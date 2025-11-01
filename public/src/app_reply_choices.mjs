@@ -1,3 +1,4 @@
+import { emojis_sing_wrap } from "../../../love/public/src/emojis_sing_wrap.mjs";
 import { emoji_voice } from "../../../love/public/src/emoji_voice.mjs";
 import { string_first_lower_to } from "../../../love/public/src/string_first_lower_to.mjs";
 import { app_reply_response_how_r_u_skip } from "../../../love/public/src/app_reply_response_how_r_u_skip.mjs";
@@ -284,10 +285,9 @@ export function app_reply_choices() {
     },
     {
       text: emoji_voice() + " Voice",
-      response:
-        emoji_voice() +
-        " My voice is a gift and miracle from God! " +
-        app_reply_choices_glory(),
+      response: emojis_sing_wrap(
+        "My voice is a gift and miracle from God! " + app_reply_choices_glory(),
+      ),
     },
     {
       text: emoji_question() + " What",
