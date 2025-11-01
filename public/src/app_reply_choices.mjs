@@ -60,7 +60,7 @@ export function app_reply_choices() {
     {
       text: emoji_pray() + " Amazing",
       response:
-        emoji_pray() + "Yet not I, but the grace of God that was with me",
+        emoji_pray() + "Yet not I, but the grace of God that was with me!",
     },
     {
       text: emoji_pray() + " Amen",
