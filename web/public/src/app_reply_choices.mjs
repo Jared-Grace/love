@@ -1,3 +1,4 @@
+import { emoji_voice } from "../../../love/public/src/emoji_voice.mjs";
 import { string_first_lower_to } from "../../../love/public/src/string_first_lower_to.mjs";
 import { app_reply_response_how_r_u_skip } from "../../../love/public/src/app_reply_response_how_r_u_skip.mjs";
 import { app_reply_choices_glory } from "../../../love/public/src/app_reply_choices_glory.mjs";
@@ -277,6 +278,14 @@ export function app_reply_choices() {
       response: emoji_pray() + "No money for travel",
     },
     travel_pray,
+    {
+      text: emoji_pray() + " Travel ask",
+      response: emoji_pray() + "No money for travel",
+    },
+    {
+      text: emoji_voice() + " Voice",
+      response: emoji_phone() + " WhatsApp: +1-904-314-4052",
+    },
     {
       text: emoji_question() + " What",
       response: emoji_pray() + "What do you mean?",
