@@ -1,3 +1,4 @@
+import { app_reply_choices_thanks } from "../../../love/public/src/app_reply_choices_thanks.mjs";
 import { emojis_sing_wrap } from "../../../love/public/src/emojis_sing_wrap.mjs";
 import { emoji_voice } from "../../../love/public/src/emoji_voice.mjs";
 import { string_first_lower_to } from "../../../love/public/src/string_first_lower_to.mjs";
@@ -272,7 +273,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " Thank you",
-      response: emoji_pray() + " Thank you very much! " + emoji_smile(),
+      response: app_reply_choices_thanks(),
     },
     {
       text: emoji_pray() + " Travel ask",
