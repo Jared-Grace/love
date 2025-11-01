@@ -46,6 +46,7 @@ import { html_button } from "../../../love/public/src/html_button.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 export async function app_reply_main() {
+  let choices = app_reply_choices();
   global_function_initialize(firebase_name, "jared-grace");
   let en = ebible_folder_english();
   let languages = ebible_languages();
@@ -124,7 +125,6 @@ export async function app_reply_main() {
   }
   each(languages, lambda5);
   marker("1");
-  let choices = app_reply_choices();
   function buttons_refresh() {
     function lambda2(item) {
       let text2 = object_property_get(item, "text");
