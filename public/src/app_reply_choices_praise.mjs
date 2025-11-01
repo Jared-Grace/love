@@ -1,10 +1,6 @@
-import { emoji_voice } from "../../../love/public/src/emoji_voice.mjs";
+import { emojis_sing_wrap } from "../../../love/public/src/emojis_sing_wrap.mjs";
 export function app_reply_choices_praise() {
-  let v2 =
-    "🎵 " +
-    emoji_voice() +
-    " " +
-    "Praise the LORD our God in the name of Jesus Christ!" +
-    " 🎶";
+  const lyrics = "Praise the LORD our God in the name of Jesus Christ!";
+  let v2 = emojis_sing_wrap(lyrics);
   return v2;
 }
