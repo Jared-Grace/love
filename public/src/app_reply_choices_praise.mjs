@@ -3,7 +3,8 @@ export function app_reply_choices_praise() {
   let v2 =
     "🎵 " +
     emoji_voice() +
-    " Praise the LORD our God in the name of Jesus Christ!" +
+    " " +
+    "Praise the LORD our God in the name of Jesus Christ!" +
     " 🎶";
   return v2;
 }
