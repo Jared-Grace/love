@@ -287,7 +287,10 @@ export function app_reply_choices() {
     {
       text: emoji_voice() + " Voice",
       response: emojis_sing_wrap(
-        "My voice is a gift and miracle from God! " + app_reply_choices_glory(),
+        "My voice is a gift and miracle from God! " +
+          app_reply_choices_glory() +
+          " " +
+          app_reply_choices_thanks(),
       ),
     },
     {
