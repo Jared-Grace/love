@@ -284,7 +284,10 @@ export function app_reply_choices() {
     },
     {
       text: emoji_voice() + " Voice",
-      response: emoji_voice() + " ",
+      response:
+        emoji_voice() +
+        " My voice is a gift and miracle from God!" +
+        app_reply_choices_glory(),
     },
     {
       text: emoji_question() + " What",
