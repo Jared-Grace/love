@@ -21,6 +21,7 @@ export function ebible_verses_include() {
     "pmc",
     "pmo",
     "pmr",
+    "pn",
     "sc",
     "q",
     "q2",
