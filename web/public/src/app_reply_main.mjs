@@ -1,7 +1,7 @@
+import { bible_verses_uplifting } from "../../../love/public/src/bible_verses_uplifting.mjs";
 import { firebase_name } from "../../../love/public/src/firebase_name.mjs";
 import { global_function_initialize } from "../../../love/public/src/global_function_initialize.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
-import { bible_verses_encouragement as bible_verses_uplifting } from "../../../love/public/src/bible_verses_encouragement.mjs";
 import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
