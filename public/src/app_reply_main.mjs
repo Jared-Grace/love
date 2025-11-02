@@ -47,9 +47,9 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 export async function app_reply_main() {
   let choices = app_reply_choices();
+  let languages = ebible_languages();
   global_function_initialize(firebase_name, "jared-grace");
   let en = ebible_folder_english();
-  let languages = ebible_languages();
   list_remove_property(languages, "language_code", "en");
   let file_name = ebible_index_flat_upload_name();
   let index = await firebase_storage_download_ebible(en, file_name);
