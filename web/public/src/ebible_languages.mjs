@@ -78,9 +78,9 @@ export function ebible_languages() {
       language_code: "am",
     },
     {
-      name: "Chinese (simplified)",
+      name: "Chinese (Simplified)",
       bible_folder: "cmn-cu89s",
-      language_code: "am",
+      language_code: "zh",
     },
   ];
   return languages;
