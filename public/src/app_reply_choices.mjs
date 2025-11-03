@@ -208,6 +208,13 @@ export function app_reply_choices() {
         emoji_rainbow(),
     },
     {
+      text: emoji_dove() + " Pictures",
+      response:
+        emoji_dove() +
+        " Now may the Lord of peace himself give you peace at all times and in every way. The Lord be with you " +
+        emoji_rainbow(),
+    },
+    {
       text: "🎵 Praise",
       response: app_reply_choices_praise(),
     },
@@ -219,7 +226,7 @@ export function app_reply_choices() {
       text: emoji_pray() + " Preach",
       response:
         emoji_pray() +
-        "If God wills, then yes I will preach. Do you have a day and time?",
+        "If God wills, then yes I will preach teach. Do you have a day and time?",
     },
     {
       text: emoji_pray() + " " + "Prayers",
