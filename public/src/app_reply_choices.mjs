@@ -208,7 +208,7 @@ export function app_reply_choices() {
         emoji_rainbow(),
     },
     {
-      text: emoji_dove() + " Pictures",
+      text: "📸 Pictures",
       response:
         emoji_dove() +
         " Now may the Lord of peace himself give you peace at all times and in every way. The Lord be with you " +
