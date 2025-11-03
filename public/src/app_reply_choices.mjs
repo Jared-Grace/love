@@ -80,7 +80,7 @@ export function app_reply_choices() {
       response: "God bless" + prayer_end(),
     },
     {
-      text: emoji_phone() + " Call why?",
+      text: emoji_phone() + " Call want why?",
       response: app_reply_call_why_generic("do", "want "),
     },
     {
