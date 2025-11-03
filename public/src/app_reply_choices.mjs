@@ -81,7 +81,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_phone() + " Call why?",
-      response: app_reply_call_why_generic("do", "want"),
+      response: app_reply_call_why_generic("do", "want "),
     },
     {
       text: emoji_phone() + " Called why?",
