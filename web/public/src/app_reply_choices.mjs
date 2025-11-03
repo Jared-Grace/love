@@ -82,7 +82,11 @@ export function app_reply_choices() {
       text: emoji_phone() + " Called why?",
       response:
         emoji_phone() +
-        " Why do you want to call me? What did you want to talk about?",
+        " Why " +
+        "do" +
+        " you " +
+        "want to" +
+        " call me? What did you want to talk about?",
     },
     {
       text: emoji_phone() + " Called why?",
