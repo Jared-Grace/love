@@ -1,3 +1,4 @@
+import { app_reply_pray_help_generic } from "../../../love/public/src/app_reply_pray_help_generic.mjs";
 import { emoji_camera } from "../../../love/public/src/emoji_camera.mjs";
 import { app_reply_call_why_generic } from "../../../love/public/src/app_reply_call_why_generic.mjs";
 import { app_reply_choices_thanks } from "../../../love/public/src/app_reply_choices_thanks.mjs";
@@ -139,7 +140,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " Help",
-      response: "God help " + h + prayer_end(),
+      response: app_reply_pray_help_generic(h),
     },
     {
       text: emoji_question() + " Help what",
