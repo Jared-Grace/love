@@ -57,8 +57,6 @@ export function app_reply_choices() {
   let with2 = app_reply_pray("With", "always be with you! " + emoji_dove());
   const blessed = "you, your family, your church and your country";
   let s = app_reply_response_how_r_u_skip();
-  const a = "do";
-  const b = "want to";
   let v = [
     {
       text: emoji_pray() + " Amazing",
@@ -87,7 +85,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_phone() + " Called why?",
-      response: app_reply_call_why_generic(a, b),
+      response: app_reply_call_why_generic("do", "want to"),
     },
     {
       text: emoji_phone() + " Call no",
