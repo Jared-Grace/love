@@ -1,11 +1,11 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 export function bible_verses_uplifting() {
   marker("1");
+  ["Exodus 14:14"];
   const verses_uplifting = [
     "Genesis 1:31",
     "Genesis 12:2-3",
     "Genesis 28:15",
-    "Exodus 14:14",
     "Exodus 33:14",
     "Deuteronomy 7:9",
     "Deuteronomy 20:4",
