@@ -138,12 +138,12 @@ export function app_reply_choices() {
         " The doctors said I had a diagnosis of schizoaffective disorder. Please pray for my health, that I am healed from everything and that those who gave me medicine command me to stop taking medicine.",
     },
     {
-      text: emoji_pray() + " Help us",
-      response: app_reply_pray_help_generic("us"),
-    },
-    {
       text: emoji_pray() + " Help me",
       response: app_reply_pray_help_generic("me"),
+    },
+    {
+      text: emoji_pray() + " Help us",
+      response: app_reply_pray_help_generic("us"),
     },
     {
       text: emoji_question() + " Help what",
