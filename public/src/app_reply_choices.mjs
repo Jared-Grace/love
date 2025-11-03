@@ -59,7 +59,6 @@ export function app_reply_choices() {
   let with2 = app_reply_pray("With", "always be with you! " + emoji_dove());
   const blessed = "you, your family, your church and your country";
   let s = app_reply_response_how_r_u_skip();
-  const h = "us";
   let v = [
     {
       text: emoji_pray() + " Amazing",
@@ -140,7 +139,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " Help",
-      response: app_reply_pray_help_generic(h),
+      response: app_reply_pray_help_generic("us"),
     },
     {
       text: emoji_question() + " Help what",
