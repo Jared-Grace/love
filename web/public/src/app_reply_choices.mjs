@@ -210,9 +210,7 @@ export function app_reply_choices() {
     {
       text: "📸 Pictures",
       response:
-        emoji_dove() +
-        " Now may the Lord of peace himself give you peace at all times and in every way. The Lord be with you " +
-        emoji_rainbow(),
+        "https://www.facebook.com/media/set/?set=a.761930266739275&type=3",
     },
     {
       text: "🎵 Praise",
