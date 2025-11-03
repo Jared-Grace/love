@@ -1,7 +1,7 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 export function bible_verses_uplifting() {
   marker("1");
-  ["Exodus 14:14"];
+  ["Exodus 14:14", "Moses said be still, then God said move"];
   const verses_uplifting = [
     "Genesis 1:31",
     "Genesis 12:2-3",
