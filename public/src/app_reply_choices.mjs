@@ -79,7 +79,13 @@ export function app_reply_choices() {
       response: "God bless" + prayer_end(),
     },
     {
-      text: emoji_phone() + " Call why?",
+      text: emoji_phone() + " Called why?",
+      response:
+        emoji_phone() +
+        " Why do you want to call me? What did you want to talk about?",
+    },
+    {
+      text: emoji_phone() + " Called why?",
       response:
         emoji_phone() +
         " Why did you call me? What did you want to talk about?",
