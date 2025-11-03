@@ -1,3 +1,4 @@
+import { emoji_camera } from "../../../love/public/src/emoji_camera.mjs";
 import { app_reply_call_why_generic } from "../../../love/public/src/app_reply_call_why_generic.mjs";
 import { app_reply_choices_thanks } from "../../../love/public/src/app_reply_choices_thanks.mjs";
 import { emojis_sing_wrap } from "../../../love/public/src/emojis_sing_wrap.mjs";
@@ -208,7 +209,7 @@ export function app_reply_choices() {
         emoji_rainbow(),
     },
     {
-      text: "📸" + " Pictures",
+      text: emoji_camera() + " Pictures",
       response:
         "https://www.facebook.com/media/set/?set=a.761930266739275&type=3",
     },
