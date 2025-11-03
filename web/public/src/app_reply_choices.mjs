@@ -138,7 +138,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " Help",
-      response: "God help us" + prayer_end(),
+      response: "God help " + "us" + prayer_end(),
     },
     {
       text: emoji_question() + " Help what",
