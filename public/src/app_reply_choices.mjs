@@ -208,7 +208,7 @@ export function app_reply_choices() {
         emoji_rainbow(),
     },
     {
-      text: "📸 Pictures",
+      text: "📸" + " Pictures",
       response:
         "https://www.facebook.com/media/set/?set=a.761930266739275&type=3",
     },
