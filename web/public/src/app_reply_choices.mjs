@@ -1,3 +1,4 @@
+import { app_reply_call_why_generic } from "../../../love/public/src/app_reply_call_why_generic.mjs";
 import { app_reply_choices_thanks } from "../../../love/public/src/app_reply_choices_thanks.mjs";
 import { emojis_sing_wrap } from "../../../love/public/src/emojis_sing_wrap.mjs";
 import { emoji_voice } from "../../../love/public/src/emoji_voice.mjs";
@@ -82,13 +83,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_phone() + " Called why?",
-      response:
-        emoji_phone() +
-        " Why " +
-        a +
-        " you " +
-        b +
-        " call me? What did you want to talk about?",
+      response: app_reply_call_why_generic(a, b),
     },
     {
       text: emoji_phone() + " Called why?",
