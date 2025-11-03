@@ -48,6 +48,7 @@ import { list_map_unordered_async } from "../../../love/public/src/list_map_unor
 export async function app_reply_main() {
   let choices = app_reply_choices();
   let languages = ebible_languages();
+  let encouragement = bible_verses_uplifting();
   global_function_initialize(firebase_name, "jared-grace");
   let en = ebible_folder_english();
   list_remove_property(languages, "language_code", "en");
@@ -64,7 +65,6 @@ export async function app_reply_main() {
   let chosens = [];
   let typed = "";
   async function verse_random_reset() {
-    let encouragement = bible_verses_uplifting();
     let reference = list_random_item(encouragement);
     let verses = await ebible_references_parse_lines([en], [reference]);
     verses_list = [
