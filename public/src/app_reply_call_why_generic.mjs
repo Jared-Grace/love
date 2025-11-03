@@ -6,6 +6,6 @@ export function app_reply_call_why_generic(a, b) {
     a +
     " you " +
     b +
-    " call me? What did you want to talk about?";
+    "call me? What did you want to talk about?";
   return v2;
 }
