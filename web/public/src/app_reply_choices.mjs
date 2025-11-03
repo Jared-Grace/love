@@ -82,14 +82,12 @@ export function app_reply_choices() {
       response: "God bless" + prayer_end(),
     },
     {
-      text: emoji_phone() + " Called why?",
-      response: app_reply_call_why_generic(a, b),
+      text: emoji_phone() + " Call why?",
+      response: app_reply_call_why_generic("do", "you want"),
     },
     {
       text: emoji_phone() + " Called why?",
-      response:
-        emoji_phone() +
-        " Why did you call me? What did you want to talk about?",
+      response: app_reply_call_why_generic(a, b),
     },
     {
       text: emoji_phone() + " Call no",
