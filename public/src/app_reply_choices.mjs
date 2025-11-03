@@ -211,7 +211,8 @@ export function app_reply_choices() {
     {
       text: emoji_camera() + " Pictures",
       response:
-        "https://www.facebook.com/media/set/?set=a.761930266739275&type=3",
+        emoji_camera() +
+        " Here are some pictures of my wife and I: https://www.facebook.com/media/set/?set=a.761930266739275&type=3",
     },
     {
       text: "🎵 Praise",
