@@ -313,8 +313,12 @@ export function app_reply_choices() {
         app_reply_choices_thanks(),
     },
     {
+      text: emoji_smile() + " Well",
+      response: emoji_smile() + " All is well! " + emoji_pray(),
+    },
+    {
       text: emoji_question() + " What",
-      response: emoji_pray() + "What do you mean?",
+      response: emoji_pray() + " What do you mean?",
     },
     {
       text: emoji_phone() + " WhatsApp",
