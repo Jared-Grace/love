@@ -85,7 +85,7 @@ export function ebible_languages() {
     {
       name: "Dutch",
       bible_folder: "nldnbg",
-      language_code: "zh",
+      language_code: "nl",
     },
   ];
   return languages;
