@@ -82,6 +82,11 @@ export function ebible_languages() {
       bible_folder: "cmn-cu89s",
       language_code: "zh",
     },
+    {
+      name: "Dutch",
+      bible_folder: "nldnbg",
+      language_code: "zh",
+    },
   ];
   return languages;
 }
