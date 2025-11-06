@@ -8,7 +8,8 @@ export async function ebible_chapters_each_verses_list(
 ) {
   await each_async(list, lambda);
   async function lambda(chapter_code) {
-    if (false) {
+    if (bible_folder === "hausa" && chapter_code === "DAN14") {
+      return;
     }
     log_keep(chapter_code);
     let verses = await ebible_verses(bible_folder, chapter_code);
