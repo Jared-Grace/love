@@ -87,6 +87,11 @@ export function ebible_languages() {
       bible_folder: "nldnbg",
       language_code: "nl",
     },
+    {
+      name: "Igbo",
+      bible_folder: "ibo",
+      language_code: "nl",
+    },
   ];
   return languages;
 }
