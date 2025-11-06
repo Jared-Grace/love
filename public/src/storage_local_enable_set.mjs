@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { storage_local_remove_app } from "../../../love/public/src/storage_local_remove_app.mjs";
 import { storage_local_set_dictionary } from "../../../love/public/src/storage_local_set_dictionary.mjs";
@@ -5,6 +6,8 @@ import { storage_local_enabled } from "../../../love/public/src/storage_local_en
 import { global_function_set } from "../../../love/public/src/global_function_set.mjs";
 export function storage_local_enable_set(value_new, context) {
   let enabled = storage_local_enabled();
+  if (equal(left, right)) {
+  }
   marker("1");
   let dictionary = storage_local_remove_app(context);
   global_function_set(storage_local_enabled, value_new);
