@@ -1,3 +1,4 @@
+import { storage_local_keys_value_dictionary } from "../../../love/public/src/storage_local_keys_value_dictionary.mjs";
 import { storage_local_mock_enable } from "../../../love/public/src/storage_local_mock_enable.mjs";
 import { global_function_initialize_object } from "../../../love/public/src/global_function_initialize_object.mjs";
 import { storage_local_enable } from "../../../love/public/src/storage_local_enable.mjs";
@@ -40,8 +41,7 @@ export async function sandbox() {
     test: v,
   };
   json_equal_assert(dictionary, expected);
-  let keys = object_properties(dictionary);
-  let local_disabled = storage_local_keys_values(context, keys);
+  let local_disabled = storage_local_keys_value_dictionary(dictionary, context);
   json_equal_assert(local_disabled, expected);
   ("global actually uses global");
   let storage_local_key = storage_local_key_get(app_fn, key);
