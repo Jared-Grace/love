@@ -92,6 +92,11 @@ export function ebible_languages() {
       bible_folder: "ibo",
       language_code: "nl",
     },
+    {
+      name: "Hausa",
+      bible_folder: "hausa",
+      language_code: "nl",
+    },
   ];
   return languages;
 }
