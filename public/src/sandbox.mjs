@@ -69,7 +69,7 @@ export async function sandbox() {
     test: v,
   };
   json_equal_assert(dictionary, expected);
-  storage_local_disable();
+  storage_local_disable(context);
   function lambda4(object, property) {
     storage_local_set(app_fn, property, object);
   }
