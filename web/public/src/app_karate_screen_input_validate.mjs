@@ -47,28 +47,28 @@ export function app_karate_screen_input_validate(
     }
     html_on_input(input, validate_all);
     validate_input(input);
-    function validate_input(input) {
-      let value = html_value_get(input);
-      let trimmed = string_trim(value);
-      html_value_set(input, trimmed);
-      html_clear(ul);
-      let valid = true;
-      function lambda(c) {
-        let text2 = object_property_get(c, "text");
-        let check2 = object_property_get(c, "check");
-        let a = check2(trimmed);
-        if (not(a)) {
-          let li = html_element(ul, "li");
-          html_text_set(li, text2);
-          valid = false;
-        }
-      }
-      each(checks, lambda);
-      app_karate_validate_style_assign(valid, [div], input, null);
-      return valid;
-    }
   }
   each(inputs, lambda2);
+  function validate_input(input) {
+    let value = html_value_get(input);
+    let trimmed = string_trim(value);
+    html_value_set(input, trimmed);
+    html_clear(ul);
+    let valid = true;
+    function lambda(c) {
+      let text2 = object_property_get(c, "text");
+      let check2 = object_property_get(c, "check");
+      let a = check2(trimmed);
+      if (not(a)) {
+        let li = html_element(ul, "li");
+        html_text_set(li, text2);
+        valid = false;
+      }
+    }
+    each(checks, lambda);
+    app_karate_validate_style_assign(valid, [div], input, null);
+    return valid;
+  }
   let first = list_first(inputs);
   html_focus(first);
 }
