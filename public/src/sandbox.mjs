@@ -1,6 +1,5 @@
 import { storage_local_enable } from "../../../love/public/src/storage_local_enable.mjs";
 import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
-import { storage_local_remove_app } from "../../../love/public/src/storage_local_remove_app.mjs";
 import { json_equal_assert } from "../../../love/public/src/json_equal_assert.mjs";
 import { storage_local_get_global } from "../../../love/public/src/storage_local_get_global.mjs";
 import { storage_local_key_get } from "../../../love/public/src/storage_local_key_get.mjs";
@@ -63,13 +62,12 @@ export async function sandbox() {
   ("by default local storage is enabled");
   let enabled = storage_local_enabled();
   true_is_assert(enabled);
-  let dictionary = storage_local_remove_app(context);
+  let dictionary = storage_local_disable(context);
   let keys = object_properties(dictionary);
   const expected = {
     test: v,
   };
   json_equal_assert(dictionary, expected);
-  storage_local_disable(context);
   function lambda4(object, property) {
     storage_local_set(app_fn, property, object);
   }
@@ -82,7 +80,6 @@ export async function sandbox() {
   equal_assert(value_global, v);
   let enabled2 = storage_local_enabled();
   false_is_assert(enabled2);
-  let dictionary2 = storage_local_remove_app(context);
-  let keys2 = object_properties(dictionary);
-  storage_local_enable(context);
+  let dictionary2 = storage_local_enable(context);
+  let keys2 = object_properties(dictionary2);
 }
