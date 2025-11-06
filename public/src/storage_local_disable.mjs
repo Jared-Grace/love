@@ -3,5 +3,5 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function storage_local_disable(context) {
   marker("1");
   const v = false;
-  storage_local_enable_set(v);
+  storage_local_enable_set(v, context);
 }
