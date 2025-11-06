@@ -82,4 +82,5 @@ export async function sandbox() {
   let local_reenabled = storage_local_keys_values(context, keys2);
   json_equal_assert(local_reenabled, expected);
   let fn_object = global_function_initialize_object(storage_local_set);
+  return fn_object;
 }
