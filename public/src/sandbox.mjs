@@ -46,7 +46,7 @@ export async function sandbox() {
   {
     let dictionary = storage_local_disable(context);
     json_equal_assert(dictionary, expected);
-    ("disabled local storage ");
+    ("disabled local storage returns correct dictionary");
     let local_disabled = storage_local_keys_value_dictionary(
       dictionary,
       context,
@@ -54,9 +54,11 @@ export async function sandbox() {
     json_equal_assert(local_disabled, expected);
   }
   ("global actually uses global");
-  let storage_local_key = storage_local_key_get(app_fn, key);
-  let value_global = storage_local_get_global(storage_local_key);
-  equal_assert(value_global, v);
+  {
+    let storage_local_key = storage_local_key_get(app_fn, key);
+    let value_global = storage_local_get_global(storage_local_key);
+    equal_assert(value_global, v);
+  }
   let enabled2 = storage_local_enabled();
   false_is_assert(enabled2);
   let fn_object = global_function_initialize_object(storage_local_set);
