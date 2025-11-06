@@ -53,7 +53,10 @@ export async function sandbox() {
   });
   let dictionary2 = storage_local_enable(context);
   json_equal_assert(dictionary2, expected);
-  let local_reenabled = storage_local_keys_value_dictionary(context, keys2);
+  let local_reenabled = storage_local_keys_value_dictionary(
+    dictionary2,
+    context,
+  );
   json_equal_assert(local_reenabled, expected);
   let fn_object2 = global_function_initialize_object(storage_local_set);
   json_equal_assert(fn_object2, {});
