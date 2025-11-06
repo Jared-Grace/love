@@ -59,15 +59,18 @@ export async function sandbox() {
     let value_global = storage_local_get_global(storage_local_key);
     equal_assert(value_global, v);
   }
-  ("disabling local storage returns disabled");
+  ("disabling local storage returns disabled flag");
   {
     let enabled2 = storage_local_enabled();
     false_is_assert(enabled2);
   }
-  let fn_object = global_function_initialize_object(storage_local_set);
-  json_equal_assert(fn_object, {
-    [storage_local_key_get(app_fn, key)]: v,
-  });
+  ("global object is correct");
+  {
+    let fn_object = global_function_initialize_object(storage_local_set);
+    json_equal_assert(fn_object, {
+      [storage_local_key_get(app_fn, key)]: v,
+    });
+  }
   let dictionary2 = storage_local_enable(context);
   json_equal_assert(dictionary2, expected);
   let local_reenabled = storage_local_keys_value_dictionary(
