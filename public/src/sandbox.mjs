@@ -79,4 +79,5 @@ export async function sandbox() {
   json_equal_assert(dictionary2, expected);
   let keys2 = object_properties(dictionary2);
   let local_reenabled = storage_local_keys_values(context, keys2);
+  json_equal_assert(local_reenabled, expected);
 }
