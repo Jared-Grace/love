@@ -1,3 +1,4 @@
+import { json_equal_assert_empty } from "../../../love/public/src/json_equal_assert_empty.mjs";
 import { storage_local_keys_value_dictionary } from "../../../love/public/src/storage_local_keys_value_dictionary.mjs";
 import { storage_local_mock_enable } from "../../../love/public/src/storage_local_mock_enable.mjs";
 import { global_function_initialize_object } from "../../../love/public/src/global_function_initialize_object.mjs";
@@ -84,6 +85,6 @@ export async function sandbox() {
   ("global object is empty after enable");
   {
     let fn_object2 = global_function_initialize_object(storage_local_set);
-    json_equal_assert(fn_object2, {});
+    json_equal_assert_empty(fn_object2);
   }
 }
