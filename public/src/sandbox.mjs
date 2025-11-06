@@ -38,8 +38,10 @@ export async function sandbox() {
     equal_assert(v, value2);
   }
   ("by default local storage is enabled");
-  let enabled = storage_local_enabled();
-  true_is_assert(enabled);
+  {
+    let enabled = storage_local_enabled();
+    true_is_assert(enabled);
+  }
   ("disabling local storage returns a dictionary");
   let dictionary = storage_local_disable(context);
   json_equal_assert(dictionary, expected);
