@@ -81,6 +81,9 @@ export async function sandbox() {
     );
     json_equal_assert(local_reenabled, expected);
   }
-  let fn_object2 = global_function_initialize_object(storage_local_set);
-  json_equal_assert(fn_object2, {});
+  ("global object is empty after enable");
+  {
+    let fn_object2 = global_function_initialize_object(storage_local_set);
+    json_equal_assert(fn_object2, {});
+  }
 }
