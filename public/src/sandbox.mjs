@@ -80,6 +80,7 @@ export async function sandbox() {
   let fn_object = global_function_initialize_object(storage_local_set);
   return fn_object;
   let dictionary2 = storage_local_enable(context);
+  let list = [];
   function lambda3(item2) {}
   each(list, lambda3);
   json_equal_assert(dictionary2, expected);
