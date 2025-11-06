@@ -1,5 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
-import { json_equal_assert_multiple } from "../../../love/public/src/json_equal_assert_multiple.mjs";
 import { global_function_initialize_object } from "../../../love/public/src/global_function_initialize_object.mjs";
 import { storage_local_enable } from "../../../love/public/src/storage_local_enable.mjs";
 import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
@@ -79,12 +77,9 @@ export async function sandbox() {
   let enabled2 = storage_local_enabled();
   false_is_assert(enabled2);
   let fn_object = global_function_initialize_object(storage_local_set);
+  json_equal_assert(fn_object, expected);
   let dictionary2 = storage_local_enable(context);
-  let list = [fn_object, dictionary2];
-  log({
-    list,
-  });
-  json_equal_assert_multiple(expected, list);
+  json_equal_assert(dictionary2, expected);
   let keys2 = object_properties(dictionary2);
   let local_reenabled = storage_local_keys_values(context, keys2);
   json_equal_assert(local_reenabled, expected);
