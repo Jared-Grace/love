@@ -3,5 +3,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function storage_local_disable(context) {
   marker("1");
   const v = false;
-  return storage_local_enable_set(v, context);
+  let dictionary = storage_local_enable_set(v, context);
+  return dictionary;
 }
