@@ -21,10 +21,12 @@ export async function sandbox() {
   let context = {
     app_fn,
   };
-  ("before setting value, get returns null");
   const key = "test";
-  let value = storage_local_get(app_fn, key);
-  null_is_assert(value);
+  ("before setting value, get returns null");
+  {
+    let value = storage_local_get(app_fn, key);
+    null_is_assert(value);
+  }
   ("set a value and get the value");
   const v = 123;
   storage_local_set(app_fn, key, v);
