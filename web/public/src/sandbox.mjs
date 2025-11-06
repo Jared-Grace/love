@@ -84,5 +84,5 @@ export async function sandbox() {
   false_is_assert(enabled2);
   let dictionary2 = storage_local_remove_app(context);
   let keys2 = object_properties(dictionary);
-  storage_local_enable();
+  storage_local_enable(context);
 }
