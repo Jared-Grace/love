@@ -55,6 +55,7 @@ export function app_karate_screen_input_validate(
     let value = html_value_get(input);
     let trimmed = string_trim(value);
     html_value_set(input, trimmed);
+    let value2 = object_property_get(object, property_name);
     html_clear(ul);
     let valid = true;
     function lambda(c) {
