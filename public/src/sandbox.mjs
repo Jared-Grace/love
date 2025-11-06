@@ -78,7 +78,6 @@ export async function sandbox() {
   let enabled2 = storage_local_enabled();
   false_is_assert(enabled2);
   let fn_object = global_function_initialize_object(storage_local_set);
-  return fn_object;
   let dictionary2 = storage_local_enable(context);
   let list = [fn_object, dictionary2];
   json_equal_assert_multiple(expected, list);
