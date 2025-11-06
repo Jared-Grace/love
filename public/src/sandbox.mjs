@@ -26,7 +26,7 @@ export async function sandbox() {
   const key = "test";
   let value = storage_local_get(app_fn, key);
   null_is_assert(value);
-  ("set and get value");
+  ("set a value and get the value");
   const v = 123;
   storage_local_set(app_fn, key, v);
   let value2 = storage_local_get(app_fn, key);
