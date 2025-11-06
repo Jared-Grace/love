@@ -73,7 +73,9 @@ export async function sandbox() {
   ("global actually uses global");
   let storage_local_key = storage_local_key_get(app_fn, key);
   let value_global = storage_local_get_global(storage_local_key);
-  equal_assert(value_global, v);
+  equal_assert(value_global, {
+    "sandbox test": 123,
+  });
   let enabled2 = storage_local_enabled();
   false_is_assert(enabled2);
   let fn_object = global_function_initialize_object(storage_local_set);
