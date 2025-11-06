@@ -41,14 +41,14 @@ export function app_karate_screen_input_validate(
       color: "#872121ff",
     });
     html_style_set(ul, "margin", "0");
-    function validate_all() {
-      each(inputs, validate_input);
-      let mapped = list_map(inputs, validate_input);
-      let valid_all = list_all(mapped, true_is);
-      app_karate_validate_style_assign(valid_all, [div], null, button_below);
-    }
     html_on_input(input, validate_all);
     validate_input(input);
+  }
+  function validate_all() {
+    each(inputs, validate_input);
+    let mapped = list_map(inputs, validate_input);
+    let valid_all = list_all(mapped, true_is);
+    app_karate_validate_style_assign(valid_all, [div], null, button_below);
   }
   each(inputs, lambda2);
   function validate_input(input) {
@@ -74,4 +74,5 @@ export function app_karate_screen_input_validate(
   }
   let first = list_first(inputs);
   html_focus(first);
+  return validate_all;
 }
