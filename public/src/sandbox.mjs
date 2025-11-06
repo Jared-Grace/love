@@ -3,7 +3,6 @@ import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
 import { json_equal_assert } from "../../../love/public/src/json_equal_assert.mjs";
 import { storage_local_get_global } from "../../../love/public/src/storage_local_get_global.mjs";
 import { storage_local_key_get } from "../../../love/public/src/storage_local_key_get.mjs";
-import { each_object } from "../../../love/public/src/each_object.mjs";
 import { storage_local_keys_values } from "../../../karate_code/public/src/storage_local_keys_values.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
@@ -68,10 +67,6 @@ export async function sandbox() {
     test: v,
   };
   json_equal_assert(dictionary, expected);
-  function lambda4(object, property) {
-    storage_local_set(app_fn, property, object);
-  }
-  each_object(dictionary, lambda4);
   let local_disabled_after_migrate = storage_local_keys_values(context, keys);
   json_equal_assert(local_disabled_after_migrate, expected);
   ("global actually uses global");
