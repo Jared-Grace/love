@@ -71,6 +71,7 @@ export async function sandbox() {
       [storage_local_key_get(app_fn, key)]: v,
     });
   }
+  ("enabling local storage returns dictionary");
   let dictionary2 = storage_local_enable(context);
   json_equal_assert(dictionary2, expected);
   let local_reenabled = storage_local_keys_value_dictionary(
