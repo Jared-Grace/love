@@ -32,9 +32,11 @@ export async function sandbox() {
     null_is_assert(value);
   }
   ("set a value and get the value");
-  storage_local_set(app_fn, key, v);
-  let value2 = storage_local_get(app_fn, key);
-  equal_assert(v, value2);
+  {
+    storage_local_set(app_fn, key, v);
+    let value2 = storage_local_get(app_fn, key);
+    equal_assert(v, value2);
+  }
   ("by default local storage is enabled");
   let enabled = storage_local_enabled();
   true_is_assert(enabled);
