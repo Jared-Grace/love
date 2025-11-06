@@ -78,7 +78,7 @@ export async function sandbox() {
   false_is_assert(enabled2);
   let fn_object = global_function_initialize_object(storage_local_set);
   json_equal_assert(fn_object, {
-    [storage_local_key_get(app_fn, key)]: 123,
+    [storage_local_key_get(app_fn, key)]: v,
   });
   let dictionary2 = storage_local_enable(context);
   json_equal_assert(dictionary2, expected);
