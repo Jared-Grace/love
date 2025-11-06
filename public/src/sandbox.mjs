@@ -22,7 +22,7 @@ export async function sandbox() {
   let context = {
     app_fn,
   };
-  ("returns null");
+  ("before setting value, get returns null");
   const key = "test";
   let value = storage_local_get(app_fn, key);
   null_is_assert(value);
