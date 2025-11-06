@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { global_function_initialize_object } from "../../../love/public/src/global_function_initialize_object.mjs";
 import { storage_local_enable } from "../../../love/public/src/storage_local_enable.mjs";
 import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
@@ -79,10 +80,11 @@ export async function sandbox() {
   let fn_object = global_function_initialize_object(storage_local_set);
   return fn_object;
   let dictionary2 = storage_local_enable(context);
+  each(list, function lambda3(item2) {});
   json_equal_assert(dictionary2, expected);
   let keys2 = object_properties(dictionary2);
   let local_reenabled = storage_local_keys_values(context, keys2);
   json_equal_assert(local_reenabled, expected);
   let fn_object2 = global_function_initialize_object(storage_local_set);
-  return fn_object2;
+  return fn_object;
 }
