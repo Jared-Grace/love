@@ -10,6 +10,7 @@ export function ebible_verses_exclude() {
     "fr",
     "footnote",
     "fl",
+    "fm",
     "ft",
     "fv",
     "iex",
