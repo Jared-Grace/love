@@ -33,11 +33,6 @@ export function ebible_languages() {
       language_code: "tel",
     },
     {
-      name: "Yoruba",
-      bible_folder: "yor",
-      language_code: "yor",
-    },
-    {
       name: "Hindi",
       bible_folder: "hin2017",
       language_code: "hin",
@@ -96,6 +91,11 @@ export function ebible_languages() {
       name: "Hausa",
       bible_folder: "hausa",
       language_code: "ha",
+    },
+    {
+      name: "Yoruba",
+      bible_folder: "yor",
+      language_code: "yor",
     },
   ];
   return languages;
