@@ -27,6 +27,10 @@ export async function sandbox() {
   const expected = {
     test: v,
   };
+  ("global object is empty initially");
+  {
+    storage_local_global_empt_assert();
+  }
   ("before setting value, get returns null");
   {
     let value = storage_local_get(app_fn, key);
