@@ -23,6 +23,9 @@ export async function sandbox() {
   };
   const key = "test";
   const v = 123;
+  const expected = {
+    test: v,
+  };
   ("before setting value, get returns null");
   {
     let value = storage_local_get(app_fn, key);
@@ -37,9 +40,6 @@ export async function sandbox() {
   true_is_assert(enabled);
   ("disabling local storage returns a dictionary");
   let dictionary = storage_local_disable(context);
-  const expected = {
-    test: v,
-  };
   json_equal_assert(dictionary, expected);
   let local_disabled = storage_local_keys_value_dictionary(dictionary, context);
   json_equal_assert(local_disabled, expected);
