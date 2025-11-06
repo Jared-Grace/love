@@ -6,7 +6,8 @@ import { storage_local_enabled } from "../../../love/public/src/storage_local_en
 import { global_function_set } from "../../../love/public/src/global_function_set.mjs";
 export function storage_local_enable_set(value_new, context) {
   let enabled = storage_local_enabled();
-  if (equal(left, right)) {
+  if (equal(enabled, value_new)) {
+    return;
   }
   marker("1");
   let dictionary = storage_local_remove_app(context);
