@@ -181,7 +181,8 @@ export function app_reply_choices() {
     },
     {
       text: emoji_question() + " Languages",
-      response: "Do you speak any languages besides English?",
+      response:
+        "Do you speak any languages besides English? If so, what languages do you speak besides English?",
     },
     {
       text: emoji_globe_americas() + " Location",
