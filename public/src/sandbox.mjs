@@ -6,8 +6,6 @@ import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
 import { json_equal_assert } from "../../../love/public/src/json_equal_assert.mjs";
 import { storage_local_get_global } from "../../../love/public/src/storage_local_get_global.mjs";
 import { storage_local_key_get } from "../../../love/public/src/storage_local_key_get.mjs";
-import { storage_local_keys_values } from "../../../karate_code/public/src/storage_local_keys_values.mjs";
-import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { storage_local_disable } from "../../../love/public/src/storage_local_disable.mjs";
 import { true_is_assert } from "../../../love/public/src/true_is_assert.mjs";
 import { storage_local_enabled } from "../../../love/public/src/storage_local_enabled.mjs";
@@ -55,8 +53,7 @@ export async function sandbox() {
   });
   let dictionary2 = storage_local_enable(context);
   json_equal_assert(dictionary2, expected);
-  let keys2 = object_properties(dictionary2);
-  let local_reenabled = storage_local_keys_values(context, keys2);
+  let local_reenabled = storage_local_keys_value_dictionary(context, keys2);
   json_equal_assert(local_reenabled, expected);
   let fn_object2 = global_function_initialize_object(storage_local_set);
   json_equal_assert(fn_object2, {});
