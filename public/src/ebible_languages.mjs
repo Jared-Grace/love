@@ -90,12 +90,12 @@ export function ebible_languages() {
     {
       name: "Igbo",
       bible_folder: "ibo",
-      language_code: "nl",
+      language_code: "ig",
     },
     {
       name: "Hausa",
       bible_folder: "hausa",
-      language_code: "nl",
+      language_code: "ha",
     },
   ];
   return languages;
