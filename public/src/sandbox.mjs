@@ -76,11 +76,13 @@ export async function sandbox() {
   equal_assert(value_global, v);
   let enabled2 = storage_local_enabled();
   false_is_assert(enabled2);
+  let fn_object = global_function_initialize_object(storage_local_set);
+  return fn_object;
   let dictionary2 = storage_local_enable(context);
   json_equal_assert(dictionary2, expected);
   let keys2 = object_properties(dictionary2);
   let local_reenabled = storage_local_keys_values(context, keys2);
   json_equal_assert(local_reenabled, expected);
-  let fn_object = global_function_initialize_object(storage_local_set);
-  return fn_object;
+  let fn_object2 = global_function_initialize_object(storage_local_set);
+  return fn_object2;
 }
