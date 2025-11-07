@@ -1,4 +1,4 @@
-import { object_property_initialize } from "../../../love/public/src/object_property_initialize.mjs";
+import { object_property_initialize_list } from "../../../love/public/src/object_property_initialize_list.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
@@ -9,7 +9,7 @@ export async function sandbox() {
   let verses = {};
   function lambda(word) {
     let vid = object_property_get(word, "VerseId");
-    let value = object_property_initialize(verses, vid, []);
+    let value = object_property_initialize_list(verses, vid);
   }
   each(list, lambda);
   return data;
