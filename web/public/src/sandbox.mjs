@@ -10,11 +10,11 @@ export async function sandbox() {
   let words = await file_read_json(path_output);
   let verses = {};
   function lambda(word) {
-    let vid = object_property_get(word, "VerseId");
     let n = object_property_exists_not(verses, vid);
     if (n) {
       return;
     }
+    let vid = object_property_get(word, "VerseId");
     let verse_words = object_property_initialize_list(verses, vid);
     list_add(verse_words, word);
   }
