@@ -10,7 +10,7 @@ export async function sandbox() {
   let path_input = folder_user_combine("downloads", "bsb_tables.xlsx");
   const wb = XLSX.readFile(path_input);
   console.log(wb.SheetNames);
-  const ws = wb.Sheets[wb.SheetNames[0]];
+  const ws = wb.Sheets["biblosinterlinear96"];
   const json = XLSX.utils.sheet_to_json(ws);
   let contents = json_format_to(json);
   let path_output = file_name_json(path_input);
