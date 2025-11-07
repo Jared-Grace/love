@@ -9,6 +9,7 @@ export async function sandbox() {
   let words = await file_read_json(path_output);
   const vid_property = "VerseId";
   let verses = list_to_lookup(vid_property, words);
+  let sorts = ["Heb Sort", "Greek Sort"];
   function lambda(verse_words, vid) {
     function lambda2(item) {
       let value = object_property_get(object2, property_name);
