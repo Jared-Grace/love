@@ -10,6 +10,7 @@ export async function sandbox() {
   let words = await file_read_json(path_output);
   const vid_property = "VerseId";
   let verses = list_to_lookup(vid_property, words);
+  return verses;
   let sorts = ["Heb Sort", "Greek Sort"];
   function lambda(verse_words, vid) {
     function lambda3(sort) {
