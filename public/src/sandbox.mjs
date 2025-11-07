@@ -1,4 +1,6 @@
 export async function sandbox() {
+  const XLSX = await import("xlsx");
+  const { writeFileSync } = await import("fs");
   const wb = XLSX.readFile("input.xlsx");
   const ws = wb.Sheets[wb.SheetNames[0]];
   const json = XLSX.utils.sheet_to_json(ws);
