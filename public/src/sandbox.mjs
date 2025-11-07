@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
 import { object_property_initialize_list } from "../../../love/public/src/object_property_initialize_list.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -14,8 +15,9 @@ export async function sandbox() {
     if (n) {
       return;
     }
-    let verse = object_property_initialize_list(verses, vid);
+    let verse_words = object_property_initialize_list(verses, vid);
     let original_property = "WLC / Nestle Base TR RP WH NE NA SBL";
+    list_add(list2, item);
   }
   each(list, lambda);
   return data;
