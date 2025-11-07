@@ -19,5 +19,5 @@ export async function sandbox() {
     list_add(verse_words, word);
   }
   each(list, lambda);
-  return data;
+  return verses;
 }
