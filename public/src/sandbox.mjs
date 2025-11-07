@@ -1,4 +1,4 @@
-import { bible_interlinear_json_generate } from "../../../love/public/src/bible_interlinear_json_generate.mjs";
+import { bible_interlinear_json_path } from "../../../love/public/src/bible_interlinear_json_path.mjs";
 export async function sandbox() {
-  await bible_interlinear_json_generate();
+  let path_output = bible_interlinear_json_path();
 }
