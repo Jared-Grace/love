@@ -23,6 +23,7 @@ export async function sandbox() {
       list_sort_number_mapper(verse_words, lambda2);
     }
     each(sorts, lambda3);
+    let original_property = "WLC / Nestle Base TR RP WH NE NA SBL";
   }
   each_object(verses, lambda);
   let v = verses[1];
