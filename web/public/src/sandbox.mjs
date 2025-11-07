@@ -24,7 +24,8 @@ export async function sandbox() {
       list_sort_number_mapper(verse_words, lambda2);
     }
     each(sorts, lambda3);
-    let filtered = list_filter(list, function lambda4(item2) {});
+    function lambda4(item2) {}
+    let filtered = list_filter(list, lambda4);
     let original_property = "WLC / Nestle Base TR RP WH NE NA SBL";
     let original = object_property_get(object, original_property);
   }
