@@ -15,6 +15,7 @@ export async function sandbox() {
       return;
     }
     let verse = object_property_initialize_list(verses, vid);
+    let original_property = "WLC / Nestle Base TR RP WH NE NA SBL";
   }
   each(list, lambda);
   return data;
