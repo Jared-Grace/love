@@ -7,6 +7,7 @@ export async function sandbox() {
   let words = await file_read_json(path_output);
   const vid_property = "VerseId";
   let verses = list_to_lookup(vid_property, words);
-  each_object(object, function lambda(value, property) {});
+  function lambda(value, property) {}
+  each_object(object, lambda);
   return verses;
 }
