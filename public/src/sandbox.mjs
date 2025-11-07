@@ -17,7 +17,10 @@ export async function sandbox() {
     }
     let verse_words = object_property_initialize_list(verses, vid);
     let original_property = "WLC / Nestle Base TR RP WH NE NA SBL";
-    list_add(list2, item);
+    let value = object_property_get(object, property_name);
+    list_add(verse_words, {
+      item,
+    });
   }
   each(list, lambda);
   return data;
