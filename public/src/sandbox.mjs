@@ -6,7 +6,7 @@ export async function sandbox() {
   let path_output = bible_interlinear_json_path();
   let data = await file_read_json(path_output);
   function lambda(word) {
-    let value = object_property_get(object, property_name);
+    let vid = object_property_get(word, "VerseId");
   }
   each(list, lambda);
   return data;
