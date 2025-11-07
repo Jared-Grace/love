@@ -13,5 +13,5 @@ export async function bible_interlinear_json_generate() {
   const json = XLSX.utils.sheet_to_json(ws);
   let contents = json_format_to(json);
   let path_output = bible_interlinear_json_path();
-  let result = await file_overwrite(path_output, contents);
+  let result = await file_overwrite(path_output, contents);$e
 }
