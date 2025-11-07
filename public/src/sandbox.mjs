@@ -22,5 +22,6 @@ export async function sandbox() {
     each(sorts, lambda3);
   }
   each_object(verses, lambda);
-  return verses;
+  let v = verses[1];
+  return v;
 }
