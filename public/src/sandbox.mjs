@@ -1,10 +1,13 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
 import { bible_interlinear_json_path } from "../../../love/public/src/bible_interlinear_json_path.mjs";
 export async function sandbox() {
   let path_output = bible_interlinear_json_path();
   let data = await file_read_json(path_output);
-  function lambda(word) {}
+  function lambda(word) {
+    let value = object_property_get(object, property_name);
+  }
   each(list, lambda);
   return data;
 }
