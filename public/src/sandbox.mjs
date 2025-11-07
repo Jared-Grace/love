@@ -13,7 +13,8 @@ export async function sandbox() {
   let verses = list_to_lookup(vid_property, words);
   let sorts = ["Heb Sort", "Greek Sort"];
   function lambda(verse_words, vid) {
-    let first = list_first(list);
+    let first = list_first(verse_words);
+    let value2 = object_property_get(object, property_name);
     function lambda3(sort) {
       function lambda2(item) {
         let value = object_property_get(item, sort);
