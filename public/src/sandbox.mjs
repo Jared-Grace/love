@@ -16,12 +16,7 @@ export async function sandbox() {
       return;
     }
     let verse_words = object_property_initialize_list(verses, vid);
-    let original_property = "WLC / Nestle Base TR RP WH NE NA SBL";
-    let original = object_property_get(word, original_property);
-    list_add(verse_words, {
-      item,
-      original,
-    });
+    list_add(verse_words, word);
   }
   each(list, lambda);
   return data;
