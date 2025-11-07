@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
 import { object_property_initialize_list } from "../../../love/public/src/object_property_initialize_list.mjs";
@@ -15,6 +16,7 @@ export async function sandbox() {
     if (n) {
       return;
     }
+    log(message);
     let vid = object_property_get(word, vid_property);
     let verse_words = object_property_initialize_list(verses, vid);
     list_add(verse_words, word);
