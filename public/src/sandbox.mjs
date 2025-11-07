@@ -1,5 +1,7 @@
 import { folder_user_combine } from "../../../love/public/src/folder_user_combine.mjs";
 export async function sandbox() {
+  "todo: download from";
+  "https://bereanbible.com/bsb_tables.xlsx";
   let joined = folder_user_combine("downloads", "bsb_tables.xlsx");
   const XLSX = await import("xlsx");
   const { writeFileSync } = await import("fs");
