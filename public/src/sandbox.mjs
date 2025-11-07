@@ -12,7 +12,7 @@ export async function sandbox() {
   let verses = {};
   function lambda(word) {
     const vid_property = "VerseId";
-    let n = object_property_exists_not(verses, vid_property);
+    let n = object_property_exists_not(word, vid_property);
     if (n) {
       return;
     }
