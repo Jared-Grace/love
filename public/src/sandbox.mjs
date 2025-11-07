@@ -7,6 +7,7 @@ import { each_object } from "../../../love/public/src/each_object.mjs";
 import { list_to_lookup } from "../../../love/public/src/list_to_lookup.mjs";
 import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
 import { bible_interlinear_json_path } from "../../../love/public/src/bible_interlinear_json_path.mjs";
+import { object_property_exists } from "./object_property_exists.mjs";
 export async function sandbox() {
   let path_output = bible_interlinear_json_path();
   let words = await file_read_json(path_output);
@@ -24,8 +25,10 @@ export async function sandbox() {
       list_sort_number_mapper(verse_words, lambda2);
     }
     each(sorts, lambda3);
-    function lambda4(item2) {}
-    let filtered = list_filter(list, lambda4);
+    function lambda4(item2) {
+      let exists = object_property_exists(object2, property_name);
+    }
+    let filtered = list_filter(verse_words, lambda4);
     let original_property = "WLC / Nestle Base TR RP WH NE NA SBL";
     let original = object_property_get(object, original_property);
   }
