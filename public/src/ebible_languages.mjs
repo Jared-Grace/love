@@ -97,6 +97,11 @@ export function ebible_languages() {
       bible_folder: "yor",
       language_code: "yor",
     },
+    {
+      name: "Punjabi",
+      bible_folder: "pan",
+  language_code: "pa",
+    },
   ];
   return languages;
 }
