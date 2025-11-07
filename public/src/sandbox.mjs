@@ -9,7 +9,8 @@ export async function sandbox() {
   const vid_property = "VerseId";
   let verses = list_to_lookup(vid_property, words);
   function lambda(verse, vid) {
-    list_sort_number_mapper(list, function lambda2(item) {});
+    function lambda2(item) {}
+    list_sort_number_mapper(list, lambda2);
   }
   each_object(object, lambda);
   return verses;
