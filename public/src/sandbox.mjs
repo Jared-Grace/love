@@ -8,7 +8,7 @@ import { bible_interlinear_json_path } from "../../../love/public/src/bible_inte
 export async function sandbox() {
   let path_output = bible_interlinear_json_path();
   let words = await file_read_json(path_output);
-  const vid_property = "VerseId";
+  const vid_property = "Verse";
   let verses = list_to_lookup(vid_property, words);
   return verses;
   let sorts = ["Heb Sort", "Greek Sort"];
