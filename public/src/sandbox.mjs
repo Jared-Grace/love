@@ -16,7 +16,7 @@ export async function sandbox() {
     if (n) {
       return;
     }
-    log(message);
+    log("message");
     let vid = object_property_get(word, vid_property);
     let verse_words = object_property_initialize_list(verses, vid);
     list_add(verse_words, word);
