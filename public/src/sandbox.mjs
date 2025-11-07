@@ -21,6 +21,6 @@ export async function sandbox() {
     }
     each(sorts, lambda3);
   }
-  each_object(object, lambda);
+  each_object(verses, lambda);
   return verses;
 }
