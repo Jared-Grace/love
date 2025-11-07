@@ -1,4 +1,4 @@
-import { function_wrap } from "../../../love/public/src/function_wrap.mjs";
+import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
 import { folder_user_combine } from "../../../love/public/src/folder_user_combine.mjs";
 import { json_format_to } from "./json_format_to.mjs";
@@ -13,6 +13,6 @@ export async function sandbox() {
   const json = XLSX.utils.sheet_to_json(ws);
   let v = json_format_to(json);
   let file_name = file_name_json(joined);
-  await function_wrap(f_name, f_name_wrapped);
+  let result = await file_overwrite(file_path, contents);
   writeFileSync(file_name, v);
 }
