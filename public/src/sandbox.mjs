@@ -11,7 +11,8 @@ export async function sandbox() {
   const vid_property = "VerseId";
   let verses = list_to_lookup(vid_property, words);
   let sorts = ["Heb Sort", "Greek Sort"];
-  each(list, function lambda3(item2) {});
+  function lambda3(item2) {}
+  each(list, lambda3);
   function lambda(verse_words, vid) {
     function lambda2(item) {
       let value = object_property_get(object2, property_name);
