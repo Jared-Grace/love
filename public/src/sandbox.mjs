@@ -9,5 +9,5 @@ export async function sandbox() {
   const ws = wb.Sheets[wb.SheetNames[0]];
   const json = XLSX.utils.sheet_to_json(ws);
   let v = JSON.stringify(json, null, 2);
-  writeFileSync("output.json", v);
+  writeFileSync(joined + ".json", v);
 }
