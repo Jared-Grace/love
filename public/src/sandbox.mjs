@@ -1,3 +1,4 @@
+import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
 import { object_property_initialize_list } from "../../../love/public/src/object_property_initialize_list.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -9,6 +10,7 @@ export async function sandbox() {
   let verses = {};
   function lambda(word) {
     let vid = object_property_get(word, "VerseId");
+    let n = object_property_exists_not(object, property_name);
     let value = object_property_initialize_list(verses, vid);
   }
   each(list, lambda);
