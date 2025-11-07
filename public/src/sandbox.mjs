@@ -11,8 +11,7 @@ export async function sandbox() {
   const wb = XLSX.readFile(path_input);
   const ws = wb.Sheets[wb.SheetNames[0]];
   const json = XLSX.utils.sheet_to_json(ws);
-  let v = json_format_to(json);
+  let contents = json_format_to(json);
   let path_output = file_name_json(path_input);
   let result = await file_overwrite(path_output, contents);
-  writeFileSync(path_output, v);
 }
