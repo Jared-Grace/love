@@ -11,13 +11,15 @@ export async function sandbox() {
   const vid_property = "VerseId";
   let verses = list_to_lookup(vid_property, words);
   let sorts = ["Heb Sort", "Greek Sort"];
-  function lambda3(item2) {}
-  each(list, lambda3);
   function lambda(verse_words, vid) {
-    function lambda2(item) {
-      let value = object_property_get(object2, property_name);
+    function lambda3(sort) {
+      function lambda2(item) {
+        let value = object_property_get(item, sort);
+        return value;
+      }
+      list_sort_number_mapper(verse_words, lambda2);
     }
-    list_sort_number_mapper(verse_words, lambda2);
+    each(sorts, lambda3);
   }
   each_object(object, lambda);
   return verses;
