@@ -1,6 +1,6 @@
+import { bible_interlinear_json_path } from "../../../love/public/src/bible_interlinear_json_path.mjs";
 import { bible_interlinear_excel_path } from "../../../love/public/src/bible_interlinear_excel_path.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
-import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
 import { json_format_to } from "./json_format_to.mjs";
 export async function sandbox() {
   const { default: XLSX } = await import("xlsx");
@@ -12,6 +12,6 @@ export async function sandbox() {
   const ws = wb.Sheets["biblosinterlinear96"];
   const json = XLSX.utils.sheet_to_json(ws);
   let contents = json_format_to(json);
-  let path_output = file_name_json(path_input);
+  let path_output = bible_interlinear_json_path();
   let result = await file_overwrite(path_output, contents);
 }
