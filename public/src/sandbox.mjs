@@ -9,11 +9,7 @@ export async function sandbox() {
   let verses = {};
   function lambda(word) {
     let vid = object_property_get(word, "VerseId");
-    let value = object_property_initialize(
-      object,
-      property_name,
-      value_initial,
-    );
+    let value = object_property_initialize(verses, vid, []);
   }
   each(list, lambda);
   return data;
