@@ -11,7 +11,7 @@ export async function sandbox() {
   function lambda(word) {
     let vid = object_property_get(word, "VerseId");
     let n = object_property_exists_not(verses, vid);
-    if (false) {
+    if (n) {
       return;
     }
     let value = object_property_initialize_list(verses, vid);
