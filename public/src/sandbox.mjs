@@ -7,12 +7,12 @@ export async function sandbox() {
   const { writeFileSync } = await import("fs");
   ("todo: download from");
   ("https://bereanbible.com/bsb_tables.xlsx");
-  let joined = folder_user_combine("downloads", "bsb_tables.xlsx");
-  const wb = XLSX.readFile(joined);
+  let path_input = folder_user_combine("downloads", "bsb_tables.xlsx");
+  const wb = XLSX.readFile(path_input);
   const ws = wb.Sheets[wb.SheetNames[0]];
   const json = XLSX.utils.sheet_to_json(ws);
   let v = json_format_to(json);
-  let file_name = file_name_json(joined);
-  let result = await file_overwrite(file_path, contents);
-  writeFileSync(file_name, v);
+  let path_output = file_name_json(path_input);
+  let result = await file_overwrite(path_output, contents);
+  writeFileSync(path_output, v);
 }
