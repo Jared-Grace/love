@@ -1,3 +1,4 @@
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -23,8 +24,9 @@ export async function sandbox() {
       list_sort_number_mapper(verse_words, lambda2);
     }
     each(sorts, lambda3);
+    let filtered = list_filter(list, function lambda4(item2) {});
     let original_property = "WLC / Nestle Base TR RP WH NE NA SBL";
-    let value2 = object_property_get(object, property_name);
+    let original = object_property_get(object, original_property);
   }
   each_object(verses, lambda);
   let v = verses[1];
