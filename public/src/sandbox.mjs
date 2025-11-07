@@ -1,3 +1,4 @@
+import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { list_to_lookup } from "../../../love/public/src/list_to_lookup.mjs";
 import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
@@ -7,7 +8,9 @@ export async function sandbox() {
   let words = await file_read_json(path_output);
   const vid_property = "VerseId";
   let verses = list_to_lookup(vid_property, words);
-  function lambda(verse, vid) {}
+  function lambda(verse, vid) {
+    list_sort_number_mapper(list, function lambda2(item) {});
+  }
   each_object(object, lambda);
   return verses;
 }
