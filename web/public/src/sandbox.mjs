@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
 import { folder_user_combine } from "../../../love/public/src/folder_user_combine.mjs";
@@ -8,6 +9,7 @@ export async function sandbox() {
   ("https://bereanbible.com/bsb_tables.xlsx");
   let path_input = folder_user_combine("downloads", "bsb_tables.xlsx");
   const wb = XLSX.readFile(path_input);
+  console.log(wb.SheetNames);
   const ws = wb.Sheets[wb.SheetNames[0]];
   const json = XLSX.utils.sheet_to_json(ws);
   let contents = json_format_to(json);
