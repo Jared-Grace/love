@@ -25,11 +25,12 @@ export async function sandbox() {
       list_sort_number_mapper(verse_words, lambda2);
     }
     each(sorts, lambda3);
+    let original_property = "WLC / Nestle Base TR RP WH NE NA SBL";
     function lambda4(item2) {
-      let exists = object_property_exists(object2, property_name);
+      let exists = object_property_exists(item2, original_property);
+      return exists;
     }
     let filtered = list_filter(verse_words, lambda4);
-    let original_property = "WLC / Nestle Base TR RP WH NE NA SBL";
     let original = object_property_get(object, original_property);
   }
   each_object(verses, lambda);
