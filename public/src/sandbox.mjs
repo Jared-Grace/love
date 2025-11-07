@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
@@ -9,7 +10,8 @@ export async function sandbox() {
   let words = await file_read_json(path_output);
   const vid_property = "VerseId";
   let verses = list_to_lookup(vid_property, words);
-  let sorts = ["Heb Sort", "Greek Sort"];e
+  let sorts = ["Heb Sort", "Greek Sort"];
+  each(list, function lambda3(item2) {});
   function lambda(verse_words, vid) {
     function lambda2(item) {
       let value = object_property_get(object2, property_name);
