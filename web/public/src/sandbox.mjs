@@ -14,7 +14,7 @@ export async function sandbox() {
     if (n) {
       return;
     }
-    let value = object_property_initialize_list(verses, vid);
+    let verse = object_property_initialize_list(verses, vid);
   }
   each(list, lambda);
   return data;
