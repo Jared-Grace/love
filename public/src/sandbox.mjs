@@ -7,6 +7,7 @@ export async function sandbox() {
   const { default: XLSX } = await import("xlsx");
   ("todo: download from");
   ("https://bereanbible.com/bsb_tables.xlsx");
+  ("that way more is automated for other users of this script");
   let path_input = folder_user_combine("downloads", "bsb_tables.xlsx");
   const wb = XLSX.readFile(path_input);
   console.log(wb.SheetNames);
