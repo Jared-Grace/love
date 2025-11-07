@@ -24,6 +24,7 @@ export async function sandbox() {
     }
     each(sorts, lambda3);
     let original_property = "WLC / Nestle Base TR RP WH NE NA SBL";
+    let value2 = object_property_get(object, property_name);
   }
   each_object(verses, lambda);
   let v = verses[1];
