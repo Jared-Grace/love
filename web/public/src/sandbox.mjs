@@ -8,9 +8,9 @@ import { bible_interlinear_json_path } from "../../../love/public/src/bible_inte
 export async function sandbox() {
   let path_output = bible_interlinear_json_path();
   let words = await file_read_json(path_output);
+  const vid_property = "VerseId";
   let verses = {};
   function lambda(word) {
-    const vid_property = "VerseId";
     let n = object_property_exists_not(word, vid_property);
     if (n) {
       return;
