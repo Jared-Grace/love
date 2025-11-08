@@ -48,11 +48,6 @@ export async function sandbox() {
     let { book_names, chapter_verses_list } = ebible_references_names(books, [
       vid,
     ]);
-    log({
-      vid,
-      book_names,
-      chapter_verses_list,
-    });
     let bn = list_single(book_names);
     let cv = list_single(chapter_verses_list);
     let { index, chapter_code, verse_start, verse_end } =
