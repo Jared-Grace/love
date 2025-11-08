@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { object_property_initialize_list } from "../../../love/public/src/object_property_initialize_list.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each_object_async } from "../../../love/public/src/each_object_async.mjs";
@@ -9,7 +10,6 @@ import { ebible_references_names } from "../../../love/public/src/ebible_referen
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { ebible_reference_parts } from "../../../love/public/src/ebible_reference_parts.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -61,8 +61,8 @@ export async function sandbox() {
       verse_number: verse_start,
       text,
     };
-    let value2 = object_property_initialize_list(verses2, vid2);
-    object_property_set(chapters, chapter_code, []);
+    let value2 = object_property_initialize_list(chapters, chapter_code);
+    list_add(list, item3);
     log({
       verse,
       chapter_code,
