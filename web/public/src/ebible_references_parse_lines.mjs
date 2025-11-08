@@ -1,3 +1,4 @@
+import { ebible_references_names } from "../../../love/public/src/ebible_references_names.mjs";
 import { ebible_reference_parts } from "../../../love/public/src/ebible_reference_parts.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
@@ -10,9 +11,6 @@ import { list_map_first } from "../../../love/public/src/list_map_first.mjs";
 import { list_map_filter_string_empty_not_is } from "../../../love/public/src/list_map_filter_string_empty_not_is.mjs";
 import { list_map_split_space } from "../../../love/public/src/list_map_split_space.mjs";
 import { list_map_prefix_without_any } from "../../../love/public/src/list_map_prefix_without_any.mjs";
-import { list_map_prefix_any } from "../../../love/public/src/list_map_prefix_any.mjs";
-import { list_filter_starts_with_any } from "../../../love/public/src/list_filter_starts_with_any.mjs";
-import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
@@ -22,10 +20,8 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
     bible_folders,
     ebible_version_books,
   );
-  let books = await ebible_version_books(bible_folder);
-  let books_names = list_map_property(books, "text");
-  let verse_references = list_filter_starts_with_any(books_names, lines);
-  let book_names = list_map_prefix_any(verse_references, books_names);
+  let { verse_references, books_names, books, book_names } =
+    await ebible_references_names(bible_folder, lines);
   let mapped2 = list_map_prefix_without_any(verse_references, books_names);
   let mapped3 = list_map_split_space(mapped2);
   let mapped4 = list_map_filter_string_empty_not_is(mapped3);
