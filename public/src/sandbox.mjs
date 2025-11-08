@@ -1,3 +1,4 @@
+import { each_object_async } from "../../../love/public/src/each_object_async.mjs";
 import { ebible_firebase_upload_verse } from "../../../love/public/src/ebible_firebase_upload_verse.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -13,7 +14,6 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
-import { each_object } from "../../../love/public/src/each_object.mjs";
 import { list_to_lookup } from "../../../love/public/src/list_to_lookup.mjs";
 import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
 import { bible_interlinear_json_path } from "../../../love/public/src/bible_interlinear_json_path.mjs";
@@ -62,5 +62,5 @@ export async function sandbox() {
     };
     await ebible_firebase_upload_verse(v, chapter_code, bible_folder);
   }
-  each_object(verses, lambda);
+  await each_object_async(verses, lambda);
 }
