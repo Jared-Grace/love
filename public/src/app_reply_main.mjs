@@ -1,4 +1,3 @@
-import { list_single } from "../../../love/public/src/list_single.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
 import { list_remove_property_multiple } from "../../../love/public/src/list_remove_property_multiple.mjs";
@@ -54,7 +53,7 @@ export async function app_reply_main() {
   let encouragement = bible_verses_uplifting();
   global_function_initialize(firebase_name, "jared-grace");
   let en = ebible_folder_english();
-  let bible_folder = bible_interlinear_verses_upload_folder();
+  let original = bible_interlinear_verses_upload_folder();
   list_remove_property_multiple(languages, "language_code", ["en", "original"]);
   let file_name = ebible_index_flat_upload_name();
   let index = await firebase_storage_download_ebible(en, file_name);
@@ -71,13 +70,13 @@ export async function app_reply_main() {
   async function verse_random_reset() {
     let reference = list_random_item(encouragement);
     let verses = await ebible_references_parse_lines([en], [reference]);
-    let only = list_single(list2);
     verses_list = [
       {
         verses,
         reference,
       },
     ];
+    app_reply_main_verse_add(verses_list, original);
     log({
       verses_list,
     });
@@ -108,26 +107,16 @@ export async function app_reply_main() {
     let bible_folder2 = object_property_get(item2, "bible_folder");
     let language_code = object_property_get(item2, "language_code");
     async function lambda7() {
-      let verses_list_first = list_first(verses_list);
-      let verses2 = object_property_get(verses_list_first, "verses");
-      let reference = object_property_get(verses_list_first, "reference");
-      async function lambda8(verse) {
-        let chapter_code2 = object_property_get(verse, "chapter_code");
-        let verse_number2 = object_property_get(verse, "verse_number");
-        let d = await ebible_verse_download(
-          bible_folder2,
-          chapter_code2,
-          verse_number2,
-        );
-        return d;
-      }
-      let verses = await list_map_unordered_async(verses2, lambda8);
+      let { verses, reference } = await app_reply_main_verse_add(
+        verses_list,
+        bible_folder2,
+      );
       list_add_first(verses_list, {
         verses,
         reference,
       });
       list_add_first(languages_chosens, language_code);
-      preview_refresh();
+      await preview_refresh();
     }
     let component4 = html_button(root, name2, lambda7);
   }
@@ -161,7 +150,7 @@ export async function app_reply_main() {
   }
   buttons = list_map(choices, lambda);
   preview = html_p(root);
-  preview_refresh();
+  await preview_refresh();
   buttons_refresh();
   async function preview_refresh() {
     let verses_list_first = list_first(verses_list);
@@ -193,5 +182,26 @@ export async function app_reply_main() {
     html_p_text_multiple(preview, concated);
     html_text_set(preview, joined);
     await clipboard_copy(joined);
+  }
+  async function app_reply_main_verse_add(verses_list, bible_folder2) {
+    let verses_list_first = list_first(verses_list);
+    let verses2 = object_property_get(verses_list_first, "verses");
+    let reference = object_property_get(verses_list_first, "reference");
+    async function lambda8(verse) {
+      let chapter_code2 = object_property_get(verse, "chapter_code");
+      let verse_number2 = object_property_get(verse, "verse_number");
+      let d = await ebible_verse_download(
+        bible_folder2,
+        chapter_code2,
+        verse_number2,
+      );
+      return d;
+    }
+    let verses = await list_map_unordered_async(verses2, lambda8);
+    let v = {
+      verses,
+      reference,
+    };
+    return v;
   }
 }
