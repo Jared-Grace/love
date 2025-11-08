@@ -1,6 +1,6 @@
+import { each_object } from "../../../love/public/src/each_object.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { object_property_initialize_list } from "../../../love/public/src/object_property_initialize_list.mjs";
-import { each_object_async } from "../../../love/public/src/each_object_async.mjs";
 import { ebible_firebase_upload_verse } from "../../../love/public/src/ebible_firebase_upload_verse.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -68,7 +68,7 @@ export async function sandbox() {
       verse,
       chapter_code,
     });
-    await ebible_firebase_upload_verse(verse, chapter_code, bible_folder);
   }
-  await each_object_async(verses, lambda);
+  each_object(verses, lambda);
+  await ebible_firebase_upload_verse(verse, chapter_code, bible_folder);
 }
