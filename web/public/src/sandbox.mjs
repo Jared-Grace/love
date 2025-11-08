@@ -1,6 +1,5 @@
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { object_property_initialize_list } from "../../../love/public/src/object_property_initialize_list.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { each_object_async } from "../../../love/public/src/each_object_async.mjs";
 import { ebible_firebase_upload_verse } from "../../../love/public/src/ebible_firebase_upload_verse.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
@@ -61,9 +60,11 @@ export async function sandbox() {
       verse_number: verse_start,
       text,
     };
-    let value2 = object_property_initialize_list(chapters, chapter_code);
-    list_add(list, item3);
-    log({
+    let chapter_verses = object_property_initialize_list(
+      chapters,
+      chapter_code,
+    );
+    list_add(chapter_verses, {
       verse,
       chapter_code,
     });
