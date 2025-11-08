@@ -17,7 +17,7 @@ export function ebible_references_names(books, lines) {
     };
     function lambda2(to, froms) {
       function lambda3(from) {
-        item = string_replace_if_starts_with(prefix, from + " ", to + " ");
+        item = string_replace_if_starts_with(from + " ", item, to + " ");
       }
       each(froms, lambda3);
     }
