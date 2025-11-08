@@ -1,5 +1,4 @@
-import { string_starts_with } from "../../../love/public/src/string_starts_with.mjs";
-import { string_replace } from "../../../love/public/src/string_replace.mjs";
+import { string_replace_if_starts_with } from "../../../love/public/src/string_replace_if_starts_with.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_first } from "../../../love/public/src/list_map_first.mjs";
 import { list_map_filter_string_empty_not_is } from "../../../love/public/src/list_map_filter_string_empty_not_is.mjs";
@@ -12,10 +11,7 @@ export function ebible_references_names(books, lines) {
   function lambda(item) {
     const replacement = "Psalms ";
     const prefix = "Psalm ";
-    let sw = string_starts_with(s, prefix);
-    if (sw) {
-      item = string_replace(item, prefix, replacement);
-    }
+    item = string_replace_if_starts_with(prefix, item, replacement);
   }
   let mapped = list_map(list, lambda);
   let books_names = list_map_property(books, "text");
