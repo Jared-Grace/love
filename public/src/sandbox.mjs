@@ -45,7 +45,9 @@ export async function sandbox() {
     let filtered = list_filter(verse_words, lambda4);
     let mapped = list_map_property(filtered, original_property);
     object_property_set(verses2, vid, mapped);
-    let { book_names } = ebible_references_names(books, [vid]);
+    let { book_names, chapter_verses_list } = ebible_references_names(books, [
+      vid,
+    ]);
     let only = list_single(book_names);
     let { index, chapter_code, verse_start, verse_end } =
       ebible_reference_parts(books, only, chapter_verses);
