@@ -1,4 +1,3 @@
-import { search_generic } from "../../../love/public/src/search_generic.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { ebible_references_names } from "../../../love/public/src/ebible_references_names.mjs";
@@ -50,7 +49,7 @@ export async function sandbox() {
       vid,
     ]);
     let only = list_single(book_names);
-    let result = search_generic(search, list, value_get);
+    let only2 = list_single(list);
     let { index, chapter_code, verse_start, verse_end } =
       ebible_reference_parts(books, only, chapter_verses);
     equal_assert(verse_start, verse_end);
