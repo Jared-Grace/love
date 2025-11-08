@@ -44,13 +44,14 @@ export async function sandbox() {
     let mapped = list_map_property(filtered, original_property);
     object_property_set(verses2, vid, mapped);
     let { book_names } = ebible_references_names(books, [vid]);
-    let only = list_single(list);
+    let only = list_single(book_names);
     let { index, chapter_code, verse_start, verse_end } =
-      ebible_reference_parts(books, book_name, chapter_verses);
+      ebible_reference_parts(books, only, chapter_verses);
     equal_assert(verse_start, verse_end);
     log({
       chapter_code,
       verse_start,
+      only,
     });
   }
   each_object(verses, lambda);
