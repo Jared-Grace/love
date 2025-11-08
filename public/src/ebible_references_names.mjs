@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { string_replace_if_starts_with } from "../../../love/public/src/string_replace_if_starts_with.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -14,12 +15,9 @@ export function ebible_references_names(books, lines) {
       Psalms: ["Psalm"],
       Song: ["Song of Solomon"],
     };
-    function lambda2(replacement, froms) {
-      let r = string_replace_if_starts_with(
-        prefix,
-        item + " ",
-        replacement + " ",
-      );
+    function lambda2(to, froms) {
+      each(list, function lambda3(item2) {});
+      let r = string_replace_if_starts_with(prefix, item + " ", to + " ");
     }
     each_object(object, lambda2);
     return r;
