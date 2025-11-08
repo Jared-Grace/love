@@ -71,6 +71,7 @@ export async function sandbox() {
     });
   }
   each_object(verses, lambda);
-  await each_object_async(object, async function lambda6() {});
+  async function lambda6() {}
+  await each_object_async(object, lambda6);
   await ebible_firebase_upload_verse(verse, chapter_code, bible_folder);
 }
