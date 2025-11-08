@@ -17,7 +17,7 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
     ebible_version_books,
   );
   let books = await ebible_version_books(bible_folder);
-  let { verse_references, books_names, book_names } = ebible_references_names(
+  let { chapter_verses_list, book_names } = ebible_references_names(
     books,
     lines,
   );
