@@ -45,7 +45,7 @@ export async function sandbox() {
     }
     let filtered = list_filter(verse_words, lambda4);
     let mapped = list_map_property(filtered, original_property);
-    let joined = list_join_space(args);
+    let text = list_join_space(mapped);
     object_property_set(verses2, vid, mapped);
     let { book_names, chapter_verses_list } = ebible_references_names(books, [
       vid,
@@ -57,6 +57,7 @@ export async function sandbox() {
     equal_assert(verse_start, verse_end);
     log({
       verse_start,
+      text,
     });
   }
   each_object(verses, lambda);
