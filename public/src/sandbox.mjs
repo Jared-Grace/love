@@ -76,5 +76,4 @@ export async function sandbox() {
     let waited = await list_map_unordered_async(chapter_verses, lambda5);
   }
   await each_object_async(chapters, lambda6);
-  return;
 }
