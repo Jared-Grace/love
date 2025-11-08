@@ -1,4 +1,4 @@
-import { list_map } from "../../../love/public/src/list_map.mjs";
+import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { each_object_async } from "../../../love/public/src/each_object_async.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -73,8 +73,10 @@ export async function sandbox() {
   }
   each_object(verses, lambda);
   async function lambda6(chapter_verses, chapter_code) {
-    function lambda5(item3) {}
-    let mapped2 = list_map(list, lambda5);
+    let waited = await list_map_unordered_async(
+      list,
+      async function lambda5(item3) {},
+    );
   }
   await each_object_async(chapter_verses, lambda6);
   await ebible_firebase_upload_verse(verse, chapter_code, bible_folder);
