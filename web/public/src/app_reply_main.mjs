@@ -1,3 +1,4 @@
+import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
 import { list_remove_property_multiple } from "../../../love/public/src/list_remove_property_multiple.mjs";
 import { bible_verses_uplifting } from "../../../love/public/src/bible_verses_uplifting.mjs";
 import { firebase_name } from "../../../love/public/src/firebase_name.mjs";
@@ -51,6 +52,7 @@ export async function app_reply_main() {
   let encouragement = bible_verses_uplifting();
   global_function_initialize(firebase_name, "jared-grace");
   let en = ebible_folder_english();
+  let bible_folder = bible_interlinear_verses_upload_folder();
   list_remove_property_multiple(languages, "language_code", ["en", "original"]);
   let file_name = ebible_index_flat_upload_name();
   let index = await firebase_storage_download_ebible(en, file_name);
