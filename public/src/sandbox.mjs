@@ -61,7 +61,7 @@ export async function sandbox() {
       verse_number: verse_start,
       text,
     };
-    log(message);
+    log(v);
     await ebible_firebase_upload_verse(v, chapter_code, bible_folder);
   }
   await each_object_async(verses, lambda);
