@@ -1,6 +1,5 @@
 import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { ebible_references_parse } from "../../../love/public/src/ebible_references_parse.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -39,8 +38,7 @@ export async function sandbox() {
     let filtered = list_filter(verse_words, lambda4);
     let mapped = list_map_property(filtered, original_property);
     object_property_set(verses2, vid, mapped);
-    let p = await ebible_references_parse(vid);
-    await ebible_references_parse_lines(bible_folders, lines);
+    let p = await ebible_references_parse_lines([], [vid]);
     log(p);
   }
   each_object(verses, lambda);
