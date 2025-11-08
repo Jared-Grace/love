@@ -1,3 +1,4 @@
+import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { ebible_references_names } from "../../../love/public/src/ebible_references_names.mjs";
@@ -43,8 +44,9 @@ export async function sandbox() {
       return exists;
     }
     let filtered = list_filter(verse_words, lambda4);
-    let text = list_map_property(filtered, original_property);
-    object_property_set(verses2, vid, text);
+    let mapped = list_map_property(filtered, original_property);
+    let joined = list_join_space(args);
+    object_property_set(verses2, vid, mapped);
     let { book_names, chapter_verses_list } = ebible_references_names(books, [
       vid,
     ]);
