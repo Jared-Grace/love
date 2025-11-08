@@ -11,7 +11,7 @@ export function ebible_references_names(books, lines) {
   function lambda(item) {
     const replacement = "Psalms ";
     const prefix = "Psalm ";
-    item = string_replace_if_starts_with(prefix, item, replacement);
+    let r = string_replace_if_starts_with(prefix, item, replacement);
   }
   let mapped = list_map(lines, lambda);
   let books_names = list_map_property(books, "text");
