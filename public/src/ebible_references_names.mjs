@@ -11,7 +11,8 @@ import { list_map_property } from "../../../love/public/src/list_map_property.mj
 export function ebible_references_names(books, lines) {
   function lambda(item) {
     let sw = string_starts_with(s, prefix);
-    let replaced = string_replace(item, "Psalm ", "Psalms ");
+    const prefix = "Psalm ";
+    let replaced = string_replace(item, prefix, "Psalms ");
   }
   let mapped = list_map(list, lambda);
   let books_names = list_map_property(books, "text");
