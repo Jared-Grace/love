@@ -1,4 +1,4 @@
-import { list_second } from "../../../love/public/src/list_second.mjs";
+import { list_single } from "../../../love/public/src/list_single.mjs";
 import { ebible_references_names } from "../../../love/public/src/ebible_references_names.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
@@ -44,7 +44,7 @@ export async function sandbox() {
     let mapped = list_map_property(filtered, original_property);
     object_property_set(verses2, vid, mapped);
     let { book_names } = ebible_references_names(books, [vid]);
-    let second = list_second(list);
+    let only = list_single(list);
     let { index, chapter_code, verse_start, verse_end } =
       ebible_reference_parts(books, book_name, chapter_verses);
     equal_assert(verse_start, verse_end);
