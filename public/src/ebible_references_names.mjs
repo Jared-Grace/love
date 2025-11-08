@@ -14,7 +14,8 @@ export function ebible_references_names(books, lines) {
       Psalms: ["Psalm"],
       Song: ["Song of Solomon"],
     };
-    each_object(object, function lambda2(value, property) {});
+    function lambda2(value, property) {}
+    each_object(object, lambda2);
     const replacement = "Psalms ";
     const prefix = "Psalm ";
     let r = string_replace_if_starts_with(prefix, item, replacement);
