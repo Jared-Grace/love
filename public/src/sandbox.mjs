@@ -1,3 +1,4 @@
+import { object_property_initialize_list } from "../../../love/public/src/object_property_initialize_list.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each_object_async } from "../../../love/public/src/each_object_async.mjs";
 import { ebible_firebase_upload_verse } from "../../../love/public/src/ebible_firebase_upload_verse.mjs";
@@ -28,7 +29,7 @@ export async function sandbox() {
   const vid_property = "Verse";
   let verses = list_to_lookup(vid_property, words);
   let sorts = ["Heb Sort", "Greek Sort"];
-  let verses2 = {};
+  let chapters = {};
   async function lambda(verse_words, v_number) {
     let first = list_first(verse_words);
     let vid = object_property_get(first, "VerseId");
@@ -48,7 +49,6 @@ export async function sandbox() {
     let filtered = list_filter(verse_words, lambda4);
     let mapped = list_map_property(filtered, original_property);
     let text = list_join_space(mapped);
-    object_property_set(verses2, vid, mapped);
     let { book_names, chapter_verses_list } = ebible_references_names(books, [
       vid,
     ]);
@@ -57,12 +57,17 @@ export async function sandbox() {
     let { index, chapter_code, verse_start, verse_end } =
       ebible_reference_parts(books, bn, cv);
     equal_assert(verse_start, verse_end);
-    let v = {
+    let verse = {
       verse_number: verse_start,
       text,
     };
-    log(v);
-    await ebible_firebase_upload_verse(v, chapter_code, bible_folder);
+    let value2 = object_property_initialize_list(verses2, vid2);
+    object_property_set(chapters, chapter_code, []);
+    log({
+      verse,
+      chapter_code,
+    });
+    await ebible_firebase_upload_verse(verse, chapter_code, bible_folder);
   }
   await each_object_async(verses, lambda);
 }
