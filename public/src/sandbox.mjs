@@ -32,7 +32,7 @@ export async function sandbox() {
       return exists;
     }
     let filtered = list_filter(verse_words, lambda4);
-    let mapped = list_map_property(list, property_name);
+    let mapped = list_map_property(filtered, original_property);
     let original = object_property_get(object, original_property);
   }
   each_object(verses, lambda);
