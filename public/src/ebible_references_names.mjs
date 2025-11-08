@@ -10,7 +10,8 @@ import { list_map_property } from "../../../love/public/src/list_map_property.mj
 export function ebible_references_names(books, lines) {
   function lambda(item) {
     let replacements = {
-      Psalm: "Psalms",
+      Psalms: ["Psalm"],
+      Song: ["Song of Solomon"],
     };
     const replacement = "Psalms ";
     const prefix = "Psalm ";
