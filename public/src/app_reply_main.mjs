@@ -51,6 +51,7 @@ export async function app_reply_main() {
   let encouragement = bible_verses_uplifting();
   global_function_initialize(firebase_name, "jared-grace");
   let en = ebible_folder_english();
+  ["en", "original"];
   list_remove_property(languages, "language_code", "en");
   let file_name = ebible_index_flat_upload_name();
   let index = await firebase_storage_download_ebible(en, file_name);
