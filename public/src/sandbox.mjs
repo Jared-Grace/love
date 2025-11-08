@@ -43,8 +43,8 @@ export async function sandbox() {
       return exists;
     }
     let filtered = list_filter(verse_words, lambda4);
-    let mapped = list_map_property(filtered, original_property);
-    object_property_set(verses2, vid, mapped);
+    let text = list_map_property(filtered, original_property);
+    object_property_set(verses2, vid, text);
     let { book_names, chapter_verses_list } = ebible_references_names(books, [
       vid,
     ]);
@@ -54,8 +54,6 @@ export async function sandbox() {
       ebible_reference_parts(books, bn, cv);
     equal_assert(verse_start, verse_end);
     log({
-      only: bn,
-      chapter_code,
       verse_start,
     });
   }
