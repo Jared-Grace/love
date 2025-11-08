@@ -16,9 +16,10 @@ export function ebible_references_names(books, lines) {
       Song: ["Song of Solomon"],
     };
     function lambda2(to, froms) {
-      function lambda3(item2) {}
-      each(list, lambda3);
-      let r = string_replace_if_starts_with(prefix, item + " ", to + " ");
+      function lambda3(from) {
+        let r = string_replace_if_starts_with(prefix, item + " ", to + " ");
+      }
+      each(froms, lambda3);
     }
     each_object(object, lambda2);
     return r;
