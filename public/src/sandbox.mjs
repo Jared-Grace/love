@@ -20,6 +20,7 @@ import { bible_interlinear_json_path } from "../../../love/public/src/bible_inte
 import { object_property_exists } from "./object_property_exists.mjs";
 export async function sandbox() {
   marker("1");
+  let bible_folder = "original";
   let books = await ebible_version_books("engbsb");
   let path_output = bible_interlinear_json_path();
   let words = await file_read_json(path_output);
