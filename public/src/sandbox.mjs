@@ -1,6 +1,5 @@
-import { each_object_async } from "../../../love/public/src/each_object_async.mjs";
-import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
-import { log } from "../../../love/public/src/log.mjs";
+import { ebible_reference_parts } from "../../../love/public/src/ebible_reference_parts.mjs";
+import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -8,11 +7,13 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
+import { each_object } from "../../../love/public/src/each_object.mjs";
 import { list_to_lookup } from "../../../love/public/src/list_to_lookup.mjs";
 import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
 import { bible_interlinear_json_path } from "../../../love/public/src/bible_interlinear_json_path.mjs";
 import { object_property_exists } from "./object_property_exists.mjs";
 export async function sandbox() {
+  let books = await ebible_version_books("engbsb");
   let path_output = bible_interlinear_json_path();
   let words = await file_read_json(path_output);
   const vid_property = "Verse";
@@ -38,8 +39,8 @@ export async function sandbox() {
     let filtered = list_filter(verse_words, lambda4);
     let mapped = list_map_property(filtered, original_property);
     object_property_set(verses2, vid, mapped);
-    let p = await ebible_references_parse_lines([], [vid]);
-    log(p);
+    let { index, chapter_code, verse_start, verse_end } =
+      ebible_reference_parts(books, book_name, chapter_verses);
   }
-  await each_object_async(verses, lambda);
+  each_object(verses, lambda);
 }
