@@ -50,9 +50,8 @@ export async function app_reply_main() {
   let languages = ebible_languages();
   let encouragement = bible_verses_uplifting();
   global_function_initialize(firebase_name, "jared-grace");
-  let en = ebible_folder_english();$a
-  let removals = ["en", "original"];
-  list_remove_property_multiple(languages, "language_code", removals);
+  let en = ebible_folder_english();
+  list_remove_property_multiple(languages, "language_code", ["en", "original"]);
   let file_name = ebible_index_flat_upload_name();
   let index = await firebase_storage_download_ebible(en, file_name);
   let books = await ebible_version_books(en);
