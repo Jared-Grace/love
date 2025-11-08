@@ -1,3 +1,4 @@
+import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
 import { each_object_async } from "../../../love/public/src/each_object_async.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { ebible_firebase_upload_verse } from "../../../love/public/src/ebible_firebase_upload_verse.mjs";
@@ -21,7 +22,7 @@ import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
 import { bible_interlinear_json_path } from "../../../love/public/src/bible_interlinear_json_path.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 export async function bible_interlinear_verses_upload() {
-  let bible_folder = "original";
+  let bible_folder = bible_interlinear_verses_upload_folder();
   let books = await ebible_version_books("engbsb");
   let path_output = bible_interlinear_json_path();
   let words = await file_read_json(path_output);
