@@ -42,7 +42,7 @@ export async function sandbox() {
     let filtered = list_filter(verse_words, lambda4);
     let mapped = list_map_property(filtered, original_property);
     object_property_set(verses2, vid, mapped);
-    ebible_references_names(books, lines);
+    ebible_references_names(books, []);
     let { index, chapter_code, verse_start, verse_end } =
       ebible_reference_parts(books, book_name, chapter_verses);
     equal_assert(verse_start, verse_end);
