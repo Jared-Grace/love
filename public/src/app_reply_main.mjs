@@ -1,3 +1,4 @@
+import { list_single } from "../../../love/public/src/list_single.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
 import { list_remove_property_multiple } from "../../../love/public/src/list_remove_property_multiple.mjs";
@@ -70,6 +71,7 @@ export async function app_reply_main() {
   async function verse_random_reset() {
     let reference = list_random_item(encouragement);
     let verses = await ebible_references_parse_lines([en], [reference]);
+    let only = list_single(list2);
     verses_list = [
       {
         verses,
