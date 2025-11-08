@@ -1,3 +1,4 @@
+import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { ebible_reference_parts } from "../../../love/public/src/ebible_reference_parts.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -41,7 +42,7 @@ export async function sandbox() {
     object_property_set(verses2, vid, mapped);
     let { index, chapter_code, verse_start, verse_end } =
       ebible_reference_parts(books, book_name, chapter_verses);
-    eat;
+    equal_assert(left, right);
   }
   each_object(verses, lambda);
 }
