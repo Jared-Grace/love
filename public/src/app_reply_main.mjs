@@ -53,7 +53,8 @@ export async function app_reply_main() {
   let en = ebible_folder_english();
   let removals = ["en", "original"];
   list_remove_property(languages, "language_code", "en");
-  each(list2, function lambda10(item4) {});
+  function lambda10(item4) {}
+  each(list2, lambda10);
   let file_name = ebible_index_flat_upload_name();
   let index = await firebase_storage_download_ebible(en, file_name);
   let books = await ebible_version_books(en);
