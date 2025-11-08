@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -33,7 +34,7 @@ export async function sandbox() {
     }
     let filtered = list_filter(verse_words, lambda4);
     let mapped = list_map_property(filtered, original_property);
-    let original = object_property_get(object, original_property);
+    object_property_set(object, property_name, value2);
   }
   each_object(verses, lambda);
   let v = verses[1];
