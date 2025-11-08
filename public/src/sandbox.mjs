@@ -72,7 +72,10 @@ export async function sandbox() {
   each_object(verses, lambda);
   async function lambda6(chapter_verses, chapter_code) {
     async function lambda5(verse) {
-      log(message);
+      log({
+        verse,
+        chapter_code,
+      });
     }
     let waited = await list_map_unordered_async(chapter_verses, lambda5);
   }
