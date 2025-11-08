@@ -23,10 +23,10 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
     ebible_version_books,
   );
   let books = await ebible_version_books(bible_folder);
-  let mapped = list_map_property(books, "text");
-  let verse_references = list_filter_starts_with_any(mapped, lines);
-  let book_names = list_map_prefix_any(verse_references, mapped);
-  let mapped2 = list_map_prefix_without_any(verse_references, mapped);
+  let books_names = list_map_property(books, "text");
+  let verse_references = list_filter_starts_with_any(books_names, lines);
+  let book_names = list_map_prefix_any(verse_references, books_names);
+  let mapped2 = list_map_prefix_without_any(verse_references, books_names);
   let mapped3 = list_map_split_space(mapped2);
   let mapped4 = list_map_filter_string_empty_not_is(mapped3);
   let chapter_verses_list = list_map_first(mapped4);
