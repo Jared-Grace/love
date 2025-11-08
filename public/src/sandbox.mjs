@@ -73,10 +73,8 @@ export async function sandbox() {
   }
   each_object(verses, lambda);
   async function lambda6(chapter_verses, chapter_code) {
-    let waited = await list_map_unordered_async(
-      list,
-      async function lambda5(item3) {},
-    );
+    async function lambda5(item3) {}
+    let waited = await list_map_unordered_async(list, lambda5);
   }
   await each_object_async(chapter_verses, lambda6);
   await ebible_firebase_upload_verse(verse, chapter_code, bible_folder);
