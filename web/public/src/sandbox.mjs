@@ -1,3 +1,4 @@
+import { ebible_references_names } from "../../../love/public/src/ebible_references_names.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { ebible_reference_parts } from "../../../love/public/src/ebible_reference_parts.mjs";
@@ -41,6 +42,7 @@ export async function sandbox() {
     let filtered = list_filter(verse_words, lambda4);
     let mapped = list_map_property(filtered, original_property);
     object_property_set(verses2, vid, mapped);
+    await ebible_references_names(books, lines);
     let { index, chapter_code, verse_start, verse_end } =
       ebible_reference_parts(books, book_name, chapter_verses);
     equal_assert(verse_start, verse_end);
