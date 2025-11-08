@@ -20,8 +20,9 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
     bible_folders,
     ebible_version_books,
   );
-  let { verse_references, books_names, books, book_names } =
-    await ebible_references_names(bible_folder, lines);
+  let books = await ebible_version_books(bible_folder);
+  let { verse_references, books_names, book_names } =
+    await ebible_references_names(books, lines);
   let mapped2 = list_map_prefix_without_any(verse_references, books_names);
   let mapped3 = list_map_split_space(mapped2);
   let mapped4 = list_map_filter_string_empty_not_is(mapped3);
