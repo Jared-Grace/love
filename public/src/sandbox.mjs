@@ -16,6 +16,7 @@ export async function sandbox() {
   const vid_property = "Verse";
   let verses = list_to_lookup(vid_property, words);
   let sorts = ["Heb Sort", "Greek Sort"];
+  let verses2 = {};
   function lambda(verse_words, v_number) {
     let first = list_first(verse_words);
     let vid = object_property_get(first, "VerseId");
@@ -34,7 +35,7 @@ export async function sandbox() {
     }
     let filtered = list_filter(verse_words, lambda4);
     let mapped = list_map_property(filtered, original_property);
-    object_property_set(object, property_name, value2);
+    object_property_set(verses2, vid, mapped);
   }
   each_object(verses, lambda);
   let v = verses[1];
