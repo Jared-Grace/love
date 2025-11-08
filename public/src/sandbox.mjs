@@ -1,3 +1,4 @@
+import { ebible_firebase_upload_verse } from "../../../love/public/src/ebible_firebase_upload_verse.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -26,7 +27,7 @@ export async function sandbox() {
   let verses = list_to_lookup(vid_property, words);
   let sorts = ["Heb Sort", "Greek Sort"];
   let verses2 = {};
-  function lambda(verse_words, v_number) {
+  async function lambda(verse_words, v_number) {
     let first = list_first(verse_words);
     let vid = object_property_get(first, "VerseId");
     function lambda3(sort) {
@@ -58,6 +59,7 @@ export async function sandbox() {
       verse_number: verse_start,
       text,
     };
+    await ebible_firebase_upload_verse(v, chapter_code, bible_folder);
   }
   each_object(verses, lambda);
 }
