@@ -44,7 +44,10 @@ export async function sandbox() {
     let { index, chapter_code, verse_start, verse_end } =
       ebible_reference_parts(books, book_name, chapter_verses);
     equal_assert(verse_start, verse_end);
-    log(message);
+    log({
+      chapter_code,
+      verse_start,
+    });
   }
   each_object(verses, lambda);
 }
