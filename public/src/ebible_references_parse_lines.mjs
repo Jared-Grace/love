@@ -7,10 +7,6 @@ import { each_range_from_async } from "../../../love/public/src/each_range_from_
 import { string_to } from "../../../love/public/src/string_to.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { list_map_first } from "../../../love/public/src/list_map_first.mjs";
-import { list_map_filter_string_empty_not_is } from "../../../love/public/src/list_map_filter_string_empty_not_is.mjs";
-import { list_map_split_space } from "../../../love/public/src/list_map_split_space.mjs";
-import { list_map_prefix_without_any } from "../../../love/public/src/list_map_prefix_without_any.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
@@ -25,10 +21,6 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
     books,
     lines,
   );
-  let mapped2 = list_map_prefix_without_any(verse_references, books_names);
-  let mapped3 = list_map_split_space(mapped2);
-  let mapped4 = list_map_filter_string_empty_not_is(mapped3);
-  let chapter_verses_list = list_map_first(mapped4);
   async function lambda2(la) {
     async function lambda(book_name, chapter_verses) {
       let { index, chapter_code, verse_start, verse_end } =
