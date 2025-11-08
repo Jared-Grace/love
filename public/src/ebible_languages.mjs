@@ -110,7 +110,7 @@ export function ebible_languages() {
     {
       name: "Chichewa",
       bible_folder: "nya",
-      language_code: "",
+      language_code: "ny",
     },
   ];
   return languages;
