@@ -1,3 +1,4 @@
+import { list_remove_property_multiple } from "../../../love/public/src/list_remove_property_multiple.mjs";
 import { bible_verses_uplifting } from "../../../love/public/src/bible_verses_uplifting.mjs";
 import { firebase_name } from "../../../love/public/src/firebase_name.mjs";
 import { global_function_initialize } from "../../../love/public/src/global_function_initialize.mjs";
@@ -10,7 +11,6 @@ import { ebible_chapter_code_to_name } from "../../../love/public/src/ebible_cha
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { firebase_storage_download_ebible } from "../../../love/public/src/firebase_storage_download_ebible.mjs";
-import { list_remove_property } from "../../../love/public/src/list_remove_property.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { string_take_less_1 } from "../../../love/public/src/string_take_less_1.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -53,10 +53,7 @@ export async function app_reply_main() {
   let en = ebible_folder_english();
   let removals = ["en", "original"];
   const property_name = "language_code";
-  function lambda10(r) {
-    list_remove_property(languages, property_name, r);
-  }
-  each(removals, lambda10);
+  list_remove_property_multiple(languages, property_name, removals);
   let file_name = ebible_index_flat_upload_name();
   let index = await firebase_storage_download_ebible(en, file_name);
   let books = await ebible_version_books(en);
