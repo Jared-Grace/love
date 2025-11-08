@@ -48,13 +48,13 @@ export async function sandbox() {
     let { book_names, chapter_verses_list } = ebible_references_names(books, [
       vid,
     ]);
-    let only = list_single(book_names);
-    let only2 = list_single(list);
+    let bn = list_single(book_names);
+    let cv = list_single(chapter_verses_list);
     let { index, chapter_code, verse_start, verse_end } =
-      ebible_reference_parts(books, only, chapter_verses);
+      ebible_reference_parts(books, bn, cv);
     equal_assert(verse_start, verse_end);
     log({
-      only,
+      only: bn,
       chapter_code,
       verse_start,
     });
