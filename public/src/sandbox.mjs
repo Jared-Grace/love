@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { ebible_references_names } from "../../../love/public/src/ebible_references_names.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -17,6 +18,7 @@ import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
 import { bible_interlinear_json_path } from "../../../love/public/src/bible_interlinear_json_path.mjs";
 import { object_property_exists } from "./object_property_exists.mjs";
 export async function sandbox() {
+  marker("1");
   let books = await ebible_version_books("engbsb");
   let path_output = bible_interlinear_json_path();
   let words = await file_read_json(path_output);
