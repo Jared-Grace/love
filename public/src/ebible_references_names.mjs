@@ -12,9 +12,9 @@ export function ebible_references_names(books, lines) {
   function lambda(item) {
     const prefix = "Psalm ";
     let sw = string_starts_with(s, prefix);
-    if (false) {
+    if (sw) {
+      item = string_replace(item, prefix, "Psalms ");
     }
-    let replaced = string_replace(item, prefix, "Psalms ");
   }
   let mapped = list_map(list, lambda);
   let books_names = list_map_property(books, "text");
