@@ -2,7 +2,6 @@ import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { ebible_references_names } from "../../../love/public/src/ebible_references_names.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { ebible_reference_parts } from "../../../love/public/src/ebible_reference_parts.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
@@ -55,10 +54,10 @@ export async function sandbox() {
     let { index, chapter_code, verse_start, verse_end } =
       ebible_reference_parts(books, bn, cv);
     equal_assert(verse_start, verse_end);
-    log({
+    let v = {
       verse_number: verse_start,
       text,
-    });
+    };
   }
   each_object(verses, lambda);
 }
