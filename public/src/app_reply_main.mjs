@@ -76,7 +76,9 @@ export async function app_reply_main() {
         reference,
       },
     ];
-    log({verses_list});
+    log({
+      verses_list,
+    });
   }
   function lambda6(event) {
     let key = object_property_get(event, "key");
