@@ -9,6 +9,9 @@ import { list_filter_starts_with_any } from "../../../love/public/src/list_filte
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 export function ebible_references_names(books, lines) {
   function lambda(item) {
+    let replacements = {
+      Psalm: "Psalms",
+    };
     const replacement = "Psalms ";
     const prefix = "Psalm ";
     let r = string_replace_if_starts_with(prefix, item, replacement);
