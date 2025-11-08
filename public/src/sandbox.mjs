@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { each_object_async } from "../../../love/public/src/each_object_async.mjs";
 import { ebible_firebase_upload_verse } from "../../../love/public/src/ebible_firebase_upload_verse.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
@@ -60,6 +61,7 @@ export async function sandbox() {
       verse_number: verse_start,
       text,
     };
+    log(message);
     await ebible_firebase_upload_verse(v, chapter_code, bible_folder);
   }
   await each_object_async(verses, lambda);
