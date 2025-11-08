@@ -37,7 +37,7 @@ export async function sandbox() {
     let filtered = list_filter(verse_words, lambda4);
     let mapped = list_map_property(filtered, original_property);
     object_property_set(verses2, vid, mapped);
-    let p = await ebible_references_parse(vid);
+    let p = await ebible_references_parse(vid);l
   }
   each_object(verses, lambda);
 }
