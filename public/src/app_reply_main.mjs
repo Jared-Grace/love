@@ -77,6 +77,7 @@ export async function app_reply_main() {
       },
     ];
     let v = await app_reply_main_verse_add(verses_list, original);
+    list_add_first(verses_list, v);
     log({
       verses_list,
     });
@@ -107,14 +108,8 @@ export async function app_reply_main() {
     let bible_folder2 = object_property_get(item2, "bible_folder");
     let language_code = object_property_get(item2, "language_code");
     async function lambda7() {
-      let { verses, reference } = await app_reply_main_verse_add(
-        verses_list,
-        bible_folder2,
-      );
-      list_add_first(verses_list, {
-        verses,
-        reference,
-      });
+      let v = await app_reply_main_verse_add(verses_list, bible_folder2);
+      list_add_first(verses_list, v);
       list_add_first(languages_chosens, language_code);
       await preview_refresh();
     }
