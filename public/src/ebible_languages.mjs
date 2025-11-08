@@ -107,6 +107,11 @@ export function ebible_languages() {
       bible_folder: "pan",
       language_code: "pa",
     },
+    {
+      name: "Chichewa",
+      bible_folder: "nya",
+      language_code: "",
+    },
   ];
   return languages;
 }
