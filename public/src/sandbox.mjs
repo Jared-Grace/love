@@ -39,7 +39,7 @@ export async function sandbox() {
     let mapped = list_map_property(filtered, original_property);
     object_property_set(verses2, vid, mapped);
     let p = await ebible_references_parse(vid);
-    log(message);
+    log(p);
   }
   each_object(verses, lambda);
 }
