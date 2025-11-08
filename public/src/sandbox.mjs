@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { each_object_async } from "../../../love/public/src/each_object_async.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
@@ -72,14 +71,10 @@ export async function sandbox() {
   each_object(verses, lambda);
   async function lambda6(chapter_verses, chapter_code) {
     async function lambda5(verse) {
-      log({
-        verse,
-        chapter_code,
-      });
+      await ebible_firebase_upload_verse(verse, chapter_code, bible_folder);
     }
     let waited = await list_map_unordered_async(chapter_verses, lambda5);
   }
   await each_object_async(chapters, lambda6);
   return;
-  await ebible_firebase_upload_verse(verse, chapter_code, bible_folder);
 }
