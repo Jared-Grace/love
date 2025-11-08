@@ -49,9 +49,9 @@ export async function sandbox() {
       ebible_reference_parts(books, only, chapter_verses);
     equal_assert(verse_start, verse_end);
     log({
+      only,
       chapter_code,
       verse_start,
-      only,
     });
   }
   each_object(verses, lambda);
