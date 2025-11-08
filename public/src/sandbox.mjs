@@ -56,7 +56,7 @@ export async function sandbox() {
       ebible_reference_parts(books, bn, cv);
     equal_assert(verse_start, verse_end);
     log({
-      verse_start,
+      verse_number: verse_start,
       text,
     });
   }
