@@ -8,6 +8,11 @@ export function ebible_languages() {
       language_code: "en",
     },
     {
+      name: "Original",
+      bible_folder: "original",
+      language_code: "original",
+    },
+    {
       name: "Urdu",
       bible_folder: ebible_folder_urdu(),
       language_code: "ur",
@@ -100,7 +105,7 @@ export function ebible_languages() {
     {
       name: "Punjabi",
       bible_folder: "pan",
-  language_code: "pa",
+      language_code: "pa",
     },
   ];
   return languages;
