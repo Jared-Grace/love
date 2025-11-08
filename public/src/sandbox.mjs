@@ -26,7 +26,7 @@ export async function sandbox() {
   let verses = list_to_lookup(vid_property, words);
   let sorts = ["Heb Sort", "Greek Sort"];
   let verses2 = {};
-  async function lambda(verse_words, v_number) {
+  function lambda(verse_words, v_number) {
     let first = list_first(verse_words);
     let vid = object_property_get(first, "VerseId");
     function lambda3(sort) {
