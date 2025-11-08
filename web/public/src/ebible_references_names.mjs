@@ -14,10 +14,8 @@ export function ebible_references_names(books, lines) {
   let mapped4 = list_map_filter_string_empty_not_is(mapped3);
   let chapter_verses_list = list_map_first(mapped4);
   let v = {
-    verse_references,
-    books_names,
-    book_names,
     chapter_verses_list,
+    book_names,
   };
   return v;
 }
