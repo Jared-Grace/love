@@ -17,12 +17,12 @@ export function ebible_references_names(books, lines) {
     };
     function lambda2(to, froms) {
       function lambda3(from) {
-        let r = string_replace_if_starts_with(prefix, item + " ", to + " ");
+        item = string_replace_if_starts_with(prefix, from + " ", to + " ");
       }
       each(froms, lambda3);
     }
-    each_object(object, lambda2);
-    return r;
+    each_object(replacements, lambda2);
+    return item;
   }
   let mapped = list_map(lines, lambda);
   let books_names = list_map_property(books, "text");
