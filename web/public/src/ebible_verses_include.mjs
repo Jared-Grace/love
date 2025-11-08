@@ -16,6 +16,7 @@ export function ebible_verses_include() {
     "nd",
     "p",
     "pi",
+    "pi3",
     "pc",
     "pm",
     "pmc",
