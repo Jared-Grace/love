@@ -1,3 +1,4 @@
+import { string_replace } from "../../../love/public/src/string_replace.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_first } from "../../../love/public/src/list_map_first.mjs";
 import { list_map_filter_string_empty_not_is } from "../../../love/public/src/list_map_filter_string_empty_not_is.mjs";
@@ -7,7 +8,9 @@ import { list_map_prefix_any } from "../../../love/public/src/list_map_prefix_an
 import { list_filter_starts_with_any } from "../../../love/public/src/list_filter_starts_with_any.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 export function ebible_references_names(books, lines) {
-  function lambda(item) {}
+  function lambda(item) {
+    let replaced = string_replace(s, from, to);
+  }
   let mapped = list_map(list, lambda);
   let books_names = list_map_property(books, "text");
   let verse_references = list_filter_starts_with_any(books_names, lines);
