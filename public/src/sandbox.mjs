@@ -38,6 +38,5 @@ export async function sandbox() {
     object_property_set(verses2, vid, mapped);
   }
   each_object(verses, lambda);
-  let v = verses[1];
-  return v;
+  return verses2;
 }
