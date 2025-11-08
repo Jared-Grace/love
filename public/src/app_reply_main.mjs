@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
 import { list_remove_property_multiple } from "../../../love/public/src/list_remove_property_multiple.mjs";
 import { bible_verses_uplifting } from "../../../love/public/src/bible_verses_uplifting.mjs";
@@ -75,6 +76,7 @@ export async function app_reply_main() {
         reference,
       },
     ];
+    log(message);
   }
   function lambda6(event) {
     let key = object_property_get(event, "key");
