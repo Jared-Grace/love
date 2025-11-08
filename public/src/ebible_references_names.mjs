@@ -10,10 +10,11 @@ import { list_filter_starts_with_any } from "../../../love/public/src/list_filte
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 export function ebible_references_names(books, lines) {
   function lambda(item) {
+    const replacement = "Psalms ";
     const prefix = "Psalm ";
     let sw = string_starts_with(s, prefix);
     if (sw) {
-      item = string_replace(item, prefix, "Psalms ");
+      item = string_replace(item, prefix, replacement);
     }
   }
   let mapped = list_map(list, lambda);
