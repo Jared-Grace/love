@@ -76,7 +76,7 @@ export async function app_reply_main() {
         reference,
       },
     ];
-    app_reply_main_verse_add(verses_list, original);
+    let v = await app_reply_main_verse_add(verses_list, original);
     log({
       verses_list,
     });
