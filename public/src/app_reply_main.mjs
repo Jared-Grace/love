@@ -1,3 +1,4 @@
+import { html_span } from "../../../love/public/src/html_span.mjs";
 import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
 import { list_remove_property_multiple } from "../../../love/public/src/list_remove_property_multiple.mjs";
 import { bible_verses_uplifting } from "../../../love/public/src/bible_verses_uplifting.mjs";
@@ -99,7 +100,7 @@ export async function app_reply_main() {
   }
   let component3 = html_button(root, "Reset", lambda4);
   let component2 = html_button(root, "Copy", preview_refresh);
-  hs;
+  let component5 = html_span(parent);
   function lambda5(item2) {
     let name2 = object_property_get(item2, "name");
     let bible_folder2 = object_property_get(item2, "bible_folder");
