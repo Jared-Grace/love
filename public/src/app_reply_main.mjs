@@ -113,11 +113,11 @@ export async function app_reply_main() {
       let language_code = object_property_get(item2, "language_code");
       let language_button = null;
       async function lambda7() {
+        html_remove(language_button);
         let v = await app_reply_main_verse_add(verses_list, bible_folder2);
         list_add_first(verses_list, v);
         list_add_first(languages_chosens, language_code);
         await preview_refresh();
-        html_remove(language_button);
       }
       language_button = html_button(component_languages, name2, lambda7);
     }
