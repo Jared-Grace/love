@@ -97,6 +97,7 @@ export async function app_reply_main() {
     typed = "";
     buttons_refresh();
     preview_refresh();
+    languages_reset();
   }
   let component3 = html_button(root, "Reset", lambda4);
   let component2 = html_button(root, "Copy", preview_refresh);
@@ -115,7 +116,7 @@ export async function app_reply_main() {
         list_add_first(languages_chosens, language_code);
         await preview_refresh();
       }
-      let component4 = html_button(component_languages, name2, lambda7);
+      let language_button = html_button(component_languages, name2, lambda7);
     }
     each(languages, lambda5);
   }
