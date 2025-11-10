@@ -115,8 +115,9 @@ export async function app_reply_main() {
         list_add_first(verses_list, v);
         list_add_first(languages_chosens, language_code);
         await preview_refresh();
-      }$s
-      let language_button = html_button(component_languages, name2, lambda7);
+      }
+      let language_button = null;
+      language_button = html_button(component_languages, name2, lambda7);
     }
     each(languages, lambda5);
   }
