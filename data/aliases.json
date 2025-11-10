@@ -250,6 +250,7 @@
   "hdb": "html_document_body",
   "apr": "autopray",
   "sto": "string_to",
-  "eqa": "equal_assert"
+  "eqa": "equal_assert",
+  "hs": "html_span"
  }
 }
