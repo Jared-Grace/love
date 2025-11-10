@@ -99,6 +99,7 @@ export async function app_reply_main() {
   }
   let component3 = html_button(root, "Reset", lambda4);
   let component2 = html_button(root, "Copy", preview_refresh);
+  hs;
   function lambda5(item2) {
     let name2 = object_property_get(item2, "name");
     let bible_folder2 = object_property_get(item2, "bible_folder");
