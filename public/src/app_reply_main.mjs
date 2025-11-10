@@ -1,3 +1,4 @@
+import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
 import { list_remove_property_multiple } from "../../../love/public/src/list_remove_property_multiple.mjs";
@@ -110,13 +111,14 @@ export async function app_reply_main() {
       let name2 = object_property_get(item2, "name");
       let bible_folder2 = object_property_get(item2, "bible_folder");
       let language_code = object_property_get(item2, "language_code");
+      let language_button = null;
       async function lambda7() {
         let v = await app_reply_main_verse_add(verses_list, bible_folder2);
         list_add_first(verses_list, v);
         list_add_first(languages_chosens, language_code);
         await preview_refresh();
+        html_remove(component4);
       }
-      let language_button = null;
       language_button = html_button(component_languages, name2, lambda7);
     }
     each(languages, lambda5);
