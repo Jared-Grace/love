@@ -100,7 +100,8 @@ export async function app_reply_main() {
   }
   let component3 = html_button(root, "Reset", lambda4);
   let component2 = html_button(root, "Copy", preview_refresh);
-  let component5 = html_span(parent);
+  let component_languages = html_span(root);
+  html_clear(element);
   function lambda5(item2) {
     let name2 = object_property_get(item2, "name");
     let bible_folder2 = object_property_get(item2, "bible_folder");
@@ -111,7 +112,7 @@ export async function app_reply_main() {
       list_add_first(languages_chosens, language_code);
       await preview_refresh();
     }
-    let component4 = html_button(root, name2, lambda7);
+    let component4 = html_button(component_languages, name2, lambda7);
   }
   each(languages, lambda5);
   marker("1");
