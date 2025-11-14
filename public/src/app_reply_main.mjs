@@ -1,5 +1,4 @@
 import { html_disable } from "../../../love/public/src/html_disable.mjs";
-import { html_enable_if } from "../../../love/public/src/html_enable_if.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
 import { list_remove_property_multiple } from "../../../love/public/src/list_remove_property_multiple.mjs";
@@ -9,6 +8,7 @@ import { global_function_initialize } from "../../../love/public/src/global_func
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
+import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { ebible_chapter_code_to_name } from "../../../love/public/src/ebible_chapter_code_to_name.mjs";
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
@@ -130,8 +130,8 @@ export async function app_reply_main() {
       let lower = string_lower_to(letters);
       let sw = string_starts_with(lower, typed);
       let includes = list_includes(chosens, item);
-      const condition = not(includes) && sw;
-      html_enable_if(item, condition);
+      const condition = includes || not(sw);
+      html_display_none_or_block(condition, item);
     }
     each(buttons, lambda2);
   }
