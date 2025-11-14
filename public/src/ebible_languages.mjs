@@ -112,6 +112,11 @@ export function ebible_languages() {
       bible_folder: "nya",
       language_code: "ny",
     },
+    {
+      name: "Portuguese",
+      bible_folder: "porbrbsl",
+      language_code: "pt",
+    },
   ];
   return languages;
 }
