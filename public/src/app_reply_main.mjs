@@ -101,6 +101,7 @@ export async function app_reply_main() {
   }
   let component4 = html_button(root, "❤️", love);
   let component3 = html_button(root, "Reset", reset);
+  html_button(root, "Reset1", reset);
   async function reset_language_keep() {
     await verse_random_reset();
     list_empty(copied);
@@ -128,7 +129,6 @@ export async function app_reply_main() {
     let list2 = await list_adder_multiple_async(lambda10);
     await list_join_newline_2_copy(list2);
   }
-  let component5 = html_button(root, "Extra", reset_language_keep);
   let component2 = html_button(root, "Copy", preview_refresh);
   let component_languages = html_span(root);
   languages_reset();
