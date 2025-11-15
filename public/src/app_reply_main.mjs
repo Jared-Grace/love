@@ -211,7 +211,8 @@ export async function app_reply_main() {
       let verse_texts = list_map_property(verses3, "text");
       list_add_multiple(other, verse_texts);
       let translations2 = object_property_get(v, "translations");
-      each(list3, function lambda12(item2) {});
+      function lambda12(item2) {}
+      each(list3, lambda12);
       list_add_multiple(other, translations2);
     }
     each(verses_list, lambda11);
