@@ -124,7 +124,7 @@ export async function app_reply_main() {
     await list_join_newline_2_copy(list2);
   }
   function lambda12() {}
-  let component5 = html_button(parent, text3, lambda12);
+  let component5 = html_button(parent, "Extra", lambda12);
   let component2 = html_button(root, "Copy", preview_refresh);
   let component_languages = html_span(root);
   languages_reset();
