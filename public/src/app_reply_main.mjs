@@ -74,6 +74,7 @@ export async function app_reply_main() {
   async function verse_random_reset_1() {
     verse_random_reset();
     await verse_random_add();
+    await each_range_async(count, async function lambda12() {});
   }
   function verse_random_reset() {
     verses_list = [];
