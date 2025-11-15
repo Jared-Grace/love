@@ -104,7 +104,8 @@ export async function app_reply_main() {
   }
   let component3 = html_button(root, "Reset", reset);
   async function lambda11() {
-    let list2 = await list_adder_multiple_async(async function lambda10(la) {});
+    async function lambda10(la) {}
+    let list2 = await list_adder_multiple_async(lambda10);
     await reset();
     let codes = ["tgl", "ceb"];
     async function lambda4(code) {
