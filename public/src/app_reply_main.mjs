@@ -1,3 +1,4 @@
+import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { each_range_async } from "../../../love/public/src/each_range_async.mjs";
 import { list_adder_multiple_async } from "../../../love/public/src/list_adder_multiple_async.mjs";
@@ -208,6 +209,7 @@ export async function app_reply_main() {
       let reference = object_property_get(v, "reference");
       list_add(other, reference);
       verses_add(v);
+      let exists = object_property_exists(object, property_name);
       let translations2 = object_property_get(v, "translations");
       each(translations2, verses_add);
     }
