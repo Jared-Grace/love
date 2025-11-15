@@ -1,3 +1,4 @@
+import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { each_range_async } from "../../../love/public/src/each_range_async.mjs";
 import { list_adder_multiple_async } from "../../../love/public/src/list_adder_multiple_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -46,7 +47,6 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
-import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -179,8 +179,7 @@ export async function app_reply_main() {
   buttons_refresh();
   async function preview_refresh() {
     let concated = concated_get();
-    let joined = list_join_newline_2(concated);
-    await clipboard_copy(joined);
+    let joined = await list_join_newline_2_copy(concated);
     html_clear(preview);
     html_p_text_multiple(preview, concated);
     html_text_set(preview, joined);
