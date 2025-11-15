@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { each_range_async } from "../../../love/public/src/each_range_async.mjs";
 import { list_adder_multiple_async } from "../../../love/public/src/list_adder_multiple_async.mjs";
@@ -10,7 +9,6 @@ import { list_remove_property_multiple } from "../../../love/public/src/list_rem
 import { bible_verses_uplifting } from "../../../love/public/src/bible_verses_uplifting.mjs";
 import { firebase_name } from "../../../love/public/src/firebase_name.mjs";
 import { global_function_initialize } from "../../../love/public/src/global_function_initialize.mjs";
-import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
@@ -214,13 +212,7 @@ export async function app_reply_main() {
       let verse_text = list_join_newline_2(verse_texts);
       list_add(other, verse_text);
     }
-    log({
-      other,
-    });
     each(verses_list, lambda11);
-    let squashed = list_squash(verses);
-    let verse_texts = list_map_property(squashed, "text");
-    list_add_first(verse_texts, reference);
     let ne = list_empty_not_is(languages_chosens);
     if (ne) {
       list_add(other, languages_chosens);
