@@ -73,16 +73,11 @@ export async function app_reply_main() {
   let typed = "";
   async function verse_random_reset_1() {
     reset();
-    verse_random_reset();
     await verse_random_add();
   }
   async function verse_random_reset_2() {
     reset();
-    verse_random_reset();
     await each_range_async(2, verse_random_add);
-  }
-  function verse_random_reset() {
-    verses_list = [];
   }
   async function verse_random_add() {
     let reference = list_random_item(encouragement);
@@ -105,6 +100,7 @@ export async function app_reply_main() {
   }
   html_on_keydown(root, lambda6);
   async function reset() {
+    verses_list = [];
     list_empty(copied);
     list_empty(chosens);
     list_empty(languages_chosens);
