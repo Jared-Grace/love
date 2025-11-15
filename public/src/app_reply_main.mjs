@@ -210,10 +210,10 @@ export async function app_reply_main() {
       list_add(other, reference);
       verses_add(v);
       let exists = object_property_exists(v, "translations");
-      if (false) {
+      if (exists) {
+        let translations2 = object_property_get(v, "translations");
+        each(translations2, verses_add);
       }
-      let translations2 = object_property_get(v, "translations");
-      each(translations2, verses_add);
     }
     each(verses_list, lambda11);
     let ne = list_empty_not_is(languages_chosens);
