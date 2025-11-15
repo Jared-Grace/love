@@ -251,6 +251,7 @@
   "apr": "autopray",
   "sto": "string_to",
   "eqa": "equal_assert",
-  "hs": "html_span"
+  "hs": "html_span",
+  "ldm": "list_adder_multiple"
  }
 }
