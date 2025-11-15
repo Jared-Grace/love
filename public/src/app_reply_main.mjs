@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { each_range_async } from "../../../love/public/src/each_range_async.mjs";
 import { list_adder_multiple_async } from "../../../love/public/src/list_adder_multiple_async.mjs";
@@ -213,6 +214,7 @@ export async function app_reply_main() {
       let verse_text = list_join_newline_2(verse_texts);
       list_add(other, verse_text);
     }
+    log(message);
     each(verses_list, lambda11);
     let squashed = list_squash(verses);
     let verse_texts = list_map_property(squashed, "text");
