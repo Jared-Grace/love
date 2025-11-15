@@ -193,8 +193,6 @@ export async function app_reply_main() {
     html_text_set(preview, joined);
   }
   function concated_get() {
-    let verses_list_first = list_first(verses_list);
-    let reference = object_property_get(verses_list_first, "reference");
     if (false) {
       function lambda9(item3) {}
       each(list, lambda9);
@@ -208,6 +206,8 @@ export async function app_reply_main() {
     }
     const other = [];
     function lambda11(v) {
+      let reference = object_property_get(v, "reference");
+      list_add(other, reference);
       let verses3 = object_property_get(v, "verses");
       let verse_texts = list_map_property(verses3, "text");
       let verse_text = list_join_newline_2(verse_texts);
