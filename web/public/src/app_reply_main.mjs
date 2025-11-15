@@ -97,7 +97,7 @@ export async function app_reply_main() {
     await reset_language_keep();
     languages_reset();
   }
-  let component4 = html_button(root, "love", love);
+  let component4 = html_button(root, "❤️", love);
   let component3 = html_button(root, "Reset", reset);
   async function reset_language_keep() {
     await verse_random_reset();
