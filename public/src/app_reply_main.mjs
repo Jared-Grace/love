@@ -249,6 +249,7 @@ export async function app_reply_main() {
         verses,
         reference,
       };
+      let translations3 = object_property_get(v_item, "translations");
       function lambda14(item2) {}
       each(list3, lambda14);
     }
