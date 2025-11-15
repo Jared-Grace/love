@@ -87,6 +87,7 @@ export async function app_reply_main() {
       reference,
       translations,
     });
+    return;
     let v = await app_reply_main_verse_add(verses_list, original);
   }
   function lambda6(event) {
