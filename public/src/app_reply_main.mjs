@@ -90,7 +90,7 @@ export async function app_reply_main() {
     buttons_refresh();
   }
   html_on_keydown(root, lambda6);
-  async function lambda4() {
+  async function reset() {
     await verse_random_reset();
     list_empty(copied);
     list_empty(chosens);
@@ -100,7 +100,7 @@ export async function app_reply_main() {
     preview_refresh();
     languages_reset();
   }
-  let component3 = html_button(root, "Reset", lambda4);
+  let component3 = html_button(root, "Reset", reset);
   function lambda11() {}
   let component4 = html_button(parent, "love", lambda11);
   let component2 = html_button(root, "Copy", preview_refresh);
