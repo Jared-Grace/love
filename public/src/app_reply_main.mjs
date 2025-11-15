@@ -104,16 +104,17 @@ export async function app_reply_main() {
   }
   let component3 = html_button(root, "Reset", reset);
   async function lambda11() {
-    async function lambda10(la) {}
-    let list2 = await list_adder_multiple_async(lambda10);
-    await reset();
-    let codes = ["tgl", "ceb"];
-    async function lambda4(code) {
-      let language = list_find_property(languages, "language_code", code);
-      await language_choose(language);
+    async function lambda10(la) {
+      await reset();
+      let codes = ["tgl", "ceb"];
+      async function lambda4(code) {
+        let language = list_find_property(languages, "language_code", code);
+        await language_choose(language);
+      }
+      await each_async(codes, lambda4);
+      let concated = concated_get();
     }
-    await each_async(codes, lambda4);
-    let concated = concated_get();
+    let list2 = await list_adder_multiple_async(lambda10);
   }
   let component4 = html_button(parent, "love", lambda11);
   let component2 = html_button(root, "Copy", preview_refresh);
