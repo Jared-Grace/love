@@ -249,7 +249,7 @@ export async function app_reply_main() {
         reference,
       };
       let translations3 = object_property_get(v_item, "translations");
-      list_add(translations3, v);
+      list_add_first(translations3, v);
     }
     await each_async(verses_list, lambda12);
   }
