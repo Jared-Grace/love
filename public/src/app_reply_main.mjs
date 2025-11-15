@@ -211,8 +211,7 @@ export async function app_reply_main() {
       let verses3 = object_property_get(v, "verses");
       let verse_texts = list_map_property(verses3, "text");
       let verse_text = list_join_newline_2(verse_texts);
-      const other = [verse_text];
-      list_add(list3, item2);
+      list_add(other, verse_text);
     }
     each(verses_list, lambda11);
     let squashed = list_squash(verses);
