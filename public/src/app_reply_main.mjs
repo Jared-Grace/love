@@ -75,12 +75,10 @@ export async function app_reply_main() {
     verses_list = [];
     let reference = list_random_item(encouragement);
     let verses = await ebible_references_parse_lines([en], [reference]);
-    verses_list = [
-      {
-        verses,
-        reference,
-      },
-    ];
+    list_add(verses_list, {
+      verses,
+      reference,
+    });
     let v = await app_reply_main_verse_add(verses_list, original);
     list_add(verses_list, v);
   }
