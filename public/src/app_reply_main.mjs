@@ -88,7 +88,6 @@ export async function app_reply_main() {
       translations,
     });
     let v = await app_reply_main_verse_add(verses_list, original);
-    list_add(translations, v);
   }
   function lambda6(event) {
     let key = object_property_get(event, "key");
