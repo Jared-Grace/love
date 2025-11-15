@@ -63,7 +63,7 @@ export async function app_reply_main() {
   let index = await firebase_storage_download_ebible(en, file_name);
   let books = await ebible_version_books(en);
   let verses_list = null;
-  await verse_random_reset();
+  await verse_random_reset_1();
   const root = html_document_body();
   let copied = [];
   let languages_chosens = [];
@@ -71,9 +71,12 @@ export async function app_reply_main() {
   let preview = null;
   let chosens = [];
   let typed = "";
-  async function verse_random_reset() {
-    verses_list = [];
+  async function verse_random_reset_1() {
+    verse_random_reset();
     await verse_random_add();
+  }
+  function verse_random_reset() {
+    verses_list = [];
   }
   async function verse_random_add() {
     let reference = list_random_item(encouragement);
@@ -96,7 +99,7 @@ export async function app_reply_main() {
   }
   html_on_keydown(root, lambda6);
   async function reset() {
-    await verse_random_reset();
+    await verse_random_reset_1();
     list_empty(copied);
     list_empty(chosens);
     list_empty(languages_chosens);
