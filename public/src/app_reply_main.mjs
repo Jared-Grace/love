@@ -231,6 +231,7 @@ export async function app_reply_main() {
     }
   }
   async function app_reply_main_verse_add(verses_list, bible_folder2) {
+    return;
     async function lambda12(v_item) {
       let verses2 = object_property_get(v_item, "verses");
       let reference = object_property_get(v_item, "reference");
