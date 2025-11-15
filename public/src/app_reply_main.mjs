@@ -107,7 +107,8 @@ export async function app_reply_main() {
     await reset();
     let codes = ["tgl", "ceb"];
     async function lambda4(code) {
-      let only = list_find(list2, function lambda10(item2) {});
+      function lambda10(item2) {}
+      let only = list_find(list2, lambda10);
     }
     await each_async(codes, lambda4);
     await language_choose(language);
