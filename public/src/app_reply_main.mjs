@@ -1,3 +1,4 @@
+import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { html_disable } from "../../../love/public/src/html_disable.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
@@ -103,6 +104,7 @@ export async function app_reply_main() {
   }
   let component3 = html_button(root, "Reset", reset);
   async function lambda11() {
+    list_add_multiple(list2, items);
     await reset();
     let codes = ["tgl", "ceb"];
     async function lambda4(code) {
@@ -110,6 +112,7 @@ export async function app_reply_main() {
       await language_choose(language);
     }
     await each_async(codes, lambda4);
+    let concated = concated_get();
   }
   let component4 = html_button(parent, "love", lambda11);
   let component2 = html_button(root, "Copy", preview_refresh);
