@@ -209,7 +209,9 @@ export async function app_reply_main() {
       let reference = object_property_get(v, "reference");
       list_add(other, reference);
       verses_add(v);
-      let exists = object_property_exists(object, property_name);
+      let exists = object_property_exists(v, "translations");
+      if (false) {
+      }
       let translations2 = object_property_get(v, "translations");
       each(translations2, verses_add);
     }
