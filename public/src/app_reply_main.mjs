@@ -101,6 +101,7 @@ export async function app_reply_main() {
     languages_reset();
   }
   let component3 = html_button(root, "Reset", lambda4);
+  let component4 = html_button(parent, text3, function lambda11() {});
   let component2 = html_button(root, "Copy", preview_refresh);
   let component_languages = html_span(root);
   languages_reset();
