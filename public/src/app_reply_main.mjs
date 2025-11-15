@@ -107,7 +107,7 @@ export async function app_reply_main() {
     await reset();
     let codes = ["tgl", "ceb"];
     async function lambda4(code) {
-      let filtered = list_filter_property(list2, property_name, property_value);
+      let filtered = list_filter_property(languages, "language_code", code);
     }
     await each_async(codes, lambda4);
     await language_choose(language);
