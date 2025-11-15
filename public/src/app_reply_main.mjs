@@ -106,7 +106,8 @@ export async function app_reply_main() {
   let component3 = html_button(root, "Reset", reset);
   async function lambda11() {
     async function lambda10(la) {
-      await each_range_async(count, async function lambda13() {});
+      async function lambda13() {}
+      await each_range_async(count, lambda13);
       await reset();
       let codes = ["tgl", "ceb"];
       async function lambda4(code) {
