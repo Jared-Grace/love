@@ -113,6 +113,7 @@ export async function app_reply_main() {
       }
       await each_async(codes, lambda4);
       let concated = concated_get();
+      la(concated);
     }
     let list2 = await list_adder_multiple_async(lambda10);
   }
