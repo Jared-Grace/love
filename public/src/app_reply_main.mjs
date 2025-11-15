@@ -105,7 +105,8 @@ export async function app_reply_main() {
   async function lambda11() {
     await reset();
     let codes = ["tgl", "ceb"];
-    await each_async(list2, async function lambda4(item2) {});
+    async function lambda4(item2) {}
+    await each_async(list2, lambda4);
     await language_choose(language);
   }
   let component4 = html_button(parent, "love", lambda11);
