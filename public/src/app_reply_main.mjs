@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { each_range_async } from "../../../love/public/src/each_range_async.mjs";
 import { list_adder_multiple_async } from "../../../love/public/src/list_adder_multiple_async.mjs";
@@ -212,9 +211,7 @@ export async function app_reply_main() {
       let verse_texts = list_map_property(verses3, "text");
       list_add_multiple(other, verse_texts);
       let translations2 = object_property_get(v, "translations");
-      log({
-        translations2,
-      });
+      each(list3, function lambda12(item2) {});
       list_add_multiple(other, translations2);
     }
     each(verses_list, lambda11);
