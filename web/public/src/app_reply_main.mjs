@@ -73,6 +73,9 @@ export async function app_reply_main() {
   let typed = "";
   async function verse_random_reset() {
     verses_list = [];
+    await verse_random_add();
+  }
+  async function verse_random_add() {
     let reference = list_random_item(encouragement);
     let verses = await ebible_references_parse_lines([en], [reference]);
     list_add(verses_list, {
