@@ -207,12 +207,9 @@ export async function app_reply_main() {
     function lambda11(v) {
       let reference = object_property_get(v, "reference");
       list_add(other, reference);
-      let verses3 = object_property_get(v, "verses");
-      let verse_texts = list_map_property(verses3, "text");
-      list_add_multiple(other, verse_texts);
+      verses_add(v);
       let translations2 = object_property_get(v, "translations");
-      function lambda12(item2) {}
-      each(list3, lambda12);
+      each(translations2, verses_add);
       list_add_multiple(other, translations2);
     }
     each(verses_list, lambda11);
@@ -222,6 +219,11 @@ export async function app_reply_main() {
     }
     let concated = list_concat(copied, other);
     return concated;
+    function verses_add(v) {
+      let verses3 = object_property_get(v, "verses");
+      let verse_texts = list_map_property(verses3, "text");
+      list_add_multiple(other, verse_texts);
+    }
   }
   async function app_reply_main_verse_add(verses_list, bible_folder2) {
     let verses_list_first = list_first(verses_list);
