@@ -180,10 +180,10 @@ export async function app_reply_main() {
   async function preview_refresh() {
     let concated = concated_get();
     let joined = list_join_newline_2(concated);
+    await clipboard_copy(joined);
     html_clear(preview);
     html_p_text_multiple(preview, concated);
     html_text_set(preview, joined);
-    await clipboard_copy(joined);
   }
   function concated_get() {
     let verses_list_first = list_first(verses_list);
