@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { html_disable } from "../../../love/public/src/html_disable.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
@@ -104,6 +105,7 @@ export async function app_reply_main() {
   async function lambda11() {
     await reset();
     let codes = ["tgl", "ceb"];
+    await each_async(list2, async function lambda4(item2) {});
     await language_choose(language);
   }
   let component4 = html_button(parent, "love", lambda11);
