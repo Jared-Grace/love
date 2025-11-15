@@ -1,3 +1,4 @@
+import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { html_disable } from "../../../love/public/src/html_disable.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
@@ -105,7 +106,9 @@ export async function app_reply_main() {
   async function lambda11() {
     await reset();
     let codes = ["tgl", "ceb"];
-    async function lambda4(code) {lfp}
+    async function lambda4(code) {
+      let filtered = list_filter_property(list2, property_name, property_value);
+    }
     await each_async(codes, lambda4);
     await language_choose(language);
   }
