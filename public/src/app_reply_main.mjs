@@ -82,13 +82,13 @@ export async function app_reply_main() {
     let reference = list_random_item(encouragement);
     let verses = await ebible_references_parse_lines([en], [reference]);
     const translations = [];
-    list_add(verses_list, {
+    const v = {
       verses,
       reference,
       translations,
-    });
-    return;
-    let v = await app_reply_main_verse_add(verses_list, original);
+    };
+    list_add(verses_list, v);
+    await app_reply_main_verse_add([v], original);
   }
   function lambda6(event) {
     let key = object_property_get(event, "key");
