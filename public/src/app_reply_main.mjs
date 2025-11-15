@@ -206,7 +206,9 @@ export async function app_reply_main() {
       let verse_number2 = object_property_get(verse, "verse_number");
       let reference2 = book_name + " " + chapter_name + ":" + verse_number2;
     }
-    function lambda11(v) {$g$}
+    function lambda11(v) {
+      let verses3 = object_property_get(v, "verses");
+    }
     each(verses_list, lambda11);
     let verses = list_map_property(verses_list, "verses");
     let squashed = list_squash(verses);
