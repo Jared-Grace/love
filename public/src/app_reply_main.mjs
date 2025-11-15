@@ -25,7 +25,6 @@ import { equal } from "../../../love/public/src/equal.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { ebible_verse_download } from "../../../love/public/src/ebible_verse_download.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
 import { ebible_index_flat_upload_name } from "../../../love/public/src/ebible_index_flat_upload_name.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -252,7 +251,6 @@ export async function app_reply_main() {
       };
     }
     await each_async(verses_list, lambda12);
-    let verses_list_first = list_first(verses_list);
     return v;
   }
   await verse_random_reset_2();
