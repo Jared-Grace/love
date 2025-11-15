@@ -217,7 +217,7 @@ export async function app_reply_main() {
       }
     }
     each(verses_list, lambda11);
-    log(message);
+    log({verses_list});
     let ne = list_empty_not_is(languages_chosens);
     if (ne) {
       list_add(other, languages_chosens);
