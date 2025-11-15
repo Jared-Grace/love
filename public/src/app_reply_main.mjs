@@ -128,6 +128,7 @@ export async function app_reply_main() {
   }
   async function lambda12() {
     await reset_language_keep();
+    preview_refresh();
   }
   let component5 = html_button(parent, "Extra", lambda12);
   let component2 = html_button(root, "Copy", preview_refresh);
