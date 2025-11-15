@@ -103,6 +103,7 @@ export async function app_reply_main() {
   let component3 = html_button(root, "Reset", reset);
   async function lambda11() {
     await reset();
+    await language_choose(language);
   }
   let component4 = html_button(parent, "love", lambda11);
   let component2 = html_button(root, "Copy", preview_refresh);
