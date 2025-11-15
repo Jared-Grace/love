@@ -120,6 +120,7 @@ export async function app_reply_main() {
       await each_range_async(3, lambda13);
     }
     let list2 = await list_adder_multiple_async(lambda10);
+    await list_join_newline_2_copy(list2);
   }
   let component4 = html_button(parent, "love", lambda11);
   let component2 = html_button(root, "Copy", preview_refresh);
