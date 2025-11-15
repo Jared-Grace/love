@@ -106,17 +106,18 @@ export async function app_reply_main() {
   let component3 = html_button(root, "Reset", reset);
   async function lambda11() {
     async function lambda10(la) {
-      async function lambda13() {}
-      await each_range_async(count, lambda13);
-      await reset();
-      let codes = ["tgl", "ceb"];
-      async function lambda4(code) {
-        let language = list_find_property(languages, "language_code", code);
-        await language_choose(language);
+      async function lambda13() {
+        await reset();
+        let codes = ["tgl", "ceb"];
+        async function lambda4(code) {
+          let language = list_find_property(languages, "language_code", code);
+          await language_choose(language);
+        }
+        await each_async(codes, lambda4);
+        let concated = concated_get();
+        la(concated);
       }
-      await each_async(codes, lambda4);
-      let concated = concated_get();
-      la(concated);
+      await each_range_async(3, lambda13);
     }
     let list2 = await list_adder_multiple_async(lambda10);
   }
