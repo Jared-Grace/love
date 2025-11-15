@@ -1,3 +1,4 @@
+import { each_range_async } from "../../../love/public/src/each_range_async.mjs";
 import { list_adder_multiple_async } from "../../../love/public/src/list_adder_multiple_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { html_disable } from "../../../love/public/src/html_disable.mjs";
@@ -105,6 +106,7 @@ export async function app_reply_main() {
   let component3 = html_button(root, "Reset", reset);
   async function lambda11() {
     async function lambda10(la) {
+      await each_range_async(count, async function lambda13() {});
       await reset();
       let codes = ["tgl", "ceb"];
       async function lambda4(code) {
