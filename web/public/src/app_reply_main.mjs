@@ -210,7 +210,6 @@ export async function app_reply_main() {
       verses_add(v);
       let translations2 = object_property_get(v, "translations");
       each(translations2, verses_add);
-      list_add_multiple(other, translations2);
     }
     each(verses_list, lambda11);
     let ne = list_empty_not_is(languages_chosens);
