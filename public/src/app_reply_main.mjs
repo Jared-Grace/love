@@ -106,10 +106,10 @@ export async function app_reply_main() {
     await reset();
     let codes = ["tgl", "ceb"];
     async function lambda4(code) {
-      let filtered = list_find_property(languages, "language_code", code);
+      let language = list_find_property(languages, "language_code", code);
+      await language_choose(language);
     }
     await each_async(codes, lambda4);
-    await language_choose(language);
   }
   let component4 = html_button(parent, "love", lambda11);
   let component2 = html_button(root, "Copy", preview_refresh);
