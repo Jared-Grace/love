@@ -208,13 +208,13 @@ export async function app_reply_main() {
     }
     function lambda11(v) {
       let verses3 = object_property_get(v, "verses");
+      let verse_texts = list_map_property(verses3, "text");
+      let verse_text = list_join_newline_2(verse_texts);
     }
     each(verses_list, lambda11);
-    let verses = list_map_property(verses_list, "verses");
     let squashed = list_squash(verses);
     let verse_texts = list_map_property(squashed, "text");
     list_add_first(verse_texts, reference);
-    let verse_text = list_join_newline_2(verse_texts);
     const other = [verse_text];
     let ne = list_empty_not_is(languages_chosens);
     if (ne) {
