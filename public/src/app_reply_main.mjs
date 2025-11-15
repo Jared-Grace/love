@@ -1,4 +1,4 @@
-import { list_adder_multiple } from "../../../love/public/src/list_adder_multiple.mjs";
+import { list_adder_multiple_async } from "../../../love/public/src/list_adder_multiple_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { html_disable } from "../../../love/public/src/html_disable.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
@@ -104,8 +104,7 @@ export async function app_reply_main() {
   }
   let component3 = html_button(root, "Reset", reset);
   async function lambda11() {
-    function lambda10(la) {}
-    let list2 = list_adder_multiple(lambda10);
+    let list2 = await list_adder_multiple_async(async function lambda10(la) {});
     await reset();
     let codes = ["tgl", "ceb"];
     async function lambda4(code) {
