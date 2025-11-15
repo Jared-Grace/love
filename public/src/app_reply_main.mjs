@@ -69,7 +69,6 @@ export async function app_reply_main() {
   let preview = null;
   let chosens = [];
   let typed = "";
-  await verse_random_reset_2();
   async function verse_random_reset_1() {
     reset();
     await verse_random_add();
@@ -244,4 +243,5 @@ export async function app_reply_main() {
     };
     return v;
   }
+  await verse_random_reset_2();
 }
