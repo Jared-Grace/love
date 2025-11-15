@@ -249,7 +249,8 @@ export async function app_reply_main() {
         verses,
         reference,
       };
-      each(list3, function lambda14(item2) {});
+      function lambda14(item2) {}
+      each(list3, lambda14);
     }
     await each_async(verses_list, lambda12);
   }
