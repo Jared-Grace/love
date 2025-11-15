@@ -62,7 +62,6 @@ export async function app_reply_main() {
   let index = await firebase_storage_download_ebible(en, file_name);
   let books = await ebible_version_books(en);
   let verses_list = null;
-  await verse_random_reset_1();
   const root = html_document_body();
   let copied = [];
   let languages_chosens = [];
@@ -70,6 +69,7 @@ export async function app_reply_main() {
   let preview = null;
   let chosens = [];
   let typed = "";
+  await verse_random_reset_2();
   async function verse_random_reset_1() {
     reset();
     await verse_random_add();
