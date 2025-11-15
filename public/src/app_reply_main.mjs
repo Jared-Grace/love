@@ -123,7 +123,8 @@ export async function app_reply_main() {
     let list2 = await list_adder_multiple_async(lambda10);
     await list_join_newline_2_copy(list2);
   }
-  let component5 = html_button(parent, text3, function lambda12() {});
+  function lambda12() {}
+  let component5 = html_button(parent, text3, lambda12);
   let component2 = html_button(root, "Copy", preview_refresh);
   let component_languages = html_span(root);
   languages_reset();
