@@ -168,6 +168,14 @@ export async function app_reply_main() {
   await preview_refresh();
   buttons_refresh();
   async function preview_refresh() {
+    let concated = concated_get();
+    let joined = list_join_newline_2(concated);
+    html_clear(preview);
+    html_p_text_multiple(preview, concated);
+    html_text_set(preview, joined);
+    await clipboard_copy(joined);
+  }
+  function concated_get() {
     let verses_list_first = list_first(verses_list);
     let reference = object_property_get(verses_list_first, "reference");
     if (false) {
@@ -192,11 +200,7 @@ export async function app_reply_main() {
       list_add(other, languages_chosens);
     }
     let concated = list_concat(copied, other);
-    let joined = list_join_newline_2(concated);
-    html_clear(preview);
-    html_p_text_multiple(preview, concated);
-    html_text_set(preview, joined);
-    await clipboard_copy(joined);
+    return concated;
   }
   async function app_reply_main_verse_add(verses_list, bible_folder2) {
     let verses_list_first = list_first(verses_list);
