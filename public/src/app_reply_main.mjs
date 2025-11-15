@@ -114,7 +114,6 @@ export async function app_reply_main() {
     languages_reset();
   }
   let component4 = html_button(root, "❤️", love);
-  let component3 = html_button(root, "Reset", reset);
   html_button(root, "Reset 1", reset);
   html_button(root, "Reset 2", verse_random_reset_2);
   async function love() {
