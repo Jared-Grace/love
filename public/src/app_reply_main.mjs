@@ -251,7 +251,8 @@ export async function app_reply_main() {
       };
       let translations3 = object_property_get(v_item, "translations");
       function lambda14(item2) {}
-      each(list3, lambda14);
+      each(translations3, lambda14);
+      list_add_multiple(list3, items);
     }
     await each_async(verses_list, lambda12);
   }
