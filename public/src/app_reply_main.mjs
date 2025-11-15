@@ -106,9 +106,8 @@ export async function app_reply_main() {
     list_empty(languages_chosens);
     typed = "";
     buttons_refresh();
-    preview_refresh();
+    await preview_refresh();
     languages_reset();
-    preview_refresh();
   }
   let component4 = html_button(root, "❤️", love);
   html_button(root, "Reset 1", verse_random_reset_1);
