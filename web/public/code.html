@@ -6,8 +6,16 @@
 </head>
 <body>
   <script type="module"> 
-    import {app_code} from "./src\\app_code.mjs"
+    let global = {};
     app_code(  );
+    function app_code() {
+  marker("1");
+  alert();
+}
+function marker(marker_name) {
+  noop();
+}
+function noop() {}
   </script>
 </body>
 </html>
