@@ -1,3 +1,4 @@
+import { app_reply_response_how_r_u_skip_before } from "../../../love/public/src/app_reply_response_how_r_u_skip_before.mjs";
 import { app_reply_pray_help_generic } from "../../../love/public/src/app_reply_pray_help_generic.mjs";
 import { emoji_camera } from "../../../love/public/src/emoji_camera.mjs";
 import { app_reply_call_why_generic } from "../../../love/public/src/app_reply_call_why_generic.mjs";
@@ -59,6 +60,7 @@ export function app_reply_choices() {
   let with2 = app_reply_pray("With", "always be with you! " + emoji_dove());
   const blessed = "you, your family, your church and your country";
   let s = app_reply_response_how_r_u_skip();
+  let s2 = app_reply_response_how_r_u_skip_before();
   let v = [
     {
       text: emoji_pray() + " Amazing",
@@ -153,7 +155,11 @@ export function app_reply_choices() {
     },
     {
       text: emoji_ok() + " How day",
-      response: emoji_ok() + " The day of the " + string_first_lower_to(s),
+      response:
+        emoji_ok() +
+        " The day of the " +
+        string_first_lower_to(s2) +
+        " today is one day closer to the return of Jesus than yesterday!",
     },
     {
       text: emoji_pray() + " How family",
