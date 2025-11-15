@@ -1,3 +1,4 @@
+import { list_find } from "../../../love/public/src/list_find.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { html_disable } from "../../../love/public/src/html_disable.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
@@ -105,8 +106,10 @@ export async function app_reply_main() {
   async function lambda11() {
     await reset();
     let codes = ["tgl", "ceb"];
-    async function lambda4(item2) {}
-    await each_async(list2, lambda4);
+    async function lambda4(code) {
+      let only = list_find(list2, function lambda10(item2) {});
+    }
+    await each_async(codes, lambda4);
     await language_choose(language);
   }
   let component4 = html_button(parent, "love", lambda11);
