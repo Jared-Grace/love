@@ -249,9 +249,10 @@ export async function app_reply_main() {
         verses,
         reference,
       };
+      return v;
+      list_add(list3, item2);
     }
     await each_async(verses_list, lambda12);
-    return v;
   }
   await verse_random_reset_2();
 }
