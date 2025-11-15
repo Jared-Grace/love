@@ -153,7 +153,6 @@ export async function app_reply_main() {
     let bible_folder2 = object_property_get(language, "bible_folder");
     let language_code = object_property_get(language, "language_code");
     let v = await app_reply_main_verse_add(verses_list, bible_folder2);
-    list_add_first(verses_list, v);
     list_add_first(languages_chosens, language_code);
     await preview_refresh();
   }
