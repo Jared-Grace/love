@@ -70,11 +70,11 @@ export async function app_reply_main() {
   let chosens = [];
   let typed = "";
   async function verse_random_reset_1() {
-    reset();
+    await reset();
     await verse_random_add();
   }
   async function verse_random_reset_2() {
-    reset();
+    await reset();
     await each_range_async(2, verse_random_add);
   }
   async function verse_random_add() {
