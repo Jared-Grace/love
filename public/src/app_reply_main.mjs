@@ -41,7 +41,6 @@ import { app_reply_choices } from "../../../love/public/src/app_reply_choices.mj
 import { each } from "../../../love/public/src/each.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
-import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
@@ -50,6 +49,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
+import { list_add_multiple } from "./list_add_multiple.mjs";
 export async function app_reply_main() {
   let choices = app_reply_choices();
   let languages = ebible_languages();
@@ -211,9 +211,9 @@ export async function app_reply_main() {
       list_add(other, reference);
       let verses3 = object_property_get(v, "verses");
       let verse_texts = list_map_property(verses3, "text");
-      let verse_text = list_join_newline_2(verse_texts);
+      list_add_multiple(other, verse_texts);
       let translations2 = object_property_get(v, "translations");
-      list_add(other, verse_text);
+      list_add_multiple(other, translations2);
     }
     each(verses_list, lambda11);
     let ne = list_empty_not_is(languages_chosens);
