@@ -249,8 +249,7 @@ export async function app_reply_main() {
         verses,
         reference,
       };
-      return v;
-      list_add(list3, item2);
+      list_add(verses_list, v);
     }
     await each_async(verses_list, lambda12);
   }
