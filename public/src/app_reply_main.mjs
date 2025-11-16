@@ -209,7 +209,6 @@ export async function app_reply_main() {
     }
     const other = [];
     function lambda11(v) {
-      verses_add(v);
       let reference = object_property_get(v, "reference");
       list_add(other, reference);
       let original_translation = null;
@@ -218,12 +217,13 @@ export async function app_reply_main() {
         let translations2 = object_property_get(v, "translations");
         let { last, remaining } = list_last_remaining(translations2);
         original_translation = last;
-        if (original_translation !== null) {
-          verses_add(original_translation);
-        }
         if (remaining !== null) {
           each(remaining, verses_add);
         }
+      }
+      verses_add(v);
+      if (original_translation !== null) {
+        verses_add(original_translation);
       }
     }
     each(verses_list, lambda11);
