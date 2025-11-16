@@ -120,7 +120,7 @@ export function ebible_languages() {
     {
       name: "Wolof",
       bible_folder: "wolmbs",
-      language_code: "pt",
+      language_code: "wo",
     },
   ];
   return languages;
