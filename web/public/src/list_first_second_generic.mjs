@@ -3,7 +3,7 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 export function list_first_second_generic(
   list,
-  value_get,
+  other_get,
   property_name_second,
 ) {
   let property_name_first = "first";
@@ -13,7 +13,7 @@ export function list_first_second_generic(
   if (list_empty_not_is(list)) {
     first = one_get(list);
     if (list_multiple_is(list)) {
-      second = value_get(list);
+      second = other_get(list);
     }
   }
   let result = {
