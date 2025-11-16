@@ -15,6 +15,7 @@ export function ebible_verses_exclude() {
     "fv",
     "ie",
     "iex",
+    "ili",
     "im",
     "imt",
     "is",
