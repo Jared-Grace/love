@@ -213,10 +213,11 @@ export async function app_reply_main() {
       list_add(other, reference);
       verses_add(v);
       let exists = object_property_exists(v, "translations");
+      original = null;
       if (exists) {
         let translations2 = object_property_get(v, "translations");
-        let result = list_last_remaining(list3);
-        each(translations2, verses_add);
+        let { last, remaining } = list_last_remaining(translations2);
+        each(remaining, verses_add);
       }
     }
     each(verses_list, lambda11);
