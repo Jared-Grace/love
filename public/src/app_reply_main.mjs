@@ -71,10 +71,12 @@ export async function app_reply_main() {
   let chosens = [];
   let typed = "";
   async function verse_random_reset_1() {
+    verses_list_reset();
     await reset();
     await verse_random_add();
   }
   async function verse_random_reset_2() {
+    verses_list_reset();
     await reset();
     await each_range_async(2, verse_random_add);
   }
@@ -101,7 +103,6 @@ export async function app_reply_main() {
   }
   html_on_keydown(root, lambda6);
   async function reset() {
-    verses_list = [];
     list_empty(copied);
     list_empty(chosens);
     list_empty(languages_chosens);
@@ -113,6 +114,9 @@ export async function app_reply_main() {
   let component4 = html_button(root, "❤️", love);
   html_button(root, "Reset 1", verse_random_reset_1);
   html_button(root, "Reset 2", verse_random_reset_2);
+  function verses_list_reset() {
+    verses_list = [];
+  }
   async function love() {
     async function lambda10(la) {
       async function lambda13() {
