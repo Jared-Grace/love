@@ -5,6 +5,6 @@ export function list_take_less_1(list, count) {
   marker("1");
   let sz = list_size(count);
   let sz1 = sz - 1;
-  let taken = list_take(list, count);
+  let taken = list_take(list, sz1);
   return taken;
 }
