@@ -212,8 +212,8 @@ export async function app_reply_main() {
       let reference = object_property_get(v, "reference");
       list_add(other, reference);
       verses_add(v);
+      let original_translation = null;
       let exists = object_property_exists(v, "translations");
-      original = null;
       if (exists) {
         let translations2 = object_property_get(v, "translations");
         let { last, remaining } = list_last_remaining(translations2);
