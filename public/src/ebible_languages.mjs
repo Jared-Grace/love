@@ -117,6 +117,11 @@ export function ebible_languages() {
       bible_folder: "porbrbsl",
       language_code: "pt",
     },
+    {
+      name: "Wolof",
+      bible_folder: "wolmbs",
+      language_code: "pt",
+    },
   ];
   return languages;
 }
