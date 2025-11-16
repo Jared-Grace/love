@@ -220,7 +220,8 @@ export async function app_reply_main() {
       }
       let reference = object_property_get(v, "reference");
       list_add(other, reference);
-      if (false) {
+      if (original_translation !== null) {
+        list_add(other, original_translation);
       }
     }
     each(verses_list, lambda11);
