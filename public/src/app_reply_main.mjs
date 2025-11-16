@@ -120,6 +120,7 @@ export async function app_reply_main() {
     async function lambda10(la) {
       async function lambda13() {
         await reset();
+        await verse_random_reset_1();
         let codes = ["tgl", "ceb"];
         async function lambda4(code) {
           let language = list_find_property(languages, "language_code", code);
