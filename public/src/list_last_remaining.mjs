@@ -1,11 +1,19 @@
-import { list_first_second_generic } from "../../../love/public/src/list_first_second_generic.mjs";
+import { list_one_other } from "../../../love/public/src/list_one_other.mjs";
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_skip_1 } from "../../../love/public/src/list_skip_1.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function list_last_remaining(list) {
   const property_name = "remaining";
   let value_get = list_skip_1;
-  $ex;
-  let result = list_first_second_generic(list, value_get, property_name);
+  let property_name_first = "first";
+  let one_get = list_first;
+  let result = list_one_other(
+    list,
+    one_get,
+    value_get,
+    property_name_first,
+    property_name,
+  );
   marker("1");
   return result;
 }
