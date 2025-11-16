@@ -217,6 +217,7 @@ export async function app_reply_main() {
       if (exists) {
         let translations2 = object_property_get(v, "translations");
         let { last, remaining } = list_last_remaining(translations2);
+        original_translation = last;
         each(remaining, verses_add);
       }
     }
