@@ -4,6 +4,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function list_last_remaining(list) {
   const property_name = "remaining";
   let value_get = list_skip_1;
+  $ex;
   let result = list_first_second_generic(list, value_get, property_name);
   marker("1");
   return result;
