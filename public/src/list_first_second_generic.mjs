@@ -7,10 +7,11 @@ export function list_first_second_generic(
   property_name_second,
 ) {
   let property_name_first = "first";
+  let one_get = list_first;
   let first = null;
   let second = null;
   if (list_empty_not_is(list)) {
-    first = list_first(list);
+    first = one_get(list);
     if (list_multiple_is(list)) {
       second = value_get(list);
     }
