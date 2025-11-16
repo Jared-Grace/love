@@ -16,7 +16,7 @@ export function list_first_second_generic(
     }
   }
   let result = {
-    first,
+    [property_name_first]: first,
     [property_name_second]: second,
   };
   return result;
