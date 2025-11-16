@@ -71,12 +71,10 @@ export async function app_reply_main() {
   let chosens = [];
   let typed = "";
   async function verse_random_reset_1() {
-    verses_list_reset();
     await reset();
     await verse_random_add();
   }
   async function verse_random_reset_2() {
-    verses_list_reset();
     await reset();
     await each_range_async(2, verse_random_add);
   }
@@ -103,6 +101,7 @@ export async function app_reply_main() {
   }
   html_on_keydown(root, lambda6);
   async function reset() {
+    verses_list_reset();
     list_empty(copied);
     list_empty(chosens);
     list_empty(languages_chosens);
