@@ -1,3 +1,4 @@
+import { list_last_remaining } from "../../../love/public/src/list_last_remaining.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
@@ -214,6 +215,7 @@ export async function app_reply_main() {
       let exists = object_property_exists(v, "translations");
       if (exists) {
         let translations2 = object_property_get(v, "translations");
+        let result = list_last_remaining(list3);
         each(translations2, verses_add);
       }
     }
