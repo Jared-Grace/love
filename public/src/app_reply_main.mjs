@@ -210,20 +210,20 @@ export async function app_reply_main() {
     const other = [];
     function lambda11(v) {
       verses_add(v);
+      let reference = object_property_get(v, "reference");
+      list_add(other, reference);
       let original_translation = null;
       let exists = object_property_exists(v, "translations");
       if (exists) {
         let translations2 = object_property_get(v, "translations");
         let { last, remaining } = list_last_remaining(translations2);
         original_translation = last;
+        if (original_translation !== null) {
+          list_add(other, original_translation);
+        }
         if (remaining !== null) {
           each(remaining, verses_add);
         }
-      }
-      let reference = object_property_get(v, "reference");
-      list_add(other, reference);
-      if (original_translation !== null) {
-        list_add(other, original_translation);
       }
     }
     each(verses_list, lambda11);
