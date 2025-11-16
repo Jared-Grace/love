@@ -34,6 +34,7 @@ export function ebible_verses_include() {
     "qm2",
     "qr",
     "qs",
+    "qt",
     "verse",
     "wj",
   ];
