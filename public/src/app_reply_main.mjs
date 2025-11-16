@@ -219,7 +219,7 @@ export async function app_reply_main() {
         let { last, remaining } = list_last_remaining(translations2);
         original_translation = last;
         if (original_translation !== null) {
-          list_add(other, original_translation);
+          verses_add(original_translation);
         }
         if (remaining !== null) {
           each(remaining, verses_add);
