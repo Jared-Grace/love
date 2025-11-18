@@ -197,6 +197,7 @@ export async function app_reply_main() {
   buttons_refresh();
   async function preview_refresh() {
     let concated = concated_get();
+    log(message);
     let joined = await list_join_newline_2_copy(concated);
     html_clear(preview);
     html_p_text_multiple(preview, concated);
