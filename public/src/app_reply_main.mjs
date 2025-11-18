@@ -1,3 +1,4 @@
+import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_last_remaining } from "../../../love/public/src/list_last_remaining.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
@@ -35,7 +36,6 @@ import { html_on_keydown } from "../../../love/public/src/html_on_keydown.mjs";
 import { string_letters_only } from "../../../love/public/src/string_letters_only.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
-import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -240,7 +240,7 @@ export async function app_reply_main() {
     if (ne) {
       list_add(other, languages_chosens);
     }
-    let concated = list_concat(copied, other);
+    let concated = list_concat_multiple(copied, other);
     return concated;
     function verses_add(v) {
       let verses3 = object_property_get(v, "verses");
