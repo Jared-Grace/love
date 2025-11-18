@@ -1,3 +1,4 @@
+import { prayer_blessing_expand } from "../../../love/public/src/prayer_blessing_expand.mjs";
 import { app_reply_response_how_r_u_skip_before } from "../../../love/public/src/app_reply_response_how_r_u_skip_before.mjs";
 import { app_reply_pray_help_generic } from "../../../love/public/src/app_reply_pray_help_generic.mjs";
 import { emoji_camera } from "../../../love/public/src/emoji_camera.mjs";
@@ -10,7 +11,6 @@ import { app_reply_response_how_r_u_skip } from "../../../love/public/src/app_re
 import { app_reply_choices_glory } from "../../../love/public/src/app_reply_choices_glory.mjs";
 import { app_reply_choices_will_done_fragment } from "../../../love/public/src/app_reply_choices_will_done_fragment.mjs";
 import { app_reply_choices_name } from "../../../love/public/src/app_reply_choices_name.mjs";
-import { prayer_blessing } from "../../../love/public/src/prayer_blessing.mjs";
 import { app_reply_choices_location } from "../../../love/public/src/app_reply_choices_location.mjs";
 import { app_reply_choices_give } from "../../../love/public/src/app_reply_choices_give.mjs";
 import { app_reply_choices_praise } from "../../../love/public/src/app_reply_choices_praise.mjs";
@@ -76,9 +76,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " Bless",
-      response: prayer_blessing(
-        "you, your family, your church and your country",
-      ),
+      response: prayer_blessing_expand(),
     },
     {
       text: emoji_pray() + " Bless short",
