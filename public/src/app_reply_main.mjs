@@ -76,10 +76,11 @@ export async function app_reply_main() {
     await verse_random_add();
   }
   function verse_random_reset_n(n) {
-    return async function inner() {
+    let v2 = async function inner() {
       await reset();
       await each_range_async(n, verse_random_add);
     };
+    return v2;
   }
   async function verse_random_add() {
     let reference = list_random_item(encouragement);
