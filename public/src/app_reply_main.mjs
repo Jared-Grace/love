@@ -233,9 +233,7 @@ export async function app_reply_main() {
       }
       verses_add(v);
       if (original_translation !== null) {
-        if (0) {
-          verses_add(original_translation);
-        }
+        verses_add(original_translation);
       }
     }
     each(verses_list, lambda11);
