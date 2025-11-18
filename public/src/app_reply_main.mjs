@@ -240,7 +240,7 @@ export async function app_reply_main() {
     if (ne) {
       list_add(other, languages_chosens);
     }
-    let concated = list_concat_multiple(copied, other);
+    let concated = list_concat_multiple([copied, other]);
     return concated;
     function verses_add(v) {
       let verses3 = object_property_get(v, "verses");
