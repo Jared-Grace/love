@@ -1,3 +1,4 @@
+import { prayer_blessing_expand } from "../../../love/public/src/prayer_blessing_expand.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_last_remaining } from "../../../love/public/src/list_last_remaining.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -240,7 +241,8 @@ export async function app_reply_main() {
     if (ne) {
       list_add(other, languages_chosens);
     }
-    let concated = list_concat_multiple([copied, other]);
+    let v22 = prayer_blessing_expand();
+    let concated = list_concat_multiple([copied, v22, other]);
     return concated;
     function verses_add(v) {
       let verses3 = object_property_get(v, "verses");
