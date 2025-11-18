@@ -75,6 +75,7 @@ export async function app_reply_main() {
     await reset();
     await verse_random_add();
   }
+  let verse_random_reset_2 = verse_random_reset_n(2);
   function verse_random_reset_n(n) {
     let v2 = async function inner() {
       await reset();
