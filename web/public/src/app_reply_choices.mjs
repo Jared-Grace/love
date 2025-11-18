@@ -58,7 +58,6 @@ export function app_reply_choices() {
   let pray_request = app_reply_choices_will_done_fragment();
   let will = app_reply_pray("Will", pray_request);
   let with2 = app_reply_pray("With", "always be with you! " + emoji_dove());
-  const blessed = "you, your family, your church and your country";
   let s = app_reply_response_how_r_u_skip();
   let s2 = app_reply_response_how_r_u_skip_before();
   let v = [
@@ -77,7 +76,9 @@ export function app_reply_choices() {
     },
     {
       text: emoji_pray() + " Bless",
-      response: prayer_blessing(blessed),
+      response: prayer_blessing(
+        "you, your family, your church and your country",
+      ),
     },
     {
       text: emoji_pray() + " Bless short",
