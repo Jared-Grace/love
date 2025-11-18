@@ -60,6 +60,10 @@ export function app_reply_choices() {
   let with2 = app_reply_pray("With", "always be with you! " + emoji_dove());
   let s = app_reply_response_how_r_u_skip();
   let s2 = app_reply_response_how_r_u_skip_before();
+  let b = {
+    text: emoji_pray() + " Bless",
+    response: prayer_blessing_expand(),
+  };
   let v = [
     {
       text: emoji_pray() + " Amazing",
@@ -73,10 +77,6 @@ export function app_reply_choices() {
     {
       text: emoji_question() + " Ask",
       response: "What are you asking me to do?",
-    },
-    {
-      text: emoji_pray() + " Bless",
-      response: prayer_blessing_expand(),
     },
     {
       text: emoji_pray() + " Bless short",
