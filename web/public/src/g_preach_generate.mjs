@@ -20,5 +20,6 @@ export async function g_preach_generate() {
     let result2 = await file_temp(lambda2);
   }
   let result = await file_temp(lambda);
+  return data;
   marker("1");
 }
