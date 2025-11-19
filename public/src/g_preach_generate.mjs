@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { bible_interlinear_chapters } from "../../../love/public/src/bible_interlinear_chapters.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
@@ -8,6 +9,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_preach_generate() {
   let chapter_code = "JAS01";
   let list = await ebible_verses("engbsb", chapter_code);
+  await each_async(list2, async function lambda3(item) {});
   let chapters = await bible_interlinear_chapters();
   return chapters;
   let verse =
