@@ -4,8 +4,8 @@ import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_preach_generate() {
-  let k = openai_key_folder();
   let v = py_script_run_cmd("openai_chat");
+  let k = openai_key_folder();
   let concated = [v, k + "openai.txt", input_file_path, output_file_path];
   let joined = list_join_space(concated);
   let stdout = await command_line(joined);
