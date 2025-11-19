@@ -5,7 +5,6 @@ import { log } from "../../../love/public/src/log.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { each_range_async } from "../../../love/public/src/each_range_async.mjs";
-import { list_adder_multiple_async } from "../../../love/public/src/list_adder_multiple_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { html_disable } from "../../../love/public/src/html_disable.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
@@ -125,22 +124,13 @@ export async function app_reply_main() {
     verses_list = [];
   }
   async function love() {
-    async function lambda10(la) {
-      async function lambda13() {
-        verse_random_reset_n(3)();
-        let codes = ["tgl", "ceb"];
-        async function lambda4(code) {
-          let language = list_find_property(languages, "language_code", code);
-          await language_choose(language);
-        }
-        await each_async(codes, lambda4);
-        let concated = concated_get();
-        la(concated);
-      }
-      await each_range_async(3, lambda13);
+    verse_random_reset_n(3)();
+    let codes = ["tgl", "ceb"];
+    async function lambda4(code) {
+      let language = list_find_property(languages, "language_code", code);
+      await language_choose(language);
     }
-    let list2 = await list_adder_multiple_async(lambda10);
-    await list_join_newline_2_copy(list2);
+    preview_refresh();
   }
   let component2 = html_button(root, "Copy", preview_refresh);
   let component_languages = html_span(root);
