@@ -124,14 +124,13 @@ export async function app_reply_main() {
     verses_list = [];
   }
   async function love() {
-    verse_random_reset_n(3)();
+    await verse_random_reset_n(3)();
     let codes = ["tgl", "ceb"];
     async function lambda4(code) {
       let language = list_find_property(languages, "language_code", code);
       await language_choose(language);
     }
     await each_async(codes, lambda4);
-    preview_refresh();
   }
   let component2 = html_button(root, "Copy", preview_refresh);
   let component_languages = html_span(root);
