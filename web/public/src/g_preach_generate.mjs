@@ -10,11 +10,11 @@ export async function g_preach_generate() {
     system,
     user,
   };
+  let data = null;
   async function lambda(input_file_path) {
     async function lambda2(output_file_path) {
       await file_overwrite_json(input_file_path, input);
       await openai_chat(input_file_path, output_file_path);
-      let data = null;
       data = await file_read_json(output_file_path);
     }
     let result2 = await file_temp(lambda2);
