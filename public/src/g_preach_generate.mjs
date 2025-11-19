@@ -1,9 +1,11 @@
+import { bible_interlinear_chapters } from "../../../love/public/src/bible_interlinear_chapters.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { openai_chat } from "../../../love/public/src/openai_chat.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { file_temp } from "../../../love/public/src/file_temp.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_preach_generate() {
+  let chapters = await bible_interlinear_chapters();
   let verse =
     "James 1:22  Γίνεσθε δὲ ποιηταὶ λόγου καὶ μὴ ἀκροαταὶ μόνον παραλογιζόμενοι ἑαυτούς Be doers of the word, and not hearers only. Otherwise, you are deceiving yourselves.";
   let system =
