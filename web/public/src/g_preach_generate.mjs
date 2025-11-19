@@ -6,7 +6,8 @@ import { command_line } from "../../../love/public/src/command_line.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_preach_generate() {
   async function lambda(temp_path) {
-    let result2 = await file_temp(async function lambda2(temp_path2) {});
+    async function lambda2(temp_path2) {}
+    let result2 = await file_temp(lambda2);
   }
   let result = await file_temp(lambda);
   let v = py_script_run_cmd("openai_chat");
