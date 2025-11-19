@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
@@ -9,13 +10,14 @@ import { file_temp } from "../../../love/public/src/file_temp.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_preach_generate() {
   let chapter_code = "JAS01";
+  let chapters = await bible_interlinear_chapters();
+  let value = object_property_get(object, property_name);
   let list = await ebible_verses("engbsb", chapter_code);
   async function lambda3(verse) {
     log(verse);
   }
   await each_async(list, lambda3);
   return;
-  let chapters = await bible_interlinear_chapters();
   return chapters;
   let verse =
     "James 1:22  Γίνεσθε δὲ ποιηταὶ λόγου καὶ μὴ ἀκροαταὶ μόνον παραλογιζόμενοι ἑαυτούς Be doers of the word, and not hearers only. Otherwise, you are deceiving yourselves.";
