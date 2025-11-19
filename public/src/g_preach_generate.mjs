@@ -1,3 +1,4 @@
+import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { file_temp } from "../../../love/public/src/file_temp.mjs";
 import { openai_key_folder } from "../../../love/public/src/openai_key_folder.mjs";
 import { py_script_run_cmd } from "../../../love/public/src/py_script_run_cmd.mjs";
@@ -10,7 +11,9 @@ export async function g_preach_generate() {
     user,
   };
   async function lambda(input_file_path) {
-    async function lambda2(output_file_path) {}
+    async function lambda2(output_file_path) {
+      await file_overwrite_json(file_path, object);
+    }
     let result2 = await file_temp(lambda2);
   }
   let result = await file_temp(lambda);
