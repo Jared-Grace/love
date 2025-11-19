@@ -5,6 +5,10 @@ import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_preach_generate() {
+  let input = {
+    system,
+    user,
+  };
   async function lambda(input_file_path) {
     async function lambda2(output_file_path) {}
     let result2 = await file_temp(lambda2);
