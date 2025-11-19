@@ -6,6 +6,7 @@ import { file_temp } from "../../../love/public/src/file_temp.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_preach_generate() {
   let chapters = await bible_interlinear_chapters();
+  return chapters;
   let verse =
     "James 1:22  Γίνεσθε δὲ ποιηταὶ λόγου καὶ μὴ ἀκροαταὶ μόνον παραλογιζόμενοι ἑαυτούς Be doers of the word, and not hearers only. Otherwise, you are deceiving yourselves.";
   let system =
