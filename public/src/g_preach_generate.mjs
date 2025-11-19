@@ -14,8 +14,6 @@ export async function g_preach_generate() {
   let combineds = list_map_combine_left(p, split);
   let concated = list_concat([v], combineds);
   let joined = list_join_space(concated);
-  return joined;
-  let command = py_exe_name();
-  let stdout = await command_line(command);
+  let stdout = await command_line(joined);
   marker("1");
 }
