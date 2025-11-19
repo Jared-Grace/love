@@ -1,3 +1,4 @@
+import { list_find } from "../../../love/public/src/list_find.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -16,6 +17,7 @@ export async function g_preach_generate() {
   async function lambda3(verse) {
     log(verse);
     let verse_number = object_property_get(verse, "verse_number");
+    let only = list_find(list2, function lambda4(item) {});
   }
   await each_async(list, lambda3);
   return;
