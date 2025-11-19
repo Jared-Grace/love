@@ -17,7 +17,7 @@ export async function g_preach_generate() {
   async function lambda3(verse) {
     log(verse);
     let verse_number = object_property_get(verse, "verse_number");
-    let item = list_find_property(list2, property_name, property_value);
+    let item = list_find_property(interlinear, "verse_number", verse_number);
   }
   await each_async(list, lambda3);
   return;
