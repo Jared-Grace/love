@@ -11,10 +11,11 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_preach_generate() {
   let chapter_code = "JAS01";
   let chapters = await bible_interlinear_chapters();
-  let value = object_property_get(object, property_name);
+  let interlinear = object_property_get(chapters, chapter_code);
   let list = await ebible_verses("engbsb", chapter_code);
   async function lambda3(verse) {
     log(verse);
+    let verse_number = object_property_get(verse, "verse_number");
   }
   await each_async(list, lambda3);
   return;
