@@ -8,7 +8,7 @@ import { folder_user_path } from "../../../love/public/src/folder_user_path.mjs"
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_preach_generate() {
   let p = folder_user_path() + "ChristGPT\\";
-  let v = py_script_run_cmd("openai");
+  let v = py_script_run_cmd("openai_chat");
   let file_names = "openai.txt input.txt output.txt";
   let split = string_split_space(file_names);
   let combineds = list_map_combine_left(p, split);
