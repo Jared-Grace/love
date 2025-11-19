@@ -12,7 +12,10 @@ export async function g_preach_generate() {
   let file_names = "openai.txt input.txt output.txt";
   let split = string_split_space(file_names);
   let combineds = list_map_combine_left(p, split);
-  let concated = list_concat([v], combineds);
+  let concated = list_concat(
+    [v],
+    ["openai.txt", input_file_path, output_file_path],
+  );
   let joined = list_join_space(concated);
   let stdout = await command_line(joined);
   marker("1");
