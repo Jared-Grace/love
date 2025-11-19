@@ -11,9 +11,10 @@ export async function g_preach_generate() {
   let chapter_code = "JAS01";
   let list = await ebible_verses("engbsb", chapter_code);
   async function lambda3(verse) {
-    log(message);
+    log(verse);
   }
   await each_async(list, lambda3);
+  return;
   let chapters = await bible_interlinear_chapters();
   return chapters;
   let verse =
