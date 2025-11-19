@@ -15,14 +15,14 @@ export async function g_preach_generate() {
   async function lambda(input_file_path) {
     async function lambda2(output_file_path) {
       await file_overwrite_json(input_file_path, input);
+      let v = py_script_run_cmd("openai_chat");
+      let k = openai_key_folder();
+      let concated = [v, k + "openai.txt", input_file_path, output_file_path];
+      let joined = list_join_space(concated);
+      let stdout = await command_line(joined);
     }
     let result2 = await file_temp(lambda2);
   }
   let result = await file_temp(lambda);
-  let v = py_script_run_cmd("openai_chat");
-  let k = openai_key_folder();
-  let concated = [v, k + "openai.txt", input_file_path, output_file_path];
-  let joined = list_join_space(concated);
-  let stdout = await command_line(joined);
   marker("1");
 }
