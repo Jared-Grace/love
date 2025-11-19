@@ -5,7 +5,8 @@ import { openai_chat } from "../../../love/public/src/openai_chat.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { file_temp } from "../../../love/public/src/file_temp.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export async function g_preach_generate() {
+export async function g_preach_generate(chapter_code) {
+  engbsb;
   let list = await ebible_verses(bible_folder, chapter_code);
   let chapters = await bible_interlinear_chapters();
   return chapters;
