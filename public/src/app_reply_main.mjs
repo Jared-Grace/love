@@ -130,6 +130,7 @@ export async function app_reply_main() {
       let language = list_find_property(languages, "language_code", code);
       await language_choose(language);
     }
+    await each_async(codes, lambda4);
     preview_refresh();
   }
   let component2 = html_button(root, "Copy", preview_refresh);
