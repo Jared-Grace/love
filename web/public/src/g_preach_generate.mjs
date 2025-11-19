@@ -7,11 +7,11 @@ import { string_split_space } from "../../../love/public/src/string_split_space.
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_preach_generate() {
-  let p = openai_key_path();
+  let k = openai_key_path();
   let v = py_script_run_cmd("openai_chat");
   let file_names = "openai.txt input.txt output.txt";
   let split = string_split_space(file_names);
-  let combineds = list_map_combine_left(p, split);
+  let combineds = list_map_combine_left(k, split);
   let concated = list_concat(
     [v],
     ["openai.txt", input_file_path, output_file_path],
