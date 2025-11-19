@@ -1,3 +1,4 @@
+import { py_exe_name } from "../../../love/public/src/py_exe_name.mjs";
 import { command_line_cmd } from "../../../love/public/src/command_line_cmd.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { folder_user } from "../../../love/public/src/folder_user.mjs";
@@ -30,7 +31,7 @@ export async function sandbox_2() {
     };
     let contents = json_to(o);
     await file_write(temp_path, contents);
-    const c = "python.exe " + "./py/kokoro.py " + temp_path;
+    const c = py_exe_name() + "./py/kokoro.py " + temp_path;
     const newLocal = "D:\\programs\\WPy64-312100\\python\\";
     let stdout = await command_line_cmd(c, newLocal);
     return stdout;
