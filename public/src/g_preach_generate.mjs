@@ -5,6 +5,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_preach_generate() {
   let p = folder_user_path() + "ChristGPT\\";
   let v = py_exe_name();
+  let file_names = "openai.txt input.txt output.txt";
   let parts = [v];
   let command = py_exe_name();
   let stdout = await command_line(command);
