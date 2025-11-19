@@ -31,7 +31,7 @@ export async function sandbox_2() {
     };
     let contents = json_to(o);
     await file_write(temp_path, contents);
-    const c = py_exe_name() + "./py/kokoro.py" + " " + temp_path;
+    const c = py_exe_name() + "./py/" + "kokoro.py" + " " + temp_path;
     const newLocal = "D:\\programs\\WPy64-312100\\python\\";
     let stdout = await command_line_cmd(c, newLocal);
     return stdout;
