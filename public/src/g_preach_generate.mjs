@@ -34,7 +34,7 @@ export async function g_preach_generate() {
       let suffixes = ".?!";
       let split = string_split_empty(suffixes);
       let end = string_ends_with_any(trimmed, split);
-      if (end) {
+      if (end || index === index_last) {
         la(group);
         group = [];
       }
