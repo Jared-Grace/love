@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
 import { string_ends_with_any } from "../../../love/public/src/string_ends_with_any.mjs";
 import { string_trim_right } from "../../../love/public/src/string_trim_right.mjs";
@@ -27,6 +28,7 @@ export async function ebible_sandbox() {
           return ew;
         }
         let s3 = string_trim_right(lambda3, v);
+        log(message);
         let item = string_last(s3);
         return item;
       }
