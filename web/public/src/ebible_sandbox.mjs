@@ -8,6 +8,6 @@ export async function ebible_sandbox(bible_folder) {
   ("loop through to ensure parse correct before begin upload");
   await ebible_chapters_each_verses(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
-    log(message);
+    log(verses);
   }
 }
