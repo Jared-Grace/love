@@ -30,8 +30,9 @@ export async function g_preach_generate() {
     let index_last = list_index_last(verses);
     let nearness = 2;
     function lambda(item, index) {}
-    let before = range_from(index - nearness, nearness);
+    let before = range_from(index - nearness, index);
     let mapped = list_map_index(list, lambda);
+    let after = range_from(index, index + nearness);
     let group = [];
     async function lambda3(verse, index) {
       let text = object_property_get(verse, "text");
