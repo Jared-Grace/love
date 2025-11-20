@@ -25,9 +25,6 @@ Context and clarity rules:
 4. Never leave meaning vague. Always make subjects and objects explicit unless a pronoun is clearly safe to use.
 
 You will be given the passage and its context. Rewrite the passage following these rules.
-
-Example:
-Suppose a man looks at his own face in a mirror. The man sees himself. Then the man goes away. Right away, he forgets what he looks like. If a person hears God’s word but does not do what it says, that person is like that man.
 `,
     user = passage;
   let input = {
