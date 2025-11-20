@@ -67,8 +67,8 @@ export async function g_preach_generate() {
       let item2 = list_get(groups, index2);
       return item2;
     }
-    let mapped2 = list_map(filtered, lambda2);
-    return mapped2;
+    let slice = list_map(filtered, lambda2);
+    return slice;
   }
   let mapped = list_map_index(groups, lambda);
   let file_name = file_name_json(chapter_code);
