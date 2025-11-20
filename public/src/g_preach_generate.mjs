@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { bible_verse_trim_right } from "../../../love/public/src/bible_verse_trim_right.mjs";
 import { string_ends_with_any } from "../../../love/public/src/string_ends_with_any.mjs";
 import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
@@ -28,6 +29,7 @@ export async function g_preach_generate() {
       if (end) {
         la(group);
       } else {
+        list_add(list3, item2);
       }
       let verse_number = object_property_get(verse, "verse_number");
       let item = list_find_property(interlinear, "verse_number", verse_number);
