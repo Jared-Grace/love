@@ -18,8 +18,9 @@ export async function g_preach_generate() {
   let chapter_code = "JAS01";
   let chapters = await bible_interlinear_chapters();
   let interlinear = object_property_get(chapters, chapter_code);
-  let list = await ebible_verses("engbsb", chapter_code);
+  let verses = await ebible_verses("engbsb", chapter_code);
   async function lambda4(la) {
+    let index_last = list_index_last(verses);
     let group = [];
     async function lambda3(verse, index) {
       let text = object_property_get(verse, "text");
@@ -33,13 +34,12 @@ export async function g_preach_generate() {
       let suffixes = ".?!";
       let split = string_split_empty(suffixes);
       let end = string_ends_with_any(trimmed, split);
-      let index_last = list_index_last(list3);
       if (end) {
         la(group);
         group = [];
       }
     }
-    await each_index_async(list, lambda3);
+    await each_index_async(verses, lambda3);
   }
   let list2 = await list_adder_async(lambda4);
   return;
