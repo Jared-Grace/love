@@ -28,7 +28,7 @@ user_msg   = data.get("user", "")
 
 # --- API call ---
 response = openai.chat.completions.create(
-    model="gpt-4.1-mini",
+    model="gpt-4.1",
     messages=[
         {"role": "system", "content": system_msg},
         {"role": "user", "content": user_msg}
