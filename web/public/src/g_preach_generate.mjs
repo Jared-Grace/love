@@ -1,6 +1,5 @@
+import { string_ends_with_any } from "../../../love/public/src/string_ends_with_any.mjs";
 import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
-import { list_any } from "../../../love/public/src/list_any.mjs";
-import { string_ends_with } from "../../../love/public/src/string_ends_with.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -24,11 +23,7 @@ export async function g_preach_generate() {
         let text = object_property_get(verse, "text");
         let suffixes = ".?!";
         let split = string_split_empty(suffixes);
-        function lambda6(item2) {
-          let ew = string_ends_with(text, item2);
-          return ew;
-        }
-        let any = list_any(split, lambda6);
+        let any = string_ends_with_any(text, split);
         log(any);
         let verse_number = object_property_get(verse, "verse_number");
         let item = list_find_property(
