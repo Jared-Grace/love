@@ -1,3 +1,4 @@
+import { each_index_async } from "../../../love/public/src/each_index_async.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { bible_verse_trim_right } from "../../../love/public/src/bible_verse_trim_right.mjs";
 import { string_ends_with_any } from "../../../love/public/src/string_ends_with_any.mjs";
@@ -5,7 +6,6 @@ import { string_split_empty } from "../../../love/public/src/string_split_empty.
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { bible_interlinear_chapters } from "../../../love/public/src/bible_interlinear_chapters.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
@@ -34,10 +34,9 @@ export async function g_preach_generate() {
       let end = string_ends_with_any(trimmed, split);
       if (end) {
         la(group);
-      } else {
       }
     }
-    await each_async(list, lambda3);
+    await each_index_async(list, lambda3);
   }
   let list2 = await list_adder_async(lambda4);
   return;
