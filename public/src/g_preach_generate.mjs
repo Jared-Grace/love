@@ -91,12 +91,12 @@ export async function g_preach_generate() {
     let joined = list_join(mapped3, " ::: ");
     var { user_prompt, text, original } = prompt_get(item3);
     let verse_numbers = list_map_property(item3, "verse_number");
-    let sermon = await g_preach_generate_passage(
+    const prompt =
       "Here is the context: " +
-        joined +
-        " :::: Here is the passage to rewrite: " +
-        user_prompt,
-    );
+      joined +
+      " :::: Here is the passage to rewrite: " +
+      user_prompt;
+    let sermon = await g_preach_generate_passage(prompt);
     let v = {
       verse_numbers,
       text,
