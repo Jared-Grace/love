@@ -1,3 +1,4 @@
+import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_adder_multiple_unique_async } from "../../../love/public/src/list_adder_multiple_unique_async.mjs";
 import { string_get } from "../../../love/public/src/string_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -25,5 +26,6 @@ export async function ebible_sandbox() {
     }
   }
   let list = await list_adder_multiple_unique_async(lambda2);
+  let joined = list_join_empty(letters);
   return list;
 }
