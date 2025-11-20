@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
@@ -58,6 +59,7 @@ export async function g_preach_generate() {
     const property_name = "text";
     let mapped = list_map_property(group, property_name);
     let joined = list_join_space(mapped);
+    log(message);
   }
   let waited = await list_map_unordered_async(groups, lambda5);
   let verse =
