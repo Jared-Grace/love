@@ -86,7 +86,9 @@ export async function g_preach_generate() {
     let mapped2 = list_map(range2, prompt_get);
     let mapped3 = list_map_property(mapped2, "user_prompt");
     let joined = list_join(mapped3, " ::: ");
-    log({joined});
+    log({
+      joined,
+    });
     var { text, original } = prompt_get(item3);
     let verse_numbers = list_map_property(group, "verse_number");
     let sermon = await g_preach_generate_passage(user_prompt);
