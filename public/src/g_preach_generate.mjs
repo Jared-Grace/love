@@ -18,6 +18,7 @@ export async function g_preach_generate() {
   async function lambda4(la) {
     async function lambda5(la2) {
       async function lambda3(verse) {
+        let text = object_property_get(verse, "text");
         let verse_number = object_property_get(verse, "verse_number");
         let item = list_find_property(
           interlinear,
@@ -31,7 +32,8 @@ export async function g_preach_generate() {
       }
       await each_async(list, lambda3);
     }
-    let list3 = await list_adder_async(lambda5);
+    let group = await list_adder_async(lambda5);
+    la(group);
   }
   let list2 = await list_adder_async(lambda4);
   return;
