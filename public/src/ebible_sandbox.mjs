@@ -16,9 +16,10 @@ export async function ebible_sandbox() {
     let mapped = list_map_property(verses, "text");
     function lambda(v) {
       let index_last = string_index_last(v);
-      let item = string_get(s, index);
+      let item = string_get(v, index_last);
+      return item;
     }
     let mapped2 = list_map(mapped, lambda);
-    log(verses);
+    log(mapped2);
   }
 }
