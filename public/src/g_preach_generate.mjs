@@ -64,8 +64,8 @@ export async function g_preach_generate() {
     };
     return v;
   }
-  let waited = await list_map_unordered_async(groups, lambda5);
-  await file_overwrite_json(file_path, object);
+  let passages = await list_map_unordered_async(groups, lambda5);
+  await file_overwrite_json(path, passages);
   return;
   let verse =
     "Γίνεσθε δὲ ποιηταὶ λόγου καὶ μὴ ἀκροαταὶ μόνον παραλογιζόμενοι ἑαυτούς :: Be doers of the word, and not hearers only. Otherwise, you are deceiving yourselves.";
