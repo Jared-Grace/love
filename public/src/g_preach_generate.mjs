@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { range_from } from "../../../love/public/src/range_from.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { list_index_is } from "../../../love/public/src/list_index_is.mjs";
@@ -62,6 +63,7 @@ export async function g_preach_generate() {
   function lambda(item, index) {
     let r = range_from(index - nearness, index + nearness + 1);
     let filtered = list_filter(r, list_index_is);
+    let mapped2 = list_map(list2, function lambda2(item2) {});
     let sliced = list_slice(list, index - nearness, index + nearness + 1);
     return sliced;
   }
