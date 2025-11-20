@@ -9,7 +9,6 @@ export async function ebible_sandbox(bible_folder) {
   marker("1");
   await ebible_version_download(bible_folder);
   ("loop through to ensure parse correct before begin upload");
-  await ebible_chapters_each_verses_check(bible_folder);
   await ebible_chapters_each_verses(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     async function lambda(v) {
