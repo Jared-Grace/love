@@ -97,7 +97,7 @@ export async function g_preach_generate() {
       joined +
       " :::: Here is the passage to rewrite: " +
       user_prompt;
-    log(message);
+    log(prompt);
     let sermon = await g_preach_generate_passage(prompt);
     let v = {
       verse_numbers,
