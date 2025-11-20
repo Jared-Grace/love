@@ -95,7 +95,7 @@ export async function g_preach_generate() {
     let verse_numbers = list_map_property(item3, "verse_number");
     const expected = ["7"];
     let n = json_equal_not(verse_numbers, expected);
-    if (true) {
+    if (false) {
       if (n) {
         return;
       }
