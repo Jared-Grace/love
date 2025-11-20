@@ -1,3 +1,4 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { g_preach_generate_passage } from "../../../love/public/src/g_preach_generate_passage.mjs";
 import { list_map_property_join_space } from "../../../love/public/src/list_map_property_join_space.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -55,6 +56,7 @@ export async function g_preach_generate() {
     let text = list_map_property_join_space(group, "text");
     let original = list_map_property_join_space(group, "original");
     const user_prompt = original + " :: " + text;
+    let mapped = list_map_property(list, property_name);
     log(user_prompt);
   }
   let waited = await list_map_unordered_async(groups, lambda5);
