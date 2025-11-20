@@ -19,9 +19,9 @@ export async function ebible_sandbox() {
     async function each_chapter(chapter_code, verses) {
       let mapped = list_map_property(verses, "text");
       function lambda(v) {
-        let s3 = bible_verse_trim_right(v);
-        log(s3);
-        let item = string_last(s3);
+        let trimmed = bible_verse_trim_right(v);
+        log(trimmed);
+        let item = string_last(trimmed);
         return item;
       }
       let mapped2 = list_map(mapped, lambda);
