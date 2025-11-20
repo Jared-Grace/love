@@ -54,9 +54,8 @@ export async function g_preach_generate() {
   }
   let path = local_function_path(ebible_version_download, chapter_code);
   let groups = await list_adder_async(lambda4);
-  async function lambda5(group) {$a
-    const property_name = "text";
-    let joined = list_map_property_join_space(group, property_name);
+  async function lambda5(group) {
+    let joined = list_map_property_join_space(group, "text");
     log(joined);
   }
   let waited = await list_map_unordered_async(groups, lambda5);
