@@ -69,12 +69,18 @@ export async function g_preach_generate() {
       return item2;
     }
     let range = list_map(filtered, lambda2);
-    return range;
+    let v3 = {
+      range,
+      item,
+    };
+    return v3;
   }
   let mapped = list_map_index(groups, lambda);
   let file_name = file_name_json(chapter_code);
   let path = local_function_path(ebible_version_download, file_name);
-  async function lambda5(group) {
+  async function lambda5(r) {
+    let item3 = object_property_get(r, "item");
+    let range2 = object_property_get(r, "range");
     var { user_prompt, text, original } = prompt_get(group);
     let verse_numbers = list_map_property(group, "verse_number");
     let sermon = await g_preach_generate_passage(user_prompt);
