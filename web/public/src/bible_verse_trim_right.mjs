@@ -8,6 +8,6 @@ export function bible_verse_trim_right(v) {
     let ew = string_ends_with_any(s2, split);
     return ew;
   }
-  let s3 = string_trim_right(lambda3, v);
-  return s3;
+  let trimmed = string_trim_right(lambda3, v);
+  return trimmed;
 }
