@@ -95,7 +95,9 @@ export async function g_preach_generate() {
     var { user_prompt, text, original } = prompt_get(item3);
     let verse_numbers = list_map_property(item3, "verse_number");
     let eq2 = json_equal(verse_numbers, ["7"]);
-    let n = not(a);
+    let n = not(eq2);
+    if (false) {
+    }
     const prompt =
       "Here is the context: " +
       joined +
