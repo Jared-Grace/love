@@ -1,4 +1,4 @@
-import { list_adder_multiple_async } from "../../../love/public/src/list_adder_multiple_async.mjs";
+import { list_adder_multiple_unique_async } from "../../../love/public/src/list_adder_multiple_unique_async.mjs";
 import { string_get } from "../../../love/public/src/string_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_index_last } from "../../../love/public/src/string_index_last.mjs";
@@ -24,6 +24,6 @@ export async function ebible_sandbox() {
       la(mapped2);
     }
   }
-  let list = await list_adder_multiple_async(lambda2);
+  let list = await list_adder_multiple_unique_async(lambda2);
   return list;
 }
