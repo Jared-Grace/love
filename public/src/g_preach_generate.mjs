@@ -66,6 +66,7 @@ export async function g_preach_generate() {
   }
   let passages = await list_map_unordered_async(groups, lambda5);
   await file_overwrite_json(path, {
+    chapter_code,
     passages,
   });
   return;
