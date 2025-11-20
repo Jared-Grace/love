@@ -1,4 +1,4 @@
-import { string_index_last } from "../../../love/public/src/string_index_last.mjs";
+import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
 import { each_index_async } from "../../../love/public/src/each_index_async.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { bible_verse_trim_right } from "../../../love/public/src/bible_verse_trim_right.mjs";
@@ -33,7 +33,7 @@ export async function g_preach_generate() {
       let suffixes = ".?!";
       let split = string_split_empty(suffixes);
       let end = string_ends_with_any(trimmed, split);
-      let index_last = string_index_last(s);
+      let index_last = list_index_last(list3);
       if (end) {
         la(group);
         group = [];
