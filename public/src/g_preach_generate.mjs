@@ -81,6 +81,7 @@ export async function g_preach_generate() {
   async function lambda5(r) {
     let item3 = object_property_get(r, "item");
     let range2 = object_property_get(r, "range");
+    let mapped2 = list_map(list, function lambda6(item4) {});
     var { text, original } = prompt_get(item3);
     let verse_numbers = list_map_property(group, "verse_number");
     let sermon = await g_preach_generate_passage(user_prompt);
