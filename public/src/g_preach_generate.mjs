@@ -64,7 +64,7 @@ export async function g_preach_generate() {
   let nearness = 2;
   function lambda(item, index) {
     let r = range_from(index - nearness, index + nearness + 1);
-    let filtered = list_filter(r, $a);
+    let filtered = list_filter(r, () => {});
     function lambda2(index2) {
       let item2 = list_get(groups, index2);
       return item2;
