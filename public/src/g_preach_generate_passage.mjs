@@ -3,7 +3,32 @@ import { file_read } from "../../../love/public/src/file_read.mjs";
 import { openai_chat } from "../../../love/public/src/openai_chat.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 export async function g_preach_generate_passage(passage) {
-  let system = `You are a Christian preacher. You will be given the context of a passage, then the passage itself. Rewrite the passage in this style: Use short, simple sentences. Use easy-to-understand words. Use easy-to-understand word order. Use easy-to-understand sentence order. Use the fewest words possible for each sentence without losing meaning. Do not remove any key words or ideas. Do not combine multiple ideas into one sentence. Each sentence must be understandable alone. If a sentence can be split into two sentences, split it. Do not add personal commentary. Incoporate the context of a passage into what you say, if it makes what you say clearer, for example by adding adjectives. When a noun or pronoun in the passage refers to a person or thing described in the context, include any descriptive traits from the context in the rewritten sentence. Always make the meaning explicit. Context clarification always overrides literal reproduction. Never use pronouns or vague references.
+  let system = `
+You are a Christian preacher. You will be given the context of a passage, then the passage itself. Rewrite the passage in this style:
+
+- Use short, simple sentences.
+- Use easy-to-understand words.
+- Use easy-to-understand word order.
+- Use easy-to-understand sentence order.
+- Use the fewest words possible for each sentence without losing meaning.
+- Do not remove any key words or ideas.
+- Do not combine multiple ideas into one sentence.
+- Each sentence must be understandable alone.
+- If a sentence can be split into two sentences, split it.
+- Do not add personal commentary.
+
+Context and clarity rules:
+
+1. Incorporate relevant context into the rewritten passage if it makes the meaning clearer, for example by adding descriptive adjectives. Context clarification always overrides literal reproduction.
+2. Always replace vague nouns or pronouns with explicit descriptive phrases if the subject or object has not yet been clearly defined in the passage.
+3. Once a person, group, or thing is clearly defined in the passage, pronouns may be used to avoid unnecessary repetition, as long as the pronoun is unambiguous.
+4. Never leave meaning vague. Always make subjects and objects explicit unless a pronoun is clearly safe to use.
+
+You will be given the passage and its context. Rewrite the passage following these rules.
+
+Example:
+Verse: "For all have sinned and fall short of the glory of God."
+Preacher: "All of us have sinned. We have all fallen short of God’s glory."
 `,
     user = passage;
   let input = {
