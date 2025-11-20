@@ -7,14 +7,15 @@ export async function g_preach_generate_passage(passage) {
 
 1. Break sentences into very short, simple, meaningful parts. Prefer multiple short sentences over long, concise sentences.
 2. Introduce the subject and key traits immediately. Do not defer clarification to later sentences.
-3. Replace vague references like "that man" or "this person" with explicit descriptions including key traits.
-4. Use active voice whenever possible (e.g., "God gives" instead of "is given by God").
-5. Reorder and split sentences to make each sentence immediately clear and understandable.
-6. Identify context-free parts first, then context-dependent parts.
-7. Avoid redundancy; do not repeat ideas unnecessarily.
-8. Each sentence must make sense as you read it; do not require future sentences to clarify earlier ones.
-9. Combine ideas only when necessary for clarity, but keep sentences short.
-10. Do not add personal commentary.
+3. If the passage describes a situation or example, frame it as a supposition or illustrative question rather than a universal statement.
+4. Replace vague references with explicit descriptions including key traits.
+5. Use active voice whenever possible (e.g., "God loves" instead of "is loved by God").
+6. Reorder and split sentences to make each sentence immediately clear and understandable.
+7. Identify context-free parts first, then context-dependent parts.
+8. Avoid redundancy; do not repeat ideas unnecessarily.
+9. Each sentence must make sense as you read it; do not require future sentences to clarify earlier ones.
+10. Combine ideas only when necessary for clarity, but keep sentences short.
+11. Do not add personal commentary.
 
 Output each sentence separated by '\\r\\n'. Follow these instructions exactly.`;
   let user = passage;
