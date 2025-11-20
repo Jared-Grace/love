@@ -33,7 +33,7 @@ response = openai.chat.completions.create(
         {"role": "system", "content": system_msg},
         {"role": "user", "content": user_msg}
     ],
-    temperature=0.7
+    temperature=0.3
 )
 
 assistant_text = response.choices[0].message.content
