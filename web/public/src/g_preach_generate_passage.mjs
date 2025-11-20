@@ -13,10 +13,11 @@ export async function g_preach_generate_passage(passage) {
 6. Identify context-dependent parts (need prior context) and state them after context is established.
 7. Replace vague nouns or pronouns with clear descriptive phrases if the subject or object is not yet defined.
 8. Once defined, pronouns may be used if unambiguous.
-9. Do not combine multiple ideas into one sentence unless it improves clarity.
-10. Never leave meaning vague; always prioritize clarity over literal reproduction.
-11. Each sentence should be understandable alone whenever possible.
-12. Do not add personal commentary.
+9. Avoid repeating the same idea in multiple sentences.
+10. Combine only if necessary for clarity, but do not introduce redundancy.
+11. Never leave meaning vague; always prioritize clarity over literal reproduction.
+12. Each sentence should be understandable alone whenever possible.
+13. Do not add personal commentary.
 
 Treat the passage like a dependency graph: first state context-free parts, then context-dependent parts. Output each sentence separated by '\\r\\n'.`,
     user = passage;
