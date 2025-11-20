@@ -18,7 +18,7 @@ export async function ebible_sandbox() {
       let mapped = list_map_property(verses, "text");
       function lambda(v) {
         function lambda3(s2) {}
-        let s3 = string_trim_right(lambda3, s);
+        let s3 = string_trim_right(lambda3, v);
         let item = string_last(v);
         return item;
       }
