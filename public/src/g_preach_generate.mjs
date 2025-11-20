@@ -1,4 +1,4 @@
-import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
+import { file_open } from "../../../love/public/src/file_open.mjs";
 import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { g_preach_generate_passage } from "../../../love/public/src/g_preach_generate_passage.mjs";
@@ -70,7 +70,7 @@ export async function g_preach_generate() {
     chapter_code,
     passages,
   });
-  let result = await file_overwrite(file_path, contents);
+  let result = await file_open(path);
   return;
   let verse =
     "Γίνεσθε δὲ ποιηταὶ λόγου καὶ μὴ ἀκροαταὶ μόνον παραλογιζόμενοι ἑαυτούς :: Be doers of the word, and not hearers only. Otherwise, you are deceiving yourselves.";
