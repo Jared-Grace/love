@@ -63,7 +63,7 @@ export async function g_preach_generate() {
   return;
   let verse =
     "Γίνεσθε δὲ ποιηταὶ λόγου καὶ μὴ ἀκροαταὶ μόνον παραλογιζόμενοι ἑαυτούς :: Be doers of the word, and not hearers only. Otherwise, you are deceiving yourselves.";
-  let data = await g_preach_generate_passage(verse);
-  return data;
+  let sermon = await g_preach_generate_passage(verse);
+  return sermon;
   marker("1");
 }
