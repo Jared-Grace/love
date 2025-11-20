@@ -20,7 +20,7 @@ export async function g_preach_generate() {
   let list = await ebible_verses("engbsb", chapter_code);
   async function lambda4(la) {
     let group = [];
-    async function lambda3(verse) {
+    async function lambda3(verse, index) {
       let text = object_property_get(verse, "text");
       let verse_number = object_property_get(verse, "verse_number");
       let item = list_find_property(interlinear, "verse_number", verse_number);
@@ -34,6 +34,7 @@ export async function g_preach_generate() {
       let end = string_ends_with_any(trimmed, split);
       if (end) {
         la(group);
+        group = [];
       }
     }
     await each_index_async(list, lambda3);
