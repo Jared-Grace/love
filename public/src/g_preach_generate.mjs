@@ -100,7 +100,6 @@ export async function g_preach_generate() {
     log({
       prompt,
     });
-    return;
     let sermon = await g_preach_generate_passage(prompt);
     let v = {
       verse_numbers,
