@@ -59,7 +59,7 @@ export async function g_preach_generate() {
     let text = list_map_property_join_space(group, "text");
     let original = list_map_property_join_space(group, "original");
     const user_prompt = original + " :: " + text;
-    let verse_numbers = list_map_property(list, "verse_number");
+    let verse_numbers = list_map_property(group, "verse_number");
     let v = {
       verse_numbers,
     };
