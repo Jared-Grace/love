@@ -49,8 +49,6 @@ export async function g_preach_generate() {
     await each_index_async(verses, lambda3);
   }
   let groups = await list_adder_async(lambda4);
-  return groups;
-  return chapters;
   let verse =
     "James 1:22  Γίνεσθε δὲ ποιηταὶ λόγου καὶ μὴ ἀκροαταὶ μόνον παραλογιζόμενοι ἑαυτούς";
   let system =
