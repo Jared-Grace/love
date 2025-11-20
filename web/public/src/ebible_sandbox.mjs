@@ -1,8 +1,7 @@
+import { string_last } from "../../../love/public/src/string_last.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_adder_multiple_unique_async } from "../../../love/public/src/list_adder_multiple_unique_async.mjs";
-import { string_get } from "../../../love/public/src/string_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { string_index_last } from "../../../love/public/src/string_index_last.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { ebible_chapters_each_verses } from "../../../love/public/src/ebible_chapters_each_verses.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -17,8 +16,7 @@ export async function ebible_sandbox() {
     async function each_chapter(chapter_code, verses) {
       let mapped = list_map_property(verses, "text");
       function lambda(v) {
-        let index_last = string_index_last(v);
-        let item = string_get(v, index_last);
+        let item = string_last(v);
         return item;
       }
       let mapped2 = list_map(mapped, lambda);
