@@ -1,3 +1,4 @@
+import { range_from } from "../../../love/public/src/range_from.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { file_open } from "../../../love/public/src/file_open.mjs";
 import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
@@ -28,6 +29,7 @@ export async function g_preach_generate() {
   async function lambda4(la) {
     let index_last = list_index_last(verses);
     function lambda(item, index) {}
+    let mapped2 = range_from(from, to);
     let mapped = list_map_index(list, lambda);
     let group = [];
     async function lambda3(verse, index) {
