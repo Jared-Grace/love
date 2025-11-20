@@ -4,7 +4,6 @@ import { string_split_empty } from "../../../love/public/src/string_split_empty.
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { bible_interlinear_chapters } from "../../../love/public/src/bible_interlinear_chapters.mjs";
@@ -25,8 +24,9 @@ export async function g_preach_generate() {
       let trimmed = bible_verse_trim_right(text);
       let suffixes = ".?!";
       let split = string_split_empty(suffixes);
-      let any = string_ends_with_any(trimmed, split);
-      log(any);
+      let end = string_ends_with_any(trimmed, split);
+      if (false) {
+      }
       let verse_number = object_property_get(verse, "verse_number");
       let item = list_find_property(interlinear, "verse_number", verse_number);
     }
