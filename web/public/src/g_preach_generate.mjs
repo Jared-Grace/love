@@ -27,14 +27,14 @@ export async function g_preach_generate() {
     async function lambda3(verse, index) {
       let text = object_property_get(verse, "text");
       let verse_number = object_property_get(verse, "verse_number");
-      let original = list_find_property(
+      let original_verse = list_find_property(
         interlinear,
         "verse_number",
         verse_number,
       );
-      let text_original = object_property_get(original, "text");
+      let original = object_property_get(original_verse, "text");
       list_add(group, {
-        text_original,
+        text_original: original,
         text,
       });
       let trimmed = bible_verse_trim_right(text);
