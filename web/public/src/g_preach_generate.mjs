@@ -64,13 +64,13 @@ export async function g_preach_generate() {
     let r = range_from(index - nearness, index + nearness + 1);
     let filtered = list_filter(r, list_index_is);
     function lambda2(index2) {
-      let item2 = list_get(list, index2);
+      let item2 = list_get(groups, index2);
       return item2;
     }
     let mapped2 = list_map(filtered, lambda2);
     return mapped2;
   }
-  let mapped = list_map_index(list, lambda);
+  let mapped = list_map_index(groups, lambda);
   let file_name = file_name_json(chapter_code);
   let path = local_function_path(ebible_version_download, file_name);
   async function lambda5(group) {
