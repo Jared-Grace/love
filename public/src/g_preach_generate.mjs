@@ -1,3 +1,4 @@
+import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { list_index_is } from "../../../love/public/src/list_index_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { range_from } from "../../../love/public/src/range_from.mjs";
@@ -34,6 +35,7 @@ export async function g_preach_generate() {
     function lambda(item, index) {
       let indices = range_from(index - nearness, index + nearness);
       let filtered = list_filter(indices, list_index_is);
+      let sliced = list_slice(list2, a, b);
     }
     let mapped = list_map_index(list, lambda);
     let group = [];
