@@ -36,6 +36,7 @@ export async function g_preach_generate() {
       list_add(group, {
         text_original: original,
         text,
+        verse_number,
       });
       let trimmed = bible_verse_trim_right(text);
       let suffixes = ".?!";
