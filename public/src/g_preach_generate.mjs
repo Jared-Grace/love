@@ -48,7 +48,7 @@ export async function g_preach_generate() {
     }
     await each_index_async(verses, lambda3);
   }
-  let joined2 = local_function_path(ebible_version_download, bible_folder);
+  let path = local_function_path(ebible_version_download, chapter_code);
   let groups = await list_adder_async(lambda4);
   let verse =
     "Γίνεσθε δὲ ποιηταὶ λόγου καὶ μὴ ἀκροαταὶ μόνον παραλογιζόμενοι ἑαυτούς :: Be doers of the word, and not hearers only. Otherwise, you are deceiving yourselves.";
