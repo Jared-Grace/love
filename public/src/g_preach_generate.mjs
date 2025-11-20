@@ -1,5 +1,4 @@
 import { list_index_is } from "../../../love/public/src/list_index_is.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_join } from "../../../love/public/src/list_join.mjs";
 import { range } from "../../../love/public/src/range.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
@@ -90,13 +89,14 @@ export async function g_preach_generate() {
     let mapped2 = list_map(range2, prompt_get);
     let mapped3 = list_map_property(mapped2, "user_prompt");
     let joined = list_join(mapped3, " ::: ");
-    log({
-      joined,
-    });
-    return;
-    var { text, original } = prompt_get(item3);
-    let verse_numbers = list_map_property(group, "verse_number");
-    let sermon = await g_preach_generate_passage(user_prompt);
+    var { user_prompt, text, original } = prompt_get(item3);
+    let verse_numbers = list_map_property(item3, "verse_number");
+    let sermon = await g_preach_generate_passage(
+      "Here is the context: :::: " +
+        joined +
+        " :::: Here is the passage to rewrite: " +
+        user_prompt,
+    );
     let v = {
       verse_numbers,
       text,
