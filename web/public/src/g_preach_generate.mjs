@@ -16,19 +16,24 @@ export async function g_preach_generate() {
   let interlinear = object_property_get(chapters, chapter_code);
   let list = await ebible_verses("engbsb", chapter_code);
   async function lambda4(la) {
-    async function lambda5(la2) {}
+    async function lambda5(la2) {
+      async function lambda3(verse) {
+        let verse_number = object_property_get(verse, "verse_number");
+        let item = list_find_property(
+          interlinear,
+          "verse_number",
+          verse_number,
+        );
+        log({
+          verse,
+          item,
+        });
+      }
+      await each_async(list, lambda3);
+    }
     let list3 = await list_adder_async(lambda5);
   }
   let list2 = await list_adder_async(lambda4);
-  async function lambda3(verse) {
-    let verse_number = object_property_get(verse, "verse_number");
-    let item = list_find_property(interlinear, "verse_number", verse_number);
-    log({
-      verse,
-      item,
-    });
-  }
-  await each_async(list, lambda3);
   return;
   return chapters;
   let verse =
