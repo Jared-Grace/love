@@ -1,4 +1,4 @@
-import { list_map } from "../../../love/public/src/list_map.mjs";
+import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { file_open } from "../../../love/public/src/file_open.mjs";
 import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -27,8 +27,8 @@ export async function g_preach_generate() {
   let verses = await ebible_verses("engbsb", chapter_code);
   async function lambda4(la) {
     let index_last = list_index_last(verses);
-    function lambda(item) {}
-    let mapped = list_map(list, lambda);
+    function lambda(item, index) {}
+    let mapped = list_map_index(list, lambda);
     let group = [];
     async function lambda3(verse, index) {
       let text = object_property_get(verse, "text");
