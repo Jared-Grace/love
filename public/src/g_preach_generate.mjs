@@ -1,3 +1,4 @@
+import { json_equal } from "../../../love/public/src/json_equal.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_index_is } from "../../../love/public/src/list_index_is.mjs";
 import { list_join } from "../../../love/public/src/list_join.mjs";
@@ -92,7 +93,7 @@ export async function g_preach_generate() {
     let joined = list_join(mapped3, " ::: ");
     var { user_prompt, text, original } = prompt_get(item3);
     let verse_numbers = list_map_property(item3, "verse_number");
-    $inej;
+    let eq2 = json_equal(left, sliced);
     const prompt =
       "Here is the context: " +
       joined +
