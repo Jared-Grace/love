@@ -1,3 +1,4 @@
+import { string_trim_right } from "../../../love/public/src/string_trim_right.mjs";
 import { string_last } from "../../../love/public/src/string_last.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_adder_multiple_unique_async } from "../../../love/public/src/list_adder_multiple_unique_async.mjs";
@@ -16,6 +17,7 @@ export async function ebible_sandbox() {
     async function each_chapter(chapter_code, verses) {
       let mapped = list_map_property(verses, "text");
       function lambda(v) {
+        let s3 = string_trim_right(function lambda3(s2) {}, s);
         let item = string_last(v);
         return item;
       }
