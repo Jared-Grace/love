@@ -12,8 +12,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
 export async function ebible_sandbox() {
   ".”,:?;d—k)m’!frluetysgDnhpazb";
-  let suffixes = '"”) ’';
-  let split = string_split_empty(suffixes);
   let bible_folder = "engbsb";
   marker("1");
   await ebible_version_download(bible_folder);
@@ -23,6 +21,8 @@ export async function ebible_sandbox() {
     async function each_chapter(chapter_code, verses) {
       let mapped = list_map_property(verses, "text");
       function lambda(v) {
+        let suffixes = '"”) ’';
+        let split = string_split_empty(suffixes);
         function lambda3(s2) {
           let ew = string_ends_with_any(s2, split);
           return ew;
