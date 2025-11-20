@@ -1,7 +1,6 @@
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { g_preach_generate_passage } from "../../../love/public/src/g_preach_generate_passage.mjs";
 import { list_map_property_join_space } from "../../../love/public/src/list_map_property_join_space.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
 import { local_function_path } from "../../../love/public/src/local_function_path.mjs";
@@ -50,6 +49,7 @@ export async function g_preach_generate() {
     }
     await each_index_async(verses, lambda3);
   }
+  fnj;
   let path = local_function_path(ebible_version_download, chapter_code);
   let groups = await list_adder_async(lambda4);
   async function lambda5(group) {
@@ -57,7 +57,9 @@ export async function g_preach_generate() {
     let original = list_map_property_join_space(group, "original");
     const user_prompt = original + " :: " + text;
     let verse_numbers = list_map_property(list, "verse_number");
-    log(user_prompt);
+    return {
+      verse_numbers,
+    };
   }
   let waited = await list_map_unordered_async(groups, lambda5);
   return;
