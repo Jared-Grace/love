@@ -1,3 +1,4 @@
+import { string_ends_with } from "../../../love/public/src/string_ends_with.mjs";
 import { string_trim_right } from "../../../love/public/src/string_trim_right.mjs";
 import { string_last } from "../../../love/public/src/string_last.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
@@ -17,7 +18,9 @@ export async function ebible_sandbox() {
     async function each_chapter(chapter_code, verses) {
       let mapped = list_map_property(verses, "text");
       function lambda(v) {
-        function lambda3(s2) {}
+        function lambda3(s2) {
+          let ew = string_ends_with(s, suffix);
+        }
         let s3 = string_trim_right(lambda3, v);
         let item = string_last(v);
         return item;
