@@ -254,6 +254,7 @@
   "hs": "html_span",
   "ldm": "list_adder_multiple",
   "ldma": "list_adder_multiple_async",
-  "erga": "each_range_async"
+  "erga": "each_range_async",
+  "fnj": "file_name_json"
  }
 }
