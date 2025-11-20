@@ -96,9 +96,9 @@ export async function g_preach_generate() {
     const expected = ["7"];
     let n = json_equal_not(verse_numbers, expected);
     if (false) {
-    }
-    if (n) {
-      return;
+      if (n) {
+        return;
+      }
     }
     const prompt =
       "Here is the context: " +
