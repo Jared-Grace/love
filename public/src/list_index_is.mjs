@@ -1,6 +1,8 @@
+import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
-export function list_index_is(list, index) {$aa
+export function list_index_is(list, index) {
+  assert_arguments(arguments, 2);
   let e = list_empty_is(list);
   let v = false;
   if (e) {
