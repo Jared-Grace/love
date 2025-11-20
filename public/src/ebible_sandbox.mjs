@@ -25,4 +25,5 @@ export async function ebible_sandbox() {
     }
   }
   let list = await list_adder_multiple_async(lambda2);
+  return list;
 }
