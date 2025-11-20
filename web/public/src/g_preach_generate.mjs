@@ -1,3 +1,4 @@
+import { g_preach_generate_passage } from "../../../love/public/src/g_preach_generate_passage.mjs";
 import { list_map_property_join_space } from "../../../love/public/src/list_map_property_join_space.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
@@ -14,10 +15,6 @@ import { list_find_property } from "../../../love/public/src/list_find_property.
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { bible_interlinear_chapters } from "../../../love/public/src/bible_interlinear_chapters.mjs";
-import { file_read } from "../../../love/public/src/file_read.mjs";
-import { openai_chat } from "../../../love/public/src/openai_chat.mjs";
-import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
-import { file_temp } from "../../../love/public/src/file_temp.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_preach_generate() {
   let chapter_code = "JAS01";
@@ -64,23 +61,7 @@ export async function g_preach_generate() {
   return;
   let verse =
     "Γίνεσθε δὲ ποιηταὶ λόγου καὶ μὴ ἀκροαταὶ μόνον παραλογιζόμενοι ἑαυτούς :: Be doers of the word, and not hearers only. Otherwise, you are deceiving yourselves.";
-  let system =
-      'You are a Christian preacher. Rewrite Bible verses in short, simple sentences. Use easy to understand words. Use easy to understand word order. Use fewest words possible for each sentence without sacrificing easy to understand. Do not remove any key words or ideas. Do not combine multiple ideas into one sentence. Each sentence must be understandable alone. If a sentence can be made into two sentences, then make it two instead of one. Do not add personal commentary. Do not summarize beyond the verse. Use clear, literal wording. Rewrite the verse(s) the user gives you in your style. Example: Verse: "For all have sinned and fall short of the glory of God." Preacher: "All of us have sinned. We have all fallen short of God\'s glory."',
-    user = verse;
-  let input = {
-    system,
-    user,
-  };
-  let data = null;
-  async function lambda(input_file_path) {
-    async function lambda2(output_file_path) {
-      await file_overwrite_json(input_file_path, input);
-      await openai_chat(input_file_path, output_file_path);
-      data = await file_read(output_file_path);
-    }
-    let result2 = await file_temp(lambda2);
-  }
-  let result = await file_temp(lambda);
+  let data = await g_preach_generate_passage(verse);
   return data;
   marker("1");
 }
