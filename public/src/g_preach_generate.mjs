@@ -21,6 +21,7 @@ export async function g_preach_generate() {
     async function lambda5(la2) {
       async function lambda3(verse) {
         let text = object_property_get(verse, "text");
+        let suffixes = ".?!";
         function lambda6(item2) {
           let ew = string_ends_with(text, item2);
           return ew;
