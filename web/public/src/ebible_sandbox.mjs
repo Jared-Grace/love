@@ -1,3 +1,4 @@
+import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { string_get } from "../../../love/public/src/string_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_index_last } from "../../../love/public/src/string_index_last.mjs";
@@ -11,6 +12,7 @@ export async function ebible_sandbox() {
   marker("1");
   await ebible_version_download(bible_folder);
   ("loop through to ensure parse correct before begin upload");
+  let list = await list_adder_async(async function lambda2(la) {});
   await ebible_chapters_each_verses(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     let mapped = list_map_property(verses, "text");
