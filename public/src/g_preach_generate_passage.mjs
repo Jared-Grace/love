@@ -3,29 +3,22 @@ import { file_read } from "../../../love/public/src/file_read.mjs";
 import { openai_chat } from "../../../love/public/src/openai_chat.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 export async function g_preach_generate_passage(passage) {
-  let system = `You are a Christian preacher. You will be given the context of a passage and the passage itself. Rewrite the passage in this style:
+  let system = `You are a Christian preacher. You will be given the context of a passage and the passage itself. Rewrite the passage as follows:
 
-Sentence structure:
-- Break each sentence into small, meaningful parts.
-- Use short, simple sentences.
-- Use easy-to-understand words and word order.
-- Split any sentence that can be divided for clarity.
-- Reorder ideas if it makes sentences clearer or more logical.
-- Use the fewest words possible without losing meaning.
-- Do not combine multiple ideas into one sentence unless it improves clarity.
-- Each sentence should be understandable alone when context allows.
-- Do not add personal commentary.
+1. Break each sentence into very short, meaningful parts.
+2. Use short, simple sentences and easy-to-understand words.
+3. Split sentences whenever possible for clarity.
+4. Reorder ideas if it makes sentences clearer or more logical.
+5. Identify context-free parts (understandable alone) and state them first.
+6. Identify context-dependent parts (need prior context) and state them after context is established.
+7. Replace vague nouns or pronouns with clear descriptive phrases if the subject or object is not yet defined.
+8. Once defined, pronouns may be used if unambiguous.
+9. Do not combine multiple ideas into one sentence unless it improves clarity.
+10. Never leave meaning vague; always prioritize clarity over literal reproduction.
+11. Each sentence should be understandable alone whenever possible.
+12. Do not add personal commentary.
 
-Context handling:
-- Identify context-free parts (understandable alone) and state them first.
-- Identify context-dependent parts (need prior context) and state them after context is established.
-- Replace vague nouns or pronouns with clear descriptive phrases if the subject or object is not yet defined.
-- Once defined, pronouns may be used if unambiguous.
-- Always make subjects and objects explicit unless a pronoun is clearly safe.
-- Never leave meaning vague. Always prioritize clarity over literal reproduction.
-- Add relevant descriptive context if it makes the meaning clearer.
-
-Treat the passage like a dependency graph: first state context-free parts, then context-dependent parts.`,
+Treat the passage like a dependency graph: first state context-free parts, then context-dependent parts. Output each sentence separated by '\\r\\n'.`,
     user = passage;
   let input = {
     system,
