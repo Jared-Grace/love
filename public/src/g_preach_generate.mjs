@@ -37,7 +37,7 @@ export async function g_preach_generate() {
       );
       let original = object_property_get(original_verse, "text");
       list_add(group, {
-        text_original: original,
+        original,
         text,
         verse_number,
       });
