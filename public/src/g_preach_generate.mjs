@@ -33,7 +33,7 @@ export async function g_preach_generate() {
     let nearness = 2;
     function lambda(item, index) {
       let indices = range_from(index - nearness, index + nearness);
-      let filtered = list_filter(list2, list_index_is);
+      let filtered = list_filter(indices, list_index_is);
     }
     let mapped = list_map_index(list, lambda);
     let group = [];
