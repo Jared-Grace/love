@@ -1,3 +1,4 @@
+import { string_get } from "../../../love/public/src/string_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_index_last } from "../../../love/public/src/string_index_last.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -15,7 +16,7 @@ export async function ebible_sandbox() {
     let mapped = list_map_property(verses, "text");
     function lambda(v) {
       let index_last = string_index_last(v);
-      string_get;
+      let item = string_get(s, index);
     }
     let mapped2 = list_map(mapped, lambda);
     log(verses);
