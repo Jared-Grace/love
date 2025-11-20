@@ -1,4 +1,4 @@
-import { string_ends_with } from "../../../love/public/src/string_ends_with.mjs";
+import { string_ends_with_any } from "../../../love/public/src/string_ends_with_any.mjs";
 import { string_trim_right } from "../../../love/public/src/string_trim_right.mjs";
 import { string_last } from "../../../love/public/src/string_last.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
@@ -9,6 +9,7 @@ import { ebible_chapters_each_verses } from "../../../love/public/src/ebible_cha
 import { marker } from "../../../love/public/src/marker.mjs";
 import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
 export async function ebible_sandbox() {
+  let suffixes = '"”) !';
   let bible_folder = "engbsb";
   marker("1");
   await ebible_version_download(bible_folder);
@@ -19,7 +20,7 @@ export async function ebible_sandbox() {
       let mapped = list_map_property(verses, "text");
       function lambda(v) {
         function lambda3(s2) {
-          let ew = string_ends_with(s, suffix);
+          let ew = string_ends_with_any(s2, suffix);
         }
         let s3 = string_trim_right(lambda3, v);
         let item = string_last(v);
