@@ -7,11 +7,7 @@ export async function g_preach_generate_passage(passage) {
 
 Always replace vague or generic nouns or pronouns with the precise meaning from the context. Use descriptive phrases that clearly identify the person, thing, or group. Context clarification always overrides literal reproduction. Never use pronouns or vague references.
 
-You will be given the context of a passage, then the passage itself. Rewrite the passage in this style.
-
-Example:
-Verse: "For all have sinned and fall short of the glory of God."
-Preacher: "All of us have sinned. We have all fallen short of God’s glory."`,
+You will be given the context of a passage, then the passage itself. Rewrite the passage in this style.`,
     user = passage;
   let input = {
     system,
