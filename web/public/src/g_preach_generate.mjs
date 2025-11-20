@@ -16,7 +16,8 @@ export async function g_preach_generate() {
   let interlinear = object_property_get(chapters, chapter_code);
   let list = await ebible_verses("engbsb", chapter_code);
   async function lambda4(la) {
-    let list3 = await list_adder_async(async function lambda5(la2) {});
+    async function lambda5(la2) {}
+    let list3 = await list_adder_async(lambda5);
   }
   let list2 = await list_adder_async(lambda4);
   async function lambda3(verse) {
