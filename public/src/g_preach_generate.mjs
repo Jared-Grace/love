@@ -30,13 +30,6 @@ export async function g_preach_generate() {
   let verses = await ebible_verses("engbsb", chapter_code);
   async function lambda4(la) {
     let index_last = list_index_last(verses);
-    let nearness = 2;
-    function lambda(item, index) {
-      let filtered = list_filter(indices, list_index_is);
-      let sliced = list_slice(filtered, index - nearness, index + nearness + 1);
-      return sliced;
-    }
-    let mapped = list_map_index(list, lambda);
     let group = [];
     async function lambda3(verse, index) {
       let text = object_property_get(verse, "text");
@@ -63,9 +56,16 @@ export async function g_preach_generate() {
     }
     await each_index_async(verses, lambda3);
   }
+  let groups = await list_adder_async(lambda4);
+  let nearness = 2;
+  function lambda(item, index) {
+    let filtered = list_filter(indices, list_index_is);
+    let sliced = list_slice(filtered, index - nearness, index + nearness + 1);
+    return sliced;
+  }
+  let mapped = list_map_index(list, lambda);
   let file_name = file_name_json(chapter_code);
   let path = local_function_path(ebible_version_download, file_name);
-  let groups = await list_adder_async(lambda4);
   async function lambda5(group) {
     let text = list_map_property_join_space(group, "text");
     let original = list_map_property_join_space(group, "original");
