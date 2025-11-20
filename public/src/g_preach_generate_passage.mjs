@@ -3,7 +3,7 @@ import { file_read } from "../../../love/public/src/file_read.mjs";
 import { openai_chat } from "../../../love/public/src/openai_chat.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 export async function g_preach_generate_passage(passage) {
-  const system_msg = `You are a Christian preacher. You will be given a passage and its context. Rewrite the passage as follows:
+  const prompt = `You are a Christian preacher. You will be given a passage and its context. Rewrite the passage as follows:
 
 1. Break sentences into very short, simple, meaningful parts. Prefer multiple short sentences over long, concise sentences.
 2. Introduce the subject and key traits immediately. Do not defer clarification to later sentences.
