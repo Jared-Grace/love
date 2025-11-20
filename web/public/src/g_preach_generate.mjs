@@ -63,7 +63,8 @@ export async function g_preach_generate() {
   function lambda(item, index) {
     let r = range_from(index - nearness, index + nearness + 1);
     let filtered = list_filter(r, list_index_is);
-    let mapped2 = list_map(list2, function lambda2(item2) {});
+    function lambda2(item2) {}
+    let mapped2 = list_map(list2, lambda2);
     let sliced = list_slice(list, index - nearness, index + nearness + 1);
     return sliced;
   }
