@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
 import { each_index_async } from "../../../love/public/src/each_index_async.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -32,7 +31,6 @@ export async function g_preach_generate() {
         verse_number,
       );
       let text_original = object_property_get(original, "text");
-      log(original);
       list_add(group, {
         text_original,
         text,
