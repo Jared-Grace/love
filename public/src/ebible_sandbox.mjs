@@ -1,3 +1,4 @@
+import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
 import { string_ends_with_any } from "../../../love/public/src/string_ends_with_any.mjs";
 import { string_trim_right } from "../../../love/public/src/string_trim_right.mjs";
 import { string_last } from "../../../love/public/src/string_last.mjs";
@@ -10,6 +11,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
 export async function ebible_sandbox() {
   let suffixes = '"”) ’';
+  let split = string_split_empty(s);
   let bible_folder = "engbsb";
   marker("1");
   await ebible_version_download(bible_folder);
