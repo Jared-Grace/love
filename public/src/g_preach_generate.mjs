@@ -1,3 +1,4 @@
+import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { g_preach_generate_passage } from "../../../love/public/src/g_preach_generate_passage.mjs";
 import { list_map_property_join_space } from "../../../love/public/src/list_map_property_join_space.mjs";
@@ -49,7 +50,7 @@ export async function g_preach_generate() {
     }
     await each_index_async(verses, lambda3);
   }
-  fnj;
+  let file_name = file_name_json(name);
   let path = local_function_path(ebible_version_download, chapter_code);
   let groups = await list_adder_async(lambda4);
   async function lambda5(group) {
