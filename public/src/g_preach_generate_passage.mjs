@@ -7,19 +7,18 @@ export async function g_preach_generate_passage(passage) {
 
 1. Break sentences into short, meaningful parts.
 2. Use short, simple sentences and easy-to-understand words.
-3. Introduce the subject and key traits immediately; do not defer clarification to later sentences.
+3. Introduce the subject and key traits immediately; do not defer clarification.
 4. Use active voice whenever possible (e.g., "God gives" instead of "is given by God").
-5. Combine ideas naturally when it improves clarity and readability, but avoid redundancy.
+5. Combine ideas naturally for clarity and flow, but avoid redundancy.
 6. Split sentences only when necessary for understanding.
 7. Reorder ideas if it makes sentences clearer, logical, and immediately understandable.
-8. Identify context-free parts (understandable alone) and state them first.
-9. Identify context-dependent parts (need prior context) and state them after context is established.
+8. Each sentence should make sense on its own without waiting for later sentences.
+9. Identify context-free parts first, then context-dependent parts.
 10. Replace vague nouns or pronouns with clear descriptive phrases if the subject or object is not yet defined.
 11. Once defined, pronouns may be used if unambiguous.
-12. Each sentence should make sense as you read it, without waiting for later sentences.
-13. Do not add personal commentary.
+12. Do not add personal commentary.
 
-Treat the passage like a dependency graph: first state context-free parts, then context-dependent parts. Output each sentence separated by '\\r\\n'.`;
+Treat the passage like a dependency graph. Output each sentence separated by '\\r\\n'.`;
   let user = passage;
   let input = {
     system: prompt,
