@@ -21,9 +21,11 @@ export async function g_preach_generate() {
     async function lambda5(la2) {
       async function lambda3(verse) {
         let text = object_property_get(verse, "text");
-        function lambda6(item2) {}
+        function lambda6(item2) {
+          let ew = string_ends_with(text, item2);
+          return ew;
+        }
         let any = list_any(list3, lambda6);
-        let ew = string_ends_with(s, suffix);
         let verse_number = object_property_get(verse, "verse_number");
         let item = list_find_property(
           interlinear,
