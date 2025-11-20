@@ -1,3 +1,4 @@
+import { bible_verse_trim_right } from "../../../love/public/src/bible_verse_trim_right.mjs";
 import { string_ends_with_any } from "../../../love/public/src/string_ends_with_any.mjs";
 import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
@@ -21,9 +22,10 @@ export async function g_preach_generate() {
     async function lambda5(la2) {
       async function lambda3(verse) {
         let text = object_property_get(verse, "text");
+        let trimmed = bible_verse_trim_right(text);
         let suffixes = ".?!";
         let split = string_split_empty(suffixes);
-        let any = string_ends_with_any(text, split);
+        let any = string_ends_with_any(trimmed, split);
         log(any);
         let verse_number = object_property_get(verse, "verse_number");
         let item = list_find_property(
