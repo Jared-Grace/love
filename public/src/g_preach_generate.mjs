@@ -17,6 +17,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { bible_interlinear_chapters } from "../../../love/public/src/bible_interlinear_chapters.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
+import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function g_preach_generate() {
   let chapter_code = "JAS01";
   let chapters = await bible_interlinear_chapters();
@@ -64,6 +65,7 @@ export async function g_preach_generate() {
     return v;
   }
   let waited = await list_map_unordered_async(groups, lambda5);
+  await file_overwrite_json(file_path, object);
   return;
   let verse =
     "Γίνεσθε δὲ ποιηταὶ λόγου καὶ μὴ ἀκροαταὶ μόνον παραλογιζόμενοι ἑαυτούς :: Be doers of the word, and not hearers only. Otherwise, you are deceiving yourselves.";
