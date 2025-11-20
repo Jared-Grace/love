@@ -93,9 +93,9 @@ export async function g_preach_generate() {
     let joined = list_join(mapped3, " ::: ");
     var { user_prompt, text, original } = prompt_get(item3);
     let verse_numbers = list_map_property(item3, "verse_number");
-    const expected = ["7"];
+    const expected = ["23", "24"];
     let n = json_equal_not(verse_numbers, expected);
-    if (false) {
+    if (true) {
       if (n) {
         return;
       }
