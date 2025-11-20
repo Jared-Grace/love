@@ -1,3 +1,4 @@
+import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
 import { local_function_path } from "../../../love/public/src/local_function_path.mjs";
 import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
@@ -51,7 +52,10 @@ export async function g_preach_generate() {
   }
   let path = local_function_path(ebible_version_download, chapter_code);
   let groups = await list_adder_async(lambda4);
-  lma;
+  let waited = await list_map_unordered_async(
+    list,
+    async function lambda5(item) {},
+  );
   let verse =
     "Γίνεσθε δὲ ποιηταὶ λόγου καὶ μὴ ἀκροαταὶ μόνον παραλογιζόμενοι ἑαυτούς :: Be doers of the word, and not hearers only. Otherwise, you are deceiving yourselves.";
   let system =
