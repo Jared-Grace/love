@@ -20,5 +20,6 @@ export async function g_preach_generate_passage(passage) {
     let result2 = await file_temp(lambda2);
   }
   let result = await file_temp(lambda);
-  return data;
+  let sermon = data;
+  return sermon;
 }
