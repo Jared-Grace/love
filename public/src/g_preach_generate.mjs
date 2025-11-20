@@ -1,3 +1,4 @@
+import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
 import { string_ends_with } from "../../../love/public/src/string_ends_with.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
@@ -22,6 +23,7 @@ export async function g_preach_generate() {
       async function lambda3(verse) {
         let text = object_property_get(verse, "text");
         let suffixes = ".?!";
+        let split = string_split_empty(s);
         function lambda6(item2) {
           let ew = string_ends_with(text, item2);
           return ew;
