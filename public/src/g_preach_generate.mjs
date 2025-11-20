@@ -19,6 +19,7 @@ export async function g_preach_generate() {
   let interlinear = object_property_get(chapters, chapter_code);
   let list = await ebible_verses("engbsb", chapter_code);
   async function lambda4(la) {
+    let group = [];
     async function lambda3(verse) {
       let text = object_property_get(verse, "text");
       let trimmed = bible_verse_trim_right(text);
