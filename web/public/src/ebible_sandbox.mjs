@@ -1,3 +1,4 @@
+import { string_index_last } from "../../../love/public/src/string_index_last.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_chapters_each_verses } from "../../../love/public/src/ebible_chapters_each_verses.mjs";
@@ -11,6 +12,7 @@ export async function ebible_sandbox() {
   await ebible_chapters_each_verses(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     let mapped = list_map_property(verses, "text");
+    string_index_last(s);
     log(verses);
   }
 }
