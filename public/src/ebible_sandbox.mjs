@@ -13,9 +13,10 @@ export async function ebible_sandbox() {
   await ebible_chapters_each_verses(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     let mapped = list_map_property(verses, "text");
-    function lambda(item) {}
-    let mapped2 = list_map(list, lambda);
-    let index_last = string_index_last(s);
+    function lambda(v) {
+      let index_last = string_index_last(v);
+    }
+    let mapped2 = list_map(mapped, lambda);
     log(verses);
   }
 }
