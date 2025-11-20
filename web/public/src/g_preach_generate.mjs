@@ -1,4 +1,4 @@
-import { list_filter_ends_with_any } from "../../../love/public/src/list_filter_ends_with_any.mjs";
+import { string_ends_with } from "../../../love/public/src/string_ends_with.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -20,7 +20,7 @@ export async function g_preach_generate() {
     async function lambda5(la2) {
       async function lambda3(verse) {
         let text = object_property_get(verse, "text");
-        let ew = list_filter_ends_with_any(s, suffix);
+        let ew = string_ends_with(s, suffix);
         let verse_number = object_property_get(verse, "verse_number");
         let item = list_find_property(
           interlinear,
