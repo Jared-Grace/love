@@ -60,8 +60,12 @@ export async function g_preach_generate() {
     let original = list_map_property_join_space(group, "original");
     const user_prompt = original + " :: " + text;
     let verse_numbers = list_map_property(group, "verse_number");
+    let sermon = await g_preach_generate_passage(user_prompt);
     let v = {
       verse_numbers,
+      original,
+      sermon,
+      original,
     };
     return v;
   }
