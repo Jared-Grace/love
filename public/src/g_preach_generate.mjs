@@ -29,7 +29,7 @@ export async function g_preach_generate() {
           return ew;
         }
         let any = list_any(split, lambda6);
-        log(message);
+        log(any);
         let verse_number = object_property_get(verse, "verse_number");
         let item = list_find_property(
           interlinear,
