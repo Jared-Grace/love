@@ -22,6 +22,12 @@ export async function g_preach_generate() {
     let group = [];
     async function lambda3(verse) {
       let text = object_property_get(verse, "text");
+      let verse_number = object_property_get(verse, "verse_number");
+      let item = list_find_property(interlinear, "verse_number", verse_number);
+      list_add(group, {
+        item,
+        text,
+      });
       let trimmed = bible_verse_trim_right(text);
       let suffixes = ".?!";
       let split = string_split_empty(suffixes);
@@ -29,10 +35,7 @@ export async function g_preach_generate() {
       if (end) {
         la(group);
       } else {
-        list_add(list3, item2);
       }
-      let verse_number = object_property_get(verse, "verse_number");
-      let item = list_find_property(interlinear, "verse_number", verse_number);
     }
     await each_async(list, lambda3);
   }
