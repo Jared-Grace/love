@@ -1,3 +1,5 @@
+import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
+import { local_function_path } from "../../../love/public/src/local_function_path.mjs";
 import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
 import { each_index_async } from "../../../love/public/src/each_index_async.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -46,6 +48,7 @@ export async function g_preach_generate() {
     }
     await each_index_async(verses, lambda3);
   }
+  let joined2 = local_function_path(ebible_version_download, bible_folder);
   let groups = await list_adder_async(lambda4);
   let verse =
     "Γίνεσθε δὲ ποιηταὶ λόγου καὶ μὴ ἀκροαταὶ μόνον παραλογιζόμενοι ἑαυτούς :: Be doers of the word, and not hearers only. Otherwise, you are deceiving yourselves.";
