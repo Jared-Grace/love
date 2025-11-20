@@ -9,7 +9,7 @@ import { ebible_chapters_each_verses } from "../../../love/public/src/ebible_cha
 import { marker } from "../../../love/public/src/marker.mjs";
 import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
 export async function ebible_sandbox() {
-  let suffixes = '"”) !';
+  let suffixes = '"”) ’';
   let bible_folder = "engbsb";
   marker("1");
   await ebible_version_download(bible_folder);
