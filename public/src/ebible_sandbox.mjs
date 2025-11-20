@@ -10,6 +10,7 @@ import { ebible_chapters_each_verses } from "../../../love/public/src/ebible_cha
 import { marker } from "../../../love/public/src/marker.mjs";
 import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
 export async function ebible_sandbox() {
+  ".”,:?;d—k)m’!frluetysgDnhpazb";
   let suffixes = '"”) ’';
   let split = string_split_empty(suffixes);
   let bible_folder = "engbsb";
@@ -26,7 +27,7 @@ export async function ebible_sandbox() {
           return ew;
         }
         let s3 = string_trim_right(lambda3, v);
-        let item = string_last(v);
+        let item = string_last(s3);
         return item;
       }
       let mapped2 = list_map(mapped, lambda);
@@ -35,6 +36,5 @@ export async function ebible_sandbox() {
   }
   let list = await list_adder_multiple_unique_async(lambda2);
   let joined = list_join_empty(list);
-  (".”,:?;d—k)m’!frluetysgDnhpazb");
   return joined;
 }
