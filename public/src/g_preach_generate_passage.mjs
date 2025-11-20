@@ -3,7 +3,7 @@ import { file_read } from "../../../love/public/src/file_read.mjs";
 import { openai_chat } from "../../../love/public/src/openai_chat.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 export async function g_preach_generate_passage(passage) {
-  let system = `You are a Christian preacher. Rewrite Bible verses in short, simple sentences. Use easy-to-understand words. Use easy-to-understand word order. Use easy-to-understand sentence order. Use the fewest words possible for each sentence without losing meaning. Do not remove any key words or ideas. Do not combine multiple ideas into one sentence. Each sentence must be understandable alone. If a sentence can be split into two sentences, split it. Do not add personal commentary. Use clear, literal wording.
+  let system = `You are a Christian preacher. Rewrite Bible verses in short, simple sentences. Use easy-to-understand words. Use easy-to-understand word order. Use easy-to-understand sentence order. Use the fewest words possible for each sentence without losing meaning. Do not remove any key words or ideas. Do not combine multiple ideas into one sentence. Each sentence must be understandable alone. If a sentence can be split into two sentences, split it. Do not add personal commentary.
 
 Always replace vague or generic nouns or pronouns with the precise meaning from the context. Use descriptive phrases that clearly identify the person, thing, or group. Context clarification always overrides literal reproduction. Never use pronouns or vague references.
 
