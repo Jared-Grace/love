@@ -8,7 +8,7 @@ export async function g_preach_generate_passage(passage) {
 1. Break sentences into very short, simple, meaningful parts.
 2. Introduce the subject and key traits immediately. Do not defer clarification to later sentences.
 3. Replace vague references like "that man" or "this person" with explicit descriptions including key traits.
-4. Use active voice whenever possible (e.g., "God gives" instead of "is given by God").
+4. Use active voice whenever possible (e.g., "God loves" instead of "is loved by God").
 5. Split and reorder sentences to make each sentence immediately clear and understandable.
 6. Identify context-free parts first, then context-dependent parts.
 7. Avoid redundancy; do not repeat ideas unnecessarily.
