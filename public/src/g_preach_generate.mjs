@@ -1,3 +1,4 @@
+import { range } from "../../../love/public/src/range.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { range_from } from "../../../love/public/src/range_from.mjs";
@@ -67,8 +68,8 @@ export async function g_preach_generate() {
       let item2 = list_get(groups, index2);
       return item2;
     }
-    let slice = list_map(filtered, lambda2);
-    return slice;
+    let range = list_map(filtered, lambda2);
+    return range;
   }
   let mapped = list_map_index(groups, lambda);
   let file_name = file_name_json(chapter_code);
