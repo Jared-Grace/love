@@ -57,7 +57,8 @@ export async function g_preach_generate() {
   async function lambda5(group) {
     let text = list_map_property_join_space(group, "text");
     let original = list_map_property_join_space(group, "original");
-    log(original + " :: " + text);
+    const user_prompt = original + " :: " + text;
+    log(user_prompt);
   }
   let waited = await list_map_unordered_async(groups, lambda5);
   return;
