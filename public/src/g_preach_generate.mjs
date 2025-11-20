@@ -27,7 +27,7 @@ export async function g_preach_generate() {
       let text = object_property_get(verse, "text");
       let verse_number = object_property_get(verse, "verse_number");
       let item = list_find_property(interlinear, "verse_number", verse_number);
-      log(message);
+      log(item);
       list_add(group, {
         item,
         text,
