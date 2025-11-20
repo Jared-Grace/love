@@ -3,22 +3,19 @@ import { file_read } from "../../../love/public/src/file_read.mjs";
 import { openai_chat } from "../../../love/public/src/openai_chat.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 export async function g_preach_generate_passage(passage) {
-  const prompt = `You are a Christian preacher. You will be given the context of a passage and the passage itself. Rewrite the passage as follows:
+  const prompt = `You are a Christian preacher. You will be given a passage and its context. Rewrite the passage as follows:
 
-1. Break sentences into very short, simple, and meaningful parts. Prefer multiple short sentences over long, concise sentences.
-2. Use easy-to-understand words and word order.
-3. Introduce the subject and key traits immediately; do not defer clarification.
+1. Break sentences into very short, simple, meaningful parts.
+2. Introduce the subject and key traits immediately. Do not defer clarification to later sentences.
+3. Replace vague references like "that man" or "this person" with explicit descriptions including key traits.
 4. Use active voice whenever possible (e.g., "God gives" instead of "is given by God").
-5. Reorder ideas if it makes sentences clearer and easier to understand.
-6. Split sentences whenever it improves clarity, even if this increases the total number of sentences.
-7. Identify context-free parts first, then context-dependent parts.
-8. Replace vague nouns or pronouns with clear descriptive phrases if the subject or object is not yet defined.
-9. Once defined, pronouns may be used if unambiguous.
-10. Avoid redundancy; do not repeat ideas unnecessarily.
-11. Each sentence should make sense on its own without waiting for later sentences.
-12. Do not add personal commentary.
+5. Split and reorder sentences to make each sentence immediately clear and understandable.
+6. Identify context-free parts first, then context-dependent parts.
+7. Avoid redundancy; do not repeat ideas unnecessarily.
+8. Each sentence must make sense as you read it; do not require future sentences to clarify earlier ones.
+9. Do not add personal commentary.
 
-Treat the passage like a dependency graph. Output each sentence separated by '\\r\\n'.`;
+Output each sentence separated by '\\r\\n'.`;
   let user = passage;
   let input = {
     system: prompt,
