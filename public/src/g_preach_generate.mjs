@@ -1,6 +1,5 @@
+import { list_map_property_join_space } from "../../../love/public/src/list_map_property_join_space.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
-import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
 import { local_function_path } from "../../../love/public/src/local_function_path.mjs";
@@ -57,9 +56,8 @@ export async function g_preach_generate() {
   let groups = await list_adder_async(lambda4);
   async function lambda5(group) {
     const property_name = "text";
-    let mapped = list_map_property(group, property_name);
-    let joined = list_join_space(mapped);
-    log(message);
+    let joined = list_map_property_join_space(group, property_name);
+    log(joined);
   }
   let waited = await list_map_unordered_async(groups, lambda5);
   let verse =
