@@ -27,7 +27,8 @@ export async function g_preach_generate() {
   let verses = await ebible_verses("engbsb", chapter_code);
   async function lambda4(la) {
     let index_last = list_index_last(verses);
-    let mapped = list_map(list, function lambda(item) {});
+    function lambda(item) {}
+    let mapped = list_map(list, lambda);
     let group = [];
     async function lambda3(verse, index) {
       let text = object_property_get(verse, "text");
