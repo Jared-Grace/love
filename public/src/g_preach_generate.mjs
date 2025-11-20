@@ -73,10 +73,8 @@ export async function g_preach_generate() {
   let mapped = list_map_index(groups, lambda);
   let file_name = file_name_json(chapter_code);
   let path = local_function_path(ebible_version_download, file_name);
-  async function lambda5(groups) {
-    let text = list_map_property_join_space(group, "text");
-    let original = list_map_property_join_space(group, "original");
-    const user_prompt = original + " :: " + text;
+  async function lambda5(group) {
+    var { user_prompt, text, original } = prompt_get(group);
     let verse_numbers = list_map_property(group, "verse_number");
     let sermon = await g_preach_generate_passage(user_prompt);
     let v = {
@@ -86,6 +84,17 @@ export async function g_preach_generate() {
       original,
     };
     return v;
+    function prompt_get(group) {
+      let text = list_map_property_join_space(group, "text");
+      let original = list_map_property_join_space(group, "original");
+      const user_prompt = original + " :: " + text;
+      let v2 = {
+        user_prompt,
+        text,
+        original,
+      };
+      return v2;
+    }
   }
   let passages = await list_map_unordered_async(mapped, lambda5);
   await file_overwrite_json(path, {
