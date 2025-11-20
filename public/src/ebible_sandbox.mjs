@@ -10,7 +10,7 @@ export async function ebible_sandbox() {
   ("loop through to ensure parse correct before begin upload");
   await ebible_chapters_each_verses(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
-    let mapped = list_map_property(list, property_name);
+    let mapped = list_map_property(verses, "text");
     log(verses);
   }
 }
