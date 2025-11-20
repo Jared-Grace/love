@@ -70,7 +70,7 @@ export async function g_preach_generate() {
     chapter_code,
     passages,
   });
-  let result = await file_open(path);
+  await file_open(path);
   return;
   let verse =
     "Γίνεσθε δὲ ποιηταὶ λόγου καὶ μὴ ἀκροαταὶ μόνον παραλογιζόμενοι ἑαυτούς :: Be doers of the word, and not hearers only. Otherwise, you are deceiving yourselves.";
