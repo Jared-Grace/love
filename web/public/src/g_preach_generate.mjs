@@ -28,8 +28,9 @@ export async function g_preach_generate() {
   let verses = await ebible_verses("engbsb", chapter_code);
   async function lambda4(la) {
     let index_last = list_index_last(verses);
+    let nearness = 2;
     function lambda(item, index) {}
-    let mapped2 = range_from(from, to);
+    let before = range_from(index - nearness, nearness);
     let mapped = list_map_index(list, lambda);
     let group = [];
     async function lambda3(verse, index) {
