@@ -12,7 +12,7 @@ export async function ebible_sandbox() {
   await ebible_chapters_each_verses(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     let mapped = list_map_property(verses, "text");
-    string_index_last(s);
+    let index_last = string_index_last(s);
     log(verses);
   }
 }
