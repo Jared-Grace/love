@@ -28,7 +28,7 @@ export async function ebible_sandbox() {
           return ew;
         }
         let s3 = string_trim_right(lambda3, v);
-        log(message);
+        log(s3);
         let item = string_last(s3);
         return item;
       }
