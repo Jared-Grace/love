@@ -89,6 +89,7 @@ export async function g_preach_generate() {
     log({
       joined,
     });
+    return;
     var { text, original } = prompt_get(item3);
     let verse_numbers = list_map_property(group, "verse_number");
     let sermon = await g_preach_generate_passage(user_prompt);
