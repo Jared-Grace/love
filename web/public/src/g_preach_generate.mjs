@@ -50,8 +50,8 @@ export async function g_preach_generate() {
     }
     await each_index_async(verses, lambda3);
   }
-  let file_name = file_name_json(name);
-  let path = local_function_path(ebible_version_download, chapter_code);
+  let file_name = file_name_json(chapter_code);
+  let path = local_function_path(ebible_version_download, file_name);
   let groups = await list_adder_async(lambda4);
   async function lambda5(group) {
     let text = list_map_property_join_space(group, "text");
