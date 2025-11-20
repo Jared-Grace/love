@@ -25,7 +25,9 @@ export async function g_preach_generate() {
       let suffixes = ".?!";
       let split = string_split_empty(suffixes);
       let end = string_ends_with_any(trimmed, split);
-      if (false) {
+      if (end) {
+        la(group);
+      } else {
       }
       let verse_number = object_property_get(verse, "verse_number");
       let item = list_find_property(interlinear, "verse_number", verse_number);
