@@ -65,8 +65,9 @@ export async function g_preach_generate() {
   let nearness = 2;
   function lambda(item, index) {
     let r = range_from(index - nearness, index + nearness + 1);
-    function lambda6() {
-      let ii = list_index_is(list, index3);
+    function lambda6(index3) {
+      let ii = list_index_is(groups, index3);
+      return ii;
     }
     let filtered = list_filter(r, lambda6);
     function lambda2(index2) {
