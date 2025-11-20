@@ -28,12 +28,12 @@ user_msg   = data.get("user", "")
 
 # --- API call ---
 response = openai.chat.completions.create(
-    model="gpt-5-mini",
+    model="gpt-4.1",
     messages=[
         {"role": "system", "content": system_msg},
         {"role": "user", "content": user_msg}
     ],
-    temperature=1
+    temperature=0
 )
 
 assistant_text = response.choices[0].message.content
