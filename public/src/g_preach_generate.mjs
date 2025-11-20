@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_index_is } from "../../../love/public/src/list_index_is.mjs";
 import { list_join } from "../../../love/public/src/list_join.mjs";
 import { range } from "../../../love/public/src/range.mjs";
@@ -96,6 +97,7 @@ export async function g_preach_generate() {
       joined +
       " :::: Here is the passage to rewrite: " +
       user_prompt;
+    log(message);
     let sermon = await g_preach_generate_passage(prompt);
     let v = {
       verse_numbers,
