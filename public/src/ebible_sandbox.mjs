@@ -12,7 +12,8 @@ export async function ebible_sandbox() {
   marker("1");
   await ebible_version_download(bible_folder);
   ("loop through to ensure parse correct before begin upload");
-  let list = await list_adder_async(async function lambda2(la) {});
+  async function lambda2(la) {}
+  let list = await list_adder_async(lambda2);
   await ebible_chapters_each_verses(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     let mapped = list_map_property(verses, "text");
