@@ -37,11 +37,12 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function g_preach_generate() {
   let book_code = "JAS";
+  const bible_folder = "engbsb";
   let chapters = await ebible_chapters(bible_folder, book_code);
   let chapters_interlinear = await bible_interlinear_chapters();
   let interlinear = object_property_get(chapters_interlinear, chapter_code);
   async function lambda7(chapter_code) {
-    let verses = await ebible_verses("engbsb", chapter_code);
+    let verses = await ebible_verses(bible_folder, chapter_code);
     function lambda8(v) {
       let to2 = object_merge(v, {
         chapter_code,
