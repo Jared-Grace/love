@@ -55,8 +55,11 @@ export async function g_preach_generate() {
     each(verses, lambda8);
     return verses;
   }
-  let squashed = list_squash(list);
-  let verses_chapter = await list_map_unordered_async(chapters, lambda7);
+  let verses_chapter_unsquashed = await list_map_unordered_async(
+    chapters,
+    lambda7,
+  );
+  let verses_chapter = list_squash(verses_chapter_unsquashed);
   async function lambda4(la) {
     let index_last = list_index_last(verses);
     let group = [];
