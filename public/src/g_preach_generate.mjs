@@ -42,9 +42,10 @@ export async function g_preach_generate() {
   }
   let chapters_interlinear = await bible_interlinear_chapters();
   let interlinear = object_property_get(chapters, chapter_code);
-  async function lambda7(item4) {}
-  let waited = await list_map_unordered_async(list, lambda7);
-  let verses = await ebible_verses("engbsb", chapter_code);
+  async function lambda7(chapter_code) {
+    let verses = await ebible_verses("engbsb", chapter_code);
+  }
+  let waited = await list_map_unordered_async(chapters, lambda7);
   async function lambda4(la) {
     let index_last = list_index_last(verses);
     let group = [];
