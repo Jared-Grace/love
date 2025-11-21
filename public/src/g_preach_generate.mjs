@@ -30,6 +30,8 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function g_preach_generate() {
   let chapter_code = "JAS01";
+  let file_name = file_name_json(chapter_code);
+  let path = local_function_path(g_preach_generate, file_name);
   let chapters = await bible_interlinear_chapters();
   let interlinear = object_property_get(chapters, chapter_code);
   let verses = await ebible_verses("engbsb", chapter_code);
@@ -82,8 +84,6 @@ export async function g_preach_generate() {
     return v3;
   }
   let mapped = list_map_index(groups, lambda);
-  let file_name = file_name_json(chapter_code);
-  let path = local_function_path(g_preach_generate, file_name);
   async function lambda5(r) {
     let item3 = object_property_get(r, "item");
     let range2 = object_property_get(r, "range");
