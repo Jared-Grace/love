@@ -47,7 +47,9 @@ export async function g_preach_generate() {
   async function lambda7(chapter_code) {
     let verses = await ebible_verses("engbsb", chapter_code);
     function lambda8(v) {
-      let to2 = object_merge(to, from);
+      let to2 = object_merge(v, {
+        chapter_code,
+      });
     }
     each(verses, lambda8);
     return verses;
