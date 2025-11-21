@@ -1,3 +1,4 @@
+import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -61,7 +62,7 @@ export async function g_preach_generate() {
   );
   let verses_chapter = list_squash(verses_chapter_unsquashed);
   async function lambda4(la) {
-    lfp;
+    let filtered2 = list_filter_property(list, property_name, property_value);
     let index_last = list_index_last(verses);
     let group = [];
     async function lambda3(verse, index) {
