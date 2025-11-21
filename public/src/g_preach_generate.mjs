@@ -1,5 +1,7 @@
+import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
+import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { ebible_chapters } from "../../../love/public/src/ebible_chapters.mjs";
@@ -123,9 +125,9 @@ export async function g_preach_generate() {
     function lambda11(group) {
       let mapped4 = object_property_get(group, "item");
       log(mapped4);
-      let mapped2 = object_property_get(mapped4, "chapter_code");
-      let v4 = mapped2 === chapter_code;
-      return v4;
+      let mapped2 = list_filter_property(mapped4, "chapter_code", chapter_code);
+      let ne = list_empty_not_is(mapped2);
+      return ne;
     }
     let filtered2 = list_filter(mapped, lambda11);
     async function lambda5(r) {
