@@ -52,7 +52,8 @@ export async function g_preach_generate() {
   }
   let verses_book = await list_map_unordered_async(chapters, lambda7);
   async function lambda4(la) {
-    await each_async(list, async function lambda10(item4) {});
+    async function lambda10(item4) {}
+    await each_async(list, lambda10);
     let index_last = list_index_last(verses_chapter);
     let group = [];
     async function lambda3(verse, index) {
