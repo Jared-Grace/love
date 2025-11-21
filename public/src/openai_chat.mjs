@@ -11,7 +11,7 @@ export async function openai_chat(input_file_path, output_file_path) {
   try {
     let stdout = await command_line(joined);
   } catch (e) {
-    let json = json_to(object);
+    let json = json_to(e);l
     throw e;
   }
 }
