@@ -62,8 +62,7 @@ export async function g_preach_generate() {
   );
   let verses_chapter = list_squash(verses_chapter_unsquashed);
   async function lambda4(la) {
-    let filtered2 = list_filter_property(list, property_name, property_value);
-    let index_last = list_index_last(verses);
+    let index_last = list_index_last(verses_chapter);
     let group = [];
     async function lambda3(verse, index) {
       let text = object_property_get(verse, "text");
@@ -88,7 +87,7 @@ export async function g_preach_generate() {
         group = [];
       }
     }
-    await each_index_async(verses, lambda3);
+    await each_index_async(verses_chapter, lambda3);
   }
   let groups = await list_adder_async(lambda4);
   let nearness = 2;
@@ -111,6 +110,7 @@ export async function g_preach_generate() {
     return v3;
   }
   let mapped = list_map_index(groups, lambda);
+  let filtered2 = list_filter_property(list, property_name, property_value);
   async function lambda5(r) {
     let item3 = object_property_get(r, "item");
     let range2 = object_property_get(r, "range");
