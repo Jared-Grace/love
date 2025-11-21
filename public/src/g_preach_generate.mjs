@@ -34,7 +34,8 @@ import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function g_preach_generate() {
   let book_code = "JAS";
   let chapters = await ebible_chapters(bible_folder, book_code);
-  await each_async(list, async function lambda7(item4) {});
+  async function lambda7(item4) {}
+  await each_async(list, lambda7);
   let chapter_code = "JAS01";
   let file_name = file_name_json(chapter_code);
   let path = local_function_path(g_preach_generate, file_name);
