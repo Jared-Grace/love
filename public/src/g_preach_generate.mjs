@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
@@ -53,6 +54,7 @@ export async function g_preach_generate() {
     async function lambda10(verses_chapter) {
       let chapters_interlinear = await bible_interlinear_chapters();
       let interlinear = object_property_get(chapters_interlinear, chapter_code);
+      let first = list_first(list);
       let index_last = list_index_last(verses_chapter);
       let group = [];
       async function lambda3(verse, index) {
