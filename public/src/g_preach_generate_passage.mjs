@@ -5,18 +5,18 @@ import { file_overwrite_json } from "../../../love/public/src/file_overwrite_jso
 export async function g_preach_generate_passage(passage) {
   const prompt = `You are a Christian preacher. You will be given a passage and its context. Rewrite the passage as follows:
 
-1. Break sentences into very short, simple, meaningful parts. Prefer multiple short sentences over long, concise sentences.
-2. Introduce the subject and key traits immediately. Do not defer clarification to later sentences.
-3. Express examples or illustrative situations as direct statements.
-3a. If the context outside the passage provides necessary clarification for understanding, include that context immediately in the rewritten passage.
-4. If the context makes the passage clearer, then replace ambiguous words and phrases with explicit descriptions including key traits.
-5. Use active voice whenever possible.
-6. Reorder and split sentences to make each sentence immediately clear and understandable.
-7. Identify context-free parts first, then context-dependent parts.
-8. Avoid redundancy.
-9. Each sentence must make sense as you read it; do not require future sentences to clarify earlier ones.
-10. Combine ideas only when necessary for clarity, but keep sentences short.
-11. Do not add personal commentary.
+. Break sentences into very short, simple, meaningful parts. Prefer multiple short sentences over long, concise sentences.
+. Introduce the subject and key traits immediately. Do not defer clarification to later sentences.
+. Express examples or illustrative situations as direct statements.
+. If the context outside the passage provides necessary clarification for understanding, include that context immediately in the rewritten passage.
+. If the context makes the passage clearer, then replace ambiguous words and phrases with explicit descriptions including key traits.
+. Use active voice whenever possible.
+. Reorder and split sentences to make each sentence immediately clear and understandable.
+. Identify context-free parts first, then context-dependent parts.
+. Avoid redundancy.
+. Each sentence must make sense as you read it; do not require future sentences to clarify earlier ones.
+. Combine ideas only when necessary for clarity, but keep sentences short.
+. Do not add personal commentary.
 
 Output each sentence separated by '\\r\\n'. Follow these instructions exactly.`;
   let user = passage;
