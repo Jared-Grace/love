@@ -33,7 +33,9 @@ export async function g_preach_generate() {
   let chapter_code = "JAS01";
   let file_name = file_name_json(chapter_code);
   let path = local_function_path(g_preach_generate, file_name);
-  let exists = await file_exists(file_path);
+  let exists = await file_exists(path);
+  if (false) {
+  }
   let chapters = await bible_interlinear_chapters();
   let interlinear = object_property_get(chapters, chapter_code);
   let verses = await ebible_verses("engbsb", chapter_code);
