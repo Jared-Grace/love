@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { ebible_chapters } from "../../../love/public/src/ebible_chapters.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { json_equal_not } from "../../../love/public/src/json_equal_not.mjs";
@@ -44,6 +45,7 @@ export async function g_preach_generate() {
   let interlinear = object_property_get(chapters, chapter_code);
   async function lambda7(chapter_code) {
     let verses = await ebible_verses("engbsb", chapter_code);
+    each(list, function lambda8(item4) {});
     return verses;
   }
   let waited = await list_map_unordered_async(chapters, lambda7);
