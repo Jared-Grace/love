@@ -127,8 +127,7 @@ export async function g_preach_generate() {
       let ne = list_empty_not_is(mapped2);
       return ne;
     }
-    let filtered2 = list_filter(list, lambda11);
-    let mapped2 = list_filter_property(mapped, "chapter_code", chapter_code);
+    let filtered2 = list_filter(mapped, lambda11);
     async function lambda5(r) {
       let item3 = object_property_get(r, "item");
       let range2 = object_property_get(r, "range");
@@ -174,7 +173,7 @@ export async function g_preach_generate() {
         return v2;
       }
     }
-    let passages = await list_map_unordered_async(mapped2, lambda5);
+    let passages = await list_map_unordered_async(filtered2, lambda5);
     await file_overwrite_json(path, {
       chapter_code,
       passages,
