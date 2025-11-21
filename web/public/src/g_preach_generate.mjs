@@ -52,34 +52,35 @@ export async function g_preach_generate() {
   }
   let verses_book = await list_map_unordered_async(chapters, lambda7);
   async function lambda4(la) {
-    async function lambda10(item4) {}
-    await each_async(list, lambda10);
-    let index_last = list_index_last(verses_chapter);
-    let group = [];
-    async function lambda3(verse, index) {
-      let text = object_property_get(verse, "text");
-      let verse_number = object_property_get(verse, "verse_number");
-      let original_verse = list_find_property(
-        interlinear,
-        "verse_number",
-        verse_number,
-      );
-      let original = object_property_get(original_verse, "text");
-      list_add(group, {
-        original,
-        text,
-        verse_number,
-      });
-      let trimmed = bible_verse_trim_right(text);
-      let suffixes = ".?!";
-      let split = string_split_empty(suffixes);
-      let end = string_ends_with_any(trimmed, split);
-      if (end || index === index_last) {
-        la(group);
-        group = [];
+    async function lambda10(verses_chapter) {
+      await each_async(verses_book, lambda10);
+      let index_last = list_index_last(verses_chapter);
+      let group = [];
+      async function lambda3(verse, index) {
+        let text = object_property_get(verse, "text");
+        let verse_number = object_property_get(verse, "verse_number");
+        let original_verse = list_find_property(
+          interlinear,
+          "verse_number",
+          verse_number,
+        );
+        let original = object_property_get(original_verse, "text");
+        list_add(group, {
+          original,
+          text,
+          verse_number,
+        });
+        let trimmed = bible_verse_trim_right(text);
+        let suffixes = ".?!";
+        let split = string_split_empty(suffixes);
+        let end = string_ends_with_any(trimmed, split);
+        if (end || index === index_last) {
+          la(group);
+          group = [];
+        }
       }
+      await each_index_async(verses_chapter, lambda3);
     }
-    await each_index_async(verses_chapter, lambda3);
   }
   let groups = await list_adder_async(lambda4);
   let nearness = 2;
