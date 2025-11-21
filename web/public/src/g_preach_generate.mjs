@@ -121,7 +121,8 @@ export async function g_preach_generate() {
         skip: false,
       });
     }
-    let filtered2 = list_filter(list, function lambda11(item4) {});
+    function lambda11(item4) {}
+    let filtered2 = list_filter(list, lambda11);
     let mapped2 = list_filter_property(mapped, "chapter_code", chapter_code);
     async function lambda5(r) {
       let item3 = object_property_get(r, "item");
