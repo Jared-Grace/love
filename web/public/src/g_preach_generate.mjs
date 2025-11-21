@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
@@ -122,7 +123,8 @@ export async function g_preach_generate() {
       });
     }
     function lambda11(group) {
-      let mapped2 = list_filter_property(group, "chapter_code", chapter_code);leni
+      let mapped2 = list_filter_property(group, "chapter_code", chapter_code);
+      let ne = list_empty_not_is(list2);
     }
     let filtered2 = list_filter(list, lambda11);
     let mapped2 = list_filter_property(mapped, "chapter_code", chapter_code);
