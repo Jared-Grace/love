@@ -13,7 +13,7 @@ export async function openai_chat(input_file_path, output_file_path) {
     let stdout = await command_line(joined);
   } catch (e) {
     let json = json_to(e);
-    log(message);
+    log(json);
     throw e;
   }
 }
