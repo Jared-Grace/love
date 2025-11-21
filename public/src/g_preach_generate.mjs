@@ -71,6 +71,7 @@ export async function g_preach_generate() {
           original,
           text,
           verse_number,
+          chapter_code,
         });
         let trimmed = bible_verse_trim_right(text);
         let suffixes = ".?!";
