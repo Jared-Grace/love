@@ -125,7 +125,6 @@ export async function g_preach_generate() {
     }
     function lambda11(group) {
       let mapped4 = object_property_get(group, "item");
-      log(mapped4);
       let mapped2 = list_filter_property(mapped4, "chapter_code", chapter_code);
       let ne = list_empty_not_is(mapped2);
       return ne;
