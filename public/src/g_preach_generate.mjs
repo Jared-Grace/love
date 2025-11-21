@@ -115,7 +115,12 @@ export async function g_preach_generate() {
       });
       return;
     } else {
+      log({
+        chapter_code,
+        skip: false,
+      });
     }
+    return;
     let mapped2 = list_filter_property(mapped, "chapter_code", chapter_code);
     async function lambda5(r) {
       let item3 = object_property_get(r, "item");
