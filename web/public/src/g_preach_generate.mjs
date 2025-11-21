@@ -111,7 +111,8 @@ export async function g_preach_generate() {
     return v3;
   }
   let mapped = list_map_index(groups, lambda);
-  await each_async(list2, async function lambda9(item4) {});
+  async function lambda9(item4) {}
+  await each_async(list2, lambda9);
   let filtered2 = list_filter_property(list, property_name, property_value);
   async function lambda5(r) {
     let item3 = object_property_get(r, "item");
