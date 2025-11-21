@@ -155,7 +155,7 @@ export async function g_preach_generate() {
         return v2;
       }
     }
-    let passages = await list_map_unordered_async(mapped, lambda5);
+    let passages = await list_map_unordered_async(mapped2, lambda5);
     await file_overwrite_json(path, {
       chapter_code,
       passages,
