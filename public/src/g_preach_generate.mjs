@@ -1,3 +1,4 @@
+import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { ebible_chapters } from "../../../love/public/src/ebible_chapters.mjs";
@@ -54,7 +55,8 @@ export async function g_preach_generate() {
     each(verses, lambda8);
     return verses;
   }
-  let waited = await list_map_unordered_async(chapters, lambda7);
+  let squashed = list_squash(list);
+  let verses_chapter = await list_map_unordered_async(chapters, lambda7);
   async function lambda4(la) {
     let index_last = list_index_last(verses);
     let group = [];
