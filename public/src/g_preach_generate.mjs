@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
@@ -110,6 +111,7 @@ export async function g_preach_generate() {
     return v3;
   }
   let mapped = list_map_index(groups, lambda);
+  await each_async(list2, async function lambda9(item4) {});
   let filtered2 = list_filter_property(list, property_name, property_value);
   async function lambda5(r) {
     let item3 = object_property_get(r, "item");
