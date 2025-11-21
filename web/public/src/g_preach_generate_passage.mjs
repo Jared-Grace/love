@@ -8,6 +8,7 @@ export async function g_preach_generate_passage(passage) {
 1. Break sentences into very short, simple, meaningful parts. Prefer multiple short sentences over long, concise sentences.
 2. Introduce the subject and key traits immediately. Do not defer clarification to later sentences.
 3. Express examples or illustrative situations as direct statements.
+3a. If the context outside the passage provides necessary clarification for understanding, include that context immediately in the rewritten passage.
 4. If the context makes the passage clearer, then replace ambiguous words and phrases with explicit descriptions including key traits.
 5. Use active voice whenever possible.
 6. Reorder and split sentences to make each sentence immediately clear and understandable.
