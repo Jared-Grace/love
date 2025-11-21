@@ -44,6 +44,7 @@ export async function g_preach_generate() {
   let interlinear = object_property_get(chapters, chapter_code);
   async function lambda7(chapter_code) {
     let verses = await ebible_verses("engbsb", chapter_code);
+    return verses;
   }
   let waited = await list_map_unordered_async(chapters, lambda7);
   async function lambda4(la) {
