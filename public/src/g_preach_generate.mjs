@@ -38,13 +38,6 @@ import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function g_preach_generate() {
   let book_code = "JAS";
   let chapters = await ebible_chapters(bible_folder, book_code);
-  let chapter_code = "JAS01";
-  let file_name = file_name_json(chapter_code);
-  let path = local_function_path(g_preach_generate, file_name);
-  let exists = await file_exists(path);
-  if (exists) {
-    return;
-  }
   let chapters_interlinear = await bible_interlinear_chapters();
   let interlinear = object_property_get(chapters_interlinear, chapter_code);
   async function lambda7(chapter_code) {
@@ -111,8 +104,15 @@ export async function g_preach_generate() {
     return v3;
   }
   let mapped = list_map_index(groups, lambda);
-  async function lambda9(item4) {}
-  await each_async(list2, lambda9);
+  async function lambda9(chapter_code) {
+    let file_name = file_name_json(chapter_code);
+    let path = local_function_path(g_preach_generate, file_name);
+    let exists = await file_exists(path);
+    if (exists) {
+      return;
+    }
+  }
+  await each_async(chapters, lambda9);
   let filtered2 = list_filter_property(list, property_name, property_value);
   async function lambda5(r) {
     let item3 = object_property_get(r, "item");
