@@ -14,7 +14,7 @@ export async function openai_chat(input_file_path, output_file_path) {
   } catch (e) {
     let json = json_to(e);
     log({
-      json,
+      openai_chat,
     });
     throw e;
   }
