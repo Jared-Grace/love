@@ -109,8 +109,12 @@ export async function g_preach_generate() {
     let path = local_function_path(g_preach_generate, file_name);
     let exists = await file_exists(path);
     if (exists) {
-      log(message);
+      log({
+        chapter_code,
+        skip: true,
+      });
       return;
+    } else {
     }
     let mapped2 = list_filter_property(mapped, "chapter_code", chapter_code);
     async function lambda5(r) {
