@@ -11,7 +11,7 @@ export async function g_preach_generate_passage(passage) {
 . Combine ideas only when necessary for clarity, but keep sentences short.
 . Each sentence must make sense as you read it; do not require future sentences to clarify earlier ones.
 . Introduce the subject and key traits immediately. Do not defer clarification to later sentences.
-. If the context outside the passage provides necessary clarification for understanding, include that context immediately in the rewritten passage.
+. If the context outside the passage provides necessary clarification or describes key traits, include them immediately in the rewritten passage as part of the first sentence(s).
 . Avoid redundancy.
 . Use active voice whenever possible.
 . Express examples or illustrative situations as direct statements.
