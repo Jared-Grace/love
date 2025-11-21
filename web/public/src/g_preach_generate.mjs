@@ -111,58 +111,58 @@ export async function g_preach_generate() {
     if (exists) {
       return;
     }
-  }
-  await each_async(chapters, lambda9);
-  let filtered2 = list_filter_property(list, property_name, property_value);
-  async function lambda5(r) {
-    let item3 = object_property_get(r, "item");
-    let range2 = object_property_get(r, "range");
-    let mapped2 = list_map(range2, prompt_get);
-    let mapped3 = list_map_property(mapped2, "user_prompt");
-    let joined = list_join(mapped3, " ::: ");
-    var { user_prompt, text, original } = prompt_get(item3);
-    let verse_numbers = list_map_property(item3, "verse_number");
-    const expected = ["7"];
-    let n = json_equal_not(verse_numbers, expected);
-    if (0) {
-      if (n) {
-        return;
+    let mapped2 = list_filter_property(mapped, "chapter_code", chapter_code);
+    async function lambda5(r) {
+      let item3 = object_property_get(r, "item");
+      let range2 = object_property_get(r, "range");
+      let mapped2 = list_map(range2, prompt_get);
+      let mapped3 = list_map_property(mapped2, "user_prompt");
+      let joined = list_join(mapped3, " ::: ");
+      var { user_prompt, text, original } = prompt_get(item3);
+      let verse_numbers = list_map_property(item3, "verse_number");
+      const expected = ["7"];
+      let n = json_equal_not(verse_numbers, expected);
+      if (0) {
+        if (n) {
+          return;
+        }
       }
-    }
-    const prompt =
-      "Here is the context: " +
-      joined +
-      " :::: Here is the passage to rewrite: " +
-      user_prompt;
-    log({
-      prompt,
-    });
-    let sermon = await g_preach_generate_passage(prompt);
-    let v = {
-      verse_numbers,
-      text,
-      sermon,
-      original,
-    };
-    return v;
-    function prompt_get(group) {
-      let text = list_map_property_join_space(group, "text");
-      let original = list_map_property_join_space(group, "original");
-      const user_prompt = original + " :: " + text;
-      let v2 = {
-        user_prompt,
+      const prompt =
+        "Here is the context: " +
+        joined +
+        " :::: Here is the passage to rewrite: " +
+        user_prompt;
+      log({
+        prompt,
+      });
+      let sermon = await g_preach_generate_passage(prompt);
+      let v = {
+        verse_numbers,
         text,
+        sermon,
         original,
       };
-      return v2;
+      return v;
+      function prompt_get(group) {
+        let text = list_map_property_join_space(group, "text");
+        let original = list_map_property_join_space(group, "original");
+        const user_prompt = original + " :: " + text;
+        let v2 = {
+          user_prompt,
+          text,
+          original,
+        };
+        return v2;
+      }
     }
+    let passages = await list_map_unordered_async(mapped, lambda5);
+    await file_overwrite_json(path, {
+      chapter_code,
+      passages,
+    });
+    await file_open(path);
   }
-  let passages = await list_map_unordered_async(mapped, lambda5);
-  await file_overwrite_json(path, {
-    chapter_code,
-    passages,
-  });
-  await file_open(path);
+  await each_async(chapters, lambda9);
   return;
   let verse =
     "Γίνεσθε δὲ ποιηταὶ λόγου καὶ μὴ ἀκροαταὶ μόνον παραλογιζόμενοι ἑαυτούς :: Be doers of the word, and not hearers only. Otherwise, you are deceiving yourselves.";
