@@ -7,5 +7,7 @@ export async function openai_chat(input_file_path, output_file_path) {
   let k = openai_key_folder();
   let concated = [v, k + "openai.txt", input_file_path, output_file_path];
   let joined = list_join_space(concated);
-  let stdout = await command_line(joined);
+  try {
+    let stdout = await command_line(joined);
+  } catch (e) {}
 }
