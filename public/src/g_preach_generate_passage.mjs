@@ -6,13 +6,13 @@ export async function g_preach_generate_passage(passage) {
   const prompt = `You are a Christian preacher. You will be given a passage and its context. Rewrite the passage as follows:
 
 . Break sentences into very short, simple, meaningful parts. Prefer multiple short sentences over long, concise sentences.
+. Reorder and split sentences to make each sentence immediately clear and understandable.
 . Combine ideas only when necessary for clarity, but keep sentences short.
 . Each sentence must make sense as you read it; do not require future sentences to clarify earlier ones.
 . Introduce the subject and key traits immediately. Do not defer clarification to later sentences.
 . Express examples or illustrative situations as direct statements.
 . If the context outside the passage provides necessary clarification for understanding, include that context immediately in the rewritten passage.
 . Use active voice whenever possible.
-. Reorder and split sentences to make each sentence immediately clear and understandable.
 . Identify context-free parts first, then context-dependent parts.
 . Avoid redundancy.
 . Do not add personal commentary.
