@@ -9,5 +9,7 @@ export async function openai_chat(input_file_path, output_file_path) {
   let joined = list_join_space(concated);
   try {
     let stdout = await command_line(joined);
-  } catch (e) {}
+  } catch (e) {
+    throw e;
+  }
 }
