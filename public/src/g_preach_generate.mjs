@@ -44,7 +44,7 @@ export async function g_preach_generate() {
     return;
   }
   let chapters_interlinear = await bible_interlinear_chapters();
-  let interlinear = object_property_get(chapters, chapter_code);
+  let interlinear = object_property_get(chapters_interlinear, chapter_code);
   async function lambda7(chapter_code) {
     let verses = await ebible_verses("engbsb", chapter_code);
     function lambda8(v) {
@@ -61,6 +61,7 @@ export async function g_preach_generate() {
   );
   let verses_chapter = list_squash(verses_chapter_unsquashed);
   async function lambda4(la) {
+    lflp;
     let index_last = list_index_last(verses);
     let group = [];
     async function lambda3(verse, index) {
