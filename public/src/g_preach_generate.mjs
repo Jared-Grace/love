@@ -14,7 +14,6 @@ import { list_map_property } from "../../../love/public/src/list_map_property.mj
 import { g_preach_generate_passage } from "../../../love/public/src/g_preach_generate_passage.mjs";
 import { list_map_property_join_space } from "../../../love/public/src/list_map_property_join_space.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
-import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
 import { local_function_path } from "../../../love/public/src/local_function_path.mjs";
 import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
 import { each_index_async } from "../../../love/public/src/each_index_async.mjs";
@@ -84,7 +83,7 @@ export async function g_preach_generate() {
   }
   let mapped = list_map_index(groups, lambda);
   let file_name = file_name_json(chapter_code);
-  let path = local_function_path(ebible_version_download, file_name);
+  let path = local_function_path(g_preach_generate, file_name);
   async function lambda5(r) {
     let item3 = object_property_get(r, "item");
     let range2 = object_property_get(r, "range");
