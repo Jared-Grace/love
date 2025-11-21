@@ -122,7 +122,7 @@ export async function g_preach_generate() {
         skip: false,
       });
     }
-    log(message);
+    log(mapped);
     function lambda11(group) {
       let mapped4 = object_property_get(group, "item");
       let mapped2 = list_filter_property(mapped4, "chapter_code", chapter_code);
