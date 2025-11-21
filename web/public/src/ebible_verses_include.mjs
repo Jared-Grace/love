@@ -7,6 +7,7 @@ export function ebible_verses_include() {
     "em",
     "fk",
     "it",
+    "lf",
     "li",
     "li2",
     "li3",
