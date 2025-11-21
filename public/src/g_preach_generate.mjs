@@ -33,7 +33,6 @@ import { list_find_property } from "../../../love/public/src/list_find_property.
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { bible_interlinear_chapters } from "../../../love/public/src/bible_interlinear_chapters.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function g_preach_generate() {
   let book_code = "JAS";
@@ -175,10 +174,4 @@ export async function g_preach_generate() {
     await file_open(path);
   }
   await each_async(chapters, lambda9);
-  return;
-  let verse =
-    "Γίνεσθε δὲ ποιηταὶ λόγου καὶ μὴ ἀκροαταὶ μόνον παραλογιζόμενοι ἑαυτούς :: Be doers of the word, and not hearers only. Otherwise, you are deceiving yourselves.";
-  let sermon = await g_preach_generate_passage(verse);
-  return sermon;
-  marker("1");
 }
