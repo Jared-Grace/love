@@ -7,9 +7,9 @@ export async function g_preach_generate_passage(passage) {
 
 1. Break sentences into very short, simple, meaningful parts. Prefer multiple short sentences over long, concise sentences.
 2. Introduce the subject and key traits immediately. Do not defer clarification to later sentences.
-3. If the passage describes a situation or example, frame it as a supposition or illustrative question rather than a universal statement.
+3. Express examples or illustrative situations as direct statements.
 4. Replace vague references with explicit descriptions including key traits.
-5. Use active voice whenever possible (e.g., "God loves" instead of "is loved by God").
+5. Use active voice whenever possible.
 6. Reorder and split sentences to make each sentence immediately clear and understandable.
 7. Identify context-free parts first, then context-dependent parts.
 8. Avoid redundancy; do not repeat ideas unnecessarily.
