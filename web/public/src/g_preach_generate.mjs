@@ -1,3 +1,4 @@
+import { ebible_chapters } from "../../../love/public/src/ebible_chapters.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { json_equal_not } from "../../../love/public/src/json_equal_not.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -30,6 +31,8 @@ import { bible_interlinear_chapters } from "../../../love/public/src/bible_inter
 import { marker } from "../../../love/public/src/marker.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 export async function g_preach_generate() {
+  let book_code = "JAS";
+  let chapters = await ebible_chapters(bible_folder, book_code);
   let chapter_code = "JAS01";
   let file_name = file_name_json(chapter_code);
   let path = local_function_path(g_preach_generate, file_name);
@@ -37,7 +40,7 @@ export async function g_preach_generate() {
   if (exists) {
     return;
   }
-  let chapters = await bible_interlinear_chapters();
+  let chapters_interlinear = await bible_interlinear_chapters();
   let interlinear = object_property_get(chapters, chapter_code);
   let verses = await ebible_verses("engbsb", chapter_code);
   async function lambda4(la) {
