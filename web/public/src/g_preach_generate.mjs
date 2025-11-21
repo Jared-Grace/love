@@ -61,7 +61,7 @@ export async function g_preach_generate() {
   );
   let verses_chapter = list_squash(verses_chapter_unsquashed);
   async function lambda4(la) {
-    lflp;
+    lfp;
     let index_last = list_index_last(verses);
     let group = [];
     async function lambda3(verse, index) {
