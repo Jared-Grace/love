@@ -9,7 +9,6 @@ export async function g_preach_generate_passage(passage) {
 . Introduce the subject and key traits immediately. Do not defer clarification to later sentences.
 . Express examples or illustrative situations as direct statements.
 . If the context outside the passage provides necessary clarification for understanding, include that context immediately in the rewritten passage.
-. If the context makes the passage clearer, then replace ambiguous words and phrases with explicit descriptions including key traits.
 . Use active voice whenever possible.
 . Reorder and split sentences to make each sentence immediately clear and understandable.
 . Identify context-free parts first, then context-dependent parts.
