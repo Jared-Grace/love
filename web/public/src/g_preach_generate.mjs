@@ -54,7 +54,8 @@ export async function g_preach_generate() {
     async function lambda10(verses_chapter) {
       let chapters_interlinear = await bible_interlinear_chapters();
       let interlinear = object_property_get(chapters_interlinear, chapter_code);
-      let first = list_first(list);
+      let first = list_first(verses_chapter);
+      let value = object_property_get(object, property_name);
       let index_last = list_index_last(verses_chapter);
       let group = [];
       async function lambda3(verse, index) {
