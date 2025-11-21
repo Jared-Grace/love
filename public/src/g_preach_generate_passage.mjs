@@ -12,7 +12,7 @@ export async function g_preach_generate_passage(passage) {
 5. Use active voice whenever possible.
 6. Reorder and split sentences to make each sentence immediately clear and understandable.
 7. Identify context-free parts first, then context-dependent parts.
-8. Avoid redundancy; do not repeat ideas unnecessarily.
+8. Avoid redundancy.
 9. Each sentence must make sense as you read it; do not require future sentences to clarify earlier ones.
 10. Combine ideas only when necessary for clarity, but keep sentences short.
 11. Do not add personal commentary.
