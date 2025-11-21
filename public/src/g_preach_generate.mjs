@@ -121,7 +121,9 @@ export async function g_preach_generate() {
         skip: false,
       });
     }
-    function lambda11(item4) {}
+    function lambda11(item4) {
+      let mapped2 = list_filter_property(item4, "chapter_code", chapter_code);
+    }
     let filtered2 = list_filter(list, lambda11);
     let mapped2 = list_filter_property(mapped, "chapter_code", chapter_code);
     async function lambda5(r) {
