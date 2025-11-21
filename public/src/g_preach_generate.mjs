@@ -123,6 +123,7 @@ export async function g_preach_generate() {
       });
     }
     function lambda11(group) {
+      let mapped4 = list_map_property(list, property_name);
       let mapped2 = list_filter_property(group, "chapter_code", chapter_code);
       let ne = list_empty_not_is(mapped2);
       return ne;
