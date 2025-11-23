@@ -118,8 +118,8 @@ export async function app_reply_main() {
   let component4 = html_button(root, "❤️", love);
   html_button(root, "Reset 1", verse_random_reset_1);
   html_button(root, "Reset 2", verse_random_reset_2);
-  let lambda14 = verse_random_reset_n(4);
-  html_button(root, "Reset 4", lambda14);
+  let verse_random_reset_4 = verse_random_reset_n(4);
+  html_button(root, "Reset 4", verse_random_reset_4);
   function verses_list_reset() {
     verses_list = [];
   }
