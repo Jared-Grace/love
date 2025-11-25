@@ -1,4 +1,3 @@
-import { file_open } from "../../../love/public/src/file_open.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { list_map_property_join_space } from "../../../love/public/src/list_map_property_join_space.mjs";
 import { g_preach_generate_passage } from "../../../love/public/src/g_preach_generate_passage.mjs";
@@ -166,7 +165,6 @@ export async function g_preach_generate_book(bible_folder, book_code) {
       chapter_code,
       passages,
     });
-    await file_open(path);
   }
   await each_async(chapters, lambda9);
 }
