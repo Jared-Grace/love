@@ -2,7 +2,6 @@ import { file_open } from "../../../love/public/src/file_open.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { list_map_property_join_space } from "../../../love/public/src/list_map_property_join_space.mjs";
 import { g_preach_generate_passage } from "../../../love/public/src/g_preach_generate_passage.mjs";
-import { json_equal_not } from "../../../love/public/src/json_equal_not.mjs";
 import { list_join } from "../../../love/public/src/list_join.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -137,13 +136,6 @@ export async function g_preach_generate_book(bible_folder, book_code) {
       let joined = list_join(mapped3, " ::: ");
       var { user_prompt, text, original } = prompt_get(item3);
       let verse_numbers = list_map_property(item3, "verse_number");
-      const expected = ["7"];
-      let n = json_equal_not(verse_numbers, expected);
-      if (0) {
-        if (n) {
-          return;
-        }
-      }
       const prompt =
         "Here is the context: " +
         joined +
