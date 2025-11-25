@@ -8,5 +8,5 @@ export async function g_preach_generate() {
     let { book_code } = b;
     await g_preach_generate_book(bible_folder, book_code);
   }
-  await each_async(list, lambda);
+  await each_async(books, lambda);
 }
