@@ -147,7 +147,7 @@ export async function g_preach_generate_book(bible_folder, book_code) {
         sermon,
         original,
       };
-      log(message);
+      log(v);
       return v;
       function prompt_get(group) {
         let text = list_map_property_join_space(group, "text");
