@@ -4,7 +4,8 @@ import { g_preach_generate_book } from "../../../love/public/src/g_preach_genera
 export async function g_preach_generate() {
   const bible_folder = "engbsb";
   let books = await ebible_version_books(bible_folder);
-  await each_async(list, async function lambda(item) {});
+  async function lambda(item) {}
+  await each_async(list, lambda);
   return books;
   await g_preach_generate_book(bible_folder, book_code);
 }
