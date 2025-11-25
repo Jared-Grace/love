@@ -4,6 +4,5 @@ export async function g_preach_generate() {
   const bible_folder = "engbsb";
   let books = await ebible_version_books(bible_folder);
   return books;
-  let book_code = "JAS";
-  await g_preach_generate_book(book_code);
+  await g_preach_generate_book(bible_folder, book_code);
 }
