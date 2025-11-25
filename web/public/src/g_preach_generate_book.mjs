@@ -141,11 +141,6 @@ export async function g_preach_generate_book(bible_folder, book_code) {
         joined +
         " :::: Here is the passage to rewrite: " +
         user_prompt;
-      if (0) {
-        log({
-          prompt,
-        });
-      }
       let sermon = await g_preach_generate_passage(prompt);
       let v = {
         verse_numbers,
