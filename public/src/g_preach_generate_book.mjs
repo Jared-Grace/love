@@ -161,7 +161,7 @@ export async function g_preach_generate_book(bible_folder, book_code) {
         return v2;
       }
     }
-    let passages = await eac_async(filtered2, lambda5);
+    let passages = await each_async(filtered2, lambda5);
     await file_overwrite_json(path, {
       chapter_code,
       passages,
