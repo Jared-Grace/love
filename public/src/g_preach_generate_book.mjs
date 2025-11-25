@@ -36,8 +36,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { ebible_chapters } from "../../../love/public/src/ebible_chapters.mjs";
-export async function g_preach_generate_book(book_code) {
-  const bible_folder = "engbsb";
+export async function g_preach_generate_book(bible_folder, book_code) {
   let chapters = await ebible_chapters(bible_folder, book_code);
   async function lambda7(chapter_code) {
     let verses = await ebible_verses(bible_folder, chapter_code);
