@@ -1,5 +1,4 @@
 import { g_preach_generate_book_generic } from "../../../love/public/src/g_preach_generate_book_generic.mjs";
-import { g_preach_generate } from "../../../love/public/src/g_preach_generate.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_objection_generate() {
   let bible_folder = "engbsb";
@@ -21,7 +20,7 @@ Rules:
 Output each objection separated by '\\r\\n'. Follow these instructions exactly.`;
   const prompt_user_middle =
     "Generate objections that the following passage would refute; Output 5–10 objections: ";
-  let fn = g_preach_generate;
+  let fn = g_objection_generate;
   await g_preach_generate_book_generic(
     bible_folder,
     book_code,
