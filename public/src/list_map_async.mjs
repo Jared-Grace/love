@@ -6,6 +6,7 @@ export async function list_map_async(list, lambda$item) {
   list_is_assert(list);
   async function lambda(item) {
     let m = lambda$item(item);
+    return m;
   }
   await each_async(list, lambda);
   let mapped = list.map(lambda$item);
