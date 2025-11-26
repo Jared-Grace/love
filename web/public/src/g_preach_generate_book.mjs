@@ -50,6 +50,7 @@ export async function g_preach_generate_book(bible_folder, book_code) {
 . Do not add personal commentary.
 
 Output each sentence separated by '\\r\\n'. Follow these instructions exactly.`;
+  const prompt_user_middle = "Here is the passage to rewrite: ";
   let fn = g_preach_generate;
   let chapters = await ebible_chapters(bible_folder, book_code);
   async function lambda7(chapter_code) {
@@ -150,7 +151,6 @@ Output each sentence separated by '\\r\\n'. Follow these instructions exactly.`;
       let joined = list_join(mapped3, " ::: ");
       var { user_prompt, text, original } = prompt_get(item3);
       let verse_numbers = list_map_property(item3, "verse_number");
-      const prompt_user_middle = "Here is the passage to rewrite: ";
       const prompt_user =
         "Here is the context: " +
         joined +
