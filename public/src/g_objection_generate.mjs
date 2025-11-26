@@ -17,7 +17,8 @@ Rules:
 - Every output must be a plain list of objections, nothing else.
 
 Output each objection separated by '\\r\\n'. Follow these instructions exactly.`;
-  const prompt_user_middle = "Here is the passage to rewrite: ";
+  const prompt_user_middle =
+    "Generate objections that the following passage would refute; Output 5–10 objections: ";
   let fn = g_preach_generate;
   await g_preach_generate_book_generic(
     bible_folder,
