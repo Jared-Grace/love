@@ -1,8 +1,8 @@
+import { g_generate_openai } from "../../../love/public/src/g_generate_openai.mjs";
 import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { list_map_property_join_space } from "../../../love/public/src/list_map_property_join_space.mjs";
-import { g_preach_generate_passage } from "../../../love/public/src/g_preach_generate_passage.mjs";
 import { list_join } from "../../../love/public/src/list_join.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -139,7 +139,22 @@ export async function g_preach_generate_book(bible_folder, book_code) {
         joined +
         " :::: Here is the passage to rewrite: " +
         user_prompt;
-      let sermon = await g_preach_generate_passage(prompt);
+      const prompt2 = `You are a Christian preacher. You will be given a passage and its context. Rewrite the passage as follows:
+
+. Break sentences into very short, simple, meaningful parts. Prefer multiple short sentences over long, concise sentences.
+. Identify context-free parts first, then context-dependent parts.
+. Reorder and split sentences to make each sentence immediately clear and understandable.
+. Combine ideas only when necessary for clarity, but keep sentences short.
+. Each sentence must make sense as you read it; do not require future sentences to clarify earlier ones.
+. Introduce the subject and key traits immediately. Do not defer clarification to later sentences.
+. If the context outside the passage provides necessary clarification or describes key traits, include them immediately in the rewritten passage as part of the first sentence(s).
+. Avoid redundancy.
+. Use active voice whenever possible.
+. Express examples or illustrative situations as direct statements.
+. Do not add personal commentary.
+
+Output each sentence separated by '\\r\\n'. Follow these instructions exactly.`;
+      let sermon = await g_generate_openai(prompt2, prompt);
       let v = {
         verse_numbers,
         text,
