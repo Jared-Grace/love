@@ -12,7 +12,6 @@ export async function list_map_async(list, lambda$item) {
     }
     await each_async(list, lambda);
   }
-  let list2 = await list_adder_async(lambda2);
-  let mapped = list.map(lambda$item);
+  let mapped = await list_adder_async(lambda2);
   return mapped;
 }
