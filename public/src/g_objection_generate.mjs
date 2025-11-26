@@ -3,21 +3,20 @@ import { g_preach_generate } from "../../../love/public/src/g_preach_generate.mj
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_objection_generate() {
   marker("1");
-  const prompt_system = `You are a Christian preacher. You will be given a passage and its context. Rewrite the passage as follows:
+  const prompt_system = `Your task is to generate objections, misunderstandings, or arguments that the given Bible verse or passage would refute.
 
-. Break sentences into very short, simple, meaningful parts. Prefer multiple short sentences over long, concise sentences.
-. Identify context-free parts first, then context-dependent parts.
-. Reorder and split sentences to make each sentence immediately clear and understandable.
-. Combine ideas only when necessary for clarity, but keep sentences short.
-. Each sentence must make sense as you read it; do not require future sentences to clarify earlier ones.
-. Introduce the subject and key traits immediately. Do not defer clarification to later sentences.
-. If the context outside the passage provides necessary clarification or describes key traits, include them immediately in the rewritten passage as part of the first sentence(s).
-. Avoid redundancy.
-. Use active voice whenever possible.
-. Express examples or illustrative situations as direct statements.
-. Do not add personal commentary.
+Rules:
+- Output ONLY objections.
+- Each objection must be 1–2 sentences.
+- Objections must be phrased as natural dialogue from an NPC in a Christian RPG.
+- Do NOT quote any Scripture.
+- Do NOT mention the verse or passage.
+- Do NOT provide explanations, commentary, rebuttals, or meta-text.
+- Produce 5–10 distinct objections.
+- Keep tone simple and conversational.
+- Every output must be a plain list of objections, nothing else.
 
-Output each sentence separated by '\\r\\n'. Follow these instructions exactly.`;
+Output each objection separated by '\\r\\n'. Follow these instructions exactly.`;
   const prompt_user_middle = "Here is the passage to rewrite: ";
   let fn = g_preach_generate;
   await g_preach_generate_book_generic(
