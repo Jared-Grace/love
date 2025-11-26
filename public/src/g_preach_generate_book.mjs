@@ -35,6 +35,21 @@ import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { ebible_chapters } from "../../../love/public/src/ebible_chapters.mjs";
 export async function g_preach_generate_book(bible_folder, book_code) {
+  const prompt_system = `You are a Christian preacher. You will be given a passage and its context. Rewrite the passage as follows:
+
+. Break sentences into very short, simple, meaningful parts. Prefer multiple short sentences over long, concise sentences.
+. Identify context-free parts first, then context-dependent parts.
+. Reorder and split sentences to make each sentence immediately clear and understandable.
+. Combine ideas only when necessary for clarity, but keep sentences short.
+. Each sentence must make sense as you read it; do not require future sentences to clarify earlier ones.
+. Introduce the subject and key traits immediately. Do not defer clarification to later sentences.
+. If the context outside the passage provides necessary clarification or describes key traits, include them immediately in the rewritten passage as part of the first sentence(s).
+. Avoid redundancy.
+. Use active voice whenever possible.
+. Express examples or illustrative situations as direct statements.
+. Do not add personal commentary.
+
+Output each sentence separated by '\\r\\n'. Follow these instructions exactly.`;
   let chapters = await ebible_chapters(bible_folder, book_code);
   async function lambda7(chapter_code) {
     let verses = await ebible_verses(bible_folder, chapter_code);
@@ -139,21 +154,6 @@ export async function g_preach_generate_book(bible_folder, book_code) {
         joined +
         " :::: Here is the passage to rewrite: " +
         user_prompt;
-      const prompt_system = `You are a Christian preacher. You will be given a passage and its context. Rewrite the passage as follows:
-
-. Break sentences into very short, simple, meaningful parts. Prefer multiple short sentences over long, concise sentences.
-. Identify context-free parts first, then context-dependent parts.
-. Reorder and split sentences to make each sentence immediately clear and understandable.
-. Combine ideas only when necessary for clarity, but keep sentences short.
-. Each sentence must make sense as you read it; do not require future sentences to clarify earlier ones.
-. Introduce the subject and key traits immediately. Do not defer clarification to later sentences.
-. If the context outside the passage provides necessary clarification or describes key traits, include them immediately in the rewritten passage as part of the first sentence(s).
-. Avoid redundancy.
-. Use active voice whenever possible.
-. Express examples or illustrative situations as direct statements.
-. Do not add personal commentary.
-
-Output each sentence separated by '\\r\\n'. Follow these instructions exactly.`;
       let sermon = await g_generate_openai(prompt_system, prompt_user);
       let v = {
         verse_numbers,
