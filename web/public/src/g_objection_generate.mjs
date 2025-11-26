@@ -3,7 +3,7 @@ import { g_preach_generate } from "../../../love/public/src/g_preach_generate.mj
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_objection_generate() {
   let bible_folder = "engbsb";
-  let book_code = "jas";
+  let book_code = "JAS";
   marker("1");
   const prompt_system = `You will be given a Bible passage and its context. Your task is to generate objections, misunderstandings, or arguments that the given Bible passage would refute.
 
