@@ -1,3 +1,4 @@
+import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { list_map_property_join_space } from "../../../love/public/src/list_map_property_join_space.mjs";
@@ -9,8 +10,6 @@ import { list_filter_property } from "../../../love/public/src/list_filter_prope
 import { log } from "../../../love/public/src/log.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { g_preach_generate } from "../../../love/public/src/g_preach_generate.mjs";
-import { local_function_path } from "../../../love/public/src/local_function_path.mjs";
-import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { range } from "../../../love/public/src/range.mjs";
@@ -107,8 +106,7 @@ export async function g_preach_generate_book(bible_folder, book_code) {
   let mapped = list_map_index(groups, lambda);
   async function lambda9(chapter_code) {
     let fn = g_preach_generate;
-    let file_name = file_name_json(chapter_code);
-    let path = local_function_path(fn, file_name);
+    let path = local_function_path_json(chapter_code, fn);
     let exists = await file_exists(path);
     if (exists) {
       log({
