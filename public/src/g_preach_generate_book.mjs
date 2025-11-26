@@ -50,6 +50,7 @@ export async function g_preach_generate_book(bible_folder, book_code) {
 . Do not add personal commentary.
 
 Output each sentence separated by '\\r\\n'. Follow these instructions exactly.`;
+  let fn = g_preach_generate;
   let chapters = await ebible_chapters(bible_folder, book_code);
   async function lambda7(chapter_code) {
     let verses = await ebible_verses(bible_folder, chapter_code);
@@ -120,7 +121,7 @@ Output each sentence separated by '\\r\\n'. Follow these instructions exactly.`;
   }
   let mapped = list_map_index(groups, lambda);
   async function lambda9(chapter_code) {
-    let path = local_function_path_json(chapter_code, g_preach_generate);
+    let path = local_function_path_json(chapter_code, fn);
     let exists = await file_exists(path);
     if (exists) {
       log({
