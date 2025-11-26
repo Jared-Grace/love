@@ -155,6 +155,7 @@ Output each sentence separated by '\\r\\n'. Follow these instructions exactly.`;
         joined +
         " :::: Here is the passage to rewrite: " +
         user_prompt;
+      log(prompt_user);
       return;
       let sermon = await g_generate_openai(prompt_system, prompt_user);
       let v = {
