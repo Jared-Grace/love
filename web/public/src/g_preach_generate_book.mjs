@@ -1,3 +1,4 @@
+import { exit } from "../../../love/public/src/exit.mjs";
 import { g_generate_openai } from "../../../love/public/src/g_generate_openai.mjs";
 import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
@@ -158,6 +159,7 @@ Output each sentence separated by '\\r\\n'. Follow these instructions exactly.`;
         prompt_user_middle +
         user_prompt;
       log(prompt_user);
+      exit();
       return;
       let sermon = await g_generate_openai(prompt_system, prompt_user);
       let v = {
