@@ -150,11 +150,12 @@ Output each sentence separated by '\\r\\n'. Follow these instructions exactly.`;
       let joined = list_join(mapped3, " ::: ");
       var { user_prompt, text, original } = prompt_get(item3);
       let verse_numbers = list_map_property(item3, "verse_number");
+      const prompt_user_middle = "Here is the passage to rewrite: ";
       const prompt_user =
         "Here is the context: " +
         joined +
         " :::: " +
-        "Here is the passage to rewrite: " +
+        prompt_user_middle +
         user_prompt;
       log(prompt_user);
       return;
