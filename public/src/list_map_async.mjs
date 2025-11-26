@@ -7,7 +7,7 @@ export async function list_map_async(list, lambda$item) {
   list_is_assert(list);
   async function lambda2(la) {
     async function lambda(item) {
-      let m = lambda$item(item);
+      let m = await lambda$item(item);
       la(m);
     }
     await each_async(list, lambda);
