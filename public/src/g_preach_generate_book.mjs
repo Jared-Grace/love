@@ -105,8 +105,7 @@ export async function g_preach_generate_book(bible_folder, book_code) {
   }
   let mapped = list_map_index(groups, lambda);
   async function lambda9(chapter_code) {
-    let fn = g_preach_generate;
-    let path = local_function_path_json(chapter_code, fn);
+    let path = local_function_path_json(chapter_code, g_preach_generate);
     let exists = await file_exists(path);
     if (exists) {
       log({
