@@ -134,12 +134,12 @@ export async function g_preach_generate_book(bible_folder, book_code) {
       let joined = list_join(mapped3, " ::: ");
       var { user_prompt, text, original } = prompt_get(item3);
       let verse_numbers = list_map_property(item3, "verse_number");
-      const prompt =
+      const prompt_user =
         "Here is the context: " +
         joined +
         " :::: Here is the passage to rewrite: " +
         user_prompt;
-      const prompt2 = `You are a Christian preacher. You will be given a passage and its context. Rewrite the passage as follows:
+      const prompt_system = `You are a Christian preacher. You will be given a passage and its context. Rewrite the passage as follows:
 
 . Break sentences into very short, simple, meaningful parts. Prefer multiple short sentences over long, concise sentences.
 . Identify context-free parts first, then context-dependent parts.
@@ -154,7 +154,7 @@ export async function g_preach_generate_book(bible_folder, book_code) {
 . Do not add personal commentary.
 
 Output each sentence separated by '\\r\\n'. Follow these instructions exactly.`;
-      let sermon = await g_generate_openai(prompt2, prompt);
+      let sermon = await g_generate_openai(prompt_system, prompt_user);
       let v = {
         verse_numbers,
         text,
