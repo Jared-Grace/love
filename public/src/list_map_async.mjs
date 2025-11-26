@@ -5,13 +5,14 @@ import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
 export async function list_map_async(list, lambda$item) {
   marker("1");
   list_is_assert(list);
-  async function lambda2(la) {}
-  let list2 = await list_adder_async(lambda2);
-  async function lambda(item) {
-    let m = lambda$item(item);
-    return m;
+  async function lambda2(la) {
+    async function lambda(item) {
+      let m = lambda$item(item);
+      la(m);
+    }
+    await each_async(list, lambda);
   }
-  await each_async(list, lambda);
+  let list2 = await list_adder_async(lambda2);
   let mapped = list.map(lambda$item);
   return mapped;
 }
