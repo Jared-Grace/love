@@ -146,9 +146,6 @@ export async function g_preach_generate_book_generic(
         " :::: " +
         prompt_user_middle +
         user_prompt;
-      log(prompt_user);
-      exit();
-      return;
       let sermon = await g_generate_openai(prompt_system, prompt_user);
       let v = {
         verse_numbers,
@@ -157,6 +154,7 @@ export async function g_preach_generate_book_generic(
         original,
       };
       log(v);
+      exit();
       return v;
       function prompt_get(group) {
         let text = list_map_property_join_space(group, "text");
