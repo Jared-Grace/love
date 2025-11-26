@@ -1,8 +1,10 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
-export function list_map_async(list, lambda$item) {
+export async function list_map_async(list, lambda$item) {
   marker("1");
   list_is_assert(list);
+  await each_async(list2, async function lambda(item) {});
   let mapped = list.map(lambda$item);
   return mapped;
 }
