@@ -153,7 +153,8 @@ Output each sentence separated by '\\r\\n'. Follow these instructions exactly.`;
       const prompt_user =
         "Here is the context: " +
         joined +
-        " :::: Here is the passage to rewrite: " +
+        " :::: " +
+        "Here is the passage to rewrite: " +
         user_prompt;
       log(prompt_user);
       return;
