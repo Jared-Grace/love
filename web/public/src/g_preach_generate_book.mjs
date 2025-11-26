@@ -1,3 +1,4 @@
+import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { list_map_property_join_space } from "../../../love/public/src/list_map_property_join_space.mjs";
 import { g_preach_generate_passage } from "../../../love/public/src/g_preach_generate_passage.mjs";
