@@ -2,7 +2,6 @@ import { file_overwrite_json } from "../../../love/public/src/file_overwrite_jso
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { list_map_property_join_space } from "../../../love/public/src/list_map_property_join_space.mjs";
 import { g_generate_openai } from "../../../love/public/src/g_generate_openai.mjs";
-import { exit } from "../../../love/public/src/exit.mjs";
 import { list_join } from "../../../love/public/src/list_join.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -154,7 +153,6 @@ export async function g_preach_generate_book_generic(
         original,
       };
       log(v);
-      exit();
       return v;
       function prompt_get(group) {
         let text = list_map_property_join_space(group, "text");
