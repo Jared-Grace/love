@@ -15,7 +15,6 @@ export async function g_preach_generate_passage(passage) {
 . Do not add personal commentary.
 
 Output each sentence separated by '\\r\\n'. Follow these instructions exactly.`;
-  let user = passage;
-  let sermon = await g_generate_openai(prompt, user);
+  let sermon = await g_generate_openai(prompt, passage);
   return sermon;
 }
