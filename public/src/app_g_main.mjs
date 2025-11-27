@@ -226,7 +226,7 @@ export function app_g_main() {
               width: "100vw",
               height: "100vh",
               "pointer-events": "none",
-              background: "rgba(255,255,255,0.1)",
+              background: "rgba(255,255,255,0.9)",
               "z-index": "9999",
             };
             html_style_assign(div2, s);
