@@ -178,18 +178,18 @@ export function app_g_main() {
           let e2 = list_empty_not_is(filtered2);
           if (e2) {
           } else {
-          }
-          log(filtered2);
-          object_assign(c, clicked_coordinates);
-          function handler(e) {
-            if (e.propertyName === "left" || e.propertyName === "top") {
-              let element2 = html_component_element_get(ci);
-              element2.scrollIntoView({
-                behavior: "smooth",
-                block: "center",
-                inline: "center",
-              });
-              element2.removeEventListener("transitionend", handler);
+            log(filtered2);
+            object_assign(c, clicked_coordinates);
+            function handler(e) {
+              if (e.propertyName === "left" || e.propertyName === "top") {
+                let element2 = html_component_element_get(ci);
+                element2.scrollIntoView({
+                  behavior: "smooth",
+                  block: "center",
+                  inline: "center",
+                });
+                element2.removeEventListener("transitionend", handler);
+              }
             }
           }
           html_on(ci, "transitionend", handler);
