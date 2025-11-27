@@ -1,3 +1,4 @@
+import { each_range_1 } from "../../../love/public/src/each_range_1.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
@@ -48,7 +49,7 @@ export function app_g_main() {
   list_shuffle(grasses);
   function lambda3(g, index) {
     function lambda4(i3) {}
-    each_range(count, lambda4);
+    each_range_1(index, lambda4);
   }
   each_index(grasses, lambda3);
   let taken = list_take(grasses, 3);
