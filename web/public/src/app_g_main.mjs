@@ -71,5 +71,5 @@ export function app_g_main() {
   }
   each_range(10, lambda2);
   const c_src = game_prefix + "characters\\man_1\\rotations\\south.png";
-  g_img_square(div, c_src, square_size, x, square_count, y);
+  g_img_square(div, c_src, square_size, 5, square_count, 5);
 }
