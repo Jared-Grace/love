@@ -87,7 +87,7 @@ export function app_g_main() {
   let v = html_component_wrap(window);
   html_on(v, "resize", lambda8);
   let r2 = range_1(10);
-  let combineds = list_map_combine_left("man_", r2);
+  let men = list_map_combine_left("man_", r2);
   let c = {
     x: 5,
     y: 5,
