@@ -43,11 +43,11 @@ export function app_g_main() {
     "swamp_grass_snowy",
     "yellow_grass",
   ];
-  const src = tiles_path + "grass.png";
   function lambda2(i) {
     function lambda(i2) {
+      let r = list_random_item(grasses);
+      const src = tiles_path + r + ".png";
       let tile = html_img(div, src);
-      let r = list_random_item(arr);
       html_style_size_square(tile, square_size);
       html_style_assign(tile, {
         position: "absolute",
