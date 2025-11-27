@@ -9,3 +9,5 @@ const should be converted to let
 js_declaration_single_block_blody blody to body
 
 log should include function name
+
+if use if money donate https://codespree.itch.io/seamless-rpg-tiles
