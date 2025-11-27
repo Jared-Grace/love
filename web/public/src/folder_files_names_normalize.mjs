@@ -8,7 +8,8 @@ import { folder_read_files } from "../../../love/public/src/folder_read_files.mj
 export async function folder_files_names_normalize(path, include, prefix) {
   let files = await folder_read_files(path);
   let index = 1;
-  let list = await list_adder_async(async function lambda2(la) {});
+  async function lambda2(la) {}
+  let list = await list_adder_async(lambda2);
   async function lambda(name_old) {
     let i = string_includes(name_old, include);
     if (i) {
