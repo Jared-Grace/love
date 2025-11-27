@@ -11,13 +11,16 @@ export function app_g_main() {
     margin: "0",
   });
   let div = html_div(root);
+  html_style_assign(div, {
+    position: "relative",
+  });
   let square_size = "64px";
   let path_prefix = "..\\";
   const game_prefix = path_prefix + "img\\game\\";
   const src = game_prefix + "tiles\\seamless\\grass.png";
-  let tile = html_img(body, src);
+  let tile = html_img(div, src);
   html_style_size_square(tile, square_size);
   const src2 = game_prefix + "characters\\man_1\\rotations\\south.png";
-  let c = html_img(body, src2);
+  let c = html_img(div, src2);
   html_style_size_square(c, square_size);
 }
