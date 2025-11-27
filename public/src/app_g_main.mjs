@@ -1,3 +1,4 @@
+import { g_img_square_style } from "../../../love/public/src/g_img_square_style.mjs";
 import { g_img_square } from "../../../love/public/src/g_img_square.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
@@ -62,6 +63,8 @@ export function app_g_main() {
       let r = list_random_item(list);
       const src = tiles_path + r + ".png";
       g_img_square(div, src, square_size, x, square_count, y);
+      let div2 = html_div(root);
+      g_img_square_style(tile, square_size, x, square_count, y);
       return;
     }
     each_range(10, lambda);
