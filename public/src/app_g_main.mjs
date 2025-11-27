@@ -44,7 +44,8 @@ export function app_g_main() {
   ];
   const src = tiles_path + "grass.png";
   function lambda2(i) {
-    each_range(count, function lambda(i2) {});
+    function lambda(i2) {}
+    each_range(count, lambda);
     let tile = html_img(div, src);
     html_style_size_square(tile, square_size);
     html_style_assign(tile, {
