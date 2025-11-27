@@ -5,8 +5,10 @@ export function g_img_square_style(tile, square_size, x, square_count, y, z) {
   html_style_size_square(tile, square_size);
   html_style_assign(tile, {
     position: "absolute",
+    "z-index": list_index_of(["tile", "character", "click"], z),
+  });
+  html_style_assign(tile, {
     left: x * square_count + "px",
     top: y * square_count + "px",
-    "z-index": list_index_of(["tile", "character", "click"], z),
   });
 }
