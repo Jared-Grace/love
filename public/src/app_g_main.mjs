@@ -196,20 +196,20 @@ export function app_g_main() {
             coordinates_move_to = list_first(filtered3);
           } else {
             coordinates_move_to = clicked_coordinates;
-            object_assign(player, clicked_coordinates);
-            function handler(e) {
-              if (e.propertyName === "left" || e.propertyName === "top") {
-                let element2 = html_component_element_get(ci);
-                element2.scrollIntoView({
-                  behavior: "smooth",
-                  block: "center",
-                  inline: "center",
-                });
-                element2.removeEventListener("transitionend", handler);
-              }
-            }
-            html_on(ci, "transitionend", handler);
           }
+          object_assign(player, clicked_coordinates);
+          function handler(e) {
+            if (e.propertyName === "left" || e.propertyName === "top") {
+              let element2 = html_component_element_get(ci);
+              element2.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+                inline: "center",
+              });
+              element2.removeEventListener("transitionend", handler);
+            }
+          }
+          html_on(ci, "transitionend", handler);
           g_img_square_style_position_object(player, ci);
         }
         html_on_click(clickable, lambda7);
