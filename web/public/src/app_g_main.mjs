@@ -170,19 +170,18 @@ export function app_g_main() {
             x,
             y,
           };
-          if (false) {
-            function lambda17(npc) {
-              let e = true;
-              function lambda18(value, property) {
-                let value2 = object_property_get(npc, property);
-                if (equal_not(value, value2)) {
-                  e = false;
-                }
+          function lambda17(npc) {
+            let e = true;
+            function lambda18(value, property) {
+              let value2 = object_property_get(npc, property);
+              if (equal_not(value, value2)) {
+                e = false;
               }
-              each_object(clicked_coordinates, lambda18);
             }
-            let filtered2 = list_filter(npcs, lambda17);
+            each_object(clicked_coordinates, lambda18);
           }
+          let filtered2 = list_filter(npcs, lambda17);
+          alert(filtered2);
           object_assign(c, clicked_coordinates);
           function handler(e) {
             if (e.propertyName === "left" || e.propertyName === "top") {
