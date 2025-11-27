@@ -8,5 +8,5 @@ export function g_img_square_style(tile, square_size, x, square_count, y, z) {
     position: "absolute",
     "z-index": list_index_of(["tile", "character", "click"], z),
   });
-  g_img_square_style_position(tile, x, square_count, y);
+  g_img_square_style_position(tile, x, y);
 }
