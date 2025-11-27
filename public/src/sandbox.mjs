@@ -10,7 +10,7 @@ export async function sandbox() {
   let files = await folder_files_names_normalize(path, "woman", "woman_");
   async function lambda(file_path) {
     let name = path_without_extension(file_path);
-    await unzip(file_path, buffer);
+    await unzip(name, file_path);
     log(name);
   }
   await each_async(files, lambda);
