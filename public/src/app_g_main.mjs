@@ -1,3 +1,4 @@
+import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_component_wrap } from "../../../love/public/src/html_component_wrap.mjs";
@@ -98,6 +99,7 @@ export function app_g_main() {
         let clickable = html_div(div);
         g_img_square_style(clickable, x, y, "click");
         function lambda7() {
+          let a = object_assign(to, from);
           g_img_square_style_position(ci, x, y);
         }
         html_on_click(clickable, lambda7);
