@@ -137,7 +137,7 @@ export function app_g_main() {
   each(npcs, lambda16);
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
-    let ci = g_character_img(game_prefix, div, player);
+    let player_img_c = g_character_img(game_prefix, div, player);
     let parent = html_document_head();
     let component = html_element(parent, "style");
     html_text_set(
@@ -157,7 +157,11 @@ export function app_g_main() {
   }
 }`,
     );
-    html_style_set(ci, "animation", "pulseGlow 2s infinite alternate");
+    html_style_set(
+      player_img_c,
+      "animation",
+      "pulseGlow 2s infinite alternate",
+    );
     function lambda12(npc) {
       let ci = g_character_img(game_prefix, div, npc);
     }
@@ -204,7 +208,7 @@ export function app_g_main() {
           object_assign(player, coordinates_move_to);
           function handler(e) {
             if (e.propertyName === "left" || e.propertyName === "top") {
-              let element2 = html_component_element_get(ci);
+              let element2 = html_component_element_get(player_img_c);
               element2.scrollIntoView({
                 behavior: "smooth",
                 block: "center",
@@ -213,8 +217,8 @@ export function app_g_main() {
               element2.removeEventListener("transitionend", handler);
             }
           }
-          html_on(ci, "transitionend", handler);
-          g_img_square_style_position_object(player, ci);
+          html_on(player_img_c, "transitionend", handler);
+          g_img_square_style_position_object(player, player_img_c);
         }
         html_on_click(clickable, lambda7);
       }
