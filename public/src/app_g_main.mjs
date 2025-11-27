@@ -80,6 +80,10 @@ export function app_g_main() {
   let rows = list_adder(lambda10);
   let v = html_component_wrap(window);
   html_on(v, "resize", lambda8);
+  let c = {
+    x: 5,
+    y: 5,
+  };
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
     const c_src = game_prefix + "characters\\man_1\\rotations\\south.png";
