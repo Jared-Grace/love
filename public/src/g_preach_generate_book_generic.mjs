@@ -178,7 +178,9 @@ export async function g_preach_generate_book_generic(
       chapter_code,
       passages,
     });
-    log({path});
+    log({
+      path,
+    });
     exit();
   }
   await each_async(chapters, lambda9);
