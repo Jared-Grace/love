@@ -218,8 +218,8 @@ export function app_g_main() {
             block: "center",
             inline: "center",
           });
+          log(filtered2);
           if (e2) {
-            log("message");
             let div2 = html_div(div);
             let s = {
               position: "fixed",
