@@ -124,6 +124,7 @@ export function app_g_main() {
   let npc_count = 30;
   let taken2 = list_take(coordinates, npc_count);
   function lambda16(c) {
+    let r3 = list_random_item(list3);
     object_property_set(object, property_name, value);
   }
   each(coordinates, lambda16);
