@@ -1,4 +1,4 @@
-import { each } from "../../../love/public/src/each.mjs";
+import { each_range } from "../../../love/public/src/each_range.mjs";
 import { g_folder_tiles } from "../../../love/public/src/g_folder_tiles.mjs";
 import { g_folder_img } from "../../../love/public/src/g_folder_img.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -42,8 +42,7 @@ export function app_g_main() {
     "yellow_grass",
   ];
   const src = tiles_path + "grass.png";
-  function lambda(item) {}
-  each(list, lambda);
+  each_range(count, function lambda2() {});
   let tile = html_img(div, src);
   html_style_size_square(tile, square_size);
   html_style_assign(tile, {
