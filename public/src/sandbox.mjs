@@ -11,6 +11,6 @@ export async function sandbox() {
     let name = await unzip_self(file_path);
     log(name);
   }
-  await each_async(files, lambda);
+  await each_async(files, unzip_self);
   await folder_files_names_normalize(path, "_man_", "man_");
 }
