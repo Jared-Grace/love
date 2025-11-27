@@ -20,6 +20,26 @@ export function app_g_main() {
   let path_prefix = "..\\";
   const game_prefix = g_folder_img(path_prefix);
   const tiles_path = g_folder_tiles(path_prefix);
+  let grasses = [
+    "cyan_grass",
+    "dustgrass",
+    "grass",
+    "grass_cold",
+    "grass_dry",
+    "grass_nov",
+    "grass_oct",
+    "grass_sep",
+    "grass_snowy",
+    "junglegrass",
+    "map_tile_grass",
+    "monsoongrass",
+    "swamp_grass_mar",
+    "swamp_grass_nov",
+    "swamp_grass_oct",
+    "swamp_grass_sep",
+    "swamp_grass_snowy",
+    "yellow_grass",
+  ];
   const src = tiles_path + "grass.png";
   let tile = html_img(div, src);
   html_style_size_square(tile, square_size);
