@@ -204,8 +204,8 @@ export function app_g_main() {
           object_assign(player, coordinates_move_to);
           let properties = ["left", "top"];
           function handler(e) {
-            let includes = list_includes(list, item4);
-            if (e.propertyName === "left" || e.propertyName === "top") {
+            let includes = list_includes(properties, e.propertyName);
+            if (includes) {
               element2.removeEventListener("transitionend", handler);
               let element2 = html_component_element_get(player_img_c);
               element2.scrollIntoView({
