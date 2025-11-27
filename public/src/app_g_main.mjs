@@ -207,7 +207,7 @@ export function app_g_main() {
             let includes = list_includes(properties, e.propertyName);
             if (includes) {
               element2.removeEventListener("transitionend", handler);
-              let element2 = on_transition_end();
+              on_transition_end();
             }
           }
           html_on(player_img_c, "transitionend", handler);
