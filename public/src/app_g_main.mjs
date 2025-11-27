@@ -65,30 +65,29 @@ export function app_g_main() {
     app_g_refresh(game_prefix, div, tiles, tiles_path);
   }
   function lambda10(la2) {
-    let rows = 10;
-    let columns = 10;
+    let row_count = 10;
+    let column_count = 10;
     function lambda6(i) {
       function lambda11(la3) {
         function lambda9(i2) {
           let r = list_random_item(tiles);
           la3(r);
         }
-        each_range(columns, lambda9);
+        each_range(column_count, lambda9);
       }
       let list2 = list_adder(lambda11);
       la2(list2);
     }
-    each_range(rows, lambda6);
+    each_range(row_count, lambda6);
   }
-  let list = list_adder(lambda10);
+  let rows = list_adder(lambda10);
   let v = html_component_wrap(window);
   html_on(v, "resize", lambda8);
   function app_g_refresh(game_prefix, div, tiles, tiles_path) {
     const c_src = game_prefix + "characters\\man_1\\rotations\\south.png";
     let c = g_img_square(div, c_src, 5, 5, "character");
-    function lambda2(y) {
-      function lambda(x) {
-        let r = list_random_item(tiles);
+    function lambda2(columns, y) {
+      function lambda(r, x) {
         const src = tiles_path + r + ".png";
         g_img_square(div, src, x, y, "tile");
         let clickable = html_div(div);
@@ -99,8 +98,8 @@ export function app_g_main() {
         html_on_click(clickable, lambda7);
         return;
       }
-      each_range(columns, lambda);
+      each_index(columns, lambda);
     }
-    each_range(rows, lambda2);
+    each_index(rows, lambda2);
   }
 }
