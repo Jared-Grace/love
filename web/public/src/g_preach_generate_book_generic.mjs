@@ -156,7 +156,7 @@ export async function g_preach_generate_book_generic(
       let v = {
         verse_numbers,
         text,
-        sermon: output,
+        [property_name]: output,
         original,
       };
       log(v);
