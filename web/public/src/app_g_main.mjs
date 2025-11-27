@@ -95,11 +95,10 @@ export function app_g_main() {
   let c = {
     x: 5,
     y: 5,
-    img: player_img
+    img: player_img,
   };
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
-    const c_src = game_prefix + "characters\\"++"\\rotations\\south.png";
     let ci = g_img_square(div, c_src, -1, -1, "character");
     g_img_square_style_position_object(c, ci);
     function lambda2(columns, y) {
