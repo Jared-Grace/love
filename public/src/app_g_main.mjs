@@ -1,3 +1,4 @@
+import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
@@ -89,6 +90,7 @@ export function app_g_main() {
   let r2 = range_1(10);
   let men = list_map_combine_left("man_", r2);
   let women = list_map_combine_left("woman_", r2);
+  let people = list_concat(women, men);
   let c = {
     x: 5,
     y: 5,
