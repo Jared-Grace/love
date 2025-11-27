@@ -114,6 +114,9 @@ export function app_g_main() {
     x: 5,
     y: 5,
     img: player_img,
+    prayer: {
+      conversation: false,
+    },
   };
   let right = player_img;
   let filtered = list_without(people, right);
