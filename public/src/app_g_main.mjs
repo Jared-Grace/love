@@ -44,16 +44,17 @@ export function app_g_main() {
   ];
   const src = tiles_path + "grass.png";
   function lambda2(i) {
-    function lambda(i2) {}
-    each_range(count, lambda);
-    let tile = html_img(div, src);
-    html_style_size_square(tile, square_size);
-    html_style_assign(tile, {
-      position: "absolute",
-      left: "0px",
-      top: i * square_count + "px",
-    });
-    return;
+    function lambda(i2) {
+      let tile = html_img(div, src);
+      html_style_size_square(tile, square_size);
+      html_style_assign(tile, {
+        position: "absolute",
+        left: "0px",
+        top: i * square_count + "px",
+      });
+      return;
+    }
+    each_range(10, lambda);
     const src2 = game_prefix + "characters\\man_1\\rotations\\south.png";
     let c = html_img(div, src2);
     html_style_size_square(c, square_size);
