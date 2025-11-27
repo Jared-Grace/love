@@ -164,7 +164,8 @@ export function app_g_main() {
         g_img_square_style(clickable, x, y, "click");
         function lambda7() {
           if (false) {
-            let filtered2 = list_filter(list, function lambda17(item) {});
+            function lambda17(item) {}
+            let filtered2 = list_filter(list, lambda17);
           }
           object_assign(c, {
             x,
