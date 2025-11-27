@@ -18,7 +18,7 @@ Rules:
 - Keep tone simple and conversational.
 - Output each struggle separated by '\r\n'.`;
   const prompt_user_middle =
-    "Generate personal struggles or issues that characters might be experiencing that relate to this passage; Output 5–10 struggles: ";
+    "Generate personal struggles that directly relate to this text: ";
   let fn = g_struggle_generate;
   await g_preach_generate_book_generic(
     bible_folder,
