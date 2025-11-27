@@ -64,6 +64,7 @@ export function app_g_main() {
   function lambda8() {
     app_g_refresh(game_prefix, div, tiles, tiles_path);
   }
+  let list = list_adder(function lambda10(la2) {});
   let rows = 10;
   let columns = 10;
   function lambda6(i) {
