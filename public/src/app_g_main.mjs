@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { html_on_transitionend } from "../../../love/public/src/html_on_transitionend.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
@@ -184,6 +185,7 @@ export function app_g_main() {
           let filtered2 = list_filter(npcs, lambda17);
           let e2 = list_empty_not_is(filtered2);
           let coordinates_move_to = null;
+          log(message);
           if (e2) {
             function lambda18(item) {
               let distance = g_distance(clicked_coordinates, item);
