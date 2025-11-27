@@ -67,7 +67,7 @@ export function app_g_main() {
       let clickable = html_div(div);
       g_img_square_style(clickable, square_size, x, square_count, y, "click");
       function lambda7() {}
-      html_on_click(component, lambda7);
+      html_on_click(clickable, lambda7);
       return;
     }
     each_range(10, lambda);
