@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -7,6 +8,7 @@ import { string_includes } from "../../../love/public/src/string_includes.mjs";
 import { folder_read_files } from "../../../love/public/src/folder_read_files.mjs";
 export async function folder_files_names_normalize(path, include, prefix) {
   let files = await folder_read_files(path);
+  log(message);
   let index = 1;
   async function lambda2(la) {
     async function lambda(name_old) {
