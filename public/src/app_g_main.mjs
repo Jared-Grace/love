@@ -105,7 +105,7 @@ export function app_g_main() {
   let women = list_map_combine_left("woman_", r2);
   let people = list_concat(women, men);
   const player_img = list_random_item(men);
-  let c = {
+  let player = {
     x: 5,
     y: 5,
     img: player_img,
@@ -135,7 +135,7 @@ export function app_g_main() {
   each(npcs, lambda16);
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
-    let ci = g_character_img(game_prefix, div, c);
+    let ci = g_character_img(game_prefix, div, player);
     let parent = html_document_head();
     let component = html_element(parent, "style");
     html_text_set(
@@ -185,10 +185,12 @@ export function app_g_main() {
             }
             let filtered3 = list_filter(coordinates, lambda18);
             list_shuffle(filtered3);
-            function lambda19(item3) {}
+            function lambda19(item3) {
+              let distance = g_distance(player, item);
+            }
             list_sort_number_mapper(list, lambda19);
           } else {
-            object_assign(c, clicked_coordinates);
+            object_assign(player, clicked_coordinates);
             function handler(e) {
               if (e.propertyName === "left" || e.propertyName === "top") {
                 let element2 = html_component_element_get(ci);
@@ -202,7 +204,7 @@ export function app_g_main() {
             }
             html_on(ci, "transitionend", handler);
           }
-          g_img_square_style_position_object(c, ci);
+          g_img_square_style_position_object(player, ci);
         }
         html_on_click(clickable, lambda7);
       }
