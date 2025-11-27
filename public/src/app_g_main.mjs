@@ -131,7 +131,7 @@ export function app_g_main() {
     html_style_set(
       ci,
       "filter",
-      "drop-shadow(0 0 10px lime) drop-shadow(0 0 20px lime);",
+      "drop-shadow(0 0 10px lime) drop-shadow(0 0 20px lime)",
     );
     function lambda12(npc) {
       let ci = g_character_img(game_prefix, div, npc);
