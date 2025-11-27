@@ -177,7 +177,7 @@ export async function g_preach_generate_book_generic(
     await file_overwrite_json(path, {
       chapter_code,
       passages,
-    });
+    });l
     exit();
   }
   await each_async(chapters, lambda9);
