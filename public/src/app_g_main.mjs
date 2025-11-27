@@ -55,9 +55,9 @@ export function app_g_main() {
       }
       each_range_1(index, lambda4);
     }
+    each_index(grasses, lambda3);
   }
   let list = list_adder(lambda5);
-  each_index(grasses, lambda3);
   let taken = list_take(grasses, 3);
   function lambda2(i) {
     function lambda(i2) {
