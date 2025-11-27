@@ -105,9 +105,10 @@ export function app_g_main() {
     return eq2;
   }
   let filtered = list_filter(list, lambda12);
-  function lambda13(columns, index2) {
-    function lambda14(item2, index3) {}
-    each_index(list3, lambda14);
+  let list3 = list_adder(function lambda15(la4) {});
+  function lambda13(columns, y) {
+    function lambda14(item2, x) {}
+    each_index(columns, lambda14);
   }
   each_index(rows, lambda13);
   function app_g_refresh(game_prefix, div, tiles_path) {
