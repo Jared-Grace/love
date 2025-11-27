@@ -10,7 +10,7 @@ export async function sandbox() {
   async function lambda(item) {
     let i = string_includes(item, "woman");
     if (i) {
-      let name_new = "woman_" + index;
+      let name_new = "woman_" + index + ".zip";
     }
   }
   await each_async(list, lambda);
