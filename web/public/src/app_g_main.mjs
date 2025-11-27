@@ -60,14 +60,14 @@ export function app_g_main() {
   }
   let tiles = list_adder(lambda5);
   const c_src = game_prefix + "characters\\man_1\\rotations\\south.png";
-  let c = g_img_square(div, c_src, square_size, 5, 5, "character");
+  let c = g_img_square(div, c_src,  5, 5, "character");
   function lambda2(y) {
     function lambda(x) {
       let r = list_random_item(tiles);
       const src = tiles_path + r + ".png";
-      g_img_square(div, src, square_size, x, y, "tile");
+      g_img_square(div, src,  x, y, "tile");
       let clickable = html_div(div);
-      g_img_square_style(clickable, square_size, x, y, "click");
+      g_img_square_style(clickable,  x, y, "click");
       function lambda7() {
         g_img_square_style_position(c, x, y);
       }
