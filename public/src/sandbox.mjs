@@ -5,6 +5,7 @@ export async function sandbox() {
   marker("1");
   let path = "C:\\Users\\chris\\Downloads\\characters";
   let files = await folder_files_names_normalize(path, "woman", "woman_");
-  each(list, function lambda(item) {});
+  function lambda(item) {}
+  each(list, lambda);
   await folder_files_names_normalize(path, "_man_", "man_");
 }
