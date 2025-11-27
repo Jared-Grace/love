@@ -1,3 +1,4 @@
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
@@ -97,6 +98,7 @@ export function app_g_main() {
     y: 5,
     img: player_img,
   };
+  let filtered = list_filter(list, function lambda12(item) {});
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
     const c_src = game_prefix + "characters\\" + p + "\\rotations\\south.png";
