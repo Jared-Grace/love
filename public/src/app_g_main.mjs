@@ -209,7 +209,7 @@ export function app_g_main() {
               if (includes) {
                 let element2 = html_component_element_get(player_img_c);
                 element2.removeEventListener("transitionend", handler);
-                on_transition_end();
+                resolve();
               }
             }
             html_on(player_img_c, "transitionend", handler);
