@@ -125,7 +125,7 @@ export function ebible_languages() {
     {
       name: "Gujarati",
       bible_folder: "guj2017",
-      language_code: "wo",
+      language_code: "gu",
     },
   ];
   return languages;
