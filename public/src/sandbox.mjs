@@ -9,9 +9,9 @@ export async function sandbox() {
   let path = "C:\\Users\\chris\\Downloads\\characters";
   const include = "woman";
   const prefix = "woman_";
-  await sandbox_rename(path, include, prefix);
+  await folder_files_names_normalize(path, include, prefix);
   return files;
-  async function sandbox_rename(path, include, prefix) {
+  async function folder_files_names_normalize(path, include, prefix) {
     let files = await folder_read_files(path);
     let index = 1;
     async function lambda(name_old) {
