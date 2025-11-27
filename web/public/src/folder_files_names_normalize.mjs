@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { file_move } from "../../../love/public/src/file_move.mjs";
@@ -17,11 +16,8 @@ export async function folder_files_names_normalize(path, include, prefix) {
       }
       let path_old = path_join([path, name_old]);
       let path_new = path_join([path, name_new]);
-      log({
-        path_new,
-      });
       await file_move(path_old, path_new);
-      i++;
+      index++;
     }
   }
   await each_async(files, lambda);
