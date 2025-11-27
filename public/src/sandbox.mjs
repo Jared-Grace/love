@@ -8,9 +8,10 @@ export async function sandbox() {
   marker("1");
   let p = "C:\\Users\\chris\\Downloads\\characters";
   let files = await folder_read_files(p);
+  const include = "woman";
   let index = 1;
   async function lambda(name_old) {
-    let i = string_includes(name_old, "woman");
+    let i = string_includes(name_old, include);
     if (i) {
       let name_new = "woman_" + index + ".zip";
       let path_old = path_join([p, name_old]);
