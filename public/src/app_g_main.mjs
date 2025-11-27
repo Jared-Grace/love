@@ -1,4 +1,4 @@
-import { html_button } from "../../../love/public/src/html_button.mjs";
+import { app_karate_button_back } from "../../../karate_code/public/src/app_karate_button_back.mjs";
 import { g_z } from "../../../love/public/src/g_z.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_on_transitionend } from "../../../love/public/src/html_on_transitionend.mjs";
@@ -237,7 +237,7 @@ export function app_g_main() {
             };
             html_style_assign(overlay, s);
             function lambda21() {}
-            let component2 = html_button(overlay, "Back", lambda21);
+            let component2 = app_karate_button_back(overlay, "Back", lambda21);
           }
         }
         html_on_click(clickable, lambda7);
