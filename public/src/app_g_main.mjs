@@ -46,7 +46,9 @@ export function app_g_main() {
     "yellow_grass",
   ];
   list_shuffle(grasses);
-  function lambda3(g, index) {erg}
+  function lambda3(g, index) {
+    each_range(count, function lambda4(i3) {});
+  }
   each_index(grasses, lambda3);
   let taken = list_take(grasses, 3);
   function lambda2(i) {
