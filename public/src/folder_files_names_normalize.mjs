@@ -8,7 +8,7 @@ import { string_includes } from "../../../love/public/src/string_includes.mjs";
 import { folder_read_files } from "../../../love/public/src/folder_read_files.mjs";
 export async function folder_files_names_normalize(path, include, prefix) {
   let files = await folder_read_files(path);
-  log(message);
+  log(files);
   let index = 1;
   async function lambda2(la) {
     async function lambda(name_old) {
