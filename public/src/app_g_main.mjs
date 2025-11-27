@@ -64,7 +64,8 @@ export function app_g_main() {
   function lambda8() {
     app_g_refresh(game_prefix, div, tiles, tiles_path);
   }
-  each_range(count, function lambda6(i) {});
+  function lambda6(i) {}
+  each_range(count, lambda6);
   let v = html_component_wrap(window);
   html_on(v, "resize", lambda8);
   function app_g_refresh(game_prefix, div, tiles, tiles_path) {
