@@ -9,6 +9,6 @@ export function app_g_main() {
     margin: "0",
   });
   let path_prefix = "..\\";
-  const src = path_prefix + "img\\game\\tiles\\seamless\\grass.png";
+  const src = path_prefix + "img\\game\\" + "tiles\\seamless\\grass.png";
   html_img(body, src);
 }
