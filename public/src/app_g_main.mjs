@@ -237,7 +237,7 @@ export function app_g_main() {
             };
             html_style_assign(overlay, s);
             function lambda21() {}
-            let component2 = app_karate_button_back(overlay, "Back", lambda21);
+            let component2 = app_karate_button_back(overlay, lambda21);
           }
         }
         html_on_click(clickable, lambda7);
