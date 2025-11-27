@@ -1,7 +1,6 @@
+import { list_without } from "../../../love/public/src/list_without.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { equal } from "../../../love/public/src/equal.mjs";
-import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
@@ -102,11 +101,7 @@ export function app_g_main() {
     img: player_img,
   };
   let right = player_img;
-  function lambda12(item) {
-    let eq2 = equal(item, right);
-    return eq2;
-  }
-  let filtered = list_filter(list, lambda12);
+  let filtered = list_without(right);
   function lambda15(la4) {
     function lambda13(columns, y) {
       function lambda14(item2, x) {
