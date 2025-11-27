@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
@@ -194,6 +195,7 @@ export function app_g_main() {
             list_sort_number_mapper(filtered3, lambda19);
             let coordinates_move_to = null;
             coordinates_move_to = list_first(filtered3);
+            log(message);
           } else {
             coordinates_move_to = clicked_coordinates;
           }
