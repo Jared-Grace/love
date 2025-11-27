@@ -13,8 +13,7 @@ export async function folder_files_names_underscore(path) {
   async function lambda2(la) {
     async function lambda(name_old) {
       let path_old = path_join([path, name_old]);
-      let replaced = string_replace(s, from, to);
-      let name_new = prefix + index + ".zip";
+      let name_new = string_replace(name_old, " ", "_");
       let path_new = path_join([path, name_new]);
       if (equal_not(name_old, name_new)) {
         await file_move(path_old, path_new);
