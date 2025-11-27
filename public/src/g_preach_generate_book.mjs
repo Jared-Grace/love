@@ -24,5 +24,6 @@ Output each sentence separated by '\\r\\n'. Follow these instructions exactly.`;
     fn,
     prompt_user_middle,
     prompt_system,
+    "sermon",
   );
 }
