@@ -1,4 +1,4 @@
-import { string_replace } from "../../../love/public/src/string_replace.mjs";
+import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { folder_files_names_transform } from "../../../love/public/src/folder_files_names_transform.mjs";
 import { g_folder_tiles } from "../../../love/public/src/g_folder_tiles.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -11,7 +11,7 @@ export async function sandbox() {
   let list2 = await folder_files_names_transform(joined, transform);
   return list2;
   function transform(name_old) {
-    let replaced = string_replace(name_old, " ", "_");
+    let replaced = string_lower_to(name_old);
     return replaced;
   }
 }
