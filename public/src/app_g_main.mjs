@@ -1,3 +1,4 @@
+import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { app_karate_button_back } from "../../../karate_code/public/src/app_karate_button_back.mjs";
 import { g_z } from "../../../love/public/src/g_z.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -237,7 +238,9 @@ export function app_g_main() {
               "z-index": g_z("overlay"),
             };
             html_style_assign(overlay, s);
-            function lambda21() {}
+            function lambda21() {
+              html_remove(component3);
+            }
             let component2 = app_karate_button_back(overlay, lambda21);
           }
         }
