@@ -120,6 +120,7 @@ export function app_g_main() {
   let coordinates = list_adder(lambda15);
   list_shuffle(coordinates);
   let npc_count = 30;
+  let taken2 = list_take(list3, count);
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
     const c_src = game_prefix + "characters\\" + p + "\\rotations\\south.png";
