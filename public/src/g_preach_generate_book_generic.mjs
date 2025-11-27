@@ -69,7 +69,8 @@ export async function g_preach_generate_book_generic(
             "verse_number",
             verse_number,
           );
-          let original = object_property_get(original_verse, "text");
+          let original = null;
+          original = object_property_get(original_verse, "text");
         }
         list_add(group, {
           original,
