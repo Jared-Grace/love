@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { list_map_property_join_space } from "../../../love/public/src/list_map_property_join_space.mjs";
@@ -40,6 +41,7 @@ export async function g_preach_generate_book_generic(
   prompt_user_middle,
   prompt_system,
 ) {
+  marker("1");
   let chapters = await ebible_chapters(bible_folder, book_code);
   async function lambda7(chapter_code) {
     let verses = await ebible_verses(bible_folder, chapter_code);
