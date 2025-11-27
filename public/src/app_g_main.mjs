@@ -90,7 +90,7 @@ export function app_g_main() {
     const c_src = game_prefix + "characters\\man_1\\rotations\\south.png";
     let x2 = object_property_get(c, "x");
     let y2 = object_property_get(c, "y");
-    let ci = g_img_square(div, c_src, 5, 5, "character");
+    let ci = g_img_square(div, c_src, y2, x2, "character");
     function lambda2(columns, y) {
       function lambda(r, x) {
         const src = tiles_path + r + ".png";
