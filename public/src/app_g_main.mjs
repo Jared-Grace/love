@@ -105,8 +105,10 @@ export function app_g_main() {
     return eq2;
   }
   let filtered = list_filter(list, lambda12);
-  function lambda13(item2, index2) {}
-  each_index(list3, lambda13);
+  function lambda13(columns, index2) {
+    each_index(list3, function lambda14(item2, index3) {});
+  }
+  each_index(rows, lambda13);
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
     const c_src = game_prefix + "characters\\" + p + "\\rotations\\south.png";
