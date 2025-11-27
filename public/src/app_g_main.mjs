@@ -60,7 +60,9 @@ export function app_g_main() {
     position: "relative",
   });
   app_g_refresh(game_prefix, div, tiles, tiles_path);
-  function lambda8() {}
+  function lambda8() {
+    app_g_refresh(game_prefix, div, tiles, tiles_path);
+  }
   html_on(body, name_event, lambda8);
   ("resize");
   function app_g_refresh(game_prefix, div, tiles, tiles_path) {
