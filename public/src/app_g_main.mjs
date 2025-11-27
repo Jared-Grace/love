@@ -186,7 +186,8 @@ export function app_g_main() {
             let filtered3 = list_filter(coordinates, lambda18);
             list_shuffle(filtered3);
             function lambda19(item3) {
-              let distance = g_distance(player, item);
+              let distance = g_distance(player, item3);
+              return;
             }
             list_sort_number_mapper(list, lambda19);
           } else {
