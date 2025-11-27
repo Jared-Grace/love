@@ -78,5 +78,6 @@ export function app_g_main() {
     each_range(10, lambda);
   }
   each_range(10, lambda2);
-  html_on(component, name_event, function lambda8() {});
+  function lambda8() {}
+  html_on(component, name_event, lambda8);
 }
