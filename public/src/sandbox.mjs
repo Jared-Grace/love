@@ -1,6 +1,6 @@
+import { unzip_self_multiple } from "../../../love/public/src/unzip_self_multiple.mjs";
 import { unzip_self } from "../../../love/public/src/unzip_self.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { each_async } from "../../../love/public/src/each_async.mjs";
 import { folder_files_names_normalize } from "../../../love/public/src/folder_files_names_normalize.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
@@ -11,6 +11,6 @@ export async function sandbox() {
     let name = await unzip_self(file_path);
     log(name);
   }
-  await each_async(files, unzip_self);
+  await unzip_self_multiple(files);
   await folder_files_names_normalize(path, "_man_", "man_");
 }
