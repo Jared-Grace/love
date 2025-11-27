@@ -1,3 +1,4 @@
+import { g_character_img } from "../../../love/public/src/g_character_img.mjs";
 import { list_without } from "../../../love/public/src/list_without.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -125,9 +126,7 @@ export function app_g_main() {
   each(taken2, lambda16);
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
-    const c_src = game_prefix + "characters\\" + p + "\\rotations\\south.png";
-    let ci = g_img_square(div, c_src, -1, -1, "character");
-    g_img_square_style_position_object(c, ci);
+    let ci = g_character_img(game_prefix, div, c);
     function lambda2(columns, y) {
       function lambda(r, x) {
         const src = tiles_path + r + ".png";
