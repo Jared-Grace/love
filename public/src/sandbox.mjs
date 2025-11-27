@@ -18,6 +18,6 @@ export async function sandbox() {
       await file_move(path_old, path_new);
     }
   }
-  await each_async(list, lambda);
+  await each_async(files, lambda);
   return files;
 }
