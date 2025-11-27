@@ -1,10 +1,10 @@
+import { folder_files_names_normalize_unzip } from "../../../love/public/src/folder_files_names_normalize_unzip.mjs";
 import { unzip_self_multiple } from "../../../love/public/src/unzip_self_multiple.mjs";
-import { folder_files_names_normalize } from "../../../love/public/src/folder_files_names_normalize.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   marker("1");
   let path = "C:\\Users\\chris\\Downloads\\characters";
-  let files = await folder_files_names_normalize(path, "woman", "woman_");
+  let files = await folder_files_names_normalize_unzip(path, "woman", "woman_");
   await unzip_self_multiple(files);
-  await folder_files_names_normalize(path, "_man_", "man_");
+  await folder_files_names_normalize_unzip(path, "_man_", "man_");
 }
