@@ -212,6 +212,7 @@ export function app_g_main() {
             }
           }
           html_on(player_img_c, "transitionend", handler);
+          new Promise(function lambda20(resolve) {});
           function on_transition_end() {
             let element2 = html_component_element_get(player_img_c);
             element2.scrollIntoView({
