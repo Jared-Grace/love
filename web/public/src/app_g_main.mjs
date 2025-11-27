@@ -178,7 +178,6 @@ export function app_g_main() {
           let e2 = list_empty_not_is(filtered2);
           if (e2) {
           } else {
-            log(filtered2);
             object_assign(c, clicked_coordinates);
             function handler(e) {
               if (e.propertyName === "left" || e.propertyName === "top") {
