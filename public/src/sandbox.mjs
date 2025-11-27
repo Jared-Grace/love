@@ -4,5 +4,6 @@ export async function sandbox() {
   marker("1");
   let p = "C:\\Users\\chris\\Downloads\\characters";
   let files = await folder_read_files(p);
+  $ea;
   return files;
 }
