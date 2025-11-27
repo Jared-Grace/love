@@ -125,9 +125,9 @@ export function app_g_main() {
   let taken2 = list_take(coordinates, npc_count);
   function lambda16(c) {
     let r3 = list_random_item(filtered);
-    object_property_set(object, "img", r3);
+    object_property_set(c, "img", r3);
   }
-  each(coordinates, lambda16);
+  each(taken2, lambda16);
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
     const c_src = game_prefix + "characters\\" + p + "\\rotations\\south.png";
