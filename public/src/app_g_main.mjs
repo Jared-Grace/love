@@ -178,6 +178,7 @@ export function app_g_main() {
           }
           let filtered2 = list_filter(npcs, lambda17);
           let e2 = list_empty_not_is(filtered2);
+          let coordinates_move_to = null;
           if (e2) {
             function lambda18(item) {
               let distance = g_distance(clicked_coordinates, item);
@@ -194,6 +195,7 @@ export function app_g_main() {
             let coordinates_move_to = null;
             coordinates_move_to = list_first(filtered3);
           } else {
+            coordinates_move_to = clicked_coordinates;
             object_assign(player, clicked_coordinates);
             function handler(e) {
               if (e.propertyName === "left" || e.propertyName === "top") {
