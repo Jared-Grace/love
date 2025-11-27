@@ -48,7 +48,8 @@ export function app_g_main() {
     "yellow_grass",
   ];
   list_shuffle(grasses);
-  let list = list_adder(function lambda5(la) {});
+  function lambda5(la) {}
+  let list = list_adder(lambda5);
   function lambda3(g, index) {
     function lambda4(i3) {}
     each_range_1(index, lambda4);
