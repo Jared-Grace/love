@@ -218,6 +218,7 @@ export function app_g_main() {
             inline: "center",
           });
           if (e2) {
+            let div2 = html_div(root);
           }
         }
         html_on_click(clickable, lambda7);
