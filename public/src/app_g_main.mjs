@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
@@ -46,8 +47,10 @@ export function app_g_main() {
     "yellow_grass",
   ];
   list_shuffle(grasses);
-  function lambda3(item, index) {}
-  each_index(list, lambda3);
+  function lambda3(g, index) {
+    each(list, function lambda4(item) {});
+  }
+  each_index(grasses, lambda3);
   let taken = list_take(grasses, 3);
   function lambda2(i) {
     function lambda(i2) {
