@@ -160,7 +160,6 @@ export async function g_preach_generate_book_generic(
         original,
       };
       log(v);
-      exit();
       return v;
       function prompt_get(group) {
         let text = list_map_property_join_space(group, "text");
@@ -179,6 +178,7 @@ export async function g_preach_generate_book_generic(
       chapter_code,
       passages,
     });
+    exit();
   }
   await each_async(chapters, lambda9);
 }
