@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { abs } from "../../../love/public/src/abs.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -178,7 +179,6 @@ export function app_g_main() {
           let filtered2 = list_filter(npcs, lambda17);
           let e2 = list_empty_not_is(filtered2);
           if (e2) {
-            coordinates;
             function lambda18(item) {
               let x2 = object_property_get(item, "x");
               let y2 = object_property_get(item, "y");
@@ -186,7 +186,8 @@ export function app_g_main() {
               let v2 = distance === 1;
               return v2;
             }
-            let filtered3 = list_filter(list, lambda18);
+            let filtered3 = list_filter(coordinates, lambda18);
+            log(message);
           } else {
             object_assign(c, clicked_coordinates);
             function handler(e) {
