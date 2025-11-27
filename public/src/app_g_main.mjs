@@ -1,3 +1,4 @@
+import { list_take } from "../../../love/public/src/list_take.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
@@ -43,7 +44,8 @@ export function app_g_main() {
     "swamp_grass_snowy",
     "yellow_grass",
   ];
-  let list2 = list_shuffle(list);
+  list_shuffle(grasses);
+  let taken = list_take(list, count);
   function lambda2(i) {
     function lambda(i2) {
       let r = list_random_item(grasses);
