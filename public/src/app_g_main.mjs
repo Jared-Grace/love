@@ -76,6 +76,7 @@ export function app_g_main() {
         each_range(columns, lambda9);
       }
       let list2 = list_adder(lambda11);
+      la2(list2);
     }
     each_range(rows, lambda6);
   }
