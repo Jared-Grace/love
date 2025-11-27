@@ -1,4 +1,4 @@
-import { list_includes } from "../../../love/public/src/list_includes.mjs";
+import { html_on_transitionend } from "../../../love/public/src/html_on_transitionend.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
@@ -206,18 +206,11 @@ export function app_g_main() {
           function on_transition_begin() {
             g_img_square_style_position_object(player, player_img_c);
           }
-          await new Promise(function lambda20(resolve) {
-            function handler(e) {
-              let includes = list_includes(properties, e.propertyName);
-              if (includes) {
-                let element2 = html_component_element_get(player_img_c);
-                element2.removeEventListener("transitionend", handler);
-                resolve();
-              }
-            }
-            html_on(player_img_c, "transitionend", handler);
-            on_transition_begin();
-          });
+          await html_on_transitionend(
+            properties,
+            player_img_c,
+            on_transition_begin,
+          );
           let element2 = html_component_element_get(player_img_c);
           element2.scrollIntoView({
             behavior: "smooth",
