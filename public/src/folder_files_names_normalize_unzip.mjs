@@ -6,5 +6,6 @@ export async function folder_files_names_normalize_unzip(
   prefix,
 ) {
   marker("1");
-  return await folder_files_names_normalize(path, include, prefix);
+  let v = await folder_files_names_normalize(path, include, prefix);
+  return v;
 }
