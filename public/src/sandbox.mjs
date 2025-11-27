@@ -13,7 +13,8 @@ export async function sandbox() {
     let i = string_includes(item, "woman");
     if (i) {
       let name_new = "woman_" + index + ".zip";
-      let joined = path_join(segments);
+      let joined2 = path_join(segments);
+      let joined = path_join([p, name_new]);
       await file_move(f_name_before, f_name_after);
     }
   }
