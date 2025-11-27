@@ -136,8 +136,18 @@ export function app_g_main() {
     html_text_set(
       component,
       `@keyframes pulseGlow {
-  0%,100% { filter: drop-shadow(0 0 1px rgba(255,255,255,1)) drop-shadow(0 0 5px rgba(255,255,255,0.8)); }
-  50%     { filter: drop-shadow(0 0 2px rgba(255,255,255,1)) drop-shadow(0 0 10px rgba(255,255,255,0.7)); }
+  0%,100% { 
+    filter: 
+      drop-shadow(0 0 1px rgba(255,255,255,1))
+      drop-shadow(0 0 3px rgba(255,255,255,0.9))
+      drop-shadow(0 0 6px rgba(255,255,255,0.7)); 
+  }
+  50% { 
+    filter: 
+      drop-shadow(0 0 2px rgba(255,255,255,1))
+      drop-shadow(0 0 6px rgba(255,255,255,0.9))
+      drop-shadow(0 0 12px rgba(255,255,255,0.7)); 
+  }
 }`,
     );
     html_style_set(ci, "animation", "pulseGlow 1.2s infinite alternate");
