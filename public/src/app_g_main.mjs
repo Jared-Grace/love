@@ -25,8 +25,6 @@ export function app_g_main() {
     position: "relative",
   });
   let rows = 10;
-  const square_count = "calc(100vh / " + rows + ")";
-  let square_size = square_count + "px";
   let path_prefix = "..\\";
   const game_prefix = g_folder_img(path_prefix);
   const tiles_path = g_folder_tiles(path_prefix);
