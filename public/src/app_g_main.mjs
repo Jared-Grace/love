@@ -63,8 +63,8 @@ export function app_g_main() {
       let r = list_random_item(list);
       const src = tiles_path + r + ".png";
       g_img_square(div, src, square_size, x, square_count, y);
-      let div2 = html_div(root);
-      g_img_square_style(tile, square_size, x, square_count, y);
+      let clickable = html_div(root);
+      g_img_square_style(clickable, square_size, x, square_count, y);
       return;
     }
     each_range(10, lambda);
