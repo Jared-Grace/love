@@ -5,5 +5,4 @@ export function list_shuffle(list) {
     const j = floor(random() * (i + 1));
     [list[i], list[j]] = [list[j], list[i]];
   }
-  return list;
 }
