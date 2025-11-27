@@ -13,5 +13,6 @@ export async function sandbox() {
   let list = await folder_files_names_underscore(joined);
   let list2 = await folder_files_names_lower(joined);
   let m = list_filter_includes(list2, "grass");
-  let mapped = list_map(list3, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list3, lambda);
 }
