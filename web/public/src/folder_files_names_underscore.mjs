@@ -11,7 +11,7 @@ export async function folder_files_names_underscore(path) {
   async function lambda2(la) {
     async function lambda(name_old) {
       let path_old = path_join([path, name_old]);
-      let name_new = string_replace(name_old, " ", "_");
+      let name_new = transform(name_old);
       let path_new = path_join([path, name_new]);
       await file_move(path_old, path_new);
       la(path_new);
@@ -20,4 +20,8 @@ export async function folder_files_names_underscore(path) {
   }
   let list = await list_adder_async(lambda2);
   return list;
+  function transform(name_old) {
+    let replaced = string_replace(name_old, " ", "_");
+    return replaced;
+  }
 }
