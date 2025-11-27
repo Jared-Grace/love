@@ -207,15 +207,19 @@ export function app_g_main() {
             let includes = list_includes(properties, e.propertyName);
             if (includes) {
               element2.removeEventListener("transitionend", handler);
-              let element2 = html_component_element_get(player_img_c);
-              element2.scrollIntoView({
-                behavior: "smooth",
-                block: "center",
-                inline: "center",
-              });
+              let element2 = on_transition_end();
             }
           }
           html_on(player_img_c, "transitionend", handler);
+          function on_transition_end() {
+            let element2 = html_component_element_get(player_img_c);
+            element2.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+              inline: "center",
+            });
+            return element2;
+          }
           g_img_square_style_position_object(player, player_img_c);
         }
         html_on_click(clickable, lambda7);
