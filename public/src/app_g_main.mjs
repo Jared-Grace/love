@@ -1,3 +1,4 @@
+import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 import { g_img_square_style_position_object } from "../../../love/public/src/g_img_square_style_position_object.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -104,6 +105,12 @@ export function app_g_main() {
             y,
           });
           g_img_square_style_position_object(c, ci);
+          let element2 = html_component_element_get(component);
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "center",
+          });
         }
         html_on_click(clickable, lambda7);
       }
