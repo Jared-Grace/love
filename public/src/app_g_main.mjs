@@ -89,9 +89,7 @@ export function app_g_main() {
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
     const c_src = game_prefix + "characters\\man_1\\rotations\\south.png";
-    let x2 = object_property_get(c, "x");
-    let y2 = object_property_get(c, "y");
-    let ci = g_img_square(div, c_src, y2, x2, "character");
+    let ci = g_img_square(div, c_src, -1, -1, "character");
     function lambda2(columns, y) {
       function lambda(r, x) {
         const src = tiles_path + r + ".png";
@@ -103,7 +101,9 @@ export function app_g_main() {
             x,
             y,
           });
-          g_img_square_style_position(ci, x, y);
+          let x2 = object_property_get(c, "x");
+          let y2 = object_property_get(c, "y");
+          g_img_square_style_position(ci, x2, y2);
         }
         html_on_click(clickable, lambda7);
       }
