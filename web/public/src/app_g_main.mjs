@@ -61,16 +61,16 @@ export function app_g_main() {
   }
   let list = list_adder(lambda5);
   log(list);
-  function lambda2(i) {
-    function lambda(i2) {
+  function lambda2(y) {
+    function lambda(x) {
       let r = list_random_item(list);
       const src = tiles_path + r + ".png";
       let tile = html_img(div, src);
       html_style_size_square(tile, square_size);
       html_style_assign(tile, {
         position: "absolute",
-        left: i2 * square_count + "px",
-        top: i * square_count + "px",
+        left: x * square_count + "px",
+        top: y * square_count + "px",
       });
       return;
       const src2 = game_prefix + "characters\\man_1\\rotations\\south.png";
