@@ -23,6 +23,8 @@ export function app_g_main() {
   let body = html_document_body();
   html_style_assign(body, {
     margin: "0",
+    padding: 0,
+    overflow: "hidden",
   });
   let path_prefix = "..\\";
   const game_prefix = g_folder_img(path_prefix);
