@@ -48,6 +48,7 @@ export function app_g_main() {
     "yellow_grass",
   ];
   list_shuffle(grasses);
+  let taken = list_take(grasses, 3);
   function lambda5(la) {
     function lambda3(g, index) {
       function lambda4(i3) {
@@ -55,13 +56,12 @@ export function app_g_main() {
       }
       each_range_1(index, lambda4);
     }
-    each_index(grasses, lambda3);
+    each_index(taken, lambda3);
   }
   let list = list_adder(lambda5);
-  let taken = list_take(grasses, 3);
   function lambda2(i) {
     function lambda(i2) {
-      let r = list_random_item(taken);
+      let r = list_random_item(list);
       const src = tiles_path + r + ".png";
       let tile = html_img(div, src);
       html_style_size_square(tile, square_size);
