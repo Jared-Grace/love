@@ -180,6 +180,8 @@ export function app_g_main() {
           let e2 = list_empty_not_is(filtered2);
           if (e2) {
             function lambda18(item) {
+              let x3 = object_property_get(clicked_coordinates, "x");
+              let y3 = object_property_get(clicked_coordinates, "y");
               let x2 = object_property_get(item, "x");
               let y2 = object_property_get(item, "y");
               let distance = abs(x2 - x) + abs(y2 - y);
