@@ -164,6 +164,10 @@ export function app_g_main() {
         let clickable = html_div(div);
         g_img_square_style(clickable, x, y, "click");
         function lambda7() {
+          const clicked_coordinates = {
+            x,
+            y,
+          };
           if (false) {
             function lambda17(item) {
               function lambda18(value, property) {}
@@ -171,10 +175,7 @@ export function app_g_main() {
             }
             let filtered2 = list_filter(list, lambda17);
           }
-          object_assign(c, {
-            x,
-            y,
-          });
+          object_assign(c, clicked_coordinates);
           function handler(e) {
             if (e.propertyName === "left" || e.propertyName === "top") {
               let element2 = html_component_element_get(ci);
