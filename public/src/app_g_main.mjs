@@ -118,19 +118,19 @@ export function app_g_main() {
   let coordinates = list_adder(lambda15);
   list_shuffle(coordinates);
   let npc_count = 30;
-  let taken2 = list_take(coordinates, npc_count);
+  let npcs = list_take(coordinates, npc_count);
   function lambda16(c) {
     let r3 = list_random_item(filtered);
     object_property_set(c, "img", r3);
   }
-  each(taken2, lambda16);
+  each(npcs, lambda16);
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
     let ci = g_character_img(game_prefix, div, c);
     function lambda12(npc) {
       let ci = g_character_img(game_prefix, div, npc);
     }
-    each(taken2, lambda12);
+    each(npcs, lambda12);
     function lambda2(columns, y) {
       function lambda(r, x) {
         const src = tiles_path + r + ".png";
