@@ -13,8 +13,8 @@ export function app_g_main() {
   let path_prefix = "..\\";
   const game_prefix = path_prefix + "img\\game\\";
   const src = game_prefix + "tiles\\seamless\\grass.png";
-  html_img(body, src);
+  let tile = html_img(body, src);
   html_style_size_square(body, square_size);
   const src2 = game_prefix + "characters\\man_1\\rotations\\south.png";
-  html_img(body, src2);
+  let c = html_img(body, src2);
 }
