@@ -104,7 +104,6 @@ export function app_g_main() {
             x,
             y,
           });
-          g_img_square_style_position_object(c, ci);
           let element2 = html_component_element_get(ci);
           function handler(e) {
             if (e.propertyName === "left" || e.propertyName === "top") {
@@ -117,6 +116,7 @@ export function app_g_main() {
             }
           }
           html_on(v, "transitionend", handler);
+          g_img_square_style_position_object(c, ci);
         }
         html_on_click(clickable, lambda7);
       }
