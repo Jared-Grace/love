@@ -239,7 +239,7 @@ export function app_g_main() {
             };
             html_style_assign(overlay, s);
             function lambda21() {
-              html_remove(component3);
+              html_remove(overlay);
             }
             let component2 = app_karate_button_back(overlay, lambda21);
           }
