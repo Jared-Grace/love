@@ -68,10 +68,11 @@ export function app_g_main() {
     let rows = 10;
     let columns = 10;
     function lambda6(i) {
-      function lambda11(la3) {}
+      function lambda11(la3) {
+        function lambda9(i2) {}
+        each_range(columns, lambda9);
+      }
       let list2 = list_adder(lambda11);
-      function lambda9(i2) {}
-      each_range(columns, lambda9);
     }
   }
   let list = list_adder(lambda10);
