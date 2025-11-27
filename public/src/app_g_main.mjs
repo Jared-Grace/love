@@ -60,10 +60,6 @@ export function app_g_main() {
   html_style_assign(div, {
     position: "relative",
   });
-  lambda8();
-  function lambda8() {
-    app_g_refresh(game_prefix, div, tiles_path);
-  }
   function lambda10(la2) {
     let row_count = 10;
     let column_count = 10;
@@ -101,5 +97,9 @@ export function app_g_main() {
       each_index(columns, lambda);
     }
     each_index(rows, lambda2);
+  }
+  lambda8();
+  function lambda8() {
+    app_g_refresh(game_prefix, div, tiles_path);
   }
 }
