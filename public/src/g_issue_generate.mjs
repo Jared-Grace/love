@@ -18,7 +18,7 @@ Rules:
 
 Output each objection separated by '\\r\\n'. Follow these instructions exactly.`;
   const prompt_user_middle =
-    "Generate personal struggles or issues that characters might be experiencing that relate to this passage; Output 5–10 objections: ";
+    "Generate personal struggles or issues that characters might be experiencing that relate to this passage; Output 5–10 struggles: ";
   let fn = g_issue_generate;
   await g_preach_generate_book_generic(
     bible_folder,
