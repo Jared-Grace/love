@@ -13,6 +13,10 @@ export function app_g_main() {
   const game_prefix = path_prefix + "img\\game\\";
   const src = game_prefix + "tiles\\seamless\\grass.png";
   html_img(body, src);
+  html_style_assign(body, {
+    height: square_size,
+    width: square_size,
+  });
   const src2 = game_prefix + "characters\\man_1\\rotations\\south.png";
   html_img(body, src2);
 }
