@@ -1,4 +1,4 @@
 export function g_rows_count() {
-  let v = 10;
+  let v = 11;
   return v;
 }
