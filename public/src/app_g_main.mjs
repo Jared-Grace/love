@@ -201,15 +201,16 @@ export function app_g_main() {
             coordinates_move_to = clicked_coordinates;
           }
           object_assign(player, coordinates_move_to);
+          let properties = ["left", "top"];
           function handler(e) {
             if (e.propertyName === "left" || e.propertyName === "top") {
+              element2.removeEventListener("transitionend", handler);
               let element2 = html_component_element_get(player_img_c);
               element2.scrollIntoView({
                 behavior: "smooth",
                 block: "center",
                 inline: "center",
               });
-              element2.removeEventListener("transitionend", handler);
             }
           }
           html_on(player_img_c, "transitionend", handler);
