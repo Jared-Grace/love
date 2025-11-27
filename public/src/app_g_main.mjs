@@ -13,7 +13,7 @@ export function app_g_main() {
     "src",
     path_prefix + "img\\game\\tiles\\seamless\\grass.png",
   );
-  html_style_assign(component, {
-    margin: body,
+  html_style_assign(body, {
+    margin: "0",
   });
 }
