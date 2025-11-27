@@ -48,8 +48,8 @@ export function app_g_main() {
     html_style_size_square(tile, square_size);
     html_style_assign(tile, {
       position: "absolute",
-      x: "0px",
-      y: i * square_count + "px",
+      left: "0px",
+      top: i * square_count + "px",
     });
     return;
     const src2 = game_prefix + "characters\\man_1\\rotations\\south.png";
