@@ -127,7 +127,8 @@ export function app_g_main() {
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
     let ci = g_character_img(game_prefix, div, c);
-    each(list, function lambda12(item) {});
+    function lambda12(item) {}
+    each(list, lambda12);
     function lambda2(columns, y) {
       function lambda(r, x) {
         const src = tiles_path + r + ".png";
