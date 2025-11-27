@@ -88,6 +88,7 @@ export function app_g_main() {
   html_on(v, "resize", lambda8);
   let r2 = range_1(10);
   let men = list_map_combine_left("man_", r2);
+  let women = list_map_combine_left("woman_", r2);
   let c = {
     x: 5,
     y: 5,
