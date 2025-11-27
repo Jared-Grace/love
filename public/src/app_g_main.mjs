@@ -63,7 +63,7 @@ export function app_g_main() {
       let r = list_random_item(list);
       const src = tiles_path + r + ".png";
       g_img_square(div, src, square_size, x, square_count, y, "tile");
-      let clickable = html_div(root);
+      let clickable = html_div(div);
       g_img_square_style(clickable, square_size, x, square_count, y, "click");
       return;
     }
