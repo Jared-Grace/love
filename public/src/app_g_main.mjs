@@ -138,9 +138,9 @@ export function app_g_main() {
       `@keyframes pulseGlow {
   0%,100% { 
     filter: 
-      drop-shadow(0 0 1px rgba(255,255,255,1))
-      drop-shadow(0 0 3px rgba(255,255,255,0.9))
-      drop-shadow(0 0 12px rgba(255,255,255,0.7)); 
+      drop-shadow(0 0 1px rgba(255,255,255,0.5))
+      drop-shadow(0 0 3px rgba(255,255,255,0.3))
+      drop-shadow(0 0 12px rgba(255,255,255,0.1)); 
   }
   50% { 
     filter: 
