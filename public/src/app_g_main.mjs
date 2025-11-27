@@ -1,3 +1,4 @@
+import { g_folder_tiles } from "../../../love/public/src/g_folder_tiles.mjs";
 import { g_folder_img } from "../../../love/public/src/g_folder_img.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_size_square } from "../../../love/public/src/html_style_size_square.mjs";
@@ -18,8 +19,7 @@ export function app_g_main() {
   let square_size = "64px";
   let path_prefix = "..\\";
   const game_prefix = g_folder_img(path_prefix);
-  const game_prefix1 = g_folder_img(path_prefix);
-  const tiles_path = game_prefix1 + "tiles\\seamless\\";
+  const tiles_path = g_folder_tiles(path_prefix);
   const src = tiles_path + "grass.png";
   let tile = html_img(div, src);
   html_style_size_square(tile, square_size);
