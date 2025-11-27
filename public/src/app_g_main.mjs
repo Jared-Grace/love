@@ -42,7 +42,8 @@ export function app_g_main() {
     "yellow_grass",
   ];
   const src = tiles_path + "grass.png";
-  each_range(count, function lambda2() {});
+  function lambda2() {}
+  each_range(count, lambda2);
   let tile = html_img(div, src);
   html_style_size_square(tile, square_size);
   html_style_assign(tile, {
