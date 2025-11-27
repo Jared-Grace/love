@@ -59,25 +59,28 @@ export function app_g_main() {
   html_style_assign(div, {
     position: "relative",
   });
-  const c_src = game_prefix + "characters\\man_1\\rotations\\south.png";
-  let c = g_img_square(div, c_src, 5, 5, "character");
-  function lambda2(y) {
-    function lambda(x) {
-      let r = list_random_item(tiles);
-      const src = tiles_path + r + ".png";
-      g_img_square(div, src, x, y, "tile");
-      let clickable = html_div(div);
-      g_img_square_style(clickable, x, y, "click");
-      function lambda7() {
-        g_img_square_style_position(c, x, y);
-      }
-      html_on_click(clickable, lambda7);
-      return;
-    }
-    each_range(10, lambda);
-  }
-  each_range(10, lambda2);
+  app_g_refresh(game_prefix, div, tiles, tiles_path);
   function lambda8() {}
   html_on(body, name_event, lambda8);
   ("resize");
+  function app_g_refresh(game_prefix, div, tiles, tiles_path) {
+    const c_src = game_prefix + "characters\\man_1\\rotations\\south.png";
+    let c = g_img_square(div, c_src, 5, 5, "character");
+    function lambda2(y) {
+      function lambda(x) {
+        let r = list_random_item(tiles);
+        const src = tiles_path + r + ".png";
+        g_img_square(div, src, x, y, "tile");
+        let clickable = html_div(div);
+        g_img_square_style(clickable, x, y, "click");
+        function lambda7() {
+          g_img_square_style_position(c, x, y);
+        }
+        html_on_click(clickable, lambda7);
+        return;
+      }
+      each_range(10, lambda);
+    }
+    each_range(10, lambda2);
+  }
 }
