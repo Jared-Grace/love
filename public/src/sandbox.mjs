@@ -6,9 +6,10 @@ export async function sandbox() {
   marker("1");
   let p = "C:\\Users\\chris\\Downloads\\characters";
   let files = await folder_read_files(p);
+  let index = 1;
   async function lambda(item) {
     let i = string_includes(item, "woman");
-    if (false) {
+    if (i) {
     }
   }
   await each_async(list, lambda);
