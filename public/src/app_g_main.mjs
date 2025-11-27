@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
@@ -181,7 +182,7 @@ export function app_g_main() {
             each_object(clicked_coordinates, lambda18);
           }
           let filtered2 = list_filter(npcs, lambda17);
-          alert(filtered2);
+          log(filtered2);
           object_assign(c, clicked_coordinates);
           function handler(e) {
             if (e.propertyName === "left" || e.propertyName === "top") {
