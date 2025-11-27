@@ -1,3 +1,4 @@
+import { list_second } from "../../../love/public/src/list_second.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
@@ -118,6 +119,7 @@ export function app_g_main() {
     each_index(rows, lambda13);
   }
   let coordinates = list_adder(lambda15);
+  let second = list_second(list3);
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
     const c_src = game_prefix + "characters\\" + p + "\\rotations\\south.png";
