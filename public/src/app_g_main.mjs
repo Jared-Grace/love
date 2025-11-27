@@ -197,7 +197,7 @@ export function app_g_main() {
           } else {
             coordinates_move_to = clicked_coordinates;
           }
-          object_assign(player, clicked_coordinates);
+          object_assign(player, coordinates_move_to);
           function handler(e) {
             if (e.propertyName === "left" || e.propertyName === "top") {
               let element2 = html_component_element_get(ci);
