@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -190,6 +191,7 @@ export function app_g_main() {
               return distance;
             }
             list_sort_number_mapper(filtered3, lambda19);
+            let first = list_first(list);
           } else {
             object_assign(player, clicked_coordinates);
             function handler(e) {
