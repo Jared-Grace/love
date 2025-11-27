@@ -1,3 +1,4 @@
+import { g_z } from "../../../love/public/src/g_z.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_on_transitionend } from "../../../love/public/src/html_on_transitionend.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -231,7 +232,7 @@ export function app_g_main() {
               width: "100vw",
               height: "100vh",
               background: "rgba(0,0,0,0.4)",
-              "z-index": "9999",
+              "z-index": g_z("overlay"),
             };
             html_style_assign(div2, s);
           }
