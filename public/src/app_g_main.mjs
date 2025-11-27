@@ -140,7 +140,7 @@ export function app_g_main() {
   50% { filter: drop-shadow(0 0 4px white) drop-shadow(0 0 20px white); }
 }`,
     );
-    html_style_set(ci, "border", "pulseGlow 1.2s infinite alternate");
+    html_style_set(ci, "animation", "pulseGlow 1.2s infinite alternate");
     function lambda12(npc) {
       let ci = g_character_img(game_prefix, div, npc);
     }
