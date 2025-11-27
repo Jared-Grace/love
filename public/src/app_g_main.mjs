@@ -104,9 +104,9 @@ export function app_g_main() {
             x,
             y,
           });
-          let element2 = html_component_element_get(ci);
           function handler(e) {
             if (e.propertyName === "left" || e.propertyName === "top") {
+              let element2 = html_component_element_get(ci);
               element2.scrollIntoView({
                 behavior: "smooth",
                 block: "center",
