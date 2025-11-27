@@ -1,3 +1,4 @@
+import { exit } from "../../../love/public/src/exit.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
@@ -159,6 +160,7 @@ export async function g_preach_generate_book_generic(
         original,
       };
       log(v);
+      exit();
       return v;
       function prompt_get(group) {
         let text = list_map_property_join_space(group, "text");
