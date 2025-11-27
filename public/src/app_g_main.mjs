@@ -220,7 +220,10 @@ export function app_g_main() {
             });
             return element2;
           }
-          g_img_square_style_position_object(player, player_img_c);
+          on_transition_begin();
+          function on_transition_begin() {
+            g_img_square_style_position_object(player, player_img_c);
+          }
         }
         html_on_click(clickable, lambda7);
       }
