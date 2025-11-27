@@ -1,4 +1,4 @@
-export function path_name(p) {
+export function path_without_extension(p) {
   function lambda(m) {
     let v = m.replace(/\.[^.]+$/, "");
     return v;
