@@ -106,7 +106,7 @@ export function app_g_main() {
           });
           g_img_square_style_position_object(c, ci);
           let element2 = html_component_element_get(component);
-          element.scrollIntoView({
+          element2.scrollIntoView({
             behavior: "smooth",
             block: "center",
             inline: "center",
