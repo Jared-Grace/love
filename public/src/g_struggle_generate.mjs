@@ -4,7 +4,7 @@ export async function g_struggle_generate() {
   let bible_folder = "engbsb";
   let book_code = "JAS";
   marker("1");
-  const prompt_system = `You are a scriptwriter for a Christian RPG. You will be given a Bible passage and its context. Your job is to generate realistic character struggles or personal issues inspired by Bible passages. 
+  const prompt_system = `You are a scriptwriter for a Christian RPG. You will be given a Bible passage and its context. Your job is to generate realistic character struggles or personal issues inspired by Bible passages. The struggle or issue must be solved by the Bible passage. 
 
 Rules:
 - Output ONLY the struggles/issues.
