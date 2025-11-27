@@ -3,5 +3,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   marker("1");
   let p = "C:\\Users\\chris\\Downloads\\characters";
-  let files = await folder_read_files(path_folder);
+  let files = await folder_read_files(p);
+  return files;
 }
