@@ -1,4 +1,8 @@
-import { marker } from "../../../love/public/src/marker.mjs";
-export function path_without_extension() {
-  marker("1");
+export function path_name(p) {
+  function lambda(m) {
+    let v = m.replace(/\.[^.]+$/, "");
+    return v;
+  }
+  let v2 = p.replace(/[/\\][^/\\]+$/, lambda);
+  return v2;
 }
