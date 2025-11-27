@@ -4,6 +4,8 @@ import { path_without_extension } from "../../../love/public/src/path_without_ex
 export async function unzip_self(file_path) {
   let name = path_without_extension(file_path);
   await file_exists(file_path);
+  if (false) {
+  }
   await unzip(name, file_path);
   return name;
 }
