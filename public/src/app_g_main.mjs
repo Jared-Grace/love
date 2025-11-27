@@ -8,11 +8,8 @@ export function app_g_main() {
   let body = html_document_body();
   let component = html_element(body, "img");
   let path_prefix = "..\\";
-  html_attribute_set(
-    component,
-    "src",
-    path_prefix + "img\\game\\tiles\\seamless\\grass.png",
-  );
+  const src = path_prefix + "img\\game\\tiles\\seamless\\grass.png";
+  html_attribute_set(component, "src", src);
   html_style_assign(body, {
     margin: "0",
   });
