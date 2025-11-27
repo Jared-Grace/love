@@ -1,3 +1,4 @@
+import { path_join } from "../../../love/public/src/path_join.mjs";
 import { file_move } from "../../../love/public/src/file_move.mjs";
 import { string_includes } from "../../../love/public/src/string_includes.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -12,6 +13,7 @@ export async function sandbox() {
     let i = string_includes(item, "woman");
     if (i) {
       let name_new = "woman_" + index + ".zip";
+      let joined = path_join(segments);
       await file_move(f_name_before, f_name_after);
     }
   }
