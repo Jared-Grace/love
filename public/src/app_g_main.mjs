@@ -232,6 +232,7 @@ export function app_g_main() {
               left: "0",
               width: "100vw",
               height: "100vh",
+              padding: "1vw",
               background: "rgba(0,0,0,0.4)",
               "z-index": g_z("overlay"),
             };
