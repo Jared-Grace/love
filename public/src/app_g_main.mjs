@@ -70,7 +70,8 @@ export function app_g_main() {
     function lambda6(i) {
       function lambda11(la3) {
         function lambda9(i2) {
-          la3();
+          let r = list_random_item(tiles);
+          la3(r);
         }
         each_range(columns, lambda9);
       }
