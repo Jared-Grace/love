@@ -58,10 +58,12 @@ export function app_g_main() {
     }
     each_index(taken, lambda3);
   }
-  let list = list_adder(lambda5);
+  let tiles = list_adder(lambda5);
+  const c_src = game_prefix + "characters\\man_1\\rotations\\south.png";
+  g_img_square(div, c_src, square_size, 5, square_count, 5, "character");
   function lambda2(y) {
     function lambda(x) {
-      let r = list_random_item(list);
+      let r = list_random_item(tiles);
       const src = tiles_path + r + ".png";
       g_img_square(div, src, square_size, x, square_count, y, "tile");
       let clickable = html_div(div);
@@ -73,6 +75,4 @@ export function app_g_main() {
     each_range(10, lambda);
   }
   each_range(10, lambda2);
-  const c_src = game_prefix + "characters\\man_1\\rotations\\south.png";
-  g_img_square(div, c_src, square_size, 5, square_count, 5, "character");
 }
