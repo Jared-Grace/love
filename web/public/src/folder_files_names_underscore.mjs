@@ -1,3 +1,4 @@
+import { string_replace } from "../../../love/public/src/string_replace.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
@@ -12,6 +13,7 @@ export async function folder_files_names_underscore(path) {
   async function lambda2(la) {
     async function lambda(name_old) {
       let path_old = path_join([path, name_old]);
+      let replaced = string_replace(s, from, to);
       let name_new = prefix + index + ".zip";
       let path_new = path_join([path, name_new]);
       if (equal_not(name_old, name_new)) {
