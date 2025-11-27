@@ -1,19 +1,6 @@
-import { string_includes_or_starts_with } from "../../../love/public/src/string_includes_or_starts_with.mjs";
-import { string_includes } from "../../../love/public/src/string_includes.mjs";
-import { folder_files_names_normalize_unzip } from "../../../love/public/src/folder_files_names_normalize_unzip.mjs";
+import { g_characters_unzip } from "../../../love/public/src/g_characters_unzip.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   marker("1");
-  let path = "C:\\Users\\chris\\Downloads\\characters";
-  function lambda(input) {
-    let i = string_includes(input, "woman");
-    return i;
-  }
-  await folder_files_names_normalize_unzip(path, lambda, "woman_");
-  function lambda2(input) {
-    const item = "man";
-    let v = string_includes_or_starts_with(input, item);
-    return v;
-  }
-  await folder_files_names_normalize_unzip(path, lambda2, "man_");
+  await g_characters_unzip();
 }
