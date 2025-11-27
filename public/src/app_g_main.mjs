@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
@@ -170,8 +171,10 @@ export function app_g_main() {
           };
           if (false) {
             function lambda17(npc) {
-              function lambda18(value, property) {}
-              each_object(object, lambda18);
+              function lambda18(value, property) {
+                let value2 = object_property_get(object, property_name);
+              }
+              each_object(clicked_coordinates, lambda18);
             }
             let filtered2 = list_filter(npcs, lambda17);
           }
