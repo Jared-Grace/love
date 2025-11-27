@@ -112,7 +112,7 @@ export function app_g_main() {
                 block: "center",
                 inline: "center",
               });
-              ci.removeEventListener("transitionend", handler);
+              element2.removeEventListener("transitionend", handler);
             }
           }
           html_on(ci, "transitionend", handler);
