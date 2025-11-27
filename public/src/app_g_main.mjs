@@ -34,7 +34,6 @@ export function app_g_main() {
     "grass_sep",
     "grass_snowy",
     "junglegrass",
-    "map_tile_grass",
     "monsoongrass",
     "swamp_grass_mar",
     "swamp_grass_nov",
