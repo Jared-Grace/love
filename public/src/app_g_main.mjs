@@ -236,7 +236,8 @@ export function app_g_main() {
               "z-index": g_z("overlay"),
             };
             html_style_assign(div2, s);
-            let component2 = html_button(parent2, text, function lambda21() {});
+            function lambda21() {}
+            let component2 = html_button(parent2, text, lambda21);
           }
         }
         html_on_click(clickable, lambda7);
