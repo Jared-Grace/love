@@ -1,3 +1,4 @@
+import { list_map_combine } from "../../../love/public/src/list_map_combine.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 import { g_img_square_style_position_object } from "../../../love/public/src/g_img_square_style_position_object.mjs";
@@ -86,6 +87,7 @@ export function app_g_main() {
   let v = html_component_wrap(window);
   html_on(v, "resize", lambda8);
   let r2 = range_1(10);
+  let combineds = list_map_combine(right, list);
   let c = {
     x: 5,
     y: 5,
