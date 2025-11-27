@@ -1,3 +1,4 @@
+import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
 import { g_folder_tiles } from "../../../love/public/src/g_folder_tiles.mjs";
@@ -42,6 +43,7 @@ export function app_g_main() {
     "swamp_grass_snowy",
     "yellow_grass",
   ];
+  let list2 = list_shuffle(list);
   function lambda2(i) {
     function lambda(i2) {
       let r = list_random_item(grasses);
