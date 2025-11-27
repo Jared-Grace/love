@@ -63,13 +63,13 @@ export async function g_preach_generate_book_generic(
       async function lambda3(verse, index) {
         let text = object_property_get(verse, "text");
         let verse_number = object_property_get(verse, "verse_number");
+        let original = null;
         if (verse_number !== "0") {
           let original_verse = list_find_property(
             interlinear,
             "verse_number",
             verse_number,
           );
-          let original = null;
           original = object_property_get(original_verse, "text");
         }
         list_add(group, {
