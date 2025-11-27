@@ -1,3 +1,4 @@
+import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 import { g_img_square_style_position_object } from "../../../love/public/src/g_img_square_style_position_object.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
@@ -84,7 +85,7 @@ export function app_g_main() {
   let rows = list_adder(lambda10);
   let v = html_component_wrap(window);
   html_on(v, "resize", lambda8);
-  rg1;
+  let r2 = range_1(count);
   let c = {
     x: 5,
     y: 5,
