@@ -1,3 +1,4 @@
+import { file_read } from "../../../love/public/src/file_read.mjs";
 import { string_includes } from "../../../love/public/src/string_includes.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { folder_read_files } from "../../../love/public/src/folder_read_files.mjs";
@@ -11,6 +12,7 @@ export async function sandbox() {
     let i = string_includes(item, "woman");
     if (i) {
       let name_new = "woman_" + index + ".zip";
+      let contents = await file_read(file_path);
     }
   }
   await each_async(list, lambda);
