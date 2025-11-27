@@ -168,7 +168,8 @@ export function app_g_main() {
             y,
           };
           if (false) {
-            let filtered2 = list_filter(npcs, () => {});
+            function lambda17() {}
+            let filtered2 = list_filter(npcs, lambda17);
           }
           object_assign(c, clicked_coordinates);
           function handler(e) {
