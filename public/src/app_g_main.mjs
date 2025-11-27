@@ -146,7 +146,7 @@ export function app_g_main() {
     filter: 
       drop-shadow(0 0 2px rgba(255,255,255,1))
       drop-shadow(0 0 6px rgba(255,255,255,0.9))
-      drop-shadow(0 0 24px rgba(255,255,255,0.7)); 
+      drop-shadow(0 0 18px rgba(255,255,255,0.7)); 
   }
 }`,
     );
