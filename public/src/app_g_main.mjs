@@ -68,9 +68,9 @@ export function app_g_main() {
   let columns = 10;
   function lambda6(i) {
     function lambda9(i2) {}
-    each_range(count2, lambda9);
+    each_range(columns, lambda9);
   }
-  each_range(count, lambda6);
+  each_range(rows, lambda6);
   let v = html_component_wrap(window);
   html_on(v, "resize", lambda8);
   function app_g_refresh(game_prefix, div, tiles, tiles_path) {
@@ -89,8 +89,8 @@ export function app_g_main() {
         html_on_click(clickable, lambda7);
         return;
       }
-      each_range(10, lambda);
+      each_range(columns, lambda);
     }
-    each_range(10, lambda2);
+    each_range(rows, lambda2);
   }
 }
