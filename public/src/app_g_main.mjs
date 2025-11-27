@@ -1,3 +1,4 @@
+import { html_component_wrap } from "../../../love/public/src/html_component_wrap.mjs";
 import { html_on } from "../../../love/public/src/html_on.mjs";
 import { g_img_square_style_position } from "../../../love/public/src/g_img_square_style_position.mjs";
 import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
@@ -63,6 +64,7 @@ export function app_g_main() {
   function lambda8() {
     app_g_refresh(game_prefix, div, tiles, tiles_path);
   }
+  let v = html_component_wrap(element);
   html_on(window, "resize", lambda8);
   function app_g_refresh(game_prefix, div, tiles, tiles_path) {
     const c_src = game_prefix + "characters\\man_1\\rotations\\south.png";
