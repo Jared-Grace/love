@@ -10,7 +10,7 @@ export function app_g_main() {
   html_style_assign(body, {
     margin: "0",
   });
-  let div = html_div(root);
+  let div = html_div(body);
   html_style_assign(div, {
     position: "relative",
   });
