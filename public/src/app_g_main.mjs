@@ -1,3 +1,4 @@
+import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
@@ -170,7 +171,11 @@ export function app_g_main() {
           };
           if (false) {
             function lambda17(item) {
-              function lambda18(value, property) {}
+              let eq = true;
+              function lambda18(xy, value) {
+                if (equal_not(left, right2)) {
+                }
+              }
               each_object(clicked_coordinates, lambda18);
             }
             let filtered2 = list_filter(list, lambda17);
