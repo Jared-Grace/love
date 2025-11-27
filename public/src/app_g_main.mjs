@@ -99,8 +99,10 @@ export function app_g_main() {
     y: 5,
     img: player_img,
   };
+  let right = player_img;
   function lambda12(item) {
-    let eq2 = equal(left, right);
+    let eq2 = equal(item, right);
+    return eq2;
   }
   let filtered = list_filter(list, lambda12);
   function app_g_refresh(game_prefix, div, tiles_path) {
