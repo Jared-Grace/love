@@ -189,7 +189,7 @@ export function app_g_main() {
               let distance = g_distance(player, item3);
               return distance;
             }
-            list_sort_number_mapper(list, lambda19);
+            list_sort_number_mapper(filtered3, lambda19);
           } else {
             object_assign(player, clicked_coordinates);
             function handler(e) {
