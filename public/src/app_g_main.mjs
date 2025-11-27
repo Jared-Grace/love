@@ -1,7 +1,6 @@
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { app_karate_button_back } from "../../../karate_code/public/src/app_karate_button_back.mjs";
 import { g_z } from "../../../love/public/src/g_z.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { html_on_transitionend } from "../../../love/public/src/html_on_transitionend.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
@@ -224,7 +223,6 @@ export function app_g_main() {
             block: "center",
             inline: "center",
           });
-          log(filtered2);
           if (e2) {
             let overlay = html_div(div);
             let s = {
