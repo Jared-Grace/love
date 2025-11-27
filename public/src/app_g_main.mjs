@@ -172,7 +172,7 @@ export function app_g_main() {
         g_img_square(div, src, x, y, "tile");
         let clickable = html_div(div);
         g_img_square_style(clickable, x, y, "click");
-        function lambda7() {
+        async function lambda7() {
           const clicked_coordinates = {
             x,
             y,
@@ -203,7 +203,10 @@ export function app_g_main() {
           }
           object_assign(player, coordinates_move_to);
           let properties = ["left", "top"];
-          new Promise(function lambda20(resolve) {
+          function on_transition_begin() {
+            g_img_square_style_position_object(player, player_img_c);
+          }
+          await new Promise(function lambda20(resolve) {
             function handler(e) {
               let includes = list_includes(properties, e.propertyName);
               if (includes) {
@@ -213,20 +216,14 @@ export function app_g_main() {
               }
             }
             html_on(player_img_c, "transitionend", handler);
+            on_transition_begin();
           });
-          function on_transition_end() {
-            let element2 = html_component_element_get(player_img_c);
-            element2.scrollIntoView({
-              behavior: "smooth",
-              block: "center",
-              inline: "center",
-            });
-            return element2;
-          }
-          on_transition_begin();
-          function on_transition_begin() {
-            g_img_square_style_position_object(player, player_img_c);
-          }
+          let element2 = html_component_element_get(player_img_c);
+          element2.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "center",
+          });
         }
         html_on_click(clickable, lambda7);
       }
