@@ -219,7 +219,7 @@ export function app_g_main() {
             inline: "center",
           });
           if (e2) {
-            log('message');
+            log("message");
             let div2 = html_div(div);
             let s = {
               position: "fixed",
