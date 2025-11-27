@@ -225,7 +225,7 @@ export function app_g_main() {
           });
           log(filtered2);
           if (e2) {
-            let div2 = html_div(div);
+            let overlay = html_div(div);
             let s = {
               position: "fixed",
               top: "0",
@@ -235,9 +235,9 @@ export function app_g_main() {
               background: "rgba(0,0,0,0.4)",
               "z-index": g_z("overlay"),
             };
-            html_style_assign(div2, s);
+            html_style_assign(overlay, s);
             function lambda21() {}
-            let component2 = html_button(parent2, text, lambda21);
+            let component2 = html_button(overlay, "Back", lambda21);
           }
         }
         html_on_click(clickable, lambda7);
