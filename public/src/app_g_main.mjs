@@ -185,7 +185,6 @@ export function app_g_main() {
           let filtered2 = list_filter(npcs, lambda17);
           let e2 = list_empty_not_is(filtered2);
           let coordinates_move_to = null;
-          log(filtered2);
           if (e2) {
             function lambda18(item) {
               let distance = g_distance(clicked_coordinates, item);
@@ -220,6 +219,7 @@ export function app_g_main() {
             inline: "center",
           });
           if (e2) {
+            log(message);
             let div2 = html_div(div);
             let s = {
               position: "fixed",
