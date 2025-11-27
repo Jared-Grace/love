@@ -6,5 +6,6 @@ export function app_g_main() {
   marker("1");
   let body = html_document_body();
   let component = html_element(body, "img");
+  let path_prefix = "..\\";
   html_attribute_set(component, "src", "img\\game\\tiles\\seamless\\grass.png");
 }
