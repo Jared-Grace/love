@@ -20,7 +20,17 @@ export function app_g_main() {
   const src = game_prefix + "tiles\\seamless\\grass.png";
   let tile = html_img(div, src);
   html_style_size_square(tile, square_size);
+  html_style_assign(tile, {
+    position: "absolute",
+    x: "0px",
+    y: "0px",
+  });
   const src2 = game_prefix + "characters\\man_1\\rotations\\south.png";
   let c = html_img(div, src2);
   html_style_size_square(c, square_size);
+  html_style_assign(c, {
+    position: "absolute",
+    x: "0px",
+    y: "0px",
+  });
 }
