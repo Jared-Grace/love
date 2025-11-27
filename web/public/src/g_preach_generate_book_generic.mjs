@@ -40,6 +40,7 @@ export async function g_preach_generate_book_generic(
   fn,
   prompt_user_middle,
   prompt_system,
+  property_name,
 ) {
   marker("1");
   let chapters = await ebible_chapters(bible_folder, book_code);
