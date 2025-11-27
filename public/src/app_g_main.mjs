@@ -162,6 +162,8 @@ export function app_g_main() {
         let clickable = html_div(div);
         g_img_square_style(clickable, x, y, "click");
         function lambda7() {
+          if (false) {
+          }
           object_assign(c, {
             x,
             y,
