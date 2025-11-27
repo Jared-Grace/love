@@ -5,5 +5,5 @@ export function app_g_main() {
   marker("1");
   let body = html_document_body();
   let component = html_element(body, "img");
-  ("img\\game\\tiles\\seamless");
+  has("img\\game\\tiles\\seamless");
 }
