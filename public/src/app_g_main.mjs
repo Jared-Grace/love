@@ -45,10 +45,10 @@ export function app_g_main() {
     "yellow_grass",
   ];
   list_shuffle(grasses);
-  let taken = list_take(list, count);
+  let taken = list_take(grasses, 3);
   function lambda2(i) {
     function lambda(i2) {
-      let r = list_random_item(grasses);
+      let r = list_random_item(taken);
       const src = tiles_path + r + ".png";
       let tile = html_img(div, src);
       html_style_size_square(tile, square_size);
