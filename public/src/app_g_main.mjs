@@ -68,6 +68,7 @@ export function app_g_main() {
     let rows = 10;
     let columns = 10;
     function lambda6(i) {
+      let list2 = list_adder(function lambda11(la3) {});
       function lambda9(i2) {}
       each_range(columns, lambda9);
     }
