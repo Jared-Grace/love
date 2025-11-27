@@ -1,5 +1,4 @@
-import { object_properties } from "../../../love/public/src/object_properties.mjs";
-import { object_properties_from } from "../../../love/public/src/object_properties_from.mjs";
+import { each_object } from "../../../love/public/src/each_object.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -167,8 +166,7 @@ export function app_g_main() {
         function lambda7() {
           if (false) {
             function lambda17(item) {
-              let properties2 = object_properties(obj);
-              object_properties_from(to, properties, from);
+              each_object(object, function lambda18(value, property) {});
             }
             let filtered2 = list_filter(list, lambda17);
           }
