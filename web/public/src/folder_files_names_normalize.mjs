@@ -11,7 +11,8 @@ export async function folder_files_names_normalize(path, include, prefix) {
     let i = string_includes(name_old, include);
     if (i) {
       let name_new = prefix + index + ".zip";
-      if (equal(left, right)) {
+      if (equal(name_old, name_new)) {
+        return;
       }
       let path_old = path_join([path, name_old]);
       let path_new = path_join([path, name_new]);
