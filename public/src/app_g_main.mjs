@@ -24,7 +24,7 @@ export function app_g_main() {
   html_style_assign(div, {
     position: "relative",
   });
-  const square_count = 64;
+  const square_count = 100;
   let square_size = square_count + "px";
   let path_prefix = "..\\";
   const game_prefix = g_folder_img(path_prefix);
