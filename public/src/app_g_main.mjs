@@ -87,7 +87,7 @@ export function app_g_main() {
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
     const c_src = game_prefix + "characters\\man_1\\rotations\\south.png";
-    let c = g_img_square(div, c_src, 5, 5, "character");
+    let ci = g_img_square(div, c_src, 5, 5, "character");
     function lambda2(columns, y) {
       function lambda(r, x) {
         const src = tiles_path + r + ".png";
@@ -95,7 +95,7 @@ export function app_g_main() {
         let clickable = html_div(div);
         g_img_square_style(clickable, x, y, "click");
         function lambda7() {
-          g_img_square_style_position(c, x, y);
+          g_img_square_style_position(ci, x, y);
         }
         html_on_click(clickable, lambda7);
         return;
