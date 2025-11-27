@@ -7,7 +7,9 @@ export async function sandbox() {
   let p = "C:\\Users\\chris\\Downloads\\characters";
   let files = await folder_read_files(p);
   async function lambda(item) {
-    let i = string_includes(input, part);
+    let i = string_includes(item, "woman");
+    if (false) {
+    }
   }
   await each_async(list, lambda);
   return files;
