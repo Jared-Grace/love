@@ -166,7 +166,8 @@ export function app_g_main() {
         function lambda7() {
           if (false) {
             function lambda17(item) {
-              each_object(object, function lambda18(value, property) {});
+              function lambda18(value, property) {}
+              each_object(object, lambda18);
             }
             let filtered2 = list_filter(list, lambda17);
           }
