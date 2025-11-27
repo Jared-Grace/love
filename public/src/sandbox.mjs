@@ -13,7 +13,7 @@ export async function sandbox() {
   function lambda2() {
     const item = "man";
     let i = string_includes(input, item);
-    let sw = string_starts_with(s, prefix);
+    let sw = string_starts_with(s, item);
     let v = sw || i;
     return v;
   }
