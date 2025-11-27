@@ -10,5 +10,4 @@ export async function sandbox() {
   marker("1");
   let list = await folder_files_names_underscore(joined);
   let list2 = await folder_files_names_lower(joined);
-  return list2;
 }
