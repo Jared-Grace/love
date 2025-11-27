@@ -59,7 +59,6 @@ export function app_g_main() {
   html_style_assign(div, {
     position: "relative",
   });
-  let rows = 10;
   const c_src = game_prefix + "characters\\man_1\\rotations\\south.png";
   let c = g_img_square(div, c_src, 5, 5, "character");
   function lambda2(y) {
