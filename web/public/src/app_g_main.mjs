@@ -24,6 +24,7 @@ export function app_g_main() {
   html_style_assign(div, {
     position: "relative",
   });
+  let rows = 10;
   const square_count = "calc(100vh / " + rows + ")";
   let square_size = square_count + "px";
   let path_prefix = "..\\";
