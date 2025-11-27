@@ -1,3 +1,4 @@
+import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { object_includes } from "../../../love/public/src/object_includes.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -174,6 +175,7 @@ export function app_g_main() {
             return e;
           }
           let filtered2 = list_filter(npcs, lambda17);
+          let e2 = list_empty_is(list);
           if (false) {
           }
           log(filtered2);
