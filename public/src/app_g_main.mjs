@@ -182,7 +182,7 @@ export function app_g_main() {
             function lambda18(item) {
               let x2 = object_property_get(item, "x");
               let y2 = object_property_get(item, "y");
-              abs(x2 - x);
+              abs(x2 - x) + abs(y2 - y);
             }
             let filtered3 = list_filter(list, lambda18);
           } else {
