@@ -180,6 +180,7 @@ export function app_g_main() {
               }
             }
             each_object(clicked_coordinates, lambda18);
+            return e;
           }
           let filtered2 = list_filter(npcs, lambda17);
           log(filtered2);
