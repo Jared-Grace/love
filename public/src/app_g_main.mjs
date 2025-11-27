@@ -1,7 +1,5 @@
+import { object_includes } from "../../../love/public/src/object_includes.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { equal_not } from "../../../love/public/src/equal_not.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { each_object } from "../../../love/public/src/each_object.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -172,14 +170,7 @@ export function app_g_main() {
             y,
           };
           function lambda17(npc) {
-            let e = true;
-            function lambda18(value, property) {
-              let value2 = object_property_get(npc, property);
-              if (equal_not(value, value2)) {
-                e = false;
-              }
-            }
-            each_object(clicked_coordinates, lambda18);
+            let e = object_includes(npc, clicked_coordinates);
             return e;
           }
           let filtered2 = list_filter(npcs, lambda17);
