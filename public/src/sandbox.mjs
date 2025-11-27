@@ -9,7 +9,7 @@ export async function sandbox() {
   let files = await folder_files_names_normalize(path, "woman", "woman_");
   async function lambda(file_path) {
     let name = path_name(file_path);
-    log(message);
+    log(name);
   }
   await each_async(files, lambda);
   await folder_files_names_normalize(path, "_man_", "man_");
