@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_component_wrap } from "../../../love/public/src/html_component_wrap.mjs";
 import { html_on } from "../../../love/public/src/html_on.mjs";
@@ -87,6 +88,8 @@ export function app_g_main() {
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
     const c_src = game_prefix + "characters\\man_1\\rotations\\south.png";
+    let x2 = object_property_get(c, "x");
+    let y2 = object_property_get(c, "y");
     let ci = g_img_square(div, c_src, 5, 5, "character");
     function lambda2(columns, y) {
       function lambda(r, x) {
