@@ -219,6 +219,16 @@ export function app_g_main() {
           });
           if (e2) {
             let div2 = html_div(body);
+            let s = {
+              position: "fixed",
+              top: "0",
+              left: "0",
+              width: "100vw",
+              height: "100vh",
+              "pointer-events": "none",
+              background: "rgba(255,255,255,0.1)",
+              "z-index": "9999",
+            };
           }
         }
         html_on_click(clickable, lambda7);
