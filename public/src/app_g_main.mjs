@@ -105,13 +105,14 @@ export function app_g_main() {
     return eq2;
   }
   let filtered = list_filter(list, lambda12);
-  function lambda15(la4) {}
-  let list3 = list_adder(lambda15);
-  function lambda13(columns, y) {
-    function lambda14(item2, x) {}
-    each_index(columns, lambda14);
+  function lambda15(la4) {
+    function lambda13(columns, y) {
+      function lambda14(item2, x) {}
+      each_index(columns, lambda14);
+    }
+    each_index(rows, lambda13);
   }
-  each_index(rows, lambda13);
+  let list3 = list_adder(lambda15);
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
     const c_src = game_prefix + "characters\\" + p + "\\rotations\\south.png";
