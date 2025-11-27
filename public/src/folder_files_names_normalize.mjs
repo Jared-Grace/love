@@ -1,5 +1,4 @@
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
-import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { file_move } from "../../../love/public/src/file_move.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
@@ -12,10 +11,8 @@ export async function folder_files_names_normalize(path, matches, prefix) {
       if (matches(name_old)) {
         let name_new = prefix + index + ".zip";
         let path_new = path_join([path, name_new]);
-        if (equal_not(name_old, name_new)) {
-          let path_old = path_join([path, name_old]);
-          await file_move(path_old, path_new);
-        }
+        let path_old = path_join([path, name_old]);
+        await file_move(path_old, path_new);
         la(path_new);
         index++;
       }
