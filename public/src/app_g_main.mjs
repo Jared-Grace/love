@@ -132,7 +132,7 @@ export function app_g_main() {
     let ci = g_character_img(game_prefix, div, c);
     let component = html_element(parent, "style");
     html_text_set(
-      component2,
+      component,
       `@keyframes pulseGlow {
   0%,100% { filter: drop-shadow(0 0 2px white) drop-shadow(0 0 10px white); }
   50% { filter: drop-shadow(0 0 4px white) drop-shadow(0 0 20px white); }
