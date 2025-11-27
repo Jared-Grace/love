@@ -150,7 +150,7 @@ export function app_g_main() {
   }
 }`,
     );
-    html_style_set(ci, "animation", "pulseGlow 1.2s infinite alternate");
+    html_style_set(ci, "animation", "pulseGlow 2s infinite alternate");
     function lambda12(npc) {
       let ci = g_character_img(game_prefix, div, npc);
     }
