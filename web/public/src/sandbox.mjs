@@ -16,6 +16,7 @@ export async function sandbox() {
       let path_old = path_join([p, name_old]);
       let path_new = path_join([p, name_new]);
       await file_move(path_old, path_new);
+      i++;
     }
   }
   await each_async(files, lambda);
