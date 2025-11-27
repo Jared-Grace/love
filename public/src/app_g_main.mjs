@@ -229,6 +229,7 @@ export function app_g_main() {
               background: "rgba(255,255,255,0.1)",
               "z-index": "9999",
             };
+            html_style_assign(b, s2);
           }
         }
         html_on_click(clickable, lambda7);
