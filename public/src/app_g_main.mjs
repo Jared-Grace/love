@@ -208,13 +208,13 @@ export function app_g_main() {
           function on_transition_begin() {
             g_img_square_style_position_object(player, player_img_c);
           }
-          if (false) {
+          if (distance >= 1) {
+            await html_on_transitionend(
+              properties,
+              player_img_c,
+              on_transition_begin,
+            );
           }
-          await html_on_transitionend(
-            properties,
-            player_img_c,
-            on_transition_begin,
-          );
           let element2 = html_component_element_get(player_img_c);
           element2.scrollIntoView({
             behavior: "smooth",
