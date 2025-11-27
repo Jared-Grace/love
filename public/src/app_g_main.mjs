@@ -58,7 +58,7 @@ export function app_g_main() {
   }
   let tiles = list_adder(lambda5);
   let div = html_div(body);
-  html_clear(element);
+  html_clear(div);
   html_style_assign(div, {
     position: "relative",
   });
