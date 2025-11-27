@@ -175,8 +175,8 @@ export function app_g_main() {
             return e;
           }
           let filtered2 = list_filter(npcs, lambda17);
-          let e2 = list_empty_is(list);
-          if (false) {
+          let e2 = list_empty_is(filtered2);
+          if (e2) {
           }
           log(filtered2);
           object_assign(c, clicked_coordinates);
