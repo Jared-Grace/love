@@ -15,7 +15,7 @@ export async function sandbox() {
       let name_new = "woman_" + index + ".zip";
       let path_old = path_join([p, name_old]);
       let path_new = path_join([p, name_new]);
-      await file_move(f_name_before, f_name_after);
+      await file_move(path_old, path_new);
     }
   }
   await each_async(list, lambda);
