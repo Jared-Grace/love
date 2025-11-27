@@ -130,7 +130,7 @@ export function app_g_main() {
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
     let ci = g_character_img(game_prefix, div, c);
-    let component = html_element(div, "style");
+    let component = html_element(body, "style");
     html_text_set(
       component,
       `@keyframes pulseGlow {
