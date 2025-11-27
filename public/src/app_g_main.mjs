@@ -176,6 +176,8 @@ export function app_g_main() {
           let filtered2 = list_filter(npcs, lambda17);
           let e2 = list_empty_not_is(filtered2);
           if (e2) {
+            coordinates;
+            let filtered3 = list_filter(list, function lambda18(item) {});
           } else {
             object_assign(c, clicked_coordinates);
             function handler(e) {
