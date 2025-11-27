@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { file_move } from "../../../love/public/src/file_move.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
@@ -9,7 +10,9 @@ export async function folder_files_names_normalize(path, include, prefix) {
   async function lambda(name_old) {
     let i = string_includes(name_old, include);
     if (i) {
-      let name_new = prefix + index + ".zip";$ie
+      let name_new = prefix + index + ".zip";
+      if (equal(left, right)) {
+      }
       let path_old = path_join([path, name_old]);
       let path_new = path_join([path, name_new]);
       await file_move(path_old, path_new);
