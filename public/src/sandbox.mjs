@@ -1,6 +1,8 @@
+import { g_folder_tiles } from "../../../love/public/src/g_folder_tiles.mjs";
 import { folder_files_names_underscore } from "../../../love/public/src/folder_files_names_underscore.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   marker("1");
-  let list = await folder_files_names_underscore(path);
+  const tiles_path = g_folder_tiles("");
+  let list = await folder_files_names_underscore(tiles_path);
 }
