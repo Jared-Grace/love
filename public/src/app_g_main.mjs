@@ -1,3 +1,4 @@
+import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
 import { g_img_square_style } from "../../../love/public/src/g_img_square_style.mjs";
 import { g_img_square } from "../../../love/public/src/g_img_square.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -65,6 +66,7 @@ export function app_g_main() {
       g_img_square(div, src, square_size, x, square_count, y, "tile");
       let clickable = html_div(div);
       g_img_square_style(clickable, square_size, x, square_count, y, "click");
+      html_on_click(component, function lambda7() {});
       return;
     }
     each_range(10, lambda);
