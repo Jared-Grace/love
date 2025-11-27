@@ -1,5 +1,4 @@
 import { g_img_square } from "../../../love/public/src/g_img_square.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
@@ -58,7 +57,6 @@ export function app_g_main() {
     each_index(taken, lambda3);
   }
   let list = list_adder(lambda5);
-  log(list);
   function lambda2(y) {
     function lambda(x) {
       let r = list_random_item(list);
