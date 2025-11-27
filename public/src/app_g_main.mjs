@@ -58,7 +58,6 @@ export function app_g_main() {
   }
   let tiles = list_adder(lambda5);
   let div = html_div(body);
-  html_clear(div);
   html_style_assign(div, {
     position: "relative",
   });
@@ -82,6 +81,7 @@ export function app_g_main() {
   let v = html_component_wrap(window);
   html_on(v, "resize", lambda8);
   function app_g_refresh(game_prefix, div, tiles_path) {
+    html_clear(div);
     const c_src = game_prefix + "characters\\man_1\\rotations\\south.png";
     let c = g_img_square(div, c_src, 5, 5, "character");
     function lambda2(columns, y) {
