@@ -1,3 +1,4 @@
+import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
 import { g_folder_tiles } from "../../../love/public/src/g_folder_tiles.mjs";
 import { g_folder_img } from "../../../love/public/src/g_folder_img.mjs";
@@ -46,6 +47,7 @@ export function app_g_main() {
   function lambda2(i) {
     function lambda(i2) {
       let tile = html_img(div, src);
+      let r = list_random_item(arr);
       html_style_size_square(tile, square_size);
       html_style_assign(tile, {
         position: "absolute",
