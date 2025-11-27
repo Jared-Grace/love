@@ -105,7 +105,7 @@ export function app_g_main() {
             y,
           });
           g_img_square_style_position_object(c, ci);
-          let element2 = html_component_element_get(component);
+          let element2 = html_component_element_get(ci);
           element2.scrollIntoView({
             behavior: "smooth",
             block: "center",
