@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_range_1 } from "../../../love/public/src/each_range_1.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
@@ -59,6 +60,7 @@ export function app_g_main() {
     each_index(taken, lambda3);
   }
   let list = list_adder(lambda5);
+  log(message);
   function lambda2(i) {
     function lambda(i2) {
       let r = list_random_item(list);
