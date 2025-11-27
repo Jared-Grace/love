@@ -1,3 +1,4 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_size_square } from "../../../love/public/src/html_style_size_square.mjs";
 import { html_img } from "../../../love/public/src/html_img.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
@@ -9,6 +10,7 @@ export function app_g_main() {
   html_style_assign(body, {
     margin: "0",
   });
+  let div = html_div(root);
   let square_size = "64px";
   let path_prefix = "..\\";
   const game_prefix = path_prefix + "img\\game\\";
