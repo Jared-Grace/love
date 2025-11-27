@@ -8,6 +8,7 @@ export function app_g_main() {
   html_style_assign(body, {
     margin: "0",
   });
+  let square_size = "64px";
   let path_prefix = "..\\";
   const game_prefix = path_prefix + "img\\game\\";
   const src = game_prefix + "tiles\\seamless\\grass.png";
