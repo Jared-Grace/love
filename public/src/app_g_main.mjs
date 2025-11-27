@@ -61,9 +61,9 @@ export function app_g_main() {
   html_style_assign(div, {
     position: "relative",
   });
+  let row_count = 50;
+  let column_count = row_count;
   function lambda10(la2) {
-    let row_count = 10;
-    let column_count = 10;
     function lambda6(i) {
       function lambda11(la3) {
         function lambda9(i2) {
