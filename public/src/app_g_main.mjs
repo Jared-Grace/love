@@ -171,7 +171,7 @@ export function app_g_main() {
           if (false) {
             function lambda17(item) {
               function lambda18(value, property) {}
-              each_object(object, lambda18);
+              each_object(clicked_coordinates, lambda18);
             }
             let filtered2 = list_filter(list, lambda17);
           }
