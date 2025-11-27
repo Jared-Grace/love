@@ -112,10 +112,10 @@ export function app_g_main() {
                 block: "center",
                 inline: "center",
               });
-              square.removeEventListener("transitionend", handler);
+              ci.removeEventListener("transitionend", handler);
             }
           }
-          html_on(v, "transitionend", handler);
+          html_on(ci, "transitionend", handler);
           g_img_square_style_position_object(c, ci);
         }
         html_on_click(clickable, lambda7);
