@@ -5,6 +5,7 @@ export async function sandbox() {
   marker("1");
   let p = "C:\\Users\\chris\\Downloads\\characters";
   let files = await folder_read_files(p);
-  await each_async(list, async function lambda(item) {});
+  async function lambda(item) {}
+  await each_async(list, lambda);
   return files;
 }
