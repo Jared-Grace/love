@@ -107,7 +107,9 @@ export function app_g_main() {
   let filtered = list_filter(list, lambda12);
   function lambda15(la4) {
     function lambda13(columns, y) {
-      function lambda14(item2, x) {}
+      function lambda14(item2, x) {
+        la({});
+      }
       each_index(columns, lambda14);
     }
     each_index(rows, lambda13);
