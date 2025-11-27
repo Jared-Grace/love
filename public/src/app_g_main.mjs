@@ -53,7 +53,7 @@ export function app_g_main() {
   function lambda5(la) {
     function lambda3(g, index) {
       function lambda4(i3) {
-        log(message);
+        log(i3);
         la(g);
       }
       each_range_1(index, lambda4);
