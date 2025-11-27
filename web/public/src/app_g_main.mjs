@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -172,7 +173,9 @@ export function app_g_main() {
           if (false) {
             function lambda17(npc) {
               function lambda18(value, property) {
-                let value2 = object_property_get(object, property_name);
+                let value2 = object_property_get(npc, value);
+                if (equal(left, right2)) {
+                }
               }
               each_object(clicked_coordinates, lambda18);
             }
