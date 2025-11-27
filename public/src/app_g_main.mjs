@@ -48,7 +48,8 @@ export function app_g_main() {
   ];
   list_shuffle(grasses);
   function lambda3(g, index) {
-    each(list, function lambda4(item) {});
+    function lambda4(item) {}
+    each(list, lambda4);
   }
   each_index(grasses, lambda3);
   let taken = list_take(grasses, 3);
