@@ -1,3 +1,4 @@
+import { g_img_square_style_position } from "../../../love/public/src/g_img_square_style_position.mjs";
 import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
 import { g_img_square_style } from "../../../love/public/src/g_img_square_style.mjs";
 import { g_img_square } from "../../../love/public/src/g_img_square.mjs";
@@ -77,7 +78,7 @@ export function app_g_main() {
       let clickable = html_div(div);
       g_img_square_style(clickable, square_size, x, square_count, y, "click");
       function lambda7() {
-        g_img_square_style(clickable, square_size, x, square_count, y, "click");
+        g_img_square_style_position(c, x, square_count, y);
       }
       html_on_click(clickable, lambda7);
       return;
