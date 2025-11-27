@@ -64,14 +64,15 @@ export function app_g_main() {
   function lambda8() {
     app_g_refresh(game_prefix, div, tiles, tiles_path);
   }
-  function lambda10(la2) {}
-  let list = list_adder(lambda10);
-  let rows = 10;
-  let columns = 10;
-  function lambda6(i) {
-    function lambda9(i2) {}
-    each_range(columns, lambda9);
+  function lambda10(la2) {
+    let rows = 10;
+    let columns = 10;
+    function lambda6(i) {
+      function lambda9(i2) {}
+      each_range(columns, lambda9);
+    }
   }
+  let list = list_adder(lambda10);
   each_range(rows, lambda6);
   let v = html_component_wrap(window);
   html_on(v, "resize", lambda8);
