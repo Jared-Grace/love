@@ -1,3 +1,4 @@
+import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
@@ -203,6 +204,7 @@ export function app_g_main() {
           object_assign(player, coordinates_move_to);
           let properties = ["left", "top"];
           function handler(e) {
+            let includes = list_includes(list, item4);
             if (e.propertyName === "left" || e.propertyName === "top") {
               element2.removeEventListener("transitionend", handler);
               let element2 = html_component_element_get(player_img_c);
