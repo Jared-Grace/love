@@ -1,9 +1,8 @@
+import { g_img_square_style_position_object } from "../../../love/public/src/g_img_square_style_position_object.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_component_wrap } from "../../../love/public/src/html_component_wrap.mjs";
 import { html_on } from "../../../love/public/src/html_on.mjs";
-import { g_img_square_style_position } from "../../../love/public/src/g_img_square_style_position.mjs";
 import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
 import { g_img_square_style } from "../../../love/public/src/g_img_square_style.mjs";
 import { g_img_square } from "../../../love/public/src/g_img_square.mjs";
@@ -101,9 +100,7 @@ export function app_g_main() {
             x,
             y,
           });
-          let x2 = object_property_get(c, "x");
-          let y2 = object_property_get(c, "y");
-          g_img_square_style_position(ci, x2, y2);
+          g_img_square_style_position_object(c, ci);
         }
         html_on_click(clickable, lambda7);
       }
