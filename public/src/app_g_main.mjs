@@ -185,7 +185,7 @@ export function app_g_main() {
               let v2 = distance === 1;
               return v2;
             }
-            let filtered3 = list_filter(coordinates, lambda18);
+            let filtered3 = list_filter(coordinates, lambda18);l
           } else {
             object_assign(c, clicked_coordinates);
             function handler(e) {
