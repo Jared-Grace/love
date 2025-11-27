@@ -11,9 +11,11 @@ export async function sandbox() {
   }
   await folder_files_names_normalize_unzip(path, lambda, "woman_");
   function lambda2() {
-    let i = string_includes(input, "man");
+    const item = "man";
+    let i = string_includes(input, item);
     let sw = string_starts_with(s, prefix);
-    return i;
+    let v = sw || i;
+    return v;
   }
   await folder_files_names_normalize_unzip(path, lambda2, "man_");
 }
