@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
@@ -98,7 +99,9 @@ export function app_g_main() {
     y: 5,
     img: player_img,
   };
-  function lambda12(item) {}
+  function lambda12(item) {
+    let eq2 = equal(left, right);
+  }
   let filtered = list_filter(list, lambda12);
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
