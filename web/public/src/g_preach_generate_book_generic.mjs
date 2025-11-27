@@ -148,11 +148,11 @@ export async function g_preach_generate_book_generic(
         " :::: " +
         prompt_user_middle +
         user_prompt;
-      let sermon = await g_generate_openai(prompt_system, prompt_user);
+      let output = await g_generate_openai(prompt_system, prompt_user);
       let v = {
         verse_numbers,
         text,
-        sermon,
+        sermon: output,
         original,
       };
       log(v);
