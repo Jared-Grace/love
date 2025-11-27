@@ -129,7 +129,7 @@ export function app_g_main() {
     html_clear(div);
     let ci = g_character_img(game_prefix, div, c);
     html_style_set(
-      b,
+      ci,
       "filter",
       "drop-shadow(0 0 10px lime) drop-shadow(0 0 20px lime);",
     );
