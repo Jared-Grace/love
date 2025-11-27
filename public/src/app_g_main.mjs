@@ -131,12 +131,14 @@ export function app_g_main() {
     html_clear(div);
     let ci = g_character_img(game_prefix, div, c);
     let component = html_element(parent, "style");
-    html_text_set(component2, text);
-    html_style_set(
-      ci,
-      "filter",
-      "drop-shadow(0 0 10px white) drop-shadow(0 0 20px white)",
+    html_text_set(
+      component2,
+      `@keyframes pulseGlow {
+  0%,100% { filter: drop-shadow(0 0 2px white) drop-shadow(0 0 10px white); }
+  50% { filter: drop-shadow(0 0 4px white) drop-shadow(0 0 20px white); }
+}`,
     );
+    html_style_set(ci, "filter", "pulseGlow 1.2s infinite alternate");
     function lambda12(npc) {
       let ci = g_character_img(game_prefix, div, npc);
     }
