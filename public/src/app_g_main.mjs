@@ -128,8 +128,11 @@ export function app_g_main() {
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
     let ci = g_character_img(game_prefix, div, c);
-    html_style_set(b, style_key, style_value);
-    ("filter: drop-shadow(0 0 10px lime) drop-shadow(0 0 20px lime);");
+    html_style_set(
+      b,
+      "filter",
+      "drop-shadow(0 0 10px lime) drop-shadow(0 0 20px lime);",
+    );
     function lambda12(npc) {
       let ci = g_character_img(game_prefix, div, npc);
     }
