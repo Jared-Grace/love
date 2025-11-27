@@ -21,11 +21,6 @@ export function app_g_main() {
   html_style_assign(body, {
     margin: "0",
   });
-  let div = html_div(body);
-  html_style_assign(div, {
-    position: "relative",
-  });
-  let rows = 10;
   let path_prefix = "..\\";
   const game_prefix = g_folder_img(path_prefix);
   const tiles_path = g_folder_tiles(path_prefix);
@@ -60,6 +55,11 @@ export function app_g_main() {
     each_index(taken, lambda3);
   }
   let tiles = list_adder(lambda5);
+  let div = html_div(body);
+  html_style_assign(div, {
+    position: "relative",
+  });
+  let rows = 10;
   const c_src = game_prefix + "characters\\man_1\\rotations\\south.png";
   let c = g_img_square(div, c_src, 5, 5, "character");
   function lambda2(y) {
