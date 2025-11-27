@@ -1,4 +1,4 @@
-import { equal } from "../../../love/public/src/equal.mjs";
+import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -172,9 +172,11 @@ export function app_g_main() {
           };
           if (false) {
             function lambda17(npc) {
+              let e = true;
               function lambda18(value, property) {
-                let value2 = object_property_get(npc, value);
-                if (equal(left, right2)) {
+                let value2 = object_property_get(npc, property);
+                if (equal_not(value, value2)) {
+                  e = false;
                 }
               }
               each_object(clicked_coordinates, lambda18);
