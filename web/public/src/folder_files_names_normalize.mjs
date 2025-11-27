@@ -9,9 +9,7 @@ export async function folder_files_names_normalize(path, include, prefix) {
   async function lambda(name_old) {
     let i = string_includes(name_old, include);
     if (i) {
-      let name_new = prefix + index + ".zip";
-      if (false) {
-      }
+      let name_new = prefix + index + ".zip";$ie
       let path_old = path_join([path, name_old]);
       let path_new = path_join([path, name_new]);
       await file_move(path_old, path_new);
