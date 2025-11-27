@@ -1,3 +1,4 @@
+import { html_element } from "../../../love/public/src/html_element.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { g_character_img } from "../../../love/public/src/g_character_img.mjs";
 import { list_without } from "../../../love/public/src/list_without.mjs";
@@ -128,6 +129,7 @@ export function app_g_main() {
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
     let ci = g_character_img(game_prefix, div, c);
+    let component = html_element(parent, tag_name);
     html_style_set(
       ci,
       "filter",
