@@ -1,3 +1,4 @@
+import { html_button } from "../../../love/public/src/html_button.mjs";
 import { g_z } from "../../../love/public/src/g_z.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_on_transitionend } from "../../../love/public/src/html_on_transitionend.mjs";
@@ -235,6 +236,7 @@ export function app_g_main() {
               "z-index": g_z("overlay"),
             };
             html_style_assign(div2, s);
+            let component2 = html_button(parent2, text, function lambda21() {});
           }
         }
         html_on_click(clickable, lambda7);
