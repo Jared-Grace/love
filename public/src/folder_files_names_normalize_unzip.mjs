@@ -9,7 +9,7 @@ export async function folder_files_names_normalize_unzip(
 ) {
   marker("1");
   let files = await folder_files_names_normalize(path, include, prefix);
-  log(message);
+  log(files);
   await unzip_self_multiple(files);
   return files;
 }
