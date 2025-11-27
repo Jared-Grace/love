@@ -183,7 +183,7 @@ export function app_g_main() {
               return v2;
             }
             let filtered3 = list_filter(coordinates, lambda18);
-            list_shuffle(list);
+            list_shuffle(filtered3);
           } else {
             object_assign(c, clicked_coordinates);
             function handler(e) {
