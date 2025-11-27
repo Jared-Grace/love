@@ -69,14 +69,16 @@ export function app_g_main() {
     let columns = 10;
     function lambda6(i) {
       function lambda11(la3) {
-        function lambda9(i2) {}
+        function lambda9(i2) {
+          la3();
+        }
         each_range(columns, lambda9);
       }
       let list2 = list_adder(lambda11);
     }
+    each_range(rows, lambda6);
   }
   let list = list_adder(lambda10);
-  each_range(rows, lambda6);
   let v = html_component_wrap(window);
   html_on(v, "resize", lambda8);
   function app_g_refresh(game_prefix, div, tiles, tiles_path) {
