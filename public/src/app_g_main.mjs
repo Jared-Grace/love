@@ -101,7 +101,6 @@ export function app_g_main() {
           g_img_square_style_position(ci, x, y);
         }
         html_on_click(clickable, lambda7);
-        return;
       }
       each_index(columns, lambda);
     }
