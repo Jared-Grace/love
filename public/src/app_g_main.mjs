@@ -1,3 +1,4 @@
+import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_includes } from "../../../love/public/src/object_includes.mjs";
@@ -184,6 +185,7 @@ export function app_g_main() {
             }
             let filtered3 = list_filter(coordinates, lambda18);
             list_shuffle(filtered3);
+            list_sort_number_mapper(list, function lambda19(item3) {});
           } else {
             object_assign(c, clicked_coordinates);
             function handler(e) {
