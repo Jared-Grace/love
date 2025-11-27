@@ -16,7 +16,7 @@ Rules:
 - Keep tone simple and conversational.
 - Output each struggle separated by '\r\n'.
 
-Output each objection separated by '\\r\\n'. Follow these instructions exactly.`;
+Output each struggle separated by '\\r\\n'. Follow these instructions exactly.`;
   const prompt_user_middle =
     "Generate personal struggles or issues that characters might be experiencing that relate to this passage; Output 5–10 struggles: ";
   let fn = g_struggle_generate;
