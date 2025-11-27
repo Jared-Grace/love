@@ -4,5 +4,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function app_g_main() {
   marker("1");
   let body = html_document_body();
-  let component = html_element(parent, tag_name);
+  let component = html_element(body, "img");
+  ("img\\game\\tiles\\seamless");
 }
