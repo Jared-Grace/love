@@ -9,12 +9,12 @@ export async function sandbox() {
   let p = "C:\\Users\\chris\\Downloads\\characters";
   let files = await folder_read_files(p);
   let index = 1;
-  async function lambda(item) {
-    let i = string_includes(item, "woman");
+  async function lambda(name_old) {
+    let i = string_includes(name_old, "woman");
     if (i) {
       let name_new = "woman_" + index + ".zip";
-      let joined2 = path_join(segments);
-      let joined = path_join([p, name_new]);
+      let path_old = path_join([p, name_old]);
+      let path_new = path_join([p, name_new]);
       await file_move(f_name_before, f_name_after);
     }
   }
