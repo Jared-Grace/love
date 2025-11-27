@@ -6,9 +6,9 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function app_g_main() {
   marker("1");
   let body = html_document_body();
-  let component = html_element(body, "img");
   let path_prefix = "..\\";
   const src = path_prefix + "img\\game\\tiles\\seamless\\grass.png";
+  let component = html_element(body, "img");
   html_attribute_set(component, "src", src);
   html_style_assign(body, {
     margin: "0",
