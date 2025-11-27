@@ -5,6 +5,7 @@ export async function unzip_self(file_path) {
   let name = path_without_extension(file_path);
   let e = await file_exists(file_path);
   if (e) {
+    return;
   }
   await unzip(name, file_path);
   return name;
