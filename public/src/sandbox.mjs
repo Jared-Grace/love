@@ -9,6 +9,9 @@ export async function sandbox() {
     return i;
   }
   await folder_files_names_normalize_unzip(path, lambda, "woman_");
-  function lambda2() {}
+  function lambda2() {
+    let i = string_includes(input, "woman");
+    return i;
+  }
   await folder_files_names_normalize_unzip(path, lambda2, "man_");
 }
