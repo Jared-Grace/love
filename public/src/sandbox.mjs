@@ -1,4 +1,4 @@
-import { string_starts_with } from "../../../love/public/src/string_starts_with.mjs";
+import { string_includes_or_starts_with } from "../../../love/public/src/string_includes_or_starts_with.mjs";
 import { string_includes } from "../../../love/public/src/string_includes.mjs";
 import { folder_files_names_normalize_unzip } from "../../../love/public/src/folder_files_names_normalize_unzip.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -12,9 +12,7 @@ export async function sandbox() {
   await folder_files_names_normalize_unzip(path, lambda, "woman_");
   function lambda2() {
     const item = "man";
-    let i = string_includes(input, item);
-    let sw = string_starts_with(s, item);
-    let v = sw || i;
+    let v = string_includes_or_starts_with(item);
     return v;
   }
   await folder_files_names_normalize_unzip(path, lambda2, "man_");
