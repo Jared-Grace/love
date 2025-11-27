@@ -108,7 +108,10 @@ export function app_g_main() {
   function lambda15(la4) {
     function lambda13(columns, y) {
       function lambda14(item2, x) {
-        la({});
+        la({
+          x,
+          y,
+        });
       }
       each_index(columns, lambda14);
     }
