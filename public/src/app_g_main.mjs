@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
@@ -201,9 +200,6 @@ export function app_g_main() {
           } else {
             coordinates_move_to = clicked_coordinates;
           }
-          log({
-            coordinates_move_to,
-          });
           object_assign(player, coordinates_move_to);
           function handler(e) {
             if (e.propertyName === "left" || e.propertyName === "top") {
