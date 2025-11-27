@@ -1,3 +1,4 @@
+import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
@@ -130,7 +131,8 @@ export function app_g_main() {
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
     let ci = g_character_img(game_prefix, div, c);
-    let component = html_element(body, "style");
+    let parent = html_document_head();
+    let component = html_element(parent, "style");
     html_text_set(
       component,
       `@keyframes pulseGlow {
