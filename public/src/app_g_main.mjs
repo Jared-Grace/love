@@ -1,6 +1,5 @@
+import { g_distance } from "../../../love/public/src/g_distance.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { abs } from "../../../love/public/src/abs.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_includes } from "../../../love/public/src/object_includes.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -180,11 +179,7 @@ export function app_g_main() {
           let e2 = list_empty_not_is(filtered2);
           if (e2) {
             function lambda18(item) {
-              let x3 = object_property_get(clicked_coordinates, "x");
-              let y3 = object_property_get(clicked_coordinates, "y");
-              let x2 = object_property_get(item, "x");
-              let y2 = object_property_get(item, "y");
-              let distance = abs(x2 - x) + abs(y2 - y);
+              let distance = g_distance(clicked_coordinates, item);
               let v2 = distance === 1;
               return v2;
             }
