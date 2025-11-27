@@ -79,5 +79,6 @@ export function app_g_main() {
   }
   each_range(10, lambda2);
   function lambda8() {}
-  html_on(component, name_event, lambda8);
+  html_on(body, name_event, lambda8);
+  ("resize");
 }
