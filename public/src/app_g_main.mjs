@@ -99,7 +99,10 @@ export function app_g_main() {
         let clickable = html_div(div);
         g_img_square_style(clickable, x, y, "click");
         function lambda7() {
-          let a = object_assign(to, from);
+          object_assign(c, {
+            x,
+            y,
+          });
           g_img_square_style_position(ci, x, y);
         }
         html_on_click(clickable, lambda7);
