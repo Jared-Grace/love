@@ -89,6 +89,7 @@ export function app_g_main() {
     html_clear(div);
     const c_src = game_prefix + "characters\\man_1\\rotations\\south.png";
     let ci = g_img_square(div, c_src, -1, -1, "character");
+    g_img_square_style_position_object(c, ci);
     function lambda2(columns, y) {
       function lambda(r, x) {
         const src = tiles_path + r + ".png";
