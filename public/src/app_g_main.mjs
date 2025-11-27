@@ -1,3 +1,4 @@
+import { html_style_size_square } from "../../../love/public/src/html_style_size_square.mjs";
 import { html_img } from "../../../love/public/src/html_img.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
@@ -13,10 +14,7 @@ export function app_g_main() {
   const game_prefix = path_prefix + "img\\game\\";
   const src = game_prefix + "tiles\\seamless\\grass.png";
   html_img(body, src);
-  html_style_assign(body, {
-    height: square_size,
-    width: square_size,
-  });
+  html_style_size_square(body, square_size);
   const src2 = game_prefix + "characters\\man_1\\rotations\\south.png";
   html_img(body, src2);
 }
