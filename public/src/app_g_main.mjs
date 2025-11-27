@@ -1,4 +1,3 @@
-import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { g_character_img } from "../../../love/public/src/g_character_img.mjs";
 import { list_without } from "../../../love/public/src/list_without.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -128,11 +127,6 @@ export function app_g_main() {
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
     let ci = g_character_img(game_prefix, div, c);
-    html_style_set(
-      ci,
-      "filter",
-      "drop-shadow(0 0 10px lime) drop-shadow(0 0 20px lime);",
-    );
     function lambda12(npc) {
       let ci = g_character_img(game_prefix, div, npc);
     }
