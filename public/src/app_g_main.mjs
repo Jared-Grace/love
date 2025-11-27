@@ -63,8 +63,7 @@ export function app_g_main() {
   function lambda8() {
     app_g_refresh(game_prefix, div, tiles, tiles_path);
   }
-  html_on(body, name_event, lambda8);
-  ("resize");
+  html_on(body, "resize", lambda8);
   function app_g_refresh(game_prefix, div, tiles, tiles_path) {
     const c_src = game_prefix + "characters\\man_1\\rotations\\south.png";
     let c = g_img_square(div, c_src, 5, 5, "character");
