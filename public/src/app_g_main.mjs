@@ -85,7 +85,7 @@ export function app_g_main() {
   let rows = list_adder(lambda10);
   let v = html_component_wrap(window);
   html_on(v, "resize", lambda8);
-  let r2 = range_1(count);
+  let r2 = range_1(10);
   let c = {
     x: 5,
     y: 5,
