@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { abs } from "../../../love/public/src/abs.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -187,7 +186,6 @@ export function app_g_main() {
               return v2;
             }
             let filtered3 = list_filter(coordinates, lambda18);
-            log(message);
           } else {
             object_assign(c, clicked_coordinates);
             function handler(e) {
