@@ -60,7 +60,7 @@ export function app_g_main() {
     each_index(taken, lambda3);
   }
   let list = list_adder(lambda5);
-  log(message);
+  log(list);
   function lambda2(i) {
     function lambda(i2) {
       let r = list_random_item(list);
