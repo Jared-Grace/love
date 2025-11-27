@@ -199,12 +199,12 @@ export function app_g_main() {
             list_sort_number_mapper(filtered3, lambda19);
             let coordinates_move_to = null;
             coordinates_move_to = list_first(filtered3);
-            log({
-              filtered3,
-            });
           } else {
             coordinates_move_to = clicked_coordinates;
           }
+          log({
+            coordinates_move_to,
+          });
           object_assign(player, coordinates_move_to);
           function handler(e) {
             if (e.propertyName === "left" || e.propertyName === "top") {
