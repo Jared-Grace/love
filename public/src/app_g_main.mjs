@@ -218,7 +218,7 @@ export function app_g_main() {
             inline: "center",
           });
           if (e2) {
-            let div2 = html_div(body);
+            let div2 = html_div(div);
             let s = {
               position: "fixed",
               top: "0",
