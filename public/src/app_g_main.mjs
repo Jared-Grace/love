@@ -1,3 +1,4 @@
+import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_component_wrap } from "../../../love/public/src/html_component_wrap.mjs";
 import { html_on } from "../../../love/public/src/html_on.mjs";
 import { g_img_square_style_position } from "../../../love/public/src/g_img_square_style_position.mjs";
@@ -57,6 +58,7 @@ export function app_g_main() {
   }
   let tiles = list_adder(lambda5);
   let div = html_div(body);
+  html_clear(element);
   html_style_assign(div, {
     position: "relative",
   });
