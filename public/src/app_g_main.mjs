@@ -108,7 +108,7 @@ export function app_g_main() {
   function lambda15(la4) {
     function lambda13(columns, y) {
       function lambda14(item2, x) {
-        la({
+        la4({
           x,
           y,
         });
