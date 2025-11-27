@@ -1,3 +1,4 @@
+import { path_name } from "../../../love/public/src/path_name.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_filter_includes } from "../../../love/public/src/list_filter_includes.mjs";
 import { folder_files_names_lower } from "../../../love/public/src/folder_files_names_lower.mjs";
@@ -13,6 +14,6 @@ export async function sandbox() {
   let list = await folder_files_names_underscore(joined);
   let list2 = await folder_files_names_lower(joined);
   let m = list_filter_includes(list2, "grass");
-  function lambda(item) {}
-  let mapped = list_map(list3, lambda);
+  let mapped = list_map(m, path_name);
+  return mapped;
 }
