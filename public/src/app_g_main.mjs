@@ -217,6 +217,8 @@ export function app_g_main() {
             block: "center",
             inline: "center",
           });
+          if (e2) {
+          }
         }
         html_on_click(clickable, lambda7);
       }
