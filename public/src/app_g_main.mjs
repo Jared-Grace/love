@@ -191,7 +191,7 @@ export function app_g_main() {
               return distance;
             }
             list_sort_number_mapper(filtered3, lambda19);
-            let first = list_first(list);
+            let coordinates_move_to = list_first(filtered3);
           } else {
             object_assign(player, clicked_coordinates);
             function handler(e) {
