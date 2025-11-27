@@ -98,7 +98,8 @@ export function app_g_main() {
     y: 5,
     img: player_img,
   };
-  let filtered = list_filter(list, function lambda12(item) {});
+  function lambda12(item) {}
+  let filtered = list_filter(list, lambda12);
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
     const c_src = game_prefix + "characters\\" + p + "\\rotations\\south.png";
