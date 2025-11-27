@@ -122,6 +122,11 @@ export function ebible_languages() {
       bible_folder: "wolmbs",
       language_code: "wo",
     },
+    {
+      name: "Gujarati",
+      bible_folder: "guj2017",
+      language_code: "wo",
+    },
   ];
   return languages;
 }
