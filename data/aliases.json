@@ -257,6 +257,7 @@
   "erga": "each_range_async",
   "fnj": "file_name_json",
   "rt": "restart",
-  "rg1": "range_1"
+  "rg1": "range_1",
+  "lsh": "list_shuffle"
  }
 }
