@@ -17,7 +17,8 @@ export function app_g_main() {
   html_style_assign(div, {
     position: "relative",
   });
-  let square_size = "64px";
+  const square_count = 64;
+  let square_size = square_count + "px";
   let path_prefix = "..\\";
   const game_prefix = g_folder_img(path_prefix);
   const tiles_path = g_folder_tiles(path_prefix);
@@ -42,21 +43,23 @@ export function app_g_main() {
     "yellow_grass",
   ];
   const src = tiles_path + "grass.png";
-  function lambda2() {}
-  each_range(count, lambda2);
-  let tile = html_img(div, src);
-  html_style_size_square(tile, square_size);
-  html_style_assign(tile, {
-    position: "absolute",
-    x: "0px",
-    y: "0px",
-  });
-  const src2 = game_prefix + "characters\\man_1\\rotations\\south.png";
-  let c = html_img(div, src2);
-  html_style_size_square(c, square_size);
-  html_style_assign(c, {
-    position: "absolute",
-    x: "0px",
-    y: "0px",
-  });
+  function lambda2(i) {
+    let tile = html_img(div, src);
+    html_style_size_square(tile, square_size);
+    html_style_assign(tile, {
+      position: "absolute",
+      x: "0px",
+      y: i * square_count + "px",
+    });
+    return;
+    const src2 = game_prefix + "characters\\man_1\\rotations\\south.png";
+    let c = html_img(div, src2);
+    html_style_size_square(c, square_size);
+    html_style_assign(c, {
+      position: "absolute",
+      x: "0px",
+      y: "0px",
+    });
+  }
+  each_range(10, lambda2);
 }
