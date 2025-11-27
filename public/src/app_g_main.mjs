@@ -51,7 +51,6 @@ export function app_g_main() {
   function lambda5(la) {
     function lambda3(g, index) {
       function lambda4(i3) {
-        log(i3);
         la(g);
       }
       each_range(index + 1, lambda4);
