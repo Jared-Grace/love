@@ -183,6 +183,7 @@ export function app_g_main() {
               let x2 = object_property_get(item, "x");
               let y2 = object_property_get(item, "y");
               let distance = abs(x2 - x) + abs(y2 - y);
+              return distance === 1;
             }
             let filtered3 = list_filter(list, lambda18);
           } else {
