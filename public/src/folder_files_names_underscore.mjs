@@ -11,10 +11,10 @@ export async function folder_files_names_underscore(path) {
   let index = 1;
   async function lambda2(la) {
     async function lambda(name_old) {
+      let path_old = path_join([path, name_old]);
       let name_new = prefix + index + ".zip";
       let path_new = path_join([path, name_new]);
       if (equal_not(name_old, name_new)) {
-        let path_old = path_join([path, name_old]);
         await file_move(path_old, path_new);
       }
       la(path_new);
