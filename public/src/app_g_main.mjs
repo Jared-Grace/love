@@ -17,7 +17,7 @@ export function app_g_main() {
   let square_size = "64px";
   let path_prefix = "..\\";
   const game_prefix = path_prefix + "img\\game\\";
-  const src = game_prefix + "tiles\\seamless\\grass.png";
+  const src = game_prefix + "tiles\\" + "seamless\\grass.png";
   let tile = html_img(div, src);
   html_style_size_square(tile, square_size);
   html_style_assign(tile, {
