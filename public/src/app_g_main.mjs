@@ -14,8 +14,8 @@ export function app_g_main() {
   const game_prefix = path_prefix + "img\\game\\";
   const src = game_prefix + "tiles\\seamless\\grass.png";
   let tile = html_img(body, src);
-  html_style_size_square(body, square_size);
+  html_style_size_square(tile, square_size);
   const src2 = game_prefix + "characters\\man_1\\rotations\\south.png";
   let c = html_img(body, src2);
-  html_style_size_square(body, c);
+  html_style_size_square(c, square_size);
 }
