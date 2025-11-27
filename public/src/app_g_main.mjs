@@ -1,5 +1,4 @@
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_includes } from "../../../love/public/src/object_includes.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -184,7 +183,7 @@ export function app_g_main() {
               return v2;
             }
             let filtered3 = list_filter(coordinates, lambda18);
-            log(filtered3);
+            list_shuffle(list);
           } else {
             object_assign(c, clicked_coordinates);
             function handler(e) {
