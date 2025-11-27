@@ -4,8 +4,9 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   marker("1");
   let path = "C:\\Users\\chris\\Downloads\\characters";
-  function lambda() {
-    let i = string_includes(input, part);
+  function lambda(input) {
+    let i = string_includes(input, "woman");
+    return i;
   }
   await folder_files_names_normalize_unzip(path, lambda, "woman_");
   function lambda2() {}
