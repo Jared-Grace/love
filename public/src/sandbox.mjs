@@ -1,3 +1,4 @@
+import { unzip } from "../../../love/public/src/unzip.mjs";
 import { path_without_extension } from "../../../love/public/src/path_without_extension.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -9,6 +10,7 @@ export async function sandbox() {
   let files = await folder_files_names_normalize(path, "woman", "woman_");
   async function lambda(file_path) {
     let name = path_without_extension(file_path);
+    await unzip(file_path, buffer);
     log(name);
   }
   await each_async(files, lambda);
