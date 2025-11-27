@@ -111,6 +111,17 @@ export function app_g_main() {
             block: "center",
             inline: "center",
           });
+          function handler(e) {
+            if (e.propertyName === "left" || e.propertyName === "top") {
+              square.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+                inline: "center",
+              });
+              square.removeEventListener("transitionend", handler);
+            }
+          }
+          html_on(v, "transitionend", handler);
         }
         html_on_click(clickable, lambda7);
       }
