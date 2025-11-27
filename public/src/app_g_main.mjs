@@ -60,9 +60,9 @@ export function app_g_main() {
   html_style_assign(div, {
     position: "relative",
   });
-  app_g_refresh(game_prefix, div, tiles, tiles_path);
+  lambda8();
   function lambda8() {
-    app_g_refresh(game_prefix, div, tiles, tiles_path);
+    app_g_refresh(game_prefix, div, tiles_path);
   }
   function lambda10(la2) {
     let row_count = 10;
@@ -83,7 +83,7 @@ export function app_g_main() {
   let rows = list_adder(lambda10);
   let v = html_component_wrap(window);
   html_on(v, "resize", lambda8);
-  function app_g_refresh(game_prefix, div, tiles, tiles_path) {
+  function app_g_refresh(game_prefix, div, tiles_path) {
     const c_src = game_prefix + "characters\\man_1\\rotations\\south.png";
     let c = g_img_square(div, c_src, 5, 5, "character");
     function lambda2(columns, y) {
