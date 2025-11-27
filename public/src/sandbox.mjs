@@ -3,6 +3,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   marker("1");
   let path = "C:\\Users\\chris\\Downloads\\characters";
-  await folder_files_names_normalize_unzip(path, "woman", "woman_");
-  await folder_files_names_normalize_unzip(path, "_man_", "man_");
+  await folder_files_names_normalize_unzip(path, () => {}, "woman_");
+  await folder_files_names_normalize_unzip(path, () => {}, "man_");
 }
