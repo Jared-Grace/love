@@ -26,6 +26,6 @@ Output each objection separated by '\\r\\n'. Follow these instructions exactly.`
     fn,
     prompt_user_middle,
     prompt_system,
-    "output",
+    "struggle",
   );
 }
