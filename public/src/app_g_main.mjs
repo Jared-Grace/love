@@ -1,3 +1,4 @@
+import { html_on } from "../../../love/public/src/html_on.mjs";
 import { g_img_square_style_position } from "../../../love/public/src/g_img_square_style_position.mjs";
 import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
 import { g_img_square_style } from "../../../love/public/src/g_img_square_style.mjs";
@@ -60,14 +61,14 @@ export function app_g_main() {
   }
   let tiles = list_adder(lambda5);
   const c_src = game_prefix + "characters\\man_1\\rotations\\south.png";
-  let c = g_img_square(div, c_src,  5, 5, "character");
+  let c = g_img_square(div, c_src, 5, 5, "character");
   function lambda2(y) {
     function lambda(x) {
       let r = list_random_item(tiles);
       const src = tiles_path + r + ".png";
-      g_img_square(div, src,  x, y, "tile");
+      g_img_square(div, src, x, y, "tile");
       let clickable = html_div(div);
-      g_img_square_style(clickable,  x, y, "click");
+      g_img_square_style(clickable, x, y, "click");
       function lambda7() {
         g_img_square_style_position(c, x, y);
       }
@@ -77,4 +78,5 @@ export function app_g_main() {
     each_range(10, lambda);
   }
   each_range(10, lambda2);
+  html_on(component, name_event, function lambda8() {});
 }
