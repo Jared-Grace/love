@@ -1,6 +1,5 @@
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_includes } from "../../../love/public/src/object_includes.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
