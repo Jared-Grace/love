@@ -1,12 +1,6 @@
-import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
-import { html_style_size_square } from "../../../love/public/src/html_style_size_square.mjs";
+import { g_img_square_style } from "../../../love/public/src/g_img_square_style.mjs";
 import { html_img } from "../../../love/public/src/html_img.mjs";
 export function g_img_square(parent, src, square_size, x, square_count, y) {
   let tile = html_img(parent, src);
-  html_style_size_square(tile, square_size);
-  html_style_assign(tile, {
-    position: "absolute",
-    left: x * square_count + "px",
-    top: y * square_count + "px",
-  });
+  g_img_square_style(tile, square_size, x, square_count, y);
 }
