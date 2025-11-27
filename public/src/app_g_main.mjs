@@ -102,7 +102,7 @@ export function app_g_main() {
     img: player_img,
   };
   let right = player_img;
-  let filtered = list_without(right);
+  let filtered = list_without(people, right);
   function lambda15(la4) {
     function lambda13(columns, y) {
       function lambda14(item2, x) {
