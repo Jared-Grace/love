@@ -197,7 +197,6 @@ export function app_g_main() {
               return distance;
             }
             list_sort_number_mapper(filtered3, lambda19);
-            let coordinates_move_to = null;
             coordinates_move_to = list_first(filtered3);
           } else {
             coordinates_move_to = clicked_coordinates;
