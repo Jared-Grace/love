@@ -11,6 +11,6 @@ export async function folder_read_files(path_folder) {
   }
   const all = fs.readdirSync(path_folder);
   let files = all.filter(lambda);
-  return files;
   list_sort_string(files);
+  return files;
 }
