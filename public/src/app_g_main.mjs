@@ -185,7 +185,8 @@ export function app_g_main() {
             }
             let filtered3 = list_filter(coordinates, lambda18);
             list_shuffle(filtered3);
-            list_sort_number_mapper(list, function lambda19(item3) {});
+            function lambda19(item3) {}
+            list_sort_number_mapper(list, lambda19);
           } else {
             object_assign(c, clicked_coordinates);
             function handler(e) {
