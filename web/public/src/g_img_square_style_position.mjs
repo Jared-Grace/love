@@ -5,5 +5,6 @@ export function g_img_square_style_position(tile, x, y) {
   html_style_assign(tile, {
     left: "calc(" + x + " * (100vh / " + rows + "))",
     top: "calc(" + y + " * (100vh / " + rows + "))",
+    transition: "left 0.3s ease, top 0.3s ease",
   });
 }
