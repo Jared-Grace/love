@@ -106,14 +106,9 @@ export function app_g_main() {
           });
           g_img_square_style_position_object(c, ci);
           let element2 = html_component_element_get(ci);
-          element2.scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-            inline: "center",
-          });
           function handler(e) {
             if (e.propertyName === "left" || e.propertyName === "top") {
-              square.scrollIntoView({
+              element2.scrollIntoView({
                 behavior: "smooth",
                 block: "center",
                 inline: "center",
