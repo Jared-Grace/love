@@ -46,7 +46,6 @@ export function app_g_refresh(
   player,
   npcs,
   tiles_path,
-  tutorial,
   coordinates,
   rows,
 ) {
