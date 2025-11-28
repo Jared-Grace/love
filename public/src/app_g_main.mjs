@@ -241,10 +241,10 @@ export function app_g_main() {
           } else {
             coordinates_move_to = clicked_coordinates;
           }
+          let distance = g_distance(player, coordinates_move_to);
           log_json(player);
           object_assign(player, coordinates_move_to);
           log_json(player);
-          let distance = g_distance(player, coordinates_move_to);
           const away = distance >= 1;
           log({
             distance,
