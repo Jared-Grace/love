@@ -12,6 +12,6 @@ export function bible_names_text_parse(text) {
   let mapped6 = list_map_first(mapped3);
   let mapped = list_map_split_space(mapped6);
   let mapped2 = list_map_first(mapped);
-  let unique = list_unique(list);
-  return mapped2;
+  let unique = list_unique(mapped2);
+  return unique;
 }
