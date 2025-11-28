@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { g_rows_count } from "../../../love/public/src/g_rows_count.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
@@ -202,6 +203,9 @@ export function app_g_main() {
         };
         g_img_square_style(clickable, clicked_coordinates, "click");
         async function on_tile_click() {
+          let distance2 = g_distance(player, clicked_coordinates);
+          if (equal(left2, right2)) {
+          }
           if (equal_not(tutorial, null)) {
             html_remove(tutorial);
           }
