@@ -1,4 +1,4 @@
-import { app_g_button_style } from "../../../love/public/src/app_g_button_style.mjs";
+import { app_g_button_uncolored_style } from "../../../love/public/src/app_g_button_uncolored_style.mjs";
 import { app_karate_button_green } from "../../../karate_code/public/src/app_karate_button_green.mjs";
 import { app_g_button_uncolored } from "../../../love/public/src/app_g_button_uncolored.mjs";
 import { app_g_button_back } from "../../../love/public/src/app_g_button_back.mjs";
@@ -37,7 +37,7 @@ export function app_g_menu_refresh(overlay) {
         emoji_pray(),
       lambda22,
     );
-    app_g_button_style(b);
+    app_g_button_uncolored_style(b);
   }
   app_g_button_uncolored(overlay, text, lambda7);
 }
