@@ -137,7 +137,9 @@ export function app_g_main() {
       conversation: false,
     },
   };
-  storage_local_set(app_g, key, value);
+  storage_local_set(app_g, "game", {
+    player,
+  });
   let right = player_img;
   let filtered = list_without(people, right);
   function lambda15(la4) {
