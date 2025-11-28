@@ -160,6 +160,7 @@ export function app_g_refresh(
             html_style_assign(container, {
               "background-color":
                 app_karate_container_background_color() + "aa",
+              color: "white",
               padding: "0",
             });
             html_p_text(
