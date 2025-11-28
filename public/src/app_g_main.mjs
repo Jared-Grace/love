@@ -1,3 +1,4 @@
+import { mod } from "../../../love/public/src/mod.mjs";
 import { bible_names_men } from "../../../love/public/src/bible_names_men.mjs";
 import { bible_names_women } from "../../../love/public/src/bible_names_women.mjs";
 import { g_tiles_grasses } from "../../../love/public/src/g_tiles_grasses.mjs";
@@ -117,7 +118,7 @@ export function app_g_main() {
   function lambda16(npc, index) {
     let r3 = list_random_item(filtered);
     object_property_set(npc, "img", r3);
-    mod;
+    let r4 = mod(n, m);
   }
   each_index(npcs, lambda16);
   app_g_refresh(div, game_prefix, player, npcs, tiles_path, coordinates, rows);
