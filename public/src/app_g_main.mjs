@@ -279,7 +279,8 @@ export function app_g_main() {
               app_karate_style_control(container);
               function lambda21() {
                 html_remove(overlay);
-                let tutorial = html_div(div);
+                let tutorial = null;
+                tutorial = html_div(div);
                 g_img_square_style(tutorial, player, "tutorial");
                 let text = emoji_pray();
                 html_text_set(tutorial, text);
