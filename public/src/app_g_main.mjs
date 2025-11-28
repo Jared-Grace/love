@@ -125,7 +125,6 @@ export function app_g_main() {
     y: 5,
     img: player_img,
     prayer: {
-      tutorial: true,
       conversation: false,
     },
   };
