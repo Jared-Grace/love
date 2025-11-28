@@ -159,7 +159,7 @@ export function app_g_refresh(
             let container = app_karate_container_centered(overlay);
             html_style_assign(container, {
               "background-color":
-                app_karate_container_background_color() + "77",
+                app_karate_container_background_color() + "aa",
               padding: "0",
             });
             html_p_text(
