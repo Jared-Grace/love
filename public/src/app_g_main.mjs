@@ -136,7 +136,6 @@ export function app_g_main() {
       player,
       npcs,
       tiles_path,
-      tutorial,
       coordinates,
       rows,
     );
