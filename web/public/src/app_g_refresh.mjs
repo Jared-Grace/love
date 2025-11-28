@@ -194,5 +194,4 @@ export function app_g_refresh(
     each_index(columns, lambda);
   }
   each_index(rows, lambda2);
-  return tutorial;
 }
