@@ -23,6 +23,7 @@ export function app_g_menu_refresh(overlay) {
     function lambda22() {
       let player = app_g_player_get();
       let prayer = object_property_get(player, "prayer");
+      let conversation = object_property_get(prayer, "conversation");
       app_g_player_save(player);
     }
     let component3 = app_karate_button_uncolored(
