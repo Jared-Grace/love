@@ -211,7 +211,8 @@ export function app_g_main() {
         };
         g_img_square_style(clickable, clicked_coordinates, "click");
         async function on_tile_click() {
-          let value = storage_local_get(app_fn, key);
+          let game = storage_local_get(app_g, "game");
+          let player2 = object_property_get(game, "player");
           if (equal_not(tutorial, null)) {
             html_remove(tutorial);
           }
