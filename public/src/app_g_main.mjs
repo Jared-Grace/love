@@ -129,7 +129,7 @@ export function app_g_main() {
   }
   each(npcs, lambda16);
   let tutorial = null;
-  function app_g_refresh_outer(game_prefix, div, tiles_path) {
+  function app_g_refresh_outer() {
     tutorial = app_g_refresh(
       div,
       game_prefix,
@@ -143,6 +143,6 @@ export function app_g_main() {
   }
   lambda8();
   function lambda8() {
-    app_g_refresh_outer(game_prefix, div, tiles_path);
+    app_g_refresh_outer();
   }
 }
