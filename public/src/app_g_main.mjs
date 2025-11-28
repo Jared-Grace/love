@@ -246,6 +246,7 @@ export function app_g_main() {
           log_json(player);
           let distance = g_distance(player, coordinates_move_to);
           const away = distance >= 1;
+          log(distance);
           if (away) {
             log("away");
             let properties = ["left", "top"];
