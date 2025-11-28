@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { app_karate_button_back } from "../../../karate_code/public/src/app_karate_button_back.mjs";
@@ -242,6 +243,8 @@ export function app_g_main() {
             html_style_assign(overlay, s);
             let prayer2 = object_property_get(player, "prayer");
             let conversation2 = object_property_get(player, "conversation");
+            if (not(b)) {
+            }
             function lambda21() {
               html_remove(overlay);
             }
