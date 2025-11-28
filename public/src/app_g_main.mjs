@@ -107,6 +107,9 @@ export function app_g_main() {
     names: names_women,
   };
   let names_men = bible_names_men();
+  let male = {
+    names: names_men,
+  };
   let npc_count = 30;
   let npcs = list_take(coordinates, npc_count);
   function lambda16(c) {
