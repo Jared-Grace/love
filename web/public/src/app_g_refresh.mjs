@@ -157,7 +157,7 @@ export function app_g_refresh(
           let conversation2 = object_property_get(prayer2, "conversation");
           if (not(conversation2)) {
             let container = app_karate_container_centered(overlay);
-            html_style_assign(div, {
+            html_style_assign(container, {
               "background-color":
                 app_karate_container_background_color() + "77",
               padding: "0",
