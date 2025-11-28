@@ -1,3 +1,4 @@
+import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
 import { app_g } from "../../../love/public/src/app_g.mjs";
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { app_g_menu_refresh } from "../../../love/public/src/app_g_menu_refresh.mjs";
@@ -210,6 +211,7 @@ export function app_g_main() {
         };
         g_img_square_style(clickable, clicked_coordinates, "click");
         async function on_tile_click() {
+          let value = storage_local_get(app_fn, key);
           if (equal_not(tutorial, null)) {
             html_remove(tutorial);
           }
