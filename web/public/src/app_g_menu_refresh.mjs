@@ -12,7 +12,9 @@ export function app_g_menu_refresh(overlay) {
   let text = emoji_pray() + " Pray";
   function lambda7() {
     html_clear(overlay);
-    function lambda23() {}
+    function lambda23() {
+      app_g_menu_refresh(overlay);
+    }
     let button2 = app_karate_button_back(overlay, lambda23);
     function lambda22() {}
     let component3 = app_karate_button_uncolored(
