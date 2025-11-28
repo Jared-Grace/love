@@ -218,6 +218,11 @@ export function app_g_main() {
             let text = emoji_pray() + " Pray";
             function lambda7() {
               html_clear(overlay);
+              let component3 = app_karate_button_uncolored(
+                div2,
+                text2,
+                function lambda22() {},
+              );
             }
             let button = app_karate_button_uncolored(overlay, text, lambda7);
             return;
