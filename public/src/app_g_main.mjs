@@ -103,6 +103,9 @@ export function app_g_main() {
   let coordinates = list_adder(lambda15);
   list_shuffle(coordinates);
   let names_women = bible_names_women();
+  let female = {
+    names: names_women,
+  };
   let names_men = bible_names_men();
   let npc_count = 30;
   let npcs = list_take(coordinates, npc_count);
