@@ -127,6 +127,7 @@ export function app_g_main() {
     object_property_set(npc, "img", r3);
     let names2 = object_property_get(gender, "names");
     let r5 = list_random_item(names2);
+    object_property_set(npc, "name", r5);
   }
   each_index(npcs, lambda16);
   app_g_refresh(div, game_prefix, player, npcs, tiles_path, coordinates, rows);
