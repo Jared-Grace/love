@@ -1,6 +1,5 @@
+import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
 import { app_g_player } from "../../../love/public/src/app_g_player.mjs";
-import { app_g } from "../../../love/public/src/app_g.mjs";
-import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { app_g_menu_refresh } from "../../../love/public/src/app_g_menu_refresh.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
@@ -138,9 +137,7 @@ export function app_g_main() {
       conversation: false,
     },
   };
-  storage_local_set(app_g, "game", {
-    player,
-  });
+  app_g_player_save(player);
   let right = player_img;
   let filtered = list_without(people, right);
   function lambda15(la4) {
