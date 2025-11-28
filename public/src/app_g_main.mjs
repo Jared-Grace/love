@@ -299,6 +299,7 @@ export function app_g_main() {
               let component2 = app_karate_button_back(overlay, lambda21);
             }
           }
+          app_g_player_save(player);
         }
         html_on_click(clickable, on_tile_click);
       }
