@@ -1798,11 +1798,11 @@ Zur
 Zuriel
 Zurishaddai`;
   let split = string_split_newline(text);
-  function lambda(item) {
+  function string_size_greater_than_1(item) {
     let g = string_size(item) > 1;
     return g;
   }
-  let filtered2 = list_filter(split, lambda);
+  let filtered2 = list_filter(split, string_size_greater_than_1);
   let mapped3 = list_map_split_comma(split);
   let mapped6 = list_map_first(mapped3);
   return mapped6;
