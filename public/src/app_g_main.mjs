@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
@@ -119,10 +120,11 @@ export function app_g_main() {
   let npc_count = 30;
   let npcs = list_take(coordinates, npc_count);
   function lambda16(npc, index) {
+    let r4 = mod(index, gender_count);
+    let gender = list_get(genders, r4);
+    let imgs2 = object_property_get(gender, "imgs");
     let r3 = list_random_item(filtered);
     object_property_set(npc, "img", r3);
-    let r4 = mod(index, gender_count);
-    let item = list_get(list, index2);
   }
   each_index(npcs, lambda16);
   app_g_refresh(div, game_prefix, player, npcs, tiles_path, coordinates, rows);
