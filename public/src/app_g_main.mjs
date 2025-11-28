@@ -277,22 +277,22 @@ export function app_g_main() {
                 " To pray, tap or click on yourself (You glow with white)",
               );
               app_karate_style_control(container);
-              let tutorial = html_div(div);
-              g_img_square_style(tutorial, player, "tutorial");
-              let text = emoji_pray();
-              html_text_set(tutorial, text);
-              let rows = g_rows_count();
-              const square_size = "calc(100vh / " + rows + " * .7)";
-              html_style_assign(tutorial, {
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                textAlign: "center",
-                fontSize: square_size,
-                animation: "upDown 1.25s infinite ease-in-out alternate",
-              });
               function lambda21() {
                 html_remove(overlay);
+                let tutorial = html_div(div);
+                g_img_square_style(tutorial, player, "tutorial");
+                let text = emoji_pray();
+                html_text_set(tutorial, text);
+                let rows = g_rows_count();
+                const square_size = "calc(100vh / " + rows + " * .7)";
+                html_style_assign(tutorial, {
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  textAlign: "center",
+                  fontSize: square_size,
+                  animation: "upDown 1.25s infinite ease-in-out alternate",
+                });
               }
               let component2 = app_karate_button_back(overlay, lambda21);
             }
