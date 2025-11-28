@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
@@ -254,7 +253,6 @@ export function app_g_main() {
               on_transition_begin,
             );
           }
-          log("message");
           let element2 = html_component_element_get(player_img_c);
           element2.scrollIntoView({
             behavior: "smooth",
