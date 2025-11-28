@@ -4,6 +4,6 @@ import { html_style_assign } from "../../../love/public/src/html_style_assign.mj
 export function app_g_button_green_style(component2) {
   marker("1");
   html_style_assign(component2, {
-    "background-color": app_karate_button_background() + "bb",
+    "background-color": app_karate_button_background() + "cc",
   });
 }
