@@ -2,7 +2,7 @@ import { bible_names_text_parse } from "../../../love/public/src/bible_names_tex
 import { marker } from "../../../love/public/src/marker.mjs";
 export function bible_names_women() {
   marker("1");
-  `A
+  let text = `A
 Abi
 Abia or Abiah
 Abigail
