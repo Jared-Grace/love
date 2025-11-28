@@ -212,7 +212,9 @@ export function app_g_main() {
             html_remove(tutorial);
           }
           let distance2 = g_distance(player2, clicked_coordinates);
-          log({distance2});
+          log({
+            distance2,
+          });
           if (equal(distance2, 0)) {
             let overlay = app_g_overlay(div);
             app_g_menu_refresh(overlay);
