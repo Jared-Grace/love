@@ -1,3 +1,4 @@
+import { html_font_san_serif_value } from "../../../love/public/src/html_font_san_serif_value.mjs";
 import { html_document_root } from "../../../love/public/src/html_document_root.mjs";
 import { app_karate_style_control } from "../../../karate_code/public/src/app_karate_style_control.mjs";
 import { app_karate_container_centered } from "../../../karate_code/public/src/app_karate_container_centered.mjs";
@@ -47,8 +48,9 @@ import { html_document_body } from "../../../love/public/src/html_document_body.
 import { marker } from "../../../love/public/src/marker.mjs";
 export function app_g_main() {
   marker("1");
-  let html2 = html_document_root();
-  html_style_set(html, "font-family", value);
+  let html = html_document_root();
+  let style_value = html_font_san_serif_value();
+  html_style_set(html, "font-family", style_value);
   let body = html_document_body();
   html_style_assign(body, {
     margin: "0",
