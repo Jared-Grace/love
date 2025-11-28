@@ -1,3 +1,4 @@
+import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
@@ -168,6 +169,7 @@ export function app_g_refresh(
             function lambda21() {
               html_remove(overlay);
               tutorial = html_div(div);
+              global_function_property_set(app_g_refresh, "tutorial", tutorial);
               g_img_square_style(tutorial, player2, "tutorial");
               let text = emoji_pray();
               html_text_set(tutorial, text);
