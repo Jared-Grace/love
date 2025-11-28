@@ -1,3 +1,4 @@
+import { app_karate_style_control } from "../../../karate_code/public/src/app_karate_style_control.mjs";
 import { app_karate_container_centered } from "../../../karate_code/public/src/app_karate_container_centered.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -250,6 +251,7 @@ export function app_g_main() {
                 container,
                 "You remember that you have not prayed, yet, before your next conversation",
               );
+              app_karate_style_control(component3);
               function lambda21() {
                 html_remove(overlay);
               }
