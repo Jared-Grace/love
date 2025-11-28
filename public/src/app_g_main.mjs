@@ -112,6 +112,7 @@ export function app_g_main() {
     names: names_men,
     imgs: list_without(imgs_women, right),
   };
+  let genders = [male, female];
   let npc_count = 30;
   let npcs = list_take(coordinates, npc_count);
   function lambda16(c) {
