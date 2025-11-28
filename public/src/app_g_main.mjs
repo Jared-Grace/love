@@ -251,7 +251,7 @@ export function app_g_main() {
                 container,
                 "You remember that you have not prayed, yet, before your next conversation",
               );
-              app_karate_style_control(component3);
+              app_karate_style_control(container);
               function lambda21() {
                 html_remove(overlay);
               }
