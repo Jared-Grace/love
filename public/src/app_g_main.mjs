@@ -141,8 +141,5 @@ export function app_g_main() {
       rows,
     );
   }
-  lambda8();
-  function lambda8() {
-    app_g_refresh_outer();
-  }
+  app_g_refresh_outer();
 }
