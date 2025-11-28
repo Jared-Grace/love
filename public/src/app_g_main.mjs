@@ -125,7 +125,10 @@ export function app_g_main() {
     y: 5,
     img: player_img,
     prayer: {
-      conversation: false,
+      conversation: {
+        already: false,
+        reminder: false,
+      },
     },
   };
   let right = player_img;
