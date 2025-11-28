@@ -155,7 +155,8 @@ export function app_g_refresh(
           let prayer2 = object_property_get(player2, "prayer");
           let conversation2 = object_property_get(prayer2, "conversation");
           if (conversation2) {
-            let first = list_single(npcs_matched);
+            let s = list_single(npcs_matched);
+            let name = object_property_get(s, "name");
           } else {
             let container = app_karate_container_centered(overlay);
             html_style_assign(container, {
