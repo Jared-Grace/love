@@ -1,3 +1,4 @@
+import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { html_font_san_serif_value } from "../../../love/public/src/html_font_san_serif_value.mjs";
 import { html_document_root } from "../../../love/public/src/html_document_root.mjs";
@@ -253,10 +254,14 @@ export function app_g_main() {
             let conversation2 = object_property_get(prayer2, "conversation");
             if (not(conversation2)) {
               let container = app_karate_container_centered(overlay);
-              html_text_set(
+              html_p_text(
                 container,
                 emoji_pray() +
                   " You remember that you have not prayed, yet, before your next conversation!",
+              );
+              html_p_text(
+                container,
+                " To pray, tap or click on yourself (You glow with white)",
               );
               app_karate_style_control(container);
               function lambda21() {
