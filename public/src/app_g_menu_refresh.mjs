@@ -1,3 +1,4 @@
+import { app_g_player } from "../../../love/public/src/app_g_player.mjs";
 import { emoji_bow } from "../../../love/public/src/emoji_bow.mjs";
 import { app_karate_button_uncolored } from "../../../karate_code/public/src/app_karate_button_uncolored.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -17,7 +18,9 @@ export function app_g_menu_refresh(overlay) {
       app_g_menu_refresh(overlay);
     }
     let button2 = app_karate_button_back(overlay, lambda23);
-    function lambda22() {}
+    function lambda22() {
+      let player2 = app_g_player();
+    }
     let component3 = app_karate_button_uncolored(
       overlay,
       emoji_bow() +
