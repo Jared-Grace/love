@@ -1,4 +1,4 @@
-import { string_size } from "../../../love/public/src/string_size.mjs";
+import { string_size_greater_than_1 } from "../../../love/public/src/string_size_greater_than_1.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_map_first } from "../../../love/public/src/list_map_first.mjs";
 import { list_map_split_comma } from "../../../love/public/src/list_map_split_comma.mjs";
@@ -1798,12 +1798,8 @@ Zur
 Zuriel
 Zurishaddai`;
   let split = string_split_newline(text);
-  function string_size_greater_than_1(item) {
-    let g = string_size(item) > 1;
-    return g;
-  }
   let filtered2 = list_filter(split, string_size_greater_than_1);
-  let mapped3 = list_map_split_comma(split);
+  let mapped3 = list_map_split_comma(filtered2);
   let mapped6 = list_map_first(mapped3);
   return mapped6;
 }
