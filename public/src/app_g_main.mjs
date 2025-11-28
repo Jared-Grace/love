@@ -220,7 +220,7 @@ export function app_g_main() {
             function lambda7() {
               html_clear(overlay);
               function lambda23() {}
-              let button2 = app_karate_button_back(container2, lambda23);
+              let button2 = app_karate_button_back(overlay, lambda23);
               function lambda22() {}
               let component3 = app_karate_button_uncolored(
                 overlay,
