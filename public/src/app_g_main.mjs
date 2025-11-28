@@ -243,13 +243,13 @@ export function app_g_main() {
           log_json(player);
           object_assign(player, coordinates_move_to);
           log_json(player);
-          let properties = ["left", "top"];
-          function on_transition_begin() {
-            g_img_square_style_position_object(player, player_img_c);
-          }
           let distance = g_distance(player, coordinates_move_to);
           const away = distance >= 1;
           if (away) {
+            let properties = ["left", "top"];
+            function on_transition_begin() {
+              g_img_square_style_position_object(player, player_img_c);
+            }
             await html_on_transitionend(
               properties,
               player_img_c,
