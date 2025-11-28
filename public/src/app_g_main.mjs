@@ -1,3 +1,4 @@
+import { emoji_bow } from "../../../love/public/src/emoji_bow.mjs";
 import { app_karate_button_uncolored } from "../../../karate_code/public/src/app_karate_button_uncolored.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
@@ -221,8 +222,9 @@ export function app_g_main() {
               function lambda22() {}
               let component3 = app_karate_button_uncolored(
                 overlay,
-                emoji_pray() +
-                  " Heavenly Father, please bless this next conversation, in Jesus' name, amen!",
+                emoji_bow() +
+                  " Heavenly Father, please bless this next conversation, in Jesus' name, amen! " +
+                  emoji_pray(),
                 lambda22,
               );
             }
