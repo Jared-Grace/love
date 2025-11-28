@@ -106,12 +106,12 @@ export function app_g_main() {
   let names_women = bible_names_women();
   let female = {
     names: names_women,
-    imgs: list_without(imgs_men, right),
+    imgs: list_without(imgs_women, right),
   };
   let names_men = bible_names_men();
   let male = {
     names: names_men,
-    imgs: list_without(imgs_women, right),
+    imgs: list_without(imgs_men, right),
   };
   let genders = [male, female];
   let gender_count = list_size(genders);
