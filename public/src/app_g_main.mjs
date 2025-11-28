@@ -243,7 +243,7 @@ export function app_g_main() {
             };
             html_style_assign(overlay, s);
             let prayer2 = object_property_get(player, "prayer");
-            let conversation2 = object_property_get(player, "conversation");
+            let conversation2 = object_property_get(prayer2, "conversation");
             if (not(conversation2)) {
               let container = app_karate_container_centered(overlay);
               html_text_set(
