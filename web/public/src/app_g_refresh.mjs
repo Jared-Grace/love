@@ -1,3 +1,4 @@
+import { app_karate_button_uncolored_background_color } from "../../../karate_code/public/src/app_karate_button_uncolored_background_color.mjs";
 import { app_karate_container_background_color } from "../../../love/public/src/app_karate_container_background_color.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
@@ -191,6 +192,10 @@ export function app_g_refresh(
               });
             }
             let component2 = app_karate_button_back(overlay, lambda21);
+            html_style_assign(container, {
+              "background-color":
+                app_karate_button_uncolored_background_color() + "bc",
+            });
           }
         }
         app_g_player_save(player2);
