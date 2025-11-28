@@ -11,7 +11,6 @@ import { app_karate_style_control } from "../../../karate_code/public/src/app_ka
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { app_karate_container_centered } from "../../../karate_code/public/src/app_karate_container_centered.mjs";
-import { not } from "../../../love/public/src/not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 import { html_on_transitionend } from "../../../love/public/src/html_on_transitionend.mjs";
@@ -155,7 +154,8 @@ export function app_g_refresh(
           let overlay = app_g_overlay(div);
           let prayer2 = object_property_get(player2, "prayer");
           let conversation2 = object_property_get(prayer2, "conversation");
-          if (not(conversation2)) {
+          if (conversation2) {
+          } else {
             let container = app_karate_container_centered(overlay);
             html_style_assign(container, {
               "background-color":
