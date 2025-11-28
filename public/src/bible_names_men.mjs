@@ -1799,7 +1799,7 @@ Zuriel
 Zurishaddai`;
   let split = string_split_newline(text);
   function lambda(item) {
-    let size = string_size(item);
+    let size = string_size(item) > 1;
     return size;
   }
   let filtered2 = list_filter(split, lambda);
