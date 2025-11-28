@@ -205,7 +205,8 @@ export function app_g_main() {
         async function on_tile_click() {
           let distance2 = g_distance(player, clicked_coordinates);
           if (equal(distance2, 0)) {
-            let overlay = app_g_overlay(div);$r
+            let overlay = app_g_overlay(div);
+            return;
           }
           if (equal_not(tutorial, null)) {
             html_remove(tutorial);
