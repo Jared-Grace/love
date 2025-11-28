@@ -128,16 +128,5 @@ export function app_g_main() {
     object_property_set(c, "img", r3);
   }
   each(npcs, lambda16);
-  function app_g_refresh_outer() {
-    app_g_refresh(
-      div,
-      game_prefix,
-      player,
-      npcs,
-      tiles_path,
-      coordinates,
-      rows,
-    );
-  }
-  app_g_refresh_outer();
+  app_g_refresh(div, game_prefix, player, npcs, tiles_path, coordinates, rows);
 }
