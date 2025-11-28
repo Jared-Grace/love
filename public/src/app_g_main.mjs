@@ -236,12 +236,12 @@ export function app_g_main() {
           } else {
             coordinates_move_to = clicked_coordinates;
           }
-          let distance = g_distance(player, coordinates_move_to);
           object_assign(player, coordinates_move_to);
           let properties = ["left", "top"];
           function on_transition_begin() {
             g_img_square_style_position_object(player, player_img_c);
           }
+          let distance = g_distance(player, coordinates_move_to);
           if (distance >= 1) {
             await html_on_transitionend(
               properties,
