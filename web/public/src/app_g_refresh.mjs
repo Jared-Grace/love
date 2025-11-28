@@ -133,7 +133,6 @@ export function app_g_refresh(
         object_assign(player2, coordinates_move_to);
         const away = distance >= 1;
         if (away) {
-          log("away");
           let properties = ["left", "top"];
           function on_transition_begin() {
             g_img_square_style_position_object(player2, player_img_c);
