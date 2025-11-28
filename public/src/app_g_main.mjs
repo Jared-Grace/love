@@ -102,8 +102,8 @@ export function app_g_main() {
   }
   let coordinates = list_adder(lambda15);
   list_shuffle(coordinates);
-  let mapped6 = bible_names_women();
-  let mapped62 = bible_names_men();
+  let names_women = bible_names_women();
+  let names_men = bible_names_men();
   let npc_count = 30;
   let npcs = list_take(coordinates, npc_count);
   function lambda16(c) {
