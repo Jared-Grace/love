@@ -204,7 +204,7 @@ export function app_g_main() {
         g_img_square_style(clickable, clicked_coordinates, "click");
         async function on_tile_click() {
           let distance2 = g_distance(player, clicked_coordinates);
-          if (equal(left2, right2)) {
+          if (equal(distance2, 0)) {
           }
           if (equal_not(tutorial, null)) {
             html_remove(tutorial);
