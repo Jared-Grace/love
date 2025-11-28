@@ -206,6 +206,24 @@ export function app_g_main() {
           let distance2 = g_distance(player, clicked_coordinates);
           if (equal(distance2, 0)) {
             let overlay = app_g_overlay(div);
+            function lambda21() {
+              html_remove(overlay);
+              tutorial = html_div(div);
+              g_img_square_style(tutorial, player, "tutorial");
+              let text = emoji_pray();
+              html_text_set(tutorial, text);
+              let rows = g_rows_count();
+              const square_size = "calc(100vh / " + rows + " * .7)";
+              html_style_assign(tutorial, {
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+                fontSize: square_size,
+                animation: "upDown 1.25s infinite ease-in-out alternate",
+              });
+            }
+            let component2 = app_karate_button_back(overlay, lambda21);
             return;
           }
           if (equal_not(tutorial, null)) {
