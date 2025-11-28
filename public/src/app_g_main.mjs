@@ -254,7 +254,7 @@ export function app_g_main() {
               on_transition_begin,
             );
           }
-          log(message);
+          log('message');
           let element2 = html_component_element_get(player_img_c);
           element2.scrollIntoView({
             behavior: "smooth",
