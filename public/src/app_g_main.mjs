@@ -276,7 +276,14 @@ export function app_g_main() {
               g_img_square_style(tutorial, player, "tutorial");
               let text = emoji_pray();
               html_text_set(tutorial, text);
-              html_style_assign(b, s2);
+              html_style_assign(tutorial, {
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+                width: "100%",
+                height: "100%",
+              });
               function lambda21() {
                 html_remove(overlay);
               }
