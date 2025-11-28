@@ -105,12 +105,12 @@ export function app_g_main() {
   let names_women = bible_names_women();
   let female = {
     names: names_women,
-    imgs: list_without(people, right),
+    imgs: list_without(imgs_men, right),
   };
   let names_men = bible_names_men();
   let male = {
     names: names_men,
-    imgs: list_without(people, right),
+    imgs: list_without(imgs_women, right),
   };
   let npc_count = 30;
   let npcs = list_take(coordinates, npc_count);
