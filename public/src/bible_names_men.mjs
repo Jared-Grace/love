@@ -1,1 +1,4 @@
-export function bible_names_men() {}
+import { marker } from "../../../love/public/src/marker.mjs";
+export function bible_names_men() {
+  marker("1");
+}
