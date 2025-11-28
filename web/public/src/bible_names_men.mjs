@@ -1793,5 +1793,5 @@ Zuph
 Zur
 Zuriel
 Zurishaddai`;
-  let split = string_split_newline(list);
+  let split = string_split_newline(text);
 }
