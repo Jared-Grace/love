@@ -241,6 +241,7 @@ export function app_g_main() {
             };
             html_style_assign(overlay, s);
             let prayer2 = object_property_get(player, "prayer");
+            let conversation2 = object_property_get(player, "conversation");
             function lambda21() {
               html_remove(overlay);
             }
