@@ -1,3 +1,4 @@
+import { g_tiles_grasses } from "../../../love/public/src/g_tiles_grasses.mjs";
 import { app_g_refresh } from "../../../love/public/src/app_g_refresh.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
 import { html_font_san_serif_value } from "../../../love/public/src/html_font_san_serif_value.mjs";
@@ -35,25 +36,7 @@ export function app_g_main() {
   let path_prefix = "..\\";
   const game_prefix = g_folder_img(path_prefix);
   const tiles_path = g_folder_tiles(path_prefix);
-  let grasses = [
-    "cyan_grass",
-    "dustgrass",
-    "grass",
-    "grass_cold",
-    "grass_dry",
-    "grass_nov",
-    "grass_oct",
-    "grass_sep",
-    "grass_snowy",
-    "junglegrass",
-    "monsoongrass",
-    "swamp_grass_mar",
-    "swamp_grass_nov",
-    "swamp_grass_oct",
-    "swamp_grass_sep",
-    "swamp_grass_snowy",
-    "yellow_grass",
-  ];
+  let grasses = g_tiles_grasses();
   list_shuffle(grasses);
   let taken = list_take(grasses, 3);
   function lambda5(la) {
