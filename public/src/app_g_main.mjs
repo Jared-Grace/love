@@ -216,7 +216,7 @@ export function app_g_main() {
             }
             let component2 = app_karate_button_back(overlay, lambda21);
             let text = emoji_pray() + " Pray";
-            let button = app_karate_button_uncolored(overlay, text, lambda);
+            let button = app_karate_button_uncolored(overlay, text, () => {});
             return;
           }
           function lambda17(npc) {
