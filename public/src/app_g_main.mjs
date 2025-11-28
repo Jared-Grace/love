@@ -256,7 +256,7 @@ export function app_g_main() {
               html_text_set(
                 container,
                 emoji_pray() +
-                  " You remember that you have not prayed, yet, before your next conversation",
+                  " You remember that you have not prayed, yet, before your next conversation!",
               );
               app_karate_style_control(container);
               function lambda21() {
