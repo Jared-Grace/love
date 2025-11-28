@@ -1,3 +1,4 @@
+import { string_split_newline } from "../../../love/public/src/string_split_newline.mjs";
 export function bible_names_men() {
   let text = `A
 Aaron
@@ -1792,4 +1793,5 @@ Zuph
 Zur
 Zuriel
 Zurishaddai`;
+  let split = string_split_newline(list);
 }
