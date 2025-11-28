@@ -117,6 +117,7 @@ export function app_g_main() {
   function lambda16(npc, index) {
     let r3 = list_random_item(filtered);
     object_property_set(npc, "img", r3);
+    mod;
   }
   each_index(npcs, lambda16);
   app_g_refresh(div, game_prefix, player, npcs, tiles_path, coordinates, rows);
