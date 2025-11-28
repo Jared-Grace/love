@@ -1,3 +1,4 @@
+import { g_rows_count } from "../../../love/public/src/g_rows_count.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { html_font_san_serif_value } from "../../../love/public/src/html_font_san_serif_value.mjs";
@@ -276,11 +277,14 @@ export function app_g_main() {
               g_img_square_style(tutorial, player, "tutorial");
               let text = emoji_pray();
               html_text_set(tutorial, text);
+              let rows = g_rows_count();
+              const square_size = "calc(100vh / " + rows + ")";
               html_style_assign(tutorial, {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 textAlign: "center",
+                font_size: square_size,
               });
               function lambda21() {
                 html_remove(overlay);
