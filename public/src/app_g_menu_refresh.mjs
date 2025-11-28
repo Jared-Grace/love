@@ -30,13 +30,11 @@ export function app_g_menu_refresh(overlay) {
       app_g_player_save(player);
       close();
     }
-    let b = app_karate_button_green(
-      overlay,
+    const text =
       emoji_bow() +
-        " Heavenly Father, please bless this next conversation, in Jesus' name, amen! " +
-        emoji_pray(),
-      lambda22,
-    );
+      " Heavenly Father, please bless this next conversation, in Jesus' name, amen! " +
+      emoji_pray();
+    let b = app_karate_button_green(overlay, text, lambda22);
     app_g_button_green_style(b);
   }
   app_g_button_uncolored(overlay, text, lambda7);
