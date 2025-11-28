@@ -9,8 +9,6 @@ import { each } from "../../../love/public/src/each.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
-import { html_component_wrap } from "../../../love/public/src/html_component_wrap.mjs";
-import { html_on } from "../../../love/public/src/html_on.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
@@ -89,8 +87,6 @@ export function app_g_main() {
     each_range(row_count, lambda6);
   }
   let rows = list_adder(lambda10);
-  let v = html_component_wrap(window);
-  html_on(v, "resize", lambda8);
   let r2 = range_1(10);
   let men = list_map_combine_left("man_", r2);
   let women = list_map_combine_left("woman_", r2);
