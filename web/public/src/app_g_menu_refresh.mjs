@@ -5,6 +5,7 @@ import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { app_karate_button_back } from "../../../karate_code/public/src/app_karate_button_back.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 export function app_g_menu_refresh(overlay) {
+  html_clear(overlay);
   function lambda21() {
     html_remove(overlay);
   }
