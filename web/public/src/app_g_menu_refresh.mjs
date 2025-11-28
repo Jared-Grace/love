@@ -26,6 +26,7 @@ export function app_g_menu_refresh(overlay) {
       let prayer = object_property_get(player, "prayer");
       object_property_set(prayer, "conversation", true);
       app_g_player_save(player);
+      html_remove(overlay);
     }
     let component3 = app_karate_button_uncolored(
       overlay,
