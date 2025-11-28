@@ -128,9 +128,8 @@ export function app_g_main() {
     object_property_set(c, "img", r3);
   }
   each(npcs, lambda16);
-  let tutorial = null;
   function app_g_refresh_outer() {
-    tutorial = app_g_refresh(
+    app_g_refresh(
       div,
       game_prefix,
       player,
