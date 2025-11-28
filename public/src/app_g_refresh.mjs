@@ -1,11 +1,10 @@
-import { app_g_button_style } from "../../../love/public/src/app_g_button_style.mjs";
+import { app_g_button_back } from "../../../love/public/src/app_g_button_back.mjs";
 import { app_karate_container_background_color } from "../../../love/public/src/app_karate_container_background_color.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
-import { app_karate_button_back } from "../../../karate_code/public/src/app_karate_button_back.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { g_rows_count } from "../../../love/public/src/g_rows_count.mjs";
 import { app_karate_style_control } from "../../../karate_code/public/src/app_karate_style_control.mjs";
@@ -191,8 +190,7 @@ export function app_g_refresh(
                 animation: "upDown 1.25s infinite ease-in-out alternate",
               });
             }
-            let component2 = app_karate_button_back(overlay, lambda21);
-            app_g_button_style(component2);
+            app_g_button_back(overlay, lambda21);
           }
         }
         app_g_player_save(player2);
