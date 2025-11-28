@@ -189,7 +189,14 @@ export function app_g_main() {
         const src = tiles_path + r + ".png";
         g_img_square(div, src, x, y, "tile");
         let clickable = html_div(div);
-        g_img_square_style(clickable, {x, y}, "click");
+        g_img_square_style(
+          clickable,
+          {
+            x,
+            y,
+          },
+          "click",
+        );
         async function lambda7() {
           const clicked_coordinates = {
             x,
