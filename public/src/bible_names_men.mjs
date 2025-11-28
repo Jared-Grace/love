@@ -1799,8 +1799,8 @@ Zuriel
 Zurishaddai`;
   let split = string_split_newline(text);
   function lambda(item) {
-    let size = string_size(item) > 1;
-    return size;
+    let g = string_size(item) > 1;
+    return g;
   }
   let filtered2 = list_filter(split, lambda);
   let mapped3 = list_map_split_comma(split);
