@@ -289,7 +289,7 @@ export function app_g_main() {
                 alignItems: "center",
                 textAlign: "center",
                 fontSize: square_size,
-                animation: "upDown 1.5s infinite ease-in-out alternate",
+                animation: "upDown 1.25s infinite ease-in-out alternate",
               });
               function lambda21() {
                 html_remove(overlay);
