@@ -1,5 +1,5 @@
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
-import { app_g_player } from "../../../love/public/src/app_g_player.mjs";
+import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { app_g_menu_refresh } from "../../../love/public/src/app_g_menu_refresh.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
@@ -208,7 +208,7 @@ export function app_g_main() {
         };
         g_img_square_style(clickable, clicked_coordinates, "click");
         async function on_tile_click() {
-          let player2 = app_g_player();
+          let player2 = app_g_player_get();
           if (equal_not(tutorial, null)) {
             html_remove(tutorial);
           }
