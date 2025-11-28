@@ -1,4 +1,4 @@
-import { list_map } from "../../../love/public/src/list_map.mjs";
+import { list_map_first } from "../../../love/public/src/list_map_first.mjs";
 import { list_map_split_comma } from "../../../love/public/src/list_map_split_comma.mjs";
 import { string_split_newline } from "../../../love/public/src/string_split_newline.mjs";
 export function bible_names_men() {
@@ -1797,6 +1797,5 @@ Zuriel
 Zurishaddai`;
   let split = string_split_newline(text);
   let mapped3 = list_map_split_comma(split);
-  function lambda(item) {}
-  let mapped = list_map(list, lambda);
+  let mapped6 = list_map_first(mapped4);
 }
