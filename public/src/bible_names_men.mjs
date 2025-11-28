@@ -1797,5 +1797,6 @@ Zuriel
 Zurishaddai`;
   let split = string_split_newline(text);
   let mapped3 = list_map_split_comma(split);
-  let mapped6 = list_map_first(mapped4);
+  let mapped6 = list_map_first(mapped3);
+  return mapped6;
 }
