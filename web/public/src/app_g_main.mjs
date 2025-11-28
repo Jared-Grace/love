@@ -220,8 +220,8 @@ export function app_g_main() {
               html_clear(overlay);
               function lambda22() {}
               let component3 = app_karate_button_uncolored(
-                div2,
-                text2,
+                overlay,
+                "Heavenly Father, please bless this next conversation, in Jesus' name, amen!",
                 lambda22,
               );
             }
