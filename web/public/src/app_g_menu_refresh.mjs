@@ -10,10 +10,10 @@ import { app_karate_button_back } from "../../../karate_code/public/src/app_kara
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 export function app_g_menu_refresh(overlay) {
   html_clear(overlay);
-  function lambda21() {
+  function close() {
     html_remove(overlay);
   }
-  let component2 = app_karate_button_back(overlay, lambda21);
+  let component2 = app_karate_button_back(overlay, close);
   let text = emoji_pray() + " Pray";
   function lambda7() {
     html_clear(overlay);
@@ -26,7 +26,7 @@ export function app_g_menu_refresh(overlay) {
       let prayer = object_property_get(player, "prayer");
       object_property_set(prayer, "conversation", true);
       app_g_player_save(player);
-      html_remove(overlay);
+      close();
     }
     let component3 = app_karate_button_uncolored(
       overlay,
