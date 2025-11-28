@@ -216,7 +216,7 @@ export function app_g_main() {
           if (equal_not(tutorial, null)) {
             html_remove(tutorial);
           }
-          let distance2 = g_distance(player, clicked_coordinates);
+          let distance2 = g_distance(player2, clicked_coordinates);
           if (equal(distance2, 0)) {
             let overlay = app_g_overlay(div);
             app_g_menu_refresh(overlay);
@@ -238,7 +238,7 @@ export function app_g_main() {
             let filtered3 = list_filter(coordinates, lambda18);
             list_shuffle(filtered3);
             function lambda19(item3) {
-              let distance = g_distance(player, item3);
+              let distance = g_distance(player2, item3);
               return distance;
             }
             list_sort_number_mapper(filtered3, lambda19);
@@ -246,14 +246,14 @@ export function app_g_main() {
           } else {
             coordinates_move_to = clicked_coordinates;
           }
-          let distance = g_distance(player, coordinates_move_to);
-          object_assign(player, coordinates_move_to);
+          let distance = g_distance(player2, coordinates_move_to);
+          object_assign(player2, coordinates_move_to);
           const away = distance >= 1;
           if (away) {
             log("away");
             let properties = ["left", "top"];
             function on_transition_begin() {
-              g_img_square_style_position_object(player, player_img_c);
+              g_img_square_style_position_object(player2, player_img_c);
             }
             await html_on_transitionend(
               properties,
@@ -269,7 +269,7 @@ export function app_g_main() {
           });
           if (e2) {
             let overlay = app_g_overlay(div);
-            let prayer2 = object_property_get(player, "prayer");
+            let prayer2 = object_property_get(player2, "prayer");
             let conversation2 = object_property_get(prayer2, "conversation");
             if (not(conversation2)) {
               let container = app_karate_container_centered(overlay);
@@ -286,7 +286,7 @@ export function app_g_main() {
               function lambda21() {
                 html_remove(overlay);
                 tutorial = html_div(div);
-                g_img_square_style(tutorial, player, "tutorial");
+                g_img_square_style(tutorial, player2, "tutorial");
                 let text = emoji_pray();
                 html_text_set(tutorial, text);
                 let rows = g_rows_count();
