@@ -198,6 +198,6 @@ Zibiah (Tsibiah)
 Zillah
 Zilpah
 Zipporah`;
-  let mapped6 = bible_names_text_parse(text);
-  return mapped6;
+  let names_women = bible_names_text_parse(text);
+  return names_women;
 }
