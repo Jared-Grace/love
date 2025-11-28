@@ -1,3 +1,4 @@
+import { list_map_split_comma } from "../../../love/public/src/list_map_split_comma.mjs";
 import { string_split_newline } from "../../../love/public/src/string_split_newline.mjs";
 export function bible_names_men() {
   let text = `A
@@ -1794,4 +1795,5 @@ Zur
 Zuriel
 Zurishaddai`;
   let split = string_split_newline(text);
+  let mapped3 = list_map_split_comma(mapped2);
 }
