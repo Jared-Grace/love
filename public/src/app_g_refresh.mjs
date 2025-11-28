@@ -1,3 +1,4 @@
+import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
@@ -89,6 +90,7 @@ export function app_g_refresh(
       };
       g_img_square_style(clickable, clicked_coordinates, "click");
       async function on_tile_click() {
+        let value = global_function_property_get(fn, property_name);
         let player2 = app_g_player_get();
         if (equal_not(tutorial, null)) {
           html_remove(tutorial);
