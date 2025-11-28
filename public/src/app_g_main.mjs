@@ -1,3 +1,5 @@
+import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
+import { equal } from "../../../love/public/src/equal.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { g_rows_count } from "../../../love/public/src/g_rows_count.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
@@ -10,7 +12,6 @@ import { not } from "../../../love/public/src/not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { app_karate_button_back } from "../../../karate_code/public/src/app_karate_button_back.mjs";
-import { g_z } from "../../../love/public/src/g_z.mjs";
 import { html_on_transitionend } from "../../../love/public/src/html_on_transitionend.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
@@ -196,22 +197,38 @@ export function app_g_main() {
         const src = tiles_path + r + ".png";
         g_img_square(div, src, x, y, "tile");
         let clickable = html_div(div);
-        g_img_square_style(
-          clickable,
-          {
-            x,
-            y,
-          },
-          "click",
-        );
+        const clicked_coordinates = {
+          x,
+          y,
+        };
+        g_img_square_style(clickable, clicked_coordinates, "click");
         async function on_tile_click() {
+          let distance2 = g_distance(player, clicked_coordinates);
+          if (equal(distance2, 0)) {
+            let overlay = app_g_overlay(div);
+            function lambda21() {
+              html_remove(overlay);
+              tutorial = html_div(div);
+              g_img_square_style(tutorial, player, "tutorial");
+              let text = emoji_pray();
+              html_text_set(tutorial, text);
+              let rows = g_rows_count();
+              const square_size = "calc(100vh / " + rows + " * .7)";
+              html_style_assign(tutorial, {
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+                fontSize: square_size,
+                animation: "upDown 1.25s infinite ease-in-out alternate",
+              });
+            }
+            let component2 = app_karate_button_back(overlay, lambda21);
+            return;
+          }
           if (equal_not(tutorial, null)) {
             html_remove(tutorial);
           }
-          const clicked_coordinates = {
-            x,
-            y,
-          };
           function lambda17(npc) {
             let e = object_includes(npc, clicked_coordinates);
             return e;
@@ -257,18 +274,7 @@ export function app_g_main() {
             inline: "center",
           });
           if (e2) {
-            let overlay = html_div(div);
-            let s = {
-              position: "fixed",
-              top: "0",
-              left: "0",
-              width: "100vw",
-              height: "100vh",
-              padding: "1vw",
-              background: "rgba(0,0,0,0.4)",
-              "z-index": g_z("overlay"),
-            };
-            html_style_assign(overlay, s);
+            let overlay = app_g_overlay(div);
             let prayer2 = object_property_get(player, "prayer");
             let conversation2 = object_property_get(prayer2, "conversation");
             if (not(conversation2)) {
