@@ -284,7 +284,7 @@ export function app_g_main() {
                 justifyContent: "center",
                 alignItems: "center",
                 textAlign: "center",
-                font_size: square_size,
+                fontSize: square_size,
               });
               function lambda21() {
                 html_remove(overlay);
