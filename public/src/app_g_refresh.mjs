@@ -194,7 +194,7 @@ export function app_g_refresh(
             let component2 = app_karate_button_back(overlay, lambda21);
             html_style_assign(component2, {
               "background-color":
-                app_karate_button_uncolored_background_color() + "bc",
+                app_karate_button_uncolored_background_color() + "ee",
             });
           }
         }
