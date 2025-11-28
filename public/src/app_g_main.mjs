@@ -254,7 +254,8 @@ export function app_g_main() {
               let container = app_karate_container_centered(overlay);
               html_text_set(
                 container,
-                "You remember that you have not prayed, yet, before your next conversation",
+                emoji_prayer() +
+                  " You remember that you have not prayed, yet, before your next conversation",
               );
               app_karate_style_control(container);
               function lambda21() {
