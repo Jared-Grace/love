@@ -1,3 +1,4 @@
+import { list_single } from "../../../love/public/src/list_single.mjs";
 import { app_g_button_back } from "../../../love/public/src/app_g_button_back.mjs";
 import { app_karate_container_background_color } from "../../../love/public/src/app_karate_container_background_color.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
@@ -154,7 +155,7 @@ export function app_g_refresh(
           let prayer2 = object_property_get(player2, "prayer");
           let conversation2 = object_property_get(prayer2, "conversation");
           if (conversation2) {
-            let first = list_first(npcs_matched);
+            let first = list_single(npcs_matched);
           } else {
             let container = app_karate_container_centered(overlay);
             html_style_assign(container, {
