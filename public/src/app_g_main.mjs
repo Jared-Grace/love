@@ -278,7 +278,7 @@ export function app_g_main() {
               let text = emoji_pray();
               html_text_set(tutorial, text);
               let rows = g_rows_count();
-              const square_size = "calc(100vh / " + rows + " * .8)";
+              const square_size = "calc(100vh / " + rows + " * .7)";
               html_style_assign(tutorial, {
                 display: "flex",
                 justifyContent: "center",
