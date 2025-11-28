@@ -206,7 +206,7 @@ export function app_g_main() {
         );
         async function on_tile_click() {
           if (equal_not(tutorial, null)) {
-            html_remove(component3);
+            html_remove(tutorial);
           }
           const clicked_coordinates = {
             x,
