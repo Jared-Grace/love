@@ -123,7 +123,7 @@ export function app_g_main() {
     let r4 = mod(index, gender_count);
     let gender = list_get(genders, r4);
     let imgs2 = object_property_get(gender, "imgs");
-    let r3 = list_random_item(filtered);
+    let r3 = list_random_item(imgs2);
     object_property_set(npc, "img", r3);
   }
   each_index(npcs, lambda16);
