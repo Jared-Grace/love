@@ -273,14 +273,7 @@ export function app_g_main() {
               );
               app_karate_style_control(container);
               let clickable = html_div(div);
-              g_img_square_style(
-                clickable,
-                {
-                  x,
-                  y,
-                },
-                "tutorial",
-              );
+              g_img_square_style(clickable, player, "tutorial");
               let text = emoji_pray();
               html_text_set(clickable, text);
               function lambda21() {
