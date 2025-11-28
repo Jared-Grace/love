@@ -1,4 +1,4 @@
-import { app_g_button_style } from "../../../love/public/src/app_g_button_style.mjs";
+import { app_g_button_uncolored } from "../../../love/public/src/app_g_button_uncolored.mjs";
 import { app_g_button_back } from "../../../love/public/src/app_g_button_back.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -37,6 +37,5 @@ export function app_g_menu_refresh(overlay) {
       lambda22,
     );
   }
-  let button = app_karate_button_uncolored(overlay, text, lambda7);
-  app_g_button_style(button);
+  app_g_button_uncolored(overlay, text, lambda7);
 }
