@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { log_json } from "../../../love/public/src/log_json.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -246,6 +247,7 @@ export function app_g_main() {
           let distance = g_distance(player, coordinates_move_to);
           const away = distance >= 1;
           if (away) {
+            log("away");
             let properties = ["left", "top"];
             function on_transition_begin() {
               g_img_square_style_position_object(player, player_img_c);
