@@ -1793,6 +1793,6 @@ Zuph
 Zur
 Zuriel
 Zurishaddai`;
-  let mapped6 = bible_names_text_parse(text);
-  return mapped6;
+  let names_men = bible_names_text_parse(text);
+  return names_men;
 }
