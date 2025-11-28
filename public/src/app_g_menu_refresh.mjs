@@ -1,3 +1,4 @@
+import { app_karate_button_green } from "../../../karate_code/public/src/app_karate_button_green.mjs";
 import { app_g_button_uncolored } from "../../../love/public/src/app_g_button_uncolored.mjs";
 import { app_g_button_back } from "../../../love/public/src/app_g_button_back.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -28,7 +29,7 @@ export function app_g_menu_refresh(overlay) {
       app_g_player_save(player);
       close();
     }
-    app_g_button_uncolored(
+    let b = app_karate_button_green(
       overlay,
       emoji_bow() +
         " Heavenly Father, please bless this next conversation, in Jesus' name, amen! " +
