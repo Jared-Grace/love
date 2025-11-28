@@ -204,6 +204,9 @@ export function app_g_main() {
         };
         g_img_square_style(clickable, clicked_coordinates, "click");
         async function on_tile_click() {
+          if (equal_not(tutorial, null)) {
+            html_remove(tutorial);
+          }
           let distance2 = g_distance(player, clicked_coordinates);
           if (equal(distance2, 0)) {
             let overlay = app_g_overlay(div);
@@ -212,9 +215,6 @@ export function app_g_main() {
             }
             let component2 = app_karate_button_back(overlay, lambda21);
             return;
-          }
-          if (equal_not(tutorial, null)) {
-            html_remove(tutorial);
           }
           function lambda17(npc) {
             let e = object_includes(npc, clicked_coordinates);
