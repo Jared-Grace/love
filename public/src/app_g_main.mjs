@@ -174,6 +174,10 @@ export function app_g_main() {
       drop-shadow(0 0 12px rgba(255,255,255,0.9))
       drop-shadow(0 0 24px rgba(255,255,255,0.7)); 
   }
+}
+  @keyframes upDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); } /* move up 10px */
 }`,
     );
     html_style_set(
