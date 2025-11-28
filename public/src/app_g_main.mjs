@@ -265,6 +265,8 @@ export function app_g_main() {
                 " To pray, tap or click on yourself (You glow with white)",
               );
               app_karate_style_control(container);
+              let clickable = html_div(div);
+              g_img_square_style(clickable, x, y, "click");
               function lambda21() {
                 html_remove(overlay);
               }
