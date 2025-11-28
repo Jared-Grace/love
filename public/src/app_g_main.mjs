@@ -1,3 +1,4 @@
+import { list_size } from "../../../love/public/src/list_size.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
 import { bible_names_men } from "../../../love/public/src/bible_names_men.mjs";
 import { bible_names_women } from "../../../love/public/src/bible_names_women.mjs";
@@ -113,12 +114,13 @@ export function app_g_main() {
     imgs: list_without(imgs_women, right),
   };
   let genders = [male, female];
+  let size = list_size(list);
   let npc_count = 30;
   let npcs = list_take(coordinates, npc_count);
   function lambda16(npc, index) {
     let r3 = list_random_item(filtered);
     object_property_set(npc, "img", r3);
-    let r4 = mod(n, m);
+    let r4 = mod(index, m);
   }
   each_index(npcs, lambda16);
   app_g_refresh(div, game_prefix, player, npcs, tiles_path, coordinates, rows);
