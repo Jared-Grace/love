@@ -109,8 +109,8 @@ export function app_g_refresh(
           let e = object_includes(npc, clicked_coordinates);
           return e;
         }
-        let filtered2 = list_filter(npcs, lambda17);
-        let e2 = list_empty_not_is(filtered2);
+        let npcs_matched = list_filter(npcs, lambda17);
+        let e2 = list_empty_not_is(npcs_matched);
         let coordinates_move_to = null;
         if (e2) {
           function lambda18(item) {
@@ -154,6 +154,7 @@ export function app_g_refresh(
           let prayer2 = object_property_get(player2, "prayer");
           let conversation2 = object_property_get(prayer2, "conversation");
           if (conversation2) {
+            npc;
           } else {
             let container = app_karate_container_centered(overlay);
             html_style_assign(container, {
