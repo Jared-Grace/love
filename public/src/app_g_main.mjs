@@ -196,22 +196,15 @@ export function app_g_main() {
         const src = tiles_path + r + ".png";
         g_img_square(div, src, x, y, "tile");
         let clickable = html_div(div);
-        g_img_square_style(
-          clickable,
-          {
-            x,
-            y,
-          },
-          "click",
-        );
+        const clicked_coordinates = {
+          x,
+          y,
+        };
+        g_img_square_style(clickable, clicked_coordinates, "click");
         async function on_tile_click() {
           if (equal_not(tutorial, null)) {
             html_remove(tutorial);
           }
-          const clicked_coordinates = {
-            x,
-            y,
-          };
           function lambda17(npc) {
             let e = object_includes(npc, clicked_coordinates);
             return e;
