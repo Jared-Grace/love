@@ -1,3 +1,4 @@
+import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { g_rows_count } from "../../../love/public/src/g_rows_count.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
@@ -205,7 +206,8 @@ export function app_g_main() {
         );
         async function on_tile_click() {
           tutorial;
-          $inen;
+          if (equal_not(left2, right2)) {
+          }
           const clicked_coordinates = {
             x,
             y,
