@@ -1,3 +1,4 @@
+import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { html_font_san_serif_value } from "../../../love/public/src/html_font_san_serif_value.mjs";
 import { html_document_root } from "../../../love/public/src/html_document_root.mjs";
 import { app_karate_style_control } from "../../../karate_code/public/src/app_karate_style_control.mjs";
