@@ -73,10 +73,10 @@ export function app_g_main() {
   }
   let rows = list_adder(lambda10);
   let r2 = range_1(10);
-  let men = list_map_combine_left("man_", r2);
-  let women = list_map_combine_left("woman_", r2);
-  let people = list_concat(women, men);
-  const player_img = list_random_item(men);
+  let imgs_men = list_map_combine_left("man_", r2);
+  let imgs_women = list_map_combine_left("woman_", r2);
+  let people = list_concat(imgs_women, imgs_men);
+  const player_img = list_random_item(imgs_men);
   let player = {
     x: 5,
     y: 5,
@@ -105,6 +105,7 @@ export function app_g_main() {
   let names_women = bible_names_women();
   let female = {
     names: names_women,
+    imgs: list_without(people, right),
   };
   let names_men = bible_names_men();
   let male = {
