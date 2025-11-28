@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
@@ -239,6 +240,7 @@ export function app_g_main() {
           } else {
             coordinates_move_to = clicked_coordinates;
           }
+          log(message);
           object_assign(player, coordinates_move_to);
           let properties = ["left", "top"];
           function on_transition_begin() {
