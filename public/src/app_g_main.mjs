@@ -221,7 +221,8 @@ export function app_g_main() {
               function lambda22() {}
               let component3 = app_karate_button_uncolored(
                 overlay,
-                "Heavenly Father, please bless this next conversation, in Jesus' name, amen!",
+                emoji_pray() +
+                  " Heavenly Father, please bless this next conversation, in Jesus' name, amen!",
                 lambda22,
               );
             }
