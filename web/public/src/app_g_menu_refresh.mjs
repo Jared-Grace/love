@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
@@ -23,7 +24,7 @@ export function app_g_menu_refresh(overlay) {
     function lambda22() {
       let player = app_g_player_get();
       let prayer = object_property_get(player, "prayer");
-      let conversation = object_property_get(prayer, "conversation");
+      object_property_set(prayer, "conversation", true);
       app_g_player_save(player);
     }
     let component3 = app_karate_button_uncolored(
