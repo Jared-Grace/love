@@ -1,6 +1,6 @@
 import { marker } from "../../../love/public/src/marker.mjs";
-export function mod(left, right) {
+export function mod(n, m) {
   marker("1");
-  const sum = left + right;
-  return sum;
+  const r = n % m;
+  return r;
 }
