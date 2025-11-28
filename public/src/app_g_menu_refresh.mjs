@@ -19,7 +19,7 @@ export function app_g_menu_refresh(overlay) {
     }
     let button2 = app_karate_button_back(overlay, lambda23);
     function lambda22() {
-      let player2 = app_g_player_get();
+      let player = app_g_player_get();
     }
     let component3 = app_karate_button_uncolored(
       overlay,
