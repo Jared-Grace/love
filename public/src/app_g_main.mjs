@@ -1,3 +1,4 @@
+import { bible_names_women } from "../../../love/public/src/bible_names_women.mjs";
 import { g_tiles_grasses } from "../../../love/public/src/g_tiles_grasses.mjs";
 import { app_g_refresh } from "../../../love/public/src/app_g_refresh.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
@@ -100,6 +101,7 @@ export function app_g_main() {
   }
   let coordinates = list_adder(lambda15);
   list_shuffle(coordinates);
+  let mapped6 = bible_names_women();
   let npc_count = 30;
   let npcs = list_take(coordinates, npc_count);
   function lambda16(c) {
