@@ -242,7 +242,8 @@ export function app_g_main() {
             g_img_square_style_position_object(player, player_img_c);
           }
           let distance = g_distance(player, coordinates_move_to);
-          if (distance >= 1) {
+          const away = distance >= 1;
+          if (away) {
             await html_on_transitionend(
               properties,
               player_img_c,
