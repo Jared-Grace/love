@@ -1,3 +1,4 @@
+import { app_karate_button_uncolored } from "../../../karate_code/public/src/app_karate_button_uncolored.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -214,6 +215,8 @@ export function app_g_main() {
               html_remove(overlay);
             }
             let component2 = app_karate_button_back(overlay, lambda21);
+            let text = emoji_pray() + " Pray";
+            let button = app_karate_button_uncolored(overlay, text, lambda);
             return;
           }
           function lambda17(npc) {
