@@ -246,7 +246,10 @@ export function app_g_main() {
             let conversation2 = object_property_get(player, "conversation");
             if (not(conversation2)) {
               let container = app_karate_container_centered(overlay);
-              html_text_set(component3, text);
+              html_text_set(
+                container,
+                "You remember that you have not prayed, yet, before your next conversation",
+              );
               function lambda21() {
                 html_remove(overlay);
               }
