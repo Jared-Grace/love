@@ -8,7 +8,6 @@ import { html_document_root } from "../../../love/public/src/html_document_root.
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { list_without } from "../../../love/public/src/list_without.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
@@ -115,10 +114,10 @@ export function app_g_main() {
   let genders = [male, female];
   let npc_count = 30;
   let npcs = list_take(coordinates, npc_count);
-  function lambda16(c) {
+  function lambda16(npc, index) {
     let r3 = list_random_item(filtered);
-    object_property_set(c, "img", r3);
+    object_property_set(npc, "img", r3);
   }
-  each(npcs, lambda16);
+  each_index(npcs, lambda16);
   app_g_refresh(div, game_prefix, player, npcs, tiles_path, coordinates, rows);
 }
