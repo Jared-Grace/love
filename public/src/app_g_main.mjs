@@ -1,3 +1,4 @@
+import { app_karate_container_centered } from "../../../karate_code/public/src/app_karate_container_centered.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
@@ -243,12 +244,13 @@ export function app_g_main() {
             html_style_assign(overlay, s);
             let prayer2 = object_property_get(player, "prayer");
             let conversation2 = object_property_get(player, "conversation");
-            if (not(b)) {
+            if (not(conversation2)) {
+              app_karate_container_centered(parent);
+              function lambda21() {
+                html_remove(overlay);
+              }
+              let component2 = app_karate_button_back(overlay, lambda21);
             }
-            function lambda21() {
-              html_remove(overlay);
-            }
-            let component2 = app_karate_button_back(overlay, lambda21);
           }
         }
         html_on_click(clickable, lambda7);
