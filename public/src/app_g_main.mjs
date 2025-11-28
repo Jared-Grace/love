@@ -1,5 +1,4 @@
 import { log } from "../../../love/public/src/log.mjs";
-import { log_json } from "../../../love/public/src/log_json.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
