@@ -154,6 +154,7 @@ export function app_g_main() {
     object_property_set(c, "img", r3);
   }
   each(npcs, lambda16);
+  let tutorial = null;
   function app_g_refresh(game_prefix, div, tiles_path) {
     html_clear(div);
     let player_img_c = g_character_img(game_prefix, div, player);
@@ -202,7 +203,9 @@ export function app_g_main() {
           },
           "click",
         );
-        async function lambda7() {
+        async function on_tile_click() {
+          tutorial;
+          $inen;
           const clicked_coordinates = {
             x,
             y,
@@ -279,7 +282,6 @@ export function app_g_main() {
               app_karate_style_control(container);
               function lambda21() {
                 html_remove(overlay);
-                let tutorial = null;
                 tutorial = html_div(div);
                 g_img_square_style(tutorial, player, "tutorial");
                 let text = emoji_pray();
@@ -299,7 +301,7 @@ export function app_g_main() {
             }
           }
         }
-        html_on_click(clickable, lambda7);
+        html_on_click(clickable, on_tile_click);
       }
       each_index(columns, lambda);
     }
