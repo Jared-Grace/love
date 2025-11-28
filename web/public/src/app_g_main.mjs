@@ -245,7 +245,8 @@ export function app_g_main() {
             let prayer2 = object_property_get(player, "prayer");
             let conversation2 = object_property_get(player, "conversation");
             if (not(conversation2)) {
-              app_karate_container_centered(parent);
+              let container = app_karate_container_centered(overlay);
+              html_text_set(component3, text);
               function lambda21() {
                 html_remove(overlay);
               }
