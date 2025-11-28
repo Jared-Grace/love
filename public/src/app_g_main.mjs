@@ -109,6 +109,7 @@ export function app_g_main() {
   let names_men = bible_names_men();
   let male = {
     names: names_men,
+    imgs: list_without(people, right),
   };
   let npc_count = 30;
   let npcs = list_take(coordinates, npc_count);
