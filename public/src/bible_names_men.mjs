@@ -1797,7 +1797,8 @@ Zur
 Zuriel
 Zurishaddai`;
   let split = string_split_newline(text);
-  let filtered2 = list_filter(item, () => {});
+  function lambda() {}
+  let filtered2 = list_filter(item, lambda);
   let mapped3 = list_map_split_comma(split);
   let mapped6 = list_map_first(mapped3);
   return mapped6;
