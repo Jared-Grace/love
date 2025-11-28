@@ -267,6 +267,7 @@ export function app_g_main() {
               app_karate_style_control(container);
               let clickable = html_div(div);
               g_img_square_style(clickable, x, y, "tutorial");
+              html_text_set(component3, text);
               function lambda21() {
                 html_remove(overlay);
               }
