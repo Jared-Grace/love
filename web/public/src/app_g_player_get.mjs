@@ -5,6 +5,6 @@ import { storage_local_get } from "../../../love/public/src/storage_local_get.mj
 export function app_g_player_get() {
   marker("1");
   let game = storage_local_get(app_g, "game");
-  let player2 = object_property_get(game, "player");
-  return player2;
+  let player = object_property_get(game, "player");
+  return player;
 }
