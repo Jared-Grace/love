@@ -1,3 +1,4 @@
+import { g_random_dot_bang } from "../../../love/public/src/g_random_dot_bang.mjs";
 import { string_first_upper_to } from "../../../love/public/src/string_first_upper_to.mjs";
 import { app_g_container } from "../../../love/public/src/app_g_container.mjs";
 import { app_g_p_text } from "../../../love/public/src/app_g_p_text.mjs";
@@ -42,7 +43,13 @@ export function app_g_refresh_click_overlay(
     let v = string_first_upper_to(greet);
     app_g_p_text(
       container,
-      name + " says: " + v + " " + name2 + list_random_item([".", "!"]),
+      name +
+        " says: " +
+        v +
+        " " +
+        name2 +
+        g_random_dot_bang() +
+        " Nice to meet you",
     );
     app_g_p_text(
       container,
