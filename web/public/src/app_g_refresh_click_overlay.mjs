@@ -10,11 +10,9 @@ import { app_g_refresh } from "../../../love/public/src/app_g_refresh.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
-import { app_karate_style_control } from "../../../karate_code/public/src/app_karate_style_control.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { app_karate_container_background_color } from "../../../love/public/src/app_karate_container_background_color.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
-import { app_karate_container_centered } from "../../../karate_code/public/src/app_karate_container_centered.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
@@ -33,12 +31,10 @@ export function app_g_refresh_click_overlay(
     let s = list_single(npcs_matched);
     let name = object_property_get(s, "name");
     let gender = object_property_get(s, "gender");
-    let container = app_karate_container_centered(overlay);
+    let container = app_g_container(overlay);
     html_style_assign(container, {
       "background-color": "#4976ff" + "bc",
-      padding: "0",
     });
-    app_karate_style_control(container);
     app_g_p_text(container, name);
     app_g_p_text(
       container,
