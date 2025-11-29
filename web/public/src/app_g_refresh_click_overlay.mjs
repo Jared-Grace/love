@@ -38,7 +38,7 @@ export function app_g_refresh_click_overlay(
       padding: "0",
     });
     app_karate_style_control(container);
-    html_p_text(container, name);
+    let p = html_p_text(container, name);
     html_p_text(
       container,
       emoji_pray() +
