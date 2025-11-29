@@ -114,9 +114,8 @@ export function app_g_refresh(
   each_index(rows, lambda2);
   html_on_click(div, on_tile_click);
   async function on_tile_click(e) {
-    const tile = e.target.closest("." + tile_class);
-    let v = html_component_wrap(element);
-    log(tile);
+    const tile_e = e.target.closest("." + tile_class);
+    let tile = html_component_wrap(tile_e);
     let json = html_data_get(tile, "coordinates");
     let clicked_coordinates = json_from(json);
     let tutorial = global_function_property_get(app_g_refresh, "tutorial");
