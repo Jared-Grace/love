@@ -22,7 +22,7 @@ import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 import { list_random_item } from "./list_random_item.mjs";
-export function app_g_click_npc(div, player, npcs_matched, tutorial, body) {
+export function app_g_click_npc(div, npcs_matched, tutorial, body) {
   marker("1");
   let overlay = app_g_overlay(body);
   let prayer = object_property_get(player, "prayer");
