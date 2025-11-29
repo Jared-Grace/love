@@ -22,6 +22,7 @@ export function app_g_refresh_click_overlay(
   tutorial,
 ) {
   let overlay = app_g_overlay(div);
+  html_style_assign(b, s2);
   let prayer2 = object_property_get(player, "prayer");
   let conversation2 = object_property_get(prayer2, "conversation");
   if (conversation2) {
