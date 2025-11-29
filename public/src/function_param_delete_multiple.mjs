@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 import { list_sort_number } from "../../../love/public/src/list_sort_number.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -30,6 +31,7 @@ export async function function_param_delete_multiple(param_names_comma) {
     list_sort_number(m);
     ("we want to remove later indices before earlier so the order does not shift while we remove");
     list_reverse(m);
+    each(list, function lambda2(item) {});
     list_remove_at(params, index);
   }
 }
