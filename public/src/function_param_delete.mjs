@@ -31,7 +31,7 @@ export async function function_param_delete(param_name) {
     let params = js_declaration_params_get(declaration);
     let p = js_declaration_param_named(declaration, param_name);
     let index = list_index_of(params, p);
-    list_remove_at(list, index2);
+    list_remove_at(params, index);
     if (false) {
       let names = js_identifiers_names(ast);
       list_intersect_empty_is_assert(names, param_names);
