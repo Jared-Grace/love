@@ -1,4 +1,4 @@
-import { each } from "../../../love/public/src/each.mjs";
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_split_comma } from "../../../love/public/src/string_split_comma.mjs";
 import { list_remove_at } from "../../../love/public/src/list_remove_at.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
@@ -24,7 +24,7 @@ export async function function_param_delete_multiple(param_names_comma) {
       let index = list_index_of(params, p);
       return index;
     }
-    each(param_names, lambda);
+    let m = list_map(param_names, lambda);
     list_remove_at(params, index);
   }
 }
