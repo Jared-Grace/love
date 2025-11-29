@@ -18,7 +18,8 @@ export async function function_param_delete_multiple(param_names_comma) {
     list_remove_at(args, index);
   }
   function function_transform_current_lambda(ast) {
-    each(list, function lambda(item) {});
+    function lambda(item) {}
+    each(list, lambda);
     let declaration = js_declaration_single(ast);
     let params = js_declaration_params_get(declaration);
     let p = js_declaration_param_named(declaration, param_name);
