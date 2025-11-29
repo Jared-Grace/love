@@ -1,3 +1,4 @@
+import { html_data_get } from "../../../love/public/src/html_data_get.mjs";
 import { html_data_set_json } from "../../../love/public/src/html_data_set_json.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -116,7 +117,7 @@ export function app_g_refresh(
     const clicked_coordinates = {
       ...tile.dataset,
     };
-    html_data_get;
+    let value = html_data_get(component2, property_name);
     each_object(object, lambda3);
     let tutorial = global_function_property_get(app_g_refresh, "tutorial");
     let player2 = app_g_player_get();
