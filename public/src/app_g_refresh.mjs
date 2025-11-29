@@ -111,7 +111,7 @@ export function app_g_refresh(
   html_on_click(div, on_tile_click);
   async function on_tile_click(e) {
     const tile = e.target.closest("." + tile_class);
-    const data = {
+    const clicked_coordinates = {
       ...tile.dataset,
     };
     let tutorial = global_function_property_get(app_g_refresh, "tutorial");
