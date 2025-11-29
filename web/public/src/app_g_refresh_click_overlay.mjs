@@ -50,7 +50,7 @@ export function app_g_refresh_click_overlay(
         name2 +
         g_random_dot_bang() +
         " " +
-        "Nice" +
+        string_first_upper_to("nice") +
         " to meet you" +
         g_random_dot_bang(),
     );
