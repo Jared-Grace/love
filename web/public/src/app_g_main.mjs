@@ -131,7 +131,7 @@ export function app_g_main() {
     let r5 = list_random_item(names2);
     object_property_set(npc, "name", r5);
     let name2 = object_property_get(gender, "name");
-    object_property_set(object, property_name, value);
+    object_property_set(npc, "gender", name2);
   }
   each_index(npcs, npc_initialize);
   app_g_refresh(
