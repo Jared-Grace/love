@@ -1,5 +1,4 @@
-import { each_object } from "../../../love/public/src/each_object.mjs";
-import { html_data_set } from "../../../love/public/src/html_data_set.mjs";
+import { html_data_set_multiple } from "../../../love/public/src/html_data_set_multiple.mjs";
 import { html_class_add } from "../../../love/public/src/html_class_add.mjs";
 import { g_img_square_style } from "../../../love/public/src/g_img_square_style.mjs";
 import { html_img } from "../../../love/public/src/html_img.mjs";
@@ -100,16 +99,11 @@ export function app_g_refresh(
       g_img_square_style(tile);
       const tile_class = "tile";
       html_class_add(tile, tile_class);
-      function lambda3(value, property) {
-        html_data_set(tile, property, value);
-      }
-      each_object(
-        {
-          x,
-          y,
-        },
-        lambda3,
-      );
+      const coordinates = {
+        x,
+        y,
+      };
+      html_data_set_multiple(tile, coordinates);
     }
     each_index(columns, lambda);
   }
