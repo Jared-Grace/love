@@ -85,7 +85,7 @@ export async function app_g_click(e, tile_class, div, player_img_c, body, map) {
       inline: "center",
     });
     if (npc_clicked) {
-      tutorial = app_g_click_npc(div, player, npcs_matched, tutorial, body);
+      tutorial = app_g_click_npc(div, npcs_matched, tutorial, body);
     }
     app_g_player_save(player);
   }
