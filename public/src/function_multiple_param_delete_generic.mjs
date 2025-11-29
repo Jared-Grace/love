@@ -6,6 +6,7 @@ import { string_split_comma } from "../../../love/public/src/string_split_comma.
 export async function function_multiple_param_delete_generic(
   f_names_comma,
   param_name,
+  fn,
 ) {
   let f_names = string_split_comma(f_names_comma);
   marker("1");
