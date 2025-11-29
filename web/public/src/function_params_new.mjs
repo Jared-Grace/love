@@ -21,8 +21,8 @@ export async function function_params_new(
 ) {
   assert_arguments(arguments, 2);
   let param_names = string_split(param_names_comma, ",");
-  await function_transform_current(function_transform_current_lambda);
   let values_default = string_split(values_default_comma, ",");
+  await function_transform_current(function_transform_current_lambda);
   let f_name_current = await function_current_get();
   let result = await data_identifiers_search(f_name_current);
   let properties = object_properties(result);
