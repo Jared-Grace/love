@@ -28,8 +28,8 @@ export async function function_param_delete(param_name) {
   function function_transform_current_lambda(ast) {
     let declaration = js_declaration_single(ast);
     let params = js_declaration_params_get(declaration);
-    let result = js_declaration_param_named(declaration, param_name);
-    let index = list_index_of(list, item);
+    let p = js_declaration_param_named(declaration, param_name);
+    let index = list_index_of(params, p);
     if (false) {
       let names = js_identifiers_names(ast);
       list_intersect_empty_is_assert(names, param_names);
