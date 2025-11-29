@@ -1,3 +1,4 @@
+import { add } from "../../../love/public/src/add.mjs";
 import { g_img_square_style } from "../../../love/public/src/g_img_square_style.mjs";
 import { html_img } from "../../../love/public/src/html_img.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
@@ -95,6 +96,8 @@ export function app_g_refresh(
       const src = tiles_path + r + ".png";
       let tile = html_img(div, src);
       g_img_square_style(tile);
+      const tile_class = "til";
+      element.classList.add(tile_class);
     }
     each_index(columns, lambda);
   }
