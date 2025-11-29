@@ -22,7 +22,15 @@ import { global_function_property_get } from "../../../love/public/src/global_fu
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { html_data_get } from "../../../love/public/src/html_data_get.mjs";
 import { html_component_wrap } from "../../../love/public/src/html_component_wrap.mjs";
-export async function app_g_click(e, tile_class, div, player_img_c, body, map) {
+export async function app_g_click(
+  e,
+  tile_class,
+  div,
+  player_img_c,
+  body,
+  map,
+  player,
+) {
   let { npcs, coordinates } = map;
   marker("1");
   const tile_e = e.target.closest("." + tile_class);
@@ -36,7 +44,7 @@ export async function app_g_click(e, tile_class, div, player_img_c, body, map) {
   let distance2 = g_distance(player, clicked_coordinates);
   if (equal(distance2, 0)) {
     let overlay = app_g_overlay(body);
-    app_g_menu(overlay);
+    app_g_menu(overlay, player);
   } else {
     function lambda17(npc) {
       let e = object_includes(npc, clicked_coordinates);
@@ -83,7 +91,7 @@ export async function app_g_click(e, tile_class, div, player_img_c, body, map) {
       inline: "center",
     });
     if (npc_clicked) {
-      tutorial = app_g_click_npc(div, npcs_matched, tutorial, body);
+      tutorial = app_g_click_npc(div, npcs_matched, tutorial, body, player);
     }
   }
   app_g_player_save(player);
