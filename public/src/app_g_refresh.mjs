@@ -115,11 +115,8 @@ export function app_g_refresh(
   html_on_click(div, on_tile_click);
   async function on_tile_click(e) {
     const tile = e.target.closest("." + tile_class);
-    const clicked_coordinates = {
-      ...tile.dataset,
-    };
     let json = html_data_get(tile, "coordinates");
-    let v = json_from(json2);
+    let clicked_coordinates = json_from(json);
     each_object(object, lambda3);
     let tutorial = global_function_property_get(app_g_refresh, "tutorial");
     let player2 = app_g_player_get();
