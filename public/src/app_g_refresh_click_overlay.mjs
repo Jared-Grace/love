@@ -52,7 +52,7 @@ export function app_g_refresh_click_overlay(
     });
     app_karate_style_control(container);
     html_style_assign(container, {
-      padding: "0.5em",
+      padding: "0.25em",
     });
     app_g_p_text(
       container,
