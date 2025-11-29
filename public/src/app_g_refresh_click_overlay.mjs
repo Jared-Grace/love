@@ -59,11 +59,10 @@ export function app_g_refresh_click_overlay(
         ),
     );
     function lambda2() {}
-    app_g_button_green(overlay2, text2, lambda2);
     app_g_button_green(
       container,
       "Pray and politely end the conversation",
-      lambda22,
+      lambda2,
     );
   } else {
     let container = app_g_container(overlay);
