@@ -52,7 +52,10 @@ export function app_g_refresh_click_overlay(
         g_random_dot_bang() +
         " " +
         string_first_upper_to(
-          list_random_item([a, ""]) + s2 + " to meet you" + g_random_dot_bang(),
+          list_random_item([a, "it is"]) +
+            s2 +
+            " to meet you" +
+            g_random_dot_bang(),
         ),
     );
     app_g_p_text(
