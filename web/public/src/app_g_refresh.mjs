@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_refresh_click } from "../../../love/public/src/app_g_refresh_click.mjs";
 import { html_data_set_json } from "../../../love/public/src/html_data_set_json.mjs";
@@ -85,7 +84,6 @@ export function app_g_refresh(
   each_index(rows, lambda2);
   html_on_click(div, on_click);
   async function on_click(e) {
-    log("body");
     await app_g_refresh_click(
       e,
       tile_class,
