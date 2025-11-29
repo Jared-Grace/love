@@ -1,3 +1,4 @@
+import { app_g_p } from "../../../love/public/src/app_g_p.mjs";
 import { html_click_none } from "../../../love/public/src/html_click_none.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_button_back } from "../../../love/public/src/app_g_button_back.mjs";
@@ -38,11 +39,7 @@ export function app_g_refresh_click_overlay(
       padding: "0",
     });
     app_karate_style_control(container);
-    let p = html_p_text(container, name);
-    html_style_assign({
-      marginTop: "0.5em",
-      marginBottom: "0.5em",
-    });
+    app_g_p(container, name);
     html_p_text(
       container,
       emoji_pray() +
