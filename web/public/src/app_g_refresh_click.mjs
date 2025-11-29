@@ -62,9 +62,9 @@ export async function app_g_refresh_click(
       return e;
     }
     let npcs_matched = list_filter(npcs, lambda17);
-    let e2 = list_empty_not_is(npcs_matched);
+    let npc_clicked = list_empty_not_is(npcs_matched);
     let coordinates_move_to = null;
-    if (e2) {
+    if (npc_clicked) {
       function lambda18(item) {
         let distance = g_distance(clicked_coordinates, item);
         let v2 = distance === 1;
@@ -101,7 +101,7 @@ export async function app_g_refresh_click(
       block: "center",
       inline: "center",
     });
-    if (e2) {
+    if (npc_clicked) {
       let overlay = app_g_overlay(div);
       let prayer2 = object_property_get(player2, "prayer");
       let conversation2 = object_property_get(prayer2, "conversation");
