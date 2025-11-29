@@ -47,7 +47,7 @@ export function app_g_click_npc(div, npcs_matched, tutorial, body) {
     let meet_message = null;
     let meet = object_property_get(npc, "meet");
     if (not(meet)) {
-      object_property_set(object, property_name, value);
+      object_property_set(npc, "meet", false);
       meet_message =
         " " +
         string_first_upper_to(
