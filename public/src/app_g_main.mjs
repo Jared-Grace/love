@@ -132,5 +132,14 @@ export function app_g_main() {
     object_property_set(npc, "name", r5);
   }
   each_index(npcs, lambda16);
-  app_g_refresh(div, game_prefix, player, npcs, tiles_path, coordinates, rows);
+  app_g_refresh(
+    div,
+    game_prefix,
+    player,
+    npcs,
+    tiles_path,
+    coordinates,
+    rows,
+    body,
+  );
 }
