@@ -16,6 +16,7 @@ import { html_style_assign } from "../../../love/public/src/html_style_assign.mj
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
+import { list_random_item } from "./list_random_item.mjs";
 export function app_g_refresh_click_overlay(
   div,
   player,
@@ -35,7 +36,7 @@ export function app_g_refresh_click_overlay(
     html_style_assign(container, {
       "background-color": "#80a0ff" + "bc",
     });
-    app_g_p_text(container, name + " says: ");
+    app_g_p_text(container, name + " says: ", list_random_item(['hi', 'hello', 'greetings']));
     app_g_p_text(
       container,
       emoji_pray() +
