@@ -51,6 +51,9 @@ export function app_g_refresh_click_overlay(
       padding: "0",
     });
     app_karate_style_control(container);
+    html_style_assign(container, {
+      margin: "0.5em",
+    });
     app_g_p_text(
       container,
       emoji_pray() +
