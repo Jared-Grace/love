@@ -121,7 +121,7 @@ export function app_g_main() {
   let gender_count = list_size(genders);
   let npc_count = 30;
   let npcs = list_take(coordinates, npc_count);
-  function lambda16(npc, index) {
+  function npc_initialize(npc, index) {
     let r4 = mod(index, gender_count);
     let gender = list_get(genders, r4);
     let imgs2 = object_property_get(gender, "imgs");
@@ -131,7 +131,7 @@ export function app_g_main() {
     let r5 = list_random_item(names2);
     object_property_set(npc, "name", r5);
   }
-  each_index(npcs, lambda16);
+  each_index(npcs, npc_initialize);
   app_g_refresh(
     div,
     game_prefix,
