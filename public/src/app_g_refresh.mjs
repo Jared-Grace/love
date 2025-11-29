@@ -24,6 +24,7 @@ export function app_g_refresh(
   tiles_path,
   coordinates,
   rows,
+  body,
 ) {
   marker("1");
   global_function_property_set(app_g_refresh, "tutorial", null);
