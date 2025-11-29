@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { html_data_set_multiple } from "../../../love/public/src/html_data_set_multiple.mjs";
 import { html_class_add } from "../../../love/public/src/html_class_add.mjs";
 import { g_img_square_style } from "../../../love/public/src/g_img_square_style.mjs";
@@ -136,6 +137,7 @@ export function app_g_refresh(
       function lambda18(item) {
         let distance = g_distance(clicked_coordinates, item);
         let v2 = distance === 1;
+        log(message);
         return v2;
       }
       let filtered3 = list_filter(coordinates, lambda18);
