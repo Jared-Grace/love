@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { emoji_wave } from "../../../love/public/src/emoji_wave.mjs";
 import { app_g_button_green } from "../../../love/public/src/app_g_button_green.mjs";
@@ -42,13 +43,14 @@ export function app_g_click_npc(div, npcs_matched, tutorial, body) {
     let v = string_first_upper_to(greet);
     let s2 = list_random_item(["nice", "great", "pleasure", "good"]);
     const a = list_random_item(["it's", "it is"]) + " ";
-    const meet_message =
+    let meet_message = null;
+    meet_message =
       " " +
       string_first_upper_to(
         string_random_or_empty(a) + s2 + " to meet you" + g_random_dot_bang(),
       );
     let meet = object_property_get(npc, "meet");
-    if (npc) {
+    if (not(meet)) {
     }
     app_g_p_text(
       container,
