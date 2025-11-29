@@ -1,4 +1,4 @@
-import { string_first_lower_to } from "../../../love/public/src/string_first_lower_to.mjs";
+import { string_first_upper_to } from "../../../love/public/src/string_first_upper_to.mjs";
 import { app_g_container } from "../../../love/public/src/app_g_container.mjs";
 import { app_g_p_text } from "../../../love/public/src/app_g_p_text.mjs";
 import { html_click_none } from "../../../love/public/src/html_click_none.mjs";
@@ -39,7 +39,7 @@ export function app_g_refresh_click_overlay(
     });
     let name2 = object_property_get(player, "name");
     const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
-    let v = string_first_lower_to(s2);
+    let v = string_first_upper_to(s2);
     app_g_p_text(container, name + " says: " + greet + " " + name2);
     app_g_p_text(
       container,
