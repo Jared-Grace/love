@@ -96,7 +96,7 @@ export function app_g_refresh(
       const src = tiles_path + r + ".png";
       let tile = html_img(div, src);
       g_img_square_style(tile);
-      const tile_class = "til";
+      const tile_class = "tile";
       element.classList.add(tile_class);
     }
     each_index(columns, lambda);
