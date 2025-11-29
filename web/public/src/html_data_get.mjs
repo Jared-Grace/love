@@ -5,5 +5,6 @@ export function html_data_get(component, property_name) {
   marker("1");
   let element = html_component_element_get(component);
   element.dataset;
-  return object_property_get(element.dataset, property_name);
+  let value = object_property_get(element.dataset, property_name);
+  return value;
 }
