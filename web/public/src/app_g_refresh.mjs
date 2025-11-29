@@ -17,7 +17,7 @@ import { html_element } from "../../../love/public/src/html_element.mjs";
 import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
 import { g_character_img } from "../../../love/public/src/g_character_img.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-export function app_g_refresh(div, game_prefix, tiles_path, rows, body) {
+export function app_g_refresh(div, game_prefix, tiles_path, rows, body, map) {
   marker("1");
   global_function_property_set(app_g_refresh, "tutorial", null);
   html_clear(div);
