@@ -260,6 +260,7 @@
   "rg1": "range_1",
   "lsh": "list_shuffle",
   "oba": "object_assign",
-  "fpd": "function_param_delete"
+  "fpd": "function_param_delete",
+  "fpsw": "function_param_swap"
  }
 }
