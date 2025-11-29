@@ -1,3 +1,4 @@
+import { string_random_or_empty } from "../../../love/public/src/string_random_or_empty.mjs";
 import { g_random_dot_bang } from "../../../love/public/src/g_random_dot_bang.mjs";
 import { string_first_upper_to } from "../../../love/public/src/string_first_upper_to.mjs";
 import { app_g_container } from "../../../love/public/src/app_g_container.mjs";
@@ -42,6 +43,7 @@ export function app_g_refresh_click_overlay(
     const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
     let v = string_first_upper_to(greet);
     let s2 = list_random_item(["nice", "great", "pleasure"]);
+    const a = "it is";
     app_g_p_text(
       container,
       name +
@@ -52,10 +54,7 @@ export function app_g_refresh_click_overlay(
         g_random_dot_bang() +
         " " +
         string_first_upper_to(
-          list_random_item(["", "it is"]) +
-            s2 +
-            " to meet you" +
-            g_random_dot_bang(),
+          string_random_or_empty(a) + s2 + " to meet you" + g_random_dot_bang(),
         ),
     );
     app_g_p_text(
