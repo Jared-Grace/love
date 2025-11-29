@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_refresh_click_overlay } from "../../../love/public/src/app_g_refresh_click_overlay.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
@@ -30,6 +31,7 @@ export async function app_g_refresh_click(
   coordinates,
   player_img_c,
 ) {
+  marker("1");
   const tile_e = e.target.closest("." + tile_class);
   let tile = html_component_wrap(tile_e);
   let json = html_data_get(tile, "coordinates");
