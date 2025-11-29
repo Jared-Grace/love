@@ -1,5 +1,4 @@
-import { identity } from "../../../love/public/src/identity.mjs";
-import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
+import { list_sort_number } from "../../../love/public/src/list_sort_number.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_split_comma } from "../../../love/public/src/string_split_comma.mjs";
 import { list_remove_at } from "../../../love/public/src/list_remove_at.mjs";
@@ -27,7 +26,7 @@ export async function function_param_delete_multiple(param_names_comma) {
       return index;
     }
     let m = list_map(param_names, lambda);
-    list_sort_number_mapper(m, identity);
+    list_sort_number(m);
     list_remove_at(params, index);
   }
 }
