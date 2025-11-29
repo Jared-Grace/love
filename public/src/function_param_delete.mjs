@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
 import { list_intersect_empty_is_assert } from "../../../love/public/src/list_intersect_empty_is_assert.mjs";
@@ -11,6 +12,7 @@ export async function function_param_delete(
   param_names_comma,
   values_default_comma,
 ) {
+  marker("1");
   assert_arguments(arguments, 2);
   let param_names = string_split(param_names_comma, ",");
   let values_default = string_split(values_default_comma, ",");
