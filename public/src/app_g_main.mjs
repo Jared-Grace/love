@@ -107,11 +107,13 @@ export function app_g_main() {
   list_shuffle(coordinates);
   let names_women = bible_names_women();
   let female = {
+    name: g_gender_female(),
     names: names_women,
     imgs: list_without(imgs_women, right),
   };
   let names_men = bible_names_men();
   let male = {
+    name: g_gender_male(),
     names: names_men,
     imgs: list_without(imgs_men, right),
   };
@@ -132,3 +134,11 @@ export function app_g_main() {
   each_index(npcs, lambda16);
   app_g_refresh(div, game_prefix, player, npcs, tiles_path, coordinates, rows);
 }
+function g_gender_male() {
+  return 'male';
+}
+
+function g_gender_female() {
+  return 'female';
+}
+
