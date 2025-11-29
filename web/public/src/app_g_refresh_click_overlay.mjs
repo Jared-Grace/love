@@ -37,6 +37,7 @@ export function app_g_refresh_click_overlay(
       "background-color": "#4964ff" + "bc",
       padding: "0",
     });
+    html_text_set(component, text2);
   } else {
     let container = app_karate_container_centered(overlay);
     html_style_assign(container, {
