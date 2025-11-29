@@ -21,6 +21,7 @@ export function app_g_refresh_click_overlay(
   player,
   npcs_matched,
   tutorial,
+  body,
 ) {
   marker("1");
   let overlay = app_g_overlay(div);
