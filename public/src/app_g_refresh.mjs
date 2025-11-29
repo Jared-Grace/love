@@ -66,11 +66,11 @@ export function app_g_refresh(div, game_prefix, tiles_path, rows, body, map) {
       let tile = html_img(div, src);
       g_img_square_style(tile);
       html_class_add(tile, tile_class);
-      const coordinates = {
+      const coordinates_tile = {
         x,
         y,
       };
-      html_data_set_json(tile, "coordinates", coordinates);
+      html_data_set_json(tile, "coordinates", coordinates_tile);
     }
     each_index(columns, lambda);
   }
