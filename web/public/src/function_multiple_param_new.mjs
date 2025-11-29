@@ -3,8 +3,8 @@ import { function_param_new } from "../../../love/public/src/function_param_new.
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function function_multiple_param_new(
   f_names_comma,
-  default_value,
   param_name,
+  default_value,
 ) {
   marker("1");
   let fn = async function lambda(param_name) {
