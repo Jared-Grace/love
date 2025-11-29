@@ -9,7 +9,7 @@ import { emoji_bow } from "../../../love/public/src/emoji_bow.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
-export function app_g_menu(overlay) {
+export function app_g_menu(overlay, player) {
   marker("1");
   html_clear(overlay);
   function close() {
@@ -20,7 +20,7 @@ export function app_g_menu(overlay) {
   function lambda7() {
     html_clear(overlay);
     function lambda23() {
-      app_g_menu(overlay);
+      app_g_menu(overlay, player);
     }
     let button2 = app_g_button_back(overlay, lambda23);
     function lambda22() {
