@@ -1,3 +1,4 @@
+import { js_declaration_param_named } from "../../../love/public/src/js_declaration_param_named.mjs";
 import { js_declaration_params_get } from "../../../love/public/src/js_declaration_params_get.mjs";
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -26,6 +27,7 @@ export async function function_param_delete(param_name) {
   function function_transform_current_lambda(ast) {
     let declaration = js_declaration_single(ast);
     let params = js_declaration_params_get(declaration);
+    let result = js_declaration_param_named(declaration2, param_name2);
     if (false) {
       let names = js_identifiers_names(ast);
       list_intersect_empty_is_assert(names, param_names);
