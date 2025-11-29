@@ -44,7 +44,7 @@ export function app_g_click_npc(div, npcs_matched, tutorial, body) {
     let v = string_first_upper_to(greet);
     let s2 = list_random_item(["nice", "great", "pleasure", "good"]);
     const a = list_random_item(["it's", "it is"]) + " ";
-    let meet_message = null;
+    let meet_message = "";
     let meet = object_property_get(npc, "meet");
     if (not(meet)) {
       object_property_set(npc, "meet", false);
