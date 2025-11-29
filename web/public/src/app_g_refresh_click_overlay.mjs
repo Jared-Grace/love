@@ -49,7 +49,8 @@ export function app_g_refresh_click_overlay(
         " " +
         name2 +
         g_random_dot_bang() +
-        " Nice to meet you",
+        " Nice to meet you" +
+        g_random_dot_bang(),
     );
     app_g_p_text(
       container,
