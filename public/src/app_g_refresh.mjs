@@ -1,3 +1,5 @@
+import { g_img_square_style } from "../../../love/public/src/g_img_square_style.mjs";
+import { html_img } from "../../../love/public/src/html_img.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { app_g_button_back } from "../../../love/public/src/app_g_button_back.mjs";
@@ -34,7 +36,6 @@ import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { g_img_square_style_position } from "../../../love/public/src/g_img_square_style_position.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
-import { g_img_square } from "../../../love/public/src/g_img_square.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -93,7 +94,8 @@ export function app_g_refresh(
     });
     function lambda(r, x) {
       const src = tiles_path + r + ".png";
-      g_img_square(div, src, x, y, "tile");
+      let tile = html_img(parent, src);
+      g_img_square_style(tile);
       let clickable = html_div(div);
       const clicked_coordinates = {
         x,
