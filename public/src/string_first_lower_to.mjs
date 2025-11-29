@@ -5,9 +5,10 @@ import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function string_first_lower_to(s) {
   marker("1");
+  let transform = string_lower_to;
   let split = string_split_empty(s);
   let { first, remaining } = list_first_remaining(split);
-  let lower = string_lower_to(first);
+  let lower = transform(first);
   let joined = list_join_empty(remaining);
   let v = "" + lower + joined;
   return v;
