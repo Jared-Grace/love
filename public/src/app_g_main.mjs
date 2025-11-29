@@ -1,3 +1,4 @@
+import { app_g_game_save } from "../../../love/public/src/app_g_game_save.mjs";
 import { g_gender_male } from "../../../love/public/src/g_gender_male.mjs";
 import { g_gender_female } from "../../../love/public/src/g_gender_female.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -8,7 +9,6 @@ import { bible_names_men } from "../../../love/public/src/bible_names_men.mjs";
 import { bible_names_women } from "../../../love/public/src/bible_names_women.mjs";
 import { g_tiles_grasses } from "../../../love/public/src/g_tiles_grasses.mjs";
 import { app_g_refresh } from "../../../love/public/src/app_g_refresh.mjs";
-import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
 import { html_font_san_serif_value } from "../../../love/public/src/html_font_san_serif_value.mjs";
 import { html_document_root } from "../../../love/public/src/html_document_root.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
@@ -91,7 +91,6 @@ export function app_g_main() {
     },
     name: list_random_item(names_men),
   };
-  app_g_player_save(player);
   let right = player_img;
   function lambda15(la4) {
     function lambda13(columns, y) {
@@ -146,4 +145,8 @@ export function app_g_main() {
     rows,
     body,
   );
+  app_g_game_save({
+    player,
+    npcs,
+  });
 }
