@@ -1,6 +1,6 @@
 import { g_z } from "../../../love/public/src/g_z.mjs";
 import { g_rows_count } from "../../../love/public/src/g_rows_count.mjs";
-import { g_img_square_style_position } from "../../../love/public/src/g_img_square_style_position.mjs";
+import { g_img_square_style_position_only } from "../../../love/public/src/g_img_square_style_position_only.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_style_size_square } from "../../../love/public/src/html_style_size_square.mjs";
 export function g_img_square_style(tile, { x, y }, z) {
@@ -11,5 +11,5 @@ export function g_img_square_style(tile, { x, y }, z) {
     position: "absolute",
     "z-index": g_z(z),
   });
-  g_img_square_style_position(tile, x, y);
+  g_img_square_style_position_only(tile, x, y);
 }
