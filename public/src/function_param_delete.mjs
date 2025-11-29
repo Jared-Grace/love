@@ -5,13 +5,10 @@ import { js_declaration_params_get } from "../../../love/public/src/js_declarati
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
-import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
-import { list_intersect_empty_is_assert } from "../../../love/public/src/list_intersect_empty_is_assert.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
-import { js_declaration_single_params_add } from "../../../love/public/src/js_declaration_single_params_add.mjs";
 export async function function_param_delete(param_name) {
   marker("1");
   assert_arguments(arguments, 1);
@@ -30,10 +27,5 @@ export async function function_param_delete(param_name) {
     let p = js_declaration_param_named(declaration, param_name);
     index = list_index_of(params, p);
     list_remove_at(params, index);
-    if (false) {
-      let names = js_identifiers_names(ast);
-      list_intersect_empty_is_assert(names, param_names);
-    }
-    js_declaration_single_params_add(ast, param_names);
   }
 }
