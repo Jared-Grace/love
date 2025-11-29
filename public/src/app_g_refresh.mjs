@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { html_data_set_multiple } from "../../../love/public/src/html_data_set_multiple.mjs";
 import { html_class_add } from "../../../love/public/src/html_class_add.mjs";
 import { g_img_square_style } from "../../../love/public/src/g_img_square_style.mjs";
@@ -111,6 +112,7 @@ export function app_g_refresh(
   html_on_click(div, on_tile_click);
   async function on_tile_click(e) {
     const tile = e.target.closest("." + tile_class);
+    log(message);
     const clicked_coordinates = {
       ...tile.dataset,
     };
