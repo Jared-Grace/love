@@ -17,7 +17,6 @@ import { equal } from "../../../love/public/src/equal.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
-import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { app_g_refresh } from "../../../love/public/src/app_g_refresh.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
@@ -31,7 +30,6 @@ export async function app_g_click(e, tile_class, div, player_img_c, body, map) {
   let json = html_data_get(tile, "coordinates");
   let clicked_coordinates = json_from(json);
   let tutorial = global_function_property_get(app_g_refresh, "tutorial");
-  let player = app_g_player_get();
   if (equal_not(tutorial, null)) {
     html_remove(tutorial);
   }
