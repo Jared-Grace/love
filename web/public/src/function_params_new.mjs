@@ -34,16 +34,19 @@ export async function function_params_new(
     async function lambda5(ast) {
       js_visit_calls_named(f_name_current, lambda, ast);
       function lambda({ args }) {
-        function lambda3(value_default) {
-          let expression2 = js_parse_expression(value_default);
-          list_add(args, expression2);
-        }
-        each(values_default, lambda3);
+        on_call(args);
       }
     }
     let output = await function_transform(f_name, lambda5);
   }
   await each_async(properties, lambda4);
+  function on_call(args) {
+    function lambda3(value_default) {
+      let expression2 = js_parse_expression(value_default);
+      list_add(args, expression2);
+    }
+    each(values_default, lambda3);
+  }
   function function_transform_current_lambda(ast) {
     if (false) {
       let names = js_identifiers_names(ast);
