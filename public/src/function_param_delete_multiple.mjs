@@ -3,7 +3,6 @@ import { list_remove_at_multiple } from "../../../love/public/src/list_remove_at
 import { list_sort_number } from "../../../love/public/src/list_sort_number.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_split_comma } from "../../../love/public/src/string_split_comma.mjs";
-import { list_remove_at } from "../../../love/public/src/list_remove_at.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { js_declaration_param_named } from "../../../love/public/src/js_declaration_param_named.mjs";
 import { js_declaration_params_get } from "../../../love/public/src/js_declaration_params_get.mjs";
@@ -18,7 +17,7 @@ export async function function_param_delete_multiple(param_names_comma) {
   let indices = null;
   await function_params_new_generic(function_transform_current_lambda, on_call);
   function on_call(args) {
-    list_remove_at(args, index);
+    list_remove_at_multiple(args, indices);
   }
   function function_transform_current_lambda(ast) {
     let declaration = js_declaration_single(ast);
