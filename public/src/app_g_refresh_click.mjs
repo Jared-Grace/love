@@ -97,6 +97,7 @@ export async function app_g_refresh_click(
         player,
         npcs_matched,
         tutorial,
+        body,
       );
     }
     app_g_player_save(player);
