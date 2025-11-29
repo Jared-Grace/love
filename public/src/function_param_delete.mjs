@@ -12,12 +12,10 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_declaration_single_params_add } from "../../../love/public/src/js_declaration_single_params_add.mjs";
-import { string_split } from "../../../love/public/src/string_split.mjs";
 export async function function_param_delete(param_name) {
   marker("1");
   assert_arguments(arguments, 1);
-  let param_names = string_split(param_names_comma, ",");
-  let values_default = string_split(values_default_comma, ",");
+  let index = null;
   await function_params_new_generic(function_transform_current_lambda, on_call);
   function on_call(args) {
     function lambda3(value_default) {
@@ -30,7 +28,6 @@ export async function function_param_delete(param_name) {
     let declaration = js_declaration_single(ast);
     let params = js_declaration_params_get(declaration);
     let p = js_declaration_param_named(declaration, param_name);
-    let index = null;
     index = list_index_of(params, p);
     list_remove_at(params, index);
     if (false) {
