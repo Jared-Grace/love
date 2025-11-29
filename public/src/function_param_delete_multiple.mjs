@@ -27,7 +27,7 @@ export async function function_param_delete_multiple(param_names_comma) {
       return index;
     }
     let m = list_map(param_names, lambda);
-    list_sort_number_mapper(list, identity);
+    list_sort_number_mapper(m, identity);
     list_remove_at(params, index);
   }
 }
