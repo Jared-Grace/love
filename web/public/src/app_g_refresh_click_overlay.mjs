@@ -27,8 +27,8 @@ export function app_g_refresh_click_overlay(
   marker("1");
   let overlay = app_g_overlay(body);
   let prayer2 = object_property_get(player, "prayer");
-  let conversation2 = object_property_get(prayer2, "conversation");
-  if (conversation2) {
+  let conversation = object_property_get(prayer2, "conversation");
+  if (conversation) {
     let s = list_single(npcs_matched);
     let name = object_property_get(s, "name");
     let container = app_karate_container_centered(overlay);
