@@ -33,11 +33,11 @@ export function app_g_refresh_click_overlay(
     let name = object_property_get(s, "name");
     let gender = object_property_get(s, "gender");
     let container = app_karate_container_centered(overlay);
-    app_karate_style_control(container);
     html_style_assign(container, {
       "background-color": "#4976ff" + "bc",
       padding: "0",
     });
+    app_karate_style_control(container);
     html_p_text(container, name);
     html_p_text(
       container,
@@ -46,11 +46,11 @@ export function app_g_refresh_click_overlay(
     );
   } else {
     let container = app_karate_container_centered(overlay);
-    app_karate_style_control(container);
     html_style_assign(container, {
       "background-color": app_karate_container_background_color() + "bc",
       padding: "0",
     });
+    app_karate_style_control(container);
     html_p_text(
       container,
       emoji_pray() +
