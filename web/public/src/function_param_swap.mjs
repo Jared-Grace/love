@@ -5,7 +5,7 @@ import { js_declaration_param_named } from "../../../love/public/src/js_declarat
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
 export async function function_param_swap(param_name_a, param_name_b) {
   marker("1");
-  await function_transform_current(f_name, lambda);
+  await function_transform_current(lambda);
   function lambda(ast) {
     let declaration = js_declaration_single(ast);
     let a = js_declaration_param_named(declaration, param_name_a);
