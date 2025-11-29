@@ -1,3 +1,4 @@
+import { object_property_from } from "../../../love/public/src/object_property_from.mjs";
 import { g_gender_male } from "../../../love/public/src/g_gender_male.mjs";
 import { g_gender_female } from "../../../love/public/src/g_gender_female.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -130,6 +131,7 @@ export function app_g_main() {
     let names2 = object_property_get(gender, "names");
     let r5 = list_random_item(names2);
     object_property_set(npc, "name", r5);
+    object_property_from(to, property_name, from);
   }
   each_index(npcs, npc_initialize);
   app_g_refresh(
