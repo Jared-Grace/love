@@ -1,5 +1,5 @@
+import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 import { list_sort_number } from "../../../love/public/src/list_sort_number.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_split_comma } from "../../../love/public/src/string_split_comma.mjs";
@@ -30,7 +30,7 @@ export async function function_param_delete_multiple(param_names_comma) {
     let m = list_map(param_names, lambda);
     list_sort_number(m);
     ("we want to remove later indices before earlier so the order does not shift while we remove");
-    list_reverse(m);
+    list_copy_reverse(m);
     function lambda2(index) {
       list_remove_at(params, index);
     }
