@@ -1,4 +1,6 @@
+import { function_param_new } from "../../../love/public/src/function_param_new.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export function function_multiple_param_new() {
+export async function function_multiple_param_new(param_name, default_value) {
   marker("1");
+  return await function_param_new(param_name, default_value);
 }
