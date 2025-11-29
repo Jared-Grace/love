@@ -55,7 +55,7 @@ export function app_g_click_npc(div, player, npcs_matched, tutorial, body) {
     );
     app_g_button_green(
       overlay,
-      emoji_pray() + emoji_wave() + "Pray and politely end the conversation",
+      emoji_pray() + emoji_wave() + " Pray and politely end the conversation",
       overlay_close,
     );
   } else {
