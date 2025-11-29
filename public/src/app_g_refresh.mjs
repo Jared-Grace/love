@@ -1,7 +1,6 @@
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { html_data_get } from "../../../love/public/src/html_data_get.mjs";
 import { html_data_set_json } from "../../../love/public/src/html_data_set_json.mjs";
-import { each_object } from "../../../love/public/src/each_object.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_class_add } from "../../../love/public/src/html_class_add.mjs";
 import { g_img_square_style } from "../../../love/public/src/g_img_square_style.mjs";
@@ -117,7 +116,6 @@ export function app_g_refresh(
     const tile = e.target.closest("." + tile_class);
     let json = html_data_get(tile, "coordinates");
     let clicked_coordinates = json_from(json);
-    each_object(object, lambda3);
     let tutorial = global_function_property_get(app_g_refresh, "tutorial");
     let player2 = app_g_player_get();
     if (equal_not(tutorial, null)) {
