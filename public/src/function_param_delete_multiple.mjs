@@ -27,7 +27,8 @@ export async function function_param_delete_multiple(param_names_comma) {
       let index = list_index_of(params, p);
       return index;
     }
-    let indices = list_map(param_names, lambda);
+    let indices = null;
+    indices = list_map(param_names, lambda);
     list_sort_number(indices);
     ("we want to remove later indices before earlier so the order does not shift while we remove");
     list_reverse(indices);
