@@ -14,7 +14,6 @@ import { html_document_root } from "../../../love/public/src/html_document_root.
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { list_without } from "../../../love/public/src/list_without.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -81,7 +80,6 @@ export function app_g_main() {
   let r2 = range_1(10);
   let imgs_men = list_map_combine_left("man_", r2);
   let imgs_women = list_map_combine_left("woman_", r2);
-  let people = list_concat(imgs_women, imgs_men);
   const player_img = list_random_item(imgs_men);
   let player = {
     x: 5,
@@ -93,7 +91,6 @@ export function app_g_main() {
   };
   app_g_player_save(player);
   let right = player_img;
-  let filtered = list_without(people, right);
   function lambda15(la4) {
     function lambda13(columns, y) {
       function lambda14(item2, x) {
