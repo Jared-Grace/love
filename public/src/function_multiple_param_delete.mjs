@@ -5,5 +5,5 @@ export async function function_multiple_param_delete(
   param_name,
 ) {
   let fn = function_param_delete;
-  await function_multiple_param_delete_generic(f_names_comma, param_name);
+  await function_multiple_param_delete_generic(f_names_comma, param_name, fn);
 }
