@@ -2,8 +2,8 @@ import { function_transform_current } from "../../../love/public/src/function_tr
 import { list_swap } from "../../../love/public/src/list_swap.mjs";
 import { js_declaration_param_named } from "../../../love/public/src/js_declaration_param_named.mjs";
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
-export async function function_param_swap(param_name_a, param_name_b) {
-  await function_transform_current(lambda);
+export async function function_param_swap(f_name, param_name_a, param_name_b) {
+  await function_transform_current(f_name, lambda);
   function lambda(ast) {
     let declaration = js_declaration_single(ast);
     let a = js_declaration_param_named(declaration, param_name_a);
