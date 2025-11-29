@@ -42,8 +42,8 @@ export function app_g_refresh_click_overlay(
       name +
         " says: " +
         list_random_item(["hi", "hello", "greetings", "hey"]) +
-        " ",
-      name2,
+        " " +
+        name2,
     );
     app_g_p_text(
       container,
