@@ -22,8 +22,9 @@ export async function function_param_delete_multiple(param_names_comma) {
       let params = js_declaration_params_get(declaration);
       let p = js_declaration_param_named(declaration, param_name);
       let index = list_index_of(params, p);
-      list_remove_at(params, index);
+      return index;
     }
     each(param_names, lambda);
+    list_remove_at(params, index);
   }
 }
