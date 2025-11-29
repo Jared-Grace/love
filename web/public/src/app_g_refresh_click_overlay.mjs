@@ -35,7 +35,7 @@ export function app_g_refresh_click_overlay(
     html_style_assign(container, {
       "background-color": "#80a0ff" + "bc",
     });
-    app_g_p_text(container, name);
+    app_g_p_text(container, name + " says: ");
     app_g_p_text(
       container,
       emoji_pray() +
