@@ -135,16 +135,7 @@ export function app_g_main() {
     object_property_set(npc, "meet", false);
   }
   each_index(npcs, npc_initialize);
-  app_g_refresh(
-    div,
-    game_prefix,
-    player,
-    npcs,
-    tiles_path,
-    coordinates,
-    rows,
-    body,
-  );
+  app_g_refresh(div, game_prefix, npcs, tiles_path, coordinates, rows, body);
   app_g_game_save({
     player,
     npcs,
