@@ -133,6 +133,7 @@ export function app_g_main() {
     object_property_set(npc, "name", r5);
     let name2 = object_property_get(gender, "name");
     object_property_set(npc, "gender", name2);
+    object_property_set(npc, "meet", false);
   }
   each_index(npcs, npc_initialize);
   app_g_refresh(
