@@ -41,6 +41,7 @@ export function app_g_refresh_click_overlay(
     let name2 = object_property_get(player, "name");
     const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
     let v = string_first_upper_to(greet);
+    let s2 = list_random_item(["nice"]);
     app_g_p_text(
       container,
       name +
@@ -50,7 +51,7 @@ export function app_g_refresh_click_overlay(
         name2 +
         g_random_dot_bang() +
         " " +
-        string_first_upper_to("nice") +
+        string_first_upper_to(s2) +
         " to meet you" +
         g_random_dot_bang(),
     );
