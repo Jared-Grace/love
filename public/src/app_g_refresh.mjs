@@ -1,6 +1,7 @@
+import { html_data_set } from "../../../love/public/src/html_data_set.mjs";
+import { json_to } from "../../../love/public/src/json_to.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { html_data_set_multiple } from "../../../love/public/src/html_data_set_multiple.mjs";
 import { html_class_add } from "../../../love/public/src/html_class_add.mjs";
 import { g_img_square_style } from "../../../love/public/src/g_img_square_style.mjs";
 import { html_img } from "../../../love/public/src/html_img.mjs";
@@ -105,7 +106,8 @@ export function app_g_refresh(
         x,
         y,
       };
-      html_data_set_multiple(tile, coordinates);
+      let json = json_to(object2);
+      html_data_set(tile, coordinates);
     }
     each_index(columns, lambda);
   }
@@ -116,7 +118,6 @@ export function app_g_refresh(
     const clicked_coordinates = {
       ...tile.dataset,
     };
-    function lambda3(value, property) {}
     each_object(object, lambda3);
     let tutorial = global_function_property_get(app_g_refresh, "tutorial");
     let player2 = app_g_player_get();
