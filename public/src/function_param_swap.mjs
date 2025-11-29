@@ -3,8 +3,6 @@ import { js_declaration_param_named } from "../../../love/public/src/js_declarat
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 export async function function_param_swap(f_name, param_name_a, param_name_b) {
-  let a_index = null;
-  let b_index = null;
   await function_transform(f_name, lambda);
   function lambda(ast) {
     let declaration = js_declaration_single(ast);
