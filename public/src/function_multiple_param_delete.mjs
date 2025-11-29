@@ -9,10 +9,10 @@ export async function function_multiple_param_delete(
 ) {
   let f_names = string_split_comma(f_names_comma);
   marker("1");
-  async function lambda(item) {
+  async function lambda(f_name) {
     let v2 = await function_current_set(f_name);
+    let v = await function_param_delete(param_name);
   }
   await each_async(f_names, lambda);
-  let v = await function_param_delete(param_name);
   return v;
 }
