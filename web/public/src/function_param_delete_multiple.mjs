@@ -18,12 +18,13 @@ export async function function_param_delete_multiple(param_names_comma) {
     list_remove_at(args, index);
   }
   function function_transform_current_lambda(ast) {
-    function lambda(item) {}
-    each(list, lambda);
-    let declaration = js_declaration_single(ast);
-    let params = js_declaration_params_get(declaration);
-    let p = js_declaration_param_named(declaration, param_name);
-    index = list_index_of(params, p);
-    list_remove_at(params, index);
+    function lambda(param_name) {
+      let declaration = js_declaration_single(ast);
+      let params = js_declaration_params_get(declaration);
+      let p = js_declaration_param_named(declaration, param_name);
+      index = list_index_of(params, p);
+      list_remove_at(params, index);
+    }
+    each(param_names, lambda);
   }
 }
