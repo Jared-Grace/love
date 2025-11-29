@@ -59,7 +59,7 @@ export function app_g_refresh_click_overlay(
         ),
     );
     app_g_button_green(
-      container,
+      overlay,
       "Pray and politely end the conversation",
       overlay_close,
     );
