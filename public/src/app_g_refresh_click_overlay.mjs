@@ -37,14 +37,8 @@ export function app_g_refresh_click_overlay(
       "background-color": "#80a0ff" + "bc",
     });
     let name2 = object_property_get(player, "name");
-    app_g_p_text(
-      container,
-      name +
-        " says: " +
-        list_random_item(["hi", "hello", "greetings", "hey"]) +
-        " " +
-        name2,
-    );
+    const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
+    app_g_p_text(container, name + " says: " + greet + " " + name2);
     app_g_p_text(
       container,
       emoji_pray() +
