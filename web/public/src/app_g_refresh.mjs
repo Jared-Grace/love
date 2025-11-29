@@ -100,7 +100,8 @@ export function app_g_refresh(
       g_img_square_style(tile);
       const tile_class = "tile";
       html_class_add(tile, tile_class);
-      each_object(object, function lambda3(value, property) {});
+      function lambda3(value, property) {}
+      each_object(object, lambda3);
       html_data_set(tile, "x", x);
       html_data_set(tile, "y", y);
     }
