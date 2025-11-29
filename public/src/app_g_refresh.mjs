@@ -126,7 +126,6 @@ export function app_g_refresh(
     if (equal(distance2, 0)) {
       let overlay = app_g_overlay(div);
       app_g_menu_refresh(overlay);
-      return;
     } else {
       function lambda17(npc) {
         let e = object_includes(npc, clicked_coordinates);
