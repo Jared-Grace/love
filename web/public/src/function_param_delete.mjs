@@ -1,3 +1,4 @@
+import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { js_declaration_param_named } from "../../../love/public/src/js_declaration_param_named.mjs";
 import { js_declaration_params_get } from "../../../love/public/src/js_declaration_params_get.mjs";
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
@@ -27,7 +28,8 @@ export async function function_param_delete(param_name) {
   function function_transform_current_lambda(ast) {
     let declaration = js_declaration_single(ast);
     let params = js_declaration_params_get(declaration);
-    let result = js_declaration_param_named(declaration2, param_name2);
+    let result = js_declaration_param_named(declaration, param_name);
+    let index = list_index_of(list, item);
     if (false) {
       let names = js_identifiers_names(ast);
       list_intersect_empty_is_assert(names, param_names);
