@@ -12,7 +12,6 @@ export async function function_param_delete_multiple(param_names_comma) {
   marker("1");
   assert_arguments(arguments, 1);
   let param_names = string_split_comma(param_names_comma);
-  let index = null;
   await function_params_new_generic(function_transform_current_lambda, on_call);
   function on_call(args) {
     list_remove_at(args, index);
@@ -22,7 +21,7 @@ export async function function_param_delete_multiple(param_names_comma) {
       let declaration = js_declaration_single(ast);
       let params = js_declaration_params_get(declaration);
       let p = js_declaration_param_named(declaration, param_name);
-      index = list_index_of(params, p);
+      let index = list_index_of(params, p);
       list_remove_at(params, index);
     }
     each(param_names, lambda);
