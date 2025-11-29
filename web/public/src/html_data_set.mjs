@@ -4,6 +4,5 @@ import { html_component_element_get } from "../../../love/public/src/html_compon
 export function html_data_set(component, property_name, value) {
   marker("1");
   let element = html_component_element_get(component);
-  element.dataset;
   object_property_set(element.dataset, property_name, value);
 }
