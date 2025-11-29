@@ -33,7 +33,7 @@ export function app_g_refresh_click_overlay(
     let name = object_property_get(s, "name");
     let container = app_karate_container_centered(overlay);
     html_style_assign(container, {
-      "background-color": app_karate_container_background_color() + "bc",
+      "background-color": "#FFFFFF" + "bc",
       padding: "0",
     });
   } else {
