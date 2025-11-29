@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_button_back } from "../../../love/public/src/app_g_button_back.mjs";
 import { g_rows_count } from "../../../love/public/src/g_rows_count.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -21,6 +22,7 @@ export function app_g_refresh_click_overlay(
   npcs_matched,
   tutorial,
 ) {
+  marker("1");
   let overlay = app_g_overlay(div);
   let prayer2 = object_property_get(player, "prayer");
   let conversation2 = object_property_get(prayer2, "conversation");
