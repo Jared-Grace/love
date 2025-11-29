@@ -78,6 +78,6 @@ export function app_g_refresh(div, game_prefix, tiles_path, rows, body, map) {
   each_index(rows, lambda2);
   html_on_click(div, on_click);
   async function on_click(e) {
-    await app_g_click(e, tile_class, div, player_img_c, body);
+    await app_g_click(e, tile_class, div, player_img_c, body, map);
   }
 }
