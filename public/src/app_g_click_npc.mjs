@@ -32,7 +32,7 @@ export function app_g_click_npc(div, npcs_matched, tutorial, body) {
   let prayer = object_property_get(player, "prayer");
   let conversation = object_property_get(prayer, "conversation");
   if (conversation) {
-    object_property_set(prayer, "conversation");
+    object_property_set(prayer, "conversation", false);
     let npc = list_single(npcs_matched);
     let name = object_property_get(npc, "name");
     let gender = object_property_get(npc, "gender");
