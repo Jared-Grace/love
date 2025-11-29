@@ -42,18 +42,14 @@ export function app_g_click_npc(div, npcs_matched, tutorial, body) {
     let v = string_first_upper_to(greet);
     let s2 = list_random_item(["nice", "great", "pleasure", "good"]);
     const a = list_random_item(["it's", "it is"]) + " ";
+    const meet_message =
+      " " +
+      string_first_upper_to(
+        string_random_or_empty(a) + s2 + " to meet you" + g_random_dot_bang(),
+      );
     app_g_p_text(
       container,
-      name +
-        " says: " +
-        v +
-        " " +
-        name2 +
-        g_random_dot_bang() +
-        " " +
-        string_first_upper_to(
-          string_random_or_empty(a) + s2 + " to meet you" + g_random_dot_bang(),
-        ),
+      name + " says: " + v + " " + name2 + g_random_dot_bang() + meet_message,
     );
     app_g_button_green(
       overlay,
