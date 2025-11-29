@@ -81,6 +81,7 @@ export function app_g_main() {
   let imgs_men = list_map_combine_left("man_", r2);
   let imgs_women = list_map_combine_left("woman_", r2);
   const player_img = list_random_item(imgs_men);
+  let names_men = bible_names_men();
   let player = {
     x: 5,
     y: 5,
@@ -88,6 +89,7 @@ export function app_g_main() {
     prayer: {
       conversation: false,
     },
+    name: list_random_item(names_men),
   };
   app_g_player_save(player);
   let right = player_img;
@@ -111,7 +113,6 @@ export function app_g_main() {
     names: names_women,
     imgs: list_without(imgs_women, right),
   };
-  let names_men = bible_names_men();
   let male = {
     name: g_gender_male(),
     names: names_men,
