@@ -1,18 +1,5 @@
+import { app_g_refresh_click_overlay } from "../../../love/public/src/app_g_refresh_click_overlay.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
-import { app_g_button_back } from "../../../love/public/src/app_g_button_back.mjs";
-import { g_rows_count } from "../../../love/public/src/g_rows_count.mjs";
-import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
-import { g_img_square_style_position } from "../../../love/public/src/g_img_square_style_position.mjs";
-import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
-import { html_div } from "../../../love/public/src/html_div.mjs";
-import { app_karate_style_control } from "../../../karate_code/public/src/app_karate_style_control.mjs";
-import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
-import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
-import { app_karate_container_background_color } from "../../../love/public/src/app_karate_container_background_color.mjs";
-import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
-import { app_karate_container_centered } from "../../../karate_code/public/src/app_karate_container_centered.mjs";
-import { list_single } from "../../../love/public/src/list_single.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 import { html_on_transitionend } from "../../../love/public/src/html_on_transitionend.mjs";
 import { g_img_square_style_position_object } from "../../../love/public/src/g_img_square_style_position_object.mjs";
@@ -48,11 +35,11 @@ export async function app_g_refresh_click(
   let json = html_data_get(tile, "coordinates");
   let clicked_coordinates = json_from(json);
   let tutorial = global_function_property_get(app_g_refresh, "tutorial");
-  let player2 = app_g_player_get();
+  let player = app_g_player_get();
   if (equal_not(tutorial, null)) {
     html_remove(tutorial);
   }
-  let distance2 = g_distance(player2, clicked_coordinates);
+  let distance2 = g_distance(player, clicked_coordinates);
   if (equal(distance2, 0)) {
     let overlay = app_g_overlay(div);
     app_g_menu_refresh(overlay);
@@ -73,7 +60,7 @@ export async function app_g_refresh_click(
       let filtered3 = list_filter(coordinates, lambda18);
       list_shuffle(filtered3);
       function lambda19(item3) {
-        let distance = g_distance(player2, item3);
+        let distance = g_distance(player, item3);
         return distance;
       }
       list_sort_number_mapper(filtered3, lambda19);
@@ -81,13 +68,13 @@ export async function app_g_refresh_click(
     } else {
       coordinates_move_to = clicked_coordinates;
     }
-    let distance = g_distance(player2, coordinates_move_to);
-    object_assign(player2, coordinates_move_to);
+    let distance = g_distance(player, coordinates_move_to);
+    object_assign(player, coordinates_move_to);
     const away = distance >= 1;
     if (away) {
       let properties = ["left", "top"];
       function on_transition_begin() {
-        g_img_square_style_position_object(player2, player_img_c);
+        g_img_square_style_position_object(player, player_img_c);
       }
       await html_on_transitionend(
         properties,
@@ -102,54 +89,13 @@ export async function app_g_refresh_click(
       inline: "center",
     });
     if (npc_clicked) {
-      let overlay = app_g_overlay(div);
-      let prayer2 = object_property_get(player2, "prayer");
-      let conversation2 = object_property_get(prayer2, "conversation");
-      if (conversation2) {
-        let s = list_single(npcs_matched);
-        let name = object_property_get(s, "name");
-        let container = app_karate_container_centered(overlay);
-        html_style_assign(container, {
-          "background-color": app_karate_container_background_color() + "bc",
-          padding: "0",
-        });
-      } else {
-        let container = app_karate_container_centered(overlay);
-        html_style_assign(container, {
-          "background-color": app_karate_container_background_color() + "bc",
-          padding: "0",
-        });
-        html_p_text(
-          container,
-          emoji_pray() +
-            " You remember that you have not prayed, yet, before your next conversation!",
-        );
-        html_p_text(
-          container,
-          " To pray, tap or click on yourself (You glow with white)",
-        );
-        app_karate_style_control(container);
-        function lambda21() {
-          html_remove(overlay);
-          tutorial = html_div(div);
-          global_function_property_set(app_g_refresh, "tutorial", tutorial);
-          g_img_square_style_position(tutorial, player2, "tutorial");
-          let text = emoji_pray();
-          html_text_set(tutorial, text);
-          let rows = g_rows_count();
-          const square_size = "calc(100vh / " + rows + " * .7)";
-          html_style_assign(tutorial, {
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            textAlign: "center",
-            fontSize: square_size,
-            animation: "upDown 1.25s infinite ease-in-out alternate",
-          });
-        }
-        app_g_button_back(overlay, lambda21);
-      }
+      tutorial = app_g_refresh_click_overlay(
+        div,
+        player,
+        npcs_matched,
+        tutorial,
+      );
     }
-    app_g_player_save(player2);
+    app_g_player_save(player);
   }
 }
