@@ -57,11 +57,7 @@ export function app_g_refresh_click_overlay(
           string_random_or_empty(a) + s2 + " to meet you" + g_random_dot_bang(),
         ),
     );
-    app_g_p_text(
-      container,
-      emoji_pray() +
-        " You remember that you have not prayed, yet, before your next conversation!",
-    );
+    app_g_button;
   } else {
     let container = app_g_container(overlay);
     html_style_assign(container, {
