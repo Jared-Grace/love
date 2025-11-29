@@ -51,9 +51,7 @@ export function app_g_refresh_click_overlay(
         name2 +
         g_random_dot_bang() +
         " " +
-        string_first_upper_to(s2) +
-        " to meet you" +
-        g_random_dot_bang(),
+        string_first_upper_to(s2 + " to meet you" + g_random_dot_bang()),
     );
     app_g_p_text(
       container,
