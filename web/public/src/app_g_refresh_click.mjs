@@ -44,7 +44,7 @@ export async function app_g_refresh_click(
   }
   let distance2 = g_distance(player, clicked_coordinates);
   if (equal(distance2, 0)) {
-    let overlay = app_g_overlay(div);
+    let overlay = app_g_overlay(body);
     app_g_menu_refresh(overlay);
   } else {
     function lambda17(npc) {
