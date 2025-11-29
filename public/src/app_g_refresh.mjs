@@ -99,6 +99,7 @@ export function app_g_refresh(
     each_index(columns, lambda);
   }
   each_index(rows, lambda2);
+  html_on_click(div, on_tile_click);
   async function on_tile_click() {
     let tutorial = global_function_property_get(app_g_refresh, "tutorial");
     let player2 = app_g_player_get();
@@ -206,5 +207,4 @@ export function app_g_refresh(
     }
     app_g_player_save(player2);
   }
-  html_on_click(clickable, on_tile_click);
 }
