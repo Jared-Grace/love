@@ -30,10 +30,10 @@ export async function function_param_delete_multiple(param_names_comma) {
     let m = list_map(param_names, lambda);
     list_sort_number(m);
     ("we want to remove later indices before earlier so the order does not shift while we remove");
-    list_copy_reverse(m);
+    let c = list_copy_reverse(m);
     function lambda2(index) {
       list_remove_at(params, index);
     }
-    each(m, lambda2);
+    each(c, lambda2);
   }
 }
