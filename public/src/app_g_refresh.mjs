@@ -81,6 +81,10 @@ export function app_g_refresh(
     let ci = g_character_img(game_prefix, div, npc);
   }
   each(npcs, lambda12);
+  html_style_assign(div, {
+    gridTemplateColumns: "repeat(100, 1fr)",
+    gridTemplateRows: "repeat(" + "rows" + ", 1fr)",
+  });
   function lambda2(columns, y) {
     function lambda(r, x) {
       const src = tiles_path + r + ".png";
