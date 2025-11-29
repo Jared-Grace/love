@@ -58,7 +58,12 @@ export function app_g_refresh_click_overlay(
           string_random_or_empty(a) + s2 + " to meet you" + g_random_dot_bang(),
         ),
     );
-    app_g_button_green(overlay2, text2, lambda22);
+    app_g_button_green(overlay2, text2, lambda222);
+    app_g_button_green(
+      container,
+      "Pray and politely end the conversation",
+      lambda22,
+    );
   } else {
     let container = app_g_container(overlay);
     html_style_assign(container, {
