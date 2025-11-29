@@ -94,7 +94,7 @@ export function app_g_refresh(
     });
     function lambda(r, x) {
       const src = tiles_path + r + ".png";
-      let tile = html_img(parent, src);
+      let tile = html_img(div, src);
       g_img_square_style(tile);
       let clickable = html_div(div);
       const clicked_coordinates = {
