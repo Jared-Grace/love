@@ -36,6 +36,7 @@ export function app_g_refresh_click_overlay(
     html_style_assign(container, {
       "background-color": "#80a0ff" + "bc",
     });
+    let name2 = object_property_get(player, "name");
     app_g_p_text(
       container,
       name + " says: ",
