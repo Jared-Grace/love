@@ -112,7 +112,7 @@ export function app_g_refresh(
   html_on_click(div, on_tile_click);
   async function on_tile_click(e) {
     const tile = e.target.closest("." + tile_class);
-    log(message);
+    log(tile);
     const clicked_coordinates = {
       ...tile.dataset,
     };
