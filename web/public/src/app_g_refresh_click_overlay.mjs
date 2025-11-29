@@ -46,12 +46,12 @@ export function app_g_refresh_click_overlay(
     );
   } else {
     let container = app_karate_container_centered(overlay);
-    html_style_assign(container, {
-      "background-color": app_karate_container_background_color() + "bc",
-    });
     app_karate_style_control(container);
     html_style_assign(container, {
-      padding: "0",
+      padding: "0.25em",
+    });
+    html_style_assign(container, {
+      "background-color": app_karate_container_background_color() + "bc",
     });
     app_g_p_text(
       container,
