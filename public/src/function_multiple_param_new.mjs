@@ -2,9 +2,9 @@ import { function_multiple_param_delete_generic } from "../../../love/public/src
 import { function_param_new } from "../../../love/public/src/function_param_new.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function function_multiple_param_new(
-  param_name,
-  default_value,
   f_names_comma,
+  default_value,
+  param_name,
 ) {
   marker("1");
   let fn = async function lambda(param_name) {
