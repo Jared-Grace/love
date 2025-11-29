@@ -91,6 +91,7 @@ export function app_g_refresh(
       npcs,
       coordinates,
       player_img_c,
+      body,
     );
   }
 }
