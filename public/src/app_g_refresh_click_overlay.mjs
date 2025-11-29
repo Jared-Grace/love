@@ -42,7 +42,7 @@ export function app_g_refresh_click_overlay(
     let name2 = object_property_get(player, "name");
     const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
     let v = string_first_upper_to(greet);
-    let s2 = list_random_item(["nice", "great", "pleasure"]);
+    let s2 = list_random_item(["nice", "great", "pleasure", "good"]);
     const a = "it is" + string_random_or_empty(" very");
     app_g_p_text(
       container,
