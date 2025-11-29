@@ -30,6 +30,7 @@ export async function app_g_refresh_click(
   npcs,
   coordinates,
   player_img_c,
+  body,
 ) {
   marker("1");
   const tile_e = e.target.closest("." + tile_class);
