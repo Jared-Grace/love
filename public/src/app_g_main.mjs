@@ -1,3 +1,5 @@
+import { g_gender_male } from "../../../love/public/src/g_gender_male.mjs";
+import { g_gender_female } from "../../../love/public/src/g_gender_female.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
@@ -134,11 +136,3 @@ export function app_g_main() {
   each_index(npcs, lambda16);
   app_g_refresh(div, game_prefix, player, npcs, tiles_path, coordinates, rows);
 }
-function g_gender_male() {
-  return 'male';
-}
-
-function g_gender_female() {
-  return 'female';
-}
-
