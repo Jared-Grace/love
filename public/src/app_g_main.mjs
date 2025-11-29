@@ -59,6 +59,7 @@ export function app_g_main() {
   let div = html_div(body);
   html_style_assign(div, {
     position: "relative",
+    display: "grid",
   });
   let row_count = 20;
   let column_count = row_count;
