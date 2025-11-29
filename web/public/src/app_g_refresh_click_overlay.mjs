@@ -62,7 +62,7 @@ export function app_g_refresh_click_overlay(
     app_g_button_green(
       container,
       "Pray and politely end the conversation",
-      lambda2,
+      overlay_close,
     );
   } else {
     let container = app_g_container(overlay);
@@ -79,7 +79,7 @@ export function app_g_refresh_click_overlay(
       " To pray, tap or click on yourself (You glow with white)",
     );
     function lambda21() {
-      html_remove(overlay);
+      overlay_close();
       tutorial = html_div(div);
       html_click_none(tutorial);
       global_function_property_set(app_g_refresh, "tutorial", tutorial);
@@ -100,4 +100,7 @@ export function app_g_refresh_click_overlay(
     app_g_button_back(overlay, lambda21);
   }
   return tutorial;
+  function overlay_close() {
+    html_remove(overlay);
+  }
 }
