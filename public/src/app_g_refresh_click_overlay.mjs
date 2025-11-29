@@ -1,3 +1,4 @@
+import { app_g_container } from "../../../love/public/src/app_g_container.mjs";
 import { app_g_p_text } from "../../../love/public/src/app_g_p_text.mjs";
 import { html_click_none } from "../../../love/public/src/html_click_none.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -45,11 +46,7 @@ export function app_g_refresh_click_overlay(
         " You remember that you have not prayed, yet, before your next conversation!",
     );
   } else {
-    let container = app_karate_container_centered(overlay);
-    app_karate_style_control(container);
-    html_style_assign(container, {
-      padding: "0.25em",
-    });
+    let container = app_g_container(overlay);
     html_style_assign(container, {
       "background-color": app_karate_container_background_color() + "bc",
     });
