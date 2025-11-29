@@ -58,7 +58,8 @@ export function app_g_refresh_click_overlay(
           string_random_or_empty(a) + s2 + " to meet you" + g_random_dot_bang(),
         ),
     );
-    app_g_button_green(overlay2, text2, function lambda2() {});
+    function lambda2() {}
+    app_g_button_green(overlay2, text2, lambda2);
     app_g_button_green(
       container,
       "Pray and politely end the conversation",
