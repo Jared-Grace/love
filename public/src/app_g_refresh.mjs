@@ -1,3 +1,4 @@
+import { each_object } from "../../../love/public/src/each_object.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_data_set_multiple } from "../../../love/public/src/html_data_set_multiple.mjs";
 import { html_class_add } from "../../../love/public/src/html_class_add.mjs";
@@ -115,9 +116,7 @@ export function app_g_refresh(
     const clicked_coordinates = {
       ...tile.dataset,
     };
-    log({
-      clicked_coordinates,
-    });
+    each_object(object, function lambda3(value, property) {});
     let tutorial = global_function_property_get(app_g_refresh, "tutorial");
     let player2 = app_g_player_get();
     if (equal_not(tutorial, null)) {
