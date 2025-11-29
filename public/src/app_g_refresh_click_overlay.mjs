@@ -26,7 +26,7 @@ export function app_g_refresh_click_overlay(
 ) {
   marker("1");
   let overlay = app_g_overlay(body);
-  let prayer2 = object_property_get(player, "prayer");
+  let prayer = object_property_get(player, "prayer");
   let conversation = object_property_get(prayer, "conversation");
   if (conversation) {
     let s = list_single(npcs_matched);
