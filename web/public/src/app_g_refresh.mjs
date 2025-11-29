@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_refresh_click } from "../../../love/public/src/app_g_refresh_click.mjs";
 import { html_data_set_json } from "../../../love/public/src/html_data_set_json.mjs";
 import { html_class_add } from "../../../love/public/src/html_class_add.mjs";
@@ -24,6 +25,7 @@ export function app_g_refresh(
   coordinates,
   rows,
 ) {
+  marker("1");
   global_function_property_set(app_g_refresh, "tutorial", null);
   html_clear(div);
   let player_img_c = g_character_img(game_prefix, div, player);
