@@ -1,5 +1,4 @@
-import { html_data_set } from "../../../love/public/src/html_data_set.mjs";
-import { json_to } from "../../../love/public/src/json_to.mjs";
+import { html_data_set_json } from "../../../love/public/src/html_data_set_json.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_class_add } from "../../../love/public/src/html_class_add.mjs";
@@ -106,8 +105,7 @@ export function app_g_refresh(
         x,
         y,
       };
-      let json = json_to(object2);
-      html_data_set(tile, coordinates);
+      html_data_set_json(coordinates, tile);
     }
     each_index(columns, lambda);
   }
