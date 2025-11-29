@@ -1,3 +1,4 @@
+import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_click } from "../../../love/public/src/app_g_click.mjs";
 import { html_data_set_json } from "../../../love/public/src/html_data_set_json.mjs";
@@ -28,6 +29,7 @@ export function app_g_refresh(
   marker("1");
   global_function_property_set(app_g_refresh, "tutorial", null);
   html_clear(div);
+  let player2 = app_g_player_get();
   let player_img_c = g_character_img(game_prefix, div, player);
   let parent = html_document_head();
   let component = html_element(parent, "style");
