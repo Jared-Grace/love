@@ -44,7 +44,7 @@ export function app_g_refresh_click_overlay(
     const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
     let v = string_first_upper_to(greet);
     let s2 = list_random_item(["nice", "great", "pleasure", "good"]);
-    const a = "it is ";
+    const a = list_random_item(["it's", "it is"]) + " ";
     app_g_p_text(
       container,
       name +
