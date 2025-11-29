@@ -105,7 +105,7 @@ export function app_g_refresh(
         x,
         y,
       };
-      html_data_set_json(coordinates, tile);
+      html_data_set_json(tile, "coordinates", coordinates);
     }
     each_index(columns, lambda);
   }
