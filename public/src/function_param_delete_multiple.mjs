@@ -1,3 +1,4 @@
+import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_split_comma } from "../../../love/public/src/string_split_comma.mjs";
 import { list_remove_at } from "../../../love/public/src/list_remove_at.mjs";
@@ -25,6 +26,7 @@ export async function function_param_delete_multiple(param_names_comma) {
       return index;
     }
     let m = list_map(param_names, lambda);
+    list_sort_number_mapper(list, function lambda2(item) {});
     list_remove_at(params, index);
   }
 }
