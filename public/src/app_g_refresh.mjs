@@ -1,3 +1,4 @@
+import { html_component_wrap } from "../../../love/public/src/html_component_wrap.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { html_data_get } from "../../../love/public/src/html_data_get.mjs";
 import { html_data_set_json } from "../../../love/public/src/html_data_set_json.mjs";
@@ -114,6 +115,7 @@ export function app_g_refresh(
   html_on_click(div, on_tile_click);
   async function on_tile_click(e) {
     const tile = e.target.closest("." + tile_class);
+    let v = html_component_wrap(element);
     log(tile);
     let json = html_data_get(tile, "coordinates");
     let clicked_coordinates = json_from(json);
