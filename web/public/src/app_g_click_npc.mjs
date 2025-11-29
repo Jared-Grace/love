@@ -1,6 +1,5 @@
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { not } from "../../../love/public/src/not.mjs";
-import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { emoji_wave } from "../../../love/public/src/emoji_wave.mjs";
 import { app_g_button_green } from "../../../love/public/src/app_g_button_green.mjs";
 import { string_random_or_empty } from "../../../love/public/src/string_random_or_empty.mjs";
@@ -27,7 +26,6 @@ import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 import { list_random_item } from "./list_random_item.mjs";
 export function app_g_click_npc(div, npcs_matched, tutorial, body) {
   marker("1");
-  let player = app_g_player_get();
   let overlay = app_g_overlay(body);
   let prayer = object_property_get(player, "prayer");
   let conversation = object_property_get(prayer, "conversation");
