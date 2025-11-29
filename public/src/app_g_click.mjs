@@ -24,6 +24,7 @@ import { json_from } from "../../../love/public/src/json_from.mjs";
 import { html_data_get } from "../../../love/public/src/html_data_get.mjs";
 import { html_component_wrap } from "../../../love/public/src/html_component_wrap.mjs";
 export async function app_g_click(e, tile_class, div, player_img_c, body, map) {
+  let { npcs, coordinates } = map;
   marker("1");
   const tile_e = e.target.closest("." + tile_class);
   let tile = html_component_wrap(tile_e);
