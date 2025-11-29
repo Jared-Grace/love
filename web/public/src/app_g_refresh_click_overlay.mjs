@@ -39,8 +39,10 @@ export function app_g_refresh_click_overlay(
     let name2 = object_property_get(player, "name");
     app_g_p_text(
       container,
-      name + " says: ",
-      list_random_item(["hi", "hello", "greetings", "hey"]) + " ",
+      name +
+        " says: " +
+        list_random_item(["hi", "hello", "greetings", "hey"]) +
+        " ",
     );
     app_g_p_text(
       container,
