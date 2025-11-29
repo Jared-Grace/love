@@ -1,5 +1,5 @@
 import { marker } from "../../../love/public/src/marker.mjs";
-import { app_g_refresh_click_overlay } from "../../../love/public/src/app_g_refresh_click_overlay.mjs";
+import { app_g_click_npc } from "../../../love/public/src/app_g_click_npc.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 import { html_on_transitionend } from "../../../love/public/src/html_on_transitionend.mjs";
@@ -92,13 +92,7 @@ export async function app_g_click(
       inline: "center",
     });
     if (npc_clicked) {
-      tutorial = app_g_refresh_click_overlay(
-        div,
-        player,
-        npcs_matched,
-        tutorial,
-        body,
-      );
+      tutorial = app_g_click_npc(div, player, npcs_matched, tutorial, body);
     }
     app_g_player_save(player);
   }
