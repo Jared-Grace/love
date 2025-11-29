@@ -21,9 +21,9 @@ export async function function_param_delete_multiple(param_names_comma) {
     list_remove_at(args, index);
   }
   function function_transform_current_lambda(ast) {
+    let declaration = js_declaration_single(ast);
+    let params = js_declaration_params_get(declaration);
     function lambda(param_name) {
-      let declaration = js_declaration_single(ast);
-      let params = js_declaration_params_get(declaration);
       let p = js_declaration_param_named(declaration, param_name);
       let index = list_index_of(params, p);
       return index;
