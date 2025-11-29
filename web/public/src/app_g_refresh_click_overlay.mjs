@@ -1,3 +1,4 @@
+import { app_g_button_green } from "../../../love/public/src/app_g_button_green.mjs";
 import { string_random_or_empty } from "../../../love/public/src/string_random_or_empty.mjs";
 import { g_random_dot_bang } from "../../../love/public/src/g_random_dot_bang.mjs";
 import { string_first_upper_to } from "../../../love/public/src/string_first_upper_to.mjs";
@@ -57,7 +58,7 @@ export function app_g_refresh_click_overlay(
           string_random_or_empty(a) + s2 + " to meet you" + g_random_dot_bang(),
         ),
     );
-    app_g_button;
+    app_g_button_green(overlay2, text2, lambda22);
   } else {
     let container = app_g_container(overlay);
     html_style_assign(container, {
