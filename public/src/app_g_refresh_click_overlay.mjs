@@ -11,7 +11,6 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { app_karate_style_control } from "../../../karate_code/public/src/app_karate_style_control.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
-import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { app_karate_container_background_color } from "../../../love/public/src/app_karate_container_background_color.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { app_karate_container_centered } from "../../../karate_code/public/src/app_karate_container_centered.mjs";
@@ -40,7 +39,7 @@ export function app_g_refresh_click_overlay(
     });
     app_karate_style_control(container);
     app_g_p_text(container, name);
-    html_p_text(
+    app_g_p_text(
       container,
       emoji_pray() +
         " You remember that you have not prayed, yet, before your next conversation!",
@@ -52,12 +51,12 @@ export function app_g_refresh_click_overlay(
       padding: "0",
     });
     app_karate_style_control(container);
-    html_p_text(
+    app_g_p_text(
       container,
       emoji_pray() +
         " You remember that you have not prayed, yet, before your next conversation!",
     );
-    html_p_text(
+    app_g_p_text(
       container,
       " To pray, tap or click on yourself (You glow with white)",
     );
