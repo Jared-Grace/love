@@ -29,7 +29,6 @@ import { object_includes } from "../../../love/public/src/object_includes.mjs";
 import { app_g_menu_refresh } from "../../../love/public/src/app_g_menu_refresh.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
@@ -107,9 +106,6 @@ export function app_g_refresh(
       html_remove(tutorial);
     }
     let distance2 = g_distance(player2, clicked_coordinates);
-    log({
-      distance2,
-    });
     if (equal(distance2, 0)) {
       let overlay = app_g_overlay(div);
       app_g_menu_refresh(overlay);
