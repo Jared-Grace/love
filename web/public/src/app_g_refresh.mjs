@@ -82,12 +82,15 @@ export function app_g_refresh(
     let ci = g_character_img(game_prefix, div, npc);
   }
   each(npcs, lambda12);
-  let size = list_size(list);
+  let rows_size = list_size(rows);
   html_style_assign(div, {
-    gridTemplateColumns: "repeat(100, 1fr)",
-    gridTemplateRows: "repeat(" + "rows" + ", 1fr)",
+    gridTemplateRows: "repeat(" + rows_size + ", 1fr)",
   });
   function lambda2(columns, y) {
+    let columns_size = list_size(columns);
+    html_style_assign(div, {
+      gridTemplateColumns: "repeat(" + columns_size + ", 1fr)",
+    });
     function lambda(r, x) {
       const src = tiles_path + r + ".png";
       g_img_square(div, src, x, y, "tile");
