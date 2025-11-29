@@ -157,7 +157,12 @@ export function app_g_refresh(
           if (conversation2) {
             let s = list_single(npcs_matched);
             let name = object_property_get(s, "name");
-            alert(name);
+            let container = app_karate_container_centered(overlay);
+            html_style_assign(container, {
+              "background-color":
+                app_karate_container_background_color() + "bc",
+              padding: "0",
+            });
           } else {
             let container = app_karate_container_centered(overlay);
             html_style_assign(container, {
