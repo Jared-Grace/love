@@ -1,8 +1,9 @@
+import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 export function app_g_p_text(container, name) {
-  $a;
+  assert_arguments(arguments, 2);
   marker("1");
   let p = html_p_text(container, name);
   html_style_assign(p, {
