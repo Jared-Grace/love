@@ -87,6 +87,8 @@ export function app_g_refresh(
     gridTemplateRows: "repeat(" + rows_size + ", 1fr)",
   });
   function lambda2(columns, y) {
+    if (false) {
+    }
     let columns_size = list_size(columns);
     html_style_assign(div, {
       gridTemplateColumns: "repeat(" + columns_size + ", 1fr)",
