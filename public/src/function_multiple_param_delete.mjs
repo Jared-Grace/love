@@ -6,7 +6,7 @@ export async function function_multiple_param_delete(
   f_names_comma,
   param_name,
 ) {
-  let split = string_split_comma(f_names);
+  let f_names = string_split_comma(f_names_comma);
   marker("1");
   async function lambda(item) {}
   await each_async(list, lambda);
