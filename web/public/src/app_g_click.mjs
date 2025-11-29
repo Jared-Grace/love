@@ -87,6 +87,6 @@ export async function app_g_click(e, tile_class, div, player_img_c, body, map) {
     if (npc_clicked) {
       tutorial = app_g_click_npc(div, npcs_matched, tutorial, body);
     }
-    app_g_player_save(player);
   }
+  app_g_player_save(player);
 }
