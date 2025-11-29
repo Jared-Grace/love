@@ -121,6 +121,10 @@ export function app_g_main() {
   let gender_count = list_size(genders);
   let npc_count = 30;
   let npcs = list_take(coordinates, npc_count);
+  let map = {
+    npcs,
+    coordinates,
+  };
   function npc_initialize(npc, index) {
     let r4 = mod(index, gender_count);
     let gender = list_get(genders, r4);
