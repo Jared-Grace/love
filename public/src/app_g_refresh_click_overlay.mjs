@@ -24,7 +24,7 @@ export function app_g_refresh_click_overlay(
   body,
 ) {
   marker("1");
-  let overlay = app_g_overlay(div);
+  let overlay = app_g_overlay(body);
   let prayer2 = object_property_get(player, "prayer");
   let conversation2 = object_property_get(prayer2, "conversation");
   if (conversation2) {
