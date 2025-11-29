@@ -79,8 +79,8 @@ export function app_g_refresh(
     each_index(columns, lambda);
   }
   each_index(rows, lambda2);
-  html_on_click(div, on_tile_click);
-  async function on_tile_click(e) {
+  html_on_click(div, on_click);
+  async function on_click(e) {
     await app_g_refresh_click(
       e,
       tile_class,
