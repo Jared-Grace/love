@@ -88,6 +88,7 @@ export function app_g_refresh(
   html_style_assign(div, {
     gridTemplateRows: "repeat(" + rows_size + ", 1fr)",
   });
+  const tile_class = "tile";
   function lambda2(columns, y) {
     let columns_size = list_size(columns);
     html_style_assign(div, {
@@ -97,7 +98,6 @@ export function app_g_refresh(
       const src = tiles_path + r + ".png";
       let tile = html_img(div, src);
       g_img_square_style(tile);
-      const tile_class = "tile";
       html_class_add(tile, tile_class);
       const coordinates = {
         x,
