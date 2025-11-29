@@ -1,3 +1,4 @@
+import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { app_g_button_back } from "../../../love/public/src/app_g_button_back.mjs";
 import { app_karate_container_background_color } from "../../../love/public/src/app_karate_container_background_color.mjs";
@@ -81,6 +82,7 @@ export function app_g_refresh(
     let ci = g_character_img(game_prefix, div, npc);
   }
   each(npcs, lambda12);
+  let size = list_size(list);
   html_style_assign(div, {
     gridTemplateColumns: "repeat(100, 1fr)",
     gridTemplateRows: "repeat(" + "rows" + ", 1fr)",
