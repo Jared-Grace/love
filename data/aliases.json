@@ -258,6 +258,7 @@
   "fnj": "file_name_json",
   "rt": "restart",
   "rg1": "range_1",
-  "lsh": "list_shuffle"
+  "lsh": "list_shuffle",
+  "oba": "object_assign"
  }
 }
