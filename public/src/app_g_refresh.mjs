@@ -32,7 +32,7 @@ import { g_distance } from "../../../love/public/src/g_distance.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
-import { g_img_square_style } from "../../../love/public/src/g_img_square_style.mjs";
+import { g_img_square_style_position } from "../../../love/public/src/g_img_square_style_position.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { g_img_square } from "../../../love/public/src/g_img_square.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -99,7 +99,7 @@ export function app_g_refresh(
         x,
         y,
       };
-      g_img_square_style(clickable, clicked_coordinates, "click");
+      g_img_square_style_position(clickable, clicked_coordinates, "click");
       async function on_tile_click() {
         let tutorial = global_function_property_get(app_g_refresh, "tutorial");
         let player2 = app_g_player_get();
@@ -193,7 +193,7 @@ export function app_g_refresh(
               html_remove(overlay);
               tutorial = html_div(div);
               global_function_property_set(app_g_refresh, "tutorial", tutorial);
-              g_img_square_style(tutorial, player2, "tutorial");
+              g_img_square_style_position(tutorial, player2, "tutorial");
               let text = emoji_pray();
               html_text_set(tutorial, text);
               let rows = g_rows_count();
