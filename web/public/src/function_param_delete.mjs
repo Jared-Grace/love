@@ -30,7 +30,8 @@ export async function function_param_delete(param_name) {
     let declaration = js_declaration_single(ast);
     let params = js_declaration_params_get(declaration);
     let p = js_declaration_param_named(declaration, param_name);
-    let index = list_index_of(params, p);
+    let index = null;
+    index = list_index_of(params, p);
     list_remove_at(params, index);
     if (false) {
       let names = js_identifiers_names(ast);
