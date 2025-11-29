@@ -30,9 +30,9 @@ export function app_g_click_npc(div, npcs_matched, tutorial, body) {
   let prayer = object_property_get(player, "prayer");
   let conversation = object_property_get(prayer, "conversation");
   if (conversation) {
-    let s = list_single(npcs_matched);
-    let name = object_property_get(s, "name");
-    let gender = object_property_get(s, "gender");
+    let npc = list_single(npcs_matched);
+    let name = object_property_get(npc, "name");
+    let gender = object_property_get(npc, "gender");
     let container = app_g_container(overlay);
     html_style_assign(container, {
       "background-color": "#80a0ff" + "bc",
