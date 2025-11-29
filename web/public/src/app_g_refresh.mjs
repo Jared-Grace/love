@@ -1,5 +1,5 @@
 import { marker } from "../../../love/public/src/marker.mjs";
-import { app_g_refresh_click } from "../../../love/public/src/app_g_refresh_click.mjs";
+import { app_g_click } from "../../../love/public/src/app_g_click.mjs";
 import { html_data_set_json } from "../../../love/public/src/html_data_set_json.mjs";
 import { html_class_add } from "../../../love/public/src/html_class_add.mjs";
 import { g_img_square_style } from "../../../love/public/src/g_img_square_style.mjs";
@@ -84,7 +84,7 @@ export function app_g_refresh(
   each_index(rows, lambda2);
   html_on_click(div, on_click);
   async function on_click(e) {
-    await app_g_refresh_click(
+    await app_g_click(
       e,
       tile_class,
       div,
