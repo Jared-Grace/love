@@ -115,7 +115,9 @@ export function app_g_refresh(
     const clicked_coordinates = {
       ...tile.dataset,
     };
-    log({clicked_coordinates});
+    log({
+      clicked_coordinates,
+    });
     let tutorial = global_function_property_get(app_g_refresh, "tutorial");
     let player2 = app_g_player_get();
     if (equal_not(tutorial, null)) {
