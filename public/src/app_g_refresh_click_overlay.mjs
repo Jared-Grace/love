@@ -1,3 +1,4 @@
+import { html_click_none } from "../../../love/public/src/html_click_none.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_button_back } from "../../../love/public/src/app_g_button_back.mjs";
 import { g_rows_count } from "../../../love/public/src/g_rows_count.mjs";
@@ -54,6 +55,7 @@ export function app_g_refresh_click_overlay(
     function lambda21() {
       html_remove(overlay);
       tutorial = html_div(div);
+      html_click_none(tutorial);
       global_function_property_set(app_g_refresh, "tutorial", tutorial);
       g_img_square_style_position(tutorial, player, "tutorial");
       let text = emoji_pray();
