@@ -1,3 +1,4 @@
+import { emoji_wave } from "../../../love/public/src/emoji_wave.mjs";
 import { app_g_button_green } from "../../../love/public/src/app_g_button_green.mjs";
 import { string_random_or_empty } from "../../../love/public/src/string_random_or_empty.mjs";
 import { g_random_dot_bang } from "../../../love/public/src/g_random_dot_bang.mjs";
@@ -54,7 +55,7 @@ export function app_g_click_npc(div, player, npcs_matched, tutorial, body) {
     );
     app_g_button_green(
       overlay,
-      "Pray and politely end the conversation",
+      emoji_pray() + emoji_wave() + "Pray and politely end the conversation",
       overlay_close,
     );
   } else {
