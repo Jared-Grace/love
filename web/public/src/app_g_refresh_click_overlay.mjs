@@ -40,7 +40,7 @@ export function app_g_refresh_click_overlay(
     let name2 = object_property_get(player, "name");
     const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
     let v = string_first_upper_to(s2);
-    app_g_p_text(container, name + " says: " + greet + " " + name2);
+    app_g_p_text(container, name + " says: " + v + " " + name2);
     app_g_p_text(
       container,
       emoji_pray() +
