@@ -19,7 +19,6 @@ import { html_clear } from "../../../love/public/src/html_clear.mjs";
 export function app_g_refresh(
   div,
   game_prefix,
-  player,
   npcs,
   tiles_path,
   coordinates,
