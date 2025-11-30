@@ -6,9 +6,21 @@ export async function html_scroll_center_container_generic(
 ) {
   marker("1");
   let el = await html_scroll_center_generic_wait(player_img_c);
-  el.scrollIntoView({
+  const containerRect = container.getBoundingClientRect();
+  const tileRect = tileEl.getBoundingClientRect();
+  const scrollLeft =
+    container.scrollLeft +
+    (tileRect.left - containerRect.left) -
+    container.clientWidth / 2 +
+    tileRect.width / 2;
+  const scrollTop =
+    container.scrollTop +
+    (tileRect.top - containerRect.top) -
+    container.clientHeight / 2 +
+    tileRect.height / 2;
+  container.scrollTo({
+    left: scrollLeft,
+    top: scrollTop,
     behavior,
-    block: "center",
-    inline: "center",
   });
 }
