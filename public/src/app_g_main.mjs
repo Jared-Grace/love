@@ -1,5 +1,4 @@
-import { string_starts_with } from "../../../love/public/src/string_starts_with.mjs";
-import { location_pathname } from "../../../love/public/src/location_pathname.mjs";
+import { location_pathname_part_first_starts_with } from "../../../love/public/src/location_pathname_part_first_starts_with.mjs";
 import { localhost_is } from "../../../love/public/src/localhost_is.mjs";
 import { app_g_game_save } from "../../../love/public/src/app_g_game_save.mjs";
 import { g_gender_male } from "../../../love/public/src/g_gender_male.mjs";
@@ -45,8 +44,7 @@ export function app_g_main() {
   let path_prefix = "";
   let v = localhost_is();
   const path_part = "latest";
-  let s = location_pathname(sw);
-  let sw = string_starts_with(s, "/", path_part, "/");
+  let sw = location_pathname_part_first_starts_with(path_part);
   if (v || sw) {
     path_prefix = "..\\";
   }
