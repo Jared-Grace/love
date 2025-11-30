@@ -81,6 +81,8 @@ export async function app_g_main() {
     top: "0",
     left: "0",
     overflow: "auto",
+    scrollbarWidth: "none",
+    msOverflowStyle: "none",
     width: "100dvw",
     height: "100dvh",
     "z-index": html_z_max(),
