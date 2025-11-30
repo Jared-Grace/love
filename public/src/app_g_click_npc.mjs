@@ -55,7 +55,9 @@ export function app_g_click_npc(div, npcs_matched, tutorial, body, player) {
     } else {
       meet_message =
         s2 +
-        " to see you" +
+        " to " +
+        "see" +
+        " you" +
         string_random_or_empty(", again") +
         g_random_dot_bang();
     }
