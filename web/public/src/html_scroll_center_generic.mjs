@@ -9,7 +9,7 @@ export function html_scroll_center_generic(player_img_c, behavior) {
         inline: "center",
       });
     }
-    setTimeout(lambda, 0);
+    setTimeout(lambda, 1);
   }
   window.requestAnimationFrame(lambda2);
 }
