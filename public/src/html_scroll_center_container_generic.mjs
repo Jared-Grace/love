@@ -5,9 +5,9 @@ export async function html_scroll_center_container_generic(
   behavior,
 ) {
   marker("1");
-  let el = await html_scroll_center_generic_wait(player_img_c);
+  let e = await html_scroll_center_generic_wait(player_img_c);
   const containerRect = container.getBoundingClientRect();
-  const tileRect = tileEl.getBoundingClientRect();
+  const tileRect = e.getBoundingClientRect();
   const scrollLeft =
     container.scrollLeft +
     (tileRect.left - containerRect.left) -
