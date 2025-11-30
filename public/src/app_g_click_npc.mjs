@@ -39,6 +39,10 @@ export function app_g_click_npc(
       emoji_pray() +
         " You remember that you have not prayed, yet, before your next conversation!",
     );
+    let conversed = object_property_get(player, "conversed");
+    if (conversed) {
+      return;
+    }
     app_g_p_text(
       container,
       " To pray, tap or click on yourself (You glow with white)",
