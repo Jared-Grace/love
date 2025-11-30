@@ -19,7 +19,13 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
-export function app_g_conversation(prayer, npcs_matched, overlay, player) {
+export function app_g_conversation(
+  prayer,
+  npcs_matched,
+  overlay,
+  player,
+  game_prefix,
+) {
   marker("1");
   function overlay_close() {
     html_remove(overlay);
