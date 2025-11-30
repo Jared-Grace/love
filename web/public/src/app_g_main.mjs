@@ -1,3 +1,4 @@
+import { html_z_max } from "../../../love/public/src/html_z_max.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { integer_random_range } from "../../../love/public/src/integer_random_range.mjs";
 import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
@@ -80,7 +81,7 @@ export async function app_g_main() {
     left: "0",
     width: "100dvw",
     height: "100dvh",
-    "z-index": 9999,
+    "z-index": html_z_max(),
     "pointer-events": "auto",
   });
   let div_map = html_div(body);
