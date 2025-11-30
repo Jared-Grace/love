@@ -36,7 +36,7 @@ export async function app_g_main() {
   html_meta_viewport();
   let html = html_document_root();
   let style_value = html_font_san_serif_value();
-  html_style_assign(body, {
+  html_style_assign(html, {
     "font-family": style_value,
   });
   let body = html_document_body();
