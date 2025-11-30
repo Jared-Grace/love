@@ -36,7 +36,7 @@ export function app_g_conversation(prayer, npcs_matched, overlay, player) {
   html_style_assign(container, {
     "background-color": color_background + "bc",
   });
-  const c_src = g_character_img_url(c, game_prefix);
+  const c_src = g_character_img_url(npc, game_prefix);
   let component = html_img(container, c_src);
   let name_player = object_property_get(player, "name");
   const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
