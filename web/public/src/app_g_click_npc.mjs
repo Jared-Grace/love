@@ -56,7 +56,9 @@ export function app_g_click_npc(div, npcs_matched, tutorial, body, player) {
         string_random_or_empty(", again") +
         g_random_dot_bang() +
         " " +
-        "What is on your mind?";
+        "What is on your " +
+        list_random_item(["mind", "heart"]) +
+        "?";
     }
     meet_message += g_random_dot_bang();
     app_g_p_text(
