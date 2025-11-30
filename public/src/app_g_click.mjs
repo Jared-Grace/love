@@ -78,7 +78,7 @@ export async function app_g_click(e, tile_class, div, player_img_c, body, map) {
         on_transition_begin,
       );
     }
-    html_scroll_center(element2);
+    html_scroll_center(player_img_c);
     if (npc_clicked) {
       tutorial = app_g_click_npc(div, npcs_matched, tutorial, body, player);
     }
