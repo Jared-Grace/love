@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_scroll_center_generic_wait } from "../../../love/public/src/html_scroll_center_generic_wait.mjs";
@@ -21,9 +22,11 @@ export async function html_scroll_center_container_generic(
     (tileRect.top - containerRect.top) -
     container_e.clientHeight / 2 +
     tileRect.height / 2;
-  container_e.scrollTo({
+  const s = {
     left: scrollLeft,
     top: scrollTop,
     behavior,
-  });
+  };
+  container_e.scrollTo(s);
+  log(message);
 }
