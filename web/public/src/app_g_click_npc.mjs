@@ -1,10 +1,4 @@
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { not } from "../../../love/public/src/not.mjs";
-import { emoji_wave } from "../../../love/public/src/emoji_wave.mjs";
-import { app_g_button_green } from "../../../love/public/src/app_g_button_green.mjs";
-import { string_random_or_empty } from "../../../love/public/src/string_random_or_empty.mjs";
-import { g_random_dot_bang } from "../../../love/public/src/g_random_dot_bang.mjs";
-import { string_first_upper_to } from "../../../love/public/src/string_first_upper_to.mjs";
+import { app_g_conversation } from "../../../love/public/src/app_g_conversation.mjs";
 import { app_g_container } from "../../../love/public/src/app_g_container.mjs";
 import { app_g_p_text } from "../../../love/public/src/app_g_p_text.mjs";
 import { html_click_none } from "../../../love/public/src/html_click_none.mjs";
@@ -20,65 +14,15 @@ import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { app_karate_container_background_color } from "../../../love/public/src/app_karate_container_background_color.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
-import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
-import { list_random_item } from "./list_random_item.mjs";
 export function app_g_click_npc(div, npcs_matched, tutorial, body, player) {
   marker("1");
   let overlay = app_g_overlay(body);
   let prayer = object_property_get(player, "prayer");
   let conversation = object_property_get(prayer, "conversation");
   if (conversation) {
-    object_property_set(prayer, "conversation", false);
-    let npc = list_single(npcs_matched);
-    let name = object_property_get(npc, "name");
-    let gender = object_property_get(npc, "gender");
-    let container = app_g_container(overlay);
-    html_style_assign(container, {
-      "background-color": "#80a0ff" + "bc",
-    });
-    let name2 = object_property_get(player, "name");
-    const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
-    let v = string_first_upper_to(greet);
-    let s2 = list_random_item(["nice", "great", "pleasure", "good"]);
-    const a = list_random_item(["it's", "it is"]) + " ";
-    let meet_message =
-      " " + string_first_upper_to(string_random_or_empty(a) + s2 + " to ");
-    let meet = object_property_get(npc, "meet");
-    if (not(meet)) {
-      object_property_set(npc, "meet", true);
-      meet_message += "meet you";
-    } else {
-      ((meet_message +=
-        list_random_item(["see", "talk to", "hear from you"]) +
-        " you" +
-        string_random_or_empty(", again") +
-        g_random_dot_bang() +
-        " " +
-        "What "),
-        list_random_item([
-          "do you " +
-            list_random_item(["want", "wish"]) +
-            " to " +
-            list_random_item(["talk about", "discuss"]) +
-            string_random_or_empty(" today") +
-            string_random_or_empty(" with me"),
-          "is on your " + list_random_item(["mind", "heart"]),
-        ]) + "?");
-    }
-    meet_message += g_random_dot_bang();
-    app_g_p_text(
-      container,
-      name + " says: " + v + " " + name2 + g_random_dot_bang() + meet_message,
-    );
-    app_g_button_green(
-      overlay,
-      emoji_pray() +
-        emoji_wave() +
-        " Pray and then politely end the conversation",
-      overlay_close,
-    );
+    app_g_conversation(prayer, npcs_matched, overlay, player);
   } else {
     let container = app_g_container(overlay);
     html_style_assign(container, {
