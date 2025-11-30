@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { html_scroll_center } from "../../../love/public/src/html_scroll_center.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -92,7 +91,4 @@ export async function app_g_refresh(
   }
   await sleep(2000);
   html_scroll_center(player_img_c);
-  log({
-    player_img_c,
-  });
 }
