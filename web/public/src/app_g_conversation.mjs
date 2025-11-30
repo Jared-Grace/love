@@ -1,3 +1,5 @@
+import { html_img } from "../../../love/public/src/html_img.mjs";
+import { g_character_img_url } from "../../../love/public/src/g_character_img_url.mjs";
 import { g_gender_female } from "../../../love/public/src/g_gender_female.mjs";
 import { g_gender_male } from "../../../love/public/src/g_gender_male.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -34,6 +36,8 @@ export function app_g_conversation(prayer, npcs_matched, overlay, player) {
   html_style_assign(container, {
     "background-color": color_background + "bc",
   });
+  const c_src = g_character_img_url(c, game_prefix);
+  let component = html_img(body, src);
   let name_player = object_property_get(player, "name");
   const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
   let v = string_first_upper_to(greet);
