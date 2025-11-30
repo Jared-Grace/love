@@ -1,3 +1,4 @@
+import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_scroll_center_container_now } from "../../../love/public/src/html_scroll_center_container_now.mjs";
 import { html_on_load } from "../../../love/public/src/html_on_load.mjs";
@@ -15,9 +16,6 @@ import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
-import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
-import { html_element } from "../../../love/public/src/html_element.mjs";
-import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
 import { g_character_img } from "../../../love/public/src/g_character_img.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 export async function app_g_refresh(
@@ -52,9 +50,7 @@ export async function app_g_refresh(
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); } /* move up 10px */
 }`;
-  let parent = html_document_head();
-  let component = html_element(parent, "style");
-  html_text_set(component, style_text);
+  html_style_head(style_text);
   html_style_set(player_img_c, "animation", "pulseGlow 2s infinite alternate");
   function lambda12(npc) {
     let ci = g_character_img(game_prefix, div_map, npc);
