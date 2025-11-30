@@ -83,5 +83,11 @@ export async function app_g_click(e, tile_class, div, player_img_c, body, map) {
       tutorial = app_g_click_npc(div, npcs_matched, tutorial, body, player);
     }
   }
-  app_g_player_save(player);
+  function lambda2() {
+    function lambda() {
+      app_g_player_save(player);
+    }
+    requestAnimationFrame(lambda);
+  }
+  window.addEventListener("load", lambda2);
 }
