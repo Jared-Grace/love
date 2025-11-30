@@ -6,9 +6,10 @@ import { floor } from "../../../love/public/src/floor.mjs";
 export function integer_random(min, max) {
   let fn = integer_is;
   let list = [min, max];
-  let ii = fn(min);
-  assert(ii);
-  function lambda(l) {}
+  function lambda(l) {
+    let ii = fn(min);
+    assert(ii);
+  }
   each(list, lambda);
   let r = floor(random() * (max - min + 1)) + min;
   return r;
