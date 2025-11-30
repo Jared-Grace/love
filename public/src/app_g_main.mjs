@@ -90,6 +90,7 @@ export function app_g_main() {
       conversation: false,
     },
     name: list_random_item(names_men),
+    conversed: false,
   };
   let right = player_img;
   function lambda15(la4) {
