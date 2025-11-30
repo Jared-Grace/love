@@ -10,7 +10,6 @@
   "ac": "function_alias_change",
   "al": "function_aliases",
   "ni": "npm_install",
-  "fa": "functions_format",
   "v": "server",
   "m": "marker_top",
   "md": "marker_down",
@@ -261,6 +260,7 @@
   "lsh": "list_shuffle",
   "oba": "object_assign",
   "fpd": "function_param_delete",
-  "fpsw": "function_param_swap"
+  "fpsw": "function_param_swap",
+  "fa": "firebase_deploy_function_app_main"
  }
 }
