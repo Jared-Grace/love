@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { g_img_square_size_css } from "../../../love/public/src/g_img_square_size_css.mjs";
 import { app_g_conversation } from "../../../love/public/src/app_g_conversation.mjs";
 import { app_g_container } from "../../../love/public/src/app_g_container.mjs";
@@ -41,12 +42,12 @@ export function app_g_click_npc(
     );
     let conversed = object_property_get(player, "conversed");
     if (conversed) {
-      return;
+      let b = app_g_p_text(
+        container,
+        " To pray, tap or click on yourself (You glow with white)",
+      );
+      not(b);
     }
-    app_g_p_text(
-      container,
-      " To pray, tap or click on yourself (You glow with white)",
-    );
     function lambda21() {
       overlay_close();
       let conversed = object_property_get(player, "conversed");
