@@ -18,7 +18,15 @@ import { html_element } from "../../../love/public/src/html_element.mjs";
 import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
 import { g_character_img } from "../../../love/public/src/g_character_img.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-export function app_g_refresh(div, game_prefix, tiles_path, rows, body, map) {
+import { sleep } from "./sleep.mjs";
+export async function app_g_refresh(
+  div,
+  game_prefix,
+  tiles_path,
+  rows,
+  body,
+  map,
+) {
   let { npcs } = map;
   marker("1");
   global_function_property_set(app_g_refresh, "tutorial", null);
@@ -81,5 +89,6 @@ export function app_g_refresh(div, game_prefix, tiles_path, rows, body, map) {
   async function on_click(e) {
     await app_g_click(e, tile_class, div, player_img_c, body, map);
   }
+  await sleep(ms);
   html_scroll_center(player_img_c);
 }
