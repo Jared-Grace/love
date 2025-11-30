@@ -1,4 +1,5 @@
-import { html_scroll_center } from "../../../love/public/src/html_scroll_center.mjs";
+import { html_scroll_center_container } from "../../../love/public/src/html_scroll_center_container.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_click_npc } from "../../../love/public/src/app_g_click_npc.mjs";
@@ -86,7 +87,8 @@ export async function app_g_click(
         on_transition_begin,
       );
     }
-    html_scroll_center(player_img_c);
+    let container = object_property_get(div_map, "container");
+    await html_scroll_center_container(player_img_c);
     if (npc_clicked) {
       tutorial = app_g_click_npc(
         div_map,
