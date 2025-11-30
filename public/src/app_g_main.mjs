@@ -48,7 +48,8 @@ export async function app_g_main() {
     overflow: "hidden",
     height: "100%",
   });
-  each(list, function lambda(item) {});
+  function lambda(item) {}
+  each(list, lambda);
   let path_prefix = "";
   let v = localhost_is();
   const path_part = "latest";
