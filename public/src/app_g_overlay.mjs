@@ -1,7 +1,9 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { g_z } from "../../../love/public/src/g_z.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
-export function app_g_overlay(div_map) {$g
+export function app_g_overlay(div_map) {
+  let container = object_property_get(div_map, "container");
   let overlay = html_div(div_map);
   let s = {
     position: "fixed",
