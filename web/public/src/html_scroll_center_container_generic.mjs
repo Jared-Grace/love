@@ -10,6 +10,10 @@ export async function html_scroll_center_container_generic(
   marker("1");
   let e = await html_scroll_center_generic_wait(player_img_c);
   let container_e = html_component_element_get(container);
+  await new Promise(function lambda(r) {
+    let v = requestAnimationFrame(r);
+    return v;
+  });
   const containerRect = container_e.getBoundingClientRect();
   const tileRect = e.getBoundingClientRect();
   const scrollLeft =
