@@ -42,7 +42,7 @@ export function app_g_main() {
     overflow: "hidden",
   });
   let path_prefix = "";
-  let v = localhost_is();
+  let v = localhost_is();ssw
   if (v || location_pathname().startsWith("/latest/")) {
     path_prefix = "..\\";
   }
