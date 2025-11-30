@@ -15,7 +15,6 @@ import { g_tiles_grasses } from "../../../love/public/src/g_tiles_grasses.mjs";
 import { app_g_refresh } from "../../../love/public/src/app_g_refresh.mjs";
 import { html_font_san_serif_value } from "../../../love/public/src/html_font_san_serif_value.mjs";
 import { html_document_root } from "../../../love/public/src/html_document_root.mjs";
-import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { list_without } from "../../../love/public/src/list_without.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
@@ -37,7 +36,9 @@ export async function app_g_main() {
   html_meta_viewport();
   let html = html_document_root();
   let style_value = html_font_san_serif_value();
-  html_style_set(html, "font-family", style_value);
+  html_style_assign(body, {
+    "font-family": style_value,
+  });
   let body = html_document_body();
   html_style_assign(body, {
     margin: "0",
