@@ -7,7 +7,8 @@ export function integer_random(min, max) {
   let fn = integer_is;
   let ii = fn(min);
   assert(ii);
-  each(list, function lambda(item) {});
+  function lambda(item) {}
+  each(list, lambda);
   let r = floor(random() * (max - min + 1)) + min;
   return r;
 }
