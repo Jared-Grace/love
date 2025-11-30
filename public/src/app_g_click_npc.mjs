@@ -52,6 +52,7 @@ export function app_g_click_npc(div, npcs_matched, tutorial, body, player) {
         string_first_upper_to(
           string_random_or_empty(a) + s2 + " to meet you" + g_random_dot_bang(),
         );
+    } else {
     }
     app_g_p_text(
       container,
