@@ -60,7 +60,7 @@ export function app_g_conversation(prayer, npcs_matched, overlay, player) {
     name + " says: " + v + " " + name2 + g_random_dot_bang() + meet_message,
   );
   function lambda2() {}
-  app_g_button_green(overlay2, text, lambda2);
+  app_g_button_green(overlay, "text", lambda2);
   app_g_button_green(
     overlay,
     emoji_pray() +
