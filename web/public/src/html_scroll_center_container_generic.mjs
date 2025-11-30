@@ -28,5 +28,5 @@ export async function html_scroll_center_container_generic(
     behavior,
   };
   container_e.scrollTo(s);
-  log(message);
+  log(s);
 }
