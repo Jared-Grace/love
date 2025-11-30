@@ -1,3 +1,4 @@
+import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
 import { location_pathname_part_first_starts_with } from "../../../love/public/src/location_pathname_part_first_starts_with.mjs";
 import { localhost_is } from "../../../love/public/src/localhost_is.mjs";
 import { app_g_game_save } from "../../../love/public/src/app_g_game_save.mjs";
@@ -32,6 +33,7 @@ import { html_document_body } from "../../../love/public/src/html_document_body.
 import { marker } from "../../../love/public/src/marker.mjs";
 export function app_g_main() {
   marker("1");
+  html_meta_viewport();
   let html = html_document_root();
   let style_value = html_font_san_serif_value();
   html_style_set(html, "font-family", style_value);
