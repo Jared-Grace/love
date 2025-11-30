@@ -4,7 +4,7 @@ import { random } from "../../../love/public/src/random.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
 export function integer_random(min, max) {
   let fn = integer_is;
-  let ii = integer_is(min);
+  let ii = fn(min);
   assert(b);
   let r = floor(random() * (max - min + 1)) + min;
   return r;
