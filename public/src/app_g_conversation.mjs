@@ -38,7 +38,7 @@ export function app_g_conversation(
   let container = app_g_container(overlay);
   let map = {
     [g_gender_female()]: "#ff80ea",
-    [g_gender_male()]: "#80a0ff",
+    [g_gender_male()]: "#acc1ff",
   };
   let color_background = object_property_get(map, gender);
   html_style_assign(container, {
