@@ -42,7 +42,7 @@ export function app_g_main() {
   });
   let path_prefix = "";
   let v = localhost_is();
-  if (v) {
+  if (v || location.pathname.startsWith("/latest/")) {
     path_prefix = "..\\";
   }
   const game_prefix = g_folder_img(path_prefix);
