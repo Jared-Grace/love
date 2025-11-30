@@ -1,5 +1,5 @@
+import { html_scroll_center_container_now } from "../../../love/public/src/html_scroll_center_container_now.mjs";
 import { html_on_load } from "../../../love/public/src/html_on_load.mjs";
-import { html_scroll_center_now } from "../../../love/public/src/html_scroll_center_now.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_click } from "../../../love/public/src/app_g_click.mjs";
@@ -102,7 +102,7 @@ export async function app_g_refresh(
   } else {
     html_on_load(lambda3);
   }
-  function lambda3() {
-    html_scroll_center_now(player_img_c);
+  async function lambda3() {
+    await html_scroll_center_container_now(player_img_c, container);
   }
 }
