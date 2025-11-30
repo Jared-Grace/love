@@ -98,7 +98,8 @@ export async function app_g_refresh(
     );
   }
   if (false) {
-  }$e
+  } else {
+  }
   function lambda3() {
     html_scroll_center_now(player_img_c);
   }
