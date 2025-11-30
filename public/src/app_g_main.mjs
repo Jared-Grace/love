@@ -42,7 +42,8 @@ export function app_g_main() {
   });
   let path_prefix = "";
   let v = localhost_is();
-  if (false) {
+  if (v) {
+    path_prefix = "..\\";
   }
   const game_prefix = g_folder_img(path_prefix);
   const tiles_path = g_folder_tiles(path_prefix);
