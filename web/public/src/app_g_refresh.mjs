@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { html_on_load } from "../../../love/public/src/html_on_load.mjs";
 import { html_scroll_center_now } from "../../../love/public/src/html_scroll_center_now.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
@@ -96,6 +97,8 @@ export async function app_g_refresh(
       map,
       game_prefix,
     );
+  }
+  if (equal(left, right)) {
   }
   function lambda3() {
     html_scroll_center_now(player_img_c);
