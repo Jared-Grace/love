@@ -91,12 +91,12 @@ export async function app_g_main() {
     "z-index": html_z_max(),
     "pointer-events": "auto",
   });
+  let u = await uuid();
   html_style_head(`
-  #${container.id}::-webkit-scrollbar {
+  #${u}::-webkit-scrollbar {
     display: none;
   }
 `);
-  let u = await uuid();
   html_attribute_set(div_map_container, "id", u);
   let div_map = html_div(div_map_container);
   object_property_set_exists_not(div_map, "container", div_map_container);
