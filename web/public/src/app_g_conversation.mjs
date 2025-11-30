@@ -30,9 +30,9 @@ export function app_g_conversation(prayer, npcs_matched, overlay, player) {
     [g_gender_female()]: "#ff80ea",
     [g_gender_male()]: "#80a0ff",
   };
-  let value = object_property_get(map, gender);
+  let color_background = object_property_get(map, gender);
   html_style_assign(container, {
-    "background-color": value + "bc",
+    "background-color": color_background + "bc",
   });
   let name_player = object_property_get(player, "name");
   const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
