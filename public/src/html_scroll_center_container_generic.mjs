@@ -27,8 +27,8 @@ export async function html_scroll_center_container_generic(
     container_e.clientHeight / 2 +
     tileRect.height / 2;
   const s = {
-    left: 0,
-    top: 0,
+    left: scrollLeft,
+    top: scrollTop,
     behavior,
   };
   container_e.scrollTo(s);
