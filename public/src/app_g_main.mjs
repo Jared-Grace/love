@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { integer_random_range } from "../../../love/public/src/integer_random_range.mjs";
 import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
 import { location_pathname_part_first_starts_with } from "../../../love/public/src/location_pathname_part_first_starts_with.mjs";
@@ -46,7 +47,8 @@ export async function app_g_main() {
     padding: 0,
     overflow: "hidden",
     height: "100%",
-  });e
+  });
+  each(list, function lambda(item) {});
   let path_prefix = "";
   let v = localhost_is();
   const path_part = "latest";
