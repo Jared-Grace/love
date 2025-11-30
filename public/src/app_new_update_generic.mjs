@@ -1,4 +1,3 @@
-import { function_dependencies_code } from "../../../love/public/src/function_dependencies_code.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
@@ -42,7 +41,6 @@ export async function app_new_update_generic(
     let body_block = js_declaration_single_block_body(ast);
     list_empty(body_block);
     list_add(body_block, statement);
-    let code_call_name = await function_dependencies_code(f_name);
   }
   let output = await function_transform(f_name_transformed, lambda);
 }
