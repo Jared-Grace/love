@@ -61,7 +61,7 @@ export function app_g_click_npc(div, npcs_matched, tutorial, body, player) {
           "do you " +
             list_random_item(["want", "wish"]) +
             " to " +
-            list_random_item(["talk about"]),
+            list_random_item(["talk about", "discuss"]),
           "is on your " + list_random_item(["mind", "heart"]),
         ]) + "?");
     }
