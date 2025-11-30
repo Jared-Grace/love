@@ -57,7 +57,8 @@ export function app_g_click_npc(
       let text = emoji_pray();
       html_text_set(tutorial, text);
       let rows = g_rows_count();
-      const square_size = `calc(max(100vh / ${rows}, 100vw / ${rows})*.4)`;
+      const square_size =
+        `calc(` + `max(100vh / ${rows}, 100vw / ${rows})` + `*.4)`;
       html_style_assign(tutorial, {
         display: "flex",
         justifyContent: "center",
