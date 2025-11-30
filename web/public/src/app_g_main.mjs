@@ -42,13 +42,14 @@ export async function app_g_main() {
     "font-size": "18px",
   });
   let body = html_document_body();
-  html_style_assign(body, {
-    margin: "0",
-    padding: 0,
-    overflow: "hidden",
-    height: "100%",
-  });
-  function lambda(item) {}
+  function lambda(item) {
+    html_style_assign(body, {
+      margin: "0",
+      padding: 0,
+      overflow: "hidden",
+      height: "100%",
+    });
+  }
   each(list, lambda);
   let path_prefix = "";
   let v = localhost_is();
