@@ -93,8 +93,8 @@ export function app_g_main() {
   const player_img = list_random_item(imgs_men);
   let names_men = bible_names_men();
   let player = {
-    x: list_random_item(row_count),
-    y: list_random_item(column_count),
+    x: list_random_item(column_count),
+    y: list_random_item(row_count),
     img: player_img,
     prayer: {
       conversation: false,
