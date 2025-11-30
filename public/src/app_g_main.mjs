@@ -1,5 +1,4 @@
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
-import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { html_z_max } from "../../../love/public/src/html_z_max.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -90,15 +89,11 @@ export async function app_g_main() {
     "z-index": html_z_max(),
     "pointer-events": "auto",
   });
-  let head = html_document_head();
   html_style_head(`
   #${container.id}::-webkit-scrollbar {
     display: none;
   }
 `);
-  const style = document.createElement("style");
-  document.head.appendChild(style);
-  document.head.appendChild(style);
   let div_map = html_div(div_map_container);
   object_property_set_exists_not(div_map, "container", div_map_container);
   html_style_assign(div_map, {
