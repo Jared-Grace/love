@@ -30,6 +30,7 @@ export function app_g_conversation(prayer, npcs_matched, overlay, player) {
     [g_gender_female()]: "#ff80ea",
     [g_gender_male()]: "#80a0ff",
   };
+  let value = object_property_get(object, property_name);
   html_style_assign(container, {
     "background-color": color_male + "bc",
   });
