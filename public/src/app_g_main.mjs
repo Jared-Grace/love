@@ -44,8 +44,8 @@ export function app_g_main() {
   });
   let path_prefix = "";
   let v = localhost_is();
-  let sw = string_starts_with(s, prefix);
-  if (v || location_pathname().startsWith("/latest/")) {
+  let sw = string_starts_with(s, "/latest/");
+  if (v || location_pathname(sw)) {
     path_prefix = "..\\";
   }
   const game_prefix = g_folder_img(path_prefix);
