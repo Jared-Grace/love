@@ -29,7 +29,7 @@ export function app_g_click_npc(
   let prayer = object_property_get(player, "prayer");
   let conversation = object_property_get(prayer, "conversation");
   if (conversation) {
-    app_g_conversation(prayer, npcs_matched, overlay, player, game_prefix);
+    app_g_conversation(prayer, npcs_matched, overlay, player);
   } else {
     let container = app_g_container(overlay);
     html_style_assign(container, {
