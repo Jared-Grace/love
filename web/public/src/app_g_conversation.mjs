@@ -19,13 +19,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
-export function app_g_conversation(
-  prayer,
-  npcs_matched,
-  overlay,
-  player,
-  game_prefix,
-) {
+export function app_g_conversation(prayer, npcs_matched, overlay, player) {
   marker("1");
   function overlay_close() {
     html_remove(overlay);
@@ -44,7 +38,7 @@ export function app_g_conversation(
   html_style_assign(container, {
     "background-color": color_background + "bc",
   });
-  const c_src = g_character_img_url(npc, game_prefix);
+  const c_src = g_character_img_url(npc, game_prefix2);
   let component = html_img(container, c_src);
   let name_player = object_property_get(player, "name");
   const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
