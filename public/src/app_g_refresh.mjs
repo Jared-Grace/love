@@ -89,6 +89,6 @@ export async function app_g_refresh(
   async function on_click(e) {
     await app_g_click(e, tile_class, div, player_img_c, body, map);
   }
-  await sleep(ms);
+  await sleep(2000);
   html_scroll_center(player_img_c);
 }
