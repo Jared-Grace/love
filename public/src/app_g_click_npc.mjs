@@ -50,15 +50,16 @@ export function app_g_click_npc(div, npcs_matched, tutorial, body, player) {
       object_property_set(npc, "meet", true);
       meet_message += "meet you";
     } else {
-      meet_message +=
+      ((meet_message +=
         list_random_item(["see", "talk to", "hear from you"]) +
         " you" +
         string_random_or_empty(", again") +
         g_random_dot_bang() +
         " " +
-        "What is on your " +
-        list_random_item(["mind", "heart"]) +
-        "?";
+        "What "),
+        list_random_item([
+          "is on your " + list_random_item(["mind", "heart"]),
+        ]) + "?");
     }
     meet_message += g_random_dot_bang();
     app_g_p_text(
