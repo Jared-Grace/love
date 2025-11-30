@@ -45,7 +45,8 @@ export function app_g_main() {
   let path_prefix = "";
   let v = localhost_is();
   let s = location_pathname(sw);
-  let sw = string_starts_with(s, "/", "latest", "/");
+  const path_part = "latest";
+  let sw = string_starts_with(s, "/", path_part, "/");
   if (v || sw) {
     path_prefix = "..\\";
   }
