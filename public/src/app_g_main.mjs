@@ -1,4 +1,3 @@
-import { html_on_load } from "../../../love/public/src/html_on_load.mjs";
 import { integer_random_0 } from "../../../love/public/src/integer_random_0.mjs";
 import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
 import { location_pathname_part_first_starts_with } from "../../../love/public/src/location_pathname_part_first_starts_with.mjs";
@@ -157,6 +156,4 @@ export async function app_g_main() {
     npcs,
   });
   await app_g_refresh(div, game_prefix, tiles_path, rows, body, map);
-  function lambda() {}
-  html_on_load(lambda);
 }
