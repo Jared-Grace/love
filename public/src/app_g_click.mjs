@@ -3,7 +3,6 @@ import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs"
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_click_npc } from "../../../love/public/src/app_g_click_npc.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
-import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 import { html_on_transitionend } from "../../../love/public/src/html_on_transitionend.mjs";
 import { g_img_square_style_position_object } from "../../../love/public/src/g_img_square_style_position_object.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
@@ -79,7 +78,6 @@ export async function app_g_click(e, tile_class, div, player_img_c, body, map) {
         on_transition_begin,
       );
     }
-    let element2 = html_component_element_get(player_img_c);
     html_scroll_center(element2);
     if (npc_clicked) {
       tutorial = app_g_click_npc(div, npcs_matched, tutorial, body, player);
