@@ -1,3 +1,4 @@
+import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { html_z_max } from "../../../love/public/src/html_z_max.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { integer_random_range } from "../../../love/public/src/integer_random_range.mjs";
@@ -85,6 +86,7 @@ export async function app_g_main() {
     "pointer-events": "auto",
   });
   let div_map = html_div(body);
+  object_property_set_exists_not(object, property_name, value);
   html_style_assign(div_map, {
     position: "relative",
     display: "grid",
