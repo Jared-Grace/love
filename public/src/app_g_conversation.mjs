@@ -17,6 +17,7 @@ export function app_g_conversation(prayer, npcs_matched, overlay, player) {
   function overlay_close() {
     html_remove(overlay);
   }
+  object_property_set(player, "conversed", true);
   object_property_set(prayer, "conversation", false);
   let npc = list_single(npcs_matched);
   let name = object_property_get(npc, "name");
