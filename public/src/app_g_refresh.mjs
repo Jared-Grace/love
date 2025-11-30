@@ -1,4 +1,4 @@
-import { html_scroll_center } from "../../../love/public/src/html_scroll_center.mjs";
+import { html_scroll_center_now } from "../../../love/public/src/html_scroll_center_now.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_click } from "../../../love/public/src/app_g_click.mjs";
@@ -18,7 +18,6 @@ import { html_element } from "../../../love/public/src/html_element.mjs";
 import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
 import { g_character_img } from "../../../love/public/src/g_character_img.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { sleep } from "./sleep.mjs";
 export async function app_g_refresh(
   div,
   game_prefix,
@@ -89,6 +88,5 @@ export async function app_g_refresh(
   async function on_click(e) {
     await app_g_click(e, tile_class, div, player_img_c, body, map);
   }
-  await sleep(2000);
-  html_scroll_center(player_img_c);
+  html_scroll_center_now(player_img_c);
 }
