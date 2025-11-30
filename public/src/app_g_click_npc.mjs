@@ -40,7 +40,8 @@ export function app_g_click_npc(div, npcs_matched, tutorial, body, player) {
     function lambda21() {
       let conversed = object_property_get(player, "conversed");
       overlay_close();
-      if (false) {
+      if (conversed) {
+        return;
       }
       tutorial = html_div(div);
       html_click_none(tutorial);
