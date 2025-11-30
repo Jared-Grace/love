@@ -85,7 +85,7 @@ export async function app_g_main() {
     "z-index": html_z_max(),
     "pointer-events": "auto",
   });
-  let div_map = html_div(body);
+  let div_map = html_div(div_map_container);
   object_property_set_exists_not(div_map, "container", div_map_container);
   html_style_assign(div_map, {
     position: "relative",
