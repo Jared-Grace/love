@@ -48,7 +48,7 @@ export function app_g_click_npc(div, npcs_matched, tutorial, body, player) {
     let meet = object_property_get(npc, "meet");
     if (not(meet)) {
       object_property_set(npc, "meet", true);
-      meet_message += "meet you" + g_random_dot_bang();
+      meet_message += "meet you";
     } else {
       meet_message +=
         list_random_item(["see", "talk to", "hear from you"]) +
