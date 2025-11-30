@@ -18,6 +18,7 @@ import { html_element } from "../../../love/public/src/html_element.mjs";
 import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
 import { g_character_img } from "../../../love/public/src/g_character_img.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
+import { sleep } from "./sleep.mjs";
 export async function app_g_refresh(
   div,
   game_prefix,
@@ -88,5 +89,6 @@ export async function app_g_refresh(
   async function on_click(e) {
     await app_g_click(e, tile_class, div, player_img_c, body, map);
   }
+  await sleep(2000);
   html_scroll_center_now(player_img_c);
 }
