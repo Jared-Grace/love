@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_scroll_center_container_now } from "../../../love/public/src/html_scroll_center_container_now.mjs";
 import { html_on_load } from "../../../love/public/src/html_on_load.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
@@ -103,6 +104,7 @@ export async function app_g_refresh(
     html_on_load(lambda3);
   }
   async function lambda3() {
+    let container2 = object_property_get(div_map, "container");
     await html_scroll_center_container_now(player_img_c, container);
   }
 }
