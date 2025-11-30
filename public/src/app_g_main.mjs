@@ -74,6 +74,15 @@ export async function app_g_main() {
   }
   let tiles = list_adder(lambda5);
   let div_map_container = html_div(body);
+  html_style_assign(div_map_container, {
+    position: "fixed",
+    top: "0",
+    left: "0",
+    width: "100dvw",
+    height: "100dvh",
+    "z-index": 9999,
+    "pointer-events": "auto",
+  });
   let div_map = html_div(body);
   html_style_assign(div_map, {
     position: "relative",
