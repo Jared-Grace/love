@@ -87,7 +87,7 @@ export async function app_g_refresh(
   each_index(rows, lambda2);
   html_on_click(div, on_click);
   async function on_click(e) {
-    await app_g_click(e, tile_class, div, player_img_c, body, map);
+    await app_g_click(e, tile_class, div, player_img_c, body, map, game_prefix);
   }
   function lambda3() {
     html_scroll_center_now(player_img_c);

@@ -16,7 +16,14 @@ import { app_karate_container_background_color } from "../../../love/public/src/
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
-export function app_g_click_npc(div, npcs_matched, tutorial, body, player) {
+export function app_g_click_npc(
+  div,
+  npcs_matched,
+  tutorial,
+  body,
+  player,
+  game_prefix,
+) {
   marker("1");
   let overlay = app_g_overlay(body);
   let prayer = object_property_get(player, "prayer");
