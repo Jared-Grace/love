@@ -32,4 +32,10 @@ export async function html_scroll_center_container_generic(
     s,
     container_e,
   });
+  console.log(
+    container_e.scrollHeight,
+    container_e.scrollWidth,
+    container_e.clientHeight,
+    container_e.clientWidth,
+  );
 }
