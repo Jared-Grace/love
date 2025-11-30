@@ -97,11 +97,12 @@ export async function app_g_refresh(
       game_prefix,
     );
   }
-  if (false) {
+  if (document.readyState === "complete") {
+    lambda3();
   } else {
+    html_on_load(lambda3);
   }
   function lambda3() {
     html_scroll_center_now(player_img_c);
   }
-  html_on_load(lambda3);
 }
