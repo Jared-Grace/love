@@ -63,13 +63,13 @@ export async function app_g_refresh(
   each(npcs, lambda12);
   let rows_size = list_size(rows);
   html_style_assign(div, {
-    gridTemplateRows: "repeat(" + rows_size + ", 1fr)",
+    gridTemplateRows: "repeat(" + rows_size + ", auto)",
   });
   const tile_class = "tile";
   function lambda2(columns, y) {
     let columns_size = list_size(columns);
     html_style_assign(div, {
-      gridTemplateColumns: "repeat(" + columns_size + ", 1fr)",
+      gridTemplateColumns: "repeat(" + columns_size + ", auto)",
     });
     function lambda(r, x) {
       const src = tiles_path + r + ".png";
