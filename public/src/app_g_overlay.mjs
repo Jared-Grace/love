@@ -4,7 +4,7 @@ import { g_z } from "../../../love/public/src/g_z.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 export function app_g_overlay(div_map) {
   let container = object_property_get(div_map, "container");
-  let overlay = html_div(div_map);
+  let overlay = html_div(container);
   let s = {
     position: "fixed",
     top: "0",
