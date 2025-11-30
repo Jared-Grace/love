@@ -1,4 +1,3 @@
-import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { integer_random_range } from "../../../love/public/src/integer_random_range.mjs";
 import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
 import { location_pathname_part_first_starts_with } from "../../../love/public/src/location_pathname_part_first_starts_with.mjs";
@@ -53,7 +52,6 @@ export async function app_g_main() {
     path_prefix = "..\\";
   }
   const game_prefix = g_folder_img(path_prefix);
-  global_function_property_set(fn, property_name, value);
   const tiles_path = g_folder_tiles(path_prefix);
   let grasses = g_tiles_grasses();
   list_shuffle(grasses);
