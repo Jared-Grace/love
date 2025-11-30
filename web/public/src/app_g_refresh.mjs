@@ -34,7 +34,6 @@ export async function app_g_refresh(
   html_clear(div_map);
   let player = app_g_player_get();
   let player_img_c = g_character_img(game_prefix, div_map, player);
-  let parent = html_document_head();
   const style_text = `@keyframes pulseGlow {
   0%,100% { 
     filter: 
@@ -53,6 +52,7 @@ export async function app_g_refresh(
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); } /* move up 10px */
 }`;
+  let parent = html_document_head();
   let component = html_element(parent, "style");
   html_text_set(component, style_text);
   html_style_set(player_img_c, "animation", "pulseGlow 2s infinite alternate");
