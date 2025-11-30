@@ -262,6 +262,7 @@
   "fpd": "function_param_delete",
   "fpsw": "function_param_swap",
   "fa": "firebase_deploy_function_app_main",
-  "fda": "function_dependencies_code_copy_app_main"
+  "fda": "function_dependencies_code_copy_app_main",
+  "pd": "function_param_delete"
  }
 }
