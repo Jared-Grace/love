@@ -5,8 +5,8 @@ export function g_img_square_style_position_only(tile, x, y) {
   marker("1");
   let rows = g_rows_count();
   html_style_assign(tile, {
-    left: "calc(" + x + " * (100vh / " + rows + "))",
-    top: "calc(" + y + " * (100vh / " + rows + "))",
+    left: "calc(" + x + " * (max(100vh / ${rows}, 100vw / ${rows})))",
+    top: "calc(" + y + " * (max(100vh / ${rows}, 100vw / ${rows})))",
     transition: "left 0.3s ease, top 0.3s ease",
   });
 }
