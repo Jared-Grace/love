@@ -43,14 +43,14 @@ export async function app_g_main() {
   });
   let body = html_document_body();
   function lambda(item) {
-    html_style_assign(body, {
+    html_style_assign(item, {
       margin: "0",
       padding: 0,
       overflow: "hidden",
       height: "100%",
     });
   }
-  each(list, lambda);
+  each([body, html], lambda);
   let path_prefix = "";
   let v = localhost_is();
   const path_part = "latest";
