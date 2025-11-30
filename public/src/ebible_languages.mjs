@@ -127,6 +127,11 @@ export function ebible_languages() {
       bible_folder: "guj2017",
       language_code: "gu",
     },
+    {
+      name: "Afaan Oromoo",
+      bible_folder: "gaz",
+      language_code: "gu",
+    },
   ];
   return languages;
 }
