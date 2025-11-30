@@ -1,3 +1,4 @@
+import { html_on_load } from "../../../love/public/src/html_on_load.mjs";
 import { html_scroll_center_now } from "../../../love/public/src/html_scroll_center_now.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -88,5 +89,8 @@ export async function app_g_refresh(
   async function on_click(e) {
     await app_g_click(e, tile_class, div, player_img_c, body, map);
   }
-  html_scroll_center_now(player_img_c);
+  function lambda() {
+    html_scroll_center_now(player_img_c);
+  }
+  html_on_load(() => {});
 }
