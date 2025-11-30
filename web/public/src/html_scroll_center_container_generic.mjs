@@ -8,20 +8,20 @@ export async function html_scroll_center_container_generic(
 ) {
   marker("1");
   let e = await html_scroll_center_generic_wait(player_img_c);
-  const containerRect = container.getBoundingClientRect();
+  let container_e = html_component_element_get(container);
+  const containerRect = container_e.getBoundingClientRect();
   const tileRect = e.getBoundingClientRect();
   const scrollLeft =
-    container.scrollLeft +
+    container_e.scrollLeft +
     (tileRect.left - containerRect.left) -
-    container.clientWidth / 2 +
+    container_e.clientWidth / 2 +
     tileRect.width / 2;
   const scrollTop =
-    container.scrollTop +
+    container_e.scrollTop +
     (tileRect.top - containerRect.top) -
-    container.clientHeight / 2 +
+    container_e.clientHeight / 2 +
     tileRect.height / 2;
-  let element = html_component_element_get(component);
-  container.scrollTo({
+  container_e.scrollTo({
     left: scrollLeft,
     top: scrollTop,
     behavior,
