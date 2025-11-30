@@ -10,7 +10,7 @@ export async function html_scroll_none(component) {
   let u = await uuid();
   html_data_set(component, html_scroll_none.name, u);
   html_style_head(`
-  #${u}::-webkit-scrollbar {
+  [data-${html_scroll_none.name}="${u}"]::-webkit-scrollbar {
     display: none;
   }
 `);
