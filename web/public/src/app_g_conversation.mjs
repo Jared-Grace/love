@@ -1,3 +1,4 @@
+import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { emoji_wave } from "../../../love/public/src/emoji_wave.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { app_g_button_green } from "../../../love/public/src/app_g_button_green.mjs";
@@ -66,7 +67,9 @@ export function app_g_conversation(prayer, npcs_matched, overlay, player) {
       g_random_dot_bang() +
       meet_message,
   );
-  function lambda2() {}
+  function lambda2() {
+    html_clear(element);
+  }
   app_g_button_green(
     overlay,
     "Tell " +
