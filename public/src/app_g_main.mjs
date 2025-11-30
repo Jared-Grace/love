@@ -90,12 +90,13 @@ export async function app_g_main() {
     "pointer-events": "auto",
   });
   let head = html_document_head();
-  const style = document.createElement("style");
-  style.textContent = `
-  [data-scroll-hide="${uid}"]::-webkit-scrollbar {
+const style = document.createElement("style");
+style.textContent = `
+  #${container.id}::-webkit-scrollbar {
     display: none;
   }
 `;
+document.head.appendChild(style);
   document.head.appendChild(style);
   let div_map = html_div(div_map_container);
   object_property_set_exists_not(div_map, "container", div_map_container);
