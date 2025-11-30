@@ -20,13 +20,13 @@ export function app_g_conversation(prayer, npcs_matched, overlay, player) {
   object_property_set(player, "conversed", true);
   object_property_set(prayer, "conversation", false);
   let npc = list_single(npcs_matched);
-  let name = object_property_get(npc, "name");
+  let name_npc = object_property_get(npc, "name");
   let gender = object_property_get(npc, "gender");
   let container = app_g_container(overlay);
   html_style_assign(container, {
     "background-color": "#80a0ff" + "bc",
   });
-  let name2 = object_property_get(player, "name");
+  let name_player = object_property_get(player, "name");
   const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
   let v = string_first_upper_to(greet);
   let s2 = list_random_item(["nice", "great", "pleasure", "good"]);
@@ -58,10 +58,16 @@ export function app_g_conversation(prayer, npcs_matched, overlay, player) {
   meet_message += g_random_dot_bang();
   app_g_p_text(
     container,
-    name + " says: " + v + " " + name2 + g_random_dot_bang() + meet_message,
+    name_npc +
+      " says: " +
+      v +
+      " " +
+      name_player +
+      g_random_dot_bang() +
+      meet_message,
   );
   function lambda2() {}
-  app_g_button_green(overlay, "text", lambda2);
+  app_g_button_green(overlay, "Tell " + name_npc + " ", lambda2);
   app_g_button_green(
     overlay,
     emoji_pray() +
