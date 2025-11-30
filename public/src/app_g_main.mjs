@@ -1,3 +1,4 @@
+import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
 import { uuid } from "../../../love/public/src/uuid.mjs";
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
@@ -96,6 +97,7 @@ export async function app_g_main() {
   }
 `);
   let u = await uuid();
+  html_attribute_set(component, key, value);
   let div_map = html_div(div_map_container);
   object_property_set_exists_not(div_map, "container", div_map_container);
   html_style_assign(div_map, {
