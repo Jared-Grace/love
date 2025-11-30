@@ -3,6 +3,7 @@ import { html_scroll_center_generic_wait } from "../../../love/public/src/html_s
 export async function html_scroll_center_container_generic(
   player_img_c,
   behavior,
+  container,
 ) {
   marker("1");
   let e = await html_scroll_center_generic_wait(player_img_c);
