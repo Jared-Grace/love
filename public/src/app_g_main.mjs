@@ -46,7 +46,7 @@ export async function app_g_main() {
     padding: 0,
     overflow: "hidden",
     height: "100%",
-  });
+  });e
   let path_prefix = "";
   let v = localhost_is();
   const path_part = "latest";
