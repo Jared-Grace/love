@@ -1,4 +1,3 @@
-import { html_on_load } from "../../../love/public/src/html_on_load.mjs";
 import { html_scroll_center } from "../../../love/public/src/html_scroll_center.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -85,9 +84,4 @@ export async function app_g_click(e, tile_class, div, player_img_c, body, map) {
     }
   }
   app_g_player_save(player);
-  function lambda2() {
-    function lambda() {}
-    requestAnimationFrame(lambda);
-  }
-  html_on_load(lambda2);
 }
