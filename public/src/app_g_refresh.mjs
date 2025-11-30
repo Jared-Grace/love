@@ -92,5 +92,6 @@ export async function app_g_refresh(
   function lambda() {
     html_scroll_center_now(player_img_c);
   }
-  html_on_load(() => {});
+  function lambda3() {}
+  html_on_load(lambda3);
 }
