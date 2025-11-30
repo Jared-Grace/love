@@ -13,5 +13,5 @@ export async function html_scroll_none(component) {
     display: none;
   }
 `);
-  html_data_set(component, u);
+  html_data_set(component, html_scroll_none.name, u);
 }
