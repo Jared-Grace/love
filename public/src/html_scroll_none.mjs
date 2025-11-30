@@ -2,8 +2,8 @@ import { html_id_set } from "../../../love/public/src/html_id_set.mjs";
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
 import { uuid } from "../../../love/public/src/uuid.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
-export async function html_scroll_none(div_map_container) {
-  html_style_assign(div_map_container, {
+export async function html_scroll_none(component) {
+  html_style_assign(component, {
     scrollbarWidth: "none",
     msOverflowStyle: "none",
   });
@@ -13,5 +13,5 @@ export async function html_scroll_none(div_map_container) {
     display: none;
   }
 `);
-  html_id_set(div_map_container, u);
+  html_id_set(component, u);
 }
