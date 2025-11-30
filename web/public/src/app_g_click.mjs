@@ -1,3 +1,4 @@
+import { html_scroll_center } from "../../../love/public/src/html_scroll_center.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_click_npc } from "../../../love/public/src/app_g_click_npc.mjs";
@@ -79,11 +80,7 @@ export async function app_g_click(e, tile_class, div, player_img_c, body, map) {
       );
     }
     let element2 = html_component_element_get(player_img_c);
-    element2.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-      inline: "center",
-    });
+    html_scroll_center(element2);
     if (npc_clicked) {
       tutorial = app_g_click_npc(div, npcs_matched, tutorial, body, player);
     }
