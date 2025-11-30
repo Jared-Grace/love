@@ -71,7 +71,7 @@ export async function app_g_main() {
     position: "relative",
     display: "grid",
   });
-  let row_count = 50;
+  let row_count = 20;
   let column_count = row_count;
   function lambda10(la2) {
     function lambda6(i) {
