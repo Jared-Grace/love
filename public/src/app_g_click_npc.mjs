@@ -40,6 +40,8 @@ export function app_g_click_npc(div, npcs_matched, tutorial, body, player) {
     function lambda21() {
       let conversed = object_property_get(player, "conversed");
       overlay_close();
+      if (false) {
+      }
       tutorial = html_div(div);
       html_click_none(tutorial);
       global_function_property_set(app_g_refresh, "tutorial", tutorial);
