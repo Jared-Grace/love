@@ -38,6 +38,7 @@ export async function app_g_main() {
   let style_value = html_font_san_serif_value();
   html_style_assign(html, {
     "font-family": style_value,
+    "font-size": "18px",
   });
   let body = html_document_body();
   html_style_assign(body, {
