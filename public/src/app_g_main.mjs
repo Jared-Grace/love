@@ -1,3 +1,4 @@
+import { location_pathname } from "../../../love/public/src/location_pathname.mjs";
 import { localhost_is } from "../../../love/public/src/localhost_is.mjs";
 import { app_g_game_save } from "../../../love/public/src/app_g_game_save.mjs";
 import { g_gender_male } from "../../../love/public/src/g_gender_male.mjs";
@@ -42,7 +43,7 @@ export function app_g_main() {
   });
   let path_prefix = "";
   let v = localhost_is();
-  if (v || location.pathname.startsWith("/latest/")) {
+  if (v || location_pathname().startsWith("/latest/")) {
     path_prefix = "..\\";
   }
   const game_prefix = g_folder_img(path_prefix);
