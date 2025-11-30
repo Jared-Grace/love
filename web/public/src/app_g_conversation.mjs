@@ -1,3 +1,4 @@
+import { g_gender_female } from "../../../love/public/src/g_gender_female.mjs";
 import { g_gender_male } from "../../../love/public/src/g_gender_male.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { emoji_wave } from "../../../love/public/src/emoji_wave.mjs";
@@ -27,6 +28,7 @@ export function app_g_conversation(prayer, npcs_matched, overlay, player) {
   let container = app_g_container(overlay);
   let map = {
     [g_gender_male()]: "#80a0ff",
+    [g_gender_female()]: "#80a0ff",
   };
   html_style_assign(container, {
     "background-color": color_male + "bc",
