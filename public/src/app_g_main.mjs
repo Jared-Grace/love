@@ -1,3 +1,4 @@
+import { string_starts_with } from "../../../love/public/src/string_starts_with.mjs";
 import { location_pathname } from "../../../love/public/src/location_pathname.mjs";
 import { localhost_is } from "../../../love/public/src/localhost_is.mjs";
 import { app_g_game_save } from "../../../love/public/src/app_g_game_save.mjs";
@@ -42,7 +43,8 @@ export function app_g_main() {
     overflow: "hidden",
   });
   let path_prefix = "";
-  let v = localhost_is();ssw
+  let v = localhost_is();
+  let sw = string_starts_with(s, prefix);
   if (v || location_pathname().startsWith("/latest/")) {
     path_prefix = "..\\";
   }
