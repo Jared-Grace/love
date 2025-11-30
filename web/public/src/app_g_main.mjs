@@ -157,5 +157,6 @@ export async function app_g_main() {
     npcs,
   });
   await app_g_refresh(div, game_prefix, tiles_path, rows, body, map);
-  html_on_load(() => {});
+  function lambda() {}
+  html_on_load(lambda);
 }
