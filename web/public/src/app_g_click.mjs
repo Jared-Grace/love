@@ -92,7 +92,6 @@ export async function app_g_click(
         div_map,
         npcs_matched,
         tutorial,
-        body,
         player,
         game_prefix,
       );

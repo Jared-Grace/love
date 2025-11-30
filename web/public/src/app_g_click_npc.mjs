@@ -20,7 +20,6 @@ export function app_g_click_npc(
   div_map,
   npcs_matched,
   tutorial,
-  body,
   player,
   game_prefix,
 ) {
