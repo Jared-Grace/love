@@ -24,8 +24,9 @@ export function app_g_conversation(prayer, npcs_matched, overlay, player) {
   let name_npc = object_property_get(npc, "name");
   let gender = object_property_get(npc, "gender");
   let container = app_g_container(overlay);
+  const color_male = "#80a0ff";
   html_style_assign(container, {
-    "background-color": "#80a0ff" + "bc",
+    "background-color": color_male + "bc",
   });
   let name_player = object_property_get(player, "name");
   const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
