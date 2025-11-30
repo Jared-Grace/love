@@ -1,6 +1,4 @@
-import { html_id_set } from "../../../love/public/src/html_id_set.mjs";
-import { uuid } from "../../../love/public/src/uuid.mjs";
-import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
+import { html_scroll_none } from "../../../love/public/src/html_scroll_none.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { html_z_max } from "../../../love/public/src/html_z_max.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -89,17 +87,7 @@ export async function app_g_main() {
     "z-index": html_z_max(),
     "pointer-events": "auto",
   });
-  html_style_assign(div_map_container, {
-    scrollbarWidth: "none",
-    msOverflowStyle: "none",
-  });
-  let u = await uuid();
-  html_style_head(`
-  #${u}::-webkit-scrollbar {
-    display: none;
-  }
-`);
-  html_id_set(div_map_container, u);
+  await html_scroll_none(div_map_container);
   let div_map = html_div(div_map_container);
   object_property_set_exists_not(div_map, "container", div_map_container);
   html_style_assign(div_map, {
