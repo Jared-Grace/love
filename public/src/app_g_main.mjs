@@ -1,4 +1,4 @@
-import { integer_random_0 } from "../../../love/public/src/integer_random_0.mjs";
+import { integer_random_range } from "../../../love/public/src/integer_random_range.mjs";
 import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
 import { location_pathname_part_first_starts_with } from "../../../love/public/src/location_pathname_part_first_starts_with.mjs";
 import { localhost_is } from "../../../love/public/src/localhost_is.mjs";
@@ -94,8 +94,8 @@ export async function app_g_main() {
   const player_img = list_random_item(imgs_men);
   let names_men = bible_names_men();
   let player = {
-    x: integer_random_0(column_count),
-    y: integer_random_0(row_count),
+    x: integer_random_range(column_count),
+    y: integer_random_range(row_count),
     img: player_img,
     prayer: {
       conversation: false,
