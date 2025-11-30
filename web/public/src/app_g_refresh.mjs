@@ -92,5 +92,7 @@ export async function app_g_refresh(
   }
   await sleep(2000);
   html_scroll_center(player_img_c);
-  log(message);
+  log({
+    player_img_c,
+  });
 }
