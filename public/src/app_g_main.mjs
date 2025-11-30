@@ -1,3 +1,4 @@
+import { localhost_is } from "../../../love/public/src/localhost_is.mjs";
 import { app_g_game_save } from "../../../love/public/src/app_g_game_save.mjs";
 import { g_gender_male } from "../../../love/public/src/g_gender_male.mjs";
 import { g_gender_female } from "../../../love/public/src/g_gender_female.mjs";
@@ -39,7 +40,9 @@ export function app_g_main() {
     padding: 0,
     overflow: "hidden",
   });
-  let path_prefix = "..\\";
+  let path_prefix = "";
+  let v = localhost_is();
+  ("..\\");
   const game_prefix = g_folder_img(path_prefix);
   const tiles_path = g_folder_tiles(path_prefix);
   let grasses = g_tiles_grasses();
