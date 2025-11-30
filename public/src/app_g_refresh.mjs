@@ -20,7 +20,7 @@ import { html_document_head } from "../../../love/public/src/html_document_head.
 import { g_character_img } from "../../../love/public/src/g_character_img.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 export async function app_g_refresh(
-  div_main,
+  div_map,
   game_prefix,
   tiles_path,
   rows,
@@ -30,9 +30,9 @@ export async function app_g_refresh(
   let { npcs } = map;
   marker("1");
   global_function_property_set(app_g_refresh, "tutorial", null);
-  html_clear(div_main);
+  html_clear(div_map);
   let player = app_g_player_get();
-  let player_img_c = g_character_img(game_prefix, div_main, player);
+  let player_img_c = g_character_img(game_prefix, div_map, player);
   let parent = html_document_head();
   let component = html_element(parent, "style");
   html_text_set(
@@ -58,22 +58,22 @@ export async function app_g_refresh(
   );
   html_style_set(player_img_c, "animation", "pulseGlow 2s infinite alternate");
   function lambda12(npc) {
-    let ci = g_character_img(game_prefix, div_main, npc);
+    let ci = g_character_img(game_prefix, div_map, npc);
   }
   each(npcs, lambda12);
   let rows_size = list_size(rows);
-  html_style_assign(div_main, {
+  html_style_assign(div_map, {
     gridTemplateRows: "repeat(" + rows_size + ", auto)",
   });
   const tile_class = "tile";
   function lambda2(columns, y) {
     let columns_size = list_size(columns);
-    html_style_assign(div_main, {
+    html_style_assign(div_map, {
       gridTemplateColumns: "repeat(" + columns_size + ", auto)",
     });
     function lambda(r, x) {
       const src = tiles_path + r + ".png";
-      let tile = html_img(div_main, src);
+      let tile = html_img(div_map, src);
       g_img_square_style(tile);
       html_class_add(tile, tile_class);
       const coordinates_tile = {
@@ -85,12 +85,12 @@ export async function app_g_refresh(
     each_index(columns, lambda);
   }
   each_index(rows, lambda2);
-  html_on_click(div_main, on_click);
+  html_on_click(div_map, on_click);
   async function on_click(e) {
     await app_g_click(
       e,
       tile_class,
-      div_main,
+      div_map,
       player_img_c,
       body,
       map,

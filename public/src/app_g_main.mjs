@@ -73,8 +73,8 @@ export async function app_g_main() {
     each_index(taken, lambda3);
   }
   let tiles = list_adder(lambda5);
-  let div_main = html_div(body);
-  html_style_assign(div_main, {
+  let div_map = html_div(body);
+  html_style_assign(div_map, {
     position: "relative",
     display: "grid",
   });
@@ -162,5 +162,5 @@ export async function app_g_main() {
     player,
     npcs,
   });
-  await app_g_refresh(div_main, game_prefix, tiles_path, rows, body, map);
+  await app_g_refresh(div_map, game_prefix, tiles_path, rows, body, map);
 }
