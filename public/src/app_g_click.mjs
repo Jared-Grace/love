@@ -23,7 +23,15 @@ import { global_function_property_get } from "../../../love/public/src/global_fu
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { html_data_get } from "../../../love/public/src/html_data_get.mjs";
 import { html_component_wrap } from "../../../love/public/src/html_component_wrap.mjs";
-export async function app_g_click(e, tile_class, div, player_img_c, body, map) {
+export async function app_g_click(
+  e,
+  tile_class,
+  div,
+  player_img_c,
+  body,
+  map,
+  game_prefix,
+) {
   let player = app_g_player_get();
   let { npcs, coordinates } = map;
   marker("1");
@@ -80,7 +88,14 @@ export async function app_g_click(e, tile_class, div, player_img_c, body, map) {
     }
     html_scroll_center(player_img_c);
     if (npc_clicked) {
-      tutorial = app_g_click_npc(div, npcs_matched, tutorial, body, player);
+      tutorial = app_g_click_npc(
+        div,
+        npcs_matched,
+        tutorial,
+        body,
+        player,
+        game_prefix,
+      );
     }
   }
   app_g_player_save(player);
