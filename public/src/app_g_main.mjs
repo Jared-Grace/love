@@ -73,6 +73,7 @@ export async function app_g_main() {
     each_index(taken, lambda3);
   }
   let tiles = list_adder(lambda5);
+  let div_map_container = html_div(body);
   let div_map = html_div(body);
   html_style_assign(div_map, {
     position: "relative",
