@@ -25,8 +25,7 @@ export function app_g_conversation(prayer, npcs_matched, overlay, player) {
   let gender = object_property_get(npc, "gender");
   let container = app_g_container(overlay);
   let color_male = "#80a0ff";
-  if (false) {
-  }
+  let map = {};
   html_style_assign(container, {
     "background-color": color_male + "bc",
   });
