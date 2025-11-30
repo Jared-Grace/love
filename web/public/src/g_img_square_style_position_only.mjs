@@ -5,9 +5,10 @@ import { html_style_assign } from "../../../love/public/src/html_style_assign.mj
 export function g_img_square_style_position_only(tile, x, y) {
   marker("1");
   let rows = g_rows_count();
+  const time = "0.3s ease";
   html_style_assign(tile, {
     left: "calc(" + x + ` * (` + g_img_square_size_css() + `))`,
     top: "calc(" + y + ` * (` + g_img_square_size_css() + `))`,
-    transition: "left 0.3s ease, top 0.3s ease",
+    transition: "left " + time + ", top " + time,
   });
 }
