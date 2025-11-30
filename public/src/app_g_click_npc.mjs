@@ -50,21 +50,27 @@ export function app_g_click_npc(div, npcs_matched, tutorial, body, player) {
       meet_message =
         " " +
         string_first_upper_to(
-          string_random_or_empty(a) + s2 + " to meet you" + g_random_dot_bang(),
-        );
-    } else {
-      meet_message =
-        " " +
-        string_first_upper_to(
           string_random_or_empty(a) +
             s2 +
             " to " +
-            list_random_item(["see", "talk to", "hear from you"]) +
-            " you" +
-            string_random_or_empty(", again") +
+            "meet you" +
             g_random_dot_bang(),
         );
+    } else {
+      meet_message =
+        list_random_item(["see", "talk to", "hear from you"]) +
+        " you" +
+        string_random_or_empty(", again");
     }
+    meet_message =
+      " " +
+      string_first_upper_to(
+        string_random_or_empty(a) +
+          s2 +
+          " to " +
+          "meet you" +
+          g_random_dot_bang(),
+      );
     app_g_p_text(
       container,
       name + " says: " + v + " " + name2 + g_random_dot_bang() + meet_message,
