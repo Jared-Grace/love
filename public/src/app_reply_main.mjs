@@ -120,6 +120,8 @@ export async function app_reply_main() {
   html_button(root, "Reset 2", verse_random_reset_2);
   let verse_random_reset_4 = verse_random_reset_n(4);
   html_button(root, "Reset 4", verse_random_reset_4);
+  let lambda10 = verse_random_reset_n(6);
+  html_button(root, "Reset 6", lambda10);
   function verses_list_reset() {
     verses_list = [];
   }
