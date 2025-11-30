@@ -17,7 +17,7 @@ import { html_style_assign } from "../../../love/public/src/html_style_assign.mj
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 export function app_g_click_npc(
-  div,
+  div_map,
   npcs_matched,
   tutorial,
   body,
@@ -25,7 +25,7 @@ export function app_g_click_npc(
   game_prefix,
 ) {
   marker("1");
-  let overlay = app_g_overlay(body);
+  let overlay = app_g_overlay(div_map);
   let prayer = object_property_get(player, "prayer");
   let conversation = object_property_get(prayer, "conversation");
   if (conversation) {
@@ -50,7 +50,7 @@ export function app_g_click_npc(
       if (conversed) {
         return;
       }
-      tutorial = html_div(div);
+      tutorial = html_div(div_map);
       html_click_none(tutorial);
       global_function_property_set(app_g_refresh, "tutorial", tutorial);
       g_img_square_style_position(tutorial, player, "tutorial");
