@@ -90,7 +90,7 @@ export async function app_g_main() {
     "z-index": html_z_max(),
     "pointer-events": "auto",
   });
-  let component = html_document_head();
+  let head = html_document_head();
   const uid = "scroll-hidden-" + Math.random().toString(36).slice(2);
   container.setAttribute("data-scroll-hide", uid);
   let div_map = html_div(div_map_container);
