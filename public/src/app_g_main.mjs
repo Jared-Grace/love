@@ -1,3 +1,4 @@
+import { uuid } from "../../../love/public/src/uuid.mjs";
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { html_z_max } from "../../../love/public/src/html_z_max.mjs";
@@ -94,6 +95,7 @@ export async function app_g_main() {
     display: none;
   }
 `);
+  let u = await uuid();
   let div_map = html_div(div_map_container);
   object_property_set_exists_not(div_map, "container", div_map_container);
   html_style_assign(div_map, {
