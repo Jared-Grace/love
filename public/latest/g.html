@@ -68,8 +68,8 @@ function assert(b) {
     error();
   }
 }
-function not(a) {
-  let n = !a;
+function not(b) {
+  let n = !b;
   return n;
 }
 function error(message) {
@@ -1197,7 +1197,17 @@ async function folder_read_files(path_folder) {
   }
   const all = fs.readdirSync(path_folder);
   let files = all.filter(lambda);
+  list_sort_string(files);
   return files;
+}
+function list_sort_string(list) {
+  function lambda(a, b) {
+    const [na, ia] = a.split(/[_\.]/);
+    const [nb, ib] = b.split(/[_\.]/);
+    let v = na.localeCompare(nb) || Number(ia) - Number(ib);
+    return v;
+  }
+  list.sort(lambda);
 }
 function function_name_folder_to_path(f_name, folder) {
   let base = function_name_to_base(f_name);
