@@ -82,5 +82,4 @@ export function app_g_refresh(div, game_prefix, tiles_path, rows, body, map) {
     await app_g_click(e, tile_class, div, player_img_c, body, map);
   }
   html_scroll_center(player_img_c);
-  ;
 }
