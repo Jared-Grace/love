@@ -1,4 +1,4 @@
-import { integer_random_1 } from "../../../love/public/src/integer_random_1.mjs";
+import { integer_random_0 } from "../../../love/public/src/integer_random_0.mjs";
 import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
 import { location_pathname_part_first_starts_with } from "../../../love/public/src/location_pathname_part_first_starts_with.mjs";
 import { localhost_is } from "../../../love/public/src/localhost_is.mjs";
@@ -32,7 +32,7 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export function app_g_main() {
+export async function app_g_main() {
   marker("1");
   html_meta_viewport();
   let html = html_document_root();
@@ -94,8 +94,8 @@ export function app_g_main() {
   const player_img = list_random_item(imgs_men);
   let names_men = bible_names_men();
   let player = {
-    x: integer_random_1(column_count),
-    y: integer_random_1(row_count),
+    x: integer_random_0(column_count),
+    y: integer_random_0(row_count),
     img: player_img,
     prayer: {
       conversation: false,
@@ -155,5 +155,5 @@ export function app_g_main() {
     player,
     npcs,
   });
-  app_g_refresh(div, game_prefix, tiles_path, rows, body, map);
+  await app_g_refresh(div, game_prefix, tiles_path, rows, body, map);
 }
