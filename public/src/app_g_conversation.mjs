@@ -68,7 +68,7 @@ export function app_g_conversation(prayer, npcs_matched, overlay, player) {
       meet_message,
   );
   function lambda2() {
-    html_clear(element);
+    html_clear(overlay);
   }
   app_g_button_green(
     overlay,
