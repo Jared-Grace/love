@@ -67,7 +67,13 @@ export function app_g_conversation(prayer, npcs_matched, overlay, player) {
       meet_message,
   );
   function lambda2() {}
-  app_g_button_green(overlay, "Tell " + name_npc + " ", lambda2);
+  app_g_button_green(
+    overlay,
+    "Tell " +
+      name_npc +
+      " that Jesus died, was buried and rose to life and share the gospel!",
+    lambda2,
+  );
   app_g_button_green(
     overlay,
     emoji_pray() +
