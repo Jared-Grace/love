@@ -38,8 +38,8 @@ export function app_g_click_npc(div, npcs_matched, tutorial, body, player) {
       " To pray, tap or click on yourself (You glow with white)",
     );
     function lambda21() {
-      let conversed = object_property_get(player, "conversed");
       overlay_close();
+      let conversed = object_property_get(player, "conversed");
       if (conversed) {
         return;
       }
