@@ -45,6 +45,7 @@ export async function app_g_main() {
     margin: "0",
     padding: 0,
     overflow: "hidden",
+    height: "100%",
   });
   let path_prefix = "";
   let v = localhost_is();
