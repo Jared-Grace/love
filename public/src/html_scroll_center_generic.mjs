@@ -1,5 +1,7 @@
 import { not } from "../../../love/public/src/not.mjs";
+import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 export async function html_scroll_center_generic(player_img_c, behavior) {
+  let el = html_component_element_get(player_img_c);
   if (el.tagName === "IMG" && not(el.complete)) {
     await new Promise(function lambda(r) {
       let v = (el.onload = r);
