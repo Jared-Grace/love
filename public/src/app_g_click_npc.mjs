@@ -1,10 +1,10 @@
+import { g_img_square_size_css } from "../../../love/public/src/g_img_square_size_css.mjs";
 import { app_g_conversation } from "../../../love/public/src/app_g_conversation.mjs";
 import { app_g_container } from "../../../love/public/src/app_g_container.mjs";
 import { app_g_p_text } from "../../../love/public/src/app_g_p_text.mjs";
 import { html_click_none } from "../../../love/public/src/html_click_none.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_button_back } from "../../../love/public/src/app_g_button_back.mjs";
-import { g_rows_count } from "../../../love/public/src/g_rows_count.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { g_img_square_style_position } from "../../../love/public/src/g_img_square_style_position.mjs";
 import { app_g_refresh } from "../../../love/public/src/app_g_refresh.mjs";
@@ -56,9 +56,7 @@ export function app_g_click_npc(
       g_img_square_style_position(tutorial, player, "tutorial");
       let text = emoji_pray();
       html_text_set(tutorial, text);
-      let rows = g_rows_count();
-      const square_size =
-        `calc(` + `max(100vh / ${rows}, 100vw / ${rows})` + `*.4)`;
+      const square_size = `calc(` + g_img_square_size_css() + `*.4)`;
       html_style_assign(tutorial, {
         display: "flex",
         justifyContent: "center",
