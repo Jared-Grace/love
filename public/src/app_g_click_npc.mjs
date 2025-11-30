@@ -54,7 +54,9 @@ export function app_g_click_npc(div, npcs_matched, tutorial, body, player) {
         list_random_item(["see", "talk to", "hear from you"]) +
         " you" +
         string_random_or_empty(", again") +
-        g_random_dot_bang();
+        g_random_dot_bang() +
+        " " +
+        "What is on your mind?";
     }
     meet_message += g_random_dot_bang();
     app_g_p_text(
