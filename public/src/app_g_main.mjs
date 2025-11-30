@@ -80,6 +80,7 @@ export async function app_g_main() {
     position: "fixed",
     top: "0",
     left: "0",
+    overflow: "auto",
     width: "100dvw",
     height: "100dvh",
     "z-index": html_z_max(),
