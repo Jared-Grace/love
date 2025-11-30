@@ -1,8 +1,8 @@
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { g_z } from "../../../love/public/src/g_z.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
-export function app_g_overlay(div) {
-  let overlay = html_div(div);
+export function app_g_overlay(div_map) {
+  let overlay = html_div(div_map);
   let s = {
     position: "fixed",
     top: "0",
