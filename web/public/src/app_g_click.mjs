@@ -26,7 +26,7 @@ import { html_component_wrap } from "../../../love/public/src/html_component_wra
 export async function app_g_click(
   e,
   tile_class,
-  div_main,
+  div_map,
   player_img_c,
   body,
   map,
@@ -89,7 +89,7 @@ export async function app_g_click(
     html_scroll_center(player_img_c);
     if (npc_clicked) {
       tutorial = app_g_click_npc(
-        div_main,
+        div_map,
         npcs_matched,
         tutorial,
         body,
