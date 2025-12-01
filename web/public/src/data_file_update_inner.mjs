@@ -41,5 +41,6 @@ export function data_file_update_inner(parsed, data) {
   each(removals, lambda);
   object_property_set(f_this, property_name, f_identifiers_new);
   return;
-  js_visit_calls_named(f_name2, function lambda4() {}, ast2);
+  function lambda4() {}
+  js_visit_calls_named(f_name2, lambda4, ast2);
 }
