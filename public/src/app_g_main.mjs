@@ -46,7 +46,8 @@ export async function app_g_main() {
   firebase_name_jg();
   let destination = g_objection_generate_upload_path("JAS01");
   let o = await firebase_storage_download_json(destination);
-  let o2 = g_objection_generate_property();opg
+  let o2 = g_objection_generate_property();
+  let value = object_property_get(object, property_name);
   log({
     o,
   });
