@@ -12,7 +12,6 @@ export async function sandbox() {
     log({
       file,
     });
-    return;
     async function lambda(data) {
       let passages = object_property_get(data, "passages");
       function lambda3(item) {
