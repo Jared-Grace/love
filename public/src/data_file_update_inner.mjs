@@ -1,3 +1,4 @@
+import { js_identifier_is_assert } from "../../../love/public/src/js_identifier_is_assert.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
@@ -45,6 +46,7 @@ export function data_file_update_inner(parsed, data) {
   return;
   function lambda4({ args }) {
     let first = list_first(args);
+    js_identifier_is_assert(expression);
   }
   js_visit_calls_named(fn_name.name, lambda4, ast);
 }
