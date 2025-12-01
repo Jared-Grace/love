@@ -1,3 +1,6 @@
+import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
+import { g_objection_generate_upload_path } from "../../../love/public/src/g_objection_generate_upload_path.mjs";
+import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
@@ -39,6 +42,10 @@ import { html_style_assign } from "../../../love/public/src/html_style_assign.mj
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_g_main() {
+  firebase_name_jg();
+  let destination = g_objection_generate_upload_path("JAS01");
+  let o = await firebase_storage_download_json(destination);
+  log(o);
   marker("1");
   html_meta_viewport();
   let html = html_document_root();
