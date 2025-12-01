@@ -1,3 +1,4 @@
+import { newline_windows } from "../../../love/public/src/newline_windows.mjs";
 import { string_split } from "../../../love/public/src/string_split.mjs";
 import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
@@ -51,9 +52,10 @@ export async function app_g_main() {
   let r6 = list_random_item(passages);
   let o2 = g_objection_generate_property();
   let objections = object_property_get(r6, o2);
-  let split = string_split(s, separator);
+  let separator = newline_windows();
+  let split = string_split(objections, separator);
   log({
-    value,
+    split,
   });
   marker("1");
   html_meta_viewport();
