@@ -167,8 +167,8 @@ export async function app_g_main() {
     object_property_set(npc, "meet", false);
   }
   each_index(npcs, npc_initialize);
-  let player = list_remove_end(coordinates, 1);
-  let only = list_single(list);
+  let player_list = list_remove_end(coordinates, 1);
+  let player = list_single(player_list);
   let a = object_assign(player, {
     img: player_img,
     prayer: {
