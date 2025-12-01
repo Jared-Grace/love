@@ -17,7 +17,7 @@ export async function g_objection_generate_upload() {
     let chapter_code = path_name(fb);
     let joined2 = path_join(["uploads", fb]);
     let destination = firebase_deploy_function_destination(
-      g_objection_generate_upload.name,
+      g_objection_generate.name,
       joined2,
     );
     log({
