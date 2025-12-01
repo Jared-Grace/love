@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { folder_read_paths_async } from "../../../love/public/src/folder_read_paths_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -12,6 +13,7 @@ export async function sandbox() {
     });
     return;
     async function lambda(data) {
+      each(list, function lambda3(item) {});
       let value = object_property_get(object, property_name);
     }
     await file_json_transform(file, lambda);
