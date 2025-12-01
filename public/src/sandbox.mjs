@@ -6,7 +6,7 @@ import { file_json_transform } from "../../../love/public/src/file_json_transfor
 export async function sandbox() {
   const path = "D:\\user\\storage\\function\\g_objection_generate";
   let files = await folder_read_async(path);
-  let combineds = list_map_path_join_left(path, files);
+  let combineds = list_map_path_join_left(files, path);
   async function lambda2(file) {
     log({
       file,
