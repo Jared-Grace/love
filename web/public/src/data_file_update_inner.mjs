@@ -1,3 +1,4 @@
+import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -39,4 +40,6 @@ export function data_file_update_inner(parsed, data) {
   }
   each(removals, lambda);
   object_property_set(f_this, property_name, f_identifiers_new);
+  return;
+  js_visit_calls_named(f_name2, function lambda4() {}, ast2);
 }
