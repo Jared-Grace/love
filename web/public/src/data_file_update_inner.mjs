@@ -1,5 +1,4 @@
-import { assert } from "../../../love/public/src/assert.mjs";
-import { js_literal_is } from "../../../love/public/src/js_literal_is.mjs";
+import { js_literal_is_assert } from "../../../love/public/src/js_literal_is_assert.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
@@ -31,8 +30,7 @@ export function data_file_update_inner(parsed, data) {
   function lambda4({ args }) {
     let first = list_first(args);
     if (0) {
-      let li = js_literal_is(init);
-      assert(li);
+      js_literal_is_assert();
     }
     log(first);
   }
