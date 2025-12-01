@@ -29,7 +29,6 @@ export async function app_g_click(
   tile_class,
   div_map,
   player_img_c,
-  body,
   map,
   game_prefix,
 ) {
