@@ -117,16 +117,6 @@ export async function app_g_main() {
   let imgs_women = list_map_combine_left("woman_", r2);
   const player_img = list_random_item(imgs_men);
   let names_men = bible_names_men();
-  let player = {
-    x: integer_random_range(column_count),
-    y: integer_random_range(row_count),
-    img: player_img,
-    prayer: {
-      conversation: false,
-    },
-    name: list_random_item(names_men),
-    conversed: false,
-  };
   let right = player_img;
   function lambda15(la4) {
     function lambda13(columns, y) {
@@ -175,6 +165,16 @@ export async function app_g_main() {
     object_property_set(npc, "meet", false);
   }
   each_index(npcs, npc_initialize);
+  let player = {
+    x: integer_random_range(column_count),
+    y: integer_random_range(row_count),
+    img: player_img,
+    prayer: {
+      conversation: false,
+    },
+    name: list_random_item(names_men),
+    conversed: false,
+  };
   app_g_game_save({
     player,
     npcs,
