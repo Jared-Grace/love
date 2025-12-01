@@ -13,7 +13,7 @@ export async function g_objection_generate_upload() {
   await g_objection_generate_migrate_generic(file_each);
   async function file_each(file) {
     let fb = path_base(file);
-    let name2 = path_name(file_path);
+    let chapter_code = path_name(fb);
     let path = local_function_path_json(chapter_code, fn);
     let joined = path_join([fn.name, fb]);
     let data = await file_read_json(fb);
