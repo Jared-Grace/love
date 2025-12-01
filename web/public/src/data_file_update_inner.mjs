@@ -30,7 +30,7 @@ export function data_file_update_inner(parsed, data) {
   function lambda4({ args }) {
     let first = list_first(args);
     if (0) {
-      js_literal_is_assert();
+      js_literal_is_assert(init);
     }
     log(first);
   }
