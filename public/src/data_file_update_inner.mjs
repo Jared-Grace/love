@@ -38,8 +38,12 @@ export function data_file_update_inner(parsed, data) {
   let declaration = js_declaration_single(ast);
   let async_is = object_property_get(declaration, "async");
   object_property_set(f_this, "async", async_is);
-  let f_identifiers_old = object_property_initialize(f_this, property_name, []);
   if (false) {
+    let f_identifiers_old = object_property_initialize(
+      f_this,
+      property_name,
+      [],
+    );
     let removals = list_difference(f_identifiers_old, f_identifiers_new);
     function lambda(item) {
       let list = object_property_initialize(identifiers, item, []);
