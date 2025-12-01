@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { g_objection_generate } from "../../../love/public/src/g_objection_generate.mjs";
 import { firebase_upload_object } from "../../../love/public/src/firebase_upload_object.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -7,6 +8,7 @@ export async function g_objection_generate_upload() {
   let fn = g_objection_generate;
   await g_objection_generate_migrate_generic(file_each);
   async function file_each(file) {
+    log(message);
     return;
     await firebase_upload_object(object, fn.name);
   }
