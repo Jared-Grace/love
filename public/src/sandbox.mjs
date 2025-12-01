@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { object_property_rename } from "../../../love/public/src/object_property_rename.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { folder_read_paths_async } from "../../../love/public/src/folder_read_paths_async.mjs";
@@ -13,6 +14,7 @@ export async function sandbox() {
     });
     return;
     async function lambda(data) {
+      let passages = object_property_get(data, "passages");
       function lambda3(item) {
         const property_name_before = "sermon";
         let property_name_after = "objection";
