@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { list_remove_end } from "../../../love/public/src/list_remove_end.mjs";
 import { html_scroll_none } from "../../../love/public/src/html_scroll_none.mjs";
@@ -174,6 +175,7 @@ export async function app_g_main() {
     name: list_random_item(names_men),
     conversed: false,
   });
+  log(message);
   app_g_game_save({
     player,
     npcs,
