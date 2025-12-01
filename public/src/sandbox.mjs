@@ -16,6 +16,7 @@ export async function sandbox() {
   let list2 = await folder_files_names_lower(joined);
   let m = list_filter_includes(list2, "grass");
   let mapped = list_map(m, path_name);
-  await file_json_transform(f_path, async function lambda(data) {});
+  async function lambda(data) {}
+  await file_json_transform(f_path, lambda);
   return mapped;
 }
