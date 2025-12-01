@@ -16,9 +16,9 @@ export async function g_preach_generate_passage(passage) {
 . Express examples or illustrative situations as direct statements.
 . Do not add personal commentary.
 
-Output each sentence separated by '` +
+Output each sentence separated by ` +
     newline_windows_code() +
-    `'. Follow these instructions exactly.`;
+    `. Follow these instructions exactly.`;
   let sermon = await g_generate_openai(prompt, passage);
   return sermon;
 }
