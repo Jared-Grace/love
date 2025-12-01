@@ -29,9 +29,7 @@ export function data_file_update_inner(parsed, data) {
   each(f_identifiers_new, lambda2);
   function lambda4({ args }) {
     let first = list_first(args);
-    if (0) {
-      js_literal_is_assert(init);
-    }
+    js_literal_is_assert(first);
     log(first);
   }
   js_visit_calls_named(fn_name.name, lambda4, ast);
