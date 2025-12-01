@@ -1,4 +1,4 @@
-import { newline_windows_escaped } from "../../../love/public/src/newline_windows_escaped.mjs";
+import { newline_windows_code } from "../../../love/public/src/newline_windows_code.mjs";
 import { g_generate_openai } from "../../../love/public/src/g_generate_openai.mjs";
 export async function g_preach_generate_passage(passage) {
   const prompt =
@@ -17,7 +17,7 @@ export async function g_preach_generate_passage(passage) {
 . Do not add personal commentary.
 
 Output each sentence separated by '` +
-    newline_windows_escaped() +
+    newline_windows_code() +
     `'. Follow these instructions exactly.`;
   let sermon = await g_generate_openai(prompt, passage);
   return sermon;
