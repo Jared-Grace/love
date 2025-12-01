@@ -1,3 +1,4 @@
+import { list_remove_end } from "../../../love/public/src/list_remove_end.mjs";
 import { html_scroll_none } from "../../../love/public/src/html_scroll_none.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { html_z_max } from "../../../love/public/src/html_z_max.mjs";
@@ -155,7 +156,7 @@ export async function app_g_main() {
   let genders = [male, female];
   let gender_count = list_size(genders);
   let npc_count = 30;
-  let npcs = list_take(coordinates, npc_count);
+  let npcs = list_remove_end(coordinates, npc_count);
   let map = {
     npcs,
     coordinates,
