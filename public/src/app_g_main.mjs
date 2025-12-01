@@ -4,7 +4,6 @@ import { html_scroll_none } from "../../../love/public/src/html_scroll_none.mjs"
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { html_z_max } from "../../../love/public/src/html_z_max.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { integer_random_range } from "../../../love/public/src/integer_random_range.mjs";
 import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
 import { location_pathname_part_first_starts_with } from "../../../love/public/src/location_pathname_part_first_starts_with.mjs";
 import { localhost_is } from "../../../love/public/src/localhost_is.mjs";
@@ -167,17 +166,14 @@ export async function app_g_main() {
   }
   each_index(npcs, npc_initialize);
   let player = list_remove_end(coordinates, 1);
-  let a = object_assign(to, from);
-  let player1 = {
-    x: integer_random_range(column_count),
-    y: integer_random_range(row_count),
+  let a = object_assign(player, {
     img: player_img,
     prayer: {
       conversation: false,
     },
     name: list_random_item(names_men),
     conversed: false,
-  };
+  });
   app_g_game_save({
     player,
     npcs,
