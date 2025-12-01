@@ -102,7 +102,7 @@ export async function app_g_conversation(
   );
   firebase_name_jg();
   let destination = g_objection_generate_upload_path("JAS01");
-  let o = await firebase_storage_download_json(path);
+  let o = await firebase_storage_download_json(destination);
   log(o);
   app_g_button_green(
     overlay,
