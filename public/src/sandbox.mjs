@@ -1,22 +1,6 @@
 import { file_json_transform } from "../../../love/public/src/file_json_transform.mjs";
-import { path_name } from "../../../love/public/src/path_name.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
-import { list_filter_includes } from "../../../love/public/src/list_filter_includes.mjs";
-import { folder_files_names_lower } from "../../../love/public/src/folder_files_names_lower.mjs";
-import { folder_files_names_underscore } from "../../../love/public/src/folder_files_names_underscore.mjs";
-import { g_folder_tiles } from "../../../love/public/src/g_folder_tiles.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
-import { path_join } from "./path_join.mjs";
 export async function sandbox() {
-  marker("1");
-  const tiles_path = g_folder_tiles("");
-  let joined = path_join(["public", tiles_path]);
-  marker("1");
-  let list = await folder_files_names_underscore(joined);
-  let list2 = await folder_files_names_lower(joined);
-  let m = list_filter_includes(list2, "grass");
-  let mapped = list_map(m, path_name);
+  const path = "D:\\user\\storage\\function\\g_objection_generate";
   async function lambda(data) {}
   await file_json_transform(f_path, lambda);
-  return mapped;
 }
