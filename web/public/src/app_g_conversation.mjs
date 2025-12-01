@@ -1,7 +1,3 @@
-import { g_objection_generate_upload_path } from "../../../love/public/src/g_objection_generate_upload_path.mjs";
-import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
-import { log } from "../../../love/public/src/log.mjs";
-import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_img } from "../../../love/public/src/html_img.mjs";
 import { g_character_img_url } from "../../../love/public/src/g_character_img_url.mjs";
@@ -100,10 +96,6 @@ export async function app_g_conversation(
       " that Jesus died, was buried and rose to life and share the gospel!",
     lambda2,
   );
-  firebase_name_jg();
-  let destination = g_objection_generate_upload_path("JAS01");
-  let o = await firebase_storage_download_json(destination);
-  log(o);
   app_g_button_green(
     overlay,
     emoji_pray() +
