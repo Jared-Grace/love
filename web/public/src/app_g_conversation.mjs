@@ -1,3 +1,5 @@
+import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
+import { g_objection_generate } from "../../../love/public/src/g_objection_generate.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_img } from "../../../love/public/src/html_img.mjs";
 import { g_character_img_url } from "../../../love/public/src/g_character_img_url.mjs";
@@ -96,6 +98,8 @@ export function app_g_conversation(
       " that Jesus died, was buried and rose to life and share the gospel!",
     lambda2,
   );
+  let fn = g_objection_generate;
+  let path = local_function_path_json(chapter_code, fn);
   app_g_button_green(
     overlay,
     emoji_pray() +
