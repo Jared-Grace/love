@@ -1,3 +1,4 @@
+import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { list_remove_end } from "../../../love/public/src/list_remove_end.mjs";
 import { html_scroll_none } from "../../../love/public/src/html_scroll_none.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
@@ -165,7 +166,9 @@ export async function app_g_main() {
     object_property_set(npc, "meet", false);
   }
   each_index(npcs, npc_initialize);
-  let player = {
+  let player = list_remove_end(coordinates, 1);
+  let a = object_assign(to, from);
+  let player1 = {
     x: integer_random_range(column_count),
     y: integer_random_range(row_count),
     img: player_img,
