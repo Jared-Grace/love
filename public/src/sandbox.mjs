@@ -1,6 +1,5 @@
-import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
+import { object_property_rename } from "../../../love/public/src/object_property_rename.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { folder_read_paths_async } from "../../../love/public/src/folder_read_paths_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -17,8 +16,7 @@ export async function sandbox() {
       function lambda3(item) {
         const property_name_before = "sermon";
         let property_name_after = "objection";
-        let value = object_property_get(item, property_name_before);
-        object_property_set_exists_not(item, property_name_after, value);
+        object_property_rename(item, property_name_before, property_name_after);
       }
       each(list, lambda3);
     }
