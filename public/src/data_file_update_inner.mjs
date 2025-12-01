@@ -1,3 +1,5 @@
+import { assert } from "../../../love/public/src/assert.mjs";
+import { js_literal_is } from "../../../love/public/src/js_literal_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_identifier_is_assert } from "../../../love/public/src/js_identifier_is_assert.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -30,6 +32,8 @@ export function data_file_update_inner(parsed, data) {
   function lambda4({ args }) {
     let first = list_first(args);
     if (0) {
+      let type_is = js_literal_is(init);
+      assert(ii);
       js_identifier_is_assert(first);
     }
     log(first);
