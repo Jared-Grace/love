@@ -1,3 +1,4 @@
+import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { g_objection_generate_upload_path } from "../../../love/public/src/g_objection_generate_upload_path.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
@@ -45,6 +46,7 @@ export async function app_g_main() {
   firebase_name_jg();
   let destination = g_objection_generate_upload_path("JAS01");
   let o = await firebase_storage_download_json(destination);
+  let v2 = g_objection_generate_property();
   log({
     o,
   });
