@@ -1,3 +1,4 @@
+import { list_single } from "../../../love/public/src/list_single.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { list_remove_end } from "../../../love/public/src/list_remove_end.mjs";
@@ -167,6 +168,7 @@ export async function app_g_main() {
   }
   each_index(npcs, npc_initialize);
   let player = list_remove_end(coordinates, 1);
+  let only = list_single(list);
   let a = object_assign(player, {
     img: player_img,
     prayer: {
