@@ -13,13 +13,13 @@ export async function g_objection_generate_upload() {
   await g_objection_generate_migrate_generic(file_each);
   async function file_each(file) {
     let fb = path_base(file);
-    let destination = g_objection_generate_upload_path(fb);
+    let chapter_code = path_name(fb);
+    let destination = g_objection_generate_upload_path(chapter_code);
     log({
       destination,
     });
     return;
     let fn = g_objection_generate;
-    let chapter_code = path_name(fb);
     let path = local_function_path_json(chapter_code, fn);
     let data = await file_read_json(path);
     await firebase_upload_object(data, joined);
