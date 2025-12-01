@@ -5,8 +5,8 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 import { file_json_transform } from "../../../love/public/src/file_json_transform.mjs";
 export async function sandbox() {
   const path = "D:\\user\\storage\\function\\g_objection_generate";
-  let files = await folder_read_async(path);
-  let combineds = list_map_path_join_left(files, path);
+  let file_names = await folder_read_async(path);
+  let combineds = list_map_path_join_left(file_names, path);
   async function lambda2(file) {
     log({
       file,
@@ -15,5 +15,5 @@ export async function sandbox() {
     async function lambda(data) {}
     await file_json_transform(file, lambda);
   }
-  await each_async(files, lambda2);
+  await each_async(combineds, lambda2);
 }
