@@ -1,5 +1,5 @@
 import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
-import { function_param_new } from "../../../love/public/src/function_param_new.mjs";
+import { path_name } from "../../../love/public/src/path_name.mjs";
 import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { g_objection_generate } from "../../../love/public/src/g_objection_generate.mjs";
@@ -13,7 +13,7 @@ export async function g_objection_generate_upload() {
   await g_objection_generate_migrate_generic(file_each);
   async function file_each(file) {
     let fb = path_base(file);
-    await function_param_new(param_name, default_value);
+    let name2 = path_name(file_path);
     let path = local_function_path_json(chapter_code, fn);
     let joined = path_join([fn.name, fb]);
     let data = await file_read_json(fb);
