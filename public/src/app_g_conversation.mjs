@@ -1,3 +1,4 @@
+import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
@@ -102,6 +103,7 @@ export async function app_g_conversation(
   );
   let fn = g_objection_generate;
   let path = local_function_path_json("JAS01", fn);
+  firebase_name_jg();
   let o = await firebase_storage_download_json(path);
   log(o);
   app_g_button_green(
