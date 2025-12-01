@@ -11,8 +11,8 @@ export async function g_objection_generate_upload() {
   await g_objection_generate_migrate_generic(file_each);
   async function file_each(file) {
     let fb = path_base(file);
-    let joined = path_join([fb, fn.name]);
-    let data = await file_read_json(file_path);
-    await firebase_upload_object(file, joined);
+    let joined = path_join([fn.name, fb]);
+    let data = await file_read_json(fb);
+    await firebase_upload_object(data, joined);
   }
 }
