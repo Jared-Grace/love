@@ -175,7 +175,9 @@ export async function app_g_main() {
     name: list_random_item(names_men),
     conversed: false,
   });
-  log({player});
+  log({
+    player,
+  });
   app_g_game_save({
     player,
     npcs,
