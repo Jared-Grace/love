@@ -9,8 +9,8 @@ export async function g_objection_generate_upload() {
   let fn = g_objection_generate;
   await g_objection_generate_migrate_generic(file_each);
   async function file_each(file) {
-    let f_name = function_path_to_name(f_path);
-    log(file);
+    let f_name = function_path_to_name(file);
+    log(f_name);
     return;
     await firebase_upload_object(object, fn.name);
   }
