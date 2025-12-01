@@ -47,11 +47,11 @@ export async function app_g_main() {
   let destination = g_objection_generate_upload_path("JAS01");
   let o = await firebase_storage_download_json(destination);
   let passages = object_property_get(o, "passages");
-  let r6 = list_random_item(list);
+  let r6 = list_random_item(passages);
   let o2 = g_objection_generate_property();
-  let value = object_property_get(o, o2);
+  let value = object_property_get(r6, o2);
   log({
-    o,
+    value,
   });
   marker("1");
   html_meta_viewport();
