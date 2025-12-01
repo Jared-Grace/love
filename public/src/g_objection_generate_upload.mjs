@@ -11,6 +11,6 @@ export async function g_objection_generate_upload() {
   async function file_each(file) {
     let fb = path_base(file);
     let joined = path_join([fb, fn.name]);
-    await firebase_upload_object(object);
+    await firebase_upload_object(object, joined);
   }
 }
