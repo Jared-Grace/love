@@ -103,7 +103,7 @@ export async function app_g_conversation(
   let fn = g_objection_generate;
   let path = local_function_path_json("JAS01", fn);
   let o = await firebase_storage_download_json(path);
-  log(message);
+  log(o);
   app_g_button_green(
     overlay,
     emoji_pray() +
