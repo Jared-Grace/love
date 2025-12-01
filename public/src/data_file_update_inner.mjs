@@ -1,3 +1,4 @@
+import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
@@ -42,5 +43,5 @@ export function data_file_update_inner(parsed, data) {
   object_property_set(f_this, property_name, f_identifiers_new);
   return;
   function lambda4() {}
-  js_visit_calls_named(f_name2, lambda4, ast2);
+  js_visit_calls_named(fn_name.name, lambda4, ast);
 }
