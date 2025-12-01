@@ -18,7 +18,7 @@ export async function sandbox() {
         const property_name_before = "sermon";
         let property_name_after = "objection";
         let value = object_property_get(item, property_name_before);
-        object_property_set_exists_not(object, property_name_after, value2);
+        object_property_set_exists_not(item, property_name_after, value);
       }
       each(list, lambda3);
     }
