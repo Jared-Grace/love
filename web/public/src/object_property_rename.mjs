@@ -8,5 +8,5 @@ export function object_property_rename(
 ) {
   let value = object_property_get(item, property_name_before);
   object_property_set_exists_not(item, property_name_after, value);
-  object_property_delete(object, property_name_before);
+  object_property_delete(item, property_name_before);
 }
