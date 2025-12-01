@@ -1,3 +1,4 @@
+import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { prayer_blessing_expand } from "../../../love/public/src/prayer_blessing_expand.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_last_remaining } from "../../../love/public/src/list_last_remaining.mjs";
@@ -11,8 +12,6 @@ import { html_span } from "../../../love/public/src/html_span.mjs";
 import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
 import { list_remove_property_multiple } from "../../../love/public/src/list_remove_property_multiple.mjs";
 import { bible_verses_uplifting } from "../../../love/public/src/bible_verses_uplifting.mjs";
-import { firebase_name } from "../../../love/public/src/firebase_name.mjs";
-import { global_function_initialize } from "../../../love/public/src/global_function_initialize.mjs";
 import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
@@ -56,7 +55,7 @@ export async function app_reply_main() {
   let choices = app_reply_choices();
   let languages = ebible_languages();
   let encouragement = bible_verses_uplifting();
-  global_function_initialize(firebase_name, "jared-grace");
+  firebase_name_jg();
   let en = ebible_folder_english();
   let original = bible_interlinear_verses_upload_folder();
   list_remove_property_multiple(languages, "language_code", ["en", "original"]);
