@@ -1,3 +1,4 @@
+import { file_json_transform } from "../../../love/public/src/file_json_transform.mjs";
 import { path_name } from "../../../love/public/src/path_name.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_filter_includes } from "../../../love/public/src/list_filter_includes.mjs";
@@ -15,5 +16,6 @@ export async function sandbox() {
   let list2 = await folder_files_names_lower(joined);
   let m = list_filter_includes(list2, "grass");
   let mapped = list_map(m, path_name);
+  await file_json_transform(f_path, async function lambda(data) {});
   return mapped;
 }
