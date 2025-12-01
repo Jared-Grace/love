@@ -10,7 +10,7 @@ export async function g_objection_generate_upload() {
   await g_objection_generate_migrate_generic(file_each);
   async function file_each(file) {
     let fb = path_base(file);
-    let joined = path_join(segments);
-    await firebase_upload_object(object, fn.name);
+    let joined = path_join([fb, fn.name]);
+    await firebase_upload_object(object);
   }
 }
