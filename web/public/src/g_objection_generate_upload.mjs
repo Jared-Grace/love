@@ -20,13 +20,12 @@ export async function g_objection_generate_upload() {
     let joined2 = path_join([fb]);
     let destination = firebase_deploy_function_destination(
       g_objection_generate_upload.name,
-      fb,
+      joined2,
     );
-    let joined = firebase_deploy_function_destination(fn.name, destination);
     log({
-      joined,
+      destination,
     });
-    return joined;
+    return;
     let data = await file_read_json(path);
     await firebase_upload_object(data, joined);
   }
