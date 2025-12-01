@@ -9,9 +9,6 @@ export async function sandbox() {
   const path = "D:\\user\\storage\\function\\g_objection_generate";
   let combineds = await folder_read_paths_async(path);
   async function lambda2(file) {
-    log({
-      file,
-    });
     async function lambda(data) {
       let passages = object_property_get(data, "passages");
       function lambda3(item) {
