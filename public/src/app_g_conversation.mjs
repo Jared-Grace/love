@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
 import { g_objection_generate } from "../../../love/public/src/g_objection_generate.mjs";
@@ -101,7 +102,8 @@ export async function app_g_conversation(
   );
   let fn = g_objection_generate;
   let path = local_function_path_json("JAS01", fn);
-  let index = await firebase_storage_download_json(destination);
+  let o = await firebase_storage_download_json(path);
+  log(message);
   app_g_button_green(
     overlay,
     emoji_pray() +
