@@ -19,7 +19,6 @@ export async function sandbox() {
         log({
           item,
         });
-        return;
         const property_name_before = "sermon";
         let property_name_after = g_objection_generate_property();
         object_property_rename(item, property_name_before, property_name_after);
