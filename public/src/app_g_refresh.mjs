@@ -82,15 +82,7 @@ export async function app_g_refresh(
   each_index(rows, lambda2);
   html_on_click(div_map, on_click);
   async function on_click(e) {
-    await app_g_click(
-      e,
-      tile_class,
-      div_map,
-      player_img_c,
-      body,
-      map,
-      game_prefix,
-    );
+    await app_g_click(e, tile_class, div_map, player_img_c, map, game_prefix);
   }
   if (document.readyState === "complete") {
     lambda3();
