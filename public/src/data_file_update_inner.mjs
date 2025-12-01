@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -42,6 +43,8 @@ export function data_file_update_inner(parsed, data) {
   each(removals, lambda);
   object_property_set(f_this, property_name, f_identifiers_new);
   return;
-  function lambda4() {}
+  function lambda4({ args }) {
+    let first = list_first(list2);
+  }
   js_visit_calls_named(fn_name.name, lambda4, ast);
 }
