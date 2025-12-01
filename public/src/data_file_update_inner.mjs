@@ -31,6 +31,9 @@ export function data_file_update_inner(parsed, data) {
     let first = list_first(args);
     js_literal_is_assert(first);
     log(first);
+    if (0) {
+      let value = object_property_get(first, "value");
+    }
   }
   js_visit_calls_named(fn_name.name, lambda4, ast);
   let functions = object_property_initialize(data, "functions", {});
