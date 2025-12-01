@@ -20,7 +20,7 @@ export async function g_objection_generate_upload() {
       g_objection_generate.name,
       fb,
     );
-    let joined = firebase_deploy_function_destination(fn.name, destination);
+    let joined = firebase_deploy_function_destination(destination, fn.name);
     log({
       joined,
     });
