@@ -13,9 +13,10 @@ export async function sandbox() {
     });
     return;
     async function lambda(data) {
-      function lambda3(item) {}
+      function lambda3(item) {
+        let value = object_property_get(object, property_name);
+      }
       each(list, lambda3);
-      let value = object_property_get(object, property_name);
     }
     await file_json_transform(file, lambda);
   }
