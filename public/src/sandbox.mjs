@@ -9,6 +9,7 @@ export async function sandbox() {
     log({
       file,
     });
+    return;
     async function lambda(data) {}
     await file_json_transform(file, lambda);
   }
