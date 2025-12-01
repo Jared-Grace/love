@@ -1,3 +1,4 @@
+import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { folder_read_paths_async } from "../../../love/public/src/folder_read_paths_async.mjs";
@@ -14,7 +15,9 @@ export async function sandbox() {
     return;
     async function lambda(data) {
       function lambda3(item) {
-        let value = object_property_get(object, property_name);
+        const property_name_before = "sermon";
+        let value = object_property_get(item, property_name_before);
+        object_property_set_exists_not(object, property_name, value2);
       }
       each(list, lambda3);
     }
