@@ -18,6 +18,8 @@ export function data_file_update_inner(parsed, data) {
   let { f_path } = parsed;
   let f_name = function_path_to_name(f_path);
   let { ast } = parsed;
+  let functions = object_property_initialize(data, "functions", {});
+  let f_this = object_property_initialize(functions, f_name, {});
   let f_identifiers_new = js_identifiers_names(ast);
   const property_name = "identifiers";
   let identifiers = object_property_initialize(data, property_name, {});
@@ -33,8 +35,6 @@ export function data_file_update_inner(parsed, data) {
     identifier_add(value);
   }
   js_visit_calls_named(fn_name.name, lambda4, ast);
-  let functions = object_property_initialize(data, "functions", {});
-  let f_this = object_property_initialize(functions, f_name, {});
   let declaration = js_declaration_single(ast);
   let async_is = object_property_get(declaration, "async");
   object_property_set(f_this, "async", async_is);
