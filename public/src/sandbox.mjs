@@ -19,6 +19,7 @@ export async function sandbox() {
         log({
           item,
         });
+        return;
         const property_name_before = "sermon";
         let property_name_after = "objection";
         object_property_rename(item, property_name_before, property_name_after);
