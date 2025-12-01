@@ -1,3 +1,4 @@
+import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { object_property_rename } from "../../../love/public/src/object_property_rename.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -20,7 +21,7 @@ export async function sandbox() {
         });
         return;
         const property_name_before = "sermon";
-        let property_name_after = "objection";
+        let property_name_after = g_objection_generate_property();
         object_property_rename(item, property_name_before, property_name_after);
       }
       each(passages, lambda3);
