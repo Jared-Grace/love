@@ -1,3 +1,4 @@
+import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
 import { g_objection_generate } from "../../../love/public/src/g_objection_generate.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -21,7 +22,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
-export function app_g_conversation(
+export async function app_g_conversation(
   prayer,
   npcs_matched,
   overlay,
@@ -99,7 +100,8 @@ export function app_g_conversation(
     lambda2,
   );
   let fn = g_objection_generate;
-  let path = local_function_path_json(chapter_code, fn);
+  let path = local_function_path_json("JAS", fn);
+  let index = await firebase_storage_download_json(destination);
   app_g_button_green(
     overlay,
     emoji_pray() +
