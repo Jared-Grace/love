@@ -1,6 +1,8 @@
+import { newline_windows_escaped } from "../../../love/public/src/newline_windows_escaped.mjs";
 import { g_generate_openai } from "../../../love/public/src/g_generate_openai.mjs";
 export async function g_preach_generate_passage(passage) {
-  const prompt = `You are a Christian preacher. You will be given a passage and its context. Rewrite the passage as follows:
+  const prompt =
+    `You are a Christian preacher. You will be given a passage and its context. Rewrite the passage as follows:
 
 . Break sentences into very short, simple, meaningful parts. Prefer multiple short sentences over long, concise sentences.
 . Identify context-free parts first, then context-dependent parts.
@@ -14,7 +16,9 @@ export async function g_preach_generate_passage(passage) {
 . Express examples or illustrative situations as direct statements.
 . Do not add personal commentary.
 
-Output each sentence separated by '\\r\\n'. Follow these instructions exactly.`;
+Output each sentence separated by '` +
+    newline_windows_escaped() +
+    `'. Follow these instructions exactly.`;
   let sermon = await g_generate_openai(prompt, passage);
   return sermon;
 }
