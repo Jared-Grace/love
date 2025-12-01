@@ -1,5 +1,5 @@
+import { firebase_deploy_function_destination } from "../../../love/public/src/firebase_deploy_function_destination.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { firebase_deploy_function_destination_json } from "../../../love/public/src/firebase_deploy_function_destination_json.mjs";
 import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
 import { path_name } from "../../../love/public/src/path_name.mjs";
 import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
@@ -16,14 +16,11 @@ export async function g_objection_generate_upload() {
     let chapter_code = path_name(fb);
     let fn = g_objection_generate;
     let path = local_function_path_json(chapter_code, fn);
-    let destination = firebase_deploy_function_destination_json(
+    let destination = firebase_deploy_function_destination(
       fb,
       g_objection_generate_upload.name,
     );
-    let joined = firebase_deploy_function_destination_json(
-      destination,
-      fn.name,
-    );
+    let joined = firebase_deploy_function_destination(destination, fn.name);
     log({
       joined,
     });
