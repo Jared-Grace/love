@@ -1,3 +1,4 @@
+import { list_second } from "../../../love/public/src/list_second.mjs";
 import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { g_objection_generate_upload_path } from "../../../love/public/src/g_objection_generate_upload_path.mjs";
@@ -49,7 +50,8 @@ export async function app_g_main() {
   let passages = object_property_get(o, "passages");
   let r6 = list_random_item(passages);
   let o2 = g_objection_generate_property();
-  let value = object_property_get(r6, o2);
+  let objections = object_property_get(r6, o2);
+  let second = list_second(list);
   log({
     value,
   });
