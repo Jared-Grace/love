@@ -44,7 +44,7 @@ export function data_file_update_inner(parsed, data) {
   object_property_set(f_this, property_name, f_identifiers_new);
   return;
   function lambda4({ args }) {
-    let first = list_first(list2);
+    let first = list_first(args);
   }
   js_visit_calls_named(fn_name.name, lambda4, ast);
 }
