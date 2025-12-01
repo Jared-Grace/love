@@ -1,3 +1,4 @@
+import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
 import { object_property_rename } from "../../../love/public/src/object_property_rename.mjs";
 import { g_objection_generate_migrate_generic } from "../../../love/public/src/g_objection_generate_migrate_generic.mjs";
 import { file_json_transform } from "../../../love/public/src/file_json_transform.mjs";
@@ -14,7 +15,8 @@ export async function g_objection_generate_migrate() {
           item,
         });
         const property_name_before = "objection";
-        object_property_rename(item, property_name_before, "objections");
+        let property_name_after = g_objection_generate_property();
+        object_property_rename(item, property_name_before, property_name_after);
       }
       each(passages, lambda3);
     }
