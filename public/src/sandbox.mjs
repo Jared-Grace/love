@@ -19,7 +19,7 @@ export async function sandbox() {
           item,
         });
         const property_name_before = "sermon";
-        object_property_delete(object, property_name_before);
+        object_property_delete(item, property_name_before);
       }
       each(passages, lambda3);
     }
