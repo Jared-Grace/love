@@ -16,11 +16,12 @@ export async function sandbox() {
     async function lambda(data) {
       let passages = object_property_get(data, "passages");
       function lambda3(item) {
+        $l;
         const property_name_before = "sermon";
         let property_name_after = "objection";
         object_property_rename(item, property_name_before, property_name_after);
       }
-      each(list, lambda3);
+      each(passages, lambda3);
     }
     await file_json_transform(file, lambda);
   }
