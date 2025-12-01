@@ -6,7 +6,9 @@ export async function sandbox() {
   const path = "D:\\user\\storage\\function\\g_objection_generate";
   let files = await folder_read_async(path);
   async function lambda2(file) {
-    log({file});
+    log({
+      file,
+    });
     async function lambda(data) {}
     await file_json_transform(file, lambda);
   }
