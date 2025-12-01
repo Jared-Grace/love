@@ -1,6 +1,4 @@
-import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_literal_is_assert } from "../../../love/public/src/js_literal_is_assert.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
@@ -23,16 +21,16 @@ export function data_file_update_inner(parsed, data) {
   let f_identifiers_new = js_identifiers_names(ast);
   const property_name = "identifiers";
   let identifiers = object_property_initialize(data, property_name, {});
-  function lambda2(i_name) {
+  function identifier_add(i_name) {
     let list = object_property_initialize(identifiers, i_name, []);
     list_add_if_not_includes(list, f_name);
   }
-  each(f_identifiers_new, lambda2);
+  each(f_identifiers_new, identifier_add);
   function lambda4({ args }) {
     let first = list_first(args);
     js_literal_is_assert(first);
     let value = object_property_get(first, "value");
-    log(value);
+    identifier_add(value);
   }
   js_visit_calls_named(fn_name.name, lambda4, ast);
   let functions = object_property_initialize(data, "functions", {});
@@ -41,18 +39,17 @@ export function data_file_update_inner(parsed, data) {
   let async_is = object_property_get(declaration, "async");
   object_property_set(f_this, "async", async_is);
   let f_identifiers_old = object_property_initialize(f_this, property_name, []);
-  let removals = list_difference(f_identifiers_old, f_identifiers_new);
-  function lambda(item) {
-    let list = object_property_initialize(identifiers, item, []);
-    list_remove_all(list, f_name);
-    let e = list_empty_is(list);
-    if (e) {
-      object_property_delete(identifiers, item);
+  if (false) {
+    let removals = list_difference(f_identifiers_old, f_identifiers_new);
+    function lambda(item) {
+      let list = object_property_initialize(identifiers, item, []);
+      list_remove_all(list, f_name);
+      let e = list_empty_is(list);
+      if (e) {
+        object_property_delete(identifiers, item);
+      }
     }
+    each(removals, lambda);
   }
-  each(removals, lambda);
   object_property_set(f_this, property_name, f_identifiers_new);
-  if (0) {
-    list_add(list2, item2);
-  }
 }
