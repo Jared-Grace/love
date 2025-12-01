@@ -1,7 +1,9 @@
+import { newline_windows_code } from "../../../love/public/src/newline_windows_code.mjs";
 import { g_preach_generate_book_generic } from "../../../love/public/src/g_preach_generate_book_generic.mjs";
 import { g_preach_generate } from "../../../love/public/src/g_preach_generate.mjs";
 export async function g_preach_generate_book(bible_folder, book_code) {
-  const prompt_system = `You are a Christian preacher. You will be given a passage and its context. Rewrite the passage as follows:
+  const prompt_system =
+    `You are a Christian preacher. You will be given a passage and its context. Rewrite the passage as follows:
 
 . Break sentences into very short, simple, meaningful parts. Prefer multiple short sentences over long, concise sentences.
 . Identify context-free parts first, then context-dependent parts.
@@ -15,7 +17,9 @@ export async function g_preach_generate_book(bible_folder, book_code) {
 . Express examples or illustrative situations as direct statements.
 . Do not add personal commentary.
 
-Output each sentence separated by '\\r\\n'. Follow these instructions exactly.`;
+Output each sentence separated by ` +
+    newline_windows_code() +
+    `. Follow these instructions exactly.`;
   const prompt_user_middle = "Here is the passage to rewrite: ";
   let fn = g_preach_generate;
   await g_preach_generate_book_generic(
