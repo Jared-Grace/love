@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_literal_is_assert } from "../../../love/public/src/js_literal_is_assert.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -51,4 +52,7 @@ export function data_file_update_inner(parsed, data) {
   }
   each(removals, lambda);
   object_property_set(f_this, property_name, f_identifiers_new);
+  if (0) {
+    list_add(list2, item2);
+  }
 }
