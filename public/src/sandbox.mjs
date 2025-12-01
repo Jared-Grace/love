@@ -16,8 +16,9 @@ export async function sandbox() {
     async function lambda(data) {
       function lambda3(item) {
         const property_name_before = "sermon";
+        let property_name_after = "objection";
         let value = object_property_get(item, property_name_before);
-        object_property_set_exists_not(object, property_name, value2);
+        object_property_set_exists_not(object, property_name_after, value2);
       }
       each(list, lambda3);
     }
