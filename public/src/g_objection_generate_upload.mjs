@@ -9,11 +9,11 @@ import { g_objection_generate_migrate_generic } from "../../../love/public/src/g
 import { path_base } from "./path_base.mjs";
 export async function g_objection_generate_upload() {
   marker("1");
-  let fn = g_objection_generate;
   await g_objection_generate_migrate_generic(file_each);
   async function file_each(file) {
     let fb = path_base(file);
     let chapter_code = path_name(fb);
+    let fn = g_objection_generate;
     let path = local_function_path_json(chapter_code, fn);
     let joined = path_join([fn.name, fb]);
     let data = await file_read_json(path);
