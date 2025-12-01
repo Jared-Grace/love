@@ -1,3 +1,4 @@
+import { path_join } from "../../../love/public/src/path_join.mjs";
 import { firebase_deploy_function_destination } from "../../../love/public/src/firebase_deploy_function_destination.mjs";
 import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
 import { path_name } from "../../../love/public/src/path_name.mjs";
@@ -15,6 +16,7 @@ export async function g_objection_generate_upload() {
     let chapter_code = path_name(fb);
     let fn = g_objection_generate;
     let path = local_function_path_json(chapter_code, fn);
+    let joined2 = path_join(segments);
     let joined = firebase_deploy_function_destination(fn.name, fb);
     let data = await file_read_json(path);
     await firebase_upload_object(data, joined);
