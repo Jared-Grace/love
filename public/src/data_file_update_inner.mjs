@@ -27,6 +27,12 @@ export function data_file_update_inner(parsed, data) {
     list_add_if_not_includes(list, f_name);
   }
   each(f_identifiers_new, lambda2);
+  function lambda4({ args }) {
+    let first = list_first(args);
+    js_identifier_is_assert(first);
+    log(first);
+  }
+  js_visit_calls_named(fn_name.name, lambda4, ast);
   let functions = object_property_initialize(data, "functions", {});
   let f_this = object_property_initialize(functions, f_name, {});
   let declaration = js_declaration_single(ast);
@@ -44,11 +50,4 @@ export function data_file_update_inner(parsed, data) {
   }
   each(removals, lambda);
   object_property_set(f_this, property_name, f_identifiers_new);
-  return;
-  function lambda4({ args }) {
-    let first = list_first(args);
-    js_identifier_is_assert(first);
-    log(message);
-  }
-  js_visit_calls_named(fn_name.name, lambda4, ast);
 }
