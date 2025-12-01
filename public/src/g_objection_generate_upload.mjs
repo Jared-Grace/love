@@ -1,5 +1,4 @@
-import { path_join } from "../../../love/public/src/path_join.mjs";
-import { firebase_deploy_function_destination } from "../../../love/public/src/firebase_deploy_function_destination.mjs";
+import { g_objection_generate_upload_path } from "../../../love/public/src/g_objection_generate_upload_path.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
 import { path_name } from "../../../love/public/src/path_name.mjs";
@@ -14,11 +13,7 @@ export async function g_objection_generate_upload() {
   await g_objection_generate_migrate_generic(file_each);
   async function file_each(file) {
     let fb = path_base(file);
-    let joined2 = path_join(["uploads", fb]);
-    let destination = firebase_deploy_function_destination(
-      g_objection_generate.name,
-      joined2,
-    );
+    let destination = g_objection_generate_upload_path(fb);
     log({
       destination,
     });
