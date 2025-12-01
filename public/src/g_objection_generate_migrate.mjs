@@ -10,10 +10,7 @@ export async function g_objection_generate_migrate() {
   let fn = g_objection_generate;
   const path = "D:\\user\\storage\\function\\" + fn.name;
   let combineds = await folder_read_paths_async(path);
-  async function lambda2(file) {
-    await file_each(file);
-  }
-  await each_async(combineds, lambda2);
+  await each_async(combineds, file_each);
   async function file_each(file) {
     async function lambda(data) {
       let passages = object_property_get(data, "passages");
