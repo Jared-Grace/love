@@ -1,3 +1,5 @@
+import { object_property_get_or } from "../../../love/public/src/object_property_get_or.mjs";
+import { data_identifiers_fn_names_get } from "../../../love/public/src/data_identifiers_fn_names_get.mjs";
 import { function_move } from "../../../love/public/src/function_move.mjs";
 import { function_rename_identifiers } from "../../../love/public/src/function_rename_identifiers.mjs";
 import { function_alias_rename } from "../../../love/public/src/function_alias_rename.mjs";
