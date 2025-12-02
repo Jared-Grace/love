@@ -62,4 +62,5 @@ export async function data_file_update_inner(parsed, data) {
     }
   }
   let identifiers_fn_names = list_adder(lambda2);
+  data_add("identifiers_fn_names", identifiers_fn_names);
 }
