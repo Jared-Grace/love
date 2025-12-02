@@ -52,14 +52,13 @@ export async function data_file_update_inner(parsed, data) {
   }
   let f_identifiers_new = js_identifiers_names(ast);
   data_add("identifiers", f_identifiers_new);
-  js_visit_calls_named(fn_name.name, lambda4, ast);
-  function lambda4({ args }) {
-    let first = list_first(args);
-    js_literal_is_assert(first);
-    let value = object_property_get(first, "value");
-    if (0) {
-      function lambda2(la) {}
-      let list2 = list_adder(lambda2);
+  function lambda2(la) {
+    js_visit_calls_named(fn_name.name, lambda4, ast);
+    function lambda4({ args }) {
+      let first = list_first(args);
+      js_literal_is_assert(first);
+      let value = object_property_get(first, "value");
     }
   }
+  let list2 = list_adder(lambda2);
 }
