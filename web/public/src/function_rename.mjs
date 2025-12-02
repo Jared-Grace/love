@@ -8,7 +8,10 @@ import { error } from "./error.mjs";
 export async function function_rename(f_name_before, f_name_after) {
   let i = await data_identifiers_fn_names_get();
   async function lambda(value) {
-    error(value);
+    error({
+      f_name_before,
+      value,
+    });
   }
   await object_property_exists_if_async(i, f_name_before, lambda);
   error("else");
