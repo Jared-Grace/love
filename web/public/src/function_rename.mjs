@@ -10,7 +10,11 @@ export async function function_rename(f_name_before, f_name_after) {
   let i = await data_identifiers_fn_names_get();
   async function lambda(value) {
     error_json({
-      message: "You are trying",
+      message:
+        "You are trying to rename: " +
+        f_name_before +
+        ". However that is referenced by " +
+        value,
       f_name_before,
       value,
     });
