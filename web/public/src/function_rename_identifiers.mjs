@@ -11,6 +11,9 @@ export async function function_rename_identifiers(f_name_before, f_name_after) {
   let e = object_property_exists(identifiers, f_name_before);
   if (e) {
     let f_names = object_property_get(identifiers, f_name_before);
+    await on_exist(f_names);
+  }
+  async function on_exist(f_names) {
     list_remove_if_exists(f_names, f_name_before);
     async function lambda(f_name) {
       async function lambda2(ast) {
