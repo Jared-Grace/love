@@ -20,14 +20,12 @@ export async function data_file_update_inner(parsed, data) {
   let { ast } = parsed;
   let functions = object_property_initialize(data, "functions", {});
   let f_this = object_property_initialize(functions, f_name, {});
-  js_visit_calls_named(fn_name.name, lambda4, ast);
   let declaration = js_declaration_single(ast);
   let async_is = object_property_get(declaration, "async");
   object_property_set(f_this, "async", async_is);
-  data_add("identifiers");
+  let f_identifiers_new = js_identifiers_names(ast);
   function data_add(property_name) {
     let identifiers = object_property_initialize(data, property_name, {});
-    let f_identifiers_new = js_identifiers_names(ast);
     function identifier_add(i_name) {
       let list = object_property_initialize(identifiers, i_name, []);
       list_add_if_not_includes(list, f_name);
@@ -52,6 +50,8 @@ export async function data_file_update_inner(parsed, data) {
     }
     object_property_set(f_this, property_name, f_identifiers_new);
   }
+  data_add("identifiers");
+  js_visit_calls_named(fn_name.name, lambda4, ast);
   function lambda4({ args }) {
     let first = list_first(args);
     js_literal_is_assert(first);
