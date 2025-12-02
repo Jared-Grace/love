@@ -58,7 +58,8 @@ export async function data_file_update_inner(parsed, data) {
       let first = list_first(args);
       js_literal_is_assert(first);
       let value = object_property_get(first, "value");
+      la(value);
     }
   }
-  let list2 = list_adder(lambda2);
+  let identifiers_fn_names = list_adder(lambda2);
 }
