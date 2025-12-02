@@ -18,7 +18,11 @@ export async function function_rename(f_name_before, f_name_after) {
         value +
         " through " +
         fn_name.name +
-        ". ",
+        ". TODO: " +
+        function_rename.name +
+        " needs enhancing to rename " +
+        fn_name.name +
+        ".",
       f_name_before,
       value,
     });
