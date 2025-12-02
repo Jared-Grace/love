@@ -9,10 +9,10 @@ import { data_identifiers_get } from "../../../love/public/src/data_identifiers_
 export async function function_rename_identifiers(f_name_before, f_name_after) {
   let identifiers = await data_identifiers_get();
   let n = object_property_exists_not(identifiers, f_name_before);
-  if (n) {
+  let f_names = object_property_get_or(null, identifiers, f_name_before);
+  if (f_names !== null) {
     return;
   }
-  let f_names = object_property_get_or(null, identifiers, f_name_before);
   list_remove_if_exists(f_names, f_name_before);
   async function lambda(f_name) {
     async function lambda2(ast) {
