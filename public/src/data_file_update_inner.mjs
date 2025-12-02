@@ -24,20 +24,20 @@ export async function data_file_update_inner(parsed, data) {
   let async_is = object_property_get(declaration, "async");
   object_property_set(f_this, "async", async_is);
   let f_identifiers_new = js_identifiers_names(ast);
-  function data_add(property_name) {
+  function data_add(property_name, items) {
     let identifiers = object_property_initialize(data, property_name, {});
     function identifier_add(i_name) {
       let list = object_property_initialize(identifiers, i_name, []);
       list_add_if_not_includes(list, f_name);
     }
-    each(f_identifiers_new, identifier_add);
+    each(items, identifier_add);
     if (false) {
       let f_identifiers_old = object_property_initialize(
         f_this,
         property_name,
         [],
       );
-      let removals = list_difference(f_identifiers_old, f_identifiers_new);
+      let removals = list_difference(f_identifiers_old, items);
       function lambda(item) {
         let list = object_property_initialize(identifiers, item, []);
         list_remove_all(list, f_name);
@@ -48,9 +48,9 @@ export async function data_file_update_inner(parsed, data) {
       }
       each(removals, lambda);
     }
-    object_property_set(f_this, property_name, f_identifiers_new);
+    object_property_set(f_this, property_name, items);
   }
-  data_add("identifiers");
+  data_add("identifiers", f_identifiers_new);
   js_visit_calls_named(fn_name.name, lambda4, ast);
   function lambda4({ args }) {
     let first = list_first(args);
