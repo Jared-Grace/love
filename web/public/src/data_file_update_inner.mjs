@@ -25,9 +25,13 @@ export async function data_file_update_inner(parsed, data) {
   object_property_set(f_this, "async", async_is);
   let f_identifiers_new = js_identifiers_names(ast);
   function data_add(property_name, items) {
-    let identifiers = object_property_initialize(data, property_name, {});
+    let items_to_functions = object_property_initialize(
+      data,
+      property_name,
+      {},
+    );
     function identifier_add(i_name) {
-      let list = object_property_initialize(identifiers, i_name, []);
+      let list = object_property_initialize(items_to_functions, i_name, []);
       list_add_if_not_includes(list, f_name);
     }
     each(items, identifier_add);
@@ -39,11 +43,11 @@ export async function data_file_update_inner(parsed, data) {
       );
       let removals = list_difference(f_identifiers_old, items);
       function lambda(item) {
-        let list = object_property_initialize(identifiers, item, []);
+        let list = object_property_initialize(items_to_functions, item, []);
         list_remove_all(list, f_name);
         let e = list_empty_is(list);
         if (e) {
-          object_property_delete(identifiers, item);
+          object_property_delete(items_to_functions, item);
         }
       }
       each(removals, lambda);
