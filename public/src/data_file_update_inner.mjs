@@ -36,12 +36,8 @@ export async function data_file_update_inner(parsed, data) {
     }
     each(items, identifier_add);
     if (false) {
-      let f_identifiers_old = object_property_initialize(
-        f_this,
-        property_name,
-        [],
-      );
-      let removals = list_difference(f_identifiers_old, items);
+      let items_old = object_property_initialize(f_this, property_name, []);
+      let removals = list_difference(items_old, items);
       function lambda(item) {
         let list = object_property_initialize(items_to_functions, item, []);
         list_remove_all(list, f_name);
