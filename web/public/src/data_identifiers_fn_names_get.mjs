@@ -4,6 +4,6 @@ import { data_property_get } from "../../../love/public/src/data_property_get.mj
 export async function data_identifiers_fn_names_get() {
   marker("1");
   let d_path = data_path();
-  let v = await data_property_get("identifiers", d_path);
+  let v = await data_property_get("identifiers_fn_names", d_path);
   return v;
 }
