@@ -26,7 +26,7 @@ export async function data_file_update_inner(parsed, data) {
   let async_is = object_property_get(declaration, "async");
   object_property_set(f_this, "async", async_is);
   const property_name = "identifiers";
-  let { f_identifiers_new, identifiers } = await newFunction();
+  await newFunction();
   function newFunction() {
     let identifiers = object_property_initialize(data, property_name, {});
     let f_identifiers_new = js_identifiers_names(ast);
@@ -52,16 +52,11 @@ export async function data_file_update_inner(parsed, data) {
       }
       each(removals, lambda);
     }
-    let v = {
-      f_identifiers_new,
-      identifiers,
-    };
-    return v;
+    object_property_set(f_this, property_name, f_identifiers_new);
   }
   function lambda4({ args }) {
     let first = list_first(args);
     js_literal_is_assert(first);
     let value = object_property_get(first, "value");
   }
-  object_property_set(f_this, property_name, f_identifiers_new);
 }
