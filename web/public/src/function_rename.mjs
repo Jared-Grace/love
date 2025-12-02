@@ -5,10 +5,12 @@ import { function_rename_identifiers } from "../../../love/public/src/function_r
 import { function_alias_rename } from "../../../love/public/src/function_alias_rename.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { error } from "./error.mjs";
+import { error_json } from "./error_json.mjs";
 export async function function_rename(f_name_before, f_name_after) {
   let i = await data_identifiers_fn_names_get();
   async function lambda(value) {
-    error({
+    error_json({
+      message: "You are trying",
       f_name_before,
       value,
     });
