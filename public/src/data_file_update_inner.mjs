@@ -1,4 +1,3 @@
-import { newFunction } from "../../../love/public/src/newFunction.mjs";
 import { js_literal_is_assert } from "../../../love/public/src/js_literal_is_assert.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
@@ -26,8 +25,8 @@ export async function data_file_update_inner(parsed, data) {
   let async_is = object_property_get(declaration, "async");
   object_property_set(f_this, "async", async_is);
   const property_name = "identifiers";
-  await newFunction();
-  function newFunction() {
+  data_add(property_name);
+  function data_add(property_name) {
     let identifiers = object_property_initialize(data, property_name, {});
     let f_identifiers_new = js_identifiers_names(ast);
     function identifier_add(i_name) {
