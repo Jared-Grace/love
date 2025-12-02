@@ -23,7 +23,6 @@ export async function data_file_update_inner(parsed, data) {
   let declaration = js_declaration_single(ast);
   let async_is = object_property_get(declaration, "async");
   object_property_set(f_this, "async", async_is);
-  let f_identifiers_new = js_identifiers_names(ast);
   function data_add(property_name, items) {
     let items_to_functions = object_property_initialize(
       data,
@@ -50,6 +49,7 @@ export async function data_file_update_inner(parsed, data) {
     }
     object_property_set(f_this, property_name, items);
   }
+  let f_identifiers_new = js_identifiers_names(ast);
   data_add("identifiers", f_identifiers_new);
   js_visit_calls_named(fn_name.name, lambda4, ast);
   function lambda4({ args }) {
