@@ -6,6 +6,7 @@ import { function_alias_rename } from "../../../love/public/src/function_alias_r
 import { marker } from "../../../love/public/src/marker.mjs";
 import { error } from "./error.mjs";
 import { error_json } from "./error_json.mjs";
+import { fn_name } from "./fn_name.mjs";
 export async function function_rename(f_name_before, f_name_after) {
   let i = await data_identifiers_fn_names_get();
   async function lambda(value) {
@@ -15,7 +16,9 @@ export async function function_rename(f_name_before, f_name_after) {
         f_name_before +
         ". However that is referenced by " +
         value +
-        ".",
+        " through " +
+        fn_name.name +
+        ". ",
       f_name_before,
       value,
     });
