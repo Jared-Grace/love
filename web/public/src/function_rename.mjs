@@ -14,7 +14,8 @@ export async function function_rename(f_name_before, f_name_after) {
         "You are trying to rename: " +
         f_name_before +
         ". However that is referenced by " +
-        value,
+        value +
+        ".",
       f_name_before,
       value,
     });
