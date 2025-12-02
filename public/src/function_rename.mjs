@@ -11,6 +11,7 @@ export async function function_rename(f_name_before, f_name_after) {
     error(value);
   }
   await object_property_exists_if_async(i, f_name_before, lambda);
+  error("else");
   await function_move(f_name_before, f_name_after);
   let v = await function_alias_rename(f_name_before, f_name_after);
   await function_rename_identifiers(f_name_before, f_name_after);
