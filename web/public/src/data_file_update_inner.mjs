@@ -1,3 +1,4 @@
+import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { js_literal_is_assert } from "../../../love/public/src/js_literal_is_assert.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
@@ -56,5 +57,8 @@ export async function data_file_update_inner(parsed, data) {
     let first = list_first(args);
     js_literal_is_assert(first);
     let value = object_property_get(first, "value");
+    if (0) {
+      let list2 = list_adder(function lambda2(la) {});
+    }
   }
 }
