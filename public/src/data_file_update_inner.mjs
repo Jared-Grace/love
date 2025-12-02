@@ -58,7 +58,8 @@ export async function data_file_update_inner(parsed, data) {
     js_literal_is_assert(first);
     let value = object_property_get(first, "value");
     if (0) {
-      let list2 = list_adder(function lambda2(la) {});
+      function lambda2(la) {}
+      let list2 = list_adder(lambda2);
     }
   }
 }
