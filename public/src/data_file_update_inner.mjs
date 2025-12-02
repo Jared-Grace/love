@@ -24,8 +24,7 @@ export async function data_file_update_inner(parsed, data) {
   let declaration = js_declaration_single(ast);
   let async_is = object_property_get(declaration, "async");
   object_property_set(f_this, "async", async_is);
-  const property_name = "identifiers";
-  data_add(property_name);
+  data_add("identifiers");
   function data_add(property_name) {
     let identifiers = object_property_initialize(data, property_name, {});
     let f_identifiers_new = js_identifiers_names(ast);
