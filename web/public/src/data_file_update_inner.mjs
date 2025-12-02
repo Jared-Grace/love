@@ -1,3 +1,4 @@
+import { newFunction } from "../../../love/public/src/newFunction.mjs";
 import { js_literal_is_assert } from "../../../love/public/src/js_literal_is_assert.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
@@ -14,46 +15,53 @@ import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_n
 import { object_property_initialize } from "../../../love/public/src/object_property_initialize.mjs";
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
 import { function_path_to_name } from "../../../love/public/src/function_path_to_name.mjs";
-export function data_file_update_inner(parsed, data) {
+export async function data_file_update_inner(parsed, data) {
   let { f_path } = parsed;
   let f_name = function_path_to_name(f_path);
   let { ast } = parsed;
   let functions = object_property_initialize(data, "functions", {});
   let f_this = object_property_initialize(functions, f_name, {});
-  let f_identifiers_new = js_identifiers_names(ast);
-  const property_name = "identifiers";
-  let identifiers = object_property_initialize(data, property_name, {});
-  function identifier_add(i_name) {
-    let list = object_property_initialize(identifiers, i_name, []);
-    list_add_if_not_includes(list, f_name);
-  }
-  each(f_identifiers_new, identifier_add);
-  function lambda4({ args }) {
-    let first = list_first(args);
-    js_literal_is_assert(first);
-    let value = object_property_get(first, "value");
-    identifier_add(value);
-  }
   js_visit_calls_named(fn_name.name, lambda4, ast);
   let declaration = js_declaration_single(ast);
   let async_is = object_property_get(declaration, "async");
   object_property_set(f_this, "async", async_is);
-  if (false) {
-    let f_identifiers_old = object_property_initialize(
-      f_this,
-      property_name,
-      [],
-    );
-    let removals = list_difference(f_identifiers_old, f_identifiers_new);
-    function lambda(item) {
-      let list = object_property_initialize(identifiers, item, []);
-      list_remove_all(list, f_name);
-      let e = list_empty_is(list);
-      if (e) {
-        object_property_delete(identifiers, item);
-      }
+  const property_name = "identifiers";
+  let { f_identifiers_new, identifiers } = await newFunction();
+  function newFunction() {
+    let identifiers = object_property_initialize(data, property_name, {});
+    let f_identifiers_new = js_identifiers_names(ast);
+    function identifier_add(i_name) {
+      let list = object_property_initialize(identifiers, i_name, []);
+      list_add_if_not_includes(list, f_name);
     }
-    each(removals, lambda);
+    each(f_identifiers_new, identifier_add);
+    if (false) {
+      let f_identifiers_old = object_property_initialize(
+        f_this,
+        property_name,
+        [],
+      );
+      let removals = list_difference(f_identifiers_old, f_identifiers_new);
+      function lambda(item) {
+        let list = object_property_initialize(identifiers, item, []);
+        list_remove_all(list, f_name);
+        let e = list_empty_is(list);
+        if (e) {
+          object_property_delete(identifiers, item);
+        }
+      }
+      each(removals, lambda);
+    }
+    let v = {
+      f_identifiers_new,
+      identifiers,
+    };
+    return v;
+  }
+  function lambda4({ args }) {
+    let first = list_first(args);
+    js_literal_is_assert(first);
+    let value = object_property_get(first, "value");
   }
   object_property_set(f_this, property_name, f_identifiers_new);
 }
