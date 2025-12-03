@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_scroll_center_generic_wait } from "../../../love/public/src/html_scroll_center_generic_wait.mjs";
@@ -32,10 +31,4 @@ export async function html_scroll_center_container_generic(
     behavior,
   };
   container_e.scrollTo(s);
-  console.log(
-    container_e.scrollHeight,
-    container_e.scrollWidth,
-    container_e.clientHeight,
-    container_e.clientWidth,
-  );
 }
