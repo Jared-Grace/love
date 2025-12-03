@@ -95,10 +95,12 @@ export async function app_g_conversation(
     let book_name = ebible_book_code_to_name(books, book_code);
     let verse_numbers_s = null;
     let s1 = list_size_1(verse_numbers);
+    let first = list_first(list);
     if (s1) {
-      let first = list_first(list);
       verse_numbers_s = first;
     } else {
+      let last = list_last(list2);
+      verse_numbers_s = first;
     }
     function lambda3() {}
     app_g_button_green(
