@@ -1,3 +1,4 @@
+import { app_g_p_text } from "../../../love/public/src/app_g_p_text.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { app_g_container } from "../../../love/public/src/app_g_container.mjs";
 import { app_g_npc_says } from "../../../love/public/src/app_g_npc_says.mjs";
@@ -86,7 +87,8 @@ export async function app_g_conversation(
     app_g_button_green(overlay, text2, lambda3);
   }
   let v2 = app_g_container(overlay);
-  html_text_set(v2, "text");
+  app_g_p_text(container, name);
+  html_text_set(v2, "What would you like to do?");
   let name_npc2 = object_property_get(npc, "name");
   app_g_button_green(
     overlay,
