@@ -8,6 +8,7 @@ export function string_to_words(text) {
   let v2 = whitespace_normalize(text);
   let lower = string_lower_to(v2);
   let words = string_split_space(lower);
-  let mapped = list_map(list, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list, lambda);
   return words;
 }
