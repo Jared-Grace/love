@@ -93,7 +93,8 @@ export function app_g_conversation(
     );
     let passages = object_property_get(o, "passages");
     list_shuffle(passages);
-    let mapped = list_map(list, function lambda2(item2) {});
+    function lambda2(item2) {}
+    let mapped = list_map(list, lambda2);
     let passage = list_last(passages);
     const last_second = list_index_last_second(passages);
     let r = integer_random_0(last_second);
