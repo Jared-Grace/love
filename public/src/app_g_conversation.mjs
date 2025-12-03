@@ -1,5 +1,4 @@
-import { app_g_p_text } from "../../../love/public/src/app_g_p_text.mjs";
-import { app_g_container } from "../../../love/public/src/app_g_container.mjs";
+import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
 import { app_g_npc_says } from "../../../love/public/src/app_g_npc_says.mjs";
 import { string_split } from "../../../love/public/src/string_split.mjs";
 import { newline_windows_escaped } from "../../../love/public/src/newline_windows_escaped.mjs";
@@ -86,8 +85,7 @@ export async function app_g_conversation(
     app_g_button_green(overlay, text2, lambda3);
   }
   const text = "What would you like to do?";
-  let choices = app_g_container(overlay);
-  app_g_p_text(choices, text);
+  app_g_container_text(overlay, text);
   let name_npc2 = object_property_get(npc, "name");
   app_g_button_green(
     overlay,
