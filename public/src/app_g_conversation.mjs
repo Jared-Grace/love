@@ -97,6 +97,7 @@ export function app_g_conversation(
     let r = integer_random_0(last_second);
     let item = list_get(passages, r);
     let o2 = g_objection_generate_property();
+    let text = object_property_get(passage, "text");
     let v2 = whitespace_normalize(str);
     let objections = object_property_get(passage, o2);
     let separator = newline_windows_escaped();
