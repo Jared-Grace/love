@@ -24,63 +24,65 @@ export async function app_g_click_npc(
   game_prefix,
 ) {
   marker("1");
-  async function lambda(resolve, reject) {}
-  let result = await promise_new(lambda);
-  let overlay = app_g_overlay(div_map);
-  function overlay_close() {
-    html_remove(overlay);
-  }
-  html_style_assign(overlay, {
-    display: "flex",
-    flexDirection: "column",
-    gap: "0px",
-  });
-  let prayer = object_property_get(player, "prayer");
-  let conversation = object_property_get(prayer, "conversation");
-  if (conversation) {
-    await app_g_conversation(
-      prayer,
-      npcs_matched,
-      overlay,
-      player,
-      game_prefix,
-    );
-  } else {
-    let container = app_g_container(overlay);
-    app_g_p_text(
-      container,
-      emoji_pray() +
-        " You remember that you have not prayed, yet, before your next conversation!",
-    );
-    let conversed = object_property_get(player, "conversed");
-    if (not(conversed)) {
+  async function lambda(resolve, reject) {
+    let overlay = app_g_overlay(div_map);
+    function overlay_close() {
+      html_remove(overlay);
+    }
+    html_style_assign(overlay, {
+      display: "flex",
+      flexDirection: "column",
+      gap: "0px",
+    });
+    let prayer = object_property_get(player, "prayer");
+    let conversation = object_property_get(prayer, "conversation");
+    if (conversation) {
+      await app_g_conversation(
+        prayer,
+        npcs_matched,
+        overlay,
+        player,
+        game_prefix,
+      );
+    } else {
+      let container = app_g_container(overlay);
       app_g_p_text(
         container,
-        " To pray, tap or click on yourself (You glow with white)",
+        emoji_pray() +
+          " You remember that you have not prayed, yet, before your next conversation!",
       );
-    }
-    function lambda21() {
-      overlay_close();
       let conversed = object_property_get(player, "conversed");
-      if (conversed) {
-        return;
+      if (not(conversed)) {
+        app_g_p_text(
+          container,
+          " To pray, tap or click on yourself (You glow with white)",
+        );
       }
-      let tutorial = html_div(div_map);
-      html_click_none(tutorial);
-      global_function_property_set(app_g_refresh, "tutorial", tutorial);
-      g_img_square_style_position(tutorial, player, "tutorial");
-      let text = emoji_pray();
-      html_text_set(tutorial, text);
-      const square_size = `calc(` + g_img_square_size_css() + `*.4)`;
-      html_style_assign(tutorial, {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        textAlign: "center",
-        fontSize: square_size,
-        animation: "upDown 1.25s infinite ease-in-out alternate",
-      });
+      function lambda21() {
+        overlay_close();
+        let conversed = object_property_get(player, "conversed");
+        if (conversed) {
+          return;
+        }
+        let tutorial = html_div(div_map);
+        html_click_none(tutorial);
+        global_function_property_set(app_g_refresh, "tutorial", tutorial);
+        g_img_square_style_position(tutorial, player, "tutorial");
+        let text = emoji_pray();
+        html_text_set(tutorial, text);
+        const square_size = `calc(` + g_img_square_size_css() + `*.4)`;
+        html_style_assign(tutorial, {
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+          fontSize: square_size,
+          animation: "upDown 1.25s infinite ease-in-out alternate",
+        });
+      }
+      app_g_button_back(overlay, lambda21);
     }
-    app_g_button_back(overlay, lambda21);
   }
+  let result = await promise_new(lambda);
+  return result;
 }
