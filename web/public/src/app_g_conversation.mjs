@@ -99,8 +99,6 @@ export function app_g_conversation(
     list_shuffle(passages);
     let passage = list_last(passages);
     const last_second = list_index_last_second(passages);
-    let r = integer_random_0(last_second);
-    let item = list_get(passages, r);
     let o2 = g_objection_generate_property();
     let text = object_property_get(passage, "text");
     let words = string_to_words(text);
@@ -119,7 +117,8 @@ export function app_g_conversation(
       return size;
     }
     list_sort_number_mapper(passages, lambda2);
-    let r6 = integer_random_0(column_count);
+    let r6 = integer_random_0(5);
+    let item = list_get(passages, r6);
     app_g_npc_says(npc, overlay, game_prefix, ob);
     app_g_container_text(overlay, "What would you like to say?");
     let choices = [
