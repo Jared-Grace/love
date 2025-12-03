@@ -75,7 +75,7 @@ export async function app_g_conversation(
     async function lambda2() {
       html_clear(overlay);
       let books = global_function_property_get(app_g_main, "books");
-      let value = global_function_property_get(fn, property_name);
+      let value = global_function_property_get(app_g_conversation, "");
       const chapter_code = "JAS01";
       let destination = g_objection_generate_upload_path(chapter_code);
       let o = await firebase_storage_download_json(destination);
