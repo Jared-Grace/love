@@ -1,3 +1,4 @@
+import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 import { app_g_button_green } from "../../../love/public/src/app_g_button_green.mjs";
 import { app_g_button_uncolored } from "../../../love/public/src/app_g_button_uncolored.mjs";
 import { app_g_button_back } from "../../../love/public/src/app_g_button_back.mjs";
@@ -8,8 +9,9 @@ import { emoji_bow } from "../../../love/public/src/emoji_bow.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
-export async function app_g_menu(overlay, player) {
+export async function app_g_menu(div_map, player) {
   let v = await new Promise(function lambda(resolve, reject) {
+    let overlay = app_g_overlay(div_map);
     html_clear(overlay);
     function close() {
       html_remove(overlay);
