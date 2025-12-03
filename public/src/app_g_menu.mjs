@@ -8,34 +8,30 @@ import { emoji_bow } from "../../../love/public/src/emoji_bow.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
-export async function app_g_menu(overlay, player) {
-  let v = await new Promise(function lambda(resolve, reject) {
+export function app_g_menu(overlay, player) {
+  html_clear(overlay);
+  function close() {
+    html_remove(overlay);
+  }
+  let component2 = app_g_button_back(overlay, close);
+  let text = emoji_pray() + " Pray";
+  function lambda7() {
     html_clear(overlay);
-    function close() {
-      html_remove(overlay);
-      resolve();
+    async function lambda23() {
+      await app_g_menu(overlay, player);
     }
-    let component2 = app_g_button_back(overlay, close);
-    let text = emoji_pray() + " Pray";
-    function lambda7() {
-      html_clear(overlay);
-      async function lambda23() {
-        await app_g_menu(overlay, player);
-      }
-      let button2 = app_g_button_back(overlay, lambda23);
-      function lambda22() {
-        let prayer = object_property_get(player, "prayer");
-        object_property_set(prayer, "conversation", true);
-        app_g_player_save(player);
-        close();
-      }
-      const text =
-        emoji_bow() +
-        " Heavenly Father, please bless this next conversation, in Jesus' name, amen! " +
-        emoji_pray();
-      app_g_button_green(overlay, text, lambda22);
+    let button2 = app_g_button_back(overlay, lambda23);
+    function lambda22() {
+      let prayer = object_property_get(player, "prayer");
+      object_property_set(prayer, "conversation", true);
+      app_g_player_save(player);
+      close();
     }
-    app_g_button_uncolored(overlay, text, lambda7);
-  });
-  return v;
+    const text =
+      emoji_bow() +
+      " Heavenly Father, please bless this next conversation, in Jesus' name, amen! " +
+      emoji_pray();
+    app_g_button_green(overlay, text, lambda22);
+  }
+  app_g_button_uncolored(overlay, text, lambda7);
 }
