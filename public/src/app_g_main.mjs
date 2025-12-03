@@ -1,3 +1,4 @@
+import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
@@ -43,6 +44,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_g_main() {
   firebase_name_jg();
   let books = await ebible_version_books("engbsb");
+  global_function_property_set(fn, property_name, value);
   marker("1");
   html_meta_viewport();
   let html = html_document_root();
