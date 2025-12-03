@@ -103,11 +103,12 @@ export async function app_g_conversation(
     let passage = list_last(passages);
     let o2 = g_objection_generate_property();
     let objections = object_property_get(passage, o2);
+    let text2 = object_property_get(passage, "text");
     let separator = newline_windows_escaped();
     let split = string_split(objections, separator);
     let item3 = list_random_item(split);
     function lambda3() {}
-    app_g_button_green(overlay2, text, lambda3);
+    app_g_button_green(overlay, text, lambda3);
     log(item3);
   }
   app_g_button_green(
