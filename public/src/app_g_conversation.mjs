@@ -71,8 +71,8 @@ export async function app_g_conversation(
   app_g_npc_says(npc, overlay, game_prefix, npc_says);
   async function lambda2() {
     html_clear(overlay);
-    const book_chapter = "JAS01";
-    let destination = g_objection_generate_upload_path(book_chapter);
+    const chapter_code = "JAS01";
+    let destination = g_objection_generate_upload_path(chapter_code);
     let o = await firebase_storage_download_json(destination);
     let passages = object_property_get(o, "passages");
     list_shuffle(passages);
