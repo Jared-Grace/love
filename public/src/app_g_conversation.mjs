@@ -1,3 +1,4 @@
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { lambda_invoke_multiple } from "../../../love/public/src/lambda_invoke_multiple.mjs";
@@ -105,6 +106,7 @@ export function app_g_conversation(
       let words = string_to_words(text2);
     }
     let mapped = list_map(passages, lambda2);
+    let filtered = list_filter(list, function lambda4(item2) {});
     let objections = object_property_get(passage, o2);
     let separator = newline_windows_escaped();
     let split = string_split(objections, separator);
