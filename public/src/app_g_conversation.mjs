@@ -121,6 +121,7 @@ export function app_g_conversation(
         app_g_bible_passage_button(item, chapter_code, books, overlay, lambda3);
       },
     ];
+    list_shuffle(choices);
   }
   app_g_container_text(overlay, "What would you like to do?");
   let name_npc2 = object_property_get(npc, "name");
