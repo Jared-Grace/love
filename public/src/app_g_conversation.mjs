@@ -1,3 +1,4 @@
+import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
 import { lambda_invoke_multiple } from "../../../love/public/src/lambda_invoke_multiple.mjs";
 import { global_function_property_async } from "../../../love/public/src/global_function_property_async.mjs";
 import { app_g_bible_passage_button } from "../../../love/public/src/app_g_bible_passage_button.mjs";
@@ -96,6 +97,7 @@ export function app_g_conversation(
     let r = integer_random_0(last_second);
     let item = list_get(passages, r);
     let o2 = g_objection_generate_property();
+    let v2 = whitespace_normalize(str);
     let objections = object_property_get(passage, o2);
     let separator = newline_windows_escaped();
     let split = string_split(objections, separator);
