@@ -98,7 +98,7 @@ export function app_g_conversation(
     let item = list_get(passages, r);
     let o2 = g_objection_generate_property();
     let text = object_property_get(passage, "text");
-    let v2 = whitespace_normalize(str);
+    let v2 = whitespace_normalize(text);
     let objections = object_property_get(passage, o2);
     let separator = newline_windows_escaped();
     let split = string_split(objections, separator);
