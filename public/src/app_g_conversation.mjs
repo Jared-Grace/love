@@ -85,18 +85,18 @@ export async function app_g_conversation(
     function lambda3() {}
     app_g_button_green(overlay, text2, lambda3);
   }
-  let v2 = app_g_container(overlay);
-  app_g_p_text(v2, "What would you like to do?");
+  let choices = app_g_container(overlay);
+  app_g_p_text(choices, "What would you like to do?");
   let name_npc2 = object_property_get(npc, "name");
   app_g_button_green(
-    overlay,
+    choices,
     "Tell " +
       name_npc2 +
       " that Jesus died, was buried and rose to life and share the gospel!",
     lambda2,
   );
   app_g_button_green(
-    overlay,
+    choices,
     emoji_pray() +
       emoji_wave() +
       " Pray and then politely end the conversation",
