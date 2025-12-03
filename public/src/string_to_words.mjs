@@ -11,6 +11,6 @@ export function string_to_words(text) {
   let lower = string_lower_to(v2);
   let words = string_split_space(lower);
   words = list_map(words, string_letters_only);
-  let unique = list_unique(list);
+  let unique = list_unique(words);
   return words;
 }
