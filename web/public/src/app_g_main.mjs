@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { integer_max } from "../../../love/public/src/integer_max.mjs";
 import { integer_random } from "../../../love/public/src/integer_random.mjs";
 import { newline_windows_escaped } from "../../../love/public/src/newline_windows_escaped.mjs";
@@ -58,8 +59,9 @@ export async function app_g_main() {
   let max = integer_max();
   let objection_id = integer_random(0, max);
   let size = list_size(split);
-  let r7 = mod(n, m);
-  let item3 = list_get(list, index2);
+  let r7 = mod(objection_id, size);
+  let item3 = list_get(split, r7);
+  log(message);
   marker("1");
   html_meta_viewport();
   let html = html_document_root();
