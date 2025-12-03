@@ -79,17 +79,15 @@ export function app_g_conversation(
       app_g_conversation,
       "chapter_code",
     );
-    async function lambda5() {}
-    let value2 = await global_function_property_async(
-      fn,
-      property_name,
-      lambda5,
-    );
+    async function lambda5() {
+      let destination = g_objection_generate_upload_path(chapter_code);
+      let o = await firebase_storage_download_json(destination);
+      return o;
+    }
+    let o = await global_function_property_async(fn, property_name, lambda5);
     log({
       value,
     });
-    let destination = g_objection_generate_upload_path(chapter_code);
-    let o = await firebase_storage_download_json(destination);
     let passages = object_property_get(o, "passages");
     list_shuffle(passages);
     let passage = list_last(passages);
