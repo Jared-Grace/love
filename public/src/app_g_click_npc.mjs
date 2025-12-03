@@ -62,7 +62,7 @@ export async function app_g_click_npc(
       if (conversed) {
         return;
       }
-      tutorial = html_div(div_map);
+      let tutorial = html_div(div_map);
       html_click_none(tutorial);
       global_function_property_set(app_g_refresh, "tutorial", tutorial);
       g_img_square_style_position(tutorial, player, "tutorial");
