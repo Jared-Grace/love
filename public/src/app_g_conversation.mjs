@@ -119,6 +119,7 @@ export function app_g_conversation(
       return size;
     }
     list_sort_number_mapper(passages, lambda2);
+    let r6 = integer_random_0(column_count);
     app_g_npc_says(npc, overlay, game_prefix, ob);
     app_g_container_text(overlay, "What would you like to say?");
     let choices = [
