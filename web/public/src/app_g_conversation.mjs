@@ -31,6 +31,7 @@ import { list_random_item } from "../../../love/public/src/list_random_item.mjs"
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { list_concat } from "./list_concat.mjs";
 export function app_g_conversation(
   prayer,
   npcs_matched,
@@ -106,6 +107,7 @@ export function app_g_conversation(
     let split = string_split(objections, separator);
     let ob = list_random_item(split);
     let words2 = string_to_words(ob);
+    let concated = list_concat(a2, b);
     function lambda2(p) {
       let text2 = object_property_get(p, "text");
       let words = string_to_words(text2);
