@@ -80,7 +80,7 @@ export async function app_g_conversation(
         app_g_conversation,
         "chapter_code",
       );
-      log(message);
+      log({value});
       const chapter_code = "JAS01";
       let destination = g_objection_generate_upload_path(chapter_code);
       let o = await firebase_storage_download_json(destination);
