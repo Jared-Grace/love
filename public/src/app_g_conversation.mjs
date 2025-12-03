@@ -105,7 +105,7 @@ export function app_g_conversation(
     let separator = newline_windows_escaped();
     let split = string_split(objections, separator);
     let ob = list_random_item(split);
-    let words2 = string_to_words(text3);
+    let words2 = string_to_words(ob);
     function lambda2(p) {
       let text2 = object_property_get(p, "text");
       let words = string_to_words(text2);
