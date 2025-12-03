@@ -94,6 +94,7 @@ export async function app_g_conversation(
     let { book_code, chapter_name } = ebible_chapter_code_parse(chapter_code);
     let books = global_function_property_get(app_g_main, "books");
     let book_name = ebible_book_code_to_name(books, book_code);
+    ls1;
     function lambda3() {}
     app_g_button_green(
       overlay,
