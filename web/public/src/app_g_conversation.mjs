@@ -1,3 +1,4 @@
+import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
@@ -85,6 +86,7 @@ export async function app_g_conversation(
     let item3 = list_random_item(split);
     app_g_npc_says(npc, overlay, game_prefix, item3);
     app_g_container_text(overlay, "What would you like to say?");
+    let book_code = ebible_chapter_code_to_book(chapter_code2);
     let books = global_function_property_get(app_g_main, "books");
     function lambda3() {}
     app_g_button_green(overlay, text2, lambda3);
