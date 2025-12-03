@@ -10,6 +10,6 @@ export function list_intersect(list, other) {
     }
     each(list, lambda);
   }
-  let list2 = list_adder(lambda2);
-  return list2;
+  let i = list_adder(lambda2);
+  return i;
 }
