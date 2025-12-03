@@ -81,5 +81,4 @@ export async function app_g_click_npc(
     }
     app_g_button_back(overlay, lambda21);
   }
-  return tutorial;
 }
