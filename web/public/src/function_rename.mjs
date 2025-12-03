@@ -9,8 +9,8 @@ import { error } from "./error.mjs";
 import { error_json } from "./error_json.mjs";
 import { fn_name } from "./fn_name.mjs";
 export async function function_rename(f_name_before, f_name_after) {
-  const { f_path: f_path_old, unaliased: unaliased_old } =
-    await function_name_to_path_unalias(f_name_before);
+  const { unaliased } = await function_name_to_path_unalias(f_name_before);
+  f_name_before = unaliased;
   let i = await data_identifiers_fn_names_get();
   async function lambda(value) {
     error_json({
