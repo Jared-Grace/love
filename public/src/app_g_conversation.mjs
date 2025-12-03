@@ -100,7 +100,9 @@ export function app_g_conversation(
     let o2 = g_objection_generate_property();
     let text = object_property_get(passage, "text");
     let words = string_to_words(text);
-    function lambda2(p) {}
+    function lambda2(p) {
+      let text2 = object_property_get(p, "text");
+    }
     let mapped = list_map(passages, lambda2);
     let objections = object_property_get(passage, o2);
     let separator = newline_windows_escaped();
