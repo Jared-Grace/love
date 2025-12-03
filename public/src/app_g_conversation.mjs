@@ -76,6 +76,7 @@ export async function app_g_conversation(
   app_g_npc_says(npc, overlay, game_prefix, npc_says);
   async function lambda2() {
     html_clear(overlay);
+    let books = global_function_property_get(app_g_main, "books");
     const chapter_code = "JAS01";
     let destination = g_objection_generate_upload_path(chapter_code);
     let o = await firebase_storage_download_json(destination);
@@ -102,7 +103,6 @@ export async function app_g_conversation(
     app_g_npc_says(npc, overlay, game_prefix, item3);
     app_g_container_text(overlay, "What would you like to say?");
     let { book_code, chapter_name } = ebible_chapter_code_parse(chapter_code);
-    let books = global_function_property_get(app_g_main, "books");
     function lambda3() {}
     app_g_button_green(overlay, button_text, lambda3);
   }
