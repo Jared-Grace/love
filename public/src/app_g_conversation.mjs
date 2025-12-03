@@ -101,15 +101,26 @@ export function app_g_conversation(
     let item3 = list_random_item(split);
     app_g_npc_says(npc, overlay, game_prefix, item3);
     app_g_container_text(overlay, "What would you like to say?");
-    a = [function lambda2() {}, function lambda4() {}];
-    function lambda() {
-      npc_objection();
-    }
-    app_g_bible_passage_button(passage, chapter_code, books, overlay, lambda);
-    function lambda3() {
-      alert("wrong");
-    }
-    app_g_bible_passage_button(item, chapter_code, books, overlay, lambda3);
+    a = [
+      function lambda2() {
+        function lambda() {
+          npc_objection();
+        }
+        app_g_bible_passage_button(
+          passage,
+          chapter_code,
+          books,
+          overlay,
+          lambda,
+        );
+      },
+      function lambda4() {
+        function lambda3() {
+          alert("wrong");
+        }
+        app_g_bible_passage_button(item, chapter_code, books, overlay, lambda3);
+      },
+    ];
   }
   app_g_container_text(overlay, "What would you like to do?");
   let name_npc2 = object_property_get(npc, "name");
