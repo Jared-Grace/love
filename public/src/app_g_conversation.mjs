@@ -118,7 +118,7 @@ export function app_g_conversation(
       let list2 = list_intersect(words3, unique);
       let e = list_empty_is(list2);
       if (e) {
-        log(message);
+        log(p);
       }
     }
     let filtered = list_filter(passages, lambda2);
