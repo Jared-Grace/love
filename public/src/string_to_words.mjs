@@ -6,6 +6,6 @@ export function string_to_words(text) {
   marker("1");
   let v2 = whitespace_normalize(text);
   let lower = string_lower_to(v2);
-  let split2 = string_split_space(lower);
-  return split2;
+  let split = string_split_space(lower);
+  return split;
 }
