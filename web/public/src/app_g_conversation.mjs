@@ -86,7 +86,7 @@ export async function app_g_conversation(
     app_g_button_green(overlay, text2, lambda3);
   }
   let v2 = app_g_container();
-  html_text_set(v2, 'text');
+  html_text_set(v2, "text");
   let name_npc2 = object_property_get(npc, "name");
   app_g_button_green(
     overlay,
