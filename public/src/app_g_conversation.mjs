@@ -1,5 +1,4 @@
 import { global_function_property_async } from "../../../love/public/src/global_function_property_async.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { app_g_bible_passage_button } from "../../../love/public/src/app_g_bible_passage_button.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_index_last_second } from "../../../love/public/src/list_index_last_second.mjs";
@@ -72,7 +71,7 @@ export function app_g_conversation(
   let name_player = object_property_get(player, "name");
   const npc_says = v + " " + name_player + g_random_dot_bang() + meet_message;
   app_g_npc_says(npc, overlay, game_prefix, npc_says);
-  async function lambda2() {
+  async function npc_objection() {
     html_clear(overlay);
     let books = global_function_property_get(app_g_main, "books");
     let chapter_code = global_function_property_get(
@@ -85,9 +84,6 @@ export function app_g_conversation(
       return o;
     }
     let o = await global_function_property_async(fn, property_name, lambda5);
-    log({
-      value,
-    });
     let passages = object_property_get(o, "passages");
     list_shuffle(passages);
     let passage = list_last(passages);
@@ -115,7 +111,7 @@ export function app_g_conversation(
     "Tell " +
       name_npc2 +
       " that Jesus died, was buried and rose to life and share the gospel!",
-    lambda2,
+    npc_objection,
   );
   app_g_button_green(
     overlay,
