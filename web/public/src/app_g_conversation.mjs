@@ -84,7 +84,7 @@ export async function app_g_conversation(
     let passage = list_last(passages);
     const last_second = list_index_last_second(passages);
     let r = integer_random_0(last_second);
-    let item = list_get(list, index);
+    let item = list_get(passages, r);
     let o2 = g_objection_generate_property();
     let objections = object_property_get(passage, o2);
     let verse_numbers = object_property_get(passage, "verse_numbers");
