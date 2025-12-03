@@ -102,7 +102,7 @@ export function app_g_conversation(
     let text = object_property_get(passage, "text");
     let v2 = whitespace_normalize(text);
     let lower = string_lower_to(v2);
-    let split2 = string_split_space(s);
+    let split2 = string_split_space(lower);
     let objections = object_property_get(passage, o2);
     let separator = newline_windows_escaped();
     let split = string_split(objections, separator);
