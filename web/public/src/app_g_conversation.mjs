@@ -1,4 +1,5 @@
-import { integer_random } from "../../../love/public/src/integer_random.mjs";
+import { integer_random_0 } from "../../../love/public/src/integer_random_0.mjs";
+import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
 import { ebible_parts_to_reference } from "../../../love/public/src/ebible_parts_to_reference.mjs";
 import { ebible_chapter_code_parse } from "../../../love/public/src/ebible_chapter_code_parse.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
@@ -80,7 +81,8 @@ export async function app_g_conversation(
     let passages = object_property_get(o, "passages");
     list_shuffle(passages);
     let passage = list_last(passages);
-    let r = integer_random(min, max);
+    let index_last = list_index_last(list);
+    let r = integer_random_0(min, max);
     let o2 = g_objection_generate_property();
     let objections = object_property_get(passage, o2);
     let verse_numbers = object_property_get(passage, "verse_numbers");
