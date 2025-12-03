@@ -10,7 +10,8 @@ import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 export async function app_g_menu(overlay, player) {
-  let result = await promise_new(async function lambda2(resolve2, reject2) {});
+  async function lambda2(resolve2, reject2) {}
+  let result = await promise_new(lambda2);
   let v = await new Promise(function lambda(resolve, reject) {
     html_clear(overlay);
     function close() {
