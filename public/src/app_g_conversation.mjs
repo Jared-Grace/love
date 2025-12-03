@@ -99,8 +99,8 @@ export async function app_g_conversation(
     if (s1) {
       verse_numbers_s = first;
     } else {
-      let last = list_last(list2);
-      verse_numbers_s = first;
+      let last = list_last(list);
+      verse_numbers_s = first + "-" + last;
     }
     function lambda3() {}
     app_g_button_green(
