@@ -1,8 +1,8 @@
+import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_intersect } from "../../../love/public/src/list_intersect.mjs";
-import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { lambda_invoke_multiple } from "../../../love/public/src/lambda_invoke_multiple.mjs";
 import { global_function_property_async } from "../../../love/public/src/global_function_property_async.mjs";
@@ -120,7 +120,7 @@ export function app_g_conversation(
       log(size);
       log(p);
     }
-    let filtered = list_filter(passages, lambda2);
+    let filtered = list_sort_number_mapper(passages, lambda2);
     app_g_npc_says(npc, overlay, game_prefix, ob);
     app_g_container_text(overlay, "What would you like to say?");
     let choices = [
