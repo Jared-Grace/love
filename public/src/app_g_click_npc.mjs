@@ -44,6 +44,7 @@ export async function app_g_click_npc(
         overlay,
         player,
         game_prefix,
+        overlay_close,
       );
     } else {
       let container = app_g_container(overlay);
