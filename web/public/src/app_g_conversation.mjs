@@ -109,11 +109,13 @@ export function app_g_conversation(
     let ob = list_random_item(split);
     let words2 = string_to_words(ob);
     let concated = list_concat(words, words2);
-    let unique = list_unique(list);
+    let unique = list_unique(concated);
     function lambda2(p) {
       let text2 = object_property_get(p, "text");
       let words3 = string_to_words(text2);
-      let list2 = list_intersect(words3, concated);
+      let list2 = list_intersect(words3, unique);
+      if (false) {
+      }
     }
     let filtered = list_filter(passages, lambda2);
     app_g_npc_says(npc, overlay, game_prefix, ob);
