@@ -102,7 +102,7 @@ export function app_g_conversation(
     app_g_npc_says(npc, overlay, game_prefix, item3);
     app_g_container_text(overlay, "What would you like to say?");
     a = [
-      function lambda2() {
+      function correct() {
         function lambda() {
           npc_objection();
         }
@@ -114,7 +114,7 @@ export function app_g_conversation(
           lambda,
         );
       },
-      function lambda4() {
+      function wrong() {
         function lambda3() {
           alert("wrong");
         }
