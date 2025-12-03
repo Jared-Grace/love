@@ -89,13 +89,7 @@ export async function app_g_click(
     let container = object_property_get(div_map, "container");
     await html_scroll_center_container(player_img_c, container);
     if (npc_clicked) {
-      await app_g_click_npc(
-        div_map,
-        npcs_matched,
-        tutorial,
-        player,
-        game_prefix,
-      );
+      await app_g_click_npc(div_map, npcs_matched, player, game_prefix);
     }
   }
   app_g_player_save(player);
