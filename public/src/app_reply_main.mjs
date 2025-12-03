@@ -1,3 +1,4 @@
+import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { prayer_blessing_expand } from "../../../love/public/src/prayer_blessing_expand.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
@@ -200,8 +201,7 @@ export async function app_reply_main() {
       let chapter_code2 = object_property_get(verse, "chapter_code");
       let book_code = ebible_chapter_code_to_book(chapter_code2);
       let chapter_name = ebible_chapter_code_to_name(chapter_code2);
-      let book = list_find_property(books, "book_code", book_code);
-      let book_name = object_property_get(book, "text");
+      let book_name = ebible_book_code_to_name(books, book_code);
       let verse_number2 = object_property_get(verse, "verse_number");
       let reference2 = book_name + " " + chapter_name + ":" + verse_number2;
     }
