@@ -1,3 +1,4 @@
+import { promise_new } from "../../../love/public/src/promise_new.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { g_img_square_size_css } from "../../../love/public/src/g_img_square_size_css.mjs";
 import { app_g_conversation } from "../../../love/public/src/app_g_conversation.mjs";
@@ -23,6 +24,7 @@ export async function app_g_click_npc(
   game_prefix,
 ) {
   marker("1");
+  let result = await promise_new(async function lambda(resolve, reject) {});
   let overlay = app_g_overlay(div_map);
   function overlay_close() {
     html_remove(overlay);
