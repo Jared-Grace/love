@@ -1,8 +1,7 @@
+import { app_g_bible_passage_button } from "../../../love/public/src/app_g_bible_passage_button.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_index_last_second } from "../../../love/public/src/list_index_last_second.mjs";
 import { integer_random_0 } from "../../../love/public/src/integer_random_0.mjs";
-import { ebible_parts_to_reference } from "../../../love/public/src/ebible_parts_to_reference.mjs";
-import { ebible_chapter_code_parse } from "../../../love/public/src/ebible_chapter_code_parse.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
@@ -93,18 +92,7 @@ export async function app_g_conversation(
     let item3 = list_random_item(split);
     app_g_npc_says(npc, overlay, game_prefix, item3);
     app_g_container_text(overlay, "What would you like to say?");
-    let verse_numbers = object_property_get(passage, "verse_numbers");
-    let text2 = object_property_get(passage, "text");
-    let { book_code, chapter_name } = ebible_chapter_code_parse(chapter_code);
-    const reference = ebible_parts_to_reference(
-      books,
-      book_code,
-      verse_numbers,
-      chapter_name,
-    );
-    const button_text = text2 + " " + reference;
-    function lambda3() {}
-    app_g_button_green(overlay, button_text, lambda3);
+    app_g_bible_passage_button(passage, chapter_code, books, overlay);
   }
   app_g_container_text(overlay, "What would you like to do?");
   let name_npc2 = object_property_get(npc, "name");
