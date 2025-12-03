@@ -85,8 +85,8 @@ export async function app_g_conversation(
     function lambda3() {}
     app_g_button_green(overlay, text2, lambda3);
   }
-  let choices = app_g_container(overlay);
   const text = "What would you like to do?";
+  let choices = app_g_container(overlay);
   app_g_p_text(choices, text);
   let name_npc2 = object_property_get(npc, "name");
   app_g_button_green(
