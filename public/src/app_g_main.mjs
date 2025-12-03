@@ -53,8 +53,7 @@ export async function app_g_main() {
   let o = await firebase_storage_download_json(destination);
   let passages = object_property_get(o, "passages");
   list_shuffle(passages);
-  let removed = list_remove_last(coordinates2);
-  let r6 = list_random_item(passages);
+  let r6 = list_remove_last(passages);
   let o2 = g_objection_generate_property();
   let objections = object_property_get(r6, o2);
   let separator = newline_windows_escaped();
