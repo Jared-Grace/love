@@ -85,7 +85,7 @@ export function app_g_conversation(
     }
     let o = await global_function_property_async(
       app_g_conversation,
-      property_name,
+      "objections",
       lambda5,
     );
     let passages = object_property_get(o, "passages");
