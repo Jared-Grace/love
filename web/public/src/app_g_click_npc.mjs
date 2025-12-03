@@ -25,7 +25,7 @@ export async function app_g_click_npc(
 ) {
   marker("1");
   let overlay = app_g_overlay(div_map);
-  html_style_assign(b, {
+  html_style_assign(overlay, {
     display: "flex",
     flexDirection: "column",
     gap: "0px",
