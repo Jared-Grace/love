@@ -1,3 +1,4 @@
+import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -41,6 +42,7 @@ import { html_document_body } from "../../../love/public/src/html_document_body.
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_g_main() {
   firebase_name_jg();
+  let books = await ebible_version_books(bible_folder);
   marker("1");
   html_meta_viewport();
   let html = html_document_root();
