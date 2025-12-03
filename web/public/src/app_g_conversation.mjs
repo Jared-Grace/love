@@ -41,6 +41,20 @@ export async function app_g_conversation(
   object_property_set(player, "conversed", true);
   object_property_set(prayer, "conversation", false);
   let npc = list_single(npcs_matched);
+  let name_npc = object_property_get(npc, "name");
+  let gender = object_property_get(npc, "gender");
+  let container = app_g_container(overlay);
+  let map = {
+    [g_gender_female()]: "#ff80ea",
+    [g_gender_male()]: "#acc1ff",
+  };
+  let color_background = object_property_get(map, gender);
+  html_style_assign(container, {
+    "background-color": color_background + "bc",
+  });
+  const c_src = g_character_img_url(npc, game_prefix);
+  let component = html_img(container, c_src);
+  let name_player = object_property_get(player, "name");
   const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
   let v = string_first_upper_to(greet);
   let s2 = list_random_item(["nice", "great", "pleasure", "good"]);
@@ -70,20 +84,6 @@ export async function app_g_conversation(
       ]) + "?");
   }
   meet_message += g_random_dot_bang();
-  let name_npc = object_property_get(npc, "name");
-  let gender = object_property_get(npc, "gender");
-  let container = app_g_container(overlay);
-  let map = {
-    [g_gender_female()]: "#ff80ea",
-    [g_gender_male()]: "#acc1ff",
-  };
-  let color_background = object_property_get(map, gender);
-  html_style_assign(container, {
-    "background-color": color_background + "bc",
-  });
-  const c_src = g_character_img_url(npc, game_prefix);
-  let component = html_img(container, c_src);
-  let name_player = object_property_get(player, "name");
   app_g_p_text(
     container,
     name_npc +
