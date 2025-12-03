@@ -35,82 +35,83 @@ export async function app_g_conversation(
   game_prefix,
   overlay_close,
 ) {
-  async function lambda4(resolve, reject) {}
+  async function lambda4(resolve, reject) {
+    marker("1");
+    object_property_set(player, "conversed", true);
+    object_property_set(prayer, "conversation", false);
+    let npc = list_single(npcs_matched);
+    const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
+    let v = string_first_upper_to(greet);
+    let s2 = list_random_item(["nice", "great", "pleasure", "good"]);
+    const a = list_random_item(["it's", "it is"]) + " ";
+    let meet_message =
+      " " + string_first_upper_to(string_random_or_empty(a) + s2 + " to ");
+    let meet = object_property_get(npc, "meet");
+    if (not(meet)) {
+      object_property_set(npc, "meet", true);
+      meet_message += "meet you";
+    } else {
+      ((meet_message +=
+        list_random_item(["see", "talk to", "hear from you"]) +
+        " you" +
+        string_random_or_empty(", again") +
+        g_random_dot_bang() +
+        " " +
+        "What "),
+        list_random_item([
+          "do you " +
+            list_random_item(["want", "wish"]) +
+            " to " +
+            list_random_item(["talk about", "discuss"]) +
+            string_random_or_empty(" today") +
+            string_random_or_empty(" with me"),
+          "is on your " + list_random_item(["mind", "heart"]),
+        ]) + "?");
+    }
+    meet_message += g_random_dot_bang();
+    let name_player = object_property_get(player, "name");
+    const npc_says = v + " " + name_player + g_random_dot_bang() + meet_message;
+    app_g_npc_says(npc, overlay, game_prefix, npc_says);
+    async function lambda2() {
+      html_clear(overlay);
+      let books = global_function_property_get(app_g_main, "books");
+      const chapter_code = "JAS01";
+      let destination = g_objection_generate_upload_path(chapter_code);
+      let o = await firebase_storage_download_json(destination);
+      let passages = object_property_get(o, "passages");
+      list_shuffle(passages);
+      let passage = list_last(passages);
+      const last_second = list_index_last_second(passages);
+      let r = integer_random_0(last_second);
+      let item = list_get(passages, r);
+      let o2 = g_objection_generate_property();
+      let objections = object_property_get(passage, o2);
+      let separator = newline_windows_escaped();
+      let split = string_split(objections, separator);
+      let item3 = list_random_item(split);
+      app_g_npc_says(npc, overlay, game_prefix, item3);
+      app_g_container_text(overlay, "What would you like to say?");
+      function lambda() {}
+      app_g_bible_passage_button(passage, chapter_code, books, overlay, lambda);
+      function lambda3() {}
+      app_g_bible_passage_button(item, chapter_code, books, overlay, lambda3);
+    }
+    app_g_container_text(overlay, "What would you like to do?");
+    let name_npc2 = object_property_get(npc, "name");
+    app_g_button_green(
+      overlay,
+      "Tell " +
+        name_npc2 +
+        " that Jesus died, was buried and rose to life and share the gospel!",
+      lambda2,
+    );
+    app_g_button_green(
+      overlay,
+      emoji_pray() +
+        emoji_wave() +
+        " Pray and then politely end the conversation",
+      overlay_close,
+    );
+  }
   let result = await promise_new(lambda4);
-  marker("1");
-  object_property_set(player, "conversed", true);
-  object_property_set(prayer, "conversation", false);
-  let npc = list_single(npcs_matched);
-  const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
-  let v = string_first_upper_to(greet);
-  let s2 = list_random_item(["nice", "great", "pleasure", "good"]);
-  const a = list_random_item(["it's", "it is"]) + " ";
-  let meet_message =
-    " " + string_first_upper_to(string_random_or_empty(a) + s2 + " to ");
-  let meet = object_property_get(npc, "meet");
-  if (not(meet)) {
-    object_property_set(npc, "meet", true);
-    meet_message += "meet you";
-  } else {
-    ((meet_message +=
-      list_random_item(["see", "talk to", "hear from you"]) +
-      " you" +
-      string_random_or_empty(", again") +
-      g_random_dot_bang() +
-      " " +
-      "What "),
-      list_random_item([
-        "do you " +
-          list_random_item(["want", "wish"]) +
-          " to " +
-          list_random_item(["talk about", "discuss"]) +
-          string_random_or_empty(" today") +
-          string_random_or_empty(" with me"),
-        "is on your " + list_random_item(["mind", "heart"]),
-      ]) + "?");
-  }
-  meet_message += g_random_dot_bang();
-  let name_player = object_property_get(player, "name");
-  const npc_says = v + " " + name_player + g_random_dot_bang() + meet_message;
-  app_g_npc_says(npc, overlay, game_prefix, npc_says);
-  async function lambda2() {
-    html_clear(overlay);
-    let books = global_function_property_get(app_g_main, "books");
-    const chapter_code = "JAS01";
-    let destination = g_objection_generate_upload_path(chapter_code);
-    let o = await firebase_storage_download_json(destination);
-    let passages = object_property_get(o, "passages");
-    list_shuffle(passages);
-    let passage = list_last(passages);
-    const last_second = list_index_last_second(passages);
-    let r = integer_random_0(last_second);
-    let item = list_get(passages, r);
-    let o2 = g_objection_generate_property();
-    let objections = object_property_get(passage, o2);
-    let separator = newline_windows_escaped();
-    let split = string_split(objections, separator);
-    let item3 = list_random_item(split);
-    app_g_npc_says(npc, overlay, game_prefix, item3);
-    app_g_container_text(overlay, "What would you like to say?");
-    function lambda() {}
-    app_g_bible_passage_button(passage, chapter_code, books, overlay, lambda);
-    function lambda3() {}
-    app_g_bible_passage_button(item, chapter_code, books, overlay, lambda3);
-  }
-  app_g_container_text(overlay, "What would you like to do?");
-  let name_npc2 = object_property_get(npc, "name");
-  app_g_button_green(
-    overlay,
-    "Tell " +
-      name_npc2 +
-      " that Jesus died, was buried and rose to life and share the gospel!",
-    lambda2,
-  );
-  app_g_button_green(
-    overlay,
-    emoji_pray() +
-      emoji_wave() +
-      " Pray and then politely end the conversation",
-    overlay_close,
-  );
 }
