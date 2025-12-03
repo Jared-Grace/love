@@ -53,9 +53,8 @@ export async function app_g_main() {
   let r6 = list_random_item(passages);
   let o2 = g_objection_generate_property();
   let objections = object_property_get(r6, o2);
-  let separator = newline_windows();
-  let separator2 = newline_windows_escaped();
-  let split = string_split(objections, separator2);
+  let separator = newline_windows_escaped();
+  let split = string_split(objections, separator);
   log({
     split,
   });
