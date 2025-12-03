@@ -9,8 +9,8 @@ export function string_to_words(text) {
   marker("1");
   let v2 = whitespace_normalize(text);
   let lower = string_lower_to(v2);
-  let words = string_split_space(lower);
-  words = list_map(words, string_letters_only);
-  let unique = list_unique(words);
-  return words;
+  let split = string_split_space(lower);
+  let split2 = list_map(split, string_letters_only);
+  let unique = list_unique(split2);
+  return split;
 }
