@@ -22,7 +22,7 @@ export async function function_rename(f_name_before, f_name_after) {
         function_rename.name +
         " needs enhancing to rename " +
         fn_name.name +
-        ".",
+        " references.",
       f_name_before,
       value,
     });
