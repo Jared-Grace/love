@@ -71,7 +71,6 @@ export async function app_g_conversation(
   }
   meet_message += g_random_dot_bang();
   let name_player = object_property_get(player, "name");
-  let name_npc = object_property_get(npc, "name");
   const npc_says = v + " " + name_player + g_random_dot_bang() + meet_message;
   let gender = object_property_get(npc, "gender");
   let container = app_g_container(overlay);
@@ -85,6 +84,7 @@ export async function app_g_conversation(
   });
   const c_src = g_character_img_url(npc, game_prefix);
   let component = html_img(container, c_src);
+  let name_npc = object_property_get(npc, "name");
   app_g_p_text(container, name_npc + " says: " + npc_says);
   async function lambda2() {
     html_clear(overlay);
@@ -103,10 +103,11 @@ export async function app_g_conversation(
     app_g_button_green(overlay, text2, lambda3);
     log(item3);
   }
+  let name_npc2 = object_property_get(npc, "name");
   app_g_button_green(
     overlay,
     "Tell " +
-      name_npc +
+      name_npc2 +
       " that Jesus died, was buried and rose to life and share the gospel!",
     lambda2,
   );
