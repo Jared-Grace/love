@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { promise_new } from "../../../love/public/src/promise_new.mjs";
 import { app_g_bible_passage_button } from "../../../love/public/src/app_g_bible_passage_button.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
@@ -78,7 +79,8 @@ export async function app_g_conversation(
       let value = global_function_property_get(
         app_g_conversation,
         "chapter_code",
-      );l
+      );
+      log(message);
       const chapter_code = "JAS01";
       let destination = g_objection_generate_upload_path(chapter_code);
       let o = await firebase_storage_download_json(destination);
