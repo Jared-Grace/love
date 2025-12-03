@@ -10,8 +10,7 @@ export async function ebible_index(bible_folder) {
   let index = [];
   await ebible_chapters_each_verses(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
-    let book_code = ebible_chapter_code_to_book(chapter_code);
-    let chapter_name = ebible_chapter_code_to_name(chapter_code);
+    let { book_code, chapter_name } = ebible_chapter_code_parse(chapter_code);
     let book = object_property_initialize(books, book_code, {
       book_code,
       chapters: [],
@@ -26,4 +25,13 @@ export async function ebible_index(bible_folder) {
     list_add(chapters, chapter);
   }
   return index;
+  function ebible_chapter_code_parse(chapter_code) {
+    let book_code = ebible_chapter_code_to_book(chapter_code);
+    let chapter_name = ebible_chapter_code_to_name(chapter_code);
+    let v = {
+      book_code,
+      chapter_name,
+    };
+    return v;
+  }
 }
