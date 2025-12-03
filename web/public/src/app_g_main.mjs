@@ -7,7 +7,6 @@ import { firebase_storage_download_json } from "../../../love/public/src/firebas
 import { g_objection_generate_upload_path } from "../../../love/public/src/g_objection_generate_upload_path.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { list_remove_end } from "../../../love/public/src/list_remove_end.mjs";
 import { html_scroll_none } from "../../../love/public/src/html_scroll_none.mjs";
@@ -58,9 +57,7 @@ export async function app_g_main() {
   let split = string_split(objections, separator);
   let max = integer_max();
   let objection_id = integer_random(0, max);
-  log({
-    split,
-  });
+  let item3 = list_get(list, index2);
   marker("1");
   html_meta_viewport();
   let html = html_document_root();
