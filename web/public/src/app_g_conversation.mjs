@@ -106,7 +106,8 @@ export async function app_g_conversation(
     let separator = newline_windows_escaped();
     let split = string_split(objections, separator);
     let item3 = list_random_item(split);
-    app_g_button_green(overlay2, text, function lambda3() {});
+    function lambda3() {}
+    app_g_button_green(overlay2, text, lambda3);
     log(item3);
   }
   app_g_button_green(
