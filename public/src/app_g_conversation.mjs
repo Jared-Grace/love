@@ -83,7 +83,11 @@ export function app_g_conversation(
       let o = await firebase_storage_download_json(destination);
       return o;
     }
-    let o = await global_function_property_async(fn, property_name, lambda5);
+    let o = await global_function_property_async(
+      app_g_conversation,
+      property_name,
+      lambda5,
+    );
     let passages = object_property_get(o, "passages");
     list_shuffle(passages);
     let passage = list_last(passages);
