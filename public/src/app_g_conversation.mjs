@@ -106,8 +106,8 @@ export function app_g_conversation(
     let objections = object_property_get(passage, o2);
     let separator = newline_windows_escaped();
     let split = string_split(objections, separator);
-    let item3 = list_random_item(split);
-    app_g_npc_says(npc, overlay, game_prefix, item3);
+    let ob = list_random_item(split);
+    app_g_npc_says(npc, overlay, game_prefix, ob);
     app_g_container_text(overlay, "What would you like to say?");
     let choices = [
       function correct() {
