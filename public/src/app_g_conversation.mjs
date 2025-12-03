@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_parse } from "../../../love/public/src/ebible_chapter_code_parse.mjs";
@@ -95,6 +96,7 @@ export async function app_g_conversation(
     let verse_numbers_s = null;
     let s1 = list_size_1(verse_numbers);
     if (s1) {
+      let first = list_first(list);
     }
     function lambda3() {}
     app_g_button_green(
