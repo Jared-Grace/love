@@ -97,6 +97,8 @@ export async function app_g_conversation(
     let s1 = list_size_1(verse_numbers);
     if (s1) {
       let first = list_first(list);
+      verse_numbers_s = first;
+    } else {
     }
     function lambda3() {}
     app_g_button_green(
