@@ -80,7 +80,9 @@ export async function app_g_conversation(
     let passages = object_property_get(o, "passages");
     list_shuffle(passages);
     let passage = list_last(passages);
-    log({passage});
+    log({
+      passage,
+    });
     let o2 = g_objection_generate_property();
     let objections = object_property_get(passage, o2);
     let text2 = object_property_get(passage, "text");
