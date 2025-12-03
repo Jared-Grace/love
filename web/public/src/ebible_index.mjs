@@ -1,9 +1,8 @@
-import { ebible_chapter_code_to_name } from "../../../love/public/src/ebible_chapter_code_to_name.mjs";
+import { ebible_chapter_code_parse } from "../../../love/public/src/ebible_chapter_code_parse.mjs";
 import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_not_includes.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { object_property_initialize } from "../../../love/public/src/object_property_initialize.mjs";
-import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
 import { ebible_chapters_each_verses } from "../../../love/public/src/ebible_chapters_each_verses.mjs";
 export async function ebible_index(bible_folder) {
   let books = {};
@@ -25,13 +24,4 @@ export async function ebible_index(bible_folder) {
     list_add(chapters, chapter);
   }
   return index;
-  function ebible_chapter_code_parse(chapter_code) {
-    let book_code = ebible_chapter_code_to_book(chapter_code);
-    let chapter_name = ebible_chapter_code_to_name(chapter_code);
-    let v = {
-      book_code,
-      chapter_name,
-    };
-    return v;
-  }
 }
