@@ -19,7 +19,6 @@ import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 export async function app_g_click_npc(
   div_map,
   npcs_matched,
-  tutorial,
   player,
   game_prefix,
 ) {
