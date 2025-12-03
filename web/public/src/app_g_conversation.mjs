@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_intersect } from "../../../love/public/src/list_intersect.mjs";
@@ -115,8 +116,9 @@ export function app_g_conversation(
       let text2 = object_property_get(p, "text");
       let words3 = string_to_words(text2);
       let list2 = list_intersect(words3, unique);
-      let e = list_empty_is(list);
-      if (false) {
+      let e = list_empty_is(list2);
+      if (e) {
+        log(message);
       }
     }
     let filtered = list_filter(passages, lambda2);
