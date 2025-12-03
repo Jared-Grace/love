@@ -84,12 +84,8 @@ export async function app_g_conversation(
   meet_message += g_random_dot_bang();
   let name_player = object_property_get(player, "name");
   let name_npc = object_property_get(npc, "name");
-  app_g_p_text(
-    container,
-    name_npc +
-      " says: " +
-      (v + " " + name_player + g_random_dot_bang() + meet_message),
-  );
+  const npc_says = v + " " + name_player + g_random_dot_bang() + meet_message;
+  app_g_p_text(container, name_npc + " says: " + npc_says);
   async function lambda2() {
     html_clear(overlay);
     let destination = g_objection_generate_upload_path("JAS01");
