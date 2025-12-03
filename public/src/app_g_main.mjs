@@ -1,3 +1,4 @@
+import { integer_max } from "../../../love/public/src/integer_max.mjs";
 import { integer_random } from "../../../love/public/src/integer_random.mjs";
 import { newline_windows_escaped } from "../../../love/public/src/newline_windows_escaped.mjs";
 import { string_split } from "../../../love/public/src/string_split.mjs";
@@ -55,6 +56,7 @@ export async function app_g_main() {
   let objections = object_property_get(r6, o2);
   let separator = newline_windows_escaped();
   let split = string_split(objections, separator);
+  let max = integer_max();
   let r7 = integer_random(min, max);
   log({
     split,
