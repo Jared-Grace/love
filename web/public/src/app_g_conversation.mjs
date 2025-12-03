@@ -97,7 +97,7 @@ export async function app_g_conversation(
       chapter_name,
     );
     function lambda3() {}
-    app_g_button_green(overlay, reference + " " + text2, lambda3);
+    app_g_button_green(overlay, reference + " - " + text2, lambda3);
   }
   app_g_container_text(overlay, "What would you like to do?");
   let name_npc2 = object_property_get(npc, "name");
