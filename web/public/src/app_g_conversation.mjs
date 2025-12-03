@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_parse } from "../../../love/public/src/ebible_chapter_code_parse.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
@@ -79,6 +80,7 @@ export async function app_g_conversation(
     let passages = object_property_get(o, "passages");
     list_shuffle(passages);
     let passage = list_last(passages);
+    log(message);
     let o2 = g_objection_generate_property();
     let objections = object_property_get(passage, o2);
     let text2 = object_property_get(passage, "text");
