@@ -93,6 +93,7 @@ export async function app_g_conversation(
     app_g_npc_says(npc, overlay, game_prefix, item3);
     app_g_container_text(overlay, "What would you like to say?");
     app_g_bible_passage_button(passage, chapter_code, books, overlay);
+    app_g_bible_passage_button(item, chapter_code, books, overlay);
   }
   app_g_container_text(overlay, "What would you like to do?");
   let name_npc2 = object_property_get(npc, "name");
