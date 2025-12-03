@@ -93,8 +93,6 @@ export function app_g_conversation(
     );
     let passages = object_property_get(o, "passages");
     list_shuffle(passages);
-    function lambda2(item2) {}
-    let mapped = list_map(list, lambda2);
     let passage = list_last(passages);
     const last_second = list_index_last_second(passages);
     let r = integer_random_0(last_second);
@@ -102,6 +100,8 @@ export function app_g_conversation(
     let o2 = g_objection_generate_property();
     let text = object_property_get(passage, "text");
     let words = string_to_words(text);
+    function lambda2(p) {}
+    let mapped = list_map(passages, lambda2);
     let objections = object_property_get(passage, o2);
     let separator = newline_windows_escaped();
     let split = string_split(objections, separator);
