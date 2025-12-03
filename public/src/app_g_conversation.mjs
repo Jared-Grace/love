@@ -109,7 +109,7 @@ export function app_g_conversation(
     function lambda2(p) {
       let text2 = object_property_get(p, "text");
       let words = string_to_words(text2);
-      let list2 = list_intersect(list, words);
+      let list2 = list_intersect(words, words2);
     }
     let filtered = list_filter(passages, lambda2);
     app_g_npc_says(npc, overlay, game_prefix, ob);
