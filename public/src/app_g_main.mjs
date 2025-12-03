@@ -61,7 +61,7 @@ export async function app_g_main() {
   let size = list_size(split);
   let r7 = mod(objection_id, size);
   let item3 = list_get(split, r7);
-  log(message);
+  log(item3);
   marker("1");
   html_meta_viewport();
   let html = html_document_root();
