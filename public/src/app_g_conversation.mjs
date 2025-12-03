@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { lambda_invoke_multiple } from "../../../love/public/src/lambda_invoke_multiple.mjs";
 import { global_function_property_async } from "../../../love/public/src/global_function_property_async.mjs";
@@ -92,6 +93,7 @@ export function app_g_conversation(
     );
     let passages = object_property_get(o, "passages");
     list_shuffle(passages);
+    let mapped = list_map(list, function lambda2(item2) {});
     let passage = list_last(passages);
     const last_second = list_index_last_second(passages);
     let r = integer_random_0(last_second);
