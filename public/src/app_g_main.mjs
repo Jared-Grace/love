@@ -187,5 +187,5 @@ export async function app_g_main() {
     player,
     npcs,
   });
-  await app_g_refresh(div_map, game_prefix, tiles_path, rows, body, map);
+  await app_g_refresh(div_map, game_prefix, tiles_path, rows, map);
 }

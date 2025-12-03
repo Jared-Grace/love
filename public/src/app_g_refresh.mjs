@@ -23,7 +23,6 @@ export async function app_g_refresh(
   game_prefix,
   tiles_path,
   rows,
-  body,
   map,
 ) {
   let { npcs } = map;
