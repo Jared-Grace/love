@@ -1,3 +1,4 @@
+import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_intersect } from "../../../love/public/src/list_intersect.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
@@ -108,6 +109,7 @@ export function app_g_conversation(
     let ob = list_random_item(split);
     let words2 = string_to_words(ob);
     let concated = list_concat(words, words2);
+    let unique = list_unique(list);
     function lambda2(p) {
       let text2 = object_property_get(p, "text");
       let words3 = string_to_words(text2);
