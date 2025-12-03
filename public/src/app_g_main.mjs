@@ -1,8 +1,6 @@
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { integer_max } from "../../../love/public/src/integer_max.mjs";
-import { integer_random } from "../../../love/public/src/integer_random.mjs";
 import { newline_windows_escaped } from "../../../love/public/src/newline_windows_escaped.mjs";
 import { string_split } from "../../../love/public/src/string_split.mjs";
 import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
@@ -59,12 +57,7 @@ export async function app_g_main() {
   let objections = object_property_get(r6, o2);
   let separator = newline_windows_escaped();
   let split = string_split(objections, separator);
-  let r8 = list_random_item(list);
-  let max = integer_max();
-  let objection_id = integer_random(0, max);
-  let size = list_size(split);
-  let r7 = mod(objection_id, size);
-  let item3 = list_get(split, r7);
+  let item3 = list_random_item(split);
   log(item3);
   marker("1");
   html_meta_viewport();
