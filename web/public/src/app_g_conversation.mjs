@@ -90,6 +90,7 @@ export async function app_g_conversation(
     let objections = object_property_get(passage, o2);
     let verse_numbers = object_property_get(passage, "verse_numbers");
     let text2 = object_property_get(passage, "text");
+    let { book_code, chapter_name } = ebible_chapter_code_parse(chapter_code);
     const reference = ebible_parts_to_reference(
       books,
       book_code,
@@ -102,7 +103,6 @@ export async function app_g_conversation(
     let item3 = list_random_item(split);
     app_g_npc_says(npc, overlay, game_prefix, item3);
     app_g_container_text(overlay, "What would you like to say?");
-    let { book_code, chapter_name } = ebible_chapter_code_parse(chapter_code);
     function lambda3() {}
     app_g_button_green(overlay, button_text, lambda3);
   }
