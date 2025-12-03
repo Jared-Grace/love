@@ -1,3 +1,4 @@
+import { promise_new } from "../../../love/public/src/promise_new.mjs";
 import { app_g_bible_passage_button } from "../../../love/public/src/app_g_bible_passage_button.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_index_last_second } from "../../../love/public/src/list_index_last_second.mjs";
@@ -34,6 +35,7 @@ export async function app_g_conversation(
   game_prefix,
   overlay_close,
 ) {
+  let result = await promise_new(async function lambda4(resolve, reject) {});
   marker("1");
   object_property_set(player, "conversed", true);
   object_property_set(prayer, "conversation", false);
