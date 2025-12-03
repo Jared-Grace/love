@@ -1,3 +1,4 @@
+import { app_g_npc_says } from "../../../love/public/src/app_g_npc_says.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { string_split } from "../../../love/public/src/string_split.mjs";
 import { newline_windows_escaped } from "../../../love/public/src/newline_windows_escaped.mjs";
@@ -7,22 +8,15 @@ import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { g_objection_generate_upload_path } from "../../../love/public/src/g_objection_generate_upload_path.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { html_img } from "../../../love/public/src/html_img.mjs";
-import { g_character_img_url } from "../../../love/public/src/g_character_img_url.mjs";
-import { g_gender_female } from "../../../love/public/src/g_gender_female.mjs";
-import { g_gender_male } from "../../../love/public/src/g_gender_male.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { emoji_wave } from "../../../love/public/src/emoji_wave.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { app_g_button_green } from "../../../love/public/src/app_g_button_green.mjs";
-import { app_g_p_text } from "../../../love/public/src/app_g_p_text.mjs";
 import { g_random_dot_bang } from "../../../love/public/src/g_random_dot_bang.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { string_random_or_empty } from "../../../love/public/src/string_random_or_empty.mjs";
 import { string_first_upper_to } from "../../../love/public/src/string_first_upper_to.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
-import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
-import { app_g_container } from "../../../love/public/src/app_g_container.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -72,20 +66,7 @@ export async function app_g_conversation(
   meet_message += g_random_dot_bang();
   let name_player = object_property_get(player, "name");
   const npc_says = v + " " + name_player + g_random_dot_bang() + meet_message;
-  let gender = object_property_get(npc, "gender");
-  let container = app_g_container(overlay);
-  let map = {
-    [g_gender_female()]: "#ff80ea",
-    [g_gender_male()]: "#acc1ff",
-  };
-  let color_background = object_property_get(map, gender);
-  html_style_assign(container, {
-    "background-color": color_background + "bc",
-  });
-  const c_src = g_character_img_url(npc, game_prefix);
-  let component = html_img(container, c_src);
-  let name_npc = object_property_get(npc, "name");
-  app_g_p_text(container, name_npc + " says: " + npc_says);
+  app_g_npc_says(npc, overlay, game_prefix, npc_says);
   async function lambda2() {
     html_clear(overlay);
     let destination = g_objection_generate_upload_path("JAS01");
