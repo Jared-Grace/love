@@ -1,4 +1,11 @@
+import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
+import { log } from "../../../love/public/src/log.mjs";
+import { newline_windows_escaped } from "../../../love/public/src/newline_windows_escaped.mjs";
+import { string_split } from "../../../love/public/src/string_split.mjs";
+import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
+import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
+import { g_objection_generate_upload_path } from "../../../love/public/src/g_objection_generate_upload_path.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
@@ -41,6 +48,17 @@ import { html_document_body } from "../../../love/public/src/html_document_body.
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_g_main() {
   firebase_name_jg();
+  let destination = g_objection_generate_upload_path("JAS01");
+  let o = await firebase_storage_download_json(destination);
+  let passages = object_property_get(o, "passages");
+  list_shuffle(passages);
+  let passage = list_last(passages);
+  let o2 = g_objection_generate_property();
+  let objections = object_property_get(passage, o2);
+  let separator = newline_windows_escaped();
+  let split = string_split(objections, separator);
+  let item3 = list_random_item(split);
+  log(passage);
   marker("1");
   html_meta_viewport();
   let html = html_document_root();
