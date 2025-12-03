@@ -58,6 +58,7 @@ export async function app_g_main() {
   let max = integer_max();
   let objection_id = integer_random(0, max);
   let size = list_size(split);
+  let r7 = mod(n, m);
   let item3 = list_get(list, index2);
   marker("1");
   html_meta_viewport();
