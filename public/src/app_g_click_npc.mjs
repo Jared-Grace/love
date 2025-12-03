@@ -25,7 +25,11 @@ export async function app_g_click_npc(
 ) {
   marker("1");
   let overlay = app_g_overlay(div_map);
-  html_style_assign(b, s);
+  html_style_assign(b, {
+    display: "flex",
+    flexDirection: "column",
+    gap: "0px",
+  });
   let prayer = object_property_get(player, "prayer");
   let conversation = object_property_get(prayer, "conversation");
   if (conversation) {
