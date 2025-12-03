@@ -46,7 +46,7 @@ export async function app_g_click(
   let distance2 = g_distance(player, clicked_coordinates);
   if (equal(distance2, 0)) {
     let overlay = app_g_overlay(div_map);
-    await app_g_menu(div_map, player);
+    app_g_menu(overlay, player);
   } else {
     function lambda17(npc) {
       let e = object_includes(npc, clicked_coordinates);
@@ -89,7 +89,7 @@ export async function app_g_click(
     let container = object_property_get(div_map, "container");
     await html_scroll_center_container(player_img_c, container);
     if (npc_clicked) {
-      await app_g_click_npc(div_map, npcs_matched, player, game_prefix);
+      app_g_click_npc(div_map, npcs_matched, player, game_prefix);
     }
   }
   app_g_player_save(player);
