@@ -97,7 +97,7 @@ export function app_g_conversation(
     let item3 = list_random_item(split);
     app_g_npc_says(npc, overlay, game_prefix, item3);
     app_g_container_text(overlay, "What would you like to say?");
-    function lambda() {}
+    function lambda() {npc_objection()}
     app_g_bible_passage_button(passage, chapter_code, books, overlay, lambda);
     function lambda3() {
       alert("wrong");
