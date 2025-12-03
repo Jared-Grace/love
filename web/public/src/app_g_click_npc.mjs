@@ -25,6 +25,9 @@ export async function app_g_click_npc(
 ) {
   marker("1");
   let overlay = app_g_overlay(div_map);
+  function overlay_close() {
+    html_remove(overlay);
+  }
   html_style_assign(overlay, {
     display: "flex",
     flexDirection: "column",
@@ -79,7 +82,4 @@ export async function app_g_click_npc(
     app_g_button_back(overlay, lambda21);
   }
   return tutorial;
-  function overlay_close() {
-    html_remove(overlay);
-  }
 }
