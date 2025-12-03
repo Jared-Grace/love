@@ -33,6 +33,7 @@ export async function app_g_conversation(
   overlay,
   player,
   game_prefix,
+  overlay_close,
 ) {
   marker("1");
   function overlay_close() {
