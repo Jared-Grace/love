@@ -13,11 +13,10 @@ import { global_function_property_set } from "../../../love/public/src/global_fu
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
-import { app_karate_container_background_color } from "../../../love/public/src/app_karate_container_background_color.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
-export function app_g_click_npc(
+export async function app_g_click_npc(
   div_map,
   npcs_matched,
   tutorial,
@@ -29,12 +28,15 @@ export function app_g_click_npc(
   let prayer = object_property_get(player, "prayer");
   let conversation = object_property_get(prayer, "conversation");
   if (conversation) {
-    app_g_conversation(prayer, npcs_matched, overlay, player, game_prefix);
+    await app_g_conversation(
+      prayer,
+      npcs_matched,
+      overlay,
+      player,
+      game_prefix,
+    );
   } else {
     let container = app_g_container(overlay);
-    html_style_assign(container, {
-      "background-color": app_karate_container_background_color() + "bc",
-    });
     app_g_p_text(
       container,
       emoji_pray() +
