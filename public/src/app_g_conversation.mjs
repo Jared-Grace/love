@@ -123,7 +123,7 @@ export function app_g_conversation(
       },
     ];
     list_shuffle(choices);
-    lambda_invoke_multiple(afters);
+    lambda_invoke_multiple(choices);
   }
   app_g_container_text(overlay, "What would you like to do?");
   let name_npc2 = object_property_get(npc, "name");
