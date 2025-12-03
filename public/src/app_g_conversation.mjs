@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { lambda_invoke_multiple } from "../../../love/public/src/lambda_invoke_multiple.mjs";
@@ -103,6 +104,7 @@ export function app_g_conversation(
     function lambda2(p) {
       let text2 = object_property_get(p, "text");
       let words = string_to_words(text2);
+      log(message);
     }
     let filtered = list_filter(passages, lambda2);
     let objections = object_property_get(passage, o2);
