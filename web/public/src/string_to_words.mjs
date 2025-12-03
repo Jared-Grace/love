@@ -10,7 +10,7 @@ export function string_to_words(text) {
   let v2 = whitespace_normalize(text);
   let lower = string_lower_to(v2);
   let split = string_split_space(lower);
-  let split2 = list_map(split, string_letters_only);
-  let unique = list_unique(split2);
-  return split;
+  let m = list_map(split, string_letters_only);
+  let words = list_unique(m);
+  return words;
 }
