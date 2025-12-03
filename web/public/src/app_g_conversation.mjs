@@ -79,10 +79,11 @@ export function app_g_conversation(
       app_g_conversation,
       "chapter_code",
     );
+    async function lambda5() {}
     let value2 = await global_function_property_async(
       fn,
       property_name,
-      async function lambda5() {},
+      lambda5,
     );
     log({
       value,
