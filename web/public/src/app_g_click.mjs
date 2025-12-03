@@ -46,7 +46,7 @@ export async function app_g_click(
   let distance2 = g_distance(player, clicked_coordinates);
   if (equal(distance2, 0)) {
     let overlay = app_g_overlay(div_map);
-    app_g_menu(overlay, player);
+    await app_g_menu(overlay, player);
   } else {
     function lambda17(npc) {
       let e = object_includes(npc, clicked_coordinates);
