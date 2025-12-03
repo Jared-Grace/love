@@ -93,7 +93,9 @@ export async function app_g_conversation(
       app_g_container_text(overlay, "What would you like to say?");
       function lambda() {}
       app_g_bible_passage_button(passage, chapter_code, books, overlay, lambda);
-      function lambda3() {}
+      function lambda3() {
+        alert("wrong");
+      }
       app_g_bible_passage_button(item, chapter_code, books, overlay, lambda3);
     }
     app_g_container_text(overlay, "What would you like to do?");
