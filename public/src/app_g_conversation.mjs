@@ -1,6 +1,4 @@
-import { list_first } from "../../../love/public/src/list_first.mjs";
-import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
-import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
+import { ebible_parts_to_reference } from "../../../love/public/src/ebible_parts_to_reference.mjs";
 import { ebible_chapter_code_parse } from "../../../love/public/src/ebible_chapter_code_parse.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
@@ -92,18 +90,13 @@ export async function app_g_conversation(
     app_g_container_text(overlay, "What would you like to say?");
     let { book_code, chapter_name } = ebible_chapter_code_parse(chapter_code);
     let books = global_function_property_get(app_g_main, "books");
-    let book_name = ebible_book_code_to_name(books, book_code);
-    let verse_numbers_s = null;
-    let s1 = list_size_1(verse_numbers);
-    let first = list_first(list);
-    if (s1) {
-      verse_numbers_s = first;
-    } else {
-      let last = list_last(list);
-      verse_numbers_s = first + "-" + last;
-    }
+    const reference = ebible_parts_to_reference(
+      books,
+      book_code,
+      verse_numbers,
+      chapter_name,
+    );
     function lambda3() {}
-    const reference = book_name + " " + chapter_name + ":" + verse_numbers_s;
     app_g_button_green(overlay, reference + " " + text2, lambda3);
   }
   app_g_container_text(overlay, "What would you like to do?");
