@@ -1,5 +1,4 @@
 import { app_g_npc_says } from "../../../love/public/src/app_g_npc_says.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { string_split } from "../../../love/public/src/string_split.mjs";
 import { newline_windows_escaped } from "../../../love/public/src/newline_windows_escaped.mjs";
 import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
@@ -80,9 +79,9 @@ export async function app_g_conversation(
     let separator = newline_windows_escaped();
     let split = string_split(objections, separator);
     let item3 = list_random_item(split);
+    app_g_npc_says(npc, overlay, game_prefix, item3);
     function lambda3() {}
     app_g_button_green(overlay, text2, lambda3);
-    log(item3);
   }
   let name_npc2 = object_property_get(npc, "name");
   app_g_button_green(
