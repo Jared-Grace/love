@@ -42,7 +42,7 @@ import { html_document_body } from "../../../love/public/src/html_document_body.
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_g_main() {
   firebase_name_jg();
-  let books = await ebible_version_books(bible_folder);
+  let books = await ebible_version_books("engbsb");
   marker("1");
   html_meta_viewport();
   let html = html_document_root();
