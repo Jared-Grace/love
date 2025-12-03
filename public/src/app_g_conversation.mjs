@@ -101,16 +101,17 @@ export function app_g_conversation(
     let o2 = g_objection_generate_property();
     let text = object_property_get(passage, "text");
     let words = string_to_words(text);
-    function lambda2(p) {
-      let text2 = object_property_get(p, "text");
-      let words = string_to_words(text2);
-      let list2 = list_intersect(list, other);
-    }
-    let filtered = list_filter(passages, lambda2);
     let objections = object_property_get(passage, o2);
     let separator = newline_windows_escaped();
     let split = string_split(objections, separator);
     let ob = list_random_item(split);
+    let words2 = string_to_words(text3);
+    function lambda2(p) {
+      let text2 = object_property_get(p, "text");
+      let words = string_to_words(text2);
+      let list2 = list_intersect(list, words);
+    }
+    let filtered = list_filter(passages, lambda2);
     app_g_npc_says(npc, overlay, game_prefix, ob);
     app_g_container_text(overlay, "What would you like to say?");
     let choices = [
