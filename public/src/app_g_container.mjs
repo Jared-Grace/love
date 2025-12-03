@@ -9,6 +9,5 @@ export function app_g_container(overlay) {
     padding: "0.25em",
     "background-color": app_karate_container_background_color() + "bc",
   });
-  html_style_assign(container, {});
   return container;
 }
