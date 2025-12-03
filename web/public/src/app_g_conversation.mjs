@@ -1,3 +1,4 @@
+import { lambda_invoke_multiple } from "../../../love/public/src/lambda_invoke_multiple.mjs";
 import { global_function_property_async } from "../../../love/public/src/global_function_property_async.mjs";
 import { app_g_bible_passage_button } from "../../../love/public/src/app_g_bible_passage_button.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
@@ -122,6 +123,7 @@ export function app_g_conversation(
       },
     ];
     list_shuffle(choices);
+    lambda_invoke_multiple(afters);
   }
   app_g_container_text(overlay, "What would you like to do?");
   let name_npc2 = object_property_get(npc, "name");
