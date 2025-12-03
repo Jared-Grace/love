@@ -116,8 +116,8 @@ export function app_g_conversation(
       let text2 = object_property_get(p, "text");
       let words3 = string_to_words(text2);
       let list2 = list_intersect(words3, unique);
-      let size = list_size(list);
-      log(p);
+      let size = list_size(list2);
+      log(size);
       log(p);
     }
     let filtered = list_filter(passages, lambda2);
