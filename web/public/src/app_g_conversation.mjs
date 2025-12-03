@@ -1,3 +1,11 @@
+import { log } from "../../../love/public/src/log.mjs";
+import { string_split } from "../../../love/public/src/string_split.mjs";
+import { newline_windows_escaped } from "../../../love/public/src/newline_windows_escaped.mjs";
+import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
+import { list_last } from "../../../love/public/src/list_last.mjs";
+import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
+import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
+import { g_objection_generate_upload_path } from "../../../love/public/src/g_objection_generate_upload_path.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_img } from "../../../love/public/src/html_img.mjs";
 import { g_character_img_url } from "../../../love/public/src/g_character_img_url.mjs";
@@ -86,8 +94,19 @@ export async function app_g_conversation(
       g_random_dot_bang() +
       meet_message,
   );
-  function lambda2() {
+  async function lambda2() {
     html_clear(overlay);
+    let destination = g_objection_generate_upload_path("JAS01");
+    let o = await firebase_storage_download_json(destination);
+    let passages = object_property_get(o, "passages");
+    list_shuffle(passages);
+    let passage = list_last(passages);
+    let o2 = g_objection_generate_property();
+    let objections = object_property_get(passage, o2);
+    let separator = newline_windows_escaped();
+    let split = string_split(objections, separator);
+    let item3 = list_random_item(split);
+    log(item3);
   }
   app_g_button_green(
     overlay,
