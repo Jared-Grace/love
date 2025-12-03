@@ -8,6 +8,7 @@ export function app_g_bible_passage_button(
   chapter_code,
   books,
   overlay,
+  lambda,
 ) {
   marker("1");
   let verse_numbers = object_property_get(passage, "verse_numbers");
