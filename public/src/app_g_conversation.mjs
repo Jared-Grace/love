@@ -1,3 +1,4 @@
+import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_parse } from "../../../love/public/src/ebible_chapter_code_parse.mjs";
@@ -94,7 +95,7 @@ export async function app_g_conversation(
     let { book_code, chapter_name } = ebible_chapter_code_parse(chapter_code);
     let books = global_function_property_get(app_g_main, "books");
     let book_name = ebible_book_code_to_name(books, book_code);
-    ls1;
+    let s1 = list_size_1(list);
     function lambda3() {}
     app_g_button_green(
       overlay,
