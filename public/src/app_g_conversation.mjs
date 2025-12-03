@@ -105,7 +105,7 @@ export async function app_g_conversation(
     function lambda3() {}
     app_g_button_green(
       overlay,
-      book_name + " " + chapter_name + ":" + text2,
+      book_name + " " + chapter_name + ":" + verse_numbers_s + " " + text2,
       lambda3,
     );
   }
