@@ -10,6 +10,7 @@ import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 export function app_g_menu(overlay, player) {
+  return new Promise(function lambda(resolve, reject) {});
   marker("1");
   html_clear(overlay);
   function close() {
