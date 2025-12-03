@@ -24,7 +24,8 @@ export async function app_g_click_npc(
   game_prefix,
 ) {
   marker("1");
-  let result = await promise_new(async function lambda(resolve, reject) {});
+  async function lambda(resolve, reject) {}
+  let result = await promise_new(lambda);
   let overlay = app_g_overlay(div_map);
   function overlay_close() {
     html_remove(overlay);
