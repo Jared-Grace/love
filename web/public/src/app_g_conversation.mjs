@@ -102,6 +102,7 @@ export function app_g_conversation(
     let words = string_to_words(text);
     function lambda2(p) {
       let text2 = object_property_get(p, "text");
+      let words = string_to_words(text2);
     }
     let mapped = list_map(passages, lambda2);
     let objections = object_property_get(passage, o2);
