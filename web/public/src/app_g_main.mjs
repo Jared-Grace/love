@@ -56,7 +56,7 @@ export async function app_g_main() {
   let separator = newline_windows_escaped();
   let split = string_split(objections, separator);
   let max = integer_max();
-  let objection_id = integer_random(0, max);
+  let objection_id = integer_random(0, max);lz
   let item3 = list_get(list, index2);
   marker("1");
   html_meta_viewport();
