@@ -266,6 +266,7 @@
   "pd": "function_param_delete",
   "pnm": "path_name",
   "ls1": "list_size_1",
-  "irn": "integer_random"
+  "irn": "integer_random",
+  "prn": "promise_new"
  }
 }
