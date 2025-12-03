@@ -28,6 +28,7 @@ export async function app_g_click_npc(
     let overlay = app_g_overlay(div_map);
     function overlay_close() {
       html_remove(overlay);
+      resolve();
     }
     html_style_assign(overlay, {
       display: "flex",
