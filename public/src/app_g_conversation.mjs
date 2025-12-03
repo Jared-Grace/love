@@ -53,7 +53,6 @@ export async function app_g_conversation(
   });
   const c_src = g_character_img_url(npc, game_prefix);
   let component = html_img(container, c_src);
-  let name_player = object_property_get(player, "name");
   const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
   let v = string_first_upper_to(greet);
   let s2 = list_random_item(["nice", "great", "pleasure", "good"]);
@@ -83,16 +82,13 @@ export async function app_g_conversation(
       ]) + "?");
   }
   meet_message += g_random_dot_bang();
+  let name_player = object_property_get(player, "name");
   let name_npc = object_property_get(npc, "name");
   app_g_p_text(
     container,
     name_npc +
       " says: " +
-      v +
-      " " +
-      name_player +
-      g_random_dot_bang() +
-      meet_message,
+      (v + " " + name_player + g_random_dot_bang() + meet_message),
   );
   async function lambda2() {
     html_clear(overlay);
