@@ -1,3 +1,4 @@
+import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_parse } from "../../../love/public/src/ebible_chapter_code_parse.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
@@ -88,8 +89,13 @@ export async function app_g_conversation(
     app_g_container_text(overlay, "What would you like to say?");
     let { book_code, chapter_name } = ebible_chapter_code_parse(chapter_code);
     let books = global_function_property_get(app_g_main, "books");
+    let book_name = ebible_book_code_to_name(books, book_code);
     function lambda3() {}
-    app_g_button_green(overlay, text2, lambda3);
+    app_g_button_green(
+      overlay,
+      book_name + " " + chapter_name + ":" + text2,
+      lambda3,
+    );
   }
   app_g_container_text(overlay, "What would you like to do?");
   let name_npc2 = object_property_get(npc, "name");
