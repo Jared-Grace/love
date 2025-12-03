@@ -1,3 +1,4 @@
+import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { g_img_square_size_css } from "../../../love/public/src/g_img_square_size_css.mjs";
 import { app_g_conversation } from "../../../love/public/src/app_g_conversation.mjs";
@@ -25,6 +26,7 @@ export async function app_g_click_npc(
 ) {
   marker("1");
   let overlay = app_g_overlay(div_map);
+  html_style_set(b, style_key, style_value);
   let prayer = object_property_get(player, "prayer");
   let conversation = object_property_get(prayer, "conversation");
   if (conversation) {
