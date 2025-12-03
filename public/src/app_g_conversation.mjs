@@ -1,3 +1,4 @@
+import { global_function_property_async } from "../../../love/public/src/global_function_property_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_g_bible_passage_button } from "../../../love/public/src/app_g_bible_passage_button.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
@@ -77,6 +78,11 @@ export function app_g_conversation(
     let chapter_code = global_function_property_get(
       app_g_conversation,
       "chapter_code",
+    );
+    let value2 = await global_function_property_async(
+      fn,
+      property_name,
+      async function lambda5() {},
     );
     log({
       value,
