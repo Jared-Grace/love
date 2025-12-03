@@ -1,6 +1,5 @@
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_intersect } from "../../../love/public/src/list_intersect.mjs";
 import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
@@ -117,10 +116,9 @@ export function app_g_conversation(
       let words3 = string_to_words(text2);
       let list2 = list_intersect(words3, unique);
       let size = list_size(list2);
-      log(size);
-      log(p);
+      return size;
     }
-    let filtered = list_sort_number_mapper(passages, lambda2);
+    list_sort_number_mapper(passages, lambda2);
     app_g_npc_says(npc, overlay, game_prefix, ob);
     app_g_container_text(overlay, "What would you like to say?");
     let choices = [
