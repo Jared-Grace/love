@@ -35,7 +35,8 @@ export async function app_g_conversation(
   game_prefix,
   overlay_close,
 ) {
-  let result = await promise_new(async function lambda4(resolve, reject) {});
+  async function lambda4(resolve, reject) {}
+  let result = await promise_new(lambda4);
   marker("1");
   object_property_set(player, "conversed", true);
   object_property_set(prayer, "conversation", false);
