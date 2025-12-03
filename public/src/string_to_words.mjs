@@ -7,4 +7,5 @@ export function string_to_words(text) {
   let v2 = whitespace_normalize(text);
   let lower = string_lower_to(v2);
   let split2 = string_split_space(lower);
+  return split2;
 }
