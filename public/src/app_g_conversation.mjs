@@ -1,3 +1,4 @@
+import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
 import { lambda_invoke_multiple } from "../../../love/public/src/lambda_invoke_multiple.mjs";
@@ -100,7 +101,8 @@ export function app_g_conversation(
     let o2 = g_objection_generate_property();
     let text = object_property_get(passage, "text");
     let v2 = whitespace_normalize(text);
-    let lower = string_lower_to(s);
+    let lower = string_lower_to(v2);
+    let split2 = string_split_space(s);
     let objections = object_property_get(passage, o2);
     let separator = newline_windows_escaped();
     let split = string_split(objections, separator);
