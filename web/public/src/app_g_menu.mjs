@@ -8,8 +8,8 @@ import { emoji_bow } from "../../../love/public/src/emoji_bow.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
-export function app_g_menu(overlay, player) {
-  let v = new Promise(function lambda(resolve, reject) {
+export async function app_g_menu(overlay, player) {
+  let v = await new Promise(function lambda(resolve, reject) {
     html_clear(overlay);
     function close() {
       html_remove(overlay);
@@ -19,8 +19,8 @@ export function app_g_menu(overlay, player) {
     let text = emoji_pray() + " Pray";
     function lambda7() {
       html_clear(overlay);
-      function lambda23() {
-        app_g_menu(overlay, player);
+      async function lambda23() {
+        await app_g_menu(overlay, player);
       }
       let button2 = app_g_button_back(overlay, lambda23);
       function lambda22() {
@@ -37,4 +37,5 @@ export function app_g_menu(overlay, player) {
     }
     app_g_button_uncolored(overlay, text, lambda7);
   });
+  return v;
 }
