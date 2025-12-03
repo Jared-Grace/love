@@ -1,3 +1,4 @@
+import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { integer_max } from "../../../love/public/src/integer_max.mjs";
 import { integer_random } from "../../../love/public/src/integer_random.mjs";
@@ -191,7 +192,7 @@ export async function app_g_main() {
     object_property_set(npc, "meet", false);
   }
   each_index(npcs, npc_initialize);
-  let player_list = list_remove_end(coordinates, 1);
+  let player_list = list_remove_last(coordinates);
   let player = list_single(player_list);
   let a = object_assign(player, {
     img: player_img,
