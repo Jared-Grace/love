@@ -32,10 +32,6 @@ export async function html_scroll_center_container_generic(
     behavior,
   };
   container_e.scrollTo(s);
-  log({
-    s,
-    container_e,
-  });
   console.log(
     container_e.scrollHeight,
     container_e.scrollWidth,
