@@ -16,12 +16,7 @@ import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
-export async function app_g_click_npc(
-  div_map,
-  npcs_matched,
-  player,
-  game_prefix,
-) {
+export function app_g_click_npc(div_map, npcs_matched, player, game_prefix) {
   marker("1");
   let overlay = app_g_overlay(div_map);
   function overlay_close() {
@@ -35,7 +30,7 @@ export async function app_g_click_npc(
   let prayer = object_property_get(player, "prayer");
   let conversation = object_property_get(prayer, "conversation");
   if (conversation) {
-    await app_g_conversation(
+    app_g_conversation(
       prayer,
       npcs_matched,
       overlay,
