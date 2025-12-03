@@ -58,6 +58,7 @@ export async function app_g_main() {
   let objections = object_property_get(r6, o2);
   let separator = newline_windows_escaped();
   let split = string_split(objections, separator);
+  let r8 = list_random_item(list);
   let max = integer_max();
   let objection_id = integer_random(0, max);
   let size = list_size(split);
