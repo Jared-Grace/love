@@ -103,11 +103,8 @@ export async function app_g_conversation(
       verse_numbers_s = first + "-" + last;
     }
     function lambda3() {}
-    app_g_button_green(
-      overlay,
-      book_name + " " + chapter_name + ":" + verse_numbers_s + " " + text2,
-      lambda3,
-    );
+    const reference = book_name + " " + chapter_name + ":" + verse_numbers_s;
+    app_g_button_green(overlay, reference + " " + text2, lambda3);
   }
   app_g_container_text(overlay, "What would you like to do?");
   let name_npc2 = object_property_get(npc, "name");
