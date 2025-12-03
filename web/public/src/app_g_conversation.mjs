@@ -106,7 +106,8 @@ export function app_g_conversation(
       let words = string_to_words(text2);
     }
     let mapped = list_map(passages, lambda2);
-    let filtered = list_filter(list, function lambda4(item2) {});
+    function lambda4(item2) {}
+    let filtered = list_filter(list, lambda4);
     let objections = object_property_get(passage, o2);
     let separator = newline_windows_escaped();
     let split = string_split(objections, separator);
