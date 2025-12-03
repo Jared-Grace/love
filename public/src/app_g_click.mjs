@@ -14,7 +14,6 @@ import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mj
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { object_includes } from "../../../love/public/src/object_includes.mjs";
 import { app_g_menu } from "../../../love/public/src/app_g_menu.mjs";
-import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
@@ -45,8 +44,7 @@ export async function app_g_click(
   }
   let distance2 = g_distance(player, clicked_coordinates);
   if (equal(distance2, 0)) {
-    let overlay = app_g_overlay(div_map);
-    await app_g_menu(overlay, player);
+    await app_g_menu(div_map, player);
   } else {
     function lambda17(npc) {
       let e = object_includes(npc, clicked_coordinates);
