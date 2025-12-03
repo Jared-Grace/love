@@ -1,3 +1,4 @@
+import { newline_windows_escaped } from "../../../love/public/src/newline_windows_escaped.mjs";
 import { newline_windows } from "../../../love/public/src/newline_windows.mjs";
 import { string_split } from "../../../love/public/src/string_split.mjs";
 import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
@@ -53,7 +54,8 @@ export async function app_g_main() {
   let o2 = g_objection_generate_property();
   let objections = object_property_get(r6, o2);
   let separator = newline_windows();
-  let split = string_split(objections, separator);
+  let separator2 = newline_windows_escaped();
+  let split = string_split(objections, separator2);
   log({
     split,
   });
