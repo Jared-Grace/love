@@ -96,7 +96,7 @@ export async function app_g_conversation(
       verse_numbers,
       chapter_name,
     );
-    const button_text = reference + " - " + text2;
+    const button_text = text2 + " " + reference;
     let separator = newline_windows_escaped();
     let split = string_split(objections, separator);
     let item3 = list_random_item(split);
