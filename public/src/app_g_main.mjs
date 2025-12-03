@@ -44,7 +44,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_g_main() {
   firebase_name_jg();
   let books = await ebible_version_books("engbsb");
-  global_function_property_set(fn, property_name, value);
+  global_function_property_set(app_g_main, "books", books);
   marker("1");
   html_meta_viewport();
   let html = html_document_root();
