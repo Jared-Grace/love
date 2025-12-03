@@ -14,6 +14,7 @@ export function app_g_menu(overlay, player) {
     html_clear(overlay);
     function close() {
       html_remove(overlay);
+      resolve();
     }
     let component2 = app_g_button_back(overlay, close);
     let text = emoji_pray() + " Pray";
