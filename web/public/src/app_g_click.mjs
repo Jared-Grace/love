@@ -33,6 +33,7 @@ export async function app_g_click(
   game_prefix,
 ) {
   let player = app_g_player_get();
+  let review = object_property_get(player, "review");
   if (false) {
   }
   let { npcs, coordinates } = map;
