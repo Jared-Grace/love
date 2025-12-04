@@ -127,6 +127,7 @@ export function app_g_conversation(
       function correct() {
         function lambda() {
           objections = object_property_change(npc, "objections", subtract_1);
+          let p = objections > 0;
           npc_objection();
         }
         app_g_bible_passage_button(
