@@ -99,11 +99,8 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
     list_shuffle(choices);
     lambda_invoke_multiple(choices);
   } else {
-    app_g_npc_says(
-      npc,
-      overlay,
-      game_prefix,
-      "Thank you! Glory to God! Praise God! Hallelujah! Amen! I believe! God bless you amen!",
-    );
+    const doxology =
+      "Thank you! Glory to God! Praise God! Hallelujah! Amen! I believe! God bless you amen!";
+    app_g_npc_says(npc, overlay, game_prefix, doxology);
   }
 }
