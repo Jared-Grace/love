@@ -1,3 +1,4 @@
+import { lambda_invoke_multiple } from "../../../love/public/src/lambda_invoke_multiple.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_g_button_conversation_end } from "../../../love/public/src/app_g_button_conversation_end.mjs";
 import { app_g_gospel } from "../../../love/public/src/app_g_gospel.mjs";
@@ -23,8 +24,9 @@ export function app_g_conversation(
 ) {
   let on_end_list = [];
   function conversation_end() {
-    function lambda(item) {}
-    each(list, lambda);
+    lambda_invoke_multiple(afters);
+    function lambda(on_end) {}
+    each(on_end_list, lambda);
     overlay_close();
   }
   marker("1");
