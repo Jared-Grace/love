@@ -56,11 +56,8 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
       return o;
     }
     let value = global_function_property_get(app_g_conversation, "objections");
-    let value2 = object_property_lambda(
-      object,
-      property_name,
-      function lambda6() {},
-    );
+    function lambda6() {}
+    let value2 = object_property_lambda(object, property_name, lambda6);
     let o = await global_function_property_initialize_async(
       app_g_conversation,
       "objections",
