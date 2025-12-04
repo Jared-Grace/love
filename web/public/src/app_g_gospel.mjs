@@ -106,6 +106,16 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
     lambda_invoke_multiple(choices);
   } else {
     let t = trinity_name_prayer();
+    const believe =
+      string_random_or_empty("Now ") +
+      "I believe" +
+      string_random_or_empty(
+        ", in Jesus" +
+          string_random_or_empty(" Christ") +
+          string_random_or_empty(
+            ", the son of" + string_random_or_empty(" the living") + " God",
+          ),
+      );
     const choices = [
       "Thank you" +
         string_random_or_empty(
@@ -115,15 +125,7 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
       "Praise God" + string_random_or_empty(", our Savior"),
       "Hallelujah",
       "Amen",
-      string_random_or_empty("Now ") +
-        "I believe" +
-        string_random_or_empty(
-          ", in Jesus" +
-            string_random_or_empty(" Christ") +
-            string_random_or_empty(
-              ", the son of" + string_random_or_empty(" the living") + " God",
-            ),
-        ),
+      believe,
       "God bless you " +
         string_random_or_empty(
           " in the name of " + list_random_item(["Jesus", t]) + " ",
