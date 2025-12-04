@@ -156,6 +156,7 @@ export function app_g_conversation(
       list_shuffle(choices);
       lambda_invoke_multiple(choices);
     } else {
+      app_g_npc_says(npc, overlay, game_prefix, "Thank you! Glory to God!");
     }
   }
   app_g_container_text(overlay, "What would you like to do?");
