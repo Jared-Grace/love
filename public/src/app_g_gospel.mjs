@@ -107,6 +107,7 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
     ];
     list_shuffle(choices);
     lambda_invoke_multiple(choices);
+    app_g_button_conversation_end(overlay, overlay_close);
   } else {
     function jesus_christ() {
       let v = "Jesus" + string_random_or_empty(" Christ");
