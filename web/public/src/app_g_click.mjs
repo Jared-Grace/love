@@ -1,3 +1,4 @@
+import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { html_scroll_center_container } from "../../../love/public/src/html_scroll_center_container.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
@@ -34,7 +35,7 @@ export async function app_g_click(
 ) {
   let player = app_g_player_get();
   let review = object_property_get(player, "review");
-  let ne = list_empty_not_is(list);
+  let e2 = list_empty_is(list);
   if (false) {
   }
   let { npcs, coordinates } = map;
