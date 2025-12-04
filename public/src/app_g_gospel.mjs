@@ -120,7 +120,8 @@ export async function app_g_gospel(
         );
         function lambda3() {
           let review = object_property_get(player, "review");
-          list_add(conversation_end_list, () => {});
+          function lambda4() {}
+          list_add(conversation_end_list, lambda4);
           html_remove(b);
         }
       },
