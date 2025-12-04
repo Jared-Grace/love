@@ -110,6 +110,7 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
       "God bless you amen",
     ];
     let combineds = list_map_combine(right, list);
+    list_shuffle(list3);
     const doxology = choices;
     app_g_npc_says(npc, overlay, game_prefix, doxology);
   }
