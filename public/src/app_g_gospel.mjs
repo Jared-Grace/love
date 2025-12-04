@@ -38,7 +38,7 @@ import { global_function_property_get } from "../../../love/public/src/global_fu
 import { positive_is } from "../../../love/public/src/positive_is.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { integer_random } from "../../../love/public/src/integer_random.mjs";
-export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
+export async function app_g_gospel(overlay, npc, game_prefix, conversation_end) {
   marker("1");
   html_clear(overlay);
   let objections2 = object_property_get(npc, "objections");
@@ -88,7 +88,7 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
       function correct() {
         async function lambda() {
           object_property_change(npc, "objections", subtract_1);
-          await app_g_gospel(overlay, npc, game_prefix, overlay_close);
+          await app_g_gospel(overlay, npc, game_prefix, conversation_end);
         }
         app_g_bible_passage_button(
           passage,
@@ -118,7 +118,7 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
     ];
     list_shuffle(choices);
     lambda_invoke_multiple(choices);
-    app_g_button_conversation_end(overlay, overlay_close);
+    app_g_button_conversation_end(overlay, conversation_end);
   } else {
     function jesus_christ() {
       let v = "Jesus" + string_random_or_empty(" Christ");
@@ -163,6 +163,6 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
     const mapped = list_map_combine("!", combined);
     const doxology = list_join_space(mapped);
     app_g_npc_says(npc, overlay, game_prefix, doxology);
-    app_g_button_conversation_end(overlay, overlay_close);
+    app_g_button_conversation_end(overlay, conversation_end);
   }
 }
