@@ -1,4 +1,3 @@
-import { each } from "../../../love/public/src/each.mjs";
 import { global_function_property_nested_lambda } from "../../../love/public/src/global_function_property_nested_lambda.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
@@ -53,12 +52,6 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
     async function lambda5() {
       let destination = g_objection_generate_upload_path(chapter_code);
       let o = await firebase_storage_download_json(destination);
-      let passages = object_property_get(o, "passages");
-      function lambda4(passage) {
-        let o2 = g_objection_generate_property();
-        let objections = object_property_get(passage, o2);
-      }
-      each(passages, lambda4);
       return o;
     }
     let o = await global_function_property_nested_lambda(
@@ -69,9 +62,9 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
     let passages = object_property_get(o, "passages");
     list_shuffle(passages);
     let passage = list_last(passages);
+    let o2 = g_objection_generate_property();
     let text = object_property_get(passage, "text");
     let words = string_to_words(text);
-    let o2 = g_objection_generate_property();
     let objections = object_property_get(passage, o2);
     let separator = newline_windows_escaped();
     let split = string_split(objections, separator);
