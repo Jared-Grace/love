@@ -1,4 +1,4 @@
-import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
+import { list_move_first } from "../../../love/public/src/list_move_first.mjs";
 import { function_param_index } from "../../../love/public/src/function_param_index.mjs";
 import { list_remove_at } from "../../../love/public/src/list_remove_at.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -15,7 +15,6 @@ export async function function_param_move_first(param_name) {
   function function_transform_current_lambda(ast) {
     let params = null;
     ({ params, index } = function_param_index(ast, param_name));
-    let r = list_remove_at(params, index);
-    list_add_first(params, r);
+    list_move_first(params, index);
   }
 }
