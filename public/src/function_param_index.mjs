@@ -8,7 +8,7 @@ export function function_param_index(ast, param_name) {
   let declaration = js_declaration_single(ast);
   let params = js_declaration_params_get(declaration);
   let p = js_declaration_param_named(declaration, param_name);
-  index = list_index_of(params, p);
+  let index = list_index_of(params, p);
   let v = {
     params,
     index,
