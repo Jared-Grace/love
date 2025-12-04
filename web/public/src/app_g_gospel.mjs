@@ -119,7 +119,9 @@ export async function app_g_gospel(
           lambda3,
         );
         function lambda3() {
-          function lambda4() {}
+          function lambda4() {
+            html_clear(overlay);
+          }
           list_add(conversation_end_list, lambda4);
           html_remove(b);
         }
