@@ -3,4 +3,5 @@ import { app_karate_button_green } from "../../../karate_code/public/src/app_kar
 export function app_g_button_green(overlay, text, lambda) {
   let b = app_karate_button_green(overlay, text, lambda);
   app_g_button_green_style(b);
+  return b;
 }
