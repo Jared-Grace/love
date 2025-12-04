@@ -1,5 +1,5 @@
 import { data_generate } from "../../../love/public/src/data_generate.mjs";
-import { global_function_property_async } from "../../../love/public/src/global_function_property_async.mjs";
+import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { file_write } from "../../../love/public/src/file_write.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -19,7 +19,11 @@ export async function data_all(file_path) {
         await data_generate(data);
         return data;
       }
-      data = await global_function_property_async(data_all, d_path, lambda2);
+      data = await global_function_property_initialize_async(
+        data_all,
+        d_path,
+        lambda2,
+      );
     }
   } else {
     let exists = await file_exists(file_path);
