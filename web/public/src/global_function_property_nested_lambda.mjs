@@ -3,10 +3,10 @@ import { app_g_conversation } from "../../../love/public/src/app_g_conversation.
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 export function global_function_property_nested_lambda(
   property_name,
-  chapter_code,
-  lambda5,
+  property_name_nested,
+  lambda,
 ) {
   let value = global_function_property_get(app_g_conversation, property_name);
-  let o = object_property_lambda_async(value, chapter_code, lambda5);
-  return o;
+  let v = object_property_lambda_async(value, property_name_nested, lambda);
+  return v;
 }
