@@ -1,4 +1,3 @@
-import { lambda_invoke_multiple } from "../../../love/public/src/lambda_invoke_multiple.mjs";
 import { app_g_button_conversation_end } from "../../../love/public/src/app_g_button_conversation_end.mjs";
 import { app_g_gospel } from "../../../love/public/src/app_g_gospel.mjs";
 import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
@@ -21,11 +20,6 @@ export function app_g_conversation(
   game_prefix,
   overlay_close,
 ) {
-  let conversation_end_list = [];
-  function conversation_end() {
-    lambda_invoke_multiple(conversation_end_list);
-    overlay_close();
-  }
   marker("1");
   object_property_set(player, "conversed", true);
   object_property_set(prayer, "conversation", false);
@@ -63,7 +57,7 @@ export function app_g_conversation(
   const npc_says = v + " " + name_player + g_random_dot_bang() + meet_message;
   app_g_npc_says(npc, overlay, game_prefix, npc_says);
   async function npc_gospel() {
-    await app_g_gospel(overlay, npc, game_prefix, conversation_end);
+    await app_g_gospel(overlay, npc, game_prefix);
   }
   app_g_container_text(overlay, "What would you like to do?");
   let name_npc2 = object_property_get(npc, "name");
@@ -77,5 +71,5 @@ export function app_g_conversation(
       npc_gospel,
     );
   }
-  app_g_button_conversation_end(overlay, conversation_end);
+  app_g_button_conversation_end(overlay, overlay_close);
 }
