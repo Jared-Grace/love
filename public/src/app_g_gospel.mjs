@@ -1,4 +1,5 @@
 import { global_function_property_nested_lambda } from "../../../love/public/src/global_function_property_nested_lambda.mjs";
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { app_g_button_conversation_end } from "../../../love/public/src/app_g_button_conversation_end.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
@@ -111,6 +112,11 @@ export async function app_g_gospel(
           lambda3,
         );
         function lambda3() {
+          let review = object_property_get(player, "review");
+          list_add(review, {
+            chapter_code,
+            passage: passage_wrong,
+          });
           html_remove(b);
         }
       },
