@@ -75,9 +75,9 @@ export async function app_g_gospel(overlay, npc, game_prefix, npc_gospel) {
     app_g_container_text(overlay, "What would you like to say?");
     let choices = [
       function correct() {
-        function lambda() {
+        async function lambda() {
           object_property_change(npc, "objections", subtract_1);
-          npc_gospel();
+          await app_g_gospel(overlay, npc, game_prefix, npc_gospel);
         }
         app_g_bible_passage_button(
           passage,
