@@ -131,7 +131,6 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
       "Praise God" + string_random_or_empty(", our Savior"),
       "Hallelujah",
       "Amen",
-      blessing,
     ];
     list_shuffle(choices);
     let size2 = list_size(choices);
