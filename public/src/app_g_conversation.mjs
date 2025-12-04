@@ -20,7 +20,9 @@ export function app_g_conversation(
   game_prefix,
   overlay_close,
 ) {
-  (function lambda() {});
+  function conversation_end() {
+    overlay_close();
+  }
   marker("1");
   object_property_set(player, "conversed", true);
   object_property_set(prayer, "conversation", false);
@@ -72,5 +74,5 @@ export function app_g_conversation(
       npc_gospel,
     );
   }
-  app_g_button_conversation_end(overlay, overlay_close);
+  app_g_button_conversation_end(overlay, conversation_end);
 }
