@@ -7,6 +7,10 @@ export function global_function_property_nested_lambda(
   lambda,
 ) {
   let value = global_function_property_get(app_g_conversation, property_name);
-  let v = object_property_lambda_async(value, property_name_nested, lambda);
+  let v = object_property_lambda_async(value, property_name_nested, lambda); 
+  return v;
+}
+ lambda,
+  );
   return v;
 }
