@@ -24,7 +24,7 @@ export function app_g_conversation(
 ) {
   let on_end_list = [];
   function conversation_end() {
-    lambda_invoke_multiple(afters);
+    lambda_invoke_multiple(on_end_list);
     function lambda(on_end) {}
     each(on_end_list, lambda);
     overlay_close();
