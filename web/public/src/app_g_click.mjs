@@ -33,6 +33,8 @@ export async function app_g_click(
   game_prefix,
 ) {
   let player = app_g_player_get();
+  if (false) {
+  }
   let { npcs, coordinates } = map;
   marker("1");
   const tile_e = e.target.closest("." + tile_class);
