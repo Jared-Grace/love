@@ -1,3 +1,4 @@
+import { positive_is } from "../../../love/public/src/positive_is.mjs";
 import { subtract_1 } from "../../../love/public/src/subtract_1.mjs";
 import { object_property_change } from "../../../love/public/src/object_property_change.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
@@ -127,7 +128,7 @@ export function app_g_conversation(
       function correct() {
         function lambda() {
           objections = object_property_change(npc, "objections", subtract_1);
-          let p = objections > 0;
+          let p = positive_is(objections);
           npc_objection();
         }
         app_g_bible_passage_button(
