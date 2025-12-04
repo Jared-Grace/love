@@ -124,6 +124,7 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
         " in the name of " + list_random_item(["Jesus", t]) + " ",
       ) +
       "amen";
+    () => {};
     const jesus_christ = "Jesus" + string_random_or_empty(" Christ");
     const choices = [
       "Thank you" +
