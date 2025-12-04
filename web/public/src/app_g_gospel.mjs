@@ -1,3 +1,4 @@
+import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { app_g_button_conversation_end } from "../../../love/public/src/app_g_button_conversation_end.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
@@ -99,9 +100,6 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
         );
       },
       function wrong() {
-        function lambda3() {
-          alert("wrong");
-        }
         let b = app_g_bible_passage_button(
           item,
           chapter_code,
@@ -109,6 +107,9 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
           overlay,
           lambda3,
         );
+        function lambda3() {
+          html_remove(component);
+        }
       },
     ];
     list_shuffle(choices);
