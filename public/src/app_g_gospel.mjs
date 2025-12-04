@@ -1,3 +1,4 @@
+import { list_map_combine } from "../../../love/public/src/list_map_combine.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { lambda_invoke_multiple } from "../../../love/public/src/lambda_invoke_multiple.mjs";
 import { app_g_bible_passage_button } from "../../../love/public/src/app_g_bible_passage_button.mjs";
@@ -100,14 +101,15 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
     lambda_invoke_multiple(choices);
   } else {
     const choices = [
-      "Thank you!",
-      "Glory to God!",
-      "Praise God!",
-      "Hallelujah!",
-      "Amen!",
-      "I believe!",
-      "God bless you amen!",
+      "Thank you",
+      "Glory to God",
+      "Praise God",
+      "Hallelujah",
+      "Amen",
+      "I believe",
+      "God bless you amen",
     ];
+    let combineds = list_map_combine(right, list);
     const doxology = choices;
     app_g_npc_says(npc, overlay, game_prefix, doxology);
   }
