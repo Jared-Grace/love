@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { app_g_button_conversation_end } from "../../../love/public/src/app_g_button_conversation_end.mjs";
 import { app_g_gospel } from "../../../love/public/src/app_g_gospel.mjs";
 import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
@@ -21,6 +22,7 @@ export function app_g_conversation(
   overlay_close,
 ) {
   function conversation_end() {
+    each(list, function lambda(item) {});
     overlay_close();
   }
   marker("1");
