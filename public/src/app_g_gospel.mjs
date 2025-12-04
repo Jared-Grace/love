@@ -134,8 +134,7 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
         string_random_or_empty(
           ", the Father of " +
             string_random_or_empty("our Lord ") +
-            "Jesus" +
-            string_random_or_empty(" Christ"),
+            ("Jesus" + string_random_or_empty(" Christ")),
         ),
       "Hallelujah",
       "Amen",
