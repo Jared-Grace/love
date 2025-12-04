@@ -1,3 +1,5 @@
+import { list_remove_first } from "../../../love/public/src/list_remove_first.mjs";
+import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { g_img_square_size_css } from "../../../love/public/src/g_img_square_size_css.mjs";
 import { app_g_conversation } from "../../../love/public/src/app_g_conversation.mjs";
@@ -19,6 +21,15 @@ import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 export function app_g_click_npc(div_map, npcs_matched, player, game_prefix) {
   marker("1");
   let overlay = app_g_overlay(div_map);
+  let review = object_property_get(player, "review");
+  let e2 = list_empty_is(review);
+  let v = list_remove_first(review);
+  let container = app_g_container(overlay);
+  app_g_p_text(
+    container,
+    emoji_pray() +
+      " You remember that you have not prayed, yet, before your next conversation!",
+  );
   function overlay_close() {
     html_remove(overlay);
   }
@@ -29,6 +40,8 @@ export function app_g_click_npc(div_map, npcs_matched, player, game_prefix) {
   });
   let prayer = object_property_get(player, "prayer");
   let conversation = object_property_get(prayer, "conversation");
+  if (false) {
+  }
   if (conversation) {
     app_g_conversation(
       prayer,
