@@ -54,10 +54,10 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
       return o;
     }
     let o = await global_function_property_nested_lambda(
+      fn,
       "objections",
       chapter_code,
       lambda5,
-      fn,
     );
     let passages = object_property_get(o, "passages");
     list_shuffle(passages);
