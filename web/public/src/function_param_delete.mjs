@@ -13,7 +13,7 @@ export async function function_param_delete(param_name) {
   }
   function function_transform_current_lambda(ast) {
     let params = null;
-    ({ params, index } = function_param_index(ast, param_name, index));
+    ({ params, index } = function_param_index(ast, param_name));
     list_remove_at(params, index);
   }
 }
