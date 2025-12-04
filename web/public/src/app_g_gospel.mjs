@@ -1,3 +1,4 @@
+import { list_take } from "../../../love/public/src/list_take.mjs";
 import { trinity_name_prayer } from "../../../love/public/src/trinity_name_prayer.mjs";
 import { string_random_or_empty } from "../../../love/public/src/string_random_or_empty.mjs";
 import { list_map_combine } from "../../../love/public/src/list_map_combine.mjs";
@@ -128,8 +129,9 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
         "amen",
     ];
     list_shuffle(choices);
-    let size2 = list_size(list3);
-    let r = integer_random(1, max);
+    let size2 = list_size(choices);
+    let r = integer_random(1, size2);
+    let taken = list_take(list3, count);
     let combineds = list_map_combine("!", list);
     const doxology = choices;
     app_g_npc_says(npc, overlay, game_prefix, doxology);
