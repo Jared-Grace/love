@@ -26,7 +26,6 @@ import { string_split } from "../../../love/public/src/string_split.mjs";
 import { newline_windows_escaped } from "../../../love/public/src/newline_windows_escaped.mjs";
 import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
-import { list_index_last_second } from "../../../love/public/src/list_index_last_second.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -63,7 +62,6 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
     let passages = object_property_get(o, "passages");
     list_shuffle(passages);
     let passage = list_last(passages);
-    const last_second = list_index_last_second(passages);
     let o2 = g_objection_generate_property();
     let text = object_property_get(passage, "text");
     let words = string_to_words(text);
