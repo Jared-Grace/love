@@ -1,5 +1,5 @@
+import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { list_remove_first } from "../../../love/public/src/list_remove_first.mjs";
-import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { g_img_square_size_css } from "../../../love/public/src/g_img_square_size_css.mjs";
 import { app_g_conversation } from "../../../love/public/src/app_g_conversation.mjs";
@@ -75,9 +75,9 @@ export function app_g_click_npc(div_map, npcs_matched, player, game_prefix) {
     }
     app_g_button_back(overlay, lambda21);
   } else {
-    let e2 = list_empty_is(review);
-    let v = list_remove_first(review);
     let review = object_property_get(player, "review");
+    let ne = list_empty_not_is(review);
+    let v = list_remove_first(review);
     if (e2) {
     } else {
       app_g_conversation(
