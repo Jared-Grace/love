@@ -21,5 +21,6 @@ export function app_g_bible_passage_button(
     chapter_name,
   );
   const button_text = text2 + " " + reference;
-  return app_g_button_green(overlay, button_text, lambda);
+  let b = app_g_button_green(overlay, button_text, lambda);
+  return b;
 }
