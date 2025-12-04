@@ -82,6 +82,10 @@ export function app_g_conversation(
   const npc_says = v + " " + name_player + g_random_dot_bang() + meet_message;
   app_g_npc_says(npc, overlay, game_prefix, npc_says);
   async function npc_gospel() {
+    let p = positive_is(objections);
+    if (p) {
+    } else {
+    }
     html_clear(overlay);
     let books = global_function_property_get(app_g_main, "books");
     let chapter_code = global_function_property_get(
@@ -127,12 +131,8 @@ export function app_g_conversation(
     let choices = [
       function correct() {
         function lambda() {
-          objections = object_property_change(npc, "objections", subtract_1);
-          let p = positive_is(objections);
-          if (p) {
-            npc_gospel();
-          } else {
-          }
+          object_property_change(npc, "objections", subtract_1);
+          npc_gospel();
         }
         app_g_bible_passage_button(
           passage,
