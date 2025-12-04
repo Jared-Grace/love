@@ -38,7 +38,12 @@ import { global_function_property_get } from "../../../love/public/src/global_fu
 import { positive_is } from "../../../love/public/src/positive_is.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { integer_random } from "../../../love/public/src/integer_random.mjs";
-export async function app_g_gospel(overlay, npc, game_prefix, conversation_end) {
+export async function app_g_gospel(
+  overlay,
+  npc,
+  game_prefix,
+  conversation_end,
+) {
   marker("1");
   html_clear(overlay);
   let objections2 = object_property_get(npc, "objections");
