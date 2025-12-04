@@ -73,6 +73,12 @@ export function app_g_click_npc(div_map, npcs_matched, player, game_prefix) {
     let review = object_property_get(player, "review");
     let ne = list_empty_not_is(review);
     if (ne) {
+      let container = app_g_container(overlay);
+      app_g_p_text(
+        container,
+        emoji_pray() +
+          " You remember that you have not prayed, yet, before your next conversation!",
+      );
       let v = list_remove_first(review);
       let v2 = json_format_to(v);
       alert(v2);
