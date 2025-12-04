@@ -1,9 +1,8 @@
+import { app_g_button_conversation_end } from "../../../love/public/src/app_g_button_conversation_end.mjs";
 import { app_g_gospel } from "../../../love/public/src/app_g_gospel.mjs";
 import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
 import { app_g_npc_says } from "../../../love/public/src/app_g_npc_says.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { emoji_wave } from "../../../love/public/src/emoji_wave.mjs";
-import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { app_g_button_green } from "../../../love/public/src/app_g_button_green.mjs";
 import { g_random_dot_bang } from "../../../love/public/src/g_random_dot_bang.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -72,11 +71,5 @@ export function app_g_conversation(
       npc_gospel,
     );
   }
-  app_g_button_green(
-    overlay,
-    emoji_pray() +
-      emoji_wave() +
-      " Pray and then politely end the conversation",
-    overlay_close,
-  );
+  app_g_button_conversation_end(overlay, overlay_close);
 }
