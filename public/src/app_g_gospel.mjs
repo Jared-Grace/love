@@ -107,7 +107,7 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
         string_random_or_empty(
           " very much" + string_random_or_empty(" from the bottom of my heart"),
         ),
-      "Glory to God",
+      "Glory to God" + string_random_or_empty,
       "Praise God",
       "Hallelujah",
       "Amen",
