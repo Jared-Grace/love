@@ -1,3 +1,4 @@
+import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { trinity_name_prayer } from "../../../love/public/src/trinity_name_prayer.mjs";
@@ -137,7 +138,9 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
     let r = integer_random(1, 3);
     let taken = list_take(choices, r);
     let combined = list_concat_multiple([[believe], taken, [blessing]]);
-    const doxology = list_map_combine("!", combined);
+    const mapped = list_map_combine("!", combined);
+    let joined = list_join_space(args);
+    const doxology = mapped;
     app_g_npc_says(npc, overlay, game_prefix, doxology);
   }
 }
