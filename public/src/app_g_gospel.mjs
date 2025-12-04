@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { lambda_invoke_multiple } from "../../../love/public/src/lambda_invoke_multiple.mjs";
 import { app_g_bible_passage_button } from "../../../love/public/src/app_g_bible_passage_button.mjs";
 import { subtract_1 } from "../../../love/public/src/subtract_1.mjs";
@@ -29,6 +30,7 @@ import { global_function_property_get } from "../../../love/public/src/global_fu
 import { positive_is } from "../../../love/public/src/positive_is.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 export async function app_g_gospel(overlay, npc, game_prefix, npc_gospel) {
+  marker("1");
   html_clear(overlay);
   let p = positive_is(objections);
   if (p) {
