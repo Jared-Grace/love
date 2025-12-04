@@ -108,7 +108,7 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
           lambda3,
         );
         function lambda3() {
-          let value = object_property_get(object, property_name);
+          let value = object_property_get(player, "review");
           html_remove(b);
         }
       },
