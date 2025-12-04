@@ -98,6 +98,7 @@ export async function app_g_click(
       }
     }
   } else {
+    let overlay = app_g_overlay(div_map);
     let v = list_remove_first(review);
   }
   app_g_player_save(player);
