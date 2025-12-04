@@ -133,8 +133,7 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
       "Amen",
     ];
     list_shuffle(choices);
-    let size2 = list_size(choices);
-    let r = integer_random(1, size2);
+    let r = integer_random(1, 3);
     let taken = list_take(choices, r);
     const doxology = list_map_combine("!", taken);
     app_g_npc_says(npc, overlay, game_prefix, doxology);
