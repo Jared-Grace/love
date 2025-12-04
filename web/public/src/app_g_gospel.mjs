@@ -1,3 +1,4 @@
+import { app_g_button_conversation_end } from "../../../love/public/src/app_g_button_conversation_end.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
@@ -150,5 +151,6 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
     const mapped = list_map_combine("!", combined);
     const doxology = list_join_space(mapped);
     app_g_npc_says(npc, overlay, game_prefix, doxology);
+    app_g_button_conversation_end(overlay, overlay_close);
   }
 }
