@@ -57,7 +57,6 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
       "objections",
       chapter_code,
       lambda5,
-      fn,
     );
     let passages = object_property_get(o, "passages");
     list_shuffle(passages);
