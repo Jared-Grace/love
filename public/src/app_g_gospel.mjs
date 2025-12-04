@@ -1,3 +1,4 @@
+import { trinity_name_prayer } from "../../../love/public/src/trinity_name_prayer.mjs";
 import { string_random_or_empty } from "../../../love/public/src/string_random_or_empty.mjs";
 import { list_map_combine } from "../../../love/public/src/list_map_combine.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -102,6 +103,7 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
     list_shuffle(choices);
     lambda_invoke_multiple(choices);
   } else {
+    let v2 = trinity_name_prayer();
     const choices = [
       "Thank you" +
         string_random_or_empty(
@@ -121,7 +123,7 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
         ),
       "God bless you " +
         string_random_or_empty(
-          " in the name of " + list_random_item(["Jesus"]) + " ",
+          " in the name of " + list_random_item(["Jesus", v2]) + " ",
         ) +
         "amen",
     ];
