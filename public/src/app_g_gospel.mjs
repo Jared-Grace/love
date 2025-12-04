@@ -54,8 +54,11 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
       let destination = g_objection_generate_upload_path(chapter_code);
       let o = await firebase_storage_download_json(destination);
       let passages = object_property_get(o, "passages");
-      function lambda4(item) {}
-      each(list, lambda4);
+      function lambda4(passage) {
+        let o2 = g_objection_generate_property();
+        let objections = object_property_get(passage, o2);
+      }
+      each(passages, lambda4);
       return o;
     }
     let o = await global_function_property_nested_lambda(
