@@ -32,7 +32,6 @@ import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { g_objection_generate_upload_path } from "../../../love/public/src/g_objection_generate_upload_path.mjs";
-import { app_g_conversation } from "../../../love/public/src/app_g_conversation.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { positive_is } from "../../../love/public/src/positive_is.mjs";
@@ -46,7 +45,7 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
   if (p) {
     let books = global_function_property_get(app_g_main, "books");
     let chapter_code = global_function_property_get(
-      app_g_conversation,
+      app_g_gospel,
       "chapter_code",
     );
     async function lambda5() {
