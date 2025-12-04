@@ -98,7 +98,7 @@ export async function app_g_click(
       }
     }
   } else {
-    let v = list_remove_first(list);
+    let v = list_remove_first(review);
   }
   app_g_player_save(player);
 }
