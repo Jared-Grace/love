@@ -12,6 +12,7 @@ export async function function_param_move_first(param_name) {
     list_move_first(args, index);
   }
   function function_transform_current_lambda(ast) {
+    return;
     let params = null;
     ({ params, index } = function_param_index(ast, param_name));
     list_move_first(params, index);
