@@ -108,7 +108,7 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
         );
         function lambda3() {
           let review = object_property_get(player, "review");
-          list_add(list, {
+          list_add(review, {
             chapter_code,
             passage: passage_wrong,
           });
