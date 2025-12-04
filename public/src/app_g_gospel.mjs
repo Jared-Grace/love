@@ -1,3 +1,4 @@
+import { string_random_or_empty } from "../../../love/public/src/string_random_or_empty.mjs";
 import { list_map_combine } from "../../../love/public/src/list_map_combine.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { lambda_invoke_multiple } from "../../../love/public/src/lambda_invoke_multiple.mjs";
@@ -102,7 +103,7 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
     lambda_invoke_multiple(choices);
   } else {
     const choices = [
-      "Thank you",
+      "Thank you" + string_random_or_empty(),
       "Glory to God",
       "Praise God",
       "Hallelujah",
