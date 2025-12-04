@@ -1,3 +1,4 @@
+import { object_property_change } from "../../../love/public/src/object_property_change.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
@@ -124,9 +125,8 @@ export function app_g_conversation(
     let choices = [
       function correct() {
         function lambda() {
-          let objection = object_property_get(npc, "objection");
-          objection = objection - 1;
-          object_property_set(object, property_name, value);
+          const property = "objection";
+          object_property_change(npc, property, change);
           npc_objection();
         }
         app_g_bible_passage_button(
@@ -163,4 +163,8 @@ export function app_g_conversation(
       " Pray and then politely end the conversation",
     overlay_close,
   );
+  function change(objection) {
+    let v2 = objection - 1;
+    return v2;
+  }
 }
