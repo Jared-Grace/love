@@ -116,6 +116,12 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
             ", the son of" + string_random_or_empty(" the living") + " God",
           ),
       );
+    const blessing =
+      "God bless you " +
+      string_random_or_empty(
+        " in the name of " + list_random_item(["Jesus", t]) + " ",
+      ) +
+      "amen";
     const choices = [
       "Thank you" +
         string_random_or_empty(
@@ -125,11 +131,7 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
       "Praise God" + string_random_or_empty(", our Savior"),
       "Hallelujah",
       "Amen",
-      "God bless you " +
-        string_random_or_empty(
-          " in the name of " + list_random_item(["Jesus", t]) + " ",
-        ) +
-        "amen",
+      blessing,
     ];
     list_shuffle(choices);
     let size2 = list_size(choices);
