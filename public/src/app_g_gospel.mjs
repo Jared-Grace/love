@@ -29,7 +29,7 @@ import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { positive_is } from "../../../love/public/src/positive_is.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-export async function app_g_gospel(overlay, npc, game_prefix, npc_gospel) {
+export async function app_g_gospel(overlay, npc, game_prefix) {
   marker("1");
   html_clear(overlay);
   let p = positive_is(objections);
@@ -79,7 +79,7 @@ export async function app_g_gospel(overlay, npc, game_prefix, npc_gospel) {
       function correct() {
         async function lambda() {
           object_property_change(npc, "objections", subtract_1);
-          await app_g_gospel(overlay, npc, game_prefix, npc_gospel);
+          await app_g_gospel(overlay, npc, game_prefix);
         }
         app_g_bible_passage_button(
           passage,
