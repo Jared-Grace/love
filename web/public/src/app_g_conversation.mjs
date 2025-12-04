@@ -129,7 +129,8 @@ export function app_g_conversation(
         function lambda() {
           objections = object_property_change(npc, "objections", subtract_1);
           let p = positive_is(objections);
-          if (npc_objection()) {
+          if (p) {
+            npc_objection();
           }
         }
         app_g_bible_passage_button(
