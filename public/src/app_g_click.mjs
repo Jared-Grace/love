@@ -35,66 +35,66 @@ export async function app_g_click(
 ) {
   let player = app_g_player_get();
   let review = object_property_get(player, "review");
-  let e2 = list_empty_is(list);
-  if (false) {
-  }
-  let { npcs, coordinates } = map;
-  marker("1");
-  const tile_e = e.target.closest("." + tile_class);
-  let tile = html_component_wrap(tile_e);
-  let json = html_data_get(tile, "coordinates");
-  let clicked_coordinates = json_from(json);
-  let tutorial = global_function_property_get(app_g_refresh, "tutorial");
-  if (equal_not(tutorial, null)) {
-    html_remove(tutorial);
-  }
-  let distance2 = g_distance(player, clicked_coordinates);
-  if (equal(distance2, 0)) {
-    let overlay = app_g_overlay(div_map);
-    app_g_menu(overlay, player);
-  } else {
-    function lambda17(npc) {
-      let e = object_includes(npc, clicked_coordinates);
-      return e;
+  let e2 = list_empty_is(review);
+  if (e2) {
+    let { npcs, coordinates } = map;
+    marker("1");
+    const tile_e = e.target.closest("." + tile_class);
+    let tile = html_component_wrap(tile_e);
+    let json = html_data_get(tile, "coordinates");
+    let clicked_coordinates = json_from(json);
+    let tutorial = global_function_property_get(app_g_refresh, "tutorial");
+    if (equal_not(tutorial, null)) {
+      html_remove(tutorial);
     }
-    let npcs_matched = list_filter(npcs, lambda17);
-    let npc_clicked = list_empty_not_is(npcs_matched);
-    let coordinates_move_to = null;
-    if (npc_clicked) {
-      function lambda18(item) {
-        let distance = g_distance(clicked_coordinates, item);
-        let v2 = distance === 1;
-        return v2;
-      }
-      let filtered3 = list_filter(coordinates, lambda18);
-      list_shuffle(filtered3);
-      function lambda19(item3) {
-        let distance = g_distance(player, item3);
-        return distance;
-      }
-      list_sort_number_mapper(filtered3, lambda19);
-      coordinates_move_to = list_first(filtered3);
+    let distance2 = g_distance(player, clicked_coordinates);
+    if (equal(distance2, 0)) {
+      let overlay = app_g_overlay(div_map);
+      app_g_menu(overlay, player);
     } else {
-      coordinates_move_to = clicked_coordinates;
-    }
-    let distance = g_distance(player, coordinates_move_to);
-    object_assign(player, coordinates_move_to);
-    const away = distance >= 1;
-    if (away) {
-      let properties = ["left", "top"];
-      function on_transition_begin() {
-        g_img_square_style_position_object(player, player_img_c);
+      function lambda17(npc) {
+        let e = object_includes(npc, clicked_coordinates);
+        return e;
       }
-      await html_on_transitionend(
-        properties,
-        player_img_c,
-        on_transition_begin,
-      );
-    }
-    let container = object_property_get(div_map, "container");
-    await html_scroll_center_container(player_img_c, container);
-    if (npc_clicked) {
-      app_g_click_npc(div_map, npcs_matched, player, game_prefix);
+      let npcs_matched = list_filter(npcs, lambda17);
+      let npc_clicked = list_empty_not_is(npcs_matched);
+      let coordinates_move_to = null;
+      if (npc_clicked) {
+        function lambda18(item) {
+          let distance = g_distance(clicked_coordinates, item);
+          let v2 = distance === 1;
+          return v2;
+        }
+        let filtered3 = list_filter(coordinates, lambda18);
+        list_shuffle(filtered3);
+        function lambda19(item3) {
+          let distance = g_distance(player, item3);
+          return distance;
+        }
+        list_sort_number_mapper(filtered3, lambda19);
+        coordinates_move_to = list_first(filtered3);
+      } else {
+        coordinates_move_to = clicked_coordinates;
+      }
+      let distance = g_distance(player, coordinates_move_to);
+      object_assign(player, coordinates_move_to);
+      const away = distance >= 1;
+      if (away) {
+        let properties = ["left", "top"];
+        function on_transition_begin() {
+          g_img_square_style_position_object(player, player_img_c);
+        }
+        await html_on_transitionend(
+          properties,
+          player_img_c,
+          on_transition_begin,
+        );
+      }
+      let container = object_property_get(div_map, "container");
+      await html_scroll_center_container(player_img_c, container);
+      if (npc_clicked) {
+        app_g_click_npc(div_map, npcs_matched, player, game_prefix);
+      }
     }
   }
   app_g_player_save(player);
