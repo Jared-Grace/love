@@ -132,6 +132,7 @@ export function app_g_conversation(
           if (p) {
             npc_objection();
           }
+          $el;
         }
         app_g_bible_passage_button(
           passage,
