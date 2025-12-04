@@ -30,6 +30,7 @@ import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { positive_is } from "../../../love/public/src/positive_is.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
+import { integer_random } from "./integer_random.mjs";
 export async function app_g_gospel(overlay, npc, game_prefix) {
   marker("1");
   html_clear(overlay);
@@ -110,7 +111,8 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
       "God bless you amen",
     ];
     let combineds = list_map_combine(right, list);
-    list_shuffle(list3);
+    list_shuffle(combineds);
+    let r = integer_random(min, max);
     const doxology = choices;
     app_g_npc_says(npc, overlay, game_prefix, doxology);
   }
