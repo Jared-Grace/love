@@ -38,7 +38,7 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
   marker("1");
   html_clear(overlay);
   let objections2 = object_property_get(npc, "objections");
-  let p = positive_is(objections);
+  let p = positive_is(objections2);
   if (p) {
     let books = global_function_property_get(app_g_main, "books");
     let chapter_code = global_function_property_get(
