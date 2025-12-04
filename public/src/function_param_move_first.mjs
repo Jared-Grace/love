@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { function_param_index } from "../../../love/public/src/function_param_index.mjs";
 import { list_remove_at } from "../../../love/public/src/list_remove_at.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -15,5 +16,6 @@ export async function function_param_move_first(param_name) {
     let params = null;
     ({ params, index } = function_param_index(ast, param_name));
     list_remove_at(params, index);
+    list_add(list, item);
   }
 }
