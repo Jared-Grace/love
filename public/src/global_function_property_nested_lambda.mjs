@@ -6,6 +6,7 @@ export async function global_function_property_nested_lambda(
   property_name,
   property_name_nested,
   lambda,
+  fn,
 ) {
   marker("1");
   let value = global_function_property_get(app_g_conversation, property_name);
