@@ -1,3 +1,6 @@
+import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
+import { app_g_p_text } from "../../../love/public/src/app_g_p_text.mjs";
+import { app_g_container } from "../../../love/public/src/app_g_container.mjs";
 import { list_remove_first } from "../../../love/public/src/list_remove_first.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { html_scroll_center_container } from "../../../love/public/src/html_scroll_center_container.mjs";
@@ -100,6 +103,12 @@ export async function app_g_click(
   } else {
     let overlay = app_g_overlay(div_map);
     let v = list_remove_first(review);
+    let container = app_g_container(overlay);
+    app_g_p_text(
+      container,
+      emoji_pray() +
+        " You remember that you have not prayed, yet, before your next conversation!",
+    );
   }
   app_g_player_save(player);
 }
