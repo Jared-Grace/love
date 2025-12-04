@@ -4,7 +4,7 @@ import { emoji_trinity } from "../../../love/public/src/emoji_trinity.mjs";
 export function prayer_start() {
   let v =
     emoji_bow() +
-    " In the name" +
+    " In the name of " +
     trinity_name_prayer() +
     " " +
     emoji_trinity() +
