@@ -111,7 +111,7 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
       "Praise God" + string_random_or_empty(", our Savior"),
       "Hallelujah",
       "Amen",
-      "I believe",
+      "I believe" + string_random_or_empty(", in Jesus"),
       "God bless you amen",
     ];
     let combineds = list_map_combine(right, list);
