@@ -118,8 +118,9 @@ export async function app_reply_main() {
   }
   let component4 = html_button(root, "❤️", love);
   html_button(root, "Reset 1", verse_random_reset_1);
-  let r = range_1(4);
-  let mapped = list_map(list3, function lambda14(item4) {});
+  let r = range(4);
+  function lambda14(item4) {}
+  let mapped = list_map(list3, lambda14);
   function lambda13(item2) {}
   each(list2, lambda13);
   html_button(root, "Reset 2", verse_random_reset_2);
