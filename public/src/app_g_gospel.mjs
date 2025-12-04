@@ -125,7 +125,6 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
       "Praise God" + string_random_or_empty(", our Savior"),
       "Hallelujah",
       "Amen",
-      believe,
       "God bless you " +
         string_random_or_empty(
           " in the name of " + list_random_item(["Jesus", t]) + " ",
