@@ -21,6 +21,7 @@ export function app_g_conversation(
   game_prefix,
   overlay_close,
 ) {
+  let on_end_list = [];
   function conversation_end() {
     function lambda(item) {}
     each(list, lambda);
