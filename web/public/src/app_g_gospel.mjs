@@ -107,13 +107,17 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
     list_shuffle(choices);
     lambda_invoke_multiple(choices);
   } else {
+    function jesus_christ() {
+      let v = "Jesus" + string_random_or_empty(" Christ");
+      return v;
+    }
     let t = trinity_name_prayer();
     const believe =
       string_random_or_empty("Now ") +
       "I believe" +
       string_random_or_empty(
-        ", in Jesus" +
-          string_random_or_empty(" Christ") +
+        ", in " +
+          jesus_christ() +
           string_random_or_empty(
             ", the son of" + string_random_or_empty(" the living") + " God",
           ),
@@ -124,10 +128,6 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
         " in the name of " + list_random_item(["Jesus", t]) + " ",
       ) +
       "amen";
-    (function jesus_christ() {
-      let v = "Jesus" + string_random_or_empty(" Christ");
-      return v;
-    });
     const choices = [
       "Thank you" +
         string_random_or_empty(
@@ -138,7 +138,7 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
         string_random_or_empty(
           ", the Father of " +
             string_random_or_empty("our Lord ") +
-            jesus_christ,
+            jesus_christ(),
         ),
       "Hallelujah",
       "Amen",
