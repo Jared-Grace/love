@@ -66,9 +66,9 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
     let passages = object_property_get(o, "passages");
     list_shuffle(passages);
     let passage = list_last(passages);
-    let o2 = g_objection_generate_property();
     let text = object_property_get(passage, "text");
     let words = string_to_words(text);
+    let o2 = g_objection_generate_property();
     let objections = object_property_get(passage, o2);
     let separator = newline_windows_escaped();
     let split = string_split(objections, separator);
