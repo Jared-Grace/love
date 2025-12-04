@@ -77,15 +77,17 @@ export function app_g_click_npc(div_map, npcs_matched, player, game_prefix) {
       });
     }
     app_g_button_back(overlay, lambda21);
-  } else if (e2) {
-    app_g_conversation(
-      prayer,
-      npcs_matched,
-      overlay,
-      player,
-      game_prefix,
-      overlay_close,
-    );
   } else {
+    if (e2) {
+    } else {
+      app_g_conversation(
+        prayer,
+        npcs_matched,
+        overlay,
+        player,
+        game_prefix,
+        overlay_close,
+      );
+    }
   }
 }
