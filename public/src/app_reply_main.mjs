@@ -1,3 +1,4 @@
+import { multiply } from "../../../love/public/src/multiply.mjs";
 import { range } from "../../../love/public/src/range.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
