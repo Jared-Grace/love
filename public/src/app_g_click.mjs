@@ -1,3 +1,4 @@
+import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { html_scroll_center_container } from "../../../love/public/src/html_scroll_center_container.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -31,6 +32,7 @@ export async function app_g_click(
   map,
   game_prefix,
 ) {
+  let player = app_g_player_get();
   let { npcs, coordinates } = map;
   marker("1");
   const tile_e = e.target.closest("." + tile_class);
