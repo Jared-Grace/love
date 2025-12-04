@@ -1,3 +1,4 @@
+import { list_remove_first } from "../../../love/public/src/list_remove_first.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { html_scroll_center_container } from "../../../love/public/src/html_scroll_center_container.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -97,6 +98,7 @@ export async function app_g_click(
       }
     }
   } else {
+    let v = list_remove_first(list);
   }
   app_g_player_save(player);
 }
