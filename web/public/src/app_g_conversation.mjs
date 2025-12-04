@@ -126,7 +126,7 @@ export function app_g_conversation(
     let choices = [
       function correct() {
         function lambda() {
-          object_property_change(npc, "objection", subtract_1);
+          object_property_change(npc, "objections", subtract_1);
           npc_objection();
         }
         app_g_bible_passage_button(
@@ -148,7 +148,7 @@ export function app_g_conversation(
     lambda_invoke_multiple(choices);
   }
   app_g_container_text(overlay, "What would you like to do?");
-  let name_npc2 = object_property_get(npc, "name");
+  let name_npc2 = object_property_get(npc, "name");$g$npc$
   if (false) {
     app_g_button_green(
       overlay,
