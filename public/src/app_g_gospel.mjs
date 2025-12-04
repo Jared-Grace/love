@@ -1,3 +1,4 @@
+import { object_property_lambda } from "../../../love/public/src/object_property_lambda.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { app_g_button_conversation_end } from "../../../love/public/src/app_g_button_conversation_end.mjs";
@@ -55,6 +56,11 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
       return o;
     }
     let value = global_function_property_get(app_g_conversation, "objections");
+    let value2 = object_property_lambda(
+      object,
+      property_name,
+      function lambda6() {},
+    );
     let o = await global_function_property_initialize_async(
       app_g_conversation,
       "objections",
