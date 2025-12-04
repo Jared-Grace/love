@@ -18,6 +18,7 @@ import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
+import { json_format_to } from "./json_format_to.mjs";
 export function app_g_click_npc(div_map, npcs_matched, player, game_prefix) {
   marker("1");
   let overlay = app_g_overlay(div_map);
@@ -79,6 +80,8 @@ export function app_g_click_npc(div_map, npcs_matched, player, game_prefix) {
     let ne = list_empty_not_is(review);
     if (ne) {
       let v = list_remove_first(review);
+      let v2 = json_format_to(v);
+      alert(v2);
     } else {
       app_g_conversation(
         prayer,
