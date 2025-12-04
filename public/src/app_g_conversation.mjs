@@ -20,6 +20,7 @@ export function app_g_conversation(
   game_prefix,
   overlay_close,
 ) {
+  () => {};
   marker("1");
   object_property_set(player, "conversed", true);
   object_property_set(prayer, "conversation", false);
