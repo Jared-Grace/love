@@ -160,7 +160,7 @@ export function app_g_conversation(
         npc,
         overlay,
         game_prefix,
-        "Thank you! Glory to God! Praise God! Hallelujah! Amen!",
+        "Thank you! Glory to God! Praise God! Hallelujah! Amen! I believe!",
       );
     }
   }
