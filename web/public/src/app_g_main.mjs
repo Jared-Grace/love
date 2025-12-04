@@ -173,6 +173,7 @@ export async function app_g_main() {
     let name2 = object_property_get(gender, "name");
     object_property_set(npc, "gender", name2);
     object_property_set(npc, "meet", false);
+    object_property_set(npc, "objections", 2);
   }
   each_index(npcs, npc_initialize);
   let player_list = list_remove_last(coordinates);
