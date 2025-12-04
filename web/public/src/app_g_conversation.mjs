@@ -22,7 +22,8 @@ export function app_g_conversation(
   overlay_close,
 ) {
   function conversation_end() {
-    each(list, function lambda(item) {});
+    function lambda(item) {}
+    each(list, lambda);
     overlay_close();
   }
   marker("1");
