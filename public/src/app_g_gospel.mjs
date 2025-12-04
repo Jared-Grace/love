@@ -102,7 +102,13 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
         function lambda3() {
           alert("wrong");
         }
-        app_g_bible_passage_button(item, chapter_code, books, overlay, lambda3);
+        let b = app_g_bible_passage_button(
+          item,
+          chapter_code,
+          books,
+          overlay,
+          lambda3,
+        );
       },
     ];
     list_shuffle(choices);
