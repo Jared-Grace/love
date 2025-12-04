@@ -21,8 +21,6 @@ import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 export function app_g_click_npc(div_map, npcs_matched, player, game_prefix) {
   marker("1");
   let overlay = app_g_overlay(div_map);
-  let e2 = list_empty_is(review);
-  let v = list_remove_first(review);
   let container = app_g_container(overlay);
   app_g_p_text(
     container,
@@ -37,7 +35,6 @@ export function app_g_click_npc(div_map, npcs_matched, player, game_prefix) {
     flexDirection: "column",
     gap: "0px",
   });
-  let review = object_property_get(player, "review");
   let prayer = object_property_get(player, "prayer");
   let conversation = object_property_get(prayer, "conversation");
   if (not(conversation)) {
@@ -78,6 +75,9 @@ export function app_g_click_npc(div_map, npcs_matched, player, game_prefix) {
     }
     app_g_button_back(overlay, lambda21);
   } else {
+    let e2 = list_empty_is(review);
+    let v = list_remove_first(review);
+    let review = object_property_get(player, "review");
     if (e2) {
     } else {
       app_g_conversation(
