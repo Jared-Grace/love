@@ -124,7 +124,7 @@ export function app_g_conversation(
     let choices = [
       function correct() {
         function lambda() {
-          let objection = object_property_get(npc, "objection");
+          let objection = object_property_get(npc, "objection");st
           npc_objection();
         }
         app_g_bible_passage_button(
