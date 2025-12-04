@@ -131,9 +131,8 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
     list_shuffle(choices);
     let size2 = list_size(choices);
     let r = integer_random(1, size2);
-    let taken = list_take(list3, count);
-    let combineds = list_map_combine("!", list);
-    const doxology = choices;
+    let taken = list_take(choices, r);
+    const doxology = list_map_combine("!", taken);
     app_g_npc_says(npc, overlay, game_prefix, doxology);
   }
 }
