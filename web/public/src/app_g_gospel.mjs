@@ -115,7 +115,7 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
         string_random_or_empty(
           ", in Jesus" +
             string_random_or_empty(" Christ") +
-            string_random_or_empty(", the son of God"),
+            string_random_or_empty(", the son of " + "" + "God"),
         ),
       "God bless you amen",
     ];
