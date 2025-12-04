@@ -131,8 +131,7 @@ export function app_g_conversation(
           let p = positive_is(objections);
           if (p) {
             npc_objection();
-          }
-          $el;
+          }$e
         }
         app_g_bible_passage_button(
           passage,
