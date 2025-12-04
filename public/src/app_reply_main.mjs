@@ -1,3 +1,4 @@
+import { range } from "../../../love/public/src/range.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { prayer_blessing_expand } from "../../../love/public/src/prayer_blessing_expand.mjs";
@@ -116,7 +117,8 @@ export async function app_reply_main() {
     languages_reset();
   }
   let component4 = html_button(root, "❤️", love);
-  html_button(root, "Reset 1", verse_random_reset_1);rg
+  html_button(root, "Reset 1", verse_random_reset_1);
+  let r = range(count);
   function lambda13(item2) {}
   each(list2, lambda13);
   html_button(root, "Reset 2", verse_random_reset_2);
