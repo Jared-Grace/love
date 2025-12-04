@@ -81,7 +81,7 @@ export function app_g_conversation(
   let name_player = object_property_get(player, "name");
   const npc_says = v + " " + name_player + g_random_dot_bang() + meet_message;
   app_g_npc_says(npc, overlay, game_prefix, npc_says);
-  async function npc_objection() {
+  async function npc_gospel() {
     html_clear(overlay);
     let books = global_function_property_get(app_g_main, "books");
     let chapter_code = global_function_property_get(
@@ -130,7 +130,7 @@ export function app_g_conversation(
           objections = object_property_change(npc, "objections", subtract_1);
           let p = positive_is(objections);
           if (p) {
-            npc_objection();
+            npc_gospel();
           } else {
           }
         }
@@ -161,7 +161,7 @@ export function app_g_conversation(
       "Tell " +
         name_npc2 +
         " that Jesus died, was buried and rose to life and share the gospel!",
-      npc_objection,
+      npc_gospel,
     );
   }
   app_g_button_green(
