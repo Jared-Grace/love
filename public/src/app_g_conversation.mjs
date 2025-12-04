@@ -1,3 +1,4 @@
+import { subtract_1 } from "../../../love/public/src/subtract_1.mjs";
 import { object_property_change } from "../../../love/public/src/object_property_change.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
@@ -163,7 +164,7 @@ export function app_g_conversation(
     overlay_close,
   );
   function change(objection) {
-    let v2 = objection - 1;
+    let v2 = subtract_1(objection);
     return v2;
   }
 }
