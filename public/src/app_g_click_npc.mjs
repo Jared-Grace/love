@@ -77,7 +77,7 @@ export function app_g_click_npc(div_map, npcs_matched, player, game_prefix) {
   } else {
     let review = object_property_get(player, "review");
     let ne = list_empty_not_is(review);
-    if (e2) {
+    if (ne) {
       let v = list_remove_first(review);
     } else {
       app_g_conversation(
