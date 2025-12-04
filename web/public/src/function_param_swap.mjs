@@ -4,8 +4,10 @@ import { function_transform_current } from "../../../love/public/src/function_tr
 import { list_swap } from "../../../love/public/src/list_swap.mjs";
 import { js_declaration_param_named } from "../../../love/public/src/js_declaration_param_named.mjs";
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
+import { error } from "./error.mjs";
 export async function function_param_swap(param_name_a, param_name_b) {
   "TODO: finish this; consider similar code in " + function_params_new.name;
+  error(message);
   marker("1");
   await function_transform_current(lambda);
   function lambda(ast) {
