@@ -126,7 +126,7 @@ export function app_g_conversation(
     let choices = [
       function correct() {
         function lambda() {
-          object_property_change(npc, "objection", change);
+          object_property_change(npc, "objection", subtract_1);
           npc_objection();
         }
         app_g_bible_passage_button(
@@ -163,8 +163,4 @@ export function app_g_conversation(
       " Pray and then politely end the conversation",
     overlay_close,
   );
-  function change(objection) {
-    let v2 = subtract_1(objection);
-    return v2;
-  }
 }
