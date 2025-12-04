@@ -125,6 +125,7 @@ export function app_g_conversation(
       function correct() {
         function lambda() {
           let objection = object_property_get(npc, "objection");
+          objection = objection - 1;
           object_property_set(object, property_name, value);
           npc_objection();
         }
