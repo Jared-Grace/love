@@ -120,10 +120,7 @@ export async function app_g_gospel(
         );
         function lambda3() {
           let review = object_property_get(player, "review");
-          list_add(review, {
-            chapter_code,
-            passage: passage_wrong,
-          });
+          list_add(conversation_end_list, () => {});
           html_remove(b);
         }
       },
