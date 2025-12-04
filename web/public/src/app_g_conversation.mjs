@@ -21,9 +21,9 @@ export function app_g_conversation(
   game_prefix,
   overlay_close,
 ) {
-  let on_end_list = [];
+  let conversation_end_list = [];
   function conversation_end() {
-    lambda_invoke_multiple(on_end_list);
+    lambda_invoke_multiple(conversation_end_list);
     overlay_close();
   }
   marker("1");
