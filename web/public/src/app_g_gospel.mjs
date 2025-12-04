@@ -103,7 +103,7 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
     lambda_invoke_multiple(choices);
   } else {
     const choices = [
-      "Thank you" + string_random_or_empty(),
+      "Thank you" + string_random_or_empty(" very much"),
       "Glory to God",
       "Praise God",
       "Hallelujah",
