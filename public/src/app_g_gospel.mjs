@@ -130,7 +130,8 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
           " very much" + string_random_or_empty(" from the bottom of my heart"),
         ),
       "Glory to God" + string_random_or_empty(" in the highest"),
-      "Praise God" + string_random_or_empty(", our Savior"),
+      "Praise God, the Father of our Lord Jesus Christ" +
+        string_random_or_empty(", our Savior"),
       "Hallelujah",
       "Amen",
     ];
