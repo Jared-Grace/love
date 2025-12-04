@@ -96,6 +96,7 @@ export async function app_g_click(
         app_g_click_npc(div_map, npcs_matched, player, game_prefix);
       }
     }
+  } else {
   }
   app_g_player_save(player);
 }
