@@ -267,6 +267,7 @@
   "pnm": "path_name",
   "ls1": "list_size_1",
   "irn": "integer_random",
-  "prn": "promise_new"
+  "prn": "promise_new",
+  "pf": "function_param_move_first"
  }
 }
