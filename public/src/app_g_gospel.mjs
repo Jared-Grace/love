@@ -54,7 +54,7 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
       return o;
     }
     let o = await global_function_property_nested_lambda(
-      fn,
+      app_g_gospel,
       "objections",
       chapter_code,
       lambda5,
