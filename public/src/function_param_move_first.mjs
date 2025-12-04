@@ -16,6 +16,6 @@ export async function function_param_move_first(param_name) {
     let params = null;
     ({ params, index } = function_param_index(ast, param_name));
     let r = list_remove_at(params, index);
-    list_add_first(params, item);
+    list_add_first(params, r);
   }
 }
