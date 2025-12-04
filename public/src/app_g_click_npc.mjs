@@ -22,12 +22,6 @@ import { json_format_to } from "./json_format_to.mjs";
 export function app_g_click_npc(div_map, npcs_matched, player, game_prefix) {
   marker("1");
   let overlay = app_g_overlay(div_map);
-  let container = app_g_container(overlay);
-  app_g_p_text(
-    container,
-    emoji_pray() +
-      " You remember that you have not prayed, yet, before your next conversation!",
-  );
   function overlay_close() {
     html_remove(overlay);
   }
