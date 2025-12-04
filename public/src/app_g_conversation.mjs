@@ -124,7 +124,7 @@ export function app_g_conversation(
     app_g_container_text(overlay, "What would you like to say?");
     let choices = [
       function correct() {
-        function lambda() {
+        function lambda() {$a
           const property = "objection";
           object_property_change(npc, property, change);
           npc_objection();
