@@ -137,7 +137,7 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
     let r = integer_random(1, 3);
     let taken = list_take(choices, r);
     let combined = list_concat_multiple([[believe], taken, [blessing]]);
-    const doxology = list_map_combine("!", taken);
+    const doxology = list_map_combine("!", combined);
     app_g_npc_says(npc, overlay, game_prefix, doxology);
   }
 }
