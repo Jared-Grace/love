@@ -34,6 +34,7 @@ export async function app_g_click(
 ) {
   let player = app_g_player_get();
   let review = object_property_get(player, "review");
+  let ne = list_empty_not_is(list);
   if (false) {
   }
   let { npcs, coordinates } = map;
