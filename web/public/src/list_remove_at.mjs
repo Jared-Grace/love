@@ -1,3 +1,3 @@
 export function list_remove_at(list, index) {
-  list.splice(index, 1);
+  return list.splice(index, 1);
 }
