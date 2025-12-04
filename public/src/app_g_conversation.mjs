@@ -1,4 +1,3 @@
-import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { subtract_1 } from "../../../love/public/src/subtract_1.mjs";
 import { object_property_change } from "../../../love/public/src/object_property_change.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
@@ -150,9 +149,8 @@ export function app_g_conversation(
   }
   app_g_container_text(overlay, "What would you like to do?");
   let name_npc2 = object_property_get(npc, "name");
-  let objections2 = object_property_get(npc, "objections");
-  let e = list_empty_is(list);
-  if (false) {
+  let christian = object_property_get(npc, "christian");
+  if (not(christian)) {
     app_g_button_green(
       overlay,
       "Tell " +
