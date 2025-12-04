@@ -149,6 +149,8 @@ export function app_g_conversation(
   }
   app_g_container_text(overlay, "What would you like to do?");
   let name_npc2 = object_property_get(npc, "name");
+  if (false) {
+  }
   app_g_button_green(
     overlay,
     "Tell " +
