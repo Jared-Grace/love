@@ -42,7 +42,6 @@ export async function app_g_gospel(
   npc,
   game_prefix,
   conversation_end,
-  conversation_end_list,
 ) {
   marker("1");
   html_clear(overlay);
@@ -93,13 +92,7 @@ export async function app_g_gospel(
       function correct() {
         async function lambda() {
           object_property_change(npc, "objections", subtract_1);
-          await app_g_gospel(
-            overlay,
-            npc,
-            game_prefix,
-            conversation_end,
-            conversation_end_list,
-          );
+          await app_g_gospel(overlay, npc, game_prefix, conversation_end);
         }
         app_g_bible_passage_button(
           passage,
