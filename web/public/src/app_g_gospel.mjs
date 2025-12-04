@@ -29,7 +29,7 @@ import { g_objection_generate_property } from "../../../love/public/src/g_object
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { global_function_property_async } from "../../../love/public/src/global_function_property_async.mjs";
+import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { g_objection_generate_upload_path } from "../../../love/public/src/g_objection_generate_upload_path.mjs";
 import { app_g_conversation } from "../../../love/public/src/app_g_conversation.mjs";
@@ -37,7 +37,7 @@ import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { positive_is } from "../../../love/public/src/positive_is.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { integer_random } from "./integer_random.mjs";
+import { integer_random } from "../../../love/public/src/integer_random.mjs";
 export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
   marker("1");
   html_clear(overlay);
@@ -54,7 +54,7 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
       let o = await firebase_storage_download_json(destination);
       return o;
     }
-    let o = await global_function_property_async(
+    let o = await global_function_property_initialize_async(
       app_g_conversation,
       "objections",
       lambda5,
