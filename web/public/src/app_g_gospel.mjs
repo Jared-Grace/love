@@ -30,7 +30,6 @@ import { g_objection_generate_property } from "../../../love/public/src/g_object
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { g_objection_generate_upload_path } from "../../../love/public/src/g_objection_generate_upload_path.mjs";
 import { app_g_conversation } from "../../../love/public/src/app_g_conversation.mjs";
@@ -57,12 +56,7 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
     }
     const property_name = "objections";
     let value = global_function_property_get(app_g_conversation, property_name);
-    let value2 = object_property_lambda_async(value, chapter_code, lambda5);
-    let o = await global_function_property_initialize_async(
-      app_g_conversation,
-      "objections",
-      lambda5,
-    );
+    let o = object_property_lambda_async(value, chapter_code, lambda5);
     let passages = object_property_get(o, "passages");
     list_shuffle(passages);
     let passage = list_last(passages);
