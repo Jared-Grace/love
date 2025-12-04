@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { app_g_button_conversation_end } from "../../../love/public/src/app_g_button_conversation_end.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
@@ -108,7 +109,8 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
           lambda3,
         );
         function lambda3() {
-          let value = object_property_get(player, "review");
+          let review = object_property_get(player, "review");
+          list_add(list, item2);
           html_remove(b);
         }
       },
