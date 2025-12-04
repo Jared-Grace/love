@@ -17,8 +17,8 @@ export function app_g_menu(overlay, player) {
   let text = emoji_pray() + " Pray";
   function lambda7() {
     html_clear(overlay);
-    async function lambda23() {
-      await app_g_menu(overlay, player);
+    function lambda23() {
+      app_g_menu(overlay, player);
     }
     let button2 = app_g_button_back(overlay, lambda23);
     function lambda22() {
