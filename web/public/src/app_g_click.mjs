@@ -1,11 +1,5 @@
-import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
-import { app_g_p_text } from "../../../love/public/src/app_g_p_text.mjs";
-import { app_g_container } from "../../../love/public/src/app_g_container.mjs";
-import { list_remove_first } from "../../../love/public/src/list_remove_first.mjs";
-import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { html_scroll_center_container } from "../../../love/public/src/html_scroll_center_container.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_click_npc } from "../../../love/public/src/app_g_click_npc.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
@@ -37,78 +31,64 @@ export async function app_g_click(
   map,
   game_prefix,
 ) {
-  let player = app_g_player_get();
-  let review = object_property_get(player, "review");
-  let e2 = list_empty_is(review);
-  if (e2) {
-    let { npcs, coordinates } = map;
-    marker("1");
-    const tile_e = e.target.closest("." + tile_class);
-    let tile = html_component_wrap(tile_e);
-    let json = html_data_get(tile, "coordinates");
-    let clicked_coordinates = json_from(json);
-    let tutorial = global_function_property_get(app_g_refresh, "tutorial");
-    if (equal_not(tutorial, null)) {
-      html_remove(tutorial);
-    }
-    let distance2 = g_distance(player, clicked_coordinates);
-    if (equal(distance2, 0)) {
-      let overlay = app_g_overlay(div_map);
-      app_g_menu(overlay, player);
-    } else {
-      function lambda17(npc) {
-        let e = object_includes(npc, clicked_coordinates);
-        return e;
-      }
-      let npcs_matched = list_filter(npcs, lambda17);
-      let npc_clicked = list_empty_not_is(npcs_matched);
-      let coordinates_move_to = null;
-      if (npc_clicked) {
-        function lambda18(item) {
-          let distance = g_distance(clicked_coordinates, item);
-          let v2 = distance === 1;
-          return v2;
-        }
-        let filtered3 = list_filter(coordinates, lambda18);
-        list_shuffle(filtered3);
-        function lambda19(item3) {
-          let distance = g_distance(player, item3);
-          return distance;
-        }
-        list_sort_number_mapper(filtered3, lambda19);
-        coordinates_move_to = list_first(filtered3);
-      } else {
-        coordinates_move_to = clicked_coordinates;
-      }
-      let distance = g_distance(player, coordinates_move_to);
-      object_assign(player, coordinates_move_to);
-      const away = distance >= 1;
-      if (away) {
-        let properties = ["left", "top"];
-        function on_transition_begin() {
-          g_img_square_style_position_object(player, player_img_c);
-        }
-        await html_on_transitionend(
-          properties,
-          player_img_c,
-          on_transition_begin,
-        );
-      }
-      let container = object_property_get(div_map, "container");
-      await html_scroll_center_container(player_img_c, container);
-      if (npc_clicked) {
-        app_g_click_npc(div_map, npcs_matched, player, game_prefix);
-      }
-    }
-  } else {
+  let { npcs, coordinates } = map;
+  marker("1");
+  const tile_e = e.target.closest("." + tile_class);
+  let tile = html_component_wrap(tile_e);
+  let json = html_data_get(tile, "coordinates");
+  let clicked_coordinates = json_from(json);
+  let tutorial = global_function_property_get(app_g_refresh, "tutorial");
+  if (equal_not(tutorial, null)) {
+    html_remove(tutorial);
+  }
+  let distance2 = g_distance(player, clicked_coordinates);
+  if (equal(distance2, 0)) {
     let overlay = app_g_overlay(div_map);
-    let v = list_remove_first(review);
-    let container = app_g_container(overlay);
-    app_g_p_text(
-      container,
-      emoji_pray() +
-        " You remember that you have not prayed, yet, before your next conversation!",
-    );
+    app_g_menu(overlay, player);
+  } else {
+    function lambda17(npc) {
+      let e = object_includes(npc, clicked_coordinates);
+      return e;
+    }
+    let npcs_matched = list_filter(npcs, lambda17);
+    let npc_clicked = list_empty_not_is(npcs_matched);
+    let coordinates_move_to = null;
+    if (npc_clicked) {
+      function lambda18(item) {
+        let distance = g_distance(clicked_coordinates, item);
+        let v2 = distance === 1;
+        return v2;
+      }
+      let filtered3 = list_filter(coordinates, lambda18);
+      list_shuffle(filtered3);
+      function lambda19(item3) {
+        let distance = g_distance(player, item3);
+        return distance;
+      }
+      list_sort_number_mapper(filtered3, lambda19);
+      coordinates_move_to = list_first(filtered3);
+    } else {
+      coordinates_move_to = clicked_coordinates;
+    }
+    let distance = g_distance(player, coordinates_move_to);
+    object_assign(player, coordinates_move_to);
+    const away = distance >= 1;
+    if (away) {
+      let properties = ["left", "top"];
+      function on_transition_begin() {
+        g_img_square_style_position_object(player, player_img_c);
+      }
+      await html_on_transitionend(
+        properties,
+        player_img_c,
+        on_transition_begin,
+      );
+    }
+    let container = object_property_get(div_map, "container");
+    await html_scroll_center_container(player_img_c, container);
+    if (npc_clicked) {
+      app_g_click_npc(div_map, npcs_matched, player, game_prefix);
+    }
   }
   app_g_player_save(player);
 }
