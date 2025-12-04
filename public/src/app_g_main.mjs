@@ -173,6 +173,7 @@ export async function app_g_main() {
     let name2 = object_property_get(gender, "name");
     object_property_set(npc, "gender", name2);
     object_property_set(npc, "meet", false);
+    object_property_set(npc, "christian", false);
     object_property_set(npc, "objections", 2);
   }
   each_index(npcs, npc_initialize);
