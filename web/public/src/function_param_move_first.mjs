@@ -9,6 +9,7 @@ export async function function_param_move_first(param_name) {
   let index = null;
   await function_params_new_generic(function_transform_current_lambda, on_call);
   function on_call(args) {
+    return;
     list_move_first(args, index);
   }
   function function_transform_current_lambda(ast) {
