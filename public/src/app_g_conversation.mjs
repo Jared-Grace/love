@@ -148,7 +148,8 @@ export function app_g_conversation(
     lambda_invoke_multiple(choices);
   }
   app_g_container_text(overlay, "What would you like to do?");
-  let name_npc2 = object_property_get(npc, "name");$g$npc$
+  let name_npc2 = object_property_get(npc, "name");
+  let objections2 = object_property_get(npc, "objections");
   if (false) {
     app_g_button_green(
       overlay,
