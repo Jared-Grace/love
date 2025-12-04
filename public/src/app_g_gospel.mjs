@@ -119,7 +119,11 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
               ", the son of" + string_random_or_empty(" the living") + " God",
             ),
         ),
-      "God bless you amen",
+      "God bless you " +
+        string_random_or_empty(
+          " in the name of " + list_random_item(["Jesus"]) + " ",
+        ) +
+        "amen",
     ];
     let combineds = list_map_combine(right, list);
     list_shuffle(combineds);
