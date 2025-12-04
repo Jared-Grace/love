@@ -104,7 +104,9 @@ export async function app_g_gospel(overlay, npc, game_prefix) {
   } else {
     const choices = [
       "Thank you" +
-        string_random_or_empty(" very much" + string_random_or_empty()),
+        string_random_or_empty(
+          " very much" + string_random_or_empty(" from the bottom of my heart"),
+        ),
       "Glory to God",
       "Praise God",
       "Hallelujah",
