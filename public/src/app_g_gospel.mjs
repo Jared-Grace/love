@@ -83,7 +83,7 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
     }
     list_sort_number_mapper(passages, lambda2);
     let r6 = integer_random_0(1);
-    let item = list_get(passages, r6);
+    let passage_wrong = list_get(passages, r6);
     app_g_npc_says(npc, overlay, game_prefix, ob);
     app_g_container_text(overlay, "What would you like to say?");
     let choices = [
@@ -102,7 +102,7 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
       },
       function wrong() {
         let b = app_g_bible_passage_button(
-          item,
+          passage_wrong,
           chapter_code,
           books,
           overlay,
@@ -112,7 +112,7 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
           let review = object_property_get(player, "review");
           list_add(list, {
             chapter_code,
-            passage: item,
+            passage: passage_wrong,
           });
           html_remove(b);
         }
