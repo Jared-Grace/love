@@ -15,7 +15,7 @@ export async function function_multiple_rename_if_starts_with(
   let filtered = filter(f_names);
   list_empty_not_is_assert(filtered);
   marker("1");
-  function filter() {
+  function filter(f_names) {
     let filtered2 = list_filter_starts_with(f_names, f_name_prefix_before);
     return filtered2;
   }
