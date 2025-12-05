@@ -64,6 +64,7 @@ export function app_g_study(player, overlay) {
       let sermon_wrong = object_property_get(passage_wrong, property);
       let sermon_wrong_list =
         string_split_newline_windows_escaped(sermon_wrong);
+      let sermon_index = 0;
       function correct() {
         function lambda3() {}
         let b = app_g_button_green(overlay, text4, lambda3);
