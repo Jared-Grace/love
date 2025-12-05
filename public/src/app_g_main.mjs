@@ -1,4 +1,4 @@
-import { app_g_conversation } from "../../../love/public/src/app_g_conversation.mjs";
+import { app_g_gospel } from "../../../love/public/src/app_g_gospel.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
@@ -46,7 +46,7 @@ export async function app_g_main() {
   firebase_name_jg();
   let books = await ebible_version_books("engbsb");
   global_function_property_set(app_g_main, "books", books);
-  global_function_property_set(app_g_conversation, "chapter_code", "JAS01");
+  global_function_property_set(app_g_gospel, "chapter_code", "JAS01");
   marker("1");
   html_meta_viewport();
   let html = html_document_root();
