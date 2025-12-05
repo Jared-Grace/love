@@ -1,3 +1,4 @@
+import { ebible_parts_to_reference } from "../../../love/public/src/ebible_parts_to_reference.mjs";
 import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
 import { g_sermon_generate_upload_path } from "../../../love/public/src/g_sermon_generate_upload_path.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
@@ -107,6 +108,12 @@ export async function app_g_click_npc(
       let verse_numbers = object_property_get(r, "verse_numbers");
       let text2 = object_property_get(s, "text");
       app_g_container_text(overlay, text2);
+      let reference = ebible_parts_to_reference(
+        books,
+        book_code,
+        verse_numbers2,
+        chapter_name,
+      );
       app_g_container_text(
         overlay,
         "What would you like to say about this Bible passage?",
