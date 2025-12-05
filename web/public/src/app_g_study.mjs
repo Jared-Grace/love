@@ -1,3 +1,4 @@
+import { lambda_invoke_multiple_shuffle_2 } from "../../../love/public/src/lambda_invoke_multiple_shuffle_2.mjs";
 import { app_g_button_uncolored } from "../../../love/public/src/app_g_button_uncolored.mjs";
 import { app_g_button_green } from "../../../love/public/src/app_g_button_green.mjs";
 import { app_g_wrong } from "../../../love/public/src/app_g_wrong.mjs";
@@ -59,6 +60,9 @@ export function app_g_study(player, overlay) {
       let { passage_wrong } = app_g_wrong(passage, passages, "sermon");
       function lambda3() {}
       let b = app_g_button_green(overlay, text4, lambda3);
+      () => {};
+      () => {};
+      lambda_invoke_multiple_shuffle_2(correct, wrong);
     }
     app_g_button_uncolored(overlay, text2, lambda);
   }
