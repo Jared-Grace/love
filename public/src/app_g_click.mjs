@@ -39,7 +39,10 @@ export async function app_g_click(
   let tile = html_component_wrap(tile_e);
   let json = html_data_get(tile, "coordinates");
   let clicked_coordinates = json_from(json);
-  let tutorial = global_function_property_get(app_g_refresh, "tutorial");
+  let tutorial = global_function_property_get(
+    app_g_refresh,
+    "tutorial_converse",
+  );
   if (equal_not(tutorial, null)) {
     html_remove(tutorial);
   }
@@ -89,7 +92,7 @@ export async function app_g_click(
     let container = object_property_get(div_map, "container");
     await html_scroll_center_container(player_img_c, container);
     if (npc_clicked) {
-      app_g_click_npc(div_map, npcs_matched, player, game_prefix);
+      await app_g_click_npc(div_map, npcs_matched, player, game_prefix);
     }
   }
   app_g_player_save(player);
