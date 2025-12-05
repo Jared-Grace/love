@@ -1,3 +1,4 @@
+import { list_get } from "../../../love/public/src/list_get.mjs";
 import { string_split_newline_windows_escaped } from "../../../love/public/src/string_split_newline_windows_escaped.mjs";
 import { lambda_invoke_multiple_shuffle_2 } from "../../../love/public/src/lambda_invoke_multiple_shuffle_2.mjs";
 import { app_g_button_uncolored } from "../../../love/public/src/app_g_button_uncolored.mjs";
@@ -65,7 +66,8 @@ export function app_g_study(player, overlay) {
       let sermon_wrong_list =
         string_split_newline_windows_escaped(sermon_wrong);
       let sermon_index = 0;
-      function correct() {lg
+      function correct() {
+        let item = list_get(list, index);
         function lambda3() {}
         let b = app_g_button_green(overlay, text4, lambda3);
       }
