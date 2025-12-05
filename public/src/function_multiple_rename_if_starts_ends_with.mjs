@@ -22,8 +22,8 @@ export async function function_multiple_rename_if_starts_ends_with(
   function name_change(f_name_before) {
     let together2 = string_suffix_change(
       f_name_before,
-      f_name_prefix_before,
-      f_name_prefix_after,
+      f_name_suffix_before,
+      f_name_suffix_after,
     );
     return together2;
   }
