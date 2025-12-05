@@ -112,6 +112,10 @@ export async function app_g_gospel(
         );
         function lambda3() {
           let review = object_property_get(player, "review");
+          let verse_numbers = object_property_get(
+            passage_wrong,
+            "verse_numbers",
+          );
           list_add(review, {
             chapter_code,
             passage: passage_wrong,
