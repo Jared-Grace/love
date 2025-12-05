@@ -124,7 +124,7 @@ export async function app_reply_main() {
   }
   let component3 = html_button(parent, "Clear", lambda14);
   function lambda15() {
-    let removed = list_remove_last(list2);
+    let removed = list_remove_last(copied);
   }
   let component5 = html_button(parent2, "Remove", lambda15);
   html_button(root, "Reset 1", verse_random_reset_1);
