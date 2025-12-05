@@ -16,6 +16,7 @@ export async function g_generate_upload_generic(path_get, fn) {
       return;
     }
     log(file);
+    return;
     let fb = path_base(file);
     let chapter_code = path_name(fb);
     let destination = path_get(chapter_code);
