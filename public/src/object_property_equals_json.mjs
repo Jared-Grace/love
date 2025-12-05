@@ -1,6 +1,6 @@
+import { json_equal } from "../../../love/public/src/json_equal.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { equal } from "./equal.mjs";
 export function object_property_equals_json(
   item,
   property_name,
@@ -8,6 +8,6 @@ export function object_property_equals_json(
 ) {
   marker("1");
   let left = object_property_get(item, property_name);
-  let v = equal(left, property_value);
+  let v = json_equal(left, property_value);
   return v;
 }
