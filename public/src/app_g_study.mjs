@@ -59,6 +59,7 @@ export function app_g_study(player, overlay) {
       );
       const property = "sermon";
       let { passage_wrong } = app_g_wrong(passage, passages, property);
+      let value = object_property_get(object, property_name);
       function correct() {
         function lambda3() {}
         let b = app_g_button_green(overlay, text4, lambda3);
