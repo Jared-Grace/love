@@ -122,7 +122,7 @@ export async function app_g_gospel(
             verse_numbers,
           });
           let text = emoji_book_open();
-          const player_property = "conversed";
+          const player_property = "studied";
           const tutorial_property = "tutorial_converse";
           app_g_tutorial(
             player,
