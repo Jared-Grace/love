@@ -54,7 +54,7 @@ export function app_g_study(player, overlay) {
       app_g_container_text(overlay, text);
       app_g_container_text(
         overlay,
-        "What would you like to say about this Bible passage?",
+        "If you were preaching from this Bible passage, what would you say?",
       );
       const property = "sermon";
       let { passage_wrong } = app_g_wrong(passage, passages, property);
