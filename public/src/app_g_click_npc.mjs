@@ -94,7 +94,7 @@ export async function app_g_click_npc(
         emoji_book_open() + " You remember that you need to study!",
       );
       function lambda2() {}
-      app_g_button_back(overlay2, lambda2);
+      app_g_button_back(overlay, lambda2);
       let chapter_code = app_g_chapter_code();
       async function lambda5() {
         let destination = g_sermon_generate_upload_path(chapter_code);
