@@ -1,3 +1,4 @@
+import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
 import { g_sermon_generate_upload_path } from "../../../love/public/src/g_sermon_generate_upload_path.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { app_g_chapter_code } from "../../../love/public/src/app_g_chapter_code.mjs";
@@ -24,7 +25,6 @@ import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
-import { json_format_to } from "./json_format_to.mjs";
 export async function app_g_click_npc(
   div_map,
   npcs_matched,
@@ -105,11 +105,8 @@ export async function app_g_click_npc(
       );
       let r = list_remove_first(review);
       let verse_numbers = object_property_get(r, "verse_numbers");
-      let v2 = json_format_to({
-        v: r,
-        s,
-      });
-      alert(v2);
+      app_g_container_text(overlay, "What would you like to say?");
+      app_g_container_text(overlay, "What would you like to say?");
     } else {
       app_g_conversation(
         prayer,
