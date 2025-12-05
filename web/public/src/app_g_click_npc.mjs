@@ -62,7 +62,8 @@ export async function app_g_click_npc(
       }
       let tutorial = html_div(div_map);
       html_click_none(tutorial);
-      global_function_property_set(app_g_main, "tutorial_converse", tutorial);
+      const tutorial_property = "tutorial_converse";
+      global_function_property_set(app_g_main, tutorial_property, tutorial);
       g_img_square_style_position(tutorial, player, "tutorial");
       html_text_set(tutorial, text);
       const square_size = `calc(` + g_img_square_size_css() + `*.4)`;
