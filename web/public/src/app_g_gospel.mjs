@@ -118,7 +118,7 @@ export async function app_g_gospel(
           );
           list_add(review, {
             chapter_code,
-            passage: passage_wrong,
+            verse_numbers,
           });
           html_remove(b);
         }
