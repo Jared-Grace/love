@@ -9,7 +9,7 @@ import { g_objection_generate_migrate_generic } from "../../../love/public/src/g
 import { path_base } from "../../../love/public/src/path_base.mjs";
 export async function g_objection_generate_upload() {
   marker("1");
-  let fn = g_objection_generate_upload_path;
+  let path_get = g_objection_generate_upload_path;
   await g_objection_generate_migrate_generic(file_each);
   async function file_each(file) {
     let fb = path_base(file);
