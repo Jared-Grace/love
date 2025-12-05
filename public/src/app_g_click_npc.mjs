@@ -1,3 +1,4 @@
+import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -11,7 +12,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_button_back } from "../../../love/public/src/app_g_button_back.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { g_img_square_style_position } from "../../../love/public/src/g_img_square_style_position.mjs";
-import { app_g_refresh } from "../../../love/public/src/app_g_refresh.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
@@ -60,7 +60,7 @@ export async function app_g_click_npc(
       }
       let tutorial = html_div(div_map);
       html_click_none(tutorial);
-      global_function_property_set(app_g_refresh, "tutorial", tutorial);
+      global_function_property_set(app_g_main, "tutorial", tutorial);
       g_img_square_style_position(tutorial, player, "tutorial");
       let text = emoji_pray();
       html_text_set(tutorial, text);
