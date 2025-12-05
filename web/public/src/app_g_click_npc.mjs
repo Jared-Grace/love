@@ -88,6 +88,11 @@ export async function app_g_click_npc(
     let review = object_property_get(player, "review");
     let ne = list_empty_not_is(review);
     if (ne) {
+      let container = app_g_container(overlay);
+      app_g_p_text(
+        container,
+        emoji_book_open() + " You remember that you need to study!",
+      );
       let chapter_code = app_g_chapter_code();
       async function lambda5() {
         let destination = g_sermon_generate_upload_path(chapter_code);
@@ -99,11 +104,6 @@ export async function app_g_click_npc(
         "sermons",
         chapter_code,
         lambda5,
-      );
-      let container = app_g_container(overlay);
-      app_g_p_text(
-        container,
-        emoji_book_open() + " You remember that you need to study!",
       );
       let r = list_remove_first(review);
       let passages = object_property_get(s, "passages");
