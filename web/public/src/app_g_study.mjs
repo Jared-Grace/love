@@ -59,12 +59,14 @@ export function app_g_study(player, overlay) {
       );
       const property = "sermon";
       let { passage_wrong } = app_g_wrong(passage, passages, property);
-      let value = object_property_get(object, property_name);
+      let sermon_correct = object_property_get(passage, property);
       function correct() {
         function lambda3() {}
         let b = app_g_button_green(overlay, text4, lambda3);
       }
-      function wrong() {}
+      function wrong() {
+        let sermon_wrong = object_property_get(passage_wrong, property);
+      }
       lambda_invoke_multiple_shuffle_2(correct, wrong);
     }
     app_g_button_uncolored(overlay, text2, lambda);
