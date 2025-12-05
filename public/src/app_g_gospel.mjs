@@ -1,5 +1,5 @@
+import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
 import { app_g_tutorial } from "../../../love/public/src/app_g_tutorial.mjs";
-import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { app_g_main_books } from "../../../love/public/src/app_g_main_books.mjs";
 import { app_g_chapter_code } from "../../../love/public/src/app_g_chapter_code.mjs";
 import { global_function_property_nested_lambda } from "../../../love/public/src/global_function_property_nested_lambda.mjs";
@@ -121,7 +121,7 @@ export async function app_g_gospel(
             chapter_code,
             verse_numbers,
           });
-          let text = emoji_pray();
+          let text = emoji_book_open();
           const player_property = "conversed";
           const tutorial_property = "tutorial_converse";
           app_g_tutorial(
