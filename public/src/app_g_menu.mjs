@@ -70,11 +70,15 @@ export function app_g_menu(overlay, player) {
         verse_numbers,
         passages,
       });
-      let s = list_find_property_json(passages, "verse_numbers", verse_numbers);
-      let text3 = object_property_get(s, "text");
+      let passage = list_find_property_json(
+        passages,
+        "verse_numbers",
+        verse_numbers,
+      );
+      let text3 = object_property_get(passage, "text");
       app_g_container_text(overlay, text3);
       let books = app_g_main_books();
-      const text = app_g_passage_to_reference(s, chapter_code, books);
+      const text = app_g_passage_to_reference(passage, chapter_code, books);
       app_g_container_text(overlay, text);
       app_g_container_text(
         overlay,
