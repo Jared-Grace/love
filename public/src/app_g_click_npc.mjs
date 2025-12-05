@@ -107,7 +107,6 @@ export async function app_g_click_npc(
           " You remember that you have not prayed, yet, before your next conversation!",
       );
       let r = list_remove_first(review);
-      let verse_numbers = object_property_get(r, "verse_numbers");
       let text2 = object_property_get(s, "text");
       app_g_container_text(overlay, text2);
       let books = g_main_books();
