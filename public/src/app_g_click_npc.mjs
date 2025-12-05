@@ -105,6 +105,7 @@ export async function app_g_click_npc(
       );
       let r = list_remove_first(review);
       let verse_numbers = object_property_get(r, "verse_numbers");
+      let text2 = object_property_get(s, "text");
       app_g_container_text(overlay, "What would you like to say?");
       app_g_container_text(
         overlay,
