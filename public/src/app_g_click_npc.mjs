@@ -1,3 +1,4 @@
+import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { list_remove_first } from "../../../love/public/src/list_remove_first.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -23,6 +24,7 @@ export function app_g_click_npc(div_map, npcs_matched, player, game_prefix) {
   marker("1");
   let overlay = app_g_overlay(div_map);
   function overlay_close() {
+    app_g_player_save(player);
     html_remove(overlay);
   }
   html_style_assign(overlay, {
