@@ -1,3 +1,4 @@
+import { global_function_property_initialize } from "../../../love/public/src/global_function_property_initialize.mjs";
 import { global_function_property_nested_lambda } from "../../../love/public/src/global_function_property_nested_lambda.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
@@ -44,7 +45,7 @@ export async function app_g_gospel(overlay, npc, game_prefix, overlay_close) {
   let p = positive_is(objections2);
   if (p) {
     let books = global_function_property_get(app_g_main, "books");
-    let chapter_code = global_function_property_get(
+    let chapter_code = global_function_property_initialize(
       app_g_gospel,
       "chapter_code",
     );
