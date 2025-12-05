@@ -58,23 +58,22 @@ export async function app_g_click_npc(
       const player_property = "conversed";
       const tutorial_property = "tutorial_converse";
       let conversed = object_property_get(player, player_property);
-      if (conversed) {
-        return;
+      if (not(conversed)) {
+        let tutorial = html_div(div_map);
+        html_click_none(tutorial);
+        global_function_property_set(app_g_main, tutorial_property, tutorial);
+        g_img_square_style_position(tutorial, player, "tutorial");
+        html_text_set(tutorial, text);
+        const square_size = `calc(` + g_img_square_size_css() + `*.4)`;
+        html_style_assign(tutorial, {
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+          fontSize: square_size,
+          animation: "upDown 1.25s infinite ease-in-out alternate",
+        });
       }
-      let tutorial = html_div(div_map);
-      html_click_none(tutorial);
-      global_function_property_set(app_g_main, tutorial_property, tutorial);
-      g_img_square_style_position(tutorial, player, "tutorial");
-      html_text_set(tutorial, text);
-      const square_size = `calc(` + g_img_square_size_css() + `*.4)`;
-      html_style_assign(tutorial, {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        textAlign: "center",
-        fontSize: square_size,
-        animation: "upDown 1.25s infinite ease-in-out alternate",
-      });
     }
     app_g_button_back(overlay, lambda21);
   } else {
