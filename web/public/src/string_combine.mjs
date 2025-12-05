@@ -1,6 +1,6 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 export function string_combine(left, right) {
   marker("1");
-  const sum = left + right;
-  return sum;
+  const together = left + right;
+  return together;
 }
