@@ -67,11 +67,15 @@ export function app_g_study(player, overlay) {
         string_split_newline_windows_escaped(sermon_wrong);
       let sermon_index = 0;
       function correct() {
-        let item = list_get(list, index);
+        let item = list_get(sermon_correct_list, sermon_index);
         function lambda3() {}
-        let b = app_g_button_green(overlay, text4, lambda3);
+        let b = app_g_button_green(overlay, item, lambda3);
       }
-      function wrong() {}
+      function wrong() {
+        let item = list_get(sermon_correct_list, sermon_index);
+        function lambda3() {}
+        let b = app_g_button_green(overlay, item, lambda3);
+      }
       lambda_invoke_multiple_shuffle_2(correct, wrong);
     }
     app_g_button_uncolored(overlay, text2, lambda);
