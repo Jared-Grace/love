@@ -79,6 +79,7 @@ export function app_g_menu(overlay, player) {
         overlay,
         "What would you like to say about this Bible passage?",
       );
+      let b = app_g_button_green(overlay2, text4, function lambda3() {});
     }
     app_g_button_uncolored(overlay, text2, lambda);
   }
