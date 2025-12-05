@@ -1,4 +1,4 @@
-import { list_filter_ends_with_any } from "../../../love/public/src/list_filter_ends_with_any.mjs";
+import { list_filter_ends_with } from "../../../love/public/src/list_filter_ends_with.mjs";
 import { function_multiple_rename_generic } from "../../../love/public/src/function_multiple_rename_generic.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { string_prefix_change } from "../../../love/public/src/string_prefix_change.mjs";
@@ -14,7 +14,7 @@ export async function function_multiple_rename_if_starts_ends_with(
   marker("1");
   function filter(f_names) {
     let filtered2 = list_filter_starts_with(f_names, f_name_suffix_before);
-    let filtered = list_filter_ends_with_any(filtered2, [f_name_suffix_after]);
+    let filtered = list_filter_ends_with(filtered2, f_name_suffix_after);
     return filtered;
   }
   function name_change(f_name_before) {
