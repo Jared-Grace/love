@@ -35,5 +35,5 @@ export function app_g_menu(overlay, player) {
     app_g_button_green(overlay, text, lambda22);
   }
   app_g_button_uncolored(overlay, text, lambda7);
-  let text2 = emoji_book_open() + " You remember that you need to study!";
+  let text2 = emoji_book_open() + " Study";
 }
