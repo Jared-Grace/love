@@ -1,6 +1,6 @@
 import { newline_windows_code } from "../../../love/public/src/newline_windows_code.mjs";
 import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
-import { g_sermon_generate_book_genericundefined } from "../../../love/public/src/g_sermon_generate_book_genericundefined.mjs";
+import { g_sermon_generate_book_generic } from "../../../love/public/src/g_sermon_generate_book_generic.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_objection_generate() {
   let bible_folder = "engbsb";
@@ -27,7 +27,7 @@ Output each objection separated by ` +
     "Generate objections that the following passage would refute; Output 5–10 objections: ";
   let fn = g_objection_generate;
   let property_name = g_objection_generate_property();
-  await g_sermon_generate_book_genericundefined(
+  await g_sermon_generate_book_generic(
     bible_folder,
     book_code,
     fn,
