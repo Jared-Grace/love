@@ -80,7 +80,7 @@ export function app_g_menu(overlay, player) {
         overlay,
         "What would you like to say about this Bible passage?",
       );
-      let {passage_wrong} = app_g_wrong(passage, passages, "sermon");
+      let { passage_wrong } = app_g_wrong(passage, passages, "sermon");
       function lambda3() {}
       let b = app_g_button_green(overlay2, text4, lambda3);
     }
