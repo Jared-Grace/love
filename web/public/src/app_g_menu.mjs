@@ -41,6 +41,7 @@ export function app_g_menu(overlay, player) {
     app_g_button_green(overlay, text, lambda22);
   }
   app_g_button_uncolored(overlay, text, lambda7);
+  let review = object_property_get(player, "review");
   let text2 = emoji_book_open() + " Study";
   async function lambda() {
     app_g_menu_clear_back(overlay, player);
