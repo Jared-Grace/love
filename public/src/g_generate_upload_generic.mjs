@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { folder_user_storage_function_each } from "../../../love/public/src/folder_user_storage_function_each.mjs";
 import { firebase_upload_object } from "../../../love/public/src/firebase_upload_object.mjs";
 import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
@@ -7,6 +8,7 @@ import { path_base } from "../../../love/public/src/path_base.mjs";
 export async function g_generate_upload_generic(path_get, fn) {
   await folder_user_storage_function_each(fn, file_each);
   async function file_each(file) {
+    log(message);
     let fb = path_base(file);
     let chapter_code = path_name(fb);
     let destination = path_get(chapter_code);
