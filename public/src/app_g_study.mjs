@@ -59,11 +59,12 @@ export function app_g_study(player, overlay) {
       const property = "sermon";
       let { passage_wrong } = app_g_wrong(passage, passages, property);
       let sermon_correct = object_property_get(passage, property);
-      let split = string_split_newline_windows_escaped(sermon_correct);
+      let sermon_correct_list =
+        string_split_newline_windows_escaped(sermon_correct);
       let sermon_wrong = object_property_get(passage_wrong, property);
       let split2 = string_split_newline_windows_escaped(sermon_wrong);
       log({
-        split,
+        split: sermon_correct_list,
         split2,
       });
       function correct() {
