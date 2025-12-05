@@ -8,7 +8,7 @@ export async function global_function_property_nested_lambda(
   lambda,
 ) {
   marker("1");
-  let value = global_function_property_initialize(fn, property_name);
+  let value = global_function_property_initialize(fn, property_name, {});
   let v = await object_property_lambda_async(
     value,
     property_name_nested,
