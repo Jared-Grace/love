@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { integer_random_0 } from "../../../love/public/src/integer_random_0.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
@@ -12,6 +13,7 @@ import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
 export function app_g_wrong(passage, passages) {
+  marker("1");
   let o2 = g_objection_generate_property();
   let text = object_property_get(passage, "text");
   let words = string_to_words(text);
