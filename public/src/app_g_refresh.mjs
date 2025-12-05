@@ -27,7 +27,7 @@ export async function app_g_refresh(
 ) {
   let { npcs } = map;
   marker("1");
-  let ts = ["tutorial_converse"];
+  let ts = ["tutorial_converse", "tutorial_study"];
   function lambda4(t) {
     global_function_property_set(app_g_refresh, t, null);
   }
