@@ -1,6 +1,6 @@
 import { newline_windows_code } from "../../../love/public/src/newline_windows_code.mjs";
 import { g_preach_generate_book_generic } from "../../../love/public/src/g_preach_generate_book_generic.mjs";
-import { g_preach_generate } from "../../../love/public/src/g_preach_generate.mjs";
+import { g_sermon_generateundefined } from "../../../love/public/src/g_sermon_generateundefined.mjs";
 export async function g_preach_generate_book(bible_folder, book_code) {
   const prompt_system =
     `You are a Christian preacher. You will be given a passage and its context. Rewrite the passage as follows:
@@ -21,7 +21,7 @@ Output each sentence separated by ` +
     newline_windows_code() +
     `. Follow these instructions exactly.`;
   const prompt_user_middle = "Here is the passage to rewrite: ";
-  let fn = g_preach_generate;
+  let fn = g_sermon_generateundefined;
   await g_preach_generate_book_generic(
     bible_folder,
     book_code,
