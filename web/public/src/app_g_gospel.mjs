@@ -1,3 +1,4 @@
+import { lambda_invoke_multiple_shuffle } from "../../../love/public/src/lambda_invoke_multiple_shuffle.mjs";
 import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
 import { app_g_wrong } from "../../../love/public/src/app_g_wrong.mjs";
 import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
@@ -15,7 +16,6 @@ import { trinity_name_prayer } from "../../../love/public/src/trinity_name_praye
 import { string_random_or_empty } from "../../../love/public/src/string_random_or_empty.mjs";
 import { list_map_combine } from "../../../love/public/src/list_map_combine.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { lambda_invoke_multiple } from "../../../love/public/src/lambda_invoke_multiple.mjs";
 import { app_g_bible_passage_button } from "../../../love/public/src/app_g_bible_passage_button.mjs";
 import { subtract_1 } from "../../../love/public/src/subtract_1.mjs";
 import { object_property_change } from "../../../love/public/src/object_property_change.mjs";
@@ -106,8 +106,7 @@ export async function app_g_gospel(
       }
     }
     let choices = [correct, wrong];
-    list_shuffle(choices);
-    lambda_invoke_multiple(choices);
+    lambda_invoke_multiple_shuffle(choices);
     app_g_button_conversation_end(overlay, overlay_close);
   } else {
     function jesus_christ() {
