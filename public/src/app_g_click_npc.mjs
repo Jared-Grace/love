@@ -57,8 +57,8 @@ export async function app_g_click_npc(
       let text = emoji_pray();
       const player_property = "conversed";
       const tutorial_property = "tutorial_converse";
-      let conversed = object_property_get(player, player_property);
-      if (not(conversed)) {
+      let already = object_property_get(player, player_property);
+      if (not(already)) {
         let tutorial = html_div(div_map);
         html_click_none(tutorial);
         global_function_property_set(app_g_main, tutorial_property, tutorial);
