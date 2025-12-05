@@ -36,4 +36,5 @@ export function app_g_menu(overlay, player) {
   }
   app_g_button_uncolored(overlay, text, lambda7);
   let text2 = emoji_book_open() + " Study";
+  app_g_button_uncolored(overlay2, text3, lambda72);
 }
