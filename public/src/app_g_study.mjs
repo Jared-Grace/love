@@ -68,27 +68,31 @@ export function app_g_study(player, overlay) {
       let sermon_correct_list =
         string_split_newline_windows_escaped(sermon_correct);
       let sermon_index = 0;
-      let { passage_wrong } = app_g_wrong(passage, passages, property);
-      let sermon_wrong = object_property_get(passage_wrong, property);
-      let sermon_wrong_list =
-        string_split_newline_windows_escaped(sermon_wrong);
-      function correct() {
+      refresh();
+      function refresh() {
         html_clear(div);
-        let item = list_get(sermon_correct_list, sermon_index);
-        function lambda3() {
-          sermon_index++;
+        let { passage_wrong } = app_g_wrong(passage, passages, property);
+        let sermon_wrong = object_property_get(passage_wrong, property);
+        let sermon_wrong_list =
+          string_split_newline_windows_escaped(sermon_wrong);
+        function correct() {
+          let item = list_get(sermon_correct_list, sermon_index);
+          function lambda3() {
+            sermon_index++;
+            refresh();
+          }
+          let b = app_g_button_green(div, item, lambda3);
         }
-        let b = app_g_button_green(div, item, lambda3);
-      }
-      function wrong() {
-        let r2 = list_random_item(sermon_wrong_list);
-        function lambda3() {
-          let v = app_karate_button_background_invalid();
-          html_style_background_color(div, v);
+        function wrong() {
+          let r2 = list_random_item(sermon_wrong_list);
+          function lambda3() {
+            let v = app_karate_button_background_invalid();
+            html_style_background_color(div, v);
+          }
+          let b = app_g_button_green(div, r2, lambda3);
         }
-        let b = app_g_button_green(div, r2, lambda3);
+        lambda_invoke_multiple_shuffle_2(correct, wrong);
       }
-      lambda_invoke_multiple_shuffle_2(correct, wrong);
     }
     app_g_button_uncolored(overlay, text2, lambda);
   }
