@@ -1,3 +1,4 @@
+import { string_split_newline_windows_escaped } from "../../../love/public/src/string_split_newline_windows_escaped.mjs";
 import { lambda_invoke_multiple_shuffle_2 } from "../../../love/public/src/lambda_invoke_multiple_shuffle_2.mjs";
 import { app_g_button_uncolored } from "../../../love/public/src/app_g_button_uncolored.mjs";
 import { app_g_button_green } from "../../../love/public/src/app_g_button_green.mjs";
@@ -60,13 +61,14 @@ export function app_g_study(player, overlay) {
       const property = "sermon";
       let { passage_wrong } = app_g_wrong(passage, passages, property);
       let sermon_correct = object_property_get(passage, property);
+      let split = string_split_newline_windows_escaped(sermon_correct);
+      let sermon_wrong = object_property_get(passage_wrong, property);
+      let split2 = string_split_newline_windows_escaped(objections);
       function correct() {
         function lambda3() {}
         let b = app_g_button_green(overlay, text4, lambda3);
       }
-      function wrong() {
-        let sermon_wrong = object_property_get(passage_wrong, property);
-      }
+      function wrong() {}
       lambda_invoke_multiple_shuffle_2(correct, wrong);
     }
     app_g_button_uncolored(overlay, text2, lambda);
