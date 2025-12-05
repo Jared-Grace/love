@@ -13,7 +13,7 @@ export function app_g_tutorial(
   player_property,
   div_map,
   tutorial_property,
-  text,
+  emoji,
 ) {
   let already = object_property_get(player, player_property);
   if (not(already)) {
@@ -21,7 +21,7 @@ export function app_g_tutorial(
     html_click_none(tutorial);
     global_function_property_set(app_g_main, tutorial_property, tutorial);
     g_img_square_style_position(tutorial, player, "tutorial");
-    html_text_set(tutorial, text);
+    html_text_set(tutorial, emoji);
     const square_size = `calc(` + g_img_square_size_css() + `*.4)`;
     html_style_assign(tutorial, {
       display: "flex",
