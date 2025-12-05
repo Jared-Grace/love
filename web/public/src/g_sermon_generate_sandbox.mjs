@@ -6,7 +6,7 @@ import { list_map_combine_left } from "../../../love/public/src/list_map_combine
 import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export async function g_sermon_generate_sandboxundefined() {
+export async function g_sermon_generate_sandbox() {
   let k = openai_key_folder();
   let v = py_script_run_cmd("openai_chat");
   let file_names = "openai.txt input.txt output.txt";
