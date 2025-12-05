@@ -12,7 +12,7 @@ import { newline_windows_escaped } from "../../../love/public/src/newline_window
 import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
-export function app_g_wrong(passage, passages) {
+export function app_g_wrong(passage, passages, property) {
   marker("1");
   let o2 = g_objection_generate_property();
   let text = object_property_get(passage, "text");
