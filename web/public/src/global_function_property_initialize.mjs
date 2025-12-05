@@ -1,3 +1,4 @@
+import { object_property_initialize_lambda } from "../../../love/public/src/object_property_initialize_lambda.mjs";
 import { object_property_initialize } from "../../../love/public/src/object_property_initialize.mjs";
 import { global_get } from "../../../love/public/src/global_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
