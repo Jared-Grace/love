@@ -1,3 +1,4 @@
+import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { string_split_newline_windows_escaped } from "../../../love/public/src/string_split_newline_windows_escaped.mjs";
 import { lambda_invoke_multiple_shuffle_2 } from "../../../love/public/src/lambda_invoke_multiple_shuffle_2.mjs";
@@ -71,7 +72,8 @@ export function app_g_study(player, overlay) {
         function lambda3() {}
         let b = app_g_button_green(overlay, item, lambda3);
       }
-      function wrong() {lri
+      function wrong() {
+        let r2 = list_random_item(list);
         let item = list_get(sermon_correct_list, sermon_index);
         function lambda3() {}
         let b = app_g_button_green(overlay, item, lambda3);
