@@ -122,11 +122,11 @@ export async function app_reply_main() {
   function lambda14() {
     list_empty(copied);
   }
-  let component3 = html_button(parent, "Clear", lambda14);
+  let component3 = html_button(root, "Clear", lambda14);
   function lambda15() {
     let removed = list_remove_last(copied);
   }
-  let component5 = html_button(parent2, "Remove", lambda15);
+  let component5 = html_button(root, "Remove", lambda15);
   html_button(root, "Reset 1", verse_random_reset_1);
   let r = range_1(4);
   let mapped = list_map(r, double);
