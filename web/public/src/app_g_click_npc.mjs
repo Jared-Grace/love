@@ -106,7 +106,10 @@ export async function app_g_click_npc(
       let r = list_remove_first(review);
       let verse_numbers = object_property_get(r, "verse_numbers");
       app_g_container_text(overlay, "What would you like to say?");
-      app_g_container_text(overlay, "What would you like to say?");
+      app_g_container_text(
+        overlay,
+        "What would you like to say about this Bible passage?",
+      );
     } else {
       app_g_conversation(
         prayer,
