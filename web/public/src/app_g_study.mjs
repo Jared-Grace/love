@@ -60,8 +60,8 @@ export function app_g_study(player, overlay) {
       let { passage_wrong } = app_g_wrong(passage, passages, "sermon");
       function lambda3() {}
       let b = app_g_button_green(overlay, text4, lambda3);
-      () => {};
-      () => {};
+      (function lambda2() {});
+      (function lambda4() {});
       lambda_invoke_multiple_shuffle_2(correct, wrong);
     }
     app_g_button_uncolored(overlay, text2, lambda);
