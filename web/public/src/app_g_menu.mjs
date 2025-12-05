@@ -56,7 +56,7 @@ export function app_g_menu(overlay, player) {
         let o = await firebase_storage_download_json(destination);
         return o;
       }
-      let s = await global_function_property_nested_lambda(
+      let sermons = await global_function_property_nested_lambda(
         app_g_gospel,
         "sermons",
         chapter_code,
@@ -64,12 +64,12 @@ export function app_g_menu(overlay, player) {
       );
       let r = list_remove_first(review);
       let verse_numbers = object_property_get(r, "verse_numbers");
-      let passages = object_property_get(s, "passages");
+      let passages = object_property_get(sermons, "passages");
       log({
         verse_numbers,
         passages,
       });
-      let item = list_find_property_json(list, property_name, property_value);
+      let s = list_find_property_json(passages, "verse_numbers", verse_numbers);
       let text2 = object_property_get(s, "text");
       app_g_container_text(overlay, text2);
       let books = app_g_main_books();
