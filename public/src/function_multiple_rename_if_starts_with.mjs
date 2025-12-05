@@ -16,12 +16,16 @@ export async function function_multiple_rename_if_starts_with(
   list_empty_not_is_assert(filtered);
   marker("1");
   async function lambda(f_name_before) {
-    let together = string_prefix_change(
+    let together = name_change(f_name_before);
+    let v = await function_rename(f_name_before, together);
+  }
+  await each_async(filtered, lambda);
+  function name_change(f_name_before) {
+    let together2 = string_prefix_change(
       f_name_before,
       f_name_prefix_before,
       f_name_prefix_after,
     );
-    let v = await function_rename(f_name_before, together);
+    return together2;
   }
-  await each_async(filtered, lambda);
 }
