@@ -77,11 +77,11 @@ export async function app_g_gospel(
     let ob = list_random_item(split);
     let words2 = string_to_words(ob);
     let concated = list_concat(words, words2);
-    let unique = list_unique(concated);
+    let words_correct = list_unique(concated);
     function lambda2(p) {
-      let text2 = object_property_get(p, "text");
-      let words3 = string_to_words(text2);
-      let list2 = list_intersect(words3, unique);
+      let text_candidate = object_property_get(p, "text");
+      let words_candidate = string_to_words(text_candidate);
+      let list2 = list_intersect(words_candidate, words_correct);
       let size = list_size(list2);
       return size;
     }
