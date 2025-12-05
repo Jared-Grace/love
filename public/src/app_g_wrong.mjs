@@ -1,3 +1,4 @@
+import { string_split_newline_windows_escaped } from "../../../love/public/src/string_split_newline_windows_escaped.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { integer_random_0 } from "../../../love/public/src/integer_random_0.mjs";
@@ -7,8 +8,6 @@ import { list_intersect } from "../../../love/public/src/list_intersect.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
-import { string_split } from "../../../love/public/src/string_split.mjs";
-import { newline_windows_escaped } from "../../../love/public/src/newline_windows_escaped.mjs";
 import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function app_g_wrong(passage, passages, property) {
@@ -16,8 +15,7 @@ export function app_g_wrong(passage, passages, property) {
   let text = object_property_get(passage, "text");
   let words = string_to_words(text);
   let objections = object_property_get(passage, property);
-  let separator = newline_windows_escaped();
-  let split = string_split(objections, separator);
+  let split = string_split_newline_windows_escaped(objections);
   let ob = list_random_item(split);
   let words2 = string_to_words(ob);
   let concated = list_concat(words, words2);
