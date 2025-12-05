@@ -12,9 +12,13 @@ export async function function_multiple_rename_if_starts_with(
 ) {
   assert_arguments(arguments, 2);
   let f_names = await functions_names();
-  let filtered = list_filter_starts_with(f_names, f_name_prefix_before);
+  let filtered = filter(f_names);
   list_empty_not_is_assert(filtered);
   marker("1");
+  function filter() {
+    let filtered2 = list_filter_starts_with(f_names, f_name_prefix_before);
+    return filtered2;
+  }
   async function lambda(f_name_before) {
     let after = name_change(f_name_before);
     let v = await function_rename(f_name_before, after);
