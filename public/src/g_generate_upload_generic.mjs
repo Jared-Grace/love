@@ -8,7 +8,8 @@ import { path_base } from "../../../love/public/src/path_base.mjs";
 export async function g_generate_upload_generic(path_get, fn) {
   await folder_user_storage_function_each(fn, file_each);
   async function file_each(file) {
-    log(message);
+    log(file);
+    return;
     let fb = path_base(file);
     let chapter_code = path_name(fb);
     let destination = path_get(chapter_code);
