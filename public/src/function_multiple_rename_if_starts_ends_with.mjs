@@ -14,7 +14,7 @@ export async function function_multiple_rename_if_starts_ends_with(
   function filter(f_names) {
     let filtered = list_filter_starts_ends_with(
       f_names,
-      f_name_suffix_before,
+      f_name_prefix,
       f_name_suffix_after,
     );
     return filtered;
