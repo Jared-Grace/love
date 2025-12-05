@@ -15,7 +15,7 @@ export async function g_objection_generate_upload() {
   async function file_each(file) {
     let fb = path_base(file);
     let chapter_code = path_name(fb);
-    let destination = g_objection_generate_upload_path(chapter_code);
+    let destination = path_get(chapter_code);
     let path = local_function_path_json(chapter_code, fn);
     let data = await file_read_json(path);
     await firebase_upload_object(data, destination);
