@@ -1,7 +1,9 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { newline_windows_code } from "../../../love/public/src/newline_windows_code.mjs";
 import { g_preach_generate_book_generic } from "../../../love/public/src/g_preach_generate_book_generic.mjs";
 import { g_sermon_generateundefined } from "../../../love/public/src/g_sermon_generateundefined.mjs";
 export async function g_sermon_generate_bookundefined(bible_folder, book_code) {
+  marker("1");
   const prompt_system =
     `You are a Christian preacher. You will be given a passage and its context. Rewrite the passage as follows:
 
