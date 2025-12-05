@@ -281,5 +281,4 @@ export async function app_reply_main() {
     }
     await each_async(verses_list, lambda12);
   }
-  await verse_random_reset_4();
 }
