@@ -71,7 +71,7 @@ export function app_g_study(player, overlay) {
       let sermon_wrong_list =
         string_split_newline_windows_escaped(sermon_wrong);
       function correct() {
-        html_clear(element);
+        html_clear(div);
         let item = list_get(sermon_correct_list, sermon_index);
         function lambda3() {
           sermon_index++;
