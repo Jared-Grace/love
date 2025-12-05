@@ -58,7 +58,11 @@ export async function app_g_gospel(
     let passages = object_property_get(o, "passages");
     list_shuffle(passages);
     let passage = list_last(passages);
-    let { ob, passage_wrong } = app_g_wrong(passage, passages);
+    let { ob, passage_wrong } = app_g_wrong(
+      passage,
+      passages,
+      g_objection_generate_property(),
+    );
     app_g_npc_says(npc, overlay, game_prefix, ob);
     app_g_container_text(overlay, "What would you like to say?");
     let choices = [
