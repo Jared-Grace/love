@@ -35,7 +35,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { ebible_chapters } from "../../../love/public/src/ebible_chapters.mjs";
-export async function g_sermon_generate_book_genericundefined(
+export async function g_sermon_generate_book_generic(
   bible_folder,
   book_code,
   fn,
