@@ -54,11 +54,11 @@ export async function app_g_click_npc(
     }
     function lambda21() {
       overlay_close();
+      let text = emoji_pray();
       let conversed = object_property_get(player, "conversed");
       if (conversed) {
         return;
       }
-      let text = emoji_pray();
       let tutorial = html_div(div_map);
       html_click_none(tutorial);
       global_function_property_set(app_g_main, "tutorial", tutorial);
