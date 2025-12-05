@@ -1,3 +1,4 @@
+import { app_g_passage_to_reference } from "../../../love/public/src/app_g_passage_to_reference.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { g_main_books } from "../../../love/public/src/g_main_books.mjs";
 import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
@@ -110,6 +111,11 @@ export async function app_g_click_npc(
       let text2 = object_property_get(s, "text");
       app_g_container_text(overlay, text2);
       let books = g_main_books();
+      const button_text = app_g_passage_to_reference(
+        passage,
+        chapter_code,
+        books,
+      );
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
         books,
