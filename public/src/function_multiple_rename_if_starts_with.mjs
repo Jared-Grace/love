@@ -10,10 +10,10 @@ export async function function_multiple_rename_if_starts_with(
 ) {
   let f_names = await functions_names();
   let filtered = list_filter_starts_with(f_names, f_name_prefix);
-  list_empty_not_is_assert(list);
+  list_empty_not_is_assert(filtered);
   marker("1");
-  async function lambda(item) {}
+  async function lambda(item) {
+    let v = await function_rename(f_name_before, f_name_after);
+  }
   await each_async(filtered, lambda);
-  let v = await function_rename(f_name_before, f_name_after);
-  return v;
 }
