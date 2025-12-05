@@ -85,25 +85,19 @@ export async function app_g_gospel(
         overlay,
         lambda3,
       );
-      function lambda3() {
-        let review = object_property_get(player, "review");
-        let verse_numbers = object_property_get(passage_wrong, "verse_numbers");
-        list_add(review, {
-          chapter_code,
-          verse_numbers,
-        });
-        let text = emoji_book_open();
-        const player_property = "studied";
-        const tutorial_property = "tutorial_converse";
-        app_g_tutorial(
-          player,
-          player_property,
-          div_map,
-          tutorial_property,
-          text,
-        );
-        html_remove(b);
-      }
+    }
+    function lambda3() {
+      let review = object_property_get(player, "review");
+      let verse_numbers = object_property_get(passage_wrong, "verse_numbers");
+      list_add(review, {
+        chapter_code,
+        verse_numbers,
+      });
+      let text = emoji_book_open();
+      const player_property = "studied";
+      const tutorial_property = "tutorial_converse";
+      app_g_tutorial(player, player_property, div_map, tutorial_property, text);
+      html_remove(b);
     }
     let choices = [correct, wrong];
     list_shuffle(choices);
