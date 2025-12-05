@@ -15,7 +15,7 @@ export async function function_multiple_rename_if_starts_ends_with(
   function filter(f_names) {
     let filtered2 = list_filter_starts_with(f_names, f_name_suffix_before);
     let filtered = list_filter_ends_with_any(filtered2, [f_name_suffix_after]);
-    return filtered2;
+    return filtered;
   }
   function name_change(f_name_before) {
     let together2 = string_prefix_change(
