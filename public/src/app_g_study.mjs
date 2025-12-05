@@ -59,14 +59,14 @@ export function app_g_study(player, overlay) {
         "If you were preaching from this Bible passage, what would you say?",
       );
       const property = "sermon";
-      let { passage_wrong } = app_g_wrong(passage, passages, property);
       let sermon_correct = object_property_get(passage, property);
       let sermon_correct_list =
         string_split_newline_windows_escaped(sermon_correct);
+      let sermon_index = 0;
+      let { passage_wrong } = app_g_wrong(passage, passages, property);
       let sermon_wrong = object_property_get(passage_wrong, property);
       let sermon_wrong_list =
         string_split_newline_windows_escaped(sermon_wrong);
-      let sermon_index = 0;
       function correct() {
         let item = list_get(sermon_correct_list, sermon_index);
         function lambda3() {
