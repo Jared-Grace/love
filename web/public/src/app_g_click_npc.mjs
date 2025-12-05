@@ -58,11 +58,11 @@ export async function app_g_click_npc(
       if (conversed) {
         return;
       }
+      let text = emoji_pray();
       let tutorial = html_div(div_map);
       html_click_none(tutorial);
       global_function_property_set(app_g_main, "tutorial", tutorial);
       g_img_square_style_position(tutorial, player, "tutorial");
-      let text = emoji_pray();
       html_text_set(tutorial, text);
       const square_size = `calc(` + g_img_square_size_css() + `*.4)`;
       html_style_assign(tutorial, {
