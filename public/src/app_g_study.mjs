@@ -73,10 +73,9 @@ export function app_g_study(player, overlay) {
         let b = app_g_button_green(overlay, item, lambda3);
       }
       function wrong() {
-        let r2 = list_random_item(list);
-        let item = list_get(sermon_correct_list, sermon_index);
+        let r2 = list_random_item(sermon_wrong_list);
         function lambda3() {}
-        let b = app_g_button_green(overlay, item, lambda3);
+        let b = app_g_button_green(overlay, r2, lambda3);
       }
       lambda_invoke_multiple_shuffle_2(correct, wrong);
     }
