@@ -1,3 +1,4 @@
+import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
 import { app_g_passage_to_reference } from "../../../love/public/src/app_g_passage_to_reference.mjs";
 import { app_g_main_books } from "../../../love/public/src/app_g_main_books.mjs";
 import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
@@ -102,7 +103,7 @@ export async function app_g_click_npc(
       let container = app_g_container(overlay);
       app_g_p_text(
         container,
-        emoji_pray() + " You remember that you need to study!",
+        emoji_book_open() + " You remember that you need to study!",
       );
       let r = list_remove_first(review);
       let passages = object_property_get(s, "passages");
