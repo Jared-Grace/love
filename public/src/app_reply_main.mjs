@@ -122,7 +122,8 @@ export async function app_reply_main() {
     list_empty(copied);
   }
   let component3 = html_button(parent, "Clear", lambda14);
-  let component5 = html_button(parent2, text3, function lambda15() {});
+  function lambda15() {}
+  let component5 = html_button(parent2, text3, lambda15);
   html_button(root, "Reset 1", verse_random_reset_1);
   let r = range_1(4);
   let mapped = list_map(r, double);
