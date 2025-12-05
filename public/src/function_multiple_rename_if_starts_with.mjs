@@ -1,3 +1,4 @@
+import { string_combine } from "../../../love/public/src/string_combine.mjs";
 import { string_prefix_without } from "../../../love/public/src/string_prefix_without.mjs";
 import { list_empty_not_is_assert } from "../../../love/public/src/list_empty_not_is_assert.mjs";
 import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
@@ -15,6 +16,7 @@ export async function function_multiple_rename_if_starts_with(
   marker("1");
   async function lambda(item) {
     let without = string_prefix_without(item, f_name_prefix_before);
+    let together = string_combine(left, right);
     let v = await function_rename(f_name_before, f_name_after);
   }
   await each_async(filtered, lambda);
