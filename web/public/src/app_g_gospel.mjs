@@ -63,59 +63,49 @@ export async function app_g_gospel(
     let { ob, passage_wrong } = app_g_wrong(passage, passages, property);
     app_g_npc_says(npc, overlay, game_prefix, ob);
     app_g_container_text(overlay, "What would you like to say?");
-    let choices = [
-      function correct() {
-        async function lambda() {
-          object_property_change(npc, "objections", subtract_1);
-          await app_g_gospel(
-            overlay,
-            npc,
-            game_prefix,
-            overlay_close,
-            player,
-            div_map,
-          );
-        }
-        app_g_bible_passage_button(
-          passage,
-          chapter_code,
-          books,
+    function correct() {
+      async function lambda() {
+        object_property_change(npc, "objections", subtract_1);
+        await app_g_gospel(
           overlay,
-          lambda,
+          npc,
+          game_prefix,
+          overlay_close,
+          player,
+          div_map,
         );
-      },
-      function wrong() {
-        let b = app_g_bible_passage_button(
-          passage_wrong,
+      }
+      app_g_bible_passage_button(passage, chapter_code, books, overlay, lambda);
+    }
+    function wrong() {
+      let b = app_g_bible_passage_button(
+        passage_wrong,
+        chapter_code,
+        books,
+        overlay,
+        lambda3,
+      );
+      function lambda3() {
+        let review = object_property_get(player, "review");
+        let verse_numbers = object_property_get(passage_wrong, "verse_numbers");
+        list_add(review, {
           chapter_code,
-          books,
-          overlay,
-          lambda3,
+          verse_numbers,
+        });
+        let text = emoji_book_open();
+        const player_property = "studied";
+        const tutorial_property = "tutorial_converse";
+        app_g_tutorial(
+          player,
+          player_property,
+          div_map,
+          tutorial_property,
+          text,
         );
-        function lambda3() {
-          let review = object_property_get(player, "review");
-          let verse_numbers = object_property_get(
-            passage_wrong,
-            "verse_numbers",
-          );
-          list_add(review, {
-            chapter_code,
-            verse_numbers,
-          });
-          let text = emoji_book_open();
-          const player_property = "studied";
-          const tutorial_property = "tutorial_converse";
-          app_g_tutorial(
-            player,
-            player_property,
-            div_map,
-            tutorial_property,
-            text,
-          );
-          html_remove(b);
-        }
-      },
-    ];
+        html_remove(b);
+      }
+    }
+    let choices = [correct, wrong];
     list_shuffle(choices);
     lambda_invoke_multiple(choices);
     app_g_button_conversation_end(overlay, overlay_close);
