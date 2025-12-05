@@ -104,6 +104,7 @@ export async function app_g_click_npc(
           " You remember that you have not prayed, yet, before your next conversation!",
       );
       let v = list_remove_first(review);
+      let verse_numbers = object_property_get(v, "verse_numbers");
       let v2 = json_format_to({
         v,
         s,
