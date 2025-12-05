@@ -6,7 +6,8 @@ export async function function_multiple_rename_if_starts_with(
   f_name_after,
 ) {
   marker("1");
-  await each_async(list, async function lambda(item) {});
+  async function lambda(item) {}
+  await each_async(list, lambda);
   let v = await function_rename(f_name_before, f_name_after);
   return v;
 }
