@@ -1,3 +1,4 @@
+import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
 import { app_g_wrong } from "../../../love/public/src/app_g_wrong.mjs";
 import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
 import { app_g_tutorial } from "../../../love/public/src/app_g_tutorial.mjs";
@@ -58,11 +59,8 @@ export async function app_g_gospel(
     let passages = object_property_get(o, "passages");
     list_shuffle(passages);
     let passage = list_last(passages);
-    let { ob, passage_wrong } = app_g_wrong(
-      passage,
-      passages,
-      g_objection_generate_property(),
-    );
+    let property = g_objection_generate_property();
+    let { ob, passage_wrong } = app_g_wrong(passage, passages, property);
     app_g_npc_says(npc, overlay, game_prefix, ob);
     app_g_container_text(overlay, "What would you like to say?");
     let choices = [
