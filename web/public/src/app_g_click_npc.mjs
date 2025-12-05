@@ -109,7 +109,7 @@ export async function app_g_click_npc(
       let text2 = object_property_get(s, "text");
       app_g_container_text(overlay, text2);
       let books = app_g_main_books();
-      const button_text = app_g_passage_to_reference(s, chapter_code, books);
+      const text = app_g_passage_to_reference(s, chapter_code, books);
       app_g_container_text(
         overlay,
         "What would you like to say about this Bible passage?",
