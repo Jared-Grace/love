@@ -21,6 +21,7 @@ export async function function_multiple_rename_if_starts_with(
       f_name_prefix_after,
     );
     log(together);
+    return;
     let v = await function_rename(f_name_before, together);
   }
   await each_async(filtered, lambda);
