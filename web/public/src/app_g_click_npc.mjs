@@ -111,10 +111,9 @@ export async function app_g_click_npc(
       app_g_container_text(overlay, text2);
       let books = g_main_books();
       let reference = ebible_parts_chapter_code_to_reference(
+        chapter_code,
         books,
-        book_code,
-        verse_numbers2,
-        chapter_name,
+        verse_numbers,
       );
       app_g_container_text(
         overlay,
