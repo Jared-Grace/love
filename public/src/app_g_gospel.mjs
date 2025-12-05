@@ -50,10 +50,7 @@ export async function app_g_gospel(
   let p = positive_is(objections2);
   if (p) {
     let books = global_function_property_get(app_g_main, "books");
-    let chapter_code = global_function_property_get(
-      app_g_gospel,
-      "chapter_code",
-    );
+    let chapter_code = global_function_property_get(app_g_main, "chapter_code");
     async function lambda5() {
       let destination = g_objection_generate_upload_path(chapter_code);
       let o = await firebase_storage_download_json(destination);
