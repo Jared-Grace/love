@@ -123,6 +123,7 @@ export async function app_reply_main() {
     list_empty(copied);
     list_empty(chosens);
     buttons_refresh();
+    preview_refresh;
   }
   let component3 = html_button(root, "Clear", lambda14);
   function lambda15() {
