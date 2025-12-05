@@ -8,6 +8,6 @@ export function app_g_passage_to_reference(passage, chapter_code, books) {
     books,
     verse_numbers,
   );
-  const button_text = reference + " " + text2;
-  return button_text;
+  const text = reference + " " + text2;
+  return text;
 }
