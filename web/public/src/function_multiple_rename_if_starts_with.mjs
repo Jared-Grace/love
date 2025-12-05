@@ -14,8 +14,8 @@ export async function function_multiple_rename_if_starts_with(
   let f_names = await functions_names();
   let filtered = filter(f_names);
   list_empty_not_is_assert(filtered);
-  marker("1");
   await each_async(filtered, lambda);
+  marker("1");
   function filter(f_names) {
     let filtered2 = list_filter_starts_with(f_names, f_name_prefix_before);
     return filtered2;
