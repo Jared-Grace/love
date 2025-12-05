@@ -17,7 +17,7 @@ export function app_g_bible_passage_button(
     books,
     verse_numbers,
   );
-  const button_text = text2 + " " + reference;
+  const button_text = reference + " " + text2;
   let b = app_g_button_green(overlay, button_text, lambda);
   return b;
 }
