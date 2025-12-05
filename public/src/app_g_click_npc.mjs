@@ -102,8 +102,7 @@ export async function app_g_click_npc(
       let container = app_g_container(overlay);
       app_g_p_text(
         container,
-        emoji_pray() +
-          " You remember that you have not prayed, yet, before your next conversation!",
+        emoji_pray() + " You remember that you need to study!",
       );
       let r = list_remove_first(review);
       let passages = object_property_get(s, "passages");
