@@ -1,3 +1,4 @@
+import { string_includes } from "../../../love/public/src/string_includes.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { folder_user_storage_function_each } from "../../../love/public/src/folder_user_storage_function_each.mjs";
 import { firebase_upload_object } from "../../../love/public/src/firebase_upload_object.mjs";
@@ -8,6 +9,8 @@ import { path_base } from "../../../love/public/src/path_base.mjs";
 export async function g_generate_upload_generic(path_get, fn) {
   await folder_user_storage_function_each(fn, file_each);
   async function file_each(file) {
+    let fragment = "JAS";
+    let i = string_includes(input, part);
     log(file);
     return;
     let fb = path_base(file);
