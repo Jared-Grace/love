@@ -103,10 +103,10 @@ export async function app_g_click_npc(
         emoji_pray() +
           " You remember that you have not prayed, yet, before your next conversation!",
       );
-      let v = list_remove_first(review);
-      let verse_numbers = object_property_get(v, "verse_numbers");
+      let r = list_remove_first(review);
+      let verse_numbers = object_property_get(r, "verse_numbers");
       let v2 = json_format_to({
-        v,
+        v: r,
         s,
       });
       alert(v2);
