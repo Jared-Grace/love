@@ -1,5 +1,5 @@
+import { object_property_equals_json } from "../../../love/public/src/object_property_equals_json.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { object_property_equals } from "../../../love/public/src/object_property_equals.mjs";
 export function object_property_equals_json_lambda(
   property_name,
   property_value,
