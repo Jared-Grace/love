@@ -1,7 +1,7 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 import { newline_windows_code } from "../../../love/public/src/newline_windows_code.mjs";
 import { g_sermon_generate_book_genericundefined } from "../../../love/public/src/g_sermon_generate_book_genericundefined.mjs";
-import { g_sermon_generateundefined } from "../../../love/public/src/g_sermon_generateundefined.mjs";
+import { g_sermon_generate } from "../../../love/public/src/g_sermon_generate.mjs";
 export async function g_sermon_generate_bookundefined(bible_folder, book_code) {
   marker("1");
   const prompt_system =
@@ -23,7 +23,7 @@ Output each sentence separated by ` +
     newline_windows_code() +
     `. Follow these instructions exactly.`;
   const prompt_user_middle = "Here is the passage to rewrite: ";
-  let fn = g_sermon_generateundefined;
+  let fn = g_sermon_generate;
   await g_sermon_generate_book_genericundefined(
     bible_folder,
     book_code,
