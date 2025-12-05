@@ -104,7 +104,7 @@ export async function app_g_click_npc(
           " You remember that you have not prayed, yet, before your next conversation!",
       );
       let v = list_remove_first(review);
-      let v2 = json_format_to((v, s));
+      let v2 = json_format_to({v,s});
       alert(v2);
     } else {
       app_g_conversation(
