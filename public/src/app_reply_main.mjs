@@ -1,3 +1,4 @@
+import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
 import { double } from "../../../love/public/src/double.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
@@ -122,8 +123,10 @@ export async function app_reply_main() {
     list_empty(copied);
   }
   let component3 = html_button(parent, "Clear", lambda14);
-  function lambda15() {}
-  let component5 = html_button(parent2, text3, lambda15);
+  function lambda15() {
+    let removed = list_remove_last(list2);
+  }
+  let component5 = html_button(parent2, "Remove", lambda15);
   html_button(root, "Reset 1", verse_random_reset_1);
   let r = range_1(4);
   let mapped = list_map(r, double);
