@@ -1,4 +1,4 @@
-import { g_preach_generate_book_generic } from "../../../love/public/src/g_preach_generate_book_generic.mjs";
+import { g_sermon_generate_book_genericundefined } from "../../../love/public/src/g_sermon_generate_book_genericundefined.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_struggle_generate() {
   let bible_folder = "engbsb";
@@ -20,7 +20,7 @@ Rules:
   const prompt_user_middle =
     "Generate personal struggles that directly relate to this text: ";
   let fn = g_struggle_generate;
-  await g_preach_generate_book_generic(
+  await g_sermon_generate_book_genericundefined(
     bible_folder,
     book_code,
     fn,
