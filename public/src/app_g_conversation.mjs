@@ -19,6 +19,7 @@ export function app_g_conversation(
   player,
   game_prefix,
   overlay_close,
+  div_map,
 ) {
   marker("1");
   object_property_set(player, "conversed", true);
@@ -57,7 +58,14 @@ export function app_g_conversation(
   const npc_says = v + " " + name_player + g_random_dot_bang() + meet_message;
   app_g_npc_says(npc, overlay, game_prefix, npc_says);
   async function npc_gospel() {
-    await app_g_gospel(overlay, npc, game_prefix, overlay_close, player);
+    await app_g_gospel(
+      overlay,
+      npc,
+      game_prefix,
+      overlay_close,
+      player,
+      div_map,
+    );
   }
   app_g_container_text(overlay, "What would you like to do?");
   let name_npc2 = object_property_get(npc, "name");
