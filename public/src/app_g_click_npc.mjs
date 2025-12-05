@@ -72,6 +72,7 @@ export async function app_g_click_npc(
         player,
         game_prefix,
         overlay_close,
+        div_map,
       );
     }
   }
