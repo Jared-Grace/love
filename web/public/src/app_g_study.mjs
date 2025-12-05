@@ -1,3 +1,4 @@
+import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
@@ -80,7 +81,9 @@ export function app_g_study(player, overlay) {
       }
       function wrong() {
         let r2 = list_random_item(sermon_wrong_list);
-        function lambda3() {}
+        function lambda3() {
+          html_style_set(b2, style_key, style_value);
+        }
         let b = app_g_button_green(div, r2, lambda3);
       }
       lambda_invoke_multiple_shuffle_2(correct, wrong);
