@@ -16,8 +16,8 @@ export async function function_multiple_rename_if_starts_with(
   list_empty_not_is_assert(filtered);
   marker("1");
   async function lambda(f_name_before) {
-    let together = name_change(f_name_before);
-    let v = await function_rename(f_name_before, together);
+    let after = name_change(f_name_before);
+    let v = await function_rename(f_name_before, after);
   }
   await each_async(filtered, lambda);
   function name_change(f_name_before) {
