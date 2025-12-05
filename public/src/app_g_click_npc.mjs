@@ -1,3 +1,4 @@
+import { g_sermon_generate_upload_path } from "../../../love/public/src/g_sermon_generate_upload_path.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { app_g_chapter_code } from "../../../love/public/src/app_g_chapter_code.mjs";
 import { app_g_gospel } from "../../../love/public/src/app_g_gospel.mjs";
