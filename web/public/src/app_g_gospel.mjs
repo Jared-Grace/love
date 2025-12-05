@@ -1,3 +1,4 @@
+import { g_main_books } from "../../../love/public/src/g_main_books.mjs";
 import { app_g_chapter_code } from "../../../love/public/src/app_g_chapter_code.mjs";
 import { global_function_property_nested_lambda } from "../../../love/public/src/global_function_property_nested_lambda.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -33,8 +34,6 @@ import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { g_objection_generate_upload_path } from "../../../love/public/src/g_objection_generate_upload_path.mjs";
-import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
-import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { positive_is } from "../../../love/public/src/positive_is.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { integer_random } from "../../../love/public/src/integer_random.mjs";
@@ -50,7 +49,7 @@ export async function app_g_gospel(
   let objections2 = object_property_get(npc, "objections");
   let p = positive_is(objections2);
   if (p) {
-    let books = global_function_property_get(app_g_main, "books");
+    let books = g_main_books();
     let chapter_code = app_g_chapter_code();
     async function lambda5() {
       let destination = g_objection_generate_upload_path(chapter_code);
