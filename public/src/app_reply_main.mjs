@@ -118,6 +118,7 @@ export async function app_reply_main() {
     languages_reset();
   }
   let component4 = html_button(root, "❤️", love);
+  let component3 = html_button(parent, text3, function lambda14() {});
   html_button(root, "Reset 1", verse_random_reset_1);
   let r = range_1(4);
   let mapped = list_map(r, double);
