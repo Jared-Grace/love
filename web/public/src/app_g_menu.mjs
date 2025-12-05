@@ -63,7 +63,7 @@ export function app_g_menu(overlay, player) {
       );
       let r = list_remove_first(review);
       let verse_numbers = object_property_get(r, "verse_numbers");
-      let passages = object_property_get(s, "passages");
+      let passages = object_property_get(s, "passages");l
       let item = list_find_property_json(list, property_name, property_value);
       let text2 = object_property_get(s, "text");
       app_g_container_text(overlay, text2);
