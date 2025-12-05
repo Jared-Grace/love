@@ -1,3 +1,4 @@
+import { list_find_property_json } from "../../../love/public/src/list_find_property_json.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { app_g_passage_to_reference } from "../../../love/public/src/app_g_passage_to_reference.mjs";
 import { app_g_main_books } from "../../../love/public/src/app_g_main_books.mjs";
@@ -63,6 +64,7 @@ export function app_g_menu(overlay, player) {
       let r = list_remove_first(review);
       let verse_numbers = object_property_get(r, "verse_numbers");
       let passages = object_property_get(s, "passages");
+      let item = list_find_property_json(list, property_name, property_value);
       let text2 = object_property_get(s, "text");
       app_g_container_text(overlay, text2);
       let books = app_g_main_books();
