@@ -182,6 +182,7 @@ export async function app_g_main() {
     img: player_img,
     prayer: {
       conversation: false,
+      study: false,
     },
     name: list_random_item(names_men),
     conversed: false,
