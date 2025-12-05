@@ -28,6 +28,7 @@ export async function app_g_refresh(
   let { npcs } = map;
   marker("1");
   let ts = ["tutorial_converse"];
+  each(list, function lambda4(item) {});
   global_function_property_set(app_g_refresh, "tutorial_converse", null);
   html_clear(div_map);
   let player = app_g_player_get();
