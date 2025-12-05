@@ -1,3 +1,4 @@
+import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
 import { app_g_button_green } from "../../../love/public/src/app_g_button_green.mjs";
 import { app_g_button_uncolored } from "../../../love/public/src/app_g_button_uncolored.mjs";
 import { app_g_button_back } from "../../../love/public/src/app_g_button_back.mjs";
@@ -34,4 +35,5 @@ export function app_g_menu(overlay, player) {
     app_g_button_green(overlay, text, lambda22);
   }
   app_g_button_uncolored(overlay, text, lambda7);
+  let text2 = emoji_book_open() + " You remember that you need to study!";
 }
