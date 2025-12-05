@@ -71,7 +71,7 @@ export function app_g_study(player, overlay) {
         function lambda3() {}
         let b = app_g_button_green(overlay, item, lambda3);
       }
-      function wrong() {
+      function wrong() {lri
         let item = list_get(sermon_correct_list, sermon_index);
         function lambda3() {}
         let b = app_g_button_green(overlay, item, lambda3);
