@@ -1,3 +1,4 @@
+import { app_g_wrong } from "../../../love/public/src/app_g_wrong.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_find_property_json } from "../../../love/public/src/list_find_property_json.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -79,6 +80,7 @@ export function app_g_menu(overlay, player) {
         overlay,
         "What would you like to say about this Bible passage?",
       );
+      app_g_wrong(passage, passages, "sermon");
       function lambda3() {}
       let b = app_g_button_green(overlay2, text4, lambda3);
     }
