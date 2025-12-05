@@ -1,3 +1,4 @@
+import { app_g_chapter_code } from "../../../love/public/src/app_g_chapter_code.mjs";
 import { global_function_property_nested_lambda } from "../../../love/public/src/global_function_property_nested_lambda.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
@@ -50,7 +51,7 @@ export async function app_g_gospel(
   let p = positive_is(objections2);
   if (p) {
     let books = global_function_property_get(app_g_main, "books");
-    let chapter_code = global_function_property_get(app_g_main, "chapter_code");
+    let chapter_code = app_g_chapter_code();
     async function lambda5() {
       let destination = g_objection_generate_upload_path(chapter_code);
       let o = await firebase_storage_download_json(destination);
