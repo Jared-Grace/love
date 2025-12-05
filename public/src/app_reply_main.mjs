@@ -121,6 +121,7 @@ export async function app_reply_main() {
   let component4 = html_button(root, "❤️", love);
   function lambda14() {
     list_empty(copied);
+    list_empty(chosens);
   }
   let component3 = html_button(root, "Clear", lambda14);
   function lambda15() {
