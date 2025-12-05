@@ -1,3 +1,4 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { string_split_newline_windows_escaped } from "../../../love/public/src/string_split_newline_windows_escaped.mjs";
@@ -58,6 +59,7 @@ export function app_g_study(player, overlay) {
         overlay,
         "If you were preaching from this Bible passage, what would you say?",
       );
+      let div = html_div(root);
       const property = "sermon";
       let sermon_correct = object_property_get(passage, property);
       let sermon_correct_list =
