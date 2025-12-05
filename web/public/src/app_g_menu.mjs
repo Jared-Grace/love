@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { app_g_passage_to_reference } from "../../../love/public/src/app_g_passage_to_reference.mjs";
 import { app_g_main_books } from "../../../love/public/src/app_g_main_books.mjs";
 import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
@@ -42,32 +43,35 @@ export function app_g_menu(overlay, player) {
   }
   app_g_button_uncolored(overlay, text, lambda7);
   let review = object_property_get(player, "review");
-  let text2 = emoji_book_open() + " Study";
-  async function lambda() {
-    app_g_menu_clear_back(overlay, player);
-    let chapter_code = app_g_chapter_code();
-    async function lambda5() {
-      let destination = g_sermon_generate_upload_path(chapter_code);
-      let o = await firebase_storage_download_json(destination);
-      return o;
+  let ne = list_empty_not_is(review);
+  if (ne) {
+    let text2 = emoji_book_open() + " Study";
+    async function lambda() {
+      app_g_menu_clear_back(overlay, player);
+      let chapter_code = app_g_chapter_code();
+      async function lambda5() {
+        let destination = g_sermon_generate_upload_path(chapter_code);
+        let o = await firebase_storage_download_json(destination);
+        return o;
+      }
+      let s = await global_function_property_nested_lambda(
+        app_g_gospel,
+        "sermons",
+        chapter_code,
+        lambda5,
+      );
+      let r = list_remove_first(review);
+      let passages = object_property_get(s, "passages");
+      let text2 = object_property_get(s, "text");
+      app_g_container_text(overlay, text2);
+      let books = app_g_main_books();
+      const text = app_g_passage_to_reference(s, chapter_code, books);
+      app_g_container_text(overlay, text);
+      app_g_container_text(
+        overlay,
+        "What would you like to say about this Bible passage?",
+      );
     }
-    let s = await global_function_property_nested_lambda(
-      app_g_gospel,
-      "sermons",
-      chapter_code,
-      lambda5,
-    );
-    let r = list_remove_first(review);
-    let passages = object_property_get(s, "passages");
-    let text2 = object_property_get(s, "text");
-    app_g_container_text(overlay, text2);
-    let books = app_g_main_books();
-    const text = app_g_passage_to_reference(s, chapter_code, books);
-    app_g_container_text(overlay, text);
-    app_g_container_text(
-      overlay,
-      "What would you like to say about this Bible passage?",
-    );
+    app_g_button_uncolored(overlay, text2, lambda);
   }
-  app_g_button_uncolored(overlay, text2, lambda);
 }
