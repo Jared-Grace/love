@@ -27,7 +27,7 @@ export async function app_g_refresh(
 ) {
   let { npcs } = map;
   marker("1");
-  global_function_property_set(app_g_refresh, "tutorial", null);
+  global_function_property_set(app_g_refresh, "tutorial_converse", null);
   html_clear(div_map);
   let player = app_g_player_get();
   let player_img_c = g_character_img(game_prefix, div_map, player);
