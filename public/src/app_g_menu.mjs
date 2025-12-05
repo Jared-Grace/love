@@ -1,3 +1,4 @@
+import { app_g_menu_clear_back } from "../../../love/public/src/app_g_menu_clear_back.mjs";
 import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
 import { app_g_button_green } from "../../../love/public/src/app_g_button_green.mjs";
 import { app_g_button_uncolored } from "../../../love/public/src/app_g_button_uncolored.mjs";
@@ -17,11 +18,7 @@ export function app_g_menu(overlay, player) {
   let component2 = app_g_button_back(overlay, close);
   let text = emoji_pray() + " Pray";
   function lambda7() {
-    html_clear(overlay);
-    function lambda23() {
-      app_g_menu(overlay, player);
-    }
-    let button2 = app_g_button_back(overlay, lambda23);
+    app_g_menu_clear_back(overlay, player);
     function lambda22() {
       let prayer = object_property_get(player, "prayer");
       object_property_set(prayer, "conversation", true);
