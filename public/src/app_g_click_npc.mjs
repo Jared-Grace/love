@@ -55,7 +55,8 @@ export async function app_g_click_npc(
     function lambda21() {
       overlay_close();
       let text = emoji_pray();
-      let conversed = object_property_get(player, "conversed");
+      const property = "conversed";
+      let conversed = object_property_get(player, property);
       if (conversed) {
         return;
       }
