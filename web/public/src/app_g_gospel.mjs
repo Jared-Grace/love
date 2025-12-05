@@ -1,4 +1,4 @@
-import { lambda_invoke_multiple_shuffle } from "../../../love/public/src/lambda_invoke_multiple_shuffle.mjs";
+import { lambda_invoke_multiple_shuffle_2 } from "../../../love/public/src/lambda_invoke_multiple_shuffle_2.mjs";
 import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
 import { app_g_wrong } from "../../../love/public/src/app_g_wrong.mjs";
 import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
@@ -105,8 +105,7 @@ export async function app_g_gospel(
         html_remove(b);
       }
     }
-    let choices = [correct, wrong];
-    lambda_invoke_multiple_shuffle(choices);
+    lambda_invoke_multiple_shuffle_2(correct, wrong);
     app_g_button_conversation_end(overlay, overlay_close);
   } else {
     function jesus_christ() {
