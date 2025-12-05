@@ -1,3 +1,4 @@
+import { app_g_chapter_code } from "../../../love/public/src/app_g_chapter_code.mjs";
 import { app_g_gospel } from "../../../love/public/src/app_g_gospel.mjs";
 import { global_function_property_nested_lambda } from "../../../love/public/src/global_function_property_nested_lambda.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
@@ -82,7 +83,7 @@ export async function app_g_click_npc(
     let review = object_property_get(player, "review");
     let ne = list_empty_not_is(review);
     if (ne) {
-    let chapter_code = app_g_chapter_code();
+      let chapter_code = app_g_chapter_code();
       let s = await global_function_property_nested_lambda(
         app_g_gospel,
         "sermons",
