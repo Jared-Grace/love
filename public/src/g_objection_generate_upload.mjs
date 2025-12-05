@@ -10,12 +10,12 @@ import { path_base } from "../../../love/public/src/path_base.mjs";
 export async function g_objection_generate_upload() {
   marker("1");
   let path_get = g_objection_generate_upload_path;
+  let fn = g_objection_generate;
   await g_objection_generate_migrate_generic(file_each);
   async function file_each(file) {
     let fb = path_base(file);
     let chapter_code = path_name(fb);
     let destination = g_objection_generate_upload_path(chapter_code);
-    let fn = g_objection_generate;
     let path = local_function_path_json(chapter_code, fn);
     let data = await file_read_json(path);
     await firebase_upload_object(data, destination);
