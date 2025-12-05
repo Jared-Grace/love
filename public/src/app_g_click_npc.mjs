@@ -82,9 +82,10 @@ export async function app_g_click_npc(
     let review = object_property_get(player, "review");
     let ne = list_empty_not_is(review);
     if (ne) {
-      let o = await global_function_property_nested_lambda(
+    let chapter_code = app_g_chapter_code();
+      let s = await global_function_property_nested_lambda(
         app_g_gospel,
-        "objections",
+        "sermons",
         chapter_code,
         lambda5,
       );
