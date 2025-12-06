@@ -1,5 +1,5 @@
 import { marker } from "../../../love/public/src/marker.mjs";
-export function string_split_multiple() {
+export function string_split_multiple(str, delimiters) {
   marker("1");
   function lambda(d) {
     let v = d.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
