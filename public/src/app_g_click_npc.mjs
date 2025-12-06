@@ -24,40 +24,46 @@ export async function app_g_click_npc(
     app_g_player_save(player);
     html_remove(overlay);
   }
-  let prayer = object_property_get(player, "prayer");
-  let conversation = object_property_get(prayer, "conversation");
-  if (not(conversation)) {
+  let review = object_property_get(player, "review");
+  let ne = list_empty_not_is(review);
+  if (ne) {
     let container = app_g_container(overlay);
     app_g_p_text(
       container,
-      emoji_pray() +
-        " You remember that you have not prayed, yet, before your next conversation!",
+      emoji_book_open() + " You remember that you need to study!",
     );
-    let conversed = object_property_get(player, "conversed");
-    if (not(conversed)) {
-      app_g_p_text(
-        container,
-        " To pray, tap or click on yourself (You glow with white)",
-      );
-    }
-    function lambda21() {
-      overlay_close();
-      let text = emoji_pray();
-      const player_property = "conversed";
-      const tutorial_property = "tutorial_converse";
-      app_g_tutorial(player, player_property, div_map, tutorial_property, text);
-    }
-    app_g_button_back(overlay, lambda21);
+    app_g_button_back(overlay, overlay_close);
   } else {
-    let review = object_property_get(player, "review");
-    let ne = list_empty_not_is(review);
-    if (ne) {
+    let prayer = object_property_get(player, "prayer");
+    let conversation = object_property_get(prayer, "conversation");
+    if (not(conversation)) {
       let container = app_g_container(overlay);
       app_g_p_text(
         container,
-        emoji_book_open() + " You remember that you need to study!",
+        emoji_pray() +
+          " You remember that you have not prayed, yet, before your next conversation!",
       );
-      app_g_button_back(overlay, overlay_close);
+      let conversed = object_property_get(player, "conversed");
+      if (not(conversed)) {
+        app_g_p_text(
+          container,
+          " To pray, tap or click on yourself (You glow with white)",
+        );
+      }
+      function lambda21() {
+        overlay_close();
+        let text = emoji_pray();
+        const player_property = "conversed";
+        const tutorial_property = "tutorial_converse";
+        app_g_tutorial(
+          player,
+          player_property,
+          div_map,
+          tutorial_property,
+          text,
+        );
+      }
+      app_g_button_back(overlay, lambda21);
     } else {
       app_g_conversation(
         prayer,
