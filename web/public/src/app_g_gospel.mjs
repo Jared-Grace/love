@@ -123,6 +123,7 @@ export async function app_g_gospel(
               ", the Son of" + string_random_or_empty(" the living") + " God",
             ),
         ),
+      "I confess " + jesus_christ() + " as my Lord and Savior",
     ]);
     const blessing =
       "God bless you " +
