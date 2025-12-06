@@ -1,5 +1,6 @@
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_index_last_is } from "../../../love/public/src/list_index_last_is.mjs";
 import { html_bold } from "../../../love/public/src/html_bold.mjs";
 import { html_border_invalid_color } from "../../../love/public/src/html_border_invalid_color.mjs";
@@ -18,7 +19,6 @@ import { app_g_main_books } from "../../../love/public/src/app_g_main_books.mjs"
 import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
 import { list_find_property_json } from "../../../love/public/src/list_find_property_json.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { list_remove_first } from "../../../love/public/src/list_remove_first.mjs";
 import { app_g_gospel } from "../../../love/public/src/app_g_gospel.mjs";
 import { global_function_property_nested_lambda } from "../../../love/public/src/global_function_property_nested_lambda.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
@@ -49,7 +49,7 @@ export function app_g_study(player, overlay, close) {
         chapter_code,
         lambda5,
       );
-      let r = list_remove_first(review);
+      let r = list_first(review);
       let verse_numbers = object_property_get(r, "verse_numbers");
       let passages = object_property_get(sermons, "passages");
       log({
@@ -87,7 +87,7 @@ export function app_g_study(player, overlay, close) {
             sermon_index++;
             let li = list_index_last_is(sermon_correct_list, sermon_index);
             if (li) {
-              object_property_set(player, "review", false);
+              list_remove(review, r);
               close();
             } else {
               refresh();
