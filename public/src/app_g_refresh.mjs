@@ -1,3 +1,4 @@
+import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs";
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_scroll_center_container_now } from "../../../love/public/src/html_scroll_center_container_now.mjs";
@@ -28,11 +29,10 @@ export async function app_g_refresh(
 ) {
   let { npcs } = map;
   marker("1");
-  let ts = ["tutorial_converse", "tutorial_study"];
   function lambda4(t) {
     global_function_property_set(app_g_main, t, null);
   }
-  each(ts, lambda4);
+  g_tutorials_each(lambda4);
   html_clear(div_map);
   let player = app_g_player_get();
   let player_img_c = g_character_img(game_prefix, div_map, player);
