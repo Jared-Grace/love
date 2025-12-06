@@ -84,7 +84,7 @@ export function app_g_study(player, overlay) {
             sermon_index++;
             let index_last = list_index_last(sermon_correct_list);
             let li = sermon_index === index_last;
-            if (false) {
+            if (li) {
             }
             refresh();
           }
