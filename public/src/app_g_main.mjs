@@ -1,6 +1,4 @@
-import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
-import { html_element } from "../../../love/public/src/html_element.mjs";
-import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
+import { html_roboto } from "../../../love/public/src/html_roboto.mjs";
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
@@ -203,14 +201,3 @@ export async function app_g_main() {
   });
   await app_g_refresh(div_map, game_prefix, tiles_path, rows, map);
 }
-function html_roboto() {
-  let head = html_document_head();
-  let l = html_element(head, "link");
-  html_attribute_set(
-    l,
-    "href",
-    "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-  );
-  html_attribute_set(l, "rel", "stylesheet");
-}
-
