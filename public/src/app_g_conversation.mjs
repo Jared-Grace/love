@@ -37,7 +37,7 @@ export function app_g_conversation(
     meet_message += "meet you" + g_random_dot_bang();
   } else {
     meet_message +=
-      list_random_item(["see", "talk to", "hear from you"]) +
+      list_random_item(["see", "talk to", "hear from"]) +
       " you" +
       string_random_or_empty(", again") +
       g_random_dot_bang() +
