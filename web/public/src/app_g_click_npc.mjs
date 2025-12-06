@@ -34,7 +34,10 @@ export async function app_g_click_npc(
       emoji_book_open() + " You remember that you need to study!",
     );
     app_g_button_back(overlay, overlay_close);
-    app_g_tutorial_study(player2, div_map2);
+    let studied = object_property_get(player, "studied");
+    if (not(studied)) {
+      app_g_tutorial_study(player, div_map);
+    }
   } else {
     let prayer = object_property_get(player, "prayer");
     let conversation = object_property_get(prayer, "conversation");
