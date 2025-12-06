@@ -1,3 +1,4 @@
+import { html_loading } from "../../../love/public/src/html_loading.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { http } from "../../../love/public/src/http.mjs";
 import { firebase_bucket } from "../../../love/public/src/firebase_bucket.mjs";
@@ -6,6 +7,7 @@ import { firebase_path_fix } from "../../../love/public/src/firebase_path_fix.mj
 import { firebase_storage_url } from "../../../love/public/src/firebase_storage_url.mjs";
 export async function firebase_storage_download(destination) {
   marker("1");
+  let result = await html_loading(async function lambda2() {});
   destination = firebase_path_fix(destination);
   let b = browser_is();
   if (b) {
