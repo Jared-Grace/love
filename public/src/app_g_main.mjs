@@ -1,3 +1,4 @@
+import { html_element } from "../../../love/public/src/html_element.mjs";
 import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
@@ -57,6 +58,7 @@ export async function app_g_main() {
     "font-size": "18px",
   });
   let head = html_document_head();
+  let component = html_element(parent, tag_name);
   html_style_head(
     "button { font-family: " + html_font_san_serif_value() + " }",
   );
