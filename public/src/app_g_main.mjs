@@ -56,7 +56,7 @@ export async function app_g_main() {
     "font-family": style_value,
     "font-size": "18px",
   });
-  let parent = html_document_head();
+  let head = html_document_head();
   html_style_head(
     "button { font-family: " + html_font_san_serif_value() + " }",
   );
