@@ -1,8 +1,12 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 export function string_split_multiple() {
-  marker("1");const escaped = delimiters.map(d => d.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
-const regex = new RegExp(`[${escaped.join('')}]`);
-
-// Split string
-const parts = str.split(regex);
+  marker("1");
+  function lambda(d) {
+    let v = d.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    return v;
+  }
+  const escaped = delimiters.map(lambda);
+  let v2 = escaped.join("");
+  const regex = new RegExp(`[${v2}]`);
+  const parts = str.split(regex);
 }
