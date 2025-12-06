@@ -1,3 +1,4 @@
+import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs";
 import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { html_scroll_center_container } from "../../../love/public/src/html_scroll_center_container.mjs";
@@ -39,6 +40,7 @@ export async function app_g_click(
   let tile = html_component_wrap(tile_e);
   let json = html_data_get(tile, "coordinates");
   let clicked_coordinates = json_from(json);
+  g_tutorials_each(function lambda2() {});
   let tutorial = global_function_property_get(app_g_main, "tutorial_converse");
   if (equal_not(tutorial, null)) {
     html_remove(tutorial);
