@@ -10,7 +10,7 @@ import { path_base } from "../../../love/public/src/path_base.mjs";
 export async function g_generate_upload_generic(path_get, fn) {
   await folder_user_storage_function_each(fn, file_each);
   async function file_each(file) {
-    let fragment = "JAS";
+    let fragment = "JAS01";
     let i = string_includes(file, fragment);
     if (not(i)) {
       return;
