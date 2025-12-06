@@ -7,7 +7,7 @@ export function string_split_multiple(str, delimiters) {
   let { first, remaining } = list_first_remaining(delimiters);
   function lambda(delimiter) {
     let split = string_split(str, delimiter);
-    sj;
+    lj
   }
   each(remaining, lambda);
   return parts;
