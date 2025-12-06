@@ -83,7 +83,9 @@ export function app_g_study(player, overlay) {
           function lambda3() {
             sermon_index++;
             let index_last = list_index_last(sermon_correct_list);
-            let li = sermon_index === index_last;$i
+            let li = sermon_index === index_last;
+            if (false) {
+            }
             refresh();
           }
           let b = app_g_button_green(div, item, lambda3);
