@@ -36,13 +36,13 @@ export function app_g_conversation(
     object_property_set(npc, "meet", true);
     meet_message += "meet you";
   } else {
-    ((meet_message +=
+    (meet_message +=
       list_random_item(["see", "talk to", "hear from you"]) +
       " you" +
       string_random_or_empty(", again") +
       g_random_dot_bang() +
       " " +
-      "What "),
+      "What ") +
       list_random_item([
         "do you " +
           list_random_item(["want", "wish"]) +
@@ -51,7 +51,8 @@ export function app_g_conversation(
           string_random_or_empty(" today") +
           string_random_or_empty(" with me"),
         "is on your " + list_random_item(["mind", "heart"]),
-      ]) + "?");
+      ]) +
+      "?";
   }
   meet_message += g_random_dot_bang();
   let name_player = object_property_get(player, "name");
