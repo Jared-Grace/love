@@ -1,3 +1,4 @@
+import { app_g_tutorial_study } from "../../../love/public/src/app_g_tutorial_study.mjs";
 import { app_g_tutorial } from "../../../love/public/src/app_g_tutorial.mjs";
 import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
@@ -33,6 +34,7 @@ export async function app_g_click_npc(
       emoji_book_open() + " You remember that you need to study!",
     );
     app_g_button_back(overlay, overlay_close);
+    app_g_tutorial_study(player2, div_map2);
   } else {
     let prayer = object_property_get(player, "prayer");
     let conversation = object_property_get(prayer, "conversation");
