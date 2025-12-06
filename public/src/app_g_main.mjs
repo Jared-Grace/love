@@ -65,6 +65,7 @@ export async function app_g_main() {
     "href",
     "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap",
   );
+  html_attribute_set(l, "rel", "stylesheet");
   html_style_head(
     "button { font-family: " + html_font_san_serif_value() + " }",
   );
