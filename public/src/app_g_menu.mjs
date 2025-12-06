@@ -32,5 +32,5 @@ export function app_g_menu(overlay, player) {
     app_g_button_green(overlay, text, lambda22);
   }
   app_g_button_uncolored(overlay, text, lambda7);
-  app_g_study(player, overlay);
+  app_g_study(player, overlay, close);
 }
