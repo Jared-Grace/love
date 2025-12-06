@@ -1,3 +1,4 @@
+import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
@@ -54,6 +55,7 @@ export async function app_g_main() {
     "font-family": style_value,
     "font-size": "18px",
   });
+  html_style_head(style_text);
   let body = html_document_body();
   function lambda(item) {
     html_style_assign(item, {
