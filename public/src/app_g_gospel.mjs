@@ -127,7 +127,9 @@ export async function app_g_gospel(
         list_random_item(["confess", "recieve"]) +
         " " +
         jesus_christ() +
-        " as my Lord and Savior",
+        " as my" +
+        string_random_or_empty(" risen") +
+        " Lord and Savior",
     ]);
     const blessing =
       "God bless you " +
