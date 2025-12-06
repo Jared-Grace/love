@@ -7,7 +7,6 @@ import { app_g_main_books } from "../../../love/public/src/app_g_main_books.mjs"
 import { app_g_chapter_code } from "../../../love/public/src/app_g_chapter_code.mjs";
 import { global_function_property_nested_lambda } from "../../../love/public/src/global_function_property_nested_lambda.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { app_g_button_conversation_end } from "../../../love/public/src/app_g_button_conversation_end.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_bible_passage_button } from "../../../love/public/src/app_g_bible_passage_button.mjs";
