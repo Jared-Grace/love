@@ -1,5 +1,5 @@
 import { each } from "../../../love/public/src/each.mjs";
-export function g_tutorials_each(lambda4) {
+export function g_tutorials_each(lambda) {
   let ts = ["tutorial_converse", "tutorial_study"];
-  each(ts, lambda4);
+  each(ts, lambda);
 }
