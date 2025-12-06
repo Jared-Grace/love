@@ -4,6 +4,6 @@ import { newline_windows_escaped } from "../../../love/public/src/newline_window
 export function string_split_newline_windows_escaped(objections) {
   let separator = newline_windows_escaped();
   let n = newline_windows();
-  let split = string_split_multiple(objections, [separator]);
+  let split = string_split_multiple(objections, [separator, n]);
   return split;
 }
