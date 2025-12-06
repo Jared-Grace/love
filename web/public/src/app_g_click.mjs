@@ -1,3 +1,4 @@
+import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { html_scroll_center_container } from "../../../love/public/src/html_scroll_center_container.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -19,7 +20,6 @@ import { equal } from "../../../love/public/src/equal.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
-import { app_g_refresh } from "../../../love/public/src/app_g_refresh.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { html_data_get } from "../../../love/public/src/html_data_get.mjs";
@@ -39,10 +39,7 @@ export async function app_g_click(
   let tile = html_component_wrap(tile_e);
   let json = html_data_get(tile, "coordinates");
   let clicked_coordinates = json_from(json);
-  let tutorial = global_function_property_get(
-    app_g_refresh,
-    "tutorial_converse",
-  );
+  let tutorial = global_function_property_get(app_g_main, "tutorial_converse");
   if (equal_not(tutorial, null)) {
     html_remove(tutorial);
   }
