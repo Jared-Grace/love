@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { list_index_last_is } from "../../../love/public/src/list_index_last_is.mjs";
@@ -30,6 +31,7 @@ import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mj
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { string_take } from "../../../love/public/src/string_take.mjs";
 export function app_g_study(player, overlay) {
+  marker("1");
   let review = object_property_get(player, "review");
   let ne = list_empty_not_is(review);
   if (ne) {
