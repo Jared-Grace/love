@@ -10,7 +10,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_button_back } from "../../../love/public/src/app_g_button_back.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
-import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 export async function app_g_click_npc(
@@ -25,11 +24,6 @@ export async function app_g_click_npc(
     app_g_player_save(player);
     html_remove(overlay);
   }
-  html_style_assign(overlay, {
-    display: "flex",
-    flexDirection: "column",
-    gap: "0px",
-  });
   let prayer = object_property_get(player, "prayer");
   let conversation = object_property_get(prayer, "conversation");
   if (not(conversation)) {
