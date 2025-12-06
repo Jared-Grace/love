@@ -34,7 +34,7 @@ export function app_g_conversation(
   let meet = object_property_get(npc, "meet");
   if (not(meet)) {
     object_property_set(npc, "meet", true);
-    meet_message += "meet you";
+    meet_message += "meet you" + g_random_dot_bang();
   } else {
     meet_message +=
       list_random_item(["see", "talk to", "hear from you"]) +
@@ -54,7 +54,6 @@ export function app_g_conversation(
       ]) +
       "?";
   }
-  meet_message += g_random_dot_bang();
   let name_player = object_property_get(player, "name");
   const npc_says = v + " " + name_player + g_random_dot_bang() + meet_message;
   app_g_npc_says(npc, overlay, game_prefix, npc_says);
