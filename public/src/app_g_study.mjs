@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -89,6 +90,7 @@ export function app_g_study(player, overlay, close) {
             let li = list_index_last_is(sermon_correct_list, sermon_index);
             if (li) {
               list_remove(review, r);
+              object_property_set(object, property_name, value);
               app_g_player_save(player);
               close();
             } else {
