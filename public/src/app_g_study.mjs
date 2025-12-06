@@ -1,3 +1,4 @@
+import { html_bold } from "../../../love/public/src/html_bold.mjs";
 import { html_border_invalid_color } from "../../../love/public/src/html_border_invalid_color.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -59,6 +60,7 @@ export function app_g_study(player, overlay) {
       let books = app_g_main_books();
       const text = app_g_passage_to_reference(passage, chapter_code, books);
       let c = app_g_container_text(overlay, text);
+      html_bold(c);
       html_style_background_color(c, "#ffffffcd");
       app_g_container_text(
         overlay,
