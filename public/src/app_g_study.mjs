@@ -24,6 +24,7 @@ import { app_g_menu_clear_back } from "../../../love/public/src/app_g_menu_clear
 import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { string_take } from "./string_take.mjs";
 export function app_g_study(player, overlay) {
   let review = object_property_get(player, "review");
   let ne = list_empty_not_is(review);
@@ -88,6 +89,7 @@ export function app_g_study(player, overlay) {
           let b = app_g_button_green(div, r2, lambda3);
           function lambda3() {
             let v = html_border_invalid_color();
+            string_take(v, 6) + "cd";
             html_style_background_color(b, v);
           }
         }
