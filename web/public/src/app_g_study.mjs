@@ -86,7 +86,7 @@ export function app_g_study(player, overlay) {
             sermon_index++;
             let li = list_index_last_is(sermon_correct_list, sermon_index);
             if (li) {
-              object_property_set(player, "review", true);
+              object_property_set(player, "review", false);
               html_remove(overlay);
             } else {
               refresh();
