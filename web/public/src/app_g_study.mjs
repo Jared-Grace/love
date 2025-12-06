@@ -1,3 +1,4 @@
+import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -87,7 +88,8 @@ export function app_g_study(player, overlay, close) {
             sermon_index++;
             let li = list_index_last_is(sermon_correct_list, sermon_index);
             if (li) {
-              list_remove(review, r);app_g_player_save
+              list_remove(review, r);
+              app_g_player_save(player2);
               close();
             } else {
               refresh();
