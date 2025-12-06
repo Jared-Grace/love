@@ -1,4 +1,4 @@
-import { string_split_newline_windows_escaped } from "../../../love/public/src/string_split_newline_windows_escaped.mjs";
+import { app_g_openai_split } from "../../../love/public/src/app_g_openai_split.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { integer_random_0 } from "../../../love/public/src/integer_random_0.mjs";
@@ -15,7 +15,7 @@ export function app_g_wrong(passage, passages, property) {
   let text = object_property_get(passage, "text");
   let words = string_to_words(text);
   let objections = object_property_get(passage, property);
-  let split = string_split_newline_windows_escaped(objections);
+  let split = app_g_openai_split(objections);
   let ob = list_random_item(split);
   let words2 = string_to_words(ob);
   let concated = list_concat(words, words2);
