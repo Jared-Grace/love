@@ -113,16 +113,17 @@ export async function app_g_gospel(
       return v;
     }
     let t = trinity_name_prayer();
-    const believe =
+    const believe = list_random_item([
       string_random_or_empty("Now ") +
-      "I believe" +
-      string_random_or_empty(
-        ", in " +
-          jesus_christ() +
-          string_random_or_empty(
-            ", the Son of" + string_random_or_empty(" the living") + " God",
-          ),
-      );
+        "I believe" +
+        string_random_or_empty(
+          ", in " +
+            jesus_christ() +
+            string_random_or_empty(
+              ", the Son of" + string_random_or_empty(" the living") + " God",
+            ),
+        ),
+    ]);
     const blessing =
       "God bless you " +
       string_random_or_empty(
