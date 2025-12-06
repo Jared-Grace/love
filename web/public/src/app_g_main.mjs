@@ -55,7 +55,9 @@ export async function app_g_main() {
     "font-family": style_value,
     "font-size": "18px",
   });
-  html_style_head("button { " + "html_font_san_serif_value()" + " }");
+  html_style_head(
+    "button { font-family: " + html_font_san_serif_value() + " }",
+  );
   let body = html_document_body();
   function lambda(item) {
     html_style_assign(item, {
