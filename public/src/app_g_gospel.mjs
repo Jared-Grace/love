@@ -94,7 +94,7 @@ export async function app_g_gospel(
         });
         let text = emoji_book_open();
         const player_property = "studied";
-        const tutorial_property = "tutorial_converse";
+        const tutorial_property = "tutorial_study";
         app_g_tutorial(
           player,
           player_property,
