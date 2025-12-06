@@ -30,7 +30,7 @@ import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { string_take } from "../../../love/public/src/string_take.mjs";
-export function app_g_study(player, overlay) {
+export function app_g_study(player, overlay, close) {
   marker("1");
   let review = object_property_get(player, "review");
   let ne = list_empty_not_is(review);
