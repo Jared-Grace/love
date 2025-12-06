@@ -8,6 +8,7 @@ export function app_g_openai_split(objections) {
   let separator = newline_windows_escaped();
   let n = newline_windows();
   let split = string_split_multiple(objections, [separator, n]);
-  let mapped = list_map(list, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list, lambda);
   return split;
 }
