@@ -90,6 +90,8 @@ export function app_g_study(player, overlay, close) {
             sermon_index++;
             let li = list_index_last_is(sermon_correct_list, sermon_index);
             if (li) {
+              sermon_index = 0;
+              mistakes = false;
               list_remove(review, r);
               object_property_set(player, "studied", true);
               app_g_player_save(player);
