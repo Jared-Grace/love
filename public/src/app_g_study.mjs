@@ -58,7 +58,7 @@ export function app_g_study(player, overlay) {
       );
       let books = app_g_main_books();
       const text = app_g_passage_to_reference(passage, chapter_code, books);
-      let c = app_g_container_text(overlay, text);
+      let c = app_g_container_text(overlay, text);html_style_background_color
       app_g_container_text(
         overlay,
         "If you were preaching from this Bible passage, what would you say?",
