@@ -4,6 +4,7 @@ export function invoke_once(fn) {
     if (invoked) {
       let v = null;
       return v;
+      let result = fn(...arguments);
     }
   }
   return invoke_once_lambda;
