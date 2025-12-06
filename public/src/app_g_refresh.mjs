@@ -18,6 +18,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { g_character_img } from "../../../love/public/src/g_character_img.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
+import { app_g_main } from "./app_g_main.mjs";
 export async function app_g_refresh(
   div_map,
   game_prefix,
@@ -29,7 +30,7 @@ export async function app_g_refresh(
   marker("1");
   let ts = ["tutorial_converse", "tutorial_study"];
   function lambda4(t) {
-    global_function_property_set(app_g_refresh, t, null);
+    global_function_property_set(app_g_main, t, null);
   }
   each(ts, lambda4);
   html_clear(div_map);
