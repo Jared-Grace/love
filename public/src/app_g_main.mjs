@@ -46,8 +46,8 @@ import { html_style_assign } from "../../../love/public/src/html_style_assign.mj
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_g_main() {
-  let parts = string_split_multiple(str, delimiters);
-  log(message);
+  let parts = string_split_multiple("a1b2c2d1e34f", ["1", "2", "3"]);
+  log(parts);
   firebase_name_jg();
   let books = await ebible_version_books("engbsb");
   global_function_property_set(app_g_main, "books", books);
