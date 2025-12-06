@@ -269,6 +269,7 @@
   "irn": "integer_random",
   "prn": "promise_new",
   "pf": "function_param_move_first",
-  "lfsw": "list_filter_starts_with"
+  "lfsw": "list_filter_starts_with",
+  "hr": "html_remove"
  }
 }
