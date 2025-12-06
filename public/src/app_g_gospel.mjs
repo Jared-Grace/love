@@ -1,3 +1,4 @@
+import { app_g_button_wrong } from "../../../love/public/src/app_g_button_wrong.mjs";
 import { app_g_doxology } from "../../../love/public/src/app_g_doxology.mjs";
 import { lambda_invoke_multiple_shuffle_2 } from "../../../love/public/src/lambda_invoke_multiple_shuffle_2.mjs";
 import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
@@ -77,6 +78,7 @@ export async function app_g_gospel(
         lambda3,
       );
       function lambda3() {
+        app_g_button_wrong(b);
         let review = object_property_get(player, "review");
         let verse_numbers = object_property_get(passage_wrong, "verse_numbers");
         list_add(review, {
