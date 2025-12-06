@@ -11,6 +11,6 @@ export function string_split_multiple(str, delimiters) {
     str = list_join(split, first);
   }
   each(remaining, lambda);
-  let parts = str;
+  let parts = string_split(str, first);
   return parts;
 }
