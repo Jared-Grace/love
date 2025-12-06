@@ -1,9 +1,8 @@
+import { app_g_tutorial_study } from "../../../love/public/src/app_g_tutorial_study.mjs";
 import { app_g_doxology } from "../../../love/public/src/app_g_doxology.mjs";
 import { lambda_invoke_multiple_shuffle_2 } from "../../../love/public/src/lambda_invoke_multiple_shuffle_2.mjs";
 import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
 import { app_g_wrong } from "../../../love/public/src/app_g_wrong.mjs";
-import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
-import { app_g_tutorial } from "../../../love/public/src/app_g_tutorial.mjs";
 import { app_g_main_books } from "../../../love/public/src/app_g_main_books.mjs";
 import { app_g_chapter_code } from "../../../love/public/src/app_g_chapter_code.mjs";
 import { global_function_property_nested_lambda } from "../../../love/public/src/global_function_property_nested_lambda.mjs";
@@ -85,16 +84,7 @@ export async function app_g_gospel(
           chapter_code,
           verse_numbers,
         });
-        let text = emoji_book_open();
-        const player_property = "studied";
-        const tutorial_property = "tutorial_study";
-        app_g_tutorial(
-          player,
-          player_property,
-          div_map,
-          tutorial_property,
-          text,
-        );
+        app_g_tutorial_study(player, div_map);
         html_remove(b);
       }
     }
