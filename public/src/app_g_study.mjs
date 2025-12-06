@@ -5,7 +5,7 @@ import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
-import { string_split_newline_windows_escaped } from "../../../love/public/src/string_split_newline_windows_escaped.mjs";
+import { app_g_openai_split } from "../../../love/public/src/app_g_openai_split.mjs";
 import { lambda_invoke_multiple_shuffle_2 } from "../../../love/public/src/lambda_invoke_multiple_shuffle_2.mjs";
 import { app_g_button_uncolored } from "../../../love/public/src/app_g_button_uncolored.mjs";
 import { app_g_button_green } from "../../../love/public/src/app_g_button_green.mjs";
@@ -25,7 +25,7 @@ import { app_g_menu_clear_back } from "../../../love/public/src/app_g_menu_clear
 import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { string_take } from "./string_take.mjs";
+import { string_take } from "../../../love/public/src/string_take.mjs";
 export function app_g_study(player, overlay) {
   let review = object_property_get(player, "review");
   let ne = list_empty_not_is(review);
@@ -69,16 +69,14 @@ export function app_g_study(player, overlay) {
       let div = html_div(overlay);
       const property = "sermon";
       let sermon_correct = object_property_get(passage, property);
-      let sermon_correct_list =
-        string_split_newline_windows_escaped(sermon_correct);
+      let sermon_correct_list = app_g_openai_split(sermon_correct);
       let sermon_index = 0;
       refresh();
       function refresh() {
         html_clear(div);
         let { passage_wrong } = app_g_wrong(passage, passages, property);
         let sermon_wrong = object_property_get(passage_wrong, property);
-        let sermon_wrong_list =
-          string_split_newline_windows_escaped(sermon_wrong);
+        let sermon_wrong_list = app_g_openai_split(sermon_wrong);
         function correct() {
           let item = list_get(sermon_correct_list, sermon_index);
           function lambda3() {
