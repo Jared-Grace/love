@@ -60,7 +60,11 @@ export async function app_g_main() {
   });
   let head = html_document_head();
   let l = html_element(head, "link");
-  html_attribute_set(component, key, value);
+  html_attribute_set(
+    component,
+    "href",
+    "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap",
+  );
   html_style_head(
     "button { font-family: " + html_font_san_serif_value() + " }",
   );
