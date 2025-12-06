@@ -95,11 +95,11 @@ export function app_g_study(player, overlay, close) {
                 mistakes = false;
                 refresh();
               } else {
+                list_remove(review, r);
+                object_property_set(player, "studied", true);
+                app_g_player_save(player);
+                close();
               }
-              list_remove(review, r);
-              object_property_set(player, "studied", true);
-              app_g_player_save(player);
-              close();
             } else {
               refresh();
             }
