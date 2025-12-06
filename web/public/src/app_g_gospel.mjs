@@ -1,3 +1,4 @@
+import { app_g_doxology } from "../../../love/public/src/app_g_doxology.mjs";
 import { lambda_invoke_multiple_shuffle_2 } from "../../../love/public/src/lambda_invoke_multiple_shuffle_2.mjs";
 import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
 import { app_g_wrong } from "../../../love/public/src/app_g_wrong.mjs";
@@ -9,19 +10,12 @@ import { global_function_property_nested_lambda } from "../../../love/public/src
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { app_g_button_conversation_end } from "../../../love/public/src/app_g_button_conversation_end.mjs";
-import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
-import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
-import { list_take } from "../../../love/public/src/list_take.mjs";
-import { trinity_name_prayer } from "../../../love/public/src/trinity_name_prayer.mjs";
-import { string_random_or_empty } from "../../../love/public/src/string_random_or_empty.mjs";
-import { list_map_combine } from "../../../love/public/src/list_map_combine.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_bible_passage_button } from "../../../love/public/src/app_g_bible_passage_button.mjs";
 import { subtract_1 } from "../../../love/public/src/subtract_1.mjs";
 import { object_property_change } from "../../../love/public/src/object_property_change.mjs";
 import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
 import { app_g_npc_says } from "../../../love/public/src/app_g_npc_says.mjs";
-import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -29,7 +23,6 @@ import { firebase_storage_download_json } from "../../../love/public/src/firebas
 import { g_objection_generate_upload_path } from "../../../love/public/src/g_objection_generate_upload_path.mjs";
 import { positive_is } from "../../../love/public/src/positive_is.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { integer_random } from "../../../love/public/src/integer_random.mjs";
 export async function app_g_gospel(
   overlay,
   npc,
@@ -108,56 +101,7 @@ export async function app_g_gospel(
     lambda_invoke_multiple_shuffle_2(correct, wrong);
     app_g_button_conversation_end(overlay, overlay_close);
   } else {
-    function jesus_christ() {
-      let v = "Jesus" + string_random_or_empty(" Christ");
-      return v;
-    }
-    let t = trinity_name_prayer();
-    const believe = list_random_item([
-      string_random_or_empty("Now ") +
-        "I believe" +
-        string_random_or_empty(
-          ", in " +
-            jesus_christ() +
-            string_random_or_empty(
-              ", the Son of" + string_random_or_empty(" the living") + " God",
-            ),
-        ),
-      "I " +
-        list_random_item(["confess", "recieve"]) +
-        " " +
-        jesus_christ() +
-        " as my" +
-        string_random_or_empty(" risen") +
-        " Lord and Savior",
-    ]);
-    const blessing =
-      "God bless you " +
-      string_random_or_empty(
-        " in the name of " + list_random_item(["Jesus", t]) + " ",
-      ) +
-      "amen";
-    const choices = [
-      "Thank you" +
-        string_random_or_empty(
-          " very much" + string_random_or_empty(" from the bottom of my heart"),
-        ),
-      "Glory to God" + string_random_or_empty(" in the highest"),
-      "Praise God" +
-        string_random_or_empty(
-          ", the Father of " +
-            string_random_or_empty("our Lord ") +
-            jesus_christ(),
-        ),
-      "Hallelujah",
-      "Amen",
-    ];
-    list_shuffle(choices);
-    let r = integer_random(1, 3);
-    let taken = list_take(choices, r);
-    let combined = list_concat_multiple([[believe], taken, [blessing]]);
-    const mapped = list_map_combine("!", combined);
-    const doxology = list_join_space(mapped);
+    const doxology = app_g_doxology();
     app_g_npc_says(npc, overlay, game_prefix, doxology);
     app_g_button_conversation_end(overlay, overlay_close);
   }
