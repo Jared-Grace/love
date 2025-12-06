@@ -85,8 +85,8 @@ export function app_g_study(player, overlay) {
             let li = list_index_last_is(sermon_correct_list, sermon_index);
             if (li) {
             } else {
+              refresh();
             }
-            refresh();
           }
           let b = app_g_button_green(div, item, lambda3);
         }
