@@ -1,4 +1,3 @@
-import { app_g_tutorial_study } from "../../../love/public/src/app_g_tutorial_study.mjs";
 import { app_g_doxology } from "../../../love/public/src/app_g_doxology.mjs";
 import { lambda_invoke_multiple_shuffle_2 } from "../../../love/public/src/lambda_invoke_multiple_shuffle_2.mjs";
 import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
@@ -84,7 +83,6 @@ export async function app_g_gospel(
           chapter_code,
           verse_numbers,
         });
-        app_g_tutorial_study(player, div_map);
         html_remove(b);
       }
     }
