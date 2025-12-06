@@ -120,7 +120,7 @@ export async function app_g_gospel(
         ", in " +
           jesus_christ() +
           string_random_or_empty(
-            ", the son of" + string_random_or_empty(" the living") + " God",
+            ", the Son of" + string_random_or_empty(" the living") + " God",
           ),
       );
     const blessing =
