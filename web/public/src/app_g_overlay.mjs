@@ -14,6 +14,9 @@ export function app_g_overlay(div_map) {
     padding: "1vw",
     background: "rgba(0,0,0,0.4)",
     "z-index": g_z("overlay"),
+    display: "flex",
+    flexDirection: "column",
+    gap: "0px",
   };
   html_style_assign(overlay, s);
   return overlay;
