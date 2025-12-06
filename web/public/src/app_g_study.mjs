@@ -77,6 +77,7 @@ export function app_g_study(player, overlay, close) {
       let sermon_correct = object_property_get(passage, property);
       let sermon_correct_list = app_g_openai_split(sermon_correct);
       let sermon_index = 0;
+      let mistakes = false;
       refresh();
       function refresh() {
         html_clear(div);
@@ -103,6 +104,7 @@ export function app_g_study(player, overlay, close) {
           let r2 = list_random_item(sermon_wrong_list);
           let b = app_g_button_green(div, r2, lambda3);
           function lambda3() {
+            mistakes = true;
             let v = html_border_invalid_color();
             let t = string_take(v, 7) + "cd";
             html_style_background_color(b, t);
