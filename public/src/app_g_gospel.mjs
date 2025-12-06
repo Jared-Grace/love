@@ -1,3 +1,4 @@
+import { invoke_once } from "../../../love/public/src/invoke_once.mjs";
 import { app_g_button_wrong } from "../../../love/public/src/app_g_button_wrong.mjs";
 import { app_g_doxology } from "../../../love/public/src/app_g_doxology.mjs";
 import { lambda_invoke_multiple_shuffle_2 } from "../../../love/public/src/lambda_invoke_multiple_shuffle_2.mjs";
@@ -69,12 +70,13 @@ export async function app_g_gospel(
       app_g_bible_passage_button(passage, chapter_code, books, overlay, lambda);
     }
     function wrong() {
+      let lambda2 = invoke_once(lambda3);
       let b = app_g_bible_passage_button(
         passage_wrong,
         chapter_code,
         books,
         overlay,
-        lambda3,
+        lambda2,
       );
       function lambda3() {
         app_g_button_wrong(b);
