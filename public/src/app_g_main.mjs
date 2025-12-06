@@ -1,3 +1,4 @@
+import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
 import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
@@ -58,7 +59,8 @@ export async function app_g_main() {
     "font-size": "18px",
   });
   let head = html_document_head();
-  let component = html_element(parent, tag_name);
+  let l = html_element(head, "link");
+  html_attribute_set(component, key, value);
   html_style_head(
     "button { font-family: " + html_font_san_serif_value() + " }",
   );
