@@ -1,5 +1,5 @@
+import { html_border_invalid_color } from "../../../love/public/src/html_border_invalid_color.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
-import { app_karate_button_background_invalid } from "../../../karate_code/public/src/app_karate_button_background_invalid.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
@@ -87,7 +87,7 @@ export function app_g_study(player, overlay) {
           let r2 = list_random_item(sermon_wrong_list);
           let b = app_g_button_green(div, r2, lambda3);
           function lambda3() {
-            let v = app_karate_button_background_invalid();
+            let v = html_border_invalid_color();
             html_style_background_color(b, v);
           }
         }
