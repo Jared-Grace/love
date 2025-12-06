@@ -1,5 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
-import { string_split_multiple } from "../../../love/public/src/string_split_multiple.mjs";
 import { html_roboto } from "../../../love/public/src/html_roboto.mjs";
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
@@ -46,8 +44,6 @@ import { html_style_assign } from "../../../love/public/src/html_style_assign.mj
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_g_main() {
-  let parts = string_split_multiple("a1b2c2d1e34f", ["1", "2", "3"]);
-  log(parts);
   firebase_name_jg();
   let books = await ebible_version_books("engbsb");
   global_function_property_set(app_g_main, "books", books);
