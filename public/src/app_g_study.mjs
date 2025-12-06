@@ -89,7 +89,7 @@ export function app_g_study(player, overlay, close) {
             let li = list_index_last_is(sermon_correct_list, sermon_index);
             if (li) {
               list_remove(review, r);
-              app_g_player_save(player2);
+              app_g_player_save(player);
               close();
             } else {
               refresh();
