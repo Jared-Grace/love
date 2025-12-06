@@ -1,3 +1,4 @@
+import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
@@ -55,6 +56,7 @@ export async function app_g_main() {
     "font-family": style_value,
     "font-size": "18px",
   });
+  let parent = html_document_head();
   html_style_head(
     "button { font-family: " + html_font_san_serif_value() + " }",
   );
