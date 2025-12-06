@@ -27,7 +27,7 @@ export function app_g_conversation(
   let npc = list_single(npcs_matched);
   const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
   let v = string_first_upper_to(greet);
-  let s2 = list_random_item(["nice", "great", "pleasure", "good"]);
+  let s2 = list_random_item(["nice", "great", "good"]);
   const a = list_random_item(["it's", "it is"]) + " ";
   let meet_message =
     " " + string_first_upper_to(string_random_or_empty(a) + s2 + " to ");
