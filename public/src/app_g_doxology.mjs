@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_map_combine } from "../../../love/public/src/list_map_combine.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
@@ -8,6 +9,7 @@ import { list_random_item } from "../../../love/public/src/list_random_item.mjs"
 import { trinity_name_prayer } from "../../../love/public/src/trinity_name_prayer.mjs";
 import { string_random_or_empty } from "../../../love/public/src/string_random_or_empty.mjs";
 export function app_g_doxology() {
+  marker("1");
   function jesus_christ() {
     let v = "Jesus" + string_random_or_empty(" Christ");
     return v;
