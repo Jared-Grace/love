@@ -85,7 +85,6 @@ export async function app_g_gospel(
           chapter_code,
           verse_numbers,
         });
-        html_remove(b);
       }
     }
     lambda_invoke_multiple_shuffle_2(correct, wrong);
