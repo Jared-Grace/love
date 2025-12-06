@@ -1,6 +1,5 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { list_index_last_is } from "../../../love/public/src/list_index_last_is.mjs";
 import { html_bold } from "../../../love/public/src/html_bold.mjs";
 import { html_border_invalid_color } from "../../../love/public/src/html_border_invalid_color.mjs";
@@ -89,7 +88,7 @@ export function app_g_study(player, overlay, close) {
             let li = list_index_last_is(sermon_correct_list, sermon_index);
             if (li) {
               object_property_set(player, "review", false);
-              html_remove(overlay);
+              close();
             } else {
               refresh();
             }
