@@ -89,8 +89,8 @@ export function app_g_study(player, overlay) {
           let b = app_g_button_green(div, r2, lambda3);
           function lambda3() {
             let v = html_border_invalid_color();
-            string_take(v, 6) + "cd";
-            html_style_background_color(b, v);
+            let t = string_take(v, 6) + "cd";
+            html_style_background_color(b, t);
           }
         }
         lambda_invoke_multiple_shuffle_2(correct, wrong);
