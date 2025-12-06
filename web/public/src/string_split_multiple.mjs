@@ -9,4 +9,5 @@ export function string_split_multiple() {
   let v2 = escaped.join("");
   const regex = new RegExp(`[${v2}]`);
   const parts = str.split(regex);
+  return parts;
 }
