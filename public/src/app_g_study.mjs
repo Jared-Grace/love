@@ -1,4 +1,4 @@
-import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
+import { list_index_last_is } from "../../../love/public/src/list_index_last_is.mjs";
 import { html_bold } from "../../../love/public/src/html_bold.mjs";
 import { html_border_invalid_color } from "../../../love/public/src/html_border_invalid_color.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
@@ -82,8 +82,7 @@ export function app_g_study(player, overlay) {
           let item = list_get(sermon_correct_list, sermon_index);
           function lambda3() {
             sermon_index++;
-            let index_last = list_index_last(sermon_correct_list);
-            let li = sermon_index === index_last;
+            let li = list_index_last_is(sermon_correct_list, sermon_index);
             if (li) {
             }
             refresh();
