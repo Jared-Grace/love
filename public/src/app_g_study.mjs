@@ -1,3 +1,4 @@
+import { app_g_button_wrong } from "../../../love/public/src/app_g_button_wrong.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
@@ -5,7 +6,6 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_index_last_is } from "../../../love/public/src/list_index_last_is.mjs";
 import { html_bold } from "../../../love/public/src/html_bold.mjs";
-import { html_border_invalid_color } from "../../../love/public/src/html_border_invalid_color.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -30,7 +30,6 @@ import { app_g_menu_clear_back } from "../../../love/public/src/app_g_menu_clear
 import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { string_take } from "../../../love/public/src/string_take.mjs";
 export function app_g_study(player, overlay, close) {
   marker("1");
   let review = object_property_get(player, "review");
@@ -111,9 +110,7 @@ export function app_g_study(player, overlay, close) {
           let b = app_g_button_green(div, r2, lambda3);
           function lambda3() {
             mistakes = true;
-            let v = html_border_invalid_color();
-            let t = string_take(v, 7) + "cd";
-            html_style_background_color(b, t);
+            app_g_button_wrong(b);
           }
         }
         lambda_invoke_multiple_shuffle_2(correct, wrong);
