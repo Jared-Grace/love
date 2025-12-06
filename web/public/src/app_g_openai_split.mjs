@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { newline_windows } from "../../../love/public/src/newline_windows.mjs";
 import { string_split_multiple } from "../../../love/public/src/string_split_multiple.mjs";
@@ -7,5 +8,6 @@ export function app_g_openai_split(objections) {
   let separator = newline_windows_escaped();
   let n = newline_windows();
   let split = string_split_multiple(objections, [separator, n]);
+  let mapped = list_map(list, function lambda(item) {});
   return split;
 }
