@@ -12,8 +12,9 @@ export function g_themes(text) {
   function lambda2(item) {
     let li = string_letters_is(item);
     if (not(li)) {
-      let padded = string_pad_space(verse_number);
+      item = string_pad_space(item);
     }
+    return item;
   }
   let mapped2 = list_map(split, lambda2);
   let themes = {
