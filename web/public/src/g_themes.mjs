@@ -34,13 +34,14 @@ export function g_themes(text) {
   function lambda4(la) {
     function lambda3(words, list) {
       let split2 = string_split_space(words);
-      function lambda(item2) {}
-      each(list2, lambda);
-      let padded = string_pad_space(word);
-      let i = string_includes(n, padded);
-      if (i) {
-        la(list);
+      function lambda(item2) {
+        let padded = string_pad_space(word);
+        let i = string_includes(n, padded);
+        if (i) {
+          la(list);
+        }
       }
+      each(split2, lambda);
     }
     each_object(map, lambda3);
   }
