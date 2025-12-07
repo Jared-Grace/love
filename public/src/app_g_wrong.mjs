@@ -34,6 +34,7 @@ export function app_g_wrong(passage, passages, property) {
   }
   let mapped = list_map(words_correct, lambda);
   let themes_correct = list_filter(mapped, null_not_is);
+  let unique = list_unique(list);
   function lambda2(p) {
     let text_candidate = object_property_get(p, "text");
     let words_candidate = string_to_words(text_candidate);
