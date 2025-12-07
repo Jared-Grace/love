@@ -9,7 +9,7 @@ export function storage_local_mock_enable() {
   let s = {};
   let localStorage = {
     getItem: function getItem(storage_local_key) {
-      let value3 = object_property_get_or(null, s, storage_local_key);
+      let value3 = object_property_get_or(s, storage_local_key, null);
       return value3;
     },
     setItem: function setItem(storage_local_key, v) {
