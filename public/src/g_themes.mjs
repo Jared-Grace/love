@@ -1,3 +1,4 @@
+import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
 import { list_adder_multiple } from "../../../love/public/src/list_adder_multiple.mjs";
@@ -31,6 +32,7 @@ export function g_themes(text) {
   };
   function lambda4(la) {
     function lambda3(word, list) {
+      let split2 = string_split_space(s);
       let padded = string_pad_space(word);
       let i = string_includes(n, padded);
       if (i) {
