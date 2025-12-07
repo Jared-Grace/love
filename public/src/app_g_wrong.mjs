@@ -33,7 +33,7 @@ export function app_g_wrong(passage, passages, property) {
     return theme;
   }
   let mapped = list_map(words_correct, lambda);
-  let filtered = list_filter(mapped, null_not_is);
+  let themes_correct = list_filter(mapped, null_not_is);
   function lambda2(p) {
     let text_candidate = object_property_get(p, "text");
     let words_candidate = string_to_words(text_candidate);
