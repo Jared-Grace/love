@@ -1,3 +1,4 @@
+import { object_property_get_or } from "../../../love/public/src/object_property_get_or.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_g_openai_split } from "../../../love/public/src/app_g_openai_split.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -25,8 +26,10 @@ export function app_g_wrong(passage, passages, property) {
     evil: "morality",
     good: "morality",
   };
-  function lambda(item) {}
-  let mapped = list_map(list, lambda);
+  function lambda(w) {
+    let value = object_property_get_or(value_not, obj, key);
+  }
+  let mapped = list_map(words_correct, lambda);
   function lambda2(p) {
     let text_candidate = object_property_get(p, "text");
     let words_candidate = string_to_words(text_candidate);
