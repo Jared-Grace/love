@@ -26,7 +26,8 @@ export function g_themes(text) {
     good: "morality",
   };
   function lambda3(word, themes) {
-    let i = string_includes(input, part);
+    let padded = string_pad_space(verse_number);
+    let i = string_includes(joined, word);
   }
   each_object(themes, lambda3);
   function lambda(w) {
