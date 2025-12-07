@@ -39,13 +39,13 @@ export function g_themes(text) {
   };
   function lambda4(la) {
     function lambda3(words, list) {
-      let split3 = string_split_space(s);
+      let split3 = string_split_space(list);
       let split2 = string_split_space(words);
       function lambda(word) {
         let padded = string_pad_space(word);
         let i = string_includes(n, padded);
         if (i) {
-          la(list);
+          la(split3);
         }
       }
       each(split2, lambda);
