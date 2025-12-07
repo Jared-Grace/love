@@ -29,7 +29,7 @@ export function g_themes(text) {
     [g_themes_verb("ask")]: "faith",
     [g_themes_verb("believe")]: "faith",
     [g_themes_verb("come")]: "faith",
-    [g_themes_verb("double-minded")]: "faith",
+    [g_themes_verb("double - minded")]: "faith",
     evil: "morality",
     faith: "faith",
     good: "morality",
