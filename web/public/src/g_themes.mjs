@@ -38,7 +38,7 @@ export function g_themes(text) {
     wrong: "morality",
   };
   function lambda4(la) {
-    function lambda3(words, list) {
+    function lambda3(list, words) {
       let split3 = string_split_space(list);
       let split2 = string_split_space(words);
       function lambda(word) {
