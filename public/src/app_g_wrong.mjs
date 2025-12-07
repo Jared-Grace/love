@@ -1,3 +1,4 @@
+import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { object_property_get_or } from "../../../love/public/src/object_property_get_or.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -31,8 +32,7 @@ export function app_g_wrong(passage, passages, property) {
     let theme = object_property_get_or(themes, w, null);
     return theme;
   }
-  let mapped = list_map(words_correct, lambda);
-  function lambda3(item) {}
+  let mapped = list_map(words_correct, null_not_is);
   let filtered = list_filter(list, lambda3);
   function lambda2(p) {
     let text_candidate = object_property_get(p, "text");
