@@ -6,10 +6,7 @@ import { string_pad_space } from "../../../love/public/src/string_pad_space.mjs"
 import { not } from "../../../love/public/src/not.mjs";
 import { string_letters_is } from "../../../love/public/src/string_letters_is.mjs";
 import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
-import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
-import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { object_property_get_or } from "../../../love/public/src/object_property_get_or.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 export function g_themes(text) {
   let split = string_split_empty(text);
@@ -37,12 +34,6 @@ export function g_themes(text) {
     each_object(themes, lambda3);
   }
   let list = list_adder_multiple(lambda4);
-  function lambda(w) {
-    let theme = object_property_get_or(themes, w, null);
-    return theme;
-  }
-  let mapped = list_map(words_correct, lambda);
-  let themes_correct = list_filter(mapped, null_not_is);
-  themes_correct = list_unique(themes_correct);
+  let themes_correct = list_unique(list);
   return themes_correct;
 }
