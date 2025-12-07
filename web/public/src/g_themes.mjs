@@ -25,6 +25,8 @@ export function g_themes(text) {
   let map = {
     evil: "morality",
     good: "morality",
+    right: "morality",
+    wrong: "morality",
   };
   function lambda4(la) {
     function lambda3(word, list) {
