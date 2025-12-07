@@ -25,7 +25,8 @@ export function app_g_wrong(passage, passages, property) {
     evil: "morality",
     good: "morality",
   };
-  let mapped = list_map(list, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list, lambda);
   function lambda2(p) {
     let text_candidate = object_property_get(p, "text");
     let words_candidate = string_to_words(text_candidate);
