@@ -26,10 +26,11 @@ export function g_themes(text) {
   let joined = list_join_empty(mapped2);
   let n = whitespace_normalize(joined);
   let map = {
-    ask: "faith",
+    [g_themes_verb("ask")]: "faith",
     evil: "morality",
     faith: "faith",
     good: "morality",
+    [g_themes_verb("receive")]: "faith",
     right: "morality",
     [g_themes_verb("hear")]: "word",
     [g_themes_verb("tell")]: "word",
