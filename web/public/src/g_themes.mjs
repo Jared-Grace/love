@@ -1,3 +1,4 @@
+import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { string_pad_space } from "../../../love/public/src/string_pad_space.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { string_letters_is } from "../../../love/public/src/string_letters_is.mjs";
@@ -17,6 +18,7 @@ export function g_themes(text) {
     return item;
   }
   let mapped2 = list_map(split, lambda2);
+  let joined = list_join_empty(letters);
   let themes = {
     evil: "morality",
     good: "morality",
