@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_adder_multiple } from "../../../love/public/src/list_adder_multiple.mjs";
 import { string_includes } from "../../../love/public/src/string_includes.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
@@ -19,6 +20,7 @@ export function g_themes(text) {
   }
   let mapped2 = list_map(split, lambda2);
   let joined = list_join_empty(mapped2);
+  log(message);
   let map = {
     evil: "morality",
     good: "morality",
