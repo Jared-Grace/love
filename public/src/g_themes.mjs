@@ -1,3 +1,4 @@
+import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_adder_multiple } from "../../../love/public/src/list_adder_multiple.mjs";
 import { string_includes } from "../../../love/public/src/string_includes.mjs";
@@ -20,6 +21,7 @@ export function g_themes(text) {
   }
   let mapped2 = list_map(split, lambda2);
   let joined = list_join_empty(mapped2);
+  let n = whitespace_normalize(str);
   log(joined);
   let map = {
     evil: "morality",
