@@ -5,7 +5,7 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { object_property_get_or } from "../../../love/public/src/object_property_get_or.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 export function g_themes(text) {
-  let split = string_split_empty(s);
+  let split = string_split_empty(text);
   let themes = {
     evil: "morality",
     good: "morality",
@@ -18,4 +18,3 @@ export function g_themes(text) {
   let themes_correct = list_filter(mapped, null_not_is);
   themes_correct = list_unique(themes_correct);
   return themes_correct;
-}
