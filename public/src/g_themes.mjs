@@ -27,9 +27,10 @@ export function g_themes(text) {
     good: "morality",
   };
   function lambda4(la) {
-    function lambda3(word, themes) {
+    function lambda3(word, list) {
       let padded = string_pad_space(word);
       let i = string_includes(joined, padded);
+      la(list);
     }
     each_object(themes, lambda3);
   }
