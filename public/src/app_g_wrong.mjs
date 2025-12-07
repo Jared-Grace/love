@@ -23,6 +23,7 @@ export function app_g_wrong(passage, passages, property) {
   function lambda2(p) {
     let text_candidate = object_property_get(p, "text");
     let words_candidate = string_to_words(text_candidate);
+    let themes_candidate = g_themes(concated);
     let list2 = list_intersect(words_candidate, themes_correct);
     let size = list_size(list2);
     return size;
