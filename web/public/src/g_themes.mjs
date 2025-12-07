@@ -30,8 +30,8 @@ export function g_themes(text) {
     function lambda3(word, list) {
       let padded = string_pad_space(word);
       let i = string_includes(joined, padded);
-      la(list);
-      if (false) {
+      if (i) {
+        la(list);
       }
     }
     each_object(themes, lambda3);
