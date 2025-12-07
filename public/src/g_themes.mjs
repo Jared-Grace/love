@@ -1,3 +1,4 @@
+import { g_themes_verb } from "../../../love/public/src/g_themes_verb.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -28,8 +29,8 @@ export function g_themes(text) {
     evil: "morality",
     good: "morality",
     right: "morality",
-    ["hear hears hearing"]: "word",
-    ["tell tells telling"]: "word",
+    [g_themes_verb("hear")]: "word",
+    [g_themes_verb("tell")]: "word",
     wrong: "morality",
   };
   function lambda4(la) {
