@@ -1,3 +1,4 @@
+import { string_letters_is } from "../../../love/public/src/string_letters_is.mjs";
 import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -6,8 +7,10 @@ import { object_property_get_or } from "../../../love/public/src/object_property
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 export function g_themes(text) {
   let split = string_split_empty(text);
-  function lambda2(item) {}
-  let mapped2 = list_map(list, lambda2);
+  function lambda2(item) {
+    let li = string_letters_is(str);
+  }
+  let mapped2 = list_map(split, lambda2);
   let themes = {
     evil: "morality",
     good: "morality",
