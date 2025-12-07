@@ -24,7 +24,8 @@ export function g_themes(text) {
     evil: "morality",
     good: "morality",
   };
-  each_object(object, function lambda3(value, property) {});
+  function lambda3(value, property) {}
+  each_object(object, lambda3);
   function lambda(w) {
     let theme = object_property_get_or(themes, w, null);
     return theme;
