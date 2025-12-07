@@ -10,7 +10,7 @@ export function g_themes(text) {
   let split = string_split_empty(text);
   function lambda2(item) {
     let li = string_letters_is(item);
-    if (not(b)) {
+    if (not(li)) {
     }
   }
   let mapped2 = list_map(split, lambda2);
