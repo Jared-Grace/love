@@ -27,7 +27,7 @@ export function app_g_wrong(passage, passages, property) {
     good: "morality",
   };
   function lambda(w) {
-    let value = object_property_get_or(value_not, obj, key);
+    let value = object_property_get_or(obj, key, value_not);
   }
   let mapped = list_map(words_correct, lambda);
   function lambda2(p) {
