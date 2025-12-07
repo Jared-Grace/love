@@ -7,7 +7,6 @@ import { list_sort_number_mapper } from "../../../love/public/src/list_sort_numb
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_intersect } from "../../../love/public/src/list_intersect.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
-import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function app_g_wrong(passage, passages, property) {
   marker("1");
@@ -18,8 +17,7 @@ export function app_g_wrong(passage, passages, property) {
   let themes_correct = g_themes(text + " " + ob);
   function lambda2(p) {
     let text_candidate = object_property_get(p, "text");
-    let words_candidate = string_to_words(text_candidate);
-    let themes_candidate = g_themes(words_candidate);
+    let themes_candidate = g_themes(text_candidate);
     let list2 = list_intersect(themes_candidate, themes_correct);
     let size = list_size(list2);
     return size;
