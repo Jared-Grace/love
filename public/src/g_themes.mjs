@@ -6,7 +6,8 @@ import { object_property_get_or } from "../../../love/public/src/object_property
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 export function g_themes(text) {
   let split = string_split_empty(text);
-  let mapped2 = list_map(list, function lambda2(item) {});
+  function lambda2(item) {}
+  let mapped2 = list_map(list, lambda2);
   let themes = {
     evil: "morality",
     good: "morality",
