@@ -6,6 +6,7 @@ import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs"
 export async function function_param_move_first(param_name) {
   marker("1");
   assert_arguments(arguments, 1);
+  let fn = list_move_first;
   let index = null;
   await function_params_new_generic(function_transform_current_lambda, on_call);
   function on_call(args) {
