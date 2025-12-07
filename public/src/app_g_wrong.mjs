@@ -20,6 +20,9 @@ export function app_g_wrong(passage, passages, property) {
   let words2 = string_to_words(ob);
   let concated = list_concat(words, words2);
   let words_correct = list_unique(concated);
+  let themes = {
+    evil: "sinner ",
+  };
   function lambda2(p) {
     let text_candidate = object_property_get(p, "text");
     let words_candidate = string_to_words(text_candidate);
