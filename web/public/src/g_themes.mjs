@@ -19,7 +19,7 @@ export function g_themes(text) {
   }
   let mapped2 = list_map(split, lambda2);
   let joined = list_join_empty(mapped2);
-  let themes = {
+  let map = {
     evil: "morality",
     good: "morality",
   };
@@ -31,9 +31,9 @@ export function g_themes(text) {
         la(list);
       }
     }
-    each_object(themes, lambda3);
+    each_object(map, lambda3);
   }
   let list = list_adder_multiple(lambda4);
-  let themes_correct = list_unique(list);
-  return themes_correct;
+  let themes = list_unique(list);
+  return themes;
 }
