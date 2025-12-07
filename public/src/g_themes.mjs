@@ -20,7 +20,7 @@ export function g_themes(text) {
   }
   let mapped2 = list_map(split, lambda2);
   let joined = list_join_empty(mapped2);
-  log(message);
+  log(joined);
   let map = {
     evil: "morality",
     good: "morality",
