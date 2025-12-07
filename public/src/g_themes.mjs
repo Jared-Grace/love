@@ -3,8 +3,8 @@ import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { object_property_get_or } from "../../../love/public/src/object_property_get_or.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
-export function g_themes(concated) {
-  let words_correct = list_unique(concated);
+export function g_themes(text) {
+  let words_correct = list_unique(text);
   let themes = {
     evil: "morality",
     good: "morality",
