@@ -1,3 +1,4 @@
+import { string_pad_space } from "../../../love/public/src/string_pad_space.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { string_letters_is } from "../../../love/public/src/string_letters_is.mjs";
 import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
@@ -11,6 +12,7 @@ export function g_themes(text) {
   function lambda2(item) {
     let li = string_letters_is(item);
     if (not(li)) {
+      let padded = string_pad_space(verse_number);
     }
   }
   let mapped2 = list_map(split, lambda2);
