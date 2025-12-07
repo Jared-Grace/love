@@ -26,7 +26,8 @@ export function g_themes(text) {
     evil: "morality",
     good: "morality",
   };
-  let list = list_adder_multiple(function lambda4(la) {});
+  function lambda4(la) {}
+  let list = list_adder_multiple(lambda4);
   function lambda3(word, themes) {
     let padded = string_pad_space(word);
     let i = string_includes(joined, padded);
