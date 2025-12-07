@@ -26,6 +26,7 @@ export function g_themes(text) {
   let joined = list_join_empty(mapped2);
   let n = whitespace_normalize(joined);
   let map = {
+    ask: "faith",
     evil: "morality",
     faith: "faith",
     good: "morality",
