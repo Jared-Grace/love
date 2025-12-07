@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { string_letters_is } from "../../../love/public/src/string_letters_is.mjs";
 import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
@@ -8,7 +9,9 @@ import { list_unique } from "../../../love/public/src/list_unique.mjs";
 export function g_themes(text) {
   let split = string_split_empty(text);
   function lambda2(item) {
-    let li = string_letters_is(str);
+    let li = string_letters_is(item);
+    if (not(b)) {
+    }
   }
   let mapped2 = list_map(split, lambda2);
   let themes = {
