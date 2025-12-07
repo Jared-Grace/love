@@ -38,6 +38,9 @@ export function g_themes(text) {
   }
   let list = list_adder_multiple(lambda4);
   let themes = list_unique(list);
-  log(message);
+  log({
+    n,
+    themes,
+  });
   return themes;
 }
