@@ -27,6 +27,7 @@ export function g_themes(text) {
   let n = whitespace_normalize(joined);
   let map = {
     [g_themes_verb("ask")]: "faith",
+    [g_themes_verb("come")]: "faith",
     evil: "morality",
     faith: "faith",
     good: "morality",
