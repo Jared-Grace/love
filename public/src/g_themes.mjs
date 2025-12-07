@@ -18,3 +18,4 @@ export function g_themes(text) {
   let themes_correct = list_filter(mapped, null_not_is);
   themes_correct = list_unique(themes_correct);
   return themes_correct;
+}
