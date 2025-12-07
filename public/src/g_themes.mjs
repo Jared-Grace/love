@@ -1,3 +1,4 @@
+import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { string_includes } from "../../../love/public/src/string_includes.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
@@ -25,9 +26,10 @@ export function g_themes(text) {
     evil: "morality",
     good: "morality",
   };
+  list_add_multiple(list, items);
   function lambda3(word, themes) {
-    let padded = string_pad_space(verse_number);
-    let i = string_includes(joined, word);
+    let padded = string_pad_space(word);
+    let i = string_includes(joined, padded);
   }
   each_object(themes, lambda3);
   function lambda(w) {
