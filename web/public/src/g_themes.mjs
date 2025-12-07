@@ -26,13 +26,14 @@ export function g_themes(text) {
     evil: "morality",
     good: "morality",
   };
-  function lambda4(la) {}
-  let list = list_adder_multiple(lambda4);
-  function lambda3(word, themes) {
-    let padded = string_pad_space(word);
-    let i = string_includes(joined, padded);
+  function lambda4(la) {
+    function lambda3(word, themes) {
+      let padded = string_pad_space(word);
+      let i = string_includes(joined, padded);
+    }
+    each_object(themes, lambda3);
   }
-  each_object(themes, lambda3);
+  let list = list_adder_multiple(lambda4);
   function lambda(w) {
     let theme = object_property_get_or(themes, w, null);
     return theme;
