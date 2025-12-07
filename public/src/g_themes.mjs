@@ -28,6 +28,8 @@ export function g_themes(text) {
     evil: "morality",
     good: "morality",
     right: "morality",
+    ["hear hears hearing"]: "word",
+    ["tell tells telling"]: "word",
     wrong: "morality",
   };
   function lambda4(la) {
