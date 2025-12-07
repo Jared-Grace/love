@@ -1,3 +1,4 @@
+import { string_includes } from "../../../love/public/src/string_includes.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { string_pad_space } from "../../../love/public/src/string_pad_space.mjs";
@@ -24,8 +25,10 @@ export function g_themes(text) {
     evil: "morality",
     good: "morality",
   };
-  function lambda3(value, property) {}
-  each_object(object, lambda3);
+  function lambda3(word, themes) {
+    let i = string_includes(input, part);
+  }
+  each_object(themes, lambda3);
   function lambda(w) {
     let theme = object_property_get_or(themes, w, null);
     return theme;
