@@ -21,7 +21,8 @@ export function app_g_wrong(passage, passages, property) {
   let concated = list_concat(words, words2);
   let words_correct = list_unique(concated);
   let themes = {
-    evil: "sinner ",
+    evil: "morality",
+    good: "morality",
   };
   function lambda2(p) {
     let text_candidate = object_property_get(p, "text");
