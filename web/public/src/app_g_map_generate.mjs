@@ -50,10 +50,10 @@ export function app_g_map_generate() {
   let count = row_count * column_count;
   let r = null;
   function lambda2(i4) {
-    let filtered = list_filter(coordinates, lambda);
     if (null_is(r)) {
       r = list_random_item(coordinates);
     } else {
+      let filtered = list_filter(coordinates, lambda);
       function lambda(item) {
         let distance = g_distance(r, item);
         let v = distance === 1;
