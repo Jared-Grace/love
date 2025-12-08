@@ -8,7 +8,8 @@ export function html_link() {
   link.onload = function lambda() {
     console.log("Stylesheet loaded!");
   };
-  function lambda3() {}
+  function lambda3() {
+  html_loading}
   lambda_invoke(lambda3);
   return l;
 }
