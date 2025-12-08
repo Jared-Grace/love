@@ -10,7 +10,8 @@ export function html_link() {
     console.log("Stylesheet loaded!");
   };
   async function lambda3() {
-    let result = await html_loading(async function lambda4() {});
+    async function lambda4() {}
+    let result = await html_loading(lambda4);
   }
   lambda_invoke(lambda3);
   return l;
