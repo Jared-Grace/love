@@ -54,9 +54,8 @@ export function app_g_map_generate() {
       return v;
     }
     let filtered = list_filter(coordinates, lambda);
-    if (false) {
-    }
-    let r = list_random_item(filtered);
+    let r = null;
+    r = list_random_item(filtered);
     let { y, x } = r;
     let water_row = list_get(rows, y);
     list_set(water_row, x, w);
