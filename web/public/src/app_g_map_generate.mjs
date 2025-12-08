@@ -1,3 +1,4 @@
+import { list_second } from "../../../love/public/src/list_second.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { integer_random_less_1 } from "../../../love/public/src/integer_random_less_1.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
@@ -42,5 +43,6 @@ export function app_g_map_generate() {
   let water_start_y = integer_random_less_1(row_count);
   let water_start_x = integer_random_less_1(column_count);
   let water_row = list_get(rows, water_start_y);
+  let second = list_second(list);
   return rows;
 }
