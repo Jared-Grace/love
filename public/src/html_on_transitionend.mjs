@@ -3,7 +3,7 @@ import { html_component_element_get } from "../../../love/public/src/html_compon
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 export async function html_on_transitionend(
   properties,
-  player_img_c,
+  c,
   on_transition_begin,
 ) {
   await new Promise(function lambda20(resolve) {
@@ -11,12 +11,12 @@ export async function html_on_transitionend(
       let includes = list_includes(properties, e.propertyName);
       if (includes) {
         const type = "transitionend";
-        let element = html_component_element_get(player_img_c);
+        let element = html_component_element_get(c);
         element.removeEventListener(type, handler);
         resolve();
       }
     }
-    html_on(player_img_c, "transitionend", handler);
+    html_on(c, "transitionend", handler);
     on_transition_begin();
   });
 }
