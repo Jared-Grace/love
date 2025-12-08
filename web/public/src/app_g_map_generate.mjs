@@ -64,6 +64,8 @@ export function app_g_map_generate() {
     return v;
   }
   let filtered = list_filter(coordinates, lambda);
-  log(message);
+  log({
+    filtered,
+  });
   return rows;
 }
