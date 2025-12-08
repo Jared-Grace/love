@@ -1,3 +1,4 @@
+import { g_coordinates } from "../../../love/public/src/g_coordinates.mjs";
 import { app_g_map_generate } from "../../../love/public/src/app_g_map_generate.mjs";
 import { html_hide_loadable } from "../../../love/public/src/html_hide_loadable.mjs";
 import { g_icon_cross_unpositioned } from "../../../love/public/src/g_icon_cross_unpositioned.mjs";
@@ -34,7 +35,6 @@ import { list_without } from "../../../love/public/src/list_without.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
-import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
@@ -100,19 +100,7 @@ export async function app_g_main() {
   const player_img = list_random_item(imgs_men);
   let names_men = bible_names_men();
   let right = player_img;
-  function lambda15(la4) {
-    function lambda13(columns, y) {
-      function lambda14(item2, x) {
-        la4({
-          x,
-          y,
-        });
-      }
-      each_index(columns, lambda14);
-    }
-    each_index(rows, lambda13);
-  }
-  let coordinates = list_adder(lambda15);
+  let coordinates = g_coordinates(rows);
   list_shuffle(coordinates);
   let names_women = bible_names_women();
   let female = {
