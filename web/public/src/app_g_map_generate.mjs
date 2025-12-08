@@ -41,6 +41,6 @@ export function app_g_map_generate() {
   let rows = list_adder(lambda10);
   let water_start_y = integer_random_less_1(row_count);
   let water_start_x = integer_random_less_1(column_count);
-  let item = list_get(list, index2);
+  let water_row = list_get(rows, water_start_y);
   return rows;
 }
