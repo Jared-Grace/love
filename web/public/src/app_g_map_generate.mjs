@@ -67,7 +67,8 @@ export function app_g_map_generate() {
           return v;
         }
         let filtered = list_any(waters, lambda);
-        let ne = list_empty_not_is(list);
+        let ne = list_empty_not_is(filtered);
+        return ne;
       }
       let filtered2 = list_filter(difference, lambda7);
       r = list_random_item(filtered2);
