@@ -51,11 +51,11 @@ export function app_g_map_generate() {
   let r = null;
   function lambda2(i4) {
     let filtered = list_filter(coordinates, lambda);
+    if (null_is(r)) {
+      r = list_random_item(coordinates);
+    } else {
+    }
     function lambda(item) {
-      if (null_is(r)) {
-        let v2 = true;
-        return v2;
-      }
       let distance = g_distance(r, item);
       let v = distance === 1;
       return v;
