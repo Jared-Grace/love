@@ -1,3 +1,4 @@
+import { floor } from "../../../love/public/src/floor.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
@@ -48,6 +49,7 @@ export function app_g_map_generate() {
   let rows = list_adder(lambda10);
   let coordinates = g_coordinates(rows);
   let count = row_count * column_count;
+  let water_count = floor(count * 0.3);
   let r = null;
   function lambda2(i4) {
     if (null_is(r)) {
