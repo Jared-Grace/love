@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { assert_json } from "../../../love/public/src/assert_json.mjs";
@@ -28,6 +29,7 @@ export async function http_generic(url, options) {
           body: json_to(body),
         });
       }
+      log(message);
       const response = await fetch(url, r);
       if (not(response.ok)) {
         error("Failed to fetch file");
