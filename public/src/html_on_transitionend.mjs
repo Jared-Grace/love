@@ -1,5 +1,5 @@
+import { html_listener_remove } from "../../../love/public/src/html_listener_remove.mjs";
 import { html_on } from "../../../love/public/src/html_on.mjs";
-import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 export async function html_on_transitionend(
   properties,
@@ -11,8 +11,7 @@ export async function html_on_transitionend(
       let includes = list_includes(properties, e.propertyName);
       if (includes) {
         const type = "transitionend";
-        let element = html_component_element_get(c);
-        element.removeEventListener(type, handler);
+        html_listener_remove(c, type, handler);
         resolve();
       }
     }
