@@ -49,12 +49,12 @@ export function app_g_map_generate() {
   let count = row_count * column_count;
   function lambda2(i4) {
     let r = null;
+    let filtered = list_filter(coordinates, lambda);
     function lambda(item) {
       let distance = g_distance(r, item);
       let v = distance === 1;
       return v;
     }
-    let filtered = list_filter(coordinates, lambda);
     r = list_random_item(filtered);
     let { y, x } = r;
     let water_row = list_get(rows, y);
