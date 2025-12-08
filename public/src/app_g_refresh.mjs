@@ -1,3 +1,4 @@
+import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { g_icon_cross } from "../../../love/public/src/g_icon_cross.mjs";
@@ -26,6 +27,7 @@ export async function app_g_refresh(
   rows,
   map,
 ) {
+  html_clear(element);
   let div_map = html_div(div_map_container);
   object_property_set_exists_not(div_map, "container", div_map_container);
   html_style_assign(div_map, {
