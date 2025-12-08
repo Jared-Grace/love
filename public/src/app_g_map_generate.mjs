@@ -48,6 +48,7 @@ export function app_g_map_generate() {
   let coordinates = g_coordinates(rows);
   let count = row_count * column_count;
   function lambda2(i4) {
+    let filtered = list_filter(coordinates, lambda);
     let r = list_random_item(coordinates);
     let { y, x } = r;
     let water_row = list_get(rows, y);
@@ -58,7 +59,6 @@ export function app_g_map_generate() {
       let v = distance === 1;
       return v;
     }
-    let filtered = list_filter(coordinates, lambda);
   }
   each_range(count, lambda2);
   log({
