@@ -52,9 +52,10 @@ export function app_g_map_generate() {
   list_set(water_row, x, w);
   list_remove(coordinates, r);
   function lambda(item) {
-    function lambda2(item2) {}
-    let mapped = list_map(list, lambda2);
-    let distance = g_distance(coordinates, item);
+    function lambda2(item2) {
+      let distance = g_distance(coordinates, item);
+    }
+    let mapped = list_map(coordinates, lambda2);
   }
   let filtered = list_filter(coordinates, lambda);
   return rows;
