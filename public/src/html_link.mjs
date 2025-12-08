@@ -10,6 +10,7 @@ export function html_link() {
     async function lambda4() {
       async function lambda2(resolve, reject) {
         link.onload = resolve;
+        link.onerror = reject;
       }
       let result2 = await promise_new(lambda2);
     }
