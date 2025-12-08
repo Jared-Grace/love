@@ -1,9 +1,16 @@
+import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function html_loading(lambda) {
+  let b2 = browser_is();
+  if (b2) {
+    let result = await html_loading(lambda2);
+  } else {
+    let result = await lambda2();
+  }
   marker("1");
   let body = html_document_body();
   let div = html_div(body);
