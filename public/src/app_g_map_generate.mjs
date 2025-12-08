@@ -1,4 +1,3 @@
-import { list_any } from "../../../love/public/src/list_any.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
@@ -60,7 +59,7 @@ export function app_g_map_generate() {
       r = list_random_item(coordinates);
     } else {
       let difference = list_difference(coordinates, waters);
-      function lambda7(item2) {
+      function lambda7(d) {
         function lambda(item) {
           let distance = g_distance(r, item);
           log(distance);
@@ -69,9 +68,8 @@ export function app_g_map_generate() {
         }
         let filtered = list_filter(difference, lambda);
       }
-      let any = list_any(list, lambda7);
-      log(rows);
-      r = list_random_item(filtered);
+      let filtered2 = list_filter(difference, lambda7);
+      r = list_random_item(filtered2);
     }
     let { y, x } = r;
     let water_row = list_get(rows, y);
