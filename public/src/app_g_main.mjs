@@ -64,12 +64,7 @@ export async function app_g_main() {
     "button { font-family: " + html_font_san_serif_value() + " }",
   );
   let body = html_document_body();
-  html_text_set(
-    body,
-    `
-<i class="ri-cross-fill"></i>
-`,
-  );
+  html_text_set(body);
   return;
   function lambda(item) {
     html_style_assign(item, {
