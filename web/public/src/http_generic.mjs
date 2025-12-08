@@ -24,10 +24,10 @@ export async function http_generic(url, options) {
         },
         body: json_to(body),
       };
-      const response = await fetch(url, r);
       let exists = object_property_exists(options, "body");
       if (false) {
       }
+      const response = await fetch(url, r);
       if (not(response.ok)) {
         error("Failed to fetch file");
       }
