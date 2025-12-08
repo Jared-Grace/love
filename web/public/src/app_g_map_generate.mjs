@@ -1,3 +1,4 @@
+import { integer_random_0 } from "../../../love/public/src/integer_random_0.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
@@ -37,5 +38,6 @@ export function app_g_map_generate() {
     each_range(row_count, lambda6);
   }
   let rows = list_adder(lambda10);
+  let water_start_y = integer_random_0(row_count);
   return rows;
 }
