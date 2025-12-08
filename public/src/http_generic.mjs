@@ -1,3 +1,4 @@
+import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { assert_json } from "../../../love/public/src/assert_json.mjs";
 import { round } from "../../../love/public/src/round.mjs";
 import { catch_call } from "../../../love/public/src/catch_call.mjs";
@@ -22,7 +23,8 @@ export async function http_generic(url, options) {
           ...(options.headers || {}),
         },
         body: json_to(body),
-      });ope
+      });
+      let exists = object_property_exists(object, property_name);
       if (false) {
       }
       if (not(response.ok)) {
