@@ -202,6 +202,6 @@ export async function app_g_main() {
   }
   g_tutorials_each(lambda4);
   let i = g_icon_cross_unpositioned(body);
-  html_display_none(element);
+  html_display_none(i);
   await app_g_refresh(div_map_container, game_prefix, tiles_path, rows, map);
 }
