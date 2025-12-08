@@ -4,7 +4,6 @@ import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mj
 import { list_any } from "../../../love/public/src/list_any.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
-import { null_is } from "../../../love/public/src/null_is.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -57,8 +56,8 @@ export function app_g_map_generate() {
   let waters = [];
   function lambda2(i4) {
     let r = null;
-    let e = list_empty_is(list);
-    if (null_is(r)) {
+    let e = list_empty_is(waters);
+    if (e) {
       r = list_random_item(coordinates);
     } else {
       function lambda7(c) {
