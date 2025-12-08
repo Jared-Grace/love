@@ -61,11 +61,11 @@ export async function app_g_refresh(
   html_style_head(style_text);
   html_style_set(player_img_c, "animation", "pulseGlow 2s infinite alternate");
   function lambda12(npc) {
+    let ci = g_character_img(game_prefix, div_map, npc);
     let i = html_element(div_map, "i");
     html_click_none(i);
     g_img_square_style_position(i, npc, "icon");
     html_class_add(i, "ri-cross-fill");
-    let ci = g_character_img(game_prefix, div_map, npc);
     const square_size = `calc(` + g_img_square_size_css() + `*.4)`;
     const glow_size = `calc(` + g_img_square_size_css() + `*.05)`;
     html_style_assign(i, {
