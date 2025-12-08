@@ -58,6 +58,7 @@ export function app_g_map_generate() {
       let filtered = list_filter(coordinates, lambda);
       function lambda(item) {
         let distance = g_distance(r, item);
+        log(distance);
         let v = distance === 1;
         return v;
       }
