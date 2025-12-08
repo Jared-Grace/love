@@ -70,7 +70,7 @@ export async function app_g_refresh(
       alignItems: "flex-start",
       "padding-right": padding_size,
       textShadow: "0 0 " + glow_size + " white",
-      color: "#1cbd00ff",
+      color: "#26ff00ff",
       textAlign: "right",
       fontSize: square_size,
     });
