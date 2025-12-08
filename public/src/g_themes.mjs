@@ -1,3 +1,4 @@
+import { g_themes_plural } from "../../../love/public/src/g_themes_plural.mjs";
 import { g_themes_verb } from "../../../love/public/src/g_themes_verb.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
@@ -38,7 +39,7 @@ export function g_themes(text) {
     [g_themes_verb("receive")]: "faith",
     right: "morality",
     [g_themes_verb("tell")]: "word",
-    "thought thoughts": "heart",
+    [g_themes_plural("thought")]: "heart",
     wrong: "morality",
   };
   function lambda4(la) {
