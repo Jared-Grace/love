@@ -4,12 +4,13 @@ import { log } from "../../../love/public/src/log.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_a_main() {
   marker("1");
-  let json = {
+  let body = {
     test: 123,
   };
-  let buffer = await http_generic("/api", {
+  const url = "/api";
+  let buffer = await http_generic(url, {
     method: "POST",
-    body: json,
+    body: body,
   });
   let parsed = buffer_string_to(buffer);
   log(parsed);
