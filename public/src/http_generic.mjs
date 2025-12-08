@@ -1,3 +1,4 @@
+import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { assert_json } from "../../../love/public/src/assert_json.mjs";
 import { round } from "../../../love/public/src/round.mjs";
@@ -26,7 +27,7 @@ export async function http_generic(url, options) {
       };
       let exists = object_property_exists(options, "body");
       if (false) {
-        oag;
+        let a = object_assign(to, from);
       }
       const response = await fetch(url, r);
       if (not(response.ok)) {
