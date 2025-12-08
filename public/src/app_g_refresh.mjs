@@ -60,6 +60,14 @@ export async function app_g_refresh(
   function lambda12(npc) {
     let ci = g_character_img(game_prefix, div_map, npc);
     let tutorial = g_icon(div_map, npc, "✟");
+    html_style_assign(tutorial, {
+      display: "flex",
+      justifyContent: "flex-end",
+      alignItems: "flex-start",
+      textAlign: "right",
+      fontSize: square_size,
+      padding: "10px",
+    });
   }
   each(npcs, lambda12);
   let rows_size = list_size(rows);
