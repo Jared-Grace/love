@@ -26,6 +26,7 @@ export async function http_generic(url, options) {
       };
       let exists = object_property_exists(options, "body");
       if (false) {
+        oag;
       }
       const response = await fetch(url, r);
       if (not(response.ok)) {
