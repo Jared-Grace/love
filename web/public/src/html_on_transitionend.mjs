@@ -11,7 +11,8 @@ export async function html_on_transitionend(
       let includes = list_includes(properties, e.propertyName);
       if (includes) {
         let element = html_component_element_get(player_img_c);
-        element.removeEventListener("transitionend", handler);
+        const type = "transitionend";
+        element.removeEventListener(type, handler);
         resolve();
       }
     }
