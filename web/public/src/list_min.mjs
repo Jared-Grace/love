@@ -1,3 +1,4 @@
 export function list_min(list) {
-  return Math.min(...list);
+  let v = Math.min(...list);
+  return v;
 }
