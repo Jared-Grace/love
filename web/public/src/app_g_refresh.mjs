@@ -60,7 +60,7 @@ export async function app_g_refresh(
   function lambda12(npc) {
     let ci = g_character_img(game_prefix, div_map, npc);
     let christian = object_property_get(npc, "christian");
-    if (false) {
+    if (christian) {
       g_icon_cross(div_map, npc);
     }
   }
