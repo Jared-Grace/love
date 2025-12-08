@@ -5,7 +5,7 @@ export async function app_a_main() {
   marker("1");
   let v = await http_json("/api/time");
   log({
-    V,
+    v,
   });
   alert(v);
 }
