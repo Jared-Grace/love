@@ -19,9 +19,9 @@ export function app_g_tutorial(
   if (not(already)) {
     let tutorial = html_div(div_map);
     html_click_none(tutorial);
-    global_function_property_set(app_g_main, tutorial_property, tutorial);
     g_img_square_style_position(tutorial, player, "tutorial");
     html_text_set(tutorial, emoji);
+    global_function_property_set(app_g_main, tutorial_property, tutorial);
     const square_size = `calc(` + g_img_square_size_css() + `*.4)`;
     html_style_assign(tutorial, {
       display: "flex",
