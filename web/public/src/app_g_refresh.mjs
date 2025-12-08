@@ -26,6 +26,7 @@ export async function app_g_refresh(
   map,
 ) {
   html_clear(div_map);
+  () => {};
   let { npcs } = map;
   marker("1");
   let player = app_g_player_get();
