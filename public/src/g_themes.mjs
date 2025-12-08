@@ -38,7 +38,7 @@ export function g_themes(text) {
     [g_themes_verb("receive")]: "faith",
     right: "morality",
     [g_themes_verb("tell")]: "word",
-    thoughts: "heart",
+    "thought thoughts": "heart",
     wrong: "morality",
   };
   function lambda4(la) {
