@@ -1,3 +1,6 @@
+import { g_img_square_style_position } from "../../../love/public/src/g_img_square_style_position.mjs";
+import { html_click_none } from "../../../love/public/src/html_click_none.mjs";
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
 import { g_img_square_size_css } from "../../../love/public/src/g_img_square_size_css.mjs";
 import { g_icon } from "../../../love/public/src/g_icon.mjs";
@@ -60,6 +63,9 @@ export async function app_g_refresh(
   html_style_head(style_text);
   html_style_set(player_img_c, "animation", "pulseGlow 2s infinite alternate");
   function lambda12(npc) {
+    let div = html_div(div_map);
+    html_click_none(div);
+    g_img_square_style_position(div, coordinates, "tutorial");
     let ci = g_character_img(game_prefix, div_map, npc);
     let tutorial = g_icon(div_map, npc, ``);
     let component = html_element(parent, tag_name);
