@@ -10,7 +10,6 @@ import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { list_remove_end } from "../../../love/public/src/list_remove_end.mjs";
 import { html_scroll_none } from "../../../love/public/src/html_scroll_none.mjs";
-import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { html_z_max } from "../../../love/public/src/html_z_max.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
@@ -107,12 +106,6 @@ export async function app_g_main() {
     "pointer-events": "auto",
   });
   await html_scroll_none(div_map_container);
-  let div_map = html_div(div_map_container);
-  object_property_set_exists_not(div_map, "container", div_map_container);
-  html_style_assign(div_map, {
-    position: "relative",
-    display: "grid",
-  });
   let row_count = 15;
   let column_count = row_count;
   function lambda10(la2) {
