@@ -27,7 +27,7 @@ export async function app_g_refresh(
 ) {
   html_clear(div_map);
   async function refresh() {
-    await app_g_refresh(div_map2, game_prefix2, tiles_path2, rows2, map2);
+    await app_g_refresh(div_map, game_prefix, tiles_path, rows, map);
   }
   let { npcs } = map;
   marker("1");
