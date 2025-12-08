@@ -1,8 +1,8 @@
+import { list_any } from "../../../love/public/src/list_any.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -60,13 +60,12 @@ export function app_g_map_generate() {
     } else {
       let difference = list_difference(coordinates, waters);
       function lambda7(d) {
-        function lambda(item) {
-          let distance = g_distance(r, item);
-          log(distance);
+        function lambda(w) {
+          let distance = g_distance(d, w);
           let v = distance === 1;
           return v;
         }
-        let filtered = list_filter(difference, lambda);
+        let filtered = list_any(waters, lambda);
       }
       let filtered2 = list_filter(difference, lambda7);
       r = list_random_item(filtered2);
