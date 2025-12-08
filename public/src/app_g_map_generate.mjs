@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
@@ -66,6 +67,7 @@ export function app_g_map_generate() {
           return v;
         }
         let filtered = list_any(waters, lambda);
+        let ne = list_empty_not_is(list);
       }
       let filtered2 = list_filter(difference, lambda7);
       r = list_random_item(filtered2);
