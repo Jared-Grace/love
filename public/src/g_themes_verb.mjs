@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { string_take_less_1 } from "../../../love/public/src/string_take_less_1.mjs";
 import { string_ends_with } from "../../../love/public/src/string_ends_with.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
@@ -9,7 +10,8 @@ export function g_themes_verb(root) {
   if (ew) {
     root_ing = string_take_less_1(root_ing);
   }
-  let list = [root, root + "s"][root_ing + "ing"];la
+  let list = [root, root + "s"][root_ing + "ing"];
+  list_add(list2, item);
   let r = list_join_space(list);
   return r;
 }
