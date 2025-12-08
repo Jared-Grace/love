@@ -71,8 +71,5 @@ export function app_g_map_generate() {
     list_remove(coordinates, r);
   }
   each_range(2, lambda2);
-  log({
-    filtered,
-  });
   return rows;
 }
