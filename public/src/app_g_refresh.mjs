@@ -65,6 +65,7 @@ export async function app_g_refresh(
     let i = html_element(div_map, "i");
     html_click_none(i);
     g_img_square_style_position(i, npc, "icon");
+    html_class_add(tile2, tile_class2);
     let ci = g_character_img(game_prefix, div_map, npc);
     let tutorial = g_icon(div_map, npc, ``);
     `
