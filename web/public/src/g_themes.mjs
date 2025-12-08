@@ -34,10 +34,11 @@ export function g_themes(text) {
     evil: "morality",
     faith: "faith",
     good: "morality",
+    [g_themes_verb("hear")]: "word",
     [g_themes_verb("receive")]: "faith",
     right: "morality",
-    [g_themes_verb("hear")]: "word",
     [g_themes_verb("tell")]: "word",
+    thoughts: "heart",
     wrong: "morality",
   };
   function lambda4(la) {
