@@ -1,3 +1,4 @@
+import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -56,6 +57,7 @@ export function app_g_map_generate() {
       r = list_random_item(coordinates);
     } else {
       let filtered = list_filter(coordinates, lambda);
+      let difference = list_difference(list, other);
       function lambda(item) {
         let distance = g_distance(r, item);
         log(distance);
