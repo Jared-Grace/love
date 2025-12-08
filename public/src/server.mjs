@@ -15,7 +15,7 @@ export function server() {
   let result2 = path_join([__dirname, previous, previous, previous]);
   let v = express.static(result2);
   function lambda2(req, res) {
-    let v2 = JSON.stringify(body);
+    let v2 = JSON.stringify(res.body);
     req.write(v2);
   }
   app.post("/api", lambda2);
