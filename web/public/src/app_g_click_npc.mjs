@@ -18,6 +18,7 @@ export async function app_g_click_npc(
   npcs_matched,
   player,
   game_prefix,
+  refresh,
 ) {
   marker("1");
   let overlay = app_g_overlay(div_map);
