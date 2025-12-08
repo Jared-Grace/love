@@ -1,3 +1,4 @@
+import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_remix_icon } from "../../../love/public/src/html_remix_icon.mjs";
 import { html_roboto } from "../../../love/public/src/html_roboto.mjs";
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
@@ -63,6 +64,7 @@ export async function app_g_main() {
     "button { font-family: " + html_font_san_serif_value() + " }",
   );
   let body = html_document_body();
+  html_text_set(component, text);
   function lambda(item) {
     html_style_assign(item, {
       margin: "0",
