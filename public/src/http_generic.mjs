@@ -23,6 +23,8 @@ export async function http_generic(url, options) {
         },
         body: json_to(body),
       });
+      if (false) {
+      }
       if (not(response.ok)) {
         error("Failed to fetch file");
       }
