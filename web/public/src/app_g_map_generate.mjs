@@ -66,7 +66,7 @@ export function app_g_map_generate() {
           return v;
         }
         let filtered = list_any(waters, lambda);
-        log(message);
+        log(filtered);
         let ne = list_empty_not_is(filtered);
         return ne;
       }
