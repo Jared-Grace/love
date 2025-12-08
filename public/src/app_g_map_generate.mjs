@@ -59,9 +59,9 @@ export function app_g_map_generate() {
     if (null_is(r)) {
       r = list_random_item(coordinates);
     } else {
-      function lambda7(d) {
+      function lambda7(c) {
         function lambda(w) {
-          let distance = g_distance(d, w);
+          let distance = g_distance(c, w);
           let v = distance === 1;
           return v;
         }
