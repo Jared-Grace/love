@@ -5,11 +5,11 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function html_loading(lambda) {
+  let div = null;
   let b2 = browser_is();
   if (b2) {
     marker("1");
     let body = html_document_body();
-    let div = null;
     div = html_div(body);
     let s = {
       position: "fixed",
@@ -26,6 +26,8 @@ export async function html_loading(lambda) {
     html_style_assign(div, s);
   }
   let result = await lambda();
-  html_remove(div);
+  if (b2) {
+    html_remove(div);
+  }
   return result;
 }
