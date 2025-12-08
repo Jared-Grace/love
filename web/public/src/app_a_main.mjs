@@ -14,5 +14,4 @@ export async function app_a_main() {
   log({
     parsed,
   });
-  alert(v);
 }
