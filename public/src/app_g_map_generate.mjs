@@ -54,13 +54,13 @@ export function app_g_map_generate() {
     if (null_is(r)) {
       r = list_random_item(coordinates);
     } else {
-    }
     function lambda(item) {
       let distance = g_distance(r, item);
       let v = distance === 1;
       return v;
     }
     r = list_random_item(filtered);
+    }
     let { y, x } = r;
     let water_row = list_get(rows, y);
     list_set(water_row, x, w);
