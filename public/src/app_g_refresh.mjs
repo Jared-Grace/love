@@ -1,3 +1,4 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { g_icon_cross } from "../../../love/public/src/g_icon_cross.mjs";
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -26,6 +27,7 @@ export async function app_g_refresh(
   map,
 ) {
   html_clear(div_map);
+  let div = html_div(root);
   oldElem.parentNode.replaceChild(newElem, oldElem);
   async function refresh() {
     await app_g_refresh(div_map, game_prefix, tiles_path, rows, map);
