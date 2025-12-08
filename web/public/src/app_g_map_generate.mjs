@@ -8,6 +8,7 @@ import { g_tiles_grasses } from "../../../love/public/src/g_tiles_grasses.mjs";
 export function app_g_map_generate() {
   let grasses = g_tiles_grasses();
   list_shuffle(grasses);
+  ("choose three different types of grass for visual variety");
   let taken = list_take(grasses, 3);
   function lambda5(la) {
     function lambda3(g, index) {
