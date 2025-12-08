@@ -62,9 +62,9 @@ export async function app_g_refresh(
   html_style_head(style_text);
   html_style_set(player_img_c, "animation", "pulseGlow 2s infinite alternate");
   function lambda12(npc) {
-    let component = html_element(div_map, "i");
-    html_click_none(div);
-    g_img_square_style_position(div, coordinates, "icon");
+    let i = html_element(div_map, "i");
+    html_click_none(i);
+    g_img_square_style_position(i, coordinates, "icon");
     let ci = g_character_img(game_prefix, div_map, npc);
     let tutorial = g_icon(div_map, npc, ``);
     `
