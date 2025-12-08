@@ -96,9 +96,11 @@ export async function app_g_gospel(
   } else {
     const doxology = app_g_doxology();
     app_g_npc_says(npc, overlay, game_prefix, doxology);
-    function lambda4() {}
+    async function lambda4() {
+      overlay_close();
+      await refresh();
+    }
     app_g_button_conversation_end(overlay, lambda4);
     object_property_set(npc, "christian", true);
-    await refresh();
   }
 }
