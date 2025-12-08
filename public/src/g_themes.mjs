@@ -2,7 +2,6 @@ import { g_themes_plural } from "../../../love/public/src/g_themes_plural.mjs";
 import { g_themes_verb } from "../../../love/public/src/g_themes_verb.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
 import { list_adder_multiple } from "../../../love/public/src/list_adder_multiple.mjs";
 import { string_includes } from "../../../love/public/src/string_includes.mjs";
@@ -59,9 +58,5 @@ export function g_themes(text) {
   }
   let list = list_adder_multiple(lambda4);
   let themes = list_unique(list);
-  log({
-    n,
-    themes,
-  });
   return themes;
 }
