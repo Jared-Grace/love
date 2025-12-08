@@ -1,7 +1,4 @@
-import { g_img_square_style_position } from "../../../love/public/src/g_img_square_style_position.mjs";
-import { html_click_none } from "../../../love/public/src/html_click_none.mjs";
-import { html_element } from "../../../love/public/src/html_element.mjs";
-import { g_img_square_size_css } from "../../../love/public/src/g_img_square_size_css.mjs";
+import { g_icon_cross } from "../../../love/public/src/g_icon_cross.mjs";
 import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs";
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -62,28 +59,7 @@ export async function app_g_refresh(
   html_style_set(player_img_c, "animation", "pulseGlow 2s infinite alternate");
   function lambda12(npc) {
     let ci = g_character_img(game_prefix, div_map, npc);
-    let i = html_element(div_map, "i");
-    html_click_none(i);
-    g_img_square_style_position(i, npc, "icon");
-    html_class_add(i, "ri-cross-fill");
-    const square_size = `calc(` + g_img_square_size_css() + `*.4)`;
-    const glow_size = `calc(` + g_img_square_size_css() + `*.05)`;
-    html_style_assign(i, {
-      display: "flex",
-      justifyContent: "flex-end",
-      alignItems: "flex-start",
-      textShadow:
-        "0 0 " +
-        glow_size +
-        " white, 0 0 " +
-        glow_size +
-        " white, 0 0 " +
-        glow_size +
-        " white",
-      color: "#1fd000ff",
-      textAlign: "right",
-      fontSize: square_size,
-    });
+    g_icon_cross(div_map, npc);
   }
   each(npcs, lambda12);
   let rows_size = list_size(rows);
