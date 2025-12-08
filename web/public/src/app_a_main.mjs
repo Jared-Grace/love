@@ -1,3 +1,4 @@
+import { buffer_to_json } from "../../../love/public/src/buffer_to_json.mjs";
 import { http_generic } from "../../../love/public/src/http_generic.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -9,7 +10,7 @@ export async function app_a_main() {
       test: 123,
     },
   });
-    let parsed = buffer_to_json(buffer);
+  let parsed = buffer_to_json(buffer);
   log({
     v,
   });
