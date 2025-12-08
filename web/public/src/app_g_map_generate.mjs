@@ -62,6 +62,6 @@ export function app_g_map_generate() {
     let v = m === 1;
     return v;
   }
-  let filtered = list_filter(coordinates, lambda);
+  let filtered = list_filter(coordinates, lambda);l
   return rows;
 }
