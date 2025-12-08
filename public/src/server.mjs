@@ -14,6 +14,12 @@ export function server() {
   let previous = folder_previous();
   let result2 = path_join([__dirname, previous, previous, previous]);
   let v = express.static(result2);
+  function lambda2(req, res) {
+    res.json({
+      now: Date.now(),
+    });
+  }
+  app.get("/api/time", lambda2);
   app.use(v);
   function lambda() {
     log_keep(`Static server running at http://localhost:${port}`);
