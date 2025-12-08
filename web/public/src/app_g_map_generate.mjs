@@ -39,5 +39,6 @@ export function app_g_map_generate() {
   }
   let rows = list_adder(lambda10);
   let water_start_y = integer_random_less_1(row_count);
+  let water_start_x = integer_random_less_1(column_count);
   return rows;
 }
