@@ -8,6 +8,7 @@ import { html_loading } from "../../../love/public/src/html_loading.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
+import { json_to } from "./json_to.mjs";
 export async function http_generic(url, options) {
   const method = options.method || "GET";
   const body = options.body || null;
@@ -71,7 +72,8 @@ export async function http_generic(url, options) {
     );
     req.on("error", reject);
     if (body) {
-      req.write(body);
+      let json = json_to(body);
+      req.write(json);
     }
     req.end();
   }
