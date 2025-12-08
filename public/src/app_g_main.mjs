@@ -67,7 +67,7 @@ export async function app_g_main() {
   html_text_set(
     body,
     `
-< i class="ri-cross-fill"></i>
+<i class="ri-cross-fill"></i>
 `,
   );
   return;
