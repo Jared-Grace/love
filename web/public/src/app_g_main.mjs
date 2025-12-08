@@ -82,6 +82,18 @@ export async function app_g_main() {
     path_prefix = "..\\";
   }
   const game_prefix = g_folder_img(path_prefix);
+  let div_map_container = html_div(body);
+  html_style_assign(div_map_container, {
+    position: "fixed",
+    top: "0",
+    left: "0",
+    overflow: "auto",
+    width: "100dvw",
+    height: "100dvh",
+    "z-index": html_z_max(),
+    "pointer-events": "auto",
+  });
+  await html_scroll_none(div_map_container);
   const tiles_path = g_folder_tiles(path_prefix);
   let grasses = g_tiles_grasses();
   list_shuffle(grasses);
@@ -96,18 +108,6 @@ export async function app_g_main() {
     each_index(taken, lambda3);
   }
   let tiles = list_adder(lambda5);
-  let div_map_container = html_div(body);
-  html_style_assign(div_map_container, {
-    position: "fixed",
-    top: "0",
-    left: "0",
-    overflow: "auto",
-    width: "100dvw",
-    height: "100dvh",
-    "z-index": html_z_max(),
-    "pointer-events": "auto",
-  });
-  await html_scroll_none(div_map_container);
   let row_count = 15;
   let column_count = row_count;
   function lambda10(la2) {
