@@ -1,3 +1,4 @@
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
@@ -47,10 +48,12 @@ export function app_g_map_generate() {
   let rows = list_adder(lambda10);
   let coordinates = g_coordinates(rows);
   let count = row_count * column_count;
+  let r = null;
   function lambda2(i4) {
-    let r = null;
     let filtered = list_filter(coordinates, lambda);
     function lambda(item) {
+      if (null_is(value)) {
+      }
       let distance = g_distance(r, item);
       let v = distance === 1;
       return v;
