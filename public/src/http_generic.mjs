@@ -19,15 +19,14 @@ export async function http_generic(url, options) {
     async function lambda3() {
       const r = {
         method,
-        headers: {
-          "Content-Type": "application/json",
-          ...(options.headers || {}),
-        },
-        body: json_to(body),
       };
       let exists = object_property_exists(options, "body");
       if (false) {
-        let a = object_assign(to, from);
+        let a = object_assign(r, {
+          "Content-Type": "application/json",
+          ...(options.headers || {}),
+          body: json_to(body),
+        });
       }
       const response = await fetch(url, r);
       if (not(response.ok)) {
