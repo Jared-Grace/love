@@ -22,7 +22,7 @@ export async function firebase_storage_download(destination) {
   let b2 = browser_is();
   if (b2) {
   } else {
-  }
+  }$s
   let result = await html_loading(lambda2);
   return result;
 }
