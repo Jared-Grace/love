@@ -7,7 +7,6 @@ import { html_element } from "../../../love/public/src/html_element.mjs";
 export function g_icon_cross(div_map, coordinates) {
   let i = html_element(div_map, "i");
   html_click_none(i);
-  g_img_square_style_position(i, coordinates, "icon");
   html_class_add(i, "ri-cross-fill");
   const square_size = `calc(` + g_img_square_size_css() + `*.4)`;
   const glow_size = `calc(` + g_img_square_size_css() + `*.05)`;
@@ -27,4 +26,5 @@ export function g_icon_cross(div_map, coordinates) {
     textAlign: "right",
     fontSize: square_size,
   });
+  g_img_square_style_position(i, coordinates, "icon");
 }
