@@ -1,3 +1,4 @@
+import { html_remix_icon } from "../../../love/public/src/html_remix_icon.mjs";
 import { html_roboto } from "../../../love/public/src/html_roboto.mjs";
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
@@ -57,6 +58,7 @@ export async function app_g_main() {
     "font-size": "18px",
   });
   html_roboto();
+  html_remix_icon();
   html_style_head(
     "button { font-family: " + html_font_san_serif_value() + " }",
   );
