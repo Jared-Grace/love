@@ -13,7 +13,5 @@ export async function app_a_main() {
     body: json,
   });
   let parsed = buffer_string_to(buffer);
-  log({
-    parsed,
-  });
+  log(parsed);
 }
