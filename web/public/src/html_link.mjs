@@ -12,9 +12,8 @@ export function html_link() {
   };
   async function lambda3() {
     async function lambda4() {
-      let result2 = await promise_new(
-        async function lambda2(resolve, reject) {},
-      );
+      async function lambda2(resolve, reject) {}
+      let result2 = await promise_new(lambda2);
     }
     let result = await html_loading(lambda4);
   }
