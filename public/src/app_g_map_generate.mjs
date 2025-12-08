@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
@@ -72,6 +73,7 @@ export function app_g_map_generate() {
     let water_row = list_get(rows, y);
     list_set(water_row, x, w);
     list_remove(coordinates, r);
+    list_add(list3, item2);
   }
   each_range(water_count, lambda2);
   return rows;
