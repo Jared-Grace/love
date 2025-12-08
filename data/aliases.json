@@ -10,7 +10,7 @@
   "ac": "function_alias_change",
   "al": "function_aliases",
   "ni": "npm_install",
-  "v": "server",
+  "v": "server_static",
   "m": "marker_top",
   "md": "marker_down",
   "ma": "marker_assign_replace",
