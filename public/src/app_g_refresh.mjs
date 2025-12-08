@@ -68,6 +68,7 @@ export async function app_g_refresh(
       justifyContent: "flex-end",
       alignItems: "flex-start",
       "padding-right": padding_size,
+      color: "#39FF14",
       textAlign: "right",
       fontSize: square_size,
     });
