@@ -63,12 +63,13 @@ export async function app_g_refresh(
     let tutorial = g_icon(div_map, npc, "✟");
     const square_size = `calc(` + g_img_square_size_css() + `*.4)`;
     const padding_size = `calc(` + g_img_square_size_css() + `*.1)`;
+    const glow_size = `calc(` + g_img_square_size_css() + `*.1)`;
     html_style_assign(tutorial, {
       display: "flex",
       justifyContent: "flex-end",
       alignItems: "flex-start",
       "padding-right": padding_size,
-      textShadow: "0 0 5px white, 0 0 10px white, 0 0 15px white",
+      textShadow: "0 0 " + glow_size + "px white",
       color: "#39FF14",
       textAlign: "right",
       fontSize: square_size,
