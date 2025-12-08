@@ -79,6 +79,6 @@ export function app_g_map_generate() {
     list_remove(coordinates, r);
     list_add(waters, r);
   }
-  each_range(water_count, lambda2);
+  each_range(3, lambda2);
   return rows;
 }
