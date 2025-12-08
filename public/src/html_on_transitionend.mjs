@@ -10,8 +10,8 @@ export async function html_on_transitionend(
     function handler(e) {
       let includes = list_includes(properties, e.propertyName);
       if (includes) {
-        let element2 = html_component_element_get(player_img_c);
-        element2.removeEventListener("transitionend", handler);
+        let element = html_component_element_get(player_img_c);
+        element.removeEventListener("transitionend", handler);
         resolve();
       }
     }
