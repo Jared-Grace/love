@@ -1,3 +1,4 @@
+import { html_element } from "../../../love/public/src/html_element.mjs";
 import { g_img_square_size_css } from "../../../love/public/src/g_img_square_size_css.mjs";
 import { g_icon } from "../../../love/public/src/g_icon.mjs";
 import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs";
@@ -61,7 +62,8 @@ export async function app_g_refresh(
   function lambda12(npc) {
     let ci = g_character_img(game_prefix, div_map, npc);
     let tutorial = g_icon(div_map, npc, ``);
-    he;`
+    let component = html_element(parent, tag_name);
+    `
 <i class="ri-cross-fill"></i>
 `;
     const square_size = `calc(` + g_img_square_size_css() + `*.4)`;
