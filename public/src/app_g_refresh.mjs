@@ -26,6 +26,7 @@ export async function app_g_refresh(
   map,
 ) {
   html_clear(div_map);
+  oldElem.parentNode.replaceChild(newElem, oldElem);
   async function refresh() {
     await app_g_refresh(div_map, game_prefix, tiles_path, rows, map);
   }
