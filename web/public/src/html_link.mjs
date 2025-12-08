@@ -1,3 +1,4 @@
+import { html_loading } from "../../../love/public/src/html_loading.mjs";
 import { lambda_invoke } from "../../../love/public/src/lambda_invoke.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
@@ -8,8 +9,9 @@ export function html_link() {
   link.onload = function lambda() {
     console.log("Stylesheet loaded!");
   };
-  function lambda3() {
-  html_loading}
+  async function lambda3() {
+    let result = await html_loading(async function lambda4() {});
+  }
   lambda_invoke(lambda3);
   return l;
 }
