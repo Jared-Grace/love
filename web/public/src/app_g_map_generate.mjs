@@ -70,7 +70,7 @@ export function app_g_map_generate() {
     list_set(water_row, x, w);
     list_remove(coordinates, r);
   }
-  each_range(water_count, lambda2);
+  each_range(2, lambda2);
   log({
     filtered,
   });
