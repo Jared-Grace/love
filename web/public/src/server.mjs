@@ -16,7 +16,7 @@ export function server() {
   let v = express.static(result2);
   function lambda2(req, res) {
     res.json({
-      req,
+      ok: true,
     });
   }
   app.post("/api", lambda2);
