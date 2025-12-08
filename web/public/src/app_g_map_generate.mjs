@@ -59,7 +59,8 @@ export function app_g_map_generate() {
     }
     let mapped = list_map(coordinates, lambda2);
     let m = list_min(mapped);
-    return m === 1;
+    let v = m === 1;
+    return v;
   }
   let filtered = list_filter(coordinates, lambda);
   return rows;
