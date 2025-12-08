@@ -60,7 +60,10 @@ export async function app_g_refresh(
   html_style_set(player_img_c, "animation", "pulseGlow 2s infinite alternate");
   function lambda12(npc) {
     let ci = g_character_img(game_prefix, div_map, npc);
-    let tutorial = g_icon(div_map, npc, "✟");
+    let tutorial = g_icon(div_map, npc, ``);
+    `
+<i class="ri-cross-fill"></i>
+`;
     const square_size = `calc(` + g_img_square_size_css() + `*.4)`;
     const padding_size = `calc(` + g_img_square_size_css() + `*.1)`;
     const glow_size = `calc(` + g_img_square_size_css() + `*.1)`;
