@@ -1,3 +1,4 @@
+import { list_without } from "../../../love/public/src/list_without.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_min } from "../../../love/public/src/list_min.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -54,7 +55,7 @@ export function app_g_map_generate() {
   list_set(water_row, x, w);
   list_remove(coordinates, r);
   function lambda(item) {
-    lw;
+    let filtered2 = list_without(list, item2);
     function lambda2(c) {
       let distance = g_distance(c, item);
       return distance;
