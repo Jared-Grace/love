@@ -18,7 +18,7 @@ export function server() {
   function lambda2(req, res) {
     let body = object_property_get(req, "body");
     res.json({
-      now: Date.now(),
+      body,
     });
   }
   app.post("/api", lambda2);
