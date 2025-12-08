@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_min } from "../../../love/public/src/list_min.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
@@ -62,6 +63,7 @@ export function app_g_map_generate() {
     let v = m === 1;
     return v;
   }
-  let filtered = list_filter(coordinates, lambda);l
+  let filtered = list_filter(coordinates, lambda);
+  log(message);
   return rows;
 }
