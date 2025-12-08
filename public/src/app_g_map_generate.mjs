@@ -1,3 +1,4 @@
+import { g_coordinates } from "../../../love/public/src/g_coordinates.mjs";
 import { list_set } from "../../../love/public/src/list_set.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { integer_random_less_1 } from "../../../love/public/src/integer_random_less_1.mjs";
@@ -41,6 +42,7 @@ export function app_g_map_generate() {
     each_range(row_count, lambda6);
   }
   let rows = list_adder(lambda10);
+  let coordinates = g_coordinates(rows);
   let water_start_y = integer_random_less_1(row_count);
   let water_start_x = integer_random_less_1(column_count);
   let water_row = list_get(rows, water_start_y);
