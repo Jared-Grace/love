@@ -22,7 +22,6 @@ export function app_g_map_generate() {
     }
     each_index(taken, lambda3);
   }
-  const w = "water";
   let tiles = list_adder(lambda5);
   let row_count = 15;
   let column_count = row_count;
@@ -31,7 +30,7 @@ export function app_g_map_generate() {
       function lambda11(la3) {
         function lambda9(i2) {
           let r = list_random_item(tiles);
-          la3(w);
+          la3(r);
         }
         each_range(column_count, lambda9);
       }
@@ -44,6 +43,7 @@ export function app_g_map_generate() {
   let water_start_y = integer_random_less_1(row_count);
   let water_start_x = integer_random_less_1(column_count);
   let water_row = list_get(rows, water_start_y);
+  const w = "water";
   list_set(water_row, water_start_x, w);
   return rows;
 }
