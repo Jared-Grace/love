@@ -33,6 +33,7 @@ export function g_themes(text) {
     [g_themes_verb("come")]: "faith",
     [g_themes_verb("desire")]: "heart",
     doer: "morality",
+    does: "morality",
     ["double - minded"]: "faith",
     evil: "morality",
     faith: "faith",
