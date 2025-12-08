@@ -66,6 +66,7 @@ export async function app_g_refresh(
       display: "flex",
       justifyContent: "flex-end",
       alignItems: "flex-start",
+      "padding-right": square_size,
       textAlign: "right",
       fontSize: square_size,
     });
