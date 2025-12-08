@@ -17,8 +17,11 @@ export async function http_generic(url, options) {
     async function lambda3() {
       const response = await fetch(url, {
         method,
-        body,
-        headers: options.headers || {},
+        headers: {
+          "Content-Type": "application/json",
+          ...(options.headers || {}),
+        },
+        body: JSON.stringify(body),
       });
       if (not(response.ok)) {
         error("Failed to fetch file");
