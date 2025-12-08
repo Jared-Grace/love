@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -51,7 +52,8 @@ export function app_g_map_generate() {
   list_set(water_row, x, w);
   list_remove(coordinates, r);
   function lambda(item) {
-    let distance = g_distance(coordinates, item2);
+    let mapped = list_map(list, function lambda2(item2) {});
+    let distance = g_distance(coordinates, item);
   }
   let filtered = list_filter(coordinates, lambda);
   return rows;
