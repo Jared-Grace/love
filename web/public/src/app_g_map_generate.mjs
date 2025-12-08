@@ -43,6 +43,7 @@ export function app_g_map_generate() {
   let water_start_y = integer_random_less_1(row_count);
   let water_start_x = integer_random_less_1(column_count);
   let water_row = list_get(rows, water_start_y);
-  list_set(list, index2, value);
+  const w = "water";
+  list_set(water_row, water_start_x, w);
   return rows;
 }
