@@ -19,11 +19,12 @@ export async function firebase_storage_download(destination) {
     let [buffer] = await bucket.file(destination).download();
     return buffer;
   }
+  let result = null;
   let b2 = browser_is();
   if (b2) {
+    result = await html_loading(lambda2);
   } else {
+    result = await lambda2();
   }
-  let result = null;
-  result = await html_loading(lambda2);
   return result;
 }
