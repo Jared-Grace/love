@@ -59,8 +59,8 @@ export async function app_g_refresh(
   html_style_set(player_img_c, "animation", "pulseGlow 2s infinite alternate");
   function lambda12(npc) {
     let ci = g_character_img(game_prefix, div_map, npc);
-    g_icon_cross(div_map, npc);
     if (false) {
+      g_icon_cross(div_map, npc);
     }
   }
   each(npcs, lambda12);
