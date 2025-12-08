@@ -96,7 +96,7 @@ export async function app_g_gospel(
   } else {
     const doxology = app_g_doxology();
     app_g_npc_says(npc, overlay, game_prefix, doxology);
-    app_g_button_conversation_end(overlay, overlay_close);
+    app_g_button_conversation_end(overlay, () => {});
     object_property_set(npc, "christian", true);
     await refresh();
   }
