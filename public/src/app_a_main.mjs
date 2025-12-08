@@ -1,5 +1,4 @@
-import { buffer_to_json } from "../../../love/public/src/buffer_to_json.mjs";
-import { http_generic } from "../../../love/public/src/http_generic.mjs";
+import { http_post_json } from "../../../love/public/src/http_post_json.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_a_main() {
@@ -8,10 +7,6 @@ export async function app_a_main() {
     test: 123,
   };
   const url = "/api";
-  let buffer = await http_generic(url, {
-    method: "POST",
-    body: body,
-  });
-  let parsed = buffer_to_json(buffer);
+  let parsed = await http_post_json(url, body);
   log(parsed);
 }
