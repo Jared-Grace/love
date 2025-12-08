@@ -3,6 +3,6 @@ import { html_stylesheet } from "../../../love/public/src/html_stylesheet.mjs";
 export function html_remix_icon() {
   marker("1");
   const href =
-    "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap";
+    "https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css";
   html_stylesheet(href);
 }
