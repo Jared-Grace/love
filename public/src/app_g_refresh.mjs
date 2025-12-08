@@ -74,7 +74,16 @@ export async function app_g_refresh(
       justifyContent: "flex-end",
       alignItems: "flex-start",
       "padding-right": padding_size,
-      textShadow: "0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white",
+      textShadow:
+        "0 0 " +
+        glow_size +
+        " white, 0 0 " +
+        glow_size +
+        " white, 0 0 " +
+        glow_size +
+        " white, 0 0 " +
+        glow_size +
+        " white",
       color: "#1fd000ff",
       textAlign: "right",
       fontSize: square_size,
