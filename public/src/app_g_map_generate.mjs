@@ -55,7 +55,7 @@ export function app_g_map_generate() {
   list_remove(coordinates, r);
   function lambda(item) {
     function lambda2(c) {
-      let distance = g_distance(coordinates, item);
+      let distance = g_distance(c, item);
       return distance;
     }
     let mapped = list_map(coordinates, lambda2);
