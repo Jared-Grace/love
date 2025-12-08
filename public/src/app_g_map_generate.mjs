@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -65,6 +66,7 @@ export function app_g_map_generate() {
           return v;
         }
         let filtered = list_any(waters, lambda);
+        log(message);
         let ne = list_empty_not_is(filtered);
         return ne;
       }
