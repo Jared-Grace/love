@@ -60,15 +60,16 @@ export function app_g_map_generate() {
       r = list_random_item(coordinates);
     } else {
       let difference = list_difference(coordinates, waters);
-      function lambda7(item2) {}
-      let any = list_any(list, lambda7);
-      let filtered = list_filter(difference, lambda);
-      function lambda(item) {
-        let distance = g_distance(r, item);
-        log(distance);
-        let v = distance === 1;
-        return v;
+      function lambda7(item2) {
+        function lambda(item) {
+          let distance = g_distance(r, item);
+          log(distance);
+          let v = distance === 1;
+          return v;
+        }
+        let filtered = list_filter(difference, lambda);
       }
+      let any = list_any(list, lambda7);
       log(rows);
       r = list_random_item(filtered);
     }
