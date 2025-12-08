@@ -70,6 +70,6 @@ export function app_g_map_generate() {
     list_set(water_row, x, w);
     list_remove(coordinates, r);
   }
-  each_range(40, lambda2);
+  each_range(80, lambda2);
   return rows;
 }
