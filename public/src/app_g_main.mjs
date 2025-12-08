@@ -67,7 +67,8 @@ export async function app_g_main() {
   html_text_set(
     body,
     `
-<i class="ri-admin-line"></i>`,
+< i class="ri-cross-fill"></i>
+`,
   );
   return;
   function lambda(item) {
