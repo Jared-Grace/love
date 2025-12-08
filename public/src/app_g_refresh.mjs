@@ -2,7 +2,6 @@ import { g_img_square_style_position } from "../../../love/public/src/g_img_squa
 import { html_click_none } from "../../../love/public/src/html_click_none.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
 import { g_img_square_size_css } from "../../../love/public/src/g_img_square_size_css.mjs";
-import { g_icon } from "../../../love/public/src/g_icon.mjs";
 import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs";
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -67,11 +66,10 @@ export async function app_g_refresh(
     g_img_square_style_position(i, npc, "icon");
     html_class_add(i, "ri-cross-fill");
     let ci = g_character_img(game_prefix, div_map, npc);
-    let tutorial = g_icon(div_map, npc, ``);
     const square_size = `calc(` + g_img_square_size_css() + `*.4)`;
     const padding_size = `calc(` + g_img_square_size_css() + `*.1)`;
     const glow_size = `calc(` + g_img_square_size_css() + `*.1)`;
-    html_style_assign(tutorial, {
+    html_style_assign(i, {
       display: "flex",
       justifyContent: "flex-end",
       alignItems: "flex-start",
