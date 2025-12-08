@@ -26,6 +26,7 @@ export function g_themes(text) {
   let joined = list_join_empty(mapped2);
   let n = whitespace_normalize(joined);
   let map = {
+    [g_themes_verb("act")]: "morality",
     [g_themes_verb("ask")]: "faith",
     [g_themes_verb("believe")]: "faith",
     [g_themes_verb("come")]: "faith",
