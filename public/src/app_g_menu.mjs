@@ -1,3 +1,4 @@
+import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
 import { app_g_study } from "../../../love/public/src/app_g_study.mjs";
 import { app_g_menu_clear_back } from "../../../love/public/src/app_g_menu_clear_back.mjs";
 import { app_g_button_green } from "../../../love/public/src/app_g_button_green.mjs";
@@ -19,6 +20,7 @@ export function app_g_menu(overlay, player) {
   let text = emoji_pray() + " Pray";
   function lambda7() {
     app_g_menu_clear_back(overlay, player);
+    app_g_container_text(overlay, "What prayer would you like to pray?");
     function lambda22() {
       let prayer = object_property_get(player, "prayer");
       object_property_set(prayer, "conversation", true);
