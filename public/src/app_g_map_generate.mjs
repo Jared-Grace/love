@@ -61,7 +61,7 @@ export function app_g_map_generate() {
         let v = distance === 1;
         return v;
       }
-      log(message);
+      log(rows);
       r = list_random_item(filtered);
     }
     let { y, x } = r;
