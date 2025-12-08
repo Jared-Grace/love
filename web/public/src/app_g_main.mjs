@@ -1,4 +1,3 @@
-import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_remix_icon } from "../../../love/public/src/html_remix_icon.mjs";
 import { html_roboto } from "../../../love/public/src/html_roboto.mjs";
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
