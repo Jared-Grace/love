@@ -131,7 +131,7 @@ export async function app_reply_main() {
   }
   let component5 = html_button(root, "Remove", lambda15);
   html_button(root, "Reset 1", verse_random_reset_1);
-  let r = range_1(4);
+  let r = range_1(5);
   let mapped = list_map(r, double);
   function lambda13(v) {
     let f = verse_random_reset_n(v);
