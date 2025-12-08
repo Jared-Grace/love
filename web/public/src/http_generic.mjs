@@ -24,7 +24,7 @@ export async function http_generic(url, options) {
         },
         body: json_to(body),
       });
-      let exists = object_property_exists(object, property_name);
+      let exists = object_property_exists(options, "body");
       if (false) {
       }
       if (not(response.ok)) {
