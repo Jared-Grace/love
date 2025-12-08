@@ -55,12 +55,12 @@ export function app_g_map_generate() {
   list_set(water_row, x, w);
   list_remove(coordinates, r);
   function lambda(item) {
-    let filtered2 = list_without(list, item2);
+    let coordinates_w = list_without(coordinates, item);
     function lambda2(c) {
       let distance = g_distance(c, item);
       return distance;
     }
-    let mapped = list_map(coordinates, lambda2);
+    let mapped = list_map(coordinates_w, lambda2);
     let m = list_min(mapped);
     log(m);
     let v = m === 1;
