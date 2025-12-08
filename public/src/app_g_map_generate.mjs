@@ -60,7 +60,7 @@ export function app_g_map_generate() {
     }
     let mapped = list_map(coordinates, lambda2);
     let m = list_min(mapped);
-    log(m );
+    log(m);
     let v = m === 1;
     return v;
   }
