@@ -1,3 +1,4 @@
+import { html_hide_loadable } from "../../../love/public/src/html_hide_loadable.mjs";
 import { g_icon_cross_unpositioned } from "../../../love/public/src/g_icon_cross_unpositioned.mjs";
 import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs";
 import { html_remix_icon } from "../../../love/public/src/html_remix_icon.mjs";
@@ -201,10 +202,6 @@ export async function app_g_main() {
   }
   g_tutorials_each(lambda4);
   let i = g_icon_cross_unpositioned(body);
-  html_style_assign(i, {
-    position: "absolute",
-    left: "-9999px",
-    visibility: "hidden",
-  });
+  html_hide_loadable(i);
   await app_g_refresh(div_map_container, game_prefix, tiles_path, rows, map);
 }
