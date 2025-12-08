@@ -1,3 +1,4 @@
+import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
@@ -56,6 +57,7 @@ export function app_g_map_generate() {
   let waters = [];
   function lambda2(i4) {
     let r = null;
+    let e = list_empty_is(list);
     if (null_is(r)) {
       r = list_random_item(coordinates);
     } else {
