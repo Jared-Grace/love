@@ -46,6 +46,7 @@ export function app_g_map_generate() {
   }
   let rows = list_adder(lambda10);
   let coordinates = g_coordinates(rows);
+  let count = row_count * column_count;
   function lambda2(i4) {}
   each_range(count, lambda2);
   let r = list_random_item(coordinates);
