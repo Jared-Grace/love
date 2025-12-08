@@ -21,7 +21,7 @@ export async function http_generic(url, options) {
           "Content-Type": "application/json",
           ...(options.headers || {}),
         },
-        body: JSON.stringify(body),
+        body: json_to(body),
       });
       if (not(response.ok)) {
         error("Failed to fetch file");
