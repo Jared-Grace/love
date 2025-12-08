@@ -9,6 +9,7 @@ export async function app_a_main() {
       test: 123,
     },
   });
+    let parsed = buffer_to_json(buffer);
   log({
     v,
   });
