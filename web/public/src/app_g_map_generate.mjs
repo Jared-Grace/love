@@ -51,7 +51,7 @@ export function app_g_map_generate() {
   list_set(water_row, x, w);
   list_remove(coordinates, r);
   function lambda(item) {
-    let distance = g_distance(clicked_coordinates, item2);
+    let distance = g_distance(coordinates, item2);
   }
   let filtered = list_filter(coordinates, lambda);
   return rows;
