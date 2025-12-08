@@ -42,8 +42,8 @@ export function app_g_map_generate() {
   }
   let rows = list_adder(lambda10);
   let coordinates = g_coordinates(rows);
-  let r2 = list_random_item(list);
-  let water_row = list_get(rows, water_start_y);
-  list_set(water_row, water_start_x, w);
+  let { y, x } = list_random_item(coordinates);
+  let water_row = list_get(rows, y);
+  list_set(water_row, x, w);
   return rows;
 }
