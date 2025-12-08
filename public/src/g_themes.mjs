@@ -35,6 +35,7 @@ export function g_themes(text) {
     faith: "faith",
     good: "morality",
     [g_themes_verb("hear")]: "word",
+    law: "morality",
     [g_themes_verb("receive")]: "faith",
     right: "morality",
     [g_themes_verb("tell")]: "word",
