@@ -81,8 +81,6 @@ export async function app_g_refresh(
         glow_size +
         " white, 0 0 " +
         glow_size +
-        " white, 0 0 " +
-        glow_size +
         " white",
       color: "#1fd000ff",
       textAlign: "right",
