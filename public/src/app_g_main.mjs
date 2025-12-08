@@ -200,6 +200,6 @@ export async function app_g_main() {
     global_function_property_set(app_g_main, t, null);
   }
   g_tutorials_each(lambda4);
-  g_icon_cross_unpositioned(div_map);
+  i=g_icon_cross_unpositioned(body);
   await app_g_refresh(div_map_container, game_prefix, tiles_path, rows, map);
 }
