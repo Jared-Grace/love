@@ -8,7 +8,9 @@ import { html_loading } from "../../../love/public/src/html_loading.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
-export async function http_generic(url, method, body) {
+export async function http_generic(url, options) {
+  const method = options.method || "GET";
+  const body = options.body || null;
   const b = browser_is();
   if (b) {
     async function lambda3() {
