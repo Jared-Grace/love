@@ -46,7 +46,7 @@ export async function http_generic(url, options) {
       }
       let i = catch_call(reject, lambda2);
       res.on("data", i);
-      function lambda4() {
+      function on_end() {
         const { statusCode } = res;
         const d = statusCode / 100;
         const rounded = round(d);
@@ -57,7 +57,7 @@ export async function http_generic(url, options) {
         let v2 = Buffer.concat(chunks);
         resolve(v2);
       }
-      let i2 = catch_call(reject, lambda4);
+      let i2 = catch_call(reject, on_end);
       res.on("end", i2);
     }
     const req = h.request(
