@@ -63,7 +63,7 @@ export async function app_g_refresh(
     let tutorial = g_icon(div_map, npc, "✟");
     const square_size = `calc(` + g_img_square_size_css() + `*.4)`;
     const padding_size = `calc(` + g_img_square_size_css() + `*.1)`;
-    const glow_size = `calc(` + g_img_square_size_css() + `*.1)`;
+    const glow_size = `calc(` + g_img_square_size_css() + `*.05)`;
     html_style_assign(tutorial, {
       display: "flex",
       justifyContent: "flex-end",
