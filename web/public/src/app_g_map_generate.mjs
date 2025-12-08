@@ -1,3 +1,4 @@
+import { list_get } from "../../../love/public/src/list_get.mjs";
 import { integer_random_less_1 } from "../../../love/public/src/integer_random_less_1.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -40,5 +41,6 @@ export function app_g_map_generate() {
   let rows = list_adder(lambda10);
   let water_start_y = integer_random_less_1(row_count);
   let water_start_x = integer_random_less_1(column_count);
+  let item = list_get(list, index2);
   return rows;
 }
