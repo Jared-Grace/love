@@ -51,6 +51,7 @@ export function app_g_map_generate() {
   let coordinates = g_coordinates(rows);
   let count = row_count * column_count;
   let water_count = floor(count * 0.3);
+  let waters = [];
   function lambda2(i4) {
     let r = null;
     if (null_is(r)) {
