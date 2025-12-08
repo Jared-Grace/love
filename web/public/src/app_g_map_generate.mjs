@@ -50,8 +50,8 @@ export function app_g_map_generate() {
   let coordinates = g_coordinates(rows);
   let count = row_count * column_count;
   let water_count = floor(count * 0.3);
-  let r = null;
   function lambda2(i4) {
+    let r = null;
     if (null_is(r)) {
       r = list_random_item(coordinates);
     } else {
@@ -70,6 +70,6 @@ export function app_g_map_generate() {
     list_set(water_row, x, w);
     list_remove(coordinates, r);
   }
-  each_range(80, lambda2);
+  each_range(water_count, lambda2);
   return rows;
 }
