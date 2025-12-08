@@ -199,5 +199,5 @@ export async function app_g_main() {
     global_function_property_set(app_g_main, t, null);
   }
   g_tutorials_each(lambda4);
-  await app_g_refresh(div_map, game_prefix, tiles_path, rows, map);
+  await app_g_refresh(div_map_container, game_prefix, tiles_path, rows, map);
 }
