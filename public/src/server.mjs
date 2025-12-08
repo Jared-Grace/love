@@ -8,6 +8,8 @@ import { fileURLToPath } from "url";
 export function server() {
   marker("1");
   const app = express();
+  let v2 = express.json();
+  app.use(v2);
   const port = 8080;
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
