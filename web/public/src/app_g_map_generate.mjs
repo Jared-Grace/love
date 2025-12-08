@@ -47,6 +47,7 @@ export function app_g_map_generate() {
   let { y, x } = r;
   let water_row = list_get(rows, y);
   list_set(water_row, x, w);
-  let filtered = list_filter(list, function lambda(item) {});
+  function lambda(item) {}
+  let filtered = list_filter(list, lambda);
   return rows;
 }
