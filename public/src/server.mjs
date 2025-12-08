@@ -19,7 +19,7 @@ export function server() {
       now: Date.now(),
     });
   }
-  app.get("/api", lambda2);
+  app.post("/api", lambda2);
   app.use(v);
   function lambda() {
     log_keep(`Static server running at http://localhost:${port}`);
