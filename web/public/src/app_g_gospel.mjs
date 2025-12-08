@@ -67,6 +67,7 @@ export async function app_g_gospel(
           overlay_close,
           player,
           div_map,
+          refresh,
         );
       }
       app_g_bible_passage_button(passage, chapter_code, books, overlay, lambda);
