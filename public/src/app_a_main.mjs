@@ -12,7 +12,7 @@ export async function app_a_main() {
   });
   let parsed = buffer_to_json(buffer);
   log({
-    v,
+    parsed,
   });
   alert(v);
 }
