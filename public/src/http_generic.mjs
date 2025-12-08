@@ -16,14 +16,15 @@ export async function http_generic(url, options) {
   const b = browser_is();
   if (b) {
     async function lambda3() {
-      const response = await fetch(url, {
+      const r = {
         method,
         headers: {
           "Content-Type": "application/json",
           ...(options.headers || {}),
         },
         body: json_to(body),
-      });
+      };
+      const response = await fetch(url, r);
       let exists = object_property_exists(options, "body");
       if (false) {
       }
