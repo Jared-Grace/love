@@ -201,5 +201,9 @@ export async function app_g_main() {
     player,
     npcs,
   });
+  function lambda4(t) {
+    global_function_property_set(app_g_main, t, null);
+  }
+  g_tutorials_each(lambda4);
   await app_g_refresh(div_map, game_prefix, tiles_path, rows, map);
 }
