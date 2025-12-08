@@ -24,9 +24,11 @@ export async function http_generic(url, options) {
       let exists = object_property_exists(options, "body");
       if (exists) {
         let a = object_assign(r, {
-          "Content-Type": "application/json",
-          ...(options.headers || {}),
-          body: json_to(body),
+          headers: {
+            "Content-Type": "application/json",
+            ...(options.headers || {}),
+            body: json_to(body),
+          },
         });
       }
       log(r);
