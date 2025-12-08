@@ -60,6 +60,8 @@ export async function app_g_refresh(
   function lambda12(npc) {
     let ci = g_character_img(game_prefix, div_map, npc);
     g_icon_cross(div_map, npc);
+    if (false) {
+    }
   }
   each(npcs, lambda12);
   let rows_size = list_size(rows);
