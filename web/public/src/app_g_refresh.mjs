@@ -64,7 +64,7 @@ export async function app_g_refresh(
   function lambda12(npc) {
     let i = html_element(div_map, "i");
     html_click_none(i);
-    g_img_square_style_position(i, coordinates, "icon");
+    g_img_square_style_position(i, npc, "icon");
     let ci = g_character_img(game_prefix, div_map, npc);
     let tutorial = g_icon(div_map, npc, ``);
     `
