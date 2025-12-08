@@ -29,7 +29,7 @@ export async function http_generic(url, options) {
           body: json_to(body),
         });
       }
-      log(message);
+      log(r);
       const response = await fetch(url, r);
       if (not(response.ok)) {
         error("Failed to fetch file");
