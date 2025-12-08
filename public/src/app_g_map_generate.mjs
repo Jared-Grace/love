@@ -1,3 +1,4 @@
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_without } from "../../../love/public/src/list_without.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { g_coordinates } from "../../../love/public/src/g_coordinates.mjs";
@@ -48,9 +49,10 @@ export function app_g_map_generate() {
   let { y, x } = r;
   let water_row = list_get(rows, y);
   list_set(water_row, x, w);
+  list_remove(list, item2);
   function lambda(item) {
-    let filtered2 = list_without(list3, item2);
+    let filtered2 = list_without(coordinates, r);
   }
-  let filtered = list_filter(list, lambda);
+  let filtered = list_filter(coordinates, lambda);
   return rows;
 }
