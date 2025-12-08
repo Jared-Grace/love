@@ -30,6 +30,7 @@ export async function app_g_gospel(
   overlay_close,
   player,
   div_map,
+  refresh,
 ) {
   marker("1");
   html_clear(overlay);
