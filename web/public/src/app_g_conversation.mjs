@@ -66,6 +66,7 @@ export function app_g_conversation(
       overlay_close,
       player,
       div_map,
+      refresh,
     );
   }
   app_g_container_text(overlay, "What would you like to do?");
