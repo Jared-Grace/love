@@ -9,7 +9,7 @@ export function g_themes_verb(root) {
   if (ew) {
     root_ing = string_take_less_1(root_ing);
   }
-  let list = [root, root + "s", root_ing + "ing"];
+  let list = [root, root + "s"][root_ing + "ing"];
   let r = list_join_space(list);
   return r;
 }
