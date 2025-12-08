@@ -67,7 +67,7 @@ export async function app_g_refresh(
     html_class_add(i, "ri-cross-fill");
     let ci = g_character_img(game_prefix, div_map, npc);
     const square_size = `calc(` + g_img_square_size_css() + `*.4)`;
-    const padding_size = `calc(` + g_img_square_size_css() + `*.1)`;
+    const padding_size = `calc(` + g_img_square_size_css() + `*.05)`;
     const glow_size = `calc(` + g_img_square_size_css() + `*.05)`;
     html_style_assign(i, {
       display: "flex",
@@ -82,6 +82,7 @@ export async function app_g_refresh(
         glow_size +
         " white",
       color: "#1fd000ff",
+      paddingRight: padding_size,
       textAlign: "right",
       fontSize: square_size,
     });
