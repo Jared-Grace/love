@@ -67,7 +67,6 @@ export async function app_g_refresh(
       justifyContent: "flex-end",
       alignItems: "flex-start",
       textAlign: "right",
-      padding: "10px",
     });
   }
   each(npcs, lambda12);
