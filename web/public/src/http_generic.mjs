@@ -27,8 +27,8 @@ export async function http_generic(url, options) {
           headers: {
             "Content-Type": "application/json",
             ...(options.headers || {}),
-            body: json_to(body),
           },
+          body: json_to(body),
         });
       }
       log(r);
