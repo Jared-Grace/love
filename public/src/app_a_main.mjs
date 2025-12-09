@@ -20,7 +20,8 @@ export async function app_a_main() {
   let body2 = html_document_body();
   function lambda(f_name) {
     let div = html_div_text(body2, f_name);
-    let b = app_g_button_green(overlay, text, function lambda3() {});
+    function lambda3() {}
+    let b = app_g_button_green(overlay, text, lambda3);
   }
   each(result, lambda);
 }
