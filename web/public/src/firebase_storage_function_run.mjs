@@ -18,7 +18,7 @@ export async function firebase_storage_function_run(f_name, version_get) {
   let code = await firebase_storage_download_property(destination, "code");
   let call = js_code_call_statement(f_name);
   let global_init = js_code_global_init();
-  let joined = list_join_newline([global_init, call, code]);
+  let joined = list_join_newline([global_init, code, call]);
   if (browser_is()) {
     let body = html_document_body();
     let component = html_element(body, "script");
