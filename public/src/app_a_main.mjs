@@ -30,6 +30,13 @@ export async function app_a_main() {
   html_focus(input);
   function lambda4() {
     let value = html_value_get(input);
+    function matchesSubsequence(s, target) {
+      const escaped = s.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&");
+      let v2 = escaped.split("").join(".*");
+      const regex = new RegExp(v2);
+      let v = regex.test(target);
+      return v;
+    }
   }
   html_on_keydown(input, lambda4);
   let result = object_property_get(o, "result");
