@@ -1,3 +1,4 @@
+import { list_sort_string } from "../../../love/public/src/list_sort_string.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -14,6 +15,7 @@ export async function app_a_main() {
   const url = "/api";
   let o = await http_post_json(url, body);
   let result = object_property_get(o, "result");
+  list_sort_string(list);
   let body2 = html_document_body();
   function lambda(f_name) {
     let div = html_div_text(body2, f_name);
