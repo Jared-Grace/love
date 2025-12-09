@@ -22,7 +22,7 @@ export function server() {
   async function lambda2(req, res) {
     let body2 = object_property_get(req, "body");
     let f_name = object_property_get(body2, "function_name");
-    let v3 = await function_name_unalias(f_name2);
+    let { unaliased } = await function_name_unalias(f_name);
     const middle = await function_dependencies_code_call(f_name);
     let result = await eval(middle);
     res.json({
