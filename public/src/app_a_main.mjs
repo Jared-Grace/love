@@ -1,4 +1,4 @@
-import { app_karate_style_control_border } from "../../../love/public/src/app_karate_style_control_border.mjs";
+import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
 import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
 import { html_input } from "../../../love/public/src/html_input.mjs";
@@ -14,7 +14,10 @@ export async function app_a_main() {
   let body2 = html_document_body();
   let component2 = html_input(body2);
   app_a_control_style(component2);
-  app_karate_style_control_border(component2, "gray");
+  html_style_assign(input, {
+    "border-width": "1px",
+    "border-color": "gray",
+  });
   const function_name = fn_name("functions_names");
   let body = {
     function_name: function_name,
