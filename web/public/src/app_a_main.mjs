@@ -28,7 +28,7 @@ export async function app_a_main() {
     "border-color": "gray",
   });
   html_focus(component2);
-  function lambda4(k) {
+  function lambda4({ key }) {
     log(k);
   }
   html_on_keydown(component2, lambda4);
