@@ -1,3 +1,4 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_sort_string_alpha_size } from "../../../love/public/src/list_sort_string_alpha_size.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
@@ -28,6 +29,7 @@ export async function app_a_main() {
     "border-color": "gray",
   });
   html_focus(input);
+  let div = html_div(root);
   let f_names = null;
   function lambda4() {
     let value = html_value_get(input);
