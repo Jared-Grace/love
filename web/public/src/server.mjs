@@ -19,7 +19,7 @@ export function server() {
   let v = express.static(result2);
   function lambda2(req, res) {
     let body2 = object_property_get(req, "body");
-    let value = object_property_get(object, property_name);
+    let value = object_property_get(body2, "function_name");
     res.json({
       body2,
       query: req.query,
