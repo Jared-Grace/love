@@ -29,6 +29,7 @@ export async function app_a_main() {
     "border-color": "gray",
   });
   html_focus(input);
+  let f_names = null;
   function lambda4() {
     let value = html_value_get(input);
     function lambda2(item) {}
@@ -42,9 +43,8 @@ export async function app_a_main() {
     }
   }
   html_on_keydown(input, lambda4);
-  let result = null;
-  result = object_property_get(o, "result");
-  list_sort_string(result);
+  f_names = object_property_get(o, "result");
+  list_sort_string(f_names);
   function lambda(f_name) {
     function lambda3() {}
     marker("1");
@@ -53,5 +53,5 @@ export async function app_a_main() {
     app_karate_button_uncolored_style_assign(component);
     let b = component;
   }
-  each(result, lambda);
+  each(f_names, lambda);
 }
