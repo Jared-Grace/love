@@ -1,3 +1,4 @@
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_on_keydown } from "../../../love/public/src/html_on_keydown.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
@@ -30,6 +31,7 @@ export async function app_a_main() {
   html_focus(input);
   function lambda4() {
     let value = html_value_get(input);
+    let filtered = list_filter(list, function lambda2(item) {});
     function match(s, target) {
       const escaped = s.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&");
       let v2 = escaped.split("").join(".*");
