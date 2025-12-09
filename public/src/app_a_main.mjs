@@ -12,7 +12,6 @@ import { html_document_body } from "../../../love/public/src/html_document_body.
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { http_post_json } from "../../../love/public/src/http_post_json.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { fn_name } from "./fn_name.mjs";
 export async function app_a_main() {
   let body2 = html_document_body();
@@ -50,7 +49,6 @@ export async function app_a_main() {
   list_sort_string(f_names);
   function lambda(f_name) {
     function lambda3() {}
-    marker("1");
     let component = html_button(body2, f_name, lambda3);
     app_a_control_style(component);
     app_karate_button_uncolored_style_assign(component);
