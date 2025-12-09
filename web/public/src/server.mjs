@@ -20,7 +20,7 @@ export function server() {
   function lambda2(req, res) {
     let body2 = object_property_get(req, "body");
     res.json({
-      body: req.body,
+      body2,
       query: req.query,
       url: req.url,
     });
