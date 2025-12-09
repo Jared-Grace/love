@@ -14,7 +14,7 @@ export async function app_a_main() {
   let body2 = html_document_body();
   let component2 = html_input(body2);
   app_a_control_style(component2);
-  html_style_assign(input, {
+  html_style_assign(component2, {
     "border-width": "1px",
     "border-color": "gray",
   });
