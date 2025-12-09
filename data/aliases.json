@@ -272,6 +272,7 @@
   "lfsw": "list_filter_starts_with",
   "hr": "html_remove",
   "pg": "firebase_promote_function_app_g_main",
-  "lw": "list_without"
+  "lw": "list_without",
+  "hi": "html_input"
  }
 }
