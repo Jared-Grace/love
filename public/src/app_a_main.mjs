@@ -39,10 +39,10 @@ export async function app_a_main() {
     let value = html_value_get(input);
     function lambda2(f_name) {
       let v3 = match(value, f_name);
-      log(message);
       return v3;
     }
     filtered = list_filter(f_names, lambda2);
+    log(filtered);
     refresh();
     function match(s, target) {
       const escaped = s.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&");
