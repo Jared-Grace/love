@@ -5,6 +5,6 @@ export async function http_post_json(url, body) {
     method: "POST",
     body: body,
   });
-  let parsed = buffer_to_json(buffer);
-  return parsed;
+  let o = buffer_to_json(buffer);
+  return o;
 }
