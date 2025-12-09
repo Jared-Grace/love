@@ -15,7 +15,7 @@ export async function app_a_main() {
   const url = "/api";
   let o = await http_post_json(url, body);
   let result = object_property_get(o, "result");
-  list_sort_string(list);
+  list_sort_string(result);
   let body2 = html_document_body();
   function lambda(f_name) {
     let div = html_div_text(body2, f_name);
