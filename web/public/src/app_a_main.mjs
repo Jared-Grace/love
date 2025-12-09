@@ -1,4 +1,3 @@
-import { app_karate_margin_y_set } from "../../../karate_code/public/src/app_karate_margin_y_set.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
@@ -29,7 +28,6 @@ export async function app_a_main() {
       width: "100%",
       "border-width": "0px",
     });
-    app_karate_margin_y_set(component);
     app_karate_button_uncolored_style_assign(component);
     let b = component;
   }
