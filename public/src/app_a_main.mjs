@@ -16,7 +16,7 @@ export async function app_a_main() {
   let result = object_property_get(o, "result");
   let body2 = html_document_body();
   function lambda(f_name) {
-    let div = html_div_text(root, f_name);
+    let div = html_div_text(body2, f_name);
   }
   each(result, lambda);
 }
