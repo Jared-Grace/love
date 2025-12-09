@@ -18,6 +18,7 @@ export function server() {
   let result2 = path_join([__dirname, previous, previous, previous]);
   let v = express.static(result2);
   function lambda2(req, res) {
+    let body = object_property_get(res, "body");
     let value = object_property_get(object, property_name);
   }
   app.post("/api", lambda2);
