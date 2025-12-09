@@ -1,3 +1,4 @@
+import { function_name_unalias } from "../../../love/public/src/function_name_unalias.mjs";
 import { function_dependencies_code_call } from "../../../love/public/src/function_dependencies_code_call.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -21,6 +22,7 @@ export function server() {
   async function lambda2(req, res) {
     let body2 = object_property_get(req, "body");
     let f_name = object_property_get(body2, "function_name");
+    let v3 = await function_name_unalias(f_name2);
     const middle = await function_dependencies_code_call(f_name);
     let result = await eval(middle);
     res.json({
