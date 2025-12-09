@@ -38,7 +38,9 @@ export async function app_a_main() {
       let v3 = match(value, f_name);
       return v3;
     }
-    let filtered = list_filter(f_names, lambda2);
+    let filtered = null;
+    filtered = list_filter(f_names, lambda2);
+    refresh();
     function match(s, target) {
       const escaped = s.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&");
       let v2 = escaped.split("").join(".*");
@@ -49,14 +51,17 @@ export async function app_a_main() {
   }
   html_on_keydown(input, lambda4);
   f_names = object_property_get(o, "result");
-  html_clear(element);
-  list_sort_string_alpha_size(f_names);
-  function lambda(f_name) {
-    function lambda3() {}
-    let component = html_button(body2, f_name, lambda3);
-    app_a_control_style(component);
-    app_karate_button_uncolored_style_assign(component);
-    let b = component;
+  refresh();
+  function refresh() {
+    html_clear(f_names_div);
+    list_sort_string_alpha_size(f_names);
+    function lambda(f_name) {
+      function lambda3() {}
+      let component = html_button(body2, f_name, lambda3);
+      app_a_control_style(component);
+      app_karate_button_uncolored_style_assign(component);
+      let b = component;
+    }
+    each(f_names, lambda);
   }
-  each(f_names, lambda);
 }
