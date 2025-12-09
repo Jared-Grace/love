@@ -20,7 +20,7 @@ export async function app_a_main() {
   let o = await http_post_json(url, body);
   let result = object_property_get(o, "result");
   list_sort_string(result);
-  let component2 = html_input(div);
+  let component2 = html_input(body2);
   function lambda(f_name) {
     function lambda3() {}
     marker("1");
