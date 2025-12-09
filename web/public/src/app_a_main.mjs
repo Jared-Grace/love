@@ -1,4 +1,4 @@
-import { list_sort_string_size } from "../../../love/public/src/list_sort_string_size.mjs";
+import { list_sort_string_alpha_size } from "../../../love/public/src/list_sort_string_alpha_size.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_on_keydown } from "../../../love/public/src/html_on_keydown.mjs";
@@ -8,7 +8,6 @@ import { app_karate_button_uncolored_style_assign } from "../../../karate_code/p
 import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
 import { html_input } from "../../../love/public/src/html_input.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
-import { list_sort_string } from "../../../love/public/src/list_sort_string.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -47,8 +46,7 @@ export async function app_a_main() {
   }
   html_on_keydown(input, lambda4);
   f_names = object_property_get(o, "result");
-  list_sort_string(f_names);
-  list_sort_string_size(f_names);
+  list_sort_string_alpha_size(f_names);
   function lambda(f_name) {
     function lambda3() {}
     let component = html_button(body2, f_name, lambda3);
