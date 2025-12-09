@@ -33,7 +33,8 @@ export async function app_a_main() {
   function lambda4() {
     let value = html_value_get(input);
     function lambda2(f_name) {
-      return match(value, f_name);
+      let v3 = match(value, f_name);
+      return v3;
     }
     let filtered = list_filter(f_names, lambda2);
     function match(s, target) {
