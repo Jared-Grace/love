@@ -1,3 +1,4 @@
+import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
 import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
 import { html_input } from "../../../love/public/src/html_input.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
@@ -25,7 +26,7 @@ export async function app_a_main() {
     marker("1");
     let component = html_button(body2, f_name, lambda3);
     app_a_control_style(component);
-  app_karate_button_uncolored_style_assign(component);
+    app_karate_button_uncolored_style_assign(component);
     let b = component;
   }
   each(result, lambda);
