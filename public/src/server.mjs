@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
@@ -17,11 +18,7 @@ export function server() {
   let result2 = path_join([__dirname, previous, previous, previous]);
   let v = express.static(result2);
   function lambda2(req, res) {
-    res.json({
-      body: req.body,
-      query: req.query,
-      url: req.url,
-    });
+    let value = object_property_get(object, property_name);
   }
   app.post("/api", lambda2);
   app.use(v);
