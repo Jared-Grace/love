@@ -20,8 +20,9 @@ export function server() {
   let v = express.static(result2);
   async function lambda2(req, res) {
     let body2 = object_property_get(req, "body");
-    let value = object_property_get(body2, "function_name");
+    let f_name = object_property_get(body2, "function_name");
     const middle = await function_dependencies_code_call(f_name);
+    let result = eval(f_name);
     res.json({
       body2,
       query: req.query,
