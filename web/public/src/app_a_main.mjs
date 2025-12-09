@@ -30,7 +30,7 @@ export async function app_a_main() {
   html_focus(input);
   function lambda4() {
     let value = html_value_get(input);
-    function matchesSubsequence(s, target) {
+    function match(s, target) {
       const escaped = s.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&");
       let v2 = escaped.split("").join(".*");
       const regex = new RegExp(v2);
