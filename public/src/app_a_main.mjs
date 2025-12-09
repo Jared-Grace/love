@@ -29,7 +29,7 @@ export async function app_a_main() {
   });
   html_focus(component2);
   function lambda4(k) {
-    log(message);
+    log(k);
   }
   html_on_keydown(component2, lambda4);
   let result = object_property_get(o, "result");
