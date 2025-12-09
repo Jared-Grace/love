@@ -1,5 +1,6 @@
 export async function sandbox() {
-  return {
+  let v = {
     test: 456,
   };
+  return v;
 }
