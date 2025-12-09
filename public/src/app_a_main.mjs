@@ -1,7 +1,5 @@
+import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
 import { html_input } from "../../../love/public/src/html_input.mjs";
-import { html_style_margin_y } from "../../../love/public/src/html_style_margin_y.mjs";
-import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
-import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { list_sort_string } from "../../../love/public/src/list_sort_string.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
@@ -25,13 +23,7 @@ export async function app_a_main() {
     function lambda3() {}
     marker("1");
     let component = html_button(body2, f_name, lambda3);
-    html_style_assign(component, {
-      "border-radius": "0.8em",
-      width: "100%",
-      "border-width": "0px",
-    });
-    app_karate_button_uncolored_style_assign(component);
-    html_style_margin_y(component, "2px");
+    app_a_control_style(component);
     let b = component;
   }
   each(result, lambda);
