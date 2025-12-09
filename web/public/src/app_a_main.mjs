@@ -1,7 +1,6 @@
 import { app_g_button_green } from "../../../love/public/src/app_g_button_green.mjs";
 import { list_sort_string } from "../../../love/public/src/list_sort_string.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
-import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { http_post_json } from "../../../love/public/src/http_post_json.mjs";
@@ -19,9 +18,8 @@ export async function app_a_main() {
   list_sort_string(result);
   let body2 = html_document_body();
   function lambda(f_name) {
-    let div = html_div_text(body2, f_name);
     function lambda3() {}
-    let b = app_g_button_green(overlay, text, lambda3);
+    let b = app_g_button_green(body2, f_name, lambda3);
   }
   each(result, lambda);
 }
