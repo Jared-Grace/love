@@ -19,7 +19,8 @@ export async function app_a_main() {
   let result = object_property_get(o, "result");
   list_sort_string(result);
   let body2 = html_document_body();
-  lambda(a);
+  lambda("a1");
+  lambda("a2");
   function lambda(f_name) {
     function lambda3() {}
     marker("1");
