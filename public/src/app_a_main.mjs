@@ -10,5 +10,5 @@ export async function app_a_main() {
   };
   const url = "/api";
   let o = await http_post_json(url, body);
-  let body2 = object_property_get(o, "body");
+  let result = object_property_get(o, "result");
 }
