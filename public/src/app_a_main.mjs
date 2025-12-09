@@ -19,7 +19,7 @@ export async function app_a_main() {
   let result = object_property_get(o, "result");
   list_sort_string(result);
   let component2 = html_input(body2);
-    app_a_control_style(component2);
+  app_a_control_style(component2);
   function lambda(f_name) {
     function lambda3() {}
     marker("1");
