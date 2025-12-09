@@ -1,3 +1,4 @@
+import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { js_code_call_statement } from "../../../love/public/src/js_code_call_statement.mjs";
 import { function_dependencies_code } from "../../../love/public/src/function_dependencies_code.mjs";
 import { js_code_global_init } from "../../../karate_code/public/src/js_code_global_init.mjs";
@@ -28,9 +29,10 @@ export function server() {
     let global_init = js_code_global_init();
     let code = await function_dependencies_code(unaliased);
     let call = js_code_call_statement(unaliased);
+    let code2 = js_code_call_args();
     let middle = `${global_init}
     ${code}
-    ${call}`;
+    ${code2}`;
     let result = await eval(middle);
     res.json({
       result,
