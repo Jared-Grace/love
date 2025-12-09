@@ -1,3 +1,4 @@
+import { function_dependencies_code_call } from "../../../love/public/src/function_dependencies_code_call.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
@@ -17,9 +18,10 @@ export function server() {
   let previous = folder_previous();
   let result2 = path_join([__dirname, previous, previous, previous]);
   let v = express.static(result2);
-  function lambda2(req, res) {
+  async function lambda2(req, res) {
     let body2 = object_property_get(req, "body");
     let value = object_property_get(body2, "function_name");
+    const middle = await function_dependencies_code_call(f_name);
     res.json({
       body2,
       query: req.query,
