@@ -23,7 +23,7 @@ export function server() {
     let body2 = object_property_get(req, "body");
     let f_name = object_property_get(body2, "function_name");
     let { unaliased } = await function_name_unalias(f_name);
-    const middle = await function_dependencies_code_call(f_name);
+    const middle = await function_dependencies_code_call(unaliased);
     let result = await eval(middle);
     res.json({
       result,
