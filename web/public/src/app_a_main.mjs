@@ -1,3 +1,4 @@
+import { html_input } from "../../../love/public/src/html_input.mjs";
 import { html_style_margin_y } from "../../../love/public/src/html_style_margin_y.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
@@ -19,7 +20,7 @@ export async function app_a_main() {
   let o = await http_post_json(url, body);
   let result = object_property_get(o, "result");
   list_sort_string(result);
-  hi;
+  let component2 = html_input(div);
   function lambda(f_name) {
     function lambda3() {}
     marker("1");
