@@ -1,3 +1,4 @@
+import { list_sort_string_size } from "../../../love/public/src/list_sort_string_size.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_on_keydown } from "../../../love/public/src/html_on_keydown.mjs";
@@ -47,6 +48,7 @@ export async function app_a_main() {
   html_on_keydown(input, lambda4);
   f_names = object_property_get(o, "result");
   list_sort_string(f_names);
+  list_sort_string_size(f_names);
   function lambda(f_name) {
     function lambda3() {}
     let component = html_button(body2, f_name, lambda3);
