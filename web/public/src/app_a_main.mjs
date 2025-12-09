@@ -25,6 +25,7 @@ export async function app_a_main() {
     marker("1");
     let component = html_button(body2, f_name, lambda3);
     app_a_control_style(component);
+  app_karate_button_uncolored_style_assign(component);
     let b = component;
   }
   each(result, lambda);
