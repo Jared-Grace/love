@@ -24,9 +24,7 @@ export function server() {
     const middle = await function_dependencies_code_call(f_name);
     let result = eval(f_name);
     res.json({
-      body2,
-      query: req.query,
-      url: req.url,
+      result,
     });
   }
   app.post("/api", lambda2);
