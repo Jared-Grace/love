@@ -21,17 +21,17 @@ export async function app_a_main() {
   };
   const url = "/api";
   let o = await http_post_json(url, body);
-  let component2 = html_input(body2);
-  app_a_control_style(component2);
-  html_style_assign(component2, {
+  let input = html_input(body2);
+  app_a_control_style(input);
+  html_style_assign(input, {
     "border-width": "1px",
     "border-color": "gray",
   });
-  html_focus(component2);
+  html_focus(input);
   function lambda4() {
     let value = html_value_get(input);
   }
-  html_on_keydown(component2, lambda4);
+  html_on_keydown(input, lambda4);
   let result = object_property_get(o, "result");
   list_sort_string(result);
   function lambda(f_name) {
