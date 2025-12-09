@@ -34,7 +34,7 @@ export async function app_a_main() {
     });
     app_karate_button_uncolored_style_assign(component);
     const margin_y = app_karate_margin_y();
-    html_style_margin_y(component, margin_y);
+    html_style_margin_y(component, "1px");
     let b = component;
   }
   each(result, lambda);
