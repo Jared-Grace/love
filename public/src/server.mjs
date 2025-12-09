@@ -25,6 +25,7 @@ export function server() {
     let result = eval(middle);
     res.json({
       result,
+      middle,
     });
   }
   app.post("/api", lambda2);
