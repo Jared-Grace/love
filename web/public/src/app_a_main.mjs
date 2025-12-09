@@ -12,5 +12,6 @@ export async function app_a_main() {
   const url = "/api";
   let o = await http_post_json(url, body);
   let result = object_property_get(o, "result");
-  each(list, function lambda(item) {});
+  function lambda(item) {}
+  each(list, lambda);
 }
