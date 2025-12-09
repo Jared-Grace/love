@@ -31,7 +31,8 @@ export async function app_a_main() {
   html_focus(input);
   function lambda4() {
     let value = html_value_get(input);
-    let filtered = list_filter(list, function lambda2(item) {});
+    function lambda2(item) {}
+    let filtered = list_filter(list, lambda2);
     function match(s, target) {
       const escaped = s.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&");
       let v2 = escaped.split("").join(".*");
