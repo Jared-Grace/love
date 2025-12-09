@@ -9,6 +9,7 @@ import { http_post_json } from "../../../love/public/src/http_post_json.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { fn_name } from "./fn_name.mjs";
 export async function app_a_main() {
+  let body2 = html_document_body();
   marker("1");
   lambda("a1");
   lambda("a2");
@@ -20,7 +21,6 @@ export async function app_a_main() {
   let o = await http_post_json(url, body);
   let result = object_property_get(o, "result");
   list_sort_string(result);
-  let body2 = html_document_body();
   function lambda(f_name) {
     function lambda3() {}
     marker("1");
