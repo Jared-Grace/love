@@ -1,10 +1,10 @@
+import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_sort_string_alpha_size } from "../../../love/public/src/list_sort_string_alpha_size.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
-import { html_on_keydown } from "../../../love/public/src/html_on_keydown.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
@@ -52,7 +52,7 @@ export async function app_a_main() {
       return v;
     }
   }
-  html_on_keydown(input, lambda4);
+  html_on_input(input, lambda4);
   f_names = object_property_get(o, "result");
   filtered = f_names;
   refresh();
