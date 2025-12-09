@@ -1,5 +1,7 @@
+import { js_code_call_statement } from "../../../love/public/src/js_code_call_statement.mjs";
+import { function_dependencies_code } from "../../../love/public/src/function_dependencies_code.mjs";
+import { js_code_global_init } from "../../../karate_code/public/src/js_code_global_init.mjs";
 import { function_name_unalias } from "../../../love/public/src/function_name_unalias.mjs";
-import { function_dependencies_code_call } from "../../../love/public/src/function_dependencies_code_call.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
@@ -23,7 +25,12 @@ export function server() {
     let body2 = object_property_get(req, "body");
     let f_name = object_property_get(body2, "function_name");
     let { unaliased } = await function_name_unalias(f_name);
-    const middle = await function_dependencies_code_call(unaliased);
+    let global_init = js_code_global_init();
+    let code = await function_dependencies_code(unaliased);
+    let call = js_code_call_statement(unaliased);
+    let middle = `${global_init}
+    ${code}
+    ${call}`;
     let result = await eval(middle);
     res.json({
       result,
