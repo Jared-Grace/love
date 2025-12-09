@@ -1,5 +1,4 @@
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_sort_string_alpha_size } from "../../../love/public/src/list_sort_string_alpha_size.mjs";
@@ -35,14 +34,12 @@ export async function app_a_main() {
   let f_names = null;
   let filtered = null;
   function lambda4() {
-    log("here");
     let value = html_value_get(input);
     function lambda2(f_name) {
       let v3 = match(value, f_name);
       return v3;
     }
     filtered = list_filter(f_names, lambda2);
-    log(filtered);
     refresh();
     function match(s, target) {
       const escaped = s.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&");
