@@ -1,3 +1,4 @@
+import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_sort_string_alpha_size } from "../../../love/public/src/list_sort_string_alpha_size.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -29,7 +30,7 @@ export async function app_a_main() {
     "border-color": "gray",
   });
   html_focus(input);
-  let div = html_div(root);
+  let f_names_div = html_div(body2);
   let f_names = null;
   function lambda4() {
     let value = html_value_get(input);
@@ -48,6 +49,7 @@ export async function app_a_main() {
   }
   html_on_keydown(input, lambda4);
   f_names = object_property_get(o, "result");
+  html_clear(element);
   list_sort_string_alpha_size(f_names);
   function lambda(f_name) {
     function lambda3() {}
