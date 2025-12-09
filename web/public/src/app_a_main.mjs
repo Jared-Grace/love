@@ -19,6 +19,7 @@ export async function app_a_main() {
   let o = await http_post_json(url, body);
   let result = object_property_get(o, "result");
   list_sort_string(result);
+  hi;
   function lambda(f_name) {
     function lambda3() {}
     marker("1");
