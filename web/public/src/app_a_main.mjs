@@ -1,3 +1,4 @@
+import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
 import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
@@ -12,18 +13,19 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { fn_name } from "./fn_name.mjs";
 export async function app_a_main() {
   let body2 = html_document_body();
-  let component2 = html_input(body2);
-  app_a_control_style(component2);
-  html_style_assign(component2, {
-    "border-width": "1px",
-    "border-color": "gray",
-  });
   const function_name = fn_name("functions_names");
   let body = {
     function_name: function_name,
   };
   const url = "/api";
   let o = await http_post_json(url, body);
+  let component2 = html_input(body2);
+  app_a_control_style(component2);
+  html_style_assign(component2, {
+    "border-width": "1px",
+    "border-color": "gray",
+  });
+  html_focus(input);
   let result = object_property_get(o, "result");
   list_sort_string(result);
   function lambda(f_name) {
