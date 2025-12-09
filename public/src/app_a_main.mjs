@@ -1,5 +1,7 @@
+import { app_karate_margin_y_set } from "../../../karate_code/public/src/app_karate_margin_y_set.mjs";
+import { app_karate_style_control_font_size } from "../../../karate_code/public/src/app_karate_style_control_font_size.mjs";
+import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
-import { app_karate_style_control } from "../../../karate_code/public/src/app_karate_style_control.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { list_sort_string } from "../../../love/public/src/list_sort_string.mjs";
@@ -25,7 +27,14 @@ export async function app_a_main() {
     assert_arguments(arguments, 0);
     marker("1");
     let component = html_button(body2, f_name, lambda3);
-    app_karate_style_control(component);
+    html_style_assign(component, {
+      "border-radius": "0.8em",
+      padding: "0.55em",
+      width: "100%",
+      "border-width": "0px",
+      "font-size": app_karate_style_control_font_size(),
+    });
+    app_karate_margin_y_set(component);
     app_karate_button_uncolored_style_assign(component);
     let b = component;
   }
