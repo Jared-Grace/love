@@ -1,5 +1,4 @@
 import { html_style_margin_y } from "../../../love/public/src/html_style_margin_y.mjs";
-import { app_karate_margin_y } from "../../../karate_code/public/src/app_karate_margin_y.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
@@ -30,7 +29,6 @@ export async function app_a_main() {
       "border-width": "0px",
     });
     app_karate_button_uncolored_style_assign(component);
-    const margin_y = app_karate_margin_y();
     html_style_margin_y(component, "2px");
     let b = component;
   }
