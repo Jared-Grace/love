@@ -1,3 +1,4 @@
+import { app_g_button_green } from "../../../love/public/src/app_g_button_green.mjs";
 import { list_sort_string } from "../../../love/public/src/list_sort_string.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -19,6 +20,7 @@ export async function app_a_main() {
   let body2 = html_document_body();
   function lambda(f_name) {
     let div = html_div_text(body2, f_name);
+    let b = app_g_button_green(overlay, text, function lambda3() {});
   }
   each(result, lambda);
 }
