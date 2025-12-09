@@ -32,13 +32,13 @@ export async function app_a_main() {
   html_focus(input);
   let f_names_div = html_div(body2);
   let f_names = null;
+  let filtered = null;
   function lambda4() {
     let value = html_value_get(input);
     function lambda2(f_name) {
       let v3 = match(value, f_name);
       return v3;
     }
-    let filtered = null;
     filtered = list_filter(f_names, lambda2);
     refresh();
     function match(s, target) {
@@ -51,10 +51,11 @@ export async function app_a_main() {
   }
   html_on_keydown(input, lambda4);
   f_names = object_property_get(o, "result");
+  filtered = f_names;
   refresh();
   function refresh() {
     html_clear(f_names_div);
-    list_sort_string_alpha_size(f_names);
+    list_sort_string_alpha_size(filtered);
     function lambda(f_name) {
       function lambda3() {}
       let component = html_button(body2, f_name, lambda3);
@@ -62,6 +63,6 @@ export async function app_a_main() {
       app_karate_button_uncolored_style_assign(component);
       let b = component;
     }
-    each(f_names, lambda);
+    each(filtered, lambda);
   }
 }
