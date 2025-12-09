@@ -12,9 +12,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { fn_name } from "./fn_name.mjs";
 export async function app_a_main() {
   let body2 = html_document_body();
-  marker("1");
-  lambda("a1");
-  lambda("a2");
   const function_name = fn_name("functions_names");
   let body = {
     function_name: function_name,
