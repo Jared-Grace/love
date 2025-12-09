@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { http_post_json } from "../../../love/public/src/http_post_json.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -11,4 +12,5 @@ export async function app_a_main() {
   const url = "/api";
   let o = await http_post_json(url, body);
   let result = object_property_get(o, "result");
+  each(list, function lambda(item) {});
 }
