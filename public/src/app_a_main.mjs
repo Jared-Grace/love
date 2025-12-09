@@ -25,7 +25,7 @@ export async function app_a_main() {
     "border-width": "1px",
     "border-color": "gray",
   });
-  html_focus(input);
+  html_focus(component2);
   let result = object_property_get(o, "result");
   list_sort_string(result);
   function lambda(f_name) {
