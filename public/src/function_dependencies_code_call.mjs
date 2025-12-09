@@ -6,7 +6,7 @@ export async function function_dependencies_code_call(f_name) {
   let call = js_code_call_statement(f_name);
   let global_init = js_code_global_init();
   const middle = `${global_init}
-    ${call}
-    ${code}`;
+    ${code}
+    ${call}`;
   return middle;
 }
