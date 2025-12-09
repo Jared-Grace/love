@@ -1,4 +1,4 @@
-import { app_g_button_green } from "../../../love/public/src/app_g_button_green.mjs";
+import { app_karate_button_uncolored } from "../../../karate_code/public/src/app_karate_button_uncolored.mjs";
 import { list_sort_string } from "../../../love/public/src/list_sort_string.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -19,7 +19,7 @@ export async function app_a_main() {
   let body2 = html_document_body();
   function lambda(f_name) {
     function lambda3() {}
-    let b = app_g_button_green(body2, f_name, lambda3);
+    let b = app_karate_button_uncolored(body2, f_name, lambda3);
   }
   each(result, lambda);
 }
