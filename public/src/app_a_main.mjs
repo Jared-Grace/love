@@ -4,7 +4,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_a_main() {
   marker("1");
   let body = {
-    test: 123,
+    function_name: "sandbox",
   };
   const url = "/api";
   let parsed = await http_post_json(url, body);
