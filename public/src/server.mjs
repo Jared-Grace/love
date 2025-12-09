@@ -25,7 +25,6 @@ export function server() {
     let result = await eval(middle);
     res.json({
       result,
-      middle,
     });
   }
   app.post("/api", lambda2);
