@@ -27,7 +27,8 @@ export async function app_a_main() {
     "border-color": "gray",
   });
   html_focus(component2);
-  html_on_keydown(component3, function lambda4() {});
+  function lambda4() {}
+  html_on_keydown(component3, lambda4);
   let result = object_property_get(o, "result");
   list_sort_string(result);
   function lambda(f_name) {
