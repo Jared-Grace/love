@@ -1,3 +1,4 @@
+import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -13,8 +14,9 @@ export async function app_a_main() {
   const url = "/api";
   let o = await http_post_json(url, body);
   let result = object_property_get(o, "result");
+  let body2 = html_document_body();
   function lambda(f_name) {
-    let div = html_div_text(root, text);
+    let div = html_div_text(root, f_name);
   }
   each(result, lambda);
 }
