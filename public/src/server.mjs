@@ -22,7 +22,7 @@ export function server() {
     let body2 = object_property_get(req, "body");
     let f_name = object_property_get(body2, "function_name");
     const middle = await function_dependencies_code_call(f_name);
-    let result = eval(f_name);
+    let result = eval(middle);
     res.json({
       result,
     });
