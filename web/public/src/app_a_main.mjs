@@ -1,3 +1,4 @@
+import { app_karate_style_control_border } from "../../../love/public/src/app_karate_style_control_border.mjs";
 import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
 import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
 import { html_input } from "../../../love/public/src/html_input.mjs";
@@ -11,6 +12,8 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { fn_name } from "./fn_name.mjs";
 export async function app_a_main() {
   let body2 = html_document_body();
+  let component2 = html_input(body2);
+  app_karate_style_control_border(component2, "gray");
   const function_name = fn_name("functions_names");
   let body = {
     function_name: function_name,
@@ -19,7 +22,6 @@ export async function app_a_main() {
   let o = await http_post_json(url, body);
   let result = object_property_get(o, "result");
   list_sort_string(result);
-  let component2 = html_input(body2);
   app_a_control_style(component2);
   function lambda(f_name) {
     function lambda3() {}
