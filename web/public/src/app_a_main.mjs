@@ -13,6 +13,7 @@ import { fn_name } from "./fn_name.mjs";
 export async function app_a_main() {
   let body2 = html_document_body();
   let component2 = html_input(body2);
+  app_a_control_style(component2);
   app_karate_style_control_border(component2, "gray");
   const function_name = fn_name("functions_names");
   let body = {
@@ -22,7 +23,6 @@ export async function app_a_main() {
   let o = await http_post_json(url, body);
   let result = object_property_get(o, "result");
   list_sort_string(result);
-  app_a_control_style(component2);
   function lambda(f_name) {
     function lambda3() {}
     marker("1");
