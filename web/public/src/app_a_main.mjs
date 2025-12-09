@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { html_on_keydown } from "../../../love/public/src/html_on_keydown.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
@@ -27,8 +28,10 @@ export async function app_a_main() {
     "border-color": "gray",
   });
   html_focus(component2);
-  function lambda4() {}
-  html_on_keydown(component3, lambda4);
+  function lambda4(k) {
+    log(message);
+  }
+  html_on_keydown(component2, lambda4);
   let result = object_property_get(o, "result");
   list_sort_string(result);
   function lambda(f_name) {
