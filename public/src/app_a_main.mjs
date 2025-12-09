@@ -42,7 +42,8 @@ export async function app_a_main() {
     }
   }
   html_on_keydown(input, lambda4);
-  let result = object_property_get(o, "result");
+  let result = null;
+  result = object_property_get(o, "result");
   list_sort_string(result);
   function lambda(f_name) {
     function lambda3() {}
