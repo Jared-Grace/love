@@ -1,23 +1,17 @@
-import { function_import } from "../../../love/public/src/function_import.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { storage_local_set_exists_not } from "../../../love/public/src/storage_local_set_exists_not.mjs";
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
 import { storage_local_exists } from "../../../love/public/src/storage_local_exists.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
-export async function invoke_cache(f_name, args) {
+export async function invoke_cache(fn, args) {
   marker("1");
   let key_get = function lambda() {
     let json = json_to([f_name, args]);
     return json;
   };
   async function value_get() {
-    let result2 = await function_import(f_name, args);
-    return result2;
-    let f = eval(f_name);
-    log(f);
-    let v = await f(...args);
+    let v = await fn(...args);
     return v;
   }
   let cached_exists = function lambda3(key) {
