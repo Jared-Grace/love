@@ -1,6 +1,4 @@
-import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
-import { html_script } from "../../../love/public/src/html_script.mjs";
 import { app_a_api } from "../../../love/public/src/app_a_api.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -22,12 +20,6 @@ export async function app_a_main() {
   let function_name = fn_name("functions_names");
   let o = await app_a_api(function_name, []);
   let body = html_document_body();
-  let component = html_script(`{
-  "imports": {
-    "acorn": "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.mjs"
-  }
-}`);
-  html_attribute_set(component, "type", "importmap");
   let input = html_input(body);
   html_focus(input);
   app_a_control_style(input);
