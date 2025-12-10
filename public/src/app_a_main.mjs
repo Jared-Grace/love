@@ -1,6 +1,4 @@
 import { http_post_json_cache } from "../../../love/public/src/http_post_json_cache.mjs";
-import { storage_local_enabled } from "../../../love/public/src/storage_local_enabled.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -25,12 +23,6 @@ export async function app_a_main() {
   };
   const url = "/api";
   let result = await http_post_json_cache(url, body);
-  let enabled = storage_local_enabled();
-  log({
-    result,
-    enabled,
-  });
-  return;
   let body2 = html_document_body();
   let o = await http_post_json(url, body);
   let input = html_input(body2);
