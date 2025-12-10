@@ -19,6 +19,7 @@ export async function app_a_main() {
   let function_name = fn_name("functions_names");
   let o = await app_a_api(function_name, []);
   let body = html_document_body();
+  ("https://cdn.jsdelivr.net/npm/acorn/dist/acorn.min.js");
   let input = html_input(body);
   html_focus(input);
   app_a_control_style(input);
