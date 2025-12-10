@@ -24,10 +24,7 @@ export async function app_a_main() {
     function_name: function_name,
   };
   const url = "/api";
-  let result = await invoke_cache_storage_local(http_post_json.name, [
-    url,
-    body,
-  ]);
+  let result = await invoke_cache_storage_local(http_post_json, [url, body]);
   let enabled = storage_local_enabled();
   log({
     result,
