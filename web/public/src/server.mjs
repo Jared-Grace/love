@@ -1,9 +1,5 @@
-import { null_not_is_assert } from "../../../love/public/src/null_not_is_assert.mjs";
-import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
+import { function_run_io_file_wrapper } from "../../../love/public/src/function_run_io_file_wrapper.mjs";
 import { function_run } from "../../../love/public/src/function_run.mjs";
-import { command_line } from "../../../love/public/src/command_line.mjs";
-import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
-import { file_temp } from "../../../love/public/src/file_temp.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { js_code_call_statement } from "../../../love/public/src/js_code_call_statement.mjs";
@@ -18,7 +14,6 @@ import { path_join } from "../../../love/public/src/path_join.mjs";
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import { fn_name } from "./fn_name.mjs";
 export function server() {
   marker("1");
   const app = express();
@@ -32,28 +27,7 @@ export function server() {
   let v = express.static(result2);
   async function api(req, res) {
     let body = object_property_get(req, "body");
-    let r = null;
-    async function lambda2(temp_path_input) {
-      let result5 = await file_overwrite_json(temp_path_input, body);
-      async function lambda3(temp_path_output) {
-        let stdout = await command_line(
-          "node scripts/r.mjs " +
-            fn_name("function_run_io_file") +
-            " " +
-            temp_path_input +
-            " " +
-            temp_path_output,
-        );
-        log(stdout);
-        r = await file_read_json(temp_path_output);
-        log({
-          r,
-        });
-      }
-      let result4 = await file_temp(lambda3);
-    }
-    let result3 = await file_temp(lambda2);
-    null_not_is_assert(r);
+    let r = await function_run_io_file_wrapper(body);
     res.json(r);
     return;
     let result6 = await function_run(f_name2, args2);
