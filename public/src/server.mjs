@@ -32,23 +32,21 @@ export function server() {
   async function api(req, res) {
     let body = object_property_get(req, "body");
     let r = null;
-    if (false) {
-      async function lambda2(temp_path_input) {
-        let result5 = await file_overwrite_json(temp_path_input, body);
-        async function lambda3(temp_path_output) {
-          let stdout = await command_line(
-            "node r.mjs " +
-              fn_name("function_run_io_file") +
-              " " +
-              temp_path_input +
-              " " +
-              temp_path_output,
-          );
-          log(stdout);
-          r = await file_read_json(temp_path_output);
-        }
-        let result4 = await file_temp(lambda3);
+    async function lambda2(temp_path_input) {
+      let result5 = await file_overwrite_json(temp_path_input, body);
+      async function lambda3(temp_path_output) {
+        let stdout = await command_line(
+          "node r.mjs " +
+            fn_name("function_run_io_file") +
+            " " +
+            temp_path_input +
+            " " +
+            temp_path_output,
+        );
+        log(stdout);
+        r = await file_read_json(temp_path_output);
       }
+      let result4 = await file_temp(lambda3);
     }
     res.json(r);
     return;
