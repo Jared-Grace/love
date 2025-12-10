@@ -1,3 +1,4 @@
+import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { app_a_function } from "../../../love/public/src/app_a_function.mjs";
 import { app_a_api } from "../../../love/public/src/app_a_api.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
@@ -52,6 +53,7 @@ export async function app_a_main() {
     list_sort_string_alpha_size(filtered);
     function lambda(f_name) {
       async function lambda3() {
+        storage_local_set(app_fn, key, value2);
         await app_a_function(body, f_name);
       }
       let component = html_button(f_names_div, f_name, lambda3);
