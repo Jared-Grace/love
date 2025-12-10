@@ -1,3 +1,4 @@
+import { html_script } from "../../../love/public/src/html_script.mjs";
 import { app_a_api } from "../../../love/public/src/app_a_api.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -19,7 +20,8 @@ export async function app_a_main() {
   let function_name = fn_name("functions_names");
   let o = await app_a_api(function_name, []);
   let body = html_document_body();
-  ("https://cdn.jsdelivr.net/npm/acorn/dist/acorn.min.js");
+  let component = html_script();
+  let src = "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.min.js";
   let input = html_input(body);
   html_focus(input);
   app_a_control_style(input);
