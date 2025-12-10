@@ -14,6 +14,7 @@ export async function invoke_cache(f_name, args) {
   }
   let cached_exists = function lambda3(key) {
     let exists = global_function_property_exists(invoke_cache, key);
+    return exists;
   };
   let cached_get = async function lambda2(key) {
     let value = await global_function_property_get(invoke_cache, key);
