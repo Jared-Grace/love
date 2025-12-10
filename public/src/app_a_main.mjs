@@ -57,7 +57,7 @@ export async function app_a_main() {
         let function_name = fn_name("function_read");
         let code_string = js_code_string(f_name);
         let code = await app_a_api(function_name, [code_string]);
-        let p = html_p_text(root, text);
+        let p = html_p_text(body, code);
       }
       let component = html_button(f_names_div, f_name, lambda3);
       app_a_control_style(component);
