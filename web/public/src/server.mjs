@@ -1,3 +1,4 @@
+import { assert } from "../../../love/public/src/assert.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
 import { function_run } from "../../../love/public/src/function_run.mjs";
@@ -49,7 +50,8 @@ export function server() {
       }
       let result4 = await file_temp(lambda3);
     }
-    let nn = null_not_is(value);
+    let nn = null_not_is(r);
+    assert(b);
     res.json(r);
     return;
     let result6 = await function_run(f_name2, args2);
