@@ -1,3 +1,4 @@
+import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function global_function_property_set_exists_not(
@@ -6,6 +7,7 @@ export function global_function_property_set_exists_not(
   value,
 ) {
   marker("1");
+  let exists = global_function_property_exists(fn2, property_name2);
   let v = global_function_property_set(fn, property_name, value);
   return v;
 }
