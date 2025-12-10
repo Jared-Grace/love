@@ -1,5 +1,4 @@
 import { app_generic_refresh } from "../../../love/public/src/app_generic_refresh.mjs";
-import { app_karate_screens } from "../../../karate_code/public/src/app_karate_screens.mjs";
 import { app_karate } from "../../../karate_code/public/src/app_karate.mjs";
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { app_a_function } from "../../../love/public/src/app_a_function.mjs";
