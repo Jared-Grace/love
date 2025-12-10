@@ -57,7 +57,9 @@ export async function app_a_main() {
     html_clear(f_names_div);
     list_sort_string_alpha_size(filtered);
     function lambda(f_name) {
-      function lambda3() {}
+      function lambda3() {
+        html_clear(element);
+      }
       let component = html_button(f_names_div, f_name, lambda3);
       app_a_control_style(component);
       app_karate_button_uncolored_style_assign(component);
