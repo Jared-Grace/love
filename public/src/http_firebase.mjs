@@ -20,7 +20,6 @@ export async function http_firebase(url) {
   }
   let result = await cache_generic(
     key_get,
-    url,
     cached_exists,
     cached_get,
     value_get,
