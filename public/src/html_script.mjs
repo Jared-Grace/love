@@ -5,6 +5,6 @@ import { html_document_body } from "../../../love/public/src/html_document_body.
 export function html_script(script_body_text) {
   let body = html_document_body();
   let component = html_element(body, "script");
-  html_attribute_set(component, "type", "module");
   html_text_set(component, script_body_text);
+  html_attribute_set(component, "type", "module");
 }
