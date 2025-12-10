@@ -7,7 +7,7 @@ import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
 export async function invoke_cache(fn, args) {
   marker("1");
   let key_get = function lambda() {
-    let json = json_to([f_name, args]);
+    let json = json_to([fn.name, args]);
     return json;
   };
   async function value_get() {
