@@ -13,7 +13,8 @@ export async function invoke_cache(f_name, args) {
     return json;
   };
   async function value_get() {
-    let result2 = await function_run(f_name2, args2);
+    let result2 = await function_run(f_name, args);
+    return result2;
     let f = eval(f_name);
     log(f);
     let v = await f(...args);
