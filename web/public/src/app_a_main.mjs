@@ -1,3 +1,4 @@
+import { invoke_cache } from "../../../love/public/src/invoke_cache.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -16,6 +17,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { http_post_json } from "../../../love/public/src/http_post_json.mjs";
 import { fn_name } from "./fn_name.mjs";
 export async function app_a_main() {
+  let result = await invoke_cache(f_name2, args);
   let body2 = html_document_body();
   const function_name = fn_name("functions_names");
   let body = {
