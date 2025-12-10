@@ -1,3 +1,4 @@
+import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { file_temp } from "../../../love/public/src/file_temp.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
@@ -27,6 +28,7 @@ export function server() {
   async function api(req, res) {
     let body = object_property_get(req, "body");
     async function lambda2(temp_path_input) {
+      let result5 = await file_overwrite(file_path, contents);
       async function lambda3(temp_path_output) {}
       let result4 = await file_temp(lambda3);
     }
