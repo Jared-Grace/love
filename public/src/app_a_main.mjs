@@ -1,4 +1,4 @@
-import { http_post_json_cache } from "../../../love/public/src/http_post_json_cache.mjs";
+import { app_a_api } from "../../../love/public/src/app_a_api.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -18,12 +18,7 @@ import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export async function app_a_main() {
   const function_name = fn_name("functions_names");
   const args = [];
-  let api_body = {
-    function_name: function_name,
-    args: args,
-  };
-  const url = "/api";
-  let o = await http_post_json_cache(url, api_body);
+  let o = await app_a_api(function_name, args);
   let body = html_document_body();
   let input = html_input(body);
   html_focus(input);
