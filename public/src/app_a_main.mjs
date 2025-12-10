@@ -15,11 +15,10 @@ import { html_input } from "../../../love/public/src/html_input.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export async function app_a_main() {
   let function_name = fn_name("functions_names");
-  let o = await app_a_api(function_name, []);
+  let f_names = await app_a_api(function_name, []);
   let body = html_document_body();
   let input = html_input(body);
   html_focus(input);
@@ -29,7 +28,6 @@ export async function app_a_main() {
     "border-color": "gray",
   });
   let f_names_div = html_div(body);
-  let f_names = null;
   let filtered = null;
   function lambda4() {
     let value = html_value_get(input);
@@ -48,8 +46,7 @@ export async function app_a_main() {
     }
   }
   html_on_input(input, lambda4);
-  f_names = object_property_get(o, "result");
-  filtered = f_names;
+  f_names = filtered = f_names;
   refresh();
   function refresh() {
     html_clear(f_names_div);
