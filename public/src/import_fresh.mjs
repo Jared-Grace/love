@@ -1,7 +1,8 @@
-export function import_fresh(path) {
+import { VM } from "vm";
+export async function import_fresh(path) {
   const vm = new VM({
     context: {},
   });
-  let v = vm.run(`import("${path}")`);
+  let v = await vm.run(`import("${path}")`);
   return v;
 }
