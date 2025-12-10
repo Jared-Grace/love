@@ -16,9 +16,9 @@ import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export async function app_a_main() {
+  $;
   const function_name = fn_name("functions_names");
-  const args = [];
-  let o = await app_a_api(function_name, args);
+  let o = await app_a_api(function_name, []);
   let body = html_document_body();
   let input = html_input(body);
   html_focus(input);
