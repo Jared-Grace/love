@@ -30,7 +30,6 @@ export async function app_a_main() {
     "border-width": "1px",
     "border-color": "gray",
   });
-  html_focus(input);
   let f_names_div = html_div(body2);
   let f_names = null;
   let filtered = null;
