@@ -8,6 +8,8 @@ export async function file_temp(lambda$temp_path) {
   try {
     result = await lambda$temp_path(temp_path);
   } finally {
+    if (false) {
+    }
     await file_delete_if_exists(temp_path);
   }
   return result;
