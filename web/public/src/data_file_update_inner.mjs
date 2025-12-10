@@ -57,9 +57,10 @@ export async function data_file_update_inner(parsed, data) {
     function lambda4({ args }) {
       let first = list_first(args);
       function lambda3() {
-        return {
+        let v = {
           msg: fn_name.name + " first argument should be a literal: " + f_name,
         };
+        return v;
       }
       js_literal_is_assert(first, lambda3);
       let value = object_property_get(first, "value");
