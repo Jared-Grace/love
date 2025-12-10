@@ -1,5 +1,5 @@
+import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { app_screen_set_lambda } from "../../../love/public/src/app_screen_set_lambda.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
@@ -55,7 +55,7 @@ export async function app_a_home(context) {
     function lambda(f_name) {
       async function lambda3() {
         object_property_set(context, "f_name_selected", f_name);
-        let l = app_screen_set_lambda(context, app_a_function);
+        app_generic_screen_set(context, app_a_function);
       }
       let component = html_button(f_names_div, f_name, lambda3);
       app_a_control_style(component);
