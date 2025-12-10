@@ -17,7 +17,7 @@ import { html_input } from "../../../love/public/src/html_input.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { app_a_api } from "../../../love/public/src/app_a_api.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
-export async function app_a_home() {
+export async function app_a_home(context) {
   let function_name = fn_name("functions_names");
   let f_names = await app_a_api(function_name, []);
   let body = html_document_body();
@@ -54,7 +54,7 @@ export async function app_a_home() {
     list_sort_string_alpha_size(filtered);
     function lambda(f_name) {
       async function lambda3() {
-        object_property_set(object, "f_name_selected", f_name);
+        object_property_set(context, "f_name_selected", f_name);
         let l = app_screen_set_lambda(context, app_a_function);
       }
       let component = html_button(f_names_div, f_name, lambda3);
