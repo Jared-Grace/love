@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { storage_local_set_exists_not } from "../../../love/public/src/storage_local_set_exists_not.mjs";
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
 import { storage_local_exists } from "../../../love/public/src/storage_local_exists.mjs";
@@ -12,6 +13,7 @@ export async function invoke_cache(f_name, args) {
   };
   async function value_get() {
     let f = eval(f_name);
+    log(message);
     let v = await f(...args);
     return v;
   }
