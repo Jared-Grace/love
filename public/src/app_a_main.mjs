@@ -1,5 +1,5 @@
+import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
 import { app_a_api } from "../../../love/public/src/app_a_api.mjs";
-import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -55,7 +55,7 @@ export async function app_a_main() {
         html_clear(body);
         let function_name = fn_name("function_read");
         let code = await app_a_api(function_name, [f_name]);
-        let p = html_p_text(body, code);
+        let p = html_pre_text(body, code);
       }
       let component = html_button(f_names_div, f_name, lambda3);
       app_a_control_style(component);
