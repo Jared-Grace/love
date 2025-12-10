@@ -17,9 +17,10 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export async function app_a_main() {
   const function_name = fn_name("functions_names");
+  const args = [];
   let api_body = {
     function_name: function_name,
-    args: [],
+    args: args,
   };
   const url = "/api";
   let o = await http_post_json_cache(url, api_body);
