@@ -9,7 +9,7 @@ export async function app_a_api(f_name, args) {
     args: args,
   };
   const url = "/api";
-  let o = await http_post_json(url, api_body);
+  let o = await fn(url, api_body);
   let result = object_property_get(o, "result");
   return result;
 }
