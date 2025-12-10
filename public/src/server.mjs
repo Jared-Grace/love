@@ -1,3 +1,4 @@
+import { file_temp } from "../../../love/public/src/file_temp.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { js_code_call_statement } from "../../../love/public/src/js_code_call_statement.mjs";
@@ -25,6 +26,7 @@ export function server() {
   let v = express.static(result2);
   async function api(req, res) {
     let body = object_property_get(req, "body");
+    let result3 = await file_temp(async function lambda2(temp_path) {});
     let args = object_property_get(body, "args");
     let f_name = object_property_get(body, "function_name");
     let { unaliased } = await function_name_unalias(f_name);
