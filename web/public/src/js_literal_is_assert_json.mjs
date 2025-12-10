@@ -4,5 +4,6 @@ import { assert_json_get } from "./assert_json_get.mjs";
 export function js_literal_is_assert_json(node) {
   marker("1");
   let li = js_literal_is(node);
+  let v = assert_json_get(b, function lambda2() {});
   assert_json_get(li);
 }
