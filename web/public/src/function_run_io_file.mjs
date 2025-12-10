@@ -5,5 +5,5 @@ export async function function_run_io_file(temp_path_input, temp_path_output) {
   let data = await file_read_json(temp_path_input);
   let f_name = object_property_get(data, "f_name");
   let args = object_property_get(data, "args");
-  let result = await function_run(f_name2, args2);
+  let result = await function_run(f_name, args);
 }
