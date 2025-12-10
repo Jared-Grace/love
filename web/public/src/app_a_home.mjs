@@ -1,3 +1,4 @@
+import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -54,6 +55,7 @@ export async function app_a_home(context) {
     list_sort_string_alpha_size(filtered);
     function lambda(f_name) {
       async function lambda3() {
+        storage_local_set(app_fn, key, value2);
         object_property_set(context, "f_name_selected", f_name);
         app_generic_screen_set(context, app_a_function);
       }
