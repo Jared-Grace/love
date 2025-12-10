@@ -37,7 +37,7 @@ export function server() {
       let result5 = await file_overwrite_json(temp_path_input, body);
       async function lambda3(temp_path_output) {
         let stdout = await command_line(
-          "node r.mjs " +
+          "node scripts/r.mjs " +
             fn_name("function_run_io_file") +
             " " +
             temp_path_input +
