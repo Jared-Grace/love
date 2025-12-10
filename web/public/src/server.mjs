@@ -29,14 +29,22 @@ export function server() {
   let v = express.static(result2);
   async function api(req, res) {
     let body = object_property_get(req, "body");
-    if (false){
-    async function lambda2(temp_path_input) {
-      let result5 = await file_overwrite_json(temp_path_input, body);
-      async function lambda3(temp_path_output) {
-        let stdout = await command_line('node r.mjs ' + fn_name(function_run_io_file) + ' ' + temp_path_input+' '+temp_path_output);
+    if (false) {
+      async function lambda2(temp_path_input) {
+        let result5 = await file_overwrite_json(temp_path_input, body);
+        async function lambda3(temp_path_output) {
+          let stdout = await command_line(
+            "node r.mjs " +
+              fn_name("function_run_io_file") +
+              " " +
+              temp_path_input +
+              " " +
+              temp_path_output,
+          );
+        }
+        let result4 = await file_temp(lambda3);
       }
-      let result4 = await file_temp(lambda3);
-    }}
+    }
     let result3 = await file_temp(lambda2);
     let args = object_property_get(body, "args");
     let f_name = object_property_get(body, "function_name");
