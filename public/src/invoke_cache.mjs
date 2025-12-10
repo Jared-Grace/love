@@ -7,10 +7,11 @@ export async function invoke_cache(f_name, args) {
     return json;
   };
   let cached_exists = async function lambda2(key) {
+    async function lambda4() {}
     let value = await global_function_property_initialize_async(
       fn,
       property_name,
-      async function lambda4() {},
+      lambda4,
     );
   };
   let result = await cache_generic(
