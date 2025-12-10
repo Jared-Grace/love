@@ -274,6 +274,7 @@
   "pg": "firebase_promote_function_app_g_main",
   "lw": "list_without",
   "hi": "html_input",
-  "atnt": "assert_not"
+  "atnt": "assert_not",
+  "frn": "function_run"
  }
 }
