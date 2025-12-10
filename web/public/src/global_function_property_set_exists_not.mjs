@@ -6,5 +6,6 @@ export function global_function_property_set_exists_not(
   value,
 ) {
   marker("1");
-  return global_function_property_set(fn, property_name, value);
+  let v = global_function_property_set(fn, property_name, value);
+  return v;
 }
