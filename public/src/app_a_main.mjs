@@ -24,7 +24,9 @@ export async function app_a_main() {
   };
   const url = "/api";
   let result = await invoke_cache(http_post_json.name, [url, body]);
-  log({result});
+  log({
+    result,
+  });
   return;
   let body2 = html_document_body();
   let o = await http_post_json(url, body);
