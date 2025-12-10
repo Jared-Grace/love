@@ -12,10 +12,10 @@ export async function cache_generic(
   let e = await cached_exists(key);
   let result = null;
   if (e) {
-    log('message');
+    log("message");
     result = await cached_get(key);
   } else {
-    log('message2');
+    log("message2");
     let value = await value_get();
     await cache_save(key, value);
     result = await cached_get(key);
