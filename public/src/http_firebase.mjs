@@ -11,7 +11,10 @@ export async function http_firebase(url) {
   };
   let cached_exists = firebase_storage_exists;
   let cached_get = firebase_storage_download;
-  let value_get = http;
+  let value_get = async function lambda2() {
+    let v = await http(url);
+    return v;
+  };
   async function cache_save(key, value) {
     await firebase_upload_buffer(value, key);
   }
