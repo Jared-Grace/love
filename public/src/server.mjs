@@ -33,7 +33,8 @@ export function server() {
     log({
       f_name,
     });
-    let code2 = js_code_call_args(f_name, []);
+    const args = [];
+    let code2 = js_code_call_args(f_name, args);
     let middle = `${global_init}
     ${code}
     ${code2}`;
