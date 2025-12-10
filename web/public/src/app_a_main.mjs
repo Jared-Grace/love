@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { invoke_cache } from "../../../love/public/src/invoke_cache.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -23,6 +24,7 @@ export async function app_a_main() {
   };
   const url = "/api";
   let result = await invoke_cache(http_post_json.name, [url, body]);
+  log(message);
   return;
   let body2 = html_document_body();
   let o = await http_post_json(url, body);
