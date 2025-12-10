@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { js_code_call_statement } from "../../../love/public/src/js_code_call_statement.mjs";
 import { function_dependencies_code } from "../../../love/public/src/function_dependencies_code.mjs";
@@ -29,6 +30,7 @@ export function server() {
     let global_init = js_code_global_init();
     let code = await function_dependencies_code(unaliased);
     let call = js_code_call_statement(unaliased);
+    log(message);
     let code2 = js_code_call_args(f_name);
     let middle = `${global_init}
     ${code}
