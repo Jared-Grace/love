@@ -1,11 +1,4 @@
 import { function_run_io_file_wrapper } from "../../../love/public/src/function_run_io_file_wrapper.mjs";
-import { function_run } from "../../../love/public/src/function_run.mjs";
-import { log } from "../../../love/public/src/log.mjs";
-import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
-import { js_code_call_statement } from "../../../love/public/src/js_code_call_statement.mjs";
-import { function_dependencies_code } from "../../../love/public/src/function_dependencies_code.mjs";
-import { js_code_global_init } from "../../../karate_code/public/src/js_code_global_init.mjs";
-import { function_name_unalias } from "../../../love/public/src/function_name_unalias.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
@@ -29,22 +22,6 @@ export function server() {
     let body = object_property_get(req, "body");
     let r = await function_run_io_file_wrapper(body);
     res.json(r);
-    return;
-    let result6 = await function_run(f_name2, args2);
-    let args = object_property_get(body, "args");
-    let f_name = object_property_get(body, "function_name");
-    let { unaliased } = await function_name_unalias(f_name);
-    let global_init = js_code_global_init();
-    let code = await function_dependencies_code(unaliased);
-    let call = js_code_call_statement(unaliased);
-    log({
-      f_name,
-    });
-    let code2 = js_code_call_args(f_name, args);
-    let middle = `${global_init}
-    ${code}
-    ${code2}`;
-    let result = await eval(middle);
   }
   app.post("/api", api);
   app.use(v);
