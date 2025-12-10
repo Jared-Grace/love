@@ -9,5 +9,5 @@ export async function app_a_function(context) {
   html_clear(root);
   let function_name = fn_name("function_read");
   let code = await app_a_api(function_name, [f_name]);
-  let p = html_pre_text(body, code);
+  let p = html_pre_text(root, code);
 }
