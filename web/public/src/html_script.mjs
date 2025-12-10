@@ -6,6 +6,6 @@ export function html_script(script_body_text) {
   marker("1");
   let body = html_document_body();
   let s = html_element(body, "script");
-  html_text_set(component, script_body_text);
+  html_text_set(s, script_body_text);
   return s;
 }
