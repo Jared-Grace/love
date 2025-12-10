@@ -8,7 +8,6 @@ export async function invoke_cache(f_name, args) {
   };
   let result = await cache_generic(
     key_get,
-    url,
     cached_exists,
     cached_get,
     value_get,
