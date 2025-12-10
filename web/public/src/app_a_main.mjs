@@ -22,7 +22,11 @@ export async function app_a_main() {
   let function_name = fn_name("functions_names");
   let o = await app_a_api(function_name, []);
   let body = html_document_body();
-  let component = html_script(script_body_text);
+  let component = html_script(`{
+  "imports": {
+    "acorn": "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.mjs"
+  }
+}`);
   let src = "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.min.js";
   html_src_set(component, src);
   let input = html_input(body);
