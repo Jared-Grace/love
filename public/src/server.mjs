@@ -44,7 +44,7 @@ export function server() {
               " " +
               temp_path_output,
           );
-          log(message);
+          log(stdout);
           r = await file_read_json(temp_path_output);
         }
         let result4 = await file_temp(lambda3);
