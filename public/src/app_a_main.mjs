@@ -27,7 +27,7 @@ export async function app_a_main() {
   let result = await invoke_cache(http_post_json.name, [url, body]);
   let enabled = storage_local_enabled();
   log({
-    result,
+    result,enabled
   });
   return;
   let body2 = html_document_body();
