@@ -24,9 +24,9 @@ export function server() {
   let result2 = path_join([__dirname, previous, previous, previous]);
   let v = express.static(result2);
   async function api(req, res) {
-    let body2 = object_property_get(req, "body");
-    let args = object_property_get(body2, "args");
-    let f_name = object_property_get(body2, "function_name");
+    let body = object_property_get(req, "body");
+    let args = object_property_get(body, "args");
+    let f_name = object_property_get(body, "function_name");
     let { unaliased } = await function_name_unalias(f_name);
     let global_init = js_code_global_init();
     let code = await function_dependencies_code(unaliased);
