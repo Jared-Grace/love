@@ -30,7 +30,9 @@ export function server() {
     let global_init = js_code_global_init();
     let code = await function_dependencies_code(unaliased);
     let call = js_code_call_statement(unaliased);
-    log(message);
+    log({
+      f_name,
+    });
     let code2 = js_code_call_args(f_name);
     let middle = `${global_init}
     ${code}
