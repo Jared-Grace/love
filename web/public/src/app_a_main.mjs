@@ -17,11 +17,11 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export async function app_a_main() {
   const function_name = fn_name("functions_names");
-  let body = {
+  let api_body = {
     function_name: function_name,
   };
   const url = "/api";
-  let o = await http_post_json_cache(url, body);
+  let o = await http_post_json_cache(url, api_body);
   let body2 = html_document_body();
   let input = html_input(body2);
   html_focus(input);
