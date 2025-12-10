@@ -1,5 +1,5 @@
+import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
-import { html_src_set } from "../../../love/public/src/html_src_set.mjs";
 import { html_script } from "../../../love/public/src/html_script.mjs";
 import { app_a_api } from "../../../love/public/src/app_a_api.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
@@ -27,8 +27,7 @@ export async function app_a_main() {
     "acorn": "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.mjs"
   }
 }`);
-  let src = "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.min.js";
-  html_src_set(component, src);
+  html_attribute_set(component, "src", src);
   let input = html_input(body);
   html_focus(input);
   app_a_control_style(input);
