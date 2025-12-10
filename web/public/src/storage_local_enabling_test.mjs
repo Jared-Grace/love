@@ -12,7 +12,7 @@ import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { null_is_assert } from "../../../love/public/src/null_is_assert.mjs";
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
-import { storage_local_global_empt_assert } from "../../../love/public/src/storage_local_global_empt_assert.mjs";
+import { storage_local_global_empty_assert } from "../../../love/public/src/storage_local_global_empty_assert.mjs";
 import { sandbox } from "../../../love/public/src/sandbox.mjs";
 import { storage_local_mock_enable } from "../../../love/public/src/storage_local_mock_enable.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -30,7 +30,7 @@ export function storage_local_enabling_test() {
   };
   ("global object is empty initially");
   {
-    storage_local_global_empt_assert();
+    storage_local_global_empty_assert();
   }
   ("before setting value, get returns null");
   {
@@ -89,6 +89,6 @@ export function storage_local_enabling_test() {
   }
   ("global object is empty after enable");
   {
-    storage_local_global_empt_assert();
+    storage_local_global_empty_assert();
   }
 }
