@@ -57,7 +57,8 @@ export async function data_file_update_inner(parsed, data) {
     function lambda4({ args }) {
       let first = list_first(args);
       return;
-      js_literal_is_assert(first, () => {});
+      function lambda3() {}
+      js_literal_is_assert(first, lambda3);
       let value = object_property_get(first, "value");
       la(value);
     }
