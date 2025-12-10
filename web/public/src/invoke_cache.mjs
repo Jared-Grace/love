@@ -23,6 +23,7 @@ export async function invoke_cache(f_name, args) {
   };
   let cache_save = function lambda4(key, value) {
     let v2 = global_function_property_set_exists_not(invoke_cache, key, value);
+    return v2;
   };
   let result = await cache_generic(
     key_get,
