@@ -54,7 +54,7 @@ export async function app_a_home() {
     list_sort_string_alpha_size(filtered);
     function lambda(f_name) {
       async function lambda3() {
-        object_property_set(object, property_name, value2);
+        object_property_set(object, "f_name_selected", f_name);
         let l = app_screen_set_lambda(context, app_a_function);
       }
       let component = html_button(f_names_div, f_name, lambda3);
