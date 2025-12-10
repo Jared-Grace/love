@@ -1,3 +1,4 @@
+import { global_function_property_set_exists_not } from "../../../love/public/src/global_function_property_set_exists_not.mjs";
 import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
@@ -20,7 +21,9 @@ export async function invoke_cache(f_name, args) {
     let value = await global_function_property_get(invoke_cache, key);
     return value;
   };
-  let cache_save = function lambda4() {global_function_property_set_exists_not};
+  let cache_save = function lambda4() {
+    let v2 = global_function_property_set_exists_not(fn, property_name, value2);
+  };
   let result = await cache_generic(
     key_get,
     cached_exists,
