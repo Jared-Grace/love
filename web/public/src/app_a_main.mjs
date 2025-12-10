@@ -55,6 +55,7 @@ export async function app_a_main() {
       async function lambda3() {
         storage_local_set(app_a_main, "screen", app_a_function.name);
         storage_local_set(app_a_main, "function_current", f_name);
+        await app_a_main();
         await app_a_function(body, f_name);
       }
       let component = html_button(f_names_div, f_name, lambda3);
