@@ -25,7 +25,7 @@ export function server() {
   let v = express.static(result2);
   async function api(req, res) {
     let body2 = object_property_get(req, "body");
-    let args = object_property_get(req, "args");
+    let args = object_property_get(body2, "args");
     let f_name = object_property_get(body2, "function_name");
     let { unaliased } = await function_name_unalias(f_name);
     let global_init = js_code_global_init();
