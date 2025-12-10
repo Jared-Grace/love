@@ -18,7 +18,7 @@ import { html_document_body } from "../../../love/public/src/html_document_body.
 import { app_a_api } from "../../../love/public/src/app_a_api.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export async function app_a_home(context) {
-  let app_fn = context;
+  let { app_fn } = context;
   let function_name = fn_name("functions_names");
   let f_names = await app_a_api(function_name, []);
   let body = html_document_body();
