@@ -55,10 +55,8 @@ export async function app_a_home() {
     list_sort_string_alpha_size(filtered);
     function lambda(f_name) {
       async function lambda3() {
-        storage_local_set(app_a_main, "screen", app_a_function.name);
         storage_local_set(app_a_main, "function_current", f_name);
-        await app_a_main();
-        let l = app_screen_set_lambda(context, screen_fn);
+        let l = app_screen_set_lambda(context, app_a_function);
       }
       let component = html_button(f_names_div, f_name, lambda3);
       app_a_control_style(component);
