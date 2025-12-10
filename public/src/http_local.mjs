@@ -7,10 +7,16 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
 export async function http_local(url) {
   marker("1");
-  let key_get = http_local_file_name;
+  let key_get = function lambda() {
+    let joined = http_local_file_name(url);
+    return joined;
+  };
   let cached_exists = file_exists;
   let cached_get = file_read_buffer;
-  let value_get = http_firebase;
+  let value_get = async function lambda2() {
+    let v = await http_firebase(url);
+    return v;
+  };
   let cache_save = file_write_buffer;
   let result = await cache_generic(
     key_get,
