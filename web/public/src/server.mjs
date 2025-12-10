@@ -44,7 +44,7 @@ export function server() {
         }
         let result4 = await file_temp(lambda3);
       }
-    }
+    }function_run
     let result3 = await file_temp(lambda2);
     let args = object_property_get(body, "args");
     let f_name = object_property_get(body, "function_name");
