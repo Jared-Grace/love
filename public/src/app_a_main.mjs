@@ -14,7 +14,6 @@ import { html_button } from "../../../love/public/src/html_button.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { http_post_json } from "../../../love/public/src/http_post_json.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export async function app_a_main() {
   const function_name = fn_name("functions_names");
@@ -22,10 +21,8 @@ export async function app_a_main() {
     function_name: function_name,
   };
   const url = "/api";
-  let result = await http_post_json_cache(url, body);
-  return;
+  let o = await http_post_json_cache(url, body);
   let body2 = html_document_body();
-  let o = await http_post_json(url, body);
   let input = html_input(body2);
   app_a_control_style(input);
   html_style_assign(input, {
