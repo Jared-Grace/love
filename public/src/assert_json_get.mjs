@@ -8,6 +8,5 @@ export function assert_json_get(b, lambda) {
     let json = json_to(object);
     return json;
   }
-  let v = assert_message_get(b, json_get);
-  return v;
+  assert_message_get(b, json_get);
 }
