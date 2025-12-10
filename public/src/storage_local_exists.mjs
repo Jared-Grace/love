@@ -3,5 +3,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function storage_local_exists(app_fn, key) {
   marker("1");
   let value = storage_local_get(app_fn, key);
-  return value;
+  let v = value !== null;
+  return v;
 }
