@@ -1,6 +1,5 @@
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
@@ -56,8 +55,7 @@ export async function app_a_home(context) {
     list_sort_string_alpha_size(filtered);
     function lambda(f_name) {
       async function lambda3() {
-        storage_local_set(app_fn, "f_name_selected", value2);
-        object_property_set(context, "f_name_selected", f_name);
+        storage_local_set(app_fn, "f_name_selected", f_name);
         app_generic_screen_set(context, app_a_function);
       }
       let component = html_button(f_names_div, f_name, lambda3);
