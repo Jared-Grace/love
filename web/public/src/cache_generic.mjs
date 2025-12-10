@@ -1,7 +1,6 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function cache_generic(
   key_get,
-  url,
   cached_exists,
   cached_get,
   value_get,
