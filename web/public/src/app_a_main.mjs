@@ -9,7 +9,7 @@ export function app_a_main() {
   const context = {
     app_fn,
     screens,
-    root: root,
+    root,
   };
   app_generic_refresh(context);
 }
