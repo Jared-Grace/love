@@ -5,7 +5,10 @@ import { http_firebase_file_path } from "../../../love/public/src/http_firebase_
 import { firebase_storage_exists } from "../../../love/public/src/firebase_storage_exists.mjs";
 import { http } from "../../../love/public/src/http.mjs";
 export async function http_firebase(url) {
-  let key_get = http_firebase_file_path;
+  let key_get = function lambda() {
+    let joined = http_firebase_file_path(url);
+    return joined;
+  };
   let cached_exists = firebase_storage_exists;
   let cached_get = firebase_storage_download;
   let value_get = http;
