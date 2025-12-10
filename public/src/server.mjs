@@ -51,7 +51,7 @@ export function server() {
       let result4 = await file_temp(lambda3);
     }
     let nn = null_not_is(r);
-    assert(b);
+    assert(nn);
     res.json(r);
     return;
     let result6 = await function_run(f_name2, args2);
