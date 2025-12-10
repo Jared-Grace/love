@@ -19,6 +19,7 @@ import { html_document_body } from "../../../love/public/src/html_document_body.
 import { app_a_api } from "../../../love/public/src/app_a_api.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export async function app_a_home(context) {
+  let app_fn = context;
   let function_name = fn_name("functions_names");
   let f_names = await app_a_api(function_name, []);
   let body = html_document_body();
@@ -55,7 +56,7 @@ export async function app_a_home(context) {
     list_sort_string_alpha_size(filtered);
     function lambda(f_name) {
       async function lambda3() {
-        storage_local_set(app_fn, key, value2);
+        storage_local_set(app_fn, "f_name_selected", value2);
         object_property_set(context, "f_name_selected", f_name);
         app_generic_screen_set(context, app_a_function);
       }
