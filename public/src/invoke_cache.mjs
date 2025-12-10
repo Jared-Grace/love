@@ -17,6 +17,7 @@ export async function invoke_cache(f_name, args) {
       key,
       lambda4,
     );
+    return value;
   };
   let result = await cache_generic(
     key_get,
