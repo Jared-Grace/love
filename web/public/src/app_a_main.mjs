@@ -62,9 +62,9 @@ export async function app_a_main() {
       async function lambda3() {
         html_clear(body);
         let function_name = fn_name("function_read");
-        let o = await app_a_api(function_name, [f_name]);
+        let code_string = js_code_string(f_name);
+        let o = await app_a_api(function_name, [code_string]);
       }
-      let code_string = js_code_string(value_string);
       let component = html_button(f_names_div, f_name, lambda3);
       app_a_control_style(component);
       app_karate_button_uncolored_style_assign(component);
