@@ -44,11 +44,13 @@ export function server() {
               " " +
               temp_path_output,
           );
-          let data = await file_read_json(file_path);
+          r = await file_read_json(temp_path_output);
         }
         let result4 = await file_temp(lambda3);
       }
     }
+    res.json(r);
+    return;
     let result6 = await function_run(f_name2, args2);
     let result3 = await file_temp(lambda2);
     let args = object_property_get(body, "args");
@@ -65,9 +67,6 @@ export function server() {
     ${code}
     ${code2}`;
     let result = await eval(middle);
-    res.json({
-      result,
-    });
   }
   app.post("/api", api);
   app.use(v);
