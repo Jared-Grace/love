@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { app_a_api } from "../../../love/public/src/app_a_api.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
@@ -59,6 +60,7 @@ export async function app_a_main() {
         let function_name = fn_name("function_read");
         let code_string = js_code_string(f_name);
         let o = await app_a_api(function_name, [code_string]);
+        log(message);
       }
       let component = html_button(f_names_div, f_name, lambda3);
       app_a_control_style(component);
