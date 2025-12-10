@@ -24,7 +24,7 @@ export async function app_a_main() {
   let o = await http_post_json_cache(url, body);
   let body2 = html_document_body();
   let input = html_input(body2);
-  html_focus(input2);
+  html_focus(input);
   app_a_control_style(input);
   html_style_assign(input, {
     "border-width": "1px",
