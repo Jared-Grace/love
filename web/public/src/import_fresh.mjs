@@ -1,4 +1,7 @@
-import { marker } from "../../../love/public/src/marker.mjs";
-export function import_fresh() {
-  marker("1");
+export function import_fresh(path) {
+  const vm = new VM({
+    context: {},
+  });
+  let v = vm.run(`import("${path}")`);
+  return v;
 }
