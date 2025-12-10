@@ -17,14 +17,14 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { http_post_json } from "../../../love/public/src/http_post_json.mjs";
 import { fn_name } from "./fn_name.mjs";
 export async function app_a_main() {
-  let result = await invoke_cache(http_post_json.name, args);
-  return;
-  let body2 = html_document_body();
   const function_name = fn_name("functions_names");
   let body = {
     function_name: function_name,
   };
   const url = "/api";
+  let result = await invoke_cache(http_post_json.name, [url, body]);
+  return;
+  let body2 = html_document_body();
   let o = await http_post_json(url, body);
   let input = html_input(body2);
   app_a_control_style(input);
