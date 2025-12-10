@@ -51,13 +51,13 @@ export async function app_a_main() {
     html_clear(f_names_div);
     list_sort_string_alpha_size(filtered);
     function lambda(f_name) {
-      async function lambda3() {
+      async function app_a_function() {
         html_clear(body);
         let function_name = fn_name("function_read");
         let code = await app_a_api(function_name, [f_name]);
         let p = html_pre_text(body, code);
       }
-      let component = html_button(f_names_div, f_name, lambda3);
+      let component = html_button(f_names_div, f_name, app_a_function);
       app_a_control_style(component);
       app_karate_button_uncolored_style_assign(component);
       let b = component;
