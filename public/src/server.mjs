@@ -49,11 +49,11 @@ export function server() {
       }
       let result4 = await file_temp(lambda3);
     }
+    let result3 = await file_temp(lambda2);
     null_not_is_assert(r);
     res.json(r);
     return;
     let result6 = await function_run(f_name2, args2);
-    let result3 = await file_temp(lambda2);
     let args = object_property_get(body, "args");
     let f_name = object_property_get(body, "function_name");
     let { unaliased } = await function_name_unalias(f_name);
