@@ -1,6 +1,6 @@
+import { http_post_json_cache } from "../../../love/public/src/http_post_json_cache.mjs";
 import { storage_local_enabled } from "../../../love/public/src/storage_local_enabled.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { invoke_cache_storage_local } from "../../../love/public/src/invoke_cache_storage_local.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -24,7 +24,7 @@ export async function app_a_main() {
     function_name: function_name,
   };
   const url = "/api";
-  let result = await invoke_cache_storage_local(http_post_json, [url, body]);
+  let result = await http_post_json_cache(url, body);
   let enabled = storage_local_enabled();
   log({
     result,
