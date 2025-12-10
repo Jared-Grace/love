@@ -12,7 +12,6 @@ export async function cache_generic(
   let e = await cached_exists(key);
   let result = null;
   if (e) {
-    log(key);
     result = await cached_get(key);
   } else {
     log("message2");
