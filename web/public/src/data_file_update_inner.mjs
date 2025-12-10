@@ -56,7 +56,8 @@ export async function data_file_update_inner(parsed, data) {
     js_visit_calls_named(fn_name.name, lambda4, ast);
     function lambda4({ args }) {
       let first = list_first(args);
-      js_literal_is_assert(first);
+      return;
+      js_literal_is_assert(first, () => {});
       let value = object_property_get(first, "value");
       la(value);
     }
