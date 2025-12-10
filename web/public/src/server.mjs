@@ -26,7 +26,9 @@ export function server() {
   let v = express.static(result2);
   async function api(req, res) {
     let body = object_property_get(req, "body");
-    async function lambda2(temp_path) {}
+    async function lambda2(temp_path) {
+      let result4 = await file_temp(async function lambda3(temp_path2) {});
+    }
     let result3 = await file_temp(lambda2);
     let args = object_property_get(body, "args");
     let f_name = object_property_get(body, "function_name");
