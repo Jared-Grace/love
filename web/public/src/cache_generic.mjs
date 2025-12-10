@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function cache_generic(
   key_get,
@@ -11,6 +12,7 @@ export async function cache_generic(
   let e = await cached_exists(key);
   let result = null;
   if (e) {
+    log(message);
     result = await cached_get(key);
   } else {
     let value = await value_get();
