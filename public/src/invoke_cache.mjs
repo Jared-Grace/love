@@ -13,7 +13,7 @@ export async function invoke_cache(f_name, args) {
   };
   async function value_get() {
     let f = eval(f_name);
-    log(message);
+    log(f);
     let v = await f(...args);
     return v;
   }
