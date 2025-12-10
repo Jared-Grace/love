@@ -3,11 +3,11 @@ import { assert_message_get } from "../../../love/public/src/assert_message_get.
 import { marker } from "../../../love/public/src/marker.mjs";
 export function assert_json_get(b, lambda) {
   marker("1");
-  function lambda2() {
+  function json_get() {
     let object = lambda();
     let json = json_to(object);
     return json;
   }
-  let v = assert_message_get(b, lambda2);
+  let v = assert_message_get(b, json_get);
   return v;
 }
