@@ -1,3 +1,4 @@
+import { html_src_set } from "../../../love/public/src/html_src_set.mjs";
 import { html_script } from "../../../love/public/src/html_script.mjs";
 import { app_a_api } from "../../../love/public/src/app_a_api.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
@@ -22,6 +23,7 @@ export async function app_a_main() {
   let body = html_document_body();
   let component = html_script();
   let src = "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.min.js";
+  html_src_set(component, src);
   let input = html_input(body);
   html_focus(input);
   app_a_control_style(input);
