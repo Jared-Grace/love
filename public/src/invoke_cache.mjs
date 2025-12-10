@@ -5,7 +5,7 @@ export async function invoke_cache(f_name, args) {
     let json = json_to([f_name, args]);
     return json;
   };
-  let cached_exists = () => {};
+  let cached_exists = function lambda2() {};
   let result = await cache_generic(
     key_get,
     cached_exists,
