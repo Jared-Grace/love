@@ -22,7 +22,7 @@ import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export async function app_a_main() {
   let app_fn = app_karate;
   const root = html_document_body();
-  let screens = app_karate_screens();
+  let screens = app_a_screens();
   const context = {
     app_fn,
     screens,
