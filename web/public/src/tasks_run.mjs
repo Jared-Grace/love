@@ -1,6 +1,6 @@
 import { string_pad } from "../../../love/public/src/string_pad.mjs";
 import { function_name_separator } from "../../../love/public/src/function_name_separator.mjs";
-import { function_run } from "../../../love/public/src/function_run.mjs";
+import { function_run_unalias } from "../../../love/public/src/function_run_unalias.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { task_function_name_part } from "../../../love/public/src/task_function_name_part.mjs";
@@ -12,7 +12,7 @@ export async function tasks_run() {
   let result = await functions_search(search);
   let properties = object_properties(result);
   async function lambda(item) {
-    let result3 = await function_run(item, []);
+    let result3 = await function_run_unalias(item, []);
   }
   await each_async(properties, lambda);
   return result;
