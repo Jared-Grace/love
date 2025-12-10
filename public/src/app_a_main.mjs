@@ -58,7 +58,7 @@ export async function app_a_main() {
     list_sort_string_alpha_size(filtered);
     function lambda(f_name) {
       function lambda3() {
-        html_clear(element);
+        html_clear(body);
       }
       let component = html_button(f_names_div, f_name, lambda3);
       app_a_control_style(component);
