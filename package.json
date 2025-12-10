@@ -14,6 +14,7 @@
     "puppeteer": "^24.22.3",
     "readline": "^1.3.0",
     "shift-validator": "^6.0.0",
+    "vm2": "^3.10.0",
     "wordnetjs": "^0.3.0",
     "xlsx": "^0.18.5"
   }
