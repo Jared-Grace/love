@@ -1,5 +1,5 @@
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
-import { app_a_api } from "../../../love/public/src/app_a_api.mjs";
+import { app_a_api_cache } from "../../../love/public/src/app_a_api_cache.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -17,7 +17,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export async function app_a_main() {
   let function_name = fn_name("functions_names");
-  let f_names = await app_a_api(function_name, []);
+  let f_names = await app_a_api_cache(function_name, []);
   let body = html_document_body();
   let input = html_input(body);
   html_focus(input);
@@ -54,7 +54,7 @@ export async function app_a_main() {
       async function lambda3() {
         html_clear(body);
         let function_name = fn_name("function_read");
-        let code = await app_a_api(function_name, [f_name]);
+        let code = await app_a_api_cache(function_name, [f_name]);
         let p = html_p_text(body, code);
       }
       let component = html_button(f_names_div, f_name, lambda3);
