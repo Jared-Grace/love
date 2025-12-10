@@ -27,7 +27,7 @@ export async function app_a_main() {
     "acorn": "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.mjs"
   }
 }`);
-  html_attribute_set(component, "src", src);
+  html_attribute_set(component, "importmap", src);
   let input = html_input(body);
   html_focus(input);
   app_a_control_style(input);
