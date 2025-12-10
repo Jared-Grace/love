@@ -1,3 +1,4 @@
+import { storage_local_enabled } from "../../../love/public/src/storage_local_enabled.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { invoke_cache } from "../../../love/public/src/invoke_cache.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
@@ -24,6 +25,7 @@ export async function app_a_main() {
   };
   const url = "/api";
   let result = await invoke_cache(http_post_json.name, [url, body]);
+  let enabled = storage_local_enabled();
   log({
     result,
   });
