@@ -56,8 +56,11 @@ export async function data_file_update_inner(parsed, data) {
     js_visit_calls_named(fn_name.name, lambda4, ast);
     function lambda4({ args }) {
       let first = list_first(args);
-      return;
-      function lambda3() {}
+      function lambda3() {
+        return {
+          msg: fn_name.name + " first argument should be a literal: " + f_name,
+        };
+      }
       js_literal_is_assert(first, lambda3);
       let value = object_property_get(first, "value");
       la(value);
