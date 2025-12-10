@@ -1,3 +1,4 @@
+import { function_run } from "../../../love/public/src/function_run.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { file_temp } from "../../../love/public/src/file_temp.mjs";
@@ -29,6 +30,7 @@ export function server() {
   let v = express.static(result2);
   async function api(req, res) {
     let body = object_property_get(req, "body");
+    let r = null;
     if (false) {
       async function lambda2(temp_path_input) {
         let result5 = await file_overwrite_json(temp_path_input, body);
@@ -44,7 +46,8 @@ export function server() {
         }
         let result4 = await file_temp(lambda3);
       }
-    }function_run
+    }
+    let result6 = await function_run(f_name2, args2);
     let result3 = await file_temp(lambda2);
     let args = object_property_get(body, "args");
     let f_name = object_property_get(body, "function_name");
