@@ -1,3 +1,4 @@
+import { command_line } from "../../../love/public/src/command_line.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { file_temp } from "../../../love/public/src/file_temp.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -29,7 +30,9 @@ export function server() {
     let body = object_property_get(req, "body");
     async function lambda2(temp_path_input) {
       let result5 = await file_overwrite_json(temp_path_input, body);
-      async function lambda3(temp_path_output) {}
+      async function lambda3(temp_path_output) {
+        let stdout = await command_line(command);
+      }
       let result4 = await file_temp(lambda3);
     }
     let result3 = await file_temp(lambda2);
