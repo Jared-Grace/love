@@ -15,6 +15,7 @@ import { path_join } from "../../../love/public/src/path_join.mjs";
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
+import { fn_name } from "./fn_name.mjs";
 export function server() {
   marker("1");
   const app = express();
@@ -31,7 +32,7 @@ export function server() {
     async function lambda2(temp_path_input) {
       let result5 = await file_overwrite_json(temp_path_input, body);
       async function lambda3(temp_path_output) {
-        let stdout = await command_line(command);
+        let stdout = await command_line('node r.mjs ' + fn_name(function_run_io_file) + ' ' + temp_path_input+' '+temp_path_output);
       }
       let result4 = await file_temp(lambda3);
     }
