@@ -1,10 +1,9 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { app_screen_set_lambda } from "../../../love/public/src/app_screen_set_lambda.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { app_a_function } from "../../../love/public/src/app_a_function.mjs";
-import { app_a_main } from "../../../love/public/src/app_a_main.mjs";
-import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { list_sort_string_alpha_size } from "../../../love/public/src/list_sort_string_alpha_size.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
@@ -55,7 +54,7 @@ export async function app_a_home() {
     list_sort_string_alpha_size(filtered);
     function lambda(f_name) {
       async function lambda3() {
-        storage_local_set(app_a_main, "function_current", f_name);
+        object_property_set(object, property_name, value2);
         let l = app_screen_set_lambda(context, app_a_function);
       }
       let component = html_button(f_names_div, f_name, lambda3);
