@@ -1,4 +1,4 @@
-import { VM } from "vm";
+import { VM } from "node:vm";
 export async function import_fresh(path) {
   const vm = new VM({
     context: {},
