@@ -46,7 +46,7 @@ export async function app_a_main() {
     }
   }
   html_on_input(input, lambda4);
-  f_names = filtered = f_names;
+ filtered = f_names;
   refresh();
   function refresh() {
     html_clear(f_names_div);
