@@ -56,7 +56,7 @@ export async function app_a_main() {
       async function lambda3() {
         html_clear(body);
         let function_name = fn_name("function_read");
-        let o = await app_a_api(function_name, []);
+        let o = await app_a_api(function_name, [f_name]);
       }
       let component = html_button(f_names_div, f_name, lambda3);
       app_a_control_style(component);
