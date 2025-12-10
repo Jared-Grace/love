@@ -1,6 +1,6 @@
 import { storage_local_enabled } from "../../../love/public/src/storage_local_enabled.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { invoke_cache } from "../../../love/public/src/invoke_cache.mjs";
+import { invoke_cache_storage_local } from "../../../love/public/src/invoke_cache_storage_local.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -17,14 +17,17 @@ import { html_document_body } from "../../../love/public/src/html_document_body.
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { http_post_json } from "../../../love/public/src/http_post_json.mjs";
-import { fn_name } from "./fn_name.mjs";
+import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export async function app_a_main() {
   const function_name = fn_name("functions_names");
   let body = {
     function_name: function_name,
   };
   const url = "/api";
-  let result = await invoke_cache(http_post_json.name, [url, body]);
+  let result = await invoke_cache_storage_local(http_post_json.name, [
+    url,
+    body,
+  ]);
   let enabled = storage_local_enabled();
   log({
     result,
