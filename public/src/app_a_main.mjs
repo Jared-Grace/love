@@ -22,15 +22,15 @@ export async function app_a_main() {
   };
   const url = "/api";
   let o = await http_post_json_cache(url, api_body);
-  let body2 = html_document_body();
-  let input = html_input(body2);
+  let body = html_document_body();
+  let input = html_input(body);
   html_focus(input);
   app_a_control_style(input);
   html_style_assign(input, {
     "border-width": "1px",
     "border-color": "gray",
   });
-  let f_names_div = html_div(body2);
+  let f_names_div = html_div(body);
   let f_names = null;
   let filtered = null;
   function lambda4() {
