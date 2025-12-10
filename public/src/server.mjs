@@ -1,3 +1,4 @@
+import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
 import { function_run } from "../../../love/public/src/function_run.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
@@ -43,6 +44,7 @@ export function server() {
               " " +
               temp_path_output,
           );
+          let data = await file_read_json(file_path);
         }
         let result4 = await file_temp(lambda3);
       }
