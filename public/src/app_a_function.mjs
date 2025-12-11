@@ -36,6 +36,6 @@ export async function app_a_function(context) {
   let ast = js_parse(code);
   app_a_function_node({
     node: ast,
-    parent: div,
+    parent: div,context
   });
 }
