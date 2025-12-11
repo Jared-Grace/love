@@ -10,19 +10,19 @@ import { js_declaration_single } from "../../../love/public/src/js_declaration_s
 import { error } from "./error.mjs";
 export async function function_param_swap(param_name_a, param_name_b) {
   if (false) {
+    error(
+      "TODO: finish this; consider similar code in " + function_params_new.name,
+    );
+    await function_transform_current(lambda);
+    function lambda(ast) {
+      let declaration = js_declaration_single(ast);
+      let a = js_declaration_param_named(declaration, param_name_a);
+      let b = js_declaration_param_named(declaration, param_name_b);
+      let { params } = declaration;
+      list_swap(params, a, b);
+    }
+    marker("1");
   }
-  error(
-    "TODO: finish this; consider similar code in " + function_params_new.name,
-  );
-  await function_transform_current(lambda);
-  function lambda(ast) {
-    let declaration = js_declaration_single(ast);
-    let a = js_declaration_param_named(declaration, param_name_a);
-    let b = js_declaration_param_named(declaration, param_name_b);
-    let { params } = declaration;
-    list_swap(params, a, b);
-  }
-  marker("1");
   let index_a = null;
   let index_b = null;
   await function_params_new_generic(function_transform_current_lambda, on_call);
