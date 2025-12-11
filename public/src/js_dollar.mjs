@@ -22,7 +22,7 @@ export async function js_dollar(ast) {
       let { node, stack } = v;
       let jin = js_identifier_not_is(node);
       if (not(jin)) {
-        ("during the transformations, an identifier could be replaced into another node");
+        ("during the transformations, an identifier could be replaced into another node");$r
       }
       let stack1 = list_get_end_1(stack);
       let stack2 = list_get_end_2(stack);
