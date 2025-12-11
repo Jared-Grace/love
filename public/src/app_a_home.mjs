@@ -1,3 +1,4 @@
+import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -59,6 +60,7 @@ export async function app_a_home(context) {
       }
       let component = html_button(f_names_div, f_name, lambda3);
       app_a_control_style_wide(component);
+      app_karate_button_uncolored_style_assign(component);
     }
     each(filtered, lambda);
   }
