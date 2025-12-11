@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_a_body } from "../../../love/public/src/app_a_body.mjs";
 import { app_a_brace_right } from "../../../love/public/src/app_a_brace_right.mjs";
 import { app_a_brace_left } from "../../../love/public/src/app_a_brace_left.mjs";
@@ -98,7 +99,11 @@ export function app_a_function_node(a) {
       let expression = object_property_get(node, "expression");
       app_a_function_node_child(a, expression);
     },
-    ["AwaitExpression"]: function lambda() {},
+    ["AwaitExpression"]: function lambda() {
+      log({
+        node,
+      });
+    },
   };
   let value = object_property_get(lookup, type);
   value();
