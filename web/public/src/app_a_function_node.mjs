@@ -1,5 +1,4 @@
-import { app_a_parenthesis_right } from "../../../love/public/src/app_a_parenthesis_right.mjs";
-import { app_a_parenthesis_left } from "../../../love/public/src/app_a_parenthesis_left.mjs";
+import { app_a_parenthesis_wrap } from "../../../love/public/src/app_a_parenthesis_wrap.mjs";
 import { js_keyword_await } from "../../../love/public/src/js_keyword_await.mjs";
 import { app_a_keyword_purple_space } from "../../../love/public/src/app_a_keyword_purple_space.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -80,9 +79,7 @@ export function app_a_function_node(a) {
       }
       let id = object_property_get(node, "id");
       app_a_identifier(parent, id);
-      app_a_parenthesis_left(parent);
-      inner();
-      app_a_parenthesis_right(parent);
+      app_a_parenthesis_wrap(parent, inner);
       function inner() {
         let params = object_property_get(node, "params");
         list_empty_is_assert(params);
