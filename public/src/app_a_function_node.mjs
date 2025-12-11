@@ -1,3 +1,4 @@
+import { app_a_keyword } from "../../../love/public/src/app_a_keyword.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { app_a_function_node_child_parent } from "../../../love/public/src/app_a_function_node_child_parent.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -28,9 +29,7 @@ export function app_a_function_node(a) {
     ["ImportDeclaration"]: function lambda4() {
       let source = object_property_get(node, "source");
       let text = js_keyword_import();
-      let s2 = html_span_text(parent, text);
-      const color = "purple";
-      html_font_color_set(s2, color);
+      app_a_keyword(parent, text);
       let s = html_span_text(parent, " " + js_code_brace_left() + " ");
       let specifiers = object_property_get(node, "specifiers");
       function lambda2(specifier) {
