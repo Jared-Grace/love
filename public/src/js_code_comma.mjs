@@ -1,4 +1,4 @@
 export function js_code_comma() {
-  let v2 = ",";
-  return v2;
+  let c = ",";
+  return c;
 }
