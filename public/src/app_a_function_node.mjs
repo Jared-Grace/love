@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function app_a_function_node(ast) {
@@ -10,8 +11,8 @@ export function app_a_function_node(ast) {
       }
       each(body, lambda);
     },
-    ["ImportDeclaration"]: function lambda4() {},
-    ["ExportNamedDeclaration"]: function lambda5() {},
+    ["ImportDeclaration"]: log,
+    ["ExportNamedDeclaration"]: log,
   };
   let value = object_property_get(lookup, type);
   value();
