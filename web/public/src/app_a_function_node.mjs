@@ -1,3 +1,4 @@
+import { js_code_comma } from "../../../love/public/src/js_code_comma.mjs";
 import { app_a_parenthesis_wrap } from "../../../love/public/src/app_a_parenthesis_wrap.mjs";
 import { js_keyword_await } from "../../../love/public/src/js_keyword_await.mjs";
 import { app_a_keyword_purple_space } from "../../../love/public/src/app_a_keyword_purple_space.mjs";
@@ -108,6 +109,7 @@ export function app_a_function_node(a) {
       });
       let callee = object_property_get(node, "callee");
       app_a_function_node_child(a, callee);
+      js_code_comma();
       let arguments2 = object_property_get(node, "arguments");
       app_a_parenthesis_wrap(parent, inner);
       function inner() {
