@@ -11,7 +11,7 @@ export function js_dollar_l({
   ast,
   afters,
 }) {
-  let code = js_code_call_args(object_property_get.name, [
+  let code = js_code_call_args(log.name, [
     object_name,
     code_string,
   ]);
