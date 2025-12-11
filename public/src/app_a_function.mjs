@@ -1,3 +1,4 @@
+import { html_font_set } from "../../../love/public/src/html_font_set.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_a_function_node } from "../../../love/public/src/app_a_function_node.mjs";
 import { js_parse } from "../../../love/public/src/js_parse.mjs";
@@ -25,6 +26,7 @@ export async function app_a_function(context) {
   let function_name = fn_name("function_read");
   let code = await app_a_api(function_name, [f_name]);
   let div = html_div(root);
+  html_font_set(div, 'ui-monospace, "Courier New", monospace');
   let ast = js_parse(code);
   app_a_function_node({
     node: ast,
