@@ -44,9 +44,7 @@ export function app_a_function_node(a) {
       let span2 = app_a_brace_right(parent);
       let text2 = js_keyword_from();
       app_a_keyword_purple_space(parent, text2);
-      let raw = object_property_get(source, "raw");
-      let span3 = html_span_text(parent, raw);
-      html_font_color_set(span3, "#d07200ff");
+      app_a_function_node_child(a, source);
       let text3 = js_code_semicolon();
       let span4 = html_span_text(parent, text3);
     },
@@ -121,7 +119,11 @@ export function app_a_function_node(a) {
     ["Identifier"]: function lambda9() {
       app_a_identifier(parent, node);
     },
-    ["Literal"]: function lambda10() {},
+    ["Literal"]: function lambda10() {
+      let raw = object_property_get(source, "raw");
+      let span3 = html_span_text(parent, raw);
+      html_font_color_set(span3, "#d07200ff");
+    },
   };
   let value = object_property_get(lookup, type);
   value();
