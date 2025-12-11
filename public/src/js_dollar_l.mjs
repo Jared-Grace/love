@@ -20,7 +20,7 @@ export function js_dollar_l({
     parsed,
     node,
   });
-  return;
   object_replace(node, parsed);
+  return;
   log("jg");
 }
