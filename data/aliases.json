@@ -275,6 +275,7 @@
   "lw": "list_without",
   "hi": "html_input",
   "atnt": "assert_not",
-  "frn": "function_run"
+  "frn": "function_run",
+  "hb": "html_button"
  }
 }
