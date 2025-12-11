@@ -81,9 +81,12 @@ export function app_a_function_node(a) {
       let id = object_property_get(node, "id");
       app_a_identifier(parent, id);
       app_a_parenthesis_left(parent);
-      let params = object_property_get(node, "params");
-      list_empty_is_assert(params);
+      inner();
       app_a_parenthesis_right(parent);
+      function inner() {
+        let params = object_property_get(node, "params");
+        list_empty_is_assert(params);
+      }
       let s = app_a_brace_left(parent);
       let body2 = object_property_get(node, "body");
       let span2 = app_a_brace_right(parent);
