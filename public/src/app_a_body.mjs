@@ -1,3 +1,4 @@
+import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_a_function_node_child_parent } from "../../../love/public/src/app_a_function_node_child_parent.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -8,6 +9,7 @@ export function app_a_body(node, parent, a) {
   function lambda(b) {
     if (imports) {
       let type = object_property_get(b, "type");
+      let nti = js_node_type_not_is(node2, type2);
     }
     let div = html_div(parent);
     app_a_function_node_child_parent(a, b, div);
