@@ -4,7 +4,6 @@ import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs"
 import { global_get } from "./global_get.mjs";
 export function global_function_initialize(fn, initial) {
   assert_arguments(arguments, 2);
-  let global = global_get();
   let value_get = lambda_get(initial);
   let value = global_function_initialize_lambda(global, fn.name, value_get);
   return value;
