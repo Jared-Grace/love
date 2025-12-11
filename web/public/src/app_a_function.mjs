@@ -27,6 +27,7 @@ export async function app_a_function(context) {
   let code = await app_a_api(function_name, [f_name]);
   let div = html_div(root);
   html_font_set(div, 'ui-monospace, "Courier New", monospace');
+  hss;
   let ast = js_parse(code);
   app_a_function_node({
     node: ast,
