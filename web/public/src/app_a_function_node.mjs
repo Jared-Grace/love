@@ -70,7 +70,8 @@ export function app_a_function_node(a) {
       app_a_keyword(parent, text4);
       html_span_space(parent);
       let declaration = object_property_get(node, "declaration");
-      list_empty_is_assert(extra, j);
+      let specifiers2 = object_property_get(node, "specifiers");
+      list_empty_is_assert(extra, {});
       app_a_function_node_child(a, declaration);
     },
     ["FunctionDeclaration"]: function lambda5() {
