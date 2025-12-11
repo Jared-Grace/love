@@ -14,7 +14,7 @@ export async function app_a_function(context) {
   function lambda2() {}
   let text = emoji_search();
   let b = html_button(root, text, lambda2);
-  app_karate_button_uncolored_style_assign(component);
+  app_karate_button_uncolored_style_assign(b);
   app_a_control_style(b);
   let function_name = fn_name("function_read");
   let code = await app_a_api(function_name, [f_name]);
