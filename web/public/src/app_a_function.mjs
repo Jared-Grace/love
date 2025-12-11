@@ -26,7 +26,7 @@ export async function app_a_function(context) {
   let function_name = fn_name("function_read");
   let code = await app_a_api(function_name, [f_name]);
   let ast = js_parse(code);
-  let value = object_property_get(object, property_name);
+  let body = object_property_get(ast, "body");
   log({
     ast,
   });
