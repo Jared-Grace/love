@@ -1,3 +1,4 @@
+import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { app_a_api_cache_global } from "../../../love/public/src/app_a_api_cache_global.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
@@ -125,13 +126,14 @@ export function app_a_function_node(a) {
       app_a_identifier(parent, node);
     },
     ["Literal"]: function lambda10() {
-      let value2 = object_property_get(node, "value");
       let raw = object_property_get(node, "raw");
       let span3 = html_span_text(parent, raw);
       html_font_color_set(span3, "#d07200ff");
       async function lambda12() {
+        let value2 = object_property_get(node, "value");
         let function_name = fn_name("functions_names");
         let f_names = await app_a_api_cache_global(function_name, []);
+        let includes = list_includes(list, item);
       }
       html_on_pointerdown(span3, lambda12);
     },
