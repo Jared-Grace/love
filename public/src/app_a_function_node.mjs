@@ -136,7 +136,7 @@ export function app_a_function_node(a) {
         let f_names = await app_a_api_cache_global(function_name, []);
         let includes = list_includes(f_names, value2);
         if (includes) {
-          app_a_function_select(context, f_name);
+          app_a_function_select(context, value2);
         }
       }
       html_on_pointerdown(span3, lambda12);
