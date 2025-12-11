@@ -15,7 +15,7 @@ import { g_img_square_style } from "../../../love/public/src/g_img_square_style.
 import { html_img } from "../../../love/public/src/html_img.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
-import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
+import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
@@ -93,7 +93,7 @@ export async function app_g_refresh(
     each_index(columns, lambda);
   }
   each_index(rows, lambda2);
-  html_on_click(div_map, on_click);
+  html_on_pointerdown(div_map, on_click);
   async function on_click(e) {
     await app_g_click(
       e,
