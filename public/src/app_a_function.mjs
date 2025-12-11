@@ -1,4 +1,4 @@
-import { html_bold } from "../../../love/public/src/html_bold.mjs";
+import { html_bold_mild } from "../../../love/public/src/html_bold_mild.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_a_function_node } from "../../../love/public/src/app_a_function_node.mjs";
@@ -31,7 +31,7 @@ export async function app_a_function(context) {
     "overflow-wrap": "break-word",
     "word-break": "break-word",
   });
-  html_bold(root);
+  html_bold_mild(root);
   let ast = js_parse(code);
   app_a_function_node({
     node: ast,
