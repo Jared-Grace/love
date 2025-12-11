@@ -29,6 +29,7 @@ export function app_a_function_node(a) {
         app_a_function_node_child(a, specifier);
       }
       each(specifiers, lambda2);
+      let span2 = html_span_text(parent2, text2);
       let s2 = html_span_text(parent, s3);
       log(node);
     },
