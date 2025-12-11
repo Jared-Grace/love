@@ -29,7 +29,7 @@ export async function app_a_function(context) {
   let ast = js_parse(code);
   let type = object_property_get(ast, "type");
   let lookup = {
-    Program: () => {},
+    Program: function lambda3() {},
   };
   log(ast);
   let body = object_property_get(ast, "body");
