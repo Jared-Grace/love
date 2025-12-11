@@ -1,4 +1,4 @@
-import { list_empty_is_assert } from "../../../love/public/src/list_empty_is_assert.mjs";
+import { list_empty_is_assert_json } from "../../../love/public/src/list_empty_is_assert_json.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { js_keyword_export } from "../../../love/public/src/js_keyword_export.mjs";
 import { js_code_semicolon } from "../../../love/public/src/js_code_semicolon.mjs";
@@ -71,7 +71,7 @@ export function app_a_function_node(a) {
       html_span_space(parent);
       let declaration = object_property_get(node, "declaration");
       let specifiers = object_property_get(node, "specifiers");
-      list_empty_is_assert(specifiers, {
+      list_empty_is_assert_json(specifiers, {
         specifiers,
       });
       app_a_function_node_child(a, declaration);
