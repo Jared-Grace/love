@@ -27,7 +27,7 @@ export async function app_a_function(context) {
   let code = await app_a_api(function_name, [f_name]);
   let div = html_div(root);
   html_style_assign(div, {
-    "JetBrains Mono": "monospace",
+    "font-family": '"JetBrains Mono", monospace',
     "overflow-wrap": "break-word",
     "word-break": "break-word",
     "font-weight": "500",
