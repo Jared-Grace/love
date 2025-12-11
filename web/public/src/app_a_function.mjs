@@ -1,4 +1,3 @@
-import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
 import { emoji_search } from "../../../love/public/src/emoji_search.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
@@ -14,7 +13,6 @@ export async function app_a_function(context) {
   function lambda2() {}
   let text = emoji_search();
   let b = html_button(root, text, lambda2);
-  app_karate_button_uncolored_style_assign(b);
   app_a_control_style(b);
   let function_name = fn_name("function_read");
   let code = await app_a_api(function_name, [f_name]);
