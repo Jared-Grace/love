@@ -110,10 +110,10 @@ export function app_a_function_node(a) {
           app_a_function_node_child(a, arg);
           let c = js_code_comma();
           let v3 = list_last_is(arguments2, arg);
-          if (false) {
+          if (v3) {
+            let span = html_span_text(parent, c);
+            html_span_space(parent);
           }
-          let span = html_span_text(parent, c);
-          html_span_space(parent);
         }
         each(arguments2, lambda);
       }
