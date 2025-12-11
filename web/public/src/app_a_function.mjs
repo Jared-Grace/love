@@ -1,4 +1,4 @@
-import { html_font_set } from "../../../love/public/src/html_font_set.mjs";
+import { html_font_jetbrains_mono } from "../../../love/public/src/html_font_jetbrains_mono.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_a_function_node } from "../../../love/public/src/app_a_function_node.mjs";
@@ -27,7 +27,7 @@ export async function app_a_function(context) {
   let function_name = fn_name("function_read");
   let code = await app_a_api(function_name, [f_name]);
   let div = html_div(root);
-  html_font_set(div, '"JetBrains Mono", monospace');
+  html_font_jetbrains_mono(div);
   html_style_assign(div, {
     "overflow-wrap": "break-word",
     "word-break": "break-word",
