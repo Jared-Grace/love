@@ -108,8 +108,9 @@ export function app_a_function_node(a) {
       log({
         node,
       });
-      let arguments2 = object_property_get(node, "arguments");
       let callee = object_property_get(node, "callee");
+      app_a_function_node_child(a, callee);
+      let arguments2 = object_property_get(node, "arguments");
     },
   };
   let value = object_property_get(lookup, type);
