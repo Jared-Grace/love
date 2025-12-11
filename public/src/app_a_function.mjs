@@ -30,6 +30,7 @@ export async function app_a_function(context) {
   html_style_assign(div, {
     "overflow-wrap": "break-word",
     "word-break": "break-word",
+    "font-weight": "700",
   });
   html_bold_mild(root);
   let ast = js_parse(code);
