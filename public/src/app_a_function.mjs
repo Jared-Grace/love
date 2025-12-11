@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_parse } from "../../../love/public/src/js_parse.mjs";
 import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
 import { app_a_home } from "../../../love/public/src/app_a_home.mjs";
@@ -23,6 +24,7 @@ export async function app_a_function(context) {
   app_karate_button_uncolored_style_assign(b);
   let function_name = fn_name("function_read");
   let code = await app_a_api(function_name, [f_name]);
-  let v = js_parse(code);
+  let ast = js_parse(code);
+  log(message);
   let p = html_pre_text(root, code);
 }
