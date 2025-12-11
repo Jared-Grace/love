@@ -1,3 +1,4 @@
+import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { list_last_not_is } from "../../../love/public/src/list_last_not_is.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { app_a_semicolon } from "../../../love/public/src/app_a_semicolon.mjs";
@@ -125,7 +126,7 @@ export function app_a_function_node(a) {
       let raw = object_property_get(node, "raw");
       let span3 = html_span_text(parent, raw);
       html_font_color_set(span3, "#d07200ff");
-      hop;
+      html_on_pointerdown(component, function lambda12() {});
     },
   };
   let value = object_property_get(lookup, type);
