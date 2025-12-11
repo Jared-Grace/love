@@ -31,7 +31,7 @@ export function app_a_function_node(a) {
       }
       each(specifiers, lambda2);
       let text2 = js_keyword_from();
-      let span2 = html_span_text(parent2, " " + text2 + " " + s3);
+      let span2 = html_span_text(parent, " " + text2 + " " + s3);
       log(node);
     },
     ["ImportSpecifier"]: function lambda6() {
