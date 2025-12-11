@@ -15,7 +15,7 @@ export async function js_dollar(ast) {
   let choices = js_dollar_choices();
   let afters = [];
   async function lambda(v) {
-    async function lambda2(c) {l
+    async function lambda2(c) {log({c})
       let { name: choice_name, fn } = c;
       let { node, stack } = v;
       let stack1 = list_get_end_1(stack);
