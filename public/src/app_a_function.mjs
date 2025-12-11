@@ -35,7 +35,7 @@ export async function app_a_function(context) {
       each(body, lambda);
     },
     ["ImportDeclaration"]: function lambda4() {},
-    ["ExportNamedDeclaration"]: () => {},
+    ["ExportNamedDeclaration"]: function lambda5() {},
   };
   let value = object_property_get(lookup, type);
   value();
