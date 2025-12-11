@@ -114,8 +114,8 @@ export function app_a_function_node(a) {
       function inner() {
         function lambda(arg) {
           app_a_function_node_child(a, arg);
-          let span = html_span_text(parent, c);
           let c = js_code_comma();
+          let span = html_span_text(parent, c);
         }
         each(arguments2, lambda);
       }
