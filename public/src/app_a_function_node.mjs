@@ -1,3 +1,4 @@
+import { app_a_body } from "../../../love/public/src/app_a_body.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_a_brace_right } from "../../../love/public/src/app_a_brace_right.mjs";
 import { app_a_brace_left } from "../../../love/public/src/app_a_brace_left.mjs";
@@ -14,8 +15,6 @@ import { js_keyword_export } from "../../../love/public/src/js_keyword_export.mj
 import { js_code_semicolon } from "../../../love/public/src/js_code_semicolon.mjs";
 import { app_a_keyword } from "../../../love/public/src/app_a_keyword.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
-import { app_a_function_node_child_parent } from "../../../love/public/src/app_a_function_node_child_parent.mjs";
-import { html_div } from "../../../love/public/src/html_div.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { js_keyword_from } from "../../../love/public/src/js_keyword_from.mjs";
 import { object_property_get_double_equal_assert } from "../../../love/public/src/object_property_get_double_equal_assert.mjs";
@@ -30,12 +29,7 @@ export function app_a_function_node(a) {
   let type = object_property_get(node, "type");
   let lookup = {
     Program: function lambda3() {
-      let body = object_property_get(node, "body");
-      function lambda(b) {
-        let div = html_div(parent);
-        app_a_function_node_child_parent(a, b, div);
-      }
-      each(body, lambda);
+      app_a_body(node, parent, a);
     },
     ["ImportDeclaration"]: function lambda4() {
       let source = object_property_get(node, "source");
