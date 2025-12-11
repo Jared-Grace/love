@@ -1,3 +1,4 @@
+import { string_includes } from "../../../love/public/src/string_includes.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { search_generic } from "../../../love/public/src/search_generic.mjs";
 import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";

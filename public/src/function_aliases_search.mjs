@@ -1,3 +1,4 @@
+import { string_includes } from "../../../love/public/src/string_includes.mjs";
 import { search_generic } from "../../../love/public/src/search_generic.mjs";
 import { function_aliases_inverted } from "../../../love/public/src/function_aliases_inverted.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
