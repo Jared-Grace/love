@@ -84,7 +84,7 @@ export function app_a_function_node(a) {
       html_span_space(parent);
       if (async) {
         let v2 = js_keyword_async();
-        app_a_keyword_blue(parent, v);
+        app_a_keyword_blue(parent, v2);
         html_span_space(parent);
       }
       app_a_identifier(parent, local);
