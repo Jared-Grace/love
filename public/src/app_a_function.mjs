@@ -1,3 +1,4 @@
+import { html_font_set } from "../../../love/public/src/html_font_set.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_a_function_node } from "../../../love/public/src/app_a_function_node.mjs";
@@ -29,6 +30,7 @@ export async function app_a_function(context) {
   html_style_assign(div, {
     "font-family": '"JetBrains Mono", monospace',
   });
+  html_font_set(html, value);
   html_style_assign(div, {
     "overflow-wrap": "break-word",
     "word-break": "break-word",
