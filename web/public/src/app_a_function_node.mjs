@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { app_a_semicolon } from "../../../love/public/src/app_a_semicolon.mjs";
@@ -109,7 +110,8 @@ export function app_a_function_node(a) {
         function lambda(arg) {
           app_a_function_node_child(a, arg);
           let c = js_code_comma();
-          let v3 = list_last_is(arguments2, arg);not
+          let v3 = list_last_is(arguments2, arg);
+          let n = not(b);
           if (v3) {
             let span = html_span_text(parent, c);
             html_span_space(parent);
