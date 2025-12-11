@@ -63,9 +63,9 @@ export function app_a_function_node(a) {
         local,
         property_name,
       );
+      js_identifier_is_assert(local);
       let span = html_span_text(parent, name);
       html_font_color_set(span, "blue");
-      js_identifier_is_assert(local);
     },
     ["ExportNamedDeclaration"]: function lambda5() {
       let text4 = js_keyword_export();
