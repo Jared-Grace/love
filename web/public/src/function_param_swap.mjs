@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { list_swap_at } from "../../../love/public/src/list_swap_at.mjs";
 import { function_param_index } from "../../../love/public/src/function_param_index.mjs";
 import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
