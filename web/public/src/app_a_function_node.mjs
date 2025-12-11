@@ -10,8 +10,8 @@ export function app_a_function_node(a) {
     Program: function lambda3() {
       let body = object_property_get(node, "body");
       function lambda(b) {
-        let copy = object_copy(a);
-        object_assign(copy, {
+        let a2 = object_copy(a);
+        object_assign(a2, {
           node: b,
         });
         app_a_function_node({
