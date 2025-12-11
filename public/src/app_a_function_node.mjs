@@ -100,6 +100,7 @@ export function app_a_function_node(a) {
     },
     ["BlockStatement"]: function lambda7() {
       let body3 = object_property_get(node, "body");
+      each(list, function lambda8(item) {});
       log({
         node,
       });
