@@ -32,9 +32,6 @@ export async function function_param_swap(param_name_a, param_name_b) {
   }
   function function_transform_current_lambda(ast) {
     let params = null;
-    log({
-      param_name_a,
-    });
     ({ params, index: index_a } = function_param_index(ast, param_name_a));
     ({ index: index_b } = function_param_index(ast, param_name_b));
     list_swap_at(params, index_a, index_b);
