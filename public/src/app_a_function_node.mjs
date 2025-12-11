@@ -63,6 +63,7 @@ export function app_a_function_node(a) {
       js_identifier_is_assert(local);
     },
     ["ExportNamedDeclaration"]: function lambda5() {
+      app_a_keyword(parent2, text4);
       log(node);
     },
   };
