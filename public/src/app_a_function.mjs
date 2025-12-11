@@ -9,7 +9,6 @@ import { emoji_search } from "../../../love/public/src/emoji_search.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
-import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
 import { app_a_api } from "../../../love/public/src/app_a_api.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -29,11 +28,11 @@ export async function app_a_function(context) {
   let ast = js_parse(code);
   let type = object_property_get(ast, "type");
   let lookup = {
-    Program: function lambda3() {},
+    Program: function lambda3() {
+      log(ast);
+      let body = object_property_get(ast, "body");
+      function lambda(b) {}
+      each(body, lambda);
+    },
   };
-  log(ast);
-  let body = object_property_get(ast, "body");
-  function lambda(b) {}
-  each(body, lambda);
-  let p = html_pre_text(root, code);
 }
