@@ -100,7 +100,8 @@ export function app_a_function_node(a) {
     },
     ["AwaitExpression"]: function lambda() {
       app_a_keyword_purple_space(parent, text4);
-      let v22 = js_keyword_await();
+      let k = js_keyword_await();
+      app_a_keyword_purple_space(parent, k);
       let argument = object_property_get(v22, "argument");
       log({
         node,
