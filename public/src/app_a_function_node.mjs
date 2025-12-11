@@ -57,6 +57,7 @@ export function app_a_function_node(a) {
         property_name,
       );
       let span = html_span_text(parent, name);
+      html_font_color_set(span, "blue");
       js_identifier_is_assert(local);
       log(node);
     },
