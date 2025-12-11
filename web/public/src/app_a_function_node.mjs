@@ -103,11 +103,12 @@ export function app_a_function_node(a) {
       app_a_keyword_purple_space(parent, k);
       let argument = object_property_get(node, "argument");
       app_a_function_node_child(a, argument);
+    },
+    ["CallExpression"]: function lambda8() {
       log({
         node,
       });
     },
-    ["CallExpression"]: function lambda8() {},
   };
   let value = object_property_get(lookup, type);
   value();
