@@ -4,6 +4,7 @@ import { global_get } from "./global_get.mjs";
 export function global_function_initialize(fn, initial) {
   assert_arguments(arguments, 2);
   let global = global_get();
+  () => {};
   let value = object_property_initialize(global, fn.name, initial);
   return value;
 }
