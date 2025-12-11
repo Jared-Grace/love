@@ -1,3 +1,4 @@
+import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
 import { app_a_keyword_blue_space } from "../../../love/public/src/app_a_keyword_blue_space.mjs";
 import { js_keyword_async } from "../../../love/public/src/js_keyword_async.mjs";
 import { app_a_identifier } from "../../../love/public/src/app_a_identifier.mjs";
@@ -78,6 +79,7 @@ export function app_a_function_node(a) {
       let params = object_property_get(node, "params");
       list_empty_is_assert(params);
       let generator = object_property_get(node, "generator");
+      false_is_assert(enabled);
       log(node);
       let v = js_keyword_function();
       app_a_keyword_blue_space(parent, v);
