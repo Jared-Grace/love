@@ -1,3 +1,4 @@
+import { app_a_brace_left } from "../../../love/public/src/app_a_brace_left.mjs";
 import { js_code_parenthesis_right } from "../../../love/public/src/js_code_parenthesis_right.mjs";
 import { js_code_parenthesis_left } from "../../../love/public/src/js_code_parenthesis_left.mjs";
 import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
@@ -14,7 +15,6 @@ import { html_font_color_set } from "../../../love/public/src/html_font_color_se
 import { app_a_function_node_child_parent } from "../../../love/public/src/app_a_function_node_child_parent.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { js_code_brace_right } from "../../../love/public/src/js_code_brace_right.mjs";
-import { js_code_brace_left } from "../../../love/public/src/js_code_brace_left.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { js_keyword_from } from "../../../love/public/src/js_keyword_from.mjs";
 import { object_property_get_double_equal_assert } from "../../../love/public/src/object_property_get_double_equal_assert.mjs";
@@ -41,7 +41,7 @@ export function app_a_function_node(a) {
       let source = object_property_get(node, "source");
       let text = js_keyword_import();
       app_a_keyword(parent, text);
-      let s = html_span_text(parent, " " + js_code_brace_left() + " ");
+      let s = app_a_brace_left(parent);
       let specifiers = object_property_get(node, "specifiers");
       function lambda2(specifier) {
         app_a_function_node_child(a, specifier);
