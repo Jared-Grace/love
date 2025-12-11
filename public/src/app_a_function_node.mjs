@@ -98,7 +98,7 @@ export function app_a_function_node(a) {
       let expression = object_property_get(node, "expression");
       app_a_function_node_child(a, expression);
     },
-    ["AwaitExpression"]: $,
+    ["AwaitExpression"]: $f,
   };
   let value = object_property_get(lookup, type);
   value();
