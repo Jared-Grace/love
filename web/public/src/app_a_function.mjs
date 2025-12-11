@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_parse } from "../../../love/public/src/js_parse.mjs";
@@ -29,7 +28,6 @@ export async function app_a_function(context) {
   let type = object_property_get(ast, "type");
   let lookup = {
     Program: function lambda3() {
-      log(ast);
       let body = object_property_get(ast, "body");
       function lambda(b) {}
       each(body, lambda);
