@@ -1,3 +1,4 @@
+import { app_a_parenthesis_right } from "../../../love/public/src/app_a_parenthesis_right.mjs";
 import { app_a_parenthesis_left } from "../../../love/public/src/app_a_parenthesis_left.mjs";
 import { js_keyword_await } from "../../../love/public/src/js_keyword_await.mjs";
 import { app_a_keyword_purple_space } from "../../../love/public/src/app_a_keyword_purple_space.mjs";
@@ -5,7 +6,6 @@ import { log } from "../../../love/public/src/log.mjs";
 import { app_a_body } from "../../../love/public/src/app_a_body.mjs";
 import { app_a_brace_right } from "../../../love/public/src/app_a_brace_right.mjs";
 import { app_a_brace_left } from "../../../love/public/src/app_a_brace_left.mjs";
-import { js_code_parenthesis_right } from "../../../love/public/src/js_code_parenthesis_right.mjs";
 import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
 import { app_a_keyword_blue_space } from "../../../love/public/src/app_a_keyword_blue_space.mjs";
 import { js_keyword_async } from "../../../love/public/src/js_keyword_async.mjs";
@@ -83,8 +83,7 @@ export function app_a_function_node(a) {
       app_a_parenthesis_left(parent);
       let params = object_property_get(node, "params");
       list_empty_is_assert(params);
-      let r = js_code_parenthesis_right();
-      let span5 = html_span_text(parent, r);
+      app_a_parenthesis_right(parent);
       let s = app_a_brace_left(parent);
       let body2 = object_property_get(node, "body");
       let span2 = app_a_brace_right(parent);
