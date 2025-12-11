@@ -1,5 +1,5 @@
+import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { js_string } from "../../../love/public/src/js_string.mjs";
-import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { object_copy_assign } from "../../../love/public/src/object_copy_assign.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -23,7 +23,7 @@ export function app_a_function_node(a) {
       let value2 = object_property_get(source, "value");
       let s = js_string(value2);
       let specifiers = object_property_get(node, "specifiers");
-      let p = html_p_text(parent, s);
+      let p = html_span_text(parent, s);
       log(node);
     },
     ["ExportNamedDeclaration"]: function lambda5() {
