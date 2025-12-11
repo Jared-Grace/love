@@ -81,7 +81,9 @@ export function app_a_function_node(a) {
       let v = js_keyword_function();
       app_a_keyword_blue(parent, v);
       html_span_space(parent);
-      if (false) {
+      if (async) {
+        app_a_keyword_blue(parent, v);
+        html_span_space(parent);
       }
       app_a_identifier(parent, local);
     },
