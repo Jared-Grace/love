@@ -1,4 +1,4 @@
-import { marker } from "../../../love/public/src/marker.mjs";
+import { object_replace } from "../../../love/public/src/object_replace.mjs";
 export function js_dollar_l({
   remaining,
   node,
@@ -8,6 +8,5 @@ export function js_dollar_l({
   ast,
   afters,
 }) {
-  marker("1");
-  return;
+  object_replace(node, parsed);
 }
