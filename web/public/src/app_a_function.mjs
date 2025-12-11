@@ -1,4 +1,3 @@
-import { html_bold_mild } from "../../../love/public/src/html_bold_mild.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_a_function_node } from "../../../love/public/src/app_a_function_node.mjs";
@@ -28,11 +27,11 @@ export async function app_a_function(context) {
   let code = await app_a_api(function_name, [f_name]);
   let div = html_div(root);
   html_style_assign(div, {
+    "font-family": 'ui-monospace, "Courier New", monospace',
     "overflow-wrap": "break-word",
     "word-break": "break-word",
     "font-weight": "700",
   });
-  html_bold_mild(root);
   let ast = js_parse(code);
   app_a_function_node({
     node: ast,
