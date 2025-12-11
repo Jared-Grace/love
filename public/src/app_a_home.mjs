@@ -1,7 +1,6 @@
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { app_a_function } from "../../../love/public/src/app_a_function.mjs";
 import { list_sort_string_alpha_size } from "../../../love/public/src/list_sort_string_alpha_size.mjs";
