@@ -40,7 +40,7 @@ export function app_a_function_node(a) {
       let name = object_property_get(imported, property_name);
       let name2 = object_property_get(local, property_name);
       equal_assert(name, name2);
-      let span = html_span_text(parent2, text2);
+      let span = html_span_text(parent, name);
       js_identifier_is_assert(local);
       log(node);
     },
