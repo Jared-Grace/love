@@ -109,7 +109,7 @@ export function app_a_function_node(a) {
           app_a_function_node_child(a, arg);
           let c = js_code_comma();
           let span = html_span_text(parent, c);
-          html_span_space(parent2);
+          html_span_space(parent);
         }
         each(arguments2, lambda);
       }
