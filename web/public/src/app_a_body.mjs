@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_a_function_node_child_parent } from "../../../love/public/src/app_a_function_node_child_parent.mjs";
@@ -6,7 +7,8 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 export function app_a_body(node, parent, a) {
   let body = object_property_get(node, "body");
   let imports = true;
-  function lambda(b) {$l
+  function lambda(b) {
+    log({});
     if (imports) {
       let type = object_property_get(b, "type");
       let ti = js_node_type_is(b, "ExportNamedDeclaration");
