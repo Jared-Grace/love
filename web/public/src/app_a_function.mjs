@@ -27,10 +27,7 @@ export async function app_a_function(context) {
   let function_name = fn_name("function_read");
   let code = await app_a_api(function_name, [f_name]);
   let div = html_div(root);
-  html_style_assign(div, {
-    "font-family": '"JetBrains Mono", monospace',
-  });
-  html_font_set(html, value);
+  html_font_set(div, '"JetBrains Mono", monospace');
   html_style_assign(div, {
     "overflow-wrap": "break-word",
     "word-break": "break-word",
