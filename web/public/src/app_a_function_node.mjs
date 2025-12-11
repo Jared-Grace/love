@@ -1,3 +1,4 @@
+import { app_a_identifier } from "../../../love/public/src/app_a_identifier.mjs";
 import { app_a_keyword_blue } from "../../../love/public/src/app_a_keyword_blue.mjs";
 import { js_keyword_function } from "../../../love/public/src/js_keyword_function.mjs";
 import { list_empty_is_assert } from "../../../love/public/src/list_empty_is_assert.mjs";
@@ -59,10 +60,7 @@ export function app_a_function_node(a) {
       let local = object_property_get(node, "local");
       const property_name = "name";
       object_property_get_double_equal_assert(imported, local, property_name);
-      js_identifier_is_assert(local);
-      let name = object_property_get(local, "name");
-      let span = html_span_text(parent, name);
-      html_font_color_set(span, "blue");
+      app_a_identifier(local, parent);
     },
     ["ExportNamedDeclaration"]: function lambda5() {
       let text4 = js_keyword_export();
