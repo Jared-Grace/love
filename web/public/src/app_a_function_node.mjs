@@ -123,7 +123,7 @@ export function app_a_function_node(a) {
     ["Identifier"]: function lambda9() {
       app_a_identifier(parent, node);
     },
-    ["Literal"]: () => {},
+    ["Literal"]: function lambda10() {},
   };
   let value = object_property_get(lookup, type);
   value();
