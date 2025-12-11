@@ -6,6 +6,7 @@ import { js_string } from "../../../love/public/src/js_string.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { equal_assert } from "./equal_assert.mjs";
 export function app_a_function_node(a) {
   let { node, parent } = a;
   let type = object_property_get(node, "type");
@@ -37,6 +38,7 @@ export function app_a_function_node(a) {
       let local = object_property_get(node, "local");
       let name = object_property_get(imported, "name");
       let name2 = object_property_get(local, "name");
+      equal_assert(left, right);
       js_identifier_is_assert(local);
       log(node);
     },
