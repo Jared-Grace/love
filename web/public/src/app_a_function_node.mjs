@@ -113,7 +113,6 @@ export function app_a_function_node(a) {
       let c = js_code_comma();
       let arguments2 = object_property_get(node, "arguments");
       function lambda(b) {
-        let div = html_div(parent);
         app_a_function_node_child(a, b);
       }
       each(body, lambda);
