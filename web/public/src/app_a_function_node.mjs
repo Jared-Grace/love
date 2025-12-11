@@ -109,6 +109,11 @@ export function app_a_function_node(a) {
       let callee = object_property_get(node, "callee");
       app_a_function_node_child(a, callee);
       let arguments2 = object_property_get(node, "arguments");
+      app_a_parenthesis_wrap(parent, inner);
+      function inner() {
+        let params = object_property_get(node, "params");
+        list_empty_is_assert(params);
+      }
     },
   };
   let value = object_property_get(lookup, type);
