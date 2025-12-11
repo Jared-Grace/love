@@ -28,6 +28,8 @@ export async function app_a_function(context) {
   let div = html_div(root);
   html_style_assign(div, {
     "font-family": 'ui-monospace, "Courier New", monospace',
+    "overflow-wrap": "break-word",
+    "word-break": "break-word",
   });
   let ast = js_parse(code);
   app_a_function_node({
