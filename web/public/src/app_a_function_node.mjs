@@ -9,10 +9,9 @@ export function app_a_function_node(a) {
     Program: function lambda3() {
       let body = object_property_get(node, "body");
       function lambda(b) {
-        const from = {
+        let a2 = object_copy_assign(a, {
           node: b,
-        };
-        let a2 = object_copy_assign(a, from);
+        });
         app_a_function_node(a2);
       }
       each(body, lambda);
