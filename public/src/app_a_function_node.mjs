@@ -1,3 +1,4 @@
+import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { js_code_brace_right } from "../../../love/public/src/js_code_brace_right.mjs";
 import { js_code_brace_left } from "../../../love/public/src/js_code_brace_left.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
@@ -17,6 +18,7 @@ export function app_a_function_node(a) {
     Program: function lambda3() {
       let body = object_property_get(node, "body");
       function lambda(b) {
+        let div = html_div_text(root, text3);
         app_a_function_node_child(a, b);
       }
       each(body, lambda);
