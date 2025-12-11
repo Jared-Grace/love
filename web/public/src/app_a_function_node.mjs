@@ -3,7 +3,6 @@ import { js_code_comma } from "../../../love/public/src/js_code_comma.mjs";
 import { app_a_parenthesis_wrap } from "../../../love/public/src/app_a_parenthesis_wrap.mjs";
 import { js_keyword_await } from "../../../love/public/src/js_keyword_await.mjs";
 import { app_a_keyword_purple_space } from "../../../love/public/src/app_a_keyword_purple_space.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { app_a_body } from "../../../love/public/src/app_a_body.mjs";
 import { app_a_brace_right } from "../../../love/public/src/app_a_brace_right.mjs";
 import { app_a_brace_left } from "../../../love/public/src/app_a_brace_left.mjs";
@@ -99,9 +98,6 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, argument);
     },
     ["CallExpression"]: function lambda8() {
-      log({
-        node,
-      });
       let callee = object_property_get(node, "callee");
       app_a_function_node_child(a, callee);
       let arguments2 = object_property_get(node, "arguments");
