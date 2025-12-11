@@ -94,6 +94,9 @@ export function app_a_function_node(a) {
     ["BlockStatement"]: function lambda7() {
       app_a_body(node, parent, a);
     },
+    ["ExpressionStatement"]: function lambda7() {
+      app_a_body(node, parent, a);
+    },
   };
   let value = object_property_get(lookup, type);
   value();
