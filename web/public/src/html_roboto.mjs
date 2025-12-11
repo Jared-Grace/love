@@ -2,7 +2,7 @@ import { global_function_once } from "../../../love/public/src/global_function_o
 import { html_jetbrains_mono_include } from "../../../love/public/src/html_jetbrains_mono_include.mjs";
 import { html_stylesheet } from "../../../love/public/src/html_stylesheet.mjs";
 export function html_roboto() {
-  let fn = html_jetbrains_mono_include;
+  let fn = html_roboto;
   global_function_once(lambda, fn);
   function lambda() {
     const href =
