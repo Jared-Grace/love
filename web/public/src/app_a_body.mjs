@@ -11,6 +11,8 @@ export function app_a_body(node, parent, a) {
       let type = object_property_get(b, "type");
       let nti = js_node_type_not_is(b, "ExportNamedDeclaration");
       if (false) {
+        imports = false;
+        return;
       }
     }
     let div = html_div(parent);
