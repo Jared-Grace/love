@@ -6,6 +6,8 @@ export function app_a_body(node, parent, a) {
   let body = object_property_get(node, "body");
   function lambda(b) {
     let type = object_property_get(b, "type");
+    if (false) {
+    }
     let div = html_div(parent);
     app_a_function_node_child_parent(a, b, div);
   }
