@@ -1,3 +1,5 @@
+import { js_code_brace_right } from "../../../love/public/src/js_code_brace_right.mjs";
+import { js_code_brace_left } from "../../../love/public/src/js_code_brace_left.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { js_keyword_from } from "../../../love/public/src/js_keyword_from.mjs";
 import { object_property_get_double_equal_assert } from "../../../love/public/src/object_property_get_double_equal_assert.mjs";
@@ -24,14 +26,17 @@ export function app_a_function_node(a) {
       let value2 = object_property_get(source, "value");
       let s3 = js_code_string(value2);
       let text = js_keyword_import();
-      let s = html_span_text(parent, text + " ");
+      let s = html_span_text(parent, text + " " + js_code_brace_left() + " ");
       let specifiers = object_property_get(node, "specifiers");
       function lambda2(specifier) {
         app_a_function_node_child(a, specifier);
       }
       each(specifiers, lambda2);
       let text2 = js_keyword_from();
-      let span2 = html_span_text(parent, " " + text2 + " " + s3);
+      let span2 = html_span_text(
+        parent,
+        " " + js_code_brace_right() + " " + text2 + " " + s3,
+      );
       log(node);
     },
     ["ImportSpecifier"]: function lambda6() {
