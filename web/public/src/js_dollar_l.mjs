@@ -1,3 +1,4 @@
+import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_code_braces_empty } from "../../../love/public/src/js_code_braces_empty.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -14,7 +15,8 @@ export function js_dollar_l({
 }) {
   let v = js_code_braces_empty();
   let code = js_code_call_args(log.name, [v]);
-  let parsed = js_parse_expression(code);ju
+  let parsed = js_parse_expression(code);
+  let code2 = js_unparse(ast2);
   log(message);
   object_replace(node, parsed);
 }
