@@ -58,12 +58,9 @@ export function app_a_function_node(a) {
       js_identifier_is_assert(imported);
       let local = object_property_get(node, "local");
       const property_name = "name";
-      let name = object_property_get_double_equal_assert(
-        imported,
-        local,
-        property_name,
-      );
+      object_property_get_double_equal_assert(imported, local, property_name);
       js_identifier_is_assert(local);
+      let name2 = object_property_get(local, "name");
       let span = html_span_text(parent, name);
       html_font_color_set(span, "blue");
     },
