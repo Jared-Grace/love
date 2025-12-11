@@ -1,3 +1,4 @@
+import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -19,8 +20,9 @@ export async function js_dollar(ast) {
   async function lambda(v) {
     async function lambda2(c) {
       let { name: choice_name, fn } = c;
-      let { node, stack } = v;js_identifier_not_is
+      let { node, stack } = v;
       if (not(node)) {
+        let jin = js_identifier_not_is(id);
         console.log({
           v,
         });
