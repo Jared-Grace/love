@@ -26,13 +26,15 @@ export function app_a_function_node(a) {
       let specifiers = object_property_get(node, "specifiers");
       function lambda2(specifier) {
         app_a_function_node_child(a, specifier);
-        js_identifier_is_assert(expression);
       }
       each(specifiers, lambda2);
       let s2 = html_span_text(parent, s3);
       log(node);
     },
     ["ImportSpecifier"]: function lambda6() {
+      let imported = object_property_get(node, "imported");
+      let local = object_property_get(node, "local");
+      js_identifier_is_assert(expression);
       log(node);
     },
     ["ExportNamedDeclaration"]: function lambda5() {
