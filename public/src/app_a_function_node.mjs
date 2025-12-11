@@ -68,6 +68,8 @@ export function app_a_function_node(a) {
       let text4 = js_keyword_export();
       app_a_keyword(parent, text4);
       html_span_space(parent);
+      let declaration = object_property_get(node, "declaration");
+      app_a_function_node_child(a, specifier);
       log(node);
     },
     ["FunctionDeclaration"]: function lambda5() {
