@@ -1,3 +1,4 @@
+import { app_a_keyword_purple_space } from "../../../love/public/src/app_a_keyword_purple_space.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_a_body } from "../../../love/public/src/app_a_body.mjs";
 import { app_a_brace_right } from "../../../love/public/src/app_a_brace_right.mjs";
@@ -43,8 +44,7 @@ export function app_a_function_node(a) {
       each(specifiers, lambda2);
       let span2 = app_a_brace_right(parent);
       let text2 = js_keyword_from();
-      app_a_keyword_purple(parent, text2);
-      html_span_space(parent);
+      app_a_keyword_purple_space(parent, text2);
       let value2 = object_property_get(source, "value");
       let s3 = js_code_string(value2);
       let span3 = html_span_text(parent, s3);
