@@ -1,3 +1,4 @@
+import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { js_keyword_export } from "../../../love/public/src/js_keyword_export.mjs";
 import { js_code_semicolon } from "../../../love/public/src/js_code_semicolon.mjs";
 import { app_a_keyword } from "../../../love/public/src/app_a_keyword.mjs";
@@ -41,7 +42,7 @@ export function app_a_function_node(a) {
       let span2 = html_span_text(parent, " " + js_code_brace_right() + " ");
       let text2 = js_keyword_from();
       app_a_keyword(parent, text2);
-      html_span_text(parent, " ");
+      html_span_space(parent);
       let value2 = object_property_get(source, "value");
       let s3 = js_code_string(value2);
       let span3 = html_span_text(parent, s3);
