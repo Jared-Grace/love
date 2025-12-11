@@ -99,7 +99,8 @@ export function app_a_function_node(a) {
       let expression = object_property_get(node, "expression");
       app_a_function_node_child(a, expression);
     },
-    ["AwaitExpression"]: function lambda() {app_a_keyword_purple
+    ["AwaitExpression"]: function lambda() {
+      app_a_keyword_purple(parent2, keyword);
       let argument = object_property_get(node, "argument");
       log({
         node,
