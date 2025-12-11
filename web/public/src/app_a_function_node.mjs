@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_a_brace_right } from "../../../love/public/src/app_a_brace_right.mjs";
 import { app_a_brace_left } from "../../../love/public/src/app_a_brace_left.mjs";
 import { js_code_parenthesis_right } from "../../../love/public/src/js_code_parenthesis_right.mjs";
@@ -100,6 +101,6 @@ export function app_a_function_node(a) {
   };
   let value = object_property_get(lookup, type);
   value();
-  $l;
-  $g$G$G;
+  log({});
+  let G = object_property_get(G, "G");
 }
