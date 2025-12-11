@@ -110,15 +110,13 @@ export function app_a_function_node(a) {
       let callee = object_property_get(node, "callee");
       app_a_function_node_child(a, callee);
       let c = js_code_comma();
-      let arguments2 = object_property_get(node, "arguments");
-      function lambda(arg) {
-        app_a_function_node_child(a, arg);
-      }
-      each(arguments2, lambda);
       app_a_parenthesis_wrap(parent, inner);
+      let arguments2 = object_property_get(node, "arguments");
       function inner() {
-        let params = object_property_get(node, "params");
-        list_empty_is_assert(params);
+        function lambda(arg) {
+          app_a_function_node_child(a, arg);
+        }
+        each(arguments2, lambda);
       }
     },
   };
