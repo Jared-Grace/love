@@ -1,4 +1,4 @@
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { log } from "../../../love/public/src/log.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
@@ -11,10 +11,7 @@ export function js_dollar_l({
   ast,
   afters,
 }) {
-  let code = js_code_call_args(log.name, [
-    object_name,
-    code_string,
-  ]);
+  let code = js_code_call_args(log.name, [object_name, code_string]);
   let parsed = js_parse_expression(code);
   object_replace(node, parsed);
 }
