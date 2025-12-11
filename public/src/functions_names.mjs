@@ -11,7 +11,7 @@ export async function functions_names() {
     return f_names;
   }
   return f_names;
-  if (browser_is()) {
+  if (browser_is()) {$s
     let f_names = await app_a_api_cache_global(functions_names, []);
   } else {
   }
