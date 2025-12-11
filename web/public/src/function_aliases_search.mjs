@@ -9,6 +9,6 @@ export async function function_aliases_search(search) {
     let value = object_property_get(names_to_aliases, n);
     return value;
   }
-  let result = search_generic(search, names, lambda, include);
+  let result = search_generic(search, names, lambda);
   return result;
 }
