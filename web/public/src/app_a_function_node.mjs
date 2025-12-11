@@ -11,7 +11,9 @@ export function app_a_function_node(a) {
       let body = object_property_get(node, "body");
       function lambda(b) {
         let copy = object_copy(a);
-        object_assign(to, from);
+        object_assign(copy, {
+          node: b,
+        });
         app_a_function_node({
           node,
         });
