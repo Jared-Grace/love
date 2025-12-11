@@ -76,6 +76,11 @@ export function app_a_function_node(a) {
       let v = js_keyword_function();
       app_a_keyword_blue(parent, v);
       html_span_space(parent);
+      let id = object_property_get(node, "id");
+      let body2 = object_property_get(node, "body");
+      let params = object_property_get(node, "params");
+      let async = object_property_get(node, "async");
+      let generator = object_property_get(node, "generator");
       app_a_identifier(parent, local);
     },
   };
