@@ -11,7 +11,7 @@ export async function functions_search(search) {
     search,
     f_names,
     function_name_to_path,
-    string_includes,
+    fn,
   );
   return result;
 }
