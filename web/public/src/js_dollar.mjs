@@ -38,8 +38,8 @@ export async function js_dollar(ast) {
         return;
       }
       let remaining = list_skip(split, 2);
-      let lower = string_lower_to(s);
-      if (second === choice_name) {
+      let lower = string_lower_to(second);
+      if (lower === choice_name) {
         marker("choice_arguments");
         const a = {
           remaining,
