@@ -1,3 +1,4 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { js_code_comma } from "../../../love/public/src/js_code_comma.mjs";
 import { app_a_parenthesis_wrap } from "../../../love/public/src/app_a_parenthesis_wrap.mjs";
 import { js_keyword_await } from "../../../love/public/src/js_keyword_await.mjs";
@@ -111,6 +112,11 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, callee);
       let c = js_code_comma();
       let arguments2 = object_property_get(node, "arguments");
+      function lambda(b) {
+        let div = html_div(parent);
+        app_a_function_node_child(a, b);
+      }
+      each(body, lambda);
       app_a_parenthesis_wrap(parent, inner);
       function inner() {
         let params = object_property_get(node, "params");
