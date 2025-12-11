@@ -44,6 +44,7 @@ export function app_a_function_node(a) {
       let s3 = js_code_string(value2);
       let span3 = html_span_text(parent, s3);
       html_font_color_set(span3, "#d07200ff");
+      let span4 = html_span_text(parent2, text3);
     },
     ["ImportSpecifier"]: function lambda6() {
       let imported = object_property_get(node, "imported");
