@@ -15,7 +15,9 @@ export function js_dollar_l({
   let v = js_code_braces_empty();
   let code = js_code_call_args(log.name, [v]);
   let parsed = js_parse_expression(code);
-  log({stack1});
+  log({
+    stack1,
+  });
   return;
   object_replace(node, parsed);
   log("jg");
