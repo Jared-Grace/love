@@ -1,4 +1,3 @@
-import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { app_a_semicolon } from "../../../love/public/src/app_a_semicolon.mjs";
@@ -110,8 +109,7 @@ export function app_a_function_node(a) {
         function lambda(arg) {
           app_a_function_node_child(a, arg);
           let c = js_code_comma();
-          let v3 = list_last_is(arguments2, arg);
-          let type_is = js_node_type_is(node2, type2);
+          let v3 = list_last_is(arguments2, arg);not
           if (v3) {
             let span = html_span_text(parent, c);
             html_span_space(parent);
