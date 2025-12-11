@@ -1,3 +1,4 @@
+import { app_a_brace_right } from "../../../love/public/src/app_a_brace_right.mjs";
 import { app_a_brace_left } from "../../../love/public/src/app_a_brace_left.mjs";
 import { js_code_parenthesis_right } from "../../../love/public/src/js_code_parenthesis_right.mjs";
 import { js_code_parenthesis_left } from "../../../love/public/src/js_code_parenthesis_left.mjs";
@@ -14,7 +15,6 @@ import { app_a_keyword } from "../../../love/public/src/app_a_keyword.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { app_a_function_node_child_parent } from "../../../love/public/src/app_a_function_node_child_parent.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
-import { js_code_brace_right } from "../../../love/public/src/js_code_brace_right.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { js_keyword_from } from "../../../love/public/src/js_keyword_from.mjs";
 import { object_property_get_double_equal_assert } from "../../../love/public/src/object_property_get_double_equal_assert.mjs";
@@ -47,7 +47,7 @@ export function app_a_function_node(a) {
         app_a_function_node_child(a, specifier);
       }
       each(specifiers, lambda2);
-      let span2 = html_span_text(parent, " " + js_code_brace_right() + " ");
+      let span2 = app_a_brace_right(parent);
       let text2 = js_keyword_from();
       app_a_keyword(parent, text2);
       html_span_space(parent);
