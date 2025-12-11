@@ -14,9 +14,7 @@ export function app_a_function_node(a) {
         object_assign(a2, {
           node: b,
         });
-        app_a_function_node({
-          node,
-        });
+        app_a_function_node(a2);
       }
       each(body, lambda);
     },
