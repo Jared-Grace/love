@@ -100,6 +100,7 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, expression);
     },
     ["AwaitExpression"]: function lambda() {
+      let argument = object_property_get(node, "argument");
       log({
         node,
       });
