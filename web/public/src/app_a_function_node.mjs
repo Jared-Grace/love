@@ -71,9 +71,7 @@ export function app_a_function_node(a) {
       html_span_space(parent);
       let declaration = object_property_get(node, "declaration");
       let specifiers = object_property_get(node, "specifiers");
-      list_empty_is_assert_json(specifiers, {
-        specifiers,
-      });
+      list_empty_is_assert_json(specifiers, {});
       app_a_function_node_child(a, declaration);
     },
     ["FunctionDeclaration"]: function lambda5() {
