@@ -30,7 +30,9 @@ export function app_a_function_node(a) {
       let s2 = html_span_text(parent, s3);
       log(node);
     },
-    ["ImportSpecifier"]: function lambda6() {},
+    ["ImportSpecifier"]: function lambda6() {
+      log(node);
+    },
     ["ExportNamedDeclaration"]: function lambda5() {
       log(node);
     },
