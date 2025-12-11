@@ -72,15 +72,15 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, declaration);
     },
     ["FunctionDeclaration"]: function lambda5() {
-      log(node);
-      let v = js_keyword_function();
-      app_a_keyword_blue(parent, v);
-      html_span_space(parent);
       let id = object_property_get(node, "id");
       let body2 = object_property_get(node, "body");
       let params = object_property_get(node, "params");
       let async = object_property_get(node, "async");
       let generator = object_property_get(node, "generator");
+      log(node);
+      let v = js_keyword_function();
+      app_a_keyword_blue(parent, v);
+      html_span_space(parent);
       app_a_identifier(parent, local);
     },
   };
