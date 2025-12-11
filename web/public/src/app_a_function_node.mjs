@@ -1,4 +1,3 @@
-import { function_new } from "../../../love/public/src/function_new.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { app_a_semicolon } from "../../../love/public/src/app_a_semicolon.mjs";
@@ -107,11 +106,10 @@ export function app_a_function_node(a) {
       let arguments2 = object_property_get(node, "arguments");
       app_a_parenthesis_wrap(parent, inner);
       function inner() {
-        async function lambda(arg) {
+        function lambda(arg) {
           app_a_function_node_child(a, arg);
           let c = js_code_comma();
-          let v3 = list_last_is(arguments2, arg);
-          await function_new(f_name);
+          let v3 = list_last_is(arguments2, arg);nt
           if (v3) {
             let span = html_span_text(parent, c);
             html_span_space(parent);
