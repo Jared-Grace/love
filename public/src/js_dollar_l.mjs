@@ -1,5 +1,3 @@
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { js_node_type_is_assert } from "../../../love/public/src/js_node_type_is_assert.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_code_braces_empty } from "../../../love/public/src/js_code_braces_empty.mjs";
 import { log } from "../../../love/public/src/log.mjs";
