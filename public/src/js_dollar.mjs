@@ -19,7 +19,7 @@ export async function js_dollar(ast) {
   async function lambda(v) {
     async function lambda2(c) {
       let { name: choice_name, fn } = c;
-      let { node, stack } = v;
+      let { node, stack } = v;js_identifier_not_is
       if (not(node)) {
         console.log({
           v,
