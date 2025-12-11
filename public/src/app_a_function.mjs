@@ -32,7 +32,7 @@ export async function app_a_function(context) {
     "overflow-wrap": "break-word",
     "word-break": "break-word",
   });
-  html_bold(b2);
+  html_bold(root);
   let ast = js_parse(code);
   app_a_function_node({
     node: ast,
