@@ -9,7 +9,9 @@ export function app_a_body(node, parent, a) {
   function lambda(b) {
     if (imports) {
       let type = object_property_get(b, "type");
-      let nti = js_node_type_not_is(node2, type2);
+      let nti = js_node_type_not_is(b, "ExportNamedDeclaration");
+      if (false) {
+      }
     }
     let div = html_div(parent);
     app_a_function_node_child_parent(a, b, div);
