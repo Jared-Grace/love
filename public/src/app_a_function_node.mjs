@@ -77,7 +77,7 @@ export function app_a_function_node(a) {
     ["FunctionDeclaration"]: function lambda5() {
       log(node);
       let s2 = html_span_text(parent, text4);
-      const color = "purple";
+      const color = "darkblue";
       html_font_color_set(s2, color);
     },
   };
