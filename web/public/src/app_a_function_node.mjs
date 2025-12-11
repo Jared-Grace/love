@@ -19,6 +19,7 @@ export function app_a_function_node(a) {
     },
     ["ImportDeclaration"]: function lambda4() {
       let source = object_property_get(node, "source");
+      let value2 = object_property_get(source, "value");
       let specifiers = object_property_get(node, "specifiers");
       let p = html_p_text(parent, source);
       log(node);
