@@ -31,7 +31,7 @@ export function app_a_function_node(a) {
       let s3 = js_code_string(value2);
       let text = js_keyword_import();
       let s2 = html_span_text(parent, text);
-      html_style_set(b2, style_key, style_value);
+      html_style_set(b2, "color", "pur[le");
       let s = html_span_text(parent, " " + js_code_brace_left() + " ");
       let specifiers = object_property_get(node, "specifiers");
       function lambda2(specifier) {
