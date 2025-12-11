@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { js_node_type_is_assert } from "../../../love/public/src/js_node_type_is_assert.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_code_braces_empty } from "../../../love/public/src/js_code_braces_empty.mjs";
@@ -16,7 +17,8 @@ export function js_dollar_l({
   let v = js_code_braces_empty();
   let code = js_code_call_args(log.name, [v]);
   let parsed = js_parse_expression(code);
-  js_node_type_is_assert(node2, type);
+  js_node_type_is_assert(stack1, "ExpressionStatement");
+  object_property_set(object, property_name, value);
   log({
     stack1,
     parsed,
