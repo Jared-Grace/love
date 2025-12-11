@@ -11,6 +11,7 @@ export function app_a_body(node, parent, a) {
       let type = object_property_get(b, "type");
       let ti = js_node_type_is(b, "ExportNamedDeclaration");
       if (ti) {
+        return;
       } else {
         imports = false;
       }
