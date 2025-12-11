@@ -107,6 +107,7 @@ export function app_a_function_node(a) {
         node,
       });
     },
+    ["CallExpression"]: () => {},
   };
   let value = object_property_get(lookup, type);
   value();
