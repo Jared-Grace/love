@@ -29,7 +29,7 @@ import { mod } from "../../../love/public/src/mod.mjs";
 import { bible_names_men } from "../../../love/public/src/bible_names_men.mjs";
 import { bible_names_women } from "../../../love/public/src/bible_names_women.mjs";
 import { app_g_refresh } from "../../../love/public/src/app_g_refresh.mjs";
-import { html_font_san_serif_value } from "../../../love/public/src/html_font_san_serif_value.mjs";
+import { html_font_sans_serif_value } from "../../../love/public/src/html_font_sans_serif_value.mjs";
 import { html_document_root } from "../../../love/public/src/html_document_root.mjs";
 import { list_without } from "../../../love/public/src/list_without.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -52,7 +52,7 @@ export async function app_g_main() {
   marker("1");
   html_meta_viewport();
   let html = html_document_root();
-  let style_value = html_font_san_serif_value();
+  let style_value = html_font_sans_serif_value();
   html_style_assign(html, {
     "font-family": style_value,
     "font-size": "18px",
@@ -60,7 +60,7 @@ export async function app_g_main() {
   html_roboto();
   html_remix_icon();
   html_style_head(
-    "button { font-family: " + html_font_san_serif_value() + " }",
+    "button { font-family: " + html_font_sans_serif_value() + " }",
   );
   let body = html_document_body();
   function lambda(item) {
