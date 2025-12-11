@@ -1,4 +1,5 @@
-import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
+import { app_a_api_cache_global } from "../../../love/public/src/app_a_api_cache_global.mjs";
+import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { list_last_not_is } from "../../../love/public/src/list_last_not_is.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
@@ -127,8 +128,9 @@ export function app_a_function_node(a) {
       let raw = object_property_get(node, "raw");
       let span3 = html_span_text(parent, raw);
       html_font_color_set(span3, "#d07200ff");
-      function lambda12() {
-        html_style_background_color(span3, "yellow");
+      async function lambda12() {
+        let function_name = fn_name("functions_names");
+        let f_names = await app_a_api_cache_global(function_name, []);
       }
       html_on_pointerdown(span3, lambda12);
     },
