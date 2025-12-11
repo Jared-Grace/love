@@ -107,7 +107,7 @@ export function app_a_function_node(a) {
         node,
       });
     },
-    ["CallExpression"]: () => {},
+    ["CallExpression"]: function lambda8() {},
   };
   let value = object_property_get(lookup, type);
   value();
