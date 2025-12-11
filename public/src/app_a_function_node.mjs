@@ -60,7 +60,7 @@ export function app_a_function_node(a) {
       const property_name = "name";
       object_property_get_double_equal_assert(imported, local, property_name);
       js_identifier_is_assert(local);
-      let name2 = object_property_get(local, "name");
+      let name = object_property_get(local, "name");
       let span = html_span_text(parent, name);
       html_font_color_set(span, "blue");
     },
