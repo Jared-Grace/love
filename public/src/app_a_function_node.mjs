@@ -1,3 +1,4 @@
+import { object_property_get_double_equal_assert } from "../../../love/public/src/object_property_get_double_equal_assert.mjs";
 import { js_identifier_is_assert } from "../../../love/public/src/js_identifier_is_assert.mjs";
 import { app_a_function_node_child } from "../../../love/public/src/app_a_function_node_child.mjs";
 import { js_keyword_import } from "../../../love/public/src/js_keyword_import.mjs";
@@ -6,7 +7,6 @@ import { js_string } from "../../../love/public/src/js_string.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { equal_assert } from "./equal_assert.mjs";
 export function app_a_function_node(a) {
   let { node, parent } = a;
   let type = object_property_get(node, "type");
@@ -37,9 +37,11 @@ export function app_a_function_node(a) {
       js_identifier_is_assert(imported);
       let local = object_property_get(node, "local");
       const property_name = "name";
-      let name = object_property_get(imported, property_name);
-      let name2 = object_property_get(local, property_name);
-      equal_assert(name, name2);
+      let name = object_property_get_double_equal_assert(
+        imported,
+        property_name,
+        local,
+      );
       let span = html_span_text(parent, name);
       js_identifier_is_assert(local);
       log(node);
