@@ -7,7 +7,7 @@ import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 export async function app_a_function(context) {
   function lambda2() {}
-  let b = html_button(parent, text, lambda2);
+  let b = html_button(parent, emoji_search(), lambda2);
   app_a_control_style(b);
   let { app_fn, root } = context;
   let f_name = storage_local_get(app_fn, "f_name_selected");
