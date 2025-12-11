@@ -1,6 +1,10 @@
 import { app_a_function_node_replace } from "../../../love/public/src/app_a_function_node_replace.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export function app_a_function_node_child_parent(a, node_replacement) {
+export function app_a_function_node_child_parent(
+  a,
+  node_replacement,
+  parent_replacement,
+) {
   marker("1");
   const replacements = {
     node: node_replacement,
