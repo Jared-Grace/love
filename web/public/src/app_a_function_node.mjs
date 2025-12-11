@@ -1,10 +1,10 @@
+import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { js_keyword_from } from "../../../love/public/src/js_keyword_from.mjs";
 import { object_property_get_double_equal_assert } from "../../../love/public/src/object_property_get_double_equal_assert.mjs";
 import { js_identifier_is_assert } from "../../../love/public/src/js_identifier_is_assert.mjs";
 import { app_a_function_node_child } from "../../../love/public/src/app_a_function_node_child.mjs";
 import { js_keyword_import } from "../../../love/public/src/js_keyword_import.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
-import { js_string } from "../../../love/public/src/js_string.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -22,7 +22,7 @@ export function app_a_function_node(a) {
     ["ImportDeclaration"]: function lambda4() {
       let source = object_property_get(node, "source");
       let value2 = object_property_get(source, "value");
-      let s3 = js_string(value2);
+      let s3 = js_code_string(value2);
       let text = js_keyword_import();
       let s = html_span_text(parent, text + " ");
       let specifiers = object_property_get(node, "specifiers");
