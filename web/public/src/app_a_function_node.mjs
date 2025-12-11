@@ -1,3 +1,4 @@
+import { js_code_parenthesis_right } from "../../../love/public/src/js_code_parenthesis_right.mjs";
 import { js_code_parenthesis_left } from "../../../love/public/src/js_code_parenthesis_left.mjs";
 import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
 import { app_a_keyword_blue_space } from "../../../love/public/src/app_a_keyword_blue_space.mjs";
@@ -91,6 +92,7 @@ export function app_a_function_node(a) {
       let span = html_span_text(parent2, text5);
       let params = object_property_get(node, "params");
       list_empty_is_assert(params);
+      js_code_parenthesis_right();
       let span5 = html_span_text(parent3, text6);
       let body2 = object_property_get(node, "body");
     },
