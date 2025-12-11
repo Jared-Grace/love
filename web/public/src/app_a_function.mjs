@@ -27,6 +27,7 @@ export async function app_a_function(context) {
   let code = await app_a_api(function_name, [f_name]);
   let ast = js_parse(code);
   let body = object_property_get(ast, "body");
-  each(body, function lambda(b) {});
+  function lambda(b) {}
+  each(body, lambda);
   let p = html_pre_text(root, code);
 }
