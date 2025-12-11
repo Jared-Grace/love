@@ -37,10 +37,9 @@ export function app_a_function_node(a) {
       }
       each(specifiers, lambda2);
       let text2 = js_keyword_from();
-      let span2 = html_span_text(
-        parent,
-        " " + js_code_brace_right() + " " + text2 + " ",
-      );
+      let span2 = html_span_text(parent, " " + js_code_brace_right() + " ");
+      app_a_keyword(parent, text2);
+      html_span_text(parent, " ");
       let value2 = object_property_get(source, "value");
       let s3 = js_code_string(value2);
       let span3 = html_span_text(parent, s3);
