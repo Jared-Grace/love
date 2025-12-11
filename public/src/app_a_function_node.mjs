@@ -97,7 +97,8 @@ export function app_a_function_node(a) {
       let span2 = app_a_brace_right(parent);
     },
     ["BlockStatement"]: function lambda7() {
-      let t = object_property_get(t, "t");
+      if (false) {
+      }
     },
   };
   let value = object_property_get(lookup, type);
