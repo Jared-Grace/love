@@ -66,7 +66,8 @@ export function app_a_function_node(a) {
     },
     ["ExportNamedDeclaration"]: function lambda5() {
       let text4 = js_keyword_export();
-      app_a_keyword(parent2, text4);
+      app_a_keyword(parent, text4);
+      html_span_space(parent);
       log(node);
     },
   };
