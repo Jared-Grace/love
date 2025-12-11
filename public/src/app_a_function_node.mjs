@@ -133,7 +133,9 @@ export function app_a_function_node(a) {
         let value2 = object_property_get(node, "value");
         let function_name = fn_name("functions_names");
         let f_names = await app_a_api_cache_global(function_name, []);
-        let includes = list_includes(list, item);
+        let includes = list_includes(f_names, value2);
+        if (false) {
+        }
       }
       html_on_pointerdown(span3, lambda12);
     },
