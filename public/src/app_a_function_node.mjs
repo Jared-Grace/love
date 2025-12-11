@@ -1,3 +1,4 @@
+import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { app_a_api_cache_global } from "../../../love/public/src/app_a_api_cache_global.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
@@ -135,6 +136,7 @@ export function app_a_function_node(a) {
         let f_names = await app_a_api_cache_global(function_name, []);
         let includes = list_includes(f_names, value2);
         if (includes) {
+          app_a_function_select(context, f_name);
         }
       }
       html_on_pointerdown(span3, lambda12);
