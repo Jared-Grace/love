@@ -130,7 +130,7 @@ export function app_a_function_node(a) {
       function lambda12() {
         html_style_background_color(span3, "yellow");
       }
-      html_on_pointerdown(component, lambda12);
+      html_on_pointerdown(span3, lambda12);
     },
   };
   let value = object_property_get(lookup, type);
