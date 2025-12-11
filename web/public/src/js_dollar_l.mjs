@@ -17,6 +17,7 @@ export function js_dollar_l({
   let parsed = js_parse_expression(code);
   log({
     stack1,
+    parsed,
   });
   return;
   object_replace(node, parsed);
