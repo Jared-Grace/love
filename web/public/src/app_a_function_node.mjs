@@ -94,7 +94,9 @@ export function app_a_function_node(a) {
       list_empty_is_assert(params);
       let r = js_code_parenthesis_right();
       let span5 = html_span_text(parent, r);
+      let s = app_a_brace_left(parent);
       let body2 = object_property_get(node, "body");
+      let span2 = app_a_brace_right(parent);
     },
   };
   let value = object_property_get(lookup, type);
