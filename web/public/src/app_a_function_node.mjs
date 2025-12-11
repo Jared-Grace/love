@@ -120,7 +120,9 @@ export function app_a_function_node(a) {
         each(arguments2, lambda);
       }
     },
-    ["Identifier"]: function lambda9() {},
+    ["Identifier"]: function lambda9() {
+      app_a_identifier(parent, node);
+    },
   };
   let value = object_property_get(lookup, type);
   value();
