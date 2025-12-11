@@ -26,8 +26,8 @@ export function app_a_function_node(a) {
       let text = js_keyword_import();
       let s = html_span_text(parent, text);
       let specifiers = object_property_get(node, "specifiers");
-      function lambda2(item) {}
-      each(list, lambda2);
+      function lambda2(specifier) {}
+      each(specifiers, lambda2);
       let s2 = html_span_text(parent, s3);
       log(node);
     },
