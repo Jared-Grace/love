@@ -22,7 +22,6 @@ import { js_identifier_is_assert } from "../../../love/public/src/js_identifier_
 import { app_a_function_node_child } from "../../../love/public/src/app_a_function_node_child.mjs";
 import { js_keyword_import } from "../../../love/public/src/js_keyword_import.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function app_a_function_node(a) {
@@ -78,7 +77,6 @@ export function app_a_function_node(a) {
     ["FunctionDeclaration"]: function lambda5() {
       let generator = object_property_get(node, "generator");
       false_is_assert(generator);
-      log(node);
       let v = js_keyword_function();
       app_a_keyword_blue_space(parent, v);
       let async = object_property_get(node, "async");
