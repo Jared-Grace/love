@@ -1,5 +1,4 @@
 import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
-import { not } from "../../../love/public/src/not.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_dollar_choices } from "../../../love/public/src/js_dollar_choices.mjs";
 import { list_get_end_3 } from "../../../love/public/src/list_get_end_3.mjs";
@@ -21,7 +20,7 @@ export async function js_dollar(ast) {
       let { name: choice_name, fn } = c;
       let { node, stack } = v;
       let jin = js_identifier_not_is(node);
-      if (not(jin)) {
+      if (jin) {
         ("during the transformations, an identifier could be replaced into another node");
         return;
       }
