@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_a_body } from "../../../love/public/src/app_a_body.mjs";
 import { app_a_brace_right } from "../../../love/public/src/app_a_brace_right.mjs";
 import { app_a_brace_left } from "../../../love/public/src/app_a_brace_left.mjs";
@@ -95,7 +96,9 @@ export function app_a_function_node(a) {
       app_a_body(node, parent, a);
     },
     ["ExpressionStatement"]: function lambda7() {
-      app_a_body(node, parent, a);
+      log({
+        node,
+      });
     },
   };
   let value = object_property_get(lookup, type);
