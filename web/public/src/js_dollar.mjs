@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_dollar_choices } from "../../../love/public/src/js_dollar_choices.mjs";
 import { list_get_end_3 } from "../../../love/public/src/list_get_end_3.mjs";
@@ -15,7 +16,10 @@ export async function js_dollar(ast) {
   let choices = js_dollar_choices();
   let afters = [];
   async function lambda(v) {
-    async function lambda2(c) {log({c})
+    console.log({
+      v,
+    });
+    async function lambda2(c) {
       let { name: choice_name, fn } = c;
       let { node, stack } = v;
       let stack1 = list_get_end_1(stack);
