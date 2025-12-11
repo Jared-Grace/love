@@ -1,4 +1,3 @@
-import { list_take } from "../../../love/public/src/list_take.mjs";
 import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_dollar_choices } from "../../../love/public/src/js_dollar_choices.mjs";
@@ -37,8 +36,7 @@ export async function js_dollar(ast) {
         ("if inside this block, then begins with non-$ - we only process beginning with $");
         return;
       }
-      let remaining = list_skip(split, 2);
-      let taken = list_take(list, count);
+      let remaining = list_skip(split, 2);slt
       if (second === choice_name) {
         marker("choice_arguments");
         const a = {
