@@ -3,8 +3,9 @@ import { app_a_function_node } from "../../../love/public/src/app_a_function_nod
 import { object_copy_assign } from "../../../love/public/src/object_copy_assign.mjs";
 export function app_a_function_node_child(a, node_replacement) {
   marker("1");
-  let a2 = object_copy_assign(a, {
+  const replacements = {
     node: node_replacement,
-  });
+  };
+  let a2 = object_copy_assign(a, replacements);
   app_a_function_node(a2);
 }
