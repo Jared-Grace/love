@@ -1,6 +1,7 @@
+import { js_code_wrap_braces } from "../../../love/public/src/js_code_wrap_braces.mjs";
+import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
-import { js_code_braces_empty } from "../../../love/public/src/js_code_braces_empty.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
@@ -13,7 +14,8 @@ export function js_dollar_l({
   ast,
   afters,
 }) {
-  let v = js_code_braces_empty();
+  let result = list_join_comma(names);
+  let v = js_code_wrap_braces();
   let code = js_code_call_args(log.name, [v]);
   let parsed = js_parse_expression(code);
   let code2 = js_unparse(node);
