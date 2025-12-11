@@ -23,11 +23,11 @@ export function app_a_function_node(a) {
       let source = object_property_get(node, "source");
       let value2 = object_property_get(source, "value");
       let s3 = js_string(value2);
+      let text = js_keyword_import();
+      let s = html_span_text(parent, text);
       let specifiers = object_property_get(node, "specifiers");
       function lambda2(item) {}
       each(list, lambda2);
-      let text = js_keyword_import();
-      let s = html_span_text(parent, text);
       let s2 = html_span_text(parent, s3);
       log(node);
     },
