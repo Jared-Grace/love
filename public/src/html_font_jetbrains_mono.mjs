@@ -7,6 +7,9 @@ export function html_font_jetbrains_mono(div) {
     let v = true;
     return v;
   }
-  let value = global_function_initialize_lambda(fn, lambda2);
+  let value = global_function_initialize_lambda(
+    html_font_jetbrains_mono,
+    lambda2,
+  );
   html_font_set(div, '"JetBrains Mono", monospace');
 }
