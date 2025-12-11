@@ -2,7 +2,7 @@ import { string_prefix_without } from "../../../love/public/src/string_prefix_wi
 import { html_parse_attr } from "../../../love/public/src/html_parse_attr.mjs";
 import { roman_to_integer } from "../../../love/public/src/roman_to_integer.mjs";
 import { list_intersect_empty_is_assert } from "../../../love/public/src/list_intersect_empty_is_assert.mjs";
-import { list_empty_is_assert } from "../../../love/public/src/list_empty_is_assert.mjs";
+import { list_empty_is_assert_json } from "../../../love/public/src/list_empty_is_assert_json.mjs";
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_parse_find_list_to } from "../../../love/public/src/html_parse_find_list_to.mjs";
@@ -31,7 +31,7 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
   let list2 = list_difference(classes, include);
   let extra = list_difference(list2, exclude);
   let dictionary = html_parse_classes_preview(main, d, extra);
-  list_empty_is_assert(extra, {
+  list_empty_is_assert_json(extra, {
     extra,
     dictionary,
   });
