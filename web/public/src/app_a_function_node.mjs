@@ -1,3 +1,4 @@
+import { app_a_semicolon } from "../../../love/public/src/app_a_semicolon.mjs";
 import { js_code_comma } from "../../../love/public/src/js_code_comma.mjs";
 import { app_a_parenthesis_wrap } from "../../../love/public/src/app_a_parenthesis_wrap.mjs";
 import { js_keyword_await } from "../../../love/public/src/js_keyword_await.mjs";
@@ -13,7 +14,6 @@ import { app_a_identifier } from "../../../love/public/src/app_a_identifier.mjs"
 import { js_keyword_function } from "../../../love/public/src/js_keyword_function.mjs";
 import { list_empty_is_assert } from "../../../love/public/src/list_empty_is_assert.mjs";
 import { js_keyword_export } from "../../../love/public/src/js_keyword_export.mjs";
-import { js_code_semicolon } from "../../../love/public/src/js_code_semicolon.mjs";
 import { app_a_keyword_purple } from "../../../love/public/src/app_a_keyword_purple.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { js_keyword_from } from "../../../love/public/src/js_keyword_from.mjs";
@@ -45,8 +45,7 @@ export function app_a_function_node(a) {
       let text2 = js_keyword_from();
       app_a_keyword_purple_space(parent, text2);
       app_a_function_node_child(a, source);
-      let text3 = js_code_semicolon();
-      let span4 = html_span_text(parent, text3);
+      app_a_semicolon(parent);
     },
     ["ImportSpecifier"]: function lambda6() {
       let imported = object_property_get(node, "imported");
