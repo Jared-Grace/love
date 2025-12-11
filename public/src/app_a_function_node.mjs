@@ -6,7 +6,7 @@ export function app_a_function_node({ node }) {
   let lookup = {
     Program: function lambda3() {
       let body = object_property_get(node, "body");
-      function lambda(b) {
+      function lambda(b) {st
         app_a_function_node({
           node,
         });
