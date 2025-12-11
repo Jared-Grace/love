@@ -27,10 +27,10 @@ export async function app_a_function(context) {
   let code = await app_a_api(function_name, [f_name]);
   let div = html_div(root);
   html_style_assign(div, {
-    "font-family": 'ui-monospace, "Courier New", monospace',
+    "JetBrains Mono": "monospace",
     "overflow-wrap": "break-word",
     "word-break": "break-word",
-    "font-weight": "700",
+    "font-weight": "500",
   });
   let ast = js_parse(code);
   app_a_function_node({
