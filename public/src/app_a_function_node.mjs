@@ -120,7 +120,7 @@ export function app_a_function_node(a) {
       app_a_identifier(parent, node);
     },
     ["Literal"]: function lambda10() {
-      let raw = object_property_get(source, "raw");
+      let raw = object_property_get(node, "raw");
       let span3 = html_span_text(parent, raw);
       html_font_color_set(span3, "#d07200ff");
     },
