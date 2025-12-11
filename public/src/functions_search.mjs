@@ -7,11 +7,6 @@ export async function functions_search(search) {
   marker("1");
   let fn = string_includes;
   let f_names = await functions_names();
-  let result = search_generic(
-    search,
-    f_names,
-    function_name_to_path,
-    fn,
-  );
+  let result = search_generic(search, f_names, function_name_to_path, fn);
   return result;
 }
