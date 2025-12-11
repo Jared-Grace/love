@@ -1,3 +1,4 @@
+import { js_node_type_is_assert } from "../../../love/public/src/js_node_type_is_assert.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_code_braces_empty } from "../../../love/public/src/js_code_braces_empty.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -15,6 +16,7 @@ export function js_dollar_l({
   let v = js_code_braces_empty();
   let code = js_code_call_args(log.name, [v]);
   let parsed = js_parse_expression(code);
+  js_node_type_is_assert(node2, type);
   log({
     stack1,
     parsed,
