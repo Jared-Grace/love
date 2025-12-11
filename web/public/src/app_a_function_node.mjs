@@ -1,5 +1,4 @@
-import { object_assign } from "../../../love/public/src/object_assign.mjs";
-import { object_copy } from "../../../love/public/src/object_copy.mjs";
+import { object_copy_assign } from "../../../love/public/src/object_copy_assign.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -13,8 +12,7 @@ export function app_a_function_node(a) {
         const from = {
           node: b,
         };
-        let a2 = object_copy(a);
-        object_assign(a2, from);
+        let a2 = object_copy_assign(a, from);
         app_a_function_node(a2);
       }
       each(body, lambda);
