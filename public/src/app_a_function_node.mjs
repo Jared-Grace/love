@@ -17,6 +17,8 @@ export function app_a_function_node(a) {
       each(body, lambda);
     },
     ["ImportDeclaration"]: function lambda4() {
+      let source = object_property_get(node, "source");
+      let specifiers = object_property_get(node, "specifiers");
       log(node);
     },
     ["ExportNamedDeclaration"]: function lambda5() {
