@@ -74,8 +74,6 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, declaration);
     },
     ["FunctionDeclaration"]: function lambda5() {
-      let id = object_property_get(node, "id");
-      let body2 = object_property_get(node, "body");
       let params = object_property_get(node, "params");
       list_empty_is_assert(params);
       let generator = object_property_get(node, "generator");
@@ -88,7 +86,9 @@ export function app_a_function_node(a) {
         let v2 = js_keyword_async();
         app_a_keyword_blue_space(parent, v2);
       }
-      app_a_identifier(parent, local);
+      let id = object_property_get(node, "id");
+      app_a_identifier(parent, id);
+      let body2 = object_property_get(node, "body");
     },
   };
   let value = object_property_get(lookup, type);
