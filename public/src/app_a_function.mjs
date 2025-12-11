@@ -34,6 +34,7 @@ export async function app_a_function(context) {
       function lambda(b) {}
       each(body, lambda);
     },
+    ["ImportDeclaration"]: () => {},
   };
   let value = object_property_get(lookup, type);
   value();
