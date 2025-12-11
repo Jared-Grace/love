@@ -13,7 +13,7 @@ export function app_a_body(node, parent, a) {
     });
     if (imports) {
       let type = object_property_get(b, "type");
-      let ti = js_node_type_is(b, "ExportNamedDeclaration");
+      let ti = js_node_type_is(b, "VariableDeclaration");
       if (ti) {
         return;
       } else {
