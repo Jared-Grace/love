@@ -10,7 +10,7 @@ import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
+import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { html_rgba_to_rgb } from "../../../love/public/src/html_rgba_to_rgb.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_checked_set } from "../../../love/public/src/html_checked_set.mjs";
@@ -84,7 +84,7 @@ export function html_checkboxes(
           ", inset 0 0 0 .3em white",
       });
     }
-    html_on_click(container, on_click);
+    html_on_pointerdown(container, on_click);
     if (equal(value, value_previous)) {
       list_add(afters, on_click);
     }
