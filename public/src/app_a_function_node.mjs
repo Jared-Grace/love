@@ -1,3 +1,4 @@
+import { js_keyword_from } from "../../../love/public/src/js_keyword_from.mjs";
 import { object_property_get_double_equal_assert } from "../../../love/public/src/object_property_get_double_equal_assert.mjs";
 import { js_identifier_is_assert } from "../../../love/public/src/js_identifier_is_assert.mjs";
 import { app_a_function_node_child } from "../../../love/public/src/app_a_function_node_child.mjs";
@@ -29,6 +30,7 @@ export function app_a_function_node(a) {
         app_a_function_node_child(a, specifier);
       }
       each(specifiers, lambda2);
+      let text2 = js_keyword_from();
       let span2 = html_span_text(parent2, text2);
       let s2 = html_span_text(parent, s3);
       log(node);
