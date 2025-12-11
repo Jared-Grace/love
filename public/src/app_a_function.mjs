@@ -35,5 +35,6 @@ export async function app_a_function(context) {
       each(body, lambda);
     },
   };
-  let value = object_property_get(object, property_name);
+  let value = object_property_get(lookup, type);
+  value();
 }
