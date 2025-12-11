@@ -99,6 +99,7 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, body2);
     },
     ["BlockStatement"]: function lambda7() {
+      let body3 = object_property_get(node, "body");
       log({
         node,
       });
