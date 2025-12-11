@@ -79,7 +79,7 @@ export function app_a_function_node(a) {
       let params = object_property_get(node, "params");
       list_empty_is_assert(params);
       let generator = object_property_get(node, "generator");
-      false_is_assert(enabled);
+      false_is_assert(generator);
       log(node);
       let v = js_keyword_function();
       app_a_keyword_blue_space(parent, v);
