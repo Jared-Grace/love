@@ -14,8 +14,8 @@ export function js_dollar_l({
   ast,
   afters,
 }) {
-  let result = list_join_comma(names);
-  let v = js_code_wrap_braces();
+  let result = list_join_comma(remaining);
+  let v = js_code_wrap_braces(result);
   let code = js_code_call_args(log.name, [v]);
   let parsed = js_parse_expression(code);
   let code2 = js_unparse(node);
