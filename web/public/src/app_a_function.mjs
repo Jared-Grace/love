@@ -8,7 +8,7 @@ import { html_clear } from "../../../love/public/src/html_clear.mjs";
 export async function app_a_function(context) {
   function lambda2() {}
   let component2 = html_button(parent, text, lambda2);
-  app_a_control_style(component);
+  app_a_control_style(component2);
   let { app_fn, root } = context;
   let f_name = storage_local_get(app_fn, "f_name_selected");
   html_clear(root);
