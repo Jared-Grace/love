@@ -44,7 +44,6 @@ export function app_a_function_node(a) {
         parent,
         " " + js_code_brace_right() + " " + text2 + " " + s3,
       );
-      log(node);
     },
     ["ImportSpecifier"]: function lambda6() {
       let imported = object_property_get(node, "imported");
@@ -59,7 +58,6 @@ export function app_a_function_node(a) {
       let span = html_span_text(parent, name);
       html_font_color_set(span, "blue");
       js_identifier_is_assert(local);
-      log(node);
     },
     ["ExportNamedDeclaration"]: function lambda5() {
       log(node);
