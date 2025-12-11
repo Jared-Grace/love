@@ -120,7 +120,7 @@ export function app_a_function_node(a) {
         each(arguments2, lambda);
       }
     },
-    ["Identifier"]: () => {},
+    ["Identifier"]: function lambda9() {},
   };
   let value = object_property_get(lookup, type);
   value();
