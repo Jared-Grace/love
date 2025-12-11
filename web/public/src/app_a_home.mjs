@@ -1,10 +1,8 @@
+import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { app_a_api_cache_global } from "../../../love/public/src/app_a_api_cache_global.mjs";
 import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
-import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
-import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
-import { app_a_function } from "../../../love/public/src/app_a_function.mjs";
 import { list_sort_string_alpha_size } from "../../../love/public/src/list_sort_string_alpha_size.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
@@ -54,9 +52,7 @@ export async function app_a_home(context) {
     list_sort_string_alpha_size(filtered);
     function lambda(f_name) {
       async function lambda3() {
-        let { app_fn } = context;
-        storage_local_set(app_fn, "f_name_selected", f_name);
-        app_generic_screen_set(context, app_a_function);
+        app_a_function_select(context, f_name);
       }
       let component = html_button(f_names_div, f_name, lambda3);
       app_a_control_style_wide(component);
