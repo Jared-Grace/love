@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_swap_at } from "../../../love/public/src/list_swap_at.mjs";
 import { function_param_index } from "../../../love/public/src/function_param_index.mjs";
 import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
@@ -30,7 +31,8 @@ export async function function_param_swap(param_name_a, param_name_b) {
     list_swap_at(args, index_a, index_b);
   }
   function function_transform_current_lambda(ast) {
-    let params = null;l;
+    let params = null;
+    log(message);
     ({ params, index_a } = function_param_index(ast, param_name_a));
     ({ index_b } = function_param_index(ast, param_name_b));
     list_swap_at(params, index_a, index_b);
