@@ -70,7 +70,6 @@ export function app_a_function_node(a) {
       html_span_space(parent);
       let declaration = object_property_get(node, "declaration");
       app_a_function_node_child(a, declaration);
-      log(node);
     },
     ["FunctionDeclaration"]: function lambda5() {
       log(node);
