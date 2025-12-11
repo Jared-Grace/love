@@ -36,8 +36,9 @@ export function app_a_function_node(a) {
       let imported = object_property_get(node, "imported");
       js_identifier_is_assert(imported);
       let local = object_property_get(node, "local");
-      let name = object_property_get(imported, "name");
-      let name2 = object_property_get(local, "name");
+      const property_name = "name";
+      let name = object_property_get(imported, property_name);
+      let name2 = object_property_get(local, property_name);
       equal_assert(name, name2);
       js_identifier_is_assert(local);
       log(node);
