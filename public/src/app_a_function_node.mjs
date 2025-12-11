@@ -1,3 +1,4 @@
+import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { app_a_semicolon } from "../../../love/public/src/app_a_semicolon.mjs";
 import { js_code_comma } from "../../../love/public/src/js_code_comma.mjs";
 import { app_a_parenthesis_wrap } from "../../../love/public/src/app_a_parenthesis_wrap.mjs";
@@ -108,6 +109,7 @@ export function app_a_function_node(a) {
           app_a_function_node_child(a, arg);
           let c = js_code_comma();
           let span = html_span_text(parent, c);
+          html_style_set(b, style_key, style_value);
         }
         each(arguments2, lambda);
       }
