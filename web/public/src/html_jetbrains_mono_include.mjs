@@ -7,7 +7,7 @@ export function html_jetbrains_mono_include() {
     let v = true;
     return v;
   }
-  global_function_initialize_lambda(html_jetbrains_mono_include, value_get);
+  global_function_initialize_lambda(fn, value_get);
   function lambda() {
     const href =
       "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap";
