@@ -16,7 +16,6 @@ import { js_keyword_export } from "../../../love/public/src/js_keyword_export.mj
 import { js_code_semicolon } from "../../../love/public/src/js_code_semicolon.mjs";
 import { app_a_keyword_purple } from "../../../love/public/src/app_a_keyword_purple.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
-import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { js_keyword_from } from "../../../love/public/src/js_keyword_from.mjs";
 import { object_property_get_double_equal_assert } from "../../../love/public/src/object_property_get_double_equal_assert.mjs";
 import { js_identifier_is_assert } from "../../../love/public/src/js_identifier_is_assert.mjs";
@@ -46,7 +45,6 @@ export function app_a_function_node(a) {
       let text2 = js_keyword_from();
       app_a_keyword_purple_space(parent, text2);
       let raw = object_property_get(source, "raw");
-      let s3 = js_code_string(value2);
       let span3 = html_span_text(parent, raw);
       html_font_color_set(span3, "#d07200ff");
       let text3 = js_code_semicolon();
