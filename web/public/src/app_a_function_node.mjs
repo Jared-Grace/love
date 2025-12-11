@@ -1,3 +1,4 @@
+import { js_keyword_export } from "../../../love/public/src/js_keyword_export.mjs";
 import { js_code_semicolon } from "../../../love/public/src/js_code_semicolon.mjs";
 import { app_a_keyword } from "../../../love/public/src/app_a_keyword.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
@@ -63,7 +64,8 @@ export function app_a_function_node(a) {
       js_identifier_is_assert(local);
     },
     ["ExportNamedDeclaration"]: function lambda5() {
-      app_a_keyword(parent2, js_keyword_export());
+      let text4 = js_keyword_export();
+      app_a_keyword(parent2, text4);
       log(node);
     },
   };
