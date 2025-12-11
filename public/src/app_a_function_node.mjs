@@ -1,3 +1,4 @@
+import { js_identifier_is_assert } from "../../../love/public/src/js_identifier_is_assert.mjs";
 import { app_a_function_node_child } from "../../../love/public/src/app_a_function_node_child.mjs";
 import { js_keyword_import } from "../../../love/public/src/js_keyword_import.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
@@ -25,6 +26,7 @@ export function app_a_function_node(a) {
       let specifiers = object_property_get(node, "specifiers");
       function lambda2(specifier) {
         app_a_function_node_child(a, specifier);
+        js_identifier_is_assert(expression);
       }
       each(specifiers, lambda2);
       let s2 = html_span_text(parent, s3);
