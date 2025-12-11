@@ -60,7 +60,7 @@ export function app_a_function_node(a) {
       let local = object_property_get(node, "local");
       const property_name = "name";
       object_property_get_double_equal_assert(imported, local, property_name);
-      app_a_identifier(local, parent);
+      app_a_identifier(parent, local);
     },
     ["ExportNamedDeclaration"]: function lambda5() {
       let text4 = js_keyword_export();
