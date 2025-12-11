@@ -13,7 +13,7 @@ import { list_empty_is_assert } from "../../../love/public/src/list_empty_is_ass
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { js_keyword_export } from "../../../love/public/src/js_keyword_export.mjs";
 import { js_code_semicolon } from "../../../love/public/src/js_code_semicolon.mjs";
-import { app_a_keyword } from "../../../love/public/src/app_a_keyword.mjs";
+import { app_a_keyword_purple } from "../../../love/public/src/app_a_keyword_purple.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { js_keyword_from } from "../../../love/public/src/js_keyword_from.mjs";
@@ -34,7 +34,7 @@ export function app_a_function_node(a) {
     ["ImportDeclaration"]: function lambda4() {
       let source = object_property_get(node, "source");
       let text = js_keyword_import();
-      app_a_keyword(parent, text);
+      app_a_keyword_purple(parent, text);
       let s = app_a_brace_left(parent);
       let specifiers = object_property_get(node, "specifiers");
       function lambda2(specifier) {
@@ -43,7 +43,7 @@ export function app_a_function_node(a) {
       each(specifiers, lambda2);
       let span2 = app_a_brace_right(parent);
       let text2 = js_keyword_from();
-      app_a_keyword(parent, text2);
+      app_a_keyword_purple(parent, text2);
       html_span_space(parent);
       let value2 = object_property_get(source, "value");
       let s3 = js_code_string(value2);
@@ -62,7 +62,7 @@ export function app_a_function_node(a) {
     },
     ["ExportNamedDeclaration"]: function lambda5() {
       let text4 = js_keyword_export();
-      app_a_keyword(parent, text4);
+      app_a_keyword_purple(parent, text4);
       html_span_space(parent);
       let declaration = object_property_get(node, "declaration");
       let specifiers = object_property_get(node, "specifiers");
