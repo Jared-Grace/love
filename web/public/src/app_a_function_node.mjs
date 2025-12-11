@@ -58,7 +58,7 @@ export function app_a_function_node(a) {
       let local = object_property_get(node, "local");
       const property_name = "name";
       object_property_get_double_equal_assert(imported, local, property_name);
-      app_a_identifier(parent, local);
+      app_a_function_node_child(a, local);
     },
     ["ExportNamedDeclaration"]: function lambda5() {
       let text4 = js_keyword_export();
@@ -79,7 +79,7 @@ export function app_a_function_node(a) {
         app_a_keyword_blue_space(parent, v2);
       }
       let id = object_property_get(node, "id");
-      app_a_identifier(parent, id);
+      app_a_function_node_child(a, id);
       app_a_parenthesis_wrap(parent, inner);
       function inner() {
         let params = object_property_get(node, "params");
