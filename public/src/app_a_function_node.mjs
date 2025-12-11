@@ -97,7 +97,7 @@ export function app_a_function_node(a) {
     ["ExpressionStatement"]: function lambda7() {
       let expression = object_property_get(node, "expression");
       app_a_function_node_child(a, expression);
-    },
+    },["AwaitExpression"]:$
   };
   let value = object_property_get(lookup, type);
   value();
