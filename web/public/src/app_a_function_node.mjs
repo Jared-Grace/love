@@ -1,4 +1,4 @@
-import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
+import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { app_a_function_node_child_parent } from "../../../love/public/src/app_a_function_node_child_parent.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { js_code_brace_right } from "../../../love/public/src/js_code_brace_right.mjs";
@@ -31,7 +31,8 @@ export function app_a_function_node(a) {
       let s3 = js_code_string(value2);
       let text = js_keyword_import();
       let s2 = html_span_text(parent, text);
-      html_style_set(s2, "color", "purple");
+      const color = "purple";
+      html_font_color_set(s2, color);
       let s = html_span_text(parent, " " + js_code_brace_left() + " ");
       let specifiers = object_property_get(node, "specifiers");
       function lambda2(specifier) {
