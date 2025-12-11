@@ -13,6 +13,7 @@ export function js_dollar_l({
   ast,
   afters,
 }) {
+  log("here");
   let v = js_code_braces_empty();
   let code = js_code_call_args(log.name, [v]);
   let parsed = js_parse_expression(code);
