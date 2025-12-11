@@ -77,11 +77,11 @@ export function app_a_function_node(a) {
       let body2 = object_property_get(node, "body");
       let params = object_property_get(node, "params");
       list_empty_is_assert(params);
-      let async = object_property_get(node, "async");
       let generator = object_property_get(node, "generator");
       log(node);
       let v = js_keyword_function();
       app_a_keyword_blue_space(parent, v);
+      let async = object_property_get(node, "async");
       if (async) {
         let v2 = js_keyword_async();
         app_a_keyword_blue_space(parent, v2);
