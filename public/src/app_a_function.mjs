@@ -28,6 +28,8 @@ export async function app_a_function(context) {
   let div = html_div(root);
   html_style_assign(div, {
     "font-family": '"JetBrains Mono", monospace',
+  });
+  html_style_assign(div, {
     "overflow-wrap": "break-word",
     "word-break": "break-word",
     "font-weight": "500",
