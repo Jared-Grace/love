@@ -74,8 +74,6 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, declaration);
     },
     ["FunctionDeclaration"]: function lambda5() {
-      let params = object_property_get(node, "params");
-      list_empty_is_assert(params);
       let generator = object_property_get(node, "generator");
       false_is_assert(generator);
       log(node);
@@ -89,6 +87,8 @@ export function app_a_function_node(a) {
       let id = object_property_get(node, "id");
       app_a_identifier(parent, id);
       let span = html_span_text(parent2, text5);
+      let params = object_property_get(node, "params");
+      list_empty_is_assert(params);
       let span5 = html_span_text(parent3, text6);
       let body2 = object_property_get(node, "body");
     },
