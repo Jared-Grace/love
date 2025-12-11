@@ -109,7 +109,9 @@ export function app_a_function_node(a) {
         function lambda(arg) {
           app_a_function_node_child(a, arg);
           let c = js_code_comma();
-          let v3 = list_last_is(list, item);
+          let v3 = list_last_is(arguments2, arg);
+          if (false) {
+          }
           let span = html_span_text(parent, c);
           html_span_space(parent);
         }
