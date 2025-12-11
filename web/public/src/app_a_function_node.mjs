@@ -88,11 +88,11 @@ export function app_a_function_node(a) {
       }
       let id = object_property_get(node, "id");
       app_a_identifier(parent, id);
-      js_code_parenthesis_left();
+      let l = js_code_parenthesis_left();
       let span = html_span_text(parent2, text5);
       let params = object_property_get(node, "params");
       list_empty_is_assert(params);
-      js_code_parenthesis_right();
+      let r = js_code_parenthesis_right();
       let span5 = html_span_text(parent3, text6);
       let body2 = object_property_get(node, "body");
     },
