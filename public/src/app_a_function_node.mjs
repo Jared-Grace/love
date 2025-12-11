@@ -100,5 +100,6 @@ export function app_a_function_node(a) {
   };
   let value = object_property_get(lookup, type);
   value();
-  $l;$G$G$G
+  $l;
+  $G$G$G;
 }
