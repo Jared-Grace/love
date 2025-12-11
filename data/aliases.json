@@ -277,6 +277,7 @@
   "atnt": "assert_not",
   "frn": "function_run",
   "hb": "html_button",
-  "se": "functions_search_ends_with"
+  "se": "functions_search_ends_with",
+  "hss": "html_style_set"
  }
 }
