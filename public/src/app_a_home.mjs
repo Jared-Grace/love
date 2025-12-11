@@ -1,4 +1,4 @@
-import { app_a_api_cache_global } from "../../../love/public/src/app_a_api_cache_global.mjs";
+import { functions_names_client } from "../../../love/public/src/functions_names_client.mjs";
 import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
@@ -16,11 +16,9 @@ import { app_a_control_style_wide } from "../../../love/public/src/app_a_control
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_input } from "../../../love/public/src/html_input.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
-import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export async function app_a_home(context) {
   let { app_fn } = context;
-  let function_name = fn_name("functions_names");
-  let f_names = await app_a_api_cache_global(function_name, []);
+  let f_names = await functions_names_client();
   let body = html_document_body();
   let input = html_input(body);
   html_focus(input);
