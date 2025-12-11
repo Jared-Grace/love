@@ -20,7 +20,7 @@ export function app_a_function_node(a) {
       let body = object_property_get(node, "body");
       function lambda(b) {
         let div = html_div(parent);
-        app_a_function_node_child_parent(a, b);
+        app_a_function_node_child_parent(a, b, div);
       }
       each(body, lambda);
     },
