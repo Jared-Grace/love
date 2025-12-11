@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { app_a_brace_right } from "../../../love/public/src/app_a_brace_right.mjs";
 import { app_a_brace_left } from "../../../love/public/src/app_a_brace_left.mjs";
 import { js_code_parenthesis_right } from "../../../love/public/src/js_code_parenthesis_right.mjs";
@@ -98,9 +97,7 @@ export function app_a_function_node(a) {
       let span2 = app_a_brace_right(parent);
     },
     ["BlockStatement"]: function lambda7() {
-      log({
-        node,
-      });
+      $L$NODE;
     },
   };
   let value = object_property_get(lookup, type);
