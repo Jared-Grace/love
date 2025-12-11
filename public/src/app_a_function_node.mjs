@@ -1,5 +1,4 @@
 import { app_a_body } from "../../../love/public/src/app_a_body.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { app_a_brace_right } from "../../../love/public/src/app_a_brace_right.mjs";
 import { app_a_brace_left } from "../../../love/public/src/app_a_brace_left.mjs";
 import { js_code_parenthesis_right } from "../../../love/public/src/js_code_parenthesis_right.mjs";
@@ -93,12 +92,7 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, body2);
     },
     ["BlockStatement"]: function lambda7() {
-      let body3 = object_property_get(node, "body");
-      function lambda8(item) {}
-      each(list, lambda8);
-      log({
-        node,
-      });
+      app_a_body(node, parent, a);
     },
   };
   let value = object_property_get(lookup, type);
