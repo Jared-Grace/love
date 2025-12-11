@@ -81,8 +81,8 @@ export function app_a_function_node(a) {
       }
       let s = app_a_brace_left(parent);
       let body2 = object_property_get(node, "body");
-      let span2 = app_a_brace_right(parent);
       app_a_function_node_child(a, body2);
+      let span2 = app_a_brace_right(parent);
     },
     ["BlockStatement"]: function lambda7() {
       app_a_body(node, parent, a);
