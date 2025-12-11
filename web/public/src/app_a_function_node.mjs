@@ -33,8 +33,9 @@ export function app_a_function_node(a) {
     },
     ["ImportSpecifier"]: function lambda6() {
       let imported = object_property_get(node, "imported");
+      js_identifier_is_assert(imported);
       let local = object_property_get(node, "local");
-      js_identifier_is_assert(expression);
+      js_identifier_is_assert(local);
       log(node);
     },
     ["ExportNamedDeclaration"]: function lambda5() {
