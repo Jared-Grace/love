@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_dollar_choices } from "../../../love/public/src/js_dollar_choices.mjs";
@@ -16,12 +17,14 @@ export async function js_dollar(ast) {
   let choices = js_dollar_choices();
   let afters = [];
   async function lambda(v) {
-    console.log({
-      v,
-    });
     async function lambda2(c) {
       let { name: choice_name, fn } = c;
       let { node, stack } = v;
+      if (not(node)) {
+        console.log({
+          v,
+        });
+      }
       let stack1 = list_get_end_1(stack);
       let stack2 = list_get_end_2(stack);
       let stack3 = list_get_end_3(stack);
