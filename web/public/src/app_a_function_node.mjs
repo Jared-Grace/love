@@ -88,7 +88,8 @@ export function app_a_function_node(a) {
       }
       let id = object_property_get(node, "id");
       app_a_identifier(parent, id);
-      let span = html_span_text(parent2, text5);hst
+      let span = html_span_text(parent2, text5);
+      let span5 = html_span_text(parent3, text6);
       let body2 = object_property_get(node, "body");
     },
   };
