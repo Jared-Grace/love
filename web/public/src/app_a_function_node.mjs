@@ -1,3 +1,4 @@
+import { js_keyword_async } from "../../../love/public/src/js_keyword_async.mjs";
 import { app_a_identifier } from "../../../love/public/src/app_a_identifier.mjs";
 import { app_a_keyword_blue } from "../../../love/public/src/app_a_keyword_blue.mjs";
 import { js_keyword_function } from "../../../love/public/src/js_keyword_function.mjs";
@@ -82,6 +83,7 @@ export function app_a_function_node(a) {
       app_a_keyword_blue(parent, v);
       html_span_space(parent);
       if (async) {
+        let v2 = js_keyword_async();
         app_a_keyword_blue(parent, v);
         html_span_space(parent);
       }
