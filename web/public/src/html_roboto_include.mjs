@@ -1,7 +1,9 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { global_function_once } from "../../../love/public/src/global_function_once.mjs";
 import { html_stylesheet } from "../../../love/public/src/html_stylesheet.mjs";
-export function html_roboto() {
-  let fn = html_roboto;
+export function html_roboto_include() {
+  marker("1");
+  let fn = html_roboto_include;
   global_function_once(lambda, fn);
   function lambda() {
     const href =
