@@ -1,4 +1,3 @@
-import { global_get } from "../../../love/public/src/global_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { global_function_initialize_lambda } from "../../../love/public/src/global_function_initialize_lambda.mjs";
 import { lambda_get } from "../../../love/public/src/lambda_get.mjs";
