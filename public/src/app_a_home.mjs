@@ -11,7 +11,7 @@ import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
-import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
+import { app_a_control_style_wide } from "../../../love/public/src/app_a_control_style_wide.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_input } from "../../../love/public/src/html_input.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
@@ -24,7 +24,7 @@ export async function app_a_home(context) {
   let body = html_document_body();
   let input = html_input(body);
   html_focus(input);
-  app_a_control_style(input);
+  app_a_control_style_wide(input);
   html_style_assign(input, {
     "border-width": "1px",
     "border-color": "gray",
@@ -59,7 +59,7 @@ export async function app_a_home(context) {
         app_generic_screen_set(context, app_a_function);
       }
       let component = html_button(f_names_div, f_name, lambda3);
-      app_a_control_style(component);
+      app_a_control_style_wide(component);
       app_karate_button_uncolored_style_assign(component);
       let b = component;
     }
