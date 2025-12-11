@@ -21,7 +21,7 @@ export function app_a_function_node(a) {
       let source = object_property_get(node, "source");
       let value2 = object_property_get(source, "value");
       let specifiers = object_property_get(node, "specifiers");
-      let p = html_p_text(parent, source);
+      let p = html_p_text(parent, value2);
       log(node);
     },
     ["ExportNamedDeclaration"]: function lambda5() {
