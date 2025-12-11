@@ -76,6 +76,7 @@ export function app_a_function_node(a) {
       let id = object_property_get(node, "id");
       let body2 = object_property_get(node, "body");
       let params = object_property_get(node, "params");
+      list_empty_is_assert(params);
       let async = object_property_get(node, "async");
       let generator = object_property_get(node, "generator");
       log(node);
