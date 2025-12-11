@@ -24,10 +24,10 @@ export async function app_a_function(context) {
   app_karate_button_uncolored_style_assign(b);
   let function_name = fn_name("function_read");
   let code = await app_a_api(function_name, [f_name]);
-  let div = html_div(root2);
+  let div = html_div(root);
   let ast = js_parse(code);
   app_a_function_node({
     node: ast,
-    parent: root,
+    parent: div,
   });
 }
