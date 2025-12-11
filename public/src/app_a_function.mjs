@@ -28,7 +28,7 @@ export async function app_a_function(context) {
   let ast = js_parse(code);
   let body = object_property_get(ast, "body");
   log({
-    ast,
+    body,
   });
   let p = html_pre_text(root, code);
 }
