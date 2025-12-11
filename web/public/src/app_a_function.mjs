@@ -25,7 +25,7 @@ export async function app_a_function(context) {
   let code = await app_a_api(function_name, [f_name]);
   let ast = js_parse(code);
   app_a_function_node({
-    ast,
+    node: ast,
     parent: root,
   });
 }
