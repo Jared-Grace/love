@@ -44,6 +44,7 @@ export function app_a_function_node(a) {
         parent,
         " " + js_code_brace_right() + " " + text2 + " " + s3,
       );
+      let span3 = html_span_text(parent2, text3);
     },
     ["ImportSpecifier"]: function lambda6() {
       let imported = object_property_get(node, "imported");
