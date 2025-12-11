@@ -1,3 +1,4 @@
+import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 export function js_dollar_l({
   remaining,
@@ -8,5 +9,6 @@ export function js_dollar_l({
   ast,
   afters,
 }) {
+  let parsed = js_parse_expression(code);
   object_replace(node, parsed);
 }
