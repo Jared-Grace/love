@@ -109,7 +109,7 @@ export function app_a_function_node(a) {
       });
       let callee = object_property_get(node, "callee");
       app_a_function_node_child(a, callee);
-      js_code_comma();
+      let c = js_code_comma();
       let arguments2 = object_property_get(node, "arguments");
       app_a_parenthesis_wrap(parent, inner);
       function inner() {
