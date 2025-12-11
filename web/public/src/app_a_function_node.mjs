@@ -1,7 +1,6 @@
 import { app_a_keyword_blue_space } from "../../../love/public/src/app_a_keyword_blue_space.mjs";
 import { js_keyword_async } from "../../../love/public/src/js_keyword_async.mjs";
 import { app_a_identifier } from "../../../love/public/src/app_a_identifier.mjs";
-import { app_a_keyword_blue } from "../../../love/public/src/app_a_keyword_blue.mjs";
 import { js_keyword_function } from "../../../love/public/src/js_keyword_function.mjs";
 import { list_empty_is_assert } from "../../../love/public/src/list_empty_is_assert.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
@@ -81,8 +80,7 @@ export function app_a_function_node(a) {
       let generator = object_property_get(node, "generator");
       log(node);
       let v = js_keyword_function();
-      app_a_keyword_blue(parent, v);
-      html_span_space(parent);
+      app_a_keyword_blue_space(parent, v);
       if (async) {
         let v2 = js_keyword_async();
         app_a_keyword_blue_space(parent, v2);
