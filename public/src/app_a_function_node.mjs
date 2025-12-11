@@ -27,8 +27,6 @@ export function app_a_function_node(a) {
     },
     ["ImportDeclaration"]: function lambda4() {
       let source = object_property_get(node, "source");
-      let value2 = object_property_get(source, "value");
-      let s3 = js_code_string(value2);
       let text = js_keyword_import();
       let s2 = html_span_text(parent, text);
       const color = "purple";
@@ -42,9 +40,12 @@ export function app_a_function_node(a) {
       let text2 = js_keyword_from();
       let span2 = html_span_text(
         parent,
-        " " + js_code_brace_right() + " " + text2 + " " + s3,
+        " " + js_code_brace_right() + " " + text2 + " ",
       );
-      let span3 = html_span_text(parent2, text3);
+      let value2 = object_property_get(source, "value");
+      let s3 = js_code_string(value2);
+      let span3 = html_span_text(parent, s3);
+      html_font_color_set(s22, color2);
     },
     ["ImportSpecifier"]: function lambda6() {
       let imported = object_property_get(node, "imported");
