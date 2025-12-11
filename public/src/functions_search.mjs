@@ -5,6 +5,6 @@ import { functions_names } from "../../../love/public/src/functions_names.mjs";
 export async function functions_search(search) {
   marker("1");
   let fn = string_includes;
-  let result = functions_search_generic(search, f_names, fn);
+  let result = functions_search_generic(search, fn);
   return result;
 }
