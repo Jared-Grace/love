@@ -33,6 +33,7 @@ export async function js_dollar(ast) {
       let { first, second } = list_first_second(split);
       let ne = string_empty_not_is(first);
       if (ne) {
+        ("if inside this block, then begins with non-$ - we only process beginning with $");
         return;
       }
       let remaining = list_skip(split, 2);
