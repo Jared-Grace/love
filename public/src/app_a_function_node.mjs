@@ -23,7 +23,7 @@ export function app_a_function_node(a) {
       let value2 = object_property_get(source, "value");
       let s3 = js_string(value2);
       let text = js_keyword_import();
-      let s = html_span_text(parent, text);
+      let s = html_span_text(parent, text + " ");
       let specifiers = object_property_get(node, "specifiers");
       function lambda2(specifier) {
         app_a_function_node_child(a, specifier);
