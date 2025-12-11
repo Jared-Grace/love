@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_parse } from "../../../love/public/src/js_parse.mjs";
@@ -26,6 +27,7 @@ export async function app_a_function(context) {
   let function_name = fn_name("function_read");
   let code = await app_a_api(function_name, [f_name]);
   let ast = js_parse(code);
+  log(message);
   let body = object_property_get(ast, "body");
   function lambda(b) {}
   each(body, lambda);
