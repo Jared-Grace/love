@@ -39,8 +39,8 @@ export function app_a_function_node(a) {
       const property_name = "name";
       let name = object_property_get_double_equal_assert(
         imported,
-        property_name,
         local,
+        property_name,
       );
       let span = html_span_text(parent, name);
       js_identifier_is_assert(local);
