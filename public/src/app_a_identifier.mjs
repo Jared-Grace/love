@@ -8,5 +8,5 @@ export function app_a_identifier(parent, local) {
   js_identifier_is_assert(local);
   let name = object_property_get(local, "name");
   let span = html_span_text(parent, name);
-  html_font_color_set(span, "blue");
+  html_font_color_set(span, "#0000F");
 }
