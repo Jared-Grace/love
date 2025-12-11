@@ -1,3 +1,4 @@
+import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { object_copy } from "../../../love/public/src/object_copy.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -9,7 +10,8 @@ export function app_a_function_node(a) {
     Program: function lambda3() {
       let body = object_property_get(node, "body");
       function lambda(b) {
-        let copy = object_copy(from);
+        let copy = object_copy(a);
+        object_assign(to, from);
         app_a_function_node({
           node,
         });
