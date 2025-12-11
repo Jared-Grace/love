@@ -1,3 +1,4 @@
+import { js_keyword_function } from "../../../love/public/src/js_keyword_function.mjs";
 import { list_empty_is_assert } from "../../../love/public/src/list_empty_is_assert.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { js_keyword_export } from "../../../love/public/src/js_keyword_export.mjs";
@@ -76,6 +77,7 @@ export function app_a_function_node(a) {
     },
     ["FunctionDeclaration"]: function lambda5() {
       log(node);
+      let v = js_keyword_function();
       let s2 = html_span_text(parent, text4);
       const color = "darkblue";
       html_font_color_set(s2, color);
