@@ -75,6 +75,8 @@ export function app_a_function_node(a) {
       log(node);
       let v = js_keyword_function();
       app_a_keyword_blue(parent, v);
+      html_span_space(parent);
+      app_a_identifier(parent, local);
     },
   };
   let value = object_property_get(lookup, type);
