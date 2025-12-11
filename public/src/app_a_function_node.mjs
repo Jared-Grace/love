@@ -1,3 +1,4 @@
+import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { list_last_not_is } from "../../../love/public/src/list_last_not_is.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
@@ -126,7 +127,9 @@ export function app_a_function_node(a) {
       let raw = object_property_get(node, "raw");
       let span3 = html_span_text(parent, raw);
       html_font_color_set(span3, "#d07200ff");
-      function lambda12() {}
+      function lambda12() {
+        html_style_background_color(div, background);
+      }
       html_on_pointerdown(component, lambda12);
     },
   };
