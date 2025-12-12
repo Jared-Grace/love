@@ -20,7 +20,8 @@ export function app_a_body(node, parent, a) {
         imports = true;
         parent_new = html_div(parent);
         html_style_background_color(parent_new, "yellow");
-        app_a_button_wide(parent2, text, function lambda3() {});
+        function lambda3() {}
+        app_a_button_wide(parent2, text, lambda3);
       }
     }
     if (imports) {
