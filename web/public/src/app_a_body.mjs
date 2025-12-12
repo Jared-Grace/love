@@ -14,7 +14,7 @@ export function app_a_body(node, parent, a) {
     let v = list_first_is(list, item);
     if (v) {
       let type = object_property_get(b, "type");
-      if (equal(left, right)) {
+      if (equal(type, t)) {
       }
     }
     if (imports) {
