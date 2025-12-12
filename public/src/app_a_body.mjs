@@ -13,6 +13,7 @@ export function app_a_body(node, parent, a) {
       if (ti) {
         return;
       } else {
+        return;
         imports = false;
       }
     }
