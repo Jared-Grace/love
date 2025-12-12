@@ -12,7 +12,7 @@ export function app_a_body(node, parent, a) {
       let ti = js_node_type_is(b, "VariableDeclaration");
       if (ti) {
         return;
-      } else {
+      } else {$l
         imports = false;
       }
     }
