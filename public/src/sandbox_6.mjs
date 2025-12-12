@@ -3,4 +3,5 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function sandbox_6() {
   marker("1");
   sandbox_6_inner();
+  return 1;
 }
