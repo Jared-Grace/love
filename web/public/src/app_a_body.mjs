@@ -28,8 +28,9 @@ export function app_a_body(node, parent, a) {
           function lambda3(item2) {
             let text = null;
             if (false) {
+              text = "Show";
+            } else {
             }
-            text = "Show";
           }
           each(buttons, lambda3);
           html_display_none_or_block(hidden, parent_new_saved);
