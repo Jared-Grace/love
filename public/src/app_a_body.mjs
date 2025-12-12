@@ -34,7 +34,7 @@ export function app_a_body(node, parent, a) {
               text = "Hide";
             }
             text += " imports";
-            html_text_set(component, text2);
+            html_text_set(b, text);
           }
           each(buttons, lambda3);
           html_display_none_or_block(hidden, parent_new_saved);
