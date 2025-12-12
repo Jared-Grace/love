@@ -12,7 +12,7 @@ export function app_a_body(node, parent, a) {
   let imports = false;
   function lambda(b) {
     const t = "ImportDeclaration";
-    let v = list_first_is(list, item);
+    let v = list_first_is(body, b);
     if (v) {
       let type = object_property_get(b, "type");
       if (equal(type, t)) {
