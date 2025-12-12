@@ -41,7 +41,8 @@ export function app_a_body(node, parent, a) {
           hidden = not(hidden);
         }
         function lambda2(item) {
-          return app_a_button_wide(item, "", imports_refresh);
+          let v2 = app_a_button_wide(item, "", imports_refresh);
+          return v2;
         }
         buttons = list_map([parent, parent_new_saved], lambda2);
         imports_refresh();
