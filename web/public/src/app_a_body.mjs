@@ -19,10 +19,11 @@ export function app_a_body(node, parent, a) {
       if (equal(type, t)) {
         imports = true;
         parent_new = html_div(parent);
-        function lambda3() {
+        let displayed = false;
+        function imports_refresh() {
           html_display_none(parent_new);
         }
-        app_a_button_wide(parent, "text", lambda3);
+        app_a_button_wide(parent, "text", imports_refresh);
       }
     }
     if (imports) {
