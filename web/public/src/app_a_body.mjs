@@ -13,6 +13,7 @@ export function app_a_body(node, parent, a) {
     let v = list_first_is(list, item);
     if (v) {
       let type = object_property_get(b, "type");
+      ie;
     }
     if (imports) {
       let ti = js_node_type_is(b, t);
