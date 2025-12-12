@@ -46,7 +46,7 @@ export function app_a_body(node, parent, a) {
           return v2;
         }
         buttons = list_map([parent, parent_new_saved], lambda2);
-        log(message);
+        log(buttons);
         imports_refresh();
       }
     }
