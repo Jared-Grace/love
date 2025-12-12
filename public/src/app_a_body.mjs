@@ -21,7 +21,7 @@ export function app_a_body(node, parent, a) {
         parent_new = html_div(parent);
         html_style_background_color(parent_new, "yellow");
         function lambda3() {}
-        app_a_button_wide(parent, text, lambda3);
+        app_a_button_wide(parent, "text", lambda3);
       }
     }
     if (imports) {
