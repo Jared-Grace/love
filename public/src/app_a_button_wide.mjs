@@ -5,4 +5,5 @@ export function app_a_button_wide(parent, text, lambda) {
   let component = html_button(parent, text, lambda);
   app_a_control_style_wide(component);
   app_karate_button_uncolored_style_assign(component);
+  return component;
 }
