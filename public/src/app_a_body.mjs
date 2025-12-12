@@ -1,5 +1,4 @@
 import { html_display_none } from "../../../love/public/src/html_display_none.mjs";
-import { html_style_background_color_yellow } from "../../../love/public/src/html_style_background_color_yellow.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -20,9 +19,8 @@ export function app_a_body(node, parent, a) {
       if (equal(type, t)) {
         imports = true;
         parent_new = html_div(parent);
-        html_style_background_color_yellow(parent_new);
         function lambda3() {
-          html_display_none(element);
+          html_display_none(parent_new);
         }
         app_a_button_wide(parent, "text", lambda3);
       }
