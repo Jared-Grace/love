@@ -18,7 +18,7 @@ export function app_a_body(node, parent, a) {
       if (equal(type, t)) {
         imports = true;
         parent_new = html_div(parent);
-        html_style_background_color(parent_new, "yellow");
+        html_style_background_color(parent_new, "yellow");app_a_button_wide
       }
     }
     if (imports) {
