@@ -24,6 +24,7 @@ export function app_a_body(node, parent, a) {
         let parent_new_saved = parent_new;
         let hidden = true;
         function imports_refresh() {
+          each(list, function lambda3(item2) {});
           html_display_none_or_block(hidden, parent_new_saved);
           hidden = not(hidden);
         }
