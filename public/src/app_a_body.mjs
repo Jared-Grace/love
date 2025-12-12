@@ -10,7 +10,7 @@ export function app_a_body(node, parent, a) {
   function lambda(b) {
     if (imports) {
       let type = object_property_get(b, "type");
-      let ti = js_node_type_is(b, "VariableDeclaration");
+      let ti = js_node_type_is(b, "ImportDeclaration");
       if (ti) {
         return;
       } else {
