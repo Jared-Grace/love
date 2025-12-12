@@ -1,6 +1,7 @@
+import { html_display_none } from "../../../love/public/src/html_display_none.mjs";
+import { html_style_background_color_yellow } from "../../../love/public/src/html_style_background_color_yellow.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
-import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -20,7 +21,9 @@ export function app_a_body(node, parent, a) {
         imports = true;
         parent_new = html_div(parent);
         html_style_background_color_yellow(parent_new);
-        function lambda3() {}
+        function lambda3() {
+          html_display_none(element);
+        }
         app_a_button_wide(parent, "text", lambda3);
       }
     }
@@ -36,7 +39,3 @@ export function app_a_body(node, parent, a) {
   }
   each(body, lambda);
 }
-function html_style_background_color_yellow(parent_new) {
-  html_style_background_color(parent_new, "yellow");
-}
-
