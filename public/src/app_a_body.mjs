@@ -21,6 +21,7 @@ export function app_a_body(node, parent, a) {
       if (equal(type, t)) {
         imports = true;
         parent_new = html_div(parent);
+        let parent_new_saved = parent_new;
         let hidden = true;
         function imports_refresh() {
           log("imports_refresh");
