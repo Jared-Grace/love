@@ -9,12 +9,13 @@ export function app_a_body(node, parent, a) {
   let body = object_property_get(node, "body");
   let imports = true;
   function lambda(b) {
+    const t = "ImportDeclaration";
     let v = list_first_is(list, item);
-    if (false) {
+    if (v) {
+      let type = object_property_get(b, "type");
     }
     if (imports) {
-      let type = object_property_get(b, "type");
-      let ti = js_node_type_is(b, "ImportDeclaration");
+      let ti = js_node_type_is(b, t);
       if (ti) {
         return;
       } else {
