@@ -23,17 +23,19 @@ export function app_a_body(node, parent, a) {
         parent_new = html_div(parent);
         let parent_new_saved = parent_new;
         let hidden = true;
-        let m = null;
+        let buttons = null;
         function imports_refresh() {
-          function lambda3(item2) {}
-          each(list, lambda3);
+          function lambda3(item2) {
+            let text = "Show";
+          }
+          each(buttons, lambda3);
           html_display_none_or_block(hidden, parent_new_saved);
           hidden = not(hidden);
         }
         function lambda2(item) {
           app_a_button_wide(item, "", imports_refresh);
         }
-        m = list_map([parent, parent_new_saved], lambda2);
+        buttons = list_map([parent, parent_new_saved], lambda2);
         imports_refresh();
       }
     }
