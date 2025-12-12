@@ -36,7 +36,7 @@ export function app_a_body(node, parent, a) {
         parent_new = parent;
       }
     }
-    let div = html_div(parent_new);
+    let div = html_div(parent);
     app_a_function_node_child_parent(a, b, div);
   }
   each(body, lambda);
