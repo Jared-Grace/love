@@ -1,3 +1,4 @@
+import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -8,7 +9,7 @@ export function app_a_body(node, parent, a) {
   let body = object_property_get(node, "body");
   let imports = true;
   function lambda(b) {
-    lfi;
+    let v = list_first_is(list, item);
     if (false) {
     }
     if (imports) {
