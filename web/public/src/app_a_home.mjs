@@ -1,8 +1,7 @@
+import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { app_a_api_cache_global } from "../../../love/public/src/app_a_api_cache_global.mjs";
-import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { html_button } from "../../../love/public/src/html_button.mjs";
 import { list_sort_string_alpha_size } from "../../../love/public/src/list_sort_string_alpha_size.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
@@ -54,9 +53,7 @@ export async function app_a_home(context) {
       async function lambda3() {
         app_a_function_select(context, f_name);
       }
-      let component = html_button(f_names_div, f_name, lambda3);
-      app_a_control_style_wide(component);
-      app_karate_button_uncolored_style_assign(component);
+      app_a_button_wide(f_names_div, f_name, lambda3);
     }
     each(filtered, lambda);
   }
