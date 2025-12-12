@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
@@ -27,9 +28,9 @@ export function app_a_body(node, parent, a) {
           hidden = not(hidden);
         }
         function lambda2(item) {
-          app_a_button_wide(item, "text", imports_refresh);
+          app_a_button_wide(item, "", imports_refresh);
         }
-        each([parent, parent_new_saved], lambda2);
+        let m = list_map([parent, parent_new_saved], lambda2);
         imports_refresh();
       }
     }
