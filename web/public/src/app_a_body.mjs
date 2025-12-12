@@ -1,3 +1,4 @@
+import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -18,6 +19,7 @@ export function app_a_body(node, parent, a) {
       if (equal(type, t)) {
         imports = true;
         parent_new = html_div(root);
+        html_style_background_color(div2, background);
       }
     }
     if (imports) {
