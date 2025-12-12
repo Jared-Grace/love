@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
@@ -19,9 +20,10 @@ export function app_a_body(node, parent, a) {
       if (equal(type, t)) {
         imports = true;
         parent_new = html_div(parent);
-        let displayed = false;
+        let hidden = true;
         function imports_refresh() {
-          html_display_none_or_block(displayed, parent_new);
+          hidden = not(hidden);
+          html_display_none_or_block(hidden, parent_new);
         }
         app_a_button_wide(parent, "text", imports_refresh);
       }
