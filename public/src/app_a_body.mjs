@@ -23,6 +23,8 @@ export function app_a_body(node, parent, a) {
         parent_new = html_div(parent);
         let hidden = true;
         function imports_refresh() {
+          log("imports_refresh");
+          log(hidden);
           html_display_none_or_block(hidden, parent_new);
           hidden = not(hidden);
         }
@@ -35,7 +37,7 @@ export function app_a_body(node, parent, a) {
       if (ti) {
         imports = false;
         parent_new = parent;
-        log(message);
+        log("not");
       }
     }
     let div = html_div(parent_new);
