@@ -17,6 +17,7 @@ export function app_a_body(node, parent, a) {
       let type = object_property_get(b, "type");
       if (equal(type, t)) {
         imports = true;
+        let div2 = html_div(root);
       }
     }
     if (imports) {
