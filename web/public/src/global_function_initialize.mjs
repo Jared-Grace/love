@@ -6,6 +6,6 @@ export function global_function_initialize(fn, initial) {
   marker("1");
   assert_arguments(arguments, 2);
   let value_get = lambda_get(initial);
-  let value = global_function_initialize_lambda(fn.name, value_get);
+  let value = global_function_initialize_lambda(fn, value_get);
   return value;
 }
