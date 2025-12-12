@@ -1,1 +1,4 @@
-export function sandbox_6() {}
+import { marker } from "../../../love/public/src/marker.mjs";
+export function sandbox_6() {
+  marker("1");
+}
