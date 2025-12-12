@@ -1,3 +1,4 @@
+import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
@@ -25,7 +26,7 @@ export function app_a_body(node, parent, a) {
         let hidden = true;
         let buttons = null;
         function imports_refresh() {
-          function lambda3(item2) {
+          function lambda3(b) {
             let text = null;
             if (hidden) {
               text = "Show";
@@ -33,6 +34,7 @@ export function app_a_body(node, parent, a) {
               text = "Hide";
             }
             text += " imports";
+            html_text_set(component, text2);
           }
           each(buttons, lambda3);
           html_display_none_or_block(hidden, parent_new_saved);
