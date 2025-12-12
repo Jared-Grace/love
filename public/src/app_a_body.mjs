@@ -27,9 +27,10 @@ export function app_a_body(node, parent, a) {
         function imports_refresh() {
           function lambda3(item2) {
             let text = null;
-            if (false) {
+            if (hidden) {
               text = "Show";
             } else {
+              text = "Hide";
             }
           }
           each(buttons, lambda3);
