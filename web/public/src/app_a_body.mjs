@@ -23,6 +23,7 @@ export function app_a_body(node, parent, a) {
         parent_new = html_div(parent);
         let parent_new_saved = parent_new;
         let hidden = true;
+        let m = null;
         function imports_refresh() {
           function lambda3(item2) {}
           each(list, lambda3);
@@ -32,7 +33,6 @@ export function app_a_body(node, parent, a) {
         function lambda2(item) {
           app_a_button_wide(item, "", imports_refresh);
         }
-        let m = null;
         m = list_map([parent, parent_new_saved], lambda2);
         imports_refresh();
       }
