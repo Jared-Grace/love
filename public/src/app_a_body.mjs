@@ -32,7 +32,8 @@ export function app_a_body(node, parent, a) {
         function lambda2(item) {
           app_a_button_wide(item, "", imports_refresh);
         }
-        let m = list_map([parent, parent_new_saved], lambda2);
+        let m = null;
+        m = list_map([parent, parent_new_saved], lambda2);
         imports_refresh();
       }
     }
