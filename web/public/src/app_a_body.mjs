@@ -32,6 +32,7 @@ export function app_a_body(node, parent, a) {
             } else {
               text = "Hide";
             }
+            text += " imports";
           }
           each(buttons, lambda3);
           html_display_none_or_block(hidden, parent_new_saved);
