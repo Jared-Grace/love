@@ -26,7 +26,7 @@ export function app_a_body(node, parent, a) {
         let buttons = null;
         function imports_refresh() {
           function lambda3(item2) {
-            let text = null;
+            let text = null;$i
             text = "Show";
           }
           each(buttons, lambda3);
