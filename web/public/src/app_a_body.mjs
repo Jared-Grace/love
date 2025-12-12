@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -45,6 +46,7 @@ export function app_a_body(node, parent, a) {
           return v2;
         }
         buttons = list_map([parent, parent_new_saved], lambda2);
+        log(message);
         imports_refresh();
       }
     }
