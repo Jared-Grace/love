@@ -26,9 +26,10 @@ export function app_a_body(node, parent, a) {
           html_display_none_or_block(hidden, parent_new_saved);
           hidden = not(hidden);
         }
-        function lambda2(item) {}
-        each(list, lambda2);
-        app_a_button_wide(parent, "text", imports_refresh);
+        function lambda2(item) {
+          app_a_button_wide(parent, "text", imports_refresh);
+        }
+        each([parent], lambda2);
         imports_refresh();
       }
     }
