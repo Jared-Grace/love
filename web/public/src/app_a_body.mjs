@@ -27,9 +27,9 @@ export function app_a_body(node, parent, a) {
           hidden = not(hidden);
         }
         function lambda2(item) {
-          app_a_button_wide(parent, "text", imports_refresh);
+          app_a_button_wide(item, "text", imports_refresh);
         }
-        each([parent], lambda2);
+        each([parent, parent_new_saved], lambda2);
         imports_refresh();
       }
     }
