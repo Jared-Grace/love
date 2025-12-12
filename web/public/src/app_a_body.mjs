@@ -14,7 +14,9 @@ export function app_a_body(node, parent, a) {
       if (ti) {
         return;
       } else {
-        log({b});
+        log({
+          b,
+        });
         imports = false;
       }
     }
