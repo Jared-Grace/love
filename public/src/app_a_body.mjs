@@ -1,7 +1,6 @@
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_a_function_node_child_parent } from "../../../love/public/src/app_a_function_node_child_parent.mjs";
@@ -27,10 +26,8 @@ export function app_a_body(node, parent, a) {
       if (ti) {
         return;
       } else {
-        log({
-          b2: b,
-        });
         imports = false;
+        parent_new = parent;
       }
     }
     let div = html_div(parent_new);
