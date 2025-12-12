@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
@@ -24,8 +23,6 @@ export function app_a_body(node, parent, a) {
         let parent_new_saved = parent_new;
         let hidden = true;
         function imports_refresh() {
-          log("imports_refresh");
-          log(hidden);
           html_display_none_or_block(hidden, parent_new_saved);
           hidden = not(hidden);
         }
@@ -38,7 +35,6 @@ export function app_a_body(node, parent, a) {
       if (ti) {
         imports = false;
         parent_new = parent;
-        log("not");
       }
     }
     let div = html_div(parent_new);
