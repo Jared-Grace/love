@@ -8,6 +8,7 @@ export function app_a_body(node, parent, a) {
   let body = object_property_get(node, "body");
   let imports = true;
   function lambda(b) {
+    lfi;
     if (false) {
     }
     if (imports) {
