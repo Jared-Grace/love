@@ -8,6 +8,8 @@ export function app_a_body(node, parent, a) {
   let body = object_property_get(node, "body");
   let imports = true;
   function lambda(b) {
+    if (false) {
+    }
     if (imports) {
       let type = object_property_get(b, "type");
       let ti = js_node_type_is(b, "ImportDeclaration");
