@@ -22,8 +22,8 @@ export function app_a_body(node, parent, a) {
         parent_new = html_div(parent);
         let hidden = true;
         function imports_refresh() {
-          hidden = not(hidden);
           html_display_none_or_block(hidden, parent_new);
+          hidden = not(hidden);
         }
         app_a_button_wide(parent, "text", imports_refresh);
         imports_refresh();
