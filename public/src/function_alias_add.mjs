@@ -4,8 +4,8 @@ import { undefined_not_is_assert } from "../../../love/public/src/undefined_not_
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_sort_string_size } from "../../../love/public/src/list_sort_string_size.mjs";
 import { function_alias_generic } from "../../../love/public/src/function_alias_generic.mjs";
-import { error } from "../../../love/public/src/error.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { error_json } from "./error_json.mjs";
 export async function function_alias_add(first, second) {
   marker("1");
   let list = [first, second];
@@ -17,7 +17,10 @@ export async function function_alias_add(first, second) {
   function lambda(a) {
     let { exists, aliases, unaliased } = a;
     if (exists) {
-      error(unaliased);
+      error_json({
+        message: "alias already exists",
+        unaliased,
+      });
     }
     object_property_set(aliases, alias, f_name);
   }
