@@ -17,12 +17,12 @@ export async function function_wrap(f_name, f_name_wrapped) {
   return v;
   async function lambda(ast) {
     let arg_names = js_declaration_params_names(declaration_call);
-    let code = js_code_call_args_await_maybe(
+    let return_argument_code = js_code_call_args_await_maybe(
       unaliased,
       arg_names,
       declaration_call,
     );
-    let item = js_statement_return(code);
+    let item = js_statement_return(return_argument_code);
     js_declaration_single_block_body_add(ast, item);
     let declaration = js_declaration_single(ast);
     js_declaration_asyncify(declaration, declaration_call);
