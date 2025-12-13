@@ -144,7 +144,7 @@ export function app_a_function_node(a) {
         node,
       });
       let text3 = js_code_equals_padded();
-      let span = html_span_text(parent2, text3);
+      let span = html_span_text(parent, text3);
     },
   };
   let value = object_property_get(lookup, type);
