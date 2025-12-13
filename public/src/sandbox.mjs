@@ -10,5 +10,6 @@ export async function sandbox() {
     let v = await ebible_version_chapters_cache(bible_folder);
   }
   each(languages, lambda);
-  await each_async(list, async function lambda2(item) {});
+  async function lambda2(item) {}
+  await each_async(list, lambda2);
 }
