@@ -14,7 +14,7 @@ export async function sandbox() {
         bible_folder,
         chapters,
       });
-      log('message');
+      log("message");
     }
     await each_unordered_async(languages, lambda2);
   }
