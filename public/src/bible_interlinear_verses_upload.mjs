@@ -18,10 +18,11 @@ export async function bible_interlinear_verses_upload() {
     await each_object_async(chapters, lambda6);
   }
   let list = await list_adder_async(lambda);
-  async function lambda2(item) {}
-  await each_async(list2, lambda2);
-  async function lambda5(verse) {
-    await ebible_firebase_upload_verse(verse, chapter_code, bible_folder);
+  async function lambda2({ chapter_code, verses }) {
+    async function lambda5(verse) {
+      await ebible_firebase_upload_verse(verse, chapter_code, bible_folder);
+    }
+    let waited = await list_map_unordered_async(verses, lambda5);
   }
-  let waited = await list_map_unordered_async(verses, lambda5);
+  await each_async(list, lambda2);
 }
