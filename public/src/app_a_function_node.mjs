@@ -1,6 +1,5 @@
 import { app_a_braces_wrap_node } from "../../../love/public/src/app_a_braces_wrap_node.mjs";
 import { js_keyword_if } from "../../../love/public/src/js_keyword_if.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { a_brackets_wrap } from "../../../love/public/src/a_brackets_wrap.mjs";
 import { string_pad_space } from "../../../love/public/src/string_pad_space.mjs";
 import { app_a_comma } from "../../../love/public/src/app_a_comma.mjs";
@@ -201,11 +200,7 @@ export function app_a_function_node(a) {
       app_a_braces_wrap_node(a, alternate, parent);
     },
     ["LogicalExpression"]: binary,
-    ["AssignmentExpression"]: function lambda15() {
-      log({
-        node,
-      });
-    },
+    ["AssignmentExpression"]: binary,
   };
   function binary() {
     let left = object_property_get(node, "left");
