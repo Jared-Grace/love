@@ -1,7 +1,6 @@
+import { a_brackets_wrap } from "../../../love/public/src/a_brackets_wrap.mjs";
 import { string_pad_space } from "../../../love/public/src/string_pad_space.mjs";
 import { app_a_comma } from "../../../love/public/src/app_a_comma.mjs";
-import { js_code_bracket_open } from "../../../love/public/src/js_code_bracket_open.mjs";
-import { js_code_bracket_close } from "../../../love/public/src/js_code_bracket_close.mjs";
 import { app_a_body_inner } from "../../../love/public/src/app_a_body_inner.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { js_code_colon } from "../../../love/public/src/js_code_colon.mjs";
@@ -192,11 +191,7 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, right);
     },
     ["ArrayExpression"]: function lambda17() {
-      let b = js_code_bracket_open();
-      let span5 = html_span_text(parent, b);
-      inner();
-      let v3 = js_code_bracket_close();
-      let span6 = html_span_text(parent, v3);
+      a_brackets_wrap(parent, inner);
       log({
         node,
       });
