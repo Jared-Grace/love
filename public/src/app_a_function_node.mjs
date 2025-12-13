@@ -154,8 +154,7 @@ export function app_a_function_node(a) {
       let key = object_property_get(node, "key");
       let shorthand = object_property_get(node, "shorthand");
       let method = object_property_get(node, "method");
-      let computed = object_property_get(node, "computed");
-      app_a_braces_wrap(parent2, inner2);
+      let computed = object_property_get(node, "computed");app_a_braces_wrap
       log({
         node,
       });
