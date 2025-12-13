@@ -1,6 +1,6 @@
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
-import { app_a_api_cache_global } from "../../../love/public/src/app_a_api_cache_global.mjs";
+import { app_api_cache_global } from "../../../love/public/src/app_api_cache_global.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_sort_string_alpha_size } from "../../../love/public/src/list_sort_string_alpha_size.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -16,7 +16,7 @@ import { html_document_body } from "../../../love/public/src/html_document_body.
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export async function app_a_home(context) {
   let function_name = fn_name("functions_names");
-  let f_names = await app_a_api_cache_global(function_name, []);
+  let f_names = await app_api_cache_global(function_name, []);
   let body = html_document_body();
   let input = html_input(body);
   html_focus(input);
