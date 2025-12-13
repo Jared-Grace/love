@@ -178,8 +178,8 @@ export function app_a_function_node(a) {
         let c = js_code_colon();
         let span4 = html_span_text(parent, c);
         let value3 = object_property_get(node, "value");
+        app_a_function_node_child(a, value3);
       }
-      app_a_function_node_child(a, value3);
       app_a_comma(parent);
     },
     ["BinaryExpression"]: binary,
