@@ -140,9 +140,6 @@ export function app_a_function_node(a) {
       app_a_semicolon(parent);
     },
     ["VariableDeclarator"]: function lambda13() {
-      log({
-        node,
-      });
       let id = object_property_get(node, "id");
       app_a_function_node_child(a, id);
       let text3 = js_code_equals_padded();
@@ -150,7 +147,11 @@ export function app_a_function_node(a) {
       let init = object_property_get(node, "init");
       app_a_function_node_child(a, init);
     },
-    ["ObjectExpression"]: function lambda14() {},
+    ["ObjectExpression"]: function lambda14() {
+      log({
+        node,
+      });
+    },
   };
   let value = object_property_get(lookup, type);
   value();
