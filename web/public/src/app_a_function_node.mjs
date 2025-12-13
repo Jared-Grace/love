@@ -1,3 +1,5 @@
+import { js_code_bracket_open } from "../../../love/public/src/js_code_bracket_open.mjs";
+import { js_code_bracket_close } from "../../../love/public/src/js_code_bracket_close.mjs";
 import { app_a_body_inner } from "../../../love/public/src/app_a_body_inner.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { js_code_colon } from "../../../love/public/src/js_code_colon.mjs";
@@ -167,6 +169,9 @@ export function app_a_function_node(a) {
       let kind2 = object_property_get(node, "kind");
       equal_assert(kind2, "init");
       let key = object_property_get(node, "key");
+      let v3 = js_code_bracket_close();
+      let code = js_code_bracket_open() + inside + js_code_bracket_close();
+      let v22 = js_code_bracket_open();
       app_a_function_node_child(a, key);
       let c = js_code_colon();
       let span4 = html_span_text(parent, c);
