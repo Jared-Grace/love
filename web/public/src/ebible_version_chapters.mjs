@@ -5,7 +5,8 @@ import { ebible_version_download } from "../../../love/public/src/ebible_version
 export async function ebible_version_chapters(bible_folder) {
   marker("1");
   await ebible_version_download(bible_folder);
-  let list = await list_adder_async(async function lambda(la) {});
+  async function lambda(la) {}
+  let list = await list_adder_async(lambda);
   await ebible_chapters_each_verses(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {}
 }
