@@ -7,7 +7,6 @@ import { js_code_colon } from "../../../love/public/src/js_code_colon.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { app_a_braces_wrap } from "../../../love/public/src/app_a_braces_wrap.mjs";
 import { js_code_equals_padded } from "../../../love/public/src/js_code_equals_padded.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { app_a_nodes_list } from "../../../love/public/src/app_a_nodes_list.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
@@ -192,9 +191,6 @@ export function app_a_function_node(a) {
     },
     ["ArrayExpression"]: function lambda17() {
       a_brackets_wrap(parent, inner);
-      log({
-        node,
-      });
       function inner() {
         let elements = object_property_get(node, "elements");
         app_a_nodes_list(a, elements, parent);
