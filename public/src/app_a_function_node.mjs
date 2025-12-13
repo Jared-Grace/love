@@ -141,7 +141,7 @@ export function app_a_function_node(a) {
       }
       html_on_pointerdown(span3, lambda12);
     },
-    ["VariableDeclaration"]: () => {},
+    ["VariableDeclaration"]: function lambda11() {},
   };
   let value = object_property_get(lookup, type);
   value();
