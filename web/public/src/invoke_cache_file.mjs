@@ -6,8 +6,6 @@ import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { folder_user_storage_function_path } from "../../../love/public/src/folder_user_storage_function_path.mjs";
-import { global_function_property_set_exists_not } from "../../../love/public/src/global_function_property_set_exists_not.mjs";
-import { invoke_cache_global } from "../../../love/public/src/invoke_cache_global.mjs";
 import { invoke_cache_value_get } from "../../../love/public/src/invoke_cache_value_get.mjs";
 import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -28,17 +26,12 @@ export async function invoke_cache_file(fn, args) {
   let cached_get = async function lambda2(key) {
     let data = await file_read_json(key);
     let result2 = object_property_get(data, "result");
-    return data;
+    return result2;
   };
   let cache_save = async function lambda4(key, value) {
     await file_overwrite_json(key, {
       result,
     });
-    let v2 = global_function_property_set_exists_not(
-      invoke_cache_global,
-      key,
-      value,
-    );
     return v2;
   };
   let v = await cache_generic(
