@@ -168,6 +168,7 @@ export function app_a_function_node(a) {
       let key = object_property_get(node, "key");
       app_a_function_node_child(a, key);
       let c = js_code_colon();
+      let span4 = html_span_text(parent2, text5);
       html_span_space(c);
       let shorthand = object_property_get(node, "shorthand");
       false_is_assert(shorthand);
