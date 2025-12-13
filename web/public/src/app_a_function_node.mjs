@@ -196,7 +196,10 @@ export function app_a_function_node(a) {
         app_a_nodes_list(a, elements, parent);
       }
     },
-    ["IfStatement"]: function lambda18() {},
+    ["IfStatement"]: function lambda18() {
+      log({
+        node,
+      });},
   };
   let value = object_property_get(lookup, type);
   value();
