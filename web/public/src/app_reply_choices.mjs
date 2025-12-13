@@ -73,6 +73,7 @@ export function app_reply_choices() {
   };
   let greetings = app_reply_response_greetings();
   let hru = app_reply_response_how_r_u();
+  let how_family = app_reply_response_how_family();
   let v = [
     {
       text: emoji_pray() + " Amazing",
@@ -183,7 +184,7 @@ export function app_reply_choices() {
     },
     {
       text: app_reply_how_r_u() + " " + app_reply_how_family(),
-      response: list_join_newline_2([how_r_u]),
+      response: list_join_newline_2([how_r_u, how_family]),
     },
     {
       text: emoji_pray() + " Invite",
