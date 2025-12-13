@@ -3,7 +3,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { ebible_version_chapters_cache } from "../../../love/public/src/ebible_version_chapters_cache.mjs";
 export async function sandbox() {
-  let languages = ebible_languages();
+  let languages = ebible_languages();laa
   async function lambda2(item) {
     let bible_folder = object_property_get(language, "bible_folder");
     let v = await ebible_version_chapters_cache(bible_folder);
