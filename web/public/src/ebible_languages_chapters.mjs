@@ -2,7 +2,7 @@ import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs"
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_version_chapters_cache } from "../../../love/public/src/ebible_version_chapters_cache.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { ebible_language_original } from "../../../love/public/src/ebible_language_original.mjs";
+import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 export async function ebible_languages_chapters() {
@@ -10,7 +10,7 @@ export async function ebible_languages_chapters() {
   async function lambda(la) {
     async function lambda2(language) {
       let bible_folder = object_property_get(language, "bible_folder");
-      let right = ebible_language_original();
+      let right = bible_interlinear_verses_upload_folder();
       if (equal(bible_folder, right)) {
         return;
       }
