@@ -8,11 +8,12 @@ export async function cache_file(
   cache_save,
 ) {
   marker("1");
-  return await cache_generic(
+  let v = await cache_generic(
     key_get,
     cached_exists,
     cached_get,
     value_get,
     cache_save,
   );
+  return v;
 }
