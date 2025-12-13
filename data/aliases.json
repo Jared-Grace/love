@@ -82,7 +82,6 @@
   "ssc": "string_split_comma",
   "fnt": "function_new_transform",
   "jps": "js_parse_statement",
-  "fc": "functions_combine",
   "lm": "list_map",
   "lmu": "list_map_unordered_async",
   "lmp": "list_map_property",
