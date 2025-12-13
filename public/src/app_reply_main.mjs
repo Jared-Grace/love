@@ -125,10 +125,6 @@ export async function app_reply_main() {
     preview_refresh();
   }
   let component3 = html_button(root, "Clear", lambda14);
-  function lambda15() {
-    let removed = list_remove_last(copied);
-  }
-  let component5 = html_button(root, "Remove", lambda15);
   html_button(root, "Reset 1", verse_random_reset_1);
   let r = range_1(5);
   let mapped = list_map(r, double);
