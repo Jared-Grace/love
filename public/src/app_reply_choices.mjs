@@ -1,3 +1,4 @@
+import { app_reply_how_r_u } from "../../../love/public/src/app_reply_how_r_u.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { prayer_blessing_expand } from "../../../love/public/src/prayer_blessing_expand.mjs";
 import { app_reply_response_how_r_u_skip_before } from "../../../love/public/src/app_reply_response_how_r_u_skip_before.mjs";
@@ -167,7 +168,7 @@ export function app_reply_choices() {
       response: emoji_pray() + "Please pray for my family",
     },
     {
-      text: emoji_ok() + "How r u",
+      text: app_reply_how_r_u(),
       response: app_reply_response_how_r_u(),
     },
     {
