@@ -1,3 +1,4 @@
+import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { app_a_braces_wrap_node } from "../../../love/public/src/app_a_braces_wrap_node.mjs";
 import { js_keyword_if } from "../../../love/public/src/js_keyword_if.mjs";
 import { a_brackets_wrap } from "../../../love/public/src/a_brackets_wrap.mjs";
@@ -196,6 +197,7 @@ export function app_a_function_node(a) {
       }
       app_a_parenthesis_wrap(parent, lambda19);
       let consequent = object_property_get(node, "consequent");
+      let nn = null_not_is(value4);
       $inn;
       app_a_braces_wrap_node(a, consequent, parent);
       app_a_braces_wrap_node(a, alternate, parent);
