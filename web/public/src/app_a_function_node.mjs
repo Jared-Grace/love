@@ -170,7 +170,6 @@ export function app_a_function_node(a) {
       equal_assert(kind2, "init");
       let key = object_property_get(node, "key");
       let v3 = js_code_bracket_close();
-      let code = js_code_bracket_open() + inside + js_code_bracket_close();
       let v22 = js_code_bracket_open();
       app_a_function_node_child(a, key);
       let c = js_code_colon();
