@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { app_a_braces_wrap_node } from "../../../love/public/src/app_a_braces_wrap_node.mjs";
 import { js_keyword_if } from "../../../love/public/src/js_keyword_if.mjs";
@@ -175,6 +176,8 @@ export function app_a_function_node(a) {
       false_is_assert(method);
       let computed = object_property_get(node, "computed");
       false_is_assert(computed);
+      if (not(b)) {
+      }
       let value3 = object_property_get(node, "value");
       app_a_function_node_child(a, value3);
       app_a_comma(parent);
