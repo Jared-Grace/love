@@ -167,8 +167,8 @@ export function app_a_function_node(a) {
       equal_assert(kind2, "init");
       let key = object_property_get(node, "key");
       app_a_function_node_child(a, key);
-      let v22 = js_code_colon();
-      html_span_space(parent2);
+      let c = js_code_colon();
+      html_span_space(c);
       let shorthand = object_property_get(node, "shorthand");
       false_is_assert(shorthand);
       let method = object_property_get(node, "method");
