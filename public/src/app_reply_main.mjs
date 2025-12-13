@@ -1,4 +1,3 @@
-import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
 import { double } from "../../../love/public/src/double.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
