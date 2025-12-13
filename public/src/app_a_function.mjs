@@ -10,7 +10,7 @@ import { emoji_search } from "../../../love/public/src/emoji_search.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
-import { app_a_api } from "../../../love/public/src/app_a_api.mjs";
+import { app_api } from "../../../love/public/src/app_api.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 export async function app_a_function(context) {
@@ -25,7 +25,7 @@ export async function app_a_function(context) {
   app_a_control_style(b);
   app_karate_button_uncolored_style_assign(b);
   let function_name = fn_name("function_read");
-  let code = await app_a_api(function_name, [f_name]);
+  let code = await app_api(function_name, [f_name]);
   let div = html_div(root);
   html_font_jetbrains_mono(div);
   html_style_assign(div, {
