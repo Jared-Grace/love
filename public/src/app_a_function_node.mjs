@@ -207,6 +207,7 @@ export function app_a_function_node(a) {
       app_a_braces_wrap_node(a, alternate, parent);
     },
     ["LogicalExpression"]: binary,
+    ["AssignmentExpression"]: () => {},
   };
   function binary() {
     let left = object_property_get(node, "left");
