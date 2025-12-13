@@ -1,3 +1,4 @@
+import { app_a_braces_wrap } from "../../../love/public/src/app_a_braces_wrap.mjs";
 import { js_code_equals_padded } from "../../../love/public/src/js_code_equals_padded.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_a_nodes_list } from "../../../love/public/src/app_a_nodes_list.mjs";
@@ -41,9 +42,7 @@ export function app_a_function_node(a) {
       let source = object_property_get(node, "source");
       let text = js_keyword_import();
       app_a_keyword_purple(parent, text);
-      let s = app_a_brace_left(parent);
-      inner();
-      let span2 = app_a_brace_right(parent);
+      app_a_braces_wrap(parent, inner);
       let text2 = js_keyword_from();
       app_a_keyword_purple_space(parent, text2);
       app_a_function_node_child(a, source);
