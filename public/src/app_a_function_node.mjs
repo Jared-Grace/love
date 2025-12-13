@@ -137,7 +137,7 @@ export function app_a_function_node(a) {
       app_a_nodes_list(a, declarations, parent);
       app_a_semicolon(parent);
     },
-    ["VariableDeclarator"]: () => {},
+    ["VariableDeclarator"]: function lambda13() {},
   };
   let value = object_property_get(lookup, type);
   value();
