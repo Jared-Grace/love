@@ -7,10 +7,10 @@ import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
 export async function invoke_cache_storage_local(fn, args) {
   marker("1");
   let key_get = invoke_cache_key_get(fn, args);
-  async function value_get() {
+  let value_get = async function lambda() {
     let v = await fn(...args);
     return v;
-  }
+  };
   let cached_exists = function lambda3(key) {
     let exists = storage_local_exists(invoke_cache_storage_local, key);
     return exists;
