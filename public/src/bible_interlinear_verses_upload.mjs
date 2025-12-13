@@ -6,11 +6,11 @@ import { ebible_firebase_upload_verse } from "../../../love/public/src/ebible_fi
 export async function bible_interlinear_verses_upload() {
   let chapters = await bible_interlinear_chapters();
   let bible_folder = bible_interlinear_verses_upload_folder();
-  async function lambda6(chapter_verses, chapter_code) {
+  async function lambda6(verses, chapter_code) {
     async function lambda5(verse) {
       await ebible_firebase_upload_verse(verse, chapter_code, bible_folder);
     }
-    let waited = await list_map_unordered_async(chapter_verses, lambda5);
+    let waited = await list_map_unordered_async(verses, lambda5);
   }
   await each_object_async(chapters, lambda6);
 }
