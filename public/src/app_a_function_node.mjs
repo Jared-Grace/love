@@ -144,7 +144,7 @@ export function app_a_function_node(a) {
     },
     ["VariableDeclaration"]: function lambda11() {
       let kind = object_property_get(node, "kind");
-      app_a_keyword_blue_space(parent2, v22);
+      app_a_keyword_blue_space(parent, kind);
       let declarations = object_property_get(node, "declarations");
       log({
         node,
