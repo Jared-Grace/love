@@ -15,4 +15,5 @@ export async function ebible_version_chapters(bible_folder) {
     }
   }
   let list = await list_adder_async(lambda);
+  return list;
 }
