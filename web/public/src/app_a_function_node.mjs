@@ -150,6 +150,7 @@ export function app_a_function_node(a) {
       let init = object_property_get(node, "init");
       app_a_function_node_child(a, init);
     },
+    ["ObjectExpression"]: () => {},
   };
   let value = object_property_get(lookup, type);
   value();
