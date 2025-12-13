@@ -1,3 +1,4 @@
+import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { app_a_braces_wrap } from "../../../love/public/src/app_a_braces_wrap.mjs";
 import { js_code_equals_padded } from "../../../love/public/src/js_code_equals_padded.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -161,6 +162,7 @@ export function app_a_function_node(a) {
     },
     ["Property"]: function lambda14() {
       let kind2 = object_property_get(node, "kind");
+      equal_assert(left, right);
       false_is_assert(enabled);
       let key = object_property_get(node, "key");
       let shorthand = object_property_get(node, "shorthand");
