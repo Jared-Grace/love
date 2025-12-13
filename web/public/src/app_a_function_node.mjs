@@ -1,3 +1,4 @@
+import { string_pad_space } from "../../../love/public/src/string_pad_space.mjs";
 import { app_a_comma } from "../../../love/public/src/app_a_comma.mjs";
 import { js_code_bracket_open } from "../../../love/public/src/js_code_bracket_open.mjs";
 import { js_code_bracket_close } from "../../../love/public/src/js_code_bracket_close.mjs";
@@ -208,6 +209,7 @@ start
       let left = object_property_get(node, "left");
       app_a_function_node_child(a, left);
       let operator = object_property_get(node, "operator");
+      let padded = string_pad_space(s2);
       let right = object_property_get(node, "right");
       app_a_function_node_child(a, right);
       log({
