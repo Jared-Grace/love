@@ -128,6 +128,10 @@ export function app_reply_choices() {
       response: app_reply_choices_give(),
     },
     {
+      text: app_reply_greetings(),
+      response: greetings,
+    },
+    {
       text: app_reply_greetings() + " " + app_reply_how_r_u(),
       response: list_join_newline_2([greetings, hru]),
     },
@@ -173,7 +177,7 @@ export function app_reply_choices() {
     },
     {
       text: app_reply_how_r_u(),
-      response: app_reply_response_how_r_u(),
+      response: how_r_u,
     },
     {
       text: emoji_pray() + " Invite",
