@@ -96,8 +96,8 @@ export function app_a_function_node(a) {
         let params = object_property_get(node, "params");
         app_a_nodes_list(a, params, parent);
       }
-      let s = app_a_brace_left(parent);
       let body2 = object_property_get(node, "body");
+      let s = app_a_brace_left(parent);
       app_a_function_node_child(a, body2);
       let span2 = app_a_brace_right(parent);
     },
