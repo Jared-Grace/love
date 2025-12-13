@@ -196,20 +196,6 @@ export function app_a_function_node(a) {
       }
     },
     ["IfStatement"]: function lambda18() {
-      `alternate
-: 
-null
-consequent
-: 
-Node {type: 'BlockStatement', start: 4672, end: 4703, body: Array(1)}
-end
-: 
-4703
-start
-: 
-4659
-test
-:`;
       log({
         node,
       });
@@ -222,6 +208,8 @@ test
         app_a_function_node_child(a, test);
       }
       app_a_parenthesis_wrap(parent, lambda19);
+      app_a_braces_wrap_node(a, consequent, parent);
+      app_a_braces_wrap_node(a, alternate, parent);
     },
   };
   let value = object_property_get(lookup, type);
