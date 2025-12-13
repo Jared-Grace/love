@@ -1,8 +1,8 @@
+import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { ebible_version_chapters_cache } from "../../../love/public/src/ebible_version_chapters_cache.mjs";
-import { list_wait } from "./list_wait.mjs";
 export async function sandbox() {
   let languages = ebible_languages();
   async function lambda(la) {
@@ -14,7 +14,7 @@ export async function sandbox() {
         chapters,
       });
     }
-    await list_wait(languages, lambda2);
+    await list_map_unordered_async(languages, lambda2);
   }
   let all = await list_adder_async(lambda);
   return all;
