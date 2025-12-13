@@ -1,5 +1,4 @@
 import { app_a_nodes_list } from "../../../love/public/src/app_a_nodes_list.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { app_a_api_cache_global } from "../../../love/public/src/app_a_api_cache_global.mjs";
@@ -136,9 +135,7 @@ export function app_a_function_node(a) {
       app_a_keyword_blue_space(parent, kind);
       let declarations = object_property_get(node, "declarations");
       app_a_nodes_list(a, declarations, parent);
-      log({
-        declarations,
-      });
+      app_a_semicolon(parent);
     },
   };
   let value = object_property_get(lookup, type);
