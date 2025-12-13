@@ -143,6 +143,8 @@ export function app_a_function_node(a) {
       log({
         node,
       });
+      let id2 = object_property_get(node, "id");
+      let init = object_property_get(node, "init");
       let text3 = js_code_equals_padded();
       let span = html_span_text(parent, text3);
     },
