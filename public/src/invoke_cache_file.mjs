@@ -1,3 +1,4 @@
+import { json_to } from "../../../love/public/src/json_to.mjs";
 import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
@@ -6,12 +7,14 @@ import { global_function_property_set_exists_not } from "../../../love/public/sr
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { invoke_cache_global } from "../../../love/public/src/invoke_cache_global.mjs";
 import { invoke_cache_value_get } from "../../../love/public/src/invoke_cache_value_get.mjs";
-import { invoke_cache_key_get } from "../../../love/public/src/invoke_cache_key_get.mjs";
 import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function invoke_cache_file(fn, args) {
   marker("1");
-  let key_get = invoke_cache_key_get(fn, args);
+  let key_get = function lambda() {
+    let json = json_to([fn.name, args]);
+    return json;
+  };
   let value_get = invoke_cache_value_get(fn, args);
   let cached_exists = async function lambda3(key) {
     let f_path = folder_user_storage_function_path(fn);
