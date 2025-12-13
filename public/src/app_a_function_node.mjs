@@ -20,8 +20,6 @@ import { app_a_parenthesis_wrap } from "../../../love/public/src/app_a_parenthes
 import { js_keyword_await } from "../../../love/public/src/js_keyword_await.mjs";
 import { app_a_keyword_purple_space } from "../../../love/public/src/app_a_keyword_purple_space.mjs";
 import { app_a_body } from "../../../love/public/src/app_a_body.mjs";
-import { app_a_brace_right } from "../../../love/public/src/app_a_brace_right.mjs";
-import { app_a_brace_left } from "../../../love/public/src/app_a_brace_left.mjs";
 import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
 import { app_a_keyword_blue_space } from "../../../love/public/src/app_a_keyword_blue_space.mjs";
 import { js_keyword_async } from "../../../love/public/src/js_keyword_async.mjs";
@@ -97,10 +95,9 @@ export function app_a_function_node(a) {
         app_a_nodes_list(a, params, parent);
       }
       let body2 = object_property_get(node, "body");
-      let s = app_a_brace_left(parent);
-      app_a_function_node_child(a, body2);
-      let span2 = app_a_brace_right(parent);
-      function lambda20() {}
+      function lambda20() {
+        app_a_function_node_child(a, body2);
+      }
       app_a_braces_wrap(parent2, lambda20);
     },
     ["BlockStatement"]: function lambda7() {
