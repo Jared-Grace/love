@@ -94,7 +94,7 @@ export function app_a_function_node(a) {
       app_a_parenthesis_wrap(parent, inner);
       function inner() {
         let params = object_property_get(node, "params");
-        list_empty_is_assert(params);
+        app_a_nodes_list(a, params, parent);
       }
       let s = app_a_brace_left(parent);
       let body2 = object_property_get(node, "body");
