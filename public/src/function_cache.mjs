@@ -1,3 +1,4 @@
+import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { js_declaration_asyncify_params_from } from "../../../love/public/src/js_declaration_asyncify_params_from.mjs";
 import { js_code_call_args_await_maybe_declaration_return_add } from "../../../love/public/src/js_code_call_args_await_maybe_declaration_return_add.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
@@ -9,6 +10,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { invoke_cache_file } from "./invoke_cache_file.mjs";
 export async function function_cache(f_name) {
   marker("1");
+  let invoke = false;
   let { declaration: declaration_call, unaliased } =
     await function_parse_declaration(f_name);
   const c = invoke_cache_file.name;
@@ -16,6 +18,7 @@ export async function function_cache(f_name) {
   let f_name_cache = function_name_combine(unaliased, "cache");
   async function lambda(ast) {
     let arg_names = js_declaration_params_names(declaration_call);
+    let e = list_empty_is(list);
     let arg_names_code = json_to(arg_names);
     js_code_call_args_await_maybe_declaration_return_add(
       c,
