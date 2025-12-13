@@ -176,7 +176,7 @@ export function app_reply_choices() {
     },
     {
       text: app_reply_how_family(),
-      response: app_reply_response_how_family(),
+      response: how_family,
     },
     {
       text: app_reply_how_r_u(),
