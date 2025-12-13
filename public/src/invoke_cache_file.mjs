@@ -3,7 +3,6 @@ import { folder_user_storage_function_path } from "../../../love/public/src/fold
 import { global_function_property_set_exists_not } from "../../../love/public/src/global_function_property_set_exists_not.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { invoke_cache_global } from "../../../love/public/src/invoke_cache_global.mjs";
-import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
 import { invoke_cache_value_get } from "../../../love/public/src/invoke_cache_value_get.mjs";
 import { invoke_cache_key_get } from "../../../love/public/src/invoke_cache_key_get.mjs";
 import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
@@ -14,8 +13,7 @@ export async function invoke_cache_file(fn, args) {
   let value_get = invoke_cache_value_get(fn, args);
   let cached_exists = async function lambda3(key) {
     let path = folder_user_storage_function_path(fn);
-    let exists2 = await file_exists(file_path);
-    let exists = global_function_property_exists(invoke_cache_global, key);
+    let exists = await file_exists(path);
     return exists;
   };
   let cached_get = async function lambda2(key) {
