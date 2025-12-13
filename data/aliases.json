@@ -281,6 +281,7 @@
   "hss": "html_style_set",
   "hssp": "html_span_space",
   "lfi": "list_first_is",
-  "fia": "false_is_assert"
+  "fia": "false_is_assert",
+  "fle": "file_exists"
  }
 }
