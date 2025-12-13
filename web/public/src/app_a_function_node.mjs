@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { app_a_api_cache_global } from "../../../love/public/src/app_a_api_cache_global.mjs";
@@ -141,7 +142,9 @@ export function app_a_function_node(a) {
       }
       html_on_pointerdown(span3, lambda12);
     },
-    ["VariableDeclaration"]: function lambda11() {$l},
+    ["VariableDeclaration"]: function lambda11() {
+      log({});
+    },
   };
   let value = object_property_get(lookup, type);
   value();
