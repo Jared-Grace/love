@@ -1,13 +1,11 @@
+import { app_a_nodes_list } from "../../../love/public/src/app_a_nodes_list.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { app_a_api_cache_global } from "../../../love/public/src/app_a_api_cache_global.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
-import { list_last_not_is } from "../../../love/public/src/list_last_not_is.mjs";
-import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { app_a_semicolon } from "../../../love/public/src/app_a_semicolon.mjs";
-import { js_code_comma } from "../../../love/public/src/js_code_comma.mjs";
 import { app_a_parenthesis_wrap } from "../../../love/public/src/app_a_parenthesis_wrap.mjs";
 import { js_keyword_await } from "../../../love/public/src/js_keyword_await.mjs";
 import { app_a_keyword_purple_space } from "../../../love/public/src/app_a_keyword_purple_space.mjs";
@@ -112,16 +110,7 @@ export function app_a_function_node(a) {
       let arguments2 = object_property_get(node, "arguments");
       app_a_parenthesis_wrap(parent, inner);
       function inner() {
-        function lambda(arg) {
-          app_a_function_node_child(a, arg);
-          let c = js_code_comma();
-          let n = list_last_not_is(arguments2, arg);
-          if (n) {
-            let span = html_span_text(parent, c);
-            html_span_space(parent);
-          }
-        }
-        each(arguments2, lambda);
+        app_a_nodes_list(a, arguments2, parent);
       }
     },
     ["Identifier"]: function lambda9() {
