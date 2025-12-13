@@ -205,9 +205,11 @@ Node {type: 'Literal', start: 4284, end: 4288, value: ' }', raw: '" }"'}
 start
 : 
 4226`;
-      let right = object_property_get(node, "right");
       let left = object_property_get(node, "left");
+      app_a_function_node_child(a, left);
       let operator = object_property_get(node, "operator");
+      let right = object_property_get(node, "right");
+      app_a_function_node_child(a, right);
       log({
         node,
       });
