@@ -61,8 +61,7 @@ export async function app_reply_main() {
   firebase_name_jg();
   let en = ebible_folder_english();
   let original = bible_interlinear_verses_upload_folder();
-  let v3 = bible_interlinear_verses_upload_folder();
-  list_remove_property_multiple(languages, "language_code", ["en", v3]);
+  list_remove_property_multiple(languages, "language_code", ["en", original]);
   let file_name = ebible_index_flat_upload_name();
   let index = await firebase_storage_download_ebible(en, file_name);
   let books = await ebible_version_books(en);
