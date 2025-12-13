@@ -163,9 +163,6 @@ export function app_a_function_node(a) {
         app_a_body_inner(parent, properties, a);
       }
       app_a_braces_wrap(parent, lambda16);
-      log({
-        node,
-      });
     },
     ["Property"]: function lambda14() {
       let kind2 = object_property_get(node, "kind");
