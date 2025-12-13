@@ -1,3 +1,4 @@
+import { app_reply_greetings } from "../../../love/public/src/app_reply_greetings.mjs";
 import { app_reply_how_r_u } from "../../../love/public/src/app_reply_how_r_u.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { prayer_blessing_expand } from "../../../love/public/src/prayer_blessing_expand.mjs";
@@ -124,7 +125,7 @@ export function app_reply_choices() {
       response: app_reply_choices_give(),
     },
     {
-      text: emoji_wave() + " Greetings",
+      text: app_reply_greetings(),
       response: app_reply_response_greetings(),
     },
     {
