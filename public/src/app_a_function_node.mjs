@@ -1,3 +1,4 @@
+import { app_a_body_inner } from "../../../love/public/src/app_a_body_inner.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { js_code_colon } from "../../../love/public/src/js_code_colon.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
@@ -155,7 +156,7 @@ export function app_a_function_node(a) {
     ["ObjectExpression"]: function lambda14() {
       function lambda16() {
         let properties = object_property_get(node, "properties");
-        app_a_body(a, properties, parent);
+        app_a_body_inner(parent, properties, a);
       }
       app_a_braces_wrap(parent, lambda16);
       log({
