@@ -194,14 +194,17 @@ export function app_a_function_node(a) {
     ["ArrayExpression"]: function lambda17() {
       let b = js_code_bracket_open();
       let span5 = html_span_text(parent, b);
-      app_a_function_node_child(a, key);
-      let elements = object_property_get(node, "elements");
-      app_a_nodes_list(a, params, parent);
+      inner();
       let v3 = js_code_bracket_close();
       let span6 = html_span_text(parent, v3);
       log({
         node,
       });
+      function inner() {
+        app_a_function_node_child(a, key);
+        let elements = object_property_get(node, "elements");
+        app_a_nodes_list(a, elements, parent);
+      }
     },
   };
   let value = object_property_get(lookup, type);
