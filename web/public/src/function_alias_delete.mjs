@@ -6,7 +6,7 @@ export async function function_alias_delete(alias_old) {
   function lambda(a) {
     let { exists, aliases } = a;
     if (not(exists)) {
-      error();
+      error("alias does not exist");
     }
     object_property_delete(aliases, alias_old);
   }
