@@ -282,6 +282,7 @@
   "lfi": "list_first_is",
   "fia": "false_is_assert",
   "fle": "file_exists",
-  "frp": "function_replace"
+  "frp": "function_replace",
+  "fc": "function_cache"
  }
 }
