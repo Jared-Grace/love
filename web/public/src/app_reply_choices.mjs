@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { prayer_blessing_expand } from "../../../love/public/src/prayer_blessing_expand.mjs";
 import { app_reply_response_how_r_u_skip_before } from "../../../love/public/src/app_reply_response_how_r_u_skip_before.mjs";
 import { app_reply_pray_help_generic } from "../../../love/public/src/app_reply_pray_help_generic.mjs";
@@ -44,6 +45,7 @@ import { prayer_start } from "../../../love/public/src/prayer_start.mjs";
 import { prayer_end } from "../../../love/public/src/prayer_end.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 export function app_reply_choices() {
+  marker("1");
   let education = app_reply_pray(
     "Education",
     "provide education to those in need 🏫",
