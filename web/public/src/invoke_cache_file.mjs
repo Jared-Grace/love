@@ -27,7 +27,7 @@ export async function invoke_cache_file(fn, args) {
     let data = await file_read_json(key);
     return data;
   };
-  let cache_save = function lambda4(key, value) {
+  let cache_save = function lambda4(key, value) {foj
     let v2 = global_function_property_set_exists_not(
       invoke_cache_global,
       key,
