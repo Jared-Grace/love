@@ -184,7 +184,7 @@ export function app_reply_choices() {
     },
     {
       text: app_reply_how_r_u() + " " + app_reply_how_family(),
-      response: list_join_newline_2([how_r_u, how_family]),
+      response: list_join_newline_2([hru, how_family]),
     },
     {
       text: emoji_pray() + " Invite",
