@@ -205,7 +205,8 @@ export function app_a_function_node(a) {
     ["ArrayExpression"]: function lambda17() {
       log({
         node,
-      });},
+      });
+    },
   };
   let value = object_property_get(lookup, type);
   value();
