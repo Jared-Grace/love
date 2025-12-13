@@ -1,3 +1,4 @@
+import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
@@ -27,7 +28,8 @@ export async function invoke_cache_file(fn, args) {
     let data = await file_read_json(key);
     return data;
   };
-  let cache_save = function lambda4(key, value) {foj
+  let cache_save = async function lambda4(key, value) {
+    await file_overwrite_json(file_path, object);
     let v2 = global_function_property_set_exists_not(
       invoke_cache_global,
       key,
