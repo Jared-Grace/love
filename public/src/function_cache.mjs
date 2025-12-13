@@ -1,3 +1,4 @@
+import { js_declaration_asyncify_params_from } from "../../../love/public/src/js_declaration_asyncify_params_from.mjs";
 import { js_code_call_args_await_maybe_declaration_return_add } from "../../../love/public/src/js_code_call_args_await_maybe_declaration_return_add.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
@@ -22,6 +23,7 @@ export async function function_cache(f_name) {
       declaration_cache,
       ast,
     );
+    await js_declaration_asyncify_params_from(ast, declaration_call);
   }
   let v = await function_new_transform(f_name_cache, lambda);
 }
