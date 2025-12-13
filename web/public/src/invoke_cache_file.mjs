@@ -1,3 +1,4 @@
+import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { folder_user_storage_function_path } from "../../../love/public/src/folder_user_storage_function_path.mjs";
@@ -14,6 +15,7 @@ export async function invoke_cache_file(fn, args) {
   let value_get = invoke_cache_value_get(fn, args);
   let cached_exists = async function lambda3(key) {
     let f_path = folder_user_storage_function_path(fn);
+    let file_name = file_name_json(name);
     let joined = path_join([f_path, key]);
     let exists = await file_exists(f_path);
     return exists;
