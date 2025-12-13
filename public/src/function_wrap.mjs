@@ -1,12 +1,9 @@
+import { js_declaration_asyncify_params_from } from "../../../love/public/src/js_declaration_asyncify_params_from.mjs";
 import { js_code_call_args_await_maybe_declaration_return_add } from "../../../love/public/src/js_code_call_args_await_maybe_declaration_return_add.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { object_property_from } from "../../../love/public/src/object_property_from.mjs";
-import { js_declaration_asyncify } from "../../../love/public/src/js_declaration_asyncify.mjs";
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
-import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
-import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
 export async function function_wrap(f_name, f_name_wrapped) {
   marker("1");
   let { declaration: declaration_call, unaliased } =
@@ -21,9 +18,6 @@ export async function function_wrap(f_name, f_name_wrapped) {
       declaration_call,
       ast,
     );
-    let declaration = js_declaration_single(ast);
-    js_declaration_asyncify(declaration, declaration_call);
-    object_property_from(declaration, "params", declaration_call);
-    await js_imports_missing_add(ast);
+    await js_declaration_asyncify_params_from(ast, declaration_call);
   }
 }
