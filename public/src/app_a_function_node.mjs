@@ -196,7 +196,6 @@ export function app_a_function_node(a) {
         node,
       });
       function inner() {
-        app_a_function_node_child(a, key);
         let elements = object_property_get(node, "elements");
         app_a_nodes_list(a, elements, parent);
       }
