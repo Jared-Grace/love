@@ -155,7 +155,9 @@ export function app_a_function_node(a) {
       let shorthand = object_property_get(node, "shorthand");
       let method = object_property_get(node, "method");
       let computed = object_property_get(node, "computed");
-      function lambda16() {}
+      function lambda16() {
+        let properties = object_property_get(node, "properties");
+      }
       app_a_braces_wrap(parent, lambda16);
       log({
         node,
