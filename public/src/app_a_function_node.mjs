@@ -144,9 +144,11 @@ export function app_a_function_node(a) {
         node,
       });
       let id = object_property_get(node, "id");
-      let init = object_property_get(node, "init");
+      app_a_function_node_child(a, id);
       let text3 = js_code_equals_padded();
       let span = html_span_text(parent, text3);
+      let init = object_property_get(node, "init");
+      app_a_function_node_child(a, init);
     },
   };
   let value = object_property_get(lookup, type);
