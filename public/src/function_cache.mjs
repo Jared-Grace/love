@@ -33,5 +33,5 @@ export async function function_cache(f_name) {
     await js_declaration_asyncify_params_from(ast, declaration_call);
   }
   let v = await function_new_transform(f_name_cache, lambda);
-  let result = await function_run(f_name2, args);
+  let result = await function_run(unaliased, []);
 }
