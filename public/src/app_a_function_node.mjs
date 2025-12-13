@@ -211,7 +211,7 @@ export function app_a_function_node(a) {
       app_a_braces_wrap_node(a, consequent, parent);
       app_a_braces_wrap_node(a, alternate, parent);
     },
-    ["LogicalExpression"]: () => {},
+    ["LogicalExpression"]: function lambda20() {},
   };
   let value = object_property_get(lookup, type);
   value();
