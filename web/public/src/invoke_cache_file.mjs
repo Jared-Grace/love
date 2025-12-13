@@ -13,8 +13,8 @@ export async function invoke_cache_file(fn, args) {
   marker("1");
   let key_get = function lambda() {
     let json = json_to([fn.name, args]);
+    let file_name = file_name_json(json);
     let f_path = folder_user_storage_function_path(fn);
-    let file_name = file_name_json(key);
     let joined = path_join([f_path, file_name]);
     return joined;
   };
