@@ -1,4 +1,4 @@
-import { file_read } from "../../../love/public/src/file_read.mjs";
+import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
@@ -25,7 +25,7 @@ export async function invoke_cache_file(fn, args) {
     return exists;
   };
   let cached_get = async function lambda2(key) {
-    let contents = await file_read(file_path);
+    let data = await file_read_json(file_path);
     let value = await global_function_property_get(invoke_cache_global, key);
     return value;
   };
