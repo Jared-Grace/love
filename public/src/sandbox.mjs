@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -13,6 +14,7 @@ export async function sandbox() {
         bible_folder,
         chapters,
       });
+      log(message);
     }
     await each_unordered_async(languages, lambda2);
   }
