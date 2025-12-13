@@ -14,7 +14,7 @@ import { js_code_equals_padded } from "../../../love/public/src/js_code_equals_p
 import { app_a_nodes_list } from "../../../love/public/src/app_a_nodes_list.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
-import { app_a_api_cache_global } from "../../../love/public/src/app_a_api_cache_global.mjs";
+import { app_api_cache_global } from "../../../love/public/src/app_api_cache_global.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { app_a_semicolon } from "../../../love/public/src/app_a_semicolon.mjs";
@@ -132,7 +132,7 @@ export function app_a_function_node(a) {
       async function lambda12() {
         let value2 = object_property_get(node, "value");
         let function_name = fn_name("functions_names");
-        let f_names = await app_a_api_cache_global(function_name, []);
+        let f_names = await app_api_cache_global(function_name, []);
         let includes = list_includes(f_names, value2);
         if (includes) {
           app_a_function_select(context, value2);
