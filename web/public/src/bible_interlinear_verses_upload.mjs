@@ -18,7 +18,8 @@ export async function bible_interlinear_verses_upload() {
     await each_object_async(chapters, lambda6);
   }
   let list = await list_adder_async(lambda);
-  await each_async(list2, async function lambda2(item) {});
+  async function lambda2(item) {}
+  await each_async(list2, lambda2);
   async function lambda5(verse) {
     await ebible_firebase_upload_verse(verse, chapter_code, bible_folder);
   }
