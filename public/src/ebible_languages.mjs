@@ -1,4 +1,4 @@
-import { ebible_language_original } from "../../../love/public/src/ebible_language_original.mjs";
+import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { ebible_folder_urdu } from "../../../love/public/src/ebible_folder_urdu.mjs";
 export function ebible_languages() {
@@ -10,7 +10,7 @@ export function ebible_languages() {
     },
     {
       name: "Original",
-      bible_folder: ebible_language_original(),
+      bible_folder: bible_interlinear_verses_upload_folder(),
       language_code: "original",
     },
     {
