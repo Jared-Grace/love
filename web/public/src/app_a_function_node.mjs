@@ -205,9 +205,10 @@ export function app_a_function_node(a) {
     },
     ["LogicalExpression"]: binary,
     ["AssignmentExpression"]: function lambda15() {
-        log({
-          test,
-        });},
+      log({
+        test,
+      });
+    },
   };
   function binary() {
     let left = object_property_get(node, "left");
