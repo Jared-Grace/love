@@ -221,6 +221,7 @@ test
       let test = object_property_get(node, "test");
       let k = js_keyword_if();
       app_a_keyword_blue_space(parent, k);
+      app_a_parenthesis_wrap(parent2, inner2);
     },
   };
   let value = object_property_get(lookup, type);
