@@ -13,9 +13,9 @@ export async function invoke_cache_file(fn, args) {
   let key_get = invoke_cache_key_get(fn, args);
   let value_get = invoke_cache_value_get(fn, args);
   let cached_exists = async function lambda3(key) {
-    let path = folder_user_storage_function_path(fn);
-    let joined = path_join(segments);
-    let exists = await file_exists(path);
+    let f_path = folder_user_storage_function_path(fn);
+    let joined = path_join([f_path, key]);
+    let exists = await file_exists(f_path);
     return exists;
   };
   let cached_get = async function lambda2(key) {
