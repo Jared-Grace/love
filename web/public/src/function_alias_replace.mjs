@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { string_is_assert } from "../../../love/public/src/string_is_assert.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -6,6 +7,7 @@ import { object_property_delete } from "../../../love/public/src/object_property
 import { error } from "../../../love/public/src/error.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 export async function function_alias_replace(alias_old, f_name) {
+  each(list, function lambda2(item) {});
   string_is_assert(f_name);
   marker("1");
   function lambda(a) {
