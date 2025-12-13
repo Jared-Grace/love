@@ -15,6 +15,7 @@ export async function sandbox() {
         return;
       }
       let bible_folder = object_property_get(language, "bible_folder");
+      log("message2");
       let chapters = await ebible_version_chapters_cache(bible_folder);
       la({
         bible_folder,
