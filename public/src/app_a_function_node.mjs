@@ -1,3 +1,4 @@
+import { js_keyword_if } from "../../../love/public/src/js_keyword_if.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { a_brackets_wrap } from "../../../love/public/src/a_brackets_wrap.mjs";
 import { string_pad_space } from "../../../love/public/src/string_pad_space.mjs";
@@ -218,6 +219,7 @@ test
       let alternate = object_property_get(node, "alternate");
       let consequent = object_property_get(node, "consequent");
       let test = object_property_get(node, "test");
+      let v3 = js_keyword_if();
       app_a_keyword_blue_space(parent, text5);
     },
   };
