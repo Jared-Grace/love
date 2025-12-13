@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_language_original } from "../../../love/public/src/ebible_language_original.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { log } from "../../../love/public/src/log.mjs";
