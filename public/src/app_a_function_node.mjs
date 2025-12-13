@@ -1,3 +1,4 @@
+import { js_code_equals_padded } from "../../../love/public/src/js_code_equals_padded.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_a_nodes_list } from "../../../love/public/src/app_a_nodes_list.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
@@ -142,6 +143,7 @@ export function app_a_function_node(a) {
       log({
         node,
       });
+      js_code_equals_padded();
     },
   };
   let value = object_property_get(lookup, type);
