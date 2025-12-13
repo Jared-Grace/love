@@ -161,7 +161,7 @@ export function app_a_function_node(a) {
     },
     ["Property"]: function lambda14() {
       let kind2 = object_property_get(node, "kind");
-      fia;
+      false_is_assert(enabled);
       let key = object_property_get(node, "key");
       let shorthand = object_property_get(node, "shorthand");
       let method = object_property_get(node, "method");
