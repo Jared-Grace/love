@@ -1,3 +1,4 @@
+import { ebible_language_original } from "../../../love/public/src/ebible_language_original.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
@@ -9,7 +10,9 @@ export async function sandbox() {
   let languages = ebible_languages();
   async function lambda(la) {
     async function lambda2(language) {
-      if (equal(left, right)) {
+      let right = ebible_language_original();
+      if (equal(language, right)) {
+        return;
       }
       let bible_folder = object_property_get(language, "bible_folder");
       let chapters = await ebible_version_chapters_cache(bible_folder);
