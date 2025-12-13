@@ -1,15 +1,12 @@
+import { invoke_cache_key_get } from "../../../love/public/src/invoke_cache_key_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { global_function_property_set_exists_not } from "../../../love/public/src/global_function_property_set_exists_not.mjs";
 import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
-import { json_to } from "../../../love/public/src/json_to.mjs";
 import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
 export async function invoke_cache_global(f_name, args) {
   marker("1");
-  let key_get = function lambda() {
-    let json = json_to([f_name, args]);
-    return json;
-  };
+  let key_get = invoke_cache_key_get(fn, args);
   async function value_get() {
     let f = eval(f_name);
     let v = await f(...args);
