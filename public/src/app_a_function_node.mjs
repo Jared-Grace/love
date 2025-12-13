@@ -163,12 +163,12 @@ export function app_a_function_node(a) {
     ["Property"]: function lambda14() {
       let kind2 = object_property_get(node, "kind");
       equal_assert(kind2, "init");
-      false_is_assert(enabled);
       let key = object_property_get(node, "key");
       app_a_function_node_child(a, key);
       let shorthand = object_property_get(node, "shorthand");
       let method = object_property_get(node, "method");
       let computed = object_property_get(node, "computed");
+      false_is_assert(computed);
       log({
         node,
       });
