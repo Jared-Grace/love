@@ -1,3 +1,4 @@
+import { app_a_braces_wrap_node } from "../../../love/public/src/app_a_braces_wrap_node.mjs";
 import { js_keyword_if } from "../../../love/public/src/js_keyword_if.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { a_brackets_wrap } from "../../../love/public/src/a_brackets_wrap.mjs";
@@ -95,10 +96,7 @@ export function app_a_function_node(a) {
         app_a_nodes_list(a, params, parent);
       }
       let body2 = object_property_get(node, "body");
-      function lambda20() {
-        app_a_function_node_child(a, body2);
-      }
-      app_a_braces_wrap(parent, lambda20);
+      app_a_braces_wrap_node(a, body2, parent);
     },
     ["BlockStatement"]: function lambda7() {
       app_a_body(node, parent, a);
