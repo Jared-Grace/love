@@ -201,11 +201,11 @@ export function app_a_function_node(a) {
       html_span_text(parent, padded);
       let right = object_property_get(node, "right");
       app_a_function_node_child(a, right);
+    },
+    ["ArrayExpression"]: function lambda17() {
       log({
         node,
-      });
-    },
-    ["ArrayExpression"]: function lambda17() {},
+      });},
   };
   let value = object_property_get(lookup, type);
   value();
