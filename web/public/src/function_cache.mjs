@@ -1,6 +1,5 @@
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
-import { js_code_wrap_brackets } from "../../../love/public/src/js_code_wrap_brackets.mjs";
 import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
@@ -16,11 +15,10 @@ export async function function_cache(f_name) {
   let f_name_cache = function_name_combine(unaliased, "cache");
   async function lambda(ast) {
     let arg_names = js_declaration_params_names(declaration_call);
-    let json = json_to(object);
-    let args = js_code_wrap_brackets(inside);
+    let arg_names_code = json_to(arg_names);
     let return_argument_code = js_code_call_args_await_maybe(
       c,
-      [unaliased, args],
+      [unaliased, arg_names_code],
       declaration_cache,
     );
   }
