@@ -42,16 +42,19 @@ export function app_a_function_node(a) {
       let text = js_keyword_import();
       app_a_keyword_purple(parent, text);
       let s = app_a_brace_left(parent);
-      let specifiers = object_property_get(node, "specifiers");
-      function lambda2(specifier) {
-        app_a_function_node_child(a, specifier);
-      }
-      each(specifiers, lambda2);
+      inner();
       let span2 = app_a_brace_right(parent);
       let text2 = js_keyword_from();
       app_a_keyword_purple_space(parent, text2);
       app_a_function_node_child(a, source);
       app_a_semicolon(parent);
+      function inner() {
+        let specifiers = object_property_get(node, "specifiers");
+        function lambda2(specifier) {
+          app_a_function_node_child(a, specifier);
+        }
+        each(specifiers, lambda2);
+      }
     },
     ["ImportSpecifier"]: function lambda6() {
       let imported = object_property_get(node, "imported");
