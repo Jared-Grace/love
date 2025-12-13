@@ -3,5 +3,6 @@ import { invoke_cache_file } from "../../../love/public/src/invoke_cache_file.mj
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function bible_interlinear_verses_cache() {
   marker("1");
-  return await invoke_cache_file(bible_interlinear_verses, []);
+  let v = await invoke_cache_file(bible_interlinear_verses, []);
+  return v;
 }
