@@ -34,7 +34,6 @@ export async function invoke_cache_file(fn, args) {
     await file_overwrite_json(key, {
       result,
     });
-    return v2;
   };
   let v = await cache_generic(
     key_get,
