@@ -11,7 +11,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { invoke_cache_file } from "./invoke_cache_file.mjs";
 export async function function_cache(f_name) {
   marker("1");
-  let invoke = false;
+  let args_none = false;
   let { declaration: declaration_call, unaliased } =
     await function_parse_declaration(f_name);
   const c = invoke_cache_file.name;
@@ -21,7 +21,7 @@ export async function function_cache(f_name) {
     let arg_names = js_declaration_params_names(declaration_call);
     let e = list_empty_is(list);
     if (e) {
-      invoke = true;
+      args_none = true;
     }
     let arg_names_code = json_to(arg_names);
     js_code_call_args_await_maybe_declaration_return_add(
@@ -33,7 +33,7 @@ export async function function_cache(f_name) {
     await js_declaration_asyncify_params_from(ast, declaration_call);
   }
   let v = await function_new_transform(f_name_cache, lambda);
-  if (invoke) {
+  if (args_none) {
     let v2 = await function_run(unaliased, []);
     return v2;
   }
