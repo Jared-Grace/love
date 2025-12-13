@@ -12,7 +12,7 @@ export async function function_alias_replace(alias_old, f_name) {
   function lambda(a) {
     let { exists, aliases } = a;
     if (not(exists)) {
-      error();
+      error("alias no exist");
     }
     object_property_delete(aliases, alias_old);
     object_property_set(aliases, alias_old, f_name);
