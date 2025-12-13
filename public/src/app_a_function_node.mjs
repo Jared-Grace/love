@@ -188,7 +188,6 @@ export function app_a_function_node(a) {
       }
     },
     ["IfStatement"]: function lambda18() {
-      let alternate = object_property_get(node, "alternate");
       let k = js_keyword_if();
       app_a_keyword_blue_space(parent, k);
       function lambda19() {
@@ -197,12 +196,12 @@ export function app_a_function_node(a) {
       }
       app_a_parenthesis_wrap(parent, lambda19);
       let consequent = object_property_get(node, "consequent");
-      let nn = null_not_is(consequent);
-      if (false) {
-      }
-      $inn;
       app_a_braces_wrap_node(a, consequent, parent);
-      app_a_braces_wrap_node(a, alternate, parent);
+      let alternate = object_property_get(node, "alternate");
+      let nn = null_not_is(alternate);
+      if (nn) {
+        app_a_braces_wrap_node(a, alternate, parent);
+      }
     },
     ["LogicalExpression"]: binary,
     ["AssignmentExpression"]: binary,
