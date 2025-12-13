@@ -19,6 +19,7 @@ export async function function_alias_add(first, second) {
     if (exists) {
       error_json({
         message: "alias already exists",
+        alias,
         unaliased,
       });
     }
