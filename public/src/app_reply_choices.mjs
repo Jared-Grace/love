@@ -1,3 +1,4 @@
+import { app_reply_how_family } from "../../../love/public/src/app_reply_how_family.mjs";
 import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
 import { app_reply_greetings } from "../../../love/public/src/app_reply_greetings.mjs";
 import { app_reply_how_r_u } from "../../../love/public/src/app_reply_how_r_u.mjs";
@@ -172,7 +173,7 @@ export function app_reply_choices() {
         " today is one day closer to the return of Jesus than yesterday!",
     },
     {
-      text: emoji_pray() + " How family",
+      text: app_reply_how_family(),
       response: emoji_pray() + "Please pray for my family",
     },
     {
