@@ -1,3 +1,4 @@
+import { bible_interlinear_verses_cache } from "../../../love/public/src/bible_interlinear_verses_cache.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_version_chapters_cache } from "../../../love/public/src/ebible_version_chapters_cache.mjs";
@@ -21,6 +22,8 @@ export async function ebible_languages_chapters() {
       });
     }
     await each_async(languages, lambda2);
+    let i = await bible_interlinear_verses_cache();
+    la(i);
   }
   let all = await list_adder_async(lambda);
   return all;
