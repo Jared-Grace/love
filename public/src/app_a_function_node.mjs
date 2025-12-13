@@ -170,7 +170,7 @@ export function app_a_function_node(a) {
       let kind2 = object_property_get(node, "kind");
       equal_assert(kind2, "init");
       let key = object_property_get(node, "key");
-      let b = js_code_bracket_open();
+      let b = js_code_bracket_open();$i
       let span5 = html_span_text(parent, b);
       app_a_function_node_child(a, key);
       if (false) {
