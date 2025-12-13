@@ -200,7 +200,7 @@ export function app_a_function_node(a) {
         app_a_nodes_list(a, elements, parent);
       }
     },
-    ["IfStatement"]: () => {},
+    ["IfStatement"]: function lambda18() {},
   };
   let value = object_property_get(lookup, type);
   value();
