@@ -195,15 +195,11 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, right);
     },
     ["ArrayExpression"]: function lambda17() {
-      if (false) {
-        let b = js_code_bracket_open();
-        let span5 = html_span_text(parent, b);
-      }
+      let b = js_code_bracket_open();
+      let span5 = html_span_text(parent, b);
       app_a_function_node_child(a, key);
-      if (false) {
-        let v3 = js_code_bracket_close();
-        let span6 = html_span_text(parent, v3);
-      }
+      let v3 = js_code_bracket_close();
+      let span6 = html_span_text(parent, v3);
       log({
         node,
       });
