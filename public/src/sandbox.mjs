@@ -5,11 +5,12 @@ import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs"
 import { ebible_version_chapters_cache } from "../../../love/public/src/ebible_version_chapters_cache.mjs";
 export async function sandbox() {
   let languages = ebible_languages();
-  async function lambda(la) {}
-  let list2 = await list_adder_async(lambda);
-  async function lambda2(item) {
-    let bible_folder = object_property_get(language, "bible_folder");
-    let v = await ebible_version_chapters_cache(bible_folder);
+  async function lambda(la) {
+    async function lambda2(language) {
+      let bible_folder = object_property_get(language, "bible_folder");
+      let v = await ebible_version_chapters_cache(bible_folder);
+    }
+    await each_async(languages, lambda2);
   }
-  await each_async(list, lambda2);
+  let list2 = await list_adder_async(lambda);
 }
