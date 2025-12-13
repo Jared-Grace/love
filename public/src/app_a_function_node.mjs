@@ -135,6 +135,7 @@ export function app_a_function_node(a) {
       let kind = object_property_get(node, "kind");
       app_a_keyword_blue_space(parent, kind);
       let declarations = object_property_get(node, "declarations");
+      app_a_nodes_list(a2, nodes, parent2);
       log({
         declarations,
       });
