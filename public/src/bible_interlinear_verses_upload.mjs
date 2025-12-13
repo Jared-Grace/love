@@ -10,5 +10,5 @@ export async function bible_interlinear_verses_upload() {
     }
     let waited = await list_map_unordered_async(verses, lambda5);
   }
-  await each_async(list, lambda2);
+  await each_async(chapters, lambda2);
 }
