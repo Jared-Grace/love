@@ -34,6 +34,7 @@ export async function function_cache(f_name) {
   }
   let v = await function_new_transform(f_name_cache, lambda);
   if (invoke) {
-    return await function_run(unaliased, []);
+    let v2 = await function_run(unaliased, []);
+    return v2;
   }
 }
