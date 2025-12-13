@@ -220,7 +220,8 @@ test
       let k = js_keyword_if();
       app_a_keyword_blue_space(parent, k);
       let test = object_property_get(node, "test");
-      app_a_parenthesis_wrap(parent, () => {});
+      function lambda19() {}
+      app_a_parenthesis_wrap(parent, lambda19);
     },
   };
   let value = object_property_get(lookup, type);
