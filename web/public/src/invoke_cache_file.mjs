@@ -1,3 +1,4 @@
+import { path_join } from "../../../love/public/src/path_join.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { folder_user_storage_function_path } from "../../../love/public/src/folder_user_storage_function_path.mjs";
 import { global_function_property_set_exists_not } from "../../../love/public/src/global_function_property_set_exists_not.mjs";
@@ -13,6 +14,7 @@ export async function invoke_cache_file(fn, args) {
   let value_get = invoke_cache_value_get(fn, args);
   let cached_exists = async function lambda3(key) {
     let path = folder_user_storage_function_path(fn);
+    let joined = path_join(segments);
     let exists = await file_exists(path);
     return exists;
   };
