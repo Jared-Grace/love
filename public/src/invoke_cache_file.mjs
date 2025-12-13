@@ -1,3 +1,4 @@
+import { file_path_safe_to } from "../../../love/public/src/file_path_safe_to.mjs";
 import { invoke_cache_key } from "../../../love/public/src/invoke_cache_key.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
@@ -16,6 +17,7 @@ export async function invoke_cache_file(fn, args) {
     let file_name = file_name_json(json);
     let f_path = folder_user_storage_function_path(fn);
     let joined = path_join([f_path, file_name]);
+    let safe = file_path_safe_to(fp);
     return joined;
   };
   let value_get = invoke_cache_value_get(fn, args);
