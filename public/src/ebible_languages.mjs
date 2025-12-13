@@ -1,3 +1,4 @@
+import { ebible_language_original } from "../../../love/public/src/ebible_language_original.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { ebible_folder_urdu } from "../../../love/public/src/ebible_folder_urdu.mjs";
 export function ebible_languages() {
@@ -9,7 +10,7 @@ export function ebible_languages() {
     },
     {
       name: "Original",
-      bible_folder: "original",
+      bible_folder: ebible_language_original(),
       language_code: "original",
     },
     {
