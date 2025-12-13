@@ -168,14 +168,15 @@ export function app_a_function_node(a) {
       let key = object_property_get(node, "key");
       app_a_function_node_child(a, key);
       let c = js_code_colon();
-      let span4 = html_span_text(parent2, text5);
-      html_span_space(c);
+      let span4 = html_span_text(parent, c);
+      html_span_space(parent);
       let shorthand = object_property_get(node, "shorthand");
       false_is_assert(shorthand);
       let method = object_property_get(node, "method");
       false_is_assert(method);
       let computed = object_property_get(node, "computed");
       false_is_assert(computed);
+      let value3 = object_property_get(node, "value");
       log({
         node,
       });
