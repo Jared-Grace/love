@@ -19,7 +19,7 @@ export async function function_cache(f_name) {
   let f_name_cache = function_name_combine(unaliased, "cache");
   async function lambda(ast) {
     let arg_names = js_declaration_params_names(declaration_call);
-    let e = list_empty_is(list);
+    let e = list_empty_is(arg_names);
     if (e) {
       args_none = true;
     }
