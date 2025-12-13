@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -9,4 +10,5 @@ export async function sandbox() {
     let v = await ebible_version_chapters_cache(bible_folder);
   }
   each(languages, lambda);
+  await each_async(list, async function lambda2(item) {});
 }
