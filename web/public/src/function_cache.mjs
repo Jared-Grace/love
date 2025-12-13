@@ -18,7 +18,7 @@ export async function function_cache(f_name) {
   let f_name_cache = function_name_combine(unaliased, "cache");
   async function lambda(ast) {
     let arg_names = js_declaration_params_names(declaration_call);
-    let e = list_empty_is(list);
+    let e = list_empty_is(list);$i
     let arg_names_code = json_to(arg_names);
     js_code_call_args_await_maybe_declaration_return_add(
       c,
