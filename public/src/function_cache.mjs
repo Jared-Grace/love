@@ -8,5 +8,5 @@ export async function function_cache(f_name) {
   let { declaration: declaration_call, unaliased } =
     await function_parse_declaration(f_name);
   async function lambda(ast) {}
-  let v = await function_new_transform(f_name2, lambda);
+  let v = await function_new_transform(f_name_cache, lambda);
 }
