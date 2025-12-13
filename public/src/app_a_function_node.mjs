@@ -1,3 +1,4 @@
+import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { js_code_colon } from "../../../love/public/src/js_code_colon.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { app_a_braces_wrap } from "../../../love/public/src/app_a_braces_wrap.mjs";
@@ -167,6 +168,7 @@ export function app_a_function_node(a) {
       let key = object_property_get(node, "key");
       app_a_function_node_child(a, key);
       let v22 = js_code_colon();
+      html_style_set(b, style_key, style_value);
       let shorthand = object_property_get(node, "shorthand");
       false_is_assert(shorthand);
       let method = object_property_get(node, "method");
