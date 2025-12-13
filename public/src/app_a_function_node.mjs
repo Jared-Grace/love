@@ -215,6 +215,9 @@ test
       log({
         node,
       });
+      let alternate = object_property_get(node, "alternate");
+      let consequent = object_property_get(node, "consequent");
+      let test = object_property_get(node, "test");
     },
   };
   let value = object_property_get(lookup, type);
