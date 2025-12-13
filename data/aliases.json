@@ -280,6 +280,7 @@
   "se": "functions_search_ends_with",
   "hss": "html_style_set",
   "hssp": "html_span_space",
-  "lfi": "list_first_is"
+  "lfi": "list_first_is",
+  "fia": "false_is_assert"
  }
 }
