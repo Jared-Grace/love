@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { a_brackets_wrap } from "../../../love/public/src/a_brackets_wrap.mjs";
 import { string_pad_space } from "../../../love/public/src/string_pad_space.mjs";
 import { app_a_comma } from "../../../love/public/src/app_a_comma.mjs";
@@ -199,7 +200,8 @@ export function app_a_function_node(a) {
     ["IfStatement"]: function lambda18() {
       log({
         node,
-      });},
+      });
+    },
   };
   let value = object_property_get(lookup, type);
   value();
