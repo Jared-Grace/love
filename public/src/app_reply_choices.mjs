@@ -1,3 +1,4 @@
+import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
 import { app_reply_greetings } from "../../../love/public/src/app_reply_greetings.mjs";
 import { app_reply_how_r_u } from "../../../love/public/src/app_reply_how_r_u.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -68,6 +69,8 @@ export function app_reply_choices() {
     text: emoji_pray() + " Bless",
     response: prayer_blessing_expand(),
   };
+  let greetings = app_reply_response_greetings();
+  let hru = app_reply_response_how_r_u();
   let v = [
     {
       text: emoji_pray() + " Amazing",
@@ -125,8 +128,8 @@ export function app_reply_choices() {
       response: app_reply_choices_give(),
     },
     {
-      text: app_reply_greetings(),
-      response: app_reply_response_greetings(),
+      text: app_reply_greetings() + " " + app_reply_how_r_u(),
+      response: list_join_newline_2([greetings, hru]),
     },
     {
       text: emoji_hands_raising() + " Hallelujah",
