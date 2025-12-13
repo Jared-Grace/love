@@ -22,7 +22,7 @@ export async function sandbox() {
       });
       log("message");
     }
-    await each_sync(languages, lambda2);
+    await each_async(languages, lambda2);
   }
   let all = await list_adder_async(lambda);
   return all;
