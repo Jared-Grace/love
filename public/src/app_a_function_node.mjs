@@ -218,6 +218,7 @@ test
       let alternate = object_property_get(node, "alternate");
       let consequent = object_property_get(node, "consequent");
       let test = object_property_get(node, "test");
+      app_a_keyword_blue_space(parent2, text5);
     },
   };
   let value = object_property_get(lookup, type);
