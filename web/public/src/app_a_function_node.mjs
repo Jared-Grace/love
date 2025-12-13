@@ -98,7 +98,7 @@ export function app_a_function_node(a) {
       function lambda20() {
         app_a_function_node_child(a, body2);
       }
-      app_a_braces_wrap(parent2, lambda20);
+      app_a_braces_wrap(parent, lambda20);
     },
     ["BlockStatement"]: function lambda7() {
       app_a_body(node, parent, a);
