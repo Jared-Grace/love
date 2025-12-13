@@ -177,6 +177,7 @@ export function app_a_function_node(a) {
       let computed = object_property_get(node, "computed");
       false_is_assert(computed);
       let value3 = object_property_get(node, "value");
+      app_a_function_node_child(a, value3);
       log({
         node,
       });
