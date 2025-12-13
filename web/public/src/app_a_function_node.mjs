@@ -206,7 +206,7 @@ export function app_a_function_node(a) {
     ["LogicalExpression"]: binary,
     ["AssignmentExpression"]: function lambda15() {
       log({
-        test,
+        node,
       });
     },
   };
