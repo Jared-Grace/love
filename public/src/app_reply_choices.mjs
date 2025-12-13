@@ -180,7 +180,7 @@ export function app_reply_choices() {
     },
     {
       text: app_reply_how_r_u(),
-      response: how_r_u,
+      response: hru,
     },
     {
       text: app_reply_how_r_u() + " " + app_reply_how_family(),
