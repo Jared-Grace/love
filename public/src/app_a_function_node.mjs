@@ -188,9 +188,6 @@ export function app_a_function_node(a) {
       }
     },
     ["IfStatement"]: function lambda18() {
-      log({
-        node,
-      });
       let alternate = object_property_get(node, "alternate");
       let consequent = object_property_get(node, "consequent");
       let k = js_keyword_if();
