@@ -282,6 +282,7 @@
   "hssp": "html_span_space",
   "lfi": "list_first_is",
   "fia": "false_is_assert",
-  "fle": "file_exists"
+  "fle": "file_exists",
+  "frp": "function_replace"
  }
 }
