@@ -197,9 +197,6 @@ export function app_a_function_node(a) {
       app_a_keyword_blue_space(parent, k);
       function lambda19() {
         let test = object_property_get(node, "test");
-        log({
-          test,
-        });
         app_a_function_node_child(a, test);
       }
       app_a_parenthesis_wrap(parent, lambda19);
@@ -207,7 +204,10 @@ export function app_a_function_node(a) {
       app_a_braces_wrap_node(a, alternate, parent);
     },
     ["LogicalExpression"]: binary,
-    ["AssignmentExpression"]: function lambda15() {},
+    ["AssignmentExpression"]: function lambda15() {
+        log({
+          test,
+        });},
   };
   function binary() {
     let left = object_property_get(node, "left");
