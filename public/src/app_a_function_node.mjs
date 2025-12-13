@@ -148,6 +148,11 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, init);
     },
     ["ObjectExpression"]: function lambda14() {
+      let kind2 = object_property_get(node, "kind");
+      let key = object_property_get(node, "key");
+      let shorthand = object_property_get(node, "shorthand");
+      let method = object_property_get(node, "method");
+      let computed = object_property_get(node, "computed");
       log({
         node,
       });
