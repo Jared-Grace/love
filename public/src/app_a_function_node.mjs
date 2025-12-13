@@ -193,6 +193,21 @@ export function app_a_function_node(a) {
       app_a_comma(parent);
     },
     ["BinaryExpression"]: function lambda15() {
+      `left
+: 
+Node {type: 'BinaryExpression', start: 4226, end: 4281, left: Node, operator: '+', …}
+operator
+: 
+"+"
+right
+: 
+Node {type: 'Literal', start: 4284, end: 4288, value: ' }', raw: '" }"'}
+start
+: 
+4226`;
+      let right = object_property_get(node, "right");
+      let left = object_property_get(node, "left");
+      let operator = object_property_get(node, "operator");
       log({
         node,
       });
