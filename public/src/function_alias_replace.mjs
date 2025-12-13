@@ -8,7 +8,7 @@ import { error } from "../../../love/public/src/error.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 export async function function_alias_replace(alias_old, f_name) {
   function lambda2(item) {}
-  each(list, lambda2);
+  each([alias_old, f_name], lambda2);
   string_is_assert(f_name);
   marker("1");
   function lambda(a) {
