@@ -203,8 +203,9 @@ export function app_a_function_node(a) {
       let consequent = object_property_get(node, "consequent");
       let k = js_keyword_if();
       app_a_keyword_blue_space(parent, k);
-      let test = object_property_get(node, "test");
       function lambda19() {
+        let test = object_property_get(node, "test");
+        log({});
         app_a_function_node_child(a, test);
       }
       app_a_parenthesis_wrap(parent, lambda19);
