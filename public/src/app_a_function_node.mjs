@@ -167,8 +167,6 @@ export function app_a_function_node(a) {
       equal_assert(kind2, "init");
       let key = object_property_get(node, "key");
       app_a_function_node_child(a, key);
-      let c = js_code_colon();
-      let span4 = html_span_text(parent, c);
       html_span_space(parent);
       let shorthand = object_property_get(node, "shorthand");
       false_is_assert(shorthand);
@@ -176,9 +174,11 @@ export function app_a_function_node(a) {
       false_is_assert(method);
       let computed = object_property_get(node, "computed");
       false_is_assert(computed);
-      if (not(b)) {
+      if (not(shorthand)) {
+        let c = js_code_colon();
+        let span4 = html_span_text(parent, c);
+        let value3 = object_property_get(node, "value");
       }
-      let value3 = object_property_get(node, "value");
       app_a_function_node_child(a, value3);
       app_a_comma(parent);
     },
