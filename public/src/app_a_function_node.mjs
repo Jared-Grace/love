@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_a_nodes_list } from "../../../love/public/src/app_a_nodes_list.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
@@ -137,7 +138,9 @@ export function app_a_function_node(a) {
       app_a_nodes_list(a, declarations, parent);
       app_a_semicolon(parent);
     },
-    ["VariableDeclarator"]: function lambda13() {},
+    ["VariableDeclarator"]: function lambda13() {
+      log({});
+    },
   };
   let value = object_property_get(lookup, type);
   value();
