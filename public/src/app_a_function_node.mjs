@@ -173,13 +173,13 @@ export function app_a_function_node(a) {
       let key = object_property_get(node, "key");
       if (false) {
         let b = js_code_bracket_open();
+        let span5 = html_span_text(parent, b);
       }
-      let span5 = html_span_text(parent, b);
       app_a_function_node_child(a, key);
       if (false) {
         let v3 = js_code_bracket_close();
+        let span6 = html_span_text(parent, v3);
       }
-      let span6 = html_span_text(parent, v3);
       let c = js_code_colon();
       let span4 = html_span_text(parent, c);
       html_span_space(parent);
