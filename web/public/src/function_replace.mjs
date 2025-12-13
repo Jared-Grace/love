@@ -1,3 +1,4 @@
+import { function_rename_identifiers_alias } from "../../../love/public/src/function_rename_identifiers_alias.mjs";
 import { function_rename_fn_names_check } from "../../../love/public/src/function_rename_fn_names_check.mjs";
 import { function_name_to_path_unalias } from "../../../love/public/src/function_name_to_path_unalias.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
