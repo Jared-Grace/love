@@ -1,3 +1,4 @@
+import { js_code_call_args_await_maybe_declaration_return_add } from "../../../love/public/src/js_code_call_args_await_maybe_declaration_return_add.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
 import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
@@ -20,6 +21,12 @@ export async function function_cache(f_name) {
       c,
       [unaliased, arg_names_code],
       declaration_cache,
+    );
+    js_code_call_args_await_maybe_declaration_return_add(
+      unaliased,
+      arg_names,
+      declaration_call,
+      ast,
     );
   }
   let v = await function_new_transform(f_name_cache, lambda);
