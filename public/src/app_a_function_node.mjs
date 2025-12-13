@@ -143,6 +143,7 @@ export function app_a_function_node(a) {
       log({
         node,
       });
+      let span = html_span_text(parent2, text3);
       js_code_equals_padded();
     },
   };
