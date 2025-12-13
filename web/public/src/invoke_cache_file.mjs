@@ -13,14 +13,14 @@ export async function invoke_cache_file(fn, args) {
   marker("1");
   let key_get = function lambda() {
     let json = json_to([fn.name, args]);
-    return json;
-  };
-  let value_get = invoke_cache_value_get(fn, args);
-  let cached_exists = async function lambda3(key) {
     let f_path = folder_user_storage_function_path(fn);
     let file_name = file_name_json(key);
     let joined = path_join([f_path, file_name]);
-    let exists = await file_exists(joined);
+    return joined;
+  };
+  let value_get = invoke_cache_value_get(fn, args);
+  let cached_exists = async function lambda3(key) {
+    let exists = await file_exists(key);
     return exists;
   };
   let cached_get = async function lambda2(key) {
