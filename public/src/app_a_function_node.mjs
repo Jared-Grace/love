@@ -198,6 +198,20 @@ export function app_a_function_node(a) {
       }
     },
     ["IfStatement"]: function lambda18() {
+      `alternate
+: 
+null
+consequent
+: 
+Node {type: 'BlockStatement', start: 4672, end: 4703, body: Array(1)}
+end
+: 
+4703
+start
+: 
+4659
+test
+:`;
       log({
         node,
       });
