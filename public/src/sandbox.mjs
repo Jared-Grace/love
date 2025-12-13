@@ -10,11 +10,11 @@ export async function sandbox() {
   let languages = ebible_languages();
   async function lambda(la) {
     async function lambda2(language) {
+      let bible_folder = object_property_get(language, "bible_folder");
       let right = ebible_language_original();
-      if (equal(language, right)) {
+      if (equal(bible_folder, right)) {
         return;
       }
-      let bible_folder = object_property_get(language, "bible_folder");
       log("message2");
       let chapters = await ebible_version_chapters_cache(bible_folder);
       la({
