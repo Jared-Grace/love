@@ -1,3 +1,4 @@
+import { app_a_comma } from "../../../love/public/src/app_a_comma.mjs";
 import { js_code_bracket_open } from "../../../love/public/src/js_code_bracket_open.mjs";
 import { js_code_bracket_close } from "../../../love/public/src/js_code_bracket_close.mjs";
 import { app_a_body_inner } from "../../../love/public/src/app_a_body_inner.mjs";
@@ -185,6 +186,7 @@ export function app_a_function_node(a) {
       false_is_assert(computed);
       let value3 = object_property_get(node, "value");
       app_a_function_node_child(a, value3);
+      app_a_comma(parent);
       log({
         node,
       });
