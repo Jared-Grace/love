@@ -179,15 +179,7 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, value3);
       app_a_comma(parent);
     },
-    ["BinaryExpression"]: function lambda15() {
-      let left = object_property_get(node, "left");
-      app_a_function_node_child(a, left);
-      let operator = object_property_get(node, "operator");
-      let padded = string_pad_space(operator);
-      html_span_text(parent, padded);
-      let right = object_property_get(node, "right");
-      app_a_function_node_child(a, right);
-    },
+    ["BinaryExpression"]: binary,
     ["ArrayExpression"]: function lambda17() {
       a_brackets_wrap(parent, inner);
       function inner() {
@@ -214,8 +206,17 @@ export function app_a_function_node(a) {
       app_a_braces_wrap_node(a, consequent, parent);
       app_a_braces_wrap_node(a, alternate, parent);
     },
-    ["LogicalExpression"]: function lambda20() {},
+    ["LogicalExpression"]: binary,
   };
+  function binary() {
+    let left = object_property_get(node, "left");
+    app_a_function_node_child(a, left);
+    let operator = object_property_get(node, "operator");
+    let padded = string_pad_space(operator);
+    html_span_text(parent, padded);
+    let right = object_property_get(node, "right");
+    app_a_function_node_child(a, right);
+  }
   let value = object_property_get(lookup, type);
   value();
 }
