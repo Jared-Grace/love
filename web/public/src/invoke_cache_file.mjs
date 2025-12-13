@@ -1,7 +1,7 @@
+import { invoke_cache_key } from "../../../love/public/src/invoke_cache_key.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
-import { json_to } from "../../../love/public/src/json_to.mjs";
 import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
@@ -12,7 +12,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function invoke_cache_file(fn, args) {
   marker("1");
   let key_get = function lambda() {
-    let json = json_to([fn.name, args]);
+    let json = invoke_cache_key(fn, args);
     let file_name = file_name_json(json);
     let f_path = folder_user_storage_function_path(fn);
     let joined = path_join([f_path, file_name]);
