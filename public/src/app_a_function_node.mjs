@@ -156,7 +156,7 @@ export function app_a_function_node(a) {
       let method = object_property_get(node, "method");
       let computed = object_property_get(node, "computed");
       function lambda16() {}
-      app_a_braces_wrap(parent2, lambda16);
+      app_a_braces_wrap(parent, lambda16);
       log({
         node,
       });
