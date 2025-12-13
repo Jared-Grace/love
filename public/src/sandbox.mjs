@@ -16,5 +16,6 @@ export async function sandbox() {
     }
     await each_async(languages, lambda2);
   }
-  let list2 = await list_adder_async(lambda);
+  let all = await list_adder_async(lambda);
+  return all;
 }
