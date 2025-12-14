@@ -1,3 +1,4 @@
+import { html_on_keydown_body } from "../../../love/public/src/html_on_keydown_body.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
@@ -35,7 +36,6 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
-import { html_on_keydown } from "../../../love/public/src/html_on_keydown.mjs";
 import { string_take_less_1 } from "../../../love/public/src/string_take_less_1.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -105,8 +105,7 @@ export async function app_reply_main() {
     }
     buttons_refresh();
   }
-  const body = html_document_body();
-  html_on_keydown(body, lambda6);
+  html_on_keydown_body(lambda6);
   async function reset() {
     verses_list_reset();
     list_empty(copied);
