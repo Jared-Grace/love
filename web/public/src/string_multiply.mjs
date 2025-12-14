@@ -5,4 +5,5 @@ export function string_multiply(value, times) {
     indentation += value;
   }
   each_range(times, lambda4);
+  return indentation;
 }
