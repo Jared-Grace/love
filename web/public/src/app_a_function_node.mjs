@@ -98,7 +98,7 @@ export function app_a_function_node(a) {
         app_a_nodes_list(a, params, parent);
       }
       let body2 = object_property_get(node, "body");
-      html_span_space(parent2);
+      html_span_space(parent);
       app_a_braces_wrap_node(a, body2, parent);
     },
     ["BlockStatement"]: function lambda7() {
