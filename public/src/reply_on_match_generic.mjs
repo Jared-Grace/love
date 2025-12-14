@@ -1,5 +1,4 @@
 import { invoke_multiple_args } from "../../../love/public/src/invoke_multiple_args.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { reply_matches } from "../../../love/public/src/reply_matches.mjs";
 import { reply_wrap_invoke } from "../../../love/public/src/reply_wrap_invoke.mjs";
@@ -15,11 +14,7 @@ export function reply_on_match_generic(fn, before, after, on_args, lambdas) {
     if (ne) {
       let args = [filtered];
       on_args(args);
-      function lambda2(lambda) {
-        lambda(...args);
-      }
-      each(lambdas, lambda2);
-      invoke_multiple_args(list_fns, args2);
+      invoke_multiple_args(lambdas, args);
     }
     return filtered;
   };
