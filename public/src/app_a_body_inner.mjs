@@ -75,7 +75,7 @@ export function app_a_body_inner(parent, body, a) {
       "white-space": "pre-wrap",
       "min-width": "0",
     });
-    app_a_function_node_child_parent(a, b, line);
+    app_a_function_node_child_parent(a, b, span);
   }
   each(body, lambda);
 }
