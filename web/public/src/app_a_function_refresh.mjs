@@ -11,7 +11,7 @@ import { app_generic_screen_set } from "../../../love/public/src/app_generic_scr
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 export function app_a_function_refresh(context, ast) {
   marker("1");
-  let root2 = object_property_get(context, "root");
+  let root = object_property_get(context, "root");
   html_clear(root);
   function lambda2() {
     app_generic_screen_set(context, app_a_home);
