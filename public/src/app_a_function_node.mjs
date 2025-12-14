@@ -100,7 +100,7 @@ export function app_a_function_node(a) {
       app_a_braces_wrap_node(a, body2, parent);
     },
     ["BlockStatement"]: function lambda7() {
-      app_a_body(node, parent, a, false);
+      app_a_body(node, parent, a, true);
     },
     ["ExpressionStatement"]: function lambda7() {
       let expression = object_property_get(node, "expression");
@@ -158,7 +158,7 @@ export function app_a_function_node(a) {
     ["ObjectExpression"]: function lambda14() {
       function lambda16() {
         let properties = object_property_get(node, "properties");
-        app_a_body_inner(parent, properties, a, false);
+        app_a_body_inner(parent, properties, a, true);
       }
       app_a_braces_wrap(parent, lambda16);
     },
