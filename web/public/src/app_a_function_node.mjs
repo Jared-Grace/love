@@ -165,7 +165,7 @@ export function app_a_function_node(a) {
               function lambda22(e) {
                 let key3 = object_property_get(e, "key");
                 if (equal(key3, "Enter")) {
-                  rename_overlay_close();
+                  lambda23();
                 }
               }
               let text5 = app_a_overlay_close_text();
