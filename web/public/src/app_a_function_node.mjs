@@ -138,9 +138,7 @@ export function app_a_function_node(a) {
         let overlay = html_overlay(root, z);
         let on_keydowns = object_property_get(context, "on_keydowns");
         function on_keydown(k) {
-          let key2 = object_property_get(k, "key");
-          if (false) {
-          }
+          let key2 = object_property_get(k, "key");$ie
         }
         list_add(on_keydowns, on_keydown);
         function lambda15() {
