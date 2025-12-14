@@ -3,10 +3,10 @@ import { html_font_color_set } from "../../../love/public/src/html_font_color_se
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_identifier_is_assert } from "../../../love/public/src/js_identifier_is_assert.mjs";
-export function app_a_identifier(parent, identifier) {
+export function app_a_identifier(parent, node) {
   marker("1");
-  js_identifier_is_assert(identifier);
-  let name = object_property_get(identifier, "name");
+  js_identifier_is_assert(node);
+  let name = object_property_get(node, "name");
   let span = html_span_text(parent, name);
   html_font_color_set(span, "#4a4affff");
 }
