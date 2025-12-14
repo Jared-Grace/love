@@ -69,7 +69,8 @@ export function app_a_body_inner(parent, body, a) {
       flex: "0 0 auto",
       "white-space": "pre",
     });
-    let span = html_span_text(parent2, text2);hsa
+    let span = html_span_text(parent2, text2);
+    html_style_assign(b2, s2);
     app_a_function_node_child_parent(a, b, line);
   }
   each(body, lambda);
