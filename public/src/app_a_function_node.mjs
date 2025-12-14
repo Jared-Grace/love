@@ -1,6 +1,5 @@
 import { html_remove_lambda } from "../../../love/public/src/html_remove_lambda.mjs";
 import { app_a_button } from "../../../love/public/src/app_a_button.mjs";
-import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { html_overlay } from "../../../love/public/src/html_overlay.mjs";
 import { html_z_max } from "../../../love/public/src/html_z_max.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -134,10 +133,7 @@ export function app_a_function_node(a) {
       function lambda20() {
         let z = html_z_max();
         let overlay = html_overlay(container, z);
-        function close() {
-          html_remove(overlay);
-        }
-        let r = html_remove_lambda(component2);
+        let close = html_remove_lambda(component2);
         let b = app_a_button(root, text, close);
       }
       html_on_pointerdown(component, lambda20);
