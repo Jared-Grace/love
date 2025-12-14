@@ -3,8 +3,7 @@ import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function folder_read(path_folder) {
   if (browser_is()) {
-    let fn = folder_read;
-    let r = await app_api_cache_global_fn(fn, arguments);
+    let r = await app_api_cache_global_fn(folder_read, arguments);
     return r;
   }
   marker("1");
