@@ -136,7 +136,7 @@ export function app_a_function_node(a) {
         let z = html_z_max();
         let overlay = html_overlay(root, z);
         let on_keydowns = object_property_get(context, "on_keydowns");
-        list_add(list, item);
+        list_add(on_keydowns, $f);
         function lambda15() {
           html_remove(component);
         }
