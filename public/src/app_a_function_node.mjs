@@ -133,7 +133,7 @@ export function app_a_function_node(a) {
       function lambda20() {
         let z = html_z_max();
         let overlay = html_overlay(container, z);
-        let close = html_remove_lambda(component2);
+        let close = html_remove_lambda(overlay);
         let b = app_a_button(root, text, close);
       }
       html_on_pointerdown(component, lambda20);
