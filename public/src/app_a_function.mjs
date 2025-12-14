@@ -4,7 +4,6 @@ import { html_style_assign } from "../../../love/public/src/html_style_assign.mj
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_a_function_node } from "../../../love/public/src/app_a_function_node.mjs";
 import { js_parse } from "../../../love/public/src/js_parse.mjs";
-import { app_karate_button_uncolored_style_assign } from "../../../karate_code/public/src/app_karate_button_uncolored_style_assign.mjs";
 import { app_a_home } from "../../../love/public/src/app_a_home.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { emoji_search } from "../../../love/public/src/emoji_search.mjs";
@@ -21,7 +20,6 @@ export async function app_a_function(context) {
   }
   let text = emoji_search();
   let b = app_a_button(root, text, lambda2);
-  app_karate_button_uncolored_style_assign(b);
   let function_name = fn_name("function_read");
   let code = await app_api(function_name, [f_name]);
   let div = html_div(root);
