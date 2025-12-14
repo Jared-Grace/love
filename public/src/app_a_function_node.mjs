@@ -148,8 +148,8 @@ export function app_a_function_node(a) {
       let span = html_span_text(parent, name);
       html_font_color_set(span, "#4a4affff");
       function lambda20() {
-        let overlay = html_overlay_z_max(root);
         let on_keydowns = object_property_get(context, "on_keydowns");
+        let overlay = html_overlay_z_max(root);
         let overlay_close = app_a_overlay_on_keydown(
           on_keydowns,
           on_keydown,
