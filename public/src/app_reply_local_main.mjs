@@ -5,8 +5,8 @@ import { app_api } from "../../../love/public/src/app_api.mjs";
 export async function app_reply_local_main() {
   let result = await app_api(ebible_languages_chapters.name, []);
   function lambda(bible_folder, chapter_code, verse_number) {
-    let item = list_find_property(result, "bible_folder", bible_folder);
-    let item2 = list_find_property(list, property_name, property_value);
+    let chapters = list_find_property(result, "bible_folder", bible_folder);
+    let item2 = list_find_property(chapters, "chapter_code", chapter_code);
   }
   await app_reply_generic(lambda);
 }
