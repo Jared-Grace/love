@@ -1,3 +1,4 @@
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { html_alert } from "../../../love/public/src/html_alert.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
@@ -137,11 +138,12 @@ export function app_a_function_node(a) {
         let z = html_z_max();
         let overlay = html_overlay(root, z);
         let on_keydowns = object_property_get(context, "on_keydowns");
-        function lambda21() {
+        function on_keydown() {
           html_alert("message");
         }
-        list_add(on_keydowns, lambda21);
+        list_add(on_keydowns, on_keydown);
         function lambda15() {
+          list_remove(list, item);
           html_remove(component);
         }
         let b = app_a_button(overlay, "Close", lambda15);
