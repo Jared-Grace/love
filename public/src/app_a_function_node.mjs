@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { html_alert } from "../../../love/public/src/html_alert.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -140,6 +141,9 @@ export function app_a_function_node(a) {
         let overlay = html_overlay(root, z);
         let on_keydowns = object_property_get(context, "on_keydowns");
         function on_keydown(k) {
+          log({
+            k,
+          });
           let message = json_to(k);
           html_alert(message);
         }
