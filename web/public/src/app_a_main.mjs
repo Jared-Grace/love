@@ -7,10 +7,12 @@ export function app_a_main() {
   let app_fn = app_a;
   const root = html_document_body();
   let screens = app_a_screens();
+  let on_keydowns = [];
   const context = {
     app_fn,
     screens,
     root,
+    on_keydowns,
   };
   function lambda() {}
   html_on_keydown(root, lambda);
