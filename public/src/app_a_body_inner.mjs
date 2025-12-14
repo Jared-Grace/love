@@ -63,11 +63,11 @@ export function app_a_body_inner(parent, body, a) {
     }
     let line = html_div(parent_new);
     let indent = object_property_get(a, "indent");
-    function lambda4(i) {
-      let s = html_span_text(line, " ");
-      html_style_set(s, "white-space", "pre");
-    }
+    let indentation = "";
+    function lambda4(i) {}
     each_range(indent, lambda4);
+    let s = html_span_text(line, " ");
+    html_style_set(s, "white-space", "pre");
     app_a_function_node_child_parent(a, b, line);
   }
   each(body, lambda);
