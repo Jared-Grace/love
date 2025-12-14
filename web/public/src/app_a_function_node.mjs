@@ -1,3 +1,4 @@
+import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { html_remove_lambda } from "../../../love/public/src/html_remove_lambda.mjs";
 import { app_a_button } from "../../../love/public/src/app_a_button.mjs";
 import { html_overlay } from "../../../love/public/src/html_overlay.mjs";
@@ -135,7 +136,9 @@ export function app_a_function_node(a) {
         let z = html_z_max();
         let overlay = html_overlay(root, z);
         let close = html_remove_lambda(overlay);
-        function lambda15() {}
+        function lambda15() {
+          html_remove(component);
+        }
         let b = app_a_button(overlay, "Close", lambda15);
         let on_keydowns = object_property_get(context, "on_keydowns");
       }
