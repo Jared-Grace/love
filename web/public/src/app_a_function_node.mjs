@@ -162,7 +162,7 @@ export function app_a_function_node(a) {
               overlay_close();
               function lambda22(e) {
                 let key3 = object_property_get(e, "key");
-                if (equal(left2, right2)) {
+                if (equal(key3, "Enter")) {
                 }
               }
               let { overlay, overlay_close: rename_overlay_close } =
