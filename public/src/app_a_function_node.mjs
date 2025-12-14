@@ -13,7 +13,6 @@ import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { app_a_input } from "../../../love/public/src/app_a_input.mjs";
-import { html_overlay_z_max } from "../../../love/public/src/html_overlay_z_max.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
@@ -149,7 +148,7 @@ export function app_a_function_node(a) {
       html_font_color_set(span, "#4a4affff");
       function lambda20() {
         let on_keydowns = object_property_get(context, "on_keydowns");
-        let {overlay,overlay_close} = app_a_overlay(on_keydowns, on_keydown, overlay);
+        let { overlay, overlay_close } = app_a_overlay(on_keydowns, on_keydown);
         let choices = [
           {
             shortcut: "c",
@@ -162,10 +161,9 @@ export function app_a_function_node(a) {
             fn: async function lambda15() {
               overlay_close();
               function lambda22() {}
-              let {overlay_close:rename_overlay_close} = app_a_overlay(
+              let { overlay_close: rename_overlay_close } = app_a_overlay(
                 on_keydowns,
                 lambda22,
-                overlay,
               );
               let text5 = app_a_overlay_close_text();
               let component2 = app_a_button_wide(
