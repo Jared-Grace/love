@@ -12,6 +12,7 @@ export function app_a_main() {
     screens,
     root,
   };
-  html_on_keydown(root, () => {});
+  function lambda() {}
+  html_on_keydown(root, lambda);
   app_generic_refresh(context);
 }
