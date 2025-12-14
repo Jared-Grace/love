@@ -1,3 +1,4 @@
+import { on_keydown_stop } from "../../../love/public/src/on_keydown_stop.mjs";
 import { app_a_overlay_close_text } from "../../../love/public/src/app_a_overlay_close_text.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
@@ -195,9 +196,7 @@ export function app_a_function_node(a) {
         ];
         list_add(on_keydowns, on_keydown);
         function on_keydown(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          e.stopImmediatePropagation();
+          on_keydown_stop(e);
           let key2 = object_property_get(e, "key");
           choices_each(on_choice);
           function on_choice(shortcut, text, fn) {
