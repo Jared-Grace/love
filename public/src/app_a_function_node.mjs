@@ -1,3 +1,4 @@
+import { app_a_button } from "../../../love/public/src/app_a_button.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { html_overlay } from "../../../love/public/src/html_overlay.mjs";
 import { html_z_max } from "../../../love/public/src/html_z_max.mjs";
@@ -135,6 +136,7 @@ export function app_a_function_node(a) {
         function close() {
           html_remove(overlay);
         }
+        let b = app_a_button(root, text, close);
       }
       html_on_pointerdown(component, lambda20);
     },
