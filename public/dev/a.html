@@ -12,7 +12,10 @@
     "astring": "https://cdn.jsdelivr.net/npm/astring/dist/astring.mjs"
   }
 }
-</script>
+</script><script src="https://unpkg.com/prettier@3.2.5/standalone.js"></script>
+
+<!-- Plugins must come after Prettier -->
+<script src="https://unpkg.com/prettier@3.2.5/parser-babel.js"></script>
   <script type="module"> 
     import {app_a_main} from "./../src/app_a_main.mjs"
     app_a_main(  );
