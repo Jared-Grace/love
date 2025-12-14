@@ -62,7 +62,8 @@ export function app_a_body_inner(parent, body, a) {
     }
     let div = html_div(parent_new);
     let indent = object_property_get(a, "indent");
-    each_range(count, function lambda4(i) {});
+    function lambda4(i) {}
+    each_range(count, lambda4);
     if (indent) {
       let span = html_span_text(div, "+");
     }
