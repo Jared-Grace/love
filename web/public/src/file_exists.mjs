@@ -1,4 +1,3 @@
-import { file_read } from "../../../love/public/src/file_read.mjs";
 import { app_api_cache_global_fn } from "../../../love/public/src/app_api_cache_global_fn.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -6,6 +5,10 @@ import { throws_not_async } from "../../../love/public/src/throws_not_async.mjs"
 import { error } from "../../../love/public/src/error.mjs";
 import { promise_is } from "../../../love/public/src/promise_is.mjs";
 export async function file_exists(file_path) {
+  if (browser_is()) {
+    let r = await app_api_cache_global_fn(file_exists, arguments);
+    return r;
+  }
   marker("1");
   if (promise_is(file_path)) {
     error();
@@ -18,8 +21,4 @@ export async function file_exists(file_path) {
     await access(file_path, constants.F_OK);
   }
   return exists;
-  if (browser_is()) {
-    let r = await app_api_cache_global_fn(file_read, arguments);
-    return r;
-  }
 }
