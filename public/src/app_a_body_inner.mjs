@@ -63,7 +63,7 @@ export function app_a_body_inner(parent, body, a) {
       }
     }
     let line = html_div(parent_new);
-    html_style_assign(s, {
+    html_style_assign(line, {
       display: "flex",
     });
     let indent = object_property_get(a, "indent");
