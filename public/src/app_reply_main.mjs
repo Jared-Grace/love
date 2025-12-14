@@ -55,6 +55,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
 export async function app_reply_main() {
+  let verse_get = ebible_verse_download;
   let choices = app_reply_choices();
   let languages = ebible_languages();
   let encouragement = bible_verses_uplifting();
@@ -261,11 +262,7 @@ export async function app_reply_main() {
       async function lambda8(verse) {
         let chapter_code2 = object_property_get(verse, "chapter_code");
         let verse_number2 = object_property_get(verse, "verse_number");
-        let d = await ebible_verse_download(
-          bible_folder2,
-          chapter_code2,
-          verse_number2,
-        );
+        let d = await verse_get(bible_folder2, chapter_code2, verse_number2);
         return d;
       }
       let verses = await list_map_unordered_async(verses2, lambda8);
