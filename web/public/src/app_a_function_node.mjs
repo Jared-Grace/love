@@ -151,6 +151,7 @@ export function app_a_function_node(a) {
             text: "Rename",
             fn: function lambda15() {
               overlay_close();
+        let overlay = html_overlay_z_max(root);
             },
           },
         ];
