@@ -7,8 +7,8 @@ export async function app_reply_local_main() {
   function lambda(bible_folder, chapter_code, verse_number) {
     let chapters = list_find_property(result, "bible_folder", bible_folder);
     let verses = list_find_property(chapters, "chapter_code", chapter_code);
-    let item = list_find_property(verses, "verse_number", verse_number);
-    return item;
+    let verse = list_find_property(verses, "verse_number", verse_number);
+    return verse;
   }
   await app_reply_generic(lambda);
 }
