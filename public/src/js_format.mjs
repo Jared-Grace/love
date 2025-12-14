@@ -3,8 +3,10 @@ export async function js_format(code) {
   let prettier = null,
     parserBabel = null;
   if (browser_is()) {
-    prettier = await import("https://esm.sh/prettier@3.2.5");
-    parserBabel = await import("https://esm.sh/prettier@3.2.5/plugins/babel");
+    prettier = await import("https://esm.sh/prettier@3.2.5/standalone.mjs");
+    parserBabel = await import(
+      "https://esm.sh/prettier@3.2.5/standalone-parser-babel.mjs"
+    );
   } else {
     prettier = await import("prettier");
     parserBabel = await import("prettier/plugins/babel");
