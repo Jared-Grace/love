@@ -12,7 +12,7 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { app_g_openai_split } from "../../../love/public/src/app_g_openai_split.mjs";
-import { lambda_invoke_multiple_shuffle_2 } from "../../../love/public/src/lambda_invoke_multiple_shuffle_2.mjs";
+import { invoke_multiple_shuffle_2 } from "../../../love/public/src/invoke_multiple_shuffle_2.mjs";
 import { app_g_button_uncolored } from "../../../love/public/src/app_g_button_uncolored.mjs";
 import { app_g_button_green } from "../../../love/public/src/app_g_button_green.mjs";
 import { app_g_wrong } from "../../../love/public/src/app_g_wrong.mjs";
@@ -113,7 +113,7 @@ export function app_g_study(player, overlay, close) {
             app_g_button_wrong(b);
           }
         }
-        lambda_invoke_multiple_shuffle_2(correct, wrong);
+        invoke_multiple_shuffle_2(correct, wrong);
       }
     }
     app_g_button_uncolored(overlay, text2, lambda);
