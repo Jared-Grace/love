@@ -147,6 +147,14 @@ export function app_a_function_node(a) {
               html_remove(overlay);
             },
           },
+          {
+            shortcut: "r",
+            text: "Rename",
+            fn: function lambda15() {
+              list_remove(on_keydowns, on_keydown);
+              html_remove(overlay);
+            },
+          },
         ];
         list_add(on_keydowns, on_keydown);
         function on_keydown(k) {
