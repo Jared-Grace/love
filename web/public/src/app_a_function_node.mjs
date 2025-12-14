@@ -1,3 +1,4 @@
+import { html_on_keydown_stop_logic } from "../../../love/public/src/html_on_keydown_stop_logic.mjs";
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
 import { js_identifier_rename_imports_fix } from "../../../love/public/src/js_identifier_rename_imports_fix.mjs";
 import { html_select } from "../../../love/public/src/html_select.mjs";
@@ -202,6 +203,7 @@ export function app_a_function_node(a) {
         ];
         list_add(on_keydowns, on_keydown);
         function on_keydown(e) {
+          html_on_keydown_stop_logic(e);
           let key2 = object_property_get(e, "key");
           choices_each(on_choice);
           function on_choice(shortcut, text, fn) {
