@@ -128,10 +128,10 @@ export function app_a_function_node(a) {
       let name = object_property_get(node, "name");
       let span = html_span_text(parent, name);
       html_font_color_set(span, "#4a4affff");
-      function lambda20() {}
-      html_on_pointerdown(component, lambda20);
+      function lambda20() {
       let z = html_z_max();
-      let overlay = html_overlay(container, z);
+      let overlay = html_overlay(container, z);}
+      html_on_pointerdown(component, lambda20);
     },
     ["Literal"]: function lambda10() {
       let raw = object_property_get(node, "raw");
