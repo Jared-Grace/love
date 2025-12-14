@@ -169,7 +169,7 @@ export function app_a_function_node(a) {
               let { overlay, overlay_close: rename_overlay_close } =
                 app_a_overlay(root, on_keydowns, lambda22);
               function lambda22(e) {
-                log('message');
+                log("message");
                 let key3 = object_property_get(e, "key");
                 if (equal(key3, "Enter")) {
                   lambda23();
