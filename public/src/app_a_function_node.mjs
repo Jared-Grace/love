@@ -136,7 +136,7 @@ export function app_a_function_node(a) {
         let close = html_remove_lambda(overlay);
         let b = app_a_button(root, "Close", close);
       }
-      html_on_pointerdown(component, lambda20);
+      html_on_pointerdown(span, lambda20);
     },
     ["Literal"]: function lambda10() {
       let raw = object_property_get(node, "raw");
