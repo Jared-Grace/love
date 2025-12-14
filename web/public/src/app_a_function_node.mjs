@@ -1,4 +1,3 @@
-import { app_a_indent } from "../../../love/public/src/app_a_indent.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { app_a_braces_wrap_node } from "../../../love/public/src/app_a_braces_wrap_node.mjs";
@@ -160,10 +159,7 @@ export function app_a_function_node(a) {
     ["ObjectExpression"]: function lambda14() {
       function lambda16() {
         let properties = object_property_get(node, "properties");
-        app_a_indent(a, inner);
-        function inner() {
-          app_a_body_inner(parent, properties, a, false);
-        }
+        app_a_body_inner(parent, properties, a, false);
       }
       app_a_braces_wrap(parent, lambda16);
     },
