@@ -16,7 +16,7 @@ export function app_a_main() {
     on_keydowns,
   };
   function lambda() {
-    invoke_multiple(afters);
+    invoke_multiple(on_keydowns);
   }
   html_on_keydown(root, lambda);
   app_generic_refresh(context);
