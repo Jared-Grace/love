@@ -38,5 +38,6 @@ export async function app_a_function(context) {
     node: ast,
     parent: div,
     context,
+    indent: 0,
   });
 }
