@@ -1,3 +1,4 @@
+import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { app_a_function_node_child_parent } from "../../../love/public/src/app_a_function_node_child_parent.mjs";
 import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -57,6 +58,7 @@ export function app_a_body_inner(parent, body, a) {
       }
     }
     let div = html_div(parent_new);
+    let span = html_span_text(parent2, text2);
     app_a_function_node_child_parent(a, b, div);
   }
   each(body, lambda);
