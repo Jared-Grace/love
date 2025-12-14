@@ -3,5 +3,7 @@ import { html_component_element_get } from "../../../love/public/src/html_compon
 export function html_select(input) {
   let element = html_component_element_get(input);
   element.select();
-  log({});
+  log({
+    m: "m",
+  });
 }
