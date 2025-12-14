@@ -1,3 +1,4 @@
+import { html_remove_lambda } from "../../../love/public/src/html_remove_lambda.mjs";
 import { app_a_button } from "../../../love/public/src/app_a_button.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { html_overlay } from "../../../love/public/src/html_overlay.mjs";
@@ -136,7 +137,7 @@ export function app_a_function_node(a) {
         function close() {
           html_remove(overlay);
         }
-        hrg;
+        let r = html_remove_lambda(component2);
         let b = app_a_button(root, text, close);
       }
       html_on_pointerdown(component, lambda20);
