@@ -149,7 +149,7 @@ export function app_a_function_node(a) {
           list_remove(on_keydowns, on_keydown);
           html_remove(overlay);
         }
-        let b = app_a_button(overlay, "Close", lambda15);
+        let b = app_a_button(overlay, "(c) Close", lambda15);
       }
       html_on_pointerdown(span, lambda20);
     },
