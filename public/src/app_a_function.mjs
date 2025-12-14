@@ -16,6 +16,7 @@ export async function app_a_function(context) {
   let f_name = storage_local_get(app_fn, "f_name_selected");
   let function_name = fn_name("function_read");
   let code = await app_api(function_name, [f_name]);
+  let ast = js_parse(code);
   html_clear(root);
   function lambda2() {
     app_generic_screen_set(context, app_a_home);
@@ -29,7 +30,6 @@ export async function app_a_function(context) {
     "word-break": "break-word",
     "font-weight": "500",
   });
-  let ast = js_parse(code);
   app_a_function_node({
     node: ast,
     parent: div,
