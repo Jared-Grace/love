@@ -155,7 +155,7 @@ export function app_a_function_node(a) {
               overlay_close();
               let overlay = html_overlay_z_max(root);
               let input = app_a_input(overlay);
-              html_value_set(input2, value4);
+              html_value_set(input, name);
             },
           },
         ];
