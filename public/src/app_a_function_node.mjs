@@ -165,11 +165,8 @@ export function app_a_function_node(a) {
               html_div_text(div3, "Rename to:");
               let input = app_a_input(overlay);
               html_value_set(input, name);
-              let component = app_a_button_wide(
-                parent2,
-                text5,
-                function lambda23() {},
-              );
+              function lambda23() {}
+              let component = app_a_button_wide(parent2, text5, lambda23);
             },
           },
         ];
