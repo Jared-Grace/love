@@ -63,6 +63,9 @@ export function app_a_body_inner(parent, body, a) {
       }
     }
     let line = html_div(parent_new);
+    html_style_assign(s, {
+      display: "flex",
+    });
     let indent = object_property_get(a, "indent");
     let indentation = string_multiply(" ", indent);
     let s = html_span_text(line, indentation);
