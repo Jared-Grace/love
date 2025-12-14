@@ -287,6 +287,7 @@
   "hprt": "html_pre_text",
   "ho": "html_overlay",
   "ri": "function_multiple_rename_if_starts_with",
-  "im": "invoke_multiple"
+  "im": "invoke_multiple",
+  "aabw": "app_a_button_wide"
  }
 }
