@@ -5,7 +5,6 @@ import { html_hide_loadable } from "../../../love/public/src/html_hide_loadable.
 import { g_icon_cross_unpositioned } from "../../../love/public/src/g_icon_cross_unpositioned.mjs";
 import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs";
 import { html_remix_icon } from "../../../love/public/src/html_remix_icon.mjs";
-import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
@@ -29,7 +28,6 @@ import { mod } from "../../../love/public/src/mod.mjs";
 import { bible_names_men } from "../../../love/public/src/bible_names_men.mjs";
 import { bible_names_women } from "../../../love/public/src/bible_names_women.mjs";
 import { app_g_refresh } from "../../../love/public/src/app_g_refresh.mjs";
-import { html_font_sans_serif_value } from "../../../love/public/src/html_font_sans_serif_value.mjs";
 import { html_document_root } from "../../../love/public/src/html_document_root.mjs";
 import { list_without } from "../../../love/public/src/list_without.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
