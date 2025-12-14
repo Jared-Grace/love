@@ -151,13 +151,11 @@ export function app_a_function_node(a) {
         list_add(on_keydowns, on_keydown);
         function on_keydown(k) {
           let key2 = object_property_get(k, "key");
-          if (equal(key2, key_close)) {
-            lambda15();
-          }
           choices_each(on_choice);
           function on_choice(shortcut, text, fn) {
-            let b2 = app_a_button(overlay, "(" + shortcut + ") " + text, fn);
-            return b2;
+            if (equal(key2, shortcut)) {
+              fn();
+            }
           }
         }
         choices_each(on_choice);
