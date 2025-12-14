@@ -297,7 +297,7 @@ export function app_a_function_node(a) {
         app_a_function_node_child(a, test);
       }
       app_a_parenthesis_wrap(parent, lambda19);
-      html_span_space(parent2);
+      html_span_space(parent);
       let consequent = object_property_get(node, "consequent");
       app_a_braces_wrap_node(a, consequent, parent);
       let alternate = object_property_get(node, "alternate");
