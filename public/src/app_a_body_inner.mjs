@@ -65,8 +65,9 @@ export function app_a_body_inner(parent, body, a, indent) {
     html_style_assign(line, {
       display: "flex",
     });
-    if (indent) {$s
-      let i = " ";
+    if (indent) {
+      let i = null;
+      i = " ";
     } else {
     }
     let s = html_span_text(line, " ");
