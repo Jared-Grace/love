@@ -62,22 +62,24 @@ export function app_a_body_inner(parent, body, a, indent) {
       }
     }
     let line = html_div(parent_new);
+    html_style_assign(line, {
+      display: "flex",
+    });
     if (indent) {
-      html_style_assign(line, {
-        display: "flex",
-      });
-      let s = html_span_text(line, " ");
-      html_style_assign(s, {
-        flex: "0 0 auto",
-        "white-space": "pre",
-      });
-      let span = html_span(line);
-      html_style_assign(span, {
-        "white-space": "pre-wrap",
-        "min-width": "0",
-      });
-      line = span;
+      let i = " ";
+    } else {
     }
+    let s = html_span_text(line, " ");
+    html_style_assign(s, {
+      flex: "0 0 auto",
+      "white-space": "pre",
+    });
+    let span = html_span(line);
+    html_style_assign(span, {
+      "white-space": "pre-wrap",
+      "min-width": "0",
+    });
+    line = span;
     app_a_function_node_child_parent(a, b, line);
   }
   each(body, lambda);
