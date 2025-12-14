@@ -13,7 +13,7 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
-export function app_a_body_inner(parent, body, a) {
+export function app_a_body_inner(parent, body, a, indent) {
   marker("1");
   let parent_new = parent;
   let imports = false;
