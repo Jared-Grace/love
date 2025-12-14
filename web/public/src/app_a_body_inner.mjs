@@ -61,7 +61,8 @@ export function app_a_body_inner(parent, body, a) {
     }
     let div = html_div(parent_new);
     let indent = object_property_get(a, "indent");
-    each(list, function lambda4(item2) {});
+    function lambda4(item2) {}
+    each(list, lambda4);
     if (indent) {
       let span = html_span_text(div, "+");
     }
