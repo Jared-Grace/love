@@ -1,4 +1,4 @@
-import { app_a_overlay_on_keydown } from "../../../love/public/src/app_a_overlay_on_keydown.mjs";
+import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
 import { js_identifier_rename_imports_fix } from "../../../love/public/src/js_identifier_rename_imports_fix.mjs";
 import { html_select } from "../../../love/public/src/html_select.mjs";
 import { app_a_overlay_close_text } from "../../../love/public/src/app_a_overlay_close_text.mjs";
@@ -150,11 +150,7 @@ export function app_a_function_node(a) {
       function lambda20() {
         let on_keydowns = object_property_get(context, "on_keydowns");
         let overlay = html_overlay_z_max(root);
-        let overlay_close = app_a_overlay_on_keydown(
-          on_keydowns,
-          on_keydown,
-          overlay,
-        );
+        let overlay_close = app_a_overlay(on_keydowns, on_keydown, overlay);
         let choices = [
           {
             shortcut: "c",
@@ -168,7 +164,7 @@ export function app_a_function_node(a) {
               overlay_close();
               let overlay = html_overlay_z_max(root);
               function lambda22() {}
-              let rename_overlay_close = app_a_overlay_on_keydown(
+              let rename_overlay_close = app_a_overlay(
                 on_keydowns,
                 lambda22,
                 overlay,
