@@ -1,3 +1,4 @@
+import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { html_overlay } from "../../../love/public/src/html_overlay.mjs";
 import { html_z_max } from "../../../love/public/src/html_z_max.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -131,6 +132,9 @@ export function app_a_function_node(a) {
       function lambda20() {
         let z = html_z_max();
         let overlay = html_overlay(container, z);
+        function close() {
+          html_remove(overlay);
+        }
       }
       html_on_pointerdown(component, lambda20);
     },
