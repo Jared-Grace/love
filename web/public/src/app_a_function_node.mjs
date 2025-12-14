@@ -161,7 +161,7 @@ export function app_a_function_node(a) {
             fn: async function lambda15() {
               overlay_close();
               function lambda22() {}
-              let { overlay_close } = app_a_overlay(on_keydowns, lambda22);
+              let {overlay,  overlay_close } = app_a_overlay(on_keydowns, lambda22);
               let text5 = app_a_overlay_close_text();
               let component2 = app_a_button_wide(overlay, text5, overlay_close);
               let div3 = html_div(overlay);
