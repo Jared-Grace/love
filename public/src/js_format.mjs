@@ -1,3 +1,4 @@
+import { browser_is } from "../../../love/public/src/browser_is.mjs";
 export async function js_format(code) {let prettierModule, babelPlugin;
   if (browser_is()) {
      prettier = await import("https://esm.sh/prettier@3.2.5");
