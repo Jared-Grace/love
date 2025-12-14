@@ -8,12 +8,11 @@ export async function ebible_verse(bible_folder, chapter_code, verse_number) {
   marker("1");
   let b = browser_is();
   if (b) {
-    let value = global_function_initialize(fn, initial);
-    let verse = await ebible_verse_download(
-      bible_folder,
-      chapter_code,
-      verse_number,
+    let verse_get = global_function_initialize(
+      ebible_verse,
+      ebible_verse_download,
     );
+    let verse = await verse_get(bible_folder, chapter_code, verse_number);
     return verse;
   }
   let verses = await ebible_verses(bible_folder, chapter_code);
