@@ -135,7 +135,7 @@ export function app_a_function_node(a) {
         let z = html_z_max();
         let overlay = html_overlay(root, z);
         let close = html_remove_lambda(overlay);
-        let b = app_a_button(overlay, "Close", close);
+        let b = app_a_button(overlay, "Close", () => {});
         let on_keydowns = object_property_get(context, "on_keydowns");
       }
       html_on_pointerdown(span, lambda20);
