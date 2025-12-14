@@ -10,7 +10,7 @@ import { app_a_home } from "../../../love/public/src/app_a_home.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 export function app_a_function_refresh(context, parsed) {
-  let parsed2 = object_property_get(ast, "parsed");
+  let ast2 = object_property_get(parsed, "ast");
   marker("1");
   let root = object_property_get(context, "root");
   html_clear(root);
