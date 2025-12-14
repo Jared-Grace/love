@@ -1,3 +1,4 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
@@ -156,6 +157,7 @@ export function app_a_function_node(a) {
             fn: function lambda15() {
               overlay_close();
               let overlay = html_overlay_z_max(root);
+              let div3 = html_div(root3);
               let div2 = html_div_text(root2, text5);
               let div = html_div_text(overlay, name);
               html_centered(div);
