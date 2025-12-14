@@ -45,7 +45,7 @@ export function app_a_function_node(a) {
   let type = object_property_get(node, "type");
   let lookup = {
     Program: function lambda3() {
-      app_a_body(node, parent, a);
+      app_a_body(node, parent, a, false);
     },
     ["ImportDeclaration"]: function lambda4() {
       let source = object_property_get(node, "source");
@@ -104,7 +104,7 @@ export function app_a_function_node(a) {
     ["BlockStatement"]: function lambda7() {
       app_a_indent(a, inner);
       function inner() {
-        app_a_body(node, parent, a);
+        app_a_body(node, parent, a, false);
       }
     },
     ["ExpressionStatement"]: function lambda7() {
