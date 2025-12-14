@@ -65,10 +65,11 @@ export function app_a_body_inner(parent, body, a) {
     let indent = object_property_get(a, "indent");
     let indentation = string_multiply(" ", indent);
     let s = html_span_text(line, indentation);
-    html_style_assign(b2, {
+    html_style_assign(s, {
       flex: "0 0 auto",
       "white-space": "pre",
     });
+    let span = html_span_text(parent2, text2);
     app_a_function_node_child_parent(a, b, line);
   }
   each(body, lambda);
