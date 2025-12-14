@@ -59,6 +59,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function app_a_function_node(a) {
   let { node, parent, context, ast } = a;
+  let parsed2 = object_property_get(a, "parsed");
   let root = object_property_get(a, "root");
   let type = object_property_get(node, "type");
   let lookup = {
@@ -194,7 +195,7 @@ export function app_a_function_node(a) {
                 await js_identifier_rename_imports_fix(ast, name, name_new);
                 html_remove(overlay);
                 await file_js_unparse(parsed);
-                app_a_function_refresh(context, ast);
+                app_a_function_refresh(context, parsed);
               }
               let component = app_a_button_wide(overlay, "Rename", lambda23);
             },
