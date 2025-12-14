@@ -164,11 +164,8 @@ export function app_a_function_node(a) {
             fn: function lambda15() {
               overlay_close();
               let overlay = html_overlay_z_max(root);
-              let component2 = app_a_button_wide(
-                parent2,
-                text5,
-                function lambda24() {},
-              );
+              function lambda24() {}
+              let component2 = app_a_button_wide(parent2, text5, lambda24);
               let div3 = html_div(overlay);
               app_a_control_style(div3);
               html_style_background_color(div3, "white");
