@@ -1,3 +1,4 @@
+import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { app_a_input } from "../../../love/public/src/app_a_input.mjs";
 import { html_overlay_z_max } from "../../../love/public/src/html_overlay_z_max.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -154,6 +155,7 @@ export function app_a_function_node(a) {
               overlay_close();
               let overlay = html_overlay_z_max(root);
               let input = app_a_input(overlay);
+              html_value_set(input2, value4);
             },
           },
         ];
