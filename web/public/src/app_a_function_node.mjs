@@ -1,3 +1,5 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
@@ -167,6 +169,8 @@ export function app_a_function_node(a) {
               html_value_set(input, name);
               function lambda23() {
                 html_remove(overlay);
+                let name_new = html_value_get(input);
+                object_property_set(node, "name", name_new);
               }
               let component = app_a_button_wide(overlay, "Rename", lambda23);
             },
