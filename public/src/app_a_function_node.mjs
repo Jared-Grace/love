@@ -156,6 +156,7 @@ export function app_a_function_node(a) {
             fn: function lambda15() {
               overlay_close();
               let overlay = html_overlay_z_max(root);
+              let div2 = html_div_text(root2, text5);
               let div = html_div_text(overlay, name);
               html_centered(div);
               let input = app_a_input(overlay);
