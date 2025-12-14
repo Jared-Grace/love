@@ -1,5 +1,5 @@
 import { invoke_multiple_shuffle } from "../../../love/public/src/invoke_multiple_shuffle.mjs";
-export function lambda_invoke_multiple_shuffle_2(correct, wrong) {
+export function invoke_multiple_shuffle_2(correct, wrong) {
   let choices = [correct, wrong];
   invoke_multiple_shuffle(choices);
 }
