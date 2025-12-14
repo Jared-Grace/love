@@ -1,4 +1,3 @@
-import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { app_a_input } from "../../../love/public/src/app_a_input.mjs";
 import { html_overlay_z_max } from "../../../love/public/src/html_overlay_z_max.mjs";
@@ -154,8 +153,7 @@ export function app_a_function_node(a) {
             text: "Rename",
             fn: function lambda15() {
               overlay_close();
-              let overlay = html_overlay_z_max(root);
-              let div = html_div(root2);
+              let overlay = html_overlay_z_max(root);hdt
               let input = app_a_input(overlay);
               html_value_set(input, name);
             },
