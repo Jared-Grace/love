@@ -1,4 +1,4 @@
-import { html_font_set } from "../../../love/public/src/html_font_set.mjs";
+import { html_font_sans_serif_set_html } from "../../../love/public/src/html_font_sans_serif_set_html.mjs";
 import { g_coordinates } from "../../../love/public/src/g_coordinates.mjs";
 import { app_g_map_generate } from "../../../love/public/src/app_g_map_generate.mjs";
 import { html_hide_loadable } from "../../../love/public/src/html_hide_loadable.mjs";
@@ -53,9 +53,7 @@ export async function app_g_main() {
   marker("1");
   html_meta_viewport();
   let html = html_document_root();
-  let html2 = html_document_root();
-  let style_value = html_font_sans_serif_value();
-  html_font_set(html2, style_value);
+  html_font_sans_serif_set_html();
   html_style_assign(html, {
     "font-size": "18px",
   });
