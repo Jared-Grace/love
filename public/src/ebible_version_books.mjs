@@ -1,3 +1,4 @@
+import { global_function_initialize_lambda_async } from "../../../love/public/src/global_function_initialize_lambda_async.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { firebase_storage_download_ebible } from "../../../love/public/src/firebase_storage_download_ebible.mjs";
 import { ebible_version_books_upload_name } from "../../../love/public/src/ebible_version_books_upload_name.mjs";
@@ -11,6 +12,10 @@ export async function ebible_version_books(bible_folder) {
   marker("1");
   let b = browser_is();
   if (b) {
+    let value = await global_function_initialize_lambda_async(
+      fn,
+      async function lambda2() {},
+    );
     let file_name2 = ebible_version_books_upload_name();
     let { books } = await firebase_storage_download_ebible(
       bible_folder,
