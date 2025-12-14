@@ -63,8 +63,7 @@ export function app_a_body_inner(parent, body, a) {
     }
     let line = html_div(parent_new);
     let indent = object_property_get(a, "indent");
-    const value = " ";
-    string_multiply(value, indent);
+    string_multiply(" ", indent);
     let s = html_span_text(line, " ");
     html_style_set(s, "white-space", "pre");
     app_a_function_node_child_parent(a, b, line);
