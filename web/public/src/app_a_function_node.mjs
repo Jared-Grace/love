@@ -16,7 +16,6 @@ import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { app_a_input } from "../../../love/public/src/app_a_input.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { app_a_button } from "../../../love/public/src/app_a_button.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -203,7 +202,6 @@ export function app_a_function_node(a) {
             },
           },
         ];
-        list_add(on_keydowns, on_keydown);
         function on_keydown(e) {
           html_on_keydown_stop_logic(e);
           let key2 = object_property_get(e, "key");
