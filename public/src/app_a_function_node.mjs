@@ -163,7 +163,7 @@ export function app_a_function_node(a) {
           {
             shortcut: "r",
             text: "Rename",
-            fn: function lambda15() {
+            fn: async function lambda15() {
               overlay_close();
               let overlay = html_overlay_z_max(root);
               function rename_overlay_close() {
@@ -185,7 +185,7 @@ export function app_a_function_node(a) {
               let input = app_a_input(overlay);
               html_centered(input);
               html_value_set(input, name);
-              html_select(input);
+              await html_select(input);
               function lambda23() {
                 let name_new = html_value_get(input);
                 object_property_set(node, "name", name_new);
