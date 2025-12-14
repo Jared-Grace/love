@@ -31,5 +31,6 @@ export function app_a_function_refresh(context, ast) {
     context,
     indent: 0,
     root,
+    ast,
   });
 }
