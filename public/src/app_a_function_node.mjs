@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { html_on_keydown_stop_logic } from "../../../love/public/src/html_on_keydown_stop_logic.mjs";
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
 import { js_identifier_rename_imports_fix } from "../../../love/public/src/js_identifier_rename_imports_fix.mjs";
@@ -168,7 +167,6 @@ export function app_a_function_node(a) {
               let { overlay, overlay_close: rename_overlay_close } =
                 app_a_overlay(root, on_keydowns, lambda22);
               function lambda22(e) {
-                log("message");
                 let key3 = object_property_get(e, "key");
                 if (equal(key3, "Enter")) {
                   lambda23();
