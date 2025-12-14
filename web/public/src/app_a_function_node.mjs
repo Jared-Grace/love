@@ -150,10 +150,10 @@ export function app_a_function_node(a) {
       function lambda20() {
         let overlay = html_overlay_z_max(root);
         let on_keydowns = object_property_get(context, "on_keydowns");
-        function overlay_close() {
+        let overlay_close = function lambda22() {
           list_remove(on_keydowns, on_keydown);
           html_remove(overlay);
-        }
+        };
         let choices = [
           {
             shortcut: "c",
