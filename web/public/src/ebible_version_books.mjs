@@ -1,4 +1,4 @@
-import { global_function_initialize_lambda_async } from "../../../love/public/src/global_function_initialize_lambda_async.mjs";
+import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { firebase_storage_download_ebible } from "../../../love/public/src/firebase_storage_download_ebible.mjs";
 import { ebible_version_books_upload_name } from "../../../love/public/src/ebible_version_books_upload_name.mjs";
@@ -20,7 +20,7 @@ export async function ebible_version_books(bible_folder) {
       );
       return books;
     }
-    let value = await global_function_initialize_lambda_async(
+    let value = await global_function_property_initialize_async(
       ebible_version_books,
       lambda2,
     );
