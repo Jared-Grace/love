@@ -140,7 +140,8 @@ export function app_a_function_node(a) {
         let on_keydowns = object_property_get(context, "on_keydowns");
         function on_keydown(k) {
           let key2 = object_property_get(k, "key");
-          if (equal(left2, right2)) {
+          if (equal(key2, "c")) {
+            lambda15();
           }
         }
         list_add(on_keydowns, on_keydown);
