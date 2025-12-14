@@ -149,7 +149,7 @@ export function app_a_function_node(a) {
       html_font_color_set(span, "#4a4affff");
       function lambda20() {
         let on_keydowns = object_property_get(context, "on_keydowns");
-        let overlay_close = app_a_overlay(on_keydowns, on_keydown, overlay);
+        let {overlay,overlay_close} = app_a_overlay(on_keydowns, on_keydown, overlay);
         let choices = [
           {
             shortcut: "c",
@@ -161,9 +161,8 @@ export function app_a_function_node(a) {
             text: "Rename",
             fn: async function lambda15() {
               overlay_close();
-              let overlay = html_overlay_z_max(root);
               function lambda22() {}
-              let rename_overlay_close = app_a_overlay(
+              let {overlay_close:rename_overlay_close} = app_a_overlay(
                 on_keydowns,
                 lambda22,
                 overlay,
