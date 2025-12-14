@@ -62,8 +62,9 @@ export function app_a_body_inner(parent, body, a) {
     let div = html_div(parent_new);
     let indent = object_property_get(a, "indent");
     html_style_assign(div, {
-      "white-space": "pre",
+      "white-space": "pre-wrap",
       "padding-left": indent + "ch",
+      "text-indent": "-" + indent + "ch",
     });
     app_a_function_node_child_parent(a, b, div);
   }
