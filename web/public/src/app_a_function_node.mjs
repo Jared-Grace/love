@@ -1,3 +1,4 @@
+import { app_a_input } from "../../../love/public/src/app_a_input.mjs";
 import { html_overlay_z_max } from "../../../love/public/src/html_overlay_z_max.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
@@ -152,6 +153,7 @@ export function app_a_function_node(a) {
             fn: function lambda15() {
               overlay_close();
               let overlay = html_overlay_z_max(root);
+              let input = app_a_input(overlay);
             },
           },
         ];
