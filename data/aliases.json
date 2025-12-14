@@ -284,6 +284,7 @@
   "fle": "file_exists",
   "frp": "function_replace",
   "fc": "function_cache",
-  "hprt": "html_pre_text"
+  "hprt": "html_pre_text",
+  "ho": "html_overlay"
  }
 }
