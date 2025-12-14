@@ -54,9 +54,8 @@ export async function app_g_main() {
   html_meta_viewport();
   let html = html_document_root();
   let style_value = html_font_sans_serif_value();
-  html_font_set(html2, value);
+  html_font_set(html, style_value);
   html_style_assign(html, {
-    "font-family": style_value,
     "font-size": "18px",
   });
   html_roboto_include();
