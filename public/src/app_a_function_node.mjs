@@ -1,3 +1,4 @@
+import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -164,6 +165,11 @@ export function app_a_function_node(a) {
               html_div_text(div3, "Rename to:");
               let input = app_a_input(overlay);
               html_value_set(input, name);
+              let component = app_a_button_wide(
+                parent2,
+                text5,
+                function lambda23() {},
+              );
             },
           },
         ];
