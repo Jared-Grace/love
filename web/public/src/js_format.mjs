@@ -1,6 +1,6 @@
 import prettier from "prettier";
 import parserBabel from "prettier/plugins/babel";
-export async function js_format(code) {
+export async function js_format(code) {bi
   if (false) {
     const prettier = await import("https://esm.sh/prettier@3.2.5");
     const parserBabel = await import(
