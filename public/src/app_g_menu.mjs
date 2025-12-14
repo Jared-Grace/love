@@ -13,9 +13,9 @@ import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 export function app_g_menu(overlay, player) {
   html_clear(overlay);
-  function close() {
+  let close = function lambda() {
     html_remove(overlay);
-  }
+  };
   let component2 = app_g_button_back(overlay, close);
   let text = emoji_pray() + " Pray";
   function lambda7() {
