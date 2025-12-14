@@ -105,7 +105,8 @@ export async function app_reply_main() {
     }
     buttons_refresh();
   }
-  html_on_keydown(root, lambda6);
+  const body = html_document_body();
+  html_on_keydown(body, lambda6);
   async function reset() {
     verses_list_reset();
     list_empty(copied);
