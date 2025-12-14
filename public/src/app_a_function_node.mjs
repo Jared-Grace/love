@@ -162,8 +162,11 @@ export function app_a_function_node(a) {
         let properties = object_property_get(node, "properties");
         const property = "indent";
         object_property_add_1(a, property);
-        app_a_body_inner(parent, properties, a);
+        inner();
         object_property_subtract_1(a, property);
+        function inner() {
+          app_a_body_inner(parent, properties, a);
+        }
       }
       app_a_braces_wrap(parent, lambda16);
     },
