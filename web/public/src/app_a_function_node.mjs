@@ -149,9 +149,9 @@ export function app_a_function_node(a) {
       function lambda20() {
         let on_keydowns = object_property_get(context, "on_keydowns");
         let { overlay, overlay_close } = app_a_overlay(
+          root,
           on_keydowns,
           on_keydown,
-          root,
         );
         let choices = [
           {
@@ -165,7 +165,7 @@ export function app_a_function_node(a) {
             fn: async function lambda15() {
               overlay_close();
               let { overlay, overlay_close: rename_overlay_close } =
-                app_a_overlay(on_keydowns, lambda22, root);
+                app_a_overlay(root, on_keydowns, lambda22);
               function lambda22(e) {
                 let key3 = object_property_get(e, "key");
                 if (equal(key3, "Enter")) {
