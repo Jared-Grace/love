@@ -167,9 +167,10 @@ export function app_a_function_node(a) {
             fn: async function lambda15() {
               overlay_close();
               let overlay = html_overlay_z_max(root);
+              function lambda22() {}
               let rename_overlay_close = app_a_overlay_on_keydown(
                 on_keydowns,
-                () => {},
+                lambda22,
                 overlay,
               );
               let text5 = app_a_overlay_close_text();
