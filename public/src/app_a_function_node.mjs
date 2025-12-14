@@ -45,6 +45,7 @@ import { js_keyword_import } from "../../../love/public/src/js_keyword_import.mj
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { json_to } from "./json_to.mjs";
 export function app_a_function_node(a) {
   let { node, parent, context } = a;
   let root = object_property_get(a, "root");
@@ -138,8 +139,9 @@ export function app_a_function_node(a) {
         let z = html_z_max();
         let overlay = html_overlay(root, z);
         let on_keydowns = object_property_get(context, "on_keydowns");
-        function on_keydown() {
-          html_alert("message");
+        function on_keydown(k) {
+          let message = json_to(k);
+          html_alert(message);
         }
         list_add(on_keydowns, on_keydown);
         function lambda15() {
