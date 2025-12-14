@@ -1,3 +1,5 @@
+import { add_1 } from "../../../love/public/src/add_1.mjs";
+import { object_property_change } from "../../../love/public/src/object_property_change.mjs";
 import { object_property_add_1 } from "../../../love/public/src/object_property_add_1.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
@@ -161,6 +163,7 @@ export function app_a_function_node(a) {
         let properties = object_property_get(node, "properties");
         object_property_add_1(a, "indent");
         app_a_body_inner(parent, properties, a);
+        object_property_change(a, "indent", add_1);
       }
       app_a_braces_wrap(parent, lambda16);
     },
