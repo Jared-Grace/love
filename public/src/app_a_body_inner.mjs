@@ -64,7 +64,9 @@ export function app_a_body_inner(parent, body, a) {
     let line = html_div(parent_new);
     let indent = object_property_get(a, "indent");
     let indentation = "";
-    function lambda4(i) {}
+    function lambda4(i) {
+      indentation += " ";
+    }
     each_range(indent, lambda4);
     let s = html_span_text(line, " ");
     html_style_set(s, "white-space", "pre");
