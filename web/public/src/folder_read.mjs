@@ -8,6 +8,7 @@ export async function folder_read(path_folder) {
   return all;
   if (browser_is()) {
     let function_name = folder_read.name;
-    let f_names = await app_api_cache_global(function_name, []);
+    let r = await app_api_cache_global(function_name, [path_folder]);
+    return r;
   }
 }
