@@ -156,10 +156,13 @@ export function app_a_function_node(a) {
             },
           },
         ];
-        function lambda21(item) {
+        function lambda21(c) {
+          let shortcut2 = object_property_get(c, "shortcut");
+          let text5 = object_property_get(c, "text");
+          let fn2 = object_property_get(c, "fn");
           let b = app_a_button(overlay, "(c) Close", lambda15);
         }
-        each(list, lambda21);
+        each(choices, lambda21);
       }
       html_on_pointerdown(span, lambda20);
     },
