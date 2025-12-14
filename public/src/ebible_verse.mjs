@@ -1,3 +1,4 @@
+import { global_function_initialize } from "../../../love/public/src/global_function_initialize.mjs";
 import { ebible_verse_download } from "../../../love/public/src/ebible_verse_download.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
@@ -7,6 +8,7 @@ export async function ebible_verse(bible_folder, chapter_code, verse_number) {
   marker("1");
   let b = browser_is();
   if (b) {
+    let value = global_function_initialize(fn, initial);
     let verse = await ebible_verse_download(
       bible_folder,
       chapter_code,
