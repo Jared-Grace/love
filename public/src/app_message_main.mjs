@@ -1,5 +1,5 @@
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
-import { lambda_invoke } from "../../../love/public/src/lambda_invoke.mjs";
+import { invoke } from "../../../love/public/src/invoke.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -98,7 +98,7 @@ export async function app_message_main() {
       return next;
     }
     let nexts = list_map(messages, lambda2);
-    await list_map_unordered_async(nexts, lambda_invoke);
+    await list_map_unordered_async(nexts, invoke);
   }
   function message_display(direction, message) {
     let div_message = app_karate_container(div_messages);
