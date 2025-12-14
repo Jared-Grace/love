@@ -283,6 +283,7 @@
   "fia": "false_is_assert",
   "fle": "file_exists",
   "frp": "function_replace",
-  "fc": "function_cache"
+  "fc": "function_cache",
+  "hprt": "html_pre_text"
  }
 }
