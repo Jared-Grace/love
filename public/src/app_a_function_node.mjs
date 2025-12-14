@@ -138,21 +138,21 @@ export function app_a_function_node(a) {
         let z = html_z_max();
         let overlay = html_overlay(root, z);
         let on_keydowns = object_property_get(context, "on_keydowns");
+        function overlay_close() {
+          list_remove(on_keydowns, on_keydown);
+          html_remove(overlay);
+        }
         let choices = [
           {
             shortcut: "c",
             text: "Close",
-            fn: function lambda15() {
-              list_remove(on_keydowns, on_keydown);
-              html_remove(overlay);
-            },
+            fn: overlay_close,
           },
           {
             shortcut: "r",
             text: "Rename",
             fn: function lambda15() {
-              list_remove(on_keydowns, on_keydown);
-              html_remove(overlay);
+              overlay_close();
             },
           },
         ];
