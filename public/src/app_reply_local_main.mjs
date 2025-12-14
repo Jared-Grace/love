@@ -1,5 +1,5 @@
+import { app_reply_main } from "../../../love/public/src/app_reply_main.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
-import { app_reply_generic } from "../../../love/public/src/app_reply_generic.mjs";
 import { ebible_languages_chapters } from "../../../love/public/src/ebible_languages_chapters.mjs";
 import { app_api } from "../../../love/public/src/app_api.mjs";
 export async function app_reply_local_main() {
@@ -10,5 +10,5 @@ export async function app_reply_local_main() {
     let verse = list_find_property(verses, "verse_number", verse_number);
     return verse;
   }
-  await app_reply_generic(lambda);
+  await app_reply_main();
 }
