@@ -44,7 +44,7 @@ export function app_a_function_node(a) {
   let type = object_property_get(node, "type");
   let lookup = {
     Program: function lambda3() {
-      app_a_body(node, parent, a, true);
+      app_a_body(node, parent, a, false);
     },
     ["ImportDeclaration"]: function lambda4() {
       let source = object_property_get(node, "source");
