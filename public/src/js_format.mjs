@@ -1,5 +1,5 @@
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
-export async function js_format(code) {let prettierModule, babelPlugin;
+export async function js_format(code) {let prettier, babelPlugin;
   if (browser_is()) {
      prettier = await import("https://esm.sh/prettier@3.2.5");
      parserBabel = await import(
@@ -7,7 +7,7 @@ export async function js_format(code) {let prettierModule, babelPlugin;
     );
   } else {
     // Node.js fallback (optional)
-    prettierModule = await import("prettier");
+    prettier = await import("prettier");
     babelPlugin = await import("prettier/plugins/babel");
   }
   const formatted = await prettier.format(code, {
