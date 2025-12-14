@@ -138,17 +138,9 @@ export function app_a_function_node(a) {
         let z = html_z_max();
         let overlay = html_overlay(root, z);
         let on_keydowns = object_property_get(context, "on_keydowns");
-        const key_close = "c";
-        function on_keydown(k) {
-          let key2 = object_property_get(k, "key");
-          if (equal(key2, key_close)) {
-            lambda15();
-          }
-        }
-        list_add(on_keydowns, on_keydown);
         let choices = [
           {
-            shortcut: key_close,
+            shortcut: "c",
             text: "Close",
             fn: function lambda15() {
               list_remove(on_keydowns, on_keydown);
@@ -156,6 +148,13 @@ export function app_a_function_node(a) {
             },
           },
         ];
+        list_add(on_keydowns, on_keydown);
+        function on_keydown(k) {
+          let key2 = object_property_get(k, "key");
+          if (equal(key2, key_close)) {
+            lambda15();
+          }
+        }
         function lambda21(c) {
           let shortcut2 = object_property_get(c, "shortcut");
           let text5 = object_property_get(c, "text");
