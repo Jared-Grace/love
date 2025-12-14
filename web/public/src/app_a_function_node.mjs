@@ -159,8 +159,7 @@ export function app_a_function_node(a) {
     ["ObjectExpression"]: function lambda14() {
       function lambda16() {
         let properties = object_property_get(node, "properties");
-        const property = "indent";
-        object_property_add_subtract_1(a, property, inner);
+        object_property_add_subtract_1(a, "indent", inner);
         function inner() {
           app_a_body_inner(parent, properties, a);
         }
