@@ -58,7 +58,7 @@ export function app_a_body_inner(parent, body, a) {
       }
     }
     let div = html_div(parent_new);
-    let span = html_span_text(parent2, text2);
+    let span = html_span_text(div, "+");
     app_a_function_node_child_parent(a, b, div);
   }
   each(body, lambda);
