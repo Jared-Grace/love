@@ -1,3 +1,4 @@
+import { js_identifier_rename_imports_fix } from "../../../love/public/src/js_identifier_rename_imports_fix.mjs";
 import { html_select } from "../../../love/public/src/html_select.mjs";
 import { on_keydown_stop } from "../../../love/public/src/on_keydown_stop.mjs";
 import { app_a_overlay_close_text } from "../../../love/public/src/app_a_overlay_close_text.mjs";
@@ -186,11 +187,12 @@ export function app_a_function_node(a) {
               html_centered(input);
               html_value_set(input, name);
               await html_select(input);
-              function lambda23() {
+              async function lambda23() {
                 let name_new = html_value_get(input);
                 object_property_set(node, "name", name_new);
                 html_remove(overlay);
                 app_a_function_refresh(context, ast);
+                await js_identifier_rename_imports_fix(ast, name, name_new);
               }
               let component = app_a_button_wide(overlay, "Rename", lambda23);
             },
