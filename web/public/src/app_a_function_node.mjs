@@ -164,9 +164,15 @@ export function app_a_function_node(a) {
             fn: function lambda15() {
               overlay_close();
               let overlay = html_overlay_z_max(root);
-              function lambda24() {}
+              function rename_overlay_close() {
+                html_remove(overlay);
+              }
               let text5 = app_a_overlay_close_text();
-              let component2 = app_a_button_wide(overlay, text5, lambda24);
+              let component2 = app_a_button_wide(
+                overlay,
+                text5,
+                rename_overlay_close,
+              );
               let div3 = html_div(overlay);
               app_a_control_style(div3);
               html_style_background_color(div3, "white");
