@@ -1,3 +1,4 @@
+import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { app_api_cache_global } from "../../../love/public/src/app_api_cache_global.mjs";
@@ -9,7 +10,6 @@ import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
-import { app_a_control_style_wide } from "../../../love/public/src/app_a_control_style_wide.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_input } from "../../../love/public/src/html_input.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
@@ -20,7 +20,7 @@ export async function app_a_home(context) {
   let body = html_document_body();
   let input = html_input(body);
   html_focus(input);
-  app_a_control_style_wide(input);
+  app_a_control_style(input);
   html_style_assign(input, {
     "border-width": "1px",
     "border-color": "gray",
