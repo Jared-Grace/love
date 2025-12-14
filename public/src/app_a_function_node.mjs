@@ -59,7 +59,7 @@ import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function app_a_function_node(a) {
-  let { node, parent, context } = a;
+  let { node, parent, context, ast } = a;
   let root = object_property_get(a, "root");
   let type = object_property_get(node, "type");
   let lookup = {
