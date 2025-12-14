@@ -155,7 +155,8 @@ export function app_a_function_node(a) {
               html_remove(overlay);
             },
           },
-        ];e
+        ];
+        each(list, function lambda21(item) {});
         let b = app_a_button(overlay, "(c) Close", lambda15);
       }
       html_on_pointerdown(span, lambda20);
