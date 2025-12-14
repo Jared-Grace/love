@@ -1,3 +1,4 @@
+import { integer_max } from "../../../love/public/src/integer_max.mjs";
 import { html_on_keydown } from "../../../love/public/src/html_on_keydown.mjs";
 import { app_a } from "../../../love/public/src/app_a.mjs";
 import { app_a_screens } from "../../../love/public/src/app_a_screens.mjs";
@@ -14,7 +15,9 @@ export function app_a_main() {
     root,
     on_keydowns,
   };
-  function lambda() {}
+  function lambda() {
+    let m = integer_max();
+  }
   html_on_keydown(root, lambda);
   app_generic_refresh(context);
 }
