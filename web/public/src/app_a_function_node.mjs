@@ -1,10 +1,9 @@
+import { html_overlay_z_max } from "../../../love/public/src/html_overlay_z_max.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { app_a_button } from "../../../love/public/src/app_a_button.mjs";
-import { html_overlay } from "../../../love/public/src/html_overlay.mjs";
-import { html_z_max } from "../../../love/public/src/html_z_max.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { app_a_braces_wrap_node } from "../../../love/public/src/app_a_braces_wrap_node.mjs";
@@ -135,8 +134,7 @@ export function app_a_function_node(a) {
       let span = html_span_text(parent, name);
       html_font_color_set(span, "#4a4affff");
       function lambda20() {
-        let z = html_z_max();
-        let overlay = html_overlay(root, z);
+        let overlay = html_overlay_z_max(root);
         let on_keydowns = object_property_get(context, "on_keydowns");
         function overlay_close() {
           list_remove(on_keydowns, on_keydown);
