@@ -1,3 +1,4 @@
+import { app_a_overlay_close_text } from "../../../love/public/src/app_a_overlay_close_text.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
 import { app_a_function_refresh } from "../../../love/public/src/app_a_function_refresh.mjs";
@@ -154,7 +155,7 @@ export function app_a_function_node(a) {
         let choices = [
           {
             shortcut: "c",
-            text: "Close",
+            text: app_a_overlay_close_text(),
             fn: overlay_close,
           },
           {
