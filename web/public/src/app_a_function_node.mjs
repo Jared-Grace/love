@@ -160,7 +160,7 @@ export function app_a_function_node(a) {
           let shortcut2 = object_property_get(c, "shortcut");
           let text5 = object_property_get(c, "text");
           let fn2 = object_property_get(c, "fn");
-          let b = app_a_button(overlay, "(c) Close", lambda15);
+          let b = app_a_button(overlay, "(" + shortcut2 + ") " + text5, fn2);
         }
         each(choices, lambda21);
       }
