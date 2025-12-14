@@ -1,3 +1,4 @@
+import { html_z_max } from "../../../love/public/src/html_z_max.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { app_a_braces_wrap_node } from "../../../love/public/src/app_a_braces_wrap_node.mjs";
@@ -125,7 +126,8 @@ export function app_a_function_node(a) {
     ["Identifier"]: function lambda9() {
       let name = object_property_get(node, "name");
       let span = html_span_text(parent, name);
-      html_font_color_set(span, "#4a4affff");html_z_max
+      html_font_color_set(span, "#4a4affff");
+      let v22 = html_z_max();
       ho;
     },
     ["Literal"]: function lambda10() {
