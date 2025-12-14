@@ -65,10 +65,11 @@ export function app_a_body_inner(parent, body, a, indent) {
     html_style_assign(line, {
       display: "flex",
     });
+    let i = null;
     if (indent) {
-      let i = null;
       i = " ";
     } else {
+      i = "";
     }
     let s = html_span_text(line, " ");
     html_style_assign(s, {
