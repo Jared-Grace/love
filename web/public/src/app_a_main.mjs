@@ -1,3 +1,4 @@
+import { html_font_sans_serif_set_html } from "../../../love/public/src/html_font_sans_serif_set_html.mjs";
 import { invoke_multiple_arg } from "../../../love/public/src/invoke_multiple_arg.mjs";
 import { html_on_keydown } from "../../../love/public/src/html_on_keydown.mjs";
 import { app_a } from "../../../love/public/src/app_a.mjs";
@@ -19,5 +20,6 @@ export function app_a_main() {
     invoke_multiple_arg(on_keydowns, k);
   }
   html_on_keydown(root, lambda);
+  html_font_sans_serif_set_html();
   app_generic_refresh(context);
 }
