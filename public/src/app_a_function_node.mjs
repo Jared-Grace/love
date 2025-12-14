@@ -154,14 +154,26 @@ export function app_a_function_node(a) {
           if (equal(key2, key_close)) {
             lambda15();
           }
+          choices_each(on_choice);
+          function on_choice(shortcut, text, fn) {
+            let b2 = app_a_button(overlay, "(" + shortcut2 + ") " + text5, fn2);
+            return b2;
+          }
         }
-        function lambda21(c) {
-          let shortcut2 = object_property_get(c, "shortcut");
-          let text5 = object_property_get(c, "text");
-          let fn2 = object_property_get(c, "fn");
-          let b = app_a_button(overlay, "(" + shortcut2 + ") " + text5, fn2);
+        choices_each(on_choice);
+        function on_choice(shortcut, text, fn) {
+          let b3 = app_a_button(overlay, "(" + shortcut + ") " + text, fn);
+          return b3;
         }
-        each(choices, lambda21);
+        function choices_each(on_choice) {
+          function lambda21(c) {
+            let shortcut = object_property_get(c, "shortcut");
+            let text = object_property_get(c, "text");
+            let fn = object_property_get(c, "fn");
+            let b = on_choice(shortcut, text, fn);
+          }
+          each(choices, lambda21);
+        }
       }
       html_on_pointerdown(span, lambda20);
     },
