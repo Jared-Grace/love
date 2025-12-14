@@ -33,5 +33,6 @@ export function app_a_function_refresh(context, parsed) {
     indent: 0,
     root,
     ast,
+    parsed,
   });
 }
