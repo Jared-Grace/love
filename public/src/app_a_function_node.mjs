@@ -194,8 +194,11 @@ export function app_a_function_node(a) {
           },
         ];
         list_add(on_keydowns, on_keydown);
-        function on_keydown(k) {
-          let key2 = object_property_get(k, "key");
+        function on_keydown(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+          let key2 = object_property_get(e, "key");
           choices_each(on_choice);
           function on_choice(shortcut, text, fn) {
             if (equal(key2, shortcut)) {
