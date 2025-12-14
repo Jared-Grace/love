@@ -146,7 +146,7 @@ export function app_a_function_node(a) {
         list_add(on_keydowns, on_keydown);
         function lambda15() {
           list_remove(on_keydowns, on_keydown);
-          html_remove(component);
+          html_remove(overlay);
         }
         let b = app_a_button(overlay, "Close", lambda15);
       }
