@@ -125,7 +125,7 @@ export function app_a_function_node(a) {
     ["Identifier"]: function lambda9() {
       let name = object_property_get(node, "name");
       let span = html_span_text(parent, name);
-      html_font_color_set(span, "#4a4affff");
+      html_font_color_set(span, "#4a4affff");html_z_max
       ho;
     },
     ["Literal"]: function lambda10() {
