@@ -60,6 +60,7 @@ export function app_a_body_inner(parent, body, a) {
       }
     }
     let div = html_div(parent_new);
+    let indent2 = object_property_get(a, "indent");
     if (indent) {
       let span = html_span_text(div, "+");
     }
