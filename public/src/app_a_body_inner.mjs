@@ -1,3 +1,4 @@
+import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { string_multiply } from "../../../love/public/src/string_multiply.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
@@ -64,8 +65,9 @@ export function app_a_body_inner(parent, body, a) {
     let line = html_div(parent_new);
     let indent = object_property_get(a, "indent");
     let indentation = string_multiply(" ", indent);
-    let s = html_span_text(line, " ");
+    let s = html_span_text(line, indentation);
     html_style_set(s, "white-space", "pre");
+    html_style_assign(b2, s2);
     app_a_function_node_child_parent(a, b, line);
   }
   each(body, lambda);
