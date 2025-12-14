@@ -157,7 +157,7 @@ export function app_a_function_node(a) {
               overlay_close();
               let overlay = html_overlay_z_max(root);
               let div = html_div_text(overlay, name);
-              html_centered(div2);
+              html_centered(div);
               let input = app_a_input(overlay);
               html_value_set(input, name);
             },
