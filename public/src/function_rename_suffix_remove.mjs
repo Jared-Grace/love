@@ -7,6 +7,7 @@ export async function function_rename_suffix_remove(f_name_before, suffix) {
   function lambda(f_name_before, suffix) {
     let separator = function_name_separator();
     let sw = string_starts_with(f_name_before, "" + separator + suffix);
+    ssr;
     return sw;
   }
   let v = await function_rename_suffix_add_generic(
