@@ -154,16 +154,16 @@ export function app_a_function_node(a) {
           if (equal(key2, key_close)) {
             lambda15();
           }
-          choices_each(on_choice);
-          function on_choice(shortcut, text, fn) {
-            let b2 = app_a_button(overlay, "(" + shortcut2 + ") " + text5, fn2);
-            return b2;
-          }
+        choices_each(on_choice);
+
+        function on_choice(shortcut, text, fn) {
+          return app_a_button(overlay, "(" + shortcut + ") " + text, fn);
+        }
         }
         choices_each(on_choice);
+
         function on_choice(shortcut, text, fn) {
-          let b3 = app_a_button(overlay, "(" + shortcut + ") " + text, fn);
-          return b3;
+          return app_a_button(overlay, "(" + shortcut + ") " + text, fn);
         }
         function choices_each(on_choice) {
           function lambda21(c) {
@@ -174,6 +174,7 @@ export function app_a_function_node(a) {
           }
           each(choices, lambda21);
         }
+
       }
       html_on_pointerdown(span, lambda20);
     },
