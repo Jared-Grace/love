@@ -61,14 +61,14 @@ export function app_a_body_inner(parent, body, a) {
         parent_new = parent;
       }
     }
-    let div = html_div(parent_new);
+    let line = html_div(parent_new);
     let indent = object_property_get(a, "indent");
     function lambda4(i) {
-      let s = html_span_text(div, " ");
+      let s = html_span_text(line, " ");
       html_style_set(s, "white-space", "pre");
     }
     each_range(indent, lambda4);
-    app_a_function_node_child_parent(a, b, div);
+    app_a_function_node_child_parent(a, b, line);
   }
   each(body, lambda);
 }
