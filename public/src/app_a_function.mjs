@@ -39,5 +39,6 @@ export async function app_a_function(context) {
     parent: div,
     context,
     indent: 0,
+    root,
   });
 }
