@@ -3,5 +3,6 @@ import { ebible_languages_chapters } from "../../../love/public/src/ebible_langu
 import { app_api } from "../../../love/public/src/app_api.mjs";
 export async function app_reply_local_main() {
   let result = await app_api(ebible_languages_chapters.name, []);
-  await app_reply_generic(() => {});
+  function lambda() {}
+  await app_reply_generic(lambda);
 }
