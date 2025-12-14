@@ -1,4 +1,4 @@
 export function js_code_parenthesis_left() {
-  let v3 = "( ";
+  let v3 = "(";
   return v3;
 }
