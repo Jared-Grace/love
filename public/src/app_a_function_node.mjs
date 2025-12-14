@@ -128,8 +128,9 @@ export function app_a_function_node(a) {
       let name = object_property_get(node, "name");
       let span = html_span_text(parent, name);
       html_font_color_set(span, "#4a4affff");
+      html_on_pointerdown(component, function lambda20() {});
       let z = html_z_max();
-      let overlay = html_overlay(container, z_index);
+      let overlay = html_overlay(container, z);
     },
     ["Literal"]: function lambda10() {
       let raw = object_property_get(node, "raw");
