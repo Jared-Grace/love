@@ -59,7 +59,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function app_a_function_node(a) {
   let { node, parent, context, ast } = a;
-  let parsed2 = object_property_get(a, "parsed");
+  let parsed = object_property_get(a, "parsed");
   let root = object_property_get(a, "root");
   let type = object_property_get(node, "type");
   let lookup = {
