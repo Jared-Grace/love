@@ -157,10 +157,11 @@ export function app_a_function_node(a) {
             fn: function lambda15() {
               overlay_close();
               let overlay = html_overlay_z_max(root);
-              let div3 = html_div(root3);
-              let div2 = html_div_text(root2, text5);
-              let div = html_div_text(overlay, name);
-              html_centered(div);
+              let div3 = html_div(overlay);
+              html_centered(div3);
+              let div2 = html_div_text(div3, "Rename from:");
+              let div = html_div_text(div3, name);
+              html_div_text(div3, "Rename to:");
               let input = app_a_input(overlay);
               html_value_set(input, name);
             },
