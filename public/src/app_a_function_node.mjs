@@ -25,7 +25,6 @@ import { app_a_body } from "../../../love/public/src/app_a_body.mjs";
 import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
 import { app_a_keyword_blue_space } from "../../../love/public/src/app_a_keyword_blue_space.mjs";
 import { js_keyword_async } from "../../../love/public/src/js_keyword_async.mjs";
-import { app_a_identifier } from "../../../love/public/src/app_a_identifier.mjs";
 import { js_keyword_function } from "../../../love/public/src/js_keyword_function.mjs";
 import { list_empty_is_assert } from "../../../love/public/src/list_empty_is_assert.mjs";
 import { js_keyword_export } from "../../../love/public/src/js_keyword_export.mjs";
@@ -124,7 +123,9 @@ export function app_a_function_node(a) {
       }
     },
     ["Identifier"]: function lambda9() {
-      app_a_identifier(parent, node);
+      let name = object_property_get(node, "name");
+      let span = html_span_text(parent, name);
+      html_font_color_set(span, "#4a4affff");
     },
     ["Literal"]: function lambda10() {
       let raw = object_property_get(node, "raw");
