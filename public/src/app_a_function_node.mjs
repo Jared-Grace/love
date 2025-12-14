@@ -169,9 +169,9 @@ export function app_a_function_node(a) {
               let input = app_a_input(overlay);
               html_value_set(input, name);
               function lambda23() {
-                html_remove(overlay);
                 let name_new = html_value_get(input);
                 object_property_set(node, "name", name_new);
+                html_remove(overlay);
                 app_a_function_refresh(context, ast);
               }
               let component = app_a_button_wide(overlay, "Rename", lambda23);
