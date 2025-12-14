@@ -2,7 +2,7 @@ import { object_property_set } from "../../../love/public/src/object_property_se
 import { invoke_once } from "../../../love/public/src/invoke_once.mjs";
 import { app_g_button_wrong } from "../../../love/public/src/app_g_button_wrong.mjs";
 import { app_g_doxology } from "../../../love/public/src/app_g_doxology.mjs";
-import { lambda_invoke_multiple_shuffle_2 } from "../../../love/public/src/lambda_invoke_multiple_shuffle_2.mjs";
+import { invoke_multiple_shuffle_2 } from "../../../love/public/src/invoke_multiple_shuffle_2.mjs";
 import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
 import { app_g_wrong } from "../../../love/public/src/app_g_wrong.mjs";
 import { app_g_main_books } from "../../../love/public/src/app_g_main_books.mjs";
@@ -91,7 +91,7 @@ export async function app_g_gospel(
         });
       }
     }
-    lambda_invoke_multiple_shuffle_2(correct, wrong);
+    invoke_multiple_shuffle_2(correct, wrong);
     app_g_button_conversation_end(overlay, overlay_close);
   } else {
     const doxology = app_g_doxology();
