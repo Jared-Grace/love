@@ -285,6 +285,7 @@
   "frp": "function_replace",
   "fc": "function_cache",
   "hprt": "html_pre_text",
-  "ho": "html_overlay"
+  "ho": "html_overlay",
+  "ri": "function_multiple_rename_if_starts_with"
  }
 }
