@@ -12,14 +12,19 @@ export async function ebible_version_books(bible_folder) {
   marker("1");
   let b = browser_is();
   if (b) {
-    async function lambda2() {}
-    let value = await global_function_initialize_lambda_async(fn, lambda2);
-    let file_name2 = ebible_version_books_upload_name();
-    let { books } = await firebase_storage_download_ebible(
-      bible_folder,
-      file_name2,
+    async function lambda2() {
+      let file_name2 = ebible_version_books_upload_name();
+      let { books } = await firebase_storage_download_ebible(
+        bible_folder,
+        file_name2,
+      );
+      return books;
+    }
+    let value = await global_function_initialize_lambda_async(
+      ebible_version_books,
+      lambda2,
     );
-    return books;
+    return value;
   }
   const n = ebible_class_new();
   let o = ebible_class_old();
