@@ -148,7 +148,7 @@ export function app_a_function_node(a) {
         let choices = [
           {
             shortcut: "c",
-            text: "(c) Close",
+            text: "Close",
             fn: lambda15,
           },
         ];
