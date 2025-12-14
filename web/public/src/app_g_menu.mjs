@@ -1,3 +1,4 @@
+import { html_overlay_close_get } from "../../../love/public/src/html_overlay_close_get.mjs";
 import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
 import { app_g_study } from "../../../love/public/src/app_g_study.mjs";
 import { app_g_menu_clear_back } from "../../../love/public/src/app_g_menu_clear_back.mjs";
@@ -10,12 +11,9 @@ import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mj
 import { emoji_bow } from "../../../love/public/src/emoji_bow.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
-import { html_remove } from "../../../love/public/src/html_remove.mjs";
 export function app_g_menu(overlay, player) {
   html_clear(overlay);
-  let close = function lambda() {
-    html_remove(overlay);
-  };
+  let close = html_overlay_close_get(overlay);
   let component2 = app_g_button_back(overlay, close);
   let text = emoji_pray() + " Pray";
   function lambda7() {
