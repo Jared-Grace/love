@@ -161,7 +161,7 @@ export function app_a_function_node(a) {
             fn: async function lambda15() {
               overlay_close();
               function lambda22(e) {
-                let key3 = object_property_get(e, "key");
+                let key3 = object_property_get(e, "key");$ie
               }
               let { overlay, overlay_close: rename_overlay_close } =
                 app_a_overlay(on_keydowns, lambda22);
