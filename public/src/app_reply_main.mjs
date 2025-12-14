@@ -54,7 +54,6 @@ import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs"
 import { bible_verses_uplifting } from "../../../love/public/src/bible_verses_uplifting.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { app_reply_choices } from "../../../love/public/src/app_reply_choices.mjs";
-import { ebible_verse_download } from "../../../love/public/src/ebible_verse_download.mjs";
 export async function app_reply_main() {
   let choices = app_reply_choices();
   let languages = ebible_languages();
