@@ -14,7 +14,9 @@ export function app_a_main() {
     root,
     on_keydowns,
   };
-  function lambda() {im}
+  function lambda() {
+    im;
+  }
   html_on_keydown(root, lambda);
   app_generic_refresh(context);
 }
