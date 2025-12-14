@@ -136,6 +136,7 @@ export function app_a_function_node(a) {
         function close() {
           html_remove(overlay);
         }
+        hrg;
         let b = app_a_button(root, text, close);
       }
       html_on_pointerdown(component, lambda20);
