@@ -1,3 +1,4 @@
+import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
 import { app_a_function_refresh } from "../../../love/public/src/app_a_function_refresh.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
@@ -162,6 +163,7 @@ export function app_a_function_node(a) {
               overlay_close();
               let overlay = html_overlay_z_max(root);
               let div3 = html_div(overlay);
+              app_a_control_style(component2);
               html_centered(div3);
               let div2 = html_div_text(div3, "Rename from:");
               let div = html_div_text(div3, name);
