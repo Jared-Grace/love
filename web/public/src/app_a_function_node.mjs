@@ -145,6 +145,13 @@ export function app_a_function_node(a) {
           }
         }
         list_add(on_keydowns, on_keydown);
+        let choices = [
+          {
+            shortcut: "c",
+            text: "(c) Close",
+            fn: lambda15,
+          },
+        ];
         function lambda15() {
           list_remove(on_keydowns, on_keydown);
           html_remove(overlay);
