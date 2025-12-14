@@ -1,13 +1,10 @@
-import { list_to } from "../../../love/public/src/list_to.mjs";
-import { app_api_cache_global } from "../../../love/public/src/app_api_cache_global.mjs";
+import { app_api_cache_global_fn } from "../../../love/public/src/app_api_cache_global_fn.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function folder_read(path_folder) {
   if (browser_is()) {
     let fn = folder_read;
-    let function_name = fn.name;
-    let args = list_to(arguments);
-    let r = await app_api_cache_global(function_name, args);
+    let r = await app_api_cache_global_fn(fn, arguments);
     return r;
   }
   marker("1");
