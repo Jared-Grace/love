@@ -4,5 +4,5 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 export function app_a_body(node, parent, a, indent) {
   marker("1");
   let body = object_property_get(node, "body");
-  app_a_body_inner(parent, body, a, indent);
+  app_a_body_inner(parent, body, a);
 }
