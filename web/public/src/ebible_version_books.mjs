@@ -12,10 +12,8 @@ export async function ebible_version_books(bible_folder) {
   marker("1");
   let b = browser_is();
   if (b) {
-    let value = await global_function_initialize_lambda_async(
-      fn,
-      async function lambda2() {},
-    );
+    async function lambda2() {}
+    let value = await global_function_initialize_lambda_async(fn, lambda2);
     let file_name2 = ebible_version_books_upload_name();
     let { books } = await firebase_storage_download_ebible(
       bible_folder,
