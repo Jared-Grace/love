@@ -1,3 +1,4 @@
+import { html_overlay } from "../../../love/public/src/html_overlay.mjs";
 import { html_z_max } from "../../../love/public/src/html_z_max.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
@@ -127,8 +128,8 @@ export function app_a_function_node(a) {
       let name = object_property_get(node, "name");
       let span = html_span_text(parent, name);
       html_font_color_set(span, "#4a4affff");
-      let v22 = html_z_max();
-      ho;
+      let z = html_z_max();
+      let overlay = html_overlay(container, z_index);
     },
     ["Literal"]: function lambda10() {
       let raw = object_property_get(node, "raw");
