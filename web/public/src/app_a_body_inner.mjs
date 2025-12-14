@@ -1,3 +1,4 @@
+import { each_range } from "../../../love/public/src/each_range.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { app_a_function_node_child_parent } from "../../../love/public/src/app_a_function_node_child_parent.mjs";
@@ -60,7 +61,8 @@ export function app_a_body_inner(parent, body, a) {
       }
     }
     let div = html_div(parent_new);
-    let indent = object_property_get(a, "indent");erg
+    let indent = object_property_get(a, "indent");
+    each_range(count, function lambda4(i) {});
     if (indent) {
       let span = html_span_text(div, "+");
     }
