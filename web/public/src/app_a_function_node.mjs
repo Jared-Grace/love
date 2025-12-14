@@ -55,8 +55,6 @@ export function app_a_function_node(a) {
       app_a_keyword_purple_space(parent, text2);
       app_a_function_node_child(a, source);
       app_a_semicolon(parent);
-      if (false) {
-      }
       function inner() {
         let specifiers = object_property_get(node, "specifiers");
         function lambda2(specifier) {
@@ -193,7 +191,7 @@ export function app_a_function_node(a) {
     },
     ["IfStatement"]: function lambda18() {
       let k = js_keyword_if();
-      app_a_keyword_blue_space(parent, k);
+      app_a_keyword_purple_space(parent, k);
       function lambda19() {
         let test = object_property_get(node, "test");
         app_a_function_node_child(a, test);
