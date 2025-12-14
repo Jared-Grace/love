@@ -1,3 +1,4 @@
+import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
@@ -21,6 +22,7 @@ export async function app_a_home(context) {
   let input = html_input(body);
   html_focus(input);
   app_a_control_style(input);
+  html_width_full(input);
   html_style_assign(input, {
     "border-width": "1px",
     "border-color": "gray",
