@@ -1,4 +1,4 @@
-import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
+import { html_select } from "../../../love/public/src/html_select.mjs";
 import { on_keydown_stop } from "../../../love/public/src/on_keydown_stop.mjs";
 import { app_a_overlay_close_text } from "../../../love/public/src/app_a_overlay_close_text.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
@@ -185,8 +185,7 @@ export function app_a_function_node(a) {
               let input = app_a_input(overlay);
               html_centered(input);
               html_value_set(input, name);
-              let element = html_component_element_get(input);
-              element.select();
+              html_select(input);
               function lambda23() {
                 let name_new = html_value_get(input);
                 object_property_set(node, "name", name_new);
