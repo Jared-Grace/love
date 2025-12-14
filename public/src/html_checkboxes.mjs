@@ -1,7 +1,7 @@
 import { app_karate_button_background_invalid } from "../../../karate_code/public/src/app_karate_button_background_invalid.mjs";
 import { sleep_0 } from "../../../love/public/src/sleep_0.mjs";
 import { html_checkboxes_checked_value_get } from "../../../love/public/src/html_checkboxes_checked_value_get.mjs";
-import { lambda_invoke_multiple } from "../../../love/public/src/lambda_invoke_multiple.mjs";
+import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { app_karate_validate_style_assign } from "../../../karate_code/public/src/app_karate_validate_style_assign.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -118,5 +118,5 @@ export function html_checkboxes(
     app_karate_validate_style_assign(valid, containers, null, bn);
   }
   validate(false);
-  lambda_invoke_multiple(afters);
+  invoke_multiple(afters);
 }

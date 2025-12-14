@@ -3,7 +3,7 @@ import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_dollar_choices } from "../../../love/public/src/js_dollar_choices.mjs";
 import { list_get_end_3 } from "../../../love/public/src/list_get_end_3.mjs";
-import { lambda_invoke_multiple } from "../../../love/public/src/lambda_invoke_multiple.mjs";
+import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
 import { list_skip } from "../../../love/public/src/list_skip.mjs";
@@ -56,6 +56,6 @@ export async function js_dollar(ast) {
     await each_async(choices, lambda2);
   }
   await js_visit_type_each_async(ast, "Identifier", lambda);
-  lambda_invoke_multiple(afters);
+  invoke_multiple(afters);
   return;
 }
