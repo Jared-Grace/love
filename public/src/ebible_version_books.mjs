@@ -22,6 +22,7 @@ export async function ebible_version_books(bible_folder) {
     }
     let value = await global_function_property_initialize_async(
       ebible_version_books,
+      bible_folder,
       lambda2,
     );
     return value;
