@@ -71,7 +71,7 @@ export function app_a_body_inner(parent, body, a, indent) {
     } else {
       i = "";
     }
-    let s = html_span_text(line, " ");
+    let s = html_span_text(line, i);
     html_style_assign(s, {
       flex: "0 0 auto",
       "white-space": "pre",
