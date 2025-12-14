@@ -158,9 +158,8 @@ export function app_a_function_node(a) {
     },
     ["ObjectExpression"]: function lambda14() {
       function lambda16() {
-        let properties = object_property_get(node, "properties");$a
-        const property = "indent";
-        object_property_add_1(a, property);
+        let properties = object_property_get(node, "properties");
+        object_property_add_1(a, "indent");
         app_a_body_inner(parent, properties, a);
       }
       app_a_braces_wrap(parent, lambda16);
