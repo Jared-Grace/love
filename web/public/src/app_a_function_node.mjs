@@ -6,7 +6,6 @@ import { app_a_overlay_close_text } from "../../../love/public/src/app_a_overlay
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
 import { app_a_function_refresh } from "../../../love/public/src/app_a_function_refresh.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -191,10 +190,9 @@ export function app_a_function_node(a) {
               await html_select(input);
               async function lambda23() {
                 let name_new = html_value_get(input);
-                object_property_set(node, "name", name_new);
                 html_remove(overlay);
-                app_a_function_refresh(context, ast);
                 await js_identifier_rename_imports_fix(ast, name, name_new);
+                app_a_function_refresh(context, ast);
               }
               let component = app_a_button_wide(overlay, "Rename", lambda23);
             },
