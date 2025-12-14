@@ -65,7 +65,7 @@ export function app_a_body_inner(parent, body, a) {
     let indent = object_property_get(a, "indent");
     function lambda4(i) {
       let s = html_span_text(div, " ");
-      html_style_set(b2, style_key, style_value);
+      html_style_set(s, "white-space", "pre");
     }
     each_range(indent, lambda4);
     app_a_function_node_child_parent(a, b, div);
