@@ -202,8 +202,8 @@ export function app_a_function_node(a) {
       false_is_assert(computed);
       if (not(shorthand)) {
         let c = js_code_colon();
-        html_span_space(parent);
         let span4 = html_span_text(parent, c);
+        html_span_space(parent);
         let value3 = object_property_get(node, "value");
         app_a_function_node_child(a, value3);
       }
