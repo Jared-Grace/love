@@ -9,7 +9,7 @@ export function html_overlay(container, z_index) {
     width: "100vw",
     height: "100vh",
     padding: "1vw",
-    background: "rgba(0,0,0,0)",
+    background: "rgba(0,0,0,0.4)",
     "z-index": z_index,
     display: "flex",
     flexDirection: "column",
