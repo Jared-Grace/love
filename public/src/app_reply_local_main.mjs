@@ -1,12 +1,11 @@
-import { list_find } from "../../../love/public/src/list_find.mjs";
+import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { app_reply_generic } from "../../../love/public/src/app_reply_generic.mjs";
 import { ebible_languages_chapters } from "../../../love/public/src/ebible_languages_chapters.mjs";
 import { app_api } from "../../../love/public/src/app_api.mjs";
 export async function app_reply_local_main() {
   let result = await app_api(ebible_languages_chapters.name, []);
   function lambda(bible_folder, chapter_code, verse_number) {
-    function lambda2(item) {}
-    let only = list_find(list, lambda2);
+    let item = list_find_property(list, property_name, property_value);
   }
   await app_reply_generic(lambda);
 }
