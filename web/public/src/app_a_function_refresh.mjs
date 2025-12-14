@@ -8,7 +8,7 @@ import { emoji_search } from "../../../love/public/src/emoji_search.mjs";
 import { app_a_home } from "../../../love/public/src/app_a_home.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-export function app_a_function_refresh(root, context, ast) {
+export function app_a_function_refresh(context, ast) {
   marker("1");
   html_clear(root);
   function lambda2() {
