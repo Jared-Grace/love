@@ -1,3 +1,4 @@
+import { file_js_unparse } from "../../../love/public/src/file_js_unparse.mjs";
 import { html_on_keydown_stop_logic } from "../../../love/public/src/html_on_keydown_stop_logic.mjs";
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
 import { js_identifier_rename_imports_fix } from "../../../love/public/src/js_identifier_rename_imports_fix.mjs";
@@ -192,6 +193,7 @@ export function app_a_function_node(a) {
                 let name_new = html_value_get(input);
                 await js_identifier_rename_imports_fix(ast, name, name_new);
                 html_remove(overlay);
+                await file_js_unparse(parsed);
                 app_a_function_refresh(context, ast);
               }
               let component = app_a_button_wide(overlay, "Rename", lambda23);
