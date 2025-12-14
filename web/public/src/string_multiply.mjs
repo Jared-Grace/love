@@ -1,9 +1,9 @@
 import { each_range } from "../../../love/public/src/each_range.mjs";
 export function string_multiply(value, times) {
-  let indentation = "";
+  let result = "";
   function lambda4(i) {
-    indentation += value;
+    result += value;
   }
   each_range(times, lambda4);
-  return indentation;
+  return result;
 }
