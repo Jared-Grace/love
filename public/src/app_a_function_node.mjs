@@ -165,7 +165,7 @@ export function app_a_function_node(a) {
               let overlay = html_overlay_z_max(root);
               let div3 = html_div(overlay);
               app_a_control_style(div3);
-              html_style_background_color(div4, background);
+              html_style_background_color(div3, "white");
               html_centered(div3);
               let div2 = html_div_text(div3, "Rename from:");
               let div = html_div_text(div3, name);
