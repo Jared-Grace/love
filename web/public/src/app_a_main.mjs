@@ -1,4 +1,4 @@
-import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
+import { invoke_multiple_args } from "../../../love/public/src/invoke_multiple_args.mjs";
 import { html_on_keydown } from "../../../love/public/src/html_on_keydown.mjs";
 import { app_a } from "../../../love/public/src/app_a.mjs";
 import { app_a_screens } from "../../../love/public/src/app_a_screens.mjs";
@@ -16,7 +16,7 @@ export function app_a_main() {
     on_keydowns,
   };
   function lambda() {
-    invoke_multiple(on_keydowns);
+    invoke_multiple_args(on_keydowns);
   }
   html_on_keydown(root, lambda);
   app_generic_refresh(context);
