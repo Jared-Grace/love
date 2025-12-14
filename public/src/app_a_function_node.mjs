@@ -161,16 +161,9 @@ export function app_a_function_node(a) {
             fn: async function lambda15() {
               overlay_close();
               function lambda22() {}
-              let { overlay_close: rename_overlay_close } = app_a_overlay(
-                on_keydowns,
-                lambda22,
-              );
+              let { overlay_close } = app_a_overlay(on_keydowns, lambda22);
               let text5 = app_a_overlay_close_text();
-              let component2 = app_a_button_wide(
-                overlay,
-                text5,
-                rename_overlay_close,
-              );
+              let component2 = app_a_button_wide(overlay, text5, overlay_close);
               let div3 = html_div(overlay);
               app_a_control_style(div3);
               html_style_background_color(div3, "white");
