@@ -131,6 +131,7 @@ export function app_a_function_node(a) {
       let span = html_span_text(parent, name);
       html_font_color_set(span, "#4a4affff");
       function lambda20() {
+        let root = a;
         let z = html_z_max();
         let overlay = html_overlay(container, z);
         let close = html_remove_lambda(overlay);
