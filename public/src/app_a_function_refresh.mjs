@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { app_a_function_node } from "../../../love/public/src/app_a_function_node.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_font_jetbrains_mono } from "../../../love/public/src/html_font_jetbrains_mono.mjs";
@@ -8,6 +9,7 @@ import { app_a_home } from "../../../love/public/src/app_a_home.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 export function app_a_function_refresh(root, context, ast) {
+  marker("1");
   html_clear(root);
   function lambda2() {
     app_generic_screen_set(context, app_a_home);
