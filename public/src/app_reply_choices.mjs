@@ -135,6 +135,10 @@ export function app_reply_choices() {
       response: greetings,
     },
     {
+      text: app_reply_greetings() + " " + app_reply_how_day(),
+      response: list_join_newline_2([hru, how_family]),
+    },
+    {
       text: app_reply_greetings() + " " + app_reply_how_family(),
       response: list_join_newline_2([greetings, how_family]),
     },
@@ -185,10 +189,6 @@ export function app_reply_choices() {
     {
       text: app_reply_how_r_u() + " " + app_reply_how_day(),
       response: list_join_newline_2([hru, how_day]),
-    },
-    {
-      text: app_reply_how_r_u() + " " + app_reply_how_family(),
-      response: list_join_newline_2([hru, how_family]),
     },
     {
       text: emoji_pray() + " Invite",
