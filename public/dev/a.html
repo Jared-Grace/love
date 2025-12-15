@@ -17,24 +17,7 @@
 <script src="https://cdn.jsdelivr.net/npm/prettier@2.8.8/parser-babel.js"></script>
 <script>
   // Define a formatting function using the global Prettier and plugin
-  window.js_format_browser = function(code) {
-    return prettier.format(code, {
-      parser: "babel",
-      plugins: [prettierPlugins.babel],
-      braceStyle: "allman",
-    });
-  };
-
-  // Call after everything is fully loaded
-  window.addEventListener("load", () => {
-    const code = "const a=1;";
-    try {
-      const formatted = window.js_format_browser(code);
-      console.log(formatted);
-    } catch (e) {
-      console.error("Formatting error:", e);
-    }
-  });
+  window.prettier=prettier
 </script>
   <script type="module"> 
     import {app_a_main} from "./../src/app_a_main.mjs"
