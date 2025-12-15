@@ -1,13 +1,9 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { object_property_initialize_lambda } from "../../../love/public/src/object_property_initialize_lambda.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { global_get } from "./global_get.mjs";
 export function global_function_initialize_lambda(fn, lambda) {
   assert_arguments(arguments, 2);
   let global = global_get();
-  log({
-    global,
-  });
   let value = object_property_initialize_lambda(global, fn.name, lambda);
   return value;
 }
