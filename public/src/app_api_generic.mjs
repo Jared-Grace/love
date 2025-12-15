@@ -7,6 +7,8 @@ export async function app_api_generic(f_name, args, fn) {
   let o = await fn(url, body);
   log({
     o,
+    url,
+    body,
   });
   return o;
 }
