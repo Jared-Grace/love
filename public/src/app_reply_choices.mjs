@@ -135,6 +135,10 @@ export function app_reply_choices() {
       response: greetings,
     },
     {
+      text: app_reply_greetings() + " " + app_reply_how_family(),
+      response: list_join_newline_2([greetings, how_family]),
+    },
+    {
       text: app_reply_greetings() + " " + app_reply_how_r_u(),
       response: list_join_newline_2([greetings, hru]),
     },
