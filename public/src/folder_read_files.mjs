@@ -5,7 +5,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 export async function folder_read_files(path_folder) {
   if (browser_is()) {
-    let r = await app_api_cache_global_fn(folder_read_files, arguments);
+    let r = await app_api_cache_storage_local_fn(folder_read_files, arguments);
     return r;
   }
   let fs = await import("fs");
