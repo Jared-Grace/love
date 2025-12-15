@@ -4,7 +4,6 @@ import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_a_function_node_child_parent } from "../../../love/public/src/app_a_function_node_child_parent.mjs";
 import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -50,7 +49,6 @@ export function app_a_body_inner(parent, body, a, indent) {
           return v2;
         }
         buttons = list_map([parent, parent_new_saved], lambda2);
-        log(buttons);
         imports_refresh();
       }
     }
