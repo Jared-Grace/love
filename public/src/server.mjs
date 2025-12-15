@@ -1,3 +1,4 @@
+import { server_api_url } from "../../../love/public/src/server_api_url.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { function_run_io_file_wrapper } from "../../../love/public/src/function_run_io_file_wrapper.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -27,7 +28,8 @@ export function server() {
     });
     res.json(r);
   }
-  app.post("/api", api);
+  let v3 = server_api_url();
+  app.post(v3, api);
   app.use(v);
   function lambda() {
     log_keep(`Static server running at http://localhost:${port}`);
