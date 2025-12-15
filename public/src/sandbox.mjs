@@ -1,3 +1,4 @@
+import { server_api_url } from "../../../love/public/src/server_api_url.mjs";
 import { app_api_generic_f_name_args } from "../../../love/public/src/app_api_generic_f_name_args.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { http_post_json } from "../../../love/public/src/http_post_json.mjs";
@@ -6,5 +7,6 @@ export async function sandbox() {
   let a = app_api_generic_f_name_args(file_read.name, [
     "../love/public/src/app_g_main.mjs",
   ]);
-  invoke_cache_clear(http_post_json, ["/api", a]);
+  let a2 = server_api_url();
+  invoke_cache_clear(http_post_json, [a2, a]);
 }
