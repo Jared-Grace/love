@@ -3,6 +3,7 @@ export async function js_format(code) {
   let prettier = null,
     parserBabel = null;
   if (browser_is()) {
+    prettier = window.prettier;
     parserBabel = prettierPlugins.babel;
   } else {
     prettier = await import("prettier");
