@@ -1,3 +1,4 @@
+import { app_a_function } from "../../../love/public/src/app_a_function.mjs";
 import { file_js_unparse } from "../../../love/public/src/file_js_unparse.mjs";
 import { html_on_keydown_stop_logic } from "../../../love/public/src/html_on_keydown_stop_logic.mjs";
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
@@ -6,7 +7,6 @@ import { html_select } from "../../../love/public/src/html_select.mjs";
 import { app_a_overlay_close_text } from "../../../love/public/src/app_a_overlay_close_text.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
-import { app_a_function_refresh } from "../../../love/public/src/app_a_function_refresh.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -195,7 +195,7 @@ export function app_a_function_node(a) {
                 await js_identifier_rename_imports_fix(ast, name, name_new);
                 html_remove(overlay);
                 await file_js_unparse(parsed);
-                app_a_function_refresh(context, parsed);
+                await app_a_function(context);
               }
               let component = app_a_button_wide(overlay, "Rename", lambda23);
             },
