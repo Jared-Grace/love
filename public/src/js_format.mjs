@@ -4,10 +4,6 @@ export async function js_format(code) {
     parserBabel = null;
   if (browser_is()) {
     parserBabel = prettierPlugins.babel;
-    prettier.format(messyCode, {
-      parser: "babel",
-      plugins: [prettierPlugins.babel],
-    });
   } else {
     prettier = await import("prettier");
     parserBabel = await import("prettier/plugins/babel");
