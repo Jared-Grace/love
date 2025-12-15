@@ -1,7 +1,4 @@
-import { marker } from "../../../love/public/src/marker.mjs";
-import { ebible_languages_chapters } from "../../../love/public/src/ebible_languages_chapters.mjs";
+import { invoke_cache_clear } from "../../../love/public/src/invoke_cache_clear.mjs";
 export async function sandbox() {
-  marker("1");
-  let all = await ebible_languages_chapters();
-  return all;
+  invoke_cache_clear(fn, args);
 }
