@@ -136,7 +136,7 @@ export function app_reply_choices() {
     },
     {
       text: app_reply_greetings() + " " + app_reply_how_day(),
-      response: list_join_newline_2([hru, how_family]),
+      response: list_join_newline_2([greetings, how_day]),
     },
     {
       text: app_reply_greetings() + " " + app_reply_how_family(),
