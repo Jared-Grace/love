@@ -120,16 +120,8 @@ export async function g_sermon_generate_book_generic(
     let path = local_function_path_json(chapter_code, fn);
     let exists = await file_exists(path);
     if (exists) {
-      log({
-        chapter_code,
-        skip: true,
-      });
       return;
     } else {
-      log({
-        chapter_code,
-        skip: false,
-      });
     }
     function lambda11(group) {
       let mapped4 = object_property_get(group, "item");
@@ -159,7 +151,6 @@ export async function g_sermon_generate_book_generic(
         [property_name]: output,
         original,
       };
-      log(v);
       return v;
       function prompt_get(group) {
         let text = list_map_property_join_space(group, "text");
@@ -177,9 +168,6 @@ export async function g_sermon_generate_book_generic(
     await file_overwrite_json(path, {
       chapter_code,
       passages,
-    });
-    log({
-      path,
     });
     exit();
   }
