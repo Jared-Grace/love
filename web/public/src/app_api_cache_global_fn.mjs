@@ -7,8 +7,5 @@ export async function app_api_cache_global_fn(fn, args) {
   let function_name = fn.name;
   let args_list = list_to(args);
   let r = await app_api_cache_global(function_name, args_list);
-  log({
-    r,
-  });
   return r;
 }
