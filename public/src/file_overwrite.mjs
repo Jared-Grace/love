@@ -9,6 +9,7 @@ export async function file_overwrite(file_path, contents) {
   marker("1");
   if (browser_is()) {
     log("file_overwrite: " + file_path);
+    debugger;
     let r = await app_api_fn(file_overwrite, arguments);
     app_api_cache_clear(file_read, [file_path]);
     return r;
