@@ -73,6 +73,7 @@ export function app_reply_choices() {
   let greetings = app_reply_response_greetings();
   let hru = app_reply_response_how_r_u();
   let how_family = app_reply_response_how_family();
+  const how_day = app_reply_response_how_day();
   let v = [
     {
       text: emoji_pray() + " Amazing",
@@ -171,7 +172,7 @@ export function app_reply_choices() {
     },
     {
       text: app_reply_how_day(),
-      response: app_reply_response_how_day(),
+      response: how_day,
     },
     {
       text: app_reply_how_family(),
@@ -183,7 +184,7 @@ export function app_reply_choices() {
     },
     {
       text: app_reply_how_r_u() + " " + app_reply_how_family(),
-      response: list_join_newline_2([hru, how_family]),
+      response: list_join_newline_2([hru, how_day]),
     },
     {
       text: app_reply_how_r_u() + " " + app_reply_how_family(),
