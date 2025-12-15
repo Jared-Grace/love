@@ -1,5 +1,4 @@
 import { server_api_url } from "../../../love/public/src/server_api_url.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { function_run_io_file_wrapper } from "../../../love/public/src/function_run_io_file_wrapper.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -23,9 +22,6 @@ export function server() {
   async function api(req, res) {
     let body = object_property_get(req, "body");
     let r = await function_run_io_file_wrapper(body);
-    log({
-      r,
-    });
     res.json(r);
   }
   let v3 = server_api_url();

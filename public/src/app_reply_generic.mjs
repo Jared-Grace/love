@@ -225,9 +225,6 @@ export async function app_reply_generic(verse_get) {
         let translations2 = object_property_get(v, "translations");
         let { last, remaining } = list_last_remaining(translations2);
         original_translation = last;
-        log({
-          remaining,
-        });
         if (remaining !== null) {
           each(remaining, verses_add);
         }
@@ -238,9 +235,6 @@ export async function app_reply_generic(verse_get) {
       }
     }
     each(verses_list, lambda11);
-    log({
-      verses_list,
-    });
     let ne = list_empty_not_is(languages_chosens);
     if (ne) {
       list_add(other, languages_chosens);

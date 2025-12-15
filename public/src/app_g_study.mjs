@@ -53,10 +53,6 @@ export function app_g_study(player, overlay, close) {
       let r = list_first(review);
       let verse_numbers = object_property_get(r, "verse_numbers");
       let passages = object_property_get(sermons, "passages");
-      log({
-        verse_numbers,
-        passages,
-      });
       let passage = list_find_property_json(
         passages,
         "verse_numbers",
