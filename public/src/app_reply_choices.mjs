@@ -7,7 +7,6 @@ import { app_reply_greetings } from "../../../love/public/src/app_reply_greeting
 import { app_reply_how_r_u } from "../../../love/public/src/app_reply_how_r_u.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { prayer_blessing_expand } from "../../../love/public/src/prayer_blessing_expand.mjs";
-import { app_reply_response_how_r_u_skip_before } from "../../../love/public/src/app_reply_response_how_r_u_skip_before.mjs";
 import { app_reply_pray_help_generic } from "../../../love/public/src/app_reply_pray_help_generic.mjs";
 import { emoji_camera } from "../../../love/public/src/emoji_camera.mjs";
 import { app_reply_call_why_generic } from "../../../love/public/src/app_reply_call_why_generic.mjs";
@@ -67,7 +66,6 @@ export function app_reply_choices() {
   let will = app_reply_pray("Will", pray_request);
   let with2 = app_reply_pray("With", "always be with you! " + emoji_dove());
   let s = app_reply_response_how_r_u_skip();
-  let s2 = app_reply_response_how_r_u_skip_before();
   let b = {
     text: emoji_pray() + " Bless",
     response: prayer_blessing_expand(),
