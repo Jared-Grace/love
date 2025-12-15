@@ -3,8 +3,7 @@ export async function js_format(code) {
   let prettier = null,
     parserBabel = null;
   if (browser_is()) {
-    let v = window.js_format_browser(code);
-    return v;
+parserBabel=prettierPlugins.babel
   } else {
     prettier = await import("prettier");
     parserBabel = await import("prettier/plugins/babel");
@@ -14,5 +13,10 @@ export async function js_format(code) {
     plugins: [parserBabel],
     braceStyle: "allman",
   });
+
+  prettier.format(messyCode, {
+          parser: "babel",
+          plugins: [prettierPlugins.babel] // ✅ works in v2.8.8
+        })
   return formatted;
 }
