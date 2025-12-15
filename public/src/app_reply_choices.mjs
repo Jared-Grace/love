@@ -186,6 +186,10 @@ export function app_reply_choices() {
       response: list_join_newline_2([hru, how_family]),
     },
     {
+      text: app_reply_how_r_u() + " " + app_reply_how_family(),
+      response: list_join_newline_2([hru, how_family]),
+    },
+    {
       text: emoji_pray() + " Invite",
       response:
         emoji_pray() +
