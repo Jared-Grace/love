@@ -9,7 +9,7 @@ export async function file_overwrite(file_path, contents) {
   marker("1");
   if (browser_is()) {
     let r = await app_api_cache_global_fn(file_overwrite, arguments);
-    var { url, body } = app_api_generic_url_body(file_read, arguments);
+    var { url, body } = app_api_generic_url_body(file_read, [file_path]);
     http_post_json_cache_clear(url, body);
     return r;
   }
