@@ -1,4 +1,4 @@
-import { app_api_cache_global_fn } from "../../../love/public/src/app_api_cache_global_fn.mjs";
+import { app_api_cache_storage_local_fn } from "../../../love/public/src/app_api_cache_storage_local_fn.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { list_sort_string } from "../../../love/public/src/list_sort_string.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
