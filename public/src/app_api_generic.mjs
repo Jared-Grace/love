@@ -1,5 +1,6 @@
 import { log } from "../../../love/public/src/log.mjs";
 import { app_api_generic_url_body } from "../../../love/public/src/app_api_generic_url_body.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_api_generic(f_name, args, fn) {
   marker("1");
@@ -10,5 +11,6 @@ export async function app_api_generic(f_name, args, fn) {
     url,
     body,
   });
-  return o;
+  let result = object_property_get(o, "result");
+  return result;
 }
