@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { app_api_cache_clear } from "../../../love/public/src/app_api_cache_clear.mjs";
@@ -7,6 +8,7 @@ import { file_parent_exists_ensure } from "../../../love/public/src/file_parent_
 export async function file_overwrite(file_path, contents) {
   marker("1");
   if (browser_is()) {
+    log(message);
     let r = await app_api_fn(file_overwrite, arguments);
     app_api_cache_clear(file_read, [file_path]);
     return r;
