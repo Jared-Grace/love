@@ -173,7 +173,7 @@ export function app_reply_choices() {
     },
     {
       text: app_reply_how_day(),
-      response: app_reply_response_how_day(s2),
+      response: app_reply_response_how_day(),
     },
     {
       text: app_reply_how_family(),
