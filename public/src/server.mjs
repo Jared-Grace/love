@@ -21,6 +21,7 @@ export function server() {
   async function api(req, res) {
     let body = object_property_get(req, "body");
     let r = await function_run_io_file_wrapper(body);
+    l$r;
     res.json(r);
   }
   app.post("/api", api);
