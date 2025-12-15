@@ -1,3 +1,5 @@
+import { app_reply_response_how_day } from "../../../love/public/src/app_reply_response_how_day.mjs";
+import { app_reply_how_day } from "../../../love/public/src/app_reply_how_day.mjs";
 import { app_reply_response_how_family } from "../../../love/public/src/app_reply_response_how_family.mjs";
 import { app_reply_how_family } from "../../../love/public/src/app_reply_how_family.mjs";
 import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
@@ -12,7 +14,6 @@ import { app_reply_call_why_generic } from "../../../love/public/src/app_reply_c
 import { app_reply_choices_thanks } from "../../../love/public/src/app_reply_choices_thanks.mjs";
 import { emojis_sing_wrap } from "../../../love/public/src/emojis_sing_wrap.mjs";
 import { emoji_voice } from "../../../love/public/src/emoji_voice.mjs";
-import { string_first_lower_to } from "../../../love/public/src/string_first_lower_to.mjs";
 import { app_reply_response_how_r_u_skip } from "../../../love/public/src/app_reply_response_how_r_u_skip.mjs";
 import { app_reply_choices_glory } from "../../../love/public/src/app_reply_choices_glory.mjs";
 import { app_reply_choices_will_done_fragment } from "../../../love/public/src/app_reply_choices_will_done_fragment.mjs";
@@ -171,12 +172,8 @@ export function app_reply_choices() {
         "What help are you asking for? What are you asking me to do?",
     },
     {
-      text: emoji_ok() + " How day",
-      response:
-        emoji_ok() +
-        " The day of the " +
-        string_first_lower_to(s2) +
-        " today is one day closer to the return of Jesus than yesterday!",
+      text: app_reply_how_day(),
+      response: app_reply_response_how_day(s2),
     },
     {
       text: app_reply_how_family(),
