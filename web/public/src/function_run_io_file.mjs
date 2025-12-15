@@ -9,6 +9,8 @@ export async function function_run_io_file(temp_path_input, temp_path_output) {
   let f_name = object_property_get(data, "f_name");
   let args = object_property_get(data, "args");
   let result = await function_run(f_name, args);
+  if (false) {
+  }
   await file_overwrite_json(temp_path_output, {
     result,
   });
