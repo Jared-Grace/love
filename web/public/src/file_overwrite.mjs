@@ -8,7 +8,7 @@ import { file_parent_exists_ensure } from "../../../love/public/src/file_parent_
 export async function file_overwrite(file_path, contents) {
   marker("1");
   if (browser_is()) {
-    log(message);
+    log("file_overwrite");
     let r = await app_api_fn(file_overwrite, arguments);
     app_api_cache_clear(file_read, [file_path]);
     return r;
