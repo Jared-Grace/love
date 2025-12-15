@@ -195,6 +195,7 @@ export function app_a_function_node(a) {
                 await js_identifier_rename_imports_fix(ast, name, name_new);
                 html_remove(overlay);
                 await file_js_unparse(parsed);
+                rename_overlay_close();
                 await app_a_function(context);
               }
               let component = app_a_button_wide(overlay, "Rename", lambda23);
