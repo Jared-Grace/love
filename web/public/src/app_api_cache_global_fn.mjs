@@ -8,6 +8,6 @@ export async function app_api_cache_global_fn(fn, args) {
     fn,
     args,
   });
-  let r = await app_api_cache_global(function_name, args_list);
+  let r = await app_api_cache_global(function_name, args);
   return r;
 }
