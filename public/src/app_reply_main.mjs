@@ -6,7 +6,6 @@ import { list_map_property } from "../../../love/public/src/list_map_property.mj
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { prayer_blessing_expand } from "../../../love/public/src/prayer_blessing_expand.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_last_remaining } from "../../../love/public/src/list_last_remaining.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
