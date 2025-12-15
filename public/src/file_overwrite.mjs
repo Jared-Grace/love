@@ -8,8 +8,7 @@ export async function file_overwrite(file_path, contents) {
   marker("1");
   if (browser_is()) {
     let r = await app_api_cache_global_fn(file_overwrite, arguments);
-    let args = [file_path];
-    app_api_cache_clear(file_read, args);
+    app_api_cache_clear(file_read, [file_path]);
     return r;
   }
   await file_parent_exists_ensure(file_path);
