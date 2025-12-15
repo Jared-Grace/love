@@ -20,7 +20,6 @@ import { app_g_passage_to_reference } from "../../../love/public/src/app_g_passa
 import { app_g_main_books } from "../../../love/public/src/app_g_main_books.mjs";
 import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
 import { list_find_property_json } from "../../../love/public/src/list_find_property_json.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { app_g_gospel } from "../../../love/public/src/app_g_gospel.mjs";
 import { global_function_property_nested_lambda } from "../../../love/public/src/global_function_property_nested_lambda.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
