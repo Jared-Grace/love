@@ -235,8 +235,7 @@ export function app_a_function_node(a) {
       html_font_color_set(span3, "#d07200ff");
       async function lambda12() {
         let value2 = object_property_get(node, "value");
-        let function_name = fn_name("functions_names");
-        let f_names = await app_api_cache_global(function_name, []);
+        let f_names = functions_names();
         let includes = list_includes(f_names, value2);
         if (includes) {
           app_a_function_select(context, value2);
