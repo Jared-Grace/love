@@ -5,9 +5,8 @@ import { http_post_json } from "../../../love/public/src/http_post_json.mjs";
 import { invoke_cache_clear } from "../../../love/public/src/invoke_cache_clear.mjs";
 export async function sandbox() {
   let fn = file_read;
-  let a = app_api_generic_f_name_args(file_read.name, [
-    "../love/public/src/app_g_main.mjs",
-  ]);
+  const args = ["../love/public/src/app_g_main.mjs"];
+  let a = app_api_generic_f_name_args(file_read.name, args);
   let a2 = server_api_url();
   invoke_cache_clear(http_post_json, [a2, a]);
 }
