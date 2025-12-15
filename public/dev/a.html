@@ -12,18 +12,29 @@
     "astring": "https://cdn.jsdelivr.net/npm/astring/dist/astring.mjs"
   }
 }
-</script><script src="https://unpkg.com/prettier@3.2.5/standalone.js"></script>
-
-<!-- Plugins must come after Prettier -->
-<script src="https://unpkg.com/prettier@3.2.5/parser-babel.js"></script>
+</script>
+<script src="https://cdn.jsdelivr.net/npm/prettier@2.8.8/standalone.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prettier@2.8.8/parser-babel.js"></script>
 <script>
+  // Define a formatting function using the global Prettier and plugin
   window.js_format_browser = function(code) {
-    return window.prettier.format(code, {
+    return prettier.format(code, {
       parser: "babel",
-      plugins: [window.prettierPlugins.babel],
+      plugins: [prettierPlugins.babel],
       braceStyle: "allman",
     });
   };
+
+  // Call after everything is fully loaded
+  window.addEventListener("load", () => {
+    const code = "const a=1;";
+    try {
+      const formatted = window.js_format_browser(code);
+      console.log(formatted);
+    } catch (e) {
+      console.error("Formatting error:", e);
+    }
+  });
 </script>
   <script type="module"> 
     import {app_a_main} from "./../src/app_a_main.mjs"
