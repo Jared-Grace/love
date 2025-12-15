@@ -66,10 +66,10 @@ export async function app_g_main() {
   }
   each([body, html], lambda);
   let path_prefix = "";
-  let c = localhost_is();
+  let v = localhost_is();
   const path_part = "latest";
   let sw = location_pathname_part_first_starts_with(path_part);
-  if (c || sw) {
+  if (v || sw) {
     path_prefix = "..\\";
   }
   const game_prefix = g_folder_img(path_prefix);
