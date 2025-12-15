@@ -1,7 +1,9 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { app_reply_response_how_r_u_skip_before } from "../../../love/public/src/app_reply_response_how_r_u_skip_before.mjs";
 import { string_first_lower_to } from "../../../love/public/src/string_first_lower_to.mjs";
 import { emoji_ok } from "../../../love/public/src/emoji_ok.mjs";
 export function app_reply_response_how_day(s2) {
+  marker("1");
   let s = app_reply_response_how_r_u_skip_before();
   let v2 =
     emoji_ok() +
