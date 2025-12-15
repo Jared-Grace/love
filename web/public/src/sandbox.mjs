@@ -7,5 +7,5 @@ export async function sandbox() {
   let a = app_api_generic_f_name_args(file_read.name, [
     "../love/public/src/app_g_main.mjs",
   ]);
-  invoke_cache_clear(http_post_json, ['"/api"', a]);
+  invoke_cache_clear(http_post_json, ["/api", a]);
 }
