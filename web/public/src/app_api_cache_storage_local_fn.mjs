@@ -1,4 +1,6 @@
+import { app_api_cache_storage_local } from "../../../love/public/src/app_api_cache_storage_local.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export function app_api_cache_storage_local_fn() {
+export async function app_api_cache_storage_local_fn(f_name, args) {
   marker("1");
+  return await app_api_cache_storage_local(f_name, args);
 }
