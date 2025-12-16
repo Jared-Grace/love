@@ -195,10 +195,11 @@ export async function app_reply_main() {
   }
   buttons = list_map(choices, lambda);
   let original_include = true;
+  let component5 = html_button(parent, "Original Exclude", lambda15);
   function lambda15() {
     original_include = not(original_include);
+    html_text_set(component6, text3);
   }
-  let component5 = html_button(parent, "Original Exclude", lambda15);
   preview = html_p(root);
   buttons_refresh();
   async function preview_refresh() {
