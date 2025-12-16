@@ -47,5 +47,5 @@ export async function app_a_home(context) {
     }
     each(filtered, lambda);
   }
-  html_focus(input2);
+  html_focus(input);
 }
