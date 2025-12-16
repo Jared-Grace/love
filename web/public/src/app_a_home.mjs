@@ -1,3 +1,4 @@
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
 import { app_a_on_keydown_add } from "../../../love/public/src/app_a_on_keydown_add.mjs";
@@ -62,6 +63,7 @@ export async function app_a_home(context) {
   }
   html_focus(input);
   function f_name_select(f_name) {
+    list_remove(list, item);
     app_a_function_select(context, f_name);
   }
 }
