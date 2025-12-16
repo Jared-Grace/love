@@ -60,8 +60,8 @@ import { app_reply_choices } from "../../../love/public/src/app_reply_choices.mj
 export async function app_reply_main() {
   html_meta_viewport();
   html_font_sans_serif_set_html();
-  let html2 = html_document_root();
-  html_style_font_size(html, value);
+  let html = html_document_root();
+  html_style_font_size(html, '20px');
   let choices = app_reply_choices();
   let languages = ebible_languages();
   let encouragement = bible_verses_uplifting();
