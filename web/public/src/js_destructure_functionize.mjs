@@ -4,5 +4,5 @@ export function js_destructure_functionize(ast) {
   marker("1");
   return;
   function lambda(v) {}
-  js_visit_type(ast2, type, lambda);
+  js_visit_type(ast2, 'VariableDeclarator', lambda);
 }
