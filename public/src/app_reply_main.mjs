@@ -193,7 +193,8 @@ export async function app_reply_main() {
     }
     return component;
   }
-  buttons = list_map(choices, lambda);original=false
+  buttons = list_map(choices, lambda);
+  original = false;
   function lambda15() {}
   let component5 = html_button(parent, text3, lambda15);
   preview = html_p(root);
