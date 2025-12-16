@@ -11,9 +11,11 @@ export function app_a_overlay(a, on_keydowns, on_keydown) {
     a,
     "app_a_function_on_keydown",
   );
+  list_remove(on_keydowns, app_a_function_on_keydown);
   list_add(on_keydowns, on_keydown);
   let overlay = html_overlay_z_max(root);
   function overlay_close() {
+    list_add(on_keydowns, app_a_function_on_keydown);
     list_remove(on_keydowns, on_keydown);
     html_remove(overlay);
   }
