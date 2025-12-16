@@ -17,8 +17,8 @@ export async function app_a_function(context) {
   let { app_fn } = context;
   list_add(on_keydowns, app_a_function_on_keydown);
   function app_a_function_on_keydown(e) {
-    let key3 = object_property_get(e, "key");
-    if (equal(key3, "s")) {
+    let k = object_property_get(e, "key");
+    if (equal(k, "s")) {
       search();
     }
   }
