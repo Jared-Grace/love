@@ -1,3 +1,4 @@
+import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
 import { html_on_keydown_body } from "../../../love/public/src/html_on_keydown_body.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
@@ -54,6 +55,7 @@ import { bible_verses_uplifting } from "../../../love/public/src/bible_verses_up
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { app_reply_choices } from "../../../love/public/src/app_reply_choices.mjs";
 export async function app_reply_main() {
+  html_meta_viewport();
   let choices = app_reply_choices();
   let languages = ebible_languages();
   let encouragement = bible_verses_uplifting();
