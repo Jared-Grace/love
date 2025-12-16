@@ -198,7 +198,10 @@ export async function app_reply_main() {
   let component5 = html_button(parent, "Original Exclude", lambda15);
   function lambda15() {
     original_include = not(original_include);
-    html_text_set(component6, text3);
+    html_text_set(
+      component5,
+      '"Original ' + (original_include ? "In" : "Ex") + "clude",
+    );
   }
   preview = html_p(root);
   buttons_refresh();
