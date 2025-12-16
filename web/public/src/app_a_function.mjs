@@ -28,11 +28,11 @@ export async function app_a_function(context) {
   marker("1");
   let root = object_property_get(context, "root");
   html_clear(root);
-  function lambda2() {
+  function search() {
     app_generic_screen_set(context, app_a_home);
   }
   let text = emoji_search();
-  let b = app_a_button(root, text, lambda2);
+  let b = app_a_button(root, text, search);
   let div = html_div(root);
   html_font_jetbrains_mono(div);
   html_style_assign(div, {
