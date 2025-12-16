@@ -1,3 +1,4 @@
+import { html_on_keydown_stop_logic } from "../../../love/public/src/html_on_keydown_stop_logic.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_function_node } from "../../../love/public/src/app_a_function_node.mjs";
@@ -18,6 +19,7 @@ export async function app_a_function(context) {
   let on_keydowns = object_property_get(context, "on_keydowns");
   list_add(on_keydowns, app_a_function_on_keydown);
   function app_a_function_on_keydown(e) {
+    html_on_keydown_stop_logic(e);
     let k = object_property_get(e, "key");
     if (equal(k, "s")) {
       search();
