@@ -42,5 +42,6 @@ export async function app_a_function(context) {
     root,
     ast,
     parsed,
+    app_a_function_on_keydown,
   });
 }
