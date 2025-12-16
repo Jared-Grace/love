@@ -1,3 +1,4 @@
+import { html_button_notext } from "../../../love/public/src/html_button_notext.mjs";
 import { html_on_keydown_body } from "../../../love/public/src/html_on_keydown_body.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
@@ -195,7 +196,7 @@ export async function app_reply_main() {
   }
   buttons = list_map(choices, lambda);
   let original_include = true;
-  let component5 = html_button(parent, "", lambda15);
+  let component5 = html_button_notext(parent, lambda15);
   original_text_update();
   function lambda15() {
     original_include = not(original_include);
