@@ -17,11 +17,11 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 export async function app_a_home(context) {
   let filtered = null;
-  function lambda5() {
+  function on_enter() {
     let first = list_first(filtered);
     f_name_select(first);
   }
-  let lambda22 = html_on_enter_lambda(lambda5);
+  let lambda22 = html_on_enter_lambda(on_enter);
   let on_keydowns = app_a_on_keydown_add(context, lambda22);
   log({
     on_keydowns,
