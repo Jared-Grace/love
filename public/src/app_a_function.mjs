@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_function_node } from "../../../love/public/src/app_a_function_node.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
@@ -15,7 +16,12 @@ import { storage_local_get } from "../../../love/public/src/storage_local_get.mj
 export async function app_a_function(context) {
   let { app_fn } = context;
   list_add(on_keydowns, app_a_function_on_keydown);
-  function app_a_function_on_keydown() {}
+  function app_a_function_on_keydown(e) {
+    let key3 = object_property_get(e, "key");
+    if (equal(key3, "s")) {
+      lambda23();
+    }
+  }
   let f_name = storage_local_get(app_fn, "f_name_selected");
   let parsed = await function_parse(f_name);
   let ast = object_property_get(parsed, "ast");
