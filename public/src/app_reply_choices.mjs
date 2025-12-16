@@ -1,3 +1,4 @@
+import { app_reply_languages } from "../../../love/public/src/app_reply_languages.mjs";
 import { app_reply_response_languages } from "../../../love/public/src/app_reply_response_languages.mjs";
 import { app_reply_response_how_day } from "../../../love/public/src/app_reply_response_how_day.mjs";
 import { app_reply_how_day } from "../../../love/public/src/app_reply_how_day.mjs";
@@ -212,7 +213,7 @@ export function app_reply_choices() {
         emoji_pray(),
     },
     {
-      text: emoji_question() + " Languages",
+      text: app_reply_languages(),
       response: app_reply_response_languages(),
     },
     {
