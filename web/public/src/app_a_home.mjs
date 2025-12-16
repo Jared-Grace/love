@@ -63,7 +63,7 @@ export async function app_a_home(context) {
   }
   html_focus(input);
   function f_name_select(f_name) {
-    list_remove(list, item);
+    list_remove(context, on_keydown);
     app_a_function_select(context, f_name);
   }
 }
