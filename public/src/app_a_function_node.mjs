@@ -1,3 +1,4 @@
+import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { app_a_function } from "../../../love/public/src/app_a_function.mjs";
 import { file_js_unparse } from "../../../love/public/src/file_js_unparse.mjs";
 import { html_on_keydown_stop_logic } from "../../../love/public/src/html_on_keydown_stop_logic.mjs";
@@ -33,8 +34,6 @@ import { js_code_equals_padded } from "../../../love/public/src/js_code_equals_p
 import { app_a_nodes_list } from "../../../love/public/src/app_a_nodes_list.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
-import { app_api_cache_global } from "../../../love/public/src/app_api_cache_global.mjs";
-import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { app_a_semicolon } from "../../../love/public/src/app_a_semicolon.mjs";
 import { app_a_parenthesis_wrap } from "../../../love/public/src/app_a_parenthesis_wrap.mjs";
@@ -150,7 +149,7 @@ export function app_a_function_node(a) {
       function lambda20() {
         let on_keydowns = object_property_get(context, "on_keydowns");
         let { overlay, overlay_close } = app_a_overlay(
-          root,
+          a,
           on_keydowns,
           on_keydown,
         );
@@ -166,7 +165,7 @@ export function app_a_function_node(a) {
             fn: async function lambda15() {
               overlay_close();
               let { overlay, overlay_close: rename_overlay_close } =
-                app_a_overlay(root, on_keydowns, lambda22);
+                app_a_overlay(a, on_keydowns, lambda22);
               function lambda22(e) {
                 let key3 = object_property_get(e, "key");
                 if (equal(key3, "Enter")) {
@@ -235,7 +234,7 @@ export function app_a_function_node(a) {
       html_font_color_set(span3, "#d07200ff");
       async function lambda12() {
         let value2 = object_property_get(node, "value");
-        let f_names = functions_names();
+        let f_names = await functions_names();
         let includes = list_includes(f_names, value2);
         if (includes) {
           app_a_function_select(context, value2);
