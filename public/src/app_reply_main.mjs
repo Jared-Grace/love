@@ -1,4 +1,4 @@
-import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
+import { html_document_root } from "../../../love/public/src/html_document_root.mjs";
 import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
 import { html_font_sans_serif_set_html } from "../../../love/public/src/html_font_sans_serif_set_html.mjs";
 import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
@@ -60,7 +60,7 @@ import { app_reply_choices } from "../../../love/public/src/app_reply_choices.mj
 export async function app_reply_main() {
   html_meta_viewport();
   html_font_sans_serif_set_html();
-  let head = html_document_head();
+  let html2 = html_document_root();
   html_style_font_size(html, value);
   let choices = app_reply_choices();
   let languages = ebible_languages();
