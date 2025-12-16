@@ -10,6 +10,7 @@ export function js_destructure_functionize(ast) {
       node2,
     });
     return;
+    let stack = object_property_get(v, "stack");
     let id = object_property_get(node2, "id");
   }
   js_visit_type(ast, "ObjectPattern", lambda);
