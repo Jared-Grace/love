@@ -194,22 +194,24 @@ export async function app_reply_main() {
     }
     return component;
   }
-  buttons = list_map(choices, lambda);
-  let original_include = true;
-  let component5 = html_button_notext(root, lambda15);
-  original_text_update();
-  function lambda15() {
-    original_include = not(original_include);
+  if (false) {
+    let original_include = true;
+    let component5 = html_button_notext(root, lambda15);
     original_text_update();
+    function lambda15() {
+      original_include = not(original_include);
+      original_text_update();
+    }
+    function original_text_update() {
+      html_text_set(
+        component5,
+        "Original " + (original_include ? "In" : "Ex") + "clude",
+      );
+    }
   }
+  buttons = list_map(choices, lambda);
   preview = html_p(root);
   buttons_refresh();
-  function original_text_update() {
-    html_text_set(
-      component5,
-      "Original " + (original_include ? "In" : "Ex") + "clude",
-    );
-  }
   async function preview_refresh() {
     let concated = concated_get();
     let joined = await list_join_newline_2_copy(concated);
