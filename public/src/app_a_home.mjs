@@ -19,6 +19,7 @@ export async function app_a_home(context) {
   let filtered = null;
   function lambda5() {
     let first = list_first(filtered);
+    f_name_select(first);
   }
   let lambda22 = html_on_enter_lambda(lambda5);
   let on_keydowns = app_a_on_keydown_add(context, lambda22);
@@ -53,11 +54,14 @@ export async function app_a_home(context) {
     list_sort_string_alpha_size(filtered);
     function lambda(f_name) {
       async function lambda3() {
-        app_a_function_select(context, f_name);
+        f_name_select(f_name);
       }
       app_a_button_wide(f_names_div, f_name, lambda3);
     }
     each(filtered, lambda);
   }
   html_focus(input);
+  function f_name_select(f_name) {
+    app_a_function_select(context, f_name);
+  }
 }
