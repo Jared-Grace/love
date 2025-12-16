@@ -1,3 +1,4 @@
+import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
 import { app_a_on_keydown_add } from "../../../love/public/src/app_a_on_keydown_add.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
@@ -15,7 +16,8 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 export async function app_a_home(context) {
   function lambda5() {}
-  let on_keydowns = app_a_on_keydown_add(context, lambda5);
+  let lambda22 = html_on_enter_lambda(lambda5);
+  let on_keydowns = app_a_on_keydown_add(context, lambda22);
   log({
     on_keydowns,
   });
