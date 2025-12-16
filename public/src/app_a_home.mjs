@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
 import { app_a_on_keydown_add } from "../../../love/public/src/app_a_on_keydown_add.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -15,7 +16,10 @@ import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 export async function app_a_home(context) {
-  function lambda5() {}
+  let filtered = null;
+  function lambda5() {
+    let first = list_first(list);
+  }
   let lambda22 = html_on_enter_lambda(lambda5);
   let on_keydowns = app_a_on_keydown_add(context, lambda22);
   log({
@@ -25,7 +29,6 @@ export async function app_a_home(context) {
   let body = html_document_body();
   let input = app_a_input(body);
   let f_names_div = html_div(body);
-  let filtered = null;
   function lambda4() {
     let value = html_value_get(input);
     function lambda2(f_name) {
