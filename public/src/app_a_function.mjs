@@ -19,7 +19,7 @@ export async function app_a_function(context) {
   function app_a_function_on_keydown(e) {
     let key3 = object_property_get(e, "key");
     if (equal(key3, "s")) {
-      lambda23();
+      search();
     }
   }
   let f_name = storage_local_get(app_fn, "f_name_selected");
