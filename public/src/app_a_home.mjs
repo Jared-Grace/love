@@ -14,7 +14,8 @@ import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 export async function app_a_home(context) {
-  let on_keydowns = app_a_on_keydown_add(context, () => {});
+  function lambda5() {}
+  let on_keydowns = app_a_on_keydown_add(context, lambda5);
   log({
     on_keydowns,
   });
