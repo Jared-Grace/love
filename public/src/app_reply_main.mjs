@@ -194,7 +194,8 @@ export async function app_reply_main() {
     return component;
   }
   buttons = list_map(choices, lambda);
-  let component5 = html_button(parent, text3, function lambda15() {});
+  function lambda15() {}
+  let component5 = html_button(parent, text3, lambda15);
   preview = html_p(root);
   buttons_refresh();
   async function preview_refresh() {
