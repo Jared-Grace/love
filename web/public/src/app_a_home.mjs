@@ -1,5 +1,5 @@
+import { app_a_on_keydown_add } from "../../../love/public/src/app_a_on_keydown_add.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { app_a_input } from "../../../love/public/src/app_a_input.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
@@ -14,7 +14,7 @@ import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 export async function app_a_home(context) {
-  let on_keydowns = object_property_get(context, "on_keydowns");
+  let on_keydowns = app_a_on_keydown_add(context, () => {});
   log({
     on_keydowns,
   });
