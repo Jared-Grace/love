@@ -10,6 +10,7 @@ export function js_destructure_functionize(ast) {
       node2,
     });
     return;
+    let id = object_property_get(node2, "id");
   }
   js_visit_type(ast, "VariableDeclarator", lambda);
   return;
