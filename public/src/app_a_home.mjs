@@ -1,3 +1,4 @@
+import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { app_a_input } from "../../../love/public/src/app_a_input.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
@@ -46,4 +47,5 @@ export async function app_a_home(context) {
     }
     each(filtered, lambda);
   }
+  html_focus(input2);
 }
