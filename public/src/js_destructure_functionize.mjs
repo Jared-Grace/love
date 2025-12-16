@@ -3,12 +3,12 @@ import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function js_destructure_functionize(ast) {
   marker("1");
-  function lambda(v) {$g$v$node
+  function lambda(v) {
+  return;$g$v$node
     log({
       v,
     });
   }
   js_visit_type(ast, "VariableDeclarator", lambda);
-  return;
   let { node, parent, context } = a;
 }
