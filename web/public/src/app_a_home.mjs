@@ -21,8 +21,8 @@ export async function app_a_home(context) {
     let first = list_first(filtered);
     f_name_select(first);
   }
-  let lambda22 = html_on_enter_lambda(on_enter);
-  let on_keydowns = app_a_on_keydown_add(context, lambda22);
+  let on_keydown = html_on_enter_lambda(on_enter);
+  let on_keydowns = app_a_on_keydown_add(context, on_keydown);
   log({
     on_keydowns,
   });
