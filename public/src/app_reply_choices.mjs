@@ -220,10 +220,6 @@ export function app_reply_choices() {
       response: app_reply_choices_location(),
     },
     {
-      text: "🚫" + " Sorry",
-      response: " Sorry, I will not do that",
-    },
-    {
       text: emoji_wave() + " Meet",
       response: emoji_pray() + " Nice to meet you! " + emoji_handshake(),
     },
@@ -307,6 +303,10 @@ export function app_reply_choices() {
         newline() +
         newline() +
         " Jesus gave me the grace to write this song",
+    },
+    {
+      text: "🚫" + " Sorry",
+      response: " Sorry, I will not do that",
     },
     {
       text: emoji_pray() + " Testimony",
