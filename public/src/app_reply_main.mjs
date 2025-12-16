@@ -196,7 +196,7 @@ export async function app_reply_main() {
   }
   buttons = list_map(choices, lambda);
   let original_include = true;
-  let component5 = html_button_notext(parent, lambda15);
+  let component5 = html_button_notext(root, lambda15);
   original_text_update();
   function lambda15() {
     original_include = not(original_include);
