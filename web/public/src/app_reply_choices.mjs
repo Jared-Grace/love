@@ -1,3 +1,4 @@
+import { app_reply_response_languages } from "../../../love/public/src/app_reply_response_languages.mjs";
 import { app_reply_response_how_day } from "../../../love/public/src/app_reply_response_how_day.mjs";
 import { app_reply_how_day } from "../../../love/public/src/app_reply_how_day.mjs";
 import { app_reply_response_how_family } from "../../../love/public/src/app_reply_response_how_family.mjs";
@@ -212,8 +213,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_question() + " Languages",
-      response:
-        "Do you speak any languages besides English? If so, what languages do you speak besides English?",
+      response: app_reply_response_languages(),
     },
     {
       text: emoji_globe_americas() + " Location",
