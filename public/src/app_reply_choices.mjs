@@ -76,6 +76,7 @@ export function app_reply_choices() {
   let hru = app_reply_response_how_r_u();
   let how_family = app_reply_response_how_family();
   const how_day = app_reply_response_how_day();
+  let v2 = app_reply_response_languages();
   let v = [
     {
       text: emoji_pray() + " Amazing",
@@ -147,6 +148,10 @@ export function app_reply_choices() {
     {
       text: app_reply_greetings() + " " + app_reply_how_r_u(),
       response: list_join_newline_2([greetings, hru]),
+    },
+    {
+      text: app_reply_greetings() + " " + app_reply_languages(),
+      response: list_join_newline_2([greetings, v2]),
     },
     {
       text: emoji_hands_raising() + " Hallelujah",
