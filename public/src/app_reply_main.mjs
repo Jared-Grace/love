@@ -196,9 +196,9 @@ export async function app_reply_main() {
   buttons = list_map(choices, lambda);
   let original_include = true;
   function lambda15() {
-    original_include = false;
+    original_include = not(original_include);
   }
-  let component5 = html_button(parent, text3, lambda15);
+  let component5 = html_button(parent, "Original Exclude", lambda15);
   preview = html_p(root);
   buttons_refresh();
   async function preview_refresh() {
@@ -234,10 +234,10 @@ export async function app_reply_main() {
         }
       }
       verses_add(v);
-      if (false) {
-      }
-      if (original_translation !== null) {
-        verses_add(original_translation);
+      if (original_include) {
+        if (original_translation !== null) {
+          verses_add(original_translation);
+        }
       }
     }
     each(verses_list, lambda11);
