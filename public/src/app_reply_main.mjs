@@ -1,4 +1,4 @@
-import { html_style_button } from "../../../love/public/src/html_style_button.mjs";
+import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
 import { html_font_sans_serif_set_html } from "../../../love/public/src/html_font_sans_serif_set_html.mjs";
 import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
 import { html_on_keydown_body } from "../../../love/public/src/html_on_keydown_body.mjs";
@@ -59,7 +59,7 @@ import { app_reply_choices } from "../../../love/public/src/app_reply_choices.mj
 export async function app_reply_main() {
   html_meta_viewport();
   html_font_sans_serif_set_html();
-  html_style_button("font-size: 20px");
+  html_style_font_size(html, value);
   let choices = app_reply_choices();
   let languages = ebible_languages();
   let encouragement = bible_verses_uplifting();
