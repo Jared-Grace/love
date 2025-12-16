@@ -9,6 +9,6 @@ export function html_font_sans_serif_set_html() {
   let style_value = html_font_sans_serif_value();
   html_font_set(html2, style_value);
   html_style_head(
-    "button { font-family: " + html_font_sans_serif_value() + " }",
+    "button { " + ":font-family: " + html_font_sans_serif_value() + " }",
   );
 }
