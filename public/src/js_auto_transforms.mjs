@@ -1,3 +1,4 @@
+import { js_destructure_functionize } from "../../../love/public/src/js_destructure_functionize.mjs";
 import { js_assert_arguments_args } from "../../../love/public/src/js_assert_arguments_args.mjs";
 import { js_assign_combine } from "../../../love/public/src/js_assign_combine.mjs";
 import { js_atomize } from "../../../love/public/src/js_atomize.mjs";
@@ -36,7 +37,9 @@ export function js_auto_transforms() {
     js_atomize,
     js_assign_combine,
     js_assert_arguments_args,
+    js_destructure_functionize,
   ];
   return transforms;
+  return;
   return;
 }
