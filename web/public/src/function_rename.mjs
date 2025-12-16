@@ -11,7 +11,10 @@ export async function function_rename(f_name_before, f_name_after) {
   f_name_before = unaliased;
   let { ast } = await function_parse(f_name_before);
   let identifiers_named = js_identifiers_named(ast, f_name_after);
-  list_empty_is_assert(identifiers_named);
+  list_empty_is_assert(identifiers_named, {
+    f_name_after,
+    msg: "already exists in file as identifier",
+  });
   await function_rename_fn_names_check(f_name_before);
   await function_move(f_name_before, f_name_after);
   await function_rename_identifiers_alias(f_name_before, f_name_after);
