@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_function_node } from "../../../love/public/src/app_a_function_node.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_font_jetbrains_mono } from "../../../love/public/src/html_font_jetbrains_mono.mjs";
@@ -13,6 +14,7 @@ import { function_parse } from "../../../love/public/src/function_parse.mjs";
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
 export async function app_a_function(context) {
   let { app_fn } = context;
+  list_add(on_keydowns, on_keydown);
   let f_name = storage_local_get(app_fn, "f_name_selected");
   let parsed = await function_parse(f_name);
   let ast = object_property_get(parsed, "ast");
