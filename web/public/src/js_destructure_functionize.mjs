@@ -12,7 +12,7 @@ export function js_destructure_functionize(ast) {
     return;
     let id = object_property_get(node2, "id");
   }
-  js_visit_type(ast, "VariableDeclarator", lambda);
+  js_visit_type(ast, "ObjectPattern", lambda);
   return;
   let { node, parent, context } = a;
 }
