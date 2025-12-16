@@ -18,7 +18,7 @@ import { html_document_body } from "../../../love/public/src/html_document_body.
 export async function app_a_home(context) {
   let filtered = null;
   function lambda5() {
-    let first = list_first(list);
+    let first = list_first(filtered);
   }
   let lambda22 = html_on_enter_lambda(lambda5);
   let on_keydowns = app_a_on_keydown_add(context, lambda22);
