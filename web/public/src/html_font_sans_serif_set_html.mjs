@@ -8,7 +8,6 @@ export function html_font_sans_serif_set_html() {
   html_roboto_include();
   let style_value = html_font_sans_serif_value();
   html_font_set(html2, style_value);
-  html_style_head(
-    "button { " + ":font-family: " + html_font_sans_serif_value() + " }",
-  );
+  const style = ":font-family: " + html_font_sans_serif_value();
+  html_style_head("button { " + style + " }");
 }
