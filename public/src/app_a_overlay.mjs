@@ -6,7 +6,7 @@ import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 export function app_a_overlay(a, on_keydowns, on_keydown) {
   marker("1");
-  let root2 = object_property_get(a, "root");
+  let root = object_property_get(a, "root");
   let app_a_function_on_keydown = object_property_get(
     a,
     "app_a_function_on_keydown",
