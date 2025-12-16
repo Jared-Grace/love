@@ -1,3 +1,4 @@
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { html_on_keydown_stop_logic } from "../../../love/public/src/html_on_keydown_stop_logic.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -32,6 +33,7 @@ export async function app_a_function(context) {
   let root = object_property_get(context, "root");
   html_clear(root);
   function search() {
+    list_remove(on_keydowns, app_a_function_on_keydown);
     app_generic_screen_set(context, app_a_home);
   }
   let text = emoji_search();
