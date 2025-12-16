@@ -6,7 +6,6 @@ export function html_overlay(container, z_index) {
     position: "fixed",
     top: "0",
     left: "0",
-    left: "0",
     right: "0",
     width: "auto",
     height: "100vh",
