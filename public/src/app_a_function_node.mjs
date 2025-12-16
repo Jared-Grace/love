@@ -1,3 +1,4 @@
+import { html_on_enter } from "../../../love/public/src/html_on_enter.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { app_a_function } from "../../../love/public/src/app_a_function.mjs";
 import { file_js_unparse } from "../../../love/public/src/file_js_unparse.mjs";
@@ -164,12 +165,7 @@ export function app_a_function_node(a) {
             text: "Rename",
             fn: async function lambda15() {
               overlay_close();
-              let lambda22 = function lambda24(e) {
-                let key3 = object_property_get(e, "key");
-                if (equal(key3, "Enter")) {
-                  lambda23();
-                }
-              };
+              let lambda22 = html_on_enter(lambda23);
               let { overlay, overlay_close: rename_overlay_close } =
                 app_a_overlay(a, on_keydowns, lambda22);
               let text5 = app_a_overlay_close_text();
