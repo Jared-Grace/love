@@ -22,7 +22,6 @@ export async function js_dollar_g({
     if (js_node_type_is(stack1, "ExpressionStatement")) {
       let unique = js_identifier_unique_ast(ast, property_name);
       let assign = js_assign_object_property_get(
-        ast,
         property_name,
         object_name,
         stack2,
