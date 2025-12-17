@@ -11,8 +11,10 @@ export function js_destructure_functionize(ast) {
   let variable_name = js_node_atomize_name();
   function lambda(v) {
     let node2 = object_property_get(v, "node");
+    let stack = object_property_get(v, "stack");
     log({
       node2,
+      stack,
     });
     let properties = object_property_get(node2, "properties");
     let mi = list_multiple_is(properties);
@@ -29,7 +31,6 @@ export function js_destructure_functionize(ast) {
       each(properties, lambda2);
     }
     return;
-    let stack = object_property_get(v, "stack");
     let id = object_property_get(node2, "id");
   }
   js_visit_type(ast, "ObjectPattern", lambda);
