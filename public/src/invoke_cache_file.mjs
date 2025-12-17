@@ -21,10 +21,7 @@ export async function invoke_cache_file(fn, args) {
     return joined;
   };
   let value_get = invoke_cache_value_get(fn, args);
-  let cached_exists = async function lambda3(key) {
-    let exists = await file_exists(key);
-    return exists;
-  };
+  let cached_exists = file_exists;
   let cached_get = async function lambda2(key) {
     let data = await file_read_json(key);
     let result2 = object_property_get(data, "result");
