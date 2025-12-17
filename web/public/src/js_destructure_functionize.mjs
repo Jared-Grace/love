@@ -23,11 +23,13 @@ export function js_destructure_functionize(ast) {
       let stack = object_property_get(v, "stack");
       let e1 = list_get_end_1(stack);
       js_node_type_is_assert(e1, "VariableDeclarator");
-      return;
       let e4 = list_get_end(stack, 4);
-      let item = list_get_end(stack2, index_from_end);
       list_is_assert(e4);
-      le3;
+      let e3 = list_get_end(stack, 3);
+      return;
+      log({
+        e3,
+      });
       let unique = js_identifier_unique_ast(ast, variable_name);
       function lambda2(p) {
         return;
