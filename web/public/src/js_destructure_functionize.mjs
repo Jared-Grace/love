@@ -1,3 +1,4 @@
+import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
 import { js_node_type_is_assert } from "../../../love/public/src/js_node_type_is_assert.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -32,6 +33,7 @@ export function js_destructure_functionize(ast) {
         });
         let key = object_property_get(p, "key");
         let value = object_property_get(p, "value");
+        let e1 = list_get_end(stack, 1);
       }
       each(properties, lambda2);
       return;
