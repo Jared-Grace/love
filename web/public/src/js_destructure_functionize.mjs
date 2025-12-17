@@ -1,8 +1,5 @@
 import { js_assign_object_property_get } from "../../../love/public/src/js_assign_object_property_get.mjs";
-import { js_call_object_property_get } from "../../../love/public/src/js_call_object_property_get.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
-import { js_declare } from "../../../love/public/src/js_declare.mjs";
-import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
 import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
 import { js_node_type_is_assert } from "../../../love/public/src/js_node_type_is_assert.mjs";
@@ -41,16 +38,13 @@ export function js_destructure_functionize(ast) {
         let name3 = js_identifier_name(key);
         let value = object_property_get(p, "value");
         let name2 = js_identifier_name(value);
-        let assign2 = js_assign_object_property_get(
+        let assign = js_assign_object_property_get(
           ast,
           name3,
           unique,
           block_body,
           block_body_item,
         );
-        let parsed = js_call_object_property_get(name3, unique);
-        let assign = js_declare(name2, key);
-        list_insert(block_body, index_next, assign);
       }
       each(properties, lambda2);
       let expression = js_parse_expression(unique);
