@@ -6,7 +6,7 @@ export async function cache_remove_generic(
   cache_remove,
 ) {
   marker("1");
-  let key = key_get();
+  let key = key_get();$l$key
   let e = await cached_exists(key);
   true_is_assert(e);
   await cache_remove(e);
