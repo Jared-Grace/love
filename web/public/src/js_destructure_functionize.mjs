@@ -16,15 +16,16 @@ export function js_destructure_functionize(ast) {
   let variable_name = js_node_atomize_name();
   function lambda(v) {
     let node2 = object_property_get(v, "node");
-    let stack = object_property_get(v, "stack");
-    let e1 = list_get_end_1(stack);
-    js_node_type_is_assert(e1, "VariableDeclarator");
     log({
       stack,
     });
     let properties = object_property_get(node2, "properties");
     let mi = list_multiple_is(properties);
     if (mi) {
+    let stack = object_property_get(v, "stack");
+    let e1 = list_get_end_1(stack);
+    js_node_type_is_assert(e1, "VariableDeclarator");
+        let e4 = list_get_end(stack, 4);
       let unique = js_identifier_unique_ast(ast, variable_name);
       function lambda2(p) {
         return;
@@ -33,7 +34,6 @@ export function js_destructure_functionize(ast) {
         });
         let key = object_property_get(p, "key");
         let value = object_property_get(p, "value");
-        let e1 = list_get_end(stack, 1);
       }
       each(properties, lambda2);
       return;
