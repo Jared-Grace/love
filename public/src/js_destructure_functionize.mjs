@@ -1,3 +1,4 @@
+import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_node_atomize_name } from "../../../love/public/src/js_node_atomize_name.mjs";
 import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier_unique_ast.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -21,6 +22,7 @@ export function js_destructure_functionize(ast) {
     if (mi) {
       function lambda2(p) {
         return;
+        let e1 = list_get_end_1(stack2);
         let unique = js_identifier_unique_ast(ast, variable_name);
         log({
           p,
