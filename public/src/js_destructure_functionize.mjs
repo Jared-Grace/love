@@ -30,7 +30,7 @@ export function js_destructure_functionize(ast) {
       let block_body = list_get_end(stack, 4);
       list_is_assert(block_body);
       let e3 = list_get_end(stack, 3);
-      let index_next = list_index_of_next(block_body, e3);console.log({index_next})
+      let index_next = list_index_of_next_outside(block_body, e3);console.log({index_next})
       let unique = js_identifier_unique_ast(ast, variable_name);
       function lambda2(p) {
         let key = object_property_get(p, "key");
