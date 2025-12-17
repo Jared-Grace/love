@@ -1,3 +1,4 @@
+import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier_unique_ast.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -14,8 +15,9 @@ export function js_destructure_functionize(ast) {
     let properties = object_property_get(node2, "properties");
     let mi = list_multiple_is(properties);
     if (mi) {
-      function lambda2(p) {js_identifier_unique_ast
+      function lambda2(p) {
         return;
+        let unique = js_identifier_unique_ast(ast2, property_name);
         log({
           p,
         });
