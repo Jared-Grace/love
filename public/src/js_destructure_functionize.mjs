@@ -1,3 +1,4 @@
+import { js_node_atomize_name } from "../../../love/public/src/js_node_atomize_name.mjs";
 import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier_unique_ast.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
@@ -7,7 +8,6 @@ import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function js_destructure_functionize(ast) {
   marker("1");
-  let variable_name = js_node_atomize_name();
   function lambda(v) {
     let node2 = object_property_get(v, "node");
     log({
@@ -33,5 +33,6 @@ export function js_destructure_functionize(ast) {
   }
   js_visit_type(ast, "ObjectPattern", lambda);
   return;
+  let variable_name = js_node_atomize_name();
   let { node, parent, context } = a;
 }
