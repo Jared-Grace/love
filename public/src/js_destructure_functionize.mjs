@@ -13,16 +13,16 @@ export function js_destructure_functionize(ast) {
   function lambda(v) {
     let node2 = object_property_get(v, "node");
     let stack = object_property_get(v, "stack");
+    let e1 = list_get_end_1(stack);
     log({
       node2,
-      stack,
+      e1,
     });
     let properties = object_property_get(node2, "properties");
     let mi = list_multiple_is(properties);
     if (mi) {
       function lambda2(p) {
         return;
-        let e1 = list_get_end_1(stack2);
         let unique = js_identifier_unique_ast(ast, variable_name);
         log({
           p,
