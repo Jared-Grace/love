@@ -3,7 +3,6 @@ import { js_call_object_property_get } from "../../../love/public/src/js_call_ob
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { list_index_of_next_outside } from "../../../love/public/src/list_index_of_next_outside.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
-import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier_unique_ast.mjs";
 export function js_assign_object_property_get(
   ast,
   property_name,
