@@ -27,10 +27,10 @@ export function js_destructure_functionize(ast) {
       let stack = object_property_get(v, "stack");
       let e1 = list_get_end_1(stack);
       js_node_type_is_assert(e1, "VariableDeclarator");
-      let e4 = list_get_end(stack, 4);
-      list_is_assert(e4);
+      let block_body = list_get_end(stack, 4);
+      list_is_assert(block_body);
       let e3 = list_get_end(stack, 3);
-      let index_next = list_index_of_next(e4, e3);
+      let index_next = list_index_of_next(block_body, e3);
       let unique = js_identifier_unique_ast(ast, variable_name);
       function lambda2(p) {
         let key = object_property_get(p, "key");
@@ -38,7 +38,7 @@ export function js_destructure_functionize(ast) {
         js_identifier_is_assert(value);
         let name2 = object_property_get(value, "name");
         let assign = js_declare(name2, key);
-        list_insert(e4, index_next, assign);
+        list_insert(block_body, index_next, assign);
       }
       each(properties, lambda2);
       let expression = js_parse_expression(unique);
