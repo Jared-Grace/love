@@ -1,3 +1,4 @@
+import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
 import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
@@ -39,6 +40,7 @@ export function js_destructure_functionize(ast) {
         });
         let key = object_property_get(p, "key");
         let value = object_property_get(p, "value");
+        let assign = js_declare(name, init);
         list_insert(list, index, value2);
       }
       each(properties, lambda2);
