@@ -22,7 +22,7 @@ export async function js_dollar_g({
       let assign = js_assign_object_property_get(
         ast,
         property_name,
-        parsed,
+        object_name,
         stack2,
         stack1,
       );
