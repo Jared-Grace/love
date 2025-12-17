@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { js_call_object_property_get } from "../../../love/public/src/js_call_object_property_get.mjs";
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { list_index_of_next_outside } from "../../../love/public/src/list_index_of_next_outside.mjs";
@@ -10,6 +11,7 @@ export function js_assign_object_property_get(
   block_body,
   block_body_item,
 ) {
+  marker("1");
   let parsed = js_call_object_property_get(property_name, object_name);
   let unique = js_identifier_unique_ast(ast, property_name);
   let assign = js_declare(unique, parsed);
