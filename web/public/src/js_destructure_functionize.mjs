@@ -17,6 +17,7 @@ export function js_destructure_functionize(ast) {
     let node2 = object_property_get(v, "node");
     let stack = object_property_get(v, "stack");
     let e1 = list_get_end_1(stack);
+    js_node_type_is_assert(e1, "VariableDeclarator");
     log({
       node2,
       e1,
@@ -35,7 +36,6 @@ export function js_destructure_functionize(ast) {
       }
       each(properties, lambda2);
       return;
-      js_node_type_is_assert(node3, type);
       let expression = js_parse_expression(unique);
       object_property_set(e1, "id", expression);
     }
