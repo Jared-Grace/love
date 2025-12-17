@@ -133,6 +133,11 @@ export function ebible_languages() {
       bible_folder: "gaz",
       language_code: "om",
     },
+    {
+      name: "Persian",
+      bible_folder: "gaz",
+      language_code: "evu pesopcb",
+    },
   ];
   return languages;
 }
