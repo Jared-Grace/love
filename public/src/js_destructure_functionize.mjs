@@ -35,7 +35,7 @@ export function js_destructure_functionize(ast) {
       each(properties, lambda2);
       return;
       let expression = js_parse_expression(unique);
-      object_property_set(object, "id", expression);
+      object_property_set(e1, "id", expression);
     }
     return;
     let id = object_property_get(node2, "id");
