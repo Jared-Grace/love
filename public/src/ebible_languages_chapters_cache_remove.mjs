@@ -3,6 +3,5 @@ import { ebible_languages_chapters } from "../../../love/public/src/ebible_langu
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_languages_chapters_cache_remove() {
   marker("1");
-  let v = await invoke_cache_file_remove(ebible_languages_chapters, []);
-  return v;
+  await invoke_cache_file_remove(ebible_languages_chapters, []);
 }
