@@ -8,12 +8,12 @@ export function js_assign_object_property_get(
   property_name,
   object_name,
   block_body,
-  stack1,
+  block_body_item,
 ) {
   let parsed = js_call_object_property_get(property_name, object_name);
   let unique = js_identifier_unique_ast(ast, property_name);
   let assign = js_declare(unique, parsed);
-  let index = list_index_of_next_outside(block_body, stack1);
+  let index = list_index_of_next_outside(block_body, block_body_item);
   list_insert(block_body, index, assign);
   return assign;
 }
