@@ -12,8 +12,8 @@ export function js_destructure_functionize(ast) {
     });
     return;
     let properties = object_property_get(node2, "properties");
-    let v2 = list_multiple_is(list);
-    if (properties) {
+    let mi = list_multiple_is(properties);
+    if (mi) {
     }
     let stack = object_property_get(v, "stack");
     let id = object_property_get(node2, "id");
