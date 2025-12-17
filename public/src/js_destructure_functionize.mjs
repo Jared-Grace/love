@@ -26,6 +26,7 @@ export function js_destructure_functionize(ast) {
       return;
       let e4 = list_get_end(stack, 4);
       list_is_assert(e4);
+      le3;
       let unique = js_identifier_unique_ast(ast, variable_name);
       function lambda2(p) {
         return;
