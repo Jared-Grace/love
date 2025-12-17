@@ -1,3 +1,4 @@
+import { list_index_of_next } from "../../../love/public/src/list_index_of_next.mjs";
 import { js_identifier_is_assert } from "../../../love/public/src/js_identifier_is_assert.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
@@ -33,6 +34,7 @@ export function js_destructure_functionize(ast) {
         e3,
       });
       return;
+      let index_next = list_index_of_next(list2, item);
       let unique = js_identifier_unique_ast(ast, variable_name);
       function lambda2(p) {
         return;
@@ -40,11 +42,11 @@ export function js_destructure_functionize(ast) {
           p,
         });
         let key = object_property_get(p, "key");
-        js_identifier_is_assert(key);
-        let name2 = object_property_get(key, "name");
         let value = object_property_get(p, "value");
-        let assign = js_declare(name2, value);
-        list_insert(list, index, value2);
+        js_identifier_is_assert(value);
+        let name2 = object_property_get(value, "name");
+        let assign = js_declare(name2, key);
+        list_insert(list, index, assign);
       }
       each(properties, lambda2);
       let expression = js_parse_expression(unique);
