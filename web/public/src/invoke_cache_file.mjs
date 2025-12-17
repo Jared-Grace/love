@@ -9,8 +9,8 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function invoke_cache_file(fn, args) {
   marker("1");
   let key_get = invoke_cache_file_key_get(fn, args);
-  let value_get = invoke_cache_value_get(fn, args);
   let cached_exists = file_exists;
+  let value_get = invoke_cache_value_get(fn, args);
   let cached_get = async function lambda2(key) {
     let data = await file_read_json(key);
     let result2 = object_property_get(data, "result");
