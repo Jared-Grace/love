@@ -136,7 +136,7 @@ export function ebible_languages() {
     {
       name: "Persian",
       bible_folder: "pesopcb",
-      language_code: "evu ",
+      language_code: "fas",
     },
   ];
   return languages;
