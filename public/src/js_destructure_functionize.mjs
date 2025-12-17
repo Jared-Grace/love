@@ -19,8 +19,7 @@ export function js_destructure_functionize(ast) {
     let e1 = list_get_end_1(stack);
     js_node_type_is_assert(e1, "VariableDeclarator");
     log({
-      node2,
-      e1,
+      stack,
     });
     let properties = object_property_get(node2, "properties");
     let mi = list_multiple_is(properties);
