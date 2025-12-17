@@ -1,3 +1,4 @@
+import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
 import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
 import { js_node_type_is_assert } from "../../../love/public/src/js_node_type_is_assert.mjs";
@@ -38,6 +39,7 @@ export function js_destructure_functionize(ast) {
         });
         let key = object_property_get(p, "key");
         let value = object_property_get(p, "value");
+        list_insert(list, index, value2);
       }
       each(properties, lambda2);
       let expression = js_parse_expression(unique);
