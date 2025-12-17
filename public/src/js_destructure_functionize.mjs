@@ -1,3 +1,4 @@
+import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
@@ -11,7 +12,8 @@ export function js_destructure_functionize(ast) {
     });
     return;
     let properties = object_property_get(node2, "properties");
-    if (false) {
+    let v2 = list_multiple_is(list);
+    if (properties) {
     }
     let stack = object_property_get(v, "stack");
     let id = object_property_get(node2, "id");
