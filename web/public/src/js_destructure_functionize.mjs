@@ -15,9 +15,12 @@ export function js_destructure_functionize(ast) {
     let mi = list_multiple_is(properties);
     if (mi) {
       function lambda2(p) {
+        return;
         log({
           p,
         });
+        let key = object_property_get(p, "key");
+        let value = object_property_get(p, "value");
       }
       each(properties, lambda2);
     }
