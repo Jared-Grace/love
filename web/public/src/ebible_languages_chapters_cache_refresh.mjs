@@ -1,8 +1,8 @@
-import { invoke_cache_file_remove } from "../../../love/public/src/invoke_cache_file_remove.mjs";
-import { ebible_languages_chapters } from "../../../love/public/src/ebible_languages_chapters.mjs";
+import { ebible_languages_chapters_cache } from "../../../love/public/src/ebible_languages_chapters_cache.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
+import { ebible_languages_chapters_cache_remove } from "./ebible_languages_chapters_cache_remove.mjs";
 export async function ebible_languages_chapters_cache_refresh() {
   marker("1");
-  let v = await invoke_cache_file_remove(ebible_languages_chapters, []);
-  return v;
+  let v = await ebible_languages_chapters_cache_remove();
+  let v2 = await ebible_languages_chapters_cache();
 }
