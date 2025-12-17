@@ -49,7 +49,7 @@ export function js_destructure_functionize(ast) {
   js_visit_type(ast, "ObjectPattern", lambda);
   return;
   let v2 = a;
-  let context = object_property_get(v2, "context");
-  let parent = object_property_get(v2, "parent");
-  let node = object_property_get(v2, "node");
+  let c = object_property_get(v2, "context");
+  let p = object_property_get(v2, "parent");
+  let n = object_property_get(v2, "node");
 }
