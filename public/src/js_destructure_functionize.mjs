@@ -11,13 +11,13 @@ export function js_destructure_functionize(ast) {
     log({
       node2,
     });
-    return;
     let properties = object_property_get(node2, "properties");
     let mi = list_multiple_is(properties);
     if (mi) {
-      function lambda2(item) {}
-      each(list, lambda2);
+      function lambda2(p) {}
+      each(properties, lambda2);
     }
+    return;
     let stack = object_property_get(v, "stack");
     let id = object_property_get(node2, "id");
   }
