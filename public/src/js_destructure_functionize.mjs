@@ -39,9 +39,10 @@ export function js_destructure_functionize(ast) {
       let unique = js_identifier_unique_ast(ast, variable_name);
       function lambda2(p) {
         let key = object_property_get(p, "key");
+        let name3 = js_identifier_name(key);
         let value = object_property_get(p, "value");
         let name2 = js_identifier_name(value);
-        let parsed = js_call_object_property_get(property_name, object_name);
+        let parsed = js_call_object_property_get(name3, unique);
         let assign = js_declare(name2, key);
         list_insert(block_body, index_next, assign);
       }
