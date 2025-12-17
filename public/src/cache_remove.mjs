@@ -1,1 +1,4 @@
-export function cache_remove() {}
+import { marker } from "../../../love/public/src/marker.mjs";
+export function cache_remove() {
+  marker("1");
+}
