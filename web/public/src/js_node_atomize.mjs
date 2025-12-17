@@ -1,3 +1,4 @@
+import { js_node_atomize_name } from "../../../love/public/src/js_node_atomize_name.mjs";
 import { function_exists_strict } from "../../../love/public/src/function_exists_strict.mjs";
 import { function_parse_strict_declaration } from "../../../love/public/src/function_parse_strict_declaration.mjs";
 import { js_call_function_if } from "../../../love/public/src/js_call_function_if.mjs";
@@ -19,7 +20,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { assert_json } from "../../../love/public/src/assert_json.mjs";
 export async function js_node_atomize(existing, v) {
-  let variable_name = "v";
+  let variable_name = js_node_atomize_name();
   let { node } = v;
   let { stack } = v;
   if (js_node_type_is(node, "CallExpression")) {
