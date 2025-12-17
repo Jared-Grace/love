@@ -25,6 +25,7 @@ export function js_destructure_functionize(ast) {
       js_node_type_is_assert(e1, "VariableDeclarator");
       return;
       let e4 = list_get_end(stack, 4);
+      let item = list_get_end(stack2, index_from_end);
       list_is_assert(e4);
       le3;
       let unique = js_identifier_unique_ast(ast, variable_name);
