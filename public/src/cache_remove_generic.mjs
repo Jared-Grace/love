@@ -5,4 +5,5 @@ export async function cache_remove_generic(key_get, cached_exists) {
   let key = key_get();
   let e = await cached_exists(key);
   false_is_assert(e);
+  await cache_remove(e);
 }
