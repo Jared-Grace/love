@@ -20,12 +20,9 @@ export function js_destructure_functionize(ast) {
     let mi = list_multiple_is(properties);
     if (mi) {
       let stack = object_property_get(v, "stack");
-      log({
-        stack,
-      });
       let e1 = list_get_end_1(stack);
       js_node_type_is_assert(e1, "VariableDeclarator");
-      let e4 = list_get_end(stack, 4);
+      let e4 = list_get_end(stack, 4);lia
       let unique = js_identifier_unique_ast(ast, variable_name);
       function lambda2(p) {
         return;
