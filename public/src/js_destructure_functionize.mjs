@@ -1,3 +1,4 @@
+import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
 import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
 import { js_node_type_is_assert } from "../../../love/public/src/js_node_type_is_assert.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
@@ -22,7 +23,9 @@ export function js_destructure_functionize(ast) {
       let stack = object_property_get(v, "stack");
       let e1 = list_get_end_1(stack);
       js_node_type_is_assert(e1, "VariableDeclarator");
-      let e4 = list_get_end(stack, 4);lia
+      return;
+      let e4 = list_get_end(stack, 4);
+      list_is_assert(list);
       let unique = js_identifier_unique_ast(ast, variable_name);
       function lambda2(p) {
         return;
@@ -33,7 +36,6 @@ export function js_destructure_functionize(ast) {
         let value = object_property_get(p, "value");
       }
       each(properties, lambda2);
-      return;
       let expression = js_parse_expression(unique);
       object_property_set(e1, "id", expression);
     }
