@@ -1,3 +1,4 @@
+import { js_identifier_is_assert } from "../../../love/public/src/js_identifier_is_assert.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
@@ -39,6 +40,7 @@ export function js_destructure_functionize(ast) {
           p,
         });
         let key = object_property_get(p, "key");
+        js_identifier_is_assert(expression2);
         let name2 = object_property_get(key, "name");
         let value = object_property_get(p, "value");
         let assign = js_declare(name, value);
