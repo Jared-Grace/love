@@ -25,6 +25,7 @@ export async function js_dollar_g({
         object_name,
         stack2,
         stack1,
+        variable_name,
       );
       function lambda() {
         object_replace(stack1, assign);
