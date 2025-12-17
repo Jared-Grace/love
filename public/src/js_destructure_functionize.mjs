@@ -1,4 +1,4 @@
-import { list_index_of_next } from "../../../love/public/src/list_index_of_next.mjs";
+import { list_index_of_next_outside } from "../../../love/public/src/list_index_of_next_outside.mjs";
 import { js_identifier_is_assert } from "../../../love/public/src/js_identifier_is_assert.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
@@ -30,7 +30,10 @@ export function js_destructure_functionize(ast) {
       let block_body = list_get_end(stack, 4);
       list_is_assert(block_body);
       let e3 = list_get_end(stack, 3);
-      let index_next = list_index_of_next_outside(block_body, e3);console.log({index_next})
+      let index_next = list_index_of_next_outside(block_body, e3);
+      console.log({
+        index_next,
+      });
       let unique = js_identifier_unique_ast(ast, variable_name);
       function lambda2(p) {
         let key = object_property_get(p, "key");
@@ -47,5 +50,8 @@ export function js_destructure_functionize(ast) {
   }
   js_visit_type(ast, "ObjectPattern", lambda);
   return;
-  let { node, parent, context } = a;
+  let v2 = a;
+  let context = context;
+  let parent = parent;
+  let node = node;
 }
