@@ -1,7 +1,6 @@
 import { js_assign_object_property_get } from "../../../love/public/src/js_assign_object_property_get.mjs";
 import { js_call_object_property_get } from "../../../love/public/src/js_call_object_property_get.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
-import { list_index_of_next_outside } from "../../../love/public/src/list_index_of_next_outside.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
@@ -33,7 +32,6 @@ export function js_destructure_functionize(ast) {
       let block_body = list_get_end(stack, 4);
       list_is_assert(block_body);
       let block_body_item = list_get_end(stack, 3);
-      let index_next = list_index_of_next_outside(block_body, block_body_item);
       console.log({
         index_next,
       });
