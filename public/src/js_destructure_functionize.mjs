@@ -11,7 +11,6 @@ import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier
 import { each } from "../../../love/public/src/each.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function js_destructure_functionize(ast) {
@@ -28,9 +27,6 @@ export function js_destructure_functionize(ast) {
       let block_body = list_get_end(stack, 4);
       list_is_assert(block_body);
       let block_body_item = list_get_end(stack, 3);
-      console.log({
-        index_next,
-      });
       let unique = js_identifier_unique_ast(ast, variable_name);
       function lambda2(p) {
         let key = object_property_get(p, "key");
@@ -52,5 +48,8 @@ export function js_destructure_functionize(ast) {
   }
   js_visit_type(ast, "ObjectPattern", lambda);
   return;
-  let { node, parent, context } = a;
+  let v2 = a;
+  let context = object_property_get(v2, "context");
+  let parent = object_property_get(v2, "parent");
+  let node = object_property_get(v2, "node");
 }
