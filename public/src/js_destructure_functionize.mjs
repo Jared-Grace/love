@@ -39,7 +39,6 @@ export function js_destructure_functionize(ast) {
         let value = object_property_get(p, "value");
         let name2 = js_identifier_name(value);
         let assign = js_assign_object_property_get(
-          ast,
           name3,
           unique,
           block_body,
