@@ -17,7 +17,7 @@ export function js_destructure_functionize(ast) {
     if (mi) {
       function lambda2(p) {
         return;
-        let unique = js_identifier_unique_ast(ast2, property_name);
+        let unique = js_identifier_unique_ast(ast, "v");
         log({
           p,
         });
