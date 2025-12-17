@@ -6,7 +6,7 @@ import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier
 export function js_assign_object_property_get(
   ast,
   property_name,
-  parsed2,
+  object_name,
   stack2,
   stack1,
 ) {
