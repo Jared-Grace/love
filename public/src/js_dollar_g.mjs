@@ -1,3 +1,4 @@
+import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier_unique_ast.mjs";
 import { js_assign_object_property_get } from "../../../love/public/src/js_assign_object_property_get.mjs";
 import { js_call_object_property_get } from "../../../love/public/src/js_call_object_property_get.mjs";
 import { each_reverse } from "../../../love/public/src/each_reverse.mjs";
@@ -19,7 +20,7 @@ export async function js_dollar_g({
     list_first_remaining(remaining);
   async function lambda2(property_name) {
     if (js_node_type_is(stack1, "ExpressionStatement")) {
-  let unique = js_identifier_unique_ast(ast, property_name);
+      let unique = js_identifier_unique_ast(ast, property_name);
       let assign = js_assign_object_property_get(
         ast,
         property_name,
