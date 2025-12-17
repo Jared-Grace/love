@@ -1,3 +1,4 @@
+import { js_assign_object_property_get } from "../../../love/public/src/js_assign_object_property_get.mjs";
 import { js_call_object_property_get } from "../../../love/public/src/js_call_object_property_get.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { list_index_of_next_outside } from "../../../love/public/src/list_index_of_next_outside.mjs";
@@ -42,6 +43,13 @@ export function js_destructure_functionize(ast) {
         let name3 = js_identifier_name(key);
         let value = object_property_get(p, "value");
         let name2 = js_identifier_name(value);
+        let assign2 = js_assign_object_property_get(
+          ast2,
+          property_name,
+          object_name,
+          block_body2,
+          block_body_item,
+        );
         let parsed = js_call_object_property_get(name3, unique);
         let assign = js_declare(name2, key);
         list_insert(block_body, index_next, assign);
