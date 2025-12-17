@@ -14,7 +14,7 @@ export function js_destructure_functionize(ast) {
     let properties = object_property_get(node2, "properties");
     let mi = list_multiple_is(properties);
     if (mi) {
-      function lambda2(p) {
+      function lambda2(p) {js_identifier_unique_ast
         return;
         log({
           p,
