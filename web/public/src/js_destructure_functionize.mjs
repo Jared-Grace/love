@@ -38,7 +38,7 @@ export function js_destructure_functionize(ast) {
         js_identifier_is_assert(value);
         let name2 = object_property_get(value, "name");
         let assign = js_declare(name2, key);
-        list_insert(list, index_next, assign);
+        list_insert(e4, index_next, assign);
       }
       each(properties, lambda2);
       let expression = js_parse_expression(unique);
