@@ -43,7 +43,7 @@ export function js_destructure_functionize(ast) {
           unique,
           block_body,
           block_body_item,
-          variable_name,
+          name2,
         );
       }
       each(properties, lambda2);
