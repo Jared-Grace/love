@@ -18,8 +18,8 @@ export async function js_dollar_g({
   let { first: object_name, remaining: property_names } =
     list_first_remaining(remaining);
   async function lambda2(property_name) {
-    let parsed = js_call_object_property_get(property_name, object_name);
     if (js_node_type_is(stack1, "ExpressionStatement")) {
+      let parsed = js_call_object_property_get(property_name, object_name);
       let assign = js_assign_object_property_get(
         ast,
         property_name,
@@ -32,6 +32,7 @@ export async function js_dollar_g({
       }
       list_add(afters, lambda);
     } else {
+      let parsed = js_call_object_property_get(property_name, object_name);
       list_size_1_assert(remaining);
       function lambda() {
         object_replace(node, parsed);
