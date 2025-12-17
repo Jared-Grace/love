@@ -32,8 +32,8 @@ export function js_destructure_functionize(ast) {
       js_node_type_is_assert(e1, "VariableDeclarator");
       let block_body = list_get_end(stack, 4);
       list_is_assert(block_body);
-      let e3 = list_get_end(stack, 3);
-      let index_next = list_index_of_next_outside(block_body, e3);
+      let block_body_item = list_get_end(stack, 3);
+      let index_next = list_index_of_next_outside(block_body, block_body_item);
       console.log({
         index_next,
       });
@@ -44,10 +44,10 @@ export function js_destructure_functionize(ast) {
         let value = object_property_get(p, "value");
         let name2 = js_identifier_name(value);
         let assign2 = js_assign_object_property_get(
-          ast2,
-          property_name,
-          object_name,
-          block_body2,
+          ast,
+          name3,
+          unique,
+          block_body,
           block_body_item,
         );
         let parsed = js_call_object_property_get(name3, unique);
