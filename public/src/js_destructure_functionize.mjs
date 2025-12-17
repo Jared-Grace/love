@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_node_atomize_name } from "../../../love/public/src/js_node_atomize_name.mjs";
 import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier_unique_ast.mjs";
@@ -33,6 +34,7 @@ export function js_destructure_functionize(ast) {
       each(properties, lambda2);
     }
     return;
+    object_property_set(object, property_name, value2);
     let id = object_property_get(node2, "id");
   }
   js_visit_type(ast, "ObjectPattern", lambda);
