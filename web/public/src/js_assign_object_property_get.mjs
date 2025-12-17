@@ -10,6 +10,7 @@ export function js_assign_object_property_get(
   object_name,
   block_body,
   block_body_item,
+  variable_name,
 ) {
   marker("1");
   let parsed = js_call_object_property_get(property_name, object_name);
