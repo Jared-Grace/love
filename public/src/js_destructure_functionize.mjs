@@ -23,9 +23,9 @@ export function js_destructure_functionize(ast) {
     let properties = object_property_get(node2, "properties");
     let mi = list_multiple_is(properties);
     if (mi) {
+      let unique = js_identifier_unique_ast(ast, variable_name);
       function lambda2(p) {
         return;
-        let unique = js_identifier_unique_ast(ast, variable_name);
         log({
           p,
         });
@@ -33,10 +33,11 @@ export function js_destructure_functionize(ast) {
         let value = object_property_get(p, "value");
       }
       each(properties, lambda2);
+      return;
+      let expression = js_parse_expression(unique);
+      object_property_set(object, "id", expression);
     }
     return;
-    let expression = js_parse_expression(code_expression);
-    object_property_set(object, "id", value2);
     let id = object_property_get(node2, "id");
   }
   js_visit_type(ast, "ObjectPattern", lambda);
