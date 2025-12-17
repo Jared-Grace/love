@@ -19,13 +19,14 @@ export async function js_dollar_g({
     list_first_remaining(remaining);
   async function lambda2(property_name) {
     if (js_node_type_is(stack1, "ExpressionStatement")) {
+  let unique = js_identifier_unique_ast(ast, property_name);
       let assign = js_assign_object_property_get(
         ast,
         property_name,
         object_name,
         stack2,
         stack1,
-        variable_name,
+        unique,
       );
       function lambda() {
         object_replace(stack1, assign);
