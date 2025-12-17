@@ -4,7 +4,6 @@ import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { list_index_of_next_outside } from "../../../love/public/src/list_index_of_next_outside.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 export function js_assign_object_property_get(
-  ast,
   property_name,
   object_name,
   block_body,
