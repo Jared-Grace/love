@@ -5,7 +5,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function js_destructure_functionize(ast) {
   marker("1");
   function lambda(v) {
-    let node2 = object_property_get(v, "node");
+    let node2 = object_property_get(v, "node");$i
     log({
       node2,
     });
