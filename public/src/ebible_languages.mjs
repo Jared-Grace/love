@@ -1,4 +1,4 @@
-import { ebible_languages_chapters_cache_remove } from "../../../love/public/src/ebible_languages_chapters_cache_remove.mjs";
+import { ebible_languages_chapters_cache_refresh } from "../../../love/public/src/ebible_languages_chapters_cache_refresh.mjs";
 import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { ebible_folder_urdu } from "../../../love/public/src/ebible_folder_urdu.mjs";
@@ -140,6 +140,7 @@ export function ebible_languages() {
       language_code: "fas",
     },
   ];
-  ebible_languages_chapters_cache_remove.name;
+  ("if you modify the list, then run:");
+  ebible_languages_chapters_cache_refresh.name;
   return languages;
 }
