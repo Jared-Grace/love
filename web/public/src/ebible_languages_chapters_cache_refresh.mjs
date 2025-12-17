@@ -4,5 +4,6 @@ import { ebible_languages_chapters_cache_remove } from "./ebible_languages_chapt
 export async function ebible_languages_chapters_cache_refresh() {
   marker("1");
   await ebible_languages_chapters_cache_remove();
-  let v2 = await ebible_languages_chapters_cache();
+  let r = await ebible_languages_chapters_cache();
+  return r;
 }
