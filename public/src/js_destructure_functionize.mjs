@@ -5,11 +5,13 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function js_destructure_functionize(ast) {
   marker("1");
   function lambda(v) {
-    let node2 = object_property_get(v, "node");$i
+    let node2 = object_property_get(v, "node");
     log({
       node2,
     });
     return;
+    if (false) {
+    }
     let stack = object_property_get(v, "stack");
     let id = object_property_get(node2, "id");
   }
