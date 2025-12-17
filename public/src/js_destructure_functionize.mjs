@@ -39,8 +39,9 @@ export function js_destructure_functionize(ast) {
           p,
         });
         let key = object_property_get(p, "key");
+        let name2 = object_property_get(key, "name");
         let value = object_property_get(p, "value");
-        let assign = js_declare(name, init);
+        let assign = js_declare(name, value);
         list_insert(list, index, value2);
       }
       each(properties, lambda2);
