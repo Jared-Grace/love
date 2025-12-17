@@ -1,3 +1,4 @@
+import { js_node_type_is_assert } from "../../../love/public/src/js_node_type_is_assert.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
@@ -34,6 +35,7 @@ export function js_destructure_functionize(ast) {
       }
       each(properties, lambda2);
       return;
+      js_node_type_is_assert(node3, type);
       let expression = js_parse_expression(unique);
       object_property_set(e1, "id", expression);
     }
