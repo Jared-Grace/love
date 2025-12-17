@@ -1,5 +1,6 @@
+import { js_call_object_property_get } from "../../../love/public/src/js_call_object_property_get.mjs";
+import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { list_index_of_next_outside } from "../../../love/public/src/list_index_of_next_outside.mjs";
-import { js_identifier_is_assert } from "../../../love/public/src/js_identifier_is_assert.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
@@ -39,8 +40,8 @@ export function js_destructure_functionize(ast) {
       function lambda2(p) {
         let key = object_property_get(p, "key");
         let value = object_property_get(p, "value");
-        js_identifier_is_assert(value);
-        let name2 = object_property_get(value, "name");
+        let name2 = js_identifier_name(value);
+        let parsed = js_call_object_property_get(property_name, object_name);
         let assign = js_declare(name2, key);
         list_insert(block_body, index_next, assign);
       }
