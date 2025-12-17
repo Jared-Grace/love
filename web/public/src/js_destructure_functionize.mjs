@@ -10,6 +10,7 @@ export function js_destructure_functionize(ast) {
       node2,
     });
     return;
+    let properties = object_property_get(node2, "properties");
     if (false) {
     }
     let stack = object_property_get(v, "stack");
