@@ -1,3 +1,4 @@
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
@@ -84,7 +85,12 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
       shortcut: "o",
       text: "Open",
       fn: function lambda() {
-        overlay_close;
+        overlay_close();
+        let app_a_function_on_keydown = object_property_get(
+          a,
+          "app_a_function_on_keydown",
+        );
+        list_remove(on_keydowns, app_a_function_on_keydown);
         app_a_function_select(context, name);
       },
     };
