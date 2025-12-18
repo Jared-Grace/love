@@ -87,7 +87,7 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
     let f_names = await functions_names();
     let includes = list_includes(f_names, name);
     if (includes) {
-      list_add(list, item);
+      list_add(choices, choice_function_open);
     }
     function on_keydown(e) {
       html_on_keydown_stop_logic(e);
