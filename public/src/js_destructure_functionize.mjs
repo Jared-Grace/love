@@ -48,4 +48,6 @@ export function js_destructure_functionize(ast) {
     object_property_set(e1, "id", expression);
   }
   js_visit_type(ast, "ObjectPattern", lambda);
+  return;
+  let { A } = b;
 }
