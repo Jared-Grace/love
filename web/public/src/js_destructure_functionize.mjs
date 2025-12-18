@@ -1,7 +1,6 @@
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier_unique_ast.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { js_assign_object_property_get } from "../../../love/public/src/js_assign_object_property_get.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
@@ -23,9 +22,6 @@ export function js_destructure_functionize(ast) {
     let properties = object_property_get(node2, "properties");
     let stack = object_property_get(v, "stack");
     let e1 = list_get_end_1(stack);
-    log({
-      e1,
-    });
     let name4 = null;
     let init = object_property_get(e1, "init");
     let ii = js_identifier_is(init);
@@ -60,8 +56,4 @@ export function js_destructure_functionize(ast) {
     }
   }
   js_visit_type(ast, "ObjectPattern", lambda);
-  return;
-  let v2 = b.b;
-  let c = object_property_get(v2, "c");
-  let A = object_property_get(v2, "A");
 }
