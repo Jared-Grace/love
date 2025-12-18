@@ -27,14 +27,15 @@ export function js_destructure_functionize(ast) {
     });
     return;
     let init = object_property_get(e1, "init");
-    let ii = js_identifier_is(node);
-    if (false) {
+    let ii = js_identifier_is(init);
+    if (ii) {
     }
     js_node_type_is_assert(e1, "VariableDeclarator");
     let block_body = list_get_end(stack, 4);
     list_is_assert(block_body);
     let block_body_item = list_get_end(stack, 3);
-    let unique = js_identifier_unique_ast(ast, variable_name);
+    let name4 = null;
+    name4 = js_identifier_unique_ast(ast, variable_name);
     function lambda2(p) {
       let key = object_property_get(p, "key");
       let name3 = js_identifier_name(key);
@@ -42,14 +43,14 @@ export function js_destructure_functionize(ast) {
       let name2 = js_identifier_name(value);
       let assign = js_assign_object_property_get(
         name3,
-        unique,
+        name4,
         block_body,
         block_body_item,
         name2,
       );
     }
     each(properties, lambda2);
-    let expression = js_parse_expression(unique);
+    let expression = js_parse_expression(name4);
     object_property_set(e1, "id", expression);
   }
   js_visit_type(ast, "ObjectPattern", lambda);
