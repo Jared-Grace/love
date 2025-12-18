@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
@@ -34,15 +35,6 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
     let v = app_a_overlay(a, on_keydowns, on_keydown);
     let overlay_close = object_property_get(v, "overlay_close");
     let overlay = object_property_get(v, "overlay");
-    let f_names = await functions_names();
-    let includes = list_includes(list, item);
-    if (false) {
-    }
-    const choice_function_open = {
-      shortcut: "o",
-      text: "Open",
-      fn: overlay_close,
-    };
     let choices = [
       {
         shortcut: "c",
@@ -86,8 +78,17 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
           let component = app_a_button_wide(overlay, "Rename", lambda23);
         },
       },
-      choice_function_open,
     ];
+    const choice_function_open = {
+      shortcut: "o",
+      text: "Open",
+      fn: overlay_close,
+    };
+    let f_names = await functions_names();
+    let includes = list_includes(f_names, name);
+    if (includes) {
+      list_add(list, item);
+    }
     function on_keydown(e) {
       html_on_keydown_stop_logic(e);
       let key2 = object_property_get(e, "key");
