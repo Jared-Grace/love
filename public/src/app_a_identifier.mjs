@@ -82,7 +82,7 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
     const choice_function_open = {
       shortcut: "o",
       text: "Open",
-      fn: () => {},
+      fn: function lambda() {},
     };
     let f_names = await functions_names();
     let includes = list_includes(f_names, name);
