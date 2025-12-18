@@ -1,3 +1,4 @@
+import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
@@ -82,7 +83,10 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
     const choice_function_open = {
       shortcut: "o",
       text: "Open",
-      fn: function lambda() {},
+      fn: function lambda() {
+        overlay_close;
+        app_a_function_select(context, f_name);
+      },
     };
     let f_names = await functions_names();
     let includes = list_includes(f_names, name);
