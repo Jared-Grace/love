@@ -1,3 +1,4 @@
+import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_assign_object_property_get } from "../../../love/public/src/js_assign_object_property_get.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
@@ -25,7 +26,8 @@ export function js_destructure_functionize(ast) {
       e1,
     });
     return;
-    let init = object_property_get(e1, "init");js_identifier_is
+    let init = object_property_get(e1, "init");
+    let ii = js_identifier_is(node);
     if (false) {
     }
     js_node_type_is_assert(e1, "VariableDeclarator");
