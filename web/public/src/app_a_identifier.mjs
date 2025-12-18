@@ -1,3 +1,4 @@
+import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -33,7 +34,8 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
     let v = app_a_overlay(a, on_keydowns, on_keydown);
     let overlay_close = object_property_get(v, "overlay_close");
     let overlay = object_property_get(v, "overlay");
-    let f_names = await functions_names();lin
+    let f_names = await functions_names();
+    let includes = list_includes(list, item);
     if (false) {
     }
     const choice_function_open = {
