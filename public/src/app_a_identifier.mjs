@@ -29,7 +29,9 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
   html_font_color_set(span, "#4a4affff");
   function lambda20() {
     let on_keydowns = object_property_get(context, "on_keydowns");
-    let { overlay, overlay_close } = app_a_overlay(a, on_keydowns, on_keydown);
+    let v = app_a_overlay(a, on_keydowns, on_keydown);
+    let overlay_close = object_property_get(v, "overlay_close");
+    let overlay = object_property_get(v, "overlay");
     let choices = [
       {
         shortcut: "c",
@@ -42,11 +44,9 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
         fn: async function lambda15() {
           overlay_close();
           let lambda22 = html_on_enter_lambda(lambda23);
-          let { overlay, overlay_close: rename_overlay_close } = app_a_overlay(
-            a,
-            on_keydowns,
-            lambda22,
-          );
+          let v2 = app_a_overlay(a, on_keydowns, lambda22);
+          let rename_overlay_close = object_property_get(v2, "overlay_close");
+          let overlay = object_property_get(v2, "overlay");
           let text5 = app_a_overlay_close_text();
           let component2 = app_a_button_wide(
             overlay,
@@ -74,6 +74,11 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
           }
           let component = app_a_button_wide(overlay, "Rename", lambda23);
         },
+      },
+      {
+        shortcut: "o",
+        text: "Open",
+        fn: overlay_close,
       },
     ];
     function on_keydown(e) {
