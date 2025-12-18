@@ -85,7 +85,7 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
       text: "Open",
       fn: function lambda() {
         overlay_close;
-        app_a_function_select(context, f_name);
+        app_a_function_select(context, name);
       },
     };
     let f_names = await functions_names();
