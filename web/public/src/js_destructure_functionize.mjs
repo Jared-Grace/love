@@ -61,6 +61,7 @@ export function js_destructure_functionize(ast) {
   }
   js_visit_type(ast, "ObjectPattern", lambda);
   return;
-  let c = object_property_get(b, "c");
-  let A = object_property_get(b, "A");
+  let v2 = b.b;
+  let c = object_property_get(v2, "c");
+  let A = object_property_get(v2, "A");
 }
