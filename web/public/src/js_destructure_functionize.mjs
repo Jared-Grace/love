@@ -1,3 +1,4 @@
+import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier_unique_ast.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_assign_object_property_get } from "../../../love/public/src/js_assign_object_property_get.mjs";
@@ -30,6 +31,7 @@ export function js_destructure_functionize(ast) {
     let ii = js_identifier_is(init);
     if (ii) {
     } else {
+      name4 = js_identifier_unique_ast(ast, variable_name);
     }
     js_node_type_is_assert(e1, "VariableDeclarator");
     let block_body = list_get_end(stack, 4);
