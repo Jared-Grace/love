@@ -34,6 +34,8 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
     let overlay_close = object_property_get(v, "overlay_close");
     let overlay = object_property_get(v, "overlay");
     let f_names = await functions_names();
+    if (false) {
+    }
     const choice_function_open = {
       shortcut: "o",
       text: "Open",
