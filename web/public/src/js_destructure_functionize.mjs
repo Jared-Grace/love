@@ -25,7 +25,7 @@ export function js_destructure_functionize(ast) {
       e1,
     });
     return;
-    let init = object_property_get(e1, "init");
+    let init = object_property_get(e1, "init");js_identifier_is
     if (false) {
     }
     js_node_type_is_assert(e1, "VariableDeclarator");
