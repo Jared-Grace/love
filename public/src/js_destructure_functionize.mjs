@@ -1,3 +1,4 @@
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier_unique_ast.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -52,8 +53,12 @@ export function js_destructure_functionize(ast) {
       );
     }
     each(properties, lambda2);
-    let expression = js_parse_expression(name4);
-    object_property_set(e1, "id", expression);
+    if (ii) {
+      list_remove(list, item);
+    } else {
+      let expression = js_parse_expression(name4);
+      object_property_set(e1, "id", expression);
+    }
   }
   js_visit_type(ast, "ObjectPattern", lambda);
   return;
