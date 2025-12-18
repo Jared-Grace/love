@@ -32,6 +32,11 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
     let v = app_a_overlay(a, on_keydowns, on_keydown);
     let overlay_close = object_property_get(v, "overlay_close");
     let overlay = object_property_get(v, "overlay");
+    const choice_function_open = {
+      shortcut: "o",
+      text: "Open",
+      fn: overlay_close,
+    };
     let choices = [
       {
         shortcut: "c",
@@ -75,11 +80,7 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
           let component = app_a_button_wide(overlay, "Rename", lambda23);
         },
       },
-      {
-        shortcut: "o",
-        text: "Open",
-        fn: overlay_close,
-      },
+      choice_function_open,
     ];
     function on_keydown(e) {
       html_on_keydown_stop_logic(e);
