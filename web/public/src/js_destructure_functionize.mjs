@@ -21,10 +21,10 @@ export function js_destructure_functionize(ast) {
     let properties = object_property_get(node2, "properties");
     let stack = object_property_get(v, "stack");
     let e1 = list_get_end_1(stack);
-    return;
     log({
       e1,
     });
+    return;
     js_node_type_is_assert(e1, "VariableDeclarator");
     let block_body = list_get_end(stack, 4);
     list_is_assert(block_body);
