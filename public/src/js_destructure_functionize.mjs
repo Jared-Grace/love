@@ -30,6 +30,7 @@ export function js_destructure_functionize(ast) {
     let init = object_property_get(e1, "init");
     let ii = js_identifier_is(init);
     if (ii) {
+      let name = js_identifier_name(i);
       name4 = null;
     } else {
       name4 = js_identifier_unique_ast(ast, variable_name);
