@@ -26,7 +26,6 @@ export function js_destructure_functionize(ast) {
     log({
       e1,
     });
-    return;
     let name4 = null;
     let init = object_property_get(e1, "init");
     let ii = js_identifier_is(init);
@@ -54,7 +53,7 @@ export function js_destructure_functionize(ast) {
     }
     each(properties, lambda2);
     if (ii) {
-      list_remove(list, item);
+      list_remove(block_body, block_body_item);
     } else {
       let expression = js_parse_expression(name4);
       object_property_set(e1, "id", expression);
@@ -62,5 +61,5 @@ export function js_destructure_functionize(ast) {
   }
   js_visit_type(ast, "ObjectPattern", lambda);
   return;
-  let { A } = b;
+  let A = object_property_get(b, "A");
 }
