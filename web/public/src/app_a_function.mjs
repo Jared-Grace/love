@@ -16,8 +16,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { function_parse } from "../../../love/public/src/function_parse.mjs";
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
 export async function app_a_function(context) {
-  let v = context;
-  let app_fn = object_property_get(v, "app_fn");
+  let { app_fn } = context;
   let on_keydowns = app_a_on_keydown_add(context, app_a_function_on_keydown);
   function app_a_function_on_keydown(e) {
     html_on_keydown_stop_logic(e);
