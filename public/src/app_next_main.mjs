@@ -1,3 +1,4 @@
+import { string_split } from "../../../love/public/src/string_split.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { string_split_comma } from "../../../love/public/src/string_split_comma.mjs";
 import { string_prefix_without } from "../../../love/public/src/string_prefix_without.mjs";
@@ -9,8 +10,10 @@ export function app_next_main() {
   let hash = html_hash_get();
   let without = string_prefix_without(hash, "#");
   let split = string_split_comma(without);
-  function lambda(item) {}
-  each(list, lambda);
+  function lambda(s) {
+    let split2 = string_split(s2, separator);
+  }
+  each(split, lambda);
   log({
     split,
   });
