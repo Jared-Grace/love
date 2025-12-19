@@ -236,6 +236,7 @@ export function app_a_function_node(a) {
       }
       app_a_parenthesis_wrap(parent, lambda20);
     },
+    ["MemberExpression"]: () => {},
   };
   function binary() {
     let left = object_property_get(node, "left");
