@@ -228,10 +228,12 @@ export function app_a_function_node(a) {
     ["LogicalExpression"]: binary,
     ["AssignmentExpression"]: binary,
     ["ImportExpression"]: function lambda15() {
-      let source2 = object_property_get(node, "source");
       let k2 = js_keyword_import();
       app_a_keyword_blue(parent, k2);
-      function lambda20() {}
+      function lambda20() {
+        let source2 = object_property_get(node, "source");
+        app_a_function_node_child(a, source2);
+      }
       app_a_parenthesis_wrap(parent, lambda20);
       log({
         node,
