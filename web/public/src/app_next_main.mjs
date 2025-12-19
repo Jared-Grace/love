@@ -1,3 +1,4 @@
+import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
 import { object_adder } from "../../../love/public/src/object_adder.mjs";
 import { string_split_equal } from "../../../love/public/src/string_split_equal.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -14,6 +15,7 @@ export function app_next_main() {
   function lambda3(oa) {
     function lambda(s) {
       let split2 = string_split_equal(s);
+      let result = list_first_second(list);
     }
     each(split, lambda);
   }
