@@ -225,7 +225,7 @@ export function app_a_function_node(a) {
     let right = object_property_get(node, "right");
     app_a_function_node_child(a, right);
   }
-  let n = object_property_exists_not(object, property_name2);
+  let n = object_property_exists_not(lookup, type);$i
   let value = object_property_get(lookup, type);
   value();
 }
