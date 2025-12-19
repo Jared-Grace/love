@@ -49,5 +49,5 @@ export async function app_next_main() {
   verse_number += 1;
   object_property_set(result, "v", verse_number);
   function lambda(value, property) {}
-  each_object(object, lambda);
+  each_object(object, lambda);html_url_without_hash
 }
