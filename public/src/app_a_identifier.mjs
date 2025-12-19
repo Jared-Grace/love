@@ -44,6 +44,11 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
         fn: overlay_close,
       },
       {
+        shortcut: "c",
+        text: "Copy",
+        fn: overlay_close,
+      },
+      {
         shortcut: "r",
         text: "Rename",
         fn: async function lambda15() {
