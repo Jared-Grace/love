@@ -225,6 +225,7 @@ export function app_a_function_node(a) {
     },
     ["LogicalExpression"]: binary,
     ["AssignmentExpression"]: binary,
+    ["ImportExpression"]: () => {},
   };
   function binary() {
     let left = object_property_get(node, "left");
