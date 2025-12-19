@@ -60,5 +60,5 @@ export async function app_next_main() {
   list_add(mapped, reference);
   let joined = await list_join_newline_2_copy(mapped);
   let body = html_document_body();
-  html_text_set(component, joined);
+  html_text_set(body, joined);
 }
