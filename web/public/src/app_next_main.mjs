@@ -53,10 +53,11 @@ export async function app_next_main() {
   object_property_set(result, "v", verse_number);
   let h = html_hash_symbol();
   function lambda3(la) {
-  function lambda(value, property) {
-    let part = property + "=" + value;
+    function lambda(value, property) {
+      let part = property + "=" + value;
+    }
+    each_object(object, lambda);
   }
-  each_object(object, lambda);}
   let list = list_adder(lambda3);
   let url = html_url_without_hash();
 }
