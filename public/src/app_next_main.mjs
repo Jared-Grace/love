@@ -51,5 +51,5 @@ export async function app_next_main() {
   object_property_set(result, "v", verse_number);
   function lambda(value, property) {}
   each_object(object, lambda);
-  let urlWithoutHash = html_url_without_hash();
+  let url = html_url_without_hash();
 }
