@@ -1,3 +1,4 @@
+import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { string_split_plus } from "../../../love/public/src/string_split_plus.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -26,11 +27,12 @@ export async function app_next_main() {
   }
   let result = object_adder(lambda3);
   let c = object_property_get(result, "c");
-  let v2 = object_property_get(result, "v");
+  let verse = object_property_get(result, "v");
   let l = object_property_get(result, "l");
   let languages = string_split_plus(l);
   async function lambda2(language) {
     let bible_folder = object_property_get(language, "bible_folder");
+    let d = await ebible_verse(bible_folder, c, verse);
   }
   let mapped = await list_map_async(languages, lambda2);
 }
