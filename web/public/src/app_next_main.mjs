@@ -5,7 +5,6 @@ import { string_split_equal } from "../../../love/public/src/string_split_equal.
 import { each } from "../../../love/public/src/each.mjs";
 import { string_split_comma } from "../../../love/public/src/string_split_comma.mjs";
 import { string_prefix_without } from "../../../love/public/src/string_prefix_without.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { html_hash_get } from "../../../love/public/src/html_hash_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function app_next_main() {
@@ -24,7 +23,6 @@ export function app_next_main() {
     each(split, lambda);
   }
   let result = object_adder(lambda3);
-  log({
-    result,
-  });
+  let c = object_property_get(result, "c");
+  let v2 = object_property_get(result, "v");
 }
