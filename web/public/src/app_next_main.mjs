@@ -1,5 +1,4 @@
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
-import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -16,7 +15,6 @@ import { html_hash_get } from "../../../love/public/src/html_hash_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_next_main() {
   marker("1");
-  firebase_name_jg();
   let hash = html_hash_get();
   let without = string_prefix_without(hash, "#");
   let split = string_split_comma(without);
