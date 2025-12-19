@@ -36,8 +36,9 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
   let a2 = js_special_arguments();
   if (equal(name, a2)) {
     app_a_keyword_blue(parent2, text2);
-  }$s
-  let span = html_span_text(parent, name);
+  }
+  let span = null;
+  span = html_span_text(parent, name);
   html_font_color_set(span, "#4a4affff");
   async function lambda20() {
     let on_keydowns = object_property_get(context, "on_keydowns");
