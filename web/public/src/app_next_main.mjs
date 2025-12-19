@@ -30,7 +30,7 @@ export async function app_next_main() {
   let l = object_property_get(result, "l");
   let languages = string_split_plus(l);
   async function lambda2(language) {
-    let bible_folder2 = object_property_get(language, "bible_folder");
+    let bible_folder = object_property_get(language, "bible_folder");
   }
   let mapped = await list_map_async(languages, lambda2);
 }
