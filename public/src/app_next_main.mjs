@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { string_split_plus } from "../../../love/public/src/string_split_plus.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
@@ -8,7 +9,7 @@ import { string_split_comma } from "../../../love/public/src/string_split_comma.
 import { string_prefix_without } from "../../../love/public/src/string_prefix_without.mjs";
 import { html_hash_get } from "../../../love/public/src/html_hash_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export function app_next_main() {
+export async function app_next_main() {
   marker("1");
   let hash = html_hash_get();
   let without = string_prefix_without(hash, "#");
@@ -28,4 +29,6 @@ export function app_next_main() {
   let v2 = object_property_get(result, "v");
   let l = object_property_get(result, "l");
   let languages = string_split_plus(l);
+  await each_async(list, async function lambda2(item) {});
+  let bible_folder2 = object_property_get(language, "bible_folder");
 }
