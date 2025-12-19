@@ -34,7 +34,7 @@ export async function app_a_function(context) {
   html_clear(root);
   async function search() {
     list_remove(on_keydowns, app_a_function_on_keydown);
-    let v3 = await sleep_0();
+    await sleep_0();
     app_generic_screen_set(context, app_a_home);
   }
   let text = emoji_search();
