@@ -29,6 +29,7 @@ export async function app_next_main() {
   let v2 = object_property_get(result, "v");
   let l = object_property_get(result, "l");
   let languages = string_split_plus(l);
-  await each_async(list, async function lambda2(item) {});
+  async function lambda2(item) {}
+  await each_async(list, lambda2);
   let bible_folder2 = object_property_get(language, "bible_folder");
 }
