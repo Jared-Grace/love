@@ -39,7 +39,7 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
     let overlay = object_property_get(v, "overlay");
     let choices = [
       {
-        shortcut: "c",
+        shortcut: "x",
         text: app_a_overlay_close_text(),
         fn: overlay_close,
       },
