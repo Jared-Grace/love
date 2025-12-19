@@ -46,9 +46,6 @@ export async function app_next_main() {
   ]);
   let mapped = await list_map_unordered_async(languages_chosen, lambda2);
   list_add(mapped, reference);
-  let joined = await list_join_newline_2_copy(mapped);
-  let body = html_document_body();
-  html_text_set(body, joined);
   let verse_number = integer_to(verse);
   verse_number += 1;
   object_property_set(result, "v", verse_number);
@@ -64,4 +61,8 @@ export async function app_next_main() {
   let h = html_hash_symbol();
   let url = html_url_without_hash();
   url += "" + h + result2;
+  list_add(list, item);
+  let joined = await list_join_newline_2_copy(mapped);
+  let body = html_document_body();
+  html_text_set(body, joined);
 }
