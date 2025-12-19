@@ -1,3 +1,4 @@
+import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { html_hash_symbol } from "../../../love/public/src/html_hash_symbol.mjs";
@@ -45,7 +46,7 @@ export async function app_next_main() {
     verse,
   ]);
   let mapped = await list_map_unordered_async(languages_chosen, lambda2);
-  list_add(mapped, reference);
+  list_add_first(mapped, reference);
   let verse_number = integer_to(verse);
   verse_number += 1;
   object_property_set(hash, "v", verse_number);
