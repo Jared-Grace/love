@@ -48,10 +48,8 @@ export async function app_next_main() {
     let text = object_property_get(d, "text");
     return text;
   }
-  let waited = await list_map_unordered_async(
-    list,
-    async function lambda4(item) {},
-  );
+  async function lambda4(item) {}
+  let waited = await list_map_unordered_async(list, lambda4);
   let mapped = await list_map_async(languages_chosen, lambda2);
   log({
     mapped,
