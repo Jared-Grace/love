@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
@@ -56,7 +57,8 @@ export async function app_next_main() {
     verse,
   ]);
   let mapped = await list_map_unordered_async(languages_chosen, lambda2);
-  let joined = await list_join_newline_2_copy(concated);
+  list_add(list, item);
+  let joined = await list_join_newline_2_copy(mapped);
   html_text_set(component, text2);
   log({
     mapped,
