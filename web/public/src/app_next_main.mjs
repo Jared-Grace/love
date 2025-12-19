@@ -1,3 +1,4 @@
+import { html_hash_symbol } from "../../../love/public/src/html_hash_symbol.mjs";
 import { html_url_without_hash } from "../../../love/public/src/html_url_without_hash.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -48,6 +49,7 @@ export async function app_next_main() {
   html_text_set(body, joined);
   let verse_number = integer_to(verse);
   verse_number += 1;
+  let v2 = html_hash_symbol();
   object_property_set(result, "v", verse_number);
   function lambda(value, property) {}
   each_object(object, lambda);
