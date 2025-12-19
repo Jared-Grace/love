@@ -46,7 +46,7 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
       {
         shortcut: "c",
         text: "Copy",
-        fn: overlay_close,
+        fn: $f,
       },
       {
         shortcut: "r",
