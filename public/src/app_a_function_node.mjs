@@ -114,9 +114,10 @@ export function app_a_function_node(a) {
       app_a_keyword_purple(parent, k);
       let argument2 = object_property_get(node, "argument");
       let nn2 = null_not_is(argument2);
-      if (false) {
+      if (nn2) {
+        html_span_space(parent);
       }
-      html_span_space(parent);
+      app_a_semicolon(parent);
     },
     ["ExpressionStatement"]: function lambda7() {
       let expression = object_property_get(node, "expression");
