@@ -116,6 +116,7 @@ export function app_a_function_node(a) {
       let nn2 = null_not_is(argument2);
       if (nn2) {
         html_span_space(parent);
+        app_a_function_node_child(a, argument2);
       }
       app_a_semicolon(parent);
     },
