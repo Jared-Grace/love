@@ -44,5 +44,5 @@ export async function app_next_main() {
   let body = html_document_body();
   html_text_set(body, joined);
   let verse_number = integer_to(verse);
-  verse_number += 1;
+  verse_number += 1;st
 }
