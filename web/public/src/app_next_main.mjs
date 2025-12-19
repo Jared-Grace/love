@@ -5,7 +5,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function app_next_main() {
   marker("1");
   let hash = html_hash_get();
-  let without = string_prefix_without(s, "#");
+  let without = string_prefix_without(hash, "#");
   log({
     hash,
   });
