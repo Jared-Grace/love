@@ -237,7 +237,7 @@ export function app_a_function_node(a) {
       app_a_parenthesis_wrap(parent, lambda20);
     },
     ["MemberExpression"]: function lambda21() {
-      g$node$computed$object$optional$property;
+      $g$node$computed$object$optional$property;
       `      computed
 : 
 false
