@@ -27,5 +27,5 @@ export function app_next_main() {
   let c = object_property_get(result, "c");
   let v2 = object_property_get(result, "v");
   let l = object_property_get(result, "l");
-  let split3 = string_split_plus(l);
+  let languages = string_split_plus(l);
 }
