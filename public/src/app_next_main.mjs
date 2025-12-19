@@ -52,7 +52,6 @@ export async function app_next_main() {
   let verse_number = integer_to(verse);
   verse_number += 1;
   object_property_set(result, "v", verse_number);
-  let h = html_hash_symbol();
   function lambda3(la) {
     function lambda(value, property) {
       let part = property + "=" + value;
@@ -61,6 +60,8 @@ export async function app_next_main() {
     each_object(object, lambda);
   }
   let parts = list_adder(lambda3);
-  let result2 = list_join_comma(names);
+  let result2 = list_join_comma(parts);
+  let h = html_hash_symbol();
   let url = html_url_without_hash();
+  url += "" + h + result2;
 }
