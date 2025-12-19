@@ -1,5 +1,5 @@
+import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
-import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
@@ -36,7 +36,7 @@ export async function app_next_main() {
   let languages_list = ebible_languages();
   async function lambda2(language) {
     let bible_folder = object_property_get(language, "bible_folder");
-    let filtered = list_filter_property(list, "language", language);
+    let filtered = list_find_property(languages_list, "language", language);
     let d = await ebible_verse(bible_folder, c, verse);
   }
   let mapped = await list_map_async(languages_chosen, lambda2);
