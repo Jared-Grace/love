@@ -36,7 +36,7 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
   let a2 = js_special_arguments();
   let span = null;
   if (equal(name, a2)) {
-    app_a_keyword_blue(parent, name);
+    span = app_a_keyword_blue(parent, name);
   } else {
     span = html_span_text(parent, name);
     html_font_color_set(span, "#4a4affff");
