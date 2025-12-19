@@ -4,7 +4,6 @@ import { list_find_property } from "../../../love/public/src/list_find_property.
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
-import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { string_split_plus } from "../../../love/public/src/string_split_plus.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
