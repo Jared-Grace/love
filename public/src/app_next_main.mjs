@@ -49,9 +49,11 @@ export async function app_next_main() {
   html_text_set(body, joined);
   let verse_number = integer_to(verse);
   verse_number += 1;
-  let h = html_hash_symbol();
   object_property_set(result, "v", verse_number);
-  function lambda(value, property) {}
+  let h = html_hash_symbol();
+  function lambda(value, property) {
+    let part = property + "=" + value;
+  }
   each_object(object, lambda);
   let url = html_url_without_hash();
 }
