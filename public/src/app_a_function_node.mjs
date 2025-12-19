@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_keyword_return } from "../../../love/public/src/js_keyword_return.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
@@ -238,10 +239,12 @@ export function app_a_function_node(a) {
   }
   let n = object_property_exists_not(lookup, type);
   if (n) {
+    log({
+      node,
+    });
     let json = json_to({
       type,
       msg: "TODO",
-      node,
     });
     alert(json);
   }
