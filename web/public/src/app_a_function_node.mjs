@@ -227,6 +227,7 @@ export function app_a_function_node(a) {
   }
   let n = object_property_exists_not(lookup, type);
   if (n) {
+    alert();
   }
   let value = object_property_get(lookup, type);
   value();
