@@ -25,4 +25,5 @@ export function app_next_main() {
   let result = object_adder(lambda3);
   let c = object_property_get(result, "c");
   let v2 = object_property_get(result, "v");
+  let l = object_property_get(result, "l");
 }
