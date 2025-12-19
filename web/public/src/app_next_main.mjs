@@ -7,8 +7,8 @@ export function app_next_main() {
   marker("1");
   let hash = html_hash_get();
   let without = string_prefix_without(hash, "#");
-  let split = string_split_comma(f_names);
+  let split = string_split_comma(without);
   log({
-    without,
+    split,
   });
 }
