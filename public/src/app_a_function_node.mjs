@@ -238,10 +238,13 @@ export function app_a_function_node(a) {
     },
     ["MemberExpression"]: function lambda21() {
       let computed2 = object_property_get(node, "computed");
+      false_is_assert(computed2);
       let optional = object_property_get(node, "optional");
-      false_is_assert(b);
+      false_is_assert(optional);
       let object = object_property_get(node, "object");
+      app_a_function_node_child(a, object);
       let property = object_property_get(node, "property");
+      app_a_function_node_child(a, property);
       `      computed
 : 
 false
