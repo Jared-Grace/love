@@ -52,11 +52,11 @@ export async function app_next_main() {
   verse_number += 1;
   object_property_set(result, "v", verse_number);
   let h = html_hash_symbol();
-  function lambda3(la) {}
-  let list = list_adder(lambda3);
+  function lambda3(la) {
   function lambda(value, property) {
     let part = property + "=" + value;
   }
-  each_object(object, lambda);
+  each_object(object, lambda);}
+  let list = list_adder(lambda3);
   let url = html_url_without_hash();
 }
