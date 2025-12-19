@@ -48,5 +48,6 @@ export async function app_next_main() {
   let verse_number = integer_to(verse);
   verse_number += 1;
   object_property_set(result, "v", verse_number);
-  each_object(object, function lambda(value, property) {});
+  function lambda(value, property) {}
+  each_object(object, lambda);
 }
