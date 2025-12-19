@@ -44,6 +44,7 @@ export async function app_next_main() {
     );
     let bible_folder = object_property_get(filtered, "bible_folder");
     let d = await ebible_verse(bible_folder, c, verse);
+    let text = object_property_get(d, "text");
   }
   let mapped = await list_map_async(languages_chosen, lambda2);
   log({
