@@ -46,7 +46,7 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
       {
         shortcut: "c",
         text: "Copy",
-        fn: function lambda2() {},
+        fn: function lambda2() {clipboard_copy},
       },
       {
         shortcut: "r",
