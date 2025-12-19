@@ -1,3 +1,4 @@
+import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
 import { app_a_identifier } from "../../../love/public/src/app_a_identifier.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -223,7 +224,8 @@ export function app_a_function_node(a) {
     html_span_text(parent, padded);
     let right = object_property_get(node, "right");
     app_a_function_node_child(a, right);
-  }object_property_exists_not
+  }
+  let n = object_property_exists_not(object, property_name2);
   let value = object_property_get(lookup, type);
   value();
 }
