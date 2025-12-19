@@ -7,7 +7,6 @@ import { list_map_unordered_async } from "../../../love/public/src/list_map_unor
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { string_split_plus } from "../../../love/public/src/string_split_plus.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -57,10 +56,7 @@ export async function app_next_main() {
     verse,
   ]);
   let mapped = await list_map_unordered_async(languages_chosen, lambda2);
-  list_add(list, item);
+  list_add(mapped, reference);
   let joined = await list_join_newline_2_copy(mapped);
-  html_text_set(component, text2);
-  log({
-    mapped,
-  });
+  html_text_set(component, joined);
 }
