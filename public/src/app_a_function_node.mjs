@@ -229,7 +229,8 @@ export function app_a_function_node(a) {
     ["AssignmentExpression"]: binary,
     ["ImportExpression"]: function lambda15() {
       let source2 = object_property_get(node, "source");
-      app_a_keyword_blue(parent2, text5);
+      app_a_keyword_blue(parent, text5);
+      let k2 = js_keyword_import();
       log({
         node,
       });
