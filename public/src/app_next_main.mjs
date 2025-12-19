@@ -1,3 +1,4 @@
+import { html_url_without_hash } from "../../../love/public/src/html_url_without_hash.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
@@ -49,5 +50,6 @@ export async function app_next_main() {
   verse_number += 1;
   object_property_set(result, "v", verse_number);
   function lambda(value, property) {}
-  each_object(object, lambda);html_url_without_hash
+  each_object(object, lambda);
+  let urlWithoutHash = html_url_without_hash();
 }
