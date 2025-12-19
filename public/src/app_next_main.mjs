@@ -1,3 +1,4 @@
+import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
@@ -48,6 +49,7 @@ export async function app_next_main() {
     return text;
   }
   let mapped = await list_map_unordered_async(languages_chosen, lambda2);
+  html_text_set(component, text2);
   log({
     mapped,
   });
