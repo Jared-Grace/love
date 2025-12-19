@@ -237,7 +237,10 @@ export function app_a_function_node(a) {
       app_a_parenthesis_wrap(parent, lambda20);
     },
     ["MemberExpression"]: function lambda21() {
-      g$n$computed$object$optional$property`      computed
+      
+      g$node$computed$object$optional$property;
+      
+`      computed
 : 
 false
 end
@@ -257,8 +260,7 @@ start
 700
 type
 : 
-"MemberExpression"`;
-    },
+"MemberExpression"`},
   };
   function binary() {
     let left = object_property_get(node, "left");
