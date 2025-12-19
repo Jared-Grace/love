@@ -1,3 +1,4 @@
+import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
@@ -32,9 +33,10 @@ export async function app_next_main() {
   let verse = object_property_get(result, "v");
   let l = object_property_get(result, "l");
   let languages = string_split_plus(l);
+  let languages2 = ebible_languages();
   async function lambda2(language) {
     let bible_folder = object_property_get(language, "bible_folder");
-    let filtered = list_filter_property(list, property_name, property_value);
+    let filtered = list_filter_property(list, "language", language);
     let d = await ebible_verse(bible_folder, c, verse);
   }
   let mapped = await list_map_async(languages, lambda2);
