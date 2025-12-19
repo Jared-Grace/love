@@ -1,3 +1,4 @@
+import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -46,7 +47,9 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
       {
         shortcut: "c",
         text: "Copy",
-        fn: function lambda2() {clipboard_copy},
+        fn: async function lambda2() {
+          await clipboard_copy(text2);
+        },
       },
       {
         shortcut: "r",
