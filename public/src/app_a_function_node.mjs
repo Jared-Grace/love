@@ -236,7 +236,29 @@ export function app_a_function_node(a) {
       }
       app_a_parenthesis_wrap(parent, lambda20);
     },
-    ["MemberExpression"]: function lambda21() {},
+    ["MemberExpression"]: function lambda21() {
+      g$n$computed$object$optional$property`      computed
+: 
+false
+end
+: 
+726
+object
+: 
+Node {type: 'CallExpression', start: 700, end: 719, callee: Node, arguments: Array(1), …}
+optional
+: 
+false
+property
+: 
+Node {type: 'Identifier', start: 720, end: 726, name: 'isFile'}
+start
+: 
+700
+type
+: 
+"MemberExpression"`;
+    },
   };
   function binary() {
     let left = object_property_get(node, "left");
