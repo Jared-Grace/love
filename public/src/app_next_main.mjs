@@ -19,6 +19,7 @@ export function app_next_main() {
       let v = list_first_second(split2);
       let second = object_property_get(v, "second");
       let first = object_property_get(v, "first");
+      oa(first, second);
     }
     each(split, lambda);
   }
