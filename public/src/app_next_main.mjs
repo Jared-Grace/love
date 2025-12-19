@@ -32,14 +32,14 @@ export async function app_next_main() {
   let c = object_property_get(result, "c");
   let verse = object_property_get(result, "v");
   let l = object_property_get(result, "l");
-  let languages = string_split_plus(l);
-  let languages2 = ebible_languages();
+  let languages_chosen = string_split_plus(l);
+  let languages_list = ebible_languages();
   async function lambda2(language) {
     let bible_folder = object_property_get(language, "bible_folder");
     let filtered = list_filter_property(list, "language", language);
     let d = await ebible_verse(bible_folder, c, verse);
   }
-  let mapped = await list_map_async(languages, lambda2);
+  let mapped = await list_map_async(languages_chosen, lambda2);
   log({
     mapped,
   });
