@@ -1,3 +1,4 @@
+import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { html_hash_symbol } from "../../../love/public/src/html_hash_symbol.mjs";
 import { html_url_without_hash } from "../../../love/public/src/html_url_without_hash.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
@@ -51,7 +52,7 @@ export async function app_next_main() {
   verse_number += 1;
   object_property_set(result, "v", verse_number);
   let h = html_hash_symbol();
-  lad;
+  let list = list_adder(function lambda3(la) {});
   function lambda(value, property) {
     let part = property + "=" + value;
   }
