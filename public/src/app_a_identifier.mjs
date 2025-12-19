@@ -46,7 +46,7 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
       {
         shortcut: "c",
         text: "Copy",
-        fn: () => {},
+        fn: function lambda2() {},
       },
       {
         shortcut: "r",
