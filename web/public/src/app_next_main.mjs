@@ -1,3 +1,4 @@
+import { string_split } from "../../../love/public/src/string_split.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
 import { object_adder } from "../../../love/public/src/object_adder.mjs";
@@ -26,4 +27,5 @@ export function app_next_main() {
   let c = object_property_get(result, "c");
   let v2 = object_property_get(result, "v");
   let l = object_property_get(result, "l");
+  let split3 = string_split(s2, separator);
 }
