@@ -1,3 +1,4 @@
+import { html_hash_symbol } from "../../../love/public/src/html_hash_symbol.mjs";
 import { object_adder } from "../../../love/public/src/object_adder.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -8,7 +9,8 @@ import { string_prefix_without } from "../../../love/public/src/string_prefix_wi
 import { html_hash_get } from "../../../love/public/src/html_hash_get.mjs";
 export function html_hash_object_get() {
   let hash = html_hash_get();
-  let without = string_prefix_without(hash, html_hash_symbol());
+  let prefix = html_hash_symbol();
+  let without = string_prefix_without(hash, prefix);
   let split = string_split_comma(without);
   function lambda3(oa) {
     function lambda(s) {
@@ -22,8 +24,4 @@ export function html_hash_object_get() {
   }
   let result = object_adder(lambda3);
   return result;
-}
-
-function html_hash_symbol() {
-  return "#";
 }
