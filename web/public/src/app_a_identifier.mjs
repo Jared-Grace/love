@@ -48,7 +48,8 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
         shortcut: "c",
         text: "Copy",
         fn: async function lambda2() {
-          await clipboard_copy(text2);
+          await clipboard_copy(name);
+          overlay_close();
         },
       },
       {
