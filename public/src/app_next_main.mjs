@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
@@ -44,5 +45,6 @@ export async function app_next_main() {
   let body = html_document_body();
   html_text_set(body, joined);
   let verse_number = integer_to(verse);
-  verse_number += 1;st
+  verse_number += 1;
+  object_property_set(object, property_name, value);
 }
