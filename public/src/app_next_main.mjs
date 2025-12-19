@@ -23,8 +23,8 @@ export function app_next_main() {
     }
     each(split, lambda);
   }
-  let reuslt = object_adder(lambda3);
+  let result = object_adder(lambda3);
   log({
-    split,
+    result,
   });
 }
