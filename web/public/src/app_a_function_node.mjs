@@ -235,9 +235,6 @@ export function app_a_function_node(a) {
         app_a_function_node_child(a, source2);
       }
       app_a_parenthesis_wrap(parent, lambda20);
-      log({
-        node,
-      });
     },
   };
   function binary() {
