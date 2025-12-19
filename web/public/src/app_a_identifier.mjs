@@ -33,8 +33,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 export function app_a_identifier(node, parent, context, a, ast, parsed) {
   let name = object_property_get(node, "name");
   let a2 = js_special_arguments();
-  if (false) {
-    let a3 = js_special_arguments();
+  if (equal(left, right)) {
   }
   let span = html_span_text(parent, name);
   html_font_color_set(span, "#4a4affff");
