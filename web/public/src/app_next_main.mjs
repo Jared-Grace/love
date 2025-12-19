@@ -1,3 +1,4 @@
+import { object_adder } from "../../../love/public/src/object_adder.mjs";
 import { string_split_equal } from "../../../love/public/src/string_split_equal.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { string_split_comma } from "../../../love/public/src/string_split_comma.mjs";
@@ -10,6 +11,7 @@ export function app_next_main() {
   let hash = html_hash_get();
   let without = string_prefix_without(hash, "#");
   let split = string_split_comma(without);
+  let reuslt = object_adder(function lambda3() {});
   function lambda(s) {
     let split2 = string_split_equal(s);
   }
