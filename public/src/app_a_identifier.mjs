@@ -34,10 +34,11 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 export function app_a_identifier(node, parent, context, a, ast, parsed) {
   let name = object_property_get(node, "name");
   let a2 = js_special_arguments();
+  let span = null;
   if (equal(name, a2)) {
     app_a_keyword_blue(parent2, text2);
+  } else {
   }
-  let span = null;
   span = html_span_text(parent, name);
   html_font_color_set(span, "#4a4affff");
   async function lambda20() {
