@@ -1,3 +1,4 @@
+import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -12,31 +13,11 @@ import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs"
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { string_split_plus } from "../../../love/public/src/string_split_plus.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
-import { object_adder } from "../../../love/public/src/object_adder.mjs";
-import { string_split_equal } from "../../../love/public/src/string_split_equal.mjs";
-import { each } from "../../../love/public/src/each.mjs";
-import { string_split_comma } from "../../../love/public/src/string_split_comma.mjs";
-import { string_prefix_without } from "../../../love/public/src/string_prefix_without.mjs";
-import { html_hash_get } from "../../../love/public/src/html_hash_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_next_main() {
   marker("1");
   firebase_name_jg();
-  let hash = html_hash_get();
-  let without = string_prefix_without(hash, "#");
-  let split = string_split_comma(without);
-  function lambda3(oa) {
-    function lambda(s) {
-      let split2 = string_split_equal(s);
-      let v = list_first_second(split2);
-      let second = object_property_get(v, "second");
-      let first = object_property_get(v, "first");
-      oa(first, second);
-    }
-    each(split, lambda);
-  }
-  let result = object_adder(lambda3);
+  let result = html_hash_object_get();
   let chapter_code = object_property_get(result, "c");
   let verse = object_property_get(result, "v");
   let l = object_property_get(result, "l");
