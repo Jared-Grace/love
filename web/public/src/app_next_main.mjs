@@ -9,7 +9,8 @@ export function app_next_main() {
   let hash = html_hash_get();
   let without = string_prefix_without(hash, "#");
   let split = string_split_comma(without);
-  each(list, function lambda(item) {});
+  function lambda(item) {}
+  each(list, lambda);
   log({
     split,
   });
