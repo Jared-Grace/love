@@ -35,7 +35,7 @@ export async function app_next_main() {
   let languages_chosen = string_split_plus(l);
   let languages_list = ebible_languages();
   async function lambda2(language) {
-      let filtered = list_find_property(languages_list, "language", language);
+    let filtered = list_find_property(languages_list, "language", language);
     let bible_folder = object_property_get(filtered, "bible_folder");
     let d = await ebible_verse(bible_folder, c, verse);
   }
