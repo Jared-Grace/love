@@ -243,6 +243,7 @@ export function app_a_function_node(a) {
       false_is_assert(optional);
       let object = object_property_get(node, "object");
       app_a_function_node_child(a, object);
+      html_span_text(parent, ".");
       let property = object_property_get(node, "property");
       app_a_function_node_child(a, property);
       `      computed
