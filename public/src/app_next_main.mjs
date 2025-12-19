@@ -1,3 +1,4 @@
+import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
@@ -47,6 +48,10 @@ export async function app_next_main() {
     let text = object_property_get(d, "text");
     return text;
   }
+  let waited = await list_map_unordered_async(
+    list,
+    async function lambda4(item) {},
+  );
   let mapped = await list_map_async(languages_chosen, lambda2);
   log({
     mapped,
