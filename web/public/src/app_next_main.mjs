@@ -15,7 +15,9 @@ export function app_next_main() {
   function lambda3(oa) {
     function lambda(s) {
       let split2 = string_split_equal(s);
-      let result = list_first_second(list);
+      let v = list_first_second(split2);
+      let second = object_property_get(v, "second");
+      let first = object_property_get(v, "first");
     }
     each(split, lambda);
   }
