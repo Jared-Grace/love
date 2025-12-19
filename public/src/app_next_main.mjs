@@ -62,5 +62,6 @@ export async function app_next_main() {
   let joined = await list_join_newline_2_copy(mapped);
   let body = html_document_body();
   html_text_set(body, joined);
-  let i = integer_to(input);
+  let verse_number = integer_to(verse);
+  verse_number += 1;
 }
