@@ -1,3 +1,4 @@
+import { js_keyword_arguments } from "../../../love/public/src/js_keyword_arguments.mjs";
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
@@ -30,7 +31,8 @@ import { html_font_color_set } from "../../../love/public/src/html_font_color_se
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function app_a_identifier(node, parent, context, a, ast, parsed) {
-  let name = object_property_get(node, "name");js_keyword_arguments
+  let name = object_property_get(node, "name");
+  let a2 = js_keyword_arguments();
   if (false) {
   }
   let span = html_span_text(parent, name);
