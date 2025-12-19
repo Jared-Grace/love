@@ -1,3 +1,4 @@
+import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { html_hash_symbol } from "../../../love/public/src/html_hash_symbol.mjs";
 import { html_url_without_hash } from "../../../love/public/src/html_url_without_hash.mjs";
@@ -55,9 +56,11 @@ export async function app_next_main() {
   function lambda3(la) {
     function lambda(value, property) {
       let part = property + "=" + value;
+      la(part);
     }
     each_object(object, lambda);
   }
-  let list = list_adder(lambda3);
+  let parts = list_adder(lambda3);
+  let result2 = list_join_comma(names);
   let url = html_url_without_hash();
 }
