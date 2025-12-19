@@ -237,7 +237,10 @@ export function app_a_function_node(a) {
       app_a_parenthesis_wrap(parent, lambda20);
     },
     ["MemberExpression"]: function lambda21() {
-      $g$node$computed$object$optional$property;
+      let computed2 = object_property_get(node, "computed");
+      let object = object_property_get(node, "object");
+      let optional = object_property_get(node, "optional");
+      let property = object_property_get(node, "property");
       `      computed
 : 
 false
