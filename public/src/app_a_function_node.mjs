@@ -110,7 +110,7 @@ export function app_a_function_node(a) {
       app_a_body(node, parent, a, true);
     },
     ["ReturnStatement"]: function lambda7() {
-      let k = js_keyword_return();
+      let k = js_keyword_return();$x
       app_a_keyword_purple_space(parent, k);
     },
     ["ExpressionStatement"]: function lambda7() {
