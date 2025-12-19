@@ -228,8 +228,11 @@ export function app_a_function_node(a) {
   }
   let n = object_property_exists_not(lookup, type);
   if (n) {
-    let json = json_to(object);
-    alert();
+    let json = json_to({
+      type,
+      msg: "TODO",
+    });
+    alert(json);
   }
   let value = object_property_get(lookup, type);
   value();
