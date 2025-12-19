@@ -227,6 +227,7 @@ export function app_a_function_node(a) {
     ["LogicalExpression"]: binary,
     ["AssignmentExpression"]: binary,
     ["ImportExpression"]: function lambda15() {
+      let source2 = object_property_get(node, "source");
       log({
         node,
       });
