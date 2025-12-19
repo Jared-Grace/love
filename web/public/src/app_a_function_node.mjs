@@ -1,3 +1,4 @@
+import { json_to } from "../../../love/public/src/json_to.mjs";
 import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
 import { app_a_identifier } from "../../../love/public/src/app_a_identifier.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
@@ -226,7 +227,8 @@ export function app_a_function_node(a) {
     app_a_function_node_child(a, right);
   }
   let n = object_property_exists_not(lookup, type);
-  if (n) {jt
+  if (n) {
+    let json = json_to(object);
     alert();
   }
   let value = object_property_get(lookup, type);
