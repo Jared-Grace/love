@@ -35,7 +35,7 @@ export async function app_next_main() {
     each(split, lambda);
   }
   let result = object_adder(lambda3);
-  let c = object_property_get(result, "c");
+  let chapter_code = object_property_get(result, "c");
   let verse = object_property_get(result, "v");
   let l = object_property_get(result, "l");
   let languages_chosen = string_split_plus(l);
@@ -47,7 +47,7 @@ export async function app_next_main() {
       language,
     );
     let bible_folder = object_property_get(filtered, "bible_folder");
-    let d = await ebible_verse(bible_folder, c, verse);
+    let d = await ebible_verse(bible_folder, chapter_code, verse);
     let text = object_property_get(d, "text");
     return text;
   }
