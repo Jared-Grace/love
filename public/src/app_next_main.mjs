@@ -1,3 +1,4 @@
+import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
@@ -49,6 +50,11 @@ export async function app_next_main() {
     let text = object_property_get(d, "text");
     return text;
   }
+  let reference = ebible_parts_chapter_code_to_reference(
+    chapter_code,
+    books,
+    verse_numbers,
+  );
   let mapped = await list_map_unordered_async(languages_chosen, lambda2);
   let joined = await list_join_newline_2_copy(concated);
   html_text_set(component, text2);
