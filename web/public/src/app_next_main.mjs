@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { string_split_plus } from "../../../love/public/src/string_split_plus.mjs";
@@ -35,4 +36,7 @@ export async function app_next_main() {
     let d = await ebible_verse(bible_folder, c, verse);
   }
   let mapped = await list_map_async(languages, lambda2);
+  log({
+    mapped,
+  });
 }
