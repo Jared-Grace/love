@@ -110,8 +110,9 @@ export function app_a_function_node(a) {
       app_a_body(node, parent, a, true);
     },
     ["ReturnStatement"]: function lambda7() {
-      let k = js_keyword_return();$x
-      app_a_keyword_purple_space(parent, k);
+      let k = js_keyword_return();
+      app_a_keyword_purple(parent, k);
+      html_span_space(parent);
     },
     ["ExpressionStatement"]: function lambda7() {
       let expression = object_property_get(node, "expression");
