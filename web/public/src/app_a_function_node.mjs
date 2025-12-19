@@ -1,3 +1,4 @@
+import { app_a_keyword_blue } from "../../../love/public/src/app_a_keyword_blue.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_keyword_return } from "../../../love/public/src/js_keyword_return.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
@@ -228,6 +229,7 @@ export function app_a_function_node(a) {
     ["AssignmentExpression"]: binary,
     ["ImportExpression"]: function lambda15() {
       let source2 = object_property_get(node, "source");
+      app_a_keyword_blue(parent2, text5);
       log({
         node,
       });
