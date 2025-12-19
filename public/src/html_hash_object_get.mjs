@@ -8,9 +8,9 @@ import { string_split_comma } from "../../../love/public/src/string_split_comma.
 import { string_prefix_without } from "../../../love/public/src/string_prefix_without.mjs";
 import { html_hash_get } from "../../../love/public/src/html_hash_get.mjs";
 export function html_hash_object_get() {
-  let hash = html_hash_get();
+  let hash_url = html_hash_get();
   let prefix = html_hash_symbol();
-  let without = string_prefix_without(hash, prefix);
+  let without = string_prefix_without(hash_url, prefix);
   let split = string_split_comma(without);
   function lambda3(oa) {
     function lambda(s) {
@@ -22,6 +22,6 @@ export function html_hash_object_get() {
     }
     each(split, lambda);
   }
-  let result = object_adder(lambda3);
-  return result;
+  let hash = object_adder(lambda3);
+  return hash;
 }
