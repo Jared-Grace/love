@@ -11,12 +11,12 @@ export function app_next_main() {
   let hash = html_hash_get();
   let without = string_prefix_without(hash, "#");
   let split = string_split_comma(without);
-  function lambda3() {}
-  let reuslt = object_adder(lambda3);
+  function lambda3(oa) {
   function lambda(s) {
     let split2 = string_split_equal(s);
   }
-  each(split, lambda);
+  each(split, lambda);}
+  let reuslt = object_adder(lambda3);
   log({
     split,
   });
