@@ -7,6 +7,6 @@ export function app_next_main() {
   let hash = html_hash_get();
   let without = string_prefix_without(hash, "#");
   log({
-    hash,
+    without,
   });
 }
