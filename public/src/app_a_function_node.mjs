@@ -240,7 +240,7 @@ export function app_a_function_node(a) {
   if (n) {
     let json = json_to({
       type,
-      msg: "TODO",
+      msg: "TODO",node
     });
     alert(json);
   }
