@@ -113,7 +113,9 @@ export function app_a_function_node(a) {
       let k = js_keyword_return();
       app_a_keyword_purple(parent, k);
       let argument2 = object_property_get(node, "argument");
-      let nn2 = null_not_is(argument2);$i
+      let nn2 = null_not_is(argument2);
+      if (false) {
+      }
       html_span_space(parent);
     },
     ["ExpressionStatement"]: function lambda7() {
