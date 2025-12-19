@@ -4,7 +4,8 @@ export function object_adder(lambda) {
   marker("1");
   let reuslt = {};
   function lambda2(key, value) {
-    object_property_set_exists_not(object, property_name, value2);
+    object_property_set_exists_not(reuslt, key, value);
   }
   lambda(lambda2);
+  return reuslt;
 }
