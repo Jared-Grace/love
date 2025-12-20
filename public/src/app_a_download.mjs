@@ -13,5 +13,5 @@ export async function app_a_download() {
     return v;
   }
   let dictionary = await list_to_dictionary_async(filtered, lambda2);
-  return waited;
+  return dictionary;
 }
