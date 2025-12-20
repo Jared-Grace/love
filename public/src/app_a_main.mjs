@@ -1,5 +1,3 @@
-import { app_a_download } from "../../../love/public/src/app_a_download.mjs";
-import { app_api_cache_storage_local_fn } from "../../../love/public/src/app_api_cache_storage_local_fn.mjs";
 import { html_on_keydown } from "../../../love/public/src/html_on_keydown.mjs";
 import { html_font_sans_serif_set_html } from "../../../love/public/src/html_font_sans_serif_set_html.mjs";
 import { invoke_multiple_arg } from "../../../love/public/src/invoke_multiple_arg.mjs";
@@ -23,6 +21,5 @@ export async function app_a_main() {
   }
   html_on_keydown(root, lambda);
   html_font_sans_serif_set_html();
-  await app_api_cache_storage_local_fn(app_a_download, []);
   app_generic_refresh(context);
 }
