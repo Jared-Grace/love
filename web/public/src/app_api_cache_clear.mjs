@@ -5,6 +5,6 @@ import { app_api_generic_f_name_args } from "../../../love/public/src/app_api_ge
 export function app_api_cache_clear(fn, f_args) {
   let a = app_api_generic_f_name_args(fn.name, f_args);
   let a2 = server_api_url();
-  const newLocal = [a2, a];
-  invoke_cache_clear(http_post_json, newLocal);
+  const args_cache = [a2, a];
+  invoke_cache_clear(http_post_json, args_cache);
 }
