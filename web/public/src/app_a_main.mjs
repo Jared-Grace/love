@@ -23,6 +23,6 @@ export async function app_a_main() {
   }
   html_on_keydown(root, lambda);
   html_font_sans_serif_set_html();
-  let v = await app_api_cache_storage_local_fn(app_a_download, []);
+  await app_api_cache_storage_local_fn(app_a_download, []);
   app_generic_refresh(context);
 }
