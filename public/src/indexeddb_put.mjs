@@ -1,1 +1,4 @@
-export function indexeddb_put() {}
+import { marker } from "../../../love/public/src/marker.mjs";
+export function indexeddb_put() {
+  marker("1");
+}
