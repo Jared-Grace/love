@@ -1,3 +1,4 @@
+import { path_normalize } from "../../../love/public/src/path_normalize.mjs";
 import { invoke_cache_value_get } from "../../../love/public/src/invoke_cache_value_get.mjs";
 import { invoke_cache_key_get } from "../../../love/public/src/invoke_cache_key_get.mjs";
 import { storage_local_set_exists_not } from "../../../love/public/src/storage_local_set_exists_not.mjs";
@@ -10,6 +11,7 @@ export async function invoke_cache_indexeddb(fn, args) {
   let key_get = invoke_cache_key_get(fn, args);
   let value_get = invoke_cache_value_get(fn, args);
   let cached_exists = function lambda3(key) {
+    let v = path_normalize(path);
     let exists = storage_local_exists(invoke_cache_indexeddb, key);
     return exists;
   };
