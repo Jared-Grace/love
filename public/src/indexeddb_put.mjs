@@ -12,17 +12,14 @@ export async function indexeddb_put(db_get, store, value) {
   let v4 = await new Promise(function lambda3(resolve, reject) {
     const req = s.get(path);
     req.onsuccess = function lambda() {
-      const file = req.result;
-      if (not(file)) {
-        file = null;
-        let v2 = reject("File not found");
-        return v2;
-      } else {
+      const previous = req.result;
+      if (not(previous)) {
+        previous = null;
       }
-      file.content = mutateFn(file.content);
-      file.mtime = Date.now();
-      s.put(file);
-      resolve(file.content);
+      previous.content = mutateFn(previous.content);
+      previous.mtime = Date.now();
+      s.put(value);
+      resolve(previous.content);
     };
     req.onerror = function lambda2() {
       let v3 = reject(req.error);
