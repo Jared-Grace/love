@@ -7,7 +7,7 @@ export async function app_a_indexeddb_initialize() {
   const db_name = app_a.name;
   const version = 1;
   const store_files = "files";
-  let v3 = await new Promise(function lambda4(resolve, reject) {
+  let db = await new Promise(function lambda4(resolve, reject) {
     const req = indexedDB.open(db_name, version);
     req.onupgradeneeded = function lambda() {
       const db = req.result;
@@ -19,7 +19,7 @@ export async function app_a_indexeddb_initialize() {
       }
     };
     req.onsuccess = function lambda2() {
-      let v = resolve(req.result);
+      let v = resolve(db);
       return v;
     };
     req.onerror = function lambda3() {
@@ -27,5 +27,5 @@ export async function app_a_indexeddb_initialize() {
       return v2;
     };
   });
-  return v3;
+  return db;
 }
