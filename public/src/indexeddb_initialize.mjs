@@ -3,16 +3,16 @@ import { not } from "../../../love/public/src/not.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function indexeddb_initialize() {
   marker("1");
-  const DB_NAME = "ide_fs";
-  const DB_VERSION = 1;
-  const STORE_FILES = "files";
+  const db_name = "ide_fs";
+  const version = 1;
+  const store_files = "files";
   let v3 = new Promise(function lambda4(resolve, reject) {
-    const req = indexedDB.open(DB_NAME, DB_VERSION);
+    const req = indexedDB.open(db_name, version);
     req.onupgradeneeded = function lambda() {
       const db = req.result;
-      let b = db.objectStoreNames.contains(STORE_FILES);
+      let b = db.objectStoreNames.contains(store_files);
       if (not(b)) {
-        db.createObjectStore(STORE_FILES, {
+        db.createObjectStore(store_files, {
           keyPath: "path",
         });
       }
