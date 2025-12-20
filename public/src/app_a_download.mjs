@@ -5,8 +5,9 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_a_download() {
   marker("1");
   let filtered = await app_a_download_paths();
-  let contents = await file_read(file_path);
-  function lambda() {}
+  async function lambda() {
+    let contents = await file_read(file_path);
+  }
   let waited = await list_map_unordered_async(filtered, lambda);
   return waited;
 }
