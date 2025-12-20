@@ -5,7 +5,7 @@ import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function file_read(file_path) {
   if (browser_is()) {
-    await app_api_cache_storage_local_fn(app_a_download, []);
+    let fs = await app_api_cache_storage_local_fn(app_a_download, []);
     const args_cache = app_api_cache_args(fn, f_args);
     let r = await app_api_cache_storage_local_fn(file_read, arguments);
     return r;
