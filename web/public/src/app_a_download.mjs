@@ -6,7 +6,9 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_a_download() {
   marker("1");
   let filtered = await app_a_download_paths();
-  async function lambda(file_path) {
+  async function lambda(file_path) {}
+  let waited = await list_map_unordered_async(filtered, lambda);
+  async function lambda2(item) {
     let contents = await file_read(file_path);
     let v = {
       file_path,
@@ -14,8 +16,6 @@ export async function app_a_download() {
     };
     return v;
   }
-  let waited = await list_map_unordered_async(filtered, lambda);
-  async function lambda2(item) {}
   let dictionary = await list_to_dictionary_async(list, lambda2);
   return waited;
 }
