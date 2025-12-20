@@ -14,6 +14,7 @@ export async function indexeddb_put(db_get, store, value) {
     req.onsuccess = function lambda() {
       const file = req.result;
       if (not(file)) {
+        file = null;
         let v2 = reject("File not found");
         return v2;
       } else {
