@@ -1,4 +1,9 @@
-import { marker } from "../../../love/public/src/marker.mjs";
-export function path_normalize() {
-  marker("1");
+export function path_normalize(path) {
+  let v = path
+    .replace(/\\/g, "/")
+    .replace(/\/+/g, "/")
+    .replace(/\/\.\//g, "/")
+    .replace(/\/$/, "")
+    .replace(/^\.\/+/, "");
+  return v;
 }
