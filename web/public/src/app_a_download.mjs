@@ -15,9 +15,7 @@ export async function app_a_download() {
     return v;
   }
   let waited = await list_map_unordered_async(filtered, lambda);
-  let dictionary = await list_to_dictionary_async(
-    list,
-    async function lambda2(item) {},
-  );
+  async function lambda2(item) {}
+  let dictionary = await list_to_dictionary_async(list, lambda2);
   return waited;
 }
