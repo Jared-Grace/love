@@ -16,6 +16,7 @@ export async function indexeddb_put(db_get, store, value) {
       if (not(file)) {
         let v2 = reject("File not found");
         return v2;
+      } else {
       }
       file.content = mutateFn(file.content);
       file.mtime = Date.now();
