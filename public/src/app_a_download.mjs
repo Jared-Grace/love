@@ -1,4 +1,4 @@
-import { list_filter_ends_with } from "../../../love/public/src/list_filter_ends_with.mjs";
+import { list_filter_ends_with_any } from "../../../love/public/src/list_filter_ends_with_any.mjs";
 import { function_name_extension } from "../../../love/public/src/function_name_extension.mjs";
 import { folder_read_recursive_paths_async } from "../../../love/public/src/folder_read_recursive_paths_async.mjs";
 import { folder_public } from "../../../love/public/src/folder_public.mjs";
@@ -8,6 +8,6 @@ export async function app_a_download() {
   let path_folder = folder_public();
   let combineds = await folder_read_recursive_paths_async(path_folder);
   let ext = function_name_extension();
-  let filtered = list_filter_ends_with(combineds, ext);
+  let filtered = list_filter_ends_with_any(combineds, ext);
   return filtered;
 }
