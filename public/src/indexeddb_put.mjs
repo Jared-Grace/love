@@ -1,16 +1,31 @@
-import { path_normalize } from "../../../love/public/src/path_normalize.mjs";
+import { error } from "../../../love/public/src/error.mjs";
+import { not } from "../../../love/public/src/not.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export async function indexeddb_put(db_get, store, path, content) {
+export async function indexeddb_put(db_get, store, value) {
   marker("1");
   let db = await db_get();
-  let normalized = path_normalize(path);
   const tx = db.transaction(store, "readwrite");
   const s = tx.objectStore(store);
-  s.put({
-    path: normalized,
-    content,
-    mtime: Date.now(),
-  });
+  s.put(value);
   let v = tx.complete;
   return v;
+  let v4 = await new Promise(function lambda3(resolve, reject) {
+    const req = s.get(path);
+    req.onsuccess = function lambda() {
+      const file = req.result;
+      if (not(file)) {
+        let v2 = reject("File not found");
+        return v2;
+      }
+      file.content = mutateFn(file.content);
+      file.mtime = Date.now();
+      s.put(file);
+      resolve(file.content);
+    };
+    req.onerror = function lambda2() {
+      let v3 = reject(req.error);
+      return v3;
+    };
+  });
+  return v4;
 }
