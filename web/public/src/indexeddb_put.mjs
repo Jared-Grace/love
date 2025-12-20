@@ -18,7 +18,7 @@ export async function indexeddb_put(db_get, store, value_get) {
       }
       let value = await value_get(previous);
       s.put(value);
-      resolve(previous.content);
+      resolve(value);
     };
     req.onerror = function lambda2() {
       let v3 = reject(req.error);
