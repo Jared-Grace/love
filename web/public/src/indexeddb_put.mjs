@@ -1,26 +1,37 @@
 import { error } from "../../../love/public/src/error.mjs";
-import { not } from "../../../love/public/src/not.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export async function indexeddb_put(db_get, store, value_get) {
+export async function indexeddb_put(db_get, store, key, value_get) {
   marker("1");
-  let db = await db_get();
+  const db = await db_get();
   const tx = db.transaction(store, "readwrite");
   const s = tx.objectStore(store);
-  let v4 = await new Promise(function lambda3(resolve, reject) {
-    const req = s.get(path);
+  const value = await new Promise(function lambda3(resolve, reject) {
+    const req = s.get(key);
     req.onsuccess = async function lambda() {
-      const previous = req.result;
-      if (not(previous)) {
-        previous = null;
+      let previous = req.result ?? null;
+      try {
+        const next = await value_get(previous);
+        s.put(next);
+        resolve(next);
+      } catch (e) {
+        reject(e);
       }
-      let value = await value_get(previous);
-      s.put(value);
-      resolve(value);
     };
     req.onerror = function lambda2() {
-      let v3 = reject(req.error);
+      let v = reject(req.error);
+      return v;
+    };
+  });
+  await new Promise(function lambda6(resolve, reject) {
+    tx.oncomplete = resolve;
+    tx.onerror = function lambda4() {
+      let v2 = reject(tx.error);
+      return v2;
+    };
+    tx.onabort = function lambda5() {
+      let v3 = reject(tx.error);
       return v3;
     };
   });
-  return v4;
+  return value;
 }
