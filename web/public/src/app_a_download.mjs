@@ -8,6 +8,6 @@ export async function app_a_download() {
   let path_folder = folder_public();
   let combineds = await folder_read_recursive_paths_async(path_folder);
   let ext = function_name_extension();
-  let filtered3 = list_filter_ends_with(filtered2, f_name_suffix_after);
-  return combineds;
+  let filtered = list_filter_ends_with(combineds, ext);
+  return filtered;
 }
