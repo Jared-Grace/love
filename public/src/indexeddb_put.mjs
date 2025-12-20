@@ -6,9 +6,6 @@ export async function indexeddb_put(db_get, store, value_get) {
   let db = await db_get();
   const tx = db.transaction(store, "readwrite");
   const s = tx.objectStore(store);
-  s.put(value);
-  let v = tx.complete;
-  return v;
   let v4 = await new Promise(function lambda3(resolve, reject) {
     const req = s.get(path);
     req.onsuccess = async function lambda() {
