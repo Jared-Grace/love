@@ -15,7 +15,7 @@ export async function file_read(file_path) {
     );
     log({
       file_system,
-    });
+    });$r
     let r = object_property_get(file_system, file_path);
     return r;
   }
