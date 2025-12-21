@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
 import { app_api_cache_indexeddb_fn } from "../../../love/public/src/app_api_cache_indexeddb_fn.mjs";
@@ -16,6 +17,7 @@ export async function file_read(file_path) {
     log({
       file_system,
     });
+    error();
     return;
     let r = object_property_get(file_system, file_path);
     return r;
