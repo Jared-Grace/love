@@ -5,5 +5,6 @@ export async function function_multiple_param_new_double_multiple(
   param_name,
 ) {
   marker("1");
-  return await function_multiple_param_new_double(f_names_comma, param_name);
+  let v = await function_multiple_param_new_double(f_names_comma, param_name);
+  return v;
 }
