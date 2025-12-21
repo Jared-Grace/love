@@ -3,7 +3,6 @@ import { indexeddb_read } from "../../../love/public/src/indexeddb_read.mjs";
 import { invoke_cache_value_get } from "../../../love/public/src/invoke_cache_value_get.mjs";
 import { invoke_cache_key_get } from "../../../love/public/src/invoke_cache_key_get.mjs";
 import { storage_local_set_exists_not } from "../../../love/public/src/storage_local_set_exists_not.mjs";
-import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
 export async function invoke_cache_indexeddb(fn, args, db_get, store) {
@@ -16,8 +15,8 @@ export async function invoke_cache_indexeddb(fn, args, db_get, store) {
     return exists;
   };
   let cached_get = async function lambda2(key) {
-    let value = await storage_local_get(invoke_cache_indexeddb, key);
-    return value;
+    let item = await indexeddb_read(db_get, store, key);
+    return item;
   };
   let cache_save = function lambda4(key, value) {
     let v2 = storage_local_set_exists_not(invoke_cache_indexeddb, key, value);
