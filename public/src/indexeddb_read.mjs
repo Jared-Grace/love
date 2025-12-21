@@ -5,7 +5,7 @@ export async function indexeddb_read(db_get, store, key) {
   let db = await db_get();
   const tx = db.transaction(store, "readonly");
   const s = tx.objectStore(store);
-  let v3 = await new Promise(function lambda3(resolve, reject) {
+  let item = await new Promise(function lambda3(resolve, reject) {
     const req = s.get(key);
     req.onsuccess = function lambda() {
       let v = resolve(req.result ?? null);
@@ -16,5 +16,5 @@ export async function indexeddb_read(db_get, store, key) {
       return v2;
     };
   });
-  return v3;
+  return item;
 }
