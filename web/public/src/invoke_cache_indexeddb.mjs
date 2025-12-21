@@ -1,8 +1,9 @@
+import { lambda_get } from "../../../love/public/src/lambda_get.mjs";
+import { indexeddb_put } from "../../../love/public/src/indexeddb_put.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { indexeddb_read } from "../../../love/public/src/indexeddb_read.mjs";
 import { invoke_cache_value_get } from "../../../love/public/src/invoke_cache_value_get.mjs";
 import { invoke_cache_key_get } from "../../../love/public/src/invoke_cache_key_get.mjs";
-import { storage_local_set_exists_not } from "../../../love/public/src/storage_local_set_exists_not.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
 export async function invoke_cache_indexeddb(fn, args, db_get, store) {
@@ -18,9 +19,9 @@ export async function invoke_cache_indexeddb(fn, args, db_get, store) {
     let item = await indexeddb_read(db_get, store, key);
     return item;
   };
-  let cache_save = function lambda4(key, value) {
-    let v2 = storage_local_set_exists_not(invoke_cache_indexeddb, key, value);
-    return v2;
+  let cache_save = async function lambda4(key, value) {
+    let value_get2 = lambda_get(value);
+    await indexeddb_put(db_get, store, key, value_get2);
   };
   let result = await cache_generic(
     key_get,
