@@ -1,14 +1,12 @@
-import { path_normalize } from "../../../love/public/src/path_normalize.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export async function indexeddb_read(db_get, store, path) {
+export async function indexeddb_read(db_get, store, key) {
   marker("1");
   let db = await db_get();
-  let normalized = path_normalize(path);
   const tx = db.transaction(store, "readonly");
   const s = tx.objectStore(store);
   let v3 = await new Promise(function lambda3(resolve, reject) {
-    const req = s.get(normalized);
+    const req = s.get(key);
     req.onsuccess = function lambda() {
       let v = resolve(req.result ?? null);
       return v;
