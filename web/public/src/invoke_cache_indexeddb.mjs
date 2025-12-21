@@ -4,7 +4,6 @@ import { invoke_cache_value_get } from "../../../love/public/src/invoke_cache_va
 import { invoke_cache_key_get } from "../../../love/public/src/invoke_cache_key_get.mjs";
 import { storage_local_set_exists_not } from "../../../love/public/src/storage_local_set_exists_not.mjs";
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
-import { storage_local_exists } from "../../../love/public/src/storage_local_exists.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
 export async function invoke_cache_indexeddb(fn, args) {
@@ -13,8 +12,7 @@ export async function invoke_cache_indexeddb(fn, args) {
   let value_get = invoke_cache_value_get(fn, args);
   let cached_exists = async function lambda3(key) {
     let item = await indexeddb_read(db_get, store, key);
-    let nn = null_not_is(value2);
-    let exists = storage_local_exists(invoke_cache_indexeddb, key);
+    let exists = null_not_is(item);
     return exists;
   };
   let cached_get = async function lambda2(key) {
