@@ -6,11 +6,11 @@ export async function function_multiple_param_new_double_multiple(
   f_names_comma,
   param_names,
 ) {
-  let split = string_split_comma(f_names);
-  async function lambda(item) {
+  let split = string_split_comma(param_names);
+  async function lambda(param_name) {
     let v = await function_multiple_param_new_double(f_names_comma, param_name);
     return v;
   }
-  await each_async(list, lambda);
+  await each_async(split, lambda);
   marker("1");
 }
