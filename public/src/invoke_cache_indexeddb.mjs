@@ -1,3 +1,4 @@
+import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { indexeddb_read } from "../../../love/public/src/indexeddb_read.mjs";
 import { invoke_cache_value_get } from "../../../love/public/src/invoke_cache_value_get.mjs";
 import { invoke_cache_key_get } from "../../../love/public/src/invoke_cache_key_get.mjs";
@@ -11,7 +12,8 @@ export async function invoke_cache_indexeddb(fn, args) {
   let key_get = invoke_cache_key_get(fn, args);
   let value_get = invoke_cache_value_get(fn, args);
   let cached_exists = async function lambda3(key) {
-    let v3 = await indexeddb_read(db_get, store, key2);
+    let item = await indexeddb_read(db_get, store, key);
+    let nn = null_not_is(value2);
     let exists = storage_local_exists(invoke_cache_indexeddb, key);
     return exists;
   };
