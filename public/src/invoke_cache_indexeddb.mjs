@@ -6,7 +6,7 @@ import { storage_local_set_exists_not } from "../../../love/public/src/storage_l
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
-export async function invoke_cache_indexeddb(fn, args, db_get) {
+export async function invoke_cache_indexeddb(fn, args, db_get, store) {
   marker("1");
   let key_get = invoke_cache_key_get(fn, args);
   let value_get = invoke_cache_value_get(fn, args);
