@@ -10,7 +10,7 @@ export async function indexeddb_read(db_get, store, path) {
   let v3 = await new Promise(function lambda3(resolve, reject) {
     const req = s.get(normalized);
     req.onsuccess = function lambda() {
-      let v = resolve(req.result?.content ?? null);
+      let v = resolve(req.result ?? null);
       return v;
     };
     req.onerror = function lambda2() {
