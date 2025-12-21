@@ -2,5 +2,6 @@ import { invoke_cache_indexeddb } from "../../../love/public/src/invoke_cache_in
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function http_post_json_cache_indexeddb(fn, args, db_get, store) {
   marker("1");
-  return await invoke_cache_indexeddb(fn, args, db_get, store);
+  let v = await invoke_cache_indexeddb(fn, args, db_get, store);
+  return v;
 }
