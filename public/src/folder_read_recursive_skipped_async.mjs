@@ -25,6 +25,7 @@ export async function folder_read_recursive_skipped_async(
         if (equal(name, "node_modules")) {
           log({
             name,
+            folders_skipped,
           });
           error();
         }
