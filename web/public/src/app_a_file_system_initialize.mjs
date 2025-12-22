@@ -17,7 +17,8 @@ export async function app_a_file_system_initialize() {
     let db = await app_a_indexeddb_initialize();
     let value_get2 = lambda_get(db);
     let r = await app_api_fn(app_a_download, []);
-    await each_async(list, async function lambda(item) {});
+    async function lambda(item) {}
+    await each_async(list, lambda);
     let value3 = await indexeddb_put(value_get2, "files", key, value_get);
   }
   let value2 = await global_function_initialize_lambda_async(
