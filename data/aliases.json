@@ -289,6 +289,7 @@
   "ri": "function_multiple_rename_if_starts_with",
   "im": "invoke_multiple",
   "aabw": "app_a_button_wide",
-  "oad": "object_adder"
+  "oad": "object_adder",
+  "lmg": "lambda_get"
  }
 }
