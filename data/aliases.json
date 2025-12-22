@@ -291,6 +291,7 @@
   "aabw": "app_a_button_wide",
   "oad": "object_adder",
   "lmg": "lambda_get",
-  "sc": "string_compress"
+  "sc": "string_compress",
+  "pnz": "path_normalize"
  }
 }
