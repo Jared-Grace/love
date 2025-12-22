@@ -290,6 +290,7 @@
   "im": "invoke_multiple",
   "aabw": "app_a_button_wide",
   "oad": "object_adder",
-  "lmg": "lambda_get"
+  "lmg": "lambda_get",
+  "sc": "string_compress"
  }
 }
