@@ -23,7 +23,7 @@ export async function file_overwrite(file_path, contents) {
       let versions = object_property_get(f, "versions");
       list_add(versions, contents);
       let compressed_after = json_compress(data);
-      object_property_set(object, property_name, value);
+      object_property_set(previous, "compressed", compressed_after);
     }
     let item = await indexeddb_put(
       app_a_indexeddb_initialize,
