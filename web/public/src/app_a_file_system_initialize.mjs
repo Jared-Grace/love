@@ -7,9 +7,10 @@ export async function app_a_file_system_initialize() {
   if (value) {
     return;
   }
+  async function lambda2() {}
   let value2 = await global_function_initialize_lambda_async(
     app_a_file_system_initialize,
-    async function lambda2() {},
+    lambda2,
   );
   marker("1");
 }
