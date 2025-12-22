@@ -1,3 +1,4 @@
+import { json_compress } from "../../../love/public/src/json_compress.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { indexeddb_put } from "../../../love/public/src/indexeddb_put.mjs";
 import { json_decompress } from "../../../love/public/src/json_decompress.mjs";
@@ -20,7 +21,7 @@ export async function file_overwrite(file_path, contents) {
       let f = json_decompress(compressed);
       let versions = object_property_get(f, "versions");
       list_add(versions, contents);
-      jc;
+      let compressed2 = json_compress(data);
     }
     let item = await indexeddb_put(
       app_a_indexeddb_initialize,
