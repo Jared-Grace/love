@@ -1,4 +1,3 @@
-import { path_normalize } from "../../../love/public/src/path_normalize.mjs";
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { app_a_file_system_store } from "../../../love/public/src/app_a_file_system_store.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -24,9 +23,8 @@ export async function app_a_file_system_initialize() {
     async function lambda(item) {
       let value_get = lambda_get(item);
       let path = object_property_get(item, "path");
-      let n = path_normalize(path);
       let store = app_a_file_system_store();
-      let value3 = await indexeddb_put(db_get, store, n, value_get);
+      let value3 = await indexeddb_put(db_get, store, path, value_get);
     }
     await each_async(r, lambda);
     storage_local_set(app_a, app_a_file_system_initialize.name, true);
