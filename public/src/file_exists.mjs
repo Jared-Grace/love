@@ -11,7 +11,7 @@ import { promise_is } from "../../../love/public/src/promise_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function file_exists(file_path) {
   if (browser_is()) {
-    let sw = string_starts_with(s, prefix);
+    let sw = string_starts_with(s, "../");
     if (false) {
     }
     await app_a_file_system_initialize();
