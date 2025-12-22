@@ -20,7 +20,9 @@ export async function folder_read_recursive_skipped_async(
     } else if (entry.isDirectory()) {
       let n = list_includes_not(folders_skipped, name);
       if (n) {
-        log({name});
+        log({
+          name,
+        });
         const subFiles = await folder_read_recursive_async(fullPath);
         function lambda(f) {
           let v = path.join(name, f);
