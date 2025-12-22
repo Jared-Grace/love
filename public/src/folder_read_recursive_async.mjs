@@ -1,5 +1,6 @@
 import { log } from "../../../love/public/src/log.mjs";
 export async function folder_read_recursive_async(path_folder) {
+  let folders_skipped = [];
   const fs = await import("fs/promises");
   const path = await import("path");
   let result = [];
