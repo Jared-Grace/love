@@ -10,6 +10,6 @@ export async function app_a_download_paths() {
   let ext_f = function_name_extension();
   let ext_h = html_extension();
   let ext_j = json_extension();
-  let filtered = list_filter_ends_with_any(combineds, [ext_f, ext_h, ext_j]);
+  let filtered = list_filter_ends_with_any(combineds, [ext_f, ext_h, ext_j]);lm
   return filtered;
 }
