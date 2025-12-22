@@ -9,7 +9,7 @@ export async function app_a_download_paths() {
   let combineds = await folder_read_recursive_paths_async(path_folder);
   let ext_f = function_name_extension();
   let ext_h = html_extension();
-  let v = json_extension();
-  let filtered = list_filter_ends_with_any(combineds, [ext_f, ext_h, v]);
+  let ext_j = json_extension();
+  let filtered = list_filter_ends_with_any(combineds, [ext_f, ext_h, ext_j]);
   return filtered;
 }
