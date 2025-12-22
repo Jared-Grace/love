@@ -1,7 +1,6 @@
 import { error } from "../../../love/public/src/error.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { folder_read_recursive_async } from "../../../love/public/src/folder_read_recursive_async.mjs";
 import { list_includes_not } from "../../../love/public/src/list_includes_not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function folder_read_recursive_skipped_async(
@@ -32,7 +31,10 @@ export async function folder_read_recursive_skipped_async(
           });
           error();
         }
-        const subFiles = await folder_read_recursive_async(fullPath);
+        const subFiles = await folder_read_recursive_skipped_async(
+          path_folder,
+          folders_skipped,
+        );
         function lambda(f) {
           let v = path.join(name, f);
           return v;
