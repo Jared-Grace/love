@@ -12,7 +12,7 @@ import { promise_is } from "../../../love/public/src/promise_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function file_exists(file_path) {
   if (browser_is()) {
-    let n2 = path_normalize(path);
+    file_path = path_normalize(file_path);
     const prefix = "../";
     let n = string_starts_with_not(s, prefix);
     if (n) {
