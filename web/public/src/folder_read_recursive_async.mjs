@@ -14,15 +14,15 @@ export async function folder_read_recursive_async(path_folder) {
     if (entry.isFile()) {
       result.push(name);
     } else if (entry.isDirectory()) {
-      let includes = list_includes_not(folders_skipped, name);
-      if (includes) {
+      let n = list_includes_not(folders_skipped, name);
+      if (n) {
+        const subFiles = await folder_read_recursive_async(fullPath);
+        function lambda(f) {
+          let v = path.join(name, f);
+          return v;
+        }
+        result.push(...subFiles.map(lambda));
       }
-      const subFiles = await folder_read_recursive_async(fullPath);
-      function lambda(f) {
-        let v = path.join(name, f);
-        return v;
-      }
-      result.push(...subFiles.map(lambda));
     }
   }
   return result;
