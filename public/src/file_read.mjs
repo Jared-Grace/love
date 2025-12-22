@@ -19,6 +19,7 @@ export async function file_read(file_path) {
     );
     let compressed = object_property_get(item, "compressed");
     let text = string_decompress(compressed);
+    let versions = object_property_get(text, "versions");
     return text;
   }
   marker("1");
