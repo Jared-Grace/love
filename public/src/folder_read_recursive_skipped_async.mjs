@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { folder_read_recursive_async } from "../../../love/public/src/folder_read_recursive_async.mjs";
 import { list_includes_not } from "../../../love/public/src/list_includes_not.mjs";
@@ -19,7 +20,9 @@ export async function folder_read_recursive_skipped_async(
       result.push(name);
     } else if (entry.isDirectory()) {
       let n = list_includes_not(folders_skipped, name);
-      if (n) {$ie
+      if (n) {
+        if (equal(left, right)) {
+        }
         log({
           name,
         });
