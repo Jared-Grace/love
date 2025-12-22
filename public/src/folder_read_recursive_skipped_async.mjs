@@ -19,7 +19,7 @@ export async function folder_read_recursive_skipped_async(
       let n = list_includes_not(folders_skipped, name);
       if (n) {
         const subFiles = await folder_read_recursive_skipped_async(
-          path_folder,
+          fullPath,
           folders_skipped,
         );
         function lambda(f) {
