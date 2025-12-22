@@ -1,5 +1,3 @@
-import { error } from "../../../love/public/src/error.mjs";
-import { equal } from "../../../love/public/src/equal.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_includes_not } from "../../../love/public/src/list_includes_not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -24,13 +22,6 @@ export async function folder_read_recursive_skipped_async(
     } else if (entry.isDirectory()) {
       let n = list_includes_not(folders_skipped, name);
       if (n) {
-        if (equal(name, "node_modules")) {
-          log({
-            name,
-            folders_skipped,
-          });
-          error();
-        }
         const subFiles = await folder_read_recursive_skipped_async(
           path_folder,
           folders_skipped,
