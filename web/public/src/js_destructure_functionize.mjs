@@ -57,6 +57,5 @@ export async function js_destructure_functionize(ast) {
     }
   }
   js_visit_type(ast, "ObjectPattern", lambda);
-  return;
   await js_imports_missing_add(ast);
 }
