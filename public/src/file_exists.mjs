@@ -1,3 +1,4 @@
+import { function_param_new } from "../../../love/public/src/function_param_new.mjs";
 import { string_starts_with_not } from "../../../love/public/src/string_starts_with_not.mjs";
 import { indexeddb_exists } from "../../../love/public/src/indexeddb_exists.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
@@ -11,6 +12,7 @@ import { promise_is } from "../../../love/public/src/promise_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function file_exists(file_path) {
   if (browser_is()) {
+    await function_param_new(param_name, default_value);
     const prefix = "../";
     let n = string_starts_with_not(s, prefix);
     if (n) {
