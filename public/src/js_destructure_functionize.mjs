@@ -56,4 +56,5 @@ export function js_destructure_functionize(ast) {
     }
   }
   js_visit_type(ast, "ObjectPattern", lambda);
+     js_imports_missing_add(ast);
 }
