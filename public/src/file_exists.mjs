@@ -1,5 +1,5 @@
+import { indexeddb_exists } from "../../../love/public/src/indexeddb_exists.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
-import { indexeddb_read } from "../../../love/public/src/indexeddb_read.mjs";
 import { app_a_file_system_store } from "../../../love/public/src/app_a_file_system_store.mjs";
 import { app_a_file_system_initialize } from "../../../love/public/src/app_a_file_system_initialize.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
@@ -12,7 +12,7 @@ export async function file_exists(file_path) {
   if (browser_is()) {
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
-    let item = await indexeddb_read(
+    let item = await indexeddb_exists(
       app_a_indexeddb_initialize,
       store,
       file_path,
