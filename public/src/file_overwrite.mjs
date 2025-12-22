@@ -18,7 +18,8 @@ export async function file_overwrite(file_path, contents) {
     let item = await indexeddb_put(
       app_a_indexeddb_initialize,
       store,
-      file_path,$f
+      file_path,
+      () => {},
     );
     let compressed = object_property_get(item, "compressed");
     let f = json_decompress(compressed);
