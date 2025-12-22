@@ -19,11 +19,8 @@ export async function file_overwrite(file_path, contents) {
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
     function lambda(previous) {
-      let value2 = object_property_change(
-        o,
-        property,
-        function lambda2(value) {},
-      );
+      function lambda2(value) {}
+      let value2 = object_property_change(o, property, lambda2);
       let compressed_before = object_property_get(previous, "compressed");
       let f = json_decompress(compressed_before);
       let versions = object_property_get(f, "versions");
