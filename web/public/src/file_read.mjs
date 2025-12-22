@@ -1,4 +1,4 @@
-import { json_decompress } from "../../../love/public/src/json_decompress.mjs";
+import { string_decompress } from "../../../love/public/src/string_decompress.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { file_path_normalize } from "../../../love/public/src/file_path_normalize.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
@@ -18,7 +18,7 @@ export async function file_read(file_path) {
       file_path,
     );
     let compressed = object_property_get(item, "compressed");
-    let text = json_decompress(compressed);
+    let text = string_decompress(compressed);
     return text;
   }
   marker("1");
