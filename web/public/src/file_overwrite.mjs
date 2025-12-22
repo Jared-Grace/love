@@ -17,11 +17,11 @@ export async function file_overwrite(file_path, contents) {
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
     function lambda(previous) {
-      let compressed = object_property_get(previous, "compressed");
-      let f = json_decompress(compressed);
+      let compressed_before = object_property_get(previous, "compressed");
+      let f = json_decompress(compressed_before);
       let versions = object_property_get(f, "versions");
       list_add(versions, contents);
-      let compressed2 = json_compress(data);
+      let compressed_after = json_compress(data);
     }
     let item = await indexeddb_put(
       app_a_indexeddb_initialize,
