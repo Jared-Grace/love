@@ -9,7 +9,7 @@ export async function app_a_download() {
     let contents = await file_read(file_path);
     let v = {
       path: file_path,
-      contents,
+      versions: [contents],
     };
     return v;
   }
