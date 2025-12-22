@@ -1,3 +1,4 @@
+import { object_property_change } from "../../../love/public/src/object_property_change.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { json_compress } from "../../../love/public/src/json_compress.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -18,6 +19,7 @@ export async function file_overwrite(file_path, contents) {
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
     function lambda(previous) {
+      let value = object_property_change(o, property, change);
       let compressed_before = object_property_get(previous, "compressed");
       let f = json_decompress(compressed_before);
       let versions = object_property_get(f, "versions");
