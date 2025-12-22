@@ -13,7 +13,7 @@ export async function app_a_download() {
     };
     let compressed = json_compress(data);
     let v = {
-      path,
+      key: path,
       compressed,
     };
     return v;
