@@ -1,5 +1,4 @@
 import { object_property_change } from "../../../love/public/src/object_property_change.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { json_compress } from "../../../love/public/src/json_compress.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { indexeddb_put } from "../../../love/public/src/indexeddb_put.mjs";
@@ -19,14 +18,14 @@ export async function file_overwrite(file_path, contents) {
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
     function lambda(previous) {
-      function lambda2(value) {}
-      let value2 = object_property_change(o, property, lambda2);
-      let compressed_before = object_property_get(previous, "compressed");
-      let f = json_decompress(compressed_before);
-      let versions = object_property_get(f, "versions");
-      list_add(versions, contents);
-      let compressed_after = json_compress(data);
-      object_property_set(previous, "compressed", compressed_after);
+      function lambda2(compressed_before) {
+        let f = json_decompress(compressed_before);
+        let versions = object_property_get(f, "versions");
+        list_add(versions, contents);
+        let compressed_after = json_compress(data);
+        return compressed_after;
+      }
+      let value2 = object_property_change(o, "compressed", lambda2);
     }
     let item = await indexeddb_put(
       app_a_indexeddb_initialize,
