@@ -15,15 +15,15 @@ export async function file_exists(file_path) {
     let n = string_starts_with_not(s, prefix);
     if (n) {
       file_path = prefix + "love/" + file_path;
+      await app_a_file_system_initialize();
+      let store = app_a_file_system_store();
+      let exists = await indexeddb_exists(
+        app_a_indexeddb_initialize,
+        store,
+        file_path,
+      );
+      return exists;
     }
-    await app_a_file_system_initialize();
-    let store = app_a_file_system_store();
-    let exists = await indexeddb_exists(
-      app_a_indexeddb_initialize,
-      store,
-      file_path,
-    );
-    return exists;
   }
   marker("1");
   if (promise_is(file_path)) {
