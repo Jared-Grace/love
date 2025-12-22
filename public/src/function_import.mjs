@@ -7,6 +7,9 @@ export async function function_import(f_name) {
   let v = await function_name_unalias(f_name);
   let unaliased = object_property_get(v, "unaliased");
   let v2 = await function_name_to_path_search(unaliased);
+  log({
+    unaliased,
+  });
   let f = object_property_get(v2, "f_path");
   let f_path = await path_resolve(f);
   const imported = await import(`file://${f_path}`);
@@ -17,7 +20,4 @@ export async function function_import(f_name) {
     );
   }
   return imported_fn;
-  log({
-    unaliased,
-  });
 }
