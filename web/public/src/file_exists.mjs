@@ -15,7 +15,7 @@ export async function file_exists(file_path) {
   if (browser_is()) {
     file_path = path_normalize(file_path);
     const prefix = "../";
-    let n = string_starts_with_not(s, prefix);
+    let n = string_starts_with_not(file_path, prefix);
     if (n) {
       file_path = prefix + "love/" + file_path;
     }
