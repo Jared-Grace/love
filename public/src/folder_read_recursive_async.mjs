@@ -1,6 +1,5 @@
-import { not } from "../../../love/public/src/not.mjs";
+import { list_includes_not } from "../../../love/public/src/list_includes_not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { list_includes } from "../../../love/public/src/list_includes.mjs";
 export async function folder_read_recursive_async(path_folder) {
   let folders_skipped = [];
   const fs = await import("fs/promises");
@@ -15,9 +14,8 @@ export async function folder_read_recursive_async(path_folder) {
     if (entry.isFile()) {
       result.push(name);
     } else if (entry.isDirectory()) {
-      let b = list_includes(folders_skipped, name);
-      let includes = not(b);
-      if (false) {
+      let includes = list_includes_not(folders_skipped, name);
+      if (includes) {
       }
       const subFiles = await folder_read_recursive_async(fullPath);
       function lambda(f) {
