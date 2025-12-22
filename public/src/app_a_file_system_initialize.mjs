@@ -15,11 +15,11 @@ export async function app_a_file_system_initialize() {
   }
   async function lambda2() {
     let db = await app_a_indexeddb_initialize();
-    let value_get2 = lambda_get(db);
+    let db_get = lambda_get(db);
     let r = await app_api_fn(app_a_download, []);
     async function lambda(item) {
-      let value_get3 = lambda_get(value4);
-      let value3 = await indexeddb_put(value_get2, "files", key, value_get);
+      let value_get = lambda_get(item);
+      let value3 = await indexeddb_put(db_get, "files", key, value_get);
     }
     await each_async(list, lambda);
   }
