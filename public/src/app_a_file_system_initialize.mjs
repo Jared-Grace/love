@@ -1,3 +1,4 @@
+import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
 import { app_a_download } from "../../../love/public/src/app_a_download.mjs";
 import { global_function_initialize_lambda_async } from "../../../love/public/src/global_function_initialize_lambda_async.mjs";
 import { app_a } from "../../../love/public/src/app_a.mjs";
@@ -9,6 +10,7 @@ export async function app_a_file_system_initialize() {
     return;
   }
   async function lambda2() {
+    let v = await app_api_fn(fn, args);
     let dictionary = await app_a_download();
   }
   let value2 = await global_function_initialize_lambda_async(
