@@ -1,3 +1,4 @@
+import { string_compress } from "../../../love/public/src/string_compress.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
@@ -12,7 +13,7 @@ export async function app_a_download() {
       versions: [contents],
     };
     let json = json_to(object);
-    sc;
+    let compressed = string_compress(text);
     let v = {
       path,
       data,
