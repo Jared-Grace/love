@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { json_extension } from "../../../love/public/src/json_extension.mjs";
 import { repos_folder } from "../../../love/public/src/repos_folder.mjs";
 import { list_filter_ends_with_any } from "../../../love/public/src/list_filter_ends_with_any.mjs";
@@ -10,6 +11,7 @@ export async function app_a_download_paths() {
   let ext_f = function_name_extension();
   let ext_h = html_extension();
   let ext_j = json_extension();
-  let filtered = list_filter_ends_with_any(combineds, [ext_f, ext_h, ext_j]);lm
+  let filtered = list_filter_ends_with_any(combineds, [ext_f, ext_h, ext_j]);
+  let mapped = list_map(list, function lambda(item) {});
   return filtered;
 }
