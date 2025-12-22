@@ -19,7 +19,9 @@ export async function file_exists(file_path) {
     if (n) {
       file_path = prefix + "love/" + file_path;
     }
-    log({file_path});
+    log({
+      file_path,
+    });
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
     let exists = await indexeddb_exists(
