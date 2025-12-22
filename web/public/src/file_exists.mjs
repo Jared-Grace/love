@@ -12,8 +12,9 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 export async function file_exists(file_path) {
   if (browser_is()) {
     const prefix = "../";
-    let sw = string_starts_with_not(s, prefix);
-    if (false) {
+    let n = string_starts_with_not(s, prefix);
+    if (n) {
+      file_path = prefix + "love/" + file_path;
     }
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
