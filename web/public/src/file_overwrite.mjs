@@ -1,8 +1,8 @@
+import { indexeddb_put } from "../../../love/public/src/indexeddb_put.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { json_decompress } from "../../../love/public/src/json_decompress.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
-import { indexeddb_read } from "../../../love/public/src/indexeddb_read.mjs";
 import { app_a_file_system_store } from "../../../love/public/src/app_a_file_system_store.mjs";
 import { app_a_file_system_initialize } from "../../../love/public/src/app_a_file_system_initialize.mjs";
 import { file_path_normalize } from "../../../love/public/src/file_path_normalize.mjs";
@@ -15,7 +15,7 @@ export async function file_overwrite(file_path, contents) {
     file_path = file_path_normalize(file_path);
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
-    let item = await indexeddb_read(
+    let item = await indexeddb_put(
       app_a_indexeddb_initialize,
       store,
       file_path,
