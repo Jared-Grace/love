@@ -13,6 +13,6 @@ export async function app_a_download() {
     };
     return v;
   }
-  let waited = await list_map_unordered_async(filtered, lambda2);
-  return waited;
+  let files = await list_map_unordered_async(filtered, lambda2);
+  return files;
 }
