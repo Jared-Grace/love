@@ -10,6 +10,8 @@ import { promise_is } from "../../../love/public/src/promise_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function file_exists(file_path) {
   if (browser_is()) {
+    if (false) {
+    }
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
     let exists = await indexeddb_exists(
