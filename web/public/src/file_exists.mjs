@@ -9,7 +9,8 @@ import { error } from "../../../love/public/src/error.mjs";
 import { promise_is } from "../../../love/public/src/promise_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function file_exists(file_path) {
-  if (browser_is()) {ssw
+  if (browser_is()) {
+    ssw;
     if (false) {
     }
     await app_a_file_system_initialize();
