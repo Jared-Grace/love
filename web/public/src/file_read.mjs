@@ -6,6 +6,7 @@ import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function file_read(file_path) {
   if (browser_is()) {
+    file_path = file_path_normalize(file_path);
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
     let item = await indexeddb_read(
