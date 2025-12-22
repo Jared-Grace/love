@@ -1,3 +1,4 @@
+import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { list_to_dictionary_async } from "../../../love/public/src/list_to_dictionary_async.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { app_a_download_paths } from "../../../love/public/src/app_a_download_paths.mjs";
@@ -12,7 +13,11 @@ export async function app_a_download() {
       contents,
     };
     return v;
-  }lmua
+  }
+  let waited = await list_map_unordered_async(
+    list,
+    async function lambda(item) {},
+  );
   let dictionary = await list_to_dictionary_async(filtered, lambda2);
   return dictionary;
 }
