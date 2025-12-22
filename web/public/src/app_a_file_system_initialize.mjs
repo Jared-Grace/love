@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { lambda_get } from "../../../love/public/src/lambda_get.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
@@ -19,6 +20,7 @@ export async function app_a_file_system_initialize() {
     let r = await app_api_fn(app_a_download, []);
     async function lambda(item) {
       let value_get = lambda_get(item);
+      let path = object_property_get(item, "path");
       let value3 = await indexeddb_put(db_get, "files", key, value_get);
     }
     await each_async(list, lambda);
