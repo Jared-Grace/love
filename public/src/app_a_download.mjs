@@ -7,9 +7,12 @@ export async function app_a_download() {
   let filtered = await app_a_download_paths();
   async function lambda2(path) {
     let contents = await file_read(path);
+    let data = {
+      versions: [contents],
+    };
     let v = {
       path,
-      versions: [contents],
+      data,
     };
     return v;
   }
