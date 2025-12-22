@@ -1,3 +1,4 @@
+import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 export async function folder_read_recursive_async(path_folder) {
   let folders_skipped = [];
@@ -9,7 +10,8 @@ export async function folder_read_recursive_async(path_folder) {
   });
   for (const entry of entries) {
     const fullPath = path.join(path_folder, entry.name);
-    if (entry.isFile()) {lin
+    if (entry.isFile()) {
+      let includes = list_includes(list, item);
       result.push(entry.name);
     } else if (entry.isDirectory()) {
       log(entry.name);
