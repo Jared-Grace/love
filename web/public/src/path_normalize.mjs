@@ -1,9 +1,9 @@
 export function path_normalize(path) {
-  let v = path
+  let n = path
     .replace(/\\/g, "/")
     .replace(/\/+/g, "/")
     .replace(/\/\.\//g, "/")
     .replace(/\/$/, "")
     .replace(/^\.\/+/, "");
-  return v;
+  return n;
 }
