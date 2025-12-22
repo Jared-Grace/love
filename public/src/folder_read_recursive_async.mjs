@@ -9,7 +9,7 @@ export async function folder_read_recursive_async(path_folder) {
   });
   for (const entry of entries) {
     const fullPath = path.join(path_folder, entry.name);
-    if (entry.isFile()) {
+    if (entry.isFile()) {lin
       result.push(entry.name);
     } else if (entry.isDirectory()) {
       log(entry.name);
