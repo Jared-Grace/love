@@ -12,12 +12,12 @@ export async function folder_read_recursive_skipped_async(
   });
   for (const entry of entries) {
     let name = object_property_get(entry, "name");
-    const fullPath = path.join(path_folder, name);
     if (entry.isFile()) {
       result.push(name);
     } else if (entry.isDirectory()) {
       let n = list_includes_not(folders_skipped, name);
       if (n) {
+        const fullPath = path.join(path_folder, name);
         const subFiles = await folder_read_recursive_skipped_async(
           fullPath,
           folders_skipped,
