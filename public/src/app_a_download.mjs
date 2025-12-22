@@ -14,10 +14,8 @@ export async function app_a_download() {
     };
     return v;
   }
-  let waited = await list_map_unordered_async(
-    list,
-    async function lambda(item) {},
-  );
+  async function lambda(item) {}
+  let waited = await list_map_unordered_async(list, lambda);
   let dictionary = await list_to_dictionary_async(filtered, lambda2);
   return dictionary;
 }
