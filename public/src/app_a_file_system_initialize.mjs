@@ -26,7 +26,8 @@ export async function app_a_file_system_initialize() {
       let value3 = await indexeddb_put(db_get, store, path, value_get);
     }
     await each_async(r, lambda);
-    return true;
+    let v = true;
+    return v;
   }
   let value2 = await global_function_initialize_lambda_async(
     app_a_file_system_initialize,
