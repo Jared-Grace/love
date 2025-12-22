@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { path_normalize } from "../../../love/public/src/path_normalize.mjs";
 import { string_starts_with_not } from "../../../love/public/src/string_starts_with_not.mjs";
 import { indexeddb_exists } from "../../../love/public/src/indexeddb_exists.mjs";
@@ -18,6 +19,7 @@ export async function file_exists(file_path) {
     if (n) {
       file_path = prefix + "love/" + file_path;
     }
+    log(message);
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
     let exists = await indexeddb_exists(
