@@ -1,3 +1,4 @@
+import { json_to } from "../../../love/public/src/json_to.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { app_a_download_paths } from "../../../love/public/src/app_a_download_paths.mjs";
@@ -10,6 +11,7 @@ export async function app_a_download() {
     let data = {
       versions: [contents],
     };
+    let json = json_to(object);
     let v = {
       path,
       data,
