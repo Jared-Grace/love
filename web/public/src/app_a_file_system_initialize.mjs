@@ -10,8 +10,7 @@ export async function app_a_file_system_initialize() {
     return;
   }
   async function lambda2() {
-    let v = await app_api_fn(fn, args);
-    let dictionary = await app_a_download();
+    let r = await app_api_fn(app_a_download, []);
   }
   let value2 = await global_function_initialize_lambda_async(
     app_a_file_system_initialize,
