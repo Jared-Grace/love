@@ -8,7 +8,7 @@ export async function app_a_download() {
   async function lambda2(file_path) {
     let contents = await file_read(file_path);
     let v = {
-      path:file_path,
+      path: file_path,
       contents,
     };
     return v;
