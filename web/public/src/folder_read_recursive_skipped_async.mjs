@@ -20,6 +20,8 @@ export async function folder_read_recursive_skipped_async(
     } else if (entry.isDirectory()) {
       let n = list_includes_not(folders_skipped, name);
       if (n) {
+        if (false) {
+        }
         log({
           name,
         });
