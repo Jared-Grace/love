@@ -12,6 +12,7 @@ export async function app_a_download_paths() {
   let ext_h = html_extension();
   let ext_j = json_extension();
   let filtered = list_filter_ends_with_any(combineds, [ext_f, ext_h, ext_j]);
-  let mapped = list_map(list, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list, lambda);
   return filtered;
 }
