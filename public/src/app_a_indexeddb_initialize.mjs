@@ -14,7 +14,7 @@ export async function app_a_indexeddb_initialize() {
       let b = db.objectStoreNames.contains(store_files);
       if (not(b)) {
         db.createObjectStore(store_files, {
-          keyPath: "path",
+          keyPath: "key",
         });
       }
     };
