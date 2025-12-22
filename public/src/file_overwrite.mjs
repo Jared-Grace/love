@@ -26,6 +26,7 @@ export async function file_overwrite(file_path, contents) {
         return compressed_after;
       }
       let value2 = object_property_change(previous, "compressed", lambda2);
+      return previous;
     }
     let item = await indexeddb_put(
       app_a_indexeddb_initialize,
