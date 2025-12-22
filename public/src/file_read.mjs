@@ -1,3 +1,4 @@
+import { file_path_normalize } from "../../../love/public/src/file_path_normalize.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
 import { app_a_file_system_store } from "../../../love/public/src/app_a_file_system_store.mjs";
 import { indexeddb_read } from "../../../love/public/src/indexeddb_read.mjs";
