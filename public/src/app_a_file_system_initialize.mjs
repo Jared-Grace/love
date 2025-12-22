@@ -1,3 +1,4 @@
+import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
 import { indexeddb_put } from "../../../love/public/src/indexeddb_put.mjs";
 import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
 import { app_a_download } from "../../../love/public/src/app_a_download.mjs";
@@ -12,6 +13,7 @@ export async function app_a_file_system_initialize() {
   }
   async function lambda2() {
     let r = await app_api_fn(app_a_download, []);
+    let db = await app_a_indexeddb_initialize();
     let value3 = await indexeddb_put(db_get, store, key, value_get);
   }
   let value2 = await global_function_initialize_lambda_async(
