@@ -8,6 +8,9 @@ export async function folder_read_recursive_skipped_async(
   path_folder,
   folders_skipped,
 ) {
+  log({
+    folders_skipped,
+  });
   const fs = await import("fs/promises");
   const path = await import("path");
   let result = [];
