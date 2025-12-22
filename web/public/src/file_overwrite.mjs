@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { json_compress } from "../../../love/public/src/json_compress.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { indexeddb_put } from "../../../love/public/src/indexeddb_put.mjs";
@@ -22,6 +23,7 @@ export async function file_overwrite(file_path, contents) {
       let versions = object_property_get(f, "versions");
       list_add(versions, contents);
       let compressed_after = json_compress(data);
+      object_property_set(object, property_name, value);
     }
     let item = await indexeddb_put(
       app_a_indexeddb_initialize,
