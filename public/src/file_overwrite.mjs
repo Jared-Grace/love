@@ -27,7 +27,7 @@ export async function file_overwrite(file_path, contents) {
       file_path,
       lambda,
     );
-    return last;
+    return;
   }
   await file_parent_exists_ensure(file_path);
   let fs = await import("fs");
