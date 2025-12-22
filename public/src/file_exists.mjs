@@ -12,12 +12,12 @@ export async function file_exists(file_path) {
   if (browser_is()) {
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
-    let item = await indexeddb_exists(
+    let exists = await indexeddb_exists(
       app_a_indexeddb_initialize,
       store,
       file_path,
     );
-    return item;
+    return exists;
   }
   marker("1");
   if (promise_is(file_path)) {
