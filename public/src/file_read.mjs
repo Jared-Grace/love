@@ -21,8 +21,8 @@ export async function file_read(file_path) {
     let compressed = object_property_get(item, "compressed");
     let text = string_decompress(compressed);
     let versions = object_property_get(text, "versions");
-    let last = list_last(list);
-    return text;
+    let last = list_last(versions);
+    return last;
   }
   marker("1");
   let fs = await import("fs");
