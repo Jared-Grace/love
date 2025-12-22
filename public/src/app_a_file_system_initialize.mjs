@@ -21,7 +21,7 @@ export async function app_a_file_system_initialize() {
     async function lambda(item) {
       let value_get = lambda_get(item);
       let path = object_property_get(item, "path");
-      let value3 = await indexeddb_put(db_get, "files", key, value_get);
+      let value3 = await indexeddb_put(db_get, "files", path, value_get);
     }
     await each_async(list, lambda);
   }
