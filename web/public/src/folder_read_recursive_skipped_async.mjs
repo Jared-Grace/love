@@ -19,9 +19,7 @@ export async function folder_read_recursive_skipped_async(
       result.push(name);
     } else if (entry.isDirectory()) {
       let n = list_includes_not(folders_skipped, name);
-      if (n) {
-        if (false) {
-        }
+      if (n) {$ie
         log({
           name,
         });
