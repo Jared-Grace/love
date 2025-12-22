@@ -292,6 +292,7 @@
   "oad": "object_adder",
   "lmg": "lambda_get",
   "sc": "string_compress",
-  "pnz": "path_normalize"
+  "pnz": "path_normalize",
+  "jc": "json_compress"
  }
 }
