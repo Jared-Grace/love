@@ -41,5 +41,4 @@ export function js_auto_transforms() {
   ];
   return transforms;
   return;
-  return;
 }
