@@ -4,7 +4,6 @@ import { log } from "../../../love/public/src/log.mjs";
 import { folder_read_recursive_async } from "../../../love/public/src/folder_read_recursive_async.mjs";
 import { list_includes_not } from "../../../love/public/src/list_includes_not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { error } from "console";
 export async function folder_read_recursive_skipped_async(
   path_folder,
   folders_skipped,
