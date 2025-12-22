@@ -19,7 +19,8 @@ export async function file_overwrite(file_path, contents) {
       let compressed = object_property_get(previous, "compressed");
       let f = json_decompress(compressed);
       let versions = object_property_get(f, "versions");
-      list_add(list, item2);
+      list_add(versions, contents);
+      jc;
     }
     let item = await indexeddb_put(
       app_a_indexeddb_initialize,
