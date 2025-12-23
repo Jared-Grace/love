@@ -3,9 +3,9 @@ import { js_declaration_single } from "../../../love/public/src/js_declaration_s
 export function js_declaration_params_ast_get(ast) {
   let declaration = js_declaration_single(ast);
   let params = js_declaration_params_get(declaration);
-  let v2 = {
+  let r = {
     declaration,
     params,
   };
-  return v2;
+  return r;
 }
