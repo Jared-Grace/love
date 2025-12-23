@@ -1,3 +1,4 @@
+import { app_a_choice_close } from "../../../love/public/src/app_a_choice_close.mjs";
 import { app_a_buttons_shortcuts } from "../../../love/public/src/app_a_buttons_shortcuts.mjs";
 import { app_a_on_keydown } from "../../../love/public/src/app_a_on_keydown.mjs";
 import { app_a_function_on_keydown_remove } from "../../../love/public/src/app_a_function_on_keydown_remove.mjs";
@@ -47,12 +48,9 @@ export function app_a_identifier(a) {
     let o = app_a_overlay(a, on_keydowns, on_keydown);
     let overlay_close = object_property_get(o, "overlay_close");
     let overlay = object_property_get(o, "overlay");
+    let v = app_a_choice_close(overlay_close);
     let choices = [
-      {
-        shortcut: "x",
-        text: app_a_overlay_close_text(),
-        fn: overlay_close,
-      },
+      v,
       {
         shortcut: "c",
         text: "Copy",
