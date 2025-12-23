@@ -1,3 +1,4 @@
+import { emoji_down } from "../../../love/public/src/emoji_down.mjs";
 import { app_a_upload } from "../../../love/public/src/app_a_upload.mjs";
 import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
 import { object_properties_from } from "../../../love/public/src/object_properties_from.mjs";
@@ -75,7 +76,8 @@ export async function app_a_function(context) {
   }
   let b2 = app_a_button(root, a, upload);
   function lambda4() {}
-  let b3 = app_a_button(root2, text2, lambda4);
+  let text2 = emoji_down();
+  let b3 = app_a_button(root, text2, lambda4);
   let div = html_div(root);
   html_font_jetbrains_mono(div);
   html_style_assign(div, {
