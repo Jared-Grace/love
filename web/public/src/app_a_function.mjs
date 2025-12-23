@@ -1,7 +1,7 @@
+import { app_a_upload } from "../../../love/public/src/app_a_upload.mjs";
 import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
 import { object_properties_from } from "../../../love/public/src/object_properties_from.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -70,11 +70,8 @@ export async function app_a_function(context) {
       let o = object_properties_from({}, ["key", "versions"], item2);
       return o;
     }
-    let mapped = list_map(filtered, lambda2);
-    log({
-      mapped,
-    });
-    let r = await app_api_fn(fn, args);
+    let deltas = list_map(filtered, lambda2);
+    let r = await app_api_fn(app_a_upload, [deltas]);
   }
   let b2 = app_a_button(root, a, upload);
   let div = html_div(root);
