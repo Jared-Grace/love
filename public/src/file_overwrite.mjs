@@ -22,7 +22,7 @@ export async function file_overwrite(file_path, contents) {
         let f = json_decompress(compressed_before);
         let versions = object_property_get(f, "versions");
         list_add(versions, contents);
-        let compressed_after = json_compress(data);
+        let compressed_after = json_compress(f);
         return compressed_after;
       }
       object_property_change(previous, "compressed", lambda2);
