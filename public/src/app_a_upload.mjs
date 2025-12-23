@@ -1,3 +1,4 @@
+import { file_open } from "../../../love/public/src/file_open.mjs";
 import { list_skip_1 } from "../../../love/public/src/list_skip_1.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -19,8 +20,10 @@ export async function app_a_upload(deltas) {
     let contents = await file_read(key);
     let versions = object_property_get(d, "versions");
     let skipped = list_skip_1(versions);
-    async function lambda3(item) {}
-    await each_async(list, lambda3);
+    async function lambda3(item) {
+      await file_open(f_path);
+    }
+    await each_async(skipped, lambda3);
   }
   await each_async(deltas, lambda2);
   marker("1");
