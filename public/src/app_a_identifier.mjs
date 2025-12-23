@@ -34,7 +34,6 @@ export function app_a_identifier(a) {
   let node = object_property_get(a, "node");
   let parent = object_property_get(a, "parent");
   let context = object_property_get(a, "context");
-  let parsed = object_property_get(a, "parsed");
   let name = object_property_get(node, "name");
   let a2 = js_special_arguments();
   let span = null;
@@ -91,6 +90,7 @@ export function app_a_identifier(a) {
           await html_select(input);
           async function lambda23() {
             let ast = object_property_get(a, "ast");
+            let parsed = object_property_get(a, "parsed");
             let name_new = html_value_get(input);
             await js_identifier_rename_imports_fix(ast, name, name_new);
             await file_js_unparse(parsed);
