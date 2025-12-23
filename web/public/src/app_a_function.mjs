@@ -1,6 +1,5 @@
+import { app_a_buttons_shortcuts } from "../../../love/public/src/app_a_buttons_shortcuts.mjs";
 import { app_a_on_keydown } from "../../../love/public/src/app_a_on_keydown.mjs";
-import { app_a_shortcuts_each } from "../../../love/public/src/app_a_shortcuts_each.mjs";
-import { app_a_button_shortcut } from "../../../love/public/src/app_a_button_shortcut.mjs";
 import { emoji_sync } from "../../../love/public/src/emoji_sync.mjs";
 import { indexeddb_store_clear } from "../../../love/public/src/indexeddb_store_clear.mjs";
 import { app_a_file_system_initialize_download } from "../../../love/public/src/app_a_file_system_initialize_download.mjs";
@@ -95,10 +94,7 @@ export async function app_a_function(context) {
       fn: sync,
     },
   ];
-  function lambda3(shortcut, text, fn) {
-    let b3 = app_a_button_shortcut(root, shortcut, text, fn);
-  }
-  app_a_shortcuts_each(choices, lambda3);
+  app_a_buttons_shortcuts(choices, root);
   function app_a_function_on_keydown(e) {
     app_a_on_keydown(e, choices);
   }
