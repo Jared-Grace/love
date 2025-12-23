@@ -15,7 +15,10 @@ export async function app_a_upload(deltas) {
     let versions = object_property_get(d, "versions");
     let contents = await file_read(key);
     let first = list_first(versions);
-    log(message);
+    log({
+      contents,
+      first,
+    });
     equal_assert(contents, first);
   }
   await each_async(deltas, lambda);
