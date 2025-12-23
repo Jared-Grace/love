@@ -1,3 +1,4 @@
+import { app_a_on_keydown } from "../../../love/public/src/app_a_on_keydown.mjs";
 import { app_a_shortcuts_each } from "../../../love/public/src/app_a_shortcuts_each.mjs";
 import { app_a_button_shortcut } from "../../../love/public/src/app_a_button_shortcut.mjs";
 import { emoji_sync } from "../../../love/public/src/emoji_sync.mjs";
@@ -20,8 +21,6 @@ import { emoji_up } from "../../../love/public/src/emoji_up.mjs";
 import { sleep_0 } from "../../../love/public/src/sleep_0.mjs";
 import { app_a_on_keydown_add } from "../../../love/public/src/app_a_on_keydown_add.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
-import { html_on_keydown_stop_logic } from "../../../love/public/src/html_on_keydown_stop_logic.mjs";
-import { equal } from "../../../love/public/src/equal.mjs";
 import { app_a_function_node } from "../../../love/public/src/app_a_function_node.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_font_jetbrains_mono } from "../../../love/public/src/html_font_jetbrains_mono.mjs";
@@ -101,16 +100,7 @@ export async function app_a_function(context) {
   }
   app_a_shortcuts_each(choices, lambda3);
   function app_a_function_on_keydown(e) {
-    html_on_keydown_stop_logic(e);
-    let k = object_property_get(e, "key");
-    function lambda5(c) {
-      let letter2 = object_property_get(c, "shortcut");
-      if (equal(k, letter2)) {
-        let fn2 = object_property_get(c, "fn");
-        fn2();
-      }
-    }
-    app_a_shortcuts_each(choices, lambda5);
+    app_a_on_keydown(e, choices);
   }
   let div = html_div(root);
   html_font_jetbrains_mono(div);
