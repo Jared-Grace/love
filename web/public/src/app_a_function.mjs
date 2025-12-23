@@ -1,3 +1,4 @@
+import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 import { app_a_overlay_container } from "../../../love/public/src/app_a_overlay_container.mjs";
 import { app_a_choice_close } from "../../../love/public/src/app_a_choice_close.mjs";
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
@@ -116,6 +117,7 @@ export async function app_a_function(context) {
             app_a_on_keydown(e, choices);
           }
           let div = app_a_overlay_container(overlay);
+          let v2 = json_format_to(object);
           app_a_buttons_shortcuts(choices, overlay);
           log({
             r,
