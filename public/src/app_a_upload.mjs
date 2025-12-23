@@ -1,7 +1,6 @@
-import { each } from "../../../love/public/src/each.mjs";
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export function app_a_upload(deltas) {
-  function lambda(item) {}
-  each(list, lambda);
+export async function app_a_upload(deltas) {
+  await each_async(list, async function lambda(item) {});
   marker("1");
 }
