@@ -78,12 +78,12 @@ export async function app_a_function(context) {
   }
   let b2 = app_a_button(root, a, upload);
   let text2 = emoji_down();
-  async function lambda4() {
+  async function download() {
     let store = app_a_file_system_store();
     await indexeddb_store_clear(app_a_indexeddb_initialize, store);
     await app_a_file_system_initialize_download();
   }
-  let b3 = app_a_button(root, text2, lambda4);
+  let b3 = app_a_button(root, text2, download);
   let div = html_div(root);
   html_font_jetbrains_mono(div);
   html_style_assign(div, {
