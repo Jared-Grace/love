@@ -13,6 +13,7 @@ export async function function_dependencies_code_call(f_name) {
     ${call}`;
   let v2 = {
     code,
+    externals,
   };
   return v2;
 }
