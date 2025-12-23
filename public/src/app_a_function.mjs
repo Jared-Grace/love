@@ -1,3 +1,4 @@
+import { object_properties_from_empty } from "../../../love/public/src/object_properties_from_empty.mjs";
 import { list_empty_is_assert } from "../../../love/public/src/list_empty_is_assert.mjs";
 import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
 import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
@@ -16,7 +17,6 @@ import { app_a_file_system_initialize_download } from "../../../love/public/src/
 import { emoji_down } from "../../../love/public/src/emoji_down.mjs";
 import { app_a_upload } from "../../../love/public/src/app_a_upload.mjs";
 import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
-import { object_properties_from } from "../../../love/public/src/object_properties_from.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
@@ -71,7 +71,8 @@ export async function app_a_function(context) {
     each(all, lambda);
     let filtered = list_filter_property(all, "changed", true);
     function lambda2(item2) {
-      let o = object_properties_from({}, ["key", "versions"], item2);
+      const properties = ["key", "versions"];
+      let o = object_properties_from_empty(properties, item2);
       return o;
     }
     let deltas = list_map(filtered, lambda2);
