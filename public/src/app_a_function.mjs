@@ -1,3 +1,4 @@
+import { emoji_sync } from "../../../love/public/src/emoji_sync.mjs";
 import { indexeddb_store_clear } from "../../../love/public/src/indexeddb_store_clear.mjs";
 import { app_a_file_system_initialize_download } from "../../../love/public/src/app_a_file_system_initialize_download.mjs";
 import { emoji_down } from "../../../love/public/src/emoji_down.mjs";
@@ -84,8 +85,11 @@ export async function app_a_function(context) {
     await app_a_file_system_initialize_download();
   }
   let b3 = app_a_button(root, text2, download);
-  async function lambda4() {await download()}
-  let b4 = app_a_button(root, emoji_sync(), lambda4);
+  async function lambda4() {
+    await download();
+  }
+  let text3 = emoji_sync();
+  let b4 = app_a_button(root, text3, lambda4);
   let div = html_div(root);
   html_font_jetbrains_mono(div);
   html_style_assign(div, {
@@ -104,7 +108,3 @@ export async function app_a_function(context) {
     app_a_function_on_keydown,
   });
 }
-function emoji_sync() {
-  return '🔄';
-}
-
