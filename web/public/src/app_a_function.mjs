@@ -122,7 +122,7 @@ export async function app_a_function(context) {
             r,
           });
           let j = json_format_to(r);
-          let pre = html_pre_text(root2, text3);
+          let pre = html_pre_text(div, j);
           app_a_buttons_shortcuts(choices, overlay);
         }
         let result = await html_loading(lambda5);
