@@ -1,3 +1,4 @@
+import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_loading } from "../../../love/public/src/html_loading.mjs";
 import { function_dependencies_code_call } from "../../../love/public/src/function_dependencies_code_call.mjs";
@@ -104,6 +105,7 @@ export async function app_a_function(context) {
         async function lambda5() {
           let middle = await function_dependencies_code_call(f_name);
           let r = await eval(middle);
+          let o = app_a_overlay(a, on_keydowns, () => {});
           log({
             r,
           });
