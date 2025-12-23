@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { js_imports_all } from "../../../love/public/src/js_imports_all.mjs";
@@ -14,8 +15,9 @@ export function js_imports_declarations(ast) {
   let vs = js_imports_all(ast);
   function lambda2(la) {
     function lambda(v) {
-      let { node } = v;
-      let { specifiers, source } = node;
+      let node = object_property_get(v, "node");
+      let source = object_property_get(node, "source");
+      let specifiers = object_property_get(node, "specifiers");
       let a = list_size_1(specifiers);
       if (not(a)) {
         return;
@@ -24,12 +26,14 @@ export function js_imports_declarations(ast) {
       if (not(a2)) {
         return;
       }
-      let { value } = source;
+      let value = object_property_get(source, "value");
       let a3 = string_starts_with(value, ".");
       if (not(a3)) {
         return;
       }
-      let { imported, local } = list_single(specifiers);
+      let v2 = list_single(specifiers);
+      let local = object_property_get(v2, "local");
+      let imported = object_property_get(v2, "imported");
       let both = [imported, local];
       let mapped = list_map_property(both, "name");
       let unique = list_unique(mapped);
