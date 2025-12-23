@@ -9,19 +9,18 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_a_upload(deltas) {
   async function lambda(d) {
     let key = object_property_get(d, "key");
-    let contents = await file_read(key);
     let versions = object_property_get(d, "versions");
+    let contents = await file_read(key);
     let first = list_first(versions);
     equal_assert(contents, first);
   }
   await each_async(deltas, lambda);
   async function lambda2(d) {
     let key = object_property_get(d, "key");
-    let contents = await file_read(key);
     let versions = object_property_get(d, "versions");
     let skipped = list_skip_1(versions);
     async function lambda3(item) {
-      let result = await file_overwrite(file_path, contents2);
+      let result = await file_overwrite(key, item);
     }
     await each_async(skipped, lambda3);
   }
