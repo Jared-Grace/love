@@ -75,8 +75,10 @@ export async function app_a_function(context) {
     let r = await app_api_fn(app_a_upload, [deltas]);
   }
   let b2 = app_a_button(root, a, upload);
-  function lambda4() {}
   let text2 = emoji_down();
+  async function lambda4() {
+    let r = await app_api_fn(app_a_upload, [deltas]);
+  }
   let b3 = app_a_button(root, text2, lambda4);
   let div = html_div(root);
   html_font_jetbrains_mono(div);
