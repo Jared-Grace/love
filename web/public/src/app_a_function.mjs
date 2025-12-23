@@ -108,6 +108,7 @@ export async function app_a_function(context) {
       fn: async function lambda3() {
         async function lambda5() {
           let v2 = await function_dependencies_code_call(f_name);
+          let externals = object_property_get(v2, "externals");
           let code = object_property_get(v2, "code");
           let o = app_a_overlay(
             {
