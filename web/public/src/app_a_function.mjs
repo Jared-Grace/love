@@ -1,3 +1,4 @@
+import { app_a_file_system_initialize_download } from "../../../love/public/src/app_a_file_system_initialize_download.mjs";
 import { emoji_down } from "../../../love/public/src/emoji_down.mjs";
 import { app_a_upload } from "../../../love/public/src/app_a_upload.mjs";
 import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
@@ -77,7 +78,7 @@ export async function app_a_function(context) {
   let b2 = app_a_button(root, a, upload);
   let text2 = emoji_down();
   async function lambda4() {
-    let r = await app_api_fn(app_a_upload, [deltas]);
+    await app_a_file_system_initialize_download();
   }
   let b3 = app_a_button(root, text2, lambda4);
   let div = html_div(root);
