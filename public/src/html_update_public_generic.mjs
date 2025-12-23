@@ -10,8 +10,8 @@ export async function html_update_public_generic(f_name, file_path, name) {
   let joined = await function_name_repo_path_combine(f_name, file_path);
   var v = await html_update_externals(f_name);
   let scripts = object_property_get(v, "scripts");
-  let d = object_property_get(v, "d");
-  let code = object_property_get(d, "code");
+  let dependencies = object_property_get(v, "dependencies");
+  let code = object_property_get(dependencies, "code");
   let body = html_code_script_module(code);
   list_add(scripts, body);
   let joined2 = list_join_newline(scripts);
