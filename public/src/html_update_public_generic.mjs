@@ -1,3 +1,4 @@
+import { object_properties_from } from "../../../love/public/src/object_properties_from.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { function_dependencies_code_call } from "../../../love/public/src/function_dependencies_code_call.mjs";
@@ -9,8 +10,9 @@ export async function html_update_public_generic(f_name, file_path, name) {
   let joined = await function_name_repo_path_combine(f_name, file_path);
   const v = await function_dependencies_code_call(f_name);
   let externals = object_property_get(v, "externals");
-  let ne = list_empty_not_is(list);
-  if (false) {
+  let ne = list_empty_not_is(externals);
+  if (ne) {
+    let to2 = object_properties_from(to, properties, from);
   }
   let code = object_property_get(v, "code");
   let body = html_code_script_module(code);
