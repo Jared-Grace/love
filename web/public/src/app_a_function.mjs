@@ -100,7 +100,7 @@ export async function app_a_function(context) {
   function lambda3(shortcut, text, fn) {
     let b3 = app_a_button_shortcut(root, shortcut, text, fn);
   }
-  app_a_shortcuts_each(lambda3, choices);
+  app_a_shortcuts_each(choices, lambda3);
   function app_a_function_on_keydown(e) {
     html_on_keydown_stop_logic(e);
     let k = object_property_get(e, "key");
@@ -111,7 +111,7 @@ export async function app_a_function(context) {
         fn2();
       }
     }
-    app_a_shortcuts_each(lambda5, choices);
+    app_a_shortcuts_each(choices, lambda5);
   }
   let div = html_div(root);
   html_font_jetbrains_mono(div);
