@@ -100,11 +100,10 @@ export async function app_a_function(context) {
       shortcut: "r",
       text: emoji_run(),
       fn: async function lambda3() {
-        async function lambda5() {}
-        let result = await html_loading(lambda5);
+        async function lambda5() {
         let middle = await function_dependencies_code_call(f_name);
-        let r = await eval(middle);
-        alert(r);
+        let r = await eval(middle);}
+        let result = await html_loading(lambda5);
       },
     },
   ];
