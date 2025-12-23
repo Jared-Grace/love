@@ -1,3 +1,4 @@
+import { app_a_overlay_container } from "../../../love/public/src/app_a_overlay_container.mjs";
 import { app_a_choice_close } from "../../../love/public/src/app_a_choice_close.mjs";
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -114,6 +115,7 @@ export async function app_a_function(context) {
           function on_keydown(e) {
             app_a_on_keydown(e, choices);
           }
+          let div3 = app_a_overlay_container(overlay);
           app_a_buttons_shortcuts(choices, overlay);
           log({
             r,
