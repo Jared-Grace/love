@@ -7,6 +7,6 @@ export function html_code_script_importmap(middle, imports) {
     imports,
   });
   const script_type = "importmap";
-  let code = html_code_script_module_generic(script_type, middle);
+  let code = html_code_script_module_generic(script_type, j);
   return code;
 }
