@@ -44,10 +44,10 @@ import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function app_a_function_node(a) {
+  let node = object_property_get(a, "node");
+  let parent = object_property_get(a, "parent");
   let ast = object_property_get(a, "ast");
   let context = object_property_get(a, "context");
-  let parent = object_property_get(a, "parent");
-  let node = object_property_get(a, "node");
   let parsed = object_property_get(a, "parsed");
   let type = object_property_get(node, "type");
   let lookup = {
@@ -143,7 +143,7 @@ export function app_a_function_node(a) {
       }
     },
     ["Identifier"]: function lambda9() {
-      app_a_identifier(node, parent, context, a, ast, parsed);
+      app_a_identifier(a);
     },
     ["Literal"]: function lambda10() {
       let raw = object_property_get(node, "raw");
