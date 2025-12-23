@@ -15,7 +15,6 @@ export async function app_a_upload(deltas) {
     let versions = object_property_get(d, "versions");
     let contents = await file_read(key);
     let first = list_first(versions);
-    marker("1");
     let eq = equal(contents, first);
     assert_json(eq, {
       contents,
