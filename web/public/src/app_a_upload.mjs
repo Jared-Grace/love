@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { git_acp_folder } from "../../../love/public/src/git_acp_folder.mjs";
 import { repos_paths_map_unordered } from "../../../love/public/src/repos_paths_map_unordered.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
@@ -14,6 +15,7 @@ export async function app_a_upload(deltas) {
     let versions = object_property_get(d, "versions");
     let contents = await file_read(key);
     let first = list_first(versions);
+    log(message);
     equal_assert(contents, first);
   }
   await each_async(deltas, lambda);
