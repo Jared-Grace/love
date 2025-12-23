@@ -1,3 +1,4 @@
+import { object_properties_from } from "../../../love/public/src/object_properties_from.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
@@ -64,7 +65,9 @@ export async function app_a_function(context) {
     }
     each(all, lambda);
     let filtered = list_filter_property(all, "changed", true);
-    function lambda2(item2) {object_properties_from}
+    function lambda2(item2) {
+      object_properties_from(to, properties, from);
+    }
     let mapped = list_map(list, lambda2);
     log({
       filtered,
