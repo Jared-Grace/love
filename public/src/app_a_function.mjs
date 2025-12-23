@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
@@ -63,6 +64,7 @@ export async function app_a_function(context) {
     }
     each(all, lambda);
     let filtered = list_filter_property(all, "changed", true);
+    let mapped = list_map(list, function lambda2(item2) {});
     log({
       filtered,
     });
