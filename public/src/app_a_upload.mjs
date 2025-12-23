@@ -37,6 +37,7 @@ export async function app_a_upload(deltas) {
     await each_async(skipped, lambda3);
   }
   await each_async(deltas, lambda2);
-  invoke(function lambda5() {});
+  function lambda5() {}
+  invoke(lambda5);
   marker("1");
 }
