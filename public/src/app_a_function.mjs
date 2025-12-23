@@ -98,11 +98,14 @@ export async function app_a_function(context) {
   function app_a_function_on_keydown(e) {
     html_on_keydown_stop_logic(e);
     let k = object_property_get(e, "key");
-    function lambda5(item3) {}
-    each(list, lambda5);
-    if (equal(k, "s")) {
-      search();
+    function lambda5(c) {
+      let letter2 = object_property_get(c, "letter");
+      let fn2 = object_property_get(c, "fn");
+      if (equal(k, "s")) {
+        search();
+      }
     }
+    each(choices, lambda5);
   }
   let div = html_div(root);
   html_font_jetbrains_mono(div);
