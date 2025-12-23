@@ -1,3 +1,4 @@
+import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { list_wait } from "../../../love/public/src/list_wait.mjs";
@@ -12,7 +13,8 @@ export async function function_dependencies_code(f_name) {
   let waited = await list_wait(mapped);
   let mapped2 = list_map_property(waited, "declaration");
   let externals = list_map_property(waited, "externals");
-  let combined = list_concat_multiple(lists);
+  let combined = list_concat_multiple(externals);
+  let unique = list_unique(list);
   let waited2 = list_map(mapped2, js_unparse);
   let code = list_join_newline(waited2);
   let v = {
