@@ -1,3 +1,4 @@
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { json_decompress } from "../../../love/public/src/json_decompress.mjs";
@@ -57,6 +58,7 @@ export async function app_a_function(context) {
       object_property_set_exists_not(item, "versions", versions);
     }
     each(list, lambda);
+    let filtered = list_filter(list2, function lambda2(item2) {});
   }
   let b2 = app_a_button(root, a, upload);
   let div = html_div(root);
