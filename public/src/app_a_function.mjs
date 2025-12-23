@@ -36,13 +36,6 @@ import { storage_local_get } from "../../../love/public/src/storage_local_get.mj
 export async function app_a_function(context) {
   let app_fn = object_property_get(context, "app_fn");
   let on_keydowns = app_a_on_keydown_add(context, app_a_function_on_keydown);
-  function app_a_function_on_keydown(e) {
-    html_on_keydown_stop_logic(e);
-    let k = object_property_get(e, "key");
-    if (equal(k, "s")) {
-      search();
-    }
-  }
   let f_name = storage_local_get(app_fn, "f_name_selected");
   let parsed = await function_parse(f_name);
   let ast = object_property_get(parsed, "ast");
@@ -100,8 +93,16 @@ export async function app_a_function(context) {
     },
   ];
   let b4 = app_a_button(root, text3, lambda4);
-  function lambda3(item3) {}
-  each(list, lambda3);
+  function lambda3(c) {}
+  each(choices, lambda3);
+  function app_a_function_on_keydown(e) {
+    html_on_keydown_stop_logic(e);
+    let k = object_property_get(e, "key");
+    each(list, function lambda5(item3) {});
+    if (equal(k, "s")) {
+      search();
+    }
+  }
   let div = html_div(root);
   html_font_jetbrains_mono(div);
   html_style_assign(div, {
