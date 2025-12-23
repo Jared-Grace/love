@@ -84,7 +84,8 @@ export async function app_a_function(context) {
     await app_a_file_system_initialize_download();
   }
   let b3 = app_a_button(root, text2, download);
-  let b4 = app_a_button(root2, text3, function lambda4() {});
+  function lambda4() {}
+  let b4 = app_a_button(root2, text3, lambda4);
   let div = html_div(root);
   html_font_jetbrains_mono(div);
   html_style_assign(div, {
