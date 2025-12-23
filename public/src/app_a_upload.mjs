@@ -1,4 +1,4 @@
-import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
+import { list_skip_1 } from "../../../love/public/src/list_skip_1.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
@@ -20,7 +20,7 @@ export async function app_a_upload(deltas) {
     let versions = object_property_get(d, "versions");
     let first = list_first(versions);
     equal_assert(contents, first);
-    let result = list_first_remaining(list);
+    let skipped = list_skip_1(list);
   }
   await each_async(deltas, lambda2);
   marker("1");
