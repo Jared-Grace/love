@@ -293,6 +293,7 @@
   "lmg": "lambda_get",
   "sc": "string_compress",
   "pnz": "path_normalize",
-  "jc": "json_compress"
+  "jc": "json_compress",
+  "aab": "app_a_button"
  }
 }
