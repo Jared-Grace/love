@@ -107,7 +107,8 @@ export async function app_a_function(context) {
       text: emoji_run(),
       fn: async function lambda3() {
         async function lambda5() {
-          let middle = await function_dependencies_code_call(f_name);
+          let v2 = await function_dependencies_code_call(f_name);
+          let code = object_property_get(v2, "code");
           let o = app_a_overlay(
             {
               root,
@@ -124,7 +125,7 @@ export async function app_a_function(context) {
             app_a_on_keydown(e, choices);
           }
           let div = app_a_overlay_container(overlay);
-          let r = await eval(middle);
+          let r = await eval(code);
           log({
             r,
           });
