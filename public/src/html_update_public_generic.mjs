@@ -1,6 +1,5 @@
+import { list_add_join_newline } from "../../../love/public/src/list_add_join_newline.mjs";
 import { html_update_externals } from "../../../love/public/src/html_update_externals.mjs";
-import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
-import { list_add } from "../../../love/public/src/list_add.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { file_open } from "../../../love/public/src/file_open.mjs";
 import { html_overwrite } from "../../../love/public/src/html_overwrite.mjs";
@@ -13,8 +12,7 @@ export async function html_update_public_generic(f_name, file_path, name) {
   let dependencies = object_property_get(v, "dependencies");
   let code = object_property_get(dependencies, "code");
   let body = html_code_script_module(code);
-  list_add(scripts, body);
-  let joined2 = list_join_newline(scripts);
+  let joined2 = list_add_join_newline(scripts, body);
   await html_overwrite(name, joined, joined2);
   await file_open(joined);
 }
