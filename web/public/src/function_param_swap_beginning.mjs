@@ -3,10 +3,7 @@ import { js_declaration_params_ast_get } from "../../../love/public/src/js_decla
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_swap_at } from "../../../love/public/src/list_swap_at.mjs";
 import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
-export async function function_param_swap_beginning(
-  param_name_a,
-  param_name_b,
-) {
+export async function function_param_swap_beginning() {
   marker("1");
   let index_a = 0;
   let index_b = 1;
