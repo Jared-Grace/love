@@ -43,9 +43,9 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
   }
   async function on_pointerdown() {
     let on_keydowns = object_property_get(context, "on_keydowns");
-    let v = app_a_overlay(a, on_keydowns, on_keydown);
-    let overlay_close = object_property_get(v, "overlay_close");
-    let overlay = object_property_get(v, "overlay");
+    let o = app_a_overlay(a, on_keydowns, on_keydown);
+    let overlay_close = object_property_get(o, "overlay_close");
+    let overlay = object_property_get(o, "overlay");
     let choices = [
       {
         shortcut: "x",
