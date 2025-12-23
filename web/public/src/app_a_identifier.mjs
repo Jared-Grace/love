@@ -119,20 +119,17 @@ export function app_a_identifier(a) {
     function on_keydown(e) {
       html_on_keydown_stop_logic(e);
       let key2 = object_property_get(e, "key");
-      choices_each(on_choice);
+      app_a_shortcuts_each(on_choice, choices);
       function on_choice(shortcut, text, fn) {
         if (equal(key2, shortcut)) {
           fn();
         }
       }
     }
-    choices_each(on_choice);
+    app_a_shortcuts_each(on_choice, choices);
     function on_choice(shortcut, text, fn) {
       let b3 = app_a_button_shortcut(overlay, shortcut, text, fn);
       return b3;
-    }
-    function choices_each(on_choice) {
-      app_a_shortcuts_each(on_choice, choices);
     }
   }
   html_on_pointerdown(span, on_pointerdown);
