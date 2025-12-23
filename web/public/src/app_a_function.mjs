@@ -58,7 +58,8 @@ export async function app_a_function(context) {
       object_property_set_exists_not(item, "versions", versions);
     }
     each(list, lambda);
-    let filtered = list_filter(list2, function lambda2(item2) {});
+    function lambda2(item2) {}
+    let filtered = list_filter(list2, lambda2);
   }
   let b2 = app_a_button(root, a, upload);
   let div = html_div(root);
