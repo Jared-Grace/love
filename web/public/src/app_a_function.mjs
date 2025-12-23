@@ -115,7 +115,7 @@ export async function app_a_function(context) {
           function on_keydown(e) {
             app_a_on_keydown(e, choices);
           }
-          let div3 = app_a_overlay_container(overlay);
+          let div = app_a_overlay_container(overlay);
           app_a_buttons_shortcuts(choices, overlay);
           log({
             r,
