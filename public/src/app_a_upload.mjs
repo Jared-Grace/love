@@ -26,7 +26,7 @@ export async function app_a_upload(deltas) {
       marker("1");
       await repos_paths_map_unordered(each_folder);
       async function each_folder(folder) {
-        await git_acp_folder(folder, message);
+        await git_acp_folder(folder, app_a_upload.name);
       }
     }
     await each_async(skipped, lambda3);
