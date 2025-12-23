@@ -114,6 +114,7 @@ export async function app_a_function(context) {
           function on_keydown(e) {
             app_a_on_keydown(e, choices);
           }
+          app_a_buttons_shortcuts(choices, overlay);
           log({
             r,
           });
