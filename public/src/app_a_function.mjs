@@ -1,3 +1,4 @@
+import { app_api_cache_indexeddb } from "../../../love/public/src/app_api_cache_indexeddb.mjs";
 import { indexeddb_get_all } from "../../../love/public/src/indexeddb_get_all.mjs";
 import { emoji_up } from "../../../love/public/src/emoji_up.mjs";
 import { sleep_0 } from "../../../love/public/src/sleep_0.mjs";
@@ -43,7 +44,7 @@ export async function app_a_function(context) {
   let b = app_a_button(root, text, search);
   let a = emoji_up();
   async function upload() {
-    let v3 = await indexeddb_get_all(db_get, store);
+    let v3 = await indexeddb_get_all(app_api_cache_indexeddb, store);
   }
   let b2 = app_a_button(root, a, upload);
   let div = html_div(root);
