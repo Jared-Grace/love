@@ -71,7 +71,7 @@ export async function app_a_function(context) {
     }
     let mapped = list_map(list, lambda2);
     log({
-      filtered,
+      mapped,
     });
   }
   let b2 = app_a_button(root, a, upload);
