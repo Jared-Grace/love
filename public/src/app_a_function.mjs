@@ -66,7 +66,7 @@ export async function app_a_function(context) {
     each(all, lambda);
     let filtered = list_filter_property(all, "changed", true);
     function lambda2(item2) {
-      object_properties_from({}, ["key", "versions"], item2);
+      let o = object_properties_from({}, ["key", "versions"], item2);
     }
     let mapped = list_map(list, lambda2);
     log({
