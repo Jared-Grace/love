@@ -37,7 +37,7 @@ export async function html_update_dev(name) {
   const middle = `${code}
     ${call}`;
   let body = html_code_script_module(middle);
-  var v = await html_update_externals(f_name);
+  var v = await html_update_externals(name_prefixed);
   let scripts = object_property_get(v, "scripts");
   let joined2 = list_add_join_newline(scripts, body);
   await html_overwrite(name, joined, joined2);
