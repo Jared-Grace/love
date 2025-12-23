@@ -79,24 +79,27 @@ export async function app_a_function(context) {
     let text2 = emoji_down();
     let b3 = app_a_button(root, text2, download);
   }
-  async function lambda4() {
+  async function sync() {
     await upload();
     await download();
   }
-  let text3 = emoji_sync();
   let choices = [
     {
-      letter: "s",
+      letter: "f",
       text: emoji_search(),
       fn: search,
     },
+    {
+      letter: "s",
+      text: emoji_sync(),
+      fn: sync,
+    },
   ];
-  let b4 = app_a_button(root, text3, lambda4);
   function lambda3(c) {
     let letter3 = object_property_get(c, "letter");
     let text4 = object_property_get(c, "text");
     let fn3 = object_property_get(c, "fn");
-    let b = app_a_button(root, text, search);
+    let b = app_a_button(root, text4, fn3);
   }
   each(choices, lambda3);
   function app_a_function_on_keydown(e) {
