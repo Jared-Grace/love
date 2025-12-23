@@ -1,5 +1,5 @@
+import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
-import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { json_decompress } from "../../../love/public/src/json_decompress.mjs";
@@ -61,8 +61,7 @@ export async function app_a_function(context) {
       object_property_set_exists_not(item, "changed", m);
     }
     each(list, lambda);
-    function lambda2(item2) {}
-    let filtered = list_filter(list2, lambda2);
+    let filtered = list_filter_property(all, "changed", true);
   }
   let b2 = app_a_button(root, a, upload);
   let div = html_div(root);
