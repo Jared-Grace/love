@@ -1,3 +1,4 @@
+import { app_a_choice_close } from "../../../love/public/src/app_a_choice_close.mjs";
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_loading } from "../../../love/public/src/html_loading.mjs";
@@ -109,6 +110,8 @@ export async function app_a_function(context) {
             app_a_on_keydown(e, choices);
           }
           let o = app_a_overlay(a, on_keydowns, on_keydown);
+          let v = app_a_choice_close(overlay_close);
+          let choices = [v];
           log({
             r,
           });
