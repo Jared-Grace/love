@@ -1,3 +1,4 @@
+import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
 import { object_properties_from } from "../../../love/public/src/object_properties_from.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -73,6 +74,7 @@ export async function app_a_function(context) {
     log({
       mapped,
     });
+    let r = await app_api_fn(fn, args);
   }
   let b2 = app_a_button(root, a, upload);
   let div = html_div(root);
