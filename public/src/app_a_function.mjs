@@ -1,3 +1,4 @@
+import { app_a_file_system_store } from "../../../love/public/src/app_a_file_system_store.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
 import { indexeddb_get_all } from "../../../love/public/src/indexeddb_get_all.mjs";
 import { emoji_up } from "../../../love/public/src/emoji_up.mjs";
@@ -44,6 +45,7 @@ export async function app_a_function(context) {
   let b = app_a_button(root, text, search);
   let a = emoji_up();
   async function upload() {
+    let store = app_a_file_system_store();
     let v3 = await indexeddb_get_all(app_a_indexeddb_initialize, store);
   }
   let b2 = app_a_button(root, a, upload);
