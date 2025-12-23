@@ -30,7 +30,7 @@ export async function app_a_upload(deltas) {
       await file_overwrite(key, item);
       await repos_paths_map_unordered(each_folder);
       async function each_folder(folder) {
-        await git_acp_folder(folder, app_a_upload.name);
+        await git_ac_folder(folder, app_a_upload.name);
       }
     }
     await each_async(skipped, lambda3);
