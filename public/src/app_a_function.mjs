@@ -100,7 +100,7 @@ export async function app_a_function(context) {
     let k = object_property_get(e, "key");
     function lambda5(c) {
       let letter2 = object_property_get(c, "letter");
-      if (equal(letter2, "s")) {
+      if (equal(k, letter2)) {
         let fn2 = object_property_get(c, "fn");
         fn2();
       }
