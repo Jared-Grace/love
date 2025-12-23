@@ -1,3 +1,4 @@
+import { app_a_shortcuts_each } from "../../../love/public/src/app_a_shortcuts_each.mjs";
 import { app_a_button_shortcut } from "../../../love/public/src/app_a_button_shortcut.mjs";
 import { emoji_sync } from "../../../love/public/src/emoji_sync.mjs";
 import { indexeddb_store_clear } from "../../../love/public/src/indexeddb_store_clear.mjs";
@@ -102,6 +103,7 @@ export async function app_a_function(context) {
     let fn3 = object_property_get(c, "fn");
     let b3 = app_a_button_shortcut(root, shortcut, text, fn);
   }
+  app_a_shortcuts_each(on_choice, choices);
   each(choices, lambda3);
   function app_a_function_on_keydown(e) {
     html_on_keydown_stop_logic(e);
