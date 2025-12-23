@@ -13,7 +13,6 @@ import { equal } from "../../../love/public/src/equal.mjs";
 import { html_on_keydown_stop_logic } from "../../../love/public/src/html_on_keydown_stop_logic.mjs";
 import { app_a_function } from "../../../love/public/src/app_a_function.mjs";
 import { file_js_unparse } from "../../../love/public/src/file_js_unparse.mjs";
-import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { js_identifier_rename_imports_fix } from "../../../love/public/src/js_identifier_rename_imports_fix.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_select } from "../../../love/public/src/html_select.mjs";
@@ -89,7 +88,6 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
           async function lambda23() {
             let name_new = html_value_get(input);
             await js_identifier_rename_imports_fix(ast, name, name_new);
-            html_remove(overlay);
             await file_js_unparse(parsed);
             rename_overlay_close();
             await app_a_function(context);
