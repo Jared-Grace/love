@@ -93,7 +93,8 @@ export async function app_a_function(context) {
   }
   let text3 = emoji_sync();
   let b4 = app_a_button(root, text3, lambda4);
-  each(list, function lambda3(item3) {});
+  function lambda3(item3) {}
+  each(list, lambda3);
   let div = html_div(root);
   html_font_jetbrains_mono(div);
   html_style_assign(div, {
