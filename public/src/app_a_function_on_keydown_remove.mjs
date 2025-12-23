@@ -8,5 +8,4 @@ export function app_a_function_on_keydown_remove(a) {
     "app_a_function_on_keydown",
   );
   list_remove(on_keydowns, app_a_function_on_keydown);
-  return context;
 }
