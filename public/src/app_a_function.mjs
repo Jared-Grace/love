@@ -48,7 +48,6 @@ export async function app_a_function(context) {
     app_generic_screen_set(context, app_a_home);
   }
   let text = emoji_search();
-  let b = app_a_button(root, text, search);
   async function upload() {
     let store = app_a_file_system_store();
     let all = await indexeddb_get_all(app_a_indexeddb_initialize, store);
@@ -93,7 +92,12 @@ export async function app_a_function(context) {
     },
   ];
   let b4 = app_a_button(root, text3, lambda4);
-  function lambda3(c) {}
+  function lambda3(c) {
+    let letter3 = object_property_get(c, "letter");
+    let text4 = object_property_get(c, "text");
+    let fn3 = object_property_get(c, "fn");
+    let b = app_a_button(root, text, search);
+  }
   each(choices, lambda3);
   function app_a_function_on_keydown(e) {
     html_on_keydown_stop_logic(e);
