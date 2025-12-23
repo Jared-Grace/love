@@ -92,7 +92,13 @@ export async function app_a_function(context) {
     await download();
   }
   let text3 = emoji_sync();
-  let choices = [];
+  let choices = [
+    {
+      letter: "s",
+      text: emoji_search(),
+      fn: search,
+    },
+  ];
   let b4 = app_a_button(root, text3, lambda4);
   function lambda3(item3) {}
   each(list, lambda3);
