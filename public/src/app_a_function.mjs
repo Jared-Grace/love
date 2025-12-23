@@ -1,3 +1,4 @@
+import { indexeddb_get_all } from "../../../love/public/src/indexeddb_get_all.mjs";
 import { emoji_up } from "../../../love/public/src/emoji_up.mjs";
 import { sleep_0 } from "../../../love/public/src/sleep_0.mjs";
 import { app_a_on_keydown_add } from "../../../love/public/src/app_a_on_keydown_add.mjs";
@@ -41,7 +42,9 @@ export async function app_a_function(context) {
   let text = emoji_search();
   let b = app_a_button(root, text, search);
   let a = emoji_up();
-  function upload() {}
+  async function upload() {
+    let v3 = await indexeddb_get_all(db_get, store);
+  }
   let b2 = app_a_button(root, a, upload);
   let div = html_div(root);
   html_font_jetbrains_mono(div);
