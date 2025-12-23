@@ -101,6 +101,7 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
       text: "Open",
       fn: function lambda() {
         overlay_close();
+        let on_keydowns = object_property_get(context, "on_keydowns");
         let app_a_function_on_keydown = object_property_get(
           a,
           "app_a_function_on_keydown",
