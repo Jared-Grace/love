@@ -1,3 +1,4 @@
+import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
@@ -56,6 +57,8 @@ export async function app_a_function(context) {
       let f = json_decompress(compressed);
       let versions = object_property_get(f, "versions");
       object_property_set_exists_not(item, "versions", versions);
+      let v = list_multiple_is(list3);
+      object_property_set_exists_not(item, "changed", versions);
     }
     each(list, lambda);
     function lambda2(item2) {}
