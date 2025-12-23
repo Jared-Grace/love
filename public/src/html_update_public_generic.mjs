@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { object_properties_from_empty } from "../../../love/public/src/object_properties_from_empty.mjs";
@@ -14,6 +15,9 @@ export async function html_update_public_generic(f_name, file_path, name) {
   let joined = await function_name_repo_path_combine(f_name, file_path);
   const v = await function_dependencies_code_call(f_name);
   let externals = object_property_get(v, "externals");
+  log({
+    externals,
+  });
   let ne = list_empty_not_is(externals);
   if (ne) {
     let imports = object_properties_from_empty(externals, {
