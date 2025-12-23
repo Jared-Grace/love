@@ -100,7 +100,8 @@ export async function app_a_function(context) {
       text: emoji_run(),
       fn: async function lambda3() {
         let middle = await function_dependencies_code_call(f_name);
-        let r = eval(middle);alert(r)
+        let r = eval(middle);
+        alert(r);
       },
     },
   ];
