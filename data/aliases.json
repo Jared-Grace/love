@@ -294,6 +294,7 @@
   "sc": "string_compress",
   "pnz": "path_normalize",
   "jc": "json_compress",
-  "aab": "app_a_button"
+  "aab": "app_a_button",
+  "agm": "app_g_main"
  }
 }
