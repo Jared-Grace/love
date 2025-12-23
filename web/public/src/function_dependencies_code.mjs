@@ -11,10 +11,12 @@ export async function function_dependencies_code(f_name) {
   let mapped = list_map(ds, function_parse_declaration);
   let waited = await list_wait(mapped);
   let mapped2 = list_map_property(waited, "declaration");
+  let externals = list_map_property(waited, "externals");
   let waited2 = await list_map_unordered_async(mapped2, js_unparse);
   let code = list_join_newline(waited2);
   let v = {
     code,
+    externals,
   };
   return v;
 }
