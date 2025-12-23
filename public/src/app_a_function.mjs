@@ -48,7 +48,8 @@ export async function app_a_function(context) {
   async function upload() {
     let store = app_a_file_system_store();
     let all = await indexeddb_get_all(app_a_indexeddb_initialize, store);
-    let mapped = list_map(list, function lambda(item) {});
+    function lambda(item) {}
+    let mapped = list_map(list, lambda);
   }
   let b2 = app_a_button(root, a, upload);
   let div = html_div(root);
