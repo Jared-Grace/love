@@ -13,8 +13,8 @@ import { html_code_script_importmap } from "./html_code_script_importmap.mjs";
 export async function html_update_public_generic(f_name, file_path, name) {
   let list = [];
   let joined = await function_name_repo_path_combine(f_name, file_path);
-  const v = await function_dependencies_code_call(f_name);
-  let externals = object_property_get(v, "externals");
+  const d = await function_dependencies_code_call(f_name);
+  let externals = object_property_get(d, "externals");
   log({
     externals,
   });
@@ -28,7 +28,7 @@ export async function html_update_public_generic(f_name, file_path, name) {
     let importmap = html_code_script_importmap(imports);
     list_add(list, importmap);
   }
-  let code = object_property_get(v, "code");
+  let code = object_property_get(d, "code");
   let body = html_code_script_module(code);
   list_add(list, body);
   let joined2 = list_join_newline(list);
