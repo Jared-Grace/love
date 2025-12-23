@@ -1,7 +1,7 @@
+import { app_a_function_on_keydown_remove } from "../../../love/public/src/app_a_function_on_keydown_remove.mjs";
 import { app_a_keyword_blue } from "../../../love/public/src/app_a_keyword_blue.mjs";
 import { js_special_arguments } from "../../../love/public/src/js_special_arguments.mjs";
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
-import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
@@ -106,13 +106,7 @@ export function app_a_identifier(a) {
       text: "Open",
       fn: function lambda() {
         overlay_close();
-        let context = object_property_get(a, "context");
-        let on_keydowns = object_property_get(context, "on_keydowns");
-        let app_a_function_on_keydown = object_property_get(
-          a,
-          "app_a_function_on_keydown",
-        );
-        list_remove(on_keydowns, app_a_function_on_keydown);
+        let context = app_a_function_on_keydown_remove(a);
         app_a_function_select(context, name);
       },
     };
