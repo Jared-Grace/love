@@ -1,3 +1,4 @@
+import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { object_properties_from_empty } from "../../../love/public/src/object_properties_from_empty.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -21,10 +22,12 @@ export async function html_update_public_generic(f_name, file_path, name) {
       "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm",
     });
     let importmap = html_code_script_importmap(imports);
-    list_add(list2, item);
+    list_add(list, importmap);
   }
   let code = object_property_get(v, "code");
   let body = html_code_script_module(code);
+  list_add(list, body);
+  let joined2 = list_join_newline(list2);
   await html_overwrite(name, joined, body);
   await file_open(joined);
 }
