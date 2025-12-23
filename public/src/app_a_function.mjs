@@ -77,9 +77,9 @@ export async function app_a_function(context) {
     }
     let deltas = list_map(filtered, lambda2);
     let ne = list_empty_not_is(list);
-    if (false) {
+    if (ne) {
+      let r = await app_api_fn(app_a_upload, [deltas]);
     }
-    let r = await app_api_fn(app_a_upload, [deltas]);
   }
   async function download() {
     let store = app_a_file_system_store();
