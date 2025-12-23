@@ -66,9 +66,9 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
         fn: async function lambda15() {
           overlay_close();
           let lambda22 = html_on_enter_lambda(lambda23);
-          let v2 = app_a_overlay(a, on_keydowns, lambda22);
-          let rename_overlay_close = object_property_get(v2, "overlay_close");
-          let overlay = object_property_get(v2, "overlay");
+          let o2 = app_a_overlay(a, on_keydowns, lambda22);
+          let rename_overlay_close = object_property_get(o2, "overlay_close");
+          let overlay = object_property_get(o2, "overlay");
           let text5 = app_a_overlay_close_text();
           let component2 = app_a_button_wide(
             overlay,
