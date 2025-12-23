@@ -1,6 +1,6 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { json_decompress } from "../../../love/public/src/json_decompress.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_a_file_system_store } from "../../../love/public/src/app_a_file_system_store.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
 import { indexeddb_get_all } from "../../../love/public/src/indexeddb_get_all.mjs";
@@ -54,9 +54,9 @@ export async function app_a_function(context) {
       let compressed = object_property_get(item, "compressed");
       let f = json_decompress(compressed);
       let versions = object_property_get(f, "versions");
-      object_property_set_exists_not(object, property_name, value);
+      object_property_set_exists_not(item, "versions", versions);
     }
-    let mapped = list_map(list, lambda);
+    each(list, lambda);
   }
   let b2 = app_a_button(root, a, upload);
   let div = html_div(root);
