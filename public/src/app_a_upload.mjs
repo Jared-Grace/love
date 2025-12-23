@@ -9,7 +9,7 @@ export async function app_a_upload(deltas) {
     let contents = await file_read(key);
     let versions = object_property_get(d, "versions");
     let first = list_first(versions);
-    eqat;
+    eqa;
   }
   await each_async(deltas, lambda);
   marker("1");
