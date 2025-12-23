@@ -1,6 +1,5 @@
+import { app_a_buttons_shortcuts } from "../../../love/public/src/app_a_buttons_shortcuts.mjs";
 import { app_a_on_keydown } from "../../../love/public/src/app_a_on_keydown.mjs";
-import { app_a_shortcuts_each } from "../../../love/public/src/app_a_shortcuts_each.mjs";
-import { app_a_button_shortcut } from "../../../love/public/src/app_a_button_shortcut.mjs";
 import { app_a_function_on_keydown_remove } from "../../../love/public/src/app_a_function_on_keydown_remove.mjs";
 import { app_a_keyword_blue } from "../../../love/public/src/app_a_keyword_blue.mjs";
 import { js_special_arguments } from "../../../love/public/src/js_special_arguments.mjs";
@@ -119,11 +118,7 @@ export function app_a_identifier(a) {
     function on_keydown(e) {
       app_a_on_keydown(e, choices);
     }
-    app_a_shortcuts_each(choices, on_choice);
-    function on_choice(shortcut, text, fn) {
-      let b3 = app_a_button_shortcut(overlay, shortcut, text, fn);
-      return b3;
-    }
+    app_a_buttons_shortcuts(choices, overlay);
   }
   html_on_pointerdown(span, on_pointerdown);
 }
