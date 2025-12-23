@@ -106,7 +106,7 @@ export function app_a_identifier(a) {
       text: "Open",
       fn: function lambda() {
         overlay_close();
-        let context = app_a_function_on_keydown_remove(a);
+        app_a_function_on_keydown_remove(a);
         app_a_function_select(context, name);
       },
     };
