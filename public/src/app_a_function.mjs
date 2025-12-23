@@ -92,7 +92,7 @@ export async function app_a_function(context) {
     await download();
   }
   let text3 = emoji_sync();
-  let b4 = app_a_button(root, text3, lambda4);
+  let b4 = app_a_button(root, text3, lambda4);e
   let div = html_div(root);
   html_font_jetbrains_mono(div);
   html_style_assign(div, {
