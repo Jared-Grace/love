@@ -1,3 +1,6 @@
+import { list_add_join_newline } from "../../../love/public/src/list_add_join_newline.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { html_update_externals } from "../../../love/public/src/html_update_externals.mjs";
 import { function_name_repo_path_combine } from "../../../love/public/src/function_name_repo_path_combine.mjs";
 import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mjs";
 import { file_open } from "../../../love/public/src/file_open.mjs";
@@ -24,7 +27,7 @@ export async function html_update_dev(name) {
     const from_paths = [previous, src, f_name_ext];
     return from_paths;
   }
-  const name_prefixed = await app_name_main(name);
+  const name_prefixed = app_name_main(name);
   let call = js_code_call_statement(name_prefixed);
   let f_name_ext2 = function_name_to_base(name_prefixed);
   const from_paths2 = paths_get(f_name_ext2);
@@ -34,6 +37,9 @@ export async function html_update_dev(name) {
   const middle = `${code}
     ${call}`;
   let body = html_code_script_module(middle);
-  await html_overwrite(name, joined, body);
+  var v = await html_update_externals(f_name);
+  let scripts = object_property_get(v, "scripts");
+  let joined2 = list_add_join_newline(scripts, body);
+  await html_overwrite(name, joined, joined2);
   await file_open(joined);
 }
