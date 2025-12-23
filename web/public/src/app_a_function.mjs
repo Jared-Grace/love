@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -62,6 +63,9 @@ export async function app_a_function(context) {
     }
     each(list, lambda);
     let filtered = list_filter_property(all, "changed", true);
+    log({
+      filtered,
+    });
   }
   let b2 = app_a_button(root, a, upload);
   let div = html_div(root);
