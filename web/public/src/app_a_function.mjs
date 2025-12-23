@@ -1,3 +1,4 @@
+import { html_loading } from "../../../love/public/src/html_loading.mjs";
 import { function_dependencies_code_call } from "../../../love/public/src/function_dependencies_code_call.mjs";
 import { emoji_run } from "../../../love/public/src/emoji_run.mjs";
 import { app_a_buttons_shortcuts } from "../../../love/public/src/app_a_buttons_shortcuts.mjs";
@@ -99,6 +100,7 @@ export async function app_a_function(context) {
       shortcut: "r",
       text: emoji_run(),
       fn: async function lambda3() {
+        let result = await html_loading(async function lambda5() {});
         let middle = await function_dependencies_code_call(f_name);
         let r = await eval(middle);
         alert(r);
