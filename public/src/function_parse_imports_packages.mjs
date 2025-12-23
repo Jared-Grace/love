@@ -5,7 +5,7 @@ import { object_merge } from "../../../love/public/src/object_merge.mjs";
 export function function_parse_imports_packages(parsed) {
   let ast = object_property_get(parsed, "ast");
   let declaration = js_imports_declarations_externals(ast);
-  let mapped = list_map_property(list, property_name);
+  let mapped = list_map_property(list, "property_name");
   let to = object_merge(
     {
       declaration,
