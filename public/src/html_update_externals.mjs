@@ -7,8 +7,8 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { function_dependencies_code_call } from "../../../love/public/src/function_dependencies_code_call.mjs";
 export async function html_update_externals(f_name) {
   let scripts = [];
-  const d = await function_dependencies_code_call(f_name);
-  let externals = object_property_get(d, "externals");
+  const dependencies = await function_dependencies_code_call(f_name);
+  let externals = object_property_get(dependencies, "externals");
   log({
     externals,
   });
@@ -23,7 +23,7 @@ export async function html_update_externals(f_name) {
     list_add(scripts, importmap);
   }
   let r = {
-    d,
+    dependencies,
     scripts,
   };
   return r;
