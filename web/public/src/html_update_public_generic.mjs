@@ -1,4 +1,4 @@
-import { object_properties_from } from "../../../love/public/src/object_properties_from.mjs";
+import { object_properties_from_empty } from "../../../love/public/src/object_properties_from_empty.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { function_dependencies_code_call } from "../../../love/public/src/function_dependencies_code_call.mjs";
@@ -12,7 +12,7 @@ export async function html_update_public_generic(f_name, file_path, name) {
   let externals = object_property_get(v, "externals");
   let ne = list_empty_not_is(externals);
   if (ne) {
-    let to2 = object_properties_from(to, properties, from);
+    let to2 = object_properties_from_empty(externals, {});
   }
   let code = object_property_get(v, "code");
   let body = html_code_script_module(code);
