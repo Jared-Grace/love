@@ -1,3 +1,4 @@
+import { app_a_button_shortcut } from "../../../love/public/src/app_a_button_shortcut.mjs";
 import { app_a_function_on_keydown_remove } from "../../../love/public/src/app_a_function_on_keydown_remove.mjs";
 import { app_a_keyword_blue } from "../../../love/public/src/app_a_keyword_blue.mjs";
 import { js_special_arguments } from "../../../love/public/src/js_special_arguments.mjs";
@@ -8,7 +9,6 @@ import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { app_a_button } from "../../../love/public/src/app_a_button.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { html_on_keydown_stop_logic } from "../../../love/public/src/html_on_keydown_stop_logic.mjs";
 import { app_a_function } from "../../../love/public/src/app_a_function.mjs";
@@ -128,7 +128,7 @@ export function app_a_identifier(a) {
     }
     choices_each(on_choice);
     function on_choice(shortcut, text, fn) {
-      let b3 = app_a_button(overlay, "(" + shortcut + ") " + text, fn);
+      let b3 = app_a_button_shortcut(overlay, shortcut, text, fn);
       return b3;
     }
     function choices_each(on_choice) {
