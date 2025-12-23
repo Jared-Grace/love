@@ -46,7 +46,7 @@ export async function app_a_function(context) {
   let a = emoji_up();
   async function upload() {
     let store = app_a_file_system_store();
-    let v3 = await indexeddb_get_all(app_a_indexeddb_initialize, store);
+    let all = await indexeddb_get_all(app_a_indexeddb_initialize, store);
   }
   let b2 = app_a_button(root, a, upload);
   let div = html_div(root);
