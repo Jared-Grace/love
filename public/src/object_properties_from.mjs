@@ -5,4 +5,5 @@ export function object_properties_from(to, properties, from) {
     object_property_from(to, property, from);
   }
   each(properties, lambda3);
+  return to;
 }
