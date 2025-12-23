@@ -48,7 +48,9 @@ export async function app_a_function(context) {
   async function upload() {
     let store = app_a_file_system_store();
     let all = await indexeddb_get_all(app_a_indexeddb_initialize, store);
-    function lambda(item) {}
+    function lambda(f) {
+      let compressed = object_property_get(f, "compressed");
+    }
     let mapped = list_map(list, lambda);
   }
   let b2 = app_a_button(root, a, upload);
