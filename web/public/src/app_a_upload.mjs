@@ -1,9 +1,10 @@
+import { assert } from "../../../love/public/src/assert.mjs";
+import { equal } from "../../../love/public/src/equal.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { git_acp_folder } from "../../../love/public/src/git_acp_folder.mjs";
 import { repos_paths_map_unordered } from "../../../love/public/src/repos_paths_map_unordered.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { list_skip_1 } from "../../../love/public/src/list_skip_1.mjs";
-import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -19,7 +20,9 @@ export async function app_a_upload(deltas) {
       contents,
       first,
     });
-    equal_assert(contents, first);
+    marker("1");
+    let eq = equal(contents, first);
+    assert(eq);
   }
   await each_async(deltas, lambda);
   async function lambda2(d) {
