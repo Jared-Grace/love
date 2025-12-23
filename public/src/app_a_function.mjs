@@ -1,3 +1,4 @@
+import { list_empty_is_assert } from "../../../love/public/src/list_empty_is_assert.mjs";
 import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
 import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 import { app_a_overlay_container } from "../../../love/public/src/app_a_overlay_container.mjs";
@@ -109,6 +110,7 @@ export async function app_a_function(context) {
         async function lambda5() {
           let v2 = await function_dependencies_code_call(f_name);
           let externals = object_property_get(v2, "externals");
+          list_empty_is_assert(list);
           let code = object_property_get(v2, "code");
           let o = app_a_overlay(
             {
