@@ -61,7 +61,7 @@ export async function app_a_function(context) {
       let m = list_multiple_is(versions);
       object_property_set_exists_not(item, "changed", m);
     }
-    each(list, lambda);
+    each(all, lambda);
     let filtered = list_filter_property(all, "changed", true);
     log({
       filtered,
