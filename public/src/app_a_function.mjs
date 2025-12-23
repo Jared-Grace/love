@@ -85,7 +85,7 @@ export async function app_a_function(context) {
   }
   let b3 = app_a_button(root, text2, download);
   function lambda4() {}
-  let b4 = app_a_button(root2, emoji_sync(), lambda4);
+  let b4 = app_a_button(root, emoji_sync(), lambda4);
   let div = html_div(root);
   html_font_jetbrains_mono(div);
   html_style_assign(div, {
