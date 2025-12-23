@@ -85,18 +85,18 @@ export async function app_a_function(context) {
   }
   let choices = [
     {
-      letter: "f",
+      shortcut: "f",
       text: emoji_search(),
       fn: search,
     },
     {
-      letter: "s",
+      shortcut: "s",
       text: emoji_sync(),
       fn: sync,
     },
   ];
   function lambda3(c) {
-    let letter3 = object_property_get(c, "letter");
+    let letter3 = object_property_get(c, "shortcut");
     let text4 = object_property_get(c, "text");
     let fn3 = object_property_get(c, "fn");
     let b = app_a_button(root, text4, fn3);
@@ -106,7 +106,7 @@ export async function app_a_function(context) {
     html_on_keydown_stop_logic(e);
     let k = object_property_get(e, "key");
     function lambda5(c) {
-      let letter2 = object_property_get(c, "letter");
+      let letter2 = object_property_get(c, "shortcut");
       if (equal(k, letter2)) {
         let fn2 = object_property_get(c, "fn");
         fn2();
