@@ -5,11 +5,14 @@ import { function_dependencies_code } from "../../../love/public/src/function_de
 export async function function_dependencies_code_call(f_name) {
   let global_init = js_code_global_init();
   let v = await function_dependencies_code(f_name);
-  let code = object_property_get(v, "code");
+  let dependencies = object_property_get(v, "code");
   let externals = object_property_get(v, "externals");
   let call = js_code_call_statement(f_name);
-  const middle = `${global_init}
-    ${code}
+  const code = `${global_init}
+    ${dependencies}
     ${call}`;
-  return middle;
+  let v2 = {
+    code,
+  };
+  return v2;
 }
