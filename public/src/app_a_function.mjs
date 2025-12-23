@@ -69,7 +69,7 @@ export async function app_a_function(context) {
       let o = object_properties_from({}, ["key", "versions"], item2);
       return o;
     }
-    let mapped = list_map(list, lambda2);
+    let mapped = list_map(filtered, lambda2);
     log({
       mapped,
     });
