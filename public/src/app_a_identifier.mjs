@@ -33,7 +33,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 export function app_a_identifier(a) {
   let node = object_property_get(a, "node");
   let parent = object_property_get(a, "parent");
-  let ast = object_property_get(a, "ast");
   let context = object_property_get(a, "context");
   let parsed = object_property_get(a, "parsed");
   let name = object_property_get(node, "name");
@@ -91,6 +90,7 @@ export function app_a_identifier(a) {
           html_value_set(input, name);
           await html_select(input);
           async function lambda23() {
+            let ast = object_property_get(a, "ast");
             let name_new = html_value_get(input);
             await js_identifier_rename_imports_fix(ast, name, name_new);
             await file_js_unparse(parsed);
