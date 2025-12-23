@@ -1,3 +1,4 @@
+import { app_a_on_keydown } from "../../../love/public/src/app_a_on_keydown.mjs";
 import { app_a_shortcuts_each } from "../../../love/public/src/app_a_shortcuts_each.mjs";
 import { app_a_button_shortcut } from "../../../love/public/src/app_a_button_shortcut.mjs";
 import { app_a_function_on_keydown_remove } from "../../../love/public/src/app_a_function_on_keydown_remove.mjs";
@@ -10,7 +11,6 @@ import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { html_on_keydown_stop_logic } from "../../../love/public/src/html_on_keydown_stop_logic.mjs";
 import { app_a_function } from "../../../love/public/src/app_a_function.mjs";
 import { file_js_unparse } from "../../../love/public/src/file_js_unparse.mjs";
 import { js_identifier_rename_imports_fix } from "../../../love/public/src/js_identifier_rename_imports_fix.mjs";
@@ -117,14 +117,7 @@ export function app_a_identifier(a) {
       list_add(choices, choice_function_open);
     }
     function on_keydown(e) {
-      html_on_keydown_stop_logic(e);
-      let key2 = object_property_get(e, "key");
-      app_a_shortcuts_each(choices, on_choice);
-      function on_choice(shortcut, text, fn) {
-        if (equal(key2, shortcut)) {
-          fn();
-        }
-      }
+      app_a_on_keydown(e, choices);
     }
     app_a_shortcuts_each(choices, on_choice);
     function on_choice(shortcut, text, fn) {
