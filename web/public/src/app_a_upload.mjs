@@ -1,4 +1,5 @@
-import { git_acp_call_repos } from "../../../love/public/src/git_acp_call_repos.mjs";
+import { git_acp_call_folder } from "../../../love/public/src/git_acp_call_folder.mjs";
+import { repos_paths_map_unordered } from "../../../love/public/src/repos_paths_map_unordered.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { list_skip_1 } from "../../../love/public/src/list_skip_1.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
@@ -22,7 +23,11 @@ export async function app_a_upload(deltas) {
     let skipped = list_skip_1(versions);
     async function lambda3(item) {
       let result = await file_overwrite(key, item);
-      await git_acp_call_repos(f_name, args);
+      marker("1");
+      await repos_paths_map_unordered(each_folder);
+      async function each_folder(folder) {
+        await git_acp_call_folder(app_a_upload, args, folder);
+      }
     }
     await each_async(skipped, lambda3);
   }
