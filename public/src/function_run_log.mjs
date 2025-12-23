@@ -4,7 +4,7 @@ import { function_name_unalias } from "../../../love/public/src/function_name_un
 import { json_to } from "./json_to.mjs";
 export async function function_run_log(f_name, args) {
   let { unaliased } = await function_name_unalias(f_name);
-  log_keep("🏃 " + unaliased + " " + json_to(args));
+  log_keep("🏃" +" " + unaliased + " " + json_to(args));
   let result = await function_run_unalias(f_name, args);
   log_keep("🔥");
   log_keep(result);
