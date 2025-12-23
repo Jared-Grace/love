@@ -13,5 +13,8 @@ export async function function_dependencies_code(f_name) {
   let mapped2 = list_map_property(waited, "declaration");
   let waited2 = await list_map_unordered_async(mapped2, js_unparse);
   let code = list_join_newline(waited2);
-  return {code};
+  let v = {
+    code,
+  };
+  return v;
 }
