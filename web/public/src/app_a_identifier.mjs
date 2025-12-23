@@ -33,7 +33,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 export function app_a_identifier(a) {
   let node = object_property_get(a, "node");
   let parent = object_property_get(a, "parent");
-  let context = object_property_get(a, "context");
   let name = object_property_get(node, "name");
   let a2 = js_special_arguments();
   let span = null;
@@ -44,6 +43,7 @@ export function app_a_identifier(a) {
     html_font_color_set(span, "#4a4affff");
   }
   async function on_pointerdown() {
+    let context = object_property_get(a, "context");
     let on_keydowns = object_property_get(context, "on_keydowns");
     let o = app_a_overlay(a, on_keydowns, on_keydown);
     let overlay_close = object_property_get(o, "overlay_close");
