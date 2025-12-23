@@ -111,7 +111,7 @@ export async function app_a_function(context) {
         fn2();
       }
     }
-    each(choices, lambda5);
+    app_a_shortcuts_each(lambda5, choices);
   }
   let div = html_div(root);
   html_font_jetbrains_mono(div);
