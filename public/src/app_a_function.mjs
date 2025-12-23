@@ -77,7 +77,6 @@ export async function app_a_function(context) {
     let deltas = list_map(filtered, lambda2);
     let r = await app_api_fn(app_a_upload, [deltas]);
   }
-  let text2 = emoji_down();
   async function download() {
     let store = app_a_file_system_store();
     await indexeddb_store_clear(app_a_indexeddb_initialize, store);
@@ -85,6 +84,7 @@ export async function app_a_function(context) {
   }
   if (false) {
     let b2 = app_a_button(root, a, upload);
+    let text2 = emoji_down();
     let b3 = app_a_button(root, text2, download);
   }
   async function lambda4() {
