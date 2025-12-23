@@ -41,7 +41,7 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
     span = html_span_text(parent, name);
     html_font_color_set(span, "#4a4affff");
   }
-  async function lambda20() {
+  async function on_pointerdown() {
     let on_keydowns = object_property_get(context, "on_keydowns");
     let v = app_a_overlay(a, on_keydowns, on_keydown);
     let overlay_close = object_property_get(v, "overlay_close");
@@ -141,5 +141,5 @@ export function app_a_identifier(node, parent, context, a, ast, parsed) {
       each(choices, lambda21);
     }
   }
-  html_on_pointerdown(span, lambda20);
+  html_on_pointerdown(span, on_pointerdown);
 }
