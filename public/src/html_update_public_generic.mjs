@@ -11,8 +11,8 @@ import { html_code_script_module } from "../../../love/public/src/html_code_scri
 import { function_name_repo_path_combine } from "../../../love/public/src/function_name_repo_path_combine.mjs";
 import { html_code_script_importmap } from "./html_code_script_importmap.mjs";
 export async function html_update_public_generic(f_name, file_path, name) {
-  let list = [];
   let joined = await function_name_repo_path_combine(f_name, file_path);
+  let scripts = [];
   const d = await function_dependencies_code_call(f_name);
   let externals = object_property_get(d, "externals");
   log({
@@ -26,12 +26,12 @@ export async function html_update_public_generic(f_name, file_path, name) {
       "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm",
     });
     let importmap = html_code_script_importmap(imports);
-    list_add(list, importmap);
+    list_add(scripts, importmap);
   }
   let code = object_property_get(d, "code");
   let body = html_code_script_module(code);
-  list_add(list, body);
-  let joined2 = list_join_newline(list);
+  list_add(scripts, body);
+  let joined2 = list_join_newline(scripts);
   await html_overwrite(name, joined, joined2);
   await file_open(joined);
 }
