@@ -98,7 +98,8 @@ export async function app_a_function(context) {
   function app_a_function_on_keydown(e) {
     html_on_keydown_stop_logic(e);
     let k = object_property_get(e, "key");
-    each(list, function lambda5(item3) {});
+    function lambda5(item3) {}
+    each(list, lambda5);
     if (equal(k, "s")) {
       search();
     }
