@@ -71,7 +71,7 @@ export async function app_a_function(context) {
     each(all, lambda);
     let filtered = list_filter_property(all, "changed", true);
     function lambda2(item2) {
-      let o = object_properties_from_empty(["key", "versions"], item2);
+      let o = object_properties_from_empty(item2, ["key", "versions"]);
       return o;
     }
     let deltas = list_map(filtered, lambda2);
