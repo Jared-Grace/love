@@ -22,9 +22,9 @@ export async function html_update_externals(f_name) {
     let importmap = html_code_script_importmap(imports);
     list_add(scripts, importmap);
   }
-  let v = {
+  let r = {
     d,
     scripts,
   };
-  return v;
+  return r;
 }
