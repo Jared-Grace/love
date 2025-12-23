@@ -110,6 +110,7 @@ export async function app_a_function(context) {
         async function lambda5() {
           let v2 = await function_dependencies_code_call(f_name);
           let externals = object_property_get(v2, "externals");
+          ("if non empty then handle case of external not already loaded in import map");
           list_empty_is_assert(externals);
           let code = object_property_get(v2, "code");
           let o = app_a_overlay(
