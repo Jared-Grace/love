@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_properties_from_empty } from "../../../love/public/src/object_properties_from_empty.mjs";
 import { list_empty_is_assert } from "../../../love/public/src/list_empty_is_assert.mjs";
 import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
@@ -75,6 +76,7 @@ export async function app_a_function(context) {
       return o;
     }
     let deltas = list_map(filtered, lambda2);
+    let ne = list_empty_not_is(list);
     let r = await app_api_fn(app_a_upload, [deltas]);
   }
   async function download() {
