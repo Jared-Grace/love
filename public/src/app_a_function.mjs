@@ -45,12 +45,9 @@ export async function app_a_function(context) {
   let root = object_property_get(context, "root");
   html_clear(root);
   async function search() {
-    before();
+    list_remove(on_keydowns, app_a_function_on_keydown);
     await sleep_0();
     app_generic_screen_set(context, app_a_home);
-  }
-  function before() {
-    list_remove(on_keydowns, app_a_function_on_keydown);
   }
   async function upload() {
     let store = app_a_file_system_store();
