@@ -1,4 +1,4 @@
-import { list_is } from "../../../love/public/src/list_is.mjs";
+import { invoke } from "../../../love/public/src/invoke.mjs";
 import { git_ac_folder } from "../../../love/public/src/git_ac_folder.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { repos_paths_map_unordered } from "../../../love/public/src/repos_paths_map_unordered.mjs";
@@ -37,6 +37,6 @@ export async function app_a_upload(deltas) {
     await each_async(skipped, lambda3);
   }
   await each_async(deltas, lambda2);
-  let l = list_is(value);
+  invoke(function lambda5() {});
   marker("1");
 }
