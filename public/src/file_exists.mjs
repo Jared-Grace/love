@@ -1,5 +1,4 @@
 import { file_path_normalize } from "../../../love/public/src/file_path_normalize.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { indexeddb_exists } from "../../../love/public/src/indexeddb_exists.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
 import { app_a_file_system_store } from "../../../love/public/src/app_a_file_system_store.mjs";
@@ -13,9 +12,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 export async function file_exists(file_path) {
   if (browser_is()) {
     file_path = file_path_normalize(file_path);
-    log({
-      file_path,
-    });
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
     let exists = await indexeddb_exists(
