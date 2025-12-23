@@ -58,7 +58,7 @@ export async function app_a_function(context) {
       let versions = object_property_get(f, "versions");
       object_property_set_exists_not(item, "versions", versions);
       let m = list_multiple_is(versions);
-      object_property_set_exists_not(item, "changed", versions);
+      object_property_set_exists_not(item, "changed", m);
     }
     each(list, lambda);
     function lambda2(item2) {}
