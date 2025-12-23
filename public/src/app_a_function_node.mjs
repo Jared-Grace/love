@@ -246,27 +246,6 @@ export function app_a_function_node(a) {
       html_span_text(parent, ".");
       let property = object_property_get(node, "property");
       app_a_function_node_child(a, property);
-      `      computed
-: 
-false
-end
-: 
-726
-object
-: 
-Node {type: 'CallExpression', start: 700, end: 719, callee: Node, arguments: Array(1), …}
-optional
-: 
-false
-property
-: 
-Node {type: 'Identifier', start: 720, end: 726, name: 'isFile'}
-start
-: 
-700
-type
-: 
-"MemberExpression"`;
     },
   };
   function binary() {
