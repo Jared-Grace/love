@@ -12,7 +12,11 @@ export async function html_update_public_generic(f_name, file_path, name) {
   let externals = object_property_get(v, "externals");
   let ne = list_empty_not_is(externals);
   if (ne) {
-    let to2 = object_properties_from_empty(externals, {});
+    let to2 = object_properties_from_empty(externals, {
+      acorn: "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.mjs",
+      astring: "https://cdn.jsdelivr.net/npm/astring/dist/astring.mjs",
+      "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm",
+    });
   }
   let code = object_property_get(v, "code");
   let body = html_code_script_module(code);
