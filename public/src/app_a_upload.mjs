@@ -19,7 +19,7 @@ export async function app_a_upload(deltas) {
     let eq = equal(contents, first);
     assert_json(eq, {
       contents,
-      first,
+      versions,
     });
   }
   await each_async(deltas, lambda);
