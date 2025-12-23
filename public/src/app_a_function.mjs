@@ -97,13 +97,10 @@ export async function app_a_function(context) {
       fn: sync,
     },
   ];
-  function lambda3(c) {
-    let shortcut = object_property_get(c, "shortcut");
-    let text4 = object_property_get(c, "text");
-    let fn3 = object_property_get(c, "fn");
+  function lambda3(shortcut, text, fn) {
     let b3 = app_a_button_shortcut(root, shortcut, text, fn);
   }
-  app_a_shortcuts_each(on_choice, choices);
+  app_a_shortcuts_each(lambda3, choices);
   each(choices, lambda3);
   function app_a_function_on_keydown(e) {
     html_on_keydown_stop_logic(e);
