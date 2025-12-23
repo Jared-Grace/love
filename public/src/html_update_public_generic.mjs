@@ -6,17 +6,20 @@ import { file_open } from "../../../love/public/src/file_open.mjs";
 import { html_overwrite } from "../../../love/public/src/html_overwrite.mjs";
 import { html_code_script_module } from "../../../love/public/src/html_code_script_module.mjs";
 import { function_name_repo_path_combine } from "../../../love/public/src/function_name_repo_path_combine.mjs";
+import { html_code_script_importmap } from "./html_code_script_importmap.mjs";
 export async function html_update_public_generic(f_name, file_path, name) {
+  let list = [];
   let joined = await function_name_repo_path_combine(f_name, file_path);
   const v = await function_dependencies_code_call(f_name);
   let externals = object_property_get(v, "externals");
   let ne = list_empty_not_is(externals);
   if (ne) {
-    let to2 = object_properties_from_empty(externals, {
+    let imports = object_properties_from_empty(externals, {
       acorn: "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.mjs",
       astring: "https://cdn.jsdelivr.net/npm/astring/dist/astring.mjs",
       "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm",
     });
+    let code2 = html_code_script_importmap(imports2);
   }
   let code = object_property_get(v, "code");
   let body = html_code_script_module(code);
