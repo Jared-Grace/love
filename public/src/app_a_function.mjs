@@ -100,9 +100,9 @@ export async function app_a_function(context) {
     let k = object_property_get(e, "key");
     function lambda5(c) {
       let letter2 = object_property_get(c, "letter");
-      let fn2 = object_property_get(c, "fn");
-      if (equal(k, "s")) {
-        search();
+      if (equal(letter2, "s")) {
+        let fn2 = object_property_get(c, "fn");
+        fn2();
       }
     }
     each(choices, lambda5);
