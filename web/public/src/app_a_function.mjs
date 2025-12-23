@@ -108,7 +108,14 @@ export async function app_a_function(context) {
       fn: async function lambda3() {
         async function lambda5() {
           let middle = await function_dependencies_code_call(f_name);
-          let o = app_a_overlay(a, on_keydowns, on_keydown);
+          let o = app_a_overlay(
+            {
+              root,
+              app_a_function_on_keydown,
+            },
+            on_keydowns,
+            on_keydown,
+          );
           let overlay_close = object_property_get(o, "overlay_close");
           let overlay = object_property_get(o, "overlay");
           let v = app_a_choice_close(overlay_close);
