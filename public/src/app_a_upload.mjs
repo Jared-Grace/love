@@ -18,9 +18,8 @@ export async function app_a_upload(deltas) {
     let key = object_property_get(d, "key");
     let contents = await file_read(key);
     let versions = object_property_get(d, "versions");
-    let first = list_first(versions);
-    equal_assert(contents, first);
-    let skipped = list_skip_1(list);
+    let skipped = list_skip_1(versions);
+    await each_async(list, async function lambda3(item) {});
   }
   await each_async(deltas, lambda2);
   marker("1");
