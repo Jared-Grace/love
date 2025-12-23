@@ -1,4 +1,4 @@
-import { emoji_add } from "../../../love/public/src/emoji_add.mjs";
+import { emoji_sync } from "../../../love/public/src/emoji_sync.mjs";
 import { sleep_0 } from "../../../love/public/src/sleep_0.mjs";
 import { app_a_on_keydown_add } from "../../../love/public/src/app_a_on_keydown_add.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
@@ -40,7 +40,7 @@ export async function app_a_function(context) {
   }
   let text = emoji_search();
   let b = app_a_button(root, text, search);
-  let a = emoji_add();
+  let a = emoji_sync();
   function lambda() {}
   let b2 = app_a_button(root, a, lambda);
   let div = html_div(root);
