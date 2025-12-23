@@ -93,6 +93,11 @@ export async function app_a_function(context) {
       text: emoji_sync(),
       fn: sync,
     },
+    {
+      shortcut: "r",
+      text: emoji_run(),
+      fn: () => {},
+    },
   ];
   app_a_buttons_shortcuts(choices, root);
   function app_a_function_on_keydown(e) {
