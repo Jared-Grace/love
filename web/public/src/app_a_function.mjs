@@ -74,6 +74,7 @@ export async function app_a_function(context) {
     let r = await app_api_fn(app_a_upload, [deltas]);
   }
   let b2 = app_a_button(root, a, upload);
+  let b3 = app_a_button(root2, text2, function lambda4() {});
   let div = html_div(root);
   html_font_jetbrains_mono(div);
   html_style_assign(div, {
