@@ -41,7 +41,8 @@ export async function app_a_function(context) {
   let text = emoji_search();
   let b = app_a_button(root, text, search);
   let a = emoji_add();
-  let b2 = app_a_button(root, a, () => {});
+  function lambda() {}
+  let b2 = app_a_button(root, a, lambda);
   let div = html_div(root);
   html_font_jetbrains_mono(div);
   html_style_assign(div, {
