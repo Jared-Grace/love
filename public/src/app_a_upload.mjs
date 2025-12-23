@@ -1,4 +1,4 @@
-import { git_acp_call_folder } from "../../../love/public/src/git_acp_call_folder.mjs";
+import { git_acp_folder } from "../../../love/public/src/git_acp_folder.mjs";
 import { repos_paths_map_unordered } from "../../../love/public/src/repos_paths_map_unordered.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { list_skip_1 } from "../../../love/public/src/list_skip_1.mjs";
