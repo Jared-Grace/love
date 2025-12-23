@@ -1,3 +1,4 @@
+import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
@@ -13,5 +14,14 @@ export async function app_a_upload(deltas) {
     equal_assert(contents, first);
   }
   await each_async(deltas, lambda);
+  async function lambda2(d) {
+    let key = object_property_get(d, "key");
+    let contents = await file_read(key);
+    let versions = object_property_get(d, "versions");
+    let first = list_first(versions);
+    equal_assert(contents, first);
+    let result = list_first_remaining(list);
+  }
+  await each_async(deltas, lambda2);
   marker("1");
 }
