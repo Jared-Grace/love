@@ -1,6 +1,4 @@
-import { assert } from "../../../love/public/src/assert.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { git_acp_folder } from "../../../love/public/src/git_acp_folder.mjs";
 import { repos_paths_map_unordered } from "../../../love/public/src/repos_paths_map_unordered.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
@@ -10,19 +8,19 @@ import { file_read } from "../../../love/public/src/file_read.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
+import { assert_json } from "./assert_json.mjs";
 export async function app_a_upload(deltas) {
   async function lambda(d) {
     let key = object_property_get(d, "key");
     let versions = object_property_get(d, "versions");
     let contents = await file_read(key);
     let first = list_first(versions);
-    log({
+    marker("1");
+    let eq = equal(contents, first);
+    assert_json(eq, {
       contents,
       first,
     });
-    marker("1");
-    let eq = equal(contents, first);
-    assert(eq);
   }
   await each_async(deltas, lambda);
   async function lambda2(d) {
