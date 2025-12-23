@@ -94,7 +94,7 @@ export async function app_a_function(context) {
   }
   let choices = [
     {
-      shortcut: "f",
+      shortcut: "o",
       text: emoji_search(),
       fn: search,
     },
