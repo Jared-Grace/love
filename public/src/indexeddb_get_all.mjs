@@ -3,7 +3,7 @@ export async function indexeddb_get_all(db_get, store) {
   const db = await db_get();
   const tx = db.transaction(store, "readonly");
   const s = tx.objectStore(store);
-  let v3 = new Promise(function lambda3(resolve, reject) {
+  let all = new Promise(function lambda3(resolve, reject) {
     const req = s.getAll();
     req.onsuccess = function lambda() {
       let v = resolve(req.result);
@@ -14,5 +14,5 @@ export async function indexeddb_get_all(db_get, store) {
       return v2;
     };
   });
-  return v3;
+  return all;
 }
