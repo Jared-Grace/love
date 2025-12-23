@@ -86,6 +86,7 @@ export async function app_a_function(context) {
   }
   let b3 = app_a_button(root, text2, download);
   async function lambda4() {
+    await upload();
     await download();
   }
   let text3 = emoji_sync();
