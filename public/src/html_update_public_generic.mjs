@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { object_properties_from_empty } from "../../../love/public/src/object_properties_from_empty.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -19,7 +20,8 @@ export async function html_update_public_generic(f_name, file_path, name) {
       astring: "https://cdn.jsdelivr.net/npm/astring/dist/astring.mjs",
       "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm",
     });
-    let code2 = html_code_script_importmap(imports2);
+    let importmap = html_code_script_importmap(imports);
+    list_add(list2, item);
   }
   let code = object_property_get(v, "code");
   let body = html_code_script_module(code);
