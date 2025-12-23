@@ -82,7 +82,7 @@ export async function app_a_function(context) {
     await app_a_file_system_initialize_download();
   }
   if (false) {
-  let a = emoji_up();
+    let a = emoji_up();
     let b2 = app_a_button(root, a, upload);
     let text2 = emoji_down();
     let b3 = app_a_button(root, text2, download);
