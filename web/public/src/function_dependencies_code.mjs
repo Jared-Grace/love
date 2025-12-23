@@ -12,9 +12,9 @@ export async function function_dependencies_code(f_name) {
   let mapped = list_map(ds, function_parse_declaration);
   let waited = await list_wait(mapped);
   let mapped2 = list_map_property(waited, "declaration");
-  let externals = list_map_property(waited, "externals");
-  let combined = list_concat_multiple(externals);
-  let unique = list_unique(list);
+  let externals_list = list_map_property(waited, "externals");
+  let combined = list_concat_multiple(externals_list);
+  let externals = list_unique(combined);
   let waited2 = list_map(mapped2, js_unparse);
   let code = list_join_newline(waited2);
   let v = {
