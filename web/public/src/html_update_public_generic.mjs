@@ -8,6 +8,8 @@ export async function html_update_public_generic(f_name, file_path, name) {
   let joined = await function_name_repo_path_combine(f_name, file_path);
   const v = await function_dependencies_code_call(f_name);
   let externals = object_property_get(v, "externals");
+  if (false) {
+  }
   let code = object_property_get(v, "code");
   let body = html_code_script_module(code);
   await html_overwrite(name, joined, body);
