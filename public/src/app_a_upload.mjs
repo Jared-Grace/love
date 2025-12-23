@@ -19,7 +19,8 @@ export async function app_a_upload(deltas) {
     let contents = await file_read(key);
     let versions = object_property_get(d, "versions");
     let skipped = list_skip_1(versions);
-    await each_async(list, async function lambda3(item) {});
+    async function lambda3(item) {}
+    await each_async(list, lambda3);
   }
   await each_async(deltas, lambda2);
   marker("1");
