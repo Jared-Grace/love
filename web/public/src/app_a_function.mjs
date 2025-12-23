@@ -1,3 +1,4 @@
+import { app_a_button_shortcut } from "../../../love/public/src/app_a_button_shortcut.mjs";
 import { emoji_sync } from "../../../love/public/src/emoji_sync.mjs";
 import { indexeddb_store_clear } from "../../../love/public/src/indexeddb_store_clear.mjs";
 import { app_a_file_system_initialize_download } from "../../../love/public/src/app_a_file_system_initialize_download.mjs";
@@ -96,10 +97,10 @@ export async function app_a_function(context) {
     },
   ];
   function lambda3(c) {
-    let letter3 = object_property_get(c, "shortcut");
+    let shortcut = object_property_get(c, "shortcut");
     let text4 = object_property_get(c, "text");
     let fn3 = object_property_get(c, "fn");
-    let b = app_a_button(root, text4, fn3);
+    let b3 = app_a_button_shortcut(root, shortcut, text, fn);
   }
   each(choices, lambda3);
   function app_a_function_on_keydown(e) {
