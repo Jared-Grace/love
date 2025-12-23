@@ -27,7 +27,7 @@ export async function html_update_public_generic(f_name, file_path, name) {
   let code = object_property_get(v, "code");
   let body = html_code_script_module(code);
   list_add(list, body);
-  let joined2 = list_join_newline(list2);
-  await html_overwrite(name, joined, body);
+  let joined2 = list_join_newline(list);
+  await html_overwrite(name, joined, joined2);
   await file_open(joined);
 }
