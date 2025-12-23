@@ -1,4 +1,4 @@
-import { git_push_folder } from "../../../love/public/src/git_push_folder.mjs";
+import { git_push_repos } from "../../../love/public/src/git_push_repos.mjs";
 import { invoke } from "../../../love/public/src/invoke.mjs";
 import { git_ac_folder } from "../../../love/public/src/git_ac_folder.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -39,10 +39,7 @@ export async function app_a_upload(deltas) {
   }
   await each_async(deltas, lambda2);
   async function lambda5() {
-    await repos_paths_map_unordered(each_folder);
-    async function each_folder(folder) {
-      await git_push_folder(folder);
-    }
+    await git_push_repos();
   }
   invoke(lambda5);
   marker("1");
