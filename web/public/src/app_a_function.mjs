@@ -1,3 +1,4 @@
+import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
 import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 import { app_a_overlay_container } from "../../../love/public/src/app_a_overlay_container.mjs";
 import { app_a_choice_close } from "../../../love/public/src/app_a_choice_close.mjs";
@@ -107,7 +108,6 @@ export async function app_a_function(context) {
       fn: async function lambda3() {
         async function lambda5() {
           let middle = await function_dependencies_code_call(f_name);
-          let r = await eval(middle);
           let o = app_a_overlay(a, on_keydowns, on_keydown);
           let overlay_close = object_property_get(o, "overlay_close");
           let overlay = object_property_get(o, "overlay");
@@ -117,11 +117,13 @@ export async function app_a_function(context) {
             app_a_on_keydown(e, choices);
           }
           let div = app_a_overlay_container(overlay);
-          let v2 = json_format_to(object);
-          app_a_buttons_shortcuts(choices, overlay);
+          let r = await eval(middle);
           log({
             r,
           });
+          let j = json_format_to(r);
+          let pre = html_pre_text(root2, text3);
+          app_a_buttons_shortcuts(choices, overlay);
         }
         let result = await html_loading(lambda5);
       },
