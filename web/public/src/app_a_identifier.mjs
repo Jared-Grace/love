@@ -1,3 +1,4 @@
+import { app_a_overlay_container } from "../../../love/public/src/app_a_overlay_container.mjs";
 import { app_a_choice_close } from "../../../love/public/src/app_a_choice_close.mjs";
 import { app_a_buttons_shortcuts } from "../../../love/public/src/app_a_buttons_shortcuts.mjs";
 import { app_a_on_keydown } from "../../../love/public/src/app_a_on_keydown.mjs";
@@ -20,9 +21,6 @@ import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { app_a_input } from "../../../love/public/src/app_a_input.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
-import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
-import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
-import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
 import { app_a_overlay_close_text } from "../../../love/public/src/app_a_overlay_close_text.mjs";
@@ -74,9 +72,7 @@ export function app_a_identifier(a) {
             text5,
             rename_overlay_close,
           );
-          let div3 = html_div(overlay);
-          app_a_control_style(div3);
-          html_style_background_color(div3, "white");
+          let div3 = app_a_overlay_container(overlay);
           html_centered(div3);
           let div2 = html_div_text(div3, "Rename from:");
           let div = html_div_text(div3, name);
