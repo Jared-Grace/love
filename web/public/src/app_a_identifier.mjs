@@ -30,7 +30,12 @@ import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-export function app_a_identifier(node, parent, context, a, ast, parsed) {
+export function app_a_identifier(a) {
+  let node = object_property_get(a, "node");
+  let parent = object_property_get(a, "parent");
+  let ast = object_property_get(a, "ast");
+  let context = object_property_get(a, "context");
+  let parsed = object_property_get(a, "parsed");
   let name = object_property_get(node, "name");
   let a2 = js_special_arguments();
   let span = null;
