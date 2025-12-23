@@ -49,7 +49,6 @@ export async function app_a_function(context) {
     await sleep_0();
     app_generic_screen_set(context, app_a_home);
   }
-  let text = emoji_search();
   async function upload() {
     let store = app_a_file_system_store();
     let all = await indexeddb_get_all(app_a_indexeddb_initialize, store);
