@@ -105,8 +105,10 @@ export async function app_a_function(context) {
         async function lambda5() {
           let middle = await function_dependencies_code_call(f_name);
           let r = await eval(middle);
-          function lambda4() {}
-          let o = app_a_overlay(a, on_keydowns, lambda4);
+          function on_keydown(e) {
+            app_a_on_keydown(e, choices);
+          }
+          let o = app_a_overlay(a, on_keydowns, on_keydown);
           log({
             r,
           });
