@@ -84,7 +84,7 @@ export async function app_a_function(context) {
     await app_a_file_system_initialize_download();
   }
   let b3 = app_a_button(root, text2, download);
-  function lambda4() {}
+  async function lambda4() {await download()}
   let b4 = app_a_button(root, emoji_sync(), lambda4);
   let div = html_div(root);
   html_font_jetbrains_mono(div);
