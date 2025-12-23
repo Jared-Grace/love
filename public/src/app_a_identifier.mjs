@@ -1,3 +1,4 @@
+import { app_a_shortcuts_each } from "../../../love/public/src/app_a_shortcuts_each.mjs";
 import { app_a_button_shortcut } from "../../../love/public/src/app_a_button_shortcut.mjs";
 import { app_a_function_on_keydown_remove } from "../../../love/public/src/app_a_function_on_keydown_remove.mjs";
 import { app_a_keyword_blue } from "../../../love/public/src/app_a_keyword_blue.mjs";
@@ -8,7 +9,6 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { html_on_keydown_stop_logic } from "../../../love/public/src/html_on_keydown_stop_logic.mjs";
 import { app_a_function } from "../../../love/public/src/app_a_function.mjs";
@@ -132,13 +132,7 @@ export function app_a_identifier(a) {
       return b3;
     }
     function choices_each(on_choice) {
-      function lambda21(c) {
-        let shortcut = object_property_get(c, "shortcut");
-        let text = object_property_get(c, "text");
-        let fn = object_property_get(c, "fn");
-        let b = on_choice(shortcut, text, fn);
-      }
-      each(choices, lambda21);
+      app_a_shortcuts_each(on_choice, choices);
     }
   }
   html_on_pointerdown(span, on_pointerdown);
