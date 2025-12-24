@@ -18,4 +18,7 @@ export function app_a_identifier(a) {
     html_font_color_set(span, "#4a4affff");
   }
   app_a_identifier_generic(a, span, name, on_change);
+  async function on_change(ast, name_new) {
+    await js_identifier_rename_imports_fix(ast, name, name_new);
+  }
 }
