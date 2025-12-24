@@ -69,7 +69,7 @@ export function app_a_identifier_generic(a, span, name, on_change) {
         let component = app_a_button_wide(overlay, "Rename", lambda23);
       },
     };
-    let to2 = object_merge(to, from);
+    let to2 = object_merge(change, on_change);
     let choices = [
       v,
       {
