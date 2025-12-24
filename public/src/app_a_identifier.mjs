@@ -19,8 +19,8 @@ export function app_a_identifier(a) {
     html_font_color_set(span, "#4a4affff");
   }
   app_a_identifier_generic(a, span, name, {
-      shortcut: "r",
-      text: "Rename",
+    shortcut: "r",
+    text: "Rename",
     on_change,
   });
   async function on_change(name_new) {
