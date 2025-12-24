@@ -49,9 +49,9 @@ export function app_a_identifier_generic(a, span, name, c) {
         let div3 = app_a_overlay_container(overlay);
         html_centered(div3);
         let text2 = object_property_get(change, "text");
-        let div2 = html_div_text(div3, " from:");
+        let div2 = html_div_text(div3, text2 + " from:");
         let div = html_div_text(div3, name);
-        html_div_text(div3, " to:");
+        html_div_text(div3, text2 + " to:");
         let input = app_a_input(overlay);
         html_centered(input);
         html_value_set(input, name);
