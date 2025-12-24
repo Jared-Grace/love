@@ -148,6 +148,8 @@ export function app_a_function_node(a) {
       let span3 = html_span_text(parent, raw);
       html_font_color_set(span3, "#d07200ff");
       app_a_identifier_generic(a, span3, raw, {
+        shortcut: "e",
+        text: "Edit",
         on_change,
       });
       async function on_change(value_new) {
