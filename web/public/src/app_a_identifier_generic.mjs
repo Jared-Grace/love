@@ -60,8 +60,8 @@ export function app_a_identifier_generic(a, span, name, c) {
         async function lambda23() {
           let parsed = object_property_get(a, "parsed");
           let value_new = html_value_get(input);
-          let on_change2 = object_property_get(change, "on_change");
-          await c(value_new);
+          let on_change = object_property_get(change, "on_change");
+          await on_change(value_new);
           await file_js_unparse(parsed);
           rename_overlay_close();
           app_a_function_on_keydown_remove(a);
