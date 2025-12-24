@@ -66,7 +66,7 @@ export function app_a_identifier_generic(a, span, name, c) {
           app_a_function_on_keydown_remove(a);
           await app_a_function(context);
         }
-        let component = app_a_button_wide(overlay, "Rename", lambda23);
+        let component = app_a_button_wide(overlay, text2, lambda23);
       },
     };
     let to2 = object_merge(change, c);
