@@ -76,7 +76,7 @@ export async function app_a_function(context) {
       return o;
     }
     let deltas = list_map(filtered, lambda2);
-    let ne = list_empty_not_is(list);
+    let ne = list_empty_not_is(deltas);
     if (ne) {
       let r = await app_api_fn(app_a_upload, [deltas]);
     }
