@@ -67,7 +67,6 @@ export function app_a_identifier_generic(a, span, name, on_change) {
           html_value_set(input, name);
           await html_select(input);
           async function lambda23() {
-            let ast = object_property_get(a, "ast");
             let parsed = object_property_get(a, "parsed");
             let value_new = html_value_get(input);
             await on_change(ast, value_new);
