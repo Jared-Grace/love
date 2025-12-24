@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { app_a_buttons_shortcuts } from "../../../love/public/src/app_a_buttons_shortcuts.mjs";
 import { app_a_on_keydown } from "../../../love/public/src/app_a_on_keydown.mjs";
@@ -68,6 +69,7 @@ export function app_a_identifier_generic(a, span, name, on_change) {
         let component = app_a_button_wide(overlay, "Rename", lambda23);
       },
     };
+    let to2 = object_merge(to, from);
     let choices = [
       v,
       {
