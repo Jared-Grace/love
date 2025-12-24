@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { app_a_identifier_generic } from "../../../love/public/src/app_a_identifier_generic.mjs";
 import { app_a_keyword_blue } from "../../../love/public/src/app_a_keyword_blue.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -148,9 +149,7 @@ export function app_a_function_node(a) {
       html_font_color_set(span3, "#d07200ff");
       app_a_identifier_generic(a, span3, raw, on_change);
       async function on_change(ast, value_new) {
-        log({
-          raw,
-        });
+        object_property_set(node, "raw", value_new);
       }
     },
     ["VariableDeclaration"]: function lambda11() {
