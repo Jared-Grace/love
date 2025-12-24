@@ -96,7 +96,10 @@ export async function app_a_function(context) {
   async function sync() {
     await upload();
     await download();
-    app_a_function_on_keydown_remove(a);
+    app_a_function_on_keydown_remove({
+      context,
+      app_a_function_on_keydown,
+    });
     await app_a_function(context);
   }
   let choices = [
