@@ -8,7 +8,6 @@ import { app_a_function_select } from "../../../love/public/src/app_a_function_s
 import { app_a_function } from "../../../love/public/src/app_a_function.mjs";
 import { app_a_function_on_keydown_remove } from "../../../love/public/src/app_a_function_on_keydown_remove.mjs";
 import { file_js_unparse } from "../../../love/public/src/file_js_unparse.mjs";
-import { js_identifier_rename_imports_fix } from "../../../love/public/src/js_identifier_rename_imports_fix.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_select } from "../../../love/public/src/html_select.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
@@ -101,7 +100,4 @@ export function app_a_identifier_generic(a, span, name) {
     app_a_buttons_shortcuts(choices, overlay);
   }
   html_on_pointerdown(span, on_pointerdown);
-  async function on_change(ast, name_new) {
-    await js_identifier_rename_imports_fix(ast, name, name_new);
-  }
 }
