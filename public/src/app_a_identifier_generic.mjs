@@ -71,7 +71,7 @@ export function app_a_identifier_generic(a, span, name) {
             let ast = object_property_get(a, "ast");
             let parsed = object_property_get(a, "parsed");
             let name_new = html_value_get(input);
-            await js_identifier_rename_imports_fix(ast, name, name_new);
+            await on_change(ast, name_new);
             await file_js_unparse(parsed);
             rename_overlay_close();
             app_a_function_on_keydown_remove(a);
@@ -101,4 +101,7 @@ export function app_a_identifier_generic(a, span, name) {
     app_a_buttons_shortcuts(choices, overlay);
   }
   html_on_pointerdown(span, on_pointerdown);
+  async function on_change(ast, name_new) {
+    await js_identifier_rename_imports_fix(ast, name, name_new);
+  }
 }
