@@ -1,4 +1,4 @@
 export async function sandbox() {
-  let d = 2 + 3;
-  return d;
+  let e = 2 + 3;
+  return e;
 }
