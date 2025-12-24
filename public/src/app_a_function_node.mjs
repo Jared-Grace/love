@@ -1,10 +1,10 @@
+import { app_a_identifier_generic } from "../../../love/public/src/app_a_identifier_generic.mjs";
 import { app_a_keyword_blue } from "../../../love/public/src/app_a_keyword_blue.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_keyword_return } from "../../../love/public/src/js_keyword_return.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
 import { app_a_identifier } from "../../../love/public/src/app_a_identifier.mjs";
-import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { app_a_braces_wrap_node } from "../../../love/public/src/app_a_braces_wrap_node.mjs";
@@ -19,9 +19,6 @@ import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { app_a_braces_wrap } from "../../../love/public/src/app_a_braces_wrap.mjs";
 import { js_code_equals_padded } from "../../../love/public/src/js_code_equals_padded.mjs";
 import { app_a_nodes_list } from "../../../love/public/src/app_a_nodes_list.mjs";
-import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
-import { list_includes } from "../../../love/public/src/list_includes.mjs";
-import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { app_a_semicolon } from "../../../love/public/src/app_a_semicolon.mjs";
 import { app_a_parenthesis_wrap } from "../../../love/public/src/app_a_parenthesis_wrap.mjs";
 import { js_keyword_await } from "../../../love/public/src/js_keyword_await.mjs";
@@ -149,15 +146,7 @@ export function app_a_function_node(a) {
       let raw = object_property_get(node, "raw");
       let span3 = html_span_text(parent, raw);
       html_font_color_set(span3, "#d07200ff");
-      async function lambda12() {
-        let value2 = object_property_get(node, "value");
-        let f_names = await functions_names();
-        let includes = list_includes(f_names, value2);
-        if (includes) {
-          app_a_function_select(context, value2);
-        }
-      }
-      html_on_pointerdown(span3, lambda12);
+      app_a_identifier_generic(a, span3, raw);
     },
     ["VariableDeclaration"]: function lambda11() {
       let kind = object_property_get(node, "kind");
