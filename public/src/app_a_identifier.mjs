@@ -17,5 +17,5 @@ export function app_a_identifier(a) {
     span = html_span_text(parent, name);
     html_font_color_set(span, "#4a4affff");
   }
-  app_a_identifier_generic(a, span, name);
+  app_a_identifier_generic(a, span, name, on_change);
 }
