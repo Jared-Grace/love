@@ -18,7 +18,7 @@ export function app_a_identifier(a) {
     span = html_span_text(parent, name);
     html_font_color_set(span, "#4a4affff");
   }
-  app_a_identifier_generic(a, span, name, on_change);
+  app_a_identifier_generic(a, span, name, {});
   async function on_change(name_new) {
     let ast = object_property_get(a, "ast");
     await js_identifier_rename_imports_fix(ast, name, name_new);
