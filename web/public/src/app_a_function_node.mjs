@@ -1,4 +1,3 @@
-import { js_identifier_rename_imports_fix } from "../../../love/public/src/js_identifier_rename_imports_fix.mjs";
 import { app_a_identifier_generic } from "../../../love/public/src/app_a_identifier_generic.mjs";
 import { app_a_keyword_blue } from "../../../love/public/src/app_a_keyword_blue.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -149,7 +148,9 @@ export function app_a_function_node(a) {
       html_font_color_set(span3, "#d07200ff");
       app_a_identifier_generic(a, span3, raw, on_change);
       async function on_change(ast, name_new) {
-        await js_identifier_rename_imports_fix(ast, name, name_new);
+        log({
+          raw,
+        });
       }
     },
     ["VariableDeclaration"]: function lambda11() {
