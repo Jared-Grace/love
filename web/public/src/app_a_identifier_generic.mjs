@@ -32,6 +32,42 @@ export function app_a_identifier_generic(a, span, name, on_change) {
     let overlay_close = object_property_get(o, "overlay_close");
     let overlay = object_property_get(o, "overlay");
     let v = app_a_choice_close(overlay_close);
+    const edit = {
+      shortcut: "r",
+      text: "Rename",
+      fn: async function lambda15() {
+        overlay_close();
+        let lambda22 = html_on_enter_lambda(lambda23);
+        let o2 = app_a_overlay(a, on_keydowns, lambda22);
+        let rename_overlay_close = object_property_get(o2, "overlay_close");
+        let overlay = object_property_get(o2, "overlay");
+        let text5 = app_a_overlay_close_text();
+        let component2 = app_a_button_wide(
+          overlay,
+          text5,
+          rename_overlay_close,
+        );
+        let div3 = app_a_overlay_container(overlay);
+        html_centered(div3);
+        let div2 = html_div_text(div3, "Rename from:");
+        let div = html_div_text(div3, name);
+        html_div_text(div3, "Rename to:");
+        let input = app_a_input(overlay);
+        html_centered(input);
+        html_value_set(input, name);
+        await html_select(input);
+        async function lambda23() {
+          let parsed = object_property_get(a, "parsed");
+          let value_new = html_value_get(input);
+          await on_change(value_new);
+          await file_js_unparse(parsed);
+          rename_overlay_close();
+          app_a_function_on_keydown_remove(a);
+          await app_a_function(context);
+        }
+        let component = app_a_button_wide(overlay, "Rename", lambda23);
+      },
+    };
     let choices = [
       v,
       {
@@ -42,42 +78,7 @@ export function app_a_identifier_generic(a, span, name, on_change) {
           overlay_close();
         },
       },
-      {
-        shortcut: "r",
-        text: "Rename",
-        fn: async function lambda15() {
-          overlay_close();
-          let lambda22 = html_on_enter_lambda(lambda23);
-          let o2 = app_a_overlay(a, on_keydowns, lambda22);
-          let rename_overlay_close = object_property_get(o2, "overlay_close");
-          let overlay = object_property_get(o2, "overlay");
-          let text5 = app_a_overlay_close_text();
-          let component2 = app_a_button_wide(
-            overlay,
-            text5,
-            rename_overlay_close,
-          );
-          let div3 = app_a_overlay_container(overlay);
-          html_centered(div3);
-          let div2 = html_div_text(div3, "Rename from:");
-          let div = html_div_text(div3, name);
-          html_div_text(div3, "Rename to:");
-          let input = app_a_input(overlay);
-          html_centered(input);
-          html_value_set(input, name);
-          await html_select(input);
-          async function lambda23() {
-            let parsed = object_property_get(a, "parsed");
-            let value_new = html_value_get(input);
-            await on_change(value_new);
-            await file_js_unparse(parsed);
-            rename_overlay_close();
-            app_a_function_on_keydown_remove(a);
-            await app_a_function(context);
-          }
-          let component = app_a_button_wide(overlay, "Rename", lambda23);
-        },
-      },
+      edit,
     ];
     const choice_function_open = {
       shortcut: "o",
