@@ -1,3 +1,4 @@
+import { app_a_function_on_keydown_remove } from "../../../love/public/src/app_a_function_on_keydown_remove.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_properties_from_empty } from "../../../love/public/src/object_properties_from_empty.mjs";
 import { list_empty_is_assert } from "../../../love/public/src/list_empty_is_assert.mjs";
@@ -95,6 +96,8 @@ export async function app_a_function(context) {
   async function sync() {
     await upload();
     await download();
+    app_a_function_on_keydown_remove(a);
+    await app_a_function(context);
   }
   let choices = [
     {
