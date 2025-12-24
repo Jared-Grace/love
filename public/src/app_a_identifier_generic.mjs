@@ -32,6 +32,8 @@ export function app_a_identifier_generic(a, span, name, on_change) {
     let overlay_close = object_property_get(o, "overlay_close");
     let overlay = object_property_get(o, "overlay");
     let v = app_a_choice_close(overlay_close);
+    const change_shortcut = "r";
+    const change_text = "Rename";
     let choices = [
       v,
       {
@@ -43,8 +45,8 @@ export function app_a_identifier_generic(a, span, name, on_change) {
         },
       },
       {
-        shortcut: "r",
-        text: "Rename",
+        shortcut: change_shortcut,
+        text: change_text,
         fn: async function lambda15() {
           overlay_close();
           let lambda22 = html_on_enter_lambda(lambda23);
