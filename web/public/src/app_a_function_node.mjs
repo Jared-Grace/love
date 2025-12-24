@@ -147,7 +147,9 @@ export function app_a_function_node(a) {
       let raw = object_property_get(node, "raw");
       let span3 = html_span_text(parent, raw);
       html_font_color_set(span3, "#d07200ff");
-      app_a_identifier_generic(a, span3, raw, on_change);
+      app_a_identifier_generic(a, span3, raw, {
+        on_change,
+      });
       async function on_change(value_new) {
         object_property_set(node, "raw", value_new);
       }
