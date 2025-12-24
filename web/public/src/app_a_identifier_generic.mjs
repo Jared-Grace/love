@@ -24,7 +24,7 @@ import { app_a_choice_close } from "../../../love/public/src/app_a_choice_close.
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export function app_a_identifier_generic(a, span, name, on_change) {
+export function app_a_identifier_generic(a, span, name, c) {
   marker("1");
   async function on_pointerdown() {
     let context = object_property_get(a, "context");
@@ -61,7 +61,7 @@ export function app_a_identifier_generic(a, span, name, on_change) {
           let parsed = object_property_get(a, "parsed");
           let value_new = html_value_get(input);
           let on_change2 = object_property_get(change, "on_change");
-          await on_change(value_new);
+          await c(value_new);
           await file_js_unparse(parsed);
           rename_overlay_close();
           app_a_function_on_keydown_remove(a);
@@ -70,7 +70,7 @@ export function app_a_identifier_generic(a, span, name, on_change) {
         let component = app_a_button_wide(overlay, "Rename", lambda23);
       },
     };
-    let to2 = object_merge(change, on_change);
+    let to2 = object_merge(change, c);
     let choices = [
       v,
       {
