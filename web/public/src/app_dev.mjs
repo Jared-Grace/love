@@ -1,3 +1,3 @@
-export function app_dev(fn) {
+export function app_dev(fn) {context={}
   fn();
 }
