@@ -1,3 +1,4 @@
-export function app_dev(fn) {context={}
+export function app_dev(fn) {
+  let context = {};
   fn();
 }
