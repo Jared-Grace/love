@@ -22,17 +22,13 @@ export async function html_update_dev(name) {
   let file_path = html_name_to_path_dev(name);
   let a_name = app_name_prefixed(name);
   let joined = await function_name_repo_path_combine(a_name, file_path);
-  function paths_get(f_name_ext) {
-    let src = folder_src();
-    let previous = folder_previous();
-    const from_paths = [previous, src, f_name_ext];
-    return from_paths;
-  }
   const name_prefixed = app_name_main(name);
   let call = js_code_call_args_statement(app_dev.name, [name_prefixed]);
-  let f_name_ext2 = function_name_to_base(name_prefixed);
-  const from_paths2 = paths_get(f_name_ext2);
-  let f_path = path_join(from_paths2);
+  let f_name_ext = function_name_to_base(name_prefixed);
+  let src = folder_src();
+  let previous = folder_previous();
+  const from_paths = [previous, src, f_name_ext];
+  let f_path = path_join(from_paths);
   const from = folder_current_join_code(f_path);
   let code = js_code_import_single(name_prefixed, from);
   const middle = `${code}
