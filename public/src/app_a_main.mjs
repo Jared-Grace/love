@@ -18,7 +18,7 @@ export async function app_a_main(context) {
   function lambda(e) {
     invoke_multiple_arg(on_keydowns, e);
   }
-  let root2 = object_property_get(context, "root");
+  let root = object_property_get(context, "root");
   html_on_keydown(root, lambda);
   html_font_sans_serif_set_html();
   app_generic_refresh(context);
