@@ -5,9 +5,17 @@
   <title>message</title>
 </head>
 <body>
-  <script type="module"> 
+  <script type="importmap"> 
+    {
+ "imports": {
+  "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm"
+ }
+}
+  </script>
+<script type="module"> 
     import {app_message_main} from "./../src/app_message_main.mjs"
-    app_message_main(  );
+import {app_context_initialize} from "./../src/app_context_initialize.mjs"
+app_context_initialize( app_message_main );
   </script>
 </body>
 </html>
