@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { invoke } from "../../../love/public/src/invoke.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
@@ -32,22 +33,20 @@ import { app_karate_container } from "../../../karate_code/public/src/app_karate
 import { app_replace_font_size_refresh } from "../../../love/public/src/app_replace_font_size_refresh.mjs";
 import { app_karate_style_control_border } from "../../../love/public/src/app_karate_style_control_border.mjs";
 import { app_karate_style_control } from "../../../karate_code/public/src/app_karate_style_control.mjs";
-import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
-export async function app_message_main() {
+export async function app_message_main(context) {
   marker("1");
   const messages_property = "messages";
   let u = await uuid();
   const user_id_property = "user_id";
   let app_fn = app_message_main;
-  const root = html_document_body();
-  const context = {
+  let root = object_property_get(context, "root");
+  object_merge(context, {
     app_fn,
-    root: root,
-  };
+  });
   storage_local_initialize_context(context, user_id_property, u);
   app_replace_font_size_refresh(context);
   html_font_sans_serif(context);
