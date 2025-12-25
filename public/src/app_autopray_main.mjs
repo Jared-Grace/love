@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { string_may_the_lord } from "../../../love/public/src/string_may_the_lord.mjs";
 import { prayer_end } from "../../../love/public/src/prayer_end.mjs";
 import { prayer_start } from "../../../love/public/src/prayer_start.mjs";
@@ -8,7 +9,8 @@ import { each_object_async } from "../../../love/public/src/each_object_async.mj
 import { kjv } from "../../../love/public/src/kjv.mjs";
 import { sleep } from "./sleep.mjs";
 export async function app_autopray_main(context) {
-  let root = $g;
+  let root2 = object_property_get(context, "root");
+  let root = html_document_body();
   let v = kjv();
   async function lambda2(verse_text, verse_reference) {
     html_clear(root);
