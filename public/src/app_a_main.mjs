@@ -5,16 +5,15 @@ import { invoke_multiple_arg } from "../../../love/public/src/invoke_multiple_ar
 import { app_a } from "../../../love/public/src/app_a.mjs";
 import { app_a_screens } from "../../../love/public/src/app_a_screens.mjs";
 import { app_generic_refresh } from "../../../love/public/src/app_generic_refresh.mjs";
-export async function app_a_main(context2) {
+export async function app_a_main(context) {
   let app_fn = app_a;
   let screens = app_a_screens();
   let on_keydowns = [];
-  const context = {
+  object_merge(context, {
     app_fn,
     screens,
     on_keydowns,
-  };
-  let to2 = object_merge(to, from);
+  });
   function lambda(e) {
     invoke_multiple_arg(on_keydowns, e);
   }
