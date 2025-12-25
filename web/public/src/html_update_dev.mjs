@@ -1,3 +1,5 @@
+import { app_dev } from "../../../love/public/src/app_dev.mjs";
+import { js_code_call_args_statement } from "../../../love/public/src/js_code_call_args_statement.mjs";
 import { list_add_join_newline } from "../../../love/public/src/list_add_join_newline.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_update_externals } from "../../../love/public/src/html_update_externals.mjs";
@@ -10,7 +12,6 @@ import { js_code_import_single } from "../../../love/public/src/js_code_import_s
 import { folder_current_join_code } from "../../../love/public/src/folder_current_join_code.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { function_name_to_base } from "../../../love/public/src/function_name_to_base.mjs";
-import { js_code_call_statement } from "../../../love/public/src/js_code_call_statement.mjs";
 import { app_name_main } from "../../../love/public/src/app_name_main.mjs";
 import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
 import { folder_src } from "../../../love/public/src/folder_src.mjs";
@@ -28,7 +29,7 @@ export async function html_update_dev(name) {
     return from_paths;
   }
   const name_prefixed = app_name_main(name);
-  let call = js_code_call_statement(name_prefixed);
+  let call = js_code_call_args_statement(app_dev.name, [name_prefixed]);
   let f_name_ext2 = function_name_to_base(name_prefixed);
   const from_paths2 = paths_get(f_name_ext2);
   let f_path = path_join(from_paths2);
