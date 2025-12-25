@@ -7,15 +7,15 @@ import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multi
 import { each_object_async } from "../../../love/public/src/each_object_async.mjs";
 import { kjv } from "../../../love/public/src/kjv.mjs";
 import { sleep } from "./sleep.mjs";
-export async function app_autopray_main() {
-  let body = html_document_body();
+export async function app_autopray_main(context) {
+  let root = html_document_body();
   let v = kjv();
   async function lambda2(verse_text, verse_reference) {
-    html_clear(body);
+    html_clear(root);
     let v2 = prayer_start();
     let v3 = prayer_end();
     let v4 = string_may_the_lord();
-    html_p_text_multiple(body, [
+    html_p_text_multiple(root, [
       v2,
       v4,
       "lead all creation to hear, believe, obey, enjoy and proclaim the word of God:",
