@@ -5,24 +5,19 @@
   <title>a</title>
 </head>
 <body>
-<script type="importmap">
-{
-  "imports": {
-    "acorn": "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.mjs",
-    "astring": "https://cdn.jsdelivr.net/npm/astring/dist/astring.mjs",
-    "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm"
-  }
+  <script type="importmap"> 
+    {
+ "imports": {
+  "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm",
+  "astring": "https://cdn.jsdelivr.net/npm/astring/dist/astring.mjs",
+  "acorn": "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.mjs"
+ }
 }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/prettier@2.8.8/standalone.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prettier@2.8.8/parser-babel.js"></script>
-<script>
-  // Define a formatting function using the global Prettier and plugin
-  window.prettier=prettier
-</script>
-  <script type="module"> 
-    import {app_a_main} from "./../src/app_a_main.mjs"
-    app_a_main(  );
+  </script>
+<script type="module"> 
+    app_dev( app_a_main );
+import {app_a_main} from "./../src/app_a_main.mjs"
+import {app_dev} from "./../src/app_dev.mjs"
   </script>
 </body>
 </html>
