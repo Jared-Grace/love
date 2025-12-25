@@ -1,3 +1,4 @@
+import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { function_code_import_dev } from "../../../love/public/src/function_code_import_dev.mjs";
 import { app_dev } from "../../../love/public/src/app_dev.mjs";
 import { js_code_call_args_statement } from "../../../love/public/src/js_code_call_args_statement.mjs";
@@ -21,7 +22,7 @@ export async function html_update_dev(name) {
   let call = js_code_call_args_statement(app_dev.name, [name_prefixed]);
   let code = function_code_import_dev(name_prefixed);
   let code2 = function_code_import_dev(app_dev.name);
-ljn
+  let joined3 = list_join_newline(list);
   let body = html_code_script_module(middle);
   var v = await html_update_externals(name_prefixed);
   let scripts = object_property_get(v, "scripts");
