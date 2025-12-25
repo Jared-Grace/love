@@ -46,7 +46,6 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { each_range_async } from "../../../love/public/src/each_range_async.mjs";
-import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { firebase_storage_download_ebible } from "../../../love/public/src/firebase_storage_download_ebible.mjs";
 import { ebible_index_flat_upload_name } from "../../../love/public/src/ebible_index_flat_upload_name.mjs";
@@ -57,7 +56,7 @@ import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs"
 import { bible_verses_uplifting } from "../../../love/public/src/bible_verses_uplifting.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { app_reply_choices } from "../../../love/public/src/app_reply_choices.mjs";
-export async function app_reply_main() {
+export async function app_reply_main(context) {
   html_meta_viewport();
   html_font_sans_serif_set_html();
   let html = html_document_root();
@@ -73,7 +72,7 @@ export async function app_reply_main() {
   let index = await firebase_storage_download_ebible(en, file_name);
   let books = await ebible_version_books(en);
   let verses_list = null;
-  const root = html_document_body();
+  let root = object_property_get(context, "root");
   let copied = [];
   let languages_chosens = [];
   let buttons = null;
@@ -230,7 +229,9 @@ export async function app_reply_main() {
       let exists = object_property_exists(v, "translations");
       if (exists) {
         let translations2 = object_property_get(v, "translations");
-        let { last, remaining } = list_last_remaining(translations2);
+        let v3 = list_last_remaining(translations2);
+        let remaining = object_property_get(v3, "remaining");
+        let last = object_property_get(v3, "last");
         original_translation = last;
         if (remaining !== null) {
           each(remaining, verses_add);
