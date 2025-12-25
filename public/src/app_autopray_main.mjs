@@ -8,7 +8,7 @@ import { each_object_async } from "../../../love/public/src/each_object_async.mj
 import { kjv } from "../../../love/public/src/kjv.mjs";
 import { sleep } from "./sleep.mjs";
 export async function app_autopray_main(context) {
-  let root = html_document_body();
+  let root = $g;
   let v = kjv();
   async function lambda2(verse_text, verse_reference) {
     html_clear(root);
