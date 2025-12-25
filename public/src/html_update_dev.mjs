@@ -1,3 +1,4 @@
+import { function_code_import } from "../../../love/public/src/function_code_import.mjs";
 import { app_dev } from "../../../love/public/src/app_dev.mjs";
 import { js_code_call_args_statement } from "../../../love/public/src/js_code_call_args_statement.mjs";
 import { list_add_join_newline } from "../../../love/public/src/list_add_join_newline.mjs";
@@ -8,13 +9,7 @@ import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mj
 import { file_open } from "../../../love/public/src/file_open.mjs";
 import { html_overwrite } from "../../../love/public/src/html_overwrite.mjs";
 import { html_code_script_module } from "../../../love/public/src/html_code_script_module.mjs";
-import { js_code_import_single } from "../../../love/public/src/js_code_import_single.mjs";
-import { folder_current_join_code } from "../../../love/public/src/folder_current_join_code.mjs";
-import { path_join } from "../../../love/public/src/path_join.mjs";
-import { function_name_to_base } from "../../../love/public/src/function_name_to_base.mjs";
 import { app_name_main } from "../../../love/public/src/app_name_main.mjs";
-import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
-import { folder_src } from "../../../love/public/src/folder_src.mjs";
 import { html_name_to_path_dev } from "../../../love/public/src/html_name_to_path_dev.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function html_update_dev(name) {
@@ -24,13 +19,7 @@ export async function html_update_dev(name) {
   let joined = await function_name_repo_path_combine(a_name, file_path);
   const name_prefixed = app_name_main(name);
   let call = js_code_call_args_statement(app_dev.name, [name_prefixed]);
-  let f_name_ext = function_name_to_base(name_prefixed);
-  let src = folder_src();
-  let previous = folder_previous();
-  const from_paths = [previous, src, f_name_ext];
-  let f_path = path_join(from_paths);
-  const from = folder_current_join_code(f_path);
-  let code = js_code_import_single(name_prefixed, from);
+  let code = function_code_import(name_prefixed);
   const middle = `${code}
     ${call}`;
   let body = html_code_script_module(middle);
