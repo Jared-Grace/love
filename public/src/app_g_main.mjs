@@ -40,9 +40,9 @@ import { g_folder_tiles } from "../../../love/public/src/g_folder_tiles.mjs";
 import { g_folder_img } from "../../../love/public/src/g_folder_img.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
-import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export async function app_g_main() {
+export async function app_g_main(context) {
+  let root = object_property_get(context, "root");
   firebase_name_jg();
   let books = await ebible_version_books("engbsb");
   global_function_property_set(app_g_main, "books", books);
@@ -55,7 +55,6 @@ export async function app_g_main() {
     "font-size": "18px",
   });
   html_remix_icon();
-  let body = html_document_body();
   function lambda(item) {
     html_style_assign(item, {
       margin: "0",
@@ -64,7 +63,7 @@ export async function app_g_main() {
       height: "100%",
     });
   }
-  each([body, html], lambda);
+  each([root, html], lambda);
   let path_prefix = "";
   let l = localhost_is();
   const path_part = "latest";
@@ -73,7 +72,7 @@ export async function app_g_main() {
     path_prefix = "..\\";
   }
   const game_prefix = g_folder_img(path_prefix);
-  let div_map_container = html_div(body);
+  let div_map_container = html_div(root);
   html_style_assign(div_map_container, {
     position: "fixed",
     top: "0",
@@ -151,7 +150,7 @@ export async function app_g_main() {
     global_function_property_set(app_g_main, t, null);
   }
   g_tutorials_each(lambda4);
-  let i = g_icon_cross_unpositioned(body);
+  let i = g_icon_cross_unpositioned(root);
   html_hide_loadable(i);
   await app_g_refresh(div_map_container, game_prefix, tiles_path, rows, map);
 }
