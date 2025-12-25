@@ -1,3 +1,4 @@
+import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { function_code_import_dev } from "../../../love/public/src/function_code_import_dev.mjs";
 import { app_dev } from "../../../love/public/src/app_dev.mjs";
 import { js_code_call_args_statement } from "../../../love/public/src/js_code_call_args_statement.mjs";
@@ -20,8 +21,8 @@ export async function html_update_dev(name) {
   const name_prefixed = app_name_main(name);
   let call = js_code_call_args_statement(app_dev.name, [name_prefixed]);
   let code = function_code_import_dev(name_prefixed);
-  const middle = `${code}
-    ${call}`;
+  let code2 = function_code_import_dev(app_dev.name);
+  let joined3 = list_join_space(list);
   let body = html_code_script_module(middle);
   var v = await html_update_externals(name_prefixed);
   let scripts = object_property_get(v, "scripts");
