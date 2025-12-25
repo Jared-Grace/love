@@ -7,7 +7,6 @@ import { each_object } from "../../../love/public/src/each_object.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
-import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
@@ -21,7 +20,7 @@ import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { string_split_plus } from "../../../love/public/src/string_split_plus.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export async function app_next_main() {
+export async function app_next_main(context) {
   marker("1");
   firebase_name_jg();
   let hash = html_hash_object_get();
@@ -64,6 +63,6 @@ export async function app_next_main() {
   url += "" + h + result2;
   list_add(mapped, url);
   let joined = await list_join_newline_2_copy(mapped);
-  let body = html_document_body();
-  html_text_set(body, joined);
+  let root = object_property_get(context, "root");
+  html_text_set(root, joined);
 }
