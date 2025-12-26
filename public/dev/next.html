@@ -14,7 +14,8 @@
   </script>
 <script type="module"> 
     import {app_next_main} from "./../src/app_next_main.mjs"
-    app_next_main(  );
+import {app_context_initialize} from "./../src/app_context_initialize.mjs"
+app_context_initialize( app_next_main );
   </script>
 </body>
 </html>
