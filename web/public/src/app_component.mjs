@@ -1,1 +1,4 @@
-export function app_component() {}
+import { marker } from "../../../love/public/src/marker.mjs";
+export function app_component() {
+  marker("1");
+}
