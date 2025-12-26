@@ -1,4 +1,6 @@
-import { marker } from "../../../love/public/src/marker.mjs";
-export function app_component() {
-  marker("1");
+export async function app_component(fn, root) {
+  let context = {
+    root,
+  };
+  await fn(context);
 }
