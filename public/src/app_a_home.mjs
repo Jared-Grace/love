@@ -1,3 +1,4 @@
+import { functions_path } from "../../../love/public/src/functions_path.mjs";
 import { string_includes } from "../../../love/public/src/string_includes.mjs";
 import { string_pad } from "../../../love/public/src/string_pad.mjs";
 import { function_name_extension } from "../../../love/public/src/function_name_extension.mjs";
@@ -47,8 +48,9 @@ export async function app_a_home(context) {
   let filtered3 = list_filter_ends_with(mapped, suffix);
   log(mapped);
   let f_names = list_map(filtered3, function_path_to_name);
+  let joined = functions_path();
+  let padded = string_pad(item, "/");
   function lambda5(item) {
-    let padded = string_pad(item, "/");
     let i = string_includes(input2, part);
     return padded;
   }
