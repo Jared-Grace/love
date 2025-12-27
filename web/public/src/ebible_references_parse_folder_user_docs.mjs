@@ -20,7 +20,7 @@ export async function ebible_references_parse_folder_user_docs(
     return v2;
   }
   let mapped = list_map(list, lambda);
-  let joined = list_join_newline_2(list2);
-  await clipboard_copy(list);
-  return list;
+  let joined = list_join_newline_2(mapped);
+  await clipboard_copy(joined);
+  return joined;
 }
