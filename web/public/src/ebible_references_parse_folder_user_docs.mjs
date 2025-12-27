@@ -11,7 +11,8 @@ export async function ebible_references_parse_folder_user_docs(
   let file_path = folder_user_docs_path(file_name);
   let bible_folders = [second_language, v];
   let list = await ebible_references_parse(bible_folders, file_path);
-  let mapped = list_map(list2, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list2, lambda);
   await clipboard_copy(list);
   return list;
 }
