@@ -38,7 +38,7 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
             chapter_code,
             verse_number,
           );
-          let to2 = object_merge(to, from);
+          let to2 = object_merge(result, {from});
           la(result);
         }
         await each_range_from_async(verse_start, verse_end, lambda4);
