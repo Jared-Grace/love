@@ -40,12 +40,11 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
             verse_number,
           );
           let reference = ebible_parts_chapter_code_to_reference(
-            chapter_code2,
-            books2,
-            verse_numbers,
-          );
-          let to2 = object_merge(result, {
-            from,
+            chapter_code,
+            books,
+            [verse_number],
+          );object_merge(result, {
+            reference
           });
           la(result);
         }
