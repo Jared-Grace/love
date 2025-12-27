@@ -46,11 +46,10 @@ export async function app_a_home(context) {
   let mapped = list_map_property(all, property_name);
   let suffix = function_name_extension();
   let filtered3 = list_filter_ends_with(mapped, suffix);
-  log(mapped);
-  let f_names = list_map(filtered3, function_path_to_name);
   let joined = functions_path();
   let padded = string_pad(joined, "/");
-  let mapped2 = list_filter_includes(list, padded);
+  let filtered4 = list_filter_includes(filtered3, padded);
+  let f_names = list_map(filtered4, function_path_to_name);
   let body = html_document_body();
   let input = app_a_input(body);
   let f_names_div = html_div(body);
