@@ -1,4 +1,4 @@
-import { ebible_parts_to_reference } from "../../../love/public/src/ebible_parts_to_reference.mjs";
+import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { ebible_references_names } from "../../../love/public/src/ebible_references_names.mjs";
 import { ebible_reference_parts } from "../../../love/public/src/ebible_reference_parts.mjs";
@@ -39,11 +39,10 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
             chapter_code,
             verse_number,
           );
-          let reference = ebible_parts_to_reference(
+          let reference = ebible_parts_chapter_code_to_reference(
+            chapter_code2,
             books2,
-            book_code,
             verse_numbers,
-            chapter_name,
           );
           let to2 = object_merge(result, {
             from,
