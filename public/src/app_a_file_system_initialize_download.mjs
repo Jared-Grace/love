@@ -19,6 +19,7 @@ export async function app_a_file_system_initialize_download() {
   async function lambda(item) {
     let value_get = lambda_get(item);
     let key = object_property_get(item, "key");
+    log(key);
     let sw = string_starts_with(key, "app_c");
     if (sw) {
       log(key);
