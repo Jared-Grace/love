@@ -1,4 +1,4 @@
-import { string_starts_with } from "../../../love/public/src/string_starts_with.mjs";
+import { string_includes } from "../../../love/public/src/string_includes.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_a_file_system_initialize } from "../../../love/public/src/app_a_file_system_initialize.mjs";
 import { app_a } from "../../../love/public/src/app_a.mjs";
@@ -20,7 +20,7 @@ export async function app_a_file_system_initialize_download() {
     let value_get = lambda_get(item);
     let key = object_property_get(item, "key");
     log(key);
-    let sw = string_starts_with(key, "app_c");
+    let sw = string_includes(key, "app_c");
     if (sw) {
       log(key);
     }
