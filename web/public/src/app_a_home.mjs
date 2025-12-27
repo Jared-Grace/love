@@ -47,7 +47,7 @@ export async function app_a_home(context) {
   log(mapped);
   let f_names = list_map(filtered3, function_path_to_name);
   function lambda5(item) {
-    let padded = string_pad(padding, "/");
+    let padded = string_pad(item, "/");
     return padded;
   }
   let mapped2 = list_map(list, lambda5);
