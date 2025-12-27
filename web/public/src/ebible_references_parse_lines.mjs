@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { ebible_references_names } from "../../../love/public/src/ebible_references_names.mjs";
 import { ebible_reference_parts } from "../../../love/public/src/ebible_reference_parts.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
@@ -17,14 +18,16 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
     ebible_version_books,
   );
   let books = await ebible_version_books(bible_folder);
-  let { chapter_verses_list, book_names } = ebible_references_names(
-    books,
-    lines,
-  );
+  let v = ebible_references_names(books, lines);
+  let book_names = object_property_get(v, "book_names");
+  let chapter_verses_list = object_property_get(v, "chapter_verses_list");
   async function lambda2(la) {
     async function lambda(book_name, chapter_verses) {
-      let { index, chapter_code, verse_start, verse_end } =
-        ebible_reference_parts(books, book_name, chapter_verses);
+      let v2 = ebible_reference_parts(books, book_name, chapter_verses);
+      let verse_end = object_property_get(v2, "verse_end");
+      let verse_start = object_property_get(v2, "verse_start");
+      let chapter_code = object_property_get(v2, "chapter_code");
+      let index = object_property_get(v2, "index");
       async function lambda5(bible_folder, books) {
         let book2 = list_get(books, index);
         let book_name = object_property_get(book2, "text");
@@ -35,6 +38,7 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
             chapter_code,
             verse_number,
           );
+          let to2 = object_merge(to, from);
           la(result);
         }
         await each_range_from_async(verse_start, verse_end, lambda4);
