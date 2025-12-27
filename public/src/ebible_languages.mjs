@@ -1,3 +1,4 @@
+import { ebible_folder_swahili } from "../../../love/public/src/ebible_folder_swahili.mjs";
 import { ebible_languages_chapters_cache_refresh } from "../../../love/public/src/ebible_languages_chapters_cache_refresh.mjs";
 import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
@@ -21,7 +22,7 @@ export function ebible_languages() {
     },
     {
       name: "Swahili",
-      bible_folder: "swhonen",
+      bible_folder: ebible_folder_swahili(),
       language_code: "swh",
     },
     {
