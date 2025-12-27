@@ -16,7 +16,8 @@ export async function ebible_references_parse_folder_user_docs(
   function lambda(item) {
     let text = object_property_get(item, "text");
     let reference = object_property_get(item, "reference");
-    return reference + " " + text;
+    let v2 = reference + " " + text;
+    return v2;
   }
   let mapped = list_map(list, lambda);
   let joined = list_join_newline_2(list2);
