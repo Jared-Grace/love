@@ -11,6 +11,6 @@ export async function app_component(a_name) {
   let code = object_property_get(v2, "code");
   code += newline() + a_name;
   let fn = eval(code);
-  let body = html_document_body();
+  let root = html_document_body();
   await app_context_initialize_root(root, fn);
 }
