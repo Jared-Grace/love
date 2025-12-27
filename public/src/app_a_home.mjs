@@ -1,3 +1,4 @@
+import { function_path_to_name } from "../../../love/public/src/function_path_to_name.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_a_indexeddb_path_key } from "../../../love/public/src/app_a_indexeddb_path_key.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -14,7 +15,6 @@ import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { app_a_input } from "../../../love/public/src/app_a_input.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
-import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_sort_string_alpha_size } from "../../../love/public/src/list_sort_string_alpha_size.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -34,14 +34,12 @@ export async function app_a_home(context) {
   log({
     on_keydowns,
   });
-  let f_names = await functions_names();
   await app_a_file_system_initialize_download();
   let store = app_a_file_system_store();
   let all = await indexeddb_get_all(app_a_indexeddb_initialize, store);
   let property_name = app_a_indexeddb_path_key();
   let mapped = list_map_property(all, property_name);
-  function lambda5(item) {}
-  let mapped2 = list_map(list, lambda5);
+  let f_names = list_map(mapped, function_path_to_name);
   let body = html_document_body();
   let input = app_a_input(body);
   let f_names_div = html_div(body);
