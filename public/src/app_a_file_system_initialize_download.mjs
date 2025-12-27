@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_a_file_system_initialize } from "../../../love/public/src/app_a_file_system_initialize.mjs";
 import { app_a } from "../../../love/public/src/app_a.mjs";
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
@@ -13,6 +14,7 @@ export async function app_a_file_system_initialize_download() {
   let db = await app_a_indexeddb_initialize();
   let db_get = lambda_get(db);
   let r = await app_api_fn(app_a_download, []);
+  log(message);
   async function lambda(item) {
     let value_get = lambda_get(item);
     let key = object_property_get(item, "key");
