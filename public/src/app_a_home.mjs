@@ -1,3 +1,4 @@
+import { list_filter_ends_with } from "../../../love/public/src/list_filter_ends_with.mjs";
 import { app_a_file_system_initialize } from "../../../love/public/src/app_a_file_system_initialize.mjs";
 import { function_path_to_name } from "../../../love/public/src/function_path_to_name.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -39,6 +40,7 @@ export async function app_a_home(context) {
   let all = await indexeddb_get_all(app_a_indexeddb_initialize, store);
   let property_name = app_a_indexeddb_path_key();
   let mapped = list_map_property(all, property_name);
+  let filtered3 = list_filter_ends_with(filtered2, f_name_suffix_after);
   log(mapped);
   let f_names = list_map(mapped, function_path_to_name);
   let body = html_document_body();
