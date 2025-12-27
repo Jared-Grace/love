@@ -46,9 +46,11 @@ export async function app_a_home(context) {
   let filtered3 = list_filter_ends_with(mapped, suffix);
   log(mapped);
   let f_names = list_map(filtered3, function_path_to_name);
-  function lambda5(item) {}
+  function lambda5(item) {
+    let padded = string_pad(padding, "/");
+    return padded;
+  }
   let mapped2 = list_map(list, lambda5);
-  let padded = string_pad(padding, "/");
   let body = html_document_body();
   let input = app_a_input(body);
   let f_names_div = html_div(body);
