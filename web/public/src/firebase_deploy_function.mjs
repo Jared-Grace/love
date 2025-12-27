@@ -10,8 +10,8 @@ export async function firebase_deploy_function(f_name) {
   marker("1");
   let v = await function_name_unalias(f_name);
   let unaliased = object_property_get(v, "unaliased");
-  let v2 = await function_dependencies_code(unaliased);
-  let code = object_property_get(v2, "code");
+  let d = await function_dependencies_code(unaliased);
+  let code = object_property_get(d, "code");
   let now_file = date_now_file();
   let destination = firebase_deploy_function_destination_json(
     now_file,
