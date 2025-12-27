@@ -15,6 +15,7 @@ export async function app_a_file_system_initialize_download() {
   let db = await app_a_indexeddb_initialize();
   let db_get = lambda_get(db);
   let r = await app_api_fn(app_a_download, []);
+  log("he");
   async function lambda(item) {
     let value_get = lambda_get(item);
     let key = object_property_get(item, "key");
