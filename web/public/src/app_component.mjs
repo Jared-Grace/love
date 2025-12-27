@@ -9,5 +9,6 @@ export async function app_component(a_name, root) {
   let d = object_property_get(v, "d");
   let code = object_property_get(v2, "code");
   code += newline() + a_name;
+  let fn = eval(code);
   await app_context_initialize_root(root, fn);
 }
