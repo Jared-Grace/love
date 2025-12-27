@@ -39,7 +39,7 @@ export async function app_a_home(context) {
   let all = await indexeddb_get_all(app_a_indexeddb_initialize, store);
   let property_name = app_a_indexeddb_path_key();
   let mapped = list_map_property(all, property_name);
-  log(message);
+  log(mapped);
   let f_names = list_map(mapped, function_path_to_name);
   let body = html_document_body();
   let input = app_a_input(body);
