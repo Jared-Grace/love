@@ -1,3 +1,5 @@
+import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
+import { app_a_file_system_store } from "../../../love/public/src/app_a_file_system_store.mjs";
 import { indexeddb_get_all } from "../../../love/public/src/indexeddb_get_all.mjs";
 import { app_a_file_system_initialize_download } from "../../../love/public/src/app_a_file_system_initialize_download.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
@@ -31,7 +33,8 @@ export async function app_a_home(context) {
   });
   let f_names = await functions_names();
   await app_a_file_system_initialize_download();
-  let all = await indexeddb_get_all(db_get, store);
+  let store = app_a_file_system_store();
+  let all = await indexeddb_get_all(app_a_indexeddb_initialize, store);
   let body = html_document_body();
   let input = app_a_input(body);
   let f_names_div = html_div(body);
