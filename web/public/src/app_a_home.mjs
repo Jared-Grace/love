@@ -1,3 +1,4 @@
+import { app_a_file_system_initialize_download } from "../../../love/public/src/app_a_file_system_initialize_download.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
@@ -28,6 +29,7 @@ export async function app_a_home(context) {
     on_keydowns,
   });
   let f_names = await functions_names();
+  await app_a_file_system_initialize_download();
   let body = html_document_body();
   let input = app_a_input(body);
   let f_names_div = html_div(body);
