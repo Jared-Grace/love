@@ -8,7 +8,7 @@ import { functions_search } from "../../../love/public/src/functions_search.mjs"
 export async function tasks_run() {
   let result2 = task_function_name_part();
   let separator = function_name_separator();
-  let search = string_pad(separator, result2);
+  let search = string_pad(result2, separator);
   let result = await functions_search(search);
   let properties = object_properties(result);
   async function lambda(item) {
