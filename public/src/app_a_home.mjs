@@ -1,5 +1,5 @@
+import { list_filter_includes } from "../../../love/public/src/list_filter_includes.mjs";
 import { functions_path } from "../../../love/public/src/functions_path.mjs";
-import { string_includes } from "../../../love/public/src/string_includes.mjs";
 import { string_pad } from "../../../love/public/src/string_pad.mjs";
 import { function_name_extension } from "../../../love/public/src/function_name_extension.mjs";
 import { list_filter_ends_with } from "../../../love/public/src/list_filter_ends_with.mjs";
@@ -49,12 +49,8 @@ export async function app_a_home(context) {
   log(mapped);
   let f_names = list_map(filtered3, function_path_to_name);
   let joined = functions_path();
-  let padded = string_pad(item, "/");
-  function lambda5(item) {
-    let i = string_includes(input2, part);
-    return padded;
-  }
-  let mapped2 = list_map(list, lambda5);
+  let padded = string_pad(joined, "/");
+  let mapped2 = list_filter_includes(list, padded);
   let body = html_document_body();
   let input = app_a_input(body);
   let f_names_div = html_div(body);
