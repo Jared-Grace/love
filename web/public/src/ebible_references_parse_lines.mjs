@@ -43,8 +43,9 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
             chapter_code,
             books,
             [verse_number],
-          );object_merge(result, {
-            reference
+          );
+          object_merge(result, {
+            reference,
           });
           la(result);
         }
