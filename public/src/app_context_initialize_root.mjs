@@ -1,6 +1,6 @@
-export function app_context_initialize_root(root, fn) {
+export async function app_context_initialize_root(root, fn) {
   let context = {
     root,
   };
-  fn(context);
+  await fn(context);
 }
