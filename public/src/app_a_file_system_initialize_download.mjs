@@ -15,12 +15,12 @@ export async function app_a_file_system_initialize_download() {
   let db = await app_a_indexeddb_initialize();
   let db_get = lambda_get(db);
   let r = await app_api_fn(app_a_download, []);
-  log(r);
   async function lambda(item) {
     let value_get = lambda_get(item);
     let key = object_property_get(item, "key");
     let sw = string_starts_with(key, "app_c");
-    if (false) {
+    if (sw) {
+      log(key);
     }
     let store = app_a_file_system_store();
     let value3 = await indexeddb_put(db_get, store, key, value_get);
