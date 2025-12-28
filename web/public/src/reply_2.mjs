@@ -19,15 +19,16 @@ export async function reply_2(context) {
     root,
     "1. Choose the language or languages you want the Bible verses to be translated into",
   );
+  let ds = app_reply_languages_default();
   function lambda(language) {
     let name = object_property_get(language, "name");
+    let bible_folder = object_property_get(language, "bible_folder");
     function lambda3() {
       list_add(languages_chosen, language);
     }
     let component = html_button(root, name, lambda3);
   }
   each(languages, lambda);
-  let ds = app_reply_languages_default();
   function lambda2(d) {}
   each(ds, lambda2);
 }
