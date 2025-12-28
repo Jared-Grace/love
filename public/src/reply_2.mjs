@@ -1,3 +1,4 @@
+import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { app_reply_languages_default } from "../../../love/public/src/app_reply_languages_default.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
@@ -26,7 +27,8 @@ export async function reply_2(context) {
     function lambda3() {
       list_add(languages_chosen, language);
     }
-    let component = html_button(root, name, lambda3);lin
+    let component = html_button(root, name, lambda3);
+    let includes = list_includes(list, item);
     if (false) {
     }
   }
