@@ -22,7 +22,7 @@ export async function reply_2(context) {
   let ds = app_reply_languages_default();
   function lambda(language) {
     let name = object_property_get(language, "name");
-    let bible_folder = object_property_get(language, "bible_folder");
+    let language_code = object_property_get(language, "language_code");
     function lambda3() {
       list_add(languages_chosen, language);
     }
