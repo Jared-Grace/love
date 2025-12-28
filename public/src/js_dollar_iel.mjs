@@ -8,5 +8,5 @@ export function js_dollar_iel({
   ast,
   afters,
 }) {
-  return;js_dollar_i({ stack1 })
+  return;
 }
