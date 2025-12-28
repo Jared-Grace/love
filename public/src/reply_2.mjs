@@ -1,7 +1,5 @@
 import { html_style_remove } from "../../../love/public/src/html_style_remove.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
-import { list_includes_not } from "../../../love/public/src/list_includes_not.mjs";
-import { html_disable_set } from "../../../love/public/src/html_disable_set.mjs";
 import { list_toggle } from "../../../love/public/src/list_toggle.mjs";
 import { html_pointerdown } from "../../../love/public/src/html_pointerdown.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
@@ -31,13 +29,12 @@ export async function reply_2(context) {
     let name = object_property_get(language, "name");
     function lambda3() {
       list_toggle(languages_chosen, language);
-      let disabled = list_includes_not(languages_chosen, language);
-      if (false) {
+      let chosen = list_includes(languages_chosen, language);
+      if (chosen) {
+        html_style_background_color(component, "lightgreen");
       } else {
+        html_style_remove(b, "background-color");
       }
-      html_disable_set(component, disabled);
-      html_style_background_color(component, "lightgreen");
-      html_style_remove(b, "background-color");
     }
     component = html_button(root, name, lambda3);
     let language_code = object_property_get(language, "language_code");
