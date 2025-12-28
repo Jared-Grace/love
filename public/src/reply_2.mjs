@@ -1,5 +1,4 @@
-import { html_style_remove } from "../../../love/public/src/html_style_remove.mjs";
-import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
+import { html_style_background_color_set_or_remove } from "../../../love/public/src/html_style_background_color_set_or_remove.mjs";
 import { list_toggle } from "../../../love/public/src/list_toggle.mjs";
 import { html_pointerdown } from "../../../love/public/src/html_pointerdown.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
@@ -30,11 +29,8 @@ export async function reply_2(context) {
     function lambda3() {
       list_toggle(languages_chosen, language);
       let chosen = list_includes(languages_chosen, language);
-      if (chosen) {
-        html_style_background_color(component, "lightgreen");
-      } else {
-        html_style_remove(component, "background-color");
-      }
+      const color = "lightgreen";
+      html_style_background_color_set_or_remove(chosen, component, color);
     }
     component = html_button(root, name, lambda3);
     let language_code = object_property_get(language, "language_code");
