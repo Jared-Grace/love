@@ -12,6 +12,7 @@ export async function reply_2(context) {
   let original = object_property_get(r, "original");
   let en = object_property_get(r, "en");
   let encouragement = object_property_get(r, "encouragement");
+  let languages_chosen = [];
   let p = html_p_text(
     root,
     "1. Choose the language or languages you want the Bible verses to be translated into",
