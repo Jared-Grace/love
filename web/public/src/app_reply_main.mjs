@@ -1,3 +1,4 @@
+import { reply_2 } from "../../../love/public/src/reply_2.mjs";
 import { app_reply_initialize } from "../../../love/public/src/app_reply_initialize.mjs";
 import { html_on_keydown_body } from "../../../love/public/src/html_on_keydown_body.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
@@ -44,6 +45,8 @@ import { ebible_references_parse_lines } from "../../../love/public/src/ebible_r
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { each_range_async } from "../../../love/public/src/each_range_async.mjs";
 export async function app_reply_main(context) {
+  await reply_2();
+  return;
   let r = await app_reply_initialize(context);
   let books = object_property_get(r, "books");
   let choices = object_property_get(r, "choices");
