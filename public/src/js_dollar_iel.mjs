@@ -16,7 +16,4 @@ export function js_dollar_iel({
   let b = js_statement_block_new(null);
   object_property_set(stack1, "alternate", b);
   return;
-  if (false) {
-  } else {
-  }
 }
