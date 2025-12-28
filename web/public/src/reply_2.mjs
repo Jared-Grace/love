@@ -53,9 +53,9 @@ export async function reply_2(context) {
   }
   each_range_from(1, 6, lambda4);
   list_add(choices_verse_count, 20);
-  function lambda2(item2) {
+  function lambda2(c) {
     function lambda6() {}
-    let component2 = html_button(parent, text, lambda6);
+    let component2 = html_button(root, c, lambda6);
   }
   each(choices_verse_count, lambda2);
 }
