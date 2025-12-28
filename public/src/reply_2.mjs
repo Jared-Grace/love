@@ -1,4 +1,3 @@
-import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_reply_initialize } from "../../../love/public/src/app_reply_initialize.mjs";
 export async function reply_2() {
@@ -10,6 +9,4 @@ export async function reply_2() {
   let original = object_property_get(r, "original");
   let en = object_property_get(r, "en");
   let encouragement = object_property_get(r, "encouragement");
-  function lambda(item) {}
-  each(list, lambda);
 }
