@@ -5,7 +5,6 @@ import { html_pointerdown } from "../../../love/public/src/html_pointerdown.mjs"
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { app_reply_languages_default } from "../../../love/public/src/app_reply_languages_default.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
-import { html_button } from "../../../love/public/src/html_button.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_reply_initialize } from "../../../love/public/src/app_reply_initialize.mjs";
@@ -43,8 +42,7 @@ export async function reply_2(context) {
   each_range_from(1, 6, lambda4);
   list_add(choices_verse_count, 20);
   function lambda2(c) {
-    function lambda6() {}
-    let component2 = html_button(root, c, lambda6);
+    let component = app_reply_button(choices_verse_count, c, root, c);
   }
   each(choices_verse_count, lambda2);
 }
