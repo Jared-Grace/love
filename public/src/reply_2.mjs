@@ -44,8 +44,5 @@ export async function reply_2(context) {
     }
   }
   each(languages, lambda);
-  html_p_text(
-    root,
-    "1. Choose the language or languages you want the Bible verses to be translated into",
-  );
+  html_p_text(root, "2. ");
 }
