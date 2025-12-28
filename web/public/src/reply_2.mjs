@@ -45,6 +45,8 @@ export async function reply_2(context) {
   }
   each(languages, lambda);
   html_p_text(root, "2. How many Bible passages do you want?");
-  function lambda4() {}
-  each_range_from(from, to, lambda4);
+  function lambda4(item) {
+    let v = item * 2;
+  }
+  each_range_from(1, 6, lambda4);
 }
