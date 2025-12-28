@@ -53,4 +53,5 @@ export async function reply_2(context) {
   }
   each_range_from(1, 6, lambda4);
   list_add(choices_verse_count, 20);
+  each(list, function lambda2(item2) {});
 }
