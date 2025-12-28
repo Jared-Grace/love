@@ -8,6 +8,8 @@ export function js_dollar_iel({
   ast,
   afters,
 }) {
-  js_dollar_i(stack12);
+  js_dollar_i({
+    stack1,
+  });
   return;
 }
