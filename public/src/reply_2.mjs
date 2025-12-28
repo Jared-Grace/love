@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { each_range_from } from "../../../love/public/src/each_range_from.mjs";
 import { html_style_background_color_set_or_remove } from "../../../love/public/src/html_style_background_color_set_or_remove.mjs";
 import { list_toggle } from "../../../love/public/src/list_toggle.mjs";
@@ -12,7 +13,7 @@ import { app_reply_initialize } from "../../../love/public/src/app_reply_initial
 export async function reply_2(context) {
   let r = await app_reply_initialize(context);
   let books = object_property_get(r, "books");
-  let choices = object_property_get(r, "choices");
+  let choices_verse_count = object_property_get(r, "choices");
   let languages = object_property_get(r, "languages");
   let root = object_property_get(r, "root");
   let original = object_property_get(r, "original");
@@ -45,9 +46,10 @@ export async function reply_2(context) {
   }
   each(languages, lambda);
   html_p_text(root, "2. How many Bible passages do you want?");
-  choices = [1];
+  choices_verse_count = [1];
   function lambda4(item) {
     let v = item * 2;
+    list_add(list, item2);
   }
   each_range_from(1, 6, lambda4);
 }
