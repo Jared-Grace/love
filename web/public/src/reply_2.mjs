@@ -27,6 +27,8 @@ export async function reply_2(context) {
       list_add(languages_chosen, language);
     }
     let component = html_button(root, name, lambda3);
+    if (false) {
+    }
   }
   each(languages, lambda);
   function lambda2(d) {}
