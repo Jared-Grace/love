@@ -21,7 +21,7 @@ export async function reply_2(context) {
   function lambda(language) {
     let name = object_property_get(language, "name");
     function lambda3() {
-      list_add(list, item);
+      list_add(languages_chosen, language);
     }
     let component = html_button(root, name, lambda3);
   }
