@@ -24,12 +24,12 @@ export async function reply_2(context) {
   );
   let ds = app_reply_languages_default();
   function lambda(language) {
+    let component = null;
     let name = object_property_get(language, "name");
     function lambda3() {
       list_toggle(languages_chosen, language);
-      html_disable_set(b, disabled);
+      html_disable_set(component, disabled);
     }
-    let component = null;
     component = html_button(root, name, lambda3);
     let language_code = object_property_get(language, "language_code");
     let includes = list_includes(ds, language_code);
