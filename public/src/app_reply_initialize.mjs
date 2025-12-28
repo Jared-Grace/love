@@ -1,5 +1,4 @@
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
-import { list_remove_property_multiple } from "../../../love/public/src/list_remove_property_multiple.mjs";
 import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { bible_verses_uplifting } from "../../../love/public/src/bible_verses_uplifting.mjs";
@@ -23,7 +22,6 @@ export async function app_reply_initialize(context) {
   let encouragement = bible_verses_uplifting();
   let en = ebible_folder_english();
   let original = bible_interlinear_verses_upload_folder();
-  list_remove_property_multiple(languages, "language_code", ["en", original]);
   let books = await ebible_version_books(en);
   let r = {
     encouragement,
