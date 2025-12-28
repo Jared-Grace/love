@@ -1,3 +1,4 @@
+import { list_is } from "../../../love/public/src/list_is.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier_unique_ast.mjs";
@@ -23,6 +24,7 @@ export async function js_destructure_functionize(ast) {
     let properties = object_property_get(node2, "properties");
     let stack = object_property_get(v, "stack");
     let e1 = list_get_end_1(stack);
+    let l = list_is(value2);
     if (false) {
     }
     let name4 = null;
