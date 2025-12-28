@@ -1,3 +1,4 @@
+import { js_dollar_i } from "../../../love/public/src/js_dollar_i.mjs";
 export function js_dollar_iel({
   remaining,
   node,
@@ -7,5 +8,6 @@ export function js_dollar_iel({
   ast,
   afters,
 }) {
+  js_dollar_i(stack12);
   return;
 }
