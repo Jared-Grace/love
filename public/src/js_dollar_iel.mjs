@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_dollar_i } from "../../../love/public/src/js_dollar_i.mjs";
 export function js_dollar_iel({
   remaining,
@@ -8,7 +9,10 @@ export function js_dollar_iel({
   ast,
   afters,
 }) {
-  let i = js_dollar_i({
+  js_dollar_i({
+    stack1,
+  });
+  log({
     stack1,
   });
   return;
