@@ -31,7 +31,7 @@ export async function reply_2(context) {
     let language_code = object_property_get(language, "language_code");
     let includes = list_includes(ds, language_code);
     if (includes) {
-      html_click(c);
+      html_click(component);
     }
   }
   each(languages, lambda);
