@@ -32,9 +32,12 @@ export async function reply_2(context) {
     function lambda3() {
       list_toggle(languages_chosen, language);
       let disabled = list_includes_not(languages_chosen, language);
+      if (false) {
+      } else {
+      }
       html_disable_set(component, disabled);
       html_style_background_color(component, "lightgreen");
-      html_style_remove(b, style_key);
+      html_style_remove(b, "background-color");
     }
     component = html_button(root, name, lambda3);
     let language_code = object_property_get(language, "language_code");
