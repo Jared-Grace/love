@@ -44,14 +44,14 @@ import { ebible_references_parse_lines } from "../../../love/public/src/ebible_r
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { each_range_async } from "../../../love/public/src/each_range_async.mjs";
 export async function app_reply_main(context) {
-  let v4 = await app_reply_initialize(context);
-  let books = object_property_get(v4, "books");
-  let choices = object_property_get(v4, "choices");
-  let languages = object_property_get(v4, "languages");
-  let root = object_property_get(v4, "root");
-  let original = object_property_get(v4, "original");
-  let en = object_property_get(v4, "en");
-  let encouragement = object_property_get(v4, "encouragement");
+  let r = await app_reply_initialize(context);
+  let books = object_property_get(r, "books");
+  let choices = object_property_get(r, "choices");
+  let languages = object_property_get(r, "languages");
+  let root = object_property_get(r, "root");
+  let original = object_property_get(r, "original");
+  let en = object_property_get(r, "en");
+  let encouragement = object_property_get(r, "encouragement");
   let verses_list = null;
   let copied = [];
   let languages_chosens = [];
