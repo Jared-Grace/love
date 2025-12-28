@@ -14,12 +14,8 @@ export function js_dollar_iel({
   js_dollar_i({
     stack1,
   });
-  let v2 = js_statement_block_new(bs_body);
-  object_property_set(object, property_name, value);
-  log({
-    stack1,
-  });
+  let b = js_statement_block_new(bs_body);
+  object_property_set(stack1, 'alternate', b);
   return;
-  if (false) {
-  }
+  $iel
 }
