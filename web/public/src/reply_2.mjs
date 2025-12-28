@@ -1,3 +1,4 @@
+import { html_style_remove } from "../../../love/public/src/html_style_remove.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { list_includes_not } from "../../../love/public/src/list_includes_not.mjs";
 import { html_disable_set } from "../../../love/public/src/html_disable_set.mjs";
@@ -33,6 +34,7 @@ export async function reply_2(context) {
       let disabled = list_includes_not(languages_chosen, language);
       html_disable_set(component, disabled);
       html_style_background_color(component, "lightgreen");
+      html_style_remove(b, style_key);
     }
     component = html_button(root, name, lambda3);
     let language_code = object_property_get(language, "language_code");
