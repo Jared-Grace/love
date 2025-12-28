@@ -29,8 +29,11 @@ export async function reply_2(context) {
     function lambda3() {
       list_toggle(languages_chosen, language);
       let chosen = list_includes(languages_chosen, language);
-      const color = "lightgreen";
-      html_style_background_color_set_or_remove(chosen, component, color);
+      html_style_background_color_set_or_remove(
+        chosen,
+        component,
+        "lightgreen",
+      );
     }
     component = html_button(root, name, lambda3);
     let language_code = object_property_get(language, "language_code");
