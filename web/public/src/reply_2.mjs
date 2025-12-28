@@ -1,3 +1,4 @@
+import { each_range } from "../../../love/public/src/each_range.mjs";
 import { html_style_background_color_set_or_remove } from "../../../love/public/src/html_style_background_color_set_or_remove.mjs";
 import { list_toggle } from "../../../love/public/src/list_toggle.mjs";
 import { html_pointerdown } from "../../../love/public/src/html_pointerdown.mjs";
@@ -43,5 +44,6 @@ export async function reply_2(context) {
     }
   }
   each(languages, lambda);
-  html_p_text(root, "2. ");
+  html_p_text(root, "2. How many Bible passages do you want?");
+  each_range(count, function lambda2(i) {});
 }
