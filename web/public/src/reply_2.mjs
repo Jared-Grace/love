@@ -26,5 +26,6 @@ export async function reply_2(context) {
     let component = html_button(root, name, lambda3);
   }
   each(languages, lambda);
-  each(list, function lambda2(item) {});
+  function lambda2(item) {}
+  each(list, lambda2);
 }
