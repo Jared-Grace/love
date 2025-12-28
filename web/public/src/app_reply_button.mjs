@@ -10,6 +10,6 @@ export function app_reply_button(list, item, root, text) {
     html_style_background_color_set_or_remove_list(list, item, component);
   }
   component = html_button(root, text, lambda3);
-    html_style_background_color_set_or_remove_list(list, item, component);
+  html_style_background_color_set_or_remove_list(list, item, component);
   return component;
 }
