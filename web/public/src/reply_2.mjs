@@ -1,7 +1,6 @@
+import { app_reply_button } from "../../../love/public/src/app_reply_button.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { each_range_from } from "../../../love/public/src/each_range_from.mjs";
-import { html_style_background_color_set_or_remove } from "../../../love/public/src/html_style_background_color_set_or_remove.mjs";
-import { list_toggle } from "../../../love/public/src/list_toggle.mjs";
 import { html_pointerdown } from "../../../love/public/src/html_pointerdown.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { app_reply_languages_default } from "../../../love/public/src/app_reply_languages_default.mjs";
@@ -28,16 +27,13 @@ export async function reply_2(context) {
   function lambda(language) {
     let component = null;
     let name = object_property_get(language, "name");
-    function lambda3() {
-      list_toggle(languages_chosen, language);
-      let chosen = list_includes(languages_chosen, language);
-      html_style_background_color_set_or_remove(
-        chosen,
-        component,
-        "lightgreen",
-      );
-    }
-    component = html_button(root, name, lambda3);
+    component = app_reply_button(
+      languages_chosen,
+      language,
+      component,
+      root,
+      name,
+    );
     let language_code = object_property_get(language, "language_code");
     let includes = list_includes(ds, language_code);
     if (includes) {
