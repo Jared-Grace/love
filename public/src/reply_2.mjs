@@ -2,7 +2,7 @@ import { html_button } from "../../../love/public/src/html_button.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_reply_initialize } from "../../../love/public/src/app_reply_initialize.mjs";
-export async function reply_2() {
+export async function reply_2(context) {
   let r = await app_reply_initialize(context);
   let books = object_property_get(r, "books");
   let choices = object_property_get(r, "choices");
