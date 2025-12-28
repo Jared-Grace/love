@@ -25,7 +25,7 @@ export async function app_reply_initialize(context) {
   let original = bible_interlinear_verses_upload_folder();
   list_remove_property_multiple(languages, "language_code", ["en", original]);
   let books = await ebible_version_books(en);
-  let v4 = {
+  let r = {
     encouragement,
     en,
     original,
@@ -34,5 +34,5 @@ export async function app_reply_initialize(context) {
     choices,
     books,
   };
-  return v4;
+  return r;
 }
