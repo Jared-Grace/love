@@ -12,7 +12,8 @@ export async function reply_2() {
   let en = object_property_get(r, "en");
   let encouragement = object_property_get(r, "encouragement");
   function lambda(language) {
-    let component = html_button(parent, text, function lambda3() {});
+    function lambda3() {}
+    let component = html_button(parent, text, lambda3);
   }
   each(languages, lambda);
 }
