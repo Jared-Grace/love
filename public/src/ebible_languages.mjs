@@ -1,3 +1,5 @@
+import { ebible_language_original_name } from "../../../love/public/src/ebible_language_original_name.mjs";
+import { ebible_language_en_name } from "../../../love/public/src/ebible_language_en_name.mjs";
 import { ebible_folder_swahili } from "../../../love/public/src/ebible_folder_swahili.mjs";
 import { ebible_languages_chapters_cache_refresh } from "../../../love/public/src/ebible_languages_chapters_cache_refresh.mjs";
 import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
@@ -6,12 +8,12 @@ import { ebible_folder_urdu } from "../../../love/public/src/ebible_folder_urdu.
 export function ebible_languages() {
   let languages = [
     {
-      name: "English",
+      name: ebible_language_en_name(),
       bible_folder: ebible_folder_english(),
       language_code: "en",
     },
     {
-      name: "Original",
+      name: ebible_language_original_name(),
       bible_folder: bible_interlinear_verses_upload_folder(),
       language_code: "original",
     },
