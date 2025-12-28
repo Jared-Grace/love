@@ -57,12 +57,12 @@ import { app_reply_choices } from "../../../love/public/src/app_reply_choices.mj
 export async function app_reply_main(context) {
   html_meta_viewport();
   html_font_sans_serif_set_html();
+  firebase_name_jg();
   let html = html_document_root();
   html_style_font_size(html, "20px");
   let choices = app_reply_choices();
   let languages = ebible_languages();
   let encouragement = bible_verses_uplifting();
-  firebase_name_jg();
   let en = ebible_folder_english();
   let original = bible_interlinear_verses_upload_folder();
   list_remove_property_multiple(languages, "language_code", ["en", original]);
