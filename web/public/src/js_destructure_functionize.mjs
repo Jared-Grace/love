@@ -24,8 +24,9 @@ export async function js_destructure_functionize(ast) {
     let properties = object_property_get(node2, "properties");
     let stack = object_property_get(v, "stack");
     let e1 = list_get_end_1(stack);
-    let l = list_is(value2);
-    if (false) {
+    let l = list_is(e1);
+    if (l) {
+      return;
     }
     let name4 = null;
     let init = object_property_get(e1, "init");
