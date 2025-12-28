@@ -1,5 +1,5 @@
 import { log } from "../../../love/public/src/log.mjs";
-import { html_click } from "../../../love/public/src/html_click.mjs";
+import { html_pointerdown } from "../../../love/public/src/html_pointerdown.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { app_reply_languages_default } from "../../../love/public/src/app_reply_languages_default.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -39,7 +39,7 @@ export async function reply_2(context) {
       language_code,
     });
     if (includes) {
-      html_click(component);
+      html_pointerdown(component);
     }
   }
   each(languages, lambda);
