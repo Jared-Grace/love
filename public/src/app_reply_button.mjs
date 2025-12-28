@@ -10,6 +10,7 @@ export function app_reply_button(list, item, root, text) {
     let chosen = list_includes(list, item);
     html_style_background_color_set_or_remove(chosen, component, "lightgreen");
   }
-  let component = html_button(root, text, lambda3);
+  let component = null;
+  component = html_button(root, text, lambda3);
   return component;
 }
