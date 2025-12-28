@@ -1,8 +1,6 @@
 import { app_reply_button } from "../../../love/public/src/app_reply_button.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { each_range_from } from "../../../love/public/src/each_range_from.mjs";
-import { html_pointerdown } from "../../../love/public/src/html_pointerdown.mjs";
-import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { app_reply_languages_default } from "../../../love/public/src/app_reply_languages_default.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -27,10 +25,6 @@ export async function reply_2(context) {
     let name = object_property_get(language, "name");
     let component = app_reply_button(languages_chosen, language, root, name);
     let language_code = object_property_get(language, "language_code");
-    let includes = list_includes(ds, language_code);
-    if (includes) {
-      html_pointerdown(component);
-    }
   }
   each(languages, lambda);
   html_p_text(root, "2. How many Bible passages do you want?");
