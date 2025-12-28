@@ -29,7 +29,8 @@ export async function reply_2(context) {
       list_toggle(languages_chosen, language);
       html_disable_set(b, disabled);
     }
-    let component = html_button(root, name, lambda3);
+    let component = null;
+    component = html_button(root, name, lambda3);
     let language_code = object_property_get(language, "language_code");
     let includes = list_includes(ds, language_code);
     if (includes) {
