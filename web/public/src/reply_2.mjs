@@ -41,8 +41,9 @@ export async function reply_2(context) {
   }
   each_range_from(1, 6, lambda4);
   list_add(choices_verse_count, 20);
+  let verse_count_chosen = [];
   function lambda2(c) {
-    let component = app_reply_button(choices_verse_count, c, root, c);
+    let component = app_reply_button(verse_count_chosen, c, root, c);
   }
   each(choices_verse_count, lambda2);
 }
