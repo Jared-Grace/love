@@ -1,3 +1,4 @@
+import { list_includes_not } from "../../../love/public/src/list_includes_not.mjs";
 import { html_disable_set } from "../../../love/public/src/html_disable_set.mjs";
 import { list_toggle } from "../../../love/public/src/list_toggle.mjs";
 import { html_pointerdown } from "../../../love/public/src/html_pointerdown.mjs";
@@ -28,6 +29,7 @@ export async function reply_2(context) {
     let name = object_property_get(language, "name");
     function lambda3() {
       list_toggle(languages_chosen, language);
+      let n = list_includes_not(list, item);
       html_disable_set(component, disabled);
     }
     component = html_button(root, name, lambda3);
