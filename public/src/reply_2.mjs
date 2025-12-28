@@ -1,3 +1,4 @@
+import { html_click } from "../../../love/public/src/html_click.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { app_reply_languages_default } from "../../../love/public/src/app_reply_languages_default.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -23,13 +24,14 @@ export async function reply_2(context) {
   let ds = app_reply_languages_default();
   function lambda(language) {
     let name = object_property_get(language, "name");
-    let language_code = object_property_get(language, "language_code");
     function lambda3() {
       list_add(languages_chosen, language);
     }
     let component = html_button(root, name, lambda3);
-    let includes = list_includes(list, item);
-    if (false) {
+    let language_code = object_property_get(language, "language_code");
+    let includes = list_includes(ds, language_code);
+    if (includes) {
+      html_click(c);
     }
   }
   each(languages, lambda);
