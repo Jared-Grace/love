@@ -7,7 +7,6 @@ export function js_dollar_iel({
   stack3,
   ast,
   afters,
-}) {
-  marker("1");
+}) {js_dollar_i({ stack1 })
   return;
 }
