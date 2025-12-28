@@ -1,3 +1,4 @@
+import { app_reply_languages_default } from "../../../love/public/src/app_reply_languages_default.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
@@ -26,6 +27,7 @@ export async function reply_2(context) {
     let component = html_button(root, name, lambda3);
   }
   each(languages, lambda);
-  function lambda2(item) {}
-  each(list, lambda2);
+  let ds = app_reply_languages_default();
+  function lambda2(d) {}
+  each(ds, lambda2);
 }
