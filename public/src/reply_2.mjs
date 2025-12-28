@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -19,7 +20,9 @@ export async function reply_2(context) {
   );
   function lambda(language) {
     let name = object_property_get(language, "name");
-    function lambda3() {}
+    function lambda3() {
+      list_add(list, item);
+    }
     let component = html_button(root, name, lambda3);
   }
   each(languages, lambda);
