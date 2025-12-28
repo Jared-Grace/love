@@ -27,13 +27,7 @@ export async function reply_2(context) {
   function lambda(language) {
     let component = null;
     let name = object_property_get(language, "name");
-    component = app_reply_button(
-      languages_chosen,
-      language,
-      component,
-      root,
-      name,
-    );
+    component = app_reply_button(languages_chosen, language, root, name);
     let language_code = object_property_get(language, "language_code");
     let includes = list_includes(ds, language_code);
     if (includes) {
