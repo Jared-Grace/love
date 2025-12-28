@@ -23,7 +23,6 @@ export async function reply_2(context) {
   function lambda(language) {
     let name = object_property_get(language, "name");
     let component = app_reply_button(languages_chosen, language, root, name);
-    let language_code = object_property_get(language, "language_code");
   }
   each(languages, lambda);
   html_p_text(root, "2. How many Bible passages do you want?");
