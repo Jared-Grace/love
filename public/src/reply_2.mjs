@@ -33,7 +33,7 @@ export async function reply_2(context) {
       if (chosen) {
         html_style_background_color(component, "lightgreen");
       } else {
-        html_style_remove(b, "background-color");
+        html_style_remove(component, "background-color");
       }
     }
     component = html_button(root, name, lambda3);
