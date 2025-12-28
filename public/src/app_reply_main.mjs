@@ -58,6 +58,7 @@ export async function app_reply_main(context) {
   html_meta_viewport();
   html_font_sans_serif_set_html();
   firebase_name_jg();
+  let root = object_property_get(context, "root");
   let html = html_document_root();
   html_style_font_size(html, "20px");
   let choices = app_reply_choices();
@@ -68,7 +69,6 @@ export async function app_reply_main(context) {
   list_remove_property_multiple(languages, "language_code", ["en", original]);
   let books = await ebible_version_books(en);
   let verses_list = null;
-  let root = object_property_get(context, "root");
   let copied = [];
   let languages_chosens = [];
   let buttons = null;
