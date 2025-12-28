@@ -14,8 +14,6 @@ export function js_dollar_iel({
   });
   log({
     stack1,
-  });
-  if (false) {
-  }
+  });$iel
   return;
 }
