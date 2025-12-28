@@ -5,12 +5,12 @@ import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { list_toggle } from "../../../love/public/src/list_toggle.mjs";
 export function app_reply_button(list, item, root, text) {
   marker("1");
+  let component = null;
   function lambda3() {
     list_toggle(list, item);
     let chosen = list_includes(list, item);
     html_style_background_color_set_or_remove(chosen, component, "lightgreen");
   }
-  let component = null;
   component = html_button(root, text, lambda3);
   return component;
 }
