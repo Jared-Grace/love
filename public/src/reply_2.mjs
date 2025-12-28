@@ -25,8 +25,8 @@ export async function reply_2(context) {
   function lambda(language) {
     let name = object_property_get(language, "name");
     function lambda3() {
-      let includes2 = list_includes(list, item);
-      if (false) {
+      let includes2 = list_includes(languages_chosen, language);
+      if (includes2) {
       } else {
       }
       list_add(languages_chosen, language);
