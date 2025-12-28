@@ -1,4 +1,12 @@
-import { marker } from "../../../love/public/src/marker.mjs";
-export function reply_2() {
-  marker("1");
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { app_reply_initialize } from "../../../love/public/src/app_reply_initialize.mjs";
+export async function reply_2() {
+  let r = await app_reply_initialize(context);
+  let books = object_property_get(r, "books");
+  let choices = object_property_get(r, "choices");
+  let languages = object_property_get(r, "languages");
+  let root = object_property_get(r, "root");
+  let original = object_property_get(r, "original");
+  let en = object_property_get(r, "en");
+  let encouragement = object_property_get(r, "encouragement");
 }
