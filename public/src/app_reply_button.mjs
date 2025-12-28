@@ -10,6 +10,6 @@ export function app_reply_button(languages_chosen, language, root, name) {
     let chosen = list_includes(languages_chosen, language);
     html_style_background_color_set_or_remove(chosen, component, "lightgreen");
   }
-  component = html_button(root, name, lambda3);
+  let component = html_button(root, name, lambda3);
   return component;
 }
