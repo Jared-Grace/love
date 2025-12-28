@@ -45,7 +45,7 @@ import { ebible_references_parse_lines } from "../../../love/public/src/ebible_r
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { each_range_async } from "../../../love/public/src/each_range_async.mjs";
 export async function app_reply_main(context) {
-  await reply_2();
+  await reply_2(context);
   return;
   let r = await app_reply_initialize(context);
   let books = object_property_get(r, "books");
