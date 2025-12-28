@@ -47,8 +47,6 @@ import { ebible_references_parse_lines } from "../../../love/public/src/ebible_r
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { each_range_async } from "../../../love/public/src/each_range_async.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
-import { firebase_storage_download_ebible } from "../../../love/public/src/firebase_storage_download_ebible.mjs";
-import { ebible_index_flat_upload_name } from "../../../love/public/src/ebible_index_flat_upload_name.mjs";
 import { list_remove_property_multiple } from "../../../love/public/src/list_remove_property_multiple.mjs";
 import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
@@ -68,8 +66,6 @@ export async function app_reply_main(context) {
   let en = ebible_folder_english();
   let original = bible_interlinear_verses_upload_folder();
   list_remove_property_multiple(languages, "language_code", ["en", original]);
-  let file_name = ebible_index_flat_upload_name();
-  let index = await firebase_storage_download_ebible(en, file_name);
   let books = await ebible_version_books(en);
   let verses_list = null;
   let root = object_property_get(context, "root");
