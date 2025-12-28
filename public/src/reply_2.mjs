@@ -1,3 +1,4 @@
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { html_pointerdown } from "../../../love/public/src/html_pointerdown.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { app_reply_languages_default } from "../../../love/public/src/app_reply_languages_default.mjs";
@@ -27,9 +28,10 @@ export async function reply_2(context) {
     function lambda3() {
       let includes2 = list_includes(languages_chosen, language);
       if (includes2) {
+        list_remove(list, item);
       } else {
+        list_add(languages_chosen, language);
       }
-      list_add(languages_chosen, language);
     }
     let component = html_button(root, name, lambda3);
     let language_code = object_property_get(language, "language_code");
