@@ -19,9 +19,9 @@ export async function function_dependencies_code_export(f_name) {
   });
   const url = URL.createObjectURL(blob);
   const mod = await import(url);
-  let value = object_property_get(object, property_name);
+  let fn = object_property_get(mod, f_name);
   let v2 = {
-    code,
+    fn,
     externals,
   };
   return v2;
