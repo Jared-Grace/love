@@ -1,36 +1,42 @@
 import { error } from "../../../love/public/src/error.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function indexeddb_put(db_get, store, key, value_get) {
-  marker("1");
   const db = await db_get();
   const tx = db.transaction(store, "readwrite");
   const s = tx.objectStore(store);
-  const value = await new Promise(function lambda3(resolve, reject) {
+  const value = await new Promise(function lambda7(resolve, reject) {
     const req = s.get(key);
-    req.onsuccess = async function lambda() {
+    req.onsuccess = function lambda2() {
       let previous = req.result ?? null;
-      try {
-        const next = await value_get(previous);
-        s.put(next);
+      function lambda(next) {
+        s.put(next, key);
         resolve(next);
-      } catch (e) {
-        reject(e);
       }
+      let v6 = value_get(previous);
+      Promise.resolve(v6).then(lambda).catch(reject);
     };
-    req.onerror = function lambda2() {
+    req.onerror = function lambda3() {
       let v = reject(req.error);
       return v;
     };
-  });
-  await new Promise(function lambda6(resolve, reject) {
-    tx.oncomplete = resolve;
-    tx.onerror = function lambda4() {
+    tx.oncomplete = function lambda4() {};
+    tx.onerror = function lambda5() {
       let v2 = reject(tx.error);
       return v2;
     };
-    tx.onabort = function lambda5() {
+    tx.onabort = function lambda6() {
       let v3 = reject(tx.error);
       return v3;
+    };
+  });
+  await new Promise(function lambda10(resolve, reject) {
+    tx.oncomplete = resolve;
+    tx.onerror = function lambda8() {
+      let v4 = reject(tx.error);
+      return v4;
+    };
+    tx.onabort = function lambda9() {
+      let v5 = reject(tx.error);
+      return v5;
     };
   });
   return value;
