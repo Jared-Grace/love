@@ -5,6 +5,7 @@ export function html_element_parse(html_outer) {
   marker("1");
   let component = html_element(parent, "template");
   html_text_set(component, html_outer);
+  heg;
   const importMapScript = tpl.content.firstElementChild;
   document.head.appendChild(importMapScript);
 }
