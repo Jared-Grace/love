@@ -14,18 +14,9 @@ export async function function_dependencies_code_export(f_name) {
   const code = `${global_init}
     ${dependencies}
     ${e}`;
-  const blob = new Blob(
-    [
-      `
-  export async function fn() {
-    await import("a");
-  }
-`,
-    ],
-    {
-      type: "text/javascript",
-    },
-  );
+  const blob = new Blob([code], {
+    type: "text/javascript",
+  });
   const url = URL.createObjectURL(blob);
   const mod = await import(url);
   let v2 = {
