@@ -1,3 +1,4 @@
+import { app_reply_buttons_refresh } from "../../../love/public/src/app_reply_buttons_refresh.mjs";
 import { list_skip } from "../../../love/public/src/list_skip.mjs";
 import { reply_2 } from "../../../love/public/src/reply_2.mjs";
 import { app_reply_initialize } from "../../../love/public/src/app_reply_initialize.mjs";
@@ -19,12 +20,6 @@ import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multi
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
-import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
-import { not } from "../../../love/public/src/not.mjs";
-import { list_includes } from "../../../love/public/src/list_includes.mjs";
-import { string_starts_with } from "../../../love/public/src/string_starts_with.mjs";
-import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
-import { string_letters_only } from "../../../love/public/src/string_letters_only.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { html_disable } from "../../../love/public/src/html_disable.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -162,19 +157,7 @@ export async function app_reply_main(context) {
   let typed_get = function lambda15() {
     return typed;
   };
-  let buttons_refresh = function lambda10() {
-    function lambda2(item) {
-      let text2 = object_property_get(item, "text");
-      let letters = string_letters_only(text2);
-      let lower = string_lower_to(letters);
-      let prefix = typed_get();
-      let sw = string_starts_with(lower, prefix);
-      let includes = list_includes(chosens, item);
-      const condition = includes || not(sw);
-      html_display_none_or_block(condition, item);
-    }
-    each(buttons, lambda2);
-  };
+  let buttons_refresh = app_reply_buttons_refresh(typed_get, chosens, buttons);
   function lambda(choice) {
     let response2 = object_property_get(choice, "response");
     let text = object_property_get(choice, "text");
