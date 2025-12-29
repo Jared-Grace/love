@@ -19,7 +19,10 @@ export async function file_overwrite(file_path, contents) {
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
     async function value_get(previous) {
-      if (null_is(value)) {
+      if (null_is(previous)) {
+        previous = {
+          ["versions"]: [],
+        };
       }
       async function lambda2(compressed_before) {
         let f = await json_decompress(compressed_before);
