@@ -21,7 +21,7 @@ export async function file_overwrite(file_path, contents) {
     async function value_get(previous) {
       if (null_is(previous)) {
         previous = {
-          ["versions"]: [],
+          ["compressed"]: null,
         };
       }
       async function lambda2(compressed_before) {
