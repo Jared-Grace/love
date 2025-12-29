@@ -1,4 +1,3 @@
-import { html_br } from "../../../love/public/src/html_br.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
@@ -90,7 +89,7 @@ export async function reply_2(context) {
     }
     await each_async(taken, lambda6);
   }
-  let component3 = html_br(root);
+  html_p_text(root, "3. (Optional) Choose a response");
   function lambda9(choice) {
     let text = object_property_get(choice, "text");
     async function lambda11() {
