@@ -9,7 +9,7 @@ export async function function_dependencies_code_unaliased(f_names) {
     return unaliased;
   }
   let waited = await list_map_unordered_async(f_names, lambda);
-  let d = await function_dependencies_code(unaliased);
+  let d = await function_dependencies_code(waited);
   let v2 = {
     d,
     unaliased,
