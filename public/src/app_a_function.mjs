@@ -1,3 +1,4 @@
+import { html_code_script_importmap } from "../../../love/public/src/html_code_script_importmap.mjs";
 import { function_dependencies_code_export } from "../../../love/public/src/function_dependencies_code_export.mjs";
 import { app_a_function_on_keydown_remove } from "../../../love/public/src/app_a_function_on_keydown_remove.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -139,6 +140,7 @@ export async function app_a_function(context) {
             app_a_on_keydown(e, choices);
           }
           let div = app_a_overlay_container(overlay);
+          let importmap = html_code_script_importmap(externals);
           let fn = await fn_get();
           let r = await fn();
           log({
