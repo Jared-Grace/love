@@ -1,5 +1,5 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
-import { object_property_change_async } from "../../../love/public/src/object_property_change_async.mjs";
 import { json_compress } from "../../../love/public/src/json_compress.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { indexeddb_put } from "../../../love/public/src/indexeddb_put.mjs";
@@ -32,7 +32,10 @@ export async function file_overwrite(file_path, contents) {
         return compressed_after;
       }
       const p = "compressed";
-      await object_property_change_async(previous, p, lambda2);
+      marker("1");
+      let value = object_property_get(previous, p);
+      value = await lambda2(value);
+      object_property_set(previous, p, value);
       return previous;
     }
     let item = await indexeddb_put(
