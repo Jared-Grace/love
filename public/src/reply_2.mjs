@@ -58,7 +58,7 @@ export async function reply_2(context) {
       list_add(languages_chosen, language);
     }
     await app_reply_love(languages, lambda13);
-    update(4);
+    await update(4);
     languages_chosen = languages_chosen_before;
   }
   let component4 = html_button(root, "❤️", love);
@@ -83,8 +83,8 @@ export async function reply_2(context) {
   each_range_from(3, 6, lambda4);
   list_add(choices_verse_count, 20);
   function lambda2(c) {
-    function lambda3() {
-      update(c);
+    async function lambda3() {
+      await update(c);
     }
     let component = html_button(root, c, lambda3);
   }
