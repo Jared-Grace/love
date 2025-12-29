@@ -5,12 +5,23 @@
   <title>reply</title>
 </head>
 <body>
-  <script type="module"> 
+  <script type="importmap"> 
+    {
+ "imports": {
+  "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm"
+ }
+}
+  </script>
+<script type="module"> 
     let global = {};
-    app_reply(  );
     async function app_reply() {
+  marker("1");
   await app_main_production("app_reply_main", "jared-grace");
 }
+function marker(marker_name) {
+  noop();
+}
+function noop() {}
 async function app_main_production(f_name, firebase_name_value) {
   marker("1");
   let v = await app_main(f_name, firebase_name_value, firebase_deploy_function_destination_production);
@@ -18,15 +29,16 @@ async function app_main_production(f_name, firebase_name_value) {
 }
 function firebase_deploy_function_destination_production(f_name) {
   marker("1");
-  let destination2 = firebase_deploy_function_destination("version_production", f_name);
+  let destination2 = firebase_deploy_function_destination_json("version_production", f_name);
   return destination2;
 }
-function marker(marker_name) {
-  noop();
-}
-function noop() {}
-function firebase_deploy_function_destination(name, f_name) {
+function firebase_deploy_function_destination_json(name, f_name) {
+  marker("1");
   let file_name = file_name_json(name);
+  let destination = firebase_deploy_function_destination(f_name, file_name);
+  return destination;
+}
+function firebase_deploy_function_destination(f_name, file_name) {
   const list = ["function", f_name, file_name];
   let destination = list_join_slash_forward(list);
   return destination;
@@ -40,19 +52,59 @@ function list_join(list, separator) {
   return joined;
 }
 function file_name_json(name) {
-  let file_name = name + ".json";
+  let file_name = name + json_extension();
   return file_name;
+}
+function json_extension() {
+  marker("1");
+  let ext_j = ".json";
+  return ext_j;
 }
 async function app_main(f_name, firebase_name_value, version_get) {
   marker("1");
   global_function_initialize(firebase_name, firebase_name_value);
-  await firebase_storage_function_run(f_name, version_get);
+  marker("1");
+  let call = js_code_call_app_context_initialize(f_name);
+  await firebase_storage_function_run_generic(version_get, f_name, call);
 }
-function global_function_initialize(fn, initial) {
+function js_code_call_app_context_initialize(name_prefixed) {
+  let result = js_code_call_args_statement(app_context_initialize.name, [name_prefixed]);
+  return result;
+}
+async function app_context_initialize(fn) {
+  marker("1");
+  const root = html_document_body();
+  await app_context_initialize_root(root, fn);
+}
+async function app_context_initialize_root(root, fn) {
+  let context = {
+    root
+  };
+  await fn(context);
+}
+function html_document_body() {
+  marker("1");
+  let body_element = document.body;
+  let body = html_component_wrap(body_element);
+  return body;
+}
+function html_component_wrap(element) {
+  let v = {
+    element
+  };
+  return v;
+}
+function js_code_call_args_statement(f_name, args) {
+  marker("1");
+  let code = js_code_call_args(f_name, args);
+  let result = js_code_statement(code);
+  return result;
+}
+function js_code_call_args(fn_name, args) {
   assert_arguments(arguments, 2);
-  let global = global_get();
-  let value = object_property_initialize(global, fn.name, initial);
-  return value;
+  let joined = list_join_comma_space(args);
+  let code = fn_name + js_code_wrap_parenthesis(joined);
+  return code;
 }
 function assert_arguments(args, count) {
   let length = object_property_get(args, "length");
@@ -68,8 +120,8 @@ function assert(b) {
     error();
   }
 }
-function not(a) {
-  let n = !a;
+function not(b) {
+  let n = !b;
   return n;
 }
 function error(message) {
@@ -106,66 +158,47 @@ function undefined_is(value) {
   let v = typeof value === "undefined";
   return v;
 }
-function object_property_initialize(object, property_name, value_initial) {
-  const exists = object_property_exists(object, property_name);
-  if (not(exists)) {
-    object_property_set(object, property_name, value_initial);
-  }
-  let value = object_property_get(object, property_name);
-  return value;
+function fn_name(f_name) {
+  return f_name;
 }
-function object_property_set(object, property_name, value) {
-  object[property_name] = value;
+function js_code_wrap_parenthesis(inside) {
+  let v = js_code_parenthesis_left() + " " + inside + " " + js_code_parenthesis_right();
+  return v;
 }
-function object_property_exists(object, property_name) {
-  const exists = object && Object.hasOwn(object, property_name);
-  return exists;
+function js_code_parenthesis_right() {
+  let v2 = ")";
+  return v2;
 }
-function global_get() {
-  marker("1");
-  return global;
+function js_code_parenthesis_left() {
+  let v3 = "(";
+  return v3;
 }
-async function firebase_storage_function_run(f_name, version_get) {
-  marker("1");
+function list_join_comma_space(args) {
+  let v = list_join(args, ", ");
+  return v;
+}
+function js_code_statement(code) {
+  let v = code + js_code_semicolon();
+  return v;
+}
+function js_code_semicolon() {
+  let v2 = ";";
+  return v2;
+}
+async function firebase_storage_function_run_generic(version_get, f_name, call) {
   let destination_version = version_get(f_name);
   let destination = await firebase_storage_download_property(destination_version, "destination");
   let code = await firebase_storage_download_property(destination, "code");
-  let call = js_code_call_statement(f_name);
   let global_init = js_code_global_init();
-  let joined = list_join_newline([global_init, call, code]);
+  let joined = list_join_newline([global_init, code, call]);
   if (browser_is()) {
     let body = html_document_body();
     let component = html_element(body, "script");
     html_attribute_set(component, "type", "module");
     html_text_set(component, joined);
-    return;
+  } else {
+    eval(joined);
   }
-  eval(joined);
-}
-function js_code_global_init() {
-  let right = js_code_braces_empty();
-  let code_assign = js_code_let_assign("global", right);
-  return code_assign;
-}
-function js_code_let_assign(left, right) {
-  let code_assign = js_keyword_let() + " " + js_code_assign(left, right) + ";";
-  return code_assign;
-}
-function js_code_assign(left, right) {
-  const code = left + " = " + right;
-  return code;
-}
-function js_keyword_let() {
-  let v = "let";
-  return v;
-}
-function js_code_braces_empty() {
-  let v = js_code_wrap_braces("");
-  return v;
-}
-function js_code_wrap_braces(inside) {
-  let v = "{" + inside + "}";
-  return v;
 }
 function html_text_set(component, text) {
   let element = html_component_element_get(component);
@@ -191,18 +224,6 @@ function html_style_set(b, style_key, style_value) {
   let b_element = html_component_element_get(b);
   b_element.style[style_key] = style_value;
 }
-function html_component_wrap(element) {
-  let v = {
-    element
-  };
-  return v;
-}
-function html_document_body() {
-  marker("1");
-  let body_element = document.body;
-  let body = html_component_wrap(body_element);
-  return body;
-}
 function browser_is() {
   let b = typeof window !== "undefined" && typeof window.document !== "undefined";
   return b;
@@ -216,32 +237,42 @@ function newline() {
   let v = "\n";
   return v;
 }
-function js_code_call_statement(f_name) {
-  let code = js_code_call(f_name);
-  let result = js_code_statement(code);
-  return result;
+function js_code_global_init() {
+  let right = js_code_braces_empty();
+  let code_assign = js_code_let_assign("global", right);
+  return code_assign;
 }
-function js_code_call(fn_name) {
-  let args = [];
-  let result = js_code_call_args(fn_name, args);
-  return result;
+function js_code_let_assign(left, right) {
+  let code_assign = js_keyword_let() + " " + js_code_assign(left, right) + ";";
+  return code_assign;
 }
-function js_code_call_args(fn_name, args) {
-  let joined = list_join_comma_space(args);
-  let code = fn_name + js_code_wrap_parenthesis(joined);
+function js_code_assign(left, right) {
+  const code = left + js_code_equals_padded() + right;
   return code;
 }
-function js_code_wrap_parenthesis(inside) {
-  let v = "( " + inside + " )";
+function js_code_equals_padded() {
+  let v = " = ";
   return v;
 }
-function list_join_comma_space(args) {
-  let v = list_join(args, ", ");
+function js_keyword_let() {
+  let v = "let";
   return v;
 }
-function js_code_statement(code) {
-  let v = code + ";";
+function js_code_braces_empty() {
+  let v = js_code_wrap_braces("");
   return v;
+}
+function js_code_wrap_braces(inside) {
+  let v = js_code_brace_left() + inside + js_code_brace_right();
+  return v;
+}
+function js_code_brace_right() {
+  let v2 = "}";
+  return v2;
+}
+function js_code_brace_left() {
+  let v2 = "{";
+  return v2;
 }
 async function firebase_storage_download_property(storage_path, property_name) {
   let buffer = await firebase_storage_download(storage_path);
@@ -272,104 +303,46 @@ function buffer_string_to(buffer) {
 }
 async function firebase_storage_download(destination) {
   marker("1");
-  destination = firebase_path_fix(destination);
-  let b = browser_is();
-  if (b) {
-    let url = await firebase_storage_url(destination);
-    let buffer = await http(url);
+  async function lambda2() {
+    destination = firebase_path_fix(destination);
+    let b = browser_is();
+    if (b) {
+      let url = await firebase_storage_url(destination);
+      let buffer = await http(url);
+      return buffer;
+    }
+    const bucket = await firebase_bucket();
+    let [buffer] = await bucket.file(destination).download();
     return buffer;
   }
-  const bucket = await firebase_bucket();
-  let [buffer] = await bucket.file(destination).download();
-  return buffer;
-}
-async function http(url) {
-  let b = browser_is();
-  if (b) {
-    async function lambda3() {
-      const response = await fetch(url);
-      if (not(response.ok)) {
-        error("Failed to fetch file");
-      }
-      const buf = await response.arrayBuffer();
-      return buf;
-    }
-    let v = await html_loading(lambda3);
-    return v;
-  }
-  await http_sleep();
-  let h = null;
-  let sw = string_starts_with(url, "https://");
-  if (sw) {
-    h = await import("https");
-  }
-  let buffer = await promise_wrap(lambda);
-  function lambda(resolve, reject) {
-    function lambda2(res) {
-      const chunks = [];
-      function on_data(chunk) {
-        let v2 = chunks.push(chunk);
-        return v2;
-      }
-      let result = catch_call(reject, on_data);
-      res.on("data", result);
-      function on_end() {
-        const {statusCode} = res;
-        const d = statusCode / 100;
-        const rounded = round(d);
-        assert_json(rounded === 2, {
-          url
-        });
-        let v3 = Buffer.concat(chunks);
-        resolve(v3);
-      }
-      let result2 = catch_call(reject, on_end);
-      res.on("end", result2);
-    }
-    h.get(url, lambda2).on("error", reject);
-  }
-  return buffer;
-}
-async function http_sleep() {
-  await sleep(integer_random(5, 8) * 1000);
-}
-function integer_random(min, max) {
-  let r = floor(random() * (max - min + 1)) + min;
-  return r;
-}
-function random() {
-  let v = Math.random();
-  return v;
-}
-function floor(p) {
-  let floored = Math.floor(p);
-  return floored;
-}
-async function sleep(ms) {
-  await new Promise(function lambda5(resolve) {
-    let v = setTimeout(resolve, ms);
-    return v;
-  });
+  let result = await html_loading(lambda2);
+  return result;
 }
 async function html_loading(lambda) {
-  marker("1");
-  let body = html_document_body();
-  let div = html_div(body);
-  let s = {
-    position: "fixed",
-    top: "0",
-    left: "0",
-    width: "100vw",
-    height: "100vh",
-    background: "rgba(0, 0, 0, 0.6)",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    zIndex: "1000"
-  };
-  html_style_assign(div, s);
+  let div = null;
+  let b2 = browser_is();
+  if (b2) {
+    marker("1");
+    let body = html_document_body();
+    div = html_div(body);
+    let s = {
+      position: "fixed",
+      top: "0",
+      left: "0",
+      width: "100vw",
+      height: "100vh",
+      background: "rgba(0, 0, 0, 0.6)",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      zIndex: "1000"
+    };
+    html_style_assign(div, s);
+  }
   let result = await lambda();
-  html_remove(div);
+  if (b2) {
+    html_remove(div);
+  }
   return result;
 }
 function html_remove(component) {
@@ -384,12 +357,110 @@ function html_style_assign(b, s) {
 }
 function object_assign(to, from) {
   marker("1");
-  let a = Object.assign(to, from);
-  return a;
+  Object.assign(to, from);
 }
 function html_div(root) {
   let div = html_element(root, "div");
   return div;
+}
+async function http(url) {
+  let v = await http_generic(url, {
+    method: "GET"
+  });
+  return v;
+}
+async function http_generic(url, options) {
+  const method = options.method || "GET";
+  const body = options.body || null;
+  const b = browser_is();
+  if (b) {
+    async function lambda3() {
+      const r = {
+        method
+      };
+      let exists = object_property_exists(options, "body");
+      if (exists) {
+        object_assign(r, {
+          headers: {
+            "Content-Type": "application/json",
+            ...options.headers || ({})
+          },
+          body: json_to(body)
+        });
+      }
+      const response = await fetch(url, r);
+      if (not(response.ok)) {
+        error("Failed to fetch file");
+      }
+      const buf = await response.arrayBuffer();
+      return buf;
+    }
+    let v = await html_loading(lambda3);
+    return v;
+  }
+  await http_sleep();
+  let h = null;
+  let swHttps = string_starts_with(url, "https://");
+  if (swHttps) {
+    h = await import("https");
+  } else {
+    h = await import("http");
+  }
+  let buffer = await promise_wrap(lambda);
+  function lambda(resolve, reject) {
+    const urlObj = new URL(url);
+    function lambda5(res) {
+      const chunks = [];
+      function lambda2(chunk) {
+        chunks.push(chunk);
+      }
+      let i = catch_call(reject, lambda2);
+      res.on("data", i);
+      function on_end() {
+        const {statusCode} = res;
+        const d = statusCode / 100;
+        const rounded = round(d);
+        assert_json(rounded === 2, {
+          url,
+          statusCode
+        });
+        let v2 = Buffer.concat(chunks);
+        resolve(v2);
+      }
+      let i2 = catch_call(reject, on_end);
+      res.on("end", i2);
+    }
+    const req = h.request({
+      hostname: urlObj.hostname,
+      path: urlObj.pathname + urlObj.search,
+      method,
+      headers: options.headers || ({})
+    }, lambda5);
+    req.on("error", reject);
+    if (body) {
+      let json = json_to(body);
+      req.write(json);
+    }
+    req.end();
+  }
+  return buffer;
+}
+function object_property_exists(object, property_name) {
+  const exists = object && Object.hasOwn(object, property_name);
+  return exists;
+}
+function assert_json(b, o) {
+  let message = json_to(o);
+  assert_message(b, message);
+}
+function assert_message(b, message) {
+  if (not(b)) {
+    error(message);
+  }
+}
+function round(n) {
+  let rounded = Math.round(n);
+  return rounded;
 }
 function catch_call(reject, lambda) {
   let i = function inner() {
@@ -414,22 +485,52 @@ function promise_wrap(lambda) {
   });
   return v;
 }
-function round(n) {
-  let rounded = Math.round(n);
-  return rounded;
-}
 function string_starts_with(s, prefix) {
   let sw = s.startsWith(prefix);
   return sw;
 }
-function assert_json(b, o) {
-  let message = json_to(o);
-  assert_message(b, message);
+async function http_sleep() {
+  await sleep(integer_random(5, 8) * 1000);
 }
-function assert_message(b, message) {
-  if (not(b)) {
-    error(message);
+function integer_random(min, max) {
+  let list = [min, max];
+  assert_multiple(integer_is, list);
+  let r = floor(random() * (max - min + 1)) + min;
+  return r;
+}
+function assert_multiple(fn, list) {
+  function lambda(l) {
+    let ii = fn(l);
+    assert(ii);
   }
+  each(list, lambda);
+}
+function each(list, lambda$item) {
+  marker("1");
+  for (let item of list) {
+    if (lambda$item(item) === true) {
+      return;
+    }
+  }
+}
+function integer_is(value) {
+  marker("1");
+  let ii = Number.isInteger(value);
+  return ii;
+}
+function random() {
+  let v = Math.random();
+  return v;
+}
+function floor(p) {
+  let floored = Math.floor(p);
+  return floored;
+}
+async function sleep(ms) {
+  await new Promise(function lambda5(resolve) {
+    let v = setTimeout(resolve, ms);
+    return v;
+  });
 }
 async function firebase_bucket() {
   const admin = await firebase_admin();
@@ -443,11 +544,11 @@ async function firebase_admin() {
 async function global_function_async(fn, lambda) {
   let global = global_get();
   marker("1");
-  let value = object_property_lambda(global, fn.name, lambda);
+  let value = object_property_initialize_lambda(global, fn.name, lambda);
   let awaited = await value;
   return awaited;
 }
-function object_property_lambda(object, property_name, lambda) {
+function object_property_initialize_lambda(object, property_name, lambda) {
   marker("1");
   const exists = object_property_exists(object, property_name);
   if (not(exists)) {
@@ -457,25 +558,23 @@ function object_property_lambda(object, property_name, lambda) {
   let value = object_property_get(object, property_name);
   return value;
 }
+function object_property_set(object, property_name, value) {
+  object[property_name] = value;
+}
+function global_get() {
+  marker("1");
+  return global;
+}
 async function firebase_admin_get() {
   const admin = (await import("firebase-admin")).default;
   marker("1");
   let service_account = await firebase_service_account();
   const sb = await firebase_storage_url_project();
-  log({
-    sb
-  });
   admin.initializeApp({
     credential: admin.credential.cert(service_account),
     storageBucket: sb
   });
   return admin;
-}
-function log(message) {
-  log_keep(message);
-}
-function log_keep(message) {
-  console.log(message);
 }
 async function firebase_storage_url_project() {
   marker("1");
@@ -501,19 +600,398 @@ async function firebase_name_repo(repo_name) {
   return default2;
 }
 async function file_read_json(file_path) {
+  marker("1");
   let json = await file_read(file_path);
   let data = json_from(json);
   return data;
 }
 async function file_read(file_path) {
+  if (browser_is()) {
+    file_path = file_path_normalize(file_path);
+    await app_a_file_system_initialize();
+    let store = app_a_file_system_store();
+    let item = await indexeddb_read(app_a_indexeddb_initialize, store, file_path);
+    let compressed = object_property_get(item, "compressed");
+    let f = json_decompress(compressed);
+    let versions = object_property_get(f, "versions");
+    let last = list_last(versions);
+    return last;
+  }
+  marker("1");
   let fs = await import("fs");
   let contents = await fs.promises.readFile(file_path, "utf-8");
   return contents;
 }
-function repo_path_combine(repo_name, f_path) {
-  let folder_name = repo_path(repo_name);
-  let combined = path_join([folder_name, f_path]);
-  return combined;
+function json_decompress(compressed) {
+  let json = string_decompress(compressed);
+  let text = json_from(json);
+  return text;
+}
+function string_decompress(compressed) {
+  let text = LZString.decompressFromUTF16(compressed);
+  return text;
+}
+function list_last(list) {
+  list_empty_not_is_assert(list);
+  let last = list_get_end(list, 0);
+  return last;
+}
+function list_empty_not_is_assert(list) {
+  let ne = list_empty_not_is(list);
+  assert(ne);
+}
+function list_empty_not_is(list) {
+  let a = list_empty_is(list);
+  const ne = not(a);
+  return ne;
+}
+function list_empty_is(list) {
+  const e = list_size(list) === 0;
+  return e;
+}
+function list_size(list) {
+  list_is_assert(list);
+  let size = list.length;
+  return size;
+}
+function list_is_assert(list) {
+  function lambda() {
+    let v = {
+      list
+    };
+    return v;
+  }
+  list_is_assert_json(list, lambda);
+}
+function list_is_assert_json(list, lambda) {
+  let result = list_is(list);
+  assert_json_get(result, lambda);
+}
+function assert_json_get(b, lambda) {
+  marker("1");
+  function json_get() {
+    let object = lambda();
+    let json = json_to(object);
+    return json;
+  }
+  assert_message_get(b, json_get);
+}
+function assert_message_get(b, lambda) {
+  marker("1");
+  if (not(b)) {
+    let message = lambda();
+    error(message);
+  }
+}
+function list_is(value) {
+  const l = Array.isArray(value);
+  return l;
+}
+function list_get_end(stack, index_from_end) {
+  const difference = list_index_last(stack) - index_from_end;
+  const item = list_get(stack, difference);
+  return item;
+}
+function list_index_last(list) {
+  const index_last = list_size(list) - 1;
+  return index_last;
+}
+function list_get(list, index) {
+  integer_is_assert(index);
+  let item = list[index];
+  undefined_not_is_assert_lambda(item, object_get);
+  function object_get() {
+    let v = {
+      list,
+      index
+    };
+    return v;
+  }
+  return item;
+}
+function integer_is_assert(index) {
+  let ii = integer_is(index);
+  assert_json(ii, {
+    index
+  });
+}
+function file_path_normalize(file_path) {
+  file_path = path_normalize(file_path);
+  const prefix = "../";
+  let n = string_starts_with_not(file_path, prefix);
+  if (n) {
+    file_path = prefix + "love/" + file_path;
+  }
+  return file_path;
+}
+function string_starts_with_not(item, book_code) {
+  let a = string_starts_with(item, book_code);
+  let sw = not(a);
+  return sw;
+}
+function path_normalize(path) {
+  let n = path.replace(/\\/g, "/").replace(/\/+/g, "/").replace(/\/\.\//g, "/").replace(/\/$/, "").replace(/^\.\/+/, "");
+  return n;
+}
+async function app_a_indexeddb_initialize() {
+  marker("1");
+  const db_name = app_a.name;
+  const version = 1;
+  const store_files = "files";
+  const db = await new Promise(function lambda4(resolve, reject) {
+    const req = indexedDB.open(db_name, version);
+    req.onupgradeneeded = function lambda() {
+      const db = req.result;
+      let b = db.objectStoreNames.contains(store_files);
+      if (not(b)) {
+        db.createObjectStore(store_files, {
+          keyPath: app_a_indexeddb_path_key()
+        });
+      }
+    };
+    req.onsuccess = function lambda2() {
+      let v = resolve(req.result);
+      return v;
+    };
+    req.onerror = function lambda3() {
+      let v2 = reject(req.error);
+      return v2;
+    };
+  });
+  return db;
+}
+function app_a_indexeddb_path_key() {
+  let v3 = "key";
+  return v3;
+}
+async function app_a() {
+  await app_main_production("app_a_main", "jared-grace");
+}
+function app_a_file_system_store() {
+  let v = "files";
+  return v;
+}
+async function indexeddb_read(db_get, store, key) {
+  marker("1");
+  let db = await db_get();
+  const tx = db.transaction(store, "readonly");
+  const s = tx.objectStore(store);
+  let item = await new Promise(function lambda3(resolve, reject) {
+    const req = s.get(key);
+    req.onsuccess = function lambda() {
+      let v = resolve(req.result ?? null);
+      return v;
+    };
+    req.onerror = function lambda2() {
+      let v2 = reject(req.error);
+      return v2;
+    };
+  });
+  return item;
+}
+async function app_a_file_system_initialize() {
+  let value = storage_local_exists(app_a, app_a_file_system_initialize.name);
+  if (value) {
+    return;
+  }
+  async function lambda2() {
+    await app_a_file_system_initialize_download();
+    let v = true;
+    return v;
+  }
+  let value2 = await global_function_initialize_lambda_async(app_a_file_system_initialize, lambda2);
+  marker("1");
+}
+async function app_a_file_system_initialize_download() {
+  let db = await app_a_indexeddb_initialize();
+  let db_get = lambda_get(db);
+  let r = await app_api_fn(app_a_download, []);
+  log("he");
+  async function lambda(item) {
+    let value_get = lambda_get(item);
+    let key = object_property_get(item, "key");
+    let store = app_a_file_system_store();
+    let value3 = await indexeddb_put(db_get, store, key, value_get);
+  }
+  await each_async(r, lambda);
+  storage_local_set(app_a, app_a_file_system_initialize.name, true);
+}
+function log(message) {
+  log_keep(message);
+  let a = 1;
+}
+function log_keep(message) {
+  console.log(message);
+}
+function storage_local_set(app_fn, key, value) {
+  let storage_local_key = storage_local_key_get(app_fn, key);
+  if (storage_local_enabled()) {
+    storage_local_specify_set(value, storage_local_key);
+    return;
+  }
+  global_function_property_set(storage_local_set, storage_local_key, value);
+}
+function global_function_property_set(fn, property_name, value) {
+  marker("1");
+  let fn_object = global_function_initialize(fn, {});
+  object_property_set(fn_object, property_name, value);
+}
+function global_function_initialize(fn, initial) {
+  marker("1");
+  assert_arguments(arguments, 2);
+  let value_get = lambda_get(initial);
+  let value = global_function_initialize_lambda(fn, value_get);
+  return value;
+}
+function global_function_initialize_lambda(fn, lambda) {
+  assert_arguments(arguments, 2);
+  let global = global_get();
+  let value = object_property_initialize_lambda(global, fn.name, lambda);
+  return value;
+}
+function lambda_get(value) {
+  function value_get() {
+    return value;
+  }
+  return value_get;
+}
+function storage_local_specify_set(value, storage_local_key) {
+  let v = json_to({
+    value
+  });
+  localStorage.setItem(storage_local_key, v);
+}
+function storage_local_key_get(app_fn, key) {
+  let ley = app_fn.name + " " + key;
+  return ley;
+}
+function storage_local_enabled() {
+  marker("1");
+  let set = global_function_exists(storage_local_enabled);
+  let enabled = not(set) || global_function_get(storage_local_enabled) === true;
+  return enabled;
+}
+function global_function_get(fn) {
+  let global = global_get();
+  let value = object_property_get(global, fn.name);
+  return value;
+}
+function global_function_exists(fn) {
+  marker("1");
+  let global = global_get();
+  let exists = object_property_exists(global, fn.name);
+  return exists;
+}
+async function each_async(list, lambda$item) {
+  for (let item of list) {
+    if (await lambda$item(item) === true) {
+      break;
+    }
+  }
+}
+async function indexeddb_put(db_get, store, key, value_get) {
+  marker("1");
+  const db = await db_get();
+  const tx = db.transaction(store, "readwrite");
+  const s = tx.objectStore(store);
+  const value = await new Promise(function lambda3(resolve, reject) {
+    const req = s.get(key);
+    req.onsuccess = async function lambda() {
+      let previous = req.result ?? null;
+      try {
+        const next = await value_get(previous);
+        s.put(next);
+        resolve(next);
+      } catch (e) {
+        reject(e);
+      }
+    };
+    req.onerror = function lambda2() {
+      let v = reject(req.error);
+      return v;
+    };
+  });
+  await new Promise(function lambda6(resolve, reject) {
+    tx.oncomplete = resolve;
+    tx.onerror = function lambda4() {
+      let v2 = reject(tx.error);
+      return v2;
+    };
+    tx.onabort = function lambda5() {
+      let v3 = reject(tx.error);
+      return v3;
+    };
+  });
+  return value;
+}
+async function app_a_download() {
+  marker("1");
+  let filtered = await app_a_download_paths();
+  async function lambda2(path) {
+    let contents = await file_read(path);
+    let data = {
+      versions: [contents]
+    };
+    let compressed = json_compress(data);
+    let v = {
+      key: path,
+      compressed
+    };
+    return v;
+  }
+  let files = await list_map_unordered_async(filtered, lambda2);
+  return files;
+}
+function json_compress(data) {
+  let json = json_to(data);
+  let compressed = string_compress(json);
+  return compressed;
+}
+function string_compress(text) {
+  let compressed = LZString.compressToUTF16(text);
+  return compressed;
+}
+async function list_map_unordered_async(list, lambda$item) {
+  let mapped = list_map(list, lambda$item);
+  let waited = await list_wait(mapped);
+  return waited;
+}
+async function list_wait(list) {
+  let v = await Promise.all(list);
+  return v;
+}
+function list_map(list, lambda$item) {
+  list_is_assert(list);
+  let mapped = list.map(lambda$item);
+  return mapped;
+}
+async function app_a_download_paths() {
+  let path_folder = repos_folder();
+  let combineds = await folder_read_recursive_skipped_paths_async(path_folder, ["node_modules", ".git"]);
+  let ext_f = function_name_extension();
+  let ext_h = html_extension();
+  let ext_j = json_extension();
+  let filtered = list_filter_ends_with_any(combineds, [ext_f, ext_h, ext_j]);
+  return filtered;
+}
+async function folder_read_recursive_skipped_paths_async(path_folder, folders_skipped) {
+  let result = await folder_read_recursive_skipped_async(path_folder, folders_skipped);
+  let mapped = folder_read_recursive_paths_to(result, path_folder);
+  return mapped;
+}
+function folder_read_recursive_paths_to(result, path_folder) {
+  let combineds = list_map_path_join_left(result, path_folder);
+  let mapped = list_map(combineds, path_normalize);
+  return mapped;
+}
+function list_map_path_join_left(list, folder_prefix) {
+  marker("1");
+  function lambda(item) {
+    let joined = path_join([folder_prefix, item]);
+    return joined;
+  }
+  let mapped2 = list_map(list, lambda);
+  return mapped2;
 }
 function path_join(segments) {
   assert_arguments(arguments, 1);
@@ -546,20 +1024,207 @@ function folder_previous() {
   let previous = "..";
   return previous;
 }
-function repo_path(repo_name) {
-  marker("1");
-  let previous = repos_folder();
-  let r_path = path_join([previous, repo_name]);
-  return r_path;
+async function folder_read_recursive_skipped_async(path_folder, folders_skipped) {
+  const fs = await import("fs/promises");
+  const path = await import("path");
+  let result = [];
+  const entries = await fs.readdir(path_folder, {
+    withFileTypes: true
+  });
+  for (const entry of entries) {
+    let name = object_property_get(entry, "name");
+    if (entry.isFile()) {
+      result.push(name);
+    } else if (entry.isDirectory()) {
+      let n = list_includes_not(folders_skipped, name);
+      if (n) {
+        const fullPath = path.join(path_folder, name);
+        const subFiles = await folder_read_recursive_skipped_async(fullPath, folders_skipped);
+        function lambda(f) {
+          let v = path.join(name, f);
+          return v;
+        }
+        result.push(...subFiles.map(lambda));
+      }
+    }
+  }
+  return result;
+}
+function list_includes_not(list, item) {
+  let b = list_includes(list, item);
+  let n = not(b);
+  return n;
+}
+function list_includes(list, item) {
+  const includes = list.includes(item);
+  return includes;
 }
 function repos_folder() {
   let previous = folder_previous();
   return previous;
 }
-function global_function_get(fn) {
+function list_filter_ends_with_any(list, suffixes) {
+  marker("1");
+  function lambda(item) {
+    function lambda3(suffix) {
+      let ew = string_ends_with(item, suffix);
+      return ew;
+    }
+    let any = list_any(suffixes, lambda3);
+    return any;
+  }
+  let filtered = list_filter(list, lambda);
+  return filtered;
+}
+function list_filter(list, lambda$item) {
+  list_is_assert(list);
+  function lambda(item) {
+    let match = lambda$item(item);
+    return match;
+  }
+  let filtered = list.filter(lambda);
+  return filtered;
+}
+function list_any(list, lambda$item) {
+  marker("1");
+  let filtered = list_filter(list, lambda$item);
+  let any = list_empty_not_is(filtered);
+  return any;
+}
+function string_ends_with(s, suffix) {
+  const ew = s.endsWith(suffix);
+  return ew;
+}
+function html_extension() {
+  let ext_h = ".html";
+  return ext_h;
+}
+function function_name_extension() {
+  const ext = ".mjs";
+  return ext;
+}
+async function app_api_fn(fn, args) {
+  marker("1");
+  let f_name = fn.name;
+  let r = await app_api(f_name, args);
+  return r;
+}
+async function app_api(f_name, args) {
+  string_is_assert(f_name);
+  marker("1");
+  let fn = http_post_json;
+  let result = await app_api_generic(f_name, args, fn);
+  return result;
+}
+function string_is_assert(value) {
+  let b = string_is(value);
+  assert(b);
+}
+function string_is(value) {
+  let si = typeof value === "string";
+  return si;
+}
+async function app_api_generic(f_name, args, fn) {
+  marker("1");
+  var {url, body} = app_api_generic_url_body(f_name, args);
+  let o = await fn(url, body);
+  let result = object_property_get(o, "result");
+  return result;
+}
+function app_api_generic_url_body(f_name, args) {
+  let body = app_api_generic_f_name_args(f_name, args);
+  const url = server_api_url();
+  let v = {
+    url,
+    body
+  };
+  return v;
+}
+function server_api_url() {
+  let a = "/api";
+  return a;
+}
+function app_api_generic_f_name_args(f_name, args) {
+  let args_list = list_to(args);
+  let v2 = {
+    f_name: f_name,
+    args: args_list
+  };
+  return v2;
+}
+function list_to(a) {
+  let v = Array.from(a);
+  return v;
+}
+async function http_post_json(url, body) {
+  let buffer = await http_generic(url, {
+    method: "POST",
+    body: body
+  });
+  let o = buffer_to_json(buffer);
+  return o;
+}
+function buffer_to_json(buffer) {
+  let text = buffer_string_to(buffer);
+  let parsed = json_from(text);
+  return parsed;
+}
+async function global_function_initialize_lambda_async(fn, lambda) {
+  marker("1");
+  assert_arguments(arguments, 2);
   let global = global_get();
-  let value = object_property_get(global, fn.name);
+  let value = await object_property_initialize_lambda_async(global, fn.name, lambda);
   return value;
+}
+async function object_property_initialize_lambda_async(object, property_name, lambda) {
+  marker("1");
+  const exists = object_property_exists(object, property_name);
+  if (not(exists)) {
+    let value_set = await lambda();
+    object_property_set(object, property_name, value_set);
+  }
+  let value = object_property_get(object, property_name);
+  return value;
+}
+function storage_local_exists(app_fn, key) {
+  marker("1");
+  let storage_local_key = storage_local_key_get(app_fn, key);
+  if (storage_local_enabled()) {
+    let json = storage_local_specify_get_json(storage_local_key);
+    let v = json !== null;
+    return v;
+  }
+  let value = storage_local_exists_global(storage_local_key);
+  return value;
+}
+function storage_local_specify_get_json(storage_local_key) {
+  let v = localStorage.getItem(storage_local_key);
+  return v;
+}
+function storage_local_exists_global(storage_local_key) {
+  let exists2 = global_function_property_exists(storage_local_set, storage_local_key);
+  return exists2;
+}
+function global_function_property_exists(fn, property_name) {
+  marker("1");
+  let fn_object = global_function_initialize_object(fn);
+  let exists = object_property_exists(fn_object, property_name);
+  return exists;
+}
+function global_function_initialize_object(fn) {
+  let value = global_function_initialize(fn, {});
+  return value;
+}
+function repo_path_combine(repo_name, f_path) {
+  let folder_name = repo_path(repo_name);
+  let combined = path_join([folder_name, f_path]);
+  return combined;
+}
+function repo_path(repo_name) {
+  marker("1");
+  let previous = repos_folder();
+  let r_path = path_join([previous, repo_name]);
+  return r_path;
 }
 async function user_repo_get() {
   marker("1");
@@ -576,10 +1241,6 @@ function list_includes_assert(all, repo_name) {
   let includes = list_includes(all, repo_name);
   assert(includes);
 }
-function list_includes(list, item) {
-  const includes = list.includes(item);
-  return includes;
-}
 async function repos_names() {
   marker("1");
   let path_folder = repos_folder();
@@ -587,10 +1248,136 @@ async function repos_names() {
   return rns;
 }
 async function folder_read(path_folder) {
+  if (browser_is()) {
+    let r = await app_api_cache_storage_local_fn(folder_read, arguments);
+    return r;
+  }
   marker("1");
   let fs = await import("fs");
   const all = await fs.promises.readdir(path_folder);
   return all;
+}
+async function app_api_cache_storage_local_fn(fn, args) {
+  marker("1");
+  let f_name = fn.name;
+  let v = await app_api_cache_storage_local(f_name, args);
+  return v;
+}
+async function app_api_cache_storage_local(f_name, args) {
+  marker("1");
+  let fn = http_post_json_cache_storage_local;
+  let result = await app_api_generic(f_name, args, fn);
+  return result;
+}
+async function http_post_json_cache_storage_local(url, body) {
+  marker("1");
+  let v4 = await invoke_cache_storage_local(http_post_json, [url, body]);
+  return v4;
+}
+async function invoke_cache_storage_local(fn, args) {
+  marker("1");
+  let key_get = invoke_cache_key_get(fn, args);
+  let value_get = invoke_cache_value_get(fn, args);
+  let cached_exists = function lambda3(key) {
+    let exists = storage_local_exists(invoke_cache_storage_local, key);
+    return exists;
+  };
+  let cached_get = async function lambda2(key) {
+    let value = await storage_local_get(invoke_cache_storage_local, key);
+    return value;
+  };
+  let cache_save = function lambda4(key, value) {
+    let v2 = storage_local_set_exists_not(invoke_cache_storage_local, key, value);
+    return v2;
+  };
+  let result = await cache_generic(key_get, cached_exists, cached_get, value_get, cache_save);
+  return result;
+}
+function invoke_cache_value_get(fn, args) {
+  marker("1");
+  let v3 = async function lambda() {
+    let v = await fn(...args);
+    return v;
+  };
+  return v3;
+}
+function invoke_cache_key_get(fn, args) {
+  let l = function lambda() {
+    let json = invoke_cache_key(fn, args);
+    return json;
+  };
+  return l;
+}
+function invoke_cache_key(fn, args) {
+  let name = object_property_get(fn, "name");
+  let json2 = json_to([name, args]);
+  return json2;
+}
+function storage_local_set_exists_not(app_fn, key, value) {
+  marker("1");
+  let e = storage_local_exists(app_fn, key);
+  assert_not(e);
+  storage_local_set(app_fn, key, value);
+}
+function assert_not(b) {
+  if (b) {
+    error();
+  }
+}
+function storage_local_get(app_fn, key) {
+  marker("1");
+  let storage_local_key = storage_local_key_get(app_fn, key);
+  if (storage_local_enabled()) {
+    let result = storage_local_specify_get(storage_local_key);
+    return result;
+  }
+  let value = storage_local_get_global(storage_local_key);
+  return value;
+}
+function storage_local_get_global(storage_local_key) {
+  let exists = storage_local_exists_global(storage_local_key);
+  "localStorage has this behavior of null if not exists, so the in-memory version also mirrors api";
+  let value = null;
+  if (exists) {
+    value = global_function_property_get(storage_local_set, storage_local_key);
+  }
+  return value;
+}
+function global_function_property_get(fn, property_name) {
+  marker("1");
+  let fn_object = global_function_initialize(fn, {});
+  let value = object_property_get(fn_object, property_name);
+  return value;
+}
+function storage_local_specify_get(storage_local_key) {
+  let json = storage_local_specify_get_json(storage_local_key);
+  let n = null_is(json);
+  let result = null;
+  if (n) {
+    result = json;
+  } else {
+    let {value} = json_from(json);
+    result = value;
+  }
+  return result;
+}
+function null_is(value) {
+  const n = value === null;
+  return n;
+}
+async function cache_generic(key_get, cached_exists, cached_get, value_get, cache_save) {
+  marker("1");
+  let key = key_get();
+  let e = await cached_exists(key);
+  let result = null;
+  if (e) {
+    result = await cached_get(key);
+  } else {
+    let value = await value_get();
+    await cache_save(key, value);
+    result = await cached_get(key);
+  }
+  return result;
 }
 async function data_get(property_name, value_initial, d_path) {
   marker("1");
@@ -614,7 +1401,7 @@ async function data_all(file_path) {
         await data_generate(data);
         return data;
       }
-      data = await global_function_property_async(data_all, d_path, lambda2);
+      data = await global_function_property_initialize_async(data_all, d_path, lambda2);
     }
   } else {
     let exists = await file_exists(file_path);
@@ -638,53 +1425,56 @@ async function data_generate(data) {
   }
   each(parseds, lambda);
 }
-function each(list, lambda$item) {
-  marker("1");
-  for (let item of list) {
-    lambda$item(item);
-  }
-}
-function data_file_update_inner(parsed, data) {
+async function data_file_update_inner(parsed, data) {
   let {f_path} = parsed;
   let f_name = function_path_to_name(f_path);
   let {ast} = parsed;
-  let f_identifiers_new = js_identifiers_names(ast);
-  const property_name = "identifiers";
-  let identifiers = object_property_initialize(data, property_name, {});
-  function lambda2(i_name) {
-    let list = object_property_initialize(identifiers, i_name, []);
-    list_add_if_not_includes(list, f_name);
-  }
-  each(f_identifiers_new, lambda2);
   let functions = object_property_initialize(data, "functions", {});
   let f_this = object_property_initialize(functions, f_name, {});
   let declaration = js_declaration_single(ast);
   let async_is = object_property_get(declaration, "async");
   object_property_set(f_this, "async", async_is);
-  let f_identifiers_old = object_property_initialize(f_this, property_name, []);
-  let removals = list_difference(f_identifiers_old, f_identifiers_new);
-  function lambda(item) {
-    let list = object_property_initialize(identifiers, item, []);
-    list_remove_all(list, f_name);
-    let e = list_empty_is(list);
-    if (e) {
-      object_property_delete(identifiers, item);
+  function data_add(property_name, items) {
+    let items_to_functions = object_property_initialize(data, property_name, {});
+    function identifier_add(i_name) {
+      let list = object_property_initialize(items_to_functions, i_name, []);
+      list_add_if_not_includes(list, f_name);
     }
+    each(items, identifier_add);
+    if (false) {
+      let items_old = object_property_initialize(f_this, property_name, []);
+      let removals = list_difference(items_old, items);
+      function lambda(item) {
+        let list = object_property_initialize(items_to_functions, item, []);
+        list_remove_all(list, f_name);
+        let e = list_empty_is(list);
+        if (e) {
+          object_property_delete(items_to_functions, item);
+        }
+      }
+      each(removals, lambda);
+    }
+    object_property_set(f_this, property_name, items);
   }
-  each(removals, lambda);
-  object_property_set(f_this, property_name, f_identifiers_new);
-}
-function js_declaration_single(ast) {
+  let f_identifiers_new = js_identifiers_names(ast);
+  data_add("identifiers", f_identifiers_new);
   function lambda2(la) {
-    function lambda(v) {
-      let {node} = v;
-      la(node);
+    js_visit_calls_named(fn_name.name, lambda4, ast);
+    function lambda4({args}) {
+      let first = list_first(args);
+      function lambda3() {
+        let v = {
+          msg: fn_name.name + " first argument should be a literal: " + f_name
+        };
+        return v;
+      }
+      js_literal_is_assert(first, lambda3);
+      let value = object_property_get(first, "value");
+      la(value);
     }
-    js_visit_type(ast, "ExportNamedDeclaration", lambda);
   }
-  let nameds = list_adder(lambda2);
-  let {declaration} = list_single(nameds);
-  return declaration;
+  let identifiers_fn_names = list_adder(lambda2);
+  data_add("identifiers_fn_names", identifiers_fn_names);
 }
 function list_adder(lambda$la) {
   let fn = list_add;
@@ -702,95 +1492,46 @@ function list_adder_generic(lambda, fn) {
 function list_add(list, item) {
   list.push(item);
 }
-function list_single(list) {
-  list_size_1_assert(list);
-  let only = list_first(list);
-  return only;
-}
-function list_size_1_assert(list) {
-  let message = list_size(list);
-  let message2 = string_to(message);
-  list_size_1_assert_message(list, message2);
-}
-function list_size_1_assert_message(list, message) {
-  let a = list_size_1(list);
-  if (not(a)) {
-    error(message);
-  }
-}
-function list_size_1(list) {
-  const s1 = list_size(list) === 1;
-  return s1;
-}
-function list_size(list) {
-  list_is_assert(list);
-  let size = list.length;
-  return size;
-}
-function list_is_assert(list) {
-  let result = list_is(list);
-  function lambda() {
-    let v = {
-      list
-    };
-    return v;
-  }
-  assert_json_get(result, lambda);
-  return;
-}
-function assert_json_get(b, lambda) {
+function js_literal_is_assert(node) {
   marker("1");
-  function lambda2() {
-    let object = lambda();
-    let json = json_to(object);
-    return json;
-  }
-  let v = assert_message_get(b, lambda2);
-  return v;
+  let li = js_literal_is(node);
+  assert(li);
 }
-function assert_message_get(b, lambda) {
-  marker("1");
-  if (not(b)) {
-    let message = lambda();
-    error(message);
-  }
+function js_literal_is(node) {
+  let li = js_node_type_is(node, "Literal");
+  return li;
 }
-function list_is(value) {
-  const l = Array.isArray(value);
-  return l;
+function js_node_type_is(node, type) {
+  const type_is = js_node_is(node) && js_node_type(node) === type;
+  return type_is;
 }
-function string_to(input) {
-  const s = input.toString();
-  return s;
+function js_node_is(n) {
+  const ni = object_property_exists(n, "type");
+  return ni;
+}
+function js_node_type(n) {
+  const nt = object_property_get(n, "type");
+  return nt;
 }
 function list_first(list) {
   const index = 0;
   const first = list_get(list, index);
   return first;
 }
-function list_get(list, index) {
-  integer_is_assert(index);
-  let item = list[index];
-  undefined_not_is_assert_lambda(item, object_get);
-  function object_get() {
-    let v = {
-      list,
-      index
-    };
-    return v;
+function js_visit_calls_named(f_name, lambda, ast) {
+  function lambda_inner(v) {
+    let {node} = v;
+    let name = js_call_callee_name(node);
+    if (equal_not(name, f_name)) {
+      return;
+    }
+    let args = object_property_get(node, "arguments");
+    lambda({
+      v,
+      args
+    });
   }
-  return item;
-}
-function integer_is_assert(index) {
-  let ii = integer_is(index);
-  assert_json(ii, {
-    index
-  });
-}
-function integer_is(value) {
-  marker("1");
-  let ii = Number.isInteger(value);
-  return ii;
+  js_visit_type(ast, "CallExpression", lambda_inner);
 }
 function js_visit_type(ast, type, lambda$v) {
   js_visit_types(ast, [type], lambda$v);
@@ -812,43 +1553,6 @@ function js_node_types_is(item, types) {
   }
   const match = list_any(types, lambda2);
   return match;
-}
-function list_any(list, lambda$item) {
-  marker("1");
-  let filtered = list_filter(list, lambda$item);
-  let any = list_empty_not_is(filtered);
-  return any;
-}
-function list_empty_not_is(list) {
-  let a = list_empty_is(list);
-  const ne = not(a);
-  return ne;
-}
-function list_empty_is(list) {
-  const e = list_size(list) === 0;
-  return e;
-}
-function list_filter(list, lambda$item) {
-  let l = list_is(list);
-  assert(l);
-  function lambda(item) {
-    let match = lambda$item(item);
-    return match;
-  }
-  let filtered = list.filter(lambda);
-  return filtered;
-}
-function js_node_type_is(node, type) {
-  const type_is = js_node_is(node) && js_node_type(node) === type;
-  return type_is;
-}
-function js_node_is(n) {
-  const ni = object_property_exists(n, "type");
-  return ni;
-}
-function js_node_type(n) {
-  const nt = object_property_get(n, "type");
-  return nt;
 }
 function js_visit(ast, lambda$v) {
   let a = promise_not_is(ast);
@@ -891,8 +1595,8 @@ function visit_filter_recursive(node, children_get, filter, on_each, stack) {
   }
 }
 function list_pop(list) {
-  let v = list.pop();
-  return v;
+  let popped = list.pop();
+  return popped;
 }
 function list_copy(original) {
   const copy = [...original];
@@ -918,21 +1622,91 @@ function object_properties(obj) {
   const properties = Object.getOwnPropertyNames(obj);
   return properties;
 }
-function string_is(value) {
-  let si = typeof value === "string";
-  return si;
-}
-function list_map(list, lambda$item) {
-  list_is_assert(list);
-  let mapped = list.map(lambda$item);
-  return mapped;
-}
 function js_visit_filter(n) {
   let v = js_node_is(n) || list_is(n);
   return v;
 }
+function equal_not(left, right) {
+  marker("1");
+  let a = equal(left, right);
+  let ne = not(a);
+  return ne;
+}
+function js_call_callee_name(expression) {
+  let name = null;
+  let jin2 = js_node_type_not_is(expression, "CallExpression");
+  if (jin2) {
+    return name;
+  }
+  let callee = object_property_get(expression, "callee");
+  let jin = js_identifier_not_is(callee);
+  if (jin) {
+    return name;
+  }
+  name = object_property_get_name(callee);
+  return name;
+}
+function js_node_type_not_is(node, type) {
+  let type_is = js_node_type_is(node, type);
+  let nti = not(type_is);
+  return nti;
+}
+function js_identifier_not_is(id) {
+  let jin = js_node_type_not_is(id, "Identifier");
+  return jin;
+}
+function object_property_get_name(item) {
+  let name = object_property_get(item, "name");
+  return name;
+}
+function js_declaration_single(ast) {
+  function lambda2(la) {
+    function lambda(v) {
+      let {node} = v;
+      la(node);
+    }
+    js_visit_type(ast, "ExportNamedDeclaration", lambda);
+  }
+  let nameds = list_adder(lambda2);
+  let {declaration} = list_single(nameds);
+  return declaration;
+}
+function list_single(list) {
+  list_size_1_assert(list);
+  let only = list_first(list);
+  return only;
+}
+function list_size_1_assert(list) {
+  let size = list_size(list);
+  let json = json_to({
+    size
+  });
+  list_size_1_assert_message(list, json);
+}
+function list_size_1_assert_message(list, message) {
+  let a = list_size_1(list);
+  if (not(a)) {
+    error(message);
+  }
+}
+function list_size_1(list) {
+  const s1 = list_size(list) === 1;
+  return s1;
+}
 function object_property_delete(object, property_name) {
+  object_property_exists_assert(object, property_name);
   delete object[property_name];
+}
+function object_property_exists_assert(object, property_name) {
+  let result = object_property_exists(object, property_name);
+  function lambda() {
+    let v = {
+      object,
+      property_name
+    };
+    return v;
+  }
+  assert_json_get(result, lambda);
 }
 function list_remove_all(list, item) {
   while (list_includes(list, item)) {
@@ -944,7 +1718,9 @@ function list_remove(list, item) {
   list_remove_at(list, index);
 }
 function list_remove_at(list, index) {
-  list.splice(index, 1);
+  let e = list.splice(index, 1);
+  let only = list_single(e);
+  return only;
 }
 function list_index_of(list, item) {
   let index = list.indexOf(item);
@@ -962,8 +1738,8 @@ function error_json(o) {
   error(message);
 }
 function json_format_to(object) {
-  let v = JSON.stringify(object, null, 1);
-  return v;
+  let j = JSON.stringify(object, null, 1);
+  return j;
 }
 function list_difference(list, other) {
   function lambda2(la) {
@@ -984,6 +1760,14 @@ function list_add_if_not_includes(list, item) {
   if (not(exists)) {
     list_add(list, item);
   }
+}
+function object_property_initialize(object, property_name, value_initial) {
+  const exists = object_property_exists(object, property_name);
+  if (not(exists)) {
+    object_property_set(object, property_name, value_initial);
+  }
+  let value = object_property_get(object, property_name);
+  return value;
 }
 function js_identifiers_names(ast) {
   function lambda2(la) {
@@ -1018,11 +1802,15 @@ function function_path_to_name(f_path) {
   return f_name;
 }
 function path_name(file_path) {
-  const parts = file_path.split(/[/\\]/);
-  const filename = parts.pop();
+  const filename = path_base(file_path);
   let v = filename.lastIndexOf(".");
   const name = filename.includes(".") ? filename.slice(0, v) : filename;
   return name;
+}
+function path_base(file_path) {
+  const parts = file_path.split(/[/\\]/);
+  const filename = parts.pop();
+  return filename;
 }
 async function file_js_parse(f_path) {
   let code = await file_read(f_path);
@@ -1052,15 +1840,6 @@ function js_parse_generic(acorn, code) {
     throw e;
   }
   return ast;
-}
-async function list_map_unordered_async(list, lambda$item) {
-  let mapped = list_map(list, lambda$item);
-  let waited = await list_wait(mapped);
-  return waited;
-}
-async function list_wait(list) {
-  let v = await Promise.all(list);
-  return v;
 }
 async function functions_paths() {
   marker("1");
@@ -1158,23 +1937,19 @@ function string_suffix_without(s, suffix) {
   const without = string_slice(s, 0, string_size(s) - string_size(suffix));
   return without;
 }
-function string_ends_with(s, suffix) {
-  const ew = s.endsWith(suffix);
-  return ew;
-}
 function string_slice(s, a, b) {
-  let v = s.slice(a, b);
-  return v;
+  let sliced = s.slice(a, b);
+  return sliced;
 }
 function string_size(s) {
-  let v = s.length;
-  return v;
-}
-function function_name_extension() {
-  const ext = ".mjs";
-  return ext;
+  let size = s.length;
+  return size;
 }
 async function folder_read_files(path_folder) {
+  if (browser_is()) {
+    let r = await app_api_cache_storage_local_fn(folder_read_files, arguments);
+    return r;
+  }
   let fs = await import("fs");
   marker("1");
   function lambda(file) {
@@ -1184,7 +1959,26 @@ async function folder_read_files(path_folder) {
   }
   const all = fs.readdirSync(path_folder);
   let files = all.filter(lambda);
+  list_sort_string(files);
   return files;
+}
+function list_sort_string(list) {
+  list_sort_string_mapper(list, identity);
+}
+function identity(a) {
+  return a;
+}
+function list_sort_string_mapper(list, lambda$item) {
+  marker("1");
+  function lambda(a, b) {
+    const va = lambda$item(a);
+    const vb = lambda$item(b);
+    const [na, ia] = va.split(/[_\.]/);
+    const [nb, ib] = vb.split(/[_\.]/);
+    let v = na.localeCompare(nb) || Number(ia) - Number(ib);
+    return v;
+  }
+  list.sort(lambda);
 }
 function function_name_folder_to_path(f_name, folder) {
   let base = function_name_to_base(f_name);
@@ -1196,21 +1990,11 @@ function function_name_to_base(f_name) {
   let f_name_ext = f_name + function_name_extension();
   return f_name_ext;
 }
-async function global_function_property_async(fn, property_name, lambda) {
+async function global_function_property_initialize_async(fn, property_name, lambda) {
   let global = global_get();
   marker("1");
   let fn_object = object_property_initialize(global, fn.name, {});
-  let value = await object_property_lambda_async(fn_object, property_name, lambda);
-  return value;
-}
-async function object_property_lambda_async(object, property_name, lambda) {
-  marker("1");
-  const exists = object_property_exists(object, property_name);
-  if (not(exists)) {
-    let value_set = await lambda();
-    object_property_set(object, property_name, value_set);
-  }
-  let value = object_property_get(object, property_name);
+  let value = await object_property_initialize_lambda_async(fn_object, property_name, lambda);
   return value;
 }
 async function file_write(f_path, contents) {
@@ -1227,17 +2011,43 @@ async function assert_file_exists_not(file_path_new) {
   }
 }
 async function file_exists(file_path) {
+  if (browser_is()) {
+    file_path = file_path_normalize(file_path);
+    await app_a_file_system_initialize();
+    let store = app_a_file_system_store();
+    let exists = await indexeddb_exists(app_a_indexeddb_initialize, store, file_path);
+    return exists;
+  }
   marker("1");
   if (promise_is(file_path)) {
     error();
   }
   let fs = await import("fs");
-  let {access} = fs.promises;
-  let {constants} = fs;
+  let v = fs.promises;
+  let access = object_property_get(v, "access");
+  let constants = object_property_get(fs, "constants");
   let exists = await throws_not_async(lambda);
   async function lambda() {
     await access(file_path, constants.F_OK);
   }
+  return exists;
+}
+async function indexeddb_exists(db_get, store, key) {
+  marker("1");
+  const db = await db_get();
+  const tx = db.transaction(store, "readonly");
+  const s = tx.objectStore(store);
+  const exists = await new Promise(function lambda3(resolve, reject) {
+    const req = s.count(key);
+    req.onsuccess = function lambda() {
+      let v = resolve(req.result > 0);
+      return v;
+    };
+    req.onerror = function lambda2() {
+      let v2 = reject(req.error);
+      return v2;
+    };
+  });
   return exists;
 }
 async function throws_not_async(lambda) {
@@ -1251,9 +2061,44 @@ async function throws_not_async(lambda) {
   return success;
 }
 async function file_overwrite(file_path, contents) {
+  marker("1");
+  if (browser_is()) {
+    file_path = file_path_normalize(file_path);
+    await app_a_file_system_initialize();
+    let store = app_a_file_system_store();
+    function lambda(previous) {
+      function lambda2(compressed_before) {
+        let f = json_decompress(compressed_before);
+        let versions = object_property_get(f, "versions");
+        list_add(versions, contents);
+        let compressed_after = json_compress(f);
+        return compressed_after;
+      }
+      object_property_change(previous, "compressed", lambda2);
+      return previous;
+    }
+    let item = await indexeddb_put(app_a_indexeddb_initialize, store, file_path, lambda);
+    return;
+  }
   await file_parent_exists_ensure(file_path);
   let fs = await import("fs");
   await fs.promises.writeFile(file_path, contents, "utf-8");
+  return;
+}
+function object_property_change(o, property, lambda$value) {
+  let value = object_property_get(o, property);
+  value = lambda$value(value);
+  object_property_set(o, property, value);
+  return value;
+}
+async function file_parent_exists_ensure(file_path) {
+  await file_root_exists_assert(file_path);
+  let fs = await import("fs");
+  let path = await import("path");
+  const dir = path.dirname(file_path);
+  await fs.promises.mkdir(dir, {
+    recursive: true
+  });
   return;
 }
 async function file_root_exists_assert(file_path) {
@@ -1292,16 +2137,6 @@ function string_empty_is(s) {
   const e = s === "";
   return e;
 }
-async function file_parent_exists_ensure(file_path) {
-  await file_root_exists_assert(file_path);
-  let fs = await import("fs");
-  let path = await import("path");
-  const dir = path.dirname(file_path);
-  await fs.promises.mkdir(dir, {
-    recursive: true
-  });
-  return;
-}
 function data_path() {
   let inner = "";
   let f_path = data_path_generic(inner, "data");
@@ -1330,18 +2165,27 @@ function file_name_json_folder_gitignore(name) {
 }
 async function firebase_service_account() {
   let f_name = await user_repo_firebase_service_account_get();
-  let file_path = await function_run(f_name, []);
+  let file_path = await function_run_unalias(f_name, []);
   let service_account = await file_read_json(file_path);
   return service_account;
 }
-async function function_run(f_name, args) {
-  const fn = await function_import(f_name);
+async function function_run_unalias(f_name, args) {
+  marker("1");
+  const fn = await function_import_unalias(f_name);
   const result = await fn(...args);
   return result;
 }
-async function function_import(f_name) {
+async function function_import_unalias(f_name) {
+  marker("1");
   let {unaliased} = await function_name_unalias(f_name);
-  let {f_path: f} = await function_name_to_path_search(unaliased);
+  const imported_fn = await function_import(unaliased);
+  return imported_fn;
+}
+async function function_import(f_name) {
+  let v = await function_name_unalias(f_name);
+  let unaliased = object_property_get(v, "unaliased");
+  let v2 = await function_name_to_path_search(unaliased);
+  let f = object_property_get(v2, "f_path");
   let f_path = await path_resolve(f);
   const imported = await import(`file://${f_path}`);
   const imported_fn = imported[unaliased];
@@ -1409,13 +2253,13 @@ function undefined_not_is_assert(value) {
   }
   undefined_not_is_assert_lambda(value, lambda2);
 }
-function each_object(object, lambda) {
-  function lambda2(p) {
-    let value = object_property_get(object, p);
-    lambda(value, p);
+function each_object(object, lambda$value$property) {
+  function lambda2(property) {
+    let value = object_property_get(object, property);
+    lambda$value$property(value, property);
   }
-  let list = object_properties(object);
-  each(list, lambda2);
+  let properties = object_properties(object);
+  each(properties, lambda2);
 }
 function function_name_to_acronym(f_name) {
   let parts = function_name_to_parts(f_name);
@@ -1464,6 +2308,10 @@ function list_to_dictionary(list, lambda$item) {
   return dictionary;
 }
 async function functions_names() {
+  if (browser_is()) {
+    let r = await app_api_cache_storage_local_fn(functions_names, arguments);
+    return r;
+  }
   marker("1");
   let f_names = await repos_paths_map_unordered_combine_squash(mapper);
   async function mapper(joined) {
@@ -1556,8 +2404,8 @@ async function repos_paths_names_map_unordered(lambda$name$path) {
   return result;
 }
 function list_multiple_is(list) {
-  let v = list_size(list) >= 2;
-  return v;
+  let m = list_size(list) >= 2;
+  return m;
 }
 function true_is(value) {
   let ti = equal(value, true);
@@ -1580,8 +2428,8 @@ function string_includes(input, part) {
   };
   string_is_assert_json(input, o);
   string_is_assert_json(part, o);
-  let v = input.includes(part);
-  return v;
+  let i = input.includes(part);
+  return i;
 }
 function string_is_assert_json(value, o) {
   let message = json_to(o);
@@ -1635,6 +2483,7 @@ async function firebase_storage_url(storage_path) {
   let url = "https://firebasestorage.googleapis.com/v0/b/" + await firebase_storage_url_project() + "/o/" + replaced + "?alt=media";
   return url;
 }
+    app_reply(  );
   </script>
 </body>
 </html>
