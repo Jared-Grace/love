@@ -125,6 +125,7 @@ export async function reply_2(context) {
       await each_async(copy, lambda5);
     }
     await each_async(taken, lambda6);
+    buttons_refresh();
     await copy_refresh();
   }
   function lambda12() {}
