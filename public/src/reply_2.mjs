@@ -91,7 +91,7 @@ export async function reply_2(context) {
     let text = object_property_get(choice, "text");
     function lambda11() {
       let response = object_property_get(choice, "response");
-      list_add(copied, response);
+      list_add(responses, response);
     }
     let component2 = html_button(root, text, lambda11);
   }
