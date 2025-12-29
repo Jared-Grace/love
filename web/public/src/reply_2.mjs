@@ -66,7 +66,7 @@ export async function reply_2(context) {
         function lambda7(v) {
           let text = object_property_get(v, "text");
           log({
-            v,
+            text,
             reference,
           });
         }
