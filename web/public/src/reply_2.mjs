@@ -44,7 +44,8 @@ export async function reply_2(context) {
   }
   each(choices_verse_count, lambda2);
   async function update(verse_count_new) {
-    await each_range_from_async(from, to, async function lambda6() {});
+    async function lambda6() {}
+    await each_range_from_async(from, to, lambda6);
     verse_count = c;
   }
 }
