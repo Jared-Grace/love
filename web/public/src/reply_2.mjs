@@ -68,6 +68,7 @@ export async function reply_2(context) {
         function lambda7(v) {
           if (equal_not(reference, reference_current)) {
             log(reference);
+            reference_current = reference;
           }
           let text = object_property_get(v, "text");
           log(text);
