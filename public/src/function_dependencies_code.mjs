@@ -7,8 +7,8 @@ import { function_dependencies } from "../../../love/public/src/function_depende
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-export async function function_dependencies_code(f_name) {
-  let ds = await function_dependencies(f_name);
+export async function function_dependencies_code(f_names) {
+  let ds = await function_dependencies(f_names);
   let mapped = list_map(ds, function_parse_declaration);
   let waited = await list_wait(mapped);
   let mapped2 = list_map_property(waited, "declaration");
