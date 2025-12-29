@@ -55,11 +55,6 @@ export async function reply_2(context) {
     async function lambda6(reference) {
       let verse_range = await ebible_references_parse_lines([en], [reference]);
       const translations = [];
-      const v = {
-        verse_range,
-        reference,
-        translations,
-      };
       async function lambda5(l) {
         let bible_folder = object_property_get(l, "bible_folder");
         async function lambda8(verse) {
