@@ -29,6 +29,7 @@ export async function file_overwrite(file_path, contents) {
         f = {
           ["versions"]: [],
         };
+        previous = {};
       }
       let list = object_property_get(f, "versions");
       list_add(list, contents);
