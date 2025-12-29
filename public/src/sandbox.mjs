@@ -1,4 +1,4 @@
-import { object_property_change } from "../../../love/public/src/object_property_change.mjs";
-export async function sandbox() {$x
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+export async function sandbox() {
   object_property_get(previous, p, lambda2);
 }
