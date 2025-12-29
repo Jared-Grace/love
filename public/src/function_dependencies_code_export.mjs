@@ -21,7 +21,7 @@ export async function function_dependencies_code_export(f_name) {
   const mod = await import(url);
   let fn = object_property_get(mod, f_name);
   let v2 = {
-    fn_get: () => {},
+    fn_get: function lambda() {},
     externals,
   };
   return v2;
