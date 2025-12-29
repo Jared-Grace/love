@@ -73,8 +73,8 @@ export async function reply_2(context) {
           verses,
         });
       }
-      let copy = list_copy_reverse(previous);
-      await each_async(languages_chosen, lambda5);
+      let copy = list_copy_reverse(languages_chosen);
+      await each_async(copy, lambda5);
     }
     await each_async(taken, lambda6);
   }
