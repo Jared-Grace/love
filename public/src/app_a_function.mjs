@@ -1,3 +1,4 @@
+import { function_dependencies_code_export } from "../../../love/public/src/function_dependencies_code_export.mjs";
 import { app_a_function_on_keydown_remove } from "../../../love/public/src/app_a_function_on_keydown_remove.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_properties_from_empty } from "../../../love/public/src/object_properties_from_empty.mjs";
@@ -9,7 +10,6 @@ import { app_a_choice_close } from "../../../love/public/src/app_a_choice_close.
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_loading } from "../../../love/public/src/html_loading.mjs";
-import { function_dependencies_code_call } from "../../../love/public/src/function_dependencies_code_call.mjs";
 import { emoji_run } from "../../../love/public/src/emoji_run.mjs";
 import { app_a_buttons_shortcuts } from "../../../love/public/src/app_a_buttons_shortcuts.mjs";
 import { app_a_on_keydown } from "../../../love/public/src/app_a_on_keydown.mjs";
@@ -118,7 +118,7 @@ export async function app_a_function(context) {
       text: emoji_run(),
       fn: async function lambda3() {
         async function lambda5() {
-          let v2 = await function_dependencies_code_call(f_name);
+          let v2 = await function_dependencies_code_export(f_name);
           let externals = object_property_get(v2, "externals");
           ("if non empty then handle case of external not already loaded in import map");
           list_empty_is_assert(externals);
