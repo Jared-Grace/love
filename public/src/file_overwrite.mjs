@@ -33,7 +33,7 @@ export async function file_overwrite(file_path, contents) {
       }
       const p = "compressed";
       $x
-      await object_property_change_async(previous, p, lambda2);
+       object_property_change_async(previous, p, lambda2);
       return previous;
     }
     let item = await indexeddb_put(
