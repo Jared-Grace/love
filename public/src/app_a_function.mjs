@@ -1,3 +1,4 @@
+import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
 import { html_code_script_importmap } from "../../../love/public/src/html_code_script_importmap.mjs";
 import { function_dependencies_code_export } from "../../../love/public/src/function_dependencies_code_export.mjs";
 import { app_a_function_on_keydown_remove } from "../../../love/public/src/app_a_function_on_keydown_remove.mjs";
@@ -141,6 +142,7 @@ export async function app_a_function(context) {
           }
           let div = app_a_overlay_container(overlay);
           let importmap = html_code_script_importmap(externals);
+          let head = html_document_head();
           let fn = await fn_get();
           let r = await fn();
           log({
