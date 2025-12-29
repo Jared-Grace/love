@@ -1,3 +1,4 @@
+import { exit } from "../../../love/public/src/exit.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_remove_all_multiple } from "../../../love/public/src/list_remove_all_multiple.mjs";
@@ -63,6 +64,7 @@ export async function js_expand_generic(next, stack2, index, ast) {
       list_remove(body_block, last);
       let argument = object_property_get(last, "argument");
       log(declaration_call);
+      exit();
       let name = js_declaration_name(declaration_call);
       let assign = js_declare(name, argument);
       list_add(body_block, assign);
