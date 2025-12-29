@@ -1,3 +1,4 @@
+import { js_code_wrap_braces } from "../../../love/public/src/js_code_wrap_braces.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
 import { js_code_export } from "../../../love/public/src/js_code_export.mjs";
@@ -13,6 +14,7 @@ export async function function_dependencies_code_export(f_name) {
   let v2 = {
     fn_get: async function lambda() {
       let dependencies = object_property_get(v, "code");
+      let v3 = js_code_wrap_braces(inside);
       let e = js_code_export(f_name);
       const code = `${global_init}
     ${dependencies}
