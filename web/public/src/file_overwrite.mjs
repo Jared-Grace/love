@@ -1,3 +1,4 @@
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { object_property_change_async } from "../../../love/public/src/object_property_change_async.mjs";
 import { json_compress } from "../../../love/public/src/json_compress.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -18,6 +19,8 @@ export async function file_overwrite(file_path, contents) {
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
     async function value_get(previous) {
+      if (null_is(value)) {
+      }
       async function lambda2(compressed_before) {
         let f = await json_decompress(compressed_before);
         let versions = object_property_get(f, "versions");
