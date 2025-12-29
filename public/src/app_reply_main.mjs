@@ -159,7 +159,7 @@ export async function app_reply_main(context) {
     list_add_first(languages_chosens, language_code);
     await preview_refresh();
   }
-  let typed_get = function lambda15() {};
+  let typed_get = function lambda15() {$r,typed};
   let buttons_refresh = function lambda10() {
     function lambda2(item) {
       let text2 = object_property_get(item, "text");
