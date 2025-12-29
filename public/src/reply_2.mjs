@@ -89,6 +89,7 @@ export async function reply_2(context) {
     }
     await each_async(taken, lambda6);
   }
+  html_br;
   function lambda9(choice) {
     let text = object_property_get(choice, "text");
     async function lambda11() {
