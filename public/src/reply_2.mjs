@@ -43,7 +43,7 @@ export async function reply_2(context) {
     let component = html_button(root, lambda3);
   }
   each(choices_verse_count, lambda2);
-  async function update(verse_count_new) {
+  async function update(verse_count_new) {gt
     if (false) {
     }
     async function lambda6() {}
