@@ -140,7 +140,7 @@ export async function app_a_function(context) {
           }
           let div = app_a_overlay_container(overlay);
           let fn = await fn_get();
-          await fn();
+          let r = await fn();
           log({
             r,
           });
