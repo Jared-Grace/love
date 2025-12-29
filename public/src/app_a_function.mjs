@@ -122,7 +122,7 @@ export async function app_a_function(context) {
           let externals = object_property_get(v2, "externals");
           ("if non empty then handle case of external not already loaded in import map");
           list_empty_is_assert(externals);
-          let code = object_property_get(v2, "code");
+          let fn_get = object_property_get(v2, "fn_get");
           let o = app_a_overlay(
             {
               root,
@@ -139,7 +139,8 @@ export async function app_a_function(context) {
             app_a_on_keydown(e, choices);
           }
           let div = app_a_overlay_container(overlay);
-          let r = await eval(code);
+          let fn = await fn_get();
+          await fn();
           log({
             r,
           });
