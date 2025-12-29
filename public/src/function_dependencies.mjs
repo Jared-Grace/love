@@ -14,7 +14,7 @@ export async function function_dependencies(f_names) {
         let node = object_property_get(v, "node");
         la(node);
       }
-      await visit_unique_async(f_names, function_imports, lambda);
+      await visit_unique_async(item, function_imports, lambda);
     }
     await each_async(split, lambda3);
   }
