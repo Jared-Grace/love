@@ -20,7 +20,7 @@ export async function function_dependencies_code_export(f_name) {
   const url = URL.createObjectURL(blob);
   const mod = await import(url);
   let fn = object_property_get(mod, f_name);
-  () => {};
+  (function lambda() {});
   let v2 = {
     fn,
     externals,
