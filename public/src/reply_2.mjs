@@ -1,3 +1,4 @@
+import { greater_than } from "../../../love/public/src/greater_than.mjs";
 import { each_range_from_async } from "../../../love/public/src/each_range_from_async.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
@@ -44,7 +45,7 @@ export async function reply_2(context) {
   }
   each(choices_verse_count, lambda2);
   async function update(verse_count_new) {
-    gt;
+    let g = greater_than(a, b);
     if (false) {
     }
     async function lambda6() {}
