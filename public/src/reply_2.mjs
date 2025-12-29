@@ -118,12 +118,12 @@ export async function reply_2(context) {
     let v22 = prayer_blessing_expand();
     languages;
     let mapped = list_map_property(languages, "language_code");
-    let result = list_join_comma(names);
+    let result = list_join_comma(mapped);
     let concated = list_concat_multiple([
       responses,
       [v22],
       bible_texts,
-      [mapped],
+      [result],
     ]);
     let joined = await list_join_newline_2_copy(concated);
     log(joined);
