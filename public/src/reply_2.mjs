@@ -76,12 +76,11 @@ export async function reply_2(context) {
         let verses = await list_map_unordered_async(verse_range, lambda8);
         function lambda7(v) {
           if (equal_not(reference, reference_current)) {
-            list_add(list, item2);
-            la(bible_texts, reference);
+            list_add(bible_texts, reference);
             reference_current = reference;
           }
           let text = object_property_get(v, "text");
-          la(bible_texts, text);
+          list_add(bible_texts, text);
         }
         each(verses, lambda7);
       }
