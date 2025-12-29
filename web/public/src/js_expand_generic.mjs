@@ -1,4 +1,3 @@
-import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { log_exit } from "../../../love/public/src/log_exit.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_remove_all_multiple } from "../../../love/public/src/list_remove_all_multiple.mjs";
@@ -63,7 +62,7 @@ export async function js_expand_generic(next, stack2, index, ast) {
     function lambda() {
       list_remove(body_block, last);
       let argument = object_property_get(last, "argument");
-      let nn = null_not_is(value);
+      $inn;
       log_exit(argument);
       let name = js_declaration_name(declaration_call);
       let assign = js_declare(name, argument);
