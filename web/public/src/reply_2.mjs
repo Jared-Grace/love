@@ -1,3 +1,4 @@
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
@@ -65,7 +66,7 @@ export async function reply_2(context) {
         let verses = await list_map_unordered_async(verse_range, lambda8);
         let reference_current = null;
         function lambda7(v) {
-          if (false) {
+          if (null_is(value)) {
           }
           let text = object_property_get(v, "text");
           log({
