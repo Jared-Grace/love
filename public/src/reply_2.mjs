@@ -88,6 +88,7 @@ export async function reply_2(context) {
       await each_async(copy, lambda5);
     }
     await each_async(taken, lambda6);
+    await copy_reset();
   }
   html_p_text(root, "3. (Optional) Choose any responses:");
   function lambda9(choice) {
@@ -95,11 +96,14 @@ export async function reply_2(context) {
     async function lambda11() {
       let response = object_property_get(choice, "response");
       list_add(responses, response);
-      let concated = list_concat(responses, bible_texts);
-      let joined = await list_join_newline_2_copy(concated);
-      log(joined);
+      await copy_reset();
     }
     let component2 = html_button(root, text, lambda11);
   }
   each(choices, lambda9);
+  async function copy_reset() {
+    let concated = list_concat(responses, bible_texts);
+    let joined = await list_join_newline_2_copy(concated);
+    log(joined);
+  }
 }
