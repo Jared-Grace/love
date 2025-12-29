@@ -1,3 +1,4 @@
+import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
@@ -52,6 +53,7 @@ export async function reply_2(context) {
   each(choices_verse_count, lambda2);
   async function update(verse_count) {
     texts = [];
+    list_empty(list);
     list_shuffle(encouragement);
     let taken = list_take(encouragement, verse_count);
     let reference_current = null;
