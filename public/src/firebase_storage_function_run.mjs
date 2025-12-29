@@ -25,6 +25,7 @@ export async function firebase_storage_function_run(f_name, version_get) {
     html_attribute_set(component, "type", "module");
     html_text_set(component, joined);
     return;
+  } else {
   }
   eval(joined);
 }
