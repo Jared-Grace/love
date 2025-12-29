@@ -91,7 +91,7 @@ export async function reply_2(context) {
     await copy_reset();
   }
   function lambda12() {}
-  let component3 = html_button(parent, text2, lambda12);
+  let component3 = html_button(root, "Copy", copy_reset);
   html_p_text(root, "3. (Optional) Choose any responses:");
   function lambda9(choice) {
     let text = object_property_get(choice, "text");
