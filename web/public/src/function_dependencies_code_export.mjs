@@ -18,7 +18,7 @@ export async function function_dependencies_code_export(f_name) {
     type: "text/javascript",
   });
   const url = URL.createObjectURL(blob);
-  const mod = await import(url);
+  const mod = await import(url);$g
   let v2 = {
     code,
     externals,
