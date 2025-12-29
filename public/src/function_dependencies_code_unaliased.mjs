@@ -1,9 +1,11 @@
+import { string_split_comma } from "../../../love/public/src/string_split_comma.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { function_dependencies_code } from "../../../love/public/src/function_dependencies_code.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { function_name_unalias } from "../../../love/public/src/function_name_unalias.mjs";
 export async function function_dependencies_code_unaliased(f_names) {
+  let split = string_split_comma(f_names2);
   async function lambda(f_name) {
     let v = await function_name_unalias(f_name);
     let unaliased = object_property_get(v, "unaliased");
