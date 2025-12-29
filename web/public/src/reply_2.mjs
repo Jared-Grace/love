@@ -48,7 +48,8 @@ export async function reply_2(context) {
     "2. How many Bible passages do you want? This will reset any responses below. You may need to choose 'Copy' button.",
   );
   let choices_verse_count = [1];
-  each_range_from(from, to, function lambda10(item2) {});
+  function lambda10(item2) {}
+  each_range_from(from, to, lambda10);
   function lambda4(item) {
     let c = item * 2;
     list_add(choices_verse_count, c);
