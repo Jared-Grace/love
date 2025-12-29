@@ -64,8 +64,10 @@ export async function reply_2(context) {
         }
         let verses = await list_map_unordered_async(verse_range, lambda8);
         function lambda7(v) {
+          let text = object_property_get(v, "text");
           log({
             v,
+            reference,
           });
         }
         each(verses, lambda7);
