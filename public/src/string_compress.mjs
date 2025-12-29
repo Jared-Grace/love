@@ -1,5 +1,5 @@
-import LZString from "lz-string";
-export function string_compress(text) {
-  let compressed = LZString.compressToUTF16(text);
-  return compressed;
+export async function string_compress(text) {
+  const LZString = (await import("lz-string")).default;
+  let v = LZString.compressToUTF16(text);
+  return v;
 }
