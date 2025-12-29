@@ -23,7 +23,7 @@ export async function reply_2(context) {
   let r = await app_reply_initialize(context);
   let books = object_property_get(r, "books");
   let choices = object_property_get(r, "choices");
-  let languages = object_property_get(r, "languages");
+  let languages = object_property_get(r, "languages");$a
   let property_name = "name";
   list_sort_string_property(property_name, languages);
   let root = object_property_get(r, "root");
