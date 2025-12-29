@@ -1,6 +1,5 @@
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
@@ -50,6 +49,7 @@ export async function reply_2(context) {
     let component = html_button(root, c, lambda3);
   }
   each(choices_verse_count, lambda2);
+  let texts = [];
   async function update(verse_count) {
     list_shuffle(encouragement);
     let taken = list_take(encouragement, verse_count);
@@ -67,11 +67,11 @@ export async function reply_2(context) {
         let verses = await list_map_unordered_async(verse_range, lambda8);
         function lambda7(v) {
           if (equal_not(reference, reference_current)) {
-            log(reference);
+            la(texts, reference);
             reference_current = reference;
           }
           let text = object_property_get(v, "text");
-          log(text);
+          la(texts, text);
         }
         each(verses, lambda7);
       }
