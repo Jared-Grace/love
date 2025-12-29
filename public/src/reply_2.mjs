@@ -116,8 +116,8 @@ export async function reply_2(context) {
   each(choices, lambda9);
   async function copy_reset() {
     let v22 = prayer_blessing_expand();
-    languages;
-    let mapped = list_map_property(languages_chosen, "language_code");
+    let copy = list_copy_reverse(languages_chosen);
+    let mapped = list_map_property(copy, "language_code");
     let result = list_join_comma(mapped);
     let concated = list_concat_multiple([
       responses,
