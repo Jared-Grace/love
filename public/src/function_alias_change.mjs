@@ -1,3 +1,5 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { function_exists_not_assert } from "../../../love/public/src/function_exists_not_assert.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { function_alias_generic } from "../../../love/public/src/function_alias_generic.mjs";
@@ -6,8 +8,11 @@ import { error } from "../../../love/public/src/error.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 export async function function_alias_change(alias_old, alias_new) {
   marker("1");
+  await function_exists_not_assert(f_name);
   function lambda(a) {
-    let { exists, aliases, unaliased } = a;
+    let unaliased = object_property_get(a, "unaliased");
+    let aliases = object_property_get(a, "aliases");
+    let exists = object_property_get(a, "exists");
     if (not(exists)) {
       error();
     }
