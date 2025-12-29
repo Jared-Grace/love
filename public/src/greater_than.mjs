@@ -1,4 +1,4 @@
-export function greater_than(z, n) {
-  let v = z > n;
+export function greater_than(a, b) {
+  let v = a > b;
   return v;
 }
