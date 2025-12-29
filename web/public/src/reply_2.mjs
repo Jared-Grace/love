@@ -1,3 +1,5 @@
+import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
+import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -50,8 +52,21 @@ export async function reply_2(context) {
     let taken = list_take(encouragement, verse_count);
     async function lambda6(reference) {
       let verses = await ebible_references_parse_lines([en], [reference]);
+      const translations = [];
+      const v = {
+        verses,
+        reference,
+        translations,
+      };
       async function lambda5(l) {
-        let language_code = object_property_get(l, "language_code");
+        let bible_folder = object_property_get(l, "bible_folder");
+        async function lambda8(verse) {
+          let chapter_code = object_property_get(verse, "chapter_code");
+          let verse_number = object_property_get(verse, "verse_number");
+          let d = await ebible_verse(bible_folder, chapter_code, verse_number);
+          return d;
+        }
+        let verses = await list_map_unordered_async(verses2, lambda8);
       }
       await each_async(languages_chosen, lambda5);
     }
