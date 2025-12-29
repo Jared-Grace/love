@@ -17,7 +17,7 @@ export async function file_overwrite(file_path, contents) {
     file_path = file_path_normalize(file_path);
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
-    async function lambda(previous) {
+    async function value_get(previous) {
       async function lambda2(compressed_before) {
         let f = await json_decompress(compressed_before);
         let versions = object_property_get(f, "versions");
@@ -32,7 +32,7 @@ export async function file_overwrite(file_path, contents) {
       app_a_indexeddb_initialize,
       store,
       file_path,
-      lambda,
+      value_get,
     );
     return;
   }
