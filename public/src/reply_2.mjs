@@ -54,7 +54,6 @@ export async function reply_2(context) {
     let taken = list_take(encouragement, verse_count);
     async function lambda6(reference) {
       let verse_range = await ebible_references_parse_lines([en], [reference]);
-      const translations = [];
       async function lambda5(l) {
         let bible_folder = object_property_get(l, "bible_folder");
         async function lambda8(verse) {
