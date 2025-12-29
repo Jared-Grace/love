@@ -47,6 +47,7 @@ export async function reply_2(context) {
   each(choices_verse_count, lambda2);
   async function update(verse_count) {
     list_shuffle(encouragement);
+    let taken = list_take(list, count);
     async function lambda6() {
       async function lambda5(l) {
         let language_code = object_property_get(l, "language_code");
