@@ -52,8 +52,7 @@ export async function reply_2(context) {
   }
   each(choices_verse_count, lambda2);
   async function update(verse_count) {
-    texts = [];
-    list_empty(list);
+    list_empty(texts);
     list_shuffle(encouragement);
     let taken = list_take(encouragement, verse_count);
     let reference_current = null;
