@@ -1,3 +1,4 @@
+import { app_reply_love } from "../../../love/public/src/app_reply_love.mjs";
 import { app_reply_buttons_refresh } from "../../../love/public/src/app_reply_buttons_refresh.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_on_keydown_body } from "../../../love/public/src/html_on_keydown_body.mjs";
@@ -50,9 +51,10 @@ export async function reply_2(context) {
   function languages_chosen_reset() {
     languages_chosen = list_take(languages, 2);
   }
-  function love() {
+  async function love() {
     languages_chosen_reset();
-    list_add(list, item3);
+    list_add(languages_chosen, item3);
+    await app_reply_love(languages, () => {});
   }
   let component4 = html_button(root, "❤️", love);
   function lambda(language) {
