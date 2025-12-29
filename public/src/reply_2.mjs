@@ -31,7 +31,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { app_reply_initialize } from "../../../love/public/src/app_reply_initialize.mjs";
 export async function reply_2(context) {
   let r = await app_reply_initialize(context);
-  let books = object_property_get(r, "books");
   let choices = object_property_get(r, "choices");
   let languages = object_property_get(r, "languages");
   let languages_chosen_default = list_take(languages, 2);
@@ -39,7 +38,6 @@ export async function reply_2(context) {
   languages_chosen_reset();
   list_sort_string_property(languages, "name");
   let root = object_property_get(r, "root");
-  let original = object_property_get(r, "original");
   let en = object_property_get(r, "en");
   let encouragement = object_property_get(r, "encouragement");
   let bible_texts = [];
