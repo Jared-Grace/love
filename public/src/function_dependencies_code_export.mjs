@@ -12,7 +12,7 @@ export async function function_dependencies_code_export(f_name) {
   let e = js_code_export(f_name);
   const code = `${global_init}
     ${dependencies}
-    ${call}`;
+    ${e}`;
   let v2 = {
     code,
     externals,
