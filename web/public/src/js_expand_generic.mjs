@@ -1,5 +1,4 @@
-import { exit } from "../../../love/public/src/exit.mjs";
-import { log } from "../../../love/public/src/log.mjs";
+import { log_exit } from "../../../love/public/src/log_exit.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_remove_all_multiple } from "../../../love/public/src/list_remove_all_multiple.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
@@ -30,8 +29,7 @@ import { js_statement_call_get } from "../../../love/public/src/js_statement_cal
 export async function js_expand_generic(next, stack2, index, ast) {
   let inserted = null;
   let v = js_statement_call_get(next);
-  log(v);
-  exit();
+  log_exit(v);
   let declaration_call = object_property_get(v, "declaration");
   let expression = object_property_get(v, "expression");
   if (expression !== null) {
