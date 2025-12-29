@@ -1,3 +1,4 @@
+import { each_range_from_async } from "../../../love/public/src/each_range_from_async.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { app_reply_button } from "../../../love/public/src/app_reply_button.mjs";
@@ -34,14 +35,16 @@ export async function reply_2(context) {
   }
   each_range_from(1, 6, lambda4);
   list_add(choices_verse_count, 20);
-  let verse_count_chosen = null;
+  let verse_count = null;
   function lambda2(c) {
     function lambda3() {
-      verse_count_chosen = c;
-      update();
+      update(c);
     }
     let component = html_button(root, lambda3);
   }
   each(choices_verse_count, lambda2);
-  function update() {}
+  async function update(verse_count_new) {
+    await each_range_from_async(from, to, async function lambda6() {});
+    verse_count = c;
+  }
 }
