@@ -40,6 +40,7 @@ export async function reply_2(context) {
   let encouragement = object_property_get(r, "encouragement");
   let bible_texts = [];
   let responses = [];
+  let responses_buttons = [];
   let typed = "";
   let p = html_p_text(
     root,
@@ -77,6 +78,7 @@ export async function reply_2(context) {
   async function update(verse_count) {
     list_empty(bible_texts);
     list_empty(responses);
+    list_empty(responses_buttons);
     list_shuffle(encouragement);
     let taken = list_take(encouragement, verse_count);
     let reference_current = null;
@@ -105,10 +107,10 @@ export async function reply_2(context) {
       await each_async(copy, lambda5);
     }
     await each_async(taken, lambda6);
-    await copy_reset();
+    await copy_refresh();
   }
   function lambda12() {}
-  let component3 = html_button(root, "Copy", copy_reset);
+  let component3 = html_button(root, "Copy", copy_refresh);
   html_p_text(root, "3. (Optional) Choose any responses:");
   function lambda9(choice) {
     let b = null;
@@ -116,13 +118,13 @@ export async function reply_2(context) {
     async function lambda11() {
       let response = object_property_get(choice, "response");
       list_add(responses, response);
-      list_add(responses, b);
-      await copy_reset();
+      list_add(responses_buttons, b);
+      await copy_refresh();
     }
     b = html_button(root, text, lambda11);
   }
   let buttons = list_map(choices, lambda9);
-  async function copy_reset() {
+  async function copy_refresh() {
     let v22 = prayer_blessing_expand();
     let copy = list_copy_reverse(languages_chosen);
     let mapped = list_map_property(copy, "language_code");
