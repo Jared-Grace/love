@@ -1,3 +1,6 @@
+import { html_on_keydown_body } from "../../../love/public/src/html_on_keydown_body.mjs";
+import { string_take_less_1 } from "../../../love/public/src/string_take_less_1.mjs";
+import { equal } from "../../../love/public/src/equal.mjs";
 import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
@@ -35,6 +38,7 @@ export async function reply_2(context) {
   let encouragement = object_property_get(r, "encouragement");
   let bible_texts = [];
   let responses = [];
+  let typed = "";
   let p = html_p_text(
     root,
     "1. What language or languages you want the Bible verses to be translated into?",
@@ -128,4 +132,14 @@ export async function reply_2(context) {
     let joined = await list_join_newline_2_copy(concated);
     log(joined);
   }
+  function lambda6(event) {
+    let key = object_property_get(event, "key");
+    if (equal(key, "Backspace")) {
+      typed = string_take_less_1(typed);
+    } else {
+      typed += key;
+    }
+    buttons_refresh();
+  }
+  html_on_keydown_body(lambda6);
 }
