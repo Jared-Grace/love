@@ -19,7 +19,7 @@ export async function file_read(file_path) {
       file_path,
     );
     let compressed = object_property_get(item, "compressed");
-    let f = json_decompress(compressed);
+    let f = await json_decompress(compressed);
     let versions = object_property_get(f, "versions");
     let last = list_last(versions);
     return last;
