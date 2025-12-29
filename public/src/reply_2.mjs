@@ -1,3 +1,4 @@
+import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
@@ -72,6 +73,7 @@ export async function reply_2(context) {
           verses,
         });
       }
+      let copy = list_copy_reverse(previous);
       await each_async(languages_chosen, lambda5);
     }
     await each_async(taken, lambda6);
