@@ -1,5 +1,4 @@
-import { app_reply_languages_default } from "../../../love/public/src/app_reply_languages_default.mjs";
-import { list_remove_property_multiple } from "../../../love/public/src/list_remove_property_multiple.mjs";
+import { list_take } from "../../../love/public/src/list_take.mjs";
 import { reply_2 } from "../../../love/public/src/reply_2.mjs";
 import { app_reply_initialize } from "../../../love/public/src/app_reply_initialize.mjs";
 import { html_on_keydown_body } from "../../../love/public/src/html_on_keydown_body.mjs";
@@ -53,8 +52,7 @@ export async function app_reply_main(context) {
   let books = object_property_get(r, "books");
   let choices = object_property_get(r, "choices");
   let languages = object_property_get(r, "languages");
-  let removals = app_reply_languages_default();
-  list_remove_property_multiple(languages, "language_code", removals);
+  let taken = list_take(list2, count);
   let root = object_property_get(r, "root");
   let original = object_property_get(r, "original");
   let en = object_property_get(r, "en");
