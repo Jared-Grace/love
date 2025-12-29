@@ -14,15 +14,7 @@ export async function html_update_externals(f_name) {
   });
   let ne = list_empty_not_is(externals);
   if (ne) {
-    let imports = object_properties_from_empty(
-      {
-        acorn: "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.mjs",
-        astring: "https://cdn.jsdelivr.net/npm/astring/dist/astring.mjs",
-        "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm",
-      },
-      externals,
-    );
-    let importmap = html_code_script_importmap(imports);
+    let importmap = html_code_script_importmap(externals);
     list_add(scripts, importmap);
   }
   let r = {
