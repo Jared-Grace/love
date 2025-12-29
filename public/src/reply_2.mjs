@@ -98,7 +98,7 @@ export async function reply_2(context) {
     let component2 = html_button(root, text, lambda11);
     let concated = list_concat(responses, bible_texts);
     let joined = await list_join_newline_2_copy(concated);
-    log(message);
+    log(joined);
   }
   each(choices, lambda9);
 }
