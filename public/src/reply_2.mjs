@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
@@ -97,6 +98,7 @@ export async function reply_2(context) {
     let component2 = html_button(root, text, lambda11);
     let concated = list_concat(responses, bible_texts);
     let joined = await list_join_newline_2_copy(concated);
+    log(message);
   }
   each(choices, lambda9);
 }
