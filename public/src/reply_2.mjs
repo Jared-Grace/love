@@ -41,7 +41,7 @@ export async function reply_2(context) {
   each(languages, lambda);
   html_p_text(
     root,
-    "2. How many Bible passages do you want? This will reset any responses below. If you need to, choose 'Copy' button.",
+    "2. How many Bible passages do you want? This will reset any responses below. You may need to choose 'Copy' button.",
   );
   let choices_verse_count = [1];
   function lambda4(item) {
