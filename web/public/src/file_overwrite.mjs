@@ -19,12 +19,15 @@ export async function file_overwrite(file_path, contents) {
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
     async function value_get(previous) {
+      let f = null;
       let nn = null_not_is(previous);
       if (nn) {
         let compressed_before = object_property_get(previous, p);
-        let f = null;
         f = await json_decompress(compressed_before);
       } else {
+        f = {
+          ["versions"]: [],
+        };
       }
       const p = "compressed";
       let versions = object_property_get(f, "versions");
