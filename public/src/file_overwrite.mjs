@@ -22,18 +22,17 @@ export async function file_overwrite(file_path, contents) {
       let f = null;
       let nn = null_not_is(previous);
       if (nn) {
-        let compressed_before = object_property_get(previous, p);
+        let compressed_before = object_property_get(previous, "compressed");
         f = await json_decompress(compressed_before);
       } else {
         f = {
           ["versions"]: [],
         };
       }
-      const p = "compressed";
       let versions = object_property_get(f, "versions");
       list_add(versions, contents);
       let compressed_after = await json_compress(f);
-      object_property_set(previous, p, compressed_after);
+      object_property_set(previous, "compressed", compressed_after);
       return previous;
     }
     let item = await indexeddb_put(
