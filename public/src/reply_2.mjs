@@ -25,7 +25,7 @@ export async function reply_2(context) {
   let en = object_property_get(r, "en");
   let encouragement = object_property_get(r, "encouragement");
   let languages_chosen = list_take(languages, 2);
-  let texts = [];
+  let bible_texts = [];
   let p = html_p_text(
     root,
     "1. Choose the language or languages you want the Bible verses to be translated into",
@@ -55,7 +55,8 @@ export async function reply_2(context) {
   }
   each(choices_verse_count, lambda2);
   async function update(verse_count) {
-    list_empty(texts);
+    list_empty(bible_texts);
+    list_empty(responses);
     list_shuffle(encouragement);
     let taken = list_take(encouragement, verse_count);
     let reference_current = null;
@@ -72,11 +73,11 @@ export async function reply_2(context) {
         let verses = await list_map_unordered_async(verse_range, lambda8);
         function lambda7(v) {
           if (equal_not(reference, reference_current)) {
-            la(texts, reference);
+            la(bible_texts, reference);
             reference_current = reference;
           }
           let text = object_property_get(v, "text");
-          la(texts, text);
+          la(bible_texts, text);
         }
         each(verses, lambda7);
       }
@@ -85,11 +86,14 @@ export async function reply_2(context) {
     }
     await each_async(taken, lambda6);
   }
+  let responses = [];
   function lambda9(choice) {
-    let response = object_property_get(choice, "response");
     let text = object_property_get(choice, "text");
-    function lambda11() {}
-    let component2 = html_button(root, "text2", lambda11);
+    function lambda11() {
+      let response = object_property_get(choice, "response");
+      list_add(copied, response2);
+    }
+    let component2 = html_button(root, text, lambda11);
   }
   each(choices, lambda9);
 }
