@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
 import { js_code_export } from "../../../love/public/src/js_code_export.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -16,6 +17,7 @@ export async function function_dependencies_code_export(f_name) {
       const code = `${global_init}
     ${dependencies}
     ${e}`;
+      log(message);
       const blob = new Blob([code], {
         type: "text/javascript",
       });
