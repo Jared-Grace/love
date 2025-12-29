@@ -1,6 +1,7 @@
+import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
+import { prayer_blessing_expand } from "../../../love/public/src/prayer_blessing_expand.mjs";
 import { list_sort_string_property } from "../../../love/public/src/list_sort_string_property.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
@@ -112,7 +113,8 @@ export async function reply_2(context) {
   }
   each(choices, lambda9);
   async function copy_reset() {
-    let concated = list_concat(responses, bible_texts);
+    let v22 = prayer_blessing_expand();
+    let concated = list_concat_multiple([responses, [v22], bible_texts]);
     let joined = await list_join_newline_2_copy(concated);
     log(joined);
   }
