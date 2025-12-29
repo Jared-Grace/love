@@ -1,3 +1,4 @@
+import { mod } from "../../../love/public/src/mod.mjs";
 import { js_code_export } from "../../../love/public/src/js_code_export.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -13,6 +14,20 @@ export async function function_dependencies_code_export(f_name) {
   const code = `${global_init}
     ${dependencies}
     ${e}`;
+  const blob = new Blob(
+    [
+      `
+  export async function fn() {
+    await import("a");
+  }
+`,
+    ],
+    {
+      type: "text/javascript",
+    },
+  );
+  const url = URL.createObjectURL(blob);
+  const mod = await import(url);
   let v2 = {
     code,
     externals,
