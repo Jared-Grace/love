@@ -43,7 +43,8 @@ export async function reply_2(context) {
   let bible_texts = [];
   let responses = [];
   let responses_buttons = [];
-  let typed = "";
+  let typed = null;
+  typed = "";
   let p = html_p_text(
     root,
     "1. What language or languages you want the Bible verses to be translated into?",
