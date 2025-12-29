@@ -4,11 +4,11 @@ import { ebible_folder_swahili } from "../../../love/public/src/ebible_folder_sw
 import { ebible_languages_chapters_cache_refresh } from "../../../love/public/src/ebible_languages_chapters_cache_refresh.mjs";
 import { ebible_folder_urdu } from "../../../love/public/src/ebible_folder_urdu.mjs";
 export function ebible_languages() {
-  let v2 = ebible_language_en();
-  let v = ebible_language_original();
+  let en = ebible_language_en();
+  let o = ebible_language_original();
   let languages = [
-    v2,
-    v,
+    o,
+    en,
     {
       name: "Urdu",
       bible_folder: ebible_folder_urdu(),
