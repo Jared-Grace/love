@@ -44,6 +44,8 @@ export async function reply_2(context) {
   }
   each(choices_verse_count, lambda2);
   async function update(verse_count_new) {
+    if (false) {
+    }
     async function lambda6() {}
     await each_range_from_async(verse_count + 1, verse_count_new, lambda6);
     verse_count = c;
