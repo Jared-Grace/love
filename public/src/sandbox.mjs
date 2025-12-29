@@ -1,4 +1,13 @@
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-export async function sandbox() {$x
-  let a = object_property_get(previous, p, lambda2);
+import { undefined_not_is_assert_lambda } from "../../../love/public/src/undefined_not_is_assert_lambda.mjs";
+export async function sandbox() {
+  let value = previous[p];
+  undefined_not_is_assert_lambda(value, object_get);
+  function object_get() {
+    let v = {
+      previous,
+      p,
+    };
+    return v;
+  }
+  let a = value;
 }
