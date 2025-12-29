@@ -144,7 +144,7 @@ export async function app_a_function(context) {
           let div = app_a_overlay_container(overlay);
           let importmap = html_code_script_importmap(externals);
           let head = html_document_head();
-          html_element_parse(parent2, html_outer);
+          html_element_parse(head, importmap);
           let fn = await fn_get();
           let r = await fn();
           log({
