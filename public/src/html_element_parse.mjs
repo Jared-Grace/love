@@ -8,5 +8,6 @@ export function html_element_parse(parent, html_outer) {
   html_text_set(component, html_outer);
   let element = html_component_element_get(component);
   const s = element.content.firstElementChild;
+  let element2 = html_component_element_get(component2);
   parent.appendChild(s);
 }
