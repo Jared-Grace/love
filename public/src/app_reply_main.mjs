@@ -167,7 +167,8 @@ export async function app_reply_main(context) {
       let text2 = object_property_get(item, "text");
       let letters = string_letters_only(text2);
       let lower = string_lower_to(letters);
-      let sw = string_starts_with(lower, typed);
+      let prefix = typed_get();
+      let sw = string_starts_with(lower, prefix);
       let includes = list_includes(chosens, item);
       const condition = includes || not(sw);
       html_display_none_or_block(condition, item);
