@@ -46,8 +46,8 @@ export async function reply_2(context) {
   each(choices_verse_count, lambda2);
   async function update(verse_count) {
     async function lambda6() {
-      async function lambda5(item2) {}
-      await each_async(list, lambda5);
+      async function lambda5(l) {}
+      await each_async(languages_chosen, lambda5);
     }
     await each_range_from_async(1, verse_count, lambda6);
   }
