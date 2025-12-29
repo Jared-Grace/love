@@ -5,13 +5,13 @@ import { function_dependencies_code } from "../../../love/public/src/function_de
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { function_name_unalias } from "../../../love/public/src/function_name_unalias.mjs";
 export async function function_dependencies_code_unaliased(f_names) {
-  let split = string_split_comma(f_names2);
+  let split = string_split_comma(f_names);
   async function lambda(f_name) {
     let v = await function_name_unalias(f_name);
     let unaliased = object_property_get(v, "unaliased");
     return unaliased;
   }
-  let waited = await list_map_unordered_async(f_names, lambda);
+  let waited = await list_map_unordered_async(split, lambda);
   let first = list_first(waited);
   let d = await function_dependencies_code(waited);
   let v2 = {
