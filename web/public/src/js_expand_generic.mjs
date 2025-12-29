@@ -61,8 +61,7 @@ export async function js_expand_generic(next, stack2, index, ast) {
     let last = list_last(body_block);
     function lambda() {
       list_remove(body_block, last);
-      let argument = object_property_get(last, "argument");
-      $inn;
+      let argument = object_property_get(last, "argument");nni
       log_exit(argument);
       let name = js_declaration_name(declaration_call);
       let assign = js_declare(name, argument);
