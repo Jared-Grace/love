@@ -111,14 +111,14 @@ export async function reply_2(context) {
   let component3 = html_button(root, "Copy", copy_reset);
   html_p_text(root, "3. (Optional) Choose any responses:");
   function lambda9(choice) {
+    let b = null;
     let text = object_property_get(choice, "text");
     async function lambda11() {
       let response = object_property_get(choice, "response");
       list_add(responses, response);
-      list_add(responses, response);
+      list_add(responses, b);
       await copy_reset();
     }
-    let b = null;
     b = html_button(root, text, lambda11);
   }
   let buttons = list_map(choices, lambda9);
