@@ -5,7 +5,6 @@ import { function_dependencies_code_export } from "../../../love/public/src/func
 import { app_a_function_on_keydown_remove } from "../../../love/public/src/app_a_function_on_keydown_remove.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { object_properties_from_empty } from "../../../love/public/src/object_properties_from_empty.mjs";
-import { list_empty_is_assert } from "../../../love/public/src/list_empty_is_assert.mjs";
 import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
 import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 import { app_a_overlay_container } from "../../../love/public/src/app_a_overlay_container.mjs";
@@ -123,8 +122,6 @@ export async function app_a_function(context) {
         async function lambda5() {
           let v2 = await function_dependencies_code_export(f_name);
           let externals = object_property_get(v2, "externals");
-          ("if non empty then handle case of external not already loaded in import map");
-          list_empty_is_assert(externals);
           let fn_get = object_property_get(v2, "fn_get");
           let o = app_a_overlay(
             {
