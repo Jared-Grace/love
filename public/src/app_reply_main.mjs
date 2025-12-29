@@ -159,7 +159,7 @@ export async function app_reply_main(context) {
     list_add_first(languages_chosens, language_code);
     await preview_refresh();
   }
-  function buttons_refresh() {
+  let buttons_refresh = function lambda10() {
     function lambda2(item) {
       let text2 = object_property_get(item, "text");
       let letters = string_letters_only(text2);
@@ -170,7 +170,7 @@ export async function app_reply_main(context) {
       html_display_none_or_block(condition, item);
     }
     each(buttons, lambda2);
-  }
+  };
   function lambda(choice) {
     let response2 = object_property_get(choice, "response");
     let text = object_property_get(choice, "text");
