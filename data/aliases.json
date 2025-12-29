@@ -297,6 +297,7 @@
   "aab": "app_a_button",
   "agm": "app_g_main",
   "pb": "function_param_swap_beginning",
-  "linn": "list_includes_not"
+  "linn": "list_includes_not",
+  "gt": "greater_than"
  }
 }
