@@ -57,8 +57,6 @@ export async function reply_2(context) {
     let component = html_button(root, c, lambda3);
   }
   each(choices_verse_count, lambda2);
-  function lambda12() {}
-  let component3 = html_button(parent, text2, lambda12);
   async function update(verse_count) {
     list_empty(bible_texts);
     list_empty(responses);
@@ -92,6 +90,8 @@ export async function reply_2(context) {
     await each_async(taken, lambda6);
     await copy_reset();
   }
+  function lambda12() {}
+  let component3 = html_button(parent, text2, lambda12);
   html_p_text(root, "3. (Optional) Choose any responses:");
   function lambda9(choice) {
     let text = object_property_get(choice, "text");
