@@ -76,6 +76,7 @@ export async function reply_2(context) {
         let verses = await list_map_unordered_async(verse_range, lambda8);
         function lambda7(v) {
           if (equal_not(reference, reference_current)) {
+            list_add(list, item2);
             la(bible_texts, reference);
             reference_current = reference;
           }
