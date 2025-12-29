@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
@@ -51,10 +52,10 @@ export async function reply_2(context) {
     list_shuffle(encouragement);
     let taken = list_take(encouragement, verse_count);
     async function lambda6(reference) {
-      let verses = await ebible_references_parse_lines([en], [reference]);
+      let verse_range = await ebible_references_parse_lines([en], [reference]);
       const translations = [];
       const v = {
-        verses,
+        verse_range,
         reference,
         translations,
       };
@@ -66,7 +67,8 @@ export async function reply_2(context) {
           let d = await ebible_verse(bible_folder, chapter_code, verse_number);
           return d;
         }
-        let verses = await list_map_unordered_async(verses2, lambda8);
+        let verses = await list_map_unordered_async(verse_range, lambda8);
+        log({});
       }
       await each_async(languages_chosen, lambda5);
     }
