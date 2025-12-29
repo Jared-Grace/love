@@ -117,6 +117,9 @@ export async function reply_2(context) {
         }
         each(verses, lambda7);
       }
+      log({
+        languages_chosen,
+      });
       let copy = list_copy_reverse(languages_chosen);
       await each_async(copy, lambda5);
     }
