@@ -63,6 +63,7 @@ export async function reply_2(context) {
           return d;
         }
         let verses = await list_map_unordered_async(verse_range, lambda8);
+        let reference_current = null;
         function lambda7(v) {
           let text = object_property_get(v, "text");
           log({
