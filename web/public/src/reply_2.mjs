@@ -115,9 +115,11 @@ export async function reply_2(context) {
     async function lambda11() {
       let response = object_property_get(choice, "response");
       list_add(responses, response);
+      list_add(responses, response);
       await copy_reset();
     }
-    let component2 = html_button(root, text, lambda11);
+    let b = null;
+    b = html_button(root, text, lambda11);
   }
   let buttons = list_map(choices, lambda9);
   async function copy_reset() {
