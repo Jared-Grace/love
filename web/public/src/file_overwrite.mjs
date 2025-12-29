@@ -32,7 +32,6 @@ export async function file_overwrite(file_path, contents) {
         return compressed_after;
       }
       const p = "compressed";
-      marker("1");
       let value = object_property_get(previous, p);
       value = await lambda2(value);
       object_property_set(previous, p, value);
