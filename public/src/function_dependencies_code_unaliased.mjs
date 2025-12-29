@@ -10,11 +10,11 @@ export async function function_dependencies_code_unaliased(f_names) {
     return unaliased;
   }
   let waited = await list_map_unordered_async(f_names, lambda);
-  let first = list_first(list);
+  let first = list_first(waited);
   let d = await function_dependencies_code(waited);
   let v2 = {
     d,
-    unaliased,
+    unaliased:first,
   };
   return v2;
 }
