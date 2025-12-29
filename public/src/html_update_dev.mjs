@@ -1,7 +1,7 @@
+import { js_code_call_app_context_initialize } from "../../../love/public/src/js_code_call_app_context_initialize.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { function_code_import_dev } from "../../../love/public/src/function_code_import_dev.mjs";
 import { app_context_initialize } from "../../../love/public/src/app_context_initialize.mjs";
-import { js_code_call_args_statement } from "../../../love/public/src/js_code_call_args_statement.mjs";
 import { list_add_join_newline } from "../../../love/public/src/list_add_join_newline.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_update_externals } from "../../../love/public/src/html_update_externals.mjs";
@@ -19,9 +19,7 @@ export async function html_update_dev(name) {
   let a_name = app_name_prefixed(name);
   let joined = await function_name_repo_path_combine(a_name, file_path);
   const name_prefixed = app_name_main(name);
-  let call = js_code_call_args_statement(app_context_initialize.name, [
-    name_prefixed,
-  ]);
+  let call = js_code_call_app_context_initialize(name_prefixed);
   let code = function_code_import_dev(name_prefixed);
   let code2 = function_code_import_dev(app_context_initialize.name);
   let middle = list_join_newline([code, code2, call]);
