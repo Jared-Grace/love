@@ -14,7 +14,7 @@ export async function function_dependencies_code_unaliased(f_names) {
   let d = await function_dependencies_code(waited);
   let v2 = {
     d,
-    unaliased:first,
+    unaliased: first,
   };
   return v2;
 }
