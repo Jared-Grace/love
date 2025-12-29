@@ -96,7 +96,7 @@ export async function reply_2(context) {
       list_add(responses, response);
     }
     let component2 = html_button(root, text, lambda11);
-    let concated2 = list_concat(a, b);
+    let concated = list_concat(a, b);
     let joined = await list_join_newline_2_copy(concated);
   }
   each(choices, lambda9);
