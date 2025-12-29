@@ -24,7 +24,7 @@ export async function file_overwrite(file_path, contents) {
         let compressed_before = object_property_get(previous, p);
         let f = await json_decompress(compressed_before);
       } else {
-      let versions = object_property_get(f, "versions");
+        let versions = object_property_get(f, "versions");
       }
       const p = "compressed";
       list_add(versions, contents);
