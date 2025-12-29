@@ -70,10 +70,7 @@ export async function reply_2(context) {
             log(reference);
           }
           let text = object_property_get(v, "text");
-          log({
-            text,
-            reference,
-          });
+          log(text);
         }
         each(verses, lambda7);
       }
