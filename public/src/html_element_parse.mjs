@@ -1,5 +1,5 @@
 import { marker } from "../../../love/public/src/marker.mjs";
-export function html_element_parse() {
+export function html_element_parse(html_outer) {
   marker("1");
   const tpl = document.createElement("template");
   tpl.innerHTML = importMapString.trim();
