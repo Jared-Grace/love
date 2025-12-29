@@ -36,8 +36,8 @@ export async function reply_2(context) {
     root,
     "1. What language or languages you want the Bible verses to be translated into?",
   );
-  function lambda13() {}
-  let component4 = html_button(parent, text2, lambda13);
+  function love() {}
+  let component4 = html_button(parent, "❤️", love);
   function lambda(language) {
     let name = object_property_get(language, "name");
     let component = app_reply_button(languages_chosen, language, root, name);
