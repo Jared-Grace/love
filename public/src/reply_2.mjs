@@ -1,3 +1,4 @@
+import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
@@ -95,6 +96,7 @@ export async function reply_2(context) {
       list_add(responses, response);
     }
     let component2 = html_button(root, text, lambda11);
+    let concated2 = list_concat(a, b);
     let joined = await list_join_newline_2_copy(concated);
   }
   each(choices, lambda9);
