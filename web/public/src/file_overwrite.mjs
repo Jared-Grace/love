@@ -30,7 +30,7 @@ export async function file_overwrite(file_path, contents) {
         list_add(versions, contents);
         let compressed_after = await json_compress(f);
         return compressed_after;
-      }
+      }$x
       await object_property_change_async(previous, "compressed", lambda2);
       return previous;
     }
