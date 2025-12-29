@@ -69,11 +69,12 @@ export async function reply_2(context) {
           return d;
         }
         let verses = await list_map_unordered_async(verse_range, lambda8);
-        log({
-          verses,
-        });
-        function lambda7(item2) {}
-        each(list, lambda7);
+        function lambda7(v) {
+          log({
+            v,
+          });
+        }
+        each(verses, lambda7);
       }
       let copy = list_copy_reverse(languages_chosen);
       await each_async(copy, lambda5);
