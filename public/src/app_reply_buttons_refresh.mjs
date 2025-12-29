@@ -9,8 +9,8 @@ import { string_letters_only } from "../../../love/public/src/string_letters_onl
 export function app_reply_buttons_refresh(typed_get, chosens, buttons) {
   let v4 = function lambda10() {
     function lambda2(item) {
-      let text2 = html_text_get(item);
-      let letters = string_letters_only(text2);
+      let text = html_text_get(item);
+      let letters = string_letters_only(text);
       let lower = string_lower_to(letters);
       let prefix = typed_get();
       let sw = string_starts_with(lower, prefix);
