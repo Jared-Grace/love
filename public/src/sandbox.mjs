@@ -1,6 +1,4 @@
-import { marker } from "../../../love/public/src/marker.mjs";
+import { log } from "../../../love/public/src/log.mjs";
 export async function sandbox() {
-  marker("1");
-  let e = 5 + 7;
-  return e;
+  log(message);
 }
