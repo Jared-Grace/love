@@ -1,4 +1,4 @@
-import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
+import { list_sort_string_mapper } from "../../../love/public/src/list_sort_string_mapper.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
@@ -23,7 +23,8 @@ export async function reply_2(context) {
   let r = await app_reply_initialize(context);
   let books = object_property_get(r, "books");
   let choices = object_property_get(r, "choices");
-  let languages = object_property_get(r, "languages");property_name=''
+  let languages = object_property_get(r, "languages");
+  let property_name = "";
   function lambda10(item) {
     let value = object_property_get(item, property_name);
   }
