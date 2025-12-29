@@ -1,3 +1,5 @@
+import { app_reply_buttons_refresh } from "../../../love/public/src/app_reply_buttons_refresh.mjs";
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_on_keydown_body } from "../../../love/public/src/html_on_keydown_body.mjs";
 import { string_take_less_1 } from "../../../love/public/src/string_take_less_1.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -117,7 +119,7 @@ export async function reply_2(context) {
     }
     let component2 = html_button(root, text, lambda11);
   }
-  each(choices, lambda9);
+  let buttons = list_map(choices, lambda9);
   async function copy_reset() {
     let v22 = prayer_blessing_expand();
     let copy = list_copy_reverse(languages_chosen);
@@ -142,4 +144,12 @@ export async function reply_2(context) {
     buttons_refresh();
   }
   html_on_keydown_body(lambda6);
+  let typed_get = function lambda15() {
+    return typed;
+  };
+  let buttons_refresh = app_reply_buttons_refresh(
+    typed_get,
+    responses,
+    buttons,
+  );
 }
