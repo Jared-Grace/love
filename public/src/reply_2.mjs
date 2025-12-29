@@ -52,12 +52,14 @@ export async function reply_2(context) {
     languages_chosen = list_copy(languages_chosen_default);
   }
   async function love() {
+    let languages_chosen_before = list_copy(languages_chosen);
     languages_chosen_reset();
     function lambda13(language) {
       list_add(languages_chosen, language);
     }
     await app_reply_love(languages, lambda13);
     update(4);
+    languages_chosen = languages_chosen_before;
   }
   let component4 = html_button(root, "❤️", love);
   function lambda(language) {
