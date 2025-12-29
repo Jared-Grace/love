@@ -1,3 +1,4 @@
+import { app_reply_love } from "../../../love/public/src/app_reply_love.mjs";
 import { app_reply_buttons_refresh } from "../../../love/public/src/app_reply_buttons_refresh.mjs";
 import { list_skip } from "../../../love/public/src/list_skip.mjs";
 import { reply_2 } from "../../../love/public/src/reply_2.mjs";
@@ -25,7 +26,6 @@ import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
-import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { double } from "../../../love/public/src/double.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -122,12 +122,7 @@ export async function app_reply_main(context) {
   }
   async function love() {
     await verse_random_reset_n(3)();
-    let codes = ["tgl", "ceb"];
-    async function lambda4(code) {
-      let language = list_find_property(languages, "language_code", code);
-      await language_choose(language);
-    }
-    await each_async(codes, lambda4);
+    await app_reply_love(languages, language_choose);
   }
   let component2 = html_button(root, "Copy", preview_refresh);
   let component_languages = html_span(root);
