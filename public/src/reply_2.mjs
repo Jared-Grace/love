@@ -45,7 +45,7 @@ export async function reply_2(context) {
     function lambda3() {
       update(c);
     }
-    let component = html_button(root, lambda3);
+    let component = html_button(root, c, lambda3);
   }
   each(choices_verse_count, lambda2);
   async function update(verse_count) {
