@@ -1,4 +1,4 @@
-import { list_sort_string } from "../../../love/public/src/list_sort_string.mjs";
+import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
@@ -24,7 +24,7 @@ export async function reply_2(context) {
   let books = object_property_get(r, "books");
   let choices = object_property_get(r, "choices");
   let languages = object_property_get(r, "languages");
-  list_sort_string(list);
+  list_sort_number_mapper(list);
   let root = object_property_get(r, "root");
   let original = object_property_get(r, "original");
   let en = object_property_get(r, "en");
