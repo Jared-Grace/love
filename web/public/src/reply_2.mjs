@@ -24,7 +24,9 @@ export async function reply_2(context) {
   let books = object_property_get(r, "books");
   let choices = object_property_get(r, "choices");
   let languages = object_property_get(r, "languages");
-  function lambda10() {}
+  function lambda10() {
+    let value = object_property_get(object, property_name);
+  }
   list_sort_number_mapper(list, lambda10);
   let root = object_property_get(r, "root");
   let original = object_property_get(r, "original");
