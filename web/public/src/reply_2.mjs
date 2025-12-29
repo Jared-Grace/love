@@ -1,3 +1,4 @@
+import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
@@ -26,6 +27,7 @@ export async function reply_2(context) {
   let encouragement = object_property_get(r, "encouragement");
   let languages_chosen = list_take(languages, 2);
   let bible_texts = [];
+  let responses = [];
   let p = html_p_text(
     root,
     "1. Choose the language or languages you want the Bible verses to be translated into",
@@ -86,14 +88,14 @@ export async function reply_2(context) {
     }
     await each_async(taken, lambda6);
   }
-  let responses = [];
-  function lambda9(choice) {
+  async function lambda9(choice) {
     let text = object_property_get(choice, "text");
     function lambda11() {
       let response = object_property_get(choice, "response");
       list_add(responses, response);
     }
     let component2 = html_button(root, text, lambda11);
+    let joined = await list_join_newline_2_copy(concated);
   }
   each(choices, lambda9);
 }
