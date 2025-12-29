@@ -9,7 +9,7 @@ export async function function_dependencies_code_export(f_name) {
   let v = await function_dependencies_code(f_name);
   let dependencies = object_property_get(v, "code");
   let externals = object_property_get(v, "externals");
-  let v3 = js_code_export(code_declaration);
+  let v3 = js_code_export(f_name);
   const code = `${global_init}
     ${dependencies}
     ${call}`;
