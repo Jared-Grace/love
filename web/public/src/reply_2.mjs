@@ -49,7 +49,6 @@ export async function reply_2(context) {
   }
   each_range_from(1, 6, lambda4);
   list_add(choices_verse_count, 20);
-  let verse_count = null;
   function lambda2(c) {
     function lambda3() {
       update(c);
@@ -96,7 +95,7 @@ export async function reply_2(context) {
       list_add(responses, response);
     }
     let component2 = html_button(root, text, lambda11);
-    let concated = list_concat(a, b);
+    let concated = list_concat(responses, bible_texts);
     let joined = await list_join_newline_2_copy(concated);
   }
   each(choices, lambda9);
