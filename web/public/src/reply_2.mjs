@@ -3,7 +3,6 @@ import { list_filter_property } from "../../../love/public/src/list_filter_prope
 import { app_reply_button } from "../../../love/public/src/app_reply_button.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { each_range_from } from "../../../love/public/src/each_range_from.mjs";
-import { app_reply_languages_default } from "../../../love/public/src/app_reply_languages_default.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -18,8 +17,7 @@ export async function reply_2(context) {
   let en = object_property_get(r, "en");
   let encouragement = object_property_get(r, "encouragement");
   let filtered = list_filter_property(list, property_name, property_value);
-  let languages_chosen = app_reply_languages_default();
-  let taken = list_take(list2, count);
+  let languages_chosen = list_take(languages, 2);
   let p = html_p_text(
     root,
     "1. Choose the language or languages you want the Bible verses to be translated into",
