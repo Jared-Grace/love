@@ -140,6 +140,7 @@ export async function reply_2(context) {
       list_add(responses_buttons, b);
       await copy_refresh();
       typed_reset();
+      buttons_refresh();
     }
     b = html_button(root, text, lambda11);
     return b;
