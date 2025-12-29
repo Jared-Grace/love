@@ -24,7 +24,7 @@ export async function reply_2(context) {
   let books = object_property_get(r, "books");
   let choices = object_property_get(r, "choices");
   let languages = object_property_get(r, "languages");
-  let property_name = "";
+  let property_name = "name";
   function lambda10(item) {
     let value = object_property_get(item, property_name);
   }
