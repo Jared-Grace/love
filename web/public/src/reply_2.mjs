@@ -153,7 +153,7 @@ export async function reply_2(context) {
   };
   let buttons_refresh = app_reply_buttons_refresh(
     typed_get,
-    responses,
+    responses_buttons,
     buttons,
   );
 }
