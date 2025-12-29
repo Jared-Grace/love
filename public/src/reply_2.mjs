@@ -89,16 +89,16 @@ export async function reply_2(context) {
     }
     await each_async(taken, lambda6);
   }
-  async function lambda9(choice) {
+  function lambda9(choice) {
     let text = object_property_get(choice, "text");
-    function lambda11() {
+    async function lambda11() {
       let response = object_property_get(choice, "response");
       list_add(responses, response);
+      let concated = list_concat(responses, bible_texts);
+      let joined = await list_join_newline_2_copy(concated);
+      log(joined);
     }
     let component2 = html_button(root, text, lambda11);
-    let concated = list_concat(responses, bible_texts);
-    let joined = await list_join_newline_2_copy(concated);
-    log(joined);
   }
   each(choices, lambda9);
 }
