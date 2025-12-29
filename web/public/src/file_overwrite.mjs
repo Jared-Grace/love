@@ -1,6 +1,5 @@
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { null_is } from "../../../love/public/src/null_is.mjs";
 import { json_compress } from "../../../love/public/src/json_compress.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { indexeddb_put } from "../../../love/public/src/indexeddb_put.mjs";
@@ -20,15 +19,12 @@ export async function file_overwrite(file_path, contents) {
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
     async function value_get(previous) {
-      let nn = null_not_is(value);
-      if (null_is(previous)) {
-        previous = {
-          ["compressed"]: null,
-        };
+      let nn = null_not_is(previous);
+      if (nn) {
+        let compressed_before = object_property_get(previous, p);
+        let f = await json_decompress(compressed_before);
       }
       const p = "compressed";
-      let compressed_before = object_property_get(previous, p);
-      let f = await json_decompress(compressed_before);
       let versions = object_property_get(f, "versions");
       list_add(versions, contents);
       let compressed_after = await json_compress(f);
