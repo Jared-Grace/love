@@ -17,7 +17,7 @@ export async function function_dependencies_code_export(f_name) {
       const code = `${global_init}
     ${dependencies}
     ${e}`;
-      log(message);
+      log(code);
       const blob = new Blob([code], {
         type: "text/javascript",
       });
