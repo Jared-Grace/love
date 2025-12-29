@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { each_range_from_async } from "../../../love/public/src/each_range_from_async.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
@@ -44,7 +45,9 @@ export async function reply_2(context) {
   }
   each(choices_verse_count, lambda2);
   async function update(verse_count) {
-    async function lambda6() {}
+    async function lambda6() {
+      await each_async(list, async function lambda5(item2) {});
+    }
     await each_range_from_async(1, verse_count, lambda6);
   }
 }
