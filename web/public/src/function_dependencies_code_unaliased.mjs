@@ -5,7 +5,8 @@ import { function_name_unalias } from "../../../love/public/src/function_name_un
 export async function function_dependencies_code_unaliased(f_names) {
   let v = await function_name_unalias(f_names);
   let unaliased = object_property_get(v, "unaliased");
-  let mapped = list_map(list, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list, lambda);
   let d = await function_dependencies_code(unaliased);
   let v2 = {
     d,
