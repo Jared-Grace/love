@@ -56,7 +56,7 @@ export async function reply_2(context) {
     }
     let component = html_button(root, c, lambda3);
   }
-  each(choices_verse_count, lambda2);
+  each(choices_verse_count, lambda2);hb
   async function update(verse_count) {
     list_empty(bible_texts);
     list_empty(responses);
