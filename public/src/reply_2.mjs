@@ -38,6 +38,7 @@ export async function reply_2(context) {
   function lambda2(c) {
     function lambda3() {
       verse_count_chosen = c;
+      update();
     }
     let component = html_button(root, lambda3);
   }
