@@ -85,6 +85,8 @@ export async function reply_2(context) {
     }
     await each_async(taken, lambda6);
   }
-  function lambda9(c) {}
+  function lambda9(c) {
+    let component2 = html_button(parent, text2, function lambda11() {});
+  }
   each(choices, lambda9);
 }
