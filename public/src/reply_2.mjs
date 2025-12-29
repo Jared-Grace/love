@@ -122,6 +122,7 @@ export async function reply_2(context) {
       await copy_refresh();
     }
     b = html_button(root, text, lambda11);
+    return b;
   }
   let buttons = list_map(choices, lambda9);
   async function copy_refresh() {
