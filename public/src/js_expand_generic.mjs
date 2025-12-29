@@ -1,3 +1,5 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { log } from "../../../love/public/src/log.mjs";
 import { list_remove_all_multiple } from "../../../love/public/src/list_remove_all_multiple.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
@@ -26,14 +28,17 @@ import { js_identifiers_to_names } from "../../../love/public/src/js_identifiers
 import { js_statement_call_get } from "../../../love/public/src/js_statement_call_get.mjs";
 export async function js_expand_generic(next, stack2, index, ast) {
   let inserted = null;
-  let { expression, declaration: declaration_call } =
-    js_statement_call_get(next);
+  let v = js_statement_call_get(next);
+  let declaration_call = object_property_get(v, "declaration");
+  let expression = object_property_get(v, "expression");
   if (expression !== null) {
-    let { callee } = expression;
-    let { arguments: arguments2 } = expression;
+    let callee = object_property_get(expression, "callee");
+    let arguments2 = object_property_get(expression, "arguments");
     const a_names = js_identifiers_to_names(arguments2);
-    let { name } = callee;
-    let { declaration, ast: ast_call } = await function_parse_declaration(name);
+    let name = object_property_get(callee, "name");
+    let v2 = await function_parse_declaration(name);
+    let ast_call = object_property_get(v2, "ast");
+    let declaration = object_property_get(v2, "declaration");
     let identifiers_call = js_identifiers_names(ast_call);
     let identifiers = js_identifiers_names(ast);
     let intesection = list_intersect(identifiers_call, identifiers);
@@ -56,7 +61,8 @@ export async function js_expand_generic(next, stack2, index, ast) {
     let last = list_last(body_block);
     function lambda() {
       list_remove(body_block, last);
-      let { argument } = last;
+      let argument = object_property_get(last, "argument");
+      log(message);
       let name = js_declaration_name(declaration_call);
       let assign = js_declare(name, argument);
       list_add(body_block, assign);
