@@ -36,7 +36,7 @@ export async function reply_2(context) {
   list_add(choices_verse_count, 20);
   let verse_count_chosen = [10];
   function lambda2(c) {
-    let component = html_button(verse_count_chosen, c, root, c);
+    let component = html_button(verse_count_chosen, () => {});
   }
   each(choices_verse_count, lambda2);
 }
