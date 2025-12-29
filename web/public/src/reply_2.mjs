@@ -33,7 +33,7 @@ export async function reply_2(context) {
   let choices = object_property_get(r, "choices");
   let languages = object_property_get(r, "languages");
   let languages_chosen = null;
-  languages_chosen = list_take(languages, 2);
+  languages_chosen_reset();
   list_sort_string_property(languages, "name");
   let root = object_property_get(r, "root");
   let original = object_property_get(r, "original");
@@ -47,7 +47,12 @@ export async function reply_2(context) {
     root,
     "1. What language or languages you want the Bible verses to be translated into?",
   );
-  function love() {}
+  function languages_chosen_reset() {
+    languages_chosen = list_take(languages, 2);
+  }
+  function love() {
+    languages_chosen_reset();
+  }
   let component4 = html_button(root, "❤️", love);
   function lambda(language) {
     let name = object_property_get(language, "name");
