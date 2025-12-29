@@ -1,5 +1,5 @@
 import { marker } from "../../../love/public/src/marker.mjs";
-export function list_sort_string_mapper(list, mapper) {
+export function list_sort_string_mapper(list, lambda$item) {
   marker("1");
   function lambda(a, b) {
     const va = lambda$item(a);
