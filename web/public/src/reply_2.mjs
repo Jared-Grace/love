@@ -1,3 +1,4 @@
+import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { each_range_from_async } from "../../../love/public/src/each_range_from_async.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
@@ -45,8 +46,11 @@ export async function reply_2(context) {
   }
   each(choices_verse_count, lambda2);
   async function update(verse_count) {
+    list_shuffle(list);
     async function lambda6() {
-      async function lambda5(l) {}
+      async function lambda5(l) {
+        let language_code = object_property_get(l, "language_code");
+      }
       await each_async(languages_chosen, lambda5);
     }
     await each_range_from_async(1, verse_count, lambda6);
