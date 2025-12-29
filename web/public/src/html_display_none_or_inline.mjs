@@ -1,4 +1,4 @@
-import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
+import { html_display_inline } from "../../../love/public/src/html_display_inline.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_display_none } from "../../../love/public/src/html_display_none.mjs";
 export function html_display_none_or_inline(hidden, item) {
@@ -6,7 +6,6 @@ export function html_display_none_or_inline(hidden, item) {
   if (hidden) {
     html_display_none(item);
   } else {
-    marker("1");
-    html_style_set(item, "display", "block");
+    html_display_inline(item);
   }
 }
