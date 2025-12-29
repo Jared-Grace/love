@@ -68,7 +68,9 @@ export async function reply_2(context) {
           return d;
         }
         let verses = await list_map_unordered_async(verse_range, lambda8);
-        log({verses});
+        log({
+          verses,
+        });
       }
       await each_async(languages_chosen, lambda5);
     }
