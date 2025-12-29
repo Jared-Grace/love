@@ -54,7 +54,8 @@ export async function reply_2(context) {
   async function love() {
     languages_chosen_reset();
     list_add(languages_chosen, item3);
-    await app_reply_love(languages, () => {});
+    function lambda13() {}
+    await app_reply_love(languages, lambda13);
   }
   let component4 = html_button(root, "❤️", love);
   function lambda(language) {
