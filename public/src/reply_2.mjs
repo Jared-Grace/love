@@ -35,7 +35,10 @@ export async function reply_2(context) {
     let component = app_reply_button(languages_chosen, language, root, name);
   }
   each(languages, lambda);
-  html_p_text(root, "2. How many Bible passages do you want?");
+  html_p_text(
+    root,
+    "2. How many Bible passages do you want? (This will reset any responses below)",
+  );
   let choices_verse_count = [1];
   function lambda4(item) {
     let c = item * 2;
