@@ -104,7 +104,6 @@
   "fy": "function_types",
   "lk": "list_skip",
   "jnt": "js_node_type",
-  "lx": "list_index_of",
   "x": "exit",
   "ini": "integer_is",
   "lu": "log_unparse",
@@ -298,6 +297,7 @@
   "agm": "app_g_main",
   "pb": "function_param_swap_beginning",
   "linn": "list_includes_not",
-  "gt": "greater_than"
+  "gt": "greater_than",
+  "log_exit": "list_index_of"
  }
 }
