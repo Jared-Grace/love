@@ -85,5 +85,6 @@ export async function reply_2(context) {
     }
     await each_async(taken, lambda6);
   }
-  each(choices, function lambda9(c) {});
+  function lambda9(c) {}
+  each(choices, lambda9);
 }
