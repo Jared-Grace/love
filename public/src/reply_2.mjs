@@ -53,6 +53,7 @@ export async function reply_2(context) {
   async function update(verse_count) {
     list_shuffle(encouragement);
     let taken = list_take(encouragement, verse_count);
+    let reference_current = null;
     async function lambda6(reference) {
       let verse_range = await ebible_references_parse_lines([en], [reference]);
       async function lambda5(l) {
@@ -64,9 +65,9 @@ export async function reply_2(context) {
           return d;
         }
         let verses = await list_map_unordered_async(verse_range, lambda8);
-        let reference_current = null;
         function lambda7(v) {
-          if (equal_not(left, right)) {
+          if (equal_not(reference, reference_current)) {
+            log(reference);
           }
           let text = object_property_get(v, "text");
           log({
