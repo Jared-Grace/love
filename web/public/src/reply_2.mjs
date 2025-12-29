@@ -1,3 +1,4 @@
+import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { prayer_blessing_expand } from "../../../love/public/src/prayer_blessing_expand.mjs";
@@ -116,8 +117,14 @@ export async function reply_2(context) {
   async function copy_reset() {
     let v22 = prayer_blessing_expand();
     languages;
-    let mapped = list_map_property(list, property_name);
-    let concated = list_concat_multiple([responses, [v22], bible_texts]);
+    let mapped = list_map_property(languages, "language_code");
+    let result = list_join_comma(names);
+    let concated = list_concat_multiple([
+      responses,
+      [v22],
+      bible_texts,
+      [mapped],
+    ]);
     let joined = await list_join_newline_2_copy(concated);
     log(joined);
   }
