@@ -1,3 +1,4 @@
+import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { app_reply_love } from "../../../love/public/src/app_reply_love.mjs";
 import { app_reply_buttons_refresh } from "../../../love/public/src/app_reply_buttons_refresh.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -33,6 +34,7 @@ export async function reply_2(context) {
   let books = object_property_get(r, "books");
   let choices = object_property_get(r, "choices");
   let languages = object_property_get(r, "languages");
+  let languages_chosen_default = list_take(languages, 2);
   let languages_chosen = null;
   languages_chosen_reset();
   list_sort_string_property(languages, "name");
@@ -49,7 +51,7 @@ export async function reply_2(context) {
     "1. What language or languages you want the Bible verses to be translated into?",
   );
   function languages_chosen_reset() {
-    languages_chosen = list_take(languages, 2);
+    languages_chosen = list_copy(languages_chosen_default);
   }
   async function love() {
     languages_chosen_reset();
