@@ -24,6 +24,7 @@ export async function reply_2(context) {
   let en = object_property_get(r, "en");
   let encouragement = object_property_get(r, "encouragement");
   let languages_chosen = list_take(languages, 2);
+  let texts = [];
   let p = html_p_text(
     root,
     "1. Choose the language or languages you want the Bible verses to be translated into",
@@ -49,7 +50,6 @@ export async function reply_2(context) {
     let component = html_button(root, c, lambda3);
   }
   each(choices_verse_count, lambda2);
-  let texts = [];
   async function update(verse_count) {
     texts = [];
     list_shuffle(encouragement);
