@@ -32,7 +32,7 @@ export async function reply_2(context) {
   let responses = [];
   let p = html_p_text(
     root,
-    "1. Choose the language or languages you want the Bible verses to be translated into",
+    "1. What language or languages you want the Bible verses to be translated into?",
   );
   function lambda(language) {
     let name = object_property_get(language, "name");
@@ -41,7 +41,7 @@ export async function reply_2(context) {
   each(languages, lambda);
   html_p_text(
     root,
-    "2. How many Bible passages do you want? (This will reset any responses below)",
+    "2. How many Bible passages do you want? This will reset any responses below.",
   );
   let choices_verse_count = [1];
   function lambda4(item) {
