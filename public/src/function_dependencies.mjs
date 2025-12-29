@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { string_split_comma } from "../../../love/public/src/string_split_comma.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { function_exists_assert } from "../../../love/public/src/function_exists_assert.mjs";
@@ -12,6 +13,7 @@ export async function function_dependencies(f_names) {
       let node = object_property_get(v, "node");
       la(node);
     }
+    await each_async(list, async function lambda3(item) {});
     await visit_unique_async(f_names, function_imports, lambda);
   }
   let v2 = await list_adder_unique_async(lambda2);
