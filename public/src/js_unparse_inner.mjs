@@ -4,13 +4,14 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { generate } from "astring";
 export function js_unparse_inner(ast) {
   marker("1");
-  let output = generate(ast);
-  return output;
   let g = null;
   let module_name = "astring";
   let e = global_external_exists(module_name);
   if (e) {
     g = global_external_get(module_name);
   } else {
+    g = generate;
   }
+  let output = g(ast);
+  return output;
 }
