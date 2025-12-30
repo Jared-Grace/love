@@ -2,10 +2,10 @@ import { object_property_set_exists_not } from "../../../love/public/src/object_
 import { marker } from "../../../love/public/src/marker.mjs";
 export function object_adder(lambda$oad) {
   marker("1");
-  let reuslt = {};
+  let result = {};
   function oa(key, value) {
-    object_property_set_exists_not(reuslt, key, value);
+    object_property_set_exists_not(result, key, value);
   }
   lambda$oad(oa);
-  return reuslt;
+  return result;
 }
