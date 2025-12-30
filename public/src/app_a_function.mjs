@@ -1,5 +1,4 @@
 import { object_values_map_async } from "../../../love/public/src/object_values_map_async.mjs";
-import { each_object_unordered_async } from "../../../love/public/src/each_object_unordered_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { html_element_parse } from "../../../love/public/src/html_element_parse.mjs";
 import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
@@ -146,13 +145,11 @@ export async function app_a_function(context) {
           html_element_parse(head, importmap);
           let v3 = await get();
           let global = object_property_get(v3, "global");
-          async function lambda4(url, module_name) {
+          async function lambda6(url) {
             let v4 = await import(url);
             return v4;
           }
-          await each_object_unordered_async(externals, lambda4);
-          async function lambda6(value) {}
-          let result2 = await object_values_map_async(object, lambda6);
+          let result2 = await object_values_map_async(externals, lambda6);
           let fn = object_property_get(v3, "fn");
           let r = await fn();
           log({
