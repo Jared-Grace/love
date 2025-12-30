@@ -1,3 +1,4 @@
+import { global_external_set } from "../../../love/public/src/global_external_set.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function global_external_get(module_name) {
