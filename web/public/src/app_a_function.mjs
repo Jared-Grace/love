@@ -1,3 +1,4 @@
+import { exit } from "../../../love/public/src/exit.mjs";
 import { function_dependencies_externals_to_urls } from "../../../love/public/src/function_dependencies_externals_to_urls.mjs";
 import { global_import_set } from "../../../love/public/src/global_import_set.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
@@ -152,11 +153,12 @@ export async function app_a_function(context) {
             global_import_set(name, m, global);
           }
           each_object(modules, lambda4);
+          log({
+            global,
+          });
+          exit();
           let fn = object_property_get(v3, "fn");
           let r = await fn();
-          log({
-            r,
-          });
           let j = json_format_to(r);
           let pre = html_pre_text(div, j);
           app_a_buttons_shortcuts(choices, overlay);
