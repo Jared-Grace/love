@@ -1,4 +1,4 @@
-import { global_external_get } from "../../../love/public/src/global_external_get.mjs";
+import { global_import_get } from "../../../love/public/src/global_import_get.mjs";
 import { global_import_exists } from "../../../love/public/src/global_import_exists.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { generate } from "astring";
@@ -8,7 +8,7 @@ export function js_unparse_inner(ast) {
   let module_name = "astring";
   let e = global_import_exists(module_name);
   if (e) {
-    g = global_external_get(module_name);
+    g = global_import_get(module_name);
   } else {
     g = generate;
   }
