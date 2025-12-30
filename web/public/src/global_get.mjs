@@ -7,7 +7,8 @@ export function global_get() {
   marker("1");
   return global;
   let exists = global_function_exists(global_alternate_set);
-  if (global) {
-    let value = global_function_get(fn);
+  if (exists) {
+    let value = global_function_get(global_alternate_set);
+    return value;
   }
 }
