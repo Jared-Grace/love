@@ -142,7 +142,9 @@ export async function app_a_function(context) {
           let importmap = html_code_script_importmap(externals);
           let head = html_document_head();
           html_element_parse(head, importmap);
-          let fn = await get();
+          let v3 = await get();
+          let global = object_property_get(v3, "global");
+          let fn = object_property_get(v3, "fn");
           let r = await fn();
           log({
             r,
