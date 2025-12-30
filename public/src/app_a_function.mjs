@@ -151,7 +151,7 @@ export async function app_a_function(context) {
           let modules = await object_values_map_async(imports, lambda6);
           let unset = global_alternate_set(global);
           function lambda4(m, name) {
-            global_import_set(name, m);
+            global_import_set(name, m, global);
           }
           each_object(modules, lambda4);
           unset();
