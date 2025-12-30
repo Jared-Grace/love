@@ -122,7 +122,7 @@ export async function app_a_function(context) {
         async function lambda5() {
           let v2 = await function_dependencies_code_export(f_name);
           let externals = object_property_get(v2, "externals");
-          let fn_get = object_property_get(v2, "fn_get");
+          let get = object_property_get(v2, "get");
           let o = app_a_overlay(
             {
               root,
@@ -142,7 +142,7 @@ export async function app_a_function(context) {
           let importmap = html_code_script_importmap(externals);
           let head = html_document_head();
           html_element_parse(head, importmap);
-          let fn = await fn_get();
+          let fn = await get();
           let r = await fn();
           log({
             r,
