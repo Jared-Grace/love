@@ -1,4 +1,4 @@
-import { global_external_set } from "../../../love/public/src/global_external_set.mjs";
+import { global_import_set } from "../../../love/public/src/global_import_set.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { object_values_map_async } from "../../../love/public/src/object_values_map_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -153,7 +153,7 @@ export async function app_a_function(context) {
           }
           let modules = await object_values_map_async(externals, lambda6);
           function lambda4(m, name) {
-            global_external_set(name, m);
+            global_import_set(name, m);
           }
           each_object(modules, lambda4);
           let fn = object_property_get(v3, "fn");
