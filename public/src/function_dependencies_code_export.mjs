@@ -13,7 +13,7 @@ export async function function_dependencies_code_export(f_name) {
   let v = await function_dependencies_code(f_name);
   let externals = object_property_get(v, "externals");
   let v2 = {
-    fn_get: async function lambda() {
+    get: async function lambda() {
       let dependencies = object_property_get(v, "code");
       let e = js_code_export_wrapped(f_name);
       let gn = global_name();
@@ -27,7 +27,12 @@ export async function function_dependencies_code_export(f_name) {
       const url = URL.createObjectURL(blob);
       const mod = await import(url);
       let fn = object_property_get(mod, f_name);
-      return fn;
+      let global = object_property_get(mod, gn);
+      let v3 = {
+        fn,
+        global,
+      };
+      return v3;
     },
     externals,
   };
