@@ -6,6 +6,7 @@ export function js_unparse_inner(ast) {
   marker("1");
   let g = null;
   let module_name = "astring";
+  l
   let e = global_import_exists(module_name);
   if (e) {
     g = global_import_get(module_name);
