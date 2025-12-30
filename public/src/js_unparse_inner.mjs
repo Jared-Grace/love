@@ -10,10 +10,11 @@ export function js_unparse_inner(ast) {
   let g = null;
   let module_name = "astring";
   let global = global_get();
+  let e = global_import_exists(module_name);
   log({
     globall: global,
+    e,
   });
-  let e = global_import_exists(module_name);
   if (e) {
     let v = global_import_get(module_name);
     g = object_property_get(v, "generate");
