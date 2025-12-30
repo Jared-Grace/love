@@ -1,3 +1,4 @@
+import { global_external_get } from "../../../love/public/src/global_external_get.mjs";
 import { global_external_exists } from "../../../love/public/src/global_external_exists.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { generate } from "astring";
@@ -8,5 +9,6 @@ export function js_unparse_inner(ast) {
   let module_name = "astring";
   let e = global_external_exists(module_name);
   if (e) {
+    let value = global_external_get(module_name2);
   }
 }
