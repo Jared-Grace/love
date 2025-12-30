@@ -1,4 +1,3 @@
-import { global_alternate_set } from "../../../love/public/src/global_alternate_set.mjs";
 import { function_dependencies_externals_to_urls } from "../../../love/public/src/function_dependencies_externals_to_urls.mjs";
 import { global_import_set } from "../../../love/public/src/global_import_set.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
