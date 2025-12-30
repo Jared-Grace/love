@@ -6,6 +6,6 @@ export function global_get() {
   marker("1");
   return global;
   let exists = global_function_exists(global_alternate_set);
-  if (false) {
+  if (global) {
   }
 }
