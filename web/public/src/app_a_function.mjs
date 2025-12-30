@@ -150,7 +150,7 @@ export async function app_a_function(context) {
             let v4 = await import(url);
             return v4;
           }
-          let result2 = await object_values_map_async(externals, lambda6);
+          let modules = await object_values_map_async(externals, lambda6);
           function lambda4(value, property) {}
           each_object(object, lambda4);
           let fn = object_property_get(v3, "fn");
