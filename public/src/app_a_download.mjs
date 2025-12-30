@@ -11,7 +11,7 @@ export async function app_a_download() {
     let data = {
       versions: [contents],
     };
-    let compressed = json_compress(data);
+    let compressed = await json_compress(data);
     let v = {
       key: path,
       compressed,
