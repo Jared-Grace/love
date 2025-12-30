@@ -6,11 +6,9 @@ let global = {};
 export function global_get() {
   return global;
   marker("1");
-  let global2 = global_get();
-  let exists = object_property_exists(global2, global_alternate_set.name);
+  let exists = object_property_exists(global, global_alternate_set.name);
   if (exists) {
-    let global3 = global_get();
-    let value = object_property_get(global3, global_alternate_set.name2);
+    let value = object_property_get(global, global_alternate_set.name2);
     return value;
   }
 }
