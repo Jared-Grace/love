@@ -140,7 +140,7 @@ export function ebible_languages() {
       language_code: "tr",
     },
   ];
-  ("if you modify the list, then run:");
+  ("if you modify the above list, then run:");
   ebible_languages_chapters_cache_refresh.name;
   return languages;
 }
