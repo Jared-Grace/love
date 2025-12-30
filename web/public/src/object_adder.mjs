@@ -3,9 +3,9 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function object_adder(lambda$oad) {
   marker("1");
   let result = {};
-  function oa(key, value) {
+  let oa = function lambda(key, value) {
     object_property_set_exists_not(result, key, value);
-  }
+  };
   lambda$oad(oa);
   return result;
 }
