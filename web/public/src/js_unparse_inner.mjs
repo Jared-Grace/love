@@ -8,6 +8,10 @@ export function js_unparse_inner(ast) {
   marker("1");
   let g = null;
   let module_name = "astring";
+  let global = global_get();
+  log({
+    global,
+  });
   let e = global_import_exists(module_name);
   if (e) {
     g = global_import_get(module_name);
@@ -16,6 +20,4 @@ export function js_unparse_inner(ast) {
   }
   let output = g(ast);
   return output;
-  log({});
-  let global = global_get();
 }
