@@ -1,3 +1,4 @@
+import { global_get } from "../../../love/public/src/global_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { global_import_get } from "../../../love/public/src/global_import_get.mjs";
 import { global_import_exists } from "../../../love/public/src/global_import_exists.mjs";
@@ -15,5 +16,6 @@ export function js_unparse_inner(ast) {
   }
   let output = g(ast);
   return output;
-  log(message);
+  log({});
+  let global = global_get();
 }
