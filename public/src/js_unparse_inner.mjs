@@ -16,7 +16,7 @@ export function js_unparse_inner(ast) {
   let e = global_import_exists(module_name);
   if (e) {
     let v = global_import_get(module_name);
-    let g = object_property_get(v, "generate");
+    g = object_property_get(v, "generate");
   } else {
     g = generate;
   }
