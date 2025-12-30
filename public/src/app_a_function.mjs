@@ -2,9 +2,6 @@ import { global_import_set } from "../../../love/public/src/global_import_set.mj
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { object_values_map_async } from "../../../love/public/src/object_values_map_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
-import { html_element_parse } from "../../../love/public/src/html_element_parse.mjs";
-import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
-import { html_code_script_importmap } from "../../../love/public/src/html_code_script_importmap.mjs";
 import { function_dependencies_code_export } from "../../../love/public/src/function_dependencies_code_export.mjs";
 import { app_a_function_on_keydown_remove } from "../../../love/public/src/app_a_function_on_keydown_remove.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -142,9 +139,6 @@ export async function app_a_function(context) {
             app_a_on_keydown(e, choices);
           }
           let div = app_a_overlay_container(overlay);
-          let importmap = html_code_script_importmap(externals);
-          let head = html_document_head();
-          html_element_parse(head, importmap);
           let v3 = await get();
           let global = object_property_get(v3, "global");
           async function lambda6(url) {
