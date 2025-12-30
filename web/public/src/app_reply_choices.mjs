@@ -190,6 +190,10 @@ export function app_reply_choices() {
       response: how_family,
     },
     {
+      text: emoji_pray() + " How feeling",
+      response: emoji_pray() + " God is helping me be joyful when I suffer",
+    },
+    {
       text: app_reply_how_r_u(),
       response: hru,
     },
