@@ -137,7 +137,7 @@ export function ebible_languages() {
     {
       name: "Turkish",
       bible_folder: "turytc",
-      language_code: "fas",
+      language_code: "tr",
     },
   ];
   ("if you modify the list, then run:");
