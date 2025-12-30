@@ -19,6 +19,6 @@ export function js_unparse_inner(ast) {
     a = astring;
   }
   let { generate }=a
-  let output = g(ast);
+  let output = generate(ast);
   return output;
 }
