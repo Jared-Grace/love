@@ -8,7 +8,8 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { app_message_provide_food } from "./app_message_provide_food.mjs";
 export function app_sandbox_main(context) {
   let root = object_property_get(context, "root");
-  let p = html_p_text(root2, text);
+  let p = html_p_text(root, "text");
+  return;
   marker("1");
   let app_fn = app_message;
   object_merge(context, {
