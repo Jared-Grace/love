@@ -1,11 +1,11 @@
-import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { object_adder_generic } from "../../../love/public/src/object_adder_generic.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function object_adder(lambda$oad) {
   marker("1");
-  let result = {};
-  let oa = function lambda(key, value) {
-    object_property_set_exists_not(result, key, value);
-  };
+  let v = object_adder_generic();
+  let result = object_property_get(v, "result");
+  let oa = object_property_get(v, "oa");
   lambda$oad(oa);
   return result;
 }
