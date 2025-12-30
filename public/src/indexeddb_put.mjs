@@ -1,43 +1,33 @@
 import { error } from "../../../love/public/src/error.mjs";
 export async function indexeddb_put(db_get, store, key, value_get) {
   const db = await db_get();
-  const tx = db.transaction(store, "readwrite");
-  const s = tx.objectStore(store);
-  const value = await new Promise(function lambda7(resolve, reject) {
+  const previous = await new Promise(function lambda3(resolve, reject) {
+    const tx = db.transaction(store, "readonly");
+    const s = tx.objectStore(store);
     const req = s.get(key);
-    req.onsuccess = function lambda2() {
-      let previous = req.result ?? null;
-      function lambda(next) {
-        s.put(next, key);
-        resolve(next);
-      }
-      let v6 = value_get(previous);
-      Promise.resolve(v6).then(lambda).catch(reject);
-    };
-    req.onerror = function lambda3() {
-      let v = reject(req.error);
+    req.onsuccess = function lambda() {
+      let v = resolve(req.result ?? null);
       return v;
     };
-    tx.oncomplete = function lambda4() {};
-    tx.onerror = function lambda5() {
-      let v2 = reject(tx.error);
+    req.onerror = function lambda2() {
+      let v2 = reject(req.error);
       return v2;
     };
-    tx.onabort = function lambda6() {
+  });
+  const next = await value_get(previous);
+  const tx = db.transaction(store, "readwrite");
+  const s = tx.objectStore(store);
+  s.put(next, key);
+  await new Promise(function lambda6(resolve, reject) {
+    tx.oncomplete = resolve;
+    tx.onerror = function lambda4() {
       let v3 = reject(tx.error);
       return v3;
     };
-  });
-  await new Promise(function lambda10(resolve, reject) {
-    tx.oncomplete = resolve;
-    tx.onerror = function lambda8() {
+    tx.onabort = function lambda5() {
       let v4 = reject(tx.error);
       return v4;
     };
-    tx.onabort = function lambda9() {
-      let v5 = reject(tx.error);
-      return v5;
-    };
   });
-  return value;
+  return next;
 }
