@@ -3,7 +3,8 @@ import { each_object_unordered_async } from "../../../love/public/src/each_objec
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function object_values_map_async() {
   marker("1");
-  let result = await object_adder_async(async function lambda(oad) {});
+  async function lambda(oad) {}
+  let result = await object_adder_async(lambda);
   async function lambda2() {}
   await each_object_unordered_async(object, lambda2);
 }
