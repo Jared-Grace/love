@@ -1,3 +1,4 @@
+import { object_values_map_async } from "../../../love/public/src/object_values_map_async.mjs";
 import { each_object_unordered_async } from "../../../love/public/src/each_object_unordered_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { html_element_parse } from "../../../love/public/src/html_element_parse.mjs";
@@ -150,6 +151,10 @@ export async function app_a_function(context) {
             return v4;
           }
           await each_object_unordered_async(externals, lambda4);
+          let result2 = await object_values_map_async(
+            object,
+            async function lambda6(value) {},
+          );
           let fn = object_property_get(v3, "fn");
           let r = await fn();
           log({
