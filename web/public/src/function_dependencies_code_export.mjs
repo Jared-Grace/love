@@ -1,7 +1,6 @@
-import { js_code_wrap_braces } from "../../../love/public/src/js_code_wrap_braces.mjs";
+import { js_code_export_wrapped } from "../../../love/public/src/js_code_export_wrapped.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
-import { js_code_export } from "../../../love/public/src/js_code_export.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_code_global_init } from "../../../karate_code/public/src/js_code_global_init.mjs";
@@ -14,8 +13,7 @@ export async function function_dependencies_code_export(f_name) {
   let v2 = {
     fn_get: async function lambda() {
       let dependencies = object_property_get(v, "code");
-      let w = js_code_wrap_braces(f_name);
-      let e = js_code_export(w);
+      let e = js_code_export_wrapped(f_name);
       const code = `${global_init}
     ${dependencies}
     ${e}`;
