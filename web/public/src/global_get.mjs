@@ -7,5 +7,6 @@ export function global_get() {
   return global;
   let exists = global_function_exists(global_alternate_set);
   if (global) {
+    global_alternate_get;
   }
 }
