@@ -4,9 +4,9 @@ export function object_adder_generic() {
   let oa = function lambda(key, value) {
     object_property_set_exists_not(result, key, value);
   };
-  let v = {
+  let r = {
     oa,
     result,
   };
-  return v;
+  return r;
 }
