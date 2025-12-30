@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 export async function indexeddb_put(db_get, store, key, value_get) {
   const db = await db_get();
@@ -17,6 +18,9 @@ export async function indexeddb_put(db_get, store, key, value_get) {
   const next = await value_get(previous);
   const tx = db.transaction(store, "readwrite");
   const s = tx.objectStore(store);
+  log({
+    next,
+  });
   s.put(next);
   await new Promise(function lambda6(resolve, reject) {
     tx.oncomplete = resolve;
