@@ -1,3 +1,4 @@
+import { function_dependencies_externals_to_urls } from "../../../love/public/src/function_dependencies_externals_to_urls.mjs";
 import { global_import_set } from "../../../love/public/src/global_import_set.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { object_values_map_async } from "../../../love/public/src/object_values_map_async.mjs";
@@ -141,11 +142,12 @@ export async function app_a_function(context) {
           let div = app_a_overlay_container(overlay);
           let v3 = await get();
           let global = object_property_get(v3, "global");
+          let imports = function_dependencies_externals_to_urls(externals);
           async function lambda6(url) {
             let v4 = await import(url);
             return v4;
           }
-          let modules = await object_values_map_async(externals, lambda6);
+          let modules = await object_values_map_async(imports, lambda6);
           function lambda4(m, name) {
             global_import_set(name, m);
           }
