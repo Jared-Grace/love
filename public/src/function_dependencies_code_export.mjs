@@ -1,3 +1,4 @@
+import { global_name } from "../../../love/public/src/global_name.mjs";
 import { js_code_export_wrapped } from "../../../love/public/src/js_code_export_wrapped.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
@@ -14,6 +15,8 @@ export async function function_dependencies_code_export(f_name) {
     fn_get: async function lambda() {
       let dependencies = object_property_get(v, "code");
       let e = js_code_export_wrapped(f_name);
+      let f_name2 = global_name();
+      let g = js_code_export_wrapped(f_name2);
       const code = `${global_init}
     ${dependencies}
     ${e}`;
