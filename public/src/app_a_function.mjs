@@ -146,7 +146,7 @@ export async function app_a_function(context) {
           let v3 = await get();
           let global = object_property_get(v3, "global");
           function lambda4(value, property) {}
-          await each_object_unordered_async(object, lambda4);
+          await each_object_unordered_async(externals, lambda4);
           let fn = object_property_get(v3, "fn");
           let r = await fn();
           log({
