@@ -151,10 +151,8 @@ export async function app_a_function(context) {
             return v4;
           }
           await each_object_unordered_async(externals, lambda4);
-          let result2 = await object_values_map_async(
-            object,
-            async function lambda6(value) {},
-          );
+          async function lambda6(value) {}
+          let result2 = await object_values_map_async(object, lambda6);
           let fn = object_property_get(v3, "fn");
           let r = await fn();
           log({
