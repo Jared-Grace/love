@@ -8,7 +8,7 @@ export function global_get() {
   marker("1");
   let exists = object_property_exists(global, global_alternate_set.name);
   if (exists) {
-    let value = object_property_get(global, global_alternate_set.name2);
+    let value = object_property_get(global, global_alternate_set.name);
     return value;
   }
 }
