@@ -7,6 +7,6 @@ export function js_unparse_inner(ast) {
   return output;
   let module_name = "astring";
   let e = global_external_exists(module_name);
-  if (false) {
+  if (e) {
   }
 }
