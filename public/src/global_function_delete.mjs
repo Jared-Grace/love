@@ -4,5 +4,5 @@ import { global_get } from "../../../love/public/src/global_get.mjs";
 export function global_function_delete(fn, value) {
   marker("1");
   let global = global_get();
-  object_property_delete(global, fn.name, value);
+  object_property_delete(global, fn.name);
 }
