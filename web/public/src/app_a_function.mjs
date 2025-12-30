@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { html_element_parse } from "../../../love/public/src/html_element_parse.mjs";
 import { html_document_head } from "../../../love/public/src/html_document_head.mjs";
 import { html_code_script_importmap } from "../../../love/public/src/html_code_script_importmap.mjs";
@@ -24,7 +25,6 @@ import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { json_decompress } from "../../../love/public/src/json_decompress.mjs";
 import { app_a_file_system_store } from "../../../love/public/src/app_a_file_system_store.mjs";
@@ -72,7 +72,7 @@ export async function app_a_function(context) {
       let m = list_multiple_is(versions);
       object_property_set_exists_not(item, "changed", m);
     }
-    each_async(all, lambda);
+    await each_async(all, lambda);
     let filtered = list_filter_property(all, "changed", true);
     function lambda2(item2) {
       let o = object_properties_from_empty(item2, ["key", "versions"]);
