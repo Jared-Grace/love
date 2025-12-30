@@ -16,8 +16,8 @@ export async function function_dependencies_code_export(f_name) {
     fn_get: async function lambda() {
       let dependencies = object_property_get(v, "code");
       let e = js_code_export_wrapped(f_name);
-      let f_name2 = global_name();
-      let g = js_code_export_wrapped(f_name2);
+      let gn = global_name();
+      let g = js_code_export_wrapped(gn);
       let parts = [global_init, dependencies, e, g];
       let code = list_join_newline(parts);
       log(code);
