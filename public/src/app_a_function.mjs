@@ -145,7 +145,9 @@ export async function app_a_function(context) {
           html_element_parse(head, importmap);
           let v3 = await get();
           let global = object_property_get(v3, "global");
-          function lambda4(url, module_name) {}
+          async function lambda4(url, module_name) {
+            return await import(url);
+          }
           await each_object_unordered_async(externals, lambda4);
           let fn = object_property_get(v3, "fn");
           let r = await fn();
