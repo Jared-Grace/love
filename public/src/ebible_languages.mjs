@@ -134,6 +134,11 @@ export function ebible_languages() {
       bible_folder: "pesopcb",
       language_code: "fas",
     },
+    {
+      name: "Turkish",
+      bible_folder: "turytc",
+      language_code: "fas",
+    },
   ];
   ("if you modify the list, then run:");
   ebible_languages_chapters_cache_refresh.name;
