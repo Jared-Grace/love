@@ -153,7 +153,7 @@ export async function app_a_function(context) {
           }
           let modules = await object_values_map_async(externals, lambda6);
           function lambda4(m, name) {
-            global_external_set(module_name, value);
+            global_external_set(name, m);
           }
           each_object(modules, lambda4);
           let fn = object_property_get(v3, "fn");
