@@ -8,7 +8,7 @@ export async function app_component(a_name) {
   let combined = app_name_main(a_name);
   let v = await function_dependencies_code_unaliased(combined);
   let d = object_property_get(v, "d");
-  let code = object_property_get(v2, "code");
+  let code = object_property_get(d, "code");
   code += newline() + a_name;
   let fn = eval(code);
   let root = html_document_body();
