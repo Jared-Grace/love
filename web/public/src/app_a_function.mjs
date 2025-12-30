@@ -145,7 +145,8 @@ export async function app_a_function(context) {
           html_element_parse(head, importmap);
           let v3 = await get();
           let global = object_property_get(v3, "global");
-          each_object(object, function lambda4(value, property) {});
+          function lambda4(value, property) {}
+          each_object(object, lambda4);
           let fn = object_property_get(v3, "fn");
           let r = await fn();
           log({
