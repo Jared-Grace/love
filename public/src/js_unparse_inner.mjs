@@ -6,10 +6,11 @@ export function js_unparse_inner(ast) {
   marker("1");
   let output = generate(ast);
   return output;
+  let g = null;
   let module_name = "astring";
   let e = global_external_exists(module_name);
   if (e) {
-    let g = null;
     g = global_external_get(module_name);
+  } else {
   }
 }
