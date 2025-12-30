@@ -17,7 +17,7 @@ export async function indexeddb_put(db_get, store, key, value_get) {
   const next = await value_get(previous);
   const tx = db.transaction(store, "readwrite");
   const s = tx.objectStore(store);
-  s.put(next, key);
+  s.put(next);
   await new Promise(function lambda6(resolve, reject) {
     tx.oncomplete = resolve;
     tx.onerror = function lambda4() {
