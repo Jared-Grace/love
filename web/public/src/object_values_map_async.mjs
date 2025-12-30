@@ -11,4 +11,5 @@ export async function object_values_map_async(object, lambda$value) {
     await each_object_unordered_async(object, lambda2);
   }
   let result = await object_adder_async(lambda);
+  return result;
 }
