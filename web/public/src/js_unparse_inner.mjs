@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { global_import_get } from "../../../love/public/src/global_import_get.mjs";
 import { global_import_exists } from "../../../love/public/src/global_import_exists.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -6,7 +7,6 @@ export function js_unparse_inner(ast) {
   marker("1");
   let g = null;
   let module_name = "astring";
-  l
   let e = global_import_exists(module_name);
   if (e) {
     g = global_import_get(module_name);
@@ -15,4 +15,5 @@ export function js_unparse_inner(ast) {
   }
   let output = g(ast);
   return output;
+  log(message);
 }
