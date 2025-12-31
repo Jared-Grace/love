@@ -7,9 +7,9 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function love_initialize() {
   marker("1");
   let d_path = data_path();
-  let f = folder_vscode();
-  let joined2 = path_join([f]);
-  let joined = path_join([d_path, f]);
+  let vc = folder_vscode();
+  let joined2 = path_join([vc]);
+  let joined = path_join([d_path, vc]);
   let file_path_old = folder_public_combine(joined);
   await file_copy_overwrite(file_path_old, file_path_new);
 }
