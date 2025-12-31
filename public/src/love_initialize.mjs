@@ -7,9 +7,9 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { file_name_json_folder } from "./file_name_json_folder.mjs";
 export async function love_initialize() {
   marker("1");
-  let f_path = file_name_json_folder(folder, f_name);
-  let d_path = data_path();
   let vc = folder_vscode();
+  let f_path = file_name_json_folder(vc, "tasks");
+  let d_path = data_path();
   let joined2 = path_join([vc]);
   let joined = path_join([d_path, vc]);
   let file_path_old = folder_public_combine(joined);
