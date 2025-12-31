@@ -87,8 +87,8 @@ export async function app_g_main(context) {
   const tiles_path = g_folder_tiles(path_prefix);
   let rows = app_g_map_generate();
   let r2 = range_1(10);
-  let imgs_men = list_map_combine_left("man_", r2);
-  let imgs_women = list_map_combine_left("woman_", r2);
+  let imgs_men = list_map_combine_left(r2, "man_");
+  let imgs_women = list_map_combine_left(r2, "woman_");
   const player_img = list_random_item(imgs_men);
   let names_men = bible_names_men();
   let right = player_img;
