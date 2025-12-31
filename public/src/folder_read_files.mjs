@@ -1,3 +1,4 @@
+import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { folder_read_browser } from "../../../love/public/src/folder_read_browser.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
@@ -10,6 +11,7 @@ export async function folder_read_files(path_folder) {
     let filtered = object_property_get(r, "filtered");
     let prefix = object_property_get(r, "prefix");
     let unique = object_property_get(r, "unique");
+    let combineds = list_map_combine_left(list, left);
     return r;
   }
   let fs = await import("fs");
