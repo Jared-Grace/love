@@ -1,8 +1,8 @@
-import { global_function_get } from "../../../love/public/src/global_function_get.mjs";
+import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { indexeddb_put_multiple } from "../../../love/public/src/indexeddb_put_multiple.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 export async function indexeddb_get_all(db_get, store) {
-  let dictionary = global_function_get(indexeddb_put_multiple);
+  let dictionary = global_function_property_get(indexeddb_put_multiple, store);
   const db = await db_get();
   const tx = db.transaction(store, "readonly");
   const s = tx.objectStore(store);
