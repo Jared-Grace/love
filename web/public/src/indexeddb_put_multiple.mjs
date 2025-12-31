@@ -1,4 +1,4 @@
-import { each_object_async } from "../../../love/public/src/each_object_async.mjs";
+import { each_object_unordered_async } from "../../../love/public/src/each_object_unordered_async.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { error } from "../../../love/public/src/error.mjs";
@@ -8,8 +8,10 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
   const previous = await new Promise(async function lambda3(resolve, reject) {
     const tx = db.transaction(store, "readonly");
     const s = tx.objectStore(store);
-    async function lambda8() {}
-    await each_object_async(object, lambda8);
+    await each_object_unordered_async(
+      object,
+      async function lambda7(value, key2) {},
+    );
     const req = s.get(key);
     req.onsuccess = function lambda() {
       let v = resolve(req.result ?? null);
