@@ -1,10 +1,9 @@
 import { not } from "../../../love/public/src/not.mjs";
 import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
-import { indexeddb_put_multiple } from "../../../love/public/src/indexeddb_put_multiple.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 export async function indexeddb_get_all(db_get, store) {
-  let exists = global_function_property_exists(indexeddb_put_multiple, store);
+  let exists = global_function_property_exists(indexeddb_get_all, store);
   if (not(exists)) {
     const db = await db_get();
     const tx = db.transaction(store, "readonly");
@@ -22,5 +21,5 @@ export async function indexeddb_get_all(db_get, store) {
     });
     return all;
   }
-  let dictionary = global_function_property_get(indexeddb_put_multiple, store);
+  let dictionary = global_function_property_get(indexeddb_get_all, store);
 }
