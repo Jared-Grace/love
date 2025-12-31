@@ -9,6 +9,7 @@ export async function folder_read(path_folder) {
   if (browser_is()) {
     let n = path_normalize(path_folder);
     let s = string_slash_forward();
+    let prefix = "" + n + s;
     let files_paths = await app_a_files_paths();
     log({
       n,
