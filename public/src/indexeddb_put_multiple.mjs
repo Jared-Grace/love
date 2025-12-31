@@ -1,7 +1,7 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { error } from "../../../love/public/src/error.mjs";
-export async function indexeddb_put_multiple(db_get, store, key, value_get) {
+export async function indexeddb_put_multiple(db_get, store, lookup) {
   marker("1");
   const db = await db_get();
   const previous = await new Promise(function lambda3(resolve, reject) {
