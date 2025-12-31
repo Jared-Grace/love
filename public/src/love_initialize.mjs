@@ -1,5 +1,4 @@
 import { data_folder } from "../../../love/public/src/data_folder.mjs";
-import { path_resolve } from "../../../love/public/src/path_resolve.mjs";
 import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
 import { folder_vscode } from "../../../love/public/src/folder_vscode.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
@@ -14,7 +13,5 @@ export async function love_initialize() {
   let file_path_old = path_join([d_path, f_path]);
   let previous = folder_previous();
   let file_path_new = path_join([previous, f_path]);
-  let v = await path_resolve(file_path_old);
-  return v;
   await file_copy_overwrite(file_path_old, file_path_new);
 }
