@@ -7,6 +7,6 @@ export async function indexeddb_get(db_get, store, key) {
   let all = await indexeddb_get_all(db_get, store);
   let f = list_find_property(all, "key", key);
   return f;
-  let v3 = await indexeddb_get_backend(db_get, store, key);
-  return v3;
+  let item = await indexeddb_get_backend(db_get, store, key);
+  return item;
 }
