@@ -16,7 +16,7 @@ export async function love_initialize() {
   let file_path_old = folder_public_combine(joined);
   let previous = folder_previous();
   let file_path_new = path_join([previous, f_path]);
-  let v = await path_resolve(file_path_new);
+  let v = await path_resolve(file_path_old);
   return v;
   await file_copy_overwrite(file_path_old, file_path_new);
 }
