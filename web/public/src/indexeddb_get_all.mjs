@@ -3,7 +3,9 @@ import { global_function_property_get } from "../../../love/public/src/global_fu
 import { indexeddb_put_multiple } from "../../../love/public/src/indexeddb_put_multiple.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 export async function indexeddb_get_all(db_get, store) {
-  let exists = global_function_property_exists(fn, property_name);
+  let exists = global_function_property_exists(indexeddb_put_multiple, store);
+  if (false) {
+  }
   let dictionary = global_function_property_get(indexeddb_put_multiple, store);
   const db = await db_get();
   const tx = db.transaction(store, "readonly");
