@@ -1,0 +1,40 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Server",
+      "type": "shell",
+      "command": "cd love; node scripts/r.mjs v",
+      "presentation": {
+        "panel": "new",
+        "focus": false
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "Watcher",
+      "type": "shell",
+      "command": "cd love; node scripts/r.mjs w",
+      "presentation": {
+        "panel": "new",
+        "focus": false
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "Terminal",
+      "type": "shell",
+      "command": "cd love; ./scripts/p.cmd",
+      "presentation": {
+        "panel": "new"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+  ]
+}
