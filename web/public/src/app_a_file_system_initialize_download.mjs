@@ -1,3 +1,4 @@
+import { global_function_set } from "../../../love/public/src/global_function_set.mjs";
 import { indexeddb_put_multiple } from "../../../love/public/src/indexeddb_put_multiple.mjs";
 import { list_to_dictionary_key } from "../../../love/public/src/list_to_dictionary_key.mjs";
 import { app_a_file_system_initialize } from "../../../love/public/src/app_a_file_system_initialize.mjs";
@@ -24,5 +25,6 @@ export async function app_a_file_system_initialize_download() {
   let dictionary = list_to_dictionary_key(r, lambda2, lambda3);
   let store = app_a_file_system_store();
   await indexeddb_put_multiple(db_get, store, dictionary);
+  global_function_set(fn, value);
   storage_local_set(app_a, app_a_file_system_initialize.name, true);
 }
