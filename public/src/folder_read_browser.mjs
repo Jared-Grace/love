@@ -21,6 +21,8 @@ export async function folder_read_browser(path_folder) {
   let unique = list_unique(mapped2);
   let r = {
     unique,
+    prefix,
+    filtered,
   };
   return r;
 }
