@@ -13,10 +13,8 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
     omua;
     previous = await indexeddb_put_item(key, s);
   }
-  let result = await object_values_map_async(
-    object,
-    async function lambda(value) {},
-  );
+  async function lambda(value) {}
+  let result = await object_values_map_async(object, lambda);
   const next = await value_get(previous);
   const tx = db.transaction(store, "readwrite");
   const s = tx.objectStore(store);
