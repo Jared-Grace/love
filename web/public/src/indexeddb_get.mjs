@@ -5,7 +5,8 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function indexeddb_get(db_get, store, key) {
   marker("1");
   let all = await indexeddb_get_all(db_get, store);
-  let filtered = list_filter_property(list, property_name, property_value);
+  let filtered = list_filter_property(all, "key", key);
+  return all;
   let db = await db_get();
   const tx = db.transaction(store, "readonly");
   const s = tx.objectStore(store);
