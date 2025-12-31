@@ -1,3 +1,4 @@
+import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
@@ -19,7 +20,7 @@ export async function indexeddb_get_all(db_get, store) {
         return v2;
       };
     });
-    return all;
+    global_function_property_set(indexeddb_get_all, store, all);
   }
   let dictionary = global_function_property_get(indexeddb_get_all, store);
 }
