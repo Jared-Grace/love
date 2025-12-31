@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each_object_values } from "../../../love/public/src/each_object_values.mjs";
 import { object_values_map_async } from "../../../love/public/src/object_values_map_async.mjs";
 import { indexeddb_put_item } from "../../../love/public/src/indexeddb_put_item.mjs";
@@ -17,6 +18,7 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
     previouses = await object_values_map_async(lookup, lambda);
   }
   async function lambda3(previous) {
+    let value2 = object_property_get(object, property_name);
     const next = await value_get(previous);
     return next;
   }
