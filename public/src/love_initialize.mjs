@@ -10,8 +10,7 @@ export async function love_initialize() {
   let vc = folder_vscode();
   let f_path = file_name_json_folder(vc, "tasks");
   let d_path = data_path();
-  let joined2 = path_join([vc]);
-  let joined = path_join([d_path, vc]);
+  let joined = path_join([d_path, f_path]);
   let file_path_old = folder_public_combine(joined);
   await file_copy_overwrite(file_path_old, file_path_new);
 }
