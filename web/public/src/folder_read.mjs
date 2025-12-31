@@ -1,3 +1,4 @@
+import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { string_split_first } from "../../../love/public/src/string_split_first.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_prefix_without } from "../../../love/public/src/list_map_prefix_without.mjs";
@@ -22,6 +23,7 @@ export async function folder_read(path_folder) {
       return first;
     }
     let mapped2 = list_map(mapped, lambda);
+    let unique = list_unique(list);
     log({
       n,
       mapped2,
