@@ -12,11 +12,11 @@ export async function indexeddb_put(db_get, store, key, value_get) {
   const next = await value_get(f);
   object_replace(f, next);
   let initial = promise_resolved();
-  let previous = global_function_initialize(indexeddb_put, initial);
-  async function lambda2() {
+  async function lambda_async() {
     await indexeddb_put_backend(db_get, store, key, next);
   }
-  let promise = invoke(lambda2);
+  let previous = global_function_initialize(indexeddb_put, initial);
+  let promise = invoke(lambda_async);
   previous.then(promise);
   global_function_set(indexeddb_put, previous);
   return next;
