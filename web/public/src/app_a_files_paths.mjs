@@ -10,7 +10,8 @@ export async function app_a_files_paths() {
   let all = await indexeddb_get_all(app_a_indexeddb_initialize, store);
   let property_name = app_a_indexeddb_path_key();
   let files_paths = list_map_property(all, property_name);
-  let mapped = list_map(list, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list, lambda);
   log({
     files_paths,
   });
