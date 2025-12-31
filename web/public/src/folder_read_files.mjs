@@ -5,7 +5,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 export async function folder_read_files(path_folder) {
   if (browser_is()) {
-    await folder_read_browser(path_folder);
+    let r2 = await folder_read_browser(path_folder2);
     return r;
   }
   let fs = await import("fs");
