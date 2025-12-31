@@ -1,3 +1,4 @@
+import { string_split } from "../../../love/public/src/string_split.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_prefix_without } from "../../../love/public/src/list_map_prefix_without.mjs";
 import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
@@ -16,8 +17,10 @@ export async function folder_read(path_folder) {
     let files_paths = await app_a_files_paths();
     let filtered = list_filter_starts_with(files_paths, prefix);
     let mapped = list_map_prefix_without(filtered, prefix);
-    function lambda(item) {}
-    let mapped2 = list_map(list, lambda);
+    function lambda(item) {
+      let split = string_split(s2, separator);
+    }
+    let mapped2 = list_map(mapped, lambda);
     log({
       n,
       files_paths,
