@@ -9,6 +9,6 @@ export async function love_initialize() {
   let d_path = data_path();
   let f = folder_vscode();
   let joined = path_join([d_path, f]);
-  let combined = folder_public_combine(f_path);
+  let file_path_old = folder_public_combine(joined);
   await file_copy_overwrite(file_path_old, file_path_new);
 }
