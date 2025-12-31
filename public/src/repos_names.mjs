@@ -8,6 +8,10 @@ export async function repos_names() {
   let path_folder = repos_folder();
   let rns = await folder_read(path_folder);
   let ignores = [".vscode"];
-  let f = list_filter(rns, (r) => list_includes_not(ignores, r));
+  function lambda(r) {
+    let n = list_includes_not(ignores, r);
+    return n;
+  }
+  let f = list_filter(rns, lambda);
   return f;
 }
