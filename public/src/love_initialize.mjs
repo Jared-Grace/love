@@ -8,7 +8,7 @@ export async function love_initialize() {
   marker("1");
   let d_path = data_path();
   let f = folder_vscode();
-  let joined2 = path_join(segments);
+  let joined2 = path_join([f]);
   let joined = path_join([d_path, f]);
   let file_path_old = folder_public_combine(joined);
   await file_copy_overwrite(file_path_old, file_path_new);
