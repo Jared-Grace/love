@@ -17,12 +17,12 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
     }
     previouses = await object_values_map_async(lookup, lambda);
   }
-  async function lambda3(previous) {
-    let value2 = object_property_get(object, property_name);
+  async function lambda3(previous, key) {
+    let value2 = object_property_get(lookup, property_name);
     const next = await value_get(previous);
     return next;
   }
-  let nexts = await object_values_map_async(previouses, lambda3);
+  let nexts = await object_map_async(previouses, lambda3);
   const tx = db.transaction(store, "readwrite");
   const s = tx.objectStore(store);
   function lambda2(n) {
