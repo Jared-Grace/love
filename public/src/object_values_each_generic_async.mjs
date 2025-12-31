@@ -1,8 +1,8 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 import { each_object_unordered_async } from "../../../love/public/src/each_object_unordered_async.mjs";
 export async function object_values_each_generic_async(
-  lambda$value$key,
   object,
+  lambda$value$key,
   oad,
 ) {
   marker("1");
