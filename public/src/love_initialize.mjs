@@ -1,3 +1,4 @@
+import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
 import { data_path } from "../../../love/public/src/data_path.mjs";
 import { folder_vscode } from "../../../love/public/src/folder_vscode.mjs";
 import { folder_public_combine } from "../../../love/public/src/folder_public_combine.mjs";
@@ -6,6 +7,7 @@ import { file_copy_overwrite } from "../../../love/public/src/file_copy_overwrit
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function love_initialize() {
   marker("1");
+  let file_name = file_name_json(name);
   let d_path = data_path();
   let vc = folder_vscode();
   let joined2 = path_join([vc]);
