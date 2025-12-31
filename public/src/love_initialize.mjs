@@ -1,3 +1,4 @@
+import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
 import { data_path } from "../../../love/public/src/data_path.mjs";
 import { folder_vscode } from "../../../love/public/src/folder_vscode.mjs";
 import { folder_public_combine } from "../../../love/public/src/folder_public_combine.mjs";
@@ -12,6 +13,7 @@ export async function love_initialize() {
   let d_path = data_path();
   let joined = path_join([d_path, f_path]);
   let file_path_old = folder_public_combine(joined);
-  let joined2 = path_join(segments);
+  let previous = folder_previous();
+  let file_path_new = path_join([previous, f_path]);
   await file_copy_overwrite(file_path_old, file_path_new);
 }
