@@ -10,8 +10,8 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
     const tx = db.transaction(store, "readonly");
     const s = tx.objectStore(store);
     async function lambda(value, key) {
-      let v = await indexeddb_put_item(key, s);
-      return v;
+      let p = await indexeddb_put_item(key, s);
+      return p;
     }
     previouses = await object_values_map_async(lookup, lambda);
   }
