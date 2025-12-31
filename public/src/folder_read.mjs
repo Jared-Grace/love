@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { string_split } from "../../../love/public/src/string_split.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_prefix_without } from "../../../love/public/src/list_map_prefix_without.mjs";
@@ -18,7 +19,8 @@ export async function folder_read(path_folder) {
     let filtered = list_filter_starts_with(files_paths, prefix);
     let mapped = list_map_prefix_without(filtered, prefix);
     function lambda(item) {
-      let split = string_split(s2, separator);
+      let split = string_split(item, s);
+      let first = list_first(list);
     }
     let mapped2 = list_map(mapped, lambda);
     log({
