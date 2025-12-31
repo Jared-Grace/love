@@ -2,6 +2,7 @@
   /* 
   This file is in love/data/.vscode/tasks.json
   Edit there
+  Then run love_initialize
   */
   "version": "2.0.0",
 
