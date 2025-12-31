@@ -5,7 +5,7 @@ export async function object_values_map_async(object, lambda$value$key) {
   marker("1");
   async function lambda(oad) {
     async function lambda2(value, key) {
-      let mapped = await lambda$value(value, key);
+      let mapped = await lambda$value$key(value, key);
       oad(key, mapped);
     }
     await each_object_unordered_async(object, lambda2);
