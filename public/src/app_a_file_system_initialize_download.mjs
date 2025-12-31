@@ -1,7 +1,7 @@
+import { list_to_dictionary } from "../../../love/public/src/list_to_dictionary.mjs";
 import { indexeddb_get_all } from "../../../love/public/src/indexeddb_get_all.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { indexeddb_put_multiple } from "../../../love/public/src/indexeddb_put_multiple.mjs";
-import { list_to_dictionary_key } from "../../../love/public/src/list_to_dictionary_key.mjs";
 import { app_a_file_system_initialize } from "../../../love/public/src/app_a_file_system_initialize.mjs";
 import { app_a } from "../../../love/public/src/app_a.mjs";
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
@@ -15,15 +15,12 @@ export async function app_a_file_system_initialize_download() {
   let db = await app_a_indexeddb_initialize();
   let db_get = lambda_get(db);
   let r = await app_api_fn(app_a_download, []);
-  function lambda2(item2v) {
-    let value_get = lambda_get(item2v);
-    return value_get;
-  }
-  function lambda3(item2k) {
-    let key = object_property_get(item2k, "key");
+  const property = "key";
+  function key_get(item) {
+    let key = object_property_get(item, property);
     return key;
   }
-  let dictionary = list_to_dictionary_key(r, lambda2, lambda3);
+  let dictionary = list_to_dictionary(r, lambda2);
   let store = app_a_file_system_store();
   await indexeddb_put_multiple(db_get, store, dictionary);
   global_function_property_set(indexeddb_get_all, store, r);
