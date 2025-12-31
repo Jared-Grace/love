@@ -1,6 +1,10 @@
+import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
+import { indexeddb_get_all } from "../../../love/public/src/indexeddb_get_all.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 export async function indexeddb_put(db_get, store, key, value_get) {
+  let all = await indexeddb_get_all(db_get, store);
+  let f = list_find_property(all, "key", key);
   const db = await db_get();
   const previous = await new Promise(function lambda3(resolve, reject) {
     const tx = db.transaction(store, "readonly");
