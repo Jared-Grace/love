@@ -8,7 +8,8 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
   const previous = await new Promise(async function lambda3(resolve, reject) {
     const tx = db.transaction(store, "readonly");
     const s = tx.objectStore(store);
-    await each_object_async(object, async function lambda8() {});
+    async function lambda8() {}
+    await each_object_async(object, lambda8);
     const req = s.get(key);
     req.onsuccess = function lambda() {
       let v = resolve(req.result ?? null);
