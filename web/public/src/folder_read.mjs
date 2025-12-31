@@ -5,7 +5,7 @@ import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function folder_read(path_folder) {
   if (browser_is()) {
-    await app_a_files_paths();
+    let files_paths = await app_a_files_paths();
     let n = path_normalize(path_folder);
     let r = await app_api_cache_storage_local_fn(folder_read, arguments);
     return r;
