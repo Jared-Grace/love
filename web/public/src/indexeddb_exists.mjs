@@ -7,8 +7,8 @@ export async function indexeddb_exists(db_get, store, key) {
   marker("1");
   let all = await indexeddb_get_all(db_get, store);
   let f = list_filter_property(all, "key", key);
-  let s1 = list_size_1(list);
-  return f;
+  let s1 = list_size_1(f);
+  return s1;
   const db = await db_get();
   const tx = db.transaction(store, "readonly");
   const s = tx.objectStore(store);
