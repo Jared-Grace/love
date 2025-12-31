@@ -1,4 +1,4 @@
 export function invoke(lambda) {
-  let v = lambda();
-  return v;
+  let r = lambda();
+  return r;
 }
