@@ -1,11 +1,11 @@
-import { app_api_cache_storage_local_fn } from "../../../love/public/src/app_api_cache_storage_local_fn.mjs";
+import { folder_read_browser } from "../../../love/public/src/folder_read_browser.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { list_sort_string } from "../../../love/public/src/list_sort_string.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 export async function folder_read_files(path_folder) {
   if (browser_is()) {
-    let r = await app_api_cache_storage_local_fn(folder_read_files, arguments);
+    await folder_read_browser(path_folder);
     return r;
   }
   let fs = await import("fs");
