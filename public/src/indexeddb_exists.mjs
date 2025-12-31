@@ -8,6 +8,6 @@ export async function indexeddb_exists(db_get, store, key) {
   const property = "key";
   let s1 = list_find_property_exists(all, property, key);
   return s1;
-  let v3 = await indexeddb_exists_backend(db_get, store, key);
-  return v3;
+  let exists = await indexeddb_exists_backend(db_get, store, key);
+  return exists;
 }
