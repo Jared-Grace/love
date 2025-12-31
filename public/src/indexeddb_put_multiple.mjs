@@ -1,5 +1,5 @@
+import { object_values_map_async } from "../../../love/public/src/object_values_map_async.mjs";
 import { indexeddb_put_item } from "../../../love/public/src/indexeddb_put_item.mjs";
-import { each_object_unordered_async } from "../../../love/public/src/each_object_unordered_async.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 export async function indexeddb_put_multiple(db_get, store, lookup) {
@@ -13,8 +13,10 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
     omua;
     previous = await indexeddb_put_item(key, s);
   }
-  async function lambda7(value_get, key) {}
-  await each_object_unordered_async(object, lambda7);
+  let result = await object_values_map_async(
+    object,
+    async function lambda(value) {},
+  );
   const next = await value_get(previous);
   const tx = db.transaction(store, "readwrite");
   const s = tx.objectStore(store);
