@@ -20,7 +20,8 @@ export async function folder_read(path_folder) {
     let mapped = list_map_prefix_without(filtered, prefix);
     function lambda(item) {
       let split = string_split(item, s);
-      let first = list_first(list);
+      let first = list_first(split);
+      return first;
     }
     let mapped2 = list_map(mapped, lambda);
     log({
