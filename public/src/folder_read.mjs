@@ -1,3 +1,4 @@
+import { list_map_prefix_without } from "../../../love/public/src/list_map_prefix_without.mjs";
 import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
 import { string_slash_forward } from "../../../love/public/src/string_slash_forward.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -12,7 +13,8 @@ export async function folder_read(path_folder) {
     let s = string_slash_forward();
     let prefix = "" + n + s;
     let files_paths = await app_a_files_paths();
-    let filtered = list_filter_starts_with(list, prefix2);
+    let filtered = list_filter_starts_with(files_paths, prefix);
+    let mapped = list_map_prefix_without(list, prefix2);
     log({
       n,
       files_paths,
