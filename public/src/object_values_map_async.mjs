@@ -1,10 +1,10 @@
-import { object_values_each_async } from "../../../love/public/src/object_values_each_async.mjs";
+import { object_values_each_generic_async } from "../../../love/public/src/object_values_each_generic_async.mjs";
 import { object_adder_async } from "../../../love/public/src/object_adder_async.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function object_values_map_async(object, lambda$value$key) {
   marker("1");
   async function lambda(oad) {
-    await object_values_each_async(lambda$value$key, oad, object);
+    await object_values_each_generic_async(lambda$value$key, oad, object);
   }
   let result = await object_adder_async(lambda);
   return result;
