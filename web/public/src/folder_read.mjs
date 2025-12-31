@@ -24,7 +24,7 @@ export async function folder_read(path_folder) {
     let mapped2 = list_map(mapped, lambda);
     log({
       n,
-      files_paths,
+      mapped2,
     });
     let r = await app_api_cache_storage_local_fn(folder_read, arguments);
     return r;
