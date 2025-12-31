@@ -26,7 +26,8 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
   async function lambda2(previous) {
     s.put(next);
   }
-  each(list, function lambda7(item) {});
+  function lambda7(item) {}
+  each(list, lambda7);
   await new Promise(function lambda6(resolve, reject) {
     tx.oncomplete = resolve;
     tx.onerror = function lambda4() {
