@@ -6,7 +6,8 @@ import { list_filter } from "../../../love/public/src/list_filter.mjs";
 export async function repos_names() {
   marker("1");
   let path_folder = repos_folder();
-  let rns = await folder_read(path_folder);let ignores=['.vscode']
-  let f=list_filter(rns,r=>list_includes_not(ignores,r))
+  let rns = await folder_read(path_folder);
+  let ignores = [".vscode"];
+  let f = list_filter(rns, (r) => list_includes_not(ignores, r));
   return f;
 }
