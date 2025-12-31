@@ -11,6 +11,7 @@ export async function folder_read(path_folder) {
     let s = string_slash_forward();
     let prefix = "" + n + s;
     let files_paths = await app_a_files_paths();
+    lmsw;
     log({
       n,
       files_paths,
