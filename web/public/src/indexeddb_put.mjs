@@ -5,6 +5,7 @@ import { error } from "../../../love/public/src/error.mjs";
 export async function indexeddb_put(db_get, store, key, value_get) {
   let all = await indexeddb_get_all(db_get, store);
   let f = list_find_property(all, "key", key);
+  const next = await value_get(f);
   const db = await db_get();
   const previous = await new Promise(function lambda3(resolve, reject) {
     const tx = db.transaction(store, "readonly");
@@ -19,7 +20,6 @@ export async function indexeddb_put(db_get, store, key, value_get) {
       return v2;
     };
   });
-  const next = await value_get(previous);
   const tx = db.transaction(store, "readwrite");
   const s = tx.objectStore(store);
   log({
