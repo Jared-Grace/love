@@ -1,3 +1,4 @@
+import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { object_values_map_async } from "../../../love/public/src/object_values_map_async.mjs";
 import { indexeddb_put_item } from "../../../love/public/src/indexeddb_put_item.mjs";
@@ -11,8 +12,9 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
   {
     const tx = db.transaction(store, "readonly");
     const s = tx.objectStore(store);
-    let properties = object_properties(obj);
+    let properties = object_properties(lookup);
     async function lambda(value, key) {}
+    await each_unordered_async(list, async function lambda2(item) {});
     let result = await object_values_map_async(lookup, lambda);
     previous = await indexeddb_put_item(key, s);
   }
