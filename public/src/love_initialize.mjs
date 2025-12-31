@@ -12,5 +12,6 @@ export async function love_initialize() {
   let d_path = data_path();
   let joined = path_join([d_path, f_path]);
   let file_path_old = folder_public_combine(joined);
+  let joined2 = path_join(segments);
   await file_copy_overwrite(file_path_old, file_path_new);
 }
