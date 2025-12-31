@@ -22,6 +22,6 @@ export async function indexeddb_get_all(db_get, store) {
     });
     global_function_property_set(indexeddb_get_all, store, all);
   }
-  let dictionary = global_function_property_get(indexeddb_get_all, store);
-  return dictionary;
+  let list = global_function_property_get(indexeddb_get_all, store);
+  return list;
 }
