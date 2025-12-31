@@ -298,6 +298,7 @@
   "pb": "function_param_swap_beginning",
   "linn": "list_includes_not",
   "gt": "greater_than",
-  "lx": "log_exit"
+  "lx": "log_exit",
+  "lit": "list_intersect"
  }
 }
