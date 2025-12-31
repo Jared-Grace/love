@@ -1,5 +1,5 @@
+import { global_function_get } from "../../../love/public/src/global_function_get.mjs";
 import { indexeddb_put_multiple } from "../../../love/public/src/indexeddb_put_multiple.mjs";
-import { global_function_set } from "../../../love/public/src/global_function_set.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 export async function indexeddb_get_all(db_get, store) {
   let dictionary = global_function_get(indexeddb_put_multiple);
