@@ -20,7 +20,7 @@ export async function app_a_file_system_initialize_download() {
     let key = object_property_get(item, property);
     return key;
   }
-  let dictionary = list_to_dictionary(r, lambda2);
+  let dictionary = list_to_dictionary(r, key_get);
   let store = app_a_file_system_store();
   await indexeddb_put_multiple(db_get, store, dictionary);
   global_function_property_set(indexeddb_get_all, store, r);
