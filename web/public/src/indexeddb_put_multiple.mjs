@@ -23,22 +23,24 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
     return next;
   }
   let nexts = await object_values_map_async(previouses, lambda3);
-  const tx = db.transaction(store, "readwrite");
-  const s = tx.objectStore(store);
-  function lambda2(n) {
-    s.put(n);
+  {
+    const tx = db.transaction(store, "readwrite");
+    const s = tx.objectStore(store);
+    function lambda2(n) {
+      s.put(n);
+    }
+    each_object_values(nexts, lambda2);
+    await new Promise(function lambda6(resolve, reject) {
+      tx.oncomplete = resolve;
+      tx.onerror = function lambda4() {
+        let v3 = reject(tx.error);
+        return v3;
+      };
+      tx.onabort = function lambda5() {
+        let v4 = reject(tx.error);
+        return v4;
+      };
+    });
   }
-  each_object_values(nexts, lambda2);
-  await new Promise(function lambda6(resolve, reject) {
-    tx.oncomplete = resolve;
-    tx.onerror = function lambda4() {
-      let v3 = reject(tx.error);
-      return v3;
-    };
-    tx.onabort = function lambda5() {
-      let v4 = reject(tx.error);
-      return v4;
-    };
-  });
   return nexts;
 }
