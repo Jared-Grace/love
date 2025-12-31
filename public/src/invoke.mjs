@@ -1,3 +1,3 @@
 export function invoke(lambda) {
-  lambda();
+  return lambda();
 }
