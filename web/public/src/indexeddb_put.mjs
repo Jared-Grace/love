@@ -7,8 +7,10 @@ export async function indexeddb_put(db_get, store, key, value_get) {
   let all = await indexeddb_get_all(db_get, store);
   let f = list_find_property(all, "key", key);
   const next = await value_get(f);
-  object_replace(to, from);
+  object_replace(f, next);
   const db = await db_get();
+  if (false) {
+  }
   const previous = await new Promise(function lambda3(resolve, reject) {
     const tx = db.transaction(store, "readonly");
     const s = tx.objectStore(store);
