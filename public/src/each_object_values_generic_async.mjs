@@ -1,6 +1,6 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 import { each_object_unordered_async } from "../../../love/public/src/each_object_unordered_async.mjs";
-export async function object_values_each_generic_async(
+export async function each_object_values_generic_async(
   object,
   lambda$value$key,
   oad,
