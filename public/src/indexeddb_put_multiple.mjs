@@ -9,8 +9,6 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
     const tx = db.transaction(store, "readonly");
     const s = tx.objectStore(store);
     previous = await new Promise(async function lambda3(resolve, reject) {
-      async function lambda7(value_get, key) {}
-      await each_object_unordered_async(object, lambda7);
       const req = s.get(key);
       req.onsuccess = function lambda() {
         let v = resolve(req.result ?? null);
@@ -22,6 +20,8 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
       };
     });
   }
+  async function lambda7(value_get, key) {}
+  await each_object_unordered_async(object, lambda7);
   const next = await value_get(previous);
   const tx = db.transaction(store, "readwrite");
   const s = tx.objectStore(store);
