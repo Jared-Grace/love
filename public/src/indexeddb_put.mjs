@@ -13,6 +13,6 @@ export async function indexeddb_put(db_get, store, key, value_get) {
   async function lambda2() {
     await indexeddb_put_backend(db_get, store, key, next);
   }
-  invoke(lambda2);
+  let promise = invoke(lambda2);
   return next;
 }
