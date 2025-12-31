@@ -15,7 +15,8 @@ export async function app_a_file_system_initialize_download() {
   let db = await app_a_indexeddb_initialize();
   let db_get = lambda_get(db);
   let r = await app_api_fn(app_a_download, []);
-  let dictionary = list_to_dictionary(list, function lambda2(item2) {});
+  function lambda2(item2) {}
+  let dictionary = list_to_dictionary(list, lambda2);
   log("he");
   async function lambda(item) {
     let value_get = lambda_get(item);
