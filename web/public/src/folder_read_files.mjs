@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { list_intersect } from "../../../love/public/src/list_intersect.mjs";
 import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -15,9 +14,6 @@ export async function folder_read_files(path_folder) {
     let unique = object_property_get(r, "unique");
     let combineds = list_map_combine_left(unique, prefix);
     let r2 = list_intersect(filtered, combineds);
-    log({
-      r2,
-    });
     return r2;
   }
   let fs = await import("fs");
