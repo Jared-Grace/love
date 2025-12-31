@@ -23,10 +23,10 @@ export async function folder_read(path_folder) {
       return first;
     }
     let mapped2 = list_map(mapped, lambda);
-    let unique = list_unique(list);
+    let unique = list_unique(mapped2);
     log({
       n,
-      mapped2,
+      unique,
     });
     let r = await app_api_cache_storage_local_fn(folder_read, arguments);
     return r;
