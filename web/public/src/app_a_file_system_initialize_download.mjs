@@ -25,6 +25,6 @@ export async function app_a_file_system_initialize_download() {
   let dictionary = list_to_dictionary_key(r, lambda2, lambda3);
   let store = app_a_file_system_store();
   await indexeddb_put_multiple(db_get, store, dictionary);
-  global_function_set(fn, value);
+  global_function_set(indexeddb_put_multiple, dictionary);
   storage_local_set(app_a, app_a_file_system_initialize.name, true);
 }
