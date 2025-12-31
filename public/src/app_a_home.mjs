@@ -1,3 +1,4 @@
+import { app_a_files_paths } from "../../../love/public/src/app_a_files_paths.mjs";
 import { list_filter_includes } from "../../../love/public/src/list_filter_includes.mjs";
 import { functions_path } from "../../../love/public/src/functions_path.mjs";
 import { string_pad } from "../../../love/public/src/string_pad.mjs";
@@ -5,11 +6,6 @@ import { function_name_extension } from "../../../love/public/src/function_name_
 import { list_filter_ends_with } from "../../../love/public/src/list_filter_ends_with.mjs";
 import { function_path_to_name } from "../../../love/public/src/function_path_to_name.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { app_a_indexeddb_path_key } from "../../../love/public/src/app_a_indexeddb_path_key.mjs";
-import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
-import { app_a_file_system_store } from "../../../love/public/src/app_a_file_system_store.mjs";
-import { indexeddb_get_all } from "../../../love/public/src/indexeddb_get_all.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
@@ -38,10 +34,7 @@ export async function app_a_home(context) {
   log({
     on_keydowns,
   });
-  let store = app_a_file_system_store();
-  let all = await indexeddb_get_all(app_a_indexeddb_initialize, store);
-  let property_name = app_a_indexeddb_path_key();
-  let mapped = list_map_property(all, property_name);
+  let mapped = await app_a_files_paths();
   let suffix = function_name_extension();
   let filtered3 = list_filter_ends_with(mapped, suffix);
   let joined = functions_path();
