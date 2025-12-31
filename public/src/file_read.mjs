@@ -4,7 +4,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { file_path_normalize } from "../../../love/public/src/file_path_normalize.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
 import { app_a_file_system_store } from "../../../love/public/src/app_a_file_system_store.mjs";
-import { indexeddb_read } from "../../../love/public/src/indexeddb_read.mjs";
+import { indexeddb_get } from "../../../love/public/src/indexeddb_get.mjs";
 import { app_a_file_system_initialize } from "../../../love/public/src/app_a_file_system_initialize.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -13,7 +13,7 @@ export async function file_read(file_path) {
     file_path = file_path_normalize(file_path);
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
-    let item = await indexeddb_read(
+    let item = await indexeddb_get(
       app_a_indexeddb_initialize,
       store,
       file_path,
