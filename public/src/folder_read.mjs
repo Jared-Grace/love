@@ -1,3 +1,4 @@
+import { string_slash_forward } from "../../../love/public/src/string_slash_forward.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_a_files_paths } from "../../../love/public/src/app_a_files_paths.mjs";
 import { path_normalize } from "../../../love/public/src/path_normalize.mjs";
@@ -6,8 +7,9 @@ import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function folder_read(path_folder) {
   if (browser_is()) {
-    let files_paths = await app_a_files_paths();
     let n = path_normalize(path_folder);
+    let s = string_slash_forward();
+    let files_paths = await app_a_files_paths();
     log({
       n,
       files_paths,
