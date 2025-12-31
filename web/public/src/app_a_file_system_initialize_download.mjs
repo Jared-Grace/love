@@ -28,8 +28,7 @@ export async function app_a_file_system_initialize_download() {
   await indexeddb_put_multiple(db_get, store, dictionary);
   global_function_property_set(indexeddb_put_multiple, store, dictionary);
   log({
-    m: 1,
-    dictionary,
+    r,
   });
   storage_local_set(app_a, app_a_file_system_initialize.name, true);
 }
