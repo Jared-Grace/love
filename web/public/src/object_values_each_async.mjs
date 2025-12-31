@@ -5,8 +5,8 @@ export async function object_values_each_async(object, lambda$value$key) {
   marker("1");
   let v = await object_values_each_generic_async(
     lambda$value$key,
-    noop,
     object,
+    noop,
   );
   return v;
 }
