@@ -16,7 +16,7 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
     }
     previouses = await object_values_map_async(lookup, lambda);
   }
-  async function lambda3(previous, ) {
+  async function lambda3(previous) {
     const next = await value_get(previous);
     return next;
   }
