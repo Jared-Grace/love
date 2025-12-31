@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_a_files_paths } from "../../../love/public/src/app_a_files_paths.mjs";
 import { path_normalize } from "../../../love/public/src/path_normalize.mjs";
 import { app_api_cache_storage_local_fn } from "../../../love/public/src/app_api_cache_storage_local_fn.mjs";
@@ -7,6 +8,10 @@ export async function folder_read(path_folder) {
   if (browser_is()) {
     let files_paths = await app_a_files_paths();
     let n = path_normalize(path_folder);
+    log({
+      N,
+      files_paths,
+    });
     let r = await app_api_cache_storage_local_fn(folder_read, arguments);
     return r;
   }
