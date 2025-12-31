@@ -5,7 +5,7 @@ import { error } from "../../../love/public/src/error.mjs";
 export async function indexeddb_put_multiple(db_get, store, lookup) {
   marker("1");
   const db = await db_get();
-  let previous = null;
+  let previouses = null;
   {
     const tx = db.transaction(store, "readonly");
     const s = tx.objectStore(store);
@@ -13,13 +13,13 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
       let v = await indexeddb_put_item(key, s);
       return v;
     }
-    previous = await object_values_map_async(lookup, lambda);
+    previouses = await object_values_map_async(lookup, lambda);
   }
   const tx = db.transaction(store, "readwrite");
   const s = tx.objectStore(store);
   async function lambda2(value2, key2) {}
-  let result = await object_values_map_async(object, lambda2);
-  const next = await value_get(previous);
+  let result = await object_values_map_async(previouses, lambda2);
+  const next = await value_get(previouses);
   s.put(next);
   await new Promise(function lambda6(resolve, reject) {
     tx.oncomplete = resolve;
