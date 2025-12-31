@@ -4,10 +4,10 @@ import { error } from "../../../love/public/src/error.mjs";
 export async function indexeddb_put_multiple(db_get, store, lookup) {
   marker("1");
   const db = await db_get();
+    let previous = null;
   {
     const tx = db.transaction(store, "readonly");
     const s = tx.objectStore(store);
-    let previous = null;
     previous = await new Promise(async function lambda3(resolve, reject) {
       async function lambda7(value_get, key) {}
       await each_object_unordered_async(object, lambda7);
