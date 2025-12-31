@@ -14,8 +14,7 @@ export async function app_a_file_system_initialize_download() {
   let db = await app_a_indexeddb_initialize();
   let db_get = lambda_get(db);
   let r = await app_api_fn(app_a_download, []);
-  const property = "key";
-  let dictionary = list_to_dictionary_property(r, property);
+  let dictionary = list_to_dictionary_property(r, "key");
   let store = app_a_file_system_store();
   await indexeddb_put_multiple(db_get, store, dictionary);
   global_function_property_set(indexeddb_get_all, store, r);
