@@ -1,4 +1,4 @@
-import { list_to_dictionary } from "../../../love/public/src/list_to_dictionary.mjs";
+import { list_to_dictionary_key } from "../../../love/public/src/list_to_dictionary_key.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_a_file_system_initialize } from "../../../love/public/src/app_a_file_system_initialize.mjs";
 import { app_a } from "../../../love/public/src/app_a.mjs";
@@ -16,7 +16,7 @@ export async function app_a_file_system_initialize_download() {
   let db_get = lambda_get(db);
   let r = await app_api_fn(app_a_download, []);
   function lambda2(item2) {}
-  let dictionary = list_to_dictionary(list, lambda2);
+  let dictionary = list_to_dictionary_key(list, lambda2);
   log("he");
   async function lambda(item) {
     let value_get = lambda_get(item);
