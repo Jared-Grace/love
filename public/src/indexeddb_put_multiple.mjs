@@ -1,3 +1,4 @@
+import { object_values_each_async } from "../../../love/public/src/object_values_each_async.mjs";
 import { object_values_map_async } from "../../../love/public/src/object_values_map_async.mjs";
 import { indexeddb_put_item } from "../../../love/public/src/indexeddb_put_item.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -21,7 +22,7 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
     const next = await value_get(previous);
     s.put(next);
   }
-  let result = await object_values_map_async(previouses, lambda2);
+  let result = await object_values_each_async(previouses, lambda2);
   await new Promise(function lambda6(resolve, reject) {
     tx.oncomplete = resolve;
     tx.onerror = function lambda4() {
