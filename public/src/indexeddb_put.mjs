@@ -8,8 +8,9 @@ export async function indexeddb_put(db_get, store, key, value_get) {
   let f = list_find_property(all, "key", key);
   const next = await value_get(f);
   object_replace(f, next);
-  function lambda2() {}
+  async function lambda2() {
+    await indexeddb_put_backend(db_get, store, key, next);
+  }
   invoke(lambda2);
-  await indexeddb_put_backend(db_get, store, key, next);
   return next;
 }
