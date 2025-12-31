@@ -1,1 +1,4 @@
-export function object_values() {}
+import { marker } from "../../../love/public/src/marker.mjs";
+export function object_values() {
+  marker("1");
+}
