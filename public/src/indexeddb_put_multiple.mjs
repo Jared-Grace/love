@@ -4,7 +4,7 @@ import { error } from "../../../love/public/src/error.mjs";
 export async function indexeddb_put_multiple(db_get, store, lookup) {
   marker("1");
   const db = await db_get();
-    let previous = null;
+  let previous = null;
   {
     const tx = db.transaction(store, "readonly");
     const s = tx.objectStore(store);
