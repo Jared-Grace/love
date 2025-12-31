@@ -17,10 +17,11 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
   }
   const tx = db.transaction(store, "readwrite");
   const s = tx.objectStore(store);
-  async function lambda2(value2, key2) {}
+  async function lambda2(previous) {
+    const next = await value_get(previous);
+    s.put(next);
+  }
   let result = await object_values_map_async(previouses, lambda2);
-  const next = await value_get(previouses);
-  s.put(next);
   await new Promise(function lambda6(resolve, reject) {
     tx.oncomplete = resolve;
     tx.onerror = function lambda4() {
