@@ -9,7 +9,7 @@ export async function folder_read(path_folder) {
     let files_paths = await app_a_files_paths();
     let n = path_normalize(path_folder);
     log({
-      N,
+      n,
       files_paths,
     });
     let r = await app_api_cache_storage_local_fn(folder_read, arguments);
