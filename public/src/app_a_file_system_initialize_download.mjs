@@ -1,4 +1,3 @@
-import { not } from "../../../love/public/src/not.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { indexeddb_put_multiple } from "../../../love/public/src/indexeddb_put_multiple.mjs";
@@ -29,7 +28,8 @@ export async function app_a_file_system_initialize_download() {
   await indexeddb_put_multiple(db_get, store, dictionary);
   global_function_property_set(indexeddb_put_multiple, store, dictionary);
   log({
-    m: not(dictionary),
+    m: 1,
+    dictionary,
   });
   storage_local_set(app_a, app_a_file_system_initialize.name, true);
 }
