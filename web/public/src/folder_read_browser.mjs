@@ -19,8 +19,8 @@ export async function folder_read_browser(path_folder) {
   }
   let mapped2 = list_map(mapped, lambda);
   let unique = list_unique(mapped2);
-  let v = {
+  let r = {
     unique,
   };
-  return v;
+  return r;
 }
