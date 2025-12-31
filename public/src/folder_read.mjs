@@ -14,7 +14,7 @@ export async function folder_read(path_folder) {
     let prefix = "" + n + s;
     let files_paths = await app_a_files_paths();
     let filtered = list_filter_starts_with(files_paths, prefix);
-    let mapped = list_map_prefix_without(list, prefix2);
+    let mapped = list_map_prefix_without(filtered, prefix);
     log({
       n,
       files_paths,
