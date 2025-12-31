@@ -1,4 +1,4 @@
 export function data_folder() {
-  let v = "data";
-  return v;
+  let d = "data";
+  return d;
 }
