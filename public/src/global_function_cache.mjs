@@ -3,7 +3,7 @@ import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { global_function_initialize } from "../../../love/public/src/global_function_initialize.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
-export function global_function_cache(fn,key, value_get) {
+export function global_function_cache(fn, key, value_get) {
   let json = json_to(key);
   let value = global_function_initialize(fn, {
     json: null,
