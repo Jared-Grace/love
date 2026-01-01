@@ -1,9 +1,6 @@
+import { global_function_cache_generic } from "../../../love/public/src/global_function_cache_generic.mjs";
 import { global_function_property_initialize } from "../../../love/public/src/global_function_property_initialize.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { equal_not } from "../../../love/public/src/equal_not.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { json_to } from "../../../love/public/src/json_to.mjs";
 export function global_function_property_cache(
   fn,
   property_name,
@@ -15,13 +12,6 @@ export function global_function_property_cache(
     json: null,
     result: null,
   });
-  let json = json_to(key);
-  let json_existing = object_property_get(c, "json");
-  if (equal_not(json, json_existing)) {
-    let r = value_get();
-    object_property_set(c, "result", r);
-    object_property_set(c, "json", json);
-  }
-  let result = object_property_get(c, "result");
+  let result = global_function_cache_generic(key, c, value_get);
   return result;
 }
