@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
@@ -10,6 +11,7 @@ import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 export async function function_dependencies_code_multiple(f_names) {
   marker("1");
+  log({});
   let ds = await function_dependencies(f_names);
   let mapped = list_map(ds, function_parse_declaration);
   let waited = await list_wait(mapped);
