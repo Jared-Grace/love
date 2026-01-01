@@ -14,4 +14,5 @@ export function list_unique(list) {
   }
   each(list, lambda);
   return unique;
+  let found = new Set();
 }
