@@ -17,7 +17,7 @@ export async function app_a_download() {
     let v = {
       key: path,
       compressed,
-      [function_name_extension()]: js_unparse(),
+      [function_name_extension()]: js_unparse(contents),
     };
     return v;
   }
