@@ -36,7 +36,6 @@ export async function file_overwrite(file_path, contents) {
       }
       let list = object_property_get(f, "versions");
       list_add(list, contents);
-      log(f);
       let compressed_after = await json_compress(f);
       object_property_set(previous, p, compressed_after);
       return previous;

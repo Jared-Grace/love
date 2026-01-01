@@ -122,9 +122,6 @@ export async function app_reply_main(context) {
         }
         each(verses, lambda7);
       }
-      log({
-        languages_chosen,
-      });
       let copy = list_copy_reverse(languages_chosen);
       await each_async(copy, lambda5);
     }
@@ -162,7 +159,6 @@ export async function app_reply_main(context) {
       [result],
     ]);
     let joined = await list_join_newline_2_copy(concated);
-    log(joined);
   }
   function lambda6(event) {
     let key = object_property_get(event, "key");
