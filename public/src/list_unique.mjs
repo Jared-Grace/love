@@ -9,7 +9,7 @@ export function list_unique(list) {
   let found = set_new();
   let unique = [];
   function lambda(item) {
-    let a = found.has(item);
+    let a = set_includes(found, item);
     if (not(a)) {
       list_add(unique, item);
     }
@@ -17,3 +17,7 @@ export function list_unique(list) {
   each(list, lambda);
   return unique;
 }
+function set_includes(found, item) {
+  return found.has(item);
+}
+
