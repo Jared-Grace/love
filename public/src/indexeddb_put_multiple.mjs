@@ -25,7 +25,7 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
     return includes;
   }
   let filtered = list_filter(existing, lambda);
-  list_remove_multiple(removals, list);
+  list_remove_multiple(existing, filtered);
   global_function_property_set(indexeddb_get_all, store, v);
   marker("1");
   async function lambda_async() {
