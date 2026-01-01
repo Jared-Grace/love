@@ -10,7 +10,6 @@ import { prayer_blessing_expand } from "../../../love/public/src/prayer_blessing
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
