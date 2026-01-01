@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { global_function_property_initialize } from "../../../love/public/src/global_function_property_initialize.mjs";
@@ -16,7 +17,9 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
     store,
     [],
   );
-  function lambda(item) {}
+  function lambda(item) {
+    let value = object_property_get(object, property_name);
+  }
   let filtered = list_filter(list, lambda);
   global_function_property_set(indexeddb_get_all, store, v);
   marker("1");
