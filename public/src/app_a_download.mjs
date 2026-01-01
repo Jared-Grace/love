@@ -1,3 +1,4 @@
+import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { string_ends_with } from "../../../love/public/src/string_ends_with.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { function_name_extension } from "../../../love/public/src/function_name_extension.mjs";
@@ -17,7 +18,8 @@ export async function app_a_download() {
     };
     let suffix = function_name_extension();
     let ew = string_ends_with(path, suffix);
-    if (false) {
+    if (ew) {
+      object_property_set_exists_not(object, property_name, value);
     }
     let compressed = await json_compress(data);
     let v = {
