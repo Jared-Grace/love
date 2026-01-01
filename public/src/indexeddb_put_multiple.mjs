@@ -27,6 +27,7 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
     filtered,
     v,
     existing,
+    keys,
   });
   list_add_multiple(existing, v);
   marker("1");
