@@ -34,7 +34,7 @@ export async function app_reply_main(context) {
   let choices = object_property_get(r, "choices");
   let languages = object_property_get(r, "languages");
   let languages_chosen_default = list_take(languages, 2);
-  let languages_chosen = null;
+  let languages_chosen = [];
   languages_chosen_reset();
   list_sort_string_property(languages, "name");
   let root = object_property_get(r, "root");
