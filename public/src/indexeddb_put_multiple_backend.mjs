@@ -1,7 +1,7 @@
 import { error } from "../../../love/public/src/error.mjs";
 import { each_object_values } from "../../../love/public/src/each_object_values.mjs";
-export async function indexeddb_put_multiple_backend(db, store, nexts) {
-  const tx = db.transaction(store, "readwrite");
+export async function indexeddb_put_multiple_backend(db_get, store, nexts) {
+  const tx = await db_get().transaction(store, "readwrite");
   const s = tx.objectStore(store);
   function lambda2(n) {
     s.put(n);
