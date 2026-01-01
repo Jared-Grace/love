@@ -1,3 +1,4 @@
+import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -19,6 +20,7 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
   );
   function lambda(item) {
     let k = object_property_get(item, key);
+    let includes = list_includes(list2, item2);
   }
   let filtered = list_filter(list, lambda);
   global_function_property_set(indexeddb_get_all, store, v);
