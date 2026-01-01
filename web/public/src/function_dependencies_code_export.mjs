@@ -1,7 +1,6 @@
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { global_name } from "../../../love/public/src/global_name.mjs";
 import { js_code_export_wrapped } from "../../../love/public/src/js_code_export_wrapped.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
