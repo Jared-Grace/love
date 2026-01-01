@@ -19,6 +19,10 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
   function lambda(item) {
     let k = object_property_get(item, key);
     let includes = list_includes(keys, k);
+    log({
+      k,
+      includes,
+    });
     return includes;
   }
   let filtered = list_filter(existing, lambda);
