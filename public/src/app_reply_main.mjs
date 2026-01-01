@@ -57,7 +57,8 @@ export async function app_reply_main(context) {
     each(languages_chosen_default, lambda14);
   }
   async function love() {
-    let languages_chosen_before = list_copy(languages_chosen);
+    let languages_chosen_before = languages_chosen;
+    languages_chosen = list_copy(languages_chosen);
     languages_chosen_reset();
     function lambda13(language) {
       list_add(languages_chosen, language);
