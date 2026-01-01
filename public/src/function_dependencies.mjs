@@ -1,4 +1,3 @@
-import { list_to_dictionary_async } from "../../../love/public/src/list_to_dictionary_async.mjs";
 import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
