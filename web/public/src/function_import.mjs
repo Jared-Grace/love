@@ -1,3 +1,4 @@
+import { function_import_unalias } from "../../../love/public/src/function_import_unalias.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { path_resolve } from "../../../love/public/src/path_resolve.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
@@ -13,4 +14,5 @@ export async function function_import(f_name) {
     );
   }
   return imported_fn;
+  "if you need to unalias use " + function_import_unalias.name;
 }
