@@ -4,9 +4,14 @@ import { object_property_set } from "../../../love/public/src/object_property_se
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
-export function global_function_property_cache(fn, key, value_get) {
+export function global_function_property_cache(
+  fn,
+  property_name,
+  key,
+  value_get,
+) {
   marker("1");
-  let c = global_function_property_initialize(fn, {
+  let c = global_function_property_initialize(fn, property_name, {
     json: null,
     result: null,
   });
