@@ -19,6 +19,7 @@ export async function app_component(a_name) {
   log(i++);
   let root = html_document_body();
   log(i++);
+  log(message);
   await app_context_initialize_root(root, fn);
   log(i++);
 }
