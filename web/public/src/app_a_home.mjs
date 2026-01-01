@@ -31,9 +31,6 @@ export async function app_a_home(context) {
   }
   let on_keydown = html_on_enter_lambda(on_enter);
   let on_keydowns = app_a_on_keydown_add(context, on_keydown);
-  log({
-    on_keydowns,
-  });
   let mapped = await app_a_files_paths();
   let suffix = function_name_extension();
   let filtered3 = list_filter_ends_with(mapped, suffix);

@@ -11,9 +11,7 @@ export async function function_dependencies_code_export(f_name) {
   marker("1");
   let global_init = js_code_global_init();
   let i = 10;
-  log(i++);
   let v = await function_dependencies_code(f_name);
-  log(i++);
   let externals = object_property_get(v, "externals");
   let v2 = {
     get: async function lambda() {
@@ -23,7 +21,6 @@ export async function function_dependencies_code_export(f_name) {
       let g = js_code_export_wrapped(gn);
       let parts = [global_init, dependencies, e, g];
       let code = list_join_newline(parts);
-      log(code);
       const blob = new Blob([code], {
         type: "text/javascript",
       });
