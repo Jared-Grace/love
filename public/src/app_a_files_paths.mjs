@@ -1,5 +1,3 @@
-import { path_normalize } from "../../../love/public/src/path_normalize.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_a_indexeddb_path_key } from "../../../love/public/src/app_a_indexeddb_path_key.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
@@ -9,7 +7,6 @@ export async function app_a_files_paths() {
   let store = app_a_file_system_store();
   let all = await indexeddb_get_all(app_a_indexeddb_initialize, store);
   let property_name = app_a_indexeddb_path_key();
-  let mapped = list_map_property(all, property_name);
-  let files_paths = list_map(mapped, path_normalize);
+  let files_paths = list_map_property(all, property_name);
   return files_paths;
 }
