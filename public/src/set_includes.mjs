@@ -1,4 +1,4 @@
-export function set_includes(found, item) {
-  let v = found.has(item);
+export function set_includes(set, item) {
+  let v = set.has(item);
   return v;
 }
