@@ -15,7 +15,10 @@ export async function app_a_download() {
       versions: [contents],
       [function_name_extension()]: js_unparse(contents),
     };
-    let ew = string_ends_with(s, suffix);
+    let suffix = function_name_extension();
+    let ew = string_ends_with(path, suffix);
+    if (false) {
+    }
     let compressed = await json_compress(data);
     let v = {
       key: path,
