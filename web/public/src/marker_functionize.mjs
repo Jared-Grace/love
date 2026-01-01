@@ -37,11 +37,13 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
   await function_transform(f_name, lambda_marker);
   async function lambda_marker(ast) {
     let a_from = js_marker_named_ast_arg(ast, m_name_from);
-    let { index: index_from } = marker_next_index(a_from);
+    let v2 = marker_next_index(a_from);
+    let index_from = object_property_get(v2, "index");
     let a_to = js_marker_named_ast_arg(ast, m_name_to);
-    let { index: index_to } = marker_previous_index(a_to);
-    let { stack2: stack2_from } = a_from;
-    let { stack2: stack2_to } = a_to;
+    let v3 = marker_previous_index(a_to);
+    let index_to = object_property_get(v3, "index");
+    let stack2_from = object_property_get(a_from, "stack2");
+    let stack2_to = object_property_get(a_to, "stack2");
     assert(stack2_from === stack2_to);
     let range = list_range(stack2_from, index_from, index_to);
     function lambda(r) {
@@ -53,12 +55,13 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     let declaration = js_parse_statement_module(code_declaration);
     let body_block = js_declaration_to_block_body(declaration);
     list_add_multiple(body_block, range);
-    let { body } = ast;
+    let body = object_property_get(ast, "body");
     list_add(body, declaration);
     function lambda3(la) {
       function lambda2(v) {
         let defineds = js_identifier_defineds(v);
-        let { node, stack } = v;
+        let stack = object_property_get(v, "stack");
+        let node = object_property_get(v, "node");
         let stack1 = list_get_end(stack, 1);
         if (js_node_type_is(stack1, "Property")) {
           if (object_property_equals(stack1, "key", node)) {
