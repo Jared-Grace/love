@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { list_remove_multiple } from "../../../love/public/src/list_remove_multiple.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
@@ -27,6 +28,10 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
   }
   let filtered = list_filter(existing, lambda);
   list_remove_multiple(existing, filtered);
+  log({
+    filtered,
+    v,
+  });
   list_add_multiple(existing, v);
   marker("1");
   async function lambda_async() {
