@@ -6,6 +6,7 @@ import { indexeddb_put_multiple_backend } from "../../../love/public/src/indexed
 import { indexeddb_next } from "../../../love/public/src/indexeddb_next.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function indexeddb_put_multiple(db_get, store, lookup) {
+  let key = "key";
   let v = object_values(lookup);
   let existing = global_function_property_initialize(
     indexeddb_get_all,
