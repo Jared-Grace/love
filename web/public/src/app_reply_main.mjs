@@ -50,6 +50,7 @@ export async function app_reply_main(context) {
     "1. What language or languages you want the Bible verses to be translated into?",
   );
   function languages_chosen_reset() {
+    list_clear;
     languages_chosen = list_copy(languages_chosen_default);
   }
   async function love() {
