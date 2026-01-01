@@ -14,7 +14,9 @@ export async function app_component(a_name) {
   code += newline() + combined;
   let fn = eval(code);
   let root = html_document_body();
-  function lambda2() {}
+  function lambda2() {
+    app_name_main();
+  }
   let text = app_karate_button_back_text();
   let component = html_button(parent, text, lambda2);
   await app_context_initialize_root(root, fn);
