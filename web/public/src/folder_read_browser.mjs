@@ -1,4 +1,4 @@
-import { global_function_cache } from "../../../love/public/src/global_function_cache.mjs";
+import { global_function_property_cache } from "../../../love/public/src/global_function_property_cache.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -11,12 +11,10 @@ import { path_normalize } from "../../../love/public/src/path_normalize.mjs";
 export async function folder_read_browser(path_folder) {
   marker("1");
   let files_paths = await app_a_files_paths();
-  let r = global_function_cache(
+  let r = global_function_property_cache(
     folder_read_browser,
-    {
-      path_folder,
-      files_paths,
-    },
+    path_folder,
+    files_paths,
     value_get,
   );
   return r;
