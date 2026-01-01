@@ -13,13 +13,13 @@ export function global_function_cache(fn, key, value_get) {
   let json_existing = object_property_get(c, "json");
   if (equal_not(json, json_existing)) {
     let r = value_get();
+    log({
+      r,
+      json,
+    });
     object_property_set(c, "result", r);
     object_property_set(c, "json", json);
   }
   let result = object_property_get(c, "result");
   return result;
-  log({
-    r,
-    json,
-  });
 }
