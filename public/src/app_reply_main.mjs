@@ -51,7 +51,8 @@ export async function app_reply_main(context) {
   );
   function languages_chosen_reset() {
     list_empty(languages_chosen);
-    each(list, function lambda14(item3) {});
+    function lambda14(item3) {}
+    each(list, lambda14);
     languages_chosen = list_copy(languages_chosen_default);
   }
   async function love() {
