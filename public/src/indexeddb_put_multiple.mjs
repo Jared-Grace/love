@@ -20,7 +20,8 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
   );
   function lambda(item) {
     let k = object_property_get(item, key);
-    let includes = list_includes(list2, item2);
+    let includes = list_includes(keys, k);
+    return includes;
   }
   let filtered = list_filter(list, lambda);
   global_function_property_set(indexeddb_get_all, store, v);
