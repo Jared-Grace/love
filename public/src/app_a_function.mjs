@@ -12,7 +12,6 @@ import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 import { app_a_overlay_container } from "../../../love/public/src/app_a_overlay_container.mjs";
 import { app_a_choice_close } from "../../../love/public/src/app_a_choice_close.mjs";
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { html_loading } from "../../../love/public/src/html_loading.mjs";
 import { emoji_run } from "../../../love/public/src/emoji_run.mjs";
 import { app_a_buttons_shortcuts } from "../../../love/public/src/app_a_buttons_shortcuts.mjs";
