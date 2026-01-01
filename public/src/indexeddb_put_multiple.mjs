@@ -13,6 +13,7 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
     store,
     [],
   );
+  lflp;
   global_function_property_set(indexeddb_get_all, store, v);
   marker("1");
   async function lambda_async() {
