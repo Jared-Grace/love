@@ -1,3 +1,4 @@
+import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { newline } from "../../../love/public/src/newline.mjs";
@@ -14,6 +15,7 @@ export async function app_component(a_name) {
   let fn = eval(code);
   let root = html_document_body();
   function lambda2() {}
+  let text = app_karate_button_back_text();
   let component = html_button(parent, text, lambda2);
   await app_context_initialize_root(root, fn);
 }
