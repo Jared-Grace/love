@@ -8,5 +8,6 @@ export async function function_names_to_acronyms() {
   let dictionary = list_to_dictionary_value(f_names, function_name_to_acronym);
   let acronyms = object_invert(dictionary);
   return acronyms;
-  let json = json_to(object);
+  let json = json_to(f_names);
+  gfi;
 }
