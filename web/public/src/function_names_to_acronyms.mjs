@@ -28,4 +28,5 @@ export async function function_names_to_acronyms() {
     object_property_set(value, "json", json2);
   }
   let result2 = object_property_get(value, "result");
+  return result2;
 }
