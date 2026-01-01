@@ -1,3 +1,4 @@
+import { string_ends_with } from "../../../love/public/src/string_ends_with.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { function_name_extension } from "../../../love/public/src/function_name_extension.mjs";
 import { json_compress } from "../../../love/public/src/json_compress.mjs";
@@ -14,6 +15,7 @@ export async function app_a_download() {
       versions: [contents],
       [function_name_extension()]: js_unparse(contents),
     };
+    let ew = string_ends_with(s, suffix);
     let compressed = await json_compress(data);
     let v = {
       key: path,
