@@ -10,7 +10,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function indexeddb_put_multiple(db_get, store, lookup) {
   let key = "key";
   let v = object_values(lookup);
-  let mapped = list_map_property(list2, property_name);
+  let keys = list_map_property(v, key);
   let existing = global_function_property_initialize(
     indexeddb_get_all,
     store,
