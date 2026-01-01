@@ -5,16 +5,16 @@ import { global_function_initialize } from "../../../love/public/src/global_func
 import { json_to } from "../../../love/public/src/json_to.mjs";
 export function global_function_cache(fn, key, value_get) {
   let json = json_to(key);
-  let value = global_function_initialize(fn, {
+  let c = global_function_initialize(fn, {
     json: null,
     result: null,
   });
-  let json_existing = object_property_get(value, "json");
+  let json_existing = object_property_get(c, "json");
   if (equal_not(json, json_existing)) {
     let r = value_get();
-    object_property_set(value, "result", r);
-    object_property_set(value, "json", json);
+    object_property_set(c, "result", r);
+    object_property_set(c, "json", json);
   }
-  let result = object_property_get(value, "result");
+  let result = object_property_get(c, "result");
   return result;
 }
