@@ -12,12 +12,12 @@ export async function app_a_download() {
     let contents = await file_read(path);
     let data = {
       versions: [contents],
+      [function_name_extension()]: js_unparse(contents),
     };
     let compressed = await json_compress(data);
     let v = {
       key: path,
       compressed,
-      [function_name_extension()]: js_unparse(contents),
     };
     return v;
   }
