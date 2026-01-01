@@ -1,3 +1,4 @@
+import { global_function_initialize } from "../../../love/public/src/global_function_initialize.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { object_invert } from "../../../love/public/src/object_invert.mjs";
 import { function_name_to_acronym } from "../../../love/public/src/function_name_to_acronym.mjs";
@@ -9,5 +10,5 @@ export async function function_names_to_acronyms() {
   let acronyms = object_invert(dictionary);
   return acronyms;
   let json = json_to(f_names);
-  gfi;
+  let value = global_function_initialize(fn, initial);
 }
