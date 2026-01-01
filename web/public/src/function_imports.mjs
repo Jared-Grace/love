@@ -1,7 +1,9 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { function_parse } from "../../../love/public/src/function_parse.mjs";
 import { js_imports } from "../../../love/public/src/js_imports.mjs";
-import { function_parse_unaliased } from "../../../love/public/src/function_parse_unaliased.mjs";
 export async function function_imports(f_name) {
-  let { ast } = await function_parse_unaliased(f_name);
+  let v = await function_parse(f_name);
+  let ast = object_property_get(v, "ast");
   let imports = js_imports(ast);
   return imports;
 }
