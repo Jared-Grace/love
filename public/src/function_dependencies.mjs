@@ -9,10 +9,8 @@ import { visit_unique_async } from "../../../love/public/src/visit_unique_async.
 import { function_imports } from "../../../love/public/src/function_imports.mjs";
 export async function function_dependencies(f_names) {
   let f_names2 = await functions_names();
-  let dictionary = await list_to_dictionary_async(
-    list,
-    async function lambda5(item2) {},
-  );
+  async function lambda5(item2) {}
+  let dictionary = await list_to_dictionary_async(list, lambda5);
   async function lambda4(f_name) {
     await function_exists_assert(f_name);
   }
