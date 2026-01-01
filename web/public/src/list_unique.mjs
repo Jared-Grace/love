@@ -10,7 +10,7 @@ export function list_unique(list) {
   let unique = [];
   function lambda(item) {
     let a = set_includes(found, item);
-    if (not(a)) {
+    if (not(a)) {found.add(a)
       list_add(unique, item);
     }
   }
