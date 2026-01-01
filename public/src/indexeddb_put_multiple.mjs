@@ -24,9 +24,8 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
     return includes;
   }
   let filtered = list_filter(existing, lambda);
-  list_remove_multiple(existing, filtered);
-  let v2 = marker("1");
-  (lambda, v2);
+  list_remove_multiple(existing, filtered);lam
+  marker("1");
   async function lambda_async() {
     await indexeddb_put_multiple_backend(db_get, store, lookup);
   }
