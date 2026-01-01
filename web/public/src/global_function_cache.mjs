@@ -10,6 +10,9 @@ export function global_function_cache(fn, key, value_get) {
     json: null,
     result: null,
   });
+  log({
+    c,
+  });
   let json_existing = object_property_get(c, "json");
   if (equal_not(json, json_existing)) {
     let r = value_get();
