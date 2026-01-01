@@ -21,6 +21,6 @@ export async function app_component(a_name) {
   }
   let text = app_karate_button_back_text();
   let component = html_button(root, text, lambda2);
-  let div = html_div(root2);
-  await app_context_initialize_root(root, fn);
+  let div = html_div(root);
+  await app_context_initialize_root(div, fn);
 }
