@@ -3,7 +3,7 @@ import { list_to_dictionary } from "../../../love/public/src/list_to_dictionary.
 import { identity } from "../../../love/public/src/identity.mjs";
 export function list_to_dictionary_key(list, lambda$item) {
   marker("1");
-  let key_get = identity;
-  let dictionary = list_to_dictionary(list, lambda$item, key_get);
+  let value_get = identity;
+  let dictionary = list_to_dictionary(list, value_get, lambda$item);
   return dictionary;
 }
