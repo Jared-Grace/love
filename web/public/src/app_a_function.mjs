@@ -121,8 +121,10 @@ export async function app_a_function(context) {
       text: emoji_run(),
       fn: async function lambda3() {
         async function lambda5() {
-          log({});
+          let i = 0;
+          log(i++);
           let v2 = await function_dependencies_code_export(f_name);
+          log(i++);
           let externals = object_property_get(v2, "externals");
           let get = object_property_get(v2, "get");
           let o = app_a_overlay(
@@ -141,14 +143,18 @@ export async function app_a_function(context) {
             app_a_on_keydown(e, choices);
           }
           let div = app_a_overlay_container(overlay);
+          log(i++);
           let v3 = await get();
+          log(i++);
           let global = object_property_get(v3, "global");
           let imports = function_dependencies_externals_to_urls(externals);
           async function lambda6(url) {
             let v4 = await import(url);
             return v4;
           }
+          log(i++);
           let modules = await object_values_map_async(imports, lambda6);
+          log(i++);
           function lambda4(m, name) {
             global_import_set(name, m, global);
           }
@@ -157,7 +163,9 @@ export async function app_a_function(context) {
             global,
           });
           let fn = object_property_get(v3, "fn");
+          log(i++);
           let r = await fn();
+          log(i++);
           let j = json_format_to(r);
           let pre = html_pre_text(div, j);
           app_a_buttons_shortcuts(choices, overlay);
