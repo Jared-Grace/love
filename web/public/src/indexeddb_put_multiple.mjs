@@ -11,6 +11,7 @@ import { indexeddb_put_multiple_backend } from "../../../love/public/src/indexed
 import { indexeddb_next } from "../../../love/public/src/indexeddb_next.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function indexeddb_put_multiple(db_get, store, lookup) {
+  'at time of writing, indexeddb code only uses key value of "key" therefore this function could be made general to receive key name as param';
   let key = "key";
   let v = object_values(lookup);
   let keys = list_map_property(v, key);
