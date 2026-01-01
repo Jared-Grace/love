@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { global_function_initialize } from "../../../love/public/src/global_function_initialize.mjs";
@@ -17,6 +18,12 @@ export async function function_names_to_acronyms() {
     result: null,
   });
   let json2 = object_property_get(value, "json");
-  if (equal_not(left, right)) {
+  if (equal_not(json, json2)) {
+    let dictionary = list_to_dictionary_value(
+      f_names,
+      function_name_to_acronym,
+    );
+    let acronyms = object_invert(dictionary);
+    object_property_set(object, property_name, value2);
   }
 }
