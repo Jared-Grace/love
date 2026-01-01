@@ -299,6 +299,7 @@
   "linn": "list_includes_not",
   "gt": "greater_than",
   "lx": "log_exit",
-  "lit": "list_intersect"
+  "lit": "list_intersect",
+  "stk": "string_take"
  }
 }
