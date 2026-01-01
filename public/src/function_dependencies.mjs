@@ -1,3 +1,4 @@
+import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -6,6 +7,7 @@ import { list_adder_unique_async } from "../../../love/public/src/list_adder_uni
 import { visit_unique_async } from "../../../love/public/src/visit_unique_async.mjs";
 import { function_imports } from "../../../love/public/src/function_imports.mjs";
 export async function function_dependencies(f_names) {
+  let f_names2 = await functions_names();
   async function lambda4(f_name) {
     await function_exists_assert(f_name);
   }
