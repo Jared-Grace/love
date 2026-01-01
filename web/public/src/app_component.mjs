@@ -13,7 +13,7 @@ export async function app_component(a_name) {
   log(i++);
   let d = object_property_get(v, "d");
   let code = object_property_get(d, "code");
-  code += newline() + a_name;
+  code += newline() + combined;
   log(i++);
   let fn = eval(code);
   log(i++);
