@@ -256,9 +256,6 @@ export function app_a_function_node(a) {
   }
   let n = object_property_exists_not(lookup, type);
   if (n) {
-    log({
-      node,
-    });
     let json = json_to({
       type,
       msg: "TODO",
