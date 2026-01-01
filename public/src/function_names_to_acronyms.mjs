@@ -5,12 +5,12 @@ import { list_to_dictionary_value } from "../../../love/public/src/list_to_dicti
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 export async function function_names_to_acronyms() {
   let f_names = await functions_names();
-  let result2 = global_function_cache(
+  let result = global_function_cache(
     function_names_to_acronyms,
     f_names,
     value_get,
   );
-  return result2;
+  return result;
   function value_get() {
     let dictionary = list_to_dictionary_value(
       f_names,
