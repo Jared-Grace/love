@@ -300,6 +300,7 @@
   "gt": "greater_than",
   "lx": "log_exit",
   "lit": "list_intersect",
-  "stk": "string_take"
+  "stk": "string_take",
+  "gfi": "global_function_initialize"
  }
 }
