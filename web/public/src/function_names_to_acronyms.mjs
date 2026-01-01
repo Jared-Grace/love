@@ -1,3 +1,4 @@
+import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { global_function_initialize } from "../../../love/public/src/global_function_initialize.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
@@ -16,4 +17,6 @@ export async function function_names_to_acronyms() {
     result: null,
   });
   let json2 = object_property_get(value, "json");
+  if (equal_not(left, right)) {
+  }
 }
