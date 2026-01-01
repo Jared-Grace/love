@@ -7,7 +7,6 @@ import { list_adder_unique_async } from "../../../love/public/src/list_adder_uni
 import { visit_unique_async } from "../../../love/public/src/visit_unique_async.mjs";
 import { function_imports } from "../../../love/public/src/function_imports.mjs";
 export async function function_dependencies(f_names) {
-  let dictionary = await list_to_dictionary_async(list, lambda5);
   async function lambda4(f_name) {
     await function_exists_assert(f_name);
   }
