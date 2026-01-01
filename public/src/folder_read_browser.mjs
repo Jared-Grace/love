@@ -1,6 +1,4 @@
 import { global_function_cache } from "../../../love/public/src/global_function_cache.mjs";
-import { global_function_set } from "../../../love/public/src/global_function_set.mjs";
-import { global_function_initialize } from "../../../love/public/src/global_function_initialize.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -23,9 +21,6 @@ export async function folder_read_browser(path_folder) {
   );
   return r;
   function value_get() {
-    let value = global_function_initialize(folder_read_browser, 0);
-    const x = value + 1;
-    global_function_set(folder_read_browser, x);
     let n = path_normalize(path_folder);
     let s = string_slash_forward();
     let prefix = "" + n + s;
