@@ -24,6 +24,8 @@ export async function function_names_to_acronyms() {
       function_name_to_acronym,
     );
     let acronyms = object_invert(dictionary);
-    object_property_set(object, property_name, value2);
+    object_property_set(value, "result", acronyms);
+    object_property_set(value, "json", json2);
   }
+  let result2 = object_property_get(value, "result");
 }
