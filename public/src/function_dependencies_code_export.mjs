@@ -10,7 +10,10 @@ import { function_dependencies_code } from "../../../love/public/src/function_de
 export async function function_dependencies_code_export(f_name) {
   marker("1");
   let global_init = js_code_global_init();
+  let i = 10;
+  log(i++);
   let v = await function_dependencies_code(f_name);
+  log(i++);
   let externals = object_property_get(v, "externals");
   let v2 = {
     get: async function lambda() {
