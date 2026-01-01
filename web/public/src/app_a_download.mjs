@@ -1,3 +1,5 @@
+import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
+import { function_name_extension } from "../../../love/public/src/function_name_extension.mjs";
 import { json_compress } from "../../../love/public/src/json_compress.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
@@ -15,6 +17,7 @@ export async function app_a_download() {
     let v = {
       key: path,
       compressed,
+      [function_name_extension()]: js_unparse(),
     };
     return v;
   }
