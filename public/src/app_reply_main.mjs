@@ -23,7 +23,6 @@ import { app_reply_button } from "../../../love/public/src/app_reply_button.mjs"
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { app_reply_love } from "../../../love/public/src/app_reply_love.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { list_sort_string_property } from "../../../love/public/src/list_sort_string_property.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
@@ -58,7 +57,7 @@ export async function app_reply_main(context) {
   }
   async function love() {
     let languages_chosen_before = languages_chosen;
-    languages_chosen = list_copy(languages_chosen);
+    languages_chosen = [];
     languages_chosen_reset();
     function lambda13(language) {
       list_add(languages_chosen, language);
