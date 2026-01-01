@@ -10,5 +10,8 @@ export async function function_names_to_acronyms() {
   let acronyms = object_invert(dictionary);
   return acronyms;
   let json = json_to(f_names);
-  let value = global_function_initialize(fn, initial);
+  let value = global_function_initialize(fn, {
+    json: null,
+    value: null,
+  });
 }
