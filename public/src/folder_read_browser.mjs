@@ -12,26 +12,36 @@ import { string_slash_forward } from "../../../love/public/src/string_slash_forw
 import { path_normalize } from "../../../love/public/src/path_normalize.mjs";
 export async function folder_read_browser(path_folder) {
   marker("1");
-  let value = global_function_initialize(folder_read_browser, 0);
-  const x = value + 1;
-  global_function_set(folder_read_browser, x);
-  let n = path_normalize(path_folder);
-  let s = string_slash_forward();
-  let prefix = "" + n + s;
   let files_paths = await app_a_files_paths();
-  let result = global_function_cache(fn, key, value_get);
-  let filtered = list_filter_starts_with(files_paths, prefix);
-  let mapped = list_map_prefix_without(filtered, prefix);
-  function lambda(item) {
-    let first = string_split_first(item, s);
-    return first;
-  }
-  let mapped2 = list_map(mapped, lambda);
-  let unique = list_unique(mapped2);
-  let r = {
-    unique,
-    prefix,
-    filtered,
-  };
+  let r = global_function_cache(
+    folder_read_browser,
+    {
+      path_folder,
+      files_paths,
+    },
+    value_get,
+  );
   return r;
+  function value_get() {
+    let value = global_function_initialize(folder_read_browser, 0);
+    const x = value + 1;
+    global_function_set(folder_read_browser, x);
+    let n = path_normalize(path_folder);
+    let s = string_slash_forward();
+    let prefix = "" + n + s;
+    let filtered = list_filter_starts_with(files_paths, prefix);
+    let mapped = list_map_prefix_without(filtered, prefix);
+    function lambda(item) {
+      let first = string_split_first(item, s);
+      return first;
+    }
+    let mapped2 = list_map(mapped, lambda);
+    let unique = list_unique(mapped2);
+    let r = {
+      unique,
+      prefix,
+      filtered,
+    };
+    return r;
+  }
 }
