@@ -1,3 +1,4 @@
+import { html_button } from "../../../love/public/src/html_button.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { newline } from "../../../love/public/src/newline.mjs";
 import { app_context_initialize_root } from "../../../love/public/src/app_context_initialize_root.mjs";
@@ -12,5 +13,6 @@ export async function app_component(a_name) {
   code += newline() + combined;
   let fn = eval(code);
   let root = html_document_body();
+  let component = html_button(parent, text, function lambda2() {});
   await app_context_initialize_root(root, fn);
 }
