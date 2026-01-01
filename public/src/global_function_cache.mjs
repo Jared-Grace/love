@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -13,10 +12,6 @@ export function global_function_cache(fn, key, value_get) {
   let json_existing = object_property_get(c, "json");
   if (equal_not(json, json_existing)) {
     let r = value_get();
-    log({
-      r,
-      json,
-    });
     object_property_set(c, "result", r);
     object_property_set(c, "json", json);
   }
