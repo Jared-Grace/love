@@ -25,7 +25,7 @@ export function js_dollar_a({ stack1, stack2, ast, afters, remaining }) {
     count,
   });
   function lambda({ stack1, next, stack2, ast, declarations }) {
-    list_remove_multiple([stack1, next], stack2);
+    list_remove_multiple(stack2, [stack1, next]);
     function lambda2(declaration) {
       let { id, init } = declaration;
       let { name } = id;
