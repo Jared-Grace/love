@@ -1,3 +1,4 @@
+import { add } from "../../../love/public/src/add.mjs";
 import { set_new } from "../../../love/public/src/set_new.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -10,12 +11,11 @@ export function list_unique(list) {
   let unique = [];
   function lambda(item) {
     let a = set_includes(found, item);
-    if (not(a)) {found.add(a)
+    if (not(a)) {
+      found.add(item);
       list_add(unique, item);
     }
   }
   each(list, lambda);
-
   return unique;
 }
-
