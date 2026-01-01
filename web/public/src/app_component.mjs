@@ -13,6 +13,7 @@ export async function app_component(a_name) {
   code += newline() + combined;
   let fn = eval(code);
   let root = html_document_body();
-  let component = html_button(parent, text, function lambda2() {});
+  function lambda2() {}
+  let component = html_button(parent, text, lambda2);
   await app_context_initialize_root(root, fn);
 }
