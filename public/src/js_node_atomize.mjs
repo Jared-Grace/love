@@ -21,12 +21,13 @@ import { list_size } from "../../../love/public/src/list_size.mjs";
 import { assert_json } from "../../../love/public/src/assert_json.mjs";
 export async function js_node_atomize(existing, v) {
   let variable_name = js_node_atomize_name();
-  let { node } = v;
-  let { stack } = v;
+  let node = object_property_get(v, "node");
+  let stack = object_property_get(v, "stack");
   if (js_node_type_is(node, "CallExpression")) {
     await js_call_function_if(node, lambda);
     async function lambda(name) {
-      let { ast: ast_callee } = await function_parse_unaliased(name);
+      let v3 = await function_parse_unaliased(name);
+      let ast_callee = object_property_get(v3, "ast");
       let return_name = js_return_name(ast_callee);
       if (return_name !== null) {
         variable_name = return_name;
@@ -37,13 +38,15 @@ export async function js_node_atomize(existing, v) {
   if (js_node_type_is(stack2, "CallExpression")) {
     let stack1 = list_get_end(stack, 1);
     if (list_is(stack1)) {
-      let { callee } = stack2;
+      let callee = object_property_get(stack2, "callee");
       if (js_node_type_is(callee, "Identifier")) {
-        let { name } = callee;
-        const { exists } = await function_exists_strict(name);
+        let name = object_property_get(callee, "name");
+        const v4 = await function_exists_strict(name);
+        let exists = object_property_get(v4, "exists");
         if (exists) {
-          let { declaration } = await function_parse_strict_declaration(name);
-          let { params } = declaration;
+          let v5 = await function_parse_strict_declaration(name);
+          let declaration = object_property_get(v5, "declaration");
+          let params = object_property_get(declaration, "params");
           let index = list_index_of(stack1, node);
           let param = list_get(params, index);
           let b = equal_by(stack1, params, list_size);
