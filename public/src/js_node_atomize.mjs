@@ -11,7 +11,7 @@ import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { object_copy } from "../../../love/public/src/object_copy.mjs";
 import { js_identifier_unique } from "../../../love/public/src/js_identifier_unique.mjs";
 import { js_return_name } from "../../../love/public/src/js_return_name.mjs";
-import { function_parse } from "../../../love/public/src/function_parse.mjs";
+import { function_parse_unaliased } from "../../../love/public/src/function_parse_unaliased.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
@@ -26,7 +26,7 @@ export async function js_node_atomize(existing, v) {
   if (js_node_type_is(node, "CallExpression")) {
     await js_call_function_if(node, lambda);
     async function lambda(name) {
-      let { ast: ast_callee } = await function_parse(name);
+      let { ast: ast_callee } = await function_parse_unaliased(name);
       let return_name = js_return_name(ast_callee);
       if (return_name !== null) {
         variable_name = return_name;
