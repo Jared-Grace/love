@@ -1,3 +1,4 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_a_main } from "../../../love/public/src/app_a_main.mjs";
 import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
@@ -19,6 +20,7 @@ export async function app_component(a_name) {
     await app_a_main();
   }
   let text = app_karate_button_back_text();
-  let component = html_button(parent, text, lambda2);
+  let component = html_button(root, text, lambda2);
+  let div = html_div(root2);
   await app_context_initialize_root(root, fn);
 }
