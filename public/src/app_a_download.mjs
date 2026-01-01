@@ -1,7 +1,3 @@
-import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
-import { string_ends_with } from "../../../love/public/src/string_ends_with.mjs";
-import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
-import { function_name_extension } from "../../../love/public/src/function_name_extension.mjs";
 import { json_compress } from "../../../love/public/src/json_compress.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
@@ -15,12 +11,6 @@ export async function app_a_download() {
     let data = {
       versions: [contents],
     };
-    let suffix = function_name_extension();
-    let ew = string_ends_with(path, suffix);
-    if (ew) {
-      let value = js_unparse(contents);
-      object_property_set_exists_not(data, suffix, value);
-    }
     let compressed = await json_compress(data);
     let v = {
       key: path,
