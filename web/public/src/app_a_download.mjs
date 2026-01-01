@@ -14,12 +14,12 @@ export async function app_a_download() {
     let contents = await file_read(path);
     let data = {
       versions: [contents],
-      [function_name_extension()]: js_unparse(contents),
     };
     let suffix = function_name_extension();
     let ew = string_ends_with(path, suffix);
     if (ew) {
-      object_property_set_exists_not(object, property_name, value);
+      let value = js_unparse(contents);
+      object_property_set_exists_not(data, suffix, value);
     }
     let compressed = await json_compress(data);
     let v = {
