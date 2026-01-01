@@ -1,3 +1,4 @@
+import { list_to_dictionary_async } from "../../../love/public/src/list_to_dictionary_async.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -8,6 +9,10 @@ import { visit_unique_async } from "../../../love/public/src/visit_unique_async.
 import { function_imports } from "../../../love/public/src/function_imports.mjs";
 export async function function_dependencies(f_names) {
   let f_names2 = await functions_names();
+  let dictionary = await list_to_dictionary_async(
+    list,
+    async function lambda5(item2) {},
+  );
   async function lambda4(f_name) {
     await function_exists_assert(f_name);
   }
