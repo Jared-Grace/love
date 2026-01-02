@@ -1,3 +1,4 @@
+import { invoke } from "../../../love/public/src/invoke.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
@@ -17,8 +18,7 @@ export async function marker_screen_rename(
   assert_arguments(arguments, 2);
   let afters = [];
   let result = await marker_screen_add_generic(lambda);
-  async function lambda3(item2) {}
-  await each_async(list, lambda3);
+  await each_async(afters, invoke);
   marker("1");
   return result;
   async function lambda(properties, prefixed) {
