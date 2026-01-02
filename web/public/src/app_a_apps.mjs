@@ -1,4 +1,3 @@
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { path_name } from "../../../love/public/src/path_name.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -12,8 +11,6 @@ export async function app_a_apps(context) {
     mapped,
   });
   marker("1");
-  let root = object_property_get(context, "root");
-  const noun = "app";
   function on_select(f_name) {
     alert(f_name);
   }
