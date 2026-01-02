@@ -21,5 +21,5 @@ export async function app_a_functions(context) {
   function on_select(f_name) {
     app_a_function_select(context, f_name);
   }
-  app_a_functions_generic(context, f_names, on_select);
+  app_a_functions_generic(context, "function", f_names, on_select);
 }
