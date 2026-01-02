@@ -14,7 +14,7 @@ export async function app_a_apps(context) {
   });
   marker("1");
   let root = object_property_get(context, "root");
-  const text = "Choose " + "an" + " app:";
+  const text = "Choose " + "an" + " " + "app" + ":";
   html_div_text_centered(root, text);
   function on_select(f_name) {
     alert(f_name);
