@@ -15,7 +15,7 @@ import { html_document_body } from "../../../love/public/src/html_document_body.
 import { app_a_on_keydown_add } from "../../../love/public/src/app_a_on_keydown_add.mjs";
 import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-export function app_a_functions_generic(context, f_names) {
+export function app_a_functions_generic(context, f_names, on_select) {
   marker("1");
   let filtered = null;
   function on_enter() {
