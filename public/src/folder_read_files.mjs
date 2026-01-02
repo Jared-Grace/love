@@ -18,10 +18,8 @@ export async function folder_read_files(path_folder) {
     let unique = object_property_get(r, "unique");
     let combineds = list_map_combine_left(unique, prefix);
     let r2 = list_intersect(filtered, combineds);
-    let filename = path_base(file_path);
-    function lambda2(item) {}
-    let mapped = list_map(list, lambda2);
-    return r2;
+    let r3 = list_map(r2, path_base);
+    return r3;
   }
   let fs = await import("fs");
   marker("1");
