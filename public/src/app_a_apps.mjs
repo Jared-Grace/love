@@ -1,5 +1,4 @@
-import { html_centered } from "../../../love/public/src/html_centered.mjs";
-import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
+import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { path_name } from "../../../love/public/src/path_name.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -15,8 +14,8 @@ export async function app_a_apps(context) {
   });
   marker("1");
   let root = object_property_get(context, "root");
-  let p = html_div_text(root, "Choose an app:");
-  html_centered(p);
+  const text = "Choose an app:";
+  html_div_text_centered(root, text);
   function on_select(f_name) {
     alert(f_name);
   }
