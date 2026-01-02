@@ -18,6 +18,7 @@ export async function app_a_apps(context) {
   let root = object_property_get(context, "root");
   let p = html_div_text(root, "Choose an app:");
   html_centered(p);
-  let on_select = error();
-  app_a_functions_generic(context, mapped, on_select);
+  app_a_functions_generic(context, mapped,     function on_select(f_name) {
+      app_a_function_select(context, f_name);
+    });
 }
