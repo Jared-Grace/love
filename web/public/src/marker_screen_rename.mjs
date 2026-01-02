@@ -12,11 +12,13 @@ export async function marker_screen_rename(
   marker("1");
   return result;
   async function lambda(properties, prefixed) {
-    let key = js_expression_string(screen_name);
-    let combined_screen = function_name_combine(prefixed, screen_name);
+    let key = js_expression_string(screen_name_before);
+    let combined_screen = function_name_combine(prefixed, screen_name_before);
     let value = js_parse_expression(combined_screen);
     log({
       properties,
+      key,
+      value,
     });
   }
 }
