@@ -11,6 +11,7 @@ export function html_overlay(container, z_index) {
     background: "rgba(0,0,0,0.4)",
     padding: "1vw",
     zIndex: z_index,
+    transition: "opacity 0.2s",
   };
   html_style_assign(overlay, s);
   function update() {
