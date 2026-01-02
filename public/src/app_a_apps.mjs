@@ -1,3 +1,4 @@
+import { app_a } from "../../../love/public/src/app_a.mjs";
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { app_a_function } from "../../../love/public/src/app_a_function.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
@@ -12,7 +13,7 @@ export async function app_a_apps(context) {
     function lambda() {
       app_generic_screen_set(context, app_a_function);
     }
-    storage_local_set(app_fn, key, value);
+    storage_local_set(app_a, "app_selected", a_name);
     await app_component(a_name, lambda);
   }
   app_a_functions_generic(context, "app", mapped, on_select);
