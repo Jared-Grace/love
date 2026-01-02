@@ -8,8 +8,8 @@ export async function app_a_apps(context) {
   let mapped = await apps_names();
   marker("1");
   async function on_select(a_name) {
-    await app_a_preview_back_function(context, a_name);
     storage_local_set(app_a, "app_selected", a_name);
+    await app_a_preview_back_function(context, a_name);
   }
   app_a_functions_generic(context, "app", mapped, on_select);
 }
