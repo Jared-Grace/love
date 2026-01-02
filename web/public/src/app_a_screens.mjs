@@ -6,6 +6,7 @@ export function app_a_screens() {
   let v = {
     functions: app_a_functions,
     function: app_a_function,
+    apps: app_a_apps,
   };
   return v;
 }
