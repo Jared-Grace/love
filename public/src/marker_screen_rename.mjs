@@ -1,6 +1,6 @@
+import { function_rename } from "../../../love/public/src/function_rename.mjs";
 import { invoke } from "../../../love/public/src/invoke.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { js_expression_string } from "../../../love/public/src/js_expression_string.mjs";
@@ -25,7 +25,7 @@ export async function marker_screen_rename(
     function lambda2(item) {
       function lambda4() {
         let key = object_property_get(item, "key");
-        function lambda5() {
+        async function lambda5() {
           let name = object_property_get(key, "name");
           let match = name === screen_name_before;
           if (match) {
@@ -36,10 +36,7 @@ export async function marker_screen_rename(
             );
             let value_after = js_parse_expression(combined_screen_after);
             object_property_set(item, "key", key_after);
-            object_property_set(item, "value", value_after);
-            log({
-              item,
-            });
+            let result2 = await function_rename(f_name_before, f_name_after);
           }
         }
         js_node_type_is_if(key, "Identifier", lambda5);
