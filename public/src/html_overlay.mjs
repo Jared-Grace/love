@@ -28,6 +28,5 @@ export function html_overlay(container, z_index) {
   }
   let es = ["scroll", "resize"];
   each(es, lambda2);
-  container.addEventListener("scroll", updateOverlay);
   return overlay;
 }
