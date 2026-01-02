@@ -301,6 +301,7 @@
   "lx": "log_exit",
   "lit": "list_intersect",
   "stk": "string_take",
-  "gfi": "global_function_initialize"
+  "gfi": "global_function_initialize",
+  "hon": "html_on"
  }
 }
