@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_expression_string } from "../../../love/public/src/js_expression_string.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
@@ -14,5 +15,8 @@ export async function marker_screen_rename(
     let key = js_expression_string(screen_name);
     let combined_screen = function_name_combine(prefixed, screen_name);
     let value = js_parse_expression(combined_screen);
+    log({
+      properties,
+    });
   }
 }
