@@ -1,3 +1,4 @@
+import { path_base } from "../../../love/public/src/path_base.mjs";
 import { file_path_normalize } from "../../../love/public/src/file_path_normalize.mjs";
 import { list_intersect } from "../../../love/public/src/list_intersect.mjs";
 import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
@@ -16,6 +17,7 @@ export async function folder_read_files(path_folder) {
     let unique = object_property_get(r, "unique");
     let combineds = list_map_combine_left(unique, prefix);
     let r2 = list_intersect(filtered, combineds);
+    let filename = path_base(file_path);
     return r2;
   }
   let fs = await import("fs");
