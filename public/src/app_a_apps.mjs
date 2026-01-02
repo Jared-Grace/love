@@ -1,3 +1,4 @@
+import { string_articled } from "../../../love/public/src/string_articled.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { path_name } from "../../../love/public/src/path_name.mjs";
@@ -14,9 +15,8 @@ export async function app_a_apps(context) {
   });
   marker("1");
   let root = object_property_get(context, "root");
-  const article = "an";
   const noun = "app";
-  const articled = article + " " + noun;
+  const articled = string_articled(noun);
   const text = "Choose " + articled + ":";
   html_div_text_centered(root, text);
   function on_select(f_name) {
