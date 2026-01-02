@@ -63,7 +63,7 @@ export async function app_g_main(context) {
       height: "100%",
     });
   }
-  each([root, html], lambda);
+  each([root], lambda);
   let path_prefix = "";
   let l = localhost_is();
   const path_part = "latest";
