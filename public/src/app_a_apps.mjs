@@ -6,7 +6,7 @@ import { apps_paths } from "../../../love/public/src/apps_paths.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_a_apps(context) {
   let aps = await apps_paths();
-  let mapped = list_map(list, path_name);
+  let mapped = list_map(aps, path_name);
   log({
     mapped,
   });
