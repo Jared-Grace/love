@@ -1,4 +1,3 @@
-import { list_sort_string } from "../../../love/public/src/list_sort_string.mjs";
 import { path_name } from "../../../love/public/src/path_name.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -8,7 +7,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_a_apps(context) {
   let aps = await apps_paths();
   let mapped = list_map(aps, path_name);
-  list_sort_string(mapped);
   log({
     mapped,
   });
