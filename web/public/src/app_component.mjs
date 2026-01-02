@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_a_main } from "../../../love/public/src/app_a_main.mjs";
@@ -10,6 +11,7 @@ import { function_dependencies_code_unaliased } from "../../../love/public/src/f
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_name_main } from "../../../love/public/src/app_name_main.mjs";
 export async function app_component(a_name) {
+  marker("1");
   let combined = app_name_main(a_name);
   let v = await function_dependencies_code_unaliased(combined);
   let d = object_property_get(v, "d");
