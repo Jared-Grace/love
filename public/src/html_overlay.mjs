@@ -1,5 +1,5 @@
+import { html_on_resize } from "../../../love/public/src/html_on_resize.mjs";
 import { html_on_scroll } from "../../../love/public/src/html_on_scroll.mjs";
-import { html_on } from "../../../love/public/src/html_on.mjs";
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -24,6 +24,6 @@ export function html_overlay(container, z_index) {
   }
   update();
   html_on_scroll(container, update);
-  html_on(window, "resize", update);
+  html_on_resize(update);
   return overlay;
 }
