@@ -56,7 +56,7 @@ export async function app_a_function(context) {
   marker("1");
   let root = object_property_get(context, "root");
   html_clear(root);
-  async function search() {
+  async function open() {
     list_remove(on_keydowns, app_a_function_on_keydown);
     await sleep_0();
     app_generic_screen_set(context, app_a_functions);
@@ -108,7 +108,7 @@ export async function app_a_function(context) {
     {
       shortcut: "o",
       text: emoji_search(),
-      fn: search,
+      fn: open,
     },
     {
       shortcut: "s",
