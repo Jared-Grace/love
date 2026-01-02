@@ -1,4 +1,4 @@
-import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -15,9 +15,9 @@ export async function marker_screen_rename(
   screen_name_after,
 ) {
   assert_arguments(arguments, 2);
-  let value_after = null;
+  let afters = [];
   let result = await marker_screen_add_generic(lambda);
-  let nn = null_not_is(value);
+  await each_async(list, async function lambda3(item2) {});
   marker("1");
   return result;
   async function lambda(properties, prefixed) {
@@ -33,7 +33,7 @@ export async function marker_screen_rename(
               prefixed,
               screen_name_after,
             );
-            value_after = js_parse_expression(combined_screen_after);
+            let value_after = js_parse_expression(combined_screen_after);
             object_property_set(item, "key", key_after);
             object_property_set(item, "value", value_after);
             log({
