@@ -38,11 +38,12 @@ export async function marker_screen_rename(
               screen_name_after,
             );
             object_property_set(item, "key", key_after);
-            (function lambda3() {});
-            let result2 = await function_rename(
-              combined_screen,
-              combined_screen_after,
-            );
+            (async function lambda3() {
+              let result2 = await function_rename(
+                combined_screen,
+                combined_screen_after,
+              );
+            });
           }
         }
         js_node_type_is_if(key, "Identifier", lambda5);
