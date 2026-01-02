@@ -4,7 +4,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function app_a_screens() {
   marker("screens");
   let v = {
-    home: app_a_home,
+    functions: app_a_functions,
     function: app_a_function,
   };
   return v;
