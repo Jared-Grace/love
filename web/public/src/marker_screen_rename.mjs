@@ -28,8 +28,8 @@ export async function marker_screen_rename(
         let key2 = object_property_get(item, "key");
         function lambda5() {
           let name = object_property_get(key2, "name");
-          let r = name === screen_name_before;
-          if (r) {
+          let match = name === screen_name_before;
+          if (match) {
           }
         }
         js_node_type_is_if(key2, "Identifier", lambda5);
