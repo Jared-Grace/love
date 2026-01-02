@@ -6,10 +6,10 @@ export function html_overlay(container, z_index) {
   let element = html_component_element_get(component);
   let s = {
     position: "absolute",
-    top: 0,
-    left: 0,
-    width: element.clientWidth,
-    height: element.clientHeight,
+    top: element.scrollTop,
+    left: element.scrollLeft,
+    width: "100%",
+    height: "100%",
     background: "rgba(0,0,0,0.4)",
     padding: "1vw",
     "z-index": z_index,
