@@ -8,6 +8,7 @@ export function app_a_screens() {
     functions: app_a_functions,
     function: app_a_function,
     apps: app_a_apps,
+    home: app_a_home,
   };
   return v;
 }
