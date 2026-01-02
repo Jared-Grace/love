@@ -8,7 +8,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_a_apps(context) {
   let aps = await apps_paths();
   let mapped = list_map(aps, path_name);
-  list_sort_string(list);
+  list_sort_string(mapped);
   log({
     mapped,
   });
