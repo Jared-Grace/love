@@ -25,6 +25,7 @@ export function html_overlay(container, z_index) {
   update();
   function lambda2(e) {}
   html_on(container, "scroll", update);
+  html_on(window, "resize", update);
   let es = [, "resize"];
   each(es, lambda2);
   return overlay;
