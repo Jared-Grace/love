@@ -13,8 +13,8 @@ export async function app_a_apps(context) {
     function lambda() {
       app_generic_screen_set(context, app_a_function);
     }
-    storage_local_set(app_a, "app_selected", a_name);
     await app_component(a_name, lambda);
+    storage_local_set(app_a, "app_selected", a_name);
   }
   app_a_functions_generic(context, "app", mapped, on_select);
 }
