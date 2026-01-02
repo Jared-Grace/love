@@ -19,7 +19,7 @@ export function html_overlay(container, z_index) {
   html_style_assign(overlay, s);
   let es = ["scroll", "resize"];
   function lambda2(e) {
-    html_on(container, e, lambda);
+    html_on(container, e, () => {});
   }
   each(es, lambda2);
   container.addEventListener("scroll", updateOverlay);
