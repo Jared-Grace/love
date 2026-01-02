@@ -14,7 +14,9 @@ export async function marker_screen_rename(
   screen_name_after,
 ) {
   assert_arguments(arguments, 2);
+  let value_after = null;
   let result = await marker_screen_add_generic(lambda);
+  $inn;
   marker("1");
   return result;
   async function lambda(properties, prefixed) {
@@ -30,7 +32,6 @@ export async function marker_screen_rename(
               prefixed,
               screen_name_after,
             );
-            let value_after = null;
             value_after = js_parse_expression(combined_screen_after);
             object_property_set(item, "key", key_after);
             object_property_set(item, "value", value_after);
