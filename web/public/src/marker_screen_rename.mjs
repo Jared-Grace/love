@@ -3,7 +3,6 @@ import { js_expression_string } from "../../../love/public/src/js_expression_str
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { marker_screen_add_generic } from "../../../love/public/src/marker_screen_add_generic.mjs";
@@ -17,11 +16,6 @@ export async function marker_screen_rename(
   return result;
   async function lambda(properties, prefixed) {
     let combined_screen = function_name_combine(prefixed, screen_name_before);
-    log({
-      properties,
-      key,
-      value,
-    });
     function lambda2(item) {
       function lambda4() {
         let key = object_property_get(item, "key");
@@ -31,7 +25,8 @@ export async function marker_screen_rename(
           if (match) {
             let key_after = js_expression_string(screen_name_before);
             let value_after = js_parse_expression(combined_screen);
-            object_property_set(object, property_name, value2);
+            object_property_set(item, "key", key_after);
+            object_property_set(item, "value", value_after);
           }
         }
         js_node_type_is_if(key, "Identifier", lambda5);
