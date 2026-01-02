@@ -30,6 +30,7 @@ export async function app_component(a_name, back) {
     height: "100dvh",
   });
   let text = app_karate_button_back_text();
+  let div2 = html_div(root2);
   let component = html_button(shell, text, back);
   let div = html_div(shell);
   await app_context_initialize_root(div, fn);
