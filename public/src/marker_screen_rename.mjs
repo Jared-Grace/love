@@ -1,3 +1,4 @@
+import { js_expression_string } from "../../../love/public/src/js_expression_string.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
@@ -27,6 +28,7 @@ export async function marker_screen_rename(
           let name = object_property_get(key, "name");
           let match = name === screen_name_before;
           if (match) {
+            let key = js_expression_string(screen_name_before);
             let value = js_parse_expression(combined_screen);
           }
         }
