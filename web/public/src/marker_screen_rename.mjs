@@ -1,3 +1,4 @@
+import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -16,7 +17,7 @@ export async function marker_screen_rename(
   assert_arguments(arguments, 2);
   let value_after = null;
   let result = await marker_screen_add_generic(lambda);
-  nn;
+  let nn = null_not_is(value);
   marker("1");
   return result;
   async function lambda(properties, prefixed) {
