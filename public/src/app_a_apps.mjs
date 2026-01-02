@@ -1,4 +1,4 @@
-import { error } from "../../../love/public/src/error.mjs";
+import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -18,7 +18,8 @@ export async function app_a_apps(context) {
   let root = object_property_get(context, "root");
   let p = html_div_text(root, "Choose an app:");
   html_centered(p);
-  app_a_functions_generic(context, mapped,     function on_select(f_name) {
-      app_a_function_select(context, f_name);
-    });
+  function on_select(f_name) {
+    app_a_function_select(context, f_name);
+  }
+  app_a_functions_generic(context, mapped, on_select);
 }
