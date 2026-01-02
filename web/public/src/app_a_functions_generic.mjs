@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
@@ -15,6 +16,7 @@ import { app_a_on_keydown_add } from "../../../love/public/src/app_a_on_keydown_
 import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 export function app_a_functions_generic(context, f_names) {
+  marker("1");
   let filtered = null;
   function on_enter() {
     let first = list_first(filtered);
