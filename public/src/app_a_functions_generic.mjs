@@ -18,6 +18,7 @@ import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lam
 import { list_first } from "../../../love/public/src/list_first.mjs";
 export function app_a_functions_generic(context, noun, texts, on_select) {
   marker("1");
+  let root = object_property_get(context, "root");
   const articled = string_articled(noun);
   const text = "Choose " + articled + ":";
   html_div_text_centered(root, text);
@@ -28,9 +29,8 @@ export function app_a_functions_generic(context, noun, texts, on_select) {
   }
   let on_keydown = html_on_enter_lambda(on_enter);
   let on_keydowns = app_a_on_keydown_add(context, on_keydown);
-  let root = object_property_get(context, "root");
-  let input = app_a_input(body);
-  let f_names_div = html_div(body);
+  let input = app_a_input(root);
+  let f_names_div = html_div(root);
   function lambda4() {
     let value = html_value_get(input);
     function lambda2(text) {
