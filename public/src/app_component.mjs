@@ -22,6 +22,9 @@ export async function app_component(a_name, back) {
   let joined = list_join_newline(list);
   let fn = eval(joined);
   let root = html_document_body();
+  html_style_assign(root, {
+    margin: 0,
+  });
   html_clear(root);
   let shell = html_div(root);
   html_style_assign(shell, {
