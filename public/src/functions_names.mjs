@@ -6,11 +6,11 @@ export async function functions_names() {
   marker("1");
   let f_names = await repos_paths_map_unordered_combine_squash(mapper);
   async function mapper(joined) {
-    let f_names = await functions_names_from_path(joined);
-    return f_names;
     log({
       joined,
     });
+    let f_names = await functions_names_from_path(joined);
+    return f_names;
   }
   return f_names;
 }
