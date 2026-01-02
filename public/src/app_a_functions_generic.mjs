@@ -1,3 +1,5 @@
+import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
+import { string_articled } from "../../../love/public/src/string_articled.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
@@ -14,8 +16,11 @@ import { html_document_body } from "../../../love/public/src/html_document_body.
 import { app_a_on_keydown_add } from "../../../love/public/src/app_a_on_keydown_add.mjs";
 import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-export function app_a_functions_generic(context, texts, on_select) {
+export function app_a_functions_generic(context, noun, texts, on_select) {
   marker("1");
+  const articled = string_articled(noun);
+  const text = "Choose " + articled + ":";
+  html_div_text_centered(root, text);
   let filtered = null;
   function on_enter() {
     let first = list_first(filtered);
