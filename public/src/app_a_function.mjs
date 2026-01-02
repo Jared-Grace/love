@@ -168,8 +168,6 @@ export async function app_a_function(context) {
       fn: async function open() {
         list_remove(on_keydowns, app_a_function_on_keydown);
         await sleep_0();
-        list_remove(on_keydowns, app_a_function_on_keydown);
-        await sleep_0();
         app_generic_screen_set(context, app_a_apps);
       },
     },
