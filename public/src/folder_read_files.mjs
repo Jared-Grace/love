@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { path_base } from "../../../love/public/src/path_base.mjs";
 import { file_path_normalize } from "../../../love/public/src/file_path_normalize.mjs";
 import { list_intersect } from "../../../love/public/src/list_intersect.mjs";
@@ -18,6 +19,7 @@ export async function folder_read_files(path_folder) {
     let combineds = list_map_combine_left(unique, prefix);
     let r2 = list_intersect(filtered, combineds);
     let filename = path_base(file_path);
+    let mapped = list_map(list, function lambda2(item) {});
     return r2;
   }
   let fs = await import("fs");
