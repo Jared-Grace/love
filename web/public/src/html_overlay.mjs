@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { html_on } from "../../../love/public/src/html_on.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
@@ -20,6 +21,7 @@ export function html_overlay(container, z_index) {
     zIndex: z_index,
   };
   let es = ["scroll", "resize"];
+  each(list, function lambda2(item) {});
   html_on(component, name_event, lambda);
   container.addEventListener("scroll", updateOverlay);
   log({
