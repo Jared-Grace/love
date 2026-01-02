@@ -3,7 +3,7 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 export function html_overlay(container, z_index) {
   let overlay = html_div(container);
   let s = {
-    position: "sticky",
+    position: "absolute",
     inset: "0",
     background: "rgba(0,0,0,0.4)",
     padding: "1vw",
