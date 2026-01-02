@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -14,6 +15,9 @@ export function html_overlay(container, z_index) {
     padding: "1vw",
     "z-index": z_index,
   };
+  log({
+    s,
+  });
   html_style_assign(overlay, s);
   return overlay;
 }
