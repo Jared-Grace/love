@@ -28,8 +28,8 @@ export function app_a_functions_generic(context, f_names, on_select) {
   let f_names_div = html_div(body);
   function lambda4() {
     let value = html_value_get(input);
-    function lambda2(f_name) {
-      let v3 = match(value, f_name);
+    function lambda2(text) {
+      let v3 = match(value, text);
       return v3;
     }
     filtered = list_filter(f_names, lambda2);
@@ -48,17 +48,17 @@ export function app_a_functions_generic(context, f_names, on_select) {
   function refresh() {
     html_clear(f_names_div);
     list_sort_string_alpha_size(filtered);
-    function lambda(f_name) {
+    function lambda(text) {
       async function lambda3() {
-        f_name_select(f_name);
+        f_name_select(text);
       }
-      app_a_button_wide(f_names_div, f_name, lambda3);
+      app_a_button_wide(f_names_div, text, lambda3);
     }
     each(filtered, lambda);
   }
   html_focus(input);
-  function f_name_select(f_name) {
+  function f_name_select(text) {
     list_remove(on_keydowns, on_keydown);
-    on_select(f_name);
+    on_select(text);
   }
 }
