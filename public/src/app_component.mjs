@@ -1,3 +1,4 @@
+import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { js_code_global_init } from "../../../karate_code/public/src/js_code_global_init.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -16,7 +17,8 @@ export async function app_component(a_name, back) {
   let d = object_property_get(v, "d");
   let code = object_property_get(d, "code");
   let code_assign = js_code_global_init();
-  let list = [code, code_assign, combined];
+  let list = [code_assign, code, combined];
+  let joined = list_join_newline(list2);
   let fn = eval(code);
   let root = html_document_body();
   let text = app_karate_button_back_text();
