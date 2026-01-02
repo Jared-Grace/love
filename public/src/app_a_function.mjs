@@ -40,7 +40,7 @@ import { html_font_jetbrains_mono } from "../../../love/public/src/html_font_jet
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_a_button } from "../../../love/public/src/app_a_button.mjs";
 import { emoji_search } from "../../../love/public/src/emoji_search.mjs";
-import { app_a_home } from "../../../love/public/src/app_a_home.mjs";
+import { app_a_functions } from "../../../love/public/src/app_a_functions.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -59,7 +59,7 @@ export async function app_a_function(context) {
   async function search() {
     list_remove(on_keydowns, app_a_function_on_keydown);
     await sleep_0();
-    app_generic_screen_set(context, app_a_home);
+    app_generic_screen_set(context, app_a_functions);
   }
   async function upload() {
     let store = app_a_file_system_store();
