@@ -13,7 +13,6 @@ export function html_overlay(container, z_index) {
     zIndex: z_index,
   };
   html_style_assign(overlay, s);
-  let es = ["scroll", "resize"];
   function update() {
     let s = {
       top: element.scrollTop + "px",
@@ -23,9 +22,11 @@ export function html_overlay(container, z_index) {
     };
     html_style_assign(overlay, s);
   }
+  update();
   function lambda2(e) {
     html_on(container, e, update);
   }
+  let es = ["scroll", "resize"];
   each(es, lambda2);
   container.addEventListener("scroll", updateOverlay);
   return overlay;
