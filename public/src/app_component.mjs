@@ -22,15 +22,15 @@ export async function app_component(a_name, back) {
   let joined = list_join_newline(list);
   let fn = eval(joined);
   let root = html_document_body();
-  let div2 = html_div(root2);
-  html_style_assign(root, {
+  html_clear(root);
+  let shell = html_div(root);
+  html_style_assign(shell, {
     display: "flex",
     "flex-direction": "column",
     height: "100dvh",
   });
   let text = app_karate_button_back_text();
-  html_clear(root);
-  let component = html_button(root, text, back);
-  let div = html_div(root);
+  let component = html_button(shell, text, back);
+  let div = html_div(shell);
   await app_context_initialize_root(div, fn);
 }
