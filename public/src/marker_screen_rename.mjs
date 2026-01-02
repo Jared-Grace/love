@@ -10,6 +10,7 @@ import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { marker_screen_add_generic } from "../../../love/public/src/marker_screen_add_generic.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
+import { list_add } from "./list_add.mjs";
 export async function marker_screen_rename(
   screen_name_before,
   screen_name_after,
@@ -44,7 +45,7 @@ export async function marker_screen_rename(
                 combined_screen_after,
               );
             }
-            list_Add(lambda3);
+            list_add(lambda3);
           }
         }
         js_node_type_is_if(key, "Identifier", lambda5);
