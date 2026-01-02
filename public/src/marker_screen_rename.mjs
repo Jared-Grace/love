@@ -26,7 +26,11 @@ export async function marker_screen_rename(
           let name = object_property_get(key, "name");
           let match = name === screen_name_before;
           if (match) {
-            let key_after = js_expression_string(screen_name_before);
+            let key_after = js_expression_string(screen_name_after);
+            let combined_screen_after = function_name_combine(
+              prefixed,
+              screen_name_after,
+            );
             let value_after = js_parse_expression(combined_screen);
             object_property_set(item, "key", key_after);
             object_property_set(item, "value", value_after);
