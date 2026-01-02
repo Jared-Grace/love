@@ -166,7 +166,7 @@ export async function app_a_function(context) {
     {
       shortcut: "p",
       text: emoji_mobile(),
-      fn: () => {},
+      fn: function lambda7() {},
     },
   ];
   app_a_buttons_shortcuts(choices, root);
