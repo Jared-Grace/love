@@ -30,6 +30,8 @@ export async function marker_screen_rename(
         function lambda5() {
           let name = object_property_get(key2, "name");
           r = name === screen_name_before;
+          if (false) {
+          }
         }
         js_node_type_is_if(key2, "Identifier", lambda5);
       }
