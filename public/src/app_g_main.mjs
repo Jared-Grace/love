@@ -74,17 +74,17 @@ export async function app_g_main(context) {
   const game_prefix = g_folder_img(path_prefix);
   let div_map_container = html_div(root);
   if (false) {
+    html_style_assign(div_map_container, {
+      position: "fixed",
+      top: "0",
+      left: "0",
+      overflow: "auto",
+      width: "100dvw",
+      height: "100dvh",
+      "z-index": html_z_max(),
+      "pointer-events": "auto",
+    });
   }
-  html_style_assign(div_map_container, {
-    position: "fixed",
-    top: "0",
-    left: "0",
-    overflow: "auto",
-    width: "100dvw",
-    height: "100dvh",
-    "z-index": html_z_max(),
-    "pointer-events": "auto",
-  });
   html_style_assign(div_map_container, {
     position: "relative",
     overflow: "auto",
