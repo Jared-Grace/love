@@ -23,9 +23,9 @@ export function app_a_functions_generic(context, noun, texts, on_select) {
   const text = "Choose " + articled + ":";
   html_div_text_centered(root, text);
   let filtered = null;
-  function on_enter() {
+  async function on_enter() {
     let first = list_first(filtered);
-    f_name_select(first);
+    await f_name_select(first);
   }
   let on_keydown = html_on_enter_lambda(on_enter);
   let on_keydowns = app_a_on_keydown_add(context, on_keydown);
@@ -55,15 +55,15 @@ export function app_a_functions_generic(context, noun, texts, on_select) {
     list_sort_string_alpha_size(filtered);
     function lambda(text) {
       async function lambda3() {
-        f_name_select(text);
+        await f_name_select(text);
       }
       app_a_button_wide(f_names_div, text, lambda3);
     }
     each(filtered, lambda);
   }
   html_focus(input);
-  function f_name_select(text) {
+  async function f_name_select(text) {
     list_remove(on_keydowns, on_keydown);
-    on_select(text);
+    await on_select(text);
   }
 }
