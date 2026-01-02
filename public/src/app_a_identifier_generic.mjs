@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { app_a_buttons_shortcuts } from "../../../love/public/src/app_a_buttons_shortcuts.mjs";
@@ -92,6 +93,9 @@ export function app_a_identifier_generic(a, span, name, c) {
       },
     };
     let f_names = await functions_names();
+    log({
+      f_names,
+    });
     let includes = list_includes(f_names, name);
     if (includes) {
       list_add(choices, choice_function_open);
