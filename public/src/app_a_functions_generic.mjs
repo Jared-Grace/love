@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { string_articled } from "../../../love/public/src/string_articled.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -12,7 +13,6 @@ import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_a_input } from "../../../love/public/src/app_a_input.mjs";
-import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { app_a_on_keydown_add } from "../../../love/public/src/app_a_on_keydown_add.mjs";
 import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -28,7 +28,7 @@ export function app_a_functions_generic(context, noun, texts, on_select) {
   }
   let on_keydown = html_on_enter_lambda(on_enter);
   let on_keydowns = app_a_on_keydown_add(context, on_keydown);
-  let body = html_document_body();
+  let root = object_property_get(context, "root");
   let input = app_a_input(body);
   let f_names_div = html_div(body);
   function lambda4() {
