@@ -1,3 +1,4 @@
+import { html_on } from "../../../love/public/src/html_on.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
@@ -18,6 +19,8 @@ export function html_overlay(container, z_index) {
     padding: "1vw",
     zIndex: z_index,
   };
+  html_on(component, name_event, lambda);
+  container.addEventListener("scroll", updateOverlay);
   log({
     s,
   });
