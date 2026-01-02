@@ -17,6 +17,11 @@ export async function marker_screen_rename(
     let key = js_expression_string(screen_name_before);
     let combined_screen = function_name_combine(prefixed, screen_name_before);
     let value = js_parse_expression(combined_screen);
+    log({
+      properties,
+      key,
+      value,
+    });
     function lambda2(item) {
       let r = false;
       function lambda4() {
@@ -27,11 +32,6 @@ export async function marker_screen_rename(
       js_node_type_is_if(item, "Property", lambda4);
       return r;
     }
-    let only = list_find(list, lambda2);
-    log({
-      properties,
-      key,
-      value,
-    });
+    let only = list_find(properties, lambda2);
   }
 }
