@@ -8,7 +8,6 @@ import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
-import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { marker_screen_add_generic } from "../../../love/public/src/marker_screen_add_generic.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function marker_screen_rename(
@@ -30,13 +29,20 @@ export async function marker_screen_rename(
           let match = name === screen_name_before;
           if (match) {
             let key_after = js_expression_string(screen_name_after);
+            let combined_screen = function_name_combine(
+              prefixed,
+              screen_name_before,
+            );
             let combined_screen_after = function_name_combine(
               prefixed,
               screen_name_after,
             );
-            let value_after = js_parse_expression(combined_screen_after);
             object_property_set(item, "key", key_after);
-            let result2 = await function_rename(f_name_before, f_name_after);
+            () => {};
+            let result2 = await function_rename(
+              combined_screen,
+              combined_screen_after,
+            );
           }
         }
         js_node_type_is_if(key, "Identifier", lambda5);
