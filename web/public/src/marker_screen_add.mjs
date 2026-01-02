@@ -1,4 +1,4 @@
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { marker_screen_add_generic } from "../../../love/public/src/marker_screen_add_generic.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { js_declaration_single_block_body_add } from "../../../love/public/src/js_declaration_single_block_body_add.mjs";
@@ -7,33 +7,17 @@ import { js_code_let_assign } from "../../../love/public/src/js_code_let_assign.
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { function_param_new_double } from "../../../love/public/src/function_param_new_double.mjs";
-import { marker_next_declare_single_init } from "../../../love/public/src/marker_next_declare_single_init.mjs";
 import { function_new } from "../../../love/public/src/function_new.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_property } from "../../../love/public/src/js_property.mjs";
-import { function_transform_marker_specified } from "../../../love/public/src/function_transform_marker_specified.mjs";
-import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
-import { data_app_current_get } from "../../../love/public/src/data_app_current_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function marker_screen_add(screen_name) {
-  let a_name = await data_app_current_get();
-  let prefixed = app_name_prefixed(a_name);
-  let combined = function_name_combine(prefixed, "screens");
-  async function lambda_ftms(a) {
-    let v2 = marker_next_declare_single_init(a);
-    let properties = object_property_get(v2, "properties");
-    await lambda(properties);
-  }
-  let result = await function_transform_marker_specified(
-    combined,
-    "screens",
-    lambda_ftms,
-  );
+  let result = await marker_screen_add_generic(lambda);
   marker("1");
   return result;
-  async function lambda(properties) {
+  async function lambda(properties, prefixed) {
     let code_string = js_code_string(screen_name);
     let key = js_parse_expression(code_string);
     let combined_screen = function_name_combine(prefixed, screen_name);
