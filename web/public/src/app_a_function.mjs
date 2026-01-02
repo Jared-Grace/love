@@ -173,11 +173,12 @@ export async function app_a_function(context) {
   ];
   app_a_buttons_shortcuts(choices, root);
   async function open_generic(screen) {
-    let v5 = function lambda7() {};
+    let v5 = async function lambda7() {
+      list_remove(on_keydowns, app_a_function_on_keydown);
+      await sleep_0();
+      app_generic_screen_set(context, screen);
+    };
     return v5;
-    list_remove(on_keydowns, app_a_function_on_keydown);
-    await sleep_0();
-    app_generic_screen_set(context, screen);
   }
   function app_a_function_on_keydown(e) {
     app_a_on_keydown(e, choices);
