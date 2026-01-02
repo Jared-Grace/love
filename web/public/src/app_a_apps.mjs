@@ -14,6 +14,6 @@ export async function app_a_apps(context) {
   });
   marker("1");
   let root = object_property_get(context, "root");
-  let p = html_div_text(root, "Choose an app");
+  let p = html_div_text(root, "Choose an app:");
   app_a_functions_generic(context, mapped);
 }
