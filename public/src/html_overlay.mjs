@@ -10,7 +10,10 @@ export function html_overlay(container, z_index) {
   });
   let s = {
     position: "absolute",
-    inset: 0,
+    top: "0",
+    left: "0",
+    width: element.clientWidth + "px",
+    height: element.clientHeight + "px",
     background: "rgba(0,0,0,0.4)",
     padding: "1vw",
     "z-index": z_index,
