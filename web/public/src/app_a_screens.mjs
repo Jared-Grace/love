@@ -1,3 +1,4 @@
+import { app_a_apps } from "../../../love/public/src/app_a_apps.mjs";
 import { app_a_functions } from "../../../love/public/src/app_a_functions.mjs";
 import { app_a_function } from "../../../love/public/src/app_a_function.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
