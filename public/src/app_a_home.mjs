@@ -1,1 +1,4 @@
-export function app_a_home() {}
+import { marker } from "../../../love/public/src/marker.mjs";
+export function app_a_home() {
+  marker("1");
+}
