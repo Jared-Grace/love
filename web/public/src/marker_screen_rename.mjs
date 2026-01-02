@@ -1,3 +1,4 @@
+import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { js_expression_string } from "../../../love/public/src/js_expression_string.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -10,7 +11,8 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function marker_screen_rename(
   screen_name_before,
   screen_name_after,
-) {$aa
+) {
+  assert_arguments(arguments, 2);
   let result = await marker_screen_add_generic(lambda);
   marker("1");
   return result;
