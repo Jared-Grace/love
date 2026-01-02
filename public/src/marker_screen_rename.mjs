@@ -27,7 +27,8 @@ export async function marker_screen_rename(
       let r = false;
       function lambda4() {
         let key2 = object_property_get(item, "key");
-        js_node_type_is_if(node, type, function lambda5() {});
+        function lambda5() {}
+        js_node_type_is_if(node, type, lambda5);
         log({
           item,
         });
