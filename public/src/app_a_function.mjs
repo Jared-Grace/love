@@ -57,11 +57,6 @@ export async function app_a_function(context) {
   marker("1");
   let root = object_property_get(context, "root");
   html_clear(root);
-  async function open() {
-    list_remove(on_keydowns, app_a_function_on_keydown);
-    await sleep_0();
-    app_generic_screen_set(context, app_a_functions);
-  }
   async function upload() {
     let store = app_a_file_system_store();
     let all = await indexeddb_get_all(app_a_indexeddb_initialize, store);
@@ -109,7 +104,11 @@ export async function app_a_function(context) {
     {
       shortcut: "o",
       text: emoji_search(),
-      fn: open,
+      fn: async function open() {
+        list_remove(on_keydowns, app_a_function_on_keydown);
+        await sleep_0();
+        app_generic_screen_set(context, app_a_functions);
+      },
     },
     {
       shortcut: "s",
@@ -165,7 +164,11 @@ export async function app_a_function(context) {
     {
       shortcut: "a",
       text: emoji_mobile(),
-      fn: open,
+      fn: async function open() {
+        list_remove(on_keydowns, app_a_function_on_keydown);
+        await sleep_0();
+        app_generic_screen_set(context, app_a_functions);
+      },
     },
   ];
   app_a_buttons_shortcuts(choices, root);
