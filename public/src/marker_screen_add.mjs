@@ -21,7 +21,7 @@ export async function marker_screen_add(screen_name) {
   let a_name = await data_app_current_get();
   let prefixed = app_name_prefixed(a_name);
   let combined = function_name_combine(prefixed, "screens");
-  async function lambda(a) {
+  async function lambda_ftms(a) {
     let v2 = marker_next_declare_single_init(a);
     let properties = object_property_get(v2, "properties");
     await lambda(properties);
@@ -29,7 +29,7 @@ export async function marker_screen_add(screen_name) {
   let result = await function_transform_marker_specified(
     combined,
     "screens",
-    lambda,
+    lambda_ftms,
   );
   marker("1");
   return result;
