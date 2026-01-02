@@ -8,19 +8,23 @@ export function html_overlay(container, z_index) {
   let element = html_component_element_get(container);
   let s = {
     position: "absolute",
-    top: element.scrollTop + "px",
-    left: element.scrollLeft + "px",
-    width: element.clientWidth + "px",
-    height: element.clientHeight + "px",
     background: "rgba(0,0,0,0.4)",
     padding: "1vw",
     zIndex: z_index,
   };
   html_style_assign(overlay, s);
   let es = ["scroll", "resize"];
+  function update() {
+    let s = {
+      top: element.scrollTop + "px",
+      left: element.scrollLeft + "px",
+      width: element.clientWidth + "px",
+      height: element.clientHeight + "px",
+    };
+    html_style_assign(overlay, s);
+  }
   function lambda2(e) {
-    function lambda() {}
-    html_on(container, e, lambda);
+    html_on(container, e, update);
   }
   each(es, lambda2);
   container.addEventListener("scroll", updateOverlay);
