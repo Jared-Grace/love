@@ -1,3 +1,4 @@
+import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { js_code_global_init } from "../../../karate_code/public/src/js_code_global_init.mjs";
@@ -22,9 +23,7 @@ export async function app_component(a_name, back) {
   let joined = list_join_newline(list);
   let fn = eval(joined);
   let root = html_document_body();
-  html_style_assign(root, {
-    margin: 0,
-  });
+  html_margin_0(root);
   html_clear(root);
   let shell = html_div(root);
   html_style_assign(shell, {
