@@ -16,7 +16,7 @@ export async function marker_screen_rename(
   assert_arguments(arguments, 2);
   let value_after = null;
   let result = await marker_screen_add_generic(lambda);
-  inn;
+  nn;
   marker("1");
   return result;
   async function lambda(properties, prefixed) {
