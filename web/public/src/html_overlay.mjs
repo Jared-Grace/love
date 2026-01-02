@@ -1,8 +1,9 @@
+import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 export function html_overlay(container, z_index) {
   let overlay = html_div(container);
-  heg;
+  let element = html_component_element_get(component);
   let s = {
     position: "absolute",
     top: container.scrollTop + "px",
