@@ -1,5 +1,5 @@
+import { js_expression_string } from "../../../love/public/src/js_expression_string.mjs";
 import { marker_screen_add_generic } from "../../../love/public/src/marker_screen_add_generic.mjs";
-import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { js_declaration_single_block_body_add } from "../../../love/public/src/js_declaration_single_block_body_add.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
@@ -18,8 +18,7 @@ export async function marker_screen_add(screen_name) {
   marker("1");
   return result;
   async function lambda(properties, prefixed) {
-    let code_string = js_code_string(screen_name);
-    let key = js_parse_expression(code_string);
+    let key = js_expression_string(screen_name);
     let combined_screen = function_name_combine(prefixed, screen_name);
     let value = js_parse_expression(combined_screen);
     let p = js_property(key, value);
