@@ -4,7 +4,7 @@ import { html_style_assign } from "../../../love/public/src/html_style_assign.mj
 import { html_div } from "../../../love/public/src/html_div.mjs";
 export function html_overlay(container, z_index) {
   let overlay = html_div(container);
-  let element = html_component_element_get(component);
+  let element = html_component_element_get(container);
   log({
     element,
   });
