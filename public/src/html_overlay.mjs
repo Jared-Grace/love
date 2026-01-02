@@ -19,6 +19,7 @@ export function html_overlay(container, z_index) {
     padding: "1vw",
     zIndex: z_index,
   };
+  let es = ["scroll", "resize"];
   html_on(component, name_event, lambda);
   container.addEventListener("scroll", updateOverlay);
   log({
