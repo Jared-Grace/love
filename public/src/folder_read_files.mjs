@@ -19,7 +19,8 @@ export async function folder_read_files(path_folder) {
     let combineds = list_map_combine_left(unique, prefix);
     let r2 = list_intersect(filtered, combineds);
     let filename = path_base(file_path);
-    let mapped = list_map(list, function lambda2(item) {});
+    function lambda2(item) {}
+    let mapped = list_map(list, lambda2);
     return r2;
   }
   let fs = await import("fs");
