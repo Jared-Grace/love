@@ -34,7 +34,6 @@ export async function marker_screen_rename(
         js_node_type_is_if(key, "Identifier", lambda5);
       }
       js_node_type_is_if(item, "Property", lambda4);
-      return r;
     }
     each(properties, lambda2);
   }
