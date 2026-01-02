@@ -26,7 +26,7 @@ export function ebible_references_names(books, lines) {
   }
   let mapped = list_map(lines, lambda);
   let books_names = list_map_property(books, "text");
-  let verse_references = list_filter_starts_with_any(books_names, mapped);
+  let verse_references = list_filter_starts_with_any(mapped, books_names);
   let book_names = list_map_prefix_any(verse_references, books_names);
   let mapped2 = list_map_prefix_without_any(verse_references, books_names);
   let mapped3 = list_map_split_space(mapped2);
