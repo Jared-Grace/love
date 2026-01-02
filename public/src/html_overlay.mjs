@@ -5,6 +5,9 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 export function html_overlay(container, z_index) {
   let overlay = html_div(container);
   let element = html_component_element_get(component);
+  log({
+    element,
+  });
   let s = {
     position: "absolute",
     top: element.scrollTop,
