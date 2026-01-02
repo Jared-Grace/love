@@ -163,6 +163,11 @@ export async function app_a_function(context) {
       text: emoji_mobile(),
       fn: screen_choose(app_a_apps),
     },
+    {
+      shortcut: "p",
+      text: emoji_mobile(),
+      fn: () => {},
+    },
   ];
   app_a_buttons_shortcuts(choices, root);
   function screen_choose(screen) {
