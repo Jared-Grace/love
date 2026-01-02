@@ -22,6 +22,7 @@ export async function app_component(a_name, back) {
   let joined = list_join_newline(list);
   let fn = eval(joined);
   let root = html_document_body();
+  let div2 = html_div(root2);
   html_style_assign(root, {
     display: "flex",
     "flex-direction": "column",
