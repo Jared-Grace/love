@@ -18,7 +18,8 @@ export async function marker_screen_rename(
     let combined_screen = function_name_combine(prefixed, screen_name_before);
     let value = js_parse_expression(combined_screen);
     function lambda2(item) {
-      js_node_type_is_if(node, type, function lambda4() {});
+      function lambda4() {}
+      js_node_type_is_if(node, type, lambda4);
     }
     let only = list_find(list, lambda2);
     log({
