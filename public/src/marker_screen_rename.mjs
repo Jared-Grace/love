@@ -18,7 +18,6 @@ export async function marker_screen_rename(
   marker("1");
   return result;
   async function lambda(properties, prefixed) {
-    let combined_screen = function_name_combine(prefixed, screen_name_before);
     function lambda2(item) {
       function lambda4() {
         let key = object_property_get(item, "key");
