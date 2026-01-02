@@ -28,7 +28,6 @@ import { mod } from "../../../love/public/src/mod.mjs";
 import { bible_names_men } from "../../../love/public/src/bible_names_men.mjs";
 import { bible_names_women } from "../../../love/public/src/bible_names_women.mjs";
 import { app_g_refresh } from "../../../love/public/src/app_g_refresh.mjs";
-import { html_document_root } from "../../../love/public/src/html_document_root.mjs";
 import { list_without } from "../../../love/public/src/list_without.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
@@ -49,14 +48,11 @@ export async function app_g_main(context) {
   global_function_property_set(app_g_main, "chapter_code", "JAS01");
   marker("1");
   html_meta_viewport();
-  let html = html_document_root();
   html_font_sans_serif_set_html();
-  html_style_assign(html, {
-    "font-size": "18px",
-  });
   html_remix_icon();
   function lambda(item) {
     html_style_assign(item, {
+      "font-size": "18px",
       margin: "0",
       padding: 0,
       overflow: "hidden",
