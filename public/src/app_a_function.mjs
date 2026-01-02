@@ -103,6 +103,14 @@ export async function app_a_function(context) {
     });
     await app_a_function(context);
   }
+  const preview_app = {
+    shortcut: "p",
+    text: emoji_mobile(),
+    fn: async function lambda7() {
+      let a_name = storage_local_get(app_a, "app_selected");
+      await app_a_preview_back_function(context, a_name);
+    },
+  };
   let choices = [
     {
       shortcut: "o",
@@ -165,15 +173,9 @@ export async function app_a_function(context) {
       text: emoji_mobile(),
       fn: screen_choose(app_a_apps),
     },
-    {
-      shortcut: "p",
-      text: emoji_mobile(),
-      fn: async function lambda7() {
-        let a_name = storage_local_get(app_a, "app_selected");
-        await app_a_preview_back_function(context, a_name);
-      },
-    },
   ];
+  if (false) {
+  }
   app_a_buttons_shortcuts(choices, root);
   function screen_choose(screen) {
     let f = async function screen_choose_inner() {
