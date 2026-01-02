@@ -165,7 +165,7 @@ export async function app_a_function(context) {
     },
   ];
   app_a_buttons_shortcuts(choices, root);
-  async function screen_choose(screen) {
+  function screen_choose(screen) {
     let f = async function screen_choose_inner() {
       list_remove(on_keydowns, app_a_function_on_keydown);
       await sleep_0();
