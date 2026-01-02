@@ -1,3 +1,4 @@
+import { html_on_scroll } from "../../../love/public/src/html_on_scroll.mjs";
 import { html_on } from "../../../love/public/src/html_on.mjs";
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
@@ -22,7 +23,7 @@ export function html_overlay(container, z_index) {
     html_style_assign(overlay, s);
   }
   update();
-  html_on(container, "scroll", update);
+  html_on_scroll(container, update);
   html_on(window, "resize", update);
   return overlay;
 }
