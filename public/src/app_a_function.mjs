@@ -107,9 +107,7 @@ export async function app_a_function(context) {
       text: emoji_search(),
       fn: async function open() {
         let screen = app_a_functions;
-        list_remove(on_keydowns, app_a_function_on_keydown);
-        await sleep_0();
-        app_generic_screen_set(context, app_a_functions);
+        await open_generic(screen);
       },
     },
     {
@@ -174,6 +172,12 @@ export async function app_a_function(context) {
     },
   ];
   app_a_buttons_shortcuts(choices, root);
+  async function open_generic(screen) {
+    return () => {};
+    list_remove(on_keydowns, app_a_function_on_keydown);
+    await sleep_0();
+    app_generic_screen_set(context, screen);
+  }
   function app_a_function_on_keydown(e) {
     app_a_on_keydown(e, choices);
   }
