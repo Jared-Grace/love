@@ -1,3 +1,4 @@
+import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { js_code_global_init } from "../../../karate_code/public/src/js_code_global_init.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -21,6 +22,11 @@ export async function app_component(a_name, back) {
   let joined = list_join_newline(list);
   let fn = eval(joined);
   let root = html_document_body();
+  html_style_assign(root, {
+    display: "flex",
+    "flex-direction": "column",
+    height: "100dvh",
+  });
   let text = app_karate_button_back_text();
   html_clear(root);
   let component = html_button(root, text, back);
