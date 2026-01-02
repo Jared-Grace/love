@@ -27,11 +27,10 @@ export async function marker_screen_rename(
       let r = false;
       function lambda4() {
         let key2 = object_property_get(item, "key");
-        function lambda5() {}
-        js_node_type_is_if(node, type, lambda5);
-        log({
-          item,
-        });
+        function lambda5() {
+          let name = object_property_get(key2, "name");
+        }
+        js_node_type_is_if(key2, "Identifier", lambda5);
       }
       js_node_type_is_if(item, "Property", lambda4);
       return r;
