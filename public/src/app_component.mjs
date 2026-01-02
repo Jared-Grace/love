@@ -29,9 +29,18 @@ export async function app_component(a_name, back) {
     "flex-direction": "column",
     height: "100dvh",
   });
+  let bar = html_div(shell);
+  html_style_assign(bar, {
+    flex: "0 0 auto",
+  });
   let text = app_karate_button_back_text();
-  let div2 = html_div(root2);
-  let component = html_button(shell, text, back);
+  let component = html_button(bar, text, back);
   let div = html_div(shell);
+  html_style_assign(div, {
+    flex: "1 1 auto",
+    "min-height": "0",
+    position: "relative",
+    overflow: "hidden",
+  });
   await app_context_initialize_root(div, fn);
 }
