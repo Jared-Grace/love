@@ -31,7 +31,7 @@ export async function sandbox_4_a() {
         ebible_version_books,
       );
       let mapped = list_map_property(books, "text");
-      let verse_references = list_filter_starts_with_any(mapped, split);
+      let verse_references = list_filter_starts_with_any(split, mapped);
     }
     await each_async(list, lambda2);
     let v = [first, mapped2];
