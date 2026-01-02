@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { js_expression_string } from "../../../love/public/src/js_expression_string.mjs";
@@ -29,6 +30,9 @@ export async function marker_screen_rename(
             let value_after = js_parse_expression(combined_screen);
             object_property_set(item, "key", key_after);
             object_property_set(item, "value", value_after);
+            log({
+              item,
+            });
           }
         }
         js_node_type_is_if(key, "Identifier", lambda5);
