@@ -24,6 +24,13 @@ import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 export async function app_a_functions(context) {
+  let mapped = await app_a_files_paths();
+  let suffix = function_name_extension();
+  let filtered3 = list_filter_ends_with(mapped, suffix);
+  let joined = functions_path();
+  let padded = string_pad(joined, "/");
+  let filtered4 = list_filter_includes(filtered3, padded);
+  let f_names = list_map(filtered4, function_path_to_name);
   marker("1");
   let filtered = null;
   function on_enter() {
@@ -32,13 +39,6 @@ export async function app_a_functions(context) {
   }
   let on_keydown = html_on_enter_lambda(on_enter);
   let on_keydowns = app_a_on_keydown_add(context, on_keydown);
-  let mapped = await app_a_files_paths();
-  let suffix = function_name_extension();
-  let filtered3 = list_filter_ends_with(mapped, suffix);
-  let joined = functions_path();
-  let padded = string_pad(joined, "/");
-  let filtered4 = list_filter_includes(filtered3, padded);
-  let f_names = list_map(filtered4, function_path_to_name);
   let body = html_document_body();
   let input = app_a_input(body);
   let f_names_div = html_div(body);
