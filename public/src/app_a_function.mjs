@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { storage_local_exists } from "../../../love/public/src/storage_local_exists.mjs";
 import { app_a_preview_back_function } from "../../../love/public/src/app_a_preview_back_function.mjs";
 import { app_a } from "../../../love/public/src/app_a.mjs";
@@ -175,8 +176,9 @@ export async function app_a_function(context) {
       fn: screen_choose(app_a_apps),
     },
   ];
-  let a_name = storage_local_exists(app_a, "app_selected");
-  if (false) {
+  let e = storage_local_exists(app_a, "app_selected");
+  if (e) {
+    list_add(list, item3);
     preview_app;
   }
   app_a_buttons_shortcuts(choices, root);
