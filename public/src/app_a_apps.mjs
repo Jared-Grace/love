@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { path_name } from "../../../love/public/src/path_name.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -12,6 +13,7 @@ export async function app_a_apps(context) {
     mapped,
   });
   marker("1");
+  let root2 = object_property_get(context, "root");
   let p = html_p_text(root, text);
   app_a_functions_generic(context, mapped);
 }
