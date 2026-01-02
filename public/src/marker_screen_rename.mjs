@@ -31,7 +31,7 @@ export async function marker_screen_rename(
               prefixed,
               screen_name_after,
             );
-            let value_after = js_parse_expression(combined_screen);
+            let value_after = js_parse_expression(combined_screen_after);
             object_property_set(item, "key", key_after);
             object_property_set(item, "value", value_after);
             log({
