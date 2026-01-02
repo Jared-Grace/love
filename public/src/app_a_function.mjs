@@ -178,8 +178,7 @@ export async function app_a_function(context) {
   ];
   let e = storage_local_exists(app_a, "app_selected");
   if (e) {
-    list_add(choices, e);
-    preview_app;
+    list_add(choices, preview_app);
   }
   app_a_buttons_shortcuts(choices, root);
   function screen_choose(screen) {
