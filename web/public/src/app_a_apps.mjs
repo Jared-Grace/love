@@ -6,7 +6,8 @@ export async function app_a_apps(context) {
   let mapped = await apps_names();
   marker("1");
   async function on_select(a_name) {
-    await app_component(a_name, () => {});
+    function lambda() {}
+    await app_component(a_name, lambda);
   }
   app_a_functions_generic(context, "app", mapped, on_select);
 }
