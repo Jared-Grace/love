@@ -18,8 +18,8 @@ export async function app_component(a_name, back) {
   let code = object_property_get(d, "code");
   let code_assign = js_code_global_init();
   let list = [code_assign, code, combined];
-  let joined = list_join_newline(list2);
-  let fn = eval(code);
+  let joined = list_join_newline(list);
+  let fn = eval(joined);
   let root = html_document_body();
   let text = app_karate_button_back_text();
   html_clear(root);
