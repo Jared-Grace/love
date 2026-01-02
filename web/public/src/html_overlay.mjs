@@ -21,7 +21,8 @@ export function html_overlay(container, z_index) {
     zIndex: z_index,
   };
   let es = ["scroll", "resize"];
-  each(list, function lambda2(item) {});
+  function lambda2(item) {}
+  each(list, lambda2);
   html_on(component, name_event, lambda);
   container.addEventListener("scroll", updateOverlay);
   log({
