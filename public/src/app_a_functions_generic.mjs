@@ -61,8 +61,8 @@ export function app_a_functions_generic(context, f_names) {
   function f_name_select(f_name) {
     list_remove(on_keydowns, on_keydown);
     on_select(f_name);
-  }
-  function on_select(f_name) {
-    app_a_function_select(context, f_name);
+    function on_select(f_name) {
+      app_a_function_select(context, f_name);
+    }
   }
 }
