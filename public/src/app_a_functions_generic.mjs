@@ -1,5 +1,4 @@
 import { marker } from "../../../love/public/src/marker.mjs";
-import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -61,8 +60,5 @@ export function app_a_functions_generic(context, f_names, on_select) {
   function f_name_select(f_name) {
     list_remove(on_keydowns, on_keydown);
     on_select(f_name);
-    function on_select(f_name) {
-      app_a_function_select(context, f_name);
-    }
   }
 }
