@@ -1,3 +1,4 @@
+import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
@@ -37,6 +38,7 @@ export async function app_component(a_name, back) {
   });
   let text = app_karate_button_back_text();
   let component = html_button(bar, text, back);
+  html_width_full(component2);
   let div = html_div(shell);
   html_style_assign(div, {
     flex: "1 1 auto",
