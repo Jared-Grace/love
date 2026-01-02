@@ -1,6 +1,6 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
-import { list_find } from "../../../love/public/src/list_find.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_expression_string } from "../../../love/public/src/js_expression_string.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
@@ -24,13 +24,12 @@ export async function marker_screen_rename(
       value,
     });
     function lambda2(item) {
-      let r = false;
       function lambda4() {
         let key2 = object_property_get(item, "key");
         function lambda5() {
           let name = object_property_get(key2, "name");
-          r = name === screen_name_before;
-          if (false) {
+          let r = name === screen_name_before;
+          if (r) {
           }
         }
         js_node_type_is_if(key2, "Identifier", lambda5);
@@ -38,6 +37,6 @@ export async function marker_screen_rename(
       js_node_type_is_if(item, "Property", lambda4);
       return r;
     }
-    let only = list_find(properties, lambda2);
+    each(properties, lambda2);
   }
 }
