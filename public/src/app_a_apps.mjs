@@ -1,5 +1,5 @@
+import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { path_name } from "../../../love/public/src/path_name.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -14,6 +14,6 @@ export async function app_a_apps(context) {
   });
   marker("1");
   let root = object_property_get(context, "root");
-  let p = html_p_text(root, "Choose an app");
+  let p = html_div_text(root, "Choose an app");
   app_a_functions_generic(context, mapped);
 }
