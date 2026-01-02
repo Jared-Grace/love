@@ -107,7 +107,7 @@ export async function app_a_function(context) {
       text: emoji_search(),
       fn: async function open() {
         let screen = app_a_functions;
-        await open_generic(screen);
+        await screen_choose(screen);
       },
     },
     {
@@ -172,7 +172,7 @@ export async function app_a_function(context) {
     },
   ];
   app_a_buttons_shortcuts(choices, root);
-  async function open_generic(screen) {
+  async function screen_choose(screen) {
     let v5 = async function lambda7() {
       list_remove(on_keydowns, app_a_function_on_keydown);
       await sleep_0();
