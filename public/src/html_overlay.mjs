@@ -2,9 +2,13 @@ import { html_style_assign } from "../../../love/public/src/html_style_assign.mj
 import { html_div } from "../../../love/public/src/html_div.mjs";
 export function html_overlay(container, z_index) {
   let overlay = html_div(container);
+  heg;
   let s = {
     position: "absolute",
-    inset: "0",
+    top: container.scrollTop + "px",
+    left: container.scrollLeft + "px",
+    width: container.clientWidth + "px",
+    height: container.clientHeight + "px",
     background: "rgba(0,0,0,0.4)",
     padding: "1vw",
     "z-index": z_index,
