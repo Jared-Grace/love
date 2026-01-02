@@ -1,3 +1,4 @@
+import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_expression_string } from "../../../love/public/src/js_expression_string.mjs";
@@ -16,7 +17,9 @@ export async function marker_screen_rename(
     let key = js_expression_string(screen_name_before);
     let combined_screen = function_name_combine(prefixed, screen_name_before);
     let value = js_parse_expression(combined_screen);
-    function lambda2(item) {}
+    function lambda2(item) {
+      js_node_type_is_if(node, type, function lambda4() {});
+    }
     let only = list_find(list, lambda2);
     log({
       properties,
