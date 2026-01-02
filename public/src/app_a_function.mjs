@@ -1,4 +1,4 @@
-import { emoji_apps } from "../../../love/public/src/emoji_apps.mjs";
+import { emoji_mobile } from "../../../love/public/src/emoji_mobile.mjs";
 import { function_dependencies_externals_to_urls } from "../../../love/public/src/function_dependencies_externals_to_urls.mjs";
 import { global_import_set } from "../../../love/public/src/global_import_set.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
@@ -164,7 +164,7 @@ export async function app_a_function(context) {
     },
     {
       shortcut: "a",
-      text: emoji_apps(),
+      text: emoji_mobile(),
       fn: open,
     },
   ];
