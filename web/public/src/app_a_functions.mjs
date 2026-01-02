@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { app_a_files_paths } from "../../../love/public/src/app_a_files_paths.mjs";
 import { list_filter_includes } from "../../../love/public/src/list_filter_includes.mjs";
 import { functions_path } from "../../../love/public/src/functions_path.mjs";
@@ -22,7 +23,8 @@ import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
-export async function app_a_home(context) {
+export async function app_a_functions(context) {
+  marker("1");
   let filtered = null;
   function on_enter() {
     let first = list_first(filtered);
