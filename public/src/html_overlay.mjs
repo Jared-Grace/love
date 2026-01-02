@@ -10,13 +10,13 @@ export function html_overlay(container, z_index) {
   });
   let s = {
     position: "absolute",
-    top: "0",
-    left: "0",
-    width: element.clientWidth + "px",
-    height: element.clientHeight + "px",
+    top: container.scrollTop + "px",
+    left: container.scrollLeft + "px",
+    width: container.clientWidth + "px",
+    height: container.clientHeight + "px",
     background: "rgba(0,0,0,0.4)",
     padding: "1vw",
-    "z-index": z_index,
+    zIndex: z_index,
   };
   log({
     s,
