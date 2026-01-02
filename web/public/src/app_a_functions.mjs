@@ -17,5 +17,5 @@ export async function app_a_functions(context) {
   let filtered4 = list_filter_includes(filtered3, padded);
   let f_names = list_map(filtered4, function_path_to_name);
   marker("1");
-  app_a_functions_generic(context, f_names);
+  app_a_functions_generic(context, f_names, error());
 }
