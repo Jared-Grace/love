@@ -3,12 +3,11 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 export function html_overlay(container, z_index) {
   let overlay = html_div(container);
   let s = {
-    position: "fixed",
+    position: "absolute",
     top: "0",
     left: "0",
     right: "0",
-    width: "auto",
-    height: "100vh",
+    bottom: "0",
     padding: "1vw",
     background: "rgba(0,0,0,0.4)",
     "z-index": z_index,
