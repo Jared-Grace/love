@@ -1,3 +1,4 @@
+import { emoji_apps } from "../../../love/public/src/emoji_apps.mjs";
 import { function_dependencies_externals_to_urls } from "../../../love/public/src/function_dependencies_externals_to_urls.mjs";
 import { global_import_set } from "../../../love/public/src/global_import_set.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
@@ -160,6 +161,11 @@ export async function app_a_function(context) {
         }
         let result = await html_loading(lambda5);
       },
+    },
+    {
+      shortcut: "a",
+      text: emoji_apps(),
+      fn: open,
     },
   ];
   app_a_buttons_shortcuts(choices, root);
