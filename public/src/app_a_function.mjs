@@ -1,6 +1,5 @@
 import { app_a_preview_back_function } from "../../../love/public/src/app_a_preview_back_function.mjs";
 import { app_a } from "../../../love/public/src/app_a.mjs";
-import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { app_a_apps } from "../../../love/public/src/app_a_apps.mjs";
 import { emoji_mobile } from "../../../love/public/src/emoji_mobile.mjs";
 import { function_dependencies_externals_to_urls } from "../../../love/public/src/function_dependencies_externals_to_urls.mjs";
@@ -170,7 +169,7 @@ export async function app_a_function(context) {
       shortcut: "p",
       text: emoji_mobile(),
       fn: async function lambda7() {
-        storage_local_set(app_a, "app_selected", a_name);
+        let a_name = storage_local_get(app_a, "app_selected");
         await app_a_preview_back_function(context, a_name);
       },
     },
