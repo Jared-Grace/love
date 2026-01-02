@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { js_expression_string } from "../../../love/public/src/js_expression_string.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -28,8 +29,9 @@ export async function marker_screen_rename(
           let name = object_property_get(key, "name");
           let match = name === screen_name_before;
           if (match) {
-            let key = js_expression_string(screen_name_before);
-            let value = js_parse_expression(combined_screen);
+            let key_after = js_expression_string(screen_name_before);
+            let value_after = js_parse_expression(combined_screen);
+            object_property_set(object, property_name, value2);
           }
         }
         js_node_type_is_if(key, "Identifier", lambda5);
