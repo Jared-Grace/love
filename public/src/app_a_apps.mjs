@@ -13,7 +13,7 @@ export async function app_a_apps(context) {
     mapped,
   });
   marker("1");
-  let root2 = object_property_get(context, "root");
-  let p = html_p_text(root, text);
+  let root = object_property_get(context, "root");
+  let p = html_p_text(root, "Choose an app");
   app_a_functions_generic(context, mapped);
 }
