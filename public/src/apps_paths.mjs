@@ -3,7 +3,7 @@ import { folder_read_files } from "../../../love/public/src/folder_read_files.mj
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function apps_paths() {
   let fop = folder_public();
-  let as = await folder_read_files(fop);
+  let aps = await folder_read_files(fop);
   marker("1");
-  return as;
+  return aps;
 }
