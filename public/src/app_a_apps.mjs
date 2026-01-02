@@ -16,7 +16,8 @@ export async function app_a_apps(context) {
   let root = object_property_get(context, "root");
   const article = "an";
   const noun = "app";
-  const text = "Choose " + article + " " + noun + ":";
+  const articled = article + " " + noun;
+  const text = "Choose " + articled + ":";
   html_div_text_centered(root, text);
   function on_select(f_name) {
     alert(f_name);
