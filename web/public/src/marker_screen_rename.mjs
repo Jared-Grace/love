@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -25,6 +26,7 @@ export async function marker_screen_rename(
     function lambda2(item) {
       let r = false;
       function lambda4() {
+        let key2 = object_property_get(item, "key");
         log({
           item,
         });
