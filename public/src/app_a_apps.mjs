@@ -8,7 +8,7 @@ export async function app_a_apps(context) {
   let aps = await apps_paths();
   let mapped = list_map(list, path_name);
   log({
-    as: aps,
+    mapped,
   });
   marker("1");
   app_a_functions_generic(context, mapped);
