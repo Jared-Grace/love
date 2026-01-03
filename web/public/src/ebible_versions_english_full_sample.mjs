@@ -7,6 +7,7 @@ export async function ebible_versions_english_full_sample() {
   let v = await ebible_versions_english_full();
   async function lambda(value, key) {
     let result2 = await ebible_verse(key, "GEN01", "1");
+    return result2;
   }
   let result = await object_values_map_async(v, lambda);
   return v;
