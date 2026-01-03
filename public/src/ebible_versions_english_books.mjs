@@ -8,21 +8,27 @@ import { ebible_versions_english } from "../../../love/public/src/ebible_version
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_books() {
   marker("1");
-  async function lambda2(la) {}
-  let list = await list_adder_async(lambda2);
-  async function lambda(bible_folder) {
-    let result = null;
-    let success = null;
-    let error = null;
-    try {
-      result = await ebible_version_download(bible_folder);
-      success = true;
-    } catch (e) {
-      success = false;
-      error = e;
+  async function lambda2(la) {
+    async function lambda(bible_folder) {
+      let result = null;
+      let success = null;
+      let error = null;
+      try {
+        result = await ebible_version_download(bible_folder);
+        success = true;
+      } catch (e) {
+        success = false;
+        error = e;
+      }
+      la({
+        result,
+        success,
+        error,
+      });
     }
+    let mapped = await list_map_async(bible_folders, lambda);
   }
-  let mapped = await list_map_async(bible_folders, lambda);
+  let list = await list_adder_async(lambda2);
   let v = await ebible_versions_english();
   let dictionary = await list_to_dictionary_async(v, ebible_version_books);
   return dictionary;
