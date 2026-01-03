@@ -111,6 +111,8 @@ export async function app_reply_main(context) {
         async function lambda8(verse) {
           let chapter_code = object_property_get(verse, "chapter_code");
           let verse_number = object_property_get(verse, "verse_number");
+          if (equal(left, right)) {
+          }
           let d = await ebible_verse(bible_folder, chapter_code, verse_number);
           return d;
         }
