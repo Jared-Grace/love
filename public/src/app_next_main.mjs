@@ -63,7 +63,7 @@ export async function app_next_main(context) {
     return eq;
   }
   let only = list_find(list, lambda4);
-  log(list);
+  log(only);
   verse_number += 1;
   object_property_set(hash, "v", verse_number);
   function lambda3(la) {
