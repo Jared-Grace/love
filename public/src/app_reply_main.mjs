@@ -112,8 +112,8 @@ export async function app_reply_main(context) {
         let bible_folder = object_property_get(l, "bible_folder");
         let right = ebible_folder_english();
         if (equal(bible_folder, right)) {
-          english_choices;
-          let r2 = list_random_item(list);
+          let r = list_random_item(english_choices);
+          bible_folder = r;
         }
         async function lambda8(verse) {
           let chapter_code = object_property_get(verse, "chapter_code");
