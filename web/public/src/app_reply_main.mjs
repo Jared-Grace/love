@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { ebible_versions_english_choices } from "../../../love/public/src/ebible_versions_english_choices.mjs";
@@ -114,6 +115,9 @@ export async function app_reply_main(context) {
         if (equal(bible_folder, right)) {
           let r = list_random_item(english_choices);
           bible_folder = r;
+          log({
+            bible_folder,
+          });
         }
         async function lambda8(verse) {
           let chapter_code = object_property_get(verse, "chapter_code");
