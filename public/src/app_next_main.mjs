@@ -1,3 +1,4 @@
+import { list_find } from "../../../love/public/src/list_find.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_index_flat } from "../../../love/public/src/ebible_index_flat.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
@@ -51,6 +52,7 @@ export async function app_next_main(context) {
   list_add_first(mapped, reference);
   let verse_number = integer_to(verse);
   let list = await ebible_index_flat(version_english);
+  let only = list_find(list2, function lambda4(item) {});
   log(list);
   verse_number += 1;
   object_property_set(hash, "v", verse_number);
