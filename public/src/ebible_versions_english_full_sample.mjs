@@ -15,7 +15,10 @@ export async function ebible_versions_english_full_sample() {
     return any;
   };
   function lambda2(oad2) {
-    function lambda3(value, property) {}
+    function lambda3(value, property) {
+      if (false) {
+      }
+    }
     each_object(object, lambda3);
   }
   let result3 = object_adder(lambda2);
