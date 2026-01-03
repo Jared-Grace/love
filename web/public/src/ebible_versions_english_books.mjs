@@ -8,6 +8,7 @@ import { ebible_versions_english } from "../../../love/public/src/ebible_version
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_books() {
   marker("1");
+  let bible_folders = await ebible_versions_english();
   async function lambda2(la) {
     async function lambda(bible_folder) {
       let result = null;
@@ -25,7 +26,6 @@ export async function ebible_versions_english_books() {
     await each_async(bible_folders, lambda);
   }
   let list = await list_adder_async(lambda2);
-  let v = await ebible_versions_english();
   let dictionary = await list_to_dictionary_async(v, ebible_version_books);
   return dictionary;
 }
