@@ -1,3 +1,4 @@
+import { ebible_versions_english_choices } from "../../../love/public/src/ebible_versions_english_choices.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_reply_buttons_refresh } from "../../../love/public/src/app_reply_buttons_refresh.mjs";
 import { html_on_keydown_body } from "../../../love/public/src/html_on_keydown_body.mjs";
@@ -33,6 +34,7 @@ export async function app_reply_main(context) {
   let r = await app_reply_initialize(context);
   let choices = object_property_get(r, "choices");
   let languages = object_property_get(r, "languages");
+  let result3 = await ebible_versions_english_choices();
   let languages_chosen_default = list_take(languages, 2);
   let languages_chosen = [];
   languages_chosen_reset();
