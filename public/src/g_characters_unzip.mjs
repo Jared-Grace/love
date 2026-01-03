@@ -8,6 +8,7 @@ export async function g_characters_unzip() {
     return i;
   }
   await folder_files_names_normalize_unzip(path, lambda, "woman_");
+  return;
   function lambda2(input) {
     const item = "man";
     let v = string_includes_or_starts_with(input, item);
