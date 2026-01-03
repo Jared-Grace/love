@@ -3,9 +3,9 @@ import { list_filter_try_async } from "../../../love/public/src/list_filter_try_
 import { ebible_versions_english } from "../../../love/public/src/ebible_versions_english.mjs";
 export async function ebible_versions_english_downloadable() {
   let bible_folders = await ebible_versions_english();
-  let list = await list_filter_try_async(
+  let downloadable = await list_filter_try_async(
     bible_folders,
     ebible_version_download,
   );
-  return list;
+  return downloadable;
 }
