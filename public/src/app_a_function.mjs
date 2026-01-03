@@ -108,9 +108,7 @@ export async function app_a_function(context) {
   const preview_app = {
     shortcut: "p",
     text: emoji_mobile(),
-    fn: async function lambda7() {
-      await app_a_app_run(context);
-    },
+    fn: screen_choose(app_a_app_run),
   };
   let choices = [
     {
