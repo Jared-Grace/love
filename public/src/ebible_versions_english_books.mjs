@@ -15,16 +15,12 @@ export async function ebible_versions_english_books() {
       let error = null;
       try {
         result = await ebible_version_download(bible_folder);
+        la(result);
         success = true;
       } catch (e) {
         success = false;
         error = e;
       }
-      la({
-        result,
-        success,
-        error,
-      });
     }
     let mapped = await list_map_async(bible_folders, lambda);
   }
