@@ -10,7 +10,8 @@ export async function ebible_versions_english_full_sample() {
   let v = await ebible_versions_english_full();
   let excluded_prefixes = ["engweb,eng-web"];
   function lambda2(oad2) {
-    each_object(object, function lambda3(value2, property) {});
+    function lambda3(value2, property) {}
+    each_object(object, lambda3);
   }
   let result3 = object_adder(lambda2);
   async function lambda(value, key) {
