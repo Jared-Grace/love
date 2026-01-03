@@ -14,6 +14,6 @@ export async function ebible_versions() {
   let list = html_parse_find_a_href_starts_with(root, d, "details.php?id=");
   let mapped = list_map_prefix_without(list, "details.php?id=");
   let unique = list_unique(mapped);
-  list_sort_string(list2);
+  list_sort_string(unique);
   return unique;
 }
