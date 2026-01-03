@@ -109,7 +109,6 @@ export async function app_a_function(context) {
     shortcut: "p",
     text: emoji_mobile(),
     fn: async function lambda7() {
-      let a_name = storage_local_get(app_a, "app_selected");
       await app_a_app_run(context);
     },
   };
