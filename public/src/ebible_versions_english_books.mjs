@@ -18,6 +18,6 @@ export async function ebible_versions_english_books() {
     await each_async(bible_folders, lambda);
   }
   let list = await list_adder_async(lambda2);
-  let dictionary = await list_to_dictionary_async(v, ebible_version_books);
+  let dictionary = await list_to_dictionary_async(list, ebible_version_books);
   return dictionary;
 }
