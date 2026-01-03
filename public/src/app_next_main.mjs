@@ -67,8 +67,9 @@ export async function app_next_main(context) {
   let parts = list_adder(lambda3);
   let result2 = list_join_comma(parts);
   let h = html_hash_symbol();
+  const h2 = h + result2;
   let url = html_url_without_hash();
-  url += "" + h + result2;
+  url += "" + h2;
   list_add(mapped, url);
   let joined = await list_join_newline_2_copy(mapped);
   let root = object_property_get(context, "root");
