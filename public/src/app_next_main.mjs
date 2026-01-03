@@ -26,7 +26,7 @@ export async function app_next_main(context) {
   marker("1");
   firebase_name_jg();
   let list = await ebible_index_flat("engbsb");
-  log(message);
+  log(list);
   let hash = html_hash_object_get();
   let chapter_code = object_property_get(hash, "c");
   let verse = object_property_get(hash, "v");
