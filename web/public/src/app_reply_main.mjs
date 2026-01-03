@@ -34,7 +34,7 @@ export async function app_reply_main(context) {
   let r = await app_reply_initialize(context);
   let choices = object_property_get(r, "choices");
   let languages = object_property_get(r, "languages");
-  let result3 = await ebible_versions_english_choices();
+  let result3 = await ebible_versions_english_choices();$L$result3
   let languages_chosen_default = list_take(languages, 2);
   let languages_chosen = [];
   languages_chosen_reset();
