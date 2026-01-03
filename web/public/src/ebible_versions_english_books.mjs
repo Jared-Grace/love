@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
@@ -14,6 +15,8 @@ export async function ebible_versions_english_books() {
       success = true;
     } catch (e) {
       success = false;
+      let error = null;
+      error = e;
     }
   }
   let mapped = await list_map_async(bible_folders, lambda);
