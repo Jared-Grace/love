@@ -16,16 +16,13 @@ export async function firebase_deploy_function(f_name) {
     now_file,
     unaliased,
   );
-  await firebase_upload_object(
-    {
-      code,
-    },
-    destination,
-  );
+  await firebase_upload_object(destination, {
+    code,
+  });
   let version = {
     destination,
   };
   let destination_version =
     firebase_deploy_function_destination_latest(unaliased);
-  await firebase_upload_object(version, destination_version);
+  await firebase_upload_object(destination_version, version);
 }
