@@ -6,7 +6,8 @@ import { ebible_versions_english } from "../../../love/public/src/ebible_version
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_books() {
   marker("1");
-  let mapped = await list_map_async(list, async function lambda(item) {});
+  async function lambda(item) {}
+  let mapped = await list_map_async(list, lambda);
   let file_path = await ebible_version_download(bible_folder);
   let v = await ebible_versions_english();
   let dictionary = await list_to_dictionary_async(v, ebible_version_books);
