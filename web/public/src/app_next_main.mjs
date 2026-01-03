@@ -48,7 +48,7 @@ export async function app_next_main(context) {
   ]);
   let mapped = await list_map_unordered_async(languages_chosen, lambda2);
   list_add_first(mapped, reference);
-  let list = await ebible_index_flat(version_english);
+  let list = await ebible_index_flat(version_english);$a
   const target = {
     chapter_code,
     verse_number,
