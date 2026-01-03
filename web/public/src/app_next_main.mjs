@@ -25,8 +25,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_next_main(context) {
   marker("1");
   firebase_name_jg();
-  let list = await ebible_index_flat("engbsb");
-  log(list);
+  const version_english = "engbsb";
   let hash = html_hash_object_get();
   let chapter_code = object_property_get(hash, "c");
   let verse = object_property_get(hash, "v");
@@ -44,13 +43,15 @@ export async function app_next_main(context) {
     let text = object_property_get(d, "text");
     return text;
   }
-  let books = await ebible_version_books("engbsb");
+  let books = await ebible_version_books(version_english);
   let reference = ebible_parts_chapter_code_to_reference(chapter_code, books, [
     verse,
   ]);
   let mapped = await list_map_unordered_async(languages_chosen, lambda2);
   list_add_first(mapped, reference);
   let verse_number = integer_to(verse);
+  let list = await ebible_index_flat(version_english);
+  log(list);
   verse_number += 1;
   object_property_set(hash, "v", verse_number);
   function lambda3(la) {
