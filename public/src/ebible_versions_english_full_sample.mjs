@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { list_any_starts_with } from "../../../love/public/src/list_any_starts_with.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { object_adder } from "../../../love/public/src/object_adder.mjs";
@@ -11,7 +12,8 @@ export async function ebible_versions_english_full_sample() {
   let v = await ebible_versions_english_full();
   let excluded_prefixes = ["engweb,eng-web"];
   let filter = function lambda4(value, property) {
-    let any = list_any_starts_with(value, excluded_prefixes);
+    let b = list_any_starts_with(value, excluded_prefixes);
+    let any = not(b);
     return any;
   };
   function lambda2(oad2) {
