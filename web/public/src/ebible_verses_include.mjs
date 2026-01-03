@@ -29,6 +29,7 @@ export function ebible_verses_include() {
     "po",
     "pr",
     "sc",
+    "sls",
     "q",
     "q2",
     "q3",
