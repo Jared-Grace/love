@@ -8,9 +8,9 @@ export async function ebible_versions_english_books() {
   marker("1");
   async function lambda(bible_folder) {
     let result = null;
+    let success = null;
     try {
       result = await ebible_version_download(bible_folder);
-      let success = null;
       success = true;
     } catch (e) {}
   }
