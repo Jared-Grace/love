@@ -9,6 +9,10 @@ export async function ebible_versions_english_choices_upload() {
   let index = await ebible_versions_english_choices();
   let file_name = ebible_index_flat_upload_name();
   let file_name_with_extension = file_name_json(file_name);
-  let destination = list_join_slash_forward(["bibles", bible_folder]);
+  let destination = list_join_slash_forward([
+    "bibles",
+    "en",
+    file_name_with_extension,
+  ]);
   await firebase_upload_object(index, destination);
 }
