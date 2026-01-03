@@ -3,5 +3,6 @@ import { invoke_cache_file } from "../../../love/public/src/invoke_cache_file.mj
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_books_count_cache() {
   marker("1");
-  return await invoke_cache_file(ebible_versions_english_books_count, []);
+  let v = await invoke_cache_file(ebible_versions_english_books_count, []);
+  return v;
 }
