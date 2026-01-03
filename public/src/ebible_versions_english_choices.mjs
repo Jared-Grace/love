@@ -26,6 +26,6 @@ export async function ebible_versions_english_choices() {
     let any = list_any_starts_with_not(property, excluded_prefixes);
     return any;
   };
-  let result3 = list_filter(properties, filter);
-  return result3;
+  let choices = list_filter(properties, filter);
+  return choices;
 }
