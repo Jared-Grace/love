@@ -12,7 +12,9 @@ export async function ebible_versions_english_books() {
     try {
       result = await ebible_version_download(bible_folder);
       success = true;
-    } catch (e) {}
+    } catch (e) {
+      success = false;
+    }
   }
   let mapped = await list_map_async(bible_folders, lambda);
   let v = await ebible_versions_english();
