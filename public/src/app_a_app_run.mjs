@@ -5,10 +5,10 @@ import { app_component } from "../../../love/public/src/app_component.mjs";
 import { app_a_function } from "../../../love/public/src/app_a_function.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_a_app_run(context) {
-  function lambda() {
+  function back() {
     marker("1");
     app_generic_screen_set(context, app_a_function);
   }
   let a_name = storage_local_get(app_a, "app_selected");
-  await app_component(a_name, lambda);
+  await app_component(a_name, back);
 }
