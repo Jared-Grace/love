@@ -1,5 +1,5 @@
+import { object_adder } from "../../../love/public/src/object_adder.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
-import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { ebible_versions_english_books_count_cache } from "../../../love/public/src/ebible_versions_english_books_count_cache.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_full() {
@@ -8,11 +8,12 @@ export async function ebible_versions_english_full() {
   let filter = null;
   function lambda(la) {
     function lambda2(value, property) {
-      if (false) {
+      if (filter(value, property)) {
+        la();
       }
     }
     each_object(object, lambda2);
   }
-  let list = list_adder(lambda);
+  let list = object_adder(lambda);
   return v;
 }
