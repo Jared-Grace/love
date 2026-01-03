@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { app_reply_buttons_refresh } from "../../../love/public/src/app_reply_buttons_refresh.mjs";
 import { html_on_keydown_body } from "../../../love/public/src/html_on_keydown_body.mjs";
 import { string_take_less_1 } from "../../../love/public/src/string_take_less_1.mjs";
@@ -28,6 +29,7 @@ import { list_take } from "../../../love/public/src/list_take.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_reply_initialize } from "../../../love/public/src/app_reply_initialize.mjs";
 export async function app_reply_main(context) {
+  marker("1");
   let r = await app_reply_initialize(context);
   let choices = object_property_get(r, "choices");
   let languages = object_property_get(r, "languages");
