@@ -5,7 +5,7 @@ import { ebible_versions_english_books_count_cache } from "../../../love/public/
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_full() {
   marker("1");
-  let v = await ebible_versions_english_books_count_cache();
+  let object = await ebible_versions_english_books_count_cache();
   const c = isaiah_chapters_count();
   let filter = function lambda3(value, key) {
     let v2 = value >= c;
