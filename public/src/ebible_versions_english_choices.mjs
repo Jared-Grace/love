@@ -1,3 +1,4 @@
+import { global_function_initialize } from "../../../love/public/src/global_function_initialize.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
@@ -5,6 +6,12 @@ import { list_any_starts_with_not } from "../../../love/public/src/list_any_star
 import { ebible_versions_english_full } from "../../../love/public/src/ebible_versions_english_full.mjs";
 export async function ebible_versions_english_choices() {
   if (browser_is()) {
+    let verse_get = global_function_initialize(
+      ebible_versions_english_choices,
+      () => {},
+    );
+    let verse = await verse_get(bible_folder, chapter_code, verse_number);
+    return verse;
   }
   let object = await ebible_versions_english_full();
   let properties = object_properties(object);
