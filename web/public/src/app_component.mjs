@@ -1,4 +1,3 @@
-import { app_generic_refresh_screen } from "../../../love/public/src/app_generic_refresh_screen.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
@@ -14,7 +13,7 @@ import { app_context_initialize_root } from "../../../love/public/src/app_contex
 import { function_dependencies_code_unaliased } from "../../../love/public/src/function_dependencies_code_unaliased.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_name_main } from "../../../love/public/src/app_name_main.mjs";
-export async function app_component(a_name, screen_name) {
+export async function app_component(a_name, back) {
   marker("1");
   let combined = app_name_main(a_name);
   let v = await function_dependencies_code_unaliased(combined);
@@ -38,10 +37,7 @@ export async function app_component(a_name, screen_name) {
     flex: "0 0 auto",
   });
   let text = app_karate_button_back_text();
-  function lambda() {
-    app_generic_refresh_screen(context, screen_name);
-  }
-  let component = html_button(bar, text, lambda);
+  let component = html_button(bar, text, back);
   html_width_full(component);
   let div = html_div(shell);
   html_style_assign(div, {
