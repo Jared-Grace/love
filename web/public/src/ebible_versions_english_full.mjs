@@ -5,8 +5,12 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_full() {
   marker("1");
   let v = await ebible_versions_english_books_count_cache();
+  let filter = null;
   function lambda(la) {
-    function lambda2(value, property) {}
+    function lambda2(value, property) {
+      if (false) {
+      }
+    }
     each_object(object, lambda2);
   }
   let list = list_adder(lambda);
