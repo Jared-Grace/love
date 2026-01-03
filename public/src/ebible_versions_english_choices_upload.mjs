@@ -6,7 +6,8 @@ import { ebible_versions_english_choices } from "../../../love/public/src/ebible
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_choices_upload() {
   let cs = await ebible_versions_english_choices();
-  await each_unordered_async(list, async function lambda(item) {});
+  async function lambda(item) {}
+  await each_unordered_async(list, lambda);
   await ebible_verses_upload(bible_folder);
   marker("1");
   let destination = ebible_versions_english_choices_upload_path();
