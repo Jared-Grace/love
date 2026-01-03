@@ -56,7 +56,7 @@ export async function app_next_main(context) {
     chapter_code,
     verse_number,
   };
-  let only = list_find_json(expected, list);
+  let only = list_find_json(list, expected);
   log(only);
   verse_number += 1;
   object_property_set(hash, "v", verse_number);
