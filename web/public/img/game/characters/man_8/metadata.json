@@ -1,8 +1,8 @@
 {
   "character": {
-    "id": "99f12ec3-4837-4ed4-b4b2-f7dcfe53ecee",
-    "name": " Christian joyful man wearing tunic. No hat. No head covering. He is very poor. He is wearing clothing from two thousand years ago.",
-    "prompt": " Christian joyful man wearing tunic. No hat. No head covering. He is very poor. He is wearing clothing from two thousand years ago.",
+    "id": "d8e4c5f7-c618-4129-b92e-ab6f6b45870d",
+    "name": "Christian joyful man wearing tunic. No hat. No head covering. He is very poor. He is wearing clothing from two thousand years ago.",
+    "prompt": "Christian joyful man wearing tunic. No hat. No head covering. He is very poor. He is wearing clothing from two thousand years ago.",
     "size": {
       "width": 128,
       "height": 128
@@ -10,7 +10,7 @@
     "template_id": "mannequin",
     "directions": 8,
     "view": "high top-down",
-    "created_at": "2025-11-27T06:22:41.154642+00:00"
+    "created_at": "2025-11-27T04:34:21.27358+00:00"
   },
   "frames": {
     "rotations": {
@@ -1071,5 +1071,5 @@
     "animations": {}
   },
   "export_version": "1.0",
-  "export_date": "2025-11-27T15:07:22.337267"
+  "export_date": "2026-01-03T00:06:49.105407"
 }

@@ -1,8 +1,8 @@
 {
   "character": {
-    "id": "0ae8c26f-9658-4ff3-80c9-e03d8505af70",
-    "name": "Christian joyful man wearing tunic and sandals. He has very dark skin. He is very poor. He is wearing clothing from two thousand years ago. ",
-    "prompt": "Christian joyful man wearing tunic and sandals. He has very dark skin. He is very poor. He is wearing clothing from two thousand years ago. ",
+    "id": "e02bfa8c-886c-4de2-b806-847ab8f2ab21",
+    "name": " Christian joyful man with beard and dark skin wearing medium tunic. No hat. No head covering. He is very poor. He is wearing clothing from two thousand years ago.",
+    "prompt": " Christian joyful man with beard and dark skin wearing medium tunic. No hat. No head covering. He is very poor. He is wearing clothing from two thousand years ago.",
     "size": {
       "width": 128,
       "height": 128
@@ -10,7 +10,7 @@
     "template_id": "mannequin",
     "directions": 8,
     "view": "high top-down",
-    "created_at": "2025-11-27T04:40:22.428834+00:00"
+    "created_at": "2025-11-27T23:39:10.01833+00:00"
   },
   "frames": {
     "rotations": {
@@ -1071,5 +1071,5 @@
     "animations": {}
   },
   "export_version": "1.0",
-  "export_date": "2025-11-27T15:07:07.946473"
+  "export_date": "2026-01-03T00:06:19.796950"
 }
