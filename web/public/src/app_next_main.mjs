@@ -52,7 +52,8 @@ export async function app_next_main(context) {
   list_add_first(mapped, reference);
   let verse_number = integer_to(verse);
   let list = await ebible_index_flat(version_english);
-  let only = list_find(list2, function lambda4(item) {});
+  function lambda4(item) {}
+  let only = list_find(list2, lambda4);
   log(list);
   verse_number += 1;
   object_property_set(hash, "v", verse_number);
