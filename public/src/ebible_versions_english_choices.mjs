@@ -1,3 +1,4 @@
+import { global_function_initialize_lambda_async } from "../../../love/public/src/global_function_initialize_lambda_async.mjs";
 import { firebase_storage_download_ebible } from "../../../love/public/src/firebase_storage_download_ebible.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -9,7 +10,7 @@ export async function ebible_versions_english_choices() {
     async function lambda() {
       let index = await firebase_storage_download_ebible(bible_folder, n);
     }
-    let verse_get = global_function_initialize_async(
+    let verse_get = await global_function_initialize_lambda_async(
       ebible_versions_english_choices,
       lambda,
     );
