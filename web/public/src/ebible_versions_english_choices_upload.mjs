@@ -6,5 +6,5 @@ export async function ebible_versions_english_choices_upload() {
   marker("1");
   let index = await ebible_versions_english_choices();
   let destination = ebible_versions_english_choices_upload_path();
-  await firebase_upload_object(index, destination);
+  await firebase_upload_object(destination, index);
 }
