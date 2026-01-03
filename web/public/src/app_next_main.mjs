@@ -1,3 +1,4 @@
+import { ebible_index_flat } from "../../../love/public/src/ebible_index_flat.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -21,6 +22,7 @@ import { string_split_plus } from "../../../love/public/src/string_split_plus.mj
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_next_main(context) {
+  let list = await ebible_index_flat(bible_folder2);
   marker("1");
   firebase_name_jg();
   let hash = html_hash_object_get();
