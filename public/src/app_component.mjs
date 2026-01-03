@@ -37,7 +37,7 @@ export async function app_component(a_name, back) {
     flex: "0 0 auto",
   });
   let text = app_karate_button_back_text();
-  let component = html_button(bar, text, back);
+  let component = html_button(bar, text, () => {});
   html_width_full(component);
   let div = html_div(shell);
   html_style_assign(div, {
