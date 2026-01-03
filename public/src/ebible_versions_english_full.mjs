@@ -6,13 +6,14 @@ export async function ebible_versions_english_full() {
   marker("1");
   let v = await ebible_versions_english_books_count_cache();
   let filter = null;
-  function lambda2(value, property) {
-    if (filter(value, property)) {
-      la();
+  function lambda(oad) {
+    function lambda2(value, key) {
+      if (filter(value, key)) {
+        oad(key, value);
+      }
     }
+    each_object(object, lambda2);
   }
-  each_object(object, lambda2);
-  function lambda(oad) {}
   let result = object_adder(lambda);
   return v;
 }
