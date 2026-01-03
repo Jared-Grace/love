@@ -1,6 +1,6 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { error } from "../../../love/public/src/error.mjs";
-import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { list_to_dictionary_async } from "../../../love/public/src/list_to_dictionary_async.mjs";
@@ -22,7 +22,7 @@ export async function ebible_versions_english_books() {
         error = e;
       }
     }
-    let mapped = await list_map_async(bible_folders, lambda);
+    await each_async(bible_folders, lambda);
   }
   let list = await list_adder_async(lambda2);
   let v = await ebible_versions_english();
