@@ -52,11 +52,10 @@ export async function app_next_main(context) {
   list_add_first(mapped, reference);
   let verse_number = integer_to(verse);
   let list = await ebible_index_flat(version_english);
-  let expected = {
+  let only = list_find_json(list, {
     chapter_code,
     verse_number,
-  };
-  let only = list_find_json(list, expected);
+  });
   log(only);
   verse_number += 1;
   object_property_set(hash, "v", verse_number);
