@@ -54,7 +54,8 @@ export async function app_next_main(context) {
   let verse_number = integer_to(verse);
   let list = await ebible_index_flat(version_english);
   function lambda4(item) {
-    let eq = equal_by(a, b, function lambda5(item2) {});
+    function lambda5(item2) {}
+    let eq = equal_by(a, b, lambda5);
   }
   let only = list_find(list, lambda4);
   log(list);
