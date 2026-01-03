@@ -9,9 +9,9 @@ export async function ebible_versions_english_full_sample() {
   marker("1");
   let v = await ebible_versions_english_full();
   let excluded_prefixes = ["engweb,eng-web"];
-  let filter = function lambda4() {};
+  let filter = function lambda4(value, property) {};
   function lambda2(oad2) {
-    function lambda3(value2, property) {}
+    function lambda3(value, property) {}
     each_object(object, lambda3);
   }
   let result3 = object_adder(lambda2);
