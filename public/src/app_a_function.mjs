@@ -1,6 +1,6 @@
+import { app_a_app_run } from "../../../love/public/src/app_a_app_run.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { storage_local_exists } from "../../../love/public/src/storage_local_exists.mjs";
-import { app_a_preview_back_function } from "../../../love/public/src/app_a_preview_back_function.mjs";
 import { app_a } from "../../../love/public/src/app_a.mjs";
 import { app_a_apps } from "../../../love/public/src/app_a_apps.mjs";
 import { emoji_mobile } from "../../../love/public/src/emoji_mobile.mjs";
@@ -110,7 +110,7 @@ export async function app_a_function(context) {
     text: emoji_mobile(),
     fn: async function lambda7() {
       let a_name = storage_local_get(app_a, "app_selected");
-      await app_a_preview_back_function(context, a_name);
+      await app_a_app_run(context);
     },
   };
   let choices = [
