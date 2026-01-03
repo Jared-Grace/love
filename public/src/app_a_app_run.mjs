@@ -1,3 +1,4 @@
+import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { app_component } from "../../../love/public/src/app_component.mjs";
 import { app_generic_refresh_screen } from "../../../love/public/src/app_generic_refresh_screen.mjs";
 import { app_a_function } from "../../../love/public/src/app_a_function.mjs";
@@ -8,6 +9,7 @@ export async function app_a_app_run(context) {
     marker("1");
     let without = app_generic_screen_name(context, app_a_function);
     app_generic_refresh_screen(context, without);
+    app_generic_screen_set(context2, fn);
   }
   await app_component(a_name, lambda);
 }
