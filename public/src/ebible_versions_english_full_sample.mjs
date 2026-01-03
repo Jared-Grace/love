@@ -4,6 +4,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_full_sample() {
   marker("1");
   let v = await ebible_versions_english_full();
-  let result = object_values_map(object, function lambda(value, key) {});
+  function lambda(value, key) {}
+  let result = object_values_map(object, lambda);
   return v;
 }
