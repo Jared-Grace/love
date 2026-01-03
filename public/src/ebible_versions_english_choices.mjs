@@ -13,11 +13,11 @@ export async function ebible_versions_english_choices() {
       let choices = await firebase_storage_download_json(destination);
       return choices;
     }
-    let choices = await global_function_initialize_lambda_async(
+    let english_choices = await global_function_initialize_lambda_async(
       ebible_versions_english_choices,
       lambda,
     );
-    return choices;
+    return english_choices;
   }
   let object = await ebible_versions_english_full();
   let properties = object_properties(object);
@@ -26,6 +26,6 @@ export async function ebible_versions_english_choices() {
     let any = list_any_starts_with_not(property, excluded_prefixes);
     return any;
   };
-  let choices = list_filter(properties, filter);
-  return choices;
+  let english_choices = list_filter(properties, filter);
+  return english_choices;
 }
