@@ -1,11 +1,8 @@
+import { hash_to_url } from "../../../love/public/src/hash_to_url.mjs";
 import { list_find_json_next } from "../../../love/public/src/list_find_json_next.mjs";
 import { ebible_index_flat } from "../../../love/public/src/ebible_index_flat.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
-import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
-import { list_adder } from "../../../love/public/src/list_adder.mjs";
-import { html_hash_symbol } from "../../../love/public/src/html_hash_symbol.mjs";
 import { html_url_without_hash } from "../../../love/public/src/html_url_without_hash.mjs";
-import { each_object } from "../../../love/public/src/each_object.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -57,17 +54,7 @@ export async function app_next_main(context) {
   let verse_number2 = object_property_get(next, "verse_number");
   object_property_set(hash, "v", verse_number2);
   object_property_set(hash, "c", chapter_code2);
-  function lambda3(la) {
-    function lambda(value, property) {
-      let part = property + "=" + value;
-      la(part);
-    }
-    each_object(hash, lambda);
-  }
-  let parts = list_adder(lambda3);
-  let result2 = list_join_comma(parts);
-  let h = html_hash_symbol();
-  const h2 = h + result2;
+  const h2 = hash_to_url(hash);
   let url = html_url_without_hash();
   url += "" + h2;
   list_add(mapped, url);
