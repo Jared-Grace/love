@@ -1,4 +1,4 @@
-import { list_find_json } from "../../../love/public/src/list_find_json.mjs";
+import { list_find_json_next } from "../../../love/public/src/list_find_json_next.mjs";
 import { ebible_index_flat } from "../../../love/public/src/ebible_index_flat.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
@@ -21,7 +21,6 @@ import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { string_split_plus } from "../../../love/public/src/string_split_plus.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { list_next } from "./list_next.mjs";
 export async function app_next_main(context) {
   marker("1");
   firebase_name_jg();
@@ -50,11 +49,11 @@ export async function app_next_main(context) {
   let mapped = await list_map_unordered_async(languages_chosen, lambda2);
   list_add_first(mapped, reference);
   let list = await ebible_index_flat(version_english);
-  let found = list_find_json(list, {
+  const target = {
     chapter_code,
     verse_number,
-  });
-  list_next(list, found);
+  };
+  list_find_json_next(list, target);
   verse_number += 1;
   object_property_set(hash, "v", verse_number);
   function lambda3(la) {
