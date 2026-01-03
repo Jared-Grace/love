@@ -1,5 +1,4 @@
-import { each_async } from "../../../love/public/src/each_async.mjs";
-import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
+import { list_filter_try_async } from "../../../love/public/src/list_filter_try_async.mjs";
 import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { list_to_dictionary_async } from "../../../love/public/src/list_to_dictionary_async.mjs";
@@ -9,16 +8,7 @@ export async function ebible_versions_english_books() {
   marker("1");
   let bible_folders = await ebible_versions_english();
   let lambda = ebible_version_download;
-  async function lambda2(la) {
-    async function lambda3(bible_folder) {
-      try {
-        await lambda(bible_folder);
-        la(bible_folder);
-      } catch (e) {}
-    }
-    await each_async(bible_folders, lambda3);
-  }
-  let list = await list_adder_async(lambda2);
+  let list = await list_filter_try_async(lambda, bible_folders);
   let dictionary = await list_to_dictionary_async(list, ebible_version_books);
   return dictionary;
 }
