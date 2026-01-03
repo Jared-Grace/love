@@ -1,5 +1,5 @@
+import { ebible_versions_english_choices_upload_path } from "../../../love/public/src/ebible_versions_english_choices_upload_path.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
-import { ebible_firebase_upload_path } from "../../../love/public/src/ebible_firebase_upload_path.mjs";
 import { global_function_initialize_lambda_async } from "../../../love/public/src/global_function_initialize_lambda_async.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -9,7 +9,7 @@ import { ebible_versions_english_full } from "../../../love/public/src/ebible_ve
 export async function ebible_versions_english_choices() {
   if (browser_is()) {
     async function lambda() {
-      let destination = ebible_firebase_upload_path(bible_folder, n);
+      let destination = ebible_versions_english_choices_upload_path();
       let index = await firebase_storage_download_json(destination);
     }
     let verse_get = await global_function_initialize_lambda_async(
