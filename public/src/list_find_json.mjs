@@ -8,6 +8,6 @@ export function list_find_json(list, expected) {
     let eq = equal_by(item, expected, json_to);
     return eq;
   }
-  let only = list_find(list, lambda4);
-  return only;
+  let found = list_find(list, lambda4);
+  return found;
 }
