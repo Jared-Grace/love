@@ -19,6 +19,6 @@ export async function g_generate_upload_generic(path_get, fn) {
     let destination = path_get(chapter_code);
     let path = local_function_path_json(chapter_code, fn);
     let data = await file_read_json(path);
-    await firebase_upload_object(data, destination);
+    await firebase_upload_object(destination, data);
   }
 }
