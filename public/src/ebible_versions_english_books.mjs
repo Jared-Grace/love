@@ -4,9 +4,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_books() {
   marker("1");
   let v = await ebible_versions_english();
-  let dictionary = await list_to_dictionary_async(
-    list,
-    async function lambda(item) {},
-  );
+  async function lambda(item) {}
+  let dictionary = await list_to_dictionary_async(list, lambda);
   return v;
 }
