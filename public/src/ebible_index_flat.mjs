@@ -1,3 +1,8 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
+import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
+import { firebase_storage_download_ebible } from "../../../love/public/src/firebase_storage_download_ebible.mjs";
+import { ebible_version_books_upload_name } from "../../../love/public/src/ebible_version_books_upload_name.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -7,6 +12,18 @@ import { ebible_chapters_each_verses } from "../../../love/public/src/ebible_cha
 export async function ebible_index_flat(bible_folder) {
   let b = browser_is();
   if (b) {
+    async function lambda2() {
+      let file_name2 = ebible_version_books_upload_name();
+      let v = await firebase_storage_download_ebible(bible_folder, file_name2);
+      let books = object_property_get(v, "books");
+      return books;
+    }
+    let value = await global_function_property_initialize_async(
+      ebible_version_books,
+      bible_folder,
+      lambda2,
+    );
+    return value;
   }
   marker("1");
   async function lambda(la) {
