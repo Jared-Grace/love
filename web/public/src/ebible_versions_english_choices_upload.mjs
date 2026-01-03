@@ -7,7 +7,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_choices_upload() {
   let cs = await ebible_versions_english_choices();
   await each_async(cs, ebible_verses_upload);
-  await ebible_verses_upload(bible_folder);
+  return;
   marker("1");
   let destination = ebible_versions_english_choices_upload_path();
   await firebase_upload_object(destination, cs);
