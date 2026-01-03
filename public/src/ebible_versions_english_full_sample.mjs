@@ -28,6 +28,6 @@ export async function ebible_versions_english_full_sample() {
     let result2 = await ebible_verse(key, "GEN01", "1");
     return result2;
   }
-  let result = await object_values_map_async(v, lambda);
+  let result = await object_values_map_async(result3, lambda);
   return result;
 }
