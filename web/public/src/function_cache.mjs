@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { function_run } from "../../../love/public/src/function_run.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { js_declaration_asyncify_params_from } from "../../../love/public/src/js_declaration_asyncify_params_from.mjs";
@@ -12,10 +13,12 @@ import { invoke_cache_file } from "./invoke_cache_file.mjs";
 export async function function_cache(f_name) {
   marker("1");
   let args_none = false;
-  let { declaration: declaration_call, unaliased } =
-    await function_parse_declaration(f_name);
+  let v3 = await function_parse_declaration(f_name);
+  let unaliased = object_property_get(v3, "unaliased");
+  let declaration_call = object_property_get(v3, "declaration");
   const c = invoke_cache_file.name;
-  let { declaration: declaration_cache } = await function_parse_declaration(c);
+  let v4 = await function_parse_declaration(c);
+  let declaration_cache = object_property_get(v4, "declaration");
   let f_name_cache = function_name_combine(unaliased, "cache");
   async function lambda(ast) {
     let arg_names = js_declaration_params_names(declaration_call);
@@ -34,7 +37,7 @@ export async function function_cache(f_name) {
   }
   let v = await function_new_transform(f_name_cache, lambda);
   if (args_none) {
-    let v2 = await function_run(unaliased, []);
+    let v2 = await function_run(f_name_cache, []);
     return v2;
   }
 }
