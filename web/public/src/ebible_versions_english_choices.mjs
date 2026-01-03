@@ -13,12 +13,11 @@ export async function ebible_versions_english_choices() {
       let choices = await firebase_storage_download_json(destination);
       return choices;
     }
-    let verse_get = await global_function_initialize_lambda_async(
+    let choices = await global_function_initialize_lambda_async(
       ebible_versions_english_choices,
       lambda,
     );
-    let verse = await verse_get(bible_folder, chapter_code, verse_number);
-    return verse;
+    return choices;
   }
   let object = await ebible_versions_english_full();
   let properties = object_properties(object);
