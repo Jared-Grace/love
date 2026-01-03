@@ -59,7 +59,6 @@ export async function app_next_main(context) {
     verse_number,
   };
   function lambda4(item) {
-    function lambda5(item2) {}
     let eq = equal_by(item, b, json_to);
   }
   let only = list_find(list, lambda4);
