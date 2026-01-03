@@ -8,7 +8,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_full_sample() {
   marker("1");
   let object = await ebible_versions_english_full();
-  let excluded_prefixes = ["engweb", "eng-web", "engwyc2018"];
+  let excluded_prefixes = ["engweb", "eng-web"];
   let filter = function lambda4(value, property) {
     let any = list_any_starts_with_not(property, excluded_prefixes);
     return any;
