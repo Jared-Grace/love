@@ -10,7 +10,8 @@ export async function ebible_versions_english_choices() {
   if (browser_is()) {
     async function lambda() {
       let destination = ebible_versions_english_choices_upload_path();
-      let index = await firebase_storage_download_json(destination);
+      let choices = await firebase_storage_download_json(destination);
+      return choices;
     }
     let verse_get = await global_function_initialize_lambda_async(
       ebible_versions_english_choices,
