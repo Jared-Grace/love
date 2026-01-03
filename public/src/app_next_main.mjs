@@ -53,6 +53,8 @@ export async function app_next_main(context) {
     chapter_code,
     verse_number,
   });
+  let chapter_code2 = object_property_get(next, "chapter_code");
+  let verse_number2 = object_property_get(next, "verse_number");
   verse_number += 1;
   object_property_set(hash, "v", verse_number);
   function lambda3(la) {
