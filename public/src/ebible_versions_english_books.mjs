@@ -8,7 +8,8 @@ import { ebible_versions_english } from "../../../love/public/src/ebible_version
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_books() {
   marker("1");
-  let list = await list_adder_async(async function lambda2(la) {});
+  async function lambda2(la) {}
+  let list = await list_adder_async(lambda2);
   async function lambda(bible_folder) {
     let result = null;
     let success = null;
