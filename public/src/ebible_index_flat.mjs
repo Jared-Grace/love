@@ -1,5 +1,4 @@
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
 import { firebase_storage_download_ebible } from "../../../love/public/src/firebase_storage_download_ebible.mjs";
 import { ebible_version_books_upload_name } from "../../../love/public/src/ebible_version_books_upload_name.mjs";
@@ -19,7 +18,7 @@ export async function ebible_index_flat(bible_folder) {
       return books;
     }
     let value = await global_function_property_initialize_async(
-      ebible_version_books,
+      ebible_index_flat,
       bible_folder,
       lambda2,
     );
