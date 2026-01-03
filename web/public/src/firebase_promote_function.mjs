@@ -9,5 +9,5 @@ export async function firebase_promote_function(f_name) {
   let value = await firebase_storage_download_json(destination_latest);
   let destination_production =
     firebase_deploy_function_destination_production(f_name);
-  await firebase_upload_object(value, destination_production);
+  await firebase_upload_object(destination_production, value);
 }
