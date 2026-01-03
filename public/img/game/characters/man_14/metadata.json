@@ -1,8 +1,8 @@
 {
   "character": {
-    "id": "a0c1e1e3-c5ce-42c5-8611-b20f6a78c06a",
-    "name": "woman wearing a head covering veil over her head and wearing a tunic wearing modest winter clothing from two thousand years ago; she is very poor",
-    "prompt": "woman wearing a head covering veil over her head and wearing a tunic wearing modest winter clothing from two thousand years ago; she is very poor",
+    "id": "0da631aa-5d5b-4933-b0d3-6ea2f5c7eb41",
+    "name": "\n Christian joyful man with beard and dark skin wearing dark tunic. No hat. No head covering. He is very poor. He is wearing clothing from two thousand years ago.",
+    "prompt": "\n Christian joyful man with beard and dark skin wearing dark tunic. No hat. No head covering. He is very poor. He is wearing clothing from two thousand years ago.",
     "size": {
       "width": 128,
       "height": 128
@@ -10,7 +10,7 @@
     "template_id": "mannequin",
     "directions": 8,
     "view": "high top-down",
-    "created_at": "2025-11-27T13:41:13.986361+00:00"
+    "created_at": "2025-11-27T22:30:27.369848+00:00"
   },
   "frames": {
     "rotations": {
@@ -1071,5 +1071,5 @@
     "animations": {}
   },
   "export_version": "1.0",
-  "export_date": "2025-11-27T15:07:26.077697"
+  "export_date": "2026-01-03T00:06:27.590543"
 }
