@@ -1,5 +1,4 @@
 import { list_find_json } from "../../../love/public/src/list_find_json.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { ebible_index_flat } from "../../../love/public/src/ebible_index_flat.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
@@ -22,6 +21,7 @@ import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { string_split_plus } from "../../../love/public/src/string_split_plus.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
+import { list_next } from "./list_next.mjs";
 export async function app_next_main(context) {
   marker("1");
   firebase_name_jg();
@@ -54,7 +54,7 @@ export async function app_next_main(context) {
     chapter_code,
     verse_number,
   });
-  log(only);
+  list_next(list, only);
   verse_number += 1;
   object_property_set(hash, "v", verse_number);
   function lambda3(la) {
