@@ -9,7 +9,6 @@ import { html_url_without_hash } from "../../../love/public/src/html_url_without
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
-import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
@@ -29,7 +28,7 @@ export async function app_next_main(context) {
   const version_english = "engbsb";
   let hash = html_hash_object_get();
   let chapter_code = object_property_get(hash, "c");
-  let verse = object_property_get(hash, "v");
+  let verse_number = object_property_get(hash, "v");
   let l = object_property_get(hash, "l");
   let languages_chosen = string_split_plus(l);
   let languages_list = ebible_languages();
@@ -40,17 +39,16 @@ export async function app_next_main(context) {
       language,
     );
     let bible_folder = object_property_get(filtered, "bible_folder");
-    let d = await ebible_verse(bible_folder, chapter_code, verse);
+    let d = await ebible_verse(bible_folder, chapter_code, verse_number);
     let text = object_property_get(d, "text");
     return text;
   }
   let books = await ebible_version_books(version_english);
   let reference = ebible_parts_chapter_code_to_reference(chapter_code, books, [
-    verse,
+    verse_number,
   ]);
   let mapped = await list_map_unordered_async(languages_chosen, lambda2);
   list_add_first(mapped, reference);
-  let verse_number = integer_to(verse);
   let list = await ebible_index_flat(version_english);
   let only = list_find_json(list, {
     chapter_code,
