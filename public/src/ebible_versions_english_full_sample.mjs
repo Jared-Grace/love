@@ -1,4 +1,4 @@
-import { function_open_dollar_choice } from "../../../love/public/src/function_open_dollar_choice.mjs";
+import { function_open_app } from "../../../love/public/src/function_open_app.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { object_values_map_async } from "../../../love/public/src/object_values_map_async.mjs";
@@ -8,7 +8,7 @@ export async function ebible_versions_english_full_sample() {
   marker("1");
   let v = await ebible_versions_english_full();
   let excluded_prefixes = ["engweb,eng-web"];
-  let v2 = await function_open_dollar_choice(code);
+  let v2 = await function_open_app(f_name);
   async function lambda(value, key) {
     log(key);
     let result2 = await ebible_verse(key, "GEN01", "1");
