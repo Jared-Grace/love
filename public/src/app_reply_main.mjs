@@ -1,3 +1,4 @@
+import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { ebible_versions_english_choices } from "../../../love/public/src/ebible_versions_english_choices.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_reply_buttons_refresh } from "../../../love/public/src/app_reply_buttons_refresh.mjs";
@@ -108,11 +109,13 @@ export async function app_reply_main(context) {
       let verse_range = await ebible_references_parse_lines([en], [reference]);
       async function lambda5(l) {
         let bible_folder = object_property_get(l, "bible_folder");
+        let right = ebible_folder_english();
+        if (equal(bible_folder, right)) {
+          english_choices;
+        }
         async function lambda8(verse) {
           let chapter_code = object_property_get(verse, "chapter_code");
           let verse_number = object_property_get(verse, "verse_number");
-          if (equal(left, right)) {
-          }
           let d = await ebible_verse(bible_folder, chapter_code, verse_number);
           return d;
         }
