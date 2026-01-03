@@ -1,3 +1,4 @@
+import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
@@ -7,15 +8,16 @@ import { ebible_versions_english } from "../../../love/public/src/ebible_version
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_books() {
   marker("1");
+  let list = await list_adder_async(async function lambda2(la) {});
   async function lambda(bible_folder) {
     let result = null;
     let success = null;
+    let error = null;
     try {
       result = await ebible_version_download(bible_folder);
       success = true;
     } catch (e) {
       success = false;
-      let error = null;
       error = e;
     }
   }
