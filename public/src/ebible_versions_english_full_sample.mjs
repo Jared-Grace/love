@@ -10,5 +10,5 @@ export async function ebible_versions_english_full_sample() {
     return result2;
   }
   let result = await object_values_map_async(v, lambda);
-  return v;
+  return result;
 }
