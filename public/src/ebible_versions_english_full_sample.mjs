@@ -10,10 +10,7 @@ export async function ebible_versions_english_full_sample() {
   let object = await ebible_versions_english_full();
   let excluded_prefixes = ["engweb,eng-web"];
   let filter = function lambda4(value, property) {
-    log({
-      value,
-    });
-    let any = list_any_starts_with_not(value, excluded_prefixes);
+    let any = list_any_starts_with_not(property, excluded_prefixes);
     return any;
   };
   let result3 = object_filter(object, filter);
