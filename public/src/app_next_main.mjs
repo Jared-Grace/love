@@ -48,12 +48,11 @@ export async function app_next_main(context) {
   ]);
   let mapped = await list_map_unordered_async(languages_chosen, lambda2);
   list_add_first(mapped, reference);
-  let list = await ebible_index_flat(version_english);$a
-  const target = {
+  let list = await ebible_index_flat(version_english);
+  list_find_json_next(list, {
     chapter_code,
     verse_number,
-  };
-  list_find_json_next(list, target);
+  });
   verse_number += 1;
   object_property_set(hash, "v", verse_number);
   function lambda3(la) {
