@@ -13,7 +13,7 @@ export async function ebible_versions_english_full_sample() {
     let any = list_any_starts_with_not(value, excluded_prefixes);
     return any;
   };
-  let result3 = object_filter(filter, object);
+  let result3 = object_filter(object, filter);
   async function lambda(value, key) {
     log(key);
     let result2 = await ebible_verse(key, "GEN01", "1");
