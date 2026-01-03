@@ -24,6 +24,7 @@ import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { string_split_plus } from "../../../love/public/src/string_split_plus.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
+import { json_to } from "./json_to.mjs";
 export async function app_next_main(context) {
   marker("1");
   firebase_name_jg();
@@ -53,9 +54,13 @@ export async function app_next_main(context) {
   list_add_first(mapped, reference);
   let verse_number = integer_to(verse);
   let list = await ebible_index_flat(version_english);
+  let expected = {
+    chapter_code,
+    verse_number,
+  };
   function lambda4(item) {
     function lambda5(item2) {}
-    let eq = equal_by(a, b, lambda5);
+    let eq = equal_by(item, b, json_to);
   }
   let only = list_find(list, lambda4);
   log(list);
