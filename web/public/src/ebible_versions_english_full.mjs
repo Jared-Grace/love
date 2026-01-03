@@ -20,5 +20,5 @@ export async function ebible_versions_english_full() {
     each_object(object, lambda2);
   }
   let result = object_adder(lambda);
-  return v;
+  return result;
 }
