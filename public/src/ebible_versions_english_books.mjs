@@ -15,8 +15,8 @@ export async function ebible_versions_english_books() {
       let success = null;
       let error = null;
       try {
-        result = await ebible_version_download(bible_folder);
-        la(result);
+        await ebible_version_download(bible_folder);
+        la(bible_folder);
         success = true;
       } catch (e) {
         success = false;
