@@ -4,6 +4,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english() {
   marker("1");
   let v = await ebible_versions();
-  let filtered = list_filter_starts_with(list, prefix);
-  return v;
+  let filtered = list_filter_starts_with(v, "eng");
+  return filtered;
 }
