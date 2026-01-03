@@ -1,6 +1,8 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function list_filter_try_async(lambda, bible_folders) {
+  marker("1");
   async function lambda2(la) {
     async function lambda3(bible_folder) {
       try {
