@@ -7,7 +7,10 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_books() {
   marker("1");
   async function lambda(bible_folder) {
-    let file_path = await ebible_version_download(bible_folder);
+    try {
+      let file_path = null;
+      file_path = await ebible_version_download(bible_folder);
+    } catch (e) {}
   }
   let mapped = await list_map_async(bible_folders, lambda);
   let v = await ebible_versions_english();
