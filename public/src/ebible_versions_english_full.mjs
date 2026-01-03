@@ -2,5 +2,6 @@ import { ebible_versions_english_books_count_cache } from "../../../love/public/
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_full() {
   marker("1");
-  return await ebible_versions_english_books_count_cache();
+  let v = await ebible_versions_english_books_count_cache();
+  return v;
 }
