@@ -1,3 +1,4 @@
+import { isaiah_chapters_count } from "../../../love/public/src/isaiah_chapters_count.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { string_may_the_lord } from "../../../love/public/src/string_may_the_lord.mjs";
 import { prayer_end } from "../../../love/public/src/prayer_end.mjs";
@@ -23,8 +24,8 @@ export async function app_autopray_main(context) {
       verse_reference,
       v3,
     ]);
-    const isaiah_chapters_count = 66;
-    await sleep(isaiah_chapters_count);
+    const c = isaiah_chapters_count();
+    await sleep(c);
   }
   while (true) {
     await each_object_async(v, lambda2);
