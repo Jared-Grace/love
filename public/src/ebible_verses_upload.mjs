@@ -11,9 +11,10 @@ export async function ebible_verses_upload(bible_folder) {
   await ebible_chapters_each_verses_check_with(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     async function lambda(v) {
-      await ebible_firebase_upload_verse(v, chapter_code, bible_folder);
-      async function lambda3() {}
-      await retry(count, lambda3);
+      async function lambda3() {
+        await ebible_firebase_upload_verse(v, chapter_code, bible_folder);
+      }
+      await retry(5, lambda3);
     }
     await each_unordered_async(verses, lambda);
   }
