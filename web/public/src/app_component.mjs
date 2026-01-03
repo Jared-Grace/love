@@ -37,7 +37,8 @@ export async function app_component(a_name, back) {
     flex: "0 0 auto",
   });
   let text = app_karate_button_back_text();
-  function lambda() {}
+  function lambda() {
+      app_generic_refresh_screen(context, without);}
   let component = html_button(bar, text, lambda);
   html_width_full(component);
   let div = html_div(shell);
