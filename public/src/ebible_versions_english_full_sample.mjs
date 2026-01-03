@@ -11,8 +11,8 @@ export async function ebible_versions_english_full_sample() {
   let v = await ebible_versions_english_full();
   let excluded_prefixes = ["engweb,eng-web"];
   let filter = function lambda4(value, property) {
-    let any = list_any_starts_with(item, prefixes);
-    return;
+    let any = list_any_starts_with(value, excluded_prefixes);
+    return any;
   };
   function lambda2(oad2) {
     function lambda3(value, property) {}
