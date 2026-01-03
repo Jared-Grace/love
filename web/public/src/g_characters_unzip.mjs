@@ -1,4 +1,3 @@
-import { string_includes_or_starts_with } from "../../../love/public/src/string_includes_or_starts_with.mjs";
 import { folder_files_names_normalize_unzip } from "../../../love/public/src/folder_files_names_normalize_unzip.mjs";
 import { string_includes } from "../../../love/public/src/string_includes.mjs";
 export async function g_characters_unzip() {
@@ -11,7 +10,7 @@ export async function g_characters_unzip() {
   return;
   function lambda2(input) {
     const item = "man";
-    let v = string_includes_or_starts_with(input, item);
+    let v = string_includes(input, "_" + item);
     return v;
   }
   await folder_files_names_normalize_unzip(path, lambda2, "man_");
