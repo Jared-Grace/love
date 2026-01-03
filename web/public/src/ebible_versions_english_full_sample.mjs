@@ -16,7 +16,8 @@ export async function ebible_versions_english_full_sample() {
   };
   function lambda2(oad2) {
     function lambda3(value, property) {
-      if (false) {
+      if (filter(value, property)) {
+        oad2(property, value);
       }
     }
     each_object(object, lambda3);
