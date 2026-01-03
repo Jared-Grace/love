@@ -1,6 +1,8 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { object_adder } from "../../../love/public/src/object_adder.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 export function object_filter(filter, object) {
+  marker("1");
   function lambda2(oad2) {
     function lambda3(value, property) {
       if (filter(value, property)) {
