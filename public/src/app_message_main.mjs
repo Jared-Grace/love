@@ -125,13 +125,10 @@ export async function app_message_main(context) {
       let message_id = await uuid();
       const file_name = app_message_firebase_path() + u + "/" + message_id;
       let file_path = file_name_json(file_name);
-      await firebase_upload_object(
-        {
-          message,
-          when: date_now_iso(),
-        },
-        file_path,
-      );
+      await firebase_upload_object(file_path, {
+        message,
+        when: date_now_iso(),
+      });
     }
     let messages = messages_get();
     list_add(messages, message);
