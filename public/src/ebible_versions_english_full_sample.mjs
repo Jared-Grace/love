@@ -1,3 +1,4 @@
+import { each_object } from "../../../love/public/src/each_object.mjs";
 import { object_adder } from "../../../love/public/src/object_adder.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
@@ -8,7 +9,9 @@ export async function ebible_versions_english_full_sample() {
   marker("1");
   let v = await ebible_versions_english_full();
   let excluded_prefixes = ["engweb,eng-web"];
-  function lambda2(oad2) {}
+  function lambda2(oad2) {
+    each_object(object, function lambda3(value2, property) {});
+  }
   let result3 = object_adder(lambda2);
   async function lambda(value, key) {
     log(key);
