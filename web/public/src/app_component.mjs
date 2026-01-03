@@ -1,3 +1,4 @@
+import { app_generic_refresh_screen } from "../../../love/public/src/app_generic_refresh_screen.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
@@ -38,7 +39,8 @@ export async function app_component(a_name, back) {
   });
   let text = app_karate_button_back_text();
   function lambda() {
-      app_generic_refresh_screen(context, without);}
+    app_generic_refresh_screen(context, without);
+  }
   let component = html_button(bar, text, lambda);
   html_width_full(component);
   let div = html_div(shell);
