@@ -6,6 +6,7 @@ import { ebible_versions_english_choices } from "../../../love/public/src/ebible
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_choices_upload() {
   let cs = await ebible_versions_english_choices();
+  ["eng-asv", "engBBE"];
   await each_async(cs, ebible_verses_upload);
   return;
   marker("1");
