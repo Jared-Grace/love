@@ -8,7 +8,7 @@ export async function ebible_versions_english_books() {
   marker("1");
   let bible_folders = await ebible_versions_english();
   let lambda = ebible_version_download;
-  let list = await list_filter_try_async(lambda, bible_folders);
+  let list = await list_filter_try_async(bible_folders, lambda);
   let dictionary = await list_to_dictionary_async(list, ebible_version_books);
   return dictionary;
 }
