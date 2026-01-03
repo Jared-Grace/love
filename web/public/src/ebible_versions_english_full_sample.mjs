@@ -8,7 +8,8 @@ export async function ebible_versions_english_full_sample() {
   marker("1");
   let v = await ebible_versions_english_full();
   let excluded_prefixes = ["engweb,eng-web"];
-  let result3 = object_adder(function lambda2(oad2) {});
+  function lambda2(oad2) {}
+  let result3 = object_adder(lambda2);
   async function lambda(value, key) {
     log(key);
     let result2 = await ebible_verse(key, "GEN01", "1");
