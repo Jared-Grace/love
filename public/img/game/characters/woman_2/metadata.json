@@ -1,8 +1,8 @@
 {
   "character": {
-    "id": "4c58134a-7090-4ad3-8efa-404587078145",
-    "name": "woman wearing a head covering veil over her head and wearing a tunic wearing modest winter clothing from two thousand years ago; she is very poor",
-    "prompt": "woman wearing a head covering veil over her head and wearing a tunic wearing modest winter clothing from two thousand years ago; she is very poor",
+    "id": "a80221d2-61f1-43ac-b1dd-50f5efe4ff6b",
+    "name": "dark skinned African woman wearing a head covering veil over her head and wearing a tunic wearing modest winter clothing from two thousand years ago; she is very poor",
+    "prompt": "dark skinned African woman wearing a head covering veil over her head and wearing a tunic wearing modest winter clothing from two thousand years ago; she is very poor",
     "size": {
       "width": 128,
       "height": 128
@@ -10,7 +10,7 @@
     "template_id": "mannequin",
     "directions": 8,
     "view": "high top-down",
-    "created_at": "2025-11-27T05:59:47.628112+00:00"
+    "created_at": "2025-11-27T23:45:36.411773+00:00"
   },
   "frames": {
     "rotations": {
@@ -1071,5 +1071,5 @@
     "animations": {}
   },
   "export_version": "1.0",
-  "export_date": "2025-11-27T15:07:15.437560"
+  "export_date": "2026-01-03T00:06:17.422010"
 }
