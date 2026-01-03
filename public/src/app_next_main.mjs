@@ -50,11 +50,11 @@ export async function app_next_main(context) {
   let mapped = await list_map_unordered_async(languages_chosen, lambda2);
   list_add_first(mapped, reference);
   let list = await ebible_index_flat(version_english);
-  let only = list_find_json(list, {
+  let found = list_find_json(list, {
     chapter_code,
     verse_number,
   });
-  list_next(list, only);
+  list_next(list, found);
   verse_number += 1;
   object_property_set(hash, "v", verse_number);
   function lambda3(la) {
