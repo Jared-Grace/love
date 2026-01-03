@@ -8,14 +8,15 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_books() {
   marker("1");
   let bible_folders = await ebible_versions_english();
+  let lambda = ebible_version_download;
   async function lambda2(la) {
-    async function lambda(bible_folder) {
+    async function lambda3(bible_folder) {
       try {
-        await ebible_version_download(bible_folder);
+        await lambda(bible_folder);
         la(bible_folder);
       } catch (e) {}
     }
-    await each_async(bible_folders, lambda);
+    await each_async(bible_folders, lambda3);
   }
   let list = await list_adder_async(lambda2);
   let dictionary = await list_to_dictionary_async(list, ebible_version_books);
