@@ -4,7 +4,10 @@ import { list_to_dictionary_async } from "../../../love/public/src/list_to_dicti
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_books() {
   marker("1");
-  let list = await ebible_versions_english_downloadable();
-  let dictionary = await list_to_dictionary_async(list, ebible_version_books);
+  let downloadable = await ebible_versions_english_downloadable();
+  let dictionary = await list_to_dictionary_async(
+    downloadable,
+    ebible_version_books,
+  );
   return dictionary;
 }
