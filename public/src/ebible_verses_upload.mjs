@@ -1,9 +1,8 @@
+import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
 import { ebible_firebase_upload_verse } from "../../../love/public/src/ebible_firebase_upload_verse.mjs";
 import { ebible_chapters_each_verses_check_with } from "../../../love/public/src/ebible_chapters_each_verses_check_with.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
-import { list_wait } from "../../../love/public/src/list_wait.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 export async function ebible_verses_upload(bible_folder) {
   marker("1");
   await ebible_version_download(bible_folder);
@@ -13,7 +12,6 @@ export async function ebible_verses_upload(bible_folder) {
     async function lambda(v) {
       await ebible_firebase_upload_verse(v, chapter_code, bible_folder);
     }
-    let mapped = list_map(verses, lambda);
-    await list_wait(mapped);
+    await each_unordered_async(verses, lambda);
   }
 }
