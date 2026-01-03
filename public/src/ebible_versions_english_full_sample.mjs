@@ -7,7 +7,7 @@ export async function ebible_versions_english_full_sample() {
   marker("1");
   let v = await ebible_versions_english_full();
   async function lambda(value, key) {
-    log(message);
+    log(key);
     let result2 = await ebible_verse(key, "GEN01", "1");
     return result2;
   }
