@@ -60,6 +60,7 @@ export async function app_next_main(context) {
   };
   function lambda4(item) {
     let eq = equal_by(item, b, json_to);
+    return eq;
   }
   let only = list_find(list, lambda4);
   log(list);
