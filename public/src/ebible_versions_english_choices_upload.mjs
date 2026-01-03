@@ -1,3 +1,4 @@
+import { list_without } from "../../../love/public/src/list_without.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_verses_upload } from "../../../love/public/src/ebible_verses_upload.mjs";
 import { ebible_versions_english_choices_upload_path } from "../../../love/public/src/ebible_versions_english_choices_upload_path.mjs";
@@ -6,7 +7,8 @@ import { ebible_versions_english_choices } from "../../../love/public/src/ebible
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_choices_upload() {
   let cs = await ebible_versions_english_choices();
-  ["eng-asv", "engBBE"];
+  let skip = ["eng-asv", "engBBE"];
+  let filtered = list_without(list, item);
   await each_async(cs, ebible_verses_upload);
   return;
   marker("1");
