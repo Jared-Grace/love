@@ -6,9 +6,10 @@ import { list_any_starts_with_not } from "../../../love/public/src/list_any_star
 import { ebible_versions_english_full } from "../../../love/public/src/ebible_versions_english_full.mjs";
 export async function ebible_versions_english_choices() {
   if (browser_is()) {
+    function lambda() {}
     let verse_get = global_function_initialize(
       ebible_versions_english_choices,
-      () => {},
+      lambda,
     );
     let verse = await verse_get(bible_folder, chapter_code, verse_number);
     return verse;
