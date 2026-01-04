@@ -33,6 +33,7 @@ export async function function_cache(f_name) {
     let mapped = list_map(arg_names, js_parse_expression);
     let code_expression = js_code_brackets_empty();
     let expression = js_parse_expression(code_expression);
+    let elements = object_property_get(expression, "elements");
     log({
       expression,
     });
