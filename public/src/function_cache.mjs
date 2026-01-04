@@ -30,6 +30,7 @@ export async function function_cache(f_name) {
       args_none = true;
     }
     let mapped = list_map(arg_names, js_parse_expression);
+    let expression = js_parse_expression(code_expression);
     let code = js_unparse(mapped);
     log({
       code,
