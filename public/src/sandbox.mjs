@@ -21,5 +21,5 @@ export async function sandbox() {
     each(list, lambda);
   }
   let unique = list_adder_unique(lambda4);
-  return list;
+  return unique;
 }
