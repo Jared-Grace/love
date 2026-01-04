@@ -9,8 +9,8 @@ export function string_symbols_unique(mapped) {
     let split = string_split_empty(joined);
     each(split, la);
   }
-  let unique = list_adder_unique(lambda4);
-  list_sort_string(unique);
-  let joined2 = list_join_empty(unique);
-  return joined2;
+  let unique_list = list_adder_unique(lambda4);
+  list_sort_string(unique_list);
+  let unique = list_join_empty(unique_list);
+  return unique;
 }
