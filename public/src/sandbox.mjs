@@ -1,3 +1,4 @@
+import { list_sort_string } from "../../../love/public/src/list_sort_string.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
@@ -13,5 +14,6 @@ export async function sandbox() {
     each(split, la);
   }
   let unique = list_adder_unique(lambda4);
+  list_sort_string(list2);
   return unique;
 }
