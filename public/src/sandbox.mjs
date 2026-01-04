@@ -18,5 +18,6 @@ export async function sandbox() {
     await each_async(await ebible_versions_english(), lambda);
   }
   let list = await list_adder_async(lambda3);
-  let joined = list_join_empty(list2);
+  let joined = list_join_empty(list);
+  let unique2 = string_symbols_unique(mapped2);
 }
