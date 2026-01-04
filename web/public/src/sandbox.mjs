@@ -1,3 +1,4 @@
+import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { ebible_versions_english } from "../../../love/public/src/ebible_versions_english.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -17,4 +18,5 @@ export async function sandbox() {
     await each_async(await ebible_versions_english(), lambda);
   }
   let list = await list_adder_async(lambda3);
+  let joined = list_join_empty(list2);
 }
