@@ -1,3 +1,4 @@
+import { list_to_dictionary_async } from "../../../love/public/src/list_to_dictionary_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_version_symbols_unique_cache } from "../../../love/public/src/ebible_version_symbols_unique_cache.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -13,5 +14,10 @@ export async function sandbox() {
     });
     return unique;
   }
-  await each_async(await ebible_versions_english(), lambda);
+  const versions = await ebible_versions_english();
+  let dictionary = await list_to_dictionary_async(
+    list,
+    async function lambda2(item) {},
+  );
+  await each_async(versions, lambda);
 }
