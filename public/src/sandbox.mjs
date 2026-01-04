@@ -1,7 +1,6 @@
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_split_multiple } from "../../../love/public/src/string_split_multiple.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -17,7 +16,7 @@ export async function sandbox() {
         let split = string_split_empty(item2);
         each(split, la);
       }
-      let mapped = list_map(parts, lambda2);
+      each(parts, lambda2);
     }
     each(list, lambda);
   }
