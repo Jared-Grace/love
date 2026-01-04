@@ -16,5 +16,5 @@ export async function sandbox() {
     }
     await each_async(await ebible_versions_english(), lambda);
   }
-  let list2 = await list_adder_async(lambda3);
+  let list = await list_adder_async(lambda3);
 }
