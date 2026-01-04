@@ -11,8 +11,8 @@ export async function sandbox() {
       async function lambda2(chapter_code, verses) {
         let list = await ebible_verses("engbsb", "GEN01");
         let mapped = list_map_property(list, "text");
-        let joined2 = string_symbols_unique(mapped);
-        la(joined2);
+        let unique = string_symbols_unique(mapped);
+        la(unique);
       }
       await ebible_chapters_each_verses_check_with(bible_folder, lambda2);
     }
