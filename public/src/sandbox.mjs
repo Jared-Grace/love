@@ -5,6 +5,7 @@ import { string_symbols_unique } from "../../../love/public/src/string_symbols_u
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 export async function sandbox() {
+  lda;
   async function lambda(bible_folder) {
     async function lambda2(chapter_code, verses) {
       let list = await ebible_verses("engbsb", "GEN01");
