@@ -14,6 +14,7 @@ export function ebible_verses_include() {
     "li2",
     "li3",
     "li4",
+    "lim",
     "m",
     "mi",
     "nd",
