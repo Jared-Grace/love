@@ -50,6 +50,7 @@ export function ebible_verses_exclude() {
     "s2",
     "s3",
     "s4",
+    "sig",
     "sp",
     "sr",
     "sup",
