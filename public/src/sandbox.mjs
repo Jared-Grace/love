@@ -10,8 +10,8 @@ export async function sandbox() {
     async function lambda(bible_folder) {
       async function lambda2(chapter_code, verses) {
         let mapped = list_map_property(verses, "text");
-        let unique = string_symbols_unique(mapped);
-        la(unique);
+        let unique_chapter = string_symbols_unique(mapped);
+        la(unique_chapter);
       }
       await ebible_chapters_each_verses_check_with(bible_folder, lambda2);
     }
@@ -19,5 +19,6 @@ export async function sandbox() {
   }
   let list = await list_adder_async(lambda3);
   let joined = list_join_empty(list);
-  let unique2 = string_symbols_unique(mapped2);
+  let unique = string_symbols_unique(joined);
+  return unique;
 }
