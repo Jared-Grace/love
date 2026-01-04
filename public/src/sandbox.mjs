@@ -1,7 +1,5 @@
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
-import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
-import { string_split_multiple } from "../../../love/public/src/string_split_multiple.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
@@ -10,8 +8,6 @@ export async function sandbox() {
   function lambda4(la) {
     function lambda(item) {
       let text = object_property_get(item, "text");
-      let lower = string_lower_to(s);
-      let parts = string_split_multiple(lower, ["—", " "]);
       function lambda2(item2) {
         let split = string_split_empty(item2);
         each(split, la);
