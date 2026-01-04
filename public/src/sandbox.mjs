@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_split_multiple } from "../../../love/public/src/string_split_multiple.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -7,6 +8,7 @@ export async function sandbox() {
   function lambda(item) {
     let text = object_property_get(item, "text");
     let parts = string_split_multiple(str, ["—", " "]);
+    let mapped = list_map(list2, function lambda2(item2) {});
   }
   each(list, lambda);
   return list;
