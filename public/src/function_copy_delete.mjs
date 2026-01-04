@@ -8,7 +8,8 @@ export async function function_copy_delete(f_name_old, deleted) {
   marker("1");
   let split = string_split_comma(deleted);
   let parts = function_name_to_parts(f_name_old);
-  let list = list_adder(function lambda(la) {});
+  function lambda(la) {}
+  let list = list_adder(lambda);
   let f_name_new = string_replace(f_name_old, from, to);
   let v = await function_copy(f_name_old, f_name_new);
   return v;
