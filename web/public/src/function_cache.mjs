@@ -27,9 +27,7 @@ export async function function_cache(f_name) {
     if (e) {
       args_none = true;
     }
-    let expression = js_parse_expression(code_expression);
-    function lambda2(item) {}
-    let mapped = list_map(list, lambda2);
+    let mapped = list_map(list, js_parse_expression);
     js_code_call_args_await_maybe_declaration_return_add(
       c,
       [unaliased, arg_names],
