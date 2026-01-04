@@ -14,6 +14,7 @@ export async function sandbox() {
     each(split, la);
   }
   let unique = list_adder_unique(lambda4);
-  list_sort_string(list2);
+  list_sort_string(unique);
+  let joined2 = list_join_empty(list2);
   return unique;
 }
