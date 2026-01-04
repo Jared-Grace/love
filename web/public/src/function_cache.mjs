@@ -34,7 +34,6 @@ export async function function_cache(f_name) {
     let code_expression = js_code_brackets_empty();
     let expression = js_parse_expression(code_expression);
     log({
-      code,
       expression,
     });
     let code = js_unparse(mapped);
