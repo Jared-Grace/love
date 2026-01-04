@@ -6,10 +6,8 @@ import { list_map_property } from "../../../love/public/src/list_map_property.mj
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 export async function sandbox() {
   async function lambda(bible_folder) {
-    await ebible_chapters_each_verses_check_with(
-      bible_folder2,
-      async function lambda2(chapter_code, verses) {},
-    );
+    async function lambda2(chapter_code, verses) {}
+    await ebible_chapters_each_verses_check_with(bible_folder2, lambda2);
     await ebible_chapters_each_verses_check_with(bible_folder, each_chapter);
     let list = await ebible_verses("engbsb", "GEN01");
     let mapped = list_map_property(list, "text");
