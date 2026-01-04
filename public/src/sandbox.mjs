@@ -1,3 +1,4 @@
+import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_split_multiple } from "../../../love/public/src/string_split_multiple.mjs";
@@ -12,7 +13,7 @@ export async function sandbox() {
     let parts = string_split_multiple(lower, ["—", " "]);
     function lambda2(item2) {}
     let mapped = list_map(parts, lambda2);
-    sse;
+    let split = string_split_empty(s2);
   }
   each(list, lambda);
   return list;
