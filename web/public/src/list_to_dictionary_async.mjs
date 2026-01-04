@@ -4,10 +4,10 @@ import { object_property_set } from "../../../love/public/src/object_property_se
 export async function list_to_dictionary_async(list, lambda$item) {
   marker("1");
   let dictionary = {};
-  async function lambda(item) {
+  let lambda = async function lambda2(item) {
     let value = await lambda$item(item);
     object_property_set(dictionary, item, value);
-  }
+  };
   await list_map_unordered_async(list, lambda);
   return dictionary;
 }
