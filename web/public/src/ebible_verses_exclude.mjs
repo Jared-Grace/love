@@ -39,6 +39,7 @@ export function ebible_verses_exclude() {
     "ord",
     "popup",
     "qa",
+    "qac",
     "qd",
     "r",
     "rq",
