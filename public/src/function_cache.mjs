@@ -26,7 +26,8 @@ export async function function_cache(f_name) {
     if (e) {
       args_none = true;
     }
-    let mapped = list_map(list, function lambda2(item) {});
+    function lambda2(item) {}
+    let mapped = list_map(list, lambda2);
     js_code_call_args_await_maybe_declaration_return_add(
       c,
       [unaliased, arg_names_code],
