@@ -12,6 +12,7 @@ export async function sandbox() {
     let parts = string_split_multiple(lower, ["—", " "]);
     function lambda2(item2) {}
     let mapped = list_map(parts, lambda2);
+    sse;
   }
   each(list, lambda);
   return list;
