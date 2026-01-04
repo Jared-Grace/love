@@ -15,9 +15,7 @@ export async function sandbox() {
     return unique;
   }
   const versions = await ebible_versions_english();
-  let dictionary = await list_to_dictionary_async(
-    list,
-    async function lambda2(item) {},
-  );
+  async function lambda2(item) {}
+  let dictionary = await list_to_dictionary_async(list, lambda2);
   await each_async(versions, lambda);
 }
