@@ -29,6 +29,7 @@ export function ebible_verses_exclude() {
     "k",
     "mt",
     "mt3",
+    "mt4",
     "mr",
     "ms",
     "ms2",
