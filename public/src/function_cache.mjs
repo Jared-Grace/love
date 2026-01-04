@@ -36,6 +36,7 @@ export async function function_cache(f_name) {
     let code = js_unparse(mapped);
     log({
       code,
+      expression,
     });
     js_code_call_args_await_maybe_declaration_return_add(
       c,
