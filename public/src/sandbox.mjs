@@ -7,13 +7,15 @@ import { each } from "../../../love/public/src/each.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 export async function sandbox() {
   let list = await ebible_verses("engbsb", "GEN01");
+  ldu;
   function lambda(item) {
     let text = object_property_get(item, "text");
     let lower = string_lower_to(s);
     let parts = string_split_multiple(lower, ["—", " "]);
-    function lambda2(item2) {}
+    function lambda2(item2) {
+      let split = string_split_empty(item2);
+    }
     let mapped = list_map(parts, lambda2);
-    let split = string_split_empty(s2);
   }
   each(list, lambda);
   return list;
