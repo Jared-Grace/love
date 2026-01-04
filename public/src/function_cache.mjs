@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { js_code_brackets_empty } from "../../../love/public/src/js_code_brackets_empty.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
@@ -30,10 +31,10 @@ export async function function_cache(f_name) {
     if (e) {
       args_none = true;
     }
-    let mapped = list_map(arg_names, js_parse_expression);
     let code_expression = js_code_brackets_empty();
     let expression = js_parse_expression(code_expression);
-    let elements = object_property_get(expression, "elements");
+    let mapped = list_map(arg_names, js_parse_expression);
+    object_property_set(expression, "elements", mapped);
     log({
       expression,
     });
