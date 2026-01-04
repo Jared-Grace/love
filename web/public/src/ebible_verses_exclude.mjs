@@ -32,6 +32,7 @@ export function ebible_verses_exclude() {
     "ms2",
     "mt2",
     "nb",
+    "no",
     "notebackref",
     "notemark",
     "popup",
