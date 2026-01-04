@@ -9,7 +9,7 @@ export async function sandbox() {
   function lambda(item) {
     let text = object_property_get(item, "text");
     let lower = string_lower_to(s);
-    let parts = string_split_multiple(str, ["—", " "]);
+    let parts = string_split_multiple(lower, ["—", " "]);
     function lambda2(item2) {}
     let mapped = list_map(parts, lambda2);
   }
