@@ -1,9 +1,9 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { function_run } from "../../../love/public/src/function_run.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { js_declaration_asyncify_params_from } from "../../../love/public/src/js_declaration_asyncify_params_from.mjs";
 import { js_code_call_args_await_maybe_declaration_return_add } from "../../../love/public/src/js_code_call_args_await_maybe_declaration_return_add.mjs";
-import { json_to } from "../../../love/public/src/json_to.mjs";
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
@@ -26,7 +26,7 @@ export async function function_cache(f_name) {
     if (e) {
       args_none = true;
     }
-    let arg_names_code = json_to(arg_names);
+    let mapped = list_map(list, function lambda2(item) {});
     js_code_call_args_await_maybe_declaration_return_add(
       c,
       [unaliased, arg_names_code],
