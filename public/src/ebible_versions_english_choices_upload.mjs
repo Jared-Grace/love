@@ -7,7 +7,15 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { list_difference } from "./list_difference.mjs";
 export async function ebible_versions_english_choices_upload() {
   let cs = await ebible_versions_english_choices();
-  let skip = ["eng-asv", "engBBE"];
+  let skip = [
+    "eng-asv",
+    "engBBE",
+    "engDBY",
+    "engDRA",
+    "englsv",
+    "enggnv",
+    "engmsb",
+  ];
   let filtered = list_difference(cs, skip);
   await each_async(filtered, ebible_verses_upload);
   return;
