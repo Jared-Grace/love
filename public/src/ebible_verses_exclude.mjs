@@ -44,6 +44,7 @@ export function ebible_verses_exclude() {
     "s3",
     "s4",
     "sp",
+    "sr",
     "tl",
     "tnav",
     "x",
