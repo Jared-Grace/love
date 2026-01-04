@@ -1,4 +1,3 @@
-import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
@@ -16,7 +15,7 @@ export async function sandbox() {
       let parts = string_split_multiple(lower, ["—", " "]);
       function lambda2(item2) {
         let split = string_split_empty(item2);
-        list_add(list2, item3);
+        each(list2, function lambda3(item3) {});
       }
       let mapped = list_map(parts, lambda2);
     }
