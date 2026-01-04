@@ -8,8 +8,8 @@ export async function ebible_version_symbols_unique(bible_folder) {
   async function lambda$la(la) {
     async function lambda2(chapter_code, verses) {
       let mapped = list_map_property(verses, "text");
-      let joined = list_join_empty(list);
-      let unique_chapter = string_symbols_unique(mapped);
+      let joined = list_join_empty(mapped);
+      let unique_chapter = string_symbols_unique(joined);
       la(unique_chapter);
     }
     await ebible_chapters_each_verses_check_with(bible_folder, lambda2);
