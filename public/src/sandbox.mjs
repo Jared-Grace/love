@@ -9,11 +9,8 @@ export async function sandbox() {
   let mapped = list_map_property(list, "text");
   let joined = list_join_empty(mapped);
   function lambda4(la) {
-    function lambda2(item2) {
-      let split = string_split_empty(item2);
-      each(split, la);
-    }
-    each(parts, lambda2);
+    let split = string_split_empty(joined);
+    each(split, la);
   }
   let unique = list_adder_unique(lambda4);
   return unique;
