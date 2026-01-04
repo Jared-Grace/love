@@ -8,7 +8,8 @@ export async function sandbox() {
   function lambda(item) {
     let text = object_property_get(item, "text");
     let parts = string_split_multiple(str, ["—", " "]);
-    let mapped = list_map(list2, function lambda2(item2) {});
+    function lambda2(item2) {}
+    let mapped = list_map(list2, lambda2);
   }
   each(list, lambda);
   return list;
