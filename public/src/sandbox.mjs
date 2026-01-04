@@ -8,6 +8,13 @@ import { list_map_property } from "../../../love/public/src/list_map_property.mj
 export async function sandbox() {
   async function lambda(bible_folder) {
     async function lambda3(la) {
+      await lambda$la(la);
+    }
+    let list = await list_adder_async(lambda3);
+    let joined = list_join_empty(list);
+    let unique = string_symbols_unique(joined);
+    return unique;
+    async function lambda$la(la) {
       async function lambda2(chapter_code, verses) {
         let mapped = list_map_property(verses, "text");
         let unique_chapter = string_symbols_unique(mapped);
@@ -15,10 +22,6 @@ export async function sandbox() {
       }
       await ebible_chapters_each_verses_check_with(bible_folder, lambda2);
     }
-    let list = await list_adder_async(lambda3);
-    let joined = list_join_empty(list);
-    let unique = string_symbols_unique(joined);
-    return unique;
   }
   await each_async(await ebible_versions_english(), lambda);
 }
