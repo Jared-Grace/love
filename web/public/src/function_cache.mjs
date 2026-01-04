@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -29,10 +30,13 @@ export async function function_cache(f_name) {
       args_none = true;
     }
     let mapped = list_map(arg_names, js_parse_expression);
-    let code = js_unparse(ast2);
+    let code = js_unparse(mapped);
+    log({
+      code,
+    });
     js_code_call_args_await_maybe_declaration_return_add(
       c,
-      [unaliased, arg_names],
+      [unaliased, code],
       declaration_cache,
       ast,
     );
