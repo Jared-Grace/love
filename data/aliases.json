@@ -302,6 +302,7 @@
   "lit": "list_intersect",
   "stk": "string_take",
   "gfi": "global_function_initialize",
-  "hon": "html_on"
+  "hon": "html_on",
+  "sse": "string_split_empty"
  }
 }
