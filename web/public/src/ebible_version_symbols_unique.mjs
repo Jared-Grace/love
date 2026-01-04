@@ -5,12 +5,13 @@ import { string_symbols_unique } from "../../../love/public/src/string_symbols_u
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { string_symbols_unique_adder } from "../../../love/public/src/string_symbols_unique_adder.mjs";
 export async function ebible_version_symbols_unique(bible_folder) {
-  log({
-    bible_folder,
-  });
   let unique = await string_symbols_unique_adder(lambda$la);
   async function lambda$la(la) {
     async function lambda2(chapter_code, verses) {
+      log({
+        bible_folder,
+        chapter_code,
+      });
       let mapped = list_map_property(verses, "text");
       let joined = list_join_empty(mapped);
       let unique_chapter = string_symbols_unique(joined);
