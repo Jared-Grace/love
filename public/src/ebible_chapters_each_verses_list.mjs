@@ -14,6 +14,9 @@ export async function ebible_chapters_each_verses_list(
     if (bible_folder === "englxxup" && chapter_code === "PRO30") {
       return;
     }
+    if (bible_folder === "engnna" && chapter_code === "GEN05") {
+      return;
+    }
     log_keep(chapter_code);
     let verses = await ebible_verses(bible_folder, chapter_code);
     await each_chapter(chapter_code, verses);
