@@ -19,11 +19,11 @@ export async function function_cache(f_name) {
   let args_none = false;
   let v3 = await function_parse_declaration(f_name);
   let unaliased = object_property_get(v3, "unaliased");
+  let f_name_cache = function_name_combine(unaliased, "cache");
   let declaration_call = object_property_get(v3, "declaration");
   const c = invoke_cache_file.name;
   let v4 = await function_parse_declaration(c);
   let declaration_cache = object_property_get(v4, "declaration");
-  let f_name_cache = function_name_combine(unaliased, "cache");
   async function lambda(ast) {
     let arg_names = js_declaration_params_names(declaration_call);
     let e = list_empty_is(arg_names);
