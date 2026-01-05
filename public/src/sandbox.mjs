@@ -1,4 +1,4 @@
-import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
+import { list_to } from "../../../love/public/src/list_to.mjs";
 import { string_replace } from "../../../love/public/src/string_replace.mjs";
 import { ebible_versions_english_downloadable_symbols_unique } from "../../../love/public/src/ebible_versions_english_downloadable_symbols_unique.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -27,7 +27,7 @@ export async function sandbox() {
   };
   let symbols_split_non =
     "01½¼23¾4556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZΑΩ";
-  let e2 = list_get_end_2(stack);
+  let v = list_to(a);
   let replaced = string_replace(s, from, to);
   return unique;
 }
