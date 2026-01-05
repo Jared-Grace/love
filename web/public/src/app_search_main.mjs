@@ -108,7 +108,8 @@ export async function app_search_main(context) {
     html_clear(root);
     function lambda6() {}
     let text = app_karate_button_back_text();
-    let component2 = html_button(parent, text2, function lambda11() {});
+    function lambda11() {}
+    let component2 = html_button(parent, text2, lambda11);
     let button = app_karate_button_back(root, lambda6);
     function lambda7(verse_numbers, chapter_code) {
       let book_code = ebible_chapter_code_to_book(chapter_code);
