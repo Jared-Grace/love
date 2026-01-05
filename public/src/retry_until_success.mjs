@@ -5,6 +5,8 @@ export async function retry_until_success(lambda) {
   let r = null;
   let success = false;
   while (not(success)) {
+    try {
+    } catch (e) {}
     r = await lambda();
   }
   return r;
