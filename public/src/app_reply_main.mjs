@@ -122,10 +122,10 @@ export async function app_reply_main(context) {
           if (equal(bible_folder, right)) {
             lambda11 = retry_until_success;
           }
-          if (equal(bible_folder, right)) {
-            bible_folder = list_pop(copy2);
-          }
           async function lambda() {
+            if (equal(bible_folder, right)) {
+              bible_folder = list_pop(copy2);
+            }
             let d = await ebible_verse(
               bible_folder,
               chapter_code,
