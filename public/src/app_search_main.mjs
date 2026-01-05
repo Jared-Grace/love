@@ -52,7 +52,8 @@ export async function app_search_main(context) {
     }
     let mapped = await list_map_unordered_async(words, lambda);
     html_clear(root);
-    let mapped2 = list_map(list, function lambda3(item) {});
+    function lambda3(item) {}
+    let mapped2 = list_map(list, lambda3);
     let reference = ebible_parts_chapter_code_to_reference(
       chapter_code,
       books,
