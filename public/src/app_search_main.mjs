@@ -1,3 +1,4 @@
+import { app_karate_button_uncolored } from "../../../karate_code/public/src/app_karate_button_uncolored.mjs";
 import { app_karate_button_back } from "../../../karate_code/public/src/app_karate_button_back.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { ebible_book_exists } from "../../../love/public/src/ebible_book_exists.mjs";
@@ -25,7 +26,6 @@ import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { app_bible_search_word_path } from "../../../love/public/src/app_bible_search_word_path.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
-import { html_button } from "../../../love/public/src/html_button.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { html_input_text } from "../../../karate_code/public/src/html_input_text.mjs";
@@ -73,7 +73,7 @@ export async function app_search_main(context) {
     let books = object_values(result);
   }
   let books = await ebible_version_books("engbsb");
-  let component = html_button(root, "Search", lambda2);
+  let component = app_karate_button_uncolored(root, "Search", lambda2);
   async function lambda2() {
     let value = html_value_get(input);
     let words = string_to_words(value);
