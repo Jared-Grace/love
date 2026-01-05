@@ -1,3 +1,4 @@
+import { json_compress_object } from "../../../love/public/src/json_compress_object.mjs";
 import { ebible_versions_english_downloadable_words_lookup_cache } from "../../../love/public/src/ebible_versions_english_downloadable_words_lookup_cache.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { firebase_upload_object } from "../../../love/public/src/firebase_upload_object.mjs";
@@ -13,7 +14,8 @@ export async function ebible_versions_english_downloadable_words_search_upload()
       "bible_search",
       file_name_with_extension,
     ]);
-    await firebase_upload_object(destination, value);
+    let c = await json_compress_object(value);
+    await firebase_upload_object(destination, c);
   }
   await each_object_async(result, lambda3);
 }
