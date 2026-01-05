@@ -7,6 +7,7 @@ export async function file_overwrite_json(file_path, object) {
   if (browser_is()) {
     let json = json_format_to(object);
     await file_overwrite(file_path, json);
+    return;
   } else {
     let fs = await import("fs");
     const v = await import("stream/promises");
