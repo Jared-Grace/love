@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { firebase_upload_generic } from "../../../love/public/src/firebase_upload_generic.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { firebase_config_get } from "../../../love/public/src/firebase_config_get.mjs";
@@ -7,6 +8,10 @@ export async function firebase_upload_string_generic(
   destination,
   content_type,
 ) {
+  log({
+    destination,
+    msg,
+  });
   if (browser_is()) {
     const firebase = await import(
       "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js"
@@ -14,7 +19,8 @@ export async function firebase_upload_string_generic(
     const storageMod = await import(
       "https://www.gstatic.com/firebasejs/10.13.0/firebase-storage.js"
     );
-    const { ref, uploadString } = storageMod;
+    let uploadString = object_property_get(storageMod, "uploadString");
+    let ref = object_property_get(storageMod, "ref");
     let firebase_config = firebase_config_get();
     const app = firebase.initializeApp(firebase_config);
     const storage = storageMod.getStorage(app);
