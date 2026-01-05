@@ -1,3 +1,4 @@
+import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { string_transform } from "../../../love/public/src/string_transform.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -51,6 +52,7 @@ export async function sandbox() {
         function lambda5(s) {
           let lower = string_lower_to(s);
           function lambda3(c) {
+            let exists = object_property_exists(object, property_name);
             if (false) {
             }
           }
