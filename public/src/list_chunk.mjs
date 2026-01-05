@@ -9,7 +9,7 @@ export function list_chunk(list, chunk_size) {
   let position = 0;
   function lambda(la) {
     while (list_index_is(position)) {
-      let sliced = list_slice(list3, a, b);
+      let sliced = list_slice(list, position, chunk_size);
     }
   }
   let list2 = list_adder(lambda);
