@@ -1,3 +1,4 @@
+import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
@@ -34,6 +35,8 @@ export async function ebible_versions_english_downloadable_words_search_upload()
   }
   let result2 = object_values_map(object, lambda3);
   let cs = list_chunk(result2, 20);
-  async function lambda2(item) {}
+  async function lambda2(item) {
+    await each_unordered_async(list2, async function lambda4(item2) {});
+  }
   await each_async(list, lambda2);
 }
