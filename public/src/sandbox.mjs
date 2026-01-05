@@ -46,7 +46,7 @@ export async function sandbox() {
         let n = whitespace_normalize(replaced);
         let split = string_split_space(n);
         function lambda5(s) {
-          oad(key, value);
+          let value2 = object_property_initialize_empty(object, property_name);
           let chapter = object_property_initialize_empty(result, chapter_code);
           let versions = object_property_initialize_list(chapter, verse_number);
           list_add(list, item);
