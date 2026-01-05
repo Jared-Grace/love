@@ -114,8 +114,6 @@ export async function app_reply_main(context) {
       async function lambda5(l) {
         async function lambda8(verse) {
           let choices = null;
-          choices = list_copy(english_choices);
-          list_shuffle(choices);
           let bible_folder = object_property_get(l, "bible_folder");
           let right = ebible_folder_english();
           let chapter_code = object_property_get(verse, "chapter_code");
@@ -126,7 +124,9 @@ export async function app_reply_main(context) {
           }
           async function lambda() {
             if (equal(bible_folder, right)) {
-              if (null_is(value)) {
+              if (null_is(choices)) {
+                choices = list_copy(english_choices);
+                list_shuffle(choices);
               }
               bible_folder = list_pop(choices);
             }
