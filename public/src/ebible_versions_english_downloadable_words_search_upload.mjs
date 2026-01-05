@@ -1,4 +1,4 @@
-import { string_last } from "../../../love/public/src/string_last.mjs";
+import { sleep } from "../../../love/public/src/sleep.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
 import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -31,7 +31,7 @@ export async function ebible_versions_english_downloadable_words_search_upload()
       await firebase_upload_object_compressed(destination, m);
     }
     await each_unordered_async(c, lambda4);
-    let item = string_last(s);
+    await sleep(ms);
   }
   await each_async(cs, lambda2);
 }
