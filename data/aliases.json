@@ -306,6 +306,7 @@
   "sse": "string_split_empty",
   "ldu": "list_adder_unique",
   "lda": "list_adder_async",
-  "fcd": "function_copy_delete"
+  "fcd": "function_copy_delete",
+  "fcrf": "function_cache_refresh"
  }
 }
