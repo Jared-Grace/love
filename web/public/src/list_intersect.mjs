@@ -15,8 +15,8 @@ export function list_intersect(list, other) {
     }
     each(list, lambda);
   }
-  let r = list_adder(lambda2);
-  return r;
-  r = list_intersect_multiple([list, other]);
+  let i = list_adder(lambda2);
+  return i;
+  let r = list_intersect_multiple([list, other]);
   return r;
 }
