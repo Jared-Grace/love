@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -38,6 +39,8 @@ export async function app_search_main(context) {
   html_value_set(input, "glory");
   html_width_full(input);
   html_focus(input);
+  let books = await ebible_version_books("engbsb");
+  let component = html_button(root, "Search", lambda2);
   async function lambda2() {
     let value = html_value_get(input);
     let words = string_to_words(value);
@@ -49,12 +52,11 @@ export async function app_search_main(context) {
     }
     let mapped = await list_map_unordered_async(words, lambda);
     html_clear(root);
+    let mapped2 = list_map(list, function lambda3(item) {});
     let reference = ebible_parts_chapter_code_to_reference(
       chapter_code,
       books,
       verse_numbers,
     );
   }
-  let books = await ebible_version_books("engbsb");
-  let component = html_button(root, "Search", lambda2);
 }
