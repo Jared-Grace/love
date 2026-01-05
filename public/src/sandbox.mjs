@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_chapters_each_verses_check_with } from "../../../love/public/src/ebible_chapters_each_verses_check_with.mjs";
 import { ebible_versions_english_downloadable_cache } from "../../../love/public/src/ebible_versions_english_downloadable_cache.mjs";
 import { string_only_or_space } from "../../../love/public/src/string_only_or_space.mjs";
@@ -5,6 +6,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   marker("1");
   const versions = await ebible_versions_english_downloadable_cache();
+  await each_async(list, async function lambda2(item) {});
   async function lambda(chapter_code, verses) {}
   await ebible_chapters_each_verses_check_with(bible_folder, lambda);
   let symbols_all =
