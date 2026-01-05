@@ -4,7 +4,7 @@ import { list_take } from "../../../love/public/src/list_take.mjs";
 import { app_reply_buttons_languages } from "../../../love/public/src/app_reply_buttons_languages.mjs";
 import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_languages_prompt.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
-export function app_search_main() {
+export function app_search_main(context) {
   let root = object_property_get(context, "root");
   let languages = ebible_languages();
   let languages_chosen = [];
