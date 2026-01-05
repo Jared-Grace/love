@@ -1,3 +1,4 @@
+import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { object_values } from "../../../love/public/src/object_values.mjs";
 import { object_adder_duplicates } from "../../../love/public/src/object_adder_duplicates.mjs";
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
@@ -55,6 +56,7 @@ export async function app_search_main(context) {
     ["engwyc2018", "engwebu"],
     ebible_version_books,
   );
+  let squashed = list_squash(list);
   function lambda9(oad) {
     function lambda10(i) {
       let book_code = object_property_get(i, "book_code");
