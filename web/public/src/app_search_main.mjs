@@ -87,6 +87,11 @@ export async function app_search_main(context) {
     function lambda7(chapter, chapter_code) {
       let verse_numbers = object_properties(chapter);
       function lambda8(verse_number) {
+        log({
+          chapter_code,
+          books,
+          verse_number,
+        });
         let reference = ebible_parts_chapter_code_to_reference(
           chapter_code,
           books,
