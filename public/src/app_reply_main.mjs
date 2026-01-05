@@ -133,7 +133,8 @@ export async function app_reply_main(context) {
             );
             return d;
           }
-          return lambda11(lambda);
+          let v2 = lambda11(lambda);
+          return v2;
         }
         let verses = await list_map_unordered_async(verse_range, lambda8);
         function lambda7(v) {
