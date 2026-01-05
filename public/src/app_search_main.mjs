@@ -16,9 +16,8 @@ export function app_search_main(context) {
   app_reply_languages_chosen_reset(languages_chosen, languages_chosen_default);
   let p = app_reply_languages_prompt(root);
   app_reply_buttons_languages(languages_chosen, root, languages);
-  let p2 = html_p_text(
-    root,
-    "2. What words would you like to search for? Separate by spaces. A verse will match if any Bible version contains the word. Spelling matters.",
-  );
-  let input = html_input_text(div, placeholder);
+  const search_instructions =
+    "What words would you like to search for? Separate by spaces. A verse will match if any Bible version contains the word. Spelling matters.";
+  let p2 = html_p_text(root, "2. " + search_instructions);
+  let input = html_input_text(root, search_instructions);
 }
