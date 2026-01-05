@@ -4,7 +4,7 @@ import { each_object } from "../../../love/public/src/each_object.mjs";
 import { ebible_versions_english_books_count_cache } from "../../../love/public/src/ebible_versions_english_books_count_cache.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_full() {
-  "full meaning all books of the bible";
+  "full meaning all books of the bible, as oppose to versions that are missing books";
   marker("1");
   let object = await ebible_versions_english_books_count_cache();
   const c = isaiah_chapters_count();
