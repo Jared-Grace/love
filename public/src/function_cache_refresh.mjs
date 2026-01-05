@@ -8,9 +8,9 @@ export async function function_cache_refresh(f_name) {
   marker("1");
   const args = [];
   let fn = await function_import(f_name);
-  invoke_cache_clear(fn, args);
   let v3 = await function_cache_name(f_name);
   let f_name_cache = object_property_get(v3, "f_name_cache");
+  invoke_cache_clear(f_name_cache, args);
   let result = await function_run(f_name_cache, args);
   return result;
 }
