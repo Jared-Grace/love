@@ -1,3 +1,4 @@
+import { app_reply_languages_chosen_reset } from "../../../love/public/src/app_reply_languages_chosen_reset.mjs";
 import { app_reply_buttons_languages } from "../../../love/public/src/app_reply_buttons_languages.mjs";
 import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_languages_prompt.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -53,11 +54,10 @@ export async function app_reply_main(context) {
   typed_reset();
   let p = app_reply_languages_prompt(root);
   function languages_chosen_reset() {
-    list_empty(languages_chosen);
-    function lambda14(l) {
-      list_add(languages_chosen, l);
-    }
-    each(languages_chosen_default, lambda14);
+    app_reply_languages_chosen_reset(
+      languages_chosen,
+      languages_chosen_default,
+    );
   }
   async function love() {
     let languages_chosen_before = languages_chosen;
