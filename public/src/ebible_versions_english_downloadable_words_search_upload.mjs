@@ -21,8 +21,8 @@ export async function ebible_versions_english_downloadable_words_search_upload()
   }
   let result2 = object_values_map(result, lambda3);
   let cs = list_chunk(result2, 20);
-  let size = list_size(list);
-  return cs;
+  let size = list_size(cs);
+  return size;
   async function lambda2(c) {
     async function lambda4({ value, word }) {
       let destination = app_bible_search_word_path(word);
