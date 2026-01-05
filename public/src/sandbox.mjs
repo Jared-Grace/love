@@ -1,7 +1,4 @@
-import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
-import { string_includes } from "../../../love/public/src/string_includes.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
-import { list_to } from "../../../love/public/src/list_to.mjs";
+import { string_only_or } from "../../../love/public/src/string_only_or.mjs";
 import { ebible_versions_english_downloadable_symbols_unique } from "../../../love/public/src/ebible_versions_english_downloadable_symbols_unique.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
@@ -31,16 +28,6 @@ export async function sandbox() {
     "01½¼23¾4556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZΑΩ";
   let s = null;
   const replacement = " ";
-  let l = list_to(s);
-  function lambda(item) {
-    let i = string_includes(symbols_split_non, item);
-    if (i) {
-      return item;
-    }
-    let v = replacement;
-    return v;
-  }
-  let mapped = list_map(l, lambda);
-  let joined = list_join_empty(mapped);
+  let joined = string_only_or(s, symbols_split_non, replacement);
   return joined;
 }
