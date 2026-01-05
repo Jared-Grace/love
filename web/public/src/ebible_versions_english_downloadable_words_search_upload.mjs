@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { firebase_upload_object_compressed } from "../../../love/public/src/firebase_upload_object_compressed.mjs";
 import { ebible_versions_english_downloadable_words_lookup_cache } from "../../../love/public/src/ebible_versions_english_downloadable_words_lookup_cache.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -8,6 +9,10 @@ export async function ebible_versions_english_downloadable_words_search_upload()
   marker("1");
   let result = await ebible_versions_english_downloadable_words_lookup_cache();
   async function lambda3(value, word) {
+    log({
+      value,
+      word,
+    });
     let file_name_with_extension = file_name_json(word);
     let destination = list_join_slash_forward([
       "bible_search",
