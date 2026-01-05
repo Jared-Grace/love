@@ -56,6 +56,9 @@ export async function app_search_main(context) {
       let destination = app_bible_search_word_path(word);
       let c = await firebase_storage_download_json(destination);
       let o = await json_decompress_object(c);
+      log({
+        o,
+      });
       return o;
     }
     let mapped = await list_map_unordered_async(words, lambda);
