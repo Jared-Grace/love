@@ -53,8 +53,7 @@ export async function app_search_main(context) {
     }
     let mapped = await list_map_unordered_async(words, lambda);
     let properties = object_properties(obj);
-    function lambda4(item2) {}
-    let mapped3 = list_map(list2, lambda4);
+    let keys = list_map(list2, object_properties);
     html_clear(root);
     function lambda3(item) {}
     let mapped2 = list_map(list, lambda3);
