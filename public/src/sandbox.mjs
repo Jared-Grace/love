@@ -52,8 +52,9 @@ export async function sandbox() {
         function lambda5(s) {
           let lower = string_lower_to(s);
           function lambda3(c) {
-            let exists = object_property_exists(object, property_name);
-            if (false) {
+            let exists = object_property_exists(normalize, c);
+            if (exists) {
+              let value = object_property_get(object, property_name);
             }
           }
           let joined2 = string_transform(lower, lambda3);
