@@ -1,3 +1,4 @@
+import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { app_bible_search_word_path } from "../../../love/public/src/app_bible_search_word_path.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
@@ -31,7 +32,8 @@ export function app_search_main(context) {
   html_width_full(input);
   html_focus(input);
   async function lambda2() {
-    let value = html_value_get(input2);
+    let value = html_value_get(input);
+    let words = string_to_words(text);
     let destination = app_bible_search_word_path(word);
     let o = await firebase_storage_download_json(destination);
   }
