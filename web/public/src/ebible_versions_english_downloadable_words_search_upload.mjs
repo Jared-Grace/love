@@ -10,7 +10,6 @@ export async function ebible_versions_english_downloadable_words_search_upload()
   let result = await ebible_versions_english_downloadable_words_lookup_cache();
   async function lambda3(value, word) {
     log({
-      value,
       word,
     });
     let file_name_with_extension = file_name_json(word);
