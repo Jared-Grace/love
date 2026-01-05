@@ -1,3 +1,4 @@
+import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { app_reply_languages_chosen_reset } from "../../../love/public/src/app_reply_languages_chosen_reset.mjs";
 import { app_reply_buttons_languages } from "../../../love/public/src/app_reply_buttons_languages.mjs";
 import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_languages_prompt.mjs";
@@ -111,6 +112,7 @@ export async function app_reply_main(context) {
           let bible_folder = object_property_get(l, "bible_folder");
           let right = ebible_folder_english();
           if (0 && equal(bible_folder, right)) {
+            let copy2 = list_copy(original);
             let r = list_shuffle(english_choices);
             bible_folder = r;
             log({
