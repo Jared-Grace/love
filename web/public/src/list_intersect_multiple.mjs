@@ -15,7 +15,8 @@ export function list_intersect_multiple(list) {
   let remaining = object_property_get(fr, "remaining");
   let e = list_empty_is(remaining);
   if (e) {
-    return;
+    let copy = list_copy(e);
+    return copy;
   }
   let first = object_property_get(fr, "first");
   let uniques = list_map(remaining, list_unique_set);
@@ -34,5 +35,4 @@ export function list_intersect_multiple(list) {
   }
   let i = list_adder(lambda2);
   return i;
-  let copy = list_copy(original);
 }
