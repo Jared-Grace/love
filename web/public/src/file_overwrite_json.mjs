@@ -7,7 +7,7 @@ export async function file_overwrite_json(file_path, object) {
     let json = json_format_to(object);
     await file_overwrite(file_path, json);
   } else {
-    let fs = await import("fs");
+    let fs = await import("fs");ii
     const out = fs.createWriteStream(file_path);
     let json = streamJsonStringify(object);
     await pipeline(json, out);
