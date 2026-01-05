@@ -1,3 +1,4 @@
+import { retry_until_success } from "../../../love/public/src/retry_until_success.mjs";
 import { catch_ignore_async } from "../../../love/public/src/catch_ignore_async.mjs";
 import { list_pop } from "../../../love/public/src/list_pop.mjs";
 import { list_copy } from "../../../love/public/src/list_copy.mjs";
@@ -118,6 +119,9 @@ export async function app_reply_main(context) {
           let chapter_code = object_property_get(verse, "chapter_code");
           let verse_number = object_property_get(verse, "verse_number");
           let lambda11 = catch_ignore_async;
+          if (equal(bible_folder, right)) {
+            lambda11 = retry_until_success;
+          }
           if (equal(bible_folder, right)) {
             bible_folder = list_pop(copy2);
           }
