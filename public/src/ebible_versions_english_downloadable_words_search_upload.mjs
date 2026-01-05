@@ -23,7 +23,7 @@ export async function ebible_versions_english_downloadable_words_search_upload()
       }
       let m = object_values_map(value, lambda);
       log({
-        word,
+        key,
         m,
       });
       return;
