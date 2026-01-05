@@ -85,7 +85,7 @@ export async function app_search_main(context) {
     });
     html_clear(root);
     function lambda7(chapter, chapter_code) {
-      let properties2 = object_properties(chapter);
+      let verse_numbers = object_properties(chapter);
       function lambda8(verse_number) {
         let reference = ebible_parts_chapter_code_to_reference(
           chapter_code,
@@ -94,7 +94,7 @@ export async function app_search_main(context) {
         );
         let p3 = html_p_text(root, reference);
       }
-      each(properties2, lambda8);
+      each(verse_numbers, lambda8);
     }
     each_object(dictionary, lambda7);
   }
