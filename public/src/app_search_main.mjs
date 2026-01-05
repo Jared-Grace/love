@@ -65,7 +65,8 @@ export async function app_search_main(context) {
     list_map(mapped, lambda4);
     function lambda5(chapter_code) {
       function lambda6(m) {
-        let value2 = object_property_get(object, property_name);
+        let verses = object_property_get(m, chapter_code);
+        let properties = object_properties(obj);
       }
       let mapped3 = list_map(mapped, lambda6);
     }
