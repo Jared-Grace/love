@@ -6,7 +6,8 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   marker("1");
   const versions = await ebible_versions_english_downloadable_cache();
-  await each_async(list, async function lambda2(item) {});
+  async function lambda2(item) {}
+  await each_async(list, lambda2);
   async function lambda(chapter_code, verses) {}
   await ebible_chapters_each_verses_check_with(bible_folder, lambda);
   let symbols_all =
