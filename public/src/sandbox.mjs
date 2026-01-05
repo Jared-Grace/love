@@ -5,8 +5,6 @@ export async function sandbox() {
   let unique = await ebible_versions_english_downloadable_symbols_unique();
   let symbols_all =
     "._​ּׁׂ -–—,;:!?…·'‘’\"“”()[]{}¶*/&#%•`°+=|⌃⌞⌟►◄$01½¼23¾456789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZʼΑΩאבגדהוזחטיכלמנסעפצקרשת";
-  let symbols_whitespace = "   \n";
-  let symbols_dash = "–—";
   let normalize = {
     ﬁ: "fi",
     ﬂ: "fl",
