@@ -25,5 +25,6 @@ export async function ebible_versions_english_downloadable_words_search_upload()
     await firebase_upload_object_compressed(destination, m);
   }
   await each_object_async(result, lambda3);
-  let result2 = object_values_map(object, function lambda2(value2, key) {});
+  function lambda2(value2, key) {}
+  let result2 = object_values_map(object, lambda2);
 }
