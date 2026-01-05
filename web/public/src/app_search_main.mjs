@@ -56,7 +56,8 @@ export async function app_search_main(context) {
     lambda3,
   );
   function lambda9(oad) {
-    each(list, function lambda10(item2) {});
+    function lambda10(item2) {}
+    each(list, lambda10);
   }
   let result = object_adder_duplicates(lambda9);
   let books = await ebible_version_books("engwebu");
