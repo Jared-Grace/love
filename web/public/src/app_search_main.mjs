@@ -1,3 +1,4 @@
+import { json_decompress } from "../../../love/public/src/json_decompress.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
@@ -43,7 +44,7 @@ export function app_search_main(context) {
       let destination = app_bible_search_word_path(word);
       let c = await firebase_storage_download_json(destination);
       let compressed = object_property_get(c, "compressed");
-      let o = await json_decompress_object(compressed);
+      let o = await json_decompress(compressed);
       return o;
     }
     let mapped = await list_map_unordered_async(words, lambda);
