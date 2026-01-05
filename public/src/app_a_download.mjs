@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { json_compress } from "../../../love/public/src/json_compress.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
@@ -16,6 +17,7 @@ export async function app_a_download() {
       key: path,
       compressed,
     };
+    let to2 = object_merge(to, from);
     return v;
   }
   let files = await list_map_unordered_async(filtered, lambda2);
