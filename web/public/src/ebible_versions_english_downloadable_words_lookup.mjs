@@ -83,5 +83,4 @@ export async function ebible_versions_english_downloadable_words_lookup() {
     await firebase_upload_object(destination, value);
   }
   await each_object_async(object, lambda3);
-  return result;
 }
