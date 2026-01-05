@@ -1,6 +1,6 @@
 import { marker } from "../../../love/public/src/marker.mjs";
-export function whitespace_normalize(str) {
+export function whitespace_normalize(s) {
   marker("1");
-  let n = str.replace(/\s+/g, " ").trim();
+  let n = s.replace(/\s+/g, " ").trim();
   return n;
 }
