@@ -42,8 +42,8 @@ export async function sandbox() {
           let replaced = string_only_or_space(text, symbols_allowed);
           let n = whitespace_normalize(replaced);
           let split = string_split_space(n);
-          function lambda5(item) {}
-          each(list, lambda5);
+          function lambda5(s) {}
+          each(split, lambda5);
         }
         each(verses, lambda4);
       }
