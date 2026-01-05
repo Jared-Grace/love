@@ -54,7 +54,7 @@ export async function app_search_main(context) {
     }
     let mapped = await list_map_unordered_async(words, lambda);
     let keys = list_map(list2, object_properties);
-    let i = list_intersect_multiple(list3);
+    let i = list_intersect_multiple(keys);
     html_clear(root);
     function lambda3(item) {}
     let mapped2 = list_map(list, lambda3);
