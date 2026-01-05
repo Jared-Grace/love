@@ -6,7 +6,17 @@ import { each } from "../../../love/public/src/each.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 export function list_intersect(list, other) {
   marker("1");
-
-  i = list_intersect_multiple([list, other]);
-  return i;
+  let set = list_unique_set(other);
+  function lambda2(la) {
+    function lambda(l) {
+      if (set_includes(set, l)) {
+        la(l);
+      }
+    }
+    each(list, lambda);
+  }
+  let r = list_adder(lambda2);
+  return r;
+  r = list_intersect_multiple([list, other]);
+  return r;
 }
