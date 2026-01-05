@@ -16,13 +16,13 @@ export async function ebible_versions_english_downloadable_words_search_upload()
       let properties = object_properties(verses_obj);
       return properties;
     }
-    let result2 = object_values_map(value, lambda);
+    let m = object_values_map(value, lambda);
     log({
       word,
-      value,
+      m,
     });
     exit();
-    await firebase_upload_object_compressed(destination, value);
+    await firebase_upload_object_compressed(destination, m);
   }
   await each_object_async(result, lambda3);
 }
