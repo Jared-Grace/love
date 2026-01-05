@@ -57,7 +57,7 @@ export async function app_search_main(context) {
   );
   function lambda9(oad) {
     function lambda10(i) {
-      let book_code2 = object_property_get(i, "book_code");
+      let book_code = object_property_get(i, "book_code");
     }
     each(waited, lambda10);
   }
