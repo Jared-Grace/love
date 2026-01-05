@@ -13,7 +13,7 @@ export async function function_cache_refresh(f_name) {
   let f_name_cache = object_property_get(v3, "f_name_cache");
   let key_get = invoke_cache_file_key_get(fn, args);
   let k = key_get();
-  await file_delete(file_path);
+  await file_delete(k);
   let result = await function_run(f_name_cache, args);
   return result;
 }
