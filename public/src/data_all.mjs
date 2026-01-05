@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { data_generate } from "../../../love/public/src/data_generate.mjs";
 import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -32,9 +31,6 @@ export async function data_all(file_path) {
       let contents = json_format_to({});
       await file_write(file_path, contents);
     }
-    log({
-      file_path,
-    });
     data = await file_read_json(file_path);
   }
   let v = {
