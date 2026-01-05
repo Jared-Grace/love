@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { object_adder_async } from "../../../love/public/src/object_adder_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_chapters_each_verses_check_with } from "../../../love/public/src/ebible_chapters_each_verses_check_with.mjs";
@@ -9,7 +10,9 @@ export async function sandbox() {
   const bible_folders = await ebible_versions_english_downloadable_cache();
   async function lambda3(oad) {
     async function lambda2(bible_folder) {
-      async function lambda(chapter_code, verses) {}
+      async function lambda(chapter_code, verses) {
+        each(list, function lambda4(item) {});
+      }
       await ebible_chapters_each_verses_check_with(bible_folder, lambda);
     }
     await each_async(bible_folders, lambda2);
