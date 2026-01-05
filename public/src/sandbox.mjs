@@ -1,4 +1,4 @@
-import { string_only_or } from "../../../love/public/src/string_only_or.mjs";
+import { string_only_or_space } from "../../../love/public/src/string_only_or_space.mjs";
 import { ebible_versions_english_downloadable_symbols_unique } from "../../../love/public/src/ebible_versions_english_downloadable_symbols_unique.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
@@ -27,6 +27,6 @@ export async function sandbox() {
   let symbols_split_non =
     "01½¼23¾4556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZΑΩ";
   let s = null;
-  let joined = string_only_or(s, symbols_split_non, " ");
+  let joined = string_only_or_space(s, symbols_split_non);
   return joined;
 }
