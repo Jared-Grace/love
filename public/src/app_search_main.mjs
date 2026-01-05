@@ -83,7 +83,7 @@ export async function app_search_main(context) {
     html_clear(root);
     function lambda7(chapter, chapter_code) {
       let properties2 = object_properties(chapter);
-      function lambda8(item) {}
+      function lambda8(verse) {}
       each(properties2, lambda8);
     }
     each_object(dictionary, lambda7);
