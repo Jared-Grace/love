@@ -1,3 +1,5 @@
+import { ebible_book_exists } from "../../../love/public/src/ebible_book_exists.mjs";
+import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -86,6 +88,8 @@ export async function app_search_main(context) {
     });
     html_clear(root);
     function lambda7(verse_numbers, chapter_code) {
+      let book_code = ebible_chapter_code_to_book(chapter_code);
+      ebible_book_exists(books, book_code);
       log({
         verse_numbers,
       });
