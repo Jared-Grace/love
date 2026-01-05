@@ -1,3 +1,4 @@
+import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { html_input_text } from "../../../karate_code/public/src/html_input_text.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
@@ -22,4 +23,5 @@ export function app_search_main(context) {
   let p2 = html_p_text(root, "2. " + search_instructions);
   let input = html_input_text(root, search_instructions);
   html_width_full(input);
+  html_focus(input2);
 }
