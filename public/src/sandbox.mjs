@@ -8,20 +8,8 @@ import { string_only_or_space } from "../../../love/public/src/string_only_or_sp
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   marker("1");
-  const bible_folders = await ebible_versions_english_downloadable_cache();
-  async function lambda3(oad) {
-    async function lambda2(bible_folder) {
-      async function lambda(chapter_code, verses) {
-        function lambda4(verse) {
-          let text = object_property_get(verse, "text");
-        }
-        each(verses, lambda4);
-      }
-      await ebible_chapters_each_verses_check_with(bible_folder, lambda);
-    }
-    await each_async(bible_folders, lambda2);
-  }
-  let result = await object_adder_async(lambda3);
+  let symbols_split_non =
+    "01½¼23¾4556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZΑΩ";
   let symbols_all =
     "._​ּׁׂ -–—,;:!?…·'‘’\"“”()[]{}¶*/&#%•`°+=|⌃⌞⌟►◄$01½¼23¾456789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZʼΑΩאבגדהוזחטיכלמנסעפצקרשת";
   let normalize = {
@@ -42,9 +30,21 @@ export async function sandbox() {
     "¼": "1/4",
     "¾": "3/4",
   };
-  let symbols_split_non =
-    "01½¼23¾4556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZΑΩ";
   let s = null;
+  const bible_folders = await ebible_versions_english_downloadable_cache();
+  async function lambda3(oad) {
+    async function lambda2(bible_folder) {
+      async function lambda(chapter_code, verses) {
+        function lambda4(verse) {
+          let text = object_property_get(verse, "text");
+        }
+        each(verses, lambda4);
+      }
+      await ebible_chapters_each_verses_check_with(bible_folder, lambda);
+    }
+    await each_async(bible_folders, lambda2);
+  }
+  let result = await object_adder_async(lambda3);
   let joined = string_only_or_space(s, symbols_split_non);
   return joined;
 }
