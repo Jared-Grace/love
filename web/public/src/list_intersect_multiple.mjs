@@ -21,7 +21,7 @@ export function list_intersect_multiple(list, other) {
         return v;
       }
       let a = list_all(uniques, lambda3);
-      if (set_includes(set, l)) {
+      if (a) {
         la(l);
       }
     }
