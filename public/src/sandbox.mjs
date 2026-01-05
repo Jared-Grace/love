@@ -10,7 +10,7 @@ export async function sandbox() {
   marker("1");
   let symbols_all =
     "._​ּׁׂ -–—,;:!?…·'‘’\"“”()[]{}¶*/&#%•`°+=|⌃⌞⌟►◄$01½¼23¾456789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZʼΑΩאבגדהוזחטיכלמנסעפצקרשת";
-  let symbols_split_non =
+  let symbols_allowed =
     "01½¼23¾4556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZΑΩ";
   let normalize = {
     ﬁ: "fi",
@@ -37,6 +37,7 @@ export async function sandbox() {
       async function lambda(chapter_code, verses) {
         function lambda4(verse) {
           let text = object_property_get(verse, "text");
+          let joined = string_only_or_space(text, symbols_allowed);
         }
         each(verses, lambda4);
       }
@@ -45,6 +46,5 @@ export async function sandbox() {
     await each_async(bible_folders, lambda2);
   }
   let result = await object_adder_async(lambda3);
-  let joined = string_only_or_space(s, symbols_split_non);
   return joined;
 }
