@@ -12,7 +12,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_downloadable_words_search_upload() {
   marker("1");
   let result = await ebible_versions_english_downloadable_words_lookup_cache();
-  async function lambda3(value, word) {}
   function lambda3(value, word) {
     let v = {
       value,
