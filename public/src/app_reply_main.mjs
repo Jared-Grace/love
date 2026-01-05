@@ -1,3 +1,4 @@
+import { app_reply_buttons_languages } from "../../../love/public/src/app_reply_buttons_languages.mjs";
 import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_languages_prompt.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
@@ -24,7 +25,6 @@ import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { each_range_from } from "../../../love/public/src/each_range_from.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { app_reply_button } from "../../../love/public/src/app_reply_button.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { app_reply_love } from "../../../love/public/src/app_reply_love.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -71,11 +71,7 @@ export async function app_reply_main(context) {
     languages_chosen = languages_chosen_before;
   }
   let component4 = html_button(root, "❤️", love);
-  function lambda(language) {
-    let name = object_property_get(language, "name");
-    let component = app_reply_button(languages_chosen, language, root, name);
-  }
-  each(languages, lambda);
+  app_reply_buttons_languages(languages_chosen, root, languages);
   html_p_text(
     root,
     "2. How many Bible passages do you want? This will reset any responses below. You may need to choose 'Copy' button.",
