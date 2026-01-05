@@ -1,5 +1,4 @@
 import { firebase_upload_object_compressed_chunked } from "../../../love/public/src/firebase_upload_object_compressed_chunked.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { object_values_map } from "../../../love/public/src/object_values_map.mjs";
@@ -12,9 +11,6 @@ export async function ebible_versions_english_downloadable_words_search_upload()
   let v2 = object_to_list(result);
   await firebase_upload_object_compressed_chunked(v2, get);
   function get({ value: v, key }) {
-    log({
-      key,
-    });
     let destination = app_bible_search_word_path(key);
     function lambda(verses_obj, chapter_code) {
       let properties = object_properties(verses_obj);
