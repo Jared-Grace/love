@@ -1,3 +1,4 @@
+import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { html_input_text } from "../../../karate_code/public/src/html_input_text.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { list_sort_string_property } from "../../../love/public/src/list_sort_string_property.mjs";
@@ -20,4 +21,5 @@ export function app_search_main(context) {
     "What words would you like to search for? Separate by spaces. A verse will match if any Bible version contains the word. Spelling matters.";
   let p2 = html_p_text(root, "2. " + search_instructions);
   let input = html_input_text(root, search_instructions);
+  html_width_full(component);
 }
