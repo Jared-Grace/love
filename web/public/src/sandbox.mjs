@@ -30,13 +30,14 @@ export async function sandbox() {
   let symbols_split_non =
     "01½¼23¾4556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZΑΩ";
   let s = null;
+  const replacement = " ";
   let l = list_to(s);
   function lambda(item) {
     let i = string_includes(symbols_split_non, item);
     if (i) {
       return item;
     }
-    let v = " ";
+    let v = replacement;
     return v;
   }
   let mapped = list_map(l, lambda);
