@@ -1,3 +1,4 @@
+import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
@@ -50,7 +51,8 @@ export async function app_search_main(context) {
       let o = await json_decompress_object(c);
       return o;
     }
-    let mapped = await list_map_unordered_async(words, lambda);op
+    let mapped = await list_map_unordered_async(words, lambda);
+    let properties = object_properties(obj);
     function lambda4(item2) {}
     let mapped3 = list_map(list2, lambda4);
     html_clear(root);
