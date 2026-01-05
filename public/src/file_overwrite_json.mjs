@@ -1,5 +1,4 @@
 import { import_install } from "../../../love/public/src/import_install.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
