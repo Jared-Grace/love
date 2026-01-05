@@ -10,7 +10,8 @@ export async function retry_until_success(lambda) {
       break;
     } catch (e) {}
     i++;
-    if (equal(left, right)) {
+    if (equal(i, 30)) {
+      break;
     }
   }
   return r;
