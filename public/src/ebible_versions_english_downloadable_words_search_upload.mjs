@@ -1,3 +1,4 @@
+import { list_size } from "../../../love/public/src/list_size.mjs";
 import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
@@ -19,8 +20,8 @@ export async function ebible_versions_english_downloadable_words_search_upload()
     return v;
   }
   let result2 = object_values_map(result, lambda3);
-  return result2;
   let cs = list_chunk(result2, 20);
+  let size = list_size(list);
   return cs;
   async function lambda2(c) {
     async function lambda4({ value, word }) {
