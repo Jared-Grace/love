@@ -60,7 +60,7 @@ export async function app_search_main(context) {
     let keys = list_map(mapped, object_properties);
     let chapter_codes_match = list_intersect_multiple(keys);
     function lambda4(m) {
-      let to = object_properties_from_empty(chapter_codes_match, m);
+      let to = object_properties_from_empty(m, chapter_codes_match);
       return to;
     }
     list_map(mapped, lambda4);
