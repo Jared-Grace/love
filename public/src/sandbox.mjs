@@ -9,7 +9,7 @@ export async function sandbox() {
   let symbols_dash = "–—";
   let normalize = {
     ﬁ: "fi",
-    ﬂ: fl,
+    ﬂ: 'fl',
   };
   let symbols_split_non =
     "01½¼23¾4556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZΑΩ";
