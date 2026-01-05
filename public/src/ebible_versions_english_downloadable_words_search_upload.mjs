@@ -1,3 +1,4 @@
+import { object_values_map } from "../../../love/public/src/object_values_map.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
 import { app_bible_search_word_path } from "../../../love/public/src/app_bible_search_word_path.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -10,6 +11,7 @@ export async function ebible_versions_english_downloadable_words_search_upload()
   let result = await ebible_versions_english_downloadable_words_lookup_cache();
   async function lambda3(value, word) {
     let destination = app_bible_search_word_path(word);
+    let result2 = object_values_map(object, function lambda(value2, key) {});
     log({
       word,
       value,
