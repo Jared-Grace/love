@@ -36,6 +36,7 @@ import { app_reply_languages_chosen_reset } from "../../../love/public/src/app_r
 import { app_reply_buttons_languages } from "../../../love/public/src/app_reply_buttons_languages.mjs";
 import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_languages_prompt.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
+import { list_map_property } from "./list_map_property.mjs";
 export async function app_search_main(context) {
   let root = html_mobile_default(context);
   firebase_name_jg();
@@ -93,12 +94,7 @@ export async function app_search_main(context) {
     }
     list_map(mapped, lambda4);
     function lambda5(chapter_code) {
-      function lambda6(m) {
-        let verses = object_property_get(m, chapter_code);
-        let properties = object_properties(verses);
-        return properties;
-      }
-      let mapped3 = list_map(mapped, lambda6);
+      let mapped3 = list_map_property(mapped, chapter_code);
       let i = list_intersect_multiple(mapped3);
       return i;
     }
