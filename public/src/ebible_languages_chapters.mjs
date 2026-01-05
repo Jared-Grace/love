@@ -1,3 +1,4 @@
+import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { bible_interlinear_verses_cache } from "../../../love/public/src/bible_interlinear_verses_cache.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -11,7 +12,9 @@ export async function ebible_languages_chapters() {
   async function lambda(la) {
     async function lambda2(language) {
       let bible_folder = object_property_get(language, "bible_folder");
-      let right = bible_interlinear_verses_upload_folder();
+      let v = bible_interlinear_verses_upload_folder();
+      let right = [v];
+      let includes = list_includes(list, item);
       if (equal(bible_folder, right)) {
         return;
       }
