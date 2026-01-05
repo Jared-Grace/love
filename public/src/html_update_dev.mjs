@@ -29,9 +29,6 @@ export async function html_update_dev(name) {
   let scripts = object_property_get(v, "scripts");
   let joined2 = list_add_join_newline(scripts, body);
   log({
-    v,
-    name_prefixed,
-    body,
     scripts,
     joined2,
   });
