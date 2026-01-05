@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
@@ -8,6 +9,8 @@ export async function file_overwrite_json(file_path, object) {
     await file_overwrite(file_path, json);
   } else {
     let fs = await import("fs");
+    const v = await import("stream/promises");
+    let pipeline = object_property_get(v, "pipeline");
     let streamJsonStringify = await (
       await import_install("stream-json-stringify")
     ).default;
