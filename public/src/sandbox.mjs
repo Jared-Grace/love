@@ -5,7 +5,8 @@ import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
 import { ebible_versions_english_downloadable_words_search_upload } from "../../../love/public/src/ebible_versions_english_downloadable_words_search_upload.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
-  await each_async(list, async function lambda(item) {});
+  async function lambda(item) {}
+  await each_async(list, lambda);
   await ebible_verses_upload(bible_folder);
   marker("1");
   let r = range(10);
