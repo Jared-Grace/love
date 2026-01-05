@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { ebible_book_exists } from "../../../love/public/src/ebible_book_exists.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { object_values } from "../../../love/public/src/object_values.mjs";
@@ -108,7 +109,9 @@ export async function app_search_main(context) {
     html_clear(root);
     function lambda7(verse_numbers, chapter_code) {
       let book_code = ebible_chapter_code_to_book(chapter_code);
-      let v = ebible_book_exists(books2, book_code2);
+      let e = ebible_book_exists(books, book_code);
+      if (not(b)) {
+      }
       log({
         verse_numbers,
       });
