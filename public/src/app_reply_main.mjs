@@ -115,11 +115,7 @@ export async function app_reply_main(context) {
           let bible_folder = object_property_get(l, "bible_folder");
           let right = ebible_folder_english();
           if (equal(bible_folder, right)) {
-            let popped = list_pop(list);
-            bible_folder = r;
-            log({
-              bible_folder,
-            });
+            bible_folder = list_pop(copy2);
           }
           let chapter_code = object_property_get(verse, "chapter_code");
           let verse_number = object_property_get(verse, "verse_number");
