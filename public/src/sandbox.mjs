@@ -5,10 +5,8 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   marker("1");
   const versions = await ebible_versions_english_downloadable_cache();
-  await ebible_chapters_each_verses_check_with(
-    bible_folder,
-    async function lambda(chapter_code, verses) {},
-  );
+  async function lambda(chapter_code, verses) {}
+  await ebible_chapters_each_verses_check_with(bible_folder, lambda);
   let symbols_all =
     "._​ּׁׂ -–—,;:!?…·'‘’\"“”()[]{}¶*/&#%•`°+=|⌃⌞⌟►◄$01½¼23¾456789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZʼΑΩאבגדהוזחטיכלמנסעפצקרשת";
   let normalize = {
