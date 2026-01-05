@@ -10,6 +10,17 @@ export async function sandbox() {
   let normalize = {
     ﬁ: "fi",
     ﬂ: "fl",
+    æ: "ae",
+    Æ: "AE",
+    é: "e",
+    è: "e",
+    ë: "e",
+    ï: "i",
+    ö: "o",
+    ü: "u",
+    ʋ: "v",
+    Α: "A",
+    Ω: "O",
   };
   let symbols_split_non =
     "01½¼23¾4556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZΑΩ";
