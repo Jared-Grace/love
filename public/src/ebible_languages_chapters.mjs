@@ -1,3 +1,4 @@
+import { ebible_versions_english_choices } from "../../../love/public/src/ebible_versions_english_choices.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { bible_interlinear_verses_cache } from "../../../love/public/src/bible_interlinear_verses_cache.mjs";
@@ -28,8 +29,9 @@ export async function ebible_languages_chapters() {
     await each_async(languages, lambda2);
     let i = await bible_interlinear_verses_cache();
     la(i);
+    let english_choices = await ebible_versions_english_choices();
     async function lambda3(item) {}
-    await each_async(list, lambda3);
+    await each_async(english_choices, lambda3);
   }
   let all = await list_adder_async(lambda);
   return all;
