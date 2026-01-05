@@ -61,23 +61,26 @@ export async function app_reply_main(context) {
     }
     each(languages_chosen_default, lambda14);
   }
-  async function love() {
-    let languages_chosen_before = languages_chosen;
-    languages_chosen = [];
-    languages_chosen_reset();
-    function lambda13(language) {
-      list_add(languages_chosen, language);
-    }
-    await app_reply_love(languages, lambda13);
-    await update(3);
-    languages_chosen = languages_chosen_before;
-  }
-  let component4 = html_button(root, "❤️", love);
+  middle();
   function lambda(language) {
     let name = object_property_get(language, "name");
     let component = app_reply_button(languages_chosen, language, root, name);
   }
   each(languages, lambda);
+  function middle() {
+    async function love() {
+      let languages_chosen_before = languages_chosen;
+      languages_chosen = [];
+      languages_chosen_reset();
+      function lambda13(language) {
+        list_add(languages_chosen, language);
+      }
+      await app_reply_love(languages, lambda13);
+      await update(3);
+      languages_chosen = languages_chosen_before;
+    }
+    let component4 = html_button(root, "❤️", love);
+  }
   html_p_text(
     root,
     "2. How many Bible passages do you want? This will reset any responses below. You may need to choose 'Copy' button.",
