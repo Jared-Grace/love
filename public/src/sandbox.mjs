@@ -1,3 +1,4 @@
+import { object_adder } from "../../../love/public/src/object_adder.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_chapters_each_verses_check_with } from "../../../love/public/src/ebible_chapters_each_verses_check_with.mjs";
 import { ebible_versions_english_downloadable_cache } from "../../../love/public/src/ebible_versions_english_downloadable_cache.mjs";
@@ -6,6 +7,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   marker("1");
   const bible_folders = await ebible_versions_english_downloadable_cache();
+  let result = object_adder(function lambda3(oad2) {});
   async function lambda2(bible_folder) {
     async function lambda(chapter_code, verses) {}
     await ebible_chapters_each_verses_check_with(bible_folder, lambda);
