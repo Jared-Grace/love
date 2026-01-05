@@ -112,8 +112,8 @@ export async function app_reply_main(context) {
       let verse_range = await ebible_references_parse_lines([en], [reference]);
       async function lambda5(l) {
         async function lambda8(verse) {
-          let copy2 = list_copy(english_choices);
-          list_shuffle(copy2);
+          let choices = list_copy(english_choices);
+          list_shuffle(choices);
           let bible_folder = object_property_get(l, "bible_folder");
           let right = ebible_folder_english();
           let chapter_code = object_property_get(verse, "chapter_code");
@@ -124,7 +124,7 @@ export async function app_reply_main(context) {
           }
           async function lambda() {
             if (equal(bible_folder, right)) {
-              bible_folder = list_pop(copy2);
+              bible_folder = list_pop(choices);
             }
             let d = await ebible_verse(
               bible_folder,
