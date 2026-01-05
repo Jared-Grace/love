@@ -1,3 +1,4 @@
+import { catch_ignore_async } from "../../../love/public/src/catch_ignore_async.mjs";
 import { list_pop } from "../../../love/public/src/list_pop.mjs";
 import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { app_reply_languages_chosen_reset } from "../../../love/public/src/app_reply_languages_chosen_reset.mjs";
@@ -114,11 +115,12 @@ export async function app_reply_main(context) {
           list_shuffle(copy2);
           let bible_folder = object_property_get(l, "bible_folder");
           let right = ebible_folder_english();
+          let chapter_code = object_property_get(verse, "chapter_code");
+          let verse_number = object_property_get(verse, "verse_number");
+          let lambda11 = catch_ignore_async;
           if (equal(bible_folder, right)) {
             bible_folder = list_pop(copy2);
           }
-          let chapter_code = object_property_get(verse, "chapter_code");
-          let verse_number = object_property_get(verse, "verse_number");
           let d = await ebible_verse(bible_folder, chapter_code, verse_number);
           return d;
         }
