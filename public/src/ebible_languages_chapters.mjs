@@ -26,7 +26,8 @@ export async function ebible_languages_chapters() {
     let i = await bible_interlinear_verses_cache();
     la(i);
     let english_choices = await ebible_versions_english_choices();
-    await each_async(list, async function lambda4(item) {});
+    async function lambda4(item) {}
+    await each_async(list, lambda4);
     async function chapters_get_add(bible_folder) {
       let chapters = await ebible_version_chapters_cache(bible_folder);
       la({
