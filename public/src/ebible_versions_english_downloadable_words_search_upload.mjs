@@ -18,7 +18,7 @@ export async function ebible_versions_english_downloadable_words_search_upload()
     };
     return v;
   }
-  let result2 = object_values_map(object, lambda3);
+  let result2 = object_values_map(result, lambda3);
   let cs = list_chunk(result2, 20);
   async function lambda2(c) {
     async function lambda4({ value, word }) {
