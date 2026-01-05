@@ -41,9 +41,9 @@ export function app_search_main(context) {
       let c = await firebase_storage_download_json(destination);
       let o = await json_decompress_object(c);
     }
-    await list_map_unordered_async(words, lambda);
+    let mapped = await list_map_unordered_async(words, lambda);
     log({
-      o,
+      mapped,
     });
   }
   let component = html_button(parent, "Search", lambda2);
