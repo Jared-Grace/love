@@ -1,3 +1,4 @@
+import { function_cache_name } from "../../../love/public/src/function_cache_name.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { js_code_brackets_empty } from "../../../love/public/src/js_code_brackets_empty.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
@@ -11,15 +12,15 @@ import { js_code_call_args_await_maybe_declaration_return_add } from "../../../l
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
-import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { invoke_cache_file } from "./invoke_cache_file.mjs";
 export async function function_cache(f_name) {
   marker("1");
   let args_none = false;
-  let parsed = await function_parse_declaration(f_name);
-  let unaliased = object_property_get(parsed, "unaliased");
-  let f_name_cache = function_name_combine(unaliased, "cache");
+  let v3 = await function_cache_name(f_name);
+  let f_name_cache = object_property_get(v3, "f_name_cache");
+  let unaliased = object_property_get(v3, "unaliased");
+  let parsed = object_property_get(v3, "parsed");
   let declaration_call = object_property_get(parsed, "declaration");
   const c = invoke_cache_file.name;
   let v4 = await function_parse_declaration(c);
