@@ -1,3 +1,4 @@
+import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -32,6 +33,7 @@ export function app_search_main(context) {
     "What words would you like to search for? Separate by spaces. A verse will match if any Bible version contains the word. Spelling matters.";
   let p2 = html_p_text(root, "2. " + search_instructions);
   let input = html_input_text(root, search_instructions);
+  html_value_set(input2, value2);
   html_width_full(input);
   html_focus(input);
   async function lambda2() {
