@@ -11,7 +11,8 @@ export async function ebible_versions_english_downloadable_words_search_upload()
   let result = await ebible_versions_english_downloadable_words_lookup_cache();
   async function lambda3(value, word) {
     let destination = app_bible_search_word_path(word);
-    let result2 = object_values_map(object, function lambda(value2, key) {});
+    function lambda(value2, key) {}
+    let result2 = object_values_map(object, lambda);
     log({
       word,
       value,
