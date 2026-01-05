@@ -12,20 +12,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_downloadable_words_search_upload() {
   marker("1");
   let result = await ebible_versions_english_downloadable_words_lookup_cache();
-  async function lambda3(value, word) {
-    let destination = app_bible_search_word_path(word);
-    function lambda(verses_obj, chapter_code) {
-      let properties = object_properties(verses_obj);
-      return properties;
-    }
-    let m = object_values_map(value, lambda);
-    log({
-      word,
-      m,
-    });
-    exit();
-    await firebase_upload_object_compressed(destination, m);
-  }
+  async function lambda3(value, word) {}
   function lambda3(value, word) {
     let v = {
       value,
@@ -35,9 +22,22 @@ export async function ebible_versions_english_downloadable_words_search_upload()
   }
   let result2 = object_values_map(object, lambda3);
   let cs = list_chunk(result2, 20);
-  async function lambda2(item) {
-    async function lambda4(item2) {}
-    await each_unordered_async(list2, lambda4);
+  async function lambda2(c) {
+    async function lambda4({ value, word }) {
+      let destination = app_bible_search_word_path(word);
+      function lambda(verses_obj, chapter_code) {
+        let properties = object_properties(verses_obj);
+        return properties;
+      }
+      let m = object_values_map(value, lambda);
+      log({
+        word,
+        m,
+      });
+      exit();
+      await firebase_upload_object_compressed(destination, m);
+    }
+    await each_unordered_async(c, lambda4);
   }
-  await each_async(list, lambda2);
+  await each_async(cs, lambda2);
 }
