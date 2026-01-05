@@ -8,7 +8,8 @@ export async function file_overwrite_json(file_path, object) {
     await file_overwrite(file_path, json);
   } else {
     async function writeBigJson(largeObject) {
-      const out = fs.createWriteStream("big.json");
+      await import("fs");
+      const out = fs.createWriteStream(file_path);
       let v = streamJsonStringify(largeObject);
       await pipeline(v, out);
       console.log("JSON write complete");
