@@ -100,6 +100,9 @@ export async function app_reply_main(context) {
     list_empty(responses);
     list_empty(responses_buttons);
     list_shuffle(encouragement);
+    log({
+      verse_count,
+    });
     let taken = list_take(encouragement, verse_count);
     let reference_current = null;
     async function lambda6(reference) {
