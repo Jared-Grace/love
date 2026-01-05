@@ -34,5 +34,6 @@ export async function ebible_versions_english_downloadable_words_search_upload()
   }
   let result2 = object_values_map(object, lambda3);
   let cs = list_chunk(result2, 20);
-  await each_async(list, async function lambda2(item) {});
+  async function lambda2(item) {}
+  await each_async(list, lambda2);
 }
