@@ -31,7 +31,7 @@ export async function ebible_versions_english_downloadable_words_search_upload()
       await firebase_upload_object_compressed(destination, m);
     }
     await each_unordered_async(c, lambda4);
-    await sleep(ms);
+    await sleep(2000);
   }
   await each_async(cs, lambda2);
 }
