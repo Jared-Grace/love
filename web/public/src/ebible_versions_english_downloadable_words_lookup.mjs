@@ -71,6 +71,7 @@ export async function ebible_versions_english_downloadable_words_lookup() {
     await ebible_chapters_each_verses_check_with(bible_folder, lambda);
   }
   await each_async(bible_folders, lambda2);
-  await each_object_async(object, async function lambda3(value, key) {});
+  async function lambda3(value, key) {}
+  await each_object_async(object, lambda3);
   return result;
 }
