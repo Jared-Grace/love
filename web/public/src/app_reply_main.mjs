@@ -1,3 +1,4 @@
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { retry_until_success } from "../../../love/public/src/retry_until_success.mjs";
 import { catch_ignore_async } from "../../../love/public/src/catch_ignore_async.mjs";
 import { list_pop } from "../../../love/public/src/list_pop.mjs";
@@ -124,7 +125,9 @@ export async function app_reply_main(context) {
             lambda11 = retry_until_success;
           }
           async function lambda() {
-            if (equal(bible_folder, right)) {$ien
+            if (equal(bible_folder, right)) {
+              if (null_is(value)) {
+              }
               bible_folder = list_pop(choices);
             }
             let d = await ebible_verse(
