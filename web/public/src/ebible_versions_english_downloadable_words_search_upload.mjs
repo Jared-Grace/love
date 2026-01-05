@@ -13,21 +13,21 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_downloadable_words_search_upload() {
   marker("1");
   let result = await ebible_versions_english_downloadable_words_lookup_cache();
-  function lambda3(value, word) {
+  function lambda3(value, key) {
     let v = {
       value,
-      word,
+      key,
     };
     return v;
   }
   let result2 = object_values_map(result, lambda3);
-  let v2 = object_values(o);
-  let cs = list_chunk(result2, 20);
+  let v2 = object_values(result2);
+  let cs = list_chunk(v2, 20);
   let size = list_size(cs);
   return size;
   async function lambda2(c) {
-    async function lambda4({ value, word }) {
-      let destination = app_bible_search_word_path(word);
+    async function lambda4({ value, key }) {
+      let destination = app_bible_search_word_path(key);
       function lambda(verses_obj, chapter_code) {
         let properties = object_properties(verses_obj);
         return properties;
