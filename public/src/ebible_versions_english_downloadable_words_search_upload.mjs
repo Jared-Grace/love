@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
@@ -28,6 +29,9 @@ export async function ebible_versions_english_downloadable_words_search_upload()
   }
   await each_async(cs, lambda2);
   function get({ value: v, key }) {
+    log({
+      key,
+    });
     let destination = app_bible_search_word_path(key);
     function lambda(verses_obj, chapter_code) {
       let properties = object_properties(verses_obj);
