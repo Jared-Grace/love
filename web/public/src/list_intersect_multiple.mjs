@@ -7,9 +7,9 @@ import { each } from "../../../love/public/src/each.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 export function list_intersect_multiple(list, other) {
   marker("1");
-  let v = list_first_remaining(list);
-  let remaining = object_property_get(v, "remaining");
-  let first = object_property_get(v, "first");
+  let fr = list_first_remaining(list);
+  let remaining = object_property_get(fr, "remaining");
+  let first = object_property_get(fr, "first");
   let set = list_unique_set(other);
   function lambda2(la) {
     function lambda(l) {
