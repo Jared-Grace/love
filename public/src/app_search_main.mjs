@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
 import { object_properties_from_empty } from "../../../love/public/src/object_properties_from_empty.mjs";
@@ -74,6 +75,9 @@ export async function app_search_main(context) {
       return i;
     }
     let dictionary = list_to_dictionary_value(chapter_codes_match, lambda5);
+    log({
+      dictionary,
+    });
     html_clear(root);
     function lambda3(item) {}
     let mapped2 = list_map(list, lambda3);
