@@ -14,12 +14,10 @@ export async function app_a_download() {
     };
     let compressed = await json_compress(data);
     let v = {
-      key: path,
       compressed,
     };
     object_merge(v, {
       key: path,
-      compressed,
     });
     return v;
   }
