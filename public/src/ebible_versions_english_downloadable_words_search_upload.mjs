@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
 import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
@@ -15,17 +16,27 @@ export async function ebible_versions_english_downloadable_words_search_upload()
   let v2 = object_to_list(result);
   let cs = list_chunk(v2, 20);
   async function lambda2(c) {
-    async function lambda4({ value, key }) {
-      let destination = app_bible_search_word_path(key);
-      function lambda(verses_obj, chapter_code) {
-        let properties = object_properties(verses_obj);
-        return properties;
-      }
-      let m = object_values_map(value, lambda);
-      await firebase_upload_object_compressed(destination, m);
+    async function lambda4(i) {
+      let v4 = get(i);
+      let value = object_property_get(v4, "value");
+      let destination = object_property_get(v4, "destination");
+      await firebase_upload_object_compressed(destination, value);
     }
     await each_unordered_async(c, lambda4);
     await sleep(2000);
   }
   await each_async(cs, lambda2);
+  function get({ value: v, key }) {
+    let destination = app_bible_search_word_path(key);
+    function lambda(verses_obj, chapter_code) {
+      let properties = object_properties(verses_obj);
+      return properties;
+    }
+    let m = object_values_map(v, lambda);
+    let v3 = {
+      destination,
+      value,
+    };
+    return v3;
+  }
 }
