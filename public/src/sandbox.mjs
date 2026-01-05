@@ -37,7 +37,7 @@ export async function sandbox() {
     "¾": "3/4",
   };
   let s = null;
-  const bible_folders = await ebible_versions_english_downloadable_cache();
+  let bible_folders = await ebible_versions_english_downloadable_cache();
   bible_folders = ["engbsb"];
   let result = {};
   async function lambda2(bible_folder) {
