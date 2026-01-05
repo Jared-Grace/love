@@ -71,6 +71,9 @@ export async function app_search_main(context) {
         return properties;
       }
       let mapped3 = list_map(mapped, lambda6);
+      log({
+        mapped3,
+      });
       let i = list_intersect_multiple(mapped3);
       return i;
     }
