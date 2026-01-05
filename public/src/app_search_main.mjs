@@ -1,3 +1,4 @@
+import { object_values } from "../../../love/public/src/object_values.mjs";
 import { object_adder_duplicates } from "../../../love/public/src/object_adder_duplicates.mjs";
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -63,6 +64,7 @@ export async function app_search_main(context) {
     each(waited, lambda10);
   }
   let result = object_adder_duplicates(lambda9);
+  let v = object_values(o2);
   let books = await ebible_version_books("engwebu");
   let component = html_button(root, "Search", lambda2);
   async function lambda2() {
