@@ -80,8 +80,10 @@ export async function app_search_main(context) {
       dictionary,
     });
     html_clear(root);
-    function lambda7(value2, property) {}
-    each_object(object, lambda7);
+    function lambda7(chapter, chapter_code) {
+      let properties2 = object_properties(obj);
+    }
+    each_object(dictionary, lambda7);
     let mapped2 = list_map(list, lambda3);
     let reference = ebible_parts_chapter_code_to_reference(
       chapter_code,
