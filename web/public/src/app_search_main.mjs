@@ -35,7 +35,7 @@ export function app_search_main(context) {
   async function lambda2() {
     let value = html_value_get(input);
     let words = string_to_words(value);
-    async function lambda(item) {
+    async function lambda(word) {
       let destination = app_bible_search_word_path(word);
     }
     await each_unordered_async(words, lambda);
