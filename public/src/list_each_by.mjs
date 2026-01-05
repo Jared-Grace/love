@@ -5,5 +5,4 @@ export function list_each_by(list, lambda, chunk_size) {
     lambda(position);
     position += chunk_size;
   }
-  return position;
 }
