@@ -46,7 +46,7 @@ export async function sandbox() {
         function lambda5(s) {
           oad(key, value);
           let chapter = object_property_initialize(result, chapter_code, {});
-          let value2 = object_property_initialize(
+          let v = object_property_initialize(
             chapter,
             property_name,
             verse_number,
