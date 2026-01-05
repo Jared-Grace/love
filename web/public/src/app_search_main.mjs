@@ -84,8 +84,7 @@ export async function app_search_main(context) {
       dictionary,
     });
     html_clear(root);
-    function lambda7(chapter, chapter_code) {
-      let verse_numbers = object_properties(chapter);
+    function lambda7(verse_numbers, chapter_code) {
       log({
         verse_numbers,
       });
