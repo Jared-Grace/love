@@ -1,3 +1,4 @@
+import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { object_adder_generic } from "../../../love/public/src/object_adder_generic.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
