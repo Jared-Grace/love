@@ -29,6 +29,9 @@ export async function data_all(file_path) {
   } else {
     let exists = await file_exists(file_path);
     if (not(exists)) {
+      log({
+        file_path,
+      });
       let contents = json_format_to({});
       await file_write(file_path, contents);
     }
@@ -39,7 +42,4 @@ export async function data_all(file_path) {
     file_path,
   };
   return v;
-  log({
-    file_path,
-  });
 }
