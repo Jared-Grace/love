@@ -74,7 +74,7 @@ export async function app_search_main(context) {
   }
   let books = await ebible_version_books("engbsb");
   let component = html_button(root, "Search", lambda2);
-  html_width_full(component2);
+  html_width_full(component);
   async function lambda2() {
     let value = html_value_get(input);
     let words = string_to_words(value);
