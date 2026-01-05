@@ -46,7 +46,7 @@ export function app_search_main(context) {
       return o;
     }
     let mapped = await list_map_unordered_async(words, lambda);
-    html_clear(element);
+    html_clear(root);
   }
   let component = html_button(root, "Search", lambda2);
 }
