@@ -1,3 +1,4 @@
+import { list_is } from "../../../love/public/src/list_is.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_to } from "../../../love/public/src/list_to.mjs";
 import { string_replace } from "../../../love/public/src/string_replace.mjs";
@@ -31,6 +32,7 @@ export async function sandbox() {
   let s = null;
   let l = list_to(s);
   function lambda(item) {
+    let l2 = list_is(value);
     if (false) {
     }
   }
