@@ -4,6 +4,7 @@ export async function retry_until_success(lambda) {
   marker("1");
   let success = false;
   while (not(success)) {
-    let r = await lambda();
+    let r = null;
+    r = await lambda();
   }
 }
