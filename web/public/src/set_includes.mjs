@@ -1,4 +1,4 @@
 export function set_includes(set, item) {
-  let v = set.has(item);
-  return v;
+  let i = set.has(item);
+  return i;
 }
