@@ -35,7 +35,8 @@ export function app_search_main(context) {
   async function lambda2() {
     let value = html_value_get(input);
     let words = string_to_words(value);
-    await each_unordered_async(list, async function lambda(item) {});
+    async function lambda(item) {}
+    await each_unordered_async(list, lambda);
     let destination = app_bible_search_word_path(word);
     let o = await firebase_storage_download_json(destination);
   }
