@@ -119,11 +119,12 @@ export async function app_reply_main(context) {
           let chapter_code = object_property_get(verse, "chapter_code");
           let verse_number = object_property_get(verse, "verse_number");
           let lambda11 = catch_ignore_async;
-          if (equal(bible_folder, right)) {
+          const en_is = equal(bible_folder, right);
+          if (en_is) {
             lambda11 = retry_until_success;
           }
           async function lambda() {
-            if (equal(bible_folder, right)) {
+            if (en_is) {
               if (null_is(choices)) {
                 choices = list_copy(english_choices);
                 list_shuffle(choices);
