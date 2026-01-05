@@ -6,7 +6,8 @@ import { file_temp } from "../../../love/public/src/file_temp.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function function_run_output_file_temp(f_name) {
   marker("1");
-  let result = await function_run_unalias(f_name, []);
+  const newLocal = [];
+  let result = await function_run_unalias(f_name, newLocal);
   async function lambda(temp_path) {
     let json = json_format_to(result);
     await file_overwrite(temp_path, json);
