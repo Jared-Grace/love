@@ -84,7 +84,7 @@ export async function app_search_main(context) {
     function lambda7(chapter, chapter_code) {
       let properties2 = object_properties(chapter);
       function lambda8(item) {}
-      each(list2, lambda8);
+      each(properties2, lambda8);
     }
     each_object(dictionary, lambda7);
     let mapped2 = list_map(list, lambda3);
