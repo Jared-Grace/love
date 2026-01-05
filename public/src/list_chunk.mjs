@@ -1,11 +1,9 @@
-import { positive_is } from "../../../love/public/src/positive_is.mjs";
-import { assert } from "../../../love/public/src/assert.mjs";
+import { positive_is_assert } from "../../../love/public/src/positive_is_assert.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 export function list_chunk(list, chunk_size) {
-  let p = positive_is(chunk_size);
-  assert(p);
+  positive_is_assert(chunk_size);
   let size = list_size(list);
   let position = 0;
   function lambda(la) {
