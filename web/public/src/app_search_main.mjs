@@ -10,6 +10,7 @@ import { object_properties_from_empty } from "../../../love/public/src/object_pr
 import { list_intersect_multiple } from "../../../love/public/src/list_intersect_multiple.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
+import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { json_decompress_object } from "../../../love/public/src/json_decompress_object.mjs";
@@ -50,10 +51,9 @@ export async function app_search_main(context) {
   html_width_full(input);
   html_focus(input);
   ("include apocrypha");
-  async function lambda3(item) {}
   let waited = await list_map_unordered_async(
     ["engwyc2018", "engwebu"],
-    lambda3,
+    ebible_version_books,
   );
   function lambda9(oad) {
     function lambda10(i) {
