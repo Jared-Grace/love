@@ -30,7 +30,8 @@ export async function sandbox() {
     "01½¼23¾4556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZΑΩ";
   let s = null;
   let l = list_to(s);
-  let mapped = list_map(list, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list, lambda);
   let replaced = string_replace(s, from, to);
   return unique;
 }
