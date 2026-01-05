@@ -9,7 +9,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 export async function app_reply_initialize(context) {
   let root = object_property_get(context, "root");
-  html_mobile_default(root);
+  html_mobile_default(context);
   firebase_name_jg();
   let choices = app_reply_choices();
   let languages = ebible_languages();
