@@ -3,11 +3,12 @@ import { ebible_versions_english_downloadable_words_search_upload } from "../../
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   marker("1");
-  return list_intersect_multiple([
+  let i = list_intersect_multiple([
     [1, 2, 3],
     [3, 2, 4, 5],
     [6, 7, 2, 3, 4],
   ]);
+  return i;
   let result = await ebible_versions_english_downloadable_words_search_upload();
   return result;
 }
