@@ -1,3 +1,4 @@
+import { app_karate_button_back } from "../../../karate_code/public/src/app_karate_button_back.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { ebible_book_exists } from "../../../love/public/src/ebible_book_exists.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
@@ -103,6 +104,7 @@ export async function app_search_main(context) {
       dictionary,
     });
     html_clear(root);
+    let button = app_karate_button_back(container, function lambda6() {});
     function lambda7(verse_numbers, chapter_code) {
       let book_code = ebible_chapter_code_to_book(chapter_code);
       let e = ebible_book_exists(books, book_code);
