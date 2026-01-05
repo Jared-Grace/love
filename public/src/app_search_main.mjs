@@ -1,3 +1,4 @@
+import { object_adder_duplicates } from "../../../love/public/src/object_adder_duplicates.mjs";
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
@@ -54,6 +55,7 @@ export async function app_search_main(context) {
     ["engwyc2018", "engwebu"],
     lambda3,
   );
+  let result = object_adder_duplicates(function lambda9(oad) {});
   let books = await ebible_version_books("engwebu");
   let component = html_button(root, "Search", lambda2);
   async function lambda2() {
