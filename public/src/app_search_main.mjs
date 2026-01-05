@@ -1,3 +1,4 @@
+import { html_button } from "../../../love/public/src/html_button.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { html_input_text } from "../../../karate_code/public/src/html_input_text.mjs";
@@ -24,4 +25,5 @@ export function app_search_main(context) {
   let input = html_input_text(root, search_instructions);
   html_width_full(input);
   html_focus(input);
+  let component = html_button(parent, text, function lambda2() {});
 }
