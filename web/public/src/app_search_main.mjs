@@ -24,7 +24,6 @@ import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs"
 export async function app_search_main(context) {
   let root = html_mobile_default(context);
   firebase_name_jg();
-  let books = await ebible_version_books(version_english);
   let languages = ebible_languages();
   let languages_chosen = [];
   let languages_chosen_default = list_slice_count(languages, 1, 1);
@@ -56,5 +55,6 @@ export async function app_search_main(context) {
       verse_numbers,
     );
   }
+  let books = await ebible_version_books("engbsb");
   let component = html_button(root, "Search", lambda2);
 }
