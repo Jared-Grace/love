@@ -1,5 +1,4 @@
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
-import { list_size } from "../../../love/public/src/list_size.mjs";
 import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
@@ -15,8 +14,6 @@ export async function ebible_versions_english_downloadable_words_search_upload()
   let result = await ebible_versions_english_downloadable_words_lookup_cache();
   let v2 = object_to_list(result);
   let cs = list_chunk(v2, 20);
-  let size = list_size(cs);
-  return size;
   async function lambda2(c) {
     async function lambda4({ value, key }) {
       let destination = app_bible_search_word_path(key);
