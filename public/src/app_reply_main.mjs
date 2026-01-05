@@ -109,11 +109,11 @@ export async function app_reply_main(context) {
       let verse_range = await ebible_references_parse_lines([en], [reference]);
       async function lambda5(l) {
         async function lambda8(verse) {
+          let copy2 = list_copy(english_choices);
           let bible_folder = object_property_get(l, "bible_folder");
           let right = ebible_folder_english();
           if (0 && equal(bible_folder, right)) {
-            let copy2 = list_copy(original);
-            let r = list_shuffle(english_choices);
+            let r = list_shuffle(copy2);
             bible_folder = r;
             log({
               bible_folder,
