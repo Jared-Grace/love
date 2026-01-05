@@ -1,3 +1,4 @@
+import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_adder_async } from "../../../love/public/src/object_adder_async.mjs";
@@ -38,6 +39,7 @@ export async function sandbox() {
         function lambda4(verse) {
           let text = object_property_get(verse, "text");
           let replaced = string_only_or_space(text, symbols_allowed);
+          let n = whitespace_normalize(str);
         }
         each(verses, lambda4);
       }
