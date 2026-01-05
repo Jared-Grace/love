@@ -17,7 +17,10 @@ export async function app_a_download() {
       key: path,
       compressed,
     };
-    let to2 = object_merge(to, from);
+    object_merge(v, {
+      key: path,
+      compressed,
+    });
     return v;
   }
   let files = await list_map_unordered_async(filtered, lambda2);
