@@ -12,7 +12,7 @@ export function list_intersect_multiple(list, other) {
   let remaining = object_property_get(fr, "remaining");
   let first = object_property_get(fr, "first");
   function lambda3(item) {}
-  let mapped = list_map(list2, lambda3);
+  let uniques = list_map(remaining, list_unique_set);
   let set = list_unique_set(other);
   function lambda2(la) {
     function lambda(l) {
