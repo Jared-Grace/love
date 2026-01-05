@@ -1,3 +1,4 @@
+import { app_bible_search_word_path } from "../../../love/public/src/app_bible_search_word_path.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
@@ -29,6 +30,7 @@ export function app_search_main(context) {
   html_width_full(input);
   html_focus(input);
   async function lambda2() {
+    let destination = app_bible_search_word_path(word);
     let o = await firebase_storage_download_json(destination);
   }
   let component = html_button(parent, "Search", lambda2);
