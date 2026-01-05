@@ -28,7 +28,7 @@ export async function sandbox() {
   let symbols_split_non =
     "01½¼23¾4556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZΑΩ";
   let s = null;
-  let v = list_to(a);
+  let v = list_to(s);
   let replaced = string_replace(s, from, to);
   return unique;
 }
