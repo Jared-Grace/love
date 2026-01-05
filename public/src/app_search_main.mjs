@@ -56,13 +56,13 @@ export async function app_search_main(context) {
     ["engwyc2018", "engwebu"],
     ebible_version_books,
   );
-  let squashed = list_squash(list);
+  let squashed = list_squash(waited);
   function lambda9(oad) {
     function lambda10(i) {
       let book_code = object_property_get(i, "book_code");
       oad(book_code, i);
     }
-    each(waited, lambda10);
+    each(squashed, lambda10);
   }
   let result = object_adder_duplicates(lambda9);
   let books = object_values(result);
