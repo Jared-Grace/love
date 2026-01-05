@@ -1,3 +1,4 @@
+import { list_pop } from "../../../love/public/src/list_pop.mjs";
 import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { app_reply_languages_chosen_reset } from "../../../love/public/src/app_reply_languages_chosen_reset.mjs";
 import { app_reply_buttons_languages } from "../../../love/public/src/app_reply_buttons_languages.mjs";
@@ -110,10 +111,11 @@ export async function app_reply_main(context) {
       async function lambda5(l) {
         async function lambda8(verse) {
           let copy2 = list_copy(english_choices);
+          list_shuffle(copy2);
           let bible_folder = object_property_get(l, "bible_folder");
           let right = ebible_folder_english();
-          if (0 && equal(bible_folder, right)) {
-            let r = list_shuffle(copy2);
+          if (equal(bible_folder, right)) {
+            let popped = list_pop(list);
             bible_folder = r;
             log({
               bible_folder,
