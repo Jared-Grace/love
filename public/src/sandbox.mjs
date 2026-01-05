@@ -21,6 +21,9 @@ export async function sandbox() {
     ʋ: "v",
     Α: "A",
     Ω: "O",
+    "½": "1/2",
+    "¼": "1/4",
+    "¾": "3/4",
   };
   let symbols_split_non =
     "01½¼23¾4556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZΑΩ";
