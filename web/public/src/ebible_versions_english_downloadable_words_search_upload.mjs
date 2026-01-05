@@ -25,7 +25,11 @@ export async function ebible_versions_english_downloadable_words_search_upload()
     await firebase_upload_object_compressed(destination, m);
   }
   function lambda3(value, word) {
-    list_chunk(list, chunk_size);
+    return {
+      value,
+      word,
+    };
   }
   let result2 = object_values_map(object, lambda2);
+  list_chunk(list, chunk_size);
 }
