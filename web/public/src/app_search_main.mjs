@@ -10,7 +10,6 @@ import { object_properties_from_empty } from "../../../love/public/src/object_pr
 import { list_intersect_multiple } from "../../../love/public/src/list_intersect_multiple.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { json_decompress_object } from "../../../love/public/src/json_decompress_object.mjs";
@@ -64,8 +63,7 @@ export async function app_search_main(context) {
     each(waited, lambda10);
   }
   let result = object_adder_duplicates(lambda9);
-  let v = object_values(o2);
-  let books = await ebible_version_books("engwebu");
+  let books = object_values(result);
   let component = html_button(root, "Search", lambda2);
   async function lambda2() {
     let value = html_value_get(input);
