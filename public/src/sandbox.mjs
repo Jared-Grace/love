@@ -54,8 +54,10 @@ export async function sandbox() {
           function lambda3(c) {
             let exists = object_property_exists(normalize, c);
             if (exists) {
-              let value = object_property_get(object, property_name);
+              let value = object_property_get(normalize, c);
+              return value;
             }
+            return c;
           }
           let joined2 = string_transform(lower, lambda3);
           let word = object_property_initialize_empty(result, lower);
