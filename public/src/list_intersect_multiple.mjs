@@ -15,7 +15,7 @@ export function list_intersect_multiple(list) {
   let remaining = object_property_get(fr, "remaining");
   let e = null_is(remaining);
   if (e) {
-    let copy = list_copy(e);
+    let copy = list_copy(remaining);
     return copy;
   }
   let first = object_property_get(fr, "first");
