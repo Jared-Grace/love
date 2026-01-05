@@ -32,9 +32,12 @@ export async function sandbox() {
   let s = null;
   let l = list_to(s);
   function lambda(item) {
-    let i = string_includes(input, part);
-    if (false) {
+    let i = string_includes(symbols_split_non, item);
+    if (i) {
+      return item;
     }
+    let v = " ";
+    return v;
   }
   let mapped = list_map(l, lambda);
   let replaced = string_replace(s, from, to);
