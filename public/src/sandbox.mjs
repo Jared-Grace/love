@@ -11,6 +11,7 @@ export async function sandbox() {
     await ebible_verses_upload(bible_folder);
   }
   await each_async(english_choices, lambda);
+  return;
   marker("1");
   let r = range(10);
   let chunks = list_chunk(r, 3);
