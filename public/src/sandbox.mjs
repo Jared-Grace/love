@@ -1,5 +1,5 @@
+import { object_property_initialize_empty } from "../../../love/public/src/object_property_initialize_empty.mjs";
 import { object_property_initialize_list } from "../../../love/public/src/object_property_initialize_list.mjs";
-import { object_property_initialize } from "../../../love/public/src/object_property_initialize.mjs";
 import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -46,7 +46,7 @@ export async function sandbox() {
         let split = string_split_space(n);
         function lambda5(s) {
           oad(key, value);
-          let chapter = object_property_initialize(result, chapter_code, {});
+          let chapter = object_property_initialize_empty(result, chapter_code);
           let v = object_property_initialize_list(chapter, verse_number);
         }
         each(split, lambda5);
