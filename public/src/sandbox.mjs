@@ -1,3 +1,4 @@
+import { string_includes } from "../../../love/public/src/string_includes.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_to } from "../../../love/public/src/list_to.mjs";
 import { string_replace } from "../../../love/public/src/string_replace.mjs";
@@ -30,7 +31,8 @@ export async function sandbox() {
     "01½¼23¾4556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZΑΩ";
   let s = null;
   let l = list_to(s);
-  function lambda(item) {sin
+  function lambda(item) {
+    let i = string_includes(input, part);
     if (false) {
     }
   }
