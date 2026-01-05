@@ -63,11 +63,9 @@ export async function app_search_main(context) {
       return to;
     }
     each(mapped, lambda4);
-    let dictionary = list_to_dictionary(
-      list2,
-      function lambda5(item2v) {},
-      function lambda6(item2k) {},
-    );
+    function lambda5(item2v) {}
+    function lambda6(item2k) {}
+    let dictionary = list_to_dictionary(list2, lambda5, lambda6);
     html_clear(root);
     function lambda3(item) {}
     let mapped2 = list_map(list, lambda3);
