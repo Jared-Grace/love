@@ -25,10 +25,11 @@ export async function ebible_versions_english_downloadable_words_search_upload()
     await firebase_upload_object_compressed(destination, m);
   }
   function lambda3(value, word) {
-    return {
+    let v = {
       value,
       word,
     };
+    return v;
   }
   let result2 = object_values_map(object, lambda2);
   list_chunk(list, chunk_size);
