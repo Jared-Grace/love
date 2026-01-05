@@ -36,6 +36,7 @@ export async function sandbox() {
   };
   let s = null;
   const bible_folders = await ebible_versions_english_downloadable_cache();
+  bible_folders = ["engbsb"];
   let result = {};
   async function lambda2(bible_folder) {
     async function lambda(chapter_code, verses) {
