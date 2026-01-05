@@ -1,3 +1,4 @@
+import { exit } from "../../../love/public/src/exit.mjs";
 import { app_bible_search_word_path } from "../../../love/public/src/app_bible_search_word_path.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { firebase_upload_object_compressed } from "../../../love/public/src/firebase_upload_object_compressed.mjs";
@@ -8,10 +9,12 @@ export async function ebible_versions_english_downloadable_words_search_upload()
   marker("1");
   let result = await ebible_versions_english_downloadable_words_lookup_cache();
   async function lambda3(value, word) {
+    let destination = app_bible_search_word_path(word);
     log({
       word,
+      value,
     });
-    let destination = app_bible_search_word_path(word);
+    exit();
     await firebase_upload_object_compressed(destination, value);
   }
   await each_object_async(result, lambda3);
