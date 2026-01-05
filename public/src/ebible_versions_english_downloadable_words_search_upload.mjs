@@ -20,6 +20,7 @@ export async function ebible_versions_english_downloadable_words_search_upload()
       let v4 = get(i);
       let value = object_property_get(v4, "value");
       let destination = object_property_get(v4, "destination");
+      return;
       await firebase_upload_object_compressed(destination, value);
     }
     await each_unordered_async(c, lambda4);
@@ -32,7 +33,7 @@ export async function ebible_versions_english_downloadable_words_search_upload()
       let properties = object_properties(verses_obj);
       return properties;
     }
-    let m = object_values_map(v, lambda);
+    let value = object_values_map(v, lambda);
     let v3 = {
       destination,
       value,
