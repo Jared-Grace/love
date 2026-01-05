@@ -2,7 +2,6 @@ import { string_split_space } from "../../../love/public/src/string_split_space.
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { object_adder_async } from "../../../love/public/src/object_adder_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_chapters_each_verses_check_with } from "../../../love/public/src/ebible_chapters_each_verses_check_with.mjs";
 import { ebible_versions_english_downloadable_cache } from "../../../love/public/src/ebible_versions_english_downloadable_cache.mjs";
@@ -34,25 +33,23 @@ export async function sandbox() {
   };
   let s = null;
   const bible_folders = await ebible_versions_english_downloadable_cache();
-  async function lambda3(oad) {
-    async function lambda2(bible_folder) {
-      async function lambda(chapter_code, verses) {
-        function lambda4(verse) {
-          let text = object_property_get(verse, "text");
-          let replaced = string_only_or_space(text, symbols_allowed);
-          let n = whitespace_normalize(replaced);
-          let split = string_split_space(n);
-          function lambda5(s) {
-            oad(key, value);
-          }
-          each(split, lambda5);
+  let result = {};
+  async function lambda2(bible_folder) {
+    async function lambda(chapter_code, verses) {
+      function lambda4(verse) {
+        let text = object_property_get(verse, "text");
+        let replaced = string_only_or_space(text, symbols_allowed);
+        let n = whitespace_normalize(replaced);
+        let split = string_split_space(n);
+        function lambda5(s) {
+          oad(key, value);
         }
-        each(verses, lambda4);
+        each(split, lambda5);
       }
-      await ebible_chapters_each_verses_check_with(bible_folder, lambda);
+      each(verses, lambda4);
     }
-    await each_async(bible_folders, lambda2);
+    await ebible_chapters_each_verses_check_with(bible_folder, lambda);
   }
-  let result = await object_adder_async(lambda3);
+  await each_async(bible_folders, lambda2);
   return joined;
 }
