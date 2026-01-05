@@ -31,6 +31,6 @@ export async function ebible_versions_english_downloadable_words_search_upload()
     };
     return v;
   }
-  let result2 = object_values_map(object, lambda2);
-  list_chunk(list, chunk_size);
+  let result2 = object_values_map(object, lambda3);
+  let cs = list_chunk(result2, 20);
 }
