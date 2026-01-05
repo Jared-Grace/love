@@ -69,7 +69,7 @@ export async function app_search_main(context) {
     let result = object_adder_duplicates(lambda9);
     let books = object_values(result);
   }
-  let books3 = await ebible_version_books(bible_folder);
+  let books = await ebible_version_books("engbsb");
   let component = html_button(root, "Search", lambda2);
   async function lambda2() {
     let value = html_value_get(input);
