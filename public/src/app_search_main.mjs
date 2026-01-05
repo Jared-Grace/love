@@ -1,4 +1,4 @@
-import { marker } from "../../../love/public/src/marker.mjs";
+import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 export function app_search_main() {
-  marker("1");
+  let languages = ebible_languages();
 }
