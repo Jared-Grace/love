@@ -23,5 +23,5 @@ export function app_search_main(context) {
   let p2 = html_p_text(root, "2. " + search_instructions);
   let input = html_input_text(root, search_instructions);
   html_width_full(input);
-  html_focus(input2);
+  html_focus(input);
 }
