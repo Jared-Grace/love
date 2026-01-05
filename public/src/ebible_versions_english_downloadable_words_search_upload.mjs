@@ -1,4 +1,4 @@
-import { object_values } from "../../../love/public/src/object_values.mjs";
+import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -13,15 +13,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_downloadable_words_search_upload() {
   marker("1");
   let result = await ebible_versions_english_downloadable_words_lookup_cache();
-  function lambda3(value, key) {
-    let v = {
-      value,
-      key,
-    };
-    return v;
-  }
-  let result2 = object_values_map(result, lambda3);
-  let v2 = object_values(result2);
+  let v2 = object_to_list(result);
   let cs = list_chunk(v2, 20);
   let size = list_size(cs);
   return size;
