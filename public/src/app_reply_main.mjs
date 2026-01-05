@@ -2,7 +2,6 @@ import { app_reply_languages_chosen_reset } from "../../../love/public/src/app_r
 import { app_reply_buttons_languages } from "../../../love/public/src/app_reply_buttons_languages.mjs";
 import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_languages_prompt.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { ebible_versions_english_choices } from "../../../love/public/src/ebible_versions_english_choices.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -112,7 +111,7 @@ export async function app_reply_main(context) {
           let bible_folder = object_property_get(l, "bible_folder");
           let right = ebible_folder_english();
           if (0 && equal(bible_folder, right)) {
-            let r = list_random_item(english_choices);
+            let r = list_shuffle(english_choices);
             bible_folder = r;
             log({
               bible_folder,
