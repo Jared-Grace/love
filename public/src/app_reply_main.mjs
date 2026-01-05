@@ -110,7 +110,7 @@ export async function app_reply_main(context) {
       async function lambda5(l) {
         let bible_folder = object_property_get(l, "bible_folder");
         let right = ebible_folder_english();
-        if (equal(bible_folder, right)) {
+        if (0 && equal(bible_folder, right)) {
           let r = list_random_item(english_choices);
           bible_folder = r;
           log({
