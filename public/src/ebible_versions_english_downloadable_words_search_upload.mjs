@@ -9,7 +9,8 @@ import { each_object_async } from "../../../love/public/src/each_object_async.mj
 export async function ebible_versions_english_downloadable_words_search_upload() {
   marker("1");
   let result = await ebible_versions_english_downloadable_words_lookup_cache();
-  let properties = object_properties(obj);
+  let properties = object_properties(result);
+  return properties;
   async function lambda3(value, word) {
     log({
       value,
