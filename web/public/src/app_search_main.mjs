@@ -52,7 +52,6 @@ export async function app_search_main(context) {
       return o;
     }
     let mapped = await list_map_unordered_async(words, lambda);
-    let properties = object_properties(obj);
     let keys = list_map(list2, object_properties);
     html_clear(root);
     function lambda3(item) {}
