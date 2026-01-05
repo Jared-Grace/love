@@ -104,8 +104,7 @@ export async function app_search_main(context) {
       dictionary,
     });
     html_clear(root);
-    function lambda6() {}
-    let button = app_karate_button_back(container, lambda6);
+    let button = app_karate_button_back(root, function lambda6() {});
     function lambda7(verse_numbers, chapter_code) {
       let book_code = ebible_chapter_code_to_book(chapter_code);
       let e = ebible_book_exists(books, book_code);
