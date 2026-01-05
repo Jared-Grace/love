@@ -1,3 +1,4 @@
+import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { string_includes } from "../../../love/public/src/string_includes.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_to } from "../../../love/public/src/list_to.mjs";
@@ -40,6 +41,7 @@ export async function sandbox() {
     return v;
   }
   let mapped = list_map(l, lambda);
+  let joined = list_join_empty(list);
   let replaced = string_replace(s, from, to);
   return unique;
 }
