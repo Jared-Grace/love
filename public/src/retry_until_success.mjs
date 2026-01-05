@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function retry_until_success(lambda) {
   marker("1");
@@ -9,6 +10,8 @@ export async function retry_until_success(lambda) {
       break;
     } catch (e) {}
     i++;
+    if (equal(left, right)) {
+    }
   }
   return r;
 }
