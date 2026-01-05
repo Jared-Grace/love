@@ -33,7 +33,8 @@ export function app_search_main(context) {
   html_focus(input);
   async function lambda2() {
     let value = html_value_get(input);
-    let words = string_to_words(text);
+    let words = string_to_words(value);
+    eau;
     let destination = app_bible_search_word_path(word);
     let o = await firebase_storage_download_json(destination);
   }
