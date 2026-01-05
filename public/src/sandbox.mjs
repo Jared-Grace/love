@@ -50,8 +50,11 @@ export async function sandbox() {
         let split = string_split_space(n);
         function lambda5(s) {
           let lower = string_lower_to(s);
-          function lambda3(c) {}
-          let joined2 = string_transform(s2, lambda3);
+          function lambda3(c) {
+            if (false) {
+            }
+          }
+          let joined2 = string_transform(lower, lambda3);
           let word = object_property_initialize_empty(result, lower);
           let chapter = object_property_initialize_empty(word, chapter_code);
           let versions = object_property_initialize_list(chapter, verse_number);
