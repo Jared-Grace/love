@@ -7,4 +7,5 @@ export function html_mobile_default(context) {
   html_style_font_size(root, "20px");
   html_meta_viewport();
   html_font_sans_serif_set_html();
+  return root;
 }
