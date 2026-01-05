@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { list_intersect_multiple } from "../../../love/public/src/list_intersect_multiple.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -55,8 +56,7 @@ export async function app_search_main(context) {
     let mapped = await list_map_unordered_async(words, lambda);
     let keys = list_map(mapped, object_properties);
     let chapter_codes_match = list_intersect_multiple(keys);
-    function lambda4(item2) {}
-    let mapped3 = list_map(mapped, lambda4);
+    each(list2, function lambda4(item2) {});
     html_clear(root);
     function lambda3(item) {}
     let mapped2 = list_map(list, lambda3);
