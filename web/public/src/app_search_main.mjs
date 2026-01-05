@@ -1,3 +1,4 @@
+import { list_to_dictionary } from "../../../love/public/src/list_to_dictionary.mjs";
 import { object_properties_from_empty } from "../../../love/public/src/object_properties_from_empty.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_intersect_multiple } from "../../../love/public/src/list_intersect_multiple.mjs";
@@ -62,6 +63,11 @@ export async function app_search_main(context) {
       return to;
     }
     each(mapped, lambda4);
+    let dictionary = list_to_dictionary(
+      list2,
+      function lambda5(item2v) {},
+      function lambda6(item2k) {},
+    );
     html_clear(root);
     function lambda3(item) {}
     let mapped2 = list_map(list, lambda3);
