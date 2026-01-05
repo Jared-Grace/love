@@ -37,7 +37,7 @@ export async function sandbox() {
       async function lambda(chapter_code, verses) {
         function lambda4(verse) {
           let text = object_property_get(verse, "text");
-          let joined = string_only_or_space(text, symbols_allowed);
+          let replaced = string_only_or_space(text, symbols_allowed);
         }
         each(verses, lambda4);
       }
