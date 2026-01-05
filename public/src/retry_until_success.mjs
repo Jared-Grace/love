@@ -1,13 +1,12 @@
-import { not } from "../../../love/public/src/not.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function retry_until_success(lambda) {
   marker("1");
   let r = null;
-  let success = false;
-  while (not(success)) {
+  while (true) {
     try {
+      r = await lambda();
+      break;
     } catch (e) {}
-    r = await lambda();
   }
   return r;
 }
