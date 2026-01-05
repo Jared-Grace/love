@@ -124,7 +124,7 @@ export async function app_reply_main(context) {
             lambda11 = retry_until_success;
           }
           async function lambda() {
-            if (equal(bible_folder, right)) {
+            if (equal(bible_folder, right)) {$ien
               bible_folder = list_pop(choices);
             }
             let d = await ebible_verse(
