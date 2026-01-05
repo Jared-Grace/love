@@ -125,7 +125,8 @@ export async function app_reply_main(context) {
           if (equal(bible_folder, right)) {
             bible_folder = list_pop(copy2);
           }
-          lambda11(() => {});
+          function lambda() {}
+          lambda11(lambda);
           let d = await ebible_verse(bible_folder, chapter_code, verse_number);
           return d;
         }
