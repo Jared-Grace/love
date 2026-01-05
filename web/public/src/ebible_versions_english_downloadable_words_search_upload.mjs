@@ -13,7 +13,8 @@ export async function ebible_versions_english_downloadable_words_search_upload()
   async function lambda3(value, word) {
     let destination = app_bible_search_word_path(word);
     function lambda(verses_obj, chapter_code) {
-      let properties = object_properties(obj);
+      let properties = object_properties(verses_obj);
+      return properties;
     }
     let result2 = object_values_map(value, lambda);
     log({
