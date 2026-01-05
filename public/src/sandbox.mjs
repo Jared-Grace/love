@@ -39,6 +39,7 @@ export async function sandbox() {
     async function lambda(chapter_code, verses) {
       function lambda4(verse) {
         let text = object_property_get(verse, "text");
+        let verse_number = object_property_get(verse, "verse_number");
         let replaced = string_only_or_space(text, symbols_allowed);
         let n = whitespace_normalize(replaced);
         let split = string_split_space(n);
@@ -46,7 +47,7 @@ export async function sandbox() {
           oad(key, value);
           let chapter = object_property_initialize(result, chapter_code, {});
           let value2 = object_property_initialize(
-            object,
+            chapter,
             property_name,
             value_initial,
           );
