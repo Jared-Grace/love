@@ -66,9 +66,11 @@ export async function app_search_main(context) {
     function lambda5(chapter_code) {
       function lambda6(m) {
         let verses = object_property_get(m, chapter_code);
-        let properties = object_properties(obj);
+        let properties = object_properties(verses);
+        return properties;
       }
       let mapped3 = list_map(mapped, lambda6);
+      let i = list_intersect_multiple(list2);
     }
     let dictionary = list_to_dictionary_value(chapter_codes_match, lambda5);
     html_clear(root);
