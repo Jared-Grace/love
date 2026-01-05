@@ -1,7 +1,7 @@
+import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_not_includes.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_chapters_each_verses_check_with } from "../../../love/public/src/ebible_chapters_each_verses_check_with.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { list_add } from "../../../love/public/src/list_add.mjs";
 import { object_property_initialize_list } from "../../../love/public/src/object_property_initialize_list.mjs";
 import { object_property_initialize_empty } from "../../../love/public/src/object_property_initialize_empty.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
@@ -60,7 +60,7 @@ export async function ebible_versions_english_downloadable_words_lookup() {
               chapter,
               verse_number,
             );
-            list_add(versions, bible_folder);
+            list_add_if_not_includes(versions, bible_folder);
           }
         }
         each(split, lambda5);
