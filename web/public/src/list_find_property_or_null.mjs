@@ -1,3 +1,4 @@
+import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -14,5 +15,6 @@ export function list_find_property_or_null(
   if (e) {
     return item;
   }
+  let only = list_single(list2);
   return item;
 }
