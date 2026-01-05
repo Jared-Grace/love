@@ -29,5 +29,8 @@ export function list_intersect_multiple(list) {
   }
   let i = list_adder(lambda2);
   return i;
-  let e = list_empty_is(list2);
+  let e = list_empty_is(remaining);
+  if (false) {
+    return;
+  }
 }
