@@ -49,7 +49,7 @@ export async function sandbox() {
           let value2 = object_property_initialize(
             chapter,
             property_name,
-            value_initial,
+            verse_number,
           );
         }
         each(split, lambda5);
