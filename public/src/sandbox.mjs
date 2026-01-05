@@ -3,5 +3,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   marker("1");
   let unique = await ebible_versions_english_downloadable_symbols_unique();
+  let symbols_all =
+    "1½¼23¾45   56789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZʼΑΩ";
   return unique;
 }
