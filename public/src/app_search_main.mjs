@@ -55,7 +55,8 @@ export async function app_search_main(context) {
     ["engwyc2018", "engwebu"],
     lambda3,
   );
-  let result = object_adder_duplicates(function lambda9(oad) {});
+  function lambda9(oad) {}
+  let result = object_adder_duplicates(lambda9);
   let books = await ebible_version_books("engwebu");
   let component = html_button(root, "Search", lambda2);
   async function lambda2() {
