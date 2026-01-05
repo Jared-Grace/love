@@ -13,6 +13,5 @@ export async function file_overwrite_json(file_path, object) {
     const out = fs.createWriteStream(file_path);
     let json = streamJsonStringify(object);
     await pipeline(json, out);
-    console.log("JSON write complete");
   }
 }
