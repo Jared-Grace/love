@@ -12,5 +12,6 @@ export function string_transform_lookup(s, lookup) {
     }
     return c;
   }
-  let joined2 = string_transform(s, lambda3);
+  let t = string_transform(s, lambda3);
+  return t;
 }
