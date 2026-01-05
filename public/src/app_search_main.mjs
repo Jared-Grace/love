@@ -89,6 +89,7 @@ export async function app_search_main(context) {
           books,
           verse_numbers,
         );
+        let p3 = html_p_text(root2, text);
       }
       each(properties2, lambda8);
     }
