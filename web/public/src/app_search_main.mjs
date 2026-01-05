@@ -1,11 +1,11 @@
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { app_reply_languages_chosen_reset } from "../../../love/public/src/app_reply_languages_chosen_reset.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { app_reply_buttons_languages } from "../../../love/public/src/app_reply_buttons_languages.mjs";
 import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_languages_prompt.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 export function app_search_main(context) {
-  let root = object_property_get(context, "root");
+  let root = html_mobile_default(context);
   let languages = ebible_languages();
   let languages_chosen = [];
   let p = app_reply_languages_prompt(root);
