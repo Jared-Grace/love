@@ -1,3 +1,4 @@
+import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { string_transform_lookup } from "../../../love/public/src/string_transform_lookup.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -51,12 +52,16 @@ export async function sandbox() {
         function lambda5(s) {
           let lower = string_lower_to(s);
           word_add(lower);
-          t=string_transform_lookup(lower, normalize);$ine
-
+          let t = string_transform_lookup(lower, normalize);
+          if (equal_not(left, right)) {
+          }
           function word_add(lower) {
             let word = object_property_initialize_empty(result, lower);
             let chapter = object_property_initialize_empty(word, chapter_code);
-            let versions = object_property_initialize_list(chapter, verse_number);
+            let versions = object_property_initialize_list(
+              chapter,
+              verse_number,
+            );
             list_add(versions, bible_folder);
           }
         }
