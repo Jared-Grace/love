@@ -1,3 +1,4 @@
+import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { json_decompress_object } from "../../../love/public/src/json_decompress_object.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
@@ -47,6 +48,11 @@ export function app_search_main(context) {
     }
     let mapped = await list_map_unordered_async(words, lambda);
     html_clear(root);
+    let reference = ebible_parts_chapter_code_to_reference(
+      chapter_code,
+      books,
+      verse_numbers,
+    );
   }
   let component = html_button(root, "Search", lambda2);
 }
