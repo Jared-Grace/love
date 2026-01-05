@@ -28,7 +28,8 @@ export async function ebible_languages_chapters() {
     await each_async(languages, lambda2);
     let i = await bible_interlinear_verses_cache();
     la(i);
-    await each_async(list, async function lambda3(item) {});
+    async function lambda3(item) {}
+    await each_async(list, lambda3);
   }
   let all = await list_adder_async(lambda);
   return all;
