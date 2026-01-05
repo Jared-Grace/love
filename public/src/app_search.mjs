@@ -1,4 +1,4 @@
 import { marker } from "../../../love/public/src/marker.mjs";
-export function app_search() {
-  marker("1");
+export async function app_search() {
+  await app_main_production("app_search_main", "jared-grace");
 }
