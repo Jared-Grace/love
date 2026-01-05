@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
@@ -15,6 +16,7 @@ export function list_intersect_multiple(list, other) {
   let set = list_unique_set(other);
   function lambda2(la) {
     function lambda(l) {
+      list_add(list2, item);
       if (set_includes(set, l)) {
         la(l);
       }
