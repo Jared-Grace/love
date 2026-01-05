@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -81,7 +82,8 @@ export async function app_search_main(context) {
     });
     html_clear(root);
     function lambda7(chapter, chapter_code) {
-      let properties2 = object_properties(obj);
+      let properties2 = object_properties(chapter);
+      each(list2, function lambda8(item) {});
     }
     each_object(dictionary, lambda7);
     let mapped2 = list_map(list, lambda3);
