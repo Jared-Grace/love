@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
 import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
@@ -39,6 +40,9 @@ export function app_search_main(context) {
       let destination = app_bible_search_word_path(word);
       let c = await firebase_storage_download_json(destination);
       let o = await json_decompress_object(c);
+      log({
+        o,
+      });
     }
     await each_unordered_async(words, lambda);
   }
