@@ -1,3 +1,4 @@
+import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_languages_prompt.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
@@ -50,10 +51,7 @@ export async function app_reply_main(context) {
   let responses_buttons = [];
   let typed = null;
   typed_reset();
-  let p = html_p_text(
-    root,
-    "1. What language or languages you want the Bible verses to be translated into?",
-  );
+  let p = app_reply_languages_prompt(root);
   function languages_chosen_reset() {
     list_empty(languages_chosen);
     function lambda14(l) {
@@ -61,26 +59,23 @@ export async function app_reply_main(context) {
     }
     each(languages_chosen_default, lambda14);
   }
-  middle();
+  async function love() {
+    let languages_chosen_before = languages_chosen;
+    languages_chosen = [];
+    languages_chosen_reset();
+    function lambda13(language) {
+      list_add(languages_chosen, language);
+    }
+    await app_reply_love(languages, lambda13);
+    await update(3);
+    languages_chosen = languages_chosen_before;
+  }
+  let component4 = html_button(root, "❤️", love);
   function lambda(language) {
     let name = object_property_get(language, "name");
     let component = app_reply_button(languages_chosen, language, root, name);
   }
   each(languages, lambda);
-  function middle() {
-    async function love() {
-      let languages_chosen_before = languages_chosen;
-      languages_chosen = [];
-      languages_chosen_reset();
-      function lambda13(language) {
-        list_add(languages_chosen, language);
-      }
-      await app_reply_love(languages, lambda13);
-      await update(3);
-      languages_chosen = languages_chosen_before;
-    }
-    let component4 = html_button(root, "❤️", love);
-  }
   html_p_text(
     root,
     "2. How many Bible passages do you want? This will reset any responses below. You may need to choose 'Copy' button.",
