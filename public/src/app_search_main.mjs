@@ -25,5 +25,6 @@ export function app_search_main(context) {
   let input = html_input_text(root, search_instructions);
   html_width_full(input);
   html_focus(input);
-  let component = html_button(parent, text, function lambda2() {});
+  function lambda2() {}
+  let component = html_button(parent, text, lambda2);
 }
