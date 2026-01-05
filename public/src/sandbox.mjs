@@ -1,3 +1,4 @@
+import { string_replace } from "../../../love/public/src/string_replace.mjs";
 import { ebible_versions_english_downloadable_symbols_unique } from "../../../love/public/src/ebible_versions_english_downloadable_symbols_unique.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
@@ -25,5 +26,6 @@ export async function sandbox() {
   };
   let symbols_split_non =
     "01½¼23¾4556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZΑΩ";
+  let replaced = string_replace(s, from, to);
   return unique;
 }
