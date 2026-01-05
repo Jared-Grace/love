@@ -10,7 +10,7 @@ import { list_adder } from "../../../love/public/src/list_adder.mjs";
 export function list_intersect_multiple(list) {
   marker("1");
   let fr = list_first_remaining(list);
-  let remaining = object_property_get(fr, "remaining");
+  let remaining = object_property_get(fr, "remaining");lei
   let first = object_property_get(fr, "first");
   let uniques = list_map(remaining, list_unique_set);
   function lambda2(la) {
