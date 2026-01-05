@@ -8,7 +8,6 @@ import { app_reply_choices } from "../../../love/public/src/app_reply_choices.mj
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 export async function app_reply_initialize(context) {
-  let root = object_property_get(context, "root");
   html_mobile_default(context);
   firebase_name_jg();
   let choices = app_reply_choices();
@@ -17,6 +16,7 @@ export async function app_reply_initialize(context) {
   let en = ebible_folder_english();
   let original = bible_interlinear_verses_upload_folder();
   let books = await ebible_version_books(en);
+  let root = object_property_get(context, "root");
   let r = {
     encouragement,
     en,
