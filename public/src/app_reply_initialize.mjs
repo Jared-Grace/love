@@ -1,19 +1,15 @@
+import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { bible_verses_uplifting } from "../../../love/public/src/bible_verses_uplifting.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { app_reply_choices } from "../../../love/public/src/app_reply_choices.mjs";
-import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
-import { html_font_sans_serif_set_html } from "../../../love/public/src/html_font_sans_serif_set_html.mjs";
-import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
 export async function app_reply_initialize(context) {
   let root = object_property_get(context, "root");
-  html_style_font_size(root, "20px");
-  html_meta_viewport();
-  html_font_sans_serif_set_html();
+  html_mobile_default(root);
   firebase_name_jg();
   let choices = app_reply_choices();
   let languages = ebible_languages();
