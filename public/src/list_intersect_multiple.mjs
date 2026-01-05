@@ -1,4 +1,4 @@
-import { list_concat } from "../../../love/public/src/list_concat.mjs";
+import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -34,5 +34,5 @@ export function list_intersect_multiple(list) {
   }
   let i = list_adder(lambda2);
   return i;
-  let concated = list_concat(a2, b);
+  let copy = list_copy(original);
 }
