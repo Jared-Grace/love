@@ -16,7 +16,8 @@ export function list_intersect_multiple(list, other) {
   let set = list_unique_set(other);
   function lambda2(la) {
     function lambda(l) {
-      let a = list_all(list2, function lambda3(item) {});
+      function lambda3(item) {}
+      let a = list_all(list2, lambda3);
       if (set_includes(set, l)) {
         la(l);
       }
