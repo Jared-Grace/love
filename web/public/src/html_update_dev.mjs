@@ -18,7 +18,7 @@ export async function html_update_dev(name) {
   marker("1");
   let file_path = html_name_to_path_dev(name);
   let a_name = app_name_prefixed(name);
-  let joined = await function_name_repo_path_combine(a_name, file_path);
+  let path = await function_name_repo_path_combine(a_name, file_path);
   const name_prefixed = app_name_main(name);
   let call = js_code_call_app_context_initialize(name_prefixed);
   let code = function_code_import_dev(name_prefixed);
@@ -32,6 +32,6 @@ export async function html_update_dev(name) {
   });
   let scripts = object_property_get(v, "scripts");
   let joined2 = list_add_join_newline(scripts, body);
-  await html_overwrite(name, joined, joined2);
-  await file_open(joined);
+  await html_overwrite(name, path, joined2);
+  await file_open(path);
 }
