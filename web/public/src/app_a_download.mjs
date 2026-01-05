@@ -13,13 +13,13 @@ export async function app_a_download() {
       versions: [contents],
     };
     let compressed = await json_compress(data);
-    let v = {
+    let c = {
       compressed,
     };
-    object_merge(v, {
+    object_merge(c, {
       key: path,
     });
-    return v;
+    return c;
   }
   let files = await list_map_unordered_async(filtered, lambda2);
   return files;
