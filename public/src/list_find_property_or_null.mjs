@@ -13,7 +13,8 @@ export function list_find_property_or_null(
   let filtered = list_filter(list, filter);
   let e = list_empty_is(filtered);
   if (e) {
-    return filtered;
+    let v = null;
+    return v;
   }
   let only = list_single(filtered);
   return only;
