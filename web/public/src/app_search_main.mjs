@@ -47,7 +47,8 @@ export async function app_search_main(context) {
   html_value_set(input, "glory");
   html_width_full(input);
   html_focus(input);
-  let books = await ebible_version_books("engbsb");
+  ("include apocrypha");
+  let books = await ebible_version_books("engwebu");
   let component = html_button(root, "Search", lambda2);
   async function lambda2() {
     let value = html_value_get(input);
