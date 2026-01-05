@@ -5,11 +5,12 @@ import { string_only_or_space } from "../../../love/public/src/string_only_or_sp
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   marker("1");
-  const versions = await ebible_versions_english_downloadable_cache();
-  async function lambda2(item) {}
-  await each_async(list, lambda2);
-  async function lambda(chapter_code, verses) {}
-  await ebible_chapters_each_verses_check_with(bible_folder, lambda);
+  const bible_folders = await ebible_versions_english_downloadable_cache();
+  async function lambda2(bible_folder) {
+    async function lambda(chapter_code, verses) {}
+    await ebible_chapters_each_verses_check_with(bible_folder, lambda);
+  }
+  await each_async(bible_folders, lambda2);
   let symbols_all =
     "._​ּׁׂ -–—,;:!?…·'‘’\"“”()[]{}¶*/&#%•`°+=|⌃⌞⌟►◄$01½¼23¾456789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZʼΑΩאבגדהוזחטיכלמנסעפצקרשת";
   let normalize = {
