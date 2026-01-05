@@ -6,5 +6,6 @@ export async function retry_until_success(lambda) {
   let success = false;
   while (not(success)) {
     r = await lambda();
-  }$r,r
+  }
+  return r;
 }
