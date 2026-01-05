@@ -27,7 +27,6 @@ export async function sandbox() {
   let symbols_split_non =
     "01½¼23¾4556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZΑΩ";
   let s = null;
-  const replacement = " ";
-  let joined = string_only_or(s, symbols_split_non, replacement);
+  let joined = string_only_or(s, symbols_split_non, " ");
   return joined;
 }
