@@ -18,7 +18,7 @@ export async function sandbox() {
   let symbols_all =
     "._​ּׁׂ -–—,;:!?…·'‘’\"“”()[]{}¶*/&#%•`°+=|⌃⌞⌟►◄$01½¼23¾456789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZʼΑΩאבגדהוזחטיכלמנסעפצקרשת";
   let symbols_allowed =
-    "01½¼23¾4556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZΑΩ";
+    "01½¼23¾4556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZΑΩ-";
   let normalize = {
     ﬁ: "fi",
     ﬂ: "fl",
@@ -53,7 +53,8 @@ export async function sandbox() {
           let lower = string_lower_to(s);
           word_add(lower);
           let t = string_transform_lookup(lower, normalize);
-          if (equal_not(left, right)) {
+          if (equal_not(t, lower)) {
+            word_add(lower);
           }
           function word_add(lower) {
             let word = object_property_initialize_empty(result, lower);
