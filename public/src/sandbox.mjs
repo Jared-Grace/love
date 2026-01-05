@@ -50,11 +50,19 @@ export async function sandbox() {
         let split = string_split_space(n);
         function lambda5(s) {
           let lower = string_lower_to(s);
-          string_transform_lookup(lower, normalize);
-          let word = object_property_initialize_empty(result, lower);
-          let chapter = object_property_initialize_empty(word, chapter_code);
-          let versions = object_property_initialize_list(chapter, verse_number);
-          list_add(versions, bible_folder);
+          word_add(lower);
+          let t = string_transform_lookup(lower, normalize);
+          if (false) {
+          }
+          function word_add(lower) {
+            let word = object_property_initialize_empty(result, lower);
+            let chapter = object_property_initialize_empty(word, chapter_code);
+            let versions = object_property_initialize_list(
+              chapter,
+              verse_number,
+            );
+            list_add(versions, bible_folder);
+          }
         }
         each(split, lambda5);
       }
