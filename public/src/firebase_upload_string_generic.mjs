@@ -9,8 +9,8 @@ export async function firebase_upload_string_generic(
   content_type,
 ) {
   log({
+    msg: "uploading to firebase",
     destination,
-    msg,
   });
   if (browser_is()) {
     const firebase = await import(
