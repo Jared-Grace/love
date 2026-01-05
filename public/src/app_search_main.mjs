@@ -57,7 +57,9 @@ export async function app_search_main(context) {
       return o;
     }
     let mapped = await list_map_unordered_async(words, lambda);
-    function lambda7() {}
+    function lambda7(m) {
+      let properties2 = object_properties(obj);
+    }
     let keys = list_map(mapped, lambda7);
     let chapter_codes_match = list_intersect_multiple(keys);
     function lambda4(m) {
