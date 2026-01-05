@@ -1,3 +1,4 @@
+import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -12,6 +13,10 @@ export function list_intersect_multiple(list) {
   marker("1");
   let fr = list_first_remaining(list);
   let remaining = object_property_get(fr, "remaining");
+  let e = list_empty_is(remaining);
+  if (e) {
+    return;
+  }
   let first = object_property_get(fr, "first");
   let uniques = list_map(remaining, list_unique_set);
   function lambda2(la) {
@@ -29,8 +34,5 @@ export function list_intersect_multiple(list) {
   }
   let i = list_adder(lambda2);
   return i;
-  let e = list_empty_is(remaining);
-  if (false) {
-    return;
-  }
+  let concated = list_concat(a2, b);
 }
