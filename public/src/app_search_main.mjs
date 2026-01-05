@@ -50,7 +50,10 @@ export async function app_search_main(context) {
   html_focus(input);
   ("include apocrypha");
   async function lambda3(item) {}
-  let waited = await list_map_unordered_async(list, lambda3);
+  let waited = await list_map_unordered_async(
+    ["engwyc2018", "engwebu"],
+    lambda3,
+  );
   let books = await ebible_version_books("engwebu");
   let component = html_button(root, "Search", lambda2);
   async function lambda2() {
