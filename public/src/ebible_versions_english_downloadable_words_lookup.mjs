@@ -1,3 +1,5 @@
+import { list_join_slash_forward } from "../../../love/public/src/list_join_slash_forward.mjs";
+import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
 import { each_object_async } from "../../../love/public/src/each_object_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_chapters_each_verses_check_with } from "../../../love/public/src/ebible_chapters_each_verses_check_with.mjs";
@@ -71,7 +73,13 @@ export async function ebible_versions_english_downloadable_words_lookup() {
     await ebible_chapters_each_verses_check_with(bible_folder, lambda);
   }
   await each_async(bible_folders, lambda2);
-  async function lambda3(value, key) {}
+  async function lambda3(value, word) {
+    let file_name_with_extension = file_name_json(word);
+    let joined = list_join_slash_forward([
+      "bible_search",
+      file_name_with_extension,
+    ]);
+  }
   await each_object_async(object, lambda3);
   return result;
 }
