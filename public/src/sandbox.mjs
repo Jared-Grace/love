@@ -8,6 +8,6 @@ export async function sandbox() {
   let symbols_whitespace = "   \n";
   let symbols_dash = "–—";
   let symbols_split_non =
-    "1234556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZʼΑΩ";
+    "1234556789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZΑΩ";
   return unique;
 }
