@@ -1,3 +1,4 @@
+import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { object_values_map } from "../../../love/public/src/object_values_map.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
@@ -23,6 +24,8 @@ export async function ebible_versions_english_downloadable_words_search_upload()
     exit();
     await firebase_upload_object_compressed(destination, m);
   }
-  function lambda3(value, word) {}
+  function lambda3(value, word) {
+    list_chunk(list, chunk_size);
+  }
   let result2 = object_values_map(object, lambda2);
 }
