@@ -44,6 +44,7 @@ export async function sandbox() {
         let split = string_split_space(n);
         function lambda5(s) {
           oad(key, value);
+          let chapter = object_property_initialize(result, chapter_code, {});
           let value2 = object_property_initialize(
             object,
             property_name,
