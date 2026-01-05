@@ -11,8 +11,8 @@ export async function sandbox() {
   async function lambda3(oad) {
     async function lambda2(bible_folder) {
       async function lambda(chapter_code, verses) {
-        function lambda4(item) {}
-        each(list, lambda4);
+        function lambda4(verse) {}
+        each(verses, lambda4);
       }
       await ebible_chapters_each_verses_check_with(bible_folder, lambda);
     }
