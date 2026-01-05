@@ -1,3 +1,4 @@
+import { each_object_async } from "../../../love/public/src/each_object_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_chapters_each_verses_check_with } from "../../../love/public/src/ebible_chapters_each_verses_check_with.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -70,5 +71,6 @@ export async function ebible_versions_english_downloadable_words_lookup() {
     await ebible_chapters_each_verses_check_with(bible_folder, lambda);
   }
   await each_async(bible_folders, lambda2);
+  await each_object_async(object, async function lambda3(value, key) {});
   return result;
 }
