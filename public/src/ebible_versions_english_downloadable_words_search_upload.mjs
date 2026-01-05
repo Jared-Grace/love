@@ -3,7 +3,6 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { object_values_map } from "../../../love/public/src/object_values_map.mjs";
-import { exit } from "../../../love/public/src/exit.mjs";
 import { app_bible_search_word_path } from "../../../love/public/src/app_bible_search_word_path.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { firebase_upload_object_compressed } from "../../../love/public/src/firebase_upload_object_compressed.mjs";
@@ -33,7 +32,7 @@ export async function ebible_versions_english_downloadable_words_search_upload()
         word,
         m,
       });
-      exit();
+      return;
       await firebase_upload_object_compressed(destination, m);
     }
     await each_unordered_async(c, lambda4);
