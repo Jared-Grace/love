@@ -29,12 +29,12 @@ export async function data_all(file_path) {
   } else {
     let exists = await file_exists(file_path);
     if (not(exists)) {
-      log({
-        file_path,
-      });
       let contents = json_format_to({});
       await file_write(file_path, contents);
     }
+    log({
+      file_path,
+    });
     data = await file_read_json(file_path);
   }
   let v = {
