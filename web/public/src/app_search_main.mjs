@@ -1,6 +1,6 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
 import { object_properties_from_empty } from "../../../love/public/src/object_properties_from_empty.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { list_intersect_multiple } from "../../../love/public/src/list_intersect_multiple.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -62,10 +62,12 @@ export async function app_search_main(context) {
       let to = object_properties_from_empty(chapter_codes_match, m);
       return to;
     }
-    each(mapped, lambda4);
+    list_map(mapped, lambda4);
     function lambda5(chapter_code) {
-      function lambda6(item2) {}
-      let mapped3 = list_map(list2, lambda6);
+      function lambda6(m) {
+        let value2 = object_property_get(object, property_name);
+      }
+      let mapped3 = list_map(mapped, lambda6);
     }
     let dictionary = list_to_dictionary_value(chapter_codes_match, lambda5);
     html_clear(root);
