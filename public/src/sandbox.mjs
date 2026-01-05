@@ -51,16 +51,12 @@ export async function sandbox() {
         function lambda5(s) {
           let lower = string_lower_to(s);
           word_add(lower);
-          let t = string_transform_lookup(lower, normalize);
-          if (false) {
-          }
+          t=string_transform_lookup(lower, normalize);$ien
+
           function word_add(lower) {
             let word = object_property_initialize_empty(result, lower);
             let chapter = object_property_initialize_empty(word, chapter_code);
-            let versions = object_property_initialize_list(
-              chapter,
-              verse_number,
-            );
+            let versions = object_property_initialize_list(chapter, verse_number);
             list_add(versions, bible_folder);
           }
         }
