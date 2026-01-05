@@ -9,7 +9,7 @@ export async function file_overwrite_json(file_path, object) {
     await file_overwrite(file_path, json);
   } else {
     let fs = await import("fs");
-    await import_install(name);
+    let streamJsonStringify = await import_install("stream-json-stringify");
     const out = fs.createWriteStream(file_path);
     let json = streamJsonStringify(object);
     await pipeline(json, out);
