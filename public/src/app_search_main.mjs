@@ -50,7 +50,7 @@ export async function app_search_main(context) {
       let o = await json_decompress_object(c);
       return o;
     }
-    let mapped = await list_map_unordered_async(words, lambda);
+    let mapped = await list_map_unordered_async(words, lambda);op
     function lambda4(item2) {}
     let mapped3 = list_map(list2, lambda4);
     html_clear(root);
