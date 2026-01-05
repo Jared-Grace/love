@@ -20,17 +20,21 @@ export async function ebible_languages_chapters() {
       if (includes) {
         return;
       }
+      await chapters_get_add(bible_folder);
+    }
+    await each_async(languages, lambda2);
+    let i = await bible_interlinear_verses_cache();
+    la(i);
+    let english_choices = await ebible_versions_english_choices();
+    await each_async(list, async function lambda4(item) {});
+    async function chapters_get_add(bible_folder) {
       let chapters = await ebible_version_chapters_cache(bible_folder);
       la({
         bible_folder,
         chapters,
       });
     }
-    await each_async(languages, lambda2);
-    let i = await bible_interlinear_verses_cache();
-    la(i);
-    let english_choices = await ebible_versions_english_choices();
-    async function lambda3(item) {}
+    async function lambda3(c) {}
     await each_async(english_choices, lambda3);
   }
   let all = await list_adder_async(lambda);
