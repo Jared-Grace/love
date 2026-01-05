@@ -63,5 +63,5 @@ export async function sandbox() {
     await ebible_chapters_each_verses_check_with(bible_folder, lambda);
   }
   await each_async(bible_folders, lambda2);
-  return joined;
+  return result;
 }
