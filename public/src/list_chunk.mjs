@@ -1,4 +1,4 @@
-import { marker } from "../../../love/public/src/marker.mjs";
+import { list_size } from "../../../love/public/src/list_size.mjs";
 export function list_chunk(list, chunk_size) {
-  marker("1");
+  let size = list_size(list2);
 }
