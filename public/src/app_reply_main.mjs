@@ -87,6 +87,7 @@ export async function app_reply_main(context) {
   }
   each_range_from(3, 6, lambda4);
   list_add(choices_verse_count, 20);
+  list_add(choices_verse_count, 40);
   function lambda2(c) {
     async function lambda3() {
       await update(c);
