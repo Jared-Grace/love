@@ -1,5 +1,5 @@
 import { list_copy } from "../../../love/public/src/list_copy.mjs";
-import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
