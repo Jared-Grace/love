@@ -1,3 +1,4 @@
+import { each_object } from "../../../love/public/src/each_object.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
@@ -79,7 +80,7 @@ export async function app_search_main(context) {
       dictionary,
     });
     html_clear(root);
-    function lambda3(item) {}
+    each_object(object, function lambda7(value2, property) {});
     let mapped2 = list_map(list, lambda3);
     let reference = ebible_parts_chapter_code_to_reference(
       chapter_code,
