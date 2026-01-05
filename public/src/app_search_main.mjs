@@ -1,3 +1,4 @@
+import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
@@ -25,6 +26,8 @@ export function app_search_main(context) {
   let input = html_input_text(root, search_instructions);
   html_width_full(input);
   html_focus(input);
-  function lambda2() {}
+  async function lambda2() {
+    let o = await firebase_storage_download_json(destination);
+  }
   let component = html_button(parent, "Search", lambda2);
 }
