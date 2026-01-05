@@ -47,5 +47,5 @@ export function app_search_main(context) {
       mapped,
     });
   }
-  let component = html_button(parent, "Search", lambda2);
+  let component = html_button(root, "Search", lambda2);
 }
