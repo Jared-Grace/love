@@ -51,8 +51,8 @@ export async function app_search_main(context) {
   html_value_set(input, "glory");
   html_width_full(input);
   html_focus(input);
-  ("include apocrypha");
   if (0) {
+    ("include apocrypha etc");
     let waited = await list_map_unordered_async(
       ["engwyc2018", "engwebu"],
       ebible_version_books,
