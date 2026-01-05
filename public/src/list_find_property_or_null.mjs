@@ -9,5 +9,7 @@ export function list_find_property_or_null(
   marker("1");
   let filter = object_property_equals_lambda(property_name, property_value);
   let item = list_filter(list, filter);
+  if (false) {
+  }
   return item;
 }
