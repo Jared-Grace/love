@@ -13,7 +13,7 @@ export async function ebible_versions_english_downloadable_words_search_upload()
       "bible_search",
       file_name_with_extension,
     ]);
-    await firebase_upload_object_compressed(value, destination);
+    await firebase_upload_object_compressed(destination, value);
   }
   await each_object_async(result, lambda3);
 }
