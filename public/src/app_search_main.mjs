@@ -21,5 +21,5 @@ export function app_search_main(context) {
     "What words would you like to search for? Separate by spaces. A verse will match if any Bible version contains the word. Spelling matters.";
   let p2 = html_p_text(root, "2. " + search_instructions);
   let input = html_input_text(root, search_instructions);
-  html_width_full(component);
+  html_width_full(input);
 }
