@@ -10,11 +10,11 @@ export function list_find_property_or_null(
 ) {
   marker("1");
   let filter = object_property_equals_lambda(property_name, property_value);
-  let item = list_filter(list, filter);
-  let e = list_empty_is(item);
+  let filtered = list_filter(list, filter);
+  let e = list_empty_is(filtered);
   if (e) {
-    return item;
+    return filtered;
   }
-  let only = list_single(list2);
-  return item;
+  let only = list_single(filtered);
+  return only;
 }
