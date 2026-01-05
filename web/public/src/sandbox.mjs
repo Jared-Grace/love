@@ -4,6 +4,6 @@ export async function sandbox() {
   marker("1");
   let unique = await ebible_versions_english_downloadable_symbols_unique();
   let symbols_all =
-    "1½¼23¾45   56789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZʼΑΩ";
+    "._​ּׁׂ -–—,;:!?…·'‘’\"“”()[]{}¶*/&#%•`°+=|⌃⌞⌟►◄$01½¼23¾45   56789aAæÆbBcCdDeEéèëfFﬁﬂgGhHiIïjJkKlLmMnNoOöœpPqQrRsStTuUüvVʋwWxXyYzZʼΑΩאבגדהוזחטיכלמנסעפצקרשת\n";
   return unique;
 }
