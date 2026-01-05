@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { js_code_call_app_context_initialize } from "../../../love/public/src/js_code_call_app_context_initialize.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { function_code_import_dev } from "../../../love/public/src/function_code_import_dev.mjs";
@@ -28,10 +27,6 @@ export async function html_update_dev(name) {
   var v = await html_update_externals(name_prefixed);
   let scripts = object_property_get(v, "scripts");
   let joined2 = list_add_join_newline(scripts, body);
-  log({
-    scripts,
-    joined2,
-  });
   await html_overwrite(name, path, joined2);
   await file_open(path);
 }
