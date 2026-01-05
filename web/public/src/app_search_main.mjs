@@ -1,3 +1,4 @@
+import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
@@ -13,6 +14,7 @@ import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_l
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 export function app_search_main(context) {
   let root = html_mobile_default(context);
+  firebase_name_jg();
   let languages = ebible_languages();
   let languages_chosen = [];
   let languages_chosen_default = list_slice_count(languages, 1, 1);
