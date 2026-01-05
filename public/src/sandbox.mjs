@@ -7,9 +7,10 @@ import { ebible_versions_english_downloadable_words_search_upload } from "../../
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   let english_choices = await ebible_versions_english_choices();
-  async function lambda(item) {}
-  await each_async(list, lambda);
-  await ebible_verses_upload(bible_folder);
+  async function lambda(bible_folder) {
+    await ebible_verses_upload(bible_folder);
+  }
+  await each_async(english_choices, lambda);
   marker("1");
   let r = range(10);
   let chunks = list_chunk(r, 3);
