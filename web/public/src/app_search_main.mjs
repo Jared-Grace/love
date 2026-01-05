@@ -89,11 +89,10 @@ export async function app_search_main(context) {
           books,
           verse_numbers,
         );
-        let p3 = html_p_text(root2, text);
+        let p3 = html_p_text(root, reference);
       }
       each(properties2, lambda8);
     }
     each_object(dictionary, lambda7);
-    let mapped2 = list_map(list, lambda3);
   }
 }
