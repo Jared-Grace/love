@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_adder_async } from "../../../love/public/src/object_adder_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -11,7 +12,9 @@ export async function sandbox() {
   async function lambda3(oad) {
     async function lambda2(bible_folder) {
       async function lambda(chapter_code, verses) {
-        function lambda4(verse) {}
+        function lambda4(verse) {
+          let text = object_property_get(verse, "text");
+        }
         each(verses, lambda4);
       }
       await ebible_chapters_each_verses_check_with(bible_folder, lambda);
