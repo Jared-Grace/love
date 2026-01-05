@@ -17,10 +17,10 @@ import { invoke_cache_file } from "./invoke_cache_file.mjs";
 export async function function_cache(f_name) {
   marker("1");
   let args_none = false;
-  let v3 = await function_parse_declaration(f_name);
-  let unaliased = object_property_get(v3, "unaliased");
+  let parsed = await function_parse_declaration(f_name);
+  let unaliased = object_property_get(parsed, "unaliased");
   let f_name_cache = function_name_combine(unaliased, "cache");
-  let declaration_call = object_property_get(v3, "declaration");
+  let declaration_call = object_property_get(parsed, "declaration");
   const c = invoke_cache_file.name;
   let v4 = await function_parse_declaration(c);
   let declaration_cache = object_property_get(v4, "declaration");
