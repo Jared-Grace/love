@@ -108,11 +108,11 @@ export async function app_search_main(context) {
     });
     html_clear(root);
     function lambda7(verse_numbers, chapter_code) {
+      let book_code = ebible_chapter_code_to_book(chapter_code);
       let e = ebible_book_exists(books, book_code);
       if (not(e)) {
         return;
       }
-      let book_code = ebible_chapter_code_to_book(chapter_code);
       function lambda8(verse_number) {
         let reference = ebible_parts_chapter_code_to_reference(
           chapter_code,
