@@ -1,3 +1,4 @@
+import { list_sort_string_property } from "../../../love/public/src/list_sort_string_property.mjs";
 import { list_slice_count } from "../../../love/public/src/list_slice_count.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { app_reply_languages_chosen_reset } from "../../../love/public/src/app_reply_languages_chosen_reset.mjs";
@@ -9,6 +10,7 @@ export function app_search_main(context) {
   let languages = ebible_languages();
   let languages_chosen = [];
   let languages_chosen_default = list_slice_count(languages, 1, 1);
+  list_sort_string_property(languages, "name");
   app_reply_languages_chosen_reset(languages_chosen, languages_chosen_default);
   let p = app_reply_languages_prompt(root);
   app_reply_buttons_languages(languages_chosen, root, languages);
