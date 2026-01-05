@@ -13,7 +13,7 @@ export function list_intersect_multiple(list) {
   marker("1");
   let fr = list_first_remaining(list);
   let remaining = object_property_get(fr, "remaining");
-  let e = list_empty_is(remaining);
+  let e = null_is(remaining);
   if (e) {
     let copy = list_copy(e);
     return copy;
