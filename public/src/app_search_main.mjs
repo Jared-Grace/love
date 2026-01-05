@@ -64,7 +64,8 @@ export async function app_search_main(context) {
     }
     each(mapped, lambda4);
     function lambda5(chapter_code) {
-      let mapped3 = list_map(list2, function lambda6(item2) {});
+      function lambda6(item2) {}
+      let mapped3 = list_map(list2, lambda6);
     }
     let dictionary = list_to_dictionary_value(chapter_codes_match, lambda5);
     html_clear(root);
