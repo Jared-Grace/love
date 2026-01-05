@@ -26,12 +26,15 @@ export async function html_update_dev(name) {
   let middle = list_join_newline([code, code2, call]);
   let body = html_code_script_module(middle);
   var v = await html_update_externals(name_prefixed);
+  let scripts = object_property_get(v, "scripts");
+  let joined2 = list_add_join_newline(scripts, body);
   log({
     v,
     name_prefixed,
+    body,
+    scripts,
+    joined2,
   });
-  let scripts = object_property_get(v, "scripts");
-  let joined2 = list_add_join_newline(scripts, body);
   await html_overwrite(name, path, joined2);
   await file_open(path);
 }
