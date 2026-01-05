@@ -19,7 +19,7 @@ export function list_intersect_multiple(list, other) {
         la(l);
       }
     }
-    each(list, lambda);
+    each(first, lambda);
   }
   let i = list_adder(lambda2);
   return i;
