@@ -136,7 +136,7 @@ export async function app_search_main(context) {
             chapter_code,
             verse_number,
           );
-          let text2 = object_property_get(o, "text");
+          let text2 = object_property_get(o, "text");hpt
         }
         b = html_button_width_full(div_verse, reference, lambda3);
       }
