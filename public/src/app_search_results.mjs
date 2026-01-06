@@ -1,3 +1,4 @@
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
@@ -136,7 +137,7 @@ export async function app_search_results(context, div_results) {
       return b;
     }
     let bs = list_map(verse_numbers, lambda8);
-    let mapped2 = list_map(bs, null_not_is);
+    let mapped2 = list_filter(bs, null_not_is);
     return mapped2;
   }
   let button_lists = list_map(list, lambda7);
