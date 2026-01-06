@@ -64,15 +64,15 @@ export async function app_search_results(context, div_results) {
     return i;
   }
   let dictionary = list_to_dictionary_value(chapter_codes_match, lambda5);
-  html_clear(root);
-  let p3 = html_p_text(root, query);
+  html_clear(div_results);
+  let p3 = html_p_text(div_results, query);
   async function back() {
     app_search_home(context);
   }
   let text = app_karate_button_back_text();
-  let component2 = html_button_width_full(root, text, back);
+  let component2 = html_button_width_full(div_results, text, back);
   let button_list = null;
-  let expand_all_div = html_div(root);
+  let expand_all_div = html_div(div_results);
   let expand_all = null;
   async function lambda2() {
     async function lambda9(b) {
@@ -97,7 +97,7 @@ export async function app_search_results(context, div_results) {
       lambda6,
     );
   }
-  expand_all = html_button_width_full(root, "Expand all", lambda2);
+  expand_all = html_button_width_full(div_results, "Expand all", lambda2);
   let list = object_to_list(dictionary);
   log({
     dictionary,
@@ -112,7 +112,7 @@ export async function app_search_results(context, div_results) {
       return v;
     }
     function lambda8(verse_number) {
-      let div_verse = html_div(root);
+      let div_verse = html_div(div_results);
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
         books,
