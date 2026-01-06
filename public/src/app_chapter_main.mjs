@@ -1,4 +1,4 @@
-import { json_to } from "../../../love/public/src/json_to.mjs";
+import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
@@ -20,6 +20,6 @@ export async function app_chapter_main() {
   let first = list_first(languages_chosen);
   let bible_folder = ebible_language_to_bible_folder(first);
   let list = await ebible_verses(bible_folder, chapter_code);
-  let v = json_to(list);
+  let v = json_format_to(list);
   let p = html_pre_text(body, v);
 }
