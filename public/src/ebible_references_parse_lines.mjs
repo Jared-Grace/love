@@ -24,13 +24,16 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
   let book_names = object_property_get(v, "book_names");
   let chapter_verses_list = object_property_get(v, "chapter_verses_list");
   async function lambda2(la) {
+    log("31");
     async function lambda(book_name, chapter_verses) {
+      log("21");
       let v2 = ebible_reference_parts(books, book_name, chapter_verses);
       let verse_end = object_property_get(v2, "verse_end");
       let verse_start = object_property_get(v2, "verse_start");
       let chapter_code = object_property_get(v2, "chapter_code");
       let index = object_property_get(v2, "index");
       async function lambda5(bible_folder, books) {
+        log("11");
         let book2 = list_get(books, index);
         let book_name = object_property_get(book2, "text");
         async function lambda4(verse_number) {
