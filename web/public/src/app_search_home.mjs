@@ -12,7 +12,7 @@ import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_l
 import { app_reply_languages_chosen_reset } from "../../../love/public/src/app_reply_languages_chosen_reset.mjs";
 import { list_sort_string_property } from "../../../love/public/src/list_sort_string_property.mjs";
 import { list_slice_count } from "../../../love/public/src/list_slice_count.mjs";
-export function app_search_home(languages, languages_chosen, root, context) {
+export function app_search_home(languages_chosen, root, context) {
   marker("1");
   let languages_chosen_default = list_slice_count(languages, 1, 1);
   list_sort_string_property(languages, "name");
