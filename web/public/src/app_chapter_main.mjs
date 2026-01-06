@@ -1,3 +1,4 @@
+import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -34,6 +35,7 @@ export async function app_chapter_main() {
       books,
       [verse_number],
     );
+    html_p_text_multiple(parent, list2);
   }
   each(list, lambda);
 }
