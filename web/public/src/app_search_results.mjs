@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
@@ -39,6 +40,7 @@ export async function app_search_results(
   english_choices,
   languages_chosen,
 ) {
+  marker("1");
   let value = html_value_get(input);
   let words = string_to_words(value);
   async function lambda(word) {
