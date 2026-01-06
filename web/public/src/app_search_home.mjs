@@ -39,6 +39,6 @@ export function app_search_home(context) {
   async function search() {
     let query = html_value_get(input);
     object_property_set(context, "query", query);
-    await app_search_results(context);
+    await app_search_results(context, div_results);
   }
 }
