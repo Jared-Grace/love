@@ -71,7 +71,8 @@ export async function app_search_results(context) {
   let text = app_karate_button_back_text();
   let component2 = html_button_width_full(root, text, back);
   let button_list = null;
-  let component3 = html_button_width_full(root, "Expand all", () => {});
+  function lambda2() {}
+  let component3 = html_button_width_full(root, "Expand all", lambda2);
   let list = object_to_list(dictionary);
   function lambda7(vk) {
     let verse_numbers = object_property_get(vk, "value");
