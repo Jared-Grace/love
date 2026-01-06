@@ -16,7 +16,6 @@ export function html_bar_content(root) {
     flex: "1 1 auto",
     "min-height": "0",
     position: "relative",
-    overflow: "hidden",
   });
   let bc = {
     bar,
