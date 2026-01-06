@@ -3,7 +3,6 @@ import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { app_search_results } from "../../../love/public/src/app_search_results.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
-import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
