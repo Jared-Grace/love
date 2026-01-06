@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { list_first_last } from "../../../love/public/src/list_first_last.mjs";
@@ -39,4 +40,5 @@ export async function app_chapter_main() {
     html_p_text(root, verse_number + " " + text);
   }
   each(list, lambda);
+  await each_async(list2, async function lambda2(item2) {});
 }
