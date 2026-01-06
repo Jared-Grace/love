@@ -62,8 +62,8 @@ export async function app_search_main(context) {
   html_focus(input);
   let books = await ebible_version_books(en);
   const text = "Search";
-  html_button_width_full(root, text, lambda2);
-  async function lambda2() {
+  html_button_width_full(root, text, search);
+  async function search() {
     let value = html_value_get(input);
     let words = string_to_words(value);
     async function lambda(word) {
@@ -89,15 +89,12 @@ export async function app_search_main(context) {
       return i;
     }
     let dictionary = list_to_dictionary_value(chapter_codes_match, lambda5);
-    log({
-      dictionary,
-    });
     html_clear(root);
-    async function lambda6() {
+    async function back() {
       await app_search_main(context);
     }
     let text = app_karate_button_back_text();
-    let component2 = html_button_width_full(root, text, lambda6);
+    let component2 = html_button_width_full(root, text, back);
     function lambda7(verse_numbers, chapter_code) {
       let book_code = ebible_chapter_code_to_book(chapter_code);
       let e = ebible_book_exists(books, book_code);
