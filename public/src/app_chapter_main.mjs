@@ -70,10 +70,10 @@ export async function app_chapter_main(context) {
       }
       html_on_pointerdown(p, choose);
     }
-    each(verses, lambda);
+    each(verses, lambda);$r,verses
   }
-  await each_async(languages_chosen, lambda2);
-  function copy() {
+  let languages_verses=await list_map_async(languages_chosen, lambda2);
+  function copy() {$e
     let v = list_first_last(verse_numbers_chosen);
     let last = list_first(v);
     let first = list_last(v);
