@@ -138,6 +138,9 @@ export async function app_search_results(context, div_results) {
     }
     let bs = list_map(verse_numbers, lambda8);
     let mapped2 = list_filter(bs, null_not_is);
+    log({
+      mapped2,
+    });
     return mapped2;
   }
   let button_lists = list_map(list, lambda7);
