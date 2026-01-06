@@ -21,6 +21,7 @@ export async function app_search_main(context) {
   html_clear(root);
   let languages = ebible_languages();
   let languages_chosen = [];
+  object_property_set_exists_not(object, property_name, value);
   let languages_chosen_default = list_slice_count(languages, 1, 1);
   list_sort_string_property(languages, "name");
   app_reply_languages_chosen_reset(languages_chosen, languages_chosen_default);
