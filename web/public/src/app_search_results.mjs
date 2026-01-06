@@ -118,7 +118,7 @@ export async function app_search_results(context) {
         );
         html_p_text_multiple(div_verse, bible_texts);
         list_add_first(bible_texts, reference);
-        object_property_set_exists_not(object, property_name, value);
+        object_property_set_exists_not(b, "bible_texts", bible_texts);
         async function copy() {
           await list_join_newline_2_copy(bible_texts);
         }
