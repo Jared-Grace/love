@@ -75,7 +75,8 @@ export async function app_chapter_main(context) {
   }
   let languages_verses = await list_map_async(languages_chosen, lambda2);
   function copy() {
-    each(list, function lambda3(item) {});
+    function lambda3(item) {}
+    each(list, lambda3);
     let v = list_first_last(verse_numbers_chosen);
     let last = list_first(v);
     let first = list_last(v);
