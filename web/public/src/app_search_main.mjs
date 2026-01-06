@@ -1,3 +1,4 @@
+import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
 import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -124,7 +125,9 @@ export async function app_search_main(context) {
           [verse_number],
         );
         let b = null;
-        function lambda3() {}
+        function lambda3() {
+          html_remove(component);
+        }
         b = html_button_width_full(root, reference, lambda3);
       }
       each(verse_numbers, lambda8);
