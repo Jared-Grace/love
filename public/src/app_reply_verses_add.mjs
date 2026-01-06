@@ -20,7 +20,8 @@ export async function app_reply_verses_add(
   log("here");
   let mapped2 = list_map_property(languages_chosen, "bible_folder");
   let verse_range = await ebible_references_parse_lines(mapped2, [reference]);
-  each(list, function lambda(item) {});
+  function lambda(item) {}
+  each(list, lambda);
   async function lambda5(l) {
     async function lambda8(verse) {
       let bible_folder = object_property_get(l, "bible_folder");
