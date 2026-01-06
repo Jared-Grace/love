@@ -1,3 +1,4 @@
+import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -40,6 +41,7 @@ export async function app_search_results(
   languages_chosen,
 ) {
   marker("1");
+  let en = ebible_folder_english();
   let value = html_value_get(input);
   let words = string_to_words(value);
   async function lambda(word) {
