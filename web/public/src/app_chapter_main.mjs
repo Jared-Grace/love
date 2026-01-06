@@ -1,4 +1,3 @@
-import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -37,7 +36,6 @@ export async function app_chapter_main(context) {
   html_margin_0(root);
   let bc = html_bar_content(root);
   let content = object_property_get(bc, "content");
-  html_style_set(content, "overflow-x", "auto");
   let bar = object_property_get(bc, "bar");
   html_button_copy_width_full(bar, copy);
   firebase_name_jg();
