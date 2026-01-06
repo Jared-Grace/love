@@ -131,11 +131,12 @@ export async function app_search_main(context) {
         async function lambda3() {
           html_remove(b);
           let p3 = html_p_text(div_verse, reference);
-          let index = await ebible_verse_download(
+          let o = await ebible_verse_download(
             "engbsb",
             chapter_code,
             verse_number,
-          );$g$
+          );
+          let text2 = object_property_get(o, "text");
         }
         b = html_button_width_full(div_verse, reference, lambda3);
       }
