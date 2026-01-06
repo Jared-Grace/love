@@ -78,9 +78,6 @@ export async function app_search_results(context) {
   async function lambda2() {
     async function lambda9(b) {
       let click2 = object_property_get(b, "click");
-      log({
-        b,
-      });
       await catch_ignore_async(click2);
       log({
         b,
