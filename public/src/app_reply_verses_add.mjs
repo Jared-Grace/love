@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -43,5 +44,8 @@ export async function app_reply_verses_add(
   }
   let copy = list_copy_reverse(languages_chosen);
   let mapped = await list_map_async(copy, lambda5);
+  log({
+    mapped,
+  });
   return reference_current;
 }
