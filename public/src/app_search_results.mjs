@@ -82,7 +82,9 @@ export async function app_search_results(context) {
     let waited = await list_map_unordered_async(button_list, lambda9);
     html_remove(expand_all);
     let c2 = html_button_copy_text();
-    function lambda6() {}
+    function lambda6() {
+      let squashed = list_squash(list2);
+    }
     let component = html_button_width_full(
       expand_all_div,
       c2 + " all",
