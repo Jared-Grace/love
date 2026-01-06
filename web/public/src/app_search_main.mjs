@@ -132,7 +132,7 @@ export async function app_search_main(context) {
           html_remove(b);
           let p3 = html_p_text(div_verse, reference);
           let index = await ebible_verse_download(
-            bible_folder,
+            "engbsb",
             chapter_code,
             verse_number,
           );
