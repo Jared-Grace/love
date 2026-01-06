@@ -14,13 +14,15 @@ import { ebible_version_books } from "../../../love/public/src/ebible_version_bo
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 export async function ebible_references_parse_lines(bible_folders, lines) {
+  log("here1");
   let bible_folder = ebible_folder_english();
   let books_all = await list_map_unordered_async(
     bible_folders,
     ebible_version_books,
   );
+  log("here3");
   let books = await ebible_version_books(bible_folder);
-  log("here");
+  log("here2");
   let v = ebible_references_names(books, lines);
   let book_names = object_property_get(v, "book_names");
   let chapter_verses_list = object_property_get(v, "chapter_verses_list");
@@ -57,6 +59,8 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
     }
     await each_pair_async(book_names, chapter_verses_list, lambda);
   }
+  log("here4");
   let list = await list_adder_async(lambda2);
+  log("here5");
   return list;
 }
