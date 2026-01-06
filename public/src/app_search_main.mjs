@@ -3,7 +3,7 @@ import { object_property_set_exists_not } from "../../../love/public/src/object_
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 export async function app_search_main(context) {
-  let root = html_mobile_default(context);
+  html_mobile_default(context);
   firebase_name_jg();
   let languages_chosen = [];
   object_property_set_exists_not(context, "languages_chosen", languages_chosen);
