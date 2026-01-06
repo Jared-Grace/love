@@ -7,10 +7,8 @@ export async function ebible_languages_books_upload() {
   marker("1");
   let languages = ebible_languages();
   let mapped = list_map_property(languages, "bible_folder");
-  let waited = await list_map_unordered_async(
-    list,
-    async function lambda(item) {},
-  );
+  async function lambda(item) {}
+  let waited = await list_map_unordered_async(list, lambda);
   let books = await ebible_version_books_upload(bible_folder);
   return languages;
 }
