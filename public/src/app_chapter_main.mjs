@@ -82,7 +82,7 @@ export async function app_chapter_main(context) {
       let first = list_last(v);
       let sliced = list_slice_from(verse_numbers, first, last);
       const property = "verse_number";
-      let mapped2 = list_map_find_property(lv, property, sliced);
+      let mapped2 = list_map_find_property(sliced, lv, property);
       let mapped3 = list_map_property(mapped2, "text");
     }
     each(languages_verses, lambda3);
