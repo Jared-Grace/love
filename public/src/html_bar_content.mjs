@@ -16,7 +16,8 @@ export function html_bar_content(root) {
     flex: "1 1 auto",
     "min-height": "0",
     position: "relative",
-    overflow: "scroll",
+    "overflow-y": "scroll",
+    "overflow-x": "auto",
   });
   let bc = {
     bar,
