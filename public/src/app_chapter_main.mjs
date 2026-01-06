@@ -28,6 +28,7 @@ export async function app_chapter_main() {
   let books = await ebible_version_books(bible_folder);
   function lambda(item) {
     let verse_number = object_property_get(item, "verse_number");
+    let text = object_property_get(item, "text");
     let reference = ebible_parts_chapter_code_to_reference(
       chapter_code,
       books,
