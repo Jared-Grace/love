@@ -129,9 +129,9 @@ export async function app_search_main(context) {
         let b = null;
         function lambda3() {
           html_remove(b);
-          let p3 = html_p_text(root, reference);
+          let p3 = html_p_text(div, reference);
         }
-        b = html_button_width_full(root, reference, lambda3);
+        b = html_button_width_full(div, reference, lambda3);
       }
       each(verse_numbers, lambda8);
     }
