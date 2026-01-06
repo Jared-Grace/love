@@ -41,7 +41,7 @@ export async function app_search_main(context) {
   html_button_width_full(root, text, search);
   async function search() {
     let query = html_value_get(input);
-    object_property_set_exists_not(object, property_name, value);
+    object_property_set_exists_not(context, "query", query);
     await app_search_results(
       root,
       context,
