@@ -1,3 +1,4 @@
+import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { list_map_find_property } from "../../../love/public/src/list_map_find_property.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
@@ -89,6 +90,7 @@ export async function app_chapter_main(context) {
         books,
         [first, last],
       );
+      let concated2 = list_concat(a, b);
       let joined = await list_join_newline_2_copy(concated);
     }
     each(languages_verses, lambda3);
