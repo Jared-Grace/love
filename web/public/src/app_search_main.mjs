@@ -1,3 +1,4 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
 import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
@@ -119,6 +120,7 @@ export async function app_search_main(context) {
         return;
       }
       function lambda8(verse_number) {
+        let div = html_div(root2);
         let reference = ebible_parts_chapter_code_to_reference(
           chapter_code,
           books,
