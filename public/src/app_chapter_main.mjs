@@ -47,7 +47,11 @@ export async function app_chapter_main() {
       }
       function lambda4() {
         list_toggle(verse_numbers_chosen, verse_number_v);
-        html_style_background_color_set_or_remove_list(p, list, item);
+        html_style_background_color_set_or_remove_list(
+          p,
+          verse_numbers_chosen,
+          verse_number_v,
+        );
       }
       html_on_pointerdown(p, lambda4);
     }
