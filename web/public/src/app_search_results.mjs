@@ -33,7 +33,6 @@ import { app_bible_search_word_path } from "../../../love/public/src/app_bible_s
 import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 export async function app_search_results(
-  input,
   root,
   context,
   books,
