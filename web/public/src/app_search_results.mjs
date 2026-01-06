@@ -34,7 +34,7 @@ import { firebase_storage_download_json } from "../../../love/public/src/firebas
 import { app_bible_search_word_path } from "../../../love/public/src/app_bible_search_word_path.mjs";
 import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
-export async function app_search_results(context, languages_chosen) {
+export async function app_search_results(context) {
   marker("1");
   let en = ebible_folder_english();
   let english_choices = [en];
