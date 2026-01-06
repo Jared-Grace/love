@@ -49,39 +49,38 @@ export async function app_chapter_main(context) {
     let bible_folder = ebible_language_to_bible_folder(lc);
     let verses = await ebible_verses(bible_folder, chapter_code);
     let books = await ebible_version_books(bible_folder);
-    let mapped = list_map_property(verses, "verse_number");
-    let fl = list_first_last(mapped);
-    let reference = ebible_parts_chapter_code_to_reference(
-      chapter_code,
-      books,
-      fl,
-    );
-    html_p_text(content, reference);
-    async function lambda(v) {
-      let verse_number_v = object_property_get(v, "verse_number");
-      let text = object_property_get(v, "text");
-      let p = html_p_text(content, verse_number_v + " " + text);
-      let li = list_last_is(languages_chosen, lc);
-      if (li) {
-        return;
+    let li = list_last_is(languages_chosen, lc);
+    if (li) {
+      let mapped = list_map_property(verses, "verse_number");
+      let fl = list_first_last(mapped);
+      let reference = ebible_parts_chapter_code_to_reference(
+        chapter_code,
+        books,
+        fl,
+      );
+      html_p_text(content, reference);
+      async function lambda(v) {
+        let verse_number_v = object_property_get(v, "verse_number");
+        let text = object_property_get(v, "text");
+        let p = html_p_text(content, verse_number_v + " " + text);
+        if (verse_number_v === verse_number) {
+          await html_scroll_center_now(p);
+          choose();
+        }
+        function choose() {
+          list_toggle(verse_numbers_chosen, verse_number_v);
+          html_style_background_color_set_or_remove_list(
+            p,
+            verse_numbers_chosen,
+            verse_number_v,
+          );
+          let e = list_empty_is(verse_numbers_chosen);
+          html_display_none_or_block(e, bar);
+        }
+        html_on_pointerdown(p, choose);
       }
-      if (verse_number_v === verse_number) {
-        await html_scroll_center_now(p);
-        choose();
-      }
-      function choose() {
-        list_toggle(verse_numbers_chosen, verse_number_v);
-        html_style_background_color_set_or_remove_list(
-          p,
-          verse_numbers_chosen,
-          verse_number_v,
-        );
-        let e = list_empty_is(verse_numbers_chosen);
-        html_display_none_or_block(e, bar);
-      }
-      html_on_pointerdown(p, choose);
+      each(verses, lambda);
     }
-    each(verses, lambda);
     let v2 = {
       books,
       verses,
