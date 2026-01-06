@@ -48,7 +48,7 @@ export async function app_reply_verses_add(
   log({
     copy,
   });
-  let mapped2 = list_map_property(list, "bible_folder");
+  let mapped2 = list_map_property(languages_chosen, "bible_folder");
   let mapped = await list_map_async(copy, lambda5);
   log({
     mapped,
