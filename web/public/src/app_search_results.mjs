@@ -104,7 +104,7 @@ export async function app_search_results(context) {
       let b = null;
       async function lambda3() {
         html_remove(b);
-        let c = html_button_copy(div_verse, lambda12);
+        let c = html_button_copy(div_verse, copy);
         html_width_full(c);
         let bible_texts = [];
         await app_reply_verses_add(
@@ -116,7 +116,7 @@ export async function app_search_results(context) {
           languages_chosen,
         );
         html_p_text_multiple(div_verse, bible_texts);
-        async function lambda12() {
+        async function copy() {
           list_add_first(bible_texts, reference);
           await list_join_newline_2_copy(bible_texts);
         }
