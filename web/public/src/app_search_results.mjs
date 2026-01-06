@@ -34,15 +34,14 @@ import { json_decompress_object } from "../../../love/public/src/json_decompress
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { app_bible_search_word_path } from "../../../love/public/src/app_bible_search_word_path.mjs";
 import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
-import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 export async function app_search_results(context) {
   marker("1");
   let en = ebible_folder_english();
   let english_choices = [en];
   let books = await ebible_version_books(en);
   let root = object_property_get(context, "root");
-  let value = html_value_get(input);
-  let words = string_to_words(value);
+  let query = object_property_get(context, "query");
+  let words = string_to_words(query);
   async function lambda(word) {
     let destination = app_bible_search_word_path(word);
     let c = await firebase_storage_download_json(destination);
@@ -64,7 +63,7 @@ export async function app_search_results(context) {
   }
   let dictionary = list_to_dictionary_value(chapter_codes_match, lambda5);
   html_clear(root);
-  let p3 = html_p_text(root, value);
+  let p3 = html_p_text(root, query);
   async function back() {
     app_search_home(context);
   }
