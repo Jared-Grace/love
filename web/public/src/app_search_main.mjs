@@ -23,7 +23,6 @@ import { ebible_version_books } from "../../../love/public/src/ebible_version_bo
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { json_decompress_object } from "../../../love/public/src/json_decompress_object.mjs";
-import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
