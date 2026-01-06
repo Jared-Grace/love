@@ -40,5 +40,6 @@ export async function app_chapter_main() {
     html_p_text(root, verse_number + " " + text);
   }
   each(list, lambda);
-  await each_async(list2, async function lambda2(item2) {});
+  async function lambda2(item2) {}
+  await each_async(list2, lambda2);
 }
