@@ -116,8 +116,8 @@ export async function app_search_results(context) {
           languages_chosen,
         );
         html_p_text_multiple(div_verse, bible_texts);
+        list_add_first(bible_texts, reference);
         async function copy() {
-          list_add_first(bible_texts, reference);
           await list_join_newline_2_copy(bible_texts);
         }
       }
