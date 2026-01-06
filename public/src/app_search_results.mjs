@@ -116,9 +116,8 @@ export async function app_search_results(context, div_results) {
         html_remove(b);
         html_button_copy_width_full(div_verse, copy);
         function lambda3() {
-          const relativeUrl = app_chapter.name + "";
-          let file_name = file_name_html(name2);
-          window.open(relativeUrl, "_blank");
+          let file_name = file_name_html(app_chapter.name);
+          window.open(file_name, "_blank");
         }
         html_button_width_full(div_verse, "chapter", lambda3);
         let bible_texts = [];
