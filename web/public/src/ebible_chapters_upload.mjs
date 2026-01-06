@@ -1,3 +1,4 @@
+import { ebible_firebase_upload_path } from "../../../love/public/src/ebible_firebase_upload_path.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { firebase_upload_object_compressed_chunked } from "../../../love/public/src/firebase_upload_object_compressed_chunked.mjs";
 import { ebible_version_chapters_cache } from "../../../love/public/src/ebible_version_chapters_cache.mjs";
@@ -9,6 +10,7 @@ export async function ebible_chapters_upload(bible_folder) {
     object_merge(value, {
       bible_folder,
     });
+    let destination2 = ebible_firebase_upload_path(bible_folder2, file_name);
     let v3 = {
       destination,
       value,
