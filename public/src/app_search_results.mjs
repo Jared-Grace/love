@@ -77,10 +77,11 @@ export async function app_search_results(context) {
     each(button_list, html_pointerdown);
     html_remove(expand_all);
     let c2 = html_button_copy_text();
+    function lambda6() {}
     let component = html_button_width_full(
       expand_all_div,
       c2 + " all",
-      () => {},
+      lambda6,
     );
   }
   expand_all = html_button_width_full(root, "Expand all", lambda2);
