@@ -1,3 +1,4 @@
+import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
 import { html_pointerdown } from "../../../love/public/src/html_pointerdown.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
@@ -75,6 +76,7 @@ export async function app_search_results(context) {
   function lambda2() {
     each(button_list, html_pointerdown);
     html_remove(expand_all);
+    let c2 = html_button_copy_text();
     let component = html_button_width_full(expand_all_div, text2, lambda22);
   }
   expand_all = html_button_width_full(root, "Expand all", lambda2);
