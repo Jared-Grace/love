@@ -40,7 +40,7 @@ import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs"
 import { list_map_property } from "./list_map_property.mjs";
 export async function app_search_main(context) {
   let root = html_mobile_default(context);
-  html_clear(element);
+  html_clear(root);
   firebase_name_jg();
   let languages = ebible_languages();
   let languages_chosen = [];
