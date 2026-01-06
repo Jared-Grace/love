@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { ebible_references_names } from "../../../love/public/src/ebible_references_names.mjs";
@@ -19,6 +20,7 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
     ebible_version_books,
   );
   let books = await ebible_version_books(bible_folder);
+  log({});
   let v = ebible_references_names(books, lines);
   let book_names = object_property_get(v, "book_names");
   let chapter_verses_list = object_property_get(v, "chapter_verses_list");
