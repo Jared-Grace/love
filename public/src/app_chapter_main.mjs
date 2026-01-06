@@ -34,12 +34,12 @@ export async function app_chapter_main() {
       fl,
     );
     html_p_text(root, reference);
-    function lambda(v) {
+    async function lambda(v) {
       let verse_number_v = object_property_get(v, "verse_number");
       let text = object_property_get(v, "text");
       let p = html_p_text(root, verse_number_v + " " + text);
       if (verse_number_v === verse_number) {
-        html_scroll_center_now(p);
+        await html_scroll_center_now(p);
       }
     }
     each(verses, lambda);
