@@ -2,7 +2,6 @@ import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multi
 import { ebible_versions_english_choices } from "../../../love/public/src/ebible_versions_english_choices.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { app_reply_verses_add } from "../../../love/public/src/app_reply_verses_add.mjs";
-import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { html_button_copy } from "../../../love/public/src/html_button_copy.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -150,9 +149,6 @@ export async function app_search_main(context) {
             languages_chosen,
           );
           html_p_text_multiple(div_verse, bible_texts);
-          let o = await ebible_verse("engbsb", chapter_code, verse_number);
-          let text2 = object_property_get(o, "text");
-          let p4 = html_p_text(div_verse, text2);
           async function lambda12() {
             let text3 = reference + " " + text2;
             await clipboard_copy(text3);
