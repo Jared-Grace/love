@@ -90,8 +90,8 @@ export async function app_chapter_main(context) {
         books,
         [first, last],
       );
-      let concated2 = list_concat(a, b);
-      let joined = await list_join_newline_2_copy(concated);
+      let concated2 = list_concat([reference], mapped3);
+      let joined = await list_join_newline_2_copy(concated2);
     }
     each(languages_verses, lambda3);
   }
