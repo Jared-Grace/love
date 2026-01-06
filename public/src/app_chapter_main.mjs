@@ -77,7 +77,7 @@ export async function app_chapter_main(context) {
     let v = list_first_last(verse_numbers_chosen);
     let last = list_first(v);
     let first = list_last(v);
-    let sliced = list_slice_from(list, first, last);
+    let sliced = list_slice_from(verse_numbers_chosen, first, last);
     log({
       sliced,
     });
