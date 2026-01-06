@@ -4,7 +4,6 @@ import { ebible_version_books } from "../../../love/public/src/ebible_version_bo
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
@@ -108,7 +107,7 @@ export async function app_search_results(context) {
       }
       b = html_button_width_full(div_verse, reference, lambda3);
     }
-    each(verse_numbers, lambda8);
+    let bs = list_map(verse_numbers, lambda8);
   }
   list_map(list, lambda7);
 }
