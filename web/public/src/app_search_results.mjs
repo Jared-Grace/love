@@ -66,7 +66,7 @@ export async function app_search_results(context) {
   html_clear(root);
   let p3 = html_p_text(root, value);
   async function back() {
-    await app_search_home(context);
+    app_search_home(context);
   }
   let text = app_karate_button_back_text();
   let component2 = html_button_width_full(root, text, back);
