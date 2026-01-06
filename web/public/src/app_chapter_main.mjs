@@ -1,6 +1,6 @@
+import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
+import { ebible_language_to_bible_folder } from "../../../love/public/src/ebible_language_to_bible_folder.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
-import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { app_next_hash_to_languages_chosen } from "../../../love/public/src/app_next_hash_to_languages_chosen.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -14,8 +14,8 @@ export async function app_chapter_main() {
   let chapter_code = object_property_get(hash, "c");
   let verse_number = object_property_get(hash, "v");
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
-  let languages_list = ebible_languages();
-  let first = list_first(languages_chosen);
+  let bible_folder = ebible_language_to_bible_folder(languages_list, language);
   let f = list_find_property(languages_list, "language_code", first);
-  let list = await ebible_verses(bible_folder, chapter_code2);
+  let list = await ebible_verses(bible_folder, chapter_code);
+  let p = html_p_text(root, text);
 }
