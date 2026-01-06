@@ -25,12 +25,13 @@ export async function app_chapter_main() {
   let list = await ebible_verses(bible_folder, chapter_code);
   let v = json_format_to(list);
   let p = html_pre_text(body, v);
-  let books2 = await ebible_version_books(bible_folder2);
+  let books = await ebible_version_books(bible_folder);
   function lambda(item) {
+    let verse_number2 = object_property_get(item, "verse_number");
     let reference = ebible_parts_chapter_code_to_reference(
       chapter_code,
       books,
-      verse_numbers,
+      [verse_numbers],
     );
   }
   each(list, lambda);
