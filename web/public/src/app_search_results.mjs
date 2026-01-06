@@ -74,7 +74,9 @@ export async function app_search_results(context) {
   let expand_all_div = html_div(root);
   let expand_all = null;
   function lambda2() {
-    function lambda3() {}
+    function lambda3(b) {
+      let click2 = object_property_get(b, "click");
+    }
     each(button_list, lambda3);
     html_remove(expand_all);
     let c2 = html_button_copy_text();
