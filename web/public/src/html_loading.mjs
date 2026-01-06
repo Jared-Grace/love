@@ -25,7 +25,11 @@ export async function html_loading(lambda) {
     };
     html_style_assign(div, s);
   }
-  let result = await lambda();
+  try {
+  } finally {
+  }
+  let result = null;
+  result = await lambda();
   if (b2) {
     html_remove(div);
   }
