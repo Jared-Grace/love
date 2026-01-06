@@ -1,3 +1,4 @@
+import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_map_find_property } from "../../../love/public/src/list_map_find_property.mjs";
@@ -100,7 +101,8 @@ export async function app_chapter_main(context) {
       let concated2 = list_concat([reference], mapped3);
       return concated2;
     }
-    let m = list_map(languages_verses, lambda3);lsq
+    let m = list_map(languages_verses, lambda3);
+    let squashed = list_squash(list);
     let joined = await list_join_newline_2_copy(concated2);
   }
 }
