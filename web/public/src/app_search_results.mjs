@@ -141,5 +141,5 @@ export async function app_search_results(context, div_results) {
   }
   let button_lists = list_map(list, lambda7);
   let mapped2 = list_filter(button_lists, null_not_is);
-  button_list = list_squash(button_lists);
+  button_list = list_squash(mapped2);
 }
