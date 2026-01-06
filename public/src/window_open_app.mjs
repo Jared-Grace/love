@@ -5,6 +5,6 @@ import { file_name_html } from "../../../love/public/src/file_name_html.mjs";
 export function window_open_app(app_fn, hash) {
   marker("1");
   let file_name = file_name_html(app_fn.name);
-  let h2 = hash_to_url(hash2);
-  window_open(file_name);
+  let h2 = hash_to_url(hash);
+  window_open(file_name + h2);
 }
