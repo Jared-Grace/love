@@ -1,3 +1,4 @@
+import { app_next_hash_to_languages_chosen } from "../../../love/public/src/app_next_hash_to_languages_chosen.mjs";
 import { hash_to_url } from "../../../love/public/src/hash_to_url.mjs";
 import { list_find_json_next } from "../../../love/public/src/list_find_json_next.mjs";
 import { ebible_index_flat } from "../../../love/public/src/ebible_index_flat.mjs";
@@ -15,7 +16,6 @@ import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs"
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
-import { string_split_plus } from "../../../love/public/src/string_split_plus.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_next_main(context) {
@@ -24,8 +24,7 @@ export async function app_next_main(context) {
   let hash = html_hash_object_get();
   let chapter_code = object_property_get(hash, "c");
   let verse_number = object_property_get(hash, "v");
-  let l = object_property_get(hash, "l");
-  let languages_chosen = string_split_plus(l);
+  let languages_chosen = app_next_hash_to_languages_chosen(hash);
   let languages_list = ebible_languages();
   async function lambda2(language) {
     let filtered = list_find_property(
