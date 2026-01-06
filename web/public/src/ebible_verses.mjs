@@ -1,5 +1,5 @@
+import { ebible_firebase_upload_path } from "../../../love/public/src/ebible_firebase_upload_path.mjs";
 import { firebase_storage_download_ebible } from "../../../love/public/src/firebase_storage_download_ebible.mjs";
-import { ebible_verses_upload_name } from "../../../love/public/src/ebible_verses_upload_name.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { urdu_allah_to_god } from "../../../love/public/src/urdu_allah_to_god.mjs";
@@ -20,7 +20,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
   if (browser_is()) {
-    let n = ebible_verses_upload_name(chapter_code, verse_number);
+    let destination = ebible_firebase_upload_path(bible_folder, chapter_code);
     let verse = await firebase_storage_download_ebible(bible_folder, n);
   }
   marker("1");
