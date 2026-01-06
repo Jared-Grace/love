@@ -120,7 +120,7 @@ export async function app_search_main(context) {
         return;
       }
       function lambda8(verse_number) {
-        let div = html_div(root2);
+        let div_verse = html_div(root2);
         let reference = ebible_parts_chapter_code_to_reference(
           chapter_code,
           books,
@@ -129,9 +129,9 @@ export async function app_search_main(context) {
         let b = null;
         function lambda3() {
           html_remove(b);
-          let p3 = html_p_text(div, reference);
+          let p3 = html_p_text(div_verse, reference);
         }
-        b = html_button_width_full(div, reference, lambda3);
+        b = html_button_width_full(div_verse, reference, lambda3);
       }
       each(verse_numbers, lambda8);
     }
