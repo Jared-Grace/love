@@ -37,6 +37,7 @@ import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { catch_ignore_async } from "./catch_ignore_async.mjs";
 export async function app_search_results(context, div_results) {
   marker("1");
+  html_clear(element);
   let languages_chosen = object_property_get(context, "languages_chosen");
   let en = ebible_folder_english();
   let english_choices = [en];
