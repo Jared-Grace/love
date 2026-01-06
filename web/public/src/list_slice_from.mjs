@@ -7,7 +7,8 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { list_last } from "./list_last.mjs";
 export function list_slice_from(list, item_from, item_to) {
   marker("1");
-  let mapped = list_map([item_from, item_to], () => {});
+  function lambda() {}
+  let mapped = list_map([item_from, item_to], lambda);
   list_sort_number(mapped);
   let v = list_first_last(list);
   let last = list_first(v);
