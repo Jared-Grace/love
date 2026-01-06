@@ -32,12 +32,12 @@ export async function app_chapter_main() {
       books,
       fl,
     );
-    let p = html_p_text(root, reference);
-    function lambda(item) {
-      let verse_number = object_property_get(item, "verse_number");
-      let text = object_property_get(item, "text");
-      p = html_p_text(root, verse_number + " " + text);
-      if (false) {
+    html_p_text(root, reference);
+    function lambda(v) {
+      let verse_number_v = object_property_get(v, "verse_number");
+      let text = object_property_get(v, "text");
+      let p = html_p_text(root, verse_number_v + " " + text);
+      if (verse_number_v === verse_number) {
       }
     }
     each(verses, lambda);
