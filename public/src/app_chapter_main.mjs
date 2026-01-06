@@ -82,7 +82,7 @@ export async function app_chapter_main(context) {
   }
   let languages_verses = await list_map_async(languages_chosen, lambda2);
   function copy() {
-    async function lambda3(bv) {
+    function lambda3(bv) {
       let books2 = object_property_get(bv, "books");
       let verses2 = object_property_get(bv, "verses");
       let verse_numbers = list_map_property(verses2, "verse_number");
@@ -98,7 +98,7 @@ export async function app_chapter_main(context) {
         [first, last],
       );
       let concated2 = list_concat([reference], mapped3);
-      let joined = await list_join_newline_2(concated2);
+      let joined = list_join_newline_2(concated2);
       return joined;
       log({
         joined,
