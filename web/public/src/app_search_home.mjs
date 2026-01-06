@@ -1,3 +1,4 @@
+import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_search_results } from "../../../love/public/src/app_search_results.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
@@ -14,7 +15,7 @@ import { list_sort_string_property } from "../../../love/public/src/list_sort_st
 import { list_slice_count } from "../../../love/public/src/list_slice_count.mjs";
 export function app_search_home(languages_chosen, root, context) {
   marker("1");
-    let languages = ebible_languages();
+  let languages = ebible_languages();
   let languages_chosen_default = list_slice_count(languages, 1, 1);
   list_sort_string_property(languages, "name");
   app_reply_languages_chosen_reset(languages_chosen, languages_chosen_default);
