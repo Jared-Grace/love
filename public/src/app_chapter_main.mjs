@@ -33,7 +33,7 @@ import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 export async function app_chapter_main(context) {
   marker("1");
   let root = html_mobile_default(context);
-  html_margin_0(root2);
+  html_margin_0(root);
   let bc = html_bar_content(root);
   let content = object_property_get(bc, "content");
   let bar = object_property_get(bc, "bar");
