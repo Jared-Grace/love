@@ -144,7 +144,7 @@ export async function app_search_results(context) {
       return b;
     }
     let bs = list_map(verse_numbers, lambda8);
-    let nn = null_not_is(value);
+    let nn = null_not_is(value);ln
     return bs;
   }
   let button_lists = list_map(list, lambda7);
