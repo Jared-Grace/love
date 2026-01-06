@@ -21,7 +21,6 @@ import { ebible_book_exists } from "../../../love/public/src/ebible_book_exists.
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
 import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
 import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
-import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -37,7 +36,6 @@ import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { catch_ignore_async } from "./catch_ignore_async.mjs";
 export async function app_search_results(context, div_results) {
   marker("1");
-  html_clear(element);
   let languages_chosen = object_property_get(context, "languages_chosen");
   let en = ebible_folder_english();
   let english_choices = [en];
@@ -65,7 +63,6 @@ export async function app_search_results(context, div_results) {
   }
   let dictionary = list_to_dictionary_value(chapter_codes_match, lambda5);
   html_clear(div_results);
-  let p3 = html_p_text(div_results, query);
   let text = app_karate_button_back_text();
   let button_list = null;
   let expand_all_div = html_div(div_results);
