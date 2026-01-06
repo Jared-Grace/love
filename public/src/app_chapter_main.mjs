@@ -45,7 +45,7 @@ export async function app_chapter_main() {
       if (verse_number_v === verse_number) {
         await html_scroll_center_now(p);
       }
-      function lambda4() {
+      function choose() {
         list_toggle(verse_numbers_chosen, verse_number_v);
         html_style_background_color_set_or_remove_list(
           p,
@@ -53,7 +53,7 @@ export async function app_chapter_main() {
           verse_number_v,
         );
       }
-      html_on_pointerdown(p, lambda4);
+      html_on_pointerdown(p, choose);
     }
     each(verses, lambda);
   }
