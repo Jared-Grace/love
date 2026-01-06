@@ -35,7 +35,7 @@ export function app_search_home(context) {
   html_focus(input);
   const text = "Search";
   html_button_width_full(root, text, search);
-  let div = html_div(root2);
+  let div_results = html_div(root2);
   async function search() {
     let query = html_value_get(input);
     object_property_set(context, "query", query);
