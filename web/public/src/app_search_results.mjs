@@ -36,6 +36,7 @@ import { app_bible_search_word_path } from "../../../love/public/src/app_bible_s
 import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 export async function app_search_results(context) {
   marker("1");
+  let languages_chosen2 = object_property_get(context, "languages_chosen");
   let en = ebible_folder_english();
   let english_choices = [en];
   let books = await ebible_version_books(en);
