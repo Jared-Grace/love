@@ -116,7 +116,8 @@ export async function app_search_results(context, div_results) {
         html_remove(b);
         html_button_copy_width_full(div_verse, copy);
         function lambda3() {
-          let file_name = file_name_html(app_chapter.name);
+          let app_fn = app_chapter;
+          let file_name = file_name_html(app_fn.name);
           window.open(file_name, "_blank");
         }
         html_button_width_full(div_verse, "chapter", lambda3);
