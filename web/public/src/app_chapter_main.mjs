@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { app_next_hash_to_languages_chosen } from "../../../love/public/src/app_next_hash_to_languages_chosen.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -11,5 +12,6 @@ export async function app_chapter_main() {
   let chapter_code = object_property_get(hash, "c");
   let verse_number = object_property_get(hash, "v");
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
+  let first = list_first(list2);
   let list = await ebible_verses(bible_folder, chapter_code2);
 }
