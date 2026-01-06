@@ -1,3 +1,4 @@
+import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -60,6 +61,7 @@ export async function app_chapter_main(context) {
       let verse_number_v = object_property_get(v, "verse_number");
       let text = object_property_get(v, "text");
       let p = html_p_text(content, verse_number_v + " " + text);
+      let v3 = list_first_is(list, item);
       if (verse_number_v === verse_number) {
         await html_scroll_center_now(p);
         choose();
