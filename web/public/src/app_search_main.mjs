@@ -132,7 +132,8 @@ export async function app_search_main(context) {
         let b = null;
         async function lambda3() {
           html_remove(b);
-          html_button_copy(div_verse, lambda12);hbwf
+          html_button_copy(div_verse, lambda12);
+          let component = html_button_width_full(root2, text4, lambda22);
           let p3 = html_p_text(div_verse, reference);
           let o = await ebible_verse_download(
             "engbsb",
