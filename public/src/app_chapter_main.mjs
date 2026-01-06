@@ -1,3 +1,4 @@
+import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
@@ -24,6 +25,7 @@ export async function app_chapter_main() {
   let list = await ebible_verses(bible_folder, chapter_code);
   let v = json_format_to(list);
   let p = html_pre_text(body, v);
+  let books2 = await ebible_version_books(bible_folder2);
   function lambda(item) {
     let reference = ebible_parts_chapter_code_to_reference(
       chapter_code,
