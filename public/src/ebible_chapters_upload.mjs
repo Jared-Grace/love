@@ -5,6 +5,10 @@ export async function ebible_chapters_upload(
   lambda$chapter_code$verses,
 ) {
   marker("1");
+  await ebible_chapters_each_verses_check_with(
+    bible_folder2,
+    async function lambda(chapter_code, verses) {},
+  );
   let v = await ebible_chapters_each_verses_check_with(
     bible_folder,
     lambda$chapter_code$verses,
