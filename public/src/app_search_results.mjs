@@ -1,5 +1,4 @@
-import { window_open } from "../../../love/public/src/window_open.mjs";
-import { file_name_html } from "../../../love/public/src/file_name_html.mjs";
+import { window_open_app } from "../../../love/public/src/window_open_app.mjs";
 import { app_chapter } from "../../../love/public/src/app_chapter.mjs";
 import { html_button_copy_width_full } from "../../../love/public/src/html_button_copy_width_full.mjs";
 import { firebase_storage_download_json_decompress } from "../../../love/public/src/firebase_storage_download_json_decompress.mjs";
@@ -118,8 +117,7 @@ export async function app_search_results(context, div_results) {
         html_button_copy_width_full(div_verse, copy);
         function lambda3() {
           let app_fn = app_chapter;
-          let file_name = file_name_html(app_fn.name);
-          window_open(file_name);
+          window_open_app(app_fn);
         }
         html_button_width_full(div_verse, "chapter", lambda3);
         let bible_texts = [];
