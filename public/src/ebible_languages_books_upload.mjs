@@ -11,5 +11,4 @@ export async function ebible_languages_books_upload() {
     let books = await ebible_version_books_upload(bible_folder);
   }
   let waited = await list_map_unordered_async(bible_folders, lambda);
-  return languages;
 }
