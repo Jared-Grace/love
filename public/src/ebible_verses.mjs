@@ -21,8 +21,8 @@ import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
   if (browser_is()) {
     let destination = ebible_firebase_upload_path(bible_folder, chapter_code);
-    let o = await firebase_storage_download_json_decompress(destination);
-    let verses = object_property_get(o, "verses");
+    let c = await firebase_storage_download_json_decompress(destination);
+    let verses = object_property_get(c, "verses");
     return verses;
   }
   marker("1");
