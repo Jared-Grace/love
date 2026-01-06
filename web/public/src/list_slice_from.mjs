@@ -12,5 +12,6 @@ export function list_slice_from(list, item_from, item_to) {
   let v = list_first_last(list);
   let last = object_property_get(v, "last");
   let first = object_property_get(v, "first");
-  let sliced = list_slice_include(list, a, b);
+  let sliced = list_slice_include(list, first, last);
+  return sliced;
 }
