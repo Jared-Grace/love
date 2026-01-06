@@ -31,7 +31,7 @@ export async function app_chapter_main() {
       books,
       [verse_number],
     );
-    html_p_text_multiple(parent, [reference, text]);
+    html_p_text_multiple(body, [reference, text]);
   }
   each(list, lambda);
 }
