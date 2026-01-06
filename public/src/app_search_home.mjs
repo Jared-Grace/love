@@ -15,8 +15,9 @@ import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_l
 import { app_reply_languages_chosen_reset } from "../../../love/public/src/app_reply_languages_chosen_reset.mjs";
 import { list_sort_string_property } from "../../../love/public/src/list_sort_string_property.mjs";
 import { list_slice_count } from "../../../love/public/src/list_slice_count.mjs";
-export function app_search_home(root, context) {
+export function app_search_home(root2, context) {
   marker("1");
+  let root = object_property_get(context, "root");
   html_clear(root);
   let languages_chosen = object_property_get(context, "languages_chosen");
   let languages = ebible_languages();
