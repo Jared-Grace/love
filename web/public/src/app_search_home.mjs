@@ -14,6 +14,7 @@ import { list_sort_string_property } from "../../../love/public/src/list_sort_st
 import { list_slice_count } from "../../../love/public/src/list_slice_count.mjs";
 export function app_search_home(languages_chosen, root, context) {
   marker("1");
+    let languages = ebible_languages();
   let languages_chosen_default = list_slice_count(languages, 1, 1);
   list_sort_string_property(languages, "name");
   app_reply_languages_chosen_reset(languages_chosen, languages_chosen_default);
