@@ -1,13 +1,8 @@
-import { null_is } from "../../../love/public/src/null_is.mjs";
-import { retry_until_success } from "../../../love/public/src/retry_until_success.mjs";
-import { catch_ignore_async } from "../../../love/public/src/catch_ignore_async.mjs";
-import { list_pop } from "../../../love/public/src/list_pop.mjs";
-import { list_copy } from "../../../love/public/src/list_copy.mjs";
+import { app_reply_verse } from "../../../love/public/src/app_reply_verse.mjs";
 import { app_reply_languages_chosen_reset } from "../../../love/public/src/app_reply_languages_chosen_reset.mjs";
 import { app_reply_buttons_languages } from "../../../love/public/src/app_reply_buttons_languages.mjs";
 import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_languages_prompt.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { ebible_versions_english_choices } from "../../../love/public/src/ebible_versions_english_choices.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_reply_buttons_refresh } from "../../../love/public/src/app_reply_buttons_refresh.mjs";
@@ -24,7 +19,6 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
-import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
@@ -113,33 +107,17 @@ export async function app_reply_main(context) {
       let verse_range = await ebible_references_parse_lines([en], [reference]);
       async function lambda5(l) {
         async function lambda8(verse) {
-          let choices = null;
           let bible_folder = object_property_get(l, "bible_folder");
-          let right = ebible_folder_english();
           let chapter_code = object_property_get(verse, "chapter_code");
           let verse_number = object_property_get(verse, "verse_number");
-          let lambda11 = catch_ignore_async;
-          const en_is = equal(bible_folder, right);
-          if (en_is) {
-            lambda11 = retry_until_success;
-          }
-          async function lambda() {
-            if (en_is) {
-              if (null_is(choices)) {
-                choices = list_copy(english_choices);
-                list_shuffle(choices);
-              }
-              bible_folder = list_pop(choices);
-            }
-            let d = await ebible_verse(
-              bible_folder,
-              chapter_code,
-              verse_number,
-            );
-            return d;
-          }
-          let v2 = await lambda11(lambda);
-          return v2;
+          let r = null;
+          r = await app_reply_verse(
+            bible_folder,
+            english_choices,
+            chapter_code,
+            verse_number,
+          );
+          return r;
         }
         let verses = await list_map_unordered_async(verse_range, lambda8);
         function lambda7(v) {
