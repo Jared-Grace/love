@@ -1,3 +1,4 @@
+import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
 import { app_search_home } from "../../../love/public/src/app_search_home.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
@@ -111,4 +112,5 @@ export async function app_search_results(context) {
     return bs;
   }
   let button_lists = list_map(list, lambda7);
+  let squashed = list_squash(list2);
 }
