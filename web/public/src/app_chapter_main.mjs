@@ -61,7 +61,10 @@ export async function app_chapter_main(context) {
       let verse_number_v = object_property_get(v, "verse_number");
       let text = object_property_get(v, "text");
       let p = html_p_text(content, verse_number_v + " " + text);
-      let v3 = list_last_is(list, item);
+      let li = list_last_is(languages_chosen, lc);
+      if (false) {
+        return;
+      }
       if (verse_number_v === verse_number) {
         await html_scroll_center_now(p);
         choose();
