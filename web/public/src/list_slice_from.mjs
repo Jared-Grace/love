@@ -8,8 +8,9 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { list_last } from "./list_last.mjs";
 export function list_slice_from(list, item_from, item_to) {
   marker("1");
-  function lambda() {
-    let index = list_index_of(list2, item);
+  function lambda(item) {
+    let index = list_index_of(list, item);
+    return index;
   }
   let mapped = list_map([item_from, item_to], lambda);
   list_sort_number(mapped);
