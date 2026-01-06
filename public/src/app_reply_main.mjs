@@ -1,4 +1,4 @@
-import { app_reply_verse } from "../../../love/public/src/app_reply_verse.mjs";
+import { app_reply_verses_add } from "../../../love/public/src/app_reply_verses_add.mjs";
 import { app_reply_languages_chosen_reset } from "../../../love/public/src/app_reply_languages_chosen_reset.mjs";
 import { app_reply_buttons_languages } from "../../../love/public/src/app_reply_buttons_languages.mjs";
 import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_languages_prompt.mjs";
@@ -17,9 +17,6 @@ import { prayer_blessing_expand } from "../../../love/public/src/prayer_blessing
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
-import { equal_not } from "../../../love/public/src/equal_not.mjs";
-import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
-import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { each_range_from } from "../../../love/public/src/each_range_from.mjs";
@@ -104,34 +101,14 @@ export async function app_reply_main(context) {
     let taken = list_take(encouragement, verse_count);
     let reference_current = null;
     async function lambda6(reference) {
-      let verse_range = await ebible_references_parse_lines([en], [reference]);
-      async function lambda5(l) {
-        async function lambda8(verse) {
-          let bible_folder = object_property_get(l, "bible_folder");
-          let chapter_code = object_property_get(verse, "chapter_code");
-          let verse_number = object_property_get(verse, "verse_number");
-          let r = null;
-          r = await app_reply_verse(
-            bible_folder,
-            english_choices,
-            chapter_code,
-            verse_number,
-          );
-          return r;
-        }
-        let verses = await list_map_unordered_async(verse_range, lambda8);
-        function lambda7(v) {
-          if (equal_not(reference, reference_current)) {
-            list_add(bible_texts, reference);
-            reference_current = reference;
-          }
-          let text = object_property_get(v, "text");
-          list_add(bible_texts, text);
-        }
-        each(verses, lambda7);
-      }
-      let copy = list_copy_reverse(languages_chosen);
-      await each_async(copy, lambda5);
+      reference_current = await app_reply_verses_add(
+        en,
+        reference,
+        english_choices,
+        reference_current,
+        bible_texts,
+        languages_chosen,
+      );
     }
     await each_async(taken, lambda6);
     buttons_refresh();
