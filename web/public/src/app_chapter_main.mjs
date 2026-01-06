@@ -1,3 +1,4 @@
+import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
@@ -58,6 +59,7 @@ export async function app_chapter_main(context) {
           verse_numbers_chosen,
           verse_number_v,
         );
+        let e = list_empty_is(list);
         html_display_none_or_block(hidden, item);
       }
       html_on_pointerdown(p, choose);
