@@ -39,7 +39,7 @@ export async function app_search_main(context) {
   const text = "Search";
   html_button_width_full(root, text, search);
   async function search() {
-    let value = html_value_get(input);
+    let query = html_value_get(input);
     await app_search_results(
       root,
       context,
