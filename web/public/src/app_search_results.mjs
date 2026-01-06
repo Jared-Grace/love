@@ -124,6 +124,7 @@ export async function app_search_results(context) {
         }
       }
       b = html_button_width_full(div_verse, reference, click);
+      object_property_set_exists_not(b, "click", click);
       return b;
     }
     let bs = list_map(verse_numbers, lambda8);
