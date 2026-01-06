@@ -1,3 +1,4 @@
+import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { ebible_versions_english_choices } from "../../../love/public/src/ebible_versions_english_choices.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
@@ -150,6 +151,7 @@ export async function app_search_main(context) {
           );
           html_p_text_multiple(div_verse, bible_texts);
           async function lambda12() {
+            let joined = list_join_newline_2(list);
             let text3 = reference + " " + text2;
             await clipboard_copy(text3);
           }
