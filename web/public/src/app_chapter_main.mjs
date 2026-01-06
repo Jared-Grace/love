@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { list_map_find_property } from "../../../love/public/src/list_map_find_property.mjs";
@@ -92,6 +93,9 @@ export async function app_chapter_main(context) {
       );
       let concated2 = list_concat([reference], mapped3);
       let joined = await list_join_newline_2_copy(concated2);
+      log({
+        joined,
+      });
     }
     each(languages_verses, lambda3);
   }
