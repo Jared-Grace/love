@@ -17,7 +17,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export async function app_chapter_main() {
+export async function app_chapter_main(context) {
   marker("1");
   let root = html_mobile_default(context);
   firebase_name_jg();
