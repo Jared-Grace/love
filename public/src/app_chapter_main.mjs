@@ -32,6 +32,7 @@ export async function app_chapter_main() {
     books,
     fl,
   );
+  let p = html_p_text(root, text2);
   function lambda(item) {
     let text = object_property_get(item, "text");
     html_p_text(body, verse_number + " " + text);
