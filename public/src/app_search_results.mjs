@@ -117,7 +117,11 @@ export async function app_search_results(context, div_results) {
         html_button_copy_width_full(div_verse, copy);
         function lambda3() {
           let app_fn = app_chapter;
-          window_open_app(app_fn, hash);
+          window_open_app(app_fn, {
+            c: chapter_code,
+            v: verse_number,
+            l: languages_chosen,
+          });
         }
         html_button_width_full(div_verse, "chapter", lambda3);
         let bible_texts = [];
