@@ -14,7 +14,7 @@ export function list_slice_from(list, item_from, item_to) {
   }
   let mapped = list_map([item_from, item_to], lambda);
   list_sort_number(mapped);
-  let v = list_first_last(list);
+  let v = list_first_last(mapped);
   let last = list_first(v);
   let first = list_last(v);
   let sliced = list_slice_include(list, first, last);
