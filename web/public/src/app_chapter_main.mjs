@@ -26,7 +26,7 @@ export async function app_chapter_main() {
   let p = html_pre_text(body, v);
   function lambda(item) {
     let reference = ebible_parts_chapter_code_to_reference(
-      chapter_code2,
+      chapter_code,
       books,
       verse_numbers,
     );
