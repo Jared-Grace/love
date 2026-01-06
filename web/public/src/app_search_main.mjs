@@ -51,7 +51,7 @@ export async function app_search_main(context) {
   firebase_name_jg();
   html_clear(root);
   let en = ebible_folder_english();
-  let english_choices = ["engbsb"];
+  let english_choices = [en];
   let languages = ebible_languages();
   let languages_chosen = [];
   let languages_chosen_default = list_slice_count(languages, 1, 1);
