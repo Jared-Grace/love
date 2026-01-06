@@ -1,3 +1,4 @@
+import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { html_style_background_color_set_or_remove_list } from "../../../love/public/src/html_style_background_color_set_or_remove_list.mjs";
 import { list_toggle } from "../../../love/public/src/list_toggle.mjs";
@@ -20,6 +21,9 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_chapter_main(context) {
   marker("1");
   let root = html_mobile_default(context);
+  let bc = html_bar_content(root);
+  let content = object_property_get(bc, "content");
+  let bar = object_property_get(bc, "bar");
   firebase_name_jg();
   let hash = html_hash_object_get();
   let chapter_code = object_property_get(hash, "c");
