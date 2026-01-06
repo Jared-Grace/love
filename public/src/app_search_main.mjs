@@ -41,7 +41,6 @@ export async function app_search_main(context) {
   async function search() {
     let value = html_value_get(input);
     await app_search_results(
-      input,
       root,
       context,
       books,
