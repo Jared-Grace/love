@@ -77,9 +77,7 @@ export async function app_search_results(context) {
   async function lambda2() {
     async function lambda9(b) {
       let click2 = object_property_get(b, "click");
-      async function lambda10() {}
-      let r = await catch_ignore_async(lambda10);
-      await click2();
+      await catch_ignore_async(click2);
       let bible_texts2 = object_property_get(b, "bible_texts");
       return bible_texts2;
     }
