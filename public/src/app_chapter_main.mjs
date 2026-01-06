@@ -25,16 +25,15 @@ export async function app_chapter_main() {
   let bible_folder = ebible_language_to_bible_folder(first);
   let list = await ebible_verses(bible_folder, chapter_code);
   let books = await ebible_version_books(bible_folder);
-  let mapped = list_map_property(list3, property_name);
-  let v = list_first_last(list2);
+  let mapped = list_map_property(list, "verse_number");
+  let fl = list_first_last(mapped);
+  let reference = ebible_parts_chapter_code_to_reference(
+    chapter_code,
+    books,
+    fl,
+  );
   function lambda(item) {
-    let verse_number = object_property_get(item, "verse_number");
     let text = object_property_get(item, "text");
-    let reference = ebible_parts_chapter_code_to_reference(
-      chapter_code,
-      books,
-      [verse_number],
-    );
     html_p_text(body, verse_number + " " + text);
   }
   each(list, lambda);
