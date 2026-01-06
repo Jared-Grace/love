@@ -1,7 +1,6 @@
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { app_search_results } from "../../../love/public/src/app_search_results.mjs";
-import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
@@ -20,7 +19,6 @@ export async function app_search_main(context) {
   let root = html_mobile_default(context);
   firebase_name_jg();
   html_clear(root);
-  let en = ebible_folder_english();
   let languages = ebible_languages();
   let languages_chosen = [];
   let languages_chosen_default = list_slice_count(languages, 1, 1);
