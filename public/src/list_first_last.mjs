@@ -5,5 +5,6 @@ export function list_first_last(list) {
   marker("1");
   let first = list_first(list);
   let last = list_last(list);
-  return [first, last];
+  let v = [first, last];
+  return v;
 }
