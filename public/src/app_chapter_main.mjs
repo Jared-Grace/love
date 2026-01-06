@@ -36,7 +36,7 @@ export async function app_chapter_main() {
     function lambda(item) {
       let verse_number = object_property_get(item, "verse_number");
       let text = object_property_get(item, "text");
-      html_p_text(root, verse_number + " " + text);
+      p = html_p_text(root, verse_number + " " + text);
     }
     each(verses, lambda);
   }
