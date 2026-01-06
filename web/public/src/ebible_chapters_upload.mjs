@@ -12,7 +12,7 @@ export async function ebible_chapters_upload(bible_folder) {
       bible_folder,
     });
     let chapter_code = object_property_get(value, "chapter_code");
-    let destination2 = ebible_firebase_upload_path(bible_folder, file_name);
+    let destination = ebible_firebase_upload_path(bible_folder, chapter_code);
     let v3 = {
       destination,
       value,
