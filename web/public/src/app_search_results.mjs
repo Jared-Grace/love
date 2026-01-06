@@ -111,6 +111,7 @@ export async function app_search_results(context) {
         }
       }
       b = html_button_width_full(div_verse, reference, lambda3);
+      return b;
     }
     let bs = list_map(verse_numbers, lambda8);
     return bs;
