@@ -55,12 +55,12 @@ import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs"
 import { app_reply_choices } from "../../../love/public/src/app_reply_choices.mjs";
 export async function app_reply_generic(verse_get) {
   let choices = app_reply_choices();
-  let languages = ebible_languages();
-  let encouragement = bible_verses_uplifting();
-  firebase_name_jg();
   let en = ebible_folder_english();
   let original = bible_interlinear_verses_upload_folder();
+  let languages = ebible_languages();
   list_remove_property_multiple(languages, "language_code", ["en", original]);
+  let encouragement = bible_verses_uplifting();
+  firebase_name_jg();
   let file_name = ebible_index_flat_upload_name();
   let index = await firebase_storage_download_ebible(en, file_name);
   let books = await ebible_version_books(en);
@@ -222,7 +222,9 @@ export async function app_reply_generic(verse_get) {
       let exists = object_property_exists(v, "translations");
       if (exists) {
         let translations2 = object_property_get(v, "translations");
-        let { last, remaining } = list_last_remaining(translations2);
+        let v3 = list_last_remaining(translations2);
+        let remaining = object_property_get(v3, "remaining");
+        let last = object_property_get(v3, "last");
         original_translation = last;
         if (remaining !== null) {
           each(remaining, verses_add);
