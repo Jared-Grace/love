@@ -5,6 +5,6 @@ export async function ebible_languages_chapters_upload() {
   marker("1");
   await ebible_languages_without_original_bible_folders_each(lambda);
   async function lambda(bible_folder) {
-    let books = await ebible_chapters_upload(bible_folder);
+    await ebible_chapters_upload(bible_folder);
   }
 }
