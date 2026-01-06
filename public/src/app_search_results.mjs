@@ -78,7 +78,7 @@ export async function app_search_results(context) {
     each(button_list, lambda3);
     async function lambda9(item) {
       let click2 = object_property_get(b, "click");
-      awaitclick2();
+      await click2();
     }
     let waited = await list_map_unordered_async(button_list, lambda9);
     html_remove(expand_all);
