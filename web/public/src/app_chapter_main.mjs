@@ -1,3 +1,4 @@
+import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -11,7 +12,6 @@ import { html_style_background_color_set_or_remove_list } from "../../../love/pu
 import { list_toggle } from "../../../love/public/src/list_toggle.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { html_scroll_center_now } from "../../../love/public/src/html_scroll_center_now.mjs";
-import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { list_first_last } from "../../../love/public/src/list_first_last.mjs";
@@ -70,10 +70,12 @@ export async function app_chapter_main(context) {
       }
       html_on_pointerdown(p, choose);
     }
-    each(verses, lambda);$r,verses
+    each(verses, lambda);
+    return verses;
   }
-  let languages_verses=await list_map_async(languages_chosen, lambda2);
-  function copy() {$e
+  let languages_verses = await list_map_async(languages_chosen, lambda2);
+  function copy() {
+    each(list, function lambda3(item) {});
     let v = list_first_last(verse_numbers_chosen);
     let last = list_first(v);
     let first = list_last(v);
