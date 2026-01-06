@@ -7,7 +7,6 @@ import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs"
 export async function app_search_main(context) {
   let root = html_mobile_default(context);
   html_clear(root);
-  let languages = ebible_languages();
   firebase_name_jg();
   let languages_chosen = [];
   object_property_set_exists_not(context, "languages_chosen", languages_chosen);
