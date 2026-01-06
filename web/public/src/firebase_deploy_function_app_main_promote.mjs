@@ -3,7 +3,6 @@ import { firebase_deploy_function_app_main } from "../../../love/public/src/fire
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function firebase_deploy_function_app_main_promote(a) {
   marker("1");
-  let v2 = await app_promote(a);
-  let v = await firebase_deploy_function_app_main(a);
-  return v;
+  await firebase_deploy_function_app_main(a);
+  await app_promote(a);
 }
