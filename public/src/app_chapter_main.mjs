@@ -1,3 +1,4 @@
+import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { html_style_background_color_set_or_remove_list } from "../../../love/public/src/html_style_background_color_set_or_remove_list.mjs";
 import { list_toggle } from "../../../love/public/src/list_toggle.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
@@ -9,7 +10,6 @@ import { list_first_last } from "../../../love/public/src/list_first_last.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { ebible_language_to_bible_folder } from "../../../love/public/src/ebible_language_to_bible_folder.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { app_next_hash_to_languages_chosen } from "../../../love/public/src/app_next_hash_to_languages_chosen.mjs";
@@ -19,8 +19,8 @@ import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs"
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_chapter_main() {
   marker("1");
+  let root = html_mobile_default(context);
   firebase_name_jg();
-  let root = html_document_body();
   let hash = html_hash_object_get();
   let chapter_code = object_property_get(hash, "c");
   let verse_number = object_property_get(hash, "v");
