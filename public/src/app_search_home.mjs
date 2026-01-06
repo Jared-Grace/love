@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_search_results } from "../../../love/public/src/app_search_results.mjs";
@@ -15,6 +16,7 @@ import { list_sort_string_property } from "../../../love/public/src/list_sort_st
 import { list_slice_count } from "../../../love/public/src/list_slice_count.mjs";
 export function app_search_home(root, context) {
   marker("1");
+  let languages_chosen = object_property_get(context, "languages_chosen");
   let languages = ebible_languages();
   let languages_chosen_default = list_slice_count(languages, 1, 1);
   list_sort_string_property(languages, "name");
