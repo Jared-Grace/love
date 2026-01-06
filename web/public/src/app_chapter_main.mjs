@@ -27,7 +27,7 @@ export async function app_chapter_main() {
   let p = html_pre_text(body, v);
   let books = await ebible_version_books(bible_folder);
   function lambda(item) {
-    let verse_number2 = object_property_get(item, "verse_number");
+    let verse_number = object_property_get(item, "verse_number");
     let reference = ebible_parts_chapter_code_to_reference(
       chapter_code,
       books,
