@@ -1,3 +1,4 @@
+import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -32,6 +33,7 @@ export function app_search_home(context) {
   let input = html_input_text(root, search_instructions);
   html_width_full(input);
   html_focus(input);
+  html_value_set(input2, value);
   const text = "Search";
   html_button_width_full(root, text, search);
   async function search() {
