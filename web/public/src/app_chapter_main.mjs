@@ -37,7 +37,7 @@ export async function app_chapter_main(context) {
   html_margin_0(root);
   let bc = html_bar_content(root);
   let content = object_property_get(bc, "content");
-  html_style_set(b, style_key, style_value);
+  html_style_set(b, "overflow", "scroll");
   let bar = object_property_get(bc, "bar");
   html_button_copy_width_full(bar, copy);
   firebase_name_jg();
