@@ -83,7 +83,8 @@ export async function app_chapter_main(context) {
       let first = list_last(v);
       let sliced = list_slice_from(verse_numbers, first, last);
       function lambda4(item) {
-        let item2 = list_find_property(list2, property_name, property_value);
+        let item2 = list_find_property(sliced, "verse_number", item);
+        return item2;
       }
       let mapped2 = list_map(list, lambda4);
     }
