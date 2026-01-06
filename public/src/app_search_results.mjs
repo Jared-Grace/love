@@ -73,12 +73,16 @@ export async function app_search_results(context) {
   let button_list = null;
   let expand_all_div = html_div(root);
   let expand_all = null;
-  function lambda2() {
+  async function lambda2() {
     function lambda3(b) {
       let click2 = object_property_get(b, "click");
       click2();
     }
     each(button_list, lambda3);
+    let waited = await list_map_unordered_async(
+      list2,
+      async function lambda9(item) {},
+    );
     html_remove(expand_all);
     let c2 = html_button_copy_text();
     function lambda6() {}
