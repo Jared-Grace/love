@@ -4,7 +4,6 @@ import { object_property_set_exists_not } from "../../../love/public/src/object_
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
-import { app_search_home } from "../../../love/public/src/app_search_home.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
@@ -66,11 +65,7 @@ export async function app_search_results(context, div_results) {
   let dictionary = list_to_dictionary_value(chapter_codes_match, lambda5);
   html_clear(div_results);
   let p3 = html_p_text(div_results, query);
-  async function back() {
-    app_search_home(context);
-  }
   let text = app_karate_button_back_text();
-  let component2 = html_button_width_full(div_results, text, back);
   let button_list = null;
   let expand_all_div = html_div(div_results);
   let expand_all = null;
