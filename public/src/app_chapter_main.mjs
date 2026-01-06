@@ -82,13 +82,14 @@ export async function app_chapter_main(context) {
   }
   let languages_verses = await list_map_async(languages_chosen, lambda2);
   function copy() {
-    async function lambda3(lv) {
-      let verse_numbers = list_map_property(lv, "verse_number");
+    async function lambda3(bv) {
+      let verses2 = object_property_get(books, "verses");
+      let verse_numbers = list_map_property(bv, "verse_number");
       let v = list_first_last(verse_numbers_chosen);
       let last = list_first(v);
       let first = list_last(v);
       let sliced = list_slice_from(verse_numbers, first, last);
-      let mapped2 = list_map_find_property(sliced, lv, "verse_number");
+      let mapped2 = list_map_find_property(sliced, bv, "verse_number");
       let mapped3 = list_map_property(mapped2, "text");
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
