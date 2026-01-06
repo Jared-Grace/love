@@ -25,10 +25,7 @@ export async function app_next_main(context) {
   let verse_number = object_property_get(hash, "v");
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
   async function lambda2(language) {
-    let bible_folder = ebible_language_to_bible_folder(
-      languages_list,
-      language,
-    );
+    let bible_folder = ebible_language_to_bible_folder(language);
     let d = await ebible_verse(bible_folder, chapter_code, verse_number);
     let text = object_property_get(d, "text");
     return text;
