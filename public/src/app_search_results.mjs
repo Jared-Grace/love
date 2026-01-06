@@ -110,5 +110,5 @@ export async function app_search_results(context) {
     let bs = list_map(verse_numbers, lambda8);
     return bs;
   }
-  list_map(list, lambda7);
+  let button_lists = list_map(list, lambda7);
 }
