@@ -6,6 +6,6 @@ export async function ebible_verse_download(
   verse_number,
 ) {
   let n = ebible_verses_upload_name(chapter_code, verse_number);
-  let index = await firebase_storage_download_ebible(bible_folder, n);
-  return index;
+  let verse = await firebase_storage_download_ebible(bible_folder, n);
+  return verse;
 }
