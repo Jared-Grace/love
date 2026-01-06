@@ -19,8 +19,8 @@ export function list_slice_from(list, item_from, item_to) {
     mapped,
   });
   let v = list_first_last(mapped);
-  let last = list_first(v);
-  let first = list_last(v);
+  let first = list_first(v);
+  let last = list_last(v);
   let sliced = list_slice_include(list, first, last);
   return sliced;
 }
