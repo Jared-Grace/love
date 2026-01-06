@@ -4,7 +4,8 @@ import { list_slice_include } from "../../../love/public/src/list_slice_include.
 import { marker } from "../../../love/public/src/marker.mjs";
 export function list_slice_from(list, item_from, item_to) {
   marker("1");
-  let mapped = list_map(list2, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list2, lambda);
   let a = list_index_of(list, item_from);
   let b = list_index_of(list, item_to);
   let sliced = list_slice_include(list, a, b);
