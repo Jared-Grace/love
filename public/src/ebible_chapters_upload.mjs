@@ -1,5 +1,3 @@
-import { ebible_version_books_upload } from "../../../love/public/src/ebible_version_books_upload.mjs";
-import { ebible_languages_without_original_bible_folders_each } from "../../../love/public/src/ebible_languages_without_original_bible_folders_each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_firebase_upload_path } from "../../../love/public/src/ebible_firebase_upload_path.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
@@ -22,9 +20,5 @@ export async function ebible_chapters_upload(bible_folder) {
     return v3;
   }
   await firebase_upload_object_compressed_chunked(chapters, lambda);
-  await ebible_languages_without_original_bible_folders_each(lambda);
-  async function lambda(bible_folder) {
-    let books = await ebible_version_books_upload(bible_folder);
-  }
   return chapters;
 }
