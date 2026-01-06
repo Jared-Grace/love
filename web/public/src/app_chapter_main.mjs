@@ -99,6 +99,7 @@ export async function app_chapter_main(context) {
       );
       let concated2 = list_concat([reference], mapped3);
       let joined = await list_join_newline_2(concated2);
+      return joined;
       log({
         joined,
       });
