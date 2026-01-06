@@ -49,10 +49,10 @@ import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs"
 import { list_map_property } from "./list_map_property.mjs";
 export async function app_search_main(context) {
   let root = html_mobile_default(context);
+  firebase_name_jg();
   html_clear(root);
   let en = ebible_folder_english();
   let english_choices = await ebible_versions_english_choices();
-  firebase_name_jg();
   let languages = ebible_languages();
   let languages_chosen = [];
   let languages_chosen_default = list_slice_count(languages, 1, 1);
