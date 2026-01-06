@@ -9,7 +9,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
-import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { app_reply_verses_add } from "../../../love/public/src/app_reply_verses_add.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
@@ -130,7 +129,6 @@ export async function app_search_results(context) {
           languages_chosen,
         );
         html_p_text_multiple(div_verse, bible_texts);
-        list_add_first(bible_texts, reference);
         object_property_set_exists_not(b, "bible_texts", bible_texts);
         async function copy() {
           await list_join_newline_2_copy(bible_texts);
