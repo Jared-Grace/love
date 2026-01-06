@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
@@ -39,6 +40,7 @@ export async function app_search_results(
   languages_chosen,
 ) {
   marker("1");
+  let root = object_property_get(context, "root");
   let en = ebible_folder_english();
   let value = html_value_get(input);
   let words = string_to_words(value);
