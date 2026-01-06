@@ -3,7 +3,6 @@ import { object_property_set_exists_not } from "../../../love/public/src/object_
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
-import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 export async function app_search_main(context) {
   let root = html_mobile_default(context);
   html_clear(root);
