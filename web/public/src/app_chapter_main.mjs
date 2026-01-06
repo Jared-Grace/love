@@ -18,7 +18,7 @@ export async function app_chapter_main() {
   let verse_number = object_property_get(hash, "v");
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
   let first = list_first(languages_chosen);
-  let bible_folder = ebible_language_to_bible_folder(languages_list, first);
+  let bible_folder = ebible_language_to_bible_folder(first);
   let f = list_find_property(languages_list, "language_code", first);
   let list = await ebible_verses(bible_folder, chapter_code);
   let p = html_p_text(body, list);
