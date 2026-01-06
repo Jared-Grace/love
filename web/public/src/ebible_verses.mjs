@@ -20,7 +20,8 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
   if (browser_is()) {
-    let file_name_with_extension = ebible_firebase_upload_path_name(file_name);
+    let file_name_with_extension =
+      ebible_firebase_upload_path_name(chapter_code);
     let c = await firebase_storage_download_ebible(
       bible_folder,
       file_name_with_extension,
