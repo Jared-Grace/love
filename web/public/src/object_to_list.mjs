@@ -9,6 +9,6 @@ export function object_to_list(o) {
     return v;
   }
   let result2 = object_values_map(o, lambda3);
-  let v2 = object_values(result2);
-  return v2;
+  let list = object_values(result2);
+  return list;
 }
