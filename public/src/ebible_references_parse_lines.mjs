@@ -25,8 +25,9 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
   let book_names = object_property_get(v, "book_names");
   let chapter_verses_list = object_property_get(v, "chapter_verses_list");
   async function lambda2(la) {
-    log(message);
+    log("here1");
     async function lambda(book_name, chapter_verses) {
+      log("here2");
       let v2 = ebible_reference_parts(books, book_name, chapter_verses);
       let verse_end = object_property_get(v2, "verse_end");
       let verse_start = object_property_get(v2, "verse_start");
