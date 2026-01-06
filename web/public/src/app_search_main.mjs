@@ -1,3 +1,4 @@
+import { ebible_verse_download } from "../../../love/public/src/ebible_verse_download.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
@@ -127,10 +128,14 @@ export async function app_search_main(context) {
           [verse_number],
         );
         let b = null;
-        function lambda3() {
+        async function lambda3() {
           html_remove(b);
           let p3 = html_p_text(div_verse, reference);
-          evd;
+          let index = await ebible_verse_download(
+            bible_folder,
+            chapter_code2,
+            verse_number2,
+          );
         }
         b = html_button_width_full(div_verse, reference, lambda3);
       }
