@@ -72,8 +72,8 @@ export async function app_search_results(context) {
   let component2 = html_button_width_full(root, text, back);
   let list = object_to_list(dictionary);
   function lambda7(vk) {
-    let value2 = object_property_get(vk, "value");
-    let key = object_property_get(vk, "key");
+    let verse_numbers = object_property_get(vk, "value");
+    let chapter_code = object_property_get(vk, "key");
     let book_code = ebible_chapter_code_to_book(chapter_code);
     let e = ebible_book_exists(books, book_code);
     if (not(e)) {
