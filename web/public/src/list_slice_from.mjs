@@ -6,7 +6,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function list_slice_from(list, item_from, item_to) {
   marker("1");
   let mapped = list_map([item_from, item_to], list_index_of);
-  list_sort_number(list2);
+  list_sort_number(mapped);
   let a = list_index_of(list, item_from);
   let b = list_index_of(list, item_to);
   let sliced = list_slice_include(list, a, b);
