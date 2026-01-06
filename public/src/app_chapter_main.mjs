@@ -43,7 +43,8 @@ export async function app_chapter_main() {
       if (verse_number_v === verse_number) {
         await html_scroll_center_now(p);
       }
-      html_on_pointerdown(component, function lambda4() {});
+      function lambda4() {}
+      html_on_pointerdown(component, lambda4);
     }
     each(verses, lambda);
   }
