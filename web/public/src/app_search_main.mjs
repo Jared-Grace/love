@@ -123,7 +123,7 @@ export async function app_search_main(context) {
           books,
           [verse_number],
         );
-        let p3 = html_button_width_full(root, reference);
+        let p3 = html_button_width_full(root, reference, () => {});
       }
       each(verse_numbers, lambda8);
     }
