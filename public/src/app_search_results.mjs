@@ -1,3 +1,4 @@
+import { html_pointerdown } from "../../../love/public/src/html_pointerdown.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
@@ -73,8 +74,7 @@ export async function app_search_results(context) {
   let component2 = html_button_width_full(root, text, back);
   let button_list = null;
   function lambda2() {
-    function lambda6(item) {}
-    each(list2, lambda6);
+    each(button_list, html_pointerdown);
   }
   let component3 = html_button_width_full(root, "Expand all", lambda2);
   let list = object_to_list(dictionary);
