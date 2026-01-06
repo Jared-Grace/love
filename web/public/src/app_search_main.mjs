@@ -59,10 +59,9 @@ export async function app_search_main(context) {
     "What words would you like to search for? Separate by spaces. A verse will match if any Bible version contains the word. Spelling matters.";
   let p2 = html_p_text(root, "2. " + search_instructions);
   let input = html_input_text(root, search_instructions);
-  html_value_set(input, "glory highest");
   html_width_full(input);
   html_focus(input);
-  let books = await ebible_version_books("engbsb");
+  let books = await ebible_version_books(en);
   const text = "Search";
   html_button_width_full(root, text, lambda2);
   async function lambda2() {
