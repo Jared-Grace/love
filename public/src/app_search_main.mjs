@@ -1,6 +1,6 @@
+import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { html_button_copy } from "../../../love/public/src/html_button_copy.mjs";
-import { ebible_verse_download } from "../../../love/public/src/ebible_verse_download.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
@@ -135,11 +135,7 @@ export async function app_search_main(context) {
           let c = html_button_copy(div_verse, lambda12);
           html_width_full(c);
           let p3 = html_p_text(div_verse, reference);
-          let o = await ebible_verse_download(
-            "engbsb",
-            chapter_code,
-            verse_number,
-          );
+          let o = await ebible_verse("engbsb", chapter_code, verse_number);
           let text2 = object_property_get(o, "text");
           let p4 = html_p_text(div_verse, text2);
           async function lambda12() {
