@@ -76,6 +76,7 @@ export async function app_search_results(context) {
   function lambda2() {
     function lambda3(b) {
       let click2 = object_property_get(b, "click");
+      click2();
     }
     each(button_list, lambda3);
     html_remove(expand_all);
