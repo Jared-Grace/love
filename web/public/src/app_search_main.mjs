@@ -1,3 +1,4 @@
+import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { app_search_results } from "../../../love/public/src/app_search_results.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
@@ -40,6 +41,7 @@ export async function app_search_main(context) {
   html_button_width_full(root, text, search);
   async function search() {
     let query = html_value_get(input);
+    object_property_set_exists_not(object, property_name, value);
     await app_search_results(
       root,
       context,
