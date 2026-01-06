@@ -35,8 +35,6 @@ export async function app_component(a_name, back) {
   html_style_assign(bar, {
     flex: "0 0 auto",
   });
-  let text = app_karate_button_back_text();
-  let component = html_button_width_full(bar, text, back);
   let div = html_div(shell);
   html_style_assign(div, {
     flex: "1 1 auto",
@@ -44,5 +42,7 @@ export async function app_component(a_name, back) {
     position: "relative",
     overflow: "hidden",
   });
+  let text = app_karate_button_back_text();
+  let component = html_button_width_full(bar, text, back);
   await app_context_initialize_root(div, fn);
 }
