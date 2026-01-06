@@ -25,13 +25,15 @@ export async function html_loading(lambda) {
     };
     html_style_assign(div, s);
   }
-  try {
-  } finally {
-  }
   let result = null;
-  result = await lambda();
-  if (b2) {
-    html_remove(div);
+  try {
+    result = await lambda();
+  } catch (e) {
+    throw e;
+  } finally {
+    if (b2) {
+      html_remove(div);
+    }
   }
   return result;
 }
