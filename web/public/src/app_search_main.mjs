@@ -4,7 +4,6 @@ import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multi
 import { ebible_versions_english_choices } from "../../../love/public/src/ebible_versions_english_choices.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { app_reply_verses_add } from "../../../love/public/src/app_reply_verses_add.mjs";
-import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { html_button_copy } from "../../../love/public/src/html_button_copy.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
@@ -152,10 +151,8 @@ export async function app_search_main(context) {
           );
           html_p_text_multiple(div_verse, bible_texts);
           async function lambda12() {
-            list_add_first(list2, item);
-            let joined = await list_join_newline_2_copy(list);
-            let text3 = reference + " " + text2;
-            await clipboard_copy(text3);
+            list_add_first(bible_texts, reference);
+            await list_join_newline_2_copy(list);
           }
         }
         b = html_button_width_full(div_verse, reference, lambda3);
