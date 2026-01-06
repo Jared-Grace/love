@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_first_last } from "../../../love/public/src/list_first_last.mjs";
@@ -14,6 +15,9 @@ export function list_slice_from(list, item_from, item_to) {
   }
   let mapped = list_map([item_from, item_to], lambda);
   list_sort_number(mapped);
+  log({
+    mapped,
+  });
   let v = list_first_last(mapped);
   let last = list_first(v);
   let first = list_last(v);
