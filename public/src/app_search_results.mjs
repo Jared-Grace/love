@@ -76,6 +76,7 @@ export async function app_search_results(context) {
     async function lambda9(b) {
       let click2 = object_property_get(b, "click");
       await click2();
+      let bible_texts2 = object_property_get(b, "bible_texts");
     }
     let waited = await list_map_unordered_async(button_list, lambda9);
     html_remove(expand_all);
