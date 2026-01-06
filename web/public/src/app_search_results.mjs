@@ -1,3 +1,4 @@
+import { html_button_copy_width_full } from "../../../love/public/src/html_button_copy_width_full.mjs";
 import { firebase_storage_download_json_decompress } from "../../../love/public/src/firebase_storage_download_json_decompress.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
@@ -13,8 +14,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { app_reply_verses_add } from "../../../love/public/src/app_reply_verses_add.mjs";
-import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
-import { html_button_copy } from "../../../love/public/src/html_button_copy.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -113,8 +112,7 @@ export async function app_search_results(context, div_results) {
       let b = null;
       async function click() {
         html_remove(b);
-        let c = html_button_copy(div_verse, copy);
-        html_width_full(c);
+        html_button_copy_width_full(div_verse, copy);
         let bible_texts = [];
         await app_reply_verses_add(
           en,
