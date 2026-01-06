@@ -102,7 +102,7 @@ export async function app_search_results(context) {
         html_p_text_multiple(div_verse, bible_texts);
         async function lambda12() {
           list_add_first(bible_texts, reference);
-          await list_join_newline_2_copy(list);
+          await list_join_newline_2_copy(bible_texts);
         }
       }
       b = html_button_width_full(div_verse, reference, lambda3);
