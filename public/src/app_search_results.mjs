@@ -42,7 +42,6 @@ export async function app_search_results(context) {
   let en = ebible_folder_english();
   let english_choices = [en];
   let books = await ebible_version_books(en);
-  let root = object_property_get(context, "root");
   let query = object_property_get(context, "query");
   let words = string_to_words(query);
   async function lambda(word) {
