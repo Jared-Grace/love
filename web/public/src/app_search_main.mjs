@@ -40,6 +40,6 @@ export async function app_search_main(context) {
   async function search() {
     let query = html_value_get(input);
     object_property_set_exists_not(context, "query", query);
-    await app_search_results(context, english_choices, languages_chosen);
+    await app_search_results(context, languages_chosen);
   }
 }
