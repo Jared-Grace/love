@@ -1,4 +1,3 @@
-import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
@@ -7,12 +6,12 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
-import { html_button } from "../../../love/public/src/html_button.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { app_context_initialize_root } from "../../../love/public/src/app_context_initialize_root.mjs";
 import { function_dependencies_code_unaliased } from "../../../love/public/src/function_dependencies_code_unaliased.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_name_main } from "../../../love/public/src/app_name_main.mjs";
+import { html_button_width_full } from "./html_button_width_full.mjs";
 export async function app_component(a_name, back) {
   marker("1");
   let combined = app_name_main(a_name);
@@ -37,8 +36,7 @@ export async function app_component(a_name, back) {
     flex: "0 0 auto",
   });
   let text = app_karate_button_back_text();
-  let component = html_button(bar, text, back);
-  html_width_full(component);
+  let component = html_button_width_full(bar, text, back);
   let div = html_div(shell);
   html_style_assign(div, {
     flex: "1 1 auto",
