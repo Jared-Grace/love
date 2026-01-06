@@ -1,5 +1,4 @@
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -14,7 +13,6 @@ export async function app_reply_verses_add(
   bible_texts,
   languages_chosen,
 ) {
-  log("here");
   let copy = list_copy_reverse(languages_chosen);
   let mapped2 = list_map_property(copy, "bible_folder");
   let verses = await ebible_references_parse_lines(mapped2, [reference]);
