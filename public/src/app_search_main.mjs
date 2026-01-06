@@ -1,3 +1,4 @@
+import { html_button } from "../../../love/public/src/html_button.mjs";
 import { ebible_verse_download } from "../../../love/public/src/ebible_verse_download.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
@@ -130,6 +131,7 @@ export async function app_search_main(context) {
         let b = null;
         async function lambda3() {
           html_remove(b);
+          let component = html_button(parent, text3, function lambda12() {});
           let p3 = html_p_text(div_verse, reference);
           let o = await ebible_verse_download(
             "engbsb",
