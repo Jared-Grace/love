@@ -1,6 +1,6 @@
 import { object_values } from "../../../love/public/src/object_values.mjs";
 import { object_values_map } from "../../../love/public/src/object_values_map.mjs";
-export function object_to_list(result) {
+export function object_to_list(o) {
   function lambda3(value, key) {
     let v = {
       value,
@@ -8,7 +8,7 @@ export function object_to_list(result) {
     };
     return v;
   }
-  let result2 = object_values_map(result, lambda3);
+  let result2 = object_values_map(o, lambda3);
   let v2 = object_values(result2);
   return v2;
 }
