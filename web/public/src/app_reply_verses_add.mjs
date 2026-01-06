@@ -42,6 +42,6 @@ export async function app_reply_verses_add(
     each(verses, lambda7);
   }
   let copy = list_copy_reverse(languages_chosen);
-  await list_map_async(copy, lambda5);
+  let mapped = await list_map_async(copy, lambda5);
   return reference_current;
 }
