@@ -1,3 +1,4 @@
+import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
@@ -32,6 +33,7 @@ import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 export async function app_chapter_main(context) {
   marker("1");
   let root = html_mobile_default(context);
+  html_margin_0(root2);
   let bc = html_bar_content(root);
   let content = object_property_get(bc, "content");
   let bar = object_property_get(bc, "bar");
