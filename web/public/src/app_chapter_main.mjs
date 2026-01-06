@@ -74,7 +74,11 @@ export async function app_chapter_main(context) {
       html_on_pointerdown(p, choose);
     }
     each(verses, lambda);
-    return verses;
+    let v2 = {
+      books,
+      verses,
+    };
+    return v2;
   }
   let languages_verses = await list_map_async(languages_chosen, lambda2);
   function copy() {
