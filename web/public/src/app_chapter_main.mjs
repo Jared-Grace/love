@@ -83,6 +83,11 @@ export async function app_chapter_main(context) {
       let sliced = list_slice_from(verse_numbers, first, last);
       let mapped2 = list_map_find_property(sliced, lv, "verse_number");
       let mapped3 = list_map_property(mapped2, "text");
+      let reference = ebible_parts_chapter_code_to_reference(
+        chapter_code,
+        books,
+        [first, last],
+      );
     }
     each(languages_verses, lambda3);
   }
