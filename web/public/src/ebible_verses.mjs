@@ -1,4 +1,3 @@
-import { ebible_firebase_upload_path_name } from "../../../love/public/src/ebible_firebase_upload_path_name.mjs";
 import { firebase_storage_download_ebible } from "../../../love/public/src/firebase_storage_download_ebible.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -20,12 +19,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
   if (browser_is()) {
-    let file_name_with_extension =
-      ebible_firebase_upload_path_name(chapter_code);
-    let c = await firebase_storage_download_ebible(
-      bible_folder,
-      file_name_with_extension,
-    );
+    let c = await firebase_storage_download_ebible(bible_folder, chapter_code);
     let verses = object_property_get(c, "verses");
     return verses;
   }
