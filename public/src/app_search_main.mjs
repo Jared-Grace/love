@@ -133,7 +133,7 @@ export async function app_search_main(context) {
         async function lambda3() {
           html_remove(b);
           function lambda12() {}
-          let text3 = emoji_copy();
+          let text3 = emoji_copy() + " Copy";
           let component = html_button(parent, text3, lambda12);
           let p3 = html_p_text(div_verse, reference);
           let o = await ebible_verse_download(
