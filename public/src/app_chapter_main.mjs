@@ -44,7 +44,7 @@ export async function app_chapter_main() {
         await html_scroll_center_now(p);
       }
       function lambda4() {}
-      html_on_pointerdown(component, lambda4);
+      html_on_pointerdown(p, lambda4);
     }
     each(verses, lambda);
   }
