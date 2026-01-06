@@ -1,3 +1,4 @@
+import { list_join } from "../../../love/public/src/list_join.mjs";
 import { window_open_app } from "../../../love/public/src/window_open_app.mjs";
 import { app_chapter } from "../../../love/public/src/app_chapter.mjs";
 import { html_button_copy_width_full } from "../../../love/public/src/html_button_copy_width_full.mjs";
@@ -117,7 +118,7 @@ export async function app_search_results(context, div_results) {
         html_button_copy_width_full(div_verse, copy);
         function lambda3() {
           let mapped4 = list_map_property(languages_chosen, "language_code");
-          ljp;
+          let joined = list_join(list2, separator);
           window_open_app(app_chapter, {
             c: chapter_code,
             v: verse_number,
