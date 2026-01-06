@@ -11,5 +11,5 @@ export async function app_search_main(context) {
   firebase_name_jg();
   let languages_chosen = [];
   object_property_set_exists_not(context, "languages_chosen", languages_chosen);
-  app_search_home(languages, languages_chosen, root, context);
+  app_search_home(languages_chosen, root, context);
 }
