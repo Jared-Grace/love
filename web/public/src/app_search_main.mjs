@@ -1,3 +1,4 @@
+import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { html_button_copy } from "../../../love/public/src/html_button_copy.mjs";
 import { ebible_verse_download } from "../../../love/public/src/ebible_verse_download.mjs";
@@ -132,9 +133,6 @@ export async function app_search_main(context) {
         let b = null;
         async function lambda3() {
           html_remove(b);
-          async function lambda12() {
-            await clipboard_copy(text3);
-          }
           html_button_copy(div_verse, lambda12);
           let p3 = html_p_text(div_verse, reference);
           let o = await ebible_verse_download(
@@ -144,6 +142,10 @@ export async function app_search_main(context) {
           );
           let text2 = object_property_get(o, "text");
           let p4 = html_p_text(div_verse, text2);
+          async function lambda12() {
+            let joined = list_join_newline(list);
+            await clipboard_copy(text3);
+          }
         }
         b = html_button_width_full(div_verse, reference, lambda3);
       }
