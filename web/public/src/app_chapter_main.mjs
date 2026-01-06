@@ -1,3 +1,4 @@
+import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { list_map_find_property } from "../../../love/public/src/list_map_find_property.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
@@ -75,7 +76,7 @@ export async function app_chapter_main(context) {
   }
   let languages_verses = await list_map_async(languages_chosen, lambda2);
   function copy() {
-    function lambda3(lv) {
+    async function lambda3(lv) {
       let verse_numbers = list_map_property(lv, "verse_number");
       let v = list_first_last(verse_numbers_chosen);
       let last = list_first(v);
@@ -88,6 +89,7 @@ export async function app_chapter_main(context) {
         books,
         [first, last],
       );
+      let joined = await list_join_newline_2_copy(concated);
     }
     each(languages_verses, lambda3);
   }
