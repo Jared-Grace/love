@@ -79,10 +79,8 @@ export async function app_search_results(context) {
       click2();
     }
     each(button_list, lambda3);
-    let waited = await list_map_unordered_async(
-      list2,
-      async function lambda9(item) {},
-    );
+    async function lambda9(item) {}
+    let waited = await list_map_unordered_async(list2, lambda9);
     html_remove(expand_all);
     let c2 = html_button_copy_text();
     function lambda6() {}
