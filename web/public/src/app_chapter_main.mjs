@@ -62,7 +62,7 @@ export async function app_chapter_main(context) {
       let text = object_property_get(v, "text");
       let p = html_p_text(content, verse_number_v + " " + text);
       let li = list_last_is(languages_chosen, lc);
-      if (false) {
+      if (li) {
         return;
       }
       if (verse_number_v === verse_number) {
