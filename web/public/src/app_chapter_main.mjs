@@ -85,16 +85,16 @@ export async function app_chapter_main(context) {
     async function lambda3(bv) {
       let books2 = object_property_get(bv, "books");
       let verses2 = object_property_get(bv, "verses");
-      let verse_numbers = list_map_property(bv, "verse_number");
+      let verse_numbers = list_map_property(verses2, "verse_number");
       let v = list_first_last(verse_numbers_chosen);
       let last = list_first(v);
       let first = list_last(v);
       let sliced = list_slice_from(verse_numbers, first, last);
-      let mapped2 = list_map_find_property(sliced, bv, "verse_number");
+      let mapped2 = list_map_find_property(sliced, verses2, "verse_number");
       let mapped3 = list_map_property(mapped2, "text");
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
-        books,
+        books2,
         [first, last],
       );
       let concated2 = list_concat([reference], mapped3);
