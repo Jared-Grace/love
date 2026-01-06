@@ -34,6 +34,7 @@ import { json_decompress_object } from "../../../love/public/src/json_decompress
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { app_bible_search_word_path } from "../../../love/public/src/app_bible_search_word_path.mjs";
 import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
+import { catch_ignore_async } from "./catch_ignore_async.mjs";
 export async function app_search_results(context) {
   marker("1");
   let languages_chosen = object_property_get(context, "languages_chosen");
@@ -76,6 +77,7 @@ export async function app_search_results(context) {
   async function lambda2() {
     async function lambda9(b) {
       let click2 = object_property_get(b, "click");
+      let r = await catch_ignore_async(async function lambda10() {});
       await click2();
       let bible_texts2 = object_property_get(b, "bible_texts");
       return bible_texts2;
