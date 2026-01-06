@@ -145,7 +145,8 @@ export async function app_search_results(context) {
     }
     let bs = list_map(verse_numbers, lambda8);
     let nn = null_not_is(value);
-    let mapped2 = list_map(list2, function lambda3(item) {});
+    function lambda3(item) {}
+    let mapped2 = list_map(list2, lambda3);
     return bs;
   }
   let button_lists = list_map(list, lambda7);
