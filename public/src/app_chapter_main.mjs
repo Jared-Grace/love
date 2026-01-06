@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
@@ -104,6 +105,6 @@ export async function app_chapter_main(context) {
         joined,
       });
     }
-    each(languages_verses, lambda3);
+    let m = list_map(languages_verses, lambda3);
   }
 }
