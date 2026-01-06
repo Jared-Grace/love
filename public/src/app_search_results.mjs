@@ -1,3 +1,5 @@
+import { file_name_html } from "../../../love/public/src/file_name_html.mjs";
+import { app_chapter } from "../../../love/public/src/app_chapter.mjs";
 import { html_button_copy_width_full } from "../../../love/public/src/html_button_copy_width_full.mjs";
 import { firebase_storage_download_json_decompress } from "../../../love/public/src/firebase_storage_download_json_decompress.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -114,7 +116,8 @@ export async function app_search_results(context, div_results) {
         html_remove(b);
         html_button_copy_width_full(div_verse, copy);
         function lambda3() {
-          const relativeUrl = "some/page.html";
+          const relativeUrl = app_chapter.name + "";
+          let file_name = file_name_html(name2);
           window.open(relativeUrl, "_blank");
         }
         html_button_width_full(div_verse, "chapter", lambda3);
