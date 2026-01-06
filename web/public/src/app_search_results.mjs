@@ -74,7 +74,8 @@ export async function app_search_results(context) {
   let expand_all_div = html_div(root);
   let expand_all = null;
   function lambda2() {
-    each(button_list, () => {});
+    function lambda3() {}
+    each(button_list, lambda3);
     html_remove(expand_all);
     let c2 = html_button_copy_text();
     function lambda6() {}
