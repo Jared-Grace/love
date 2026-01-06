@@ -13,6 +13,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
+import { catch_ignore_async } from "./catch_ignore_async.mjs";
 export async function ebible_references_parse_lines(bible_folders, lines) {
   let bible_folder = ebible_folder_english();
   let books_all = await list_map_unordered_async(
@@ -37,7 +38,10 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
         let book2 = list_get(books, index);
         let book_name = object_property_get(book2, "text");
         async function lambda4(verse_number) {
-          await lambda6();
+          let r = await catch_ignore_async(async function lambda7() {});
+          await (
+            await catch_ignore_async(lambda6)
+          )();
           async function lambda6() {
             verse_number = string_to(verse_number);
             log("1");
