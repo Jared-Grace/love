@@ -70,6 +70,7 @@ export async function app_search_results(context) {
   }
   let text = app_karate_button_back_text();
   let component2 = html_button_width_full(root, text, back);
+  let button_list = null;
   let list = object_to_list(dictionary);
   function lambda7(vk) {
     let verse_numbers = object_property_get(vk, "value");
@@ -112,6 +113,5 @@ export async function app_search_results(context) {
     return bs;
   }
   let button_lists = list_map(list, lambda7);
-  let button_list = null;
   button_list = list_squash(button_lists);
 }
