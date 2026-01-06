@@ -1,3 +1,4 @@
+import { list_slice_from } from "../../../love/public/src/list_slice_from.mjs";
 import { html_button_copy_width_full } from "../../../love/public/src/html_button_copy_width_full.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
@@ -27,7 +28,6 @@ export async function app_chapter_main(context) {
   let bc = html_bar_content(root);
   let content = object_property_get(bc, "content");
   let bar = object_property_get(bc, "bar");
-  function copy() {}
   html_button_copy_width_full(bar, copy);
   firebase_name_jg();
   let hash = html_hash_object_get();
@@ -70,4 +70,7 @@ export async function app_chapter_main(context) {
     each(verses, lambda);
   }
   await each_async(languages_chosen, lambda2);
+  function copy() {
+    let sliced = list_slice_from(list, item_from, item_to);
+  }
 }
