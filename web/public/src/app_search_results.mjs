@@ -144,10 +144,8 @@ export async function app_search_results(context) {
       return b;
     }
     let bs = list_map(verse_numbers, lambda8);
-    let nn = null_not_is(value);
-    function lambda3(item) {}
-    let mapped2 = list_map(list2, lambda3);
-    return bs;
+    let mapped2 = list_map(bs, null_not_is);
+    return mapped2;
   }
   let button_lists = list_map(list, lambda7);
   button_list = list_squash(button_lists);
