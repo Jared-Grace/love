@@ -1,3 +1,4 @@
+import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
 import { app_search_home } from "../../../love/public/src/app_search_home.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -70,6 +71,7 @@ export async function app_search_results(context) {
   }
   let text = app_karate_button_back_text();
   let component2 = html_button_width_full(root, text, back);
+  let v2 = object_to_list(result);
   function lambda7(verse_numbers, chapter_code) {
     let book_code = ebible_chapter_code_to_book(chapter_code);
     let e = ebible_book_exists(books, book_code);
