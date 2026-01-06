@@ -1,3 +1,4 @@
+import { html_scroll_center_now } from "../../../love/public/src/html_scroll_center_now.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
@@ -38,6 +39,7 @@ export async function app_chapter_main() {
       let text = object_property_get(v, "text");
       let p = html_p_text(root, verse_number_v + " " + text);
       if (verse_number_v === verse_number) {
+        html_scroll_center_now(player_img_c);
       }
     }
     each(verses, lambda);
