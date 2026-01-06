@@ -130,6 +130,7 @@ export async function app_search_main(context) {
         function lambda3() {
           html_remove(b);
           let p3 = html_p_text(div_verse, reference);
+          evd;
         }
         b = html_button_width_full(div_verse, reference, lambda3);
       }
