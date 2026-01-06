@@ -127,6 +127,7 @@ export async function app_search_main(context) {
         let b = null;
         function lambda3() {
           html_remove(b);
+          let p3 = html_p_text(root2, text2);
         }
         b = html_button_width_full(root, reference, lambda3);
       }
