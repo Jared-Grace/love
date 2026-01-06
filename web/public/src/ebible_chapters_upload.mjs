@@ -6,10 +6,10 @@ export async function ebible_chapters_upload(
 ) {
   marker("1");
   async function lambda(chapter_code, verses) {}
-  await ebible_chapters_each_verses_check_with(bible_folder2, lambda);
   let v = await ebible_chapters_each_verses_check_with(
     bible_folder,
-    lambda$chapter_code$verses,
+    lambda$chapter_code$,
+    lambda,
   );
   return v;
 }
