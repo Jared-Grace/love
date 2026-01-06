@@ -1,3 +1,4 @@
+import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { html_style_background_color_set_or_remove_list } from "../../../love/public/src/html_style_background_color_set_or_remove_list.mjs";
@@ -57,6 +58,7 @@ export async function app_chapter_main(context) {
           verse_numbers_chosen,
           verse_number_v,
         );
+        html_display_none_or_block(hidden, item);
       }
       html_on_pointerdown(p, choose);
     }
