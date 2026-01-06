@@ -76,6 +76,7 @@ export async function app_search_results(context) {
     html_remove(expand_all);
   }
   expand_all = html_button_width_full(root, "Expand all", lambda2);
+  let component = html_button_width_full(root2, text2, lambda22);
   let list = object_to_list(dictionary);
   function lambda7(vk) {
     let verse_numbers = object_property_get(vk, "value");
