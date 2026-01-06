@@ -45,7 +45,7 @@ export async function app_chapter_main() {
         await html_scroll_center_now(p);
       }
       function lambda4() {
-        list_toggle(languages_chosen2, language);
+        list_toggle(verse_numbers_chosen, verse_number_v);
       }
       html_on_pointerdown(p, lambda4);
     }
