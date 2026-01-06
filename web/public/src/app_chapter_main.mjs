@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -22,4 +23,5 @@ export async function app_chapter_main() {
   let list = await ebible_verses(bible_folder, chapter_code);
   let v = json_format_to(list);
   let p = html_pre_text(body, v);
+  each(list2, function lambda(item) {});
 }
