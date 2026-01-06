@@ -1,3 +1,4 @@
+import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { app_search_results } from "../../../love/public/src/app_search_results.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
@@ -38,6 +39,7 @@ export async function app_search_main(context) {
   const text = "Search";
   html_button_width_full(root, text, search);
   async function search() {
+    let value = html_value_get(input);
     await app_search_results(
       input,
       root,
