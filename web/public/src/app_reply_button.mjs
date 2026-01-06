@@ -7,9 +7,9 @@ export function app_reply_button(list, item, root, text) {
   let component = null;
   function lambda3() {
     list_toggle(list, item);
-    html_style_background_color_set_or_remove_list(list, item, component);
+    html_style_background_color_set_or_remove_list(component, list, item);
   }
   component = html_button(root, text, lambda3);
-  html_style_background_color_set_or_remove_list(list, item, component);
+  html_style_background_color_set_or_remove_list(component, list, item);
   return component;
 }
