@@ -1,3 +1,4 @@
+import { app_reply_verses_add } from "../../../love/public/src/app_reply_verses_add.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { html_button_copy } from "../../../love/public/src/html_button_copy.mjs";
@@ -134,6 +135,15 @@ export async function app_search_main(context) {
           html_remove(b);
           let c = html_button_copy(div_verse, lambda12);
           html_width_full(c);
+          let reference_current = null;
+          reference_current = await app_reply_verses_add(
+            en,
+            reference,
+            english_choices,
+            reference_current,
+            bible_texts,
+            languages_chosen,
+          );
           let p3 = html_p_text(div_verse, reference);
           let o = await ebible_verse("engbsb", chapter_code, verse_number);
           let text2 = object_property_get(o, "text");
