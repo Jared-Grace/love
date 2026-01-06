@@ -1,3 +1,4 @@
+import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 export function ebible_language_to_bible_folder(languages_list2, language) {
