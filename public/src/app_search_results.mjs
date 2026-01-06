@@ -35,7 +35,6 @@ import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 export async function app_search_results(
   context,
-  books,
   english_choices,
   languages_chosen,
 ) {
