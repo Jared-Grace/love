@@ -16,6 +16,7 @@ export async function app_reply_verses_add(
   bible_texts,
   languages_chosen,
 ) {
+  log("here");
   let verse_range = await ebible_references_parse_lines([en], [reference]);
   async function lambda5(l) {
     async function lambda8(verse) {
