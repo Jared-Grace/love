@@ -4,7 +4,6 @@ import { ebible_version_books } from "../../../love/public/src/ebible_version_bo
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { each_object } from "../../../love/public/src/each_object.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
@@ -109,5 +108,5 @@ export async function app_search_results(context) {
     }
     each(verse_numbers, lambda8);
   }
-  each_object(dictionary, lambda7);
+  list_map(list, lambda7);
 }
