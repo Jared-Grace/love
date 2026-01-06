@@ -8,6 +8,7 @@ export function list_slice_from(list, item_from, item_to) {
   marker("1");
   let mapped = list_map([item_from, item_to], list_index_of);
   list_sort_number(mapped);
-  let filtered = list_filter(list2, function lambda(item) {});
+  function lambda(item) {}
+  let filtered = list_filter(list2, lambda);
   let sliced = list_slice_include(list, a, b);
 }
