@@ -7,4 +7,5 @@ export function app_chapter_main() {
   firebase_name_jg();
   let hash = html_hash_object_get();
   let chapter_code = object_property_get(hash, "c");
+  let verse_number = object_property_get(hash, "v");
 }
