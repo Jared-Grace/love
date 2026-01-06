@@ -1,6 +1,5 @@
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
-import { html_pointerdown } from "../../../love/public/src/html_pointerdown.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
@@ -75,7 +74,7 @@ export async function app_search_results(context) {
   let expand_all_div = html_div(root);
   let expand_all = null;
   function lambda2() {
-    each(button_list, html_pointerdown);
+    each(button_list, () => {});
     html_remove(expand_all);
     let c2 = html_button_copy_text();
     function lambda6() {}
