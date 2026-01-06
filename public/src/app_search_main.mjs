@@ -1,3 +1,4 @@
+import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { html_button_copy } from "../../../love/public/src/html_button_copy.mjs";
 import { ebible_verse_download } from "../../../love/public/src/ebible_verse_download.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -131,7 +132,9 @@ export async function app_search_main(context) {
         let b = null;
         async function lambda3() {
           html_remove(b);
-          function lambda12() {}
+          async function lambda12() {
+            await clipboard_copy(text3);
+          }
           html_button_copy(div_verse, lambda12);
           let p3 = html_p_text(div_verse, reference);
           let o = await ebible_verse_download(
