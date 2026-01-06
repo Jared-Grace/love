@@ -1,3 +1,4 @@
+import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
@@ -81,7 +82,9 @@ export async function app_chapter_main(context) {
       let last = list_first(v);
       let first = list_last(v);
       let sliced = list_slice_from(verse_numbers, first, last);
-      function lambda4(item) {}
+      function lambda4(item) {
+        let item2 = list_find_property(list2, property_name, property_value);
+      }
       let mapped2 = list_map(list, lambda4);
     }
     each(languages_verses, lambda3);
