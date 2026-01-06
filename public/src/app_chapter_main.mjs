@@ -41,11 +41,11 @@ export async function app_chapter_main(context) {
       books,
       fl,
     );
-    html_p_text(root, reference);
+    html_p_text(content, reference);
     async function lambda(v) {
       let verse_number_v = object_property_get(v, "verse_number");
       let text = object_property_get(v, "text");
-      let p = html_p_text(root, verse_number_v + " " + text);
+      let p = html_p_text(content, verse_number_v + " " + text);
       if (verse_number_v === verse_number) {
         await html_scroll_center_now(p);
         choose();
