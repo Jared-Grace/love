@@ -139,12 +139,11 @@ export async function app_search_main(context) {
           html_remove(b);
           let c = html_button_copy(div_verse, lambda12);
           html_width_full(c);
-          let reference_current = null;
-          reference_current = await app_reply_verses_add(
+          await app_reply_verses_add(
             en,
             reference,
             english_choices,
-            reference_current,
+            null,
             bible_texts,
             languages_chosen,
           );
