@@ -43,7 +43,6 @@ export async function app_search_main(context) {
       root,
       context,
       books,
-      en,
       english_choices,
       languages_chosen,
     );
