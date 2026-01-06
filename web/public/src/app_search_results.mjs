@@ -99,6 +99,9 @@ export async function app_search_results(context) {
   }
   expand_all = html_button_width_full(root, "Expand all", lambda2);
   let list = object_to_list(dictionary);
+  log({
+    dictionary,
+  });
   function lambda7(vk) {
     let verse_numbers = object_property_get(vk, "value");
     let chapter_code = object_property_get(vk, "key");
