@@ -102,7 +102,7 @@ export async function app_chapter_main(context) {
       return concated2;
     }
     let m = list_map(languages_verses, lambda3);
-    let squashed = list_squash(list);
-    let joined = await list_join_newline_2_copy(concated2);
+    let squashed = list_squash(m);
+    let joined = await list_join_newline_2_copy(squashed);
   }
 }
