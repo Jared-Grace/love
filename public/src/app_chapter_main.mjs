@@ -1,6 +1,7 @@
+import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
+import { json_from } from "../../../love/public/src/json_from.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
-import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { ebible_language_to_bible_folder } from "../../../love/public/src/ebible_language_to_bible_folder.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { app_next_hash_to_languages_chosen } from "../../../love/public/src/app_next_hash_to_languages_chosen.mjs";
@@ -18,6 +19,7 @@ export async function app_chapter_main() {
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
   let first = list_first(languages_chosen);
   let bible_folder = ebible_language_to_bible_folder(first);
-  let list = await ebible_verses(bible_folder, chapter_code);jf
+  let list = await ebible_verses(bible_folder, chapter_code);
+  let v = json_from(json);
   let p = html_pre_text(body, list);
 }
