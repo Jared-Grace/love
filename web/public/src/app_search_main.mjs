@@ -1,7 +1,6 @@
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
-import { ebible_versions_english_choices } from "../../../love/public/src/ebible_versions_english_choices.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { app_reply_verses_add } from "../../../love/public/src/app_reply_verses_add.mjs";
 import { html_button_copy } from "../../../love/public/src/html_button_copy.mjs";
@@ -52,7 +51,7 @@ export async function app_search_main(context) {
   firebase_name_jg();
   html_clear(root);
   let en = ebible_folder_english();
-  let english_choices = await ebible_versions_english_choices();
+  let english_choices = ["engbsb"];
   let languages = ebible_languages();
   let languages_chosen = [];
   let languages_chosen_default = list_slice_count(languages, 1, 1);
