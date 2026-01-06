@@ -117,6 +117,7 @@ export async function app_search_results(context, div_results) {
         html_remove(b);
         html_button_copy_width_full(div_verse, copy);
         function lambda3() {
+          let mapped4 = list_map_property(list2, property_name);
           let copy2 = list_copy_reverse(languages_chosen);
           window_open_app(app_chapter, {
             c: chapter_code,
