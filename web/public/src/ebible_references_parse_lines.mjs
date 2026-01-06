@@ -37,23 +37,26 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
         let book2 = list_get(books, index);
         let book_name = object_property_get(book2, "text");
         async function lambda4(verse_number) {
-          verse_number = string_to(verse_number);
-          log("1");
-          let result = await ebible_verse(
-            bible_folder,
-            chapter_code,
-            verse_number,
-          );
-          log("2");
-          let reference = ebible_parts_chapter_code_to_reference(
-            chapter_code,
-            books,
-            [verse_number],
-          );
-          object_merge(result, {
-            reference,
-          });
-          la(result);
+          await lambda6();
+          async function lambda6() {
+            verse_number = string_to(verse_number);
+            log("1");
+            let result = await ebible_verse(
+              bible_folder,
+              chapter_code,
+              verse_number,
+            );
+            log("2");
+            let reference = ebible_parts_chapter_code_to_reference(
+              chapter_code,
+              books,
+              [verse_number],
+            );
+            object_merge(result, {
+              reference,
+            });
+            la(result);
+          }
         }
         await each_range_from_async(verse_start, verse_end, lambda4);
       }
