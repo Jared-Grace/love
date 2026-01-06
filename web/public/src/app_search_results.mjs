@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
@@ -77,7 +78,13 @@ export async function app_search_results(context) {
   async function lambda2() {
     async function lambda9(b) {
       let click2 = object_property_get(b, "click");
+      log({
+        b,
+      });
       await catch_ignore_async(click2);
+      log({
+        b,
+      });
       let bible_texts2 = object_property_get(b, "bible_texts");
       return bible_texts2;
     }
