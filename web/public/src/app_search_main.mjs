@@ -1,5 +1,4 @@
-import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
-import { html_button } from "../../../love/public/src/html_button.mjs";
+import { html_button_copy } from "../../../love/public/src/html_button_copy.mjs";
 import { ebible_verse_download } from "../../../love/public/src/ebible_verse_download.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
@@ -133,8 +132,7 @@ export async function app_search_main(context) {
         async function lambda3() {
           html_remove(b);
           function lambda12() {}
-          let text3 = html_button_copy_text();
-          let component = html_button(parent, text3, lambda12);
+          html_button_copy(div_verse, lambda12);
           let p3 = html_p_text(div_verse, reference);
           let o = await ebible_verse_download(
             "engbsb",
