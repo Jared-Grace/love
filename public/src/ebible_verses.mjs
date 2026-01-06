@@ -1,3 +1,4 @@
+import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { urdu_allah_to_god } from "../../../love/public/src/urdu_allah_to_god.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -16,11 +17,12 @@ import { ebible_chapter_text } from "../../../love/public/src/ebible_chapter_tex
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
+  if (browser_is()) {
+  }
   marker("1");
-  let { verse_numbers, text } = await ebible_chapter_text(
-    bible_folder,
-    chapter_code,
-  );
+  let v2 = await ebible_chapter_text(bible_folder, chapter_code);
+  let text = object_property_get(v2, "text");
+  let verse_numbers = object_property_get(v2, "verse_numbers");
   text = whitespace_normalize(text);
   text = urdu_allah_to_god(text);
   let split = string_split_space(text);
