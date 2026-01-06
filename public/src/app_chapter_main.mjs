@@ -23,7 +23,6 @@ export async function app_chapter_main() {
   let first = list_first(languages_chosen);
   let bible_folder = ebible_language_to_bible_folder(first);
   let list = await ebible_verses(bible_folder, chapter_code);
-  let p = html_pre_text(body, v);
   let books = await ebible_version_books(bible_folder);
   function lambda(item) {
     let verse_number = object_property_get(item, "verse_number");
