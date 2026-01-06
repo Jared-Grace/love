@@ -1,3 +1,4 @@
+import { ebible_language_to_bible_folder } from "../../../love/public/src/ebible_language_to_bible_folder.mjs";
 import { app_next_hash_to_languages_chosen } from "../../../love/public/src/app_next_hash_to_languages_chosen.mjs";
 import { hash_to_url } from "../../../love/public/src/hash_to_url.mjs";
 import { list_find_json_next } from "../../../love/public/src/list_find_json_next.mjs";
@@ -13,7 +14,6 @@ import { list_join_newline_2_copy } from "../../../love/public/src/list_join_new
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
-import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -27,12 +27,10 @@ export async function app_next_main(context) {
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
   let languages_list = ebible_languages();
   async function lambda2(language) {
-    let filtered = list_find_property(
+    let bible_folder = ebible_language_to_bible_folder(
       languages_list,
-      "language_code",
       language,
     );
-    let bible_folder = object_property_get(filtered, "bible_folder");
     let d = await ebible_verse(bible_folder, chapter_code, verse_number);
     let text = object_property_get(d, "text");
     return text;
