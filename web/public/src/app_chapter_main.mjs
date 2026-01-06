@@ -32,7 +32,7 @@ export async function app_chapter_main() {
     let reference = ebible_parts_chapter_code_to_reference(
       chapter_code,
       books,
-      [verse_numbers],
+      [verse_number],
     );
   }
   each(list, lambda);
