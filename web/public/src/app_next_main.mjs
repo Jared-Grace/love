@@ -14,7 +14,6 @@ import { list_join_newline_2_copy } from "../../../love/public/src/list_join_new
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
-import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -25,7 +24,6 @@ export async function app_next_main(context) {
   let chapter_code = object_property_get(hash, "c");
   let verse_number = object_property_get(hash, "v");
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
-  let languages_list = ebible_languages();
   async function lambda2(language) {
     let bible_folder = ebible_language_to_bible_folder(
       languages_list,
