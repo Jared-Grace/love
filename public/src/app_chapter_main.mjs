@@ -1,3 +1,4 @@
+import { html_style_background_color_set_or_remove_list } from "../../../love/public/src/html_style_background_color_set_or_remove_list.mjs";
 import { list_toggle } from "../../../love/public/src/list_toggle.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { html_scroll_center_now } from "../../../love/public/src/html_scroll_center_now.mjs";
@@ -46,6 +47,7 @@ export async function app_chapter_main() {
       }
       function lambda4() {
         list_toggle(verse_numbers_chosen, verse_number_v);
+        html_style_background_color_set_or_remove_list(list, item, component);
       }
       html_on_pointerdown(p, lambda4);
     }
