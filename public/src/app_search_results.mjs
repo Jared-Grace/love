@@ -73,7 +73,7 @@ export async function app_search_results(context) {
   function lambda2() {
     each(button_list, html_pointerdown);
   }
-  let component3 = html_button_width_full(root, "Expand all", lambda2);
+  let expand_all = html_button_width_full(root, "Expand all", lambda2);
   let list = object_to_list(dictionary);
   function lambda7(vk) {
     let verse_numbers = object_property_get(vk, "value");
