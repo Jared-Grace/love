@@ -73,7 +73,7 @@ export async function app_search_results(context) {
   let expand_all = null;
   function lambda2() {
     each(button_list, html_pointerdown);
-    html_remove(component);
+    html_remove(expand_all);
   }
   expand_all = html_button_width_full(root, "Expand all", lambda2);
   let list = object_to_list(dictionary);
