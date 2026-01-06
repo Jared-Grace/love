@@ -19,5 +19,5 @@ export async function app_chapter_main() {
   let bible_folder = ebible_language_to_bible_folder(languages_list, language);
   let f = list_find_property(languages_list, "language_code", first);
   let list = await ebible_verses(bible_folder, chapter_code);
-  let p = html_p_text(root, list);
+  let p = html_p_text(body, list);
 }
