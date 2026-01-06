@@ -5,7 +5,6 @@ import { list_first_last } from "../../../love/public/src/list_first_last.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { ebible_language_to_bible_folder } from "../../../love/public/src/ebible_language_to_bible_folder.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
@@ -22,24 +21,24 @@ export async function app_chapter_main() {
   let chapter_code = object_property_get(hash, "c");
   let verse_number = object_property_get(hash, "v");
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
-  let first = list_first(languages_chosen);
-  let bible_folder = ebible_language_to_bible_folder(first);
-  let list = await ebible_verses(bible_folder, chapter_code);
-  let books = await ebible_version_books(bible_folder);
-  let mapped = list_map_property(list, "verse_number");
-  let fl = list_first_last(mapped);
-  let reference = ebible_parts_chapter_code_to_reference(
-    chapter_code,
-    books,
-    fl,
-  );
-  let p = html_p_text(root, reference);
-  function lambda(item) {
-    let verse_number = object_property_get(item, "verse_number");
-    let text = object_property_get(item, "text");
-    html_p_text(root, verse_number + " " + text);
+  async function lambda2(first) {
+    let bible_folder = ebible_language_to_bible_folder(first);
+    let verses = await ebible_verses(bible_folder, chapter_code);
+    let books = await ebible_version_books(bible_folder);
+    let mapped = list_map_property(verses, "verse_number");
+    let fl = list_first_last(mapped);
+    let reference = ebible_parts_chapter_code_to_reference(
+      chapter_code,
+      books,
+      fl,
+    );
+    let p = html_p_text(root, reference);
+    function lambda(item) {
+      let verse_number = object_property_get(item, "verse_number");
+      let text = object_property_get(item, "text");
+      html_p_text(root, verse_number + " " + text);
+    }
+    each(verses, lambda);
   }
-  each(list, lambda);
-  async function lambda2(item2) {}
-  await each_async(list2, lambda2);
+  await each_async(languages_chosen, lambda2);
 }
