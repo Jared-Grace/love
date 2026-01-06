@@ -7,6 +7,6 @@ export function list_first_last(list) {
   list_multiple_is_assert(list);
   let first = list_first(list);
   let last = list_last(list);
-  let v = [first, last];
-  return v;
+  let fl = [first, last];
+  return fl;
 }
