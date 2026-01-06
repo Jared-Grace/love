@@ -87,7 +87,7 @@ export async function app_chapter_main(context) {
         let item2 = list_find_property(lv, property, item);
         return item2;
       }
-      let mapped2 = list_map(list, lambda4);
+      let mapped2 = list_map(sliced, lambda4);
       let mapped3 = list_map_property(mapped2, "text");
     }
     each(languages_verses, lambda3);
