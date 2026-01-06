@@ -1,0 +1,7 @@
+import { string_prefix_without } from "../../../love/public/src/string_prefix_without.mjs";
+import { app_name_prefix } from "../../../love/public/src/app_name_prefix.mjs";
+export function app_prefix_without(app_fn) {
+  let prefix = app_name_prefix();
+  let without = string_prefix_without(app_fn.name, prefix);
+  return without;
+}
