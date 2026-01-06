@@ -74,13 +74,13 @@ export async function app_search_results(context) {
   let expand_all_div = html_div(root);
   let expand_all = null;
   async function lambda2() {
-    function lambda3(b) {
-      let click2 = object_property_get(b, "click");
-      click2();
-    }
+    function lambda3(b) {}
     each(button_list, lambda3);
-    async function lambda9(item) {}
-    let waited = await list_map_unordered_async(list2, lambda9);
+    async function lambda9(item) {
+      let click2 = object_property_get(b, "click");
+      awaitclick2();
+    }
+    let waited = await list_map_unordered_async(button_list, lambda9);
     html_remove(expand_all);
     let c2 = html_button_copy_text();
     function lambda6() {}
