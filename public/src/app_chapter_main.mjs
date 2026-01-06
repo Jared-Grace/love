@@ -81,7 +81,8 @@ export async function app_chapter_main(context) {
       let last = list_first(v);
       let first = list_last(v);
       let sliced = list_slice_from(verse_numbers, first, last);
-      let mapped2 = list_map(list, function lambda4(item) {});
+      function lambda4(item) {}
+      let mapped2 = list_map(list, lambda4);
     }
     each(languages_verses, lambda3);
   }
