@@ -1,3 +1,5 @@
+import { ebible_versions_english_choices } from "../../../love/public/src/ebible_versions_english_choices.mjs";
+import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { app_reply_verses_add } from "../../../love/public/src/app_reply_verses_add.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
@@ -47,6 +49,8 @@ import { list_map_property } from "./list_map_property.mjs";
 export async function app_search_main(context) {
   let root = html_mobile_default(context);
   html_clear(root);
+  let en = ebible_folder_english();
+  let english_choices = await ebible_versions_english_choices();
   firebase_name_jg();
   let languages = ebible_languages();
   let languages_chosen = [];
