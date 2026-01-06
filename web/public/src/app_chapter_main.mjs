@@ -83,7 +83,8 @@ export async function app_chapter_main(context) {
   let languages_verses = await list_map_async(languages_chosen, lambda2);
   function copy() {
     async function lambda3(bv) {
-      let verses2 = object_property_get(books, "verses");
+      let books2 = object_property_get(bv, "books");
+      let verses2 = object_property_get(bv, "verses");
       let verse_numbers = list_map_property(bv, "verse_number");
       let v = list_first_last(verse_numbers_chosen);
       let last = list_first(v);
