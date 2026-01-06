@@ -103,7 +103,7 @@ export async function app_search_results(context) {
         [verse_number],
       );
       let b = null;
-      async function lambda3() {
+      async function click() {
         html_remove(b);
         let c = html_button_copy(div_verse, copy);
         html_width_full(c);
@@ -123,7 +123,7 @@ export async function app_search_results(context) {
           await list_join_newline_2_copy(bible_texts);
         }
       }
-      b = html_button_width_full(div_verse, reference, lambda3);
+      b = html_button_width_full(div_verse, reference, click);
       return b;
     }
     let bs = list_map(verse_numbers, lambda8);
