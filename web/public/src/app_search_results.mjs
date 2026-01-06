@@ -1,3 +1,4 @@
+import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
 import { html_pointerdown } from "../../../love/public/src/html_pointerdown.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -117,6 +118,7 @@ export async function app_search_results(context) {
         );
         html_p_text_multiple(div_verse, bible_texts);
         list_add_first(bible_texts, reference);
+        object_property_set_exists_not(object, property_name, value);
         async function copy() {
           await list_join_newline_2_copy(bible_texts);
         }
