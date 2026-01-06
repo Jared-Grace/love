@@ -36,7 +36,6 @@ export async function app_search_results(
   root,
   context,
   books,
-  en,
   english_choices,
   languages_chosen,
 ) {
