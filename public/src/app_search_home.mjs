@@ -34,7 +34,7 @@ export function app_search_home(context) {
   let input = html_input_text(root, search_instructions);
   html_width_full(input);
   html_focus(input);
-  html_value_set(input, value);
+  html_value_set(input, "believe");
   const text = "Search";
   html_button_width_full(root, text, search);
   let div_results = html_div(root);
