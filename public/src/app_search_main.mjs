@@ -133,8 +133,8 @@ export async function app_search_main(context) {
           let p3 = html_p_text(div_verse, reference);
           let index = await ebible_verse_download(
             bible_folder,
-            chapter_code2,
-            verse_number2,
+            chapter_code,
+            verse_number,
           );
         }
         b = html_button_width_full(div_verse, reference, lambda3);
