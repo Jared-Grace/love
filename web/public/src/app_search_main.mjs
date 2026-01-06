@@ -36,7 +36,6 @@ export async function app_search_main(context) {
   let input = html_input_text(root, search_instructions);
   html_width_full(input);
   html_focus(input);
-  let books = await ebible_version_books(en);
   const text = "Search";
   html_button_width_full(root, text, search);
   async function search() {
