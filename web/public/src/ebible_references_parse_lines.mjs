@@ -34,15 +34,18 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
       let chapter_code = object_property_get(v2, "chapter_code");
       let index = object_property_get(v2, "index");
       async function lambda5(bible_folder, books) {
+        log("here3");
         let book2 = list_get(books, index);
         let book_name = object_property_get(book2, "text");
         async function lambda4(verse_number) {
+          log("here4");
           verse_number = string_to(verse_number);
           let result = await ebible_verse(
             bible_folder,
             chapter_code,
             verse_number,
           );
+          log("here5");
           let reference = ebible_parts_chapter_code_to_reference(
             chapter_code,
             books,
