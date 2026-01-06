@@ -18,9 +18,9 @@ export function html_bar_content(root) {
     position: "relative",
     overflow: "hidden",
   });
-  let v2 = {
+  let bc = {
     bar,
     content,
   };
-  return v2;
+  return bc;
 }
