@@ -4,7 +4,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_chapters_upload(bible_folder) {
   marker("1");
   let chapters = await ebible_version_chapters_cache(bible_folder);
-  function lambda() {}
+  function lambda(item) {}
   await firebase_upload_object_compressed_chunked(chapters, lambda);
   return chapters;
 }
