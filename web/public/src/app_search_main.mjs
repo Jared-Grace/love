@@ -10,14 +10,10 @@ import { html_button_width_full } from "../../../love/public/src/html_button_wid
 import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { ebible_book_exists } from "../../../love/public/src/ebible_book_exists.mjs";
-import { list_squash } from "../../../love/public/src/list_squash.mjs";
-import { object_values } from "../../../love/public/src/object_values.mjs";
-import { object_adder_duplicates } from "../../../love/public/src/object_adder_duplicates.mjs";
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
 import { object_properties_from_empty } from "../../../love/public/src/object_properties_from_empty.mjs";
 import { list_intersect_multiple } from "../../../love/public/src/list_intersect_multiple.mjs";
@@ -66,23 +62,6 @@ export async function app_search_main(context) {
   html_value_set(input, "glory highest");
   html_width_full(input);
   html_focus(input);
-  if (0) {
-    ("include apocrypha etc");
-    let waited = await list_map_unordered_async(
-      ["engwyc2018", "engwebu"],
-      ebible_version_books,
-    );
-    let squashed = list_squash(waited);
-    function lambda9(oad) {
-      function lambda10(i) {
-        let book_code = object_property_get(i, "book_code");
-        oad(book_code, i);
-      }
-      each(squashed, lambda10);
-    }
-    let result = object_adder_duplicates(lambda9);
-    let books = object_values(result);
-  }
   let books = await ebible_version_books("engbsb");
   const text = "Search";
   html_button_width_full(root, text, lambda2);
