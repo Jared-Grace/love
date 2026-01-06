@@ -41,13 +41,11 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
           await catch_ignore_async(lambda6);
           async function lambda6() {
             verse_number = string_to(verse_number);
-            log("1");
             let result = await ebible_verse(
               bible_folder,
               chapter_code,
               verse_number,
             );
-            log("2");
             let reference = ebible_parts_chapter_code_to_reference(
               chapter_code,
               books,
