@@ -1,3 +1,4 @@
+import { firebase_storage_download_json_decompress } from "../../../love/public/src/firebase_storage_download_json_decompress.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -30,8 +31,6 @@ import { list_intersect_multiple } from "../../../love/public/src/list_intersect
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
-import { json_decompress_object } from "../../../love/public/src/json_decompress_object.mjs";
-import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { app_bible_search_word_path } from "../../../love/public/src/app_bible_search_word_path.mjs";
 import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { catch_ignore_async } from "./catch_ignore_async.mjs";
@@ -45,8 +44,7 @@ export async function app_search_results(context, div_results) {
   let words = string_to_words(query);
   async function lambda(word) {
     let destination = app_bible_search_word_path(word);
-    let c = await firebase_storage_download_json(destination);
-    let o = await json_decompress_object(c);
+    let o = await firebase_storage_download_json_decompress(destination);
     return o;
   }
   let mapped = await list_map_unordered_async(words, lambda);
