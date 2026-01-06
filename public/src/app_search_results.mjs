@@ -21,7 +21,6 @@ import { ebible_book_exists } from "../../../love/public/src/ebible_book_exists.
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
 import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
 import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
-import { app_search_main } from "../../../love/public/src/app_search_main.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
@@ -38,7 +37,6 @@ import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 export async function app_search_results(context) {
   marker("1");
-  await app_search_main(context);
   let en = ebible_folder_english();
   let english_choices = [en];
   let books = await ebible_version_books(en);
