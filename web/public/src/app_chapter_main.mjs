@@ -1,7 +1,7 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_slice_from } from "../../../love/public/src/list_slice_from.mjs";
 import { html_button_copy_width_full } from "../../../love/public/src/html_button_copy_width_full.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
@@ -81,9 +81,7 @@ export async function app_chapter_main(context) {
       let last = list_first(v);
       let first = list_last(v);
       let sliced = list_slice_from(verse_numbers, first, last);
-      log({
-        sliced,
-      });
+      let mapped2 = list_map(list, function lambda4(item) {});
     }
     each(languages_verses, lambda3);
   }
