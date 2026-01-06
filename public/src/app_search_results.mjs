@@ -28,7 +28,6 @@ import { list_intersect_multiple } from "../../../love/public/src/list_intersect
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { json_decompress_object } from "../../../love/public/src/json_decompress_object.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { app_bible_search_word_path } from "../../../love/public/src/app_bible_search_word_path.mjs";
@@ -46,9 +45,6 @@ export async function app_search_results(context) {
     let destination = app_bible_search_word_path(word);
     let c = await firebase_storage_download_json(destination);
     let o = await json_decompress_object(c);
-    log({
-      o,
-    });
     return o;
   }
   let mapped = await list_map_unordered_async(words, lambda);
