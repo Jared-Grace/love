@@ -1,3 +1,4 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
@@ -47,6 +48,7 @@ export async function app_reply_verses_add(
   log({
     copy,
   });
+  let mapped2 = list_map_property(list, property_name);
   let mapped = await list_map_async(copy, lambda5);
   log({
     mapped,
