@@ -33,7 +33,7 @@ export function app_search_home(context) {
   let input = html_input_text(root, search_instructions);
   html_width_full(input);
   html_focus(input);
-  html_value_set(input2, "gospel mystery");
+  html_value_set(input, "gospel mystery");
   const text = "Search";
   html_button_width_full(root, text, search);
   async function search() {
