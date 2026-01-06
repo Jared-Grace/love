@@ -20,7 +20,6 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
     ebible_version_books,
   );
   let books = await ebible_version_books(bible_folder);
-  log({});
   let v = ebible_references_names(books, lines);
   let book_names = object_property_get(v, "book_names");
   let chapter_verses_list = object_property_get(v, "chapter_verses_list");
@@ -37,11 +36,13 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
         let book_name = object_property_get(book2, "text");
         async function lambda4(verse_number) {
           verse_number = string_to(verse_number);
+          log("1");
           let result = await ebible_verse(
             bible_folder,
             chapter_code,
             verse_number,
           );
+          log("2");
           let reference = ebible_parts_chapter_code_to_reference(
             chapter_code,
             books,
