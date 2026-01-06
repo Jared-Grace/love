@@ -39,7 +39,7 @@ export async function app_chapter_main() {
       let text = object_property_get(v, "text");
       let p = html_p_text(root, verse_number_v + " " + text);
       if (verse_number_v === verse_number) {
-        html_scroll_center_now(player_img_c);
+        html_scroll_center_now(p);
       }
     }
     each(verses, lambda);
