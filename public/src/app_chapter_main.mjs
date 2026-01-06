@@ -1,3 +1,4 @@
+import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { html_scroll_center_now } from "../../../love/public/src/html_scroll_center_now.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -42,6 +43,7 @@ export async function app_chapter_main() {
       if (verse_number_v === verse_number) {
         await html_scroll_center_now(p);
       }
+      html_on_pointerdown(component, function lambda4() {});
     }
     each(verses, lambda);
   }
