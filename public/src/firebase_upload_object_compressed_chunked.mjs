@@ -6,8 +6,8 @@ import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
 export async function firebase_upload_object_compressed_chunked(list, get) {
   let cs = list_chunk(list, 20);
   async function lambda2(c) {
-    async function lambda4(i) {
-      let v4 = get(i);
+    async function lambda4(item) {
+      let v4 = get(item);
       let value = object_property_get(v4, "value");
       let destination = object_property_get(v4, "destination");
       await firebase_upload_object_compressed(destination, value);
