@@ -25,7 +25,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
       bible_folder,
       file_name_with_extension,
     );
-    let verses2 = object_property_get(c, "verses");
+    let verses = object_property_get(c, "verses");
     return verses;
   }
   marker("1");
