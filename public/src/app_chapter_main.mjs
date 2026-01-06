@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_slice_from } from "../../../love/public/src/list_slice_from.mjs";
 import { html_button_copy_width_full } from "../../../love/public/src/html_button_copy_width_full.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
@@ -71,6 +72,12 @@ export async function app_chapter_main(context) {
   }
   await each_async(languages_chosen, lambda2);
   function copy() {
+    let v = list_first_last(verse_numbers_chosen);
+    let last = object_property_get(v, "last");
+    let first = object_property_get(v, "first");
     let sliced = list_slice_from(list, item_from, item_to);
+    log({
+      sliced,
+    });
   }
 }
