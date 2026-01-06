@@ -1,5 +1,4 @@
-import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
+import { list_map_find_property } from "../../../love/public/src/list_map_find_property.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -83,11 +82,7 @@ export async function app_chapter_main(context) {
       let first = list_last(v);
       let sliced = list_slice_from(verse_numbers, first, last);
       const property = "verse_number";
-      function lambda4(item) {
-        let item2 = list_find_property(lv, property, item);
-        return item2;
-      }
-      let mapped2 = list_map(sliced, lambda4);
+      let mapped2 = list_map_find_property(lv, property, sliced);
       let mapped3 = list_map_property(mapped2, "text");
     }
     each(languages_verses, lambda3);
