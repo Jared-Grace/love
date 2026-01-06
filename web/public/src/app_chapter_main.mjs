@@ -1,3 +1,4 @@
+import { list_toggle } from "../../../love/public/src/list_toggle.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { html_scroll_center_now } from "../../../love/public/src/html_scroll_center_now.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -43,7 +44,9 @@ export async function app_chapter_main() {
       if (verse_number_v === verse_number) {
         await html_scroll_center_now(p);
       }
-      function lambda4() {}
+      function lambda4() {
+        list_toggle(languages_chosen2, language);
+      }
       html_on_pointerdown(p, lambda4);
     }
     each(verses, lambda);
