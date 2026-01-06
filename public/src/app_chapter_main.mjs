@@ -2,7 +2,6 @@ import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multi
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
@@ -24,7 +23,6 @@ export async function app_chapter_main() {
   let first = list_first(languages_chosen);
   let bible_folder = ebible_language_to_bible_folder(first);
   let list = await ebible_verses(bible_folder, chapter_code);
-  let v = json_format_to(list);
   let p = html_pre_text(body, v);
   let books = await ebible_version_books(bible_folder);
   function lambda(item) {
