@@ -81,10 +81,10 @@ export async function app_chapter_main(context) {
       let last = list_first(v);
       let first = list_last(v);
       let sliced = list_slice_from(verse_numbers, first, last);
+      log({
+        sliced,
+      });
     }
     each(languages_verses, lambda3);
-    log({
-      sliced,
-    });
   }
 }
