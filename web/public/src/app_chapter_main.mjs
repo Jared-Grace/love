@@ -23,5 +23,6 @@ export async function app_chapter_main() {
   let list = await ebible_verses(bible_folder, chapter_code);
   let v = json_format_to(list);
   let p = html_pre_text(body, v);
-  each(list2, function lambda(item) {});
+  function lambda(item) {}
+  each(list2, lambda);
 }
