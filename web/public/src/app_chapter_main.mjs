@@ -1,6 +1,4 @@
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_map_find_property } from "../../../love/public/src/list_map_find_property.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
@@ -29,6 +27,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
+import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
 export async function app_chapter_main(context) {
   marker("1");
   let root = html_mobile_default(context);
@@ -82,7 +81,7 @@ export async function app_chapter_main(context) {
     return v2;
   }
   let languages_verses = await list_map_async(languages_chosen, lambda2);
-  function copy() {
+  async function copy() {
     function lambda3(bv) {
       let books2 = object_property_get(bv, "books");
       let verses2 = object_property_get(bv, "verses");
@@ -99,12 +98,9 @@ export async function app_chapter_main(context) {
         [first, last],
       );
       let concated2 = list_concat([reference], mapped3);
-      let joined = list_join_newline_2(concated2);
-      return joined;
-      log({
-        joined,
-      });
+      return concated2;
     }
     let m = list_map(languages_verses, lambda3);
+    let joined = await list_join_newline_2_copy(concated2);
   }
 }
