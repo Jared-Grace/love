@@ -2,7 +2,6 @@ import { ebible_chapters_each_verses_check_with } from "../../../love/public/src
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_chapters_upload(
   bible_folder,
-  lambda$chapter_code$verses,
 ) {
   marker("1");
   async function lambda(chapter_code, verses) {}
