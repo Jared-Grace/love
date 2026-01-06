@@ -44,6 +44,7 @@ export async function app_chapter_main() {
       let p = html_p_text(root, verse_number_v + " " + text);
       if (verse_number_v === verse_number) {
         await html_scroll_center_now(p);
+        choose();
       }
       function choose() {
         list_toggle(verse_numbers_chosen, verse_number_v);
