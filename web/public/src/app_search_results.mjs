@@ -36,9 +36,10 @@ import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 export async function app_search_results(context, languages_chosen) {
   marker("1");
+  let en = ebible_folder_english();
+  let english_choices = [en];
   let books = await ebible_version_books(en);
   let root = object_property_get(context, "root");
-  let en = ebible_folder_english();
   let value = html_value_get(input);
   let words = string_to_words(value);
   async function lambda(word) {
