@@ -1,4 +1,5 @@
-import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
+import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
+import { list_first_last } from "../../../love/public/src/list_first_last.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -23,6 +24,7 @@ export async function app_chapter_main() {
   let bible_folder = ebible_language_to_bible_folder(first);
   let list = await ebible_verses(bible_folder, chapter_code);
   let books = await ebible_version_books(bible_folder);
+  let v = list_first_last(list2);
   function lambda(item) {
     let verse_number = object_property_get(item, "verse_number");
     let text = object_property_get(item, "text");
@@ -31,7 +33,7 @@ export async function app_chapter_main() {
       books,
       [verse_number],
     );
-    html_p_text_multiple(body, [reference, text]);
+    html_p_text(body, verse_number + " " + text);
   }
   each(list, lambda);
 }
