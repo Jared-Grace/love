@@ -71,8 +71,7 @@ export async function app_search_results(context) {
   }
   let text = app_karate_button_back_text();
   let component2 = html_button_width_full(root, text, back);
-  let v2 = object_to_list(dictionary);
-  let list = object_to_list(o2);
+  let list = object_to_list(dictionary);
   function lambda7(verse_numbers, chapter_code) {
     let book_code = ebible_chapter_code_to_book(chapter_code);
     let e = ebible_book_exists(books, book_code);
