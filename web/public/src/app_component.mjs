@@ -24,9 +24,9 @@ export async function app_component(a_name, back) {
   let root = html_document_body();
   html_margin_0(root);
   html_clear(root);
-  let v2 = html_bar_content(root);
-  let content = object_property_get(v2, "content");
-  let bar = object_property_get(v2, "bar");
+  let bc = html_bar_content(root);
+  let content = object_property_get(bc, "content");
+  let bar = object_property_get(bc, "bar");
   let text = app_karate_button_back_text();
   let component = html_button_width_full(bar, text, back);
   await app_context_initialize_root(content, fn);
