@@ -1,3 +1,4 @@
+import { html_button_copy_width_full } from "../../../love/public/src/html_button_copy_width_full.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
@@ -26,6 +27,7 @@ export async function app_chapter_main(context) {
   let bc = html_bar_content(root);
   let content = object_property_get(bc, "content");
   let bar = object_property_get(bc, "bar");
+  html_button_copy_width_full(bar, () => {});
   firebase_name_jg();
   let hash = html_hash_object_get();
   let chapter_code = object_property_get(hash, "c");
@@ -59,8 +61,8 @@ export async function app_chapter_main(context) {
           verse_numbers_chosen,
           verse_number_v,
         );
-        let e = list_empty_is(list);
-        html_display_none_or_block(hidden, item);
+        let e = list_empty_is(verse_numbers_chosen);
+        html_display_none_or_block(e, bar);
       }
       html_on_pointerdown(p, choose);
     }
