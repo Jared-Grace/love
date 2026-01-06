@@ -1,6 +1,5 @@
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
 import { app_search_home } from "../../../love/public/src/app_search_home.mjs";
@@ -74,9 +73,7 @@ export async function app_search_results(context) {
   let expand_all_div = html_div(root);
   let expand_all = null;
   async function lambda2() {
-    function lambda3(b) {}
-    each(button_list, lambda3);
-    async function lambda9(item) {
+    async function lambda9(b) {
       let click2 = object_property_get(b, "click");
       await click2();
     }
