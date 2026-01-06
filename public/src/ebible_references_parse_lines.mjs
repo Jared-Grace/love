@@ -20,7 +20,7 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
     ebible_version_books,
   );
   let books = await ebible_version_books(bible_folder);
-  log({});
+  log("here");
   let v = ebible_references_names(books, lines);
   let book_names = object_property_get(v, "book_names");
   let chapter_verses_list = object_property_get(v, "chapter_verses_list");
