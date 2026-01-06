@@ -135,7 +135,7 @@ export async function app_search_main(context) {
             "engbsb",
             chapter_code,
             verse_number,
-          );
+          );$g$
         }
         b = html_button_width_full(div_verse, reference, lambda3);
       }
