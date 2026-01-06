@@ -151,7 +151,7 @@ export async function app_search_main(context) {
           );
           html_p_text_multiple(div_verse, bible_texts);
           async function lambda12() {
-            ladf;
+            laf;
             let joined = await list_join_newline_2_copy(list);
             let text3 = reference + " " + text2;
             await clipboard_copy(text3);
