@@ -1,1 +1,6 @@
-export function list_slice_include() {}
+import { list_slice } from "../../../love/public/src/list_slice.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+export function list_slice_include(list, a, b) {
+  marker("1");
+  return list_slice(list, a, b);
+}
