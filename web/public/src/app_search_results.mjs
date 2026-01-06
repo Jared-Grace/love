@@ -113,7 +113,8 @@ export async function app_search_results(context, div_results) {
       async function click() {
         html_remove(b);
         html_button_copy_width_full(div_verse, copy);
-        html_button_width_full(div_verse, "chapter", () => {});
+        function lambda3() {}
+        html_button_width_full(div_verse, "chapter", lambda3);
         let bible_texts = [];
         await app_reply_verses_add(
           en,
