@@ -16,7 +16,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_chapter_main() {
   marker("1");
   firebase_name_jg();
-  let body = html_document_body();
+  let root = html_document_body();
   let hash = html_hash_object_get();
   let chapter_code = object_property_get(hash, "c");
   let verse_number = object_property_get(hash, "v");
