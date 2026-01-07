@@ -16,5 +16,6 @@ export function each_multiple_or_null(lists, lambda) {
     lambda(items);
   }
   each_index(first, lambda2);
-  each_range(count, function lambda3(i) {});
+  function lambda3(i) {}
+  each_range(count, lambda3);
 }
