@@ -1,3 +1,4 @@
+import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
 import { app_a_textarea } from "../../../love/public/src/app_a_textarea.mjs";
 import { app_a_buttons_shortcuts_wide } from "../../../love/public/src/app_a_buttons_shortcuts_wide.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
@@ -61,6 +62,11 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
           html_centered(input);
         }
         let input = fn(overlay);
+        if (lines_multiple) {
+          html_attribute_set(component3, key, value);
+        } else {
+          html_centered(input);
+        }
         html_value_set(input, name);
         await html_select(input);
         async function lambda23() {
