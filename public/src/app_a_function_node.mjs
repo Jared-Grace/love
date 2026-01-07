@@ -247,7 +247,7 @@ export function app_a_function_node(a) {
       function lambda22(q, e) {
         app_a_color_literal(q);
         let nn3 = null_not_is(e);
-        if (false) {
+        if (nn3) {
         }
       }
       each_pair_or_null(quasis, expressions, lambda22);
