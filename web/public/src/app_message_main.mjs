@@ -1,3 +1,4 @@
+import { html_textarea } from "../../../love/public/src/html_textarea.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { invoke } from "../../../love/public/src/invoke.mjs";
@@ -33,7 +34,6 @@ import { app_karate_container } from "../../../karate_code/public/src/app_karate
 import { app_replace_font_size_refresh } from "../../../love/public/src/app_replace_font_size_refresh.mjs";
 import { app_karate_style_control_border } from "../../../love/public/src/app_karate_style_control_border.mjs";
 import { app_karate_style_control } from "../../../karate_code/public/src/app_karate_style_control.mjs";
-import { html_element } from "../../../love/public/src/html_element.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
@@ -55,7 +55,7 @@ export async function app_message_main(context) {
   await refresh();
   let div = app_karate_container(root);
   let div2 = html_div_text(div, "Please enter your message for me:");
-  let textarea = html_element(div, "textarea");
+  let textarea = html_textarea(div);
   html_placeholder(textarea, "Please enter your message here");
   app_karate_style_control(textarea);
   app_karate_style_control_border(textarea, "gray");
