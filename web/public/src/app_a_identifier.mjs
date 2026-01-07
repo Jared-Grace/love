@@ -21,7 +21,7 @@ export function app_a_identifier(a) {
     span = html_span_text(parent, name);
     let color = null;
     if (includes) {
-      color = "#007400ff";
+      color = "#007f00ff";
     } else {
       let f_names_local = object_property_get(a, "f_names_local");
       let includes2 = list_includes(f_names_local, name);
