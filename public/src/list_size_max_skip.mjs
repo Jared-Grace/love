@@ -7,6 +7,7 @@ export function list_size_max_skip(verse_numbers_chosen, max) {
   log({
     max,
     size,
+    verse_numbers_chosen,
   });
   if (greater_than(size, max)) {
     verse_numbers_chosen = list_skip(verse_numbers_chosen, size - max);
