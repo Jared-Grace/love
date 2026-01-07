@@ -3,13 +3,14 @@ import { object_properties_from } from "../../../love/public/src/object_properti
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 export function function_dependencies_externals_to_urls(externals) {
   let o = null;
-  let includes = list_includes(externals, "prettier/plugins/babel");
+  const pb = "prettier/plugins/babel";
+  let includes = list_includes(externals, pb);
   if (includes) {
     o = {
       parserBabel: "https://unpkg.com/prettier@3.7.4/plugins/babel.mjs",
       parserEstree: "https://unpkg.com/prettier@3.7.4/plugins/estree.mjs",
     };
-    list_remove(list, item);
+    list_remove(externals, pb);
   } else {
   }
   const lookup = {
