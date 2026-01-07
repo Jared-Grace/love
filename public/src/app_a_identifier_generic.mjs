@@ -99,7 +99,7 @@ export function app_a_identifier_generic(a, span, name, c) {
     function on_keydown(e) {
       app_a_on_keydown(e, choices);
     }
-    app_a_buttons_shortcuts(choices, overlay);
+    app_a_buttons_shortcuts(overlay, choices);
   }
   html_on_pointerdown(span, on_pointerdown);
 }
