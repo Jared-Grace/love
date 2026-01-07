@@ -1,3 +1,4 @@
+import { list_take } from "../../../love/public/src/list_take.mjs";
 import { greater_than } from "../../../love/public/src/greater_than.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { number_to_words } from "../../../love/public/src/number_to_words.mjs";
@@ -86,7 +87,7 @@ export async function app_chapter_main(context) {
           list_toggle(verse_numbers_chosen, verse_number_v);
           let size = list_size(verse_numbers_chosen);
           if (greater_than(size, max)) {
-            lt;
+            let taken = list_take(list, count);
           }
           html_style_background_color_set_or_remove_list(
             p,
