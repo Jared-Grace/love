@@ -1,3 +1,4 @@
+import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
 import { app_a_app_run } from "../../../love/public/src/app_a_app_run.mjs";
@@ -201,7 +202,7 @@ export async function app_a_function(context) {
     "word-break": "break-word",
     "font-weight": "500",
   });
-  nts;
+  js_visit_type(ast2, type, function lambda7(v6) {});
   let f_names = await functions_names();
   app_a_function_node({
     node: ast,
