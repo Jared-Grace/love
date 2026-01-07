@@ -238,7 +238,7 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, property);
     },
     ["ObjectPattern"]: o_props,
-    ["TemplateLiteral"]: () => {},
+    ["TemplateLiteral"]: function lambda12() {},
   };
   function o_props() {
     function lambda16() {
