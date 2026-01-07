@@ -20,6 +20,6 @@ export async function app_a_download() {
     return c;
   }
   let files = await list_map_unordered_async(filtered, lambda2);
-  list_property_exists_not_error(all, "key");
+  list_property_exists_not_error(files, "key");
   return files;
 }
