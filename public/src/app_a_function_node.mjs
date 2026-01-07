@@ -1,10 +1,9 @@
+import { app_a_literal } from "../../../love/public/src/app_a_literal.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { app_a_raw } from "../../../love/public/src/app_a_raw.mjs";
 import { app_a_symbol_string_template } from "../../../love/public/src/app_a_symbol_string_template.mjs";
 import { each_pair_or_null } from "../../../love/public/src/each_pair_or_null.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { app_a_identifier_generic } from "../../../love/public/src/app_a_identifier_generic.mjs";
 import { app_a_keyword_blue } from "../../../love/public/src/app_a_keyword_blue.mjs";
 import { js_keyword_return } from "../../../love/public/src/js_keyword_return.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
@@ -150,20 +149,7 @@ export function app_a_function_node(a) {
       let v3 = app_a_raw(node, parent);
       let raw = object_property_get(v3, "raw");
       let component = object_property_get(v3, "component");
-      app_a_identifier_generic(
-        a,
-        component,
-        raw,
-        {
-          shortcut: "e",
-          text: "Edit",
-          on_change,
-        },
-        false,
-      );
-      function on_change(value_new) {
-        object_property_set(node, "raw", value_new);
-      }
+      app_a_literal(a, component, raw, node);
     },
     ["VariableDeclaration"]: function lambda11() {
       let kind = object_property_get(node, "kind");
