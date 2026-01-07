@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
@@ -10,7 +11,6 @@ import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_slice_from } from "../../../love/public/src/list_slice_from.mjs";
 import { html_button_copy_width_full } from "../../../love/public/src/html_button_copy_width_full.mjs";
-import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
@@ -32,6 +32,7 @@ import { html_hash_object_get } from "../../../love/public/src/html_hash_object_
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
+import { list_multiple_is } from "./list_multiple_is.mjs";
 export async function app_chapter_main(context) {
   marker("1");
   let root = html_mobile_default(context);
@@ -82,8 +83,9 @@ export async function app_chapter_main(context) {
             verse_numbers_chosen,
             verse_number_v,
           );
-          let e = list_empty_is(verse_numbers_chosen);
-          html_display_none_or_block(e, cb);
+          let m = list_multiple_is(verse_numbers_chosen);
+          let hidden = not(m);
+          html_display_none_or_block(hidden, cb);
         }
         html_on_pointerdown(p, choose);
       }
