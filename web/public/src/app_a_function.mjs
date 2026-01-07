@@ -163,7 +163,7 @@ export async function app_a_function(context) {
           let r = await fn();
           let j = json_format_to(r);
           let pre = html_pre_text(div, j);
-          app_a_buttons_shortcuts(choices, overlay);
+          app_a_buttons_shortcuts(overlay, choices);
         }
         let result = await html_loading(lambda5);
       },
@@ -181,7 +181,7 @@ export async function app_a_function(context) {
   let v5 = html_bar_content(root2);
   let content = object_property_get(v5, "content");
   let bar = object_property_get(v5, "bar");
-  app_a_buttons_shortcuts(choices, content);
+  app_a_buttons_shortcuts(content, choices);
   function screen_choose(screen) {
     let f = async function screen_choose_inner() {
       list_remove(on_keydowns, app_a_function_on_keydown);
