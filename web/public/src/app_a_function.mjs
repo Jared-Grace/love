@@ -214,9 +214,6 @@ export async function app_a_function(context) {
         la(name2);
       }
       js_node_type_is_if(id, "Identifier", lambda9);
-      log({
-        node2,
-      });
     }
   }
   let list = list_adder_unique(lambda8);
