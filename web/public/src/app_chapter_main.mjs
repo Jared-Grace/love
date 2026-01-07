@@ -1,3 +1,4 @@
+import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { list_size_max_skip } from "../../../love/public/src/list_size_max_skip.mjs";
@@ -115,8 +116,7 @@ export async function app_chapter_main(context) {
   }
   let languages_verses = await list_map_async(languages_chosen, lambda2);
   async function copy() {
-    function lambda4(item) {}
-    list_sort_number_mapper(verse_numbers_chosen, lambda4);
+    list_sort_number_mapper(verse_numbers_chosen, integer_to);
     function lambda3(bv) {
       let books2 = object_property_get(bv, "books");
       let verses2 = object_property_get(bv, "verses");
