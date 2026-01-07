@@ -11,12 +11,15 @@ export async function app_a_identifier(a) {
   let node = object_property_get(a, "node");
   let parent = object_property_get(a, "parent");
   let name = object_property_get(node, "name");
-  let f_names = await functions_names();
   let a2 = js_special_arguments();
   let span = null;
   if (equal(name, a2)) {
     span = app_a_keyword_blue(parent, name);
   } else {
+    let f_names = await functions_names();
+    if (false) {
+    } else {
+    }
     span = html_span_text(parent, name);
     html_font_color_set(span, "#4a4affff");
   }
