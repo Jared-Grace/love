@@ -211,6 +211,7 @@ export async function app_a_function(context) {
       let id = object_property_get(n, "id");
       function lambda9() {
         let name2 = object_property_get(id, "name");
+        la(name2);
       }
       js_node_type_is_if(id, "Identifier", lambda9);
       log({
