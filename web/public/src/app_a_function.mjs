@@ -93,9 +93,9 @@ export async function app_a_function(context) {
   }
   if (false) {
     let a = emoji_up();
-    let b2 = app_a_button(root, a, upload);
+    let b2 = app_a_button(content, a, upload);
     let text2 = emoji_down();
-    let b3 = app_a_button(root, text2, download);
+    let b3 = app_a_button(content, text2, download);
   }
   async function sync() {
     await upload();
@@ -133,7 +133,7 @@ export async function app_a_function(context) {
           let get = object_property_get(v2, "get");
           let o = app_a_overlay(
             {
-              root,
+              root: content,
               app_a_function_on_keydown,
             },
             on_keydowns,
@@ -181,7 +181,7 @@ export async function app_a_function(context) {
   let v5 = html_bar_content(root2);
   let content = object_property_get(v5, "content");
   let bar = object_property_get(v5, "bar");
-  app_a_buttons_shortcuts(choices, root);
+  app_a_buttons_shortcuts(choices, content);
   function screen_choose(screen) {
     let f = async function screen_choose_inner() {
       list_remove(on_keydowns, app_a_function_on_keydown);
@@ -193,7 +193,7 @@ export async function app_a_function(context) {
   function app_a_function_on_keydown(e) {
     app_a_on_keydown(e, choices);
   }
-  let div = html_div(root);
+  let div = html_div(content);
   html_font_jetbrains_mono(div);
   html_style_assign(div, {
     "overflow-wrap": "break-word",
@@ -205,7 +205,7 @@ export async function app_a_function(context) {
     parent: div,
     context,
     indent: 0,
-    root,
+    root: content,
     ast,
     parsed,
     app_a_function_on_keydown,
