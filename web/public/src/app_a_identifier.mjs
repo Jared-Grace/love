@@ -20,11 +20,12 @@ export async function app_a_identifier(a) {
     let f_names = await functions_names();
     let includes = list_includes(f_names, name);
     span = html_span_text(parent, name);
-    if (includes) {
-    } else {
-    }
     let color = null;
-    color = "#4a4affff";
+    if (includes) {
+      color = "red";
+    } else {
+      color = "#4a4affff";
+    }
     html_font_color_set(span, color);
   }
   app_a_identifier_generic(a, span, name, {
