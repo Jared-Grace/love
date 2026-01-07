@@ -16,8 +16,8 @@ export async function ebible_version_books(bible_folder) {
   let right = ebible_language_original_code();
   if (equal(bible_folder, right)) {
     let bible_folder2 = ebible_folder_english();
-    let v2 = await ebible_version_books(bible_folder2);
-    return v2;
+    let r = await ebible_version_books(bible_folder2);
+    return r;
   }
   marker("1");
   let b = browser_is();
