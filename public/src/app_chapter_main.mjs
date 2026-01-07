@@ -84,8 +84,7 @@ export async function app_chapter_main(context) {
         function choose() {
           list_toggle(verse_numbers_chosen, verse_number_v);
           verse_numbers_chosen = list_size_max_skip(verse_numbers_chosen, max);
-          let hidden = update();
-          html_display_none_or_block(hidden, cb);
+          update();
         }
         html_on_pointerdown(p, choose);
         function update() {
@@ -96,7 +95,7 @@ export async function app_chapter_main(context) {
           );
           let m = list_multiple_is(verse_numbers_chosen);
           let hidden = not(m);
-          return hidden;
+          html_display_none_or_block(hidden, cb);
         }
       }
       each(verses, lambda);
