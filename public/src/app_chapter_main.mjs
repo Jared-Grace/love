@@ -115,7 +115,8 @@ export async function app_chapter_main(context) {
   }
   let languages_verses = await list_map_async(languages_chosen, lambda2);
   async function copy() {
-    list_sort_number_mapper(list, function lambda4(item) {});
+    function lambda4(item) {}
+    list_sort_number_mapper(list, lambda4);
     function lambda3(bv) {
       let books2 = object_property_get(bv, "books");
       let verses2 = object_property_get(bv, "verses");
