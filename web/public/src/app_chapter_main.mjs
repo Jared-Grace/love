@@ -1,4 +1,4 @@
-import { each } from "../../../love/public/src/each.mjs";
+import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { list_size_max_skip } from "../../../love/public/src/list_size_max_skip.mjs";
 import { number_to_words } from "../../../love/public/src/number_to_words.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -86,8 +86,7 @@ export async function app_chapter_main(context) {
           list_toggle(verse_numbers_chosen, verse_number_v);
           verse_numbers_chosen = list_size_max_skip(verse_numbers_chosen, max);
           update();
-          function lambda4(item) {}
-          each(list, lambda4);
+          invoke_multiple(updates);
         }
         html_on_pointerdown(p, choose);
         function update() {
