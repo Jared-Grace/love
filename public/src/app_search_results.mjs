@@ -127,7 +127,7 @@ export async function app_search_results(context, div_results) {
             l: joined,
           });
         }
-        html_button_width_full(div_verse, "chapter", lambda3);
+        html_button_width_full(div_verse, "Open chapter", lambda3);
         let bible_texts = [];
         await app_reply_verses_add(
           en,
