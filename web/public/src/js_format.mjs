@@ -9,7 +9,8 @@ export async function js_format(code) {
   let b = browser_is();
   if (b) {
     pe = await import('parserEstree');
-    pb = await import('parserBabel');pr=await import('prettier')
+    pb = await import('parserBabel');
+    pr=await import('prettier')
   } else {
     pb = parserBabel;
   }
