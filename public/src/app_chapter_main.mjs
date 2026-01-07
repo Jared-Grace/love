@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
@@ -77,6 +78,7 @@ export async function app_chapter_main(context) {
           choose();
         }
         function choose() {
+          log({});
           list_toggle(verse_numbers_chosen, verse_number_v);
           html_style_background_color_set_or_remove_list(
             p,
