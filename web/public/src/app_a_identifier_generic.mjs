@@ -1,4 +1,3 @@
-import { equal } from "../../../love/public/src/equal.mjs";
 import { app_a_buttons_shortcuts_wide } from "../../../love/public/src/app_a_buttons_shortcuts_wide.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
@@ -53,7 +52,8 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
         let div2 = html_div_text(div3, text2 + " from:");
         let div = html_div_text(div3, name);
         html_div_text(div3, text2 + " to:");
-        if (equal(left, right)) {
+        if (false) {
+        } else {
         }
         let fn = app_a_input;
         let input = app_a_input(overlay);
