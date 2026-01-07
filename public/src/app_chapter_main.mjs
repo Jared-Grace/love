@@ -100,7 +100,7 @@ export async function app_chapter_main(context) {
         }
         return update;
       }
-      updates = list_map(verses, lambda);
+      updates = await list_map_async(verses, lambda);
     }
     let v2 = {
       books,
