@@ -58,9 +58,9 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
           fn = app_a_textarea;
         } else {
           fn = app_a_input;
+          html_centered(input);
         }
         let input = fn(overlay);
-        html_centered(input);
         html_value_set(input, name);
         await html_select(input);
         async function lambda23() {
