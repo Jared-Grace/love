@@ -7,7 +7,7 @@ import { equal } from "../../../love/public/src/equal.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-export async function app_a_identifier(a) {
+export function app_a_identifier(a) {
   let node = object_property_get(a, "node");
   let parent = object_property_get(a, "parent");
   let name = object_property_get(node, "name");
