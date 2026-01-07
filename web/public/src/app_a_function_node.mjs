@@ -149,6 +149,7 @@ export function app_a_function_node(a) {
     ["Literal"]: function lambda10() {
       let v3 = app_a_raw(node, parent);
       let component = object_property_get(v3, "component");
+      let raw = object_property_get(v3, "raw");
       app_a_literal(a, component, node, on_change);
       function on_change(value_new) {
         object_property_set(node, "raw", value_new);
