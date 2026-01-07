@@ -24,6 +24,9 @@ export function app_a_identifier(a) {
       color = "#00bb00ff";
     } else {
       let f_names_local = object_property_get(a, "f_names_local");
+      if (false) {
+      } else {
+      }
       color = "#4a4affff";
     }
     html_font_color_set(span, color);
