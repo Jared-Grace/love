@@ -146,9 +146,9 @@ export function app_a_function_node(a) {
     },
     ["Literal"]: function lambda10() {
       let raw = object_property_get(node, "raw");
-      let span3 = html_span_text(parent, raw);
-      app_a_color_literal(span3);
-      app_a_identifier_generic(a, span3, raw, {
+      let component = html_span_text(parent, raw);
+      app_a_color_literal(component);
+      app_a_identifier_generic(a, component, raw, {
         shortcut: "e",
         text: "Edit",
         on_change,
