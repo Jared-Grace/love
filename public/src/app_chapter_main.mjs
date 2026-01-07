@@ -1,3 +1,4 @@
+import { list_size } from "../../../love/public/src/list_size.mjs";
 import { number_to_words } from "../../../love/public/src/number_to_words.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -84,7 +85,8 @@ export async function app_chapter_main(context) {
         function choose() {
           log({});
           list_toggle(verse_numbers_chosen, verse_number_v);
-          if (false) {
+          let size = list_size(list);
+          if (max) {
           }
           html_style_background_color_set_or_remove_list(
             p,
