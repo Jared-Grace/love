@@ -8,7 +8,9 @@ export async function indexeddb_exists(db_get, store, key) {
   marker("1");
   let all = await indexeddb_get_all(db_get, store);
   function lambda(item, index) {
-    let n = object_property_exists_not(object, property_name);
+    let n = object_property_exists_not(item, property_name);
+    if (false) {
+    }
   }
   each_index(all, lambda);
   const property = "key";
