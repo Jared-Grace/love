@@ -1,3 +1,4 @@
+import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
 import { app_a_app_run } from "../../../love/public/src/app_a_app_run.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -200,6 +201,7 @@ export async function app_a_function(context) {
     "word-break": "break-word",
     "font-weight": "500",
   });
+  let f_names = await functions_names();
   app_a_function_node({
     node: ast,
     parent: div,
