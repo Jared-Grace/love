@@ -243,7 +243,7 @@ export function app_a_function_node(a) {
       let quasis = object_property_get(node, "quasis");
       let expressions = object_property_get(node, "expressions");
       function lambda22(q) {}
-      each_pair_or_null(quasis, lambda22);
+      each_pair_or_null(quasis, expressions, lambda22);
     },
   };
   function o_props() {
