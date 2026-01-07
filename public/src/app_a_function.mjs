@@ -204,7 +204,8 @@ export async function app_a_function(context) {
     "font-weight": "500",
   });
   function lambda7(v) {
-    let node2 = object_property_get(v, "node");
+    let n = object_property_get(v, "node");
+    let id = object_property_get(n, "id");
     log({
       node2,
     });
