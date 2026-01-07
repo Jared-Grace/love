@@ -80,14 +80,18 @@ export async function app_chapter_main(context) {
         let p = html_p_text(content, verse_number_v + " " + text);
         if (verse_number_v === verse_number) {
           await html_scroll_center_now(p);
-          choose();
+          toggle();
+          update();
         }
         function choose() {
-          list_toggle(verse_numbers_chosen, verse_number_v);
-          verse_numbers_chosen = list_size_max_skip(verse_numbers_chosen, max);
+          toggle();
           invoke_multiple(updates);
         }
         html_on_pointerdown(p, choose);
+        function toggle() {
+          list_toggle(verse_numbers_chosen, verse_number_v);
+          verse_numbers_chosen = list_size_max_skip(verse_numbers_chosen, max);
+        }
         function update() {
           html_style_background_color_set_or_remove_list(
             p,
