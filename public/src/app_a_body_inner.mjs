@@ -18,7 +18,7 @@ export function app_a_body_inner(parent, body, a, indent) {
   marker("1");
   let parent_new = parent;
   let imports = false;
-  function lambda(b) {
+  async function lambda(b) {
     const t = "ImportDeclaration";
     let v = list_first_is(body, b);
     if (v) {
@@ -76,7 +76,7 @@ export function app_a_body_inner(parent, body, a, indent) {
       });
       line = span;
     }
-    app_a_function_node_child_parent(a, b, line);
+    await app_a_function_node_child_parent(a, b, line);
   }
   each(body, lambda);
 }
