@@ -8,8 +8,8 @@ export async function js_format(code) {
     pb = null;
   let b = browser_is();
   if (b) {
-    pr = "parser-babel";
-    pb = "prettier/plugins/babel";
+    pr = await import("parser-babel");
+    pb = await import("prettier/plugins/babel");
   } else {
     pr = prettier;
     pb = parserBabel;
