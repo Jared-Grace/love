@@ -245,7 +245,8 @@ export function app_a_function_node(a) {
       let expressions = object_property_get(node, "expressions");
       app_a_symbol_string_template(parent);
       function lambda22(q, e) {
-        app_a_color_literal(q);
+        let raw = object_property_get(q, "raw");
+        app_a_color_literal(raw);
         if (null_not_is(e)) {
           app_a_keyword_purple(parent, "$");
           function lambda24() {
