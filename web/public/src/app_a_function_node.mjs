@@ -1,6 +1,6 @@
+import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { app_a_literal } from "../../../love/public/src/app_a_literal.mjs";
-import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { app_a_raw } from "../../../love/public/src/app_a_raw.mjs";
 import { app_a_symbol_string_template } from "../../../love/public/src/app_a_symbol_string_template.mjs";
@@ -256,8 +256,11 @@ export function app_a_function_node(a) {
       }
       each_pair_or_null(quasis, expressions, lambda22);
       app_a_symbol_string_template(container);
-      function lambda25() {}
-      html_on_pointerdown(container, lambda25);
+      let code = js_unparse(ast2);
+      app_a_literal(a, component, node, on_change, raw);
+      function on_change(value_new) {
+        object_property_set(node, "raw", value_new);
+      }
     },
   };
   function o_props() {
