@@ -21,7 +21,7 @@ export async function app_a_identifier(a) {
     span = html_span_text(parent, name);
     let color = null;
     if (includes) {
-      color = "#00a500ff";
+      color = "#00bb00ff";
     } else {
       color = "#4a4affff";
     }
