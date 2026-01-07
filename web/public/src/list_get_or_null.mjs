@@ -1,4 +1,6 @@
+import { list_get_or } from "../../../love/public/src/list_get_or.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export function list_get_or_null() {
+export function list_get_or_null(list, index, value_not) {
   marker("1");
+  return list_get_or(list, index, value_not);
 }
