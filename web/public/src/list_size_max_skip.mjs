@@ -5,7 +5,8 @@ export function list_size_max_skip(verse_numbers_chosen, max) {
   let size = list_size(verse_numbers_chosen);
   if (greater_than(size, max)) {
     const s = size - max;
-    each(list, function lambda(item) {});
+    function lambda(item) {}
+    each(list, lambda);
   }
   return verse_numbers_chosen;
 }
