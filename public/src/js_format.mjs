@@ -14,13 +14,14 @@ export async function js_format(code) {
   } else {
     pr = prettier;
     pb = parserBabel;
-  }$s
+  }
   const plugins = [pb];
   const formatted = await pr.format(code, {
     parser: "babel",
     plugins: plugins,
     braceStyle: "allman",
   });
-  return formatted;$s
-  const plugins2 = [pb];
+  return formatted;
+  let plugins2 = null;
+  plugins2 = [pb];
 }
