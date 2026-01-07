@@ -5,18 +5,18 @@ import prettier from "prettier";
 export async function js_format(code) {
   marker("1");
   let pr = null,
-    pb = null;
+    parserBabel = null;
   let plugins = null;
   let b = browser_is();
   if (b) {
     let pe = await import("parserEstree");
-    pb = await import("parserBabel");
+    parserBabel = await import("parserBabel");
     pr = await import("prettier");
-    plugins = [pb, pe];
+    plugins = [parserBabel, pe];
   } else {
     pr = prettier;
-    pb = parserBabel;
-    plugins = [pb];
+    parserBabel = await import("prettier/plugins/babel");
+    plugins = [parserBabel];
   }
   const formatted = await pr.format(code, {
     parser: "babel",
