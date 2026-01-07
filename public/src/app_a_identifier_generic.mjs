@@ -53,9 +53,10 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
         let div = html_div_text(div3, name);
         html_div_text(div3, text2 + " to:");
         if (false) {
+          let fn = null;
+          fn = app_a_input;
         } else {
         }
-        let fn = app_a_input;
         let input = app_a_input(overlay);
         html_centered(input);
         html_value_set(input, name);
