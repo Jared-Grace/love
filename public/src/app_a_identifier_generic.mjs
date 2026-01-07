@@ -24,7 +24,7 @@ import { app_a_choice_close } from "../../../love/public/src/app_a_choice_close.
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export function app_a_identifier_generic(a, span, name, c) {
+export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
   marker("1");
   async function on_pointerdown() {
     let context = object_property_get(a, "context");
