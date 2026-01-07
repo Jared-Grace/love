@@ -17,7 +17,7 @@ export function function_dependencies_externals_to_urls(externals) {
     externals,
   );
   let includes = list_includes(list, item);
-  if (false) {
+  if (includes) {
   }
   return to;
 }
