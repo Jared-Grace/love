@@ -16,6 +16,6 @@ export function function_dependencies_externals_to_urls(externals) {
     "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm",
     prettier: "https://unpkg.com/prettier@3.7.4/standalone.mjs",
   };
-  let to = object_properties_from(o, externals, lookup);
-  return to;
+  let r = object_properties_from(o, externals, lookup);
+  return r;
 }
