@@ -1,3 +1,4 @@
+import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
@@ -204,11 +205,14 @@ export async function app_a_function(context) {
     "word-break": "break-word",
     "font-weight": "500",
   });
+  let list = list_adder(function lambda8(la) {});
   function lambda7(v) {
     let n = object_property_get(v, "node");
     let id = object_property_get(n, "id");
-    function lambda9() {}
-    js_node_type_is_if(node3, type, lambda9);
+    function lambda9() {
+      let name2 = object_property_get(id, "name");
+    }
+    js_node_type_is_if(id, "Identifier", lambda9);
     log({
       node2,
     });
