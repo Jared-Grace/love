@@ -244,7 +244,7 @@ export function app_a_function_node(a) {
       let quasis = object_property_get(node, "quasis");
       let expressions = object_property_get(node, "expressions");
       let text5 = js_symbol_string_template();
-      let span2 = html_span_text(parent2, text5);
+      let span2 = html_span_text(parent, text5);
       function lambda22(q, e) {}
       each_pair_or_null(quasis, expressions, lambda22);
     },
