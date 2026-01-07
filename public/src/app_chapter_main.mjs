@@ -42,6 +42,7 @@ export async function app_chapter_main(context) {
   let content = object_property_get(bc, "content");
   let bar = object_property_get(bc, "bar");
   let t = html_button_copy_text();
+  let max = 2;
   let p2 = html_p_text(
     bar,
     "Choose two verses. Then choose " +
