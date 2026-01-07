@@ -1,6 +1,6 @@
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import babel from "prettier/plugins/babel";
+import parserBabel from "prettier/plugins/babel";
 export async function js_format(code) {
   marker("1");
   let prettier = null,
