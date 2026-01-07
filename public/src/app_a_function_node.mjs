@@ -1,3 +1,4 @@
+import { html_span } from "../../../love/public/src/html_span.mjs";
 import { app_a_raw } from "../../../love/public/src/app_a_raw.mjs";
 import { app_a_symbol_string_template } from "../../../love/public/src/app_a_symbol_string_template.mjs";
 import { each_pair_or_null } from "../../../love/public/src/each_pair_or_null.mjs";
@@ -243,6 +244,7 @@ export function app_a_function_node(a) {
     ["TemplateLiteral"]: function lambda12() {
       let quasis = object_property_get(node, "quasis");
       let expressions = object_property_get(node, "expressions");
+      let component2 = html_span(parent2);
       app_a_symbol_string_template(parent);
       function lambda22(q, e) {
         let value = object_property_get(q, "value");
