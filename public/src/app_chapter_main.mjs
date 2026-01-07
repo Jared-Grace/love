@@ -1,3 +1,4 @@
+import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
@@ -38,7 +39,13 @@ export async function app_chapter_main(context) {
   let bc = html_bar_content(root);
   let content = object_property_get(bc, "content");
   let bar = object_property_get(bc, "bar");
-  let p2 = html_p_text(root2, text2);
+  let t = html_button_copy_text();
+  let p2 = html_p_text(
+    bar,
+    "Choose two verses. Then choose " +
+      t +
+      " to copy all the verses in between (inclusive).",
+  );
   let cb = html_button_copy_width_full(bar, copy);
   firebase_name_jg();
   let hash = html_hash_object_get();
