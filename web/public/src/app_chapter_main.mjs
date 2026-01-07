@@ -1,3 +1,4 @@
+import { number_to_words } from "../../../love/public/src/number_to_words.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
@@ -45,7 +46,9 @@ export async function app_chapter_main(context) {
   let max = 2;
   let p2 = html_p_text(
     bar,
-    "Choose two verses. Then choose " +
+    "Choose " +
+      number_to_words(max) +
+      " verses. Then choose " +
       t +
       " to copy all the verses in between (inclusive).",
   );
