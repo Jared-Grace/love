@@ -124,8 +124,8 @@ export async function app_chapter_main(context) {
       let verses2 = object_property_get(bv, "verses");
       let verse_numbers = list_map_property(verses2, "verse_number");
       let v = list_first_last(verse_numbers_chosen);
-      let last = list_first(v);
-      let first = list_last(v);
+      let first = list_first(v);
+      let last = list_last(v);
       let sliced = list_slice_from(verse_numbers, first, last);
       let mapped2 = list_map_find_property(sliced, verses2, "verse_number");
       let mapped3 = list_map_property(mapped2, "text");
