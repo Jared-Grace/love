@@ -1,4 +1,4 @@
-import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { object_properties_from } from "../../../love/public/src/object_properties_from.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 export function function_dependencies_externals_to_urls(externals) {
@@ -9,7 +9,7 @@ export function function_dependencies_externals_to_urls(externals) {
       parserBabel: "https://unpkg.com/prettier@3.7.4/plugins/babel.mjs",
       parserEstree: "https://unpkg.com/prettier@3.7.4/plugins/estree.mjs",
     };
-    let r2 = list_random_item(list);
+    list_remove(list, item);
   } else {
   }
   const lookup = {
