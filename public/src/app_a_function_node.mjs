@@ -1,3 +1,4 @@
+import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { app_a_raw } from "../../../love/public/src/app_a_raw.mjs";
 import { app_a_symbol_string_template } from "../../../love/public/src/app_a_symbol_string_template.mjs";
@@ -259,6 +260,7 @@ export function app_a_function_node(a) {
       }
       each_pair_or_null(quasis, expressions, lambda22);
       app_a_symbol_string_template(container);
+      html_on_pointerdown(component2, function lambda25() {});
     },
   };
   function o_props() {
