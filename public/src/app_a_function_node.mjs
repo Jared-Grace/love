@@ -275,3 +275,5 @@ export function app_a_function_node(a) {
   let value = object_property_get(lookup, type);
   value();
 }
+
+      app_a_symbol_string_template(parent);
