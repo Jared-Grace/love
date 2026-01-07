@@ -8,7 +8,8 @@ export function function_dependencies_externals_to_urls(externals) {
       prettier: "https://unpkg.com/prettier@3.7.4/standalone.mjs",
       "prettier/plugins/babel": [
         {
-          "": "https://cdn.jsdelivr.net/npm/prettier@3.0.0/esm/plugins/babel.mjs",
+          parserBabel: "https://unpkg.com/prettier@3.7.4/plugins/babel.mjs",
+          parserEstree: "https://unpkg.com/prettier@3.7.4/plugins/estree.mjs",
         },
       ],
     },
