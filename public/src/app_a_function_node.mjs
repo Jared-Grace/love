@@ -241,7 +241,8 @@ export function app_a_function_node(a) {
     ["TemplateLiteral"]: function lambda12() {
       let quasis = object_property_get(node, "quasis");
       let expressions = object_property_get(node, "expressions");
-      each(list, function lambda22(item) {});
+      function lambda22(item) {}
+      each(list, lambda22);
     },
   };
   function o_props() {
