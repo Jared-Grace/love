@@ -170,13 +170,7 @@ export function app_a_function_node(a) {
       let init = object_property_get(node, "init");
       app_a_function_node_child(a, init);
     },
-    ["ObjectExpression"]: function lambda14() {
-      function lambda16() {
-        let properties = object_property_get(node, "properties");
-        app_a_body_inner(parent, properties, a, true);
-      }
-      app_a_braces_wrap(parent, lambda16);
-    },
+    ["ObjectExpression"]: o_props,
     ["Property"]: function lambda14() {
       let kind2 = object_property_get(node, "kind");
       equal_assert(kind2, "init");
@@ -243,11 +237,15 @@ export function app_a_function_node(a) {
       let property = object_property_get(node, "property");
       app_a_function_node_child(a, property);
     },
-    ["ObjectPattern"]: function lambda12() {
-      function lambda22() {}
-      app_a_braces_wrap(parent, lambda22);
-    },
+    ["ObjectPattern"]: o_props,
   };
+  function o_props() {
+    function lambda16() {
+      let properties = object_property_get(node, "properties");
+      app_a_body_inner(parent, properties, a, true);
+    }
+    app_a_braces_wrap(parent, lambda16);
+  }
   function binary() {
     let left = object_property_get(node, "left");
     app_a_function_node_child(a, left);
