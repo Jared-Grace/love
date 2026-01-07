@@ -242,7 +242,9 @@ export function app_a_function_node(a) {
     ["TemplateLiteral"]: function lambda12() {
       let quasis = object_property_get(node, "quasis");
       let expressions = object_property_get(node, "expressions");
-      function lambda22(q, e) {}
+      function lambda22(q, e) {
+        let span2 = html_span_text(parent2, text5);
+      }
       each_pair_or_null(quasis, expressions, lambda22);
     },
   };
