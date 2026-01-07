@@ -25,7 +25,6 @@ import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { list_first_last } from "../../../love/public/src/list_first_last.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { ebible_language_to_bible_folder } from "../../../love/public/src/ebible_language_to_bible_folder.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { app_next_hash_to_languages_chosen } from "../../../love/public/src/app_next_hash_to_languages_chosen.mjs";
@@ -98,7 +97,7 @@ export async function app_chapter_main(context) {
           html_display_none_or_block(hidden, cb);
         }
       }
-      each(verses, lambda);
+      let updates = list_map(verses, lambda);
     }
     let v2 = {
       books,
