@@ -207,7 +207,8 @@ export async function app_a_function(context) {
   function lambda7(v) {
     let n = object_property_get(v, "node");
     let id = object_property_get(n, "id");
-    js_node_type_is_if(node3, type, function lambda9() {});
+    function lambda9() {}
+    js_node_type_is_if(node3, type, lambda9);
     log({
       node2,
     });
