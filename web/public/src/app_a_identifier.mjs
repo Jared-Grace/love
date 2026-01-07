@@ -17,7 +17,7 @@ export async function app_a_identifier(a) {
   if (equal(name, a2)) {
     span = app_a_keyword_blue(parent, name);
   } else {
-    let f_names = await functions_names();
+    let f_names = functions_names;
     let includes = list_includes(f_names, name);
     span = html_span_text(parent, name);
     let color = null;
