@@ -5,6 +5,9 @@ export function function_dependencies_externals_to_urls(externals) {
       acorn: "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.mjs",
       astring: "https://cdn.jsdelivr.net/npm/astring/dist/astring.mjs",
       "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm",
+      prettier: "https://cdn.jsdelivr.net/npm/prettier@3.0.0/esm.mjs",
+      "parser-babel":
+        "https://cdn.jsdelivr.net/npm/prettier@3.0.0/esm/plugins/babel.mjs",
     },
     externals,
   );
