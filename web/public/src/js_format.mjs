@@ -15,6 +15,7 @@ export async function js_format(code) {
   let babel = null;
   let b = browser_is();
   if (b) {
+    babel = "parser-babel";
   } else {
     babel = "prettier/plugins/babel";
   }
