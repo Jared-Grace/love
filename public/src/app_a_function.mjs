@@ -205,19 +205,20 @@ export async function app_a_function(context) {
     "word-break": "break-word",
     "font-weight": "500",
   });
-  function lambda8(la) {}
-  let list = list_adder(lambda8);
-  function lambda7(v) {
-    let n = object_property_get(v, "node");
-    let id = object_property_get(n, "id");
-    function lambda9() {
-      let name2 = object_property_get(id, "name");
+  function lambda8(la) {
+    function lambda7(v) {
+      let n = object_property_get(v, "node");
+      let id = object_property_get(n, "id");
+      function lambda9() {
+        let name2 = object_property_get(id, "name");
+      }
+      js_node_type_is_if(id, "Identifier", lambda9);
+      log({
+        node2,
+      });
     }
-    js_node_type_is_if(id, "Identifier", lambda9);
-    log({
-      node2,
-    });
   }
+  let list = list_adder(lambda8);
   js_visit_type(ast, "FunctionDeclaration", lambda7);
   let f_names = await functions_names();
   app_a_function_node({
