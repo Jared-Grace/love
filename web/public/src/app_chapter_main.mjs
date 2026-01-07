@@ -1,6 +1,4 @@
-import { list_skip } from "../../../love/public/src/list_skip.mjs";
-import { greater_than } from "../../../love/public/src/greater_than.mjs";
-import { list_size } from "../../../love/public/src/list_size.mjs";
+import { list_size_max_skip } from "../../../love/public/src/list_size_max_skip.mjs";
 import { number_to_words } from "../../../love/public/src/number_to_words.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
@@ -85,10 +83,7 @@ export async function app_chapter_main(context) {
         }
         function choose() {
           list_toggle(verse_numbers_chosen, verse_number_v);
-          let size = list_size(verse_numbers_chosen);
-          if (greater_than(size, max)) {
-            verse_numbers_chosen = list_skip(verse_numbers_chosen, size - max);
-          }
+          verse_numbers_chosen = list_size_max_skip(verse_numbers_chosen, max);
           html_style_background_color_set_or_remove_list(
             p,
             verse_numbers_chosen,
