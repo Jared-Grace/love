@@ -150,7 +150,7 @@ export function app_a_function_node(a) {
       let v3 = app_a_raw(node, parent);
       let component = object_property_get(v3, "component");
       let raw = object_property_get(v3, "raw");
-      app_a_literal(a, component, node, on_change);
+      app_a_literal(a, component, node, on_change, raw);
       function on_change(value_new) {
         object_property_set(node, "raw", value_new);
       }
