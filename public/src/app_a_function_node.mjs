@@ -153,7 +153,7 @@ export function app_a_function_node(a) {
         text: "Edit",
         on_change,
       });
-      async function on_change(value_new) {
+      function on_change(value_new) {
         object_property_set(node, "raw", value_new);
       }
     },
