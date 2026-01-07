@@ -1,3 +1,4 @@
+import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
@@ -206,6 +207,7 @@ export async function app_a_function(context) {
   function lambda7(v) {
     let n = object_property_get(v, "node");
     let id = object_property_get(n, "id");
+    js_node_type_is_if(node3, type, function lambda9() {});
     log({
       node2,
     });
