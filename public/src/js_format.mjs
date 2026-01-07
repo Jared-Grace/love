@@ -12,6 +12,7 @@ export async function js_format(code) {
     let pe = await import("parserEstree");
     pb = await import("parserBabel");
     pr = await import("prettier");
+    plugins = [pb, pe];
   } else {
     pr = prettier;
     pb = parserBabel;
