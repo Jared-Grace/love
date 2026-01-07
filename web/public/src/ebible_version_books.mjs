@@ -14,7 +14,8 @@ import { ebible_class_new } from "../../../love/public/src/ebible_class_new.mjs"
 export async function ebible_version_books(bible_folder) {
   let right = ebible_language_original_code();
   if (equal(bible_folder, right)) {
-    return await ebible_version_books(bible_folder);
+    let v2 = await ebible_version_books(bible_folder);
+    return v2;
   }
   marker("1");
   let b = browser_is();
