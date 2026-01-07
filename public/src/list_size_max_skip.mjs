@@ -5,7 +5,7 @@ export function list_size_max_skip(list, max) {
   let size = list_size(list);
   if (greater_than(size, max)) {
     const s = size - max;
-    list_remove_start(s, list);
+    list_remove_start(list, s);
   }
   return list;
 }
