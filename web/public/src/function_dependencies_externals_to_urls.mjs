@@ -1,3 +1,4 @@
+import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { object_properties_from_empty } from "../../../love/public/src/object_properties_from_empty.mjs";
 export function function_dependencies_externals_to_urls(externals) {
   let to = object_properties_from_empty(
@@ -14,7 +15,8 @@ export function function_dependencies_externals_to_urls(externals) {
       ],
     },
     externals,
-  );lin
+  );
+  let includes = list_includes(list, item);
   if (false) {
   }
   return to;
