@@ -14,7 +14,7 @@ export function function_dependencies_externals_to_urls(externals) {
       ],
     },
     externals,
-  );
+  );lin
   if (false) {
   }
   return to;
