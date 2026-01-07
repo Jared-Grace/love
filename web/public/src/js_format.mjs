@@ -8,8 +8,8 @@ export async function js_format(code) {
     pb = null;
   let b = browser_is();
   if (b) {
-    pe = await import(parserEstree);
-    pb = await import(parserBabel);
+    pe = await import('parserEstree');
+    pb = await import('parserBabel');pr=await import('prettier')
   } else {
     pb = parserBabel;
   }
