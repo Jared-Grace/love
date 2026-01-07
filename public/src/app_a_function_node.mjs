@@ -1,3 +1,4 @@
+import { app_a_raw } from "../../../love/public/src/app_a_raw.mjs";
 import { app_a_color_literal } from "../../../love/public/src/app_a_color_literal.mjs";
 import { app_a_symbol_string_template } from "../../../love/public/src/app_a_symbol_string_template.mjs";
 import { each_pair_or_null } from "../../../love/public/src/each_pair_or_null.mjs";
@@ -145,9 +146,9 @@ export function app_a_function_node(a) {
       app_a_identifier(a);
     },
     ["Literal"]: function lambda10() {
-      let raw = object_property_get(node, "raw");
-      let component = html_span_text(parent, raw);
-      app_a_color_literal(component);
+      let v3 = app_a_raw(node, parent);
+      let raw = object_property_get(v3, "raw");
+      let component = object_property_get(v3, "component");
       app_a_identifier_generic(a, component, raw, {
         shortcut: "e",
         text: "Edit",
