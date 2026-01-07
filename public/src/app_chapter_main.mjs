@@ -98,6 +98,7 @@ export async function app_chapter_main(context) {
           let size = list_size(verse_numbers_chosen);
           log({
             size,
+            verse_numbers_chosen,
           });
         }
         function update() {
