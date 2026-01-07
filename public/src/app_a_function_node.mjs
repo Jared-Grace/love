@@ -1,4 +1,4 @@
-import { each_pair } from "../../../love/public/src/each_pair.mjs";
+import { each_pair_or_null } from "../../../love/public/src/each_pair_or_null.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { app_a_identifier_generic } from "../../../love/public/src/app_a_identifier_generic.mjs";
 import { app_a_keyword_blue } from "../../../love/public/src/app_a_keyword_blue.mjs";
@@ -243,7 +243,7 @@ export function app_a_function_node(a) {
       let quasis = object_property_get(node, "quasis");
       let expressions = object_property_get(node, "expressions");
       function lambda22(q) {}
-      each_pair(quasis, lambda22);
+      each_pair_or_null(quasis, lambda22);
     },
   };
   function o_props() {
