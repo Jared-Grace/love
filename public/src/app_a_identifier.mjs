@@ -18,12 +18,14 @@ export async function app_a_identifier(a) {
     span = app_a_keyword_blue(parent, name);
   } else {
     let f_names = await functions_names();
-    let includes = list_includes(list, item);
-    if (false) {
+    let includes = list_includes(f_names, name);
+    span = html_span_text(parent, name);
+    if (includes) {
     } else {
     }
-    span = html_span_text(parent, name);
-    html_font_color_set(span, "#4a4affff");
+    let color = null;
+    color = "#4a4affff";
+    html_font_color_set(span, color);
   }
   app_a_identifier_generic(a, span, name, {
     shortcut: "r",
