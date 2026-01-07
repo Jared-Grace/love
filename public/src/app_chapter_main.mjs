@@ -38,7 +38,7 @@ export async function app_chapter_main(context) {
   let bc = html_bar_content(root);
   let content = object_property_get(bc, "content");
   let bar = object_property_get(bc, "bar");
-  html_button_copy_width_full(bar, copy);
+  let cb = html_button_copy_width_full(bar, copy);
   firebase_name_jg();
   let hash = html_hash_object_get();
   let chapter_code = object_property_get(hash, "c");
