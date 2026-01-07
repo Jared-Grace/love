@@ -14,8 +14,8 @@ export async function js_format(code) {
   return formatted;
   let babel = null;
   let b = browser_is();
-  if (false) {
+  if (b) {
   } else {
+    babel = "prettier/plugins/babel";
   }
-  babel = "prettier/plugins/babel";
 }
