@@ -12,6 +12,7 @@ export function function_dependencies_externals_to_urls(externals) {
     };
     list_remove(externals, pb);
   } else {
+    o = {};
   }
   const lookup = {
     acorn: "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.mjs",
