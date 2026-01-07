@@ -219,7 +219,7 @@ export async function app_a_function(context) {
       });
     }
   }
-  let list = list_adder(lambda8);
+  let list = list_adder_unique(lambda8);
   js_visit_type(ast, "FunctionDeclaration", lambda7);
   let f_names = await functions_names();
   app_a_function_node({
