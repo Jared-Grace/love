@@ -4,6 +4,7 @@ import { app_a_control_style } from "../../../love/public/src/app_a_control_styl
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_input } from "../../../love/public/src/html_input.mjs";
 export function app_a_input(body) {
+  let fn = html_input;
   let input = html_input(body);
   html_focus(input);
   app_a_control_style(input);
