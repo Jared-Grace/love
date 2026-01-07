@@ -238,7 +238,10 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, property);
     },
     ["ObjectPattern"]: o_props,
-    ["TemplateLiteral"]: function lambda12() {},
+    ["TemplateLiteral"]: function lambda12() {
+      let quasis = object_property_get(node, "quasis");
+      let expressions = object_property_get(node, "expressions");
+    },
   };
   function o_props() {
     function lambda16() {
