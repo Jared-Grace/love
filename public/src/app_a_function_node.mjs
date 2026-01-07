@@ -244,21 +244,21 @@ export function app_a_function_node(a) {
     ["TemplateLiteral"]: function lambda12() {
       let quasis = object_property_get(node, "quasis");
       let expressions = object_property_get(node, "expressions");
-      let component2 = html_span(parent2);
-      app_a_symbol_string_template(parent);
+      let container = html_span(parent);
+      app_a_symbol_string_template(container);
       function lambda22(q, e) {
         let value = object_property_get(q, "value");
-        app_a_raw(value, parent);
+        app_a_raw(value, container);
         if (null_not_is(e)) {
-          app_a_keyword_purple(parent, "$");
+          app_a_keyword_purple(container, "$");
           function lambda24() {
             app_a_function_node_child(a, e);
           }
-          app_a_braces_wrap(parent, lambda24);
+          app_a_braces_wrap(container, lambda24);
         }
       }
       each_pair_or_null(quasis, expressions, lambda22);
-      app_a_symbol_string_template(parent);
+      app_a_symbol_string_template(container);
     },
   };
   function o_props() {
