@@ -248,7 +248,8 @@ export function app_a_function_node(a) {
         app_a_color_literal(q);
         if (null_not_is(e)) {
           app_a_keyword_purple(parent, "$");
-          app_a_braces_wrap(parent2, function lambda24() {});
+          function lambda24() {}
+          app_a_braces_wrap(parent2, lambda24);
         }
       }
       each_pair_or_null(quasis, expressions, lambda22);
