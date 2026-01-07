@@ -1,4 +1,4 @@
-import { list_property_exists_not_debug } from "../../../love/public/src/list_property_exists_not_debug.mjs";
+import { list_property_exists_not_error } from "../../../love/public/src/list_property_exists_not_error.mjs";
 import { json_compress_object } from "../../../love/public/src/json_compress_object.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
@@ -20,6 +20,6 @@ export async function app_a_download() {
     return c;
   }
   let files = await list_map_unordered_async(filtered, lambda2);
-  list_property_exists_not_debug(all, "key");
+  list_property_exists_not_error(all, "key");
   return files;
 }
