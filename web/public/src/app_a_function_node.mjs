@@ -243,6 +243,7 @@ export function app_a_function_node(a) {
       let property = object_property_get(node, "property");
       app_a_function_node_child(a, property);
     },
+    ["ObjectPattern"]: () => {},
   };
   function binary() {
     let left = object_property_get(node, "left");
