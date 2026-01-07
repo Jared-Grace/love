@@ -147,7 +147,6 @@ export function app_a_function_node(a) {
     },
     ["Literal"]: function lambda10() {
       let v3 = app_a_raw(node, parent);
-      let raw = object_property_get(v3, "raw");
       let component = object_property_get(v3, "component");
       app_a_literal(a, component, raw, node);
     },
