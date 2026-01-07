@@ -6,7 +6,7 @@ export async function js_format(code) {
   marker("1");
   let pr = null,
     pb = null;
-  let plugins2 = null;
+  let plugins = null;
   let b = browser_is();
   if (b) {
     let pe = await import("parserEstree");
@@ -15,7 +15,7 @@ export async function js_format(code) {
   } else {
     pr = prettier;
     pb = parserBabel;
-    plugins2 = [pb];
+    plugins = [pb];
   }
   const formatted = await pr.format(code, {
     parser: "babel",
