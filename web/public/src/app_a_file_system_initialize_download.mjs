@@ -1,3 +1,4 @@
+import { list_property_exists_not_error } from "../../../love/public/src/list_property_exists_not_error.mjs";
 import { list_to_dictionary_property } from "../../../love/public/src/list_to_dictionary_property.mjs";
 import { indexeddb_put_multiple } from "../../../love/public/src/indexeddb_put_multiple.mjs";
 import { app_a_file_system_initialize } from "../../../love/public/src/app_a_file_system_initialize.mjs";
@@ -12,6 +13,7 @@ export async function app_a_file_system_initialize_download() {
   let db = await app_a_indexeddb_initialize();
   let db_get = lambda_get(db);
   let r = await app_api_fn(app_a_download, []);
+  list_property_exists_not_error(r, "key");
   let dictionary = list_to_dictionary_property(r, "key");
   let store = app_a_file_system_store();
   await indexeddb_put_multiple(db_get, store, dictionary);
