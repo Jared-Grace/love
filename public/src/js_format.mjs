@@ -8,10 +8,9 @@ export async function js_format(code) {
     pb = null;
   let b = browser_is();
   if (b) {
-    pr = await import("parser-babel");
-    pb = await import("prettier/plugins/babel");
+    pe = await import(parserEstree);
+    pb = await import(parserBabel);
   } else {
-    pr = prettier;
     pb = parserBabel;
   }
   const formatted = await pr.format(code, {
