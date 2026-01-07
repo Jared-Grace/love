@@ -139,6 +139,11 @@ export function ebible_languages() {
       bible_folder: "turytc",
       language_code: "tr",
     },
+    {
+      name: "Oriya",
+      bible_folder: "ory",
+      language_code: "tr",
+    },
   ];
   ("if you modify the above list, then run:");
   ebible_languages_chapters_cache_refresh.name;
