@@ -36,6 +36,7 @@ import { list_map_unordered_async } from "../../../love/public/src/list_map_unor
 import { app_bible_search_word_path } from "../../../love/public/src/app_bible_search_word_path.mjs";
 import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { catch_ignore_async } from "./catch_ignore_async.mjs";
+import { list_reverse } from "./list_reverse.mjs";
 export async function app_search_results(context, div_results) {
   marker("1");
   let languages_chosen = object_property_get(context, "languages_chosen");
@@ -119,6 +120,7 @@ export async function app_search_results(context, div_results) {
         function lambda3() {
           let mapped4 = list_map_property(languages_chosen, "language_code");
           let joined = list_join_plus(mapped4);
+          list_reverse(list2);
           window_open_app(app_chapter, {
             c: chapter_code,
             v: verse_number,
