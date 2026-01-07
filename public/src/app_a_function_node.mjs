@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { app_a_literal } from "../../../love/public/src/app_a_literal.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
@@ -149,9 +150,9 @@ export function app_a_function_node(a) {
       let v3 = app_a_raw(node, parent);
       let component = object_property_get(v3, "component");
       app_a_literal(a, component, node);
-  function on_change(value_new) {
-    object_property_set(node, "raw", value_new);
-  }
+      function on_change(value_new) {
+        object_property_set(node, "raw", value_new);
+      }
     },
     ["VariableDeclaration"]: function lambda11() {
       let kind = object_property_get(node, "kind");
