@@ -149,6 +149,9 @@ export function app_a_function_node(a) {
       let v3 = app_a_raw(node, parent);
       let component = object_property_get(v3, "component");
       app_a_literal(a, component, node);
+  function on_change(value_new) {
+    object_property_set(node, "raw", value_new);
+  }
     },
     ["VariableDeclaration"]: function lambda11() {
       let kind = object_property_get(node, "kind");
