@@ -202,7 +202,8 @@ export async function app_a_function(context) {
     "word-break": "break-word",
     "font-weight": "500",
   });
-  js_visit_type(ast2, type, function lambda7(v6) {});
+  function lambda7(v6) {}
+  js_visit_type(ast2, type, lambda7);
   let f_names = await functions_names();
   app_a_function_node({
     node: ast,
