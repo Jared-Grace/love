@@ -219,7 +219,7 @@ export async function app_a_function(context) {
     js_visit_type(ast, "FunctionDeclaration", lambda7);
   }
   let fds = list_adder_unique(lambda8);
-  let difference = list_difference(list, other);
+  let f_names_local = list_difference(fds, f_names);
   app_a_function_node({
     node: ast,
     parent: div,
@@ -230,5 +230,6 @@ export async function app_a_function(context) {
     parsed,
     app_a_function_on_keydown,
     f_names,
+    f_names_local,
   });
 }
