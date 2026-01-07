@@ -1,3 +1,4 @@
+import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { ebible_language_original_code } from "../../../love/public/src/ebible_language_original_code.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -14,7 +15,8 @@ import { ebible_class_new } from "../../../love/public/src/ebible_class_new.mjs"
 export async function ebible_version_books(bible_folder) {
   let right = ebible_language_original_code();
   if (equal(bible_folder, right)) {
-    let v2 = await ebible_version_books(bible_folder);
+    let bible_folder2 = ebible_folder_english();
+    let v2 = await ebible_version_books(bible_folder2);
     return v2;
   }
   marker("1");
