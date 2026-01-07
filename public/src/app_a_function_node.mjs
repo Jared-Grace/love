@@ -246,9 +246,7 @@ export function app_a_function_node(a) {
       app_a_symbol_string_template(parent);
       function lambda22(q, e) {
         let value = object_property_get(q, "value");
-        let v3 = app_a_raw(value, parent);
-        let raw = object_property_get(v3, "raw");
-        let component = object_property_get(v3, "component");
+        app_a_raw(value, parent);
         if (null_not_is(e)) {
           app_a_keyword_purple(parent, "$");
           function lambda24() {
