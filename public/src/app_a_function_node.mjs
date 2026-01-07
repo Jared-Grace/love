@@ -150,11 +150,17 @@ export function app_a_function_node(a) {
       let v3 = app_a_raw(node, parent);
       let raw = object_property_get(v3, "raw");
       let component = object_property_get(v3, "component");
-      app_a_identifier_generic(a, component, raw, {
-        shortcut: "e",
-        text: "Edit",
-        on_change,
-      });
+      app_a_identifier_generic(
+        a,
+        component,
+        raw,
+        {
+          shortcut: "e",
+          text: "Edit",
+          on_change,
+        },
+        false,
+      );
       function on_change(value_new) {
         object_property_set(node, "raw", value_new);
       }
