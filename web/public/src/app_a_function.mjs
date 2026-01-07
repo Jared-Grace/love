@@ -1,3 +1,4 @@
+import { string_is_assert } from "../../../love/public/src/string_is_assert.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
@@ -156,6 +157,7 @@ export async function app_a_function(context) {
           let global = object_property_get(v3, "global");
           let imports = function_dependencies_externals_to_urls(externals);
           async function lambda6(url) {
+            string_is_assert(value);
             let v4 = await import(url);
             return v4;
           }
