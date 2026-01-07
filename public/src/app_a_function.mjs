@@ -1,3 +1,4 @@
+import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
@@ -204,6 +205,7 @@ export async function app_a_function(context) {
     "word-break": "break-word",
     "font-weight": "500",
   });
+  let f_names = await functions_names();
   function lambda8(la) {
     function lambda7(v) {
       let n = object_property_get(v, "node");
@@ -214,10 +216,10 @@ export async function app_a_function(context) {
       }
       js_node_type_is_if(id, "Identifier", lambda9);
     }
+    js_visit_type(ast, "FunctionDeclaration", lambda7);
   }
-  let list = list_adder_unique(lambda8);
-  js_visit_type(ast, "FunctionDeclaration", lambda7);
-  let f_names = await functions_names();
+  let fds = list_adder_unique(lambda8);
+  let difference = list_difference(list, other);
   app_a_function_node({
     node: ast,
     parent: div,
