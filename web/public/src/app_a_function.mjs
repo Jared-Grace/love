@@ -178,7 +178,7 @@ export async function app_a_function(context) {
   if (e) {
     list_add(choices, preview_app);
   }
-  let v5 = html_bar_content(root2);
+  let v5 = html_bar_content(root);
   let content = object_property_get(v5, "content");
   let bar = object_property_get(v5, "bar");
   app_a_buttons_shortcuts(bar, choices);
