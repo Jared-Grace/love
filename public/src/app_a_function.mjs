@@ -181,7 +181,7 @@ export async function app_a_function(context) {
   let v5 = html_bar_content(root2);
   let content = object_property_get(v5, "content");
   let bar = object_property_get(v5, "bar");
-  app_a_buttons_shortcuts(content, choices);
+  app_a_buttons_shortcuts(bar, choices);
   function screen_choose(screen) {
     let f = async function screen_choose_inner() {
       list_remove(on_keydowns, app_a_function_on_keydown);
