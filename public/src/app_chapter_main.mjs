@@ -72,6 +72,7 @@ export async function app_chapter_main(context) {
         fl,
       );
       html_p_text(content, reference);
+      let updates = null;
       async function lambda(v) {
         let verse_number_v = object_property_get(v, "verse_number");
         let text = object_property_get(v, "text");
@@ -96,8 +97,8 @@ export async function app_chapter_main(context) {
           let hidden = not(m);
           html_display_none_or_block(hidden, cb);
         }
+        return update;
       }
-      let updates = null;
       updates = list_map(verses, lambda);
     }
     let v2 = {
