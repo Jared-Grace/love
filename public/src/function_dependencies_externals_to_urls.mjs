@@ -13,7 +13,8 @@ export function function_dependencies_externals_to_urls(externals) {
   );
   let includes = list_includes(list, "prettier/plugins/babel");
   if (includes) {
-    let r = {
+    let r = null;
+    r = {
       parserBabel: "https://unpkg.com/prettier@3.7.4/plugins/babel.mjs",
       parserEstree: "https://unpkg.com/prettier@3.7.4/plugins/estree.mjs",
     };
