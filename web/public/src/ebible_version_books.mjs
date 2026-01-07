@@ -1,3 +1,4 @@
+import { ebible_language_original_code } from "../../../love/public/src/ebible_language_original_code.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
@@ -11,7 +12,9 @@ import { list_join_comma_space } from "../../../love/public/src/list_join_comma_
 import { ebible_class_old } from "../../../love/public/src/ebible_class_old.mjs";
 import { ebible_class_new } from "../../../love/public/src/ebible_class_new.mjs";
 export async function ebible_version_books(bible_folder) {
-  if (equal(left, right)) {
+  let right = ebible_language_original_code();
+  if (equal(bible_folder, right)) {
+    return await ebible_version_books(bible_folder);
   }
   marker("1");
   let b = browser_is();
