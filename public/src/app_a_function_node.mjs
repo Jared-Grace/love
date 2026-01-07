@@ -1,3 +1,4 @@
+import { js_symbol_string_template } from "../../../love/public/src/js_symbol_string_template.mjs";
 import { each_pair_or_null } from "../../../love/public/src/each_pair_or_null.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { app_a_identifier_generic } from "../../../love/public/src/app_a_identifier_generic.mjs";
@@ -242,7 +243,8 @@ export function app_a_function_node(a) {
     ["TemplateLiteral"]: function lambda12() {
       let quasis = object_property_get(node, "quasis");
       let expressions = object_property_get(node, "expressions");
-      let span2 = html_span_text(parent2, "`");
+      let text5 = js_symbol_string_template();
+      let span2 = html_span_text(parent2, text5);
       function lambda22(q, e) {}
       each_pair_or_null(quasis, expressions, lambda22);
     },
