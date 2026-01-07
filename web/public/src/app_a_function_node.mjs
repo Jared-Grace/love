@@ -141,8 +141,8 @@ export function app_a_function_node(a) {
         app_a_nodes_list(a, arguments2, parent);
       }
     },
-    ["Identifier"]: function lambda9() {
-      app_a_identifier(a);
+    ["Identifier"]: async function lambda9() {
+      await app_a_identifier(a);
     },
     ["Literal"]: function lambda10() {
       let v3 = app_a_raw(node, parent);
