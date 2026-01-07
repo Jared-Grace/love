@@ -59,7 +59,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
         } else {
           fn = app_a_input;
         }
-        let input = app_a_input(overlay);
+        let input = fn(overlay);
         html_centered(input);
         html_value_set(input, name);
         await html_select(input);
