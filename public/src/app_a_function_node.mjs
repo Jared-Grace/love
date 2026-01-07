@@ -1,3 +1,4 @@
+import { app_a_color_literal } from "../../../love/public/src/app_a_color_literal.mjs";
 import { app_a_symbol_string_template } from "../../../love/public/src/app_a_symbol_string_template.mjs";
 import { each_pair_or_null } from "../../../love/public/src/each_pair_or_null.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -33,7 +34,6 @@ import { js_keyword_function } from "../../../love/public/src/js_keyword_functio
 import { list_empty_is_assert } from "../../../love/public/src/list_empty_is_assert.mjs";
 import { js_keyword_export } from "../../../love/public/src/js_keyword_export.mjs";
 import { app_a_keyword_purple } from "../../../love/public/src/app_a_keyword_purple.mjs";
-import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { js_keyword_from } from "../../../love/public/src/js_keyword_from.mjs";
 import { object_property_get_double_equal_assert } from "../../../love/public/src/object_property_get_double_equal_assert.mjs";
 import { js_identifier_is_assert } from "../../../love/public/src/js_identifier_is_assert.mjs";
@@ -147,7 +147,7 @@ export function app_a_function_node(a) {
     ["Literal"]: function lambda10() {
       let raw = object_property_get(node, "raw");
       let span3 = html_span_text(parent, raw);
-      html_font_color_set(span3, "#d07200ff");
+      app_a_color_literal(span3);
       app_a_identifier_generic(a, span3, raw, {
         shortcut: "e",
         text: "Edit",
