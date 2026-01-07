@@ -1,3 +1,4 @@
+import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function js_format(code) {
   marker("1");
@@ -12,6 +13,7 @@ export async function js_format(code) {
   });
   return formatted;
   let babel = null;
+  let b = browser_is();
   if (false) {
   } else {
   }
