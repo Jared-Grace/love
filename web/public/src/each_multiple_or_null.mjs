@@ -3,19 +3,14 @@ import { list_max } from "../../../love/public/src/list_max.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { lists_get } from "../../../love/public/src/lists_get.mjs";
-import { each_index } from "../../../love/public/src/each_index.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_size } from "./list_size.mjs";
 export function each_multiple_or_null(lists, lambda) {
   marker("1");
   let mapped = list_map(lists, list_size);
   let max = list_max(mapped);
-  let first = list_first(lists);
-  function lambda2(item, index) {
+  function lambda2(index) {
     let items = lists_get(lists, index);
     lambda(items);
   }
-  each_index(first, lambda2);
-  function lambda3(i) {}
-  each_range(count, lambda3);
+  each_range(max, lambda2);
 }
