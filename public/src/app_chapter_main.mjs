@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
@@ -94,7 +95,10 @@ export async function app_chapter_main(context) {
         function toggle() {
           list_toggle(verse_numbers_chosen, verse_number_v);
           verse_numbers_chosen = list_size_max_skip(verse_numbers_chosen, max);
-          let size = list_size(verse_numbers_chosen);$L$size
+          let size = list_size(verse_numbers_chosen);
+          log({
+            size,
+          });
         }
         function update() {
           html_style_background_color_set_or_remove_list(
