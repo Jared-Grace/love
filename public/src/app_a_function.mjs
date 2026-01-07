@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
@@ -204,6 +205,9 @@ export async function app_a_function(context) {
   });
   function lambda7(v) {
     let node2 = object_property_get(v, "node");
+    log({
+      node2,
+    });
   }
   js_visit_type(ast, "FunctionDeclaration", lambda7);
   let f_names = await functions_names();
