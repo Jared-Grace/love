@@ -53,40 +53,40 @@ export function app_a_function_node(a) {
     Program: function lambda3() {
       app_a_body(node, parent, a, false);
     },
-    ["ImportDeclaration"]: async function lambda4() {
+    ["ImportDeclaration"]: function lambda4() {
       let source = object_property_get(node, "source");
       let text = js_keyword_import();
       app_a_keyword_purple(parent, text);
       app_a_braces_wrap(parent, inner);
       let text2 = js_keyword_from();
       app_a_keyword_purple_space(parent, text2);
-      await app_a_function_node_child(a, source);
+      app_a_function_node_child(a, source);
       app_a_semicolon(parent);
       function inner() {
         let specifiers = object_property_get(node, "specifiers");
-        async function lambda2(specifier) {
-          await app_a_function_node_child(a, specifier);
+        function lambda2(specifier) {
+          app_a_function_node_child(a, specifier);
         }
         each(specifiers, lambda2);
       }
     },
-    ["ImportSpecifier"]: async function lambda6() {
+    ["ImportSpecifier"]: function lambda6() {
       let imported = object_property_get(node, "imported");
       js_identifier_is_assert(imported);
       let local = object_property_get(node, "local");
       const property_name = "name";
       object_property_get_double_equal_assert(imported, local, property_name);
-      await app_a_function_node_child(a, local);
+      app_a_function_node_child(a, local);
     },
-    ["ExportNamedDeclaration"]: async function lambda5() {
+    ["ExportNamedDeclaration"]: function lambda5() {
       let text4 = js_keyword_export();
       app_a_keyword_purple_space(parent, text4);
       let declaration = object_property_get(node, "declaration");
       let specifiers = object_property_get(node, "specifiers");
       list_empty_is_assert(specifiers);
-      await app_a_function_node_child(a, declaration);
+      app_a_function_node_child(a, declaration);
     },
-    ["FunctionDeclaration"]: async function lambda5() {
+    ["FunctionDeclaration"]: function lambda5() {
       let generator = object_property_get(node, "generator");
       false_is_assert(generator);
       let v = js_keyword_function();
@@ -97,7 +97,7 @@ export function app_a_function_node(a) {
         app_a_keyword_blue_space(parent, v2);
       }
       let id = object_property_get(node, "id");
-      await app_a_function_node_child(a, id);
+      app_a_function_node_child(a, id);
       app_a_parenthesis_wrap(parent, inner);
       function inner() {
         let params = object_property_get(node, "params");
@@ -110,31 +110,31 @@ export function app_a_function_node(a) {
     ["BlockStatement"]: function lambda7() {
       app_a_body(node, parent, a, true);
     },
-    ["ReturnStatement"]: async function lambda7() {
+    ["ReturnStatement"]: function lambda7() {
       let k = js_keyword_return();
       app_a_keyword_purple(parent, k);
       let argument2 = object_property_get(node, "argument");
       let nn2 = null_not_is(argument2);
       if (nn2) {
         html_span_space(parent);
-        await app_a_function_node_child(a, argument2);
+        app_a_function_node_child(a, argument2);
       }
       app_a_semicolon(parent);
     },
-    ["ExpressionStatement"]: async function lambda7() {
+    ["ExpressionStatement"]: function lambda7() {
       let expression = object_property_get(node, "expression");
-      await app_a_function_node_child(a, expression);
+      app_a_function_node_child(a, expression);
       app_a_semicolon(parent);
     },
-    ["AwaitExpression"]: async function lambda() {
+    ["AwaitExpression"]: function lambda() {
       let k = js_keyword_await();
       app_a_keyword_purple_space(parent, k);
       let argument = object_property_get(node, "argument");
-      await app_a_function_node_child(a, argument);
+      app_a_function_node_child(a, argument);
     },
-    ["CallExpression"]: async function lambda8() {
+    ["CallExpression"]: function lambda8() {
       let callee = object_property_get(node, "callee");
-      await app_a_function_node_child(a, callee);
+      app_a_function_node_child(a, callee);
       let arguments2 = object_property_get(node, "arguments");
       app_a_parenthesis_wrap(parent, inner);
       function inner() {
@@ -164,20 +164,20 @@ export function app_a_function_node(a) {
       app_a_nodes_list(a, declarations, parent);
       app_a_semicolon(parent);
     },
-    ["VariableDeclarator"]: async function lambda13() {
+    ["VariableDeclarator"]: function lambda13() {
       let id = object_property_get(node, "id");
-      await app_a_function_node_child(a, id);
+      app_a_function_node_child(a, id);
       let text3 = js_code_equals_padded();
       let span = html_span_text(parent, text3);
       let init = object_property_get(node, "init");
-      await app_a_function_node_child(a, init);
+      app_a_function_node_child(a, init);
     },
     ["ObjectExpression"]: o_props,
-    ["Property"]: async function lambda14() {
+    ["Property"]: function lambda14() {
       let kind2 = object_property_get(node, "kind");
       equal_assert(kind2, "init");
       let key = object_property_get(node, "key");
-      await app_a_function_node_child(a, key);
+      app_a_function_node_child(a, key);
       let shorthand = object_property_get(node, "shorthand");
       let method = object_property_get(node, "method");
       false_is_assert(method);
@@ -188,7 +188,7 @@ export function app_a_function_node(a) {
         let span4 = html_span_text(parent, c);
         html_span_space(parent);
         let value3 = object_property_get(node, "value");
-        await app_a_function_node_child(a, value3);
+        app_a_function_node_child(a, value3);
       }
       app_a_comma(parent);
     },
@@ -203,9 +203,9 @@ export function app_a_function_node(a) {
     ["IfStatement"]: function lambda18() {
       let k = js_keyword_if();
       app_a_keyword_purple_space(parent, k);
-      async function lambda19() {
+      function lambda19() {
         let test = object_property_get(node, "test");
-        await app_a_function_node_child(a, test);
+        app_a_function_node_child(a, test);
       }
       app_a_parenthesis_wrap(parent, lambda19);
       html_span_space(parent);
@@ -222,22 +222,22 @@ export function app_a_function_node(a) {
     ["ImportExpression"]: function lambda15() {
       let k2 = js_keyword_import();
       app_a_keyword_blue(parent, k2);
-      async function lambda20() {
+      function lambda20() {
         let source2 = object_property_get(node, "source");
-        await app_a_function_node_child(a, source2);
+        app_a_function_node_child(a, source2);
       }
       app_a_parenthesis_wrap(parent, lambda20);
     },
-    ["MemberExpression"]: async function lambda21() {
+    ["MemberExpression"]: function lambda21() {
       let computed2 = object_property_get(node, "computed");
       false_is_assert(computed2);
       let optional = object_property_get(node, "optional");
       false_is_assert(optional);
       let object = object_property_get(node, "object");
-      await app_a_function_node_child(a, object);
+      app_a_function_node_child(a, object);
       html_span_text(parent, ".");
       let property = object_property_get(node, "property");
-      await app_a_function_node_child(a, property);
+      app_a_function_node_child(a, property);
     },
     ["ObjectPattern"]: o_props,
     ["TemplateLiteral"]: function lambda12() {
@@ -251,8 +251,8 @@ export function app_a_function_node(a) {
         let component = object_property_get(v3, "component");
         if (null_not_is(e)) {
           app_a_keyword_purple(parent, "$");
-          async function lambda24() {
-            await app_a_function_node_child(a, e);
+          function lambda24() {
+            app_a_function_node_child(a, e);
           }
           app_a_braces_wrap(parent, lambda24);
         }
@@ -268,14 +268,14 @@ export function app_a_function_node(a) {
     }
     app_a_braces_wrap(parent, lambda16);
   }
-  async function binary() {
+  function binary() {
     let left = object_property_get(node, "left");
-    await app_a_function_node_child(a, left);
+    app_a_function_node_child(a, left);
     let operator = object_property_get(node, "operator");
     let padded = string_pad_space(operator);
     html_span_text(parent, padded);
     let right = object_property_get(node, "right");
-    await app_a_function_node_child(a, right);
+    app_a_function_node_child(a, right);
   }
   let n = object_property_exists_not(lookup, type);
   if (n) {
