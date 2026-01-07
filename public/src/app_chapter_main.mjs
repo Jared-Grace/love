@@ -84,6 +84,11 @@ export async function app_chapter_main(context) {
         function choose() {
           list_toggle(verse_numbers_chosen, verse_number_v);
           verse_numbers_chosen = list_size_max_skip(verse_numbers_chosen, max);
+          let hidden = update();
+          html_display_none_or_block(hidden, cb);
+        }
+        html_on_pointerdown(p, choose);
+        function update() {
           html_style_background_color_set_or_remove_list(
             p,
             verse_numbers_chosen,
@@ -91,9 +96,8 @@ export async function app_chapter_main(context) {
           );
           let m = list_multiple_is(verse_numbers_chosen);
           let hidden = not(m);
-          html_display_none_or_block(hidden, cb);
+          return hidden;
         }
-        html_on_pointerdown(p, choose);
       }
       each(verses, lambda);
     }
