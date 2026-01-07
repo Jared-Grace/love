@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { app_a_literal } from "../../../love/public/src/app_a_literal.mjs";
@@ -256,7 +257,11 @@ export function app_a_function_node(a) {
       }
       each_pair_or_null(quasis, expressions, lambda22);
       app_a_symbol_string_template(container);
-      let code = js_unparse(ast2);
+      let code = js_unparse(node);
+      log({
+        code,
+      });
+      return;
       app_a_literal(a, component, node, on_change, raw);
       function on_change(value_new) {
         object_property_set(node, "raw", value_new);
