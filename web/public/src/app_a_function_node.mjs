@@ -1,3 +1,4 @@
+import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -261,7 +262,8 @@ export function app_a_function_node(a) {
       return;
       app_a_literal(a, component, node, on_change, code);
       function on_change(value_new) {
-        let expression2 = js_parse_expression(code_expression);
+        let expression2 = js_parse_expression(value_new);
+        object_replace(to, from);
       }
     },
   };
