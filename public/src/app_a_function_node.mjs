@@ -42,7 +42,7 @@ import { js_keyword_import } from "../../../love/public/src/js_keyword_import.mj
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-export function app_a_function_node(a) {
+export async function app_a_function_node(a) {
   let node = object_property_get(a, "node");
   let parent = object_property_get(a, "parent");
   let ast = object_property_get(a, "ast");
@@ -286,5 +286,5 @@ export function app_a_function_node(a) {
     alert(json);
   }
   let value = object_property_get(lookup, type);
-  value();
+  await value();
 }
