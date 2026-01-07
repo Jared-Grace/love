@@ -1,5 +1,4 @@
 import { app_a_raw } from "../../../love/public/src/app_a_raw.mjs";
-import { app_a_color_literal } from "../../../love/public/src/app_a_color_literal.mjs";
 import { app_a_symbol_string_template } from "../../../love/public/src/app_a_symbol_string_template.mjs";
 import { each_pair_or_null } from "../../../love/public/src/each_pair_or_null.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -247,8 +246,9 @@ export function app_a_function_node(a) {
       app_a_symbol_string_template(parent);
       function lambda22(q, e) {
         let value = object_property_get(q, "value");
-        let raw = object_property_get(value, "raw");
-        app_a_color_literal(raw);
+        let v3 = app_a_raw(value, parent);
+        let raw = object_property_get(v3, "raw");
+        let component = object_property_get(v3, "component");
         if (null_not_is(e)) {
           app_a_keyword_purple(parent, "$");
           function lambda24() {
