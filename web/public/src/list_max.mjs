@@ -1,4 +1,9 @@
-import { marker } from "../../../love/public/src/marker.mjs";
-export function list_max() {
-  marker("1");
+import { reduce } from "../../../love/public/src/reduce.mjs";
+export function list_max(list) {
+  function lambda(a, b) {
+    let v = a > b ? a : b;
+    return v;
+  }
+  const max = list.reduce(lambda, -Infinity);
+  return max;
 }
