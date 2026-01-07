@@ -17,7 +17,6 @@ export async function js_format(code) {
     pb = parserBabel;
     plugins2 = [pb];
   }
-  const plugins = [pb];
   const formatted = await pr.format(code, {
     parser: "babel",
     plugins: plugins,
