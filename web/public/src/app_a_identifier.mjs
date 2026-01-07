@@ -26,7 +26,7 @@ export function app_a_identifier(a) {
       let f_names_local = object_property_get(a, "f_names_local");
       let includes2 = list_includes(f_names_local, name);
       if (includes2) {
-        color = "#00bc00ff";
+        color = "#00cf00ff";
       } else {
         color = "#4a4affff";
       }
