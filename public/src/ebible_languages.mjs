@@ -142,7 +142,7 @@ export function ebible_languages() {
     {
       name: "Oriya",
       bible_folder: "ory",
-      language_code: "tr",
+      language_code: "or",
     },
   ];
   ("if you modify the above list, then run:");
