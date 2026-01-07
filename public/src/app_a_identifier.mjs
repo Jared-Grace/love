@@ -1,5 +1,4 @@
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
-import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { js_identifier_rename_imports_fix } from "../../../love/public/src/js_identifier_rename_imports_fix.mjs";
 import { app_a_identifier_generic } from "../../../love/public/src/app_a_identifier_generic.mjs";
 import { app_a_keyword_blue } from "../../../love/public/src/app_a_keyword_blue.mjs";
@@ -17,7 +16,7 @@ export async function app_a_identifier(a) {
   if (equal(name, a2)) {
     span = app_a_keyword_blue(parent, name);
   } else {
-    let f_names = functions_names;
+    let f_names2 = object_property_get(a, "f_names");
     let includes = list_includes(f_names, name);
     span = html_span_text(parent, name);
     let color = null;
