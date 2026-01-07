@@ -1,3 +1,4 @@
+import { app_a_textarea } from "../../../love/public/src/app_a_textarea.mjs";
 import { app_a_buttons_shortcuts_wide } from "../../../love/public/src/app_a_buttons_shortcuts_wide.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
@@ -52,10 +53,11 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
         let div2 = html_div_text(div3, text2 + " from:");
         let div = html_div_text(div3, name);
         html_div_text(div3, text2 + " to:");
-        if (false) {
-          let fn = null;
-          fn = app_a_input;
+        let fn = null;
+        if (lines_multiple) {
+          fn = app_a_textarea;
         } else {
+          fn = app_a_input;
         }
         let input = app_a_input(overlay);
         html_centered(input);
