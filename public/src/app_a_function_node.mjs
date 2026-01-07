@@ -260,7 +260,8 @@ export function app_a_function_node(a) {
       }
       each_pair_or_null(quasis, expressions, lambda22);
       app_a_symbol_string_template(container);
-      html_on_pointerdown(component2, function lambda25() {});
+      function lambda25() {}
+      html_on_pointerdown(component2, lambda25);
     },
   };
   function o_props() {
