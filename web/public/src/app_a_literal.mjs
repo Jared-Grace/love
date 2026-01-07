@@ -10,7 +10,7 @@ export function app_a_literal(a, component, raw, node) {
       text: "Edit",
       on_change,
     },
-    false,
+    true,
   );
   function on_change(value_new) {
     object_property_set(node, "raw", value_new);
