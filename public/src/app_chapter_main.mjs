@@ -94,7 +94,7 @@ export async function app_chapter_main(context) {
         function toggle() {
           list_toggle(verse_numbers_chosen, verse_number_v);
           verse_numbers_chosen = list_size_max_skip(verse_numbers_chosen, max);
-          let size = list_size(list);
+          let size = list_size(verse_numbers_chosen);
         }
         function update() {
           html_style_background_color_set_or_remove_list(
