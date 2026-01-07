@@ -63,7 +63,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
         }
         let input = fn(overlay);
         if (lines_multiple) {
-          html_attribute_set(component3, key, value);
+          html_attribute_set(input, "rows", 5);
         } else {
           html_centered(input);
         }
