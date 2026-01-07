@@ -1,5 +1,6 @@
+import { ebible_verses_upload } from "../../../love/public/src/ebible_verses_upload.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export function ebible_version_upload() {
+export async function ebible_version_upload() {
   marker("1");
-  evu;
+  await ebible_verses_upload(bible_folder);
 }
