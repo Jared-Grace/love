@@ -84,6 +84,8 @@ export async function app_chapter_main(context) {
         function choose() {
           log({});
           list_toggle(verse_numbers_chosen, verse_number_v);
+          if (false) {
+          }
           html_style_background_color_set_or_remove_list(
             p,
             verse_numbers_chosen,
