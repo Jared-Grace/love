@@ -21,5 +21,6 @@ export async function js_format(code) {
     plugins: plugins,
     braceStyle: "allman",
   });
-  return formatted;
+  return formatted;$s
+  const plugins2 = [pb];
 }
