@@ -259,7 +259,7 @@ export function app_a_function_node(a) {
       each_pair_or_null(quasis, expressions, lambda22);
       app_a_symbol_string_template(container);
       let code = js_unparse(node);
-      app_a_literal(a, component, node, on_change, code);
+      app_a_literal(a, container, node, on_change, code);
       function on_change(value_new) {
         let node_new = js_parse_expression(value_new);
         object_replace(node, node_new);
