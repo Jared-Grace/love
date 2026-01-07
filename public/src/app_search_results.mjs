@@ -119,8 +119,8 @@ export async function app_search_results(context, div_results) {
         html_button_copy_width_full(div_verse, copy);
         function lambda3() {
           let mapped4 = list_map_property(languages_chosen, "language_code");
+          list_reverse(mapped4);
           let joined = list_join_plus(mapped4);
-          list_reverse(joined);
           window_open_app(app_chapter, {
             c: chapter_code,
             v: verse_number,
