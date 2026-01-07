@@ -87,7 +87,7 @@ export async function app_chapter_main(context) {
           list_toggle(verse_numbers_chosen, verse_number_v);
           let size = list_size(verse_numbers_chosen);
           if (greater_than(size, max)) {
-            verse_numbers_chosen = list_skip(verse_numbers_chosen, max);
+            verse_numbers_chosen = list_skip(verse_numbers_chosen, size - max);
           }
           html_style_background_color_set_or_remove_list(
             p,
