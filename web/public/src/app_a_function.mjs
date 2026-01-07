@@ -177,6 +177,7 @@ export async function app_a_function(context) {
   if (e) {
     list_add(choices, preview_app);
   }
+  hbc;
   app_a_buttons_shortcuts(choices, root);
   function screen_choose(screen) {
     let f = async function screen_choose_inner() {
