@@ -96,8 +96,9 @@ export async function app_chapter_main(context) {
           let hidden = not(m);
           html_display_none_or_block(hidden, cb);
         }
-      }$s
-      let updates = list_map(verses, lambda);
+      }
+      let updates = null;
+      updates = list_map(verses, lambda);
     }
     let v2 = {
       books,
