@@ -12,5 +12,8 @@ export async function js_format(code) {
   });
   return formatted;
   let babel = null;
+  if (false) {
+  } else {
+  }
   babel = "prettier/plugins/babel";
 }
