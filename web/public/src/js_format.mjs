@@ -6,6 +6,7 @@ export async function js_format(code) {
   marker("1");
   let pr = null,
     pb = null;
+  let plugins2 = null;
   let b = browser_is();
   if (b) {
     let pe = await import("parserEstree");
@@ -14,6 +15,7 @@ export async function js_format(code) {
   } else {
     pr = prettier;
     pb = parserBabel;
+    plugins2 = [pb];
   }
   const plugins = [pb];
   const formatted = await pr.format(code, {
@@ -22,6 +24,4 @@ export async function js_format(code) {
     braceStyle: "allman",
   });
   return formatted;
-  let plugins2 = null;
-  plugins2 = [pb];
 }
