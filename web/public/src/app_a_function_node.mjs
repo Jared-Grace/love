@@ -240,7 +240,8 @@ export function app_a_function_node(a) {
     ["ObjectPattern"]: o_props,
     ["TemplateLiteral"]: function lambda12() {
       let quasis = object_property_get(node, "quasis");
-      let expressions = object_property_get(node, "expressions");$e
+      let expressions = object_property_get(node, "expressions");
+      each(list, function lambda22(item) {});
     },
   };
   function o_props() {
