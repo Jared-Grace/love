@@ -86,7 +86,8 @@ export async function app_chapter_main(context) {
           list_toggle(verse_numbers_chosen, verse_number_v);
           verse_numbers_chosen = list_size_max_skip(verse_numbers_chosen, max);
           update();
-          each(list, function lambda4(item) {});
+          function lambda4(item) {}
+          each(list, lambda4);
         }
         html_on_pointerdown(p, choose);
         function update() {
