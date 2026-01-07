@@ -12,6 +12,9 @@ export function list_size_max_skip(verse_numbers_chosen, max) {
       s,
     });
     verse_numbers_chosen = list_skip(verse_numbers_chosen, s);
+    log({
+      verse_numbers_chosen,
+    });
   }
   return verse_numbers_chosen;
 }
