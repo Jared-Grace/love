@@ -6,7 +6,8 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function indexeddb_exists(db_get, store, key) {
   marker("1");
   let all = await indexeddb_get_all(db_get, store);
-  let filtered = list_filter(list, function lambda(item) {});
+  function lambda(item) {}
+  let filtered = list_filter(list, lambda);
   const property = "key";
   let s1 = list_find_property_exists(all, property, key);
   return s1;
