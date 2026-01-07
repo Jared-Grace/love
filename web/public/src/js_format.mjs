@@ -5,13 +5,6 @@ export async function js_format(code) {
   let prettier = null,
     parserBabel = null;
   prettier = await import("prettier");
-  parserBabel = await import("prettier/plugins/babel");
-  const formatted = await prettier.format(code, {
-    parser: "babel",
-    plugins: [parserBabel],
-    braceStyle: "allman",
-  });
-  return formatted;
   let babel = null;
   let b = browser_is();
   if (b) {
@@ -19,4 +12,11 @@ export async function js_format(code) {
   } else {
     babel = "prettier/plugins/babel";
   }
+  parserBabel = await import(babel);
+  const formatted = await prettier.format(code, {
+    parser: "babel",
+    plugins: [parserBabel],
+    braceStyle: "allman",
+  });
+  return formatted;
 }
