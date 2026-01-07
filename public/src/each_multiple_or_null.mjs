@@ -3,10 +3,11 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { lists_get } from "../../../love/public/src/lists_get.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
+import { list_size } from "./list_size.mjs";
 export function each_multiple_or_null(lists, lambda) {
   marker("1");
   function lambda3(item2) {}
-  let mapped = list_map(list, lambda3);
+  let mapped = list_map(lists, list_size);
   let first = list_first(lists);
   function lambda2(item, index) {
     let items = lists_get(lists, index);
