@@ -7,17 +7,16 @@ export function function_dependencies_externals_to_urls(externals) {
       astring: "https://cdn.jsdelivr.net/npm/astring/dist/astring.mjs",
       "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm",
       prettier: "https://unpkg.com/prettier@3.7.4/standalone.mjs",
-      "prettier/plugins/babel": [
-        {
-          parserBabel: "https://unpkg.com/prettier@3.7.4/plugins/babel.mjs",
-          parserEstree: "https://unpkg.com/prettier@3.7.4/plugins/estree.mjs",
-        },
-      ],
+      "prettier/plugins/babel": [,],
     },
     externals,
   );
-  let includes = list_includes(list, item);
+  let includes = list_includes(list, "prettier/plugins/babel");
   if (includes) {
+    let r = {
+      parserBabel: "https://unpkg.com/prettier@3.7.4/plugins/babel.mjs",
+      parserEstree: "https://unpkg.com/prettier@3.7.4/plugins/estree.mjs",
+    };
   }
   return to;
 }
