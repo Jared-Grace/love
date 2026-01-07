@@ -244,7 +244,8 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, property);
     },
     ["ObjectPattern"]: function lambda12() {
-      app_a_braces_wrap(parent, () => {});
+      function lambda22() {}
+      app_a_braces_wrap(parent, lambda22);
     },
   };
   function binary() {
