@@ -1,3 +1,4 @@
+import { app_a_screens } from "../../../love/public/src/app_a_screens.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
@@ -17,6 +18,7 @@ export async function app_bible_main(context) {
   let root = html_mobile_default(context);
   firebase_name_jg();
   html_margin_0(root);
+  let screens = app_a_screens();
   let bc = html_bar_content(root);
   let content = object_property_get(bc, "content");
   let bar = object_property_get(bc, "bar");
