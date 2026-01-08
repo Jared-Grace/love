@@ -3,6 +3,6 @@ import { data_property_get } from "../../../love/public/src/data_property_get.mj
 export async function data_identifiers_get() {
   const property = "identifiers";
   let d_path = data_path();
-  let v = await data_property_get(property, d_path);
+  let v = await data_property_get(d_path, property);
   return v;
 }
