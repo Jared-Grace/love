@@ -19,6 +19,6 @@ export async function js_auto(ast) {
   return;
   let f_path = data_path();
   await file_read_cached(f_path);
-  await file_overwrite_cached(f_path2);
+  await file_overwrite_cached(f_path);
   log(r);
 }
