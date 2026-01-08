@@ -17,5 +17,4 @@ export async function js_auto(ast) {
   performance_end(p);
   log("end");
   return;
-  let difference = subtract(end, start);
 }
