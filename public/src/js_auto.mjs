@@ -5,8 +5,8 @@ import { js_auto_transforms } from "../../../love/public/src/js_auto_transforms.
 import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function js_auto(ast) {
   let measurements = [];
-  const start = performance_now();
   const name = "start";
+  const start = performance_now();
   list_add(measurements, {
     time: start,
     name: name,
