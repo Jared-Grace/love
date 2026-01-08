@@ -9,5 +9,6 @@ export function performance_end(p) {
     lookup: categories,
   });
   return;
-  let dictionary = list_to_dictionary_value(list, function lambda(item) {});
+  function lambda(item) {}
+  let dictionary = list_to_dictionary_value(list, lambda);
 }
