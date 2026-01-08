@@ -21,5 +21,5 @@ export async function git_purge() {
   await git_add(added);
   await git_commit("Remove " + f_path + " and add to " + g_name);
   await repos_gitignore_overwrite();
-  let stdout = await command_line(command);
+  let stdout = await command_line("pip install git-filter-repo");
 }
