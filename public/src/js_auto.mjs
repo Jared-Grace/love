@@ -1,3 +1,4 @@
+import { subtract } from "../../../love/public/src/subtract.mjs";
 import { js_auto_transforms } from "../../../love/public/src/js_auto_transforms.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function js_auto(ast) {
@@ -9,5 +10,5 @@ export async function js_auto(ast) {
   await each_async(transforms, lambda);
   const end = performance.now();
   return;
-  sub;
+  let difference = subtract(left, right);
 }
