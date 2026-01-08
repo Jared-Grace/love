@@ -7,6 +7,7 @@ import { js_call_new } from "../../../love/public/src/js_call_new.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 export async function js_call_fill(ast) {
+  const p = performance_start();
   let functions = await data_functions_get();
   let visited = [];
   async function lambda(v) {
