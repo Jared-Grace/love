@@ -8,18 +8,19 @@ export function js_string_literals(ast) {
     function lambda(v) {
       let node = object_property_get(v, "node");
       let value = null;
-      value = object_property_get(node, "value");
       function lambda5() {
         let quasis = object_property_get(node, "quasis");
+        value = object_property_get(quasis, "value");
       }
       js_node_type_is_if(node2, "TemplateLiteral", lambda5);
       function lambda4() {
-        let si2 = string_is(value);
-        if (si2) {
-          la(value);
-        }
+        value = object_property_get(node, "value");
       }
       js_node_type_is_if(node, "Literal", lambda4);
+      let si2 = string_is(value);
+      if (si2) {
+        la(value);
+      }
     }
     js_visit_types(ast, ["Literal", "TemplateLiteral"], lambda);
   }
