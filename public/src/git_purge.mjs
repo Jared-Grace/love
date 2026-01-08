@@ -25,4 +25,5 @@ export async function git_purge() {
   let stdout2 = await command_line(
     "git filter-repo --" + f_path + " --invert-paths",
   );
+  clm;
 }
