@@ -1,4 +1,4 @@
-import { command_line_git } from "../../../love/public/src/command_line_git.mjs";
+import { command_line_git_multiple } from "../../../love/public/src/command_line_git_multiple.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { git_remove } from "../../../love/public/src/git_remove.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -14,5 +14,5 @@ export async function git_purge() {
     "push --force --all",
     "push --force --tags",
   ];
-  await command_line_git(command_git);
+  await command_line_git_multiple(command_git);
 }
