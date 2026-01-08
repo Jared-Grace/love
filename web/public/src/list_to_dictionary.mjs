@@ -3,6 +3,10 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 export function list_to_dictionary(list, lambda$item2v, lambda$item2k) {
+  "if each key has one value, then " +
+    list_to_dictionary.name +
+    " but if each key corresponds to a list of values, then " +
+    list_to_lookup.name;
   marker("1");
   let dictionary = {};
   function lambda(item) {
@@ -12,8 +16,4 @@ export function list_to_dictionary(list, lambda$item2v, lambda$item2k) {
   }
   each(list, lambda);
   return dictionary;
-  "if each key has one value, then " +
-    list_to_dictionary.name +
-    " but if each key corresponds to a list of values, then " +
-    list_to_lookup.name;
 }
