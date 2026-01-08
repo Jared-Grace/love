@@ -19,7 +19,6 @@ export function performance_next(p, name) {
   list_add(p, {
     time: time,
     name: name,
-    delta,
   });
   return;
 }
