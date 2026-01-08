@@ -46,13 +46,16 @@ export async function bible_interlinear_chapters() {
     let filtered = list_filter(verse_words, lambda4);
     let mapped = list_map_property(filtered, original_property);
     let text = list_join_space(mapped);
-    let { book_names, chapter_verses_list } = ebible_references_names(books, [
-      vid,
-    ]);
+    let v = ebible_references_names(books, [vid]);
+    let chapter_verses_list = object_property_get(v, "chapter_verses_list");
+    let book_names = object_property_get(v, "book_names");
     let bn = list_single(book_names);
     let cv = list_single(chapter_verses_list);
-    let { index, chapter_code, verse_start, verse_end } =
-      ebible_reference_parts(books, bn, cv);
+    let v2 = ebible_reference_parts(books, bn, cv);
+    let verse_end = object_property_get(v2, "verse_end");
+    let verse_start = object_property_get(v2, "verse_start");
+    let chapter_code = object_property_get(v2, "chapter_code");
+    let index = object_property_get(v2, "index");
     equal_assert(verse_start, verse_end);
     let verse = {
       verse_number: verse_start,
