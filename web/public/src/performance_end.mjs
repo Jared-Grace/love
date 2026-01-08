@@ -17,6 +17,9 @@ export function performance_end(p) {
   }
   let summary = object_values_map(categories, lambda);
   let sorted = object_to_list(summary, "category", "delta");
+  log({
+sorted
+  });
   list_sort_number_property(sorted);
   list_reverse(sorted);
   log({
