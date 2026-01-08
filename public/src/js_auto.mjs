@@ -1,3 +1,4 @@
+import { file_overwrite_cached } from "../../../love/public/src/file_overwrite_cached.mjs";
 import { data_path } from "../../../love/public/src/data_path.mjs";
 import { file_read_cached } from "../../../love/public/src/file_read_cached.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -18,5 +19,6 @@ export async function js_auto(ast) {
   return;
   let f_path = data_path();
   await file_read_cached(f_path);
+  await file_overwrite_cached(f_path2);
   log(r);
 }
