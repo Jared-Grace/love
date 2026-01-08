@@ -19,7 +19,7 @@ export async function app_bible_main(context) {
   let e = ebible_folder_english();
   let hash = html_hash_object_get();
   let chapter_code = object_property_get(hash, "c");
-  let div = html_div_text(root2, text2);
+  let div = html_div_text(bar, chapter_code);
   let verses = await ebible_verses(e, chapter_code);
   function lambda(v) {
     let verse_number_v = object_property_get(v, "verse_number");
