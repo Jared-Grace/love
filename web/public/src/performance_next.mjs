@@ -7,11 +7,6 @@ import { performance_now } from "../../../love/public/src/performance_now.mjs";
 export function performance_next(p, name) {
   marker("1");
   const time = performance_now();
-  list_add(p, {
-    time: time,
-    name: name,
-  });
-  return;
   let delta = null;
   let e = list_empty_is(p);
   if (e) {
@@ -21,4 +16,10 @@ export function performance_next(p, name) {
     let time_previous = object_property_get(last, "time");
     delta = time - time_previous;
   }
+  list_add(p, {
+    time: time,
+    name: name,
+    delta,
+  });
+  return;
 }
