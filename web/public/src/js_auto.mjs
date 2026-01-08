@@ -1,10 +1,11 @@
+import { file_read_cached } from "../../../love/public/src/file_read_cached.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { performance_end } from "../../../love/public/src/performance_end.mjs";
 import { performance_next } from "../../../love/public/src/performance_next.mjs";
 import { performance_start } from "../../../love/public/src/performance_start.mjs";
 import { js_auto_transforms } from "../../../love/public/src/js_auto_transforms.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
-export async function js_auto(ast) {frc
+export async function js_auto(ast) {
   const p = performance_start(js_auto.name);
   let transforms = js_auto_transforms();
   async function lambda(t) {
@@ -14,5 +15,6 @@ export async function js_auto(ast) {frc
   await each_async(transforms, lambda);
   let r = performance_end(p);
   return;
+  await file_read_cached(f_path);
   log(r);
 }
