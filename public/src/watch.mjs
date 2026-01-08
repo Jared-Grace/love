@@ -21,7 +21,7 @@ export async function watch() {
   async function lambda2(path) {
     async function lambda() {
       const value = true;
-      if (object_property_exists_equals(path, in_progress, value)) {
+      if (object_property_exists_equals(in_progress, path, value)) {
         return;
       }
       log({
