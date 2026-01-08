@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { performance_end } from "../../../love/public/src/performance_end.mjs";
 import { performance_next } from "../../../love/public/src/performance_next.mjs";
 import { performance_start } from "../../../love/public/src/performance_start.mjs";
@@ -14,5 +15,8 @@ export async function js_auto(ast) {
   await each_async(transforms, lambda);
   performance_end(p);
   return;
+  log({
+    p,
+  });
   let difference = subtract(end, start);
 }
