@@ -1,3 +1,4 @@
+import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { string_is } from "../../../love/public/src/string_is.mjs";
@@ -16,7 +17,7 @@ export function js_strings(ast) {
       }
       js_node_type_is_if(node, "TemplateLiteral", lambda5);
       function lambda4() {
-        lz1i;
+        let s1 = list_size_1(list);
         let v2 = object_property_get(node, "value");
         value = object_property_get(v2, "raw");
       }
