@@ -1,5 +1,5 @@
+import { list_map_property_exists } from "../../../love/public/src/list_map_property_exists.mjs";
 import { list_sum } from "../../../love/public/src/list_sum.mjs";
-import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { object_values_map } from "../../../love/public/src/object_values_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_to_lookup } from "../../../love/public/src/list_to_lookup.mjs";
@@ -12,7 +12,7 @@ export function performance_end(p) {
   });
   return;
   function lambda(list, key) {
-    let mapped = list_map_property(list, "delta");
+    let mapped = list_map_property_exists(list, "delta");
     let value = list_sum(mapped);
     return value;
   }
