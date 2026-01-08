@@ -4,7 +4,8 @@ import { list_map_property } from "../../../love/public/src/list_map_property.mj
 import { marker } from "../../../love/public/src/marker.mjs";
 export function list_map_property_exists(list, property_name) {
   function lambda(item) {
-    let exists = object_property_exists(object, property_name2);
+    let exists = object_property_exists(item, property_name);
+    return exists;
   }
   let filtered = list_filter(list, lambda);
   marker("1");
