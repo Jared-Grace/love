@@ -8,5 +8,4 @@ export function performance_next(p, name) {
     time: start,
     name: name,
   });
-  return start;
 }
