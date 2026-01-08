@@ -14,9 +14,9 @@ export async function js_auto(ast) {
   }
   await each_async(transforms, lambda);
   let r = performance_end(p);
-  log("end");
-  return;
   log({
     r,
   });
+  log("end");
+  return;
 }
