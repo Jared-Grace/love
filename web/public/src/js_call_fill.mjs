@@ -10,7 +10,9 @@ import { js_call_new } from "../../../love/public/src/js_call_new.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 export async function js_call_fill(ast) {
+  const p = performance_start();
   let functions = await data_functions_get();
+    performance_next(p, t.name);
   let visited = [];
   async function lambda(v) {
     let stack = object_property_get(v, "stack");
@@ -38,6 +40,5 @@ export async function js_call_fill(ast) {
   }
   await js_visit_type_each_async(ast, "ExpressionStatement", lambda);
   return;
-  const p = performance_start();
   let r = performance_end(p);
 }
