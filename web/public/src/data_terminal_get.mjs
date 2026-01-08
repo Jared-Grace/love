@@ -5,6 +5,6 @@ export async function data_terminal_get() {
   marker("1");
   const property_name = "terminal";
   let d_path = data_path();
-  let w = await data_property_get_generic(d_path, property_name);
-  return w;
+  let t = await data_property_get_generic(d_path, property_name);
+  return t;
 }
