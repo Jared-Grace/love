@@ -14,9 +14,9 @@ export async function js_auto(ast) {
   }
   await each_async(transforms, lambda);
   performance_end(p);
-  return;
   log({
     p,
   });
+  return;
   let difference = subtract(end, start);
 }
