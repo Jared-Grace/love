@@ -13,8 +13,7 @@ export function performance_end(p) {
     return value;
   }
   let summary = object_values_map(categories, lambda);
-  log({
-    lookup: categories,summary
+  log({categories,summary
   });
   return;
 }
