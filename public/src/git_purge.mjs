@@ -1,3 +1,4 @@
+import { command_line } from "../../../love/public/src/command_line.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { git_add } from "../../../love/public/src/git_add.mjs";
 import { file_transform } from "../../../love/public/src/file_transform.mjs";
@@ -20,4 +21,5 @@ export async function git_purge() {
   await git_add(added);
   await git_commit("Remove " + f_path + " and add to " + g_name);
   await repos_gitignore_overwrite();
+  let stdout = await command_line(command);
 }
