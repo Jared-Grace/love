@@ -14,6 +14,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { file_parent_exists_ensure } from "../../../love/public/src/file_parent_exists_ensure.mjs";
 export async function file_overwrite(file_path, contents) {
+  string_is_assert(contents);
   marker("1");
   if (browser_is()) {
     file_path = file_path_normalize(file_path);
@@ -52,5 +53,4 @@ export async function file_overwrite(file_path, contents) {
   let fs = await import("fs");
   await fs.promises.writeFile(file_path, contents, "utf-8");
   return;
-  string_is_assert(value);
 }
