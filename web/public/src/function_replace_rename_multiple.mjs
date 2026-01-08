@@ -7,7 +7,7 @@ export async function function_replace_rename_multiple(from, to) {
   marker("1");
   let f_names = await functions_names();
   async function lambda(f_name) {
-    let n = string_includes_not(parts, from);
+    let n = string_includes_not(f_name, from);
     if (n) {
       return;
     }
