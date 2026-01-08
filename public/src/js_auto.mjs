@@ -7,12 +7,6 @@ import { performance_start } from "../../../love/public/src/performance_start.mj
 import { js_auto_transforms } from "../../../love/public/src/js_auto_transforms.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function js_auto(ast) {
-  await lambda();
-  return;
-  let d_path = data_path();
-  let r = await file_transform_cached(d_path, lambda);
-  return;
-  log(r);
   async function lambda() {
     const p = performance_start(js_auto.name);
     let transforms = js_auto_transforms();
@@ -24,4 +18,10 @@ export async function js_auto(ast) {
     let r = performance_end(p);
     return r;
   }
+  await lambda();
+  return;
+  let d_path = data_path();
+  let r = await file_transform_cached(d_path, lambda);
+  return;
+  log(r);
 }
