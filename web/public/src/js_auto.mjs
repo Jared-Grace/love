@@ -9,9 +9,7 @@ import { js_auto_transforms } from "../../../love/public/src/js_auto_transforms.
 import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function js_auto(ast) {
   let d_path = data_path();
-  await file_read_cached(d_path);
-  let r = await lambda();
-  await file_overwrite_cached(d_path);
+  let r = await file_transform_cached(d_path, lambda);
   return;
   log(r);
 
@@ -27,3 +25,10 @@ export async function js_auto(ast) {
     return r;
   }
 }
+async function file_transform_cached(d_path, lambda) {
+  await file_read_cached(d_path);
+  let r = await lambda();
+  await file_overwrite_cached(d_path);
+  return r;
+}
+
