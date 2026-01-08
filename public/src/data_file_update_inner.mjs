@@ -16,9 +16,9 @@ import { object_property_initialize } from "../../../love/public/src/object_prop
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
 import { function_path_to_name } from "../../../love/public/src/function_path_to_name.mjs";
 export async function data_file_update_inner(parsed, data) {
-  let { f_path } = parsed;
+  let f_path = object_property_get(parsed, "f_path");
   let f_name = function_path_to_name(f_path);
-  let { ast } = parsed;
+  let ast = object_property_get(parsed, "ast");
   let functions = object_property_initialize(data, "functions", {});
   let f_this = object_property_initialize(functions, f_name, {});
   let declaration = js_declaration_single(ast);
@@ -52,6 +52,10 @@ export async function data_file_update_inner(parsed, data) {
   }
   let f_identifiers_new = js_identifiers_names(ast);
   data_add("identifiers", f_identifiers_new);
+  if (0) {
+    let f_identifiers_new = js_identifiers_names(ast);
+    data_add("identifiers", f_identifiers_new);
+  }
   function lambda2(la) {
     js_visit_calls_named(fn_name.name, lambda4, ast);
     function lambda4({ args }) {
