@@ -1,6 +1,8 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { object_values } from "../../../love/public/src/object_values.mjs";
 import { object_values_map } from "../../../love/public/src/object_values_map.mjs";
 export function object_to_list_names(value_name, key_name, o) {
+  marker("1");
   function lambda3(value, key) {
     let v = {
       [value_name]: value,
