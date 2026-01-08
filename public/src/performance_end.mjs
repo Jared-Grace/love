@@ -9,5 +9,6 @@ export function performance_end(p) {
     lookup: categories,
   });
   return;
-  let result = object_values_map(object, function lambda(value, key) {});
+  function lambda(value, key) {}
+  let result = object_values_map(object, lambda);
 }
