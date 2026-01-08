@@ -1,3 +1,4 @@
+import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -13,6 +14,7 @@ export async function app_bible_main(context) {
   function lambda(item) {
     let verse_number_v = object_property_get(v, "verse_number");
     let text = object_property_get(v, "text");
+    let p = html_p_text(content, verse_number_v + " " + text);
   }
   each(verses, lambda);
 }
