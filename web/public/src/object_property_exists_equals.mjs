@@ -1,7 +1,7 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_equals } from "../../../love/public/src/object_property_equals.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
-export function object_property_exists_equals(path, in_progress, value) {
+export function object_property_exists_equals(in_progress, path, value) {
   marker("1");
   let v =
     object_property_exists(path) &&
