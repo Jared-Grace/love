@@ -1,3 +1,4 @@
+import { performance_next } from "../../../love/public/src/performance_next.mjs";
 import { performance_start } from "../../../love/public/src/performance_start.mjs";
 import { performance_now } from "../../../love/public/src/performance_now.mjs";
 import { subtract } from "../../../love/public/src/subtract.mjs";
@@ -11,7 +12,7 @@ export async function js_auto(ast) {
   }
   await each_async(transforms, lambda);
   const end = performance_now();
-  let difference = subtract(end, start);
   return;
-     performance_next(p);
+  let difference = subtract(end, start);
+  performance_next(p);
 }
