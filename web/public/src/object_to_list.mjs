@@ -3,8 +3,8 @@ import { object_values_map } from "../../../love/public/src/object_values_map.mj
 export function object_to_list(o) {
   function lambda3(value, key) {
     let v = {
-      value,
-      key,
+      ["value"]: value,
+      ["key"]: key,
     };
     return v;
   }
