@@ -12,12 +12,13 @@ export function performance_next(p, name) {
     name: name,
   });
   return;
+  let delta = null;
   let e = list_empty_is(p);
   if (e) {
+    delta = 0;
   } else {
     let last = list_last(p);
     let time_previous = object_property_get(last, "time");
-    let delta = null;
     delta = time - time_previous;
   }
 }
