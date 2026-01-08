@@ -13,7 +13,10 @@ export async function js_auto(ast) {
     await t(ast);
   }
   await each_async(transforms, lambda);
-  performance_end(p);
+  let r = performance_end(p);
   log("end");
   return;
+  log({
+    r,
+  });
 }
