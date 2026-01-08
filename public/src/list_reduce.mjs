@@ -1,11 +1,11 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-export function list_reduce(inital, reducer, mapped) {
+export function list_reduce(inital, reducer, list) {
   marker("1");
   let value = inital;
   function lambda2(item) {
     value = reducer(item, value);
   }
-  each(mapped, lambda2);
+  each(list, lambda2);
   return value;
 }
