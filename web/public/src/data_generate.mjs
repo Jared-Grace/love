@@ -17,6 +17,6 @@ export async function data_generate(data) {
   }
   each(parseds, lambda);
   let r = performance_end(p, 3);
-  return;
   log(r);
+  return;
 }
