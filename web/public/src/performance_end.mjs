@@ -14,8 +14,9 @@ export function performance_end(p) {
   return;
   function lambda(list, key) {
     let mapped = list_map_property(list, "delta");
+    let inital = 0;
     let fn = add;
-    let value = 0;
+    let value = inital;
     function lambda2(item) {
       value = fn(item, value);
     }
