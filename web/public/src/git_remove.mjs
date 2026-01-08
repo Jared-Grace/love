@@ -1,4 +1,4 @@
-import { git_commit_folder } from "../../../love/public/src/git_commit_folder.mjs";
+import { git_commit } from "../../../love/public/src/git_commit.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { command_line_git } from "../../../love/public/src/command_line_git.mjs";
 export async function git_remove() {
@@ -6,7 +6,7 @@ export async function git_remove() {
   await command_line_git("rm --cached " + f_path);
   await command_line_git(command_git);
   async function lambda(item) {
-    await git_commit_folder(folder, message);
+    await git_commit(folder, message);
   }
   await each_async(list, lambda);
 }
