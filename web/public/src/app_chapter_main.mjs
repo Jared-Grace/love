@@ -41,6 +41,7 @@ import { list_multiple_is } from "./list_multiple_is.mjs";
 export async function app_chapter_main(context) {
   marker("1");
   let root = html_mobile_default(context);
+  firebase_name_jg();
   html_margin_0(root);
   let bc = html_bar_content(root);
   let content = object_property_get(bc, "content");
@@ -56,7 +57,6 @@ export async function app_chapter_main(context) {
       " to copy all the verses in between (inclusive).",
   );
   let cb = html_button_copy_width_full(bar, copy);
-  firebase_name_jg();
   let hash = html_hash_object_get();
   let chapter_code = object_property_get(hash, "c");
   let verse_number = object_property_get(hash, "v");
