@@ -10,8 +10,8 @@ export function list_to_lookup(property_key, list) {
     if (n) {
       return;
     }
-    let vid = object_property_get(word, property_key);
-    let verse_words = object_property_initialize_list(verses, vid);
+    let v = object_property_get(word, property_key);
+    let verse_words = object_property_initialize_list(verses, v);
     list_add(verse_words, word);
   }
   each(list, lambda);
