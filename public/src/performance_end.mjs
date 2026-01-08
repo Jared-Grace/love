@@ -1,4 +1,4 @@
-import { list_to_dictionary } from "../../../love/public/src/list_to_dictionary.mjs";
+import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_to_lookup } from "../../../love/public/src/list_to_lookup.mjs";
 import { performance_next } from "../../../love/public/src/performance_next.mjs";
@@ -9,7 +9,5 @@ export function performance_end(p) {
     lookup: categories,
   });
   return;
-  function lambda(item2v) {}
-  function lambda2(item2k) {}
-  let dictionary = list_to_dictionary(list, lambda, lambda2);
+  let dictionary = list_to_dictionary_value(list, function lambda(item) {});
 }
