@@ -16,12 +16,12 @@ export function performance_end(p) {
     return value;
   }
   let summary = object_values_map(categories, lambda);
-  log({
-    categories,
-    summary,
-  });
-  return;
   let sorted = object_to_list(summary, "category", "delta");
   list_sort_number_property(sorted);
   list_reverse(sorted);
+  log({
+    categories,
+    summary,sorted
+  });
+  return;
 }
