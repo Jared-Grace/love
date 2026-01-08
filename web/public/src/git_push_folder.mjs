@@ -4,7 +4,7 @@ import { data_set } from "../../../love/public/src/data_set.mjs";
 import { lambda_get } from "../../../love/public/src/lambda_get.mjs";
 import { command_line_git_folder } from "../../../love/public/src/command_line_git_folder.mjs";
 import { date_to } from "../../../love/public/src/date_to.mjs";
-import { data_property_get } from "../../../love/public/src/data_property_get.mjs";
+import { data_property_get_generic } from "../../../love/public/src/data_property_get_generic.mjs";
 import { user_repo_path } from "../../../love/public/src/user_repo_path.mjs";
 import { git_push } from "../../../love/public/src/git_push.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
@@ -23,7 +23,7 @@ export async function git_push_folder(folder) {
     let property_name = function_name_combine(git_push.name, "when");
     let d_path = user_repo_path();
     let joined = path_join([folder, d_path]);
-    let before_iso = await data_property_get(joined, property_name);
+    let before_iso = await data_property_get_generic(joined, property_name);
     let before = date_to(before_iso);
     const mins = date_diff_mins(now, before);
     if (mins < 5) {
