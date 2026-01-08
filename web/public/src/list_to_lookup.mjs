@@ -5,7 +5,7 @@ import { object_property_initialize_list } from "../../../love/public/src/object
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
 import { list_to_dictionary } from "./list_to_dictionary.mjs";
-export function list_to_lookup(property_key, list) {
+export function list_to_lookup(list, property_key) {
   marker("1");
   "if each key has one value, then " +
     list_to_dictionary.name +
