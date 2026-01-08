@@ -1,3 +1,4 @@
+import { performance_end } from "../../../love/public/src/performance_end.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { performance_start } from "../../../love/public/src/performance_start.mjs";
 import { data_functions_get } from "../../../love/public/src/data_functions_get.mjs";
@@ -38,4 +39,5 @@ export async function js_call_fill(ast) {
   await js_visit_type_each_async(ast, "ExpressionStatement", lambda);
   return;
   const p = performance_start();
+  let r = performance_end(p);
 }
