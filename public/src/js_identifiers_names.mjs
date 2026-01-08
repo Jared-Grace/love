@@ -6,7 +6,7 @@ export function js_identifiers_names(ast) {
   marker("1");
   function lambda2(la) {
     function lambda(v) {
-      let { node } = v;
+      let node = object_property_get(v, "node");
       let value = object_property_get(node, "name");
       la(value);
     }
