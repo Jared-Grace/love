@@ -1,3 +1,4 @@
+import { add } from "../../../love/public/src/add.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { object_values_map } from "../../../love/public/src/object_values_map.mjs";
@@ -13,9 +14,12 @@ export function performance_end(p) {
   return;
   function lambda(list, key) {
     let mapped = list_map_property(list, "delta");
+    let fn = add;
     let value = 0;
-    function lambda2(item) {}
-    each(list2, lambda2);
+    function lambda2(item) {
+      value = fn(item, value);
+    }
+    each(mapped, lambda2);
   }
   let result = object_values_map(categories, lambda);
 }
