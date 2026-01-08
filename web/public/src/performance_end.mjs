@@ -22,11 +22,12 @@ export function performance_end(measurements) {
   });
   list_sort_number_property(sorted);
   list_reverse(sorted);
-  log({
+  const r = {
     measurements,
     grouped,
     summary,
     sorted,
-  });
-  return;
+  };
+  log(r);
+  return r;
 }
