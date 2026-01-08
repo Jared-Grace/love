@@ -29,7 +29,8 @@ export async function app_bible_main(context) {
   let books = await ebible_version_books(e);
   let book_name = ebible_book_code_to_name(books, book_code);
   let div = html_div_text_centered(bar, book_name + " " + chapter_name);
-  let component = html_button(parent, text2, function lambda3() {});
+  function lambda3() {}
+  let component = html_button(parent, text2, lambda3);
   let verses = await ebible_verses(e, chapter_code);
   function lambda(v) {
     let verse_number_v = object_property_get(v, "verse_number");
