@@ -23,7 +23,7 @@ export async function git_push_folder(folder) {
     let property_name = function_name_combine(git_push.name, "when");
     let d_path = user_repo_path();
     let joined = path_join([folder, d_path]);
-    let before_iso = await data_property_get(property_name, joined);
+    let before_iso = await data_property_get(joined, property_name);
     let before = date_to(before_iso);
     const mins = date_diff_mins(now, before);
     if (mins < 5) {
