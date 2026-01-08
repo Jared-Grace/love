@@ -7,9 +7,9 @@ import { log } from "../../../love/public/src/log.mjs";
 import { list_to_lookup } from "../../../love/public/src/list_to_lookup.mjs";
 import { performance_next } from "../../../love/public/src/performance_next.mjs";
 import { object_to_list_names } from "./object_to_list_names.mjs";
-export function performance_end(p) {
-  performance_next(p, "end");
-  let grouped = list_to_lookup(p, "category");
+export function performance_end(measurements) {
+  performance_next(measurements, "end");
+  let grouped = list_to_lookup(measurements, "category");
   function lambda(list, key) {
     let mapped = list_map_property_exists(list, "delta");
     let value = list_sum(mapped);
@@ -23,6 +23,7 @@ export function performance_end(p) {
   list_sort_number_property(sorted);
   list_reverse(sorted);
   log({
+    measurements,
     grouped,
     summary,
     sorted,
