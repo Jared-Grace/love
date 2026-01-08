@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
@@ -13,7 +14,7 @@ export function performance_next(p, name) {
     delta = 0;
   } else {
     let last = list_last(p);
-    let time_previous = object_property_get(last, "time");st
+    let time_previous = object_property_get(last, "time");
     delta = time - time_previous;
   }
   list_add(p, {
@@ -22,4 +23,5 @@ export function performance_next(p, name) {
     delta,
   });
   return;
+  object_property_set(object, property_name, value);
 }
