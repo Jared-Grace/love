@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -14,15 +15,16 @@ export function js_strings(ast) {
       let value = null;
       function lambda5() {
         let quasis = object_property_get(node, "quasis");
-        let s1 = list_size_1(list);
+        let s1 = list_size_1(quasis);
         if (s1) {
           let expressions = object_property_get(node, "expressions");
           let e = list_empty_is(expressions);
-          if (false) {
+          if (e) {
+            let first = list_first(list);
+            let v2 = object_property_get(node, "value");
+            value = object_property_get(v2, "raw");
           }
         }
-        let v2 = object_property_get(node, "value");
-        value = object_property_get(v2, "raw");
       }
       js_node_type_is_if(node, "TemplateLiteral", lambda5);
       function lambda4() {
