@@ -4,8 +4,8 @@ import { performance_next } from "../../../love/public/src/performance_next.mjs"
 export function performance_end(p) {
   performance_next(p, "end");
   let lookup = list_to_lookup(p, "category");
-  return;
   log({
     lookup,
   });
+  return;
 }
