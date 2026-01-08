@@ -1,3 +1,4 @@
+import { folder_current } from "../../../love/public/src/folder_current.mjs";
 import { git_add_folder } from "../../../love/public/src/git_add_folder.mjs";
 import { file_transform } from "../../../love/public/src/file_transform.mjs";
 import { string_combine_newline } from "../../../love/public/src/string_combine_newline.mjs";
@@ -15,7 +16,8 @@ export async function git_remove() {
   }
   await file_transform(g_name, lambda);
   let added = g_name;
-  await git_add_folder(".", added);
+  let folder = folder_current();
+  await git_add_folder(folder, added);
   await git_commit("Remove " + f_path + " and add to " + g_name);
   await repos_gitignore_overwrite();
 }
