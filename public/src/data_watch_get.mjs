@@ -3,6 +3,6 @@ import { data_property_get_generic } from "../../../love/public/src/data_propert
 export async function data_watch_get() {
   let d_path = data_path();
   const property_name = "watch";
-  let w = await data_property_get_generic(d_path, property_name);
-  return w;
+  let v = await data_property_get_generic(d_path, "identifiers");
+  return v;
 }
