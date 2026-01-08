@@ -3,5 +3,5 @@ import { performance_next } from "../../../love/public/src/performance_next.mjs"
 export function performance_end(p) {
   performance_next(p, "end");
   return;
-  let verses = list_to_lookup(property_key, list);
+  let verses = list_to_lookup(list, property_key);
 }
