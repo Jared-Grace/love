@@ -17,7 +17,7 @@ export function js_strings(ast) {
         let s1 = list_size_1(list);
         if (s1) {
           let expressions = object_property_get(node, "expressions");
-          let e = list_empty_is(expressions);
+          let e = list_empty_is(expressions);$i
         }
         let v2 = object_property_get(node, "value");
         value = object_property_get(v2, "raw");
