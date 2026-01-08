@@ -42,6 +42,6 @@ export async function js_call_fill(ast) {
   }
   await js_visit_type_each_async(ast, "ExpressionStatement", lambda);
   let r = performance_end(p);
-  return;
   log(r);
+  return;
 }
