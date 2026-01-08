@@ -31,5 +31,5 @@ export async function git_purge() {
     let stdout = await command_line(item);
   }
   await command_line_multiple(commands);
-  clm;
+  await command_line_multiple(commands2);
 }
