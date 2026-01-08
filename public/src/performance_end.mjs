@@ -14,7 +14,8 @@ export function performance_end(p) {
   function lambda(list, key) {
     let mapped = list_map_property(list, "delta");
     let value = 0;
-    each(list2, function lambda2(item) {});
+    function lambda2(item) {}
+    each(list2, lambda2);
   }
   let result = object_values_map(categories, lambda);
 }
