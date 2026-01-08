@@ -9,7 +9,6 @@ export async function function_replace_rename_multiple(from, to) {
   marker("1");
   let f_names = await functions_names();
   async function lambda(f_name) {
-    let parts = function_name_to_parts(f_name);
     let includes = string_includes(parts, from);
     let n = not(includes);
     if (n) {
