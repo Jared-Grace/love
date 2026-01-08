@@ -21,15 +21,22 @@ export async function watch() {
   async function lambda2(path) {
     async function lambda() {
       const value = true;
+      log({
+        m: "before",
+        path,
+        in_progress,
+      });
       if (object_property_exists_equals(in_progress, path, value)) {
         return;
       }
       log({
+        m: "after",
         path,
         in_progress,
       });
       object_property_set(in_progress, path, value);
       log({
+        m: "set",
         path,
         in_progress,
       });
