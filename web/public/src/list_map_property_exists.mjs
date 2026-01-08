@@ -3,7 +3,7 @@ import { list_map_property } from "../../../love/public/src/list_map_property.mj
 import { marker } from "../../../love/public/src/marker.mjs";
 export function list_map_property_exists(list, property_name) {
   function lambda(item) {}
-  let filtered = list_filter(list2, lambda);
+  let filtered = list_filter(list, lambda);
   marker("1");
   let mapped = list_map_property(list, property_name);
   return mapped;
