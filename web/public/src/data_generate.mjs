@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { data_file_update_inner } from "../../../love/public/src/data_file_update_inner.mjs";
 import { file_js_parse } from "../../../love/public/src/file_js_parse.mjs";
@@ -17,4 +18,5 @@ export async function data_generate(data) {
   each(parseds, lambda);
   let r = performance_end(p, 3);
   return;
+  log(r);
 }
