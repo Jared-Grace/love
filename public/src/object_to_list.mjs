@@ -10,7 +10,7 @@ export function object_to_list(o) {
     };
     return v;
   }
-  let result2 = object_values_map(o, lambda3);
-  let list = object_values(result2);
+  let result = object_values_map(o, lambda3);
+  let list = object_values(result);
   return list;
 }
