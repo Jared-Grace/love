@@ -7,10 +7,10 @@ export function js_string_literals(ast) {
     function lambda(v) {
       let node = object_property_get(v, "node");
       let value = object_property_get(node, "value");
-      let si2 = string_is(value2);
-      if (false) {
+      let si2 = string_is(value);
+      if (si2) {
+        la(value);
       }
-      la(value);
     }
     js_visit_type(ast, "Literal", lambda);
   }
