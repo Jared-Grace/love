@@ -1,12 +1,6 @@
-import { list_add } from "../../../love/public/src/list_add.mjs";
-import { performance_now } from "../../../love/public/src/performance_now.mjs";
+import { performance_next } from "../../../love/public/src/performance_next.mjs";
 export function performance_start() {
   const name = "start";
-  let measurements = [];
-  const start = performance_now();
-  list_add(measurements, {
-    time: start,
-    name: name,
-  });
+  const start = performance_next(name);
   return start;
 }
