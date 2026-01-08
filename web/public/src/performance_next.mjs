@@ -15,6 +15,6 @@ export function performance_next(p, name) {
   let ne = list_empty_not_is(p);
   if (ne) {
     let last = list_last(p);
-    let time2 = object_property_get(last, "time");
+    let time_previous = object_property_get(last, "time");
   }
 }
