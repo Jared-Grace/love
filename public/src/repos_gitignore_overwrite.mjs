@@ -1,3 +1,4 @@
+import { git_ignore_name } from "../../../love/public/src/git_ignore_name.mjs";
 import { file_copy_overwrite } from "../../../love/public/src/file_copy_overwrite.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { path_resolve } from "../../../love/public/src/path_resolve.mjs";
@@ -10,7 +11,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function repos_gitignore_overwrite() {
   marker("1");
   let repos = await repos_names();
-  let f_name = ".gitignore";
+  let f_name = git_ignore_name();
   let from = await path_resolve(f_name);
   let mapped = list_map(repos, repo_path);
   let mapped2 = list_map_path_join(mapped, f_name);
