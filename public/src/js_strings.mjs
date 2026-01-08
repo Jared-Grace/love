@@ -18,6 +18,8 @@ export function js_strings(ast) {
       js_node_type_is_if(node, "TemplateLiteral", lambda5);
       function lambda4() {
         let s1 = list_size_1(list);
+        if (false) {
+        }
         let v2 = object_property_get(node, "value");
         value = object_property_get(v2, "raw");
       }
