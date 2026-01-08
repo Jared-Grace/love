@@ -1,3 +1,4 @@
+import { app_generic_refresh } from "../../../love/public/src/app_generic_refresh.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
@@ -41,4 +42,5 @@ export async function app_bible_main(context) {
     let p = html_p_text(content, verse_number_v + " " + text);
   }
   each(verses, lambda);
+  app_generic_refresh(context);
 }
