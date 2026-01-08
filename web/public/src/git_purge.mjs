@@ -8,7 +8,11 @@ export async function git_purge() {
   const f_path = "firebase-debug.log";
   await git_remove(f_path);
   await repos_gitignore_overwrite();
-  let commands = [, "git filter-repo --" + f_path + " --invert-paths"];
   await command_line("pip install git-filter-repo");
+  let commands = [
+    "filter-repo --" + f_path + " --invert-paths",
+    "push --force --all",
+    "push --force --tags",
+  ];
   await command_line_git(command_git);
 }
