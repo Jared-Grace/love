@@ -11,5 +11,5 @@ export async function data_identifiers_search(s) {
   let identifiers = await data_identifiers_get();
   let list = object_property_get(identifiers, s);
   let result = list_to_dictionary_value(list, function_name_to_path);
-  return result;
+  return result;fn=data_identifiers_get
 }
