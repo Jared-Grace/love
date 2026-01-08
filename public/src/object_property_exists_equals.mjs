@@ -1,10 +1,14 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_equals } from "../../../love/public/src/object_property_equals.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
-export function object_property_exists_equals(in_progress, path, value) {
+export function object_property_exists_equals(
+  o,
+  property_name,
+  property_value,
+) {
   marker("1");
   let v =
-    object_property_exists(path) &&
-    object_property_equals(in_progress, path, value);
+    object_property_exists(property_name) &&
+    object_property_equals(o, property_name, property_value);
   return v;
 }
