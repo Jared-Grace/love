@@ -6,6 +6,7 @@ export async function js_auto(ast) {
   const start = performance_now();
   let transforms = js_auto_transforms();
   async function lambda(t) {
+    const p = performance_now();
     await t(ast);
   }
   await each_async(transforms, lambda);
