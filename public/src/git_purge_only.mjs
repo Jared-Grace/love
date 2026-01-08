@@ -1,16 +1,9 @@
-import { git_purge_everyone } from "../../../love/public/src/git_purge_everyone.mjs";
-import { command_line_git_multiple } from "../../../love/public/src/command_line_git_multiple.mjs";
+import { git_purge_only_after } from "../../../love/public/src/git_purge_only_after.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 export async function git_purge_only(f_path) {
   await command_line("pip install git-filter-repo");
   let stdout = await command_line(
     "filter-repo  --force --path " + f_path + " --invert-paths",
   );
-  let commands = [
-    "remote add origin https://github.com/Jared-Grace/love.git",
-    "push --force --all",
-    "push --force --tags",
-  ];
-  await command_line_git_multiple(commands);
-  await git_purge_everyone();
+  await git_purge_only_after();
 }
