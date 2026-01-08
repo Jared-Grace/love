@@ -15,10 +15,10 @@ export function performance_end(p) {
   function lambda(list, key) {
     let mapped = list_map_property(list, "delta");
     let inital = 0;
-    let fn = add;
+    let reducer = add;
     let value = inital;
     function lambda2(item) {
-      value = fn(item, value);
+      value = reducer(item, value);
     }
     each(mapped, lambda2);
     return value;
