@@ -9,13 +9,13 @@ import { performance_next } from "../../../love/public/src/performance_next.mjs"
 import { object_to_list_names } from "./object_to_list_names.mjs";
 export function performance_end(p) {
   performance_next(p, "end");
-  let categories = list_to_lookup(p, "category");
+  let grouped = list_to_lookup(p, "category");
   function lambda(list, key) {
     let mapped = list_map_property_exists(list, "delta");
     let value = list_sum(mapped);
     return value;
   }
-  let summary = object_values_map(categories, lambda);
+  let summary = object_values_map(grouped, lambda);
   let sorted = object_to_list_names(summary, "category", "delta");
   log({
     sorted,
@@ -23,7 +23,7 @@ export function performance_end(p) {
   list_sort_number_property(sorted);
   list_reverse(sorted);
   log({
-    categories,
+    grouped,
     summary,
     sorted,
   });
