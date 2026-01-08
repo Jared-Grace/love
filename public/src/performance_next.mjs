@@ -5,7 +5,7 @@ import { list_last } from "../../../love/public/src/list_last.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { performance_now } from "../../../love/public/src/performance_now.mjs";
-export function performance_next(p, name) {
+export function performance_next(p, category) {
   marker("1");
   const time = performance_now();
   let delta = null;
@@ -18,7 +18,7 @@ export function performance_next(p, name) {
   }
   list_add(p, {
     time: time,
-    name: name,
+    name: category,
   });
   return;
 }
