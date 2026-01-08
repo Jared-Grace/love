@@ -21,6 +21,7 @@ export function performance_end(p) {
       value = fn(item, value);
     }
     each(mapped, lambda2);
+    return value;
   }
   let result = object_values_map(categories, lambda);
 }
