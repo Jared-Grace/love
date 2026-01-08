@@ -6,10 +6,12 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function data_identifiers_search(s) {
   marker("1");
-  const { unaliased } = await function_name_to_path_unalias(s);
+  const v = await function_name_to_path_unalias(s);
+  let unaliased = object_property_get(v, "unaliased");
   s = unaliased;
   let identifiers = await data_identifiers_get();
   let list = object_property_get(identifiers, s);
   let result = list_to_dictionary_value(list, function_name_to_path);
-  return result;fn=data_identifiers_get
+  return result;
+  let fn = data_identifiers_get;
 }
