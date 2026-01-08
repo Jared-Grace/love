@@ -22,5 +22,5 @@ export function performance_end(p) {
   return;
   let list = object_to_list(summary);
   let mapped2 = list_map_property(list, "value");
-  let value2 = list_sum(list2);
+  let value2 = list_sum(mapped2);
 }
