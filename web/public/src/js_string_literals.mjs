@@ -7,7 +7,8 @@ export function js_string_literals(ast) {
   function lambda2(la) {
     function lambda(v) {
       let node = object_property_get(v, "node");
-      let value = object_property_get(node, "value");
+      let value = null;
+      value = object_property_get(node, "value");
       function lambda5() {
         let quasis = object_property_get(node, "quasis");
       }
