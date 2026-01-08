@@ -5,10 +5,12 @@ export function js_string_literals(ast) {
   function lambda2(la) {
     function lambda(v) {
       let node = object_property_get(v, "node");
-      let value = object_property_get(node, "name");
+      let value = object_property_get(node, "value");
+      if (false) {
+      }
       la(value);
     }
-    js_visit_type(ast, "Identifier", lambda);
+    js_visit_type(ast, "Literal", lambda);
   }
   const names = list_adder_unique(lambda2);
   return names;
