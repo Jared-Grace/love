@@ -1,3 +1,4 @@
+import { git_purge_everyone } from "../../../love/public/src/git_purge_everyone.mjs";
 import { command_line_git_multiple } from "../../../love/public/src/command_line_git_multiple.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { git_remove } from "../../../love/public/src/git_remove.mjs";
@@ -15,6 +16,5 @@ export async function git_purge() {
     "push --force --tags",
   ];
   await command_line_git_multiple(commands);
-  let commands_everyone = ["fetch origin", "reset --hard origin/main"];
-  await command_line_git_multiple(commands_everyone);
+  await git_purge_everyone();
 }
