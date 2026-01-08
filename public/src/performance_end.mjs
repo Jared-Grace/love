@@ -20,6 +20,6 @@ export function performance_end(p) {
     summary,
   });
   return;
-  let list = object_to_list(summary, "category", "delta");
-  list_sort_number_property(list);
+  let sorted = object_to_list(summary, "category", "delta");
+  list_sort_number_property(sorted);
 }
