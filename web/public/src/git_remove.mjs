@@ -5,6 +5,7 @@ import { file_transform } from "../../../love/public/src/file_transform.mjs";
 import { string_combine_newline } from "../../../love/public/src/string_combine_newline.mjs";
 import { command_line_git } from "../../../love/public/src/command_line_git.mjs";
 import { git_ignore_name } from "../../../love/public/src/git_ignore_name.mjs";
+import { git_push } from "./git_push.mjs";
 export async function git_remove(f_path) {
   let g_name = git_ignore_name();
   await command_line_git("rm --cached " + f_path);
@@ -16,5 +17,6 @@ export async function git_remove(f_path) {
   let added = g_name;
   await git_add(added);
   await git_commit("Remove " + f_path + " and add to " + g_name);
+  await git_push();
   await repos_gitignore_overwrite();
 }
