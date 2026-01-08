@@ -1,3 +1,4 @@
+import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
@@ -18,7 +19,8 @@ export function js_strings(ast) {
       js_node_type_is_if(node, "TemplateLiteral", lambda5);
       function lambda4() {
         let s1 = list_size_1(list);
-        if (false) {
+        if (s1) {
+          let e = list_empty_is(list2);
         }
         let v2 = object_property_get(node, "value");
         value = object_property_get(v2, "raw");
