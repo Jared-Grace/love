@@ -1,3 +1,4 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { object_values_map } from "../../../love/public/src/object_values_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_to_lookup } from "../../../love/public/src/list_to_lookup.mjs";
@@ -9,6 +10,8 @@ export function performance_end(p) {
     lookup: categories,
   });
   return;
-  function lambda(value, key) {}
-  let result = object_values_map(object, lambda);
+  function lambda(list, key) {
+    let mapped = list_map_property(list2, property_name);
+  }
+  let result = object_values_map(categories, lambda);
 }
