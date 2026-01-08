@@ -23,7 +23,7 @@ export async function app_bible_main(context) {
   let v2 = ebible_chapter_code_parse(chapter_code);
   let chapter_name = object_property_get(v2, "chapter_name");
   let book_code = object_property_get(v2, "book_code");
-  let div = html_div_text_centered(bar, chapter_code);
+  let div = html_div_text_centered(bar, book_code + " " + chapter_name);
   let verses = await ebible_verses(e, chapter_code);
   function lambda(v) {
     let verse_number_v = object_property_get(v, "verse_number");
