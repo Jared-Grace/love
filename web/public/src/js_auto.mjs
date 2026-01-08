@@ -8,17 +8,22 @@ import { performance_start } from "../../../love/public/src/performance_start.mj
 import { js_auto_transforms } from "../../../love/public/src/js_auto_transforms.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function js_auto(ast) {
-  const p = performance_start(js_auto.name);
-  let transforms = js_auto_transforms();
-  async function lambda(t) {
-    performance_next(p, t.name);
-    await t(ast);
-  }
-  await each_async(transforms, lambda);
-  let r = performance_end(p);
-  return;
   let d_path = data_path();
   await file_read_cached(d_path);
+  let r = await lambda();
   await file_overwrite_cached(d_path);
+  return;
   log(r);
+
+  async function lambda() {
+    const p = performance_start(js_auto.name);
+    let transforms = js_auto_transforms();
+    async function lambda(t) {
+      performance_next(p, t.name);
+      await t(ast);
+    }
+    await each_async(transforms, lambda);
+    let r = performance_end(p);
+    return r;
+  }
 }
