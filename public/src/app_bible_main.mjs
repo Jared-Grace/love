@@ -2,7 +2,6 @@ import { html_button } from "../../../love/public/src/html_button.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_parse } from "../../../love/public/src/ebible_chapter_code_parse.mjs";
-import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
@@ -28,11 +27,10 @@ export async function app_bible_main(context) {
   let book_code = object_property_get(v2, "book_code");
   let books = await ebible_version_books(e);
   let book_name = ebible_book_code_to_name(books, book_code);
-  let div = html_div_text_centered(bar, book_name + " " + chapter_name);
   function lambda3() {}
   let component = html_button(bar, book_name, lambda3);
   function lambda4() {}
-  let component2 = html_button(parent, text2, lambda4);
+  let component2 = html_button(bar, chapter_name, lambda4);
   let verses = await ebible_verses(e, chapter_code);
   function lambda(v) {
     let verse_number_v = object_property_get(v, "verse_number");
