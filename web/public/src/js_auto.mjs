@@ -7,5 +7,6 @@ export async function js_auto(ast) {
     await t(ast);
   }
   await each_async(transforms, lambda);
+  const end = performance.now();
   return;
 }
