@@ -7,5 +7,4 @@ export async function js_auto(ast) {
   }
   await each_async(transforms, lambda);
   return;
-  [];
 }
