@@ -17,8 +17,8 @@ export function performance_next(p, category) {
     object_property_set(last, "delta", delta);
   }
   list_add(p, {
-    time: time,
-    name: category,
+    time,
+    category,
   });
   return;
 }
