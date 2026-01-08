@@ -18,7 +18,7 @@ export async function app_bible_main(context) {
   let root = html_mobile_default(context);
   firebase_name_jg();
   html_margin_0(root);
-  let screens = app_a_screens();
+  let screens = app_bible_screens();
   let bc = html_bar_content(root);
   let content = object_property_get(bc, "content");
   let bar = object_property_get(bc, "bar");
