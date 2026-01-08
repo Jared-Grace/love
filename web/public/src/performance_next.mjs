@@ -16,5 +16,6 @@ export function performance_next(p, name) {
   if (ne) {
     let last = list_last(p);
     let time_previous = object_property_get(last, "time");
+    let delta = time - time_previous;
   }
 }
