@@ -8,7 +8,8 @@ export function js_string_literals(ast) {
     function lambda(v) {
       let node = object_property_get(v, "node");
       let value = object_property_get(node, "value");
-      js_node_type_is_if(node2, type, function lambda4() {});
+      function lambda4() {}
+      js_node_type_is_if(node2, type, lambda4);
       let si2 = string_is(value);
       if (si2) {
         la(value);
