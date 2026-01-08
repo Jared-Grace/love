@@ -15,7 +15,7 @@ export async function git_remove() {
   }
   let contents = await file_read(g_name);
   let after = lambda(contents);
-  let result = await file_overwrite(g_name, contents);
+  let result = await file_overwrite(g_name, after);
   await command_line_git("rm --cached " + f_path);
   await git_commit("Remove " + f_path + " and add to " + g_name);
   await repos_gitignore_overwrite();
