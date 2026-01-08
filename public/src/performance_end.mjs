@@ -1,3 +1,4 @@
+import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 import { list_sort_number_property } from "../../../love/public/src/list_sort_number_property.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
 import { list_map_property_exists } from "../../../love/public/src/list_map_property_exists.mjs";
@@ -22,4 +23,5 @@ export function performance_end(p) {
   return;
   let sorted = object_to_list(summary, "category", "delta");
   list_sort_number_property(sorted);
+  list_reverse(list2);
 }
