@@ -1,3 +1,5 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { performance_start } from "../../../love/public/src/performance_start.mjs";
 import { data_functions_get } from "../../../love/public/src/data_functions_get.mjs";
 import { js_function_last_asyncify } from "../../../love/public/src/js_function_last_asyncify.mjs";
 import { function_name_unalias } from "../../../love/public/src/function_name_unalias.mjs";
@@ -7,18 +9,21 @@ import { js_call_new } from "../../../love/public/src/js_call_new.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 export async function js_call_fill(ast) {
-  const p = performance_start();
   let functions = await data_functions_get();
   let visited = [];
   async function lambda(v) {
-    let { node, stack } = v;
-    let { expression } = node;
+    let stack = object_property_get(v, "stack");
+    let node = object_property_get(v, "node");
+    let expression = object_property_get(node, "expression");
     if (js_identifier_is(expression)) {
-      let { name } = expression;
-      let { unaliased } = await function_name_unalias(name);
+      let name = object_property_get(expression, "name");
+      let v2 = await function_name_unalias(name);
+      let unaliased = object_property_get(v2, "unaliased");
       const valid = await functions_names_includes(unaliased);
       if (valid) {
-        let { parsed, async_is } = await js_call_new(name, ast);
+        let v3 = await js_call_new(name, ast);
+        let async_is = object_property_get(v3, "async_is");
+        let parsed = object_property_get(v3, "parsed");
         object_replace(node, parsed);
         await js_function_last_asyncify(
           stack,
@@ -32,4 +37,5 @@ export async function js_call_fill(ast) {
   }
   await js_visit_type_each_async(ast, "ExpressionStatement", lambda);
   return;
+  const p = performance_start();
 }
