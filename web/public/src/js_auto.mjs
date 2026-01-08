@@ -15,5 +15,8 @@ export async function js_auto(ast) {
   const end = performance_now();
   let difference = subtract(end, start);
   return;
-  list_add(list, item);
+  list_add(measurements, {
+    time: start,
+    name: "start",
+  });
 }
