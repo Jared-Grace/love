@@ -4,7 +4,7 @@ import { performance_now } from "../../../love/public/src/performance_now.mjs";
 export function performance_next(name) {
   marker("1");
   const start = performance_now();
-  list_add(measurements, {
+  list_add(p, {
     time: start,
     name: name,
   });
