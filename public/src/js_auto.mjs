@@ -6,6 +6,11 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function js_auto(ast) {
   let measurements = [];
   const start = performance_now();
+  const name = "start";
+  list_add(measurements, {
+    time: start,
+    name: name,
+  });
   let transforms = js_auto_transforms();
   async function lambda(t) {
     const p = performance_now();
@@ -15,8 +20,4 @@ export async function js_auto(ast) {
   const end = performance_now();
   let difference = subtract(end, start);
   return;
-  list_add(measurements, {
-    time: start,
-    name: "start",
-  });
 }
