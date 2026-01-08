@@ -21,6 +21,5 @@ export function performance_end(p) {
   });
   return;
   let list = object_to_list(summary, "category", "delta");
-  function lambda2(item) {}
   list_sort_number_property(list);
 }
