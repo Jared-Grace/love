@@ -8,7 +8,7 @@ export function list_to_lookup(property_key, list) {
   "if each key has one value, then " +
     list_to_dictionary.name +
     " but if each key corresponds to a list of values, then " +
-    list_to_lookup;
+    list_to_lookup.name;
   let verses = {};
   function lambda(word) {
     let n = object_property_exists_not(word, property_key);
