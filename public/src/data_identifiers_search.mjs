@@ -10,7 +10,7 @@ export async function data_identifiers_search(s) {
   const v = await function_name_to_path_unalias(s);
   let unaliased = object_property_get(v, "unaliased");
   s = unaliased;
-  let identifiers = await data_identifiers_get();
+  let identifiers = await fn();
   let list = object_property_get(identifiers, s);
   let result = list_to_dictionary_value(list, function_name_to_path);
   return result;
