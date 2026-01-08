@@ -15,7 +15,9 @@ export function js_string_literals(ast) {
         }
       }
       js_node_type_is_if(node, "Literal", lambda4);
-      function lambda5() {}
+      function lambda5() {
+        let quasis = object_property_get(node, "quasis");
+      }
       js_node_type_is_if(node2, "TemplateLiteral", lambda5);
     }
     js_visit_types(ast, ["Literal", "TemplateLiteral"], lambda);
