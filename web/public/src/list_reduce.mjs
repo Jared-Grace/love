@@ -1,6 +1,6 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-export function list_reduce(list, inital, reducer) {
+export function list_reduce(list, reducer, inital) {
   marker("1");
   let value = inital;
   function lambda2(item) {

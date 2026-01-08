@@ -16,7 +16,7 @@ export function performance_end(p) {
     let mapped = list_map_property(list, "delta");
     let inital = 0;
     let reducer = add;
-    let value = list_reduce(mapped, inital, reducer);
+    let value = list_reduce(mapped, reducer, inital);
     return value;
   }
   let result = object_values_map(categories, lambda);
