@@ -13,8 +13,8 @@ export async function git_purge() {
     "filter-repo --" + f_path + " --invert-paths",
     "push --force --all",
     "push --force --tags",
-    "fetch origin",
-    "reset --hard origin/main",
   ];
   await command_line_git_multiple(commands);
+  let commands_everyone = ["fetch origin", "reset --hard origin/main"];
+  await command_line_git_multiple(commands_everyone);
 }
