@@ -10,5 +10,6 @@ export async function app_bible_main(context) {
   let hash = html_hash_object_get();
   let chapter_code = object_property_get(hash, "c");
   let verses = await ebible_verses(bible_folder, chapter_code);
-  each(list, function lambda(item) {});
+  function lambda(item) {}
+  each(list, lambda);
 }
