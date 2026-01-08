@@ -21,5 +21,5 @@ export function performance_end(p) {
   });
   return;
   let list = object_to_list_names(summary, "category", "delta");
-  let mapped2 = list_map_property(list2, property_name);
+  let mapped2 = list_map_property(list, "delta");
 }
