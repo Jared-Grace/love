@@ -1,3 +1,4 @@
+import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { repos_gitignore_overwrite } from "../../../love/public/src/repos_gitignore_overwrite.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
@@ -8,8 +9,10 @@ export async function git_remove() {
   const f_path = "firebase-debug.log";
   let g_name = git_ignore_name();
   await command_line_git(command_git);
+  function lambda(before) {
+    let joined = list_join_newline(list);
+  }
   let contents = await file_read(g_name);
-  (function lambda() {});
   let result = await file_overwrite(g_name, contents);
   await command_line_git("rm --cached " + f_path);
   await git_commit("Remove " + f_path + " and add to " + g_name);
