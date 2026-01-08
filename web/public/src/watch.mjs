@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { repos_paths_map_unordered_combine_squash } from "../../../love/public/src/repos_paths_map_unordered_combine_squash.mjs";
 import { command_line_node_g } from "../../../love/public/src/command_line_node_g.mjs";
@@ -23,6 +24,7 @@ export async function watch() {
       if (object_property_exists_equals(path, in_progress, value)) {
         return;
       }
+      log({});
       object_property_set(in_progress, path, value);
       try {
         await command_line_node_g(function_auto_path.name, [path]);
