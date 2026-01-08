@@ -24,7 +24,7 @@ export async function bible_interlinear_chapters() {
   let path_output = bible_interlinear_json_path();
   let words = await file_read_json(path_output);
   const vid_property = "Verse";
-  let verses = list_to_lookup(vid_property, words);
+  let verses = list_to_lookup(words, vid_property);
   let sorts = ["Heb Sort", "Greek Sort"];
   let chapters = {};
   async function lambda(verse_words, v_number) {
