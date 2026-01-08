@@ -14,7 +14,7 @@ export function performance_next(p, name) {
     let last = list_last(p);
     let time_previous = object_property_get(last, "time");
     delta = time - time_previous;
-    object_property_set(last, "time", delta);
+    object_property_set(last, "delta", delta);
   }
   list_add(p, {
     time: time,
