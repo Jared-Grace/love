@@ -1,5 +1,5 @@
+import { list_reduce } from "../../../love/public/src/list_reduce.mjs";
 import { add } from "../../../love/public/src/add.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { object_values_map } from "../../../love/public/src/object_values_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -16,11 +16,7 @@ export function performance_end(p) {
     let mapped = list_map_property(list, "delta");
     let inital = 0;
     let reducer = add;
-    let value = inital;
-    function lambda2(item) {
-      value = reducer(item, value);
-    }
-    each(mapped, lambda2);
+    let value = list_reduce(inital, reducer, mapped);
     return value;
   }
   let result = object_values_map(categories, lambda);
