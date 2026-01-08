@@ -1,3 +1,4 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { object_to_list_names } from "../../../love/public/src/object_to_list_names.mjs";
 import { list_map_property_exists } from "../../../love/public/src/list_map_property_exists.mjs";
 import { list_sum } from "../../../love/public/src/list_sum.mjs";
@@ -20,4 +21,5 @@ export function performance_end(p) {
   });
   return;
   let list = object_to_list_names(summary, "category", "delta");
+  let mapped2 = list_map_property(list2, property_name);
 }
