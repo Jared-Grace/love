@@ -24,5 +24,5 @@ export function performance_end(p) {
   let list = object_to_list(summary, "category", "delta");
   function lambda2(item) {}
   let f = object_property_get_curry_right("delta");
-  list_sort_number_mapper(list2, f);
+  list_sort_number_mapper(list, f);
 }
