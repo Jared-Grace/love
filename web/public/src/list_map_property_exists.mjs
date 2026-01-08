@@ -9,6 +9,6 @@ export function list_map_property_exists(list, property_name) {
   }
   let filtered = list_filter(list, lambda);
   marker("1");
-  let mapped = list_map_property(list, property_name);
+  let mapped = list_map_property(filtered, property_name);
   return mapped;
 }
