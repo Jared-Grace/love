@@ -17,6 +17,7 @@ export function js_strings(ast) {
       js_node_type_is_if(node, "TemplateLiteral", lambda5);
       function lambda4() {
         let v2 = object_property_get(node, "value");
+        let value2 = object_property_get(object, property_name);
       }
       js_node_type_is_if(node, "Literal", lambda4);
       let si2 = string_is(value);
