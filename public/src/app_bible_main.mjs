@@ -14,7 +14,7 @@ export async function app_bible_main(context) {
   function lambda(item) {
     let verse_number_v = object_property_get(v, "verse_number");
     let text = object_property_get(v, "text");
-    let p = html_p_text(content, verse_number_v + " " + text);
+    let p = html_p_text(root, verse_number_v + " " + text);
   }
   each(verses, lambda);
 }
