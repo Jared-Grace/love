@@ -19,5 +19,5 @@ export function performance_end(p) {
     summary,
   });
   return;
-  let list2 = object_to_list_names(o, "category", "delta");
+  let list = object_to_list_names(summary, "category", "delta");
 }
