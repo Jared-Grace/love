@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { git_add } from "../../../love/public/src/git_add.mjs";
@@ -21,9 +22,11 @@ export async function git_purge() {
   await git_add(added);
   await git_commit("Remove " + f_path + " and add to " + g_name);
   await repos_gitignore_overwrite();
-  let stdout = await command_line("pip install git-filter-repo");
-  let stdout2 = await command_line(
+  let commands = [
+    "pip install git-filter-repo",
     "git filter-repo --" + f_path + " --invert-paths",
-  );
+  ];
+  let stdout = await command_line();
+  await each_async(list, async function lambda2(item) {});
   clm;
 }
