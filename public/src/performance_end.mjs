@@ -7,14 +7,15 @@ import { performance_next } from "../../../love/public/src/performance_next.mjs"
 export function performance_end(p) {
   performance_next(p, "end");
   let categories = list_to_lookup(p, "category");
-  log({
-    categories,
-  });
   function lambda(list, key) {
     let mapped = list_map_property_exists(list, "delta");
     let value = list_sum(mapped);
     return value;
   }
   let summary = object_values_map(categories, lambda);
+  log({
+    categories,
+    summary,
+  });
   return;
 }
