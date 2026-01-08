@@ -14,5 +14,5 @@ export async function git_purge() {
     "push --force --all",
     "push --force --tags",
   ];
-  await command_line_git_multiple(command_git);
+  await command_line_git_multiple(commands);
 }
