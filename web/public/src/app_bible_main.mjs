@@ -31,7 +31,8 @@ export async function app_bible_main(context) {
   let div = html_div_text_centered(bar, book_name + " " + chapter_name);
   function lambda3() {}
   let component = html_button(bar, book_name, lambda3);
-  let component2 = html_button(parent, text2, function lambda4() {});
+  function lambda4() {}
+  let component2 = html_button(parent, text2, lambda4);
   let verses = await ebible_verses(e, chapter_code);
   function lambda(v) {
     let verse_number_v = object_property_get(v, "verse_number");
