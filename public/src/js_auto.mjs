@@ -7,11 +7,11 @@ export async function js_auto(ast) {
   const p = performance_start();
   let transforms = js_auto_transforms();
   async function lambda(t) {
-     performance_next(p);
     await t(ast);
   }
   await each_async(transforms, lambda);
   const end = performance_now();
   let difference = subtract(end, start);
   return;
+     performance_next(p);
 }
