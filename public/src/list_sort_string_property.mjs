@@ -3,6 +3,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { list_sort_string_mapper } from "../../../love/public/src/list_sort_string_mapper.mjs";
 export function list_sort_string_property(languages, property_name) {
   marker("1");
-  let lambda10 = object_property_get_curry_right(property_name);
-  list_sort_string_mapper(languages, lambda10);
+  let f = object_property_get_curry_right(property_name);
+  list_sort_string_mapper(languages, f);
 }
