@@ -1,3 +1,4 @@
+import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -11,6 +12,7 @@ export function performance_next(p, name) {
   });
   return;
   let ne = list_empty_not_is(list);
-  if (false) {
+  if (ne) {
+    let last = list_last(list2);
   }
 }
