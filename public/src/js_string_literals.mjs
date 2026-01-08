@@ -8,14 +8,15 @@ export function js_string_literals(ast) {
     function lambda(v) {
       let node = object_property_get(v, "node");
       let value = object_property_get(node, "value");
-      function lambda4() {}
+      function lambda4() {
+        let si2 = string_is(value);
+        if (si2) {
+          la(value);
+        }
+      }
       js_node_type_is_if(node, "Literal", lambda4);
       function lambda5() {}
-      js_node_type_is_if(node2, type, lambda5);
-      let si2 = string_is(value);
-      if (si2) {
-        la(value);
-      }
+      js_node_type_is_if(node2, "TemplateLiteral", lambda5);
     }
     js_visit_types(ast, ["Literal", "TemplateLiteral"], lambda);
   }
