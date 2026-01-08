@@ -1,6 +1,5 @@
 import { string_includes } from "../../../love/public/src/string_includes.mjs";
 import { not } from "../../../love/public/src/not.mjs";
-import { function_name_to_parts } from "../../../love/public/src/function_name_to_parts.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { function_rename_replace } from "../../../love/public/src/function_rename_replace.mjs";
