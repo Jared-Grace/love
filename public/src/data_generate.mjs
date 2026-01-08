@@ -12,11 +12,12 @@ export async function data_generate(data) {
   let f_paths = await functions_paths();
   performance_next(p, 2);
   let parseds = await list_map_unordered_async(f_paths, file_js_parse);
+  performance_next(p, 3);
   async function lambda(parsed) {
     await data_file_update_inner(parsed, data);
   }
   each(parseds, lambda);
-  let r = performance_end(p, 3);
+  let r = performance_end(p, 4);
   log(r);
   return;
 }
