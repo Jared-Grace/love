@@ -1,3 +1,1 @@
-import { marker } from "../../../love/public/src/marker.mjs";
-export async function sandbox() {
-}
+export async function sandbox() {}
