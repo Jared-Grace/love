@@ -1,5 +1,4 @@
 import { command_line_multiple } from "../../../love/public/src/command_line_multiple.mjs";
-import { command_line } from "../../../love/public/src/command_line.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { git_add } from "../../../love/public/src/git_add.mjs";
 import { file_transform } from "../../../love/public/src/file_transform.mjs";
@@ -26,6 +25,5 @@ export async function git_purge() {
     "pip install git-filter-repo",
     "git filter-repo --" + f_path + " --invert-paths",
   ];
-  let stdout = await command_line();
   await command_line_multiple(commands);
 }
