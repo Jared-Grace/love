@@ -24,6 +24,10 @@ export async function watch() {
       if (object_property_exists_equals(path, in_progress, value)) {
         return;
       }
+      log({
+        path,
+        in_progress,
+      });
       object_property_set(in_progress, path, value);
       log({
         path,
