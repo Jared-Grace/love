@@ -1,3 +1,4 @@
+import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { string_is } from "../../../love/public/src/string_is.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -7,6 +8,7 @@ export function js_string_literals(ast) {
     function lambda(v) {
       let node = object_property_get(v, "node");
       let value = object_property_get(node, "value");
+      js_node_type_is_if(node2, type, function lambda4() {});
       let si2 = string_is(value);
       if (si2) {
         la(value);
