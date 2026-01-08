@@ -24,10 +24,15 @@ export async function watch() {
       if (object_property_exists_equals(path, in_progress, value)) {
         return;
       }
-      log({});
+      log({
+        path,
+      });
       object_property_set(in_progress, path, value);
       try {
         await command_line_node_g(function_auto_path.name, [path]);
+        log({
+          function_auto_path: "finish",
+        });
       } finally {
         try {
           const args = [path];
