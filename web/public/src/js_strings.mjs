@@ -14,16 +14,17 @@ export function js_strings(ast) {
       let value = null;
       function lambda5() {
         let quasis = object_property_get(node, "quasis");
-        value = object_property_get(quasis, "value");
-      }
-      js_node_type_is_if(node, "TemplateLiteral", lambda5);
-      function lambda4() {
         let s1 = list_size_1(list);
         if (s1) {
-          let e = list_empty_is(list2);
+          let expressions = object_property_get(node, "expressions");
+          let e = list_empty_is(expressions);
         }
         let v2 = object_property_get(node, "value");
         value = object_property_get(v2, "raw");
+      }
+      js_node_type_is_if(node, "TemplateLiteral", lambda5);
+      function lambda4() {
+        value = object_property_get(node, "value");
       }
       js_node_type_is_if(node, "Literal", lambda4);
       let si2 = string_is(value);
