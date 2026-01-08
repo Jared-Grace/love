@@ -20,8 +20,8 @@ export function js_strings(ast) {
           let expressions = object_property_get(node, "expressions");
           let e = list_empty_is(expressions);
           if (e) {
-            let first = list_first(list);
-            let v2 = object_property_get(node, "value");
+            let q = list_first(quasis);
+            let v2 = object_property_get(q, "value");
             value = object_property_get(v2, "raw");
           }
         }
