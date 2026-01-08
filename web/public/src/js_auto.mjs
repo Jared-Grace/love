@@ -9,6 +9,6 @@ export async function js_auto(ast) {
   }
   await each_async(transforms, lambda);
   const end = performance.now();
+  let difference = subtract(end, start);
   return;
-  let difference = subtract(left, right);
 }
