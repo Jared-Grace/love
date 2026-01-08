@@ -9,10 +9,8 @@ export function performance_next(p, name) {
   marker("1");
   const time = performance_now();
   let delta = null;
-  let e = list_empty_is(p);
+  let e = list_empty_not_is(p);
   if (e) {
-    delta = null;
-  } else {
     let last = list_last(p);
     let time_previous = object_property_get(last, "time");
     delta = time - time_previous;
