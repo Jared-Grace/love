@@ -13,7 +13,7 @@ export function performance_next(p, name) {
     delta = 0;
   } else {
     let last = list_last(p);
-    let time_previous = object_property_get(last, "time");
+    let time_previous = object_property_get(last, "time");st
     delta = time - time_previous;
   }
   list_add(p, {
