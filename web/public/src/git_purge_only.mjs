@@ -3,6 +3,7 @@ import { command_line_git_multiple } from "../../../love/public/src/command_line
 import { command_line } from "../../../love/public/src/command_line.mjs";
 export async function git_purge_only(f_path) {
   await command_line("pip install git-filter-repo");
+  let stdout = await command_line(command);
   let commands = [
     "filter-repo  --force --path " + f_path + " --invert-paths",
     "remote add origin https://github.com/Jared-Grace/love.git",
