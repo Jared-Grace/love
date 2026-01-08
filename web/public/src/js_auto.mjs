@@ -1,3 +1,4 @@
+import { data_path } from "../../../love/public/src/data_path.mjs";
 import { file_read_cached } from "../../../love/public/src/file_read_cached.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { performance_end } from "../../../love/public/src/performance_end.mjs";
@@ -15,6 +16,7 @@ export async function js_auto(ast) {
   await each_async(transforms, lambda);
   let r = performance_end(p);
   return;
+  let f_path = data_path();
   await file_read_cached(f_path);
   log(r);
 }
