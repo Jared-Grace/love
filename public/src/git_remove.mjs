@@ -6,7 +6,7 @@ export async function git_remove() {
   await command_line_git("rm --cached " + f_path);
   await command_line_git(command_git);
   async function lambda(item) {
-    await git_commit(folder, message);
+    await git_commit(message);
   }
   await each_async(list, lambda);
 }
