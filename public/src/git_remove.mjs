@@ -10,7 +10,8 @@ export async function git_remove() {
   let g_name = git_ignore_name();
   await command_line_git(command_git);
   function lambda(before) {
-    return before + newline() + after;
+    let v = before + newline() + after;
+    return v;
   }
   let contents = await file_read(g_name);
   let result = await file_overwrite(g_name, contents);
