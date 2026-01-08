@@ -1,3 +1,4 @@
+import { repos_gitignore_overwrite } from "../../../love/public/src/repos_gitignore_overwrite.mjs";
 import { git_commit } from "../../../love/public/src/git_commit.mjs";
 import { git_add } from "../../../love/public/src/git_add.mjs";
 import { file_transform } from "../../../love/public/src/file_transform.mjs";
@@ -15,4 +16,5 @@ export async function git_remove(f_path) {
   let added = g_name;
   await git_add(added);
   await git_commit("Remove " + f_path + " and add to " + g_name);
+  await repos_gitignore_overwrite();
 }
