@@ -1,7 +1,7 @@
+import { git_add_folder } from "../../../love/public/src/git_add_folder.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { command_line_git_folder } from "../../../love/public/src/command_line_git_folder.mjs";
 export async function git_add_folder_all(folder) {
   marker("1");
   const added = "-A";
-  await command_line_git_folder(folder, "add " + added);
+  await git_add_folder(folder, added);
 }
