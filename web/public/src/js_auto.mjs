@@ -5,7 +5,7 @@ import { performance_start } from "../../../love/public/src/performance_start.mj
 import { js_auto_transforms } from "../../../love/public/src/js_auto_transforms.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function js_auto(ast) {
-  const p = performance_start();
+  const p = performance_start(js_auto.name);
   let transforms = js_auto_transforms();
   async function lambda(t) {
     performance_next(p, t.name);
