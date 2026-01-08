@@ -1,4 +1,4 @@
-import { each_async } from "../../../love/public/src/each_async.mjs";
+import { command_line_multiple } from "../../../love/public/src/command_line_multiple.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { git_add } from "../../../love/public/src/git_add.mjs";
@@ -27,7 +27,9 @@ export async function git_purge() {
     "git filter-repo --" + f_path + " --invert-paths",
   ];
   let stdout = await command_line();
-  async function lambda2(item) {}
-  await each_async(list, lambda2);
+  async function lambda2(item) {
+    let stdout = await command_line(item);
+  }
+  await command_line_multiple(commands);
   clm;
 }
