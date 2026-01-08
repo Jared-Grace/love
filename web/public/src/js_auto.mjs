@@ -17,8 +17,8 @@ export async function js_auto(ast) {
   await each_async(transforms, lambda);
   let r = performance_end(p);
   return;
-  let f_path = data_path();
-  await file_read_cached(f_path);
-  await file_overwrite_cached(f_path);
+  let d_path = data_path();
+  await file_read_cached(d_path);
+  await file_overwrite_cached(d_path);
   log(r);
 }
