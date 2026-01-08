@@ -9,7 +9,7 @@ export async function git_remove() {
   let g_name = git_ignore_name();
   await command_line_git(command_git);
   let contents = await file_read(g_name);
-  () => {};
+  (function lambda() {});
   let result = await file_overwrite(g_name, contents);
   await command_line_git("rm --cached " + f_path);
   await git_commit("Remove " + f_path + " and add to " + g_name);
