@@ -11,7 +11,7 @@ export function performance_next(p, name) {
   let delta = null;
   let e = list_empty_is(p);
   if (e) {
-    delta = 0;
+    delta = null;
   } else {
     let last = list_last(p);
     let time_previous = object_property_get(last, "time");
