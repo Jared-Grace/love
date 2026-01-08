@@ -4,5 +4,6 @@ export async function git_remove() {
   const f_path = "firebase-debug.log";
   await command_line_git("rm --cached " + f_path);
   await command_line_git(command_git);
-  await each_async(list, async function lambda(item) {});
+  async function lambda(item) {}
+  await each_async(list, lambda);
 }
