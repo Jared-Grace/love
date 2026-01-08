@@ -1,4 +1,4 @@
-import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
+import { object_to_list_names } from "../../../love/public/src/object_to_list_names.mjs";
 import { list_map_property_exists } from "../../../love/public/src/list_map_property_exists.mjs";
 import { list_sum } from "../../../love/public/src/list_sum.mjs";
 import { object_values_map } from "../../../love/public/src/object_values_map.mjs";
@@ -19,5 +19,5 @@ export function performance_end(p) {
     summary,
   });
   return;
-  let list2 = object_to_list(o);
+  let list2 = object_to_list_names(o, "category", "delta");
 }
