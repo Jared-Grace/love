@@ -11,7 +11,7 @@ export function performance_end(p) {
   });
   return;
   function lambda(list, key) {
-    let mapped = list_map_property(list2, property_name);
+    let mapped = list_map_property(list, "delta");
   }
   let result = object_values_map(categories, lambda);
 }
