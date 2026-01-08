@@ -10,7 +10,7 @@ export async function git_remove() {
   let g_name = git_ignore_name();
   await command_line_git(command_git);
   function lambda(before) {
-    let v = before + newline() + after;
+    let v = before + newline() + f_path;
     return v;
   }
   let contents = await file_read(g_name);
