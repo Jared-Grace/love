@@ -1,3 +1,4 @@
+import { object_property_get_curry_right } from "../../../love/public/src/object_property_get_curry_right.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
 import { list_map_property_exists } from "../../../love/public/src/list_map_property_exists.mjs";
@@ -22,5 +23,6 @@ export function performance_end(p) {
   return;
   let list = object_to_list(summary, "category", "delta");
   function lambda2(item) {}
-  list_sort_number_mapper(list2, lambda2);
+  let lambda$item = object_property_get_curry_right("delta");
+  list_sort_number_mapper(list2, lambda$item);
 }
