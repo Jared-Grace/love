@@ -12,7 +12,7 @@ export function js_string_literals(ast) {
         let quasis = object_property_get(node, "quasis");
         value = object_property_get(quasis, "value");
       }
-      js_node_type_is_if(node2, "TemplateLiteral", lambda5);
+      js_node_type_is_if(node, "TemplateLiteral", lambda5);
       function lambda4() {
         value = object_property_get(node, "value");
       }
