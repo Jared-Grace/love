@@ -21,5 +21,6 @@ export function performance_end(p) {
   });
   return;
   let list = object_to_list(summary, "category", "delta");
-  list_sort_number_mapper(list2, function lambda2(item) {});
+  function lambda2(item) {}
+  list_sort_number_mapper(list2, lambda2);
 }
