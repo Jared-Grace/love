@@ -5,5 +5,6 @@ export async function function_rename_suffix_remove_last(
   suffix,
 ) {
   marker("1");
-  return await function_rename_suffix_remove(f_name_before, suffix);
+  let v = await function_rename_suffix_remove(f_name_before, suffix);
+  return v;
 }
