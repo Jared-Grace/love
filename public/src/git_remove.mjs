@@ -7,13 +7,12 @@ import { command_line_git } from "../../../love/public/src/command_line_git.mjs"
 export async function git_remove() {
   const f_path = "firebase-debug.log";
   let g_name = git_ignore_name();
-  await command_line_git(command_git);
+  await command_line_git("rm --cached " + f_path);
   function lambda(before) {
     let after = string_combine_newline(before, f_path);
     return after;
   }
   await file_transform(g_name, lambda);
-  await command_line_git("rm --cached " + f_path);
   await git_commit("Remove " + f_path + " and add to " + g_name);
   await repos_gitignore_overwrite();
 }
