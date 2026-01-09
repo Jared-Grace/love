@@ -12,7 +12,7 @@ export async function g_sermon_chapter_get(chapter_code) {
     let joined2 = g_sermon_verse_to_text(v);
     return joined2;
   }
-  let v = list_map(passages, lambda);
+  let list = list_map(passages, lambda);
   let joined = list_join_newline_2(list);
-  return joined2;
+  return joined;
 }
