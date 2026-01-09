@@ -1,11 +1,7 @@
-import { equal } from "../../../love/public/src/equal.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
-import { data_path } from "./data_path.mjs";
 export async function data_save(a) {
-  let { file_path, data } = a;
-  let d_path = data_path();
-  if (equal(file_path, d_path)) {
-    return;
-  }
+  let data = object_property_get(a, "data");
+  let file_path = object_property_get(a, "file_path");
   await file_overwrite_json(file_path, data);
 }
