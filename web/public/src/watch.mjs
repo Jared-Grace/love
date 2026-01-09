@@ -1,4 +1,3 @@
-import { add } from "../../../love/public/src/add.mjs";
 import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
@@ -38,11 +37,10 @@ export async function watch() {
         log({
           function_auto_path: "finish",
         });
-        let r = await app_api_fn(add, [1, 2]);
       } finally {
         try {
           const args = [path];
-          await command_line_node_g(data_file_update.name, args);
+          await app_api_fn(data_file_update, args);
         } finally {
           object_property_set(in_progress, path, false);
         }
