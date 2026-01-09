@@ -17,7 +17,8 @@ export async function g_sermon_passage_get(chapter_code, verse_number) {
   function lambda(v) {
     let verse_numbers = object_property_get(v, "verse_numbers");
     let first = list_first(verse_numbers);
-    return first === verse_number;
+    let v2 = first === verse_number;
+    return v2;
   }
   let v = list_find(passages, lambda);
   let verse_numbers = object_property_get(v, "verse_numbers");
