@@ -1,4 +1,4 @@
-import { app_api_fn_args } from "../../../love/public/src/app_api_fn_args.mjs";
+import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { repos_paths_map_unordered_combine_squash } from "../../../love/public/src/repos_paths_map_unordered_combine_squash.mjs";
@@ -40,7 +40,7 @@ export async function watch() {
       } finally {
         try {
           const args = [path];
-          await app_api_fn_args({
+          await app_api_fn({
             fn: data_file_update,
             args,
           });
