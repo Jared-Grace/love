@@ -23,7 +23,7 @@ export async function g_sermon_chapter_get(chapter_code) {
     let joined2 = list_join_newline_2([result, text, joined]);
     return joined2;
   }
-  let mapped = list_map(chapter, lambda);
+  let mapped = list_map(passages, lambda);
   let joined3 = list_join_newline_2(mapped);
   return joined3;
 }
