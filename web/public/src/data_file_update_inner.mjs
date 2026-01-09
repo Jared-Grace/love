@@ -16,16 +16,12 @@ import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_n
 import { object_property_initialize } from "../../../love/public/src/object_property_initialize.mjs";
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
 import { function_path_to_name } from "../../../love/public/src/function_path_to_name.mjs";
-import { log } from "./log.mjs";
 export async function data_file_update_inner(parsed, data) {
   let f_path = object_property_get(parsed, "f_path");
   let f_name = function_path_to_name(f_path);
   let ast = object_property_get(parsed, "ast");
   let functions = object_property_initialize(data, "functions", {});
   let f_this = object_property_initialize(functions, f_name, {});
-  log({
-    f_path,
-  });
   let declaration = js_declaration_single(ast);
   let async_is = object_property_get(declaration, "async");
   object_property_set(f_this, "async", async_is);
