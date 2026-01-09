@@ -1,6 +1,6 @@
 import { server_url } from "../../../love/public/src/server_url.mjs";
 import { server_port } from "../../../love/public/src/server_port.mjs";
-import { server_api_url as server_api_url_fragment } from "../../../love/public/src/server_api_url.mjs";
+import { server_api_url } from "../../../love/public/src/server_api_url.mjs";
 import { function_run_io_file_wrapper } from "../../../love/public/src/function_run_io_file_wrapper.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
