@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { server_url } from "../../../love/public/src/server_url.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { server_api_url } from "../../../love/public/src/server_api_url.mjs";
@@ -16,4 +17,7 @@ export function app_api_generic_url_body(f_name, args) {
     body,
   };
   return v;
+  log({
+    url,
+  });
 }
