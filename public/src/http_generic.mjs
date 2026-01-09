@@ -1,5 +1,4 @@
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { assert_json } from "../../../love/public/src/assert_json.mjs";
@@ -88,9 +87,6 @@ export async function http_generic(url, options) {
           : {}),
       },
     };
-    log({
-      a,
-    });
     const req = h.request(a, lambda5);
     req.on("error", reject);
     if (body) {
