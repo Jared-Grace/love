@@ -8,7 +8,7 @@ export function g_sermon_verse_to_text(v) {
   let reference = ebible_parts_chapter_code_to_reference(
     chapter_code,
     books,
-    verse_numbers2,
+    verse_numbers,
   );
   let result = list_join_comma_space(verse_numbers);
   let text = object_property_get(v, "text");
