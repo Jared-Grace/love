@@ -1,3 +1,4 @@
+import { data_file_update } from "../../../love/public/src/data_file_update.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { json_compress } from "../../../love/public/src/json_compress.mjs";
@@ -46,9 +47,11 @@ export async function file_overwrite_uncached(file_path, contents) {
       value_get,
     );
     return;
+  } else {
+    await file_parent_exists_ensure(file_path);
+    let fs = await import("fs");
+    await fs.promises.writeFile(file_path, contents, "utf-8");
   }
-  await file_parent_exists_ensure(file_path);
-  let fs = await import("fs");
-  await fs.promises.writeFile(file_path, contents, "utf-8");
   return;
+  await data_file_update(f_path);
 }
