@@ -1,3 +1,4 @@
+import { data_path } from "../../../love/public/src/data_path.mjs";
 import { function_parse_unaliased_second } from "../../../love/public/src/function_parse_unaliased_second.mjs";
 import { function_name_to_path_unalias } from "../../../love/public/src/function_name_to_path_unalias.mjs";
 import { file_transform_cached } from "../../../love/public/src/file_transform_cached.mjs";
@@ -15,4 +16,5 @@ export async function function_transform_result(f_name, lambda$ast) {
   }
   let r = await file_transform_cached(f_path, lambda2);
   return r;
+  let d_path = data_path();
 }
