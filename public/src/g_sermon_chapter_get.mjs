@@ -1,0 +1,19 @@
+import { g_sermon_verse_to_text } from "../../../love/public/src/g_sermon_verse_to_text.mjs";
+import { g_sermon_generate_chapter_passages_get } from "../../../love/public/src/g_sermon_generate_chapter_passages_get.mjs";
+import { list_find } from "../../../love/public/src/list_find.mjs";
+import { list_first } from "../../../love/public/src/list_first.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
+export async function g_sermon_chapter_get(chapter_code, verse_number) {
+  marker("1");
+  let passages = await g_sermon_generate_chapter_passages_get(chapter_code);
+  function lambda(v) {
+    let verse_numbers = object_property_get(v, "verse_numbers");
+    let first = list_first(verse_numbers);
+    let v2 = first === verse_number;
+    return v2;
+  }
+  let v = list_find(passages, lambda);
+  let joined2 = g_sermon_verse_to_text(v);
+  return joined2;
+}
