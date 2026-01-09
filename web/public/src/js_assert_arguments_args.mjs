@@ -17,5 +17,5 @@ export function js_assert_arguments_args(ast) {
     let args_new = [args_expression, size_expression];
     list_replace_all(args, args_new);
   }
-  js_visit_calls_named(assert_arguments.name, lambda2, ast);
+  js_visit_calls_named(ast, assert_arguments.name, lambda2);
 }
