@@ -5,13 +5,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { file_js_unparse } from "../../../love/public/src/file_js_unparse.mjs";
 import { function_parse_unaliased } from "../../../love/public/src/function_parse_unaliased.mjs";
 export async function function_transform_result(f_name, lambda$ast) {
-  let parsed = await function_parse_unaliased(f_name);
-  let ast = object_property_get(parsed, "ast");
-  let f_path = object_property_get(parsed, "f_path");
-  let result = await lambda$ast(ast);
-  await file_js_unparse(parsed);
-  return result;
-  {
+
     const v = await function_name_to_path_unalias(f_name);
     let f_path = object_property_get(v, "f_path");
     async function lambda2() {
@@ -23,5 +17,4 @@ export async function function_transform_result(f_name, lambda$ast) {
     }
     let r = await file_transform_cached(f_path, lambda2);
     return r;
-  }
 }
