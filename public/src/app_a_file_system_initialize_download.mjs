@@ -13,8 +13,7 @@ import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_index
 export async function app_a_file_system_initialize_download() {
   let db = await app_a_indexeddb_initialize();
   let db_get = lambda_get(db);
-  let fn = app_a_download;
-  let r = await app_api_fn(fn);
+  let r = await app_api_fn(app_a_download);
   list_property_exists_not_error(r, "key");
   let dictionary = list_to_dictionary_property(r, "key");
   let store = app_a_file_system_store();
