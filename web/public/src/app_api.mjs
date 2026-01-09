@@ -4,7 +4,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { app_api_generic } from "../../../love/public/src/app_api_generic.mjs";
 import { http_post_json } from "../../../love/public/src/http_post_json.mjs";
 export async function app_api(a) {
-  let f_name2 = object_property_get(a, "f_name");
+  let f_name = object_property_get(a, "f_name");
   string_is_assert(f_name);
   marker("1");
   let fn = http_post_json;
