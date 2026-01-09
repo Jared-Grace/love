@@ -6,7 +6,7 @@ import { js_call_callee_name } from "../../../love/public/src/js_call_callee_nam
 export function js_visit_calls_named(f_name, lambda, ast) {
   marker("1");
   function lambda_inner(v) {
-    let { node } = v;
+    let node = object_property_get(v, "node");
     let name = js_call_callee_name(node);
     if (equal_not(name, f_name)) {
       return;
