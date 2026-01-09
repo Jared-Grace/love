@@ -7,6 +7,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_sermon_chapter_get(chapter_code, verse_number) {
   marker("1");
   let chapter = await g_sermon_generate_chapter_get(chapter_code);
+  let passage = object_property_get(chapter, "passage");
   function lambda(v) {
     let joined2 = g_sermon_verse_to_text(v);
     let verse_numbers = object_property_get(v, "verse_numbers");
