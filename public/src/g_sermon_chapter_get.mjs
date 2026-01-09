@@ -7,7 +7,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_sermon_chapter_get(chapter_code) {
   marker("1");
-  let books = await ebible_version_books(bible_folder);
+  let books = await ebible_version_books("engbsb");
   let chapter = await g_sermon_generate_chapter_get(chapter_code);
   let passages = object_property_get(chapter, "passages");
   function lambda(v) {
