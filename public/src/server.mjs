@@ -27,7 +27,9 @@ export function server() {
     let r = await function_run_io_file_wrapper(body);
     res.json(r);
   }
-  function lambda2() {}
+  async function lambda2() {
+    await api(req, res);
+  }
   app.post(u, lambda2);
   app.post(u + "/ordered", api_ordered);
   async function api_ordered(req, res) {
