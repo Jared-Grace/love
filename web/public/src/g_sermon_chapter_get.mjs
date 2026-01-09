@@ -16,7 +16,7 @@ export async function g_sermon_chapter_get(chapter_code) {
     let result = list_join_comma_space(verse_numbers);
     let text = object_property_get(v, "text");
     let sermon = object_property_get(v, "sermon");
-    let mapped2 = app_g_openai_split(objections);
+    let mapped = app_g_openai_split(sermon);
   }
   let mapped = list_map(chapter, lambda);
 }
