@@ -1,6 +1,6 @@
 import { server_url } from "../../../love/public/src/server_url.mjs";
 import { server_port } from "../../../love/public/src/server_port.mjs";
-import { server_api_url } from "../../../love/public/src/server_api_url.mjs";
+import { server_url_api } from "../../../love/public/src/server_url_api.mjs";
 import { function_run_io_file_wrapper } from "../../../love/public/src/function_run_io_file_wrapper.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -21,7 +21,7 @@ export function server() {
   let previous = folder_previous();
   let result2 = path_join([__dirname, previous, previous, previous]);
   let v = express.static(result2);
-  let u = server_api_url();
+  let u = server_url_api();
   async function api_generic(req, res) {
     let body = object_property_get(req, "body");
     let r = await function_run_io_file_wrapper(body);
