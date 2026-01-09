@@ -1,6 +1,6 @@
 import { data_path } from "../../../love/public/src/data_path.mjs";
 import { function_parse_unaliased } from "../../../love/public/src/function_parse_unaliased.mjs";
-import { function_name_to_path_unalias } from "../../../love/public/src/function_name_to_path_unalias.mjs";
+import { data_all_initialize } from "../../../love/public/src/data_all_initialize.mjs";
 import { file_transform_cached } from "../../../love/public/src/file_transform_cached.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { file_js_unparse } from "../../../love/public/src/file_js_unparse.mjs";
@@ -13,6 +13,7 @@ export async function function_transform_result(f_name, lambda$ast) {
     return result;
   }
   let d_path = data_path();
+  data_all_initialize(d_path);
   let r = await file_transform_cached(d_path, lambda2);
   return r;
 }
