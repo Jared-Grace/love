@@ -4,8 +4,9 @@ import { app_api_generic_f_name_args } from "../../../love/public/src/app_api_ge
 export function app_api_generic_url_body(f_name, args) {
   let body = app_api_generic_f_name_args(f_name, args);
   let url = null;
-  url = server_api_url();
   if (browser_is()) {
+    url = server_api_url();
+  } else {
   }
   let v = {
     url,
