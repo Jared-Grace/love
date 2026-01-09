@@ -36,16 +36,14 @@ export async function data_file_update_inner(parsed, data) {
       list_add_if_not_includes(list, f_name);
     }
     each(items, identifier_add);
-    if (false) {
-      let items_old = object_property_initialize(f_this, property_name, []);
-      let removals = list_difference(items_old, items);
-      function lambda(item) {
-        let list = object_property_initialize(items_to_functions, item, []);
-        list_remove_all(list, f_name);
-        let e = list_empty_is(list);
-        if (e) {
-          object_property_delete(items_to_functions, item);
-        }
+    let items_old = object_property_initialize(f_this, property_name, []);
+    let removals = list_difference(items_old, items);
+    function lambda(item) {
+      let list = object_property_initialize(items_to_functions, item, []);
+      list_remove_all(list, f_name);
+      let e = list_empty_is(list);
+      if (e) {
+        object_property_delete(items_to_functions, item);
       }
       each(removals, lambda);
     }
