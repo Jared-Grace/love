@@ -37,7 +37,7 @@ export async function watch() {
         log({
           function_auto_path: "finish",
         });
-        server_url();
+        let u = server_url();
       } finally {
         try {
           const args = [path];
