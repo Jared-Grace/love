@@ -22,18 +22,18 @@ export function server() {
   let result2 = path_join([__dirname, previous, previous, previous]);
   let v = express.static(result2);
   let u = server_api_url();
-  async function api(req, res) {
+  async function api_generic(req, res) {
     let body = object_property_get(req, "body");
     let r = await function_run_io_file_wrapper(body);
     res.json(r);
   }
-  async function lambda2() {
-    await api(req, res);
+  async function lambda2(req, res) {
+    await api_generic(req, res);
   }
   app.post(u, lambda2);
   app.post(u + "/ordered", api_ordered);
   async function api_ordered(req, res) {
-    api(req, res);
+    api_generic(req, res);
   }
   app.use(v);
   function lambda() {
