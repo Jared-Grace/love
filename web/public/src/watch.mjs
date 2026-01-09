@@ -1,5 +1,4 @@
 import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { repos_paths_map_unordered_combine_squash } from "../../../love/public/src/repos_paths_map_unordered_combine_squash.mjs";
 import { command_line_node_g } from "../../../love/public/src/command_line_node_g.mjs";
@@ -39,9 +38,6 @@ export async function watch() {
           object_property_set(in_progress, path, false);
         }
       }
-      log({
-        w: "finish2",
-      });
     }
     await catch_log_async(lambda);
   }
