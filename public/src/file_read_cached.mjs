@@ -4,7 +4,7 @@ import { file_read } from "../../../love/public/src/file_read.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function file_read_cached(f_path) {
   marker("1");
-  let exists = global_function_property_exists(file_read_cached, f_path);
+  let exists = global_function_property_exists(file_read_cached, f_path);at
   let contents = await file_read(f_path);
   global_function_property_set(file_read_cached, f_path, contents);
 }
