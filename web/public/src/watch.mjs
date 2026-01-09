@@ -51,7 +51,7 @@ export async function watch() {
         }
       }
       log({
-        w: "finish",
+        w: "finish2",
       });
     }
     await catch_log_async(lambda);
