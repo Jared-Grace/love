@@ -7,4 +7,9 @@ export async function function_transform_result(f_name, lambda$ast) {
   let result = await lambda$ast(ast);
   await file_js_unparse(parsed);
   return result;
+
+    async function lambda2() {
+      await function_transform(f_name, js_auto);
+    }
+    let r = await file_transform_cached(d_path, lambda2);
 }
