@@ -22,7 +22,9 @@ export function server() {
   let result2 = path_join([__dirname, previous, previous, previous]);
   let v = express.static(result2);
   async function api(req, res) {
+  console.log("req.body:", req.body); 
     let body = object_property_get(req, "body");
+  console.log("object_property_get(req, 'body'):", body);
     let r = await function_run_io_file_wrapper(body);
     res.json(r);
   }
