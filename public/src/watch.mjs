@@ -1,3 +1,4 @@
+import { server_url } from "../../../love/public/src/server_url.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { repos_paths_map_unordered_combine_squash } from "../../../love/public/src/repos_paths_map_unordered_combine_squash.mjs";
@@ -36,6 +37,7 @@ export async function watch() {
         log({
           function_auto_path: "finish",
         });
+        server_url();
       } finally {
         try {
           const args = [path];
