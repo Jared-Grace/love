@@ -4,12 +4,12 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 export async function function_parse_unaliased_second(v) {
   let unaliased = object_property_get(v, "unaliased");
   let f_path = object_property_get(v, "f_path");
-  let parsed = await file_js_parse(f_path);
-  let to = object_merge(
+  let parsed_before = await file_js_parse(f_path);
+  let parsed = object_merge(
     {
       unaliased,
     },
-    parsed,
+    parsed_before,
   );
-  return to;
+  return parsed;
 }
