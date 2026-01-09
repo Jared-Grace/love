@@ -1,3 +1,4 @@
+import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
@@ -33,7 +34,6 @@ import { indexeddb_store_clear } from "../../../love/public/src/indexeddb_store_
 import { app_a_file_system_initialize_download } from "../../../love/public/src/app_a_file_system_initialize_download.mjs";
 import { emoji_down } from "../../../love/public/src/emoji_down.mjs";
 import { app_a_upload } from "../../../love/public/src/app_a_upload.mjs";
-import { app_api_fn_args } from "../../../love/public/src/app_api_fn_args.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
@@ -88,7 +88,7 @@ export async function app_a_function(context) {
     let deltas = list_map(filtered, lambda2);
     let ne = list_empty_not_is(deltas);
     if (ne) {
-      let r = await app_api_fn_args({
+      let r = await app_api_fn({
         fn: app_a_upload,
         args: [deltas],
       });
