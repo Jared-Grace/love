@@ -7,6 +7,7 @@ export async function app_api_generic(a) {
   marker("1");
   let f_name = object_property_get(a, "f_name");
   let args = object_property_get(a, "args");
+  let fn_http = object_property_get(a, "fn_http");
   var v = app_api_generic_url_body(f_name, args);
   let body = object_property_get(v, "body");
   let url = object_property_get(v, "url");
