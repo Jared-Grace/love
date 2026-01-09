@@ -12,12 +12,12 @@ export function app_api_generic_url_body(f_name, args) {
     url = server_url();
   }
   url += server_api_url();
+  log({
+    url,
+  });
   let v = {
     url,
     body,
   };
   return v;
-  log({
-    url,
-  });
 }
