@@ -12,6 +12,8 @@ import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function file_read(file_path) {
   let exists = global_function_property_exists(file_read_cached, file_path);
+  if (exists) {
+  }
   if (browser_is()) {
     file_path = file_path_normalize(file_path);
     await app_a_file_system_initialize();
@@ -31,6 +33,4 @@ export async function file_read(file_path) {
   let fs = await import("fs");
   let contents = await fs.promises.readFile(file_path, "utf-8");
   return contents;
-  if (false) {
-  }
 }
