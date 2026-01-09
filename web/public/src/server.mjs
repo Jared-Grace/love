@@ -27,10 +27,10 @@ export function server() {
     let r = await function_run_io_file_wrapper(body);
     res.json(r);
   }
-  async function lambda2(req, res) {
+  async function api(req, res) {
     await api_generic(req, res);
   }
-  app.post(u, lambda2);
+  app.post(u, api);
   app.post(u + "/ordered", api_ordered);
   async function api_ordered(req, res) {
     api_generic(req, res);
