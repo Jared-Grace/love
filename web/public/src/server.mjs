@@ -33,7 +33,7 @@ export function server() {
     await api_generic(req, res);
   }
   app.post(u, api);
-  let ordering = promise_resolved;
+  let ordering = promise_resolved();
   let uo = server_url_api_ordered();
   app.post(uo, api_ordered);
   async function api_ordered(req, res) {
