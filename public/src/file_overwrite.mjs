@@ -18,6 +18,11 @@ import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { file_parent_exists_ensure } from "../../../love/public/src/file_parent_exists_ensure.mjs";
 export async function file_overwrite(file_path, contents) {
   string_is_assert(contents);
+  let exists = global_function_property_exists(file_read_cached, file_path);
+  if (exists) {
+    global_function_property_set(file_read_cached, file_path, contents);
+    return;
+  }
   marker("1");
   if (browser_is()) {
     file_path = file_path_normalize(file_path);
@@ -56,9 +61,4 @@ export async function file_overwrite(file_path, contents) {
   let fs = await import("fs");
   await fs.promises.writeFile(file_path, contents, "utf-8");
   return;
-  let exists = global_function_property_exists(file_read_cached, file_path);
-  if (exists) {
-    global_function_property_set(file_read_cached, file_path, contents);
-    return;
-  }
 }
