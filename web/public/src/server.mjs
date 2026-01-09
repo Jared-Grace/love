@@ -32,8 +32,8 @@ export function server() {
     await api_generic(req, res);
   }
   app.post(u, api);
-  let v3 = server_url_api_ordered();
-  app.post(v3, api_ordered);
+  let uo = server_url_api_ordered();
+  app.post(uo, api_ordered);
   async function api_ordered(req, res) {
     api_generic(req, res);
   }
