@@ -1,3 +1,4 @@
+import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { file_read_cached } from "../../../love/public/src/file_read_cached.mjs";
 import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
 import { json_decompress } from "../../../love/public/src/json_decompress.mjs";
@@ -13,6 +14,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function file_read(file_path) {
   let exists = global_function_property_exists(file_read_cached, file_path);
   if (exists) {
+    global_function_property_get(file_read_cached, file_path);
   }
   if (browser_is()) {
     file_path = file_path_normalize(file_path);
