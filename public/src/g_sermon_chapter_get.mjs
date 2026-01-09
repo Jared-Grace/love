@@ -1,3 +1,4 @@
+import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
 import { app_g_openai_split } from "../../../love/public/src/app_g_openai_split.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -17,6 +18,7 @@ export async function g_sermon_chapter_get(chapter_code) {
     let text = object_property_get(v, "text");
     let sermon = object_property_get(v, "sermon");
     let mapped = app_g_openai_split(sermon);
+    let joined = list_join_newline_2(list);
   }
   let mapped = list_map(chapter, lambda);
 }
