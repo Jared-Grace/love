@@ -8,12 +8,12 @@ export async function g_sermon_chapter_get(chapter_code, verse_number) {
   marker("1");
   let chapter = await g_sermon_generate_chapter_get(chapter_code);
   function lambda(v) {
+    let joined2 = g_sermon_verse_to_text(v);
     let verse_numbers = object_property_get(v, "verse_numbers");
     let first = list_first(verse_numbers);
     let v2 = first === verse_number;
     return v2;
   }
   let v = list_map(passages, lambda);
-  let joined2 = g_sermon_verse_to_text(v);
   return joined2;
 }
