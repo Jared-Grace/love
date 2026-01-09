@@ -88,7 +88,10 @@ export async function app_a_function(context) {
     let deltas = list_map(filtered, lambda2);
     let ne = list_empty_not_is(deltas);
     if (ne) {
-      let r = await app_api_fn_args(app_a_upload, [deltas]);
+      let r = await app_api_fn_args({
+        fn: app_a_upload,
+        args: [deltas],
+      });
     }
   }
   async function download() {
