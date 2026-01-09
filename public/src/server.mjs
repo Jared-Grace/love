@@ -37,7 +37,8 @@ export function server() {
   let uo = server_url_api_ordered();
   app.post(uo, api_ordered);
   async function api_ordered(req, res) {
-    ordering = ordering.then(() => {});
+    function lambda2() {}
+    ordering = ordering.then(lambda2);
     await api_generic(req, res);
   }
   app.use(v);
