@@ -8,5 +8,6 @@ export async function g_sermon_chapter_get(chapter_code) {
   let fn = g_sermon_generate;
   let path = local_function_path_json(chapter_code, fn);
   let chapter = await file_read_json(path);
-  let mapped = list_map(list, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list, lambda);
 }
