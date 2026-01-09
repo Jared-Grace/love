@@ -54,7 +54,7 @@ export async function data_file_update_inner(parsed, data) {
   let strings_new = js_strings(ast);
   data_add("strings", strings_new);
   function lambda2(la) {
-    js_visit_calls_named(fn_name.name, lambda4, ast);
+    js_visit_calls_named(ast, fn_name.name, lambda4);
     function lambda4({ args }) {
       let first = list_first(args);
       function lambda3() {
