@@ -1,3 +1,5 @@
+import { file_read_cached } from "../../../love/public/src/file_read_cached.mjs";
+import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
 import { json_decompress } from "../../../love/public/src/json_decompress.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -28,4 +30,5 @@ export async function file_read(file_path) {
   let fs = await import("fs");
   let contents = await fs.promises.readFile(file_path, "utf-8");
   return contents;
+  let exists = global_function_property_exists(file_read_cached, file_path);
 }
