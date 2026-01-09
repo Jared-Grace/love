@@ -16,12 +16,10 @@ export async function js_auto(ast) {
     }
     await each_async(transforms, lambda);
     let r = performance_end(p);
+  log(r);
     return r;
   }
   await lambda();
-  return;
-  let d_path = data_path();
-  let r = await file_transform_cached(d_path, lambda);
   return;
   log(r);
 }
