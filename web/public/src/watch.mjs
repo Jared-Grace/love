@@ -39,9 +39,6 @@ export async function watch() {
           function_auto_path: "finish",
         });
         let r = await app_api_fn(add, [1, 2]);
-        log({
-          r: r,
-        });
       } finally {
         try {
           const args = [path];
