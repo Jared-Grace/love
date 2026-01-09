@@ -8,8 +8,8 @@ export async function app_api(a) {
   let f_name = object_property_get(a, "f_name");
   string_is_assert(f_name);
   marker("1");
-  let fn = http_post_json;
-  object_property_set_exists_not(object, property_name, value);
-  let result = await app_api_generic(f_name, args, fn);
+  let fn_http = http_post_json;
+  object_property_set_exists_not(a, "fn_http", fn_http);
+  let result = await app_api_generic(a);
   return result;
 }
