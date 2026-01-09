@@ -28,7 +28,7 @@ export function server() {
   app.post(v3, api);
   app.use(v);
   function lambda() {
-    log_keep(`Static server running at http://localhost:${port}`);
+    log_keep("Static server running at " + "http://localhost:" + port);
   }
   app.listen(port, lambda);
 }
