@@ -21,13 +21,19 @@ export function server() {
   let previous = folder_previous();
   let result2 = path_join([__dirname, previous, previous, previous]);
   let v = express.static(result2);
+  let u = server_api_url();
   async function api(req, res) {
     let body = object_property_get(req, "body");
     let r = await function_run_io_file_wrapper(body);
     res.json(r);
   }
-  let u = server_api_url();
   app.post(u, api);
+  app.post(u + "/ordered", api);
+  async function api(req, res) {
+    let body = object_property_get(req, "body");
+    let r = await function_run_io_file_wrapper(body);
+    res.json(r);
+  }
   app.use(v);
   function lambda() {
     log_keep("Static server running at: " + server_url());
