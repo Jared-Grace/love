@@ -1,7 +1,3 @@
-import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
-import { file_read_cached } from "../../../love/public/src/file_read_cached.mjs";
-import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
-import { string_is_assert } from "../../../love/public/src/string_is_assert.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { json_compress } from "../../../love/public/src/json_compress.mjs";
@@ -16,7 +12,7 @@ import { file_path_normalize } from "../../../love/public/src/file_path_normaliz
 import { marker } from "../../../love/public/src/marker.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { file_parent_exists_ensure } from "../../../love/public/src/file_parent_exists_ensure.mjs";
-export async function file_overwrite_cached(file_path, contents) {
+export async function file_overwrite_uncached(file_path, contents) {
   marker("1");
   if (browser_is()) {
     file_path = file_path_normalize(file_path);
