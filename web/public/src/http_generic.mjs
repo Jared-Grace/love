@@ -76,6 +76,7 @@ export async function http_generic(url, options) {
     }
     const a = {
       hostname: urlObj.hostname,
+      port: urlObj.port || (swHttps ? 443 : 80),
       path: urlObj.pathname + urlObj.search,
       method,
       headers: options.headers || {},
