@@ -21,7 +21,7 @@ export async function function_params_new_generic(
       return;
     }
     async function lambda5(ast) {
-      js_visit_calls_named(f_name_current, lambda, ast);
+      js_visit_calls_named(ast, f_name_current, lambda);
       function lambda({ args }) {
         on_call(args);
       }
