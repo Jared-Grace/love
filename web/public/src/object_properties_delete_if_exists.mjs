@@ -6,9 +6,9 @@ export function object_properties_delete_if_exists(data, properties) {
   marker("1");
   function lambda2(p) {
     let exists = object_property_exists(object, property_name);
-    if (false) {
+    if (exists) {
+      object_property_delete(data, p);
     }
-    object_property_delete(data, p);
   }
   each(properties, lambda2);
 }
