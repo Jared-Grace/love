@@ -1,3 +1,6 @@
+import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
+import { file_read_cached } from "../../../love/public/src/file_read_cached.mjs";
+import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
 import { string_is_assert } from "../../../love/public/src/string_is_assert.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -53,4 +56,9 @@ export async function file_overwrite(file_path, contents) {
   let fs = await import("fs");
   await fs.promises.writeFile(file_path, contents, "utf-8");
   return;
+  let exists = global_function_property_exists(file_read_cached, file_path);
+  if (exists) {
+    global_function_property_set(file_read_cached, file_path, contents);
+    return;
+  }
 }
