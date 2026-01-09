@@ -23,4 +23,5 @@ export async function g_sermon_chapter_get(chapter_code) {
     return joined2;
   }
   let mapped = list_map(chapter, lambda);
+  let joined3 = list_join_newline_2(list);
 }
