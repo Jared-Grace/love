@@ -14,6 +14,6 @@ export async function g_sermon_passage_get(chapter_code, verse_number) {
     return v2;
   }
   let v = list_find(passages, lambda);
-  let joined2 = g_sermon_verse_to_text(v);
+  let joined2 = g_sermon_verse_to_text(v, chapter_code);
   return joined2;
 }
