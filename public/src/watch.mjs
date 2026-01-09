@@ -1,6 +1,5 @@
 import { add } from "../../../love/public/src/add.mjs";
 import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
-import { server_url } from "../../../love/public/src/server_url.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { repos_paths_map_unordered_combine_squash } from "../../../love/public/src/repos_paths_map_unordered_combine_squash.mjs";
@@ -39,7 +38,6 @@ export async function watch() {
         log({
           function_auto_path: "finish",
         });
-        let u = server_url();
         let r = await app_api_fn(add, [1, 2]);
       } finally {
         try {
