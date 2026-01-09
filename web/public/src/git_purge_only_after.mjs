@@ -3,6 +3,7 @@ import { command_line_git_multiple } from "../../../love/public/src/command_line
 export async function git_purge_only_after() {
   let commands = [
     "remote add origin https://github.com/Jared-Grace/love.git",
+    "push --set-upstream origin main",
     "push --force --all",
     "push --force --tags",
   ];
