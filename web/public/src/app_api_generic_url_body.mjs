@@ -1,4 +1,3 @@
-import { server_url_api_ordered } from "../../../love/public/src/server_url_api_ordered.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { server_url } from "../../../love/public/src/server_url.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
@@ -10,7 +9,7 @@ export function app_api_generic_url_body(f_name, args) {
   if (browser_is()) {
     url = "";
   } else {
-    url = server_url() + server_url_api_ordered();
+    url = server_url();
   }
   url += server_url_api();
   log({
