@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { object_properties_delete_if_exists } from "../../../love/public/src/object_properties_delete_if_exists.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { data_generate } from "../../../love/public/src/data_generate.mjs";
@@ -11,5 +12,8 @@ export async function data_files_update() {
   let properties = ["identifiers", "functions"];
   object_properties_delete_if_exists(data, properties);
   await data_generate(data);
+  log({
+    d,
+  });
   await data_save(d);
 }
