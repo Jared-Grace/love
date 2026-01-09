@@ -41,6 +41,7 @@ export function server() {
       await api_generic(req, res);
     }
     ordering = ordering.then(lambda2);
+    await ordering;
   }
   app.use(v);
   function lambda() {
