@@ -1,5 +1,3 @@
-import { file_transform_cached } from "../../../love/public/src/file_transform_cached.mjs";
-import { data_path } from "../../../love/public/src/data_path.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { performance_end } from "../../../love/public/src/performance_end.mjs";
 import { performance_next } from "../../../love/public/src/performance_next.mjs";
@@ -16,7 +14,7 @@ export async function js_auto(ast) {
     }
     await each_async(transforms, lambda);
     let r = performance_end(p);
-  log(r);
+    log(r);
     return r;
   }
   await lambda();
