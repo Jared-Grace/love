@@ -30,7 +30,7 @@ export function server() {
   app.post(v3, api);
   app.use(v);
   function lambda() {
-    log_keep("Static server running at " + server_url());
+    log_keep("Static server running at: " + server_url());
   }
   app.listen(port, lambda);
 }
