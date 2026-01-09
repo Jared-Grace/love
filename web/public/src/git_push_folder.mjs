@@ -11,11 +11,11 @@ import { function_name_combine } from "../../../love/public/src/function_name_co
 import { date_iso_to } from "../../../love/public/src/date_iso_to.mjs";
 import { date_now } from "../../../love/public/src/date_now.mjs";
 import { catch_log_async } from "../../../love/public/src/catch_log_async.mjs";
-import { git_push_command } from "../../../love/public/src/git_push_command.mjs";
+import { git_push_text } from "../../../love/public/src/git_push_text.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function git_push_folder(folder) {
   marker("1");
-  const command_git = git_push_command();
+  const command_git = git_push_text();
   await catch_log_async(lambda);
   async function lambda() {
     const now = date_now();
