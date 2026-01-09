@@ -26,7 +26,7 @@ export function server() {
     let r = await function_run_io_file_wrapper(body);
     res.json(r);
   }
-  let u = server_api_url_fragment();
+  let u = server_api_url();
   app.post(u, api);
   app.use(v);
   function lambda() {
