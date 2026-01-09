@@ -4,5 +4,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function git_push_upstream_set_text_git_push_upstream_set() {
   marker("1");
   let c = git_push_upstream_set_text();
-  return await command_line_git(c);
+  let v = await command_line_git(c);
+  return v;
 }
