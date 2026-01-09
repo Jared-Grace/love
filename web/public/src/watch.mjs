@@ -40,7 +40,10 @@ export async function watch() {
       } finally {
         try {
           const args = [path];
-          await app_api_fn_args(data_file_update, args);
+          await app_api_fn_args({
+            f_name: data_file_update,
+            args,
+          });
         } finally {
           object_property_set(in_progress, path, false);
         }
