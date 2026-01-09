@@ -1,3 +1,4 @@
+import { server_port } from "../../../love/public/src/server_port.mjs";
 import { server_api_url } from "../../../love/public/src/server_api_url.mjs";
 import { function_run_io_file_wrapper } from "../../../love/public/src/function_run_io_file_wrapper.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -13,7 +14,7 @@ export function server() {
   const app = express();
   let v2 = express.json();
   app.use(v2);
-  const port = 8080;
+  const port = server_port();
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
   let previous = folder_previous();
