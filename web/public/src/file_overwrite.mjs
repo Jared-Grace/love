@@ -23,42 +23,5 @@ export async function file_overwrite(file_path, contents) {
     global_function_property_set(file_read_cached, file_path, contents);
     return;
   }
-  marker("1");
-  if (browser_is()) {
-    file_path = file_path_normalize(file_path);
-    await app_a_file_system_initialize();
-    let store = app_a_file_system_store();
-    async function value_get(previous) {
-      const p = "compressed";
-      let f = null;
-      let nn = null_not_is(previous);
-      if (nn) {
-        let compressed_before = object_property_get(previous, p);
-        f = await json_decompress(compressed_before);
-      } else {
-        f = {
-          ["versions"]: [],
-        };
-        previous = {
-          key: file_path,
-        };
-      }
-      let list = object_property_get(f, "versions");
-      list_add(list, contents);
-      let compressed_after = await json_compress(f);
-      object_property_set(previous, p, compressed_after);
-      return previous;
-    }
-    let item = await indexeddb_put(
-      app_a_indexeddb_initialize,
-      store,
-      file_path,
-      value_get,
-    );
-    return;
-  }
-  await file_parent_exists_ensure(file_path);
-  let fs = await import("fs");
-  await fs.promises.writeFile(file_path, contents, "utf-8");
-  return;
+  file_overwrite_uncached(file_path, contents)
 }
