@@ -6,5 +6,6 @@ export async function function_auto(f_name) {
   marker("1");
   await function_transform(f_name, js_auto);
   return;
-  let r = await file_transform_cached(d_path, async function lambda2() {});
+  async function lambda2() {}
+  let r = await file_transform_cached(d_path, lambda2);
 }
