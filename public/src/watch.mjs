@@ -41,7 +41,7 @@ export async function watch() {
         try {
           const args = [path];
           await app_api_fn_args({
-            f_name: data_file_update,
+            fn: data_file_update,
             args,
           });
         } finally {
