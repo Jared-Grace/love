@@ -1,3 +1,4 @@
+import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { g_sermon_generate_chapter_get } from "../../../love/public/src/g_sermon_generate_chapter_get.mjs";
 import { g_sermon_verse_to_text } from "../../../love/public/src/g_sermon_verse_to_text.mjs";
@@ -12,5 +13,6 @@ export async function g_sermon_chapter_get(chapter_code) {
     return joined2;
   }
   let v = list_map(passages, lambda);
+  let joined = list_join_newline_2(list);
   return joined2;
 }
