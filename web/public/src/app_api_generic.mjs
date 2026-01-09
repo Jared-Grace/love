@@ -1,8 +1,10 @@
 import { app_api_generic_url_body } from "../../../love/public/src/app_api_generic_url_body.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export async function app_api_generic(f_name, args, fn_http) {
+export async function app_api_generic(a, fn_http) {
   marker("1");
+  let f_name2 = object_property_get(a, "f_name");
+  let args2 = object_property_get(a, "args");
   var v = app_api_generic_url_body(f_name, args);
   let body = object_property_get(v, "body");
   let url = object_property_get(v, "url");
