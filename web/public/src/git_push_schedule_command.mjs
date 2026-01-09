@@ -1,7 +1,7 @@
 import { assert_not } from "../../../love/public/src/assert_not.mjs";
 import { git_push_schedule_check } from "../../../love/public/src/git_push_schedule_check.mjs";
 import { git_push_schedule_task_name } from "../../../love/public/src/git_push_schedule_task_name.mjs";
-import { git_push_command } from "../../../love/public/src/git_push_command.mjs";
+import { git_push_text } from "../../../love/public/src/git_push_text.mjs";
 import { command_line_git_prefix } from "../../../love/public/src/command_line_git_prefix.mjs";
 import { path_resolve } from "../../../love/public/src/path_resolve.mjs";
 import { folder_current } from "../../../love/public/src/folder_current.mjs";
@@ -17,7 +17,7 @@ export async function git_push_schedule_command() {
     result +
     " && " +
     command_line_git_prefix() +
-    git_push_command() +
+    git_push_text() +
     '"';
   return command;
 }
