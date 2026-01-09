@@ -1,4 +1,3 @@
-import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
 import { indexeddb_get_all } from "../../../love/public/src/indexeddb_get_all.mjs";
 import { list_property_exists_not_error } from "../../../love/public/src/list_property_exists_not_error.mjs";
@@ -15,7 +14,7 @@ export async function app_a_file_system_initialize_download() {
   let db = await app_a_indexeddb_initialize();
   let db_get = lambda_get(db);
   let r = await app_api_fn({
-    fn_name: app_a_download,
+    fn: app_a_download,
   });
   list_property_exists_not_error(r, "key");
   let dictionary = list_to_dictionary_property(r, "key");
