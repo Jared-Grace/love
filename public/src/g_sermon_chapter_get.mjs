@@ -19,7 +19,8 @@ export async function g_sermon_chapter_get(chapter_code) {
     let sermon = object_property_get(v, "sermon");
     let mapped = app_g_openai_split(sermon);
     let joined = list_join_newline_2(mapped);
-    let joined2 = list_join_newline_2(list);
+    let joined2 = list_join_newline_2([result, text, joined]);
+    return joined2;
   }
   let mapped = list_map(chapter, lambda);
 }
