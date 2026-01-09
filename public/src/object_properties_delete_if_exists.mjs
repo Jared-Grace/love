@@ -5,7 +5,7 @@ import { object_property_delete } from "../../../love/public/src/object_property
 export function object_properties_delete_if_exists(data, properties) {
   marker("1");
   function lambda2(p) {
-    let exists = object_property_exists(object, property_name);
+    let exists = object_property_exists(data, p);
     if (exists) {
       object_property_delete(data, p);
     }
