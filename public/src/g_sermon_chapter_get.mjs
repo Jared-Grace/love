@@ -1,3 +1,4 @@
+import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
@@ -11,6 +12,7 @@ export async function g_sermon_chapter_get(chapter_code) {
   let chapter = await file_read_json(path);
   function lambda(v) {
     let verse_numbers = object_property_get(v, "verse_numbers");
+    let result = list_join_comma(names);
     let text = object_property_get(v, "text");
     let sermon = object_property_get(v, "sermon");
   }
