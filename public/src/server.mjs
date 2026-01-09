@@ -1,3 +1,4 @@
+import { promise_resolved } from "../../../love/public/src/promise_resolved.mjs";
 import { server_url_api_ordered } from "../../../love/public/src/server_url_api_ordered.mjs";
 import { server_url } from "../../../love/public/src/server_url.mjs";
 import { server_port } from "../../../love/public/src/server_port.mjs";
@@ -32,6 +33,7 @@ export function server() {
     await api_generic(req, res);
   }
   app.post(u, api);
+  let ordering = promise_resolved;
   let uo = server_url_api_ordered();
   app.post(uo, api_ordered);
   async function api_ordered(req, res) {
