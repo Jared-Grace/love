@@ -7,5 +7,6 @@ export async function file_overwrite_cached(f_path) {
 console.log(global_function_get(file_read_cached))
   let contents = global_function_property_get(file_read_cached, f_path);
   await file_overwrite(f_path, contents);
+  
   global_function_property_delete(file_read_cached, f_path);
 }
