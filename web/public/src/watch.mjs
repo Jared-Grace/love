@@ -21,9 +21,6 @@ export async function watch() {
   let in_progress = {};
   async function lambda2(path) {
     async function lambda() {
-      log({
-        watch: "start",
-      });
       const value = true;
       if (object_property_exists_equals(in_progress, path, value)) {
         return;
