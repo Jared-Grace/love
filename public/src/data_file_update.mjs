@@ -9,7 +9,9 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { data_path } from "../../../love/public/src/data_path.mjs";
 export async function data_file_update(f_path) {
   let f_names = await functions_names();
-  let f_name = function_path_to_name(f_path2);
+  let f_name = function_path_to_name(f_path);
+  if (false) {
+  }
   console.log(f_path);
   let d_path = data_path();
   var d = await data_all(d_path);
