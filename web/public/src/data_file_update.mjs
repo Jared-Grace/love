@@ -1,3 +1,4 @@
+import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { file_js_parse } from "../../../love/public/src/file_js_parse.mjs";
 import { data_file_update_inner } from "../../../love/public/src/data_file_update_inner.mjs";
@@ -6,6 +7,7 @@ import { data_all } from "../../../love/public/src/data_all.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { data_path } from "../../../love/public/src/data_path.mjs";
 export async function data_file_update(f_path) {
+  let f_names = await functions_names();
   console.log(f_path);
   let d_path = data_path();
   var d = await data_all(d_path);
