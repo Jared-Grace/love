@@ -1,11 +1,7 @@
 import { data_generate } from "../../../love/public/src/data_generate.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { file_write } from "../../../love/public/src/file_write.mjs";
-import { not } from "../../../love/public/src/not.mjs";
-import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
-import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 import { data_path } from "../../../love/public/src/data_path.mjs";
 import { data_all_initialize } from "../../../love/public/src/data_all_initialize.mjs";
 export async function data_all(file_path) {
@@ -13,7 +9,7 @@ export async function data_all(file_path) {
   let data = {};
   let d_path = data_path();
   if (false && equal(file_path, d_path)) {
-    await data_generate(data);
+    return await data_generate(data);
   } else {
     await data_all_initialize(file_path);
     data = await file_read_json(file_path);
@@ -24,4 +20,3 @@ export async function data_all(file_path) {
   };
   return v;
 }
-
