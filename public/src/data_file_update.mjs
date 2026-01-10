@@ -15,7 +15,7 @@ export async function data_file_update(f_path) {
   if (n) {
     return;
   }
-  console.log(f_path);
+  log(f_path);
   let d_path = data_path();
   var d = await data_all(d_path);
   let parsed = await file_js_parse(f_path);
