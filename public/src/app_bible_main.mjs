@@ -1,6 +1,7 @@
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_bible_screens } from "../../../love/public/src/app_bible_screens.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
+import { app_generic_refresh } from "../../../love/public/src/app_generic_refresh.mjs";
 export async function app_bible_main(context) {
   marker("1");
   let app_fn = app_bible_main;
@@ -9,4 +10,5 @@ export async function app_bible_main(context) {
     app_fn,
     screens,
   });
+  app_generic_refresh(context);
 }
