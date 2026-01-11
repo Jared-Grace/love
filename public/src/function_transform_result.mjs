@@ -25,7 +25,7 @@ export async function function_transform_result(f_name, lambda$ast) {
   let value = null;
   async function lambda() {
     if (null_is(value)) {
-      let result2 = await data_generate(data);
+      value = await data_generate(data);
     }
   }
   let exists = global_function_property_set(file_read_cached, lambda);
