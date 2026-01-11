@@ -9,6 +9,7 @@ import { performance_next } from "../../../love/public/src/performance_next.mjs"
 import { performance_start } from "../../../love/public/src/performance_start.mjs";
 import { js_auto_transforms } from "../../../love/public/src/js_auto_transforms.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
+import { data_path } from "./data_path.mjs";
 export async function js_auto(ast) {
   let data = null;
   async function lambda2() {
@@ -33,7 +34,8 @@ export async function js_auto(ast) {
   await lambda();
   return;
   log(r);
-  let exists = global_function_property_exists(fn, property_name);
-  if (false) {
+  let d_path = data_path();
+  let exists = global_function_property_exists(file_read_cached, property_name);
+  if (exists) {
   }
 }
