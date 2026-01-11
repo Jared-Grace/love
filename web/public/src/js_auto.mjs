@@ -9,6 +9,15 @@ import { performance_start } from "../../../love/public/src/performance_start.mj
 import { js_auto_transforms } from "../../../love/public/src/js_auto_transforms.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function js_auto(ast) {
+  let data = null;
+  async function lambda2() {
+    if (null_is(data)) {
+      data = {};
+      await data_generate(data);
+    }
+    return data;
+  }
+  global_function_property_set(file_read_cached, lambda2);
   async function lambda() {
     const p = performance_start(js_auto.name);
     let transforms = js_auto_transforms();
@@ -23,13 +32,4 @@ export async function js_auto(ast) {
   await lambda();
   return;
   log(r);
-  let data = null;
-  async function lambda2() {
-    if (null_is(data)) {
-      data = {};
-      await data_generate(data);
-    }
-    return data;
-  }
-  global_function_property_set(file_read_cached, lambda2);
 }
