@@ -1,5 +1,4 @@
-import { js_declaration_single_name } from "../../../love/public/src/js_declaration_single_name.mjs";
-import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
+import { js_declaration_single_path } from "../../../love/public/src/js_declaration_single_path.mjs";
 import { data_file_update_inner } from "../../../love/public/src/data_file_update_inner.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
@@ -41,8 +40,7 @@ export async function js_auto(ast) {
   }
   await lambda();
   return;
-  let name2 = js_declaration_single_name(ast);
-  let f_path = function_name_to_path(f_name);
+  let f_path = js_declaration_single_path(ast);
   data_file_update_inner(
     {
       ast,
