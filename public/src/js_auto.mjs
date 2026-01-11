@@ -1,3 +1,4 @@
+import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
 import { data_file_update_inner } from "../../../love/public/src/data_file_update_inner.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
@@ -39,6 +40,7 @@ export async function js_auto(ast) {
   }
   await lambda();
   return;
+  let v = function_name_to_path(f_name);
   data_file_update_inner(
     {
       ast,
