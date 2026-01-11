@@ -40,10 +40,11 @@ export async function js_auto(ast) {
   }
   await lambda();
   return;
-  let v = function_name_to_path(f_name);
+  let f_path = function_name_to_path(f_name);
   data_file_update_inner(
     {
       ast,
+      f_path,
     },
     data,
   );
