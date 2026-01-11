@@ -41,7 +41,7 @@ export async function js_auto(ast) {
   }
   await lambda();
   return;
-  let name2 = js_declaration_single_name(ast2);
+  let name2 = js_declaration_single_name(ast);
   let f_path = function_name_to_path(f_name);
   data_file_update_inner(
     {
