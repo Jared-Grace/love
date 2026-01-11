@@ -1,3 +1,4 @@
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { file_read_cached } from "../../../love/public/src/file_read_cached.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { data_path } from "../../../love/public/src/data_path.mjs";
@@ -21,6 +22,9 @@ export async function function_transform_result(f_name, lambda$ast) {
   let r = await file_transform_cached(d_path, lambda2);
   return r;
   let value = null;
-  function lambda() {}
+  function lambda() {
+    if (null_is(value2)) {
+    }
+  }
   let exists = global_function_property_set(file_read_cached, lambda);
 }
