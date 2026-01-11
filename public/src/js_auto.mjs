@@ -1,3 +1,4 @@
+import { data_file_update_inner } from "../../../love/public/src/data_file_update_inner.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
 import { file_read_cached } from "../../../love/public/src/file_read_cached.mjs";
@@ -39,4 +40,5 @@ export async function js_auto(ast) {
   await lambda();
   return;
   log(r);
+  data_file_update_inner(parsed, data2);
 }
