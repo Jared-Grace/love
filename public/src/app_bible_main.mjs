@@ -1,3 +1,5 @@
+import { app_bible_screens } from "../../../love/public/src/app_bible_screens.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 import { app_generic_refresh } from "../../../love/public/src/app_generic_refresh.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
@@ -15,6 +17,7 @@ import { html_hash_object_get } from "../../../love/public/src/html_hash_object_
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 export async function app_bible_main(context) {
+  marker("1");
   let root = html_mobile_default(context);
   firebase_name_jg();
   html_margin_0(root);
