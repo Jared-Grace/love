@@ -1,6 +1,9 @@
+import { app_bible_home } from "../../../love/public/src/app_bible_home.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function app_bible_screens() {
   marker("screens");
-  let screens = {};
+  let screens = {
+    home: app_bible_home,
+  };
   return screens;
 }
