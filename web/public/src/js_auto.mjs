@@ -19,7 +19,8 @@ export async function js_auto(ast) {
     }
     return data;
   }
-  global_function_property_set(file_read_cached, lambda2);
+  let d_path = data_path();
+  global_function_property_set(file_read_cached, d_path, lambda2);
   async function lambda() {
     const p = performance_start(js_auto.name);
     let transforms = js_auto_transforms();
@@ -34,8 +35,7 @@ export async function js_auto(ast) {
   await lambda();
   return;
   log(r);
-  let d_path = data_path();
-  let exists = global_function_property_exists(file_read_cached, property_name);
+  let exists = global_function_property_exists(file_read_cached, d_path);
   if (exists) {
   }
 }
