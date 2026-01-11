@@ -8,7 +8,7 @@ export async function data_all(file_path) {
   marker("1");
   let data = {};
   let d_path = data_path();
-  if (false && equal(file_path, d_path)) {
+  if (equal(file_path, d_path)) {
     return await data_generate(data);
   } else {
     await data_all_initialize(file_path);
