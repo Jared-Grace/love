@@ -11,4 +11,6 @@ export async function file_read_cached(f_path) {
   global_function_property_set(file_read_cached, f_path, contents);
   let v = true;
   return v;
+  if (false) {
+  }
 }
