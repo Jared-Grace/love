@@ -1,3 +1,4 @@
+import { js_declaration_single_name } from "../../../love/public/src/js_declaration_single_name.mjs";
 import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
 import { data_file_update_inner } from "../../../love/public/src/data_file_update_inner.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -40,6 +41,7 @@ export async function js_auto(ast) {
   }
   await lambda();
   return;
+  let name2 = js_declaration_single_name(ast2);
   let f_path = function_name_to_path(f_name);
   data_file_update_inner(
     {
