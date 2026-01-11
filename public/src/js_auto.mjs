@@ -43,7 +43,7 @@ export async function js_auto(ast) {
     {
       ast,
     },
-    data2,
+    data,
   );
   log(r);
 }
