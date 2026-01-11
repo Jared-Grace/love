@@ -9,6 +9,6 @@ export function function_name_to_path(f_name) {
     });
   }
   let folder = functions_path();
-  let v = function_name_folder_to_path(f_name, folder);
-  return v;
+  let f_path = function_name_folder_to_path(f_name, folder);
+  return f_path;
 }
