@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
 import { file_read_cached } from "../../../love/public/src/file_read_cached.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
@@ -11,16 +12,19 @@ import { js_auto_transforms } from "../../../love/public/src/js_auto_transforms.
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { data_path } from "./data_path.mjs";
 export async function js_auto(ast) {
-  let data = null;
-  async function lambda2() {
-    if (null_is(data)) {
-      data = {};
-      await data_generate(data);
-    }
-    return data;
-  }
   let d_path = data_path();
-  global_function_property_set(file_read_cached, d_path, lambda2);
+  let exists = global_function_property_exists(file_read_cached, d_path);
+  if (not(exists)) {
+    let data = null;
+    async function lambda2() {
+      if (null_is(data)) {
+        data = {};
+        await data_generate(data);
+      }
+      return data;
+    }
+    global_function_property_set(file_read_cached, d_path, lambda2);
+  }
   async function lambda() {
     const p = performance_start(js_auto.name);
     let transforms = js_auto_transforms();
@@ -35,7 +39,4 @@ export async function js_auto(ast) {
   await lambda();
   return;
   log(r);
-  let exists = global_function_property_exists(file_read_cached, d_path);
-  if (exists) {
-  }
 }
