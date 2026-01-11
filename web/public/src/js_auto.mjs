@@ -35,6 +35,14 @@ export async function js_auto(ast) {
     async function lambda(t) {
       performance_next(p, t.name);
       await t(ast);
+      let data = global_function_property_get(file_read_cached, d_path);
+      data_file_update_inner(
+        {
+          ast,
+          f_path,
+        },
+        data,
+      );
     }
     await each_async(transforms, lambda);
     let r = performance_end(p);
@@ -42,13 +50,5 @@ export async function js_auto(ast) {
   }
   await lambda();
   return;
-  let data = global_function_property_get(file_read_cached, d_path);
-  data_file_update_inner(
-    {
-      ast,
-      f_path,
-    },
-    data,
-  );
   log(r);
 }
