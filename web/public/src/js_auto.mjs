@@ -1,3 +1,4 @@
+import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
 import { file_read_cached } from "../../../love/public/src/file_read_cached.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { data_generate } from "../../../love/public/src/data_generate.mjs";
@@ -32,6 +33,7 @@ export async function js_auto(ast) {
   await lambda();
   return;
   log(r);
+  let exists = global_function_property_exists(fn, property_name);
   if (false) {
   }
 }
