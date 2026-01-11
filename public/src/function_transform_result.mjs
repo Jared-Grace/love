@@ -30,5 +30,5 @@ export async function function_transform_result(f_name, lambda$ast) {
     }
     return data;
   }
-  let exists = global_function_property_set(file_read_cached, lambda);
+  global_function_property_set(file_read_cached, lambda);
 }
