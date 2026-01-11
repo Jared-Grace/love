@@ -1,3 +1,4 @@
+import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { js_declaration_single_path } from "../../../love/public/src/js_declaration_single_path.mjs";
 import { data_file_update_inner } from "../../../love/public/src/data_file_update_inner.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -27,6 +28,7 @@ export async function js_auto(ast) {
     }
     global_function_property_set(file_read_cached, d_path, lambda2);
   }
+  let f_path = js_declaration_single_path(ast);
   async function lambda() {
     const p = performance_start(js_auto.name);
     let transforms = js_auto_transforms();
@@ -40,7 +42,7 @@ export async function js_auto(ast) {
   }
   await lambda();
   return;
-  let f_path = js_declaration_single_path(ast);
+  let data = global_function_property_get(file_read_cached, d_path);
   data_file_update_inner(
     {
       ast,
