@@ -23,7 +23,7 @@ export async function function_transform_result(f_name, lambda$ast) {
   return r;
   let value = null;
   function lambda() {
-    if (null_is(value2)) {
+    if (null_is(value)) {
     }
   }
   let exists = global_function_property_set(file_read_cached, lambda);
