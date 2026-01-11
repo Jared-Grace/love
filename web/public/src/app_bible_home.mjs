@@ -1,6 +1,20 @@
-import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
+import { each } from "../../../love/public/src/each.mjs";
+import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
+import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
+import { html_button } from "../../../love/public/src/html_button.mjs";
+import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
+import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
+import { ebible_chapter_code_parse } from "../../../love/public/src/ebible_chapter_code_parse.mjs";
+import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
+import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
+import { html_centered } from "../../../love/public/src/html_centered.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
+import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
+import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
+import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export function app_bible_home(context) {
+export async function app_bible_home(context) {
   marker("1");
   let root = html_mobile_default(context);
   firebase_name_jg();
