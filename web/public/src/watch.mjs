@@ -27,11 +27,13 @@ export async function watch() {
       try {
         await command_line_node_g(function_auto_path.name, [path]);
       } finally {
-        try {
-          const args = [path];
-          await command_line_node_g(data_file_update.name, args);
-        } finally {
-          object_property_set(in_progress, path, false);
+        if (0) {
+          try {
+            const args = [path];
+            await command_line_node_g(data_file_update.name, args);
+          } finally {
+            object_property_set(in_progress, path, false);
+          }
         }
       }
     }
