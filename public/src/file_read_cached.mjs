@@ -9,4 +9,6 @@ export async function file_read_cached(f_path) {
   assert_not(exists);
   let contents = await file_read(f_path);
   global_function_property_set(file_read_cached, f_path, contents);
+  let v = true;
+  return v;
 }
