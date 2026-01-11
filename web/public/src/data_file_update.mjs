@@ -8,6 +8,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { data_path } from "../../../love/public/src/data_path.mjs";
 import { list_includes_not } from "./list_includes_not.mjs";
 export async function data_file_update(f_path) {
+  return;
   let f_names = await functions_names();
   let f_name = function_path_to_name(f_path);
   let n = list_includes_not(f_names, f_name);
