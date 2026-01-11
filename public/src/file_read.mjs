@@ -14,7 +14,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function file_read(file_path) {
   let exists = global_function_property_exists(file_read_cached, file_path);
   if (exists) {
-    let c = global_function_property_get(file_read_cached, file_path);
+    let c = await global_function_property_get(file_read_cached, file_path);
     return c;
   }
   if (browser_is()) {
