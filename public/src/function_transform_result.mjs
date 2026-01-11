@@ -20,5 +20,6 @@ export async function function_transform_result(f_name, lambda$ast) {
   await data_all_initialize(d_path);
   let r = await file_transform_cached(d_path, lambda2);
   return r;
-  let exists = global_function_property_set(file_read_cached, () => {});
+  function lambda() {}
+  let exists = global_function_property_set(file_read_cached, lambda);
 }
