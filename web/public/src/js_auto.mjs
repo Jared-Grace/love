@@ -39,6 +39,11 @@ export async function js_auto(ast) {
   }
   await lambda();
   return;
+  data_file_update_inner(
+    {
+      ast,
+    },
+    data2,
+  );
   log(r);
-  data_file_update_inner(parsed, data2);
 }
