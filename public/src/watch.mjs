@@ -1,4 +1,3 @@
-import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { repos_paths_map_unordered_combine_squash } from "../../../love/public/src/repos_paths_map_unordered_combine_squash.mjs";
 import { command_line_node_g } from "../../../love/public/src/command_line_node_g.mjs";
@@ -21,7 +20,7 @@ export async function watch() {
   async function lambda2(path) {
     async function lambda() {
       const value = true;
-      if (object_property_exists_equals(in_progress, path, value)) {
+      if (object_property_exists_equals(path, in_progress, value)) {
         return;
       }
       object_property_set(in_progress, path, value);
@@ -30,10 +29,7 @@ export async function watch() {
       } finally {
         try {
           const args = [path];
-          await app_api_fn({
-            fn: data_file_update,
-            args,
-          });
+          await command_line_node_g(data_file_update.name, args);
         } finally {
           object_property_set(in_progress, path, false);
         }
