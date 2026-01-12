@@ -1,20 +1,8 @@
-import { log } from "../../../love/public/src/log.mjs";
-import { server_url } from "../../../love/public/src/server_url.mjs";
-import { browser_is } from "../../../love/public/src/browser_is.mjs";
-import { server_url_api } from "../../../love/public/src/server_url_api.mjs";
+import { server_url_get } from "../../../love/public/src/server_url_get.mjs";
 import { app_api_generic_f_name_args } from "../../../love/public/src/app_api_generic_f_name_args.mjs";
 export function app_api_generic_url_body(f_name, args) {
   let body = app_api_generic_f_name_args(f_name, args);
-  let url = null;
-  if (browser_is()) {
-    url = "";
-  } else {
-    url = server_url();
-  }
-  url += server_url_api();
-  log({
-    url,
-  });
+  let url = server_url_get();
   let v = {
     url,
     body,
