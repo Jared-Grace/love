@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
@@ -41,6 +42,7 @@ export async function http_generic(url, options) {
     let v = await html_loading(lambda3);
     return v;
   }
+  log({});
   await http_sleep();
   let h = null;
   let swHttps = string_starts_with(url, "https://");
