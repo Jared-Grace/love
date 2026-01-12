@@ -17,7 +17,6 @@ import { path_join } from "../../../love/public/src/path_join.mjs";
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import { data_path } from "./data_path.mjs";
 export function server() {
   marker("1");
   const app = express();
@@ -50,7 +49,6 @@ export function server() {
     await ordering;
   }
   let ordering_data = promise_resolved();
-  let d_path = data_path();
   let data = null;
   async function lambda3() {
     ordering_data = ordering_data.then(data_get);
