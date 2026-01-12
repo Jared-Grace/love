@@ -64,7 +64,11 @@ export function server() {
   }
   app.get(d_path, lambda3);
   function lambda4(data_next) {
-    object_replace(data, data_next);
+    update();
+    ordering_data = ordering_data.then(update);
+    function update() {
+      object_replace(data, data_next);
+    }
   }
   app.post(d_path, lambda4);
   app.use(v);
