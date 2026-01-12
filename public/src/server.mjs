@@ -1,3 +1,5 @@
+import { data_generate } from "../../../love/public/src/data_generate.mjs";
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { data_generate_get } from "../../../love/public/src/data_generate_get.mjs";
 import { data_get } from "../../../love/public/src/data_get.mjs";
@@ -51,7 +53,10 @@ export function server() {
   let data_get = data_generate_get();
   let data = null;
   async function lambda3() {
-    data = await data_get();
+    if (null_is(data)) {
+      data = {};
+      await data_generate(data);
+    }
     return data;
   }
   app.get(d_path, lambda3);
