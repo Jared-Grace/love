@@ -1,8 +1,6 @@
 import { data_generate } from "../../../love/public/src/data_generate.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
-import { data_generate_get } from "../../../love/public/src/data_generate_get.mjs";
-import { data_get } from "../../../love/public/src/data_get.mjs";
 import { promise_resolved } from "../../../love/public/src/promise_resolved.mjs";
 import { server_url_api_ordered } from "../../../love/public/src/server_url_api_ordered.mjs";
 import { server_url } from "../../../love/public/src/server_url.mjs";
@@ -50,7 +48,6 @@ export function server() {
     await ordering;
   }
   let d_path = data_path();
-  let data_get = data_generate_get();
   let data = null;
   async function lambda3() {
     if (null_is(data)) {
