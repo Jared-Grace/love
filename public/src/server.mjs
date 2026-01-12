@@ -51,7 +51,7 @@ export function server() {
   }
   let ordering_data = promise_resolved();
   let data = null;
-  async function lambda3() {
+  async function d_get() {
     log({
       data,
     });
@@ -66,7 +66,7 @@ export function server() {
     }
   }
   let du = server_url_data();
-  app.get(du, lambda3);
+  app.get(du, d_get);
   function lambda4(data_next) {
     update();
     ordering_data = ordering_data.then(update);
