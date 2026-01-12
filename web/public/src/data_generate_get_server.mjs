@@ -5,6 +5,7 @@ import { http_json } from "../../../love/public/src/http_json.mjs";
 import { server_url_data_ending } from "../../../love/public/src/server_url_data_ending.mjs";
 import { server_url_get } from "../../../love/public/src/server_url_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
+import { data_generate } from "./data_generate.mjs";
 export async function data_generate_get_server() {
   marker("1");
   let url = server_url_get() + server_url_data_ending() + "";
@@ -13,6 +14,7 @@ export async function data_generate_get_server() {
   });
   let p = performance_start("http_json");
   let parsed = await http_json(url);
+  await data_generate();
   let r = performance_end(p);
   return r;
 }
