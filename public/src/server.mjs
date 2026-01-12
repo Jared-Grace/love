@@ -75,7 +75,8 @@ export function server() {
   }
   let du = server_url_data();
   app.get(du, d_get);
-  async function lambda4(data_next) {
+  async function lambda4(req, res) {
+    let data_next = object_property_get(req, "body");
     update();
     data_sequence = data_sequence.then(update);
     function update() {
