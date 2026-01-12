@@ -9,15 +9,21 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { data_generate } from "./data_generate.mjs";
 export async function data_generate_get_server() {
   marker("1");
-  let url = server_url_data_full();
   let p = performance_start("http_json");
-  let options = http_option_sleep_none();
-  let parsed = await http_json(url, options);
+  let data = await server_data_get();
   performance_next(p, "http_post_json");
   let options_extra = http_option_sleep_none();
-  await http_post_options(url, parsed, options_extra);
+  let url = server_url_data_full();
+  await http_post_options(url, data, options_extra);
   performance_next(p, "data_generate");
   await data_generate({});
   let r = performance_end(p);
   return r;
 }
+async function server_data_get() {
+  let url = server_url_data_full();
+  let options = http_option_sleep_none();
+  let data = await http_json(url, options);
+  return data
+}
+
