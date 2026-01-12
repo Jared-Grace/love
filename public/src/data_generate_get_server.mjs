@@ -10,5 +10,4 @@ export async function data_generate_get_server() {
     url,
   });
   let parsed = await http_json(url);
-  return parsed;
 }
