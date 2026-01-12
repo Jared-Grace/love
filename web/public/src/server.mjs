@@ -63,8 +63,8 @@ export function server() {
       }
     }
   }
-  let v3 = server_url_data();
-  app.get(v3, lambda3);
+  let du = server_url_data();
+  app.get(du, lambda3);
   function lambda4(data_next) {
     update();
     ordering_data = ordering_data.then(update);
@@ -72,7 +72,7 @@ export function server() {
       object_replace(data, data_next);
     }
   }
-  app.post(d_path, lambda4);
+  app.post(du, lambda4);
   app.use(v);
   function lambda() {
     log_keep("Static server running at: " + server_url());
