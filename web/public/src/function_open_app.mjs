@@ -9,13 +9,13 @@ import { function_open } from "../../../love/public/src/function_open.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function function_open_app(f_name) {
   marker("1");
-  let v2 = await function_exists(f_name);
+  let a_name = app_name_main(f_name);
+  let v2 = await function_exists(a_name);
   let exists = object_property_get(v2, "exists");
   if (not(exists)) {
     let mapped = await apps_names();
     f_name = list_find_starts_with(mapped, f_name);
   }
-  let a_name = app_name_main(f_name);
   let v = await function_open(a_name);
   await data_app_current_set(f_name);
   return v;
