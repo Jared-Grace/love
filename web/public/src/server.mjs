@@ -62,7 +62,7 @@ export function server() {
       }
     }
   }
-  app.get(d_path, lambda3);
+  app.get(u + "/" + d_path, lambda3);
   function lambda4(data_next) {
     update();
     ordering_data = ordering_data.then(update);
