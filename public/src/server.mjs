@@ -57,8 +57,8 @@ export function server() {
     return data;
   }
   app.get(d_path, lambda3);
-  function lambda4(data) {
-    object_replace(data, {});
+  function lambda4(data_next) {
+    object_replace(data, data_next);
   }
   app.post(d_path, lambda4);
   app.use(v);
