@@ -44,9 +44,8 @@ export async function http_generic(url, options) {
   }
   let e = object_property_exists(options, "sleep");
   if (e) {
-    if (false) {
-    }
-    let sleep = object_property_get(options, "sleep");
+    let sleep = null;
+    sleep = object_property_get(options, "sleep");
   }
   await http_sleep();
   let h = null;
