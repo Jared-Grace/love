@@ -48,12 +48,11 @@ export function server() {
     ordering = ordering.then(lambda2);
     await ordering;
   }
-  let ordering_data = promise_resolved();
   let data = null;
   async function d_get(req, res) {
-    ordering_data = ordering_data.then(data_get);
-    await ordering_data;
-    res.json(r);
+    let data_sequence = data_sequence.then(data_get);
+    await data_sequence;
+    res.json(data);
     async function data_get() {
       if (null_is(data)) {
         data = {};
@@ -65,12 +64,12 @@ export function server() {
   app.get(du, d_get);
   async function lambda4(data_next) {
     update();
-    ordering_data = ordering_data.then(update);
+    let data_sequence = data_sequence.then(update);
     function update() {
       object_replace(data, data_next);
     }
-    await ordering_data;
-    res.json(r);
+    await data_sequence;
+    res.end();
   }
   app.post(du, lambda4);
   app.use(v);
