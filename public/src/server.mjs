@@ -1,3 +1,4 @@
+import { performance_end } from "../../../love/public/src/performance_end.mjs";
 import { performance_next } from "../../../love/public/src/performance_next.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { server_url_data } from "../../../love/public/src/server_url_data.mjs";
@@ -56,9 +57,11 @@ export function server() {
   async function d_get(req, res) {
     let p = performance_start("data_sequence = data_sequence.then(data_get)");
     data_sequence = data_sequence.then(data_get);
-    performance_next("await data_sequence");
+    performance_next(p, "await data_sequence");
     await data_sequence;
+    performance_next(p, "res.json(data)");
     res.json(data);
+    let r = performance_end(p, "res.json(data)");
     async function data_get() {
       if (null_is(data)) {
         data = {};
