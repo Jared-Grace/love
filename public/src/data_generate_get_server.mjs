@@ -1,7 +1,5 @@
+import { server_data_update } from "../../../love/public/src/server_data_update.mjs";
 import { server_data_get } from "../../../love/public/src/server_data_get.mjs";
-import { server_url_data_full } from "../../../love/public/src/server_url_data_full.mjs";
-import { http_post_options } from "../../../love/public/src/http_post_options.mjs";
-import { http_option_sleep_none } from "../../../love/public/src/http_option_sleep_none.mjs";
 import { performance_next } from "../../../love/public/src/performance_next.mjs";
 import { performance_end } from "../../../love/public/src/performance_end.mjs";
 import { performance_start } from "../../../love/public/src/performance_start.mjs";
@@ -18,9 +16,3 @@ export async function data_generate_get_server() {
   let r = performance_end(p);
   return r;
 }
-async function server_data_update(data) {
-  let url = server_url_data_full();
-  let options_extra = http_option_sleep_none();
-  await http_post_options(url, data, options_extra);
-}
-
