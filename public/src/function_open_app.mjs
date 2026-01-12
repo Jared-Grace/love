@@ -1,5 +1,5 @@
 import { log } from "../../../love/public/src/log.mjs";
-import { list_find_starts_with } from "../../../love/public/src/list_find_starts_with.mjs";
+import { list_find_starts_with_prefixes } from "../../../love/public/src/list_find_starts_with_prefixes.mjs";
 import { apps_names } from "../../../love/public/src/apps_names.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -19,7 +19,7 @@ export async function function_open_app(f_name) {
       f_name,
       mapped,
     });
-    f_name = list_find_starts_with(mapped, f_name);
+    f_name = list_find_starts_with_prefixes(mapped, f_name);
   }
   let v = await function_open(a_name);
   await data_app_current_set(f_name);
