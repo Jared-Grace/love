@@ -42,9 +42,12 @@ export async function http_generic(url, options) {
     let v = await html_loading(lambda3);
     return v;
   }
-  if (false) {
+  let e = object_property_exists(options, "sleep");
+  if (e) {
+    if (false) {
+    }
+    let sleep = object_property_get(options, "sleep");
   }
-  let sleep = object_property_get(options, "sleep");
   await http_sleep();
   let h = null;
   let swHttps = string_starts_with(url, "https://");
