@@ -1,4 +1,4 @@
-import { performance_now } from "../../../love/public/src/performance_now.mjs";
+import { performance_next } from "../../../love/public/src/performance_next.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { server_url_data } from "../../../love/public/src/server_url_data.mjs";
 import { data_get } from "../../../love/public/src/data_get.mjs";
@@ -56,7 +56,7 @@ export function server() {
   async function d_get(req, res) {
     let p = performance_start("data_sequence = data_sequence.then(data_get)");
     data_sequence = data_sequence.then(data_get);
-    let v3 = performance_now();
+    performance_next("await data_sequence");
     await data_sequence;
     res.json(data);
     async function data_get() {
