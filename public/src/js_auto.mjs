@@ -1,3 +1,4 @@
+import { data_get } from "../../../love/public/src/data_get.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { js_declaration_single_path } from "../../../love/public/src/js_declaration_single_path.mjs";
 import { data_file_update_inner } from "../../../love/public/src/data_file_update_inner.mjs";
@@ -19,14 +20,14 @@ export async function js_auto(ast) {
   let exists = global_function_property_exists(file_read_cached, d_path);
   if (not(exists)) {
     let data = null;
-    async function lambda2() {
+    async function data_get() {
       if (null_is(data)) {
         data = {};
         await data_generate(data);
       }
       return data;
     }
-    global_function_property_set(file_read_cached, d_path, lambda2);
+    global_function_property_set(file_read_cached, d_path, data_get);
   }
   let f_path = js_declaration_single_path(ast);
   async function lambda() {
