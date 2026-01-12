@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { server_url_data } from "../../../love/public/src/server_url_data.mjs";
 import { data_get } from "../../../love/public/src/data_get.mjs";
 import { data_generate } from "../../../love/public/src/data_generate.mjs";
@@ -51,15 +50,10 @@ export function server() {
   }
   let ordering_data = promise_resolved();
   let data = null;
-  async function d_get() {
-    log({
-      data,
-    });
+  async function d_get(req, res) {
     ordering_data = ordering_data.then(data_get);
-    log(1);
     await ordering_data;
-    log(2);
-    return data;
+    res.json(r);
     async function data_get() {
       if (null_is(data)) {
         data = {};
@@ -69,12 +63,14 @@ export function server() {
   }
   let du = server_url_data();
   app.get(du, d_get);
-  function lambda4(data_next) {
+  async function lambda4(data_next) {
     update();
     ordering_data = ordering_data.then(update);
     function update() {
       object_replace(data, data_next);
     }
+    await ordering_data;
+    res.json(r);
   }
   app.post(du, lambda4);
   app.use(v);
