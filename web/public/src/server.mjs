@@ -26,6 +26,10 @@ export function server() {
   const app = express();
   let v2 = express.json();
   app.use(v2);
+  let v3 = express.json({
+    limit: "50mb",
+  });
+  app.use(v3);
   const port = server_port();
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
