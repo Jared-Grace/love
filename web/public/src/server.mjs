@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { server_url_data } from "../../../love/public/src/server_url_data.mjs";
 import { data_get } from "../../../love/public/src/data_get.mjs";
 import { data_generate } from "../../../love/public/src/data_generate.mjs";
@@ -51,6 +52,9 @@ export function server() {
   let ordering_data = promise_resolved();
   let data = null;
   async function lambda3() {
+    log({
+      data,
+    });
     ordering_data = ordering_data.then(data_get);
     await ordering_data;
     return data;
