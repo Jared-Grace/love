@@ -49,7 +49,8 @@ export function server() {
   let d_path = data_path();
   let data_get = data_generate_get();
   async function lambda3() {
-    return await data_get();
+    let v3 = await data_get();
+    return v3;
   }
   app.post(d_path, lambda3);
   app.use(v);
