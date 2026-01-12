@@ -1,3 +1,4 @@
+import { server_url_data } from "../../../love/public/src/server_url_data.mjs";
 import { data_get } from "../../../love/public/src/data_get.mjs";
 import { data_generate } from "../../../love/public/src/data_generate.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
@@ -62,7 +63,8 @@ export function server() {
       }
     }
   }
-  app.get(u + "/" + d_path, lambda3);
+  let v3 = server_url_data();
+  app.get(v3, lambda3);
   function lambda4(data_next) {
     update();
     ordering_data = ordering_data.then(update);
