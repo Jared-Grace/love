@@ -57,18 +57,18 @@ export async function app_search_results(context, div_results) {
     return to;
   }
   list_map(mapped, lambda4);
-  function lambda5(chapter_code) {
+  function value_get(chapter_code) {
     let mapped3 = list_map_property(mapped, chapter_code);
     let i = list_intersect_multiple(mapped3);
     return i;
   }
-  let dictionary = list_to_dictionary_value(chapter_codes_match, lambda5);
+  let dictionary = list_to_dictionary_value(chapter_codes_match, value_get);
   html_clear(div_results);
   let text = app_karate_button_back_text();
   let button_list = null;
   let expand_all_div = html_div(div_results);
   let expand_all = null;
-  async function lambda2() {
+  async function expand_all() {
     async function lambda9(b) {
       let click2 = object_property_get(b, "click");
       await catch_ignore_async(click2);
@@ -88,9 +88,9 @@ export async function app_search_results(context, div_results) {
       lambda6,
     );
   }
-  expand_all = html_button_width_full(div_results, "Expand all", lambda2);
-  let list = object_to_list(dictionary);
-  function lambda7(vk) {
+  expand_all = html_button_width_full(div_results, "Expand all", expand_all);
+  let results = object_to_list(dictionary);
+  function each_result(vk) {
     let verse_numbers = object_property_get(vk, "value");
     let chapter_code = object_property_get(vk, "key");
     let book_code = ebible_chapter_code_to_book(chapter_code);
@@ -99,7 +99,7 @@ export async function app_search_results(context, div_results) {
       let v = null;
       return v;
     }
-    function lambda8(verse_number) {
+    function each_verse_number(verse_number) {
       let div_verse = html_div(div_results);
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
@@ -140,10 +140,10 @@ export async function app_search_results(context, div_results) {
       object_property_set_exists_not(b, "click", click);
       return b;
     }
-    let bs = list_map(verse_numbers, lambda8);
+    let bs = list_map(verse_numbers, each_verse_number);
     return bs;
   }
-  let button_lists = list_map(list, lambda7);
+  let button_lists = list_map(results, each_result);
   let mapped2 = list_filter(button_lists, null_not_is);
-  button_list = list_squash(mapped2);
+  button_list = list_squash(mapped2);lz1
 }
