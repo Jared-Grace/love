@@ -45,7 +45,8 @@ export function server() {
     await ordering;
   }
   let d_path = data_path();
-  app.post(d_path, () => {});
+  function lambda3() {}
+  app.post(d_path, lambda3);
   app.use(v);
   function lambda() {
     log_keep("Static server running at: " + server_url());
