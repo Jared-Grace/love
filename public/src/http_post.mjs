@@ -5,7 +5,7 @@ export async function http_post(url, body) {
     method: "POST",
     body: body,
   };
-  let to2 = object_merge(to, from);
+  object_merge(options, {});
   let v = await http_generic(url, options);
   return v;
 }
