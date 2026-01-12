@@ -1,3 +1,4 @@
+import { data_generate_get } from "../../../love/public/src/data_generate_get.mjs";
 import { data_get } from "../../../love/public/src/data_get.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { js_declaration_single_path } from "../../../love/public/src/js_declaration_single_path.mjs";
@@ -17,6 +18,7 @@ export async function js_auto(ast) {
   let d_path = data_path();
   let exists = global_function_property_exists(file_read_cached, d_path);
   if (not(exists)) {
+    let data_get = data_generate_get();
     global_function_property_set(file_read_cached, d_path, data_get);
   }
   let f_path = js_declaration_single_path(ast);

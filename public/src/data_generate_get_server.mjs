@@ -12,11 +12,15 @@ export async function data_generate_get_server() {
   let p = performance_start("http_json");
   let data = await server_data_get();
   performance_next(p, "http_post_json");
-  let options_extra = http_option_sleep_none();
-  let url = server_url_data_full();
-  await http_post_options(url, data, options_extra);
+  await server_data_update(data);
   performance_next(p, "data_generate");
   await data_generate({});
   let r = performance_end(p);
   return r;
 }
+async function server_data_update(data) {
+  let url = server_url_data_full();
+  let options_extra = http_option_sleep_none();
+  await http_post_options(url, data, options_extra);
+}
+
