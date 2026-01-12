@@ -62,9 +62,7 @@ export function server() {
     performance_next(p, "res.json(data)");
     res.json(data);
     let r = performance_end(p, "res.json(data)");
-    log({
-      r,
-    });
+    log(r);
     async function data_get() {
       if (null_is(data)) {
         data = {};
