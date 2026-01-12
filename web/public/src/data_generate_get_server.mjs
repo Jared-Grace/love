@@ -1,3 +1,4 @@
+import { sleep } from "../../../love/public/src/sleep.mjs";
 import { performance_next } from "../../../love/public/src/performance_next.mjs";
 import { performance_end } from "../../../love/public/src/performance_end.mjs";
 import { performance_start } from "../../../love/public/src/performance_start.mjs";
@@ -14,7 +15,10 @@ export async function data_generate_get_server() {
     url,
   });
   let p = performance_start("http_json");
-  let parsed = await http_json(url);
+  let parsed = await http_json({
+    url,
+    sleep: false,
+  });
   let result = performance_next(p, "data_generate");
   await data_generate({});
   let r = performance_end(p);
