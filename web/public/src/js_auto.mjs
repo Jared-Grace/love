@@ -1,5 +1,5 @@
-import { server_data_get } from "../../../love/public/src/server_data_get.mjs";
-import { server_data_update } from "../../../love/public/src/server_data_update.mjs";
+import { data_generate_get } from "../../../love/public/src/data_generate_get.mjs";
+import { data_get } from "../../../love/public/src/data_get.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { js_declaration_single_path } from "../../../love/public/src/js_declaration_single_path.mjs";
 import { data_file_update_inner } from "../../../love/public/src/data_file_update_inner.mjs";
@@ -17,12 +17,10 @@ import { data_path } from "./data_path.mjs";
 export async function js_auto(ast) {
   let d_path = data_path();
   let exists = global_function_property_exists(file_read_cached, d_path);
-  let data = null;
   if (not(exists)) {
-    data = await server_data_get();
-    global_function_property_set(file_read_cached, d_path, data);
+    let data_get = data_generate_get();
+    global_function_property_set(file_read_cached, d_path, data_get);
   }
-  data = global_function_property_get(file_read_cached, d_path);
   let f_path = js_declaration_single_path(ast);
   async function lambda() {
     const p = performance_start(js_auto.name);
@@ -30,6 +28,7 @@ export async function js_auto(ast) {
     async function lambda(t) {
       performance_next(p, t.name);
       await t(ast);
+      let data = global_function_property_get(file_read_cached, d_path);
       data_file_update_inner(
         {
           ast,
@@ -39,7 +38,6 @@ export async function js_auto(ast) {
       );
     }
     await each_async(transforms, lambda);
-    await server_data_update(data);
     let r = performance_end(p);
     return r;
   }
