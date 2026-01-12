@@ -24,8 +24,6 @@ import { performance_start } from "./performance_start.mjs";
 export function server() {
   marker("1");
   const app = express();
-  let v2 = express.json();
-  app.use(v2);
   let v3 = express.json({
     limit: "50mb",
   });
