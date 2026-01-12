@@ -12,6 +12,7 @@ import { path_join } from "../../../love/public/src/path_join.mjs";
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
+import { data_path } from "./data_path.mjs";
 export function server() {
   marker("1");
   const app = express();
@@ -43,6 +44,8 @@ export function server() {
     ordering = ordering.then(lambda2);
     await ordering;
   }
+  let d_path = data_path();
+  app.post(d);
   app.use(v);
   function lambda() {
     log_keep("Static server running at: " + server_url());
