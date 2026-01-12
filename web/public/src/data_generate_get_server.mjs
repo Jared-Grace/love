@@ -6,6 +6,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function data_generate_get_server() {
   marker("1");
   let url = server_url_get() + server_url_data_ending() + "";
+  url = server_url_get();
   log({
     url,
   });
