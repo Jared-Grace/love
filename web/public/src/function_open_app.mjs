@@ -9,7 +9,7 @@ export async function function_open_app(f_name) {
   marker("1");
   let v2 = await function_exists(f_name);
   let exists = object_property_get(v2, "exists");
-  if (not(b)) {
+  if (not(exists)) {
   }
   let a_name = app_name_main(f_name);
   let v = await function_open(a_name);
