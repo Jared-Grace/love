@@ -1,3 +1,4 @@
+import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { list_join_plus } from "../../../love/public/src/list_join_plus.mjs";
 import { window_open_app } from "../../../love/public/src/window_open_app.mjs";
@@ -151,7 +152,8 @@ export async function app_search_results(context, div_results) {
   let button_lists = list_map(results, each_result);
   let mapped2 = list_filter(button_lists, null_not_is);
   button_list = list_squash(mapped2);
-  let s1 = list_size_1(list);
-  if (false) {
+  let s1 = list_size_1(button_list);
+  if (s1) {
+    let only = list_single(list);
   }
 }
