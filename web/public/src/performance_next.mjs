@@ -5,7 +5,7 @@ import { list_last } from "../../../love/public/src/list_last.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { performance_now } from "../../../love/public/src/performance_now.mjs";
-export function performance_next(p, category) {
+export function performance_next(p, category) {$aa
   marker("1");
   const time = performance_now();
   let delta = null;
