@@ -5,10 +5,7 @@ import { function_copy } from "../../../love/public/src/function_copy.mjs";
 export async function function_copy_remove_last(f_name_before) {
   let parts = function_name_to_parts(f_name_old, removals);
   let removed = list_remove_last(parts);
-  let combined = function_name_combine_multiple(parts2);
-  let v = await function_copy(
-    f_name_before,
-    f_name_before + separator + "" + suffix,
-  );
+  let f_name_after = function_name_combine_multiple(parts);
+  let v = await function_copy(f_name_before, f_name_after);
   return v;
 }
