@@ -1,3 +1,4 @@
+import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { list_join_plus } from "../../../love/public/src/list_join_plus.mjs";
 import { window_open_app } from "../../../love/public/src/window_open_app.mjs";
 import { app_chapter } from "../../../love/public/src/app_chapter.mjs";
@@ -68,7 +69,7 @@ export async function app_search_results(context, div_results) {
   let button_list = null;
   let expand_all_div = html_div(div_results);
   let expand_all = null;
-  async function expand_all() {
+  async function expand_all_lambda() {
     async function lambda9(b) {
       let click2 = object_property_get(b, "click");
       await catch_ignore_async(click2);
@@ -88,7 +89,11 @@ export async function app_search_results(context, div_results) {
       lambda6,
     );
   }
-  expand_all = html_button_width_full(div_results, "Expand all", expand_all);
+  expand_all = html_button_width_full(
+    div_results,
+    "Expand all",
+    expand_all_lambda,
+  );
   let results = object_to_list(dictionary);
   function each_result(vk) {
     let verse_numbers = object_property_get(vk, "value");
@@ -145,5 +150,6 @@ export async function app_search_results(context, div_results) {
   }
   let button_lists = list_map(results, each_result);
   let mapped2 = list_filter(button_lists, null_not_is);
-  button_list = list_squash(mapped2);lz1
+  button_list = list_squash(mapped2);
+  let s1 = list_size_1(list);
 }
