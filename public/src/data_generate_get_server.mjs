@@ -15,8 +15,9 @@ export async function data_generate_get_server() {
   let parsed = await http_json(url, {
     sleep: false,
   });
-  let o = await http_post_json(url2, body);
-  let result = performance_next(p, "data_generate");
+  performance_next("http_post_json");
+  let o = await http_post_json(url, parsed);
+  performance_next(p, "data_generate");
   await data_generate({});
   let r = performance_end(p);
   return r;
