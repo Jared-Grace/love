@@ -50,12 +50,13 @@ export function server() {
   let d_path = data_path();
   let data_get = data_generate_get();
   async function lambda3() {
-    let data = await data_get();
+    let data = null;
+    data = await data_get();
     return data;
   }
   app.get(d_path, lambda3);
   function lambda4(data) {
-    object_replace(to, from);
+    object_replace(data, {});
   }
   app.post(d_path, lambda4);
   app.use(v);
