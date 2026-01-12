@@ -18,6 +18,7 @@ import { path_join } from "../../../love/public/src/path_join.mjs";
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
+import { performance_start } from "./performance_start.mjs";
 export function server() {
   marker("1");
   const app = express();
@@ -52,6 +53,7 @@ export function server() {
   let data_sequence = promise_resolved();
   let data = null;
   async function d_get(req, res) {
+    let p = performance_start(category);
     data_sequence = data_sequence.then(data_get);
     await data_sequence;
     res.json(data);
