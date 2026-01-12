@@ -1,3 +1,5 @@
+import { list_find_json_next } from "../../../love/public/src/list_find_json_next.mjs";
+import { ebible_index_flat } from "../../../love/public/src/ebible_index_flat.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
@@ -42,4 +44,9 @@ export async function app_bible_home(context) {
     let p = html_p_text(content, verse_number_v + " " + text);
   }
   each(verses, lambda);
+  let list = await ebible_index_flat(version_english);
+  let next = list_find_json_next(list, {
+    chapter_code,
+    verse_number,
+  });
 }
