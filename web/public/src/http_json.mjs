@@ -6,8 +6,8 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function http_json(options) {
   marker("1");
   marker("1");
-  let to2 = http_get_options();
-  let to = object_merge(to2, options);
+  let g = http_get_options();
+  let to = object_merge(g, options);
   let buffer = await http_generic(url, to);
   let parsed = buffer_to_json(buffer);
   return parsed;
