@@ -1,5 +1,5 @@
-import { http_post } from "../../../love/public/src/http_post.mjs";
-import { sleep } from "../../../love/public/src/sleep.mjs";
+import { http_post_options } from "../../../love/public/src/http_post_options.mjs";
+import { http_option_sleep_none } from "../../../love/public/src/http_option_sleep_none.mjs";
 import { performance_next } from "../../../love/public/src/performance_next.mjs";
 import { performance_end } from "../../../love/public/src/performance_end.mjs";
 import { performance_start } from "../../../love/public/src/performance_start.mjs";
@@ -12,11 +12,11 @@ export async function data_generate_get_server() {
   marker("1");
   let url = server_url_get() + server_url_data_ending() + "";
   let p = performance_start("http_json");
-  let parsed = await http_json(url, {
-    sleep: false,
-  });
+  let options = http_option_sleep_none();
+  let parsed = await http_json(url, options);
   performance_next(p, "http_post_json");
-  await http_post(url, parsed);
+  let options_extra = http_option_sleep_none();
+  await http_post_options(url, parsed, options_extra);
   performance_next(p, "data_generate");
   await data_generate({});
   let r = performance_end(p);
