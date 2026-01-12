@@ -48,9 +48,10 @@ export function server() {
     ordering = ordering.then(lambda2);
     await ordering;
   }
+  let data_sequence = promise_resolved();
   let data = null;
   async function d_get(req, res) {
-    let data_sequence = data_sequence.then(data_get);
+    data_sequence = data_sequence.then(data_get);
     await data_sequence;
     res.json(data);
     async function data_get() {
@@ -64,7 +65,7 @@ export function server() {
   app.get(du, d_get);
   async function lambda4(data_next) {
     update();
-    let data_sequence = data_sequence.then(update);
+    data_sequence = data_sequence.then(update);
     function update() {
       object_replace(data, data_next);
     }
