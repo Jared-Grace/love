@@ -6,6 +6,6 @@ export async function function_copy_remove_last(f_name_old) {
   let suffix = function_name_to_part_last(f_name_before);
   let separator = function_name_separator();
   marker("1");
-  let v = await function_copy(f_name_old, f_name_new);
+  let v = await function_copy(f_name_old, separator + "" + suffix);
   return v;
 }
