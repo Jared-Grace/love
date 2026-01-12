@@ -20,6 +20,7 @@ export async function function_open_app(f_name) {
       mapped,
     });
     f_name = list_find_starts_with(mapped, f_name);
+    a_name = app_name_main(f_name);
   }
   let v = await function_open(a_name);
   await data_app_current_set(f_name);
