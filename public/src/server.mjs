@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { server_url_data } from "../../../love/public/src/server_url_data.mjs";
 import { data_get } from "../../../love/public/src/data_get.mjs";
 import { data_generate } from "../../../love/public/src/data_generate.mjs";
@@ -57,6 +58,7 @@ export function server() {
     async function data_get() {
       if (null_is(data)) {
         data = {};
+        log({});
         await data_generate(data);
       }
     }
