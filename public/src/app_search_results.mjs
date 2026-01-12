@@ -152,4 +152,6 @@ export async function app_search_results(context, div_results) {
   let mapped2 = list_filter(button_lists, null_not_is);
   button_list = list_squash(mapped2);
   let s1 = list_size_1(list);
+  if (false) {
+  }
 }
