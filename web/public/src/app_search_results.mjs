@@ -154,6 +154,7 @@ export async function app_search_results(context, div_results) {
   button_list = list_squash(mapped2);
   let s1 = list_size_1(button_list);
   if (s1) {
-    let only = list_single(list);
+    let only = list_single(button_list);
+    only();
   }
 }
