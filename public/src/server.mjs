@@ -56,7 +56,9 @@ export function server() {
       data,
     });
     ordering_data = ordering_data.then(data_get);
+    log(1);
     await ordering_data;
+    log(2);
     return data;
     async function data_get() {
       if (null_is(data)) {
