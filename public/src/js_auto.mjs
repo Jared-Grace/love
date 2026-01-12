@@ -20,13 +20,13 @@ export async function js_auto(ast) {
   let exists = global_function_property_exists(file_read_cached, d_path);
   if (not(exists)) {
     let data = null;
-    async function data_get() {
+    let data_get = async function lambda2() {
       if (null_is(data)) {
         data = {};
         await data_generate(data);
       }
       return data;
-    }
+    };
     global_function_property_set(file_read_cached, d_path, data_get);
   }
   let f_path = js_declaration_single_path(ast);
