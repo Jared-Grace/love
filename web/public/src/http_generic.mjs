@@ -42,6 +42,8 @@ export async function http_generic(url, options) {
     let v = await html_loading(lambda3);
     return v;
   }
+  if (false) {
+  }
   let sleep = object_property_get(options, "sleep");
   await http_sleep();
   let h = null;
