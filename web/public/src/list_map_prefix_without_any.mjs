@@ -5,7 +5,7 @@ import { string_prefix_without } from "../../../love/public/src/string_prefix_wi
 export function list_map_prefix_without_any(list, prefixes) {
   marker("1");
   function lambda(item) {
-    let prefix = list_find_starts_with(item, prefixes);
+    let prefix = list_find_starts_with(prefixes, item);
     let result = string_prefix_without(item, prefix);
     return result;
   }
