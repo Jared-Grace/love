@@ -1,3 +1,4 @@
+import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { data_generate_get } from "../../../love/public/src/data_generate_get.mjs";
 import { data_get } from "../../../love/public/src/data_get.mjs";
 import { promise_resolved } from "../../../love/public/src/promise_resolved.mjs";
@@ -53,7 +54,9 @@ export function server() {
     return data;
   }
   app.get(d_path, lambda3);
-  function lambda4() {}
+  function lambda4(data) {
+    object_replace(to, from);
+  }
   app.post(d_path, lambda4);
   app.use(v);
   function lambda() {
