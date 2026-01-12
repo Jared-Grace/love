@@ -47,6 +47,7 @@ export function server() {
     ordering = ordering.then(lambda2);
     await ordering;
   }
+  let ordering_data = promise_resolved();
   let d_path = data_path();
   let data = null;
   async function lambda3() {
