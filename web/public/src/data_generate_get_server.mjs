@@ -15,7 +15,7 @@ export async function data_generate_get_server() {
   });
   let p = performance_start("http_json");
   let parsed = await http_json(url);
-  let result = performance_next(p2, category);
+  let result = performance_next(p, "data_generate");
   await data_generate();
   let r = performance_end(p);
   return r;
