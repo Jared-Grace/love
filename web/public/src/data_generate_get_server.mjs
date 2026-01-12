@@ -1,3 +1,4 @@
+import { performance_end } from "../../../love/public/src/performance_end.mjs";
 import { performance_start } from "../../../love/public/src/performance_start.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { http_json } from "../../../love/public/src/http_json.mjs";
@@ -11,5 +12,6 @@ export async function data_generate_get_server() {
     url,
   });
   let p = performance_start(category);
-  let parsed = await http_json(url);performance_end
+  let parsed = await http_json(url);
+  let r = performance_end(measurements);
 }
