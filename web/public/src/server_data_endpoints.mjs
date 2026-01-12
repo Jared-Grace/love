@@ -3,7 +3,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { server_url_data } from "../../../love/public/src/server_url_data.mjs";
 import { data_generate } from "../../../love/public/src/data_generate.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { performance_end } from "../../../love/public/src/performance_end.mjs";
 import { performance_next } from "../../../love/public/src/performance_next.mjs";
 import { data_get } from "../../../love/public/src/data_get.mjs";
@@ -20,7 +19,6 @@ export function server_data_endpoints(app) {
     performance_next(p, "res.json(data)");
     res.json(data);
     let r = performance_end(p, "res.json(data)");
-    log(r);
     async function data_get() {
       if (null_is(data)) {
         data = {};
