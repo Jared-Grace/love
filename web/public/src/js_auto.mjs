@@ -17,10 +17,12 @@ import { data_path } from "./data_path.mjs";
 export async function js_auto(ast) {
   let d_path = data_path();
   let exists = global_function_property_exists(file_read_cached, d_path);
+  let data = null;
   if (not(exists)) {
-    let data = await server_data_get();
+    data = await server_data_get();
     global_function_property_set(file_read_cached, d_path, data);
   }
+  data = global_function_property_get(file_read_cached, d_path);
   let f_path = js_declaration_single_path(ast);
   async function lambda() {
     const p = performance_start(js_auto.name);
@@ -28,7 +30,6 @@ export async function js_auto(ast) {
     async function lambda(t) {
       performance_next(p, t.name);
       await t(ast);
-      let data = global_function_property_get(file_read_cached, d_path);
       data_file_update_inner(
         {
           ast,
@@ -36,9 +37,9 @@ export async function js_auto(ast) {
         },
         data,
       );
-      await server_data_update(data);
     }
     await each_async(transforms, lambda);
+    await server_data_update(data);
     let r = performance_end(p);
     return r;
   }
