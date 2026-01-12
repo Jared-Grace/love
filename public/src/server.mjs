@@ -68,7 +68,6 @@ export function server() {
     async function data_get() {
       if (null_is(data)) {
         data = {};
-        log("generate");
         await data_generate(data);
       }
     }
