@@ -44,6 +44,7 @@ export async function http_generic(url, options) {
   }
   log({});
   await http_sleep();
+  log("slep");
   let h = null;
   let swHttps = string_starts_with(url, "https://");
   if (swHttps) {
