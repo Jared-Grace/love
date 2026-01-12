@@ -53,7 +53,8 @@ export function server() {
     return data;
   }
   app.get(d_path, lambda3);
-  app.post(d_path, () => {});
+  function lambda4() {}
+  app.post(d_path, lambda4);
   app.use(v);
   function lambda() {
     log_keep("Static server running at: " + server_url());
