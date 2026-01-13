@@ -4,6 +4,7 @@ export function app_bible_screens() {
   marker("screens");
   let screens = {
     home: app_bible_home,
+    books: app_bible_books,
   };
   return screens;
 }
