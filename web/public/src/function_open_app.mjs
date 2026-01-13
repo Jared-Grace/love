@@ -7,23 +7,17 @@ import { data_app_current_set } from "../../../love/public/src/data_app_current_
 import { app_name_main } from "../../../love/public/src/app_name_main.mjs";
 import { function_open } from "../../../love/public/src/function_open.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export async function function_open_app(f_name) {
+export async function function_open_app(a) {
   marker("1");
-  let a_name;
-  ({ a_name, f_name } = await app_name_main_get(f_name));
-  let v = await function_open(a_name);
-  await data_app_current_set(f_name);
-  return v;
-}
-async function app_name_main_get(f_name) {
-  let a_name = app_name_main(f_name);
-  let v2 = await function_exists(a_name);
+  let f = app_name_main(a);
+  let v2 = await function_exists(f);
   let exists = object_property_get(v2, "exists");
   if (not(exists)) {
     let mapped = await apps_names();
-    f_name = list_find_starts_with(mapped, f_name);
-    a_name = app_name_main(f_name);
+    a = list_find_starts_with(mapped, a);
+    f = app_name_main(a);
   }
-  return { a_name, f_name };
+  let v = await function_open(f);
+  await data_app_current_set(a);
+  return v;
 }
-
