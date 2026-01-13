@@ -11,12 +11,13 @@ export async function ebible_index_flat(bible_folder) {
   let b = browser_is();
   if (b) {
     let file_name2 = ebible_index_flat_upload_name();
+    let get = ebible_index_flat;
     async function lambda2() {
       let v = await firebase_storage_download_ebible(bible_folder, file_name2);
       return v;
     }
     let value = await global_function_property_initialize_async(
-      ebible_index_flat,
+      get,
       bible_folder,
       lambda2,
     );
