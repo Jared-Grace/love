@@ -40,7 +40,9 @@ export async function app_bible_home(context) {
   let book_code = object_property_get(v2, "book_code");
   let books = await ebible_version_books(e);
   let book_name = ebible_book_code_to_name(books, book_code);
-  function lambda6() {}
+  async function lambda6() {
+    await on_arrow(list_next_wrap);
+  }
   let text3 = emoji_arrow_left();
   let component4 = html_button(parent, text3, lambda6);
   function lambda5() {}
