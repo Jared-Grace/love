@@ -51,6 +51,7 @@ export async function app_bible_home(context) {
     next = list_next(list, chapter_code);
     let li = list_last_is(list, chapter_code);
     if (li) {
+    } else {
     }
     object_property_set(hash, "c", next);
     let url = hash_to_url(hash);
