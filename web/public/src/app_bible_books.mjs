@@ -14,7 +14,7 @@ export async function app_bible_books(context) {
   let e = ebible_folder_english();
   let books = await ebible_version_books(e);
   function lambda(item) {
-    let chapter_code = object_property_get(item, "chapter_code");
+    let book_code = object_property_get(item, "book_code");
     let text = object_property_get(item, "text");
     function lambda3() {}
     let component = html_button(parent, text, lambda3);
