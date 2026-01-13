@@ -5,14 +5,14 @@ export async function firebase_storage_download_ebible_cache(
   file_name2,
   fn,
 ) {
-  async function lambda2() {
+  async function get() {
     let v = await firebase_storage_download_ebible(bible_folder, file_name2);
     return v;
   }
   let value = await global_function_property_initialize_async(
     fn,
     bible_folder,
-    lambda2,
+    get,
   );
   return value;
 }
