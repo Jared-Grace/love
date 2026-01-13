@@ -1,7 +1,7 @@
+import { ebible_chapter_codes } from "../../../love/public/src/ebible_chapter_codes.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { emoji_arrow_right } from "../../../love/public/src/emoji_arrow_right.mjs";
 import { list_find_json_next } from "../../../love/public/src/list_find_json_next.mjs";
-import { ebible_index_flat } from "../../../love/public/src/ebible_index_flat.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
@@ -41,7 +41,7 @@ export async function app_bible_home(context) {
   let component2 = html_button(bar, chapter_name, lambda4);
   let text2 = emoji_arrow_right();
   async function lambda3() {
-    let list = await ebible_index_flat(e);
+    let list = await ebible_chapter_codes(e);
     log({
       list,
     });
