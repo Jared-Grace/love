@@ -64,7 +64,7 @@ export async function app_bible_home(context) {
     object_property_set(hash, "c", next);
     let url = hash_to_url(hash);
     html_hash_set(url);
-    await app_bible_home(context);
+    app_generic_screen_set(context, app_bible_home);
   }
   function lambda(v) {
     let verse_number_v = object_property_get(v, "verse_number");
