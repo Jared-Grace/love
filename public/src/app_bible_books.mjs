@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
@@ -10,5 +11,8 @@ export async function app_bible_books(context) {
   html_clear(root);
   let e = ebible_folder_english();
   let books = await ebible_version_books(e);
+  log({
+    books,
+  });
   let hash = html_hash_object_get();
 }
