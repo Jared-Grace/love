@@ -1,15 +1,15 @@
+import { list_last } from "../../../love/public/src/list_last.mjs";
+import { list_previous } from "../../../love/public/src/list_previous.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
-import { list_next } from "../../../love/public/src/list_next.mjs";
 export function list_previous_wrap(list, item) {
   marker("1");
   let next = null;
   let li = list_first_is(list, item);
   if (li) {
-    next = list_next(list, item);
+    next = list_previous(list, item);
   } else {
-    next = list_first(list);
+    next = list_last(list);
   }
   return next;
 }
