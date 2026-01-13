@@ -34,6 +34,11 @@ export async function app_bible_home(context) {
   let book_code = object_property_get(v2, "book_code");
   let books = await ebible_version_books(e);
   let book_name = ebible_book_code_to_name(books, book_code);
+  function lambda5() {}
+  let component = html_button(bar, book_name, lambda5);
+  function lambda4() {}
+  let component2 = html_button(bar, chapter_name, lambda4);
+  let text2 = emoji_arrow_right();
   async function lambda3() {
     let list = await ebible_index_flat(e);
     let next = list_find_json_next(list, {
@@ -41,12 +46,7 @@ export async function app_bible_home(context) {
       verse_number,
     });
   }
-  let component = html_button(bar, book_name, lambda3);
-  function lambda4() {}
-  let component2 = html_button(bar, chapter_name, lambda4);
-  function lambda5() {}
-  let text2 = emoji_arrow_right();
-  let component3 = html_button(bar, text2, lambda5);
+  let component3 = html_button(bar, text2, lambda3);
   let verses = await ebible_verses(e, chapter_code);
   function lambda(v) {
     let verse_number_v = object_property_get(v, "verse_number");
