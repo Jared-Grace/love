@@ -1,6 +1,5 @@
 import { marker } from "../../../love/public/src/marker.mjs";
-export function html_hash_set() {
+export function html_hash_set(h) {
   marker("1");
-  let v = window.location.hash;
-  return v;
+  window.location.hash = h;
 }
