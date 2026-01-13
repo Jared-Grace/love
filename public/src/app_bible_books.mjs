@@ -9,6 +9,6 @@ export async function app_bible_books(context) {
   let root = object_property_get(context, "root");
   html_clear(root);
   let e = ebible_folder_english();
-  let books = await ebible_version_books(bible_folder);
+  let books = await ebible_version_books(e);
   let hash = html_hash_object_get();
 }
