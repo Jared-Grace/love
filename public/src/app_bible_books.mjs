@@ -1,3 +1,4 @@
+import { html_button } from "../../../love/public/src/html_button.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
@@ -15,6 +16,7 @@ export async function app_bible_books(context) {
   function lambda(item) {
     let chapter_code = object_property_get(item, "chapter_code");
     let text = object_property_get(item, "text");
+    let component = html_button(parent, text2, function lambda3() {});
   }
   each(books, lambda);
   log({
