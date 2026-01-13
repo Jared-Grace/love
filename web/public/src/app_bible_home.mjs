@@ -47,6 +47,8 @@ export async function app_bible_home(context) {
   async function lambda3() {
     let list = await ebible_chapter_codes(e);
     let next = list_next(list, chapter_code);
+    if (false) {
+    }
     object_property_set(hash, "c", next);
     let url = hash_to_url(hash);
     html_hash_set(url);
