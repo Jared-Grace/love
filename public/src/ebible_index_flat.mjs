@@ -10,8 +10,8 @@ import { ebible_chapters_each_verses } from "../../../love/public/src/ebible_cha
 export async function ebible_index_flat(bible_folder) {
   let b = browser_is();
   if (b) {
+    let file_name2 = ebible_index_flat_upload_name();
     async function lambda2() {
-      let file_name2 = ebible_index_flat_upload_name();
       let v = await firebase_storage_download_ebible(bible_folder, file_name2);
       return v;
     }
