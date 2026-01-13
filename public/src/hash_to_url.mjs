@@ -13,6 +13,6 @@ export function hash_to_url(hash) {
   let parts = list_adder(lambda3);
   let result2 = list_join_comma(parts);
   let h = html_hash_symbol();
-  const h2 = h + result2;
-  return h2;
+  const url = h + result2;
+  return url;
 }
