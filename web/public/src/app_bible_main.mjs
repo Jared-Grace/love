@@ -11,5 +11,6 @@ export async function app_bible_main(context) {
     app_fn,
     screens,
   });
+    firebase_name_jg();
   app_generic_refresh(context);
 }
