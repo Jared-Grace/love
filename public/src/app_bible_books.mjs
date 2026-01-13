@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
@@ -11,6 +12,7 @@ export async function app_bible_books(context) {
   html_clear(root);
   let e = ebible_folder_english();
   let books = await ebible_version_books(e);
+  each(list, function lambda(item) {});
   log({
     books,
   });
