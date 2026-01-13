@@ -1,3 +1,4 @@
+import { html_hash_set } from "../../../love/public/src/html_hash_set.mjs";
 import { hash_to_url } from "../../../love/public/src/hash_to_url.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_next } from "../../../love/public/src/list_next.mjs";
@@ -47,6 +48,7 @@ export async function app_bible_home(context) {
     let next = list_next(list, chapter_code);
     object_property_set(hash, "c", next);
     let url = hash_to_url(hash);
+    html_hash_set(url);
     log({
       next,
     });
