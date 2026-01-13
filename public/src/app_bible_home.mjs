@@ -44,10 +44,7 @@ export async function app_bible_home(context) {
     log({
       list,
     });
-    let next = list_find_next(list, {
-      chapter_code,
-      verse_number,
-    });
+    let next = list_find_next(list, chapter_code);
   }
   let component3 = html_button(bar, text2, lambda3);
   let verses = await ebible_verses(e, chapter_code);
