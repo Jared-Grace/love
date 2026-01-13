@@ -1,3 +1,4 @@
+import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_hash_set } from "../../../love/public/src/html_hash_set.mjs";
 import { hash_to_url } from "../../../love/public/src/hash_to_url.mjs";
@@ -47,6 +48,7 @@ export async function app_bible_home(context) {
   async function lambda3() {
     let list = await ebible_chapter_codes(e);
     let next = list_next(list, chapter_code);
+    let li = list_last_is(list2, item);
     if (false) {
     }
     object_property_set(hash, "c", next);
