@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { emoji_arrow_right } from "../../../love/public/src/emoji_arrow_right.mjs";
 import { list_find_json_next } from "../../../love/public/src/list_find_json_next.mjs";
 import { ebible_index_flat } from "../../../love/public/src/ebible_index_flat.mjs";
@@ -41,6 +42,9 @@ export async function app_bible_home(context) {
   let text2 = emoji_arrow_right();
   async function lambda3() {
     let list = await ebible_index_flat(e);
+    log({
+      list,
+    });
     let next = list_find_json_next(list, {
       chapter_code,
       verse_number,
