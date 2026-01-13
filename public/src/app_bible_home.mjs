@@ -44,7 +44,7 @@ export async function app_bible_home(context) {
     await on_arrow(list_next_wrap);
   }
   let text3 = emoji_arrow_left();
-  let component4 = html_button(parent, text3, lambda6);
+  let component4 = html_button(bar, text3, lambda6);
   function lambda5() {}
   let component = html_button(bar, book_name, lambda5);
   function lambda4() {}
