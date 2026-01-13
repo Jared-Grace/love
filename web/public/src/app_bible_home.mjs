@@ -49,6 +49,11 @@ export async function app_bible_home(context) {
     object_property_set(hash, "c", next);
     let url = hash_to_url(hash);
     html_hash_set(url);
+    function lambda2() {
+      let v3 = location.reload();
+      return v3;
+    }
+    setTimeout(lambda2, 0);
     log({
       next,
     });
