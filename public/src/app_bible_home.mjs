@@ -1,3 +1,4 @@
+import { emoji_arrow_right } from "../../../love/public/src/emoji_arrow_right.mjs";
 import { list_find_json_next } from "../../../love/public/src/list_find_json_next.mjs";
 import { ebible_index_flat } from "../../../love/public/src/ebible_index_flat.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -44,6 +45,7 @@ export async function app_bible_home(context) {
   function lambda4() {}
   let component2 = html_button(bar, chapter_name, lambda4);
   function lambda5() {}
+  let text2 = emoji_arrow_right();
   let component3 = html_button(parent, text2, lambda5);
   let verses = await ebible_verses(e, chapter_code);
   function lambda(v) {
