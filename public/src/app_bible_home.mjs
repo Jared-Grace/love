@@ -1,4 +1,3 @@
-import { list_find } from "../../../love/public/src/list_find.mjs";
 import { list_next } from "../../../love/public/src/list_next.mjs";
 import { ebible_chapter_codes } from "../../../love/public/src/ebible_chapter_codes.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -43,8 +42,7 @@ export async function app_bible_home(context) {
   let text2 = emoji_arrow_right();
   async function lambda3() {
     let list = await ebible_chapter_codes(e);
-    let found = list_find(list, chapter_code);
-    let next = list_next(list, found);
+    let next = list_next(list, chapter_code);
     log({
       next,
     });
