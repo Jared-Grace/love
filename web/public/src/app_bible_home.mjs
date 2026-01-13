@@ -4,7 +4,6 @@ import { hash_to_url } from "../../../love/public/src/hash_to_url.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_next } from "../../../love/public/src/list_next.mjs";
 import { ebible_chapter_codes } from "../../../love/public/src/ebible_chapter_codes.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { emoji_arrow_right } from "../../../love/public/src/emoji_arrow_right.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
@@ -52,9 +51,6 @@ export async function app_bible_home(context) {
     let url = hash_to_url(hash);
     html_hash_set(url);
     await app_bible_home(context);
-    log({
-      next,
-    });
   }
   let component3 = html_button(bar, text2, lambda3);
   let verses = await ebible_verses(e, chapter_code);
