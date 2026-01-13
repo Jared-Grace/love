@@ -1,3 +1,4 @@
+import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { app_bible } from "../../../love/public/src/app_bible.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_bible_screens } from "../../../love/public/src/app_bible_screens.mjs";
@@ -11,6 +12,6 @@ export async function app_bible_main(context) {
     app_fn,
     screens,
   });
-    firebase_name_jg();
+  firebase_name_jg();
   app_generic_refresh(context);
 }
