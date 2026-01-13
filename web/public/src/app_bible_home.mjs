@@ -1,11 +1,10 @@
-import { html_hash_set_object } from "../../../love/public/src/html_hash_set_object.mjs";
+import { app_bible_chapter_set } from "../../../love/public/src/app_bible_chapter_set.mjs";
 import { app_bible_books } from "../../../love/public/src/app_bible_books.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { list_previous_wrap } from "../../../love/public/src/list_previous_wrap.mjs";
 import { emoji_arrow_left } from "../../../love/public/src/emoji_arrow_left.mjs";
 import { list_next_wrap } from "../../../love/public/src/list_next_wrap.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { ebible_chapter_codes } from "../../../love/public/src/ebible_chapter_codes.mjs";
 import { emoji_arrow_right } from "../../../love/public/src/emoji_arrow_right.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -60,8 +59,7 @@ export async function app_bible_home(context) {
   async function on_arrow(list_next_wrap) {
     let list = await ebible_chapter_codes(e);
     let next = list_next_wrap(list, chapter_code);
-    object_property_set(hash, "c", next);
-    html_hash_set_object(hash);
+    app_bible_chapter_set(hash, next);
     app_generic_screen_set(context, app_bible_home);
   }
   function lambda(v) {
