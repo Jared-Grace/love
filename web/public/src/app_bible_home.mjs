@@ -46,7 +46,7 @@ export async function app_bible_home(context) {
     let list = await ebible_chapter_codes(e);
     let next = list_next(list, chapter_code);
     object_property_set(hash, "c", next);
-    let h2 = hash_to_url(hash2);
+    let h2 = hash_to_url(hash);
     log({
       next,
     });
