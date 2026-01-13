@@ -21,7 +21,7 @@ export async function app_bible_books(context) {
     let text = object_property_get(item, "text");
     function lambda3() {
       let chapter_code = ebible_chapter_code_pad(book_code, "1");
-      object_property_set(hash, property_name, chapter_code);
+      object_property_set(hash, "c", chapter_code);
     }
     let component = html_button(parent, text, lambda3);
   }
