@@ -44,7 +44,8 @@ export async function app_bible_home(context) {
     let p = html_p_text(content, verse_number_v + " " + text);
   }
   each(verses, lambda);
-  let list = await ebible_index_flat(version_english);
+  let bible_folder = ebible_folder_english();
+  let list = await ebible_index_flat(bible_folder);
   let next = list_find_json_next(list, {
     chapter_code,
     verse_number,
