@@ -47,9 +47,10 @@ export async function app_bible_home(context) {
   let text2 = emoji_arrow_right();
   async function lambda3() {
     let list = await ebible_chapter_codes(e);
-    let next = list_next(list, chapter_code);
-    let li = list_last_is(list2, item);
-    if (false) {
+    let next = null;
+    next = list_next(list, chapter_code);
+    let li = list_last_is(list, chapter_code);
+    if (li) {
     }
     object_property_set(hash, "c", next);
     let url = hash_to_url(hash);
