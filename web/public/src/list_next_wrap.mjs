@@ -5,9 +5,9 @@ export function list_next_wrap(list, item) {
   let next = null;
   let li = list_last_is(list, item);
   if (li) {
-    next = list_next(list, item);
-  } else {
     next = list_first(list);
+  } else {
+    next = list_next(list, item);
   }
   return next;
 }
