@@ -29,7 +29,8 @@ export async function js_destructure_functionize(ast) {
     if (l) {
       return;
     }
-    js_node_type_is_if(node, type, function lambda4() {});
+    function lambda4() {}
+    js_node_type_is_if(node, type, lambda4);
     let name4 = null;
     let init = object_property_get(e1, "init");
     let ii = js_identifier_is(init);
