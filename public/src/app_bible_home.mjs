@@ -1,7 +1,6 @@
 import { ebible_chapter_codes } from "../../../love/public/src/ebible_chapter_codes.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { emoji_arrow_right } from "../../../love/public/src/emoji_arrow_right.mjs";
-import { list_find_json_next } from "../../../love/public/src/list_find_json_next.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
@@ -45,7 +44,7 @@ export async function app_bible_home(context) {
     log({
       list,
     });
-    let next = list_find_json_next(list, {
+    let next = list_find_next(list, {
       chapter_code,
       verse_number,
     });
