@@ -1,11 +1,13 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { app_name_main_get } from "../../../love/public/src/app_name_main_get.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
-import { app_name_main } from "../../../love/public/src/app_name_main.mjs";
 import { firebase_promote_function } from "../../../love/public/src/firebase_promote_function.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_promote(name) {
   assert_arguments(arguments, 1);
   marker("1");
-  let combined = app_name_main(name);
+  let v2 = await app_name_main_get(a_name);
+  let combined = object_property_get(v2, "f_name");
   let v = await firebase_promote_function(combined);
   return v;
 }
