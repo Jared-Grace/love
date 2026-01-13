@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_next } from "../../../love/public/src/list_next.mjs";
 import { ebible_chapter_codes } from "../../../love/public/src/ebible_chapter_codes.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -43,6 +44,7 @@ export async function app_bible_home(context) {
   async function lambda3() {
     let list = await ebible_chapter_codes(e);
     let next = list_next(list, chapter_code);
+    object_property_set(object, property_name, value);
     log({
       next,
     });
