@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -13,15 +14,17 @@ export async function app_bible_books(context) {
   html_clear(root);
   let e = ebible_folder_english();
   let books = await ebible_version_books(e);
+  let hash = html_hash_object_get();
   function lambda(item) {
     let book_code = object_property_get(item, "book_code");
     let text = object_property_get(item, "text");
-    function lambda3() {}
+    function lambda3() {
+      object_property_set(object, property_name, value);
+    }
     let component = html_button(parent, text, lambda3);
   }
   each(books, lambda);
   log({
     books,
   });
-  let hash = html_hash_object_get();
 }
