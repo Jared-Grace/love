@@ -13,9 +13,9 @@ export async function app_name_main_get(a_name) {
     a_name = list_find_starts_with(mapped, a_name);
     f_name = app_name_main(a_name);
   }
-  let v = {
+  let r = {
     f_name,
     a_name,
   };
-  return v;
+  return r;
 }
