@@ -1,10 +1,9 @@
+import { firebase_storage_download_ebible_cache } from "../../../love/public/src/firebase_storage_download_ebible_cache.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { ebible_language_original_code } from "../../../love/public/src/ebible_language_original_code.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { firebase_storage_download_ebible } from "../../../love/public/src/firebase_storage_download_ebible.mjs";
 import { ebible_version_books_upload_name } from "../../../love/public/src/ebible_version_books_upload_name.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { ebible_class_apocrypha } from "../../../love/public/src/ebible_class_apocrypha.mjs";
@@ -22,18 +21,14 @@ export async function ebible_version_books(bible_folder) {
   marker("1");
   let b = browser_is();
   if (b) {
-    async function lambda2() {
-      let file_name2 = ebible_version_books_upload_name();
-      let v = await firebase_storage_download_ebible(bible_folder, file_name2);
-      let books = object_property_get(v, "books");
-      return books;
-    }
-    let value = await global_function_property_initialize_async(
-      ebible_version_books,
+    let file_name2 = ebible_version_books_upload_name();
+    let v = await firebase_storage_download_ebible_cache(
       bible_folder,
-      lambda2,
+      file_name2,
+      ebible_version_books,
     );
-    return value;
+    let books = object_property_get(v, "books");
+    return books;
   }
   const n = ebible_class_new();
   let o = ebible_class_old();
