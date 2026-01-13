@@ -25,7 +25,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_bible_home(context) {
   marker("1");
   let root = html_mobile_default(context);
-  html_clear(element);
+  html_clear(root);
   firebase_name_jg();
   html_margin_0(root);
   let bc = html_bar_content(root);
