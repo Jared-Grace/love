@@ -30,6 +30,9 @@ export async function js_destructure_functionize(ast) {
       return;
     }
     let type_is = js_node_type_is(e1, "AssignmentExpression");
+    if (type_is) {
+      return;
+    }
     let name4 = null;
     let init = object_property_get(e1, "init");
     let ii = js_identifier_is(init);
