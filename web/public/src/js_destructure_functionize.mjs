@@ -1,4 +1,3 @@
-import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
@@ -28,9 +27,7 @@ export async function js_destructure_functionize(ast) {
     let l = list_is(e1);
     if (l) {
       return;
-    }
-    function lambda4() {}
-    js_node_type_is_if(node, type, lambda4);
+    }nt
     let name4 = null;
     let init = object_property_get(e1, "init");
     let ii = js_identifier_is(init);
