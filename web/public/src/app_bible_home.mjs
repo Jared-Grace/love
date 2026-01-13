@@ -1,3 +1,4 @@
+import { emoji_arrow_left } from "../../../love/public/src/emoji_arrow_left.mjs";
 import { list_next_wrap } from "../../../love/public/src/list_next_wrap.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_hash_set } from "../../../love/public/src/html_hash_set.mjs";
@@ -40,6 +41,7 @@ export async function app_bible_home(context) {
   let books = await ebible_version_books(e);
   let book_name = ebible_book_code_to_name(books, book_code);
   function lambda6() {}
+  let text3 = emoji_arrow_left();
   let component4 = html_button(parent, text3, lambda6);
   function lambda5() {}
   let component = html_button(bar, book_name, lambda5);
