@@ -1,3 +1,4 @@
+import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_hash_set } from "../../../love/public/src/html_hash_set.mjs";
 import { hash_to_url } from "../../../love/public/src/hash_to_url.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -24,6 +25,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_bible_home(context) {
   marker("1");
   let root = html_mobile_default(context);
+  html_clear(element);
   firebase_name_jg();
   html_margin_0(root);
   let bc = html_bar_content(root);
