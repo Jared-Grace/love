@@ -1,3 +1,4 @@
+import { ebible_chapter_code_pad } from "../../../love/public/src/ebible_chapter_code_pad.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -18,6 +19,7 @@ export async function app_bible_books(context) {
   function lambda(item) {
     let book_code = object_property_get(item, "book_code");
     let text = object_property_get(item, "text");
+    let chapter_code = ebible_chapter_code_pad(book_code, "1");
     function lambda3() {
       object_property_set(object, property_name, value);
     }
