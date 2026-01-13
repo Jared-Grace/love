@@ -7,5 +7,4 @@ export function app_bible_books(context) {
   let root = object_property_get(context, "root");
   html_clear(root);
   let hash = html_hash_object_get();
-  let chapter_code = object_property_get(hash, "c");
 }
