@@ -21,10 +21,10 @@ export async function ebible_version_books(bible_folder) {
   marker("1");
   let b = browser_is();
   if (b) {
-    let file_name2 = ebible_version_books_upload_name();
+    let file_name = ebible_version_books_upload_name();
     let v = await firebase_storage_download_ebible_cache(
       bible_folder,
-      file_name2,
+      file_name,
       ebible_version_books,
     );
     let books = object_property_get(v, "books");
