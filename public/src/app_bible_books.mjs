@@ -12,8 +12,11 @@ export async function app_bible_books(context) {
   html_clear(root);
   let e = ebible_folder_english();
   let books = await ebible_version_books(e);
-  function lambda(item) {}
-  each(list, lambda);
+  function lambda(item) {
+    let chapter_code = object_property_get(item, "chapter_code");
+    let text = object_property_get(item, "text");
+  }
+  each(books, lambda);
   log({
     books,
   });
