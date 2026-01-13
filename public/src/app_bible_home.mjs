@@ -1,9 +1,8 @@
-import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
+import { list_next_wrap } from "../../../love/public/src/list_next_wrap.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_hash_set } from "../../../love/public/src/html_hash_set.mjs";
 import { hash_to_url } from "../../../love/public/src/hash_to_url.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { list_next } from "../../../love/public/src/list_next.mjs";
 import { ebible_chapter_codes } from "../../../love/public/src/ebible_chapter_codes.mjs";
 import { emoji_arrow_right } from "../../../love/public/src/emoji_arrow_right.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -22,7 +21,6 @@ import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { list_first } from "./list_first.mjs";
 export async function app_bible_home(context) {
   marker("1");
   let root = html_mobile_default(context);
@@ -48,13 +46,7 @@ export async function app_bible_home(context) {
   let text2 = emoji_arrow_right();
   async function lambda3() {
     let list = await ebible_chapter_codes(e);
-    let next = null;
-    let li = list_last_is(list, chapter_code);
-    if (li) {
-      next = list_next(list, chapter_code);
-    } else {
-      next = list_first(list);
-    }
+    let next = list_next_wrap(list, chapter_code);
     object_property_set(hash, "c", next);
     let url = hash_to_url(hash);
     html_hash_set(url);
