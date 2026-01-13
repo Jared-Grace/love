@@ -1,6 +1,6 @@
-import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function app_bible_books(context) {
   marker("1");
-  let root = html_clear_context(context);
+  let root = object_property_get(context, "root");
 }
