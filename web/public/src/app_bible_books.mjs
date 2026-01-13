@@ -3,7 +3,6 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 import { app_bible_chapters } from "../../../love/public/src/app_bible_chapters.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { ebible_chapter_code_pad } from "../../../love/public/src/ebible_chapter_code_pad.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -23,7 +22,6 @@ export async function app_bible_books(context) {
     let text = object_property_get(item, "text");
     function lambda3() {
       let chapter_code = ebible_chapter_code_pad(book_code, "1");
-      object_property_set(hash, "c", chapter_code);
       app_bible_chapter_set(hash, chapter_code);
       app_generic_screen_set(context, app_bible_chapters);
     }
