@@ -19,9 +19,9 @@ export async function app_bible_books(context) {
   function lambda(item) {
     let book_code = object_property_get(item, "book_code");
     let text = object_property_get(item, "text");
-    let chapter_code = ebible_chapter_code_pad(book_code, "1");
     function lambda3() {
-      object_property_set(object, property_name, value);
+      let chapter_code = ebible_chapter_code_pad(book_code, "1");
+      object_property_set(hash, property_name, value);
     }
     let component = html_button(parent, text, lambda3);
   }
