@@ -33,7 +33,9 @@ export async function app_bible_home(context) {
   let book_code = object_property_get(v2, "book_code");
   let books = await ebible_version_books(e);
   let book_name = ebible_book_code_to_name(books, book_code);
-  function lambda3() {}
+  async function lambda3() {
+    await ebible_index_flat(bible_folder);
+  }
   let component = html_button(bar, book_name, lambda3);
   function lambda4() {}
   let component2 = html_button(bar, chapter_name, lambda4);
