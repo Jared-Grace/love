@@ -2,11 +2,11 @@ import { global_function_property_initialize_async } from "../../../love/public/
 import { firebase_storage_download_ebible } from "../../../love/public/src/firebase_storage_download_ebible.mjs";
 export async function firebase_storage_download_ebible_cache(
   bible_folder,
-  file_name2,
+  file_name,
   fn,
 ) {
   async function get() {
-    let v = await firebase_storage_download_ebible(bible_folder, file_name2);
+    let v = await firebase_storage_download_ebible(bible_folder, file_name);
     return v;
   }
   let value = await global_function_property_initialize_async(
