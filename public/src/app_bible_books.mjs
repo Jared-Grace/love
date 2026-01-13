@@ -1,3 +1,4 @@
+import { app_bible_chapter_set } from "../../../love/public/src/app_bible_chapter_set.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { app_bible_chapters } from "../../../love/public/src/app_bible_chapters.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
@@ -23,6 +24,7 @@ export async function app_bible_books(context) {
     function lambda3() {
       let chapter_code = ebible_chapter_code_pad(book_code, "1");
       object_property_set(hash, "c", chapter_code);
+      app_bible_chapter_set(hash, chapter_code);
       app_generic_screen_set(context, app_bible_chapters);
     }
     let component = html_button(root, text, lambda3);
