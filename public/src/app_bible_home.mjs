@@ -50,6 +50,11 @@ export async function app_bible_home(context) {
   let text2 = emoji_arrow_right();
   async function lambda3() {
     let fn_get = list_next_wrap;
+    await on_arrow(fn_get);
+  }
+  let component3 = html_button(bar, text2, lambda3);
+  let verses = await ebible_verses(e, chapter_code);
+  async function on_arrow(fn_get) {
     let list = await ebible_chapter_codes(e);
     let next = fn_get(list, chapter_code);
     object_property_set(hash, "c", next);
@@ -57,8 +62,6 @@ export async function app_bible_home(context) {
     html_hash_set(url);
     await app_bible_home(context);
   }
-  let component3 = html_button(bar, text2, lambda3);
-  let verses = await ebible_verses(e, chapter_code);
   function lambda(v) {
     let verse_number_v = object_property_get(v, "verse_number");
     let text = object_property_get(v, "text");
