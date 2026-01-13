@@ -1,5 +1,5 @@
+import { list_find } from "../../../love/public/src/list_find.mjs";
 import { list_next } from "../../../love/public/src/list_next.mjs";
-import { list_find_json } from "../../../love/public/src/list_find_json.mjs";
 import { ebible_chapter_codes } from "../../../love/public/src/ebible_chapter_codes.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { emoji_arrow_right } from "../../../love/public/src/emoji_arrow_right.mjs";
@@ -43,11 +43,11 @@ export async function app_bible_home(context) {
   let text2 = emoji_arrow_right();
   async function lambda3() {
     let list = await ebible_chapter_codes(e);
-    log({
-      list,
-    });
-    let found = list_find_json(list, chapter_code);
+    let found = list_find(list, chapter_code);
     let next = list_next(list, found);
+    log({
+      next,
+    });
   }
   let component3 = html_button(bar, text2, lambda3);
   let verses = await ebible_verses(e, chapter_code);
