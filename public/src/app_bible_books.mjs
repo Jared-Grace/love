@@ -17,7 +17,7 @@ export async function app_bible_books(context) {
     let chapter_code = object_property_get(item, "chapter_code");
     let text = object_property_get(item, "text");
     function lambda3() {}
-    let component = html_button(parent, text2, lambda3);
+    let component = html_button(parent, text, lambda3);
   }
   each(books, lambda);
   log({
