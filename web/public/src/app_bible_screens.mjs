@@ -6,6 +6,7 @@ export function app_bible_screens() {
   let screens = {
     home: app_bible_home,
     books: app_bible_books,
+    chapters: app_bible_chapters,
   };
   return screens;
 }
