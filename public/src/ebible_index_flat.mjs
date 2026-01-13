@@ -1,6 +1,5 @@
+import { firebase_storage_download_ebible_cache } from "../../../love/public/src/firebase_storage_download_ebible_cache.mjs";
 import { ebible_index_flat_upload_name } from "../../../love/public/src/ebible_index_flat_upload_name.mjs";
-import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
-import { firebase_storage_download_ebible } from "../../../love/public/src/firebase_storage_download_ebible.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -12,14 +11,10 @@ export async function ebible_index_flat(bible_folder) {
   if (b) {
     let file_name2 = ebible_index_flat_upload_name();
     let get = ebible_index_flat;
-    async function lambda2() {
-      let v = await firebase_storage_download_ebible(bible_folder, file_name2);
-      return v;
-    }
-    let value = await global_function_property_initialize_async(
-      get,
+    let value = await firebase_storage_download_ebible_cache(
       bible_folder,
-      lambda2,
+      file_name2,
+      get,
     );
     return value;
   }
