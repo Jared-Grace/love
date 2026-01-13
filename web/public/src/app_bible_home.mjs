@@ -22,6 +22,7 @@ import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
+import { list_first } from "./list_first.mjs";
 export async function app_bible_home(context) {
   marker("1");
   let root = html_mobile_default(context);
@@ -48,10 +49,11 @@ export async function app_bible_home(context) {
   async function lambda3() {
     let list = await ebible_chapter_codes(e);
     let next = null;
-    next = list_next(list, chapter_code);
     let li = list_last_is(list, chapter_code);
     if (li) {
+      next = list_next(list, chapter_code);
     } else {
+      next = list_first(list);
     }
     object_property_set(hash, "c", next);
     let url = hash_to_url(hash);
