@@ -7,9 +7,9 @@ export function list_previous_wrap(list, item) {
   let previous = null;
   let li = list_first_is(list, item);
   if (li) {
-    previous = list_previous(list, item);
-  } else {
     previous = list_last(list);
+  } else {
+    previous = list_previous(list, item);
   }
   return previous;
 }
