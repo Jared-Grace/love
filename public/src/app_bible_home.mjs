@@ -44,8 +44,7 @@ export async function app_bible_home(context) {
   async function lambda3() {
     let list = await ebible_chapter_codes(e);
     let next = list_next(list, chapter_code);
-    object_property_set(object2, property_name2, value2);
-    object_property_set(object, property_name, value);
+    object_property_set(hash, "c", next);
     log({
       next,
     });
