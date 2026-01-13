@@ -22,14 +22,12 @@ import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
-import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_bible_home(context) {
   marker("1");
   let root = html_mobile_default(context);
   html_clear(root);
-  firebase_name_jg();
   html_margin_0(root);
   let bc = html_bar_content(root);
   let content = object_property_get(bc, "content");
