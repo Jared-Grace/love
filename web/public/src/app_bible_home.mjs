@@ -49,6 +49,7 @@ export async function app_bible_home(context) {
   let component2 = html_button(bar, chapter_name, lambda4);
   let text2 = emoji_arrow_right();
   async function lambda3() {
+    let fn = list_next_wrap;
     let list = await ebible_chapter_codes(e);
     let next = list_next_wrap(list, chapter_code);
     object_property_set(hash, "c", next);
