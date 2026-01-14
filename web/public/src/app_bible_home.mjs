@@ -1,4 +1,4 @@
-import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
+import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { app_bible_chapters } from "../../../love/public/src/app_bible_chapters.mjs";
 import { app_bible_chapter_open } from "../../../love/public/src/app_bible_chapter_open.mjs";
@@ -71,7 +71,7 @@ export async function app_bible_home(context) {
     function lambda7() {}
     let p = html_p(content);
     let component5 = html_button(p, verse_number_v, lambda7);
-    html_text_set(p, " " + text);
+    html_span_text(p, " " + text);
   }
   each(verses, lambda);
 }
