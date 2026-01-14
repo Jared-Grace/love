@@ -19,6 +19,6 @@ export async function ebible_chapter_codes(bible_folder) {
   }
   marker("1");
   let books = await ebible_version_books(bible_folder);
-  let list = await ebible_books_to_chapter_codes(books, bible_folder);
-  return list;
+  let chapter_codes = await ebible_books_to_chapter_codes(books, bible_folder);
+  return chapter_codes;
 }
