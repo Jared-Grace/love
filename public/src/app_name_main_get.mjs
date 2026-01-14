@@ -17,6 +17,7 @@ export async function app_name_main_get(a_search) {
   }
   log_keep({
     a_name,
+    a_search,
   });
   let r = {
     f_name,
