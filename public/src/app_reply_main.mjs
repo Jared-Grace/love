@@ -2,7 +2,6 @@ import { app_reply_verses_add } from "../../../love/public/src/app_reply_verses_
 import { app_reply_languages_chosen_reset } from "../../../love/public/src/app_reply_languages_chosen_reset.mjs";
 import { app_reply_buttons_languages } from "../../../love/public/src/app_reply_buttons_languages.mjs";
 import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_languages_prompt.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { ebible_versions_english_choices } from "../../../love/public/src/ebible_versions_english_choices.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_reply_buttons_refresh } from "../../../love/public/src/app_reply_buttons_refresh.mjs";
@@ -95,9 +94,6 @@ export async function app_reply_main(context) {
     list_empty(responses);
     list_empty(responses_buttons);
     list_shuffle(encouragement);
-    log({
-      verse_count,
-    });
     let taken = list_take(encouragement, verse_count);
     let reference_current = null;
     async function lambda6(reference) {
