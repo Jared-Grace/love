@@ -50,6 +50,7 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
             );
             object_merge(result, {
               reference,
+              chapter_code,
             });
             return result;
           }
