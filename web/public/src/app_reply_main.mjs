@@ -1,3 +1,4 @@
+import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
 import { app_reply_verses_add } from "../../../love/public/src/app_reply_verses_add.mjs";
 import { app_reply_languages_chosen_reset } from "../../../love/public/src/app_reply_languages_chosen_reset.mjs";
 import { app_reply_buttons_languages } from "../../../love/public/src/app_reply_buttons_languages.mjs";
@@ -16,7 +17,6 @@ import { prayer_blessing_expand } from "../../../love/public/src/prayer_blessing
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
-import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { each_range_from } from "../../../love/public/src/each_range_from.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -93,8 +93,7 @@ export async function app_reply_main(context) {
     list_empty(bible_texts);
     list_empty(responses);
     list_empty(responses_buttons);
-    list_shuffle(encouragement);
-    let taken = list_take(encouragement, verse_count);
+    let taken = list_shuffle_take(encouragement, verse_count);
     let reference_current = null;
     async function lambda6(reference) {
       reference_current = await app_reply_verses_add(
