@@ -86,7 +86,7 @@ export async function app_bible_home(context) {
       }
       html_on_pointerdown(item_span, lambda9);
     }
-    each(list2, lambda2);
+    each(list, lambda2);
   }
   each(verses, lambda);
 }
