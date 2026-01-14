@@ -1,3 +1,8 @@
+import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
+import { global_function_set } from "../../../love/public/src/global_function_set.mjs";
+import { ebible_verse_merge } from "../../../love/public/src/ebible_verse_merge.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { app_supper_verses_get } from "../../../love/public/src/app_supper_verses_get.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -11,4 +16,14 @@ export async function app_supper_main(context) {
   log({
     list,
   });
+  function verse_get(bible_folder, chapter_code, verse_number) {
+    let v2 = list_find_property(result, "bible_folder", bible_folder);
+    let chapters = object_property_get(v2, "chapters");
+    let v3 = list_find_property(chapters, "chapter_code", chapter_code);
+    let verses = object_property_get(v3, "verses");
+    let v = list_find_property(verses, "verse_number", verse_number);
+    let verse = ebible_verse_merge(bible_folder, chapter_code, v);
+    return verse;
+  }
+  global_function_set(ebible_verse, verse_get);
 }
