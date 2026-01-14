@@ -1,5 +1,4 @@
 import { ebible_chapter_codes_upload_name } from "../../../love/public/src/ebible_chapter_codes_upload_name.mjs";
-import { ebible_index_flat } from "../../../love/public/src/ebible_index_flat.mjs";
 import { firebase_storage_download_ebible_cache } from "../../../love/public/src/firebase_storage_download_ebible_cache.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { ebible_books_to_chapter_codes } from "../../../love/public/src/ebible_books_to_chapter_codes.mjs";
@@ -12,7 +11,7 @@ export async function ebible_chapter_codes(bible_folder) {
     let value = await firebase_storage_download_ebible_cache(
       bible_folder,
       file_name2,
-      ebible_index_flat,
+      ebible_chapter_codes,
     );
     return value;
   }
