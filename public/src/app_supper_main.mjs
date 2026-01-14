@@ -1,4 +1,4 @@
-import { html_element } from "../../../love/public/src/html_element.mjs";
+import { html_hr } from "../../../love/public/src/html_hr.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
@@ -30,7 +30,7 @@ export async function app_supper_main(context) {
     let chapter_code = object_property_get(v, "chapter_code");
     if (n) {
       if (equal_not(chapter_code, previous_chapter_code)) {
-        let component = html_element(root, "hr");
+        let component = html_hr(root);
       }
     }
     previous_chapter_code = chapter_code;
