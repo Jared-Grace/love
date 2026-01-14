@@ -23,7 +23,7 @@ export async function app_supper_verses_get() {
       get,
     );
     let verses = object_property_get(value, "verses");
-    return value;
+    return verses;
   }
   let references = `Matthew 26:26-30
 Mark 14:22-26
