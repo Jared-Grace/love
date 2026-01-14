@@ -15,6 +15,7 @@ export async function app_supper_main(context) {
   firebase_name_jg();
   let root = html_mobile_default(context);
   let verses = await app_supper_verses_get();
+  let previous_chapter_code = null;
   function lambda2(v) {
     let v2 = list_first_is(verses, v);
     let n = not(v2);
