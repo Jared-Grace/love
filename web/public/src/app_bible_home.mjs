@@ -74,7 +74,8 @@ export async function app_bible_home(context) {
     let component5 = html_button(p, verse_number_v, lambda7);
     html_span_text(p, " ");
     let split = string_split_space(text);
-    each(list2, function lambda2(item) {});
+    function lambda2(item) {}
+    each(list2, lambda2);
   }
   each(verses, lambda);
 }
