@@ -82,7 +82,7 @@ export async function app_bible_home(context) {
     let p = html_p(content);
     let top = html_div(p);
     let bottom = html_div(p);
-    html_centered(div);
+    html_centered(bottom);
     let hidden = false;
     toggle();
     biblehub_button_open("interlinear/", verse_number_v, bottom, "Interlinear");
