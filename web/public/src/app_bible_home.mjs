@@ -1,9 +1,8 @@
-import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
+import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { string_replace_space_underscore } from "../../../love/public/src/string_replace_space_underscore.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { not } from "../../../love/public/src/not.mjs";
-import { html_display_none_or_inline } from "../../../love/public/src/html_display_none_or_inline.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { window_open } from "../../../love/public/src/window_open.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
@@ -84,14 +83,13 @@ export async function app_bible_home(context) {
     let top = html_div(p);
     let bottom = html_div(p);
     html_centered(bottom);
-    html_width_full(bottom);
     let hidden = false;
     toggle();
     biblehub_button_open("interlinear/", verse_number_v, bottom, "Interlinear");
     biblehub_button_open("", verse_number_v, bottom, "Parallel");
     function toggle() {
       hidden = not(hidden);
-      html_display_none_or_inline(hidden, bottom);
+      html_display_none_or_block(hidden, bottom);
     }
     let verse_number_v_button = html_button(top, verse_number_v, toggle);
     let split = string_split_space(text);
