@@ -23,7 +23,7 @@ export async function app_bible_chapters(context) {
   let chapter_code = object_property_get(hash, "c");
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let mapped = list_filter_prefix_without(list, book_code);
-  let mapped2 = list_map(mapped, integer_to);
+  let chapter_numbers = list_map(mapped, integer_to);
   let books = await ebible_version_books(e);
   let book_name = ebible_book_code_to_name(books, book_code);
   html_div_text_centered(root, book_name);
@@ -33,6 +33,6 @@ export async function app_bible_chapters(context) {
   }
   each(list2, lambda);
   log({
-    mapped2,
+    mapped2: chapter_numbers,
   });
 }
