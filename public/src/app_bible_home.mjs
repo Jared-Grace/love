@@ -81,8 +81,8 @@ export async function app_bible_home(context) {
       html_span_space(p);
       let item_span = html_span_text(p, item);
       function lambda9() {
-        let letters = string_letters_only(item);
-        window_open(file_name);
+        let letters_only = string_letters_only(item);
+        window_open("https://www.google.com/search?q=" + letters_only);
       }
       html_on_pointerdown(item_span, lambda9);
     }
