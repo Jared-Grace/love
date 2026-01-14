@@ -1,3 +1,4 @@
+import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
@@ -11,4 +12,5 @@ export async function app_bible_chapters(context) {
   let list = await ebible_chapter_codes(e);
   let hash = html_hash_object_get();
   let chapter_code = object_property_get(hash, "c");
+  let book_code = ebible_chapter_code_to_book(chapter_code2);
 }
