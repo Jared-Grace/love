@@ -83,7 +83,7 @@ export async function app_bible_home(context) {
     let hidden = false;
     toggle();
     function lambda10() {
-      let lower = string_lower_to(s);
+      let lower = string_lower_to(book_name);
       window_open(
         "https://biblehub.com/interlinear/" +
           "psalms" +
