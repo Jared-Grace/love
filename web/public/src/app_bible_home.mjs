@@ -85,6 +85,7 @@ export async function app_bible_home(context) {
     let hidden = false;
     toggle();
     const folder = "interlinear/";
+    const button_text = "Interlinear";
     function lambda10() {
       let lower = string_lower_to(book_name);
       let replaced = string_replace_space_underscore(lower);
@@ -102,7 +103,6 @@ export async function app_bible_home(context) {
           ".htm",
       );
     }
-    const button_text = "Interlinear";
     let component5 = html_button(bottom, button_text, lambda10);
     function toggle() {
       hidden = not(hidden);
