@@ -1,4 +1,4 @@
-import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
+import { firebase_storage_download_json_decompress } from "../../../love/public/src/firebase_storage_download_json_decompress.mjs";
 import { ebible_firebase_upload_path } from "../../../love/public/src/ebible_firebase_upload_path.mjs";
 import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -15,7 +15,7 @@ export async function app_supper_verses_get() {
     marker("1");
     async function get() {
       let destination = ebible_firebase_upload_path(bible_folder, file_name);
-      let v = await firebase_storage_download_json(destination);
+      let v = await firebase_storage_download_json_decompress(destination);
       return v;
     }
     let value = await global_function_property_initialize_async(
