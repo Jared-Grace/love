@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
@@ -9,4 +10,5 @@ export async function app_bible_chapters(context) {
   let e = ebible_folder_english();
   let list = await ebible_chapter_codes(e);
   let hash = html_hash_object_get();
+  let chapter_code = object_property_get(hash, "c");
 }
