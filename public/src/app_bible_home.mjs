@@ -59,7 +59,7 @@ export async function app_bible_home(context) {
   async function on_arrow(list_next_wrap) {
     let list = await ebible_chapter_codes(e);
     let next = list_next_wrap(list, chapter_code);
-    app_bible_chapter_open(hash, next, context);
+    app_bible_chapter_open(context, hash, next);
   }
   function lambda(v) {
     let verse_number_v = object_property_get(v, "verse_number");
