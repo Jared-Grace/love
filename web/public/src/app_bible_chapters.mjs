@@ -33,7 +33,7 @@ export async function app_bible_chapters(context) {
     function lambda3() {}
     let component = html_button(root, chapter_number, lambda3);
   }
-  each(chapter_codes_all, lambda);
+  each(chapter_codes, lambda);
   log({
     mapped2: chapter_numbers,
   });
