@@ -1,3 +1,4 @@
+import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { app_supper_verses_get } from "../../../love/public/src/app_supper_verses_get.mjs";
@@ -10,5 +11,6 @@ export async function app_supper_main(context) {
   let e = ebible_folder_english();
   let root = html_clear_context(context);
   let list = await app_supper_verses_get();
-  html_p_text_multiple(parent, list2);
+  await ebible_references_parse_lines(bible_folders, lines);
+  html_p_text_multiple(list, list2);
 }
