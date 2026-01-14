@@ -82,7 +82,7 @@ export async function app_bible_home(context) {
       let item_span = html_span_text(p, item);
       function lambda9() {
         let letters_only = string_letters_only(item);
-        window_open("https://www.google.com/search?q=" + letters_only);
+        window_open("https://www.google.com/search?q=define:" + letters_only);
       }
       html_on_pointerdown(item_span, lambda9);
     }
