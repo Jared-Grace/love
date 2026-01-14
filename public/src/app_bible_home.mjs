@@ -1,3 +1,4 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { window_open } from "../../../love/public/src/window_open.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { string_letters_only } from "../../../love/public/src/string_letters_only.mjs";
@@ -74,6 +75,7 @@ export async function app_bible_home(context) {
     let verse_number_v = object_property_get(v, "verse_number");
     let text = object_property_get(v, "text");
     let p = html_p(content);
+    let div = html_div(root2);
     function lambda7() {}
     let verse_number_v_button = html_button(p, verse_number_v, lambda7);
     let split = string_split_space(text);
