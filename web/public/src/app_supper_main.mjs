@@ -1,3 +1,4 @@
+import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -14,7 +15,8 @@ export async function app_supper_main(context) {
   function lambda2(v) {
     let text = object_property_get(v, "text");
     let reference = object_property_get(v, "reference");
-    let p = html_p_textd(root, reference);
+    let p = html_p_text(root, reference);
+    html_centered(div);
     html_font_color_set(p, "#aaa");
     html_p_text(root, text);
   }
