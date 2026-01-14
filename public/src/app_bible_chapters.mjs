@@ -32,7 +32,7 @@ export async function app_bible_chapters(context) {
   html_div_text_centered(root, book_name);
   function lambda(chapter_code) {
     let chapter_name = ebible_chapter_code_to_name(chapter_code);
-    let i = integer_to(input);
+    let i = integer_to(chapter_name);
     function lambda3() {}
     let component = html_button(root, chapter_number, lambda3);
   }
