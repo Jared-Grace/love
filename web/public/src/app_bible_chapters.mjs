@@ -27,11 +27,11 @@ export async function app_bible_chapters(context) {
   let books = await ebible_version_books(e);
   let book_name = ebible_book_code_to_name(books, book_code);
   html_div_text_centered(root, book_name);
-  function lambda(chapter_number) {
+  function lambda(chapter_code) {
     function lambda3() {}
     let component = html_button(root, chapter_number, lambda3);
   }
-  each(chapter_numbers, lambda);
+  each(chapter_codes, lambda);
   log({
     mapped2: chapter_numbers,
   });
