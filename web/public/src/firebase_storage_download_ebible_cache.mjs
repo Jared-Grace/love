@@ -3,8 +3,8 @@ import { log } from "../../../love/public/src/log.mjs";
 import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
 import { firebase_storage_download_ebible } from "../../../love/public/src/firebase_storage_download_ebible.mjs";
 export async function firebase_storage_download_ebible_cache(
-  file_name,
   bible_folder,
+  file_name,
   fn,
 ) {
   marker("1");
