@@ -63,10 +63,8 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
     }
     await each_pair_async(book_names, chapter_verses_list, lambda);
   }
-  let waited = await list_map_unordered_async(
-    list2,
-    async function lambda3(item) {},
-  );
+  async function lambda3(item) {}
+  let waited = await list_map_unordered_async(list2, lambda3);
   let list = await list_adder_async(lambda2);
   return list;
 }
