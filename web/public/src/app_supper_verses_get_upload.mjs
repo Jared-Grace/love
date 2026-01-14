@@ -3,6 +3,6 @@ import { app_supper_verses_get } from "../../../love/public/src/app_supper_verse
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_supper_verses_get_upload() {
   marker("1");
-  let list = await app_supper_verses_get();
-  await firebase_upload_object_compressed(destination, value);
+  let verses = await app_supper_verses_get();
+  await firebase_upload_object_compressed(destination, verses);
 }
