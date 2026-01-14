@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_supper_verses_get_upload_destination } from "../../../love/public/src/app_supper_verses_get_upload_destination.mjs";
 import { firebase_storage_download_json_decompress } from "../../../love/public/src/firebase_storage_download_json_decompress.mjs";
 import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
@@ -21,6 +22,7 @@ export async function app_supper_verses_get() {
       bible_folder,
       get,
     );
+    let verses = object_property_get(value, "verses");
     return value;
   }
   let references = `Matthew 26:26-30
