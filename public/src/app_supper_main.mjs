@@ -19,12 +19,6 @@ export async function app_supper_main(context) {
   let verses = await app_supper_verses_get();
   let previous_chapter_code = null;
   function lambda2(v) {
-    let text = object_property_get(v, "text");
-    let reference = object_property_get(v, "reference");
-    let p = html_p(root);
-    let d = html_div_text_centered(p, reference);
-    html_font_color_set(d, "#aaa");
-    html_div_text(p, text);
     let v2 = list_first_is(verses, v);
     let n = not(v2);
     let chapter_code = object_property_get(v, "chapter_code");
@@ -35,6 +29,12 @@ export async function app_supper_main(context) {
       }
     }
     previous_chapter_code = chapter_code;
+    let text = object_property_get(v, "text");
+    let reference = object_property_get(v, "reference");
+    let p = html_p(root);
+    let d = html_div_text_centered(p, reference);
+    html_font_color_set(d, "#aaa");
+    html_div_text(p, text);
   }
   each(verses, lambda2);
 }
