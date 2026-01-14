@@ -1,3 +1,4 @@
+import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { html_display_none_or_inline } from "../../../love/public/src/html_display_none_or_inline.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -82,6 +83,7 @@ export async function app_bible_home(context) {
     let hidden = false;
     toggle();
     function lambda10() {
+      let lower = string_lower_to(s);
       window_open(
         "https://biblehub.com/interlinear/" +
           "psalms" +
