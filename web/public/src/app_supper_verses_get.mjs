@@ -1,9 +1,8 @@
+import { app_supper_verses_get_upload_destination } from "../../../love/public/src/app_supper_verses_get_upload_destination.mjs";
 import { firebase_storage_download_json_decompress } from "../../../love/public/src/firebase_storage_download_json_decompress.mjs";
-import { ebible_firebase_upload_path } from "../../../love/public/src/ebible_firebase_upload_path.mjs";
 import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { ebible_chapter_codes } from "../../../love/public/src/ebible_chapter_codes.mjs";
-import { ebible_chapter_codes_upload_name } from "../../../love/public/src/ebible_chapter_codes_upload_name.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
@@ -11,10 +10,9 @@ import { string_split_newline } from "../../../love/public/src/string_split_newl
 export async function app_supper_verses_get() {
   let b = browser_is();
   if (b) {
-    let file_name = ebible_chapter_codes_upload_name();
     marker("1");
     async function get() {
-      let destination = ebible_firebase_upload_path(bible_folder, file_name);
+      let destination = app_supper_verses_get_upload_destination();
       let v = await firebase_storage_download_json_decompress(destination);
       return v;
     }
