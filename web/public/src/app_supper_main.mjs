@@ -1,3 +1,4 @@
+import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -13,7 +14,8 @@ export async function app_supper_main(context) {
   function lambda2(v) {
     let text = object_property_get(v, "text");
     let reference = object_property_get(v, "reference");
-    html_p_text(root, reference);
+    let p = html_p_text(root, reference);
+    html_font_color_set(s2, color);
     html_p_text(root, text);
   }
   each(list, lambda2);
