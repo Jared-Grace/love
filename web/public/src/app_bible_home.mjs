@@ -73,10 +73,10 @@ export async function app_bible_home(context) {
     function lambda7() {}
     let p = html_p(content);
     let component5 = html_button(p, verse_number_v, lambda7);
-    html_span_text(p, " ");
     let split = string_split_space(text);
     function lambda2(item) {
-      html_span_space(parent);
+      html_span_space(p);
+      html_span_text(p, item);
     }
     each(list2, lambda2);
   }
