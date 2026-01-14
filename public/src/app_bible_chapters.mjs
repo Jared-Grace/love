@@ -28,7 +28,8 @@ export async function app_bible_chapters(context) {
   let book_name = ebible_book_code_to_name(books, book_code);
   html_div_text_centered(root, book_name);
   function lambda(item) {
-    let component = html_button(parent, text, function lambda3() {});
+    function lambda3() {}
+    let component = html_button(parent, text, lambda3);
   }
   each(list2, lambda);
   log({
