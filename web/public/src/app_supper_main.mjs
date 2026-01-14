@@ -12,7 +12,7 @@ export async function app_supper_main(context) {
   marker("1");
   firebase_name_jg();
   let root = html_mobile_default(context);
-  let list = await app_supper_verses_get();
+  let verses = await app_supper_verses_get();
   function lambda2(v) {
     let text = object_property_get(v, "text");
     let reference = object_property_get(v, "reference");
@@ -21,5 +21,5 @@ export async function app_supper_main(context) {
     html_font_color_set(d, "#aaa");
     html_div_text(p, text);
   }
-  each(list, lambda2);
+  each(verses, lambda2);
 }
