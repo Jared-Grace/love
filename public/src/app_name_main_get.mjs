@@ -9,9 +9,9 @@ export async function app_name_main_get(a_search) {
   let f_name = app_name_main(a_search);
   let v2 = await function_exists(f_name);
   let exists = object_property_get(v2, "exists");
+  let a_name = null;
   if (not(exists)) {
     let mapped = await apps_names();
-    let a_name = null;
     a_name = list_find_starts_with(mapped, a_search);
     f_name = app_name_main(a_name);
   }
