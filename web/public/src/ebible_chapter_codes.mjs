@@ -7,11 +7,11 @@ import { ebible_version_books } from "../../../love/public/src/ebible_version_bo
 export async function ebible_chapter_codes(bible_folder) {
   let b = browser_is();
   if (b) {
-    let file_name2 = ebible_chapter_codes_upload_name();
+    let file_name = ebible_chapter_codes_upload_name();
     let value = await firebase_storage_download_ebible_cache(
       ebible_chapter_codes,
       bible_folder,
-      file_name2,
+      file_name,
     );
     return value;
   }
