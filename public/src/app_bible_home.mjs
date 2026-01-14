@@ -1,3 +1,4 @@
+import { string_replace } from "../../../love/public/src/string_replace.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { html_display_none_or_inline } from "../../../love/public/src/html_display_none_or_inline.mjs";
@@ -84,6 +85,7 @@ export async function app_bible_home(context) {
     toggle();
     function lambda10() {
       let lower = string_lower_to(book_name);
+      let replaced = string_replace(s, from, to);
       window_open(
         "https://biblehub.com/interlinear/" +
           "psalms" +
