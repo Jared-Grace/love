@@ -1,3 +1,4 @@
+import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
@@ -23,7 +24,7 @@ export async function app_bible_chapters(context) {
   let mapped2 = list_map(mapped, integer_to);
   let books = await ebible_version_books(e);
   let book_name = ebible_book_code_to_name(books, book_code);
-  hdc;
+  html_div_text_centered(root2, text);
   log({
     mapped2,
   });
