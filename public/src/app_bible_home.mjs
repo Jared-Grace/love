@@ -75,7 +75,8 @@ export async function app_bible_home(context) {
     let text = object_property_get(v, "text");
     let p = html_p(content);
     function lambda7() {}
-    let verse_number_v_button = html_button(p, verse_number_v, lambda7);
+    let verse_number_v_button = null;
+    verse_number_v_button = html_button(p, verse_number_v, lambda7);
     let split = string_split_space(text);
     function lambda2(item) {
       html_span_space(p);
