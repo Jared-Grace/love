@@ -9,6 +9,7 @@ import { ebible_references_parse_lines } from "../../../love/public/src/ebible_r
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { string_split_newline } from "../../../love/public/src/string_split_newline.mjs";
 export async function app_supper_verses_get() {
+  let e = ebible_folder_english();
   let b = browser_is();
   if (b) {
     marker("1");
@@ -19,7 +20,7 @@ export async function app_supper_verses_get() {
     }
     let value = await global_function_property_initialize_async(
       ebible_chapter_codes,
-      bible_folder,
+      e,
       get,
     );
     let verses = object_property_get(value, "verses");
@@ -35,7 +36,6 @@ Acts 20:7
 1 Corinthians 10:16-22
 1 Corinthians 11:17-34`;
   let split = string_split_newline(references);
-  let e = ebible_folder_english();
   let list = await ebible_references_parse_lines([e], split);
   return list;
 }
