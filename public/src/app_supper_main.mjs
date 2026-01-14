@@ -14,7 +14,7 @@ export async function app_supper_main(context) {
   function lambda2(v) {
     let text = object_property_get(v, "text");
     let reference = object_property_get(v, "reference");
-    let p = html_p_text_centered(root, reference);
+    let p = html_p_textd(root, reference);
     html_font_color_set(p, "#aaa");
     html_p_text(root, text);
   }
