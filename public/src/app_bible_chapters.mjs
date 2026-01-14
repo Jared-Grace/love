@@ -1,3 +1,4 @@
+import { ebible_chapter_code_to_name } from "../../../love/public/src/ebible_chapter_code_to_name.mjs";
 import { list_map_prefix_without } from "../../../love/public/src/list_map_prefix_without.mjs";
 import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
@@ -30,6 +31,7 @@ export async function app_bible_chapters(context) {
   let book_name = ebible_book_code_to_name(books, book_code);
   html_div_text_centered(root, book_name);
   function lambda(chapter_code) {
+    let chapter_name = ebible_chapter_code_to_name(chapter_code2);
     let i = integer_to(input);
     function lambda3() {}
     let component = html_button(root, chapter_number, lambda3);
