@@ -18,7 +18,7 @@ export async function app_supper_main(context) {
     list,
   });
   function verse_get(bible_folder, chapter_code, verse_number) {
-    equal_assert(left, right);
+    equal_assert(bible_folder, right);
     let v2 = list_find_property(result, "bible_folder", bible_folder);
     let chapters = object_property_get(v2, "chapters");
     let v3 = list_find_property(chapters, "chapter_code", chapter_code);
