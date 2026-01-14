@@ -86,24 +86,7 @@ export async function app_bible_home(context) {
     toggle();
     const folder = "interlinear/";
     const button_text = "Interlinear";
-    function lambda10() {
-      let lower = string_lower_to(book_name);
-      let replaced = string_replace_space_underscore(lower);
-      if (equal(replaced, "song")) {
-        replaced = "songs";
-      }
-      window_open(
-        "https://biblehub.com/" +
-          folder +
-          replaced +
-          "/" +
-          chapter_name +
-          "-" +
-          verse_number_v +
-          ".htm",
-      );
-    }
-    let component5 = html_button(bottom, button_text, lambda10);
+    biblehub_button_open(folder, verse_number_v, bottom, button_text);
     function toggle() {
       hidden = not(hidden);
       html_display_none_or_inline(hidden, bottom);
@@ -122,4 +105,24 @@ export async function app_bible_home(context) {
     each(split, lambda2);
   }
   each(verses, lambda);
+  function biblehub_button_open(folder, verse_number_v, bottom, button_text) {
+    function lambda10() {
+      let lower = string_lower_to(book_name);
+      let replaced = string_replace_space_underscore(lower);
+      if (equal(replaced, "song")) {
+        replaced = "songs";
+      }
+      window_open(
+        "https://biblehub.com/" +
+          folder +
+          replaced +
+          "/" +
+          chapter_name +
+          "-" +
+          verse_number_v +
+          ".htm",
+      );
+    }
+    let component5 = html_button(bottom, button_text, lambda10);
+  }
 }
