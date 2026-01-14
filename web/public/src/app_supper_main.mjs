@@ -31,6 +31,7 @@ export async function app_supper_main(context) {
     if (n) {
       if (equal_not(chapter_code, previous_chapter_code)) {
         html_hr(root);
+        html_hr(root);
       }
     }
     previous_chapter_code = chapter_code;
