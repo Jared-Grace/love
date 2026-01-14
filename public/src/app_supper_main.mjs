@@ -13,8 +13,8 @@ export async function app_supper_main(context) {
   function lambda2(v) {
     let text = object_property_get(v, "text");
     let reference = object_property_get(v, "reference");
-    html_p_text(root, v);
-    html_p_text(root, v);
+    html_p_text(root, reference);
+    html_p_text(root, text);
   }
   each(list, lambda2);
 }
