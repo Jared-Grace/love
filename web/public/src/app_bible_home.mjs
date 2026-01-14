@@ -1,4 +1,4 @@
-import { app_bible_chapter_set } from "../../../love/public/src/app_bible_chapter_set.mjs";
+import { app_bible_chapter_open } from "../../../love/public/src/app_bible_chapter_open.mjs";
 import { app_bible_books } from "../../../love/public/src/app_bible_books.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { list_previous_wrap } from "../../../love/public/src/list_previous_wrap.mjs";
@@ -59,8 +59,7 @@ export async function app_bible_home(context) {
   async function on_arrow(list_next_wrap) {
     let list = await ebible_chapter_codes(e);
     let next = list_next_wrap(list, chapter_code);
-    app_bible_chapter_set(hash, next);
-    app_generic_screen_set(context, app_bible_home);
+    app_bible_chapter_open(hash, next, context);
   }
   function lambda(v) {
     let verse_number_v = object_property_get(v, "verse_number");
