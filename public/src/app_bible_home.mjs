@@ -102,7 +102,8 @@ export async function app_bible_home(context) {
           ".htm",
       );
     }
-    let component5 = html_button(bottom, "Interlinear", lambda10);
+    const button_text = "Interlinear";
+    let component5 = html_button(bottom, button_text, lambda10);
     function toggle() {
       hidden = not(hidden);
       html_display_none_or_inline(hidden, bottom);
