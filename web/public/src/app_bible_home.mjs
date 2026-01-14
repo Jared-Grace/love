@@ -1,4 +1,4 @@
-import { html_style_size_square } from "../../../love/public/src/html_style_size_square.mjs";
+import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
@@ -76,7 +76,7 @@ export async function app_bible_home(context) {
     html_span_text(p, " ");
     let split = string_split_space(text);
     function lambda2(item) {
-      html_style_size_square(body, square_size);
+      html_style_set(b, style_key, style_value);
     }
     each(list2, lambda2);
   }
