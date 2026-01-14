@@ -1,3 +1,4 @@
+import { html_p } from "../../../love/public/src/html_p.mjs";
 import { app_bible_chapters } from "../../../love/public/src/app_bible_chapters.mjs";
 import { app_bible_chapter_open } from "../../../love/public/src/app_bible_chapter_open.mjs";
 import { app_bible_books } from "../../../love/public/src/app_bible_books.mjs";
@@ -9,7 +10,6 @@ import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { ebible_chapter_codes } from "../../../love/public/src/ebible_chapter_codes.mjs";
 import { emoji_arrow_right } from "../../../love/public/src/emoji_arrow_right.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
@@ -69,7 +69,7 @@ export async function app_bible_home(context) {
     let text = object_property_get(v, "text");
     function lambda7() {}
     let component5 = html_button(content, verse_number_v, lambda7);
-    let p = html_p_text(content, " " + text);
+    let p = html_p(content, " " + text);
   }
   each(verses, lambda);
 }
