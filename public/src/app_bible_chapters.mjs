@@ -1,3 +1,4 @@
+import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { ebible_chapter_codes } from "../../../love/public/src/ebible_chapter_codes.mjs";
@@ -7,4 +8,5 @@ export async function app_bible_chapters(context) {
   let root = html_clear_context(context);
   let e = ebible_folder_english();
   let list = await ebible_chapter_codes(e);
+  let hash = html_hash_object_get();
 }
