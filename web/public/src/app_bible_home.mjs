@@ -83,7 +83,7 @@ export async function app_bible_home(context) {
     let top = html_div(p);
     let bottom = html_div(p);
     let hidden = false;
-    toggle();
+    toggle();$a
     const folder = "interlinear/";
     const button_text = "Interlinear";
     biblehub_button_open(folder, verse_number_v, bottom, button_text);
