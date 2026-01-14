@@ -75,13 +75,14 @@ export async function app_bible_home(context) {
     let verse_number_v = object_property_get(v, "verse_number");
     let text = object_property_get(v, "text");
     let p = html_p(content);
-    let div = html_div(root2);
+    let top = html_div(p);
+    let bottom = html_div(p);
     function lambda7() {}
-    let verse_number_v_button = html_button(p, verse_number_v, lambda7);
+    let verse_number_v_button = html_button(top, verse_number_v, lambda7);
     let split = string_split_space(text);
     function lambda2(item) {
-      html_span_space(p);
-      let item_span = html_span_text(p, item);
+      html_span_space(top);
+      let item_span = html_span_text(top, item);
       function lambda9() {
         let letters_only = string_letters_only(item);
         window_open("https://www.google.com/search?q=define:" + letters_only);
