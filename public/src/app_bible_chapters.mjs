@@ -1,3 +1,4 @@
+import { app_bible_chapter_open } from "../../../love/public/src/app_bible_chapter_open.mjs";
 import { ebible_chapter_code_to_name } from "../../../love/public/src/ebible_chapter_code_to_name.mjs";
 import { list_map_prefix_without } from "../../../love/public/src/list_map_prefix_without.mjs";
 import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
@@ -32,7 +33,9 @@ export async function app_bible_chapters(context) {
   html_div_text_centered(root, book_name);
   function lambda(chapter_code) {
     let chapter_name = ebible_chapter_code_to_name(chapter_code);
-    function lambda3() {}
+    function lambda3() {
+      app_bible_chapter_open(hash, chapter_code, context);
+    }
     let component = html_button(root, chapter_name, lambda3);
   }
   each(chapter_codes, lambda);
