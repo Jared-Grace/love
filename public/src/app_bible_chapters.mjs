@@ -34,13 +34,13 @@ export async function app_bible_chapters(context) {
   let book_name = ebible_book_code_to_name(books, book_code);
   html_div_text_centered(root, book_name);
   let div = html_div(root);
-  html_centered(div2);
+  html_centered(div);
   function lambda(chapter_code) {
     let chapter_name = ebible_chapter_code_to_name(chapter_code);
     function lambda3() {
       app_bible_chapter_open(context, hash, chapter_code);
     }
-    let component = html_button(root, chapter_name, lambda3);
+    let component = html_button(div, chapter_name, lambda3);
   }
   each(chapter_codes, lambda);
   log({
