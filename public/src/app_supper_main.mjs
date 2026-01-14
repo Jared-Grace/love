@@ -1,3 +1,4 @@
+import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -21,6 +22,8 @@ export async function app_supper_main(context) {
     let n = not(v2);
     if (false) {
       let chapter_code = object_property_get(v, "chapter_code");
+      if (equal_not(left, right)) {
+      }
     }
     let text = object_property_get(v, "text");
     let reference = object_property_get(v, "reference");
