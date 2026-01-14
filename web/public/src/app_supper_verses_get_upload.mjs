@@ -11,5 +11,7 @@ export async function app_supper_verses_get_upload() {
   let e = ebible_folder_english();
   let without = app_prefix_without(app_supper);
   let destination = ebible_firebase_upload_path(e, without);
-  await firebase_upload_object_compressed(destination, verses);
+  await firebase_upload_object_compressed(destination, {
+    verses,
+  });
 }
