@@ -1,3 +1,4 @@
+import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { app_bible_chapters } from "../../../love/public/src/app_bible_chapters.mjs";
 import { app_bible_chapter_open } from "../../../love/public/src/app_bible_chapter_open.mjs";
@@ -68,8 +69,9 @@ export async function app_bible_home(context) {
     let verse_number_v = object_property_get(v, "verse_number");
     let text = object_property_get(v, "text");
     function lambda7() {}
-    let component5 = html_button(content, verse_number_v, lambda7);
     let p = html_p(content, " " + text);
+    let component5 = html_button(content, verse_number_v, lambda7);
+    html_text_set(component6, text4);
   }
   each(verses, lambda);
 }
