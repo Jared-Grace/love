@@ -5,7 +5,14 @@
   <title>search</title>
 </head>
 <body>
-  <script type="module"> 
+  <script type="importmap"> 
+    {
+ "imports": {
+  "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm"
+ }
+}
+  </script>
+<script type="module"> 
     let global = {};
     async function app_search_latest() {
   await app_main_latest("app_search_main", "jared-grace");
@@ -354,9 +361,15 @@ async function html_loading(lambda) {
     };
     html_style_assign(div, s);
   }
-  let result = await lambda();
-  if (b2) {
-    html_remove(div);
+  let result = null;
+  try {
+    result = await lambda();
+  } catch (e) {
+    throw e;
+  } finally {
+    if (b2) {
+      html_remove(div);
+    }
   }
   return result;
 }
@@ -379,10 +392,16 @@ function html_div(root) {
   return div;
 }
 async function http(url) {
-  let v = await http_generic(url, {
-    method: "GET"
-  });
+  marker("1");
+  let options = http_get_options();
+  let v = await http_generic(url, options);
   return v;
+}
+function http_get_options() {
+  let v2 = {
+    method: "GET"
+  };
+  return v2;
 }
 async function http_generic(url, options) {
   const method = options.method || "GET";
@@ -413,7 +432,14 @@ async function http_generic(url, options) {
     let v = await html_loading(lambda3);
     return v;
   }
-  await http_sleep();
+  let sleep = true;
+  let e = object_property_exists(options, "sleep");
+  if (e) {
+    sleep = object_property_get(options, "sleep");
+  }
+  if (sleep) {
+    await http_sleep();
+  }
   let h = null;
   let swHttps = string_starts_with(url, "https://");
   if (swHttps) {
@@ -432,7 +458,7 @@ async function http_generic(url, options) {
       let i = catch_call(reject, lambda2);
       res.on("data", i);
       function on_end() {
-        const {statusCode} = res;
+        let statusCode = object_property_get(res, "statusCode");
         const d = statusCode / 100;
         const rounded = round(d);
         assert_json(rounded === 2, {
@@ -445,12 +471,19 @@ async function http_generic(url, options) {
       let i2 = catch_call(reject, on_end);
       res.on("end", i2);
     }
-    const req = h.request({
+    const a = {
       hostname: urlObj.hostname,
+      port: urlObj.port || (swHttps ? 443 : 80),
       path: urlObj.pathname + urlObj.search,
       method,
-      headers: options.headers || ({})
-    }, lambda5);
+      headers: {
+        ...options.headers || ({}),
+        ...body ? {
+          "Content-Type": "application/json"
+        } : {}
+      }
+    };
+    const req = h.request(a, lambda5);
     req.on("error", reject);
     if (body) {
       let json = json_to(body);
@@ -459,6 +492,12 @@ async function http_generic(url, options) {
     req.end();
   }
   return buffer;
+}
+async function sleep(ms) {
+  await new Promise(function lambda5(resolve) {
+    let v = setTimeout(resolve, ms);
+    return v;
+  });
 }
 function object_property_exists(object, property_name) {
   const exists = object && Object.hasOwn(object, property_name);
@@ -540,12 +579,6 @@ function random() {
 function floor(p) {
   let floored = Math.floor(p);
   return floored;
-}
-async function sleep(ms) {
-  await new Promise(function lambda5(resolve) {
-    let v = setTimeout(resolve, ms);
-    return v;
-  });
 }
 async function firebase_bucket() {
   const admin = await firebase_admin();
@@ -670,6 +703,11 @@ async function file_read_json(file_path) {
   return data;
 }
 async function file_read(file_path) {
+  let exists = global_function_property_exists(file_read_cached, file_path);
+  if (exists) {
+    let c = await global_function_property_get(file_read_cached, file_path);
+    return c;
+  }
   if (browser_is()) {
     file_path = file_path_normalize(file_path);
     await app_a_file_system_initialize();
@@ -686,14 +724,77 @@ async function file_read(file_path) {
   let contents = await fs.promises.readFile(file_path, "utf-8");
   return contents;
 }
+function global_function_property_get(fn, property_name) {
+  marker("1");
+  let fn_object = global_function_initialize(fn, {});
+  let value = object_property_get(fn_object, property_name);
+  return value;
+}
+function global_function_initialize(fn, initial) {
+  marker("1");
+  assert_arguments(arguments, 2);
+  let value_get = lambda_get(initial);
+  let value = global_function_initialize_lambda(fn, value_get);
+  return value;
+}
+function global_function_initialize_lambda(fn, lambda) {
+  assert_arguments(arguments, 2);
+  let global = global_get();
+  let value = object_property_initialize_lambda(global, fn.name, lambda);
+  return value;
+}
+function lambda_get(value) {
+  function value_get() {
+    return value;
+  }
+  return value_get;
+}
+async function file_read_cached(f_path) {
+  marker("1");
+  let exists = global_function_property_exists(file_read_cached, f_path);
+  if (exists) {
+    let v2 = false;
+    return v2;
+  }
+  assert_not(exists);
+  let contents = await file_read(f_path);
+  global_function_property_set(file_read_cached, f_path, contents);
+  let v = true;
+  return v;
+}
+function assert_not(b) {
+  if (b) {
+    error();
+  }
+}
+function global_function_property_exists(fn, property_name) {
+  marker("1");
+  let fn_object = global_function_initialize_object(fn);
+  let exists = object_property_exists(fn_object, property_name);
+  return exists;
+}
+function global_function_initialize_object(fn) {
+  let value = global_function_initialize(fn, {});
+  return value;
+}
+function global_function_property_set(fn, property_name, value) {
+  marker("1");
+  let fn_object = global_function_initialize(fn, {});
+  object_property_set(fn_object, property_name, value);
+}
 async function json_decompress(compressed) {
   let json = await string_decompress(compressed);
   let text = json_from(json);
   return text;
 }
 async function string_decompress(compressed) {
-  const LZString = (await import("lz-string")).default;
-  let v = LZString.decompressFromUTF16(compressed);
+  let lz = null;
+  if (browser_is()) {
+    lz = (await import("lz-string")).default;
+  } else {
+    lz = LZString;
+  }
+  let v = lz.decompressFromUTF16(compressed);
   return v;
 }
 function list_last(list) {
@@ -916,46 +1017,6 @@ async function indexeddb_get_all_backend(db_get, store) {
   });
   return all;
 }
-function global_function_property_set(fn, property_name, value) {
-  marker("1");
-  let fn_object = global_function_initialize(fn, {});
-  object_property_set(fn_object, property_name, value);
-}
-function global_function_initialize(fn, initial) {
-  marker("1");
-  assert_arguments(arguments, 2);
-  let value_get = lambda_get(initial);
-  let value = global_function_initialize_lambda(fn, value_get);
-  return value;
-}
-function global_function_initialize_lambda(fn, lambda) {
-  assert_arguments(arguments, 2);
-  let global = global_get();
-  let value = object_property_initialize_lambda(global, fn.name, lambda);
-  return value;
-}
-function lambda_get(value) {
-  function value_get() {
-    return value;
-  }
-  return value_get;
-}
-function global_function_property_exists(fn, property_name) {
-  marker("1");
-  let fn_object = global_function_initialize_object(fn);
-  let exists = object_property_exists(fn_object, property_name);
-  return exists;
-}
-function global_function_initialize_object(fn) {
-  let value = global_function_initialize(fn, {});
-  return value;
-}
-function global_function_property_get(fn, property_name) {
-  marker("1");
-  let fn_object = global_function_initialize(fn, {});
-  let value = object_property_get(fn_object, property_name);
-  return value;
-}
 async function app_a_file_system_initialize() {
   let value = storage_local_exists(app_a, app_a_file_system_initialize.name);
   if (value) {
@@ -972,11 +1033,183 @@ async function app_a_file_system_initialize() {
 async function app_a_file_system_initialize_download() {
   let db = await app_a_indexeddb_initialize();
   let db_get = lambda_get(db);
-  let r = await app_api_fn(app_a_download, []);
+  let r = await app_api_fn({
+    fn: app_a_download
+  });
+  list_property_exists_not_error(r, "key");
   let dictionary = list_to_dictionary_property(r, "key");
   let store = app_a_file_system_store();
   await indexeddb_put_multiple(db_get, store, dictionary);
   storage_local_set(app_a, app_a_file_system_initialize.name, true);
+  let all = await indexeddb_get_all(db_get, store);
+  list_property_exists_not_error(all, "key");
+}
+async function app_api_fn(a) {
+  let fn = object_property_get(a, "fn");
+  let f_name = fn.name;
+  object_property_set_exists_not(a, "f_name", f_name);
+  let r = await app_api(a);
+  return r;
+}
+async function app_api(a) {
+  assert_arguments(arguments, 1);
+  let f_name = object_property_get(a, "f_name");
+  string_is_assert(f_name);
+  marker("1");
+  let fn_http = http_post_json;
+  object_property_set_exists_not(a, "fn_http", fn_http);
+  let result = await app_api_generic(a);
+  return result;
+}
+function object_property_set_exists_not(object, property_name, value) {
+  object_property_exists_not_assert(object, property_name);
+  object_property_set(object, property_name, value);
+}
+function object_property_exists_not_assert(object, property_name) {
+  marker("1");
+  let result = object_property_exists_not(object, property_name);
+  assert(result);
+}
+function object_property_exists_not(object, property_name) {
+  let result = object_property_exists(object, property_name);
+  let n = not(result);
+  return n;
+}
+function string_is_assert(value) {
+  let b = string_is(value);
+  assert(b);
+}
+function string_is(value) {
+  let si = typeof value === "string";
+  return si;
+}
+async function app_api_generic(a) {
+  assert_arguments(arguments, 1);
+  marker("1");
+  let f_name = object_property_get(a, "f_name");
+  let args = object_property_get(a, "args");
+  let fn_http = object_property_get(a, "fn_http");
+  var v = app_api_generic_url_body(f_name, args);
+  let body = object_property_get(v, "body");
+  let url = object_property_get(v, "url");
+  let o = await fn_http(url, body);
+  let result = object_property_get(o, "result");
+  return result;
+}
+function app_api_generic_url_body(f_name, args) {
+  let body = app_api_generic_f_name_args(f_name, args);
+  let url = server_url_get();
+  let v = {
+    url,
+    body
+  };
+  return v;
+}
+function server_url_get() {
+  let url = null;
+  if (browser_is()) {
+    url = "";
+  } else {
+    url = server_url();
+  }
+  url += server_url_api();
+  return url;
+}
+function server_url_api() {
+  let a = "/api";
+  return a;
+}
+function server_url() {
+  const port = server_port();
+  let url = "http://localhost:" + port;
+  return url;
+}
+function server_port() {
+  let v4 = 8080;
+  return v4;
+}
+function app_api_generic_f_name_args(f_name, args) {
+  let args_list = list_to(args);
+  let v2 = {
+    f_name: f_name,
+    args: args_list
+  };
+  return v2;
+}
+function list_to(a) {
+  let l = Array.from(a);
+  return l;
+}
+async function http_post_json(url, body) {
+  let buffer = await http_post(url, body);
+  let o = buffer_to_json(buffer);
+  return o;
+}
+async function http_post(url, body) {
+  const options_extra = {};
+  let v = await http_post_options(url, body, options_extra);
+  return v;
+}
+async function http_post_options(url, body, options_extra) {
+  marker("1");
+  const options = {
+    method: "POST",
+    body: body
+  };
+  object_merge(options, options_extra);
+  let v = await http_generic(url, options);
+  return v;
+}
+function object_merge(to, from) {
+  let strict = true;
+  object_merge_generic(strict, to, from);
+  return to;
+}
+function object_merge_generic(strict, to, from) {
+  function lambda(property_name) {
+    if (strict) {
+      if (object_property_exists(to, property_name)) {
+        error_json({
+          to,
+          from,
+          property_name
+        });
+      }
+    }
+    let value = object_property_get(from, property_name);
+    object_property_set(to, property_name, value);
+  }
+  let list = object_properties(from);
+  each(list, lambda);
+}
+function object_properties(obj) {
+  const properties = Object.getOwnPropertyNames(obj);
+  return properties;
+}
+function buffer_to_json(buffer) {
+  let text = buffer_string_to(buffer);
+  let parsed = json_from(text);
+  return parsed;
+}
+function list_property_exists_not_error(all, property) {
+  marker("1");
+  function lambda(item, index) {
+    let n = object_property_exists_not(item, property);
+    if (n) {
+      error({
+        index
+      });
+    }
+  }
+  each_index(all, lambda);
+}
+function each_index(list, lambda$item$index) {
+  let index = 0;
+  function lambda2(item) {
+    lambda$item$index(item, index);
+    index++;
+  }
+  each(list, lambda2);
 }
 function list_to_dictionary_property(list, property) {
   marker("1");
@@ -994,6 +1227,7 @@ function list_to_dictionary_key(list, lambda$item) {
   return dictionary;
 }
 function list_to_dictionary(list, lambda$item2v, lambda$item2k) {
+  "if each key has one value, then " + list_to_dictionary.name + " but if each key corresponds to a list of values, then " + list_to_lookup.name;
   marker("1");
   let dictionary = {};
   function lambda(item) {
@@ -1004,19 +1238,36 @@ function list_to_dictionary(list, lambda$item2v, lambda$item2k) {
   each(list, lambda);
   return dictionary;
 }
-function object_property_set_exists_not(object, property_name, value) {
-  object_property_exists_not_assert(object, property_name);
-  object_property_set(object, property_name, value);
-}
-function object_property_exists_not_assert(object, property_name) {
+function list_to_lookup(list, property_key) {
   marker("1");
-  let result = object_property_exists_not(object, property_name);
-  assert(result);
+  "if each key has one value, then " + list_to_dictionary.name + " but if each key corresponds to a list of values, then " + list_to_lookup.name;
+  let lookup = {};
+  function lambda(word) {
+    let n = object_property_exists_not(word, property_key);
+    if (n) {
+      return;
+    }
+    let v = object_property_get(word, property_key);
+    let verse_words = object_property_initialize_list(lookup, v);
+    list_add(verse_words, word);
+  }
+  each(list, lambda);
+  return lookup;
 }
-function object_property_exists_not(object, property_name) {
-  let result = object_property_exists(object, property_name);
-  let n = not(result);
-  return n;
+function list_add(list, item) {
+  list.push(item);
+}
+function object_property_initialize_list(object, property_name) {
+  let value2 = object_property_initialize(object, property_name, []);
+  return value2;
+}
+function object_property_initialize(object, property_name, value_initial) {
+  const exists = object_property_exists(object, property_name);
+  if (not(exists)) {
+    object_property_set(object, property_name, value_initial);
+  }
+  let value = object_property_get(object, property_name);
+  return value;
 }
 function identity(a) {
   return a;
@@ -1126,10 +1377,6 @@ function each_object(object, lambda$value$property) {
   let properties = object_properties(object);
   each(properties, lambda2);
 }
-function object_properties(obj) {
-  const properties = Object.getOwnPropertyNames(obj);
-  return properties;
-}
 function indexeddb_next(lambda_async) {
   let initial = promise_resolved();
   let previous = global_function_initialize(indexeddb_next, initial);
@@ -1195,6 +1442,7 @@ async function app_a_download() {
     return c;
   }
   let files = await list_map_unordered_async(filtered, lambda2);
+  list_property_exists_not_error(files, "key");
   return files;
 }
 async function json_compress_object(data) {
@@ -1213,28 +1461,6 @@ async function string_compress(text) {
   const LZString = (await import("lz-string")).default;
   let v = LZString.compressToUTF16(text);
   return v;
-}
-function object_merge(to, from) {
-  let strict = true;
-  object_merge_generic(strict, to, from);
-  return to;
-}
-function object_merge_generic(strict, to, from) {
-  function lambda(property_name) {
-    if (strict) {
-      if (object_property_exists(to, property_name)) {
-        error_json({
-          to,
-          from,
-          property_name
-        });
-      }
-    }
-    let value = object_property_get(from, property_name);
-    object_property_set(to, property_name, value);
-  }
-  let list = object_properties(from);
-  each(list, lambda);
 }
 async function list_map_unordered_async(list, lambda$item) {
   let mapped = list_map(list, lambda$item);
@@ -1369,72 +1595,6 @@ function html_extension() {
 function function_name_extension() {
   const ext = ".mjs";
   return ext;
-}
-async function app_api_fn(fn, args) {
-  marker("1");
-  let f_name = fn.name;
-  let r = await app_api(f_name, args);
-  return r;
-}
-async function app_api(f_name, args) {
-  string_is_assert(f_name);
-  marker("1");
-  let fn = http_post_json;
-  let result = await app_api_generic(f_name, args, fn);
-  return result;
-}
-function string_is_assert(value) {
-  let b = string_is(value);
-  assert(b);
-}
-function string_is(value) {
-  let si = typeof value === "string";
-  return si;
-}
-async function app_api_generic(f_name, args, fn) {
-  marker("1");
-  var {url, body} = app_api_generic_url_body(f_name, args);
-  let o = await fn(url, body);
-  let result = object_property_get(o, "result");
-  return result;
-}
-function app_api_generic_url_body(f_name, args) {
-  let body = app_api_generic_f_name_args(f_name, args);
-  const url = server_api_url();
-  let v = {
-    url,
-    body
-  };
-  return v;
-}
-function server_api_url() {
-  let a = "/api";
-  return a;
-}
-function app_api_generic_f_name_args(f_name, args) {
-  let args_list = list_to(args);
-  let v2 = {
-    f_name: f_name,
-    args: args_list
-  };
-  return v2;
-}
-function list_to(a) {
-  let l = Array.from(a);
-  return l;
-}
-async function http_post_json(url, body) {
-  let buffer = await http_generic(url, {
-    method: "POST",
-    body: body
-  });
-  let o = buffer_to_json(buffer);
-  return o;
-}
-function buffer_to_json(buffer) {
-  let text = buffer_string_to(buffer);
-  let parsed = json_from(text);
-  return parsed;
 }
 async function global_function_initialize_lambda_async(fn, lambda) {
   marker("1");
@@ -1584,14 +1744,6 @@ function global_function_property_initialize(fn, property_name, value_initial) {
   let value = object_property_initialize(fn_object, property_name, value_initial);
   return value;
 }
-function object_property_initialize(object, property_name, value_initial) {
-  const exists = object_property_exists(object, property_name);
-  if (not(exists)) {
-    object_property_set(object, property_name, value_initial);
-  }
-  let value = object_property_get(object, property_name);
-  return value;
-}
 function list_unique(list) {
   marker("1");
   let found = list_unique_set(list);
@@ -1699,19 +1851,8 @@ async function data_all(file_path) {
   let d_path = data_path();
   if (equal(file_path, d_path)) {
     await data_generate(data);
-    if (false) {
-      async function lambda2() {
-        await data_generate(data);
-        return data;
-      }
-      data = await global_function_property_initialize_async(data_all, d_path, lambda2);
-    }
   } else {
-    let exists = await file_exists(file_path);
-    if (not(exists)) {
-      let contents = json_format_to({});
-      await file_write(file_path, contents);
-    }
+    await data_all_initialize(file_path);
     data = await file_read_json(file_path);
   }
   let v = {
@@ -1723,15 +1864,16 @@ async function data_all(file_path) {
 async function data_generate(data) {
   let f_paths = await functions_paths();
   let parseds = await list_map_unordered_async(f_paths, file_js_parse);
-  async function lambda(parsed) {
+  function lambda(parsed) {
     data_file_update_inner(parsed, data);
   }
   each(parseds, lambda);
+  return;
 }
-async function data_file_update_inner(parsed, data) {
-  let {f_path} = parsed;
+function data_file_update_inner(parsed, data) {
+  let f_path = object_property_get(parsed, "f_path");
   let f_name = function_path_to_name(f_path);
-  let {ast} = parsed;
+  let ast = object_property_get(parsed, "ast");
   let functions = object_property_initialize(data, "functions", {});
   let f_this = object_property_initialize(functions, f_name, {});
   let declaration = js_declaration_single(ast);
@@ -1744,16 +1886,14 @@ async function data_file_update_inner(parsed, data) {
       list_add_if_not_includes(list, f_name);
     }
     each(items, identifier_add);
-    if (false) {
-      let items_old = object_property_initialize(f_this, property_name, []);
-      let removals = list_difference(items_old, items);
-      function lambda(item) {
-        let list = object_property_initialize(items_to_functions, item, []);
-        list_remove_all(list, f_name);
-        let e = list_empty_is(list);
-        if (e) {
-          object_property_delete(items_to_functions, item);
-        }
+    let items_old = object_property_initialize(f_this, property_name, []);
+    let removals = list_difference(items_old, items);
+    function lambda(item) {
+      let list = object_property_initialize(items_to_functions, item, []);
+      list_remove_all(list, f_name);
+      let e = list_empty_is(list);
+      if (e) {
+        object_property_delete(items_to_functions, item);
       }
       each(removals, lambda);
     }
@@ -1761,8 +1901,10 @@ async function data_file_update_inner(parsed, data) {
   }
   let f_identifiers_new = js_identifiers_names(ast);
   data_add("identifiers", f_identifiers_new);
+  let strings_new = js_strings(ast);
+  data_add("strings", strings_new);
   function lambda2(la) {
-    js_visit_calls_named(fn_name.name, lambda4, ast);
+    js_visit_calls_named(ast, fn_name.name, lambda4);
     function lambda4({args}) {
       let first = list_first(args);
       function lambda3() {
@@ -1779,30 +1921,46 @@ async function data_file_update_inner(parsed, data) {
   let identifiers_fn_names = list_adder(lambda2);
   data_add("identifiers_fn_names", identifiers_fn_names);
 }
-function list_adder(lambda$la) {
-  let fn = list_add;
-  let list = list_adder_generic(lambda$la, fn);
-  return list;
-}
-function list_adder_generic(lambda, fn) {
-  let list = [];
-  function list_adder_inner(item) {
-    fn(list, item);
-  }
-  lambda(list_adder_inner);
-  return list;
-}
-function list_add(list, item) {
-  list.push(item);
-}
-function js_literal_is_assert(node) {
+function js_strings(ast) {
   marker("1");
-  let li = js_literal_is(node);
-  assert(li);
+  function lambda2(la) {
+    function lambda(v) {
+      let node = object_property_get(v, "node");
+      let value = null;
+      function lambda5() {
+        let quasis = object_property_get(node, "quasis");
+        let s1 = list_size_1(quasis);
+        if (s1) {
+          let expressions = object_property_get(node, "expressions");
+          let e = list_empty_is(expressions);
+          if (e) {
+            let q = list_first(quasis);
+            let v2 = object_property_get(q, "value");
+            value = object_property_get(v2, "raw");
+          }
+        }
+      }
+      js_node_type_is_if(node, "TemplateLiteral", lambda5);
+      function lambda4() {
+        value = object_property_get(node, "value");
+      }
+      js_node_type_is_if(node, "Literal", lambda4);
+      let si2 = string_is(value);
+      if (si2) {
+        la(value);
+      }
+    }
+    js_visit_types(ast, ["Literal", "TemplateLiteral"], lambda);
+  }
+  const names = list_adder_unique(lambda2);
+  return names;
 }
-function js_literal_is(node) {
-  let li = js_node_type_is(node, "Literal");
-  return li;
+function js_node_type_is_if(node, type, lambda) {
+  marker("1");
+  let type_is = js_node_type_is(node, type);
+  if (type_is) {
+    lambda();
+  }
 }
 function js_node_type_is(node, type) {
   const type_is = js_node_is(node) && js_node_type(node) === type;
@@ -1816,23 +1974,23 @@ function js_node_type(n) {
   const nt = object_property_get(n, "type");
   return nt;
 }
-function js_visit_calls_named(f_name, lambda, ast) {
-  function lambda_inner(v) {
-    let {node} = v;
-    let name = js_call_callee_name(node);
-    if (equal_not(name, f_name)) {
-      return;
-    }
-    let args = object_property_get(node, "arguments");
-    lambda({
-      v,
-      args
-    });
-  }
-  js_visit_type(ast, "CallExpression", lambda_inner);
+function list_adder_unique(lambda$la) {
+  let items = list_adder(lambda$la);
+  let unique = list_unique(items);
+  return unique;
 }
-function js_visit_type(ast, type, lambda$v) {
-  js_visit_types(ast, [type], lambda$v);
+function list_adder(lambda$la) {
+  let fn = list_add;
+  let list = list_adder_generic(lambda$la, fn);
+  return list;
+}
+function list_adder_generic(lambda, fn) {
+  let list = [];
+  function list_adder_inner(item) {
+    fn(list, item);
+  }
+  lambda(list_adder_inner);
+  return list;
 }
 function js_visit_types(ast, types, lambda$v) {
   marker("1");
@@ -1920,6 +2078,34 @@ function js_visit_filter(n) {
   let v = js_node_is(n) || list_is(n);
   return v;
 }
+function js_literal_is_assert(node) {
+  marker("1");
+  let li = js_literal_is(node);
+  assert(li);
+}
+function js_literal_is(node) {
+  let li = js_node_type_is(node, "Literal");
+  return li;
+}
+function js_visit_calls_named(ast, f_name, lambda) {
+  marker("1");
+  function lambda_inner(v) {
+    let node = object_property_get(v, "node");
+    let name = js_call_callee_name(node);
+    if (equal_not(name, f_name)) {
+      return;
+    }
+    let args = object_property_get(node, "arguments");
+    lambda({
+      v,
+      args
+    });
+  }
+  js_visit_type(ast, "CallExpression", lambda_inner);
+}
+function js_visit_type(ast, type, lambda$v) {
+  js_visit_types(ast, [type], lambda$v);
+}
 function js_call_callee_name(expression) {
   let name = null;
   let jin2 = js_node_type_not_is(expression, "CallExpression");
@@ -1985,9 +2171,10 @@ function list_add_if_not_includes(list, item) {
   }
 }
 function js_identifiers_names(ast) {
+  marker("1");
   function lambda2(la) {
     function lambda(v) {
-      let {node} = v;
+      let node = object_property_get(v, "node");
       let value = object_property_get(node, "name");
       la(value);
     }
@@ -1995,11 +2182,6 @@ function js_identifiers_names(ast) {
   }
   const names = list_adder_unique(lambda2);
   return names;
-}
-function list_adder_unique(lambda$la) {
-  let items = list_adder(lambda$la);
-  let unique = list_unique(items);
-  return unique;
 }
 function function_path_to_name(f_path) {
   let f_name = path_name(f_path);
@@ -2072,9 +2254,9 @@ async function repos_paths_map_unordered_combine_squash(mapper) {
   let squashed = list_squash(result);
   return squashed;
 }
-function list_squash(list) {
+function list_squash(lists) {
   function lambda2(la) {
-    list_process(list);
+    list_process(lists);
     function list_process(list) {
       function lambda(item) {
         let l = list_is(item);
@@ -2173,22 +2355,93 @@ async function folder_read_files(path_folder) {
   return files;
 }
 function list_intersect(list, other) {
+  let r = list_intersect_multiple([list, other]);
+  return r;
+}
+function list_intersect_multiple(list) {
   marker("1");
-  let set = list_unique_set(other);
+  let fr = list_first_remaining(list);
+  let first = object_property_get(fr, "first");
+  let remaining = object_property_get(fr, "remaining");
+  let e = null_is(remaining);
+  if (e) {
+    let copy = list_copy(first);
+    return copy;
+  }
+  let uniques = list_map(remaining, list_unique_set);
   function lambda2(la) {
     function lambda(l) {
-      if (set_includes(set, l)) {
+      function lambda3(set) {
+        let v = set_includes(set, l);
+        return v;
+      }
+      let a = list_all(uniques, lambda3);
+      if (a) {
         la(l);
       }
     }
-    each(list, lambda);
+    each(first, lambda);
   }
   let i = list_adder(lambda2);
   return i;
 }
+function null_is(value) {
+  const n = value === null;
+  return n;
+}
+function list_all(list, lambda$item) {
+  let list2 = list_filter(list, lambda$item);
+  let a = list_size(list2) === list_size(list);
+  return a;
+}
+function list_first_remaining(list) {
+  const property_name = "remaining";
+  let value_get = list_skip_1;
+  let result = list_first_second_generic(list, value_get, property_name);
+  marker("1");
+  return result;
+}
+function list_first_second_generic(list, other_get, property_name_second) {
+  let property_name_first = "first";
+  let one_get = list_first;
+  let result = list_one_other(list, one_get, other_get, property_name_first, property_name_second);
+  return result;
+}
+function list_one_other(list, one_get, other_get, property_name_one, property_name_other) {
+  let one = null;
+  let other = null;
+  if (list_empty_not_is(list)) {
+    one = one_get(list);
+    if (list_multiple_is(list)) {
+      other = other_get(list);
+    }
+  }
+  let result = {
+    [property_name_one]: one,
+    [property_name_other]: other
+  };
+  return result;
+}
+function list_multiple_is(list) {
+  let m = list_size(list) >= 2;
+  return m;
+}
+function list_skip_1(list) {
+  let skipped = list_skip(list, 1);
+  return skipped;
+}
+function list_skip(list, skip_count) {
+  let b = list_size(list);
+  const skipped = list_slice(list, skip_count, b);
+  return skipped;
+}
+function list_slice(list, a, b) {
+  let sliced = list.slice(a, b);
+  return sliced;
+}
 function set_includes(set, item) {
-  let v = set.has(item);
-  return v;
+  let si = set.has(item);
+  return si;
 }
 function list_map_combine_left(list, left) {
   marker("1");
@@ -2224,12 +2477,33 @@ function function_name_to_base(f_name) {
   let f_name_ext = f_name + function_name_extension();
   return f_name_ext;
 }
-async function global_function_property_initialize_async(fn, property_name, lambda) {
-  let global = global_get();
+function data_path() {
+  let inner = "";
+  let d_path = data_path_generic(inner, "data");
+  return d_path;
+}
+function data_path_generic(suffix, f_name_unsuffixed) {
   marker("1");
-  let fn_object = object_property_initialize(global, fn.name, {});
-  let value = await object_property_initialize_lambda_async(fn_object, property_name, lambda);
-  return value;
+  const f_name = f_name_unsuffixed + suffix;
+  const folder = data_folder();
+  let f_path = file_name_json_folder(folder, f_name);
+  return f_path;
+}
+function data_folder() {
+  let d = "data";
+  return d;
+}
+function file_name_json_folder(folder, f_name) {
+  let joined = path_join([folder, f_name]);
+  let f_path = file_name_json(joined);
+  return f_path;
+}
+async function data_all_initialize(file_path) {
+  let exists = await file_exists(file_path);
+  if (not(exists)) {
+    let contents = json_format_to({});
+    await file_write(file_path, contents);
+  }
 }
 async function file_write(f_path, contents) {
   let overwrite = file_overwrite;
@@ -2268,8 +2542,9 @@ async function file_exists(file_path) {
 }
 async function indexeddb_exists(db_get, store, key) {
   marker("1");
-  let all = await indexeddb_get_all(db_get, store);
   const property = "key";
+  let all = await indexeddb_get_all(db_get, store);
+  list_property_exists_not_error(all, property);
   let s1 = list_find_property_exists(all, property, key);
   return s1;
   let exists = await indexeddb_exists_backend(db_get, store, key);
@@ -2313,6 +2588,15 @@ async function throws_not_async(lambda) {
   return success;
 }
 async function file_overwrite(file_path, contents) {
+  string_is_assert(contents);
+  let exists = global_function_property_exists(file_read_cached, file_path);
+  if (exists) {
+    global_function_property_set(file_read_cached, file_path, contents);
+    return;
+  }
+  await file_overwrite_uncached(file_path, contents);
+}
+async function file_overwrite_uncached(file_path, contents) {
   marker("1");
   if (browser_is()) {
     file_path = file_path_normalize(file_path);
@@ -2341,11 +2625,91 @@ async function file_overwrite(file_path, contents) {
     }
     let item = await indexeddb_put(app_a_indexeddb_initialize, store, file_path, value_get);
     return;
+  } else {
+    await file_parent_exists_ensure(file_path);
+    let fs = await import("fs");
+    await fs.promises.writeFile(file_path, contents, "utf-8");
   }
-  await file_parent_exists_ensure(file_path);
-  let fs = await import("fs");
-  await fs.promises.writeFile(file_path, contents, "utf-8");
+  await data_file_update(file_path);
   return;
+}
+async function data_file_update(f_path) {
+  return;
+  let f_names = await functions_names();
+  let f_name = function_path_to_name(f_path);
+  let n = list_includes_not(f_names, f_name);
+  if (n) {
+    return;
+  }
+  let d_path = data_path();
+  var d = await data_all(d_path);
+  let parsed = await file_js_parse(f_path);
+  await data_file_update_inner(parsed, d);
+  await data_save(d);
+  marker("1");
+  return;
+}
+async function functions_names() {
+  marker("1");
+  let f_names = await repos_paths_map_unordered_combine_squash(mapper);
+  async function mapper(joined) {
+    let f_names = await functions_names_from_path(joined);
+    return f_names;
+  }
+  return f_names;
+}
+async function data_save(a) {
+  let data = object_property_get(a, "data");
+  let file_path = object_property_get(a, "file_path");
+  await file_overwrite_json(file_path, data);
+}
+async function file_overwrite_json(file_path, object) {
+  if (browser_is()) {
+    let json = json_format_to(object);
+    await file_overwrite(file_path, json);
+    return;
+  }
+  "Using " + json_to.name + " did not work on sufficiently large object, whereas this did:";
+  let fs = await import("fs");
+  const v = await import("stream/promises");
+  let pipeline = object_property_get(v, "pipeline");
+  let streamJsonStringify = await (await import_install("stream-json-stringify")).default;
+  const out = fs.createWriteStream(file_path);
+  let json = streamJsonStringify(object);
+  await pipeline(json, out);
+}
+async function import_install(name) {
+  try {
+    let v = await import(name);
+    return v;
+  } catch (err) {
+    if (err.code === "ERR_MODULE_NOT_FOUND" || err.code === "MODULE_NOT_FOUND") {
+      await npm_install(name);
+      let v2 = await import(name);
+      return v2;
+    }
+    throw err;
+  }
+}
+async function npm_install(package_name) {
+  await command_line("npm install " + package_name + "@latest");
+}
+async function command_line(command) {
+  marker("1");
+  let extra = {};
+  const stdout = await command_line_generic(command, extra);
+  return stdout;
+}
+async function command_line_generic(command, extra) {
+  const {exec} = await import("child_process");
+  const {promisify} = await import("util");
+  const execAsync = promisify(exec);
+  const options = {
+    encoding: "utf8"
+  };
+  object_merge(options, extra);
+  const stdout = await execAsync(command, options);
+  return stdout;
 }
 function null_not_is(value) {
   marker("1");
@@ -2397,8 +2761,10 @@ async function indexeddb_put_backend(db_get, store, key, next) {
   });
 }
 function object_replace(to, from) {
-  object_properties_delete_all(to);
-  object_merge(to, from);
+  if (equal_not(to, from)) {
+    object_properties_delete_all(to);
+    object_merge(to, from);
+  }
 }
 function object_properties_delete_all(obj) {
   marker("1");
@@ -2454,27 +2820,6 @@ function string_empty_not_is(name) {
 function string_empty_is(s) {
   const e = s === "";
   return e;
-}
-function data_path() {
-  let inner = "";
-  let f_path = data_path_generic(inner, "data");
-  return f_path;
-}
-function data_path_generic(suffix, f_name_unsuffixed) {
-  marker("1");
-  const f_name = f_name_unsuffixed + suffix;
-  const folder = data_folder();
-  let f_path = file_name_json_folder(folder, f_name);
-  return f_path;
-}
-function data_folder() {
-  let d = "data";
-  return d;
-}
-function file_name_json_folder(folder, f_name) {
-  let joined = path_join([folder, f_name]);
-  let f_path = file_name_json(joined);
-  return f_path;
 }
 function user_repo_path() {
   const name = "user";
@@ -2581,10 +2926,6 @@ async function repos_paths_names_map_unordered(lambda$name$path) {
   let result = await list_map_unordered_async(all, lambda);
   return result;
 }
-function list_multiple_is(list) {
-  let m = list_size(list) >= 2;
-  return m;
-}
 function true_is(value) {
   let ti = equal(value, true);
   return ti;
@@ -2596,8 +2937,8 @@ function function_name_to_path(f_name) {
     });
   }
   let folder = functions_path();
-  let v = function_name_folder_to_path(f_name, folder);
-  return v;
+  let f_path = function_name_folder_to_path(f_name, folder);
+  return f_path;
 }
 function string_includes(input, part) {
   const o = {
@@ -2727,15 +3068,6 @@ function list_to_dictionary_value(list, lambda$item) {
   let key_get = identity;
   let dictionary = list_to_dictionary(list, lambda$item, key_get);
   return dictionary;
-}
-async function functions_names() {
-  marker("1");
-  let f_names = await repos_paths_map_unordered_combine_squash(mapper);
-  async function mapper(joined) {
-    let f_names = await functions_names_from_path(joined);
-    return f_names;
-  }
-  return f_names;
 }
 async function function_alias_add_generic(alias) {
   let unaliased = null;
