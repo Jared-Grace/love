@@ -79,14 +79,15 @@ export async function app_bible_home(context) {
     let p = html_p(content);
     let top = html_div(p);
     let bottom = html_div(p);
-    let hidden = true;
+    let hidden = false;
+    toggle();
     function lambda10() {}
     let component5 = html_button(bottom, "Interlinear", lambda10);
-    function lambda7() {
+    function toggle() {
       hidden = not(hidden);
       html_display_none_or_inline(hidden, bottom);
     }
-    let verse_number_v_button = html_button(top, verse_number_v, lambda7);
+    let verse_number_v_button = html_button(top, verse_number_v, toggle);
     let split = string_split_space(text);
     function lambda2(item) {
       html_span_space(top);
