@@ -84,6 +84,7 @@ export async function app_bible_home(context) {
     let bottom = html_div(p);
     let hidden = false;
     toggle();
+    const folder = "interlinear/";
     function lambda10() {
       let lower = string_lower_to(book_name);
       let replaced = string_replace_space_underscore(lower);
@@ -91,7 +92,8 @@ export async function app_bible_home(context) {
         replaced = "songs";
       }
       window_open(
-        "https://biblehub.com/interlinear/" +
+        "https://biblehub.com/" +
+          folder +
           replaced +
           "/" +
           chapter_name +
