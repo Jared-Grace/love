@@ -14,6 +14,7 @@ import { ebible_version_books } from "../../../love/public/src/ebible_version_bo
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { catch_ignore_async } from "./catch_ignore_async.mjs";
+import { invoke } from "./invoke.mjs";
 export async function ebible_references_parse_lines(bible_folders, lines) {
   let bible_folder = ebible_folder_english();
   let books_all = await list_map_unordered_async(
@@ -63,8 +64,7 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
     }
     await each_pair_async(book_names, chapter_verses_list, lambda);
   }
-  async function lambda3(item) {}
-  let waited = await list_map_unordered_async(list2, lambda3);
   let list = await list_adder_async(lambda2);
+  let waited = await list_map_unordered_async(list, invoke);
   return list;
 }
