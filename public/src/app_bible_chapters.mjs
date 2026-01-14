@@ -1,3 +1,4 @@
+import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -20,7 +21,8 @@ export async function app_bible_chapters(context) {
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let mapped = list_filter_prefix_without(list, book_code);
   let mapped2 = list_map(mapped, integer_to);
-  let book_name = ebible_book_code_to_name(books, book_code2);
+  let books = await ebible_version_books(e);
+  let book_name = ebible_book_code_to_name(books, book_code);
   log({
     mapped2,
   });
