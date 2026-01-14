@@ -1,3 +1,4 @@
+import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { string_replace_space_underscore } from "../../../love/public/src/string_replace_space_underscore.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
@@ -83,6 +84,7 @@ export async function app_bible_home(context) {
     let top = html_div(p);
     let bottom = html_div(p);
     html_centered(bottom);
+    html_width_full(component6);
     let hidden = false;
     toggle();
     biblehub_button_open("interlinear/", verse_number_v, bottom, "Interlinear");
