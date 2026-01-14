@@ -1,3 +1,4 @@
+import { window_open } from "../../../love/public/src/window_open.mjs";
 import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
 import { string_letters_only } from "../../../love/public/src/string_letters_only.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
@@ -81,6 +82,7 @@ export async function app_bible_home(context) {
       let item_span = html_span_text(p, item);
       function lambda9() {
         let letters = string_letters_only(item);
+        window_open(file_name);
       }
       html_on_pointerdown(item_span, lambda9);
     }
