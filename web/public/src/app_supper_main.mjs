@@ -16,10 +16,10 @@ export async function app_supper_main(context) {
   function lambda2(v) {
     let text = object_property_get(v, "text");
     let reference = object_property_get(v, "reference");
-    let component = html_p(root2);
-    let p = html_div_text_centered(root, reference);
-    html_font_color_set(p, "#aaa");
-    html_div_text(root, text);
+    let p = html_p(root);
+    let d = html_div_text_centered(p, reference);
+    html_font_color_set(d, "#aaa");
+    html_div_text(p, text);
   }
   each(list, lambda2);
 }
