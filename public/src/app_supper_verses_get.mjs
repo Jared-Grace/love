@@ -1,5 +1,7 @@
+import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
+import { firebase_storage_download_ebible } from "../../../love/public/src/firebase_storage_download_ebible.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 import { ebible_chapter_codes } from "../../../love/public/src/ebible_chapter_codes.mjs";
-import { firebase_storage_download_ebible_cache } from "../../../love/public/src/firebase_storage_download_ebible_cache.mjs";
 import { ebible_chapter_codes_upload_name } from "../../../love/public/src/ebible_chapter_codes_upload_name.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
@@ -9,10 +11,15 @@ export async function app_supper_verses_get() {
   let b = browser_is();
   if (b) {
     let file_name = ebible_chapter_codes_upload_name();
-    let value = await firebase_storage_download_ebible_cache(
+    marker("1");
+    async function get() {
+      let v = await firebase_storage_download_ebible(bible_folder, file_name);
+      return v;
+    }
+    let value = await global_function_property_initialize_async(
       ebible_chapter_codes,
       bible_folder,
-      file_name,
+      get,
     );
     return value;
   }
