@@ -78,7 +78,7 @@ export async function app_bible_home(context) {
     let split = string_split_space(text);
     function lambda2(item) {
       html_span_space(p);
-      html_span_text(p, item);
+      let item_span = html_span_text(p, item);
       let letters = string_letters_only(item);
       function lambda9() {}
       html_on_pointerdown(component6, lambda9);
