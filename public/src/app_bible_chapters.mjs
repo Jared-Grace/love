@@ -1,3 +1,4 @@
+import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_filter_prefix_without } from "../../../love/public/src/list_filter_prefix_without.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -17,9 +18,8 @@ export async function app_bible_chapters(context) {
   let chapter_code = object_property_get(hash, "c");
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let mapped = list_filter_prefix_without(list, book_code);
-  function lambda(item) {}
-  let mapped2 = list_map(list2, lambda);
+  let mapped2 = list_map(mapped, integer_to);
   log({
-    mapped,
+    mapped2,
   });
 }
