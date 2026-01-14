@@ -16,7 +16,7 @@ export async function app_supper_main(context) {
     let text = object_property_get(v, "text");
     let reference = object_property_get(v, "reference");
     let p = html_p_text(root, reference);
-    html_centered(div);
+    html_centered(p);
     html_font_color_set(p, "#aaa");
     html_p_text(root, text);
   }
