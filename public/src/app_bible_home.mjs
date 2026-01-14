@@ -1,3 +1,4 @@
+import { app_bible_chapters } from "../../../love/public/src/app_bible_chapters.mjs";
 import { app_bible_chapter_open } from "../../../love/public/src/app_bible_chapter_open.mjs";
 import { app_bible_books } from "../../../love/public/src/app_bible_books.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
@@ -48,7 +49,9 @@ export async function app_bible_home(context) {
     app_generic_screen_set(context, app_bible_books);
   }
   let component = html_button(bar, book_name, lambda5);
-  function lambda4() {}
+  function lambda4() {
+    app_generic_screen_set(context, app_bible_chapters);
+  }
   let component2 = html_button(bar, chapter_name, lambda4);
   let text2 = emoji_arrow_right();
   async function lambda3() {
