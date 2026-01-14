@@ -81,7 +81,9 @@ export async function app_bible_home(context) {
     let bottom = html_div(p);
     let hidden = false;
     toggle();
-    function lambda10() {}
+    function lambda10() {
+      window_open("https://www.google.com/search?q=define:" + letters_only);
+    }
     let component5 = html_button(bottom, "Interlinear", lambda10);
     function toggle() {
       hidden = not(hidden);
