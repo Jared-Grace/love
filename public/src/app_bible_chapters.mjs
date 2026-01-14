@@ -1,6 +1,5 @@
-import { list_map_prefix_without } from "../../../love/public/src/list_map_prefix_without.mjs";
+import { list_filter_prefix_without } from "../../../love/public/src/list_filter_prefix_without.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
@@ -16,8 +15,7 @@ export async function app_bible_chapters(context) {
   let hash = html_hash_object_get();
   let chapter_code = object_property_get(hash, "c");
   let book_code = ebible_chapter_code_to_book(chapter_code);
-  let filtered = list_filter_starts_with(list, book_code);
-  let mapped = list_map_prefix_without(filtered, book_code);
+  let mapped = list_filter_prefix_without(list, book_code);
   log({
     mapped,
   });
