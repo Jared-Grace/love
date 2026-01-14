@@ -1,4 +1,4 @@
-import { log } from "../../../love/public/src/log.mjs";
+import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { list_find_starts_with } from "../../../love/public/src/list_find_starts_with.mjs";
 import { apps_names } from "../../../love/public/src/apps_names.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -14,7 +14,9 @@ export async function app_name_main_get(a_name) {
     a_name = list_find_starts_with(mapped, a_name);
     f_name = app_name_main(a_name);
   }
-  log(message);
+  log_keep({
+    a_name,
+  });
   let r = {
     f_name,
     a_name,
