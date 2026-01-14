@@ -17,7 +17,9 @@ export async function app_supper_main(context) {
   let verses = await app_supper_verses_get();
   function lambda2(v) {
     let v2 = list_first_is(verses, v);
-    let n = not(b);
+    let n = not(v2);
+    if (false) {
+    }
     let text = object_property_get(v, "text");
     let reference = object_property_get(v, "reference");
     let p = html_p(root);
