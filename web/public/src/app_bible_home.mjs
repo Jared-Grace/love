@@ -87,7 +87,8 @@ export async function app_bible_home(context) {
     function lambda10() {
       let lower = string_lower_to(book_name);
       let replaced = string_replace_space_underscore(lower);
-      if (equal(left, right)) {
+      if (equal(replaced, "song")) {
+        replaced = "songs";
       }
       window_open(
         "https://biblehub.com/interlinear/" +
