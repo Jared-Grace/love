@@ -18,9 +18,9 @@ Acts 2:42
 Acts 20:7
 1 Corinthians 10:16-22
 1 Corinthians 11:17-34`;
-  let split = string_split_newline(list2);
+  let split = string_split_newline(references);
   let e = ebible_folder_english();
-  let list = await ebible_references_parse_lines([e], references);
+  let list = await ebible_references_parse_lines([e], split);
   log({
     list,
   });
