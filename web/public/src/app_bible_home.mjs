@@ -81,7 +81,7 @@ export async function app_bible_home(context) {
       let item_span = html_span_text(p, item);
       let letters = string_letters_only(item);
       function lambda9() {}
-      html_on_pointerdown(component6, lambda9);
+      html_on_pointerdown(item_span, lambda9);
     }
     each(list2, lambda2);
   }
