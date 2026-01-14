@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
@@ -16,4 +17,7 @@ Acts 20:7
 1 Corinthians 11:17-34`;
   let e = ebible_folder_english();
   let list = await ebible_references_parse_lines([e], references);
+  log({
+    list,
+  });
 }
