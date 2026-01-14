@@ -27,12 +27,13 @@ export async function app_supper_main(context) {
     html_div_text(p, text);
     let v2 = list_first_is(verses, v);
     let n = not(v2);
+    let chapter_code = object_property_get(v, "chapter_code");
     if (n) {
-      let chapter_code = object_property_get(v, "chapter_code");
       if (equal_not(chapter_code, previous_chapter_code)) {
         let component = html_element(root, "hr");
       }
     }
+    previous_chapter_code = chapter_code;
   }
   each(verses, lambda2);
 }
