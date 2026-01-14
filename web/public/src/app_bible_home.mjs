@@ -92,11 +92,11 @@ export async function app_bible_home(context) {
       }
       window_open(
         "https://biblehub.com/interlinear/" +
-          "psalms" +
+          replaced +
           "/" +
-          "1" +
+          chapter_name +
           "-" +
-          "1" +
+          verse_number_v +
           ".htm",
       );
     }
