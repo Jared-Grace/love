@@ -7,7 +7,7 @@ import { html_name_to_path_latest } from "./html_name_to_path_latest.mjs";
 export async function html_update_latest(name) {
   marker("1");
   ("todo: maybe rename staging everywhere to latest to be consistent with naming, one less name (staging not needed) to remember");
-  let v2 = await app_name_main_get(a_name);
+  let v2 = await app_name_main_get(name);
   name = object_property_get(v2, "a_name");
   let f_name = app_name_latest(name);
   let file_path = html_name_to_path_latest(name);
