@@ -82,7 +82,15 @@ export async function app_bible_home(context) {
     let hidden = false;
     toggle();
     function lambda10() {
-      window_open("https://www.google.com/search?q=define:" + letters_only);
+      window_open(
+        "https://biblehub.com/interlinear/" +
+          "psalms" +
+          "/" +
+          "1" +
+          "-" +
+          "1" +
+          ".htm",
+      );
     }
     let component5 = html_button(bottom, "Interlinear", lambda10);
     function toggle() {
