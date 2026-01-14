@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { string_replace_space_underscore } from "../../../love/public/src/string_replace_space_underscore.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -86,6 +87,8 @@ export async function app_bible_home(context) {
     function lambda10() {
       let lower = string_lower_to(book_name);
       let replaced = string_replace_space_underscore(lower);
+      if (equal(left, right)) {
+      }
       window_open(
         "https://biblehub.com/interlinear/" +
           "psalms" +
