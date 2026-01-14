@@ -69,9 +69,9 @@ export async function app_bible_home(context) {
     let verse_number_v = object_property_get(v, "verse_number");
     let text = object_property_get(v, "text");
     function lambda7() {}
-    let p = html_p(content, " " + text);
-    let component5 = html_button(content, verse_number_v, lambda7);
-    html_text_set(component6, text4);
+    let p = html_p(content);
+    let component5 = html_button(p, verse_number_v, lambda7);
+    html_text_set(p, " " + text);
   }
   each(verses, lambda);
 }
