@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { html_display_none_or_inline } from "../../../love/public/src/html_display_none_or_inline.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { window_open } from "../../../love/public/src/window_open.mjs";
@@ -78,10 +79,12 @@ export async function app_bible_home(context) {
     let p = html_p(content);
     let top = html_div(p);
     let bottom = html_div(p);
+    let hidden = true;
     function lambda10() {}
     let component5 = html_button(bottom, "Interlinear", lambda10);
     function lambda7() {
-      html_display_none_or_inline(hidden, item2);
+      hidden = not(hidden);
+      html_display_none_or_inline(hidden, bottom);
     }
     let verse_number_v_button = html_button(top, verse_number_v, lambda7);
     let split = string_split_space(text);
