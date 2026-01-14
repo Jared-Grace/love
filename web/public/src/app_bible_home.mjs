@@ -77,7 +77,8 @@ export async function app_bible_home(context) {
     let p = html_p(content);
     let top = html_div(p);
     let bottom = html_div(p);
-    let component5 = html_button(parent, text4, function lambda10() {});
+    function lambda10() {}
+    let component5 = html_button(parent, text4, lambda10);
     function lambda7() {}
     let verse_number_v_button = html_button(top, verse_number_v, lambda7);
     let split = string_split_space(text);
