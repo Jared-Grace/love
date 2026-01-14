@@ -20,6 +20,7 @@ export async function app_supper_main(context) {
     let v2 = list_first_is(verses, v);
     let n = not(v2);
     if (false) {
+      let chapter_code = object_property_get(v, "chapter_code");
     }
     let text = object_property_get(v, "text");
     let reference = object_property_get(v, "reference");
