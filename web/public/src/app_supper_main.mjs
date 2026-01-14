@@ -30,7 +30,7 @@ export async function app_supper_main(context) {
     if (n) {
       let chapter_code = object_property_get(v, "chapter_code");
       if (equal_not(chapter_code, previous_chapter_code)) {
-        let component = html_element(parent, tag_name);
+        let component = html_element(root, "hr");
       }
     }
   }
