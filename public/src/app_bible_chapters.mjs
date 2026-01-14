@@ -1,3 +1,4 @@
+import { html_button } from "../../../love/public/src/html_button.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
@@ -26,7 +27,9 @@ export async function app_bible_chapters(context) {
   let books = await ebible_version_books(e);
   let book_name = ebible_book_code_to_name(books, book_code);
   html_div_text_centered(root, book_name);
-  function lambda(item) {hb}
+  function lambda(item) {
+    let component = html_button(parent, text, function lambda3() {});
+  }
   each(list2, lambda);
   log({
     mapped2,
