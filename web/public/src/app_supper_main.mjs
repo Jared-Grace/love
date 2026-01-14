@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
@@ -16,7 +17,7 @@ export async function app_supper_main(context) {
   let verses = await app_supper_verses_get();
   function lambda2(v) {
     let v2 = list_first_is(verses, v);
-    no;
+    let n = not(b);
     let text = object_property_get(v, "text");
     let reference = object_property_get(v, "reference");
     let p = html_p(root);
