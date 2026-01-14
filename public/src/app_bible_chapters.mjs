@@ -17,7 +17,8 @@ export async function app_bible_chapters(context) {
   let chapter_code = object_property_get(hash, "c");
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let mapped = list_filter_prefix_without(list, book_code);
-  let mapped2 = list_map(list2, function lambda(item) {});
+  function lambda(item) {}
+  let mapped2 = list_map(list2, lambda);
   log({
     mapped,
   });
