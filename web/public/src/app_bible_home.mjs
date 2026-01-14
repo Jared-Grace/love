@@ -1,3 +1,4 @@
+import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { app_bible_chapters } from "../../../love/public/src/app_bible_chapters.mjs";
@@ -72,6 +73,7 @@ export async function app_bible_home(context) {
     let p = html_p(content);
     let component5 = html_button(p, verse_number_v, lambda7);
     html_span_text(p, " " + text);
+    let split = string_split_space(s);
   }
   each(verses, lambda);
 }
