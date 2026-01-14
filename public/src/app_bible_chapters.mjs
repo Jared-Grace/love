@@ -24,7 +24,7 @@ export async function app_bible_chapters(context) {
   let mapped2 = list_map(mapped, integer_to);
   let books = await ebible_version_books(e);
   let book_name = ebible_book_code_to_name(books, book_code);
-  html_div_text_centered(root2, text);
+  html_div_text_centered(root, book_name);
   log({
     mapped2,
   });
