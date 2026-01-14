@@ -1,3 +1,4 @@
+import { string_letters_only } from "../../../love/public/src/string_letters_only.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
@@ -77,6 +78,7 @@ export async function app_bible_home(context) {
     function lambda2(item) {
       html_span_space(p);
       html_span_text(p, item);
+      let letters = string_letters_only(str);
     }
     each(list2, lambda2);
   }
