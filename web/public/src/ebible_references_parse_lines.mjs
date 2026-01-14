@@ -65,7 +65,9 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
     let v3 = await catch_ignore_async(verse_get);
     return v3;
   }
-  log({});
   let waited = await list_map_unordered_async(list, lambda3);
+  log({
+    waited,
+  });
   return waited;
 }
