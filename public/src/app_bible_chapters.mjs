@@ -26,7 +26,7 @@ export async function app_bible_chapters(context) {
   let books = await ebible_version_books(e);
   let book_name = ebible_book_code_to_name(books, book_code);
   html_div_text_centered(root, book_name);
-  function lambda(item) {}
+  function lambda(item) {hb}
   each(list2, lambda);
   log({
     mapped2,
