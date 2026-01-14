@@ -38,8 +38,8 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
         let book2 = list_get(books, index);
         let book_name = object_property_get(book2, "text");
         async function lambda4(verse_number) {
-          await catch_ignore_async(lambda6);
-          async function lambda6() {
+          await catch_ignore_async(verse_get);
+          async function verse_get() {
             verse_number = string_to(verse_number);
             let result = await ebible_verse(
               bible_folder,
@@ -54,8 +54,8 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
             object_merge(result, {
               reference,
             });
-            la(result);
           }
+          la(verse_get);
         }
         await each_range_from_async(verse_start, verse_end, lambda4);
       }
