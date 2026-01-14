@@ -1,3 +1,5 @@
+import { list_map_prefix_without } from "../../../love/public/src/list_map_prefix_without.mjs";
+import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
@@ -5,7 +7,6 @@ import { ebible_version_books } from "../../../love/public/src/ebible_version_bo
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { list_filter_prefix_without } from "../../../love/public/src/list_filter_prefix_without.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -22,7 +23,8 @@ export async function app_bible_chapters(context) {
   let hash = html_hash_object_get();
   let chapter_code = object_property_get(hash, "c");
   let book_code = ebible_chapter_code_to_book(chapter_code);
-  let mapped = list_filter_prefix_without(chapter_codes, book_code);
+  let filtered = list_filter_starts_with(chapter_codes, book_code);
+  let mapped = list_map_prefix_without(filtered, book_code);
   let chapter_numbers = list_map(mapped, integer_to);
   let books = await ebible_version_books(e);
   let book_name = ebible_book_code_to_name(books, book_code);
