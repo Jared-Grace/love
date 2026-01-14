@@ -1,3 +1,4 @@
+import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { global_function_set } from "../../../love/public/src/global_function_set.mjs";
 import { ebible_verse_merge } from "../../../love/public/src/ebible_verse_merge.mjs";
@@ -17,7 +18,7 @@ export async function app_supper_main(context) {
     list,
   });
   function verse_get(bible_folder, chapter_code, verse_number) {
-    ateq;
+    equal_assert(left, right);
     let v2 = list_find_property(result, "bible_folder", bible_folder);
     let chapters = object_property_get(v2, "chapters");
     let v3 = list_find_property(chapters, "chapter_code", chapter_code);
