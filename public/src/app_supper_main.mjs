@@ -1,3 +1,4 @@
+import { html_element } from "../../../love/public/src/html_element.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
@@ -18,19 +19,20 @@ export async function app_supper_main(context) {
   let verses = await app_supper_verses_get();
   let previous_chapter_code = null;
   function lambda2(v) {
-    let v2 = list_first_is(verses, v);
-    let n = not(v2);
-    if (false) {
-      let chapter_code = object_property_get(v, "chapter_code");
-      if (equal_not(left, right)) {
-      }
-    }
     let text = object_property_get(v, "text");
     let reference = object_property_get(v, "reference");
     let p = html_p(root);
     let d = html_div_text_centered(p, reference);
     html_font_color_set(d, "#aaa");
     html_div_text(p, text);
+    let v2 = list_first_is(verses, v);
+    let n = not(v2);
+    if (n) {
+      let chapter_code = object_property_get(v, "chapter_code");
+      if (equal_not(chapter_code, previous_chapter_code)) {
+        let component = html_element(parent, tag_name);
+      }
+    }
   }
   each(verses, lambda2);
 }
