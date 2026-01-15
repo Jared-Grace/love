@@ -50,8 +50,8 @@ export async function sandbox() {
       return v;
     }
     let mapped = list_map(paths_videos, lambda4);
-    let joined2 = list_join_newline(mapped);
-    await file_overwrite(file_path2, contents2);
+    let contents2 = list_join_newline(mapped);
+    await file_overwrite(temp_path, contents2);
   }
   let result = await file_temp(lambda3);
   return paths_videos;
