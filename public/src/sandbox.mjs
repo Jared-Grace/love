@@ -1,4 +1,4 @@
-import { bible_audio_folder } from "../../../love/public/src/bible_audio_folder.mjs";
+import { bible_audio_folder_book_video } from "../../../love/public/src/bible_audio_folder_book_video.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_book_code_to_chapter_codes } from "../../../love/public/src/ebible_book_code_to_chapter_codes.mjs";
