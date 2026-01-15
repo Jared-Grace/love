@@ -7,6 +7,6 @@ export function list_find_starts_with(list, prefix) {
     let sw = string_starts_with(item2, prefix);
     return sw;
   }
-  let any = list_find(list, lambda2);
-  return any;
+  let found = list_find(list, lambda2);
+  return found;
 }

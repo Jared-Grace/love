@@ -36,7 +36,7 @@ export async function sandbox() {
     } catch (e) {
       let stderr = object_property_get(e, "stderr");
       let lines = string_split_newline(stderr);
-      let any = list_find_starts_with(list, prefix);
+      let found = list_find_starts_with(list, '  Duration: ');
       let v = log({
         lines,
       });
