@@ -40,10 +40,10 @@ export async function sandbox() {
       let stderr = object_property_get(e, "stderr");
       let lines = string_split_newline(stderr);
       const prefix = "  Duration: ";
-      let size = string_size(s);
+      let size = string_size(prefix);
       let found = list_find_starts_with(lines, prefix);
       let index = list_index_of(found, ",");
-      let taken = string_slice(found, index);
+      let taken = string_slice(found, size, index);
       let v = log({
         taken,
       });
