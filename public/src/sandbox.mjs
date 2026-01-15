@@ -52,6 +52,7 @@ export async function sandbox() {
   ];
   const bible_folder = "engwebu";
   const book_code = "TOB";
-  await each_async(list2, async function lambda(item) {});
+  async function lambda(item) {}
+  await each_async(list2, lambda);
   await ebible_book_video_generate(bible_folder, book_code);
 }
