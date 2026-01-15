@@ -12,7 +12,7 @@ export async function text_to_speech(args) {
     await file_write(temp_path, contents);
     const script_name = "kokoro";
     const c = py_script_run_cmd(script_name) + " " + temp_path;
-    const newLocmdal = "D:\\programs\\WPy64-312100\\python\\";
+    const cmd = "D:\\programs\\WPy64-312100\\python\\";
     let stdout = await command_line_cmd(c, newLocmdal);
     log({
       stdout,
