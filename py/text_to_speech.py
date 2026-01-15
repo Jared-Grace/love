@@ -40,7 +40,7 @@ def main():
         out_dir = Path(path_output)
         out_dir.mkdir(parents=True, exist_ok=True)
         with open(f"{path_output}/{i}.txt", "w", encoding="utf-8") as f:
-            f.write(f"{i}: {gs}\n")
+            f.write(gs)
         sf.write(f'{path_output}/{i}.wav', audio, 24000)
 
 if __name__ == "__main__":
