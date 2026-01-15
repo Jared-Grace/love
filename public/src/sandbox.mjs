@@ -48,7 +48,7 @@ export async function sandbox() {
   let paths_videos = await list_adder_async(lambda2);
   async function lambda3(temp_path) {
     let path_combined = path_join([folder_path, chapter_code]);
-    path_combined += +file_extension_mp4();
+    path_combined += file_extension_mp4();
     const n = await file_exists_not(path_combined);
     if (n) {
       function lambda4(item) {
