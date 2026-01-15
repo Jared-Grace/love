@@ -1,3 +1,5 @@
+import { folder_user } from "../../../love/public/src/folder_user.mjs";
+import { path_join } from "../../../love/public/src/path_join.mjs";
 import { file_temp } from "../../../love/public/src/file_temp.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -11,7 +13,10 @@ export async function sandbox() {
   let verses = await ebible_verses(bible_folder, chapter_code);
   let mapped = list_map_property(verses, "text");
   let text = list_join_space(mapped);
-  function lambda() {}
+  function lambda(temp_path) {
+    let folder = path_join(["audio", "bible", bible_folder, chapter_code]);
+    let f = folder_user(folder);
+  }
   let v2 = await file_temp(lambda);
   await text_to_speech({
     text: "test",
