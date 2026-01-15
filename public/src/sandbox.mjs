@@ -1,3 +1,4 @@
+import { string_split_newline } from "../../../love/public/src/string_split_newline.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { video_generate } from "../../../love/public/src/video_generate.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
@@ -27,8 +28,8 @@ export async function sandbox() {
     let joined_video = joined + ".mp4";
     let joined_audio = joined + ".wav";
     await video_generate(joined_image, joined_audio, joined_video);
-    ;
-    let stdout = await command_line(("ffmpeg -i 0.wav"));ssn
+    let stdout = await command_line("ffmpeg -i 0.wav");
+    let lines = string_split_newline(list);
   }
   await each_async(filtered, lambda);
   return files;
