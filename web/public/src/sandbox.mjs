@@ -23,8 +23,9 @@ export async function sandbox() {
     let joined = path_join([folder_path, sw]);
     let joined_image = joined + ".png";
     await image_generate(contents, joined);
-    let joined_video = joined + ".png";
-    await video_generate(path_image, path_audio, joined_video);
+    let joined_video = joined + ".mp4";
+    let joined_audio = joined + ".mp3";
+    await video_generate(joined_image, joined_audio, joined_video);
   }
   await each_async(filtered, lambda);
   return files;
