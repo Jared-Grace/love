@@ -1,3 +1,4 @@
+import { videos_join_if_exists_not } from "../../../love/public/src/videos_join_if_exists_not.mjs";
 import { bible_audio_folder_book_video } from "../../../love/public/src/bible_audio_folder_book_video.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -19,4 +20,5 @@ export async function sandbox() {
   }
   let path_videos = await list_map_async(chapter_codes, lambda);
   let path_video = bible_audio_folder_book_video(bible_folder, book_code);
+  await videos_join_if_exists_not(path_video, path_videos);
 }
