@@ -1,3 +1,4 @@
+import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { video_generate } from "../../../love/public/src/video_generate.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { string_suffix_without } from "../../../love/public/src/string_suffix_without.mjs";
@@ -16,6 +17,7 @@ export async function sandbox() {
   let files = await folder_read_files(folder_path);
   const suffix = ".txt";
   let filtered = list_filter_ends_with(files, suffix);
+  let list = await list_adder_async(async function lambda2(la) {});
   async function lambda(file_path) {
     let joined_text = path_join([folder_path, file_path]);
     let contents = await file_read(joined_text);
