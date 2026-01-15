@@ -43,7 +43,8 @@ export async function sandbox() {
   }
   let list = await list_adder_async(lambda2);
   async function lambda3(temp_path) {
-    let mapped = list_map(list2, function lambda4(item) {});
+    function lambda4(item) {}
+    let mapped = list_map(list2, lambda4);
   }
   let result = await file_temp(lambda3);
   return list;
