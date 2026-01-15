@@ -16,8 +16,8 @@ export async function sandbox() {
   const suffix = ".txt";
   let filtered = list_filter_ends_with(files, suffix);
   async function lambda(file_path) {
-    let joined2 = path_join(segments);
-    let contents = await file_read(file_path);
+    let joined2 = path_join([folder_path, file_path]);
+    let contents = await file_read(joined2);
     let sw = string_suffix_without(file_path, suffix);
     let joined = path_join([folder_path, sw]);
     joined += ".png";
