@@ -1,6 +1,5 @@
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
 import fs from "fs";
 export async function image_generate(text, path_output) {
