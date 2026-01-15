@@ -28,6 +28,7 @@ def main():
         sys.exit(1)
 
         text = data.get("text")
+    print(text)
     path_output = data.get("path_output")
     # Do something with the parsed JSON
     print("Parsed JSON:", data)
