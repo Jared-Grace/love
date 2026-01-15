@@ -17,8 +17,8 @@ export async function sandbox() {
     let folder = path_join(["audio", "bible", bible_folder, chapter_code]);
     let f = folder_user(folder);
     await text_to_speech({
-      text: "test",
-      path_output: "C:/test.wav",
+      text: text,
+      path_output: f,
     });
   }
   let v2 = await file_temp(lambda);
