@@ -41,6 +41,7 @@ export async function sandbox() {
     await each_async(filtered, lambda);
   }
   let list = await list_adder_async(lambda2);
-  let result = await file_temp(async function lambda3(temp_path) {});
+  async function lambda3(temp_path) {}
+  let result = await file_temp(lambda3);
   return list;
 }
