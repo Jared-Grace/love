@@ -1,3 +1,4 @@
+import { app_reply_called_why } from "../../../love/public/src/app_reply_called_why.mjs";
 import { app_reply_languages } from "../../../love/public/src/app_reply_languages.mjs";
 import { app_reply_response_languages } from "../../../love/public/src/app_reply_response_languages.mjs";
 import { app_reply_response_how_day } from "../../../love/public/src/app_reply_response_how_day.mjs";
@@ -77,6 +78,7 @@ export function app_reply_choices() {
   let how_family = app_reply_response_how_family();
   const how_day = app_reply_response_how_day();
   let languages = app_reply_response_languages();
+  const called_why = app_reply_call_why_generic("did", "");
   let v = [
     {
       text: emoji_pray() + " Amazing",
@@ -100,8 +102,8 @@ export function app_reply_choices() {
       response: app_reply_call_why_generic("do", "want "),
     },
     {
-      text: emoji_phone() + " Called why?",
-      response: app_reply_call_why_generic("did", ""),
+      text: app_reply_called_why(),
+      response: called_why,
     },
     {
       text: emoji_phone() + " Call no",
