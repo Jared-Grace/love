@@ -10,7 +10,7 @@ export async function sandbox() {
     bible_folder,
     book_code,
   );
-  async function lambda(item) {}
-  await each_async(list, lambda);
-  await ebible_chapter_videos_generate(bible_folder, chapter_code);
+  async function lambda(chapter_code) {
+  await ebible_chapter_videos_generate(bible_folder, chapter_code);}
+  await each_async(chapter_codes, lambda);
 }
