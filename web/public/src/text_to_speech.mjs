@@ -1,4 +1,4 @@
-import { command_line_cmd } from "../../../love/public/src/command_line_cmd.mjs";
+import { command_line } from "../../../love/public/src/command_line.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { file_write } from "../../../love/public/src/file_write.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
@@ -12,8 +12,7 @@ export async function text_to_speech(args) {
     await file_write(temp_path, contents);
     const script_name = "text_to_speech";
     const c = py_script_run_cmd(script_name) + " " + temp_path;
-    const cmd = "D:\\programs\\WPy64-312100\\python\\";
-    let stdout = await command_line_cmd(c, cmd);
+    let stdout = await command_line(c);
     log({
       stdout,
     });
