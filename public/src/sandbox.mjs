@@ -11,7 +11,8 @@ export async function sandbox() {
   let verses = await ebible_verses(bible_folder, chapter_code);
   let mapped = list_map_property(verses, "text");
   let text = list_join_space(mapped);
-  let v2 = await file_temp(() => {});
+  function lambda() {}
+  let v2 = await file_temp(lambda);
   await text_to_speech({
     text: "test",
     path_output: "C:/test.wav",
