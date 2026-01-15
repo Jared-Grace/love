@@ -13,6 +13,8 @@ ffmpeg -y
 -b:a 192k
 -pix_fmt yuv420p
 -shortest
+-fflags 
++shortest
 "${path_output}"
 `.replace(/\s+/g, " ");
   let stdout2 = await command_line(cmd);
