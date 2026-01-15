@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_book_code_to_chapter_codes } from "../../../love/public/src/ebible_book_code_to_chapter_codes.mjs";
 import { ebible_chapter_videos_generate } from "../../../love/public/src/ebible_chapter_videos_generate.mjs";
@@ -11,7 +12,8 @@ export async function sandbox() {
     book_code,
   );
   async function lambda(chapter_code) {
-    await ebible_chapter_videos_generate(bible_folder, chapter_code);
+    let v = await ebible_chapter_videos_generate(bible_folder, chapter_code);
+    let path_video = object_property_get(v, "path_video");
   }
   await each_async(chapter_codes, lambda);
 }
