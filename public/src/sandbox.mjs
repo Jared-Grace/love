@@ -43,12 +43,13 @@ export async function sandbox() {
       let size = string_size(prefix);
       let found = list_find_starts_with(lines, prefix);
       let index = list_index_of(found, ",");
-      let taken = string_slice(found, size, index);
-      let v = log({
-        taken,
-      });
+      let taken = null;
+      taken = string_slice(found, size, index);
       exit();
     }
+    let v = log({
+      taken,
+    });
     await video_generate(joined_image, joined_audio, joined_video);
   }
   await each_async(filtered, lambda);
