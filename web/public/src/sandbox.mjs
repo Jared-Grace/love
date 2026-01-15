@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { string_split_newline } from "../../../love/public/src/string_split_newline.mjs";
@@ -32,8 +33,9 @@ export async function sandbox() {
     try {
       let stdout = await command_line("ffmpeg -i " + joined_audio);
     } catch (e) {
+      let stderr2 = object_property_get(e, "stderr");
       let v = log({
-        e,
+        stderr,
       });
       exit();
     }
