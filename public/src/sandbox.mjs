@@ -22,7 +22,7 @@ export async function sandbox() {
     let sw = string_suffix_without(file_path, suffix);
     let joined = path_join([folder_path, sw]);
     let joined_image = joined + ".png";
-    await image_generate(contents, joined);
+    await image_generate(contents, joined_image);
     let joined_video = joined + ".mp4";
     let joined_audio = joined + ".mp3";
     await video_generate(joined_image, joined_audio, joined_video);
