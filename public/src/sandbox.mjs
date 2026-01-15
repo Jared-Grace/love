@@ -1,3 +1,4 @@
+import { bible_audio_folder } from "../../../love/public/src/bible_audio_folder.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_book_code_to_chapter_codes } from "../../../love/public/src/ebible_book_code_to_chapter_codes.mjs";
@@ -17,4 +18,5 @@ export async function sandbox() {
     return path_video;
   }
   let path_videos = await list_map_async(chapter_codes, lambda);
+  let folder_path = bible_audio_folder(bible_folder, book_code);
 }
