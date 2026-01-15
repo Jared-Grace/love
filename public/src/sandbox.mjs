@@ -38,11 +38,11 @@ export async function sandbox() {
     } catch (e) {
       let stderr = object_property_get(e, "stderr");
       let lines = string_split_newline(stderr);
-      let found = list_find_starts_with(list, "  Duration: ");
+      let found = list_find_starts_with(lines, "  Duration: ");
       let index = list_index_of(found, ",");
-      let taken = string_take(s, count);
+      let taken = string_take(found, index);
       let v = log({
-        lines,
+        taken,
       });
       exit();
     }
