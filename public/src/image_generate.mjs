@@ -4,14 +4,15 @@ import { log } from "../../../love/public/src/log.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
 import fs from "fs";
 export async function image_generate() {
+  const path_output = "output.png";
+  const TEXT =
+    "Blessed are the pure in heart, for they shall see God. " +
+    "Blessed are the peacemakers, for they shall be called sons of God.";
   let v2 = await import_install("canvas");
   let registerFont = object_property_get(v2, "registerFont");
   let createCanvas = object_property_get(v2, "createCanvas");
   const WIDTH = 1080;
   const HEIGHT = 1920;
-  const TEXT =
-    "Blessed are the pure in heart, for they shall see God. " +
-    "Blessed are the peacemakers, for they shall be called sons of God.";
   const BACKGROUND = "#000000";
   const TEXT_COLOR = "#ffffff";
   const FONT_FAMILY = "sans-serif";
@@ -72,6 +73,6 @@ export async function image_generate() {
   }
   lines.forEach(lambda);
   let v = canvas.toBuffer("image/png");
-  fs.writeFileSync("output.png", v);
+  fs.writeFileSync(path_output, v);
   console.log(`Done. Font size = ${FONT_SIZE}px`);
 }
