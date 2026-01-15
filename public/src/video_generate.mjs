@@ -2,6 +2,7 @@ import { command_line } from "../../../love/public/src/command_line.mjs";
 import { exec } from "child_process";
 import path from "path";
 export async function video_generate(path_image, path_audio, path_output) {
+    let d = await audio_duration(path_audio);
   const cmd = `
 ffmpeg -y
 -loop 1
@@ -13,6 +14,7 @@ ffmpeg -y
 -b:a 192k 
 -pix_fmt yuv420p 
 -shortest
+-t ${d}
 "${path_output}"
 `.replace(/\s+/g, " ");
   let stdout2 = await command_line(cmd);
