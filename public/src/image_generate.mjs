@@ -1,3 +1,4 @@
+import { file_parent_exists_ensure } from "../../../love/public/src/file_parent_exists_ensure.mjs";
 import { file_overwrite_buffer } from "../../../love/public/src/file_overwrite_buffer.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
@@ -69,5 +70,6 @@ export async function image_generate(text, path_output) {
   }
   lines.forEach(lambda);
   let v = canvas.toBuffer("image/png");
+  await file_parent_exists_ensure(path_output);
   await file_overwrite_buffer(path_output, v);
 }
