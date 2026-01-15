@@ -13,6 +13,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   marker("1");
   const newLocal = "D:\\programs\\WPy64-312100\\python\\";
+  const bible_folder = "engwebu";
   await ebible_chapters_each_verses_check(bible_folder);
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
   let list = await ebible_books_to_chapter_codes(books, bible_folder);
@@ -25,7 +26,6 @@ export async function sandbox() {
     });
   }
   return;
-  const bible_folder = "engwebu";
   const chapter_code = "SIR01";
   let verses = await ebible_verses(bible_folder, chapter_code);
   let mapped = list_map_property(verses, "text");
