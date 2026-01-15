@@ -34,13 +34,12 @@ export async function sandbox() {
       let stdout = await command_line("ffmpeg -i " + joined_audio);
     } catch (e) {
       let stderr = object_property_get(e, "stderr");
-      let lines2 = string_split_newline(list);
+      let lines = string_split_newline(stderr);
       let v = log({
-        stderr,
+        lines,
       });
       exit();
     }
-    let lines = string_split_newline(stdout);
     await video_generate(joined_image, joined_audio, joined_video);
   }
   await each_async(filtered, lambda);
