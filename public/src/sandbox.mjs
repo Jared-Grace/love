@@ -1,4 +1,4 @@
-import { string_starts_with } from "../../../love/public/src/string_starts_with.mjs";
+import { string_suffix_without } from "../../../love/public/src/string_suffix_without.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { list_filter_ends_with } from "../../../love/public/src/list_filter_ends_with.mjs";
@@ -16,7 +16,7 @@ export async function sandbox() {
   let filtered = list_filter_ends_with(list, suffix);
   async function lambda(file_path) {
     let contents = await file_read(file_path);
-    let sw = string_starts_with(s, prefix);
+    let sw = string_suffix_without(file_path, prefix);
   }
   await each_async(filtered, lambda);
   return files;
