@@ -9,33 +9,48 @@ export async function image_generate() {
   let createCanvas = object_property_get(v2, "createCanvas");
   const WIDTH = 1080;
   const HEIGHT = 1920;
-  const TEXT = "Blessed are the pure in heart,\nfor they shall see God.";
+  const TEXT =
+    "Blessed are the pure in heart, for they shall see God. " +
+    "Blessed are the peacemakers, for they shall be called sons of God.";
   const BACKGROUND = "#000000";
-  const TEXT_COLOR = "#FFFFFF";
+  const TEXT_COLOR = "#ffffff";
   const FONT_FAMILY = "sans-serif";
+  const PADDING = 120;
+  const MAX_WIDTH = WIDTH - PADDING * 2;
+  const MAX_HEIGHT = HEIGHT - PADDING * 2;
   const canvas = createCanvas(WIDTH, HEIGHT);
   const ctx = canvas.getContext("2d");
   ctx.fillStyle = BACKGROUND;
   ctx.fillRect(0, 0, WIDTH, HEIGHT);
-  const PADDING = 80;
-  const MAX_WIDTH = WIDTH - PADDING * 2;
-  const MAX_HEIGHT = HEIGHT - PADDING * 2;
-  function findMaxFontSize(text) {
+  function wrapText(text, fontSize) {
+    ctx.font = `${fontSize}px ${FONT_FAMILY}`;
+    const words = text.split(" ");
+    const lines = [];
+    let line = "";
+    for (const word of words) {
+      const test = line ? `${line} ${word}` : word;
+      if (ctx.measureText(test).width <= MAX_WIDTH) {
+        line = test;
+      } else {
+        lines.push(line);
+        line = word;
+      }
+    }
+    if (line) {
+      lines.push(line);
+    }
+    return lines;
+  }
+  function findMaxFontSize() {
     let low = 10;
     let high = 500;
     let best = low;
     while (low <= high) {
       const mid = Math.floor((low + high) / 2);
-      ctx.font = `${mid}px ${FONT_FAMILY}`;
-      const lines = text.split("\n");
-      const lineHeight = mid * 1.2;
+      const lines = wrapText(TEXT, mid);
+      const lineHeight = mid * 1.25;
       const totalHeight = lines.length * lineHeight;
-      function lambda(line) {
-        let v = ctx.measureText(line).width;
-        return v;
-      }
-      const maxLineWidth = Math.max(...lines.map(lambda));
-      if (maxLineWidth <= MAX_WIDTH && totalHeight <= MAX_HEIGHT) {
+      if (totalHeight <= MAX_HEIGHT) {
         best = mid;
         low = mid + 1;
       } else {
@@ -44,19 +59,19 @@ export async function image_generate() {
     }
     return best;
   }
-  const FONT_SIZE = findMaxFontSize(TEXT);
+  const FONT_SIZE = findMaxFontSize();
+  const lines = wrapText(TEXT, FONT_SIZE);
+  const lineHeight = FONT_SIZE * 1.25;
   ctx.font = `${FONT_SIZE}px ${FONT_FAMILY}`;
   ctx.fillStyle = TEXT_COLOR;
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  const lines = TEXT.split("\n");
-  const lineHeight = FONT_SIZE * 1.2;
   const startY = HEIGHT / 2 - ((lines.length - 1) * lineHeight) / 2;
-  function lambda2(line, i) {
+  function lambda(line, i) {
     ctx.fillText(line, WIDTH / 2, startY + i * lineHeight);
   }
-  lines.forEach(lambda2);
-  const buffer = canvas.toBuffer("image/png");
-  fs.writeFileSync("c:/output.png", buffer);
-  console.log(`Image created with font size: ${FONT_SIZE}px`);
+  lines.forEach(lambda);
+  let v = canvas.toBuffer("image/png");
+  fs.writeFileSync("output.png", v);
+  console.log(`Done. Font size = ${FONT_SIZE}px`);
 }
