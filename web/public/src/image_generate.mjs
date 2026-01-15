@@ -5,7 +5,7 @@ import { floor } from "../../../love/public/src/floor.mjs";
 import fs from "fs";
 export async function image_generate() {
   const path_output = "output.png";
-  const TEXT =
+  const text =
     "Blessed are the pure in heart, for they shall see God. " +
     "Blessed are the peacemakers, for they shall be called sons of God.";
   let v2 = await import_install("canvas");
@@ -48,7 +48,7 @@ export async function image_generate() {
     let best = low;
     while (low <= high) {
       const mid = Math.floor((low + high) / 2);
-      const lines = wrapText(TEXT, mid);
+      const lines = wrapText(text, mid);
       const lineHeight = mid * 1.25;
       const totalHeight = lines.length * lineHeight;
       if (totalHeight <= MAX_HEIGHT) {
@@ -61,7 +61,7 @@ export async function image_generate() {
     return best;
   }
   const FONT_SIZE = findMaxFontSize();
-  const lines = wrapText(TEXT, FONT_SIZE);
+  const lines = wrapText(text, FONT_SIZE);
   const lineHeight = FONT_SIZE * 1.25;
   ctx.font = `${FONT_SIZE}px ${FONT_FAMILY}`;
   ctx.fillStyle = TEXT_COLOR;
