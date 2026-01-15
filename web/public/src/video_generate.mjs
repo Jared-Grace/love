@@ -3,7 +3,6 @@ import { error } from "../../../love/public/src/error.mjs";
 import { exec } from "child_process";
 import path from "path";
 export function video_generate(path_image) {
-  const imagePath = "image.png";
   const audioPath = "audio.mp3";
   const outputPath = "output.mp4";
   const cmd = `
