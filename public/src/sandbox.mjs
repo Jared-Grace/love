@@ -1,3 +1,4 @@
+import { command_line } from "../../../love/public/src/command_line.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -52,6 +53,7 @@ export async function sandbox() {
     let mapped = list_map(paths_videos, lambda4);
     let contents2 = list_join_newline(mapped);
     await file_overwrite(temp_path, contents2);
+    let stdout = await command_line(command);
   }
   let result = await file_temp(lambda3);
   return paths_videos;
