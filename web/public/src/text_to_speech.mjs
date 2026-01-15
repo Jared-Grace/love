@@ -1,5 +1,5 @@
+import { command_line_cmd } from "../../../love/public/src/command_line_cmd.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { command_line } from "../../../love/public/src/command_line.mjs";
 import { file_write } from "../../../love/public/src/file_write.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { py_script_run_cmd } from "../../../love/public/src/py_script_run_cmd.mjs";
@@ -12,7 +12,8 @@ export async function text_to_speech(args) {
     await file_write(temp_path, contents);
     const script_name = "kokoro";
     const c = py_script_run_cmd(script_name) + " " + temp_path;
-    let stdout = await command_line(c);
+    const newLocal = "D:\\programs\\WPy64-312100\\python\\";
+    let stdout = await command_line_cmd(newLocal, c);
     log({
       stdout,
     });
