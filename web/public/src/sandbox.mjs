@@ -1,3 +1,4 @@
+import { command_line } from "../../../love/public/src/command_line.mjs";
 import { video_generate } from "../../../love/public/src/video_generate.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { string_suffix_without } from "../../../love/public/src/string_suffix_without.mjs";
@@ -27,6 +28,7 @@ export async function sandbox() {
     let joined_audio = joined + ".wav";
     await video_generate(joined_image, joined_audio, joined_video);
     ("ffmpeg -i 0.wav");
+    let stdout = await command_line(command);
   }
   await each_async(filtered, lambda);
   return files;
