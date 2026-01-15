@@ -6,8 +6,8 @@ export async function ebible_apocrypha_text_to_speech_chapter(
 ) {
   let verses = await ebible_verses(bible_folder, chapter_code);
   await ebible_apocrypha_text_to_speech_chapter_generic(
-    verses,
     bible_folder,
+    verses,
     chapter_code,
   );
 }
