@@ -23,10 +23,10 @@ export async function app_bible_chapters(context) {
   marker("1");
   let root = html_clear_context(context);
   let e = ebible_folder_english();
-  let chapter_codes_all = await ebible_chapter_codes(e);
   let hash = html_hash_object_get();
   let chapter_code = object_property_get(hash, "c");
   let book_code = ebible_chapter_code_to_book(chapter_code);
+  let chapter_codes_all = await ebible_chapter_codes(e);
   let chapter_codes = list_filter_starts_with(chapter_codes_all, book_code);
   let mapped = list_map_prefix_without(chapter_codes, book_code);
   let chapter_numbers = list_map(mapped, integer_to);
