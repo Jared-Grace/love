@@ -13,7 +13,8 @@ export async function sandbox() {
   );
   async function lambda(chapter_code) {
     let v = await ebible_chapter_videos_generate(bible_folder, chapter_code);
-    let path_video = object_property_get(v, "path_video");$r,path_video
+    let path_video = object_property_get(v, "path_video");
+    return path_video;
   }
   let path_videos = await list_map_async(chapter_codes, lambda);
 }
