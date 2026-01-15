@@ -33,7 +33,7 @@ export async function sandbox() {
     try {
       let stdout = await command_line("ffmpeg -i " + joined_audio);
     } catch (e) {
-      let stderr2 = object_property_get(e, "stderr");
+      let stderr = object_property_get(e, "stderr");
       let v = log({
         stderr,
       });
