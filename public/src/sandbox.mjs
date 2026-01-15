@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { list_filter_ends_with } from "../../../love/public/src/list_filter_ends_with.mjs";
 import { bible_audio_folder } from "../../../love/public/src/bible_audio_folder.mjs";
@@ -12,6 +13,7 @@ export async function sandbox() {
   let files = await folder_read_files(f);
   let filtered = list_filter_ends_with(list, ".txt");
   let contents = await file_read(file_path);
+  await each_async(list2, async function lambda(item) {});
   return files;
   await image_generate(text, path_output);
   return v;
