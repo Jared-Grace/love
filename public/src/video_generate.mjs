@@ -1,4 +1,30 @@
-import { marker } from "../../../love/public/src/marker.mjs";
+import { log } from "../../../love/public/src/log.mjs";
+import { error } from "../../../love/public/src/error.mjs";
+import { exec } from "child_process";
+import path from "path";
 export function video_generate() {
-  marker("1");
+  const imagePath = "image.png";
+  const audioPath = "audio.mp3";
+  const outputPath = "output.mp4";
+  const cmd = `
+ffmpeg -y
+-loop 1
+-i "${imagePath}"
+-i "${audioPath}"
+-c:v libx264
+-tune stillimage
+-c:a aac
+-b:a 192k
+-pix_fmt yuv420p
+-shortest
+"${outputPath}"
+`.replace(/\s+/g, " ");
+  function lambda(err, stdout, stderr) {
+    if (err) {
+      console.error("FFmpeg error:", err);
+      return;
+    }
+    console.log("Video created:", outputPath);
+  }
+  exec(cmd, lambda);
 }
