@@ -20,9 +20,9 @@ export async function sandbox() {
     let sw = string_suffix_without(file_path, suffix);
     let joined = path_join([folder_path, sw]);
     joined += ".png";
+    await image_generate(contents, joined);
   }
   await each_async(filtered, lambda);
   return files;
-  await image_generate(text, path_output);
   return v;
 }
