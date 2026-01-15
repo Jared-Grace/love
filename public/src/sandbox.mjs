@@ -34,6 +34,7 @@ export async function sandbox() {
     await image_generate(contents, joined_image);
     let joined_video = joined + ".mp4";
     let joined_audio = joined + ".wav";
+    let result = null;
     try {
       let stdout = await command_line("ffmpeg -i " + joined_audio);
     } catch (e) {
@@ -43,12 +44,11 @@ export async function sandbox() {
       let size = string_size(prefix);
       let found = list_find_starts_with(lines, prefix);
       let index = list_index_of(found, ",");
-      let taken = null;
-      taken = string_slice(found, size, index);
-      exit();
+      result = string_slice(found, size, index);
     }
+    exit();
     let v = log({
-      taken,
+      taken: result,
     });
     await video_generate(joined_image, joined_audio, joined_video);
   }
