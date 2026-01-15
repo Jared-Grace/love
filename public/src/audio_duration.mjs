@@ -17,7 +17,7 @@ export async function audio_duration(joined_audio) {
     let found = list_find_starts_with(lines, prefix);
     let index = list_index_of(found, ",");
     let d = string_slice(found, size, index);
-    duration_to_seconds(d);
+    result = duration_to_seconds(d);
   }
   function duration_to_seconds(duration_str) {
     let [h, m, s] = duration_str.split(":");
