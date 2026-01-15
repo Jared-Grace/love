@@ -10,6 +10,7 @@ export async function text_to_speech(args) {
   async function lambda(temp_path) {
     let contents = json_to(args);
     await file_write(temp_path, contents);
+    const script_name = "kokoro";
     const c = py_script_run_cmd(script_name) + " " + temp_path;
     let stdout = await command_line(c);
     log({
