@@ -12,8 +12,8 @@ export async function ebible_apocrypha_text_to_speech() {
   await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     await ebible_apocrypha_text_to_speech_chapter_generic(
-      verses,
       bible_folder,
+      verses,
       chapter_code,
     );
   }

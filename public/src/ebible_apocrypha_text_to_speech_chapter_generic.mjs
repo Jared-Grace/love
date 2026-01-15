@@ -4,8 +4,8 @@ import { bible_audio_folder } from "../../../love/public/src/bible_audio_folder.
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 export async function ebible_apocrypha_text_to_speech_chapter_generic(
-  verses,
   bible_folder,
+  verses,
   chapter_code,
 ) {
   marker("1");
