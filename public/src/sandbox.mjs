@@ -16,7 +16,7 @@ export async function sandbox() {
   let filtered = list_filter_ends_with(list, suffix);
   async function lambda(file_path) {
     let contents = await file_read(file_path);
-    let sw = string_suffix_without(file_path, prefix);
+    let sw = string_suffix_without(file_path, suffix);
   }
   await each_async(filtered, lambda);
   return files;
