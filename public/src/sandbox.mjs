@@ -29,5 +29,4 @@ export async function sandbox() {
   }
   await each_async(filtered, lambda);
   return files;
-  return v;
 }
