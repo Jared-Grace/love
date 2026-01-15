@@ -47,5 +47,8 @@ export async function ebible_chapter_videos_generate(
   if (n) {
     await videos_join(paths_videos, path_video);
   }
-  return {path_video};
+  let v = {
+    path_video,
+  };
+  return v;
 }
