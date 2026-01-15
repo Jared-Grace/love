@@ -35,6 +35,7 @@ export async function sandbox() {
     } catch (e) {
       let stderr = object_property_get(e, "stderr");
       let lines = string_split_newline(stderr);
+      lfdsw;
       let v = log({
         lines,
       });
