@@ -49,16 +49,22 @@ export async function sandbox() {
   async function lambda3(temp_path) {
     let path_combined = path_join([folder_path, chapter_code]);
     path_combined += +file_extension_mp4();
-    function lambda4(item) {
-      let v = "file '" + item + "'";
-      return v;
+    const n = await file_exists_not(path_combined);
+    if (n) {
+      function lambda4(item) {
+        let v = "file '" + item + "'";
+        return v;
+      }
+      let mapped = list_map(paths_videos, lambda4);
+      let contents2 = list_join_newline(mapped);
+      await file_overwrite(temp_path, contents2);
+      let stdout = await command_line(
+        "ffmpeg -f concat -safe 0 -i " +
+          temp_path +
+          " -c copy " +
+          path_combined,
+      );
     }
-    let mapped = list_map(paths_videos, lambda4);
-    let contents2 = list_join_newline(mapped);
-    await file_overwrite(temp_path, contents2);
-    let stdout = await command_line(
-      "ffmpeg -f concat -safe 0 -i " + temp_path + " -c copy " + path_combined,
-    );
   }
   let result = await file_temp(lambda3);
   return paths_videos;
