@@ -20,7 +20,13 @@ export async function sandbox() {
   await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     let mapped = list_map_property(verses, "text");
-    let joined = list_join_space(mapped);
+    let text = list_join_space(mapped);
+    let folder = path_join(["audio", "bible", bible_folder, chapter_code]);
+    let f = folder_user(folder);
+    await text_to_speech({
+      text: text,
+      path_output: f,
+    });
     log({
       chapter_code,
     });
@@ -30,10 +36,4 @@ export async function sandbox() {
   let verses = await ebible_verses(bible_folder, chapter_code);
   let mapped = list_map_property(verses, "text");
   let text = list_join_space(mapped);
-  let folder = path_join(["audio", "bible", bible_folder, chapter_code]);
-  let f = folder_user(folder);
-  await text_to_speech({
-    text: text,
-    path_output: f,
-  });
 }
