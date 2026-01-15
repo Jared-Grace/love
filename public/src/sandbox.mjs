@@ -11,7 +11,8 @@ export async function sandbox() {
   const chapter_code = "SIR01";
   let f = bible_audio_folder(bible_folder, chapter_code);
   let files = await folder_read_files(f);
-  let filtered = list_filter_ends_with(list, ".txt");
+  const suffix = ".txt";
+  let filtered = list_filter_ends_with(list, suffix);
   async function lambda(file_path) {
     let contents = await file_read(file_path);
   }
