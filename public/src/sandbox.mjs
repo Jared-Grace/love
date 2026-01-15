@@ -38,7 +38,7 @@ export async function sandbox() {
       let stderr = object_property_get(e, "stderr");
       let lines = string_split_newline(stderr);
       let found = list_find_starts_with(list, "  Duration: ");
-      let index = list_index_of(list2, item);
+      let index = list_index_of(list2, found);
       let v = log({
         lines,
       });
