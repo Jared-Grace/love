@@ -2,9 +2,9 @@ from kokoro import KPipeline
 from IPython.display import display, Audio
 import soundfile as sf
 import torch
-
-
+from pathlib import Path
 import sys
+sys.stdout.reconfigure(encoding="utf-8")
 import json
 
 pipeline = KPipeline(lang_code='a')
@@ -36,6 +36,8 @@ def main():
     for i, (gs, ps, audio) in enumerate(generator):
         print(i, gs, ps)
         display(Audio(data=audio, rate=24000, autoplay=i==0))
+        out_dir = Path(path_output)
+        out_dir.mkdir(parents=True, exist_ok=True)
         with open(f"{path_output}/{i}.txt", "w", encoding="utf-8") as f:
             f.write(f"{i}: {gs}\n")
         sf.write(f'{path_output}/{i}.wav', audio, 24000)
