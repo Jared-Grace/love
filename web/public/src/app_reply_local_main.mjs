@@ -11,6 +11,7 @@ export async function app_reply_local_main(context) {
   marker("1");
   let result = await app_api({
     f_name: ebible_languages_chapters.name,
+    args: [],
   });
   function verse_get(bible_folder, chapter_code, verse_number) {
     let v2 = list_find_property(result, "bible_folder", bible_folder);
