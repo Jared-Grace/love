@@ -27,8 +27,9 @@ export async function sandbox() {
       let joined_image = joined + ".png";
       const n = await file_exists_not(joined_image);
       if (n) {
+        await image_generate(contents, joined_image);
       }
-      await image_generate(contents, joined_image);
+      let n2 = await file_exists_not(joined_image2);
       let joined_video = joined + ".mp4";
       let joined_audio = joined + ".wav";
       await video_generate(joined_image, joined_audio, joined_video);
