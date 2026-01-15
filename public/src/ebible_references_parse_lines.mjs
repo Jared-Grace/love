@@ -15,6 +15,7 @@ import { ebible_version_books } from "../../../love/public/src/ebible_version_bo
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { catch_ignore_async } from "./catch_ignore_async.mjs";
+import { object_assign } from "./object_assign.mjs";
 export async function ebible_references_parse_lines(bible_folders, lines) {
   marker("1");
   let bible_folder = ebible_folder_english();
@@ -52,6 +53,8 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
             );
             object_merge(result, {
               reference,
+            });
+            object_assign(result, {
               chapter_code,
             });
             return result;
