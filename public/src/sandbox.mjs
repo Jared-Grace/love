@@ -67,5 +67,4 @@ export async function sandbox() {
     }
   }
   let result = await file_temp(lambda3);
-  return paths_videos;
 }
