@@ -49,7 +49,7 @@ export async function sandbox() {
       return v;
     }
     let mapped = list_map(paths_videos, lambda4);
-    let joined2 = list_join_newline(list);
+    let joined2 = list_join_newline(mapped);
   }
   let result = await file_temp(lambda3);
   return paths_videos;
