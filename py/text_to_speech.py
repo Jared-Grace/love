@@ -1,4 +1,4 @@
-from love.py.text_to_speech import KPipeline
+from kokoro import KPipeline
 from IPython.display import display, Audio
 import soundfile as sf
 import torch
