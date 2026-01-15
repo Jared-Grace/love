@@ -28,10 +28,13 @@ export async function sandbox() {
     await image_generate(contents, joined_image);
     let joined_video = joined + ".mp4";
     let joined_audio = joined + ".wav";
-    let stdout = await command_line("ffmpeg -i " + joined_audio);
-    let v = log({
-      lines,
-    });
+    try {
+      let stdout = await command_line("ffmpeg -i " + joined_audio);
+    } catch (e) {
+      let v = log({
+        e,
+      });
+    }
     let lines = string_split_newline(stdout);
     await video_generate(joined_image, joined_audio, joined_video);
   }
