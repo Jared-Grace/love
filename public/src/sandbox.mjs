@@ -18,7 +18,8 @@ export async function sandbox() {
   async function lambda(file_path) {
     let contents = await file_read(file_path);
     let sw = string_suffix_without(file_path, suffix);
-    let joined = path_join(segments);
+    let joined = path_join([folder_path, sw]);
+    joined += ".png";
   }
   await each_async(filtered, lambda);
   return files;
