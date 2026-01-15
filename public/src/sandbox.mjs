@@ -1,12 +1,6 @@
-import { string_slice } from "../../../love/public/src/string_slice.mjs";
-import { string_size } from "../../../love/public/src/string_size.mjs";
-import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
-import { list_find_starts_with } from "../../../love/public/src/list_find_starts_with.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { audio_duration } from "../../../love/public/src/audio_duration.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { string_split_newline } from "../../../love/public/src/string_split_newline.mjs";
-import { command_line } from "../../../love/public/src/command_line.mjs";
 import { video_generate } from "../../../love/public/src/video_generate.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { string_suffix_without } from "../../../love/public/src/string_suffix_without.mjs";
@@ -34,18 +28,7 @@ export async function sandbox() {
     await image_generate(contents, joined_image);
     let joined_video = joined + ".mp4";
     let joined_audio = joined + ".wav";
-    let result = null;
-    try {
-      let stdout = await command_line("ffmpeg -i " + joined_audio);
-    } catch (e) {
-      let stderr = object_property_get(e, "stderr");
-      let lines = string_split_newline(stderr);
-      const prefix = "  Duration: ";
-      let size = string_size(prefix);
-      let found = list_find_starts_with(lines, prefix);
-      let index = list_index_of(found, ",");
-      result = string_slice(found, size, index);
-    }
+    let result = await audio_duration(joined_audio);
     exit();
     let v = log({
       taken: result,
