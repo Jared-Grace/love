@@ -6,8 +6,8 @@ export async function sandbox() {
   const bible_folder = "engwebu";
   const book_code = "SIR";
   let chapter_codes = await ebible_book_code_to_chapter_codes(
-    bible_folder2,
-    book_code2,
+    bible_folder,
+    book_code,
   );
   await ebible_chapter_videos_generate(bible_folder, chapter_code);
 }
