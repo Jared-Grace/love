@@ -70,5 +70,4 @@ export async function image_generate(text, path_output) {
   lines.forEach(lambda);
   let v = canvas.toBuffer("image/png");
   fs.writeFileSync(path_output, v);
-  console.log(`Done. Font size = ${FONT_SIZE}px`);
 }
