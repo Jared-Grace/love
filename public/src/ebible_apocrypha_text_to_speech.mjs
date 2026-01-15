@@ -14,7 +14,8 @@ export async function ebible_apocrypha_text_to_speech() {
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
   let list = await ebible_books_to_chapter_codes(books, bible_folder);
   await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
-  async function each_chapter(chapter_code, verses) {
+  async function each_chapter(chapter_code) {
+    let verses = await ebible_verses(bible_folder, chapter_code);
     let mapped = list_map_property(verses, "text");
     let text = list_join_space(mapped);
     let f = bible_audio_folder(bible_folder, chapter_code);
