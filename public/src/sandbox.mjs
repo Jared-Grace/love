@@ -41,11 +41,13 @@ export async function sandbox() {
     }
     await each_async(filtered, lambda);
   }
-  let list = await list_adder_async(lambda2);
+  let paths_videos = await list_adder_async(lambda2);
   async function lambda3(temp_path) {
-    function lambda4(item) {}
-    let mapped = list_map(list2, lambda4);
+    function lambda4(item) {
+      return "file '" + item + "'";
+    }
+    let mapped = list_map(paths_videos, lambda4);
   }
   let result = await file_temp(lambda3);
-  return list;
+  return paths_videos;
 }
