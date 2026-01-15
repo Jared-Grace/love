@@ -4,7 +4,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function text_to_speech(args) {
   marker("1");
   async function lambda(temp_path) {
-    let v = py_script_run_cmd(script_name);
+    const c = py_script_run_cmd(script_name) + " " + temp_path;
   }
   let result = await file_temp(lambda);
 }
