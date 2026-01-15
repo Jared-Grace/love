@@ -13,7 +13,8 @@ export async function sandbox() {
   let files = await folder_read_files(f);
   let filtered = list_filter_ends_with(list, ".txt");
   let contents = await file_read(file_path);
-  await each_async(list2, async function lambda(item) {});
+  async function lambda(item) {}
+  await each_async(list2, lambda);
   return files;
   await image_generate(text, path_output);
   return v;
