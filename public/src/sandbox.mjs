@@ -1,4 +1,5 @@
-import { string_take } from "../../../love/public/src/string_take.mjs";
+import { string_slice } from "../../../love/public/src/string_slice.mjs";
+import { string_size } from "../../../love/public/src/string_size.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { list_find_starts_with } from "../../../love/public/src/list_find_starts_with.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -39,9 +40,10 @@ export async function sandbox() {
       let stderr = object_property_get(e, "stderr");
       let lines = string_split_newline(stderr);
       const prefix = "  Duration: ";
+      let size = string_size(s);
       let found = list_find_starts_with(lines, prefix);
       let index = list_index_of(found, ",");
-      let taken = string_take(found, index);
+      let taken = string_slice(found, index);
       let v = log({
         taken,
       });
