@@ -53,6 +53,6 @@ export function image_generate() {
   }
   lines.forEach(lambda2);
   const buffer = canvas.toBuffer("image/png");
-  fs.writeFileSync("output.png", buffer);
+  fs.writeFileSync("c:/output.png", buffer);
   console.log(`Image created with font size: ${FONT_SIZE}px`);
 }
