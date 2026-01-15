@@ -3,11 +3,7 @@ import { import_install } from "../../../love/public/src/import_install.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
 import fs from "fs";
-export async function image_generate() {
-  const path_output = "output.png";
-  const text =
-    "Blessed are the pure in heart, for they shall see God. " +
-    "Blessed are the peacemakers, for they shall be called sons of God.";
+export async function image_generate(text, path_output) {
   let v2 = await import_install("canvas");
   let registerFont = object_property_get(v2, "registerFont");
   let createCanvas = object_property_get(v2, "createCanvas");
