@@ -13,13 +13,13 @@ export async function sandbox() {
   let verses = await ebible_verses(bible_folder, chapter_code);
   let mapped = list_map_property(verses, "text");
   let text = list_join_space(mapped);
-  function lambda(temp_path) {
+  async function lambda(temp_path) {
     let folder = path_join(["audio", "bible", bible_folder, chapter_code]);
     let f = folder_user(folder);
+    await text_to_speech({
+      text: "test",
+      path_output: "C:/test.wav",
+    });
   }
   let v2 = await file_temp(lambda);
-  await text_to_speech({
-    text: "test",
-    path_output: "C:/test.wav",
-  });
 }
