@@ -17,8 +17,7 @@ export async function sandbox() {
   let files = await folder_read_files(folder_path);
   const suffix = ".txt";
   let filtered = list_filter_ends_with(files, suffix);
-  async function lambda2(la) {}
-  let list = await list_adder_async(lambda2);
+  async function lambda2(la) {
   async function lambda(file_path) {
     let joined_text = path_join([folder_path, file_path]);
     let contents = await file_read(joined_text);
@@ -30,6 +29,7 @@ export async function sandbox() {
     let joined_audio = joined + ".wav";
     await video_generate(joined_image, joined_audio, joined_video);
   }
-  await each_async(filtered, lambda);
+  await each_async(filtered, lambda);}
+  let list = await list_adder_async(lambda2);
   return files;
 }
