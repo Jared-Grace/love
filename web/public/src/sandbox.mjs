@@ -29,11 +29,11 @@ export async function sandbox() {
     let joined_video = joined + ".mp4";
     let joined_audio = joined + ".wav";
     let result = await audio_duration(joined_audio);
+    await video_generate(joined_image, joined_audio, joined_video);
     log({
       taken: result,
     });
     exit();
-    await video_generate(joined_image, joined_audio, joined_video);
   }
   await each_async(filtered, lambda);
   return files;
