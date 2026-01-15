@@ -26,6 +26,7 @@ export async function sandbox() {
     let joined_video = joined + ".mp4";
     let joined_audio = joined + ".wav";
     await video_generate(joined_image, joined_audio, joined_video);
+    ("ffmpeg -i 0.wav");
   }
   await each_async(filtered, lambda);
   return files;
