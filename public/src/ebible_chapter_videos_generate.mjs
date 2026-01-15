@@ -41,10 +41,11 @@ export async function ebible_chapter_videos_generate(
     await each_async(filtered, lambda);
   }
   let paths_videos = await list_adder_async(lambda2);
-  let path_combined = path_join([folder_path, chapter_code]);
-  path_combined += file_extension_mp4();
-  const n = await file_exists_not(path_combined);
+  let path_video = path_join([folder_path, chapter_code]);
+  path_video += file_extension_mp4();
+  const n = await file_exists_not(path_video);
   if (n) {
-    await videos_join(paths_videos, path_combined);
+    await videos_join(paths_videos, path_video);
   }
+  return path_video;
 }
