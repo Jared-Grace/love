@@ -1,4 +1,3 @@
-import { audio_duration } from "../../../love/public/src/audio_duration.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { video_generate } from "../../../love/public/src/video_generate.mjs";
@@ -28,7 +27,6 @@ export async function sandbox() {
     await image_generate(contents, joined_image);
     let joined_video = joined + ".mp4";
     let joined_audio = joined + ".wav";
-    let result = await audio_duration(joined_audio);
     await video_generate(joined_image, joined_audio, joined_video);
     log({
       taken: result,
