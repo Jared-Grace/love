@@ -9,7 +9,7 @@ export async function sandbox() {
   const chapter_code = "SIR01";
   let f = bible_audio_folder(bible_folder, chapter_code);
   let files = await folder_read_files(f);
-  let filtered = list_filter_ends_with(list, sufix);
+  let filtered = list_filter_ends_with(list, ".txt");
   return files;
   await image_generate(text, path_output);
   return v;
