@@ -27,6 +27,7 @@ export async function app_reply_verses_add(
     log({
       v,
       reference,
+      languages_chosen,
     });
     let text = object_property_get(v, "text");
     list_add(bible_texts, text);
