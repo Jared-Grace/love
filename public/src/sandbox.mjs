@@ -1,3 +1,4 @@
+import { video_generate } from "../../../love/public/src/video_generate.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { string_suffix_without } from "../../../love/public/src/string_suffix_without.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -22,6 +23,7 @@ export async function sandbox() {
     let joined = path_join([folder_path, sw]);
     joined += ".png";
     await image_generate(contents, joined);
+    await video_generate(path_image, path_audio, path_output);
   }
   await each_async(filtered, lambda);
   return files;
