@@ -47,6 +47,8 @@ export async function sandbox() {
   }
   let paths_videos = await list_adder_async(lambda2);
   async function lambda3(temp_path) {
+    let path_combined = path_join([folder_path, chapter_code]);
+    path_combined += +file_extension_mp4();
     function lambda4(item) {
       let v = "file '" + item + "'";
       return v;
@@ -54,8 +56,6 @@ export async function sandbox() {
     let mapped = list_map(paths_videos, lambda4);
     let contents2 = list_join_newline(mapped);
     await file_overwrite(temp_path, contents2);
-    let path_combined = path_join([folder_path, chapter_code]);
-    path_combined += +file_extension_mp4();
     let stdout = await command_line(
       "ffmpeg -f concat -safe 0 -i " + temp_path + " -c copy " + path_combined,
     );
