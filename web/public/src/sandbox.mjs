@@ -27,7 +27,7 @@ export async function sandbox() {
       let joined = path_join([folder_path, sw]);
       let joined_image = joined + ".png";
       let exists = await file_exists(joined_image);
-      if (not(b)) {
+      if (not(exists)) {
       }
       await image_generate(contents, joined_image);
       let joined_video = joined + ".mp4";
