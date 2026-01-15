@@ -9,5 +9,6 @@ export async function sandbox() {
     bible_folder,
     book_code,
   );
+  $ea;
   await ebible_chapter_videos_generate(bible_folder, chapter_code);
 }
