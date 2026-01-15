@@ -1,3 +1,4 @@
+import { file_extension_mp4 } from "../../../love/public/src/file_extension_mp4.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
@@ -34,7 +35,7 @@ export async function sandbox() {
       if (n) {
         await image_generate(contents, joined_image);
       }
-      let joined_video = joined + ".mp4";
+      let joined_video = joined + file_extension_mp4();
       let n2 = await file_exists_not(joined_video);
       if (n2) {
         let joined_audio = joined + ".wav";
@@ -53,9 +54,10 @@ export async function sandbox() {
     let mapped = list_map(paths_videos, lambda4);
     let contents2 = list_join_newline(mapped);
     await file_overwrite(temp_path, contents2);
-    let joined_text = path_join([folder_path, chapter_code]);
+    let path_combined = path_join([folder_path, chapter_code]);
+    path_combined += +file_extension_mp4();
     let stdout = await command_line(
-      "ffmpeg -f concat -safe 0 -i " + "videos.txt" + " -c copy ",
+      "ffmpeg -f concat -safe 0 -i " + temp_path + " -c copy " + path_combined,
     );
   }
   let result = await file_temp(lambda3);
