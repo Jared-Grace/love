@@ -1,3 +1,4 @@
+import { exit } from "../../../love/public/src/exit.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { string_split_newline } from "../../../love/public/src/string_split_newline.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
@@ -34,6 +35,7 @@ export async function sandbox() {
       let v = log({
         e,
       });
+      exit();
     }
     let lines = string_split_newline(stdout);
     await video_generate(joined_image, joined_audio, joined_video);
