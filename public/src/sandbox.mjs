@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_book_video_generate } from "../../../love/public/src/ebible_book_video_generate.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
@@ -51,5 +52,6 @@ export async function sandbox() {
   ];
   const bible_folder = "engwebu";
   const book_code = "TOB";
+  await each_async(list2, async function lambda(item) {});
   await ebible_book_video_generate(bible_folder, book_code);
 }
