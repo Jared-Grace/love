@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { ebible_chapters_each_verses_list } from "../../../love/public/src/ebible_chapters_each_verses_list.mjs";
 import { ebible_books_to_chapter_codes } from "../../../love/public/src/ebible_books_to_chapter_codes.mjs";
 import { ebible_version_books_testament_apocrypha } from "../../../love/public/src/ebible_version_books_testament_apocrypha.mjs";
@@ -26,9 +25,6 @@ export async function sandbox() {
     await text_to_speech({
       text: text,
       path_output: f,
-    });
-    log({
-      chapter_code,
     });
   }
   return;
