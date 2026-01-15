@@ -12,9 +12,10 @@ export async function sandbox() {
   let f = bible_audio_folder(bible_folder, chapter_code);
   let files = await folder_read_files(f);
   let filtered = list_filter_ends_with(list, ".txt");
-  let contents = await file_read(file_path);
-  async function lambda(item) {}
-  await each_async(list2, lambda);
+  async function lambda(file_path) {
+    let contents = await file_read(file_path);
+  }
+  await each_async(filtered, lambda);
   return files;
   await image_generate(text, path_output);
   return v;
