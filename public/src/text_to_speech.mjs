@@ -8,7 +8,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function text_to_speech(args) {
   marker("1");
   async function lambda(temp_path) {
-    let contents = json_to(o);
+    let contents = json_to(args);
     await file_write(temp_path, contents);
     const c = py_script_run_cmd(script_name) + " " + temp_path;
     let stdout = await command_line(c);
