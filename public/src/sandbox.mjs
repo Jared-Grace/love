@@ -1,5 +1,4 @@
 import { exit } from "../../../love/public/src/exit.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { video_generate } from "../../../love/public/src/video_generate.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { string_suffix_without } from "../../../love/public/src/string_suffix_without.mjs";
@@ -28,9 +27,6 @@ export async function sandbox() {
     let joined_video = joined + ".mp4";
     let joined_audio = joined + ".wav";
     await video_generate(joined_image, joined_audio, joined_video);
-    log({
-      taken: result,
-    });
     exit();
   }
   await each_async(filtered, lambda);
