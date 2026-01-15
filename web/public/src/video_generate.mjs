@@ -2,8 +2,7 @@ import { log } from "../../../love/public/src/log.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { exec } from "child_process";
 import path from "path";
-export function video_generate(path_image, path_audio) {
-  const outputPath = "output.mp4";
+export function video_generate(path_image, path_audio, path_output) {
   const cmd = `
 ffmpeg -y
 -loop 1
@@ -15,14 +14,14 @@ ffmpeg -y
 -b:a 192k
 -pix_fmt yuv420p
 -shortest
-"${outputPath}"
+"${path_output}"
 `.replace(/\s+/g, " ");
   function lambda(err, stdout, stderr) {
     if (err) {
       console.error("FFmpeg error:", err);
       return;
     }
-    console.log("Video created:", outputPath);
+    console.log("Video created:", path_output);
   }
   exec(cmd, lambda);
 }
