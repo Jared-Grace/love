@@ -31,9 +31,9 @@ export async function sandbox() {
       }
       let n2 = await file_exists_not(joined_image2);
       if (n2) {
-      let joined_video = joined + ".mp4";
-      let joined_audio = joined + ".wav";
-      await video_generate(joined_image, joined_audio, joined_video);
+        let joined_video = joined + ".mp4";
+        let joined_audio = joined + ".wav";
+        await video_generate(joined_image, joined_audio, joined_video);
       }
     }
     await each_async(filtered, lambda);
