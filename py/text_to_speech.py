@@ -18,16 +18,16 @@ def main():
 
     # Open and read the text file
     with open(file_name, "r", encoding="utf-8") as f:
-        text = f.read()
+        input = f.read()
 
     # Parse the file contents as JSON
     try:
-        data = json.loads(text)
+        data = json.loads(input)
     except json.JSONDecodeError as e:
         print(f"Error parsing JSON: {e}")
         sys.exit(1)
 
-        text = data.get("text")
+    text = data.get("text")
     print(text)
     path_output = data.get("path_output")
     # Do something with the parsed JSON
