@@ -28,7 +28,7 @@ def main():
         sys.exit(1)
 
         text = data.get("text")
-    output_path = data.get("output_path")
+    path_output = data.get("path_output")
     # Do something with the parsed JSON
     print("Parsed JSON:", data)
 
@@ -36,9 +36,9 @@ def main():
     for i, (gs, ps, audio) in enumerate(generator):
         print(i, gs, ps)
         display(Audio(data=audio, rate=24000, autoplay=i==0))
-        with open(f"{output_path}/{i}.txt", "w", encoding="utf-8") as f:
+        with open(f"{path_output}/{i}.txt", "w", encoding="utf-8") as f:
             f.write(f"{i}: {gs}\n")
-        sf.write(f'{output_path}/{i}.wav', audio, 24000)
+        sf.write(f'{path_output}/{i}.wav', audio, 24000)
 
 if __name__ == "__main__":
     main()
