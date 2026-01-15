@@ -1,4 +1,4 @@
-import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
+import { list_find_starts_with } from "../../../love/public/src/list_find_starts_with.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -36,7 +36,7 @@ export async function sandbox() {
     } catch (e) {
       let stderr = object_property_get(e, "stderr");
       let lines = string_split_newline(stderr);
-      let filtered2 = list_filter_starts_with(list, prefix);
+      let any = list_find_starts_with(list, prefix);
       let v = log({
         lines,
       });
