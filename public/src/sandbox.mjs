@@ -3,6 +3,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   marker("1");
   const bible_folder = "engwebu";
-  const book_code = "SIR";
+  const book_code = "TOB";
   await ebible_book_video_generate(bible_folder, book_code);
 }
