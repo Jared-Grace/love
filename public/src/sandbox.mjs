@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { file_exists_not } from "../../../love/public/src/file_exists_not.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { video_generate } from "../../../love/public/src/video_generate.mjs";
@@ -41,7 +42,9 @@ export async function sandbox() {
     await each_async(filtered, lambda);
   }
   let list = await list_adder_async(lambda2);
-  async function lambda3(temp_path) {}
+  async function lambda3(temp_path) {
+    let mapped = list_map(list2, function lambda4(item) {});
+  }
   let result = await file_temp(lambda3);
   return list;
 }
