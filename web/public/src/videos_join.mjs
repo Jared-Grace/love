@@ -1,3 +1,4 @@
+import { file_parent_exists_ensure } from "../../../love/public/src/file_parent_exists_ensure.mjs";
 import { file_temp } from "../../../love/public/src/file_temp.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
@@ -12,6 +13,7 @@ export async function videos_join(paths_videos, path_output) {
     let mapped = list_map(paths_videos, lambda4);
     let contents2 = list_join_newline(mapped);
     await file_overwrite(temp_path, contents2);
+    let result2 = await file_parent_exists_ensure(file_path);
     let stdout = await command_line(
       "ffmpeg -f concat -safe 0 -i " + temp_path + " -c copy " + path_output,
     );
