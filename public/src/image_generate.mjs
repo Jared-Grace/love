@@ -1,10 +1,12 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
-import { createCanvas, registerFont } from "canvas";
 import fs from "fs";
 export async function image_generate() {
-  await import_install(name);
+  let v2 = await import_install("canvas");
+  let registerFont = object_property_get(v2, "registerFont");
+  let createCanvas = object_property_get(v2, "createCanvas");
   const WIDTH = 1080;
   const HEIGHT = 1920;
   const TEXT = "Blessed are the pure in heart,\nfor they shall see God.";
