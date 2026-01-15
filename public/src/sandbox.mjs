@@ -1,3 +1,4 @@
+import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { file_exists_not } from "../../../love/public/src/file_exists_not.mjs";
@@ -49,7 +50,8 @@ export async function sandbox() {
       return v;
     }
     let mapped = list_map(paths_videos, lambda4);
-    let joined2 = list_join_newline(mapped);fo
+    let joined2 = list_join_newline(mapped);
+    await file_overwrite(file_path2, contents2);
   }
   let result = await file_temp(lambda3);
   return paths_videos;
