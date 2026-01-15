@@ -1,5 +1,4 @@
-import { not } from "../../../love/public/src/not.mjs";
-import { file_exists } from "../../../love/public/src/file_exists.mjs";
+import { file_exists_not } from "../../../love/public/src/file_exists_not.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { video_generate } from "../../../love/public/src/video_generate.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
@@ -26,8 +25,8 @@ export async function sandbox() {
       let sw = string_suffix_without(file_path, suffix);
       let joined = path_join([folder_path, sw]);
       let joined_image = joined + ".png";
-      let exists = await file_exists(joined_image);
-      if (not(exists)) {
+      const n = await file_exists_not(joined_image);
+      if (n) {
       }
       await image_generate(contents, joined_image);
       let joined_video = joined + ".mp4";
