@@ -1,4 +1,4 @@
-import { list_join } from "../../../love/public/src/list_join.mjs";
+import { path_join } from "../../../love/public/src/path_join.mjs";
 import { string_suffix_without } from "../../../love/public/src/string_suffix_without.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
@@ -18,7 +18,7 @@ export async function sandbox() {
   async function lambda(file_path) {
     let contents = await file_read(file_path);
     let sw = string_suffix_without(file_path, suffix);
-    let joined = list_join(list2, separator);
+    let joined = path_join(segments);
   }
   await each_async(filtered, lambda);
   return files;
