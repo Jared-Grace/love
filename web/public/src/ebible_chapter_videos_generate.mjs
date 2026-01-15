@@ -45,11 +45,11 @@ export async function ebible_chapter_videos_generate(
     await each_async(filtered, lambda);
   }
   let paths_videos = await list_adder_async(lambda2);
-  async function lambda3(temp_path) {
-    let path_combined = path_join([folder_path, chapter_code]);
-    path_combined += file_extension_mp4();
-    const n = await file_exists_not(path_combined);
-    if (n) {
+  let path_combined = path_join([folder_path, chapter_code]);
+  path_combined += file_extension_mp4();
+  const n = await file_exists_not(path_combined);
+  if (n) {
+    async function lambda3(temp_path) {
       function lambda4(item) {
         let v = "file '" + item + "'";
         return v;
@@ -64,6 +64,6 @@ export async function ebible_chapter_videos_generate(
           path_combined,
       );
     }
+    let result = await file_temp(lambda3);
   }
-  let result = await file_temp(lambda3);
 }
