@@ -1,6 +1,7 @@
-import { ebible_apocrypha_text_to_speech } from "../../../love/public/src/ebible_apocrypha_text_to_speech.mjs";
+import { image_generate } from "../../../love/public/src/image_generate.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
-  marker("1");image_generate
+  marker("1");
+  await image_generate(text, path_output);
   return v;
 }
