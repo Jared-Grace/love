@@ -53,7 +53,10 @@ export async function sandbox() {
     let mapped = list_map(paths_videos, lambda4);
     let contents2 = list_join_newline(mapped);
     await file_overwrite(temp_path, contents2);
-    let stdout = await command_line(command);
+    let joined_text = path_join([folder_path, chapter_code]);
+    let stdout = await command_line(
+      "ffmpeg -f concat -safe 0 -i " + "videos.txt" + " -c copy ",
+    );
   }
   let result = await file_temp(lambda3);
   return paths_videos;
