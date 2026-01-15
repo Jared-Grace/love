@@ -1,8 +1,10 @@
+import { import_install } from "../../../love/public/src/import_install.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
 import { createCanvas, registerFont } from "canvas";
 import fs from "fs";
-export function image_generate() {
+export async function image_generate() {
+  await import_install(name);
   const WIDTH = 1080;
   const HEIGHT = 1920;
   const TEXT = "Blessed are the pure in heart,\nfor they shall see God.";
