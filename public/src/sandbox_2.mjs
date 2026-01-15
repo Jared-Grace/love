@@ -4,5 +4,5 @@ export async function sandbox_2() {
   marker("1");
   const bible_folder = "engwebu";
   const chapter_code = "SIR01";
-  await ebible_apocrypha_text_to_speech_chapter(bible_folder2, chapter_code2);
+  await ebible_apocrypha_text_to_speech_chapter(bible_folder, chapter_code);
 }
