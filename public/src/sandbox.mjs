@@ -44,7 +44,8 @@ export async function sandbox() {
   let paths_videos = await list_adder_async(lambda2);
   async function lambda3(temp_path) {
     function lambda4(item) {
-      return "file '" + item + "'";
+      let v = "file '" + item + "'";
+      return v;
     }
     let mapped = list_map(paths_videos, lambda4);
   }
