@@ -33,7 +33,7 @@ def main():
     # Do something with the parsed JSON
     print("Parsed JSON:", data)
 
-    generator = pipeline(text, voice='am_adam')
+    generator = pipeline(text, voice='am_adam',speed=1)
     for i, (gs, ps, audio) in enumerate(generator):
         print(i, gs, ps)
         display(Audio(data=audio, rate=24000, autoplay=i==0))

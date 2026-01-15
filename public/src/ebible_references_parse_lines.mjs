@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
@@ -15,6 +16,7 @@ import { list_map_unordered_async } from "../../../love/public/src/list_map_unor
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { catch_ignore_async } from "./catch_ignore_async.mjs";
 export async function ebible_references_parse_lines(bible_folders, lines) {
+  marker("1");
   let bible_folder = ebible_folder_english();
   let books_all = await list_map_unordered_async(
     bible_folders,
