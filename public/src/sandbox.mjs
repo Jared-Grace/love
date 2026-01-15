@@ -17,13 +17,14 @@ export async function sandbox() {
   const suffix = ".txt";
   let filtered = list_filter_ends_with(files, suffix);
   async function lambda(file_path) {
-    let joined2 = path_join([folder_path, file_path]);
-    let contents = await file_read(joined2);
+    let joined_text = path_join([folder_path, file_path]);
+    let contents = await file_read(joined_text);
     let sw = string_suffix_without(file_path, suffix);
     let joined = path_join([folder_path, sw]);
-    joined += ".png";
+    let joined_image = joined + ".png";
     await image_generate(contents, joined);
-    await video_generate(path_image, path_audio, path_output);
+    let joined_video = joined + ".png";
+    await video_generate(path_image, path_audio, joined_video);
   }
   await each_async(filtered, lambda);
   return files;
