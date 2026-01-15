@@ -18,5 +18,5 @@ export async function sandbox() {
     return path_video;
   }
   let path_videos = await list_map_async(chapter_codes, lambda);
-  let folder_path = bible_audio_folder(bible_folder, book_code);
+  let path_video = bible_audio_folder_book_video(bible_folder, book_code);
 }
