@@ -1,3 +1,4 @@
+import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { list_find_starts_with } from "../../../love/public/src/list_find_starts_with.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
@@ -36,7 +37,8 @@ export async function sandbox() {
     } catch (e) {
       let stderr = object_property_get(e, "stderr");
       let lines = string_split_newline(stderr);
-      let found = list_find_starts_with(list, "  Duration: ");lio
+      let found = list_find_starts_with(list, "  Duration: ");
+      let index = list_index_of(list2, item);
       let v = log({
         lines,
       });
