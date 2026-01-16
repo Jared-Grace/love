@@ -35,6 +35,7 @@ import { html_hash_object_get } from "../../../love/public/src/html_hash_object_
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
+import { promise_resolved } from "./promise_resolved.mjs";
 export async function app_chapter_main(context) {
   marker("1");
   let root = html_mobile_default(context);
@@ -94,6 +95,7 @@ export async function app_chapter_main(context) {
         let update = object_property_get(v3, "update");
         let toggle = object_property_get(v3, "toggle");
         if (verse_number_v === verse_number) {
+          promise_resolved().then(() => {});
           await html_scroll_center_container_now(p, content);
           toggle();
           update();
