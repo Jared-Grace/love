@@ -1,5 +1,3 @@
-import { not } from "../../../love/public/src/not.mjs";
-import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { html_style_background_color_set_or_remove_list } from "../../../love/public/src/html_style_background_color_set_or_remove_list.mjs";
 import { list_replace_all } from "../../../love/public/src/list_replace_all.mjs";
 import { list_size_max_skip } from "../../../love/public/src/list_size_max_skip.mjs";
@@ -31,9 +29,7 @@ export function app_chapter_toggle_update(
       verse_numbers_chosen,
       verse_number,
     );
-    let m = list_multiple_is(verse_numbers_chosen);
-    let hidden = not(m);
-    on_update(multiple_is);
+    on_update();
   };
   let v3 = {
     toggle,
