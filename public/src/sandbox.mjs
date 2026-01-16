@@ -1,3 +1,4 @@
+import { videos_join_if_exists_not } from "../../../love/public/src/videos_join_if_exists_not.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { ebible_version_books_testament_apocrypha } from "../../../love/public/src/ebible_version_books_testament_apocrypha.mjs";
@@ -17,5 +18,6 @@ export async function sandbox() {
     await ebible_book_video_generate(bible_folder, book_code);
   }
   let m = await list_map_async(books, lambda);
-  let mapped = list_map_property(list, property_name);
+  let mapped = list_map_property(m, "path_video");
+  await videos_join_if_exists_not(path_video, mapped);
 }
