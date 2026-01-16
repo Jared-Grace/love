@@ -111,7 +111,7 @@ export async function app_chapter_main(context) {
     return v2;
   }
   let languages_verses_add = await list_map_async(languages_chosen, lambda2);
-  list_add_multiple(list, items);
+  list_add_multiple(languages_verses, languages_verses_add);
   async function copy() {
     list_sort_number_mapper(verse_numbers_chosen, integer_to);
     function lambda3(bv) {
