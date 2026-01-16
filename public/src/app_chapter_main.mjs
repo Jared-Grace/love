@@ -88,6 +88,7 @@ export async function app_chapter_main(context) {
           verse_numbers_chosen,
           verse_number_v,
           on_update,
+          chapter_code,
         );
         let update = object_property_get(v3, "update");
         let toggle = object_property_get(v3, "toggle");
