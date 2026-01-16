@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { file_parent_exists_ensure } from "../../../love/public/src/file_parent_exists_ensure.mjs";
 import { file_overwrite_buffer } from "../../../love/public/src/file_overwrite_buffer.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -5,6 +6,7 @@ import { import_install } from "../../../love/public/src/import_install.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
 import fs from "fs";
 export async function image_generate(text, path_output) {
+  marker("1");
   let v2 = await import_install("canvas");
   let registerFont = object_property_get(v2, "registerFont");
   let createCanvas = object_property_get(v2, "createCanvas");
