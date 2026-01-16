@@ -44,8 +44,8 @@ export function app_chapter_toggle_update(
       verse_numbers_chosen,
     });
     let max = app_chapter_chosen_max();
-    let copy2 = list_copy(original);
-    let copy = list_size_max_skip(verse_numbers_chosen, max);
+    let copy = list_copy(verse_numbers_chosen);
+    list_size_max_skip(copy, max);
     log({
       copy,
     });
