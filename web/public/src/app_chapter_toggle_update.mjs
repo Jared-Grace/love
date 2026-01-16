@@ -25,7 +25,6 @@ export function app_chapter_toggle_update(
   component_clicked,
   verse_numbers_chosen,
   verse_number,
-  on_update,
   chapter_code,
   languages_verses,
 ) {
