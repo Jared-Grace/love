@@ -29,7 +29,7 @@ export function app_chapter_toggle_update(
   languages_verses,
   languages_chosen,
 ) {
-  let l = list_last(languages_chosen);
+  let l = list_last(languages_verses);
   let verses = object_property_get(l, "verses");
   let verse_numbers = list_map_property(verses, "verse_number");
   marker("1");
