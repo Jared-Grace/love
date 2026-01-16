@@ -1,4 +1,4 @@
-import { folder_exists_ensure } from "../../../love/public/src/folder_exists_ensure.mjs";
+import { folder_read_files_exists_ensure } from "../../../love/public/src/folder_read_files_exists_ensure.mjs";
 import { bible_audio_folder_book_video_join } from "../../../love/public/src/bible_audio_folder_book_video_join.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -10,15 +10,13 @@ import { string_suffix_without } from "../../../love/public/src/string_suffix_wi
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { list_filter_ends_with } from "../../../love/public/src/list_filter_ends_with.mjs";
-import { folder_read_files } from "../../../love/public/src/folder_read_files.mjs";
 import { bible_audio_folder } from "../../../love/public/src/bible_audio_folder.mjs";
 export async function ebible_chapter_videos_generate(
   bible_folder,
   chapter_code,
 ) {
   let folder_path = bible_audio_folder(bible_folder, chapter_code);
-  await folder_exists_ensure(folder_path);
-  let files = await folder_read_files(folder_path);
+  let files = await folder_read_files_exists_ensure(folder_path);
   const suffix = ".txt";
   let filtered = list_filter_ends_with(files, suffix);
   async function lambda2(la) {
