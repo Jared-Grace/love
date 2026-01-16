@@ -1,3 +1,4 @@
+import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { list_first_last_slice } from "../../../love/public/src/list_first_last_slice.mjs";
 import { list_size_max_skip_replace } from "../../../love/public/src/list_size_max_skip_replace.mjs";
@@ -43,6 +44,7 @@ export function app_chapter_toggle_update(
     let sliced = null;
     let m = list_multiple_is(verse_numbers_chosen);
     if (m) {
+      let l = list_last(languages_chosen);
       let v = list_first_last_slice(verse_numbers_chosen, verse_numbers);
       sliced = object_property_get(v, "sliced");
       log({
