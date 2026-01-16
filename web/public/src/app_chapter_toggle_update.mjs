@@ -1,5 +1,4 @@
-import { not } from "../../../love/public/src/not.mjs";
-import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
+import { list_multiple_not_is } from "../../../love/public/src/list_multiple_not_is.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -56,9 +55,9 @@ export function app_chapter_toggle_update(
   };
   async function copy() {
     list_sort_number_mapper(verse_numbers_chosen, integer_to);
-    let m2 = list_multiple_is(list);
-    let n = not(m2);
-    if (false) {
+    let n = list_multiple_not_is();
+    if (n) {
+      return;
     }
     function lambda3(bv) {
       let books2 = object_property_get(bv, "books");
