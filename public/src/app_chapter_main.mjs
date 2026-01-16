@@ -57,6 +57,7 @@ export async function app_chapter_main(context) {
   let verse_number = object_property_get(hash, "v");
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
   let verse_numbers_chosen = [];
+  let languages_verses = null;
   async function lambda2(lc) {
     let bible_folder = ebible_language_to_bible_folder(lc);
     let verses = await ebible_verses(bible_folder, chapter_code);
@@ -108,7 +109,6 @@ export async function app_chapter_main(context) {
     };
     return v2;
   }
-  let languages_verses = null;
   languages_verses = await list_map_async(languages_chosen, lambda2);
   async function copy() {
     list_sort_number_mapper(verse_numbers_chosen, integer_to);
