@@ -33,7 +33,7 @@ export function app_chapter_toggle_update(
     );
     let m = list_multiple_is(verse_numbers_chosen);
     let hidden = not(m);
-    on_update();
+    on_update(multiple_is);
   };
   let v3 = {
     toggle,
