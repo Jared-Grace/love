@@ -97,7 +97,8 @@ export async function app_chapter_main(context) {
           update();
         }
         return update;
-        return {};
+        let v4 = {};
+        return v4;
       }
       let m = await list_map_async(verses, lambda);
     }
