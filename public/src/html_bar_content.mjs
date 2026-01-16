@@ -6,6 +6,7 @@ export function html_bar_content(root) {
     display: "flex",
     "flex-direction": "column",
     height: "100dvh",
+    "box-sizing": "border-box",
   });
   let bar = html_div(shell);
   html_style_assign(bar, {
