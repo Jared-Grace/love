@@ -1,5 +1,4 @@
-import { videos_join_if_exists_not } from "../../../love/public/src/videos_join_if_exists_not.mjs";
-import { bible_audio_folder_book_video } from "../../../love/public/src/bible_audio_folder_book_video.mjs";
+import { bible_audio_folder_book_video_join } from "../../../love/public/src/bible_audio_folder_book_video_join.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_chapter_videos_generate } from "../../../love/public/src/ebible_chapter_videos_generate.mjs";
@@ -14,9 +13,12 @@ export async function ebible_book_video_generate(bible_folder, book_code) {
     let path_video = object_property_get(v, "path_video");
     return path_video;
   }
-  let path_videos = await list_map_async(chapter_codes, lambda);
-  let path_video = bible_audio_folder_book_video(bible_folder, book_code);
-  await videos_join_if_exists_not(path_video, path_videos);
+  let paths_videos = await list_map_async(chapter_codes, lambda);
+  let path_video = await bible_audio_folder_book_video_join(
+    bible_folder,
+    book_code,
+    paths_videos,
+  );
   let v2 = {
     path_video,
   };
