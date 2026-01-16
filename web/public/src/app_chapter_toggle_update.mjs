@@ -47,7 +47,6 @@ export function app_chapter_toggle_update(
       verse_numbers_chosen,
       verse_number,
     );
-    on_update();
   };
   let v3 = {
     toggle,
