@@ -69,7 +69,7 @@ export async function app_chapter_main(context) {
         fl,
       );
       html_p_text(content, reference);
-      let updates = null;
+      let updates = [];
       async function lambda(v) {
         let verse_number_v = object_property_get(v, "verse_number");
         let text = object_property_get(v, "text");
