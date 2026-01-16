@@ -71,8 +71,8 @@ export function app_chapter_toggle_update(
       log({
         languages_verses,
       });
-      let n = list_multiple_is(verse_numbers_chosen);
-      if (n) {
+      let m = list_multiple_is(verse_numbers_chosen);
+      if (m) {
         return;
       } else {
       }
