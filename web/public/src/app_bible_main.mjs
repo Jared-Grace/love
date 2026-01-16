@@ -15,7 +15,7 @@ export async function app_bible_main(context) {
     screens,
   });
   firebase_name_jg();
-  html_stxle_margin_x(component, value);
-  html_mobile_default(context);
+  let root = html_mobile_default(context);
+  html_stxle_margin_x(root, "1dvw");
   app_generic_refresh(context);
 }
