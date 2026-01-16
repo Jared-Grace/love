@@ -47,8 +47,9 @@ export async function app_bible_home(context) {
   html_centered(bar);
   let e = ebible_folder_english();
   let hash = html_hash_object_get();
-  let n = object_property_exists_not(hash, "c");$s
-  let chapter_code = object_property_get(hash, "c");
+  let n = object_property_exists_not(hash, "c");
+  let chapter_code = null;
+  chapter_code = object_property_get(hash, "c");
   let v2 = ebible_chapter_code_parse(chapter_code);
   let chapter_name = object_property_get(v2, "chapter_name");
   let book_code = object_property_get(v2, "book_code");
