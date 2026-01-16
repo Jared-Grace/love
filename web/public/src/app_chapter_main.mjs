@@ -20,7 +20,6 @@ import { list_map_find_property } from "../../../love/public/src/list_map_find_p
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_slice_from } from "../../../love/public/src/list_slice_from.mjs";
-import { html_button_copy_width_full } from "../../../love/public/src/html_button_copy_width_full.mjs";
 import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -52,7 +51,6 @@ export async function app_chapter_main(context) {
       number_to_words(max) +
       " verses. That will copy all the verses in between (inclusive).",
   );
-  let cb = html_button_copy_width_full(bar, copy);
   let hash = html_hash_object_get();
   let chapter_code = object_property_get(hash, "c");
   let verse_number = object_property_get(hash, "v");
