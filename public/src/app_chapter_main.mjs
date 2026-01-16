@@ -95,7 +95,8 @@ export async function app_chapter_main(context) {
         let update = object_property_get(v3, "update");
         let toggle = object_property_get(v3, "toggle");
         if (verse_number_v === verse_number) {
-          promise_resolved().then(() => {});
+          function lambda4() {}
+          promise_resolved().then(lambda4);
           await html_scroll_center_container_now(p, content);
           toggle();
           update();
