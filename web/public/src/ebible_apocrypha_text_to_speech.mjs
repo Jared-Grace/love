@@ -13,11 +13,17 @@ export async function ebible_apocrypha_text_to_speech() {
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
   async function lambda(book) {
     let book_code = object_property_get(book, "book_code");
+    log({
+      book_code,
+    });
     let chapter_codes = await ebible_book_code_to_chapter_codes(
       bible_folder,
       book_code,
     );
     async function lambda2(chapter_code) {
+      log({
+        chapter_code,
+      });
       let verses = await ebible_verses(bible_folder, chapter_code);
       await ebible_text_to_speech_chapter_generic(
         bible_folder,
@@ -26,9 +32,6 @@ export async function ebible_apocrypha_text_to_speech() {
       );
     }
     await each_async(chapter_codes, lambda2);
-    log({
-      book_code,
-    });
   }
   await each_async(books, lambda);
   return;
