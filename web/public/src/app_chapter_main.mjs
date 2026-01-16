@@ -1,3 +1,4 @@
+import { app_chapter_chosen_max } from "../../../love/public/src/app_chapter_chosen_max.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
@@ -47,7 +48,7 @@ export async function app_chapter_main(context) {
   let content = object_property_get(bc, "content");
   let bar = object_property_get(bc, "bar");
   let t = html_button_copy_text();
-  let max = 2;
+  let max = app_chapter_chosen_max();
   let p2 = html_p_text(
     bar,
     "Choose " +
