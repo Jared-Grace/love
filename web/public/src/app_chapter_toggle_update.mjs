@@ -40,7 +40,8 @@ export function app_chapter_toggle_update(
   };
   let update = function lambda4() {
     let v = list_first_last_slice(verse_numbers_chosen, verse_numbers_chosen);
-    let sliced = object_property_get(v, "sliced");
+    let sliced = null;
+    sliced = object_property_get(v, "sliced");
     html_style_background_color_set_or_remove_list(
       component_clicked,
       sliced,
