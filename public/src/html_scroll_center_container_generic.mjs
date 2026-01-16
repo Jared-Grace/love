@@ -3,12 +3,12 @@ import { html_component_element_get } from "../../../love/public/src/html_compon
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_scroll_center_generic_wait } from "../../../love/public/src/html_scroll_center_generic_wait.mjs";
 export async function html_scroll_center_container_generic(
-  player_img_c,
+  component,
   behavior,
   container,
 ) {
   marker("1");
-  let e = await html_scroll_center_generic_wait(player_img_c);
+  let e = await html_scroll_center_generic_wait(component);
   let container_e = html_component_element_get(container);
   await html_request_animation_frame();
   const containerRect = container_e.getBoundingClientRect();
