@@ -1,4 +1,4 @@
-import { html_scroll_center_container_now } from "../../../love/public/src/html_scroll_center_container_now.mjs";
+import { html_scroll_center_now } from "../../../love/public/src/html_scroll_center_now.mjs";
 import { list_map_add_async } from "../../../love/public/src/list_map_add_async.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
@@ -96,7 +96,7 @@ export async function app_chapter_main(context) {
         let toggle = object_property_get(v3, "toggle");
         if (verse_number_v === verse_number) {
           async function lambda4() {
-            await html_scroll_center_container_now(p, content);
+            await html_scroll_center_now(p);
             toggle();
             update();
           }
