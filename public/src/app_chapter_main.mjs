@@ -105,7 +105,8 @@ export async function app_chapter_main(context) {
         return v4;
       }
       let m = await list_map_async(verses, lambda);
-      await each_async(list, async function lambda4(item) {});
+      async function lambda4(item) {}
+      await each_async(list, lambda4);
     }
     let v2 = {
       books,
