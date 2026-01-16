@@ -1,3 +1,4 @@
+import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
@@ -57,7 +58,7 @@ export async function app_chapter_main(context) {
   let verse_number = object_property_get(hash, "v");
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
   let verse_numbers_chosen = [];
-  let languages_verses = null;
+  let languages_verses = [];
   async function lambda2(lc) {
     let bible_folder = ebible_language_to_bible_folder(lc);
     let verses = await ebible_verses(bible_folder, chapter_code);
@@ -109,7 +110,8 @@ export async function app_chapter_main(context) {
     };
     return v2;
   }
-  languages_verses = await list_map_async(languages_chosen, lambda2);
+  let languages_verses_add = await list_map_async(languages_chosen, lambda2);
+  list_add_multiple(list, items);
   async function copy() {
     list_sort_number_mapper(verse_numbers_chosen, integer_to);
     function lambda3(bv) {
