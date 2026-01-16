@@ -1,3 +1,4 @@
+import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { app_bible } from "../../../love/public/src/app_bible.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
@@ -13,5 +14,6 @@ export async function app_bible_main(context) {
     screens,
   });
   firebase_name_jg();
+  html_mobile_default(context);
   app_generic_refresh(context);
 }
