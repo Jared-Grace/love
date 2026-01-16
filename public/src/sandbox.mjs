@@ -3,6 +3,7 @@ import { ebible_version_books_testament_apocrypha } from "../../../love/public/s
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   marker("1");
+  const bible_folder = "engwebu";
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
   let mapped = list_map_property(list, property_name);
 }
