@@ -68,7 +68,6 @@ export async function app_chapter_main(context) {
           p,
           verse_numbers_chosen,
           verse_number_v,
-          on_update,
           chapter_code,
           languages_verses,
         );
