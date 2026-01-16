@@ -5,7 +5,7 @@ export function html_bar_content(root) {
   html_style_assign(shell, {
     display: "flex",
     "flex-direction": "column",
-    height: "100dvh",
+    height: "100%",
   });
   let bar = html_div(shell);
   html_style_assign(bar, {
