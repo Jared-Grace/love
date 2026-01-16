@@ -1,7 +1,7 @@
+import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { ebible_version_books_testament_apocrypha } from "../../../love/public/src/ebible_version_books_testament_apocrypha.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_book_video_generate } from "../../../love/public/src/ebible_book_video_generate.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
@@ -15,5 +15,5 @@ export async function sandbox() {
     });
     await ebible_book_video_generate(bible_folder, book_code);
   }
-  await each_async(books, lambda);
+  await list_map_async(books, lambda);
 }
