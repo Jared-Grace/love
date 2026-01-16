@@ -1,3 +1,4 @@
+import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { string_replace_space_underscore } from "../../../love/public/src/string_replace_space_underscore.mjs";
@@ -33,11 +34,10 @@ import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
-import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_bible_home(context) {
   marker("1");
-    let root = html_clear_context(context);
+  let root = html_clear_context(context);
   html_clear(root);
   html_margin_0(root);
   let bc = html_bar_content(root);
