@@ -46,6 +46,7 @@ export function app_chapter_toggle_update(
       let v = list_first_last_slice(verse_numbers_chosen, verse_numbers_chosen);
       sliced = object_property_get(v, "sliced");
     } else {
+      sliced = verse_numbers_chosen;
     }
     html_style_background_color_set_or_remove_list(
       component_clicked,
