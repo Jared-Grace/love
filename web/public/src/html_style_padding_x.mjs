@@ -3,7 +3,7 @@ import { html_style_assign } from "../../../love/public/src/html_style_assign.mj
 export function html_style_padding_x(component, value) {
   marker("1");
   html_style_assign(component, {
-    "margin-left": value,
-    "margin-right": value,
+    "padding-left": value,
+    "padding-right": value,
   });
 }
