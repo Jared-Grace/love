@@ -12,6 +12,7 @@ export function app_chapter_toggle_update(
   verse_numbers_chosen,
   verse_number,
   on_update,
+  chapter_code,
 ) {
   marker("1");
   function choose() {
