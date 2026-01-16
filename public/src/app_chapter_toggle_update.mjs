@@ -73,7 +73,7 @@ export function app_chapter_toggle_update(
         languages_verses,
       });
       let n = list_multiple_not_is(verse_numbers_chosen);
-      if (n) {
+      if (n) {lf
         verse_numbers_chosen_normalized;
         return;
       }
