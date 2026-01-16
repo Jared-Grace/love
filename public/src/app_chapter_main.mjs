@@ -100,7 +100,7 @@ export async function app_chapter_main(context) {
         }
         return update;
       }
-      let m = await each_async(verses, lambda);
+      await each_async(verses, lambda);
     }
     let v2 = {
       books,
