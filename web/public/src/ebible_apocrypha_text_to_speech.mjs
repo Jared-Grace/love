@@ -4,8 +4,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { log } from "../../../love/public/src/log.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_text_to_speech_chapter_generic } from "../../../love/public/src/ebible_text_to_speech_chapter_generic.mjs";
-import { ebible_chapters_each_verses_list } from "../../../love/public/src/ebible_chapters_each_verses_list.mjs";
-import { ebible_books_to_chapter_codes } from "../../../love/public/src/ebible_books_to_chapter_codes.mjs";
 import { ebible_version_books_testament_apocrypha } from "../../../love/public/src/ebible_version_books_testament_apocrypha.mjs";
 import { ebible_chapters_each_verses_check } from "../../../love/public/src/ebible_chapters_each_verses_check.mjs";
 export async function ebible_apocrypha_text_to_speech() {
@@ -33,9 +31,5 @@ export async function ebible_apocrypha_text_to_speech() {
     });
   }
   await each_async(books, lambda);
-  return;
-  let list = await ebible_books_to_chapter_codes(books, bible_folder);
-  await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
-  async function each_chapter(chapter_code, verses) {}
   return;
 }
