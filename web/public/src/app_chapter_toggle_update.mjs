@@ -1,4 +1,3 @@
-import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { html_style_background_color_set_or_remove_list } from "../../../love/public/src/html_style_background_color_set_or_remove_list.mjs";
@@ -13,7 +12,7 @@ export function app_chapter_toggle_update(
   component_clicked,
   verse_numbers_chosen,
   verse_number,
-  cb,
+  on_update,
 ) {
   function choose() {
     toggle();
@@ -34,7 +33,7 @@ export function app_chapter_toggle_update(
     );
     let m = list_multiple_is(verse_numbers_chosen);
     let hidden = not(m);
-    html_display_none_or_block(hidden, cb);
+    on_update();
   };
   let v3 = {
     toggle,
