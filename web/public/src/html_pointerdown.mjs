@@ -4,7 +4,7 @@ export function html_pointerdown(c) {
   marker("1");
   let element = html_component_element_get(c);
   element.dispatchEvent(
-    new PointerEvent("pointerdown", {
+    new PointerEvent("click", {
       bubbles: true,
       cancelable: true,
     }),
