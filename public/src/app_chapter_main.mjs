@@ -1,5 +1,4 @@
-import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
-import { list_empty } from "../../../love/public/src/list_empty.mjs";
+import { list_replace_all } from "../../../love/public/src/list_replace_all.mjs";
 import { app_chapter_chosen_max } from "../../../love/public/src/app_chapter_chosen_max.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
@@ -92,8 +91,7 @@ export async function app_chapter_main(context) {
           list_toggle(verse_numbers_chosen, verse_number_v);
           let max = app_chapter_chosen_max();
           let copy = list_size_max_skip(verse_numbers_chosen, max);
-          list_empty(verse_numbers_chosen);
-          list_add_multiple(verse_numbers_chosen, copy);
+          list_replace_all(verse_numbers_chosen, copy);
         };
         let update = function lambda4() {
           html_style_background_color_set_or_remove_list(
