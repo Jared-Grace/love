@@ -75,12 +75,13 @@ export async function app_chapter_main(context) {
         let verse_number_v = object_property_get(v, "verse_number");
         let text = object_property_get(v, "text");
         let p = html_p_text(content, verse_number_v + " " + text);
+        function lambda4() {}
         let v3 = app_chapter_toggle_update(
           updates,
           p,
           verse_numbers_chosen,
           verse_number_v,
-          () => {},
+          lambda4,
         );
         let update = object_property_get(v3, "update");
         let toggle = object_property_get(v3, "toggle");
