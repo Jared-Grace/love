@@ -17,7 +17,8 @@ export async function ebible_book_video_generate(bible_folder, book_code) {
   let path_videos = await list_map_async(chapter_codes, lambda);
   let path_video = bible_audio_folder_book_video(bible_folder, book_code);
   await videos_join_if_exists_not(path_video, path_videos);
-  return {
+  let v2 = {
     path_video,
   };
+  return v2;
 }
