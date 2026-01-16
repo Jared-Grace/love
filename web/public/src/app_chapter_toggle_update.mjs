@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { list_first_last_slice } from "../../../love/public/src/list_first_last_slice.mjs";
@@ -71,11 +72,22 @@ export function app_chapter_toggle_update(
       log({
         languages_verses,
       });
+      let m = list_multiple_is(verse_numbers_chosen);
+      let verse_numbers_chosen_normalized = null;
+      if (m) {
+        verse_numbers_chosen_normalized = verse_numbers_chosen;
+      } else {
+        let f = list_first(verse_numbers_chosen);
+        verse_numbers_chosen_normalized = [f, f];
+      }
       let verse_numbers_mapped = null;
       let books = object_property_get(bv, "books");
       let verses = object_property_get(bv, "verses");
       let verse_numbers = list_map_property(verses, "verse_number");
-      let v = list_first_last_slice(verse_numbers_chosen, verse_numbers);
+      let v = list_first_last_slice(
+        verse_numbers_chosen_normalized,
+        verse_numbers,
+      );
       let last = object_property_get(v, "last");
       let first = object_property_get(v, "first");
       let sliced = object_property_get(v, "sliced");
