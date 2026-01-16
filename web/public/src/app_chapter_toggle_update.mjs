@@ -57,7 +57,9 @@ export function app_chapter_toggle_update(
   async function copy() {
     list_sort_number_mapper(verse_numbers_chosen, integer_to);
     let m2 = list_multiple_is(list);
-    let n = not(b);
+    let n = not(m2);
+    if (false) {
+    }
     function lambda3(bv) {
       let books2 = object_property_get(bv, "books");
       let verses2 = object_property_get(bv, "verses");
