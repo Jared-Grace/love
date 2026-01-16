@@ -54,11 +54,11 @@ export function app_chapter_toggle_update(
     update,
   };
   async function copy() {
-    list_sort_number_mapper(verse_numbers_chosen, integer_to);
-    let n = list_multiple_not_is();
+    let n = list_multiple_not_is(verse_numbers_chosen);
     if (n) {
       return;
     }
+    list_sort_number_mapper(verse_numbers_chosen, integer_to);
     function lambda3(bv) {
       let books2 = object_property_get(bv, "books");
       let verses2 = object_property_get(bv, "verses");
