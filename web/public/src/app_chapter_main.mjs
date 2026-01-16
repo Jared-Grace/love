@@ -1,7 +1,6 @@
 import { not } from "../../../love/public/src/not.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
-import { each_async } from "../../../love/public/src/each_async.mjs";
 import { app_chapter_toggle_update } from "../../../love/public/src/app_chapter_toggle_update.mjs";
 import { app_chapter_chosen_max } from "../../../love/public/src/app_chapter_chosen_max.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
@@ -99,7 +98,7 @@ export async function app_chapter_main(context) {
         }
         return update;
       }
-      let m = await each_async(verses, lambda);
+      let m = await list_map_async(verses, lambda);
     }
     let v2 = {
       books,
