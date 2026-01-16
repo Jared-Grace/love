@@ -1,3 +1,4 @@
+import { promise_later } from "../../../love/public/src/promise_later.mjs";
 import { html_scroll_center_now } from "../../../love/public/src/html_scroll_center_now.mjs";
 import { list_map_add_async } from "../../../love/public/src/list_map_add_async.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -35,7 +36,6 @@ import { html_hash_object_get } from "../../../love/public/src/html_hash_object_
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
-import { promise_resolved } from "./promise_resolved.mjs";
 export async function app_chapter_main(context) {
   marker("1");
   let root = html_mobile_default(context);
@@ -100,7 +100,7 @@ export async function app_chapter_main(context) {
             toggle();
             update();
           }
-          promise_resolved().then(lambda4);
+          promise_later(lambda4);
         }
         return update;
       }
