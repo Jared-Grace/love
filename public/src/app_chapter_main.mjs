@@ -1,5 +1,4 @@
 import { app_chapter_chosen_max } from "../../../love/public/src/app_chapter_chosen_max.mjs";
-import { list_size } from "../../../love/public/src/list_size.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
@@ -90,8 +89,7 @@ export async function app_chapter_main(context) {
         let toggle = function lambda5() {
           list_toggle(verse_numbers_chosen, verse_number_v);
           let max = app_chapter_chosen_max();
-          verse_numbers_chosen = list_size_max_skip(verse_numbers_chosen, max);
-          let size = list_size(verse_numbers_chosen);
+          let copy = list_size_max_skip(verse_numbers_chosen, max);
         };
         let update = function lambda4() {
           html_style_background_color_set_or_remove_list(
