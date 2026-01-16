@@ -76,9 +76,9 @@ export function app_chapter_toggle_update(
       let n = list_multiple_not_is(verse_numbers_chosen);
       if (n) {
         let f = list_first(verse_numbers_chosen);
-        let verse_numbers_chosen_normalized = null;
-        verse_numbers_chosen_normalized = [f, f];
+        let verse_numbers_chosen_normalized = [f, f];
         return;
+      } else {
       }
       let verse_numbers_mapped = null;
       let books = object_property_get(bv, "books");
@@ -94,11 +94,10 @@ export function app_chapter_toggle_update(
         "verse_number",
       );
       let mapped3 = list_map_property(verse_numbers_mapped, "text");
-      const ref = [first, last];
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
         books,
-        ref,
+        [first, last],
       );
       let concated2 = list_concat([reference], mapped3);
       return concated2;
