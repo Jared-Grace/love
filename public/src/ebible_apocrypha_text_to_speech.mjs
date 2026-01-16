@@ -1,3 +1,4 @@
+import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { ebible_book_code_to_chapter_codes } from "../../../love/public/src/ebible_book_code_to_chapter_codes.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -18,7 +19,14 @@ export async function ebible_apocrypha_text_to_speech() {
       bible_folder,
       book_code,
     );
-    async function lambda2(chapter_code) {}
+    async function lambda2(chapter_code) {
+      let verses = await ebible_verses(bible_folder, chapter_code);
+      await ebible_text_to_speech_chapter_generic(
+        bible_folder,
+        verses,
+        chapter_code,
+      );
+    }
     await each_async(chapter_codes, lambda2);
     log({
       book_code,
@@ -28,12 +36,6 @@ export async function ebible_apocrypha_text_to_speech() {
   return;
   let list = await ebible_books_to_chapter_codes(books, bible_folder);
   await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
-  async function each_chapter(chapter_code, verses) {
-    await ebible_text_to_speech_chapter_generic(
-      bible_folder,
-      verses,
-      chapter_code,
-    );
-  }
+  async function each_chapter(chapter_code, verses) {}
   return;
 }
