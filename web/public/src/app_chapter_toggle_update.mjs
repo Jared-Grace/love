@@ -44,7 +44,8 @@ export function app_chapter_toggle_update(
   };
   let update = function lambda4() {
     let fl = list_first_last(verse_numbers_chosen);
-    let last2 = object_property_get(first, "last");
+    let first2 = object_property_get(fl, "first");
+    let last2 = object_property_get(fl, "last");
     let sliced2 = list_slice(list, a, b);
     html_style_background_color_set_or_remove_list(
       component_clicked,
