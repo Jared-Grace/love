@@ -66,13 +66,13 @@ export function app_chapter_toggle_update(
     list_sort_number_mapper(verse_numbers_chosen, integer_to);
     function lambda3(bv) {
       let books = object_property_get(bv, "books");
-      let verses2 = object_property_get(bv, "verses");
-      let verse_numbers = list_map_property(verses2, "verse_number");
+      let verses = object_property_get(bv, "verses");
+      let verse_numbers = list_map_property(verses, "verse_number");
       let v = list_first_last(verse_numbers_chosen);
       let first = list_first(v);
       let last = list_last(v);
       let sliced = list_slice_from(verse_numbers, first, last);
-      let mapped2 = list_map_find_property(sliced, verses2, "verse_number");
+      let mapped2 = list_map_find_property(sliced, verses, "verse_number");
       let mapped3 = list_map_property(mapped2, "text");
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
