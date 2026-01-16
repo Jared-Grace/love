@@ -1,6 +1,8 @@
-import { ebible_apocrypha_videos_generate } from "../../../love/public/src/ebible_apocrypha_videos_generate.mjs";
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
+import { ebible_version_books_testament_apocrypha } from "../../../love/public/src/ebible_version_books_testament_apocrypha.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   marker("1");
-  await ebible_apocrypha_videos_generate();
+  let books = await ebible_version_books_testament_apocrypha(bible_folder);
+  let mapped = list_map_property(list, property_name);
 }
