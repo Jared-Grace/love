@@ -28,6 +28,9 @@ export function app_chapter_toggle_update(
   chapter_code,
   languages_verses,
 ) {
+  let l = list_last(languages_chosen);
+  let verses = object_property_get(l, "verses");
+  let verse_numbers = list_map_property(verses, "verse_number");
   marker("1");
   async function choose() {
     toggle();
@@ -44,7 +47,6 @@ export function app_chapter_toggle_update(
     let sliced = null;
     let m = list_multiple_is(verse_numbers_chosen);
     if (m) {
-      let l = list_last(languages_chosen);
       let v = list_first_last_slice(verse_numbers_chosen, verse_numbers);
       sliced = object_property_get(v, "sliced");
       log({
