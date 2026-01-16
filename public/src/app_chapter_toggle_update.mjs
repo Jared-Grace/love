@@ -90,9 +90,8 @@ export function app_chapter_toggle_update(
         );
         ref = [first, last];
       } else {
-        let copy2 = list_copy(original);
-        verse_numbers_mapped;
-        ref = [first, last];
+        verse_numbers_mapped = list_copy(verse_numbers_chosen);
+        ref = verse_numbers_mapped;
       }
       let mapped3 = list_map_property(verse_numbers_mapped, "text");
       let reference = ebible_parts_chapter_code_to_reference(
