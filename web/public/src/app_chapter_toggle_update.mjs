@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_multiple_not_is } from "../../../love/public/src/list_multiple_not_is.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
@@ -31,6 +32,7 @@ export function app_chapter_toggle_update(
 ) {
   marker("1");
   async function choose() {
+    log({});
     toggle();
     invoke_multiple(updates);
     await copy();
