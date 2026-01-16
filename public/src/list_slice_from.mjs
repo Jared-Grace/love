@@ -21,6 +21,8 @@ export function list_slice_from(list, item_from, item_to) {
   let sliced = list_slice_include(list, first, last);
   log({
     sliced,
+    first,
+    last,
   });
   return sliced;
 }
