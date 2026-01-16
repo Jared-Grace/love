@@ -1,4 +1,4 @@
-import { list_size_max_skip_copy } from "../../../love/public/src/list_size_max_skip_copy.mjs";
+import { list_size_max_skip_replace } from "../../../love/public/src/list_size_max_skip_replace.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_multiple_not_is } from "../../../love/public/src/list_multiple_not_is.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
@@ -17,7 +17,6 @@ import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_style_background_color_set_or_remove_list } from "../../../love/public/src/html_style_background_color_set_or_remove_list.mjs";
-import { list_replace_all } from "../../../love/public/src/list_replace_all.mjs";
 import { app_chapter_chosen_max } from "../../../love/public/src/app_chapter_chosen_max.mjs";
 import { list_toggle } from "../../../love/public/src/list_toggle.mjs";
 import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
@@ -43,11 +42,7 @@ export function app_chapter_toggle_update(
       verse_numbers_chosen,
     });
     let max = app_chapter_chosen_max();
-    let copy = list_size_max_skip_copy(verse_numbers_chosen, max);
-    log({
-      copy,
-    });
-    list_replace_all(verse_numbers_chosen, copy);
+    list_size_max_skip_replace(verse_numbers_chosen, max);
     log({
       verse_numbers_chosen,
     });
