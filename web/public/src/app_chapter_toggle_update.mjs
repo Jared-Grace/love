@@ -43,7 +43,7 @@ export function app_chapter_toggle_update(
     let sliced = null;
     let m = list_multiple_is(verse_numbers_chosen);
     if (m) {
-      let v = list_first_last_slice(verse_numbers_chosen, verse_numbers_chosen);
+      let v = list_first_last_slice(verse_numbers_chosen, verse_numbers);
       sliced = object_property_get(v, "sliced");
       log({
         v,
