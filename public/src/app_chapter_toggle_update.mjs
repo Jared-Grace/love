@@ -35,9 +35,6 @@ export function app_chapter_toggle_update(
     toggle();
     invoke_multiple(updates);
     await copy();
-    log({
-      verse_numbers_chosen,
-    });
   }
   html_on_click(component_clicked, choose);
   let toggle = function lambda5() {
