@@ -1,3 +1,4 @@
+import { html_stxle_margin_x } from "../../../love/public/src/html_stxle_margin_x.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { app_bible } from "../../../love/public/src/app_bible.mjs";
@@ -13,7 +14,8 @@ export async function app_bible_main(context) {
     app_fn,
     screens,
   });
-  firebase_name_jg();html_stxle_margin_x
+  firebase_name_jg();
+  html_stxle_margin_x(component, value);
   html_mobile_default(context);
   app_generic_refresh(context);
 }
