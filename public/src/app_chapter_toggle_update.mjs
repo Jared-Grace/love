@@ -10,7 +10,7 @@ import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 export function app_chapter_toggle_update(
   updates,
-  p,
+  component_clicked,
   verse_numbers_chosen,
   verse_number_v,
   cb,
@@ -19,7 +19,7 @@ export function app_chapter_toggle_update(
     toggle();
     invoke_multiple(updates);
   }
-  html_on_click(p, choose);
+  html_on_click(component_clicked, choose);
   let toggle = function lambda5() {
     list_toggle(verse_numbers_chosen, verse_number_v);
     let max = app_chapter_chosen_max();
@@ -28,7 +28,7 @@ export function app_chapter_toggle_update(
   };
   let update = function lambda4() {
     html_style_background_color_set_or_remove_list(
-      p,
+      component_clicked,
       verse_numbers_chosen,
       verse_number_v,
     );
