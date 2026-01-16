@@ -8,7 +8,6 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { list_map_find_property } from "../../../love/public/src/list_map_find_property.mjs";
-import { list_first_last } from "../../../love/public/src/list_first_last.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
@@ -40,7 +39,6 @@ export function app_chapter_toggle_update(
     list_size_max_skip_replace(verse_numbers_chosen, max);
   };
   let update = function lambda4() {
-    let fl = list_first_last(verse_numbers_chosen);
     let v = list_first_last_slice(verse_numbers_chosen, verse_numbers_chosen);
     let sliced = object_property_get(v, "sliced");
     html_style_background_color_set_or_remove_list(
