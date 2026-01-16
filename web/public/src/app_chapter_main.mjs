@@ -82,7 +82,7 @@ export async function app_chapter_main(context) {
         }
         return update;
       }
-      await list_map_add_async(verses, lambda, languages_verses);
+      await list_map_add_async(verses, lambda, updates);
     }
     let v2 = {
       books,
