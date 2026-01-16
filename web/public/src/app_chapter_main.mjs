@@ -87,12 +87,12 @@ export async function app_chapter_main(context) {
           invoke_multiple(updates);
         }
         html_on_click(p, choose);
-        function toggle() {
+        let toggle = function lambda5() {
           list_toggle(verse_numbers_chosen, verse_number_v);
           let max = app_chapter_chosen_max();
           verse_numbers_chosen = list_size_max_skip(verse_numbers_chosen, max);
           let size = list_size(verse_numbers_chosen);
-        }
+        };
         let update = function lambda4() {
           html_style_background_color_set_or_remove_list(
             p,
