@@ -13,7 +13,7 @@ export async function app_bible_main(context) {
     app_fn,
     screens,
   });
-  firebase_name_jg();
+  firebase_name_jg();html_stxle_margin_x
   html_mobile_default(context);
   app_generic_refresh(context);
 }
