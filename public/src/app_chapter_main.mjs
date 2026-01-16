@@ -81,6 +81,7 @@ export async function app_chapter_main(context) {
           let hidden = not(m);
           html_display_none_or_block(hidden, cb);
         }
+        ("verse_numbers_chosen, chapter_code, languages_verses");
         let v3 = app_chapter_toggle_update(
           updates,
           p,
