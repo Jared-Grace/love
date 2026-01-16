@@ -30,10 +30,10 @@ export function app_chapter_toggle_update(
   languages_verses,
 ) {
   marker("1");
-  function choose() {
+  async function choose() {
     toggle();
     invoke_multiple(updates);
-    copy;
+    await copy();
   }
   html_on_click(component_clicked, choose);
   let toggle = function lambda5() {
