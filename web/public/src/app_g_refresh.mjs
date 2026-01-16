@@ -37,7 +37,7 @@ export async function app_g_refresh(
   async function refresh() {
     await app_g_refresh(div_map_container, game_prefix, tiles_path, rows, map);
   }
-  let { npcs } = map;
+  let npcs = object_property_get(map, "npcs");
   marker("1");
   let player = app_g_player_get();
   let player_img_c = g_character_img(game_prefix, div_map, player);
