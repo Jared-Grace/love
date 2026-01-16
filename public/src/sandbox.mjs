@@ -7,5 +7,6 @@ export async function sandbox() {
   const bible_folder = "engwebu";
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
   let mapped = list_map_property(books, "text");
-  let joined = list_join_newline(list);
+  let joined = list_join_newline(mapped);
+  return joined;
 }
