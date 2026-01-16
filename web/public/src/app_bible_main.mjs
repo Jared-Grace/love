@@ -1,4 +1,4 @@
-import { html_stxle_margin_x } from "../../../love/public/src/html_stxle_margin_x.mjs";
+import { html_style_margin_x } from "../../../love/public/src/html_style_margin_x.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { app_bible } from "../../../love/public/src/app_bible.mjs";
@@ -16,6 +16,6 @@ export async function app_bible_main(context) {
   });
   firebase_name_jg();
   let root = html_mobile_default(context);
-  html_stxle_margin_x(root, "1dvw");
+  html_style_margin_x(root, "1dvw");
   app_generic_refresh(context);
 }
