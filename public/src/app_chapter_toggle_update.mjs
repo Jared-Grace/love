@@ -1,3 +1,4 @@
+import { list_first_last_slice } from "../../../love/public/src/list_first_last_slice.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { list_size_max_skip_replace } from "../../../love/public/src/list_size_max_skip_replace.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -8,9 +9,6 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { list_map_find_property } from "../../../love/public/src/list_map_find_property.mjs";
-import { list_slice_from } from "../../../love/public/src/list_slice_from.mjs";
-import { list_last } from "../../../love/public/src/list_last.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_first_last } from "../../../love/public/src/list_first_last.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -70,10 +68,10 @@ export function app_chapter_toggle_update(
       let books = object_property_get(bv, "books");
       let verses = object_property_get(bv, "verses");
       let verse_numbers = list_map_property(verses, "verse_number");
-      let v = list_first_last(verse_numbers_chosen);
-      let first = list_first(v);
-      let last = list_last(v);
-      let sliced = list_slice_from(verse_numbers, first, last);
+      let v = list_first_last_slice(verse_numbers_chosen, verse_numbers);
+      let last = object_property_get(v, "last");
+      let first = object_property_get(v, "first");
+      let sliced = object_property_get(v, "sliced");
       let mapped2 = list_map_find_property(sliced, verses, "verse_number");
       let mapped3 = list_map_property(mapped2, "text");
       let reference = ebible_parts_chapter_code_to_reference(
