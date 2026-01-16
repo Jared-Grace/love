@@ -77,7 +77,7 @@ export function app_chapter_toggle_update(
       let verse_numbers_chosen_normalized = null;
       if (n) {
         let f = list_first(verse_numbers_chosen);
-        verse_numbers_chosen_normalized = [f, f];
+        verse_numbers_chosen_normalized = [f];
       } else {
         verse_numbers_chosen_normalized = verse_numbers_chosen;
       }
