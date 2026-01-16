@@ -9,8 +9,8 @@ export async function ebible_apocrypha_text_to_speech() {
   const bible_folder = "engwebu";
   await ebible_chapters_each_verses_check(bible_folder);
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
-  async function lambda(item) {}
-  await each_async(list2, lambda);
+  async function lambda(book) {}
+  await each_async(books, lambda);
   let list = await ebible_books_to_chapter_codes(books, bible_folder);
   await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
