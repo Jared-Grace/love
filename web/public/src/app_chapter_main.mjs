@@ -94,6 +94,7 @@ export async function app_chapter_main(context) {
         html_on_click(p, choose);
         function toggle() {
           list_toggle(verse_numbers_chosen, verse_number_v);
+          let max = app_chapter_chosen_max();
           verse_numbers_chosen = list_size_max_skip(verse_numbers_chosen, max);
           let size = list_size(verse_numbers_chosen);
         }
