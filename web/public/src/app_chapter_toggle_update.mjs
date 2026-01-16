@@ -1,3 +1,4 @@
+import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { list_size_max_skip_replace } from "../../../love/public/src/list_size_max_skip_replace.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_multiple_not_is } from "../../../love/public/src/list_multiple_not_is.mjs";
@@ -42,6 +43,7 @@ export function app_chapter_toggle_update(
     list_size_max_skip_replace(verse_numbers_chosen, max);
   };
   let update = function lambda4() {
+    let sliced2 = list_slice(list, a, b);
     html_style_background_color_set_or_remove_list(
       component_clicked,
       verse_numbers_chosen,
