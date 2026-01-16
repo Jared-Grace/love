@@ -1,3 +1,4 @@
+import { ebible_book_code_to_chapter_codes } from "../../../love/public/src/ebible_book_code_to_chapter_codes.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -13,6 +14,10 @@ export async function ebible_apocrypha_text_to_speech() {
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
   async function lambda(book) {
     let book_code = object_property_get(book, "book_code");
+    let chapter_codes = await ebible_book_code_to_chapter_codes(
+      bible_folder2,
+      book_code2,
+    );
     log({
       book_code,
     });
