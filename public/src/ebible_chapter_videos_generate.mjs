@@ -1,3 +1,4 @@
+import { file_parent_exists_ensure } from "../../../love/public/src/file_parent_exists_ensure.mjs";
 import { bible_audio_folder_book_video_join } from "../../../love/public/src/bible_audio_folder_book_video_join.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -16,6 +17,7 @@ export async function ebible_chapter_videos_generate(
   chapter_code,
 ) {
   let folder_path = bible_audio_folder(bible_folder, chapter_code);
+  await file_parent_exists_ensure(path_output);
   let files = await folder_read_files(folder_path);
   const suffix = ".txt";
   let filtered = list_filter_ends_with(files, suffix);
