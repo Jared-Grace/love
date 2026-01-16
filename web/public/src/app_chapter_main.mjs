@@ -1,3 +1,4 @@
+import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { app_chapter_chosen_max } from "../../../love/public/src/app_chapter_chosen_max.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
@@ -90,6 +91,7 @@ export async function app_chapter_main(context) {
           list_toggle(verse_numbers_chosen, verse_number_v);
           let max = app_chapter_chosen_max();
           let copy = list_size_max_skip(verse_numbers_chosen, max);
+          list_empty(list);
         };
         let update = function lambda4() {
           html_style_background_color_set_or_remove_list(
