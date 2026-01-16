@@ -49,7 +49,8 @@ export async function app_bible_home(context) {
   let hash = html_hash_object_get();
   let n = object_property_exists_not(hash, "c");
   if (n) {
-    app_bible_chapter_open(context, hash, "JHN01");$r
+    app_bible_chapter_open(context, hash, "JHN01");
+    return;
   }
   let chapter_code = object_property_get(hash, "c");
   let v2 = ebible_chapter_code_parse(chapter_code);
