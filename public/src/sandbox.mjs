@@ -7,7 +7,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox() {
   marker("1");
   const bible_folder = "engwebu";
-  let v = await ebible_version_books_testament_apocrypha(bible_folder);
+  let books = await ebible_version_books_testament_apocrypha(bible_folder);
   async function lambda(item) {
     let book_code = object_property_get(item, "book_code");
     log({
@@ -15,5 +15,5 @@ export async function sandbox() {
     });
     await ebible_book_video_generate(bible_folder, book_code);
   }
-  await each_async(list, lambda);
+  await each_async(books, lambda);
 }
