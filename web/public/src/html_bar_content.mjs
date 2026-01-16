@@ -21,7 +21,7 @@ export function html_bar_content(root) {
     "overflow-y": "scroll",
     "overflow-x": "auto",
   });
-  html_style_padding_x(content, "1dvw");
+  html_style_padding_x(content, "5dvw");
   let bc = {
     bar,
     content,
