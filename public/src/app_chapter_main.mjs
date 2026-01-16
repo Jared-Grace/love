@@ -1,3 +1,4 @@
+import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { app_chapter_toggle_update } from "../../../love/public/src/app_chapter_toggle_update.mjs";
 import { app_chapter_chosen_max } from "../../../love/public/src/app_chapter_chosen_max.mjs";
@@ -75,13 +76,15 @@ export async function app_chapter_main(context) {
         let verse_number_v = object_property_get(v, "verse_number");
         let text = object_property_get(v, "text");
         let p = html_p_text(content, verse_number_v + " " + text);
-        function lambda4() {}
+        function on_update() {
+          html_display_none_or_block(hidden, cb);
+        }
         let v3 = app_chapter_toggle_update(
           updates,
           p,
           verse_numbers_chosen,
           verse_number_v,
-          lambda4,
+          on_update,
         );
         let update = object_property_get(v3, "update");
         let toggle = object_property_get(v3, "toggle");
