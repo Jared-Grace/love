@@ -18,7 +18,7 @@ export async function ebible_apocrypha_text_to_speech() {
       bible_folder,
       book_code,
     );
-    async function lambda2(item) {}
+    async function lambda2(chapter_code) {}
     await each_async(chapter_codes, lambda2);
     log({
       book_code,
