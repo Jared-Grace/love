@@ -83,8 +83,12 @@ export function app_chapter_toggle_update(
       let last = object_property_get(v, "last");
       let first = object_property_get(v, "first");
       let sliced = object_property_get(v, "sliced");
-      let mapped2 = list_map_find_property(sliced, verses, "verse_number");
-      let mapped3 = list_map_property(mapped2, "text");
+      let verse_numbers_mapped = list_map_find_property(
+        sliced,
+        verses,
+        "verse_number",
+      );
+      let mapped3 = list_map_property(verse_numbers_mapped, "text");
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
         books,
