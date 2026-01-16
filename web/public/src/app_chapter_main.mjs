@@ -21,6 +21,7 @@ import { list_slice_from } from "../../../love/public/src/list_slice_from.mjs";
 import { html_button_copy_width_full } from "../../../love/public/src/html_button_copy_width_full.mjs";
 import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
+import { html_scroll_center_now } from "../../../love/public/src/html_scroll_center_now.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { list_first_last } from "../../../love/public/src/list_first_last.mjs";
@@ -93,6 +94,7 @@ export async function app_chapter_main(context) {
         let update = object_property_get(v3, "update");
         let toggle = object_property_get(v3, "toggle");
         if (verse_number_v === verse_number) {
+          await html_scroll_center_now(p);
           toggle();
           update();
         }
