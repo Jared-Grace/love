@@ -51,6 +51,26 @@ export async function sandbox() {
       text: "2 Maccabees",
       href: "2MA01.htm",
     },
+    {
+      book_code: "1ES",
+      text: "1 Esdras",
+      href: "1ES01.htm",
+    },
+    {
+      book_code: "MAN",
+      text: "Prayer of Manasses",
+      href: "MAN01.htm",
+    },
+    {
+      book_code: "PS2",
+      text: "Psalm 151",
+      href: "PS201.htm",
+    },
+    {
+      book_code: "3MA",
+      text: "3 Maccabees",
+      href: "3MA01.htm",
+    },
   ];
   const bible_folder = "engwebu";
   async function lambda(item) {
