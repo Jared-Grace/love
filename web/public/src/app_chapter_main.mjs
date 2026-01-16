@@ -93,7 +93,7 @@ export async function app_chapter_main(context) {
           let max = app_chapter_chosen_max();
           let copy = list_size_max_skip(verse_numbers_chosen, max);
           list_empty(verse_numbers_chosen);
-          list_add_multiple(list, items);
+          list_add_multiple(verse_numbers_chosen, copy);
         };
         let update = function lambda4() {
           html_style_background_color_set_or_remove_list(
