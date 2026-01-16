@@ -111,28 +111,5 @@ export async function app_chapter_main(context) {
     return v2;
   }
   await list_map_add_async(languages_chosen, lambda2, languages_verses);
-  async function copy() {
-    list_sort_number_mapper(verse_numbers_chosen, integer_to);
-    function lambda3(bv) {
-      let books2 = object_property_get(bv, "books");
-      let verses2 = object_property_get(bv, "verses");
-      let verse_numbers = list_map_property(verses2, "verse_number");
-      let v = list_first_last(verse_numbers_chosen);
-      let first = list_first(v);
-      let last = list_last(v);
-      let sliced = list_slice_from(verse_numbers, first, last);
-      let mapped2 = list_map_find_property(sliced, verses2, "verse_number");
-      let mapped3 = list_map_property(mapped2, "text");
-      let reference = ebible_parts_chapter_code_to_reference(
-        chapter_code,
-        books2,
-        [first, last],
-      );
-      let concated2 = list_concat([reference], mapped3);
-      return concated2;
-    }
-    let m = list_map(languages_verses, lambda3);
-    let squashed = list_squash(m);
-    let joined = await list_join_newline_2_copy(squashed);
-  }
+
 }
