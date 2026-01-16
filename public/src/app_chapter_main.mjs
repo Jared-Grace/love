@@ -1,7 +1,7 @@
-import { each_async } from "../../../love/public/src/each_async.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { app_chapter_toggle_update } from "../../../love/public/src/app_chapter_toggle_update.mjs";
 import { app_chapter_chosen_max } from "../../../love/public/src/app_chapter_chosen_max.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
@@ -74,10 +74,10 @@ export async function app_chapter_main(context) {
       );
       html_p_text(content, reference);
       let updates = [];
-      async function lambda(verse) {
-        let verse_number_v = object_property_get(verse, "verse_number");
-        let text = object_property_get(verse, "text");
-        let component = html_p_text(content, verse_number_v + " " + text);
+      async function lambda(v) {
+        let verse_number_v = object_property_get(v, "verse_number");
+        let text = object_property_get(v, "text");
+        let p = html_p_text(content, verse_number_v + " " + text);
         function on_update() {
           let m = list_multiple_is(verse_numbers_chosen);
           let hidden = not(m);
@@ -85,7 +85,7 @@ export async function app_chapter_main(context) {
         }
         let v3 = app_chapter_toggle_update(
           updates,
-          component,
+          p,
           verse_numbers_chosen,
           verse_number_v,
           on_update,
@@ -93,20 +93,13 @@ export async function app_chapter_main(context) {
         let update = object_property_get(v3, "update");
         let toggle = object_property_get(v3, "toggle");
         if (verse_number_v === verse_number) {
-          await html_scroll_center_now(component);
+          await html_scroll_center_now(p);
           toggle();
           update();
         }
         return update;
-        let v4 = {
-          verse,
-          component,
-        };
-        return v4;
       }
-      let m = await list_map_async(verses, lambda);
-      async function lambda4(item) {}
-      await each_async(list, lambda4);
+      let m = await each_async(verses, lambda);
     }
     let v2 = {
       books,
