@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_text_to_speech_chapter_generic } from "../../../love/public/src/ebible_text_to_speech_chapter_generic.mjs";
 import { ebible_chapters_each_verses_list } from "../../../love/public/src/ebible_chapters_each_verses_list.mjs";
@@ -9,8 +10,13 @@ export async function ebible_apocrypha_text_to_speech() {
   const bible_folder = "engwebu";
   await ebible_chapters_each_verses_check(bible_folder);
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
-  async function lambda(book) {}
+  async function lambda(book) {
+    log({
+      book,
+    });
+  }
   await each_async(books, lambda);
+  return;
   let list = await ebible_books_to_chapter_codes(books, bible_folder);
   await ebible_chapters_each_verses_list(list, bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
