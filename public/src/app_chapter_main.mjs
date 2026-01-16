@@ -92,7 +92,7 @@ export async function app_chapter_main(context) {
         return update;
       }
       let m = await list_map_async(verses, lambda);
-      list_add_multiple(list, items);
+      list_add_multiple(updates, m);
     }
     let v2 = {
       books,
