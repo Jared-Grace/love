@@ -1,3 +1,4 @@
+import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_multiple_not_is } from "../../../love/public/src/list_multiple_not_is.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
@@ -43,6 +44,7 @@ export function app_chapter_toggle_update(
       verse_numbers_chosen,
     });
     let max = app_chapter_chosen_max();
+    let copy2 = list_copy(original);
     let copy = list_size_max_skip(verse_numbers_chosen, max);
     log({
       copy,
