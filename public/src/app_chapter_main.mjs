@@ -80,7 +80,7 @@ export async function app_chapter_main(context) {
           p,
           verse_numbers_chosen,
           verse_number_v,
-          cb,
+          () => {},
         );
         let update = object_property_get(v3, "update");
         let toggle = object_property_get(v3, "toggle");
