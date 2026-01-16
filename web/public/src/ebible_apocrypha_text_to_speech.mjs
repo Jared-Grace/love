@@ -18,7 +18,8 @@ export async function ebible_apocrypha_text_to_speech() {
       bible_folder,
       book_code,
     );
-    await each_async(list2, async function lambda2(item) {});
+    async function lambda2(item) {}
+    await each_async(list2, lambda2);
     log({
       book_code,
     });
