@@ -1,3 +1,4 @@
+import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { app_chapter_toggle_update } from "../../../love/public/src/app_chapter_toggle_update.mjs";
 import { app_chapter_chosen_max } from "../../../love/public/src/app_chapter_chosen_max.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
@@ -90,7 +91,8 @@ export async function app_chapter_main(context) {
         }
         return update;
       }
-      updates = await list_map_async(verses, lambda);
+      let m = await list_map_async(verses, lambda);
+      list_add_multiple(list, items);
     }
     let v2 = {
       books,
