@@ -37,7 +37,7 @@ import { html_mobile_default } from "../../../love/public/src/html_mobile_defaul
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_bible_home(context) {
   marker("1");
-  let root = html_mobile_default(context);
+    let root = html_clear_context(context);
   html_clear(root);
   html_margin_0(root);
   let bc = html_bar_content(root);
