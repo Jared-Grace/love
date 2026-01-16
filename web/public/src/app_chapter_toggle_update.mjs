@@ -76,10 +76,11 @@ export function app_chapter_toggle_update(
       let n = list_multiple_not_is(verse_numbers_chosen);
       if (n) {
         let f = list_first(verse_numbers_chosen);
-        let verse_numbers_chosen_normalized = [f, f];
-        return;
+        let verse_numbers_chosen_normalized = null;
+        verse_numbers_chosen_normalized = [f, f];
       } else {
       }
+      let verse_numbers_chosen_normalized = verse_numbers_chosen;
       let verse_numbers_mapped = null;
       let books = object_property_get(bv, "books");
       let verses = object_property_get(bv, "verses");
