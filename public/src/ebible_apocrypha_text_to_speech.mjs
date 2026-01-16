@@ -14,7 +14,7 @@ export async function ebible_apocrypha_text_to_speech() {
   async function lambda(book) {
     let book_code = object_property_get(book, "book_code");
     log({
-      book,
+      book_code,
     });
   }
   await each_async(books, lambda);
