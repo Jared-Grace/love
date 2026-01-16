@@ -49,9 +49,7 @@ export async function app_chapter_main(context) {
     bar,
     "Choose " +
       number_to_words(max) +
-      " verses. Then choose " +
-      t +
-      " to copy all the verses in between (inclusive).",
+      " verses. That will copy all the verses in between (inclusive).",
   );
   let cb = html_button_copy_width_full(bar, copy);
   let hash = html_hash_object_get();
