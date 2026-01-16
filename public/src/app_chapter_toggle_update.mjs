@@ -27,6 +27,7 @@ export function app_chapter_toggle_update(
   verse_number,
   chapter_code,
   languages_verses,
+  languages_chosen,
 ) {
   let l = list_last(languages_chosen);
   let verses = object_property_get(l, "verses");
