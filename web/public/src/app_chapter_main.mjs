@@ -82,11 +82,6 @@ export async function app_chapter_main(context) {
         let verse_number_v = object_property_get(v, "verse_number");
         let text = object_property_get(v, "text");
         let p = html_p_text(content, verse_number_v + " " + text);
-        if (verse_number_v === verse_number) {
-          await html_scroll_center_now(p);
-          toggle();
-          update();
-        }
         function choose() {
           toggle();
           invoke_multiple(updates);
@@ -108,6 +103,11 @@ export async function app_chapter_main(context) {
           let hidden = not(m);
           html_display_none_or_block(hidden, cb);
         };
+        if (verse_number_v === verse_number) {
+          await html_scroll_center_now(p);
+          toggle();
+          update();
+        }
         return update;
       }
       updates = await list_map_async(verses, lambda);
