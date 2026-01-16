@@ -16,6 +16,6 @@ export async function app_bible_main(context) {
   });
   firebase_name_jg();
   let root = html_mobile_default(context);
-  html_style_margin_x(root, "1dvw");
+  html_style_padding_x(root, "1dvw");
   app_generic_refresh(context);
 }
