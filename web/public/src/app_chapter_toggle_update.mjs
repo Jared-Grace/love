@@ -1,3 +1,4 @@
+import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { list_first_last_slice } from "../../../love/public/src/list_first_last_slice.mjs";
 import { list_size_max_skip_replace } from "../../../love/public/src/list_size_max_skip_replace.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -39,9 +40,13 @@ export function app_chapter_toggle_update(
     list_size_max_skip_replace(verse_numbers_chosen, max);
   };
   let update = function lambda4() {
-    let v = list_first_last_slice(verse_numbers_chosen, verse_numbers_chosen);
     let sliced = null;
-    sliced = object_property_get(v, "sliced");
+    let m = list_multiple_is(verse_numbers_chosen);
+    if (m) {
+      let v = list_first_last_slice(verse_numbers_chosen, verse_numbers_chosen);
+      sliced = object_property_get(v, "sliced");
+    } else {
+    }
     html_style_background_color_set_or_remove_list(
       component_clicked,
       sliced,
