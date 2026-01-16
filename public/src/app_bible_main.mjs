@@ -1,4 +1,4 @@
-import { html_style_margin_x } from "../../../love/public/src/html_style_margin_x.mjs";
+import { html_style_padding_x } from "../../../love/public/src/html_style_padding_x.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { app_bible } from "../../../love/public/src/app_bible.mjs";
