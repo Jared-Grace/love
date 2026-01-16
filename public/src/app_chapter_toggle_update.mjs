@@ -1,3 +1,4 @@
+import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { list_first_last_slice } from "../../../love/public/src/list_first_last_slice.mjs";
@@ -89,6 +90,9 @@ export function app_chapter_toggle_update(
         );
         ref = [first, last];
       } else {
+        let copy2 = list_copy(original);
+        verse_numbers_mapped;
+        ref = [first, last];
       }
       let mapped3 = list_map_property(verse_numbers_mapped, "text");
       let reference = ebible_parts_chapter_code_to_reference(
