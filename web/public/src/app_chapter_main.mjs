@@ -7,19 +7,10 @@ import { html_display_none_or_block } from "../../../love/public/src/html_displa
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { app_chapter_toggle_update } from "../../../love/public/src/app_chapter_toggle_update.mjs";
 import { app_chapter_chosen_max } from "../../../love/public/src/app_chapter_chosen_max.mjs";
-import { integer_to } from "../../../love/public/src/integer_to.mjs";
-import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { number_to_words } from "../../../love/public/src/number_to_words.mjs";
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
-import { list_squash } from "../../../love/public/src/list_squash.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
-import { list_concat } from "../../../love/public/src/list_concat.mjs";
-import { list_map_find_property } from "../../../love/public/src/list_map_find_property.mjs";
-import { list_last } from "../../../love/public/src/list_last.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
-import { list_slice_from } from "../../../love/public/src/list_slice_from.mjs";
 import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -34,7 +25,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 export async function app_chapter_main(context) {
   marker("1");
   let root = html_mobile_default(context);
@@ -111,5 +101,4 @@ export async function app_chapter_main(context) {
     return v2;
   }
   await list_map_add_async(languages_chosen, lambda2, languages_verses);
-
 }
