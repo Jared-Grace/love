@@ -108,7 +108,8 @@ export async function app_chapter_main(context) {
     };
     return v2;
   }
-  let languages_verses = await list_map_async(languages_chosen, lambda2);
+  let languages_verses = null;
+  languages_verses = await list_map_async(languages_chosen, lambda2);
   async function copy() {
     list_sort_number_mapper(verse_numbers_chosen, integer_to);
     function lambda3(bv) {
