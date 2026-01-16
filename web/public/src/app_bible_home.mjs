@@ -7,7 +7,7 @@ import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { window_open } from "../../../love/public/src/window_open.mjs";
-import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
+import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
 import { string_letters_only } from "../../../love/public/src/string_letters_only.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
@@ -104,7 +104,7 @@ export async function app_bible_home(context) {
         let letters_only = string_letters_only(item);
         window_open("https://www.google.com/search?q=define:" + letters_only);
       }
-      html_on_pointerdown(item_span, lambda9);
+      html_on_click(item_span, lambda9);
     }
     each(split, lambda2);
   }
