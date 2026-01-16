@@ -1,3 +1,4 @@
+import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { app_bible } from "../../../love/public/src/app_bible.mjs";
@@ -15,5 +16,6 @@ export async function app_bible_main(context) {
   });
   firebase_name_jg();
   let root = html_mobile_default(context);
+  html_margin_0(root);
   app_generic_refresh(context);
 }
