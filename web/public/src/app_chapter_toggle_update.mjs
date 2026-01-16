@@ -73,18 +73,17 @@ export function app_chapter_toggle_update(
       });
       let m = list_multiple_is(verse_numbers_chosen);
       if (m) {
-        return;
+        let verse_numbers_mapped = null;
+        let books = object_property_get(bv, "books");
+        let verses = object_property_get(bv, "verses");
+        let verse_numbers = list_map_property(verses, "verse_number");
+        let v = list_first_last_slice(verse_numbers_chosen, verse_numbers);
+        let last = object_property_get(v, "last");
+        let first = object_property_get(v, "first");
+        let sliced = object_property_get(v, "sliced");
       } else {
       }
-      let verse_numbers_mapped = null;
-      let books = object_property_get(bv, "books");
-      let verses = object_property_get(bv, "verses");
-      let verse_numbers = list_map_property(verses, "verse_number");
-      let v = list_first_last_slice(verse_numbers_chosen, verse_numbers);
-      let last = object_property_get(v, "last");
-      let first = object_property_get(v, "first");
-      let sliced = object_property_get(v, "sliced");
-      verse_numbers_mapped = list_map_find_property(
+      let verse_numbers_mapped = list_map_find_property(
         sliced,
         verses,
         "verse_number",
