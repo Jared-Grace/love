@@ -3,7 +3,6 @@ import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs"
 import { list_first_last_slice } from "../../../love/public/src/list_first_last_slice.mjs";
 import { list_size_max_skip_replace } from "../../../love/public/src/list_size_max_skip_replace.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { list_multiple_not_is } from "../../../love/public/src/list_multiple_not_is.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -67,15 +66,17 @@ export function app_chapter_toggle_update(
     update,
   };
   async function copy() {
-    let n = list_multiple_not_is(verse_numbers_chosen);
-    if (n) {
-      return;
-    }
     list_sort_number_mapper(verse_numbers_chosen, integer_to);
     function lambda3(bv) {
       log({
         languages_verses,
       });
+      let n = list_multiple_is(verse_numbers_chosen);
+      if (n) {
+        return;
+      } else {
+      }
+      let verse_numbers_mapped = null;
       let books = object_property_get(bv, "books");
       let verses = object_property_get(bv, "verses");
       let verse_numbers = list_map_property(verses, "verse_number");
@@ -83,7 +84,6 @@ export function app_chapter_toggle_update(
       let last = object_property_get(v, "last");
       let first = object_property_get(v, "first");
       let sliced = object_property_get(v, "sliced");
-      let verse_numbers_mapped = null;
       verse_numbers_mapped = list_map_find_property(
         sliced,
         verses,
