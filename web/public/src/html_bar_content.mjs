@@ -1,4 +1,3 @@
-import { html_style_padding_x } from "../../../love/public/src/html_style_padding_x.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 export function html_bar_content(root) {
@@ -21,7 +20,6 @@ export function html_bar_content(root) {
     "overflow-y": "scroll",
     "overflow-x": "auto",
   });
-  html_style_padding_x(content, "1dvw");
   let bc = {
     bar,
     content,
