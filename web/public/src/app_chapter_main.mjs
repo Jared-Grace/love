@@ -22,7 +22,7 @@ import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs"
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { html_style_background_color_set_or_remove_list } from "../../../love/public/src/html_style_background_color_set_or_remove_list.mjs";
 import { list_toggle } from "../../../love/public/src/list_toggle.mjs";
-import { html_on_pointerdown } from "../../../love/public/src/html_on_pointerdown.mjs";
+import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
 import { html_scroll_center_now } from "../../../love/public/src/html_scroll_center_now.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
@@ -36,8 +36,8 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { list_join_newline_2_copy } from "./list_join_newline_2_copy.mjs";
-import { list_multiple_is } from "./list_multiple_is.mjs";
+import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
+import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 export async function app_chapter_main(context) {
   marker("1");
   let root = html_mobile_default(context);
@@ -90,7 +90,7 @@ export async function app_chapter_main(context) {
           toggle();
           invoke_multiple(updates);
         }
-        html_on_pointerdown(p, choose);
+        html_on_click(p, choose);
         function toggle() {
           list_toggle(verse_numbers_chosen, verse_number_v);
           verse_numbers_chosen = list_size_max_skip(verse_numbers_chosen, max);
