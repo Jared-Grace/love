@@ -15,5 +15,5 @@ export async function sandbox() {
     });
     await ebible_book_video_generate(bible_folder, book_code);
   }
-  await list_map_async(books, lambda);
+  let m = await list_map_async(books, lambda);
 }
