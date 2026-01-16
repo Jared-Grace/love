@@ -38,14 +38,8 @@ export function app_chapter_toggle_update(
   html_on_click(component_clicked, choose);
   let toggle = function lambda5() {
     list_toggle(verse_numbers_chosen, verse_number);
-    log({
-      verse_numbers_chosen,
-    });
     let max = app_chapter_chosen_max();
     list_size_max_skip_replace(verse_numbers_chosen, max);
-    log({
-      verse_numbers_chosen,
-    });
   };
   let update = function lambda4() {
     html_style_background_color_set_or_remove_list(
