@@ -13,7 +13,7 @@ export async function ebible_apocrypha_videos_generate() {
     log({
       book_code,
     });
-    await ebible_book_video_generate(bible_folder, book_code);
+    return await ebible_book_video_generate(bible_folder, book_code);
   }
   let m = await list_map_async(books, lambda);
   let mapped = list_map_property(m, "path_video");
