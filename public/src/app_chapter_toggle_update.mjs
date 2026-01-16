@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { list_first_last_slice } from "../../../love/public/src/list_first_last_slice.mjs";
@@ -73,7 +74,8 @@ export function app_chapter_toggle_update(
         languages_verses,
       });
       let n = list_multiple_not_is(verse_numbers_chosen);
-      if (n) {lf
+      if (n) {
+        let first2 = list_first(list);
         verse_numbers_chosen_normalized;
         return;
       }
