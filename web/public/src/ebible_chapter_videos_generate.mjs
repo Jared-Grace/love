@@ -1,5 +1,4 @@
-import { videos_join_if_exists_not } from "../../../love/public/src/videos_join_if_exists_not.mjs";
-import { bible_audio_folder_book_video } from "../../../love/public/src/bible_audio_folder_book_video.mjs";
+import { bible_audio_folder_book_video_join } from "../../../love/public/src/bible_audio_folder_book_video_join.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { video_generate } from "../../../love/public/src/video_generate.mjs";
@@ -42,8 +41,11 @@ export async function ebible_chapter_videos_generate(
     await each_async(filtered, lambda);
   }
   let paths_videos = await list_adder_async(lambda2);
-  let path_video = bible_audio_folder_book_video(bible_folder, chapter_code);
-  await videos_join_if_exists_not(path_video, paths_videos);
+  let path_video = await bible_audio_folder_book_video_join(
+    bible_folder,
+    chapter_code,
+    paths_videos,
+  );
   let v = {
     path_video,
   };
