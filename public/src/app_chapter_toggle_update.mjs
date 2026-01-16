@@ -12,7 +12,7 @@ export function app_chapter_toggle_update(
   updates,
   component_clicked,
   verse_numbers_chosen,
-  verse_number_v,
+  verse_number,
   cb,
 ) {
   function choose() {
@@ -21,7 +21,7 @@ export function app_chapter_toggle_update(
   }
   html_on_click(component_clicked, choose);
   let toggle = function lambda5() {
-    list_toggle(verse_numbers_chosen, verse_number_v);
+    list_toggle(verse_numbers_chosen, verse_number);
     let max = app_chapter_chosen_max();
     let copy = list_size_max_skip(verse_numbers_chosen, max);
     list_replace_all(verse_numbers_chosen, copy);
@@ -30,7 +30,7 @@ export function app_chapter_toggle_update(
     html_style_background_color_set_or_remove_list(
       component_clicked,
       verse_numbers_chosen,
-      verse_number_v,
+      verse_number,
     );
     let m = list_multiple_is(verse_numbers_chosen);
     let hidden = not(m);
