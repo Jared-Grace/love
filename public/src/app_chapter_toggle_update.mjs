@@ -1,10 +1,8 @@
-import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { list_first_last_slice } from "../../../love/public/src/list_first_last_slice.mjs";
 import { list_size_max_skip_replace } from "../../../love/public/src/list_size_max_skip_replace.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { list_multiple_not_is } from "../../../love/public/src/list_multiple_not_is.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -73,14 +71,6 @@ export function app_chapter_toggle_update(
       log({
         languages_verses,
       });
-      let n = list_multiple_not_is(verse_numbers_chosen);
-      let verse_numbers_chosen_normalized = null;
-      if (n) {
-        let f = list_first(verse_numbers_chosen);
-        verse_numbers_chosen_normalized = [f];
-      } else {
-        verse_numbers_chosen_normalized = verse_numbers_chosen;
-      }
       let verse_numbers_mapped = null;
       let books = object_property_get(bv, "books");
       let verses = object_property_get(bv, "verses");
