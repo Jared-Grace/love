@@ -73,6 +73,7 @@ export function app_chapter_toggle_update(
       });
       let m = list_multiple_is(verse_numbers_chosen);
       let verse_numbers_mapped = null;
+      let ref = null;
       if (m) {
         let books = object_property_get(bv, "books");
         let verses = object_property_get(bv, "verses");
@@ -86,7 +87,6 @@ export function app_chapter_toggle_update(
           verses,
           "verse_number",
         );
-        let ref = null;
         ref = [first, last];
       } else {
       }
