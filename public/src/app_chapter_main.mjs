@@ -1,11 +1,8 @@
-import { list_replace_all } from "../../../love/public/src/list_replace_all.mjs";
+import { app_chapter_toggle_update } from "../../../love/public/src/app_chapter_toggle_update.mjs";
 import { app_chapter_chosen_max } from "../../../love/public/src/app_chapter_chosen_max.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
-import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
-import { list_size_max_skip } from "../../../love/public/src/list_size_max_skip.mjs";
 import { number_to_words } from "../../../love/public/src/number_to_words.mjs";
-import { not } from "../../../love/public/src/not.mjs";
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
@@ -18,12 +15,8 @@ import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_slice_from } from "../../../love/public/src/list_slice_from.mjs";
 import { html_button_copy_width_full } from "../../../love/public/src/html_button_copy_width_full.mjs";
-import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
-import { html_style_background_color_set_or_remove_list } from "../../../love/public/src/html_style_background_color_set_or_remove_list.mjs";
-import { list_toggle } from "../../../love/public/src/list_toggle.mjs";
-import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
 import { html_scroll_center_now } from "../../../love/public/src/html_scroll_center_now.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
@@ -38,7 +31,6 @@ import { html_hash_object_get } from "../../../love/public/src/html_hash_object_
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
-import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 export async function app_chapter_main(context) {
   marker("1");
   let root = html_mobile_default(context);
@@ -82,27 +74,15 @@ export async function app_chapter_main(context) {
         let verse_number_v = object_property_get(v, "verse_number");
         let text = object_property_get(v, "text");
         let p = html_p_text(content, verse_number_v + " " + text);
-        function choose() {
-          toggle();
-          invoke_multiple(updates);
-        }
-        html_on_click(p, choose);
-        let toggle = function lambda5() {
-          list_toggle(verse_numbers_chosen, verse_number_v);
-          let max = app_chapter_chosen_max();
-          let copy = list_size_max_skip(verse_numbers_chosen, max);
-          list_replace_all(verse_numbers_chosen, copy);
-        };
-        let update = function lambda4() {
-          html_style_background_color_set_or_remove_list(
-            p,
-            verse_numbers_chosen,
-            verse_number_v,
-          );
-          let m = list_multiple_is(verse_numbers_chosen);
-          let hidden = not(m);
-          html_display_none_or_block(hidden, cb);
-        };
+        let v3 = app_chapter_toggle_update(
+          updates,
+          p,
+          verse_numbers_chosen,
+          verse_number_v,
+          cb,
+        );
+        let update = object_property_get(v3, "update");
+        let toggle = object_property_get(v3, "toggle");
         if (verse_number_v === verse_number) {
           await html_scroll_center_now(p);
           toggle();
