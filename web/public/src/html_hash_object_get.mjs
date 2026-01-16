@@ -1,4 +1,4 @@
-import { string_includes } from "../../../love/public/src/string_includes.mjs";
+import { string_includes_not } from "../../../love/public/src/string_includes_not.mjs";
 import { html_hash_symbol } from "../../../love/public/src/html_hash_symbol.mjs";
 import { object_adder } from "../../../love/public/src/object_adder.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -11,7 +11,8 @@ import { html_hash_get } from "../../../love/public/src/html_hash_get.mjs";
 export function html_hash_object_get() {
   let hash_url = html_hash_get();
   let prefix = html_hash_symbol();
-  let i = string_includes(input, part);
+  let n = string_includes_not(hash_url, prefix);
+  return;
   let without = string_prefix_without(hash_url, prefix);
   let split = string_split_comma(without);
   function lambda3(oa) {
