@@ -6,6 +6,6 @@ export function indexeddb_next(lambda_async) {
   let initial = promise_resolved();
   let previous = global_function_initialize(indexeddb_next, initial);
   let promise = invoke(lambda_async);
-  previous.then(promise);
+  previous = previous.then(promise);
   global_function_set(indexeddb_next, previous);
 }
