@@ -74,10 +74,10 @@ export async function app_chapter_main(context) {
       );
       html_p_text(content, reference);
       let updates = [];
-      async function lambda(v) {
-        let verse_number_v = object_property_get(v, "verse_number");
-        let text = object_property_get(v, "text");
-        let p = html_p_text(content, verse_number_v + " " + text);
+      async function lambda(verse) {
+        let verse_number_v = object_property_get(verse, "verse_number");
+        let text = object_property_get(verse, "text");
+        let component = html_p_text(content, verse_number_v + " " + text);
         function on_update() {
           let m = list_multiple_is(verse_numbers_chosen);
           let hidden = not(m);
@@ -85,7 +85,7 @@ export async function app_chapter_main(context) {
         }
         let v3 = app_chapter_toggle_update(
           updates,
-          p,
+          component,
           verse_numbers_chosen,
           verse_number_v,
           on_update,
@@ -93,7 +93,7 @@ export async function app_chapter_main(context) {
         let update = object_property_get(v3, "update");
         let toggle = object_property_get(v3, "toggle");
         if (verse_number_v === verse_number) {
-          await html_scroll_center_now(p);
+          await html_scroll_center_now(component);
           toggle();
           update();
         }
