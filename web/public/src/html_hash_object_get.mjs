@@ -9,16 +9,15 @@ import { string_split_comma } from "../../../love/public/src/string_split_comma.
 import { string_prefix_without } from "../../../love/public/src/string_prefix_without.mjs";
 import { html_hash_get } from "../../../love/public/src/html_hash_get.mjs";
 export function html_hash_object_get() {
-  let hash_url = html_hash_get();
-  let prefix = html_hash_symbol();
-  let n = string_includes_not(hash_url, prefix);
-  if (n) {
-    let v2 = {};
-    return v2;
-  }
-  let without = string_prefix_without(hash_url, prefix);
-  let split = string_split_comma(without);
   function lambda3(oa) {
+    let hash_url = html_hash_get();
+    let prefix = html_hash_symbol();
+    let n = string_includes_not(hash_url, prefix);
+    if (n) {
+      return;
+    }
+    let without = string_prefix_without(hash_url, prefix);
+    let split = string_split_comma(without);
     function lambda(s) {
       let split2 = string_split_equal(s);
       let v = list_first_second(split2);
