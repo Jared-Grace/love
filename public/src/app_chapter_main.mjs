@@ -1,4 +1,4 @@
-import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
+import { list_map_add_async } from "../../../love/public/src/list_map_add_async.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
@@ -15,7 +15,6 @@ import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { list_map_find_property } from "../../../love/public/src/list_map_find_property.mjs";
-import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_slice_from } from "../../../love/public/src/list_slice_from.mjs";
@@ -110,8 +109,7 @@ export async function app_chapter_main(context) {
     };
     return v2;
   }
-  let languages_verses_add = await list_map_async(languages_chosen, lambda2);
-  list_add_multiple(languages_verses, languages_verses_add);
+  await list_map_add_async(languages_chosen, lambda2, languages_verses);
   async function copy() {
     list_sort_number_mapper(verse_numbers_chosen, integer_to);
     function lambda3(bv) {
