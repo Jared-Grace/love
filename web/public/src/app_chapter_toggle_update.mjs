@@ -60,7 +60,7 @@ export function app_chapter_toggle_update(
     list_sort_number_mapper(verse_numbers_chosen, integer_to);
     function lambda3(bv) {
       log({
-        bv,
+        languages_verses,
       });
       let books = object_property_get(bv, "books");
       let verses = object_property_get(bv, "verses");
