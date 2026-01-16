@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
@@ -104,6 +105,7 @@ export async function app_chapter_main(context) {
         return v4;
       }
       let m = await list_map_async(verses, lambda);
+      await each_async(list, async function lambda4(item) {});
     }
     let v2 = {
       books,
