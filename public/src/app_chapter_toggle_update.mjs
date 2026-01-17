@@ -65,6 +65,7 @@ export function app_chapter_toggle_update(
   let v3 = {
     toggle,
     update,
+    copy,
   };
   async function copy() {
     list_sort_number_mapper(verse_numbers_chosen, integer_to);
