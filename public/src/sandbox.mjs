@@ -1,8 +1,6 @@
-import { marker } from "../../../love/public/src/marker.mjs";
-import { log } from "../../../love/public/src/log.mjs";
+import { g_distance } from "../../../love/public/src/g_distance.mjs";
+import { function_dependencies } from "../../../love/public/src/function_dependencies.mjs";
 export async function sandbox(b) {
-  marker("1");
-  let c = null;
-  log(a);
-  log(b);
+  let v2 = await function_dependencies(f_names);
+  let distance = g_distance(coordinates, item);
 }
