@@ -21,8 +21,7 @@ export async function ebible_verses_references(bible_folder, chapter_code) {
     let v2 = text + " " + string_wrap_parenthesis(reference);
     return v2;
   }
-  function lambda2(item) {}
-  let mapped = list_map(list, lambda2);
-  let text = list_join_newline(vs);
+  let mapped = list_map(vs, lambda);
+  let text = list_join_newline(mapped);
   return text;
 }
