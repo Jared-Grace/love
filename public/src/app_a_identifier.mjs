@@ -32,7 +32,9 @@ export function app_a_identifier(a) {
       } else {
         let ast = object_property_get(a, "ast");
         let v_match = js_visit_match(ast, node);
-        let includes3 = js_identifier_defineds_includes(v, name2);
+        let includes3 = js_identifier_defineds_includes(v_match, name);
+        if (equal(left, right)) {
+        }
         color = "#4a4affff";
       }
     }
