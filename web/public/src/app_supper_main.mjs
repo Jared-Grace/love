@@ -40,10 +40,11 @@ export async function app_supper_main(context) {
   }
   each(verses, lambda2);
   html_hr_2(root);
-  function lambda(item) {}
-  each(list, lambda);
-  let p2 = html_p_text(
-    root,
-    "Heavenly Father, in the name of the Father, and of the Son, and of the Holy Spirit: Have mercy on me a sinner. Help. Bless this bread. Amen.",
-  );
+  function lambda(item) {
+    let p2 = html_p_text(
+      root,
+      "Heavenly Father, in the name of the Father, and of the Son, and of the Holy Spirit: Have mercy on me a sinner. Help. Bless this bread. Amen.",
+    );
+  }
+  each(["bread", "fruit of the vine"], lambda);
 }
