@@ -12,10 +12,11 @@ export async function ebible_verses_references(bible_folder, chapter_code) {
     let text = object_property_get(v, "text");
     let verse_number = object_property_get(v, "verse_number");
     let reference = ebible_parts_chapter_code_to_reference(
-      chapter_code2,
+      chapter_code,
       books,
-      verse_numbers,
+      [verse_number],
     );
+    return text + " ";
   }
   let vf = list_map(vs, lambda);
   return vf;
