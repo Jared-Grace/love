@@ -73,7 +73,9 @@ export function app_a_function_node(a) {
         function lambda2(specifier) {
           html_span_space(parent);
           app_a_function_node_child(a, specifier);
-          let n2 = list_last_not_is(arguments22, arg);
+          let n2 = list_last_not_is(specifiers, specifier);
+          if (false) {
+          }
           app_a_comma(parent);
         }
         each(specifiers, lambda2);
