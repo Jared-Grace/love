@@ -7,7 +7,8 @@ export async function ebible_verses_references(bible_folder, chapter_code) {
   marker("1");
   let books = await ebible_version_books(bible_folder);
   let v = await ebible_verses(bible_folder, chapter_code);
-  each(list, function lambda(item) {});
+  function lambda(item) {}
+  each(list, lambda);
   let reference = ebible_parts_chapter_code_to_reference(
     chapter_code2,
     books,
