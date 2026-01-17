@@ -17,6 +17,7 @@ export function ebible_verses_include() {
     "lim",
     "m",
     "mi",
+    "nb",
     "nd",
     "p",
     "pi",
