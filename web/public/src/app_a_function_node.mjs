@@ -74,9 +74,9 @@ export function app_a_function_node(a) {
           html_span_space(parent);
           app_a_function_node_child(a, specifier);
           let n2 = list_last_not_is(specifiers, specifier);
-          if (false) {
+          if (n2) {
+            app_a_comma(parent);
           }
-          app_a_comma(parent);
         }
         each(specifiers, lambda2);
         html_span_space(parent);
