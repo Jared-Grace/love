@@ -92,6 +92,7 @@ export async function app_bible_home(context) {
     toggle();
     biblehub_button_open("interlinear/", verse_number_v, bottom, "Interlinear");
     biblehub_button_open("", verse_number_v, bottom, "Parallel");
+    let component6 = html_button(parent, text4, function lambda8() {});
     function toggle() {
       hidden = not(hidden);
       html_display_none_or_block(hidden, bottom);
