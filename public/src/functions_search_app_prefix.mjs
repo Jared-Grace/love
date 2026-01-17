@@ -10,5 +10,5 @@ export async function functions_search_app_prefix(s) {
   let a_name = app_name_prefixed(s);
   let v = await functions_search(a_name);
   return v;
-  fns
+  e
 }
