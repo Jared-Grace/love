@@ -40,5 +40,9 @@ export async function app_supper_main(context) {
   }
   each(verses, lambda2);
   html_hr_2(root);
-  let p2 = html_p_text(root2, text2);
+  each(list, function lambda(item) {});
+  let p2 = html_p_text(
+    root,
+    "Heavenly Father, in the name of the Father, and of the Son, and of the Holy Spirit: Have mercy on me a sinner. Help. Bless this bread. Amen.",
+  );
 }
