@@ -1,3 +1,4 @@
+import { function_parse_declaration_unalised } from "../../../love/public/src/function_parse_declaration_unalised.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { js_return_name } from "../../../love/public/src/js_return_name.mjs";
 import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
@@ -14,13 +15,11 @@ import { string_split } from "../../../love/public/src/string_split.mjs";
 import { js_identifier_unique } from "../../../love/public/src/js_identifier_unique.mjs";
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
-import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 export async function js_call_new_code(f_name_call, ast) {
-  let {
-    declaration,
-    unaliased,
-    ast: ast_call,
-  } = await function_parse_declaration(f_name_call);
+  let v2 = await function_parse_declaration_unalised(f_name_call);
+  let ast_call = object_property_get(v2, "ast");
+  let unaliased = object_property_get(v2, "unaliased");
+  let declaration = object_property_get(v2, "declaration");
   let existing = js_identifiers_names(ast);
   let arg_names = js_declaration_params_names(declaration);
   async function lambda3(arg_name) {
