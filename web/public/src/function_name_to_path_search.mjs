@@ -8,8 +8,8 @@ import { true_is } from "../../../love/public/src/true_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
-export async function function_name_to_path_search(unaliased) {
-  let f_path = function_name_to_path(unaliased);
+export async function function_name_to_path_search(f_name) {
+  let f_path = function_name_to_path(f_name);
   async function lambda(joined) {
     let exists = await file_exists(joined);
     let v = {
@@ -31,6 +31,7 @@ export async function function_name_to_path_search(unaliased) {
   let search = {
     exists,
     multiple,
+    f_name,
   };
   if (exists) {
     let only = list_single(filtered);
