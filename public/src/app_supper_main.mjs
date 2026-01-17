@@ -1,3 +1,4 @@
+import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { html_hr_2 } from "../../../love/public/src/html_hr_2.mjs";
 import { html_bar_content_padding } from "../../../love/public/src/html_bar_content_padding.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
@@ -39,4 +40,5 @@ export async function app_supper_main(context) {
   }
   each(verses, lambda2);
   html_hr_2(root);
+  let p2 = html_p_text(root2, text2);
 }
