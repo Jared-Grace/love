@@ -1,4 +1,3 @@
-import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
@@ -17,7 +16,6 @@ export async function app_bible_main(context) {
   });
   firebase_name_jg();
   let root = html_mobile_default(context);
-  html_style_font_size(root, "25px");
   html_margin_0(root);
   app_generic_refresh(context);
 }
