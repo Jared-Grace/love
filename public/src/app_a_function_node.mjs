@@ -70,9 +70,12 @@ export function app_a_function_node(a) {
       function inner() {
         let specifiers = object_property_get(node, "specifiers");
         function lambda2(specifier) {
+          html_span_space(parent);
           app_a_function_node_child(a, specifier);
+          app_a_comma(parent);
         }
         each(specifiers, lambda2);
+        html_span_space(parent);
       }
     },
     ["ImportSpecifier"]: function lambda6() {
