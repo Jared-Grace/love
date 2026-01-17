@@ -62,6 +62,7 @@ export function app_a_function_node(a) {
       let text = js_keyword_import();
       app_a_keyword_purple_space(parent, text);
       app_a_braces_wrap(parent, inner);
+      html_span_space(parent);
       let text2 = js_keyword_from();
       app_a_keyword_purple_space(parent, text2);
       app_a_function_node_child(a, source);
