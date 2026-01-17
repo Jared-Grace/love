@@ -25,14 +25,17 @@ export function app_a_identifier(a) {
     if (includes) {
       color = "#007f00ff";
     } else {
+      let ast = object_property_get(a, "ast");
+      let v_match = js_visit_match(ast, node);
+      let includes3 = js_identifier_defineds_includes(v_match, name);
+      if (false) {
+      } else {
+      }
       let f_names_local = object_property_get(a, "f_names_local");
       let includes2 = list_includes(f_names_local, name);
       if (includes2) {
         color = "#00c800ff";
       } else {
-        let ast = object_property_get(a, "ast");
-        let v_match = js_visit_match(ast, node);
-        let includes3 = js_identifier_defineds_includes(v_match, name);
         if (includes3) {
           color = "#4a4affff";
         } else {
