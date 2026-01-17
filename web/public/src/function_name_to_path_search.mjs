@@ -29,9 +29,9 @@ export async function function_name_to_path_search(f_name) {
   let multiple = list_multiple_is(filtered);
   let exists = list_size_1(filtered);
   let search = {
+    f_name,
     exists,
     multiple,
-    f_name,
   };
   if (exists) {
     let only = list_single(filtered);
