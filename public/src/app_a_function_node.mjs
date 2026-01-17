@@ -60,7 +60,7 @@ export function app_a_function_node(a) {
     ["ImportDeclaration"]: function lambda4() {
       let source = object_property_get(node, "source");
       let text = js_keyword_import();
-      app_a_keyword_purple(parent, text);
+      app_a_keyword_purple_space(parent, text);
       app_a_braces_wrap(parent, inner);
       let text2 = js_keyword_from();
       app_a_keyword_purple_space(parent, text2);
