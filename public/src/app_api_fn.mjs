@@ -6,9 +6,7 @@ export async function app_api_fn(a) {
   let fn = object_property_get(a, "fn");
   let f_name = fn.name;
   object_property_set_exists_not(a, "f_name", f_name);
-  const p = "args";
-  let value = [];
-  object_property_set_if_exists_not(a, p, value);
+  object_property_set_if_exists_not(a, "args", []);
   let r = await app_api(a);
   return r;
 }
