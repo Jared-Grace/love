@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { string_prefix_without } from "../../../love/public/src/string_prefix_without.mjs";
 import { html_parse_attr } from "../../../love/public/src/html_parse_attr.mjs";
@@ -26,6 +27,9 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
     bible_folder,
     chapter_code,
   );
+  log({
+    chapter_path,
+  });
   let v2 = await html_parse_read(chapter_path);
   let root = object_property_get(v2, "root");
   let d = object_property_get(v2, "d");
