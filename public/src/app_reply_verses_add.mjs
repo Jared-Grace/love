@@ -21,7 +21,8 @@ export async function app_reply_verses_add(
   let mapped2 = list_map_property(copy, "bible_folder");
   let verses = await ebible_references_parse_lines(mapped2, [reference]);
   function lambda(v) {
-    if (null_is(value)) {
+    if (null_is(v)) {
+      return;
     }
     if (equal_not(reference, reference_current)) {
       list_add(bible_texts, reference);
