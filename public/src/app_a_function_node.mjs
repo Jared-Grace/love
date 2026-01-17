@@ -1,3 +1,4 @@
+import { list_is } from "../../../love/public/src/list_is.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
@@ -72,6 +73,7 @@ export function app_a_function_node(a) {
         function lambda2(specifier) {
           html_span_space(parent);
           app_a_function_node_child(a, specifier);
+          let l = list_is(value2);
           app_a_comma(parent);
         }
         each(specifiers, lambda2);
