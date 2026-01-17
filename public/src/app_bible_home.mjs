@@ -1,3 +1,4 @@
+import { app_chapter_toggle_update } from "../../../love/public/src/app_chapter_toggle_update.mjs";
 import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
@@ -107,6 +108,14 @@ export async function app_bible_home(context) {
       html_on_click(item_span, lambda9);
     }
     each(split, lambda2);
+    app_chapter_toggle_update(
+      updates,
+      p,
+      verse_numbers_chosen,
+      verse_number_v,
+      chapter_code,
+      languages_verses,
+    );
   }
   each(verses, lambda);
   function biblehub_button_open(folder, verse_number_v, bottom, button_text) {
