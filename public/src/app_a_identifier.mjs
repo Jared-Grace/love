@@ -1,3 +1,4 @@
+import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { js_identifier_rename_imports_fix } from "../../../love/public/src/js_identifier_rename_imports_fix.mjs";
 import { app_a_identifier_generic } from "../../../love/public/src/app_a_identifier_generic.mjs";
@@ -28,6 +29,7 @@ export function app_a_identifier(a) {
       if (includes2) {
         color = "#00c800ff";
       } else {
+        let v_match = js_visit_match(ast2, search);
         color = "#4a4affff";
       }
     }
