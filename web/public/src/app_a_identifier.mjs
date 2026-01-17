@@ -34,9 +34,10 @@ export function app_a_identifier(a) {
         let v_match = js_visit_match(ast, node);
         let includes3 = js_identifier_defineds_includes(v_match, name);
         if (false) {
+          color = "red";
         } else {
+          color = "#4a4affff";
         }
-        color = "#4a4affff";
       }
     }
     html_font_color_set(span, color);
