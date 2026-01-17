@@ -1,5 +1,4 @@
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { string_prefix_without } from "../../../love/public/src/string_prefix_without.mjs";
 import { html_parse_attr } from "../../../love/public/src/html_parse_attr.mjs";
 import { roman_to_integer } from "../../../love/public/src/roman_to_integer.mjs";
@@ -24,9 +23,6 @@ import { ebible_version_download_path_combine } from "../../../love/public/src/e
 export async function ebible_chapter_text(bible_folder, chapter_code) {
   marker("1");
   let joined = ebible_version_download_path_combine(bible_folder, chapter_code);
-  log({
-    joined,
-  });
   let v2 = await html_parse_read(joined);
   let root = object_property_get(v2, "root");
   let d = object_property_get(v2, "d");
