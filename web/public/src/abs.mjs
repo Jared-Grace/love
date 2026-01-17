@@ -1,6 +1,6 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 export function abs(a) {
   marker("1");
-  let v = Math.abs(a);
-  return v;
+  let a = Math.abs(a);
+  return a;
 }
