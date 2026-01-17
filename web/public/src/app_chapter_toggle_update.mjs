@@ -27,7 +27,6 @@ export function app_chapter_toggle_update(
   verse_number,
   chapter_code,
   languages_verses,
-  languages_chosen,
 ) {
   marker("1");
   async function choose() {
