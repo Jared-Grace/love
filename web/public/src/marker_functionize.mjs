@@ -59,7 +59,6 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
     list_add(body, declaration);
     function lambda3(la) {
       function lambda2(v) {
-        let defineds = js_identifier_defineds(v);
         let stack = object_property_get(v, "stack");
         let node = object_property_get(v, "node");
         let stack1 = list_get_end(stack, 1);
@@ -69,6 +68,7 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
           }
         }
         let name = object_property_get(node, "name");
+        let defineds = js_identifier_defineds(v);
         let a = list_includes(defineds, name);
         if (not(a)) {
           la(name);
