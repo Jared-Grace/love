@@ -1,3 +1,4 @@
+import { js_identifier_defineds_includes } from "../../../love/public/src/js_identifier_defineds_includes.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { js_identifier_rename_imports_fix } from "../../../love/public/src/js_identifier_rename_imports_fix.mjs";
@@ -29,7 +30,9 @@ export function app_a_identifier(a) {
       if (includes2) {
         color = "#00c800ff";
       } else {
-        let v_match = js_visit_match(ast2, search);
+        let ast = object_property_get(a, "ast");
+        let v_match = js_visit_match(ast, node);
+        let includes3 = js_identifier_defineds_includes(v, name2);
         color = "#4a4affff";
       }
     }
