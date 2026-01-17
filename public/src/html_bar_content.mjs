@@ -21,10 +21,10 @@ export function html_bar_content(root) {
     "overflow-y": "scroll",
     "overflow-x": "auto",
   });
-  html_bar_content_padding(content);
   let bc = {
     bar,
     content,
   };
+  html_bar_content_padding(content);
   return bc;
 }
