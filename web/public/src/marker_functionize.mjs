@@ -1,3 +1,4 @@
+import { js_identifier_defineds_includes } from "../../../love/public/src/js_identifier_defineds_includes.mjs";
 import { list_remove_multiple } from "../../../love/public/src/list_remove_multiple.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { object_property_equals } from "../../../love/public/src/object_property_equals.mjs";
@@ -6,7 +7,6 @@ import { js_parse_statement } from "../../../love/public/src/js_parse_statement.
 import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
-import { js_identifier_defineds } from "../../../love/public/src/js_identifier_defineds.mjs";
 import { range } from "../../../love/public/src/range.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { js_declaration_to_block_body } from "../../../love/public/src/js_declaration_to_block_body.mjs";
@@ -29,7 +29,6 @@ import { assert } from "../../../love/public/src/assert.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
@@ -68,8 +67,7 @@ export async function marker_functionize(m_name_from, m_name_to, f_name_new) {
           }
         }
         let name = object_property_get(node, "name");
-        let defineds = js_identifier_defineds(v);
-        let a = list_includes(defineds, name);
+        let a = js_identifier_defineds_includes(v, name);
         if (not(a)) {
           la(name);
         }
