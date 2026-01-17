@@ -73,11 +73,13 @@ export async function app_chapter_main(context) {
         );
         let update = object_property_get(v3, "update");
         let toggle = object_property_get(v3, "toggle");
+        let copy = object_property_get(v3, "copy");
         if (verse_number_v === verse_number) {
           async function lambda4() {
             await html_scroll_center_now(p);
             toggle();
             update();
+            awaitcopy();
           }
           promise_later(lambda4);
         }
