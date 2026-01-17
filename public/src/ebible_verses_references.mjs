@@ -16,7 +16,8 @@ export async function ebible_verses_references(bible_folder, chapter_code) {
       books,
       [verse_number],
     );
-    return text + " ";
+    let v2 = text + " ";
+    return v2;
   }
   let vf = list_map(vs, lambda);
   return vf;
