@@ -1,3 +1,4 @@
+import { html_bar_content_padding } from "../../../love/public/src/html_bar_content_padding.mjs";
 import { html_hr } from "../../../love/public/src/html_hr.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -16,6 +17,7 @@ export async function app_supper_main(context) {
   marker("1");
   firebase_name_jg();
   let root = html_mobile_default(context);
+  html_bar_content_padding(root);
   let verses = await app_supper_verses_get();
   let previous_chapter_code = null;
   function lambda2(v) {
