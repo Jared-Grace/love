@@ -4,6 +4,9 @@ import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 export function list_size_1_assert_message(list, message) {
   let a = list_size_1(list);
   if (not(a)) {
-    error(message);
+    error({
+      message,
+      list,
+    });
   }
 }
