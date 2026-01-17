@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { global_function_initialize } from "../../../love/public/src/global_function_initialize.mjs";
 import { ebible_verse_download } from "../../../love/public/src/ebible_verse_download.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
@@ -16,6 +17,9 @@ export async function ebible_verse(bible_folder, chapter_code, verse_number) {
     return verse;
   }
   let verses = await ebible_verses(bible_folder, chapter_code);
+  log({
+    verses,
+  });
   let result = list_find_property(verses, "verse_number", verse_number);
   return result;
 }
