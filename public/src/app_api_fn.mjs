@@ -8,9 +8,10 @@ export async function app_api_fn(a) {
   let f_name = fn.name;
   object_property_set_exists_not(a, "f_name", f_name);
   const p = "args";
+  let value = [];
   let n = object_property_exists_not(a, p);
   if (n) {
-    object_property_set(object, property_name, value);
+    object_property_set(a, p, value);
   }
   let r = await app_api(a);
   return r;
