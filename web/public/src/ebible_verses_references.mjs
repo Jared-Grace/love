@@ -1,3 +1,4 @@
+import { string_wrap_parenthesis } from "../../../love/public/src/string_wrap_parenthesis.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
@@ -16,7 +17,7 @@ export async function ebible_verses_references(bible_folder, chapter_code) {
       books,
       [verse_number],
     );
-    let v2 = text + " ";
+    let v2 = text + " " + string_wrap_parenthesis(reference);
     return v2;
   }
   let vf = list_map(vs, lambda);
