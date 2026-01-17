@@ -1,3 +1,4 @@
+import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
@@ -10,6 +11,7 @@ export function ebible_parts_to_reference(
 ) {
   let book_name = ebible_book_code_to_name(books, book_code);
   let verse_numbers_s = null;
+  let unique = list_unique(list);
   let s1 = list_size_1(verse_numbers);
   let first = list_first(verse_numbers);
   if (s1) {
