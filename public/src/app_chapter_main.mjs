@@ -7,7 +7,7 @@ import { number_to_words } from "../../../love/public/src/number_to_words.mjs";
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
 import { list_last_is } from "../../../love/public/src/list_last_is.mjs";
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
-import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
+import { html_bar_content_padded } from "../../../love/public/src/html_bar_content_padded.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
@@ -26,7 +26,7 @@ export async function app_chapter_main(context) {
   let root = html_mobile_default(context);
   firebase_name_jg();
   html_margin_0(root);
-  let bc = html_bar_content(root);
+  let bc = html_bar_content_padded(root);
   let content = object_property_get(bc, "content");
   let bar = object_property_get(bc, "bar");
   let t = html_button_copy_text();
