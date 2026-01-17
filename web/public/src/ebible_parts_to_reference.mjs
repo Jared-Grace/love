@@ -11,13 +11,13 @@ export function ebible_parts_to_reference(
 ) {
   let book_name = ebible_book_code_to_name(books, book_code);
   let verse_numbers_s = null;
-  let unique = list_unique(list);
-  let s1 = list_size_1(verse_numbers);
-  let first = list_first(verse_numbers);
+  let unique = list_unique(verse_numbers);
+  let s1 = list_size_1(unique);
+  let first = list_first(unique);
   if (s1) {
     verse_numbers_s = first;
   } else {
-    let last = list_last(verse_numbers);
+    let last = list_last(unique);
     verse_numbers_s = first + "-" + last;
   }
   const reference = book_name + " " + chapter_name + ":" + verse_numbers_s;
