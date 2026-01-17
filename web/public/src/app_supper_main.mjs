@@ -38,4 +38,5 @@ export async function app_supper_main(context) {
     html_div_text(p, text);
   }
   each(verses, lambda2);
+        html_hr_2(root);
 }
