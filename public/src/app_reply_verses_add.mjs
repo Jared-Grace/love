@@ -1,3 +1,4 @@
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -20,6 +21,8 @@ export async function app_reply_verses_add(
   let mapped2 = list_map_property(copy, "bible_folder");
   let verses = await ebible_references_parse_lines(mapped2, [reference]);
   function lambda(v) {
+    if (null_is(value)) {
+    }
     if (equal_not(reference, reference_current)) {
       list_add(bible_texts, reference);
       reference_current = reference;
