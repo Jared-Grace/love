@@ -1,4 +1,4 @@
-import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
+import { html_bar_content_padded } from "../../../love/public/src/html_bar_content_padded.mjs";
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { js_code_global_init } from "../../../karate_code/public/src/js_code_global_init.mjs";
@@ -10,7 +10,7 @@ import { app_context_initialize_root } from "../../../love/public/src/app_contex
 import { function_dependencies_code_unaliased } from "../../../love/public/src/function_dependencies_code_unaliased.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_name_main } from "../../../love/public/src/app_name_main.mjs";
-import { html_button_width_full } from "./html_button_width_full.mjs";
+import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
 export async function app_component(a_name, back) {
   marker("1");
   let combined = app_name_main(a_name);
@@ -24,7 +24,7 @@ export async function app_component(a_name, back) {
   let root = html_document_body();
   html_margin_0(root);
   html_clear(root);
-  let bc = html_bar_content(root);
+  let bc = html_bar_content_padded(root);
   let content = object_property_get(bc, "content");
   let bar = object_property_get(bc, "bar");
   let text = app_karate_button_back_text();
