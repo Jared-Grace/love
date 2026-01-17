@@ -34,13 +34,13 @@ import { html_hash_object_get } from "../../../love/public/src/html_hash_object_
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
+import { html_bar_content_padded } from "../../../love/public/src/html_bar_content_padded.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_bible_home(context) {
   marker("1");
   let root = html_clear_context(context);
   html_clear(root);
-  let bc = html_bar_content(root);
+  let bc = html_bar_content_padded(root);
   let content = object_property_get(bc, "content");
   let bar = object_property_get(bc, "bar");
   html_centered(bar);
