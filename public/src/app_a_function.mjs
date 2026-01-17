@@ -4,7 +4,7 @@ import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mj
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
-import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
+import { html_bar_content_padded } from "../../../love/public/src/html_bar_content_padded.mjs";
 import { app_a_app_run } from "../../../love/public/src/app_a_app_run.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { storage_local_exists } from "../../../love/public/src/storage_local_exists.mjs";
@@ -186,7 +186,7 @@ export async function app_a_function(context) {
   if (e) {
     list_add(choices, preview_app);
   }
-  let v5 = html_bar_content(root);
+  let v5 = html_bar_content_padded(root);
   let content = object_property_get(v5, "content");
   let bar = object_property_get(v5, "bar");
   app_a_buttons_shortcuts(bar, choices);
