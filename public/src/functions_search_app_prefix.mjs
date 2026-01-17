@@ -1,3 +1,4 @@
+import { function_name_separator } from "../../../love/public/src/function_name_separator.mjs";
 import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_name_main_get } from "../../../love/public/src/app_name_main_get.mjs";
@@ -10,5 +11,5 @@ export async function functions_search_app_prefix(s) {
   let a_name = app_name_prefixed(s);
   let v = await functions_search(a_name);
   return v;
-  fsp
+  let separator = function_name_separator();
 }
