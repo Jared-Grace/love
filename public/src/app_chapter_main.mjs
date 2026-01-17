@@ -79,7 +79,7 @@ export async function app_chapter_main(context) {
             await html_scroll_center_now(p);
             toggle();
             update();
-            awaitcopy();
+            await copy();
           }
           promise_later(lambda4);
         }
