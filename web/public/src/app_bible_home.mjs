@@ -107,7 +107,8 @@ export async function app_bible_home(context) {
       }
       html_on_click(item_span, lambda9);
     }
-    each(split, lambda2);$r
+    each(split, lambda2);
+    return;
     app_chapter_toggle_update(
       updates,
       p,
