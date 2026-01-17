@@ -1,4 +1,6 @@
+import { undefined } from "../../../love/public/src/undefined.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export function function_parse_declaration_unalised() {
+export async function function_parse_declaration_unalised(f_name) {
   marker("1");
+  return await undefined(f_name);
 }
