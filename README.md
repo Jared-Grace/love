@@ -39,3 +39,23 @@ That way the watcher, server, and terminal will all run when VS Code is started
 ---
 
 To run the terminal: `cd love; ./scripts/p.cmd`
+
+Then you can run this function: `love_initialize`
+
+That will copy repos\love\data\.vscode\tasks.json to repos\.vscode\tasks.json
+
+---
+
+To run the Watcher: `cd love; node scripts/r.mjs w`
+
+To run the serVer: `cd love; node scripts/r.mjs v`
+
+---
+
+To run a function:
+
+`cd love; node scripts/r.mjs fn_name arg1_string arg2_string`
+
+Or if you are inside the terminal:
+
+`fn_name arg1_string arg2_string`
