@@ -9,7 +9,8 @@ import { app_a_functions_generic } from "../../../love/public/src/app_a_function
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_a_apps(context) {
   let root = object_property_get(context, "root");
-  let component = app_a_button_wide(parent, text, function lambda2() {});
+  function lambda2() {}
+  let component = app_a_button_wide(parent, text, lambda2);
   let mapped = await apps_names();
   marker("1");
   async function on_select(a_name) {
