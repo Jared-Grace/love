@@ -211,7 +211,7 @@ export function app_a_function_node(a) {
       }
     },
     ["IfStatement"]: function lambda18() {
-      app_a_if_statement(parent, node, a);
+      app_a_if_statement(a, parent, node);
     },
     ["LogicalExpression"]: binary,
     ["AssignmentExpression"]: binary,
