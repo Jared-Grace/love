@@ -28,11 +28,6 @@ export function js_identifier_defineds(v) {
       function each_statement(i) {
         let list_item = list_get(list, i);
         if (js_node_type_is(list_item, "VariableDeclaration")) {
-          log({
-            list_item,
-          });
-        }
-        if (js_node_type_is(list_item, "VariableDeclaration")) {
           let declarations = object_property_get(list_item, "declarations");
           let ids = list_map_property(declarations, "id");
           function lambda(id) {
@@ -54,6 +49,10 @@ export function js_identifier_defineds(v) {
             }
           }
           each(ids, lambda);
+        } else if (js_node_type_is(list_item, "FunctionDeclaration")) {
+          log({
+            list_item,
+          });
         }
       }
       each_range(index, each_statement);
