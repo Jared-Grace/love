@@ -3,8 +3,8 @@ import { html_font_color_set } from "../../../love/public/src/html_font_color_se
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 export function app_a_keyword_purple(parent, keyword) {
   marker("1");
-  let s = html_span_text(parent, keyword);
+  let k = html_span_text(parent, keyword);
   const color = "purple";
-  html_font_color_set(s, color);
-  return s;
+  html_font_color_set(k, color);
+  return k;
 }
