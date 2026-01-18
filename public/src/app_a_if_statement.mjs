@@ -13,7 +13,8 @@ export function app_a_if_statement(a, node, parent) {
   let k = js_keyword_if();
   let v4 = app_a_keyword_purple_space(parent, k);
   let keyword = object_property_get(v4, "keyword");
-  html_on_click(component, function lambda2() {});
+  function lambda2() {}
+  html_on_click(component, lambda2);
   function lambda19() {
     let test = object_property_get(node, "test");
     app_a_function_node_child(a, test);
