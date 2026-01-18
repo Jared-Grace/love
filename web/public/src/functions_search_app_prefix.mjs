@@ -9,7 +9,7 @@ export async function functions_search_app_prefix(s) {
   let v2 = await app_name_main_get(s);
   s = object_property_get(v2, "a_name");
   let a_name = app_name_prefixed(s);
-  let v = await functions_search(a_name);
-  return v;
   let separator = function_name_separator();
+  let v = await functions_search(a_name + separator + "");
+  return v;
 }
