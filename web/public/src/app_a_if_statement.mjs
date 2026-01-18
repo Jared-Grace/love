@@ -13,7 +13,7 @@ export function app_a_if_statement(a, node, parent) {
   let k = js_keyword_if();
   let v4 = app_a_keyword_purple_space(parent, k);
   let keyword = object_property_get(v4, "keyword");
-  function lambda(o) {}
+  async function lambda(o) {}
   app_a_overlay_on_click(a2, keyword, lambda);
   function lambda19() {
     let test = object_property_get(node, "test");
