@@ -15,7 +15,8 @@ export function app_a_button_function(context) {
   });
   if (exists) {
     const text = app_a_button_function_text(context);
-    let component = app_a_button(root, text, lambda2);
+    let component = null;
+    component = app_a_button(root, text, lambda2);
     function lambda2() {
       app_generic_screen_set(context, app_a_function);
     }
