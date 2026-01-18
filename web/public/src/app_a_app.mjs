@@ -15,7 +15,6 @@ export async function app_a_app(context) {
   app_a_button_function(context);
   let root = html_clear_context(context);
   function lambda3() {}
-  let component2 = app_a_button_wide(root, text, lambda3);
   let key = app_a_app_selected_key();
   let a_name = storage_local_get_context(context, key);
   let combined = app_generic_name_main(a_name);
