@@ -10,8 +10,10 @@ import { app_a_functions_generic } from "../../../love/public/src/app_a_function
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_a_apps(context) {
   let root = object_property_get(context, "root");
-  let v = app_karate_button_back_text();
-  function lambda2() {}
+  let text = app_karate_button_back_text();
+  function lambda2() {
+    app_generic_screen_set(context, app_a_app_run);
+  }
   let component = app_a_button_wide(parent, text, lambda2);
   let mapped = await apps_names();
   marker("1");
