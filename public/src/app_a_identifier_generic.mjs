@@ -109,10 +109,10 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
     if (includes) {
       list_add(choices, choice_function_open);
     }
+    app_a_buttons_shortcuts_wide(overlay, choices);
     function on_keydown(e) {
       app_a_on_keydown(e, choices);
     }
-    app_a_buttons_shortcuts_wide(overlay, choices);
   }
   html_on_click(span, on_click);
 }
