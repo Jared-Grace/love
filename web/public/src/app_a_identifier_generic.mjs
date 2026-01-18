@@ -116,5 +116,6 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
     }
   }
   html_on_click(span, on_click);
-  app_a_overlay_on_click(a2, function lambda3(o3) {});
+  function lambda3(o3) {}
+  app_a_overlay_on_click(a2, lambda3);
 }
