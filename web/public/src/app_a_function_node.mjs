@@ -213,7 +213,8 @@ export function app_a_function_node(a) {
     },
     ["IfStatement"]: function lambda18() {
       let k = js_keyword_if();
-      app_a_keyword_purple_space(parent, k);
+      let v4 = app_a_keyword_purple_space(parent, k);
+      let keyword = object_property_get(v4, "keyword");
       function lambda19() {
         let test = object_property_get(node, "test");
         app_a_function_node_child(a, test);
