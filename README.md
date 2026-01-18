@@ -76,3 +76,10 @@ To see what an alias `n` is mapped to use: `u n`
 
 To create a new alias `abc` for function `action_births_consequence` use: 
 `a abc action_births_consequence`
+
+There is also `ar` for `function_alias_replace`: 
+`ar existing_alias function_that_will_now_use_that_alias`
+
+And there is also `ac` for `function_alias_change`: `ac alias_old alias_new`
+
+---
