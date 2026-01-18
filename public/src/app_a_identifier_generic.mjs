@@ -30,7 +30,6 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
   marker("1");
   async function on_pointerdown() {
     let context = object_property_get(a, "context");
-    let on_keydowns = object_property_get(context, "on_keydowns");
     let o = app_a_overlay(a, on_keydown);
     let overlay_close = object_property_get(o, "overlay_close");
     let overlay = object_property_get(o, "overlay");
