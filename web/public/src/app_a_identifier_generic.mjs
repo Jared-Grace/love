@@ -4,8 +4,6 @@ import { html_attribute_set } from "../../../love/public/src/html_attribute_set.
 import { app_a_textarea } from "../../../love/public/src/app_a_textarea.mjs";
 import { app_a_buttons_shortcuts_wide } from "../../../love/public/src/app_a_buttons_shortcuts_wide.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
-import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
-import { app_a_on_keydown } from "../../../love/public/src/app_a_on_keydown.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
@@ -29,14 +27,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { marker } from "../../../love/public/src/marker.mjs";
 export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
   marker("1");
-  async function on_click() {
-    let o = app_a_overlay(a, on_keydown);
-    function on_keydown(e) {
-      app_a_on_keydown(e, choices);
-    }
-  }
-  html_on_click(span, on_click);
-  async function on_click(o3) {
+  async function on_click(o) {
     let overlay_close = object_property_get(o, "overlay_close");
     let overlay = object_property_get(o, "overlay");
     let oc = app_a_overlay_container_centered(overlay);
@@ -117,6 +108,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
       list_add(choices, choice_function_open);
     }
     app_a_buttons_shortcuts_wide(overlay, choices);
+    return choices;
   }
   app_a_overlay_on_click(a2, span, on_click);
 }
