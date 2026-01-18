@@ -1,4 +1,4 @@
-import { log } from "../../../love/public/src/log.mjs";
+import { add } from "../../../love/public/src/add.mjs";
 import { data_folder } from "../../../love/public/src/data_folder.mjs";
 import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
 import { folder_vscode } from "../../../love/public/src/folder_vscode.mjs";
@@ -15,5 +15,5 @@ export async function love_initialize() {
   let previous = folder_previous();
   let file_path_new = path_join([previous, f_path]);
   await file_copy_overwrite(file_path_old, file_path_new);
-  log(message);
+  let sum = add(left, right);
 }
