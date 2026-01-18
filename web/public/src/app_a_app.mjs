@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_buttons_shortcuts_wide } from "../../../love/public/src/app_a_buttons_shortcuts_wide.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { app_a_function_name_selected } from "../../../love/public/src/app_a_function_name_selected.mjs";
@@ -45,6 +46,7 @@ export async function app_a_app(context) {
       }
       const text = app_a_button_function_text(unaliased);
       let component = app_a_button_wide(root, text, lambda2);
+      list_add(list, item);
     }
   }
   app_a_buttons_shortcuts_wide(root, choices);
