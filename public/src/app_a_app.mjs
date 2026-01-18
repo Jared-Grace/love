@@ -15,8 +15,8 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_a_app(context) {
   marker("1");
   let root = html_clear_context(context);
-  app_a_button_function(context);
-  html_width_full(component3);
+  let f = app_a_button_function(context);
+  html_width_full(f);
   function lambda3() {
     app_generic_screen_set(context, app_a_app_run);
   }
