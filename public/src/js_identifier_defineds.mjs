@@ -21,12 +21,13 @@ export function js_identifier_defineds(v) {
   marker("1");
   let stack = object_property_get(v, "stack");
   let node2 = object_property_get(stack, "node");
-  if (false) {
+  let value = object_property_get(node2, "name");
+  if (value === "margin") {
+    log({
+      node2,
+      stack,
+    });
   }
-  log({
-    node2,
-    stack,
-  });
   function lambda4(la) {
     js_stack_filtered_each(stack, "BlockStatement", lambda3);
     function lambda3(bs) {
