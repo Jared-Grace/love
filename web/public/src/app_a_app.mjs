@@ -43,17 +43,16 @@ export async function app_a_app(context) {
         app_generic_screen_set(context, app_a_app_run);
       },
     },
-    {
+  ];
+  let exists = object_property_get(v, "exists");
+  if (exists) {
+    list_add(choices, {
       shortcut: "m",
       text: text,
       fn: function lambda2() {
         app_a_function_select(context, unaliased);
       },
-    },
-  ];
-  let exists = object_property_get(v, "exists");
-  if (exists) {
-    list_add(list, item);
+    });
   }
   app_a_buttons_shortcuts_wide(root, choices);
 }
