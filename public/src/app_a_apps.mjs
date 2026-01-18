@@ -16,8 +16,10 @@ export async function app_a_apps(context) {
   function lambda2() {
     app_generic_screen_set(context, app_a_function);
   }
+  const key = "f_name_selected";
+  let app_fn = object_property_get(context, "app_fn");
   let value = storage_local_exists(app_fn, key);
-  let f_name = storage_local_get_context(context, "f_name_selected");
+  let f_name = storage_local_get_context(context, key);
   let component = app_a_button(
     root,
     emoji_computer() + " function: " + f_name,
