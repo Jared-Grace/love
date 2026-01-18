@@ -28,7 +28,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { marker } from "../../../love/public/src/marker.mjs";
 export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
   marker("1");
-  async function on_pointerdown() {
+  async function on_click() {
     let context = object_property_get(a, "context");
     let o = app_a_overlay(a, on_keydown);
     let overlay_close = object_property_get(o, "overlay_close");
@@ -114,5 +114,5 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
     }
     app_a_buttons_shortcuts_wide(overlay, choices);
   }
-  html_on_click(span, on_pointerdown);
+  html_on_click(span, on_click);
 }
