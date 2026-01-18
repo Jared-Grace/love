@@ -46,6 +46,7 @@ export function js_identifier_defineds(v) {
             }
           }
           each(ids, lambda);
+        } else {
         }
       }
       each_range(index, each_statement);
