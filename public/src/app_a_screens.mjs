@@ -12,6 +12,7 @@ export function app_a_screens() {
     apps: app_a_apps,
     home: app_a_home,
     app_run: app_a_app_run,
+    app: app_a_app,
   };
   return v;
 }
