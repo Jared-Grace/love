@@ -15,7 +15,7 @@ export async function app_a_apps(context) {
     app_generic_screen_set(context, app_a_function);
   }
   let f_name = storage_local_get(app_fn, "f_name_selected");
-  let component = app_a_button_wide(root, "function: " + f_name, lambda2);
+  let component = app_a_button(root, "function: " + f_name, lambda2);
   let mapped = await apps_names();
   marker("1");
   async function on_select(a_name) {
