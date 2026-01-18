@@ -4,8 +4,6 @@ import { app_a_function_name_selected } from "../../../love/public/src/app_a_fun
 import { app_a_button_function_text } from "../../../love/public/src/app_a_button_function_text.mjs";
 import { emoji_mobile } from "../../../love/public/src/emoji_mobile.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
-import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
-import { app_a_button_function } from "../../../love/public/src/app_a_button_function.mjs";
 import { app_a_app_run } from "../../../love/public/src/app_a_app_run.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -18,8 +16,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_a_app(context) {
   marker("1");
   let root = html_clear_context(context);
-  let f = app_a_button_function(context);
-  html_width_full(f);
   let e = emoji_mobile();
   let key = app_a_app_selected_key();
   let a_name = storage_local_get_context(context, key);
