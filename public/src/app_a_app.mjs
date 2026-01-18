@@ -8,7 +8,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { function_exists } from "../../../love/public/src/function_exists.mjs";
 import { app_generic_name_main } from "../../../love/public/src/app_generic_name_main.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { app_a_app_selected_key } from "../../../love/public/src/app_a_app_selected_key.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
