@@ -4,7 +4,6 @@ import { list_join_newline } from "../../../love/public/src/list_join_newline.mj
 import { js_code_global_init } from "../../../karate_code/public/src/js_code_global_init.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { app_context_initialize_root } from "../../../love/public/src/app_context_initialize_root.mjs";
 import { function_dependencies_code_unaliased } from "../../../love/public/src/function_dependencies_code_unaliased.mjs";
@@ -27,7 +26,6 @@ export async function app_component(a_name, on_click, button_text) {
   let bc = html_bar_content_padded(root);
   let content = object_property_get(bc, "content");
   let bar = object_property_get(bc, "bar");
-  let text = app_karate_button_back_text();
   let component = html_button_width_full(bar, text, on_click);
   await app_context_initialize_root(content, fn);
 }
