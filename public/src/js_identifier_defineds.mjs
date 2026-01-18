@@ -20,7 +20,7 @@ import { json_to } from "../../../love/public/src/json_to.mjs";
 export function js_identifier_defineds(v) {
   marker("1");
   let stack = object_property_get(v, "stack");
-  let node2 = object_property_get(stack, "node");
+  let node2 = object_property_get(v, "node");
   let value = object_property_get(node2, "name");
   if (value === "margin") {
     log({
