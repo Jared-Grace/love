@@ -1,3 +1,4 @@
+import { app_a_app_selected_key } from "../../../love/public/src/app_a_app_selected_key.mjs";
 import { app_a_button_function } from "../../../love/public/src/app_a_button_function.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { app_a_app_run } from "../../../love/public/src/app_a_app_run.mjs";
@@ -11,7 +12,8 @@ export async function app_a_apps(context) {
   let mapped = await apps_names();
   marker("1");
   async function on_select(a_name) {
-    storage_local_set(app_a, "app_selected", a_name);
+    let key = app_a_app_selected_key();
+    storage_local_set(app_a, key, a_name);
     app_generic_screen_set(context, app_a_app_run);
   }
   app_a_functions_generic(context, "app", mapped, on_select);
