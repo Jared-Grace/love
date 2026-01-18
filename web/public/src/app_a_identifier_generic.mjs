@@ -31,6 +31,12 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
   marker("1");
   async function on_click() {
     let o = app_a_overlay(a, on_keydown);
+    function on_keydown(e) {
+      app_a_on_keydown(e, choices);
+    }
+  }
+  html_on_click(span, on_click);
+  async function on_click(o3) {
     let overlay_close = object_property_get(o, "overlay_close");
     let overlay = object_property_get(o, "overlay");
     let oc = app_a_overlay_container_centered(overlay);
@@ -111,11 +117,6 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
       list_add(choices, choice_function_open);
     }
     app_a_buttons_shortcuts_wide(overlay, choices);
-    function on_keydown(e) {
-      app_a_on_keydown(e, choices);
-    }
   }
-  html_on_click(span, on_click);
-  function lambda3(o3) {}
-  app_a_overlay_on_click(a2, lambda3);
+  app_a_overlay_on_click(a2, span, on_click);
 }
