@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { app_a_app_selected_key } from "../../../love/public/src/app_a_app_selected_key.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
@@ -7,4 +8,7 @@ export function app_a_app(context) {
   let root = html_clear_context(context);
   let key = app_a_app_selected_key();
   let a_name = storage_local_get_context(context, key);
+  log({
+    a_name,
+  });
 }
