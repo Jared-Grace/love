@@ -14,7 +14,7 @@ export async function app_a_apps(context) {
   function lambda2() {
     app_generic_screen_set(context, app_a_app_run);
   }
-  let component = app_a_button_wide(parent, text, lambda2);
+  let component = app_a_button_wide(root, text, lambda2);
   let mapped = await apps_names();
   marker("1");
   async function on_select(a_name) {
