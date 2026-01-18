@@ -19,13 +19,13 @@ export async function app_a_apps(context) {
   const key = "f_name_selected";
   let exists = storage_local_exists_context(context, key);
   if (exists) {
+    let f_name = storage_local_get_context(context, key);
+    let component = app_a_button(
+      root,
+      emoji_computer() + " function: " + f_name,
+      lambda2,
+    );
   }
-  let f_name = storage_local_get_context(context, key);
-  let component = app_a_button(
-    root,
-    emoji_computer() + " function: " + f_name,
-    lambda2,
-  );
   let mapped = await apps_names();
   marker("1");
   async function on_select(a_name) {
