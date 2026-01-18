@@ -60,8 +60,8 @@ export async function app_a_app(context) {
   function lambda(item) {
     let fn = object_property_get(item, "fn");
     function wrapped() {
-      let result = fn();
       list_remove(on_keydowns, on_keydown);
+      let result = fn();
       return result;
     }
     object_property_set(item, "fn", wrapped);
