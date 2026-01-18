@@ -1,3 +1,4 @@
+import { app_a_overlay_on_click } from "../../../love/public/src/app_a_overlay_on_click.mjs";
 import { app_a_overlay_container_centered } from "../../../love/public/src/app_a_overlay_container_centered.mjs";
 import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
 import { app_a_textarea } from "../../../love/public/src/app_a_textarea.mjs";
@@ -115,4 +116,5 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
     }
   }
   html_on_click(span, on_click);
+  app_a_overlay_on_click(a2, function lambda3(o3) {});
 }
