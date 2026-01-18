@@ -1,3 +1,4 @@
+import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { emoji_run } from "../../../love/public/src/emoji_run.mjs";
 import { app_a_button_function } from "../../../love/public/src/app_a_button_function.mjs";
 import { app_a_app_run } from "../../../love/public/src/app_a_app_run.mjs";
@@ -15,6 +16,7 @@ export async function app_a_app(context) {
   marker("1");
   let root = html_clear_context(context);
   app_a_button_function(context);
+  html_width_full(component3);
   function lambda3() {
     app_generic_screen_set(context, app_a_app_run);
   }
