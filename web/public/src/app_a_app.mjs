@@ -12,13 +12,11 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_a_app(context) {
   marker("1");
-  log({
-    context,
-  });
-  return;
   app_a_button_function(context);
   let root = html_clear_context(context);
-  function lambda3() {}
+  function lambda3() {
+    app_generic_screen_set(context, app_a_app_run);
+  }
   let key = app_a_app_selected_key();
   let a_name = storage_local_get_context(context, key);
   let combined = app_generic_name_main(a_name);
@@ -29,7 +27,6 @@ export async function app_a_app(context) {
     function lambda2() {}
     let component = app_a_button_wide(root, unaliased, lambda2);
   }
-  app_generic_screen_set(context, app_a_app_run);
   log({
     a_name,
   });
