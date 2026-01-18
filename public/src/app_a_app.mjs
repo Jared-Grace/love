@@ -1,3 +1,5 @@
+import { app_a_app_run } from "../../../love/public/src/app_a_app_run.mjs";
+import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { function_exists } from "../../../love/public/src/function_exists.mjs";
@@ -20,8 +22,7 @@ export async function app_a_app(context) {
     function lambda2() {}
     let component = app_a_button_wide(root, unaliased, lambda2);
   }
-  if (false) {
-  }
+  app_generic_screen_set(context, app_a_app_run);
   log({
     a_name,
   });
