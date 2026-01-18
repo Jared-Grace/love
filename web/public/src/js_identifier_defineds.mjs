@@ -20,10 +20,12 @@ import { json_to } from "../../../love/public/src/json_to.mjs";
 export function js_identifier_defineds(v) {
   marker("1");
   let stack = object_property_get(v, "stack");
-  let e1 = list_get_end_1(stack);
-  if (js_node_type_is(e1, "Property")) {
-  }
   function lambda4(la) {
+    let e1 = list_get_end_1(stack);
+    if (js_node_type_is(e1, "Property")) {
+      let value = object_property_get(id2, "name");
+      la([value]);
+    }
     js_stack_filtered_each(stack, "BlockStatement", lambda3);
     function lambda3(bs) {
       let list = list_next(stack, bs);
