@@ -31,7 +31,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
   async function on_pointerdown() {
     let context = object_property_get(a, "context");
     let on_keydowns = object_property_get(context, "on_keydowns");
-    let o = app_a_overlay(a, on_keydowns, on_keydown);
+    let o = app_a_overlay(a, on_keydown);
     let overlay_close = object_property_get(o, "overlay_close");
     let overlay = object_property_get(o, "overlay");
     let v = app_a_choice_close(overlay_close);
@@ -39,7 +39,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
       fn: async function lambda15() {
         overlay_close();
         let lambda22 = html_on_enter_lambda(lambda23);
-        let o2 = app_a_overlay(a, on_keydowns, lambda22);
+        let o2 = app_a_overlay(a, lambda22);
         let rename_overlay_close = object_property_get(o2, "overlay_close");
         let overlay = object_property_get(o2, "overlay");
         let text5 = app_a_overlay_close_text();
