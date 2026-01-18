@@ -18,7 +18,7 @@ export async function app_a_apps(context) {
   }
   const key = "f_name_selected";
   let app_fn = object_property_get(context, "app_fn");
-  let value = storage_local_exists(app_fn, key);
+  let exists = storage_local_exists(app_fn, key);
   let f_name = storage_local_get_context(context, key);
   let component = app_a_button(
     root,
