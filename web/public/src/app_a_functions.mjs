@@ -1,3 +1,4 @@
+import { app_a_button_function } from "../../../love/public/src/app_a_button_function.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { app_a_functions_generic } from "../../../love/public/src/app_a_functions_generic.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -10,6 +11,7 @@ import { list_filter_ends_with } from "../../../love/public/src/list_filter_ends
 import { function_path_to_name } from "../../../love/public/src/function_path_to_name.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 export async function app_a_functions(context) {
+  app_a_button_function(context);
   let mapped = await app_a_files_paths();
   let suffix = function_name_extension();
   let filtered3 = list_filter_ends_with(mapped, suffix);
