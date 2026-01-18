@@ -221,8 +221,9 @@ export function app_a_function_node(a) {
       app_a_braces_wrap_node(a, consequent, parent);
       let alternate = object_property_get(node, "alternate");
       let nn = null_not_is(alternate);
-      return;
       if (nn) {
+        let kw = "else";
+        app_a_keyword_purple_space(parent, k);
         app_a_braces_wrap_node(a, alternate, parent);
       }
     },
