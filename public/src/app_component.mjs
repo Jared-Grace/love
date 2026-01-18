@@ -26,6 +26,6 @@ export async function app_component(a_name, on_click, button_text) {
   let bc = html_bar_content_padded(root);
   let content = object_property_get(bc, "content");
   let bar = object_property_get(bc, "bar");
-  let component = html_button_width_full(bar, text, on_click);
+  let component = html_button_width_full(bar, button_text, on_click);
   await app_context_initialize_root(content, fn);
 }
