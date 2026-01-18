@@ -1,5 +1,5 @@
+import { app_a_button } from "../../../love/public/src/app_a_button.mjs";
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
-import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { app_a_app_run } from "../../../love/public/src/app_a_app_run.mjs";
