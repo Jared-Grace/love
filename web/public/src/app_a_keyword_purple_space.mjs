@@ -3,5 +3,8 @@ import { app_a_keyword_purple } from "../../../love/public/src/app_a_keyword_pur
 export function app_a_keyword_purple_space(parent, text2) {
   let keyword = app_a_keyword_purple(parent, text2);
   html_span_space(parent);
-  return keyword;
+  let v = {
+    keyword,
+  };
+  return v;
 }
