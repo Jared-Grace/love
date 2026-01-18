@@ -1,3 +1,4 @@
+import { app_a_app } from "../../../love/public/src/app_a_app.mjs";
 import { app_a_app_run } from "../../../love/public/src/app_a_app_run.mjs";
 import { app_a_home } from "../../../love/public/src/app_a_home.mjs";
 import { app_a_apps } from "../../../love/public/src/app_a_apps.mjs";
