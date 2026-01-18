@@ -1,4 +1,4 @@
-import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
+import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
@@ -14,8 +14,8 @@ export async function app_a_apps(context) {
   function lambda2() {
     app_generic_screen_set(context, app_a_function);
   }
-  let text = app_karate_button_back_text();
-  let component = app_a_button_wide(root, text, lambda2);
+  let f_name = storage_local_get(app_fn, "f_name_selected");
+  let component = app_a_button_wide(root, "function: " + f_name, lambda2);
   let mapped = await apps_names();
   marker("1");
   async function on_select(a_name) {
