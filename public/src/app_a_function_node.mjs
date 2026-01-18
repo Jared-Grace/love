@@ -121,7 +121,10 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, body2);
     },
     ["BlockStatement"]: function lambda7() {
-      app_a_body(node, parent, a, true);
+      function lambda20() {
+        app_a_body(node, parent, a, true);
+      }
+      app_a_braces_wrap(parent, lambda20);
     },
     ["ReturnStatement"]: function lambda7() {
       let k = js_keyword_return();
