@@ -4,4 +4,6 @@ import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mj
 export function app_generic_name_main(a) {
   marker("1");
   let a_name = app_name_prefixed(a);
-  let combi
+  let combined = function_name_combine_multiple([a_name, "main"]);
+  return combined;
+}
