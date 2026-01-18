@@ -13,8 +13,8 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_a_app(context) {
   marker("1");
-  app_a_button_function(context);
   let root = html_clear_context(context);
+  app_a_button_function(context);
   function lambda3() {
     app_generic_screen_set(context, app_a_app_run);
   }
