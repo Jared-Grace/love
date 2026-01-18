@@ -1,6 +1,5 @@
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
-import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { function_name_separator } from "../../../love/public/src/function_name_separator.mjs";
 import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -13,9 +12,13 @@ export async function functions_search_app_prefix(s) {
   s = object_property_get(v2, "a_name");
   let a_name = app_name_prefixed(s);
   let separator = function_name_separator();
-  let results = await functions_search(a_name + separator + "");
+  let results_search = await functions_search(a_name + separator + "");
   let value = function_name_to_path(a_name);
-  object_property_set_exists_not(results, a_name, value);
-  let to2 = object_merge(to, from);
+  let results = object_merge(
+    {
+      [a_name]: value,
+    },
+    results_search,
+  );
   return results;
 }
