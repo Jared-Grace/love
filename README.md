@@ -62,6 +62,10 @@ Or if you are inside the terminal:
 
 ---
 
+This repo is function-centric and written in JavaScript
+
+---
+
 To create a new function:
 
 `n fn_name` 
@@ -83,3 +87,15 @@ There is also `ar` for `function_alias_replace`:
 And there is also `ac` for `function_alias_change`: `ac alias_old alias_new`
 
 ---
+
+In the terminal `s partial_name1,partial_name2` will match function names that
+
+---
+
+If the watcher is running, you can write shorthands that will expand to code
+
+For example `$iel` in its own statement will expand to `if (false) {} else {}` on file save
+
+Likewise: `l` expands to: `log(message);` however if `message` is already an identifier in the file then a unique identifier will be chosen such as `message2`
+
+So if you type the alias for a function (or its name), such as `l` in its own statement for `log` then arguments will be added for the function and if the function has a `return` as
