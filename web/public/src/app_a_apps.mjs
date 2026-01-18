@@ -1,7 +1,7 @@
+import { app_a_app } from "../../../love/public/src/app_a_app.mjs";
 import { app_a_app_selected_key } from "../../../love/public/src/app_a_app_selected_key.mjs";
 import { app_a_button_function } from "../../../love/public/src/app_a_button_function.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
-import { app_a_app_run } from "../../../love/public/src/app_a_app_run.mjs";
 import { apps_names } from "../../../love/public/src/apps_names.mjs";
 import { app_a_functions_generic } from "../../../love/public/src/app_a_functions_generic.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
