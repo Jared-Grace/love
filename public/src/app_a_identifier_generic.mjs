@@ -110,5 +110,5 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
     app_a_buttons_shortcuts_wide(overlay, choices);
     return choices;
   }
-  app_a_overlay_on_click(a2, span, on_click);
+  app_a_overlay_on_click(a, span, on_click);
 }
