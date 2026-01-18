@@ -9,7 +9,7 @@ export function app_a_app(context) {
   let root = html_clear_context(context);
   let key = app_a_app_selected_key();
   let a_name = storage_local_get_context(context, key);
-  let combined = app_generic_name_main(a);
+  let combined = app_generic_name_main(a_name);
   log({
     a_name,
   });
