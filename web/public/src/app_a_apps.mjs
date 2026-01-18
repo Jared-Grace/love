@@ -1,3 +1,4 @@
+import { emoji_computer } from "../../../love/public/src/emoji_computer.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { app_a_button } from "../../../love/public/src/app_a_button.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -15,7 +16,11 @@ export async function app_a_apps(context) {
     app_generic_screen_set(context, app_a_function);
   }
   let f_name = storage_local_get_context(context, "f_name_selected");
-  let component = app_a_button(root, "function: " + f_name, lambda2);
+  let component = app_a_button(
+    root,
+    emoji_computer() + " function: " + f_name,
+    lambda2,
+  );
   let mapped = await apps_names();
   marker("1");
   async function on_select(a_name) {
