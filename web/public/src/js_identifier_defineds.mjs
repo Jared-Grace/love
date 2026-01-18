@@ -59,6 +59,7 @@ export function js_identifier_defineds(v) {
         }
       }
       each_range(index, each_statement);
+      each(list2, function lambda2(item2) {});
     }
     let types = js_types_function();
     function lambda5(node) {
