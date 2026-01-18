@@ -11,7 +11,7 @@ import { function_dependencies_code_unaliased } from "../../../love/public/src/f
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_name_main } from "../../../love/public/src/app_name_main.mjs";
 import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
-export async function app_component(a_name, back) {
+export async function app_component(a_name, back, button_text) {
   marker("1");
   let combined = app_name_main(a_name);
   let v = await function_dependencies_code_unaliased(combined);
