@@ -50,6 +50,7 @@ export function js_identifier_defineds(v) {
           }
           each(ids, lambda);
         } else if (js_node_type_is(list_item, "FunctionDeclaration")) {
+          let id2 = object_property_get(list_item, "id");
           log({
             list_item,
           });
