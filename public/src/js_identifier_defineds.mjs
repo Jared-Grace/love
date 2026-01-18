@@ -21,6 +21,8 @@ export function js_identifier_defineds(v) {
   marker("1");
   let stack = object_property_get(v, "stack");
   let node2 = object_property_get(stack, "node");
+  if (false) {
+  }
   log({
     node2,
     stack,
