@@ -1,3 +1,4 @@
+import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { app_a_function_name_selected } from "../../../love/public/src/app_a_function_name_selected.mjs";
 import { app_a_button_function_text } from "../../../love/public/src/app_a_button_function_text.mjs";
 import { emoji_mobile } from "../../../love/public/src/emoji_mobile.mjs";
@@ -26,8 +27,10 @@ export async function app_a_app(context) {
   let key = app_a_app_selected_key();
   let a_name = storage_local_get_context(context, key);
   let component2 = app_a_button_wide(root, e + "Preview: " + a_name, lambda3);
-  let f_name = app_a_function_name_selected(context2);
+  let f_name = app_a_function_name_selected(context);
   let combined = app_generic_name_main(a_name);
+  if (equal_not(left, right)) {
+  }
   let v = await function_exists(combined);
   let unaliased = object_property_get(v, "unaliased");
   let exists = object_property_get(v, "exists");
