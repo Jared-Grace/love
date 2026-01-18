@@ -1,5 +1,5 @@
+import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { app_a_button } from "../../../love/public/src/app_a_button.mjs";
-import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { app_a_app_run } from "../../../love/public/src/app_a_app_run.mjs";
@@ -14,7 +14,7 @@ export async function app_a_apps(context) {
   function lambda2() {
     app_generic_screen_set(context, app_a_function);
   }
-  let f_name = storage_local_get(app_fn, "f_name_selected");
+  let f_name = storage_local_get_context(context, "f_name_selected");
   let component = app_a_button(root, "function: " + f_name, lambda2);
   let mapped = await apps_names();
   marker("1");
