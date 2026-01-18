@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_index_of_next_outside } from "../../../love/public/src/list_index_of_next_outside.mjs";
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
@@ -49,6 +50,9 @@ export function js_identifier_defineds(v) {
           }
           each(ids, lambda);
         } else if (js_node_type_is(list_item, "VariableDeclaration")) {
+          log({
+            list_item,
+          });
         }
       }
       each_range(index, each_statement);
