@@ -13,8 +13,10 @@ export async function app_a_app(context) {
   let a_name = storage_local_get_context(context, key);
   let combined = app_generic_name_main(a_name);
   let u = await function_exists(combined);
+  if (false) {
+  }
   function lambda2() {}
-  let component = app_a_button_wide(parent, text, lambda2);
+  let component = app_a_button_wide(root, a_name, lambda2);
   if (false) {
   }
   log({
