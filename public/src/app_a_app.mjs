@@ -1,4 +1,3 @@
-import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { app_a_buttons_shortcuts_wide } from "../../../love/public/src/app_a_buttons_shortcuts_wide.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { app_a_function_name_selected } from "../../../love/public/src/app_a_function_name_selected.mjs";
@@ -22,13 +21,18 @@ export async function app_a_app(context) {
   let root = html_clear_context(context);
   let f = app_a_button_function(context);
   html_width_full(f);
-  function lambda3() {
-    app_generic_screen_set(context, app_a_app_run);
-  }
   let e = emoji_mobile();
+  let choices = [
+    {
+      shortcut: "p",
+      text: e + " Preview",
+      fn: function lambda3() {
+        app_generic_screen_set(context, app_a_app_run);
+      },
+    },
+  ];
   let key = app_a_app_selected_key();
   let a_name = storage_local_get_context(context, key);
-  let component2 = app_a_button_wide(root, e + "preview: " + a_name, lambda3);
   let f_name = app_a_function_name_selected(context);
   let combined = app_generic_name_main(a_name);
   if (equal_not(f_name, combined)) {
@@ -43,15 +47,5 @@ export async function app_a_app(context) {
       let component = app_a_button_wide(root, text, lambda2);
     }
   }
-  let choices = [
-    {
-      shortcut: "c",
-      text: "Copy",
-      fn: async function lambda2() {
-        await clipboard_copy(name);
-        overlay_close();
-      },
-    },
-  ];
   app_a_buttons_shortcuts_wide(root, choices);
 }
