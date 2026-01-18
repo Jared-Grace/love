@@ -57,6 +57,7 @@ export async function app_a_app(context) {
     app_a_on_keydown(e, choices);
   }
   function lambda(item) {
+    let fn2 = object_property_get(item, "fn");
     list_remove(on_keydowns, on_keydown);
   }
   each(list, lambda);
