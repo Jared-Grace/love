@@ -1,6 +1,4 @@
-import { app_a_on_keydown } from "../../../love/public/src/app_a_on_keydown.mjs";
-import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
-import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
+import { app_a_overlay_on_click } from "../../../love/public/src/app_a_overlay_on_click.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_keyword_else } from "../../../love/public/src/js_keyword_else.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
@@ -15,13 +13,7 @@ export function app_a_if_statement(a, node, parent) {
   let k = js_keyword_if();
   let v4 = app_a_keyword_purple_space(parent, k);
   let keyword = object_property_get(v4, "keyword");
-  function on_click() {
-    let o = app_a_overlay(a, on_keydown);
-    function on_keydown(e) {
-      app_a_on_keydown(e, choices);
-    }
-  }
-  html_on_click(keyword, on_click);
+  app_a_overlay_on_click(a2, component, function lambda(o) {});
   function lambda19() {
     let test = object_property_get(node, "test");
     app_a_function_node_child(a, test);
