@@ -33,7 +33,7 @@ export async function app_a_app(context) {
       shortcut: "f",
       text: text,
       fn: function lambda2() {
-        app_a_function_select(context, unaliased);
+        app_a_function_select(context, f_name);
       },
     },
     {
