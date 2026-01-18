@@ -31,11 +31,8 @@ export async function app_a_app(context) {
   let exists = object_property_get(v, "exists");
   if (exists) {
     function lambda2() {
-      app_a_function_select(context2, f_name);
+      app_a_function_select(context, unaliased);
     }
     let component = app_a_button_wide(root, unaliased, lambda2);
   }
-  log({
-    a_name,
-  });
 }
