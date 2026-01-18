@@ -11,6 +11,7 @@ export function app_a_button_function(context) {
   const key = app_a_function_name_selected_key();
   let exists = storage_local_exists_context(context, key);
   if (exists) {
+    const key = app_a_function_name_selected_key();
     let f_name = storage_local_get_context(context, key);
     const text = emoji_computer() + " function: " + f_name;
     let component = app_a_button(root, text, lambda2);
