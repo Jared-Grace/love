@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { function_exists } from "../../../love/public/src/function_exists.mjs";
 import { app_generic_name_main } from "../../../love/public/src/app_generic_name_main.mjs";
@@ -12,11 +13,13 @@ export async function app_a_app(context) {
   let key = app_a_app_selected_key();
   let a_name = storage_local_get_context(context, key);
   let combined = app_generic_name_main(a_name);
-  let u = await function_exists(combined);
-  if (false) {
+  let v = await function_exists(combined);
+  let unaliased = object_property_get(v, "unaliased");
+  let exists = object_property_get(v, "exists");
+  if (exists) {
+    function lambda2() {}
+    let component = app_a_button_wide(root, unaliased, lambda2);
   }
-  function lambda2() {}
-  let component = app_a_button_wide(root, a_name, lambda2);
   if (false) {
   }
   log({
