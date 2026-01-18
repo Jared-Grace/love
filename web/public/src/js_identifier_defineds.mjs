@@ -54,9 +54,6 @@ export function js_identifier_defineds(v) {
             list_item,
           });
         }
-        log({
-          list_item,
-        });
       }
       each_range(index, each_statement);
     }
