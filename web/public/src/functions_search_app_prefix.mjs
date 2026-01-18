@@ -12,8 +12,8 @@ export async function functions_search_app_prefix(s) {
   s = object_property_get(v2, "a_name");
   let a_name = app_name_prefixed(s);
   let separator = function_name_separator();
-  let v = await functions_search(a_name + separator + "");
+  let results = await functions_search(a_name + separator + "");
   let value = function_name_to_path(a_name);
-  object_property_set_exists_not(v, a_name, value);
-  return v;
+  object_property_set_exists_not(results, a_name, value);
+  return results;
 }
