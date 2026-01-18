@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { list_index_of_next_outside } from "../../../love/public/src/list_index_of_next_outside.mjs";
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
 import { js_types_function } from "../../../love/public/src/js_types_function.mjs";
@@ -15,6 +16,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { error } from "../../../love/public/src/error.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 export function js_identifier_defineds(v) {
+  marker("1");
   let stack = object_property_get(v, "stack");
   function lambda4(la) {
     js_stack_filtered_each(stack, "BlockStatement", lambda3);
