@@ -8,11 +8,12 @@ import { storage_local_set } from "../../../love/public/src/storage_local_set.mj
 import { apps_names } from "../../../love/public/src/apps_names.mjs";
 import { app_a_functions_generic } from "../../../love/public/src/app_a_functions_generic.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
+import { app_a_function } from "./app_a_function.mjs";
 export async function app_a_apps(context) {
   let root = object_property_get(context, "root");
   let text = app_karate_button_back_text();
   function lambda2() {
-    app_generic_screen_set(context, app_a_app_run);
+    app_generic_screen_set(context, app_a_function);
   }
   let component = app_a_button_wide(root, text, lambda2);
   let mapped = await apps_names();
