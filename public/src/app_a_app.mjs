@@ -10,7 +10,6 @@ import { app_a_button_function } from "../../../love/public/src/app_a_button_fun
 import { app_a_app_run } from "../../../love/public/src/app_a_app_run.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { function_exists } from "../../../love/public/src/function_exists.mjs";
 import { app_generic_name_main } from "../../../love/public/src/app_generic_name_main.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
@@ -41,12 +40,14 @@ export async function app_a_app(context) {
     let unaliased = object_property_get(v, "unaliased");
     let exists = object_property_get(v, "exists");
     if (exists) {
-      function lambda2() {
-        app_a_function_select(context, unaliased);
-      }
       const text = app_a_button_function_text(unaliased);
-      let component = app_a_button_wide(root, text, lambda2);
-      list_add(list, item);
+      list_add(choices, {
+        shortcut: "p",
+        text: text,
+        fn: function lambda2() {
+          app_a_function_select(context, unaliased);
+        },
+      });
     }
   }
   app_a_buttons_shortcuts_wide(root, choices);
