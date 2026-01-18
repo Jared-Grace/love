@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { app_a_on_keydown } from "../../../love/public/src/app_a_on_keydown.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -63,6 +64,7 @@ export async function app_a_app(context) {
       list_remove(on_keydowns, on_keydown);
       return result;
     }
+    object_property_set(object, property_name, value);
   }
   each(list, lambda);
   let on_keydowns = object_property_get(context, "on_keydowns");
