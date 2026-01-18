@@ -118,8 +118,7 @@ export function app_a_function_node(a) {
         app_a_nodes_list(a, params, parent);
       }
       let body2 = object_property_get(node, "body");
-      html_span_space(parent);
-      app_a_braces_wrap_node(a, body2, parent);
+      html_span_space(parent);app_a_function_node_child(a, body2);
     },
     ["BlockStatement"]: function lambda7() {
       app_a_body(node, parent, a, true);
@@ -219,8 +218,7 @@ export function app_a_function_node(a) {
       }
       app_a_parenthesis_wrap(parent, lambda19);
       html_span_space(parent);
-      let consequent = object_property_get(node, "consequent");
-      app_a_braces_wrap_node(a, consequent, parent);
+      let consequent = object_property_get(node, "consequent");app_a_function_node_child(a, consequent);
       let alternate = object_property_get(node, "alternate");
       let nn = null_not_is(alternate);
       if (nn) {
@@ -229,8 +227,7 @@ export function app_a_function_node(a) {
         app_a_keyword_purple_space(parent, kw);
         log({
           alternate,
-        });
-        app_a_braces_wrap_node(a, alternate, parent);
+        });app_a_function_node_child(a, consequent);
       }
     },
     ["LogicalExpression"]: binary,
