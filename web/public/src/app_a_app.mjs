@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_buttons_shortcuts_wide } from "../../../love/public/src/app_a_buttons_shortcuts_wide.mjs";
 import { app_a_function_name_selected } from "../../../love/public/src/app_a_function_name_selected.mjs";
 import { app_a_button_function_text } from "../../../love/public/src/app_a_button_function_text.mjs";
@@ -50,5 +51,9 @@ export async function app_a_app(context) {
       },
     },
   ];
+  let exists = object_property_get(v, "exists");
+  if (exists) {
+    list_add(list, item);
+  }
   app_a_buttons_shortcuts_wide(root, choices);
 }
