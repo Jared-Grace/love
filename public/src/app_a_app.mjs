@@ -19,9 +19,9 @@ export async function app_a_app(context) {
     app_generic_screen_set(context, app_a_app_run);
   }
   let e = emoji_run();
-  let component2 = app_a_button_wide(root, text, lambda3);
-  let key = app_a_app_selected_key();
   let a_name = storage_local_get_context(context, key);
+  let component2 = app_a_button_wide(root, e + "Run: " + a_name, lambda3);
+  let key = app_a_app_selected_key();
   let combined = app_generic_name_main(a_name);
   let v = await function_exists(combined);
   let unaliased = object_property_get(v, "unaliased");
