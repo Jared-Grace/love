@@ -1,6 +1,5 @@
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_buttons_shortcuts_wide } from "../../../love/public/src/app_a_buttons_shortcuts_wide.mjs";
-import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { app_a_function_name_selected } from "../../../love/public/src/app_a_function_name_selected.mjs";
 import { app_a_button_function_text } from "../../../love/public/src/app_a_button_function_text.mjs";
 import { emoji_mobile } from "../../../love/public/src/emoji_mobile.mjs";
@@ -35,20 +34,18 @@ export async function app_a_app(context) {
   let a_name = storage_local_get_context(context, key);
   let f_name = app_a_function_name_selected(context);
   let combined = app_generic_name_main(a_name);
-  if (equal_not(f_name, combined)) {
-    let v = await function_exists(combined);
-    let unaliased = object_property_get(v, "unaliased");
-    let exists = object_property_get(v, "exists");
-    if (exists) {
-      const text = app_a_button_function_text(unaliased);
-      list_add(choices, {
-        shortcut: "p",
-        text: text,
-        fn: function lambda2() {
-          app_a_function_select(context, unaliased);
-        },
-      });
-    }
+  let v = await function_exists(combined);
+  let unaliased = object_property_get(v, "unaliased");
+  let exists = object_property_get(v, "exists");
+  if (exists) {
+    const text = app_a_button_function_text(unaliased);
+    list_add(choices, {
+      shortcut: "m",
+      text: text,
+      fn: function lambda2() {
+        app_a_function_select(context, unaliased);
+      },
+    });
   }
   app_a_buttons_shortcuts_wide(root, choices);
 }
