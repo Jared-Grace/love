@@ -53,8 +53,8 @@ export function js_identifier_defineds(v) {
       }
       each_range(index, each_statement_up_to);
       function lambda2(item2) {
-        if (js_node_type_is(list_item, "FunctionDeclaration")) {
-          let id2 = object_property_get(list_item, "id");
+        if (js_node_type_is(item2, "FunctionDeclaration")) {
+          let id2 = object_property_get(item2, "id");
           let ii = js_identifier_is(id2);
           if (ii) {
             let value = object_property_get(id2, "name");
