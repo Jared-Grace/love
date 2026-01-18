@@ -6,4 +6,5 @@ export function app_a_keyword_purple(parent, keyword) {
   let s = html_span_text(parent, keyword);
   const color = "purple";
   html_font_color_set(s, color);
+  return s;
 }
