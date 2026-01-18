@@ -1,3 +1,4 @@
+import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -20,6 +21,7 @@ import { json_to } from "../../../love/public/src/json_to.mjs";
 export function js_identifier_defineds(v) {
   marker("1");
   let stack = object_property_get(v, "stack");
+  let e1 = list_get_end_1(stack2);
   let node2 = object_property_get(v, "node");
   let value = object_property_get(node2, "name");
   if (value === "margin") {
