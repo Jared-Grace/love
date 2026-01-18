@@ -11,7 +11,9 @@ export async function app_a_app(context) {
   let key = app_a_app_selected_key();
   let a_name = storage_local_get_context(context, key);
   let combined = app_generic_name_main(a_name);
-  let u = await function_exists(f_name);
+  let u = await function_exists(combined);
+  if (false) {
+  }
   log({
     a_name,
   });
