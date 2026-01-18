@@ -1,3 +1,4 @@
+import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { emoji_run } from "../../../love/public/src/emoji_run.mjs";
 import { app_a_button_function } from "../../../love/public/src/app_a_button_function.mjs";
@@ -29,7 +30,9 @@ export async function app_a_app(context) {
   let unaliased = object_property_get(v, "unaliased");
   let exists = object_property_get(v, "exists");
   if (exists) {
-    function lambda2() {}
+    function lambda2() {
+      app_a_function_select(context2, f_name);
+    }
     let component = app_a_button_wide(root, unaliased, lambda2);
   }
   log({
