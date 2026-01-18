@@ -1,3 +1,4 @@
+import { emoji_run } from "../../../love/public/src/emoji_run.mjs";
 import { app_a_button_function } from "../../../love/public/src/app_a_button_function.mjs";
 import { app_a_app_run } from "../../../love/public/src/app_a_app_run.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
@@ -17,6 +18,8 @@ export async function app_a_app(context) {
   function lambda3() {
     app_generic_screen_set(context, app_a_app_run);
   }
+  let v2 = emoji_run();
+  let component2 = app_a_button_wide(root, text, lambda3);
   let key = app_a_app_selected_key();
   let a_name = storage_local_get_context(context, key);
   let combined = app_generic_name_main(a_name);
