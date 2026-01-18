@@ -1,3 +1,4 @@
+import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { function_name_separator } from "../../../love/public/src/function_name_separator.mjs";
 import { app_name_prefixed } from "../../../love/public/src/app_name_prefixed.mjs";
@@ -12,6 +13,7 @@ export async function functions_search_app_prefix(s) {
   let a_name = app_name_prefixed(s);
   let separator = function_name_separator();
   let v = await functions_search(a_name + separator + "");
-  object_property_set_exists_not(object, property_name, value);
+  let value = function_name_to_path(a_name);
+  object_property_set_exists_not(v, a_name, value);
   return v;
 }
