@@ -59,3 +59,9 @@ To run a function:
 Or if you are inside the terminal:
 
 `fn_name arg1_string arg2_string`
+
+---
+
+To create a new function:
+
+`n fn_name`
