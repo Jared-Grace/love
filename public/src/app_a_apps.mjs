@@ -1,3 +1,4 @@
+import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
@@ -9,6 +10,7 @@ import { app_a_functions_generic } from "../../../love/public/src/app_a_function
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_a_apps(context) {
   let root = object_property_get(context, "root");
+  let v = app_karate_button_back_text();
   function lambda2() {}
   let component = app_a_button_wide(parent, text, lambda2);
   let mapped = await apps_names();
