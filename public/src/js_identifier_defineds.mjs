@@ -1,3 +1,4 @@
+import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_index_of_next_outside } from "../../../love/public/src/list_index_of_next_outside.mjs";
@@ -51,6 +52,7 @@ export function js_identifier_defineds(v) {
           each(ids, lambda);
         } else if (js_node_type_is(list_item, "FunctionDeclaration")) {
           let id2 = object_property_get(list_item, "id");
+          let ii = js_identifier_is(node2);
           log({
             list_item,
           });
