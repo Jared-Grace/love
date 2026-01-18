@@ -26,7 +26,7 @@ export async function app_a_app(context) {
   let e = emoji_mobile();
   let key = app_a_app_selected_key();
   let a_name = storage_local_get_context(context, key);
-  let component2 = app_a_button_wide(root, e + "Preview: " + a_name, lambda3);
+  let component2 = app_a_button_wide(root, e + "preview: " + a_name, lambda3);
   let f_name = app_a_function_name_selected(context);
   let combined = app_generic_name_main(a_name);
   if (equal_not(f_name, combined)) {
