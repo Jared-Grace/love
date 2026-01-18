@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_a_button_function_text } from "../../../love/public/src/app_a_button_function_text.mjs";
 import { app_a_function_name_selected_key } from "../../../love/public/src/app_a_function_name_selected_key.mjs";
 import { app_a_function } from "../../../love/public/src/app_a_function.mjs";
@@ -9,6 +10,9 @@ export function app_a_button_function(context) {
   let root = object_property_get(context, "root");
   const key = app_a_function_name_selected_key();
   let exists = storage_local_exists_context(context, key);
+  log({
+    exists,
+  });
   if (exists) {
     const text = app_a_button_function_text(context);
     let component = app_a_button(root, text, lambda2);
