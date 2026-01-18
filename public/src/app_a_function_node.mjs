@@ -1,3 +1,4 @@
+import { js_keyword_else } from "../../../love/public/src/js_keyword_else.mjs";
 import { list_last_not_is } from "../../../love/public/src/list_last_not_is.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
@@ -303,7 +304,3 @@ export function app_a_function_node(a) {
   let value = object_property_get(lookup, type);
   value();
 }
-function js_keyword_else() {
-  return "else";
-}
-
