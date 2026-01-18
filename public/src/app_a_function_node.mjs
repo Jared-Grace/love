@@ -228,7 +228,7 @@ export function app_a_function_node(a) {
         html_span_space(parent);
         let kw = js_keyword_else();
         app_a_keyword_purple_space(parent, kw);
-        app_a_function_node_child(a, consequent);
+        app_a_function_node_child(a, alternate);
       }
     },
     ["LogicalExpression"]: binary,
