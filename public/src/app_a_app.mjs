@@ -64,7 +64,7 @@ export async function app_a_app(context) {
       list_remove(on_keydowns, on_keydown);
       return result;
     }
-    object_property_set(object, property_name, value);
+    object_property_set(item, "fn", wrapped);
   }
   each(list, lambda);
   let on_keydowns = object_property_get(context, "on_keydowns");
