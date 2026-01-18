@@ -33,7 +33,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
     let o = app_a_overlay(a, on_keydown);
     let overlay_close = object_property_get(o, "overlay_close");
     let overlay = object_property_get(o, "overlay");
-    let div4 = html_div_text(root, text3);
+    let div4 = html_div_text(overlay, name);
     let v = app_a_choice_close(overlay_close);
     const change = {
       fn: async function lambda15() {
