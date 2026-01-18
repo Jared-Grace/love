@@ -11,6 +11,6 @@ export function storage_local_exists(app_fn, key) {
     let v = json !== null;
     return v;
   }
-  let value = storage_local_exists_global(storage_local_key);
-  return value;
+  let exists = storage_local_exists_global(storage_local_key);
+  return exists;
 }
