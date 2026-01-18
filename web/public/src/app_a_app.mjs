@@ -1,3 +1,4 @@
+import { app_a_on_keydown } from "../../../love/public/src/app_a_on_keydown.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -51,6 +52,9 @@ export async function app_a_app(context) {
         app_a_function_select(context, unaliased);
       },
     });
+    function on_keydown(e) {
+      app_a_on_keydown(e, choices);
+    }
   }
   function lambda(item) {
     list_remove(on_keydowns, on_keydown);
