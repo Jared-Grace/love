@@ -1,3 +1,4 @@
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_buttons_shortcuts_wide } from "../../../love/public/src/app_a_buttons_shortcuts_wide.mjs";
@@ -51,7 +52,9 @@ export async function app_a_app(context) {
       },
     });
   }
-  function lambda(item) {}
+  function lambda(item) {
+    list_remove(on_keydowns, on_keydown);
+  }
   each(list, lambda);
   let on_keydowns = object_property_get(context, "on_keydowns");
   list_add(on_keydowns, on_keydown);
