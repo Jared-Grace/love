@@ -1,4 +1,4 @@
-import { app_a_button_function_text } from "../../../love/public/src/app_a_button_function_text.mjs";
+import { app_a_button_function_text_selected } from "../../../love/public/src/app_a_button_function_text_selected.mjs";
 import { app_a } from "../../../love/public/src/app_a.mjs";
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
@@ -9,6 +9,6 @@ export async function app_a_app_run(context) {
     app_generic_screen_set(context, app_a_function);
   }
   let a_name = storage_local_get(app_a, "app_selected");
-  const button_text = app_a_button_function_text(context);
+  const button_text = app_a_button_function_text_selected(context);
   await app_component(a_name, back, button_text);
 }
