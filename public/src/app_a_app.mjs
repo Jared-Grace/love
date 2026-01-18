@@ -1,6 +1,9 @@
+import { app_a_app_selected_key } from "../../../love/public/src/app_a_app_selected_key.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function app_a_app(context) {
   marker("1");
   let root = html_clear_context(context);
+  let key = app_a_app_selected_key();
+  let a_name = (storage_local_s = get_context(context, key));
 }
