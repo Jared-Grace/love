@@ -1,4 +1,4 @@
-import { storage_local_exists } from "../../../love/public/src/storage_local_exists.mjs";
+import { storage_local_exists_context } from "../../../love/public/src/storage_local_exists_context.mjs";
 import { emoji_computer } from "../../../love/public/src/emoji_computer.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { app_a_button } from "../../../love/public/src/app_a_button.mjs";
@@ -17,9 +17,8 @@ export async function app_a_apps(context) {
     app_generic_screen_set(context, app_a_function);
   }
   const key = "f_name_selected";
-  let app_fn = object_property_get(context, "app_fn");
-  let exists = storage_local_exists(app_fn, key);
-  if (false) {
+  let exists = storage_local_exists_context(context, key);
+  if (exists) {
   }
   let f_name = storage_local_get_context(context, key);
   let component = app_a_button(
