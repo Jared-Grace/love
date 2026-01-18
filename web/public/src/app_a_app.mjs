@@ -29,16 +29,16 @@ export async function app_a_app(context) {
   let component2 = app_a_button_wide(root, e + "Preview: " + a_name, lambda3);
   let f_name = app_a_function_name_selected(context);
   let combined = app_generic_name_main(a_name);
-  if (equal_not(left, right)) {
-  }
-  let v = await function_exists(combined);
-  let unaliased = object_property_get(v, "unaliased");
-  let exists = object_property_get(v, "exists");
-  if (exists) {
-    function lambda2() {
-      app_a_function_select(context, unaliased);
+  if (equal_not(f_name, combined)) {
+    let v = await function_exists(combined);
+    let unaliased = object_property_get(v, "unaliased");
+    let exists = object_property_get(v, "exists");
+    if (exists) {
+      function lambda2() {
+        app_a_function_select(context, unaliased);
+      }
+      const text = app_a_button_function_text(unaliased);
+      let component = app_a_button_wide(root, text, lambda2);
     }
-    const text = app_a_button_function_text(unaliased);
-    let component = app_a_button_wide(root, text, lambda2);
   }
 }
