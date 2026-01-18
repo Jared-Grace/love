@@ -1,4 +1,3 @@
 import { marker } from "../../../love/public/src/marker.mjs";
-export function app_a_app() {
-  marker("1");
-}
+export function app_a_app(context) {
+  marker("
