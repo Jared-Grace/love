@@ -29,13 +29,13 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
   marker("1");
   async function on_click() {
-    let context = object_property_get(a, "context");
     let o = app_a_overlay(a, on_keydown);
     let overlay_close = object_property_get(o, "overlay_close");
     let overlay = object_property_get(o, "overlay");
     let oc = app_a_overlay_container_centered(overlay);
     let div4 = html_div_text(oc, name);
     let v = app_a_choice_close(overlay_close);
+    let context = object_property_get(a, "context");
     const change = {
       fn: async function lambda15() {
         overlay_close();
