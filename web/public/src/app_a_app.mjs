@@ -1,4 +1,4 @@
-import { emoji_edit } from "../../../love/public/src/emoji_edit.mjs";
+import { app_a_button_function_text } from "../../../love/public/src/app_a_button_function_text.mjs";
 import { emoji_mobile } from "../../../love/public/src/emoji_mobile.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
@@ -33,10 +33,7 @@ export async function app_a_app(context) {
     function lambda2() {
       app_a_function_select(context, unaliased);
     }
-    let component = app_a_button_wide(
-      root,
-      emoji_edit() + " " + unaliased,
-      lambda2,
-    );
+    const text = app_a_button_function_text(unaliased);
+    let component = app_a_button_wide(root, text, lambda2);
   }
 }
