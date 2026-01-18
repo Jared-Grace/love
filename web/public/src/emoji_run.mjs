@@ -1,4 +1,4 @@
 export function emoji_run() {
-  let v2 = "🏃";
-  return v2;
+  let e = "🏃";
+  return e;
 }
