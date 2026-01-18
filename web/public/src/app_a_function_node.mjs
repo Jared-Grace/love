@@ -222,7 +222,7 @@ export function app_a_function_node(a) {
       let alternate = object_property_get(node, "alternate");
       let nn = null_not_is(alternate);
       if (nn) {
-        let kw = "else";
+        let kw = js_keyword_else();
         app_a_keyword_purple_space(parent, k);
         app_a_braces_wrap_node(a, alternate, parent);
       }
@@ -303,3 +303,7 @@ export function app_a_function_node(a) {
   let value = object_property_get(lookup, type);
   value();
 }
+function js_keyword_else() {
+  return "else";
+}
+
