@@ -50,6 +50,5 @@ export async function app_a_app(context) {
       },
     },
   ];
-  let exists = object_property_get(v, "exists");
   app_a_buttons_shortcuts_wide(root, choices);
 }
