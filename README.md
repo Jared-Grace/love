@@ -64,4 +64,15 @@ Or if you are inside the terminal:
 
 To create a new function:
 
-`n fn_name`
+`n fn_name` 
+
+---
+
+`n` is an alias for `function_new`
+
+To see what an alias `n` is mapped to use: `u n`
+
+`u` is an alias for `function_name_unalias`
+
+To create a new alias `abc` for function `action_births_consequence` use: 
+`a abc action_births_consequence`
