@@ -23,7 +23,8 @@ export function js_identifier_defineds(v) {
   function lambda4(la) {
     let e1 = list_get_end_1(stack);
     if (js_node_type_is(e1, "Property")) {
-      let value = object_property_get(id2, "name");
+      let node = object_property_get(v, "node");
+      let value = object_property_get(node, "name");
       la([value]);
     }
     js_stack_filtered_each(stack, "BlockStatement", lambda3);
