@@ -48,7 +48,7 @@ export function js_identifier_defineds(v) {
             }
           }
           each(ids, lambda);
-        } else {
+        } else if (js_node_type_is(list_item, "VariableDeclaration")) {
         }
       }
       each_range(index, each_statement);
