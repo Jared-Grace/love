@@ -11,11 +11,8 @@ export function app_a_button_function(context) {
   let exists = storage_local_exists_context(context, key);
   if (exists) {
     let f_name = storage_local_get_context(context, key);
-    let component = app_a_button(
-      root,
-      emoji_computer() + " function: " + f_name,
-      lambda2,
-    );
+    const text = emoji_computer() + " function: " + f_name;
+    let component = app_a_button(root, text, lambda2);
     function lambda2() {
       app_generic_screen_set(context, app_a_function);
     }
