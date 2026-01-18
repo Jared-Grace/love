@@ -8,5 +8,5 @@ export async function app_a_app_run(context) {
     app_generic_screen_set(context, app_a_function);
   }
   let a_name = storage_local_get(app_a, "app_selected");
-  await app_component(a_name, back);
+  await app_component(a_name, back, button_text);
 }
