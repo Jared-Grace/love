@@ -1,6 +1,6 @@
+import { emoji_mobile } from "../../../love/public/src/emoji_mobile.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
-import { emoji_run } from "../../../love/public/src/emoji_run.mjs";
 import { app_a_button_function } from "../../../love/public/src/app_a_button_function.mjs";
 import { app_a_app_run } from "../../../love/public/src/app_a_app_run.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
@@ -20,10 +20,10 @@ export async function app_a_app(context) {
   function lambda3() {
     app_generic_screen_set(context, app_a_app_run);
   }
-  let e = emoji_run();
+  let e = emoji_mobile();
   let key = app_a_app_selected_key();
   let a_name = storage_local_get_context(context, key);
-  let component2 = app_a_button_wide(root, e + "Run: " + a_name, lambda3);
+  let component2 = app_a_button_wide(root, e + "Preview: " + a_name, lambda3);
   let combined = app_generic_name_main(a_name);
   let v = await function_exists(combined);
   let unaliased = object_property_get(v, "unaliased");
