@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_keyword_else } from "../../../love/public/src/js_keyword_else.mjs";
 import { list_last_not_is } from "../../../love/public/src/list_last_not_is.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
@@ -223,8 +224,12 @@ export function app_a_function_node(a) {
       let alternate = object_property_get(node, "alternate");
       let nn = null_not_is(alternate);
       if (nn) {
+        html_span_space(parent);
         let kw = js_keyword_else();
-        app_a_keyword_purple_space(parent, k);
+        app_a_keyword_purple_space(parent, kw);
+        log({
+          alternate,
+        });
         app_a_braces_wrap_node(a, alternate, parent);
       }
     },
