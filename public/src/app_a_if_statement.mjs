@@ -1,3 +1,4 @@
+import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
 import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_keyword_else } from "../../../love/public/src/js_keyword_else.mjs";
@@ -13,7 +14,9 @@ export function app_a_if_statement(a, node, parent) {
   let k = js_keyword_if();
   let v4 = app_a_keyword_purple_space(parent, k);
   let keyword = object_property_get(v4, "keyword");
-  function on_click() {}
+  function on_click() {
+    let o = app_a_overlay(a, on_keydown);
+  }
   html_on_click(keyword, on_click);
   function lambda19() {
     let test = object_property_get(node, "test");
