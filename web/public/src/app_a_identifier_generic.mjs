@@ -48,12 +48,12 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
           text5,
           rename_overlay_close,
         );
-        let div3 = app_a_overlay_container(overlay);
-        html_centered(div3);
+        let oc = app_a_overlay_container(overlay);
+        html_centered(oc);
         let text2 = object_property_get(change, "text");
-        let div2 = html_div_text(div3, text2 + " from:");
-        let div = html_div_text(div3, name);
-        html_div_text(div3, text2 + " to:");
+        let div2 = html_div_text(oc, text2 + " from:");
+        let div = html_div_text(oc, name);
+        html_div_text(oc, text2 + " to:");
         let fn = null;
         if (lines_multiple) {
           fn = app_a_textarea;
