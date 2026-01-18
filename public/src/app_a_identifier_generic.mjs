@@ -1,3 +1,4 @@
+import { app_a_overlay_container_centered } from "../../../love/public/src/app_a_overlay_container_centered.mjs";
 import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
 import { app_a_textarea } from "../../../love/public/src/app_a_textarea.mjs";
 import { app_a_buttons_shortcuts_wide } from "../../../love/public/src/app_a_buttons_shortcuts_wide.mjs";
@@ -17,7 +18,6 @@ import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { app_a_input } from "../../../love/public/src/app_a_input.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
-import { app_a_overlay_container } from "../../../love/public/src/app_a_overlay_container.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { app_a_overlay_close_text } from "../../../love/public/src/app_a_overlay_close_text.mjs";
 import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
@@ -48,8 +48,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
           text5,
           rename_overlay_close,
         );
-        let oc = app_a_overlay_container(overlay);
-        html_centered(oc);
+        let oc = app_a_overlay_container_centered(overlay);
         let text2 = object_property_get(change, "text");
         let div2 = html_div_text(oc, text2 + " from:");
         let div = html_div_text(oc, name);
