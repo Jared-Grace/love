@@ -143,7 +143,6 @@ export async function app_a_function(context) {
               root: content,
               app_a_function_on_keydown,
             },
-            on_keydowns,
             on_keydown,
           );
           let overlay_close = object_property_get(o, "overlay_close");
