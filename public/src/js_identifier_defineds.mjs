@@ -25,7 +25,7 @@ export function js_identifier_defineds(v) {
       let list = list_next(stack, bs);
       let item = list_next(stack, list);
       let index = list_index_of_next_outside(list, item);
-      function each_statement(i) {
+      function each_statement_up_to(i) {
         let list_item = list_get(list, i);
         if (js_node_type_is(list_item, "VariableDeclaration")) {
           let declarations = object_property_get(list_item, "declarations");
@@ -58,7 +58,7 @@ export function js_identifier_defineds(v) {
           }
         }
       }
-      each_range(index, each_statement);
+      each_range(index, each_statement_up_to);
       function lambda2(item2) {}
       each(list2, lambda2);
     }
