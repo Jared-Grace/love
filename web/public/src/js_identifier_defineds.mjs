@@ -22,7 +22,7 @@ export function js_identifier_defineds(v) {
   let stack = object_property_get(v, "stack");
   let node2 = object_property_get(stack, "node");
   log({
-    node,
+    node2,
     stack,
   });
   function lambda4(la) {
