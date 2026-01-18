@@ -1,3 +1,4 @@
+import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { app_a_buttons_shortcuts_wide } from "../../../love/public/src/app_a_buttons_shortcuts_wide.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { app_a_function_name_selected } from "../../../love/public/src/app_a_function_name_selected.mjs";
@@ -42,13 +43,15 @@ export async function app_a_app(context) {
       let component = app_a_button_wide(root, text, lambda2);
     }
   }
-  let choices = [{
-          shortcut: "c",
-          text: "Copy",
-          fn: async function lambda2() {
-            await clipboard_copy(name);
-            overlay_close();
-          },
-        }];
+  let choices = [
+    {
+      shortcut: "c",
+      text: "Copy",
+      fn: async function lambda2() {
+        await clipboard_copy(name);
+        overlay_close();
+      },
+    },
+  ];
   app_a_buttons_shortcuts_wide(root, choices);
 }
