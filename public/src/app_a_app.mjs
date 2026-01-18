@@ -22,7 +22,8 @@ export async function app_a_app(context) {
     function lambda2() {}
     let component = app_a_button_wide(root, unaliased, lambda2);
   }
-  let component2 = app_a_button_wide(parent, text, function lambda3() {});
+  function lambda3() {}
+  let component2 = app_a_button_wide(parent, text, lambda3);
   app_generic_screen_set(context, app_a_app_run);
   log({
     a_name,
