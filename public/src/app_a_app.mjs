@@ -51,7 +51,8 @@ export async function app_a_app(context) {
       },
     });
   }
-  each(list, function lambda(item) {});
+  function lambda(item) {}
+  each(list, lambda);
   let on_keydowns = object_property_get(context, "on_keydowns");
   list_add(on_keydowns, on_keydown);
   app_a_buttons_shortcuts_wide(root, choices);
