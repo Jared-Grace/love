@@ -42,6 +42,13 @@ export async function app_a_app(context) {
       let component = app_a_button_wide(root, text, lambda2);
     }
   }
-  let choices = [];
+  let choices = [{
+          shortcut: "c",
+          text: "Copy",
+          fn: async function lambda2() {
+            await clipboard_copy(name);
+            overlay_close();
+          },
+        }];
   app_a_buttons_shortcuts_wide(root, choices);
 }
