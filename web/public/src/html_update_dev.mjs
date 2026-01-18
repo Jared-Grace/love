@@ -1,4 +1,4 @@
-import { app_name_main_get } from "../../../love/public/src/app_name_main_get.mjs";
+import { app_generic_name_main_get } from "../../../love/public/src/app_generic_name_main_get.mjs";
 import { js_code_call_app_context_initialize } from "../../../love/public/src/js_code_call_app_context_initialize.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { function_code_import_dev } from "../../../love/public/src/function_code_import_dev.mjs";
@@ -16,7 +16,7 @@ import { html_name_to_path_dev } from "../../../love/public/src/html_name_to_pat
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function html_update_dev(name) {
   marker("1");
-  let v2 = await app_name_main_get(name);
+  let v2 = await app_generic_name_main_get(name);
   name = object_property_get(v2, "a_name");
   let file_path = html_name_to_path_dev(name);
   let a_name = app_name_prefixed(name);
