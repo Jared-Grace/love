@@ -1,4 +1,4 @@
-import { js_keyword_else } from "../../../love/public/src/js_keyword_else.mjs";
+import { app_a_if_statement } from "../../../love/public/src/app_a_if_statement.mjs";
 import { list_last_not_is } from "../../../love/public/src/list_last_not_is.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
@@ -16,7 +16,6 @@ import { object_property_exists_not } from "../../../love/public/src/object_prop
 import { app_a_identifier } from "../../../love/public/src/app_a_identifier.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
-import { js_keyword_if } from "../../../love/public/src/js_keyword_if.mjs";
 import { a_brackets_wrap } from "../../../love/public/src/a_brackets_wrap.mjs";
 import { string_pad_space } from "../../../love/public/src/string_pad_space.mjs";
 import { app_a_comma } from "../../../love/public/src/app_a_comma.mjs";
@@ -212,25 +211,7 @@ export function app_a_function_node(a) {
       }
     },
     ["IfStatement"]: function lambda18() {
-      let k = js_keyword_if();
-      let v4 = app_a_keyword_purple_space(parent, k);
-      let keyword = object_property_get(v4, "keyword");
-      function lambda19() {
-        let test = object_property_get(node, "test");
-        app_a_function_node_child(a, test);
-      }
-      app_a_parenthesis_wrap(parent, lambda19);
-      html_span_space(parent);
-      let consequent = object_property_get(node, "consequent");
-      app_a_function_node_child(a, consequent);
-      let alternate = object_property_get(node, "alternate");
-      let nn = null_not_is(alternate);
-      if (nn) {
-        html_span_space(parent);
-        let kw = js_keyword_else();
-        app_a_keyword_purple_space(parent, kw);
-        app_a_function_node_child(a, alternate);
-      }
+      app_a_if_statement(parent, node, a);
     },
     ["LogicalExpression"]: binary,
     ["AssignmentExpression"]: binary,
