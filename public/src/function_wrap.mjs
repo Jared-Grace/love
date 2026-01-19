@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_declaration_asyncify_params_from } from "../../../love/public/src/js_declaration_asyncify_params_from.mjs";
 import { js_code_call_args_await_maybe_declaration_return_add } from "../../../love/public/src/js_code_call_args_await_maybe_declaration_return_add.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -6,8 +7,9 @@ import { function_parse_declaration } from "../../../love/public/src/function_pa
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
 export async function function_wrap(f_name, f_name_wrapped) {
   marker("1");
-  let { declaration: declaration_call, unaliased } =
-    await function_parse_declaration(f_name);
+  let v2 = await function_parse_declaration(f_name);
+  let unaliased = object_property_get(v2, "unaliased");
+  let declaration_call = object_property_get(v2, "declaration");
   let v = await function_new_transform(f_name_wrapped, lambda);
   return v;
   async function lambda(ast) {
