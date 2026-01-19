@@ -1,3 +1,4 @@
+import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { js_call_new_insert } from "../../../love/public/src/js_call_new_insert.mjs";
 import { app_a_functions_generic } from "../../../love/public/src/app_a_functions_generic.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
@@ -52,7 +53,7 @@ export function app_a_if_statement(a, node, parent) {
               statement,
             });
           }
-          oas;
+          object_assign(to, from);
           await app_a_functions_generic(context, on_select);
         },
       },
