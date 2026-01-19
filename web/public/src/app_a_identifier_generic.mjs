@@ -32,7 +32,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
     let overlay = object_property_get(o, "overlay");
     let oc = app_a_overlay_container_centered(overlay);
     let div4 = html_div_text(oc, name);
-    let v = app_a_choice_close(overlay_close);
+    let choice_x = app_a_choice_close(overlay_close);
     let context = object_property_get(a, "context");
     const change = {
       fn: async function lambda15() {
@@ -76,7 +76,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
     };
     let to2 = object_merge(change, c);
     let choices = [
-      v,
+      choice_x,
       {
         shortcut: "c",
         text: "Copy",
