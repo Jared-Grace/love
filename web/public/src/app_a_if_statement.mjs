@@ -1,3 +1,4 @@
+import { js_call_new_insert } from "../../../love/public/src/js_call_new_insert.mjs";
 import { app_a_functions_generic } from "../../../love/public/src/app_a_functions_generic.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { list_filter_last } from "../../../love/public/src/list_filter_last.mjs";
@@ -28,7 +29,7 @@ export function app_a_if_statement(a, node, parent) {
         text: "Add above",
         fn: async function lambda2() {
           overlay_close();
-          function lambda4() {
+          async function lambda4() {
             let ast = object_property_get(a, "ast");
             let v_match = js_visit_match(ast, node);
             let stack = object_property_get(v_match, "stack");
@@ -40,6 +41,13 @@ export function app_a_if_statement(a, node, parent) {
             let list = list_filter_last(stack, lambda3);
             let statement = list_next(stack, list);
             let index = list_index_of(list, statement);
+            let parsed = await js_call_new_insert(
+              f_name_call,
+              ast,
+              stack2,
+              index,
+              stack,
+            );
             log({
               statement,
             });
