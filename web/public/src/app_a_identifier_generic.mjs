@@ -103,7 +103,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
             let index = object_property_get(v, "index");
             let list = object_property_get(v, "list");
             let ast = object_property_get(v, "ast");
-            let only = list_remove_at(list2, index2);
+            let only = list_remove_at(list, index);
             await app_a_function_on_change(o2, a);
           }
         },
