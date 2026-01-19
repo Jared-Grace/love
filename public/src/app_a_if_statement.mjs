@@ -34,6 +34,7 @@ export function app_a_if_statement(a, node, parent) {
           function lambda4(e) {}
           let o = app_a_overlay(a, lambda4);
           let overlay = object_property_get(o, "overlay");
+          let overlay_close2 = object_property_get(o, "overlay_close");
           const replacement = {
             root: overlay,
           };
