@@ -1,3 +1,4 @@
+import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs";
 import { app_a_input_integer } from "../../../love/public/src/app_a_input_integer.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
 import { app_a_overlay_close_button } from "../../../love/public/src/app_a_overlay_close_button.mjs";
@@ -96,8 +97,11 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
           await html_select(input);
           async function lambda23() {
             let value_new = html_value_get(input);
-            let on_change = object_property_get(change, "on_change");
-            await on_change(value_new);
+            let v = app_a_node_index(a, node);
+            let stack = object_property_get(v, "stack");
+            let index = object_property_get(v, "index");
+            let list = object_property_get(v, "list");
+            let ast = object_property_get(v, "ast");
             await app_a_function_on_change(o2, a);
           }
         },
