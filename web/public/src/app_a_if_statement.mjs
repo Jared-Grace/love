@@ -1,3 +1,4 @@
+import { list_find } from "../../../love/public/src/list_find.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
@@ -24,6 +25,7 @@ export function app_a_if_statement(a, node, parent) {
           let ast = object_property_get(a, "ast");
           let v_match = js_visit_match(ast, node);
           let stack = object_property_get(v_match, "stack");
+          let found = list_find(list, function lambda3(item) {});
           log({
             stack,
           });
