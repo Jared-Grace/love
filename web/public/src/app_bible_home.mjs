@@ -107,7 +107,7 @@ export async function app_bible_home(context) {
       );
     }
     let text4 = html_button_copy_text();
-    let component6 = html_button(parent, text4, lambda8);
+    let component6 = html_button(bottom, text4, lambda8);
     function toggle() {
       hidden = not(hidden);
       html_display_none_or_block(hidden, bottom);
