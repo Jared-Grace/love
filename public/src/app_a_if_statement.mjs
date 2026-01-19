@@ -32,6 +32,7 @@ export function app_a_if_statement(a, node, parent) {
             let index = list_index_of(stack, item);
             log({
               index,
+              item,
             });
             let i = js_stack_list_block_is(stack, index);
             return i;
