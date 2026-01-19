@@ -8,7 +8,6 @@ import { list_index_of_end } from "../../../love/public/src/list_index_of_end.mj
 import { js_stack_list_block_is } from "../../../love/public/src/js_stack_list_block_is.mjs";
 import { list_next } from "../../../love/public/src/list_next.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_keyword_else } from "../../../love/public/src/js_keyword_else.mjs";
