@@ -220,7 +220,7 @@ export async function app_a_function(context) {
   }
   let fds = list_adder_unique(lambda8);
   let f_names_local = list_difference(fds, f_names);
-  app_a_function_node({
+  const a = {
     node: ast,
     content,
     parent: content,
@@ -232,5 +232,6 @@ export async function app_a_function(context) {
     app_a_function_on_keydown,
     f_names,
     f_names_local,
-  });
+  };
+  app_a_function_node(a);
 }
