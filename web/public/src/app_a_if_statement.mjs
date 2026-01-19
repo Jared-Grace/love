@@ -1,5 +1,4 @@
 import { list_next } from "../../../love/public/src/list_next.mjs";
-import { js_stack_list_block_is } from "../../../love/public/src/js_stack_list_block_is.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -27,7 +26,7 @@ export function app_a_if_statement(a, node, parent) {
           let ast = object_property_get(a, "ast");
           let v_match = js_visit_match(ast, node);
           let stack = object_property_get(v_match, "stack");
-          let list = list_find(stack, js_stack_list_block_is);
+          let list = list_find(stack, () => {});
           let statement = list_next(stack, list);
           log({
             statement,
