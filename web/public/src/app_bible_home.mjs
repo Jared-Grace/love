@@ -82,8 +82,8 @@ export async function app_bible_home(context) {
   async function lambda3() {
     await on_arrow(list_next_wrap);
   }
-  const scroll_top_key = "scroll_top";
   let component3 = html_button(bar, text2, lambda3);
+  const scroll_top_key = "scroll_top";
   let verses = await ebible_verses(e, chapter_code);
   async function on_arrow(list_next_wrap) {
     let list = await ebible_chapter_codes(e);
