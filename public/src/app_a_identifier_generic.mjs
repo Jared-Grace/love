@@ -76,6 +76,11 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
         },
       },
       change,
+      {
+        shortcut: "d",
+        text: "Delete",
+        fn: async function lambda2() {},
+      },
     ];
     const choice_function_open = {
       shortcut: "o",
