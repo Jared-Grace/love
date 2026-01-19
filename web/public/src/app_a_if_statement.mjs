@@ -30,7 +30,7 @@ export function app_a_if_statement(a, node, parent) {
           let list = list_find(stack, js_stack_list_block_is);
           let statement = list_next(stack, list);
           log({
-            stack,
+            statement,
           });
         },
       },
