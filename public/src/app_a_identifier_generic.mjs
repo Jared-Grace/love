@@ -1,3 +1,4 @@
+import { noop } from "../../../love/public/src/noop.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
 import { app_a_overlay_close_button } from "../../../love/public/src/app_a_overlay_close_button.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
@@ -79,7 +80,11 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
       {
         shortcut: "d",
         text: "Delete",
-        fn: async function lambda2() {},
+        fn: async function lambda2() {
+          overlay_close();
+          let o2 = app_a_overlay(a, noop);
+          let overlay = object_property_get(o2, "overlay");
+        },
       },
     ];
     const choice_function_open = {
