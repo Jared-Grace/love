@@ -31,15 +31,13 @@ export function app_a_if_statement(a, node, parent) {
           function lambda3(item) {
             let index_end = list_index_of_end(stack, item);
             let i = js_stack_list_block_is(stack, index_end);
-            log({
-              index_end,
-              item,
-              i,
-            });
             return i;
           }
           let last = list_filter_last(stack, lambda3);
           let statement = list_next(stack, last);
+          log({
+            statement,
+          });
         },
       },
     ];
