@@ -16,6 +16,6 @@ export async function app_a_function_on_change(o, a) {
   let content = object_property_get(a, "content");
   let element = html_component_element_get(component);
   let scrollTop = object_property_get(element, "scrollTop");
-  a = await app_a_function(context);
+  let r = await app_a_function(context);
   object_property_set(element, "scrollTop", scrollTop);
 }
