@@ -1,3 +1,4 @@
+import { html_scroll_top_get } from "../../../love/public/src/html_scroll_top_get.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
@@ -157,6 +158,7 @@ export async function app_bible_home(context) {
     let component5 = html_button(bottom, button_text, lambda10);
   }
   function lambda11() {
+    let scroll_top = html_scroll_top_get(component7);
     storage_local_set_context(context2, key, value);
   }
   html_on_click(content, lambda11);
