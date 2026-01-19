@@ -168,6 +168,6 @@ export async function app_bible_home(context) {
   html_on_scroll(content, lambda11);
   let exists = storage_local_exists_context(context, scroll_top_key);
   if (exists) {
-    let s = storage_local_get_context(context, scroll_top_key);
+    let s = storage_local_get_context(context, scroll_top_key);html_scroll_top_set
   }
 }
