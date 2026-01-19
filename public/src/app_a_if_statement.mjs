@@ -1,5 +1,4 @@
 import { list_index_of_end } from "../../../love/public/src/list_index_of_end.mjs";
-import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { js_stack_list_block_is } from "../../../love/public/src/js_stack_list_block_is.mjs";
 import { list_next } from "../../../love/public/src/list_next.mjs";
@@ -29,7 +28,6 @@ export function app_a_if_statement(a, node, parent) {
           let ast = object_property_get(a, "ast");
           let v_match = js_visit_match(ast, node);
           let stack = object_property_get(v_match, "stack");
-          let copy = list_copy_reverse(stack);
           function lambda3(item) {
             let index_end = list_index_of_end(stack, item);
             let i = js_stack_list_block_is(stack, index_end);
