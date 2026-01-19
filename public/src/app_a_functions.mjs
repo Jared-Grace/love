@@ -1,6 +1,6 @@
 import { app_a_button_function } from "../../../love/public/src/app_a_button_function.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
-import { app_a_functions_generic } from "../../../love/public/src/app_a_functions_generic.mjs";
+import { app_a_list_chooser } from "../../../love/public/src/app_a_list_chooser.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_a_files_paths } from "../../../love/public/src/app_a_files_paths.mjs";
 import { list_filter_includes } from "../../../love/public/src/list_filter_includes.mjs";
@@ -23,5 +23,5 @@ export async function app_a_functions(context) {
   function on_select(f_name) {
     app_a_function_select(context, f_name);
   }
-  app_a_functions_generic(context, "function", f_names, on_select);
+  app_a_list_chooser(context, "function", f_names, on_select);
 }
