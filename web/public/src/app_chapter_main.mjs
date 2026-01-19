@@ -62,7 +62,7 @@ export async function app_chapter_main(context) {
         let verse_number_v = object_property_get(v, "verse_number");
         let text = object_property_get(v, "text");
         let p = html_p_text(content, verse_number_v + " " + text);
-        let v3 = app_chapter_toggle_update(
+        let r = app_chapter_toggle_update(
           updates,
           p,
           verse_numbers_chosen,
@@ -70,9 +70,9 @@ export async function app_chapter_main(context) {
           chapter_code,
           languages_verses,
         );
-        let update = object_property_get(v3, "update");
-        let toggle = object_property_get(v3, "toggle");
-        let copy = object_property_get(v3, "copy");
+        let update = object_property_get(r, "update");
+        let toggle = object_property_get(r, "toggle");
+        let copy = object_property_get(r, "copy");
         if (verse_number_v === verse_number) {
           async function lambda4() {
             await html_scroll_center_now(p);
