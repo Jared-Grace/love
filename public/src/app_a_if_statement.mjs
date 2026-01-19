@@ -1,3 +1,4 @@
+import { app_a_overlay_close_text } from "../../../love/public/src/app_a_overlay_close_text.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_keyword_else } from "../../../love/public/src/js_keyword_else.mjs";
@@ -14,7 +15,13 @@ export function app_a_if_statement(a, node, parent) {
   let v4 = app_a_keyword_purple_space(parent, k);
   let keyword = object_property_get(v4, "keyword");
   async function lambda(o) {
-    let choices = [];
+    let choices = [
+      {
+        shortcut: "x",
+        text: app_a_overlay_close_text(),
+        fn: overlay_close,
+      },
+    ];
     return choices;
   }
   app_a_overlay_choices(a, keyword, lambda);
