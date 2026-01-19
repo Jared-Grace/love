@@ -21,9 +21,9 @@ export function app_a_overlay(a, lambda$e) {
     list_remove(on_keydowns, lambda$e);
     html_remove(overlay);
   }
-  let v = {
+  let o = {
     overlay,
     overlay_close,
   };
-  return v;
+  return o;
 }
