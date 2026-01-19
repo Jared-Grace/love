@@ -82,11 +82,13 @@ export async function app_bible_home(context) {
   async function lambda3() {
     await on_arrow(list_next_wrap);
   }
+  const scroll_top_key = "scroll_top";
   let component3 = html_button(bar, text2, lambda3);
   let verses = await ebible_verses(e, chapter_code);
   async function on_arrow(list_next_wrap) {
     let list = await ebible_chapter_codes(e);
     let next = list_next_wrap(list, chapter_code);
+    storage_local_set_context(context, scroll_top_key, 0);
     app_bible_chapter_open(context, hash, next);
   }
   let verse_numbers_chosen = [];
@@ -161,7 +163,6 @@ export async function app_bible_home(context) {
     }
     let component5 = html_button(bottom, button_text, lambda10);
   }
-  const scroll_top_key = "scroll_top";
   function lambda11() {
     let scroll_top = html_scroll_top_get(content);
     storage_local_set_context(context, scroll_top_key, scroll_top);
