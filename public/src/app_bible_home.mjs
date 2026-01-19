@@ -83,6 +83,7 @@ export async function app_bible_home(context) {
   }
   let verse_numbers_chosen = [];
   let languages_verses = [];
+  let updates = [];
   function lambda(v) {
     let verse_number_v = object_property_get(v, "verse_number");
     let text = object_property_get(v, "text");
