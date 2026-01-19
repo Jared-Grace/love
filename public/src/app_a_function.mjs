@@ -234,4 +234,7 @@ export async function app_a_function(context) {
     f_names_local,
   };
   app_a_function_node(a);
+  return {
+    a,
+  };
 }
