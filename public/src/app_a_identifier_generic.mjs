@@ -39,7 +39,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
         overlay_close();
         let lambda22 = html_on_enter_lambda(lambda23);
         let o2 = app_a_overlay(a, lambda22);
-        app_a_overlay_close_button(o2, overlay);
+        app_a_overlay_close_button(o2);
         let oc = app_a_overlay_container_centered(overlay);
         let text2 = object_property_get(change, "text");
         let div2 = html_div_text(oc, text2 + " from:");
