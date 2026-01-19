@@ -83,7 +83,8 @@ export async function app_bible_home(context) {
     await on_arrow(list_next_wrap);
   }
   let component3 = html_button(bar, text2, lambda3);
-  let component7 = html_button(parent, text5, function lambda12() {});
+  function lambda12() {}
+  let component7 = html_button(parent, text5, lambda12);
   const scroll_top_key = "scroll_top";
   let verses = await ebible_verses(e, chapter_code);
   async function on_arrow(list_next_wrap) {
