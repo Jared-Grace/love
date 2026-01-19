@@ -32,7 +32,8 @@ export function app_a_if_statement(a, node, parent) {
         text: "Add above",
         fn: async function lambda2() {
           overlay_close();
-          let v = app_a_overlay(a, () => {});
+          function lambda4() {}
+          let v = app_a_overlay(a, lambda4);
           async function on_select(f_name_call) {
             let ast = object_property_get(a, "ast");
             let v_match = js_visit_match(ast, node);
