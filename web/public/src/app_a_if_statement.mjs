@@ -22,8 +22,8 @@ export function app_a_if_statement(a, node, parent) {
         text: "Add above",
         fn: function lambda2() {
           let ast = object_property_get(a, "ast");
-          let v_match = js_visit_match(ast2, search);
-          let stack = object_property_get(a, "stack");
+          let v_match = js_visit_match(ast, node);
+          let stack = object_property_get(v_match, "stack");
           log({
             stack,
           });
