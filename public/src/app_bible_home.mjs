@@ -130,6 +130,7 @@ export async function app_bible_home(context) {
     ("this is for copy-paste");
   }
   each(verses, lambda);
+  list_add(list2, item2);
   function biblehub_button_open(folder, verse_number_v, bottom, button_text) {
     function lambda10() {
       let lower = string_lower_to(book_name);
