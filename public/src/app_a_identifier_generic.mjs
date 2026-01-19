@@ -1,21 +1,21 @@
-import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
-import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
-import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
-import { app_a_input } from "../../../love/public/src/app_a_input.mjs";
-import { app_a_textarea } from "../../../love/public/src/app_a_textarea.mjs";
-import { app_a_overlay_close_button } from "../../../love/public/src/app_a_overlay_close_button.mjs";
 import { app_a_input_integer } from "../../../love/public/src/app_a_input_integer.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
+import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
+import { app_a_overlay_close_button } from "../../../love/public/src/app_a_overlay_close_button.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { app_a_overlay_container_centered } from "../../../love/public/src/app_a_overlay_container_centered.mjs";
+import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
+import { app_a_textarea } from "../../../love/public/src/app_a_textarea.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { app_a_function_on_keydown_remove } from "../../../love/public/src/app_a_function_on_keydown_remove.mjs";
+import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_select } from "../../../love/public/src/html_select.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
+import { app_a_input } from "../../../love/public/src/app_a_input.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
@@ -37,35 +37,33 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
         let lambda22 = html_on_enter_lambda(lambda23);
         overlay_close();
         let o2 = app_a_overlay(a, lambda22);
-        (async function lambda3() {
-          app_a_overlay_close_button(o2);
-          let overlay = object_property_get(o2, "overlay");
-          let oc = app_a_overlay_container_centered(overlay);
-          let text2 = object_property_get(change, "text");
-          let div2 = html_div_text(oc, text2 + " from:");
-          let div = html_div_text(oc, name);
-          html_div_text(oc, text2 + " to:");
-          let fn = null;
-          if (lines_multiple) {
-            fn = app_a_textarea;
-          } else {
-            fn = app_a_input;
-          }
-          let input = fn(overlay);
-          if (lines_multiple) {
-            html_attribute_set(input, "rows", 20);
-          } else {
-            html_centered(input);
-          }
-          html_value_set(input, name);
-          await html_select(input);
-          async function lambda23() {
-            let value_new = html_value_get(input);
-            let on_change = object_property_get(change, "on_change");
-            await on_change(value_new);
-            await app_a_function_on_change(o2, a);
-          }
-        });
+        app_a_overlay_close_button(o2);
+        let overlay = object_property_get(o2, "overlay");
+        let oc = app_a_overlay_container_centered(overlay);
+        let text2 = object_property_get(change, "text");
+        let div2 = html_div_text(oc, text2 + " from:");
+        let div = html_div_text(oc, name);
+        html_div_text(oc, text2 + " to:");
+        let fn = null;
+        if (lines_multiple) {
+          fn = app_a_textarea;
+        } else {
+          fn = app_a_input;
+        }
+        let input = fn(overlay);
+        if (lines_multiple) {
+          html_attribute_set(input, "rows", 20);
+        } else {
+          html_centered(input);
+        }
+        html_value_set(input, name);
+        await html_select(input);
+        async function lambda23() {
+          let value_new = html_value_get(input);
+          let on_change = object_property_get(change, "on_change");
+          await on_change(value_new);
+          await app_a_function_on_change(o2, a);
+        }
         let component = app_a_button_wide(overlay, text2, lambda23);
       },
     };
