@@ -81,6 +81,8 @@ export async function app_bible_home(context) {
     let next = list_next_wrap(list, chapter_code);
     app_bible_chapter_open(context, hash, next);
   }
+  let verse_numbers_chosen = [];
+  let languages_verses = [];
   function lambda(v) {
     let verse_number_v = object_property_get(v, "verse_number");
     let text = object_property_get(v, "text");
