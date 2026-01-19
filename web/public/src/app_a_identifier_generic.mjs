@@ -3,7 +3,6 @@ import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_ch
 import { app_a_overlay_container_centered } from "../../../love/public/src/app_a_overlay_container_centered.mjs";
 import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
 import { app_a_textarea } from "../../../love/public/src/app_a_textarea.mjs";
-import { app_a_buttons_shortcuts_wide } from "../../../love/public/src/app_a_buttons_shortcuts_wide.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
@@ -101,7 +100,6 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
     if (includes) {
       list_add(choices, choice_function_open);
     }
-    app_a_buttons_shortcuts_wide(overlay, choices);
     return choices;
   }
   app_a_overlay_choices(a, span, on_click);
