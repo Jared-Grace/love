@@ -1,15 +1,10 @@
+import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
 import { object_copy_assign } from "../../../love/public/src/object_copy_assign.mjs";
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
 import { js_call_new_insert } from "../../../love/public/src/js_call_new_insert.mjs";
 import { app_a_functions_generic } from "../../../love/public/src/app_a_functions_generic.mjs";
-import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
-import { list_filter_last } from "../../../love/public/src/list_filter_last.mjs";
-import { list_index_of_end } from "../../../love/public/src/list_index_of_end.mjs";
-import { js_stack_list_block_is } from "../../../love/public/src/js_stack_list_block_is.mjs";
-import { list_next } from "../../../love/public/src/list_next.mjs";
-import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_keyword_else } from "../../../love/public/src/js_keyword_else.mjs";
@@ -42,17 +37,11 @@ export function app_a_if_statement(a, node, parent) {
           let context = object_property_get(a, "context");
           let copy = object_copy_assign(context, replacement);
           async function on_select(f_name_call) {
-            let ast = object_property_get(a, "ast");
-            let v_match = js_visit_match(ast, node);
-            let stack = object_property_get(v_match, "stack");
-            function lambda3(item) {
-              let index_end = list_index_of_end(stack, item);
-              let i = js_stack_list_block_is(stack, index_end);
-              return i;
-            }
-            let list = list_filter_last(stack, lambda3);
-            let statement = list_next(stack, list);
-            let index = list_index_of(list, statement);
+            let v = app_a_node_index(a, node);
+            let stack = object_property_get(v, "stack");
+            let index = object_property_get(v, "index");
+            let list = object_property_get(v, "list");
+            let ast = object_property_get(v, "ast");
             let parsed = await js_call_new_insert(
               f_name_call,
               ast,
