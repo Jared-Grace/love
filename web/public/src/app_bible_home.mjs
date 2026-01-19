@@ -92,7 +92,16 @@ export async function app_bible_home(context) {
     toggle();
     biblehub_button_open("interlinear/", verse_number_v, bottom, "Interlinear");
     biblehub_button_open("", verse_number_v, bottom, "Parallel");
-    function lambda8() {}
+    function lambda8() {
+      app_chapter_toggle_update(
+        updates,
+        p,
+        verse_numbers_chosen,
+        verse_number_v,
+        chapter_code,
+        languages_verses,
+      );
+    }
     let component6 = html_button(parent, text4, lambda8);
     function toggle() {
       hidden = not(hidden);
@@ -112,14 +121,6 @@ export async function app_bible_home(context) {
     each(split, lambda2);
     return;
     ("this is for copy-paste");
-    app_chapter_toggle_update(
-      updates,
-      p,
-      verse_numbers_chosen,
-      verse_number_v,
-      chapter_code,
-      languages_verses,
-    );
   }
   each(verses, lambda);
   function biblehub_button_open(folder, verse_number_v, bottom, button_text) {
