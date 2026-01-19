@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
 import { object_copy_assign } from "../../../love/public/src/object_copy_assign.mjs";
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
@@ -60,6 +61,9 @@ export function app_a_if_statement(a, node, parent) {
               stack,
             );
             await app_a_function_on_change(o2, a);
+            log({
+              parsed,
+            });
           }
           await app_a_functions_generic(copy, on_select);
         },
