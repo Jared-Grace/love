@@ -1,5 +1,5 @@
 import { app_a_overlay_close_button } from "../../../love/public/src/app_a_overlay_close_button.mjs";
-import { app_a_overlay_on_click } from "../../../love/public/src/app_a_overlay_on_click.mjs";
+import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { app_a_overlay_container_centered } from "../../../love/public/src/app_a_overlay_container_centered.mjs";
 import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
 import { app_a_textarea } from "../../../love/public/src/app_a_textarea.mjs";
@@ -104,5 +104,5 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
     app_a_buttons_shortcuts_wide(overlay, choices);
     return choices;
   }
-  app_a_overlay_on_click(a, span, on_click);
+  app_a_overlay_choices(a, span, on_click);
 }
