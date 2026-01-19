@@ -84,6 +84,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
           overlay_close();
           let o2 = app_a_overlay(a, noop);
           let overlay = object_property_get(o2, "overlay");
+          let oc = app_a_overlay_container_centered(overlay);
         },
       },
     ];
