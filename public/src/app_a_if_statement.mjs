@@ -38,7 +38,7 @@ export function app_a_if_statement(a, node, parent) {
             let index_end = subtract(sz1, index);
             let i = js_stack_list_block_is(stack, index_end);
             log({
-              index,
+              index_end,
               item,
               i,
             });
