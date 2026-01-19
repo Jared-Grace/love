@@ -99,7 +99,7 @@ export async function app_bible_home(context) {
     function lambda8() {}
     let text4 = html_button_copy_text();
     let component6 = html_button(bottom, text4, lambda8);
-    let {uodate} = app_chapter_toggle_update(
+    let v3 = app_chapter_toggle_update(
       updates,
       component6,
       verse_numbers_chosen,
@@ -107,6 +107,7 @@ export async function app_bible_home(context) {
       chapter_code,
       languages_verses,
     );
+    let uodate = object_property_get(v3, "uodate");
     function toggle() {
       hidden = not(hidden);
       html_display_none_or_block(hidden, bottom);
