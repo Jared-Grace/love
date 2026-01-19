@@ -107,7 +107,7 @@ export async function app_bible_home(context) {
       chapter_code,
       languages_verses,
     );
-    let update = object_property_get(v3, "update");
+    let update = object_property_get(v3, "update");la
     function toggle() {
       hidden = not(hidden);
       html_display_none_or_block(hidden, bottom);
