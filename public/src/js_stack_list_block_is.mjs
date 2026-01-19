@@ -15,6 +15,6 @@ export function js_stack_list_block_is(stack, index) {
     let v2 = false;
     return v2;
   }
-  let v3 = true;
-  return v3;
+  let si = true;
+  return si;
 }
