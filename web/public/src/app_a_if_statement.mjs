@@ -1,6 +1,5 @@
-import { list_last } from "../../../love/public/src/list_last.mjs";
+import { list_filter_last } from "../../../love/public/src/list_filter_last.mjs";
 import { list_index_of_end } from "../../../love/public/src/list_index_of_end.mjs";
-import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { js_stack_list_block_is } from "../../../love/public/src/js_stack_list_block_is.mjs";
 import { list_next } from "../../../love/public/src/list_next.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
@@ -39,8 +38,9 @@ export function app_a_if_statement(a, node, parent) {
             });
             return i;
           }
-          let list = list_filter(stack, lambda3);
-          let last = list_last(list);
+          let v = list_filter_last(stack, lambda3);
+          let last = object_property_get(v, "last");
+          let list = object_property_get(v, "list");
           log({
             list,
           });
