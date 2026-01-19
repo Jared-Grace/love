@@ -145,7 +145,7 @@ Bible searching:
 
 https://jared-grace.web.app/search.html
 
-![App screenshot](readme/bible.png)
+![App screenshot](readme/search.png)
 
 ---
 
