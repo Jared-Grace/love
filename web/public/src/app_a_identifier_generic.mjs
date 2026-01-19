@@ -1,4 +1,4 @@
-import { html_input_number } from "../../../love/public/src/html_input_number.mjs";
+import { html_input_integer } from "../../../love/public/src/html_input_integer.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
 import { app_a_overlay_close_button } from "../../../love/public/src/app_a_overlay_close_button.mjs";
@@ -91,8 +91,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
             "How many statements do you want to delete?",
           );
           let input2 = app_a_input(overlay);
-          let input = html_input_number(overlay);
-          html_attribute_set(input, "step", "1");
+          html_input_integer(overlay);
           html_centered(input2);
           html_value_set(input2, 1);
           await html_select(input2);
