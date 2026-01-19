@@ -1,3 +1,4 @@
+import { subtract } from "../../../love/public/src/subtract.mjs";
 import { list_size_less_1 } from "../../../love/public/src/list_size_less_1.mjs";
 import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -33,7 +34,8 @@ export function app_a_if_statement(a, node, parent) {
           let copy = list_copy_reverse(stack);
           function lambda3(item) {
             let index = list_index_of(stack, item);
-            let sz1 = list_size_less_1(count);
+            let sz1 = list_size_less_1(stack);
+            let difference = subtract(left, right);
             let i = js_stack_list_block_is(stack, index);
             log({
               index,
