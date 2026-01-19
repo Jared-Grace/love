@@ -55,7 +55,7 @@ export function app_chapter_toggle_update(
       sliced = verse_numbers_chosen;
     }
     html_style_background_color_set_or_remove_list(
-      component_clicked,
+      component_highlighted,
       sliced,
       verse_number,
     );
