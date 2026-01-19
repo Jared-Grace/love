@@ -17,7 +17,7 @@ export function app_a_if_statement(a, node, parent) {
     let choices = [];
     return choices;
   }
-  app_a_overlay_on_click(a2, keyword, lambda);
+  app_a_overlay_on_click(a, keyword, lambda);
   function lambda19() {
     let test = object_property_get(node, "test");
     app_a_function_node_child(a, test);
