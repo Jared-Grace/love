@@ -10,7 +10,6 @@ import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { app_a_function_on_keydown_remove } from "../../../love/public/src/app_a_function_on_keydown_remove.mjs";
-import { file_js_unparse } from "../../../love/public/src/file_js_unparse.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_select } from "../../../love/public/src/html_select.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
@@ -61,8 +60,6 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
           let value_new = html_value_get(input);
           let on_change = object_property_get(change, "on_change");
           await on_change(value_new);
-          let parsed = object_property_get(a, "parsed");
-          await file_js_unparse(parsed);
           await app_a_function_on_change(o2, a);
         }
         let component = app_a_button_wide(overlay, text2, lambda23);
