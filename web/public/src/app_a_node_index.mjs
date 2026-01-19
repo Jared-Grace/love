@@ -9,7 +9,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 export function app_a_node_index(a) {
   marker("1");
   let ast = object_property_get(a, "ast");
-  let node2 = object_property_get(a, "node");
+  let node = object_property_get(a, "node");
   let v_match = js_visit_match(ast, node);
   let stack = object_property_get(v_match, "stack");
   function lambda3(item) {
