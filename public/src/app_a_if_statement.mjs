@@ -34,6 +34,7 @@ export function app_a_if_statement(a, node, parent) {
           overlay_close();
           function lambda4(e) {}
           let o = app_a_overlay(a, lambda4);
+          let overlay = object_property_get(o, "overlay");
           async function on_select(f_name_call) {
             let ast = object_property_get(a, "ast");
             let v_match = js_visit_match(ast, node);
