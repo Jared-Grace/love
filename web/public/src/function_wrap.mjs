@@ -1,14 +1,14 @@
+import { function_parse_declaration_unaliased } from "../../../love/public/src/function_parse_declaration_unaliased.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_declaration_asyncify_params_from } from "../../../love/public/src/js_declaration_asyncify_params_from.mjs";
 import { js_code_call_args_await_maybe_declaration_return_add } from "../../../love/public/src/js_code_call_args_await_maybe_declaration_return_add.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
-import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
 export async function function_wrap(f_name, f_name_wrapped) {
   marker("1");
-  let v2 = await function_parse_declaration(f_name);
+  let v2 = await function_parse_declaration_unaliased(f_name);
   log({
     v2,
   });
