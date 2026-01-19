@@ -90,6 +90,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
             "How many statements do you want to delete?",
           );
           let input = app_a_input(overlay);
+          html_centered(input);
           await html_select(input);
         },
       },
