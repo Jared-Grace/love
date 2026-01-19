@@ -58,7 +58,7 @@ export function app_chapter_toggle_update(
       verse_number,
     );
   };
-  let v3 = {
+  let r = {
     toggle,
     update,
     copy,
@@ -106,5 +106,5 @@ export function app_chapter_toggle_update(
     let squashed = list_squash(m);
     let joined = await list_join_newline_2_copy(squashed);
   }
-  return v3;
+  return r;
 }
