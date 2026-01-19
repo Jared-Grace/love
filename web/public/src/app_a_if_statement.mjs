@@ -31,7 +31,7 @@ export function app_a_if_statement(a, node, parent) {
           let stack = object_property_get(v_match, "stack");
           let copy = list_copy_reverse(stack);
           function lambda3(item) {
-            let index = list_index_of(stack, item);
+            let index = list_index_of(copy, item);
             let i = js_stack_list_block_is(stack, index);
             log({
               index,
