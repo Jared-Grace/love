@@ -40,11 +40,11 @@ export function app_a_if_statement(a, node, parent) {
             return i;
           }
           let list = list_filter(stack, lambda3);
-          let last = list_last(list2);
+          let last = list_last(list);
           log({
             list,
           });
-          let statement = list_next(stack, list);
+          let statement = list_next(stack, last);
         },
       },
     ];
