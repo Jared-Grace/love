@@ -92,6 +92,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
           );
           let input = app_a_input(overlay);
           html_input_type(input, "number");
+          html_attribute_set(input, "step", "1");
           html_centered(input);
           html_value_set(input, 1);
           await html_select(input);
