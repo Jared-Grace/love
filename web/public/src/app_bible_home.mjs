@@ -1,3 +1,4 @@
+import { html_scroll_top_set } from "../../../love/public/src/html_scroll_top_set.mjs";
 import { storage_local_exists_context } from "../../../love/public/src/storage_local_exists_context.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { html_scroll_top_get } from "../../../love/public/src/html_scroll_top_get.mjs";
@@ -168,6 +169,7 @@ export async function app_bible_home(context) {
   html_on_scroll(content, lambda11);
   let exists = storage_local_exists_context(context, scroll_top_key);
   if (exists) {
-    let s = storage_local_get_context(context, scroll_top_key);html_scroll_top_set
+    let s = storage_local_get_context(context, scroll_top_key);
+    html_scroll_top_set(component7, scroll_top2);
   }
 }
