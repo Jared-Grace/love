@@ -9,6 +9,7 @@ export function app_bible_languages(context) {
   marker("1");
   let root = html_clear_context(context);
   let languages = ebible_languages();
+  let key = "languages_chosen";
   let exists = storage_local_exists_context(context, key);
   if (exists) {
     let s = storage_local_get_context(context, key);
