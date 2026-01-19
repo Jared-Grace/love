@@ -1,3 +1,4 @@
+import { list_next } from "../../../love/public/src/list_next.mjs";
 import { js_stack_list_block_is } from "../../../love/public/src/js_stack_list_block_is.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
@@ -27,6 +28,7 @@ export function app_a_if_statement(a, node, parent) {
           let v_match = js_visit_match(ast, node);
           let stack = object_property_get(v_match, "stack");
           let found = list_find(stack, js_stack_list_block_is);
+          let next = list_next(list, item);
           log({
             stack,
           });
