@@ -8,6 +8,7 @@ export function app_bible_screens() {
     home: app_bible_home,
     books: app_bible_books,
     chapters: app_bible_chapters,
+    languages: app_bible_languages,
   };
   return screens;
 }
