@@ -61,7 +61,7 @@ export function app_a_if_statement(a, node, parent) {
             );
             overlay_close2();
           }
-          await app_a_functions_generic(replacement, on_select);
+          await app_a_functions_generic(copy, on_select);
         },
       },
     ];
