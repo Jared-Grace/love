@@ -1,3 +1,4 @@
+import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
 import { app_chapter_toggle_update } from "../../../love/public/src/app_chapter_toggle_update.mjs";
 import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
@@ -105,6 +106,7 @@ export async function app_bible_home(context) {
         languages_verses,
       );
     }
+    let text4 = html_button_copy_text();
     let component6 = html_button(parent, text4, lambda8);
     function toggle() {
       hidden = not(hidden);
