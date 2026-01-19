@@ -1,7 +1,7 @@
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { js_stack_list_block_is } from "../../../love/public/src/js_stack_list_block_is.mjs";
 import { list_next } from "../../../love/public/src/list_next.mjs";
-import { list_find } from "../../../love/public/src/list_find.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
@@ -33,11 +33,11 @@ export function app_a_if_statement(a, node, parent) {
             let i = js_stack_list_block_is(stack, index);
             return i;
           }
-          let list = list_find(stack, lambda3);
-          let statement = list_next(stack, list);
+          let list = list_filter(stack, lambda3);
           log({
-            statement,
+            list,
           });
+          let statement = list_next(stack, list);
         },
       },
     ];
