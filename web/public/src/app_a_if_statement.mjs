@@ -1,4 +1,4 @@
-import { app_a_overlay_on_click } from "../../../love/public/src/app_a_overlay_on_click.mjs";
+import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_keyword_else } from "../../../love/public/src/js_keyword_else.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
@@ -17,7 +17,7 @@ export function app_a_if_statement(a, node, parent) {
     let choices = [];
     return choices;
   }
-  app_a_overlay_on_click(a, keyword, lambda);
+  app_a_overlay_choices(a, keyword, lambda);
   function lambda19() {
     let test = object_property_get(node, "test");
     app_a_function_node_child(a, test);
