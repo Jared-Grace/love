@@ -89,7 +89,8 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
             root,
             "How many statements do you want to delete?",
           );
-          let input = fn(overlay);
+          let input = app_a_input(overlay);
+          await html_select(input);
         },
       },
     ];
