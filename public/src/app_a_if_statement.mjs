@@ -34,9 +34,9 @@ export function app_a_if_statement(a, node, parent) {
             let i = js_stack_list_block_is(stack, index_end);
             return i;
           }
-          let last = list_filter_last(stack, lambda3);
-          let statement = list_next(stack, last);
-          let index = list_index_of(list, item2);
+          let list = list_filter_last(stack, lambda3);
+          let statement = list_next(stack, list);
+          let index = list_index_of(list, statement);
           log({
             statement,
           });
