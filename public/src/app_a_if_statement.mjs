@@ -54,8 +54,8 @@ export function app_a_if_statement(a, node, parent) {
               statement,
             });
           }
-          let copy = object_copy(from);
-          object_assign(to, {
+          let copy = object_copy(context);
+          object_assign(copy, {
             root,
           });
           await app_a_functions_generic(context, on_select);
