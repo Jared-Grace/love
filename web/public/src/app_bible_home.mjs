@@ -40,6 +40,7 @@ import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_bar_content_padded } from "../../../love/public/src/html_bar_content_padded.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
+import { html_on_scroll } from "./html_on_scroll.mjs";
 export async function app_bible_home(context) {
   marker("1");
   let root = html_clear_context(context);
@@ -157,9 +158,10 @@ export async function app_bible_home(context) {
     }
     let component5 = html_button(bottom, button_text, lambda10);
   }
+  const scroll_top_key = "scroll_top";
   function lambda11() {
     let scroll_top = html_scroll_top_get(component7);
-    storage_local_set_context(context2, key, value);
+    storage_local_set_context(context, scroll_top_key, scroll_top);
   }
-  html_on_click(content, lambda11);
+  html_on_scroll(content, lambda11);
 }
