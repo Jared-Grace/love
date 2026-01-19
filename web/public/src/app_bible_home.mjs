@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
 import { app_chapter_toggle_update } from "../../../love/public/src/app_chapter_toggle_update.mjs";
 import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
@@ -107,7 +108,8 @@ export async function app_bible_home(context) {
       chapter_code,
       languages_verses,
     );
-    let update = object_property_get(v3, "update");la
+    let update = object_property_get(v3, "update");
+    list_add(list2, item2);
     function toggle() {
       hidden = not(hidden);
       html_display_none_or_block(hidden, bottom);
