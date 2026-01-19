@@ -31,7 +31,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
         let lambda22 = html_on_enter_lambda(lambda23);
         overlay_close();
         let o2 = app_a_overlay(a, lambda22);
-        () => {};
+        (function lambda3() {});
         let component = app_a_button_wide(overlay, text2, lambda23);
       },
     };
