@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_call_new } from "../../../love/public/src/js_call_new.mjs";
 import { js_stack_declaration_asyncify } from "../../../love/public/src/js_stack_declaration_asyncify.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
@@ -14,9 +15,14 @@ export async function marker_call(f_name_call) {
     await function_transform_marker(f_name_current, lambda);
     async function lambda(a) {
       marker("1");
-      let { stack, stack2, index, ast } = marker_next_index(a);
-      let { declaration, parsed } = await js_call_new(f_name_call, ast);
-      marker("2");
+      let v = marker_next_index(a);
+      let ast = object_property_get(v, "ast");
+      let index = object_property_get(v, "index");
+      let stack2 = object_property_get(v, "stack2");
+      let stack = object_property_get(v, "stack");
+      let v2 = await js_call_new(f_name_call, ast);
+      let parsed = object_property_get(v2, "parsed");
+      let declaration = object_property_get(v2, "declaration");
       list_insert(stack2, index, parsed);
       await js_imports_missing_add(ast);
       let output = await js_unparse(parsed);
