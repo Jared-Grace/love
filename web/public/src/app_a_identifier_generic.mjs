@@ -1,5 +1,4 @@
 import { app_a_input_integer } from "../../../love/public/src/app_a_input_integer.mjs";
-import { noop } from "../../../love/public/src/noop.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
 import { app_a_overlay_close_button } from "../../../love/public/src/app_a_overlay_close_button.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
@@ -82,8 +81,9 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
         shortcut: "d",
         text: "Delete",
         fn: async function lambda2() {
+          let lambda22 = html_on_enter_lambda(lambda23);
           overlay_close();
-          let o2 = app_a_overlay(a, noop);
+          let o2 = app_a_overlay(a, lambda22);
           let overlay = object_property_get(o2, "overlay");
           let oc = app_a_overlay_container_centered(overlay);
           let div3 = html_div_text(
@@ -94,6 +94,12 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
           html_centered(input);
           html_value_set(input, 1);
           await html_select(input);
+          async function lambda23() {
+            let value_new = html_value_get(input);
+            let on_change = object_property_get(change, "on_change");
+            await on_change(value_new);
+            await app_a_function_on_change(o2, a);
+          }
         },
       },
     ];
