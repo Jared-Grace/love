@@ -18,7 +18,7 @@ export function app_a_if_statement(a, node, parent) {
       {
         shortcut: "a",
         text: "Add above",
-        fn: () => {},
+        fn: function lambda2() {},
       },
     ];
     return choices;
