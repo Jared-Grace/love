@@ -29,7 +29,7 @@ export function app_a_if_statement(a, node, parent) {
         text: "Add above",
         fn: async function lambda2() {
           overlay_close();
-          async function on_select() {
+          async function on_select(f_name_call) {
             let ast = object_property_get(a, "ast");
             let v_match = js_visit_match(ast, node);
             let stack = object_property_get(v_match, "stack");
@@ -44,7 +44,7 @@ export function app_a_if_statement(a, node, parent) {
             let parsed = await js_call_new_insert(
               f_name_call,
               ast,
-              stack2,
+              list,
               index,
               stack,
             );
