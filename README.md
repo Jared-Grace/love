@@ -149,7 +149,8 @@ https://jared-grace.web.app/search.html
 
 ---
 
-`mkdir repos
+```
+mkdir repos
 cd repos
 git clone https://github.com/Jared-Grace/love
-git pull`
+git pull
