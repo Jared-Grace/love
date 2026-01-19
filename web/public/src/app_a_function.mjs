@@ -50,7 +50,6 @@ import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { app_a_function_node } from "../../../love/public/src/app_a_function_node.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_font_jetbrains_mono } from "../../../love/public/src/html_font_jetbrains_mono.mjs";
-import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_a_button } from "../../../love/public/src/app_a_button.mjs";
 import { emoji_search } from "../../../love/public/src/emoji_search.mjs";
 import { app_a_functions } from "../../../love/public/src/app_a_functions.mjs";
@@ -200,9 +199,8 @@ export async function app_a_function(context) {
   function app_a_function_on_keydown(e) {
     app_a_on_keydown(e, choices);
   }
-  let div = html_div(content);
-  html_font_jetbrains_mono(div);
-  html_style_assign(div, {
+  html_font_jetbrains_mono(content);
+  html_style_assign(content, {
     "overflow-wrap": "break-word",
     "word-break": "break-word",
     "font-weight": "500",
@@ -224,7 +222,7 @@ export async function app_a_function(context) {
   let f_names_local = list_difference(fds, f_names);
   app_a_function_node({
     node: ast,
-    parent: div,
+    parent: content,
     context,
     indent: 0,
     root,
