@@ -1,3 +1,4 @@
+import { list_sort_string_property } from "../../../love/public/src/list_sort_string_property.mjs";
 import { ebible_language_original } from "../../../love/public/src/ebible_language_original.mjs";
 import { ebible_language_en } from "../../../love/public/src/ebible_language_en.mjs";
 import { ebible_folder_swahili } from "../../../love/public/src/ebible_folder_swahili.mjs";
@@ -147,5 +148,6 @@ export function ebible_languages() {
   ];
   ("if you modify the above list, then run:");
   ebible_languages_chapters_cache_refresh.name;
+  list_sort_string_property(languages, "name");
   return languages;
 }
