@@ -166,6 +166,6 @@ export async function app_bible_home(context) {
     storage_local_set_context(context, scroll_top_key, scroll_top);
   }
   html_on_scroll(content, lambda11);
-  let exists = storage_local_exists_context(context, scroll_top_key);
+  let exists = storage_local_exists_context(context, scroll_top_key);$i
   storage_local_get_context(context, scroll_top_key);
 }
