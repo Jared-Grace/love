@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_remove_at_count } from "../../../love/public/src/list_remove_at_count.mjs";
 import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs";
 import { app_a_input_integer } from "../../../love/public/src/app_a_input_integer.mjs";
@@ -101,7 +102,10 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
             let v = app_a_node_index(a, node);
             let index = object_property_get(v, "index");
             let list = object_property_get(v, "list");
-            let only = list_remove_at_count(list, index, value_new);
+            let removals = list_remove_at_count(list, index, value_new);
+            log({
+              removals,
+            });
             await app_a_function_on_change(o2, a);
           }
         },
