@@ -1,4 +1,3 @@
-import { app_a_overlay_close_text } from "../../../love/public/src/app_a_overlay_close_text.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_keyword_else } from "../../../love/public/src/js_keyword_else.mjs";
@@ -17,9 +16,9 @@ export function app_a_if_statement(a, node, parent) {
   async function lambda(o) {
     let choices = [
       {
-        shortcut: "x",
-        text: app_a_overlay_close_text(),
-        fn: overlay_close,
+        shortcut: "a",
+        text: "Add above",
+        fn: () => {},
       },
     ];
     return choices;
