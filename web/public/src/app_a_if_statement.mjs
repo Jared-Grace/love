@@ -29,7 +29,7 @@ export function app_a_if_statement(a, node, parent) {
           let ast = object_property_get(a, "ast");
           let v_match = js_visit_match(ast, node);
           let stack = object_property_get(v_match, "stack");
-          let copy = list_copy_reverse(previous);
+          let copy = list_copy_reverse(stack);
           function lambda3(item) {
             let index = list_index_of(stack, item);
             let i = js_stack_list_block_is(stack, index);
