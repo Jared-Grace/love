@@ -28,7 +28,7 @@ export function app_a_if_statement(a, node, parent) {
           let v_match = js_visit_match(ast, node);
           let stack = object_property_get(v_match, "stack");
           let list = list_find(stack, js_stack_list_block_is);
-          let next = list_next(stack, list);
+          let statement = list_next(stack, list);
           log({
             stack,
           });
