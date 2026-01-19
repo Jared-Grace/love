@@ -30,11 +30,12 @@ export function app_a_if_statement(a, node, parent) {
           let stack = object_property_get(v_match, "stack");
           function lambda3(item) {
             let index = list_index_of(stack, item);
+            let i = js_stack_list_block_is(stack, index);
             log({
               index,
               item,
+              i,
             });
-            let i = js_stack_list_block_is(stack, index);
             return i;
           }
           let list = list_filter(stack, lambda3);
