@@ -6,7 +6,7 @@ import { js_stack_list_block_is } from "../../../love/public/src/js_stack_list_b
 import { list_index_of_end } from "../../../love/public/src/list_index_of_end.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-export function app_a_node_index(a, node) {
+export function app_a_node_index(a) {
   marker("1");
   let ast = object_property_get(a, "ast");
   let node2 = object_property_get(a, "node");
