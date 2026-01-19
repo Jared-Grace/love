@@ -1,4 +1,3 @@
-import { noop } from "../../../love/public/src/noop.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
