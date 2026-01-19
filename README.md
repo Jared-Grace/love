@@ -28,11 +28,11 @@ Therefore the root folder when you open in VS Code will be `repos/` not `love/`
 
 There is a file:
 
-`repos\love\data\.vscode\tasks.json`
+`repos/love/data/.vscode/tasks.json`
 
 It should be copied here:
 
-`repos\.vscode\tasks.json`
+`repos/.vscode/tasks.json`
 
 That way the watcher, server, and terminal will all run when VS Code is started
 
@@ -42,7 +42,7 @@ To run the terminal: `cd love; ./scripts/p.cmd`
 
 Then you can run this function: `love_initialize`
 
-That will copy `repos\love\data\.vscode\tasks.json` to `repos\.vscode\tasks.json`
+That will copy `repos/love/data/.vscode/tasks.json` to `repos/.vscode/tasks.json`
 
 ---
 
@@ -119,33 +119,33 @@ Screenshots:
 
 IDE:
 
-![App screenshot](readme\ide.png)
+![App screenshot](readme/ide.png)
 
 Choosing an identifier in the IDE:
 
-![App screenshot](readme\ide_identifier_rename.png)
+![App screenshot](readme/ide_identifier_rename.png)
 
 Previewing an app from the IDE
 
-![App screenshot](readme\ide_preview.png)
+![App screenshot](readme/ide_preview.png)
 
 Reply to messages:
 
 https://jared-grace.web.app/reply.html
 
-![App screenshot](readme\reply.png)
+![App screenshot](readme/reply.png)
 
 Bible reading:
 
 https://jared-grace.web.app/bible.html#c=JHN01
 
-![App screenshot](readme\bible.png)
+![App screenshot](readme/bible.png)
 
 Bible searching:
 
 https://jared-grace.web.app/search.html
 
-![App screenshot](readme\bible.png)
+![App screenshot](readme/bible.png)
 
 ---
 
