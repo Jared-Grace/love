@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 import { file_js_unparse } from "../../../love/public/src/file_js_unparse.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -15,5 +16,6 @@ export async function app_a_function_on_change(o, a) {
   let content = object_property_get(a, "content");
   let element = html_component_element_get(component);
   let scrollTop = object_property_get(element, "scrollTop");
-  await app_a_function(context);
+  a = await app_a_function(context);
+  object_property_set(element, "scrollTop");
 }
