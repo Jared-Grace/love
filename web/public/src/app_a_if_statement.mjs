@@ -29,8 +29,10 @@ export function app_a_if_statement(a, node, parent) {
           let v_match = js_visit_match(ast, node);
           let stack = object_property_get(v_match, "stack");
           function lambda3(item) {
-            let index2 = list_index_of(list2, item2);
-            let v3 = js_stack_list_block_is(stack, index);
+            let index = list_index_of(stack, item);
+            let i = js_stack_list_block_is(stack, index);
+            if (false) {
+            }
           }
           let list = list_find(stack, lambda3);
           let statement = list_next(stack, list);
