@@ -4,10 +4,10 @@ import { json_to } from "../../../love/public/src/json_to.mjs";
 import { equal_by } from "../../../love/public/src/equal_by.mjs";
 export function list_find_json(list, expected) {
   marker("1");
-  function lambda4(item) {
+  function equal_by_json(item) {
     let eq = equal_by(item, expected, json_to);
     return eq;
   }
-  let found = list_find(list, lambda4);
+  let found = list_find(list, equal_by_json);
   return found;
 }
