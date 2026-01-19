@@ -27,7 +27,7 @@ export function app_a_if_statement(a, node, parent) {
         fn: function lambda2() {
           let ast = object_property_get(a, "ast");
           let v_match = js_visit_match(ast, node);
-          let stack = object_property_get(v_match, "stack");
+          let stack = object_property_get(v_match, "stack");lz
           let r = range(count);
           function lambda3() {
             let v3 = js_stack_list_block_is(stack, index);
