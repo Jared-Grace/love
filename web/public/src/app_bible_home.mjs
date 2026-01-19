@@ -99,7 +99,7 @@ export async function app_bible_home(context) {
     function lambda8() {}
     let text4 = html_button_copy_text();
     let component6 = html_button(bottom, text4, lambda8);
-    let r = app_chapter_toggle_update(
+    let {uodate} = app_chapter_toggle_update(
       updates,
       component6,
       verse_numbers_chosen,
