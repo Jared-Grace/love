@@ -20,7 +20,6 @@ import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
-import { app_a_choice_close } from "../../../love/public/src/app_a_choice_close.mjs";
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -31,7 +30,6 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
     let overlay = object_property_get(o, "overlay");
     let oc = app_a_overlay_container_centered(overlay);
     let div4 = html_div_text(oc, name);
-    let choice_x = app_a_choice_close(overlay_close);
     let context = object_property_get(a, "context");
     const change = {
       fn: async function lambda15() {
@@ -75,7 +73,6 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
     };
     let to2 = object_merge(change, c);
     let choices = [
-      choice_x,
       {
         shortcut: "c",
         text: "Copy",
