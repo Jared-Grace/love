@@ -109,7 +109,7 @@ export async function app_bible_home(context) {
       languages_verses,
     );
     let update = object_property_get(v3, "update");
-    list_add(list2, item2);
+    list_add(updates, update);
     function toggle() {
       hidden = not(hidden);
       html_display_none_or_block(hidden, bottom);
