@@ -25,9 +25,9 @@ export async function marker_call(f_name_call) {
       let declaration = object_property_get(v2, "declaration");
       list_insert(stack2, index, parsed);
       await js_imports_missing_add(ast);
+      js_stack_declaration_asyncify(stack, declaration);
       let output = await js_unparse(parsed);
       la(output);
-      js_stack_declaration_asyncify(stack, declaration);
     }
   }
   let list = await list_adder_async(lambda2);
