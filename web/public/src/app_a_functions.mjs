@@ -20,8 +20,8 @@ export async function app_a_functions(context) {
   let filtered4 = list_filter_includes(filtered3, padded);
   let f_names = list_map(filtered4, function_path_to_name);
   marker("1");
+  app_a_list_chooser(context, "function", f_names, on_select);
   function on_select(f_name) {
     app_a_function_select(context, f_name);
   }
-  app_a_list_chooser(context, "function", f_names, on_select);
 }
