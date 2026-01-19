@@ -39,9 +39,6 @@ export function app_a_if_statement(a, node, parent) {
             return i;
           }
           let last = list_filter_last(stack, lambda3);
-          log({
-            list,
-          });
           let statement = list_next(stack, last);
         },
       },
