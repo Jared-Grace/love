@@ -1,3 +1,4 @@
+import { app_a_function_refresh_scroll } from "../../../love/public/src/app_a_function_refresh_scroll.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
 import { app_api_fn } from "../../../love/public/src/app_api_fn.mjs";
@@ -103,6 +104,9 @@ export async function app_a_function(context) {
     let text2 = emoji_down();
     let b3 = app_a_button(content, text2, download);
   }
+  let bc = html_bar_content(root);
+  let content = object_property_get(bc, "content");
+  let bar = object_property_get(bc, "bar");
   async function sync() {
     await upload();
     await download();
@@ -110,7 +114,7 @@ export async function app_a_function(context) {
       context,
       app_a_function_on_keydown,
     });
-    await app_a_function(context);
+    await app_a_function_refresh_scroll(content, context);
   }
   const preview_app = {
     shortcut: "p",
@@ -184,9 +188,6 @@ export async function app_a_function(context) {
   if (e) {
     list_add(choices, preview_app);
   }
-  let bc = html_bar_content(root);
-  let content = object_property_get(bc, "content");
-  let bar = object_property_get(bc, "bar");
   app_a_buttons_shortcuts(bar, choices);
   function screen_choose(screen) {
     let f = async function screen_choose_inner() {
