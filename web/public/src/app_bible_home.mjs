@@ -96,7 +96,7 @@ export async function app_bible_home(context) {
     toggle();
     biblehub_button_open("interlinear/", verse_number_v, bottom, "Interlinear");
     biblehub_button_open("", verse_number_v, bottom, "Parallel");
-    let {copy} = app_chapter_toggle_update(
+    let v3 = app_chapter_toggle_update(
       updates,
       p,
       verse_numbers_chosen,
@@ -104,6 +104,7 @@ export async function app_bible_home(context) {
       chapter_code,
       languages_verses,
     );
+    let copy = object_property_get(v3, "copy");
     function lambda8() {}
     let text4 = html_button_copy_text();
     let component6 = html_button(bottom, text4, lambda8);
