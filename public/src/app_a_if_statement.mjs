@@ -1,3 +1,4 @@
+import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
 import { object_copy } from "../../../love/public/src/object_copy.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { js_call_new_insert } from "../../../love/public/src/js_call_new_insert.mjs";
@@ -31,6 +32,7 @@ export function app_a_if_statement(a, node, parent) {
         text: "Add above",
         fn: async function lambda2() {
           overlay_close();
+          let v = app_a_overlay(a2, on_keydown);
           async function on_select(f_name_call) {
             let ast = object_property_get(a, "ast");
             let v_match = js_visit_match(ast, node);
