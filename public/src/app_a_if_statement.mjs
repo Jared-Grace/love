@@ -31,8 +31,7 @@ export function app_a_if_statement(a, node, parent) {
           function lambda3(item) {
             let index = list_index_of(stack, item);
             let i = js_stack_list_block_is(stack, index);
-            if (false) {
-            }
+            return i;
           }
           let list = list_find(stack, lambda3);
           let statement = list_next(stack, list);
