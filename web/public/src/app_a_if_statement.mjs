@@ -60,7 +60,7 @@ export function app_a_if_statement(a, node, parent) {
           }
           let copy = object_copy(context);
           object_assign(copy, {
-            root,
+            root: overlay,
           });
           await app_a_functions_generic(context, on_select);
         },
