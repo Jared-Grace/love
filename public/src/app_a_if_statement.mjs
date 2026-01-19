@@ -61,6 +61,7 @@ export function app_a_if_statement(a, node, parent) {
             log({
               statement,
             });
+            overlay_close2();
           }
           await app_a_functions_generic(replacement, on_select);
         },
