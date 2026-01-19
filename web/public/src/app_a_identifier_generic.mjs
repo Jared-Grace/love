@@ -63,7 +63,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
           let on_change = object_property_get(change, "on_change");
           await on_change(value_new);
           await file_js_unparse(parsed);
-          await app_a_function_on_change(o2, a, context);
+          await app_a_function_on_change(o2, a);
         }
         let component = app_a_button_wide(overlay, text2, lambda23);
       },
