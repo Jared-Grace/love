@@ -4,6 +4,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function list_filter_json(list, expected) {
   marker("1");
   let l = equal_by_json_lambda(expected);
-  let found = list_filter(list, l);
-  return found;
+  let filtered = list_filter(list, l);
+  return filtered;
 }
