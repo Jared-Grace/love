@@ -20,6 +20,7 @@ export function app_a_if_statement(a, node, parent) {
         shortcut: "a",
         text: "Add above",
         fn: function lambda2() {
+          let ast = object_property_get(a, "ast");
           let stack = object_property_get(a, "stack");
           log({
             stack,
