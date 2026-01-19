@@ -49,9 +49,6 @@ export function app_chapter_toggle_update(
       let verse_numbers = list_map_property(verses, "verse_number");
       let v = list_first_last_slice(verse_numbers_chosen, verse_numbers);
       sliced = object_property_get(v, "sliced");
-      log({
-        v,
-      });
     } else {
       sliced = verse_numbers_chosen;
     }
