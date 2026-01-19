@@ -18,7 +18,9 @@ export function app_a_if_statement(a, node, parent) {
       {
         shortcut: "a",
         text: "Add above",
-        fn: function lambda2() {},
+        fn: function lambda2() {
+          let stack = object_property_get(a, "stack");
+        },
       },
     ];
     return choices;
