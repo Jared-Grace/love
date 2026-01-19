@@ -1,3 +1,4 @@
+import { noop } from "../../../love/public/src/noop.mjs";
 import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
@@ -28,8 +29,7 @@ export function app_a_if_statement(a, node, parent) {
         text: "Add above",
         fn: async function lambda2() {
           overlay_close();
-          function lambda4(e) {}
-          let o2 = app_a_overlay(a, lambda4);
+          let o2 = app_a_overlay(a, noop);
           let overlay = object_property_get(o2, "overlay");
           const replacement = {
             root: overlay,
