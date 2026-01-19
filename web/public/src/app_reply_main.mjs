@@ -26,7 +26,6 @@ import { html_button } from "../../../love/public/src/html_button.mjs";
 import { app_reply_love } from "../../../love/public/src/app_reply_love.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
-import { list_sort_string_property } from "../../../love/public/src/list_sort_string_property.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_reply_initialize } from "../../../love/public/src/app_reply_initialize.mjs";
 export async function app_reply_main(context) {
@@ -40,7 +39,6 @@ export async function app_reply_main(context) {
   let languages_chosen_default = [o, en_l];
   let languages_chosen = [];
   languages_chosen_reset();
-  list_sort_string_property(languages, "name");
   let root = object_property_get(r, "root");
   let en = object_property_get(r, "en");
   let encouragement = object_property_get(r, "encouragement");
