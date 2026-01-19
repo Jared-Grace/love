@@ -1,4 +1,4 @@
-import { object_copy_right_assign } from "../../../love/public/src/object_copy_right_assign.mjs";
+import { object_copy_assign } from "../../../love/public/src/object_copy_assign.mjs";
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
 import { js_call_new_insert } from "../../../love/public/src/js_call_new_insert.mjs";
 import { app_a_functions_generic } from "../../../love/public/src/app_a_functions_generic.mjs";
@@ -39,7 +39,7 @@ export function app_a_if_statement(a, node, parent) {
             root: overlay,
           };
           let context = object_property_get(a, "context");
-          object_copy_right_assign(context, replacement);
+          object_copy_assign(context, replacement);
           async function on_select(f_name_call) {
             let ast = object_property_get(a, "ast");
             let v_match = js_visit_match(ast, node);
