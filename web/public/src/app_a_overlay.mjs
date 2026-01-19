@@ -4,7 +4,7 @@ import { html_overlay_z_max } from "../../../love/public/src/html_overlay_z_max.
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
-export function app_a_overlay(a, on_keydown) {
+export function app_a_overlay(a, lambda$k) {
   marker("1");
   let root = object_property_get(a, "root");
   let context = object_property_get(a, "context");
@@ -14,11 +14,11 @@ export function app_a_overlay(a, on_keydown) {
     "app_a_function_on_keydown",
   );
   list_remove(on_keydowns, app_a_function_on_keydown);
-  list_add(on_keydowns, on_keydown);
+  list_add(on_keydowns, lambda$k);
   let overlay = html_overlay_z_max(root);
   function overlay_close() {
     list_add(on_keydowns, app_a_function_on_keydown);
-    list_remove(on_keydowns, on_keydown);
+    list_remove(on_keydowns, lambda$k);
     html_remove(overlay);
   }
   let v = {
