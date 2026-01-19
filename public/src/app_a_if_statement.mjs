@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_keyword_else } from "../../../love/public/src/js_keyword_else.mjs";
@@ -20,6 +21,9 @@ export function app_a_if_statement(a, node, parent) {
         text: "Add above",
         fn: function lambda2() {
           let stack = object_property_get(a, "stack");
+          log({
+            stack,
+          });
         },
       },
     ];
