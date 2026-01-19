@@ -1,3 +1,4 @@
+import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
 import { object_copy_assign } from "../../../love/public/src/object_copy_assign.mjs";
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
 import { js_call_new_insert } from "../../../love/public/src/js_call_new_insert.mjs";
@@ -32,9 +33,9 @@ export function app_a_if_statement(a, node, parent) {
         fn: async function lambda2() {
           overlay_close();
           function lambda4(e) {}
-          let o = app_a_overlay(a, lambda4);
-          let overlay = object_property_get(o, "overlay");
-          let overlay_close2 = object_property_get(o, "overlay_close");
+          let o2 = app_a_overlay(a, lambda4);
+          let overlay = object_property_get(o2, "overlay");
+          let overlay_close2 = object_property_get(o2, "overlay_close");
           const replacement = {
             root: overlay,
           };
@@ -60,6 +61,7 @@ export function app_a_if_statement(a, node, parent) {
               stack,
             );
             overlay_close2();
+            await app_a_function_on_change(o2, a);
           }
           await app_a_functions_generic(copy, on_select);
         },
