@@ -1,3 +1,4 @@
+import { app_a_functions_generic } from "../../../love/public/src/app_a_functions_generic.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { list_filter_last } from "../../../love/public/src/list_filter_last.mjs";
 import { list_index_of_end } from "../../../love/public/src/list_index_of_end.mjs";
@@ -25,7 +26,9 @@ export function app_a_if_statement(a, node, parent) {
       {
         shortcut: "a",
         text: "Add above",
-        fn: function lambda2() {
+        fn: async function lambda2() {
+          overlay_close();
+          await app_a_functions_generic(context, on_select);
           let ast = object_property_get(a, "ast");
           let v_match = js_visit_match(ast, node);
           let stack = object_property_get(v_match, "stack");
