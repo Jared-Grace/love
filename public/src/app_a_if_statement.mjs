@@ -38,6 +38,7 @@ export function app_a_if_statement(a, node, parent) {
           const replacement = {
             root: overlay,
           };
+          let context2 = object_property_get(a, "context");
           object_copy_assign(context, replacement);
           async function on_select(f_name_call) {
             let ast = object_property_get(a, "ast");
