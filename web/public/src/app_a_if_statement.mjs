@@ -1,3 +1,4 @@
+import { list_size } from "../../../love/public/src/list_size.mjs";
 import { range } from "../../../love/public/src/range.mjs";
 import { js_stack_list_block_is } from "../../../love/public/src/js_stack_list_block_is.mjs";
 import { list_next } from "../../../love/public/src/list_next.mjs";
@@ -27,7 +28,8 @@ export function app_a_if_statement(a, node, parent) {
         fn: function lambda2() {
           let ast = object_property_get(a, "ast");
           let v_match = js_visit_match(ast, node);
-          let stack = object_property_get(v_match, "stack");lz
+          let stack = object_property_get(v_match, "stack");
+          let size = list_size(list2);
           let r = range(count);
           function lambda3() {
             let v3 = js_stack_list_block_is(stack, index);
