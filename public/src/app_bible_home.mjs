@@ -155,4 +155,5 @@ export async function app_bible_home(context) {
     }
     let component5 = html_button(bottom, button_text, lambda10);
   }
+  html_on_click(component7, function lambda11() {});
 }
