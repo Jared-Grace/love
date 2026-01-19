@@ -18,10 +18,10 @@ import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lam
 import { list_first } from "../../../love/public/src/list_first.mjs";
 export function app_a_list_chooser(context, noun, texts, on_select) {
   marker("1");
-  let r = object_property_get(context, "root");
+  let root = object_property_get(context, "root");
   const articled = string_articled(noun);
   const text = "Choose " + articled + ":";
-  html_div_text_centered(r, text);
+  html_div_text_centered(root, text);
   let filtered = null;
   async function on_enter() {
     let first = list_first(filtered);
@@ -29,8 +29,8 @@ export function app_a_list_chooser(context, noun, texts, on_select) {
   }
   let on_keydown = html_on_enter_lambda(on_enter);
   let on_keydowns = app_a_on_keydown_add(context, on_keydown);
-  let input = app_a_input(r);
-  let f_names_div = html_div(r);
+  let input = app_a_input(root);
+  let f_names_div = html_div(root);
   function lambda4() {
     let value = html_value_get(input);
     function lambda2(text) {
