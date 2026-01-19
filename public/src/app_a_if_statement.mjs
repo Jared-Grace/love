@@ -57,9 +57,10 @@ export function app_a_if_statement(a, node, parent) {
               statement,
             });
           }
-          object_copy_assign(context, {
+          const replacement = {
             root: overlay,
-          });
+          };
+          object_copy_assign(context, replacement);
           await app_a_functions_generic(context, on_select);
         },
       },
