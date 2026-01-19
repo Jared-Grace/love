@@ -45,6 +45,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
         let div2 = html_div_text(oc, text2 + " from:");
         let div = html_div_text(oc, name);
         html_div_text(oc, text2 + " to:");
+        let input = fn(overlay);
         let fn = null;
         if (lines_multiple) {
           fn = app_a_textarea;
@@ -52,7 +53,6 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
           fn = app_a_input;
           html_centered(input);
         }
-        let input = fn(overlay);
         if (lines_multiple) {
           html_attribute_set(input, "rows", 20);
         } else {
