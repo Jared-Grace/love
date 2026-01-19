@@ -30,7 +30,7 @@ export function app_chapter_toggle_update(
 ) {
   marker("1");
   async function choose() {
-    log(message);
+    log('message');
     toggle();
     invoke_multiple(updates);
     await copy();
