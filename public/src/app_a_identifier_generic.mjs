@@ -1,3 +1,4 @@
+import { app_a_overlay_close_button } from "../../../love/public/src/app_a_overlay_close_button.mjs";
 import { app_a_overlay_on_click } from "../../../love/public/src/app_a_overlay_on_click.mjs";
 import { app_a_overlay_container_centered } from "../../../love/public/src/app_a_overlay_container_centered.mjs";
 import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
@@ -18,7 +19,6 @@ import { app_a_input } from "../../../love/public/src/app_a_input.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
-import { app_a_overlay_close_text } from "../../../love/public/src/app_a_overlay_close_text.mjs";
 import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { app_a_choice_close } from "../../../love/public/src/app_a_choice_close.mjs";
@@ -39,14 +39,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
         overlay_close();
         let lambda22 = html_on_enter_lambda(lambda23);
         let o2 = app_a_overlay(a, lambda22);
-        let rename_overlay_close = object_property_get(o2, "overlay_close");
-        let overlay = object_property_get(o2, "overlay");
-        let text5 = app_a_overlay_close_text();
-        let component2 = app_a_button_wide(
-          overlay,
-          text5,
-          rename_overlay_close,
-        );
+        app_a_overlay_close_button(o2, overlay);
         let oc = app_a_overlay_container_centered(overlay);
         let text2 = object_property_get(change, "text");
         let div2 = html_div_text(oc, text2 + " from:");
@@ -73,6 +66,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
           let on_change = object_property_get(change, "on_change");
           await on_change(value_new);
           await file_js_unparse(parsed);
+          let rename_overlay_close = object_property_get(o2, "overlay_close");
           rename_overlay_close();
           app_a_function_on_keydown_remove(a);
           await app_a_function(context);
