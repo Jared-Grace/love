@@ -38,9 +38,7 @@ export function app_a_if_statement(a, node, parent) {
             });
             return i;
           }
-          let v = list_filter_last(stack, lambda3);
-          let last = object_property_get(v, "last");
-          let list = object_property_get(v, "list");
+          let last = list_filter_last(stack, lambda3);
           log({
             list,
           });
