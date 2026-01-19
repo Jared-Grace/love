@@ -5,8 +5,8 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 export async function app_a_function_on_change(o, a) {
   marker("1");
   let context = object_property_get(a, "context");
-  let rename_overlay_close = object_property_get(o, "overlay_close");
-  rename_overlay_close();
+  let overlay_close = object_property_get(o, "overlay_close");
+  overlay_close();
   app_a_function_on_keydown_remove(a);
   await app_a_function(context);
 }
