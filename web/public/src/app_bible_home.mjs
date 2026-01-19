@@ -107,7 +107,7 @@ export async function app_bible_home(context) {
       verse_number_v,
       chapter_code,
       languages_verses,
-      component_highlighted,
+      p,
     );
     let update = object_property_get(v3, "update");
     list_add(updates, update);
