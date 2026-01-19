@@ -39,7 +39,7 @@ export function app_a_if_statement(a, node, parent) {
             root: overlay,
           };
           let context = object_property_get(a, "context");
-          object_copy_right_assign(replacement, context);
+          object_copy_right_assign(context, replacement);
           async function on_select(f_name_call) {
             let ast = object_property_get(a, "ast");
             let v_match = js_visit_match(ast, node);
