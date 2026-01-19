@@ -92,9 +92,9 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
             "How many statements do you want to delete?",
           );
           let input2 = app_a_input(overlay);
-          let component2 = html_input(overlay);
-          html_input_type(input2, "number");
-          html_attribute_set(input2, "step", "1");
+          let input = html_input(overlay);
+          html_input_type(input, "number");
+          html_attribute_set(input, "step", "1");
           html_centered(input2);
           html_value_set(input2, 1);
           await html_select(input2);
