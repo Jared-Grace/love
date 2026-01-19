@@ -222,6 +222,7 @@ export async function app_a_function(context) {
   let f_names_local = list_difference(fds, f_names);
   app_a_function_node({
     node: ast,
+    content,
     parent: content,
     context,
     indent: 0,
