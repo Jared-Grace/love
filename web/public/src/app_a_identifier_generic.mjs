@@ -58,10 +58,10 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
         html_value_set(input, name);
         await html_select(input);
         async function lambda23() {
-          let parsed = object_property_get(a, "parsed");
           let value_new = html_value_get(input);
           let on_change = object_property_get(change, "on_change");
           await on_change(value_new);
+          let parsed = object_property_get(a, "parsed");
           await file_js_unparse(parsed);
           await app_a_function_on_change(o2, a);
         }
