@@ -19,5 +19,5 @@ export async function app_a_function_on_change(o, a) {
   let r = await app_a_function(context);
   let a2 = object_property_get(r, "a");
   let content2 = object_property_get(a2, "content");
-  html_scroll_top_set(content, scroll_top);
+  html_scroll_top_set(content2, scroll_top);
 }
