@@ -1,3 +1,4 @@
+import { object_copy } from "../../../love/public/src/object_copy.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { js_call_new_insert } from "../../../love/public/src/js_call_new_insert.mjs";
 import { app_a_functions_generic } from "../../../love/public/src/app_a_functions_generic.mjs";
@@ -53,7 +54,10 @@ export function app_a_if_statement(a, node, parent) {
               statement,
             });
           }
-          object_assign(to, from);
+          let copy = object_copy(from);
+          object_assign(to, {
+            root,
+          });
           await app_a_functions_generic(context, on_select);
         },
       },
