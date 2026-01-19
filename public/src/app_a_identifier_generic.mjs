@@ -34,8 +34,8 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
     let context = object_property_get(a, "context");
     const change = {
       fn: async function lambda15() {
-        overlay_close();
         let lambda22 = html_on_enter_lambda(lambda23);
+        overlay_close();
         let o2 = app_a_overlay(a, lambda22);
         app_a_overlay_close_button(o2);
         let overlay = object_property_get(o2, "overlay");
