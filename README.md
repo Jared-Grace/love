@@ -112,6 +112,7 @@ So if you type the alias for a function (or its name), such as `l` in its own st
 
 ---
 
+Also, on commands being run from the terminal, and on file save transformations from watcher, code is automatically committed to GitHub and if it has been at least 5 minutes since the last push, then it is pushed as well
 
 ---
 
