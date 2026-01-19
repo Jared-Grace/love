@@ -1,4 +1,4 @@
-import { list_remove_at } from "../../../love/public/src/list_remove_at.mjs";
+import { list_remove_at_count } from "../../../love/public/src/list_remove_at_count.mjs";
 import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs";
 import { app_a_input_integer } from "../../../love/public/src/app_a_input_integer.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
@@ -103,7 +103,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
             let index = object_property_get(v, "index");
             let list = object_property_get(v, "list");
             let ast = object_property_get(v, "ast");
-            let only = list_remove_at(list, index);
+            let only = list_remove_at_count(list, value_new);
             await app_a_function_on_change(o2, a);
           }
         },
