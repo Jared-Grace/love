@@ -34,6 +34,10 @@ export function app_a_if_statement(a, node, parent) {
           function lambda4(e) {}
           let o = app_a_overlay(a, lambda4);
           let overlay = object_property_get(o, "overlay");
+          const replacement = {
+            root: overlay,
+          };
+          object_copy_assign(context, replacement);
           async function on_select(f_name_call) {
             let ast = object_property_get(a, "ast");
             let v_match = js_visit_match(ast, node);
@@ -57,10 +61,6 @@ export function app_a_if_statement(a, node, parent) {
               statement,
             });
           }
-          const replacement = {
-            root: overlay,
-          };
-          object_copy_assign(context, replacement);
           await app_a_functions_generic(context, on_select);
         },
       },
