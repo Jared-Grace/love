@@ -1,6 +1,5 @@
+import { object_copy_assign } from "../../../love/public/src/object_copy_assign.mjs";
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
-import { object_copy } from "../../../love/public/src/object_copy.mjs";
-import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { js_call_new_insert } from "../../../love/public/src/js_call_new_insert.mjs";
 import { app_a_functions_generic } from "../../../love/public/src/app_a_functions_generic.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
@@ -58,8 +57,7 @@ export function app_a_if_statement(a, node, parent) {
               statement,
             });
           }
-          let copy = object_copy(context);
-          object_assign(copy, {
+          object_copy_assign(context, {
             root: overlay,
           });
           await app_a_functions_generic(context, on_select);
