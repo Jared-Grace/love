@@ -1,3 +1,4 @@
+import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
 import { app_chapter_toggle_update } from "../../../love/public/src/app_chapter_toggle_update.mjs";
@@ -155,6 +156,8 @@ export async function app_bible_home(context) {
     }
     let component5 = html_button(bottom, button_text, lambda10);
   }
-  function lambda11() {}
-  html_on_click(component7, lambda11);
+  function lambda11() {
+    storage_local_set_context(context2, key, value);
+  }
+  html_on_click(content, lambda11);
 }
