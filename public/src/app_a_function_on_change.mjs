@@ -14,5 +14,6 @@ export async function app_a_function_on_change(o, a) {
   app_a_function_on_keydown_remove(a);
   let content = object_property_get(a, "content");
   let element = html_component_element_get(component);
+  let scrollTop = object_property_get(element, "scrollTop");
   await app_a_function(context);
 }
