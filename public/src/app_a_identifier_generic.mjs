@@ -99,10 +99,8 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
           async function lambda23() {
             let value_new = html_value_get(input);
             let v = app_a_node_index(a, node);
-            let stack = object_property_get(v, "stack");
             let index = object_property_get(v, "index");
             let list = object_property_get(v, "list");
-            let ast = object_property_get(v, "ast");
             let only = list_remove_at_count(list, index, value_new);
             await app_a_function_on_change(o2, a);
           }
