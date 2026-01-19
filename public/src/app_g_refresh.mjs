@@ -107,6 +107,7 @@ export async function app_g_refresh(
     );
   }
   noop();
+  noop();
   if (document.readyState === "complete") {
     lambda3();
   } else {
