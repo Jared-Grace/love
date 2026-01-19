@@ -12,5 +12,6 @@ export async function app_a_function_on_change(o, a) {
   overlay_close();
   app_a_function_on_keydown_remove(a);
   let content = object_property_get(a, "content");
+  hecg;
   await app_a_function(context);
 }
