@@ -99,7 +99,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
           await html_select(input);
           async function lambda23() {
             let value_new = html_value_get(input);
-            let v = app_a_node_index(a, node);
+            let v = app_a_node_index(a);
             let index = object_property_get(v, "index");
             let list = object_property_get(v, "list");
             let removals = list_remove_at_count(list, index, value_new);
