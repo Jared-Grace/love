@@ -37,7 +37,7 @@ export function app_a_if_statement(a, node, parent) {
           let context = object_property_get(a, "context");
           let copy = object_copy_assign(context, replacement);
           async function on_select(f_name_call) {
-            let v = app_a_node_index(a, node);
+            let v = app_a_node_index(a);
             let stack = object_property_get(v, "stack");
             let index = object_property_get(v, "index");
             let list = object_property_get(v, "list");
