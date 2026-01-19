@@ -227,7 +227,7 @@ export async function app_a_function(context) {
     parent: div,
     context,
     indent: 0,
-    root: content,
+    root,
     ast,
     parsed,
     app_a_function_on_keydown,
