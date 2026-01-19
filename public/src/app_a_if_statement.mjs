@@ -35,7 +35,6 @@ export function app_a_if_statement(a, node, parent) {
           function lambda4(e) {}
           let o2 = app_a_overlay(a, lambda4);
           let overlay = object_property_get(o2, "overlay");
-          let overlay_close2 = object_property_get(o2, "overlay_close");
           const replacement = {
             root: overlay,
           };
@@ -60,7 +59,6 @@ export function app_a_if_statement(a, node, parent) {
               index,
               stack,
             );
-            overlay_close2();
             await app_a_function_on_change(o2, a);
           }
           await app_a_functions_generic(copy, on_select);
