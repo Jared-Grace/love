@@ -1,3 +1,4 @@
+import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_index_of_end } from "../../../love/public/src/list_index_of_end.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { js_stack_list_block_is } from "../../../love/public/src/js_stack_list_block_is.mjs";
@@ -39,6 +40,7 @@ export function app_a_if_statement(a, node, parent) {
             return i;
           }
           let list = list_filter(stack, lambda3);
+          let last = list_last(list2);
           log({
             list,
           });
