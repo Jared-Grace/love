@@ -69,7 +69,7 @@ export async function app_chapter_main(context) {
           verse_number_v,
           chapter_code,
           languages_verses,
-          component_highlighted,
+          p,
         );
         let update = object_property_get(r, "update");
         let toggle = object_property_get(r, "toggle");
