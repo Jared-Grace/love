@@ -1,3 +1,4 @@
+import { html_input } from "../../../love/public/src/html_input.mjs";
 import { html_input_type } from "../../../love/public/src/html_input_type.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
@@ -91,6 +92,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
             "How many statements do you want to delete?",
           );
           let input = app_a_input(overlay);
+          let component2 = html_input(parent);
           html_input_type(input, "number");
           html_attribute_set(input, "step", "1");
           html_centered(input);
