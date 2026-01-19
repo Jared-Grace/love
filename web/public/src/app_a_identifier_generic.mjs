@@ -108,6 +108,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
             });
             await app_a_function_on_change(o2, a);
           }
+          let component = app_a_button_wide(overlay, "Delete", lambda23);
         },
       },
     ];
