@@ -1,4 +1,4 @@
-import { list_remove_at } from "../../../love/public/src/list_remove_at.mjs";
+import { list_remove_at_count } from "../../../love/public/src/list_remove_at_count.mjs";
 import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs";
 import { app_a_input_integer } from "../../../love/public/src/app_a_input_integer.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
