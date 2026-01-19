@@ -162,7 +162,7 @@ export async function app_bible_home(context) {
   }
   const scroll_top_key = "scroll_top";
   function lambda11() {
-    let scroll_top = html_scroll_top_get(component7);
+    let scroll_top = html_scroll_top_get(content);
     storage_local_set_context(context, scroll_top_key, scroll_top);
   }
   html_on_scroll(content, lambda11);
