@@ -1,5 +1,4 @@
-import { list_size } from "../../../love/public/src/list_size.mjs";
-import { range } from "../../../love/public/src/range.mjs";
+import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { js_stack_list_block_is } from "../../../love/public/src/js_stack_list_block_is.mjs";
 import { list_next } from "../../../love/public/src/list_next.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
@@ -29,9 +28,8 @@ export function app_a_if_statement(a, node, parent) {
           let ast = object_property_get(a, "ast");
           let v_match = js_visit_match(ast, node);
           let stack = object_property_get(v_match, "stack");
-          let size = list_size(list2);
-          let r = range(count);
-          function lambda3() {
+          function lambda3(item) {
+            let index2 = list_index_of(list2, item2);
             let v3 = js_stack_list_block_is(stack, index);
           }
           let list = list_find(stack, lambda3);
