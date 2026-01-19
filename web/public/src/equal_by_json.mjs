@@ -5,4 +5,5 @@ export function equal_by_json(expected) {
     let eq = equal_by(item, expected, json_to);
     return eq;
   }
+  return lambda;
 }
