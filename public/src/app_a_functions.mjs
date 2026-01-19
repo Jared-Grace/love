@@ -1,7 +1,6 @@
 import { app_a_button_function } from "../../../love/public/src/app_a_button_function.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { app_a_list_chooser } from "../../../love/public/src/app_a_list_chooser.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { app_a_files_paths } from "../../../love/public/src/app_a_files_paths.mjs";
 import { list_filter_includes } from "../../../love/public/src/list_filter_includes.mjs";
 import { functions_path } from "../../../love/public/src/functions_path.mjs";
@@ -19,7 +18,6 @@ export async function app_a_functions(context) {
   let padded = string_pad(joined, "/");
   let filtered4 = list_filter_includes(filtered3, padded);
   let f_names = list_map(filtered4, function_path_to_name);
-  marker("1");
   app_a_list_chooser(context, "function", f_names, on_select);
   function on_select(f_name) {
     app_a_function_select(context, f_name);
