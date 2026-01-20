@@ -14,11 +14,8 @@ export async function firebase_login(on_logged_in) {
       });
     } else {
       let root = object_property_get(context, "root");
-      let component = html_button_width_full(
-        root2,
-        text,
-        function lambda3() {},
-      );
+      function lambda3() {}
+      let component = html_button_width_full(root2, text, lambda3);
     }
   }
   firebase_auth.onAuthStateChanged(auth, lambda);
