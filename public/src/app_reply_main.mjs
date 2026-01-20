@@ -52,6 +52,7 @@ export async function app_reply_main(context) {
     app_reply_languages_chosen_reset(
       languages_chosen,
       languages_chosen_default,
+      languages,
     );
   }
   async function love() {
