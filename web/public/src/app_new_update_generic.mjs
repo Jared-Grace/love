@@ -7,7 +7,6 @@ import { js_parse_statement } from "../../../love/public/src/js_parse_statement.
 import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
 import { app_generic_name_main } from "../../../love/public/src/app_generic_name_main.mjs";
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
-import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { firebase_name_repo } from "../../../love/public/src/firebase_name_repo.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
@@ -27,7 +26,7 @@ export async function app_new_update_generic(
   let default2 = await firebase_name_repo(repo_name);
   let f_name = js_code_string(default2);
   let call_name = fn_call.name;
-  let v2 = await function_parse_declaration(call_name);
+  let v2 = await function_parse_declaration_unalised(call_name);
   let unaliased = object_property_get(v2, "unaliased");
   let declaration_call = object_property_get(v2, "declaration");
   async function lambda(ast) {
