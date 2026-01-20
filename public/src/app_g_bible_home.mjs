@@ -30,10 +30,10 @@ export async function app_g_bible_home(context) {
       if (equal(s, verse_number)) {
         let sermon = object_property_get(passage, "sermon");
         let mapped2 = app_g_openai_split(sermon);
-        let size = list_size(list);
+        let size = list_size(mapped2);
         let joined = list_join_newline(mapped2);
         let component = html_textarea(p);
-        html_rows_set(component, row_count);
+        html_rows_set(component, size);
         html_value_set(component, joined);
       }
     }
