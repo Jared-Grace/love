@@ -11,10 +11,11 @@ export async function app_g_bible_home(context) {
     let p = object_property_get(a, "p");
     let chapter_code = object_property_get(a, "chapter_code");
     let p2 = html_p_text(p, chapter_code);
+    function lambda2() {}
     let value = await global_function_property_initialize_async(
       fn,
       bible_folder,
-      () => {},
+      lambda2,
     );
     let destination = g_sermon_generate_upload_path(chapter_code);
     let o = await firebase_storage_download_json(destination);
