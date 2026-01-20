@@ -25,7 +25,8 @@ export function app_reply_buttons_refresh(typed_get, chosens, buttons) {
       }
       each(buttons, lambda2);
     }
-    let i = counter(lambda);
+    let visible_count = counter(lambda);
+    return visible_count;
   };
   return v4;
 }
