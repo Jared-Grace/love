@@ -1,4 +1,4 @@
-import { functions_search_ends_with } from "../../../love/public/src/functions_search_ends_with.mjs";
+import { string_empty_is } from "../../../love/public/src/string_empty_is.mjs";
 import { ebible_language_original } from "../../../love/public/src/ebible_language_original.mjs";
 import { ebible_language_en } from "../../../love/public/src/ebible_language_en.mjs";
 import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
@@ -144,10 +144,10 @@ export async function app_reply_main(context) {
     ]);
     let joined = await list_join_newline_2_copy(concated);
   }
-  async function lambda6(event) {
+  function lambda6(event) {
     let key = object_property_get(event, "key");
     if (equal(key, "Backspace")) {
-      let result2 = await functions_search_ends_with(search);
+      let e = string_empty_is(s);
       typed = string_take_less_1(typed);
     } else {
       if (visible_count > 0) {
