@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { g_sermon_generate_download } from "../../../love/public/src/g_sermon_generate_download.mjs";
 import { app_bible_home_generic } from "../../../love/public/src/app_bible_home_generic.mjs";
@@ -12,6 +13,7 @@ export async function app_g_bible_home(context) {
     let value = await g_sermon_generate_download(chapter_code);
     let o = json_to(value);
     let passages = object_property_get(o, "passages");
+    each(list, function lambda2(item) {});
     let p2 = html_p_text(p, o);
   }
   await app_bible_home_generic(context, lambda);
