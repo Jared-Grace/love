@@ -14,17 +14,16 @@ export async function firebase_login(on_logged_in) {
       });
     } else {
       let root = object_property_get(context, "root");
-      function lambda3() {}
-      let component = html_button_width_full(root, text, lambda3);
+      async function login() {
+        let v = await firebase_auth.signInWithEmailAndPassword(
+          auth,
+          username,
+          password,
+        );
+        return v;
+      }
+      let component = html_button_width_full(root, "Login", login);
     }
   }
   firebase_auth.onAuthStateChanged(auth, lambda);
-  async function sign_in(username, password) {
-    let v = await firebase_auth.signInWithEmailAndPassword(
-      auth,
-      username,
-      password,
-    );
-    return v;
-  }
 }
