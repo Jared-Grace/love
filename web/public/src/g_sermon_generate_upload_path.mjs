@@ -5,8 +5,8 @@ export function g_sermon_generate_upload_path(chapter_code) {
   marker("1");
   let f_name = fn_name("g_sermon_generate_upload");
   let destination = g_objection_generate_upload_path_generic(
-    chapter_code,
     f_name,
+    chapter_code,
   );
   return destination;
 }
