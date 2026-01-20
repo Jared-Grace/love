@@ -148,7 +148,7 @@ export function ebible_languages() {
     {
       name: "Marathi",
       bible_folder: "mar",
-      language_code: "or",
+      language_code: "mr",
     },
   ];
   ("if you modify the above list, then run:");
