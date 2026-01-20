@@ -1,3 +1,4 @@
+import { html_mobile_default_font_size } from "../../../love/public/src/html_mobile_default_font_size.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { html_rows_set } from "../../../love/public/src/html_rows_set.mjs";
@@ -34,6 +35,7 @@ export async function app_g_bible_home(context) {
         let size = list_size(mapped2);
         let joined = list_join_newline(mapped2);
         let component = html_textarea(p);
+        html_mobile_default_font_size(component);
         html_width_full(component);
         html_rows_set(component, size);
         html_value_set(component, joined);
