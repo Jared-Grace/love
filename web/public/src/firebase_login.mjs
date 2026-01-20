@@ -1,3 +1,4 @@
+import { html_placeholder } from "../../../love/public/src/html_placeholder.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { html_input_password } from "../../../love/public/src/html_input_password.mjs";
@@ -20,6 +21,7 @@ export async function firebase_login(context, on_logged_in) {
     } else {
       let root = object_property_get(context, "root");
       let input_username = html_input_email(root);
+      html_placeholder(input, placeholder);
       let input_password = html_input_password(root);
       each([input_username, input_password], html_width_full);
       async function login() {
