@@ -1,4 +1,4 @@
-import { html_button } from "../../../love/public/src/html_button.mjs";
+import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
 import { html_mobile_default_font_size } from "../../../love/public/src/html_mobile_default_font_size.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
@@ -41,7 +41,7 @@ export async function app_g_bible_home(context) {
         html_rows_set(component, size);
         html_value_set(component, joined);
         function lambda4() {}
-        let component2 = html_button(parent, "Update", lambda4);
+        let component2 = html_button_width_full(parent, "Update", lambda4);
       }
     }
     each(passages, lambda2);
