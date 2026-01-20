@@ -10,8 +10,9 @@ export async function app_g_bible_home(context) {
     let p = object_property_get(a, "p");
     let chapter_code = object_property_get(a, "chapter_code");
     let value = await g_sermon_generate_download(chapter_code);
-    let json = json_to(value);
-    let p2 = html_p_text(p, json);
+    let o = json_to(value);
+    let passages = object_property_get(o, "passages");
+    let p2 = html_p_text(p, o);
   }
   await app_bible_home_generic(context, lambda);
 }
