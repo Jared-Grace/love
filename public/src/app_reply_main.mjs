@@ -148,9 +148,9 @@ export async function app_reply_main(context) {
     let key = object_property_get(event, "key");
     if (equal(key, "Backspace")) {
       let ne = string_empty_not_is(name);
-      if (false) {
-      }
+      if (ne) {
       typed = string_take_less_1(typed);
+      }
     } else {
       if (visible_count > 0) {
         typed += key;
