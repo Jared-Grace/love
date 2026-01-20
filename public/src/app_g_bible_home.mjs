@@ -25,10 +25,10 @@ export async function app_g_bible_home(context) {
       let max = list_max(mapped);
       let s = string_to(max);
       if (equal(s, verse_number)) {
+        let p2 = html_p_text(p, passage);
       }
     }
     each(passages, lambda2);
-    let p2 = html_p_text(p, o);
   }
   await app_bible_home_generic(context, lambda);
 }
