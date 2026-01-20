@@ -1,3 +1,4 @@
+import { html_rows_set } from "../../../love/public/src/html_rows_set.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { html_textarea } from "../../../love/public/src/html_textarea.mjs";
@@ -30,7 +31,7 @@ export async function app_g_bible_home(context) {
         let mapped2 = app_g_openai_split(sermon);
         let joined = list_join_newline(mapped2);
         let component = html_textarea(p);
-          html_rows_set(input, row_count);
+        html_rows_set(input, row_count);
         html_value_set(component, joined);
       }
     }
