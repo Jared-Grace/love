@@ -1,3 +1,4 @@
+import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { html_textarea } from "../../../love/public/src/html_textarea.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { app_g_openai_split } from "../../../love/public/src/app_g_openai_split.mjs";
@@ -29,6 +30,7 @@ export async function app_g_bible_home(context) {
         let sermon = object_property_get(passage, "sermon");
         let mapped2 = app_g_openai_split(sermon);
         let component = html_textarea(div);
+        html_value_set(input, value2);
         let o = json_to(passage);
         let p2 = html_p_text_multiple(p, mapped2);
       }
