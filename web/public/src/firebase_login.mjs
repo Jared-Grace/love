@@ -6,5 +6,10 @@ export async function firebase_login() {
     "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js"
   );
   const auth = firebaseAuth.getAuth(app);
+  const userCredential = await firebaseAuth.signInWithEmailAndPassword(
+    auth,
+    username,
+    password,
+  );
   marker("1");
 }
