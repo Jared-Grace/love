@@ -4,7 +4,8 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_g_bible_main() {
   marker("1");
   async function lambda(a) {
-    let chapter_code = object_property_get(p, "chapter_code");
+    let p = object_property_get(a, "p");
+    let chapter_code = object_property_get(a, "chapter_code");
   }
   await app_bible_home_generic(context, lambda);
 }
