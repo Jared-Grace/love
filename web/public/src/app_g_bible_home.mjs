@@ -1,3 +1,5 @@
+import { newline_windows } from "../../../love/public/src/newline_windows.mjs";
+import { newline } from "../../../love/public/src/newline.mjs";
 import { string_replace } from "../../../love/public/src/string_replace.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
@@ -44,7 +46,9 @@ export async function app_g_bible_home(context) {
         html_value_set(ta, joined);
         function lambda4() {
           let value2 = html_value_get(ta);
-          let replaced = string_replace(s2, from, to);
+          let from = newline();
+          let to = newline_windows();
+          let replaced = string_replace(value2, from, to);
         }
         let component2 = html_button_width_full(parent, "Update", lambda4);
       }
