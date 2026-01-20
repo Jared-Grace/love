@@ -1,9 +1,9 @@
+import { greater_than } from "../../../love/public/src/greater_than.mjs";
 import { assert } from "../../../love/public/src/assert.mjs";
-import { less_than } from "../../../love/public/src/less_than.mjs";
 import { string_size } from "../../../love/public/src/string_size.mjs";
 export function string_size_less_1(s) {
   let sz = string_size(s);
-  let l = less_than(sz, 1);
+  let l = greater_than(sz, 0);
   assert(b);
   const sz1 = sz - 1;
   return sz1;
