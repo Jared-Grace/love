@@ -149,7 +149,7 @@ export async function app_reply_main(context) {
     if (equal(key, "Backspace")) {
       let ne = string_empty_not_is(name);
       if (ne) {
-      typed = string_take_less_1(typed);
+        typed = string_take_less_1(typed);
       }
     } else {
       if (visible_count > 0) {
