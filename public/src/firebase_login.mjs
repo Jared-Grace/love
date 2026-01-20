@@ -1,6 +1,7 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { firebase_app_initialize } from "../../../love/public/src/firebase_app_initialize.mjs";
 export async function firebase_login(on_logged_in) {
-  const app = await firebase_app_initialize();
+  const app = await firebase_app_initialize(context);
   const firebase_auth = await import(
     "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js"
   );
@@ -11,6 +12,7 @@ export async function firebase_login(on_logged_in) {
         user,
       });
     } else {
+      let root = object_property_get(context, "root");
     }
   }
   firebase_auth.onAuthStateChanged(auth, lambda);
