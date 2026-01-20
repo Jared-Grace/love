@@ -1,3 +1,4 @@
+import { html_input_email } from "../../../love/public/src/html_input_email.mjs";
 import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { firebase_app_initialize } from "../../../love/public/src/firebase_app_initialize.mjs";
@@ -14,7 +15,7 @@ export async function firebase_login(on_logged_in) {
       });
     } else {
       let root = object_property_get(context, "root");
-      hiwf;
+      let input = html_input_email(div);
       async function login() {
         let v = await firebase_auth.signInWithEmailAndPassword(
           auth,
