@@ -1,5 +1,5 @@
 import { firebase_app_initialize } from "../../../love/public/src/firebase_app_initialize.mjs";
-export async function firebase_login(on_logged_in, on_logged_out) {
+export async function firebase_login(on_logged_in) {
   const app = await firebase_app_initialize();
   const firebase_auth = await import(
     "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js"
@@ -11,9 +11,6 @@ export async function firebase_login(on_logged_in, on_logged_out) {
         user,
       });
     } else {
-      on_logged_out({
-        sign_in,
-      });
     }
   }
   firebase_auth.onAuthStateChanged(auth, lambda);
