@@ -13,7 +13,8 @@ export async function app_g_bible_home(context) {
     let value = await g_sermon_generate_download(chapter_code);
     let o = json_to(value);
     let passages = object_property_get(o, "passages");
-    each(list, function lambda2(item) {});
+    function lambda2(item) {}
+    each(list, lambda2);
     let p2 = html_p_text(p, o);
   }
   await app_bible_home_generic(context, lambda);
