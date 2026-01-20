@@ -14,6 +14,7 @@ export async function firebase_login(on_logged_in) {
       });
     } else {
       let root = object_property_get(context, "root");
+      hiwf;
       async function login() {
         let v = await firebase_auth.signInWithEmailAndPassword(
           auth,
