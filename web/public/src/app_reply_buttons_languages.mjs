@@ -1,10 +1,29 @@
+import { html_button } from "../../../love/public/src/html_button.mjs";
+import { html_style_background_color_set_or_remove_list } from "../../../love/public/src/html_style_background_color_set_or_remove_list.mjs";
+import { list_toggle } from "../../../love/public/src/list_toggle.mjs";
+import { marker } from "../../../love/public/src/marker.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { app_reply_button } from "../../../love/public/src/app_reply_button.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function app_reply_buttons_languages(languages_chosen, root, languages) {
   function lambda(language) {
     let name = object_property_get(language, "name");
-    let component = app_reply_button(languages_chosen, language, root, name);
+    marker("1");
+    let component2 = null;
+    function lambda3() {
+      list_toggle(languages_chosen, language);
+      html_style_background_color_set_or_remove_list(
+        component2,
+        languages_chosen,
+        language,
+      );
+    }
+    component2 = html_button(root, name, lambda3);
+    html_style_background_color_set_or_remove_list(
+      component2,
+      languages_chosen,
+      language,
+    );
+    let component = component2;
   }
   each(languages, lambda);
 }
