@@ -20,7 +20,7 @@ export function app_bible_languages(context) {
   let languages_chosen = storage_local_get_context(context, key);
   app_reply_buttons_languages_on_toggle(
     languages_chosen,
-    on_toggle,
+    () => {},
     root,
     languages,
   );
