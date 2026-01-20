@@ -4,8 +4,8 @@ import { html_input_email } from "../../../love/public/src/html_input_email.mjs"
 import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { firebase_app_initialize } from "../../../love/public/src/firebase_app_initialize.mjs";
-export async function firebase_login(on_logged_in) {
-  const app = await firebase_app_initialize(context);
+export async function firebase_login(context, on_logged_in) {
+  const app = await firebase_app_initialize();
   const firebase_auth = await import(
     "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js"
   );
