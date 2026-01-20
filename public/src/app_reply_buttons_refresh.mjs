@@ -19,7 +19,8 @@ export function app_reply_buttons_refresh(typed_get, chosens, buttons) {
         let includes = list_includes(chosens, item);
         const hidden = includes || not(sw);
         html_display_none_or_inline(item, hidden);
-        if (not(b)) {
+        if (not(hidden)) {
+          c();
         }
       }
       each(buttons, lambda2);
