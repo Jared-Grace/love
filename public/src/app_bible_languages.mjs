@@ -18,7 +18,9 @@ export function app_bible_languages(context) {
     storage_local_set_context(context, key, languages_chosen_default);
   }
   let languages_chosen = storage_local_get_context(context, key);
-  function lambda() {}
+  function lambda() {
+    storage_local_set_context(context, key, languages_chosen);
+  }
   app_reply_buttons_languages_on_toggle(
     languages_chosen,
     lambda,
