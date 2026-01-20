@@ -5,10 +5,11 @@ export function string_size_less_1(s) {
   let sz = string_size(s);
   let l = greater_than_or_equal(sz, 1);
   function lambda() {
-    return {
+    let v = {
       left,
       right,
     };
+    return v;
   }
   assert_json_get(l, lambda);
   const sz1 = sz - 1;
