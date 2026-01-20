@@ -1,3 +1,4 @@
+import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { g_sermon_generate_upload_path } from "../../../love/public/src/g_sermon_generate_upload_path.mjs";
 import { app_bible_home_generic } from "../../../love/public/src/app_bible_home_generic.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
@@ -10,6 +11,7 @@ export async function app_g_bible_home(context) {
     let chapter_code = object_property_get(a, "chapter_code");
     let p2 = html_p_text(p, chapter_code);
     let destination = g_sermon_generate_upload_path(chapter_code);
+    let o = await firebase_storage_download_json(destination2);
   }
   await app_bible_home_generic(context, lambda);
 }
