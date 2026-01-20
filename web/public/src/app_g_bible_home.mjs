@@ -14,7 +14,7 @@ export async function app_g_bible_home(context) {
     let o = json_to(value);
     let passages = object_property_get(o, "passages");
     function lambda2(item) {}
-    each(list, lambda2);
+    each(passages, lambda2);
     let p2 = html_p_text(p, o);
   }
   await app_bible_home_generic(context, lambda);
