@@ -24,6 +24,7 @@ export async function app_g_bible_home(context) {
       let max = list_max(mapped);
       let s = string_to(max);
       if (equal(s, verse_number)) {
+        let text = object_property_get(passage, "text");
         let o = json_to(passage);
         let p2 = html_p_text(p, o);
       }
