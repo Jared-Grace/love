@@ -10,7 +10,6 @@ export async function app_g_bible_home(context) {
   async function lambda(a) {
     let p = object_property_get(a, "p");
     let chapter_code = object_property_get(a, "chapter_code");
-    let p2 = html_p_text(p, chapter_code);
     async function get() {
       let destination = g_sermon_generate_upload_path(chapter_code);
       let o = await firebase_storage_download_json(destination);
@@ -20,6 +19,7 @@ export async function app_g_bible_home(context) {
       chapter_code,
       get,
     );
+    let p2 = html_p_text(p, value);
   }
   await app_bible_home_generic(context, lambda);
 }
