@@ -5,11 +5,11 @@ import { app_g_bible_screens } from "../../../love/public/src/app_g_bible_screen
 import { app_g_bible } from "../../../love/public/src/app_g_bible.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_g_bible_main(context) {
+  let app_fn = app_g_bible;
+  let screens = app_g_bible_screens();
+  app_bible_main_generic_before(context, app_fn, screens);
   marker("1");
   function lambda() {
-    let app_fn = app_g_bible;
-    let screens = app_g_bible_screens();
-    app_bible_main_generic_before(context, app_fn, screens);
     app_generic_refresh(context);
   }
   await firebase_login(lambda);
