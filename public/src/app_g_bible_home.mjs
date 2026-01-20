@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { g_sermon_generate_download } from "../../../love/public/src/g_sermon_generate_download.mjs";
@@ -15,6 +16,7 @@ export async function app_g_bible_home(context) {
     let passages = object_property_get(o, "passages");
     function lambda2(passage) {
       let verse_numbers = object_property_get(passage, "verse_numbers");
+      let mapped = list_map(list, function lambda3(item) {});
     }
     each(passages, lambda2);
     let p2 = html_p_text(p, o);
