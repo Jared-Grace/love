@@ -141,6 +141,7 @@ export async function app_bible_home(context) {
     each(split, lambda2);
     noop({
       p,
+      book_code,
     });
     return;
   }
