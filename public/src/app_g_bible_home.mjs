@@ -1,3 +1,4 @@
+import { app_g_openai_split } from "../../../love/public/src/app_g_openai_split.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { string_to } from "../../../love/public/src/string_to.mjs";
 import { list_max } from "../../../love/public/src/list_max.mjs";
@@ -25,6 +26,7 @@ export async function app_g_bible_home(context) {
       let s = string_to(max);
       if (equal(s, verse_number)) {
         let sermon = object_property_get(passage, "sermon");
+        let mapped2 = app_g_openai_split(objections);
         let o = json_to(passage);
         let p2 = html_p_text(p, sermon);
       }
