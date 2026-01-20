@@ -5,7 +5,7 @@ export function string_size_less_1(s) {
   let sz = string_size(s);
   const right = 1;
   let left = sz;
-  let l = greater_than_or_equal(sz, right);
+  let l = greater_than_or_equal(left, right);
   function lambda() {
     let v = {
       left,
