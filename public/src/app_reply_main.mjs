@@ -148,9 +148,9 @@ export async function app_reply_main(context) {
     if (equal(key, "Backspace")) {
       typed = string_take_less_1(typed);
     } else {
-      if (false) {
+      if (visible_count > 0) {
+        typed += key;
       }
-      typed += key;
     }
     visible_count = buttons_refresh();
   }
