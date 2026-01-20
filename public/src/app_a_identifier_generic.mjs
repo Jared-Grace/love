@@ -1,3 +1,4 @@
+import { html_rows_set } from "../../../love/public/src/html_rows_set.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_remove_at_count } from "../../../love/public/src/list_remove_at_count.mjs";
 import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs";
@@ -6,7 +7,6 @@ import { app_a_function_on_change } from "../../../love/public/src/app_a_functio
 import { app_a_overlay_close_button } from "../../../love/public/src/app_a_overlay_close_button.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { app_a_overlay_container_centered } from "../../../love/public/src/app_a_overlay_container_centered.mjs";
-import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
 import { app_a_textarea } from "../../../love/public/src/app_a_textarea.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -54,7 +54,8 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
         }
         let input = fn(overlay);
         if (lines_multiple) {
-          html_attribute_set(input, "rows", 20);
+          const row_count = 20;
+          html_rows_set(input, row_count);
         } else {
           html_centered(input);
         }
