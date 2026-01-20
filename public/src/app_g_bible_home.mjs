@@ -50,7 +50,7 @@ export async function app_g_bible_home(context) {
           let from = newline();
           let to = newline_windows();
           let replaced = string_replace(value2, from, to);
-          object_property_set(object, property_name, value3);
+          object_property_set(passage, "sermon", replaced);
         }
         let component2 = html_button_width_full(parent, "Update", lambda4);
       }
