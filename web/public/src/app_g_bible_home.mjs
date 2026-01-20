@@ -1,3 +1,4 @@
+import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
