@@ -1,6 +1,4 @@
-import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
-import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
-import { g_sermon_generate_upload_path } from "../../../love/public/src/g_sermon_generate_upload_path.mjs";
+import { g_sermon_generate_download } from "../../../love/public/src/g_sermon_generate_download.mjs";
 import { app_bible_home_generic } from "../../../love/public/src/app_bible_home_generic.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -10,16 +8,7 @@ export async function app_g_bible_home(context) {
   async function lambda(a) {
     let p = object_property_get(a, "p");
     let chapter_code = object_property_get(a, "chapter_code");
-    async function get() {
-      let destination = g_sermon_generate_upload_path(chapter_code);
-      let o = await firebase_storage_download_json(destination);
-      return o;
-    }
-    let value = await global_function_property_initialize_async(
-      fn,
-      chapter_code,
-      get,
-    );
+    let value = await g_sermon_generate_download(chapter_code);
     let p2 = html_p_text(p, value);
   }
   await app_bible_home_generic(context, lambda);
