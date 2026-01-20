@@ -15,11 +15,8 @@ export function app_bible_languages(context) {
   if (n) {
     let en_l = ebible_language_en();
     let languages_chosen_default = [en_l];
-    storage_local_set_context(context, languages_chosen_default);
+    storage_local_set_context(context, key, languages_chosen_default);
   }
-  let languages_chosen = storage_local_get_context(
-    context,
-    languages_chosen_default,
-  );
+  let languages_chosen = storage_local_get_context(context, key);
   app_reply_buttons_languages(languages_chosen, root, languages);
 }
