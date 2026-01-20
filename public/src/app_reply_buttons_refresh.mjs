@@ -9,18 +9,19 @@ import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { string_letters_only } from "../../../love/public/src/string_letters_only.mjs";
 export function app_reply_buttons_refresh(typed_get, chosens, buttons) {
   let v4 = function lambda10() {
-    function lambda2(item) {
-      let text = html_text_get(item);
-      let letters = string_letters_only(text);
-      let lower = string_lower_to(letters);
-      let prefix = typed_get();
-      let sw = string_starts_with(lower, prefix);
-      let includes = list_includes(chosens, item);
-      const condition = includes || not(sw);
-      html_display_none_or_inline(condition, item);
+    function lambda(c) {
+      function lambda2(item) {
+        let text = html_text_get(item);
+        let letters = string_letters_only(text);
+        let lower = string_lower_to(letters);
+        let prefix = typed_get();
+        let sw = string_starts_with(lower, prefix);
+        let includes = list_includes(chosens, item);
+        const condition = includes || not(sw);
+        html_display_none_or_inline(condition, item);
+      }
+      each(buttons, lambda2);
     }
-    each(buttons, lambda2);
-    function lambda(c) {}
     let i = counter(lambda);
   };
   return v4;
