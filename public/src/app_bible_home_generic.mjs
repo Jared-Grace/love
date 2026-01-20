@@ -44,7 +44,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { html_bar_content_padded } from "../../../love/public/src/html_bar_content_padded.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_on_scroll } from "./html_on_scroll.mjs";
-export async function app_bible_home_generic(context) {
+export async function app_bible_home_generic(context, fn) {
   marker("1");
   let root = html_clear_context(context);
   html_clear(root);
