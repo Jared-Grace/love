@@ -16,13 +16,13 @@ export async function firebase_upload_string_generic(
     const firebase = await import(
       "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js"
     );
+    let firebase_config = firebase_config_get();
+    const app = firebase.initializeApp(firebase_config);
     const storageMod = await import(
       "https://www.gstatic.com/firebasejs/10.13.0/firebase-storage.js"
     );
     let uploadString = object_property_get(storageMod, "uploadString");
     let ref = object_property_get(storageMod, "ref");
-    let firebase_config = firebase_config_get();
-    const app = firebase.initializeApp(firebase_config);
     const storage = storageMod.getStorage(app);
     const jsonRef = ref(storage, destination);
     await uploadString(jsonRef, content, "raw", {
