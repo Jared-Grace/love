@@ -34,7 +34,7 @@ export async function app_g_bible_home(context) {
         let size = list_size(mapped2);
         let joined = list_join_newline(mapped2);
         let component = html_textarea(p);
-        html_width_full(component2);
+        html_width_full(component);
         html_rows_set(component, size);
         html_value_set(component, joined);
       }
