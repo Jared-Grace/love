@@ -11,15 +11,16 @@ export function app_reply_buttons_languages(languages_chosen, root, languages) {
     let name = object_property_get(language, "name");
     marker("1");
     let component = null;
-    function lambda3() {
+    function on_click() {
       list_toggle(languages_chosen, language);
       html_style_background_color_set_or_remove_list(
         component,
         languages_chosen,
         language,
       );
+      on_toggle();
     }
-    component = html_button(root, name, lambda3);
+    component = html_button(root, name, on_click);
     html_style_background_color_set_or_remove_list(
       component,
       languages_chosen,
