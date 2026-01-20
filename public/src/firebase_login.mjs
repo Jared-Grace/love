@@ -16,8 +16,8 @@ export async function firebase_login(on_logged_in) {
       });
     } else {
       let root = object_property_get(context, "root");
-      let input = html_input_email(div);
-      let input2 = html_input_type(div2, input_type);
+      let input = html_input_email(parent);
+      let input2 = html_input_type(parent, input_type);
       async function login() {
         let v = await firebase_auth.signInWithEmailAndPassword(
           auth,
