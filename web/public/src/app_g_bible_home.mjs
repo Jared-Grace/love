@@ -17,15 +17,15 @@ export async function app_g_bible_home(context) {
     let verse_number = object_property_get(a, "verse_number");
     let chapter_code = object_property_get(a, "chapter_code");
     let value = await g_sermon_generate_download(chapter_code);
-    let o = json_to(value);
-    let passages = object_property_get(o, "passages");
+    let passages = object_property_get(value, "passages");
     function lambda2(passage) {
       let verse_numbers = object_property_get(passage, "verse_numbers");
       let mapped = list_map(verse_numbers, integer_to);
       let max = list_max(mapped);
       let s = string_to(max);
       if (equal(s, verse_number)) {
-        let p2 = html_p_text(p, passage);
+        let o = json_to(passage);
+        let p2 = html_p_text(p, o);
       }
     }
     each(passages, lambda2);
