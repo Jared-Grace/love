@@ -1,5 +1,5 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_input_password } from "../../../love/public/src/html_input_password.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_input_email } from "../../../love/public/src/html_input_email.mjs";
@@ -21,7 +21,7 @@ export async function firebase_login(context, on_logged_in) {
       let root = object_property_get(context, "root");
       let input_username = html_input_email(root);
       let input_password = html_input_password(root);
-      let mapped = list_map([input_username, input_password], html_width_full);
+      each([input_username, input_password], html_width_full);
       async function login() {
         let username = html_value_get(input_username);
         let password = html_value_get(input_password);
