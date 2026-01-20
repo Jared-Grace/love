@@ -1,3 +1,4 @@
+import { list_max } from "../../../love/public/src/list_max.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -18,7 +19,8 @@ export async function app_g_bible_home(context) {
     function lambda2(passage) {
       let verse_numbers = object_property_get(passage, "verse_numbers");
       function lambda3(verse_number) {}
-      let mapped = list_map(verse_numbers, integer_to);list_max
+      let mapped = list_map(verse_numbers, integer_to);
+      let max = list_max(list);
     }
     each(passages, lambda2);
     let p2 = html_p_text(p, o);
