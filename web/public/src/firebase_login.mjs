@@ -5,5 +5,6 @@ export async function firebase_login() {
   const firebaseAuth = await import(
     "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js"
   );
+  const auth = firebaseAuth.getAuth(app);
   marker("1");
 }
