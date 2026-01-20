@@ -1,7 +1,7 @@
+import { firebase_app_initialize } from "../../../love/public/src/firebase_app_initialize.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { firebase_upload_generic } from "../../../love/public/src/firebase_upload_generic.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { firebase_config_get } from "../../../love/public/src/firebase_config_get.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 export async function firebase_upload_string_generic(
   content,
@@ -13,11 +13,7 @@ export async function firebase_upload_string_generic(
     destination,
   });
   if (browser_is()) {
-    const firebase = await import(
-      "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js"
-    );
-    let firebase_config = firebase_config_get();
-    const app = firebase.initializeApp(firebase_config);
+    const app = await firebase_app_initialize();
     const storageMod = await import(
       "https://www.gstatic.com/firebasejs/10.13.0/firebase-storage.js"
     );
