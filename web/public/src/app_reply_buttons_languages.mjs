@@ -10,22 +10,21 @@ export function app_reply_buttons_languages(languages_chosen, root, languages) {
   function lambda(language) {
     let name = object_property_get(language, "name");
     marker("1");
-    let component2 = null;
+    let component = null;
     function lambda3() {
       list_toggle(languages_chosen, language);
       html_style_background_color_set_or_remove_list(
-        component2,
+        component,
         languages_chosen,
         language,
       );
     }
-    component2 = html_button(root, name, lambda3);
+    component = html_button(root, name, lambda3);
     html_style_background_color_set_or_remove_list(
-      component2,
+      component,
       languages_chosen,
       language,
     );
-    let component = component2;
   }
   each(languages, lambda);
 }
