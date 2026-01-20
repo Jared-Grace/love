@@ -20,7 +20,8 @@ export function app_reply_buttons_refresh(typed_get, chosens, buttons) {
       html_display_none_or_inline(condition, item);
     }
     each(buttons, lambda2);
-    let i = counter(function lambda(c) {});
+    function lambda(c) {}
+    let i = counter(lambda);
   };
   return v4;
 }
