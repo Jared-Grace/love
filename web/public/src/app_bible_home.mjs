@@ -140,7 +140,6 @@ export async function app_bible_home(context) {
     }
     each(split, lambda2);
     return;
-    ("this is for copy-paste");
   }
   each(verses, lambda);
   list_add(languages_verses, {
