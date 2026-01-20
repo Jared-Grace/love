@@ -142,6 +142,7 @@ export async function app_bible_home(context) {
     noop({
       p,
       book_code,
+      chapter_code,
     });
     return;
   }
