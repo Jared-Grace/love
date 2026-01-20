@@ -20,8 +20,8 @@ export async function firebase_login(on_logged_in) {
       let input_username = html_input_email(parent);
       let input_password = html_input_type(parent, input_type);
       async function login() {
-        let value = html_value_get(input);
-        let value2 = html_value_get(input2);
+        let username = html_value_get(input_username);
+        let password = html_value_get(input_password);
         let v = await firebase_auth.signInWithEmailAndPassword(
           auth,
           username,
