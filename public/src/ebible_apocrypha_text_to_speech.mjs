@@ -5,7 +5,7 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_version_books_testament_apocrypha } from "../../../love/public/src/ebible_version_books_testament_apocrypha.mjs";
 import { ebible_chapters_each_verses_check } from "../../../love/public/src/ebible_chapters_each_verses_check.mjs";
 export async function ebible_apocrypha_text_to_speech() {
-  const newLocal = "D:\\programs\\WPy64-312100\\python\\";
+  const n = "D:\\programs\\WPy64-312100\\python\\";
   const bible_folder = "engwebu";
   await ebible_chapters_each_verses_check(bible_folder);
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
