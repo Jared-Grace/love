@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { newline_windows } from "../../../love/public/src/newline_windows.mjs";
 import { newline } from "../../../love/public/src/newline.mjs";
 import { string_replace } from "../../../love/public/src/string_replace.mjs";
@@ -49,6 +50,7 @@ export async function app_g_bible_home(context) {
           let from = newline();
           let to = newline_windows();
           let replaced = string_replace(value2, from, to);
+          object_property_set(object, property_name, value3);
         }
         let component2 = html_button_width_full(parent, "Update", lambda4);
       }
