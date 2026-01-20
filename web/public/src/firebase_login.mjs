@@ -1,3 +1,4 @@
+import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_input_type } from "../../../love/public/src/html_input_type.mjs";
 import { html_input_email } from "../../../love/public/src/html_input_email.mjs";
 import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
@@ -19,8 +20,8 @@ export async function firebase_login(on_logged_in) {
       let input_username = html_input_email(parent);
       let input_password = html_input_type(parent, input_type);
       async function login() {
-        ivg;
-        ivg;
+        let value = html_value_get(input);
+        let value2 = html_value_get(input2);
         let v = await firebase_auth.signInWithEmailAndPassword(
           auth,
           username,
