@@ -30,6 +30,7 @@ export async function app_g_bible_home(context) {
         let mapped2 = app_g_openai_split(sermon);
         let joined = list_join_newline(mapped2);
         let component = html_textarea(p);
+          html_rows_set(input, row_count);
         html_value_set(component, joined);
       }
     }
