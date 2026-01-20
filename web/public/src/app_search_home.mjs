@@ -24,7 +24,11 @@ export function app_search_home(context) {
   let languages = ebible_languages();
   let languages_chosen_default = list_slice_count(languages, 1, 1);
   list_sort_string_property(languages, "name");
-  app_reply_languages_chosen_reset(languages_chosen, languages_chosen_default);
+  app_reply_languages_chosen_reset(
+    languages_chosen,
+    languages_chosen_default,
+    languages,
+  );
   let p = app_reply_languages_prompt(root);
   app_reply_buttons_languages(languages_chosen, root, languages);
   const search_instructions =

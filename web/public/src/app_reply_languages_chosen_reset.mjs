@@ -6,6 +6,7 @@ import { list_empty } from "../../../love/public/src/list_empty.mjs";
 export function app_reply_languages_chosen_reset(
   languages_chosen,
   languages_chosen_default,
+  languages,
 ) {
   marker("1");
   list_empty(languages_chosen);
