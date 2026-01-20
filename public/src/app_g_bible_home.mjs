@@ -36,13 +36,13 @@ export async function app_g_bible_home(context) {
         let mapped2 = app_g_openai_split(sermon);
         let size = list_size(mapped2);
         let joined = list_join_newline(mapped2);
-        let component = html_textarea(p);
-        html_mobile_default_font_size(component);
-        html_width_full(component);
-        html_rows_set(component, size);
-        html_value_set(component, joined);
+        let ta = html_textarea(p);
+        html_mobile_default_font_size(ta);
+        html_width_full(ta);
+        html_rows_set(ta, size);
+        html_value_set(ta, joined);
         function lambda4() {
-          let value2 = html_value_get(input);
+          let value2 = html_value_get(ta);
         }
         let component2 = html_button_width_full(parent, "Update", lambda4);
       }
