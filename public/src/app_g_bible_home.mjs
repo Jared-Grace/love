@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { string_to } from "../../../love/public/src/string_to.mjs";
 import { list_max } from "../../../love/public/src/list_max.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
@@ -23,6 +24,8 @@ export async function app_g_bible_home(context) {
       let mapped = list_map(verse_numbers, integer_to);
       let max = list_max(mapped);
       let s = string_to(max);
+      if (equal(left, right)) {
+      }
     }
     each(passages, lambda2);
     let p2 = html_p_text(p, o);
