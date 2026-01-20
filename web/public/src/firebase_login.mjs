@@ -20,7 +20,7 @@ export async function firebase_login(context, on_logged_in) {
       let root = object_property_get(context, "root");
       let input_username = html_input_email(root);
       let input_password = html_input_password(root);
-      function lambda2(item) {}
+      function lambda2(item) {hwf}
       let mapped = list_map(list, lambda2);
       async function login() {
         let username = html_value_get(input_username);
