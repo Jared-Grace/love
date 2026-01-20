@@ -18,7 +18,7 @@ export function app_reply_buttons_refresh(typed_get, chosens, buttons) {
         let sw = string_starts_with(lower, prefix);
         let includes = list_includes(chosens, item);
         const condition = includes || not(sw);
-        html_display_none_or_inline(condition, item);
+        html_display_none_or_inline(item, condition);
       }
       each(buttons, lambda2);
     }
