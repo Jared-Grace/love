@@ -40,7 +40,8 @@ export async function app_g_bible_home(context) {
         html_width_full(component);
         html_rows_set(component, size);
         html_value_set(component, joined);
-        let component2 = html_button(parent, text, function lambda4() {});
+        function lambda4() {}
+        let component2 = html_button(parent, text, lambda4);
       }
     }
     each(passages, lambda2);
