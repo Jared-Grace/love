@@ -1,7 +1,6 @@
 import { ebible_language_en } from "../../../love/public/src/ebible_language_en.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { storage_local_exists_not_context } from "../../../love/public/src/storage_local_exists_not_context.mjs";
-import { html_scroll_top_set } from "../../../love/public/src/html_scroll_top_set.mjs";
 import { app_reply_buttons_languages } from "../../../love/public/src/app_reply_buttons_languages.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
@@ -15,8 +14,7 @@ export function app_bible_languages(context) {
   if (n) {
     let en_l = ebible_language_en();
     let languages_chosen_default = [en_l];
-    storage_local_set_context(context, key);
-    html_scroll_top_set(content, s);
+    storage_local_set_context(context, languages_chosen_default);
   }
   app_reply_buttons_languages(languages_chosen, root, languages);
 }
