@@ -91,6 +91,7 @@ export async function app_reply_main(context) {
     let component = html_button(root, c, lambda3);
   }
   each(choices_verse_count, lambda2);
+  let visible_count = null;
   async function update(verse_count) {
     list_empty(bible_texts);
     list_empty(responses);
@@ -108,7 +109,7 @@ export async function app_reply_main(context) {
       );
     }
     await each_async(taken, lambda6);
-    buttons_refresh();
+    visible_count = buttons_refresh();
     await copy_refresh();
   }
   function lambda12() {}
@@ -123,7 +124,7 @@ export async function app_reply_main(context) {
       list_add(responses_buttons, b);
       await copy_refresh();
       typed_reset();
-      buttons_refresh();
+      visible_count = buttons_refresh();
     }
     b = html_button(root, text, lambda11);
     return b;
@@ -147,9 +148,11 @@ export async function app_reply_main(context) {
     if (equal(key, "Backspace")) {
       typed = string_take_less_1(typed);
     } else {
+      if (false) {
+      }
       typed += key;
     }
-    buttons_refresh();
+    visible_count = buttons_refresh();
   }
   html_on_keydown_body(lambda6);
   let typed_get = function lambda15() {
