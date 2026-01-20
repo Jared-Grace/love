@@ -12,5 +12,5 @@ export async function app_g_bible_main(context) {
   function lambda() {
     app_generic_refresh(context);
   }
-  await firebase_login(lambda);
+  await firebase_login(context, lambda);
 }
