@@ -21,8 +21,8 @@ export async function firebase_login(context, on_logged_in) {
     } else {
       let root = object_property_get(context, "root");
       let input_username = html_input_email(root);
-      html_placeholder(input, placeholder);
       let input_password = html_input_password(root);
+      html_placeholder(input, "Password");
       each([input_username, input_password], html_width_full);
       async function login() {
         let username = html_value_get(input_username);
