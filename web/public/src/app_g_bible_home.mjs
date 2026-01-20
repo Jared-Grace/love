@@ -12,7 +12,8 @@ export async function app_g_bible_home(context) {
     let chapter_code = object_property_get(a, "chapter_code");
     async function get() {
       let destination = g_sermon_generate_upload_path(chapter_code);
-      let o = await firebase_storage_download_json(destination);$r,o
+      let o = await firebase_storage_download_json(destination);
+      return o;
     }
     let value = await global_function_property_initialize_async(
       fn,
