@@ -11,7 +11,7 @@ export async function app_g_bible_home(context) {
     let chapter_code = object_property_get(a, "chapter_code");
     let value = await g_sermon_generate_download(chapter_code);
     let json = json_to(object);
-    let p2 = html_p_text(p, value);
+    let p2 = html_p_text(p, json);
   }
   await app_bible_home_generic(context, lambda);
 }
