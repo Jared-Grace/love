@@ -1,3 +1,4 @@
+import { counter } from "../../../love/public/src/counter.mjs";
 import { html_display_none_or_inline } from "../../../love/public/src/html_display_none_or_inline.mjs";
 import { html_text_get } from "../../../love/public/src/html_text_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -19,6 +20,7 @@ export function app_reply_buttons_refresh(typed_get, chosens, buttons) {
       html_display_none_or_inline(condition, item);
     }
     each(buttons, lambda2);
+    let i = counter(function lambda(c) {});
   };
   return v4;
 }
