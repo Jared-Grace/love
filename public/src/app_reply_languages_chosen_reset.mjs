@@ -11,8 +11,8 @@ export function app_reply_languages_chosen_reset(
   marker("1");
   list_empty(languages_chosen);
   function lambda14(l) {
-    let found = list_find_json(list, expected);
-    list_add(languages_chosen, l);
+    let found = list_find_json(languages, l);
+    list_add(languages_chosen, found);
   }
   each(languages_chosen_default, lambda14);
 }
