@@ -12,7 +12,9 @@ export async function firebase_login(on_logged_in, on_logged_out) {
         user,
       });
     } else {
-      on_logged_out({});
+      on_logged_out({
+        firebase_auth,
+      });
     }
   }
   firebase_auth.onAuthStateChanged(auth, lambda);
