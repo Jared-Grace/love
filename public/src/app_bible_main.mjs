@@ -1,21 +1,10 @@
-import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
-import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
-import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
+import { app_bible_main_generic } from "../../../love/public/src/app_bible_main_generic.mjs";
 import { app_bible } from "../../../love/public/src/app_bible.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_bible_screens } from "../../../love/public/src/app_bible_screens.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { app_generic_refresh } from "../../../love/public/src/app_generic_refresh.mjs";
 export async function app_bible_main(context) {
   marker("1");
   let app_fn = app_bible;
   let screens = app_bible_screens();
-  object_merge(context, {
-    app_fn,
-    screens,
-  });
-  firebase_name_jg();
-  let root = html_mobile_default(context);
-  html_margin_0(root);
-  app_generic_refresh(context);
+  app_bible_main_generic(context, app_fn, screens);
 }
