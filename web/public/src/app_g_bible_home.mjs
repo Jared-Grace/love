@@ -16,7 +16,8 @@ export async function app_g_bible_home(context) {
     let passages = object_property_get(o, "passages");
     function lambda2(passage) {
       let verse_numbers = object_property_get(passage, "verse_numbers");
-      let mapped = list_map(list, function lambda3(item) {});
+      function lambda3(item) {}
+      let mapped = list_map(list, lambda3);
     }
     each(passages, lambda2);
     let p2 = html_p_text(p, o);
