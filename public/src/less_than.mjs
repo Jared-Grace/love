@@ -1,4 +1,4 @@
-export function less_than(ma, mb) {
-  let v2 = ma < mb;
+export function less_than(a, b) {
+  let v2 = a < b;
   return v2;
 }
