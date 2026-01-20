@@ -13,6 +13,7 @@ export async function firebase_login(on_logged_in) {
       });
     } else {
       let root = object_property_get(context, "root");
+      hiwf;
     }
   }
   firebase_auth.onAuthStateChanged(auth, lambda);
