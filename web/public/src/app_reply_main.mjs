@@ -1,3 +1,4 @@
+import { string_empty_not_is } from "../../../love/public/src/string_empty_not_is.mjs";
 import { ebible_language_original } from "../../../love/public/src/ebible_language_original.mjs";
 import { ebible_language_en } from "../../../love/public/src/ebible_language_en.mjs";
 import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
@@ -145,7 +146,8 @@ export async function app_reply_main(context) {
   }
   function lambda6(event) {
     let key = object_property_get(event, "key");
-    if (equal(key, "Backspace")) {seni
+    if (equal(key, "Backspace")) {
+      let ne = string_empty_not_is(name);
       typed = string_take_less_1(typed);
     } else {
       if (visible_count > 0) {
