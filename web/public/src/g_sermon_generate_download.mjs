@@ -8,7 +8,7 @@ export async function g_sermon_generate_download(chapter_code) {
     return o;
   }
   let value = await global_function_property_initialize_async(
-    fn,
+    g_sermon_generate_download,
     chapter_code,
     get,
   );
