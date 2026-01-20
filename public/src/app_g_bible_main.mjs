@@ -7,7 +7,7 @@ export async function app_g_bible_main() {
   async function lambda(a) {
     let p = object_property_get(a, "p");
     let chapter_code = object_property_get(a, "chapter_code");
-    let p2 = html_p_text(root, text);
+    let p2 = html_p_text(p, chapter_codea);
   }
   await app_bible_home_generic(context, lambda);
 }
