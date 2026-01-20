@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { html_scroll_top_set } from "../../../love/public/src/html_scroll_top_set.mjs";
 import { storage_local_exists_context } from "../../../love/public/src/storage_local_exists_context.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
@@ -143,7 +144,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     });
     return;
   }
-  each(verses, lambda);
+  await each_async(verses, lambda);
   list_add(languages_verses, {
     verses,
     books,
