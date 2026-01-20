@@ -1,4 +1,5 @@
-import { firebase_login_email } from "../../../love/public/src/firebase_login_email.mjs";
+import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { firebase_app_initialize } from "../../../love/public/src/firebase_app_initialize.mjs";
 export async function firebase_login(context, on_logged_in) {
   const app = await firebase_app_initialize();
@@ -12,7 +13,13 @@ export async function firebase_login(context, on_logged_in) {
         user,
       });
     } else {
-      firebase_login_email(context, firebase_auth, auth);
+      let root = object_property_get(context, "root");
+      async function login_google() {
+        const provider = new firebase_auth.GoogleAuthProvider();
+        const result = await firebase_auth.signInWithPopup(auth, provider);
+        return result;
+      }
+      html_button_width_full(root, "Sign in with Google", login_google);
     }
   }
   firebase_auth.onAuthStateChanged(auth, lambda);
