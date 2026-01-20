@@ -24,7 +24,7 @@ export async function app_g_bible_home(context) {
       let mapped = list_map(verse_numbers, integer_to);
       let max = list_max(mapped);
       let s = string_to(max);
-      if (equal(left, right)) {
+      if (equal(s, verse_number)) {
       }
     }
     each(passages, lambda2);
