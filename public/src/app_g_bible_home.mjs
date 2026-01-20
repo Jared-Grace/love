@@ -1,3 +1,4 @@
+import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { app_g_openai_split } from "../../../love/public/src/app_g_openai_split.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { string_to } from "../../../love/public/src/string_to.mjs";
@@ -8,7 +9,6 @@ import { each } from "../../../love/public/src/each.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { g_sermon_generate_download } from "../../../love/public/src/g_sermon_generate_download.mjs";
 import { app_bible_home_generic } from "../../../love/public/src/app_bible_home_generic.mjs";
-import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_g_bible_home(context) {
@@ -26,9 +26,9 @@ export async function app_g_bible_home(context) {
       let s = string_to(max);
       if (equal(s, verse_number)) {
         let sermon = object_property_get(passage, "sermon");
-        let mapped2 = app_g_openai_split(objections);
+        let mapped2 = app_g_openai_split(sermon);
         let o = json_to(passage);
-        let p2 = html_p_text(p, sermon);
+        let p2 = html_p_text_multiple(p, mapped2);
       }
     }
     each(passages, lambda2);
