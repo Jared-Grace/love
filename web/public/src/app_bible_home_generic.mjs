@@ -98,7 +98,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   let languages_verses = [];
   let updates = [];
   async function lambda(v) {
-    let verse_number_v = object_property_get(v, "verse_number");
+    let verse_number = object_property_get(v, "verse_number");
     let text = object_property_get(v, "text");
     let p = html_p(content);
     let top = html_div(p);
@@ -106,8 +106,8 @@ export async function app_bible_home_generic(context, lambda$a) {
     html_centered(bottom);
     let hidden = false;
     toggle();
-    biblehub_button_open("interlinear/", verse_number_v, bottom, "Interlinear");
-    biblehub_button_open("", verse_number_v, bottom, "Parallel");
+    biblehub_button_open("interlinear/", verse_number, bottom, "Interlinear");
+    biblehub_button_open("", verse_number, bottom, "Parallel");
     function lambda8() {}
     let text4 = html_button_copy_text();
     let component6 = html_button(bottom, text4, lambda8);
@@ -115,7 +115,7 @@ export async function app_bible_home_generic(context, lambda$a) {
       updates,
       component6,
       verse_numbers_chosen,
-      verse_number_v,
+      verse_number,
       chapter_code,
       languages_verses,
       p,
@@ -126,7 +126,7 @@ export async function app_bible_home_generic(context, lambda$a) {
       hidden = not(hidden);
       html_display_none_or_block(hidden, bottom);
     }
-    let verse_number_v_button = html_button(top, verse_number_v, toggle);
+    let verse_number_v_button = html_button(top, verse_number, toggle);
     let split = string_split_space(text);
     function lambda2(item) {
       html_span_space(top);
@@ -141,6 +141,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     await lambda$a({
       p,
       chapter_code,
+      verse_number,
     });
     return;
   }
