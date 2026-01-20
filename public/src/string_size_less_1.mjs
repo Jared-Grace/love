@@ -7,11 +7,11 @@ export function string_size_less_1(s) {
   let left = sz;
   let l = greater_than_or_equal(left, right);
   function lambda() {
-    let v = {
+    let r = {
       left,
       right,
     };
-    return v;
+    return r;
   }
   assert_json_get(l, lambda);
   const sz1 = sz - 1;
