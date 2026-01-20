@@ -1,3 +1,4 @@
+import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
 import { html_mobile_default_font_size } from "../../../love/public/src/html_mobile_default_font_size.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
@@ -40,7 +41,9 @@ export async function app_g_bible_home(context) {
         html_width_full(component);
         html_rows_set(component, size);
         html_value_set(component, joined);
-        function lambda4() {}
+        function lambda4() {
+          let value2 = html_value_get(input);
+        }
         let component2 = html_button_width_full(parent, "Update", lambda4);
       }
     }
