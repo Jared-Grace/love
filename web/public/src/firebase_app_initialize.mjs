@@ -1,3 +1,4 @@
+import { global_function_async } from "../../../love/public/src/global_function_async.mjs";
 import { firebase_config_get } from "../../../love/public/src/firebase_config_get.mjs";
 export async function firebase_app_initialize() {
   const firebase = await import(
@@ -5,5 +6,6 @@ export async function firebase_app_initialize() {
   );
   let firebase_config = firebase_config_get();
   const app = firebase.initializeApp(firebase_config);
+  let awaited = await global_function_async(fn, async function lambda2() {});
   return app;
 }
