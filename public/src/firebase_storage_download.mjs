@@ -14,11 +14,11 @@ export async function firebase_storage_download(destination) {
       let url = await firebase_storage_url(destination);
       let buffer = await http(url);
       return buffer;
-      let result = await html_loading(lambda2);
-      return result;
     }
-    const bucket = await firebase_bucket();
-    let [buffer] = await bucket.file(destination).download();
-    return buffer;
+    let result = await html_loading(lambda2);
+    return result;
   }
+  const bucket = await firebase_bucket();
+  let [buffer] = await bucket.file(destination).download();
+  return buffer;
 }
