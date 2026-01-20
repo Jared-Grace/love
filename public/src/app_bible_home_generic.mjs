@@ -1,4 +1,3 @@
-import { noop } from "../../../love/public/src/noop.mjs";
 import { html_scroll_top_set } from "../../../love/public/src/html_scroll_top_set.mjs";
 import { storage_local_exists_context } from "../../../love/public/src/storage_local_exists_context.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
@@ -47,7 +46,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { html_on_scroll } from "./html_on_scroll.mjs";
 export async function app_bible_home_generic(context) {
   marker("1");
-  let fn = noop;
   let root = html_clear_context(context);
   html_clear(root);
   let bc = html_bar_content_padded(root);
@@ -139,7 +137,7 @@ export async function app_bible_home_generic(context) {
       html_on_click(item_span, lambda9);
     }
     each(split, lambda2);
-    noop({
+    fn({
       p,
       chapter_code,
     });
