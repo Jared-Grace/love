@@ -145,6 +145,11 @@ export function ebible_languages() {
       bible_folder: "ory",
       language_code: "or",
     },
+    {
+      name: "Marathi",
+      bible_folder: "mar",
+      language_code: "or",
+    },
   ];
   ("if you modify the above list, then run:");
   ebible_languages_chapters_cache_refresh.name;
