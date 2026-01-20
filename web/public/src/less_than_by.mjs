@@ -1,4 +1,5 @@
 export function less_than_by(a, b, mapper) {
-  let v = mapper(a) < mapper(b);
+  const newLocal = mapper(b);
+  let v = mapper(a) < newLocal;
   return v;
 }
