@@ -1,3 +1,4 @@
+import { g_sermon_generate_upload_path } from "../../../love/public/src/g_sermon_generate_upload_path.mjs";
 import { firebase_upload_object_compressed } from "../../../love/public/src/firebase_upload_object_compressed.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { newline_windows } from "../../../love/public/src/newline_windows.mjs";
@@ -52,7 +53,8 @@ export async function app_g_bible_home(context) {
           let to = newline_windows();
           let replaced = string_replace(value2, from, to);
           object_property_set(passage, "sermon", replaced);
-          await firebase_upload_object_compressed(destination, value3);
+          let destination = g_sermon_generate_upload_path(chapter_code);
+          await firebase_upload_object_compressed(destination, value);
         }
         let component2 = html_button_width_full(parent, "Update", lambda4);
       }
