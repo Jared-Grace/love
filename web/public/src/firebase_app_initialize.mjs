@@ -7,6 +7,7 @@ export async function firebase_app_initialize() {
     );
     let firebase_config = firebase_config_get();
     const app = firebase.initializeApp(firebase_config);
+    return app;
   }
   let awaited = await global_function_async(firebase_app_initialize, lambda2);
   return awaited;
