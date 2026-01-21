@@ -30,6 +30,7 @@ export async function app_g_bible_home(context) {
   marker("1");
   let value = null;
   let chapter_code = null;
+    let r = null;
   async function lambda5(la) {
     async function lambda(a) {
       let p = object_property_get(a, "p");
@@ -64,7 +65,6 @@ export async function app_g_bible_home(context) {
       }
       each(passages, lambda2);
     }
-    let r = null;
     r = await app_bible_home_generic(context, lambda);
   }
   let updates = await list_adder_async(lambda5);
