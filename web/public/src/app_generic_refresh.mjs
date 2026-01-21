@@ -18,6 +18,6 @@ export function app_generic_refresh(context) {
     "screen",
     combined,
   );
-  let screen = list_find_property(list, "name", screen_name);
+  let screen = list_find_property(screens, "name", screen_name);
   screen(context);
 }
