@@ -6,5 +6,14 @@ export async function firebase_login(context, on_logged_in) {
     "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js"
   );
   const auth = firebase_auth.getAuth(app);
-  firebase_login_email(context, firebase_auth, auth);
+  function lambda(user) {
+    if (user) {
+      on_logged_in({
+        user,
+      });
+    } else {
+      firebase_login_email(context, firebase_auth, auth);
+    }
+  }
+  firebase_auth.onAuthStateChanged(auth, lambda);
 }
