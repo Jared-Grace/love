@@ -61,6 +61,6 @@ export async function app_g_bible_home(context) {
     }
     each(passages, lambda2);
   }
-  let v = await app_bible_home_generic(context, lambda);
-  let bar = object_property_get(v, "bar");
+  let r = await app_bible_home_generic(context, lambda);
+  let bar = object_property_get(r, "bar");
 }
