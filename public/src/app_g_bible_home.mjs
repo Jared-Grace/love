@@ -31,42 +31,43 @@ export async function app_g_bible_home(context) {
   let value = null;
   let chapter_code = null;
   let updates = null;
-  async function lambda5(la) {}
-  let list = await list_adder_async(lambda5);
-  async function lambda(a) {
-    let p = object_property_get(a, "p");
-    let verse_number = object_property_get(a, "verse_number");
-    chapter_code = object_property_get(a, "chapter_code");
-    value = await g_sermon_generate_download(chapter_code);
-    let passages = object_property_get(value, "passages");
-    function lambda2(passage) {
-      let verse_numbers = object_property_get(passage, "verse_numbers");
-      let mapped = list_map(verse_numbers, integer_to);
-      let max = list_max(mapped);
-      let s = string_to(max);
-      if (equal(s, verse_number)) {
-        let sermon = object_property_get(passage, "sermon");
-        let mapped2 = app_g_openai_split(sermon);
-        let size = list_size(mapped2);
-        let joined = list_join_newline(mapped2);
-        let ta = html_textarea(p);
-        html_mobile_default_font_size(ta);
-        html_width_full(ta);
-        html_rows_set(ta, size);
-        html_value_set(ta, joined);
-        let update = function lambda3() {
-          let value2 = html_value_get(ta);
-          let from = newline();
-          let to = newline_windows();
-          let replaced = string_replace(value2, from, to);
-          object_property_set(passage, "sermon", replaced);
-        };
-        return update;
+  async function lambda5(la) {
+    async function lambda(a) {
+      let p = object_property_get(a, "p");
+      let verse_number = object_property_get(a, "verse_number");
+      chapter_code = object_property_get(a, "chapter_code");
+      value = await g_sermon_generate_download(chapter_code);
+      let passages = object_property_get(value, "passages");
+      function lambda2(passage) {
+        let verse_numbers = object_property_get(passage, "verse_numbers");
+        let mapped = list_map(verse_numbers, integer_to);
+        let max = list_max(mapped);
+        let s = string_to(max);
+        if (equal(s, verse_number)) {
+          let sermon = object_property_get(passage, "sermon");
+          let mapped2 = app_g_openai_split(sermon);
+          let size = list_size(mapped2);
+          let joined = list_join_newline(mapped2);
+          let ta = html_textarea(p);
+          html_mobile_default_font_size(ta);
+          html_width_full(ta);
+          html_rows_set(ta, size);
+          html_value_set(ta, joined);
+          let update = function lambda3() {
+            let value2 = html_value_get(ta);
+            let from = newline();
+            let to = newline_windows();
+            let replaced = string_replace(value2, from, to);
+            object_property_set(passage, "sermon", replaced);
+          };
+          return update;
+        }
       }
+      each(passages, lambda2);
     }
-    each(passages, lambda2);
+    let r = await app_bible_home_generic(context, lambda);
   }
-  let r = await app_bible_home_generic(context, lambda);
+  let list = await list_adder_async(lambda5);
   let bar = object_property_get(r, "bar");
   async function lambda4() {
     invoke_multiple(updates);
