@@ -1,3 +1,4 @@
+import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { g_sermon_generate_upload_path } from "../../../love/public/src/g_sermon_generate_upload_path.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { string_replace } from "../../../love/public/src/string_replace.mjs";
@@ -27,6 +28,7 @@ export async function app_g_bible_home(context) {
   marker("1");
   let value = null;
   let chapter_code = null;
+  let updates = null;
   async function lambda(a) {
     let p = object_property_get(a, "p");
     let verse_number = object_property_get(a, "verse_number");
@@ -58,12 +60,12 @@ export async function app_g_bible_home(context) {
         return update;
       }
     }
-    let updates = null;
     updates = list_map(passages, lambda2);
   }
   let r = await app_bible_home_generic(context, lambda);
   let bar = object_property_get(r, "bar");
   async function lambda4() {
+    invoke_multiple(list_fns);
     let destination = g_sermon_generate_upload_path(chapter_code);
     await firebase_upload_object_compressed(destination, value);
   }
