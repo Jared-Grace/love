@@ -26,11 +26,11 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_g_bible_home(context) {
   marker("1");
+  let value = null;
   async function lambda(a) {
     let p = object_property_get(a, "p");
     let verse_number = object_property_get(a, "verse_number");
     let chapter_code = object_property_get(a, "chapter_code");
-    let value = null;
     value = await g_sermon_generate_download(chapter_code);
     let passages = object_property_get(value, "passages");
     function lambda2(passage) {
