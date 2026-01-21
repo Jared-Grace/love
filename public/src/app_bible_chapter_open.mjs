@@ -6,6 +6,6 @@ import { app_bible_chapter_set } from "../../../love/public/src/app_bible_chapte
 export function app_bible_chapter_open(context, hash, chapter_code) {
   marker("1");
   app_bible_chapter_set(hash, chapter_code);
-  let home = object_property_get(context, "home");
+  let screen_home = object_property_get(context, "screen_home");
   app_generic_screen_set(context, app_bible_home);
 }
