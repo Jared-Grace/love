@@ -171,11 +171,11 @@ export async function app_bible_home_generic(context, lambda$a) {
     }
     let component5 = html_button(bottom, button_text, lambda10);
   }
-  function lambda11() {
+  function on_scroll() {
     let scroll_top = html_scroll_top_get(content);
     html_hash_object_property_set(scroll_top_key, scroll_top);
   }
-  html_on_scroll(content, lambda11);
+  html_on_scroll(content, on_scroll);
   let exists = storage_local_exists_context(context, scroll_top_key);
   if (exists) {
     let s = storage_local_get_context(context, scroll_top_key);
