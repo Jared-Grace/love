@@ -1,3 +1,4 @@
+import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { g_sermon_generate_upload_path } from "../../../love/public/src/g_sermon_generate_upload_path.mjs";
@@ -30,6 +31,7 @@ export async function app_g_bible_home(context) {
   let value = null;
   let chapter_code = null;
   let updates = null;
+  let list = await list_adder_async(async function lambda5(la) {});
   async function lambda(a) {
     let p = object_property_get(a, "p");
     let verse_number = object_property_get(a, "verse_number");
