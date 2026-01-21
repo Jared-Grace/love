@@ -54,7 +54,6 @@ export async function app_g_bible_home(context) {
           let to = newline_windows();
           let replaced = string_replace(value2, from, to);
           object_property_set(passage, "sermon", replaced);
-          let destination = g_sermon_generate_upload_path(chapter_code);
         };
         return update;
       }
@@ -64,6 +63,7 @@ export async function app_g_bible_home(context) {
   let r = await app_bible_home_generic(context, lambda);
   let bar = object_property_get(r, "bar");
   async function lambda4() {
+    let destination = g_sermon_generate_upload_path(chapter_code);
     await firebase_upload_object_compressed(destination, value);
   }
   let component2 = html_button(bar, "Update", lambda4);
