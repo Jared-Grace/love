@@ -13,7 +13,7 @@ export function app_generic_flow(context, screens, before_or_after, find) {
   string_is_assert(current);
   function lambda(item2) {
     let fn2 = object_property_get(item2, "fn");
-    let value = object_property_get(object, property_name);
+    let self = object_property_get(fn2, "name");
     let eq2 = equal(self, current);
     return eq2;
   }
