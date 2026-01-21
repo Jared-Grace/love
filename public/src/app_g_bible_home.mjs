@@ -31,7 +31,8 @@ export async function app_g_bible_home(context) {
   let value = null;
   let chapter_code = null;
   let updates = null;
-  let list = await list_adder_async(async function lambda5(la) {});
+  async function lambda5(la) {}
+  let list = await list_adder_async(lambda5);
   async function lambda(a) {
     let p = object_property_get(a, "p");
     let verse_number = object_property_get(a, "verse_number");
