@@ -1,5 +1,4 @@
-import { log } from "../../../love/public/src/log.mjs";
-import { error } from "../../../love/public/src/error.mjs";
+import { firebase_login_email } from "../../../love/public/src/firebase_login_email.mjs";
 import { firebase_app_initialize } from "../../../love/public/src/firebase_app_initialize.mjs";
 export async function firebase_login(context, on_logged_in) {
   const app = await firebase_app_initialize();
@@ -7,24 +6,5 @@ export async function firebase_login(context, on_logged_in) {
     "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js"
   );
   const auth = firebase_auth.getAuth(app);
-  function lambda(result) {
-    log({
-      result,
-    });
-    const credential =
-      firebase_auth.GoogleAuthProvider.credentialFromResult(result);
-    const token = credential.accessToken;
-    const user = result.user;
-  }
-  function lambda2(error) {
-    log({
-      error,
-    });
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    const email = error.customData.email;
-    const credential =
-      firebase_auth.GoogleAuthProvider.credentialFromError(error);
-  }
-  firebase_auth.getRedirectResult(auth).then(lambda).catch(lambda2);
+  firebase_login_email(context, firebase_auth, auth);
 }
