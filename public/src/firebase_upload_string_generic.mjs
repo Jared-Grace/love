@@ -14,7 +14,8 @@ export async function firebase_upload_string_generic(
     destination,
   });
   if (browser_is()) {
-    let result = await html_loading(async function lambda2() {});
+    async function lambda2() {}
+    let result = await html_loading(lambda2);
     const app = await firebase_app_initialize();
     const storageMod = await import(
       "https://www.gstatic.com/firebasejs/10.13.0/firebase-storage.js"
