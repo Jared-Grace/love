@@ -180,4 +180,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     let s = storage_local_get_context(context, scroll_top_key);
     html_scroll_top_set(content, s);
   }
+  return {
+    bar,
+  };
 }
