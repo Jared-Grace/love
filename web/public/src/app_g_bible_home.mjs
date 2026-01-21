@@ -56,7 +56,7 @@ export async function app_g_bible_home(context) {
           let destination = g_sermon_generate_upload_path(chapter_code);
           await firebase_upload_object_compressed(destination, value);
         }
-        let component2 = html_button_width_full(parent, "Update", lambda4);
+        let component2 = html_button_width_full(p, "Update", lambda4);
       }
     }
     each(passages, lambda2);
