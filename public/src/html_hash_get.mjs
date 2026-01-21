@@ -1,4 +1,4 @@
 export function html_hash_get() {
-  let v = window.location.hash;
-  return v;
+  let h = window.location.hash;
+  return h;
 }
