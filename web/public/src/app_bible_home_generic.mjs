@@ -1,7 +1,7 @@
+import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { html_hash_object_property_set } from "../../../love/public/src/html_hash_object_property_set.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { html_scroll_top_set } from "../../../love/public/src/html_scroll_top_set.mjs";
-import { storage_local_exists_context } from "../../../love/public/src/storage_local_exists_context.mjs";
 import { html_scroll_top_get } from "../../../love/public/src/html_scroll_top_get.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -175,7 +175,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     html_hash_object_property_set(scroll_top_key, scroll_top);
   }
   html_on_scroll(content, on_scroll);
-  let exists = storage_local_exists_context(context, scroll_top_key);
+  let exists = object_property_exists(hash2, scroll_top_key);
   if (exists) {
     let hash2 = html_hash_object_get();
     let value = object_property_get(hash2, scroll_top_key);
