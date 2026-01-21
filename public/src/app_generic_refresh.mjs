@@ -10,6 +10,7 @@ export function app_generic_refresh(context) {
   let body = html_document_body();
   html_clear(body);
   marker("1");
+  let value = object_property_get(object, property_name);
   let combined = function_name_combine(app_fn.name, "home");
   let screen_name = storage_local_initialize_context(
     context,
