@@ -1,3 +1,4 @@
+import { html_loading } from "../../../love/public/src/html_loading.mjs";
 import { firebase_app_initialize } from "../../../love/public/src/firebase_app_initialize.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { firebase_upload_generic } from "../../../love/public/src/firebase_upload_generic.mjs";
@@ -13,6 +14,7 @@ export async function firebase_upload_string_generic(
     destination,
   });
   if (browser_is()) {
+    let result = await html_loading(async function lambda2() {});
     const app = await firebase_app_initialize();
     const storageMod = await import(
       "https://www.gstatic.com/firebasejs/10.13.0/firebase-storage.js"
