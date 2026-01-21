@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
@@ -45,6 +46,7 @@ export async function app_g_bible_home(context) {
         let s = string_to(max);
         if (equal(s, verse_number)) {
           let sermon = object_property_get(passage, "sermon");
+          log(message);
           let mapped2 = app_g_openai_split(sermon);
           let size = list_size(mapped2);
           let joined = list_join_newline(mapped2);
