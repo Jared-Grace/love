@@ -22,5 +22,5 @@ export async function firebase_login(context, on_logged_in) {
       html_button_width_full(root, "Sign in with Google", login_google);
     }
   }
-  firebase_auth.onAuthStateChanged(auth, lambda);
+  firebase_auth.signInWithRedirect(auth, provider);
 }
