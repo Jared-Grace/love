@@ -27,7 +27,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_g_bible_home(context) {
   marker("1");
   let value = null;
-    let chapter_code = null;
+  let chapter_code = null;
   async function lambda(a) {
     let p = object_property_get(a, "p");
     let verse_number = object_property_get(a, "verse_number");
