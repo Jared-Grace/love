@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
 import { error } from "../../../love/public/src/error.mjs";
@@ -22,6 +23,9 @@ export async function firebase_login(context, on_logged_in) {
   firebase_auth.onAuthStateChanged(auth, lambda);
   try {
     const result = await firebase_auth.getRedirectResult(auth);
+    log({
+      result,
+    });
     if (result && result.user && not(loginHandled)) {
       loginHandled = true;
       on_logged_in({
