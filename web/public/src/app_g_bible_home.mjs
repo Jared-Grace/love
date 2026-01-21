@@ -42,8 +42,14 @@ export async function app_g_bible_home(context) {
         html_width_full(ta);
         html_rows_set(ta, size);
         html_value_set(ta, joined);
-        let v = function lambda3() {};
-        return v;
+        let update = function lambda3() {
+    let value2 = html_value_get(ta);
+    let from = newline();
+    let to = newline_windows();
+    let replaced = string_replace(value2, from, to);
+    object_property_set(passage, "sermon", replaced);
+    let destination = g_sermon_generate_upload_path(chapter_code);};
+        return update;
       }
     }
     each(passages, lambda2);
