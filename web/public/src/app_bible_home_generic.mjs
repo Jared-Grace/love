@@ -1,3 +1,4 @@
+import { app_bible_hash_key_scroll_top } from "../../../love/public/src/app_bible_hash_key_scroll_top.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { html_hash_object_property_set } from "../../../love/public/src/html_hash_object_property_set.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -86,7 +87,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   let component3 = html_button(bar, text2, lambda3);
   function lambda12() {}
   let component7 = html_button(bar, "Languages", lambda12);
-  const scroll_top_key = "scroll_top";
+  const scroll_top_key = app_bible_hash_key_scroll_top();
   let verses = await ebible_verses(e, chapter_code);
   async function on_arrow(list_next_wrap) {
     let list = await ebible_chapter_codes(e);
