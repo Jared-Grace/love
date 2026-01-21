@@ -6,7 +6,6 @@ import { object_property_exists } from "../../../love/public/src/object_property
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { function_name_prefix_without_app_fn } from "../../../love/public/src/function_name_prefix_without_app_fn.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 export function app_generic_flow(context, screens, before_or_after, find) {
@@ -14,7 +13,7 @@ export function app_generic_flow(context, screens, before_or_after, find) {
   string_is_assert(current);
   function lambda(item2) {
     let fn2 = object_property_get(item2, "fn");
-    let self = function_name_prefix_without_app_fn(context, fn2);
+    let value = object_property_get(object, property_name);
     let eq2 = equal(self, current);
     return eq2;
   }
