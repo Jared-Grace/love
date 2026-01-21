@@ -10,7 +10,7 @@ export async function app_g_bible_main(context) {
   let app_fn = app_g_bible;
   let screens = app_g_bible_screens();
   object_property_set(context, "screen_home", app_g_bible_home);
-  app_bible_main_generic_before(context, app_fn, screens);
+  app_bible_main_generic_before(context, app_fn, screens, app_g_bible_home);
   marker("1");
   function lambda() {
     app_generic_refresh(context);
