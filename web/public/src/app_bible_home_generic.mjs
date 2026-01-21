@@ -172,6 +172,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   }
   function lambda11() {
     let scroll_top = html_scroll_top_get(content);
+    let hash2 = html_hash_object_get();
     storage_local_set_context(context, scroll_top_key, scroll_top);
   }
   html_on_scroll(content, lambda11);
