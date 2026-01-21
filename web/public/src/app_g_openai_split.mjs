@@ -11,6 +11,6 @@ export function app_g_openai_split(objections) {
   let n = newline_windows();
   let split = string_split_multiple(objections, [separator, n]);
   let mapped = list_map(split, string_trim);
-  let filtered = list_filter_empty_not_is(item);
-  return mapped;
+  let filtered = list_filter_empty_not_is(mapped);
+  return filtered;
 }
