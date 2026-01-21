@@ -1,3 +1,4 @@
+import { noop } from "../../../love/public/src/noop.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { g_sermon_generate_upload_path } from "../../../love/public/src/g_sermon_generate_upload_path.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -60,7 +61,7 @@ export async function app_g_bible_home(context) {
         return update;
       }
     }
-    updates = list_map(passages, lambda2);
+    return noop;
   }
   let r = await app_bible_home_generic(context, lambda);
   let bar = object_property_get(r, "bar");
