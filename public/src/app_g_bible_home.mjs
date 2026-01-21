@@ -1,11 +1,5 @@
 import { html_button } from "../../../love/public/src/html_button.mjs";
-import { g_sermon_generate_upload_path } from "../../../love/public/src/g_sermon_generate_upload_path.mjs";
 import { firebase_upload_object_compressed } from "../../../love/public/src/firebase_upload_object_compressed.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { newline_windows } from "../../../love/public/src/newline_windows.mjs";
-import { newline } from "../../../love/public/src/newline.mjs";
-import { string_replace } from "../../../love/public/src/string_replace.mjs";
-import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_mobile_default_font_size } from "../../../love/public/src/html_mobile_default_font_size.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
@@ -48,6 +42,7 @@ export async function app_g_bible_home(context) {
         html_width_full(ta);
         html_rows_set(ta, size);
         html_value_set(ta, joined);
+        return () => {};
       }
     }
     each(passages, lambda2);
@@ -55,12 +50,6 @@ export async function app_g_bible_home(context) {
   let r = await app_bible_home_generic(context, lambda);
   let bar = object_property_get(r, "bar");
   async function lambda4() {
-    let value2 = html_value_get(ta);
-    let from = newline();
-    let to = newline_windows();
-    let replaced = string_replace(value2, from, to);
-    object_property_set(passage, "sermon", replaced);
-    let destination = g_sermon_generate_upload_path(chapter_code);
     await firebase_upload_object_compressed(destination, value);
   }
   let component2 = html_button(bar, "Update", lambda4);
