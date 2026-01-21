@@ -18,7 +18,8 @@ export function app_generic_refresh(context) {
     "screen",
     combined,
   );
-  let found = list_find(list, function lambda(item) {});
+  function lambda(item) {}
+  let found = list_find(list, lambda);
   let screen = object_property_get(screens, screen_name);
   screen(context);
 }
