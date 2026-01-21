@@ -2,7 +2,6 @@ import { html_hash_object_property_set } from "../../../love/public/src/html_has
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { html_scroll_top_set } from "../../../love/public/src/html_scroll_top_set.mjs";
 import { storage_local_exists_context } from "../../../love/public/src/storage_local_exists_context.mjs";
-import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { html_scroll_top_get } from "../../../love/public/src/html_scroll_top_get.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -179,9 +178,8 @@ export async function app_bible_home_generic(context, lambda$a) {
   let exists = storage_local_exists_context(context, scroll_top_key);
   if (exists) {
     let hash2 = html_hash_object_get();
-    let value = object_property_get(object, property_name);
-    let s = storage_local_get_context(context, scroll_top_key);
-    html_scroll_top_set(content, s);
+    let value = object_property_get(hash2, scroll_top_key);
+    html_scroll_top_set(content, value);
   }
   let v4 = {
     bar,
