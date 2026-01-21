@@ -92,7 +92,6 @@ export async function app_bible_home_generic(context, lambda$a) {
   async function on_arrow(list_next_wrap) {
     let list = await ebible_chapter_codes(e);
     let next = list_next_wrap(list, chapter_code);
-    storage_local_set_context(context, scroll_top_key, 0);
     app_bible_chapter_open(context, hash, next);
   }
   let verse_numbers_chosen = [];
