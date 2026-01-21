@@ -61,5 +61,5 @@ export async function app_g_bible_home(context) {
     }
     each(passages, lambda2);
   }
-  b=await app_bible_home_generic(context, lambda);
+  let b = await app_bible_home_generic(context, lambda);
 }
