@@ -1,3 +1,4 @@
+import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -9,6 +10,7 @@ export function app_generic_refresh(context) {
   let body = html_document_body();
   html_clear(body);
   marker("1");
+  let combined = function_name_combine(left, right);
   let screen_name = storage_local_initialize_context(context, "screen", "home");
   let screen = object_property_get(screens, screen_name);
   screen(context);
