@@ -1,3 +1,9 @@
+import { g_sermon_generate_upload_path } from "../../../love/public/src/g_sermon_generate_upload_path.mjs";
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { string_replace } from "../../../love/public/src/string_replace.mjs";
+import { newline_windows } from "../../../love/public/src/newline_windows.mjs";
+import { newline } from "../../../love/public/src/newline.mjs";
+import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { firebase_upload_object_compressed } from "../../../love/public/src/firebase_upload_object_compressed.mjs";
 import { html_mobile_default_font_size } from "../../../love/public/src/html_mobile_default_font_size.mjs";
@@ -43,12 +49,13 @@ export async function app_g_bible_home(context) {
         html_rows_set(ta, size);
         html_value_set(ta, joined);
         let update = function lambda3() {
-    let value2 = html_value_get(ta);
-    let from = newline();
-    let to = newline_windows();
-    let replaced = string_replace(value2, from, to);
-    object_property_set(passage, "sermon", replaced);
-    let destination = g_sermon_generate_upload_path(chapter_code);};
+          let value2 = html_value_get(ta);
+          let from = newline();
+          let to = newline_windows();
+          let replaced = string_replace(value2, from, to);
+          object_property_set(passage, "sermon", replaced);
+          let destination = g_sermon_generate_upload_path(chapter_code);
+        };
         return update;
       }
     }
