@@ -1,3 +1,4 @@
+import { list_find } from "../../../love/public/src/list_find.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -17,6 +18,7 @@ export function app_generic_refresh(context) {
     "screen",
     combined,
   );
+  let found = list_find(list, function lambda(item) {});
   let screen = object_property_get(screens, screen_name);
   screen(context);
 }
