@@ -24,5 +24,5 @@ export async function firebase_login(context, on_logged_in) {
     const email = error.customData.email;
     const credential = GoogleAuthProvider.credentialFromError(error);
   }
-  getRedirectResult(auth).then(lambda).catch(lambda2);
+  firebase_auth.getRedirectResult(auth).then(lambda).catch(lambda2);
 }
