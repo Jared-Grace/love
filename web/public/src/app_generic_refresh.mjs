@@ -4,7 +4,8 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 export function app_generic_refresh(context) {
-  let { app_fn, screens } = context;
+  let screens = object_property_get(context, "screens");
+  let app_fn = object_property_get(context, "app_fn");
   let body = html_document_body();
   html_clear(body);
   marker("1");
