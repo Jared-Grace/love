@@ -13,6 +13,9 @@ export async function firebase_login(context, on_logged_in) {
   let root = object_property_get(context, "root");
   let loginHandled = false;
   function lambda(user) {
+    log({
+      user,
+    });
     if (user && not(loginHandled)) {
       loginHandled = true;
       on_logged_in({
