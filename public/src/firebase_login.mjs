@@ -11,7 +11,8 @@ export async function firebase_login(context, on_logged_in) {
     log({
       result,
     });
-    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const credential =
+      firebase_auth.GoogleAuthProvider.credentialFromResult(result);
     const token = credential.accessToken;
     const user = result.user;
   }
@@ -22,7 +23,8 @@ export async function firebase_login(context, on_logged_in) {
     const errorCode = error.code;
     const errorMessage = error.message;
     const email = error.customData.email;
-    const credential = GoogleAuthProvider.credentialFromError(error);
+    const credential =
+      firebase_auth.GoogleAuthProvider.credentialFromError(error);
   }
   firebase_auth.getRedirectResult(auth).then(lambda).catch(lambda2);
 }
