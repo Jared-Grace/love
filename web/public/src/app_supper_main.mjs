@@ -43,7 +43,7 @@ export async function app_supper_main(context) {
   function lambda(item) {
     let p2 = html_p_text(
       root,
-      "Heavenly Father, in the name of the Father, and of the Son, and of the Holy Spirit: Have mercy on me a sinner. Help. Bless this " +
+      "Heavenly Father, in the name of the Father, and of the Son, and of the Holy Spirit: Have mercy on me a sinner. Thank You. Help. Bless this " +
         item +
         ". Amen.",
     );
