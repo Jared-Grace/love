@@ -30,7 +30,6 @@ export async function app_g_bible_home(context) {
   marker("1");
   let value = null;
   let chapter_code = null;
-  let updates = null;
   async function lambda5(la) {
     async function lambda(a) {
       let p = object_property_get(a, "p");
@@ -60,14 +59,14 @@ export async function app_g_bible_home(context) {
             let replaced = string_replace(value2, from, to);
             object_property_set(passage, "sermon", replaced);
           };
-          return update;
+          la(update);
         }
       }
       each(passages, lambda2);
     }
     let r = await app_bible_home_generic(context, lambda);
   }
-  let list = await list_adder_async(lambda5);
+  let updates = await list_adder_async(lambda5);
   let bar = object_property_get(r, "bar");
   async function lambda4() {
     invoke_multiple(updates);
