@@ -13,6 +13,7 @@ export function app_bible_main_generic_before(
   object_merge(context, {
     app_fn,
     screens,
+    screen_home,
   });
   firebase_name_jg();
   let root = html_mobile_default(context);
