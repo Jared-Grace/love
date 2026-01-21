@@ -65,7 +65,7 @@ export async function app_g_bible_home(context) {
   let r = await app_bible_home_generic(context, lambda);
   let bar = object_property_get(r, "bar");
   async function lambda4() {
-    invoke_multiple(list_fns);
+    invoke_multiple(updates);
     let destination = g_sermon_generate_upload_path(chapter_code);
     await firebase_upload_object_compressed(destination, value);
   }
