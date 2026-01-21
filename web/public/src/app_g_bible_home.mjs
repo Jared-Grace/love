@@ -19,7 +19,6 @@ import { string_to } from "../../../love/public/src/string_to.mjs";
 import { list_max } from "../../../love/public/src/list_max.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { g_sermon_generate_download } from "../../../love/public/src/g_sermon_generate_download.mjs";
 import { app_bible_home_generic } from "../../../love/public/src/app_bible_home_generic.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -59,7 +58,7 @@ export async function app_g_bible_home(context) {
         return update;
       }
     }
-    each(passages, lambda2);
+    let updates = list_map(passages, lambda2);
   }
   let r = await app_bible_home_generic(context, lambda);
   let bar = object_property_get(r, "bar");
