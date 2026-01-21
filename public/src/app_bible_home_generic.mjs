@@ -174,7 +174,6 @@ export async function app_bible_home_generic(context, lambda$a) {
   function lambda11() {
     let scroll_top = html_scroll_top_get(content);
     html_hash_object_property_set(scroll_top_key, scroll_top);
-    storage_local_set_context(context, scroll_top_key, scroll_top);
   }
   html_on_scroll(content, lambda11);
   let exists = storage_local_exists_context(context, scroll_top_key);
