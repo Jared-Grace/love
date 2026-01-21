@@ -42,7 +42,8 @@ export async function app_g_bible_home(context) {
         html_width_full(ta);
         html_rows_set(ta, size);
         html_value_set(ta, joined);
-        return () => {};
+        let v = function lambda3() {};
+        return v;
       }
     }
     each(passages, lambda2);
