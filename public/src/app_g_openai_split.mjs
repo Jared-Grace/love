@@ -1,3 +1,4 @@
+import { list_filter_empty_not_is } from "../../../love/public/src/list_filter_empty_not_is.mjs";
 import { string_trim } from "../../../love/public/src/string_trim.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -10,5 +11,6 @@ export function app_g_openai_split(objections) {
   let n = newline_windows();
   let split = string_split_multiple(objections, [separator, n]);
   let mapped = list_map(split, string_trim);
+  let filtered = list_filter_empty_not_is(item);
   return mapped;
 }
