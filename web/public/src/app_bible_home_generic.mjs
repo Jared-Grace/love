@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { html_scroll_top_set } from "../../../love/public/src/html_scroll_top_set.mjs";
 import { storage_local_exists_context } from "../../../love/public/src/storage_local_exists_context.mjs";
@@ -173,6 +174,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   function lambda11() {
     let scroll_top = html_scroll_top_get(content);
     let hash2 = html_hash_object_get();
+    object_property_set(object, property_name, value);
     storage_local_set_context(context, scroll_top_key, scroll_top);
   }
   html_on_scroll(content, lambda11);
