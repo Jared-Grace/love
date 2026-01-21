@@ -175,10 +175,9 @@ export async function app_bible_home_generic(context, lambda$a) {
     html_hash_object_property_set(scroll_top_key, scroll_top);
   }
   html_on_scroll(content, on_scroll);
-  let exists = object_property_exists(hash2, scroll_top_key);
+  let exists = object_property_exists(hash, scroll_top_key);
   if (exists) {
-    let hash2 = html_hash_object_get();
-    let value = object_property_get(hash2, scroll_top_key);
+    let value = object_property_get(hash, scroll_top_key);
     html_scroll_top_set(content, value);
   }
   let v4 = {
