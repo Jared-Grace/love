@@ -1,3 +1,4 @@
+import { app_reply_how_feel } from "../../../love/public/src/app_reply_how_feel.mjs";
 import { app_reply_called_why } from "../../../love/public/src/app_reply_called_why.mjs";
 import { app_reply_languages } from "../../../love/public/src/app_reply_languages.mjs";
 import { app_reply_response_languages } from "../../../love/public/src/app_reply_response_languages.mjs";
@@ -192,7 +193,7 @@ export function app_reply_choices() {
       response: how_family,
     },
     {
-      text: emoji_pray() + " How feeling",
+      text: app_reply_how_feel(),
       response: emoji_pray() + " God is helping me be joyful when I suffer",
     },
     {
