@@ -150,6 +150,10 @@ export function app_reply_choices() {
       response: list_join_newline_2([greetings, how_family]),
     },
     {
+      text: app_reply_greetings() + " " + app_reply_how_feel(),
+      response: list_join_newline_2([greetings, how_feel]),
+    },
+    {
       text: app_reply_greetings() + " " + app_reply_how_r_u(),
       response: list_join_newline_2([greetings, hru]),
     },
