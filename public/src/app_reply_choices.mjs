@@ -80,6 +80,7 @@ export function app_reply_choices() {
   const how_day = app_reply_response_how_day();
   let languages = app_reply_response_languages();
   const called_why = app_reply_call_why_generic("did", "");
+  const how_feel = emoji_pray() + " God is helping me be joyful when I suffer";
   let v = [
     {
       text: emoji_pray() + " Amazing",
@@ -194,7 +195,7 @@ export function app_reply_choices() {
     },
     {
       text: app_reply_how_feel(),
-      response: emoji_pray() + " God is helping me be joyful when I suffer",
+      response: how_feel,
     },
     {
       text: app_reply_how_r_u(),
