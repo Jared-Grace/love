@@ -1,3 +1,4 @@
+import { js_types_function_includes_node } from "../../../love/public/src/js_types_function_includes_node.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { marker_next_index } from "../../../love/public/src/marker_next_index.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -6,7 +7,6 @@ import { js_declaration_to_block_body } from "../../../love/public/src/js_declar
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { js_node_type } from "../../../love/public/src/js_node_type.mjs";
-import { js_types_function_includes } from "../../../love/public/src/js_types_function_includes.mjs";
 import { function_transform_marker_current } from "../../../love/public/src/function_transform_marker_current.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function marker_enter() {
@@ -19,9 +19,9 @@ export async function marker_enter() {
     let body = null;
     while (body === null) {
       let next = list_get(stack2, index);
+      var i = js_types_function_includes_node(next);
       let nt = js_node_type(next);
-      const newLocal = js_types_function_includes(nt);
-      if (newLocal) {
+      if (i) {
         body = js_declaration_to_block_body(next);
       } else if (nt === "IfStatement") {
         let consequent = object_property_get(next, "consequent");
