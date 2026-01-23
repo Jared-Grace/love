@@ -14,10 +14,7 @@ export function js_object_to_properties_list(ast) {
     let expression = js_expression_array(mapped);
     object_replace(node, expression);
     let b = 1;
-    log({
-      mapped,
-      a: b,
-    });
+    log([mapped, b]);
   }
   js_visit_type(ast, "ObjectExpression", lambda);
 }
