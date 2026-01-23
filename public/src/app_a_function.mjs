@@ -187,7 +187,7 @@ export async function app_a_function(context) {
     {
       shortcut: "t",
       text: emoji_arrows_crossed(),
-      fn: () => {},
+      fn: function lambda10() {},
     },
   ];
   let e = storage_local_exists(app_a, "app_selected");
