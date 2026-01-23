@@ -58,7 +58,7 @@ export function app_a_if_statement(a, node, parent) {
             });
           }
           function lambda3() {
-            let overlay_close = object_property_get(o, "overlay_close");
+            let overlay_close = object_property_get(o2, "overlay_close");
             overlay_close();
           }
           app_a_button_function(context, overlay, lambda3);
