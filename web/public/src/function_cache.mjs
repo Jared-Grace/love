@@ -31,9 +31,9 @@ export async function function_cache(f_name) {
     if (e) {
       args_none = true;
     }
+    let mapped = list_map(arg_names, js_parse_expression);
     let code_expression = js_code_brackets_empty();
     let expression = js_parse_expression(code_expression);
-    let mapped = list_map(arg_names, js_parse_expression);
     object_property_set(expression, "elements", mapped);
     let code = js_unparse(expression);
     js_code_call_args_await_maybe_declaration_return_add(
