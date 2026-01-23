@@ -1,4 +1,4 @@
-import { js_expression_list } from "../../../love/public/src/js_expression_list.mjs";
+import { js_expression_array } from "../../../love/public/src/js_expression_array.mjs";
 import { function_cache_name } from "../../../love/public/src/function_cache_name.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
@@ -12,7 +12,7 @@ import { js_declaration_params_names } from "../../../love/public/src/js_declara
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { invoke_cache_file } from "./invoke_cache_file.mjs";
+import { invoke_cache_file } from "../../../love/public/src/invoke_cache_file.mjs";
 export async function function_cache(f_name) {
   marker("1");
   let args_none = false;
@@ -31,7 +31,7 @@ export async function function_cache(f_name) {
       args_none = true;
     }
     let mapped = list_map(arg_names, js_parse_expression);
-    let expression = js_expression_list(mapped);
+    let expression = js_expression_array(mapped);
     let code = js_unparse(expression);
     js_code_call_args_await_maybe_declaration_return_add(
       c,
