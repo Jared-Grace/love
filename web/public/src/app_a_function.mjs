@@ -187,7 +187,9 @@ export async function app_a_function(context) {
     {
       shortcut: "t",
       text: emoji_arrows_crossed(),
-      fn: function lambda10() {},
+      fn: function lambda10() {
+        let o2 = app_a_overlay(a2, function lambda11(e2) {});
+      },
     },
   ];
   let e = storage_local_exists(app_a, "app_selected");
