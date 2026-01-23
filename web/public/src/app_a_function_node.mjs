@@ -98,7 +98,7 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, declaration);
     },
     ["FunctionDeclaration"]: function lambda5() {
-      app_a_function_declaration(node, parent, a);
+      app_a_function_declaration(a);
     },
     ["BlockStatement"]: function lambda7() {
       function lambda20() {
