@@ -57,7 +57,7 @@ export function app_a_if_statement(a, node, parent) {
               parsed,
             });
           }
-          app_a_button_function(copy);
+          app_a_button_function(context);
           await app_a_functions_generic(copy, on_select);
         },
       },
