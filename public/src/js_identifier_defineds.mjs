@@ -66,18 +66,21 @@ export function js_identifier_defineds(v) {
       each_range(index, each_statement_up_to);
       function lambda2(item2) {
         const f_type = "FunctionDeclaration";
-        if (js_node_type_is(item2, f_type)) {
-          let id2 = object_property_get(item2, "id");
-          let ii = js_identifier_is(id2);
-          if (ii) {
-            let value = object_property_get(id2, "name");
-            la([value]);
-          }
-        }
+        function_type_add(item2, f_type);
       }
       each(bs_list, lambda2);
     }
     let types = js_types_function();
+    function function_type_add(item2, f_type) {
+      if (js_node_type_is(item2, f_type)) {
+        let id2 = object_property_get(item2, "id");
+        let ii = js_identifier_is(id2);
+        if (ii) {
+          let value = object_property_get(id2, "name");
+          la([value]);
+        }
+      }
+    }
     function lambda5(node) {
       let params_names = js_declaration_params_names(node);
       la(params_names);
