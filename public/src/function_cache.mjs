@@ -1,6 +1,5 @@
+import { js_expression_list } from "../../../love/public/src/js_expression_list.mjs";
 import { function_cache_name } from "../../../love/public/src/function_cache_name.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { js_code_brackets_empty } from "../../../love/public/src/js_code_brackets_empty.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -32,9 +31,7 @@ export async function function_cache(f_name) {
       args_none = true;
     }
     let mapped = list_map(arg_names, js_parse_expression);
-    let code_expression = js_code_brackets_empty();
-    let expression = js_parse_expression(code_expression);
-    object_property_set(expression, "elements", mapped);
+    let expression = js_expression_list(mapped);
     let code = js_unparse(expression);
     js_code_call_args_await_maybe_declaration_return_add(
       c,
