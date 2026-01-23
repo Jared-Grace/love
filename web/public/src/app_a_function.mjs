@@ -1,3 +1,4 @@
+import { emoji_arrows_crossed } from "../../../love/public/src/emoji_arrows_crossed.mjs";
 import { app_a_function_refresh_scroll } from "../../../love/public/src/app_a_function_refresh_scroll.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { html_bar_content } from "../../../love/public/src/html_bar_content.mjs";
@@ -182,6 +183,11 @@ export async function app_a_function(context) {
       shortcut: "a",
       text: emoji_mobile(),
       fn: screen_choose(app_a_apps),
+    },
+    {
+      shortcut: "t",
+      text: emoji_arrows_crossed(),
+      fn: sync,
     },
   ];
   let e = storage_local_exists(app_a, "app_selected");
