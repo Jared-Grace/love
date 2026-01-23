@@ -65,9 +65,8 @@ export function js_identifier_defineds(v) {
       }
       each_range(index, each_statement_up_to);
       function lambda2(item2) {
-        let f_type = null;
-        f_type = "FunctionDeclaration";
-        function_type_add(item2, f_type);
+        $a;
+        function_type_add(item2, "FunctionDeclaration");
       }
       each(bs_list, lambda2);
     }
