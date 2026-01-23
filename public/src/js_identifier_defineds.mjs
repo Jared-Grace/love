@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { js_types_function_includes_node } from "../../../love/public/src/js_types_function_includes_node.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
@@ -63,7 +64,10 @@ export function js_identifier_defineds(v) {
       each_range(index, each_statement_up_to);
       function lambda2(item2) {
         if (js_types_function_includes_node(item2)) {
-          let code = js_unparse(ast);
+          let code = js_unparse(item2);
+          log({
+            code,
+          });
           let id2 = object_property_get(item2, "id");
           let ii = js_identifier_is(id2);
           if (ii) {
