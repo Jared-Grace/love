@@ -27,7 +27,7 @@ import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
 import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 import { app_a_overlay_container } from "../../../love/public/src/app_a_overlay_container.mjs";
 import { app_a_choice_close } from "../../../love/public/src/app_a_choice_close.mjs";
-import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
+import { app_a_overlay_keydown } from "../../../love/public/src/app_a_overlay_keydown.mjs";
 import { html_loading } from "../../../love/public/src/html_loading.mjs";
 import { emoji_run } from "../../../love/public/src/emoji_run.mjs";
 import { app_a_buttons_shortcuts } from "../../../love/public/src/app_a_buttons_shortcuts.mjs";
@@ -142,7 +142,7 @@ export async function app_a_function(context) {
           let v2 = await function_dependencies_code_export(f_name);
           let externals = object_property_get(v2, "externals");
           let get = object_property_get(v2, "get");
-          let o = app_a_overlay(
+          let o = app_a_overlay_keydown(
             {
               root: content,
               app_a_function_on_keydown,
@@ -189,7 +189,7 @@ export async function app_a_function(context) {
       text: emoji_arrows_crossed(),
       fn: function lambda10() {
         function lambda11(e2) {}
-        let o2 = app_a_overlay(a2, lambda11);
+        let o2 = app_a_overlay_keydown(a2, lambda11);
       },
     },
   ];
