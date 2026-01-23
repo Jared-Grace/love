@@ -25,7 +25,7 @@ export function app_a_list_chooser(context, noun, texts, on_select) {
   const text = "Choose " + articled + ":";
   let d = html_div_text_centered(root, text);
   app_a_control_style(d);
-  html_style_background_color(div, background);
+  html_style_background_color(d, "white");
   let filtered = null;
   async function on_enter() {
     let first = list_first(filtered);
