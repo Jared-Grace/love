@@ -1,3 +1,4 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
@@ -7,6 +8,7 @@ export function js_object_to_properties_list(ast) {
   function lambda(v) {
     let node = object_property_get(v, "node");
     let properties = object_property_get(node, "properties");
+    let mapped = list_map_property(list, property_name);
     log({
       properties,
     });
