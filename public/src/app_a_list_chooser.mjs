@@ -1,3 +1,5 @@
+import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
+import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { string_articled } from "../../../love/public/src/string_articled.mjs";
@@ -22,6 +24,8 @@ export function app_a_list_chooser(context, noun, texts, on_select) {
   const articled = string_articled(noun);
   const text = "Choose " + articled + ":";
   let d = html_div_text_centered(root, text);
+  app_a_control_style(d);
+  html_style_background_color(div, background);
   let filtered = null;
   async function on_enter() {
     let first = list_first(filtered);
