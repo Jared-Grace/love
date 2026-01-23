@@ -29,11 +29,11 @@ export function js_identifier_defineds(v) {
     }
     js_stack_filtered_each(stack, "BlockStatement", lambda3);
     function lambda3(bs) {
-      let list = list_next(stack, bs);
-      let item = list_next(stack, list);
-      let index = list_index_of_next_outside(list, item);
+      let bs_list = list_next(stack, bs);
+      let item = list_next(stack, bs_list);
+      let index = list_index_of_next_outside(bs_list, item);
       function each_statement_up_to(i) {
-        let list_item = list_get(list, i);
+        let list_item = list_get(bs_list, i);
         if (js_node_type_is(list_item, "VariableDeclaration")) {
           let declarations = object_property_get(list_item, "declarations");
           let ids = list_map_property(declarations, "id");
@@ -69,7 +69,7 @@ export function js_identifier_defineds(v) {
           }
         }
       }
-      each(list, lambda2);
+      each(bs_list, lambda2);
     }
     let types = js_types_function();
     function lambda5(node) {
