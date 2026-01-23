@@ -27,11 +27,7 @@ export function js_identifier_defineds(v) {
       let value = object_property_get(node, "name");
       la([value]);
     }
-    if (js_node_type_is(e1, "Property")) {
-      let node = object_property_get(v, "node");
-      let value = object_property_get(node, "name");
-      la([value]);
-    }
+    function_type_add(e1, "FunctionExpression");
     js_stack_filtered_each(stack, "BlockStatement", lambda3);
     function lambda3(bs) {
       let bs_list = list_next(stack, bs);
