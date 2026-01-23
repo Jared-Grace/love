@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { app_a_nodes_list } from "../../../love/public/src/app_a_nodes_list.mjs";
 import { app_a_parenthesis_wrap } from "../../../love/public/src/app_a_parenthesis_wrap.mjs";
@@ -8,6 +9,7 @@ import { js_keyword_function } from "../../../love/public/src/js_keyword_functio
 import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function app_a_function_declaration(node, parent, a) {
+  marker("1");
   let generator = object_property_get(node, "generator");
   false_is_assert(generator);
   let v = js_keyword_function();
