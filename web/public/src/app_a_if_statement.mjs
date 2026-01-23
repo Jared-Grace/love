@@ -57,7 +57,8 @@ export function app_a_if_statement(a, node, parent) {
               parsed,
             });
           }
-          app_a_button_function(overlay, () => {});
+          function lambda3() {}
+          app_a_button_function(overlay, lambda3);
           await app_a_functions_generic(copy, on_select);
         },
       },
