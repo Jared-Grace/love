@@ -63,15 +63,15 @@ export function js_identifier_defineds(v) {
       }
       each_range(index, each_statement_up_to);
       function lambda2(item2) {
+        log({
+          item2,
+        });
         if (js_types_function_includes_node(item2)) {
           let code = js_unparse(item2);
           let id2 = object_property_get(item2, "id");
           let ii = js_identifier_is(id2);
           if (ii) {
             let value = object_property_get(id2, "name");
-            log({
-              value,
-            });
             la([value]);
           }
         }
