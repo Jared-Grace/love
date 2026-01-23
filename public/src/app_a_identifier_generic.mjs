@@ -23,7 +23,7 @@ import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
-import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
+import { app_a_overlay_keydown } from "../../../love/public/src/app_a_overlay_keydown.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
@@ -38,7 +38,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
       fn: async function lambda15() {
         let lambda22 = html_on_enter_lambda(lambda23);
         overlay_close();
-        let o2 = app_a_overlay(a, lambda22);
+        let o2 = app_a_overlay_keydown(a, lambda22);
         app_a_overlay_close_button(o2);
         let overlay = object_property_get(o2, "overlay");
         let oc = app_a_overlay_container_centered(overlay);
@@ -87,7 +87,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
         fn: async function lambda2() {
           let lambda22 = html_on_enter_lambda(lambda23);
           overlay_close();
-          let o2 = app_a_overlay(a, lambda22);
+          let o2 = app_a_overlay_keydown(a, lambda22);
           let overlay = object_property_get(o2, "overlay");
           let oc = app_a_overlay_container_centered(overlay);
           let div3 = html_div_text(
