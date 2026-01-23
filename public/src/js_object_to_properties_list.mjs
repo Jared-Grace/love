@@ -12,9 +12,10 @@ export function js_object_to_properties_list(ast) {
     let properties = object_property_get(node, "properties");
     let mapped = list_map_property(properties, "value");
     let expression = js_expression_list(mapped);
-    let json = json_to(object);
+    let json = json_to(expression);
     log({
       mapped,
+      json,
     });
   }
   js_visit_type(ast, "ObjectExpression", lambda);
