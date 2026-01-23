@@ -6,6 +6,7 @@ export function js_object_to_properties_list(ast) {
   marker("1");
   function lambda(v) {
     let node = object_property_get(v, "node");
+    let properties = object_property_get(node, "properties");
     log({
       node,
     });
