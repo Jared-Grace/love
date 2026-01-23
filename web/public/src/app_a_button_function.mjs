@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_a_button_function_text_selected } from "../../../love/public/src/app_a_button_function_text_selected.mjs";
 import { app_a_function_name_selected_key } from "../../../love/public/src/app_a_function_name_selected_key.mjs";
 import { app_a_function } from "../../../love/public/src/app_a_function.mjs";
@@ -14,6 +15,9 @@ export function app_a_button_function(context) {
     const text = app_a_button_function_text_selected(context);
     button = app_a_button(root, text, lambda2);
     function lambda2() {
+      log({
+        context,
+      });
       app_generic_screen_set(context, app_a_function);
     }
   }
