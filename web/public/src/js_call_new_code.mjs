@@ -18,7 +18,6 @@ import { js_identifiers_names } from "../../../love/public/src/js_identifiers_na
 export async function js_call_new_code(f_name_call, ast) {
   let v2 = await function_parse_declaration(f_name_call);
   let ast_call = object_property_get(v2, "ast");
-  let unaliased = object_property_get(v2, "unaliased");
   let declaration = object_property_get(v2, "declaration");
   let existing = js_identifiers_names(ast);
   let arg_names = js_declaration_params_names(declaration);
@@ -44,7 +43,7 @@ export async function js_call_new_code(f_name_call, ast) {
     return arg_code;
   }
   let args_code = await list_map_unordered_async(arg_names, lambda3);
-  let code = js_code_call_args_await_maybe(unaliased, args_code, declaration);
+  let code = js_code_call_args_await_maybe(f_name_call, args_code, declaration);
   let return_name = js_return_name(ast_call);
   let v = {
     code,
