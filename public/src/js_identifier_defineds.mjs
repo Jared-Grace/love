@@ -1,4 +1,4 @@
-import { js_types_function_includes } from "../../../love/public/src/js_types_function_includes.mjs";
+import { js_types_function_includes_node } from "../../../love/public/src/js_types_function_includes_node.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -61,7 +61,7 @@ export function js_identifier_defineds(v) {
       }
       each_range(index, each_statement_up_to);
       function lambda2(item2) {
-        if (js_types_function_includes(item2)) {
+        if (js_types_function_includes_node(item2)) {
           let id2 = object_property_get(item2, "id");
           let ii = js_identifier_is(id2);
           if (ii) {
