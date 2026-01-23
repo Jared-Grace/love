@@ -14,7 +14,8 @@ export function app_a_button_function_refresh(context) {
   let button = null;
   if (exists) {
     const text = app_a_button_function_text_selected(context);
-    button = app_a_button(root, text, lambda2);
+    let b = app_a_button(root, text, lambda2);
+    button = b;
     function lambda2() {
       app_generic_screen_set(context, app_a_function);
     }
