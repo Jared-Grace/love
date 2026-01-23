@@ -2,7 +2,6 @@ import { app_a_button_function } from "../../../love/public/src/app_a_button_fun
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
 import { object_copy_assign } from "../../../love/public/src/object_copy_assign.mjs";
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
@@ -53,9 +52,6 @@ export function app_a_if_statement(a, node, parent) {
               stack,
             );
             await app_a_function_on_change(o2, a);
-            log({
-              parsed,
-            });
           }
           function lambda3() {
             let overlay_close = object_property_get(o2, "overlay_close");
