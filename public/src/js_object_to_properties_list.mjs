@@ -12,7 +12,8 @@ export function js_object_to_properties_list(ast) {
     let properties = object_property_get(node, "properties");
     let mapped = list_map_property(properties, "value");
     let expression = js_expression_array(mapped);
-    object_replace(node, expression);b=1
+    object_replace(node, expression);
+    let b = 1;
     log({
       mapped,
       a: b,
