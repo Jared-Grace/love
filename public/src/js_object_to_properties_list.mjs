@@ -15,7 +15,6 @@ export function js_object_to_properties_list(ast) {
     object_replace(node, expression);
     log({
       mapped,
-      json,
     });
   }
   js_visit_type(ast, "ObjectExpression", lambda);
