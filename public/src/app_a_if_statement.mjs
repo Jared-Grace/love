@@ -1,3 +1,4 @@
+import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -31,6 +32,7 @@ export function app_a_if_statement(a, node, parent) {
           overlay_close();
           let o2 = app_a_overlay(a, noop);
           let overlay = object_property_get(o2, "overlay");
+          html_style_set(b, style_key, style_value);
           const replacement = {
             root: overlay,
           };
