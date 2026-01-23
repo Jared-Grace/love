@@ -8,7 +8,7 @@ export function js_object_to_properties_list(ast) {
   function lambda(v) {
     let node = object_property_get(v, "node");
     let properties = object_property_get(node, "properties");
-    let mapped = list_map_property(list, property_name);
+    let mapped = list_map_property(properties, "value");
     log({
       properties,
     });
