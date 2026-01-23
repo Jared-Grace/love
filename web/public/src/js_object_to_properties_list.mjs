@@ -8,7 +8,7 @@ export function js_object_to_properties_list(ast) {
     let node = object_property_get(v, "node");
     let properties = object_property_get(node, "properties");
     log({
-      node,
+      properties,
     });
   }
   js_visit_type(ast, "ObjectExpression", lambda);
