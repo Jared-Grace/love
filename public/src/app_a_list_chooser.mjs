@@ -21,7 +21,7 @@ export function app_a_list_chooser(context, noun, texts, on_select) {
   let root = object_property_get(context, "root");
   const articled = string_articled(noun);
   const text = "Choose " + articled + ":";
-  html_div_text_centered(root, text);
+  let d = html_div_text_centered(root, text);
   let filtered = null;
   async function on_enter() {
     let first = list_first(filtered);
