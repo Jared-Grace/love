@@ -100,6 +100,9 @@ export function app_a_function_node(a) {
     ["FunctionDeclaration"]: function lambda5() {
       app_a_function_declaration(a);
     },
+    ["FunctionExpression"]: function lambda5() {
+      app_a_function_declaration(a);
+    },
     ["BlockStatement"]: function lambda7() {
       function lambda20() {
         app_a_body(node, parent, a, true);
