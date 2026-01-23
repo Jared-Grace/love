@@ -12,7 +12,7 @@ export function app_a_button_function_refresh(context) {
   let exists = storage_local_exists_context(context, key);
   let button = null;
   if (exists) {
-    let b = app_a_button_function(root, lambda2);
+    let b = app_a_button_function(root, lambda2, context);
     button = b;
     function lambda2() {
       app_generic_screen_set(context, app_a_function);

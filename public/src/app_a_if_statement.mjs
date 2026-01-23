@@ -61,7 +61,7 @@ export function app_a_if_statement(a, node, parent) {
             let overlay_close = object_property_get(o, "overlay_close");
             overlay_close();
           }
-          app_a_button_function(overlay, lambda3);
+          app_a_button_function(overlay, lambda3, context);
           await app_a_functions_generic(copy, on_select);
         },
       },
