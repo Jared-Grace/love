@@ -1,3 +1,4 @@
+import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { js_expression_array } from "../../../love/public/src/js_expression_array.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -13,6 +14,7 @@ export function js_object_to_properties_list(ast) {
     let mapped = list_map_property(properties, "value");
     let expression = js_expression_array(mapped);
     let json = json_to(expression);
+    object_replace(to, from);
     log({
       mapped,
       json,
