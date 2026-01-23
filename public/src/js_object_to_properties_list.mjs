@@ -13,7 +13,10 @@ export function js_object_to_properties_list(ast) {
     let mapped = list_map_property(properties, "value");
     let expression = js_expression_array(mapped);
     object_replace(node, expression);
-    log([mapped]);
+    log({
+      mapped,
+      a: b,
+    });
   }
   js_visit_type(ast, "ObjectExpression", lambda);
 }
