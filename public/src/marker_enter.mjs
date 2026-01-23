@@ -23,9 +23,11 @@ export async function marker_enter() {
       let nt = js_node_type(next);
       if (i) {
         body = js_declaration_to_block_body(next);
-      } else if (nt === "IfStatement") {
-        let consequent = object_property_get(next, "consequent");
-        body = object_property_get(consequent, "body");
+      } else {
+        if (nt === "IfStatement") {
+          let consequent = object_property_get(next, "consequent");
+          body = object_property_get(consequent, "body");
+        }
       }
       index++;
     }
