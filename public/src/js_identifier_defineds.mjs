@@ -27,6 +27,11 @@ export function js_identifier_defineds(v) {
       let value = object_property_get(node, "name");
       la([value]);
     }
+    if (js_node_type_is(e1, "Property")) {
+      let node = object_property_get(v, "node");
+      let value = object_property_get(node, "name");
+      la([value]);
+    }
     js_stack_filtered_each(stack, "BlockStatement", lambda3);
     function lambda3(bs) {
       let bs_list = list_next(stack, bs);
@@ -60,7 +65,8 @@ export function js_identifier_defineds(v) {
       }
       each_range(index, each_statement_up_to);
       function lambda2(item2) {
-        if (js_node_type_is(item2, "FunctionDeclaration")) {
+        const f_type = "FunctionDeclaration";
+        if (js_node_type_is(item2, f_type)) {
           let id2 = object_property_get(item2, "id");
           let ii = js_identifier_is(id2);
           if (ii) {
