@@ -32,7 +32,7 @@ export function app_a_if_statement(a, node, parent) {
           overlay_close();
           let o2 = app_a_overlay(a, noop);
           let overlay = object_property_get(o2, "overlay");
-          html_style_set(b, style_key, style_value);
+          html_style_set(overlay, "overflow", "hidden");
           const replacement = {
             root: overlay,
           };
