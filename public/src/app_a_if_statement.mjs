@@ -1,3 +1,4 @@
+import { app_a_button_function } from "../../../love/public/src/app_a_button_function.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";
 import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs";
@@ -56,6 +57,7 @@ export function app_a_if_statement(a, node, parent) {
               parsed,
             });
           }
+          app_a_button_function(copy);
           await app_a_functions_generic(copy, on_select);
         },
       },
