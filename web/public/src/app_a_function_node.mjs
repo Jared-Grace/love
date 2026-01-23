@@ -1,3 +1,4 @@
+import { app_a_function_declaration } from "../../../love/public/src/app_a_function_declaration.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_a_if_statement } from "../../../love/public/src/app_a_if_statement.mjs";
 import { list_last_not_is } from "../../../love/public/src/list_last_not_is.mjs";
@@ -34,8 +35,6 @@ import { app_a_keyword_purple_space } from "../../../love/public/src/app_a_keywo
 import { app_a_body } from "../../../love/public/src/app_a_body.mjs";
 import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
 import { app_a_keyword_blue_space } from "../../../love/public/src/app_a_keyword_blue_space.mjs";
-import { js_keyword_async } from "../../../love/public/src/js_keyword_async.mjs";
-import { js_keyword_function } from "../../../love/public/src/js_keyword_function.mjs";
 import { list_empty_is_assert } from "../../../love/public/src/list_empty_is_assert.mjs";
 import { js_keyword_export } from "../../../love/public/src/js_keyword_export.mjs";
 import { app_a_keyword_purple } from "../../../love/public/src/app_a_keyword_purple.mjs";
@@ -99,25 +98,7 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, declaration);
     },
     ["FunctionDeclaration"]: function lambda5() {
-      let generator = object_property_get(node, "generator");
-      false_is_assert(generator);
-      let v = js_keyword_function();
-      app_a_keyword_blue_space(parent, v);
-      let async = object_property_get(node, "async");
-      if (async) {
-        let v2 = js_keyword_async();
-        app_a_keyword_blue_space(parent, v2);
-      }
-      let id = object_property_get(node, "id");
-      app_a_function_node_child(a, id);
-      app_a_parenthesis_wrap(parent, inner);
-      function inner() {
-        let params = object_property_get(node, "params");
-        app_a_nodes_list(a, params, parent);
-      }
-      let body2 = object_property_get(node, "body");
-      html_span_space(parent);
-      app_a_function_node_child(a, body2);
+      app_a_function_declaration(node, parent, a);
     },
     ["BlockStatement"]: function lambda7() {
       function lambda20() {
