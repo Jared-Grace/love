@@ -20,10 +20,10 @@ export async function marker_enter() {
     while (body === null) {
       let next = list_get(stack2, index);
       var i = js_types_function_includes_node(next);
-      let nt = js_node_type(next);
       if (i) {
         body = js_declaration_to_block_body(next);
       } else {
+      let nt = js_node_type(next);
         if (nt === "IfStatement") {
           let consequent = object_property_get(next, "consequent");
           body = object_property_get(consequent, "body");
