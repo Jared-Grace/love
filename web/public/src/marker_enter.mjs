@@ -12,12 +12,16 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function marker_enter() {
   async function lambda(a) {
     marker("1");
-    let { index, stack1, stack2 } = marker_next_index(a);
+    let v2 = marker_next_index(a);
+    let stack2 = object_property_get(v2, "stack2");
+    let stack1 = object_property_get(v2, "stack1");
+    let index = object_property_get(v2, "index");
     let body = null;
     while (body === null) {
       let next = list_get(stack2, index);
       let nt = js_node_type(next);
-      if (js_types_function_includes(nt)) {
+      const newLocal = js_types_function_includes(nt);
+      if (newLocal) {
         body = js_declaration_to_block_body(next);
       } else if (nt === "IfStatement") {
         let consequent = object_property_get(next, "consequent");
