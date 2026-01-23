@@ -1,4 +1,4 @@
-import { function_parse_declaration_unaliased } from "../../../love/public/src/function_parse_declaration_unaliased.mjs";
+import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { js_return_name } from "../../../love/public/src/js_return_name.mjs";
 import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
@@ -16,7 +16,7 @@ import { js_identifier_unique } from "../../../love/public/src/js_identifier_uni
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
 export async function js_call_new_code(f_name_call, ast) {
-  let v2 = await function_parse_declaration_unaliased(f_name_call);
+  let v2 = await function_parse_declaration(f_name_call);
   let ast_call = object_property_get(v2, "ast");
   let unaliased = object_property_get(v2, "unaliased");
   let declaration = object_property_get(v2, "declaration");
