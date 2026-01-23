@@ -7,13 +7,13 @@ import { app_a_function } from "../../../love/public/src/app_a_function.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function app_a_screens() {
   marker("screens");
-  let v = {
-    functions: app_a_functions,
-    function: app_a_function,
-    apps: app_a_apps,
-    home: app_a_home,
-    app_run: app_a_app_run,
-    app: app_a_app,
-  };
+  let v = [
+    app_a_functions,
+    app_a_function,
+    app_a_apps,
+    app_a_home,
+    app_a_app_run,
+    app_a_app,
+  ];
   return v;
 }
