@@ -194,6 +194,7 @@ export async function app_a_function(context) {
         let v6 = await app_a_functions_overlay(a, lambda11);
         let overlay_result = object_property_get(v6, "overlay_result");
         let functions_result = object_property_get(v6, "functions_result");
+        let input = object_property_get(functions_result, "input");
         async function lambda11(f_name_call) {
           let transformer = await function_parse(f_name_call);
           transformer(ast);
