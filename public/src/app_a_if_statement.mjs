@@ -25,7 +25,8 @@ export function app_a_if_statement(a, node, parent) {
         text: "Add above",
         fn: async function lambda2() {
           overlay_close();
-          let o2 = await app_a_functions_overlay(a, on_select);
+          let v2 = await app_a_functions_overlay(a, on_select);
+          let overlay_result = object_property_get(v2, "overlay_result");
           async function on_select(f_name_call) {
             let v = app_a_node_index(a);
             let stack = object_property_get(v, "stack");
@@ -39,7 +40,7 @@ export function app_a_if_statement(a, node, parent) {
               index,
               stack,
             );
-            await app_a_function_on_change(o2, a);
+            await app_a_function_on_change(overlay_result, a);
           }
         },
       },
