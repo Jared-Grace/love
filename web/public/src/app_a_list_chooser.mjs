@@ -71,8 +71,9 @@ export function app_a_list_chooser(context, noun, texts, on_select) {
     list_remove(on_keydowns, on_keydown);
     await on_select(text);
   }
-  function input_set() {
-    html_value_set(input2, value2);
+  function input_set(value) {
+    html_value_set(input, value);
+    on_input();
   }
   let v4 = {
     input_set,
