@@ -191,7 +191,8 @@ export async function app_a_function(context) {
       shortcut: "t",
       text: emoji_arrows_crossed(),
       fn: async function lambda10() {
-        let o2 = await app_a_functions_overlay(a, lambda11);
+        let v6 = await app_a_functions_overlay(a, lambda11);
+        let overlay_result = object_property_get(v6, "overlay_result");
         async function lambda11(f_name_call) {
           let transformer = await function_parse(f_name_call);
           transformer(ast);
