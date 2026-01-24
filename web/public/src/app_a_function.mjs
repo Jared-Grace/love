@@ -190,7 +190,6 @@ export async function app_a_function(context) {
       shortcut: "t",
       text: emoji_arrows_crossed(),
       fn: async function lambda10() {
-        let o2 = app_a_overlay(a);
         function lambda11() {}
         await app_a_functions_generic(context, lambda11);
       },
