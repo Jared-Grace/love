@@ -19,5 +19,9 @@ export async function app_a_functions_overlay(a, on_select) {
   }
   app_a_button_function(context, overlay, lambda3);
   let functions_result = await app_a_functions_generic(copy, on_select);
-  return overlay_result;
+  let v = {
+    overlay_result,
+    functions_result,
+  };
+  return v;
 }
