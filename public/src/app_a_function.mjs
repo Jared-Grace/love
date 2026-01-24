@@ -191,7 +191,7 @@ export async function app_a_function(context) {
       text: emoji_arrows_crossed(),
       fn: async function lambda10() {
         let o2 = app_a_overlay(a);
-        await app_a_functions_generic(context, on_select);
+        await app_a_functions_generic(context, () => {});
       },
     },
   ];
