@@ -1,3 +1,4 @@
+import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { app_a_functions_overlay } from "../../../love/public/src/app_a_functions_overlay.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
 import { function_parse } from "../../../love/public/src/function_parse.mjs";
@@ -195,6 +196,7 @@ export async function app_a_function(context) {
         let overlay_result = object_property_get(v6, "overlay_result");
         let functions_result = object_property_get(v6, "functions_result");
         let input = object_property_get(functions_result, "input");
+        html_value_set(input2, value);
         async function lambda11(f_name_call) {
           let transformer = await function_parse(f_name_call);
           transformer(ast);
