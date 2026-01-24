@@ -35,7 +35,7 @@ export function app_a_list_chooser(context, noun, texts, on_select) {
   let on_keydowns = app_a_on_keydown_add(context, on_keydown);
   let input = app_a_input(root);
   let f_names_div = html_div(root);
-  function lambda4() {
+  function on_input() {
     let value = html_value_get(input);
     function lambda2(text) {
       let v3 = match(value, text);
@@ -51,7 +51,7 @@ export function app_a_list_chooser(context, noun, texts, on_select) {
       return v;
     }
   }
-  html_on_input(input, lambda4);
+  html_on_input(input, on_input);
   filtered = texts;
   refresh();
   function refresh() {
@@ -71,7 +71,7 @@ export function app_a_list_chooser(context, noun, texts, on_select) {
     await on_select(text);
   }
   let v4 = {
-    input,
+    input,on_input
   };
   return v4;
 }
