@@ -2,7 +2,6 @@ import { app_a_function_import } from "../../../love/public/src/app_a_function_i
 import { function_new_js_name } from "../../../love/public/src/function_new_js_name.mjs";
 import { app_a_functions_overlay } from "../../../love/public/src/app_a_functions_overlay.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
-import { function_parse } from "../../../love/public/src/function_parse.mjs";
 import { emoji_arrows_crossed } from "../../../love/public/src/emoji_arrows_crossed.mjs";
 import { app_a_function_refresh_scroll } from "../../../love/public/src/app_a_function_refresh_scroll.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
@@ -179,8 +178,8 @@ export async function app_a_function(context) {
         let combined2 = function_new_js_name("");
         input_set(combined2);
         async function lambda11(f_name_call) {
-          let transformer = await function_parse(f_name_call);
-          transformer(ast);
+          let fn = await app_a_function_import(f_name_call);
+          fn(ast);
           await app_a_function_on_change(overlay_result, a);
         }
       },
