@@ -15,5 +15,6 @@ export async function app_a_functions_generic(context, lambda$f_name) {
   let padded = string_pad(joined, "/");
   let filtered4 = list_filter_includes(filtered3, padded);
   let f_names = list_map(filtered4, function_path_to_name);
-  return app_a_list_chooser(context, "function", f_names, lambda$f_name);
+  let v4 = app_a_list_chooser(context, "function", f_names, lambda$f_name);
+  return v4;
 }
