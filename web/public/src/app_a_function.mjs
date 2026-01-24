@@ -1,4 +1,3 @@
-import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { app_a_functions_generic } from "../../../love/public/src/app_a_functions_generic.mjs";
 import { emoji_arrows_crossed } from "../../../love/public/src/emoji_arrows_crossed.mjs";
 import { app_a_function_refresh_scroll } from "../../../love/public/src/app_a_function_refresh_scroll.mjs";
@@ -190,10 +189,7 @@ export async function app_a_function(context) {
       shortcut: "t",
       text: emoji_arrows_crossed(),
       fn: async function lambda10() {
-        async function lambda11(f_name_call) {
-          async function lambda12(ast2) {}
-          let output = await function_transform(f_name2, lambda12);
-        }
+        function lambda11(f_name_call) {}
         await app_a_functions_generic(context, lambda11);
       },
     },
