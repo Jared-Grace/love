@@ -29,29 +29,32 @@ export function app_a_if_statement(a, node, parent) {
         text: "Add above",
         fn: async function lambda2() {
           overlay_close();
+          function lambda20() {
+            const replacement = {
+              root: overlay,
+            };
+            let context = object_property_get(a, "context");
+            let copy = object_copy_assign(context, replacement);
+            async function on_select(f_name_call) {
+              let v = app_a_node_index(a);
+              let stack = object_property_get(v, "stack");
+              let index = object_property_get(v, "index");
+              let list = object_property_get(v, "list");
+              let ast = object_property_get(v, "ast");
+              let parsed = await js_call_new_insert(
+                f_name_call,
+                ast,
+                list,
+                index,
+                stack,
+              );
+              await app_a_function_on_change(o2, a);
+            }
+          }
           let o2 = app_a_overlay(a);
           let overlay = object_property_get(o2, "overlay");
           html_style_set(overlay, "overflow", "hidden");
-          const replacement = {
-            root: overlay,
-          };
-          let context = object_property_get(a, "context");
-          let copy = object_copy_assign(context, replacement);
-          async function on_select(f_name_call) {
-            let v = app_a_node_index(a);
-            let stack = object_property_get(v, "stack");
-            let index = object_property_get(v, "index");
-            let list = object_property_get(v, "list");
-            let ast = object_property_get(v, "ast");
-            let parsed = await js_call_new_insert(
-              f_name_call,
-              ast,
-              list,
-              index,
-              stack,
-            );
-            await app_a_function_on_change(o2, a);
-          }
+          lambda20();
           function lambda3() {
             let overlay_close = object_property_get(o2, "overlay_close");
             overlay_close();
