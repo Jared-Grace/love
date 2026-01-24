@@ -1,3 +1,4 @@
+import { app_a_functions_generic } from "../../../love/public/src/app_a_functions_generic.mjs";
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
 import { emoji_arrows_crossed } from "../../../love/public/src/emoji_arrows_crossed.mjs";
 import { app_a_function_refresh_scroll } from "../../../love/public/src/app_a_function_refresh_scroll.mjs";
@@ -188,8 +189,9 @@ export async function app_a_function(context) {
     {
       shortcut: "t",
       text: emoji_arrows_crossed(),
-      fn: function lambda10() {
+      fn: async function lambda10() {
         let o2 = app_a_overlay(a);
+        await app_a_functions_generic(context2, on_select);
       },
     },
   ];
