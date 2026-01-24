@@ -191,10 +191,8 @@ export async function app_a_function(context) {
       text: emoji_arrows_crossed(),
       fn: async function lambda10() {
         async function lambda11(f_name_call) {
-          let output = await function_transform(
-            f_name2,
-            async function lambda12(ast2) {},
-          );
+          async function lambda12(ast2) {}
+          let output = await function_transform(f_name2, lambda12);
         }
         await app_a_functions_generic(context, lambda11);
       },
