@@ -142,9 +142,6 @@ export async function app_a_function(context) {
       text: emoji_run(),
       fn: async function lambda3() {
         async function lambda5() {
-          let v2 = await function_dependencies_code_export(f_name);
-          let externals = object_property_get(v2, "externals");
-          let get = object_property_get(v2, "get");
           let o = app_a_overlay_keydown(
             {
               root: content,
@@ -161,6 +158,9 @@ export async function app_a_function(context) {
             app_a_on_keydown(e, choices);
           }
           let div = app_a_overlay_container(overlay);
+          let v2 = await function_dependencies_code_export(f_name);
+          let externals = object_property_get(v2, "externals");
+          let get = object_property_get(v2, "get");
           let v3 = await get();
           let global = object_property_get(v3, "global");
           let imports = function_dependencies_externals_to_urls(externals);
