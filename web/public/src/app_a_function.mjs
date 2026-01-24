@@ -189,7 +189,7 @@ export async function app_a_function(context) {
       shortcut: "t",
       text: emoji_arrows_crossed(),
       fn: async function lambda10() {
-        function lambda11() {}
+        function lambda11(f_name_call) {}
         await app_a_functions_generic(context, lambda11);
       },
     },
