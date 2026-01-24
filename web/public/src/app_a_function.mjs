@@ -191,12 +191,12 @@ export async function app_a_function(context) {
       shortcut: "t",
       text: emoji_arrows_crossed(),
       fn: async function lambda10() {
+        let o2 = await app_a_functions_overlay(a, lambda11);
         async function lambda11(f_name_call) {
           let transformer = await function_parse(f_name_call);
           transformer(ast);
           await app_a_function_on_change(o2, a);
         }
-        await app_a_functions_overlay(a, lambda11);
       },
     },
   ];
