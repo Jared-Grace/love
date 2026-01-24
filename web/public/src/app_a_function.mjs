@@ -197,7 +197,7 @@ export async function app_a_function(context) {
         let functions_result = object_property_get(v6, "functions_result");
         let input_set = object_property_get(functions_result, "input_set");
         let combined2 = function_new_js_name("");
-        input_set(input, combined2);
+        input_set(combined2);
         async function lambda11(f_name_call) {
           let transformer = await function_parse(f_name_call);
           transformer(ast);
