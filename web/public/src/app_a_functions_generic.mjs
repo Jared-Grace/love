@@ -7,7 +7,7 @@ import { functions_path } from "../../../love/public/src/functions_path.mjs";
 import { list_filter_ends_with } from "../../../love/public/src/list_filter_ends_with.mjs";
 import { function_name_extension } from "../../../love/public/src/function_name_extension.mjs";
 import { app_a_files_paths } from "../../../love/public/src/app_a_files_paths.mjs";
-export async function app_a_functions_generic(context, on_select) {
+export async function app_a_functions_generic(context, lambda$f_name) {
   let mapped = await app_a_files_paths();
   let suffix = function_name_extension();
   let filtered3 = list_filter_ends_with(mapped, suffix);
@@ -15,5 +15,5 @@ export async function app_a_functions_generic(context, on_select) {
   let padded = string_pad(joined, "/");
   let filtered4 = list_filter_includes(filtered3, padded);
   let f_names = list_map(filtered4, function_path_to_name);
-  app_a_list_chooser(context, "function", f_names, on_select);
+  app_a_list_chooser(context, "function", f_names, lambda$f_name);
 }
