@@ -196,7 +196,7 @@ export async function app_a_function(context) {
           transformer(ast);
           await app_a_function_on_change(o2, a);
         }
-        await app_a_functions_overlay(context, lambda11);
+        await app_a_functions_overlay(a, lambda11);
       },
     },
   ];
