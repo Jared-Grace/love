@@ -1,3 +1,4 @@
+import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -70,10 +71,11 @@ export function app_a_list_chooser(context, noun, texts, on_select) {
     list_remove(on_keydowns, on_keydown);
     await on_select(text);
   }
-  (function lambda4() {});
+  function input_set() {
+    html_value_set(input2, value2);
+  }
   let v4 = {
-    input,
-    on_input,
+    input_set,
   };
   return v4;
 }
