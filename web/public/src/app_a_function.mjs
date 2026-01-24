@@ -197,6 +197,7 @@ export async function app_a_function(context) {
         let overlay_result = object_property_get(v6, "overlay_result");
         let functions_result = object_property_get(v6, "functions_result");
         let input = object_property_get(functions_result, "input");
+        let on_input = object_property_get(functions_result, "on_input");
         let combined2 = function_new_js_name("");
         html_value_set(input, combined2);
         async function lambda11(f_name_call) {
