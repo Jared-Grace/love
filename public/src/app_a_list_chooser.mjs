@@ -70,6 +70,7 @@ export function app_a_list_chooser(context, noun, texts, on_select) {
     list_remove(on_keydowns, on_keydown);
     await on_select(text);
   }
+  () => {};
   let v4 = {
     input,
     on_input,
