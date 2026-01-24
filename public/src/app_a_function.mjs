@@ -142,7 +142,6 @@ export async function app_a_function(context) {
       text: emoji_run(),
       fn: async function lambda3() {
         async function lambda5() {
-          let i = 0;
           let v2 = await function_dependencies_code_export(f_name);
           let externals = object_property_get(v2, "externals");
           let get = object_property_get(v2, "get");
