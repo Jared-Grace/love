@@ -71,7 +71,8 @@ export function app_a_list_chooser(context, noun, texts, on_select) {
     await on_select(text);
   }
   let v4 = {
-    input,on_input
+    input,
+    on_input,
   };
   return v4;
 }
