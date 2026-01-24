@@ -196,7 +196,7 @@ export async function app_a_function(context) {
         async function lambda11(f_name_call) {
           let transformer = await function_parse(f_name_call);
           transformer(ast);
-          await app_a_function_on_change(o2, a);
+          await app_a_function_on_change(overlay_result, a);
         }
       },
     },
