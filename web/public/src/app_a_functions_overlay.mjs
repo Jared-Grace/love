@@ -18,6 +18,6 @@ export async function app_a_functions_overlay(a, on_select) {
     overlay_close();
   }
   app_a_button_function(context, overlay, lambda3);
-  await app_a_functions_generic(copy, on_select);
+  let r = await app_a_functions_generic(copy, on_select);
   return o2;
 }
