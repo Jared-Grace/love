@@ -1,4 +1,3 @@
-import { html_br } from "../../../love/public/src/html_br.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_style_grid } from "../../../love/public/src/html_style_grid.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
@@ -41,7 +40,7 @@ export function app_designs_universal_main(context) {
     },
   ];
   function lambda4(dimension) {
-    let container = html_br(root);
+    let container = html_div(root);
     let columns = object_property_get(dimension, "columns");
     let rows = object_property_get(dimension, "rows");
     let slots = rows * columns;
