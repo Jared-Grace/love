@@ -1,4 +1,4 @@
-import { marker } from "../../../love/public/src/marker.mjs";
-export function app_designs_universal_latest() {
-  marker("1");
+import { app_main_latest } from "../../../love/public/src/app_main_latest.mjs";
+export async function app_designs_universal_latest() {
+  await app_main_latest("app_designs_universal_main", "jared-grace");
 }
