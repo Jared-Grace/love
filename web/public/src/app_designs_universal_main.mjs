@@ -1,3 +1,4 @@
+import { html_span } from "../../../love/public/src/html_span.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
@@ -14,7 +15,9 @@ export function app_designs_universal_main(context) {
   let shape = html_div(root);
   function lambda(i) {
     let row = html_div(shape);
-    function lambda2(i2) {}
+    function lambda2(i2) {
+      let component = html_span(parent);
+    }
     each_range(columns, lambda2);
   }
   each_range(rows, lambda);
