@@ -24,7 +24,7 @@ export function app_designs_universal_main(context) {
     function lambda2(x) {
       let offset_x = offset + x;
       let column = html_span(row);
-      html_display_inline_block(item2);
+      html_display_inline_block(column);
       html_style_assign(column, {
         width: "5px",
         height: "5px",
