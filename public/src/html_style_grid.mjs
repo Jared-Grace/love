@@ -4,5 +4,6 @@ export function html_style_grid(shape, columns, rows) {
     display: "inline-grid",
     "grid-template-columns": "repeat(" + columns + ", auto)",
     gap: "0",
+    "vertical-align": "top",
   });
 }
