@@ -12,7 +12,7 @@ export function app_designs_universal_main(context) {
   html_style_assign(root, {
     display: "flex",
     "flex-wrap": "wrap",
-    gap: "0",
+    gap: "5px",
   });
   html_style_background_color(root, "gray");
   let colors = ["black", "white"];
