@@ -1,3 +1,4 @@
+import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { json_copy } from "../../../love/public/src/json_copy.mjs";
@@ -14,4 +15,5 @@ export function app_designs_universal_main() {
     each(copy, lambda2);
   }
   let m = list_map(colors, lambda);
+  let combined = list_concat_multiple(lists);
 }
