@@ -15,5 +15,6 @@ export function app_designs_universal_main() {
     each(copy, lambda2);
   }
   let m = list_map(colors, lambda);
-  let combined = list_concat_multiple(lists);
+  let combined = list_concat_multiple(m);
+  return combined;
 }
