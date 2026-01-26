@@ -7,5 +7,7 @@ export function app_designs_universal_main(context) {
   let colors = ["black", "white"];
   let slots = 2;
   let possbilities = list_cartesian_product_self(colors, slots);
+  let columns = 3;
+  let rows = 2;
   return possbilities;
 }
