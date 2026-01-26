@@ -17,6 +17,12 @@ export function app_designs_universal_main(context) {
   });
   html_style_background_color(root, "gray");
   let colors = ["black", "white"];
+  let dimensions = [
+    {
+      columns: 1,
+      rows: 1,
+    },
+  ];
   let columns = 3;
   let rows = 2;
   let slots = rows * columns;
