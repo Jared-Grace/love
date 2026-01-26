@@ -1,3 +1,4 @@
+import { each_range } from "../../../love/public/src/each_range.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -11,6 +12,7 @@ export function app_designs_universal_main(context) {
   let columns = 3;
   let rows = 2;
   let shape = html_div(root);
+  each_range(count, function lambda(i) {});
   let div = html_div(root2);
   return possbilities;
 }
