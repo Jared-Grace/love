@@ -39,7 +39,8 @@ export function app_designs_universal_main(context) {
       rows: 3,
     },
   ];
-  each(list, function lambda4(item2) {});
+  function lambda4(item2) {}
+  each(list, lambda4);
   let columns = 3;
   let rows = 2;
   let slots = rows * columns;
