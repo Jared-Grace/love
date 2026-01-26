@@ -12,7 +12,7 @@ export function app_designs_universal_main(context) {
   let root = object_property_get(context, "root");
   const size = "7px";
   html_style_background_color(root, "gray");
-  let colors = ["red", "yellow", "blue"];
+  let colors = ["red", "orange", "yellow", "green", "blue", "purple"];
   let dimensions = [
     {
       columns: 1,
