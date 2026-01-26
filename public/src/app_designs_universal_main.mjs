@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -17,9 +16,6 @@ export function app_designs_universal_main() {
     return copy;
   }
   let m = list_map(colors, lambda);
-  log({
-    m,
-  });
   let combined = list_concat_multiple(m);
   return combined;
 }
