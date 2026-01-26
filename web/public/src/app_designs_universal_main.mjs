@@ -24,7 +24,8 @@ export function app_designs_universal_main(context) {
       let offset_x = offset + x;
       let column = html_span(row);
       html_style_assign(b, {
-        width: "100%",
+        width: "5px",
+        height: "5px",
       });
       let item = list_get(column, offset_x);
       html_style_background_color(column, item);
