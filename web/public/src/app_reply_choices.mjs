@@ -142,6 +142,10 @@ export function app_reply_choices() {
       response: greetings,
     },
     {
+      text: app_reply_greetings() + " " + app_reply_called_why(),
+      response: list_join_newline_2([greetings, called_why]),
+    },
+    {
       text: app_reply_greetings() + " " + app_reply_how_day(),
       response: list_join_newline_2([greetings, how_day]),
     },
@@ -160,10 +164,6 @@ export function app_reply_choices() {
     {
       text: app_reply_greetings() + " " + app_reply_languages(),
       response: list_join_newline_2([greetings, languages]),
-    },
-    {
-      text: app_reply_greetings() + " " + app_reply_called_why(),
-      response: list_join_newline_2([greetings, called_why]),
     },
     {
       text: emoji_hands_raising() + " Hallelujah",
