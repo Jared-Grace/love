@@ -13,7 +13,8 @@ export function app_designs_universal_main(context) {
   let rows = 2;
   let shape = html_div(root);
   function lambda(i) {
-    each_range(count, function lambda2(i2) {});
+    function lambda2(i2) {}
+    each_range(count, lambda2);
   }
   each_range(rows, lambda);
   let div = html_div(shape);
