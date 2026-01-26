@@ -27,7 +27,7 @@ export function app_designs_universal_main(context) {
         width: "5px",
         height: "5px",
       });
-      let item = list_get(column, offset_x);
+      let item = list_get(possibility, offset_x);
       html_style_background_color(column, item);
     }
     each_range(columns, lambda2);
