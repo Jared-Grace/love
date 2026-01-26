@@ -41,12 +41,13 @@ export function app_designs_universal_main(context) {
     },
   ];
   function lambda4(dimension) {
+    let container = html_br(root);
     let columns = object_property_get(dimension, "columns");
     let rows = object_property_get(dimension, "rows");
     let slots = rows * columns;
     let possbilities = list_cartesian_product_self(colors, slots);
     function lambda3(possibility) {
-      let shape = html_div(root);
+      let shape = html_div(container);
       html_style_grid(shape, columns, rows);
       function lambda(y) {
         let offset = y * columns;
@@ -65,7 +66,6 @@ export function app_designs_universal_main(context) {
       each_range(rows, lambda);
     }
     each(possbilities, lambda3);
-    let component2 = html_br(root);
   }
   each(dimensions, lambda4);
 }
