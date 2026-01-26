@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { json_copy } from "../../../love/public/src/json_copy.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -12,5 +13,5 @@ export function app_designs_universal_main() {
     }
     each(copy, lambda2);
   }
-  each(colors, lambda);
+  let m = list_map(colors, lambda);
 }
