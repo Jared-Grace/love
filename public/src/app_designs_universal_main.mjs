@@ -1,7 +1,6 @@
 import { each } from "../../../love/public/src/each.mjs";
 import { html_style_grid } from "../../../love/public/src/html_style_grid.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -16,25 +15,24 @@ export function app_designs_universal_main(context) {
   let rows = 2;
   let slots = rows * columns;
   let possbilities = list_cartesian_product_self(colors, slots);
-  function lambda3(item2) {}
-  each(possbilities, lambda3);
-  let possibility = list_first(possbilities);
-  let shape = html_div(root);
-  html_style_grid(shape, columns, rows);
-  function lambda(y) {
-    let offset = y * columns;
-    function lambda2(x) {
-      let offset_x = offset + x;
-      let column = html_div(shape);
-      html_style_assign(column, {
-        width: "5px",
-        height: "5px",
-      });
-      let item = list_get(possibility, offset_x);
-      html_style_background_color(column, item);
+  function lambda3(possibility) {
+    let shape = html_div(root);
+    html_style_grid(shape, columns, rows);
+    function lambda(y) {
+      let offset = y * columns;
+      function lambda2(x) {
+        let offset_x = offset + x;
+        let column = html_div(shape);
+        html_style_assign(column, {
+          width: "5px",
+          height: "5px",
+        });
+        let item = list_get(possibility, offset_x);
+        html_style_background_color(column, item);
+      }
+      each_range(columns, lambda2);
     }
-    each_range(columns, lambda2);
+    each_range(rows, lambda);
   }
-  each_range(rows, lambda);
-  return possbilities;
+  each(possbilities, lambda3);
 }
