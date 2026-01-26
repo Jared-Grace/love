@@ -19,11 +19,10 @@ export function app_designs_universal_main(context) {
   let possibility = list_first(possbilities);
   let shape = html_div(root);
   function lambda(y) {
-    let row = html_div(shape);
     let offset = y * columns;
     function lambda2(x) {
       let offset_x = offset + x;
-      let column = html_span(row);
+      let column = html_span(shape);
       html_display_inline_block(column);
       html_style_assign(column, {
         width: "5px",
