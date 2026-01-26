@@ -16,7 +16,12 @@ export function app_designs_universal_main(context) {
   let possbilities = list_cartesian_product_self(colors, slots);
   let possibility = list_first(possbilities);
   let shape = html_div(root);
-  html_style_assign(b, s);
+  html_style_assign(b, {
+    display: "grid",
+    "grid-template-columns": "repeat(2, 1fr)",
+    "grid-template-rows": "repeat(3, auto)",
+    gap: "8px",
+  });
   function lambda(y) {
     let offset = y * columns;
     function lambda2(x) {
