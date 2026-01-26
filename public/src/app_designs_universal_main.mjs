@@ -1,3 +1,4 @@
+import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
@@ -22,6 +23,7 @@ export function app_designs_universal_main(context) {
     function lambda2(x) {
       let offset_x = offset + x;
       let column = html_span(row);
+      html_style_set(b, style_key, style_value);
       let item = list_get(possibility, offset_x);
       html_style_background_color(column, item);
     }
