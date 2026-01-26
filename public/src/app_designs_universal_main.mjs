@@ -16,7 +16,8 @@ export function app_designs_universal_main(context) {
   function lambda(i) {
     let row = html_div(shape);
     function lambda2(i2) {
-      let component = html_span(parent);
+      let column = html_span(row);
+      html_style_background_color(root, "gray");
     }
     each_range(columns, lambda2);
   }
