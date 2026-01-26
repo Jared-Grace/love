@@ -23,8 +23,10 @@ export function app_designs_universal_main(context) {
     function lambda2(x) {
       let offset_x = offset + x;
       let column = html_span(row);
-      html_style_assign(b, s);
-      let item = list_get(possibility, offset_x);
+      html_style_assign(b, {
+        width: "100%",
+      });
+      let item = list_get(column, offset_x);
       html_style_background_color(column, item);
     }
     each_range(columns, lambda2);
