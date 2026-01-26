@@ -14,7 +14,7 @@ export function app_designs_universal_main(context) {
   let shape = html_div(root);
   function lambda(i) {
     function lambda2(i2) {}
-    each_range(count, lambda2);
+    each_range(columns, lambda2);
   }
   each_range(rows, lambda);
   let div = html_div(shape);
