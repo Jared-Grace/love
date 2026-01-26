@@ -1,4 +1,3 @@
-import { html_display_inline_block } from "../../../love/public/src/html_display_inline_block.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
@@ -22,7 +21,6 @@ export function app_designs_universal_main(context) {
     function lambda2(x) {
       let offset_x = offset + x;
       let column = html_div(shape);
-      html_display_inline_block(column);
       html_style_assign(column, {
         width: "5px",
         height: "5px",
