@@ -15,6 +15,7 @@ export function app_designs_universal_main(context) {
   let shape = html_div(root);
   function lambda(y) {
     let row = html_div(shape);
+    let offset = y * columns;
     function lambda2(x) {
       let column = html_span(row);
       let index = html_style_background_color(root, "gray");
