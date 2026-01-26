@@ -12,8 +12,10 @@ export function app_designs_universal_main(context) {
   let columns = 3;
   let rows = 2;
   let shape = html_div(root);
-  function lambda(i) {}
+  function lambda(i) {
+    each_range(count, function lambda2(i2) {});
+  }
   each_range(rows, lambda);
-  let div = html_div(root2);
+  let div = html_div(shape);
   return possbilities;
 }
