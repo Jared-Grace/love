@@ -7,18 +7,19 @@ import { each } from "../../../love/public/src/each.mjs";
 export function app_designs_universal_main() {
   let colors = ["black", "white"];
   let slots = 2;
-  function lambda3(i) {}
-  each_range(count, lambda3);
-  let possbilities = [[]];
-  function lambda(color) {
-    let copy = json_copy(possbilities);
-    function lambda2(p) {
-      list_add(p, color);
+  function lambda3(i) {
+    let possbilities = [[]];
+    function lambda(color) {
+      let copy = json_copy(possbilities);
+      function lambda2(p) {
+        list_add(p, color);
+      }
+      each(copy, lambda2);
+      return copy;
     }
-    each(copy, lambda2);
-    return copy;
+    let m = list_map(colors, lambda);
+    possbilities = list_concat_multiple(m);
   }
-  let m = list_map(colors, lambda);
-  possbilities = list_concat_multiple(m);
+  each_range(slots, lambda3);
   return possbilities;
 }
