@@ -40,10 +40,8 @@ export function app_designs_universal_main(context) {
     },
   ];
   function lambda4(dimension) {
-    let columns2 = object_property_get(dimension, "columns");
-    let rows2 = object_property_get(dimension, "rows");
-    let columns = 3;
-    let rows = 2;
+    let columns = object_property_get(dimension, "columns");
+    let rows = object_property_get(dimension, "rows");
     let slots = rows * columns;
     let possbilities = list_cartesian_product_self(colors, slots);
     function lambda3(possibility) {
