@@ -8,16 +8,16 @@ export function app_designs_universal_main(context) {
   let root = object_property_get(context, "root");
   html_style_background_color(root, "gray");
   let colors = ["black", "white"];
-  let slots = 2;
-  let possbilities = list_cartesian_product_self(colors, slots);
   let columns = 3;
   let rows = 2;
+  let slots = 2;
+  let possbilities = list_cartesian_product_self(colors, slots);
   let shape = html_div(root);
   function lambda(i) {
     let row = html_div(shape);
     function lambda2(i2) {
       let column = html_span(row);
-      html_style_background_color(root, "gray");
+      let index = html_style_background_color(root, "gray");
     }
     each_range(columns, lambda2);
   }
