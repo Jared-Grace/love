@@ -14,7 +14,7 @@ export function app_designs_universal_main(context) {
   let rows = 2;
   let slots = rows * columns;
   let possbilities = list_cartesian_product_self(colors, slots);
-  let possbility = list_first(possbilities);
+  let possibility = list_first(possbilities);
   let shape = html_div(root);
   function lambda(y) {
     let row = html_div(shape);
@@ -22,7 +22,7 @@ export function app_designs_universal_main(context) {
     function lambda2(x) {
       let offset_x = offset + x;
       let column = html_span(row);
-      let item = list_get(possbility, offset_x);
+      let item = list_get(possibility, offset_x);
       let index = html_style_background_color(root, "gray");
     }
     each_range(columns, lambda2);
