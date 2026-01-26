@@ -9,6 +9,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { list_cartesian_product_self } from "../../../love/public/src/list_cartesian_product_self.mjs";
 export function app_designs_universal_main(context) {
   let root = object_property_get(context, "root");
+  html_style_assign(b, s);
   html_style_background_color(root, "gray");
   let colors = ["black", "white"];
   let columns = 3;
