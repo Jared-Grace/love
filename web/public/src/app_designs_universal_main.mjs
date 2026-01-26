@@ -10,6 +10,7 @@ export function app_designs_universal_main(context) {
   let possbilities = list_cartesian_product_self(colors, slots);
   let columns = 3;
   let rows = 2;
+  let shape = html_div(root);
   let div = html_div(root2);
   return possbilities;
 }
