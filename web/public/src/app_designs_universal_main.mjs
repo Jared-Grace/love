@@ -23,7 +23,7 @@ export function app_designs_universal_main(context) {
       let offset_x = offset + x;
       let column = html_span(row);
       let item = list_get(possibility, offset_x);
-      let index = html_style_background_color(root, "gray");
+      html_style_background_color(column, item);
     }
     each_range(columns, lambda2);
   }
