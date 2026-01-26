@@ -1,3 +1,4 @@
+import { each_range } from "../../../love/public/src/each_range.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -6,6 +7,7 @@ import { each } from "../../../love/public/src/each.mjs";
 export function app_designs_universal_main() {
   let colors = ["black", "white"];
   let slots = 2;
+  each_range(count, function lambda3(i) {});
   let possbilities = [[]];
   function lambda(color) {
     let copy = json_copy(possbilities);
@@ -16,6 +18,6 @@ export function app_designs_universal_main() {
     return copy;
   }
   let m = list_map(colors, lambda);
-  let combined = list_concat_multiple(m);
-  return combined;
+  possbilities = list_concat_multiple(m);
+  return possbilities;
 }
