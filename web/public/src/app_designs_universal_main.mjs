@@ -22,7 +22,24 @@ export function app_designs_universal_main(context) {
       columns: 1,
       rows: 1,
     },
+    {
+      columns: 2,
+      rows: 1,
+    },
+    {
+      columns: 2,
+      rows: 2,
+    },
+    {
+      columns: 3,
+      rows: 2,
+    },
+    {
+      columns: 3,
+      rows: 3,
+    },
   ];
+  each(list, function lambda4(item2) {});
   let columns = 3;
   let rows = 2;
   let slots = rows * columns;
