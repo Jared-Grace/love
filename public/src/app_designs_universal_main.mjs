@@ -17,7 +17,7 @@ export function app_designs_universal_main(context) {
   let slots = rows * columns;
   let possbilities = list_cartesian_product_self(colors, slots);
   function lambda3(item2) {}
-  each(list, lambda3);
+  each(possbilities, lambda3);
   let possibility = list_first(possbilities);
   let shape = html_div(root);
   html_style_grid(shape, columns, rows);
