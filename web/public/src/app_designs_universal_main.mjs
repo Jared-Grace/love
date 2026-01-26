@@ -13,9 +13,9 @@ export function app_designs_universal_main(context) {
   let slots = rows * columns;
   let possbilities = list_cartesian_product_self(colors, slots);
   let shape = html_div(root);
-  function lambda(i) {
+  function lambda(y) {
     let row = html_div(shape);
-    function lambda2(i2) {
+    function lambda2(x) {
       let column = html_span(row);
       let index = html_style_background_color(root, "gray");
     }
