@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
@@ -13,6 +14,7 @@ export function app_designs_universal_main(context) {
   let rows = 2;
   let slots = rows * columns;
   let possbilities = list_cartesian_product_self(colors, slots);
+  let first = list_first(list);
   let shape = html_div(root);
   function lambda(y) {
     let row = html_div(shape);
@@ -20,7 +22,7 @@ export function app_designs_universal_main(context) {
     function lambda2(x) {
       let offset_x = offset + x;
       let column = html_span(row);
-      let item = list_get(list, index2);
+      let item = list_get(possbilities, offset_x);
       let index = html_style_background_color(root, "gray");
     }
     each_range(columns, lambda2);
