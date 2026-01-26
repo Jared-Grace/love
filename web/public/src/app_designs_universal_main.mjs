@@ -2,7 +2,6 @@ import { html_display_inline_block } from "../../../love/public/src/html_display
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
-import { html_span } from "../../../love/public/src/html_span.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
@@ -22,7 +21,7 @@ export function app_designs_universal_main(context) {
     let offset = y * columns;
     function lambda2(x) {
       let offset_x = offset + x;
-      let column = html_span(shape);
+      let column = html_div(shape);
       html_display_inline_block(column);
       html_style_assign(column, {
         width: "5px",
