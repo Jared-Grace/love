@@ -1,3 +1,4 @@
+import { html_style_grid } from "../../../love/public/src/html_style_grid.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
@@ -16,12 +17,7 @@ export function app_designs_universal_main(context) {
   let possbilities = list_cartesian_product_self(colors, slots);
   let possibility = list_first(possbilities);
   let shape = html_div(root);
-  html_style_assign(b, {
-    display: "grid",
-    "grid-template-columns": "repeat(" + columns + ", 1fr)",
-    "grid-template-rows": "repeat(" + rows + ", auto)",
-    gap: "8px",
-  });
+  html_style_grid(shape, columns, rows);
   function lambda(y) {
     let offset = y * columns;
     function lambda2(x) {
