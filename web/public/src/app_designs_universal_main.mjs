@@ -4,9 +4,10 @@ import { each } from "../../../love/public/src/each.mjs";
 export function app_designs_universal_main() {
   let colors = ["black", "white"];
   let slots = 2;
-  let possbilities = [];
+  let possbilities = [[]];
   function lambda(color) {
     let copy = json_copy(possbilities);
+    each(list2, function lambda2(item2) {});
     list_add(list, item);
   }
   each(colors, lambda);
