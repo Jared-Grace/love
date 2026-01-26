@@ -1,3 +1,4 @@
+import { list_get } from "../../../love/public/src/list_get.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -19,6 +20,7 @@ export function app_designs_universal_main(context) {
     function lambda2(x) {
       let offset_x = offset + x;
       let column = html_span(row);
+      let item = list_get(list, index2);
       let index = html_style_background_color(root, "gray");
     }
     each_range(columns, lambda2);
