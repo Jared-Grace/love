@@ -1,3 +1,4 @@
+import { html_hr } from "../../../love/public/src/html_hr.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_style_grid } from "../../../love/public/src/html_style_grid.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
@@ -65,6 +66,7 @@ export function app_designs_universal_main(context) {
       each_range(rows, lambda);
     }
     each(possbilities, lambda3);
+    let component2 = html_hr(root2);
   }
   each(dimensions, lambda4);
 }
