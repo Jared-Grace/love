@@ -18,8 +18,8 @@ export function app_designs_universal_main(context) {
   let shape = html_div(root);
   html_style_assign(b, {
     display: "grid",
-    "grid-template-columns": "repeat(2, 1fr)",
-    "grid-template-rows": "repeat(3, auto)",
+    "grid-template-columns": "repeat(" + columns + ", 1fr)",
+    "grid-template-rows": "repeat(" + rows + ", auto)",
     gap: "8px",
   });
   function lambda(y) {
