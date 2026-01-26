@@ -7,7 +7,8 @@ import { each } from "../../../love/public/src/each.mjs";
 export function app_designs_universal_main() {
   let colors = ["black", "white"];
   let slots = 2;
-  each_range(count, function lambda3(i) {});
+  function lambda3(i) {}
+  each_range(count, lambda3);
   let possbilities = [[]];
   function lambda(color) {
     let copy = json_copy(possbilities);
