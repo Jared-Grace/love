@@ -162,6 +162,10 @@ export function app_reply_choices() {
       response: list_join_newline_2([greetings, languages]),
     },
     {
+      text: app_reply_greetings() + " " + app_reply_called_why(),
+      response: list_join_newline_2([greetings, called_why]),
+    },
+    {
       text: emoji_hands_raising() + " Hallelujah",
       response:
         emoji_hands_raising() +
