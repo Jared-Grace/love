@@ -14,6 +14,7 @@ export function app_designs_universal_main() {
       list_add(p, color);
     }
     each(copy, lambda2);
+    return copy;
   }
   let m = list_map(colors, lambda);
   log({
