@@ -10,11 +10,6 @@ import { list_cartesian_product_self } from "../../../love/public/src/list_carte
 export function app_designs_universal_main(context) {
   let root = object_property_get(context, "root");
   const size = "7px";
-  html_style_assign(root, {
-    display: "flex",
-    "flex-wrap": "wrap",
-    gap: size,
-  });
   html_style_background_color(root, "gray");
   let colors = ["black", "white"];
   let dimensions = [
@@ -41,6 +36,11 @@ export function app_designs_universal_main(context) {
   ];
   function lambda4(dimension) {
     let container = html_div(root);
+    html_style_assign(container, {
+      display: "flex",
+      "flex-wrap": "wrap",
+      gap: size,
+    });
     let columns = object_property_get(dimension, "columns");
     let rows = object_property_get(dimension, "rows");
     let slots = rows * columns;
