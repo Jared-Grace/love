@@ -22,6 +22,10 @@ export function app_designs_universal_main(context) {
       columns: 2,
       rows: 1,
     },
+    {
+      columns: 2,
+      rows: 2,
+    },
   ];
   function lambda4(dimension) {
     let container = html_div(root);
