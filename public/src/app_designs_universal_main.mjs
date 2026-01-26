@@ -65,7 +65,7 @@ export function app_designs_universal_main(context) {
       each_range(rows, lambda);
     }
     each(possbilities, lambda3);
-    let component2 = html_hr(root2);
+    let component2 = html_hr(root);
   }
   each(dimensions, lambda4);
 }
