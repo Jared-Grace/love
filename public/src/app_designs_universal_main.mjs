@@ -7,9 +7,7 @@ export function app_designs_universal_main() {
   let possbilities = [[]];
   function lambda(color) {
     let copy = json_copy(possbilities);
-    function lambda2(item2) {}
-    each(list2, lambda2);
-    list_add(list, item);
+    list_add(copy, color);
   }
   each(colors, lambda);
 }
