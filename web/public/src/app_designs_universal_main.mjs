@@ -10,7 +10,7 @@ export function app_designs_universal_main(context) {
   let colors = ["black", "white"];
   let columns = 3;
   let rows = 2;
-  let slots = 2;
+  let slots = rows * columns;
   let possbilities = list_cartesian_product_self(colors, slots);
   let shape = html_div(root);
   function lambda(i) {
