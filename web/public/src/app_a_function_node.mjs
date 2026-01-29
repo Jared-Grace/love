@@ -1,4 +1,4 @@
-import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
+import { app_a_functionize } from "../../../love/public/src/app_a_functionize.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { app_a_function_declaration } from "../../../love/public/src/app_a_function_declaration.mjs";
@@ -166,8 +166,7 @@ export function app_a_function_node(a) {
           shortcut: "f",
           text: "Functionize end",
           fn: async function lambda() {
-            let context = object_property_get(a, "context");
-            let a_first = storage_local_get_context(context, key);
+            app_a_functionize(a);
           },
         });
         return choices;
