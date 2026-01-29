@@ -1,11 +1,9 @@
+import { app_a_overlay_on_enter } from "../../../love/public/src/app_a_overlay_on_enter.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_a_semicolon } from "../../../love/public/src/app_a_semicolon.mjs";
 import { app_a_nodes_list } from "../../../love/public/src/app_a_nodes_list.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { app_a_functionize } from "../../../love/public/src/app_a_functionize.mjs";
-import { app_a_overlay_close_button } from "../../../love/public/src/app_a_overlay_close_button.mjs";
-import { app_a_overlay_keydown } from "../../../love/public/src/app_a_overlay_keydown.mjs";
-import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_keyword_blue_space } from "../../../love/public/src/app_a_keyword_blue_space.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -22,11 +20,10 @@ export function app_a_variable_declaration(a) {
       shortcut: "f",
       text: "Functionize end",
       fn: async function lambda() {
-        function lambda23() {}
-        let lambda22 = html_on_enter_lambda(lambda23);
-        overlay_close();
-        let o2 = app_a_overlay_keydown(a, lambda22);
-        app_a_overlay_close_button(o2);
+        let r = app_a_overlay_on_enter(on_enter, overlay_close, a);
+        let o = object_property_get(r, "overlay_result");
+        let overlay = object_property_get(o, "overlay");
+        let oc = object_property_get(r, "container");
         await app_a_functionize(a, f_name_new);
       },
     });
