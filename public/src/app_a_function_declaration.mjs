@@ -38,9 +38,8 @@ export function app_a_function_declaration(a) {
   let right = object_property_get(r, "right");
   function lambda(lr) {
     function lambda2(o) {
-      app_a_paste(choices2, a2, overlay_result, body2);
-      let overlay_close = object_property_get(o, "overlay_close");
       let choices = [];
+      app_a_paste(choices, a, o, body);
       return choices;
     }
     app_a_overlay_choices(a, lr, lambda2);
