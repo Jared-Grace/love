@@ -5,5 +5,5 @@ export function app_a_function_node_child(a, node_replacement) {
   const replacements = {
     node: node_replacement,
   };
-  $r,app_a_function_node_replace(a, replacements);
+  return app_a_function_node_replace(a, replacements);
 }
