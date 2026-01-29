@@ -8,12 +8,12 @@ export function app_a_paste(choices, a, overlay_close, body) {
   let context = object_property_get(a, "context");
   let exists = storage_local_exists_context(context, app_a_paste.name);
   if (exists) {
-    let value = storage_local_get_context(context2, key);
+    let value = storage_local_get_context(context, app_a_paste.name);
     list_add(choices, {
       shortcut: "v",
       text: "Paste",
       fn: function lambda() {
-        list_add(body, item);
+        list_add(body, value);
         overlay_close();
       },
     });
