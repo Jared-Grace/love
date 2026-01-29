@@ -1,4 +1,4 @@
-import { app_a_variable_declration } from "../../../love/public/src/app_a_variable_declration.mjs";
+import { app_a_variable_declaration } from "../../../love/public/src/app_a_variable_declaration.mjs";
 import { app_a_function_declaration } from "../../../love/public/src/app_a_function_declaration.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_a_if_statement } from "../../../love/public/src/app_a_if_statement.mjs";
@@ -151,7 +151,7 @@ export function app_a_function_node(a) {
       }
     },
     ["VariableDeclaration"]: function lambda11() {
-      app_a_variable_declration(node);
+      app_a_variable_declaration(node);
     },
     ["VariableDeclarator"]: function lambda13() {
       let id = object_property_get(node, "id");
