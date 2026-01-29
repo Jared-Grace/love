@@ -1,3 +1,4 @@
+import { js_block_find } from "../../../love/public/src/js_block_find.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
@@ -10,6 +11,7 @@ export function app_a_functionize(a) {
     let ast = object_property_get(ai, "ast");
     let v_match = js_visit_match(ast, node);
     let stack = object_property_get(v_match, "stack");
+    let f = js_block_find(stack2);
   }
   let mapped = list_map([a, a_first], lambda);
 }
