@@ -13,9 +13,9 @@ export async function app_a_functionize(a) {
     let v_match = js_visit_match(ast, node);
     let stack = object_property_get(v_match, "stack");
     let f = js_block_find(stack);
-    let index = object_property_get(f, "index");
-    return index;
+    return f;
   }
+  let a_f = lambda(a);
   let mapped = list_map([a, a_first], lambda);
   await js_functionize(ast2, f_name_new, stack2, index_from, index_to);
 }
