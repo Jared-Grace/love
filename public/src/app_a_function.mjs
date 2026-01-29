@@ -181,6 +181,7 @@ export async function app_a_function(context) {
         input_set(combined2);
         async function lambda11(f_name_call) {
           let fn = await app_a_function_import(f_name_call);
+          fn(ast);
           let code = js_unparse(ast);
           log(code);
           log(fn);
