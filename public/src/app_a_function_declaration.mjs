@@ -37,7 +37,7 @@ export function app_a_function_declaration(a) {
   let right = object_property_get(r, "right");
   function lambda(lr) {
     function lambda2(o) {}
-    app_a_overlay_choices(a2, component, lambda2);
+    app_a_overlay_choices(a, lr, lambda2);
   }
   each([left, right], lambda);
 }
