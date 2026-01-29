@@ -26,13 +26,13 @@ import { js_node_types_includes } from "../../../love/public/src/js_node_types_i
 import { list_range } from "../../../love/public/src/list_range.mjs";
 import { range } from "../../../love/public/src/range.mjs";
 export async function js_functionize(
-  stack2_from,
+  stack2,
   index_from,
   index_to,
   f_name_new,
   ast,
 ) {
-  let range = list_range(stack2_from, index_from, index_to);
+  let range = list_range(stack2, index_from, index_to);
   function lambda(r) {
     let result = js_node_types_includes(r, "AwaitExpression");
     return result;
@@ -69,9 +69,9 @@ export async function js_functionize(
   let list = object_property_get(declaration, "params");
   let items = list_map(missing, js_parse_expression);
   list_add_multiple(list, items);
-  list_remove_multiple(stack2_from, range);
+  list_remove_multiple(stack2, range);
   let code = js_code_call_args_await_maybe(f_name_new, missing, declaration);
   let parsed = js_parse_statement(code);
-  list_insert(stack2_from, index_from, parsed);
+  list_insert(stack2, index_from, parsed);
   await js_outside_move(ast);
 }
