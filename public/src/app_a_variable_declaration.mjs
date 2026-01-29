@@ -20,8 +20,8 @@ export function app_a_variable_declaration(a) {
       shortcut: "f",
       text: "Functionize end",
       fn: async function lambda() {
-        function lambda2() {}
-        let r = app_a_overlay_on_enter(lambda2, overlay_close, a);
+        function on_enter() {}
+        let r = app_a_overlay_on_enter(on_enter, overlay_close, a);
         let o = object_property_get(r, "overlay_result");
         let overlay = object_property_get(o, "overlay");
         let oc = object_property_get(r, "container");
