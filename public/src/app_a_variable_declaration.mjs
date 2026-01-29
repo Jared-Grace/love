@@ -1,3 +1,4 @@
+import { app_a_input } from "../../../love/public/src/app_a_input.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_a_overlay_on_enter } from "../../../love/public/src/app_a_overlay_on_enter.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -26,6 +27,7 @@ export function app_a_variable_declaration(a) {
         let overlay = object_property_get(o, "overlay");
         let oc = object_property_get(r, "container");
         let div = html_div_text(oc, "Name of new function:");
+        let input = app_a_input(body);
         async function on_enter() {
           await app_a_functionize(a, f_name_new);
         }
