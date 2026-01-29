@@ -51,8 +51,7 @@ export function app_a_if_statement(a, node, parent) {
         fn: async function lambda2() {
           overlay_close();
           log({
-            node,
-            parent,
+            a,
           });
         },
       },
