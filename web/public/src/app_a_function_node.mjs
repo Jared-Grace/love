@@ -166,7 +166,7 @@ export function app_a_function_node(a) {
           shortcut: "f",
           text: "Functionize end",
           fn: async function lambda() {
-            app_a_functionize(a);
+            app_a_functionize(a, f_name_new);
           },
         });
         return choices;
