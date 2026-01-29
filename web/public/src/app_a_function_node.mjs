@@ -49,9 +49,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 export function app_a_function_node(a) {
   let node = object_property_get(a, "node");
   let parent = object_property_get(a, "parent");
-  let ast = object_property_get(a, "ast");
-  let context = object_property_get(a, "context");
-  let parsed = object_property_get(a, "parsed");
   let type = object_property_get(node, "type");
   let lookup = {
     Program: function lambda3() {
