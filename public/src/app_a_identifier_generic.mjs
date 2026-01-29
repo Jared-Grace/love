@@ -1,3 +1,4 @@
+import { assert } from "../../../love/public/src/assert.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
 import { html_rows_set } from "../../../love/public/src/html_rows_set.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -125,6 +126,7 @@ export function app_a_identifier_generic(
         text: "Paste replace",
         fn: async function lambda2() {
           let name_new = await clipboard_paste();
+          assert(b);
           replace(name_new);
           await app_a_function_on_change(o, a);
           overlay_close();
