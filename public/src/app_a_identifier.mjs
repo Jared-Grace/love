@@ -44,6 +44,7 @@ export function app_a_identifier(a) {
     }
     html_font_color_set(span, color);
   }
+  function lambda() {}
   app_a_identifier_generic(
     a,
     span,
@@ -54,7 +55,7 @@ export function app_a_identifier(a) {
       on_change,
     },
     false,
-    () => {},
+    lambda,
   );
   async function on_change(name_new) {
     let ast = object_property_get(a, "ast");
