@@ -181,7 +181,7 @@ export async function app_a_function(context) {
         async function lambda11(f_name_call) {
           let fn = await app_a_function_import(f_name_call);
           fn(ast);
-          let code = js_unparse(ast2);
+          let code = js_unparse(ast);
           await app_a_function_on_change(overlay_result, a);
         }
       },
