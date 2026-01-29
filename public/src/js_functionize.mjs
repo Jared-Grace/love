@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { js_outside_move } from "../../../love/public/src/js_outside_move.mjs";
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
@@ -32,6 +33,7 @@ export async function js_functionize(
   f_name_new,
   ast,
 ) {
+  marker("1");
   let range = list_range(stack2, index_from, index_to);
   function lambda(r) {
     let result = js_node_types_includes(r, "AwaitExpression");
