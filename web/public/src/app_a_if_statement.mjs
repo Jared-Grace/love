@@ -59,7 +59,7 @@ export function app_a_if_statement(a, node, parent) {
           let stack = object_property_get(v_match, "stack");
           let f = js_block_find(stack);
           let item = object_property_get(f, "item");
-          let context2 = object_property_get(a, "context");
+          let context = object_property_get(a, "context");
           storage_local_set_context(context, app_a_paste.name, item);
           let body = object_property_get(f, "body");
           list_remove(body, item);
