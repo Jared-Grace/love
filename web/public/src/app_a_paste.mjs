@@ -1,3 +1,4 @@
+import { storage_local_remove_context } from "../../../love/public/src/storage_local_remove_context.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -18,5 +19,6 @@ export function app_a_paste(choices, a, overlay_result, body_list) {
         await app_a_function_on_change(overlay_result, a);
       },
     });
+    storage_local_remove_context(context, app_a_paste.name);
   }
 }
