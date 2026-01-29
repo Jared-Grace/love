@@ -148,7 +148,7 @@ export function app_a_function_node(a) {
       let v3 = app_a_raw(node, parent);
       let component = object_property_get(v3, "component");
       let raw = object_property_get(v3, "raw");
-      app_a_literal(a, component, node, replace, raw);
+      app_a_literal(a, component, node, replace, raw, replace);
       function replace(value_new) {
         object_property_set(node, "raw", value_new);
       }
@@ -241,7 +241,7 @@ export function app_a_function_node(a) {
       each_pair_or_null(quasis, expressions, lambda22);
       app_a_symbol_string_template(container);
       let code = js_unparse(node);
-      app_a_literal(a, container, node, on_change, code);
+      app_a_literal(a, container, node, on_change, code, replace);
       function on_change(value_new) {
         let node_new = js_parse_expression(value_new);
         object_replace(node, node_new);
