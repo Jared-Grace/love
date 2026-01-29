@@ -156,6 +156,7 @@ export function app_a_function_node(a) {
     ["VariableDeclaration"]: function lambda11() {
       let kind = object_property_get(node, "kind");
       let k = app_a_keyword_blue_space(parent, kind);
+      let keyword = object_property_get(k, "keyword");
       let declarations = object_property_get(node, "declarations");
       app_a_nodes_list(a, declarations, parent);
       app_a_semicolon(parent);
