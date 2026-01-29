@@ -23,7 +23,8 @@ export function app_a_variable_declaration(a) {
         let r = app_a_overlay_on_enter(on_enter, overlay_close, a);
         let o = object_property_get(r, "overlay_result");
         let overlay = object_property_get(o, "overlay");
-        let oc = object_property_get(r, "container");$f
+        let oc = object_property_get(r, "container");
+        () => {};
         await app_a_functionize(a, f_name_new);
       },
     });
