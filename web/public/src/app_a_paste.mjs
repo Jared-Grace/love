@@ -10,7 +10,9 @@ export function app_a_paste(choices, a, overlay_close) {
     list_add(choices, {
       shortcut: "v",
       text: "Paste",
-      fn: function lambda() {},
+      fn: function lambda() {
+        overlay_close();
+      },
     });
   }
 }
