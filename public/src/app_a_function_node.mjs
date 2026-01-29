@@ -1,9 +1,4 @@
-import { app_a_overlay_close_button } from "../../../love/public/src/app_a_overlay_close_button.mjs";
-import { app_a_overlay_keydown } from "../../../love/public/src/app_a_overlay_keydown.mjs";
-import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
-import { app_a_functionize } from "../../../love/public/src/app_a_functionize.mjs";
-import { list_add } from "../../../love/public/src/list_add.mjs";
-import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
+import { app_a_variable_declration } from "../../../love/public/src/app_a_variable_declration.mjs";
 import { app_a_function_declaration } from "../../../love/public/src/app_a_function_declaration.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_a_if_statement } from "../../../love/public/src/app_a_if_statement.mjs";
@@ -40,7 +35,6 @@ import { js_keyword_await } from "../../../love/public/src/js_keyword_await.mjs"
 import { app_a_keyword_purple_space } from "../../../love/public/src/app_a_keyword_purple_space.mjs";
 import { app_a_body } from "../../../love/public/src/app_a_body.mjs";
 import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
-import { app_a_keyword_blue_space } from "../../../love/public/src/app_a_keyword_blue_space.mjs";
 import { list_empty_is_assert } from "../../../love/public/src/list_empty_is_assert.mjs";
 import { js_keyword_export } from "../../../love/public/src/js_keyword_export.mjs";
 import { app_a_keyword_purple } from "../../../love/public/src/app_a_keyword_purple.mjs";
@@ -160,29 +154,7 @@ export function app_a_function_node(a) {
       }
     },
     ["VariableDeclaration"]: function lambda11() {
-      let kind = object_property_get(node, "kind");
-      let k = app_a_keyword_blue_space(parent, kind);
-      let keyword = object_property_get(k, "keyword");
-      function lambda19(o) {
-        let choices = [];
-        list_add(choices, {
-          shortcut: "f",
-          text: "Functionize end",
-          fn: async function lambda() {
-            function lambda23() {}
-            let lambda22 = html_on_enter_lambda(lambda23);
-            overlay_close();
-            let o2 = app_a_overlay_keydown(a, lambda22);
-            app_a_overlay_close_button(o2);
-            await app_a_functionize(a, f_name_new);
-          },
-        });
-        return choices;
-      }
-      app_a_overlay_choices(a, keyword, lambda19);
-      let declarations = object_property_get(node, "declarations");
-      app_a_nodes_list(a, declarations, parent);
-      app_a_semicolon(parent);
+      app_a_variable_declration(node, parent, a);
     },
     ["VariableDeclarator"]: function lambda13() {
       let id = object_property_get(node, "id");
