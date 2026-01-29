@@ -2,9 +2,10 @@ import { browser_is } from "../../../love/public/src/browser_is.mjs";
 export async function clipboard_paste() {
   let b = browser_is();
   if (b) {
-    await navigator.clipboard.readText();
-    return;
+    let v = await navigator.clipboard.readText();
+    return v;
   }
   const clipboard = await import("clipboardy");
-  await clipboard.default.read();
+  let paste = await clipboard.default.read();
+  return paste;
 }
