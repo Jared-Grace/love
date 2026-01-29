@@ -1,3 +1,4 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { js_identifier_defineds_includes } from "../../../love/public/src/js_identifier_defineds_includes.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
@@ -10,6 +11,7 @@ import { html_font_color_set } from "../../../love/public/src/html_font_color_se
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function app_a_identifier(a) {
+  marker("1");
   let node = object_property_get(a, "node");
   let parent = object_property_get(a, "parent");
   let name = object_property_get(node, "name");
