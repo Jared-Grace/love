@@ -1,3 +1,4 @@
+import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
@@ -34,6 +35,8 @@ export function app_a_function_declaration(a) {
   let r = app_a_function_node_child(a, body2);
   let left = object_property_get(r, "left");
   let right = object_property_get(r, "right");
-  function lambda(lr) {}
+  function lambda(lr) {
+    app_a_overlay_choices(a2, component, function lambda2(o) {});
+  }
   each([left, right], lambda);
 }
