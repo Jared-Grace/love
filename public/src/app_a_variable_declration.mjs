@@ -11,6 +11,8 @@ import { app_a_keyword_blue_space } from "../../../love/public/src/app_a_keyword
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function app_a_variable_declration(node) {
   marker("1");
+  let node = object_property_get(a, "node");
+  let parent = object_property_get(a, "parent");
   let kind = object_property_get(node, "kind");
   let k = app_a_keyword_blue_space(parent, kind);
   let keyword = object_property_get(k, "keyword");
