@@ -1,3 +1,5 @@
+import { app_a_paste } from "../../../love/public/src/app_a_paste.mjs";
+import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { js_block_find } from "../../../love/public/src/js_block_find.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -58,6 +60,7 @@ export function app_a_if_statement(a, node, parent) {
           let f = js_block_find(stack);
           let body = object_property_get(f, "body");
           let item = object_property_get(f, "item");
+          storage_local_get_context(context, app_a_paste.name);
           log({
             body,
             item,
