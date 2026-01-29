@@ -1,3 +1,4 @@
+import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { app_a_function_declaration } from "../../../love/public/src/app_a_function_declaration.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_a_if_statement } from "../../../love/public/src/app_a_if_statement.mjs";
@@ -157,6 +158,7 @@ export function app_a_function_node(a) {
       let kind = object_property_get(node, "kind");
       let k = app_a_keyword_blue_space(parent, kind);
       let keyword = object_property_get(k, "keyword");
+      app_a_overlay_choices(a2, component2, function lambda19(o) {});
       let declarations = object_property_get(node, "declarations");
       app_a_nodes_list(a, declarations, parent);
       app_a_semicolon(parent);
