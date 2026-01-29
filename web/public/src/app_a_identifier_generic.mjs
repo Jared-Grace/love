@@ -126,9 +126,6 @@ export function app_a_identifier_generic(
         text: "Paste replace",
         fn: async function lambda2() {
           let name_new = await clipboard_paste();
-          log({
-            name_new,
-          });
           string_is_assert(name_new);
           replace(name_new);
           await app_a_function_on_change(o, a);
