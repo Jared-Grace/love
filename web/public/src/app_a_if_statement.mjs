@@ -44,6 +44,30 @@ export function app_a_if_statement(a, node, parent) {
           }
         },
       },
+      {
+        shortcut: "u",
+        text: "Cut",
+        fn: async function lambda2() {
+          overlay_close();
+          let v2 = await app_a_functions_overlay(a, on_select);
+          let overlay_result = object_property_get(v2, "overlay_result");
+          async function on_select(f_name_call) {
+            let v = app_a_node_index(a);
+            let stack = object_property_get(v, "stack");
+            let index = object_property_get(v, "index");
+            let list = object_property_get(v, "list");
+            let ast = object_property_get(v, "ast");
+            let parsed = await js_call_new_insert(
+              f_name_call,
+              ast,
+              list,
+              index,
+              stack,
+            );
+            await app_a_function_on_change(overlay_result, a);
+          }
+        },
+      },
     ];
     return choices;
   }
