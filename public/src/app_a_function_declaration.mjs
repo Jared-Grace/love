@@ -39,6 +39,7 @@ export function app_a_function_declaration(a) {
   function lambda(lr) {
     function lambda2(o) {
       let choices = [];
+      let body2 = object_property_get(body, "body");
       app_a_paste(choices, a, o, body);
       return choices;
     }
