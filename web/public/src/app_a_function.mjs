@@ -1,3 +1,4 @@
+import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { app_a_function_import } from "../../../love/public/src/app_a_function_import.mjs";
 import { function_new_js_name } from "../../../love/public/src/function_new_js_name.mjs";
 import { app_a_functions_overlay } from "../../../love/public/src/app_a_functions_overlay.mjs";
@@ -180,6 +181,7 @@ export async function app_a_function(context) {
         async function lambda11(f_name_call) {
           let fn = await app_a_function_import(f_name_call);
           fn(ast);
+          let code = js_unparse(ast2);
           await app_a_function_on_change(overlay_result, a);
         }
       },
