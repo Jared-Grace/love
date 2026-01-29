@@ -51,9 +51,9 @@ export function app_a_if_statement(a, node, parent) {
         text: "Cut",
         fn: async function lambda2() {
           overlay_close();
-          let v_match = js_visit_match(ast2, search);
+          let v_match = js_visit_match(ast, node);
           log({
-            a,
+            v_match,
           });
         },
       },
