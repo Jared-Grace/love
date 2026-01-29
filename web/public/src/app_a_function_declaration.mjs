@@ -36,7 +36,10 @@ export function app_a_function_declaration(a) {
   let left = object_property_get(r, "left");
   let right = object_property_get(r, "right");
   function lambda(lr) {
-    function lambda2(o) {}
+    function lambda2(o) {
+      let overlay_close = object_property_get(o, "overlay_close");
+      return [];
+    }
     app_a_overlay_choices(a, lr, lambda2);
   }
   each([left, right], lambda);
