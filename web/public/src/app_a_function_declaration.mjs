@@ -38,8 +38,8 @@ export function app_a_function_declaration(a) {
   function lambda(lr) {
     function lambda2(o) {
       let overlay_close = object_property_get(o, "overlay_close");
-      let v3 = [];
-      return v3;
+      let choices = [];
+      return choices;
     }
     app_a_overlay_choices(a, lr, lambda2);
   }
