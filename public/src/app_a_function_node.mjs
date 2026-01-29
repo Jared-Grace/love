@@ -169,7 +169,8 @@ export function app_a_function_node(a) {
           shortcut: "f",
           text: "Functionize end",
           fn: async function lambda() {
-            let lambda22 = html_on_enter_lambda(() => {});
+            function lambda23() {}
+            let lambda22 = html_on_enter_lambda(lambda23);
             overlay_close();
             let o2 = app_a_overlay_keydown(a, lambda22);
             app_a_overlay_close_button(o2);
