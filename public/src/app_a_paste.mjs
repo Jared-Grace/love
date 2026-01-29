@@ -11,7 +11,7 @@ export function app_a_paste(choices, a, overlay_close, body) {
       shortcut: "v",
       text: "Paste",
       fn: function lambda() {
-        list_add(list, item);
+        list_add(body, item);
         overlay_close();
       },
     });
