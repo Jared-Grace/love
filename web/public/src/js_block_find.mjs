@@ -9,6 +9,7 @@ export function js_block_find(stack) {
   let f = {
     body,
     index,
+    item,
   };
   return f;
 }
