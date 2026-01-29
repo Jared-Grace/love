@@ -56,6 +56,8 @@ export function app_a_if_statement(a, node, parent) {
           let v_match = js_visit_match(ast, node);
           let stack = object_property_get(v_match, "stack");
           let f = js_block_find(stack);
+          let body = object_property_get(f, "body");
+          let item = object_property_get(f, "item");
           log({
             f,
           });
