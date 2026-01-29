@@ -12,7 +12,7 @@ export function app_a_functionize(a) {
     let v_match = js_visit_match(ast, node);
     let stack = object_property_get(v_match, "stack");
     let f = js_block_find(stack);
-    let index = object_property_get(g, "index");
+    let index = object_property_get(f, "index");
     return index;
   }
   let mapped = list_map([a, a_first], lambda);
