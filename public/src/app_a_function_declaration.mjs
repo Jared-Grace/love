@@ -26,7 +26,7 @@ export function app_a_function_declaration(a) {
     let choices = [];
     list_add(choices, {
       shortcut: "f",
-      text: "Functionize",
+      text: "Functionize start",
       fn: async function lambda() {
         let context = object_property_get(a, "context");
         storage_local_set_context(context, key, a);
