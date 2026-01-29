@@ -27,8 +27,8 @@ import { js_node_types_includes } from "../../../love/public/src/js_node_types_i
 import { list_range } from "../../../love/public/src/list_range.mjs";
 import { range } from "../../../love/public/src/range.mjs";
 export async function js_functionize(
-  f_name_new,
   ast,
+  f_name_new,
   stack2,
   index_from,
   index_to,
