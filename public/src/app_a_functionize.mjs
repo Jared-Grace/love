@@ -1,3 +1,4 @@
+import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -6,6 +7,7 @@ export function app_a_functionize(a) {
   let a_first = storage_local_get_context(context, app_a_functionize.name);
   function lambda(ai) {
     let node = object_property_get(ai, "node");
+    let v_match = js_visit_match(ast, search);
   }
   let mapped = list_map([a, a_first], lambda);
 }
