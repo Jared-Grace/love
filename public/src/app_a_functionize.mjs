@@ -1,3 +1,4 @@
+import { list_next } from "../../../love/public/src/list_next.mjs";
 import { js_block_find } from "../../../love/public/src/js_block_find.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -12,6 +13,7 @@ export function app_a_functionize(a) {
     let v_match = js_visit_match(ast, node);
     let stack = object_property_get(v_match, "stack");
     let f = js_block_find(stack);
+    let next = list_next(list, item);
   }
   let mapped = list_map([a, a_first], lambda);
 }
