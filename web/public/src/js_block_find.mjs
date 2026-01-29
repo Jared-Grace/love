@@ -6,9 +6,9 @@ export function js_block_find(stack) {
   let body = list_next(stack, block);
   let item = list_next(stack, body);
   let index = list_index_of(body, item);
-  let v = {
+  let f = {
     body,
     index,
   };
-  return v;
+  return f;
 }
