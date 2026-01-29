@@ -21,8 +21,8 @@ export function app_a_function_declaration(a) {
   app_a_keyword_blue_space(parent, k);
   let async = object_property_get(node, "async");
   if (async) {
-    let as = js_keyword_async();
-    app_a_keyword_blue_space(parent, as);
+    let ka = js_keyword_async();
+    app_a_keyword_blue_space(parent, ka);
   }
   let id = object_property_get(node, "id");
   app_a_function_node_child(a, id);
