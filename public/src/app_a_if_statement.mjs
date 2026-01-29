@@ -51,6 +51,7 @@ export function app_a_if_statement(a, node, parent) {
         text: "Cut",
         fn: async function lambda2() {
           overlay_close();
+          let ast2 = object_property_get(a, "ast");
           let v_match = js_visit_match(ast, node);
           log({
             v_match,
