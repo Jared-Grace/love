@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_identifier_defineds_includes } from "../../../love/public/src/js_identifier_defineds_includes.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
@@ -44,7 +45,9 @@ export function app_a_identifier(a) {
     }
     html_font_color_set(span, color);
   }
-  function lambda() {}
+  function lambda() {
+    object_property_set(object, property_name, value);
+  }
   app_a_identifier_generic(
     a,
     span,
