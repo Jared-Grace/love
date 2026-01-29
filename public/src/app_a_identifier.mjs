@@ -45,7 +45,7 @@ export function app_a_identifier(a) {
     }
     html_font_color_set(span, color);
   }
-  function lambda(value_new) {
+  function replace(value_new) {
     object_property_set(node, "name", value_new);
   }
   app_a_identifier_generic(
@@ -58,7 +58,7 @@ export function app_a_identifier(a) {
       on_change,
     },
     false,
-    lambda,
+    replace,
   );
   async function on_change(name_new) {
     let ast = object_property_get(a, "ast");
