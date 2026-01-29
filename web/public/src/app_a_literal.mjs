@@ -12,5 +12,6 @@ export function app_a_literal(a, component, node, on_change, raw) {
       on_change,
     },
     true,
+    replace,
   );
 }

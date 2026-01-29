@@ -52,6 +52,7 @@ export function app_a_identifier(a) {
       on_change,
     },
     false,
+    replace,
   );
   async function on_change(name_new) {
     let ast = object_property_get(a, "ast");
