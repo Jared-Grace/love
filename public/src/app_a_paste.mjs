@@ -5,4 +5,6 @@ export function app_a_paste(choices, a) {
   marker("1");
   let context = object_property_get(a, "context");
   let exists = storage_local_exists_context(context, app_a_paste.name);
+  if (false) {
+  }
 }
