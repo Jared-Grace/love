@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { app_a_function_import } from "../../../love/public/src/app_a_function_import.mjs";
 import { function_new_js_name } from "../../../love/public/src/function_new_js_name.mjs";
