@@ -124,8 +124,8 @@ export function app_a_identifier_generic(
         shortcut: "v",
         text: "Paste replace",
         fn: async function lambda2() {
-          await clipboard_paste();
-          let name_new = replace(name_new);
+         let name_new = await clipboard_paste();
+           replace(name_new);
           await app_a_function_on_change(o2, a);
           overlay_close();
         },
