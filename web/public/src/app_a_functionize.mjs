@@ -19,5 +19,5 @@ export async function app_a_functionize(a) {
   let body = object_property_get(a_f, "body");
   let a_first_f = lambda(a_first);
   let index2 = object_property_get(a_first_f, "index");
-  await js_functionize(ast, f_name_new, body, index_from, index_to);
+  await js_functionize(ast, f_name_new, body, index, index2);
 }
