@@ -164,7 +164,7 @@ export function app_a_function_node(a) {
         let choices = [];
         list_add(choices, {
           shortcut: "f",
-          text: "Functionize",
+          text: "Functionize end",
           fn: async function lambda() {
             let context = object_property_get(a, "context");
             let a_first = storage_local_get_context(context, key);
