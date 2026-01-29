@@ -45,8 +45,8 @@ export function app_a_identifier(a) {
     }
     html_font_color_set(span, color);
   }
-  function lambda() {
-    object_property_set(object, property_name, value);
+  function lambda(value_new) {
+    object_property_set(node, "name", value_new);
   }
   app_a_identifier_generic(
     a,
