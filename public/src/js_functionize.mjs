@@ -27,11 +27,11 @@ import { js_node_types_includes } from "../../../love/public/src/js_node_types_i
 import { list_range } from "../../../love/public/src/list_range.mjs";
 import { range } from "../../../love/public/src/range.mjs";
 export async function js_functionize(
+  f_name_new,
   ast,
   stack2,
   index_from,
   index_to,
-  f_name_new,
 ) {
   marker("1");
   let range = list_range(stack2, index_from, index_to);
