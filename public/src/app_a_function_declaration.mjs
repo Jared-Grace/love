@@ -17,8 +17,8 @@ export function app_a_function_declaration(a) {
   let parent = object_property_get(a, "parent");
   let generator = object_property_get(node, "generator");
   false_is_assert(generator);
-  let v = js_keyword_function();
-  app_a_keyword_blue_space(parent, v);
+  let k = js_keyword_function();
+  app_a_keyword_blue_space(parent, k);
   let async = object_property_get(node, "async");
   if (async) {
     let v2 = js_keyword_async();
