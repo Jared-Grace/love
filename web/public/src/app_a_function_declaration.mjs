@@ -30,9 +30,9 @@ export function app_a_function_declaration(a) {
     let params = object_property_get(node, "params");
     app_a_nodes_list(a, params, parent);
   }
-  let body2 = object_property_get(node, "body");
+  let body = object_property_get(node, "body");
   html_span_space(parent);
-  let r = app_a_function_node_child(a, body2);
+  let r = app_a_function_node_child(a, body);
   let left = object_property_get(r, "left");
   let right = object_property_get(r, "right");
   function lambda(lr) {
