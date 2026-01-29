@@ -9,7 +9,7 @@ import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lam
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_keyword_blue_space } from "../../../love/public/src/app_a_keyword_blue_space.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-export function app_a_variable_declration(node, parent, a) {
+export function app_a_variable_declration(node) {
   marker("1");
   let kind = object_property_get(node, "kind");
   let k = app_a_keyword_blue_space(parent, kind);
