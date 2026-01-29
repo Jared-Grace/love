@@ -1,3 +1,6 @@
+import { app_a_overlay_close_button } from "../../../love/public/src/app_a_overlay_close_button.mjs";
+import { app_a_overlay_keydown } from "../../../love/public/src/app_a_overlay_keydown.mjs";
+import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
 import { app_a_functionize } from "../../../love/public/src/app_a_functionize.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
@@ -166,6 +169,10 @@ export function app_a_function_node(a) {
           shortcut: "f",
           text: "Functionize end",
           fn: async function lambda() {
+            let lambda22 = html_on_enter_lambda(() => {});
+            overlay_close();
+            let o2 = app_a_overlay_keydown(a, lambda22);
+            app_a_overlay_close_button(o2);
             await app_a_functionize(a, f_name_new);
           },
         });
