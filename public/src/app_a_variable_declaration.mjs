@@ -17,13 +17,13 @@ export function app_a_variable_declaration(a) {
   let kind = object_property_get(node, "kind");
   let k = app_a_keyword_blue_space(parent, kind);
   let keyword = object_property_get(k, "keyword");
-  function lambda19(o) {
+  function lambda19(o2) {
     let choices = [];
     list_add(choices, {
       shortcut: "f",
       text: "Functionize end",
       fn: async function lambda() {
-        let r = app_a_overlay_on_enter(on_enter, o, a);
+        let r = app_a_overlay_on_enter(on_enter, o2, a);
         let o = object_property_get(r, "overlay_result");
         let overlay = object_property_get(o, "overlay");
         let oc = object_property_get(r, "container");
