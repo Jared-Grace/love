@@ -1,3 +1,4 @@
+import { app_a_overlay_on_enter } from "../../../love/public/src/app_a_overlay_on_enter.mjs";
 import { string_is_assert } from "../../../love/public/src/string_is_assert.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
 import { html_rows_set } from "../../../love/public/src/html_rows_set.mjs";
@@ -6,7 +7,6 @@ import { list_remove_at_count } from "../../../love/public/src/list_remove_at_co
 import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs";
 import { app_a_input_integer } from "../../../love/public/src/app_a_input_integer.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
-import { app_a_overlay_close_button } from "../../../love/public/src/app_a_overlay_close_button.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { app_a_overlay_container_centered } from "../../../love/public/src/app_a_overlay_container_centered.mjs";
 import { app_a_textarea } from "../../../love/public/src/app_a_textarea.mjs";
@@ -45,13 +45,10 @@ export function app_a_identifier_generic(
     let context = object_property_get(a, "context");
     const change = {
       fn: async function lambda15() {
-        let f = html_on_enter_lambda(on_enter);
-        overlay_close();
-        let o = app_a_overlay_keydown(a, f);
-        app_a_overlay_close_button(o);
-        let overlay2 = object_property_get(o, "overlay");
-        let oc = app_a_overlay_container_centered(overlay2);
-        let overlay = object_property_get(o, "overlay");
+        let v2 = app_a_overlay_on_enter(on_enter, overlay_close, a);
+        let o = object_property_get(v2, "o");
+        let overlay = object_property_get(v2, "overlay");
+        let oc = object_property_get(v2, "oc");
         let text2 = object_property_get(change, "text");
         let div2 = html_div_text(oc, text2 + " from:");
         let div = html_div_text(oc, name);
