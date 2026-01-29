@@ -8,5 +8,4 @@ export function app_a_functionize(a) {
     let node = object_property_get(ai, "node");
   }
   let mapped = list_map([a, a_first], lambda);
-  let node2 = object_property_get(a_first, "node");
 }
