@@ -47,11 +47,11 @@ export function app_a_identifier_generic(
       fn: async function lambda15() {
         let f = html_on_enter_lambda(on_enter);
         overlay_close();
-        let o2 = app_a_overlay_keydown(a, f);
-        app_a_overlay_close_button(o2);
-        let overlay2 = object_property_get(o2, "overlay");
+        let o = app_a_overlay_keydown(a, f);
+        app_a_overlay_close_button(o);
+        let overlay2 = object_property_get(o, "overlay");
         let oc = app_a_overlay_container_centered(overlay2);
-        let overlay = object_property_get(o2, "overlay");
+        let overlay = object_property_get(o, "overlay");
         let text2 = object_property_get(change, "text");
         let div2 = html_div_text(oc, text2 + " from:");
         let div = html_div_text(oc, name);
@@ -75,7 +75,7 @@ export function app_a_identifier_generic(
           let value_new = html_value_get(input);
           let on_change = object_property_get(change, "on_change");
           await on_change(value_new);
-          await app_a_function_on_change(o2, a);
+          await app_a_function_on_change(o, a);
         }
         let component = app_a_button_wide(overlay, text2, on_enter);
       },
