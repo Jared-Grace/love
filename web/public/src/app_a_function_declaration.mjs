@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { app_a_nodes_list } from "../../../love/public/src/app_a_nodes_list.mjs";
@@ -32,7 +31,6 @@ export function app_a_function_declaration(a) {
   let body2 = object_property_get(node, "body");
   html_span_space(parent);
   let r = app_a_function_node_child(a, body2);
-  log({
-    r,
-  });
+  let left = object_property_get(r, "left");
+  let right = object_property_get(r, "right");
 }
