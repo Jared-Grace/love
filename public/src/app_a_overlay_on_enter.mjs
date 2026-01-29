@@ -6,14 +6,14 @@ import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lam
 export function app_a_overlay_on_enter(on_enter, overlay_close, a) {
   let f = html_on_enter_lambda(on_enter);
   overlay_close();
-  let o = app_a_overlay_keydown(a, f);
+  let overlay_result = app_a_overlay_keydown(a, f);
   app_a_overlay_close_button(o);
   let overlay = object_property_get(o, "overlay");
   let oc = app_a_overlay_container_centered(overlay);
   let v2 = {
     oc,
     overlay,
-    o,
+    overlay_result,
   };
   return v2;
 }
