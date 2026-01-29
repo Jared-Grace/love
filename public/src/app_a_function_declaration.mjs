@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { app_a_nodes_list } from "../../../love/public/src/app_a_nodes_list.mjs";
@@ -33,4 +34,5 @@ export function app_a_function_declaration(a) {
   let r = app_a_function_node_child(a, body2);
   let left = object_property_get(r, "left");
   let right = object_property_get(r, "right");
+  each(list, function lambda(item) {});
 }
