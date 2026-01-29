@@ -30,5 +30,5 @@ export function app_a_function_declaration(a) {
   }
   let body2 = object_property_get(node, "body");
   html_span_space(parent);
-  let r = app_a_function_node_child(a, body2);
+  let r = app_a_function_node_child(a, body2);$L$r
 }
