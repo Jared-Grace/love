@@ -10,7 +10,7 @@ export function app_a_paste(choices, a) {
     list_add(choices, {
       shortcut: "v",
       text: "Paste",
-      fn: () => {},
+      fn: function lambda() {},
     });
   }
 }
