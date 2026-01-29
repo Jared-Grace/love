@@ -13,6 +13,6 @@ export function js_parse(code) {
   } else {
     a = acorn;
   }
-  let ast = js_parse_generic(acorn, code);
+  let ast = js_parse_generic(a, code);
   return ast;
 }
