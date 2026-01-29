@@ -126,7 +126,7 @@ export function app_a_identifier_generic(
         fn: async function lambda2() {
           let name_new = await clipboard_paste();
           replace(name_new);
-          await app_a_function_on_change(o2, a);
+          await app_a_function_on_change(o, a);
           overlay_close();
         },
       },
