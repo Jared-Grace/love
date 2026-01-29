@@ -1,3 +1,4 @@
+import { app_a_paste } from "../../../love/public/src/app_a_paste.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -36,7 +37,8 @@ export function app_a_function_declaration(a) {
   let left = object_property_get(r, "left");
   let right = object_property_get(r, "right");
   function lambda(lr) {
-    function lambda2(o) {app_a_paste
+    function lambda2(o) {
+      app_a_paste(choices2, a2, overlay_result, body2);
       let overlay_close = object_property_get(o, "overlay_close");
       let choices = [];
       return choices;
