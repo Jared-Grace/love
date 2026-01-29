@@ -154,7 +154,7 @@ export function app_a_function_node(a) {
       }
     },
     ["VariableDeclaration"]: function lambda11() {
-      app_a_variable_declration(node, parent, a);
+      app_a_variable_declration(node);
     },
     ["VariableDeclarator"]: function lambda13() {
       let id = object_property_get(node, "id");
