@@ -1,3 +1,4 @@
+import { js_block_find } from "../../../love/public/src/js_block_find.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_a_functions_overlay } from "../../../love/public/src/app_a_functions_overlay.mjs";
@@ -53,6 +54,7 @@ export function app_a_if_statement(a, node, parent) {
           overlay_close();
           let ast = object_property_get(a, "ast");
           let v_match = js_visit_match(ast, node);
+          let v3 = js_block_find(stack2);
           log({
             v_match,
           });
