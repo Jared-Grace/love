@@ -7,12 +7,12 @@ export function app_a_overlay_on_enter(on_enter, overlay_close, a) {
   let f = html_on_enter_lambda(on_enter);
   overlay_close();
   let overlay_result = app_a_overlay_keydown(a, f);
-  app_a_overlay_close_button(o);
-  let overlay = object_property_get(o, "overlay");
+  app_a_overlay_close_button(overlay_result);
+  let overlay = object_property_get(overlay_result, "overlay");
   let container = app_a_overlay_container_centered(overlay);
-  let v2 = {
+  let r = {
     container,
     overlay_result,
   };
-  return v2;
+  return r;
 }
