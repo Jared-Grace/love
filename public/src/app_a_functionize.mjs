@@ -11,7 +11,7 @@ export function app_a_functionize(a) {
     let ast = object_property_get(ai, "ast");
     let v_match = js_visit_match(ast, node);
     let stack = object_property_get(v_match, "stack");
-    let f = js_block_find(stack2);
+    let f = js_block_find(stack);
   }
   let mapped = list_map([a, a_first], lambda);
 }
