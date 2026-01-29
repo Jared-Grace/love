@@ -25,7 +25,7 @@ export function app_a_variable_declaration(a) {
         let o = object_property_get(r, "overlay_result");
         let overlay = object_property_get(o, "overlay");
         let oc = object_property_get(r, "container");
-        let div = html_div_text(root, text2);
+        let div = html_div_text(oc, "Name of new function:");
         async function on_enter() {
           await app_a_functionize(a, f_name_new);
         }
