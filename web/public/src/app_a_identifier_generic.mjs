@@ -117,6 +117,7 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
         text: "Paste replace",
         fn: async function lambda2() {
           overlay_close();
+          await app_a_function_on_change(o2, a);
         },
       },
     ];
