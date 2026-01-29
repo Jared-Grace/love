@@ -3,7 +3,8 @@ import { app_a_keyword_blue } from "../../../love/public/src/app_a_keyword_blue.
 export function app_a_keyword_blue_space(parent, text) {
   let keyword = app_a_keyword_blue(parent, text);
   html_span_space(parent);
-  return {
+  let v = {
     keyword,
   };
+  return v;
 }
