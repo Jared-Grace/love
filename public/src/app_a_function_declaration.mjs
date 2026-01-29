@@ -25,8 +25,8 @@ export function app_a_function_declaration(a) {
   function lambda3(o2) {
     let choices = [];
     list_add(choices, {
-      shortcut: "v",
-      text: "Paste",
+      shortcut: "f",
+      text: "Functionize",
       fn: async function lambda() {
         list_add(body_list, value);
         await app_a_function_on_change(overlay_result, a);
