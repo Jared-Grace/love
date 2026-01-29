@@ -132,7 +132,6 @@ export function app_a_identifier_generic(
           string_is_assert(name_new);
           replace(name_new);
           await app_a_function_on_change(o, a);
-          overlay_close();
         },
       },
     ];
