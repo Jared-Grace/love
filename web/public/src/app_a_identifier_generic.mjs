@@ -45,10 +45,10 @@ export function app_a_identifier_generic(
     let context = object_property_get(a, "context");
     const change = {
       fn: async function lambda15() {
-        let v2 = app_a_overlay_on_enter(on_enter, overlay_close, a);
-        let o = object_property_get(v2, "overlay_result");
-        let overlay = object_property_get(v2, "overlay");
-        let oc = object_property_get(v2, "container");
+        let r = app_a_overlay_on_enter(on_enter, overlay_close, a);
+        let o = object_property_get(r, "overlay_result");
+        let overlay = object_property_get(r, "overlay");
+        let oc = object_property_get(r, "container");
         let text2 = object_property_get(change, "text");
         let div2 = html_div_text(oc, text2 + " from:");
         let div = html_div_text(oc, name);
