@@ -9,6 +9,7 @@ export function app_a_functionize(a) {
     let node = object_property_get(ai, "node");
     let ast = object_property_get(ai, "ast");
     let v_match = js_visit_match(ast, node);
+    let stack = object_property_get(v_match, "stack");
   }
   let mapped = list_map([a, a_first], lambda);
 }
