@@ -106,7 +106,6 @@ export async function app_g_refresh(
       refresh,
     );
   }
-  let p = promise_wrap(lambda4);
   if (document.readyState === "complete") {
     lambda3();
   } else {
