@@ -1,3 +1,4 @@
+import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
 import { html_rows_set } from "../../../love/public/src/html_rows_set.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_remove_at_count } from "../../../love/public/src/list_remove_at_count.mjs";
@@ -123,8 +124,8 @@ export function app_a_identifier_generic(
         shortcut: "v",
         text: "Paste replace",
         fn: async function lambda2() {
-          let node = object_property_get(a, "node");
-          let name_new = replace(name);
+          await clipboard_paste();
+          let name_new = replace(name_new);
           await app_a_function_on_change(o2, a);
           overlay_close();
         },
