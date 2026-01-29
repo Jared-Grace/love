@@ -12,7 +12,6 @@ export function app_a_overlay_on_enter(on_enter, overlay_close, a) {
   let container = app_a_overlay_container_centered(overlay);
   let v2 = {
     container,
-    overlay,
     overlay_result,
   };
   return v2;
