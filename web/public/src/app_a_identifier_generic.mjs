@@ -47,7 +47,7 @@ export function app_a_identifier_generic(
       fn: async function lambda15() {
         let r = app_a_overlay_on_enter(on_enter, overlay_close, a);
         let o = object_property_get(r, "overlay_result");
-        let overlay = object_property_get(r, "overlay");
+        let overlay = object_property_get(o, "overlay");
         let oc = object_property_get(r, "container");
         let text2 = object_property_get(change, "text");
         let div2 = html_div_text(oc, text2 + " from:");
