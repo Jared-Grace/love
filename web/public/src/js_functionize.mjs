@@ -36,7 +36,7 @@ export async function js_functionize(
 ) {
   marker("1");
   const indices = [index_from, index_to];
-  list_sort_number(list2);
+  list_sort_number(indices);
   let range = list_first_last_slice(indices, stack2);
   function lambda(r) {
     let result = js_node_types_includes(r, "AwaitExpression");
