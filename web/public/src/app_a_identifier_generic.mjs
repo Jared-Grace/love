@@ -123,6 +123,7 @@ export function app_a_identifier_generic(
         shortcut: "v",
         text: "Paste replace",
         fn: async function lambda2() {
+          let node = object_property_get(a, "node");
           overlay_close();
           await app_a_function_on_change(o2, a);
         },
