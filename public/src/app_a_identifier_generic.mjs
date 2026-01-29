@@ -124,7 +124,7 @@ export function app_a_identifier_generic(
         text: "Paste replace",
         fn: async function lambda2() {
           let node = object_property_get(a, "node");
-          replace(name);
+          let name_new = replace(name);
           await app_a_function_on_change(o2, a);
           overlay_close();
         },
