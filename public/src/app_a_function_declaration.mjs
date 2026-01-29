@@ -39,8 +39,8 @@ export function app_a_function_declaration(a) {
   function lambda(lr) {
     function lambda2(o) {
       let choices = [];
-      let body2 = object_property_get(body, "body");
-      app_a_paste(choices, a, o, body);
+      let body_list = object_property_get(body, "body");
+      app_a_paste(choices, a, o, body_list);
       return choices;
     }
     app_a_overlay_choices(a, lr, lambda2);
