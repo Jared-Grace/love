@@ -1,3 +1,5 @@
+import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_paste } from "../../../love/public/src/app_a_paste.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -22,6 +24,14 @@ export function app_a_function_declaration(a) {
   let keyword = object_property_get(k, "keyword");
   function lambda3(o2) {
     let choices = [];
+    list_add(choices, {
+      shortcut: "v",
+      text: "Paste",
+      fn: async function lambda() {
+        list_add(body_list, value);
+        await app_a_function_on_change(overlay_result, a);
+      },
+    });
     return choices;
   }
   app_a_overlay_choices(a, keyword, lambda3);
