@@ -1,5 +1,4 @@
 import { promise_wrap } from "../../../love/public/src/promise_wrap.mjs";
-import { s5 } from "../../../love/public/src/s5.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -107,7 +106,8 @@ export async function app_g_refresh(
       refresh,
     );
   }
-  let p = promise_wrap(function lambda4(resolve, reject) {});
+  function lambda4(resolve, reject) {}
+  let p = promise_wrap(lambda4);
   if (document.readyState === "complete") {
     lambda3();
   } else {
