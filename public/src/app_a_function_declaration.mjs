@@ -1,4 +1,4 @@
-import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
+import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_paste } from "../../../love/public/src/app_a_paste.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
@@ -28,8 +28,7 @@ export function app_a_function_declaration(a) {
       shortcut: "f",
       text: "Functionize",
       fn: async function lambda() {
-        list_add(body_list, value);
-        await app_a_function_on_change(overlay_result, a);
+        storage_local_set_context(context, key, value);
       },
     });
     return choices;
