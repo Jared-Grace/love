@@ -110,7 +110,7 @@ export async function app_g_refresh(
     if (document.readyState === "complete") {
       resolve();
     } else {
-      html_on_load(lambda3);
+      html_on_load(resolve);
     }
   }
   let p = promise_wrap(lambda4);
