@@ -7,8 +7,8 @@ export function app_a_functionize(a) {
   let a_first = storage_local_get_context(context, app_a_functionize.name);
   function lambda(ai) {
     let node = object_property_get(ai, "node");
-    let ast2 = object_property_get(ai, "ast");
-    let v_match = js_visit_match(ast, search);
+    let ast = object_property_get(ai, "ast");
+    let v_match = js_visit_match(ast, node);
   }
   let mapped = list_map([a, a_first], lambda);
 }
