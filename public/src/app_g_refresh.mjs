@@ -108,7 +108,6 @@ export async function app_g_refresh(
     );
   }
   let p = promise_wrap(function lambda4(resolve, reject) {});
-  s5();
   if (document.readyState === "complete") {
     lambda3();
   } else {
