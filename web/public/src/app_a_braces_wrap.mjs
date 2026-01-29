@@ -4,9 +4,9 @@ export function app_a_braces_wrap(parent, lambda) {
   let left = app_a_brace_left(parent);
   lambda();
   let right = app_a_brace_right(parent);
-  let v = {
+  let r = {
     left,
     right,
   };
-  return v;
+  return r;
 }
