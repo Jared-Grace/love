@@ -34,5 +34,6 @@ export function app_a_function_declaration(a) {
   let r = app_a_function_node_child(a, body2);
   let left = object_property_get(r, "left");
   let right = object_property_get(r, "right");
-  each(list, function lambda(item) {});
+  function lambda(item) {}
+  each(list, lambda);
 }
