@@ -4,9 +4,9 @@ import { data_all_initialize } from "../../../love/public/src/data_all_initializ
 import { file_transform_cached } from "../../../love/public/src/file_transform_cached.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { file_js_unparse } from "../../../love/public/src/file_js_unparse.mjs";
-export async function function_transform_result(f_name, lambda$ast) {
+export async function function_transform_result(f_names, lambda$ast) {
   async function lambda2() {
-    let parsed = await function_parse_unaliased(f_name);
+    let parsed = await function_parse_unaliased(f_names);
     let ast = object_property_get(parsed, "ast");
     let result = await lambda$ast(ast);
     await file_js_unparse(parsed);
