@@ -45,7 +45,7 @@ export function app_a_identifier_generic(
     let context = object_property_get(a, "context");
     const change = {
       fn: async function lambda15() {
-        let r = app_a_overlay_on_enter(on_enter, overlay_close, a);
+        let r = app_a_overlay_on_enter(on_enter, o3, a);
         let o = object_property_get(r, "overlay_result");
         let overlay = object_property_get(o, "overlay");
         let oc = object_property_get(r, "container");
