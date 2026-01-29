@@ -45,9 +45,9 @@ export function app_a_identifier_generic(
     let context = object_property_get(a, "context");
     const change = {
       fn: async function lambda15() {
-        let lambda22 = html_on_enter_lambda(lambda23);
+        let f = html_on_enter_lambda(on_enter);
         overlay_close();
-        let o2 = app_a_overlay_keydown(a, lambda22);
+        let o2 = app_a_overlay_keydown(a, f);
         app_a_overlay_close_button(o2);
         let overlay2 = object_property_get(o2, "overlay");
         let oc = app_a_overlay_container_centered(overlay2);
@@ -71,13 +71,13 @@ export function app_a_identifier_generic(
         }
         html_value_set(input, name);
         await html_select(input);
-        async function lambda23() {
+        async function on_enter() {
           let value_new = html_value_get(input);
           let on_change = object_property_get(change, "on_change");
           await on_change(value_new);
           await app_a_function_on_change(o2, a);
         }
-        let component = app_a_button_wide(overlay, text2, lambda23);
+        let component = app_a_button_wide(overlay, text2, on_enter);
       },
     };
     let to2 = object_merge(change, c);
