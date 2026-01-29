@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { app_a_function_import } from "../../../love/public/src/app_a_function_import.mjs";
 import { function_new_js_name } from "../../../love/public/src/function_new_js_name.mjs";
@@ -182,6 +183,9 @@ export async function app_a_function(context) {
           let fn = await app_a_function_import(f_name_call);
           fn(ast);
           let code = js_unparse(ast);
+          log({
+            code,
+          });
           await app_a_function_on_change(overlay_result, a);
         }
       },
