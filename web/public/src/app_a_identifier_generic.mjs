@@ -112,6 +112,13 @@ export function app_a_identifier_generic(a, span, name, c, lines_multiple) {
           let component = app_a_button_wide(overlay, "Delete", lambda23);
         },
       },
+      {
+        shortcut: "v",
+        text: "Paste replace",
+        fn: async function lambda2() {
+          overlay_close();
+        },
+      },
     ];
     const choice_function_open = {
       shortcut: "o",
