@@ -1,3 +1,4 @@
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { app_a_paste } from "../../../love/public/src/app_a_paste.mjs";
 import { js_block_find } from "../../../love/public/src/js_block_find.mjs";
@@ -61,6 +62,7 @@ export function app_a_if_statement(a, node, parent) {
           let item = object_property_get(f, "item");
           storage_local_set_context(context, app_a_paste.name, item);
           let body = object_property_get(f, "body");
+          list_remove(list2, item2);
           log({
             body,
             item,
