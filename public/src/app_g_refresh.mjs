@@ -108,7 +108,7 @@ export async function app_g_refresh(
   }
   function lambda4(resolve, reject) {
     if (document.readyState === "complete") {
-      lambda3();
+      resolve();
     } else {
       html_on_load(lambda3);
     }
