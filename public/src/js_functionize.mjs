@@ -34,7 +34,8 @@ export async function js_functionize(
   index_to,
 ) {
   marker("1");
-  let range = list_first_last_slice([index_from, index_to], stack2);
+  const indices = [index_from, index_to];
+  let range = list_first_last_slice(indices, stack2);
   function lambda(r) {
     let result = js_node_types_includes(r, "AwaitExpression");
     return result;
