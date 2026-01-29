@@ -183,8 +183,6 @@ export async function app_a_function(context) {
           let fn = await app_a_function_import(f_name_call);
           await fn(ast);
           let code = js_unparse(ast);
-          log(code);
-          log(fn);
           await app_a_function_on_change(overlay_result, a);
         }
       },
