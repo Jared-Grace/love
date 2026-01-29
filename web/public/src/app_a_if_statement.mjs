@@ -54,10 +54,10 @@ export function app_a_if_statement(a, node, parent) {
           overlay_close();
           let ast = object_property_get(a, "ast");
           let v_match = js_visit_match(ast, node);
-          let stack3 = object_property_get(v_match, "stack");
-          let v3 = js_block_find(stack2);
+          let stack = object_property_get(v_match, "stack");
+          let f = js_block_find(stack);
           log({
-            v_match,
+            f,
           });
         },
       },
