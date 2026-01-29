@@ -19,6 +19,7 @@ export function app_a_function_declaration(a) {
   false_is_assert(generator);
   let kf = js_keyword_function();
   let k = app_a_keyword_blue_space(parent, kf);
+  let keyword = object_property_get(k, "keyword");
   let async = object_property_get(node, "async");
   if (async) {
     let ka = js_keyword_async();
