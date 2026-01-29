@@ -3,7 +3,8 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { app_a_overlay_close_button } from "../../../love/public/src/app_a_overlay_close_button.mjs";
 import { app_a_overlay_keydown } from "../../../love/public/src/app_a_overlay_keydown.mjs";
 import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
-export function app_a_overlay_on_enter(on_enter, overlay_close, a) {
+export function app_a_overlay_on_enter(on_enter, o, a) {
+  let overlay_close = object_property_get(o, "overlay_close");
   let f = html_on_enter_lambda(on_enter);
   overlay_close();
   let overlay_result = app_a_overlay_keydown(a, f);
