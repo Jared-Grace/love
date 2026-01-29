@@ -8,9 +8,9 @@ export function app_a_paste(choices, a) {
   let exists = storage_local_exists_context(context, app_a_paste.name);
   if (exists) {
     list_add(choices, {
-      shortcut: "a",
-      text: "Add above",
-      fn: "",
+      shortcut: "v",
+      text: "Paste",
+      fn: () => {},
     });
   }
 }
