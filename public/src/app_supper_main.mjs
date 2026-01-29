@@ -49,5 +49,5 @@ export async function app_supper_main(context) {
     );
   }
   each(["bread", "fruit of the vine"], lambda);
-  let p3 = html_p_text(root2, text2);
+  let p3 = html_p_text(root, "Sing hymn");
 }
