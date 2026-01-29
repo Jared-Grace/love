@@ -1,3 +1,5 @@
+import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { app_a_function_declaration } from "../../../love/public/src/app_a_function_declaration.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -158,7 +160,18 @@ export function app_a_function_node(a) {
       let kind = object_property_get(node, "kind");
       let k = app_a_keyword_blue_space(parent, kind);
       let keyword = object_property_get(k, "keyword");
-      function lambda19(o) {}
+      function lambda19(o) {
+        let choices = [];
+        list_add(choices, {
+          shortcut: "f",
+          text: "Functionize",
+          fn: async function lambda() {
+            let context = object_property_get(a, "context");
+            storage_local_set_context(context, key, a);
+          },
+        });
+        return choices;
+      }
       app_a_overlay_choices(a, keyword, lambda19);
       let declarations = object_property_get(node, "declarations");
       app_a_nodes_list(a, declarations, parent);
