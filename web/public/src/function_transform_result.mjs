@@ -1,3 +1,4 @@
+import { string_split_comma } from "../../../love/public/src/string_split_comma.mjs";
 import { data_path } from "../../../love/public/src/data_path.mjs";
 import { function_parse_unaliased } from "../../../love/public/src/function_parse_unaliased.mjs";
 import { data_all_initialize } from "../../../love/public/src/data_all_initialize.mjs";
@@ -14,6 +15,7 @@ export async function function_transform_result(f_names, lambda$ast) {
   }
   await lambda2();
   return;
+  let split = string_split_comma(f_names2);
   let d_path = data_path();
   await data_all_initialize(d_path);
   let r = await file_transform_cached(d_path, lambda2);
