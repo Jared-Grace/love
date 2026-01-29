@@ -1,3 +1,4 @@
+import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { app_a_input } from "../../../love/public/src/app_a_input.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_a_overlay_on_enter } from "../../../love/public/src/app_a_overlay_on_enter.mjs";
@@ -29,7 +30,8 @@ export function app_a_variable_declaration(a) {
         let div = html_div_text(oc, "Name of new function:");
         let input = app_a_input(overlay);
         async function on_enter() {
-          await app_a_functionize(a, f_name_new);
+          let value_new = html_value_get(input);
+          await app_a_functionize(a, value_new);
         }
       },
     });
