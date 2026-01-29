@@ -1,3 +1,4 @@
+import { app_a_functionize } from "../../../love/public/src/app_a_functionize.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_paste } from "../../../love/public/src/app_a_paste.mjs";
@@ -29,7 +30,7 @@ export function app_a_function_declaration(a) {
       text: "Functionize start",
       fn: async function lambda() {
         let context = object_property_get(a, "context");
-        storage_local_set_context(context, key, a);
+        storage_local_set_context(context, app_a_functionize.name, a);
       },
     });
     return choices;
