@@ -1,7 +1,6 @@
 import { js_functionize } from "../../../love/public/src/js_functionize.mjs";
 import { js_block_find } from "../../../love/public/src/js_block_find.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function app_a_functionize(a) {
@@ -16,6 +15,6 @@ export async function app_a_functionize(a) {
     return f;
   }
   let a_f = lambda(a);
-  let mapped = list_map([a, a_first], lambda);
+  let a_first_f = lambda(a_first);
   await js_functionize(ast2, f_name_new, stack2, index_from, index_to);
 }
