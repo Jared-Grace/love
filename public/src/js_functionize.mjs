@@ -1,3 +1,4 @@
+import { list_first_last_slice } from "../../../love/public/src/list_first_last_slice.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_outside_move } from "../../../love/public/src/js_outside_move.mjs";
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
@@ -24,7 +25,6 @@ import { js_parse_statement_module } from "../../../love/public/src/js_parse_sta
 import { js_code_declaration } from "../../../love/public/src/js_code_declaration.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
 import { js_node_types_includes } from "../../../love/public/src/js_node_types_includes.mjs";
-import { list_range } from "../../../love/public/src/list_range.mjs";
 import { range } from "../../../love/public/src/range.mjs";
 export async function js_functionize(
   ast,
@@ -34,7 +34,7 @@ export async function js_functionize(
   index_to,
 ) {
   marker("1");
-  let range = list_range(stack2, index_from, index_to);
+  let range = list_first_last_slice([index_from, index_to], stack2);
   function lambda(r) {
     let result = js_node_types_includes(r, "AwaitExpression");
     return result;
