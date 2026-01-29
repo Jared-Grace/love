@@ -28,7 +28,8 @@ export function app_a_function_declaration(a) {
       shortcut: "f",
       text: "Functionize",
       fn: async function lambda() {
-        storage_local_set_context(context, key, value);
+        let context2 = object_property_get(a, "context");
+        storage_local_set_context(context, key, a);
       },
     });
     return choices;
