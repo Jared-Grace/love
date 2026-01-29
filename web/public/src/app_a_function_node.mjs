@@ -107,7 +107,8 @@ export function app_a_function_node(a) {
       function lambda20() {
         app_a_body(node, parent, a, true);
       }
-      return app_a_braces_wrap(parent, lambda20);
+      let r = app_a_braces_wrap(parent, lambda20);
+      return r;
     },
     ["ReturnStatement"]: function lambda7() {
       let k = js_keyword_return();
