@@ -59,7 +59,8 @@ export function app_a_if_statement(a, node, parent) {
           let body = object_property_get(f, "body");
           let item = object_property_get(f, "item");
           log({
-            f,
+            body,
+            item,
           });
         },
       },
