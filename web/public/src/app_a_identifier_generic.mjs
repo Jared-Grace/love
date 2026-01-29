@@ -37,9 +37,9 @@ export function app_a_identifier_generic(
   replace,
 ) {
   marker("1");
-  async function on_click(o) {
-    let overlay_close = object_property_get(o, "overlay_close");
-    let overlay = object_property_get(o, "overlay");
+  async function on_click(o3) {
+    let overlay_close = object_property_get(o3, "overlay_close");
+    let overlay = object_property_get(o3, "overlay");
     let oc = app_a_overlay_container_centered(overlay);
     let div4 = html_div_text(oc, name);
     let context = object_property_get(a, "context");
@@ -129,7 +129,7 @@ export function app_a_identifier_generic(
           let name_new = await clipboard_paste();
           string_is_assert(name_new);
           replace(name_new);
-          await app_a_function_on_change(o, a);
+          await app_a_function_on_change(o3, a);
         },
       },
     ];
