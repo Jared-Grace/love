@@ -151,7 +151,7 @@ export function app_a_function_node(a) {
       }
     },
     ["VariableDeclaration"]: function lambda11() {
-      app_a_variable_declaration(node);
+      app_a_variable_declaration(a);
     },
     ["VariableDeclarator"]: function lambda13() {
       let id = object_property_get(node, "id");
