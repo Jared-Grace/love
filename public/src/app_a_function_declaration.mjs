@@ -31,8 +31,8 @@ export function app_a_function_declaration(a) {
   let keyword = object_property_get(k, "keyword");
   function lambda3(o) {
     let choices = [];
-    let e = global_function_property_exists(context, app_a_functionize.name);
-    if (e) {
+    let ne = global_function_property_exists(context, app_a_functionize.name);
+    if (ne) {
       list_add(choices, {
         shortcut: "f",
         text: "Functionize start",
