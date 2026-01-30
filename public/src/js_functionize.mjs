@@ -1,3 +1,4 @@
+import { list_min } from "../../../love/public/src/list_min.mjs";
 import { list_slice_from_indices } from "../../../love/public/src/list_slice_from_indices.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_outside_move } from "../../../love/public/src/js_outside_move.mjs";
@@ -75,6 +76,7 @@ export async function js_functionize(
   list_remove_multiple(stack2, range);
   let code = js_code_call_args_await_maybe(f_name_new, missing, declaration);
   let parsed = js_parse_statement(code);
+  let m = list_min(list2);
   list_insert(stack2, index_from, parsed);
   await js_outside_move(ast);
 }
