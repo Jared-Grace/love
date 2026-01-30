@@ -1,4 +1,3 @@
-import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_functionize } from "../../../love/public/src/js_functionize.mjs";
 import { js_block_find } from "../../../love/public/src/js_block_find.mjs";
@@ -7,7 +6,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 export async function app_a_functionize(a, f_name_new) {
   marker("1");
   let context = object_property_get(a, "context");
-  let a_first = global_function_property_get(context, app_a_functionize.name);
+  let a_first = object_property_get(context, app_a_functionize.name);
   function lambda(ai) {
     let node = object_property_get(ai, "node");
     let ast = object_property_get(ai, "ast");
