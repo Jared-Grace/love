@@ -31,6 +31,8 @@ export function app_a_function_declaration(a) {
       fn: async function lambda() {
         let context = object_property_get(a, "context");
         storage_local_set_context(context, app_a_functionize.name, a);
+        let overlay_close = object_property_get(o, "overlay_close");
+        overlay_close();
       },
     });
     return choices;
