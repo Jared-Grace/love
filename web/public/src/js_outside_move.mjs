@@ -29,6 +29,5 @@ export async function js_outside_move(ast) {
   }
   each(fds, lambda3);
   await js_imports_fix(ast);
-  return;
-  log(message);
+  log("message");
 }
