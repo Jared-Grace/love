@@ -1,3 +1,4 @@
+import { app_a_functionize_choice_add } from "../../../love/public/src/app_a_functionize_choice_add.mjs";
 import { app_a_overlay_on_enter } from "../../../love/public/src/app_a_overlay_on_enter.mjs";
 import { string_is_assert } from "../../../love/public/src/string_is_assert.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
@@ -130,6 +131,7 @@ export function app_a_identifier_generic(
         },
       },
     ];
+    app_a_functionize_choice_add(choices, a, o3);
     const choice_function_open = {
       shortcut: "o",
       text: "Open",
