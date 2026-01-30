@@ -1,3 +1,5 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { log } from "../../../love/public/src/log.mjs";
 import { js_imports_fix } from "../../../love/public/src/js_imports_fix.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
@@ -9,7 +11,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { js_declaration_name } from "../../../love/public/src/js_declaration_name.mjs";
 import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
 export async function js_outside_move(ast) {
-  let { body } = ast;
+  let body = object_property_get(ast, "body");
   let fds = list_filter_property(body, "type", "FunctionDeclaration");
   async function lambda(fd) {
     let f_name = js_declaration_name(fd);
@@ -27,4 +29,6 @@ export async function js_outside_move(ast) {
   }
   each(fds, lambda3);
   await js_imports_fix(ast);
+  return;
+  log(message);
 }
