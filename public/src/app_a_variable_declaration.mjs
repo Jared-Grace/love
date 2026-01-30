@@ -1,3 +1,4 @@
+import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
 import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
@@ -39,6 +40,7 @@ export function app_a_variable_declaration(a) {
           async function on_enter() {
             let value_new = html_value_get(input);
             await app_a_functionize(a, value_new);
+            await app_a_function_on_change(o, a);
           }
           let component = app_a_button_wide(overlay, "Functionize", on_enter);
         },
