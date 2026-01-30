@@ -11,7 +11,7 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_functionize } from "../../../love/public/src/app_a_functionize.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function app_a_functionize_end_choice_add(a, choices, o2) {
-  let e = global_function_exists(app_a_functionize.name);
+  let e = global_function_exists(app_a_functionize);
   if (e) {
     list_add(choices, {
       shortcut: "f",
@@ -28,7 +28,7 @@ export function app_a_functionize_end_choice_add(a, choices, o2) {
           let value_new = html_value_get(input);
           await app_a_functionize(a, value_new);
           await app_a_function_on_change(o, a);
-          global_function_delete(app_a_functionize.name);
+          global_function_delete(app_a_functionize);
         }
         let component = app_a_button_wide(overlay, "Functionize", on_enter);
       },
