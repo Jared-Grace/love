@@ -23,7 +23,7 @@ export function app_a_function_declaration(a) {
   let kf = js_keyword_function();
   let k = app_a_keyword_blue_space(parent, kf);
   let keyword = object_property_get(k, "keyword");
-  function lambda3(o2) {
+  function lambda3(o) {
     let choices = [];
     list_add(choices, {
       shortcut: "f",
