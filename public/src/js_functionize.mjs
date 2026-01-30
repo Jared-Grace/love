@@ -1,4 +1,4 @@
-import { list_first_last_slice } from "../../../love/public/src/list_first_last_slice.mjs";
+import { list_slice_from_indices } from "../../../love/public/src/list_slice_from_indices.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_outside_move } from "../../../love/public/src/js_outside_move.mjs";
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
@@ -35,7 +35,7 @@ export async function js_functionize(
 ) {
   marker("1");
   const indices = [index_from, index_to];
-  let range = list_first_last_slice(indices, stack2);
+  let range = list_slice_from_indices(stack2, indices);
   function lambda(r) {
     let result = js_node_types_includes(r, "AwaitExpression");
     return result;
