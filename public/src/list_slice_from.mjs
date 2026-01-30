@@ -1,12 +1,7 @@
-import { log } from "../../../love/public/src/log.mjs";
+import { list_slice_from_indices } from "../../../love/public/src/list_slice_from_indices.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
-import { list_first_last } from "../../../love/public/src/list_first_last.mjs";
-import { list_sort_number } from "../../../love/public/src/list_sort_number.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { list_slice_include } from "../../../love/public/src/list_slice_include.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { list_last } from "./list_last.mjs";
 export function list_slice_from(list, item_from, item_to) {
   marker("1");
   function lambda(item) {
@@ -14,15 +9,6 @@ export function list_slice_from(list, item_from, item_to) {
     return index;
   }
   let mapped = list_map([item_from, item_to], lambda);
-  list_sort_number(mapped);
-  let v = list_first_last(mapped);
-  let first = list_first(v);
-  let last = list_last(v);
-  let sliced = list_slice_include(list, first, last);
-  log({
-    sliced,
-    first,
-    last,
-  });
-  return sliced;
+  let v2 = list_slice_from_indices(mapped, list);
+  return v2;
 }
