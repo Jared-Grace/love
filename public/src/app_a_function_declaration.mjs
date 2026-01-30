@@ -1,4 +1,4 @@
-import { app_a_functionize_choice_add } from "../../../love/public/src/app_a_functionize_choice_add.mjs";
+import { app_a_functionize_start_choice_add } from "../../../love/public/src/app_a_functionize_start_choice_add.mjs";
 import { app_a_paste } from "../../../love/public/src/app_a_paste.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -28,7 +28,7 @@ export function app_a_function_declaration(a) {
   let keyword = object_property_get(k, "keyword");
   function lambda3(o) {
     let choices = [];
-    app_a_functionize_choice_add(choices, a, o);
+    app_a_functionize_start_choice_add(choices, a, o);
     return choices;
   }
   app_a_overlay_choices(a, keyword, lambda3);
