@@ -23,26 +23,26 @@ export function app_a_variable_declaration(a) {
   function lambda19(o2) {
     let choices = [];
     let e = global_function_property_exists(context, app_a_functionize.name);
-    if (false) {
+    if (e) {
+      list_add(choices, {
+        shortcut: "f",
+        text: "Functionize end",
+        fn: async function lambda() {
+          let r = app_a_overlay_on_enter(on_enter, o2, a);
+          let o = object_property_get(r, "overlay_result");
+          let overlay = object_property_get(o, "overlay");
+          let oc = object_property_get(r, "container");
+          let div = html_div_text(oc, "Name of new function:");
+          let input = app_a_input(overlay);
+          html_focus(input);
+          async function on_enter() {
+            let value_new = html_value_get(input);
+            await app_a_functionize(a, value_new);
+          }
+          let component = app_a_button_wide(overlay, "Functionize", on_enter);
+        },
+      });
     }
-    list_add(choices, {
-      shortcut: "f",
-      text: "Functionize end",
-      fn: async function lambda() {
-        let r = app_a_overlay_on_enter(on_enter, o2, a);
-        let o = object_property_get(r, "overlay_result");
-        let overlay = object_property_get(o, "overlay");
-        let oc = object_property_get(r, "container");
-        let div = html_div_text(oc, "Name of new function:");
-        let input = app_a_input(overlay);
-        html_focus(input);
-        async function on_enter() {
-          let value_new = html_value_get(input);
-          await app_a_functionize(a, value_new);
-        }
-        let component = app_a_button_wide(overlay, "Functionize", on_enter);
-      },
-    });
     return choices;
   }
   app_a_overlay_choices(a, keyword, lambda19);
