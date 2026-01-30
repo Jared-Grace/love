@@ -1,9 +1,11 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { list_sort_number } from "../../../love/public/src/list_sort_number.mjs";
 import { list_slice_from } from "../../../love/public/src/list_slice_from.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_first_last } from "../../../love/public/src/list_first_last.mjs";
 export function list_first_last_slice(list_first_last, list) {
+  marker("1");
   list_sort_number(list_first_last);
   let v = list_first_last(list_first_last);
   let first = list_first(v);
