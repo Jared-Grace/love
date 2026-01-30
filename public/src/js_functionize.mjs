@@ -76,7 +76,7 @@ export async function js_functionize(
   list_remove_multiple(stack2, range);
   let code = js_code_call_args_await_maybe(f_name_new, missing, declaration);
   let parsed = js_parse_statement(code);
-  let m = list_min(list2);
-  list_insert(stack2, index_from, parsed);
+  let m = list_min(indices);
+  list_insert(stack2, m, parsed);
   await js_outside_move(ast);
 }
