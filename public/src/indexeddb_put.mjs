@@ -9,8 +9,8 @@ export async function indexeddb_put(db_get, store, key, value_get) {
   let f = list_find_property_or_null(all, "key", key);
   const next = await value_get(f);
   if (null_is(f)) {
-    object_replace(f, next);
   } else {
+    object_replace(f, next);
   }
   async function lambda_async() {
     await indexeddb_put_backend(db_get, store, key, next);
