@@ -28,7 +28,7 @@ export function app_a_functionize_end_choice_add(a, choices, o2) {
           let value_new = html_value_get(input);
           await app_a_functionize(a, value_new);
           await app_a_function_on_change(o, a);
-          global_function_delete(fn2, app_a_functionize.name);
+          global_function_delete(app_a_functionize.name);
         }
         let component = app_a_button_wide(overlay, "Functionize", on_enter);
       },
