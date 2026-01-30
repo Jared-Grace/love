@@ -1,3 +1,4 @@
+import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { app_a_input } from "../../../love/public/src/app_a_input.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -29,6 +30,7 @@ export function app_a_variable_declaration(a) {
         let oc = object_property_get(r, "container");
         let div = html_div_text(oc, "Name of new function:");
         let input = app_a_input(overlay);
+        html_focus(input);
         async function on_enter() {
           let value_new = html_value_get(input);
           await app_a_functionize(a, value_new);
