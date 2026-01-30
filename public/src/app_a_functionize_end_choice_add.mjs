@@ -1,5 +1,5 @@
+import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { global_function_delete } from "../../../love/public/src/global_function_delete.mjs";
-import { global_function_exists } from "../../../love/public/src/global_function_exists.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
@@ -11,7 +11,7 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_functionize } from "../../../love/public/src/app_a_functionize.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function app_a_functionize_end_choice_add(a, choices, o2) {
-  let e = global_function_exists(app_a_functionize);
+  let e = object_property_exists(context, app_a_functionize.name);
   if (e) {
     list_add(choices, {
       shortcut: "f",
