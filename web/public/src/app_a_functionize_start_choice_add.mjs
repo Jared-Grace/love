@@ -1,3 +1,4 @@
+import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
 import { global_function_set } from "../../../love/public/src/global_function_set.mjs";
 import { global_function_exists_not } from "../../../love/public/src/global_function_exists_not.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -7,6 +8,7 @@ import { app_a_functionize } from "../../../love/public/src/app_a_functionize.mj
 export function app_a_functionize_start_choice_add(choices, a, o) {
   marker("1");
   let context = object_property_get(a, "context");
+  let n = object_property_exists_not(object, property_name);
   let ne = global_function_exists_not(app_a_functionize);
   if (ne) {
     list_add(choices, {
