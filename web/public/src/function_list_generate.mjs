@@ -9,11 +9,11 @@ import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { js_declaration_single_block_body } from "../../../love/public/src/js_declaration_single_block_body.mjs";
 import { function_new } from "../../../love/public/src/function_new.mjs";
 import { not } from "../../../love/public/src/not.mjs";
-import { function_exists_unalias } from "../../../love/public/src/function_exists_unalias.mjs";
+import { function_unalias_exists } from "../../../love/public/src/function_unalias_exists.mjs";
 export async function function_list_generate(f_generate, list) {
   let f_generate_name = f_generate.name;
   let f_name = string_suffix_without(f_generate_name, "_generate");
-  let v = await function_exists_unalias(f_name);
+  let v = await function_unalias_exists(f_name);
   let exists = object_property_get(v, "exists");
   if (not(exists)) {
     await function_new(f_name);
