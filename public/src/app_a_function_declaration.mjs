@@ -1,4 +1,4 @@
-import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
+import { global_function_property_exists_not } from "../../../love/public/src/global_function_property_exists_not.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { app_a_functionize } from "../../../love/public/src/app_a_functionize.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -31,7 +31,10 @@ export function app_a_function_declaration(a) {
   let keyword = object_property_get(k, "keyword");
   function lambda3(o) {
     let choices = [];
-    let ne = global_function_property_exists(context, app_a_functionize.name);
+    let ne = global_function_property_exists_not(
+      context,
+      app_a_functionize.name,
+    );
     if (ne) {
       list_add(choices, {
         shortcut: "f",
