@@ -1,4 +1,4 @@
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -13,7 +13,7 @@ export function app_a_functionize_start_choice_add(choices, a, o) {
       shortcut: "f",
       text: "Functionize start",
       fn: async function lambda() {
-        object_property_set(context, app_a_functionize.name, a);
+        object_property_set_exists_not(context, app_a_functionize.name, a);
         let overlay_close = object_property_get(o, "overlay_close");
         overlay_close();
       },
