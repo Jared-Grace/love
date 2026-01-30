@@ -1,7 +1,4 @@
-import { global_function_property_exists_not } from "../../../love/public/src/global_function_property_exists_not.mjs";
-import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
-import { app_a_functionize } from "../../../love/public/src/app_a_functionize.mjs";
-import { list_add } from "../../../love/public/src/list_add.mjs";
+import { app_a_functionize_choice_add } from "../../../love/public/src/app_a_functionize_choice_add.mjs";
 import { app_a_paste } from "../../../love/public/src/app_a_paste.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -31,22 +28,7 @@ export function app_a_function_declaration(a) {
   let keyword = object_property_get(k, "keyword");
   function lambda3(o) {
     let choices = [];
-    let ne = global_function_property_exists_not(
-      context,
-      app_a_functionize.name,
-    );
-    if (ne) {
-      list_add(choices, {
-        shortcut: "f",
-        text: "Functionize start",
-        fn: async function lambda() {
-          let context = object_property_get(a, "context");
-          global_function_property_set(context, app_a_functionize.name, a);
-          let overlay_close = object_property_get(o, "overlay_close");
-          overlay_close();
-        },
-      });
-    }
+    app_a_functionize_choice_add(choices, a, o);
     return choices;
   }
   app_a_overlay_choices(a, keyword, lambda3);
