@@ -1,5 +1,5 @@
+import { global_function_delete } from "../../../love/public/src/global_function_delete.mjs";
 import { global_function_exists } from "../../../love/public/src/global_function_exists.mjs";
-import { global_function_property_delete } from "../../../love/public/src/global_function_property_delete.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
@@ -28,7 +28,7 @@ export function app_a_functionize_end_choice_add(a, choices, o2) {
           let value_new = html_value_get(input);
           await app_a_functionize(a, value_new);
           await app_a_function_on_change(o, a);
-          global_function_property_delete(fn2, app_a_functionize.name);
+          global_function_delete(fn2, app_a_functionize.name);
         }
         let component = app_a_button_wide(overlay, "Functionize", on_enter);
       },
