@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { app_a_functionize } from "../../../love/public/src/app_a_functionize.mjs";
@@ -32,18 +33,18 @@ export function app_a_function_declaration(a) {
   function lambda3(o) {
     let choices = [];
     let e = global_function_property_exists(context, app_a_functionize.name);
-    if (false) {
+    if (not(e)) {
+      list_add(choices, {
+        shortcut: "f",
+        text: "Functionize start",
+        fn: async function lambda() {
+          let context = object_property_get(a, "context");
+          global_function_property_set(context, app_a_functionize.name, a);
+          let overlay_close = object_property_get(o, "overlay_close");
+          overlay_close();
+        },
+      });
     }
-    list_add(choices, {
-      shortcut: "f",
-      text: "Functionize start",
-      fn: async function lambda() {
-        let context = object_property_get(a, "context");
-        global_function_property_set(context, app_a_functionize.name, a);
-        let overlay_close = object_property_get(o, "overlay_close");
-        overlay_close();
-      },
-    });
     return choices;
   }
   app_a_overlay_choices(a, keyword, lambda3);
