@@ -1,4 +1,4 @@
-import { promise_wrap } from "../../../love/public/src/promise_wrap.mjs";
+import { html_on_load_wait } from "../../../love/public/src/html_on_load_wait.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -6,7 +6,6 @@ import { g_icon_cross } from "../../../love/public/src/g_icon_cross.mjs";
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_scroll_center_container_now } from "../../../love/public/src/html_scroll_center_container_now.mjs";
-import { html_on_load } from "../../../love/public/src/html_on_load.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_click } from "../../../love/public/src/app_g_click.mjs";
@@ -106,16 +105,9 @@ export async function app_g_refresh(
       refresh,
     );
   }
-  function lambda4(resolve, reject) {
-    if (document.readyState === "complete") {
-      resolve();
-    } else {
-      html_on_load(resolve);
-    }
-  }
-  let p = await promise_wrap(lambda4);
   async function lambda3() {
     let container = object_property_get(div_map, "container");
     await html_scroll_center_container_now(player_img_c, container);
   }
+  await html_on_load_wait(document, readyState);
 }
