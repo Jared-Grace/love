@@ -10,7 +10,7 @@ export async function indexeddb_put(db_get, store, key, value_get) {
   let f = list_find_property_or_null(all, "key", key);
   const next = await value_get(f);
   if (null_is(f)) {
-    list_add(list, item);
+    list_add(all, next);
   } else {
     object_replace(f, next);
   }
