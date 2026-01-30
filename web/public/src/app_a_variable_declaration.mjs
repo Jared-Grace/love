@@ -22,6 +22,7 @@ export function app_a_variable_declaration(a) {
   let keyword = object_property_get(k, "keyword");
   function lambda19(o2) {
     let choices = [];
+    let context = object_property_get(a, "context");
     let e = global_function_property_exists(context, app_a_functionize.name);
     if (e) {
       list_add(choices, {
