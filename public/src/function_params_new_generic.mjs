@@ -3,7 +3,7 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
 import { not } from "../../../love/public/src/not.mjs";
-import { function_exists } from "../../../love/public/src/function_exists.mjs";
+import { function_exists_unalias } from "../../../love/public/src/function_exists_unalias.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { data_identifiers_search } from "../../../love/public/src/data_identifiers_search.mjs";
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
@@ -17,7 +17,7 @@ export async function function_params_new_generic(
   let result = await data_identifiers_search(f_name_current);
   let properties = object_properties(result);
   async function lambda4(f_name) {
-    let v = await function_exists(f_name);
+    let v = await function_exists_unalias(f_name);
     let exists = object_property_get(v, "exists");
     if (not(exists)) {
       return;
