@@ -1,5 +1,5 @@
 import { log } from "../../../love/public/src/log.mjs";
-import { function_exists_not_assert } from "../../../love/public/src/function_exists_not_assert.mjs";
+import { function_unalias_exists_not_assert } from "../../../love/public/src/function_unalias_exists_not_assert.mjs";
 import { data_file_update } from "../../../love/public/src/data_file_update.mjs";
 import { repo_path_combine } from "../../../love/public/src/repo_path_combine.mjs";
 import { user_repo_get } from "../../../love/public/src/user_repo_get.mjs";
@@ -16,7 +16,7 @@ export async function function_new_declaration(declaration) {
   log({
     f_name,
   });
-  await function_exists_not_assert(f_name);
+  await function_unalias_exists_not_assert(f_name);
   const f_path = function_name_to_path(f_name);
   let code_declaration = js_unparse(declaration);
   const contents = js_code_export(code_declaration);
