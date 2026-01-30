@@ -1,3 +1,4 @@
+import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { app_a_input } from "../../../love/public/src/app_a_input.mjs";
@@ -35,6 +36,7 @@ export function app_a_variable_declaration(a) {
           let value_new = html_value_get(input);
           await app_a_functionize(a, value_new);
         }
+        let component = app_a_button_wide(overlay, "Functionize", on_enter);
       },
     });
     return choices;
