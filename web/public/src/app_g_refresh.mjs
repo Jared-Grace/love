@@ -113,7 +113,7 @@ export async function app_g_refresh(
       html_on_load(resolve);
     }
   }
-  let p = promise_wrap(lambda4);
+  let p = await promise_wrap(lambda4);
   async function lambda3() {
     let container = object_property_get(div_map, "container");
     await html_scroll_center_container_now(player_img_c, container);
