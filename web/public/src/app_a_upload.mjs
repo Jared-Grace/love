@@ -1,3 +1,4 @@
+import { string_empty_is } from "../../../love/public/src/string_empty_is.mjs";
 import { git_push_repos } from "../../../love/public/src/git_push_repos.mjs";
 import { invoke } from "../../../love/public/src/invoke.mjs";
 import { git_ac_folder } from "../../../love/public/src/git_ac_folder.mjs";
@@ -33,6 +34,7 @@ export async function app_a_upload(deltas) {
     let versions = object_property_get(d, "versions");
     let skipped = list_skip_1(versions);
     async function lambda3(item) {
+      let e2 = string_empty_is(s);
       await file_overwrite(key, item);
       await repos_paths_map_unordered(each_folder);
       async function each_folder(folder) {
