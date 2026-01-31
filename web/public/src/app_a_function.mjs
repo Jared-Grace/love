@@ -1,3 +1,4 @@
+import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { app_a_function_import } from "../../../love/public/src/app_a_function_import.mjs";
 import { function_new_js_name } from "../../../love/public/src/function_new_js_name.mjs";
@@ -76,6 +77,7 @@ export async function app_a_function(context) {
       let f = await json_decompress(compressed);
       let versions = object_property_get(f, "versions");
       object_property_set_exists_not(item, "versions", versions);
+      let exists = object_property_exists(object, property_name);
       let m = list_multiple_is(versions);
       object_property_set_exists_not(item, "changed", m);
     }
