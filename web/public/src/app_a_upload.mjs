@@ -15,6 +15,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { assert_json } from "./assert_json.mjs";
+import { file_exists } from "./file_exists.mjs";
 export async function app_a_upload(deltas) {
   async function lambda(d) {
     let key = object_property_get(d, "key");
@@ -27,6 +28,9 @@ export async function app_a_upload(deltas) {
     if (created === true) {
     }
     if (not(created)) {
+      let e = await file_exists(key);
+      if (false) {
+      }
       let contents = await file_read(key);
       let first = list_first(versions);
       let eq = equal(contents, first);
