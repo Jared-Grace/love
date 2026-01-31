@@ -11,5 +11,6 @@ export async function function_delete(f_name) {
   let f_path = object_property_get(v, "f_path");
   assert(exists);
   await file_delete(f_path);
+  return;
   await data_files_update();
 }
