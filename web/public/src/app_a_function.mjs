@@ -191,7 +191,7 @@ export async function app_a_function(context) {
       shortcut: "d",
       text: emoji_delete(),
       fn: function lambda4() {
-        let parsed2 = object_property_get(a, "parsed");
+        let f_path = object_property_get(parsed, "f_path");
       },
     },
   ];
