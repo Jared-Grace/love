@@ -18,7 +18,6 @@ export async function app_a_upload(deltas) {
   async function lambda(d) {
     let key = object_property_get(d, "key");
     let versions = object_property_get(d, "versions");
-    let contents = await file_read(key);
     let created = object_property_get_or(d, "created", false);
     if (created === true) {
       log({
@@ -26,6 +25,7 @@ export async function app_a_upload(deltas) {
       });
     }
     if (not(created)) {
+      let contents = await file_read(key);
       let first = list_first(versions);
       let eq = equal(contents, first);
       assert_json(eq, {
