@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { data_file_update } from "../../../love/public/src/data_file_update.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -31,11 +30,6 @@ export async function file_overwrite_uncached(file_path, contents) {
         previous = {
           key: file_path,
         };
-        if (created) {
-          log({
-            f,
-          });
-        }
       } else {
         let compressed_before = object_property_get(previous, p);
         f = await json_decompress(compressed_before);
