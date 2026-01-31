@@ -77,8 +77,8 @@ export async function app_a_function(context) {
       let f = await json_decompress(compressed);
       let versions = object_property_get(f, "versions");
       object_property_set_exists_not(item, "versions", versions);
-      let exists = object_property_get_or(item, "created", false);
-      let m = list_multiple_is(versions);
+      let created = object_property_get_or(item, "created", false);
+      let m = created || list_multiple_is(versions);
       object_property_set_exists_not(item, "changed", m);
     }
     await each_async(all, lambda);
