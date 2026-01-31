@@ -1,7 +1,6 @@
 import { exit } from "../../../love/public/src/exit.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { not } from "../../../love/public/src/not.mjs";
-import { object_property_get_or } from "../../../love/public/src/object_property_get_or.mjs";
 import { git_push_repos } from "../../../love/public/src/git_push_repos.mjs";
 import { invoke } from "../../../love/public/src/invoke.mjs";
 import { git_ac_folder } from "../../../love/public/src/git_ac_folder.mjs";
@@ -20,24 +19,21 @@ export async function app_a_upload(deltas) {
   async function lambda(d) {
     let key = object_property_get(d, "key");
     let versions = object_property_get(d, "versions");
-    let created = object_property_get_or(d, "created", false);
     exit();
     log({
       d,
     });
-    if (created === true) {
-    }
     if (not(created)) {
       let e = await file_exists(key);
-      if (false) {
+      if (e) {
+        let contents = await file_read(key);
+        let first = list_first(versions);
+        let eq = equal(contents, first);
+        assert_json(eq, {
+          contents,
+          versions,
+        });
       }
-      let contents = await file_read(key);
-      let first = list_first(versions);
-      let eq = equal(contents, first);
-      assert_json(eq, {
-        contents,
-        versions,
-      });
     }
   }
   await each_async(deltas, lambda);
