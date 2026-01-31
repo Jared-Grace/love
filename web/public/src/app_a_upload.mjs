@@ -1,3 +1,4 @@
+import { exit } from "../../../love/public/src/exit.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { object_property_get_or } from "../../../love/public/src/object_property_get_or.mjs";
@@ -19,6 +20,7 @@ export async function app_a_upload(deltas) {
     let key = object_property_get(d, "key");
     let versions = object_property_get(d, "versions");
     let created = object_property_get_or(d, "created", false);
+    exit();
     log({
       d,
     });
