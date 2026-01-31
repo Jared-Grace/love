@@ -25,13 +25,11 @@ export async function file_overwrite_uncached(file_path, contents) {
       let f = null;
       let nn = null_is(previous);
       if (nn) {
-        let created = true;
         f = {
           ["versions"]: [],
         };
         previous = {
           key: file_path,
-          created,
         };
         if (created) {
           log({
