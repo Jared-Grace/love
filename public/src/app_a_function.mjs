@@ -1,5 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
-import { object_property_get_or } from "../../../love/public/src/object_property_get_or.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { app_a_function_import } from "../../../love/public/src/app_a_function_import.mjs";
 import { function_new_js_name } from "../../../love/public/src/function_new_js_name.mjs";
@@ -78,13 +76,7 @@ export async function app_a_function(context) {
       let f = await json_decompress(compressed);
       let versions = object_property_get(f, "versions");
       object_property_set_exists_not(item, "versions", versions);
-      let created = object_property_get_or(item, "created", false);
-      if (created === true) {
-        log({
-          item,
-        });
-      }
-      let m = created || list_multiple_is(versions);
+      let m = list_multiple_is(versions);
       object_property_set_exists_not(item, "changed", m);
     }
     await each_async(all, lambda);
