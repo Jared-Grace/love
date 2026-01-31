@@ -20,7 +20,7 @@ export async function app_a_upload(deltas) {
     let versions = object_property_get(d, "versions");
     let contents = await file_read(key);
     let created = object_property_get_or(d, "created", false);
-    if (created) {
+    if (created === true) {
       log({
         d,
       });
