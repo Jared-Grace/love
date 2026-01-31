@@ -1,7 +1,7 @@
-import { js_visit_match_first } from "../../../love/public/src/js_visit_match_first.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_identifier_defineds_includes } from "../../../love/public/src/js_identifier_defineds_includes.mjs";
+import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { js_identifier_rename_imports_fix } from "../../../love/public/src/js_identifier_rename_imports_fix.mjs";
 import { app_a_identifier_generic } from "../../../love/public/src/app_a_identifier_generic.mjs";
@@ -29,7 +29,7 @@ export function app_a_identifier(a) {
       color = "#007f00ff";
     } else {
       let ast = object_property_get(a, "ast");
-      let v_match = js_visit_match_first(ast, node);
+      let v_match = js_visit_match(ast, node);
       let includes3 = js_identifier_defineds_includes(v_match, name);
       if (includes3) {
         let f_names_local = object_property_get(a, "f_names_local");
