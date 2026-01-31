@@ -190,7 +190,9 @@ export async function app_a_function(context) {
     {
       shortcut: "d",
       text: emoji_delete(),
-      fn: function lambda4() {},
+      fn: function lambda4() {
+        let parsed2 = object_property_get(a, "parsed");
+      },
     },
   ];
   let e = storage_local_exists(app_a, "app_selected");
