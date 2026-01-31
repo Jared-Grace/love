@@ -1,3 +1,4 @@
+import { emoji_delete } from "../../../love/public/src/emoji_delete.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { app_a_function_import } from "../../../love/public/src/app_a_function_import.mjs";
 import { function_new_js_name } from "../../../love/public/src/function_new_js_name.mjs";
@@ -185,6 +186,11 @@ export async function app_a_function(context) {
           await app_a_function_on_change(overlay_result, a);
         }
       },
+    },
+    {
+      shortcut: "d",
+      text: emoji_delete(),
+      fn: screen_choose(app_a_apps),
     },
   ];
   let e = storage_local_exists(app_a, "app_selected");
