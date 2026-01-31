@@ -9,9 +9,9 @@ export async function file_overwrite(file_path, contents) {
   let exists = global_function_property_exists(file_read_cached, file_path);
   if (exists) {
     global_function_property_set(file_read_cached, file_path, contents);
-    if (not(b)) {
-    }
     return;
   }
-  await file_overwrite_uncached(file_path, contents);
+  if (not(exists)) {
+    await file_overwrite_uncached(file_path, contents);
+  }
 }
