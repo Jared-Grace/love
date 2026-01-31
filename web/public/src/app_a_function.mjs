@@ -190,7 +190,7 @@ export async function app_a_function(context) {
     {
       shortcut: "d",
       text: emoji_delete(),
-      fn: screen_choose(app_a_apps),
+      fn: $f,
     },
   ];
   let e = storage_local_exists(app_a, "app_selected");
