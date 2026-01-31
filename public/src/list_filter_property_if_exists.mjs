@@ -7,7 +7,7 @@ export function list_filter_property_if_exists(list, property_name, value) {
   function lambda(item) {
     let exists = object_property_exists(item, property_name);
     if (exists) {
-      let value = object_property_get(object, property_name, value);
+      return object_property_get(object, property_name, value);
     }
     return exists;
   }
