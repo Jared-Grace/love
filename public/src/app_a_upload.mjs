@@ -18,15 +18,15 @@ export async function app_a_upload(deltas) {
     let key = object_property_get(d, "key");
     let versions = object_property_get(d, "versions");
     let contents = await file_read(key);
-    let created = object_property_get_or(item, "created", false);
-    if (not(b)) {
+    let created = object_property_get_or(d, "created", false);
+    if (not(created)) {
+      let first = list_first(versions);
+      let eq = equal(contents, first);
+      assert_json(eq, {
+        contents,
+        versions,
+      });
     }
-    let first = list_first(versions);
-    let eq = equal(contents, first);
-    assert_json(eq, {
-      contents,
-      versions,
-    });
   }
   await each_async(deltas, lambda);
   async function lambda2(d) {
