@@ -25,21 +25,22 @@ export async function file_overwrite_uncached(file_path, contents) {
       let f = null;
       let nn = null_is(previous);
       if (nn) {
+        let created = true;
         f = {
           ["versions"]: [],
-          created: true,
+          created,
         };
+        if (created) {
+          log({
+            f,
+          });
+        }
         previous = {
           key: file_path,
         };
       } else {
         let compressed_before = object_property_get(previous, p);
         f = await json_decompress(compressed_before);
-      }
-      if (created) {
-        log({
-          f,
-        });
       }
       let list = object_property_get(f, "versions");
       list_add(list, contents);
