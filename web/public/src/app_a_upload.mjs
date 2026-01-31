@@ -1,3 +1,5 @@
+import { not } from "../../../love/public/src/not.mjs";
+import { object_property_get_or } from "../../../love/public/src/object_property_get_or.mjs";
 import { git_push_repos } from "../../../love/public/src/git_push_repos.mjs";
 import { invoke } from "../../../love/public/src/invoke.mjs";
 import { git_ac_folder } from "../../../love/public/src/git_ac_folder.mjs";
@@ -16,6 +18,9 @@ export async function app_a_upload(deltas) {
     let key = object_property_get(d, "key");
     let versions = object_property_get(d, "versions");
     let contents = await file_read(key);
+    let created = object_property_get_or(item, "created", false);
+    if (not(b)) {
+    }
     let first = list_first(versions);
     let eq = equal(contents, first);
     assert_json(eq, {
