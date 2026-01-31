@@ -38,8 +38,8 @@ export async function file_overwrite_uncached(file_path, contents) {
       let e = string_empty_is(contents);
       if (e) {
         object_property_set(previous, "deleted", e);
+      } else {
       }
-      $el;
       let list = object_property_get(f, "versions");
       list_add(list, contents);
       let compressed_after = await json_compress(f);
