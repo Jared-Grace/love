@@ -1,3 +1,4 @@
+import { function_delete } from "../../../love/public/src/function_delete.mjs";
 import { emoji_delete } from "../../../love/public/src/emoji_delete.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { app_a_function_import } from "../../../love/public/src/app_a_function_import.mjs";
@@ -190,8 +191,8 @@ export async function app_a_function(context) {
     {
       shortcut: "d",
       text: emoji_delete(),
-      fn: function lambda4() {
-        let f_path = object_property_get(parsed, "f_path");
+      fn: async function lambda4() {
+        await function_delete(f_name2);
       },
     },
   ];
