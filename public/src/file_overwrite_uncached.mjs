@@ -36,7 +36,7 @@ export async function file_overwrite_uncached(file_path, contents) {
         f = await json_decompress(compressed_before);
       }
       let e = string_empty_is(contents);
-      if (false) {
+      if (e) {
       }
       let list = object_property_get(f, "versions");
       list_add(list, contents);
