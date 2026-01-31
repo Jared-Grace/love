@@ -192,7 +192,7 @@ export async function app_a_function(context) {
       shortcut: "d",
       text: emoji_delete(),
       fn: async function lambda4() {
-        await function_delete(f_name2);
+        await function_delete(f_name);
       },
     },
   ];
