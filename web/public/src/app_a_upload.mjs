@@ -34,7 +34,10 @@ export async function app_a_upload(deltas) {
     let versions = object_property_get(d, "versions");
     let skipped = list_skip_1(versions);
     async function lambda3(item) {
-      let e2 = string_empty_is(s);
+      let e2 = string_empty_is(item);
+      if (false) {
+      } else {
+      }
       await file_overwrite(key, item);
       await repos_paths_map_unordered(each_folder);
       async function each_folder(folder) {
