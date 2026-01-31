@@ -2,7 +2,7 @@ import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { js_visit } from "../../../love/public/src/js_visit.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export function js_visit_matches(node_search, ast) {
+export function js_visit_matches(ast, node_search) {
   marker("1");
   function lambda2(la) {
     function lambda(v) {
