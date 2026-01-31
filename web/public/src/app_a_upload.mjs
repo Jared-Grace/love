@@ -1,4 +1,3 @@
-import { exit } from "../../../love/public/src/exit.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { git_push_repos } from "../../../love/public/src/git_push_repos.mjs";
@@ -19,7 +18,6 @@ export async function app_a_upload(deltas) {
   async function lambda(d) {
     let key = object_property_get(d, "key");
     let versions = object_property_get(d, "versions");
-    exit();
     log({
       d,
     });
