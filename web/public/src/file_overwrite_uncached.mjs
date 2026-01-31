@@ -1,5 +1,5 @@
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { data_file_update } from "../../../love/public/src/data_file_update.mjs";
-import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { json_compress } from "../../../love/public/src/json_compress.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -22,17 +22,17 @@ export async function file_overwrite_uncached(file_path, contents) {
     async function value_get(previous) {
       const p = "compressed";
       let f = null;
-      let nn = null_not_is(previous);
+      let nn = null_is(previous);
       if (nn) {
-        let compressed_before = object_property_get(previous, p);
-        f = await json_decompress(compressed_before);
-      } else {
         f = {
           ["versions"]: [],
         };
         previous = {
           key: file_path,
         };
+      } else {
+        let compressed_before = object_property_get(previous, p);
+        f = await json_decompress(compressed_before);
       }
       let list = object_property_get(f, "versions");
       list_add(list, contents);
