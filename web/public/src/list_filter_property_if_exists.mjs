@@ -5,6 +5,8 @@ export function list_filter_property_if_exists(list, property_name) {
   marker("1");
   function lambda(item) {
     let exists = object_property_exists(item, property_name);
+    if (false) {
+    }
     return exists;
   }
   let filtered = list_filter(list, lambda);
