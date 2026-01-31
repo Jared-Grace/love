@@ -1,20 +1,7 @@
-import { marker } from "../../../love/public/src/marker.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { js_visit_matches } from "../../../love/public/src/js_visit_matches.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
-import { js_visit } from "../../../love/public/src/js_visit.mjs";
-import { list_adder } from "../../../love/public/src/list_adder.mjs";
 export function js_visit_match(ast, node_search) {
-  marker("1");
-  function lambda2(la) {
-    function lambda(v) {
-      let node = object_property_get(v, "node");
-      if (node === node_search) {
-        la(v);
-      }
-    }
-    js_visit(ast, lambda);
-  }
-  let matches = list_adder(lambda2);
+  let matches = js_visit_matches(node_search, ast);
   let v_match = list_single(matches);
   return v_match;
 }
