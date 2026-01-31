@@ -1,3 +1,4 @@
+import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { string_empty_is } from "../../../love/public/src/string_empty_is.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { data_file_update } from "../../../love/public/src/data_file_update.mjs";
@@ -38,7 +39,8 @@ export async function file_overwrite_uncached(file_path, contents) {
       let e = string_empty_is(contents);
       if (e) {
         object_property_set(previous, "deleted", e);
-      } else {ope
+      } else {
+        let exists = object_property_exists(object, property_name);
       }
       let list = object_property_get(f, "versions");
       list_add(list, contents);
