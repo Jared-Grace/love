@@ -124,11 +124,12 @@ export async function app_a_function(context) {
     text: emoji_mobile(),
     fn: screen_choose(app_a_app_run),
   };
+  const screen_choose_open = screen_choose(app_a_functions);
   let choices = [
     {
       shortcut: "o",
       text: emoji_search(),
-      fn: screen_choose(app_a_functions),
+      fn: screen_choose_open,
     },
     {
       shortcut: "s",
@@ -193,6 +194,7 @@ export async function app_a_function(context) {
       text: emoji_delete(),
       fn: async function lambda4() {
         await function_delete(f_name);
+        screen_choose_open();
       },
     },
   ];
