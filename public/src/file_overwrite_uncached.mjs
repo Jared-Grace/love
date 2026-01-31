@@ -40,9 +40,7 @@ export async function file_overwrite_uncached(file_path, contents) {
       if (e) {
         object_property_set(previous, "deleted", e);
       } else {
-        let exists = object_property_delete_if_exists(previous, "deleted");
-        if (false) {
-        }
+        object_property_delete_if_exists(previous, "deleted");
       }
       let list = object_property_get(f, "versions");
       list_add(list, contents);
