@@ -28,6 +28,9 @@ export async function file_overwrite_uncached(file_path, contents) {
         let created = true;
         f = {
           ["versions"]: [],
+        };
+        previous = {
+          key: file_path,
           created,
         };
         if (created) {
@@ -35,9 +38,6 @@ export async function file_overwrite_uncached(file_path, contents) {
             f,
           });
         }
-        previous = {
-          key: file_path,
-        };
       } else {
         let compressed_before = object_property_get(previous, p);
         f = await json_decompress(compressed_before);
