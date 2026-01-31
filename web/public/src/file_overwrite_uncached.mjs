@@ -38,7 +38,7 @@ export async function file_overwrite_uncached(file_path, contents) {
       }
       let e = string_empty_is(contents);
       if (e) {
-        object_property_set(previous, "deleted", e);
+        object_property_set(previous, "deleted", true);
       } else {
         object_property_delete_if_exists(previous, "deleted");
       }
