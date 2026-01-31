@@ -194,7 +194,7 @@ export async function app_a_function(context) {
       text: emoji_delete(),
       fn: async function lambda4() {
         await function_delete(f_name);
-       await screen_choose_open();
+        await screen_choose_open();
       },
     },
   ];
