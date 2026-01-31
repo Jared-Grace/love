@@ -13,6 +13,7 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { file_exists } from "./file_exists.mjs";
+import { file_delete } from "./file_delete.mjs";
 export async function app_a_upload(deltas) {
   async function lambda(d) {
     let key = object_property_get(d, "key");
@@ -35,10 +36,11 @@ export async function app_a_upload(deltas) {
     let skipped = list_skip_1(versions);
     async function lambda3(item) {
       let e2 = string_empty_is(item);
-      if (false) {
+      if (e2) {
+        await file_delete(key);
       } else {
+        await file_overwrite(key, item);
       }
-      await file_overwrite(key, item);
       await repos_paths_map_unordered(each_folder);
       async function each_folder(folder) {
         await git_ac_folder(folder, app_a_upload.name);
