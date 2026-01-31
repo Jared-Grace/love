@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { git_push_repos } from "../../../love/public/src/git_push_repos.mjs";
 import { invoke } from "../../../love/public/src/invoke.mjs";
@@ -18,9 +17,6 @@ export async function app_a_upload(deltas) {
   async function lambda(d) {
     let key = object_property_get(d, "key");
     let versions = object_property_get(d, "versions");
-    log({
-      d,
-    });
     if (not(created)) {
       let e = await file_exists(key);
       if (e) {
