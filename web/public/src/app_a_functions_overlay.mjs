@@ -12,13 +12,13 @@ export async function app_a_functions_overlay(a, on_select) {
     root: overlay,
   };
   let context = object_property_get(a, "context");
-  let copy = object_copy_assign(context, replacement);
+  let context_copy = object_copy_assign(context, replacement);
   function lambda3() {
     let overlay_close = object_property_get(overlay_result, "overlay_close");
     overlay_close();
   }
   app_a_button_function(context, overlay, lambda3);
-  let functions_result = await app_a_functions_generic(copy, on_select);
+  let functions_result = await app_a_functions_generic(context_copy, on_select);
   let v = {
     overlay_result,
     functions_result,
