@@ -158,6 +158,16 @@ export function app_a_identifier_generic(
         },
       };
       list_add(choices, choice_function_open);
+      const references = {
+        shortcut: "r",
+        text: "References",
+        fn: function lambda() {
+          overlay_close();
+          app_a_function_on_keydown_remove(a);
+          app_a_function_select(context, name);
+        },
+      };
+      list_add(choices, references);
     }
     function lambda4() {
       const c = {
@@ -172,9 +182,6 @@ export function app_a_identifier_generic(
       list_add(choices, c);
     }
     js_node_type_is_if(e2, "FunctionDeclaration", lambda4);
-    log({
-      stack,
-    });
     return choices;
   }
   app_a_overlay_choices(a, span, on_click);
