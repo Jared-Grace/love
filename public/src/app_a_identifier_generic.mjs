@@ -1,3 +1,4 @@
+import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { js_visit_match_first } from "../../../love/public/src/js_visit_match_first.mjs";
 import { app_a_functionize_end_choice_add } from "../../../love/public/src/app_a_functionize_end_choice_add.mjs";
 import { app_a_functionize_start_choice_add } from "../../../love/public/src/app_a_functionize_start_choice_add.mjs";
@@ -45,6 +46,7 @@ export function app_a_identifier_generic(
     let ast = object_property_get(a, "ast");
     let v_match = js_visit_match_first(ast, node);
     let stack = object_property_get(v_match, "stack");
+    let e2 = list_get_end_2(stack2);
     log({
       stack,
     });
