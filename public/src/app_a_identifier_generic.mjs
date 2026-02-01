@@ -49,7 +49,7 @@ export function app_a_identifier_generic(
     let stack = object_property_get(v_match, "stack");
     let e2 = list_get_end_2(stack);
     function lambda4() {}
-    js_node_type_is_if(e2, 'FunctionDeclaration', lambda4);
+    js_node_type_is_if(e2, "FunctionDeclaration", lambda4);
     log({
       stack,
     });
