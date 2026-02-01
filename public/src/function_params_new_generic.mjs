@@ -23,6 +23,9 @@ export async function function_params_new_generic(
   async function lambda4(f_name) {
     let v = await function_unalias_exists(f_name);
     let exists = object_property_get(v, "exists");
+    log({
+      exists,
+    });
     if (not(exists)) {
       return;
     }
