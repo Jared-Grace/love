@@ -29,6 +29,7 @@ export async function function_params_new_generic(
     async function lambda5(ast) {
       js_visit_calls_named(ast, f_name, lambda);
       function lambda({ args, v }) {
+        let node = object_property_get(v, "node");
         log({
           args,
           v,
