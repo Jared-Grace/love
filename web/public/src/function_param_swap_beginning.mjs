@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_declaration_params_ast_get } from "../../../love/public/src/js_declaration_params_ast_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -7,10 +8,11 @@ export async function function_param_swap_beginning() {
   marker("1");
   let index_a = 0;
   let index_b = 1;
+  let f_name = error();
   await function_params_new_generic(
     function_transform_current_lambda,
     on_call,
-    error(),
+    f_name,
   );
   function on_call(args) {
     list_swap_at(args, index_a, index_b);
