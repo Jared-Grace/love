@@ -43,7 +43,7 @@ export function app_a_identifier_generic(
   async function on_click(o3) {
     let node = object_property_get(a, "node");
     let ast = object_property_get(a, "ast");
-    let v_match = js_visit_match_first(ast2, node_search);
+    let v_match = js_visit_match_first(ast, node);
     let overlay_close = object_property_get(o3, "overlay_close");
     let overlay = object_property_get(o3, "overlay");
     let oc = app_a_overlay_container_centered(overlay);
