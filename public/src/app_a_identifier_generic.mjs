@@ -1,3 +1,4 @@
+import { js_visit_match_first } from "../../../love/public/src/js_visit_match_first.mjs";
 import { app_a_functionize_end_choice_add } from "../../../love/public/src/app_a_functionize_end_choice_add.mjs";
 import { app_a_functionize_start_choice_add } from "../../../love/public/src/app_a_functionize_start_choice_add.mjs";
 import { app_a_overlay_on_enter } from "../../../love/public/src/app_a_overlay_on_enter.mjs";
@@ -42,6 +43,7 @@ export function app_a_identifier_generic(
   async function on_click(o3) {
     let node = object_property_get(a, "node");
     let ast = object_property_get(a, "ast");
+    let v_match = js_visit_match_first(ast2, node_search);
     let overlay_close = object_property_get(o3, "overlay_close");
     let overlay = object_property_get(o3, "overlay");
     let oc = app_a_overlay_container_centered(overlay);
