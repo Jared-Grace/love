@@ -1,3 +1,4 @@
+import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { js_visit_match_first } from "../../../love/public/src/js_visit_match_first.mjs";
 import { app_a_functionize_end_choice_add } from "../../../love/public/src/app_a_functionize_end_choice_add.mjs";
@@ -47,6 +48,7 @@ export function app_a_identifier_generic(
     let v_match = js_visit_match_first(ast, node);
     let stack = object_property_get(v_match, "stack");
     let e2 = list_get_end_2(stack);
+    js_node_type_is_if(node2, type, function lambda4() {});
     log({
       stack,
     });
