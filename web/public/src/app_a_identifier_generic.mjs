@@ -1,3 +1,4 @@
+import { function_param_delete } from "../../../love/public/src/function_param_delete.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { js_visit_match_first } from "../../../love/public/src/js_visit_match_first.mjs";
@@ -157,16 +158,17 @@ export function app_a_identifier_generic(
       list_add(choices, choice_function_open);
     }
     function lambda4() {
-      const choice_function_open = {
-        shortcut: "o",
-        text: "Open",
-        fn: function lambda() {
+      const c = {
+        shortcut: "q",
+        text: "Param delete",
+        fn: async function lambda() {
+          await function_param_delete(f_name, param_name);
           overlay_close();
           app_a_function_on_keydown_remove(a);
           app_a_function_select(context, name);
         },
       };
-      list_add(choices, choice_function_open);
+      list_add(choices, c);
     }
     js_node_type_is_if(e2, "FunctionDeclaration", lambda4);
     log({
