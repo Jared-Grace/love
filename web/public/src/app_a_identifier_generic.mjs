@@ -46,7 +46,7 @@ export function app_a_identifier_generic(
     let ast = object_property_get(a, "ast");
     let v_match = js_visit_match_first(ast, node);
     let stack = object_property_get(v_match, "stack");
-    let e2 = list_get_end_2(stack2);
+    let e2 = list_get_end_2(stack);
     log({
       stack,
     });
