@@ -17,8 +17,8 @@ export function list_to_lookup(list, property_key) {
     if (n) {
       return;
     }
-    let v = object_property_get(word, property_key);
-    let key_list = object_property_initialize_list(lookup, v);
+    let value = object_property_get(word, property_key);
+    let key_list = object_property_initialize_list(lookup, value);
     list_add(key_list, word);
   }
   each(list, lambda);
