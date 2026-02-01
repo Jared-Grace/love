@@ -1,6 +1,6 @@
 import { promise_wrap } from "../../../love/public/src/promise_wrap.mjs";
 import { html_on_load } from "../../../love/public/src/html_on_load.mjs";
-export async function html_on_load_wait(document, readyState) {
+export async function html_on_load_wait(readyState) {
   function lambda4(resolve, reject) {
     if (document.readyState === "complete") {
       resolve();
