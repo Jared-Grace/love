@@ -11,10 +11,11 @@ export function list_filter_property_exclude_if_exists(
   function lambda(item) {
     let exists = object_property_exists(item, property_name);
     if (exists) {
-      let v = object_property_get(object, property_name) === value;
+      let v = object_property_get(object, property_name) !== value;
       return v;
     }
-    return exists;
+    let v2 = true;
+    return v2;
   }
   let filtered = list_filter(list, lambda);
   return filtered;
