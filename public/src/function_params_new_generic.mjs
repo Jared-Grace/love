@@ -14,7 +14,6 @@ export async function function_params_new_generic(
   f_name,
 ) {
   marker("1");
-  await function_transform(f_name, function_transform_current_lambda);
   let result = await data_identifiers_search(f_name);
   log({
     result,
@@ -41,4 +40,5 @@ export async function function_params_new_generic(
     let output = await function_transform(f_name, lambda5);
   }
   await each_async(properties, lambda4);
+  await function_transform(f_name, function_transform_current_lambda);
 }
