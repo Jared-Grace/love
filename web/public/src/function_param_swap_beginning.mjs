@@ -7,7 +7,11 @@ export async function function_param_swap_beginning() {
   marker("1");
   let index_a = 0;
   let index_b = 1;
-  await function_params_new_generic(function_transform_current_lambda, on_call);
+  await function_params_new_generic(
+    function_transform_current_lambda,
+    on_call,
+    error(),
+  );
   function on_call(args) {
     list_swap_at(args, index_a, index_b);
   }
