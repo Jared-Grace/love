@@ -18,8 +18,8 @@ export function list_to_lookup(list, property_key) {
       return;
     }
     let v = object_property_get(word, property_key);
-    let verse_words = object_property_initialize_list(lookup, v);
-    list_add(verse_words, word);
+    let key_list = object_property_initialize_list(lookup, v);
+    list_add(key_list, word);
   }
   each(list, lambda);
   return lookup;
