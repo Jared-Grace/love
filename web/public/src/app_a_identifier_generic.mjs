@@ -48,7 +48,8 @@ export function app_a_identifier_generic(
     let v_match = js_visit_match_first(ast, node);
     let stack = object_property_get(v_match, "stack");
     let e2 = list_get_end_2(stack);
-    js_node_type_is_if(node2, type, function lambda4() {});
+    function lambda4() {}
+    js_node_type_is_if(node2, type, lambda4);
     log({
       stack,
     });
