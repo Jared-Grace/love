@@ -166,8 +166,8 @@ export function app_a_identifier_generic(
         text: "References",
         fn: async function lambda() {
           let result = await data_identifiers_search(s);
-          let properties = object_properties(obj);
-          let r = app_a_functions_overlay_generic(a, f_names, lambda$text);
+          let properties = object_properties(result);
+          let r = app_a_functions_overlay_generic(a, properties, lambda$text);
         },
       };
       list_add(choices, references);
