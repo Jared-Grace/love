@@ -1,4 +1,4 @@
-import { list_filter } from "../../../love/public/src/list_filter.mjs";
+import { list_to_lookup } from "../../../love/public/src/list_to_lookup.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { app_a_shortcuts_each } from "../../../love/public/src/app_a_shortcuts_each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -6,8 +6,7 @@ import { html_on_keydown_stop_logic } from "../../../love/public/src/html_on_key
 export function app_a_on_keydown(e, choices) {
   html_on_keydown_stop_logic(e);
   let key = object_property_get(e, "key");
-  function lambda(item) {}
-  let filtered = list_filter(list, lambda);
+  let lookup = list_to_lookup(list, property_key);
   app_a_shortcuts_each(choices, on_choice);
   function on_choice(shortcut, text, fn) {
     if (equal(key, shortcut)) {
