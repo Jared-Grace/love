@@ -163,7 +163,7 @@ export function app_a_identifier_generic(
         shortcut: "r",
         text: "References",
         fn: async function lambda() {
-          let v2 = await app_a_functions_overlay(a2, on_select);
+          let v2 = await app_a_functions_overlay(a, on_select);
         },
       };
       list_add(choices, references);
