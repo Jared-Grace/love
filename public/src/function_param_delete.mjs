@@ -7,7 +7,11 @@ export async function function_param_delete(param_name) {
   marker("1");
   assert_arguments(arguments, 1);
   let index = null;
-  await function_params_new_generic(function_transform_current_lambda, on_call);
+  await function_params_new_generic(
+    function_transform_current_lambda,
+    on_call,
+    error(),
+  );
   function on_call(args) {
     list_remove_at(args, index);
   }

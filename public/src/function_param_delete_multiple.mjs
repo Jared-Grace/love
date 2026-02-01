@@ -15,7 +15,11 @@ export async function function_param_delete_multiple(param_names_comma) {
   assert_arguments(arguments, 1);
   let param_names = string_split_comma(param_names_comma);
   let indices = null;
-  await function_params_new_generic(function_transform_current_lambda, on_call);
+  await function_params_new_generic(
+    function_transform_current_lambda,
+    on_call,
+    error(),
+  );
   function on_call(args) {
     list_remove_at_multiple(args, indices);
   }

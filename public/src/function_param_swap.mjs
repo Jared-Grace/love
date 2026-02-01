@@ -4,7 +4,11 @@ import { function_params_new_generic } from "../../../love/public/src/function_p
 export async function function_param_swap(param_name_a, param_name_b) {
   let index_a = null;
   let index_b = null;
-  await function_params_new_generic(function_transform_current_lambda, on_call);
+  await function_params_new_generic(
+    function_transform_current_lambda,
+    on_call,
+    error(),
+  );
   function on_call(args) {
     list_swap_at(args, index_a, index_b);
   }
