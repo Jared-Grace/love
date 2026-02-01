@@ -109,5 +109,5 @@ export async function app_g_refresh(
     let container = object_property_get(div_map, "container");
     await html_scroll_center_container_now(player_img_c, container);
   }
-  await html_on_load_wait(readyState);
+  await html_on_load_wait();
 }
