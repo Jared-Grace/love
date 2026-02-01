@@ -1,3 +1,4 @@
+import { app_a_functions_overlay } from "../../../love/public/src/app_a_functions_overlay.mjs";
 import { app_a_function_overlay_refresh } from "../../../love/public/src/app_a_function_overlay_refresh.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { function_param_delete } from "../../../love/public/src/function_param_delete.mjs";
@@ -161,10 +162,8 @@ export function app_a_identifier_generic(
       const references = {
         shortcut: "r",
         text: "References",
-        fn: function lambda() {
-          overlay_close();
-          app_a_function_on_keydown_remove(a);
-          app_a_function_select(context, name);
+        fn: async function lambda() {
+          let v2 = await app_a_functions_overlay(a2, on_select);
         },
       };
       list_add(choices, references);
