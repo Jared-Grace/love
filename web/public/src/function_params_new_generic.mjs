@@ -23,15 +23,15 @@ export async function function_params_new_generic(
   async function lambda4(f_name) {
     let v = await function_unalias_exists(f_name);
     let exists = object_property_get(v, "exists");
-    log({
-      exists,
-    });
     if (not(exists)) {
       return;
     }
     async function lambda5(ast) {
       js_visit_calls_named(ast, f_name, lambda);
       function lambda({ args }) {
+        log({
+          args,
+        });
         on_call(args);
       }
     }
