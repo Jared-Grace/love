@@ -156,7 +156,18 @@ export function app_a_identifier_generic(
     if (includes) {
       list_add(choices, choice_function_open);
     }
-    function lambda4() {}
+    function lambda4() {
+      const choice_function_open = {
+        shortcut: "o",
+        text: "Open",
+        fn: function lambda() {
+          overlay_close();
+          app_a_function_on_keydown_remove(a);
+          app_a_function_select(context, name);
+        },
+      };
+      list_add(choices, choice_function_open);
+    }
     js_node_type_is_if(e2, "FunctionDeclaration", lambda4);
     log({
       stack,
