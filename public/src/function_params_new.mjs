@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
 import { list_intersect_empty_is_assert } from "../../../love/public/src/list_intersect_empty_is_assert.mjs";
@@ -14,10 +15,11 @@ export async function function_params_new(
   assert_arguments(arguments, 2);
   let param_names = string_split(param_names_comma, ",");
   let values_default = string_split(values_default_comma, ",");
+  let f_name = error();
   await function_params_new_generic(
     function_transform_current_lambda,
     on_call,
-    error(),
+    f_name,
   );
   function on_call(args) {
     function lambda3(value_default) {
