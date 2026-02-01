@@ -28,9 +28,10 @@ export async function function_params_new_generic(
     }
     async function lambda5(ast) {
       js_visit_calls_named(ast, f_name, lambda);
-      function lambda({ args }) {
+      function lambda({ args, v }) {
         log({
           args,
+          v,
         });
         on_call(args);
       }
