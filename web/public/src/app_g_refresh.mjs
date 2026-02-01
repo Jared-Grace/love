@@ -35,7 +35,7 @@ export async function app_g_refresh(
     display: "grid",
   });
   async function refresh() {
-    await app_g_refresh(game_prefix, tiles_path, rows, map);
+    await app_g_refresh(tiles_path, rows, map);
   }
   let npcs = object_property_get(map, "npcs");
   marker("1");
