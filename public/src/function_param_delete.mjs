@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { function_param_index } from "../../../love/public/src/function_param_index.mjs";
 import { list_remove_at } from "../../../love/public/src/list_remove_at.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -7,10 +8,11 @@ export async function function_param_delete(param_name) {
   marker("1");
   assert_arguments(arguments, 1);
   let index = null;
+  let f_name = error();
   await function_params_new_generic(
     function_transform_current_lambda,
     on_call,
-    error(),
+    f_name,
   );
   function on_call(args) {
     list_remove_at(args, index);
