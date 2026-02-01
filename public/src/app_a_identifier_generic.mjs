@@ -1,3 +1,4 @@
+import { app_a_function_overlay_refresh } from "../../../love/public/src/app_a_function_overlay_refresh.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { function_param_delete } from "../../../love/public/src/function_param_delete.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
@@ -165,7 +166,7 @@ export function app_a_identifier_generic(
         fn: async function lambda() {
           let f_name = storage_local_get_context(context, "f_name_selected");
           await function_param_delete(f_name, name);
-          overlay_close();
+          await app_a_function_overlay_refresh(a, o);
         },
       };
       list_add(choices, c);
