@@ -33,6 +33,7 @@ export async function function_params_new_generic(
         log({
           args,
           v,
+          node,
         });
         on_call(args);
       }
