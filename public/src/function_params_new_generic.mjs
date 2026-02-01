@@ -7,7 +7,6 @@ import { not } from "../../../love/public/src/not.mjs";
 import { function_unalias_exists } from "../../../love/public/src/function_unalias_exists.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { data_identifiers_search } from "../../../love/public/src/data_identifiers_search.mjs";
-import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 import { function_transform_current } from "../../../love/public/src/function_transform_current.mjs";
 export async function function_params_new_generic(
   function_transform_current_lambda,
@@ -16,8 +15,7 @@ export async function function_params_new_generic(
 ) {
   marker("1");
   await function_transform_current(function_transform_current_lambda);
-  let f_name_current = await function_current_get();
-  let result = await data_identifiers_search(f_name_current);
+  let result = await data_identifiers_search(f_name);
   let properties = object_properties(result);
   async function lambda4(f_name) {
     let v = await function_unalias_exists(f_name);
@@ -26,7 +24,7 @@ export async function function_params_new_generic(
       return;
     }
     async function lambda5(ast) {
-      js_visit_calls_named(ast, f_name_current, lambda);
+      js_visit_calls_named(ast, f_name, lambda);
       function lambda({ args }) {
         on_call(args);
       }
