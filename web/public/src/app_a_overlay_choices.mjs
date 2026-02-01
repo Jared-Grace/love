@@ -1,3 +1,4 @@
+import { list_to_dictionary_property } from "../../../love/public/src/list_to_dictionary_property.mjs";
 import { app_a_buttons_shortcuts_wide } from "../../../love/public/src/app_a_buttons_shortcuts_wide.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
@@ -16,6 +17,8 @@ export function app_a_overlay_choices(a, component, lambda$o) {
     list_add_first(choices, choice_x);
     let overlay = object_property_get(o, "overlay");
     app_a_buttons_shortcuts_wide(overlay, choices);
+    ("this makes sure there is at most one choice per shortcut");
+    list_to_dictionary_property(choices, "shortcut");
     function on_keydown(e) {
       app_a_on_keydown(e, choices);
     }
