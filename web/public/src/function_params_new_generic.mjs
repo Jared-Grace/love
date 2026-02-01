@@ -12,6 +12,7 @@ import { function_transform_current } from "../../../love/public/src/function_tr
 export async function function_params_new_generic(
   function_transform_current_lambda,
   on_call,
+  f_name,
 ) {
   marker("1");
   await function_transform_current(function_transform_current_lambda);
