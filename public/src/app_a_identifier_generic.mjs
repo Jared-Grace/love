@@ -1,3 +1,4 @@
+import { data_identifiers_search } from "../../../love/public/src/data_identifiers_search.mjs";
 import { app_a_functions_overlay_generic } from "../../../love/public/src/app_a_functions_overlay_generic.mjs";
 import { app_a_function_overlay_refresh } from "../../../love/public/src/app_a_function_overlay_refresh.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
@@ -163,6 +164,7 @@ export function app_a_identifier_generic(
         shortcut: "r",
         text: "References",
         fn: async function lambda() {
+          let result = await data_identifiers_search(s);
           let r = app_a_functions_overlay_generic(a, f_names, lambda$text);
         },
       };
