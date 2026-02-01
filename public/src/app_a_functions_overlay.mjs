@@ -1,34 +1,7 @@
-import { app_a_list_chooser } from "../../../love/public/src/app_a_list_chooser.mjs";
+import { app_a_functions_overlay_generic } from "../../../love/public/src/app_a_functions_overlay_generic.mjs";
 import { app_a_functions_generic_f_names } from "../../../love/public/src/app_a_functions_generic_f_names.mjs";
-import { app_a_button_function } from "../../../love/public/src/app_a_button_function.mjs";
-import { object_copy_assign } from "../../../love/public/src/object_copy_assign.mjs";
-import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
 export async function app_a_functions_overlay(a, on_select) {
   let f_names = await app_a_functions_generic_f_names();
-  let overlay_result = app_a_overlay(a);
-  let overlay = object_property_get(overlay_result, "overlay");
-  html_style_set(overlay, "overflow", "hidden");
-  const replacement = {
-    root: overlay,
-  };
-  let context = object_property_get(a, "context");
-  let copy = object_copy_assign(context, replacement);
-  function lambda3() {
-    let overlay_close = object_property_get(overlay_result, "overlay_close");
-    overlay_close();
-  }
-  app_a_button_function(context, overlay, lambda3);
-  let functions_result = app_a_list_chooser(
-    copy,
-    "function",
-    f_names,
-    on_select,
-  );
-  let v = {
-    overlay_result,
-    functions_result,
-  };
+  let v = app_a_functions_overlay_generic(a, f_names, on_select);
   return v;
 }
