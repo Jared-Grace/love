@@ -9,7 +9,7 @@ export function app_a_literal(a, component, node, on_change, raw) {
     node,
   });
   let value = object_property_get(node, "value");
-  let si2 = string_is(value2);
+  let si2 = string_is(value);
   app_a_identifier_generic(
     a,
     component,
@@ -19,7 +19,7 @@ export function app_a_literal(a, component, node, on_change, raw) {
       text: "Edit",
       on_change,
     },
-    true,
+    si2,
     on_change,
   );
 }
