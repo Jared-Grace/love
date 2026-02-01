@@ -164,10 +164,8 @@ export function app_a_identifier_generic(
         text: "Param delete",
         fn: async function lambda() {
           let f_name = storage_local_get_context(context, "f_name_selected");
-          await function_param_delete(f_name, param_name);
+          await function_param_delete(f_name, name);
           overlay_close();
-          app_a_function_on_keydown_remove(a);
-          app_a_function_select(context, name);
         },
       };
       list_add(choices, c);
