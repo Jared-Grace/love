@@ -145,18 +145,18 @@ export function app_a_identifier_generic(
     ];
     app_a_functionize_start_choice_add(choices, a, o3);
     app_a_functionize_end_choice_add(a, choices, o3);
-    const choice_function_open = {
-      shortcut: "o",
-      text: "Open",
-      fn: function lambda() {
-        overlay_close();
-        app_a_function_on_keydown_remove(a);
-        app_a_function_select(context, name);
-      },
-    };
     let f_names = await functions_names();
     let includes = list_includes(f_names, name);
     if (includes) {
+      const choice_function_open = {
+        shortcut: "o",
+        text: "Open",
+        fn: function lambda() {
+          overlay_close();
+          app_a_function_on_keydown_remove(a);
+          app_a_function_select(context, name);
+        },
+      };
       list_add(choices, choice_function_open);
     }
     function lambda4() {
