@@ -1,3 +1,4 @@
+import { string_is } from "../../../love/public/src/string_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -8,6 +9,7 @@ export function app_a_literal(a, component, node, on_change, raw) {
     node,
   });
   let value = object_property_get(node, "value");
+  let si2 = string_is(value2);
   app_a_identifier_generic(
     a,
     component,
