@@ -6,6 +6,6 @@ export async function sandbox_5() {
   log(2);
   log(3);
   log(4);
-  let v = 5 + 7;
+  let v = 5 + 9;
   return v;
 }
