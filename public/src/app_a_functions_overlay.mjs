@@ -1,4 +1,5 @@
-import { app_a_functions_generic } from "../../../love/public/src/app_a_functions_generic.mjs";
+import { app_a_list_chooser } from "../../../love/public/src/app_a_list_chooser.mjs";
+import { app_a_functions_generic_f_names } from "../../../love/public/src/app_a_functions_generic_f_names.mjs";
 import { app_a_button_function } from "../../../love/public/src/app_a_button_function.mjs";
 import { object_copy_assign } from "../../../love/public/src/object_copy_assign.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
@@ -18,7 +19,13 @@ export async function app_a_functions_overlay(a, on_select) {
     overlay_close();
   }
   app_a_button_function(context, overlay, lambda3);
-  let functions_result = await app_a_functions_generic(copy, on_select);
+  let f_names = await app_a_functions_generic_f_names();
+  let functions_result = app_a_list_chooser(
+    copy,
+    "function",
+    f_names,
+    on_select,
+  );
   let v = {
     overlay_result,
     functions_result,
