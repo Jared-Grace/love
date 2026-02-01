@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { object_property_delete_if_exists } from "../../../love/public/src/object_property_delete_if_exists.mjs";
 import { string_empty_is } from "../../../love/public/src/string_empty_is.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
@@ -40,9 +39,6 @@ export async function file_overwrite_uncached(file_path, contents) {
       let e = string_empty_is(contents);
       if (e) {
         object_property_set(previous, "deleted", true);
-        log({
-          previous,
-        });
       } else {
         object_property_delete_if_exists(previous, "deleted");
       }
