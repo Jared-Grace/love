@@ -166,7 +166,7 @@ export function app_a_identifier_generic(
         fn: async function lambda() {
           let f_name = storage_local_get_context(context, "f_name_selected");
           await function_param_delete(f_name, name);
-          await app_a_function_overlay_refresh(a, o);
+          await app_a_function_overlay_refresh(a, o3);
         },
       };
       list_add(choices, c);
