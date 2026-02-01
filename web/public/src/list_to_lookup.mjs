@@ -12,14 +12,14 @@ export function list_to_lookup(list, property_key) {
     " but if each key corresponds to a list of values, then " +
     list_to_lookup.name;
   let lookup = {};
-  function lambda(word) {
-    let n = object_property_exists_not(word, property_key);
+  function lambda(item) {
+    let n = object_property_exists_not(item, property_key);
     if (n) {
       return;
     }
-    let value = object_property_get(word, property_key);
+    let value = object_property_get(item, property_key);
     let key_list = object_property_initialize_list(lookup, value);
-    list_add(key_list, word);
+    list_add(key_list, item);
   }
   each(list, lambda);
   return lookup;
