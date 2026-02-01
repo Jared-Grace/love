@@ -48,11 +48,6 @@ export function app_a_identifier_generic(
     let v_match = js_visit_match_first(ast, node);
     let stack = object_property_get(v_match, "stack");
     let e2 = list_get_end_2(stack);
-    function lambda4() {}
-    js_node_type_is_if(e2, "FunctionDeclaration", lambda4);
-    log({
-      stack,
-    });
     let overlay_close = object_property_get(o3, "overlay_close");
     let overlay = object_property_get(o3, "overlay");
     let oc = app_a_overlay_container_centered(overlay);
@@ -161,6 +156,11 @@ export function app_a_identifier_generic(
     if (includes) {
       list_add(choices, choice_function_open);
     }
+    function lambda4() {}
+    js_node_type_is_if(e2, "FunctionDeclaration", lambda4);
+    log({
+      stack,
+    });
     return choices;
   }
   app_a_overlay_choices(a, span, on_click);
