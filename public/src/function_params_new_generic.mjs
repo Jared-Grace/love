@@ -1,3 +1,4 @@
+import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -7,14 +8,14 @@ import { not } from "../../../love/public/src/not.mjs";
 import { function_unalias_exists } from "../../../love/public/src/function_unalias_exists.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { data_identifiers_search } from "../../../love/public/src/data_identifiers_search.mjs";
-import { function_transform_current } from "../../../love/public/src/function_transform_current.mjs";
 export async function function_params_new_generic(
   function_transform_current_lambda,
   on_call,
   f_name,
 ) {
   marker("1");
-  await function_transform_current(function_transform_current_lambda);
+  let f_name2 = await function_current_get();
+  await function_transform(f_name2, function_transform_current_lambda);
   let result = await data_identifiers_search(f_name);
   let properties = object_properties(result);
   async function lambda4(f_name) {
