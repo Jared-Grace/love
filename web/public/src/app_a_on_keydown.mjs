@@ -6,6 +6,7 @@ import { html_on_keydown_stop_logic } from "../../../love/public/src/html_on_key
 export function app_a_on_keydown(e, choices) {
   html_on_keydown_stop_logic(e);
   let key = object_property_get(e, "key");
+  ("this makes sure there is at most one choice per shortcut");
   list_to_dictionary_property(choices, "shortcut");
   app_a_shortcuts_each(choices, on_choice);
   function on_choice(shortcut, text, fn) {
