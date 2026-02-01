@@ -1,3 +1,4 @@
+import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { function_param_delete } from "../../../love/public/src/function_param_delete.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
@@ -162,6 +163,7 @@ export function app_a_identifier_generic(
         shortcut: "q",
         text: "Param delete",
         fn: async function lambda() {
+          let f_name = storage_local_get_context(context, "f_name_selected");
           await function_param_delete(f_name, param_name);
           overlay_close();
           app_a_function_on_keydown_remove(a);
