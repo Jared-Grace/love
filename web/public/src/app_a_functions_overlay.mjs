@@ -4,7 +4,7 @@ import { object_copy_assign } from "../../../love/public/src/object_copy_assign.
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
-export async function app_a_functions_overlay(a, lambda$f_name) {
+export async function app_a_functions_overlay(a, on_select) {
   let overlay_result = app_a_overlay(a);
   let overlay = object_property_get(overlay_result, "overlay");
   html_style_set(overlay, "overflow", "hidden");
@@ -12,16 +12,13 @@ export async function app_a_functions_overlay(a, lambda$f_name) {
     root: overlay,
   };
   let context = object_property_get(a, "context");
-  let context_copy = object_copy_assign(context, replacement);
+  let copy = object_copy_assign(context, replacement);
   function lambda3() {
     let overlay_close = object_property_get(overlay_result, "overlay_close");
     overlay_close();
   }
   app_a_button_function(context, overlay, lambda3);
-  let functions_result = await app_a_functions_generic(
-    context_copy,
-    lambda$f_name,
-  );
+  let functions_result = await app_a_functions_generic(copy, on_select);
   let v = {
     overlay_result,
     functions_result,
