@@ -14,7 +14,11 @@ export async function function_params_new(
   assert_arguments(arguments, 2);
   let param_names = string_split(param_names_comma, ",");
   let values_default = string_split(values_default_comma, ",");
-  await function_params_new_generic(function_transform_current_lambda, on_call);
+  await function_params_new_generic(
+    function_transform_current_lambda,
+    on_call,
+    error(),
+  );
   function on_call(args) {
     function lambda3(value_default) {
       let expression2 = js_parse_expression(value_default);
