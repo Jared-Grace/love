@@ -11,8 +11,8 @@ export function list_filter_property_exclude_if_exists(
   function lambda(item) {
     let exists = object_property_exists(item, property_name);
     if (exists) {
-      let v = object_property_get(object, property_name) !== value;
-      return v;
+      let ne = object_property_get(object, property_name) !== value;
+      return ne;
     }
     let v2 = true;
     return v2;
