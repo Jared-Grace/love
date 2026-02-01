@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -16,9 +15,6 @@ export async function function_params_new_generic(
   await function_transform(f_name, function_transform_current_lambda);
   marker("1");
   let result = await data_identifiers_search(f_name);
-  log({
-    result,
-  });
   let properties = object_properties(result);
   async function lambda4(f_name_caller) {
     let v = await function_unalias_exists(f_name_caller);
