@@ -45,6 +45,9 @@ export function app_a_identifier_generic(
     let ast = object_property_get(a, "ast");
     let v_match = js_visit_match_first(ast, node);
     let stack = object_property_get(v_match, "stack");
+    log({
+      stack,
+    });
     let overlay_close = object_property_get(o3, "overlay_close");
     let overlay = object_property_get(o3, "overlay");
     let oc = app_a_overlay_container_centered(overlay);
