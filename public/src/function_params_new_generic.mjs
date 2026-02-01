@@ -1,4 +1,3 @@
-import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -14,8 +13,7 @@ export async function function_params_new_generic(
   f_name,
 ) {
   marker("1");
-  let f_name2 = await function_current_get();
-  await function_transform(f_name2, function_transform_current_lambda);
+  await function_transform(f_name, function_transform_current_lambda);
   let result = await data_identifiers_search(f_name);
   let properties = object_properties(result);
   async function lambda4(f_name) {
