@@ -165,6 +165,7 @@ export function app_a_identifier_generic(
         shortcut: "s",
         text: "References",
         fn: async function lambda() {
+          overlay_close();
           let result = await data_identifiers_search(name);
           let properties = object_properties(result);
           function lambda3(f_name) {
