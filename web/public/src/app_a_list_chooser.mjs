@@ -19,7 +19,7 @@ import { app_a_input } from "../../../love/public/src/app_a_input.mjs";
 import { app_a_on_keydown_add } from "../../../love/public/src/app_a_on_keydown_add.mjs";
 import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-export function app_a_list_chooser(context, noun, texts, on_select) {
+export function app_a_list_chooser(context, noun, texts, lambda$text) {
   marker("1");
   let root = object_property_get(context, "root");
   const articled = string_articled(noun);
@@ -69,7 +69,7 @@ export function app_a_list_chooser(context, noun, texts, on_select) {
   html_focus(input);
   async function f_name_select(text) {
     list_remove(on_keydowns, on_keydown);
-    await on_select(text);
+    await lambda$text(text);
   }
   function input_set(value) {
     html_value_set(input, value);
