@@ -162,7 +162,7 @@ export function app_a_identifier_generic(
       };
       list_add(choices, choice_function_open);
       const references = {
-        shortcut: "r",
+        shortcut: "s",
         text: "References",
         fn: async function lambda() {
           let result = await data_identifiers_search(s);
