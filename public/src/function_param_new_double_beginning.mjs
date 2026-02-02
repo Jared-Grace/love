@@ -6,6 +6,6 @@ export async function function_param_new_double_beginning(param_name) {
   marker("1");
   let v = await function_param_new_double(param_name);
   let f_name = error();
-  await function_param_move_first(param_name, f_name);
+  await function_param_move_first(f_name, param_name);
   return v;
 }
