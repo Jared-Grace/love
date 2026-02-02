@@ -4,7 +4,7 @@ import { storage_local_set_context } from "../../../love/public/src/storage_loca
 import { js_block_find } from "../../../love/public/src/js_block_find.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-export function app_a_cut(o, a, node) {
+export function app_a_cut(o, a) {
   let r = {
     shortcut: "u",
     text: "Cut",
