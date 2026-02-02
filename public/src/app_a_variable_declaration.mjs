@@ -20,7 +20,7 @@ export function app_a_variable_declaration(a) {
     let v = app_a_node_index(a);
     let index = object_property_get(v, "index");
     let list = object_property_get(v, "list");
-    app_a_paste(choices, a, o2, list, index, "");
+    app_a_paste(choices, a, o2, list, index, "above");
     return choices;
   }
   app_a_overlay_choices(a, keyword, lambda19);
