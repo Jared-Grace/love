@@ -27,12 +27,12 @@ export async function app_a_app(context) {
   let combined = app_generic_name_main(a_name);
   let v = await function_unalias_exists(combined);
   let unaliased = object_property_get(v, "unaliased");
-  let text = null;
-  text = app_a_button_function_text(unaliased);
+  let text1 = null;
+  text1 = app_a_button_function_text(unaliased);
   let choices = [
     {
       shortcut: "f",
-      text: text,
+      text: text1,
       fn: function lambda2() {
         app_a_function_select(context, f_name);
       },
@@ -49,7 +49,7 @@ export async function app_a_app(context) {
   if (exists) {
     list_add(choices, {
       shortcut: "m",
-      text: text,
+      text: text1,
       fn: function lambda2() {
         app_a_function_select(context, unaliased);
       },
