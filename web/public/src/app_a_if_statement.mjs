@@ -1,8 +1,4 @@
-import { list_remove } from "../../../love/public/src/list_remove.mjs";
-import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
-import { app_a_paste } from "../../../love/public/src/app_a_paste.mjs";
-import { js_block_find } from "../../../love/public/src/js_block_find.mjs";
-import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
+import { app_a_cut } from "../../../love/public/src/app_a_cut.mjs";
 import { app_a_functions_overlay } from "../../../love/public/src/app_a_functions_overlay.mjs";
 import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
@@ -24,6 +20,7 @@ export function app_a_if_statement(a, node, parent) {
   let keyword = object_property_get(v4, "keyword");
   async function lambda(o) {
     let overlay_close = object_property_get(o, "overlay_close");
+    let v3 = app_a_cut(overlay_close, a, node);
     let choices = [
       {
         shortcut: "a",
@@ -49,22 +46,7 @@ export function app_a_if_statement(a, node, parent) {
           }
         },
       },
-      {
-        shortcut: "u",
-        text: "Cut",
-        fn: async function lambda2() {
-          overlay_close();
-          let ast = object_property_get(a, "ast");
-          let v_match = js_visit_match(ast, node);
-          let stack = object_property_get(v_match, "stack");
-          let f = js_block_find(stack);
-          let item = object_property_get(f, "item");
-          let context = object_property_get(a, "context");
-          storage_local_set_context(context, app_a_paste.name, item);
-          let body = object_property_get(f, "body");
-          list_remove(body, item);
-        },
-      },
+      v3,
     ];
     return choices;
   }
