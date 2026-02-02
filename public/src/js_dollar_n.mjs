@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_property_swap } from "../../../love/public/src/object_property_swap.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -24,7 +25,8 @@ export function js_dollar_n({
     let name = js_call_callee_name(node);
     if (equal(name, not.name)) {
       let arguments2 = object_property_get(node, "arguments");
-      let only = list_single(list);
+      let only = list_single(arguments2);
+      object_property_set(object, property_name, value);
       const p1 = "alternate";
       const p2 = "consequent";
       object_property_swap(n, p1, p2);
