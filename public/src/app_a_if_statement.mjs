@@ -36,7 +36,7 @@ export function app_a_if_statement(a) {
             let stack = object_property_get(v, "stack");
             let index = object_property_get(v, "index");
             let list = object_property_get(v, "list");
-            let ast = object_property_get(v, "ast");
+            let ast = object_property_get(a, "ast");
             let parsed = await js_call_new_insert(
               f_name_call,
               ast,
