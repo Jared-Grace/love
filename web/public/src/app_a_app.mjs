@@ -25,7 +25,7 @@ export async function app_a_app(context) {
   let key = app_a_app_selected_key();
   let a_name = storage_local_get_context(context, key);
   let f_name = app_a_function_name_selected(context);
-  let a_name_f = app_generic_name_prefixed(a);
+  let a_name_f = app_generic_name_prefixed(a_name);
   let combined = app_generic_name_main(a_name);
   let v = await function_unalias_exists(combined);
   let unaliased = object_property_get(v, "unaliased");
