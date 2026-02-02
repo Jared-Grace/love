@@ -1,3 +1,4 @@
+import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { storage_local_remove_context } from "../../../love/public/src/storage_local_remove_context.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
@@ -15,6 +16,7 @@ export function app_a_paste(choices, a, overlay_result, body_list) {
       shortcut: "v",
       text: "Paste",
       fn: async function lambda() {
+        list_insert(list, index, value2);
         list_add(body_list, value);
         await app_a_function_on_change(overlay_result, a);
       },
