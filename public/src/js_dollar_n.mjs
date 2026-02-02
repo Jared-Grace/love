@@ -22,8 +22,10 @@ export function js_dollar_n({
   function lambda2() {
     let name = js_call_callee_name(node);
     if (equal(name, not.name)) {
-      let alternate = object_property_get(n, "alternate");
-      let consequent = object_property_get(n, "consequent");
+      const p1 = "alternate";
+      const p2 = "consequent";
+      let alternate = object_property_get(n, p1);
+      let consequent = object_property_get(n, p2);
       object_property_set(object, property_name, value);
       object_property_set(object2, property_name2, value2);
     }
