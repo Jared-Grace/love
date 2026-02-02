@@ -21,7 +21,7 @@ export function app_a_paste(
     let value = storage_local_get_context(context, app_a_paste.name);
     list_add(choices, {
       shortcut: "v",
-      text: "Paste",
+      text: "Paste" + text_suffix,
       fn: async function lambda() {
         list_insert(body_list, index, value);
         await app_a_function_on_change(overlay_result, a);
