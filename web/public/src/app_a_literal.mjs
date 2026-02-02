@@ -8,6 +8,7 @@ export function app_a_literal(a, component, node, on_change, raw) {
   marker("1");
   let lines_multiple = null;
   let type_is = js_node_type_is(node, "TemplateLiteral");
+  $n;
   if (not(type_is)) {
     let value = object_property_get(node, "value");
     lines_multiple = string_is(value);
