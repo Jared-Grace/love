@@ -15,7 +15,7 @@ export async function function_params_new(
   f_name,
 ) {
   marker("1");
-  assert_arguments(arguments, 2);
+  assert_arguments(arguments, 3);
   let param_names = string_split(param_names_comma, ",");
   let values_default = string_split(values_default_comma, ",");
   let f_name_2 = await function_current_get();
