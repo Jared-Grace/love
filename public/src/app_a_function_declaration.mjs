@@ -1,6 +1,5 @@
+import { list_insert_at_multiple } from "../../../love/public/src/list_insert_at_multiple.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
-import { list_insert } from "../../../love/public/src/list_insert.mjs";
-import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
@@ -53,11 +52,7 @@ export function app_a_function_declaration(a) {
           let body_block = js_declaration_to_block_body(node);
           let index = list_index_of(e1, node);
           list_remove(e1, node);
-          let copy = list_copy_reverse(body_block);
-          function lambda5(item) {
-            list_insert(e1, index, item);
-          }
-          each(copy, lambda5);
+          list_insert_at_multiple(body_block, e1, index);
           await app_a_function_on_change(o, a);
         },
       });
