@@ -27,7 +27,8 @@ export async function app_a_app(context) {
   let combined = app_generic_name_main(a_name);
   let v = await function_unalias_exists(combined);
   let unaliased = object_property_get(v, "unaliased");
-  const text = app_a_button_function_text(unaliased);
+  let text = null;
+  text = app_a_button_function_text(unaliased);
   let choices = [
     {
       shortcut: "f",
