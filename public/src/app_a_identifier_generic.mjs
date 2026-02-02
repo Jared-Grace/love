@@ -144,7 +144,6 @@ export function app_a_identifier_generic(
           await app_a_function_on_change(o3, a);
         },
       },
-      {},
     ];
     app_a_functionize_choices_add(choices, a, o3);
     let f_names = await functions_names();
