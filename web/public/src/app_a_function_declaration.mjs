@@ -30,7 +30,7 @@ export function app_a_function_declaration(a) {
   function lambda3(o) {
     let choices = [];
     app_a_functionize_choices_add(choices, a, o);
-    list_add(list, item);
+    list_add(list, {});
     return choices;
   }
   app_a_overlay_choices(a, keyword, lambda3);
