@@ -14,7 +14,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { app_a_keyword_purple_space } from "../../../love/public/src/app_a_keyword_purple_space.mjs";
 import { js_keyword_if } from "../../../love/public/src/js_keyword_if.mjs";
 export function app_a_if_statement(a, parent) {
-  let node2 = object_property_get(a, "node");
+  let node = object_property_get(a, "node");
   marker("1");
   let k = js_keyword_if();
   let v4 = app_a_keyword_purple_space(parent, k);
