@@ -7,10 +7,10 @@ import { app_a_identifier_generic } from "../../../love/public/src/app_a_identif
 export function app_a_literal(a, component, node, on_change, raw) {
   marker("1");
   let type_is = js_node_type_is(node, "TemplateLiteral");
-  if (not(b)) {
+  if (not(type_is)) {
+    let value = object_property_get(node, "value");
+    let si2 = string_is(value);
   }
-  let value = object_property_get(node, "value");
-  let si2 = string_is(value);
   app_a_identifier_generic(
     a,
     component,
