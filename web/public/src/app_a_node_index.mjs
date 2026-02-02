@@ -21,7 +21,6 @@ export function app_a_node_index(a) {
   let statement = list_next(stack, list);
   let index = list_index_of(list, statement);
   let v = {
-    ast,
     list,
     index,
     stack,
