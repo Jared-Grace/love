@@ -50,12 +50,12 @@ export function app_a_function_declaration(a) {
         text: "Flatten",
         fn: function lambda4() {
           let e1 = list_get_end_1(stack);
+          let body_block = js_declaration_to_block_body(node);
           let index = list_index_of(e1, node);
           list_remove(e1, node);
-          let body_block = js_declaration_to_block_body(node);
           let copy = list_copy_reverse(body_block);
           function lambda5(item) {
-            list_insert(list, index2, value);
+            list_insert(list, index, item);
           }
           each(copy, lambda5);
           log({
