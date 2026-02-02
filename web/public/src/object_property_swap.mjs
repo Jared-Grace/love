@@ -4,5 +4,5 @@ export function object_property_swap(n, p1, p2) {
   let v1 = object_property_get(n, p1);
   let v2 = object_property_get(n, p2);
   object_property_set(n, p1, v2);
-  object_property_set(n, p1, v1);
+  object_property_set(n, p2, v1);
 }
