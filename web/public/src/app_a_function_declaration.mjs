@@ -41,10 +41,10 @@ export function app_a_function_declaration(a) {
         let ast = object_property_get(a, "ast");
         let v_match = js_visit_match(ast, node);
         let stack = object_property_get(v_match, "stack");
-        let e1 = list_get_end_1(stack2);
+        let e1 = list_get_end_1(stack);
         let body_block = js_declaration_to_block_body(node);
         log({
-          parent,
+          e1,
         });
       },
     });
