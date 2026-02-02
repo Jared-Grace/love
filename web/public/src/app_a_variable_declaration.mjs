@@ -1,4 +1,4 @@
-import { app_a_functionize_end_choice_add } from "../../../love/public/src/app_a_functionize_end_choice_add.mjs";
+import { app_a_functionize_choices_add } from "../../../love/public/src/app_a_functionize_choices_add.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_a_semicolon } from "../../../love/public/src/app_a_semicolon.mjs";
 import { app_a_nodes_list } from "../../../love/public/src/app_a_nodes_list.mjs";
@@ -14,7 +14,7 @@ export function app_a_variable_declaration(a) {
   let keyword = object_property_get(k, "keyword");
   function lambda19(o2) {
     let choices = [];
-    app_a_functionize_end_choice_add(a, choices, o2);
+    app_a_functionize_choices_add(choices, a, o2);
     return choices;
   }
   app_a_overlay_choices(a, keyword, lambda19);
