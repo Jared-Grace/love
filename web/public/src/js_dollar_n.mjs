@@ -21,11 +21,11 @@ export function js_dollar_n({
   function lambda2() {
     let name = js_call_callee_name(node);
     if (equal(name, not.name)) {
+      let alternate = object_property_get(n, "alternate");
+      let consequent = object_property_get(n, "consequent");
     }
   }
   js_node_type_is_if(test, "CallExpression", lambda2);
-  let alternate = object_property_get(n, "alternate");
-  let consequent = object_property_get(n, "consequent");
   log({
     n,
   });
