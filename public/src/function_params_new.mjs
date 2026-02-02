@@ -15,11 +15,11 @@ export async function function_params_new(
   assert_arguments(arguments, 2);
   let param_names = string_split(param_names_comma, ",");
   let values_default = string_split(values_default_comma, ",");
-  let f_name = await function_current_get();
+  let f_name_2 = await function_current_get();
   await function_params_new_generic(
     function_transform_current_lambda,
     on_call,
-    f_name,
+    f_name_2,
   );
   function on_call(args) {
     function lambda3(value_default) {
