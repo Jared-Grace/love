@@ -24,7 +24,7 @@ export function js_dollar_n({
     if (equal(name, not.name)) {
       let alternate = object_property_get(n, "alternate");
       let consequent = object_property_get(n, "consequent");
-      object_property_set(object, property_name, value);
+      object_property_set(object, property_name, value);st
     }
   }
   js_node_type_is_if(test, "CallExpression", lambda2);
