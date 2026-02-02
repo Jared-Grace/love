@@ -1,3 +1,4 @@
+import { app_a_functionize_choices_add } from "../../../love/public/src/app_a_functionize_choices_add.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { data_identifiers_search } from "../../../love/public/src/data_identifiers_search.mjs";
 import { app_a_functions_overlay_generic } from "../../../love/public/src/app_a_functions_overlay_generic.mjs";
@@ -7,8 +8,6 @@ import { function_param_delete } from "../../../love/public/src/function_param_d
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { js_visit_match_first } from "../../../love/public/src/js_visit_match_first.mjs";
-import { app_a_functionize_end_choice_add } from "../../../love/public/src/app_a_functionize_end_choice_add.mjs";
-import { app_a_functionize_start_choice_add } from "../../../love/public/src/app_a_functionize_start_choice_add.mjs";
 import { app_a_overlay_on_enter } from "../../../love/public/src/app_a_overlay_on_enter.mjs";
 import { string_is_assert } from "../../../love/public/src/string_is_assert.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
@@ -146,8 +145,7 @@ export function app_a_identifier_generic(
         },
       },
     ];
-    app_a_functionize_start_choice_add(choices, a, o3);
-    app_a_functionize_end_choice_add(a, choices, o3);
+    app_a_functionize_choices_add(choices, a, o3);
     let f_names = await functions_names();
     let includes = list_includes(f_names, name);
     if (includes) {
