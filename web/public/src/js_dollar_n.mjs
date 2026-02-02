@@ -1,4 +1,4 @@
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { object_property_swap } from "../../../love/public/src/object_property_swap.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { js_call_callee_name } from "../../../love/public/src/js_call_callee_name.mjs";
@@ -24,10 +24,7 @@ export function js_dollar_n({
     if (equal(name, not.name)) {
       const p1 = "alternate";
       const p2 = "consequent";
-      let v1 = object_property_get(n, p1);
-      let v2 = object_property_get(n, p2);
-      object_property_set(n, p1, v2);
-      object_property_set(n, p1, v1);
+      object_property_swap(n, p1, p2);
     }
   }
   js_node_type_is_if(test, "CallExpression", lambda2);
