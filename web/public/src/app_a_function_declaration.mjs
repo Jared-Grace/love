@@ -36,6 +36,7 @@ export function app_a_function_declaration(a) {
       shortcut: "l",
       text: "Flatten",
       fn: function lambda4() {
+        let ast = object_property_get(a, "ast");
         let body_block = js_declaration_to_block_body(node);
         log({
           parent,
