@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_replace_multiple } from "../../../love/public/src/list_replace_multiple.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
@@ -75,7 +76,8 @@ export function app_a_function_declaration(a) {
       let choices = [];
       let body_list = object_property_get(body, "body");
       let size = list_size(body_list);
-      app_a_paste(choices, a, o, size, error());
+      let index = error();
+      app_a_paste(choices, a, o, size, index);
       return choices;
     }
     app_a_overlay_choices(a, lr, lambda2);
