@@ -13,7 +13,7 @@ import { app_a_function_node_child } from "../../../love/public/src/app_a_functi
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_a_keyword_purple_space } from "../../../love/public/src/app_a_keyword_purple_space.mjs";
 import { js_keyword_if } from "../../../love/public/src/js_keyword_if.mjs";
-export function app_a_if_statement(a, parent) {
+export function app_a_if_statement(a) {
   let node = object_property_get(a, "node");
   let parent2 = object_property_get(a, "parent");
   marker("1");
