@@ -58,7 +58,7 @@ export function app_a_function_declaration(a) {
             list_insert(e1, index, item);
           }
           each(copy, lambda5);
-          await app_a_function_on_change(o2, a);
+          await app_a_function_on_change(o, a);
         },
       });
     }
