@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_functionize_choices_add } from "../../../love/public/src/app_a_functionize_choices_add.mjs";
 import { app_a_paste } from "../../../love/public/src/app_a_paste.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
@@ -29,6 +30,7 @@ export function app_a_function_declaration(a) {
   function lambda3(o) {
     let choices = [];
     app_a_functionize_choices_add(choices, a, o);
+    list_add(list, item);
     return choices;
   }
   app_a_overlay_choices(a, keyword, lambda3);
