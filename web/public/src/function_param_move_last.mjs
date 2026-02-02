@@ -6,5 +6,5 @@ export async function function_param_move_last(param_name) {
   marker("1");
   assert_arguments(arguments, 1);
   let fn = list_move_last;
-  await function_param_move_generic(fn, param_name);
+  await function_param_move_generic(fn, param_name, error());
 }
