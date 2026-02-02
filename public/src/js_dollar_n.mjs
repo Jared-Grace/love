@@ -24,10 +24,10 @@ export function js_dollar_n({
     if (equal(name, not.name)) {
       const p1 = "alternate";
       const p2 = "consequent";
-      let alternate = object_property_get(n, p1);
-      let consequent = object_property_get(n, p2);
-      object_property_set(object, property_name, value);
-      object_property_set(object2, property_name2, value2);
+      let v1 = object_property_get(n, p1);
+      let v2 = object_property_get(n, p2);
+      object_property_set(n, p1, v2);
+      object_property_set(n, p1, v1);
     }
   }
   js_node_type_is_if(test, "CallExpression", lambda2);
