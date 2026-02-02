@@ -12,6 +12,7 @@ export function app_a_cut(o, a) {
       let overlay_close = object_property_get(o, "overlay_close");
       overlay_close();
       let ast = object_property_get(a, "ast");
+      let node = object_property_get(a, "node");
       let v_match = js_visit_match(ast, node);
       let stack = object_property_get(v_match, "stack");
       let f = js_block_find(stack);
