@@ -134,7 +134,7 @@ export function app_a_function_node(a) {
         let v2 = [c];
         return v2;
       }
-      app_a_overlay_choices(a2, component2, lambda19);
+      app_a_overlay_choices(a, keyword, lambda19);
       let argument = object_property_get(node, "argument");
       app_a_function_node_child(a, argument);
     },
