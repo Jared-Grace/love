@@ -9,9 +9,9 @@ import { js_parse_expression } from "../../../love/public/src/js_parse_expressio
 import { js_declaration_single_params_add } from "../../../love/public/src/js_declaration_single_params_add.mjs";
 import { string_split } from "../../../love/public/src/string_split.mjs";
 export async function function_params_new(
+  f_name,
   param_names_comma,
   values_default_comma,
-  f_name,
 ) {
   marker("1");
   assert_arguments(arguments, 3);

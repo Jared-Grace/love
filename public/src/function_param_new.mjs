@@ -4,5 +4,5 @@ import { function_params_new } from "../../../love/public/src/function_params_ne
 export async function function_param_new(f_name, param_name, default_value) {
   assert_arguments(arguments, 3);
   marker("1");
-  await function_params_new(param_name, default_value, f_name);
+  await function_params_new(f_name, param_name, default_value);
 }
