@@ -45,7 +45,8 @@ export function app_a_function_declaration(a) {
         let stack = object_property_get(v_match, "stack");
         let e1 = list_get_end_1(stack);
         let e2 = list_get_end_2(stack);
-        js_node_type_is_if(node2, type, function lambda6() {});
+        function lambda6() {}
+        js_node_type_is_if(node2, type, lambda6);
         let body_block = js_declaration_to_block_body(node);
         log({
           e1,
