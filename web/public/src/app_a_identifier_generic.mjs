@@ -12,7 +12,6 @@ import { app_a_overlay_on_enter } from "../../../love/public/src/app_a_overlay_o
 import { string_is_assert } from "../../../love/public/src/string_is_assert.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
 import { html_rows_set } from "../../../love/public/src/html_rows_set.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_remove_at_count } from "../../../love/public/src/list_remove_at_count.mjs";
 import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs";
 import { app_a_input_integer } from "../../../love/public/src/app_a_input_integer.mjs";
@@ -126,9 +125,6 @@ export function app_a_identifier_generic(
             let index = object_property_get(v, "index");
             let list = object_property_get(v, "list");
             let removals = list_remove_at_count(list, index, value_new);
-            log({
-              removals,
-            });
             await app_a_function_on_change(o2, a);
           }
           let component = app_a_button_wide(overlay, "Delete", lambda23);
