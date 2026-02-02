@@ -11,8 +11,8 @@ export function app_a_literal(a, component, node, on_change, raw) {
   if (not(type_is)) {
     let value = object_property_get(node, "value");
     lines_multiple = string_is(value);
+  } else {
   }
-  $el;
   app_a_identifier_generic(
     a,
     component,
