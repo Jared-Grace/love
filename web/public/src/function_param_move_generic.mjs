@@ -1,9 +1,7 @@
-import { error } from "../../../love/public/src/error.mjs";
 import { function_param_index } from "../../../love/public/src/function_param_index.mjs";
 import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
 export async function function_param_move_generic(fn, param_name) {
   let index = null;
-  let f_name = error();
   await function_params_new_generic(
     function_transform_current_lambda,
     on_call,
