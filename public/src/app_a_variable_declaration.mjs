@@ -18,7 +18,7 @@ export function app_a_variable_declaration(a) {
     let choices = [];
     app_a_functionize_choices_add(choices, a, o2);
     app_a_node_index(a);
-    app_a_paste(choices2, a2, overlay_result, body_list, index);
+    app_a_paste(choices, a, overlay_result, body_list, index);
     return choices;
   }
   app_a_overlay_choices(a, keyword, lambda19);
