@@ -1,3 +1,4 @@
+import { app_a_paste } from "../../../love/public/src/app_a_paste.mjs";
 import { app_a_functionize_choices_add } from "../../../love/public/src/app_a_functionize_choices_add.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { app_a_semicolon } from "../../../love/public/src/app_a_semicolon.mjs";
@@ -15,6 +16,7 @@ export function app_a_variable_declaration(a) {
   function lambda19(o2) {
     let choices = [];
     app_a_functionize_choices_add(choices, a, o2);
+    app_a_paste(choices2, a2, overlay_result, body_list, index);
     return choices;
   }
   app_a_overlay_choices(a, keyword, lambda19);
