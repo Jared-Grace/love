@@ -34,7 +34,7 @@ export function js_dollar_n({
   }
   js_node_type_is_if(test, "CallExpression", lambda2);
   log({
-    n,
+    test,
   });
   return;
 }
