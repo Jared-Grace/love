@@ -14,6 +14,8 @@ export function js_dollar_n({
   marker("1");
   let n = list_next(stack2, stack1);
   let test = object_property_get(n, "test");
+  let alternate = object_property_get(n, "alternate");
+  let consequent = object_property_get(n, "consequent");
   log({
     n,
   });
