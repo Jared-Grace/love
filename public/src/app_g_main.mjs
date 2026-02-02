@@ -91,9 +91,9 @@ export async function app_g_main(context) {
   await html_scroll_none(div_map_container);
   const tiles_path = g_folder_tiles(path_prefix);
   let rows = app_g_map_generate();
-  let r2 = range_1(18);
+  let imgs_men_rg = range_1(18);
   let r = range_1(21);
-  let imgs_men = list_map_combine_left(r2, "man_");
+  let imgs_men = list_map_combine_left(imgs_men_rg, "man_");
   let imgs_women = list_map_combine_left(r, "woman_");
   const player_img = list_random_item(imgs_men);
   let names_men = bible_names_men();
