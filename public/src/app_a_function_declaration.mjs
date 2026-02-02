@@ -1,3 +1,4 @@
+import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_declaration_to_block_body } from "../../../love/public/src/js_declaration_to_block_body.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -37,6 +38,7 @@ export function app_a_function_declaration(a) {
       text: "Flatten",
       fn: function lambda4() {
         let ast = object_property_get(a, "ast");
+        let v_match = js_visit_match(ast2, node_search);
         let body_block = js_declaration_to_block_body(node);
         log({
           parent,
