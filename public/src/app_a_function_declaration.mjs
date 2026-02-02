@@ -50,8 +50,8 @@ export function app_a_function_declaration(a) {
         fn: async function lambda4() {
           let e1 = list_get_end_1(stack);
           let body_block = js_declaration_to_block_body(node);
-          list_remove(e1, node);
           let index = list_index_of(e1, node);
+          list_remove(e1, node);
           list_insert_at_multiple(body_block, e1, index);
           await app_a_function_on_change(o, a);
         },
