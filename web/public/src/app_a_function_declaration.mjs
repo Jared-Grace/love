@@ -31,8 +31,8 @@ export function app_a_function_declaration(a) {
     let choices = [];
     app_a_functionize_choices_add(choices, a, o);
     list_add(choices, {
-      shortcut: "f",
-      text: "Functionize start",
+      shortcut: "l",
+      text: "Flatten",
       fn: function lambda4() {},
     });
     return choices;
