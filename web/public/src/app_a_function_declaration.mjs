@@ -1,3 +1,4 @@
+import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
@@ -50,7 +51,8 @@ export function app_a_function_declaration(a) {
           let e1 = list_get_end_1(stack);
           let index = list_index_of(e1, node);
           list_remove(e1, node);
-          let body_block = js_declaration_to_block_body(node);lcr
+          let body_block = js_declaration_to_block_body(node);
+          let copy = list_copy_reverse(previous);
           function lambda5(item) {}
           each(list, lambda5);
           log({
