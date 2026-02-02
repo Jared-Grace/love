@@ -1,3 +1,4 @@
+import { app_generic_name_prefixed } from "../../../love/public/src/app_generic_name_prefixed.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { app_a_on_keydown } from "../../../love/public/src/app_a_on_keydown.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
@@ -24,15 +25,16 @@ export async function app_a_app(context) {
   let key = app_a_app_selected_key();
   let a_name = storage_local_get_context(context, key);
   let f_name = app_a_function_name_selected(context);
+  let a_name_f = app_generic_name_prefixed(a);
   let combined = app_generic_name_main(a_name);
   let v = await function_unalias_exists(combined);
   let unaliased = object_property_get(v, "unaliased");
   let choices = [
     {
       shortcut: "f",
-      text: app_a_button_function_text(f_name),
+      text: app_a_button_function_text(a_name_f),
       fn: function lambda2() {
-        app_a_function_select(context, f_name);
+        app_a_function_select(context, a_name_f);
       },
     },
     {
