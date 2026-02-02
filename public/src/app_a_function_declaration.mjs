@@ -38,7 +38,8 @@ export function app_a_function_declaration(a) {
       text: "Flatten",
       fn: function lambda4() {
         let ast = object_property_get(a, "ast");
-        let v_match = js_visit_match(ast2, node_search);
+        let v_match = js_visit_match(ast, node);
+        let stack = object_property_get(v_match, "stack");
         let body_block = js_declaration_to_block_body(node);
         log({
           parent,
