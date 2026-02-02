@@ -1,4 +1,6 @@
+import { function_param_new_error } from "../../../love/public/src/function_param_new_error.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export function function_param_new_error_last() {
+export async function function_param_new_error_last(f_name, param_name) {
   marker("1");
+  return await function_param_new_error(f_name, param_name);
 }
