@@ -9,9 +9,8 @@ export function app_a_literal(a, component, node, on_change, raw) {
   let type_is = js_node_type_is(node, "TemplateLiteral");
   if (not(type_is)) {
     let value = object_property_get(node, "value");
-    if (false) {
-    }
-    let lines_multiple = string_is(value);
+    let lines_multiple = null;
+    lines_multiple = string_is(value);
   }
   app_a_identifier_generic(
     a,
