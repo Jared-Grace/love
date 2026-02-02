@@ -4,5 +4,5 @@ import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 export function list_replace_multiple(list, item, list_replacements) {
   let index = list_index_of(list, item);
   list_remove(list, item);
-  list_insert_at_multiple(list_replacements, list, index);
+  list_insert_at_multiple(list, index, list_replacements);
 }
