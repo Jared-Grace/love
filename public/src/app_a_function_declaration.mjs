@@ -1,4 +1,4 @@
-import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
+import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_replace_multiple } from "../../../love/public/src/list_replace_multiple.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
@@ -74,7 +74,7 @@ export function app_a_function_declaration(a) {
     function lambda2(o) {
       let choices = [];
       let body_list = object_property_get(body, "body");
-      let index_last = list_index_last(list);
+      let size = list_size(list);
       app_a_paste(choices, a, o, body_list);
       return choices;
     }
