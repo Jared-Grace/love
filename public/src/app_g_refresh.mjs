@@ -7,7 +7,6 @@ import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_scroll_center_container_now } from "../../../love/public/src/html_scroll_center_container_now.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_click } from "../../../love/public/src/app_g_click.mjs";
 import { html_data_set_json } from "../../../love/public/src/html_data_set_json.mjs";
 import { html_class_add } from "../../../love/public/src/html_class_add.mjs";
