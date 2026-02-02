@@ -40,6 +40,7 @@ export function app_a_function_declaration(a) {
         let ast = object_property_get(a, "ast");
         let v_match = js_visit_match(ast, node);
         let stack = object_property_get(v_match, "stack");
+        le1;
         let body_block = js_declaration_to_block_body(node);
         log({
           parent,
