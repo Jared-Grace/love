@@ -60,9 +60,7 @@ export function app_a_function_declaration(a) {
           }
           each(copy, lambda5);
           let u = js_unparse(ast);
-          log({
-            u,
-          });
+          log(u);
         },
       });
     }
