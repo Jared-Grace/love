@@ -12,6 +12,7 @@ import { string_split } from "../../../love/public/src/string_split.mjs";
 export async function function_params_new(
   param_names_comma,
   values_default_comma,
+  f_name,
 ) {
   marker("1");
   assert_arguments(arguments, 2);
