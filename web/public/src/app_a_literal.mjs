@@ -22,7 +22,7 @@ export function app_a_literal(a, component, node, on_change, raw) {
       text: "Edit",
       on_change,
     },
-    si2,
+    lines_multiple,
     on_change,
   );
 }
