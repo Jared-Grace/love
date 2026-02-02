@@ -34,7 +34,7 @@ export function js_dollar_n({
       const p1 = "alternate";
       const p2 = "consequent";
       object_property_swap(n, p1, p2);
-      list_remove(list, item);
+      list_remove(stack2, stack1);
     }
   }
   js_node_type_is_if(test, "CallExpression", lambda2);
