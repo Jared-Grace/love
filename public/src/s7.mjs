@@ -4,7 +4,7 @@ export function s7() {
   marker("1");
   function lambda() {
     log("1");
-    log("2");
+    log("2 hi");
   }
   lambda();
 }
