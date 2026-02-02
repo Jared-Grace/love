@@ -6,7 +6,6 @@ import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.
 import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { js_declaration_to_block_body } from "../../../love/public/src/js_declaration_to_block_body.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_functionize_choices_add } from "../../../love/public/src/app_a_functionize_choices_add.mjs";
@@ -58,9 +57,6 @@ export function app_a_function_declaration(a) {
             list_insert(e1, index, item);
           }
           each(copy, lambda5);
-          log({
-            e1,
-          });
         },
       });
     }
