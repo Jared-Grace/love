@@ -14,9 +14,9 @@ export function js_dollar_n({
 }) {
   marker("1");
   let n = list_next(stack2, stack1);
-  function lambda2() {}
-  js_node_type_is_if(node2, type, lambda2);
   let test = object_property_get(n, "test");
+  function lambda2() {}
+  js_node_type_is_if(test, type, lambda2);
   let alternate = object_property_get(n, "alternate");
   let consequent = object_property_get(n, "consequent");
   log({
