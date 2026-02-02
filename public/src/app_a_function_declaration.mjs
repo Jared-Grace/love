@@ -75,7 +75,7 @@ export function app_a_function_declaration(a) {
       let choices = [];
       let body_list = object_property_get(body, "body");
       let size = list_size(body_list);
-      app_a_paste(choices, a, o, body_list, size);
+      app_a_paste(choices, a, o, body_list, size, "");
       return choices;
     }
     app_a_overlay_choices(a, lr, lambda2);
