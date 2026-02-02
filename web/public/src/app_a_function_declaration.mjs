@@ -33,7 +33,7 @@ export function app_a_function_declaration(a) {
     list_add(choices, {
       shortcut: "f",
       text: "Functionize start",
-      fn: () => {},
+      fn: function lambda4() {},
     });
     return choices;
   }
