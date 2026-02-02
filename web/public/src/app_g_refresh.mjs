@@ -38,7 +38,6 @@ export async function app_g_refresh(
     await app_g_refresh();
   }
   let npcs = object_property_get(map, "npcs");
-  marker("1");
   let player = app_g_player_get();
   let player_img_c = g_character_img(game_prefix, div_map, player);
   const style_text = `@keyframes pulseGlow {
