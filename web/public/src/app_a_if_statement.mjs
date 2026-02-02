@@ -21,13 +21,13 @@ export function app_a_if_statement(a) {
   let v4 = app_a_keyword_purple_space(parent, k);
   let keyword = object_property_get(v4, "keyword");
   async function lambda(o) {
-    let overlay_close = object_property_get(o, "overlay_close");
     let v3 = app_a_cut(o, a);
     let choices = [
       {
         shortcut: "a",
         text: "Add above",
         fn: async function lambda2() {
+          let overlay_close = object_property_get(o, "overlay_close");
           overlay_close();
           let v2 = await app_a_functions_overlay(a, on_select);
           let overlay_result = object_property_get(v2, "overlay_result");
