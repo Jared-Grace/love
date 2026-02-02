@@ -128,7 +128,8 @@ export function app_a_function_node(a) {
       let k = js_keyword_await();
       let v = app_a_keyword_purple_space(parent, k);
       let keyword = object_property_get(v, "keyword");
-      app_a_overlay_choices(a2, component2, function lambda19(o) {});
+      function lambda19(o) {}
+      app_a_overlay_choices(a2, component2, lambda19);
       let argument = object_property_get(node, "argument");
       app_a_function_node_child(a, argument);
     },
