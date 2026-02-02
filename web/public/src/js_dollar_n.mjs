@@ -23,6 +23,9 @@ export function js_dollar_n({
   let test = object_property_get(n, "test");
   function lambda2() {
     let name = js_call_callee_name(node);
+    log({
+      name,
+    });
     if (equal(name, not.name)) {
       let arguments2 = object_property_get(node, "arguments");
       let only = list_single(arguments2);
@@ -33,8 +36,5 @@ export function js_dollar_n({
     }
   }
   js_node_type_is_if(test, "CallExpression", lambda2);
-  log({
-    test,
-  });
   return;
 }
