@@ -55,7 +55,7 @@ export function app_a_function_declaration(a) {
           list_remove(e1, node);
           let copy = list_copy_reverse(body_block);
           function lambda5(item) {
-            list_insert(list, index, item);
+            list_insert(e1, index, item);
           }
           each(copy, lambda5);
           log({
