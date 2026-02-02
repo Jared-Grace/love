@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { app_a_paste } from "../../../love/public/src/app_a_paste.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
@@ -22,11 +21,6 @@ export function app_a_cut(o, a) {
       storage_local_set_context(context, app_a_paste.name, item);
       let body = object_property_get(f, "body");
       list_remove(body, item);
-      log({
-        item,
-        node,
-        e: item === node,
-      });
     },
   };
   return r;
