@@ -49,7 +49,7 @@ export function app_a_function_declaration(a) {
         fn: function lambda4() {
           let e1 = list_get_end_1(stack);
           let index = list_index_of(e1, node);
-          list_remove(list, item);
+          list_remove(e1, node);
           let body_block = js_declaration_to_block_body(node);
           log({
             e1,
