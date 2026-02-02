@@ -25,7 +25,7 @@ export function app_a_cut(o, a) {
       log({
         item,
         node,
-        e,
+        e: item,
       });
     },
   };
