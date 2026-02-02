@@ -4,5 +4,5 @@ import { function_params_new } from "../../../love/public/src/function_params_ne
 export async function function_param_new_double(param_name) {
   marker("1");
   let f_name = error();
-  await function_params_new(param_name, param_name, f_name);
+  await function_params_new(f_name, param_name, param_name);
 }
