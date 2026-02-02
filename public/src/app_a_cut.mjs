@@ -5,7 +5,7 @@ import { js_block_find } from "../../../love/public/src/js_block_find.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function app_a_cut(overlay_close, a, node) {
-  let v3 = {
+  let r = {
     shortcut: "u",
     text: "Cut",
     fn: async function lambda2() {
@@ -21,5 +21,5 @@ export function app_a_cut(overlay_close, a, node) {
       list_remove(body, item);
     },
   };
-  return v3;
+  return r;
 }
