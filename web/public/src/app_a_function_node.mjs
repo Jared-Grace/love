@@ -190,7 +190,7 @@ export function app_a_function_node(a) {
       }
     },
     ["IfStatement"]: function lambda18() {
-      app_a_if_statement(a, node, parent);
+      app_a_if_statement(a, parent);
     },
     ["LogicalExpression"]: binary,
     ["AssignmentExpression"]: binary,
