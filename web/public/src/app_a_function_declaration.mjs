@@ -51,7 +51,8 @@ export function app_a_function_declaration(a) {
           let index = list_index_of(e1, node);
           list_remove(e1, node);
           let body_block = js_declaration_to_block_body(node);
-          each(list, function lambda5(item) {});
+          function lambda5(item) {}
+          each(list, lambda5);
           log({
             e1,
           });
