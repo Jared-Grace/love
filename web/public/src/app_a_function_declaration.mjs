@@ -1,3 +1,4 @@
+import { list_is } from "../../../love/public/src/list_is.mjs";
 import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
@@ -52,9 +53,11 @@ export function app_a_function_declaration(a) {
           let index = list_index_of(e1, node);
           list_remove(e1, node);
           let body_block = js_declaration_to_block_body(node);
-          let copy = list_copy_reverse(previous);
-          function lambda5(item) {}
-          each(list, lambda5);
+          let copy = list_copy_reverse(body_block);
+          function lambda5(item) {
+            let l = list_is(value);
+          }
+          each(copy, lambda5);
           log({
             e1,
           });
