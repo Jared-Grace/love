@@ -1,3 +1,4 @@
+import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -42,6 +43,7 @@ export function app_a_function_declaration(a) {
         let v_match = js_visit_match(ast, node);
         let stack = object_property_get(v_match, "stack");
         let e1 = list_get_end_1(stack);
+        let e2 = list_get_end_2(list);
         let body_block = js_declaration_to_block_body(node);
         log({
           e1,
