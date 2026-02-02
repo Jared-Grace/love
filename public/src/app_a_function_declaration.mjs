@@ -1,7 +1,5 @@
-import { list_insert_at_multiple } from "../../../love/public/src/list_insert_at_multiple.mjs";
+import { list_replace_multiple } from "../../../love/public/src/list_replace_multiple.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
-import { list_remove } from "../../../love/public/src/list_remove.mjs";
-import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
@@ -50,9 +48,7 @@ export function app_a_function_declaration(a) {
         fn: async function lambda4() {
           let e1 = list_get_end_1(stack);
           let body_block = js_declaration_to_block_body(node);
-          let index = list_index_of(e1, node);
-          list_remove(e1, node);
-          list_insert_at_multiple(body_block, e1, index);
+          list_replace_multiple(e1, node, body_block);
           await app_a_function_on_change(o, a);
         },
       });
