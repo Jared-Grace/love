@@ -1,4 +1,3 @@
-import { not } from "../../../love/public/src/not.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { string_is } from "../../../love/public/src/string_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -8,8 +7,7 @@ export function app_a_literal(a, component, node, on_change, raw) {
   marker("1");
   let lines_multiple = null;
   let type_is = js_node_type_is(node, "TemplateLiteral");
-  $n;
-  if (not(type_is)) {
+  if (type_is) {
     let value = object_property_get(node, "value");
     lines_multiple = string_is(value);
   } else {
