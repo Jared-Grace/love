@@ -1,3 +1,4 @@
+import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs";
 import { app_a_paste } from "../../../love/public/src/app_a_paste.mjs";
 import { app_a_functionize_choices_add } from "../../../love/public/src/app_a_functionize_choices_add.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -16,6 +17,7 @@ export function app_a_variable_declaration(a) {
   function lambda19(o2) {
     let choices = [];
     app_a_functionize_choices_add(choices, a, o2);
+    app_a_node_index(a);
     app_a_paste(choices2, a2, overlay_result, body_list, index);
     return choices;
   }
