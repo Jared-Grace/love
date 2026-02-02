@@ -6,4 +6,5 @@ export function s7() {
     log("1");
     log("2");
   }
+  lambda();
 }
