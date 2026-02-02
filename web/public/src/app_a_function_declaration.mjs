@@ -1,4 +1,4 @@
-import { log } from "../../../love/public/src/log.mjs";
+import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
@@ -23,7 +23,6 @@ import { app_a_keyword_blue_space } from "../../../love/public/src/app_a_keyword
 import { js_keyword_function } from "../../../love/public/src/js_keyword_function.mjs";
 import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { js_unparse } from "./js_unparse.mjs";
 export function app_a_function_declaration(a) {
   marker("1");
   let node = object_property_get(a, "node");
@@ -49,7 +48,7 @@ export function app_a_function_declaration(a) {
       list_add(choices, {
         shortcut: "l",
         text: "Flatten",
-        fn: function lambda4() {
+        fn: async function lambda4() {
           let e1 = list_get_end_1(stack);
           let body_block = js_declaration_to_block_body(node);
           let index = list_index_of(e1, node);
@@ -59,8 +58,7 @@ export function app_a_function_declaration(a) {
             list_insert(e1, index, item);
           }
           each(copy, lambda5);
-          let u = js_unparse(ast);
-          log(u);
+          await app_a_function_on_change(o2, a);
         },
       });
     }
