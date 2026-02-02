@@ -6,12 +6,13 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { app_a_identifier_generic } from "../../../love/public/src/app_a_identifier_generic.mjs";
 export function app_a_literal(a, component, node, on_change, raw) {
   marker("1");
+  let lines_multiple = null;
   let type_is = js_node_type_is(node, "TemplateLiteral");
   if (not(type_is)) {
     let value = object_property_get(node, "value");
-    let lines_multiple = null;
     lines_multiple = string_is(value);
   }
+  $el;
   app_a_identifier_generic(
     a,
     component,
