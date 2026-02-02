@@ -36,23 +36,24 @@ export function app_a_function_declaration(a) {
   function lambda3(o) {
     let choices = [];
     app_a_functionize_choices_add(choices, a, o);
-    list_add(choices, {
-      shortcut: "l",
-      text: "Flatten",
-      fn: function lambda4() {
-        let ast = object_property_get(a, "ast");
-        let v_match = js_visit_match(ast, node);
-        let stack = object_property_get(v_match, "stack");
-        let e1 = list_get_end_1(stack);
-        let e2 = list_get_end_2(stack);
-        function lambda6() {}
-        js_node_type_is_if(node2, type, lambda6);
-        let body_block = js_declaration_to_block_body(node);
-        log({
-          e1,
-        });
-      },
-    });
+    let ast = object_property_get(a, "ast");
+    let v_match = js_visit_match(ast, node);
+    let stack = object_property_get(v_match, "stack");
+    let e2 = list_get_end_2(stack);
+    function lambda6() {
+      list_add(choices, {
+        shortcut: "l",
+        text: "Flatten",
+        fn: function lambda4() {
+          let e1 = list_get_end_1(stack);
+          let body_block = js_declaration_to_block_body(node);
+          log({
+            e1,
+          });
+        },
+      });
+    }
+    js_node_type_is_if(e2, "BlockStatement", lambda6);
     return choices;
   }
   app_a_overlay_choices(a, keyword, lambda3);
