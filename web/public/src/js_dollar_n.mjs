@@ -1,3 +1,4 @@
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_property_swap } from "../../../love/public/src/object_property_swap.mjs";
@@ -33,6 +34,7 @@ export function js_dollar_n({
       const p1 = "alternate";
       const p2 = "consequent";
       object_property_swap(n, p1, p2);
+      list_remove(list, item);
     }
   }
   js_node_type_is_if(test, "CallExpression", lambda2);
