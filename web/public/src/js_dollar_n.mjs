@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { js_call_callee_name } from "../../../love/public/src/js_call_callee_name.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
@@ -19,7 +20,7 @@ export function js_dollar_n({
   let test = object_property_get(n, "test");
   function lambda2() {
     let name = js_call_callee_name(node);
-    if (equal(left, right)) {
+    if (equal(name, not.name)) {
     }
   }
   js_node_type_is_if(test, "CallExpression", lambda2);
