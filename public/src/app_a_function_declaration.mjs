@@ -59,7 +59,7 @@ export function app_a_function_declaration(a) {
             list_insert(e1, index, item);
           }
           each(copy, lambda5);
-          let u = js_unparse(asts);
+          let u = js_unparse(ast);
           log({
             u,
           });
