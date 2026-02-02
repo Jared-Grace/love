@@ -26,7 +26,7 @@ export function js_dollar_n({
     if (equal(name, not.name)) {
       let arguments2 = object_property_get(node, "arguments");
       let only = list_single(arguments2);
-      object_property_set(object, property_name, value);
+      object_property_set(n, "test", only);
       const p1 = "alternate";
       const p2 = "consequent";
       object_property_swap(n, p1, p2);
