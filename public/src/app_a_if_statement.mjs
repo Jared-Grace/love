@@ -20,7 +20,7 @@ export function app_a_if_statement(a, node, parent) {
   let keyword = object_property_get(v4, "keyword");
   async function lambda(o) {
     let overlay_close = object_property_get(o, "overlay_close");
-    let v3 = app_a_cut(overlay_close, a, node);
+    let v3 = app_a_cut(o, a, node);
     let choices = [
       {
         shortcut: "a",
