@@ -1,3 +1,4 @@
+import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
@@ -46,6 +47,7 @@ export function app_a_function_declaration(a) {
         text: "Flatten",
         fn: function lambda4() {
           let e1 = list_get_end_1(stack);
+          let index = list_index_of(list, item);
           let body_block = js_declaration_to_block_body(node);
           log({
             e1,
