@@ -8,6 +8,7 @@ export async function ebible_version_upload_refresh_all() {
   await ebible_languages_without_original_english_bible_folders_each(
     ebible_version_upload_refresh,
   );
+  return;
   await ebible_versions_english_choices_each(ebible_version_upload_refresh);
   let r = await ebible_languages_chapters_cache_refresh();
 }
