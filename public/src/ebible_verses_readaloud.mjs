@@ -1,9 +1,9 @@
+import { folder_read_paths_async } from "../../../love/public/src/folder_read_paths_async.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { ebible_version_readaloud_download_path } from "../../../love/public/src/ebible_version_readaloud_download_path.mjs";
 import { list_find_includes } from "../../../love/public/src/list_find_includes.mjs";
 import { ebible_chapter_code_to_name_code } from "../../../love/public/src/ebible_chapter_code_to_name_code.mjs";
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
-import { folder_read_files } from "../../../love/public/src/folder_read_files.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { ebible_chapter_verse_numbers } from "../../../love/public/src/ebible_chapter_verse_numbers.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
@@ -17,7 +17,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   }
   marker("1");
   let file_path = ebible_version_readaloud_download_path(bible_folder);
-  let files = await folder_read_files(file_path);
+  let files = await folder_read_paths_async(file_path);
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let name_code = ebible_chapter_code_to_name_code(chapter_code);
   let search = "_" + book_code + "_" + name_code + "_";
