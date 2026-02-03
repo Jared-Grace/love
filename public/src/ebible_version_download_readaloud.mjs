@@ -1,3 +1,4 @@
+import { ebible_version_download_url } from "../../../love/public/src/ebible_version_download_url.mjs";
 import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
 import { local_function_path } from "../../../love/public/src/local_function_path.mjs";
 import { unzip } from "../../../love/public/src/unzip.mjs";
@@ -6,8 +7,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_version_download_readaloud(bible_folder) {
   marker("1");
   const name = "readaloud";
-  let url =
-    "https://ebible.org/Scriptures/" + bible_folder + "_" + name + ".zip";
+  let url = ebible_version_download_url(bible_folder, name);
   let buffer = await http_local(url);
   let file_path = local_function_path(ebible_version_download, bible_folder);
   await unzip(file_path, buffer);
