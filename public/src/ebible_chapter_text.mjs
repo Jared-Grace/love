@@ -1,7 +1,3 @@
-import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
-import { roman_to_integer } from "../../../love/public/src/roman_to_integer.mjs";
-import { string_prefix_without } from "../../../love/public/src/string_prefix_without.mjs";
-import { html_parse_attr } from "../../../love/public/src/html_parse_attr.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_parse_find_remove } from "../../../love/public/src/html_parse_find_remove.mjs";
 import { css_class_prefix_combine } from "../../../love/public/src/css_class_prefix_combine.mjs";
@@ -36,19 +32,6 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
     html_parse_find_remove(main, selector2);
   }
   each(exclude, lambda);
-  function lambda2(item) {
-    let t = html_parse_text(d, item);
-    const name = "id";
-    let id = html_parse_attr(d, item, name);
-    let without = string_prefix_without(id, "V");
-    let i = roman_to_integer(without);
-    let n = whitespace_normalize(t);
-    let v = {
-      number: i,
-      name: n,
-    };
-    return v;
-  }
   let text = html_parse_text(d, main);
   let result = {
     verse_numbers,
