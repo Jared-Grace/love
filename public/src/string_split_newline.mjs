@@ -4,6 +4,6 @@ import { string_split } from "../../../love/public/src/string_split.mjs";
 export function string_split_newline(s) {
   marker("1");
   let separator = newline();
-  let lines = string_split(list, separator);
+  let lines = string_split(s, separator);
   return lines;
 }
