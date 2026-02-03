@@ -1,6 +1,6 @@
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_pair } from "../../../love/public/src/each_pair.mjs";
-export function list_map_pairs(mapper, verse_numbers, filtered) {
+export function list_map_pairs(verse_numbers, filtered, mapper) {
   function lambda2(la) {
     function lambda(nn, text) {
       const v = mapper(nn, text);
