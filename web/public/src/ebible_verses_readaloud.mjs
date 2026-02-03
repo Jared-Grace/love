@@ -21,6 +21,8 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
     return verses;
   }
   marker("1");
+  let v2 = await ebible_chapter_verse_numbers(bible_folder, chapter_code);
+  let verse_numbers = object_property_get(v2, "verse_numbers");
   let file_path = ebible_version_readaloud_download_path(bible_folder);
   let files = await folder_read_paths_async(file_path);
   let book_code = ebible_chapter_code_to_book(chapter_code);
@@ -36,7 +38,5 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   return filtered;
   return files;
   let joined = path_join([file_path, chapters_name]);
-  let v2 = await ebible_chapter_verse_numbers(bible_folder, chapter_code);
-  let verse_numbers = object_property_get(v2, "verse_numbers");
   return list;
 }
