@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -50,6 +51,9 @@ export async function ebible_verses(bible_folder, chapter_code) {
     list_add(verses_unfiltered, v);
   }
   list_reverse(verses_unfiltered);
+  log({
+    verses_unfiltered,
+  });
   function lambda(item) {
     let value = object_property_get(item, property);
     let n = string_empty_not_is(value);
