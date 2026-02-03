@@ -1,3 +1,4 @@
+import { string_trim } from "../../../love/public/src/string_trim.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_filter_empty_not_is } from "../../../love/public/src/list_filter_empty_not_is.mjs";
 import { list_skip } from "../../../love/public/src/list_skip.mjs";
