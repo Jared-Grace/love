@@ -1,4 +1,4 @@
-import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
+import { ebible_verses_readaloud } from "../../../love/public/src/ebible_verses_readaloud.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function ebible_chapters_each_verses_list(
@@ -21,7 +21,7 @@ export async function ebible_chapters_each_verses_list(
       return;
     }
     log_keep(chapter_code);
-    let verses = await ebible_verses(bible_folder, chapter_code);
+    let verses = await ebible_verses_readaloud(bible_folder, chapter_code);
     await each_chapter(chapter_code, verses);
   }
 }
