@@ -26,6 +26,7 @@ export async function ebible_chapters_each_verses_list(
     if (bible_folder === "engojb" && chapter_code === "MAL04") {
       return;
     }
+    log_keep(chapter_code);
     let any = list_any_starts_with(chapter_code, mapped);
     let ebible_verses_get = null;
     if (any) {
@@ -33,7 +34,6 @@ export async function ebible_chapters_each_verses_list(
     } else {
       ebible_verses_get = ebible_verses_readaloud;
     }
-    log_keep(chapter_code);
     let verses = await ebible_verses_readaloud(bible_folder, chapter_code);
     await each_chapter(chapter_code, verses);
   }
