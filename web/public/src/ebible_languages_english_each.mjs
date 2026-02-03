@@ -7,11 +7,11 @@ import { ebible_folder_english } from "../../../love/public/src/ebible_folder_en
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function ebible_languages_english_each(lambda$bible_folder) {
   let languages = ebible_languages_without_original();
-  let v2 = ebible_folder_english();
+  let e = ebible_folder_english();
   list_remove_property(languages, "language_code", original);
   async function lambda2(language) {
     let bible_folder = object_property_get(language, "bible_folder");
-    let skips = [v2];
+    let skips = [e];
     let includes = list_includes(skips, bible_folder);
     if (includes) {
       return;
