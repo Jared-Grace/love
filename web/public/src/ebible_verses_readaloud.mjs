@@ -1,5 +1,5 @@
+import { ebible_verse_new } from "../../../love/public/src/ebible_verse_new.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { each_pair } from "../../../love/public/src/each_pair.mjs";
 import { string_trim } from "../../../love/public/src/string_trim.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -38,16 +38,15 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let mapped = list_map(skipped, string_trim);
   let filtered = list_filter_empty_not_is(mapped);
   function lambda2(la) {
-    function lambda(vn, text) {
-      log({
-        vn,
-        text,
-      });
+    function lambda(nn, text) {
+      let number = object_property_get(nn, "number");
+      const v = ebible_verse_new(text, number);
+      la(v);
     }
     each_pair(verse_numbers, filtered, lambda);
   }
   let list2 = list_adder(lambda2);
-  return filtered;
+  return list2;
   return files;
   let joined = path_join([file_path, chapters_name]);
   return list;
