@@ -1,3 +1,4 @@
+import { list_index_of_next } from "../../../love/public/src/list_index_of_next.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -6,6 +7,7 @@ export async function ebible_languages_without_original_english_bible_folders_ea
   lambda$bible_folder,
 ) {
   let languages = ebible_languages_without_original_english();
+  let index_next = list_index_of_next(list, item);
   log({
     languages,
   });
