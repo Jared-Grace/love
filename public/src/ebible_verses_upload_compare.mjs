@@ -19,6 +19,7 @@ export async function ebible_verses_upload_compare(bible_folder) {
     function lambda2(a, b) {
       function lambda(t) {
         let replaced = string_replace(s, from, to);
+        return replaced;
       }
       let text = object_property_change(b, "text", lambda);
       let n = json_equal_not(a, b);
