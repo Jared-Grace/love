@@ -18,6 +18,7 @@ export async function ebible_verses_upload_compare(bible_folder) {
       let n = json_equal_not(a, b);
       if (n) {
         log({
+          chapter_code,
           a,
           b,
         });
