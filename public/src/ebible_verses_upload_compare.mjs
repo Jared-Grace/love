@@ -18,7 +18,7 @@ export async function ebible_verses_upload_compare(bible_folder) {
     let verses = await ebible_verses(bible_folder, chapter_code);
     function lambda2(a, b) {
       function lambda(t) {
-        let replaced = string_replace(s, from, to);
+        let replaced = string_replace(t, "’ ”", "’”");
         return replaced;
       }
       let text = object_property_change(b, "text", lambda);
