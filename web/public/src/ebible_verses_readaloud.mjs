@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { each_pair } from "../../../love/public/src/each_pair.mjs";
 import { string_trim } from "../../../love/public/src/string_trim.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -36,7 +37,10 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let mapped = list_map(skipped, string_trim);
   let filtered = list_filter_empty_not_is(mapped);
   function lambda(vn, text) {
-    l$vn$text;
+    log({
+      vn,
+      text,
+    });
   }
   each_pair(verse_numbers, filtered, lambda);
   return filtered;
