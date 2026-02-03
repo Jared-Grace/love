@@ -38,7 +38,7 @@ export async function ebible_chapters_each_verses_list(
     } else {
       ebible_verses_get = ebible_verses_readaloud;
     }
-    let verses = await ebible_verses_readaloud(bible_folder, chapter_code);
+    let verses = await ebible_verses_get(bible_folder, chapter_code);
     await each_chapter(chapter_code, verses);
   }
 }
