@@ -13,7 +13,7 @@ export async function ebible_verses_upload_compare(bible_folder) {
   ("loop through to ensure parse correct before begin upload");
   await ebible_chapters_each_verses_check_with(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses_readaloud) {
-    let list = await ebible_verses(bible_folder2, chapter_code2);
+    let verses = await ebible_verses(bible_folder, chapter_code);
     return;
     async function lambda(v) {
       async function lambda3() {
