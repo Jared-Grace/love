@@ -30,6 +30,8 @@ export async function ebible_chapter_verse_numbers(bible_folder, chapter_code) {
   let root = object_property_get(v2, "root");
   let d = object_property_get(v2, "d");
   let main = html_parse_find(root, ".main");
+  let list = html_parse_find_list_to(main, ".verse");
+  let verse_numbers = list_map(list, lambda2);
   let classes = html_parse_descendants_classes(main, d);
   let include = ebible_verses_include();
   let exclude = ebible_verses_exclude();
@@ -46,7 +48,6 @@ export async function ebible_chapter_verse_numbers(bible_folder, chapter_code) {
     html_parse_find_remove(main, selector2);
   }
   each(exclude, lambda);
-  let list = html_parse_find_list_to(main, ".verse");
   function lambda2(item) {
     let t = html_parse_text(d, item);
     const name = "id";
@@ -60,7 +61,6 @@ export async function ebible_chapter_verse_numbers(bible_folder, chapter_code) {
     };
     return v;
   }
-  let verse_numbers = list_map(list, lambda2);
   let v3 = {
     d,
     main,
