@@ -1,4 +1,5 @@
-import { ebible_chapter_code_parse } from "../../../love/public/src/ebible_chapter_code_parse.mjs";
+import { ebible_chapter_code_to_name_code } from "../../../love/public/src/ebible_chapter_code_to_name_code.mjs";
+import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
 import { folder_read_files } from "../../../love/public/src/folder_read_files.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { ebible_version_readaloud_download } from "../../../love/public/src/ebible_version_readaloud_download.mjs";
@@ -14,10 +15,13 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   }
   marker("1");
   let file_path = await ebible_version_readaloud_download(bible_folder);
-  let v = ebible_chapter_code_parse(chapter_code);
+  let book_code = ebible_chapter_code_to_book(chapter_code);
+  let s = ebible_chapter_code_to_name_code(chapter_code);
+  let v = {
+    book_code,
+    s,
+  };
   return v;
-  let chapter_name = object_property_get(v, "chapter_name");
-  let book_code = object_property_get(v, "book_code");
   let files = await folder_read_files(file_path);
   return files;
   let joined = path_join([file_path, chapters_name]);
