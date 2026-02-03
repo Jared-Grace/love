@@ -35,7 +35,9 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let skipped = list_skip(lines, 2);
   let mapped = list_map(skipped, string_trim);
   let filtered = list_filter_empty_not_is(mapped);
-  function lambda(vn, text) {}
+  function lambda(vn, text) {
+    l$vn$text;
+  }
   each_pair(verse_numbers, filtered, lambda);
   return filtered;
   return files;
