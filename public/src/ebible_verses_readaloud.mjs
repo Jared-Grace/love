@@ -1,3 +1,4 @@
+import { each_pair } from "../../../love/public/src/each_pair.mjs";
 import { string_trim } from "../../../love/public/src/string_trim.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_filter_empty_not_is } from "../../../love/public/src/list_filter_empty_not_is.mjs";
@@ -34,7 +35,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let skipped = list_skip(lines, 2);
   let mapped = list_map(skipped, string_trim);
   let filtered = list_filter_empty_not_is(mapped);
-  ep;
+  each_pair(list_a, list_b, function lambda(a, b) {});
   return filtered;
   return files;
   let joined = path_join([file_path, chapters_name]);
