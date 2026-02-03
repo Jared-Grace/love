@@ -24,7 +24,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
   }
   marker("1");
   let v2 = await ebible_chapter_text(bible_folder, chapter_code);
-  let text = object_property_get(v2, "text");
+  let property = "text";
+  let text = object_property_get(v2, property);
   let verse_numbers = object_property_get(v2, "verse_numbers");
   text = whitespace_normalize(text);
   text = urdu_allah_to_god(text);
@@ -49,7 +50,6 @@ export async function ebible_verses(bible_folder, chapter_code) {
     list_add(verses_unfiltered, v);
   }
   list_reverse(verses_unfiltered);
-  let property = "verse_number";
   function lambda(item) {
     let value = object_property_get(item, property);
     let n = string_empty_not_is(value);
