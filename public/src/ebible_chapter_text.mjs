@@ -28,14 +28,14 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
   );
   let v2 = await html_parse_read(chapter_path);
   let root = object_property_get(v2, "root");
-  let d2 = object_property_get(v2, "d");
-  let main2 = html_parse_find(root, ".main");
-  let list = html_parse_find_list_to(main2, ".verse");
-  let verse_numbers2 = list_map(list, lambda2);
+  let d = object_property_get(v2, "d");
+  let main = html_parse_find(root, ".main");
+  let list = html_parse_find_list_to(main, ".verse");
+  let verse_numbers = list_map(list, lambda2);
   function lambda2(item2) {
-    let t = html_parse_text(d2, item2);
+    let t = html_parse_text(d, item2);
     const name = "id";
-    let id = html_parse_attr(d2, item2, name);
+    let id = html_parse_attr(d, item2, name);
     let without = string_prefix_without(id, "V");
     let i = roman_to_integer(without);
     let n = whitespace_normalize(t);
@@ -45,14 +45,6 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
     };
     return v4;
   }
-  let v = {
-    d2,
-    main2,
-    verse_numbers2,
-  };
-  let verse_numbers = object_property_get(v, "verse_numbers");
-  let main = object_property_get(v, "main");
-  let d = object_property_get(v, "d");
   let classes = html_parse_descendants_classes(main, d);
   let include = ebible_verses_include();
   let exclude = ebible_verses_exclude();
