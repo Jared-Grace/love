@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { json_equal_not } from "../../../love/public/src/json_equal_not.mjs";
 import { each_pair } from "../../../love/public/src/each_pair.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
@@ -19,6 +20,10 @@ export async function ebible_verses_upload_compare(bible_folder) {
     function lambda2(a, b) {
       let n = json_equal_not(a, b);
       if (n) {
+        log({
+          a,
+          b,
+        });
       }
     }
     each_pair(verses_readaloud, verses, lambda2);
