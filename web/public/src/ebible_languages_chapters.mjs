@@ -9,8 +9,8 @@ import { bible_interlinear_verses_upload_folder } from "../../../love/public/src
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 export async function ebible_languages_chapters() {
-  let languages = ebible_languages();
   async function lambda(la) {
+    let languages = ebible_languages();
     async function lambda2(language) {
       let bible_folder = object_property_get(language, "bible_folder");
       let v = bible_interlinear_verses_upload_folder();
