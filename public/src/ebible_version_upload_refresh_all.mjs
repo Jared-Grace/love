@@ -3,7 +3,8 @@ import { ebible_version_upload_refresh } from "../../../love/public/src/ebible_v
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_version_upload_refresh_all(bible_folder) {
   marker("1");
-  await ebible_languages_english_each(async function lambda(bible_folder2) {});
+  async function lambda(bible_folder2) {}
+  await ebible_languages_english_each(lambda);
   let v = await ebible_version_upload_refresh(bible_folder);
   return v;
 }
