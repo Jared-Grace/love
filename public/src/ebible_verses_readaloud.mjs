@@ -11,7 +11,6 @@ import { ebible_version_readaloud_download_path } from "../../../love/public/src
 import { list_find_includes } from "../../../love/public/src/list_find_includes.mjs";
 import { ebible_chapter_code_to_name_code } from "../../../love/public/src/ebible_chapter_code_to_name_code.mjs";
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
-import { path_join } from "../../../love/public/src/path_join.mjs";
 import { ebible_chapter_verse_numbers } from "../../../love/public/src/ebible_chapter_verse_numbers.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
@@ -38,9 +37,6 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let filtered = list_filter_empty_not_is(mapped);
   let list2 = list_map_pairs(verse_numbers, filtered, mapper);
   return list2;
-  return files;
-  let joined = path_join([file_path, chapters_name]);
-  return list;
   function mapper(nn, text) {
     let number = object_property_get(nn, "number");
     const v = ebible_verse_new(text, number);
