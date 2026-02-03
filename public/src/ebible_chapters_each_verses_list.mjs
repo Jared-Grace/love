@@ -7,7 +7,7 @@ export async function ebible_chapters_each_verses_list(
   bible_folder,
   each_chapter,
 ) {
-  let books = await ebible_version_books_testament_apocrypha(bible_folder2);
+  let books = await ebible_version_books_testament_apocrypha(bible_folder);
   await each_async(list, lambda);
   async function lambda(chapter_code) {
     if (bible_folder === "hausa" && chapter_code === "DAN14") {
