@@ -1,3 +1,4 @@
+import { list_filter_empty_not_is } from "../../../love/public/src/list_filter_empty_not_is.mjs";
 import { list_skip } from "../../../love/public/src/list_skip.mjs";
 import { string_split_newline } from "../../../love/public/src/string_split_newline.mjs";
 import { folder_read_paths_async } from "../../../love/public/src/folder_read_paths_async.mjs";
@@ -27,6 +28,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let contents = await file_read(only);
   let lines = string_split_newline(contents);
   let skipped = list_skip(lines, 2);
+  let filtered = list_filter_empty_not_is(item);
   return lines;
   return files;
   let joined = path_join([file_path, chapters_name]);
