@@ -19,7 +19,8 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let name_code = ebible_chapter_code_to_name_code(chapter_code);
   let search = "_" + book_code + "_" + name_code + "_";
-  let found = list_find(list2, function lambda(item) {});
+  function lambda(item) {}
+  let found = list_find(list2, lambda);
   return search;
   let files = await folder_read_files(file_path);
   return files;
