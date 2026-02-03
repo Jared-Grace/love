@@ -22,8 +22,8 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let name_code = ebible_chapter_code_to_name_code(chapter_code);
   let search = "_" + book_code + "_" + name_code + "_";
   let only = list_find_includes(files, search);
-  let contents = await file_read(file_path2);
-  return only;
+  let contents = await file_read(only);
+  return contents;
   return files;
   let joined = path_join([file_path, chapters_name]);
   let v2 = await ebible_chapter_verse_numbers(bible_folder, chapter_code);
