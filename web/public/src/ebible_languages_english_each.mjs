@@ -8,7 +8,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 export async function ebible_languages_english_each(lambda$bible_folder) {
   let languages = ebible_languages_without_original();
   let e = ebible_folder_english();
-  list_remove_property(languages, "language_code", original);
+  list_remove_property(languages, "language_code", e);
   async function lambda2(language) {
     let bible_folder = object_property_get(language, "bible_folder");
     let skips = [e];
