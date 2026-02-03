@@ -26,8 +26,9 @@ export async function ebible_chapters_each_verses_list(
       return;
     }
     let any = list_any_starts_with(chapter_code, mapped);
-    if (any) {$s
-      let ebible_verses_get = ebible_verses_readaloud;
+    if (any) {
+      let ebible_verses_get = null;
+      ebible_verses_get = ebible_verses_readaloud;
     } else {
     }
     log_keep(chapter_code);
