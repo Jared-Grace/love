@@ -1,3 +1,4 @@
+import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_filter_includes } from "../../../love/public/src/list_filter_includes.mjs";
 import { ebible_chapter_code_to_name_code } from "../../../love/public/src/ebible_chapter_code_to_name_code.mjs";
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
@@ -19,7 +20,8 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let name_code = ebible_chapter_code_to_name_code(chapter_code);
   let search = "_" + book_code + "_" + name_code + "_";
-  let filtered = list_filter_includes(mapped, part);
+  let filtered = list_filter_includes(mapped, search);
+  let only = list_single(list2);
   return search;
   let files = await folder_read_files(file_path);
   return files;
