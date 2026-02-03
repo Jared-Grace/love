@@ -1,4 +1,3 @@
-import { equal } from "../../../love/public/src/equal.mjs";
 import { list_any_starts_with } from "../../../love/public/src/list_any_starts_with.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { ebible_version_books_testament_apocrypha } from "../../../love/public/src/ebible_version_books_testament_apocrypha.mjs";
@@ -27,7 +26,8 @@ export async function ebible_chapters_each_verses_list(
       return;
     }
     let any = list_any_starts_with(chapter_code, mapped);
-    if (equal(left, right)) {
+    if (false) {
+    } else {
     }
     log_keep(chapter_code);
     let verses = await ebible_verses_readaloud(bible_folder, chapter_code);
