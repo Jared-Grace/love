@@ -37,15 +37,15 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let skipped = list_skip(lines, 2);
   let mapped = list_map(skipped, string_trim);
   let filtered = list_filter_empty_not_is(mapped);
-  function lambda2(la) {}
-  let list2 = list_adder(lambda2);
+  function lambda2(la) {
   function lambda(vn, text) {
     log({
       vn,
       text,
     });
   }
-  each_pair(verse_numbers, filtered, lambda);
+  each_pair(verse_numbers, filtered, lambda);}
+  let list2 = list_adder(lambda2);
   return filtered;
   return files;
   let joined = path_join([file_path, chapters_name]);
