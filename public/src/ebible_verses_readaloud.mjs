@@ -23,7 +23,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   }
   marker("1");
   let verse_numbers = await ebible_verses_numbers(bible_folder, chapter_code);
-  list_remove_if_exists(list2, item);
+  list_remove_if_exists(verse_numbers, "0");
   let file_path = ebible_version_readaloud_download_path(bible_folder);
   let files = await folder_read_paths_async(file_path);
   let book_code = ebible_chapter_code_to_book(chapter_code);
