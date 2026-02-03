@@ -27,6 +27,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let verses = await ebible_verses(bible_folder, chapter_code);
   let property = "verse_number";
   function lambda(item) {
+    let value = object_property_get(object, property_name);
     let e = string_empty_is(s);
   }
   let filtered2 = list_filter(verses, lambda);
