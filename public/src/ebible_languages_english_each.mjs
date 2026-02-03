@@ -1,12 +1,12 @@
+import { ebible_languages_without_original } from "../../../love/public/src/ebible_languages_without_original.mjs";
 import { ebible_versions_english_choices_each } from "../../../love/public/src/ebible_versions_english_choices_each.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 export async function ebible_languages_english_each(lambda$bible_folder) {
-  let languages = ebible_languages();
+  let languages = ebible_languages_without_original();
   async function lambda2(language) {
     let bible_folder = object_property_get(language, "bible_folder");
     let v = bible_interlinear_verses_upload_folder();
