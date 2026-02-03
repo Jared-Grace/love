@@ -1,5 +1,4 @@
-import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
-import { list_index_of_next } from "../../../love/public/src/list_index_of_next.mjs";
+import { list_index_of_next_property } from "../../../love/public/src/list_index_of_next_property.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -10,10 +9,10 @@ export async function ebible_languages_without_original_english_bible_folders_ea
   let languages = ebible_languages_without_original_english();
   const property = "bible_folder";
   const value = "gaz";
-  let item = list_find_property(languages, property, value);
-  let index_next = list_index_of_next(languages, item);
+  let index_next = list_index_of_next_property(languages, property, value);
   log({
     languages,
+    index_next,
   });
   return;
   async function lambda2(language) {
