@@ -33,8 +33,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
     return n;
   }
   let filtered2 = list_filter(verses, lambda);
-  let mapped2 = list_map_property(list2, property_name);
-  let verse_numbers = object_property_get(v2, "verse_numbers");
+  let verse_numbers = list_map_property(filtered2, "verse_number");
   let file_path = ebible_version_readaloud_download_path(bible_folder);
   let files = await folder_read_paths_async(file_path);
   let book_code = ebible_chapter_code_to_book(chapter_code);
