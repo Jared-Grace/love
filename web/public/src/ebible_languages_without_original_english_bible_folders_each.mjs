@@ -1,4 +1,3 @@
-import { list_find } from "../../../love/public/src/list_find.mjs";
 import { list_index_of_next } from "../../../love/public/src/list_index_of_next.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -7,9 +6,7 @@ import { ebible_languages_without_original_english } from "../../../love/public/
 export async function ebible_languages_without_original_english_bible_folders_each(
   lambda$bible_folder,
 ) {
-  let languages = ebible_languages_without_original_english();
-  function lambda(item2) {}
-  let found = list_find(list2, lambda);
+  let languages = ebible_languages_without_original_english();lfdp
   let index_next = list_index_of_next(list, item);
   log({
     languages,
