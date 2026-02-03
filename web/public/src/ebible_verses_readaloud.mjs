@@ -16,10 +16,10 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   marker("1");
   let file_path = await ebible_version_readaloud_download(bible_folder);
   let book_code = ebible_chapter_code_to_book(chapter_code);
-  let s = ebible_chapter_code_to_name_code(chapter_code);
+  let name_code = ebible_chapter_code_to_name_code(chapter_code);
   let v = {
     book_code,
-    s,
+    name_code,
   };
   return v;
   let files = await folder_read_files(file_path);
