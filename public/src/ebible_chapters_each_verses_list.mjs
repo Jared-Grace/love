@@ -1,3 +1,4 @@
+import { string_starts_with } from "../../../love/public/src/string_starts_with.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { ebible_version_books_testament_apocrypha } from "../../../love/public/src/ebible_version_books_testament_apocrypha.mjs";
 import { ebible_verses_readaloud } from "../../../love/public/src/ebible_verses_readaloud.mjs";
@@ -24,6 +25,7 @@ export async function ebible_chapters_each_verses_list(
     if (bible_folder === "engojb" && chapter_code === "MAL04") {
       return;
     }
+    let sw = string_starts_with(s, prefix);
     log_keep(chapter_code);
     let verses = await ebible_verses_readaloud(bible_folder, chapter_code);
     await each_chapter(chapter_code, verses);
