@@ -1,3 +1,4 @@
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { ebible_verse_new_text } from "../../../love/public/src/ebible_verse_new_text.mjs";
 import { list_map_pairs } from "../../../love/public/src/list_map_pairs.mjs";
@@ -22,7 +23,8 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
     return verses;
   }
   marker("1");
-  let v2 = await ebible_verses(bible_folder, chapter_code);
+  let verses = await ebible_verses(bible_folder, chapter_code);
+  let filtered2 = list_filter(list2, function lambda(item) {});
   let verse_numbers = object_property_get(v2, "verse_numbers");
   let file_path = ebible_version_readaloud_download_path(bible_folder);
   let files = await folder_read_paths_async(file_path);
