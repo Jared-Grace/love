@@ -8,7 +8,9 @@ export async function ebible_languages_without_original_english_bible_folders_ea
   lambda$bible_folder,
 ) {
   let languages = ebible_languages_without_original_english();
-  let item = list_find_property(languages, "bible_folder", "gaz");
+  const property = "bible_folder";
+  const value = "gaz";
+  let item = list_find_property(languages, property, value);
   let index_next = list_index_of_next(languages, item);
   log({
     languages,
