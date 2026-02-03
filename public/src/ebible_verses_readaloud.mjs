@@ -1,5 +1,5 @@
+import { ebible_verse_new_text } from "../../../love/public/src/ebible_verse_new_text.mjs";
 import { list_map_pairs } from "../../../love/public/src/list_map_pairs.mjs";
-import { ebible_verse_new } from "../../../love/public/src/ebible_verse_new.mjs";
 import { string_trim } from "../../../love/public/src/string_trim.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_filter_empty_not_is } from "../../../love/public/src/list_filter_empty_not_is.mjs";
@@ -39,7 +39,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   return list;
   function mapper(nn, text) {
     let number = object_property_get(nn, "number");
-    const v = ebible_verse_new(text, number);
+    const v = ebible_verse_new_text(text, number);
     return v;
   }
 }
