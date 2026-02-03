@@ -42,12 +42,19 @@ export async function ebible_verses(bible_folder, chapter_code) {
     }
     each_reverse(verse_numbers, lambda2);
   }
-  let verses = list_adder(lambda);
+  let verses_unfiltered = list_adder(lambda);
   let ne = list_empty_not_is(filtered);
   if (ne) {
     const v = ebible_verse_new(filtered, "0");
-    list_add(verses, v);
+    list_add(verses_unfiltered, v);
   }
-  list_reverse(verses);
+  list_reverse(verses_unfiltered);
+  let property = "verse_number";
+  function lambda(item) {
+    let value = object_property_get(item, property);
+    let n = string_empty_not_is(value);
+    return n;
+  }
+  let verses = list_filter(verses_unfiltered, lambda);
   return verses;
 }
