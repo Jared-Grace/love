@@ -6,9 +6,8 @@ export async function invoke_cache_file_remove_if_exists(fn, args) {
   marker("1");
   let key_get = invoke_cache_file_key_get(fn, args);
   let cached_exists = file_exists;
-  let v2 = key_get();
-  if (cached_exists(v2)) {
-    let v = await invoke_cache_file_remove(fn, args);
+  let k = key_get();
+  if (cached_exists(k)) {
+    await invoke_cache_file_remove(fn, args);
   }
-  return v;
 }
