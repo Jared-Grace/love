@@ -25,6 +25,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   }
   marker("1");
   let verses = await ebible_verses(bible_folder, chapter_code);
+  let property = "verse_number";
   function lambda(item) {
     let e = string_empty_is(s);
   }
