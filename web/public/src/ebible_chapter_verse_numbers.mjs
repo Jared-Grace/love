@@ -1,3 +1,8 @@
+import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
+import { roman_to_integer } from "../../../love/public/src/roman_to_integer.mjs";
+import { string_prefix_without } from "../../../love/public/src/string_prefix_without.mjs";
+import { html_parse_attr } from "../../../love/public/src/html_parse_attr.mjs";
+import { html_parse_text } from "../../../love/public/src/html_parse_text.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_parse_find_list_to } from "../../../love/public/src/html_parse_find_list_to.mjs";
 import { html_parse_find } from "../../../love/public/src/html_parse_find.mjs";
@@ -17,6 +22,19 @@ export async function ebible_chapter_verse_numbers(bible_folder, chapter_code) {
   let main = html_parse_find(root, ".main");
   let list = html_parse_find_list_to(main, ".verse");
   let verse_numbers = list_map(list, lambda2);
+  function lambda2(item) {
+    let t = html_parse_text(d, item);
+    const name = "id";
+    let id = html_parse_attr(d, item, name);
+    let without = string_prefix_without(id, "V");
+    let i = roman_to_integer(without);
+    let n = whitespace_normalize(t);
+    let v = {
+      number: i,
+      name: n,
+    };
+    return v;
+  }
   let v3 = {
     d,
     main,
