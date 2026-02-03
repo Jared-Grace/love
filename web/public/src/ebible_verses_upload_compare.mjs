@@ -16,7 +16,8 @@ export async function ebible_verses_upload_compare(bible_folder) {
   async function each_chapter(chapter_code, verses_readaloud) {
     let verses = await ebible_verses(bible_folder, chapter_code);
     function lambda2(a, b) {
-      let text = object_property_change(b, "text", () => {});
+      function lambda() {}
+      let text = object_property_change(b, "text", lambda);
       let n = json_equal_not(a, b);
       if (n) {
         log({
