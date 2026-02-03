@@ -1,7 +1,7 @@
-export function ebible_verse_new_text(verse_number, joined) {
+export function ebible_verse_new_text(verse_number, text) {
   let v2 = {
     verse_number,
-    text: joined,
+    text: text,
   };
   return v2;
 }
