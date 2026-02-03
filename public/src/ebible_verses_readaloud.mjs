@@ -1,3 +1,4 @@
+import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_exists.mjs";
 import { ebible_verses_numbers } from "../../../love/public/src/ebible_verses_numbers.mjs";
 import { ebible_verse_new_text } from "../../../love/public/src/ebible_verse_new_text.mjs";
 import { list_map_pairs } from "../../../love/public/src/list_map_pairs.mjs";
@@ -22,6 +23,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   }
   marker("1");
   let verse_numbers = await ebible_verses_numbers(bible_folder, chapter_code);
+  list_remove_if_exists(list2, item);
   let file_path = ebible_version_readaloud_download_path(bible_folder);
   let files = await folder_read_paths_async(file_path);
   let book_code = ebible_chapter_code_to_book(chapter_code);
