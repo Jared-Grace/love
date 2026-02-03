@@ -29,7 +29,8 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let contents = await file_read(only);
   let lines = string_split_newline(contents);
   let skipped = list_skip(lines, 2);
-  let mapped = list_map(list2, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list2, lambda);
   let filtered = list_filter_empty_not_is(skipped);
   return filtered;
   return files;
