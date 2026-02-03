@@ -24,7 +24,8 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   }
   marker("1");
   let verses = await ebible_verses(bible_folder, chapter_code);
-  let filtered2 = list_filter(list2, function lambda(item) {});
+  function lambda(item) {}
+  let filtered2 = list_filter(list2, lambda);
   let verse_numbers = object_property_get(v2, "verse_numbers");
   let file_path = ebible_version_readaloud_download_path(bible_folder);
   let files = await folder_read_paths_async(file_path);
