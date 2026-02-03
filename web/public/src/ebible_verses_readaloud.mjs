@@ -13,7 +13,8 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   }
   marker("1");
   let file_path = await ebible_version_readaloud_download(bible_folder);
-  let files = await folder_read_files(path_folder);
+  let files = await folder_read_files(file_path);
+  return files;
   let joined = path_join([file_path, chapters_name]);
   let v2 = await ebible_chapter_verse_numbers(bible_folder, chapter_code);
   let verse_numbers = object_property_get(v2, "verse_numbers");
