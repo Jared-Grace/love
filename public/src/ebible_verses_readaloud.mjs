@@ -1,3 +1,4 @@
+import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { ebible_verse_new_text } from "../../../love/public/src/ebible_verse_new_text.mjs";
 import { list_map_pairs } from "../../../love/public/src/list_map_pairs.mjs";
 import { string_trim } from "../../../love/public/src/string_trim.mjs";
@@ -11,7 +12,6 @@ import { ebible_version_readaloud_download_path } from "../../../love/public/src
 import { list_find_includes } from "../../../love/public/src/list_find_includes.mjs";
 import { ebible_chapter_code_to_name_code } from "../../../love/public/src/ebible_chapter_code_to_name_code.mjs";
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
-import { ebible_chapter_verse_numbers } from "../../../love/public/src/ebible_chapter_verse_numbers.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -22,7 +22,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
     return verses;
   }
   marker("1");
-  let v2 = await ebible_chapter_verse_numbers(bible_folder, chapter_code);
+  let v2 = await ebible_verses(bible_folder, chapter_code);
   let verse_numbers = object_property_get(v2, "verse_numbers");
   let file_path = ebible_version_readaloud_download_path(bible_folder);
   let files = await folder_read_paths_async(file_path);
