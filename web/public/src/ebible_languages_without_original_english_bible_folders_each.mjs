@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_languages_without_original_english } from "../../../love/public/src/ebible_languages_without_original_english.mjs";
@@ -5,6 +6,10 @@ export async function ebible_languages_without_original_english_bible_folders_ea
   lambda$bible_folder,
 ) {
   let languages = ebible_languages_without_original_english();
+  log({
+    languages,
+  });
+  return;
   async function lambda2(language) {
     let bible_folder = object_property_get(language, "bible_folder");
     await lambda$bible_folder(bible_folder);
