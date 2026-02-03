@@ -1,3 +1,4 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { string_empty_not_is } from "../../../love/public/src/string_empty_not_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
@@ -32,6 +33,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
     return n;
   }
   let filtered2 = list_filter(verses, lambda);
+  let mapped2 = list_map_property(list2, property_name);
   let verse_numbers = object_property_get(v2, "verse_numbers");
   let file_path = ebible_version_readaloud_download_path(bible_folder);
   let files = await folder_read_paths_async(file_path);
