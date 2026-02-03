@@ -28,8 +28,8 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let contents = await file_read(only);
   let lines = string_split_newline(contents);
   let skipped = list_skip(lines, 2);
-  let filtered = list_filter_empty_not_is(item);
-  return lines;
+  let filtered = list_filter_empty_not_is(skipped);
+  return filtered;
   return files;
   let joined = path_join([file_path, chapters_name]);
   let v2 = await ebible_chapter_verse_numbers(bible_folder, chapter_code);
