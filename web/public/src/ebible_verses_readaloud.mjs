@@ -14,7 +14,6 @@ import { ebible_chapter_code_to_name_code } from "../../../love/public/src/ebibl
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   if (browser_is()) {
@@ -34,11 +33,6 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let skipped = list_skip(lines, 2);
   let mapped = list_map(skipped, string_trim);
   let filtered = list_filter_empty_not_is(mapped);
-  let list = list_map_pairs(verse_numbers, filtered, mapper);
+  let list = list_map_pairs(filtered, verse_numbers, ebible_verse_new_text);
   return list;
-  function mapper(nn, text) {
-    let number = object_property_get(nn, "number");
-    const v = ebible_verse_new_text(text, number);
-    return v;
-  }
 }
