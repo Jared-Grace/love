@@ -12,6 +12,7 @@ export async function ebible_verses_upload(bible_folder) {
   ("loop through to ensure parse correct before begin upload");
   await ebible_chapters_each_verses_check_with(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
+    return;
     async function lambda(v) {
       async function lambda3() {
         await ebible_firebase_upload_verse(v, chapter_code, bible_folder);
