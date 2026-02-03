@@ -15,7 +15,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
     return verses;
   }
   marker("1");
-  let file_path = await ebible_version_readaloud_download_path(bible_folder);
+  let file_path = ebible_version_readaloud_download_path(bible_folder);
   let files = await folder_read_files(file_path);
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let name_code = ebible_chapter_code_to_name_code(chapter_code);
