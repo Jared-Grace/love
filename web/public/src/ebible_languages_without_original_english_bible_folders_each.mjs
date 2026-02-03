@@ -1,6 +1,6 @@
+import { each_index_async } from "../../../love/public/src/each_index_async.mjs";
 import { list_index_of_next_property } from "../../../love/public/src/list_index_of_next_property.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { each_async } from "../../../love/public/src/each_async.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_languages_without_original_english } from "../../../love/public/src/ebible_languages_without_original_english.mjs";
 export async function ebible_languages_without_original_english_bible_folders_each(
@@ -15,9 +15,11 @@ export async function ebible_languages_without_original_english_bible_folders_ea
     index_next,
   });
   return;
-  async function lambda2(language) {
+  async function lambda2(language, i) {
+    if (false) {
+    }
     let bible_folder = object_property_get(language, "bible_folder");
     await lambda$bible_folder(bible_folder);
   }
-  await each_async(languages, lambda2);
+  await each_index_async(languages, lambda2);
 }
