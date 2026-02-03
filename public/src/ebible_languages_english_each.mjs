@@ -3,15 +3,13 @@ import { ebible_versions_english_choices_each } from "../../../love/public/src/e
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
-import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function ebible_languages_english_each(lambda$bible_folder) {
   let languages = ebible_languages_without_original();
   async function lambda2(language) {
     let bible_folder = object_property_get(language, "bible_folder");
-    let v = bible_interlinear_verses_upload_folder();
     let v2 = ebible_folder_english();
-    let skips = [v, v2];
+    let skips = [v2];
     let includes = list_includes(skips, bible_folder);
     if (includes) {
       return;
