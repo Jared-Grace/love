@@ -1,5 +1,4 @@
-import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
+import { ebible_verses_numbers } from "../../../love/public/src/ebible_verses_numbers.mjs";
 import { ebible_verse_new_text } from "../../../love/public/src/ebible_verse_new_text.mjs";
 import { list_map_pairs } from "../../../love/public/src/list_map_pairs.mjs";
 import { string_trim } from "../../../love/public/src/string_trim.mjs";
@@ -23,8 +22,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
     return verses;
   }
   marker("1");
-  let verses = await ebible_verses(bible_folder, chapter_code);
-  let verse_numbers = list_map_property(verses, "verse_number");
+  let verse_numbers = await ebible_verses_numbers(bible_folder, chapter_code);
   let file_path = ebible_version_readaloud_download_path(bible_folder);
   let files = await folder_read_paths_async(file_path);
   let book_code = ebible_chapter_code_to_book(chapter_code);
