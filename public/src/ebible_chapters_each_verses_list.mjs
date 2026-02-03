@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { list_any_starts_with } from "../../../love/public/src/list_any_starts_with.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -12,6 +13,9 @@ export async function ebible_chapters_each_verses_list(
 ) {
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
   let mapped = list_map_property(books, "book_code");
+  log({
+    mapped,
+  });
   await each_async(list, lambda);
   async function lambda(chapter_code) {
     if (bible_folder === "hausa" && chapter_code === "DAN14") {
