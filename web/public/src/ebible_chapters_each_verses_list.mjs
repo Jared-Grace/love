@@ -31,7 +31,6 @@ export async function ebible_chapters_each_verses_list(
       return;
     }
     log_keep(chapter_code);
-    ("ebible website says canon only, but seems apocrypha included?");
     let any = list_any_starts_with(chapter_code, mapped);
     let ebible_verses_get = null;
     if (any) {
@@ -39,6 +38,7 @@ export async function ebible_chapters_each_verses_list(
     } else {
       ebible_verses_get = ebible_verses_readaloud;
     }
+    ("ebible website says canon only, but seems apocrypha included?");
     ebible_verses_get = ebible_verses_readaloud;
     let verses = await ebible_verses_get(bible_folder, chapter_code);
     await each_chapter(chapter_code, verses);
