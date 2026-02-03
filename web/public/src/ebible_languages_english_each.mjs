@@ -1,4 +1,4 @@
-import { ebible_versions_english_choices } from "../../../love/public/src/ebible_versions_english_choices.mjs";
+import { ebible_versions_english_choices_each } from "../../../love/public/src/ebible_versions_english_choices_each.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
@@ -19,6 +19,5 @@ export async function ebible_languages_english_each(lambda$bible_folder) {
     await lambda$bible_folder(bible_folder);
   }
   await each_async(languages, lambda2);
-  let english_choices = await ebible_versions_english_choices();
-  await each_async(english_choices, lambda$bible_folder);
+  await ebible_versions_english_choices_each(lambda$bible_folder);
 }
