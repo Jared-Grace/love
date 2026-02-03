@@ -15,7 +15,8 @@ export async function ebible_verses_upload_compare(bible_folder) {
   await ebible_chapters_each_verses_check_with(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses_readaloud) {
     let verses = await ebible_verses(bible_folder, chapter_code);
-    each_pair(list_a, list_b, function lambda2(a, b) {});
+    function lambda2(a, b) {}
+    each_pair(list_a, list_b, lambda2);
     return;
     async function lambda(v) {
       async function lambda3() {
