@@ -1,3 +1,4 @@
+import { ebible_verses_before } from "../../../love/public/src/ebible_verses_before.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -46,7 +47,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let verses_unfiltered = list_adder(lambda);
   let ne = list_empty_not_is(filtered);
   if (ne) {
-    const v = ebible_verse_new(filtered, "0");
+    let verse_number = ebible_verses_before();
+    const v = ebible_verse_new(filtered, verse_number);
     list_add(verses_unfiltered, v);
   }
   list_reverse(verses_unfiltered);
