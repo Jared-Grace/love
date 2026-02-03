@@ -5,7 +5,7 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
 export async function ebible_version_chapters(bible_folder) {
   log({
-    t:ebible_version_chapters,
+    t: ebible_version_chapters,
     bible_folder,
   });
   marker("1");
