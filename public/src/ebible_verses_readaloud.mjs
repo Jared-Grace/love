@@ -1,3 +1,4 @@
+import { file_read } from "../../../love/public/src/file_read.mjs";
 import { ebible_version_readaloud_download_path } from "../../../love/public/src/ebible_version_readaloud_download_path.mjs";
 import { list_find_includes } from "../../../love/public/src/list_find_includes.mjs";
 import { ebible_chapter_code_to_name_code } from "../../../love/public/src/ebible_chapter_code_to_name_code.mjs";
@@ -21,6 +22,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let name_code = ebible_chapter_code_to_name_code(chapter_code);
   let search = "_" + book_code + "_" + name_code + "_";
   let only = list_find_includes(files, search);
+  let contents = await file_read(file_path2);
   return only;
   return files;
   let joined = path_join([file_path, chapters_name]);
