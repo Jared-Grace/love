@@ -8,7 +8,8 @@ export async function ebible_languages_without_original_english_bible_folders_ea
   lambda$bible_folder,
 ) {
   let languages = ebible_languages_without_original_english();
-  let found = list_find(list2, function lambda(item2) {});
+  function lambda(item2) {}
+  let found = list_find(list2, lambda);
   let index_next = list_index_of_next(list, item);
   log({
     languages,
