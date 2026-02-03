@@ -19,6 +19,8 @@ export async function ebible_languages_without_original_english_bible_folders_ea
     if (i < index_next) {
       return;
     }
+  log(language);
+  return;
     let bible_folder = object_property_get(language, "bible_folder");
     await lambda$bible_folder(bible_folder);
   }
