@@ -11,10 +11,8 @@ export async function ebible_languages_without_original_english_bible_folders_ea
   const value = "gaz";
   let index_next = list_index_of_next_property(languages, property, value);
   log({
-    languages,
     index_next,
   });
-  return;
   async function lambda2(language, i) {
     if (i < index_next) {
       return;
