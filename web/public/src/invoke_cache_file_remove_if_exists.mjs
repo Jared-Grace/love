@@ -1,7 +1,13 @@
+import { file_delete } from "../../../love/public/src/file_delete.mjs";
+import { file_exists } from "../../../love/public/src/file_exists.mjs";
+import { invoke_cache_file_key_get } from "../../../love/public/src/invoke_cache_file_key_get.mjs";
 import { invoke_cache_file_remove } from "../../../love/public/src/invoke_cache_file_remove.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function invoke_cache_file_remove_if_exists(fn, args) {
   marker("1");
+  let key_get = invoke_cache_file_key_get(fn, args);
+  let cached_exists = file_exists;
+  let cache_remove = file_delete;
   let v = await invoke_cache_file_remove(fn, args);
   return v;
 }
