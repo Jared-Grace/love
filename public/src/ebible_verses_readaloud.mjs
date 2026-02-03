@@ -39,7 +39,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   return list;
   function mapper(nn, text) {
     let number = object_property_get(nn, "number");
-    const v = ebible_verse_new_text(number, text);
+    const v = ebible_verse_new_text(text, number);
     return v;
   }
 }
