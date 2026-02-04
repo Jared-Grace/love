@@ -1,4 +1,4 @@
-import { each_reverse_next } from "../../../love/public/src/each_reverse_next.mjs";
+import { each_next_reverse } from "../../../love/public/src/each_next_reverse.mjs";
 import { greater_than } from "../../../love/public/src/greater_than.mjs";
 import { list_index_of_all } from "../../../love/public/src/list_index_of_all.mjs";
 import { list_index_of_last } from "../../../love/public/src/list_index_of_last.mjs";
@@ -75,7 +75,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
       la(v);
       filtered = list_take(filtered, index);
     }
-    each_reverse_next(verse_numbers, lambda_each_reverse);
+    each_next_reverse(verse_numbers, lambda_each_reverse);
   }
   let verses_unfiltered = list_adder(lambda);
   let ne = list_empty_not_is(filtered);
