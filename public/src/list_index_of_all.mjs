@@ -8,6 +8,7 @@ export function list_index_of_all(list, search) {
     if (value === search) {
       list_add(item, index);
     }
+    return item;
   }
   let indices = list_reduce_index(list, lambda, []);
   log({
