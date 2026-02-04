@@ -5,11 +5,20 @@ export function each_reverse_previous(list, lambda$item$previous) {
   marker("1");
   function lambda2(item, index) {
     let previous = null;
-    if (index >= 1) {
-      previous = list_get(list, index - 1);
+    if (index_valid(index)) {
+      let index2 = index_mutate(index);
+      previous = list_get(list, index2);
     }
     lambda$item$previous(item, previous);
   }
   let v = each_index_reverse(list, lambda2);
   return v;
+  function index_valid(index) {
+    let v2 = index >= 1;
+    return v2;
+  }
+  function index_mutate(index) {
+    let v3 = index - 1;
+    return v3;
+  }
 }
