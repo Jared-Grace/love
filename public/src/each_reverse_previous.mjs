@@ -4,12 +4,12 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function each_reverse_previous(list, lambda$item$previous) {
   marker("1");
   function lambda2(item, index) {
-    let previous = null;
+    let other = null;
     if (index_valid(index)) {
       let index2 = index_mutate(index);
-      previous = list_get(list, index2);
+      other = list_get(list, index2);
     }
-    lambda$item$previous(item, previous);
+    lambda$item$previous(item, other);
   }
   let v = each_index_reverse(list, lambda2);
   return v;
