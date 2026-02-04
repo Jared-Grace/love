@@ -55,8 +55,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
   list_reverse(verses_unfiltered);
   function lambda3(item) {
     let value = object_property_get(item, property);
-    let replaced = string_replace(s, from, to);
-    let n = string_empty_not_is(value);
+    let replaced = string_replace(value, "[]", "");
+    let n = string_empty_not_is(replaced);
     return n;
   }
   let verses = list_filter(verses_unfiltered, lambda3);
