@@ -1,3 +1,4 @@
+import { list_last_not_is } from "../../../love/public/src/list_last_not_is.mjs";
 import { each_reverse_previous_generic } from "../../../love/public/src/each_reverse_previous_generic.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function each_reverse_next(list, lambda$item$previous) {
@@ -10,7 +11,7 @@ export function each_reverse_next(list, lambda$item$previous) {
   );
   return v4;
   function index_valid_is(index) {
-    let v2 = index >= 1;
+    let n = list_last_not_is(arguments2, arg);
     return v2;
   }
   function index_other_get(index) {
