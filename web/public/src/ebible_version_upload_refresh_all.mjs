@@ -5,6 +5,8 @@ import { ebible_version_upload_refresh } from "../../../love/public/src/ebible_v
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_version_upload_refresh_all() {
   marker("1");
+  await ebible_versions_english_choices_each(ebible_version_upload_refresh);
+  return;
   await ebible_languages_without_original_english_bible_folders_each(
     ebible_version_upload_refresh,
   );
