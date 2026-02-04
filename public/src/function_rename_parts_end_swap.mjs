@@ -1,16 +1,9 @@
-import { function_name_combine_multiple } from "../../../love/public/src/function_name_combine_multiple.mjs";
-import { list_swap_end } from "../../../love/public/src/list_swap_end.mjs";
-import { function_name_to_parts } from "../../../love/public/src/function_name_to_parts.mjs";
+import { function_name_parts_swap_end } from "../../../love/public/src/function_name_parts_swap_end.mjs";
 import { function_rename } from "../../../love/public/src/function_rename.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export async function function_rename_parts_end_swap(
-  f_name_before,
-  f_name_after,
-) {
+export async function function_rename_parts_end_swap(f_name_before) {
   marker("1");
-  let list = function_name_to_parts(f_name_before);
-  list_swap_end(list);
-  let combined = function_name_combine_multiple(parts);
+  let f_name_after = function_name_parts_swap_end(f_name_before);
   let v = await function_rename(f_name_before, f_name_after);
   return v;
 }
