@@ -46,7 +46,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
     function lambda_each_reverse(nn, nn_previous) {
       let name = object_property_get(nn, "name");
       let number = object_property_get(nn, "number");
-      if (null_not_is(value2)) {
+      if (null_not_is(nn_previous)) {
       }
       let mapped = list_map(filtered, integer_to);
       let filtered2 = list_filter(mapped, integer_is);
