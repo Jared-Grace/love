@@ -1,3 +1,4 @@
+import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 import { list_index_of_last_try } from "../../../love/public/src/list_index_of_last_try.mjs";
 import { integer_is } from "../../../love/public/src/integer_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -45,6 +46,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
     function lambda_each_reverse(nn) {
       let name = object_property_get(nn, "name");
       let number = object_property_get(nn, "number");
+      let fi = list_first_is(list, item2);
       let mapped = list_map(filtered, integer_to);
       let filtered2 = list_filter(mapped, integer_is);
       let index = null;
