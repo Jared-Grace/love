@@ -61,7 +61,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
         let index_previous = list_index_of_last(filtered3, name_previous);
         let r = list_index_of_all(filtered, name);
         function lambda2(item2) {
-          let g = greater_than(a, b);
+          let g = greater_than(item2, index_previous);
+          return g;
         }
         let filtered4 = list_filter(r, lambda2);
       }
