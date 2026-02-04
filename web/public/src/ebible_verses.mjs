@@ -67,7 +67,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
           return g;
         }
         let filtered4 = list_filter(r, lambda2);
-        let first = list_first(list);
+        index = list_first(filtered4);
         log({
           filtered4,
         });
