@@ -38,7 +38,8 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let skipped = list_skip(lines, 2);
   let mapped = list_map(skipped, string_trim);
   function lambda(item) {
-    let replaced = string_replace(s, from, to);
+    let replaced = string_replace(item, "[]", "");
+    return replaced;
   }
   let mapped2 = list_map(list2, lambda);
   let filtered = list_filter_empty_not_is(mapped);
