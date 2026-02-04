@@ -1,4 +1,4 @@
-import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
+import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { list_index_of_last_try } from "../../../love/public/src/list_index_of_last_try.mjs";
 import { integer_is } from "../../../love/public/src/integer_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -17,7 +17,6 @@ import { ebible_verse_new } from "../../../love/public/src/ebible_verse_new.mjs"
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { list_skip } from "../../../love/public/src/list_skip.mjs";
-import { each_reverse } from "../../../love/public/src/each_reverse.mjs";
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
 import { string_empty_not_is } from "../../../love/public/src/string_empty_not_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -25,6 +24,7 @@ import { string_split_space } from "../../../love/public/src/string_split_space.
 import { ebible_chapter_text } from "../../../love/public/src/ebible_chapter_text.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
+import { each_reverse_previous } from "./each_reverse_previous.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
   if (browser_is()) {
     let verses = await ebible_verses_browser(bible_folder, chapter_code);
@@ -43,10 +43,11 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let split = string_split_space(text);
   let filtered = list_filter(split, string_empty_not_is);
   function lambda(la) {
-    function lambda_each_reverse(nn) {
+    function lambda_each_reverse(nn, nn_previous) {
       let name = object_property_get(nn, "name");
       let number = object_property_get(nn, "number");
-      let fi = list_first_is(list, item2);
+      if (null_not_is(value2)) {
+      }
       let mapped = list_map(filtered, integer_to);
       let filtered2 = list_filter(mapped, integer_is);
       let index = null;
@@ -60,7 +61,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
       la(v);
       filtered = list_take(filtered, index);
     }
-    each_reverse(verse_numbers, lambda_each_reverse);
+    each_reverse_previous(verse_numbers, lambda_each_reverse);
   }
   let verses_unfiltered = list_adder(lambda);
   let ne = list_empty_not_is(filtered);
