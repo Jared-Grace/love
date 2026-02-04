@@ -34,7 +34,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let split = string_split_space(text);
   let filtered = list_filter(split, string_empty_not_is);
   function lambda(la) {
-    function lambda2(nn) {
+    function lambda_each_reverse(nn) {
       let name = object_property_get(nn, "name");
       let number = object_property_get(nn, "number");
       let index = list_index_of_last(filtered, name);
@@ -43,7 +43,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
       la(v);
       filtered = list_take(filtered, index);
     }
-    each_reverse(verse_numbers, lambda2);
+    each_reverse(verse_numbers, lambda_each_reverse);
   }
   let verses_unfiltered = list_adder(lambda);
   let ne = list_empty_not_is(filtered);
