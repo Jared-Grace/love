@@ -15,8 +15,4 @@ export function each_reverse_next(list, lambda$item$previous) {
     let n = list_last_not_is(list, index);
     return n;
   }
-  function index_other_get(index) {
-    let v3 = index - 1;
-    return v3;
-  }
 }
