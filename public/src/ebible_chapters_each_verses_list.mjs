@@ -30,7 +30,10 @@ export async function ebible_chapters_each_verses_list(
     if (bible_folder === "engojb" && chapter_code === "MAL04") {
       return;
     }
-    log_keep(chapter_code);
+    log_keep({
+      bible_folder,
+      chapter_code,
+    });
     let any = list_any_starts_with(chapter_code, mapped);
     let ebible_verses_get = null;
     if (any) {
