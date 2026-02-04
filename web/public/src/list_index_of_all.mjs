@@ -8,6 +8,6 @@ export function list_index_of_all(list, search) {
       list_add(item, index);
     }
   }
-  let r = list_reduce_index(list, lambda, []);
-  return r;
+  let indices = list_reduce_index(list, lambda, []);
+  return indices;
 }
