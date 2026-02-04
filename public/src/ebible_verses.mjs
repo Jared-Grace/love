@@ -5,7 +5,6 @@ import { list_index_of_all } from "../../../love/public/src/list_index_of_all.mj
 import { list_index_of_last } from "../../../love/public/src/list_index_of_last.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { integer_is } from "../../../love/public/src/integer_is.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log_json } from "../../../love/public/src/log_json.mjs";
@@ -55,11 +54,6 @@ export async function ebible_verses(bible_folder, chapter_code) {
       if (null_not_is(nn_next)) {
         let name_next = object_property_get(nn_next, "name");
         let filtered3 = list_take(filtered, index);
-        log({
-          filtered2,
-          name,
-          name_next,
-        });
         let index_next = list_index_of_last(filtered3, name_next);
         let r = list_index_of_all(filtered, name);
         function lambda2(item2) {
@@ -68,9 +62,6 @@ export async function ebible_verses(bible_folder, chapter_code) {
         }
         let filtered4 = list_filter(r, lambda2);
         index = list_first(filtered4);
-        log({
-          filtered4,
-        });
       }
       let skipped = list_skip(filtered, index + 1);
       const v = ebible_verse_new(skipped, number);
