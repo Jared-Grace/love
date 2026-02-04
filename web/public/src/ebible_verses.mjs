@@ -41,6 +41,10 @@ export async function ebible_verses(bible_folder, chapter_code) {
     function lambda_each_reverse(nn) {
       let name = object_property_get(nn, "name");
       let number = object_property_get(nn, "number");
+      log({
+        filtered,
+        name,
+      });
       let index = list_index_of_last(filtered, name);
       let skipped = list_skip(filtered, index + 1);
       const v = ebible_verse_new(skipped, number);
