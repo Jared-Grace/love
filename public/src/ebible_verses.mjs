@@ -1,3 +1,4 @@
+import { list_index_of_last_try } from "../../../love/public/src/list_index_of_last_try.mjs";
 import { integer_is } from "../../../love/public/src/integer_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
@@ -10,7 +11,6 @@ import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { urdu_allah_to_god } from "../../../love/public/src/urdu_allah_to_god.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { list_index_of_last } from "../../../love/public/src/list_index_of_last.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { ebible_verse_new } from "../../../love/public/src/ebible_verse_new.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -51,7 +51,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
         filtered2,
         name,
       });
-      let index = list_index_of_last(filtered, name);
+      let index = list_index_of_last_try(filtered, name);
       let skipped = list_skip(filtered, index + 1);
       const v = ebible_verse_new(skipped, number);
       la(v);
