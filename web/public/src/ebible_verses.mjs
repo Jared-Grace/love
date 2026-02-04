@@ -1,3 +1,4 @@
+import { log_json } from "../../../love/public/src/log_json.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { string_replace } from "../../../love/public/src/string_replace.mjs";
 import { ebible_verses_before } from "../../../love/public/src/ebible_verses_before.mjs";
@@ -30,7 +31,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let property = "text";
   let text = object_property_get(v2, property);
   let verse_numbers = object_property_get(v2, "verse_numbers");
-  log({
+  log_json({
     verse_numbers,
   });
   text = whitespace_normalize(text);
