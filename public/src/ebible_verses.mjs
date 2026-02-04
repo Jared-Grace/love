@@ -52,12 +52,12 @@ export async function ebible_verses(bible_folder, chapter_code) {
       let filtered2 = list_filter(mapped, integer_is);
       let index = list_index_of_last(filtered, name);
       if (null_not_is(nn_next)) {
-        let name_previous = object_property_get(nn_next, "name");
+        let name_next = object_property_get(nn_next, "name");
         let filtered3 = list_take(filtered, index);
-        let index_previous = list_index_of_last(filtered3, name_previous);
+        let index_next = list_index_of_last(filtered3, name_next);
         let r = list_index_of_all(filtered, name);
         function lambda2(item2) {
-          let g = greater_than(item2, index_previous);
+          let g = greater_than(item2, index_next);
           return g;
         }
         let filtered4 = list_filter(r, lambda2);
