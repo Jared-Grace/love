@@ -6,6 +6,7 @@ export function each_reverse_previous(list, lambda) {
   function lambda2(item) {
     let fi = list_first_is(list, item);
     if (fi) {
+      $s;
       let previous = null;
     }
   }
