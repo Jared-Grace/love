@@ -1,5 +1,7 @@
+import { marker } from "../../../love/public/src/marker.mjs";
 import { list_reduce_index } from "../../../love/public/src/list_reduce_index.mjs";
 export function list_reduce(list, reducer, inital) {
+  marker("1");
   function lambda(item, value, index) {
     let v = reducer(item, value);
     return v;
