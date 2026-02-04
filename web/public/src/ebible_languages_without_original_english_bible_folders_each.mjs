@@ -1,5 +1,4 @@
 import { each_index_async } from "../../../love/public/src/each_index_async.mjs";
-import { list_index_of_next_property } from "../../../love/public/src/list_index_of_next_property.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_languages_without_original_english } from "../../../love/public/src/ebible_languages_without_original_english.mjs";
 export async function ebible_languages_without_original_english_bible_folders_each(
@@ -8,7 +7,7 @@ export async function ebible_languages_without_original_english_bible_folders_ea
   let languages = ebible_languages_without_original_english();
   const property = "bible_folder";
   const value = "nya";
-  let index_next = list_index_of_next_property(languages, property, value);
+  let index_next = list_index_of_property(languages, property, value);
   async function lambda2(language, i) {
     if (i <= index_next) {
       return;
