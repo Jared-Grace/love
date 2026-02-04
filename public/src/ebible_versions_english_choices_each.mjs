@@ -11,6 +11,7 @@ export async function ebible_versions_english_choices_each(
   let skipped = list_skip(english_choices, index);
   log({
     skipped,
-  });$r
+  });
+  return;
   await each_async(skipped, lambda$bible_folder);
 }
