@@ -1,5 +1,5 @@
-import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
+import { list_size } from "../../../love/public/src/list_size.mjs";
 export function list_index_end(list, index_from_end) {
-  let v = list_index_last(list) - index_from_end;
+  let v = list_size(list) - 1 - index_from_end;
   return v;
 }
