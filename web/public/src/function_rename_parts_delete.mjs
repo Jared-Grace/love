@@ -5,5 +5,6 @@ export async function function_rename_parts_delete(
   f_name_after,
 ) {
   marker("1");
-  return await function_rename(f_name_before, f_name_after);
+  let v = await function_rename(f_name_before, f_name_after);
+  return v;
 }
