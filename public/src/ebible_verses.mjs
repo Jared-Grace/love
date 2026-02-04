@@ -59,7 +59,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
         let filtered3 = list_take(filtered, index);
         let index_previous = list_index_of_last(filtered3, name_previous);
         let r = list_index_of_all(filtered, name);
-        let filtered4 = list_filter(list, function lambda2(item2) {});
+        function lambda2(item2) {}
+        let filtered4 = list_filter(list, lambda2);
       }
       let skipped = list_skip(filtered, index + 1);
       const v = ebible_verse_new(skipped, number);
