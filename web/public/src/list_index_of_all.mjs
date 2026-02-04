@@ -1,9 +1,11 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_reduce_index } from "../../../love/public/src/list_reduce_index.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-export function list_index_of_all(list, reducer, inital) {
+export function list_index_of_all(list, search) {
   marker("1");
   function lambda(item, value, index) {
-    if (false) {
+    if (value === search) {
+      list_add(list2, item2);
     }
   }
   let value2 = list_reduce_index(list, lambda, []);
