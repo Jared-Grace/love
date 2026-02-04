@@ -9,8 +9,8 @@ export function list_reduce(list, reducer, inital) {
   }
   each(list, lambda2);
   return value;
-  function lambda(item, index) {
-    value = reducer(item, value);
+  function lambda(item, value, index) {
+    return reducer(item, value);
   }
   let value2 = list_reduce_index(list, lambda, inital);
 }
