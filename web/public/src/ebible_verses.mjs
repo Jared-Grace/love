@@ -58,7 +58,6 @@ export async function ebible_verses(bible_folder, chapter_code) {
           filtered2,
           name,
           name_next,
-          filtered3,
         });
         let index_next = list_index_of_last(filtered3, name_next);
         let r = list_index_of_all(filtered, name);
