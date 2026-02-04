@@ -1,3 +1,4 @@
+import { greater_than } from "../../../love/public/src/greater_than.mjs";
 import { list_index_of_all } from "../../../love/public/src/list_index_of_all.mjs";
 import { list_index_of_last } from "../../../love/public/src/list_index_of_last.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
@@ -59,8 +60,10 @@ export async function ebible_verses(bible_folder, chapter_code) {
         let filtered3 = list_take(filtered, index);
         let index_previous = list_index_of_last(filtered3, name_previous);
         let r = list_index_of_all(filtered, name);
-        function lambda2(item2) {}
-        let filtered4 = list_filter(list, lambda2);
+        function lambda2(item2) {
+          let g = greater_than(a, b);
+        }
+        let filtered4 = list_filter(r, lambda2);
       }
       let skipped = list_skip(filtered, index + 1);
       const v = ebible_verse_new(skipped, number);
