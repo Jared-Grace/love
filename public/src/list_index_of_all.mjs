@@ -5,8 +5,9 @@ export function list_index_of_all(list, search) {
   marker("1");
   function lambda(item, value, index) {
     if (value === search) {
-      list_add(list2, item2);
+      list_add(item, index);
     }
   }
-  let value2 = list_reduce_index(list, lambda, []);
+  let r = list_reduce_index(list, lambda, []);
+  return r;
 }
