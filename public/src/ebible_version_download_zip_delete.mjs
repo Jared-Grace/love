@@ -3,7 +3,6 @@ import { http_local_file_name } from "../../../love/public/src/http_local_file_n
 import { firebase_delete } from "../../../love/public/src/firebase_delete.mjs";
 import { http_firebase_file_path } from "../../../love/public/src/http_firebase_file_path.mjs";
 import { ebible_version_download_url_html } from "../../../love/public/src/ebible_version_download_url_html.mjs";
-import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_version_download_zip_delete(bible_folder) {
   marker("1");
@@ -11,7 +10,5 @@ export async function ebible_version_download_zip_delete(bible_folder) {
   let f = http_firebase_file_path(url);
   await firebase_delete(f);
   let joined = http_local_file_name(url);
-  await file_delete(file_path);
-  let v = await ebible_version_download(bible_folder);
-  return v;
+  await file_delete(joined);
 }
