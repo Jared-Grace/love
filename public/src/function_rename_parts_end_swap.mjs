@@ -6,7 +6,7 @@ export async function function_rename_parts_end_swap(
   f_name_after,
 ) {
   marker("1");
-  let parts = function_name_to_parts(f_name);
+  let parts = function_name_to_parts(f_name_before);
   let v = await function_rename(f_name_before, f_name_after);
   return v;
 }
