@@ -1,8 +1,8 @@
-import { each_reverse_previous_generic } from "../../../love/public/src/each_reverse_previous_generic.mjs";
+import { each_previous_generic } from "../../../love/public/src/each_previous_generic.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function each_reverse_previous(list, lambda$item$previous) {
   marker("1");
-  let v4 = each_reverse_previous_generic(
+  let v4 = each_previous_generic(
     index_valid_is,
     index_other_get,
     list,
