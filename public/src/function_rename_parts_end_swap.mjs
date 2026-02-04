@@ -1,6 +1,4 @@
-import { list_index_last_second } from "../../../love/public/src/list_index_last_second.mjs";
-import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
-import { list_swap_at } from "../../../love/public/src/list_swap_at.mjs";
+import { list_swap_end } from "../../../love/public/src/list_swap_end.mjs";
 import { function_name_to_parts } from "../../../love/public/src/function_name_to_parts.mjs";
 import { function_rename } from "../../../love/public/src/function_rename.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
@@ -9,10 +7,8 @@ export async function function_rename_parts_end_swap(
   f_name_after,
 ) {
   marker("1");
-  let parts = function_name_to_parts(f_name_before);
-  let index_last = list_index_last(list);
-  let index_last_second = list_index_last_second(list);
-  list_swap_at(list, index_last, index_last_second);
+  let list = function_name_to_parts(f_name_before);
+  list_swap_end(list);
   let v = await function_rename(f_name_before, f_name_after);
   return v;
 }
