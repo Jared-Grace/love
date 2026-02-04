@@ -39,7 +39,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let mapped = list_map(skipped, string_trim);
   const from = "[]";
   const to = "";
-  let mapped2 = list_map_replace(from, to, mapped);
+  let mapped2 = list_map_replace(mapped, from, to);
   let filtered = list_filter_empty_not_is(mapped2);
   let list = list_map_pairs(filtered, verse_numbers, ebible_verse_new_text);
   return list;
