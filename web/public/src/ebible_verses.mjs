@@ -47,11 +47,12 @@ export async function ebible_verses(bible_folder, chapter_code) {
       let number = object_property_get(nn, "number");
       let mapped = list_map(filtered, integer_to);
       let filtered2 = list_filter(mapped, integer_is);
+      let index = null;
       log({
         filtered2,
         name,
       });
-      let index = list_index_of_last_try(filtered, name);
+      let index_try = list_index_of_last_try(filtered, name);
       let skipped = list_skip(filtered, index + 1);
       const v = ebible_verse_new(skipped, number);
       la(v);
