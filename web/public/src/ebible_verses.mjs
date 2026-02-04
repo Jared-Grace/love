@@ -1,3 +1,4 @@
+import { integer_is } from "../../../love/public/src/integer_is.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log_json } from "../../../love/public/src/log_json.mjs";
 import { string_replace } from "../../../love/public/src/string_replace.mjs";
@@ -42,8 +43,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
     function lambda_each_reverse(nn) {
       let name = object_property_get(nn, "name");
       let number = object_property_get(nn, "number");
-      function lambda2(item2) {}
-      let mapped = list_map(list, lambda2);
+      let mapped = list_map(list, integer_is);
+      let filtered2 = list_filter(list2, function lambda2(item2) {});
       let index = list_index_of_last(filtered, name);
       let skipped = list_skip(filtered, index + 1);
       const v = ebible_verse_new(skipped, number);
