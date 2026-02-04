@@ -4,7 +4,6 @@ import { greater_than } from "../../../love/public/src/greater_than.mjs";
 import { list_index_of_all } from "../../../love/public/src/list_index_of_all.mjs";
 import { list_index_of_last } from "../../../love/public/src/list_index_of_last.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
-import { log_json } from "../../../love/public/src/log_json.mjs";
 import { string_replace } from "../../../love/public/src/string_replace.mjs";
 import { ebible_verses_before } from "../../../love/public/src/ebible_verses_before.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
@@ -34,9 +33,6 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let property = "text";
   let text = object_property_get(v2, property);
   let verse_numbers = object_property_get(v2, "verse_numbers");
-  log_json({
-    verse_numbers,
-  });
   text = whitespace_normalize(text);
   text = urdu_allah_to_god(text);
   let split = string_split_space(text);
