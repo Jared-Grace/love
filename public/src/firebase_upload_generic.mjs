@@ -1,4 +1,4 @@
-import { retry } from "../../../love/public/src/retry.mjs";
+import { retry_standard } from "../../../love/public/src/retry_standard.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { firebase_bucket } from "../../../love/public/src/firebase_bucket.mjs";
 import { firebase_path_fix } from "../../../love/public/src/firebase_path_fix.mjs";
@@ -15,7 +15,7 @@ export async function firebase_upload_generic(destination, settings, buffer) {
     },
     settings,
   );
-  await retry(5, lambda);
+  await retry_standard(lambda);
   log_keep(`Uploaded data to ${destination}`);
   const url = `https://storage.googleapis.com/${bucket.name}/${file.name}`;
   log_keep("Accessible at:" + url);
