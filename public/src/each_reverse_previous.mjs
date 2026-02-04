@@ -5,7 +5,7 @@ export function each_reverse_previous(list, lambda$item$previous) {
   marker("1");
   function lambda2(item, index) {
     let other = null;
-    if (index_valid(index)) {
+    if (index_valid_is(index)) {
       let index2 = index_other_get(index);
       other = list_get(list, index2);
     }
@@ -13,7 +13,7 @@ export function each_reverse_previous(list, lambda$item$previous) {
   }
   let v = each_index_reverse(list, lambda2);
   return v;
-  function index_valid(index) {
+  function index_valid_is(index) {
     let v2 = index >= 1;
     return v2;
   }
