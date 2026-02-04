@@ -1,4 +1,4 @@
-import { string_replace } from "../../../love/public/src/string_replace.mjs";
+import { list_map_replace } from "../../../love/public/src/list_map_replace.mjs";
 import { ebible_verses_before } from "../../../love/public/src/ebible_verses_before.mjs";
 import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_exists.mjs";
 import { ebible_verses_numbers } from "../../../love/public/src/ebible_verses_numbers.mjs";
@@ -39,11 +39,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let mapped = list_map(skipped, string_trim);
   const from = "[]";
   const to = "";
-  function lambda(item) {
-    let replaced = string_replace(item, from, to);
-    return replaced;
-  }
-  let mapped2 = list_map(mapped, lambda);
+  let mapped2 = list_map_replace(from, to, mapped);
   let filtered = list_filter_empty_not_is(mapped2);
   let list = list_map_pairs(filtered, verse_numbers, ebible_verse_new_text);
   return list;
