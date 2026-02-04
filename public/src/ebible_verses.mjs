@@ -48,7 +48,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
       let mapped = list_map(filtered, integer_to);
       let filtered2 = list_filter(mapped, integer_is);
       log({
-        filtered2,name
+        filtered2,
+        name,
       });
       let index = list_index_of_last(filtered, name);
       let skipped = list_skip(filtered, index + 1);
