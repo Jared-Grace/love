@@ -44,7 +44,8 @@ export async function ebible_verses(bible_folder, chapter_code) {
       let name = object_property_get(nn, "name");
       let number = object_property_get(nn, "number");
       let mapped = list_map(list, integer_is);
-      let filtered2 = list_filter(list2, function lambda2(item2) {});
+      function lambda2(item2) {}
+      let filtered2 = list_filter(list2, lambda2);
       let index = list_index_of_last(filtered, name);
       let skipped = list_skip(filtered, index + 1);
       const v = ebible_verse_new(skipped, number);
