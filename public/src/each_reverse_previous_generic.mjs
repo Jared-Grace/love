@@ -1,4 +1,4 @@
-import { each_index_reverse } from "../../../love/public/src/each_index_reverse.mjs";
+import { each_index } from "../../../love/public/src/each_index.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 export function each_reverse_previous_generic(
   index_valid_is,
@@ -14,6 +14,6 @@ export function each_reverse_previous_generic(
     }
     lambda$item$other(item, other);
   }
-  let v = each_index_reverse(list, lambda2);
+  let v = each_index(list, lambda2);
   return v;
 }
