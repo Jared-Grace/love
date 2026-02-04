@@ -1,4 +1,14 @@
-import { marker } from "../../../love/public/src/marker.mjs";
-export function firebase_delete() {
-  marker("1");
+import { log_keep } from "../../../love/public/src/log_keep.mjs";
+import { retry } from "../../../love/public/src/retry.mjs";
+import { firebase_bucket } from "../../../love/public/src/firebase_bucket.mjs";
+import { firebase_path_fix } from "../../../love/public/src/firebase_path_fix.mjs";
+export async function firebase_delete(destination) {
+  destination = firebase_path_fix(destination);
+  const bucket = await firebase_bucket();
+  const file = bucket.file(destination);
+  await retry(5, lambda);
+  log_keep(`Deleted data at ${destination}`);
+  async function lambda() {
+    await file.delete();
+  }
 }
