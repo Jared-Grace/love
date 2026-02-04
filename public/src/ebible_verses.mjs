@@ -1,5 +1,5 @@
+import { list_index_of_last } from "../../../love/public/src/list_index_of_last.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
-import { list_index_of_last_try } from "../../../love/public/src/list_index_of_last_try.mjs";
 import { integer_is } from "../../../love/public/src/integer_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
@@ -55,7 +55,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
         filtered2,
         name,
       });
-      let index_try = list_index_of_last_try(filtered, name);
+      let index_try = list_index_of_last(filtered, name);
       let skipped = list_skip(filtered, index + 1);
       const v = ebible_verse_new(skipped, number);
       la(v);
