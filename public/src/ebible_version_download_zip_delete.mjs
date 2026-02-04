@@ -11,4 +11,5 @@ export async function ebible_version_download_zip_delete(bible_folder) {
   await firebase_delete(f);
   let joined = http_local_file_name(url);
   await file_delete(joined);
+  ("todo: unzipped contents");
 }
