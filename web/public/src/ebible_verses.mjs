@@ -45,7 +45,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
       let name = object_property_get(nn, "name");
       let number = object_property_get(nn, "number");
       let mapped = list_map(list, integer_to);
-      let filtered2 = list_filter(list2, mapped);
+      let filtered2 = list_filter(mapped, integer_is);
       log({
         filtered2,
       });
