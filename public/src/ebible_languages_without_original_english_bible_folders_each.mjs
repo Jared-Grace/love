@@ -7,7 +7,7 @@ export async function ebible_languages_without_original_english_bible_folders_ea
 ) {
   let languages = ebible_languages_without_original_english();
   const property = "bible_folder";
-  const value = "gaz";
+  const value = "nya";
   let index_next = list_index_of_next_property(languages, property, value);
   async function lambda2(language, i) {
     if (i < index_next) {
