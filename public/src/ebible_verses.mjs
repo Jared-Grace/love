@@ -1,3 +1,4 @@
+import { string_replace } from "../../../love/public/src/string_replace.mjs";
 import { ebible_verses_before } from "../../../love/public/src/ebible_verses_before.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
@@ -54,6 +55,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   list_reverse(verses_unfiltered);
   function lambda3(item) {
     let value = object_property_get(item, property);
+    let replaced = string_replace(s, from, to);
     let n = string_empty_not_is(value);
     return n;
   }
