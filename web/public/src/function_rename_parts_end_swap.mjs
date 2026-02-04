@@ -12,7 +12,7 @@ export async function function_rename_parts_end_swap(
   let parts = function_name_to_parts(f_name_before);
   let index_last = list_index_last(list);
   let index_last_second = list_index_last_second(list);
-  list_swap_at(list, ai, bi);
+  list_swap_at(list, index_last, index_last_second);
   let v = await function_rename(f_name_before, f_name_after);
   return v;
 }
