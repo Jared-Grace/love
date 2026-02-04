@@ -4,7 +4,7 @@ export function each_reverse_previous_generic(
   index_valid_is,
   index_other_get,
   list,
-  lambda$item$previous,
+  lambda$item$other,
 ) {
   function lambda2(item, index) {
     let other = null;
@@ -12,7 +12,7 @@ export function each_reverse_previous_generic(
       let index2 = index_other_get(index);
       other = list_get(list, index2);
     }
-    lambda$item$previous(item, other);
+    lambda$item$other(item, other);
   }
   let v = each_index_reverse(list, lambda2);
   return v;
