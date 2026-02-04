@@ -1,5 +1,5 @@
+import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
-import { list_index_of_next } from "../../../love/public/src/list_index_of_next.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 export function list_index_of_property(list, property, value) {
   marker("1");
