@@ -1,8 +1,8 @@
+import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { app_a_cut } from "../../../love/public/src/app_a_cut.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { app_a_variable_declaration } from "../../../love/public/src/app_a_variable_declaration.mjs";
 import { app_a_function_declaration } from "../../../love/public/src/app_a_function_declaration.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { app_a_if_statement } from "../../../love/public/src/app_a_if_statement.mjs";
 import { list_last_not_is } from "../../../love/public/src/list_last_not_is.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
@@ -268,7 +268,7 @@ export function app_a_function_node(a) {
   }
   let n = object_property_exists_not(lookup, type);
   if (n) {
-    log({
+    log_keep({
       node,
     });
     let json = json_to({
