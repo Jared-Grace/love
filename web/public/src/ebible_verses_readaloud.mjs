@@ -37,9 +37,9 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let lines = string_split_newline(contents);
   let skipped = list_skip(lines, 2);
   let mapped = list_map(skipped, string_trim);
+  const from = "[]";
+  const to = "";
   function lambda(item) {
-    const from = "[]";
-    const to = "";
     let replaced = string_replace(item, from, to);
     return replaced;
   }
