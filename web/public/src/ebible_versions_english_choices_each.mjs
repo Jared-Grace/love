@@ -7,6 +7,6 @@ export async function ebible_versions_english_choices_each(
 ) {
   let english_choices = await ebible_versions_english_choices();
   let index = list_index_of(english_choices, "engBBE");
-  let skipped = list_skip(list, skip_count);
-  await each_async(english_choices, lambda$bible_folder);
+  let skipped = list_skip(english_choices, index);
+  await each_async(skipped, lambda$bible_folder);
 }
