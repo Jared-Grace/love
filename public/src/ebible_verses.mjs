@@ -1,3 +1,4 @@
+import { each_reverse_next } from "../../../love/public/src/each_reverse_next.mjs";
 import { greater_than } from "../../../love/public/src/greater_than.mjs";
 import { list_index_of_all } from "../../../love/public/src/list_index_of_all.mjs";
 import { list_index_of_last } from "../../../love/public/src/list_index_of_last.mjs";
@@ -26,7 +27,6 @@ import { string_split_space } from "../../../love/public/src/string_split_space.
 import { ebible_chapter_text } from "../../../love/public/src/ebible_chapter_text.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
-import { each_reverse_previous } from "./each_reverse_previous.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
   if (browser_is()) {
     let verses = await ebible_verses_browser(bible_folder, chapter_code);
@@ -72,7 +72,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
       la(v);
       filtered = list_take(filtered, index);
     }
-    each_reverse_previous(verse_numbers, lambda_each_reverse);
+    each_reverse_next(verse_numbers, lambda_each_reverse);
   }
   let verses_unfiltered = list_adder(lambda);
   let ne = list_empty_not_is(filtered);
