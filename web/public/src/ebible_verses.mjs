@@ -1,3 +1,4 @@
+import { integer_is } from "../../../love/public/src/integer_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
