@@ -1,3 +1,4 @@
+import { list_reduce_index } from "../../../love/public/src/list_reduce_index.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 export function list_reduce(list, reducer, inital) {
@@ -8,4 +9,5 @@ export function list_reduce(list, reducer, inital) {
   }
   each(list, lambda2);
   return value;
+  let value2 = list_reduce_index(list2, reducer2, inital2);
 }
