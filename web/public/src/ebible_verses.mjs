@@ -5,6 +5,7 @@ import { list_index_of_all } from "../../../love/public/src/list_index_of_all.mj
 import { list_index_of_last } from "../../../love/public/src/list_index_of_last.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { integer_is } from "../../../love/public/src/integer_is.mjs";
+import { log } from "../../../love/public/src/log.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log_json } from "../../../love/public/src/log_json.mjs";
@@ -48,8 +49,6 @@ export async function ebible_verses(bible_folder, chapter_code) {
     function lambda_each_reverse(nn, nn_next) {
       let name = object_property_get(nn, "name");
       let number = object_property_get(nn, "number");
-      let mapped = list_map(filtered, integer_to);
-      let filtered2 = list_filter(mapped, integer_is);
       let index = list_index_of_last(filtered, name);
       if (null_not_is(nn_next)) {
         let name_next = object_property_get(nn_next, "name");
