@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { each_next_reverse } from "../../../love/public/src/each_next_reverse.mjs";
 import { greater_than } from "../../../love/public/src/greater_than.mjs";
 import { list_index_of_all } from "../../../love/public/src/list_index_of_all.mjs";
@@ -66,6 +67,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
           return g;
         }
         let filtered4 = list_filter(r, lambda2);
+        let first = list_first(list);
         log({
           filtered4,
         });
