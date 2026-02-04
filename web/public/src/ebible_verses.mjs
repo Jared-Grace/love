@@ -54,6 +54,10 @@ export async function ebible_verses(bible_folder, chapter_code) {
       if (null_not_is(nn_next)) {
         let name_next = object_property_get(nn_next, "name");
         let filtered3 = list_take(filtered, index);
+        log({
+          filtered2,
+          name,
+        });
         let index_next = list_index_of_last(filtered3, name_next);
         let r = list_index_of_all(filtered, name);
         function lambda2(item2) {
@@ -62,8 +66,6 @@ export async function ebible_verses(bible_folder, chapter_code) {
         }
         let filtered4 = list_filter(r, lambda2);
         log({
-          filtered2,
-          name,
           filtered4,
         });
       }
