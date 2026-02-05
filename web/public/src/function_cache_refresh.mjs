@@ -2,7 +2,6 @@ import { invoke_cache_file_clear } from "../../../love/public/src/invoke_cache_f
 import { function_run } from "../../../love/public/src/function_run.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { function_cache_name } from "../../../love/public/src/function_cache_name.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { function_import } from "./function_import.mjs";
 export async function function_cache_refresh(f_name) {
   const args = [];
