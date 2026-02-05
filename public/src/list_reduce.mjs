@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { list_reduce_index } from "../../../love/public/src/list_reduce_index.mjs";
 export function list_reduce(list, lambda$item$value, inital) {
   function lambda(item, value, index) {
