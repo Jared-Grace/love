@@ -9,7 +9,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
-import { integer_to } from "../../../love/public/src/integer_to.mjs";
+import { integer_to_try } from "../../../love/public/src/integer_to_try.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
@@ -27,7 +27,7 @@ export async function app_bible_chapters(context) {
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let chapter_codes = await ebible_book_code_to_chapter_codes(e, book_code);
   let mapped = list_map_prefix_without(chapter_codes, book_code);
-  let chapter_numbers = list_map(mapped, integer_to);
+  let chapter_numbers = list_map(mapped, integer_to_try);
   let books = await ebible_version_books(e);
   let book_name = ebible_book_code_to_name(books, book_code);
   html_div_text_centered(root, book_name);
