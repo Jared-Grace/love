@@ -12,7 +12,7 @@ export function js_statement_call_remove(fn, ast) {
     let e1 = list_get_end_1(stack);
     let e2 = list_get_end_2(stack);
     function lambda3() {
-      let name = js_call_callee_name(callee);
+      let name = js_call_callee_name(node);
       if (name === fn.name) {
         list_remove(e2, e1);
       }
