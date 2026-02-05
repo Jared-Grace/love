@@ -2,7 +2,6 @@ import { list_property_exists_not_error } from "../../../love/public/src/list_pr
 import { indexeddb_exists_backend } from "../../../love/public/src/indexeddb_exists_backend.mjs";
 import { list_find_property_exists } from "../../../love/public/src/list_find_property_exists.mjs";
 import { indexeddb_get_all } from "../../../love/public/src/indexeddb_get_all.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function indexeddb_exists(db_get, store, key) {
   const property = "key";
   let all = await indexeddb_get_all(db_get, store);

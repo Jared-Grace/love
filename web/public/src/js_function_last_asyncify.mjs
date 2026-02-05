@@ -8,7 +8,6 @@ import { object_properties } from "../../../love/public/src/object_properties.mj
 import { data_identifiers_search } from "../../../love/public/src/data_identifiers_search.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { js_stack_last_function } from "../../../love/public/src/js_stack_last_function.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";

@@ -1,5 +1,4 @@
 import { global_function_property_initialize } from "../../../love/public/src/global_function_property_initialize.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_lambda_async } from "../../../love/public/src/object_property_lambda_async.mjs";
 export async function global_function_property_nested_lambda(
   fn,

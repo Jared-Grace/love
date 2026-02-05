@@ -3,7 +3,6 @@ import { js_code_call } from "../../../love/public/src/js_code_call.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { js_declaration_single_block_body } from "../../../love/public/src/js_declaration_single_block_body.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 export function js_dollar_aa({
   remaining,

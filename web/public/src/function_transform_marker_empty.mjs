@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { function_transform_marker } from "../../../love/public/src/function_transform_marker.mjs";
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 import { noop } from "../../../love/public/src/noop.mjs";

@@ -1,6 +1,5 @@
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_declaration_params_ast_get } from "../../../love/public/src/js_declaration_params_ast_get.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { list_swap_at } from "../../../love/public/src/list_swap_at.mjs";
 import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
 export async function function_param_swap_beginning(f_name) {
