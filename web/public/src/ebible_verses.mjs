@@ -37,7 +37,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   text = urdu_allah_to_god(text);
   let split = string_split_space(text);
   let filtered = list_filter(split, string_empty_not_is);
-  function lambda(la) {
+  function lambda_list_adder(la) {
     function lambda_each_reverse(nn, nn_next) {
       let name = object_property_get(nn, "name");
       let number = object_property_get(nn, "number");
@@ -61,7 +61,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
     }
     each_next_reverse(verse_numbers, lambda_each_reverse);
   }
-  let verses_unfiltered = list_adder(lambda);
+  let verses_unfiltered = list_adder(lambda_list_adder);
   let ne = list_empty_not_is(filtered);
   if (ne) {
     let verse_number = ebible_verses_before();
