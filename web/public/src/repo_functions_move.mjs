@@ -11,7 +11,6 @@ import { function_name_to_base } from "../../../love/public/src/function_name_to
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
 import { repo_functions_path } from "../../../love/public/src/repo_functions_path.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function repo_functions_move(f_names, repo_name_to) {
   async function lambda(f_name) {
     let r_path = repo_functions_path(repo_name_to);
