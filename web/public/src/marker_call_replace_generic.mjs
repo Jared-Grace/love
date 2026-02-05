@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_statement_call_get } from "../../../love/public/src/js_statement_call_get.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
@@ -14,15 +15,17 @@ export async function marker_call_replace_generic(input, lambda$a) {
   async function lambda2(la) {
     await function_transform_marker(f_name, lambda);
     async function lambda(a) {
-      let { next } = marker_next_get(a);
-      let { expression } = js_statement_call_get(next);
+      let v = marker_next_get(a);
+      let next = object_property_get(v, "next");
+      let v2 = js_statement_call_get(next);
+      let expression = object_property_get(v2, "expression");
       if (expression === null) {
         return;
       }
-      let { arguments: arguments2 } = expression;
+      let arguments2 = object_property_get(expression, "arguments");
       let replaced = null;
       if (input === "c") {
-        let { callee } = expression;
+        let callee = object_property_get(expression, "callee");
         replaced = callee;
       } else {
         let arg_index_at = list_get(arguments2, arg_index);
@@ -35,7 +38,7 @@ export async function marker_call_replace_generic(input, lambda$a) {
         a,
       );
       await lambda$a(to);
-      let { ast } = a;
+      let ast = object_property_get(a, "ast");
       await js_imports_missing_add(ast);
       let output = await js_unparse(next);
       la(output);
