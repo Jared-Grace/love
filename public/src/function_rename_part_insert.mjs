@@ -1,3 +1,4 @@
+import { null_not_is_assert } from "../../../love/public/src/null_not_is_assert.mjs";
 import { function_name_combine_multiple } from "../../../love/public/src/function_name_combine_multiple.mjs";
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { integer_to_try } from "../../../love/public/src/integer_to_try.mjs";
@@ -10,7 +11,8 @@ export async function function_rename_part_insert(
   index_string,
 ) {
   marker("1");
-  let index = integer_to_try(index_string);null_not_is_assert
+  let index = integer_to_try(index_string);
+  null_not_is_assert(a);
   let parts = function_name_to_parts(f_name_before);
   list_insert(parts, index, part);
   let f_name_after = function_name_combine_multiple(parts);
