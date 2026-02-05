@@ -4,7 +4,7 @@ import { openai_key_folder } from "../../../love/public/src/openai_key_folder.mj
 import { py_script_run_cmd } from "../../../love/public/src/py_script_run_cmd.mjs";
 import { json_to } from "./json_to.mjs";
 export async function openai_chat(input_file_path, output_file_path) {
-  let v = py_script_run_cmd("openai_chat");
+  let v = py_script_run_cmd("openai_chat_completions");
   let k = openai_key_folder();
   let concated = [v, k + "openai.txt", input_file_path, output_file_path];
   let joined = list_join_space(concated);
