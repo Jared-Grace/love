@@ -1,6 +1,5 @@
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_functionize } from "../../../love/public/src/app_a_functionize.mjs";
