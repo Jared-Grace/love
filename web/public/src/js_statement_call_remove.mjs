@@ -1,3 +1,4 @@
+import { js_call_callee_name } from "../../../love/public/src/js_call_callee_name.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
@@ -11,8 +12,7 @@ export function js_statement_call_remove(fn, ast) {
     let e1 = list_get_end_1(stack);
     let e2 = list_get_end_2(stack);
     function lambda3() {
-      let callee = object_property_get(node, "callee");
-      let name = object_property_get(callee, "name");
+      let name = js_call_callee_name(callee);
       if (name === fn.name) {
         list_remove(e2, e1);
       }
