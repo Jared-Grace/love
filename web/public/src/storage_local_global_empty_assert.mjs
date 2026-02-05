@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { json_equal_assert_empty } from "../../../love/public/src/json_equal_assert_empty.mjs";
 import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
 import { global_function_initialize_object } from "../../../love/public/src/global_function_initialize_object.mjs";
