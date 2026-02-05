@@ -1,7 +1,7 @@
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_remove_multiple } from "../../../love/public/src/list_remove_multiple.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-import { integer_to } from "../../../love/public/src/integer_to.mjs";
+import { integer_to_try } from "../../../love/public/src/integer_to_try.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { js_dollar_a_generic } from "../../../love/public/src/js_dollar_a_generic.mjs";
@@ -14,7 +14,7 @@ export function js_dollar_a({ stack1, stack2, ast, afters, remaining }) {
   let s1 = list_size_1(remaining);
   if (s1) {
     let first = list_first(remaining);
-    count = integer_to(first);
+    count = integer_to_try(first);
   }
   marker("1");
   js_dollar_a_generic({
