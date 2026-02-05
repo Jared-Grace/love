@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { each_next_reverse } from "../../../love/public/src/each_next_reverse.mjs";
 import { greater_than } from "../../../love/public/src/greater_than.mjs";
@@ -44,6 +45,9 @@ export async function ebible_verses(bible_folder, chapter_code) {
       let index = list_index_of_last(filtered, name);
       if (null_not_is(nn_next)) {
         let name_next = object_property_get(nn_next, "name");
+        log({
+          nn_next,
+        });
         let filtered3 = list_take(filtered, index);
         let index_next = list_index_of_last(filtered3, name_next);
         let r = list_index_of_all(filtered, name);
