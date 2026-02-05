@@ -1,5 +1,4 @@
 import { list_to_dictionary_key } from "../../../love/public/src/list_to_dictionary_key.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function list_to_dictionary_property(list, property) {
   function key_get(item) {
