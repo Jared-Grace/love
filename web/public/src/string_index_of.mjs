@@ -1,5 +1,4 @@
 import { string_index_of_try } from "../../../love/public/src/string_index_of_try.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { error_json } from "../../../love/public/src/error_json.mjs";
 export function string_index_of(s, item) {
   let index = string_index_of_try(s, item);
