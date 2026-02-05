@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { assert } from "../../../love/public/src/assert.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -15,7 +14,10 @@ export async function messenger_reply_playwright() {
   let p = folder_user_docs_path("fb.json");
   let data = await file_read_json(p);
   let pin = object_property_get(data, "pin");
-  const { chromium, firefox, webkit } = await import_install("playwright");
+  const v2 = await import_install("playwright");
+  let webkit = object_property_get(v2, "webkit");
+  let firefox = object_property_get(v2, "firefox");
+  let chromium = object_property_get(v2, "chromium");
   let browser = null;
   async function lambda2() {
     browser = await chromium.launch({
