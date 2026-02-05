@@ -1,5 +1,4 @@
 import { list_to_lookup } from "../../../love/public/src/list_to_lookup.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
 export function list_to_dictionary(list, lambda$item2v, lambda$item2k) {
