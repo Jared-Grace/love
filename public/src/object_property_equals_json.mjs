@@ -1,5 +1,4 @@
 import { json_equal } from "../../../love/public/src/json_equal.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function object_property_equals_json(
   item,
