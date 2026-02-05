@@ -3,7 +3,6 @@ import { repo_exists_assert } from "../../../love/public/src/repo_exists_assert.
 import { repo_acronym_to_name } from "../../../love/public/src/repo_acronym_to_name.mjs";
 import { user_repo_path } from "../../../love/public/src/user_repo_path.mjs";
 import { data_set } from "../../../love/public/src/data_set.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function user_repo_set(value) {
   let repo_name = await repo_acronym_to_name(value);
   await repo_exists_assert(repo_name);
