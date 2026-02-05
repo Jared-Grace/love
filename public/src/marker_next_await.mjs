@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { js_await } from "../../../love/public/src/js_await.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -13,7 +12,8 @@ export async function marker_next_await() {
   async function lambda2(la) {
     await function_transform_marker(f_name, lambda);
     async function lambda(a) {
-      let { next } = marker_next_get(a);
+      let v = marker_next_get(a);
+      let next = object_property_get(v, "next");
       js_node_type_is_assert(next, "ExpressionStatement");
       let expression = object_property_get(next, "expression");
       let awaited = js_await(expression);
