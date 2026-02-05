@@ -12,7 +12,7 @@ import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src
 import { list_map_find_property } from "../../../love/public/src/list_map_find_property.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { integer_to } from "../../../love/public/src/integer_to.mjs";
+import { integer_to_try } from "../../../love/public/src/integer_to_try.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { html_style_background_color_set_or_remove_list } from "../../../love/public/src/html_style_background_color_set_or_remove_list.mjs";
@@ -66,7 +66,7 @@ export function app_chapter_toggle_update(
     copy,
   };
   async function copy() {
-    list_sort_number_mapper(verse_numbers_chosen, integer_to);
+    list_sort_number_mapper(verse_numbers_chosen, integer_to_try);
     function lambda3(bv) {
       log({
         languages_verses,
