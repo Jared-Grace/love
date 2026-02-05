@@ -10,6 +10,6 @@ export async function ebible_verse_tokens(
   marker("1");
   let v = await ebible_verse(bible_folder, chapter_code, verse_number);
   let text = object_property_get(v, "text");
-  let tokens_matches = string_tokens(text, {});
-  return tokens_matches;
+  let s = string_split_space(text);
+  return s;
 }
