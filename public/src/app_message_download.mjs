@@ -5,7 +5,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { firebase_storage_download } from "../../../love/public/src/firebase_storage_download.mjs";
 import { app_message_firebase_path } from "../../../love/public/src/app_message_firebase_path.mjs";
 import { firebase_bucket } from "../../../love/public/src/firebase_bucket.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_message_download() {
   const bucket = await firebase_bucket();
   const [files] = await bucket.getFiles({
