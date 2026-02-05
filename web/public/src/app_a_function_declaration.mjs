@@ -11,7 +11,6 @@ import { app_a_functionize_choices_add } from "../../../love/public/src/app_a_fu
 import { app_a_paste } from "../../../love/public/src/app_a_paste.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { app_a_nodes_list } from "../../../love/public/src/app_a_nodes_list.mjs";
 import { app_a_parenthesis_wrap } from "../../../love/public/src/app_a_parenthesis_wrap.mjs";
