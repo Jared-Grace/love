@@ -6,10 +6,10 @@ import { marker_next_get } from "../../../love/public/src/marker_next_get.mjs";
 import { function_transform_marker } from "../../../love/public/src/function_transform_marker.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
-import { integer_to } from "../../../love/public/src/integer_to.mjs";
+import { integer_to_try } from "../../../love/public/src/integer_to_try.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 export async function marker_call_replace_generic(input, lambda$a) {
-  let arg_index = integer_to(input);
+  let arg_index = integer_to_try(input);
   let f_name = await function_current_get();
   async function lambda2(la) {
     await function_transform_marker(f_name, lambda);
