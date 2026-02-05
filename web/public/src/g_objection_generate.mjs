@@ -1,7 +1,6 @@
 import { newline_windows_code } from "../../../love/public/src/newline_windows_code.mjs";
 import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
 import { g_sermon_generate_book_generic } from "../../../love/public/src/g_sermon_generate_book_generic.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_objection_generate() {
   let bible_folder = "engbsb";
   let book_code = "JAS";

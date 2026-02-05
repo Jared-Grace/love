@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { abs } from "../../../love/public/src/abs.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function g_distance(coordinates, item) {

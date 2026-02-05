@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";

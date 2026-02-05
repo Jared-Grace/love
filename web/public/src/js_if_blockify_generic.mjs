@@ -1,5 +1,4 @@
 import { js_statement_block_new } from "../../../love/public/src/js_statement_block_new.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { js_visit_type_each_async } from "../../../love/public/src/js_visit_type_each_async.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
@@ -15,7 +14,7 @@ export async function js_if_blockify_generic(
   add_copy,
 ) {
   async function lambda(v) {
-    let { node } = v;
+    let node = object_property_get(v, "node");
     let body = object_property_get(node, property_name);
     let nti = js_node_type_not_is(body, "BlockStatement");
     if (nti) {

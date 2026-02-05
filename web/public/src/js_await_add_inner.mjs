@@ -6,7 +6,6 @@ import { js_await } from "../../../love/public/src/js_await.mjs";
 import { object_copy } from "../../../love/public/src/object_copy.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_function_last_asyncify } from "../../../love/public/src/js_function_last_asyncify.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";

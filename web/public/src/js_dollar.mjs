@@ -1,6 +1,5 @@
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
 import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { js_dollar_choices } from "../../../love/public/src/js_dollar_choices.mjs";
 import { list_get_end_3 } from "../../../love/public/src/list_get_end_3.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
@@ -18,8 +17,10 @@ export async function js_dollar(ast) {
   let afters = [];
   async function lambda(v) {
     async function lambda2(c) {
-      let { name: choice_name, fn } = c;
-      let { node, stack } = v;
+      let fn = object_property_get(c, "fn");
+      let choice_name = object_property_get(c, "name");
+      let stack = object_property_get(v, "stack");
+      let node = object_property_get(v, "node");
       let jin = js_identifier_not_is(node);
       if (jin) {
         ("during the transformations, an identifier could be replaced into another node");
@@ -31,7 +32,9 @@ export async function js_dollar(ast) {
       let name = object_property_get(node, "name");
       const separator = "$";
       let split = string_split(name, separator);
-      let { first, second } = list_first_second(split);
+      let v2 = list_first_second(split);
+      let second = object_property_get(v2, "second");
+      let first = object_property_get(v2, "first");
       let ne = string_empty_not_is(first);
       if (ne) {
         ("if inside this block, then begins with non-$ - we only process beginning with $");
