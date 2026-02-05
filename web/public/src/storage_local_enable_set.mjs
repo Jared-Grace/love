@@ -1,5 +1,4 @@
 import { equal } from "../../../love/public/src/equal.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { storage_local_remove_app } from "../../../love/public/src/storage_local_remove_app.mjs";
 import { storage_local_set_dictionary } from "../../../love/public/src/storage_local_set_dictionary.mjs";
 import { storage_local_enabled } from "../../../love/public/src/storage_local_enabled.mjs";
