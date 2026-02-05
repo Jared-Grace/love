@@ -12,7 +12,6 @@ import { js_parse_expression } from "../../../love/public/src/js_parse_expressio
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_property } from "../../../love/public/src/js_property.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function marker_screen_add(screen_name) {
   let result = await marker_screen_add_generic(lambda);
   return result;
