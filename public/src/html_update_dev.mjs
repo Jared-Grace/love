@@ -13,7 +13,6 @@ import { html_overwrite } from "../../../love/public/src/html_overwrite.mjs";
 import { html_code_script_module } from "../../../love/public/src/html_code_script_module.mjs";
 import { app_generic_name_main } from "../../../love/public/src/app_generic_name_main.mjs";
 import { html_name_to_path_dev } from "../../../love/public/src/html_name_to_path_dev.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function html_update_dev(name) {
   let v2 = await app_generic_name_main_get(name);
   name = object_property_get(v2, "a_name");
