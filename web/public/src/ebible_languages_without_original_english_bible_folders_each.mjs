@@ -7,7 +7,7 @@ export async function ebible_languages_without_original_english_bible_folders_ea
 ) {
   let languages = ebible_languages_without_original_english();
   const property = "bible_folder";
-  const including_and_onward = "guz";
+  const including_and_onward = "frasbl";
   let index_next = list_index_of_property(
     languages,
     property,
