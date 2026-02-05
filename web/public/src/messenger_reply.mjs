@@ -16,7 +16,6 @@ import { messenger_reply_messages_urls_transform } from "../../../love/public/sr
 import { messenger_reply_messages } from "../../../love/public/src/messenger_reply_messages.mjs";
 import { messenger_reply_puppeteer } from "../../../love/public/src/messenger_reply_puppeteer.mjs";
 import { command_line_read_empty } from "../../../love/public/src/command_line_read_empty.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { bind_property } from "../../../love/public/src/bind_property.mjs";
 import { keyboard_type_delay } from "../../../love/public/src/keyboard_type_delay.mjs";
 export async function messenger_reply() {
@@ -36,7 +35,9 @@ export async function messenger_reply() {
     let filtered = list_filter_ends_with_not_any(mapped, properties);
     let first = list_first(filtered);
     let messages = await messenger_reply_messages(page, first);
-    let { mine_last, unreplied } = await messenger_reply_unreplied(messages);
+    let v2 = await messenger_reply_unreplied(messages);
+    let unreplied = object_property_get(v2, "unreplied");
+    let mine_last = object_property_get(v2, "mine_last");
     let message = object_property_get(mine_last, "message");
     let mine_last_lines = string_split_newline(message);
     let mine_last_lines_last = list_last(mine_last_lines);
