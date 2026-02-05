@@ -7,6 +7,8 @@ import { command_line_read } from "../../../love/public/src/command_line_read.mj
 import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 import { data_path } from "../../../love/public/src/data_path.mjs";
 export async function function_run_prompt() {
+  if (false) {
+  }
   const property_name = "error_attention";
   let d_path = data_path();
   let ea = await data_property_get_generic(d_path, property_name);
