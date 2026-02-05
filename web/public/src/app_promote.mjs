@@ -2,7 +2,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { app_generic_name_main_get } from "../../../love/public/src/app_generic_name_main_get.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { firebase_promote_function } from "../../../love/public/src/firebase_promote_function.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_promote(name) {
   assert_arguments(arguments, 1);
   let v2 = await app_generic_name_main_get(name);
