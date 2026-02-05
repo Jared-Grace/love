@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { newline_windows_code } from "../../../love/public/src/newline_windows_code.mjs";
 import { g_generate_openai } from "../../../love/public/src/g_generate_openai.mjs";
 export async function g_sermon_generate_passage(passage) {

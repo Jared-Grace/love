@@ -1,6 +1,5 @@
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { function_name_unalias } from "../../../love/public/src/function_name_unalias.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { function_wrap } from "../../../love/public/src/function_wrap.mjs";

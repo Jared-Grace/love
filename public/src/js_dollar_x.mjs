@@ -3,7 +3,6 @@ import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_next_index } from "../../../love/public/src/list_next_index.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
 import { js_expand_generic } from "../../../love/public/src/js_expand_generic.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function js_dollar_x({
   remaining,
   node,

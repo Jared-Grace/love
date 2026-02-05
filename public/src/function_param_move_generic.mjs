@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { function_param_index } from "../../../love/public/src/function_param_index.mjs";
 import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
 export async function function_param_move_generic(fn, param_name, f_name) {

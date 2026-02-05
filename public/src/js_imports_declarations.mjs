@@ -1,5 +1,4 @@
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { js_imports_all } from "../../../love/public/src/js_imports_all.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";

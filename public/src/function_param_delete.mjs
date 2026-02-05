@@ -1,6 +1,5 @@
 import { function_param_index } from "../../../love/public/src/function_param_index.mjs";
 import { list_remove_at } from "../../../love/public/src/list_remove_at.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 export async function function_param_delete(f_name, param_name) {

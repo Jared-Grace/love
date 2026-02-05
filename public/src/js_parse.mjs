@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { js_parse_generic } from "../../../love/public/src/js_parse_generic.mjs";
 import * as acorn from "acorn";
 import { global_import_get } from "../../../love/public/src/global_import_get.mjs";

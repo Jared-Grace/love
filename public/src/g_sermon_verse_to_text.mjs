@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
 import { app_g_openai_split } from "../../../love/public/src/app_g_openai_split.mjs";

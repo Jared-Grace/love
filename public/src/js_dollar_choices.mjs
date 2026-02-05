@@ -9,7 +9,6 @@ import { js_dollar_ib } from "../../../love/public/src/js_dollar_ib.mjs";
 import { js_dollar_l } from "../../../love/public/src/js_dollar_l.mjs";
 import { js_dollar_ir } from "../../../love/public/src/js_dollar_ir.mjs";
 import { js_dollar_ien } from "../../../love/public/src/js_dollar_ien.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { js_dollar_f } from "../../../love/public/src/js_dollar_f.mjs";
 import { js_dollar_s } from "../../../love/public/src/js_dollar_s.mjs";
 import { js_dollar_g } from "../../../love/public/src/js_dollar_g.mjs";

@@ -16,7 +16,6 @@ import { js_if_blockify } from "../../../love/public/src/js_if_blockify.mjs";
 import { js_arrow_blockify } from "../../../love/public/src/js_arrow_blockify.mjs";
 import { js_await_add } from "../../../love/public/src/js_await_add.mjs";
 import { js_bang_to_not } from "../../../love/public/src/js_bang_to_not.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export function js_auto_transforms() {
   let transforms = [
     js_bang_to_not,
