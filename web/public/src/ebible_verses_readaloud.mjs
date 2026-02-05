@@ -16,7 +16,6 @@ import { ebible_chapter_code_to_name_code } from "../../../love/public/src/ebibl
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   if (browser_is()) {
     let verses = await ebible_verses_browser(bible_folder, chapter_code);
