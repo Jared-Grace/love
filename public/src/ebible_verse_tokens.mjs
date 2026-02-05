@@ -6,5 +6,6 @@ export async function ebible_verse_tokens(
   verse_number,
 ) {
   marker("1");
-  return await ebible_verse(bible_folder, chapter_code, verse_number);
+  let v = await ebible_verse(bible_folder, chapter_code, verse_number);
+  return v;
 }
