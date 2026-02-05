@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 export function list_map_find_property(list, list_other, property) {
