@@ -1,5 +1,4 @@
 import { add_1 } from "../../../love/public/src/add_1.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { marker_above_generic } from "../../../love/public/src/marker_above_generic.mjs";
 export async function marker_below(code) {
   let fn = add_1;
