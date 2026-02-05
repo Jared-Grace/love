@@ -1,6 +1,5 @@
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { object_adder } from "../../../love/public/src/object_adder.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export function object_values_map(object, lambda$value$key) {
   function lambda(oad) {
     function lambda2(value, key) {
