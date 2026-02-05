@@ -2,7 +2,6 @@ import { list_remove_at } from "../../../love/public/src/list_remove_at.mjs";
 import { marker_previous_index } from "../../../love/public/src/marker_previous_index.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { function_transform_marker_current } from "../../../love/public/src/function_transform_marker_current.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function marker_above_delete() {
   async function lambda(a) {
     let p = marker_previous_index(a);
