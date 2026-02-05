@@ -7,7 +7,6 @@ export async function html_scroll_center_container_generic(
   behavior,
   container,
 ) {
-  marker("1");
   let e = await html_scroll_center_generic_wait(component);
   let container_e = html_component_element_get(container);
   await html_request_animation_frame();

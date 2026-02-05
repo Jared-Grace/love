@@ -7,7 +7,6 @@ export function global_function_property_cache(
   key,
   value_get,
 ) {
-  marker("1");
   let c = global_function_property_initialize(fn, property_name, {
     json: null,
     result: null,

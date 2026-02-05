@@ -7,7 +7,6 @@ import { function_transform } from "../../../love/public/src/function_transform.
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 export async function marker_move(m_name_from, m_name_to) {
-  marker("1");
   let f_name = await function_current_get();
   await function_transform(f_name, lambda_marker);
   async function lambda_marker(ast) {

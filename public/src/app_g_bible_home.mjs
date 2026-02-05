@@ -25,9 +25,7 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { g_sermon_generate_download } from "../../../love/public/src/g_sermon_generate_download.mjs";
 import { app_bible_home_generic } from "../../../love/public/src/app_bible_home_generic.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_g_bible_home(context) {
-  marker("1");
   let value = null;
   let chapter_code = null;
   let r = null;

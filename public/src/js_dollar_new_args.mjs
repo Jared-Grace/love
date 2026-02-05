@@ -5,5 +5,4 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function js_dollar_new_args(code) {
   let combined = js_dollar_new_name(code);
   await function_transform(combined, js_dollar_new_args_inner);
-  marker("1");
 }

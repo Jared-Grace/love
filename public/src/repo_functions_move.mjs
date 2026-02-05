@@ -13,7 +13,6 @@ import { function_name_to_path_search } from "../../../love/public/src/function_
 import { repo_functions_path } from "../../../love/public/src/repo_functions_path.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function repo_functions_move(f_names, repo_name_to) {
-  marker("1");
   async function lambda(f_name) {
     let r_path = repo_functions_path(repo_name_to);
     let f_name_ext = function_name_to_base(f_name);
@@ -24,7 +23,6 @@ export async function repo_functions_move(f_names, repo_name_to) {
     await file_delete(f_path);
   }
   let waited = await list_map_unordered_async(f_names, lambda);
-  marker("1");
   let identifiers = await data_identifiers_get();
   function lambda2(f_name) {
     let list = object_property_get(identifiers, f_name);

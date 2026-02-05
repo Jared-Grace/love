@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { object_properties_delete_if_exists } from "../../../love/public/src/object_properties_delete_if_exists.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { data_generate } from "../../../love/public/src/data_generate.mjs";
@@ -6,7 +5,6 @@ import { data_path } from "../../../love/public/src/data_path.mjs";
 import { data_save } from "../../../love/public/src/data_save.mjs";
 import { data_all } from "../../../love/public/src/data_all.mjs";
 export async function data_files_update() {
-  marker("1");
   return;
   let d_path = data_path();
   var d = await data_all(d_path);

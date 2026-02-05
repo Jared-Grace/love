@@ -6,7 +6,6 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_sermon_passage_get(chapter_code, verse_number) {
-  marker("1");
   let books = await ebible_version_books("engbsb");
   let passages = await g_sermon_generate_chapter_passages_get(chapter_code);
   function lambda(v) {

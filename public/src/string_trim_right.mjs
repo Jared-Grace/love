@@ -4,7 +4,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 export function string_trim_right(lambda$s, s) {
   let trimmed = s;
-  marker("1");
   while (true) {
     let any = lambda$s(trimmed);
     if (not(any)) {

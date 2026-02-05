@@ -14,7 +14,6 @@ import { file_read } from "../../../love/public/src/file_read.mjs";
 import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function sandbox_4_a() {
-  marker("1");
   let file_path = folder_user_docs_path("nations_mentioned.carm.org.txt");
   let contents = await file_read(file_path);
   let split = string_split_newline(contents);

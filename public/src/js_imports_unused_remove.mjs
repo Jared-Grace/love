@@ -4,7 +4,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { js_imports_unused } from "../../../love/public/src/js_imports_unused.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function js_imports_unused_remove(ast) {
-  marker("1");
   let unuseds = js_imports_unused(ast);
   let body = object_property_get(ast, "body");
   function lambda(unused) {

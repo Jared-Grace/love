@@ -11,7 +11,6 @@ import { function_transform_marker_current } from "../../../love/public/src/func
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function marker_enter() {
   async function lambda(a) {
-    marker("1");
     let v2 = marker_next_index(a);
     let stack2 = object_property_get(v2, "stack2");
     let stack1 = object_property_get(v2, "stack1");

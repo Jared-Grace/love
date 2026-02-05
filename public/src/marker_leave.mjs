@@ -8,7 +8,6 @@ import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
 import { function_transform_marker_current } from "../../../love/public/src/function_transform_marker_current.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function marker_leave() {
-  marker("1");
   async function lambda(a) {
     let { stack } = a;
     let stack4 = list_get_end(stack, 4);

@@ -14,7 +14,6 @@ export async function js_if_blockify_generic(
   property_name,
   add_copy,
 ) {
-  marker("1");
   async function lambda(v) {
     let { node } = v;
     let body = object_property_get(node, property_name);

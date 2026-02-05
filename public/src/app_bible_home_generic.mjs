@@ -43,10 +43,8 @@ import { ebible_folder_english } from "../../../love/public/src/ebible_folder_en
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_bar_content_padded } from "../../../love/public/src/html_bar_content_padded.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { html_on_scroll } from "./html_on_scroll.mjs";
 export async function app_bible_home_generic(context, lambda$a) {
-  marker("1");
   let root = html_clear_context(context);
   html_clear(root);
   let bc = html_bar_content_padded(root);

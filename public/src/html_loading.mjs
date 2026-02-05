@@ -8,7 +8,6 @@ export async function html_loading(lambda) {
   let div = null;
   let b2 = browser_is();
   if (b2) {
-    marker("1");
     let body = html_document_body();
     div = html_div(body);
     let s = {

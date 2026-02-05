@@ -36,7 +36,6 @@ import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lam
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { app_a_overlay_keydown } from "../../../love/public/src/app_a_overlay_keydown.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export function app_a_identifier_generic(
   a,
   span,
@@ -45,7 +44,6 @@ export function app_a_identifier_generic(
   lines_multiple,
   replace,
 ) {
-  marker("1");
   async function on_click(o3) {
     let node = object_property_get(a, "node");
     let ast = object_property_get(a, "ast");

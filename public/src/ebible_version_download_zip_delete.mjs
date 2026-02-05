@@ -5,7 +5,6 @@ import { http_firebase_file_path } from "../../../love/public/src/http_firebase_
 import { ebible_version_download_url_html } from "../../../love/public/src/ebible_version_download_url_html.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_version_download_zip_delete(bible_folder) {
-  marker("1");
   let url = ebible_version_download_url_html(bible_folder);
   let f = http_firebase_file_path(url);
   await firebase_delete(f);

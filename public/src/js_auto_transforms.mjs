@@ -18,7 +18,6 @@ import { js_await_add } from "../../../love/public/src/js_await_add.mjs";
 import { js_bang_to_not } from "../../../love/public/src/js_bang_to_not.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function js_auto_transforms() {
-  marker("transforms");
   let transforms = [
     js_bang_to_not,
     js_await_add,

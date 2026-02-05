@@ -10,7 +10,6 @@ export async function function_multiple_rename_if_starts_ends_with(
 ) {
   assert_arguments(arguments, 3);
   await function_multiple_rename_generic(filter, name_change);
-  marker("1");
   function filter(f_names) {
     let filtered = list_filter_starts_ends_with(
       f_names,

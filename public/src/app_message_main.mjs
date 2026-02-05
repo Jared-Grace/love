@@ -34,11 +34,9 @@ import { app_karate_container } from "../../../karate_code/public/src/app_karate
 import { app_replace_font_size_refresh } from "../../../love/public/src/app_replace_font_size_refresh.mjs";
 import { app_karate_style_control_border } from "../../../love/public/src/app_karate_style_control_border.mjs";
 import { app_karate_style_control } from "../../../karate_code/public/src/app_karate_style_control.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 export async function app_message_main(context) {
-  marker("1");
   const messages_property = "messages";
   let u = await uuid();
   const user_id_property = "user_id";

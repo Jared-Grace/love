@@ -3,7 +3,6 @@ import { ebible_folder_english } from "../../../love/public/src/ebible_folder_en
 import { ebible_language_original_code } from "../../../love/public/src/ebible_language_original_code.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { ebible_version_books_upload_name } from "../../../love/public/src/ebible_version_books_upload_name.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { ebible_class_apocrypha } from "../../../love/public/src/ebible_class_apocrypha.mjs";
@@ -18,7 +17,6 @@ export async function ebible_version_books(bible_folder) {
     let r = await ebible_version_books(bible_folder2);
     return r;
   }
-  marker("1");
   let b = browser_is();
   if (b) {
     let file_name = ebible_version_books_upload_name();

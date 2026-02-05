@@ -5,7 +5,6 @@ import { firebase_promote_function } from "../../../love/public/src/firebase_pro
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_promote(name) {
   assert_arguments(arguments, 1);
-  marker("1");
   let v2 = await app_generic_name_main_get(name);
   let combined = object_property_get(v2, "f_name");
   let v = await firebase_promote_function(combined);
