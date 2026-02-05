@@ -21,7 +21,6 @@ import { string_empty_not_is } from "../../../love/public/src/string_empty_not_i
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
 import { ebible_chapter_text } from "../../../love/public/src/ebible_chapter_text.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
   if (browser_is()) {
