@@ -7,6 +7,7 @@ import { data_save } from "../../../love/public/src/data_save.mjs";
 import { data_all } from "../../../love/public/src/data_all.mjs";
 export async function data_files_update() {
   marker("1");
+  return;
   let d_path = data_path();
   var d = await data_all(d_path);
   let data = object_property_get(d, "data");
