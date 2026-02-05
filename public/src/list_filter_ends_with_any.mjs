@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
 import { string_ends_with } from "../../../love/public/src/string_ends_with.mjs";

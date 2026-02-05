@@ -16,7 +16,6 @@ import { js_node_atomize_name } from "../../../love/public/src/js_node_atomize_n
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function js_destructure_functionize(ast) {
   let variable_name = js_node_atomize_name();
   function lambda(v) {

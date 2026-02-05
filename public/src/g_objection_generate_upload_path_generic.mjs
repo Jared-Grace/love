@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { firebase_deploy_function_destination } from "../../../love/public/src/firebase_deploy_function_destination.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { file_name_json } from "../../../love/public/src/file_name_json.mjs";

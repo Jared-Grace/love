@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { file_parent_exists_ensure } from "../../../love/public/src/file_parent_exists_ensure.mjs";
 import { file_overwrite_buffer } from "../../../love/public/src/file_overwrite_buffer.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";

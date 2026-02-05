@@ -3,7 +3,6 @@ import { list_remove_multiple } from "../../../love/public/src/list_remove_multi
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { integer_to_try } from "../../../love/public/src/integer_to_try.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { js_dollar_a_generic } from "../../../love/public/src/js_dollar_a_generic.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";

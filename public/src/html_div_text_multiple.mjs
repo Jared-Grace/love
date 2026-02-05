@@ -1,5 +1,4 @@
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 export function html_div_text_multiple(parent, list) {
   function lambda2(item) {

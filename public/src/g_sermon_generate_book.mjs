@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { newline_windows_code } from "../../../love/public/src/newline_windows_code.mjs";
 import { g_sermon_generate_book_generic } from "../../../love/public/src/g_sermon_generate_book_generic.mjs";
 import { g_sermon_generate } from "../../../love/public/src/g_sermon_generate.mjs";

@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 export function list_any(list, lambda$item) {

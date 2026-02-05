@@ -1,6 +1,5 @@
 import { global_function_cache_generic } from "../../../love/public/src/global_function_cache_generic.mjs";
 import { global_function_property_initialize } from "../../../love/public/src/global_function_property_initialize.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export function global_function_property_cache(
   fn,
   property_name,
