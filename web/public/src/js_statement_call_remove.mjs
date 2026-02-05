@@ -5,7 +5,7 @@ import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-export function js_statement_call_remove(fn, ast) {
+export function js_statement_call_remove(ast, fn) {
   function lambda(v) {
     let node = object_property_get(v, "node");
     let stack = object_property_get(v, "stack");

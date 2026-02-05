@@ -4,5 +4,5 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function js_log_remove(ast) {
   marker("1");
   let fn = log;
-  js_statement_call_remove(fn, ast);
+  js_statement_call_remove(ast, fn);
 }
