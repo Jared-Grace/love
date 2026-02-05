@@ -1,5 +1,4 @@
 import { global_function_property_cache } from "../../../love/public/src/global_function_property_cache.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_split_first } from "../../../love/public/src/string_split_first.mjs";
