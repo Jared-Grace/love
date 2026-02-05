@@ -10,7 +10,7 @@ export async function function_rename_part_insert(
   index_string,
 ) {
   marker("1");
-  let index = integer_to_try(index_string);
+  let index = integer_to_try(index_string);$ien
   let parts = function_name_to_parts(f_name_before);
   list_insert(parts, index, part);
   let f_name_after = function_name_combine_multiple(parts);
