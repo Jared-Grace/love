@@ -1,5 +1,4 @@
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { js_format } from "../../../love/public/src/js_format.mjs";
