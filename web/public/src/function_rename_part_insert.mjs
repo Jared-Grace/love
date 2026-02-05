@@ -13,7 +13,6 @@ export async function function_rename_part_insert(
   let index = integer_to(index_string);
   let parts = function_name_to_parts(f_name_before);
   list_insert(parts, index, part);
-  let combined = function_name_combine_multiple(parts2);
-  let v = await function_rename(f_name_before, f_name_after);
-  return v;
+  let f_name_after = function_name_combine_multiple(parts);
+  await function_rename(f_name_before, f_name_after);
 }
