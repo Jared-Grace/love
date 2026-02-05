@@ -16,7 +16,6 @@ export function js_dollar_a({ stack1, stack2, ast, afters, remaining }) {
     let first = list_first(remaining);
     count = integer_to_try(first);
   }
-  marker("1");
   js_dollar_a_generic({
     stack1,
     stack2,

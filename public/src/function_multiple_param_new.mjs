@@ -6,7 +6,6 @@ export async function function_multiple_param_new(
   param_name,
   default_value,
 ) {
-  marker("1");
   let fn = async function lambda(param_name) {
     let v = await function_param_new(param_name, default_value);
     return v;

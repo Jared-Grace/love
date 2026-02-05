@@ -5,7 +5,6 @@ export function app_a_function_node_child_parent(
   node_replacement,
   parent_replacement,
 ) {
-  marker("1");
   const replacements = {
     node: node_replacement,
     parent: parent_replacement,

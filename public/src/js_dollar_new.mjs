@@ -12,7 +12,6 @@ import { js_dollar_choices } from "../../../love/public/src/js_dollar_choices.mj
 import { function_transform_marker_specified } from "../../../love/public/src/function_transform_marker_specified.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function js_dollar_new(code) {
-  marker("1");
   let combined = js_dollar_new_name(code);
   await function_new(combined);
   async function lambda2(ast) {

@@ -4,7 +4,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { list_swap_at } from "../../../love/public/src/list_swap_at.mjs";
 import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
 export async function function_param_swap_beginning(f_name) {
-  marker("1");
   let index_a = 0;
   let index_b = 1;
   await function_params_new_generic(

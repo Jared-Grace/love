@@ -1,7 +1,5 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { data_transform } from "../../../love/public/src/data_transform.mjs";
 export async function data_set(lambda$previous, property_name, d_path) {
-  marker("1");
   function lambda(previous) {
     let v2 = lambda$previous(previous);
     return v2;

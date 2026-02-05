@@ -3,7 +3,6 @@ import { app_g_main } from "../../../love/public/src/app_g_main.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { html_scroll_center_container } from "../../../love/public/src/html_scroll_center_container.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_click_npc } from "../../../love/public/src/app_g_click_npc.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
 import { html_on_transitionend } from "../../../love/public/src/html_on_transitionend.mjs";
@@ -35,8 +34,8 @@ export async function app_g_click(
   refresh,
 ) {
   let player = app_g_player_get();
-  let { npcs, coordinates } = map;
-  marker("1");
+  let coordinates = object_property_get(map, "coordinates");
+  let npcs = object_property_get(map, "npcs");
   const tile_e = e.target.closest("." + tile_class);
   let tile = html_component_wrap(tile_e);
   let json = html_data_get(tile, "coordinates");

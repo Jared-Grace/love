@@ -14,7 +14,6 @@ import { list_map_property } from "../../../love/public/src/list_map_property.mj
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { integer_to_try } from "../../../love/public/src/integer_to_try.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { html_style_background_color_set_or_remove_list } from "../../../love/public/src/html_style_background_color_set_or_remove_list.mjs";
 import { app_chapter_chosen_max } from "../../../love/public/src/app_chapter_chosen_max.mjs";
 import { list_toggle } from "../../../love/public/src/list_toggle.mjs";
@@ -29,7 +28,6 @@ export function app_chapter_toggle_update(
   languages_verses,
   component_highlighted,
 ) {
-  marker("1");
   async function choose() {
     log("message");
     toggle();

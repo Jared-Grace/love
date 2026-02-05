@@ -4,12 +4,10 @@ import { app_a_button_function_refresh } from "../../../love/public/src/app_a_bu
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { apps_names } from "../../../love/public/src/apps_names.mjs";
 import { app_a_list_chooser } from "../../../love/public/src/app_a_list_chooser.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 export async function app_a_apps(context) {
   app_a_button_function_refresh(context);
   let mapped = await apps_names();
-  marker("1");
   async function on_select(a_name) {
     let key = app_a_app_selected_key();
     storage_local_set_context(context, key, a_name);

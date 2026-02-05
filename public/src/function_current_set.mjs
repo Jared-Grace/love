@@ -9,7 +9,6 @@ import { marker_current_set } from "../../../love/public/src/marker_current_set.
 import { data_transform } from "../../../love/public/src/data_transform.mjs";
 import { assert_json } from "../../../love/public/src/assert_json.mjs";
 export async function function_current_set(f_name) {
-  marker("1");
   const v2 = await function_unalias_exists(f_name);
   let unaliased = object_property_get(v2, "unaliased");
   let exists = object_property_get(v2, "exists");

@@ -9,7 +9,6 @@ export async function function_rename_part_insert(
   part,
   index_string,
 ) {
-  marker("1");
   let index = integer_to(index_string);
   let parts = function_name_to_parts(f_name_before);
   list_insert(parts, index, part);

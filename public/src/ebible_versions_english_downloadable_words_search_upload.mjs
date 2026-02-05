@@ -4,9 +4,7 @@ import { object_properties } from "../../../love/public/src/object_properties.mj
 import { object_values_map } from "../../../love/public/src/object_values_map.mjs";
 import { app_bible_search_word_path } from "../../../love/public/src/app_bible_search_word_path.mjs";
 import { ebible_versions_english_downloadable_words_lookup_cache } from "../../../love/public/src/ebible_versions_english_downloadable_words_lookup_cache.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_downloadable_words_search_upload() {
-  marker("1");
   let result = await ebible_versions_english_downloadable_words_lookup_cache();
   let v2 = object_to_list(result);
   await firebase_upload_object_compressed_chunked(v2, get);

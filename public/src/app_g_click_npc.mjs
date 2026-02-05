@@ -7,7 +7,6 @@ import { not } from "../../../love/public/src/not.mjs";
 import { app_g_conversation } from "../../../love/public/src/app_g_conversation.mjs";
 import { app_g_container } from "../../../love/public/src/app_g_container.mjs";
 import { app_g_p_text } from "../../../love/public/src/app_g_p_text.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_button_back } from "../../../love/public/src/app_g_button_back.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
@@ -20,7 +19,6 @@ export async function app_g_click_npc(
   game_prefix,
   refresh,
 ) {
-  marker("1");
   let overlay = app_g_overlay(div_map);
   function overlay_close() {
     app_g_player_save(player);

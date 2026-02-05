@@ -8,7 +8,6 @@ export async function indexeddb_put_multiple_backend_transform(
   store,
   lookup,
 ) {
-  marker("1");
   const db = await db_get();
   let previouses = null;
   {

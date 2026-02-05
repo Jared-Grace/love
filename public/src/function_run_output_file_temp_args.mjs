@@ -4,7 +4,6 @@ import { function_run_output_file_temp_generic } from "../../../love/public/src/
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function function_run_output_file_temp_args(f_name, args_comma) {
   assert_arguments(arguments, 2);
-  marker("1");
   let args = string_split_comma(args_comma);
   await function_run_output_file_temp_generic(f_name, args);
 }

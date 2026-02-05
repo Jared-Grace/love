@@ -6,7 +6,6 @@ import { g_sermon_verse_to_text } from "../../../love/public/src/g_sermon_verse_
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_sermon_chapter_get(chapter_code) {
-  marker("1");
   let books = await ebible_version_books("engbsb");
   let chapter = await g_sermon_generate_chapter_get(chapter_code);
   let passages = object_property_get(chapter, "passages");

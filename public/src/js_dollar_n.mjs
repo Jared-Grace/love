@@ -19,7 +19,6 @@ export function js_dollar_n({
   ast,
   afters,
 }) {
-  marker("1");
   let n = list_next(stack2, stack1);
   let test = object_property_get(n, "test");
   function lambda2() {

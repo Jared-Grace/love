@@ -11,10 +11,8 @@ import { js_code_call_args_await_maybe_declaration_return_add } from "../../../l
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { invoke_cache_file } from "../../../love/public/src/invoke_cache_file.mjs";
 export async function function_cache(f_name) {
-  marker("1");
   let args_none = false;
   let v3 = await function_cache_name(f_name);
   let f_name_cache = object_property_get(v3, "f_name_cache");

@@ -18,6 +18,5 @@ export async function function_rename(f_name_before, f_name_after) {
   await function_rename_fn_names_check(f_name_before);
   await function_move(f_name_before, f_name_after);
   await function_rename_identifiers_alias(f_name_before, f_name_after);
-  marker("1");
   return;
 }

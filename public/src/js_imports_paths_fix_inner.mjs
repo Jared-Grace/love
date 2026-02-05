@@ -15,5 +15,4 @@ export function js_imports_paths_fix_inner(ast, dictionary) {
     object_property_set(declaration, "source", expression);
   }
   each(imports_declarations, lambda);
-  marker("1");
 }

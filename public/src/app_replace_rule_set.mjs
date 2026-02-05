@@ -139,5 +139,4 @@ export async function app_replace_rule_set(context) {
     each(symbols_buttons, lambda8);
   }
   refresh();
-  marker("1");
 }

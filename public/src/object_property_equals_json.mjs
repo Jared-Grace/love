@@ -6,7 +6,6 @@ export function object_property_equals_json(
   property_name,
   property_value,
 ) {
-  marker("1");
   let left = object_property_get(item, property_name);
   let v = json_equal(left, property_value);
   return v;

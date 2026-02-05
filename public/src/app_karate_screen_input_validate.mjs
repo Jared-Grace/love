@@ -1,5 +1,4 @@
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -29,7 +28,6 @@ export function app_karate_screen_input_validate(
   button_below,
   checks,
 ) {
-  marker("1");
   list_is_assert(inputs);
   function lambda2(input) {
     app_karate_style_control(input);

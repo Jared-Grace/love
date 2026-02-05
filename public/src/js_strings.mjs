@@ -8,7 +8,6 @@ import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mj
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_visit_types } from "./js_visit_types.mjs";
 export function js_strings(ast) {
-  marker("1");
   function lambda2(la) {
     function lambda(v) {
       let node = object_property_get(v, "node");

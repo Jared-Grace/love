@@ -28,7 +28,6 @@ export async function ebible_verses(bible_folder, chapter_code) {
     let verses = await ebible_verses_browser(bible_folder, chapter_code);
     return verses;
   }
-  marker("1");
   let v2 = await ebible_chapter_text(bible_folder, chapter_code);
   let property = "text";
   let text = object_property_get(v2, property);

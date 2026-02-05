@@ -13,9 +13,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { each } from "../../../love/public/src/each.mjs";
 import { app_supper_verses_get } from "../../../love/public/src/app_supper_verses_get.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_supper_main(context) {
-  marker("1");
   firebase_name_jg();
   let root = html_mobile_default(context);
   html_bar_content_padding(root);

@@ -39,14 +39,12 @@ import { g_folder_tiles } from "../../../love/public/src/g_folder_tiles.mjs";
 import { g_folder_img } from "../../../love/public/src/g_folder_img.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_g_main(context) {
   let root = object_property_get(context, "root");
   firebase_name_jg();
   let books = await ebible_version_books("engbsb");
   global_function_property_set(app_g_main, "books", books);
   global_function_property_set(app_g_main, "chapter_code", "JAS01");
-  marker("1");
   html_meta_viewport();
   html_font_sans_serif_set_html();
   html_remix_icon();

@@ -9,7 +9,6 @@ import { app_a_files_paths } from "../../../love/public/src/app_a_files_paths.mj
 import { string_slash_forward } from "../../../love/public/src/string_slash_forward.mjs";
 import { path_normalize } from "../../../love/public/src/path_normalize.mjs";
 export async function folder_read_browser(path_folder) {
-  marker("1");
   let files_paths = await app_a_files_paths();
   let r = global_function_property_cache(
     folder_read_browser,

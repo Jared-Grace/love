@@ -19,7 +19,6 @@ import { app_reply_buttons_refresh } from "../../../love/public/src/app_reply_bu
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { html_disable } from "../../../love/public/src/html_disable.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { app_reply_love } from "../../../love/public/src/app_reply_love.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -124,7 +123,6 @@ export async function app_reply_main_old(context) {
   let component2 = html_button(root, "Copy", preview_refresh);
   let component_languages = html_span(root);
   languages_reset();
-  marker("1");
   function languages_reset() {
     html_clear(component_languages);
     function lambda5(language) {

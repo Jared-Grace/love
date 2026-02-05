@@ -17,7 +17,6 @@ import { sandbox } from "../../../love/public/src/sandbox.mjs";
 import { storage_local_mock_enable } from "../../../love/public/src/storage_local_mock_enable.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function storage_local_enabling_test() {
-  marker("1");
   storage_local_mock_enable();
   let app_fn = sandbox;
   let context = {

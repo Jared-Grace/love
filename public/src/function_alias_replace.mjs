@@ -1,5 +1,5 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { string_is_assert_multiple } from "../../../love/public/src/string_is_assert_multiple.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { function_alias_generic } from "../../../love/public/src/function_alias_generic.mjs";
 import { object_property_delete } from "../../../love/public/src/object_property_delete.mjs";
@@ -8,9 +8,9 @@ import { object_property_set } from "../../../love/public/src/object_property_se
 export async function function_alias_replace(alias_old, f_name) {
   const items = [alias_old, f_name];
   string_is_assert_multiple(items);
-  marker("1");
   function lambda(a) {
-    let { exists, aliases } = a;
+    let aliases = object_property_get(a, "aliases");
+    let exists = object_property_get(a, "exists");
     if (not(exists)) {
       error("alias no exist");
     }
