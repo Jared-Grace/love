@@ -28,7 +28,6 @@ import { reply_choice_optional } from "../../../love/public/src/reply_choice_opt
 import { reply_cities } from "../../../love/public/src/reply_cities.mjs";
 import { reply_once_or_more } from "../../../love/public/src/reply_once_or_more.mjs";
 import { reply_last } from "../../../love/public/src/reply_last.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { reply_sequence } from "../../../love/public/src/reply_sequence.mjs";
 import { reply_choice } from "../../../love/public/src/reply_choice.mjs";
 export function app_message_reply_choices() {
@@ -67,8 +66,11 @@ export function app_message_reply_choices() {
   let fn20 = reply_sequence(["can", cannot_middle, "t"]);
   function lambda(filtered, u) {
     function lambda2(possibility) {
-      let { data, tokens } = possibility;
-      let { before, after } = object_property_get(data, u);
+      let tokens = object_property_get(possibility, "tokens");
+      let data = object_property_get(possibility, "data");
+      let v = object_property_get(data, u);
+      let after = object_property_get(v, "after");
+      let before = object_property_get(v, "before");
       const sliced = list_slice(tokens, before, after);
       let quote = list_join_empty(sliced);
       reply_on_match_output_add_multiple(possibility, [
