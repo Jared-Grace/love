@@ -7,7 +7,6 @@ import { list_map_path_join } from "../../../love/public/src/list_map_path_join.
 import { repo_path } from "../../../love/public/src/repo_path.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { repos_names } from "../../../love/public/src/repos_names.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function repos_gitignore_overwrite() {
   let repos = await repos_names();
   let f_name = git_ignore_name();
