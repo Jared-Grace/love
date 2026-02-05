@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { list_slice_include } from "../../../love/public/src/list_slice_include.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
