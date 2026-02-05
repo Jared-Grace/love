@@ -14,7 +14,6 @@ import { catch_log_async } from "../../../love/public/src/catch_log_async.mjs";
 import { git_push_text } from "../../../love/public/src/git_push_text.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function git_push_folder(folder) {
-  marker("1");
   const command_git = git_push_text();
   await catch_log_async(lambda);
   async function lambda() {

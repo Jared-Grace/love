@@ -7,7 +7,6 @@ export function each_previous_generic(
   list,
   lambda$item$other,
 ) {
-  marker("1");
   function lambda_each_previous_generic(item, index) {
     let other = null;
     if (index_valid_is(index)) {

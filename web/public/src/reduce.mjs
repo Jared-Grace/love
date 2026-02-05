@@ -6,6 +6,5 @@ export function reduce(start, list, lambda$before$current) {
     reduced = lambda$before$current(reduced, current);
   }
   each(list, lambda);
-  marker("1");
   return reduced;
 }

@@ -9,7 +9,6 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 export async function functions_combine(f_names_comma) {
-  marker("1");
   let list = list_to(arguments);
   list_size_1_assert(list);
   let { f_names, combined } = await functions_combine_name(f_names_comma);

@@ -8,7 +8,6 @@ export async function openai_chat_completions(
   input_file_path,
   output_file_path,
 ) {
-  marker("1");
   let v = py_script_run_cmd("openai_chat_completions");
   let k = openai_key_folder();
   let concated = [v, k + "openai.txt", input_file_path, output_file_path];

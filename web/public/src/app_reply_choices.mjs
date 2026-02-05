@@ -54,7 +54,6 @@ import { prayer_start } from "../../../love/public/src/prayer_start.mjs";
 import { prayer_end } from "../../../love/public/src/prayer_end.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
 export function app_reply_choices() {
-  marker("1");
   let education = app_reply_pray(
     "Education",
     "provide education to those in need 🏫",

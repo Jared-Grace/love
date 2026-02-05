@@ -4,7 +4,6 @@ import { list_find_property_exists } from "../../../love/public/src/list_find_pr
 import { indexeddb_get_all } from "../../../love/public/src/indexeddb_get_all.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function indexeddb_exists(db_get, store, key) {
-  marker("1");
   const property = "key";
   let all = await indexeddb_get_all(db_get, store);
   list_property_exists_not_error(all, property);

@@ -7,7 +7,6 @@ export function catch_call(reject, lambda) {
     } catch (e) {
       reject(e);
     }
-    marker("1");
     return result;
   };
   return i;

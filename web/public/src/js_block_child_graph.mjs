@@ -7,7 +7,6 @@ import { each } from "../../../love/public/src/each.mjs";
 import { js_visitors } from "../../../love/public/src/js_visitors.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function js_block_child_graph(ast) {
-  marker("1");
   function lambda2(la) {
     function lambda(v) {
       let { node: right, stack } = v;

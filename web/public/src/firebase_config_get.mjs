@@ -1,6 +1,4 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 export function firebase_config_get() {
-  marker("1");
   const firebase_config = {
     apiKey: "AIzaSyABi8aveEhWeD6GyRXj9FUqu_aDWxhuBGQ",
     authDomain: "jared-grace.firebaseapp.com",

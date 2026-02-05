@@ -2,7 +2,6 @@ import { app_g_button_conversation_end } from "../../../love/public/src/app_g_bu
 import { app_g_gospel } from "../../../love/public/src/app_g_gospel.mjs";
 import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
 import { app_g_npc_says } from "../../../love/public/src/app_g_npc_says.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_button_green } from "../../../love/public/src/app_g_button_green.mjs";
 import { g_random_dot_bang } from "../../../love/public/src/g_random_dot_bang.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -22,7 +21,6 @@ export function app_g_conversation(
   div_map,
   refresh,
 ) {
-  marker("1");
   object_property_set(player, "conversed", true);
   object_property_set(prayer, "conversation", false);
   let npc = list_single(npcs_matched);

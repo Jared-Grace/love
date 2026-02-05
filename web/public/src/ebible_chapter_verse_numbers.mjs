@@ -11,7 +11,6 @@ import { html_parse_read } from "../../../love/public/src/html_parse_read.mjs";
 import { ebible_version_download_path_combine } from "../../../love/public/src/ebible_version_download_path_combine.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_chapter_verse_numbers(bible_folder, chapter_code) {
-  marker("1");
   let chapter_path = ebible_version_download_path_combine(
     bible_folder,
     chapter_code,

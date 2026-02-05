@@ -10,7 +10,6 @@ import { app_a_file_system_store } from "../../../love/public/src/app_a_file_sys
 import { indexeddb_get } from "../../../love/public/src/indexeddb_get.mjs";
 import { app_a_file_system_initialize } from "../../../love/public/src/app_a_file_system_initialize.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function file_read(file_path) {
   let exists = global_function_property_exists(file_read_cached, file_path);
   if (exists) {
@@ -32,7 +31,6 @@ export async function file_read(file_path) {
     let last = list_last(versions);
     return last;
   }
-  marker("1");
   let fs = await import("fs");
   let contents = await fs.promises.readFile(file_path, "utf-8");
   return contents;

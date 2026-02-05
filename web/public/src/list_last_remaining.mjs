@@ -14,6 +14,5 @@ export function list_last_remaining(list) {
     property_name_first,
     property_name,
   );
-  marker("1");
   return result;
 }

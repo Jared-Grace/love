@@ -10,7 +10,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { function_new_js_name } from "../../../love/public/src/function_new_js_name.mjs";
 export async function js_auto_transform_new_inner(f_name_unprefixed) {
   let combined = function_new_js_name(f_name_unprefixed);
-  marker("1");
   async function lambda(a) {
     let elements = marker_next_declare_single_init_elements(a);
     let expression = js_parse_expression(combined);

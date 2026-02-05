@@ -2,7 +2,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { newline_windows_code } from "../../../love/public/src/newline_windows_code.mjs";
 import { g_generate_openai } from "../../../love/public/src/g_generate_openai.mjs";
 export async function g_sermon_generate_passage(passage) {
-  marker("1");
   const prompt =
     `You are a Christian preacher. You will be given a passage and its context. Rewrite the passage as follows:
 

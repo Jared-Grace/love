@@ -9,7 +9,6 @@ export async function function_multiple_rename_if_starts_with(
 ) {
   assert_arguments(arguments, 2);
   await function_multiple_rename_generic(filter, name_change);
-  marker("1");
   function filter(f_names) {
     let filtered2 = list_filter_starts_with(f_names, f_name_prefix_before);
     return filtered2;

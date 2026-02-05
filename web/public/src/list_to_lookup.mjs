@@ -6,7 +6,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
 import { list_to_dictionary } from "./list_to_dictionary.mjs";
 export function list_to_lookup(list, property_key) {
-  marker("1");
   "if each key has one value, then " +
     list_to_dictionary.name +
     " but if each key corresponds to a list of values, then " +

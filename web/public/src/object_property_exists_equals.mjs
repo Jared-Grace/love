@@ -6,7 +6,6 @@ export function object_property_exists_equals(
   property_name,
   property_value,
 ) {
-  marker("1");
   let v =
     object_property_exists(property_name) &&
     object_property_equals(o, property_name, property_value);

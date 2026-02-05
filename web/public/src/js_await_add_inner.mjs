@@ -22,7 +22,6 @@ export async function js_await_add_inner(functions, ast, visited) {
       let async_is = object_property_get(f, "async");
       let n = not(async_is);
       if (n) {
-        marker("1");
         return;
       }
       let stack = object_property_get(v, "stack");

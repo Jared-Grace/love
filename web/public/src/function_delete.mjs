@@ -5,7 +5,6 @@ import { data_files_update } from "../../../love/public/src/data_files_update.mj
 import { marker } from "../../../love/public/src/marker.mjs";
 import { file_delete } from "../../../love/public/src/file_delete.mjs";
 export async function function_delete(f_name) {
-  marker("1");
   const v = await function_unalias_exists(f_name);
   let exists = object_property_get(v, "exists");
   let f_path = object_property_get(v, "f_path");

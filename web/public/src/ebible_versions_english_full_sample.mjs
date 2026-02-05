@@ -2,9 +2,7 @@ import { ebible_versions_english_choices } from "../../../love/public/src/ebible
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { object_values_map_async } from "../../../love/public/src/object_values_map_async.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_versions_english_full_sample() {
-  marker("1");
   let result3 = await ebible_versions_english_choices();
   async function lambda(value, key) {
     log(key);

@@ -9,9 +9,7 @@ import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { string_split_slash_forward } from "../../../love/public/src/string_split_slash_forward.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function functions_firebase_to_root() {
-  marker("1");
   let f_names = await functions_names();
   async function lambda(f_name) {
     let v = await function_name_to_path_search(f_name);

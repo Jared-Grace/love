@@ -6,7 +6,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { marker_index } from "../../../love/public/src/marker_index.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function marker_above_generic(lambda$index, code) {
-  marker("1");
   async function lambda(a) {
     let i = marker_index(a);
     let index = object_property_get(i, "index");

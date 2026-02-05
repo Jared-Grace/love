@@ -10,7 +10,6 @@ import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 export function reply_test() {
   let last = reply_last();
-  marker("1");
   const choice_a_k = reply_choice(["a", "k"]);
   const item = "a";
   const optional_a = reply_optional(item);

@@ -3,9 +3,7 @@ import { ebible_firebase_upload_path } from "../../../love/public/src/ebible_fir
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { firebase_upload_object_compressed_chunked } from "../../../love/public/src/firebase_upload_object_compressed_chunked.mjs";
 import { ebible_version_chapters_cache } from "../../../love/public/src/ebible_version_chapters_cache.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_chapters_upload(bible_folder) {
-  marker("1");
   let chapters = await ebible_version_chapters_cache(bible_folder);
   function lambda(value) {
     object_merge(value, {

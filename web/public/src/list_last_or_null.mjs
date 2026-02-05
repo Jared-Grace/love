@@ -9,5 +9,4 @@ export function list_last_or_null(list) {
   }
   let item = list_last(list);
   return item;
-  marker("1");
 }
