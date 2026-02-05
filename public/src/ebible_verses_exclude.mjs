@@ -42,7 +42,6 @@ export function ebible_verses_exclude() {
     "popup",
     "qa",
     "qac",
-    "qd",
     "r",
     "rq",
     "s",
