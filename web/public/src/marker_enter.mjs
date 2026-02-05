@@ -8,7 +8,6 @@ import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { js_node_type } from "../../../love/public/src/js_node_type.mjs";
 import { function_transform_marker_current } from "../../../love/public/src/function_transform_marker_current.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function marker_enter() {
   async function lambda(a) {
     let v2 = marker_next_index(a);
