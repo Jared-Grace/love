@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { string_tokens_recursive } from "../../../love/public/src/string_tokens_recursive.mjs";
 export function string_tokens(input, dictionary) {
   let index_left = 0;
