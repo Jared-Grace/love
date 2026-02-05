@@ -22,6 +22,8 @@ export async function function_current_set(f_name) {
   }
   let d_path = user_repo_path();
   await data_transform("function_current", null, lambda, d_path);
+  if (false) {
+  }
   await marker_top();
   let name = marker_first();
   await marker_current_set(name);
