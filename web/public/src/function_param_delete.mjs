@@ -4,7 +4,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 export async function function_param_delete(f_name, param_name) {
-  marker("1");
   assert_arguments(arguments, 2);
   let index = null;
   await function_params_new_generic(

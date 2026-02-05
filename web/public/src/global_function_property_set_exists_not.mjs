@@ -8,7 +8,6 @@ export function global_function_property_set_exists_not(
   property_name,
   value,
 ) {
-  marker("1");
   let exists = global_function_property_exists(fn, property_name);
   let b = not(exists);
   assert(b);

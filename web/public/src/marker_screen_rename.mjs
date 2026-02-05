@@ -19,7 +19,6 @@ export async function marker_screen_rename(
   let afters = [];
   let result = await marker_screen_add_generic(lambda);
   await each_async(afters, invoke);
-  marker("1");
   return result;
   async function lambda(properties, prefixed) {
     function lambda2(item) {

@@ -14,7 +14,6 @@ import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { app_reply_verses_add } from "../../../love/public/src/app_reply_verses_add.mjs";
@@ -39,7 +38,6 @@ import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
 import { catch_ignore_async } from "./catch_ignore_async.mjs";
 import { list_reverse } from "./list_reverse.mjs";
 export async function app_search_results(context, div_results) {
-  marker("1");
   let languages_chosen = object_property_get(context, "languages_chosen");
   let en = ebible_folder_english();
   let english_choices = [en];

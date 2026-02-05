@@ -6,7 +6,6 @@ import { http_firebase } from "../../../love/public/src/http_firebase.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
 export async function http_local(url) {
-  marker("1");
   let key_get = function lambda() {
     let joined = http_local_file_name(url);
     return joined;

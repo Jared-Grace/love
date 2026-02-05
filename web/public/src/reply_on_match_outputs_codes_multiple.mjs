@@ -4,7 +4,6 @@ import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 export function reply_on_match_outputs_codes_multiple(fn_a, outputs, codes) {
-  marker("1");
   assert_arguments(arguments, 3);
   let on_match_outputs = reply_on_match_output_multiple_lambda(outputs);
   const property_name = "codes";

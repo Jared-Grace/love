@@ -10,7 +10,6 @@ export function js_assign_object_property_get(
   block_body_item,
   variable_name,
 ) {
-  marker("1");
   let parsed = js_call_object_property_get(property_name, object_name);
   let assign = js_declare(variable_name, parsed);
   let index = list_index_of_next_outside(block_body, block_body_item);

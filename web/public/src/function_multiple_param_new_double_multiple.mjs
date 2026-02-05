@@ -12,5 +12,4 @@ export async function function_multiple_param_new_double_multiple(
     return v;
   }
   await each_async(split, lambda);
-  marker("1");
 }

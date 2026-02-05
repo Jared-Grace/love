@@ -13,7 +13,6 @@ export function js_dollar_e({
   ast,
   afters,
 }) {
-  marker("1");
   let previous = null;
   let alternate = list_previous(stack2, stack1);
   while (alternate !== null) {

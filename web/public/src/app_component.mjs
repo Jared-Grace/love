@@ -2,7 +2,6 @@ import { html_bar_content_padded } from "../../../love/public/src/html_bar_conte
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { js_code_global_init } from "../../../karate_code/public/src/js_code_global_init.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { app_context_initialize_root } from "../../../love/public/src/app_context_initialize_root.mjs";
@@ -11,7 +10,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { app_generic_name_main } from "../../../love/public/src/app_generic_name_main.mjs";
 import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
 export async function app_component(a_name, on_click, button_text) {
-  marker("1");
   let combined = app_generic_name_main(a_name);
   let v = await function_dependencies_code_unaliased(combined);
   let d = object_property_get(v, "d");

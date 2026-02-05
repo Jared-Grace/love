@@ -1,7 +1,6 @@
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { app_a_function_node_child_parent } from "../../../love/public/src/app_a_function_node_child_parent.mjs";
 import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -15,7 +14,6 @@ import { equal } from "../../../love/public/src/equal.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 export function app_a_body_inner(parent, body, a, indent) {
-  marker("1");
   let parent_new = parent;
   let imports = false;
   function lambda(b) {

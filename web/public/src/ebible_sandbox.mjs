@@ -5,12 +5,10 @@ import { list_adder_multiple_unique_async } from "../../../love/public/src/list_
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { ebible_chapters_each_verses } from "../../../love/public/src/ebible_chapters_each_verses.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
 export async function ebible_sandbox() {
   ".”,:?;d—k)m’!frluetysgDnhpazb";
   let bible_folder = "engbsb";
-  marker("1");
   await ebible_version_download(bible_folder);
   ("loop through to ensure parse correct before begin upload");
   async function lambda2(la) {
