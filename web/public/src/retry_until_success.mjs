@@ -1,5 +1,4 @@
 import { equal } from "../../../love/public/src/equal.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function retry_until_success(lambda) {
   let i = 0;
   let r = null;
