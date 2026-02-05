@@ -1,6 +1,5 @@
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { user_repo_path } from "../../../love/public/src/user_repo_path.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { marker_top } from "../../../love/public/src/marker_top.mjs";
 import { function_parse_declaration_js_unparse } from "../../../love/public/src/function_parse_declaration_js_unparse.mjs";
 import { function_unalias_exists } from "../../../love/public/src/function_unalias_exists.mjs";
