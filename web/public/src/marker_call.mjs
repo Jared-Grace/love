@@ -1,6 +1,5 @@
 import { js_call_new_insert } from "../../../love/public/src/js_call_new_insert.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { function_transform_marker } from "../../../love/public/src/function_transform_marker.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
