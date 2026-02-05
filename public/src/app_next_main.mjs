@@ -16,9 +16,7 @@ import { list_map_unordered_async } from "../../../love/public/src/list_map_unor
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_next_main(context) {
-  marker("1");
   firebase_name_jg();
   let hash = html_hash_object_get();
   let chapter_code = object_property_get(hash, "c");

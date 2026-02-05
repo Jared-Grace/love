@@ -4,7 +4,6 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 import { function_rename_replace } from "../../../love/public/src/function_rename_replace.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function function_replace_rename_multiple(from, to) {
-  marker("1");
   let f_names = await functions_names();
   async function lambda(f_name) {
     let n = string_includes_not(f_name, from);

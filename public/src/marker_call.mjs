@@ -11,7 +11,6 @@ export async function marker_call(f_name_call) {
   async function lambda2(la) {
     await function_transform_marker(f_name_current, lambda);
     async function lambda(a) {
-      marker("1");
       let v = marker_next_index(a);
       let ast = object_property_get(v, "ast");
       let index = object_property_get(v, "index");

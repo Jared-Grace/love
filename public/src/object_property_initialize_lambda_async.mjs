@@ -8,7 +8,6 @@ export async function object_property_initialize_lambda_async(
   property_name,
   lambda,
 ) {
-  marker("1");
   const exists = object_property_exists(object, property_name);
   if (not(exists)) {
     let value_set = lambda();

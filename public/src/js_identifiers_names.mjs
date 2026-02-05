@@ -3,7 +3,6 @@ import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 export function js_identifiers_names(ast) {
-  marker("1");
   function lambda2(la) {
     function lambda(v) {
       let node = object_property_get(v, "node");

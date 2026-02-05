@@ -20,7 +20,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { bind_property } from "../../../love/public/src/bind_property.mjs";
 import { keyboard_type_delay } from "../../../love/public/src/keyboard_type_delay.mjs";
 export async function messenger_reply() {
-  marker("1");
   async function lambda2(page) {
     let messages_urls = null;
     await messenger_reply_messages_urls_transform(transform_inner);

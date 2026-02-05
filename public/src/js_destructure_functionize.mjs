@@ -18,7 +18,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function js_destructure_functionize(ast) {
-  marker("1");
   let variable_name = js_node_atomize_name();
   function lambda(v) {
     let node2 = object_property_get(v, "node");

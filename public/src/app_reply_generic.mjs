@@ -24,7 +24,6 @@ import { string_letters_only } from "../../../love/public/src/string_letters_onl
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { html_disable } from "../../../love/public/src/html_disable.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
@@ -146,7 +145,6 @@ export async function app_reply_generic(verse_get) {
   let component2 = html_button(root, "Copy", preview_refresh);
   let component_languages = html_span(root);
   languages_reset();
-  marker("1");
   function languages_reset() {
     html_clear(component_languages);
     function lambda5(language) {

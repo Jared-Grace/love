@@ -4,7 +4,6 @@ import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_
 import { app_g_openai_split } from "../../../love/public/src/app_g_openai_split.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function g_sermon_verse_to_text(v, chapter_code, books) {
-  marker("1");
   let verse_numbers = object_property_get(v, "verse_numbers");
   let reference = ebible_parts_chapter_code_to_reference(
     chapter_code,

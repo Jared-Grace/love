@@ -1,8 +1,6 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 export async function catch_only_run_async(lambda, message_fragment, on_error) {
-  marker("1");
   try {
     await lambda();
   } catch (e) {

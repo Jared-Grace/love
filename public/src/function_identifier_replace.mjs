@@ -16,7 +16,6 @@ export async function function_identifier_replace(
     let identifiers_named = js_identifiers_named(ast, identifier_name);
     let b = list_empty_is(identifiers_named);
     assert_not(b);
-    marker("1");
     let from = js_parse_expression(replacement);
     function lambda(i) {
       let v = object_replace(i, from);

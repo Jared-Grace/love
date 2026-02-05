@@ -6,7 +6,6 @@ export function html_style_background_color_set_or_remove_list(
   list,
   item,
 ) {
-  marker("1");
   let chosen = list_includes(list, item);
   html_style_background_color_set_or_remove(chosen, component, "lightgreen");
 }

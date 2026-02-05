@@ -11,7 +11,6 @@ export function js_dollar_ir({
   ast,
   afters,
 }) {
-  marker("1");
   js_dollar_i({
     stack1,
   });

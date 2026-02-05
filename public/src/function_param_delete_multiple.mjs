@@ -12,7 +12,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 export async function function_param_delete_multiple(param_names_comma) {
-  marker("1");
   assert_arguments(arguments, 1);
   let param_names = string_split_comma(param_names_comma);
   let indices = null;

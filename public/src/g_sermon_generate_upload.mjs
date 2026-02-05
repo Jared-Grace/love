@@ -9,7 +9,6 @@ export async function g_sermon_generate_upload() {
     "this maybe should not be ran because it would overwrite edits from " +
       app_g_bible,
   );
-  marker("1");
   let path_get = g_sermon_generate_upload_path;
   let fn = g_sermon_generate;
   await g_generate_upload_generic(path_get, fn);

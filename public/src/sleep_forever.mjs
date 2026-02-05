@@ -1,7 +1,6 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 export async function sleep_forever() {
-  marker("1");
   await new Promise(function lambda5() {
     log_keep(sleep_forever.name);
   });

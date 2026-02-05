@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { list_find_starts_with } from "../../../love/public/src/list_find_starts_with.mjs";
 import { apps_names } from "../../../love/public/src/apps_names.mjs";
@@ -7,7 +6,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { function_unalias_exists } from "../../../love/public/src/function_unalias_exists.mjs";
 import { app_generic_name_main } from "../../../love/public/src/app_generic_name_main.mjs";
 export async function app_generic_name_main_get(search) {
-  marker("1");
   let f_name = app_generic_name_main(search);
   let v2 = await function_unalias_exists(f_name);
   let exists = object_property_get(v2, "exists");

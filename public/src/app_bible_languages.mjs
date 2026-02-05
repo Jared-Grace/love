@@ -5,9 +5,7 @@ import { storage_local_set_context } from "../../../love/public/src/storage_loca
 import { storage_local_exists_not_context } from "../../../love/public/src/storage_local_exists_not_context.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export function app_bible_languages(context) {
-  marker("1");
   let root = html_clear_context(context);
   let languages = ebible_languages();
   let key = "languages_chosen";

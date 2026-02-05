@@ -6,7 +6,6 @@ import { import_install } from "../../../love/public/src/import_install.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
 import fs from "fs";
 export async function image_generate(text, path_output) {
-  marker("1");
   let v2 = await import_install("canvas");
   let registerFont = object_property_get(v2, "registerFont");
   let createCanvas = object_property_get(v2, "createCanvas");

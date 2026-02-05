@@ -7,7 +7,6 @@ export function list_filter_property_exclude_if_exists(
   property_name,
   value,
 ) {
-  marker("1");
   function lambda(item) {
     let exists = object_property_exists(item, property_name);
     if (exists) {

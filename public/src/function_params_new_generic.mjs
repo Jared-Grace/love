@@ -13,7 +13,6 @@ export async function function_params_new_generic(
   f_name,
 ) {
   await function_transform(f_name, function_transform_current_lambda);
-  marker("1");
   let result = await data_identifiers_search(f_name);
   let properties = object_properties(result);
   async function lambda4(f_name_caller) {

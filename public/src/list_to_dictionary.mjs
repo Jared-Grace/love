@@ -7,7 +7,6 @@ export function list_to_dictionary(list, lambda$item2v, lambda$item2k) {
     list_to_dictionary.name +
     " but if each key corresponds to a list of values, then " +
     list_to_lookup.name;
-  marker("1");
   let dictionary = {};
   function lambda(item) {
     let key = lambda$item2k(item);

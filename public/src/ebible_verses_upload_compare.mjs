@@ -9,7 +9,6 @@ import { ebible_chapters_each_verses_check_with } from "../../../love/public/src
 import { marker } from "../../../love/public/src/marker.mjs";
 import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
 export async function ebible_verses_upload_compare(bible_folder) {
-  marker("1");
   await ebible_version_download(bible_folder);
   await ebible_version_readaloud_download(bible_folder);
   ("loop through to ensure parse correct before begin upload");

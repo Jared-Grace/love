@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { js_code_import_single } from "../../../love/public/src/js_code_import_single.mjs";
 import { folder_current_join_code } from "../../../love/public/src/folder_current_join_code.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
@@ -6,7 +5,6 @@ import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
 import { folder_src } from "../../../love/public/src/folder_src.mjs";
 import { function_name_to_base } from "../../../love/public/src/function_name_to_base.mjs";
 export function function_code_import_dev(name_prefixed) {
-  marker("1");
   let f_name_ext = function_name_to_base(name_prefixed);
   let src = folder_src();
   let previous = folder_previous();

@@ -3,7 +3,6 @@ import { list_map_unordered_async } from "../../../love/public/src/list_map_unor
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function js_block_child_graph_unparse(ast) {
-  marker("1");
   let edges = js_block_child_graph(ast);
   if (false) {
     function a() {}

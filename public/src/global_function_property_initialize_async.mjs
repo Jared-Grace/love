@@ -8,7 +8,6 @@ export async function global_function_property_initialize_async(
   lambda,
 ) {
   let global = global_get();
-  marker("1");
   let fn_object = object_property_initialize(global, fn.name, {});
   let value = await object_property_initialize_lambda_async(
     fn_object,

@@ -4,7 +4,6 @@ import * as acorn from "acorn";
 import { global_import_get } from "../../../love/public/src/global_import_get.mjs";
 import { global_import_exists } from "../../../love/public/src/global_import_exists.mjs";
 export function js_parse(code) {
-  marker("1");
   let a = null;
   let module_name = "acorn";
   let e = global_import_exists(module_name);

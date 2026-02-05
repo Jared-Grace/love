@@ -13,7 +13,6 @@ import { function_current_get } from "../../../love/public/src/function_current_
 import { todo } from "../../../love/public/src/todo.mjs";
 export async function task_new(task_name) {
   assert_arguments(arguments, 1);
-  marker("1");
   string_empty_not_is_assert(task_name);
   let f_name = await function_current_get();
   let result2 = task_function_name_part();

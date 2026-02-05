@@ -4,7 +4,6 @@ import { g_distance } from "../../../love/public/src/g_distance.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { function_dependencies_code_unaliased } from "../../../love/public/src/function_dependencies_code_unaliased.mjs";
 export async function sandbox() {
-  marker("1");
   let f = g_distance.name;
   let v = await function_dependencies([f]);
   return v;

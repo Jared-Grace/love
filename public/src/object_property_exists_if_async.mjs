@@ -6,7 +6,6 @@ export async function object_property_exists_if_async(
   property,
   lambda$value,
 ) {
-  marker("1");
   let e = object_property_exists(obj, property);
   if (e) {
     let value = object_property_get(obj, property);

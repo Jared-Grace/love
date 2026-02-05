@@ -15,5 +15,4 @@ export async function g_sermon_generate_sandbox() {
   let concated = list_concat([v], combineds);
   let joined = list_join_space(concated);
   let stdout = await command_line(joined);
-  marker("1");
 }

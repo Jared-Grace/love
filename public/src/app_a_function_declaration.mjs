@@ -22,7 +22,6 @@ import { js_keyword_function } from "../../../love/public/src/js_keyword_functio
 import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function app_a_function_declaration(a) {
-  marker("1");
   let node = object_property_get(a, "node");
   let parent = object_property_get(a, "parent");
   let generator = object_property_get(node, "generator");

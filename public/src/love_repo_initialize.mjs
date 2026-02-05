@@ -7,7 +7,6 @@ import { file_copy_overwrite } from "../../../love/public/src/file_copy_overwrit
 import { marker } from "../../../love/public/src/marker.mjs";
 import { file_name_json_folder } from "./file_name_json_folder.mjs";
 export async function love_repo_initialize() {
-  marker("1");
   let vc = folder_vscode();
   let f_path = file_name_json_folder(vc, "tasks");
   let d_path = data_folder();

@@ -21,7 +21,6 @@ import { js_dollar_ie } from "../../../love/public/src/js_dollar_ie.mjs";
 import { js_dollar_i } from "../../../love/public/src/js_dollar_i.mjs";
 import { js_dollar_x } from "../../../love/public/src/js_dollar_x.mjs";
 export function js_dollar_choices() {
-  marker("choices");
   let choices = [
     {
       name: "i",

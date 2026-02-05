@@ -7,7 +7,6 @@ import { string_starts_with } from "../../../love/public/src/string_starts_with.
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 export function js_imports_declarations_externals(ast) {
-  marker("1");
   let vs = js_imports_all(ast);
   function lambda2(la) {
     function lambda(v) {

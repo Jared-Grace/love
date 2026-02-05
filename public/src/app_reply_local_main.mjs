@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_verse_merge } from "../../../love/public/src/ebible_verse_merge.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
@@ -8,7 +7,6 @@ import { list_find_property } from "../../../love/public/src/list_find_property.
 import { ebible_languages_chapters } from "../../../love/public/src/ebible_languages_chapters.mjs";
 import { app_api } from "../../../love/public/src/app_api.mjs";
 export async function app_reply_local_main(context) {
-  marker("1");
   let result = await app_api({
     f_name: ebible_languages_chapters.name,
     args: [],

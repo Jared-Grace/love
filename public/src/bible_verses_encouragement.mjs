@@ -1,6 +1,4 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 export function bible_verses_encouragement() {
-  marker("1");
   let encouragement = [
     "Deuteronomy 31:6",
     "Deuteronomy 31:8",

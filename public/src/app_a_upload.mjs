@@ -10,7 +10,6 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { assert_json } from "./assert_json.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { file_delete } from "./file_delete.mjs";
@@ -53,5 +52,4 @@ export async function app_a_upload(deltas) {
     await git_push_repos();
   }
   invoke(lambda5);
-  marker("1");
 }

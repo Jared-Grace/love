@@ -5,9 +5,7 @@ import { app_generic_name_prefixed } from "../../../love/public/src/app_generic_
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_generic_name_main_get } from "../../../love/public/src/app_generic_name_main_get.mjs";
 import { functions_search } from "../../../love/public/src/functions_search.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function functions_search_app_prefix(s) {
-  marker("1");
   let v2 = await app_generic_name_main_get(s);
   s = object_property_get(v2, "a_name");
   let a_name = app_generic_name_prefixed(s);
