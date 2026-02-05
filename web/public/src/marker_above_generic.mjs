@@ -4,7 +4,6 @@ import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker_index } from "../../../love/public/src/marker_index.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function marker_above_generic(lambda$index, code) {
   async function lambda(a) {
     let i = marker_index(a);
