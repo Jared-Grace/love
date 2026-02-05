@@ -5,7 +5,6 @@ import { js_declaration_single_block_body } from "../../../love/public/src/js_de
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { js_markers } from "../../../love/public/src/js_markers.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_marker_name_get } from "../../../love/public/src/js_marker_name_get.mjs";

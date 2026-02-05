@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { string_starts_with } from "../../../love/public/src/string_starts_with.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 export function list_find_starts_with_prefixes(prefixes, item) {
