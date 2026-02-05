@@ -6,7 +6,6 @@ import { each_pair } from "../../../love/public/src/each_pair.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { ebible_version_readaloud_download } from "../../../love/public/src/ebible_version_readaloud_download.mjs";
 import { ebible_chapters_each_verses_check_with } from "../../../love/public/src/ebible_chapters_each_verses_check_with.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { ebible_version_download } from "../../../love/public/src/ebible_version_download.mjs";
 export async function ebible_verses_upload_compare(bible_folder) {
   await ebible_version_download(bible_folder);
