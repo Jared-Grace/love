@@ -4,7 +4,6 @@ import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
 import { folder_vscode } from "../../../love/public/src/folder_vscode.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { file_copy_overwrite } from "../../../love/public/src/file_copy_overwrite.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { file_name_json_folder } from "./file_name_json_folder.mjs";
 export async function love_repo_initialize() {
   let vc = folder_vscode();
