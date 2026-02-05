@@ -8,7 +8,6 @@ import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { js_declaration_param_named } from "../../../love/public/src/js_declaration_param_named.mjs";
 import { js_declaration_params_get } from "../../../love/public/src/js_declaration_params_get.mjs";
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 export async function function_param_delete_multiple(param_names_comma) {

@@ -1,6 +1,5 @@
 import { list_min } from "../../../love/public/src/list_min.mjs";
 import { list_slice_from_indices } from "../../../love/public/src/list_slice_from_indices.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { js_outside_move } from "../../../love/public/src/js_outside_move.mjs";
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";

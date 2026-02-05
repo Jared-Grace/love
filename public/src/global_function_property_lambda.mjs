@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { global_function_initialize } from "../../../love/public/src/global_function_initialize.mjs";
 import { object_property_initialize_lambda } from "../../../love/public/src/object_property_initialize_lambda.mjs";
 export function global_function_property_lambda(fn, property_name, lambda) {

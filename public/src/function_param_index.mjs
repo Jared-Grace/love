@@ -1,6 +1,5 @@
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_declaration_params_ast_get } from "../../../love/public/src/js_declaration_params_ast_get.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { js_declaration_param_named } from "../../../love/public/src/js_declaration_param_named.mjs";
 export function function_param_index(ast, param_name) {

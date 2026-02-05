@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 export function html_style_padding_x(component, value) {
   html_style_assign(component, {

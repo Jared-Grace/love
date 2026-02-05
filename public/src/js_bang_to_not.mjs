@@ -7,7 +7,6 @@ import { js_code_call } from "../../../love/public/src/js_code_call.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 export function js_bang_to_not(ast) {
   let name = js_declaration_single_name(ast);
@@ -15,8 +14,8 @@ export function js_bang_to_not(ast) {
     return;
   }
   function lambda(v) {
-    let { node } = v;
-    let { operator } = node;
+    let node = object_property_get(v, "node");
+    let operator = object_property_get(node, "operator");
     if (equal(operator, "!")) {
       let argument = object_property_get(node, "argument");
       let copy = object_copy(argument);
