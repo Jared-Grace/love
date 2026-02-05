@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { each_index } from "./each_index.mjs";
 export function list_reduce_index(list, lambda$item$value$index, inital) {
   let value = inital;
