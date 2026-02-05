@@ -6,7 +6,6 @@ import { js_parse_expression } from "../../../love/public/src/js_parse_expressio
 import { js_identifiers_named } from "../../../love/public/src/js_identifiers_named.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function function_identifier_replace(
   identifier_name,
   replacement,
