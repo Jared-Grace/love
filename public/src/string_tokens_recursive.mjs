@@ -1,6 +1,5 @@
 import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { string_size } from "../../../love/public/src/string_size.mjs";
 import { each_range_from } from "../../../love/public/src/each_range_from.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
