@@ -15,7 +15,6 @@ import { storage_local_get } from "../../../love/public/src/storage_local_get.mj
 import { storage_local_global_empty_assert } from "../../../love/public/src/storage_local_global_empty_assert.mjs";
 import { sandbox } from "../../../love/public/src/sandbox.mjs";
 import { storage_local_mock_enable } from "../../../love/public/src/storage_local_mock_enable.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export function storage_local_enabling_test() {
   storage_local_mock_enable();
   let app_fn = sandbox;
