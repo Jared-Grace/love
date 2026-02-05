@@ -4,5 +4,5 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function data_delete() {
   marker("1");
   let d_path = data_path();
-  await file_delete(file_path);
+  await file_delete(d_path);
 }
