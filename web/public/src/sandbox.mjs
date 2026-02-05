@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { function_dependencies } from "../../../love/public/src/function_dependencies.mjs";
 import { g_distance } from "../../../love/public/src/g_distance.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
