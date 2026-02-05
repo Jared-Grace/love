@@ -1,5 +1,4 @@
 import { repo_about_set } from "../../../love/public/src/repo_about_set.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function repo_acronym_set(repo, value) {
   const key = "acronym";
   await repo_about_set(repo, value, key);
