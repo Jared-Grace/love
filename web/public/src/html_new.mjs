@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { app_new_html_update } from "../../../love/public/src/app_new_html_update.mjs";
 import { html_name_to_path } from "../../../love/public/src/html_name_to_path.mjs";
 import { assert_file_exists_not } from "../../../love/public/src/assert_file_exists_not.mjs";

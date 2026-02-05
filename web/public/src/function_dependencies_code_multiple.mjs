@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";

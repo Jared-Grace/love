@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { function_new_declaration } from "../../../love/public/src/function_new_declaration.mjs";
 import { js_code_declaration } from "../../../love/public/src/js_code_declaration.mjs";
 import { function_open } from "../../../love/public/src/function_open.mjs";

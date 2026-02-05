@@ -5,7 +5,6 @@ import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { invoke_cache_value_get } from "../../../love/public/src/invoke_cache_value_get.mjs";
 import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function invoke_cache_file(fn, args) {
   let key_get = invoke_cache_file_key_get(fn, args);
   let cached_exists = file_exists;

@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";

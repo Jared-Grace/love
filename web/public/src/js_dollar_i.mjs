@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { js_keyword_false } from "../../../love/public/src/js_keyword_false.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_code_braces_empty } from "../../../love/public/src/js_code_braces_empty.mjs";

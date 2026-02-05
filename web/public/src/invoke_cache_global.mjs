@@ -1,6 +1,5 @@
 import { invoke_cache_value_get } from "../../../love/public/src/invoke_cache_value_get.mjs";
 import { invoke_cache_key_get } from "../../../love/public/src/invoke_cache_key_get.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { global_function_property_set_exists_not } from "../../../love/public/src/global_function_property_set_exists_not.mjs";
 import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";

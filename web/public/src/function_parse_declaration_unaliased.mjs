@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { function_parse_declaration_generic } from "../../../love/public/src/function_parse_declaration_generic.mjs";
 import { function_parse_unaliased } from "../../../love/public/src/function_parse_unaliased.mjs";
 export async function function_parse_declaration_unaliased(f_name) {

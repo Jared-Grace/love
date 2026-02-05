@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { js_call_object_property_get } from "../../../love/public/src/js_call_object_property_get.mjs";
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { list_index_of_next_outside } from "../../../love/public/src/list_index_of_next_outside.mjs";

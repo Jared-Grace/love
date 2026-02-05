@@ -7,7 +7,6 @@ import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { function_new_declaration } from "../../../love/public/src/function_new_declaration.mjs";
 import { assert_file_exists_not } from "../../../love/public/src/assert_file_exists_not.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { js_declaration_name } from "../../../love/public/src/js_declaration_name.mjs";
 import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
 export async function js_outside_move(ast) {

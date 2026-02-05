@@ -1,5 +1,4 @@
 import { exit } from "../../../love/public/src/exit.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { list_map_property_join_space } from "../../../love/public/src/list_map_property_join_space.mjs";
@@ -134,7 +133,10 @@ export async function g_sermon_generate_book_generic(
       let mapped2 = list_map(range2, prompt_get);
       let mapped3 = list_map_property(mapped2, "user_prompt");
       let joined = list_join(mapped3, " ::: ");
-      var { user_prompt, text, original } = prompt_get(item3);
+      var v4 = prompt_get(item3);
+      let original = object_property_get(v4, "original");
+      let text = object_property_get(v4, "text");
+      let user_prompt = object_property_get(v4, "user_prompt");
       let verse_numbers = list_map_property(item3, "verse_number");
       const prompt_user =
         "Here is the context: " +

@@ -1,5 +1,4 @@
 import { g_sermon_generate_book_generic } from "../../../love/public/src/g_sermon_generate_book_generic.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_struggle_generate() {
   let bible_folder = "engbsb";
   let book_code = "JAS";

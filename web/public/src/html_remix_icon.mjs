@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { html_stylesheet } from "../../../love/public/src/html_stylesheet.mjs";
 export function html_remix_icon() {
   const href =

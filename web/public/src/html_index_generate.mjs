@@ -2,7 +2,6 @@ import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { file_name_html } from "../../../love/public/src/file_name_html.mjs";
 import { folder_public_combine } from "../../../love/public/src/folder_public_combine.mjs";
 import { user_repo_path_combine } from "../../../love/public/src/user_repo_path_combine.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function html_index_generate(app_name) {
   let f_name = file_name_html("index");
   let combined2 = folder_public_combine(f_name);

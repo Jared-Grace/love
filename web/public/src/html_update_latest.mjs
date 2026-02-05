@@ -1,7 +1,6 @@
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_generic_name_main_get } from "../../../love/public/src/app_generic_name_main_get.mjs";
 import { app_generic_name_latest } from "../../../love/public/src/app_generic_name_latest.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { html_update_public_generic } from "../../../love/public/src/html_update_public_generic.mjs";
 import { html_name_to_path_latest } from "../../../love/public/src/html_name_to_path_latest.mjs";
 export async function html_update_latest(name) {

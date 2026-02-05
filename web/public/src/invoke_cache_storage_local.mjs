@@ -3,7 +3,6 @@ import { invoke_cache_key_get } from "../../../love/public/src/invoke_cache_key_
 import { storage_local_set_exists_not } from "../../../love/public/src/storage_local_set_exists_not.mjs";
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
 import { storage_local_exists } from "../../../love/public/src/storage_local_exists.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
 export async function invoke_cache_storage_local(fn, args) {
   let key_get = invoke_cache_key_get(fn, args);
