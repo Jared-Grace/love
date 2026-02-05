@@ -1,4 +1,4 @@
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { string_tokens } from "../../../love/public/src/string_tokens.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_verse_tokens(
@@ -8,6 +8,6 @@ export async function ebible_verse_tokens(
 ) {
   marker("1");
   let v = await ebible_verse(bible_folder, chapter_code, verse_number);
-  object_property_set(object, property_name, value);
+  let tokens_matches = string_tokens(input, dictionary);
   return v;
 }
