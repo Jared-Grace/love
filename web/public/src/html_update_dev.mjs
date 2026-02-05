@@ -15,7 +15,6 @@ import { app_generic_name_main } from "../../../love/public/src/app_generic_name
 import { html_name_to_path_dev } from "../../../love/public/src/html_name_to_path_dev.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export async function html_update_dev(name) {
-  marker("1");
   let v2 = await app_generic_name_main_get(name);
   name = object_property_get(v2, "a_name");
   let file_path = html_name_to_path_dev(name);

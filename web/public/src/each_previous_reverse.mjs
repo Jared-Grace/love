@@ -2,7 +2,6 @@ import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mj
 import { each_previous_generic } from "../../../love/public/src/each_previous_generic.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function each_previous_reverse(list, lambda$item$previous) {
-  marker("1");
   let reversed = list_copy_reverse(list);
   let v4 = each_previous_generic(
     index_valid_is,

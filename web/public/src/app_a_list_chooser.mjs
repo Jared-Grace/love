@@ -4,7 +4,6 @@ import { app_a_control_style } from "../../../love/public/src/app_a_control_styl
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { string_articled } from "../../../love/public/src/string_articled.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -20,7 +19,6 @@ import { app_a_on_keydown_add } from "../../../love/public/src/app_a_on_keydown_
 import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 export function app_a_list_chooser(context, noun, texts, lambda$text) {
-  marker("1");
   let root = object_property_get(context, "root");
   const articled = string_articled(noun);
   const text = "Choose " + articled + ":";

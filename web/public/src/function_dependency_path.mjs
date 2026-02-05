@@ -7,7 +7,6 @@ import { visit_unique_async } from "../../../love/public/src/visit_unique_async.
 import { function_imports } from "../../../love/public/src/function_imports.mjs";
 export async function function_dependency_path(f_name_from, f_name_to) {
   let result = null;
-  marker("1");
   let { unaliased: from } = await function_name_unalias(f_name_from);
   let { unaliased: to } = await function_name_unalias(f_name_to);
   await each_async([from, to], function_exists_assert);

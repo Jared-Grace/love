@@ -19,7 +19,6 @@ export async function js_outside_move(ast) {
     await assert_file_exists_not(f_path);
   }
   await each_async(fds, lambda);
-  marker("1");
   async function lambda2(fd) {
     await function_new_declaration(fd);
   }

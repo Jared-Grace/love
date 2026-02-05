@@ -6,7 +6,6 @@ import { js_code_wrap_parenthesis } from "../../../love/public/src/js_code_wrap_
 import { js_keyword_if } from "../../../love/public/src/js_keyword_if.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 export function js_dollar_i({ stack1 }) {
-  marker("1");
   let inside = js_keyword_false();
   let from = js_parse_statement(
     js_keyword_if() +

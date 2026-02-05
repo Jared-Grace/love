@@ -7,7 +7,6 @@ import { html_parse_find_list_to } from "../../../love/public/src/html_parse_fin
 import { html_parse_find } from "../../../love/public/src/html_parse_find.mjs";
 import { html_parse_read } from "../../../love/public/src/html_parse_read.mjs";
 import { ebible_version_download_path_combine } from "../../../love/public/src/ebible_version_download_path_combine.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_parse_find_remove } from "../../../love/public/src/html_parse_find_remove.mjs";
 import { css_class_prefix_combine } from "../../../love/public/src/css_class_prefix_combine.mjs";
@@ -21,7 +20,6 @@ import { html_parse_descendants_classes } from "../../../love/public/src/html_pa
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_parse_text } from "../../../love/public/src/html_parse_text.mjs";
 export async function ebible_chapter_text(bible_folder, chapter_code) {
-  marker("1");
   let chapter_path = ebible_version_download_path_combine(
     bible_folder,
     chapter_code,

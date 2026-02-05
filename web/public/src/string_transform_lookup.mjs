@@ -3,7 +3,6 @@ import { string_transform } from "../../../love/public/src/string_transform.mjs"
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 export function string_transform_lookup(s, lookup) {
-  marker("1");
   function lambda3(c) {
     let exists = object_property_exists(lookup, c);
     if (exists) {

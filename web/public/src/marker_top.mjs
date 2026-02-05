@@ -10,7 +10,6 @@ import { js_markers } from "../../../love/public/src/js_markers.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_marker_name_get } from "../../../love/public/src/js_marker_name_get.mjs";
 export async function marker_top() {
-  marker("1");
   let f_name = await function_current_get();
   let v = await function_transform(f_name, lambda);
   return v;

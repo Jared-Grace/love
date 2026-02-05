@@ -20,7 +20,6 @@ export async function js_function_last_asyncify(
   functions,
   visited,
 ) {
-  marker("1");
   let f = js_stack_last_function(stack);
   let property_name = "async";
   let async = object_property_get(f, property_name);

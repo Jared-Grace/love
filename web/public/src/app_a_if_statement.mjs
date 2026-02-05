@@ -4,7 +4,6 @@ import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs"
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
 import { js_call_new_insert } from "../../../love/public/src/js_call_new_insert.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { js_keyword_else } from "../../../love/public/src/js_keyword_else.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
@@ -16,7 +15,6 @@ import { js_keyword_if } from "../../../love/public/src/js_keyword_if.mjs";
 export function app_a_if_statement(a) {
   let node = object_property_get(a, "node");
   let parent = object_property_get(a, "parent");
-  marker("1");
   let k = js_keyword_if();
   let v4 = app_a_keyword_purple_space(parent, k);
   let keyword = object_property_get(v4, "keyword");

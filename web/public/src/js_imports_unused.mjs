@@ -6,7 +6,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { marker } from "../../../love/public/src/marker.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 export function js_imports_unused(ast) {
-  marker("1");
   let imports = js_imports_declarations(ast);
   function lambda(i) {
     let name = object_property_get(i, "name");

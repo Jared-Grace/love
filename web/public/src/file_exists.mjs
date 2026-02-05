@@ -4,7 +4,6 @@ import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_index
 import { app_a_file_system_store } from "../../../love/public/src/app_a_file_system_store.mjs";
 import { app_a_file_system_initialize } from "../../../love/public/src/app_a_file_system_initialize.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { throws_not_async } from "../../../love/public/src/throws_not_async.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { promise_is } from "../../../love/public/src/promise_is.mjs";
@@ -21,7 +20,6 @@ export async function file_exists(file_path) {
     );
     return exists;
   }
-  marker("1");
   if (promise_is(file_path)) {
     error();
   }

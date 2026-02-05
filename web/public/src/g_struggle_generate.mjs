@@ -3,7 +3,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export async function g_struggle_generate() {
   let bible_folder = "engbsb";
   let book_code = "JAS";
-  marker("1");
   const prompt_system = `You are a scriptwriter for a Christian RPG. Your task is to generate personal struggles that directly relate to the themes, wording, situation, or implications found in the given Bible passage.
 
 Rules:

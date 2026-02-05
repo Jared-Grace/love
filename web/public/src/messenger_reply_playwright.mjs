@@ -12,7 +12,6 @@ import { messenger_reply_url } from "../../../love/public/src/messenger_reply_ur
 import { retry_on_error } from "../../../love/public/src/retry_on_error.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
 export async function messenger_reply_playwright() {
-  marker("1");
   let p = folder_user_docs_path("fb.json");
   let data = await file_read_json(p);
   let pin = object_property_get(data, "pin");

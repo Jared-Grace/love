@@ -18,7 +18,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { error } from "../../../love/public/src/error.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 export function js_identifier_defineds(v) {
-  marker("1");
   let stack = object_property_get(v, "stack");
   function lambda4(la) {
     let e1 = list_get_end_1(stack);

@@ -9,7 +9,6 @@ import { function_transform_marker } from "../../../love/public/src/function_tra
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 export async function marker_next_await() {
-  marker("1");
   let f_name = await function_current_get();
   async function lambda2(la) {
     await function_transform_marker(f_name, lambda);

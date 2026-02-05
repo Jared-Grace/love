@@ -13,13 +13,11 @@ import { firebase_name_repo } from "../../../love/public/src/firebase_name_repo.
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
 import { app_generic_name_prefixed } from "../../../love/public/src/app_generic_name_prefixed.mjs";
 import { string_and_empty_not_is_assert } from "../../../love/public/src/string_and_empty_not_is_assert.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function app_new_update_generic(
   name,
   fn_call,
   f_name_transformed,
 ) {
-  marker("1");
   string_and_empty_not_is_assert(name);
   let a_name = app_generic_name_prefixed(name);
   let v = await function_name_to_path_search(a_name);

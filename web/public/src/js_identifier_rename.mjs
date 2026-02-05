@@ -4,7 +4,6 @@ import { object_property_set } from "../../../love/public/src/object_property_se
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function js_identifier_rename(ast, name_from, name_to) {
-  marker("1");
   if (equal(name_from, name_to)) {
     return;
   }

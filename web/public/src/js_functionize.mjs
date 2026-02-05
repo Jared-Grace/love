@@ -34,7 +34,6 @@ export async function js_functionize(
   index_from,
   index_to,
 ) {
-  marker("1");
   const indices = [index_from, index_to];
   let range = list_slice_from_indices(stack2, indices);
   function lambda(r) {

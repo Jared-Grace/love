@@ -6,8 +6,8 @@ import { functions_paths } from "../../../love/public/src/functions_paths.mjs";
 export async function data_generate(data) {
   let f_paths = await functions_paths();
   let parseds = await list_map_unordered_async(f_paths, file_js_parse);
-   function lambda(parsed) {
-     data_file_update_inner(parsed, data);
+  function lambda(parsed) {
+    data_file_update_inner(parsed, data);
   }
   each(parseds, lambda);
   return;

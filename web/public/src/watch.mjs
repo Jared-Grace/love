@@ -9,7 +9,6 @@ import { import_install } from "../../../love/public/src/import_install.mjs";
 import { data_file_update } from "../../../love/public/src/data_file_update.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 export async function watch() {
-  marker("1");
   const chokidar = (await import_install("chokidar")).default;
   let squashed = await repos_paths_map_unordered_combine_squash(identity);
   const watcher = chokidar.watch(squashed, {

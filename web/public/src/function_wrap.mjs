@@ -6,7 +6,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
 export async function function_wrap(f_name, f_name_wrapped) {
-  marker("1");
   let v2 = await function_parse_declaration_unaliased(f_name);
   let unaliased = object_property_get(v2, "unaliased");
   let declaration_call = object_property_get(v2, "declaration");

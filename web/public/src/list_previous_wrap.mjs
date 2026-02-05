@@ -3,7 +3,6 @@ import { list_previous } from "../../../love/public/src/list_previous.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 export function list_previous_wrap(list, item) {
-  marker("1");
   let previous = null;
   let li = list_first_is(list, item);
   if (li) {

@@ -6,7 +6,6 @@ import { performance_start } from "../../../love/public/src/performance_start.mj
 import { marker } from "../../../love/public/src/marker.mjs";
 import { data_generate } from "./data_generate.mjs";
 export async function server_data_update_test() {
-  marker("1");
   let p = performance_start("http_json");
   let data = await server_data_get();
   performance_next(p, "http_post_json");

@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function cache_generic(
   key_get,
   cached_exists,
@@ -6,7 +5,6 @@ export async function cache_generic(
   value_get,
   cache_save,
 ) {
-  marker("1");
   let key = key_get();
   let e = await cached_exists(key);
   let result = null;

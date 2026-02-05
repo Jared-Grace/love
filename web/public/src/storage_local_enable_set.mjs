@@ -9,7 +9,6 @@ export function storage_local_enable_set(value_new, context) {
   if (equal(enabled, value_new)) {
     return;
   }
-  marker("1");
   let dictionary = storage_local_remove_app(context);
   global_function_set(storage_local_enabled, value_new);
   storage_local_set_dictionary(context, dictionary);

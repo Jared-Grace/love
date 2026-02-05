@@ -1,4 +1,2 @@
 import { marker } from "../../../love/public/src/marker.mjs";
-export function app_ceb_bible_main() {
-  marker("1");
-}
+export function app_ceb_bible_main() {}

@@ -7,7 +7,6 @@ export function global_function_property_initialize(
   value_initial,
 ) {
   let global = global_get();
-  marker("1");
   let fn_object = object_property_initialize(global, fn.name, {});
   let value = object_property_initialize(
     fn_object,

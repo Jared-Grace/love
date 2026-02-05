@@ -1,6 +1,5 @@
 import { g_themes } from "../../../love/public/src/g_themes.mjs";
 import { app_g_openai_split } from "../../../love/public/src/app_g_openai_split.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { integer_random_0 } from "../../../love/public/src/integer_random_0.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
@@ -9,7 +8,6 @@ import { list_intersect } from "../../../love/public/src/list_intersect.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export function app_g_wrong(passage, passages, property) {
-  marker("1");
   let text = object_property_get(passage, "text");
   let objections = object_property_get(passage, property);
   let split = app_g_openai_split(objections);

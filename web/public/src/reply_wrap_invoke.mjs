@@ -14,7 +14,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { function_is } from "../../../love/public/src/function_is.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 export async function reply_wrap_invoke(item, possibilities) {
-  marker("1");
   let fi = function_is(item);
   let wrapped = null;
   if (fi) {

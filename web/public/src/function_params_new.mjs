@@ -13,7 +13,6 @@ export async function function_params_new(
   param_names_comma,
   values_default_comma,
 ) {
-  marker("1");
   assert_arguments(arguments, 3);
   let param_names = string_split(param_names_comma, ",");
   let values_default = string_split(values_default_comma, ",");

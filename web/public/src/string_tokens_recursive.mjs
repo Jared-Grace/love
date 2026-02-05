@@ -17,7 +17,6 @@ export function string_tokens_recursive(
     let copy = list_copy(current);
     list_add(tokens_matches, copy);
   }
-  marker("1");
   function lambda3(index_right) {
     let sliced = string_slice(input, index_left, index_right);
     let exists = object_property_exists(dictionary, sliced);

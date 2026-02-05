@@ -10,7 +10,6 @@ import { reply_messages_inner } from "../../../love/public/src/reply_messages_in
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_unique } from "./list_unique.mjs";
 export async function reply_messages_all(start, messages) {
-  marker("1");
   async function lambda(message) {
     let result = await reply_messages_inner(message, start);
     let value = object_property_get(result, "matches");

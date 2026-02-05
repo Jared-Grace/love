@@ -59,7 +59,6 @@ import { emoji_search } from "../../../love/public/src/emoji_search.mjs";
 import { app_a_functions } from "../../../love/public/src/app_a_functions.mjs";
 import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { function_parse_unaliased } from "../../../love/public/src/function_parse_unaliased.mjs";
 export async function app_a_function(context) {
@@ -67,7 +66,6 @@ export async function app_a_function(context) {
   let f_name = storage_local_get_context(context, "f_name_selected");
   let parsed = await function_parse_unaliased(f_name);
   let ast = object_property_get(parsed, "ast");
-  marker("1");
   let root = object_property_get(context, "root");
   html_clear(root);
   async function upload() {

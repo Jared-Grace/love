@@ -10,7 +10,6 @@ import { app_g_chapter_code } from "../../../love/public/src/app_g_chapter_code.
 import { global_function_property_nested_lambda } from "../../../love/public/src/global_function_property_nested_lambda.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_g_button_conversation_end } from "../../../love/public/src/app_g_button_conversation_end.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { app_g_bible_passage_button } from "../../../love/public/src/app_g_bible_passage_button.mjs";
 import { subtract_1 } from "../../../love/public/src/subtract_1.mjs";
 import { object_property_change } from "../../../love/public/src/object_property_change.mjs";
@@ -32,7 +31,6 @@ export async function app_g_gospel(
   div_map,
   refresh,
 ) {
-  marker("1");
   html_clear(overlay);
   let objections2 = object_property_get(npc, "objections");
   let p = positive_is(objections2);
@@ -54,7 +52,9 @@ export async function app_g_gospel(
     list_shuffle(passages);
     let passage = list_last(passages);
     let property = g_objection_generate_property();
-    let { ob, passage_wrong } = app_g_wrong(passage, passages, property);
+    let v = app_g_wrong(passage, passages, property);
+    let passage_wrong = object_property_get(v, "passage_wrong");
+    let ob = object_property_get(v, "ob");
     app_g_npc_says(npc, overlay, game_prefix, ob);
     app_g_container_text(overlay, "What would you like to say?");
     function correct() {

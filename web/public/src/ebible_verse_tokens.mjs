@@ -7,7 +7,6 @@ export async function ebible_verse_tokens(
   chapter_code,
   verse_number,
 ) {
-  marker("1");
   let v = await ebible_verse(bible_folder, chapter_code, verse_number);
   let text = object_property_get(v, "text");
   let s = string_split_space(text);

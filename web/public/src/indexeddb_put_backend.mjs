@@ -1,7 +1,6 @@
 import { marker } from "../../../love/public/src/marker.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 export async function indexeddb_put_backend(db_get, store, key, next) {
-  marker("1");
   const db = await db_get();
   if (false) {
     const previous = await new Promise(function lambda3(resolve, reject) {

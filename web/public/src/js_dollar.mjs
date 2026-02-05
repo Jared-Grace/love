@@ -40,7 +40,6 @@ export async function js_dollar(ast) {
       let remaining = list_skip(split, 2);
       let lower = string_lower_to(second);
       if (lower === choice_name) {
-        marker("choice_arguments");
         const a = {
           remaining,
           node,

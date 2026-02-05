@@ -32,7 +32,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 import { reply_sequence } from "../../../love/public/src/reply_sequence.mjs";
 import { reply_choice } from "../../../love/public/src/reply_choice.mjs";
 export function app_message_reply_choices() {
-  marker("1");
   let greeting = app_message_reply_greeting();
   let hru = app_message_reply_how_r_u();
   let phrases_single = app_message_reply_phrases_single();

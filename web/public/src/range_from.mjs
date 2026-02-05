@@ -6,7 +6,6 @@ import { marker } from "../../../love/public/src/marker.mjs";
 export function range_from(from, to) {
   from = integer_to_try(from);
   to = integer_to_try(to);
-  marker("1");
   let count = to - from + 1;
   let r = range(count);
   function lambda(item) {

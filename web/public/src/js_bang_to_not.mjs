@@ -10,7 +10,6 @@ import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { marker } from "../../../love/public/src/marker.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 export function js_bang_to_not(ast) {
-  marker("1");
   let name = js_declaration_single_name(ast);
   if (equal(name, not.name)) {
     return;

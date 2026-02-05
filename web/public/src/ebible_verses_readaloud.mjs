@@ -22,7 +22,6 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
     let verses = await ebible_verses_browser(bible_folder, chapter_code);
     return verses;
   }
-  marker("1");
   let verse_numbers = await ebible_verses_numbers(bible_folder, chapter_code);
   let verse_number = ebible_verses_before();
   list_remove_if_exists(verse_numbers, verse_number);

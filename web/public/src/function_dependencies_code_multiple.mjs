@@ -9,7 +9,6 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 export async function function_dependencies_code_multiple(f_names) {
-  marker("1");
   let ds = await function_dependencies(f_names);
   let mapped = list_map(ds, function_parse_declaration);
   let waited = await list_wait(mapped);

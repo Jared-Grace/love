@@ -8,7 +8,6 @@ export function list_find_property_or_null(
   property_name,
   property_value,
 ) {
-  marker("1");
   let filter = object_property_equals_lambda(property_name, property_value);
   let filtered = list_filter(list, filter);
   let e = list_empty_is(filtered);
