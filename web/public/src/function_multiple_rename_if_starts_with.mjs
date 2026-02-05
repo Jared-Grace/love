@@ -2,7 +2,6 @@ import { function_multiple_rename_generic } from "../../../love/public/src/funct
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { string_prefix_change } from "../../../love/public/src/string_prefix_change.mjs";
 import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function function_multiple_rename_if_starts_with(
   f_name_prefix_before,
   f_name_prefix_after,
