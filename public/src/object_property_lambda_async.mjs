@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
