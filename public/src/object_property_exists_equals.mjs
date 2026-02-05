@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { object_property_equals } from "../../../love/public/src/object_property_equals.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 export function object_property_exists_equals(
