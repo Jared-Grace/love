@@ -3,7 +3,6 @@ import { file_write } from "../../../love/public/src/file_write.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { py_script_run_cmd } from "../../../love/public/src/py_script_run_cmd.mjs";
 import { file_temp } from "../../../love/public/src/file_temp.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function text_to_speech(args) {
   async function lambda(temp_path) {
     let contents = json_to(args);
