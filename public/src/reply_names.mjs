@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 export function reply_names() {
   let names = ["dilshad", "khan", "yaqoob"];
