@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { openai_key_folder } from "../../../love/public/src/openai_key_folder.mjs";
