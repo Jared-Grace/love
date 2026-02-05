@@ -5,7 +5,6 @@ import { reply_messages_inner } from "../../../love/public/src/reply_messages_in
 import { reply_last } from "../../../love/public/src/reply_last.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { json_equal_assert } from "../../../love/public/src/json_equal_assert.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_choice } from "./reply_choice.mjs";
 export function reply_test() {
@@ -306,11 +305,11 @@ export function reply_test() {
       },
     },
   ];
-  function lambda(item) {
+  async function lambda(item) {
     let message = object_property_get(item, "message");
     let start2 = object_property_get(item, "start");
     let expected = object_property_get(item, "expected");
-    let actual = reply_messages_inner(message, start2);
+    let actual = await reply_messages_inner(message, start2);
     json_equal_assert(actual, expected);
   }
   each(cases, lambda);
