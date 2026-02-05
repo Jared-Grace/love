@@ -9,5 +9,5 @@ export async function ebible_verse_tokens(
   marker("1");
   let v = await ebible_verse(bible_folder, chapter_code, verse_number);
   let tokens_matches = string_tokens(input, dictionary);
-  return v;
+  return tokens_matches;
 }
