@@ -2,7 +2,6 @@ import { ebible_version_readaloud_download_path } from "../../../love/public/src
 import { ebible_version_download_url } from "../../../love/public/src/ebible_version_download_url.mjs";
 import { unzip } from "../../../love/public/src/unzip.mjs";
 import { http_local } from "../../../love/public/src/http_local.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 export async function ebible_version_readaloud_download(bible_folder) {
   let url = ebible_version_download_url(bible_folder, "readaloud");
   let buffer = await http_local(url);
