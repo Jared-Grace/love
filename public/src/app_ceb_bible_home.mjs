@@ -46,11 +46,12 @@ export async function app_ceb_bible_home(context) {
     }
     let texts = list_map(split3, lambda4);
     let explains = object_property_get(passage, "explains");
-    function lambda5(item2) {}
-    each(list2, lambda5);
-    let div = html_div_text(p, text_ceb);
-    let c = app_karate_button_background();
-    html_font_color_set(div, c);
+    function lambda5(t) {
+      let div = html_div_text(p, text_ceb);
+      let c = app_karate_button_background();
+      html_font_color_set(div, c);
+    }
+    each(texts, lambda5);
     log(text);
     return;
     let sermon = object_property_get(passage, "sermon");
