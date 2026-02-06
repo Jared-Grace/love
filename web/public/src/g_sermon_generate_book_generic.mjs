@@ -1,3 +1,4 @@
+import { string_colon_3 } from "../../../love/public/src/string_colon_3.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { each_multiple_async } from "../../../love/public/src/each_multiple_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -158,7 +159,8 @@ export async function g_sermon_generate_book_generic(
       let range2 = object_property_get(r, "range");
       let mapped2 = list_map(range2, prompt_get);
       let mapped3 = list_map_property(mapped2, "user_prompt");
-      let joined = list_join(mapped3, " ::: ");
+      let separator = string_colon_3();
+      let joined = list_join(mapped3, separator);
       var v4 = prompt_get(item3);
       let original = object_property_get(v4, "original");
       let text = object_property_get(v4, "text");
