@@ -6,11 +6,11 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 export async function app_ceb_bible_home(context) {
   let chapter_code = null;
   let r = null;
-  let verses = await ebible_verses("cebulb", chapter_code);
   async function lambda(a) {
     let p = object_property_get(a, "p");
     let verse_number = object_property_get(a, "verse_number");
     chapter_code = object_property_get(a, "chapter_code");
+    let verses = await ebible_verses("cebulb", chapter_code);
     let item = list_find_property(verses, "verse_number", verse_number);
     let text = object_property_get(item, "text");
     let div = html_div_text(p, text);
