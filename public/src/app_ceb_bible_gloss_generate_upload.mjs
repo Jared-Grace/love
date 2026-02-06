@@ -7,7 +7,7 @@ export async function app_ceb_bible_gloss_generate_upload() {
     "this maybe should not be ran because it would overwrite edits from " +
       app_g_bible,
   );
-  let path_get = () => {};
+  let path_get = function lambda() {};
   let fn = app_ceb_bible_gloss_generate;
   await g_generate_upload_generic(path_get, fn);
 }
