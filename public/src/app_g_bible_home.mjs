@@ -24,8 +24,8 @@ export async function app_g_bible_home(context) {
   let r = null;
   async function lambda5(la) {
     ({ chapter_code, downloaded, r } = await app_g_bible_home_inner(
-      on_passage,
       context,
+      on_passage,
     ));
     function on_passage(passage, p) {
       let sermon = object_property_get(passage, "sermon");
