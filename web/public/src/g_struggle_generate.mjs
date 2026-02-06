@@ -19,7 +19,7 @@ Rules:
     "Generate personal struggles that directly relate to this text: ";
   let fn = g_struggle_generate;
   await g_sermon_generate_book_generic(
-    bible_folder,
+    [bible_folder],
     book_code,
     fn,
     prompt_user_middle,
