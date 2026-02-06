@@ -65,7 +65,7 @@ export async function g_sermon_generate_book_generic(
     lambda3,
   );
   async function lambda4(la) {
-    async function each_chapter(verses_chapter) {
+    async function each_chapter(verses_chapter_folders) {
       let first = list_first(verses_chapter);
       let chapter_code = object_property_get(first, "chapter_code");
       let interlinear = object_property_get(chapters_interlinear, chapter_code);
