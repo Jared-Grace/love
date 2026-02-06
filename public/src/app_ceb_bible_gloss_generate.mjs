@@ -5,7 +5,7 @@ export async function app_ceb_bible_gloss_generate() {
   let bible_folder = "engbsb";
   let book_code = "JAS";
   const prompt_system =
-    `You will be given a Bible passage in Cebuano and its context. Your task is to generate objections, misunderstandings, or arguments that the given Bible passage would refute.
+    `You will be given a Bible passage in Cebuano and its context. Your task is to generate English glosses for each Cebuano word
 
 Rules:
 - Output ONLY objections.
