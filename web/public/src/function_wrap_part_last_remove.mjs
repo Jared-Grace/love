@@ -7,6 +7,7 @@ import { function_wrap } from "../../../love/public/src/function_wrap.mjs";
 export async function function_wrap_part_last_remove(f_name) {
   assert_arguments(arguments, 1);
   let unaliased = await function_name_unalias_only(f_name);
+  let fn = list_remove_last;
   let parts = function_name_to_parts(unaliased);
   list_remove_last(parts);
   let combined = function_name_combine_multiple(parts);
