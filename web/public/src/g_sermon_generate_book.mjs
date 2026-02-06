@@ -25,7 +25,7 @@ Output each sentence separated by ` +
   const prompt_user_middle = "Here is the passage to rewrite: ";
   let fn = g_sermon_generate;
   await g_sermon_generate_book_generic(
-    bible_folder,
+    [bible_folder],
     book_code,
     fn,
     prompt_user_middle,
