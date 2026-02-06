@@ -3,6 +3,7 @@ import { file_read } from "../../../love/public/src/file_read.mjs";
 import { openai_chat_completions } from "../../../love/public/src/openai_chat_completions.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 export async function g_generate_openai(system, user) {
+  let fn = openai_chat_completions;
   let input = {
     system,
     user,
