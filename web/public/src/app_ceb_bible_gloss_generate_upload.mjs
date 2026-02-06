@@ -4,5 +4,5 @@ import { g_generate_upload_generic } from "../../../love/public/src/g_generate_u
 export async function app_ceb_bible_gloss_generate_upload() {
   let fn = app_ceb_bible_gloss_generate;
   let path_get = app_ceb_bible_gloss_generate_upload_path;
-  await g_generate_upload_generic(path_get, fn);
+  await g_generate_upload_generic(fn, path_get);
 }
