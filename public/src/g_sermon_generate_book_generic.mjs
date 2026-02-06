@@ -192,7 +192,7 @@ export async function g_sermon_generate_book_generic(
         log({
           group,
         });
-        let texts = list_map_property_join_space(group, "texts");
+        let texts = list_map_property(group, "texts");
         let text = list_join_colon_2(texts);
         let original = list_map_property_join_space(group, "original");
         const user_prompt = original + " :: " + text;
