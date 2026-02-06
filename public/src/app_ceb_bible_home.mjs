@@ -1,3 +1,4 @@
+import { json_to } from "../../../love/public/src/json_to.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
@@ -37,7 +38,8 @@ export async function app_ceb_bible_home(context) {
       html_font_color_set(div, c);
     }
     each(texts, lambda5);
-    let explains = object_property_get(passage, "explains");
+    let explains_json = object_property_get(passage, "explains");
+    let json = json_to(object);
     let first = list_first(explains);
     let properties = object_properties(first);
     let component = html_element(p, "table");
