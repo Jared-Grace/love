@@ -41,9 +41,7 @@ export async function app_ceb_bible_home(context) {
     let div = html_div_text(p, text_ceb);
     let c = app_karate_button_background();
     html_font_color_set(div, c);
-    log({
-      passage,
-    });
+    log(text);
     return;
     let sermon = object_property_get(passage, "sermon");
     let mapped2 = app_g_openai_split(sermon);
