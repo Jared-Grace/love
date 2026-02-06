@@ -8,6 +8,7 @@ export async function ebible_languages_without_original_english_bible_folders_ea
   let languages = ebible_languages_without_original_english();
   let index_next = null;
   if (false) {
+    ("this is used to start at a folder and keep going to resume after interruption");
     const property = "bible_folder";
     const including_and_onward = "porbrbsl";
     index_next = list_index_of_property(
