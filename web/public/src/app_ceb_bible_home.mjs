@@ -40,7 +40,8 @@ export async function app_ceb_bible_home(context) {
     let component = html_element(p, "table");
     let component2 = html_element(component, "tbody");
     function lambda(e) {
-      each_object(object, function lambda2(value, property) {});
+      function lambda2(value, property) {}
+      each_object(object, lambda2);
     }
     each(explains, lambda);
     log(passage);
