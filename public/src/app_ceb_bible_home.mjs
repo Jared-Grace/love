@@ -42,9 +42,10 @@ export async function app_ceb_bible_home(context) {
     let component = html_element(p, "table");
     let component2 = html_element(component, "tbody");
     function lambda(e) {
-      let component3 = html_element(parent, tag_name);
+      let component3 = html_element(component2, "tr");
       function lambda2(property) {
-        let component4 = html_element(parent2, tag_name2);
+        let component4 = html_element(component3, "td");
+        let div2 = html_div_text(root, text2);
       }
       each(properties, lambda2);
     }
