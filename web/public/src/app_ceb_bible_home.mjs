@@ -1,5 +1,4 @@
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
-import { each_object } from "../../../love/public/src/each_object.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_colon_3 } from "../../../love/public/src/string_colon_3.mjs";
@@ -39,12 +38,15 @@ export async function app_ceb_bible_home(context) {
     each(texts, lambda5);
     let explains = object_property_get(passage, "explains");
     let first = list_first(explains);
-    let properties = object_properties(obj);
+    let properties = object_properties(first);
     let component = html_element(p, "table");
     let component2 = html_element(component, "tbody");
     function lambda(e) {
-      function lambda2(value, property) {}
-      each_object(object, lambda2);
+      let component3 = html_element(parent, tag_name);
+      function lambda2(property) {
+        let component4 = html_element(parent2, tag_name2);
+      }
+      each(properties, lambda2);
     }
     each(explains, lambda);
     log(passage);
