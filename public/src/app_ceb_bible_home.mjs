@@ -35,8 +35,7 @@ export async function app_ceb_bible_home(context) {
       let verse_number = object_property_get(a, "verse_number");
       chapter_code = object_property_get(a, "chapter_code");
       let verses = await ebible_verses("cebulb", chapter_code);
-      let passages = object_property_get(value, "passages");
-      function lambda2(passage) {
+      function lambda2(verse) {
         let verse_numbers = object_property_get(passage, "verse_numbers");
         let mapped = list_map(verse_numbers, integer_to_try);
         let max = list_max(mapped);
@@ -61,7 +60,7 @@ export async function app_ceb_bible_home(context) {
           la(update);
         }
       }
-      each(passages, lambda2);
+      each(verses, lambda2);
     }
     r = await app_bible_home_generic(context, lambda);
   }
