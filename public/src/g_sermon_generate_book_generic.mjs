@@ -44,10 +44,8 @@ export async function g_sermon_generate_book_generic(
   prompt_system,
   property_name,
 ) {
-  let dictionary = await list_to_dictionary_unordered_async(
-    list,
-    async function lambda3(item4) {},
-  );
+  async function lambda3(item4) {}
+  let dictionary = await list_to_dictionary_unordered_async(list, lambda3);
   let chapters = await ebible_chapters(bible_folders, book_code);
   async function lambda7(chapter_code) {
     let verses = await ebible_verses(bible_folders, chapter_code);
