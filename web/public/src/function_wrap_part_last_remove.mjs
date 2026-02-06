@@ -9,7 +9,7 @@ export async function function_wrap_part_last_remove(f_name) {
   let unaliased = await function_name_unalias_only(f_name);
   let parts = function_name_to_parts(unaliased);
   list_remove_last(parts);
-  let combined = function_name_combine_multiple(parts2);
-  let v = await function_wrap(unaliased, f_name_wrapped);
+  let combined = function_name_combine_multiple(parts);
+  let v = await function_wrap(unaliased, combined);
   return v;
 }
