@@ -1,7 +1,6 @@
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { global_import_get } from "../../../love/public/src/global_import_get.mjs";
 import { global_import_exists } from "../../../love/public/src/global_import_exists.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { generate } from "astring";
 export function js_unparse_inner(ast) {
   let g = null;
