@@ -172,10 +172,7 @@ export async function g_sermon_generate_book_generic(
         user_prompt;
       "sermons were originally generated using: " +
         g_generate_openai_chat_completions;
-      log({
-        prompt_system,
-        prompt_user,
-      });
+      log(prompt_system + " " + prompt_user);
       exit();
       let output = await g_generate_openai_responses(
         prompt_system,
