@@ -4,7 +4,7 @@ import { g_sermon_generate_upload_path } from "../../../love/public/src/g_sermon
 export async function g_sermon_generate_download(chapter_code) {
   let path_get = g_sermon_generate_upload_path;
   async function get() {
-    let destination = g_sermon_generate_upload_path(chapter_code);
+    let destination = path_get(chapter_code);
     let o = await firebase_storage_download_json_decompress(destination);
     return o;
   }
