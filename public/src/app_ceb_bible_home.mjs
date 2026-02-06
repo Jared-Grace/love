@@ -24,7 +24,7 @@ import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { app_bible_home_generic } from "../../../love/public/src/app_bible_home_generic.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function app_ceb_bible_home(context) {
-  await app_g_bible_home_inner(on_passage, context);
+  await app_g_bible_home_inner(context, on_passage);
   function on_passage(passage, p) {
     let sermon = object_property_get(passage, "sermon");
     let mapped2 = app_g_openai_split(sermon);
