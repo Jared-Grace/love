@@ -1,3 +1,4 @@
+import { string_colon_2 } from "../../../love/public/src/string_colon_2.mjs";
 import { string_split } from "../../../love/public/src/string_split.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { string_replace } from "../../../love/public/src/string_replace.mjs";
@@ -33,7 +34,8 @@ export async function app_ceb_bible_home(context) {
   );
   function on_passage(passage, p) {
     let text = object_property_get(passage, "text");
-    let split = string_split(s, separator);
+    let separator = string_colon_2();
+    let split = string_split(text, separator);
     let explains = object_property_get(passage, "explains");
     log({
       passage,
