@@ -1,3 +1,4 @@
+import { app_ceb_bible_gloss_generate_property } from "../../../love/public/src/app_ceb_bible_gloss_generate_property.mjs";
 import { g_sermon_generate_book_generic } from "../../../love/public/src/g_sermon_generate_book_generic.mjs";
 export async function app_ceb_bible_gloss_generate() {
   let bible_folder = "engbsb";
@@ -15,7 +16,7 @@ The original language and English are provided as a reference.`;
   const prompt_user_middle =
     "Here is the passage to output English glosses for: ";
   let fn = app_ceb_bible_gloss_generate;
-  let property_name = "explains";
+  let property_name = app_ceb_bible_gloss_generate_property();
   await g_sermon_generate_book_generic(
     ["cebulb", bible_folder],
     book_code,
