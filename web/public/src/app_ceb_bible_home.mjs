@@ -1,3 +1,4 @@
+import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_ceb_bible_gloss_generate_download } from "../../../love/public/src/app_ceb_bible_gloss_generate_download.mjs";
@@ -20,6 +21,7 @@ export async function app_ceb_bible_home(context) {
     function lambda2(ve) {
       let verse_numbers = object_property_get(ve, "verse_numbers");
       let first = list_first(verse_numbers);
+      object_property_set(object, property_name, value);
     }
     each(verses_explains, lambda2);
     let verses_ceb = await ebible_verses("cebulb", chapter_code);
