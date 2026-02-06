@@ -11,6 +11,7 @@ import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { app_bible_home_generic } from "../../../love/public/src/app_bible_home_generic.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function app_ceb_bible_home(context) {
+  return;
   let chapter_code = null;
   let r = null;
   async function lambda(a) {
