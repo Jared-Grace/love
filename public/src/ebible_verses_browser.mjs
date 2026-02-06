@@ -7,13 +7,9 @@ import { ebible_firebase_upload_path } from "../../../love/public/src/ebible_fir
 export async function ebible_verses_browser(bible_folder, chapter_code) {
   let fn = ebible_verses_browser;
   let args = list_to(arguments);
-  let json = json_to(object);
+  let json = json_to(args);
   function get() {}
-  let value = await global_function_property_initialize_async(
-    fn,
-    bible_folder,
-    get,
-  );
+  let value = await global_function_property_initialize_async(fn, json, get);
   let destination = ebible_firebase_upload_path(bible_folder, chapter_code);
   let c = await firebase_storage_download_json_decompress(destination);
   let verses = object_property_get(c, "verses");
