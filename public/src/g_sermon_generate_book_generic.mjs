@@ -183,6 +183,8 @@ export async function g_sermon_generate_book_generic(
         [property_name]: output,
         original,
       };
+      log_keep(output);
+      exit();
       return v;
       function prompt_get(group) {
         let texts = list_map_property(group, "texts");
