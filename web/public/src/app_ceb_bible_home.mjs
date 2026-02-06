@@ -37,13 +37,16 @@ export async function app_ceb_bible_home(context) {
   function on_passage(passage, p) {
     let text = object_property_get(passage, "text");
     let separator3 = string_colon_3();
-    let split1 = string_split(text, separator3);
-    function lambda4(item2) {}
-    let mapped = list_map(list2, lambda4);
-    let separator2 = string_colon_2();
-    let split = string_split(text, separator2);
-    let text_ceb = list_first(split);
+    let split3 = string_split(text, separator3);
+    function lambda4(v) {
+      let separator2 = string_colon_2();
+      let split = string_split(v, separator2);
+      let text_ceb = list_first(split);
+      return text_ceb;
+    }
+    let texts = list_map(split3, lambda4);
     let explains = object_property_get(passage, "explains");
+    each(list2, function lambda5(item2) {});
     let div = html_div_text(p, text_ceb);
     let c = app_karate_button_background();
     html_font_color_set(div, c);
