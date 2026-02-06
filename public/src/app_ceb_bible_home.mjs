@@ -1,3 +1,4 @@
+import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -45,7 +46,7 @@ export async function app_ceb_bible_home(context) {
       let component3 = html_element(component2, "tr");
       function lambda2(property) {
         let component4 = html_element(component3, "td");
-        let div2 = html_div_text(root, text2);
+        html_text_set(component5, text2);
       }
       each(properties, lambda2);
     }
