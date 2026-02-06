@@ -100,7 +100,7 @@ export async function g_sermon_generate_book_generic(
       }
       await each_index_async(verses_chapter, each_verse);
     }
-    await each_multiple_async(verses_book, each_chapter);
+    await each_multiple_async(verses_book_folders, each_chapter);
   }
   let groups = await list_adder_async(lambda4);
   let nearness = 2;
