@@ -1,3 +1,4 @@
+import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { app_karate_button_background } from "../../../karate_code/public/src/app_karate_button_background.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
@@ -16,6 +17,7 @@ export async function app_ceb_bible_home(context) {
     let text = object_property_get(item, "text");
     let div = html_div_text(p, text);
     let c = app_karate_button_background();
+    html_font_color_set(component, color);
   }
   r = await app_bible_home_generic(context, lambda);
 }
