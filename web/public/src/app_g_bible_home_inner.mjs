@@ -16,7 +16,7 @@ export async function app_g_bible_home_inner(
   async function lambda(a) {
     let p = object_property_get(a, "p");
     let verse_number = object_property_get(a, "verse_number");
-    chapter_code = object_property_get(a, "chapter_code");
+    let chapter_code = object_property_get(a, "chapter_code");
     downloaded = await g_sermon_generate_download(chapter_code);
     let passages = object_property_get(downloaded, "passages");
     function lambda2(passage) {
