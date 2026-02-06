@@ -10,8 +10,7 @@ export async function file_overwrite_json(file_path, object) {
     let json = json_format_to(object);
     await file_overwrite(file_path, json);
     return;
-  }
-  let result = await file_parent_exists_ensure(file_path);
+  }await file_parent_exists_ensure(file_path);
   "Using " +
     json_to.name +
     " did not work on sufficiently large object, whereas this did:";
