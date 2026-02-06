@@ -1,3 +1,4 @@
+import { html_element } from "../../../love/public/src/html_element.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_colon_3 } from "../../../love/public/src/string_colon_3.mjs";
 import { string_colon_2 } from "../../../love/public/src/string_colon_2.mjs";
@@ -28,14 +29,14 @@ export async function app_ceb_bible_home(context) {
       return text_ceb;
     }
     let texts = list_map(split3, lambda4);
-    let explains = object_property_get(passage, "explains");
     function lambda5(t) {
       let div = html_div_text(p, t);
       let c = app_karate_button_background();
       html_font_color_set(div, c);
     }
     each(texts, lambda5);
-    let explains2 = object_property_get(passage, "explains");
+    let explains = object_property_get(passage, "explains");
+    let component = html_element(parent, tag_name);
     log(passage);
     return;
   }
