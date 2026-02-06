@@ -1,3 +1,4 @@
+import { list_join_colon_2 } from "../../../love/public/src/list_join_colon_2.mjs";
 import { each_multiple_async } from "../../../love/public/src/each_multiple_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { g_generate_openai_responses } from "../../../love/public/src/g_generate_openai_responses.mjs";
@@ -157,7 +158,7 @@ export async function g_sermon_generate_book_generic(
       var v4 = prompt_get(item3);
       let original = object_property_get(v4, "original");
       let texts = object_property_get(v4, "texts");
-      let joined2 = list_join(list, separator);
+      let text = list_join_colon_2(texts);
       let user_prompt = object_property_get(v4, "user_prompt");
       let verse_numbers = list_map_property(item3, "verse_number");
       const prompt_user =
