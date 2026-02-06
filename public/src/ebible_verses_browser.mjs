@@ -8,7 +8,7 @@ export async function ebible_verses_browser(bible_folder, chapter_code) {
     bible_folder,
     get,
   );
-  () => {};
+  (function lambda() {});
   let destination = ebible_firebase_upload_path(bible_folder, chapter_code);
   let c = await firebase_storage_download_json_decompress(destination);
   let verses = object_property_get(c, "verses");
