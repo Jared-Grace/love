@@ -1,29 +1,12 @@
+import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { g_sermon_generate_upload_path } from "../../../love/public/src/g_sermon_generate_upload_path.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { string_replace } from "../../../love/public/src/string_replace.mjs";
-import { newline_windows } from "../../../love/public/src/newline_windows.mjs";
-import { newline } from "../../../love/public/src/newline.mjs";
-import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { firebase_upload_object_compressed } from "../../../love/public/src/firebase_upload_object_compressed.mjs";
-import { html_mobile_default_font_size } from "../../../love/public/src/html_mobile_default_font_size.mjs";
-import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
-import { list_size } from "../../../love/public/src/list_size.mjs";
-import { html_rows_set } from "../../../love/public/src/html_rows_set.mjs";
-import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
-import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
-import { html_textarea } from "../../../love/public/src/html_textarea.mjs";
-import { app_g_openai_split } from "../../../love/public/src/app_g_openai_split.mjs";
-import { equal } from "../../../love/public/src/equal.mjs";
-import { string_to } from "../../../love/public/src/string_to.mjs";
-import { list_max } from "../../../love/public/src/list_max.mjs";
-import { integer_to_try } from "../../../love/public/src/integer_to_try.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_bible_home_generic } from "../../../love/public/src/app_bible_home_generic.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function app_ceb_bible_home(context) {
@@ -36,33 +19,9 @@ export async function app_ceb_bible_home(context) {
       let verse_number = object_property_get(a, "verse_number");
       chapter_code = object_property_get(a, "chapter_code");
       let verses = await ebible_verses("cebulb", chapter_code);
-      let item = list_find_property(list, property_name, property_value);
-      function lambda2(verse) {
-        let verse_number_other = object_property_get(verse, "verse_number");
-        let verse_numbers = object_property_get(passage, "verse_numbers");
-        let mapped = list_map(verse_numbers, integer_to_try);
-        let max = list_max(mapped);
-        let s = string_to(max);
-        if (equal(s, verse_number)) {
-          let sermon = object_property_get(passage, "sermon");
-          let mapped2 = app_g_openai_split(sermon);
-          let size = list_size(mapped2);
-          let joined = list_join_newline(mapped2);
-          let ta = html_textarea(p);
-          html_mobile_default_font_size(ta);
-          html_width_full(ta);
-          html_rows_set(ta, size);
-          html_value_set(ta, joined);
-          let update = function lambda3() {
-            let value2 = html_value_get(ta);
-            let from = newline();
-            let to = newline_windows();
-            let replaced = string_replace(value2, from, to);
-            object_property_set(passage, "sermon", replaced);
-          };
-          la(update);
-        }
-      }
+      let item = list_find_property(verses, "verse_number", verse_number);
+      let text2 = object_property_get(item, "text");
+      let div = html_div_text(root, text);
       each(verses, lambda2);
     }
     r = await app_bible_home_generic(context, lambda);
