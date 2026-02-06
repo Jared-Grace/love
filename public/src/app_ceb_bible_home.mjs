@@ -38,7 +38,8 @@ export async function app_ceb_bible_home(context) {
     let text = object_property_get(passage, "text");
     let separator3 = string_colon_3();
     let split1 = string_split(text, separator3);
-    let mapped = list_map(list2, function lambda4(item2) {});
+    function lambda4(item2) {}
+    let mapped = list_map(list2, lambda4);
     let separator2 = string_colon_2();
     let split = string_split(text, separator2);
     let text_ceb = list_first(split);
