@@ -1,3 +1,4 @@
+import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -34,7 +35,8 @@ export async function app_ceb_bible_home(context) {
       let p = object_property_get(a, "p");
       let verse_number = object_property_get(a, "verse_number");
       chapter_code = object_property_get(a, "chapter_code");
-      let verses = await ebible_verses("cebulb", chapter_code);lfdp
+      let verses = await ebible_verses("cebulb", chapter_code);
+      let item = list_find_property(list, property_name, property_value);
       function lambda2(verse) {
         let verse_number_other = object_property_get(verse, "verse_number");
         let verse_numbers = object_property_get(passage, "verse_numbers");
