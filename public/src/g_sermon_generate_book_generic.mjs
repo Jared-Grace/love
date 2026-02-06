@@ -74,6 +74,7 @@ export async function g_sermon_generate_book_generic(
       let group = [];
       async function each_verse(verse, index) {
         let text = object_property_get(verse, "text");
+        let mapped5 = list_map(list, function lambda10(item4) {});
         let verse_number = object_property_get(verse, "verse_number");
         let original = null;
         if (verse_number !== "0") {
