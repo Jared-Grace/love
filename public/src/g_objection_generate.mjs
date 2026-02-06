@@ -26,7 +26,7 @@ Output each objection separated by ` +
   let fn = g_objection_generate;
   let property_name = g_objection_generate_property();
   await g_sermon_generate_book_generic(
-    bible_folder,
+    [bible_folder],
     book_code,
     fn,
     prompt_user_middle,
