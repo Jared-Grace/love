@@ -57,7 +57,7 @@ export async function g_sermon_generate_book_generic(
   let chapters_interlinear = await bible_interlinear_chapters();
   let verses_book = await list_map_unordered_async(chapters, lambda7);
   async function lambda4(la) {
-    async function lambda10(verses_chapter) {
+    async function each_chapter(verses_chapter) {
       let first = list_first(verses_chapter);
       let chapter_code = object_property_get(first, "chapter_code");
       let interlinear = object_property_get(chapters_interlinear, chapter_code);
@@ -92,7 +92,7 @@ export async function g_sermon_generate_book_generic(
       }
       await each_index_async(verses_chapter, each_verse);
     }
-    await each_async(verses_book, lambda10);
+    await each_async(verses_book, each_chapter);
   }
   let groups = await list_adder_async(lambda4);
   let nearness = 2;
