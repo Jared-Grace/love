@@ -1,4 +1,3 @@
-import { list_join_colon_2 } from "../../../love/public/src/list_join_colon_2.mjs";
 import { each_multiple_async } from "../../../love/public/src/each_multiple_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { g_generate_openai_responses } from "../../../love/public/src/g_generate_openai_responses.mjs";
@@ -187,7 +186,7 @@ export async function g_sermon_generate_book_generic(
       return v;
       function prompt_get(group) {
         let texts = list_map_property(group, "texts");
-        let text = list_join_colon_2(texts);
+        let text = list_join(texts, " ");
         log({
           texts,
           text,
