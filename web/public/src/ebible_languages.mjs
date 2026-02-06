@@ -1,3 +1,4 @@
+import { ebible_folder_cebuano } from "../../../love/public/src/ebible_folder_cebuano.mjs";
 import { list_sort_string_property } from "../../../love/public/src/list_sort_string_property.mjs";
 import { ebible_language_original } from "../../../love/public/src/ebible_language_original.mjs";
 import { ebible_language_en } from "../../../love/public/src/ebible_language_en.mjs";
@@ -52,7 +53,7 @@ export function ebible_languages() {
     },
     {
       name: "Cebuano",
-      bible_folder: "cebulb",
+      bible_folder: ebible_folder_cebuano(),
       language_code: "ceb",
     },
     {
