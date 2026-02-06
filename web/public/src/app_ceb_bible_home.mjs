@@ -38,6 +38,9 @@ export async function app_ceb_bible_home(context) {
     let split = string_split(text, separator);
     let text_ceb = list_first(split);
     let explains = object_property_get(passage, "explains");
+    let div = html_div_text(p, text_ceb);
+    let c = app_karate_button_background();
+    html_font_color_set(div, c);
     log({
       passage,
     });
