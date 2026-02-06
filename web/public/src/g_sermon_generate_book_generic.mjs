@@ -186,8 +186,10 @@ export async function g_sermon_generate_book_generic(
       return v;
       function prompt_get(group) {
         let texts = list_map_property(group, "texts");
-        function lambda12(item4) {}
-        let mapped5 = list_map(list, lambda12);
+        function lambda12(t) {
+          return list_join(t, " :: ");
+        }
+        let mapped5 = list_map(texts, lambda12);
         let text = list_join(texts, " ::: ");
         log({
           texts,
