@@ -63,7 +63,7 @@ export async function g_sermon_generate_book_generic(
       let interlinear = object_property_get(chapters_interlinear, chapter_code);
       let index_last = list_index_last(verses_chapter);
       let group = [];
-      async function lambda3(verse, index) {
+      async function each_verse(verse, index) {
         let text = object_property_get(verse, "text");
         let verse_number = object_property_get(verse, "verse_number");
         let original = null;
@@ -90,7 +90,7 @@ export async function g_sermon_generate_book_generic(
           group = [];
         }
       }
-      await each_index_async(verses_chapter, lambda3);
+      await each_index_async(verses_chapter, each_verse);
     }
     await each_async(verses_book, lambda10);
   }
