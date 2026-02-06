@@ -1,4 +1,4 @@
-import { functions_imports_fix_list } from "../../../love/public/src/functions_imports_fix_list.mjs";
+import { functions_imports_paths_fix_list } from "../../../love/public/src/functions_imports_paths_fix_list.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -30,6 +30,6 @@ export async function repo_functions_move(f_names, repo_name_to) {
   let mapped = list_map(f_names, lambda2);
   let squashed = list_squash(mapped);
   let unique = list_unique(squashed);
-  let v = await functions_imports_fix_list(unique);
+  let v = await functions_imports_paths_fix_list(unique);
   return v;
 }
