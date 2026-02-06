@@ -144,6 +144,8 @@ export async function g_sermon_generate_book_generic(
         " :::: " +
         prompt_user_middle +
         user_prompt;
+      "sermons were originally generated using: " +
+        g_generate_openai_chat_completions;
       let output = await g_generate_openai_chat_completions(
         prompt_system,
         prompt_user,
