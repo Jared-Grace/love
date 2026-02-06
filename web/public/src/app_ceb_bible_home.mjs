@@ -38,7 +38,8 @@ export async function app_ceb_bible_home(context) {
     let explains = object_property_get(passage, "explains");
     let component = html_element(p, "table");
     let component2 = html_element(component, "tbody");
-    each(list, function lambda(item) {});
+    function lambda(item) {}
+    each(list, lambda);
     log(passage);
     return;
   }
