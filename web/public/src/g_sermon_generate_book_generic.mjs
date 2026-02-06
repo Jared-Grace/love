@@ -1,5 +1,4 @@
 import { each_multiple_async } from "../../../love/public/src/each_multiple_async.mjs";
-import { list_to_dictionary_unordered_async } from "../../../love/public/src/list_to_dictionary_unordered_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { g_generate_openai_responses } from "../../../love/public/src/g_generate_openai_responses.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
@@ -61,10 +60,7 @@ export async function g_sermon_generate_book_generic(
     let verses_book = await list_map_unordered_async(chapters, lambda7);
     return verses_book;
   }
-  let dictionary = await list_to_dictionary_unordered_async(
-    bible_folders,
-    lambda3,
-  );
+  let dictionary = await list_map_unordered_async(bible_folders, lambda3);
   async function lambda4(la) {
     async function each_chapter(verses_chapter) {
       let first = list_first(verses_chapter);
