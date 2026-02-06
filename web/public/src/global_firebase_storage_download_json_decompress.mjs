@@ -1,9 +1,9 @@
 import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
 import { firebase_storage_download_json_decompress } from "../../../love/public/src/firebase_storage_download_json_decompress.mjs";
 export async function global_firebase_storage_download_json_decompress(
+  fn,
   path_get,
   property_name,
-  fn,
 ) {
   async function get() {
     let destination = path_get(property_name);
