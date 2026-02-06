@@ -31,6 +31,8 @@ export async function app_ceb_bible_home(context) {
     app_ceb_bible_gloss_generate_download,
   );
   function on_passage(passage, p) {
+    let text2 = object_property_get(passage, "text");
+    let explains = object_property_get(passage, "explains");
     log({
       passage,
     });
