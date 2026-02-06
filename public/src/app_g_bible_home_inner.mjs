@@ -13,6 +13,7 @@ export async function app_g_bible_home_inner(
   r,
   context,
 ) {
+  let chapter_code = null;
   async function lambda(a) {
     let p = object_property_get(a, "p");
     let verse_number = object_property_get(a, "verse_number");
