@@ -18,9 +18,9 @@ The original language and English are provided as a reference.`;
     "Here is the passage to output English glosses for: ";
   let fn = app_ceb_bible_gloss_generate;
   let property_name = app_ceb_bible_gloss_generate_property();
-  let v = ebible_folder_cebuano();
+  let c = ebible_folder_cebuano();
   await g_sermon_generate_book_generic(
-    [v, bible_folder],
+    [c, bible_folder],
     book_code,
     fn,
     prompt_user_middle,
