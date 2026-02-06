@@ -8,14 +8,14 @@ export async function ebible_languages_without_original_english_bible_folders_ea
   let languages = ebible_languages_without_original_english();
   let index_next = null;
   if (false) {
+    const property = "bible_folder";
+    const including_and_onward = "porbrbsl";
+    index_next = list_index_of_property(
+      languages,
+      property,
+      including_and_onward,
+    );
   }
-  const property = "bible_folder";
-  const including_and_onward = "porbrbsl";
-  index_next = list_index_of_property(
-    languages,
-    property,
-    including_and_onward,
-  );
   async function lambda2(language, i) {
     if (i < index_next) {
       return;
