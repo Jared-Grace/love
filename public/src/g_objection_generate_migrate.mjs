@@ -1,6 +1,5 @@
 import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
 import { object_property_rename } from "../../../love/public/src/object_property_rename.mjs";
-import { g_objection_generate_migrate_generic } from "../../../love/public/src/g_objection_generate_migrate_generic.mjs";
 import { file_json_transform } from "../../../love/public/src/file_json_transform.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
