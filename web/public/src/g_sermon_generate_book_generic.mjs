@@ -1,6 +1,5 @@
-import { g_generate_openai_generic } from "../../../love/public/src/g_generate_openai_generic.mjs";
-import { openai_responses } from "../../../love/public/src/openai_responses.mjs";
 import { log } from "../../../love/public/src/log.mjs";
+import { g_generate_openai_responses } from "../../../love/public/src/g_generate_openai_responses.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
@@ -152,9 +151,8 @@ export async function g_sermon_generate_book_generic(
       log({
         prompt_user,
       });
-      let fn2 = openai_responses;
-      let output = await g_generate_openai_generic(
-        fn2,
+      exit();
+      let output = await g_generate_openai_responses(
         prompt_system,
         prompt_user,
       );
