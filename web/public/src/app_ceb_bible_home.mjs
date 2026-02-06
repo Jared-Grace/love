@@ -15,7 +15,7 @@ export async function app_ceb_bible_home(context) {
     let item = list_find_property(verses, "verse_number", verse_number);
     let text = object_property_get(item, "text");
     let div = html_div_text(p, text);
-    app_karate_button_background();
+    let c = app_karate_button_background();
   }
   r = await app_bible_home_generic(context, lambda);
 }
