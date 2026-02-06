@@ -47,7 +47,7 @@ export async function app_ceb_bible_home(context) {
     let texts = list_map(split3, lambda4);
     let explains = object_property_get(passage, "explains");
     function lambda5(t) {
-      let div = html_div_text(p, text_ceb);
+      let div = html_div_text(p, t);
       let c = app_karate_button_background();
       html_font_color_set(div, c);
     }
