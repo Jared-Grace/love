@@ -5,7 +5,6 @@ import { string_to } from "../../../love/public/src/string_to.mjs";
 import { list_max } from "../../../love/public/src/list_max.mjs";
 import { integer_to_try } from "../../../love/public/src/integer_to_try.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { g_sermon_generate_download } from "../../../love/public/src/g_sermon_generate_download.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function app_g_bible_home_inner(context, on_passage, download) {
   let downloaded = null;
