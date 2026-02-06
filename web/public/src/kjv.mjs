@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 export function kjv() {
   let verses = {
     "Genesis 1:1": "In the beginning God created the heaven and the earth.",
