@@ -35,6 +35,7 @@ export async function app_ceb_bible_home(context) {
       html_font_color_set(div, c);
     }
     each(texts, lambda5);
+    let explains2 = object_property_get(passage, "explains");
     log(passage);
     return;
   }
