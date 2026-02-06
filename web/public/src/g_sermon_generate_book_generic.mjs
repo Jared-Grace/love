@@ -156,7 +156,8 @@ export async function g_sermon_generate_book_generic(
       let joined = list_join(mapped3, " ::: ");
       var v4 = prompt_get(item3);
       let original = object_property_get(v4, "original");
-      let text = object_property_get(v4, "text");
+      let texts = object_property_get(v4, "texts");
+      let joined2 = list_join(list, separator);
       let user_prompt = object_property_get(v4, "user_prompt");
       let verse_numbers = list_map_property(item3, "verse_number");
       const prompt_user =
