@@ -16,8 +16,10 @@ export async function app_ceb_bible_home(context) {
     chapter_code = object_property_get(a, "chapter_code");
     let verses_explains =
       await app_ceb_bible_gloss_generate_download(chapter_code);
-    function lambda2(item2) {}
-    each(list, lambda2);
+    function lambda2(ve) {
+      let verse_numbers = object_property_get(ve, "verse_numbers");
+    }
+    each(verses_explains, lambda2);
     let verses_ceb = await ebible_verses("cebulb", chapter_code);
     let item = list_find_property(verses_ceb, "verse_number", verse_number);
     let text = object_property_get(item, "text");
