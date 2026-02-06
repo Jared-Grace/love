@@ -36,16 +36,16 @@ import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { ebible_chapters } from "../../../love/public/src/ebible_chapters.mjs";
 export async function g_sermon_generate_book_generic(
-  bible_folder,
+  bible_folders,
   book_code,
   fn,
   prompt_user_middle,
   prompt_system,
   property_name,
 ) {
-  let chapters = await ebible_chapters(bible_folder, book_code);
+  let chapters = await ebible_chapters(bible_folders, book_code);
   async function lambda7(chapter_code) {
-    let verses = await ebible_verses(bible_folder, chapter_code);
+    let verses = await ebible_verses(bible_folders, chapter_code);
     function lambda8(v) {
       let to2 = object_merge(v, {
         chapter_code,
