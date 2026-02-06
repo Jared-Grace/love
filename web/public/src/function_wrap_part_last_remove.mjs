@@ -5,7 +5,7 @@ import { function_wrap } from "../../../love/public/src/function_wrap.mjs";
 export async function function_wrap_part_last_remove(f_name) {
   assert_arguments(arguments, 1);
   let unaliased = await function_name_unalias_only(f_name);
-  let f_path = function_name_to_parts(unaliased);
+  let parts = function_name_to_parts(unaliased);
   let v = await function_wrap(unaliased, f_name_wrapped);
   return v;
 }
