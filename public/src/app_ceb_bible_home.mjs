@@ -1,3 +1,4 @@
+import { app_karate_button_background } from "../../../karate_code/public/src/app_karate_button_background.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
@@ -14,6 +15,7 @@ export async function app_ceb_bible_home(context) {
     let item = list_find_property(verses, "verse_number", verse_number);
     let text = object_property_get(item, "text");
     let div = html_div_text(p, text);
+    app_karate_button_background();
   }
   r = await app_bible_home_generic(context, lambda);
 }
