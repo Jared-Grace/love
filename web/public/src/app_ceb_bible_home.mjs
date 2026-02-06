@@ -19,7 +19,7 @@ export async function app_ceb_bible_home(context) {
       await app_ceb_bible_gloss_generate_download(chapter_code);
     function lambda2(ve) {
       let verse_numbers = object_property_get(ve, "verse_numbers");
-      let first = list_first(list);
+      let first = list_first(verse_numbers);
     }
     each(verses_explains, lambda2);
     let verses_ceb = await ebible_verses("cebulb", chapter_code);
