@@ -1,3 +1,4 @@
+import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
 import { function_name_to_parts } from "../../../love/public/src/function_name_to_parts.mjs";
 import { function_name_unalias_only } from "../../../love/public/src/function_name_unalias_only.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
@@ -6,6 +7,7 @@ export async function function_wrap_part_last_remove(f_name) {
   assert_arguments(arguments, 1);
   let unaliased = await function_name_unalias_only(f_name);
   let parts = function_name_to_parts(unaliased);
+  let removed = list_remove_last(list);
   let v = await function_wrap(unaliased, f_name_wrapped);
   return v;
 }
