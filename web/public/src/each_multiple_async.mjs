@@ -9,7 +9,8 @@ export async function each_multiple_async(lists, lambda) {
   let fs = list_size(first);
   function lambda3(list) {
     let size = list_size(list);
-    return size === fs;
+    let v = size === fs;
+    return v;
   }
   let a = list_all(lists, lambda3);
   assert(b);
