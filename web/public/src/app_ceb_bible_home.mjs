@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { string_replace } from "../../../love/public/src/string_replace.mjs";
 import { newline_windows } from "../../../love/public/src/newline_windows.mjs";
 import { newline } from "../../../love/public/src/newline.mjs";
@@ -26,6 +27,9 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 export async function app_ceb_bible_home(context) {
   await app_g_bible_home_inner(context, on_passage);
   function on_passage(passage, p) {
+    log({
+      passage,
+    });
     return;
     let sermon = object_property_get(passage, "sermon");
     let mapped2 = app_g_openai_split(sermon);
