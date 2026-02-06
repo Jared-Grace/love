@@ -5,7 +5,7 @@ import { firebase_storage_download_json_decompress } from "../../../love/public/
 import { ebible_firebase_upload_path } from "../../../love/public/src/ebible_firebase_upload_path.mjs";
 export async function ebible_verses_browser(bible_folder, chapter_code) {
   let fn = ebible_verses_browser;
-  let l = list_to(arguments);
+  let args = list_to(arguments);
   function get() {}
   let value = await global_function_property_initialize_async(
     fn,
