@@ -34,7 +34,7 @@ export async function app_ceb_bible_home(context) {
       let p = object_property_get(a, "p");
       let verse_number = object_property_get(a, "verse_number");
       chapter_code = object_property_get(a, "chapter_code");
-      value = await ebible_verses("cebulb", chapter_code);
+      let verses = await ebible_verses("cebulb", chapter_code);
       let passages = object_property_get(value, "passages");
       function lambda2(passage) {
         let verse_numbers = object_property_get(passage, "verse_numbers");
