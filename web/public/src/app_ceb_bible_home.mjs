@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_colon_3 } from "../../../love/public/src/string_colon_3.mjs";
 import { string_colon_2 } from "../../../love/public/src/string_colon_2.mjs";
 import { string_split } from "../../../love/public/src/string_split.mjs";
@@ -36,7 +37,8 @@ export async function app_ceb_bible_home(context) {
   function on_passage(passage, p) {
     let text = object_property_get(passage, "text");
     let separator3 = string_colon_3();
-    let split1 = string_split(text, separator3);lm
+    let split1 = string_split(text, separator3);
+    let mapped = list_map(list2, function lambda4(item2) {});
     let separator2 = string_colon_2();
     let split = string_split(text, separator2);
     let text_ceb = list_first(split);
