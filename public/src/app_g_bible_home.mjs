@@ -25,7 +25,6 @@ export async function app_g_bible_home(context) {
   async function lambda5(la) {
     ({ chapter_code, downloaded, r } = await app_g_bible_home_inner(
       on_passage,
-      r,
       context,
     ));
     function on_passage(passage, p) {
