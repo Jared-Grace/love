@@ -84,7 +84,7 @@ export async function g_sermon_generate_book_generic(
           let text = object_property_get(v, "text");
           return text;
         }
-        let mapped5 = list_map(verses_chapter_folders, lambda10);
+        let texts = list_map(verses_chapter_folders, lambda10);
         let original = null;
         if (verse_number !== "0") {
           let original_verse = list_find_property(
@@ -96,7 +96,7 @@ export async function g_sermon_generate_book_generic(
         }
         list_add(group, {
           original,
-          text,
+          texts,
           verse_number,
           chapter_code,
         });
