@@ -36,7 +36,7 @@ export async function app_ceb_bible_home(context) {
   function on_passage(passage, p) {
     let text = object_property_get(passage, "text");
     let separator3 = string_colon_3();
-    let split1 = string_split(text, separator3);
+    let split1 = string_split(text, separator3);lm
     let separator2 = string_colon_2();
     let split = string_split(text, separator2);
     let text_ceb = list_first(split);
