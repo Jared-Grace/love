@@ -4,5 +4,5 @@ import { g_objection_generate } from "../../../love/public/src/g_objection_gener
 export async function g_objection_generate_upload() {
   let path_get = g_objection_generate_upload_path;
   let fn = g_objection_generate;
-  await g_generate_upload_generic(path_get, fn);
+  await g_generate_upload_generic(fn, path_get);
 }
