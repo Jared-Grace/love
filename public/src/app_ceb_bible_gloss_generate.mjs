@@ -5,8 +5,8 @@ export async function app_ceb_bible_gloss_generate() {
   let book_code = "JAS";
   const prompt_system = `You will be given a Bible passage and its context in Cebuano.
 For each Cebuano word, output an English gloss.
-Also output a full explanation of each Cebuano word, explaining its meaning and grammar (including prefixes and suffixes), written for an English speaker with no background in grammar. Explanations should be easy to understand.
-Explain as simply as possible.
+Also output a full explanation of each Cebuano word, explaining its meaning and grammar (including prefixes and suffixes), written for an English speaker with no background in grammar. 
+Explanations should be easy to understand. Explain as simply as possible.
 
 Output format:
 [{"ceb":"CEBUANO_WORD","gloss":"ENGLISH_GLOSS","explain":"FULL_EXPLANATION"}, ...]
