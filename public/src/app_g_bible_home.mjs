@@ -26,6 +26,7 @@ export async function app_g_bible_home(context) {
     ({ chapter_code, downloaded, r } = await app_g_bible_home_inner(
       context,
       on_passage,
+      g_sermon_generate_download,
     ));
     function on_passage(passage, p) {
       let sermon = object_property_get(passage, "sermon");
