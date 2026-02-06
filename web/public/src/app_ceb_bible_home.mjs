@@ -1,3 +1,4 @@
+import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
@@ -22,7 +23,6 @@ import { string_to } from "../../../love/public/src/string_to.mjs";
 import { list_max } from "../../../love/public/src/list_max.mjs";
 import { integer_to_try } from "../../../love/public/src/integer_to_try.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { g_sermon_generate_download } from "../../../love/public/src/g_sermon_generate_download.mjs";
 import { app_bible_home_generic } from "../../../love/public/src/app_bible_home_generic.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function app_ceb_bible_home(context) {
@@ -34,7 +34,7 @@ export async function app_ceb_bible_home(context) {
       let p = object_property_get(a, "p");
       let verse_number = object_property_get(a, "verse_number");
       chapter_code = object_property_get(a, "chapter_code");
-      value = await g_sermon_generate_download(chapter_code);
+      value = await ebible_verses("cebulb", chapter_code);
       let passages = object_property_get(value, "passages");
       function lambda2(passage) {
         let verse_numbers = object_property_get(passage, "verse_numbers");
