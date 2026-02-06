@@ -189,7 +189,7 @@ export async function g_sermon_generate_book_generic(
       };
       return v;
       function prompt_get(group) {
-        let text = list_map_property_join_space(group, "text");
+        let text = list_map_property_join_space(group, "texts");
         let original = list_map_property_join_space(group, "original");
         const user_prompt = original + " :: " + text;
         let v2 = {
