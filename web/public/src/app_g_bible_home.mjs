@@ -1,5 +1,5 @@
+import { app_g_bible_home_inner } from "../../../love/public/src/app_g_bible_home_inner.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { g_sermon_generate_upload_path } from "../../../love/public/src/g_sermon_generate_upload_path.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -17,37 +17,19 @@ import { list_join_newline } from "../../../love/public/src/list_join_newline.mj
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { html_textarea } from "../../../love/public/src/html_textarea.mjs";
 import { app_g_openai_split } from "../../../love/public/src/app_g_openai_split.mjs";
-import { equal } from "../../../love/public/src/equal.mjs";
-import { string_to } from "../../../love/public/src/string_to.mjs";
-import { list_max } from "../../../love/public/src/list_max.mjs";
-import { integer_to_try } from "../../../love/public/src/integer_to_try.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
-import { g_sermon_generate_download } from "../../../love/public/src/g_sermon_generate_download.mjs";
-import { app_bible_home_generic } from "../../../love/public/src/app_bible_home_generic.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function app_g_bible_home(context) {
   let downloaded = null;
   let chapter_code = null;
   let r = null;
   async function lambda5(la) {
-    async function lambda(a) {
-      let p = object_property_get(a, "p");
-      let verse_number = object_property_get(a, "verse_number");
-      chapter_code = object_property_get(a, "chapter_code");
-      downloaded = await g_sermon_generate_download(chapter_code);
-      let passages = object_property_get(downloaded, "passages");
-      function lambda2(passage) {
-        let verse_numbers = object_property_get(passage, "verse_numbers");
-        let mapped = list_map(verse_numbers, integer_to_try);
-        let max = list_max(mapped);
-        let s = string_to(max);
-        if (equal(s, verse_number)) {
-          on_passage(passage, p);
-        }
-      }
-      each(passages, lambda2);
-    }
-    r = await app_bible_home_generic(context, lambda);
+    ({ chapter_code, downloaded, r } = await app_g_bible_home_inner(
+      chapter_code,
+      downloaded,
+      on_passage,
+      r,
+      context,
+    ));
     function on_passage(passage, p) {
       let sermon = object_property_get(passage, "sermon");
       let mapped2 = app_g_openai_split(sermon);
