@@ -66,8 +66,8 @@ export async function g_sermon_generate_book_generic(
     return v5;
   }
   let v = await list_map_unordered_async(bible_folders, lambda3);
-  let verses_book2 = object_property_get(v, "verses_book");
-  let chapters2 = object_property_get(v, "chapters");
+  let verses_book_folders = object_property_get(v, "verses_book");
+  let chapters_folders = object_property_get(v, "chapters");
   async function lambda4(la) {
     async function each_chapter(verses_chapter_folders) {
       let verses_chapter = list_first(verses_chapter_folders);
