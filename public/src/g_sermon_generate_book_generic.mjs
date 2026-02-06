@@ -191,9 +191,8 @@ export async function g_sermon_generate_book_generic(
           return joined2;
         }
         let mapped5 = list_map(texts, lambda12);
-        let text = list_join(texts, " ::: ");
+        let text = list_join(mapped5, " ::: ");
         log({
-          texts,
           text,
           a: 1,
         });
