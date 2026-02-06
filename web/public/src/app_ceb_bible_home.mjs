@@ -1,3 +1,4 @@
+import { list_find } from "../../../love/public/src/list_find.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -35,8 +36,9 @@ export async function app_ceb_bible_home(context) {
       let verse_number = object_property_get(a, "verse_number");
       chapter_code = object_property_get(a, "chapter_code");
       let verses = await ebible_verses("cebulb", chapter_code);
+      let found = list_find(list, function lambda6(item) {});
       function lambda2(verse) {
-        let verse_number_v = object_property_get(verse, "verse_number");
+        let verse_number_other = object_property_get(verse, "verse_number");
         let verse_numbers = object_property_get(passage, "verse_numbers");
         let mapped = list_map(verse_numbers, integer_to_try);
         let max = list_max(mapped);
