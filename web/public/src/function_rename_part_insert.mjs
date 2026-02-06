@@ -4,9 +4,10 @@ export async function function_rename_part_insert(
   part,
   index_string,
 ) {
-  return await function_rename_part_insert_at(
+  let v = await function_rename_part_insert_at(
     f_name_before,
     part,
     index_string,
   );
+  return v;
 }
