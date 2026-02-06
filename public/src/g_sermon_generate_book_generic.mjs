@@ -1,3 +1,4 @@
+import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { each_multiple_async } from "../../../love/public/src/each_multiple_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { g_generate_openai_responses } from "../../../love/public/src/g_generate_openai_responses.mjs";
@@ -171,7 +172,7 @@ export async function g_sermon_generate_book_generic(
         user_prompt;
       "sermons were originally generated using: " +
         g_generate_openai_chat_completions;
-      log(prompt_system + " " + prompt_user);
+      log_keep(prompt_system + " " + prompt_user);
       let output = await g_generate_openai_responses(
         prompt_system,
         prompt_user,
