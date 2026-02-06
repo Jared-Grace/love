@@ -1,3 +1,4 @@
+import { list_to_dictionary_async } from "../../../love/public/src/list_to_dictionary_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { g_generate_openai_responses } from "../../../love/public/src/g_generate_openai_responses.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
@@ -43,6 +44,10 @@ export async function g_sermon_generate_book_generic(
   prompt_system,
   property_name,
 ) {
+  let dictionary = await list_to_dictionary_async(
+    list,
+    async function lambda3(item4) {},
+  );
   let chapters = await ebible_chapters(bible_folders, book_code);
   async function lambda7(chapter_code) {
     let verses = await ebible_verses(bible_folders, chapter_code);
