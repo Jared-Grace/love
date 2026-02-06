@@ -26,7 +26,7 @@ export async function app_g_bible_home_inner(on_passage, context) {
     }
     each(passages, lambda2);
   }
-  r = await app_bible_home_generic(context, lambda);
+  let r = await app_bible_home_generic(context, lambda);
   let v = {
     chapter_code,
     downloaded,
