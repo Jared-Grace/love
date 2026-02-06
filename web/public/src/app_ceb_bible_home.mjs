@@ -1,3 +1,4 @@
+import { string_split } from "../../../love/public/src/string_split.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { string_replace } from "../../../love/public/src/string_replace.mjs";
 import { newline_windows } from "../../../love/public/src/newline_windows.mjs";
@@ -31,7 +32,8 @@ export async function app_ceb_bible_home(context) {
     app_ceb_bible_gloss_generate_download,
   );
   function on_passage(passage, p) {
-    let text2 = object_property_get(passage, "text");
+    let text = object_property_get(passage, "text");
+    let split = string_split(s, separator);
     let explains = object_property_get(passage, "explains");
     log({
       passage,
