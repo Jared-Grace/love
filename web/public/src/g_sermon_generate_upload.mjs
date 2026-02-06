@@ -10,5 +10,5 @@ export async function g_sermon_generate_upload() {
   );
   let path_get = g_sermon_generate_upload_path;
   let fn = g_sermon_generate;
-  await g_generate_upload_generic(path_get, fn);
+  await g_generate_upload_generic(fn, path_get);
 }
