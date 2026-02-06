@@ -1,10 +1,7 @@
+import { lists_size_max } from "../../../love/public/src/lists_size_max.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
-import { list_max } from "../../../love/public/src/list_max.mjs";
-import { list_size } from "../../../love/public/src/list_size.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 export function each_multiple_generic(lists, getter, lambda) {
-  let mapped = list_map(lists, list_size);
-  let max = list_max(mapped);
+  let max = lists_size_max(lists);
   function lambda_each_range(index) {
     let items = getter(lists, index);
     lambda(items);
