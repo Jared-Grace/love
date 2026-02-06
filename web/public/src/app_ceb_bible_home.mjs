@@ -46,7 +46,8 @@ export async function app_ceb_bible_home(context) {
       let component3 = html_element(component2, "tr");
       function lambda2(property) {
         let component4 = html_element(component3, "td");
-        html_text_set(component5, text2);
+        let value = object_property_get(object, property_name);
+        html_text_set(component4, text2);
       }
       each(properties, lambda2);
     }
