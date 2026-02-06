@@ -2,7 +2,8 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { g_sermon_generate_book } from "../../../love/public/src/g_sermon_generate_book.mjs";
-export async function g_sermon_generate() {'dont want to accidentally overwrite sermons'
+export async function g_sermon_generate() {
+  "dont want to accidentally overwrite sermons";
   return;
   const bible_folder = "engbsb";
   let books = await ebible_version_books(bible_folder);
