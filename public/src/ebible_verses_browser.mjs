@@ -1,11 +1,11 @@
-import { list_take } from "../../../love/public/src/list_take.mjs";
+import { list_to } from "../../../love/public/src/list_to.mjs";
 import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { firebase_storage_download_json_decompress } from "../../../love/public/src/firebase_storage_download_json_decompress.mjs";
 import { ebible_firebase_upload_path } from "../../../love/public/src/ebible_firebase_upload_path.mjs";
 export async function ebible_verses_browser(bible_folder, chapter_code) {
   let fn = ebible_verses_browser;
-  let taken = list_take(list, count);
+  let l = list_to(a);
   function get() {}
   let value = await global_function_property_initialize_async(
     fn,
