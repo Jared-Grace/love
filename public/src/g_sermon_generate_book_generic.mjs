@@ -44,27 +44,26 @@ export async function g_sermon_generate_book_generic(
   prompt_system,
   property_name,
 ) {
+  let chapters_interlinear = await bible_interlinear_chapters();
   async function lambda3(bible_folder) {
     let chapters = await ebible_chapters(bible_folder, book_code);
-    return chapters;
+    async function lambda7(chapter_code) {
+      let verses = await ebible_verses(bible_folders, chapter_code);
+      function lambda8(v) {
+        let to2 = object_merge(v, {
+          chapter_code,
+        });
+      }
+      each(verses, lambda8);
+      return verses;
+    }
+    let verses_book = await list_map_unordered_async(chapters, lambda7);
   }
   let dictionary = await list_to_dictionary_unordered_async(
     bible_folders,
     lambda3,
   );
   let chapters = await ebible_chapters(bible_folders, book_code);
-  async function lambda7(chapter_code) {
-    let verses = await ebible_verses(bible_folders, chapter_code);
-    function lambda8(v) {
-      let to2 = object_merge(v, {
-        chapter_code,
-      });
-    }
-    each(verses, lambda8);
-    return verses;
-  }
-  let chapters_interlinear = await bible_interlinear_chapters();
-  let verses_book = await list_map_unordered_async(chapters, lambda7);
   async function lambda4(la) {
     async function each_chapter(verses_chapter) {
       let first = list_first(verses_chapter);
