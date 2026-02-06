@@ -1,4 +1,3 @@
-import { g_sermon_generate_download } from "../../../love/public/src/g_sermon_generate_download.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { string_replace } from "../../../love/public/src/string_replace.mjs";
 import { newline_windows } from "../../../love/public/src/newline_windows.mjs";
@@ -26,7 +25,11 @@ import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { app_bible_home_generic } from "../../../love/public/src/app_bible_home_generic.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function app_ceb_bible_home(context) {
-  await app_g_bible_home_inner(context, on_passage, g_sermon_generate_download);
+  await app_g_bible_home_inner(
+    context,
+    on_passage,
+    app_ceb_bible_explains_generate_download,
+  );
   function on_passage(passage, p) {
     log({
       passage,
