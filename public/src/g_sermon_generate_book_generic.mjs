@@ -173,6 +173,7 @@ export async function g_sermon_generate_book_generic(
       "sermons were originally generated using: " +
         g_generate_openai_chat_completions;
       log({
+        prompt_system,
         prompt_user,
       });
       exit();
@@ -188,9 +189,6 @@ export async function g_sermon_generate_book_generic(
       };
       return v;
       function prompt_get(group) {
-        log({
-          group,
-        });
         let texts = list_map_property(group, "texts");
         let text = list_join_colon_2(texts);
         let original = list_map_property_join_space(group, "original");
