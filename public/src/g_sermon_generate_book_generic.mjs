@@ -206,6 +206,9 @@ export async function g_sermon_generate_book_generic(
       chapter_code,
       passages,
     });
+    log({
+      path,
+    });
     exit();
   }
   await each_async(chapters, lambda9);
