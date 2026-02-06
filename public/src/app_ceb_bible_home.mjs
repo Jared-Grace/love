@@ -28,7 +28,7 @@ export async function app_ceb_bible_home(context) {
   await app_g_bible_home_inner(
     context,
     on_passage,
-    app_ceb_bible_explains_generate_download,
+    app_ceb_bible_gloss_generate_download,
   );
   function on_passage(passage, p) {
     log({
