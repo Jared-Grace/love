@@ -7,11 +7,7 @@ export async function function_rename_part_insert(
   part_insert,
 ) {
   let parts = function_name_to_parts(f_name_before);
-  let index = string_index_of(s, item);
-  let v = await function_rename_part_insert_at(
-    f_name_before,
-    part_new,
-    index_string,
-  );
+  let index = string_index_of(parts, part_insert);
+  let v = await function_rename_part_insert_at(f_name_before, part_new, index);
   return v;
 }
