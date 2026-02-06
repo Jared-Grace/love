@@ -1,3 +1,4 @@
+import { each_multiple_async } from "../../../love/public/src/each_multiple_async.mjs";
 import { list_to_dictionary_unordered_async } from "../../../love/public/src/list_to_dictionary_unordered_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { g_generate_openai_responses } from "../../../love/public/src/g_generate_openai_responses.mjs";
@@ -100,7 +101,7 @@ export async function g_sermon_generate_book_generic(
       }
       await each_index_async(verses_chapter, each_verse);
     }
-    await each_async(verses_book, each_chapter);
+    await each_multiple_async(verses_book, each_chapter);
   }
   let groups = await list_adder_async(lambda4);
   let nearness = 2;
