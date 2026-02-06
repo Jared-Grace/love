@@ -9,8 +9,10 @@ export async function ebible_verses_browser(bible_folder, chapter_code) {
     let verses = object_property_get(c, "verses");
     return verses;
   }
-  let fn = ebible_verses_browser;
-  let args1 = arguments;
-  let value = await global_function_call_cache_async(fn, args1, get);
+  let value = await global_function_call_cache_async(
+    ebible_verses_browser,
+    arguments,
+    get,
+  );
   return value;
 }
