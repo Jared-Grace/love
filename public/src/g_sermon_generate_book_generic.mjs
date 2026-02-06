@@ -49,7 +49,7 @@ export async function g_sermon_generate_book_generic(
   async function lambda3(bible_folder) {
     let chapters = await ebible_chapters(bible_folder, book_code);
     async function lambda7(chapter_code) {
-      let verses = await ebible_verses(bible_folders, chapter_code);
+      let verses = await ebible_verses(bible_folder, chapter_code);
       function lambda8(v) {
         let to2 = object_merge(v, {
           chapter_code,
