@@ -121,6 +121,9 @@ export async function g_sermon_generate_book_generic(
   let groups = await list_adder_async(lambda4);
   let nearness = 2;
   function lambda(item, index) {
+    log({
+      item,
+    });
     let r = range_from(index - nearness, index + nearness + 1);
     function lambda6(index3) {
       let ii = list_index_is(groups, index3);
