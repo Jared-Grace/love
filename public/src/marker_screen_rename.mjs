@@ -9,7 +9,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { marker_screen_add_generic } from "../../../love/public/src/marker_screen_add_generic.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { list_add } from "./list_add.mjs";
 export async function marker_screen_rename(
   screen_name_before,
