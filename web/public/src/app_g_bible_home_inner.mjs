@@ -8,7 +8,6 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { g_sermon_generate_download } from "../../../love/public/src/g_sermon_generate_download.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function app_g_bible_home_inner(
-  chapter_code,
   downloaded,
   on_passage,
   r,
