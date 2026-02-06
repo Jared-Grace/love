@@ -1,4 +1,3 @@
-import { marker } from "../../../love/public/src/marker.mjs";
 import { integer_is_assert } from "../../../love/public/src/integer_is_assert.mjs";
 import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";

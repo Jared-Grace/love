@@ -1,6 +1,5 @@
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { prompt_previous_get } from "../../../love/public/src/prompt_previous_get.mjs";
-import { marker } from "../../../love/public/src/marker.mjs";
 import { function_run_line } from "../../../love/public/src/function_run_line.mjs";
 export async function prompt_previous() {
   assert_arguments(arguments, 0);

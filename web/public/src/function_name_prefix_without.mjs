@@ -1,3 +1,4 @@
+import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { function_name_separator } from "../../../love/public/src/function_name_separator.mjs";
 import { string_prefix_without } from "../../../love/public/src/string_prefix_without.mjs";
