@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { app_ceb_bible_gloss_generate_download } from "../../../love/public/src/app_ceb_bible_gloss_generate_download.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { app_karate_button_background } from "../../../karate_code/public/src/app_karate_button_background.mjs";
@@ -15,6 +16,7 @@ export async function app_ceb_bible_home(context) {
     chapter_code = object_property_get(a, "chapter_code");
     let verses_explains =
       await app_ceb_bible_gloss_generate_download(chapter_code);
+    each(list, function lambda2(item2) {});
     let verses_ceb = await ebible_verses("cebulb", chapter_code);
     let item = list_find_property(verses_ceb, "verse_number", verse_number);
     let text = object_property_get(item, "text");
