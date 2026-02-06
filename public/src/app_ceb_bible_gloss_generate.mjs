@@ -13,8 +13,7 @@ Output format:
 
 "CEBUANO_WORD" should include any punctuation before or after a word.
 The original language and English are provided as a reference.`;
-  const prompt_user_middle =
-    "Here is the passage to output English glosses for: ";
+  const prompt_user_middle = "Here is the passage to output for: ";
   let fn = app_ceb_bible_gloss_generate;
   let property_name = g_objection_generate_property();
   await g_sermon_generate_book_generic(
