@@ -2,7 +2,7 @@ import { exit } from "../../../love/public/src/exit.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { list_map_property_join_space } from "../../../love/public/src/list_map_property_join_space.mjs";
-import { g_generate_openai } from "../../../love/public/src/g_generate_openai.mjs";
+import { g_generate_openai_chat_completions } from "../../../love/public/src/g_generate_openai_chat_completions.mjs";
 import { list_join } from "../../../love/public/src/list_join.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -144,7 +144,10 @@ export async function g_sermon_generate_book_generic(
         " :::: " +
         prompt_user_middle +
         user_prompt;
-      let output = await g_generate_openai(prompt_system, prompt_user);
+      let output = await g_generate_openai_chat_completions(
+        prompt_system,
+        prompt_user,
+      );
       let v = {
         verse_numbers,
         text,
