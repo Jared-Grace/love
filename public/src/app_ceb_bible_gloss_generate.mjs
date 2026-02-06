@@ -1,3 +1,4 @@
+import { ebible_folder_cebuano } from "../../../love/public/src/ebible_folder_cebuano.mjs";
 import { app_ceb_bible_gloss_generate_property } from "../../../love/public/src/app_ceb_bible_gloss_generate_property.mjs";
 import { g_sermon_generate_book_generic } from "../../../love/public/src/g_sermon_generate_book_generic.mjs";
 export async function app_ceb_bible_gloss_generate() {
@@ -17,8 +18,9 @@ The original language and English are provided as a reference.`;
     "Here is the passage to output English glosses for: ";
   let fn = app_ceb_bible_gloss_generate;
   let property_name = app_ceb_bible_gloss_generate_property();
+  let v = ebible_folder_cebuano();
   await g_sermon_generate_book_generic(
-    ["cebulb", bible_folder],
+    [v, bible_folder],
     book_code,
     fn,
     prompt_user_middle,
