@@ -17,7 +17,7 @@ export async function app_ceb_bible_home(context) {
     let text = object_property_get(item, "text");
     let div = html_div_text(p, text);
     let c = app_karate_button_background();
-    html_font_color_set(component, color);
+    html_font_color_set(div, c);
   }
   r = await app_bible_home_generic(context, lambda);
 }
