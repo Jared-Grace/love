@@ -189,6 +189,7 @@ export async function g_sermon_generate_book_generic(
         let texts = list_map_property(group, "texts");
         let text = list_join_colon_2(texts);
         log({
+          texts,
           text,
         });
         let original = list_map_property_join_space(group, "original");
