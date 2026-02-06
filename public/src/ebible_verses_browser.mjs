@@ -13,7 +13,8 @@ export async function ebible_verses_browser(bible_folder, chapter_code) {
   }
   let fn = ebible_verses_browser;
   let args1 = arguments;
-  let args = list_to(arguments);
+  let args = list_to(args1);
   let json = json_to(args);
   let value = await global_function_property_initialize_async(fn, json, get);
+  return value;
 }
