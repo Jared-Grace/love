@@ -3,13 +3,14 @@ import { global_function_property_initialize_async } from "../../../love/public/
 import { g_sermon_generate_upload_path } from "../../../love/public/src/g_sermon_generate_upload_path.mjs";
 export async function g_sermon_generate_download(chapter_code) {
   let path_get = g_sermon_generate_upload_path;
+  let fn = g_sermon_generate_download;
   async function get() {
     let destination = path_get(chapter_code);
     let o = await firebase_storage_download_json_decompress(destination);
     return o;
   }
   let value = await global_function_property_initialize_async(
-    g_sermon_generate_download,
+    fn,
     chapter_code,
     get,
   );
