@@ -3,9 +3,9 @@ import { g_sermon_generate_book_generic } from "../../../love/public/src/g_sermo
 export async function app_ceb_bible_gloss_generate() {
   let bible_folder = "engbsb";
   let book_code = "JAS";
-  const prompt_system = `You will be given a Bible passage in Cebuano. For each Cebuano word, output an English gloss. Each gloss should be a string in a JSON array.`;
+  const prompt_system = ``;
   const prompt_user_middle =
-    "Generate objections that the following passage would refute; Output 5–10 objections: ";
+    "You will be given a Bible passage in Cebuano. For each Cebuano word, output an English gloss. Each gloss should be a string in a JSON array.";
   let fn = app_ceb_bible_gloss_generate;
   let property_name = g_objection_generate_property();
   await g_sermon_generate_book_generic(
