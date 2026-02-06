@@ -7,7 +7,7 @@ export async function function_wrap_part_last_remove(f_name) {
   assert_arguments(arguments, 1);
   let unaliased = await function_name_unalias_only(f_name);
   let parts = function_name_to_parts(unaliased);
-  let removed = list_remove_last(list);
+  let removed = list_remove_last(parts);
   let v = await function_wrap(unaliased, f_name_wrapped);
   return v;
 }
