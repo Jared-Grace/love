@@ -60,7 +60,10 @@ export async function g_sermon_generate_book_generic(
     let verses_book = await list_map_unordered_async(chapters, lambda7);
     return verses_book;
   }
-  let dictionary = await list_map_unordered_async(bible_folders, lambda3);
+  let verses_book_folders = await list_map_unordered_async(
+    bible_folders,
+    lambda3,
+  );
   async function lambda4(la) {
     async function each_chapter(verses_chapter) {
       let first = list_first(verses_chapter);
