@@ -9,7 +9,7 @@ export async function app_ceb_bible_gloss_generate() {
   let fn = app_ceb_bible_gloss_generate;
   let property_name = g_objection_generate_property();
   await g_sermon_generate_book_generic(
-    [bible_folder],
+    ["cebulb", bible_folder],
     book_code,
     fn,
     prompt_user_middle,
