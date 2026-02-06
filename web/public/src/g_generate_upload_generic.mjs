@@ -1,3 +1,5 @@
+import { exit } from "../../../love/public/src/exit.mjs";
+import { log } from "../../../love/public/src/log.mjs";
 import { firebase_upload_object_compressed } from "../../../love/public/src/firebase_upload_object_compressed.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { string_includes } from "../../../love/public/src/string_includes.mjs";
@@ -19,6 +21,10 @@ export async function g_generate_upload_generic(fn, path_get) {
     let destination = path_get(chapter_code);
     let path = local_function_path_json(chapter_code, fn);
     let data = await file_read_json(path);
+    log({
+      destination,
+    });
+    exit();
     await firebase_upload_object_compressed(destination, data);
   }
 }
