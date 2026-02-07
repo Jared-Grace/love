@@ -1,7 +1,7 @@
 import { app_bible_chapter_set } from "../../../love/public/src/app_bible_chapter_set.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { app_bible_chapters } from "../../../love/public/src/app_bible_chapters.mjs";
-import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
+import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { ebible_chapter_code_pad } from "../../../love/public/src/ebible_chapter_code_pad.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -21,7 +21,7 @@ export async function app_bible_books(context) {
     function lambda3() {
       let chapter_code = ebible_chapter_code_pad(book_code, "1");
       app_bible_chapter_set(hash, chapter_code);
-      app_generic_screen_set(context, app_bible_chapters);
+      app_shared_screen_set(context, app_bible_chapters);
     }
     let component = html_button(root, text, lambda3);
   }
