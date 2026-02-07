@@ -18,5 +18,6 @@ export async function app_original_bible_gloss_generate() {
     fn,
     property_name,
     language_code,
+    null,
   );
 }
