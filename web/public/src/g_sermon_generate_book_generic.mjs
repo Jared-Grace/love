@@ -146,7 +146,6 @@ export async function g_sermon_generate_book_generic(
     let path = local_function_path_json(chapter_code, fn);
     let exists = await file_exists(path);
     if (exists) {
-      return;
     } else {
     }
     function lambda11(group) {
