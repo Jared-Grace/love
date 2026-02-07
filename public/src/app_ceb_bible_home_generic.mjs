@@ -65,14 +65,14 @@ export async function app_ceb_bible_home_generic(
     let div3 = html_div(p);
     function lambda2(e) {
       let word = object_property_get(e, language_code);
-      let span = html_span_text_nbsp_replace(word, div3);
+      let span = html_span_text_nbsp_replace(div3, word);
       html_font_color_set_green(span);
       html_span_nbsp(div3);
       let gloss = object_property_get(e, "gloss");
       let replaced2 = html_nbsp_replace(gloss);
-      let span2 = html_span_text_nbsp_replace(div3, replaced2);
+      let span2 = html_span_text_nbsp_replace(replaced2, div3);
       html_font_color_set_blue(span2);
-      let span4 = html_span_text_nbsp_replace(div3, " ");
+      let span4 = html_span_text_nbsp_replace(" ", div3);
     }
     each(explains, lambda2);
     function lambda(e) {
@@ -81,16 +81,16 @@ export async function app_ceb_bible_home_generic(
       let word = object_property_get(e, language_code);
       let gloss = object_property_get(e, "gloss");
       let explain = object_property_get(e, "explain");
-      let span = html_span_text_nbsp_replace(div2, word);
+      let span = html_span_text_nbsp_replace(word, div2);
       html_bold_mild(span);
       html_font_color_set(span, "#e40000ff");
       let c = html_span_colon_2(div2);
       html_font_color_set(c, "#aaa");
-      let span2 = html_span_text_nbsp_replace(div2, gloss);
+      let span2 = html_span_text_nbsp_replace(gloss, div2);
       html_font_color_set_blue(span2);
       let c2 = html_span_colon_2(div2);
       html_font_color_set(c2, "#aaa");
-      let span3 = html_span_text_nbsp_replace(div2, explain);
+      let span3 = html_span_text_nbsp_replace(explain, div2);
       html_font_color_set(span3, "#7b3f97ff");
     }
     each(explains, lambda);
