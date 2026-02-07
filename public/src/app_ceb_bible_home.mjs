@@ -1,4 +1,4 @@
-import { json_to } from "../../../love/public/src/json_to.mjs";
+import { json_from } from "../../../love/public/src/json_from.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
@@ -39,7 +39,7 @@ export async function app_ceb_bible_home(context) {
     }
     each(texts, lambda5);
     let explains_json = object_property_get(passage, "explains");
-    let explains = json_to(explains_json);
+    let explains = json_from(explains_json);
     let first = list_first(explains);
     let properties = object_properties(first);
     log({
