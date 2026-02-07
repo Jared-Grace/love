@@ -12,7 +12,7 @@ export async function g_generate_upload_generic(fn, path_get) {
     let fragment = "JAS01";
     fragment = "JAS02";
     let i = string_includes(file, fragment);
-    if (false && not(i)) {
+    if (not(i)) {
       return;
     }
     let fb = path_base(file);
