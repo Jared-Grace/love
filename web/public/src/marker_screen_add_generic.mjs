@@ -1,7 +1,5 @@
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
-import { exit } from "../../../love/public/src/exit.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { js_list_type } from "../../../love/public/src/js_list_type.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
@@ -15,11 +13,7 @@ export async function marker_screen_add_generic(a_name, lambda) {
     let only = list_single(vs);
     let node = object_property_get(only, "node");
     let elements = object_property_get(node, "elements");
-    log({
-      elements,
-    });
-    exit();
-    await lambda(only, prefixed);
+    await lambda(elements, prefixed);
   }
   let result = await function_transform(combined, lambda_ftms);
   return result;
