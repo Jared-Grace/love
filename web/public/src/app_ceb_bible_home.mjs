@@ -1,3 +1,4 @@
+import { html_font_color_set_green } from "../../../love/public/src/html_font_color_set_green.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_bold_mild } from "../../../love/public/src/html_bold_mild.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
@@ -12,8 +13,6 @@ import { app_g_bible_home_inner } from "../../../love/public/src/app_g_bible_hom
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_ceb_bible_gloss_generate_download } from "../../../love/public/src/app_ceb_bible_gloss_generate_download.mjs";
-import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
-import { app_karate_button_background } from "../../../karate_code/public/src/app_karate_button_background.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function app_ceb_bible_home(context) {
@@ -35,8 +34,7 @@ export async function app_ceb_bible_home(context) {
     let texts = list_map(split3, lambda4);
     function lambda5(t) {
       let div = html_div_text(p, t);
-      let c = app_karate_button_background();
-      html_font_color_set(div, c);
+      html_font_color_set_green(div);
     }
     each(texts, lambda5);
     let explains_json = object_property_get(passage, "explains");
