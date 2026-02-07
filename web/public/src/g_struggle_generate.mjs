@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { g_sermon_generate_book_generic } from "../../../love/public/src/g_sermon_generate_book_generic.mjs";
 export async function g_struggle_generate() {
   let bible_folder = "engbsb";
@@ -18,6 +19,7 @@ Rules:
   const prompt_user_middle =
     "Generate personal struggles that directly relate to this text: ";
   let fn = g_struggle_generate;
+  let chapter_code_specified = error();
   await g_sermon_generate_book_generic(
     [bible_folder],
     book_code,
@@ -25,6 +27,6 @@ Rules:
     prompt_user_middle,
     prompt_system,
     "struggle",
-    error(),
+    chapter_code_specified,
   );
 }
