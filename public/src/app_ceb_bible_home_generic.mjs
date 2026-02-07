@@ -1,3 +1,4 @@
+import { each_next } from "../../../love/public/src/each_next.mjs";
 import { emoji_arrow_down } from "../../../love/public/src/emoji_arrow_down.mjs";
 import { html_div_centered } from "../../../love/public/src/html_div_centered.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
@@ -36,7 +37,7 @@ export async function app_ceb_bible_home_generic(
 ) {
   let v2 = await app_g_bible_home_inner(context, download);
   let passages = object_property_get(v2, "passages");
-  each(passages, on_passage);
+  each_next(passages, on_passage);
   function on_passage({ passage, verses }) {
     const prop = "p";
     let last = list_last(verses);
