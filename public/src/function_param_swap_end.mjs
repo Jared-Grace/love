@@ -1,3 +1,5 @@
+import { list_index_last_second } from "../../../love/public/src/list_index_last_second.mjs";
+import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_declaration_params_ast_get } from "../../../love/public/src/js_declaration_params_ast_get.mjs";
 import { list_swap_at } from "../../../love/public/src/list_swap_at.mjs";
@@ -9,11 +11,15 @@ export async function function_param_swap_end(f_name) {
     f_name,
   );
   function on_call(args) {
+    let index_last = list_index_last(list);
+    let last_second = list_index_last_second(list2);
     let index_a = 0;
     let index_b = 1;
     list_swap_at(args, index_a, index_b);
   }
   function function_transform_current_lambda(ast) {
+    let index_last2 = list_index_last(list3);
+    let last_second2 = list_index_last_second(list4);
     let index_a = 0;
     let index_b = 1;
     let v2 = js_declaration_params_ast_get(ast);
