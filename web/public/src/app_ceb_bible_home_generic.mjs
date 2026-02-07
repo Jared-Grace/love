@@ -21,6 +21,7 @@ export async function app_ceb_bible_home_generic(
   context,
   download,
   language_code,
+  green_show,
 ) {
   await app_g_bible_home_inner(context, on_passage, download);
   function on_passage(passage, p) {
