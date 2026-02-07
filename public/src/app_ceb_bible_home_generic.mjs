@@ -36,10 +36,6 @@ export async function app_ceb_bible_home_generic(
     const prop = "p";
     let last = list_last(verses);
     let p = object_property_get(last, prop);
-    log({
-      passage,
-      verses,
-    });
     let texts = null;
     if (text_use) {
       let text = object_property_get(passage, "text");
