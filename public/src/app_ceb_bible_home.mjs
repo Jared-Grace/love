@@ -50,7 +50,7 @@ export async function app_ceb_bible_home(context) {
       html_font_color_set_green(span);
       html_span_dash(div2);
       let span2 = html_span_text(div2, gloss);
-      html_span_space(div2);
+      html_span_dash(div2);
       let span3 = html_span_text(div2, explain);
     }
     each(explains, lambda);
