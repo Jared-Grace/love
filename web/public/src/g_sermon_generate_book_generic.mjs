@@ -46,6 +46,7 @@ export async function g_sermon_generate_book_generic(
   prompt_system,
   property_name,
 ) {
+  let chapter_code_specified = "JAS02";
   let chapters_interlinear = await bible_interlinear_chapters();
   async function lambda3(bible_folder) {
     let chapters = await ebible_chapters(bible_folder, book_code);
@@ -141,7 +142,6 @@ export async function g_sermon_generate_book_generic(
   }
   let mapped = list_map_index(groups, lambda);
   async function lambda9(chapter_code) {
-    chapter_code = "JAS02";
     let path = local_function_path_json(chapter_code, fn);
     let exists = await file_exists(path);
     if (exists) {
