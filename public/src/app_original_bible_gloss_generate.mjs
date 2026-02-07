@@ -7,7 +7,7 @@ export async function app_original_bible_gloss_generate() {
   let fn = app_original_bible_gloss_generate;
   let property_name = app_ceb_bible_gloss_generate_property();
   const bible_folders = [bible_folder];
-  let last = "nglish is";
+  let last = "English is";
   await app_ceb_bible_gloss_generate_generic(
     language,
     last,
