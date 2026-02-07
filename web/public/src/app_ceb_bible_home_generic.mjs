@@ -109,6 +109,7 @@ export async function app_ceb_bible_home_generic(
       let p = object_property_get(f, "p_verse");
       log({
         p,
+        verses,
       });
       await html_scroll_center_now(p);
     }
