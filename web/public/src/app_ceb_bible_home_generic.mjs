@@ -32,6 +32,9 @@ export async function app_ceb_bible_home_generic(
     function lambda4(v) {
       let separator2 = string_colon_2();
       let split = string_split(v, separator2);
+      log({
+        split,
+      });
       let get = null;
       if (first) {
         get = list_first;
@@ -68,7 +71,7 @@ export async function app_ceb_bible_home_generic(
       html_font_color_set(span3, "#7b3f97ff");
     }
     each(explains, lambda);
-    log(passage);
+    passage;
     return;
   }
 }
