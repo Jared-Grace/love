@@ -60,11 +60,7 @@ export async function app_ceb_bible_home_generic(
       let c2 = html_span_colon_2(div2);
       html_font_color_set(c2, "#aaa");
       let span3 = html_span_text(div2, explain);
-      if (green_show) {
-        html_font_color_set(span3, "#7b3f97ff");
-      } else {
-        html_font_color_set_green(span3);
-      }
+      html_font_color_set(span3, "#7b3f97ff");
     }
     each(explains, lambda);
     log(passage);
