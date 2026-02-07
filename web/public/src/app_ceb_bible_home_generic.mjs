@@ -75,8 +75,8 @@ export async function app_ceb_bible_home_generic(
         html_font_color_set_blue(span2);
         let span4 = html_span_space(div3);
       }
+      each(explains, lambda2);
     }
-    each(explains, lambda2);
     function lambda(e) {
       let component2 = html_hr(p);
       let div2 = html_div(p);
