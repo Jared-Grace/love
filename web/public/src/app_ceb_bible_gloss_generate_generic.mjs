@@ -19,7 +19,6 @@ Explanations should be easy to understand. Explain as simply as possible.
 Output format:
 [{"${language_code}":"${language_upper}_WORD","gloss":"ENGLISH_GLOSS","explain":"FULL_EXPLANATION"}, ...]
 
-"${language_upper}_WORD" should include any punctuation before or after a word.
 The ${last} provided as a reference.`;
   const prompt_user_middle =
     "Here is the passage to output English glosses for: ";
