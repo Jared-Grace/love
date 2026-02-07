@@ -42,16 +42,16 @@ export async function app_ceb_bible_home(context) {
     let explains_json = object_property_get(passage, "explains");
     let explains = json_from(explains_json);
     function lambda(e) {
-      let div2 = html_div(root);
+      let div2 = html_div(p);
       let ceb = object_property_get(e, "ceb");
       let gloss = object_property_get(e, "gloss");
       let explain = object_property_get(e, "explain");
-      let span = html_span_text(p, ceb);
+      let span = html_span_text(div2, ceb);
       html_bold_mild(span);
-      html_span_space(p);
-      let span2 = html_span_text(p, gloss);
-      html_span_space(p);
-      let span3 = html_span_text(p, explain);
+      html_span_space(div2);
+      let span2 = html_span_text(div2, gloss);
+      html_span_space(div2);
+      let span3 = html_span_text(div2, explain);
     }
     each(explains, lambda);
     log(passage);
