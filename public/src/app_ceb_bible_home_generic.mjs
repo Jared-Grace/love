@@ -54,11 +54,11 @@ export async function app_ceb_bible_home_generic(
       let original = object_property_get(passage, "original");
       texts = [original];
     }
-      function lambda5(t) {
-        let div = html_div_text(p, t);
-        html_font_color_set_green(div);
-      }
-      each(texts, lambda5);
+    function lambda5(t) {
+      let div = html_div_text(p, t);
+      html_font_color_set_green(div);
+    }
+    each(texts, lambda5);
     let explains_json = object_property_get(passage, "explains");
     let explains = json_from(explains_json);
     if (false) {
