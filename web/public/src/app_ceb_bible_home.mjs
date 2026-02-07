@@ -50,7 +50,7 @@ export async function app_ceb_bible_home(context) {
       let explain = object_property_get(e, "explain");
       let span = html_span_text(div2, ceb);
       html_bold_mild(span);
-      html_font_color_set(span3, "#ae1515ff");
+      html_font_color_set(span, "#ae1515ff");
       let c = html_span_colon_2(div2);
       html_font_color_set(c, "#aaa");
       let span2 = html_span_text(div2, gloss);
