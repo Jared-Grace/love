@@ -34,7 +34,7 @@ export async function app_ceb_bible_home_generic(
   language_code,
   text_use,
 ) {
-  let v2 = await app_g_bible_home_inner(context, on_passage, download);
+  let v2 = await app_g_bible_home_inner(context, download);
   let passages = object_property_get(v2, "passages");
   each(passages, on_passage);
   let verses_previous = null;
