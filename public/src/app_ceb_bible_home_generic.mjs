@@ -17,6 +17,7 @@ import { string_split } from "../../../love/public/src/string_split.mjs";
 import { string_colon_3 } from "../../../love/public/src/string_colon_3.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_g_bible_home_inner } from "../../../love/public/src/app_g_bible_home_inner.mjs";
+import { list_second } from "./list_second.mjs";
 export async function app_ceb_bible_home_generic(
   context,
   download,
@@ -32,9 +33,10 @@ export async function app_ceb_bible_home_generic(
       let separator2 = string_colon_2();
       let split = string_split(v, separator2);
       let get = null;
-      get = list_first;
       if (first) {
+        get = list_first;
       } else {
+        get = list_second;
       }
       let text_ceb = list_first(split);
       return text_ceb;
