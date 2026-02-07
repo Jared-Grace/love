@@ -6,6 +6,9 @@ export async function app_ceb_bible_gloss_generate() {
   let bible_folder = "engbsb";
   let book_code = "JAS";
   let language = "Cebuano";
+  let fn = app_ceb_bible_gloss_generate;
+  let property_name = app_ceb_bible_gloss_generate_property();
+  let c = ebible_folder_cebuano();
   let last = "original language and English are";
   let language_upper = string_upper_to(language);
   const prompt_system = `You will be given a Bible passage and its context in ${language}.
@@ -20,11 +23,9 @@ Output format:
 The ${last} provided as a reference.`;
   const prompt_user_middle =
     "Here is the passage to output English glosses for: ";
-  let fn = app_ceb_bible_gloss_generate;
-  let property_name = app_ceb_bible_gloss_generate_property();
-  let c = ebible_folder_cebuano();
+  const bible_folders = [c, bible_folder];
   await g_sermon_generate_book_generic(
-    [c, bible_folder],
+    bible_folders,
     book_code,
     fn,
     prompt_user_middle,
