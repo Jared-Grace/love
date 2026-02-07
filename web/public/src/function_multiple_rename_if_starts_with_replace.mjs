@@ -7,7 +7,7 @@ export async function function_multiple_rename_if_starts_with_replace(
   to,
 ) {
   assert_arguments(arguments, 3);
-  let f_name_after = string_replace(f_name_before, from, to);
+  let f_name_prefix_after = string_replace(f_name_prefix_before, from, to);
   let v = await function_multiple_rename_if_starts_with(
     f_name_prefix_before,
     f_name_prefix_after,
