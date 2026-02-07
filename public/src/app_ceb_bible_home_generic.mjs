@@ -120,7 +120,8 @@ export async function app_ceb_bible_home_generic(
     let component22 = html_hr(p);
     if (null_not_is(verses_previous)) {
       let text3 = emoji_arrow_down();
-      let component = html_button(d, text3, () => {});
+      function lambda3() {}
+      let component = html_button(d, text3, lambda3);
     }
     return;
   }
