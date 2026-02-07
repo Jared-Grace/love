@@ -107,7 +107,7 @@ export async function app_ceb_bible_home_generic(
     async function lambda6() {
       let f = list_first(verses);
       let p = object_property_get(f, prop);
-      await html_scroll_center_now(component3);
+      await html_scroll_center_now(p);
     }
     let text2 = emoji_arrow_up();
     let component = html_button(p, text2, lambda6);
