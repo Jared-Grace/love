@@ -1,3 +1,4 @@
+import { html_span_dash } from "../../../love/public/src/html_span_dash.mjs";
 import { html_font_color_set_green } from "../../../love/public/src/html_font_color_set_green.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_bold_mild } from "../../../love/public/src/html_bold_mild.mjs";
@@ -47,7 +48,7 @@ export async function app_ceb_bible_home(context) {
       let span = html_span_text(div2, ceb);
       html_bold_mild(span);
       html_font_color_set_green(span);
-      html_span_space(div2);
+      html_span_dash(div2);
       let span2 = html_span_text(div2, gloss);
       html_span_space(div2);
       let span3 = html_span_text(div2, explain);
