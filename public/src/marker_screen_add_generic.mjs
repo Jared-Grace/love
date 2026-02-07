@@ -1,3 +1,4 @@
+import { list_single } from "../../../love/public/src/list_single.mjs";
 import { js_list_type } from "../../../love/public/src/js_list_type.mjs";
 import { function_transform_marker_specified } from "../../../love/public/src/function_transform_marker_specified.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -12,6 +13,7 @@ export async function marker_screen_add_generic(a_name, lambda) {
     let properties = object_property_get(v2, "properties");
     let node_type = "ArrayExpression";
     let vs = js_list_type(ast, node_type);
+    let only = list_single(list);
     a = [];
     await lambda(properties, prefixed);
   }
