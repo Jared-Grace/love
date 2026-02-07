@@ -1,7 +1,7 @@
 import { list_swap_at } from "../../../love/public/src/list_swap_at.mjs";
 import { function_param_index } from "../../../love/public/src/function_param_index.mjs";
 import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
-export async function function_param_swap(param_name_a, param_name_b) {
+export async function function_param_swap(param_name_a, param_name_b, f_name) {
   let index_a = null;
   let index_b = null;
   await function_params_new_generic(
