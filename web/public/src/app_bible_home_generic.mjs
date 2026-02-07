@@ -97,9 +97,9 @@ export async function app_bible_home_generic(context, lambda$a) {
   async function lambda(v) {
     let verse_number = object_property_get(v, "verse_number");
     let text = object_property_get(v, "text");
-    let p = html_p(content);
-    let top = html_div(p);
-    let bottom = html_div(p);
+    let p_verse = html_p(content);
+    let top = html_div(p_verse);
+    let bottom = html_div(p_verse);
     html_centered(bottom);
     let hidden = false;
     toggle();
@@ -115,7 +115,7 @@ export async function app_bible_home_generic(context, lambda$a) {
       verse_number,
       chapter_code,
       languages_verses,
-      p,
+      p_verse,
     );
     let update = object_property_get(v3, "update");
     list_add(updates, update);
@@ -136,7 +136,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     }
     each(split, lambda2);
     await lambda$a({
-      p,
+      p: p_verse,
       chapter_code,
       verse_number,
     });
