@@ -5,6 +5,7 @@ import { app_ceb_bible_gloss_generate_property } from "../../../love/public/src/
 export async function app_ceb_bible_gloss_generate() {
   let bible_folder = "engbsb";
   let book_code = "JAS";
+  let chapter_code_specified = "JAS02";
   let language = "Cebuano";
   let fn = app_ceb_bible_gloss_generate;
   let property_name = app_ceb_bible_gloss_generate_property();
@@ -20,6 +21,6 @@ export async function app_ceb_bible_gloss_generate() {
     fn,
     property_name,
     language_code,
-    null,
+    chapter_code_specified,
   );
 }
