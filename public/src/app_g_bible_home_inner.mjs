@@ -13,6 +13,7 @@ export async function app_g_bible_home_inner(context, on_passage, download) {
   let downloaded = null;
   let chapter_code = null;
   let verses = [];
+  list_add(list, item);
   async function lambda(a) {
     list_add(verses, a);
     let verse_number = object_property_get(a, "verse_number");
