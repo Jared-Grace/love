@@ -10,7 +10,7 @@ import { function_new } from "../../../love/public/src/function_new.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
-export async function marker_screen_add(a_name, screen_name) {
+export async function app_generic(a_name, screen_name) {
   let result = await marker_screen_add_generic(a_name, lambda);
   return result;
   async function lambda(properties, prefixed) {
