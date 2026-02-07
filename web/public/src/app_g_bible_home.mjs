@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { g_sermon_generate_download } from "../../../love/public/src/g_sermon_generate_download.mjs";
 import { app_g_bible_home_inner } from "../../../love/public/src/app_g_bible_home_inner.mjs";
@@ -31,6 +32,7 @@ export async function app_g_bible_home(context) {
       on_passage,
       g_sermon_generate_download,
     ));
+    each(list, function lambda(item) {});
     function on_passage(passage, verses) {
       let last = list_last(verses);
       let p = object_property_get(last, "p");
