@@ -1,3 +1,4 @@
+import { app_a_function_name_selected_key } from "../../../love/public/src/app_a_function_name_selected_key.mjs";
 import { app_a_functionize_choices_add } from "../../../love/public/src/app_a_functionize_choices_add.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { data_identifiers_search } from "../../../love/public/src/data_identifiers_search.mjs";
@@ -173,7 +174,8 @@ export function app_a_identifier_generic(
         shortcut: "q",
         text: "Param delete",
         fn: async function lambda() {
-          let f_name = storage_local_get_context(context, app_a_function_name_selected_key());
+          let key = app_a_function_name_selected_key();
+          let f_name = storage_local_get_context(context, key);
           await function_param_delete(f_name, name);
           await app_a_function_overlay_refresh(a, o3);
         },
