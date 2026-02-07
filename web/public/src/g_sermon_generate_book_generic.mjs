@@ -1,3 +1,4 @@
+import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { string_colon_3 } from "../../../love/public/src/string_colon_3.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { each_multiple_async } from "../../../love/public/src/each_multiple_async.mjs";
@@ -142,6 +143,8 @@ export async function g_sermon_generate_book_generic(
   }
   let mapped = list_map_index(groups, lambda);
   async function lambda9(chapter_code) {
+    if (null_not_is(value)) {
+    }
     let path = local_function_path_json(chapter_code, fn);
     let exists = await file_exists(path);
     if (exists) {
