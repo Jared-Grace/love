@@ -30,24 +30,25 @@ export async function app_ceb_bible_home_generic(
       passage,
     });
     let texts = null;
-    if (false) {
-    }
-    let text = object_property_get(passage, "text");
-    let separator3 = string_colon_3();
-    let split3 = string_split(text, separator3);
-    function lambda4(v) {
-      let separator2 = string_colon_2();
-      let split = string_split(v, separator2);
-      let get = null;
-      if (text_use) {
-        get = list_first;
-      } else {
-        get = list_second;
+    if (text_use) {
+      let text = object_property_get(passage, "text");
+      let separator3 = string_colon_3();
+      let split3 = string_split(text, separator3);
+      function lambda4(v) {
+        let separator2 = string_colon_2();
+        let split = string_split(v, separator2);
+        let get = null;
+        if (text_use) {
+          get = list_first;
+        } else {
+          get = list_second;
+        }
+        let text_ceb = list_first(split);
+        return text_ceb;
       }
-      let text_ceb = list_first(split);
-      return text_ceb;
+      texts = list_map(split3, lambda4);
+    } else {
     }
-    texts = list_map(split3, lambda4);
     function lambda5(t) {
       let div = html_div_text(p, t);
       html_font_color_set_green(div);
