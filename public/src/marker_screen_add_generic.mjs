@@ -9,6 +9,7 @@ export async function marker_screen_add_generic(a_name, lambda) {
   async function lambda_ftms(a) {
     let v2 = marker_next_declare_single_init(a);
     let properties = object_property_get(v2, "properties");
+    a = [];
     await lambda(properties, prefixed);
   }
   let result = await function_transform_marker_specified(
