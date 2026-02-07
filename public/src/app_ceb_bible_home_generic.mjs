@@ -1,3 +1,4 @@
+import { html_span_text_nbsp_replace_property_from } from "../../../love/public/src/html_span_text_nbsp_replace_property_from.mjs";
 import { html_span_text_nbsp_replace } from "../../../love/public/src/html_span_text_nbsp_replace.mjs";
 import { html_nbsp_replace } from "../../../love/public/src/html_nbsp_replace.mjs";
 import { html_span_nbsp } from "../../../love/public/src/html_span_nbsp.mjs";
@@ -64,8 +65,11 @@ export async function app_ceb_bible_home_generic(
     let explains = json_from(explains_json);
     let div3 = html_div(p);
     function lambda2(e) {
-      let word = object_property_get(e, language_code);
-      let span = html_span_text_nbsp_replace(div3, word);
+      let span = html_span_text_nbsp_replace_property_from(
+        e,
+        language_code,
+        div3,
+      );
       html_font_color_set_green(span);
       html_span_nbsp(div3);
       let gloss = object_property_get(e, "gloss");
