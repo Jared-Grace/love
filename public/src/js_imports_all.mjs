@@ -1,5 +1,5 @@
-import { js_type } from "../../../love/public/src/js_type.mjs";
+import { js_list_type } from "../../../love/public/src/js_list_type.mjs";
 export function js_imports_all(ast) {
-  const imports = js_type(ast, "ImportDeclaration");
+  const imports = js_list_type(ast, "ImportDeclaration");
   return imports;
 }
