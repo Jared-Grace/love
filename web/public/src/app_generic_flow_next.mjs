@@ -1,4 +1,4 @@
-import { app_generic_flow } from "../../../love/public/src/app_generic_flow.mjs";
+import { app_shared_flow } from "../../../love/public/src/app_shared_flow.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_skip } from "../../../love/public/src/list_skip.mjs";
 export function app_generic_flow_next(context, screens) {
@@ -7,5 +7,5 @@ export function app_generic_flow_next(context, screens) {
     return skipped;
   };
   let find = list_first;
-  app_generic_flow(context, screens, before_or_after, find);
+  app_shared_flow(context, screens, before_or_after, find);
 }
