@@ -25,5 +25,6 @@ Rules:
     prompt_user_middle,
     prompt_system,
     "struggle",
+    error(),
   );
 }
