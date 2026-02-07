@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -12,6 +13,8 @@ export async function marker_screen_add_generic(a_name, lambda) {
     let node_type = "ArrayExpression";
     let vs = js_list_type(ast, node_type);
     let only = list_single(vs);
+    let node = object_property_get(only, "node");
+    let elements = object_property_get(node, "elements");
     log({
       only,
     });
