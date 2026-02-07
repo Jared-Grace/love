@@ -36,7 +36,7 @@ export async function app_ceb_bible_home(context) {
     let texts = list_map(split3, lambda4);
     function lambda5(t) {
       let div = html_div_text(p, t);
-      html_font_color_set_green(div);
+      html_font_color_set_blue(div);
     }
     each(texts, lambda5);
     let explains_json = object_property_get(passage, "explains");
@@ -48,11 +48,11 @@ export async function app_ceb_bible_home(context) {
       let explain = object_property_get(e, "explain");
       let span = html_span_text(div2, ceb);
       html_bold_mild(span);
-      html_font_color_set_green(span);
+      html_font_color_set_blue(span);
       let c = html_span_colon_2(div2);
       html_font_color_set(c, "#aaa");
       let span2 = html_span_text(div2, gloss);
-      html_font_color_set_blue(span2);
+      html_font_color_set_green(span2);
       let c2 = html_span_colon_2(div2);
       html_font_color_set(c2, "#aaa");
       let span3 = html_span_text(div2, explain);
