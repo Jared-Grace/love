@@ -1,3 +1,4 @@
+import { list_last } from "../../../love/public/src/list_last.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_span_text_nbsp_replace_property_from } from "../../../love/public/src/html_span_text_nbsp_replace_property_from.mjs";
 import { html_span_nbsp } from "../../../love/public/src/html_span_nbsp.mjs";
@@ -29,7 +30,8 @@ export async function app_ceb_bible_home_generic(
 ) {
   await app_g_bible_home_inner(context, on_passage, download);
   function on_passage(passage, a, verses) {
-    let p = object_property_get(a, "p");
+    let last = list_last(verses);
+    let p = object_property_get(last, "p");
     log({
       passage,
       verses,
