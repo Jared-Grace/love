@@ -1,3 +1,5 @@
+import { emoji_arrow_down } from "../../../love/public/src/emoji_arrow_down.mjs";
+import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { each_next } from "../../../love/public/src/each_next.mjs";
 import { html_div_centered } from "../../../love/public/src/html_div_centered.mjs";
 import { html_scroll_top_now } from "../../../love/public/src/html_scroll_top_now.mjs";
@@ -37,6 +39,13 @@ export async function app_ceb_bible_home_generic(
   let passages = object_property_get(v2, "passages");
   each_next(passages, on_passage);
   function on_passage({ passage, verses }, next) {
+    if (null_not_is(next)) {
+      let text3 = emoji_arrow_down();
+      async function lambda3() {
+        await html_scroll_top_now(component3);
+      }
+      let component = html_button(d, text3, lambda3);
+    }
     const prop = "p";
     let last = list_last(verses);
     let p = object_property_get(last, prop);
