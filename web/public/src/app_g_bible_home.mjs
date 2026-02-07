@@ -1,3 +1,4 @@
+import { list_last } from "../../../love/public/src/list_last.mjs";
 import { g_sermon_generate_download } from "../../../love/public/src/g_sermon_generate_download.mjs";
 import { app_g_bible_home_inner } from "../../../love/public/src/app_g_bible_home_inner.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
@@ -29,7 +30,8 @@ export async function app_g_bible_home(context) {
       on_passage,
       g_sermon_generate_download,
     ));
-    function on_passage(passage, a) {
+    function on_passage(passage, verses) {
+      let last = list_last(list);
       let p = object_property_get(a, "p");
       let sermon = object_property_get(passage, "sermon");
       let mapped2 = app_g_openai_split(sermon);
