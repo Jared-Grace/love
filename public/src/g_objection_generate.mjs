@@ -26,7 +26,7 @@ Output each objection separated by ` +
     "Generate objections that the following passage would refute; Output 5–10 objections: ";
   let fn = g_objection_generate;
   let property_name = g_objection_generate_property();
-  let chapter_code_specified = error();
+  let chapter_code_specified = null;
   await g_sermon_generate_book_generic(
     [bible_folder],
     book_code,
