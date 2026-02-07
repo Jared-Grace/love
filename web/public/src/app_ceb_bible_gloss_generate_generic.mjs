@@ -8,6 +8,7 @@ export async function app_ceb_bible_gloss_generate_generic(
   fn,
   property_name,
   language_code,
+  chapter_code_specified,
 ) {
   let language_upper = string_upper_to(language);
   const prompt_system = `You will be given a Bible passage and its context in ${language}.
