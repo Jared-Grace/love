@@ -16,8 +16,8 @@ export async function function_param_swap_end(f_name) {
     list_swap_at(args, index_a, index_b);
   }
   function function_transform_current_lambda(ast) {
-    let v2 = js_declaration_params_ast_get(ast);
-    let params = object_property_get(v2, "params");
+    let r = js_declaration_params_ast_get(ast);
+    let params = object_property_get(r, "params");
     let index_a = list_index_last(params);
     let index_b = list_index_last_second(params);
     list_swap_at(params, index_a, index_b);
