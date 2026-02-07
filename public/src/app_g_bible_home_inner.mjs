@@ -39,11 +39,12 @@ export async function app_g_bible_home_inner(context, on_passage, download) {
     }
     let r = await app_bible_home_generic(context, lambda);
   }
-  let list = await list_adder_async(lambda3);
+  let passages = await list_adder_async(lambda3);
   let v = {
     chapter_code,
     downloaded,
     r,
+    passages,
   };
   return v;
 }
