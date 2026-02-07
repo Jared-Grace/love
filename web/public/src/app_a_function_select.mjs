@@ -6,6 +6,6 @@ import { app_shared_screen_set } from "../../../love/public/src/app_shared_scree
 export function app_a_function_select(context, f_name) {
   storage_local_set_context(context, "f_name_selected", f_name);
   let h = storage_local_initialize_context(context, "f_name_selected", []);
-  list_add(list, item);
+  list_add(h, f_name);
   app_shared_screen_set(context, app_a_function);
 }
