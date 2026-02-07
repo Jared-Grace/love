@@ -29,6 +29,9 @@ export async function app_ceb_bible_home_generic(
     log({
       passage,
     });
+    let texts = null;
+    if (false) {
+    }
     let text = object_property_get(passage, "text");
     let separator3 = string_colon_3();
     let split3 = string_split(text, separator3);
@@ -44,7 +47,6 @@ export async function app_ceb_bible_home_generic(
       let text_ceb = list_first(split);
       return text_ceb;
     }
-    let texts = null;
     texts = list_map(split3, lambda4);
     function lambda5(t) {
       let div = html_div_text(p, t);
