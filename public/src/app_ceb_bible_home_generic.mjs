@@ -1,5 +1,5 @@
+import { html_div_centered } from "../../../love/public/src/html_div_centered.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
-import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { html_scroll_top_now } from "../../../love/public/src/html_scroll_top_now.mjs";
 import { emoji_arrow_up } from "../../../love/public/src/emoji_arrow_up.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
@@ -114,8 +114,7 @@ export async function app_ceb_bible_home_generic(
       await html_scroll_top_now(p);
     }
     let text2 = emoji_arrow_up();
-    let d = html_div(p);
-    html_centered(d);
+    let d = html_div_centered(p);
     let component = html_button(d, text2, lambda6);
     let component22 = html_hr(p);
     if (null_not_is(verses_previous)) {
