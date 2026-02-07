@@ -36,7 +36,8 @@ export async function app_ceb_bible_home_generic(
 ) {
   let v2 = await app_g_bible_home_inner(context, on_passage, download);
   let passages = object_property_get(v2, "passages");
-  each(list, function lambda7(item) {});
+  function lambda7(item) {}
+  each(list, lambda7);
   let verses_previous = null;
   function on_passage(passage, verses) {
     verses_previous = verses;
