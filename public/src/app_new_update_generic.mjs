@@ -11,7 +11,7 @@ import { js_declaration_single } from "../../../love/public/src/js_declaration_s
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { firebase_name_repo } from "../../../love/public/src/firebase_name_repo.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
-import { app_generic_name_prefixed } from "../../../love/public/src/app_generic_name_prefixed.mjs";
+import { app_shared_name_prefixed } from "../../../love/public/src/app_shared_name_prefixed.mjs";
 import { string_and_empty_not_is_assert } from "../../../love/public/src/string_and_empty_not_is_assert.mjs";
 export async function app_new_update_generic(
   name,
@@ -19,7 +19,7 @@ export async function app_new_update_generic(
   f_name_transformed,
 ) {
   string_and_empty_not_is_assert(name);
-  let a_name = app_generic_name_prefixed(name);
+  let a_name = app_shared_name_prefixed(name);
   let v = await function_name_to_path_search(a_name);
   let repo_name = object_property_get(v, "repo_name");
   let default2 = await firebase_name_repo(repo_name);
