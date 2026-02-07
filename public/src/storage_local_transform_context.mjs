@@ -7,6 +7,6 @@ export function storage_local_transform_context(
   transform,
 ) {
   let value = storage_local_initialize_context(context, key, value_initial);
-  transform(value);
-  storage_local_set_context(context, key, value);
+  let value_new = transform(value);
+  storage_local_set_context(context, key, value_new);
 }
