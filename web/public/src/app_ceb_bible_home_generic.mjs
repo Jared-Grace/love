@@ -50,6 +50,7 @@ export async function app_ceb_bible_home_generic(
       }
       let component = html_button(p, text3, lambda3);
     }
+    let h = html_hr(root);
     let texts = null;
     if (text_use) {
       let text = object_property_get(passage, "text");
