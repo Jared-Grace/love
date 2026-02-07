@@ -38,7 +38,10 @@ export async function app_ceb_bible_home(context) {
     each(texts, lambda5);
     let explains_json = object_property_get(passage, "explains");
     let explains = json_from(explains_json);
-    function lambda(item) {
+    function lambda(e) {
+      let ceb = object_property_get(e, "ceb");
+      let gloss = object_property_get(e, "gloss");
+      let explain = object_property_get(e, "explain");
       let span = html_span_text(p, text2);
     }
     each(explains, lambda);
