@@ -1,6 +1,5 @@
 import { html_span_text_nbsp_replace_property_from } from "../../../love/public/src/html_span_text_nbsp_replace_property_from.mjs";
 import { html_span_text_nbsp_replace } from "../../../love/public/src/html_span_text_nbsp_replace.mjs";
-import { html_nbsp_replace } from "../../../love/public/src/html_nbsp_replace.mjs";
 import { html_span_nbsp } from "../../../love/public/src/html_span_nbsp.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_font_color_set_blue } from "../../../love/public/src/html_font_color_set_blue.mjs";
@@ -72,9 +71,7 @@ export async function app_ceb_bible_home_generic(
       );
       html_font_color_set_green(span);
       html_span_nbsp(div3);
-      let gloss = object_property_get(e, "gloss");
-      let replaced2 = html_nbsp_replace(gloss);
-      let span2 = html_span_text_nbsp_replace(replaced2, div3);
+      let span2 = html_span_text_nbsp_replace_property_from(e, "gloss", div3);
       html_font_color_set_blue(span2);
       let span4 = html_span_text_nbsp_replace(" ", div3);
     }
