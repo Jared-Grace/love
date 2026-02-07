@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { newline_windows_code } from "../../../love/public/src/newline_windows_code.mjs";
 import { g_objection_generate_property } from "../../../love/public/src/g_objection_generate_property.mjs";
 import { g_sermon_generate_book_generic } from "../../../love/public/src/g_sermon_generate_book_generic.mjs";
@@ -25,6 +26,7 @@ Output each objection separated by ` +
     "Generate objections that the following passage would refute; Output 5–10 objections: ";
   let fn = g_objection_generate;
   let property_name = g_objection_generate_property();
+  let chapter_code_specified = error();
   await g_sermon_generate_book_generic(
     [bible_folder],
     book_code,
@@ -32,6 +34,6 @@ Output each objection separated by ` +
     prompt_user_middle,
     prompt_system,
     property_name,
-    error(),
+    chapter_code_specified,
   );
 }
