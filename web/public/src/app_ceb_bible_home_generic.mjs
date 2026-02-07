@@ -65,9 +65,11 @@ export async function app_ceb_bible_home_generic(
       let word = object_property_get(e, language_code);
       let span = html_span_text(div3, word);
       html_font_color_set_green(span);
+      let span3 = html_span_text(div3, " ");
       let gloss = object_property_get(e, "gloss");
       let span2 = html_span_text(div3, gloss);
       html_font_color_set_blue(span2);
+      let span4 = html_span_text(div3, " ");
     }
     each(explains, lambda2);
     function lambda(e) {
