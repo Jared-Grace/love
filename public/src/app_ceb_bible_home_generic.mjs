@@ -60,15 +60,17 @@ export async function app_ceb_bible_home_generic(
     }
     let explains_json = object_property_get(passage, "explains");
     let explains = json_from(explains_json);
-    function lambda2(item) {}
+    function lambda2(e) {
+      let gloss = object_property_get(e, "gloss");
+    }
     each(explains, lambda2);
     function lambda(e) {
       let component2 = html_hr(p);
       let div2 = html_div(p);
-      let ceb = object_property_get(e, language_code);
+      let code = object_property_get(e, language_code);
       let gloss = object_property_get(e, "gloss");
       let explain = object_property_get(e, "explain");
-      let span = html_span_text(div2, ceb);
+      let span = html_span_text(div2, code);
       html_bold_mild(span);
       html_font_color_set(span, "#e40000ff");
       let c = html_span_colon_2(div2);
