@@ -65,13 +65,13 @@ export async function app_ceb_bible_home_generic(
     let div3 = html_div(p);
     function lambda2(e) {
       let span = html_span_text_nbsp_replace_property_from(
+        div3,
         e,
         language_code,
-        div3,
       );
       html_font_color_set_green(span);
       html_span_nbsp(div3);
-      let span2 = html_span_text_nbsp_replace_property_from(e, "gloss", div3);
+      let span2 = html_span_text_nbsp_replace_property_from(div3, e, "gloss");
       html_font_color_set_blue(span2);
       let span4 = html_span_text_nbsp_replace(" ", div3);
     }
