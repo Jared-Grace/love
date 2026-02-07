@@ -1,3 +1,4 @@
+import { html_font_color_set_blue } from "../../../love/public/src/html_font_color_set_blue.mjs";
 import { html_span_colon_2 } from "../../../love/public/src/html_span_colon_2.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_font_color_set_green } from "../../../love/public/src/html_font_color_set_green.mjs";
@@ -51,7 +52,7 @@ export async function app_ceb_bible_home(context) {
       let c = html_span_colon_2(div2);
       html_font_color_set(c, "#aaa");
       let span2 = html_span_text(div2, gloss);
-      html_font_color_set_green(span2);
+      html_font_color_set_blue(span2);
       let c2 = html_span_colon_2(div2);
       html_font_color_set(c2, "#aaa");
       let span3 = html_span_text(div2, explain);
