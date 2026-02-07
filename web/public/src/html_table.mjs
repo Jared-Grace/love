@@ -4,7 +4,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { html_element } from "../../../love/public/src/html_element.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-export function html_table(list, parent) {
+export function html_table(parent, list) {
   let first = list_first(list);
   let properties = object_properties(first);
   let component = html_element(parent, "table");
