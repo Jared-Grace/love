@@ -1,4 +1,3 @@
-import { error } from "../../../love/public/src/error.mjs";
 import { newline_windows_code } from "../../../love/public/src/newline_windows_code.mjs";
 import { g_sermon_generate_book_generic } from "../../../love/public/src/g_sermon_generate_book_generic.mjs";
 import { g_sermon_generate } from "../../../love/public/src/g_sermon_generate.mjs";
@@ -25,7 +24,6 @@ Output each sentence separated by ` +
     `. Follow these instructions exactly.`;
   const prompt_user_middle = "Here is the passage to rewrite: ";
   let fn = g_sermon_generate;
-  let chapter_code_specified = error();
   await g_sermon_generate_book_generic(
     [bible_folder],
     book_code,
@@ -33,6 +31,6 @@ Output each sentence separated by ` +
     prompt_user_middle,
     prompt_system,
     "sermon",
-    chapter_code_specified,
+    null,
   );
 }
