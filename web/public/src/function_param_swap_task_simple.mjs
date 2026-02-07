@@ -7,6 +7,6 @@ export async function function_param_swap_task_simple() {
   let f_name = function_param_swap_task_simple;
   await function_new(f_name2);
   let f_name3 = error();
-  await function_param_swap(param_name_a, param_name_b, f_name3);
+  await function_param_swap(f_name3, param_name_a, param_name_b);
   todo();
 }
