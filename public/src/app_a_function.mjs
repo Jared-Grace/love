@@ -1,3 +1,4 @@
+import { app_a_history } from "../../../love/public/src/app_a_history.mjs";
 import { emoji_hourglass } from "../../../love/public/src/emoji_hourglass.mjs";
 import { function_delete } from "../../../love/public/src/function_delete.mjs";
 import { emoji_delete } from "../../../love/public/src/emoji_delete.mjs";
@@ -191,7 +192,9 @@ export async function app_a_function(context) {
     {
       shortcut: "h",
       text: emoji_hourglass(),
-      fn: async function lambda4() {},
+      fn: async function lambda4() {
+        screen_choose(app_a_history);
+      },
     },
   ];
   let e = storage_local_exists(app_a, "app_selected");
