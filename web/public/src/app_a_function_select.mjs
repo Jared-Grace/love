@@ -10,7 +10,7 @@ export function app_a_function_select(context, f_name) {
   }
   let h = storage_local_transform_context(
     context,
-    "f_name_selected",
+    "f_name_selected_history",
     [],
     lambda,
   );
