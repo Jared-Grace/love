@@ -1,4 +1,4 @@
-import { html_scroll_center_now } from "../../../love/public/src/html_scroll_center_now.mjs";
+import { html_scroll_top_now } from "../../../love/public/src/html_scroll_top_now.mjs";
 import { emoji_arrow_up } from "../../../love/public/src/emoji_arrow_up.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
@@ -107,7 +107,7 @@ export async function app_ceb_bible_home_generic(
         p,
         verses,
       });
-      await html_scroll_center_now(p);
+      await html_scroll_top_now(p);
     }
     let text2 = emoji_arrow_up();
     let component = html_button(p, text2, lambda6);
