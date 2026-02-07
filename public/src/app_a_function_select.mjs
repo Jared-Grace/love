@@ -1,3 +1,4 @@
+import { app_a_function_name_selected_history_key } from "../../../love/public/src/app_a_function_name_selected_history_key.mjs";
 import { app_a_function_name_selected_key } from "../../../love/public/src/app_a_function_name_selected_key.mjs";
 import { list_remove_all } from "../../../love/public/src/list_remove_all.mjs";
 import { list_slice_end } from "../../../love/public/src/list_slice_end.mjs";
@@ -16,11 +17,7 @@ export function app_a_function_select(context, f_name) {
     let result = list_slice_end(h, max);
     return result;
   }
-  storage_local_transform_context(
-    context,
-    app_a_function_name_selected_key() + "_history",
-    [],
-    lambda,
-  );
+  let key2 = app_a_function_name_selected_history_key();
+  storage_local_transform_context(context, key2, [], lambda);
   app_shared_screen_set(context, app_a_function);
 }
