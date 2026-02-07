@@ -1,5 +1,4 @@
 import { html_hr } from "../../../love/public/src/html_hr.mjs";
-import { html_font_color_set_blue } from "../../../love/public/src/html_font_color_set_blue.mjs";
 import { html_span_colon_2 } from "../../../love/public/src/html_span_colon_2.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_font_color_set_green } from "../../../love/public/src/html_font_color_set_green.mjs";
@@ -50,7 +49,7 @@ export async function app_ceb_bible_home(context) {
       let explain = object_property_get(e, "explain");
       let span = html_span_text(div2, ceb);
       html_bold_mild(span);
-      html_font_color_set_blue(span);
+      html_font_color_set(span3, "#ae1515ff");
       let c = html_span_colon_2(div2);
       html_font_color_set(c, "#aaa");
       let span2 = html_span_text(div2, gloss);
