@@ -14,28 +14,29 @@ export async function app_g_bible_home_inner(context, on_passage, download) {
   let downloaded = null;
   let chapter_code = null;
   let verses = [];
-  async function lambda3(la) {}
-  let list = await list_adder_async(lambda3);
-  async function lambda(a) {
-    list_add(verses, a);
-    let verse_number = object_property_get(a, "verse_number");
-    chapter_code = object_property_get(a, "chapter_code");
-    downloaded = await download(chapter_code);
-    let passages = object_property_get(downloaded, "passages");
-    function lambda2(passage) {
-      let verse_numbers = object_property_get(passage, "verse_numbers");
-      let mapped = list_map(verse_numbers, integer_to_try);
-      let max = list_max(mapped);
-      let s = string_to(max);
-      if (equal(s, verse_number)) {
-        let copy = list_copy(verses);
-        on_passage(passage, copy);
-        list_empty(verses);
+  async function lambda3(la) {
+    async function lambda(a) {
+      list_add(verses, a);
+      let verse_number = object_property_get(a, "verse_number");
+      chapter_code = object_property_get(a, "chapter_code");
+      downloaded = await download(chapter_code);
+      let passages = object_property_get(downloaded, "passages");
+      function lambda2(passage) {
+        let verse_numbers = object_property_get(passage, "verse_numbers");
+        let mapped = list_map(verse_numbers, integer_to_try);
+        let max = list_max(mapped);
+        let s = string_to(max);
+        if (equal(s, verse_number)) {
+          let copy = list_copy(verses);
+          on_passage(passage, copy);
+          list_empty(verses);
+        }
       }
+      each(passages, lambda2);
     }
-    each(passages, lambda2);
+    let r = await app_bible_home_generic(context, lambda);
   }
-  let r = await app_bible_home_generic(context, lambda);
+  let list = await list_adder_async(lambda3);
   let v = {
     chapter_code,
     downloaded,
