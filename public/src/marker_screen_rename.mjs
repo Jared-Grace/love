@@ -11,11 +11,11 @@ import { function_name_combine } from "../../../love/public/src/function_name_co
 import { marker_screen_add_generic } from "../../../love/public/src/marker_screen_add_generic.mjs";
 import { list_add } from "./list_add.mjs";
 export async function marker_screen_rename(
-  a_name,
   screen_name_before,
   screen_name_after,
+  a_name,
 ) {
-  assert_arguments(arguments, 2);
+  assert_arguments(arguments, 3);
   let afters = [];
   let result = await marker_screen_add_generic(a_name, lambda);
   await each_async(afters, invoke);
