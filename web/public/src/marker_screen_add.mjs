@@ -14,7 +14,7 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_property } from "../../../love/public/src/js_property.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 export async function marker_screen_add(screen_name) {
-  let result = await marker_screen_add_generic(lambda);
+  let result = await marker_screen_add_generic(a_name, lambda);
   return result;
   async function lambda(properties, prefixed) {
     let key = js_expression_string(screen_name);
