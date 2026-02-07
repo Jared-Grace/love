@@ -5,6 +5,6 @@ import { html_clear_context } from "../../../love/public/src/html_clear_context.
 export function app_a_history(context) {
   let root = html_clear_context(context);
   let h = storage_local_get_context(context, "f_name_selected_history");
-  let json = json_to(object);
-  let div = html_div_text(root2, text);
+  let json = json_to(h);
+  let div = html_div_text(root, json);
 }
