@@ -1,3 +1,4 @@
+import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_bible_home_generic } from "../../../love/public/src/app_bible_home_generic.mjs";
@@ -24,6 +25,7 @@ export async function app_g_bible_home_inner(context, on_passage, download) {
       let max = list_max(mapped);
       let s = string_to(max);
       if (equal(s, verse_number)) {
+        let copy = list_copy(original);
         on_passage(passage, a, verses);
         list_empty(verses);
       }
