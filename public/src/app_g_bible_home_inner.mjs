@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_bible_home_generic } from "../../../love/public/src/app_bible_home_generic.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -11,6 +12,7 @@ export async function app_g_bible_home_inner(context, on_passage, download) {
   let chapter_code = null;
   let verses = [];
   async function lambda(a) {
+    list_add(list, item);
     let verse_number = object_property_get(a, "verse_number");
     chapter_code = object_property_get(a, "chapter_code");
     downloaded = await download(chapter_code);
