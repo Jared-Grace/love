@@ -112,7 +112,7 @@ export async function app_ceb_bible_home_generic(
       await html_scroll_top_now(p);
     }
     let text2 = emoji_arrow_up();
-    let p2 = html_p(root);
+    let p2 = html_div(root);
     html_centered(div4);
     let component = html_button(p, text2, lambda6);
     let component22 = html_hr(root2);
