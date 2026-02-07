@@ -42,7 +42,8 @@ export async function app_ceb_bible_home_generic(
     if (null_not_is(next)) {
       let text3 = emoji_arrow_down();
       async function lambda3() {
-        await html_scroll_top_now(component3);
+        let verses2 = object_property_get(next, "verses");
+        await scroll(verses);
       }
       let component = html_button(d, text3, lambda3);
     }
@@ -114,18 +115,21 @@ export async function app_ceb_bible_home_generic(
     }
     each(explains, lambda);
     async function lambda6() {
-      let f = list_first(verses);
-      let p = object_property_get(f, "p_verse");
-      log({
-        p,
-        verses,
-      });
-      await html_scroll_top_now(p);
+      await scroll(verses);
     }
     let text2 = emoji_arrow_up();
     let d = html_div_centered(p);
     let component = html_button(d, text2, lambda6);
     let component22 = html_hr(p);
     return;
+  }
+  async function scroll(verses) {
+    let f = list_first(verses);
+    let p = object_property_get(f, "p_verse");
+    log({
+      p,
+      verses,
+    });
+    await html_scroll_top_now(p);
   }
 }
