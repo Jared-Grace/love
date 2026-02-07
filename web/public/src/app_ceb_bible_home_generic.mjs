@@ -1,3 +1,4 @@
+import { emoji_arrow_down } from "../../../love/public/src/emoji_arrow_down.mjs";
 import { emoji_arrow_up } from "../../../love/public/src/emoji_arrow_up.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
@@ -101,6 +102,7 @@ export async function app_ceb_bible_home_generic(
       html_font_color_set(span3, "#7b3f97ff");
     }
     each(explains, lambda);
+    emoji_arrow_down();
     emoji_arrow_up();
     return;
   }
