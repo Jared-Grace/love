@@ -39,7 +39,7 @@ export async function app_ceb_bible_home(context) {
     }
     each(texts, lambda5);
     let explains_json = object_property_get(passage, "explains");
-    let json = json_to(object);
+    let explains = json_to(explains_json);
     let first = list_first(explains);
     let properties = object_properties(first);
     let component = html_element(p, "table");
