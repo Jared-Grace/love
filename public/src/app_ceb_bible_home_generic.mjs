@@ -1,3 +1,4 @@
+import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { html_scroll_top_now } from "../../../love/public/src/html_scroll_top_now.mjs";
 import { emoji_arrow_up } from "../../../love/public/src/emoji_arrow_up.mjs";
@@ -117,6 +118,8 @@ export async function app_ceb_bible_home_generic(
     html_centered(d);
     let component = html_button(d, text2, lambda6);
     let component22 = html_hr(p);
+    if (null_not_is(value)) {
+    }
     return;
   }
 }
