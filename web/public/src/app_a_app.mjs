@@ -10,7 +10,7 @@ import { app_a_button_function_text } from "../../../love/public/src/app_a_butto
 import { emoji_mobile } from "../../../love/public/src/emoji_mobile.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { app_a_app_run } from "../../../love/public/src/app_a_app_run.mjs";
-import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
+import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { function_unalias_exists } from "../../../love/public/src/function_unalias_exists.mjs";
 import { app_shared_name_main } from "../../../love/public/src/app_shared_name_main.mjs";
@@ -39,7 +39,7 @@ export async function app_a_app(context) {
       shortcut: "p",
       text: e + " Preview",
       fn: function lambda3() {
-        app_generic_screen_set(context, app_a_app_run);
+        app_shared_screen_set(context, app_a_app_run);
       },
     },
   ];
