@@ -25,7 +25,7 @@ export async function marker_screen_add(screen_name) {
     await function_new(combined_screen);
     const v = "context";
     let f_name = error();
-    await function_param_new_double(v, f_name);
+    await function_param_new_double(f_name, v);
     async function lambda2(ast) {
       let code = js_code_call_args(html_clear_context.name, [v]);
       let code_assign = js_code_let_assign("root", code);
