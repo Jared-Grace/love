@@ -1,3 +1,4 @@
+import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_bible_home_generic } from "../../../love/public/src/app_bible_home_generic.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -24,6 +25,7 @@ export async function app_g_bible_home_inner(context, on_passage, download) {
       let s = string_to(max);
       if (equal(s, verse_number)) {
         on_passage(passage, a, verses);
+        list_empty(list);
       }
     }
     each(passages, lambda2);
