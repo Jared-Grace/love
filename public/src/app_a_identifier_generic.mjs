@@ -173,7 +173,7 @@ export function app_a_identifier_generic(
         shortcut: "q",
         text: "Param delete",
         fn: async function lambda() {
-          let f_name = storage_local_get_context(context, "f_name_selected");
+          let f_name = storage_local_get_context(context, app_a_function_name_selected_key());
           await function_param_delete(f_name, name);
           await app_a_function_overlay_refresh(a, o3);
         },
