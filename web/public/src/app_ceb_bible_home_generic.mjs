@@ -118,7 +118,7 @@ export async function app_ceb_bible_home_generic(
     html_centered(d);
     let component = html_button(d, text2, lambda6);
     let component22 = html_hr(p);
-    if (null_not_is(value)) {
+    if (null_not_is(verses_previous)) {
     }
     return;
   }
