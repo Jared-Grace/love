@@ -26,15 +26,15 @@ export async function app_ceb_bible_home_generic(
 ) {
   await app_g_bible_home_inner(context, on_passage, download);
   function on_passage(passage, p) {
+    log({
+      passage,
+    });
     let text = object_property_get(passage, "text");
     let separator3 = string_colon_3();
     let split3 = string_split(text, separator3);
     function lambda4(v) {
       let separator2 = string_colon_2();
       let split = string_split(v, separator2);
-      log({
-        split,
-      });
       let get = null;
       if (first) {
         get = list_first;
