@@ -1,3 +1,4 @@
+import { html_hr } from "../../../love/public/src/html_hr.mjs";
 import { html_font_color_set_blue } from "../../../love/public/src/html_font_color_set_blue.mjs";
 import { html_span_colon_2 } from "../../../love/public/src/html_span_colon_2.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
@@ -42,6 +43,7 @@ export async function app_ceb_bible_home(context) {
     let explains_json = object_property_get(passage, "explains");
     let explains = json_from(explains_json);
     function lambda(e) {
+      let component2 = html_hr(root);
       let div2 = html_div(p);
       let ceb = object_property_get(e, "ceb");
       let gloss = object_property_get(e, "gloss");
