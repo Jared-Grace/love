@@ -7,6 +7,6 @@ export function app_ceb_bible_main(context) {
   let app_fn = app_ceb_bible;
   let screens = app_ceb_bible_screens();
   let screen_home = app_ceb_bible_home;
-  app_bible_main_generic_before(context, app_fn, screens, app_ceb_bible_home);
+  app_bible_main_generic_before(context, app_fn, screens, screen_home);
   app_generic_refresh(context);
 }
