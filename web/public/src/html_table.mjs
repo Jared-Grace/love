@@ -4,10 +4,10 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { html_element } from "../../../love/public/src/html_element.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-export function html_table(explains, p) {
-  let first = list_first(explains);
+export function html_table(list, parent) {
+  let first = list_first(list);
   let properties = object_properties(first);
-  let component = html_element(p, "table");
+  let component = html_element(parent, "table");
   let component2 = html_element(component, "tbody");
   function lambda(e) {
     let component3 = html_element(component2, "tr");
@@ -18,5 +18,5 @@ export function html_table(explains, p) {
     }
     each(properties, lambda2);
   }
-  each(explains, lambda);
+  each(list, lambda);
 }
