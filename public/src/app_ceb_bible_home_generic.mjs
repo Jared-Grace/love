@@ -43,12 +43,13 @@ export async function app_ceb_bible_home_generic(
     let last = list_last(verses);
     let p = object_property_get(last, prop);
     if (null_not_is(next)) {
+      let d = html_div_centered(p);
       let text3 = emoji_arrow_down();
       async function lambda3() {
         let verses_next = object_property_get(next, "verses");
         await scroll(verses_next);
       }
-      let component = html_button(p, text3, lambda3);
+      let component = html_button(d, text3, lambda3);
     }
     let h = html_hr(p);
     let texts = null;
