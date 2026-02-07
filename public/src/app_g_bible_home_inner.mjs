@@ -28,7 +28,7 @@ export async function app_g_bible_home_inner(context, on_passage, download) {
         let s = string_to(max);
         if (equal(s, verse_number)) {
           let copy = list_copy(verses);
-          on_passage(passage, copy);
+          la(passage, copy);
           list_empty(verses);
         }
       }
