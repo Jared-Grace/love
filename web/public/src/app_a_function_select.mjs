@@ -18,7 +18,7 @@ export function app_a_function_select(context, f_name) {
   }
   storage_local_transform_context(
     context,
-    "f_name_selected_history",
+    app_a_function_name_selected_key() + "_history",
     [],
     lambda,
   );
