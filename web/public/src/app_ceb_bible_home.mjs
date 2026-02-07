@@ -19,11 +19,8 @@ import { app_ceb_bible_gloss_generate_download } from "../../../love/public/src/
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function app_ceb_bible_home(context) {
-  await app_g_bible_home_inner(
-    context,
-    on_passage,
-    app_ceb_bible_gloss_generate_download,
-  );
+  let download = app_ceb_bible_gloss_generate_download;
+  await app_g_bible_home_inner(context, on_passage, download);
   function on_passage(passage, p) {
     let text = object_property_get(passage, "text");
     let separator3 = string_colon_3();
