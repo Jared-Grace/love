@@ -14,7 +14,8 @@ export async function app_g_bible_home_inner(context, on_passage, download) {
   let downloaded = null;
   let chapter_code = null;
   let verses = [];
-  let list = list_adder(function lambda3(la) {});
+  function lambda3(la) {}
+  let list = list_adder(lambda3);
   async function lambda(a) {
     list_add(verses, a);
     let verse_number = object_property_get(a, "verse_number");
