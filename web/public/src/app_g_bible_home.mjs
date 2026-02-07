@@ -29,7 +29,8 @@ export async function app_g_bible_home(context) {
       on_passage,
       g_sermon_generate_download,
     ));
-    function on_passage(passage, p) {
+    function on_passage(passage, a) {
+      let p = object_property_get(a, "p");
       let sermon = object_property_get(passage, "sermon");
       let mapped2 = app_g_openai_split(sermon);
       let size = list_size(mapped2);
