@@ -2,7 +2,6 @@ import { html_span_dash } from "../../../love/public/src/html_span_dash.mjs";
 import { html_font_color_set_green } from "../../../love/public/src/html_font_color_set_green.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_bold_mild } from "../../../love/public/src/html_bold_mild.mjs";
-import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
