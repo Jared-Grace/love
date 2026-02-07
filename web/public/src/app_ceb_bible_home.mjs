@@ -45,7 +45,7 @@ export async function app_ceb_bible_home(context) {
       let gloss = object_property_get(e, "gloss");
       let explain = object_property_get(e, "explain");
       let span = html_span_text(p, ceb);
-      html_bold_mild(b);
+      html_bold_mild(span);
       html_span_space(p);
       let span2 = html_span_text(p, gloss);
       html_span_space(p);
