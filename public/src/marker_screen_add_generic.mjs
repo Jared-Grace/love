@@ -10,6 +10,7 @@ export async function marker_screen_add_generic(a_name, lambda) {
   async function lambda_ftms(a) {
     let v2 = marker_next_declare_single_init(a);
     let properties = object_property_get(v2, "properties");
+    let node_type = "ArrayExpression";
     let vs = js_list_type(ast, node_type);
     a = [];
     await lambda(properties, prefixed);
