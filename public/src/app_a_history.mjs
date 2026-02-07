@@ -1,3 +1,4 @@
+import { app_a_function_select_curry } from "../../../love/public/src/app_a_function_select_curry.mjs";
 import { app_a_button_function_refresh } from "../../../love/public/src/app_a_button_function_refresh.mjs";
 import { app_a_list_chooser } from "../../../love/public/src/app_a_list_chooser.mjs";
 import { app_a_function_name_selected_history_key } from "../../../love/public/src/app_a_function_name_selected_history_key.mjs";
@@ -6,6 +7,6 @@ export function app_a_history(context) {
   app_a_button_function_refresh(context);
   let key = app_a_function_name_selected_history_key();
   let h = storage_local_get_context(context, key);
-  function lambda() {}
-  let r = app_a_list_chooser(context, "function", h, lambda);
+  let on_select = app_a_function_select_curry(context);
+  let r = app_a_list_chooser(context, "function", h, on_select);
 }
