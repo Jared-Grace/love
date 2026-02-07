@@ -48,6 +48,8 @@ export async function app_ceb_bible_home_generic(
       }
       texts = list_map(split3, lambda4);
     } else {
+      let original = object_property_get(passage, "original");
+      texts = [];
     }
     function lambda5(t) {
       let div = html_div_text(p, t);
