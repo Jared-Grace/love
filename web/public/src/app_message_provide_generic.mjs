@@ -2,7 +2,7 @@ import { app_shared_flow_back } from "../../../love/public/src/app_shared_flow_b
 import { html_checkboxes } from "../../../love/public/src/html_checkboxes.mjs";
 import { html_checkboxes_checked_value_get } from "../../../love/public/src/html_checkboxes_checked_value_get.mjs";
 import { app_karate_button_next } from "../../../karate_code/public/src/app_karate_button_next.mjs";
-import { app_generic_flow_next } from "../../../love/public/src/app_generic_flow_next.mjs";
+import { app_shared_flow_next } from "../../../love/public/src/app_shared_flow_next.mjs";
 import { app_message_flow_travel } from "../../../love/public/src/app_message_flow_travel.mjs";
 import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
 import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
@@ -60,7 +60,7 @@ export function app_message_provide_generic(category, emoji, context, verse) {
   ];
   let on_next = function lambda4() {
     let screens = app_message_flow_travel();
-    app_generic_flow_next(context, screens);
+    app_shared_flow_next(context, screens);
   };
   let button_next = app_karate_button_next;
   let valid_get = function lambda3(checkboxes) {
