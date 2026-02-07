@@ -42,10 +42,6 @@ export async function app_ceb_bible_home(context) {
     let explains = json_from(explains_json);
     let first = list_first(explains);
     let properties = object_properties(first);
-    log({
-      properties,
-    });
-    return;
     let component = html_element(p, "table");
     let component2 = html_element(component, "tbody");
     function lambda(e) {
