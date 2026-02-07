@@ -43,7 +43,7 @@ export async function app_ceb_bible_home(context) {
     let explains_json = object_property_get(passage, "explains");
     let explains = json_from(explains_json);
     function lambda(e) {
-      let component2 = html_hr(root);
+      let component2 = html_hr(p);
       let div2 = html_div(p);
       let ceb = object_property_get(e, "ceb");
       let gloss = object_property_get(e, "gloss");
