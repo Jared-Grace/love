@@ -12,7 +12,7 @@ export async function app_g_bible_home_inner(context, on_passage, download) {
   let chapter_code = null;
   let verses = [];
   async function lambda(a) {
-    list_add(list, item);
+    list_add(verses, a);
     let verse_number = object_property_get(a, "verse_number");
     chapter_code = object_property_get(a, "chapter_code");
     downloaded = await download(chapter_code);
@@ -23,7 +23,7 @@ export async function app_g_bible_home_inner(context, on_passage, download) {
       let max = list_max(mapped);
       let s = string_to(max);
       if (equal(s, verse_number)) {
-        on_passage(passage, a);
+        on_passage(passage, a, verses);
       }
     }
     each(passages, lambda2);
