@@ -49,10 +49,10 @@ export async function app_ceb_bible_home(context) {
       html_bold_mild(span);
       html_font_color_set_green(span);
       let c = html_span_colon_2(div2);
-      html_font_color_set(c, "#444");
+      html_font_color_set(c, "#aaa");
       let span2 = html_span_text(div2, gloss);
       let c2 = html_span_colon_2(div2);
-      html_font_color_set(c2, "#888");
+      html_font_color_set(c2, "#aaa");
       let span3 = html_span_text(div2, explain);
     }
     each(explains, lambda);
