@@ -1,0 +1,3097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>original_bible</title>
+</head>
+<body>
+  <script type="importmap"> 
+    {
+ "imports": {
+  "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm"
+ }
+}
+  </script>
+<script type="module"> 
+    let global = {};
+    async function app_original_bible_latest() {
+  await app_main_latest("app_original_bible_main", "jared-grace");
+}
+async function app_main_latest(f_name, firebase_name_value) {
+  let v = await app_main(f_name, firebase_name_value, firebase_deploy_function_destination_latest);
+  return v;
+}
+function firebase_deploy_function_destination_latest(f_name) {
+  let destination2 = firebase_deploy_function_destination_json("version_latest", f_name);
+  return destination2;
+}
+function firebase_deploy_function_destination_json(name, f_name) {
+  let file_name = file_name_json(name);
+  let destination = firebase_deploy_function_destination(f_name, file_name);
+  return destination;
+}
+function firebase_deploy_function_destination(f_name, file_name) {
+  const list = ["function", f_name, file_name];
+  let destination = list_join_slash_forward(list);
+  return destination;
+}
+function list_join_slash_forward(list) {
+  let joined = list_join(list, "/");
+  return joined;
+}
+function list_join(list, separator) {
+  let l = list_is(list);
+  if (not(l)) {
+    error_json({
+      list
+    });
+  }
+  let joined = list.join(separator);
+  return joined;
+}
+function not(b) {
+  let n = !b;
+  return n;
+}
+function list_is(value) {
+  const l = Array.isArray(value);
+  return l;
+}
+function error_json(o) {
+  let message = json_format_to(o);
+  error(message);
+}
+function error(message) {
+  throw new Error(message);
+}
+function json_format_to(object) {
+  let j = JSON.stringify(object, null, 1);
+  return j;
+}
+function file_name_json(name) {
+  let file_name = name + json_extension();
+  return file_name;
+}
+function json_extension() {
+  let ext_j = ".json";
+  return ext_j;
+}
+async function app_main(f_name, firebase_name_value, version_get) {
+  global_function_initialize(firebase_name, firebase_name_value);
+  let call = js_code_call_app_context_initialize(f_name);
+  await firebase_storage_function_run_generic(version_get, f_name, call);
+}
+function js_code_call_app_context_initialize(name_prefixed) {
+  let result = js_code_call_args_statement(app_context_initialize.name, [name_prefixed]);
+  return result;
+}
+async function app_context_initialize(fn) {
+  const root = html_document_body();
+  await app_context_initialize_root(root, fn);
+}
+async function app_context_initialize_root(root, fn) {
+  let context = {
+    root
+  };
+  await fn(context);
+}
+function html_document_body() {
+  let body_element = document.body;
+  let body = html_component_wrap(body_element);
+  return body;
+}
+function html_component_wrap(element) {
+  let v = {
+    element
+  };
+  return v;
+}
+function js_code_call_args_statement(f_name, args) {
+  let code = js_code_call_args(f_name, args);
+  let result = js_code_statement(code);
+  return result;
+}
+function js_code_call_args(fn_name, args) {
+  assert_arguments(arguments, 2);
+  let joined = list_join_comma_space(args);
+  let code = fn_name + js_code_wrap_parenthesis(joined);
+  return code;
+}
+function assert_arguments(args, count) {
+  let length = object_property_get(args, "length");
+  equal_assert(length, count);
+}
+function equal_assert(left, right) {
+  let eq = equal(left, right);
+  assert(eq);
+}
+function assert(b) {
+  if (not(b)) {
+    error();
+  }
+}
+function equal(left, right) {
+  let eq = left === right;
+  return eq;
+}
+function object_property_get(object, property_name) {
+  let value = object[property_name];
+  undefined_not_is_assert_lambda(value, object_get);
+  function object_get() {
+    let v = {
+      object,
+      property_name
+    };
+    return v;
+  }
+  return value;
+}
+function undefined_not_is_assert_lambda(value, lambda) {
+  if (undefined_is(value)) {
+    const object = lambda();
+    let message = json_to(object);
+    error(message);
+  }
+}
+function json_to(object) {
+  let json = JSON.stringify(object);
+  return json;
+}
+function undefined_is(value) {
+  let v = typeof value === "undefined";
+  return v;
+}
+function fn_name(f_name) {
+  return f_name;
+}
+function js_code_wrap_parenthesis(inside) {
+  const inside_larger = " " + inside + " ";
+  let v = string_wrap_parenthesis(inside_larger);
+  return v;
+}
+function string_wrap_parenthesis(inside) {
+  let v2 = js_code_parenthesis_left() + inside + js_code_parenthesis_right();
+  return v2;
+}
+function js_code_parenthesis_right() {
+  let v2 = ")";
+  return v2;
+}
+function js_code_parenthesis_left() {
+  let v3 = "(";
+  return v3;
+}
+function list_join_comma_space(args) {
+  let v = list_join(args, ", ");
+  return v;
+}
+function js_code_statement(code) {
+  let v = code + js_code_semicolon();
+  return v;
+}
+function js_code_semicolon() {
+  let v2 = ";";
+  return v2;
+}
+async function firebase_storage_function_run_generic(version_get, f_name, call) {
+  let destination_version = version_get(f_name);
+  let destination = await firebase_storage_download_property(destination_version, "destination");
+  let code = await firebase_storage_download_property(destination, "code");
+  let global_init = js_code_global_init();
+  let joined = list_join_newline([global_init, code, call]);
+  if (browser_is()) {
+    let body = html_document_body();
+    let component = html_element(body, "script");
+    html_attribute_set(component, "type", "module");
+    html_text_set(component, joined);
+  } else {
+    eval(joined);
+  }
+}
+function html_text_set(component, text) {
+  let element = html_component_element_get(component);
+  element.innerHTML = text;
+}
+function html_component_element_get(component) {
+  let element = object_property_get(component, "element");
+  return element;
+}
+function html_attribute_set(component, key, value) {
+  let element = html_component_element_get(component);
+  element.setAttribute(key, value);
+}
+function html_element(parent, tag_name) {
+  let parent_element = html_component_element_get(parent);
+  const e = document.createElement(tag_name);
+  parent_element.appendChild(e);
+  let component = html_component_wrap(e);
+  html_style_set(component, "box-sizing", "border-box");
+  return component;
+}
+function html_style_set(b, style_key, style_value) {
+  let b_element = html_component_element_get(b);
+  b_element.style[style_key] = style_value;
+}
+function browser_is() {
+  let b = typeof window !== "undefined" && typeof window.document !== "undefined";
+  return b;
+}
+function list_join_newline(list) {
+  let separator = newline();
+  let joined = list_join(list, separator);
+  return joined;
+}
+function newline() {
+  let v = "\n";
+  return v;
+}
+function js_code_global_init() {
+  let right = js_code_braces_empty();
+  let left = global_name();
+  let code_assign = js_code_let_assign(left, right);
+  return code_assign;
+}
+function global_name() {
+  let global = "global";
+  return global;
+}
+function js_code_let_assign(left, right) {
+  let code_assign = js_keyword_let() + " " + js_code_assign(left, right) + ";";
+  return code_assign;
+}
+function js_code_assign(left, right) {
+  const code = left + js_code_equals_padded() + right;
+  return code;
+}
+function js_code_equals_padded() {
+  let v = " = ";
+  return v;
+}
+function js_keyword_let() {
+  let v = "let";
+  return v;
+}
+function js_code_braces_empty() {
+  let v = js_code_wrap_braces("");
+  return v;
+}
+function js_code_wrap_braces(inside) {
+  let w = js_code_brace_left() + inside + js_code_brace_right();
+  return w;
+}
+function js_code_brace_right() {
+  let v2 = "}";
+  return v2;
+}
+function js_code_brace_left() {
+  let v2 = "{";
+  return v2;
+}
+async function firebase_storage_download_property(storage_path, property_name) {
+  let buffer = await firebase_storage_download(storage_path);
+  const json = buffer_string_to(buffer);
+  let o = json_from(json);
+  let value = object_property_get(o, property_name);
+  return value;
+}
+function json_from(json) {
+  let v = JSON.parse(json);
+  return v;
+}
+function buffer_string_to(buffer) {
+  let s = null;
+  let b = browser_is();
+  if (b) {
+    if (buffer instanceof ArrayBuffer) {
+      s = new TextDecoder("utf-8").decode(new Uint8Array(buffer));
+    } else if (buffer instanceof Uint8Array) {
+      s = new TextDecoder("utf-8").decode(buffer);
+    } else {
+      throw new Error("Unsupported buffer type");
+    }
+  } else {
+    s = buffer.toString("utf8");
+  }
+  return s;
+}
+async function firebase_storage_download(destination) {
+  destination = firebase_path_fix(destination);
+  let b = browser_is();
+  if (b) {
+    async function lambda2() {
+      let url = await firebase_storage_url(destination);
+      let buffer = await http(url);
+      return buffer;
+    }
+    let result = await html_loading(lambda2);
+    return result;
+  }
+  const bucket = await firebase_bucket();
+  let [buffer] = await bucket.file(destination).download();
+  return buffer;
+}
+async function html_loading(lambda) {
+  let div = null;
+  let b2 = browser_is();
+  if (b2) {
+    let body = html_document_body();
+    div = html_div(body);
+    let s = {
+      position: "fixed",
+      top: "0",
+      left: "0",
+      width: "100vw",
+      height: "100vh",
+      background: "rgba(0, 0, 0, 0.6)",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      zIndex: "1000"
+    };
+    html_style_assign(div, s);
+  }
+  let result = null;
+  try {
+    result = await lambda();
+  } catch (e) {
+    throw e;
+  } finally {
+    if (b2) {
+      html_remove(div);
+    }
+  }
+  return result;
+}
+function html_remove(component) {
+  let element = html_component_element_get(component);
+  element.remove();
+}
+function html_style_assign(b, s) {
+  let b_element = html_component_element_get(b);
+  object_assign(b_element.style, s);
+}
+function object_assign(to, from) {
+  Object.assign(to, from);
+}
+function html_div(root) {
+  let div = html_element(root, "div");
+  return div;
+}
+async function http(url) {
+  let options = http_get_options();
+  let v = await http_generic(url, options);
+  return v;
+}
+function http_get_options() {
+  let v2 = {
+    method: "GET"
+  };
+  return v2;
+}
+async function http_generic(url, options) {
+  const method = options.method || "GET";
+  const body = options.body || null;
+  const b = browser_is();
+  if (b) {
+    async function lambda3() {
+      const r = {
+        method
+      };
+      let exists = object_property_exists(options, "body");
+      if (exists) {
+        object_assign(r, {
+          headers: {
+            "Content-Type": "application/json",
+            ...options.headers || ({})
+          },
+          body: json_to(body)
+        });
+      }
+      const response = await fetch(url, r);
+      if (not(response.ok)) {
+        error("Failed to fetch file");
+      }
+      const buf = await response.arrayBuffer();
+      return buf;
+    }
+    let v = await html_loading(lambda3);
+    return v;
+  }
+  let sleep = true;
+  let e = object_property_exists(options, "sleep");
+  if (e) {
+    sleep = object_property_get(options, "sleep");
+  }
+  if (sleep) {
+    await http_sleep();
+  }
+  let h = null;
+  let swHttps = string_starts_with(url, "https://");
+  if (swHttps) {
+    h = await import("https");
+  } else {
+    h = await import("http");
+  }
+  let buffer = await promise_wrap(lambda);
+  function lambda(resolve, reject) {
+    const urlObj = new URL(url);
+    function lambda5(res) {
+      const chunks = [];
+      function lambda2(chunk) {
+        chunks.push(chunk);
+      }
+      let i = catch_call(reject, lambda2);
+      res.on("data", i);
+      function on_end() {
+        let statusCode = object_property_get(res, "statusCode");
+        const d = statusCode / 100;
+        const rounded = round(d);
+        assert_json(rounded === 2, {
+          url,
+          statusCode
+        });
+        let v2 = Buffer.concat(chunks);
+        resolve(v2);
+      }
+      let i2 = catch_call(reject, on_end);
+      res.on("end", i2);
+    }
+    const a = {
+      hostname: urlObj.hostname,
+      port: urlObj.port || (swHttps ? 443 : 80),
+      path: urlObj.pathname + urlObj.search,
+      method,
+      headers: {
+        ...options.headers || ({}),
+        ...body ? {
+          "Content-Type": "application/json"
+        } : {}
+      }
+    };
+    const req = h.request(a, lambda5);
+    req.on("error", reject);
+    if (body) {
+      let json = json_to(body);
+      req.write(json);
+    }
+    req.end();
+  }
+  return buffer;
+}
+async function sleep(ms) {
+  await new Promise(function lambda5(resolve) {
+    let v = setTimeout(resolve, ms);
+    return v;
+  });
+}
+function object_property_exists(object, property_name) {
+  const exists = object && Object.hasOwn(object, property_name);
+  return exists;
+}
+function assert_json(b, o) {
+  let message = json_to(o);
+  assert_message(b, message);
+}
+function assert_message(b, message) {
+  if (not(b)) {
+    error(message);
+  }
+}
+function round(n) {
+  let rounded = Math.round(n);
+  return rounded;
+}
+function catch_call(reject, lambda) {
+  let i = function inner() {
+    let result = null;
+    try {
+      result = lambda(...arguments);
+    } catch (e) {
+      reject(e);
+    }
+    return result;
+  };
+  return i;
+}
+async function promise_wrap(lambda$resolve$reject) {
+  let p = await new Promise(function promise_wrap_inner(resolve, reject) {
+    try {
+      lambda$resolve$reject(resolve, reject);
+    } catch (e) {
+      reject(e);
+    }
+  });
+  return p;
+}
+function string_starts_with(s, prefix) {
+  let sw = s.startsWith(prefix);
+  return sw;
+}
+async function http_sleep() {
+  await sleep(integer_random(5, 8) * 1000);
+}
+function integer_random(min, max) {
+  let list = [min, max];
+  assert_multiple(integer_is, list);
+  let r = floor(random() * (max - min + 1)) + min;
+  return r;
+}
+function assert_multiple(fn, list) {
+  function lambda(l) {
+    let ii = fn(l);
+    assert(ii);
+  }
+  each(list, lambda);
+}
+function each(list, lambda$item) {
+  for (let item of list) {
+    if (lambda$item(item) === true) {
+      return;
+    }
+  }
+}
+function integer_is(value) {
+  let ii = Number.isInteger(value);
+  return ii;
+}
+function random() {
+  let v = Math.random();
+  return v;
+}
+function floor(p) {
+  let floored = Math.floor(p);
+  return floored;
+}
+async function firebase_bucket() {
+  const admin = await firebase_admin();
+  const bucket = admin.storage().bucket();
+  return bucket;
+}
+async function firebase_admin() {
+  let admin = await global_function_async(firebase_admin, firebase_admin_get);
+  return admin;
+}
+async function global_function_async(fn, lambda) {
+  let global = global_get();
+  let value = object_property_initialize_lambda(global, fn.name, lambda);
+  let awaited = await value;
+  return awaited;
+}
+function object_property_initialize_lambda(object, property_name, lambda) {
+  const exists = object_property_exists(object, property_name);
+  if (not(exists)) {
+    let value_set = lambda();
+    object_property_set(object, property_name, value_set);
+  }
+  let value = object_property_get(object, property_name);
+  return value;
+}
+function object_property_set(object, property_name, value) {
+  object[property_name] = value;
+}
+function global_get() {
+  let exists = object_property_exists(global, global_alternate_set.name);
+  if (exists) {
+    let value = object_property_get(global, global_alternate_set.name);
+    return value;
+  }
+  return global;
+}
+function global_alternate_set(global_alternate) {
+  let global = global_get();
+  global_function_set(global_alternate_set, global_alternate);
+  let unset = function lambda() {
+    object_property_delete(global, global_alternate_set.name);
+  };
+  return unset;
+}
+function object_property_delete(object, property_name) {
+  object_property_exists_assert(object, property_name);
+  delete object[property_name];
+}
+function object_property_exists_assert(object, property_name) {
+  let result = object_property_exists(object, property_name);
+  function lambda() {
+    let v = {
+      object,
+      property_name
+    };
+    return v;
+  }
+  assert_json_get(result, lambda);
+}
+function assert_json_get(b, lambda) {
+  function json_get() {
+    let object = lambda();
+    let json = json_to(object);
+    return json;
+  }
+  assert_message_get(b, json_get);
+}
+function assert_message_get(b, lambda) {
+  if (not(b)) {
+    let message = lambda();
+    error(message);
+  }
+}
+function global_function_set(fn, value) {
+  let global = global_get();
+  object_property_set(global, fn.name, value);
+}
+async function firebase_admin_get() {
+  const admin = (await import("firebase-admin")).default;
+  let service_account = await firebase_service_account();
+  const sb = await firebase_storage_url_project();
+  admin.initializeApp({
+    credential: admin.credential.cert(service_account),
+    storageBucket: sb
+  });
+  return admin;
+}
+async function firebase_storage_url_project() {
+  const prefix = await firebase_name();
+  let url = prefix + ".firebasestorage.app";
+  return url;
+}
+async function firebase_name() {
+  if (browser_is()) {
+    let value = global_function_get(firebase_name);
+    return value;
+  }
+  let repo_name = await user_repo_get();
+  let default2 = await firebase_name_repo(repo_name);
+  return default2;
+}
+async function firebase_name_repo(repo_name) {
+  const f_path = ".firebaserc";
+  let combined = repo_path_combine(repo_name, f_path);
+  let f = await file_read_json(combined);
+  let projects = object_property_get(f, "projects");
+  let default2 = object_property_get(projects, "default");
+  return default2;
+}
+async function file_read_json(file_path) {
+  let json = await file_read(file_path);
+  let data = json_from(json);
+  return data;
+}
+async function file_read(file_path) {
+  let exists = global_function_property_exists(file_read_cached, file_path);
+  if (exists) {
+    let c = await global_function_property_get(file_read_cached, file_path);
+    return c;
+  }
+  if (browser_is()) {
+    file_path = file_path_normalize(file_path);
+    await app_a_file_system_initialize();
+    let store = app_a_file_system_store();
+    let item = await indexeddb_get(app_a_indexeddb_initialize, store, file_path);
+    let compressed = object_property_get(item, "compressed");
+    let f = await json_decompress(compressed);
+    let versions = object_property_get(f, "versions");
+    let last = list_last(versions);
+    return last;
+  }
+  let fs = await import("fs");
+  let contents = await fs.promises.readFile(file_path, "utf-8");
+  return contents;
+}
+function global_function_property_get(fn, property_name) {
+  let fn_object = global_function_initialize(fn, {});
+  let value = object_property_get(fn_object, property_name);
+  return value;
+}
+function global_function_initialize(fn, initial) {
+  assert_arguments(arguments, 2);
+  let value_get = lambda_get(initial);
+  let value = global_function_initialize_lambda(fn, value_get);
+  return value;
+}
+function global_function_initialize_lambda(fn, lambda) {
+  assert_arguments(arguments, 2);
+  let global = global_get();
+  let value = object_property_initialize_lambda(global, fn.name, lambda);
+  return value;
+}
+function lambda_get(value) {
+  function value_get() {
+    return value;
+  }
+  return value_get;
+}
+async function file_read_cached(f_path) {
+  let exists = global_function_property_exists(file_read_cached, f_path);
+  if (exists) {
+    let v2 = false;
+    return v2;
+  }
+  assert_not(exists);
+  let contents = await file_read(f_path);
+  global_function_property_set(file_read_cached, f_path, contents);
+  let v = true;
+  return v;
+}
+function assert_not(b) {
+  if (b) {
+    error();
+  }
+}
+function global_function_property_exists(fn, property_name) {
+  let fn_object = global_function_initialize_object(fn);
+  let exists = object_property_exists(fn_object, property_name);
+  return exists;
+}
+function global_function_initialize_object(fn) {
+  let value = global_function_initialize(fn, {});
+  return value;
+}
+function global_function_property_set(fn, property_name, value) {
+  let fn_object = global_function_initialize(fn, {});
+  object_property_set(fn_object, property_name, value);
+}
+async function json_decompress(compressed) {
+  let json = await string_decompress(compressed);
+  let text = json_from(json);
+  return text;
+}
+async function string_decompress(compressed) {
+  let lz = null;
+  if (browser_is()) {
+    lz = (await import("lz-string")).default;
+  } else {
+    lz = LZString;
+  }
+  let v = lz.decompressFromUTF16(compressed);
+  return v;
+}
+function list_last(list) {
+  list_empty_not_is_assert(list);
+  let last = list_get_end(list, 0);
+  return last;
+}
+function list_empty_not_is_assert(list) {
+  let ne = list_empty_not_is(list);
+  assert(ne);
+}
+function list_empty_not_is(list) {
+  let a = list_empty_is(list);
+  const ne = not(a);
+  return ne;
+}
+function list_empty_is(list) {
+  const e = list_size(list) === 0;
+  return e;
+}
+function list_size(list) {
+  list_is_assert(list);
+  let size = list.length;
+  return size;
+}
+function list_is_assert(list) {
+  function lambda() {
+    let v = {
+      list
+    };
+    return v;
+  }
+  list_is_assert_json(list, lambda);
+}
+function list_is_assert_json(list, lambda) {
+  let result = list_is(list);
+  assert_json_get(result, lambda);
+}
+function list_get_end(list, index_from_end) {
+  const difference = list_index_end(list, index_from_end);
+  const item = list_get(list, difference);
+  return item;
+}
+function list_index_end(list, index_from_end) {
+  let v = list_size(list) - 1 - index_from_end;
+  return v;
+}
+function list_get(list, index) {
+  integer_is_assert(index);
+  let item = list[index];
+  undefined_not_is_assert_lambda(item, object_get);
+  function object_get() {
+    let v = {
+      list,
+      index
+    };
+    return v;
+  }
+  return item;
+}
+function integer_is_assert(index) {
+  let ii = integer_is(index);
+  assert_json(ii, {
+    index
+  });
+}
+function file_path_normalize(file_path) {
+  file_path = path_normalize(file_path);
+  const prefix = "../";
+  let n = string_starts_with_not(file_path, prefix);
+  if (n) {
+    file_path = prefix + "love/" + file_path;
+  }
+  return file_path;
+}
+function string_starts_with_not(item, book_code) {
+  let a = string_starts_with(item, book_code);
+  let sw = not(a);
+  return sw;
+}
+function path_normalize(path) {
+  let n = path.replace(/\\/g, "/").replace(/\/+/g, "/").replace(/\/\.\//g, "/").replace(/\/$/, "").replace(/^\.\/+/, "");
+  return n;
+}
+async function app_a_indexeddb_initialize() {
+  const db_name = app_a.name;
+  const version = 1;
+  const store_files = "files";
+  const db = await new Promise(function lambda4(resolve, reject) {
+    const req = indexedDB.open(db_name, version);
+    req.onupgradeneeded = function lambda() {
+      const db = req.result;
+      let b = db.objectStoreNames.contains(store_files);
+      if (not(b)) {
+        db.createObjectStore(store_files, {
+          keyPath: app_a_indexeddb_path_key()
+        });
+      }
+    };
+    req.onsuccess = function lambda2() {
+      let v = resolve(req.result);
+      return v;
+    };
+    req.onerror = function lambda3() {
+      let v2 = reject(req.error);
+      return v2;
+    };
+  });
+  return db;
+}
+function app_a_indexeddb_path_key() {
+  let v3 = "key";
+  return v3;
+}
+async function app_a() {
+  await app_main_production("app_a_main", "jared-grace");
+}
+async function app_main_production(f_name, firebase_name_value) {
+  let v = await app_main(f_name, firebase_name_value, firebase_deploy_function_destination_production);
+  return v;
+}
+function firebase_deploy_function_destination_production(f_name) {
+  let destination2 = firebase_deploy_function_destination_json("version_production", f_name);
+  return destination2;
+}
+function app_a_file_system_store() {
+  let v = "files";
+  return v;
+}
+async function indexeddb_get(db_get, store, key) {
+  let all = await indexeddb_get_all(db_get, store);
+  let f = list_find_property(all, "key", key);
+  return f;
+}
+function list_find_property(list, property_name, property_value) {
+  let filter = object_property_equals_lambda(property_name, property_value);
+  let item = list_find(list, filter);
+  return item;
+}
+function object_property_equals_lambda(property_name, property_value) {
+  let v2 = function lambda(item) {
+    let v = object_property_equals(item, property_name, property_value);
+    return v;
+  };
+  return v2;
+}
+function object_property_equals(item, property_name, property_value) {
+  let left = object_property_get(item, property_name);
+  let v = equal(left, property_value);
+  return v;
+}
+function list_find(list, lambda$item) {
+  let filtered = list_filter(list, lambda$item);
+  let found = list_single(filtered);
+  return found;
+}
+function list_filter(list, lambda$item) {
+  list_is_assert(list);
+  function lambda(item) {
+    let match = lambda$item(item);
+    return match;
+  }
+  let filtered = list.filter(lambda);
+  return filtered;
+}
+function list_single(list) {
+  list_size_1_assert(list);
+  let only = list_first(list);
+  return only;
+}
+function list_size_1_assert(list) {
+  let size = list_size(list);
+  let json = json_to({
+    size
+  });
+  list_size_1_assert_message(list, json);
+}
+function list_size_1_assert_message(list, message) {
+  let a = list_size_1(list);
+  if (not(a)) {
+    error_json({
+      message,
+      list
+    });
+  }
+}
+function list_size_1(list) {
+  const s1 = list_size(list) === 1;
+  return s1;
+}
+function list_first(list) {
+  const index = 0;
+  const first = list_get(list, index);
+  return first;
+}
+async function indexeddb_get_all(db_get, store) {
+  let exists = global_function_property_exists(indexeddb_get_all, store);
+  if (not(exists)) {
+    let all = await indexeddb_get_all_backend(db_get, store);
+    global_function_property_set(indexeddb_get_all, store, all);
+  }
+  let list = global_function_property_get(indexeddb_get_all, store);
+  return list;
+}
+async function indexeddb_get_all_backend(db_get, store) {
+  const db = await db_get();
+  const tx = db.transaction(store, "readonly");
+  const s = tx.objectStore(store);
+  let all = await new Promise(function lambda3(resolve, reject) {
+    const req = s.getAll();
+    req.onsuccess = function lambda() {
+      let v = resolve(req.result);
+      return v;
+    };
+    req.onerror = function lambda2() {
+      let v2 = reject(req.error);
+      return v2;
+    };
+  });
+  return all;
+}
+async function app_a_file_system_initialize() {
+  let value = storage_local_exists(app_a, app_a_file_system_initialize.name);
+  if (value) {
+    return;
+  }
+  async function lambda2() {
+    await app_a_file_system_initialize_download();
+    let v = true;
+    return v;
+  }
+  let value2 = await global_function_initialize_lambda_async(app_a_file_system_initialize, lambda2);
+}
+async function app_a_file_system_initialize_download() {
+  let db = await app_a_indexeddb_initialize();
+  let db_get = lambda_get(db);
+  let r = await app_api_fn({
+    fn: app_a_download
+  });
+  list_property_exists_not_error(r, "key");
+  let dictionary = list_to_dictionary_property(r, "key");
+  let store = app_a_file_system_store();
+  await indexeddb_put_multiple(db_get, store, dictionary);
+  storage_local_set(app_a, app_a_file_system_initialize.name, true);
+  let all = await indexeddb_get_all(db_get, store);
+  list_property_exists_not_error(all, "key");
+}
+async function app_api_fn(a) {
+  let fn = object_property_get(a, "fn");
+  let f_name = fn.name;
+  object_property_set_exists_not(a, "f_name", f_name);
+  let r = await app_api(a);
+  return r;
+}
+async function app_api(a) {
+  assert_arguments(arguments, 1);
+  let f_name = object_property_get(a, "f_name");
+  string_is_assert(f_name);
+  let fn_http = http_post_json;
+  object_property_set_exists_not(a, "fn_http", fn_http);
+  let result = await app_api_generic(a);
+  return result;
+}
+function object_property_set_exists_not(object, property_name, value) {
+  object_property_exists_not_assert(object, property_name);
+  object_property_set(object, property_name, value);
+}
+function object_property_exists_not_assert(object, property_name) {
+  let result = object_property_exists_not(object, property_name);
+  assert(result);
+}
+function object_property_exists_not(object, property_name) {
+  let result = object_property_exists(object, property_name);
+  let ne = not(result);
+  return ne;
+}
+function string_is_assert(value) {
+  let b = string_is(value);
+  assert(b);
+}
+function string_is(value) {
+  let si = typeof value === "string";
+  return si;
+}
+async function app_api_generic(a) {
+  assert_arguments(arguments, 1);
+  let f_name = object_property_get(a, "f_name");
+  let args = object_property_initialize(a, "args", []);
+  let fn_http = object_property_get(a, "fn_http");
+  var v = app_api_generic_url_body(f_name, args);
+  let body = object_property_get(v, "body");
+  let url = object_property_get(v, "url");
+  let o = await fn_http(url, body);
+  let result = object_property_get(o, "result");
+  return result;
+}
+function app_api_generic_url_body(f_name, args) {
+  let body = app_api_generic_f_name_args(f_name, args);
+  let url = server_url_get();
+  let v = {
+    url,
+    body
+  };
+  return v;
+}
+function server_url_get() {
+  let url = null;
+  if (browser_is()) {
+    url = "";
+  } else {
+    url = server_url();
+  }
+  url += server_url_api();
+  return url;
+}
+function server_url_api() {
+  let a = "/api";
+  return a;
+}
+function server_url() {
+  const port = server_port();
+  let url = "http://localhost:" + port;
+  return url;
+}
+function server_port() {
+  let v4 = 8080;
+  return v4;
+}
+function app_api_generic_f_name_args(f_name, args) {
+  let args_list = list_to(args);
+  let v2 = {
+    f_name: f_name,
+    args: args_list
+  };
+  return v2;
+}
+function list_to(a) {
+  let l = Array.from(a);
+  return l;
+}
+function object_property_initialize(object, property_name, value_initial) {
+  const exists = object_property_exists(object, property_name);
+  if (not(exists)) {
+    object_property_set(object, property_name, value_initial);
+  }
+  let value = object_property_get(object, property_name);
+  return value;
+}
+async function http_post_json(url, body) {
+  let buffer = await http_post(url, body);
+  let o = buffer_to_json(buffer);
+  return o;
+}
+async function http_post(url, body) {
+  const options_extra = {};
+  let v = await http_post_options(url, body, options_extra);
+  return v;
+}
+async function http_post_options(url, body, options_extra) {
+  const options = {
+    method: "POST",
+    body: body
+  };
+  object_merge(options, options_extra);
+  let v = await http_generic(url, options);
+  return v;
+}
+function object_merge(to, from) {
+  let strict = true;
+  object_merge_generic(strict, to, from);
+  return to;
+}
+function object_merge_generic(strict, to, from) {
+  function lambda(property_name) {
+    if (strict) {
+      if (object_property_exists(to, property_name)) {
+        error_json({
+          to,
+          from,
+          property_name
+        });
+      }
+    }
+    let value = object_property_get(from, property_name);
+    object_property_set(to, property_name, value);
+  }
+  let list = object_properties(from);
+  each(list, lambda);
+}
+function object_properties(obj) {
+  const properties = Object.getOwnPropertyNames(obj);
+  return properties;
+}
+function buffer_to_json(buffer) {
+  let text = buffer_string_to(buffer);
+  let parsed = json_from(text);
+  return parsed;
+}
+function list_property_exists_not_error(all, property) {
+  function lambda(item, index) {
+    let n = object_property_exists_not(item, property);
+    if (n) {
+      error({
+        index
+      });
+    }
+  }
+  each_index(all, lambda);
+}
+function each_index(list, lambda$item$index) {
+  let index = 0;
+  function lambda_each_index(item) {
+    lambda$item$index(item, index);
+    index++;
+  }
+  each(list, lambda_each_index);
+}
+function list_to_dictionary_property(list, property) {
+  function key_get(item) {
+    let key = object_property_get(item, property);
+    return key;
+  }
+  let dictionary = list_to_dictionary_key(list, key_get);
+  return dictionary;
+}
+function list_to_dictionary_key(list, lambda$item) {
+  let value_get = identity;
+  let dictionary = list_to_dictionary(list, value_get, lambda$item);
+  return dictionary;
+}
+function list_to_dictionary(list, lambda$item2v, lambda$item2k) {
+  "if each key has one value, then " + list_to_dictionary.name + " but if each key corresponds to a list of values, then " + list_to_lookup.name;
+  let dictionary = {};
+  function lambda(item) {
+    let key = lambda$item2k(item);
+    let value = lambda$item2v(item);
+    object_property_set_exists_not(dictionary, key, value);
+  }
+  each(list, lambda);
+  return dictionary;
+}
+function list_to_lookup(list, property_key) {
+  "if each key has one value, then " + list_to_dictionary.name + " but if each key corresponds to a list of values, then " + list_to_lookup.name;
+  let lookup = {};
+  function lambda(item) {
+    let n = object_property_exists_not(item, property_key);
+    if (n) {
+      return;
+    }
+    let value = object_property_get(item, property_key);
+    let key_list = object_property_initialize_list(lookup, value);
+    list_add(key_list, item);
+  }
+  each(list, lambda);
+  return lookup;
+}
+function list_add(list, item) {
+  list.push(item);
+}
+function object_property_initialize_list(object, property_name) {
+  let value2 = object_property_initialize(object, property_name, []);
+  return value2;
+}
+function identity(a) {
+  return a;
+}
+async function indexeddb_put_multiple(db_get, store, lookup) {
+  'at time of writing, indexeddb code only uses key value of "key" therefore this function could be made general to receive key name as param';
+  let key = "key";
+  let v = object_values(lookup);
+  let keys = list_map_property(v, key);
+  let existing = await indexeddb_get_all(db_get, store);
+  function lambda(item) {
+    let k = object_property_get(item, key);
+    let includes = list_includes(keys, k);
+    return includes;
+  }
+  let filtered = list_filter(existing, lambda);
+  list_remove_multiple(existing, filtered);
+  list_add_multiple(existing, v);
+  async function lambda_async() {
+    await indexeddb_put_multiple_backend(db_get, store, lookup);
+  }
+  indexeddb_next(lambda_async);
+}
+function list_add_multiple(list, items) {
+  list.push(...items);
+}
+function list_remove_multiple(list, removals) {
+  function lambda(r) {
+    list_remove(list, r);
+  }
+  each(removals, lambda);
+}
+function list_remove(list, item) {
+  const index = list_index_of(list, item);
+  list_remove_at(list, index);
+}
+function list_remove_at(list, index) {
+  let e = list_remove_at_count(list, index, 1);
+  let only = list_single(e);
+  return only;
+}
+function list_remove_at_count(list, index, count) {
+  let e = list.splice(index, count);
+  return e;
+}
+function list_index_of(list, item) {
+  let index = list.indexOf(item);
+  if (index <= -1) {
+    error_json({
+      list,
+      item,
+      index
+    });
+  }
+  return index;
+}
+function list_includes(list, item) {
+  const includes = list.includes(item);
+  return includes;
+}
+function list_map_property(list, property_name) {
+  function list_map_property_lambda(item) {
+    let value = object_property_get(item, property_name);
+    return value;
+  }
+  let mapped = list_map(list, list_map_property_lambda);
+  return mapped;
+}
+function list_map(list, lambda$item) {
+  list_is_assert(list);
+  let mapped = list.map(lambda$item);
+  return mapped;
+}
+function object_values(o) {
+  let v = Object.values(o);
+  return v;
+}
+async function indexeddb_put_multiple_backend(db_get, store, nexts) {
+  const tx = await db_get().transaction(store, "readwrite");
+  const s = tx.objectStore(store);
+  function lambda2(n) {
+    s.put(n);
+  }
+  each_object_values(nexts, lambda2);
+  await new Promise(function lambda6(resolve, reject) {
+    tx.oncomplete = resolve;
+    tx.onerror = function lambda4() {
+      let v3 = reject(tx.error);
+      return v3;
+    };
+    tx.onabort = function lambda5() {
+      let v4 = reject(tx.error);
+      return v4;
+    };
+  });
+}
+function each_object_values(object, lambda$item) {
+  function lambda(value, property) {
+    lambda$item(value);
+  }
+  each_object(object, lambda);
+}
+function each_object(object, lambda$value$property) {
+  function lambda2(property) {
+    let value = object_property_get(object, property);
+    lambda$value$property(value, property);
+  }
+  let properties = object_properties(object);
+  each(properties, lambda2);
+}
+function indexeddb_next(lambda_async) {
+  let initial = promise_resolved();
+  let previous = global_function_initialize(indexeddb_next, initial);
+  let promise = invoke(lambda_async);
+  previous = previous.then(promise);
+  global_function_set(indexeddb_next, previous);
+}
+function invoke(lambda) {
+  let r = lambda();
+  return r;
+}
+function promise_resolved() {
+  let v = Promise.resolve(null);
+  return v;
+}
+function storage_local_set(app_fn, key, value) {
+  let storage_local_key = storage_local_key_get(app_fn, key);
+  if (storage_local_enabled()) {
+    storage_local_specify_set(value, storage_local_key);
+    return;
+  }
+  global_function_property_set(storage_local_set, storage_local_key, value);
+}
+function storage_local_specify_set(value, storage_local_key) {
+  let v = json_to({
+    value
+  });
+  localStorage.setItem(storage_local_key, v);
+}
+function storage_local_key_get(app_fn, key) {
+  let ley = app_fn.name + " " + key;
+  return ley;
+}
+function storage_local_enabled() {
+  let set = global_function_exists(storage_local_enabled);
+  let enabled = not(set) || global_function_get(storage_local_enabled) === true;
+  return enabled;
+}
+function global_function_get(fn) {
+  let global = global_get();
+  let value = object_property_get(global, fn.name);
+  return value;
+}
+function global_function_exists(fn) {
+  let global = global_get();
+  let exists = object_property_exists(global, fn.name);
+  return exists;
+}
+async function app_a_download() {
+  let filtered = await app_a_download_paths();
+  async function lambda2(path) {
+    let contents = await file_read(path);
+    let data = {
+      versions: [contents]
+    };
+    let c = await json_compress_object(data);
+    object_merge(c, {
+      key: path
+    });
+    return c;
+  }
+  let files = await list_map_unordered_async(filtered, lambda2);
+  list_property_exists_not_error(files, "key");
+  return files;
+}
+async function json_compress_object(data) {
+  let compressed = await json_compress(data);
+  let c = {
+    compressed
+  };
+  return c;
+}
+async function json_compress(data) {
+  let json = json_to(data);
+  let compressed = await string_compress(json);
+  return compressed;
+}
+async function string_compress(text) {
+  const LZString = (await import("lz-string")).default;
+  let v = LZString.compressToUTF16(text);
+  return v;
+}
+async function list_map_unordered_async(list, lambda$item) {
+  let mapped = list_map(list, lambda$item);
+  let waited = await list_wait(mapped);
+  return waited;
+}
+async function list_wait(list) {
+  let v = await Promise.all(list);
+  return v;
+}
+async function app_a_download_paths() {
+  let path_folder = repos_folder();
+  let combineds = await folder_read_recursive_skipped_paths_async(path_folder, ["node_modules", ".git"]);
+  let ext_f = function_name_extension();
+  let ext_h = html_extension();
+  let ext_j = json_extension();
+  let filtered = list_filter_ends_with_any(combineds, [ext_f, ext_h, ext_j]);
+  return filtered;
+}
+async function folder_read_recursive_skipped_paths_async(path_folder, folders_skipped) {
+  let result = await folder_read_recursive_skipped_async(path_folder, folders_skipped);
+  let mapped = folder_read_recursive_paths_to(result, path_folder);
+  return mapped;
+}
+function folder_read_recursive_paths_to(result, path_folder) {
+  let combineds = list_map_path_join_left(result, path_folder);
+  let mapped = list_map(combineds, path_normalize);
+  return mapped;
+}
+function list_map_path_join_left(list, folder_prefix) {
+  function lambda(item) {
+    let joined = path_join([folder_prefix, item]);
+    return joined;
+  }
+  let mapped2 = list_map(list, lambda);
+  return mapped2;
+}
+function path_join(segments) {
+  assert_arguments(arguments, 1);
+  let parts = [];
+  for (let seg of segments) {
+    if (not(seg)) {
+      continue;
+    }
+    let split = seg.split(/[\\/]+/);
+    for (let s of split) {
+      if (s === "" || s === ".") {
+        continue;
+      }
+      if (s === folder_previous()) {
+        if (parts.length > 0 && parts[parts.length - 1] !== folder_previous()) {
+          parts.pop();
+        } else {
+          let previous = folder_previous();
+          parts.push(previous);
+        }
+      } else {
+        parts.push(s);
+      }
+    }
+  }
+  let joined = parts.join("/");
+  return joined;
+}
+function folder_previous() {
+  let previous = "..";
+  return previous;
+}
+async function folder_read_recursive_skipped_async(path_folder, folders_skipped) {
+  const fs = await import("fs/promises");
+  const path = await import("path");
+  let result = [];
+  const entries = await fs.readdir(path_folder, {
+    withFileTypes: true
+  });
+  for (const entry of entries) {
+    let name = object_property_get(entry, "name");
+    if (entry.isFile()) {
+      result.push(name);
+    } else if (entry.isDirectory()) {
+      let n = list_includes_not(folders_skipped, name);
+      if (n) {
+        const fullPath = path.join(path_folder, name);
+        const subFiles = await folder_read_recursive_skipped_async(fullPath, folders_skipped);
+        function lambda(f) {
+          let v = path.join(name, f);
+          return v;
+        }
+        result.push(...subFiles.map(lambda));
+      }
+    }
+  }
+  return result;
+}
+function list_includes_not(list, item) {
+  let b = list_includes(list, item);
+  let n = not(b);
+  return n;
+}
+function repos_folder() {
+  let previous = folder_previous();
+  return previous;
+}
+function list_filter_ends_with_any(list, suffixes) {
+  function lambda(item) {
+    function lambda3(suffix) {
+      let ew = string_ends_with(item, suffix);
+      return ew;
+    }
+    let any = list_any(suffixes, lambda3);
+    return any;
+  }
+  let filtered = list_filter(list, lambda);
+  return filtered;
+}
+function list_any(list, lambda$item) {
+  let filtered = list_filter(list, lambda$item);
+  let any = list_empty_not_is(filtered);
+  return any;
+}
+function string_ends_with(s, suffix) {
+  const ew = s.endsWith(suffix);
+  return ew;
+}
+function html_extension() {
+  let ext_h = ".html";
+  return ext_h;
+}
+function function_name_extension() {
+  const ext = ".mjs";
+  return ext;
+}
+async function global_function_initialize_lambda_async(fn, lambda) {
+  assert_arguments(arguments, 2);
+  let global = global_get();
+  let value = await object_property_initialize_lambda_async(global, fn.name, lambda);
+  return value;
+}
+async function object_property_initialize_lambda_async(object, property_name, lambda) {
+  const exists = object_property_exists(object, property_name);
+  if (not(exists)) {
+    let value_set = lambda();
+    object_property_set(object, property_name, value_set);
+  }
+  let value = await object_property_get(object, property_name);
+  return value;
+}
+function storage_local_exists(app_fn, key) {
+  let storage_local_key = storage_local_key_get(app_fn, key);
+  if (storage_local_enabled()) {
+    let json = storage_local_specify_get_json(storage_local_key);
+    let v = json !== null;
+    return v;
+  }
+  let exists = storage_local_exists_global(storage_local_key);
+  return exists;
+}
+function storage_local_specify_get_json(storage_local_key) {
+  let v = localStorage.getItem(storage_local_key);
+  return v;
+}
+function storage_local_exists_global(storage_local_key) {
+  let exists2 = global_function_property_exists(storage_local_set, storage_local_key);
+  return exists2;
+}
+function repo_path_combine(repo_name, f_path) {
+  let folder_name = repo_path(repo_name);
+  let combined = path_join([folder_name, f_path]);
+  return combined;
+}
+function repo_path(repo_name) {
+  let previous = repos_folder();
+  let r_path = path_join([previous, repo_name]);
+  return r_path;
+}
+async function user_repo_get() {
+  let f_path = user_repo_path();
+  let v = await data_get("repo_current", null, f_path);
+  let repo_name = object_property_get(v, "value");
+  await repo_exists_assert(repo_name);
+  return repo_name;
+}
+async function repo_exists_assert(repo_name) {
+  let all = await repos_names();
+  list_includes_assert(all, repo_name);
+}
+function list_includes_assert(all, repo_name) {
+  let includes = list_includes(all, repo_name);
+  assert(includes);
+}
+async function repos_names() {
+  let path_folder = repos_folder();
+  let rns = await folder_read(path_folder);
+  let v = folder_vscode();
+  let ignores = [v];
+  function lambda(r) {
+    let n = list_includes_not(ignores, r);
+    return n;
+  }
+  let f = list_filter(rns, lambda);
+  return f;
+}
+function folder_vscode() {
+  let vc = ".vscode";
+  return vc;
+}
+async function folder_read(path_folder) {
+  if (browser_is()) {
+    let v = await folder_read_browser(path_folder);
+    let unique = object_property_get(v, "unique");
+    return unique;
+  }
+  let fs = await import("fs");
+  const all = await fs.promises.readdir(path_folder);
+  return all;
+}
+async function folder_read_browser(path_folder) {
+  let files_paths = await app_a_files_paths();
+  let r = global_function_property_cache(folder_read_browser, path_folder, files_paths, value_get);
+  return r;
+  function value_get() {
+    let n = path_normalize(path_folder);
+    let s = string_slash_forward();
+    let prefix = "" + n + s;
+    let filtered = list_filter_starts_with(files_paths, prefix);
+    let mapped = list_map_prefix_without(filtered, prefix);
+    function lambda(item) {
+      let first = string_split_first(item, s);
+      return first;
+    }
+    let mapped2 = list_map(mapped, lambda);
+    let unique = list_unique(mapped2);
+    let r = {
+      unique,
+      prefix,
+      filtered
+    };
+    return r;
+  }
+}
+function global_function_property_cache(fn, property_name, key, value_get) {
+  let c = global_function_property_initialize(fn, property_name, {
+    json: null,
+    result: null
+  });
+  let result = global_function_cache_generic(key, c, value_get);
+  return result;
+}
+function global_function_cache_generic(key, c, value_get) {
+  let json = json_to(key);
+  let json_existing = object_property_get(c, "json");
+  if (equal_not(json, json_existing)) {
+    let r = value_get();
+    object_property_set(c, "result", r);
+    object_property_set(c, "json", json);
+  }
+  let result = object_property_get(c, "result");
+  return result;
+}
+function equal_not(left, right) {
+  let a = equal(left, right);
+  let ne = not(a);
+  return ne;
+}
+function global_function_property_initialize(fn, property_name, value_initial) {
+  let global = global_get();
+  let fn_object = object_property_initialize(global, fn.name, {});
+  let value = object_property_initialize(fn_object, property_name, value_initial);
+  return value;
+}
+function list_unique(list) {
+  let found = list_unique_set(list);
+  let unique = [...found];
+  return unique;
+}
+function list_unique_set(list) {
+  let set = set_new();
+  function lambda(item) {
+    set_add(set, item);
+  }
+  each(list, lambda);
+  return set;
+}
+function set_add(found, item) {
+  found.add(item);
+}
+function add(left, right) {
+  const sum = left + right;
+  return sum;
+}
+function set_new() {
+  let v = new Set();
+  return v;
+}
+function string_split_first(item, s) {
+  let index = string_index_of_try(item, s);
+  if (index < 0) {
+    return item;
+  }
+  let taken = string_take(item, index);
+  return taken;
+}
+function string_take(s, count) {
+  let taken = string_slice(s, 0, count);
+  return taken;
+}
+function string_slice(s, a, b) {
+  let sliced = s.slice(a, b);
+  return sliced;
+}
+function string_index_of_try(s, item) {
+  let v = s.indexOf(item);
+  return v;
+}
+function list_map_prefix_without(list, prefix) {
+  function lambda(item) {
+    let result = string_prefix_without(item, prefix);
+    return result;
+  }
+  let mapped = list_map(list, lambda);
+  return mapped;
+}
+function string_prefix_without(s, prefix) {
+  let a = string_starts_with(s, prefix);
+  if (not(a)) {
+    error();
+  }
+  let skipped = string_size(prefix);
+  let without = string_skip(s, skipped);
+  return without;
+}
+function string_skip(s, skip_count) {
+  let b = string_size(s);
+  const skipped = string_slice(s, skip_count, b);
+  return skipped;
+}
+function string_size(s) {
+  let size = s.length;
+  return size;
+}
+function list_filter_starts_with(list, prefix) {
+  function lambda(item) {
+    let sw = string_starts_with(item, prefix);
+    return sw;
+  }
+  let filtered = list_filter(list, lambda);
+  return filtered;
+}
+async function app_a_files_paths() {
+  let store = app_a_file_system_store();
+  let all = await indexeddb_get_all(app_a_indexeddb_initialize, store);
+  let filtered = list_filter_property_exclude_if_exists(all, "deleted", true);
+  let property_name = app_a_indexeddb_path_key();
+  let files_paths = list_map_property(filtered, property_name);
+  return files_paths;
+}
+function list_filter_property_exclude_if_exists(list, property_name, value) {
+  function lambda(item) {
+    let exists = object_property_exists(item, property_name);
+    if (exists) {
+      let ne = object_property_get(item, property_name) !== value;
+      return ne;
+    }
+    let v2 = true;
+    return v2;
+  }
+  let filtered = list_filter(list, lambda);
+  return filtered;
+}
+function string_slash_forward() {
+  let s = "/";
+  return s;
+}
+async function data_get(property_name, value_initial, d_path) {
+  var v2 = await data_all(d_path);
+  let file_path = object_property_get(v2, "file_path");
+  let data = object_property_get(v2, "data");
+  let value = object_property_initialize(data, property_name, value_initial);
+  let v = {
+    value,
+    file_path,
+    data
+  };
+  return v;
+}
+async function data_all(file_path) {
+  let data = {};
+  let d_path = data_path();
+  if (equal(file_path, d_path)) {
+    await data_generate(data);
+  } else {
+    await data_all_initialize(file_path);
+    data = await file_read_json(file_path);
+  }
+  let v = {
+    data,
+    file_path
+  };
+  return v;
+}
+async function data_generate(data) {
+  let f_paths = await functions_paths();
+  let parseds = await list_map_unordered_async(f_paths, file_js_parse);
+  function lambda(parsed) {
+    data_file_update_inner(parsed, data);
+  }
+  each(parseds, lambda);
+  return;
+}
+function data_file_update_inner(parsed, data) {
+  let f_path = object_property_get(parsed, "f_path");
+  let f_name = function_path_to_name(f_path);
+  let ast = object_property_get(parsed, "ast");
+  let functions = object_property_initialize(data, "functions", {});
+  let f_this = object_property_initialize(functions, f_name, {});
+  let declaration = js_declaration_single(ast);
+  let async_is = object_property_get(declaration, "async");
+  object_property_set(f_this, "async", async_is);
+  function data_add(property_name, items) {
+    let items_to_functions = object_property_initialize(data, property_name, {});
+    function identifier_add(i_name) {
+      let list = object_property_initialize(items_to_functions, i_name, []);
+      list_add_if_not_includes(list, f_name);
+    }
+    each(items, identifier_add);
+    let items_old = object_property_initialize(f_this, property_name, []);
+    let removals = list_difference(items_old, items);
+    function lambda(item) {
+      let list = object_property_initialize(items_to_functions, item, []);
+      list_remove_all(list, f_name);
+      let e = list_empty_is(list);
+      if (e) {
+        object_property_delete(items_to_functions, item);
+      }
+      each(removals, lambda);
+    }
+    object_property_set(f_this, property_name, items);
+  }
+  let f_identifiers_new = js_identifiers_names(ast);
+  data_add("identifiers", f_identifiers_new);
+  let strings_new = js_strings(ast);
+  data_add("strings", strings_new);
+  function lambda2(la) {
+    js_visit_calls_named(ast, fn_name.name, lambda4);
+    function lambda4({args}) {
+      let first = list_first(args);
+      function lambda3() {
+        let v = {
+          msg: fn_name.name + " first argument should be a literal: " + f_name
+        };
+        return v;
+      }
+      js_literal_is_assert(first, lambda3);
+      let value = object_property_get(first, "value");
+      la(value);
+    }
+  }
+  let identifiers_fn_names = list_adder(lambda2);
+  data_add("identifiers_fn_names", identifiers_fn_names);
+}
+function js_strings(ast) {
+  function lambda2(la) {
+    function lambda(v) {
+      let node = object_property_get(v, "node");
+      let value = null;
+      function lambda5() {
+        let quasis = object_property_get(node, "quasis");
+        let s1 = list_size_1(quasis);
+        if (s1) {
+          let expressions = object_property_get(node, "expressions");
+          let e = list_empty_is(expressions);
+          if (e) {
+            let q = list_first(quasis);
+            let v2 = object_property_get(q, "value");
+            value = object_property_get(v2, "raw");
+          }
+        }
+      }
+      js_node_type_is_if(node, "TemplateLiteral", lambda5);
+      function lambda4() {
+        value = object_property_get(node, "value");
+      }
+      js_node_type_is_if(node, "Literal", lambda4);
+      let si2 = string_is(value);
+      if (si2) {
+        la(value);
+      }
+    }
+    js_visit_types(ast, ["Literal", "TemplateLiteral"], lambda);
+  }
+  const names = list_adder_unique(lambda2);
+  return names;
+}
+function js_node_type_is_if(node, type, lambda) {
+  let type_is = js_node_type_is(node, type);
+  if (type_is) {
+    lambda();
+  }
+}
+function js_node_type_is(node, type) {
+  const type_is = js_node_is(node) && js_node_type(node) === type;
+  return type_is;
+}
+function js_node_is(n) {
+  const ni = object_property_exists(n, "type");
+  return ni;
+}
+function js_node_type(n) {
+  const nt = object_property_get(n, "type");
+  return nt;
+}
+function list_adder_unique(lambda$la) {
+  let items = list_adder(lambda$la);
+  let unique = list_unique(items);
+  return unique;
+}
+function list_adder(lambda$la) {
+  let fn = list_add;
+  let list = list_adder_generic(lambda$la, fn);
+  return list;
+}
+function list_adder_generic(lambda, fn) {
+  let list = [];
+  function list_adder_inner(item) {
+    fn(list, item);
+  }
+  lambda(list_adder_inner);
+  return list;
+}
+function js_visit_types(ast, types, lambda$v) {
+  function lambda(v) {
+    let node = object_property_get(v, "node");
+    if (js_node_is(node) && js_node_types_is(node, types)) {
+      lambda$v(v);
+    }
+  }
+  js_visit(ast, lambda);
+}
+function js_node_types_is(item, types) {
+  function lambda2(type) {
+    let type_is = js_node_type_is(item, type);
+    return type_is;
+  }
+  const match = list_any(types, lambda2);
+  return match;
+}
+function js_visit(ast, lambda$v) {
+  let a = promise_not_is(ast);
+  if (not(a)) {
+    error();
+  }
+  visit_filter(ast, js_visit_children_get, js_visit_filter, lambda$v);
+}
+function promise_not_is(ast) {
+  let a = promise_is(ast);
+  let n = not(a);
+  return n;
+}
+function promise_is(value) {
+  let v = value !== null && typeof value === "object" && typeof value.then === "function" && typeof value.catch === "function";
+  return v;
+}
+function visit_filter(node, children_get, filter, on_each) {
+  visit_filter_recursive(node, children_get, filter, on_each, []);
+}
+function visit_filter_recursive(node, children_get, filter, on_each, stack) {
+  let a = filter(node);
+  if (not(a)) {
+    return;
+  }
+  list_add(stack, node);
+  let children = children_get(node);
+  function lambda(c) {
+    visit_filter_recursive(c, children_get, filter, on_each, stack);
+  }
+  each(children, lambda);
+  let copy = list_copy(stack);
+  on_each({
+    node,
+    stack: copy
+  });
+  let removed = list_pop(stack);
+  if (removed !== node) {
+    error();
+  }
+}
+function list_pop(list) {
+  let popped = list.pop();
+  return popped;
+}
+function list_copy(original) {
+  const copy = [...original];
+  return copy;
+}
+function js_visit_children_get(n) {
+  if (list_is(n)) {
+    return n;
+  }
+  if (string_is(n)) {
+    let v = [];
+    return v;
+  }
+  function lambda(p) {
+    let value = object_property_get(n, p);
+    return value;
+  }
+  let list = object_properties(n);
+  let mapped = list_map(list, lambda);
+  return mapped;
+}
+function js_visit_filter(n) {
+  let v = js_node_is(n) || list_is(n);
+  return v;
+}
+function js_literal_is_assert(node) {
+  let li = js_literal_is(node);
+  assert(li);
+}
+function js_literal_is(node) {
+  let li = js_node_type_is(node, "Literal");
+  return li;
+}
+function js_visit_calls_named(ast, f_name, lambda) {
+  function lambda_inner(v) {
+    let node = object_property_get(v, "node");
+    let name = js_call_callee_name(node);
+    if (equal_not(name, f_name)) {
+      return;
+    }
+    let args = object_property_get(node, "arguments");
+    lambda({
+      v,
+      args
+    });
+  }
+  js_visit_type(ast, "CallExpression", lambda_inner);
+}
+function js_visit_type(ast, type, lambda$v) {
+  js_visit_types(ast, [type], lambda$v);
+}
+function js_call_callee_name(expression) {
+  let name = null;
+  let jin2 = js_node_type_not_is(expression, "CallExpression");
+  if (jin2) {
+    return name;
+  }
+  let callee = object_property_get(expression, "callee");
+  let jin = js_identifier_not_is(callee);
+  if (jin) {
+    return name;
+  }
+  name = object_property_get_name(callee);
+  return name;
+}
+function js_node_type_not_is(node, type) {
+  let type_is = js_node_type_is(node, type);
+  let nti = not(type_is);
+  return nti;
+}
+function js_identifier_not_is(id) {
+  let jin = js_node_type_not_is(id, "Identifier");
+  return jin;
+}
+function object_property_get_name(item) {
+  let name = object_property_get(item, "name");
+  return name;
+}
+function js_declaration_single(ast) {
+  function lambda2(la) {
+    function lambda(v) {
+      let {node} = v;
+      la(node);
+    }
+    js_visit_type(ast, "ExportNamedDeclaration", lambda);
+  }
+  let nameds = list_adder(lambda2);
+  let {declaration} = list_single(nameds);
+  return declaration;
+}
+function list_remove_all(list, item) {
+  while (list_includes(list, item)) {
+    list_remove(list, item);
+  }
+}
+function list_difference(list, other) {
+  function lambda2(la) {
+    function lambda(l) {
+      let a = list_includes(other, l);
+      if (not(a)) {
+        la(l);
+      }
+    }
+    each(list, lambda);
+  }
+  let difference = list_adder(lambda2);
+  return difference;
+}
+function list_add_if_not_includes(list, item) {
+  "rename includes to exists todo";
+  let exists = list_includes(list, item);
+  if (not(exists)) {
+    list_add(list, item);
+  }
+}
+function js_identifiers_names(ast) {
+  function lambda2(la) {
+    function lambda(v) {
+      let node = object_property_get(v, "node");
+      let value = object_property_get(node, "name");
+      la(value);
+    }
+    js_visit_type(ast, "Identifier", lambda);
+  }
+  const names = list_adder_unique(lambda2);
+  return names;
+}
+function function_path_to_name(f_path) {
+  let f_name = path_name(f_path);
+  return f_name;
+}
+function path_name(file_path) {
+  const filename = path_base(file_path);
+  let v = filename.lastIndexOf(".");
+  const name = filename.includes(".") ? filename.slice(0, v) : filename;
+  return name;
+}
+function path_base(file_path) {
+  const parts = file_path.split(/[/\\]/);
+  const filename = parts.pop();
+  return filename;
+}
+async function file_js_parse(f_path) {
+  let code = await file_read(f_path);
+  const ast = await js_parse_async(code);
+  const parsed = {
+    ast,
+    code,
+    f_path
+  };
+  return parsed;
+}
+async function js_parse_async(code) {
+  const acorn = await import("acorn");
+  let v = js_parse_generic(acorn, code);
+  return v;
+}
+function js_parse_generic(acorn, code) {
+  let ast = null;
+  try {
+    ast = acorn.parse(code, {
+      ecmaVersion: 2020,
+      sourceType: "module"
+    });
+  } catch (e) {
+    log_keep(code);
+    throw e;
+  }
+  return ast;
+}
+function log_keep(message) {
+  console.log(message);
+}
+function log(message) {
+  log_keep(message);
+  let a = 1;
+}
+async function functions_paths() {
+  async function mapper(folder) {
+    let f_names = await functions_names_from_path(folder);
+    function lambda2(f_name) {
+      let v = function_name_folder_to_path(f_name, folder);
+      return v;
+    }
+    let mapped = list_map(f_names, lambda2);
+    return mapped;
+  }
+  let squashed = await repos_paths_map_unordered_combine_squash(mapper);
+  return squashed;
+}
+async function repos_paths_map_unordered_combine_squash(mapper) {
+  let path = functions_path();
+  let result = await repos_paths_map_unordered_combine(path, mapper);
+  let squashed = list_squash(result);
+  return squashed;
+}
+function list_squash(lists) {
+  function lambda2(la) {
+    list_process(lists);
+    function list_process(list) {
+      function lambda(item) {
+        let l = list_is(item);
+        let fn = null;
+        if (l) {
+          fn = list_process;
+        } else {
+          fn = la;
+        }
+        fn(item);
+      }
+      each(list, lambda);
+    }
+  }
+  let squashed = list_adder(lambda2);
+  return squashed;
+}
+async function repos_paths_map_unordered_combine(path, mapper) {
+  let result = await repos_paths_map_unordered(each_folder);
+  async function each_folder(folder) {
+    let joined = path_join([folder, path]);
+    let f_names = mapper(joined);
+    return f_names;
+  }
+  return result;
+}
+async function repos_paths_map_unordered(lambda$folder) {
+  let all = await repos_names();
+  async function lambda(repo_name) {
+    let folder = repo_path(repo_name);
+    let mapped = await lambda$folder(folder);
+    return mapped;
+  }
+  let result = await list_map_unordered_async(all, lambda);
+  return result;
+}
+function functions_path() {
+  const second = folder_src();
+  let joined = folder_public_combine(second);
+  return joined;
+}
+function folder_src() {
+  let src = "src";
+  return src;
+}
+function folder_public_combine(f_path) {
+  let result = folder_public();
+  let combined = path_join([result, f_path]);
+  return combined;
+}
+function folder_public() {
+  let v = "public";
+  return v;
+}
+async function functions_names_from_path(path) {
+  let paths = await folder_read_files(path);
+  function lambda(p) {
+    let suffix = function_name_extension();
+    let without = string_suffix_without(p, suffix);
+    return without;
+  }
+  let f_names = list_map(paths, lambda);
+  return f_names;
+}
+function string_suffix_without(s, suffix) {
+  let a = string_ends_with(s, suffix);
+  if (not(a)) {
+    error();
+  }
+  const without = string_slice(s, 0, string_size(s) - string_size(suffix));
+  return without;
+}
+async function folder_read_files(path_folder) {
+  if (browser_is()) {
+    path_folder = file_path_normalize(path_folder);
+    let r = await folder_read_browser(path_folder);
+    let filtered = object_property_get(r, "filtered");
+    let prefix = object_property_get(r, "prefix");
+    let unique = object_property_get(r, "unique");
+    let combineds = list_map_combine_left(unique, prefix);
+    let r2 = list_intersect(filtered, combineds);
+    let r3 = list_map(r2, path_base);
+    return r3;
+  }
+  let fs = await import("fs");
+  function lambda(file) {
+    let result = path_join([path_folder, file]);
+    let v = fs.statSync(result).isFile();
+    return v;
+  }
+  const all = fs.readdirSync(path_folder);
+  let files = all.filter(lambda);
+  list_sort_string(files);
+  return files;
+}
+function list_intersect(list, other) {
+  let r = list_intersect_multiple([list, other]);
+  return r;
+}
+function list_intersect_multiple(list) {
+  let fr = list_first_remaining(list);
+  let first = object_property_get(fr, "first");
+  let remaining = object_property_get(fr, "remaining");
+  let e = null_is(remaining);
+  if (e) {
+    let copy = list_copy(first);
+    return copy;
+  }
+  let uniques = list_map(remaining, list_unique_set);
+  function lambda2(la) {
+    function lambda(l) {
+      function lambda3(set) {
+        let v = set_includes(set, l);
+        return v;
+      }
+      let a = list_all(uniques, lambda3);
+      if (a) {
+        la(l);
+      }
+    }
+    each(first, lambda);
+  }
+  let i = list_adder(lambda2);
+  return i;
+}
+function null_is(value) {
+  const n = value === null;
+  return n;
+}
+function list_all(list, lambda$item) {
+  let list2 = list_filter(list, lambda$item);
+  let a = list_size(list2) === list_size(list);
+  return a;
+}
+function list_first_remaining(list) {
+  const property_name = "remaining";
+  let value_get = list_skip_1;
+  let result = list_first_second_generic(list, value_get, property_name);
+  return result;
+}
+function list_first_second_generic(list, other_get, property_name_second) {
+  let property_name_first = "first";
+  let one_get = list_first;
+  let result = list_one_other(list, one_get, other_get, property_name_first, property_name_second);
+  return result;
+}
+function list_one_other(list, one_get, other_get, property_name_one, property_name_other) {
+  let one = null;
+  let other = null;
+  if (list_empty_not_is(list)) {
+    one = one_get(list);
+    if (list_multiple_is(list)) {
+      other = other_get(list);
+    }
+  }
+  let result = {
+    [property_name_one]: one,
+    [property_name_other]: other
+  };
+  return result;
+}
+function list_multiple_is(list) {
+  let m = list_size(list) >= 2;
+  return m;
+}
+function list_skip_1(list) {
+  let skipped = list_skip(list, 1);
+  return skipped;
+}
+function list_skip(list, skip_count) {
+  let b = list_size(list);
+  const skipped = list_slice(list, skip_count, b);
+  return skipped;
+}
+function list_slice(list, index_a, index_b) {
+  let sliced = list.slice(index_a, index_b);
+  return sliced;
+}
+function set_includes(set, item) {
+  let si = set.has(item);
+  return si;
+}
+function list_map_combine_left(list, left) {
+  function lambda(right) {
+    let combined = left + right;
+    return combined;
+  }
+  let combineds = list_map(list, lambda);
+  return combineds;
+}
+function list_sort_string(list) {
+  list_sort_string_mapper(list, identity);
+}
+function list_sort_string_mapper(list, lambda$item) {
+  function lambda(a, b) {
+    const va = lambda$item(a);
+    const vb = lambda$item(b);
+    const [na, ia] = va.split(/[_\.]/);
+    const [nb, ib] = vb.split(/[_\.]/);
+    let v = na.localeCompare(nb) || Number(ia) - Number(ib);
+    return v;
+  }
+  list.sort(lambda);
+}
+function function_name_folder_to_path(f_name, folder) {
+  let base = function_name_to_base(f_name);
+  let second = [folder, base];
+  let joined = path_join(second);
+  return joined;
+}
+function function_name_to_base(f_name) {
+  let f_name_ext = f_name + function_name_extension();
+  return f_name_ext;
+}
+function data_path() {
+  let inner = "";
+  const folder = data_folder();
+  let d_path = data_path_generic(inner, folder);
+  return d_path;
+}
+function data_folder() {
+  let d = "data";
+  return d;
+}
+function data_path_generic(suffix, f_name_unsuffixed) {
+  const f_name = f_name_unsuffixed + suffix;
+  const folder = data_folder();
+  let f_path = file_name_json_folder(folder, f_name);
+  return f_path;
+}
+function file_name_json_folder(folder, f_name) {
+  let joined = path_join([folder, f_name]);
+  let f_path = file_name_json(joined);
+  return f_path;
+}
+async function data_all_initialize(file_path) {
+  let exists = await file_exists(file_path);
+  if (not(exists)) {
+    let contents = json_format_to({});
+    await file_write(file_path, contents);
+  }
+}
+async function file_write(f_path, contents) {
+  let overwrite = file_overwrite;
+  await file_write_generic(f_path, overwrite, contents);
+}
+async function file_write_generic(f_path, overwrite, contents) {
+  await assert_file_exists_not(f_path);
+  await overwrite(f_path, contents);
+}
+async function assert_file_exists_not(file_path_new) {
+  if (await file_exists(file_path_new)) {
+    error(file_path_new);
+  }
+}
+async function file_exists(file_path) {
+  if (browser_is()) {
+    file_path = file_path_normalize(file_path);
+    await app_a_file_system_initialize();
+    let store = app_a_file_system_store();
+    let exists = await indexeddb_exists(app_a_indexeddb_initialize, store, file_path);
+    return exists;
+  }
+  if (promise_is(file_path)) {
+    error();
+  }
+  let fs = await import("fs");
+  let v = fs.promises;
+  let access = object_property_get(v, "access");
+  let constants = object_property_get(fs, "constants");
+  let exists = await throws_not_async(lambda);
+  async function lambda() {
+    await access(file_path, constants.F_OK);
+  }
+  return exists;
+}
+async function indexeddb_exists(db_get, store, key) {
+  const property = "key";
+  let all = await indexeddb_get_all(db_get, store);
+  list_property_exists_not_error(all, property);
+  let s1 = list_find_property_exists(all, property, key);
+  return s1;
+  let exists = await indexeddb_exists_backend(db_get, store, key);
+  return exists;
+}
+async function indexeddb_exists_backend(db_get, store, key) {
+  const db = await db_get();
+  const tx = db.transaction(store, "readonly");
+  const s = tx.objectStore(store);
+  const exists = await new Promise(function lambda3(resolve, reject) {
+    const req = s.count(key);
+    req.onsuccess = function lambda() {
+      let v = resolve(req.result > 0);
+      return v;
+    };
+    req.onerror = function lambda2() {
+      let v2 = reject(req.error);
+      return v2;
+    };
+  });
+  return exists;
+}
+function list_find_property_exists(list, property, value) {
+  let f = list_filter_property(list, property, value);
+  let s1 = list_size_1(f);
+  return s1;
+}
+function list_filter_property(list, property_name, property_value) {
+  let filter = object_property_equals_lambda(property_name, property_value);
+  let filtered = list_filter(list, filter);
+  return filtered;
+}
+async function throws_not_async(lambda) {
+  let success = null;
+  try {
+    await lambda();
+    success = true;
+  } catch (e) {
+    success = false;
+  }
+  return success;
+}
+async function file_overwrite(file_path, contents) {
+  string_is_assert(contents);
+  let exists = global_function_property_exists(file_read_cached, file_path);
+  if (exists) {
+    global_function_property_set(file_read_cached, file_path, contents);
+  }
+  if (not(exists)) {
+    await file_overwrite_uncached(file_path, contents);
+  }
+}
+async function file_overwrite_uncached(file_path, contents) {
+  if (browser_is()) {
+    file_path = file_path_normalize(file_path);
+    await app_a_file_system_initialize();
+    let store = app_a_file_system_store();
+    async function value_get(previous) {
+      const p = "compressed";
+      let f = null;
+      let nn = null_is(previous);
+      if (nn) {
+        f = {
+          ["versions"]: [""]
+        };
+        previous = {
+          key: file_path
+        };
+      } else {
+        let compressed_before = object_property_get(previous, p);
+        f = await json_decompress(compressed_before);
+      }
+      let e = string_empty_is(contents);
+      if (e) {
+        object_property_set(previous, "deleted", true);
+      } else {
+        object_property_delete_if_exists(previous, "deleted");
+      }
+      let list = object_property_get(f, "versions");
+      list_add(list, contents);
+      let compressed_after = await json_compress(f);
+      object_property_set(previous, p, compressed_after);
+      return previous;
+    }
+    let item = await indexeddb_put(app_a_indexeddb_initialize, store, file_path, value_get);
+    return;
+  } else {
+    await file_parent_exists_ensure(file_path);
+    let fs = await import("fs");
+    await fs.promises.writeFile(file_path, contents, "utf-8");
+  }
+  await data_file_update(file_path);
+  return;
+}
+function object_property_delete_if_exists(data, p) {
+  let exists = object_property_exists(data, p);
+  if (exists) {
+    object_property_delete(data, p);
+  }
+}
+function string_empty_is(s) {
+  const e = s === "";
+  return e;
+}
+async function data_file_update(f_path) {
+  return;
+  let f_names = await functions_names();
+  let f_name = function_path_to_name(f_path);
+  let n = list_includes_not(f_names, f_name);
+  if (n) {
+    return;
+  }
+  let d_path = data_path();
+  var d = await data_all(d_path);
+  let parsed = await file_js_parse(f_path);
+  data_file_update_inner(parsed, d);
+  await data_save(d);
+  return;
+}
+async function functions_names() {
+  let f_names = await repos_paths_map_unordered_combine_squash(mapper);
+  async function mapper(joined) {
+    let f_names = await functions_names_from_path(joined);
+    return f_names;
+  }
+  return f_names;
+}
+async function data_save(a) {
+  let data = object_property_get(a, "data");
+  let file_path = object_property_get(a, "file_path");
+  await file_overwrite_json(file_path, data);
+}
+async function file_overwrite_json(file_path, object) {
+  if (browser_is()) {
+    let json = json_format_to(object);
+    await file_overwrite(file_path, json);
+    return;
+  }
+  await file_parent_exists_ensure(file_path);
+  "Using " + json_to.name + " did not work on sufficiently large object, whereas this did:";
+  let fs = await import("fs");
+  const v = await import("stream/promises");
+  let pipeline = object_property_get(v, "pipeline");
+  let streamJsonStringify = await (await import_install("stream-json-stringify")).default;
+  const out = fs.createWriteStream(file_path);
+  let json = streamJsonStringify(object);
+  await pipeline(json, out);
+}
+async function file_parent_exists_ensure(file_path) {
+  await file_root_exists_assert(file_path);
+  let path = await import("path");
+  const dir = path.dirname(file_path);
+  await folder_exists_ensure(dir);
+}
+async function folder_exists_ensure(dir) {
+  let fs = await import("fs");
+  let path = await import("path");
+  await fs.promises.mkdir(dir, {
+    recursive: true
+  });
+  return path;
+}
+async function file_root_exists_assert(file_path) {
+  let {exists, root} = await file_root_exists(file_path);
+  assert_json(exists, {
+    file_path,
+    root,
+    message: "root does not exist"
+  });
+}
+async function file_root_exists(file_path) {
+  let path = await import("path");
+  let parsed = path.parse(file_path);
+  let root = object_property_get(parsed, "root");
+  let en = string_empty_not_is(root);
+  let exists = true;
+  if (en) {
+    async function lambda2() {
+      let fs = await import("fs");
+      await fs.promises.access(root);
+    }
+    exists = await throws_not_async(lambda2);
+  }
+  let v = {
+    exists,
+    root
+  };
+  return v;
+}
+function string_empty_not_is(name) {
+  let a = string_empty_is(name);
+  const ne = not(a);
+  return ne;
+}
+async function import_install(name) {
+  try {
+    let v = await import(name);
+    return v;
+  } catch (err) {
+    if (err.code === "ERR_MODULE_NOT_FOUND" || err.code === "MODULE_NOT_FOUND") {
+      await npm_install(name);
+      let v2 = await import(name);
+      return v2;
+    }
+    throw err;
+  }
+}
+async function npm_install(package_name) {
+  await command_line("npm install " + package_name + "@latest");
+}
+async function command_line(command) {
+  let extra = {};
+  const stdout = await command_line_generic(command, extra);
+  return stdout;
+}
+async function command_line_generic(command, extra) {
+  const {exec} = await import("child_process");
+  const {promisify} = await import("util");
+  const execAsync = promisify(exec);
+  const options = {
+    encoding: "utf8"
+  };
+  object_merge(options, extra);
+  const stdout = await execAsync(command, options);
+  return stdout;
+}
+async function indexeddb_put(db_get, store, key, value_get) {
+  let all = await indexeddb_get_all(db_get, store);
+  let f = list_find_property_or_null(all, "key", key);
+  const next = await value_get(f);
+  log({
+    next
+  });
+  if (null_is(f)) {
+    list_add(all, next);
+  } else {
+    object_replace(f, next);
+  }
+  async function lambda_async() {
+    await indexeddb_put_backend(db_get, store, key, next);
+  }
+  indexeddb_next(lambda_async);
+  return next;
+}
+function list_find_property_or_null(list, property_name, property_value) {
+  let filter = object_property_equals_lambda(property_name, property_value);
+  let filtered = list_filter(list, filter);
+  let e = list_empty_is(filtered);
+  if (e) {
+    let v = null;
+    return v;
+  }
+  let only = list_single(filtered);
+  return only;
+}
+async function indexeddb_put_backend(db_get, store, key, next) {
+  const db = await db_get();
+  if (false) {
+    const previous = await new Promise(function lambda3(resolve, reject) {
+      const tx = db.transaction(store, "readonly");
+      const s = tx.objectStore(store);
+      const req = s.get(key);
+      req.onsuccess = function lambda() {
+        let v = resolve(req.result ?? null);
+        return v;
+      };
+      req.onerror = function lambda2() {
+        let v2 = reject(req.error);
+        return v2;
+      };
+    });
+  }
+  const tx = db.transaction(store, "readwrite");
+  const s = tx.objectStore(store);
+  s.put(next);
+  await new Promise(function lambda6(resolve, reject) {
+    tx.oncomplete = resolve;
+    tx.onerror = function lambda4() {
+      let v3 = reject(tx.error);
+      return v3;
+    };
+    tx.onabort = function lambda5() {
+      let v4 = reject(tx.error);
+      return v4;
+    };
+  });
+}
+function object_replace(to, from) {
+  if (equal_not(to, from)) {
+    object_properties_delete_all(to);
+    object_merge(to, from);
+  }
+}
+function object_properties_delete_all(obj) {
+  function lambda(p) {
+    let v = object_property_delete(obj, p);
+    return v;
+  }
+  let list = object_properties(obj);
+  each(list, lambda);
+}
+function user_repo_path() {
+  const name = "user";
+  let f_path = file_name_json_folder_gitignore(name);
+  return f_path;
+}
+function file_name_json_folder_gitignore(name) {
+  let f_path2 = file_name_json_folder("gitignore", name);
+  return f_path2;
+}
+async function firebase_service_account() {
+  let f_name = await user_repo_firebase_service_account_get();
+  let file_path = await function_run_unalias(f_name, []);
+  let service_account = await file_read_json(file_path);
+  return service_account;
+}
+async function function_run_unalias(f_name, args) {
+  const fn = await function_import_unalias(f_name);
+  const result = await fn(...args);
+  return result;
+}
+async function function_import_unalias(f_name) {
+  let v = await function_name_unalias(f_name);
+  let unaliased = object_property_get(v, "unaliased");
+  const imported_fn = await function_import(unaliased);
+  return imported_fn;
+}
+async function function_import(f_name) {
+  "if you need to unalias use " + function_import_unalias.name;
+  let v2 = await function_name_to_path_search(f_name);
+  let f = object_property_get(v2, "f_path");
+  let f_path = await path_resolve(f);
+  const imported = await import(`file://${f_path}`);
+  const imported_fn = imported[f_name];
+  if (typeof imported_fn !== "function") {
+    throw new Error(`❌ The module "${f_name}" does not export a default function.`);
+  }
+  return imported_fn;
+}
+async function path_resolve(paths) {
+  let path = await import("path");
+  let v = path.resolve(paths);
+  return v;
+}
+async function function_name_to_path_search(f_name) {
+  let f_path = function_name_to_path(f_name);
+  async function lambda(joined) {
+    let exists = await file_exists(joined);
+    let v = {
+      exists,
+      f_path: joined
+    };
+    return v;
+  }
+  let mapped = await repos_paths_names_map_unordered_combine(f_path, lambda);
+  function lambda2(m) {
+    let mapped = object_property_get(m, "mapped");
+    let exists2 = object_property_get(mapped, "exists");
+    let ti2 = true_is(exists2);
+    return ti2;
+  }
+  let filtered = list_filter(mapped, lambda2);
+  let multiple = list_multiple_is(filtered);
+  let exists = list_size_1(filtered);
+  let search = {
+    f_name,
+    exists,
+    multiple
+  };
+  if (exists) {
+    let only = list_single(filtered);
+    let mapped = object_property_get(only, "mapped");
+    object_property_from(search, "f_path", mapped);
+    object_property_from(search, "repo_name", only);
+  }
+  return search;
+}
+function object_property_from(to, property_name, from) {
+  let value = object_property_get(from, property_name);
+  object_property_set(to, property_name, value);
+}
+async function repos_paths_names_map_unordered_combine(path, mapper) {
+  let result = await repos_paths_names_map_unordered(each_folder);
+  async function each_folder(repo_name, r_path) {
+    let joined = path_join([r_path, path]);
+    let mapped = await mapper(joined);
+    let v = {
+      mapped,
+      repo_name
+    };
+    return v;
+  }
+  return result;
+}
+async function repos_paths_names_map_unordered(lambda$name$path) {
+  let all = await repos_names();
+  async function lambda(repo_name) {
+    let path = repo_path(repo_name);
+    let mapped = await lambda$name$path(repo_name, path);
+    return mapped;
+  }
+  let result = await list_map_unordered_async(all, lambda);
+  return result;
+}
+function true_is(value) {
+  let ti = equal(value, true);
+  return ti;
+}
+function function_name_to_path(f_name) {
+  if (string_includes(f_name, ".")) {
+    error_json({
+      f_name
+    });
+  }
+  let folder = functions_path();
+  let f_path = function_name_folder_to_path(f_name, folder);
+  return f_path;
+}
+function string_includes(input, part) {
+  const o = {
+    input,
+    part
+  };
+  string_is_assert_json(input, o);
+  string_is_assert_json(part, o);
+  let i = input.includes(part);
+  return i;
+}
+function string_is_assert_json(value, o) {
+  let message = json_to(o);
+  string_is_assert_message(value, message);
+}
+function string_is_assert_message(value, message) {
+  let b = string_is(value);
+  let v = assert_message(b, message);
+  return v;
+}
+async function function_name_unalias(f_name) {
+  assert_arguments(arguments, 1);
+  var v2 = await function_alias_add_generic(f_name);
+  let unaliased_actual = object_property_get(v2, "unaliased");
+  let exists = object_property_get(v2, "exists");
+  let v3 = await function_acronym_to_name(f_name);
+  let expandeds = object_property_get(v3, "expandeds");
+  let expanded = object_property_get(v3, "expanded");
+  const unaliased = exists ? unaliased_actual : expanded !== null ? expanded : f_name;
+  let v = {
+    unaliased,
+    expandeds
+  };
+  return v;
+}
+async function function_acronym_to_name(alias) {
+  let expanded = null;
+  let expandeds = null;
+  let acronyms = await function_names_to_acronyms();
+  const exists2 = object_property_exists(acronyms, alias);
+  if (exists2) {
+    expandeds = object_property_get(acronyms, alias);
+    let s1 = list_size_1(expandeds);
+    if (s1) {
+      expanded = list_single(expandeds);
+    }
+  }
+  let v = {
+    expanded,
+    expandeds
+  };
+  return v;
+}
+async function function_names_to_acronyms() {
+  let f_names = await functions_names();
+  let result = global_function_cache(function_names_to_acronyms, f_names, value_get);
+  return result;
+  function value_get() {
+    let dictionary = list_to_dictionary_value(f_names, function_name_to_acronym);
+    let acronyms = object_invert(dictionary);
+    return acronyms;
+  }
+}
+function global_function_cache(fn, key, value_get) {
+  let c = global_function_initialize(fn, {
+    json: null,
+    result: null
+  });
+  let result = global_function_cache_generic(key, c, value_get);
+  return result;
+}
+function object_invert(object) {
+  let inverted = {};
+  function lambda(value, key) {
+    undefined_not_is_assert(value);
+    let list = object_property_initialize(inverted, value, []);
+    list_add(list, key);
+  }
+  each_object(object, lambda);
+  return inverted;
+}
+function undefined_not_is_assert(value) {
+  function lambda2() {
+    let v2 = {};
+    return v2;
+  }
+  undefined_not_is_assert_lambda(value, lambda2);
+}
+function function_name_to_acronym(f_name) {
+  let parts = function_name_to_parts(f_name);
+  let letters = null;
+  try {
+    letters = list_map(parts, list_first);
+  } catch (e) {
+    "if this error, then maybe string empty, __ instead of _ or ends with _";
+    error_json({
+      e,
+      f_name
+    });
+  }
+  let acronym = list_join_empty(letters);
+  return acronym;
+}
+function list_join_empty(list) {
+  const e = string_empty();
+  let joined = list_join(list, e);
+  return joined;
+}
+function string_empty() {
+  let v = "";
+  return v;
+}
+function function_name_to_parts(f_name) {
+  let separator = function_name_separator();
+  let parts = string_split(f_name, separator);
+  return parts;
+}
+function string_split(s, separator) {
+  const split = s.split(separator);
+  return split;
+}
+function function_name_separator() {
+  const separator = "_";
+  return separator;
+}
+function list_to_dictionary_value(list, lambda$item) {
+  let key_get = identity;
+  let dictionary = list_to_dictionary(list, lambda$item, key_get);
+  return dictionary;
+}
+async function function_alias_add_generic(alias) {
+  let unaliased = null;
+  let d_path = data_aliases_path();
+  var {value: aliases, file_path, data} = await data_get("aliases", {}, d_path);
+  const exists = object_property_exists(aliases, alias);
+  if (exists) {
+    unaliased = object_property_get(aliases, alias);
+  }
+  let v = {
+    exists,
+    aliases,
+    file_path,
+    data,
+    unaliased
+  };
+  return v;
+}
+function data_aliases_path() {
+  let f_path = data_path_generic("", "aliases");
+  return f_path;
+}
+async function user_repo_firebase_service_account_get() {
+  let repo_name = await user_repo_get();
+  let v = await repo_firebase_service_account_get(repo_name);
+  return v;
+}
+async function repo_firebase_service_account_get(repo_name) {
+  const key = "firebase_service_account";
+  let v = await repo_about_get(repo_name, key);
+  return v;
+}
+async function repo_about_get(repo, key) {
+  let a_path = path_repo_about(repo);
+  let {value} = await data_get(key, null, a_path);
+  let v = value;
+  return v;
+}
+function path_repo_about(repo) {
+  let f_path = data_path_generic("", "about");
+  let a_path = path_repo_combine(repo, f_path);
+  return a_path;
+}
+function path_repo_combine(repo, f_path) {
+  let r_path = repo_path(repo);
+  let joined = path_join([r_path, f_path]);
+  return joined;
+}
+function firebase_path_fix(path) {
+  let replaced = string_replace(path, "\\", "/");
+  return replaced;
+}
+function string_replace(s, from, to) {
+  let split = string_split(s, from);
+  let replaced = list_join(split, to);
+  return replaced;
+}
+async function firebase_storage_url(storage_path) {
+  let replaced = string_replace(storage_path, "/", "%2F");
+  let url = "https://firebasestorage.googleapis.com/v0/b/" + await firebase_storage_url_project() + "/o/" + replaced + "?alt=media";
+  return url;
+}
+    app_original_bible_latest(  );
+  </script>
+</body>
+</html>
