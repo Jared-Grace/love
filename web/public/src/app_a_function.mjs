@@ -187,6 +187,14 @@ export async function app_a_function(context) {
         }
       },
     },
+    {
+      shortcut: "d",
+      text: emoji_delete(),
+      fn: async function lambda4() {
+        await function_delete(f_name);
+        await screen_choose_open();
+      },
+    },
   ];
   let e = storage_local_exists(app_a, "app_selected");
   if (e) {
