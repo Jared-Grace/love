@@ -16,7 +16,7 @@ export async function marker_screen_rename(
 ) {
   assert_arguments(arguments, 2);
   let afters = [];
-  let result = await marker_screen_add_generic(lambda);
+  let result = await marker_screen_add_generic(a_name, lambda);
   await each_async(afters, invoke);
   return result;
   async function lambda(properties, prefixed) {
