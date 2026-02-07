@@ -51,6 +51,8 @@ export async function app_ceb_bible_home_generic(
       let original = object_property_get(passage, "original");
       texts = [original];
     }
+    if (false) {
+    }
     function lambda5(t) {
       let div = html_div_text(p, t);
       html_font_color_set_green(div);
