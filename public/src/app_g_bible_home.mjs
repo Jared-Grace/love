@@ -25,7 +25,8 @@ export async function app_g_bible_home(context) {
   let chapter_code = null;
   let r = null;
   async function lambda5(la) {
-    ({ chapter_code, downloaded, r } = await app_g_bible_home_inner(
+    let passages = null;
+    ({ chapter_code, downloaded, r, passages } = await app_g_bible_home_inner(
       context,
       on_passage,
       g_sermon_generate_download,
