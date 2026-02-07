@@ -1,4 +1,4 @@
-import { html_table } from "../../../love/public/src/html_table.mjs";
+import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_colon_3 } from "../../../love/public/src/string_colon_3.mjs";
@@ -38,7 +38,7 @@ export async function app_ceb_bible_home(context) {
     each(texts, lambda5);
     let explains_json = object_property_get(passage, "explains");
     let explains = json_from(explains_json);
-    html_table(p, explains);
+    let span = html_span_text(parent, text2);
     log(passage);
     return;
   }
