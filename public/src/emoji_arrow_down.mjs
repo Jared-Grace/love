@@ -1,3 +1,4 @@
 export function emoji_arrow_down() {
-  return "⬇️";
+  let v = "⬇️";
+  return v;
 }
