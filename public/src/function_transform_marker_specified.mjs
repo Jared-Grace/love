@@ -5,7 +5,7 @@ import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs"
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { function_transform_marker_arg } from "../../../love/public/src/function_transform_marker_arg.mjs";
 import { js_marker_named } from "../../../love/public/src/js_marker_named.mjs";
-import { js_type } from "../../../love/public/src/js_type.mjs";
+import { js_list_type } from "../../../love/public/src/js_list_type.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 export async function function_transform_marker_specified(
   f_name,
@@ -16,7 +16,7 @@ export async function function_transform_marker_specified(
   async function lambda2(la) {
     code = await function_transform(f_name, lambda_marker);
     async function lambda_marker(ast) {
-      let visitors = js_type(ast, "CallExpression");
+      let visitors = js_list_type(ast, "CallExpression");
       async function lambda(v) {
         if (js_marker_named(v, marker_name)) {
           let a = function_transform_marker_arg(v, ast);
