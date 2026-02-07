@@ -1,4 +1,4 @@
-import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
+import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -44,7 +44,7 @@ export async function app_ceb_bible_home(context) {
       let gloss = object_property_get(e, "gloss");
       let explain = object_property_get(e, "explain");
       let span = html_span_text(p, ceb);
-      html_style_set(b, style_key, style_value);
+      html_span_space(parent);
     }
     each(explains, lambda);
     log(passage);
