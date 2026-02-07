@@ -21,7 +21,7 @@ import { list_second } from "./list_second.mjs";
 export async function app_ceb_bible_home_generic(
   context,
   download,
-  language_code,
+  language_code_property,
   text_use,
 ) {
   await app_g_bible_home_inner(context, on_passage, download);
@@ -67,10 +67,10 @@ export async function app_ceb_bible_home_generic(
     function lambda(e) {
       let component2 = html_hr(p);
       let div2 = html_div(p);
-      let code = object_property_get(e, language_code);
+      let language_code = object_property_get(e, language_code_property);
       let gloss = object_property_get(e, "gloss");
       let explain = object_property_get(e, "explain");
-      let span = html_span_text(div2, code);
+      let span = html_span_text(div2, language_code);
       html_bold_mild(span);
       html_font_color_set(span, "#e40000ff");
       let c = html_span_colon_2(div2);
