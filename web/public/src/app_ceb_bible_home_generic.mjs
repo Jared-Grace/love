@@ -63,18 +63,20 @@ export async function app_ceb_bible_home_generic(
     }
     let explains_json = object_property_get(passage, "explains");
     let explains = json_from(explains_json);
-    let div3 = html_div(p);
-    function lambda2(e) {
-      let span = html_span_text_nbsp_replace_property_from(
-        div3,
-        e,
-        language_code,
-      );
-      html_font_color_set_green(span);
-      html_span_nbsp(div3);
-      let span2 = html_span_text_nbsp_replace_property_from(div3, e, "gloss");
-      html_font_color_set_blue(span2);
-      let span4 = html_span_space(div3);
+    if (false) {
+      let div3 = html_div(p);
+      function lambda2(e) {
+        let span = html_span_text_nbsp_replace_property_from(
+          div3,
+          e,
+          language_code,
+        );
+        html_font_color_set_green(span);
+        html_span_nbsp(div3);
+        let span2 = html_span_text_nbsp_replace_property_from(div3, e, "gloss");
+        html_font_color_set_blue(span2);
+        let span4 = html_span_space(div3);
+      }
     }
     each(explains, lambda2);
     function lambda(e) {
