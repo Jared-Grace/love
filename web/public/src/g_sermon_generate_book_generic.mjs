@@ -141,7 +141,6 @@ export async function g_sermon_generate_book_generic(
   }
   let mapped = list_map_index(groups, lambda);
   async function lambda9(chapter_code) {
-    chapter_code = "1PE04";
     let path = local_function_path_json(chapter_code, fn);
     let exists = await file_exists(path);
     if (exists) {
