@@ -187,19 +187,19 @@ export async function app_a_function(context) {
         }
       },
     },
-    {
-      shortcut: "d",
-      text: emoji_delete(),
-      fn: async function lambda4() {
-        await function_delete(f_name);
-        await screen_choose_open();
-      },
-    },
   ];
   let e = storage_local_exists(app_a, "app_selected");
   if (e) {
     list_add(choices, preview_app);
   }
+  list_add(choices, {
+    shortcut: "d",
+    text: emoji_delete(),
+    fn: async function lambda4() {
+      await function_delete(f_name);
+      await screen_choose_open();
+    },
+  });
   app_a_buttons_shortcuts(bar, choices);
   function screen_choose(screen) {
     let f = async function screen_choose_inner() {
