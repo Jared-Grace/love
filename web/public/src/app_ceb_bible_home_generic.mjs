@@ -58,7 +58,8 @@ export async function app_ceb_bible_home_generic(
         each(texts, lambda5);
       }
     }
-    each(list, function lambda2(item) {});
+    function lambda2(item) {}
+    each(list, lambda2);
     let explains_json = object_property_get(passage, "explains");
     let explains = json_from(explains_json);
     function lambda(e) {
