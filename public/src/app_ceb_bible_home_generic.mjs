@@ -101,7 +101,8 @@ export async function app_ceb_bible_home_generic(
       html_font_color_set(span3, "#7b3f97ff");
     }
     each(explains, lambda);
-    let component = html_button(parent, text2, function lambda6() {});
+    function lambda6() {}
+    let component = html_button(parent, text2, lambda6);
     return;
   }
 }
