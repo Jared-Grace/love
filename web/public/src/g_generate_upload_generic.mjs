@@ -10,7 +10,7 @@ export async function g_generate_upload_generic(fn, path_get) {
   await folder_user_storage_function_each(fn, file_each);
   async function file_each(file) {
     let fragment = "JAS01";
-    fragment = "1PE04";
+    fragment = "JAS02";
     let i = string_includes(file, fragment);
     if (false && not(i)) {
       return;
