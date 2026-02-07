@@ -42,8 +42,8 @@ export async function app_ceb_bible_home_generic(
     if (null_not_is(next)) {
       let text3 = emoji_arrow_down();
       async function lambda3() {
-        let verses2 = object_property_get(next, "verses");
-        await scroll(verses);
+        let verses_next = object_property_get(next, "verses");
+        await scroll(verses_next);
       }
       let component = html_button(d, text3, lambda3);
     }
