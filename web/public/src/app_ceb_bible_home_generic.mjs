@@ -25,23 +25,23 @@ export async function app_ceb_bible_home_generic(
 ) {
   await app_g_bible_home_inner(context, on_passage, download);
   function on_passage(passage, p) {
-    if (false) {
+    if (green_show) {
+      let text = object_property_get(passage, "text");
+      let separator3 = string_colon_3();
+      let split3 = string_split(text, separator3);
+      function lambda4(v) {
+        let separator2 = string_colon_2();
+        let split = string_split(v, separator2);
+        let text_ceb = list_first(split);
+        return text_ceb;
+      }
+      let texts = list_map(split3, lambda4);
+      function lambda5(t) {
+        let div = html_div_text(p, t);
+        html_font_color_set_green(div);
+      }
+      each(texts, lambda5);
     }
-    let text = object_property_get(passage, "text");
-    let separator3 = string_colon_3();
-    let split3 = string_split(text, separator3);
-    function lambda4(v) {
-      let separator2 = string_colon_2();
-      let split = string_split(v, separator2);
-      let text_ceb = list_first(split);
-      return text_ceb;
-    }
-    let texts = list_map(split3, lambda4);
-    function lambda5(t) {
-      let div = html_div_text(p, t);
-      html_font_color_set_green(div);
-    }
-    each(texts, lambda5);
     let explains_json = object_property_get(passage, "explains");
     let explains = json_from(explains_json);
     function lambda(e) {
