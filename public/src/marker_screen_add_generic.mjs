@@ -20,7 +20,6 @@ export async function marker_screen_add_generic(a_name, lambda) {
       only,
     });
     exit();
-    a = [];
     await lambda(properties, prefixed);
   }
   let result = await function_transform_marker_specified(
