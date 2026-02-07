@@ -1,3 +1,4 @@
+import { list_remove_all } from "../../../love/public/src/list_remove_all.mjs";
 import { list_slice_end } from "../../../love/public/src/list_slice_end.mjs";
 import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -7,6 +8,7 @@ import { app_shared_screen_set } from "../../../love/public/src/app_shared_scree
 export function app_a_function_select(context, f_name) {
   storage_local_set_context(context, "f_name_selected", f_name);
   function lambda(h) {
+    list_remove_all(list, item);
     let max = 100;
     list_add(h, f_name);
     let result = list_slice_end(h, max);
