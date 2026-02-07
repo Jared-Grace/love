@@ -16,7 +16,7 @@ export async function marker_screen_add_generic(a_name, lambda) {
       only,
     });
     exit();
-    await lambda(properties, prefixed);
+    await lambda(only, prefixed);
   }
   let result = await function_transform(combined, lambda_ftms);
   return result;
