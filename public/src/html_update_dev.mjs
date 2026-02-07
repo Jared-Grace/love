@@ -11,7 +11,7 @@ import { app_generic_name_prefixed } from "../../../love/public/src/app_generic_
 import { file_open } from "../../../love/public/src/file_open.mjs";
 import { html_overwrite } from "../../../love/public/src/html_overwrite.mjs";
 import { html_code_script_module } from "../../../love/public/src/html_code_script_module.mjs";
-import { app_generic_name_main } from "../../../love/public/src/app_generic_name_main.mjs";
+import { app_shared_name_main } from "../../../love/public/src/app_shared_name_main.mjs";
 import { html_name_to_path_dev } from "../../../love/public/src/html_name_to_path_dev.mjs";
 export async function html_update_dev(name) {
   let v2 = await app_generic_name_main_get(name);
@@ -19,7 +19,7 @@ export async function html_update_dev(name) {
   let file_path = html_name_to_path_dev(name);
   let a_name = app_generic_name_prefixed(name);
   let path = await function_name_repo_path_combine(a_name, file_path);
-  const name_prefixed = app_generic_name_main(name);
+  const name_prefixed = app_shared_name_main(name);
   let call = js_code_call_app_context_initialize(name_prefixed);
   let code = function_code_import_dev(name_prefixed);
   let code2 = function_code_import_dev(app_context_initialize.name);
