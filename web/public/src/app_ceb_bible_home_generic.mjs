@@ -99,8 +99,7 @@ export async function app_ceb_bible_home_generic(
       let span3 = html_span_text(div2, explain);
       html_font_color_set(span3, "#7b3f97ff");
     }
-    each(explains, lambda);
-    hbt;
+    each(explains, lambda);hb
     return;
   }
 }
