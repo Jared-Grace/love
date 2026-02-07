@@ -1,3 +1,4 @@
+import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { html_scroll_top_now } from "../../../love/public/src/html_scroll_top_now.mjs";
 import { emoji_arrow_up } from "../../../love/public/src/emoji_arrow_up.mjs";
@@ -112,6 +113,7 @@ export async function app_ceb_bible_home_generic(
     }
     let text2 = emoji_arrow_up();
     let p2 = html_p(root);
+    html_centered(div4);
     let component = html_button(p, text2, lambda6);
     let component22 = html_hr(root2);
     return;
