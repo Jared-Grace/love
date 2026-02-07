@@ -17,5 +17,6 @@ export async function app_ceb_bible_gloss_generate() {
     book_code,
     fn,
     property_name,
+    "ceb",
   );
 }
