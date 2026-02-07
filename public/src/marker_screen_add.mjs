@@ -1,4 +1,3 @@
-import { js_expression_string } from "../../../love/public/src/js_expression_string.mjs";
 import { marker_screen_add_generic } from "../../../love/public/src/marker_screen_add_generic.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { js_declaration_single_block_body_add } from "../../../love/public/src/js_declaration_single_block_body_add.mjs";
@@ -10,17 +9,14 @@ import { function_param_new_double } from "../../../love/public/src/function_par
 import { function_new } from "../../../love/public/src/function_new.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { js_property } from "../../../love/public/src/js_property.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 export async function marker_screen_add(a_name, screen_name) {
   let result = await marker_screen_add_generic(a_name, lambda);
   return result;
   async function lambda(properties, prefixed) {
-    let key = js_expression_string(screen_name);
     let combined_screen = function_name_combine(prefixed, screen_name);
     let value = js_parse_expression(combined_screen);
-    let p = js_property(key, value);
-    list_add(properties, p);
+    list_add(properties, value);
     await function_new(combined_screen);
     const v = "context";
     await function_param_new_double(combined_screen, v);
