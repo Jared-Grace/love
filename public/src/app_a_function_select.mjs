@@ -8,7 +8,7 @@ import { app_shared_screen_set } from "../../../love/public/src/app_shared_scree
 export function app_a_function_select(context, f_name) {
   storage_local_set_context(context, "f_name_selected", f_name);
   function lambda(h) {
-    list_remove_all(list, item);
+    list_remove_all(h, f_name);
     list_add(h, f_name);
     let max = 100;
     let result = list_slice_end(h, max);
