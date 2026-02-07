@@ -1,3 +1,5 @@
+import { exit } from "../../../love/public/src/exit.mjs";
+import { log } from "../../../love/public/src/log.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { js_list_type } from "../../../love/public/src/js_list_type.mjs";
 import { function_transform_marker_specified } from "../../../love/public/src/function_transform_marker_specified.mjs";
@@ -14,6 +16,10 @@ export async function marker_screen_add_generic(a_name, lambda) {
     let node_type = "ArrayExpression";
     let vs = js_list_type(ast, node_type);
     let only = list_single(vs);
+    log({
+      only,
+    });
+    exit();
     a = [];
     await lambda(properties, prefixed);
   }
