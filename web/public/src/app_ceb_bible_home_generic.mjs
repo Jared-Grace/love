@@ -106,7 +106,7 @@ export async function app_ceb_bible_home_generic(
     each(explains, lambda);
     async function lambda6() {
       let f = list_first(verses);
-      let p = object_property_get(f, prop);
+      let p = object_property_get(f, "p_verse");
       log({
         p,
       });
