@@ -1,3 +1,4 @@
+import { app_a_function_name_selected_key } from "../../../love/public/src/app_a_function_name_selected_key.mjs";
 import { app_a_history } from "../../../love/public/src/app_a_history.mjs";
 import { emoji_hourglass } from "../../../love/public/src/emoji_hourglass.mjs";
 import { function_delete } from "../../../love/public/src/function_delete.mjs";
@@ -65,7 +66,8 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { function_parse_unaliased } from "../../../love/public/src/function_parse_unaliased.mjs";
 export async function app_a_function(context) {
   let on_keydowns = app_a_on_keydown_add(context, app_a_function_on_keydown);
-  let f_name = storage_local_get_context(context, app_a_function_name_selected_key());
+  let key = app_a_function_name_selected_key();
+  let f_name = storage_local_get_context(context, key);
   let parsed = await function_parse_unaliased(f_name);
   let ast = object_property_get(parsed, "ast");
   let root = object_property_get(context, "root");
