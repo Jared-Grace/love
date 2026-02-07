@@ -61,7 +61,12 @@ export async function app_ceb_bible_home_generic(
     let explains_json = object_property_get(passage, "explains");
     let explains = json_from(explains_json);
     function lambda2(e) {
+      let word = object_property_get(e, language_code);
+      let span = html_span_text(div2, word);
+      html_font_color_set_green(span);
       let gloss = object_property_get(e, "gloss");
+      let span2 = html_span_text(div2, gloss);
+      html_font_color_set_blue(span2);
     }
     each(explains, lambda2);
     function lambda(e) {
