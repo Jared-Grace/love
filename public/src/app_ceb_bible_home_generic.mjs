@@ -39,17 +39,17 @@ export async function app_ceb_bible_home_generic(
   let passages = object_property_get(v2, "passages");
   each_next(passages, on_passage);
   function on_passage({ passage, verses }, next) {
+    const prop = "p";
+    let last = list_last(verses);
+    let p = object_property_get(last, prop);
     if (null_not_is(next)) {
       let text3 = emoji_arrow_down();
       async function lambda3() {
         let verses_next = object_property_get(next, "verses");
         await scroll(verses_next);
       }
-      let component = html_button(d, text3, lambda3);
+      let component = html_button(p, text3, lambda3);
     }
-    const prop = "p";
-    let last = list_last(verses);
-    let p = object_property_get(last, prop);
     let texts = null;
     if (text_use) {
       let text = object_property_get(passage, "text");
