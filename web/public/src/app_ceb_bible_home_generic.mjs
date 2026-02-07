@@ -31,8 +31,10 @@ export async function app_ceb_bible_home_generic(
     function lambda4(v) {
       let separator2 = string_colon_2();
       let split = string_split(v, separator2);
-      let get = list_first;
+      let get = null;
+      get = list_first;
       if (first) {
+      } else {
       }
       let text_ceb = list_first(split);
       return text_ceb;
