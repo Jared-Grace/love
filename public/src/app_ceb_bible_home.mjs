@@ -1,7 +1,5 @@
+import { html_table } from "../../../love/public/src/html_table.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
-import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
-import { object_properties } from "../../../love/public/src/object_properties.mjs";
-import { html_element } from "../../../love/public/src/html_element.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { string_colon_3 } from "../../../love/public/src/string_colon_3.mjs";
 import { string_colon_2 } from "../../../love/public/src/string_colon_2.mjs";
@@ -40,20 +38,7 @@ export async function app_ceb_bible_home(context) {
     each(texts, lambda5);
     let explains_json = object_property_get(passage, "explains");
     let explains = json_from(explains_json);
-    let first = list_first(explains);
-    let properties = object_properties(first);
-    let component = html_element(p, "table");
-    let component2 = html_element(component, "tbody");
-    function lambda(e) {
-      let component3 = html_element(component2, "tr");
-      function lambda2(property) {
-        let component4 = html_element(component3, "td");
-        let value = object_property_get(e, property);
-        html_text_set(component4, value);
-      }
-      each(properties, lambda2);
-    }
-    each(explains, lambda);
+    html_table(explains, p);
     log(passage);
     return;
   }
