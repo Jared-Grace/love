@@ -32,8 +32,9 @@ export async function app_ceb_bible_home_generic(
 ) {
   await app_g_bible_home_inner(context, on_passage, download);
   function on_passage(passage, verses) {
+    const prop = "p";
     let last = list_last(verses);
-    let p = object_property_get(last, "p");
+    let p = object_property_get(last, prop);
     log({
       passage,
       verses,
