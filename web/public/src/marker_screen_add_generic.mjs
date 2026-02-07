@@ -3,7 +3,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { marker_next_declare_single_init } from "../../../love/public/src/marker_next_declare_single_init.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { app_generic_name_prefixed } from "../../../love/public/src/app_generic_name_prefixed.mjs";
-export async function marker_screen_add_generic(lambda) {
+export async function marker_screen_add_generic(a_name, lambda) {
   let prefixed = app_generic_name_prefixed(a_name);
   let combined = function_name_combine(prefixed, "screens");
   async function lambda_ftms(a) {
