@@ -135,7 +135,7 @@ export async function app_bible_home_generic(context, lambda$a) {
       html_on_click(item_span, lambda9);
     }
     each(split, lambda2);
-    let p = html_p(root2);
+    let p = html_p(content);
     await lambda$a({
       p,
       chapter_code,
