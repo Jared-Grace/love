@@ -20,6 +20,7 @@ import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function app_ceb_bible_home(context) {
   let download = app_ceb_bible_gloss_generate_download;
+  const language = "ceb";
   await app_g_bible_home_inner(context, on_passage, download);
   function on_passage(passage, p) {
     let text = object_property_get(passage, "text");
@@ -42,7 +43,7 @@ export async function app_ceb_bible_home(context) {
     function lambda(e) {
       let component2 = html_hr(p);
       let div2 = html_div(p);
-      let ceb = object_property_get(e, "ceb");
+      let ceb = object_property_get(e, language);
       let gloss = object_property_get(e, "gloss");
       let explain = object_property_get(e, "explain");
       let span = html_span_text(div2, ceb);
