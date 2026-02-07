@@ -44,7 +44,8 @@ export async function app_ceb_bible_home_generic(
       let text_ceb = list_first(split);
       return text_ceb;
     }
-    let texts = list_map(split3, lambda4);
+    let texts = null;
+    texts = list_map(split3, lambda4);
     function lambda5(t) {
       let div = html_div_text(p, t);
       html_font_color_set_green(div);
