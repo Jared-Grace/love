@@ -7,7 +7,7 @@ import { html_font_sans_serif_set_html } from "../../../love/public/src/html_fon
 import { invoke_multiple_arg } from "../../../love/public/src/invoke_multiple_arg.mjs";
 import { app_a } from "../../../love/public/src/app_a.mjs";
 import { app_a_screens } from "../../../love/public/src/app_a_screens.mjs";
-import { app_generic_refresh } from "../../../love/public/src/app_generic_refresh.mjs";
+import { app_shared_refresh } from "../../../love/public/src/app_shared_refresh.mjs";
 export async function app_a_main(context) {
   await app_a_file_system_initialize();
   let app_fn = app_a;
@@ -25,5 +25,5 @@ export async function app_a_main(context) {
   html_margin_0(root);
   html_on_keydown(root, lambda);
   html_font_sans_serif_set_html();
-  app_generic_refresh(context);
+  app_shared_refresh(context);
 }
