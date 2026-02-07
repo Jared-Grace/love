@@ -1,0 +1,11 @@
+import { html_span_text_nbsp_replace } from "../../../love/public/src/html_span_text_nbsp_replace.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+export function html_span_text_nbsp_replace_property_from(
+  e,
+  language_code,
+  div3,
+) {
+  let word = object_property_get(e, language_code);
+  let span = html_span_text_nbsp_replace(div3, word);
+  return span;
+}
