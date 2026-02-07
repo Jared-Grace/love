@@ -1,3 +1,4 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_bold_mild } from "../../../love/public/src/html_bold_mild.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
@@ -41,6 +42,7 @@ export async function app_ceb_bible_home(context) {
     let explains_json = object_property_get(passage, "explains");
     let explains = json_from(explains_json);
     function lambda(e) {
+      let div2 = html_div(root);
       let ceb = object_property_get(e, "ceb");
       let gloss = object_property_get(e, "gloss");
       let explain = object_property_get(e, "explain");
