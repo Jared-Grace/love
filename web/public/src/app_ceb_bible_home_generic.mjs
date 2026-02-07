@@ -17,7 +17,7 @@ import { string_split } from "../../../love/public/src/string_split.mjs";
 import { string_colon_3 } from "../../../love/public/src/string_colon_3.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_g_bible_home_inner } from "../../../love/public/src/app_g_bible_home_inner.mjs";
-export async function app_ceb_bible_home_generic(context, download, language) {
+export async function app_ceb_bible_home_generic(context, download, language_code) {
   await app_g_bible_home_inner(context, on_passage, download);
   function on_passage(passage, p) {
     let text = object_property_get(passage, "text");
@@ -40,7 +40,7 @@ export async function app_ceb_bible_home_generic(context, download, language) {
     function lambda(e) {
       let component2 = html_hr(p);
       let div2 = html_div(p);
-      let ceb = object_property_get(e, language);
+      let ceb = object_property_get(e, language_code);
       let gloss = object_property_get(e, "gloss");
       let explain = object_property_get(e, "explain");
       let span = html_span_text(div2, ceb);
