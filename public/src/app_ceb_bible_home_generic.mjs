@@ -1,3 +1,4 @@
+import { html_scroll_center_now } from "../../../love/public/src/html_scroll_center_now.mjs";
 import { emoji_arrow_up } from "../../../love/public/src/emoji_arrow_up.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
@@ -103,9 +104,10 @@ export async function app_ceb_bible_home_generic(
       html_font_color_set(span3, "#7b3f97ff");
     }
     each(explains, lambda);
-    function lambda6() {
+    async function lambda6() {
       let f = list_first(verses);
       let p = object_property_get(f, prop);
+      await html_scroll_center_now(component3);
     }
     let text2 = emoji_arrow_up();
     let component = html_button(p, text2, lambda6);
