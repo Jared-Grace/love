@@ -46,7 +46,6 @@ export async function g_sermon_generate_book_generic(
   prompt_system,
   property_name,
 ) {
-  log({});
   let chapters_interlinear = await bible_interlinear_chapters();
   async function lambda3(bible_folder) {
     let chapters = await ebible_chapters(bible_folder, book_code);
