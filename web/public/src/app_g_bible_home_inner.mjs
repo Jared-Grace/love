@@ -10,7 +10,7 @@ import { list_max } from "../../../love/public/src/list_max.mjs";
 import { integer_to_try } from "../../../love/public/src/integer_to_try.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-export async function app_g_bible_home_inner(context, on_passage, download) {
+export async function app_g_bible_home_inner(context, download) {
   let downloaded = null;
   let chapter_code = null;
   let verses = [];
