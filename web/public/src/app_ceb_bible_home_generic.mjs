@@ -1,3 +1,4 @@
+import { html_nbsp_replace } from "../../../love/public/src/html_nbsp_replace.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_font_color_set_blue } from "../../../love/public/src/html_font_color_set_blue.mjs";
 import { html_span_colon_2 } from "../../../love/public/src/html_span_colon_2.mjs";
@@ -65,7 +66,8 @@ export async function app_ceb_bible_home_generic(
       let word = object_property_get(e, language_code);
       let span = html_span_text(div3, word);
       html_font_color_set_green(span);
-      let span3 = html_span_text(div3, " ");
+      let text2 = html_nbsp_replace(" ");
+      let span3 = html_span_text(div3, text2);
       let gloss = object_property_get(e, "gloss");
       let span2 = html_span_text(div3, gloss);
       html_font_color_set_blue(span2);
