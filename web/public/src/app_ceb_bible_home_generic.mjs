@@ -1,5 +1,5 @@
+import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_span_text_nbsp_replace_property_from } from "../../../love/public/src/html_span_text_nbsp_replace_property_from.mjs";
-import { html_span_text_nbsp_replace } from "../../../love/public/src/html_span_text_nbsp_replace.mjs";
 import { html_span_nbsp } from "../../../love/public/src/html_span_nbsp.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_font_color_set_blue } from "../../../love/public/src/html_font_color_set_blue.mjs";
@@ -83,16 +83,16 @@ export async function app_ceb_bible_home_generic(
       let word = object_property_get(e, language_code);
       let gloss = object_property_get(e, "gloss");
       let explain = object_property_get(e, "explain");
-      let span = html_span_text_nbsp_replace(word, div2);
+      let span = html_span_text(word, div2);
       html_bold_mild(span);
       html_font_color_set(span, "#e40000ff");
       let c = html_span_colon_2(div2);
       html_font_color_set(c, "#aaa");
-      let span2 = html_span_text_nbsp_replace(gloss, div2);
+      let span2 = html_span_text(gloss, div2);
       html_font_color_set_blue(span2);
       let c2 = html_span_colon_2(div2);
       html_font_color_set(c2, "#aaa");
-      let span3 = html_span_text_nbsp_replace(explain, div2);
+      let span3 = html_span_text(explain, div2);
       html_font_color_set(span3, "#7b3f97ff");
     }
     each(explains, lambda);
