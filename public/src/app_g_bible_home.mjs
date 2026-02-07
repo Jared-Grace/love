@@ -32,9 +32,7 @@ export async function app_g_bible_home(context) {
       on_passage,
       g_sermon_generate_download,
     ));
-    function lambda(item) {}
-    each(list, lambda);
-    function on_passage(passage, verses) {
+    function on_passage({ passage, verses }) {
       let last = list_last(verses);
       let p = object_property_get(last, "p");
       let sermon = object_property_get(passage, "sermon");
@@ -55,6 +53,7 @@ export async function app_g_bible_home(context) {
       };
       la(update);
     }
+    each(passages, on_passage);
   }
   let updates = await list_adder_async(lambda5);
   let bar = object_property_get(r, "bar");
