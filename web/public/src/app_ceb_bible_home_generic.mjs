@@ -1,3 +1,4 @@
+import { html_button } from "../../../love/public/src/html_button.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_span_text_nbsp_replace_property_from } from "../../../love/public/src/html_span_text_nbsp_replace_property_from.mjs";
@@ -99,7 +100,8 @@ export async function app_ceb_bible_home_generic(
       let span3 = html_span_text(div2, explain);
       html_font_color_set(span3, "#7b3f97ff");
     }
-    each(explains, lambda);hb
+    each(explains, lambda);
+    let component = html_button(parent, text2, function lambda6() {});
     return;
   }
 }
