@@ -137,6 +137,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     each(split, lambda2);
     let p = html_p(content);
     await lambda$a({
+      p_verse,
       p,
       chapter_code,
       verse_number,
