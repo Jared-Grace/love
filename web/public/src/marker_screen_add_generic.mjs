@@ -1,3 +1,4 @@
+import { js_list_type } from "../../../love/public/src/js_list_type.mjs";
 import { function_transform_marker_specified } from "../../../love/public/src/function_transform_marker_specified.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { marker_next_declare_single_init } from "../../../love/public/src/marker_next_declare_single_init.mjs";
@@ -9,6 +10,7 @@ export async function marker_screen_add_generic(a_name, lambda) {
   async function lambda_ftms(a) {
     let v2 = marker_next_declare_single_init(a);
     let properties = object_property_get(v2, "properties");
+    let vs = js_list_type(ast, node_type);
     a = [];
     await lambda(properties, prefixed);
   }
