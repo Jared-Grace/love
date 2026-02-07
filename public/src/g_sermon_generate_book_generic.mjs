@@ -4,7 +4,6 @@ import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { each_multiple_async } from "../../../love/public/src/each_multiple_async.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { g_generate_openai_responses } from "../../../love/public/src/g_generate_openai_responses.mjs";
-import { exit } from "../../../love/public/src/exit.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { list_map_property_join_space } from "../../../love/public/src/list_map_property_join_space.mjs";
@@ -51,6 +50,9 @@ export async function g_sermon_generate_book_generic(
   let chapters_interlinear = await bible_interlinear_chapters();
   async function lambda3(bible_folder) {
     let chapters = await ebible_chapters(bible_folder, book_code);
+    if (null_not_is(chapter_code_specified)) {
+      chapters = [chapter_code_specified];
+    }
     async function lambda7(chapter_code) {
       let verses = await ebible_verses(bible_folder, chapter_code);
       function lambda8(v) {
@@ -143,9 +145,6 @@ export async function g_sermon_generate_book_generic(
   }
   let mapped = list_map_index(groups, lambda);
   async function lambda9(chapter_code) {
-    if (null_not_is(chapter_code_specified)) {
-      chapter_code = chapter_code_specified;
-    }
     let path = local_function_path_json(chapter_code, fn);
     let exists = await file_exists(path);
     if (exists) {
@@ -217,7 +216,6 @@ export async function g_sermon_generate_book_generic(
     log({
       path,
     });
-    exit();
   }
   await each_async(chapters, lambda9);
 }
