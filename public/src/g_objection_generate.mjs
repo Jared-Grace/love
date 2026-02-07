@@ -32,5 +32,6 @@ Output each objection separated by ` +
     prompt_user_middle,
     prompt_system,
     property_name,
+    error(),
   );
 }
