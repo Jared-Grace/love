@@ -38,7 +38,7 @@ export async function app_ceb_bible_home(context) {
     each(texts, lambda5);
     let explains_json = object_property_get(passage, "explains");
     let explains = json_from(explains_json);
-    html_table(explains, p);
+    html_table(p, explains);
     log(passage);
     return;
   }
