@@ -1,4 +1,3 @@
-import { error } from "../../../love/public/src/error.mjs";
 import { js_expression_string } from "../../../love/public/src/js_expression_string.mjs";
 import { marker_screen_add_generic } from "../../../love/public/src/marker_screen_add_generic.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
@@ -24,8 +23,7 @@ export async function marker_screen_add(a_name, screen_name) {
     list_add(properties, p);
     await function_new(combined_screen);
     const v = "context";
-    let f_name = error();
-    await function_param_new_double(f_name, v);
+    await function_param_new_double(combined_screen, v);
     async function lambda2(ast) {
       let code = js_code_call_args(html_clear_context.name, [v]);
       let code_assign = js_code_let_assign("root", code);
