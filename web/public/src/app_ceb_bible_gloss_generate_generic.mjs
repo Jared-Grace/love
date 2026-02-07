@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { g_sermon_generate_book_generic } from "../../../love/public/src/g_sermon_generate_book_generic.mjs";
 import { string_upper_to } from "../../../love/public/src/string_upper_to.mjs";
 export async function app_ceb_bible_gloss_generate_generic(
@@ -22,6 +23,7 @@ Output format:
 The ${last} provided as a reference.`;
   const prompt_user_middle =
     "Here is the passage to output English glosses for: ";
+  let chapter_code_specified = error();
   await g_sermon_generate_book_generic(
     bible_folders,
     book_code,
@@ -29,6 +31,6 @@ The ${last} provided as a reference.`;
     prompt_user_middle,
     prompt_system,
     property_name,
-    error(),
+    chapter_code_specified,
   );
 }
