@@ -16,7 +16,7 @@ export async function marker_screen_add_generic(a_name, lambda) {
     let node = object_property_get(only, "node");
     let elements = object_property_get(node, "elements");
     log({
-      only,
+      elements,
     });
     exit();
     await lambda(only, prefixed);
