@@ -65,7 +65,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { function_parse_unaliased } from "../../../love/public/src/function_parse_unaliased.mjs";
 export async function app_a_function(context) {
   let on_keydowns = app_a_on_keydown_add(context, app_a_function_on_keydown);
-  let f_name = storage_local_get_context(context, "f_name_selected");
+  let f_name = storage_local_get_context(context, app_a_function_name_selected_key());
   let parsed = await function_parse_unaliased(f_name);
   let ast = object_property_get(parsed, "ast");
   let root = object_property_get(context, "root");
