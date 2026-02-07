@@ -1,3 +1,4 @@
+import { html_bold_mild } from "../../../love/public/src/html_bold_mild.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
@@ -44,6 +45,7 @@ export async function app_ceb_bible_home(context) {
       let gloss = object_property_get(e, "gloss");
       let explain = object_property_get(e, "explain");
       let span = html_span_text(p, ceb);
+      html_bold_mild(b);
       html_span_space(p);
       let span2 = html_span_text(p, gloss);
       html_span_space(p);
