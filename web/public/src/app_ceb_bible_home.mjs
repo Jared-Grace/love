@@ -37,7 +37,7 @@ export async function app_ceb_bible_home(context) {
     let texts = list_map(split3, lambda4);
     function lambda5(t) {
       let div = html_div_text(p, t);
-      html_font_color_set_blue(div);
+      html_font_color_set_green(div);
     }
     each(texts, lambda5);
     let explains_json = object_property_get(passage, "explains");
