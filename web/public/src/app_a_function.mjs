@@ -193,6 +193,7 @@ export async function app_a_function(context) {
       shortcut: "h",
       text: emoji_hourglass(),
       fn: async function lambda4() {
+        alert("re");
         screen_choose(app_a_history);
       },
     },
