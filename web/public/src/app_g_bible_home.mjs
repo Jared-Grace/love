@@ -29,7 +29,6 @@ export async function app_g_bible_home(context) {
     let passages = null;
     ({ chapter_code, downloaded, r, passages } = await app_g_bible_home_inner(
       context,
-      on_passage,
       g_sermon_generate_download,
     ));
     function on_passage({ passage, verses }) {
