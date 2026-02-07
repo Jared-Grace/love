@@ -31,5 +31,6 @@ Output each sentence separated by ` +
     prompt_user_middle,
     prompt_system,
     "sermon",
+    error(),
   );
 }
