@@ -1,4 +1,3 @@
-import { html_font_color_set_blue } from "../../../love/public/src/html_font_color_set_blue.mjs";
 import { html_span_colon_2 } from "../../../love/public/src/html_span_colon_2.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_font_color_set_green } from "../../../love/public/src/html_font_color_set_green.mjs";
@@ -36,7 +35,7 @@ export async function app_ceb_bible_home(context) {
     let texts = list_map(split3, lambda4);
     function lambda5(t) {
       let div = html_div_text(p, t);
-      html_font_color_set_blue(div);
+      html_font_color_set_green(div);
     }
     each(texts, lambda5);
     let explains_json = object_property_get(passage, "explains");
@@ -48,7 +47,7 @@ export async function app_ceb_bible_home(context) {
       let explain = object_property_get(e, "explain");
       let span = html_span_text(div2, ceb);
       html_bold_mild(span);
-      html_font_color_set_blue(span);
+      html_font_color_set_green(span);
       let c = html_span_colon_2(div2);
       html_font_color_set(c, "#aaa");
       let span2 = html_span_text(div2, gloss);
