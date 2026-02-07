@@ -22,7 +22,7 @@ export async function app_ceb_bible_home_generic(
   context,
   download,
   language_code,
-  first,
+  text_use,
 ) {
   await app_g_bible_home_inner(context, on_passage, download);
   function on_passage(passage, p) {
@@ -36,7 +36,7 @@ export async function app_ceb_bible_home_generic(
       let separator2 = string_colon_2();
       let split = string_split(v, separator2);
       let get = null;
-      if (first) {
+      if (text_use) {
         get = list_first;
       } else {
         get = list_second;
