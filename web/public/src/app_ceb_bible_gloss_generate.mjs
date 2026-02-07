@@ -6,17 +6,18 @@ export async function app_ceb_bible_gloss_generate() {
   let bible_folder = "engbsb";
   let book_code = "JAS";
   let language = "Cebuano";
-  let u = string_upper_to(language);
+  let last = "original language and English are";
+  let language_upper = string_upper_to(language);
   const prompt_system = `You will be given a Bible passage and its context in ${language}.
 For each ${language} word, output an English gloss.
 Also output a full explanation of each ${language} word, explaining its meaning and grammar (including prefixes and suffixes), written for an English speaker with no background in grammar. 
 Explanations should be easy to understand. Explain as simply as possible.
 
 Output format:
-[{"ceb":"${language}_WORD","gloss":"ENGLISH_GLOSS","explain":"FULL_EXPLANATION"}, ...]
+[{"ceb":"${language_upper}_WORD","gloss":"ENGLISH_GLOSS","explain":"FULL_EXPLANATION"}, ...]
 
-"CEBUANO_WORD" should include any punctuation before or after a word.
-The original language and English are provided as a reference.`;
+"${language_upper}_WORD" should include any punctuation before or after a word.
+The ${last} provided as a reference.`;
   const prompt_user_middle =
     "Here is the passage to output English glosses for: ";
   let fn = app_ceb_bible_gloss_generate;
