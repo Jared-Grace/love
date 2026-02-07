@@ -1,3 +1,4 @@
+import { emoji_hourglass } from "../../../love/public/src/emoji_hourglass.mjs";
 import { function_delete } from "../../../love/public/src/function_delete.mjs";
 import { emoji_delete } from "../../../love/public/src/emoji_delete.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
@@ -189,7 +190,7 @@ export async function app_a_function(context) {
     },
     {
       shortcut: "d",
-      text: emoji_delete(),
+      text: emoji_hourglass(),
       fn: async function lambda4() {
         await function_delete(f_name);
         await screen_choose_open();
