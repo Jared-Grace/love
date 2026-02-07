@@ -12,6 +12,7 @@ export function app_a_screens() {
     app_a_home,
     app_a_app_run,
     app_a_app,
+    app_a_history,
   ];
   return v;
 }
