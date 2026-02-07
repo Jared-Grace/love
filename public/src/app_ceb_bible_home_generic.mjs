@@ -32,6 +32,7 @@ export async function app_ceb_bible_home_generic(
     let p = object_property_get(a, "p");
     log({
       passage,
+      verses,
     });
     let texts = null;
     if (text_use) {
