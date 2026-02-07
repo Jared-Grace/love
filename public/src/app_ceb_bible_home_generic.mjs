@@ -60,7 +60,7 @@ export async function app_ceb_bible_home_generic(
     }
     let explains_json = object_property_get(passage, "explains");
     let explains = json_from(explains_json);
-    let div3 = html_div(root);
+    let div3 = html_div(p);
     function lambda2(e) {
       let word = object_property_get(e, language_code);
       let span = html_span_text(div3, word);
