@@ -25,7 +25,7 @@ import { html_p } from "../../../love/public/src/html_p.mjs";
 import { app_bible_chapters } from "../../../love/public/src/app_bible_chapters.mjs";
 import { app_bible_chapter_open } from "../../../love/public/src/app_bible_chapter_open.mjs";
 import { app_bible_books } from "../../../love/public/src/app_bible_books.mjs";
-import { app_generic_screen_set } from "../../../love/public/src/app_generic_screen_set.mjs";
+import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { list_previous_wrap } from "../../../love/public/src/list_previous_wrap.mjs";
 import { emoji_arrow_left } from "../../../love/public/src/emoji_arrow_left.mjs";
 import { list_next_wrap } from "../../../love/public/src/list_next_wrap.mjs";
@@ -43,7 +43,7 @@ import { ebible_folder_english } from "../../../love/public/src/ebible_folder_en
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_bar_content_padded } from "../../../love/public/src/html_bar_content_padded.mjs";
-import { html_on_scroll } from "./html_on_scroll.mjs";
+import { html_on_scroll } from "../../../love/public/src/html_on_scroll.mjs";
 export async function app_bible_home_generic(context, lambda$a) {
   let root = html_clear_context(context);
   html_clear(root);
@@ -70,11 +70,11 @@ export async function app_bible_home_generic(context, lambda$a) {
   let text3 = emoji_arrow_left();
   let component4 = html_button(bar, text3, lambda6);
   function lambda5() {
-    app_generic_screen_set(context, app_bible_books);
+    app_shared_screen_set(context, app_bible_books);
   }
   let component = html_button(bar, book_name, lambda5);
   function lambda4() {
-    app_generic_screen_set(context, app_bible_chapters);
+    app_shared_screen_set(context, app_bible_chapters);
   }
   let component2 = html_button(bar, chapter_name, lambda4);
   let text2 = emoji_arrow_right();
