@@ -20,6 +20,7 @@ import { string_colon_3 } from "../../../love/public/src/string_colon_3.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_g_bible_home_inner } from "../../../love/public/src/app_g_bible_home_inner.mjs";
 import { list_second } from "./list_second.mjs";
+import { html_span_space } from "./html_span_space.mjs";
 export async function app_ceb_bible_home_generic(
   context,
   download,
@@ -73,7 +74,7 @@ export async function app_ceb_bible_home_generic(
       html_span_nbsp(div3);
       let span2 = html_span_text_nbsp_replace_property_from(div3, e, "gloss");
       html_font_color_set_blue(span2);
-      let span4 = html_span_text_nbsp_replace(" ", div3);
+      let span4 = html_span_space(div3);
     }
     each(explains, lambda2);
     function lambda(e) {
