@@ -44,7 +44,6 @@ export async function app_ceb_bible_home(context) {
       let div2 = html_div(p);
       let ceb = object_property_get(e, "ceb");
       let gloss = object_property_get(e, "gloss");
-      html_font_color_set(gloss, "rgba(0, 0, 213, 1)");
       let explain = object_property_get(e, "explain");
       let span = html_span_text(div2, ceb);
       html_bold_mild(span);
@@ -52,6 +51,7 @@ export async function app_ceb_bible_home(context) {
       let c = html_span_colon_2(div2);
       html_font_color_set(c, "#aaa");
       let span2 = html_span_text(div2, gloss);
+      html_font_color_set(span2, "rgba(0, 0, 213, 1)");
       let c2 = html_span_colon_2(div2);
       html_font_color_set(c2, "#aaa");
       let span3 = html_span_text(div2, explain);
