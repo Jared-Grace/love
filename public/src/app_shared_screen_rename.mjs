@@ -8,16 +8,16 @@ import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
-import { marker_screen_add_generic } from "../../../love/public/src/marker_screen_add_generic.mjs";
-import { list_add } from "./list_add.mjs";
-export async function marker_screen_rename(
+import { app_shared_screen_add_generic } from "../../../love/public/src/app_shared_screen_add_generic.mjs";
+import { list_add } from "../../../love/public/src/list_add.mjs";
+export async function app_shared_screen_rename(
   a_name,
   screen_name_before,
   screen_name_after,
 ) {
   assert_arguments(arguments, 3);
   let afters = [];
-  let result = await marker_screen_add_generic(a_name, lambda);
+  let result = await app_shared_screen_add_generic(a_name, lambda);
   await each_async(afters, invoke);
   return result;
   async function lambda(properties, prefixed) {
