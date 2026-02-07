@@ -58,7 +58,7 @@ export async function app_ceb_bible_home(context) {
       let c2 = html_span_colon_2(div2);
       html_font_color_set(c2, "#aaa");
       let span3 = html_span_text(div2, explain);
-      html_font_color_set(c2, "#9400d8ff");
+      html_font_color_set(span3, "#9400d8ff");
     }
     each(explains, lambda);
     log(passage);
