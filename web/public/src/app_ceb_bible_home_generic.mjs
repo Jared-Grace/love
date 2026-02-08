@@ -33,7 +33,7 @@ import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 export async function app_ceb_bible_home_generic(
   context,
   download,
-  language_code,
+  language_code2,
   text_use,
 ) {
   language_code = g_sermon_generate_book_generic_property();
