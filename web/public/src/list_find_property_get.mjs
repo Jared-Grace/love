@@ -6,7 +6,7 @@ export function list_find_property_get(
   value,
   property_get,
 ) {
-  let v = list_find_property(list, property_find, value);
-  let g = object_property_get(v, property_get);
+  let item = list_find_property(list, property_find, value);
+  let g = object_property_get(item, property_get);
   return g;
 }
