@@ -4,7 +4,7 @@ import { object_copy_assign } from "../../../love/public/src/object_copy_assign.
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_a_overlay } from "../../../love/public/src/app_a_overlay.mjs";
-export function app_a_functions_overlay_generic(a, texts, lambda$text) {
+export function app_a_functions_overlay_generic(a, texts, lambda$text, noun) {
   let overlay_result = app_a_overlay(a);
   let overlay = object_property_get(overlay_result, "overlay");
   html_style_set(overlay, "overflow", "hidden");
