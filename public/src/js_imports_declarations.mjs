@@ -3,7 +3,7 @@ import { not } from "../../../love/public/src/not.mjs";
 import { js_imports_all } from "../../../love/public/src/js_imports_all.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
-import { string_starts_with } from "../../../love/public/src/string_starts_with.mjs";
+import { text_starts_with } from "../../../love/public/src/text_starts_with.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
@@ -25,7 +25,7 @@ export function js_imports_declarations(ast) {
         return;
       }
       let value = object_property_get(source, "value");
-      let a3 = string_starts_with(value, ".");
+      let a3 = text_starts_with(value, ".");
       if (not(a3)) {
         return;
       }
