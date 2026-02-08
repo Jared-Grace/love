@@ -49,8 +49,8 @@ export function app_a_statement_choices_add(choices, a, o) {
         let v2 = app_a_functions_overlay_generic(
           a,
           i_names,
-          on_select,
           "function",
+          on_select,
         );
         let overlay_result = object_property_get(v2, "overlay_result");
         async function on_select(identifier_name) {
