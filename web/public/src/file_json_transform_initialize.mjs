@@ -2,12 +2,7 @@ import { file_json_transform } from "../../../love/public/src/file_json_transfor
 import { file_write_json } from "../../../love/public/src/file_write_json.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
-export async function file_json_transform_initialize(
-  exists2,
-  joined,
-  initial,
-  lambda,
-) {
+export async function file_json_transform_initialize(joined, initial, lambda) {
   let exists = await file_exists(joined);
   if (not(exists)) {
     await file_write_json(joined, initial);
