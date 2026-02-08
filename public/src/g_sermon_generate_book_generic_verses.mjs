@@ -10,11 +10,7 @@ export async function g_sermon_generate_book_generic_verses(
       bible_folder,
       chapters_codes,
     );
-    let v5 = {
-      verses_book,
-      chapters: chapters_codes,
-    };
-    return v5;
+    return verses_book;
   }
   let r = await list_map_unordered_async(bible_folders, map_folder);
   return r;
