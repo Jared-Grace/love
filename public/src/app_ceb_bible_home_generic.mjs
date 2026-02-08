@@ -24,7 +24,7 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { text_colon_2 } from "../../../love/public/src/text_colon_2.mjs";
 import { string_split } from "../../../love/public/src/string_split.mjs";
-import { string_colon_3 } from "../../../love/public/src/string_colon_3.mjs";
+import { text_colon_3 } from "../../../love/public/src/text_colon_3.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_g_bible_home_inner } from "../../../love/public/src/app_g_bible_home_inner.mjs";
 import { list_second } from "../../../love/public/src/list_second.mjs";
@@ -55,7 +55,7 @@ export async function app_ceb_bible_home_generic(
     let texts = null;
     if (text_use) {
       let text = object_property_get(passage, "text");
-      let separator3 = string_colon_3();
+      let separator3 = text_colon_3();
       let split3 = string_split(text, separator3);
       function lambda4(v) {
         let separator2 = text_colon_2();
