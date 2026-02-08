@@ -19,7 +19,7 @@ import { list_skip } from "../../../love/public/src/list_skip.mjs";
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
 import { text_empty_not_is } from "../../../love/public/src/text_empty_not_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
-import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
+import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { ebible_chapter_text } from "../../../love/public/src/ebible_chapter_text.mjs";
 import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
@@ -33,7 +33,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   let verse_numbers = object_property_get(v2, "verse_numbers");
   text = whitespace_normalize(text);
   text = urdu_allah_to_god(text);
-  let split = string_split_space(text);
+  let split = text_split_space(text);
   let filtered = list_filter(split, text_empty_not_is);
   function lambda_list_adder(la) {
     function lambda_each_reverse(nn, nn_next) {
