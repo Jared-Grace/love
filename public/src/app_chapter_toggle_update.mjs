@@ -86,7 +86,7 @@ export function app_chapter_toggle_update(
         verse_numbers,
       );
       let last = object_property_get(v, "last");
-      let first = object_property_get(v, "first");
+      let function_copy_replace_first = object_property_get(v, "first");
       let sliced = object_property_get(v, "sliced");
       verse_numbers_mapped = list_map_find_property(
         sliced,
@@ -97,7 +97,7 @@ export function app_chapter_toggle_update(
       let reference = ebible_parts_chapter_code_to_reference(
         chapter_code,
         books,
-        [first, last],
+        [function_copy_replace_first, last],
       );
       let concated2 = list_concat([reference], mapped3);
       return concated2;

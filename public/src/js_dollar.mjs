@@ -34,8 +34,8 @@ export async function js_dollar(ast) {
       let split = text_split(name, separator);
       let v2 = list_first_second(split);
       let second = object_property_get(v2, "second");
-      let first = object_property_get(v2, "first");
-      let ne = text_empty_not_is(first);
+      let function_copy_replace_first = object_property_get(v2, "first");
+      let ne = text_empty_not_is(function_copy_replace_first);
       if (ne) {
         ("if inside this block, then begins with non-$ - we only process beginning with $");
         return;
