@@ -179,8 +179,8 @@ export async function app_a_function(context) {
       fn: async function lambda10() {
         let v6 = await app_a_functions_overlay(a, lambda11);
         let overlay_result = object_property_get(v6, "overlay_result");
-        let functions_result = object_property_get(v6, "functions_result");
-        let input_set = object_property_get(functions_result, "input_set");
+        let chooser_result = object_property_get(v6, "chooser_result");
+        let input_set = object_property_get(chooser_result, "input_set");
         let combined2 = function_new_js_name("");
         input_set(combined2);
         async function lambda11(f_name_call) {
