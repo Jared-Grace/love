@@ -5,7 +5,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { object_property_initialize_list } from "../../../love/public/src/object_property_initialize_list.mjs";
 import { object_property_initialize_empty } from "../../../love/public/src/object_property_initialize_empty.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
-import { string_transform_lookup } from "../../../love/public/src/string_transform_lookup.mjs";
+import { text_transform_lookup } from "../../../love/public/src/text_transform_lookup.mjs";
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
@@ -49,7 +49,7 @@ export async function ebible_versions_english_downloadable_words_lookup() {
         function lambda5(s) {
           let lower = text_lower_to(s);
           word_add(lower);
-          let t = string_transform_lookup(lower, normalize);
+          let t = text_transform_lookup(lower, normalize);
           if (equal_not(t, lower)) {
             word_add(lower);
           }
