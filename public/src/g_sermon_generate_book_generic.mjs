@@ -170,11 +170,11 @@ export async function g_sermon_generate_book_generic(
             texts,
             list,
           });
-          let passages_folders = list_map_join_space(texts);
+          let passages_folders_group = list_map_join_space(texts);
           let originals = object_property_get(group, "originals");
           let original = list_join_space(originals);
-          list_add_first(passages_folders, original);
-          return passages_folders;
+          list_add_first(passages_folders_group, original);
+          return passages_folders_group;
         }
         let mapped = list_map(groups, each_group);
         list_add_pair(texts2, texts_add2);
