@@ -17,5 +17,4 @@ export async function function_multiple_rename_if_starts_with_replace(
     let f_name_after = string_replace(f_name_before, from, to);
     return f_name_after;
   }
-  return v;
 }
