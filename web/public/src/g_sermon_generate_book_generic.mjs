@@ -132,7 +132,6 @@ export async function g_sermon_generate_book_generic(
     }
     let groups_match_chapter = list_filter(nearbys, filter_group);
     async function map_group(g) {
-      log(g);
       let passage = object_property_get(g, "item");
       let n = object_property_get(g, "nearby");
       let user_prompt_before = prompt_get(n);
