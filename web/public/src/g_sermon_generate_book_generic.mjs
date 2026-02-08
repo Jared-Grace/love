@@ -157,11 +157,11 @@ export async function g_sermon_generate_book_generic(
       function prompt_get(group) {
         let texts = object_property_get(group, "texts");
         function folder_map(t) {
-          function lambda(v) {
+          function verse_map(v) {
             let p = list_join_space(v);
             return p;
           }
-          let p = list_map(t, lambda);
+          let p = list_map(t, verse_map);
           let j = list_join(p, " :: ");
           return j;
         }
