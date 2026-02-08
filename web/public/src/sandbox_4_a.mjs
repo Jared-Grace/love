@@ -6,7 +6,7 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_whitespace_normalize } from "../../../love/public/src/list_map_whitespace_normalize.mjs";
 import { list_second } from "../../../love/public/src/list_second.mjs";
-import { string_split_semicolon } from "../../../love/public/src/string_split_semicolon.mjs";
+import { text_split_semicolon } from "../../../love/public/src/text_split_semicolon.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_split_comma } from "../../../love/public/src/list_map_split_comma.mjs";
 import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
@@ -21,7 +21,7 @@ export async function sandbox_4_a() {
   async function lambda(item) {
     let first = list_first(item);
     let second = list_second(item);
-    let split3 = string_split_semicolon(second);
+    let split3 = text_split_semicolon(second);
     let mapped2 = list_map_whitespace_normalize(split3);
     async function lambda2(item2) {
       let books_all = await list_map_unordered_async(
