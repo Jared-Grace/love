@@ -17,7 +17,7 @@ import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { list_skip } from "../../../love/public/src/list_skip.mjs";
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
-import { string_empty_not_is } from "../../../love/public/src/string_empty_not_is.mjs";
+import { text_empty_not_is } from "../../../love/public/src/text_empty_not_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
 import { ebible_chapter_text } from "../../../love/public/src/ebible_chapter_text.mjs";
@@ -34,7 +34,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   text = whitespace_normalize(text);
   text = urdu_allah_to_god(text);
   let split = string_split_space(text);
-  let filtered = list_filter(split, string_empty_not_is);
+  let filtered = list_filter(split, text_empty_not_is);
   function lambda_list_adder(la) {
     function lambda_each_reverse(nn, nn_next) {
       let name = object_property_get(nn, "name");
@@ -70,7 +70,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   function lambda3(item) {
     let value = object_property_get(item, property);
     let replaced = string_replace(value, "[]", "");
-    let n = string_empty_not_is(replaced);
+    let n = text_empty_not_is(replaced);
     return n;
   }
   let verses = list_filter(verses_unfiltered, lambda3);
