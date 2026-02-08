@@ -47,7 +47,7 @@ export function app_a_function_declaration(a) {
           let e1 = list_get_end_1(stack);
           let body_block = js_declaration_to_block_body(node);
           list_replace_multiple(e1, node, body_block);
-          await app_a_function_on_change(o, a);
+          await app_a_function_on_change(a, o);
         },
       });
     }
