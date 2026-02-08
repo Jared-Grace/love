@@ -4,7 +4,7 @@ import { js_call_new_insert } from "../../../love/public/src/js_call_new_insert.
 import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs";
 import { app_a_functions_overlay } from "../../../love/public/src/app_a_functions_overlay.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-export function app_a_call_above(o, a) {
+export function app_a_call_above(o, a, choices) {
   let v5 = {
     shortcut: "a",
     text: "Add above",
