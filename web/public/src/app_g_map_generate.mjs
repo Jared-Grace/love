@@ -1,3 +1,4 @@
+import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -29,7 +30,7 @@ export function app_g_map_generate() {
     }
     each_index(taken, lambda3);
   }
-  const w = "water";
+  app_a_water();
   let tiles = list_adder(lambda5);
   let row_count = 15;
   let column_count = row_count;
