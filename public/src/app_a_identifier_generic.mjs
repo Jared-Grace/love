@@ -1,3 +1,4 @@
+import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { app_a_function_name_selected_key } from "../../../love/public/src/app_a_function_name_selected_key.mjs";
 import { app_a_functionize_choices_add } from "../../../love/public/src/app_a_functionize_choices_add.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
@@ -45,7 +46,7 @@ export function app_a_identifier_generic(
   lines_multiple,
   replace,
 ) {
-  async function choices_get(o3,choices) {
+  async function choices_get(o3, choices) {
     let node = object_property_get(a, "node");
     let ast = object_property_get(a, "ast");
     let v_match = js_visit_match_first(ast, node);
@@ -91,8 +92,8 @@ export function app_a_identifier_generic(
       },
     };
     let to2 = object_merge(change, c);
-    lam
-    let choices = [
+    list_add_multiple(list2, items);
+    choices = [
       {
         shortcut: "c",
         text: "Copy",
