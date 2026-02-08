@@ -166,9 +166,9 @@ export async function g_sermon_generate_book_generic(
           let j = list_join(p, " :: ");
           return j;
         }
-        let mapped5 = list_map(texts, folder_map);
-        let text = list_join(mapped5, " :: ");
-        list_add_first(list, item2);
+        let passages_folders = list_map(texts, folder_map);
+        list_add_first(passages_folders, original);
+        let text = list_join(passages_folders, " :: ");
         let original = list_map_property_join_space(group, "originals");
         const user_prompt = original + " :: " + text;
         log({
