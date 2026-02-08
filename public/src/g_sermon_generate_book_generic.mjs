@@ -1,5 +1,5 @@
+import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { list_find_property_get } from "../../../love/public/src/list_find_property_get.mjs";
-import { list_adder_group_async } from "../../../love/public/src/list_adder_group_async.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 import { list_nearby } from "../../../love/public/src/list_nearby.mjs";
 import { ebible_chapters_codes_or_specified } from "../../../love/public/src/ebible_chapters_codes_or_specified.mjs";
@@ -50,7 +50,7 @@ export async function g_sermon_generate_book_generic(
     bible_folders,
   );
   let chapters_interlinear = await bible_interlinear_chapters();
-  async function adder_groups(la) {
+  async function adder(la) {
     async function each_chapter(verses_chapter_folders) {
       clear();
       let verses_chapter = list_first(verses_chapter_folders);
@@ -95,7 +95,7 @@ export async function g_sermon_generate_book_generic(
     }
     await each_multiple_async(verses_book_folders, each_chapter);
   }
-  let groups = await list_adder_group_async(adder_groups);
+  let groups = await list_adder_async(adder);
   let nearness = 2;
   let nearbys = list_nearby(groups, nearness);
   async function each_chapter(chapter_code) {
