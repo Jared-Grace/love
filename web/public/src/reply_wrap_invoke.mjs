@@ -1,7 +1,7 @@
 import { integer_is_assert } from "../../../love/public/src/integer_is_assert.mjs";
 import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
-import { string_size } from "../../../love/public/src/string_size.mjs";
+import { text_size } from "../../../love/public/src/text_size.mjs";
 import { text_is } from "../../../love/public/src/text_is.mjs";
 import { json_equal } from "../../../love/public/src/json_equal.mjs";
 import { list_is_assert_json } from "../../../love/public/src/list_is_assert_json.mjs";
@@ -21,7 +21,7 @@ export async function reply_wrap_invoke(item, possibilities) {
     let si2 = text_is(item);
     let size = null;
     if (si2) {
-      size = string_size(item);
+      size = text_size(item);
       if (size > 1) {
         let split = string_split_empty(item);
         wrapped = reply_sequence(split);
