@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { each_multiple_async } from "../../../love/public/src/each_multiple_async.mjs";
@@ -10,7 +9,7 @@ import { list_find_property } from "../../../love/public/src/list_find_property.
 import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-export async function list_adder_group_async() {
+export async function list_adder_group_async(lambda) {
   async function adder_groups(la) {
     let group = null;
     await lambda({
@@ -30,9 +29,7 @@ export async function list_adder_group_async() {
     }
   }
   let groups = await list_adder_async(adder_groups);
-  log({
-    groups,
-  });
+  return groups;
   async function lambda({ clear, add, end }) {
     async function each_chapter(verses_chapter_folders) {
       let verses_chapter = list_first(verses_chapter_folders);
