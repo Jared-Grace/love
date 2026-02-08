@@ -27,8 +27,8 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
   html_style_background_color(d, "white");
   let filtered = null;
   async function on_enter() {
-    let first = list_first(filtered);
-    await f_name_select(first);
+    let function_copy_replace_first = list_first(filtered);
+    await f_name_select(function_copy_replace_first);
   }
   let on_keydown = html_on_enter_lambda(on_enter);
   let on_keydowns = app_a_on_keydown_add(context, on_keydown);

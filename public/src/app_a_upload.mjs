@@ -20,8 +20,8 @@ export async function app_a_upload(deltas) {
     let e = await file_exists(key);
     if (e) {
       let contents = await file_read(key);
-      let first = list_first(versions);
-      let eq = equal(contents, first);
+      let function_copy_replace_first = list_first(versions);
+      let eq = equal(contents, function_copy_replace_first);
       assert_json(eq, {
         contents,
         versions,

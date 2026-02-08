@@ -12,11 +12,11 @@ export async function function_dependencies_code_unaliased(f_names_comma) {
     return unaliased;
   }
   let waited = await list_map_unordered_async(split, lambda);
-  let first = list_first(waited);
+  let function_copy_replace_first = list_first(waited);
   let d = await function_dependencies_code_multiple(waited);
   let v2 = {
     d,
-    unaliased: first,
+    unaliased: function_copy_replace_first,
   };
   return v2;
 }

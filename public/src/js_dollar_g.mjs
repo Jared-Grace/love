@@ -16,7 +16,7 @@ export async function js_dollar_g({
   ast,
   afters,
 }) {
-  let { first: object_name, remaining: property_names } =
+  let { function_copy_replace_first: object_name, remaining: property_names } =
     list_first_remaining(remaining);
   async function lambda2(property_name) {
     if (js_node_type_is(stack1, "ExpressionStatement")) {

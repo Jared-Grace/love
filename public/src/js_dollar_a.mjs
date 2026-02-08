@@ -12,8 +12,8 @@ export function js_dollar_a({ stack1, stack2, ast, afters, remaining }) {
   let count = 1;
   let s1 = list_size_1(remaining);
   if (s1) {
-    let first = list_first(remaining);
-    count = integer_to_try(first);
+    let function_copy_replace_first = list_first(remaining);
+    count = integer_to_try(function_copy_replace_first);
   }
   js_dollar_a_generic({
     stack1,
