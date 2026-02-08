@@ -4,7 +4,7 @@ import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 export function list_nearbys(list, nearness) {
   positive_is_assert(nearness);
   function mapper(item, index) {
-    let nearby = list_get_nearby(index, nearness, list);
+    let nearby = list_get_nearby(list, index, nearness);
     let m = {
       nearby,
       item,
