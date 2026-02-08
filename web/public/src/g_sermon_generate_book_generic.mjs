@@ -160,12 +160,8 @@ export async function g_sermon_generate_book_generic(
         log({
           texts,
         });
-        function folder_map(t) {
-          function verse_map(v) {
-            let p = list_join_space(v);
-            return p;
-          }
-          let p = list_map(t, verse_map);
+        function folder_map(v) {
+          let p = list_join_space(v);
           return p;
         }
         let passages_folders = list_map(texts, folder_map);
