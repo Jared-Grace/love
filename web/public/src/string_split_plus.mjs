@@ -1,5 +1,5 @@
-import { string_split } from "../../../love/public/src/string_split.mjs";
+import { text_split } from "../../../love/public/src/text_split.mjs";
 export function string_split_plus(l) {
-  let split4 = string_split(l, "+");
+  let split4 = text_split(l, "+");
   return split4;
 }
