@@ -177,6 +177,8 @@ export function app_a_identifier_generic(
       e2,
     });
     async function lambda6() {
+      if (false) {
+      }
       let v2 = await function_parse_declaration(f_name_call);
       let ast_call = object_property_get(v2, "ast");
       let assign = js_declare(name2, init);
