@@ -22,7 +22,7 @@ import { app_a_identifier } from "../../../love/public/src/app_a_identifier.mjs"
 import { not } from "../../../love/public/src/not.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { a_brackets_wrap } from "../../../love/public/src/a_brackets_wrap.mjs";
-import { string_pad_space } from "../../../love/public/src/string_pad_space.mjs";
+import { text_pad_space } from "../../../love/public/src/text_pad_space.mjs";
 import { app_a_comma } from "../../../love/public/src/app_a_comma.mjs";
 import { app_a_body_inner } from "../../../love/public/src/app_a_body_inner.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
@@ -259,7 +259,7 @@ export function app_a_function_node(a) {
     let left = object_property_get(node, "left");
     app_a_function_node_child(a, left);
     let operator = object_property_get(node, "operator");
-    let padded = string_pad_space(operator);
+    let padded = text_pad_space(operator);
     html_span_text(parent, padded);
     let right = object_property_get(node, "right");
     app_a_function_node_child(a, right);
