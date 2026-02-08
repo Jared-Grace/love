@@ -7,9 +7,9 @@ import { range_from } from "../../../love/public/src/range_from.mjs";
 export function list_nearby(list, nearness) {
   positive_is_assert(nearness);
   function mapper(item, index) {
-    let r = range_from(index - nearness, index + nearness);
+    let indices = range_from(index - nearness, index + nearness);
     let filter = list_index_is_curry(list);
-    let filtered = list_filter(r, filter);
+    let filtered = list_filter(indices, filter);
     let nearby = list_indices_to_items(list, filtered);
     let m = {
       nearby,
