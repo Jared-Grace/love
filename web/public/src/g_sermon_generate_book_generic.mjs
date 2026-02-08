@@ -171,7 +171,7 @@ export async function g_sermon_generate_book_generic(
         }
         let mapped5 = list_map(texts, lambda12);
         let text = list_join(mapped5, " ::: ");
-        let original = list_map_property_join_space(group, "original");
+        let original = list_map_property_join_space(group, "originals");
         const user_prompt = original + " :: " + text;
         log({
           user_prompt,
