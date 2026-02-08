@@ -136,8 +136,8 @@ export async function g_sermon_generate_book_generic(
       let mapped3 = list_map_property(mapped2, "user_prompt");
       let separator = text_colon_3();
       let joined = list_join(mapped3, separator);
-      var v4 = prompt_get(passage);
-      let user_prompt = object_property_get(v4, "user_prompt");
+      var p = prompt_get(passage);
+      let user_prompt = object_property_get(p, "user_prompt");
       const prompt_user =
         "Here is the context: " +
         joined +
