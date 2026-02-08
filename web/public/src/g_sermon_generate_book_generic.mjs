@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { list_add_pair } from "../../../love/public/src/list_add_pair.mjs";
 import { ebible_folders_chapters_codes_to_verses } from "../../../love/public/src/ebible_folders_chapters_codes_to_verses.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -158,6 +159,7 @@ export async function g_sermon_generate_book_generic(
       let v = {
         [property_name]: output,
       };
+      let to2 = object_merge(to, from);
       log_keep(output);
       return v;
       function prompt_get(group) {
