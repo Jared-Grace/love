@@ -129,7 +129,7 @@ export async function g_sermon_generate_book_generic(
     async function each_group(g) {
       log(g);
       let passage = object_property_get(g, "item");
-      let r = object_property_get(g, "range");
+      let r = object_property_get(g, "nearby");
       let mapped3 = list_map(r, prompt_get);
       let separator = text_colon_3();
       let joined = list_join(mapped3, separator);
