@@ -17,7 +17,6 @@ export async function app_original_bible_gloss_generate() {
     book_code,
     fn,
     property_name,
-    language_code,
     null,
   );
 }
