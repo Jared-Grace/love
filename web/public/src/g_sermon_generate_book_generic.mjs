@@ -31,7 +31,6 @@ import { list_map } from "./list_map.mjs";
 import { list_map_join_space } from "./list_map_join_space.mjs";
 import { list_nearby } from "./list_nearby.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
-import { log } from "./log.mjs";
 import { log_keep } from "./log_keep.mjs";
 import { object_merge } from "./object_merge.mjs";
 import { object_property_exists } from "./object_property_exists.mjs";
@@ -183,7 +182,7 @@ export async function g_sermon_generate_book_generic(
       chapter_code,
       passages,
     });
-    log({
+    log_keep({
       path,
     });
   }
