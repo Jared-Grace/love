@@ -171,12 +171,7 @@ export async function g_sermon_generate_book_generic(
         log({
           user_prompt,
         });
-        let v2 = {
-          user_prompt,
-          text,
-          original,
-        };
-        return v2;
+        return user_prompt;
       }
     }
     await each_async(groups_match_chapter, lambda5);
