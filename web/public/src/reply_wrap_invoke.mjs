@@ -1,5 +1,5 @@
 import { integer_is_assert } from "../../../love/public/src/integer_is_assert.mjs";
-import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
+import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { text_size } from "../../../love/public/src/text_size.mjs";
 import { text_is } from "../../../love/public/src/text_is.mjs";
@@ -23,7 +23,7 @@ export async function reply_wrap_invoke(item, possibilities) {
     if (si2) {
       size = text_size(item);
       if (size > 1) {
-        let split = string_split_empty(item);
+        let split = text_split_empty(item);
         wrapped = reply_sequence(split);
       }
     }
