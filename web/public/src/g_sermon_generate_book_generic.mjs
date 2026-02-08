@@ -166,8 +166,8 @@ export async function g_sermon_generate_book_generic(
         let originals = object_property_get(group, "originals");
         let original = list_join_space(originals);
         list_add_first(passages_folders, original);
+        return passages_folders;
         let user_prompt = list_join(passages_folders, " :: ");
-        return user_prompt;
       }
     }
     await each_async(groups_match_chapter, each_group);
