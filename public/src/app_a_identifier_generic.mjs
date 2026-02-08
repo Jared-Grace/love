@@ -165,7 +165,12 @@ export function app_a_identifier_generic(
             app_a_function_select(context, f_name);
           }
           overlay_close();
-          let r = app_a_functions_overlay_generic(a, properties, lambda3);
+          let r = app_a_functions_overlay_generic(
+            a,
+            properties,
+            lambda3,
+            "function",
+          );
         },
       };
       list_add(choices, references);
