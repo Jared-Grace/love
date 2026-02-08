@@ -1,5 +1,4 @@
 import { ebible_chapters_codes_to_verses } from "../../../love/public/src/ebible_chapters_codes_to_verses.mjs";
-import { ebible_chapters_codes_or_specified } from "../../../love/public/src/ebible_chapters_codes_or_specified.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 export async function g_sermon_generate_book_generic_verses(
   book_code,
@@ -7,11 +6,6 @@ export async function g_sermon_generate_book_generic_verses(
   bible_folders,
 ) {
   async function map_folder(bible_folder) {
-    let chapters_codes = await ebible_chapters_codes_or_specified(
-      bible_folder,
-      book_code,
-      chapter_code_specified,
-    );
     let verses_book = await ebible_chapters_codes_to_verses(
       bible_folder,
       chapters_codes,
