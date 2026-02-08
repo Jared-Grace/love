@@ -1,3 +1,4 @@
+import { list_nearby } from "../../../love/public/src/list_nearby.mjs";
 import { ebible_chapters_codes_or_specified } from "../../../love/public/src/ebible_chapters_codes_or_specified.mjs";
 import { g_sermon_generate_book_generic_verses } from "../../../love/public/src/g_sermon_generate_book_generic_verses.mjs";
 import { bible_verse_end_is } from "../../../love/public/src/bible_verse_end_is.mjs";
@@ -17,13 +18,8 @@ import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mj
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
-import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { range } from "../../../love/public/src/range.mjs";
-import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
-import { list_index_is } from "../../../love/public/src/list_index_is.mjs";
-import { range_from } from "../../../love/public/src/range_from.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { each_index_async } from "../../../love/public/src/each_index_async.mjs";
@@ -101,25 +97,7 @@ export async function g_sermon_generate_book_generic(
   }
   let groups = await list_adder_async(adder_groups);
   let nearness = 2;
-  function lambda(item, index) {
-    let r = range_from(index - nearness, index + nearness);
-    function lambda6(index3) {
-      let ii = list_index_is(groups, index3);
-      return ii;
-    }
-    let filtered = list_filter(r, lambda6);
-    function lambda2(index2) {
-      let item2 = list_get(groups, index2);
-      return item2;
-    }
-    let range = list_map(filtered, lambda2);
-    let v3 = {
-      range,
-      item,
-    };
-    return v3;
-  }
-  let mapped = list_map_index(groups, lambda);
+  let mapped = list_nearby(nearness, groups);
   async function each_chapter(chapter_code) {
     let path = local_function_path_json(chapter_code, fn);
     let exists = await file_exists(path);
