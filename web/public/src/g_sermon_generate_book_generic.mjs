@@ -1,3 +1,4 @@
+import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { g_sermon_generate_book_generic_property } from "../../../love/public/src/g_sermon_generate_book_generic_property.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_new_multiple } from "../../../love/public/src/list_new_multiple.mjs";
@@ -182,7 +183,7 @@ export async function g_sermon_generate_book_generic(
         return user_prompt;
       }
     }
-    passages=await list_map_async(groups_match_chapter, each_group);
+    let passages = await list_map_async(groups_match_chapter, each_group);
     await file_overwrite_json(path, {
       chapter_code,
       passages,
