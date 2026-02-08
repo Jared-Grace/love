@@ -44,8 +44,8 @@ export function app_a_statement_choices_add(choices, a, o) {
         let overlay_close = object_property_get(o, "overlay_close");
         overlay_close();
         let ast2 = object_property_get(a, "ast");
-        let f_names = js_identifiers_names(ast2);
-        let v2 = app_a_functions_overlay_generic(a, f_names, on_select);
+        let i_names = js_identifiers_names(ast2);
+        let v2 = app_a_functions_overlay_generic(a, i_names, on_select);
         let overlay_result = object_property_get(v2, "overlay_result");
         async function on_select(f_name_call) {
           let v = app_a_node_index(a);
