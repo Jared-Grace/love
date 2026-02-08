@@ -114,7 +114,7 @@ export async function g_sermon_generate_book_generic(
       let ne = list_empty_not_is(match_chapter);
       return ne;
     }
-    let filtered2 = list_filter(nearbys, filter_group);
+    let groups_match_chapter = list_filter(nearbys, filter_group);
     async function lambda5(r) {
       log(r);
       let item3 = object_property_get(r, "item");
@@ -171,7 +171,7 @@ export async function g_sermon_generate_book_generic(
         return v2;
       }
     }
-    let passages = await list_map_async(filtered2, lambda5);
+    let passages = await list_map_async(groups_match_chapter, lambda5);
     await file_overwrite_json(path, {
       chapter_code,
       passages,
