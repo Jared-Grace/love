@@ -3,7 +3,7 @@ import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
 import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
 import { path_name } from "../../../love/public/src/path_name.mjs";
 import { path_base } from "../../../love/public/src/path_base.mjs";
-export async function g_generate_upload_filter_generic(fn, path_get, file) {
+export async function g_generate_upload_single(fn, path_get, file) {
   let fb = path_base(file);
   let chapter_code = path_name(fb);
   let destination = path_get(chapter_code);
