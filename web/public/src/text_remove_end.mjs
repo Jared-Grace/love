@@ -1,4 +1,5 @@
 export function text_remove_end(t, count) {
-  const removed = t.slice(-count);
-  return removed;
+  let v = Math.max(0, str.length - count);
+  const remaining = str.slice(0, v);
+  return remaining;
 }
