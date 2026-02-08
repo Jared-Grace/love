@@ -52,7 +52,7 @@ export async function js_node_atomize(existing, v, variable_name) {
             name,
             message: "param counts must match",
           });
-           variable_name = object_property_get(param, "name");
+          variable_name = object_property_get(param, "name");
         }
       }
     }
