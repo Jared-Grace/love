@@ -90,7 +90,8 @@ export async function g_sermon_generate_book_generic(
           original = object_property_get(original_verse, "text");
         }
         list_add(originals, original);
-        each_pair(list_a, list_b, function lambda(a, b) {});
+        function lambda(a, b) {}
+        each_pair(list_a, list_b, lambda);
         list_add(texts, texts_add);
         list_add(verse_numbers, verse_number);
         let ei = bible_verse_end_is(text);
