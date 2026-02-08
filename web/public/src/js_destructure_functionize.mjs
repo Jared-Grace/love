@@ -15,8 +15,9 @@ import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
+import { js_return_identifier_name } from "../../../love/public/src/js_return_identifier_name.mjs";
 export async function js_destructure_functionize(ast) {
-  let variable_name = "r";
+  let variable_name = js_return_identifier_name();
   function lambda(v) {
     let node2 = object_property_get(v, "node");
     let properties = object_property_get(node2, "properties");
