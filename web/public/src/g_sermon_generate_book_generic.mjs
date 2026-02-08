@@ -45,7 +45,7 @@ export async function g_sermon_generate_book_generic(
     book_code,
     chapter_code_specified,
   );
-  let verses_book_folders = await g_sermon_generate_book_generic_verses(
+  let verses_book_folders = await ebible_folders_chapters_codes_to_verses(
     chapters_codes,
     bible_folders,
   );
