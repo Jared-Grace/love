@@ -31,6 +31,6 @@ export function app_a_call_above(choices, o, a) {
       }
     },
   };
-  let c = app_a_cut(o, ab);
-  list_add_multiple(choices, [a, c]);
+  let c = app_a_cut(o, a);
+  list_add_multiple(choices, [ab, c]);
 }
