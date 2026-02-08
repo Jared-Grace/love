@@ -1,5 +1,4 @@
 import { g_sermon_generate_book_generic } from "../../../love/public/src/g_sermon_generate_book_generic.mjs";
-import { string_upper_to } from "../../../love/public/src/string_upper_to.mjs";
 export async function app_ceb_bible_gloss_generate_generic(
   language,
   last,
@@ -10,7 +9,6 @@ export async function app_ceb_bible_gloss_generate_generic(
   language_code,
   chapter_code_specified,
 ) {
-  let language_upper = string_upper_to(language);
   const prompt_system = `You will be given a Bible passage and its context in ${language}.
 For each ${language} word, output an English gloss.
 Also output a full explanation of each ${language} word, explaining its meaning and grammar (including prefixes and suffixes), written for an English speaker with no background in grammar. 
