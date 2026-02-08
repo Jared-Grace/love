@@ -157,6 +157,9 @@ export async function g_sermon_generate_book_generic(
       return passage;
       function prompt_get(group) {
         let texts = object_property_get(group, "texts");
+        log({
+          texts,
+        });
         function folder_map(t) {
           function verse_map(v) {
             let p = list_join_space(v);
