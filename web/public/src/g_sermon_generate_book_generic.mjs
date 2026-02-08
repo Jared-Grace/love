@@ -1,3 +1,4 @@
+import { g_sermon_generate_book_generic_property } from "../../../love/public/src/g_sermon_generate_book_generic_property.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_new_multiple } from "../../../love/public/src/list_new_multiple.mjs";
 import { add_1 } from "../../../love/public/src/add_1.mjs";
@@ -152,7 +153,7 @@ export async function g_sermon_generate_book_generic(
         prompt_user,
       );
       let passage_extension = {
-        ["generated"]: output,
+        [g_sermon_generate_book_generic_property()]: output,
       };
       let to2 = object_merge(passage, passage_extension);
       log_keep(output);
