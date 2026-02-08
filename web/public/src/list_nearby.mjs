@@ -23,6 +23,6 @@ export function list_nearby(list, nearness) {
     };
     return m;
   }
-  let mapped = list_map_index(list, lambda);
-  return mapped;
+  let nearbys = list_map_index(list, lambda);
+  return nearbys;
 }
