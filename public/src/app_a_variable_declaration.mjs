@@ -17,7 +17,7 @@ export function app_a_variable_declaration(a) {
   function lambda19(o2) {
     let choices = [];
     let v5 = app_a_call_above(o, a);
-    list_add(list2, item);
+    list_add(choices, v5);
     app_a_functionize_choices_add(choices, a, o2);
     let v = app_a_node_index(a);
     let index = object_property_get(v, "index");
