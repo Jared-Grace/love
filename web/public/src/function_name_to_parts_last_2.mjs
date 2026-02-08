@@ -4,7 +4,7 @@ import { list_slice_end } from "../../../love/public/src/list_slice_end.mjs";
 export function function_name_to_parts_last_2(f_name_before) {
   let count = 2;
   function lambda(parts) {
-    let result = list_slice_end(parts, 2);
+    let result = list_slice_end(parts, count);
     list_replace_all(parts, result);
   }
   let f_name_after = function_name_parts_transform(f_name_before, lambda);
