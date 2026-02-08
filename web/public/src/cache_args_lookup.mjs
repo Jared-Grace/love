@@ -1,3 +1,4 @@
+import { file_write_json } from "../../../love/public/src/file_write_json.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { file_json_transform } from "../../../love/public/src/file_json_transform.mjs";
@@ -10,6 +11,7 @@ export async function cache_args_lookup() {
   let joined = path_join([f_path, file_name]);
   let exists = await file_exists(joined);
   if (not(exists)) {
+    await file_write_json(file_path, object);
   }
   async function lambda(data) {}
   await file_json_transform(joined, lambda);
