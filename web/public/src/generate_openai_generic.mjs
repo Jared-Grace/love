@@ -1,7 +1,7 @@
 import { file_temp } from "../../../love/public/src/file_temp.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
-export async function g_generate_openai_generic(fn, system, user) {
+export async function generate_openai_generic(fn, system, user) {
   let input = {
     system,
     user,
