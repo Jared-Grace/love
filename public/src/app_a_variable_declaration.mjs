@@ -20,7 +20,7 @@ export function app_a_variable_declaration(a) {
   function lambda19(o) {
     let choices = [
       {
-        shortcut: "a",
+        shortcut: "r",
         text: "Add above",
         fn: async function lambda2() {
           let overlay_close = object_property_get(o, "overlay_close");
