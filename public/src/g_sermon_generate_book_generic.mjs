@@ -104,7 +104,7 @@ export async function g_sermon_generate_book_generic(
     if (exists) {
     } else {
     }
-    function lambda11(group) {
+    function filter_group(group) {
       let items = object_property_get(group, "item");
       let match_chapter = list_filter_property(
         items,
@@ -114,7 +114,7 @@ export async function g_sermon_generate_book_generic(
       let ne = list_empty_not_is(match_chapter);
       return ne;
     }
-    let filtered2 = list_filter(nearbys, lambda11);
+    let filtered2 = list_filter(nearbys, filter_group);
     async function lambda5(r) {
       log(r);
       let item3 = object_property_get(r, "item");
