@@ -3,7 +3,7 @@ import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { list_second } from "../../../love/public/src/list_second.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-import { string_split_dash } from "../../../love/public/src/string_split_dash.mjs";
+import { text_split_dash } from "../../../love/public/src/text_split_dash.mjs";
 import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
 import { text_split_colon } from "../../../love/public/src/text_split_colon.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -16,7 +16,7 @@ export function ebible_reference_parts(books, book_name, chapter_verses) {
   let second = object_property_get(v2, "second");
   let chapter_name = object_property_get(v2, "first");
   let chapter_code = ebible_chapter_code_pad(book_code, chapter_name);
-  let verse_range = string_split_dash(second);
+  let verse_range = text_split_dash(second);
   let verse_start = list_first(verse_range);
   let verse_end = null;
   let m = list_multiple_is(verse_range);
