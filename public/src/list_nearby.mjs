@@ -5,7 +5,7 @@ import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_index_is } from "../../../love/public/src/list_index_is.mjs";
 import { range_from } from "../../../love/public/src/range_from.mjs";
 export function list_nearby(list, nearness) {
-  function lambda(item, index) {
+  function mapper(item, index) {
     let r = range_from(index - nearness, index + nearness);
     function lambda6(index3) {
       let ii = list_index_is(list, index3);
@@ -23,6 +23,6 @@ export function list_nearby(list, nearness) {
     };
     return m;
   }
-  let nearbys = list_map_index(list, lambda);
+  let nearbys = list_map_index(list, mapper);
   return nearbys;
 }
