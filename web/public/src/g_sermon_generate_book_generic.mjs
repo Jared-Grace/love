@@ -61,13 +61,11 @@ export async function g_sermon_generate_book_generic(
         let text = object_property_get(verse, "text");
         let verse_number = object_property_get(verse, "verse_number");
         function mapper(verses_chapter_folder) {
-          const property_find = "verse_number";
-          const property_get = "text";
           let text = list_find_property_get(
             verses_chapter_folder,
-            property_find,
+            "verse_number",
             verse_number,
-            property_get,
+            "text",
           );
           return text;
         }
