@@ -173,7 +173,7 @@ export async function g_sermon_generate_book_generic(
           let passages_folders = list_map_join_space(texts);
           let originals = object_property_get(group, "originals");
           let original = list_join_space(originals);
-          list_add_first(passages_folders, original);
+          list_add_first(passages_folders, original);$r,passages_folders
         }
         let mapped = list_map(list2, lambda);
         list_add_pair(texts2, texts_add2);
