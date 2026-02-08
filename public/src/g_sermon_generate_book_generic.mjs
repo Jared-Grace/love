@@ -155,7 +155,7 @@ export async function g_sermon_generate_book_generic(
       };
       let to2 = object_merge(passage, passage_extension);
       log_keep(output);
-      return passage_extension;
+      return passage;
       function prompt_get(group) {
         let texts = list_map_property(group, "texts");
         function lambda12(t) {
