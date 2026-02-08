@@ -7,8 +7,6 @@ import { local_function_path_json } from "../../../love/public/src/local_functio
 import { path_name } from "../../../love/public/src/path_name.mjs";
 import { path_base } from "../../../love/public/src/path_base.mjs";
 export async function g_generate_upload_generic(fn, path_get) {
-  let fragment = "JAS01";
-  fragment = "JAS03";
   await folder_user_storage_function_each(fn, file_each);
   async function file_each(file) {
     let i = string_includes(file, fragment);
