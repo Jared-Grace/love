@@ -18,7 +18,7 @@ import { object_property_set_exists_not } from "../../../love/public/src/object_
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
-import { string_starts_with } from "../../../love/public/src/string_starts_with.mjs";
+import { text_starts_with } from "../../../love/public/src/text_starts_with.mjs";
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
@@ -170,7 +170,7 @@ export async function app_reply_generic(verse_get) {
       let text2 = object_property_get(item, "text");
       let letters = text_letters_only(text2);
       let lower = text_lower_to(letters);
-      let sw = string_starts_with(lower, typed);
+      let sw = text_starts_with(lower, typed);
       let includes = list_includes(chosens, item);
       const condition = includes || not(sw);
       html_display_none_or_block(condition, item);
