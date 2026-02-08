@@ -4,12 +4,12 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_first_last } from "../../../love/public/src/list_first_last.mjs";
 export function list_first_last_slice(list_rg, list) {
   let v = list_first_last(list_rg);
-  let first = list_first(v);
+  let function_copy_replace_first = list_first(v);
   let last = list_last(v);
-  let sliced = list_slice_from(list, first, last);
+  let sliced = list_slice_from(list, function_copy_replace_first, last);
   let v2 = {
     sliced,
-    first,
+    function_copy_replace_first,
     last,
   };
   return v2;
