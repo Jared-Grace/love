@@ -8,5 +8,5 @@ export async function app_ceb_bible_gloss_chapter_upload(
   await app_ceb_bible_gloss_generate_chapter(chapter_code_specified);
   let fn = app_ceb_bible_gloss_generate;
   let path_get = app_ceb_bible_gloss_generate_upload_path;
-  await g_generate_upload_filter(fn, path_get, search);
+  await g_generate_upload_filter(fn, path_get, chapter_code_specified);
 }
