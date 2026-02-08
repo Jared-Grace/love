@@ -1,6 +1,6 @@
+import { g_sermon_generate_book_generic_verses } from "../../../love/public/src/g_sermon_generate_book_generic_verses.mjs";
 import { bible_verse_end_is } from "../../../love/public/src/bible_verse_end_is.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
-import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { string_colon_3 } from "../../../love/public/src/string_colon_3.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { each_multiple_async } from "../../../love/public/src/each_multiple_async.mjs";
@@ -31,12 +31,7 @@ import { list_find_property } from "../../../love/public/src/list_find_property.
 import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { bible_interlinear_chapters } from "../../../love/public/src/bible_interlinear_chapters.mjs";
-import { each } from "../../../love/public/src/each.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
-import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
-import { ebible_chapters } from "../../../love/public/src/ebible_chapters.mjs";
 export async function g_sermon_generate_book_generic(
   bible_folders,
   book_code,
@@ -47,29 +42,11 @@ export async function g_sermon_generate_book_generic(
   chapter_code_specified,
 ) {
   let chapters_interlinear = await bible_interlinear_chapters();
-  async function lambda3(bible_folder) {
-    let chapters = await ebible_chapters(bible_folder, book_code);
-    if (null_not_is(chapter_code_specified)) {
-      chapters = [chapter_code_specified];
-    }
-    async function lambda7(chapter_code) {
-      let verses = await ebible_verses(bible_folder, chapter_code);
-      function lambda8(v) {
-        object_merge(v, {
-          chapter_code,
-        });
-      }
-      each(verses, lambda8);
-      return verses;
-    }
-    let verses_book = await list_map_unordered_async(chapters, lambda7);
-    let v5 = {
-      verses_book,
-      chapters,
-    };
-    return v5;
-  }
-  let v = await list_map_unordered_async(bible_folders, lambda3);
+  let v = await g_sermon_generate_book_generic_verses(
+    book_code,
+    chapter_code_specified,
+    bible_folders,
+  );
   let verses_book_folders = list_map_property(v, "verses_book");
   let chapters_folders = list_map_property(v, "chapters");
   let chapters = list_first(chapters_folders);
