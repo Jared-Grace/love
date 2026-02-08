@@ -31,6 +31,6 @@ export async function g_sermon_generate_book_generic_verses(
     };
     return v5;
   }
-  let v = await list_map_unordered_async(bible_folders, lambda3);
-  return v;
+  let r = await list_map_unordered_async(bible_folders, lambda3);
+  return r;
 }
