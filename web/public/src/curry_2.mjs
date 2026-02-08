@@ -1,1 +1,3 @@
-export function curry_2() {}
+export function curry_2(fn) {
+  return () => {};
+}
