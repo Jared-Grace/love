@@ -5,7 +5,7 @@ import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_index_is } from "../../../love/public/src/list_index_is.mjs";
 import { range_from } from "../../../love/public/src/range_from.mjs";
 export function list_nearby(list, nearness) {
-  positive_is_assert(chunk_size);
+  positive_is_assert(nearness);
   function mapper(item, index) {
     let r = range_from(index - nearness, index + nearness);
     function lambda6(index3) {
