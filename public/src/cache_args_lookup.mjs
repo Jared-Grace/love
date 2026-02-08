@@ -6,5 +6,6 @@ export async function cache_args_lookup() {
   let file_name = file_name_json("data");
   let f_path = folder_user_storage_function_path(cache_args_lookup);
   let joined = path_join([f_path, file_name]);
-  await file_json_transform(f_path2, async function lambda(data) {});
+  async function lambda(data) {}
+  await file_json_transform(f_path2, lambda);
 }
