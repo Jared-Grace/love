@@ -18,7 +18,7 @@ import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { html_disable } from "../../../love/public/src/html_disable.mjs";
-import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
+import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -76,7 +76,7 @@ export async function app_replace_rule_set(context) {
   let rules_buttons = list_map_index(mapped, lambda);
   let label_symbols = html_p(root);
   let div = html_div(root);
-  let current_list = string_split_empty(start);
+  let current_list = text_split_empty(start);
   let symbols_buttons = null;
   refresh();
   function refresh() {
