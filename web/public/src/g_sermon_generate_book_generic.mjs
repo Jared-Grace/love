@@ -1,3 +1,4 @@
+import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { list_add_pair } from "../../../love/public/src/list_add_pair.mjs";
 import { ebible_folders_chapters_codes_to_verses } from "../../../love/public/src/ebible_folders_chapters_codes_to_verses.mjs";
@@ -122,6 +123,7 @@ export async function g_sermon_generate_book_generic(
       });
       exit();
       let items = object_property_get(group, "item");
+      let exists2 = object_property_exists(object, property_name2);
       let match_chapter = list_filter_property(
         items,
         "chapter_code",
