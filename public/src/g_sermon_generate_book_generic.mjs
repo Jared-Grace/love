@@ -4,7 +4,6 @@ import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs"
 import { list_find_property_get } from "../../../love/public/src/list_find_property_get.mjs";
 import { list_nearby } from "../../../love/public/src/list_nearby.mjs";
 import { ebible_chapters_codes_or_specified } from "../../../love/public/src/ebible_chapters_codes_or_specified.mjs";
-import { g_sermon_generate_book_generic_verses } from "../../../love/public/src/g_sermon_generate_book_generic_verses.mjs";
 import { bible_verse_end_is } from "../../../love/public/src/bible_verse_end_is.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
 import { text_colon_3 } from "../../../love/public/src/text_colon_3.mjs";
