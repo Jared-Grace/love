@@ -17,7 +17,7 @@ export async function list_adder_group_async() {
       let chapter_code = object_property_get(verse_first, "chapter_code");
       let interlinear = object_property_get(chapters_interlinear, chapter_code);
       let index_last = list_index_last(verses_chapter);
-      group = [];
+      clear();
       async function each_verse(verse, index) {
         let text = object_property_get(verse, "text");
         let verse_number = object_property_get(verse, "verse_number");
@@ -55,6 +55,9 @@ export async function list_adder_group_async() {
       await each_index_async(verses_chapter, each_verse);
     }
     await each_multiple_async(verses_book_folders, each_chapter);
+    function clear() {
+      group = [];
+    }
   }
   let groups = await list_adder_async(adder_groups);
 }
