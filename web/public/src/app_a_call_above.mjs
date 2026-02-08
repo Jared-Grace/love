@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
 import { js_call_new_insert } from "../../../love/public/src/js_call_new_insert.mjs";
 import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs";
@@ -29,5 +30,6 @@ export function app_a_call_above(o, a) {
       }
     },
   };
+  list_add(choices, v5);
   return v5;
 }
