@@ -5,7 +5,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { string_starts_with } from "../../../love/public/src/string_starts_with.mjs";
-import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
+import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
 export function app_reply_buttons_refresh(typed_get, chosens, buttons) {
   let v4 = function lambda10() {
@@ -13,7 +13,7 @@ export function app_reply_buttons_refresh(typed_get, chosens, buttons) {
       function lambda2(item) {
         let text = html_text_get(item);
         let letters = text_letters_only(text);
-        let lower = string_lower_to(letters);
+        let lower = text_lower_to(letters);
         let prefix = typed_get();
         let sw = string_starts_with(lower, prefix);
         let includes = list_includes(chosens, item);
