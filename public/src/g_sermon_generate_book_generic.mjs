@@ -1,3 +1,4 @@
+import { g_sermon_generate } from "../../../love/public/src/g_sermon_generate.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_map_join_space } from "../../../love/public/src/list_map_join_space.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
@@ -141,7 +142,8 @@ export async function g_sermon_generate_book_generic(
         " :::: " +
         prompt_user_middle +
         user_prompt;
-      "sermons were originally generated using: " +
+      g_sermon_generate +
+        "sermons were originally generated using: " +
         g_generate_openai_chat_completions;
       log_keep(prompt_system + " " + prompt_user);
       exit();
