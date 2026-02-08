@@ -7,12 +7,12 @@ export async function function_multiple_rename_if_starts_with_parts_delete(
   deleted,
 ) {
   assert_arguments(arguments, 2);
+  let split = string_split_comma(deleted);
   await function_multiple_rename_generic_starts_with(
     name_change,
     f_name_prefix_before,
   );
   function name_change(f_name_old) {
-    let split = string_split_comma(deleted);
     let f_name_new = function_name_parts_remove(f_name_old, split);
     return f_name_new;
   }
