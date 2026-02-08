@@ -7,8 +7,7 @@ import { app_ceb_bible_gloss_generate } from "../../../love/public/src/app_ceb_b
 export async function app_ceb_bible_gloss_generate_chapter(
   chapter_code_specified,
 ) {
-  let book_code = "JAS";
-  let book_code2 = ebible_chapter_code_to_book(chapter_code);
+  let book_code = ebible_chapter_code_to_book(chapter_code_specified);
   let language = "Cebuano";
   let fn = app_ceb_bible_gloss_generate;
   let property_name = app_ceb_bible_gloss_generate_property();
