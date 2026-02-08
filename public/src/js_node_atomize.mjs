@@ -28,7 +28,7 @@ export async function js_node_atomize(existing, v, variable_name) {
       let ast_callee = object_property_get(v3, "ast");
       let return_name = js_return_name(ast_callee);
       if (return_name !== null) {
-        let variable_name = return_name;
+        variable_name = return_name;
       }
     }
   }
