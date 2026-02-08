@@ -132,7 +132,7 @@ export function app_a_function_node(a) {
       let keyword = object_property_get(v, "keyword");
       function lambda19(o, choices) {
         let c = app_a_cut(o, a);
-        list_add(list, item);
+        list_add(choices, c);
       }
       app_a_overlay_choices(a, keyword, lambda19);
       let argument = object_property_get(node, "argument");
