@@ -1,5 +1,4 @@
 import { app_a_call_above } from "../../../love/public/src/app_a_call_above.mjs";
-import { app_a_cut } from "../../../love/public/src/app_a_cut.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { js_keyword_else } from "../../../love/public/src/js_keyword_else.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
@@ -16,7 +15,6 @@ export function app_a_if_statement(a) {
   let v4 = app_a_keyword_purple_space(parent, k);
   let keyword = object_property_get(v4, "keyword");
   async function lambda(o) {
-    let v3 = app_a_cut(o, a);
     let choices = [v3];
     app_a_call_above(choices, o, a);
     return choices;
