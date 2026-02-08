@@ -29,7 +29,7 @@ import { emoji_handshake } from "../../../love/public/src/emoji_handshake.mjs";
 import { newline } from "../../../love/public/src/newline.mjs";
 import { emoji_rock } from "../../../love/public/src/emoji_rock.mjs";
 import { emoji_rainbow } from "../../../love/public/src/emoji_rainbow.mjs";
-import { string_the_servant_of_god } from "../../../love/public/src/string_the_servant_of_god.mjs";
+import { text_the_servant_of_god } from "../../../love/public/src/text_the_servant_of_god.mjs";
 import { emoji_question } from "../../../love/public/src/emoji_question.mjs";
 import { emoji_dove } from "../../../love/public/src/emoji_dove.mjs";
 import { app_reply_pray } from "../../../love/public/src/app_reply_pray.mjs";
@@ -227,7 +227,7 @@ export function app_reply_choices() {
       response:
         emoji_globe_americas() +
         " " +
-        string_the_servant_of_god() +
+        text_the_servant_of_god() +
         " speaks English. " +
         emoji_pray(),
     },
