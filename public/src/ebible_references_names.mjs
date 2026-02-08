@@ -1,6 +1,6 @@
 import { each } from "../../../love/public/src/each.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
-import { string_replace_if_starts_with } from "../../../love/public/src/string_replace_if_starts_with.mjs";
+import { text_replace_if_starts_with } from "../../../love/public/src/text_replace_if_starts_with.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_first } from "../../../love/public/src/list_map_first.mjs";
 import { list_map_filter_string_empty_not_is } from "../../../love/public/src/list_map_filter_string_empty_not_is.mjs";
@@ -17,7 +17,7 @@ export function ebible_references_names(books, lines) {
     };
     function lambda2(froms, to) {
       function lambda3(from) {
-        item = string_replace_if_starts_with(from + " ", item, to + " ");
+        item = text_replace_if_starts_with(from + " ", item, to + " ");
       }
       each(froms, lambda3);
     }
