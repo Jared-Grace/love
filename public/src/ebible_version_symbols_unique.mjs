@@ -2,9 +2,9 @@ import { string_symbols_unique_multiple } from "../../../love/public/src/string_
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_chapters_each_verses_check_with } from "../../../love/public/src/ebible_chapters_each_verses_check_with.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { string_symbols_unique_adder } from "../../../love/public/src/string_symbols_unique_adder.mjs";
+import { text_symbols_unique_adder } from "../../../love/public/src/text_symbols_unique_adder.mjs";
 export async function ebible_version_symbols_unique(bible_folder) {
-  let unique = await string_symbols_unique_adder(lambda$la);
+  let unique = await text_symbols_unique_adder(lambda$la);
   async function lambda$la(la) {
     async function lambda2(chapter_code, verses) {
       log({
