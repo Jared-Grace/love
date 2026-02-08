@@ -139,7 +139,7 @@ export async function g_sermon_generate_book_generic(
       let user_prompt_after = prompt_get([passage]);
       const prompt_user =
         "Here is the context: " +
-        joined +
+        user_prompt_before +
         " :::: " +
         prompt_user_middle +
         user_prompt_after;
