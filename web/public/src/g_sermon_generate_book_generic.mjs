@@ -130,13 +130,13 @@ export async function g_sermon_generate_book_generic(
     let groups_match_chapter = list_filter(nearbys, filter_group);
     async function lambda5(g) {
       log(g);
-      let i = object_property_get(g, "item");
+      let passage = object_property_get(g, "item");
       let r = object_property_get(g, "range");
       let mapped2 = list_map(r, prompt_get);
       let mapped3 = list_map_property(mapped2, "user_prompt");
       let separator = text_colon_3();
       let joined = list_join(mapped3, separator);
-      var v4 = prompt_get(i);
+      var v4 = prompt_get(passage);
       let user_prompt = object_property_get(v4, "user_prompt");
       const prompt_user =
         "Here is the context: " +
