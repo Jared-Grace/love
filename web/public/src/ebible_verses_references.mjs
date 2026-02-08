@@ -1,6 +1,6 @@
 import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { string_wrap_parenthesis } from "../../../love/public/src/string_wrap_parenthesis.mjs";
+import { text_wrap_parenthesis } from "../../../love/public/src/text_wrap_parenthesis.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
@@ -16,7 +16,7 @@ export async function ebible_verses_references(bible_folder, chapter_code) {
       books,
       [verse_number],
     );
-    let v2 = text + " " + string_wrap_parenthesis(reference);
+    let v2 = text + " " + text_wrap_parenthesis(reference);
     return v2;
   }
   let mapped = list_map(vs, lambda);
