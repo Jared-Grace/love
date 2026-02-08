@@ -1,38 +1,40 @@
-import { g_sermon_generate } from "../../../love/public/src/g_sermon_generate.mjs";
-import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
-import { list_map_join_space } from "../../../love/public/src/list_map_join_space.mjs";
-import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
-import { list_filter } from "../../../love/public/src/list_filter.mjs";
-import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
-import { list_add_pair } from "../../../love/public/src/list_add_pair.mjs";
-import { ebible_folders_chapters_codes_to_verses } from "../../../love/public/src/ebible_folders_chapters_codes_to_verses.mjs";
-import { list_add } from "../../../love/public/src/list_add.mjs";
-import { list_new } from "../../../love/public/src/list_new.mjs";
-import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
-import { list_find_property_get } from "../../../love/public/src/list_find_property_get.mjs";
-import { list_nearby } from "../../../love/public/src/list_nearby.mjs";
-import { ebible_chapters_codes_or_specified } from "../../../love/public/src/ebible_chapters_codes_or_specified.mjs";
-import { bible_verse_end_is } from "../../../love/public/src/bible_verse_end_is.mjs";
-import { exit } from "../../../love/public/src/exit.mjs";
-import { text_colon_3 } from "../../../love/public/src/text_colon_3.mjs";
-import { log_keep } from "../../../love/public/src/log_keep.mjs";
-import { each_multiple_async } from "../../../love/public/src/each_multiple_async.mjs";
-import { log } from "../../../love/public/src/log.mjs";
-import { g_generate_openai_responses } from "../../../love/public/src/g_generate_openai_responses.mjs";
-import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
-import { g_generate_openai_chat_completions } from "../../../love/public/src/g_generate_openai_chat_completions.mjs";
-import { list_join } from "../../../love/public/src/list_join.mjs";
-import { file_exists } from "../../../love/public/src/file_exists.mjs";
-import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
-import { each_async } from "../../../love/public/src/each_async.mjs";
-import { each_index_async } from "../../../love/public/src/each_index_async.mjs";
-import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
-import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
-import { bible_interlinear_chapters } from "../../../love/public/src/bible_interlinear_chapters.mjs";
+
+import { bible_interlinear_chapters } from "./bible_interlinear_chapters.mjs";
+import { bible_verse_end_is } from "./bible_verse_end_is.mjs";
+import { each_async } from "./each_async.mjs";
+import { each_index_async } from "./each_index_async.mjs";
+import { each_multiple_async } from "./each_multiple_async.mjs";
+import { ebible_chapters_codes_or_specified } from "./ebible_chapters_codes_or_specified.mjs";
+import { ebible_folders_chapters_codes_to_verses } from "./ebible_folders_chapters_codes_to_verses.mjs";
+import { exit } from "./exit.mjs";
+import { file_exists } from "./file_exists.mjs";
+import { file_overwrite_json } from "./file_overwrite_json.mjs";
+import { g_generate_openai_chat_completions } from "./g_generate_openai_chat_completions.mjs";
+import { g_generate_openai_responses } from "./g_generate_openai_responses.mjs";
+import { g_sermon_generate } from "./g_sermon_generate.mjs";
+import { list_add } from "./list_add.mjs";
+import { list_add_first } from "./list_add_first.mjs";
+import { list_add_pair } from "./list_add_pair.mjs";
+import { list_adder_async } from "./list_adder_async.mjs";
+import { list_filter } from "./list_filter.mjs";
+import { list_find_property } from "./list_find_property.mjs";
+import { list_find_property_get } from "./list_find_property_get.mjs";
+import { list_first } from "./list_first.mjs";
+import { list_index_last } from "./list_index_last.mjs";
+import { list_join } from "./list_join.mjs";
+import { list_join_space } from "./list_join_space.mjs";
+import { list_map } from "./list_map.mjs";
+import { list_map_join_space } from "./list_map_join_space.mjs";
+import { list_nearby } from "./list_nearby.mjs";
+import { list_new } from "./list_new.mjs";
+import { local_function_path_json } from "./local_function_path_json.mjs";
+import { log } from "./log.mjs";
+import { log_keep } from "./log_keep.mjs";
+import { object_merge } from "./object_merge.mjs";
+import { object_property_exists } from "./object_property_exists.mjs";
+import { object_property_get } from "./object_property_get.mjs";
+import { text_colon_3 } from "./text_colon_3.mjs";
+
 export async function g_sermon_generate_book_generic(
   bible_folders,
   book_code,
@@ -40,17 +42,17 @@ export async function g_sermon_generate_book_generic(
   prompt_user_middle,
   prompt_system,
   property_name,
-  chapter_code_specified,
+  chapter_code_specified
 ) {
   let bible_folder_first = list_first(bible_folders);
   let chapters_codes = await ebible_chapters_codes_or_specified(
     bible_folder_first,
     book_code,
-    chapter_code_specified,
+    chapter_code_specified
   );
   let verses_book_folders = await ebible_folders_chapters_codes_to_verses(
     chapters_codes,
-    bible_folders,
+    bible_folders
   );
   let chapters_interlinear = await bible_interlinear_chapters();
   async function adder(la) {
@@ -60,7 +62,7 @@ export async function g_sermon_generate_book_generic(
     clear();
     function clear() {
       originals = [];
-      texts = list_map(bible_folders, list_new);
+      texts = lists_to_news(bible_folders);
       verse_numbers = [];
     }
     async function each_chapter(verses_chapter_folders) {
@@ -76,7 +78,7 @@ export async function g_sermon_generate_book_generic(
             verses_chapter_folder,
             "verse_number",
             verse_number,
-            "text",
+            "text"
           );
           return text;
         }
@@ -86,7 +88,7 @@ export async function g_sermon_generate_book_generic(
           let original_verse = list_find_property(
             interlinear,
             "verse_number",
-            verse_number,
+            verse_number
           );
           original = object_property_get(original_verse, "text");
         }
@@ -123,7 +125,7 @@ export async function g_sermon_generate_book_generic(
       let match_chapter = object_property_exists(
         item,
         "chapter_code",
-        chapter_code,
+        chapter_code
       );
       return match_chapter;
     }
@@ -136,8 +138,7 @@ export async function g_sermon_generate_book_generic(
       let separator = text_colon_3();
       let joined = list_join(mapped3, separator);
       let user_prompt = prompt_get([passage]);
-      const prompt_user =
-        "Here is the context: " +
+      const prompt_user = "Here is the context: " +
         joined +
         " :::: " +
         prompt_user_middle +
@@ -149,7 +150,7 @@ export async function g_sermon_generate_book_generic(
       exit();
       let output = await g_generate_openai_responses(
         prompt_system,
-        prompt_user,
+        prompt_user
       );
       let passage_extension = {
         ["generated"]: output,
@@ -181,3 +182,7 @@ export async function g_sermon_generate_book_generic(
   }
   await each_async(chapters_codes, each_chapter);
 }
+function lists_to_news(bible_folders) {
+  return list_map(bible_folders, list_new);
+}
+
