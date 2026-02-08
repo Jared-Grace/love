@@ -1,4 +1,4 @@
-import { g_sermon_generate_book_generic } from "./g_sermon_generate_book_generic.1.mjs";
+import { g_sermon_generate_book_generic } from "./g_sermon_generate_book_generic.mjs";
 export async function app_ceb_bible_gloss_generate_generic(
   language,
   last,
