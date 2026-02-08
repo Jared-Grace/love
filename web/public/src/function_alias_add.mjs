@@ -1,3 +1,4 @@
+import { function_copy_replace_first } from "../../../love/public/src/function_copy_replace_first.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_identifier_is_assert } from "../../../love/public/src/js_identifier_is_assert.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
