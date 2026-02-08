@@ -9,7 +9,8 @@ import { app_a_overlay_keydown } from "../../../love/public/src/app_a_overlay_ke
 export function app_a_overlay_choices(a, component, lambda$o) {
   async function on_click() {
     let o = app_a_overlay_keydown(a, on_keydown);
-    let choices = await lambda$o(o);
+    let choices = [];
+    await lambda$o(o, choices);
     let overlay_close = object_property_get(o, "overlay_close");
     let choice_x = app_a_choice_close(overlay_close);
     list_add_first(choices, choice_x);
