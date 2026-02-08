@@ -12,8 +12,8 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 export async function list_adder_group_async() {
   async function adder_groups(la) {
     let group = null;
-    await lambda(clear, group, add);
-    function add() {
+    await lambda(clear, group, end);
+    function end() {
       la(group);
       clear();
     }
