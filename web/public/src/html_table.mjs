@@ -1,3 +1,4 @@
+import { function_copy_replace_first } from "../../../love/public/src/function_copy_replace_first.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
