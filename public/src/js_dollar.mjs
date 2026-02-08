@@ -1,4 +1,4 @@
-import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
+import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
 import { js_dollar_choices } from "../../../love/public/src/js_dollar_choices.mjs";
 import { list_get_end_3 } from "../../../love/public/src/list_get_end_3.mjs";
@@ -41,7 +41,7 @@ export async function js_dollar(ast) {
         return;
       }
       let remaining = list_skip(split, 2);
-      let lower = string_lower_to(second);
+      let lower = text_lower_to(second);
       if (lower === choice_name) {
         const a = {
           remaining,
