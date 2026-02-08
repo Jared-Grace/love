@@ -1,5 +1,5 @@
 import { newline_windows_code } from "../../../love/public/src/newline_windows_code.mjs";
-import { g_generate_openai_chat_completions } from "../../../love/public/src/g_generate_openai_chat_completions.mjs";
+import { openai_chat_completions } from "../../../love/public/src/openai_chat_completions.mjs";
 export async function g_sermon_generate_passage(passage) {
   const prompt =
     `You are a Christian preacher. You will be given a passage and its context. Rewrite the passage as follows:
@@ -19,6 +19,6 @@ export async function g_sermon_generate_passage(passage) {
 Output each sentence separated by ` +
     newline_windows_code() +
     `. Follow these instructions exactly.`;
-  let sermon = await g_generate_openai_chat_completions(prompt, passage);
+  let sermon = await openai_chat_completions(prompt, passage);
   return sermon;
 }
