@@ -18,7 +18,7 @@ import { list_get } from "../../../love/public/src/list_get.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { assert_json } from "../../../love/public/src/assert_json.mjs";
-export async function js_node_atomize(existing, v) {
+export async function js_node_atomize(existing, v, variable_name) {
   let node = object_property_get(v, "node");
   let stack = object_property_get(v, "stack");
   if (js_node_type_is(node, "CallExpression")) {
