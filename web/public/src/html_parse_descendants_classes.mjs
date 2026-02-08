@@ -1,5 +1,5 @@
 import { list_sort_string } from "../../../love/public/src/list_sort_string.mjs";
-import { string_split } from "../../../love/public/src/string_split.mjs";
+import { text_split } from "../../../love/public/src/text_split.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { text_is } from "../../../love/public/src/text_is.mjs";
@@ -12,7 +12,7 @@ export function html_parse_descendants_classes(item, d) {
     function lambda(item) {
       let c = html_parse_attr(d, item, "class");
       if (text_is(c)) {
-        let split = string_split(c, " ");
+        let split = text_split(c, " ");
         each(split, la);
       }
     }
