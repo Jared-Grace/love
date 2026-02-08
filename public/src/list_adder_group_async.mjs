@@ -20,6 +20,9 @@ export async function list_adder_group_async() {
     function start() {
       group = [];
     }
+    function add(item) {
+      list_add(group, item);
+    }
   }
   let groups = await list_adder_async(adder_groups);
   async function lambda(clear, group, add) {
