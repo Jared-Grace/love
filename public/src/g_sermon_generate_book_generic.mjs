@@ -17,7 +17,6 @@ import { g_generate_openai_chat_completions } from "./g_generate_openai_chat_com
 import { g_generate_openai_responses } from "./g_generate_openai_responses.mjs";
 import { g_sermon_generate } from "./g_sermon_generate.mjs";
 import { list_add } from "./list_add.mjs";
-import { list_add_first } from "./list_add_first.mjs";
 import { list_add_pair } from "./list_add_pair.mjs";
 import { list_adder_async } from "./list_adder_async.mjs";
 import { list_filter } from "./list_filter.mjs";
@@ -167,7 +166,7 @@ export async function g_sermon_generate_book_generic(
           let passages_folders_group = list_map_join_space(texts);
           let originals = object_property_get(group, "originals");
           let original = list_join_space(originals);
-          list_add_first(passages_folders_group, original);
+          list_add(passages_folders_group, original);
           return passages_folders_group;
         }
         let passages_folders = list_map(groups, each_group);
