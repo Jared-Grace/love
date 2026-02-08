@@ -174,13 +174,10 @@ export async function g_sermon_generate_book_generic(
         }
         let passages_folders = list_map(groups, each_group);
         list_add_pair(r, passages_folders);
-        function each_folder(item) {
-          let j = list_join_space(item);
-          return j;
-        }
-        let mapped = list_map(r, each_folder);
-        return r;
-        let user_prompt = list_join(passages_folders, " :: ");
+
+        let mapped = list_map_join_space(r);
+        let user_prompt = list_join(mapped, " :: ");
+        return user_prompt;
       }
     }
     await each_async(groups_match_chapter, each_group);
