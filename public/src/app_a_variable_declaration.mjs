@@ -17,7 +17,7 @@ export function app_a_variable_declaration(a) {
   let kind = object_property_get(node, "kind");
   let k = app_a_keyword_blue_space(parent, kind);
   let keyword = object_property_get(k, "keyword");
-  function lambda19(o2) {
+  function lambda19(o) {
     let choices = [
       {
         shortcut: "a",
@@ -45,13 +45,13 @@ export function app_a_variable_declaration(a) {
         },
       },
     ];
-    let v5 = app_a_call_above(o2, a);
+    let v5 = app_a_call_above(o, a);
     list_add(choices, v5);
-    app_a_functionize_choices_add(choices, a, o2);
+    app_a_functionize_choices_add(choices, a, o);
     let v = app_a_node_index(a);
     let index = object_property_get(v, "index");
     let list = object_property_get(v, "list");
-    app_a_paste(choices, a, o2, list, index, "above");
+    app_a_paste(choices, a, o, list, index, "above");
     return choices;
   }
   app_a_overlay_choices(a, keyword, lambda19);
