@@ -6,7 +6,7 @@ import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mj
 import { list_join_slash_forward } from "../../../love/public/src/list_join_slash_forward.mjs";
 import { folder_js } from "../../../love/public/src/folder_js.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
-import { string_split_slash_forward } from "../../../love/public/src/string_split_slash_forward.mjs";
+import { text_split_slash_forward } from "../../../love/public/src/text_split_slash_forward.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 export async function functions_firebase_to_root() {
@@ -14,7 +14,7 @@ export async function functions_firebase_to_root() {
   async function lambda(f_name) {
     let v = await function_name_to_path_search(f_name);
     let f_path = object_property_get(v, "f_path");
-    let split = string_split_slash_forward(f_path);
+    let split = text_split_slash_forward(f_path);
     let sliced = list_slice(split, 0, 2);
     let js = folder_js();
     let f_name_ext = function_name_to_base(f_name);
