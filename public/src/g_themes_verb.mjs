@@ -1,11 +1,11 @@
 import { g_themes_plural_list } from "../../../love/public/src/g_themes_plural_list.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { string_take_less_1 } from "../../../love/public/src/string_take_less_1.mjs";
-import { string_ends_with } from "../../../love/public/src/string_ends_with.mjs";
+import { text_ends_with } from "../../../love/public/src/text_ends_with.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 export function g_themes_verb(root) {
   let root_ing = root;
-  let ew = string_ends_with(root, "e");
+  let ew = text_ends_with(root, "e");
   if (ew) {
     root_ing = string_take_less_1(root_ing);
   }
