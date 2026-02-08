@@ -97,7 +97,7 @@ export async function g_sermon_generate_book_generic(
   }
   let groups = await list_adder_async(adder_groups);
   let nearness = 2;
-  let mapped = list_nearby(nearness, groups);
+  let mapped = list_nearby(groups, nearness);
   async function each_chapter(chapter_code) {
     let path = local_function_path_json(chapter_code, fn);
     let exists = await file_exists(path);
