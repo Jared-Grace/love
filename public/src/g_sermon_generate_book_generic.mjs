@@ -11,7 +11,6 @@ import { each_index_async } from "./each_index_async.mjs";
 import { each_multiple_async } from "./each_multiple_async.mjs";
 import { ebible_chapters_codes_or_specified } from "./ebible_chapters_codes_or_specified.mjs";
 import { ebible_folders_chapters_codes_to_verses } from "./ebible_folders_chapters_codes_to_verses.mjs";
-import { exit } from "./exit.mjs";
 import { file_exists } from "./file_exists.mjs";
 import { file_overwrite_json } from "./file_overwrite_json.mjs";
 import { g_generate_openai_chat_completions } from "./g_generate_openai_chat_completions.mjs";
@@ -156,7 +155,6 @@ export async function g_sermon_generate_book_generic(
       };
       let to2 = object_merge(passage, passage_extension);
       log_keep(output);
-      exit();
       return passage;
       function prompt_get(groups) {
         let size = list_size(bible_folders);
