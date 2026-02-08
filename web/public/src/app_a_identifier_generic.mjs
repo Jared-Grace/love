@@ -19,7 +19,7 @@ import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.
 import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { js_visit_match_first } from "../../../love/public/src/js_visit_match_first.mjs";
 import { app_a_overlay_on_enter } from "../../../love/public/src/app_a_overlay_on_enter.mjs";
-import { string_is_assert } from "../../../love/public/src/string_is_assert.mjs";
+import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { clipboard_paste } from "../../../love/public/src/clipboard_paste.mjs";
 import { html_rows_set } from "../../../love/public/src/html_rows_set.mjs";
 import { list_remove_at_count } from "../../../love/public/src/list_remove_at_count.mjs";
@@ -143,7 +143,7 @@ export function app_a_identifier_generic(
         text: "Paste replace",
         fn: async function lambda2() {
           let name_new = await clipboard_paste();
-          string_is_assert(name_new);
+          text_is_assert(name_new);
           replace(name_new);
           await app_a_function_on_change(a, o3);
         },
