@@ -5,7 +5,7 @@ import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs"
 import { app_a_functions_overlay } from "../../../love/public/src/app_a_functions_overlay.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_add_multiple } from "./list_add_multiple.mjs";
-export function app_a_statement_choices_add(choices, o, a) {
+export function app_a_statement_choices_add(choices, a, o) {
   let ab = {
     shortcut: "a",
     text: "Add above",
