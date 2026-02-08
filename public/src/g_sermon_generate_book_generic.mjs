@@ -5,36 +5,36 @@ import { list_new_multiple } from "../../../love/public/src/list_new_multiple.mj
 import { add_1 } from "../../../love/public/src/add_1.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { lists_to_news } from "../../../love/public/src/lists_to_news.mjs";
-import { bible_interlinear_chapters } from "./bible_interlinear_chapters.mjs";
-import { bible_verse_end_is } from "./bible_verse_end_is.mjs";
-import { each_async } from "./each_async.mjs";
-import { each_index_async } from "./each_index_async.mjs";
-import { each_multiple_async } from "./each_multiple_async.mjs";
-import { ebible_chapters_codes_or_specified } from "./ebible_chapters_codes_or_specified.mjs";
-import { ebible_folders_chapters_codes_to_verses } from "./ebible_folders_chapters_codes_to_verses.mjs";
-import { file_exists } from "./file_exists.mjs";
-import { file_overwrite_json } from "./file_overwrite_json.mjs";
-import { g_generate_openai_chat_completions } from "./g_generate_openai_chat_completions.mjs";
-import { g_generate_openai_responses } from "./g_generate_openai_responses.mjs";
-import { g_sermon_generate } from "./g_sermon_generate.mjs";
-import { list_add } from "./list_add.mjs";
-import { list_add_pair } from "./list_add_pair.mjs";
-import { list_adder_async } from "./list_adder_async.mjs";
-import { list_filter } from "./list_filter.mjs";
-import { list_find_property } from "./list_find_property.mjs";
-import { list_find_property_get } from "./list_find_property_get.mjs";
-import { list_first } from "./list_first.mjs";
-import { list_index_last } from "./list_index_last.mjs";
-import { list_join } from "./list_join.mjs";
-import { list_join_space } from "./list_join_space.mjs";
-import { list_map } from "./list_map.mjs";
-import { list_map_join_space } from "./list_map_join_space.mjs";
-import { list_nearby } from "./list_nearby.mjs";
-import { local_function_path_json } from "./local_function_path_json.mjs";
-import { log_keep } from "./log_keep.mjs";
-import { object_merge } from "./object_merge.mjs";
-import { object_property_exists } from "./object_property_exists.mjs";
-import { object_property_get } from "./object_property_get.mjs";
+import { bible_interlinear_chapters } from "../../../love/public/src/bible_interlinear_chapters.mjs";
+import { bible_verse_end_is } from "../../../love/public/src/bible_verse_end_is.mjs";
+import { each_async } from "../../../love/public/src/each_async.mjs";
+import { each_index_async } from "../../../love/public/src/each_index_async.mjs";
+import { each_multiple_async } from "../../../love/public/src/each_multiple_async.mjs";
+import { ebible_chapters_codes_or_specified } from "../../../love/public/src/ebible_chapters_codes_or_specified.mjs";
+import { ebible_folders_chapters_codes_to_verses } from "../../../love/public/src/ebible_folders_chapters_codes_to_verses.mjs";
+import { file_exists } from "../../../love/public/src/file_exists.mjs";
+import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
+import { g_generate_openai_chat_completions } from "../../../love/public/src/g_generate_openai_chat_completions.mjs";
+import { openai_responses } from "../../../love/public/src/openai_responses.mjs";
+import { g_sermon_generate } from "../../../love/public/src/g_sermon_generate.mjs";
+import { list_add } from "../../../love/public/src/list_add.mjs";
+import { list_add_pair } from "../../../love/public/src/list_add_pair.mjs";
+import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
+import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
+import { list_find_property_get } from "../../../love/public/src/list_find_property_get.mjs";
+import { list_first } from "../../../love/public/src/list_first.mjs";
+import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
+import { list_join } from "../../../love/public/src/list_join.mjs";
+import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
+import { list_map } from "../../../love/public/src/list_map.mjs";
+import { list_map_join_space } from "../../../love/public/src/list_map_join_space.mjs";
+import { list_nearby } from "../../../love/public/src/list_nearby.mjs";
+import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
+import { log_keep } from "../../../love/public/src/log_keep.mjs";
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function g_sermon_generate_book_generic(
   bible_folders,
   book_code,
@@ -145,10 +145,7 @@ export async function g_sermon_generate_book_generic(
         "sermons were originally generated using: " +
         g_generate_openai_chat_completions;
       log_keep(prompt_system + " " + prompt_user);
-      let output = await g_generate_openai_responses(
-        prompt_system,
-        prompt_user,
-      );
+      let output = await openai_responses(prompt_system, prompt_user);
       let passage_extension = {
         [g_sermon_generate_book_generic_property()]: output,
       };
