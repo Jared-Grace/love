@@ -52,7 +52,7 @@ export function app_a_statement_choices_add(choices, a, o) {
           let v = app_a_node_index(a);
           let list = object_property_get(v, "list");
           let index = object_property_get(v, "index");
-          js_statement_return_insert_code(list, index, identifier_name);
+          js_statement_return_insert_code(list, index+1, identifier_name);
           await app_a_function_on_change(overlay_result, a);
         }
       },
