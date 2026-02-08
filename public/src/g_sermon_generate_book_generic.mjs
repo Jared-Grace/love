@@ -2,7 +2,6 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_new } from "../../../love/public/src/list_new.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { list_find_property_get } from "../../../love/public/src/list_find_property_get.mjs";
-import { add } from "../../../love/public/src/add.mjs";
 import { list_nearby } from "../../../love/public/src/list_nearby.mjs";
 import { ebible_chapters_codes_or_specified } from "../../../love/public/src/ebible_chapters_codes_or_specified.mjs";
 import { g_sermon_generate_book_generic_verses } from "../../../love/public/src/g_sermon_generate_book_generic_verses.mjs";
@@ -83,12 +82,9 @@ export async function g_sermon_generate_book_generic(
           );
           original = object_property_get(original_verse, "text");
         }
-        list_add(list, item);
-        add({
-          original,
-          texts: texts_add,
-          verse_number,
-        });
+        list_add(originals, original);
+        list_add(texts, texts_add);
+        list_add(verse_numbers, verse_number);
         let ei = bible_verse_end_is(text);
         let index_last = list_index_last(verses_chapter);
         if (ei || index === index_last) {
