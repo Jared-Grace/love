@@ -1,3 +1,5 @@
+import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
+import { list_map_path_join } from "../../../love/public/src/list_map_path_join.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
@@ -154,7 +156,10 @@ export async function g_sermon_generate_book_generic(
       log_keep(output);
       return passage;
       function prompt_get(group) {
+        let texts = object_property_get(group, "texts");
         function folder_map(t) {
+          let mapped2 = list_map_path_join(list, f_name);
+          let j = list_join_space(t);
           let joined2 = list_join(t, " :: ");
           return joined2;
         }
