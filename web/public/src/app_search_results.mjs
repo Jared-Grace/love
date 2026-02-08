@@ -34,16 +34,16 @@ import { object_properties } from "../../../love/public/src/object_properties.mj
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { app_bible_search_word_path } from "../../../love/public/src/app_bible_search_word_path.mjs";
-import { string_to_words } from "../../../love/public/src/string_to_words.mjs";
-import { catch_ignore_async } from "./catch_ignore_async.mjs";
-import { list_reverse } from "./list_reverse.mjs";
+import { text_to_words } from "../../../love/public/src/text_to_words.mjs";
+import { catch_ignore_async } from "../../../love/public/src/catch_ignore_async.mjs";
+import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 export async function app_search_results(context, div_results) {
   let languages_chosen = object_property_get(context, "languages_chosen");
   let en = ebible_folder_english();
   let english_choices = [en];
   let books = await ebible_version_books(en);
   let query = object_property_get(context, "query");
-  let words = string_to_words(query);
+  let words = text_to_words(query);
   async function lambda(word) {
     let destination = app_bible_search_word_path(word);
     let o = await firebase_storage_download_json_decompress(destination);
