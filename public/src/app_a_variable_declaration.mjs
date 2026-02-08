@@ -14,7 +14,7 @@ export function app_a_variable_declaration(a) {
   let k = app_a_keyword_blue_space(parent, kind);
   let keyword = object_property_get(k, "keyword");
   function lambda19(o, choices) {
-    app_a_statement_choices_add(choices, o, a);
+    app_a_statement_choices_add(choices, a, o);
     app_a_functionize_choices_add(choices, a, o);
     let v = app_a_node_index(a);
     let index = object_property_get(v, "index");
