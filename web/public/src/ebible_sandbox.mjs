@@ -1,5 +1,5 @@
 import { bible_verse_trim_right } from "../../../love/public/src/bible_verse_trim_right.mjs";
-import { string_last } from "../../../love/public/src/string_last.mjs";
+import { text_last } from "../../../love/public/src/text_last.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_adder_multiple_unique_async } from "../../../love/public/src/list_adder_multiple_unique_async.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -17,7 +17,7 @@ export async function ebible_sandbox() {
       let mapped = list_map_property(verses, "text");
       function lambda(v) {
         let trimmed = bible_verse_trim_right(v);
-        let item = string_last(trimmed);
+        let item = text_last(trimmed);
         return item;
       }
       let mapped2 = list_map(mapped, lambda);
