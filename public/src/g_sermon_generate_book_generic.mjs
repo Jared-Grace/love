@@ -1,3 +1,4 @@
+import { ebible_chapters_codes_or_specified } from "../../../love/public/src/ebible_chapters_codes_or_specified.mjs";
 import { g_sermon_generate_book_generic_verses } from "../../../love/public/src/g_sermon_generate_book_generic_verses.mjs";
 import { bible_verse_end_is } from "../../../love/public/src/bible_verse_end_is.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
@@ -41,11 +42,11 @@ export async function g_sermon_generate_book_generic(
   property_name,
   chapter_code_specified,
 ) {
-    let chapters_codes = await ebible_chapters_codes_or_specified(
-      bible_folder,
-      book_code,
-      chapter_code_specified,
-    );
+  let chapters_codes = await ebible_chapters_codes_or_specified(
+    bible_folder,
+    book_code,
+    chapter_code_specified,
+  );
   let r = await g_sermon_generate_book_generic_verses(
     book_code,
     chapter_code_specified,
