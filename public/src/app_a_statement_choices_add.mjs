@@ -1,6 +1,6 @@
 import { js_statement_return_insert_code } from "../../../love/public/src/js_statement_return_insert_code.mjs";
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
-import { app_a_functions_overlay_generic } from "../../../love/public/src/app_a_functions_overlay_generic.mjs";
+import { app_a_list_overlay_generic } from "../../../love/public/src/app_a_list_overlay_generic.mjs";
 import { app_a_cut } from "../../../love/public/src/app_a_cut.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
 import { js_call_new_insert } from "../../../love/public/src/js_call_new_insert.mjs";
@@ -46,12 +46,7 @@ export function app_a_statement_choices_add(choices, a, o) {
         overlay_close();
         let ast2 = object_property_get(a, "ast");
         let i_names = js_identifiers_names(ast2);
-        let v2 = app_a_functions_overlay_generic(
-          a,
-          i_names,
-          "function",
-          on_select,
-        );
+        let v2 = app_a_list_overlay_generic(a, i_names, "function", on_select);
         let overlay_result = object_property_get(v2, "overlay_result");
         async function on_select(identifier_name) {
           let v = app_a_node_index(a);
