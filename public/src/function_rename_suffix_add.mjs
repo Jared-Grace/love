@@ -2,6 +2,6 @@ import { function_rename_suffix_add_generic } from "../../../love/public/src/fun
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 export async function function_rename_suffix_add(f_name_before, suffix) {
   let fn = function_name_combine;
-  let v = await function_rename_suffix_add_generic(suffix, fn, f_name_before);
+  let v = await function_rename_suffix_add_generic(f_name_before, suffix, fn);
   return v;
 }

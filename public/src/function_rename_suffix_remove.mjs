@@ -8,9 +8,9 @@ export async function function_rename_suffix_remove(f_name_before, suffix) {
     return sw;
   }
   let v = await function_rename_suffix_add_generic(
+    f_name_before,
     suffix,
     lambda,
-    f_name_before,
   );
   return v;
 }
