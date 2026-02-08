@@ -15,7 +15,6 @@ import { each_multiple_async } from "../../../love/public/src/each_multiple_asyn
 import { log } from "../../../love/public/src/log.mjs";
 import { g_generate_openai_responses } from "../../../love/public/src/g_generate_openai_responses.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
-import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { list_map_property_join_space } from "../../../love/public/src/list_map_property_join_space.mjs";
 import { g_generate_openai_chat_completions } from "../../../love/public/src/g_generate_openai_chat_completions.mjs";
 import { list_join } from "../../../love/public/src/list_join.mjs";
@@ -109,9 +108,9 @@ export async function g_sermon_generate_book_generic(
     }
     await each_multiple_async(verses_book_folders, each_chapter);
   }
-  let groups = await list_adder_async(adder);
+  let passages = await list_adder_async(adder);
   let nearness = 2;
-  let nearbys = list_nearby(groups, nearness);
+  let nearbys = list_nearby(passages, nearness);
   async function each_chapter(chapter_code) {
     let path = local_function_path_json(chapter_code, fn);
     let exists = await file_exists(path);
@@ -180,7 +179,7 @@ export async function g_sermon_generate_book_generic(
         return v2;
       }
     }
-    let passages = await list_map_async(groups_match_chapter, lambda5);
+    await each_async(groups_match_chapter, lambda5);
     await file_overwrite_json(path, {
       chapter_code,
       passages,
