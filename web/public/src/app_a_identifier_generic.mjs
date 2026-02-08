@@ -94,7 +94,7 @@ export function app_a_identifier_generic(
           let value_new = html_value_get(input);
           let on_change = object_property_get(change, "on_change");
           await on_change(value_new);
-          await app_a_function_on_change(o, a);
+          await app_a_function_on_change(a, o);
         }
         let component = app_a_button_wide(overlay, text2, on_enter);
       },
@@ -133,7 +133,7 @@ export function app_a_identifier_generic(
             let index = object_property_get(v, "index");
             let list = object_property_get(v, "list");
             let removals = list_remove_at_count(list, index, value_new);
-            await app_a_function_on_change(o2, a);
+            await app_a_function_on_change(a, o2);
           }
           let component = app_a_button_wide(overlay, "Delete", lambda23);
         },
@@ -145,7 +145,7 @@ export function app_a_identifier_generic(
           let name_new = await clipboard_paste();
           string_is_assert(name_new);
           replace(name_new);
-          await app_a_function_on_change(o3, a);
+          await app_a_function_on_change(a, o3);
         },
       },
     ]);
