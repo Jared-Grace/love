@@ -164,6 +164,7 @@ export async function g_sermon_generate_book_generic(
         let size = list_size(bible_folders);
         let a = add_1(size);
         let list = list_new_multiple(a);
+        let mapped = list_map(list2, function lambda(item2) {});
         let texts = object_property_get(group, "texts");
         log({
           texts,
