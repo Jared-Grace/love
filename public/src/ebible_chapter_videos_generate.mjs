@@ -6,7 +6,7 @@ import { video_generate } from "../../../love/public/src/video_generate.mjs";
 import { file_extension_mp4 } from "../../../love/public/src/file_extension_mp4.mjs";
 import { image_generate } from "../../../love/public/src/image_generate.mjs";
 import { file_exists_not } from "../../../love/public/src/file_exists_not.mjs";
-import { string_suffix_without } from "../../../love/public/src/string_suffix_without.mjs";
+import { text_suffix_without } from "../../../love/public/src/text_suffix_without.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { list_filter_ends_with } from "../../../love/public/src/list_filter_ends_with.mjs";
@@ -23,7 +23,7 @@ export async function ebible_chapter_videos_generate(
     async function lambda(file_path) {
       let joined_text = path_join([folder_path, file_path]);
       let contents = await file_read(joined_text);
-      let sw = string_suffix_without(file_path, suffix);
+      let sw = text_suffix_without(file_path, suffix);
       let joined = path_join([folder_path, sw]);
       let joined_image = joined + ".png";
       const n = await file_exists_not(joined_image);
