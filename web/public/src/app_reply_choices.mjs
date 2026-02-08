@@ -43,7 +43,7 @@ import { emoji_sleep_z } from "../../../love/public/src/emoji_sleep_z.mjs";
 import { emoji_globe_americas } from "../../../love/public/src/emoji_globe_americas.mjs";
 import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
 import { emoji_100 } from "../../../love/public/src/emoji_100.mjs";
-import { string_the_servant_of_god_is } from "../../../love/public/src/string_the_servant_of_god_is.mjs";
+import { text_the_servant_of_god_is } from "../../../love/public/src/text_the_servant_of_god_is.mjs";
 import { emoji_ok } from "../../../love/public/src/emoji_ok.mjs";
 import { emoji_cross } from "../../../love/public/src/emoji_cross.mjs";
 import { emoji_smile } from "../../../love/public/src/emoji_smile.mjs";
@@ -252,7 +252,7 @@ export function app_reply_choices() {
       response:
         emoji_ok() +
         " " +
-        string_the_servant_of_god_is() +
+        text_the_servant_of_god_is() +
         " okay, yes " +
         emoji_100() +
         " " +
