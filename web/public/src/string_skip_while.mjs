@@ -1,4 +1,4 @@
-import { string_skip } from "../../../love/public/src/string_skip.mjs";
+import { text_skip } from "../../../love/public/src/text_skip.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 export function string_skip_while(lambda$s, s) {
   while (true) {
@@ -6,7 +6,7 @@ export function string_skip_while(lambda$s, s) {
     if (not(any)) {
       break;
     }
-    s = string_skip(s, 1);
+    s = text_skip(s, 1);
   }
   return s;
 }
