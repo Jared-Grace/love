@@ -200,5 +200,5 @@ export async function g_sermon_generate_book_generic(
       path,
     });
   }
-  await each_async(chapters, each_chapter);
+  await each_async(chapters_codes, each_chapter);
 }
