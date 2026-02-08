@@ -12,6 +12,17 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 export async function list_adder_group_async() {
   async function adder_groups(la) {
     let group = null;
+    await lambda(clear, group, add);
+    function add() {
+      la(group);
+      clear();
+    }
+    function clear() {
+      group = [];
+    }
+  }
+  let groups = await list_adder_async(adder_groups);
+  async function lambda(clear, group, add) {
     async function each_chapter(verses_chapter_folders) {
       let verses_chapter = list_first(verses_chapter_folders);
       let verse_first = list_first(verses_chapter);
@@ -55,13 +66,5 @@ export async function list_adder_group_async() {
       await each_index_async(verses_chapter, each_verse);
     }
     await each_multiple_async(verses_book_folders, each_chapter);
-    function add() {
-      la(group);
-      clear();
-    }
-    function clear() {
-      group = [];
-    }
   }
-  let groups = await list_adder_async(adder_groups);
 }
