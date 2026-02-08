@@ -1,4 +1,4 @@
-import { list_nearby } from "../../../love/public/src/list_nearby.mjs";
+import { list_nearbys } from "../../../love/public/src/list_nearbys.mjs";
 import { ebible_chapters_codes_or_specified } from "../../../love/public/src/ebible_chapters_codes_or_specified.mjs";
 import { g_sermon_generate_book_generic_verses } from "../../../love/public/src/g_sermon_generate_book_generic_verses.mjs";
 import { bible_verse_end_is } from "../../../love/public/src/bible_verse_end_is.mjs";
@@ -97,7 +97,7 @@ export async function g_sermon_generate_book_generic(
   }
   let groups = await list_adder_async(adder_groups);
   let nearness = 2;
-  let mapped = list_nearby(groups, nearness);
+  let mapped = list_nearbys(groups, nearness);
   async function each_chapter(chapter_code) {
     let path = local_function_path_json(chapter_code, fn);
     let exists = await file_exists(path);
