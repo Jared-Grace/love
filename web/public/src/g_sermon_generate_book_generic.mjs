@@ -1,3 +1,4 @@
+import { list_find_property_get } from "../../../love/public/src/list_find_property_get.mjs";
 import { list_adder_group_async } from "../../../love/public/src/list_adder_group_async.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 import { list_nearby } from "../../../love/public/src/list_nearby.mjs";
@@ -62,12 +63,12 @@ export async function g_sermon_generate_book_generic(
         function mapper(verses_chapter_folder) {
           const property_find = "verse_number";
           const property_get = "text";
-          let v = list_find_property(
+          let text = list_find_property_get(
             verses_chapter_folder,
             property_find,
             verse_number,
+            property_get,
           );
-          let text = object_property_get(v, property_get);
           return text;
         }
         let texts = list_map(verses_chapter_folders, mapper);
