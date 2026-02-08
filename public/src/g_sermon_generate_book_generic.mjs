@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { list_new_multiple } from "../../../love/public/src/list_new_multiple.mjs";
 import { add_1 } from "../../../love/public/src/add_1.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
@@ -174,6 +175,7 @@ export async function g_sermon_generate_book_generic(
           r,
           passages_folders,
         });
+        each(list, function lambda(item2) {});
         list_add_pair(r, passages_folders);
         let mapped = list_map_join_space(r);
         let user_prompt = list_join(mapped, " :: ");
