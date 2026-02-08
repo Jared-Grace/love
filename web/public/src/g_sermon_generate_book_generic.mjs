@@ -1,3 +1,4 @@
+import { each_pair } from "../../../love/public/src/each_pair.mjs";
 import { ebible_folders_chapters_codes_to_verses } from "../../../love/public/src/ebible_folders_chapters_codes_to_verses.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_new } from "../../../love/public/src/list_new.mjs";
@@ -89,6 +90,7 @@ export async function g_sermon_generate_book_generic(
           original = object_property_get(original_verse, "text");
         }
         list_add(originals, original);
+        each_pair(list_a, list_b, function lambda(a, b) {});
         list_add(texts, texts_add);
         list_add(verse_numbers, verse_number);
         let ei = bible_verse_end_is(text);
