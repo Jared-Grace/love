@@ -7,7 +7,7 @@ import { string_trim } from "../../../love/public/src/string_trim.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_filter_empty_not_is } from "../../../love/public/src/list_filter_empty_not_is.mjs";
 import { list_skip } from "../../../love/public/src/list_skip.mjs";
-import { string_split_newline } from "../../../love/public/src/string_split_newline.mjs";
+import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
 import { folder_read_paths_async } from "../../../love/public/src/folder_read_paths_async.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { ebible_version_readaloud_download_path } from "../../../love/public/src/ebible_version_readaloud_download_path.mjs";
@@ -31,7 +31,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let search = "_" + book_code + "_" + name_code + "_";
   let only = list_find_includes(files, search);
   let contents = await file_read(only);
-  let lines = string_split_newline(contents);
+  let lines = text_split_newline(contents);
   let skipped = list_skip(lines, 2);
   let mapped = list_map(skipped, string_trim);
   let filtered = list_filter_empty_not_is(mapped);
