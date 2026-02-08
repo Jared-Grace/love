@@ -1,3 +1,4 @@
+import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_a_functions_overlay_generic } from "../../../love/public/src/app_a_functions_overlay_generic.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
@@ -174,7 +175,9 @@ export function app_a_identifier_generic(
     log({
       e2,
     });
-    function lambda6() {}
+    function lambda6() {
+      let assign = js_declare(name2, init);
+    }
     js_node_type_is_if(e2, "ExpressionStatement", lambda6);
     function lambda4() {
       const c = {
