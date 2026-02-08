@@ -168,8 +168,8 @@ export function app_a_identifier_generic(
           let r = app_a_functions_overlay_generic(
             a,
             properties,
-            lambda3,
             "function",
+            lambda3,
           );
         },
       };

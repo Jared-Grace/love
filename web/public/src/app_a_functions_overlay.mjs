@@ -5,8 +5,8 @@ export async function app_a_functions_overlay(a, lambda$f_name) {
   let r = app_a_functions_overlay_generic(
     a,
     f_names,
-    lambda$f_name,
     "function",
+    lambda$f_name,
   );
   return r;
 }
