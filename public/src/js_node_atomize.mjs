@@ -44,8 +44,8 @@ export async function js_node_atomize(existing, v) {
         const v4 = await function_exists_strict(name);
         let exists = object_property_get(v4, "exists");
         if (exists) {
-          let v5 = await function_parse_strict_declaration(name);
-          let declaration = object_property_get(v5, "declaration");
+          let r = await function_parse_strict_declaration(name);
+          let declaration = object_property_get(r, "declaration");
           let params = object_property_get(declaration, "params");
           let index = list_index_of(stack1, node);
           let param = list_get(params, index);
