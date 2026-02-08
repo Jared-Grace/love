@@ -12,7 +12,11 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 export async function list_adder_group_async() {
   async function adder_groups(la) {
     let group = null;
-    await lambda(start, add, end);
+    await lambda({
+      start,
+      add,
+      end,
+    });
     function end() {
       la(group);
       start();
@@ -25,7 +29,7 @@ export async function list_adder_group_async() {
     }
   }
   let groups = await list_adder_async(adder_groups);
-  async function lambda(clear, add, end) {
+  async function lambda({ clear, add, end }) {
     async function each_chapter(verses_chapter_folders) {
       let verses_chapter = list_first(verses_chapter_folders);
       let verse_first = list_first(verses_chapter);
@@ -61,8 +65,8 @@ export async function list_adder_group_async() {
           verse_number,
           chapter_code,
         });
-        let end = bible_verse_end_is(text);
-        if (end || index === index_last) {
+        let ei = bible_verse_end_is(text);
+        if (ei || index === index_last) {
           end();
         }
       }
