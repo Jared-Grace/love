@@ -33,8 +33,7 @@ export function app_a_function_declaration(a) {
   let kf = js_keyword_function();
   let k = app_a_keyword_blue_space(parent, kf);
   let keyword = object_property_get(k, "keyword");
-  function choices_get(o) {
-    let choices = [];
+  function choices_get(o, choices) {
     app_a_functionize_choices_add(choices, a, o);
     let ast = object_property_get(a, "ast");
     let v_match = js_visit_match(ast, node);
@@ -53,7 +52,6 @@ export function app_a_function_declaration(a) {
       });
     }
     js_node_type_is_if(e2, "BlockStatement", lambda6);
-    return choices;
   }
   app_a_overlay_choices(a, keyword, choices_get);
   let id = object_property_get(node, "id");
