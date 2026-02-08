@@ -18,7 +18,7 @@ export function app_a_functions_overlay_generic(a, texts, lambda$text) {
     overlay_close();
   }
   app_a_button_function(context, overlay, lambda3);
-  let functions_result = app_a_list_chooser(
+  let chooser_result = app_a_list_chooser(
     copy,
     "function",
     texts,
@@ -26,7 +26,7 @@ export function app_a_functions_overlay_generic(a, texts, lambda$text) {
   );
   let v = {
     overlay_result,
-    functions_result,
+    chooser_result,
   };
   return v;
 }
