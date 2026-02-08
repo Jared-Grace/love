@@ -7,7 +7,7 @@ import { list_adder_multiple } from "../../../love/public/src/list_adder_multipl
 import { text_includes } from "../../../love/public/src/text_includes.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
-import { string_pad_space } from "../../../love/public/src/string_pad_space.mjs";
+import { text_pad_space } from "../../../love/public/src/text_pad_space.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { text_letters_is } from "../../../love/public/src/text_letters_is.mjs";
 import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
@@ -18,7 +18,7 @@ export function g_themes(text) {
   function lambda2(item) {
     let li = text_letters_is(item);
     if (not(li)) {
-      item = string_pad_space(item);
+      item = text_pad_space(item);
     }
     return item;
   }
@@ -52,7 +52,7 @@ export function g_themes(text) {
       let split3 = string_split_space(list);
       let split2 = string_split_space(words);
       function lambda(word) {
-        let padded = string_pad_space(word);
+        let padded = text_pad_space(word);
         let i = text_includes(n, padded);
         if (i) {
           la(split3);
