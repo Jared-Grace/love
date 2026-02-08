@@ -186,7 +186,7 @@ export function app_a_identifier_generic(
         return_name = js_return_name(ast_call);
         let assign = js_declare(return_name, init);
       } else {
-        let unique = js_identifier_unique_ast(ast2, property_name);
+        let unique = js_identifier_unique_ast(ast, "r");
       }
     }
     js_node_type_is_if(e2, "ExpressionStatement", lambda6);
