@@ -1,3 +1,4 @@
+import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_map_join_space } from "../../../love/public/src/list_map_join_space.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -19,7 +20,6 @@ import { each_multiple_async } from "../../../love/public/src/each_multiple_asyn
 import { log } from "../../../love/public/src/log.mjs";
 import { g_generate_openai_responses } from "../../../love/public/src/g_generate_openai_responses.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
-import { list_map_property_join_space } from "../../../love/public/src/list_map_property_join_space.mjs";
 import { g_generate_openai_chat_completions } from "../../../love/public/src/g_generate_openai_chat_completions.mjs";
 import { list_join } from "../../../love/public/src/list_join.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
@@ -161,7 +161,8 @@ export async function g_sermon_generate_book_generic(
           texts,
         });
         let passages_folders = list_map_join_space(texts);
-        let original = list_map_property_join_space(group, "originals");
+        let originals = object_property_get(group, "originals");
+        let original = list_join_space(originals);
         list_add_first(passages_folders, original);
         let user_prompt = list_join(passages_folders, " :: ");
         return user_prompt;
