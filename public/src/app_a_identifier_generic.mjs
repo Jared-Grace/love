@@ -202,7 +202,7 @@ export function app_a_identifier_generic(
               assign,
             });
             object_replace(e2, assign);
-            await app_a_function_overlay_refresh(a, o3);
+            await app_a_function_on_change(a, o3);
           },
         };
         list_add(choices, c);
