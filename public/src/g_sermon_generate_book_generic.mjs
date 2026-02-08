@@ -19,12 +19,10 @@ import { list_map_property_join_space } from "../../../love/public/src/list_map_
 import { g_generate_openai_chat_completions } from "../../../love/public/src/g_generate_openai_chat_completions.mjs";
 import { list_join } from "../../../love/public/src/list_join.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { each_index_async } from "../../../love/public/src/each_index_async.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
@@ -117,17 +115,11 @@ export async function g_sermon_generate_book_generic(
     if (exists) {
     } else {
     }
-    function filter_group(group) {
-      let items = object_property_get(group, "item");
-      let match_chapter = list_filter_property(
-        items,
-        "chapter_code",
-        chapter_code,
-      );
-      let ne = list_empty_not_is(match_chapter);
-      return ne;
-    }
-    let groups_match_chapter = list_filter(nearbys, filter_group);
+    let groups_match_chapter = list_filter_property(
+      nearbys,
+      "chapter_code",
+      chapter_code,
+    );
     async function lambda5(g) {
       log(g);
       let passage = object_property_get(g, "item");
