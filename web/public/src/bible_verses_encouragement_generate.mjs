@@ -9,7 +9,7 @@ import { string_trim_right } from "../../../love/public/src/string_trim_right.mj
 import { text_skip_while } from "../../../love/public/src/text_skip_while.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
-import { string_starts_with_space } from "../../../love/public/src/string_starts_with_space.mjs";
+import { text_starts_with_space } from "../../../love/public/src/text_starts_with_space.mjs";
 import { text_starts_with_dot } from "../../../love/public/src/text_starts_with_dot.mjs";
 import { text_starts_with_digit } from "../../../love/public/src/text_starts_with_digit.mjs";
 import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
@@ -22,7 +22,7 @@ export async function bible_verses_encouragement_generate() {
   let fns = [
     text_starts_with_digit,
     text_starts_with_dot,
-    string_starts_with_space,
+    text_starts_with_space,
   ];
   function lambda2(item2) {
     item2 = whitespace_normalize(item2);
