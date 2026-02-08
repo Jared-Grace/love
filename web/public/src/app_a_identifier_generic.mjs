@@ -189,7 +189,7 @@ export function app_a_identifier_generic(
         return_name = js_identifier_unique_ast(ast, "r");
       }
       let assign = js_declare(return_name, node);
-      object_replace(to, from);
+      object_replace(e2, assign);
     }
     js_node_type_is_if(e2, "ExpressionStatement", lambda6);
     function lambda4() {
