@@ -115,19 +115,19 @@ export async function g_sermon_generate_book_generic(
       return ne;
     }
     let groups_match_chapter = list_filter(nearbys, filter_group);
-    async function lambda5(r) {
-      log(r);
-      let item3 = object_property_get(r, "item");
-      let range2 = object_property_get(r, "range");
-      let mapped2 = list_map(range2, prompt_get);
+    async function lambda5(g) {
+      log(g);
+      let i = object_property_get(g, "item");
+      let r = object_property_get(g, "range");
+      let mapped2 = list_map(r, prompt_get);
       let mapped3 = list_map_property(mapped2, "user_prompt");
       let separator = text_colon_3();
       let joined = list_join(mapped3, separator);
-      var v4 = prompt_get(item3);
+      var v4 = prompt_get(i);
       let original = object_property_get(v4, "original");
       let text = object_property_get(v4, "text");
       let user_prompt = object_property_get(v4, "user_prompt");
-      let verse_numbers = list_map_property(item3, "verse_number");
+      let verse_numbers = list_map_property(i, "verse_number");
       const prompt_user =
         "Here is the context: " +
         joined +
