@@ -91,9 +91,9 @@ export async function g_sermon_generate_book_generic(
         let index_last = list_index_last(verses_chapter);
         if (ei || index === index_last) {
           la({
-            original,
-            texts_add,
-            verse_number,
+            originals,
+            texts,
+            verse_numbers,
             chapter_code,
           });
         }
