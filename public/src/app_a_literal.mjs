@@ -1,5 +1,5 @@
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
-import { string_is } from "../../../love/public/src/string_is.mjs";
+import { text_is } from "../../../love/public/src/text_is.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_a_identifier_generic } from "../../../love/public/src/app_a_identifier_generic.mjs";
 export function app_a_literal(a, component, node, on_change, raw) {
@@ -9,7 +9,7 @@ export function app_a_literal(a, component, node, on_change, raw) {
     lines_multiple = true;
   } else {
     let value = object_property_get(node, "value");
-    lines_multiple = string_is(value);
+    lines_multiple = text_is(value);
   }
   app_a_identifier_generic(
     a,
