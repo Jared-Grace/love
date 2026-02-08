@@ -14,7 +14,7 @@ export async function g_sermon_generate_book_generic_verses(
     if (null_not_is(chapter_code_specified)) {
       chapters = [chapter_code_specified];
     }
-    async function each_chapter(chapter_code) {
+    async function map_chapter(chapter_code) {
       let verses = await ebible_verses(bible_folder, chapter_code);
       function each_verse(v) {
         object_merge(v, {
@@ -24,7 +24,7 @@ export async function g_sermon_generate_book_generic_verses(
       each(verses, each_verse);
       return verses;
     }
-    let verses_book = await list_map_unordered_async(chapters, each_chapter);
+    let verses_book = await list_map_unordered_async(chapters, map_chapter);
     let v5 = {
       verses_book,
       chapters,
