@@ -4,7 +4,7 @@ import { html_text_get } from "../../../love/public/src/html_text_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
-import { string_starts_with } from "../../../love/public/src/string_starts_with.mjs";
+import { text_starts_with } from "../../../love/public/src/text_starts_with.mjs";
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
 export function app_reply_buttons_refresh(typed_get, chosens, buttons) {
@@ -15,7 +15,7 @@ export function app_reply_buttons_refresh(typed_get, chosens, buttons) {
         let letters = text_letters_only(text);
         let lower = text_lower_to(letters);
         let prefix = typed_get();
-        let sw = string_starts_with(lower, prefix);
+        let sw = text_starts_with(lower, prefix);
         let includes = list_includes(chosens, item);
         const hidden = includes || not(sw);
         html_display_none_or_inline(item, hidden);
