@@ -117,8 +117,8 @@ export async function g_sermon_generate_book_generic(
     if (exists) {
     } else {
     }
-    function filter_group(passage) {
-      let items = object_property_get(passage, "item");
+    function filter_group(group) {
+      let items = object_property_get(group, "item");
       let match_chapter = list_filter_property(
         items,
         "chapter_code",
