@@ -131,8 +131,8 @@ export async function g_sermon_generate_book_generic(
     async function each_group(g) {
       log(g);
       let passage = object_property_get(g, "item");
-      let r = object_property_get(g, "nearby");
-      let mapped3 = list_map(r, prompt_get);
+      let n = object_property_get(g, "nearby");
+      let mapped3 = prompt_get(n);
       let separator = text_colon_3();
       let joined = list_join(mapped3, separator);
       let user_prompt = prompt_get(passage);
@@ -157,7 +157,7 @@ export async function g_sermon_generate_book_generic(
       let to2 = object_merge(passage, passage_extension);
       log_keep(output);
       return passage;
-      function prompt_get(group) {
+      function prompt_get(groups) {
         let texts = object_property_get(group, "texts");
         log({
           texts,
