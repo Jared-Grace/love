@@ -1,3 +1,4 @@
+import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_a_functions_overlay_generic } from "../../../love/public/src/app_a_functions_overlay_generic.mjs";
@@ -175,7 +176,9 @@ export function app_a_identifier_generic(
     log({
       e2,
     });
-    function lambda6() {
+    async function lambda6() {
+      let v2 = await function_parse_declaration(f_name_call);
+      let ast_call = object_property_get(v2, "ast");
       let assign = js_declare(name2, init);
     }
     js_node_type_is_if(e2, "ExpressionStatement", lambda6);
