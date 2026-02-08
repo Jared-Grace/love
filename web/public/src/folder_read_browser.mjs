@@ -5,7 +5,7 @@ import { string_split_first } from "../../../love/public/src/string_split_first.
 import { list_map_prefix_without } from "../../../love/public/src/list_map_prefix_without.mjs";
 import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
 import { app_a_files_paths } from "../../../love/public/src/app_a_files_paths.mjs";
-import { string_slash_forward } from "../../../love/public/src/string_slash_forward.mjs";
+import { text_slash_forward } from "../../../love/public/src/text_slash_forward.mjs";
 import { path_normalize } from "../../../love/public/src/path_normalize.mjs";
 export async function folder_read_browser(path_folder) {
   let files_paths = await app_a_files_paths();
@@ -18,7 +18,7 @@ export async function folder_read_browser(path_folder) {
   return r;
   function value_get() {
     let n = path_normalize(path_folder);
-    let s = string_slash_forward();
+    let s = text_slash_forward();
     let prefix = "" + n + s;
     let filtered = list_filter_starts_with(files_paths, prefix);
     let mapped = list_map_prefix_without(filtered, prefix);
