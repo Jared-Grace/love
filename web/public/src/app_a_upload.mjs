@@ -1,3 +1,4 @@
+import { function_copy_replace_first } from "../../../love/public/src/function_copy_replace_first.mjs";
 import { text_empty_is } from "../../../love/public/src/text_empty_is.mjs";
 import { git_push_repos } from "../../../love/public/src/git_push_repos.mjs";
 import { invoke } from "../../../love/public/src/invoke.mjs";
