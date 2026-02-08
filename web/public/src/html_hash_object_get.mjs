@@ -6,7 +6,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
 import { string_split_equal } from "../../../love/public/src/string_split_equal.mjs";
 import { string_split_comma } from "../../../love/public/src/string_split_comma.mjs";
-import { string_prefix_without } from "../../../love/public/src/string_prefix_without.mjs";
+import { text_prefix_without } from "../../../love/public/src/text_prefix_without.mjs";
 import { html_hash_get } from "../../../love/public/src/html_hash_get.mjs";
 export function html_hash_object_get() {
   function lambda3(oa) {
@@ -16,7 +16,7 @@ export function html_hash_object_get() {
     if (n) {
       return;
     }
-    let without = string_prefix_without(hash_url, prefix);
+    let without = text_prefix_without(hash_url, prefix);
     let split = string_split_comma(without);
     function lambda(s) {
       let split2 = string_split_equal(s);
