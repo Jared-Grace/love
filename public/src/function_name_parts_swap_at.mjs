@@ -6,7 +6,8 @@ export function function_name_parts_swap_at(
   index_a_text,
   index_b_text,
 ) {
-  let index = integer_to(index_string);
+  let index_a = integer_to(index_a_text);
+  let index_b = integer_to(index_b_text);
   function lambda(parts) {
     list_swap_at(parts, index_a, index_b);
   }
