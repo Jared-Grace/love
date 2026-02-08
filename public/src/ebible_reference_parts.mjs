@@ -5,13 +5,13 @@ import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs"
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { string_split_dash } from "../../../love/public/src/string_split_dash.mjs";
 import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
-import { string_split_colon } from "../../../love/public/src/string_split_colon.mjs";
+import { text_split_colon } from "../../../love/public/src/text_split_colon.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 export function ebible_reference_parts(books, book_name, chapter_verses) {
   let book = list_find_property(books, "text", book_name);
   let book_code = object_property_get(book, "book_code");
-  let split2 = string_split_colon(chapter_verses);
+  let split2 = text_split_colon(chapter_verses);
   let v2 = list_first_second(split2);
   let second = object_property_get(v2, "second");
   let chapter_name = object_property_get(v2, "first");
