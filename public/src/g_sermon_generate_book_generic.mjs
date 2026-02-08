@@ -135,7 +135,7 @@ export async function g_sermon_generate_book_generic(
       let mapped3 = prompt_get(n);
       let separator = text_colon_3();
       let joined = list_join(mapped3, separator);
-      let user_prompt = prompt_get(passage);
+      let user_prompt = prompt_get([passage]);
       const prompt_user =
         "Here is the context: " +
         joined +
