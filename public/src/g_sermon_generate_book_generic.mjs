@@ -19,7 +19,6 @@ import { list_map_property_join_space } from "../../../love/public/src/list_map_
 import { g_generate_openai_chat_completions } from "../../../love/public/src/g_generate_openai_chat_completions.mjs";
 import { list_join } from "../../../love/public/src/list_join.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -115,11 +114,6 @@ export async function g_sermon_generate_book_generic(
     if (exists) {
     } else {
     }
-    let groups_match_chapter = list_filter_property(
-      nearbys,
-      "chapter_code",
-      chapter_code,
-    );
     async function lambda5(g) {
       log(g);
       let passage = object_property_get(g, "item");
