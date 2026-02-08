@@ -1,3 +1,4 @@
+import { function_copy_replace_first } from "../../../love/public/src/function_copy_replace_first.mjs";
 import { assert } from "../../../love/public/src/assert.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
