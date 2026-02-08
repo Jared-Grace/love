@@ -105,8 +105,8 @@ export async function g_sermon_generate_book_generic(
     } else {
     }
     function lambda11(group) {
-      let mapped4 = object_property_get(group, "item");
-      let mapped2 = list_filter_property(mapped4, "chapter_code", chapter_code);
+      let items = object_property_get(group, "item");
+      let mapped2 = list_filter_property(items, "chapter_code", chapter_code);
       let ne = list_empty_not_is(mapped2);
       return ne;
     }
