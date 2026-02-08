@@ -9,6 +9,6 @@ export async function text_to_uuid(text) {
   let joined = path_join([f_path, file_name]);
   await file_json_transform_initialize(joined, {}, lambda);
   async function lambda(data) {
-    object_property_exists_not_assert(object, property_name);
+    object_property_exists_not_assert(data, text);
   }
 }
