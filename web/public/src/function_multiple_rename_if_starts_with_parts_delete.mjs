@@ -1,21 +1,19 @@
+import { function_name_parts_remove } from "../../../love/public/src/function_name_parts_remove.mjs";
+import { string_split_comma } from "../../../love/public/src/string_split_comma.mjs";
 import { function_multiple_rename_generic_starts_with } from "../../../love/public/src/function_multiple_rename_generic_starts_with.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
-import { string_prefix_change } from "../../../love/public/src/string_prefix_change.mjs";
 export async function function_multiple_rename_if_starts_with_parts_delete(
   f_name_prefix_before,
-  f_name_prefix_after,
+  deleted,
 ) {
   assert_arguments(arguments, 2);
   await function_multiple_rename_generic_starts_with(
     name_change,
     f_name_prefix_before,
   );
-  function name_change(f_name_before) {
-    let together2 = string_prefix_change(
-      f_name_before,
-      f_name_prefix_before,
-      f_name_prefix_after,
-    );
-    return together2;
+  function name_change(f_name_old) {
+    let split = string_split_comma(deleted);
+    let f_name_new = function_name_parts_remove(f_name_old, split);
+    return f_name_new;
   }
 }
