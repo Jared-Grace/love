@@ -14,8 +14,7 @@ export function app_a_variable_declaration(a) {
   let kind = object_property_get(node, "kind");
   let k = app_a_keyword_blue_space(parent, kind);
   let keyword = object_property_get(k, "keyword");
-  function lambda19(o) {
-    let choices = [];
+  function lambda19(o, choices) {
     app_a_statement_choices(choices, o, a);
     list_add(choices, v5);
     app_a_functionize_choices_add(choices, a, o);
@@ -23,7 +22,6 @@ export function app_a_variable_declaration(a) {
     let index = object_property_get(v, "index");
     let list = object_property_get(v, "list");
     app_a_paste(choices, a, o, list, index, "above");
-    return choices;
   }
   app_a_overlay_choices(a, keyword, lambda19);
   let declarations = object_property_get(node, "declarations");
