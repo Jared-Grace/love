@@ -6,7 +6,6 @@ export async function app_ceb_bible_gloss_generate_generic(
   book_code,
   fn,
   property_name,
-  language_code,
   chapter_code_specified,
 ) {
   const prompt_system = `You will be given a Bible passage and its context in ${language}.
