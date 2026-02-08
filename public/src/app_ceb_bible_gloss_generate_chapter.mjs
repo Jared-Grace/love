@@ -23,7 +23,6 @@ export async function app_ceb_bible_gloss_generate_chapter(
     book_code,
     fn,
     property_name,
-    language_code,
     chapter_code_specified,
   );
 }
