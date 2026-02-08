@@ -179,14 +179,14 @@ export function app_a_identifier_generic(
       e2,
     });
     async function lambda6() {
-      let ast_call = object_property_get(v2, "ast");
+      let return_name = null;
       if (includes) {
         let v2 = await function_parse_declaration(f_name_call);
-        let return_name = null;
+        let ast_call = object_property_get(v2, "ast");
         return_name = js_return_name(ast_call);
         let assign = js_declare(return_name, init);
       } else {
-        let unique = js_identifier_unique_ast(ast, "r");
+        return_name = js_identifier_unique_ast(ast, "r");
       }
     }
     js_node_type_is_if(e2, "ExpressionStatement", lambda6);
