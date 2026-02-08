@@ -164,7 +164,7 @@ export async function g_sermon_generate_book_generic(
         let size = list_size(bible_folders);
         let a = add_1(size);
         let list = list_new_multiple(a);
-        function lambda(item2) {
+        function each_group(group) {
           let texts = object_property_get(group, "texts");
           log({
             texts,
@@ -176,7 +176,7 @@ export async function g_sermon_generate_book_generic(
           list_add_first(passages_folders, original);
           return passages_folders;
         }
-        let mapped = list_map(list2, lambda);
+        let mapped = list_map(groups, each_group);
         list_add_pair(texts2, texts_add2);
         return passages_folders;
         let user_prompt = list_join(passages_folders, " :: ");
