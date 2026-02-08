@@ -14,10 +14,8 @@ export function app_a_if_statement(a) {
   let k = js_keyword_if();
   let v4 = app_a_keyword_purple_space(parent, k);
   let keyword = object_property_get(v4, "keyword");
-  async function lambda(o) {
-    let choices = [];
+  async function lambda(o, choices) {
     app_a_statement_choices(choices, o, a);
-    return choices;
   }
   app_a_overlay_choices(a, keyword, lambda);
   function lambda19() {
