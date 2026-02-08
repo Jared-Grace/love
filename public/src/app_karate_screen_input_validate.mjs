@@ -11,7 +11,7 @@ import { not } from "../../../love/public/src/not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
-import { string_trim } from "../../../love/public/src/string_trim.mjs";
+import { text_trim } from "../../../love/public/src/text_trim.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
@@ -20,7 +20,7 @@ import { html_element } from "../../../love/public/src/html_element.mjs";
 import { app_karate_style_control_border } from "../../../love/public/src/app_karate_style_control_border.mjs";
 import { app_karate_green_dark } from "../../../karate_code/public/src/app_karate_green_dark.mjs";
 import { app_karate_style_control } from "../../../karate_code/public/src/app_karate_style_control.mjs";
-import { true_is } from "./true_is.mjs";
+import { true_is } from "../../../love/public/src/true_is.mjs";
 export function app_karate_screen_input_validate(
   div,
   div_checks,
@@ -51,7 +51,7 @@ export function app_karate_screen_input_validate(
   each(inputs, lambda2);
   function validate_input(input) {
     let value = html_value_get(input);
-    let trimmed = string_trim(value);
+    let trimmed = text_trim(value);
     html_value_set(input, trimmed);
     let ul = object_property_get(input, "ul");
     html_clear(ul);
