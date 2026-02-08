@@ -16,7 +16,7 @@ Explanations should include any etymology.
 Explanations should be easy to understand. Explain as simply as possible.
 
 Output format:
-[{"${language_code}":"${language} word","gloss":"english gloss","explain":"full explanation"}, ...]
+[{"word":"${language} word","gloss":"english gloss","explain":"full explanation"}, ...]
 
 The ${last} provided as a reference.`;
   const prompt_user_middle =
