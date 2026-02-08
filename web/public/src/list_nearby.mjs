@@ -17,11 +17,11 @@ export function list_nearby(list, nearness) {
       return item2;
     }
     let nearby = list_map(filtered, lambda2);
-    let v3 = {
+    let m = {
       nearby,
       item,
     };
-    return v3;
+    return m;
   }
   let mapped = list_map_index(list, lambda);
   return mapped;
