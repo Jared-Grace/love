@@ -1,3 +1,4 @@
+import { function_copy_replace_first } from "../../../love/public/src/function_copy_replace_first.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_join } from "../../../love/public/src/list_join.mjs";
 import { text_split } from "../../../love/public/src/text_split.mjs";
