@@ -1,7 +1,7 @@
 import { function_name_parts_transform } from "../../../love/public/src/function_name_parts_transform.mjs";
 import { list_replace_all } from "../../../love/public/src/list_replace_all.mjs";
 import { list_slice_end } from "../../../love/public/src/list_slice_end.mjs";
-export function function_name_to_parts_last_generic(count, f_name_before) {
+export function function_name_to_parts_last_generic(f_name_before, count) {
   function lambda(parts) {
     let result = list_slice_end(parts, count);
     list_replace_all(parts, result);
