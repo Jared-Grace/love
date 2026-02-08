@@ -164,17 +164,18 @@ export async function g_sermon_generate_book_generic(
         let size = list_size(bible_folders);
         let a = add_1(size);
         let list = list_new_multiple(a);
-        function lambda(item2) {}
-        let mapped = list_map(list2, lambda);
-        let texts = object_property_get(group, "texts");
-        log({
-          texts,
-          list,
-        });
-        let passages_folders = list_map_join_space(texts);
-        let originals = object_property_get(group, "originals");
-        let original = list_join_space(originals);
-        list_add_first(passages_folders, original);
+        function lambda(item2) {
+          let mapped = list_map(list2, lambda);
+          let texts = object_property_get(group, "texts");
+          log({
+            texts,
+            list,
+          });
+          let passages_folders = list_map_join_space(texts);
+          let originals = object_property_get(group, "originals");
+          let original = list_join_space(originals);
+          list_add_first(passages_folders, original);
+        }
         return passages_folders;
         let user_prompt = list_join(passages_folders, " :: ");
       }
