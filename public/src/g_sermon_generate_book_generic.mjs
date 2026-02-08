@@ -163,10 +163,12 @@ export async function g_sermon_generate_book_generic(
       return passage;
       function prompt_get(groups) {
         let size = list_size(bible_folders);
-        let a12 = add_1(left);
+        let a12 = add_1(size);
         function lambda(la2) {
-          function lambda2(i) {}
-          each_range(count, lambda2);
+          function lambda2(i) {
+            la2([]);
+          }
+          each_range(a12, lambda2);
         }
         let list = list_adder(lambda);
         let texts = object_property_get(group, "texts");
