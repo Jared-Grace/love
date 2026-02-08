@@ -6,6 +6,6 @@ export async function function_rename_prefix_add(f_name_before, prefix) {
     let combined = function_name_combine(other, f_name_before);
     return combined;
   };
-  let v = await function_rename_suffix_add_generic(prefix, v2, f_name_before);
+  let v = await function_rename_suffix_add_generic(f_name_before, prefix, v2);
   return v;
 }
