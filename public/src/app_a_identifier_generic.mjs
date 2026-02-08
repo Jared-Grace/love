@@ -174,6 +174,7 @@ export function app_a_identifier_generic(
     log({
       e2,
     });
+    js_node_type_is_if(node2, type, function lambda6() {});
     function lambda4() {
       const c = {
         shortcut: "q",
