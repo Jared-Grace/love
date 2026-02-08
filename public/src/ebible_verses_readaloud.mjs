@@ -3,7 +3,7 @@ import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_e
 import { ebible_verses_numbers } from "../../../love/public/src/ebible_verses_numbers.mjs";
 import { ebible_verse_new_text } from "../../../love/public/src/ebible_verse_new_text.mjs";
 import { list_map_pairs } from "../../../love/public/src/list_map_pairs.mjs";
-import { string_trim } from "../../../love/public/src/string_trim.mjs";
+import { text_trim } from "../../../love/public/src/text_trim.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_filter_empty_not_is } from "../../../love/public/src/list_filter_empty_not_is.mjs";
 import { list_skip } from "../../../love/public/src/list_skip.mjs";
@@ -33,7 +33,7 @@ export async function ebible_verses_readaloud(bible_folder, chapter_code) {
   let contents = await file_read(only);
   let lines = text_split_newline(contents);
   let skipped = list_skip(lines, 2);
-  let mapped = list_map(skipped, string_trim);
+  let mapped = list_map(skipped, text_trim);
   let filtered = list_filter_empty_not_is(mapped);
   let list = list_map_pairs(filtered, verse_numbers, ebible_verse_new_text);
   return list;
