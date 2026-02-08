@@ -154,11 +154,11 @@ export async function g_sermon_generate_book_generic(
       log_keep(output);
       return passage;
       function prompt_get(group) {
-        function lambda12(t) {
+        function folder_map(t) {
           let joined2 = list_join(t, " :: ");
           return joined2;
         }
-        let mapped5 = list_map(texts, lambda12);
+        let mapped5 = list_map(texts, folder_map);
         let text = list_join(mapped5, " ::: ");
         let original = list_map_property_join_space(group, "originals");
         const user_prompt = original + " :: " + text;
