@@ -97,7 +97,7 @@ export async function g_sermon_generate_book_generic(
   }
   let groups = await list_adder_group_async(adder_groups);
   let nearness = 2;
-  let mapped = list_nearby(groups, nearness);
+  let nearbys = list_nearby(groups, nearness);
   async function each_chapter(chapter_code) {
     let path = local_function_path_json(chapter_code, fn);
     let exists = await file_exists(path);
@@ -110,7 +110,7 @@ export async function g_sermon_generate_book_generic(
       let ne = list_empty_not_is(mapped2);
       return ne;
     }
-    let filtered2 = list_filter(mapped, lambda11);
+    let filtered2 = list_filter(nearbys, lambda11);
     async function lambda5(r) {
       log(r);
       let item3 = object_property_get(r, "item");
