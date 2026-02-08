@@ -1,3 +1,4 @@
+import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier_unique_ast.mjs";
 import { js_return_name } from "../../../love/public/src/js_return_name.mjs";
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
@@ -187,7 +188,8 @@ export function app_a_identifier_generic(
       } else {
         return_name = js_identifier_unique_ast(ast, "r");
       }
-      let assign = js_declare(return_name, node);or
+      let assign = js_declare(return_name, node);
+      object_replace(to, from);
     }
     js_node_type_is_if(e2, "ExpressionStatement", lambda6);
     function lambda4() {
