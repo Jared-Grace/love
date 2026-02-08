@@ -14,6 +14,6 @@ export async function cache_args_lookup() {
   if (not(exists)) {
     await file_write_json(joined, initial);
   }
-  async function lambda(data) {}
   await file_json_transform(joined, lambda);
+  async function lambda(data) {}
 }
