@@ -1,3 +1,4 @@
+import { exit } from "../../../love/public/src/exit.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { string_colon_3 } from "../../../love/public/src/string_colon_3.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
@@ -178,6 +179,7 @@ export async function g_sermon_generate_book_generic(
       "sermons were originally generated using: " +
         g_generate_openai_chat_completions;
       log_keep(prompt_system + " " + prompt_user);
+      exit();
       let output = await g_generate_openai_responses(
         prompt_system,
         prompt_user,
