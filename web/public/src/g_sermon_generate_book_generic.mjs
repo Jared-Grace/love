@@ -1,3 +1,4 @@
+import { add_1 } from "../../../love/public/src/add_1.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -162,6 +163,7 @@ export async function g_sermon_generate_book_generic(
       return passage;
       function prompt_get(groups) {
         let size = list_size(bible_folders);
+        let a12 = add_1(left);
         function lambda(la2) {
           function lambda2(i) {}
           each_range(count, lambda2);
