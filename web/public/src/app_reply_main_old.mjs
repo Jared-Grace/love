@@ -28,7 +28,7 @@ import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { html_on_keydown_body } from "../../../love/public/src/html_on_keydown_body.mjs";
-import { string_take_less_1 } from "../../../love/public/src/string_take_less_1.mjs";
+import { text_take_less_1 } from "../../../love/public/src/text_take_less_1.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
@@ -80,7 +80,7 @@ export async function app_reply_main_old(context) {
   function lambda6(event) {
     let key = object_property_get(event, "key");
     if (equal(key, "Backspace")) {
-      typed = string_take_less_1(typed);
+      typed = text_take_less_1(typed);
     } else {
       typed += key;
     }
