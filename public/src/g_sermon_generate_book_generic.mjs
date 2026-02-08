@@ -170,10 +170,6 @@ export async function g_sermon_generate_book_generic(
           return passages_folders_group;
         }
         let passages_folders = list_map(groups, each_group);
-        log({
-          r,
-          passages_folders,
-        });
         function lambda(item2) {
           list_add_pair(r, item2);
         }
