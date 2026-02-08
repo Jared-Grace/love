@@ -4,6 +4,6 @@ import { function_copy_replace } from "../../../love/public/src/function_copy_re
 export async function first(f_name_old, to) {
   assert_arguments(arguments, 2);
   let from = function_name_to_part_first(f_name_old);
-  let v = await function_copy_replace(f_name_old, from, to);
-  return v;
+  let r = await function_copy_replace(f_name_old, from, to);
+  return r;
 }
