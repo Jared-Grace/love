@@ -4,5 +4,5 @@ export async function sandbox_5() {
   let r = curry_2(string_combine);
   let r2 = r("a");
   let r3 = r2("b");
-  return r2;
+  return r3;
 }
