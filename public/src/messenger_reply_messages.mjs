@@ -4,7 +4,7 @@ import { messenger_reply_messages_me } from "../../../love/public/src/messenger_
 import { messenger_reply_wait } from "../../../love/public/src/messenger_reply_wait.mjs";
 import { messenger_reply_messages_urls_add } from "../../../love/public/src/messenger_reply_messages_urls_add.mjs";
 import { text_empty_is } from "../../../love/public/src/text_empty_is.mjs";
-import { string_trim } from "../../../love/public/src/string_trim.mjs";
+import { text_trim } from "../../../love/public/src/text_trim.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 export async function messenger_reply_messages(page, url) {
@@ -28,7 +28,7 @@ export async function messenger_reply_messages(page, url) {
           continue;
         }
         let message = await c2.evaluate(lambda);
-        message = string_trim(message);
+        message = text_trim(message);
         let e = text_empty_is(message);
         if (e) {
           continue;
