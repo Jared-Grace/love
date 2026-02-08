@@ -1,3 +1,4 @@
+import { each_range } from "../../../love/public/src/each_range.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { lists_to_news } from "../../../love/public/src/lists_to_news.mjs";
 import { bible_interlinear_chapters } from "./bible_interlinear_chapters.mjs";
@@ -159,7 +160,9 @@ export async function g_sermon_generate_book_generic(
       log_keep(output);
       return passage;
       function prompt_get(groups) {
-        function lambda(la2) {}
+        function lambda(la2) {
+          each_range(count, function lambda2(i) {});
+        }
         let list = list_adder(lambda);
         let texts = object_property_get(group, "texts");
         log({
