@@ -4,7 +4,7 @@ import { text_size } from "../../../love/public/src/text_size.mjs";
 import { each_range_from } from "../../../love/public/src/each_range_from.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { text_slice } from "../../../love/public/src/text_slice.mjs";
-export function string_tokens_recursive(
+export function text_tokens_recursive(
   input,
   dictionary,
   index_left,
@@ -22,7 +22,7 @@ export function string_tokens_recursive(
     if (exists) {
       let copy2 = list_copy(current);
       list_add(copy2, sliced);
-      string_tokens_recursive(
+      text_tokens_recursive(
         input,
         dictionary,
         index_right,
