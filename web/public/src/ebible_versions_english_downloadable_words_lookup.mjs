@@ -7,7 +7,7 @@ import { object_property_initialize_empty } from "../../../love/public/src/objec
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { string_transform_lookup } from "../../../love/public/src/string_transform_lookup.mjs";
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
-import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
+import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
 import { text_only_or_space } from "../../../love/public/src/text_only_or_space.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -45,7 +45,7 @@ export async function ebible_versions_english_downloadable_words_lookup() {
         let verse_number = object_property_get(verse, "verse_number");
         let replaced = text_only_or_space(text, symbols_allowed);
         let n = whitespace_normalize(replaced);
-        let split = string_split_space(n);
+        let split = text_split_space(n);
         function lambda5(s) {
           let lower = text_lower_to(s);
           word_add(lower);
