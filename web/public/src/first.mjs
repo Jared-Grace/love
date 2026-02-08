@@ -4,8 +4,8 @@ import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs"
 import { function_copy_replace } from "../../../love/public/src/function_copy_replace.mjs";
 export async function first(f_name_old, to) {
   assert_arguments(arguments, 2);
-  let unaliased = await function_name_unalias_only(f_name_new);
-  let from = function_name_to_part_first(f_name_old);
-  let r = await function_copy_replace(f_name_old, from, to);
+  let unaliased = await function_name_unalias_only(f_name_old);
+  let from = function_name_to_part_first(unaliased);
+  let r = await function_copy_replace(unaliased, from, to);
   return r;
 }
