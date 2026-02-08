@@ -1,5 +1,5 @@
 import { object_property_delete_if_exists } from "../../../love/public/src/object_property_delete_if_exists.mjs";
-import { string_empty_is } from "../../../love/public/src/string_empty_is.mjs";
+import { text_empty_is } from "../../../love/public/src/text_empty_is.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { data_file_update } from "../../../love/public/src/data_file_update.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -34,7 +34,7 @@ export async function file_overwrite_uncached(file_path, contents) {
         let compressed_before = object_property_get(previous, p);
         f = await json_decompress(compressed_before);
       }
-      let e = string_empty_is(contents);
+      let e = text_empty_is(contents);
       if (e) {
         object_property_set(previous, "deleted", true);
       } else {
