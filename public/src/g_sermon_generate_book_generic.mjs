@@ -1,3 +1,5 @@
+import { list_adder_group_async } from "../../../love/public/src/list_adder_group_async.mjs";
+import { add } from "../../../love/public/src/add.mjs";
 import { list_nearby } from "../../../love/public/src/list_nearby.mjs";
 import { ebible_chapters_codes_or_specified } from "../../../love/public/src/ebible_chapters_codes_or_specified.mjs";
 import { g_sermon_generate_book_generic_verses } from "../../../love/public/src/g_sermon_generate_book_generic_verses.mjs";
@@ -20,10 +22,8 @@ import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
-import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { each_index_async } from "../../../love/public/src/each_index_async.mjs";
-import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -49,14 +49,14 @@ export async function g_sermon_generate_book_generic(
     bible_folders,
   );
   let chapters_interlinear = await bible_interlinear_chapters();
-  async function adder_groups(la) {
+  async function adder_groups({ clear, add, end }) {
     async function each_chapter(verses_chapter_folders) {
       let verses_chapter = list_first(verses_chapter_folders);
       let verse_first = list_first(verses_chapter);
       let chapter_code = object_property_get(verse_first, "chapter_code");
       let interlinear = object_property_get(chapters_interlinear, chapter_code);
       let index_last = list_index_last(verses_chapter);
-      let group = [];
+      clear();
       async function each_verse(verse, index) {
         let text = object_property_get(verse, "text");
         let verse_number = object_property_get(verse, "verse_number");
@@ -79,23 +79,22 @@ export async function g_sermon_generate_book_generic(
           );
           original = object_property_get(original_verse, "text");
         }
-        list_add(group, {
+        add({
           original,
           texts,
           verse_number,
           chapter_code,
         });
-        let end = bible_verse_end_is(text);
-        if (end || index === index_last) {
-          la(group);
-          group = [];
+        let ei = bible_verse_end_is(text);
+        if (ei || index === index_last) {
+          end();
         }
       }
       await each_index_async(verses_chapter, each_verse);
     }
     await each_multiple_async(verses_book_folders, each_chapter);
   }
-  let groups = await list_adder_async(adder_groups);
+  let groups = await list_adder_group_async(adder_groups);
   let nearness = 2;
   let mapped = list_nearby(groups, nearness);
   async function each_chapter(chapter_code) {
