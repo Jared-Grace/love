@@ -187,7 +187,7 @@ export function app_a_identifier_generic(
       } else {
         return_name = js_identifier_unique_ast(ast, "r");
       }
-      let assign = js_declare(return_name, node);
+      let assign = js_declare(return_name, node);or
     }
     js_node_type_is_if(e2, "ExpressionStatement", lambda6);
     function lambda4() {
