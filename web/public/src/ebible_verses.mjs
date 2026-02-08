@@ -4,7 +4,7 @@ import { greater_than } from "../../../love/public/src/greater_than.mjs";
 import { list_index_of_all } from "../../../love/public/src/list_index_of_all.mjs";
 import { list_index_of_last } from "../../../love/public/src/list_index_of_last.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
-import { string_replace } from "../../../love/public/src/string_replace.mjs";
+import { text_replace } from "../../../love/public/src/text_replace.mjs";
 import { ebible_verses_before } from "../../../love/public/src/ebible_verses_before.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
@@ -69,7 +69,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   list_reverse(verses_unfiltered);
   function lambda3(item) {
     let value = object_property_get(item, property);
-    let replaced = string_replace(value, "[]", "");
+    let replaced = text_replace(value, "[]", "");
     let n = text_empty_not_is(replaced);
     return n;
   }
