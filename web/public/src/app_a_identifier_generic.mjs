@@ -205,7 +205,8 @@ export function app_a_identifier_generic(
         },
       };
       list_add(choices, c);
-      js_node_type_is_if(node2, type, function lambda7() {});
+      function lambda7() {}
+      js_node_type_is_if(node2, type, lambda7);
     }
     js_node_type_is_if(e2, "ExpressionStatement", lambda6);
     function lambda4() {
