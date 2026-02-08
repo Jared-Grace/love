@@ -2,7 +2,7 @@ import { list_indices_to_items_try } from "../../../love/public/src/list_indices
 import { positive_is_assert } from "../../../love/public/src/positive_is_assert.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { range_from } from "../../../love/public/src/range_from.mjs";
-export function list_nearby(list, nearness) {
+export function list_nearbys(list, nearness) {
   positive_is_assert(nearness);
   function mapper(item, index) {
     let indices = range_from(index - nearness, index + nearness);
