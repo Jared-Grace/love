@@ -32,5 +32,5 @@ export function app_a_statement_choices_add(choices, a, o) {
     },
   };
   let c = app_a_cut(o, a);
-  list_add_multiple(choices, [ab, c]);
+  list_add_multiple(choices, [ab, c, {}]);
 }
