@@ -101,6 +101,10 @@ export async function g_sermon_generate_book_generic(
     await each_multiple_async(verses_book_folders, each_chapter);
   }
   let groups = await list_adder_async(adder);
+  log({
+    groups,
+  });
+  exit();
   let nearness = 2;
   let nearbys = list_nearby(groups, nearness);
   async function each_chapter(chapter_code) {
