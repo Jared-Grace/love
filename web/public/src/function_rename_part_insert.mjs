@@ -3,8 +3,8 @@ import { function_name_to_parts } from "../../../love/public/src/function_name_t
 import { function_rename_part_insert_at } from "../../../love/public/src/function_rename_part_insert_at.mjs";
 export async function function_rename_part_insert(
   f_name_before,
-  part_new,
   part_insert,
+  part_new,
 ) {
   let parts = function_name_to_parts(f_name_before);
   let index = text_index_of(parts, part_insert);
