@@ -22,7 +22,7 @@ export function app_a_paste(
       text: "Paste " + text_suffix,
       fn: async function lambda() {
         list_insert(body_list, index, value);
-        await app_a_function_on_change(overlay_result, a);
+        await app_a_function_on_change(a, overlay_result);
       },
     });
     storage_local_remove_context(context, app_a_paste.name);
