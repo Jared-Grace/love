@@ -9,7 +9,7 @@ import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_l
 import { ebible_versions_english_choices } from "../../../love/public/src/ebible_versions_english_choices.mjs";
 import { app_reply_buttons_refresh } from "../../../love/public/src/app_reply_buttons_refresh.mjs";
 import { html_on_keydown_body } from "../../../love/public/src/html_on_keydown_body.mjs";
-import { string_take_less_1 } from "../../../love/public/src/string_take_less_1.mjs";
+import { text_take_less_1 } from "../../../love/public/src/text_take_less_1.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
@@ -147,7 +147,7 @@ export async function app_reply_main(context) {
     if (equal(key, "Backspace")) {
       let ne = text_empty_not_is(typed);
       if (ne) {
-        typed = string_take_less_1(typed);
+        typed = text_take_less_1(typed);
       }
     } else {
       if (visible_count > 0) {
