@@ -8,11 +8,11 @@ export function list_nearby(list, nearness) {
   positive_is_assert(nearness);
   function mapper(item, index) {
     let r = range_from(index - nearness, index + nearness);
-    function lambda6(index) {
+    function filter(index) {
       let ii = list_index_is(list, index);
       return ii;
     }
-    let filtered = list_filter(r, lambda6);
+    let filtered = list_filter(r, filter);
     let nearby = list_indices_to_items(list, filtered);
     let m = {
       nearby,
