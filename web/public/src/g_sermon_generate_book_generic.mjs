@@ -156,10 +156,7 @@ export async function g_sermon_generate_book_generic(
         prompt_user,
       );
       let v = {
-        verse_numbers,
-        text,
         [property_name]: output,
-        original,
       };
       log_keep(output);
       return v;
