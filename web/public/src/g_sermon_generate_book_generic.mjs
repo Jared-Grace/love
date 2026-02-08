@@ -59,7 +59,7 @@ export async function g_sermon_generate_book_generic(
       async function each_verse(verse, index) {
         let text = object_property_get(verse, "text");
         let verse_number = object_property_get(verse, "verse_number");
-        function lambda10(verses_chapter_folder) {
+        function mapper(verses_chapter_folder) {
           let v = list_find_property(
             verses_chapter_folder,
             "verse_number",
@@ -68,7 +68,7 @@ export async function g_sermon_generate_book_generic(
           let text = object_property_get(v, "text");
           return text;
         }
-        let texts = list_map(verses_chapter_folders, lambda10);
+        let texts = list_map(verses_chapter_folders, mapper);
         let original = null;
         if (verse_number !== "0") {
           let original_verse = list_find_property(
