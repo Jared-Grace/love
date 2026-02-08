@@ -12,12 +12,11 @@ import { js_node_type_is_assert } from "../../../love/public/src/js_node_type_is
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
-import { js_node_atomize_name } from "../../../love/public/src/js_node_atomize_name.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 export async function js_destructure_functionize(ast) {
-  let variable_name = js_node_atomize_name();
+  let variable_name = "r";
   function lambda(v) {
     let node2 = object_property_get(v, "node");
     let properties = object_property_get(node2, "properties");
