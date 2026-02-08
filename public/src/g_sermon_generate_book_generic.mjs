@@ -1,3 +1,4 @@
+import { bible_verse_end_is } from "../../../love/public/src/bible_verse_end_is.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { string_colon_3 } from "../../../love/public/src/string_colon_3.mjs";
@@ -25,9 +26,6 @@ import { range_from } from "../../../love/public/src/range_from.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { each_index_async } from "../../../love/public/src/each_index_async.mjs";
-import { string_ends_with_any } from "../../../love/public/src/string_ends_with_any.mjs";
-import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
-import { bible_verse_trim_right } from "../../../love/public/src/bible_verse_trim_right.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
@@ -111,10 +109,7 @@ export async function g_sermon_generate_book_generic(
           verse_number,
           chapter_code,
         });
-        let trimmed = bible_verse_trim_right(text);
-        let suffixes = ".?!";
-        let split = string_split_empty(suffixes);
-        let end = string_ends_with_any(trimmed, split);
+        let end = bible_verse_end_is(text);
         if (end || index === index_last) {
           la(group);
           group = [];
