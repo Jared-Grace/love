@@ -4,6 +4,6 @@ import { object_property_initialize } from "../../../love/public/src/object_prop
 export async function text_to_uuid_get(id) {
   let joined = text_to_uuid_path();
   let data = await file_json_read(joined);
-  let get = object_property_initialize(data, "get", {});
+    let get = text_to_uuid_get_initialize(data);
   let text = object_property_get(get, id);
 }
