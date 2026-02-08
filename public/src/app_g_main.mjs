@@ -11,7 +11,7 @@ import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs"
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
-import { list_remove_end } from "../../../love/public/src/list_remove_end.mjs";
+import { text_remove_end } from "../../../love/public/src/text_remove_end.mjs";
 import { html_scroll_none } from "../../../love/public/src/html_scroll_none.mjs";
 import { html_z_max } from "../../../love/public/src/html_z_max.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -112,7 +112,7 @@ export async function app_g_main(context) {
   let genders = [male, female];
   let gender_count = list_size(genders);
   let npc_count = 30;
-  let npcs = list_remove_end(coordinates, npc_count);
+  let npcs = text_remove_end(coordinates, npc_count);
   let map = {
     npcs,
     coordinates,
