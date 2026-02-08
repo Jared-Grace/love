@@ -1,3 +1,4 @@
+import { function_copy_replace_first } from "../../../love/public/src/function_copy_replace_first.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { g_sermon_verse_to_text } from "../../../love/public/src/g_sermon_verse_to_text.mjs";
 import { g_sermon_generate_chapter_passages_get } from "../../../love/public/src/g_sermon_generate_chapter_passages_get.mjs";
