@@ -1,9 +1,9 @@
+import { app_a_functions_overlay_generic } from "../../../love/public/src/app_a_functions_overlay_generic.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { app_a_function_name_selected_key } from "../../../love/public/src/app_a_function_name_selected_key.mjs";
 import { app_a_functionize_choices_add } from "../../../love/public/src/app_a_functionize_choices_add.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { data_identifiers_search } from "../../../love/public/src/data_identifiers_search.mjs";
-import { app_a_list_overlay_generic } from "../../../love/public/src/app_a_list_overlay_generic.mjs";
 import { app_a_function_overlay_refresh } from "../../../love/public/src/app_a_function_overlay_refresh.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { function_param_delete } from "../../../love/public/src/function_param_delete.mjs";
@@ -165,12 +165,7 @@ export function app_a_identifier_generic(
             app_a_function_select(context, f_name);
           }
           overlay_close();
-          let r = app_a_list_overlay_generic(
-            a,
-            properties,
-            "function",
-            lambda3,
-          );
+          let r = app_a_functions_overlay_generic(a, properties, lambda3);
         },
       };
       list_add(choices, references);
