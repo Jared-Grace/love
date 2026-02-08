@@ -12,12 +12,12 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 export async function list_adder_group_async() {
   async function adder_groups(la) {
     let group = null;
-    await lambda(clear, group, end);
+    await lambda(start, group, end);
     function end() {
       la(group);
-      clear();
+      start();
     }
-    function clear() {
+    function start() {
       group = [];
     }
   }
