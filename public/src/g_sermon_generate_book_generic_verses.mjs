@@ -16,12 +16,12 @@ export async function g_sermon_generate_book_generic_verses(
     }
     async function each_chapter(chapter_code) {
       let verses = await ebible_verses(bible_folder, chapter_code);
-      function lambda8(v) {
+      function each_verse(v) {
         object_merge(v, {
           chapter_code,
         });
       }
-      each(verses, lambda8);
+      each(verses, each_verse);
       return verses;
     }
     let verses_book = await list_map_unordered_async(chapters, each_chapter);
