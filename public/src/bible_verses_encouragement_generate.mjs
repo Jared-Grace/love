@@ -12,13 +12,13 @@ import { whitespace_normalize } from "../../../love/public/src/whitespace_normal
 import { string_starts_with_space } from "../../../love/public/src/string_starts_with_space.mjs";
 import { string_starts_with_dot } from "../../../love/public/src/string_starts_with_dot.mjs";
 import { string_starts_with_digit } from "../../../love/public/src/string_starts_with_digit.mjs";
-import { string_split_newline } from "../../../love/public/src/string_split_newline.mjs";
+import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
 export async function bible_verses_encouragement_generate() {
   let file_path = folder_user_docs_path("bible_references.hopenation.org.txt");
   let contents = await file_read(file_path);
-  let split = string_split_newline(contents);
+  let split = text_split_newline(contents);
   let fns = [
     string_starts_with_digit,
     string_starts_with_dot,
