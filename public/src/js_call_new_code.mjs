@@ -11,7 +11,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-import { string_split } from "../../../love/public/src/string_split.mjs";
+import { text_split } from "../../../love/public/src/text_split.mjs";
 import { js_identifier_unique } from "../../../love/public/src/js_identifier_unique.mjs";
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
@@ -23,7 +23,7 @@ export async function js_call_new_code(f_name_call, ast) {
   let arg_names = js_declaration_params_names(declaration);
   async function lambda3(arg_name) {
     let arg_code = await js_identifier_unique(existing, arg_name);
-    let split = string_split(arg_name, "$");
+    let split = text_split(arg_name, "$");
     const lambda = "lambda";
     if (list_first(split) === lambda) {
       let skip_count = 1;
