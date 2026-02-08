@@ -1,3 +1,4 @@
+import { uuid } from "../../../love/public/src/uuid.mjs";
 import { object_property_exists_not_assert } from "../../../love/public/src/object_property_exists_not_assert.mjs";
 import { file_json_transform_initialize } from "../../../love/public/src/file_json_transform_initialize.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
@@ -10,5 +11,6 @@ export async function text_to_uuid(text) {
   await file_json_transform_initialize(joined, {}, lambda);
   async function lambda(data) {
     object_property_exists_not_assert(data, text);
+    let u = await uuid();
   }
 }
