@@ -9,7 +9,7 @@ export async function g_sermon_generate_book_generic_verses(
   chapter_code_specified,
   bible_folders,
 ) {
-  async function lambda3(bible_folder) {
+  async function each_folder(bible_folder) {
     let chapters = await ebible_chapters(bible_folder, book_code);
     if (null_not_is(chapter_code_specified)) {
       chapters = [chapter_code_specified];
@@ -31,6 +31,6 @@ export async function g_sermon_generate_book_generic_verses(
     };
     return v5;
   }
-  let r = await list_map_unordered_async(bible_folders, lambda3);
+  let r = await list_map_unordered_async(bible_folders, each_folder);
   return r;
 }
