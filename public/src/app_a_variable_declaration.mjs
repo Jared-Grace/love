@@ -45,7 +45,7 @@ export function app_a_variable_declaration(a) {
         },
       },
     ];
-    let v5 = app_a_call_above(choices, o, a);
+    app_a_call_above(choices, o, a);
     list_add(choices, v5);
     app_a_functionize_choices_add(choices, a, o);
     let v = app_a_node_index(a);
