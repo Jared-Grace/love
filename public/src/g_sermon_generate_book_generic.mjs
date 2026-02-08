@@ -1,3 +1,4 @@
+import { list_size } from "../../../love/public/src/list_size.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { lists_to_news } from "../../../love/public/src/lists_to_news.mjs";
@@ -160,6 +161,7 @@ export async function g_sermon_generate_book_generic(
       log_keep(output);
       return passage;
       function prompt_get(groups) {
+        let size = list_size(list2);
         function lambda(la2) {
           function lambda2(i) {}
           each_range(count, lambda2);
