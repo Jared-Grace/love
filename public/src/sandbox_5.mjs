@@ -1,6 +1,4 @@
-import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
+import { curry_2 } from "../../../love/public/src/curry_2.mjs";
 export async function sandbox_5() {
-  await file_overwrite_json("a/b/c.json", {
-    JESUS: "LORD",
-  });
+  let r = curry_2(fn);
 }
