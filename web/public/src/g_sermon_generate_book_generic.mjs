@@ -106,8 +106,12 @@ export async function g_sermon_generate_book_generic(
     }
     function lambda11(group) {
       let items = object_property_get(group, "item");
-      let mapped2 = list_filter_property(items, "chapter_code", chapter_code);
-      let ne = list_empty_not_is(mapped2);
+      let match_chapter = list_filter_property(
+        items,
+        "chapter_code",
+        chapter_code,
+      );
+      let ne = list_empty_not_is(match_chapter);
       return ne;
     }
     let filtered2 = list_filter(nearbys, lambda11);
