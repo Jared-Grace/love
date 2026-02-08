@@ -17,7 +17,7 @@ export async function js_return_atomize(ast) {
         return;
       }
       let v = js_visit_match(ast, argument);
-      await js_node_atomize(existing, v);
+      await js_node_atomize(existing, v, js_node_atomize_name());
     }
   }
   await each_async(rs, lambda);
