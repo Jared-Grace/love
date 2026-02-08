@@ -11,7 +11,7 @@ import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mj
 export function app_a_statement_choices_add(choices, a, o) {
   let ab = {
     shortcut: "a",
-    text: "Add above",
+    text: "Add call above",
     fn: async function lambda2() {
       let overlay_close = object_property_get(o, "overlay_close");
       overlay_close();
@@ -39,8 +39,8 @@ export function app_a_statement_choices_add(choices, a, o) {
     ab,
     c,
     {
-      shortcut: "a",
-      text: "Add above",
+      shortcut: "r",
+      text: "Add return below",
       fn: async function lambda2() {
         let overlay_close = object_property_get(o, "overlay_close");
         overlay_close();
