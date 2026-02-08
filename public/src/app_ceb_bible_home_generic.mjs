@@ -1,3 +1,4 @@
+import { g_sermon_generate_book_generic_property } from "../../../love/public/src/g_sermon_generate_book_generic_property.mjs";
 import { emoji_arrow_down } from "../../../love/public/src/emoji_arrow_down.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { each_next } from "../../../love/public/src/each_next.mjs";
@@ -35,6 +36,7 @@ export async function app_ceb_bible_home_generic(
   language_code,
   text_use,
 ) {
+  language_code = g_sermon_generate_book_generic_property();
   let v2 = await app_g_bible_home_inner(context, download);
   let passages = object_property_get(v2, "passages");
   each_next(passages, on_passage);
