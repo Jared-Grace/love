@@ -1,3 +1,4 @@
+import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
 import { app_ceb_bible_gloss_generate_generic } from "../../../love/public/src/app_ceb_bible_gloss_generate_generic.mjs";
 import { app_ceb_bible_gloss_generate_code } from "../../../love/public/src/app_ceb_bible_gloss_generate_code.mjs";
 import { ebible_folder_cebuano } from "../../../love/public/src/ebible_folder_cebuano.mjs";
@@ -7,6 +8,7 @@ export async function app_ceb_bible_gloss_generate_chapter(
   chapter_code_specified,
 ) {
   let book_code = "JAS";
+  let book_code2 = ebible_chapter_code_to_book(chapter_code);
   let language = "Cebuano";
   let fn = app_ceb_bible_gloss_generate;
   let property_name = app_ceb_bible_gloss_generate_property();
