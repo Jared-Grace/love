@@ -1,5 +1,5 @@
 import { openai_cmd_py_api } from "../../../love/public/src/openai_cmd_py_api.mjs";
-export async function openai_chat_completions(
+export async function openai_chat_completions_file(
   input_file_path,
   output_file_path,
 ) {
