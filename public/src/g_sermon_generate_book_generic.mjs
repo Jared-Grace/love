@@ -150,12 +150,12 @@ export async function g_sermon_generate_book_generic(
         prompt_system,
         prompt_user,
       );
-      let g_extension = {
+      let passage_extension = {
         [property_name]: output,
       };
-      let to2 = object_merge(g, g_extension);
+      let to2 = object_merge(passage, passage_extension);
       log_keep(output);
-      return g_extension;
+      return passage_extension;
       function prompt_get(group) {
         let texts = list_map_property(group, "texts");
         function lambda12(t) {
