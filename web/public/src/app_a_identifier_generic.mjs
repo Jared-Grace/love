@@ -178,11 +178,11 @@ export function app_a_identifier_generic(
       };
       list_add(choices, references);
     }
-    let e1 = list_get_end_1(stack);
-    log({
-      e1,
-    });
     async function lambda6() {
+      let e1 = list_get_end_1(stack);
+      log({
+        e1,
+      });
       const c = {
         shortcut: "g",
         text: "Assign result",
@@ -206,7 +206,7 @@ export function app_a_identifier_generic(
       };
       list_add(choices, c);
       function lambda7() {}
-      js_node_type_is_if(node2, type, lambda7);
+      js_node_type_is_if(e1, "CallExpression", lambda7);
     }
     js_node_type_is_if(e2, "ExpressionStatement", lambda6);
     function lambda4() {
