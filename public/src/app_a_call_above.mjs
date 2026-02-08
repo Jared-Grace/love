@@ -31,5 +31,4 @@ export function app_a_call_above(choices, o, a) {
     },
   };
   list_add(choices, v5);
-  return v5;
 }
