@@ -138,10 +138,7 @@ export async function g_sermon_generate_book_generic(
       let separator = text_colon_3();
       let joined = list_join(mapped3, separator);
       var v4 = prompt_get(i);
-      let original = object_property_get(v4, "original");
-      let text = object_property_get(v4, "text");
       let user_prompt = object_property_get(v4, "user_prompt");
-      let verse_numbers = list_map_property(i, "verse_number");
       const prompt_user =
         "Here is the context: " +
         joined +
@@ -156,12 +153,12 @@ export async function g_sermon_generate_book_generic(
         prompt_system,
         prompt_user,
       );
-      let v = {
+      let g_extension = {
         [property_name]: output,
       };
-      let to2 = object_merge(to, from);
+      let to2 = object_merge(g, g_extension);
       log_keep(output);
-      return v;
+      return g_extension;
       function prompt_get(group) {
         let texts = list_map_property(group, "texts");
         function lambda12(t) {
