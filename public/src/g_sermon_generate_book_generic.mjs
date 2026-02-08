@@ -70,7 +70,7 @@ export async function g_sermon_generate_book_generic(
           );
           return text;
         }
-        let texts = list_map(verses_chapter_folders, mapper);
+        let texts_add = list_map(verses_chapter_folders, mapper);
         let original = null;
         if (verse_number !== "0") {
           let original_verse = list_find_property(
@@ -82,14 +82,19 @@ export async function g_sermon_generate_book_generic(
         }
         add({
           original,
-          texts,
+          texts: texts_add,
           verse_number,
           chapter_code,
         });
         let ei = bible_verse_end_is(text);
         let index_last = list_index_last(verses_chapter);
         if (ei || index === index_last) {
-          end();
+          la({
+            original,
+            texts: texts_add,
+            verse_number,
+            chapter_code,
+          });
         }
       }
       await each_index_async(verses_chapter, each_verse);
