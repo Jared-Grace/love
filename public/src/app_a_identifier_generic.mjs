@@ -184,10 +184,10 @@ export function app_a_identifier_generic(
         let v2 = await function_parse_declaration(f_name_call);
         let ast_call = object_property_get(v2, "ast");
         return_name = js_return_name(ast_call);
-        let assign = js_declare(return_name, init);
       } else {
         return_name = js_identifier_unique_ast(ast, "r");
       }
+      let assign = js_declare(return_name, node);
     }
     js_node_type_is_if(e2, "ExpressionStatement", lambda6);
     function lambda4() {
