@@ -49,14 +49,11 @@ export function app_a_statement_choices_add(choices, a, o) {
         let v2 = app_a_functions_overlay_generic(a, i_names, on_select);
         let overlay_result = object_property_get(v2, "overlay_result");
         async function on_select(identifier_name) {
-          js_statement_return_add_code(code, body_block);
-          let parsed = await js_call_new_insert(
-            f_name_call,
-            ast,
-            list,
-            index,
-            stack,
-          );
+          let v = app_a_node_index(a);
+          let stack = object_property_get(v, "stack");
+          let index = object_property_get(v, "index");
+          let list = object_property_get(v, "list");
+          js_statement_return_add_code(identifier_name, list);
           await app_a_function_on_change(overlay_result, a);
         }
       },
