@@ -53,7 +53,7 @@ export async function g_sermon_generate_book_generic(
     bible_folders,
   );
   let chapters_interlinear = await bible_interlinear_chapters();
-  async function lambda4(la) {
+  async function adder_groups(la) {
     async function each_chapter(verses_chapter_folders) {
       let verses_chapter = list_first(verses_chapter_folders);
       let verse_first = list_first(verses_chapter);
@@ -99,7 +99,7 @@ export async function g_sermon_generate_book_generic(
     }
     await each_multiple_async(verses_book_folders, each_chapter);
   }
-  let groups = await list_adder_async(lambda4);
+  let groups = await list_adder_async(adder_groups);
   let nearness = 2;
   function lambda(item, index) {
     let r = range_from(index - nearness, index + nearness);
