@@ -1,1 +1,3 @@
-export function list_new() {}
+export function list_new() {
+  return [];
+}
