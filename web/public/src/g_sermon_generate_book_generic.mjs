@@ -159,9 +159,7 @@ export async function g_sermon_generate_book_generic(
     }
     let filtered2 = list_filter(mapped, lambda11);
     async function lambda5(r) {
-      log({
-        r,
-      });
+      log(r);
       let item3 = object_property_get(r, "item");
       let range2 = object_property_get(r, "range");
       let mapped2 = list_map(range2, prompt_get);
