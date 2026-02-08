@@ -3,7 +3,7 @@ import { list_get } from "../../../love/public/src/list_get.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { object_properties_size } from "../../../love/public/src/object_properties_size.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { string_to } from "../../../love/public/src/string_to.mjs";
+import { text_to } from "../../../love/public/src/text_to.mjs";
 import { object_property_get_or } from "../../../love/public/src/object_property_get_or.mjs";
 export function storage_local_mock_enable() {
   let s = {};
@@ -13,7 +13,7 @@ export function storage_local_mock_enable() {
       return value3;
     },
     setItem: function setItem(storage_local_key, v) {
-      v = string_to(v);
+      v = text_to(v);
       object_property_set(s, storage_local_key, v);
     },
     get length() {
