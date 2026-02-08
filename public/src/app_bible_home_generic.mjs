@@ -17,7 +17,7 @@ import { not } from "../../../love/public/src/not.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { window_open } from "../../../love/public/src/window_open.mjs";
 import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
-import { string_letters_only } from "../../../love/public/src/string_letters_only.mjs";
+import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
@@ -129,7 +129,7 @@ export async function app_bible_home_generic(context, lambda$a) {
       html_span_space(top);
       let item_span = html_span_text(top, item);
       function lambda9() {
-        let letters_only = string_letters_only(item);
+        let letters_only = text_letters_only(item);
         window_open("https://www.google.com/search?q=define:" + letters_only);
       }
       html_on_click(item_span, lambda9);
