@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_a_functions_overlay_generic } from "../../../love/public/src/app_a_functions_overlay_generic.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { app_a_function_name_selected_key } from "../../../love/public/src/app_a_function_name_selected_key.mjs";
@@ -170,6 +171,9 @@ export function app_a_identifier_generic(
       };
       list_add(choices, references);
     }
+    log({
+      e2,
+    });
     function lambda4() {
       const c = {
         shortcut: "q",
