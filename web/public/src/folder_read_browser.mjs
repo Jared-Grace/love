@@ -1,7 +1,7 @@
 import { global_function_property_cache } from "../../../love/public/src/global_function_property_cache.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { string_split_first } from "../../../love/public/src/string_split_first.mjs";
+import { text_split_first } from "../../../love/public/src/text_split_first.mjs";
 import { list_map_prefix_without } from "../../../love/public/src/list_map_prefix_without.mjs";
 import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
 import { app_a_files_paths } from "../../../love/public/src/app_a_files_paths.mjs";
@@ -23,7 +23,7 @@ export async function folder_read_browser(path_folder) {
     let filtered = list_filter_starts_with(files_paths, prefix);
     let mapped = list_map_prefix_without(filtered, prefix);
     function lambda(item) {
-      let first = string_split_first(item, s);
+      let first = text_split_first(item, s);
       return first;
     }
     let mapped2 = list_map(mapped, lambda);
