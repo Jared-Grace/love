@@ -1,3 +1,4 @@
+import { list_new } from "../../../love/public/src/list_new.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { list_find_property_get } from "../../../love/public/src/list_find_property_get.mjs";
 import { add } from "../../../love/public/src/add.mjs";
@@ -51,8 +52,7 @@ export async function g_sermon_generate_book_generic(
   );
   let chapters_interlinear = await bible_interlinear_chapters();
   async function adder(la) {
-    function lambda(item) {}
-    let mapped = list_map(list, lambda);
+    let texts = list_map(bible_folders, list_new);
     async function each_chapter(verses_chapter_folders) {
       let verses_chapter = list_first(verses_chapter_folders);
       let verse_first = list_first(verses_chapter);
