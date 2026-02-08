@@ -42,13 +42,13 @@ export async function g_sermon_generate_book_generic(
   chapter_code_specified,
 ) {
   let chapters_interlinear = await bible_interlinear_chapters();
-  let v = await g_sermon_generate_book_generic_verses(
+  let r = await g_sermon_generate_book_generic_verses(
     book_code,
     chapter_code_specified,
     bible_folders,
   );
-  let verses_book_folders = list_map_property(v, "verses_book");
-  let chapters_folders = list_map_property(v, "chapters");
+  let verses_book_folders = list_map_property(r, "verses_book");
+  let chapters_folders = list_map_property(r, "chapters");
   let chapters = list_first(chapters_folders);
   async function lambda4(la) {
     async function each_chapter(verses_chapter_folders) {
