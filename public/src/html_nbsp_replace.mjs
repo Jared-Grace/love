@@ -1,5 +1,5 @@
-import { string_replace } from "../../../love/public/src/string_replace.mjs";
+import { text_replace } from "../../../love/public/src/text_replace.mjs";
 export function html_nbsp_replace(s) {
-  let replaced = string_replace(s, " ", "&nbsp;");
+  let replaced = text_replace(s, " ", "&nbsp;");
   return replaced;
 }
