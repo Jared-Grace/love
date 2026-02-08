@@ -14,7 +14,7 @@ import { ebible_chapters_codes_or_specified } from "../../../love/public/src/ebi
 import { ebible_folders_chapters_codes_to_verses } from "../../../love/public/src/ebible_folders_chapters_codes_to_verses.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
-import { g_generate_openai_chat_completions } from "../../../love/public/src/g_generate_openai_chat_completions.mjs";
+import { openai_chat_completions } from "../../../love/public/src/openai_chat_completions.mjs";
 import { openai_responses } from "../../../love/public/src/openai_responses.mjs";
 import { g_sermon_generate } from "../../../love/public/src/g_sermon_generate.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -143,7 +143,7 @@ export async function g_sermon_generate_book_generic(
         user_prompt_after;
       g_sermon_generate +
         "sermons were originally generated using: " +
-        g_generate_openai_chat_completions;
+        openai_chat_completions;
       log_keep(prompt_system + " " + prompt_user);
       let output = await openai_responses(prompt_system, prompt_user);
       let passage_extension = {
