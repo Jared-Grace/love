@@ -165,7 +165,6 @@ export async function g_sermon_generate_book_generic(
         let a = add_1(size);
         let list = list_new_multiple(a);
         function lambda(item2) {
-          let mapped = list_map(list2, lambda);
           let texts = object_property_get(group, "texts");
           log({
             texts,
@@ -176,6 +175,8 @@ export async function g_sermon_generate_book_generic(
           let original = list_join_space(originals);
           list_add_first(passages_folders, original);
         }
+        let mapped = list_map(list2, lambda);
+        list_add_pair(texts2, texts_add2);
         return passages_folders;
         let user_prompt = list_join(passages_folders, " :: ");
       }
