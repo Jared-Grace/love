@@ -1,7 +1,6 @@
+import { list_new_multiple } from "../../../love/public/src/list_new_multiple.mjs";
 import { add_1 } from "../../../love/public/src/add_1.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
-import { each_range } from "../../../love/public/src/each_range.mjs";
-import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { lists_to_news } from "../../../love/public/src/lists_to_news.mjs";
 import { bible_interlinear_chapters } from "./bible_interlinear_chapters.mjs";
 import { bible_verse_end_is } from "./bible_verse_end_is.mjs";
@@ -164,16 +163,11 @@ export async function g_sermon_generate_book_generic(
       function prompt_get(groups) {
         let size = list_size(bible_folders);
         let a12 = add_1(size);
-        function lambda(la2) {
-          function lambda2(i) {
-            la2([]);
-          }
-          each_range(a12, lambda2);
-        }
-        let list = list_adder(lambda);
+        let list = list_new_multiple(a12);
         let texts = object_property_get(group, "texts");
         log({
           texts,
+          list,
         });
         let passages_folders = list_map_join_space(texts);
         let originals = object_property_get(group, "originals");
