@@ -6,7 +6,7 @@ import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
 import { list_skip } from "../../../love/public/src/list_skip.mjs";
-import { string_empty_not_is } from "../../../love/public/src/string_empty_not_is.mjs";
+import { text_empty_not_is } from "../../../love/public/src/text_empty_not_is.mjs";
 import { string_split } from "../../../love/public/src/string_split.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_visit_type_each_async } from "../../../love/public/src/js_visit_type_each_async.mjs";
@@ -35,7 +35,7 @@ export async function js_dollar(ast) {
       let v2 = list_first_second(split);
       let second = object_property_get(v2, "second");
       let first = object_property_get(v2, "first");
-      let ne = string_empty_not_is(first);
+      let ne = text_empty_not_is(first);
       if (ne) {
         ("if inside this block, then begins with non-$ - we only process beginning with $");
         return;
