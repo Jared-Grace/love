@@ -4,12 +4,12 @@ import { function_run_unalias } from "../../../love/public/src/function_run_unal
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { task_function_name_part } from "../../../love/public/src/task_function_name_part.mjs";
-import { list_nearby } from "../../../love/public/src/list_nearby.mjs";
+import { functions_search } from "../../../love/public/src/functions_search.mjs";
 export async function tasks_run() {
   let result2 = task_function_name_part();
   let separator = function_name_separator();
   let search = text_pad(result2, separator);
-  let result = await list_nearby(search);
+  let result = await functions_search(search);
   let properties = object_properties(result);
   async function lambda(item) {
     let result3 = await function_run_unalias(item, []);
