@@ -91,7 +91,6 @@ export async function g_sermon_generate_book_generic(
         }
         list_add(originals, original);
         list_add_pair(texts, texts_add);
-        list_add(texts, texts_add);
         list_add(verse_numbers, verse_number);
         let ei = bible_verse_end_is(text);
         let index_last = list_index_last(verses_chapter);
