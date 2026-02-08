@@ -161,7 +161,8 @@ export async function g_sermon_generate_book_generic(
       return passage;
       function prompt_get(groups) {
         function lambda(la2) {
-          each_range(count, function lambda2(i) {});
+          function lambda2(i) {}
+          each_range(count, lambda2);
         }
         let list = list_adder(lambda);
         let texts = object_property_get(group, "texts");
