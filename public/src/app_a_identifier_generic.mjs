@@ -197,7 +197,7 @@ export function app_a_identifier_generic(
               let property_name = js_return_identifier_name();
               return_name = js_identifier_unique_ast(ast, property_name);
             }
-            let assign = js_declare(return_name, node);
+            let assign = js_declare(return_name, e1);
             log({
               assign,
             });
