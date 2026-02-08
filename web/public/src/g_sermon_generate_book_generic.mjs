@@ -1,4 +1,4 @@
-
+import { lists_to_news } from "../../../love/public/src/lists_to_news.mjs";
 import { bible_interlinear_chapters } from "./bible_interlinear_chapters.mjs";
 import { bible_verse_end_is } from "./bible_verse_end_is.mjs";
 import { each_async } from "./each_async.mjs";
@@ -26,7 +26,6 @@ import { list_join_space } from "./list_join_space.mjs";
 import { list_map } from "./list_map.mjs";
 import { list_map_join_space } from "./list_map_join_space.mjs";
 import { list_nearby } from "./list_nearby.mjs";
-import { list_new } from "./list_new.mjs";
 import { local_function_path_json } from "./local_function_path_json.mjs";
 import { log } from "./log.mjs";
 import { log_keep } from "./log_keep.mjs";
@@ -34,7 +33,6 @@ import { object_merge } from "./object_merge.mjs";
 import { object_property_exists } from "./object_property_exists.mjs";
 import { object_property_get } from "./object_property_get.mjs";
 import { text_colon_3 } from "./text_colon_3.mjs";
-
 export async function g_sermon_generate_book_generic(
   bible_folders,
   book_code,
@@ -42,17 +40,17 @@ export async function g_sermon_generate_book_generic(
   prompt_user_middle,
   prompt_system,
   property_name,
-  chapter_code_specified
+  chapter_code_specified,
 ) {
   let bible_folder_first = list_first(bible_folders);
   let chapters_codes = await ebible_chapters_codes_or_specified(
     bible_folder_first,
     book_code,
-    chapter_code_specified
+    chapter_code_specified,
   );
   let verses_book_folders = await ebible_folders_chapters_codes_to_verses(
     chapters_codes,
-    bible_folders
+    bible_folders,
   );
   let chapters_interlinear = await bible_interlinear_chapters();
   async function adder(la) {
@@ -78,7 +76,7 @@ export async function g_sermon_generate_book_generic(
             verses_chapter_folder,
             "verse_number",
             verse_number,
-            "text"
+            "text",
           );
           return text;
         }
@@ -88,7 +86,7 @@ export async function g_sermon_generate_book_generic(
           let original_verse = list_find_property(
             interlinear,
             "verse_number",
-            verse_number
+            verse_number,
           );
           original = object_property_get(original_verse, "text");
         }
@@ -125,7 +123,7 @@ export async function g_sermon_generate_book_generic(
       let match_chapter = object_property_exists(
         item,
         "chapter_code",
-        chapter_code
+        chapter_code,
       );
       return match_chapter;
     }
@@ -138,7 +136,8 @@ export async function g_sermon_generate_book_generic(
       let separator = text_colon_3();
       let joined = list_join(mapped3, separator);
       let user_prompt = prompt_get([passage]);
-      const prompt_user = "Here is the context: " +
+      const prompt_user =
+        "Here is the context: " +
         joined +
         " :::: " +
         prompt_user_middle +
@@ -150,7 +149,7 @@ export async function g_sermon_generate_book_generic(
       exit();
       let output = await g_generate_openai_responses(
         prompt_system,
-        prompt_user
+        prompt_user,
       );
       let passage_extension = {
         ["generated"]: output,
@@ -182,7 +181,3 @@ export async function g_sermon_generate_book_generic(
   }
   await each_async(chapters_codes, each_chapter);
 }
-function lists_to_news(bible_folders) {
-  return list_map(bible_folders, list_new);
-}
-
