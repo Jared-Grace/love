@@ -50,8 +50,6 @@ export function app_a_statement_choices_add(choices, a, o) {
         let overlay_result = object_property_get(v2, "overlay_result");
         async function on_select(identifier_name) {
           let v = app_a_node_index(a);
-          let stack = object_property_get(v, "stack");
-          let index = object_property_get(v, "index");
           let list = object_property_get(v, "list");
           js_statement_return_add_code(identifier_name, list);
           await app_a_function_on_change(overlay_result, a);
