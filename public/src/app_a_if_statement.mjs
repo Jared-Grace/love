@@ -15,7 +15,7 @@ export function app_a_if_statement(a) {
   let v4 = app_a_keyword_purple_space(parent, k);
   let keyword = object_property_get(v4, "keyword");
   async function lambda(o) {
-    let choices = [v3];
+    let choices = [];
     app_a_statement_choices(choices, o, a);
     return choices;
   }
