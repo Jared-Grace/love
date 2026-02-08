@@ -1,7 +1,7 @@
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
 import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
-export function string_first_transform(s, transform) {
+export function text_first_transform(s, transform) {
   let split = string_split_empty(s);
   let { first, remaining } = list_first_remaining(split);
   let lower = transform(first);
