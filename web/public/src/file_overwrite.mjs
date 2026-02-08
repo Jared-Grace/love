@@ -3,9 +3,9 @@ import { file_overwrite_uncached } from "../../../love/public/src/file_overwrite
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { file_read_cached } from "../../../love/public/src/file_read_cached.mjs";
 import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
-import { string_is_assert } from "../../../love/public/src/string_is_assert.mjs";
+import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 export async function file_overwrite(file_path, contents) {
-  string_is_assert(contents);
+  text_is_assert(contents);
   let exists = global_function_property_exists(file_read_cached, file_path);
   if (exists) {
     global_function_property_set(file_read_cached, file_path, contents);

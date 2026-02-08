@@ -1,4 +1,4 @@
-import { string_is_assert } from "../../../love/public/src/string_is_assert.mjs";
+import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -10,7 +10,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 export function app_shared_flow(context, screens, before_or_after, find) {
   let current = storage_local_get_context(context, "screen");
-  string_is_assert(current);
+  text_is_assert(current);
   function lambda(item2) {
     let fn2 = object_property_get(item2, "fn");
     let self = object_property_get(fn2, "name");
