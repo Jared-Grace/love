@@ -175,7 +175,8 @@ export async function g_sermon_generate_book_generic(
           r,
           passages_folders,
         });
-        each(list, function lambda(item2) {});
+        function lambda(item2) {}
+        each(list, lambda);
         list_add_pair(r, passages_folders);
         let mapped = list_map_join_space(r);
         let user_prompt = list_join(mapped, " :: ");
