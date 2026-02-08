@@ -6,7 +6,7 @@ import { app_g_button_green } from "../../../love/public/src/app_g_button_green.
 import { g_random_dot_bang } from "../../../love/public/src/g_random_dot_bang.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { string_random_or_empty } from "../../../love/public/src/string_random_or_empty.mjs";
-import { string_first_upper_to } from "../../../love/public/src/string_first_upper_to.mjs";
+import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -25,11 +25,11 @@ export function app_g_conversation(
   object_property_set(prayer, "conversation", false);
   let npc = list_single(npcs_matched);
   const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
-  let v = string_first_upper_to(greet);
+  let v = text_first_upper_to(greet);
   let s2 = list_random_item(["nice", "great", "good"]);
   const a = list_random_item(["it's", "it is"]) + " ";
   let meet_message =
-    " " + string_first_upper_to(string_random_or_empty(a) + s2 + " to ");
+    " " + text_first_upper_to(string_random_or_empty(a) + s2 + " to ");
   let meet = object_property_get(npc, "meet");
   if (not(meet)) {
     object_property_set(npc, "meet", true);
