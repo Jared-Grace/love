@@ -20,7 +20,6 @@ import { file_overwrite_json } from "../../../love/public/src/file_overwrite_jso
 import { list_map_property_join_space } from "../../../love/public/src/list_map_property_join_space.mjs";
 import { g_generate_openai_chat_completions } from "../../../love/public/src/g_generate_openai_chat_completions.mjs";
 import { list_join } from "../../../love/public/src/list_join.mjs";
-import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -155,7 +154,6 @@ export async function g_sermon_generate_book_generic(
       log_keep(output);
       return passage;
       function prompt_get(group) {
-        let texts = list_map_property(group, "texts");
         function lambda12(t) {
           let joined2 = list_join(t, " :: ");
           return joined2;
