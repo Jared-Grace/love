@@ -10,13 +10,13 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { list_first } from "../../../love/public/src/list_first.mjs";
 export async function list_adder_group_async() {
   async function adder_groups(la) {
+    let group = null;
     async function each_chapter(verses_chapter_folders) {
       let verses_chapter = list_first(verses_chapter_folders);
       let verse_first = list_first(verses_chapter);
       let chapter_code = object_property_get(verse_first, "chapter_code");
       let interlinear = object_property_get(chapters_interlinear, chapter_code);
       let index_last = list_index_last(verses_chapter);
-      let group = null;
       group = [];
       async function each_verse(verse, index) {
         let text = object_property_get(verse, "text");
