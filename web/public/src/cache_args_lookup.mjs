@@ -7,6 +7,6 @@ export async function cache_args_lookup() {
   let f_path = folder_user_storage_function_path(cache_args_lookup);
   let joined = path_join([f_path, file_name]);
   let initial = {};
-  await file_json_transform_initialize(exists, joined, initial, lambda);
+  await file_json_transform_initialize(joined, initial, lambda);
   async function lambda(data) {}
 }
