@@ -1,7 +1,7 @@
-import { string_replace } from "../../../love/public/src/string_replace.mjs";
+import { text_replace } from "../../../love/public/src/text_replace.mjs";
 import { function_rename } from "../../../love/public/src/function_rename.mjs";
 export async function function_rename_replace(f_name_before, from, to) {
-  let f_name_after = string_replace(f_name_before, from, to);
+  let f_name_after = text_replace(f_name_before, from, to);
   let v = await function_rename(f_name_before, f_name_after);
   return v;
 }
