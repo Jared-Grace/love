@@ -21,7 +21,7 @@ export async function function_list_generate(f_generate, list) {
     let body_block = js_declaration_single_block_body(ast);
     list_empty(body_block);
     let code = json_to(list);
-    js_statement_return_insert_code(code, body_block);
+    js_statement_return_insert_code(code, body_block, index);
   }
   let output = await function_transform(f_name, lambda3);
   await function_open(f_name);
