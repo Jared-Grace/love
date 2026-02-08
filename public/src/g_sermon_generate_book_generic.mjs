@@ -122,10 +122,9 @@ export async function g_sermon_generate_book_generic(
         group,
       });
       exit();
-      let items = object_property_get(group, "item");
-      let exists2 = object_property_exists(object, property_name2);
-      let match_chapter = list_filter_property(
-        items,
+      let item = object_property_get(group, "item");
+      let match_chapter = object_property_exists(
+        item,
         "chapter_code",
         chapter_code,
       );
