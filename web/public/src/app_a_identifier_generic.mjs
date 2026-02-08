@@ -45,7 +45,7 @@ export function app_a_identifier_generic(
   lines_multiple,
   replace,
 ) {
-  async function on_click(o3) {
+  async function choices_get(o3,choices) {
     let node = object_property_get(a, "node");
     let ast = object_property_get(a, "ast");
     let v_match = js_visit_match_first(ast, node);
@@ -91,6 +91,7 @@ export function app_a_identifier_generic(
       },
     };
     let to2 = object_merge(change, c);
+    lam
     let choices = [
       {
         shortcut: "c",
@@ -183,7 +184,6 @@ export function app_a_identifier_generic(
       list_add(choices, c);
     }
     js_node_type_is_if(e2, "FunctionDeclaration", lambda4);
-    return choices;
   }
-  app_a_overlay_choices(a, span, on_click);
+  app_a_overlay_choices(a, span, choices_get);
 }
