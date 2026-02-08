@@ -12,11 +12,8 @@ export async function text_to_uuid(text) {
   let joined = path_join([f_path, file_name]);
   await file_json_transform_initialize(joined, {}, lambda);
   async function lambda(data) {
-    let value = object_property_initialize(
-      object,
-      property_name,
-      value_initial,
-    );
+    let get = object_property_initialize(data, "get", {});
+    let set = object_property_initialize(data, "set", {});
     object_property_exists_not_assert(data, text);
     let u = await uuid();
     object_property_set(data, text, u);
