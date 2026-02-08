@@ -2,10 +2,10 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
-import { string_is } from "../../../love/public/src/string_is.mjs";
+import { text_is } from "../../../love/public/src/text_is.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { js_visit_types } from "./js_visit_types.mjs";
+import { js_visit_types } from "../../../love/public/src/js_visit_types.mjs";
 export function js_strings(ast) {
   function lambda2(la) {
     function lambda(v) {
@@ -29,7 +29,7 @@ export function js_strings(ast) {
         value = object_property_get(node, "value");
       }
       js_node_type_is_if(node, "Literal", lambda4);
-      let si2 = string_is(value);
+      let si2 = text_is(value);
       if (si2) {
         la(value);
       }
