@@ -1,4 +1,4 @@
-import { string_trim_right } from "../../../love/public/src/string_trim_right.mjs";
+import { text_trim_right } from "../../../love/public/src/text_trim_right.mjs";
 import { text_ends_with_any } from "../../../love/public/src/text_ends_with_any.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 export function bible_verse_trim_right(text) {
@@ -8,6 +8,6 @@ export function bible_verse_trim_right(text) {
     let ew = text_ends_with_any(s2, split);
     return ew;
   }
-  let trimmed = string_trim_right(lambda3, text);
+  let trimmed = text_trim_right(lambda3, text);
   return trimmed;
 }
