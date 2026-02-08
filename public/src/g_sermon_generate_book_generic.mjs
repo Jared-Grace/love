@@ -35,7 +35,6 @@ import { log_keep } from "./log_keep.mjs";
 import { object_merge } from "./object_merge.mjs";
 import { object_property_exists } from "./object_property_exists.mjs";
 import { object_property_get } from "./object_property_get.mjs";
-import { text_colon_3 } from "./text_colon_3.mjs";
 export async function g_sermon_generate_book_generic(
   bible_folders,
   book_code,
@@ -135,16 +134,14 @@ export async function g_sermon_generate_book_generic(
       log(g);
       let passage = object_property_get(g, "item");
       let n = object_property_get(g, "nearby");
-      let mapped3 = prompt_get(n);
-      let separator = text_colon_3();
-      let joined = list_join(mapped3, separator);
-      let user_prompt = prompt_get([passage]);
+      let user_prompt_before = prompt_get(n);
+      let user_prompt_after = prompt_get([passage]);
       const prompt_user =
         "Here is the context: " +
         joined +
         " :::: " +
         prompt_user_middle +
-        user_prompt;
+        user_prompt_after;
       g_sermon_generate +
         "sermons were originally generated using: " +
         g_generate_openai_chat_completions;
