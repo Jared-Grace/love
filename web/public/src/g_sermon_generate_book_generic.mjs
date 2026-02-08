@@ -56,7 +56,6 @@ export async function g_sermon_generate_book_generic(
       let verse_first = list_first(verses_chapter);
       let chapter_code = object_property_get(verse_first, "chapter_code");
       let interlinear = object_property_get(chapters_interlinear, chapter_code);
-      let index_last = list_index_last(verses_chapter);
       async function each_verse(verse, index) {
         let text = object_property_get(verse, "text");
         let verse_number = object_property_get(verse, "verse_number");
@@ -86,6 +85,7 @@ export async function g_sermon_generate_book_generic(
           chapter_code,
         });
         let ei = bible_verse_end_is(text);
+        let index_last = list_index_last(verses_chapter);
         if (ei || index === index_last) {
           end();
         }
