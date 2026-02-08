@@ -6,21 +6,21 @@ import { integer_random } from "../../../love/public/src/integer_random.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { trinity_name_prayer } from "../../../love/public/src/trinity_name_prayer.mjs";
-import { string_random_or_empty } from "../../../love/public/src/string_random_or_empty.mjs";
+import { text_random_or_empty } from "../../../love/public/src/text_random_or_empty.mjs";
 export function app_g_doxology() {
   function jesus_christ() {
-    let v = "Jesus" + string_random_or_empty(" Christ");
+    let v = "Jesus" + text_random_or_empty(" Christ");
     return v;
   }
   let t = trinity_name_prayer();
   const believe = list_random_item([
-    string_random_or_empty("Now ") +
+    text_random_or_empty("Now ") +
       "I believe" +
-      string_random_or_empty(
+      text_random_or_empty(
         ", in " +
           jesus_christ() +
-          string_random_or_empty(
-            ", the Son of" + string_random_or_empty(" the living") + " God",
+          text_random_or_empty(
+            ", the Son of" + text_random_or_empty(" the living") + " God",
           ),
       ),
     "I " +
@@ -28,26 +28,24 @@ export function app_g_doxology() {
       " " +
       jesus_christ() +
       " as my" +
-      string_random_or_empty(" risen") +
+      text_random_or_empty(" risen") +
       " Lord and Savior",
   ]);
   const blessing =
     "God bless you " +
-    string_random_or_empty(
+    text_random_or_empty(
       " in the name of " + list_random_item(["Jesus", t]) + " ",
     ) +
     "amen";
   const choices = [
     "Thank you" +
-      string_random_or_empty(
-        " very much" + string_random_or_empty(" from the bottom of my heart"),
+      text_random_or_empty(
+        " very much" + text_random_or_empty(" from the bottom of my heart"),
       ),
-    "Glory to God" + string_random_or_empty(" in the highest"),
+    "Glory to God" + text_random_or_empty(" in the highest"),
     "Praise God" +
-      string_random_or_empty(
-        ", the Father of " +
-          string_random_or_empty("our Lord ") +
-          jesus_christ(),
+      text_random_or_empty(
+        ", the Father of " + text_random_or_empty("our Lord ") + jesus_christ(),
       ),
     "Hallelujah",
     "Amen",
