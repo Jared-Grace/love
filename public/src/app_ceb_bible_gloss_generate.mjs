@@ -3,8 +3,8 @@ import { app_ceb_bible_gloss_generate_generic } from "../../../love/public/src/a
 import { ebible_folder_cebuano } from "../../../love/public/src/ebible_folder_cebuano.mjs";
 import { app_ceb_bible_gloss_generate_property } from "../../../love/public/src/app_ceb_bible_gloss_generate_property.mjs";
 export async function app_ceb_bible_gloss_generate() {
-  let book_code = "JAS";
   let chapter_code_specified = "JAS03";
+  let book_code = "JAS";
   let language = "Cebuano";
   let fn = app_ceb_bible_gloss_generate;
   let property_name = app_ceb_bible_gloss_generate_property();
