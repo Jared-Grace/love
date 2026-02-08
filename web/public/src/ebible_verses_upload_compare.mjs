@@ -1,4 +1,4 @@
-import { string_replace } from "../../../love/public/src/string_replace.mjs";
+import { text_replace } from "../../../love/public/src/text_replace.mjs";
 import { object_property_change } from "../../../love/public/src/object_property_change.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { json_equal_not } from "../../../love/public/src/json_equal_not.mjs";
@@ -16,7 +16,7 @@ export async function ebible_verses_upload_compare(bible_folder) {
     let verses = await ebible_verses(bible_folder, chapter_code);
     function lambda2(a, b) {
       function lambda(t) {
-        let replaced = string_replace(t, "’ ”", "’”");
+        let replaced = text_replace(t, "’ ”", "’”");
         return replaced;
       }
       let text = object_property_change(b, "text", lambda);
