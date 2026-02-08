@@ -2,7 +2,7 @@ import { app_a_function_on_change } from "../../../love/public/src/app_a_functio
 import { js_call_new_insert } from "../../../love/public/src/js_call_new_insert.mjs";
 import { app_a_functions_overlay } from "../../../love/public/src/app_a_functions_overlay.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { app_a_statement } from "../../../love/public/src/app_a_statement.mjs";
+import { app_a_statement_choices } from "../../../love/public/src/app_a_statement_choices.mjs";
 import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs";
 import { app_a_paste } from "../../../love/public/src/app_a_paste.mjs";
 import { app_a_functionize_choices_add } from "../../../love/public/src/app_a_functionize_choices_add.mjs";
@@ -45,7 +45,7 @@ export function app_a_variable_declaration(a) {
         },
       },
     ];
-    app_a_statement(choices, o, a);
+    app_a_statement_choices(choices, o, a);
     list_add(choices, v5);
     app_a_functionize_choices_add(choices, a, o);
     let v = app_a_node_index(a);
