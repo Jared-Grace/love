@@ -1,4 +1,3 @@
-import { s } from "../../../love/public/src/s.mjs";
 import { ebible_chapters_codes_or_specified } from "../../../love/public/src/ebible_chapters_codes_or_specified.mjs";
 import { g_sermon_generate_book_generic_verses } from "../../../love/public/src/g_sermon_generate_book_generic_verses.mjs";
 import { bible_verse_end_is } from "../../../love/public/src/bible_verse_end_is.mjs";
