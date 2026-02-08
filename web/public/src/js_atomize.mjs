@@ -11,7 +11,7 @@ export async function js_atomize(ast) {
     let { stack } = v;
     const stack1 = list_get_end_1(stack);
     if (list_is(stack1)) {
-      await js_node_atomize(existing, v);
+      await js_node_atomize(existing, v, js_node_atomize_name());
     }
   }
   await each_async(ces, lambda);
