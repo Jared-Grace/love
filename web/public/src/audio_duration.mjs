@@ -2,7 +2,7 @@ import { text_slice } from "../../../love/public/src/text_slice.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { list_find_starts_with } from "../../../love/public/src/list_find_starts_with.mjs";
 import { text_size } from "../../../love/public/src/text_size.mjs";
-import { string_split_newline } from "../../../love/public/src/string_split_newline.mjs";
+import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 export async function audio_duration(joined_audio) {
@@ -11,7 +11,7 @@ export async function audio_duration(joined_audio) {
     let stdout = await command_line("ffmpeg -i " + joined_audio);
   } catch (e) {
     let stderr = object_property_get(e, "stderr");
-    let lines = string_split_newline(stderr);
+    let lines = text_split_newline(stderr);
     const prefix = "  Duration: ";
     let size = text_size(prefix);
     let found = list_find_starts_with(lines, prefix);
