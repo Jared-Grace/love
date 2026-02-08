@@ -36,7 +36,7 @@ import { app_reply_pray } from "../../../love/public/src/app_reply_pray.mjs";
 import { emoji_family } from "../../../love/public/src/emoji_family.mjs";
 import { emoji_hands_raising } from "../../../love/public/src/emoji_hands_raising.mjs";
 import { emoji_church } from "../../../love/public/src/emoji_church.mjs";
-import { string_lord_bless_your } from "../../../love/public/src/string_lord_bless_your.mjs";
+import { text_lord_bless_your } from "../../../love/public/src/text_lord_bless_your.mjs";
 import { emoji_phone } from "../../../love/public/src/emoji_phone.mjs";
 import { emoji_sleep_face } from "../../../love/public/src/emoji_sleep_face.mjs";
 import { emoji_sleep_z } from "../../../love/public/src/emoji_sleep_z.mjs";
@@ -112,13 +112,13 @@ export function app_reply_choices() {
     {
       text: emoji_pray() + " Church",
       response:
-        emoji_pray() + string_lord_bless_your() + "church " + emoji_church(),
+        emoji_pray() + text_lord_bless_your() + "church " + emoji_church(),
     },
     education,
     {
       text: emoji_pray() + " Family",
       response:
-        emoji_pray() + string_lord_bless_your() + "family " + emoji_family(),
+        emoji_pray() + text_lord_bless_your() + "family " + emoji_family(),
     },
     {
       text: emoji_pray() + " Future",
@@ -312,7 +312,7 @@ export function app_reply_choices() {
         emoji_pray() +
         emoji_sleep_z() +
         " " +
-        string_lord_bless_your() +
+        text_lord_bless_your() +
         "sleep, make your sleep sweet and peaceful, protect you from demons, bad dreams and all harm, and make you wake up feeling refreshed. " +
         emoji_sleep_face(),
     },
