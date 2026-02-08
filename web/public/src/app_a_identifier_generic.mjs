@@ -1,3 +1,4 @@
+import { js_return_name } from "../../../love/public/src/js_return_name.mjs";
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -180,7 +181,9 @@ export function app_a_identifier_generic(
       if (includes) {
         let v2 = await function_parse_declaration(f_name_call);
         let ast_call = object_property_get(v2, "ast");
-        let assign = js_declare(name2, init);
+        let return_name = null;
+        return_name = js_return_name(ast_call);
+        let assign = js_declare(return_name, init);
       }
     }
     js_node_type_is_if(e2, "ExpressionStatement", lambda6);
