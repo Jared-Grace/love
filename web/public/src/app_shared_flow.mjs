@@ -32,7 +32,7 @@ export function app_shared_flow(context, screens, before_or_after, find) {
     return n;
   }
   let filtered = list_filter(ba, lambda4);
-  let first = find(filtered);
-  let name2 = object_property_get(first, "fn");
+  let function_copy_replace_first = find(filtered);
+  let name2 = object_property_get(function_copy_replace_first, "fn");
   app_shared_screen_set(context, name2);
 }
