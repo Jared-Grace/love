@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { object_property_initialize } from "../../../love/public/src/object_property_initialize.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { uuid } from "../../../love/public/src/uuid.mjs";
@@ -19,11 +18,5 @@ export async function text_to_uuid_set(text) {
     let u = await uuid();
     object_property_set(set, text, u);
     object_property_set(get, u, text);
-    log({
-      data,
-    });
   }
-  log({
-    joined,
-  });
 }
