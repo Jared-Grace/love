@@ -150,7 +150,7 @@ export async function g_sermon_generate_book_generic(
         prompt_user,
       );
       let passage_extension = {
-        [property_name]: output,
+        ["generated"]: output,
       };
       let to2 = object_merge(passage, passage_extension);
       log_keep(output);
