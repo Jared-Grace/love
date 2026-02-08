@@ -1,5 +1,5 @@
 import { text_starts_with } from "../../../love/public/src/text_starts_with.mjs";
-export function string_starts_with_space(s) {
+export function text_starts_with_space(s) {
   let sw2 = text_starts_with(s, " ");
   return sw2;
 }
