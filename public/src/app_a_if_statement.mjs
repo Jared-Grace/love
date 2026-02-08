@@ -17,7 +17,7 @@ export function app_a_if_statement(a) {
   let keyword = object_property_get(v4, "keyword");
   async function lambda(o) {
     let v3 = app_a_cut(o, a);
-    let v5 = app_a_call_above(o, a);
+    let v5 = app_a_call_above(choices, o, a);
     let choices = [v5, v3];
     return choices;
   }
