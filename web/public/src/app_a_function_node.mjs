@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { app_a_cut } from "../../../love/public/src/app_a_cut.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
@@ -129,10 +130,9 @@ export function app_a_function_node(a) {
       let k = js_keyword_await();
       let v = app_a_keyword_purple_space(parent, k);
       let keyword = object_property_get(v, "keyword");
-      function lambda19(o) {
+      function lambda19(o, choices) {
         let c = app_a_cut(o, a);
-        let v2 = [c];
-        return v2;
+        list_add(list, item);
       }
       app_a_overlay_choices(a, keyword, lambda19);
       let argument = object_property_get(node, "argument");
