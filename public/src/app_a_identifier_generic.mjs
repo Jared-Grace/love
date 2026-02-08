@@ -176,20 +176,26 @@ export function app_a_identifier_generic(
       };
       list_add(choices, references);
     }
-    log({
-      e2,
-    });
+    let e1 = list_get_end_1(stack);$l$e1
     async function lambda6() {
+      const c = {
+        shortcut: "g",
+        text: "Assign result",
+        fn: async function lambda() {
       let return_name = null;
       if (includes) {
-        let v2 = await function_parse_declaration(f_name_call);
+        let v2 = await function_parse_declaration(name);
         let ast_call = object_property_get(v2, "ast");
         return_name = js_return_name(ast_call);
       } else {
-        return_name = js_identifier_unique_ast(ast, "r");
+        return_name = js_identifier_unique_ast(ast, js_return_identifier_name());
       }
       let assign = js_declare(return_name, node);
       object_replace(e2, assign);
+          await app_a_function_overlay_refresh(a, o3);
+        },
+      };
+      list_add(choices, c);
     }
     js_node_type_is_if(e2, "ExpressionStatement", lambda6);
     function lambda4() {
@@ -209,3 +215,4 @@ export function app_a_identifier_generic(
   }
   app_a_overlay_choices(a, span, choices_get);
 }
+
