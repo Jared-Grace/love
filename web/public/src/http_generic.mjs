@@ -6,13 +6,13 @@ import { assert_json } from "../../../love/public/src/assert_json.mjs";
 import { round } from "../../../love/public/src/round.mjs";
 import { catch_call } from "../../../love/public/src/catch_call.mjs";
 import { promise_wrap } from "../../../love/public/src/promise_wrap.mjs";
-import { string_starts_with } from "../../../love/public/src/string_starts_with.mjs";
+import { text_starts_with } from "../../../love/public/src/text_starts_with.mjs";
 import { http_sleep } from "../../../love/public/src/http_sleep.mjs";
 import { html_loading } from "../../../love/public/src/html_loading.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
-import { json_to } from "./json_to.mjs";
+import { json_to } from "../../../love/public/src/json_to.mjs";
 export async function http_generic(url, options) {
   const method = options.method || "GET";
   const body = options.body || null;
@@ -51,7 +51,7 @@ export async function http_generic(url, options) {
     await http_sleep();
   }
   let h = null;
-  let swHttps = string_starts_with(url, "https://");
+  let swHttps = text_starts_with(url, "https://");
   if (swHttps) {
     h = await import("https");
   } else {
