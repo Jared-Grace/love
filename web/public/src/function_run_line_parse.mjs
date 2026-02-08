@@ -1,10 +1,10 @@
-import { string_trim } from "../../../love/public/src/string_trim.mjs";
+import { text_trim } from "../../../love/public/src/text_trim.mjs";
 import { data_prompts_path } from "../../../love/public/src/data_prompts_path.mjs";
 import { list_unique_reverse } from "../../../love/public/src/list_unique_reverse.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { data_transform } from "../../../love/public/src/data_transform.mjs";
 export async function function_run_line_parse(line) {
-  let trimmed = string_trim(line);
+  let trimmed = text_trim(line);
   const [f_name, ...args] = trimmed.split(" ");
   function lambda(previous) {
     list_add(previous, trimmed);
