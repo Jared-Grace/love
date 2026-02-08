@@ -4,7 +4,7 @@ import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { string_is_assert } from "../../../love/public/src/string_is_assert.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { string_empty_not_is } from "../../../love/public/src/string_empty_not_is.mjs";
-import { string_empty_is } from "../../../love/public/src/string_empty_is.mjs";
+import { text_empty_is } from "../../../love/public/src/text_empty_is.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 export function js_identifier_unique(existing, name) {
@@ -18,7 +18,7 @@ export function js_identifier_unique(existing, name) {
     const suffix = attempt === 1 && string_empty_not_is(name) ? "" : attempt;
     unique = name + suffix;
     attempt++;
-  } while (string_empty_is(unique) || list_includes(used, unique));
+  } while (text_empty_is(unique) || list_includes(used, unique));
   list_add(existing, unique);
   return unique;
 }

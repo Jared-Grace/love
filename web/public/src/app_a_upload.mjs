@@ -1,4 +1,4 @@
-import { string_empty_is } from "../../../love/public/src/string_empty_is.mjs";
+import { text_empty_is } from "../../../love/public/src/text_empty_is.mjs";
 import { git_push_repos } from "../../../love/public/src/git_push_repos.mjs";
 import { invoke } from "../../../love/public/src/invoke.mjs";
 import { git_ac_folder } from "../../../love/public/src/git_ac_folder.mjs";
@@ -10,9 +10,9 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
-import { assert_json } from "./assert_json.mjs";
-import { file_exists } from "./file_exists.mjs";
-import { file_delete } from "./file_delete.mjs";
+import { assert_json } from "../../../love/public/src/assert_json.mjs";
+import { file_exists } from "../../../love/public/src/file_exists.mjs";
+import { file_delete } from "../../../love/public/src/file_delete.mjs";
 export async function app_a_upload(deltas) {
   async function lambda(d) {
     let key = object_property_get(d, "key");
@@ -34,7 +34,7 @@ export async function app_a_upload(deltas) {
     let versions = object_property_get(d, "versions");
     let skipped = list_skip_1(versions);
     async function lambda3(item) {
-      let e2 = string_empty_is(item);
+      let e2 = text_empty_is(item);
       if (e2) {
         await file_delete(key);
       } else {
