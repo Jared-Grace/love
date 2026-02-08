@@ -1,4 +1,3 @@
-import { log_json } from "../../../love/public/src/log_json.mjs";
 import { list_add_pair } from "../../../love/public/src/list_add_pair.mjs";
 import { ebible_folders_chapters_codes_to_verses } from "../../../love/public/src/ebible_folders_chapters_codes_to_verses.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -110,8 +109,6 @@ export async function g_sermon_generate_book_generic(
     await each_multiple_async(verses_book_folders, each_chapter);
   }
   let groups = await list_adder_async(adder);
-  log_json(groups);
-  exit();
   let nearness = 2;
   let nearbys = list_nearby(groups, nearness);
   async function each_chapter(chapter_code) {
