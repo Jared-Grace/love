@@ -1,3 +1,4 @@
+import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier_unique_ast.mjs";
 import { js_return_name } from "../../../love/public/src/js_return_name.mjs";
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
@@ -184,7 +185,8 @@ export function app_a_identifier_generic(
         let return_name = null;
         return_name = js_return_name(ast_call);
         let assign = js_declare(return_name, init);
-      } else {js_identifier_unique_ast
+      } else {
+        let unique = js_identifier_unique_ast(ast2, property_name);
       }
     }
     js_node_type_is_if(e2, "ExpressionStatement", lambda6);
