@@ -183,29 +183,30 @@ export function app_a_identifier_generic(
       log({
         e1,
       });
-      const c = {
-        shortcut: "g",
-        text: "Assign result",
-        fn: async function lambda() {
-          let return_name = null;
-          if (includes) {
-            let v2 = await function_parse_declaration(name);
-            let ast_call = object_property_get(v2, "ast");
-            return_name = js_return_name(ast_call);
-          } else {
-            let property_name = js_return_identifier_name();
-            return_name = js_identifier_unique_ast(ast, property_name);
-          }
-          let assign = js_declare(return_name, node);
-          log({
-            assign,
-          });
-          object_replace(e2, assign);
-          await app_a_function_overlay_refresh(a, o3);
-        },
-      };
-      list_add(choices, c);
-      function lambda7() {}
+      function lambda7() {
+        const c = {
+          shortcut: "g",
+          text: "Assign result",
+          fn: async function lambda() {
+            let return_name = null;
+            if (includes) {
+              let v2 = await function_parse_declaration(name);
+              let ast_call = object_property_get(v2, "ast");
+              return_name = js_return_name(ast_call);
+            } else {
+              let property_name = js_return_identifier_name();
+              return_name = js_identifier_unique_ast(ast, property_name);
+            }
+            let assign = js_declare(return_name, node);
+            log({
+              assign,
+            });
+            object_replace(e2, assign);
+            await app_a_function_overlay_refresh(a, o3);
+          },
+        };
+        list_add(choices, c);
+      }
       js_node_type_is_if(e1, "CallExpression", lambda7);
     }
     js_node_type_is_if(e2, "ExpressionStatement", lambda6);
