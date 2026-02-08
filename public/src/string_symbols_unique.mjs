@@ -1,11 +1,11 @@
 import { list_sort_string } from "../../../love/public/src/list_sort_string.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { string_split_empty } from "../../../love/public/src/string_split_empty.mjs";
+import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 export function string_symbols_unique(s) {
   function lambda4(la) {
-    let split = string_split_empty(s);
+    let split = text_split_empty(s);
     each(split, la);
   }
   let unique_list = list_adder_unique(lambda4);
