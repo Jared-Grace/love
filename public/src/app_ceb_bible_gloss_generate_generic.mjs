@@ -18,8 +18,7 @@ Output format:
 [{"word":"${language} word","gloss":"English gloss","explain":"full explanation"}, ...]
 
 The ${last} provided as a reference.`;
-  const prompt_user_middle =
-    "Here is the passage to output English glosses for: ";
+  const prompt_user_middle = `Here is the ${language} passage to output English glosses for: `;
   await g_sermon_generate_book_generic(
     bible_folders,
     book_code,
