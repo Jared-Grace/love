@@ -11,7 +11,7 @@ import { object_property_exists_not } from "../../../love/public/src/object_prop
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { string_replace_space_underscore } from "../../../love/public/src/string_replace_space_underscore.mjs";
+import { text_replace_space_underscore } from "../../../love/public/src/text_replace_space_underscore.mjs";
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -152,7 +152,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   function biblehub_button_open(folder, verse_number_v, bottom, button_text) {
     function lambda10() {
       let lower = text_lower_to(book_name);
-      let replaced = string_replace_space_underscore(lower);
+      let replaced = text_replace_space_underscore(lower);
       if (equal(replaced, "song")) {
         replaced = "songs";
       }
