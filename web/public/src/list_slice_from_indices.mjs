@@ -6,8 +6,8 @@ import { list_sort_number } from "../../../love/public/src/list_sort_number.mjs"
 export function list_slice_from_indices(list, indices) {
   list_sort_number(indices);
   let v = list_first_last(indices);
-  let first = list_first(v);
+  let function_copy_replace_first = list_first(v);
   let last = list_last(v);
-  let sliced = list_slice_include(list, first, last);
+  let sliced = list_slice_include(list, function_copy_replace_first, last);
   return sliced;
 }

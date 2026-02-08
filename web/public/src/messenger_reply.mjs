@@ -33,8 +33,11 @@ export async function messenger_reply() {
     }
     let mapped = list_map(skips, lambda4);
     let filtered = list_filter_ends_with_not_any(mapped, properties);
-    let first = list_first(filtered);
-    let messages = await messenger_reply_messages(page, first);
+    let function_copy_replace_first = list_first(filtered);
+    let messages = await messenger_reply_messages(
+      page,
+      function_copy_replace_first,
+    );
     let v2 = await messenger_reply_unreplied(messages);
     let unreplied = object_property_get(v2, "unreplied");
     let mine_last = object_property_get(v2, "mine_last");
