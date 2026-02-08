@@ -197,6 +197,9 @@ export function app_a_identifier_generic(
             return_name = js_identifier_unique_ast(ast, property_name);
           }
           let assign = js_declare(return_name, node);
+          log({
+            assign,
+          });
           object_replace(e2, assign);
           await app_a_function_overlay_refresh(a, o3);
         },
