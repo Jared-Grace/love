@@ -66,7 +66,7 @@ export function app_a_statement_choices_add(choices, a, o) {
           overlay_close2();
         }
         app_a_button_function(context, overlay, lambda3);
-        let functions_result = app_a_list_chooser(
+        let chooser_result = app_a_list_chooser(
           copy,
           "function",
           i_names,
@@ -74,7 +74,7 @@ export function app_a_statement_choices_add(choices, a, o) {
         );
         let v2 = {
           overlay_result2,
-          functions_result,
+          chooser_result,
         };
         let overlay_result = object_property_get(v2, "overlay_result");
         async function on_select(identifier_name) {
