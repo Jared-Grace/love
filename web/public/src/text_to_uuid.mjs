@@ -13,6 +13,6 @@ export async function text_to_uuid(text) {
   async function lambda(data) {
     object_property_exists_not_assert(data, text);
     let u = await uuid();
-    object_property_set(object, property_name, value);
+    object_property_set(data, text, u);
   }
 }
