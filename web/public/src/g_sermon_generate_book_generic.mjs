@@ -51,12 +51,12 @@ export async function g_sermon_generate_book_generic(
   let chapters_interlinear = await bible_interlinear_chapters();
   async function adder_groups({ clear, add, end }) {
     async function each_chapter(verses_chapter_folders) {
+      clear();
       let verses_chapter = list_first(verses_chapter_folders);
       let verse_first = list_first(verses_chapter);
       let chapter_code = object_property_get(verse_first, "chapter_code");
       let interlinear = object_property_get(chapters_interlinear, chapter_code);
       let index_last = list_index_last(verses_chapter);
-      clear();
       async function each_verse(verse, index) {
         let text = object_property_get(verse, "text");
         let verse_number = object_property_get(verse, "verse_number");
