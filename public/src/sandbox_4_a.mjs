@@ -9,13 +9,13 @@ import { list_second } from "../../../love/public/src/list_second.mjs";
 import { string_split_semicolon } from "../../../love/public/src/string_split_semicolon.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_split_comma } from "../../../love/public/src/list_map_split_comma.mjs";
-import { string_split_newline } from "../../../love/public/src/string_split_newline.mjs";
+import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
 export async function sandbox_4_a() {
   let file_path = folder_user_docs_path("nations_mentioned.carm.org.txt");
   let contents = await file_read(file_path);
-  let split = string_split_newline(contents);
+  let split = text_split_newline(contents);
   let split2 = list_map_whitespace_normalize(split);
   let mapped3 = list_map_split_comma(split2);
   async function lambda(item) {
