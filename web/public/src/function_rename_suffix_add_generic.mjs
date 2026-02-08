@@ -2,9 +2,9 @@ import { function_name_unalias_only } from "../../../love/public/src/function_na
 import { function_rename } from "../../../love/public/src/function_rename.mjs";
 import { function_name_separator_padded_not_is_assert } from "../../../love/public/src/function_name_separator_padded_not_is_assert.mjs";
 export async function function_rename_suffix_add_generic(
+  f_name_before,
   other,
   fn,
-  f_name_before,
 ) {
   function_name_separator_padded_not_is_assert(other);
   f_name_before = await function_name_unalias_only(f_name_before);
