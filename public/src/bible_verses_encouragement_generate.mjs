@@ -5,7 +5,7 @@ import { ebible_version_books } from "../../../love/public/src/ebible_version_bo
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { text_ends_with_space } from "../../../love/public/src/text_ends_with_space.mjs";
-import { string_trim_right } from "../../../love/public/src/string_trim_right.mjs";
+import { text_trim_right } from "../../../love/public/src/text_trim_right.mjs";
 import { text_skip_while } from "../../../love/public/src/text_skip_while.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
@@ -30,7 +30,7 @@ export async function bible_verses_encouragement_generate() {
     function lambda(fn) {
       item2 = text_skip_while(fn, item2);
     }
-    item2 = string_trim_right(text_ends_with_space, item2);
+    item2 = text_trim_right(text_ends_with_space, item2);
     return item2;
   }
   let mapped = list_map(split, lambda2);
