@@ -50,7 +50,7 @@ export async function g_sermon_generate_book_generic(
     bible_folders,
   );
   let chapters_interlinear = await bible_interlinear_chapters();
-  async function adder_groups({ clear, add, end }) {
+  async function adder_groups(la) {
     async function each_chapter(verses_chapter_folders) {
       clear();
       let verses_chapter = list_first(verses_chapter_folders);
