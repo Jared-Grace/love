@@ -6,4 +6,5 @@ export async function text_to_uuid_get(id) {
   let data = await file_json_read(joined);
   let get = text_to_uuid_get_initialize(data);
   let text = object_property_get(get, id);
+  return text;
 }
