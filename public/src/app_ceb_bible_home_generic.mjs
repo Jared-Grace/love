@@ -36,7 +36,7 @@ export async function app_ceb_bible_home_generic(
   language_code2,
   text_use,
 ) {
-  language_code = g_sermon_generate_book_generic_property();
+  let language_code = g_sermon_generate_book_generic_property();
   let v2 = await app_g_bible_home_inner(context, download);
   let passages = object_property_get(v2, "passages");
   each_next(passages, on_passage);
