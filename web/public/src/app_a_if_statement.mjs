@@ -1,4 +1,4 @@
-import { app_a_statement_choices } from "../../../love/public/src/app_a_statement_choices.mjs";
+import { app_a_statement_choices_add } from "../../../love/public/src/app_a_statement_choices_add.mjs";
 import { app_a_overlay_choices } from "../../../love/public/src/app_a_overlay_choices.mjs";
 import { js_keyword_else } from "../../../love/public/src/js_keyword_else.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
@@ -15,7 +15,7 @@ export function app_a_if_statement(a) {
   let v4 = app_a_keyword_purple_space(parent, k);
   let keyword = object_property_get(v4, "keyword");
   async function lambda(o, choices) {
-    app_a_statement_choices(choices, o, a);
+    app_a_statement_choices_add(choices, o, a);
   }
   app_a_overlay_choices(a, keyword, lambda);
   function lambda19() {
