@@ -5,9 +5,9 @@ import { undefined_not_is_assert } from "../../../love/public/src/undefined_not_
 import { list_sort_string_size } from "../../../love/public/src/list_sort_string_size.mjs";
 import { function_alias_generic } from "../../../love/public/src/function_alias_generic.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { error_json } from "./error_json.mjs";
-export async function function_alias_add(first, second) {
-  let list = [first, second];
+import { error_json } from "../../../love/public/src/error_json.mjs";
+export async function function_alias_add(function_copy_replace_first, second) {
+  let list = [function_copy_replace_first, second];
   list_sort_string_size(list);
   let [alias, f_name] = list;
   let expression = js_parse_expression(f_name);

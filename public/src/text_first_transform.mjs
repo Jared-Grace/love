@@ -6,8 +6,8 @@ export function text_first_transform(s, transform) {
   let split = text_split_empty(s);
   let r = list_first_remaining(split);
   let remaining = object_property_get(r, "remaining");
-  let first = object_property_get(r, "first");
-  let lower = transform(first);
+  let function_copy_replace_first = object_property_get(r, "first");
+  let lower = transform(function_copy_replace_first);
   let joined = list_join_empty(remaining);
   let v = "" + lower + joined;
   return v;

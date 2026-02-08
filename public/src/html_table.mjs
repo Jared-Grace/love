@@ -5,8 +5,8 @@ import { html_element } from "../../../love/public/src/html_element.mjs";
 import { object_properties } from "../../../love/public/src/object_properties.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 export function html_table(parent, list) {
-  let first = list_first(list);
-  let properties = object_properties(first);
+  let function_copy_replace_first = list_first(list);
+  let properties = object_properties(function_copy_replace_first);
   let component = html_element(parent, "table");
   let component2 = html_element(component, "tbody");
   function lambda(e) {

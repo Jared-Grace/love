@@ -9,8 +9,8 @@ export async function g_sermon_passage_get(chapter_code, verse_number) {
   let passages = await g_sermon_generate_chapter_passages_get(chapter_code);
   function lambda(v) {
     let verse_numbers = object_property_get(v, "verse_numbers");
-    let first = list_first(verse_numbers);
-    let v2 = first === verse_number;
+    let function_copy_replace_first = list_first(verse_numbers);
+    let v2 = function_copy_replace_first === verse_number;
     return v2;
   }
   let v = list_find(passages, lambda);

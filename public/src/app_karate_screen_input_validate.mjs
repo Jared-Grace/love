@@ -70,7 +70,7 @@ export function app_karate_screen_input_validate(
     app_karate_validate_style_assign(valid, [div], input, null);
     return valid;
   }
-  let first = list_first(inputs);
-  html_focus(first);
+  let function_copy_replace_first = list_first(inputs);
+  html_focus(function_copy_replace_first);
   return validate_all;
 }

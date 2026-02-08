@@ -13,12 +13,12 @@ export function ebible_parts_to_reference(
   let verse_numbers_s = null;
   let unique = list_unique(verse_numbers);
   let s1 = list_size_1(unique);
-  let first = list_first(unique);
+  let function_copy_replace_first = list_first(unique);
   if (s1) {
-    verse_numbers_s = first;
+    verse_numbers_s = function_copy_replace_first;
   } else {
     let last = list_last(unique);
-    verse_numbers_s = first + "-" + last;
+    verse_numbers_s = function_copy_replace_first + "-" + last;
   }
   const reference = book_name + " " + chapter_name + ":" + verse_numbers_s;
   return reference;
