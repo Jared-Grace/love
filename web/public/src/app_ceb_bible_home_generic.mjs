@@ -22,13 +22,13 @@ import { html_font_color_set_green } from "../../../love/public/src/html_font_co
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-import { string_colon_2 } from "../../../love/public/src/string_colon_2.mjs";
+import { text_colon_2 } from "../../../love/public/src/text_colon_2.mjs";
 import { string_split } from "../../../love/public/src/string_split.mjs";
 import { string_colon_3 } from "../../../love/public/src/string_colon_3.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { app_g_bible_home_inner } from "../../../love/public/src/app_g_bible_home_inner.mjs";
-import { list_second } from "./list_second.mjs";
-import { html_span_space } from "./html_span_space.mjs";
+import { list_second } from "../../../love/public/src/list_second.mjs";
+import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 export async function app_ceb_bible_home_generic(
   context,
   download,
@@ -58,7 +58,7 @@ export async function app_ceb_bible_home_generic(
       let separator3 = string_colon_3();
       let split3 = string_split(text, separator3);
       function lambda4(v) {
-        let separator2 = string_colon_2();
+        let separator2 = text_colon_2();
         let split = string_split(v, separator2);
         let get = null;
         if (text_use) {
