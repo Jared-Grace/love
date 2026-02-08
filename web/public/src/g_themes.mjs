@@ -4,7 +4,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
 import { list_adder_multiple } from "../../../love/public/src/list_adder_multiple.mjs";
-import { string_includes } from "../../../love/public/src/string_includes.mjs";
+import { text_includes } from "../../../love/public/src/text_includes.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { string_pad_space } from "../../../love/public/src/string_pad_space.mjs";
@@ -53,7 +53,7 @@ export function g_themes(text) {
       let split2 = string_split_space(words);
       function lambda(word) {
         let padded = string_pad_space(word);
-        let i = string_includes(n, padded);
+        let i = text_includes(n, padded);
         if (i) {
           la(split3);
         }
