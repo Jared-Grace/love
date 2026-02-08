@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_statement_return_insert_code } from "../../../love/public/src/js_statement_return_insert_code.mjs";
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
 import { app_a_list_overlay_generic } from "../../../love/public/src/app_a_list_overlay_generic.mjs";
@@ -57,6 +58,9 @@ export function app_a_statement_choices_add(choices, a, o) {
           let v = app_a_node_index(a);
           let list = object_property_get(v, "list");
           let index = object_property_get(v, "index");
+          log({
+            v,
+          });
           js_statement_return_insert_code(list, index + 1, identifier_name);
           await app_a_function_on_change(overlay_result, a);
         }
