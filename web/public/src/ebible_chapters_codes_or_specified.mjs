@@ -1,6 +1,6 @@
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { ebible_chapters } from "../../../love/public/src/ebible_chapters.mjs";
-export async function ebible_chapters_or_specified(
+export async function ebible_chapters_codes_or_specified(
   bible_folder,
   book_code,
   chapter_code_specified,
