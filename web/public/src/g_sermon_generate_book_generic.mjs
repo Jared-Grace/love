@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_new } from "../../../love/public/src/list_new.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { list_find_property_get } from "../../../love/public/src/list_find_property_get.mjs";
@@ -82,6 +83,7 @@ export async function g_sermon_generate_book_generic(
           );
           original = object_property_get(original_verse, "text");
         }
+        list_add(list, item);
         add({
           original,
           texts: texts_add,
