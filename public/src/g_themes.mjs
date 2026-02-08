@@ -1,7 +1,7 @@
 import { g_themes_plural } from "../../../love/public/src/g_themes_plural.mjs";
 import { g_themes_verb } from "../../../love/public/src/g_themes_verb.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { string_split_space } from "../../../love/public/src/string_split_space.mjs";
+import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
 import { list_adder_multiple } from "../../../love/public/src/list_adder_multiple.mjs";
 import { text_includes } from "../../../love/public/src/text_includes.mjs";
@@ -49,8 +49,8 @@ export function g_themes(text) {
   };
   function lambda4(la) {
     function lambda3(list, words) {
-      let split3 = string_split_space(list);
-      let split2 = string_split_space(words);
+      let split3 = text_split_space(list);
+      let split2 = text_split_space(words);
       function lambda(word) {
         let padded = text_pad_space(word);
         let i = text_includes(n, padded);
