@@ -42,8 +42,9 @@ export async function g_sermon_generate_book_generic(
   property_name,
   chapter_code_specified,
 ) {
+  let bible_folder_first = list_first(bible_folders);
   let chapters_codes = await ebible_chapters_codes_or_specified(
-    bible_folder,
+    bible_folder_first,
     book_code,
     chapter_code_specified,
   );
@@ -53,8 +54,6 @@ export async function g_sermon_generate_book_generic(
     bible_folders,
   );
   let verses_book_folders = list_map_property(r, "verses_book");
-  let chapters_folders = list_map_property(r, "chapters");
-  let chapters = list_first(chapters_folders);
   let chapters_interlinear = await bible_interlinear_chapters();
   async function lambda4(la) {
     async function each_chapter(verses_chapter_folders) {
