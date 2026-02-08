@@ -1,3 +1,4 @@
 export function list_new() {
-  return [];
+  let r = [];
+  return r;
 }
