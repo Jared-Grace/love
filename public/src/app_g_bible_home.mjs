@@ -6,7 +6,7 @@ import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs"
 import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { g_sermon_generate_upload_path } from "../../../love/public/src/g_sermon_generate_upload_path.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { string_replace } from "../../../love/public/src/string_replace.mjs";
+import { text_replace } from "../../../love/public/src/text_replace.mjs";
 import { newline_windows } from "../../../love/public/src/newline_windows.mjs";
 import { newline } from "../../../love/public/src/newline.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
@@ -47,7 +47,7 @@ export async function app_g_bible_home(context) {
         let value2 = html_value_get(ta);
         let from = newline();
         let to = newline_windows();
-        let replaced = string_replace(value2, from, to);
+        let replaced = text_replace(value2, from, to);
         object_property_set(passage, "sermon", replaced);
       };
       la(update);
