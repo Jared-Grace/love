@@ -164,7 +164,7 @@ export async function g_sermon_generate_book_generic(
         return user_prompt;
       }
     }
-    await each_async(groups_match_chapter, lambda5);
+    await each_async(groups, lambda5);
     await file_overwrite_json(path, {
       chapter_code,
       passages,
