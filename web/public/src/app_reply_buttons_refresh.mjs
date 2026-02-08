@@ -6,13 +6,13 @@ import { not } from "../../../love/public/src/not.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { string_starts_with } from "../../../love/public/src/string_starts_with.mjs";
 import { string_lower_to } from "../../../love/public/src/string_lower_to.mjs";
-import { string_letters_only } from "../../../love/public/src/string_letters_only.mjs";
+import { text_letters_only } from "../../../love/public/src/text_letters_only.mjs";
 export function app_reply_buttons_refresh(typed_get, chosens, buttons) {
   let v4 = function lambda10() {
     function lambda(c) {
       function lambda2(item) {
         let text = html_text_get(item);
-        let letters = string_letters_only(text);
+        let letters = text_letters_only(text);
         let lower = string_lower_to(letters);
         let prefix = typed_get();
         let sw = string_starts_with(lower, prefix);
