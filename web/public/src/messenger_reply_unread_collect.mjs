@@ -3,7 +3,7 @@ import { http_sleep } from "../../../love/public/src/http_sleep.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_not_includes.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
-import { string_prefix_without } from "../../../love/public/src/string_prefix_without.mjs";
+import { text_prefix_without } from "../../../love/public/src/text_prefix_without.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { messenger_reply_messages_urls_add_page } from "../../../love/public/src/messenger_reply_messages_urls_add_page.mjs";
@@ -26,7 +26,7 @@ export async function messenger_reply_unread_collect() {
       }
       let url = list_first(urls);
       let prefix = "https://www.facebook.com";
-      let without = string_prefix_without(url, prefix);
+      let without = text_prefix_without(url, prefix);
       const selector = `a[href="${without}"]`;
       const link = await page.$(selector);
       if (link !== null) {
