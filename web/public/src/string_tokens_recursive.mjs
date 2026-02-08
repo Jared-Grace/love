@@ -1,6 +1,6 @@
 import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { string_size } from "../../../love/public/src/string_size.mjs";
+import { text_size } from "../../../love/public/src/text_size.mjs";
 import { each_range_from } from "../../../love/public/src/each_range_from.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { string_slice } from "../../../love/public/src/string_slice.mjs";
@@ -11,7 +11,7 @@ export function string_tokens_recursive(
   tokens_matches,
   current,
 ) {
-  let index_last = string_size(input);
+  let index_last = text_size(input);
   if (index_left === index_last) {
     let copy = list_copy(current);
     list_add(tokens_matches, copy);
