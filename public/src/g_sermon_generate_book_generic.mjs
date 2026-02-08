@@ -49,8 +49,7 @@ export async function g_sermon_generate_book_generic(
     chapter_code_specified,
   );
   let r = await g_sermon_generate_book_generic_verses(
-    book_code,
-    chapter_code_specified,
+    chapters_codes,
     bible_folders,
   );
   let verses_book_folders = list_map_property(r, "verses_book");
