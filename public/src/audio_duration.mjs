@@ -1,4 +1,4 @@
-import { string_slice } from "../../../love/public/src/string_slice.mjs";
+import { text_slice } from "../../../love/public/src/text_slice.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { list_find_starts_with } from "../../../love/public/src/list_find_starts_with.mjs";
 import { text_size } from "../../../love/public/src/text_size.mjs";
@@ -16,7 +16,7 @@ export async function audio_duration(joined_audio) {
     let size = text_size(prefix);
     let found = list_find_starts_with(lines, prefix);
     let index = list_index_of(found, ",");
-    let d = string_slice(found, size, index);
+    let d = text_slice(found, size, index);
     result = duration_to_seconds(d);
   }
   function duration_to_seconds(duration_str) {
