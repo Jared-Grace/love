@@ -1,3 +1,5 @@
+import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
+import { add } from "../../../love/public/src/add.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { each_multiple_async } from "../../../love/public/src/each_multiple_async.mjs";
 import { each_index_async } from "../../../love/public/src/each_index_async.mjs";
@@ -48,13 +50,18 @@ export async function list_adder_group_async() {
         });
         let end = bible_verse_end_is(text);
         if (end || index === index_last) {
-          la(group);
-          group = [];
+          add();
         }
       }
       await each_index_async(verses_chapter, each_verse);
     }
     await each_multiple_async(verses_book_folders, each_chapter);
+    function add() {
+      if (null_not_is(value)) {
+      }
+      la(group);
+      group = [];
+    }
     function clear() {
       group = [];
     }
