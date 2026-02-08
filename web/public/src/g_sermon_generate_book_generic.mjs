@@ -163,13 +163,12 @@ export async function g_sermon_generate_book_generic(
             return p;
           }
           let p = list_map(t, verse_map);
-          let j = list_join(p, " :: ");
-          return j;
+          return p;
         }
         let passages_folders = list_map(texts, folder_map);
+        let original = list_map_property_join_space(group, "originals");
         list_add_first(passages_folders, original);
         let text = list_join(passages_folders, " :: ");
-        let original = list_map_property_join_space(group, "originals");
         const user_prompt = original + " :: " + text;
         log({
           user_prompt,
