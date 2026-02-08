@@ -11,7 +11,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
 import { string_starts_with_space } from "../../../love/public/src/string_starts_with_space.mjs";
 import { string_starts_with_dot } from "../../../love/public/src/string_starts_with_dot.mjs";
-import { string_starts_with_digit } from "../../../love/public/src/string_starts_with_digit.mjs";
+import { text_starts_with_digit } from "../../../love/public/src/text_starts_with_digit.mjs";
 import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
@@ -20,7 +20,7 @@ export async function bible_verses_encouragement_generate() {
   let contents = await file_read(file_path);
   let split = text_split_newline(contents);
   let fns = [
-    string_starts_with_digit,
+    text_starts_with_digit,
     string_starts_with_dot,
     string_starts_with_space,
   ];
