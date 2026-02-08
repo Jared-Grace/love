@@ -147,7 +147,6 @@ export async function g_sermon_generate_book_generic(
         "sermons were originally generated using: " +
         g_generate_openai_chat_completions;
       log_keep(prompt_system + " " + prompt_user);
-      exit();
       let output = await g_generate_openai_responses(
         prompt_system,
         prompt_user,
@@ -157,6 +156,7 @@ export async function g_sermon_generate_book_generic(
       };
       let to2 = object_merge(passage, passage_extension);
       log_keep(output);
+      exit();
       return passage;
       function prompt_get(groups) {
         let size = list_size(bible_folders);
