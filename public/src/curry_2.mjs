@@ -1,7 +1,5 @@
+import { curry_1 } from "../../../love/public/src/curry_1.mjs";
 export function curry_2(fn) {
-  let r = function curry_1_result(a) {
-    let r_inner = fn(a);
-    return r_inner;
-  };
+  curry_1(fn);
   return r;
 }
