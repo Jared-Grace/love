@@ -9,7 +9,7 @@ export async function functions_param_delete_generic(
   let f_names = text_split_comma(f_names_comma);
   async function lambda(f_name) {
     let v2 = await function_current_set(f_name);
-    let v = await fn(param_name);
+    let v = await fn(f_name, param_name);
   }
   await each_async(f_names, lambda);
 }
