@@ -6,7 +6,7 @@ export async function function_multiple_rename_generic_starts_with(
 ) {
   await function_multiple_rename_generic(filter, name_change);
   function filter(f_names) {
-    let filtered2 = list_filter_starts_with(f_names, f_name_prefix);
-    return filtered2;
+    let filtered = list_filter_starts_with(f_names, f_name_prefix);
+    return filtered;
   }
 }
