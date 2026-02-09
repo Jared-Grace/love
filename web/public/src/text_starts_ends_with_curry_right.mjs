@@ -6,7 +6,7 @@ export function text_starts_ends_with_curry_right(
   f_name_prefix,
   f_name_suffix_before,
 ) {
-  "asserts here are to make sure " +
+  "asserts in this fn are to make sure " +
     function_multiple_rename_if_starts_ends_with +
     " is ran correctly";
   text_is_assert_multiple([f_name_prefix, f_name_suffix_before]);
