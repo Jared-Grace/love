@@ -3,7 +3,7 @@ import { file_temp } from "../../../love/public/src/file_temp.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 export async function openai_generic(fn, system, user) {
-  text_is_assert_multiple(items);
+  text_is_assert_multiple([system, user]);
   let input = {
     system,
     user,
