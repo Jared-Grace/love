@@ -2,7 +2,6 @@ import { file_read } from "../../../love/public/src/file_read.mjs";
 import { text_decompress } from "../../../love/public/src/text_decompress.mjs";
 import { file_name_txt } from "../../../love/public/src/file_name_txt.mjs";
 import { app_original_bible_gloss_generate_chapter_code_specified } from "../../../love/public/src/app_original_bible_gloss_generate_chapter_code_specified.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
 export async function sandbox() {
   let chapter_code_specified =
@@ -11,8 +10,4 @@ export async function sandbox() {
   let p = folder_user_docs_path(file_name);
   let c = await file_read(p);
   let d = await text_decompress(c);
-  log({
-    d,
-    c,
-  });
 }
