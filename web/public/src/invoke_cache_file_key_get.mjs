@@ -4,7 +4,7 @@ import { file_name_json } from "../../../love/public/src/file_name_json.mjs";
 import { file_path_safe_to } from "../../../love/public/src/file_path_safe_to.mjs";
 import { invoke_cache_key } from "../../../love/public/src/invoke_cache_key.mjs";
 export function invoke_cache_file_key_get(fn, args) {
-  let f = function lambda() {
+  let g = function lambda() {
     let json = invoke_cache_key(fn, args);
     let safe = file_path_safe_to(json);
     let file_name = file_name_json(safe);
@@ -12,5 +12,5 @@ export function invoke_cache_file_key_get(fn, args) {
     let joined = path_join([f_path, file_name]);
     return joined;
   };
-  return f;
+  return g;
 }
