@@ -30,7 +30,6 @@ Output each sentence separated by ` +
     fn,
     prompt_user_middle,
     prompt_system,
-    "sermon",
     null,
   );
 }
