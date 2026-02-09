@@ -1,6 +1,6 @@
 import { functions_param_delete_generic } from "../../../love/public/src/functions_param_delete_generic.mjs";
 import { function_param_new } from "../../../love/public/src/function_param_new.mjs";
-export async function function_multiple_param_new(
+export async function functions_param_new(
   f_names_comma,
   param_name,
   default_value,
