@@ -1,5 +1,5 @@
 import { functions_rename_if_starts_ends_with } from "../../../love/public/src/functions_rename_if_starts_ends_with.mjs";
-export async function function_multiple_rename_if_starts_ends_with_to_empty(
+export async function functions_rename_if_starts_ends_with_to_empty(
   f_name_prefix,
   f_name_suffix_before,
 ) {
