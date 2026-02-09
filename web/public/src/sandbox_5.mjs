@@ -3,5 +3,5 @@ import { folder_user_storage_function_path_function } from "./folder_user_storag
 export async function sandbox_5() {
   let f = folder_user_storage_function_path_function();
   let files = await folder_read_files(f);
-  return files;
+  return f;
 }
