@@ -8,10 +8,7 @@ import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
 export async function invoke_cache_text_to_uuid(fn, args, db_get, store) {
   let key_get = invoke_cache_key_get(fn, args);
   let value_get = invoke_cache_value_get(fn, args);
-  let cached_exists = async function lambda3(key) {
-    let exists = await text_to_uuid_exists(key);
-    return exists;
-  };
+  let cached_exists = text_to_uuid_exists;
   let cached_get = async function lambda2(key) {
     let item = await indexeddb_get(db_get, store, key);
     return item;
