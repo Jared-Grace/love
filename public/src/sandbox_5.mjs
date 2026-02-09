@@ -5,7 +5,8 @@ export async function sandbox_5() {
   let f = folder_user_storage_function_path_function();
   let files = await folder_read_recursive_paths_async(f);
   function lambda(path) {
-    return Buffer.byteLength(path, "utf8");
+    let r = Buffer.byteLength(path, "utf8");
+    return r;
   }
   let mapped = list_map(list, lambda);
   return files;
