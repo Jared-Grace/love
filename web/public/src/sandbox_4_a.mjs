@@ -1,4 +1,3 @@
-import { function_copy_replace_first } from "../../../love/public/src/function_copy_replace_first.mjs";
 import { list_filter_starts_with_any } from "../../../love/public/src/list_filter_starts_with_any.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
