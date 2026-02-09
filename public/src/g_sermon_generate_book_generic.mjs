@@ -1,3 +1,4 @@
+import { openai_responses_cache } from "../../../love/public/src/openai_responses_cache.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { g_sermon_generate_book_generic_property } from "../../../love/public/src/g_sermon_generate_book_generic_property.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -15,7 +16,6 @@ import { ebible_folders_chapters_codes_to_verses } from "../../../love/public/sr
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { file_overwrite_json } from "../../../love/public/src/file_overwrite_json.mjs";
 import { openai_chat_completions } from "../../../love/public/src/openai_chat_completions.mjs";
-import { openai_responses } from "../../../love/public/src/openai_responses.mjs";
 import { g_sermon_generate } from "../../../love/public/src/g_sermon_generate.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_add_pair } from "../../../love/public/src/list_add_pair.mjs";
@@ -145,7 +145,7 @@ export async function g_sermon_generate_book_generic(
         "sermons were originally generated using: " +
         openai_chat_completions;
       log_keep(prompt_system + " " + prompt_user);
-      let output = await openai_responses(prompt_system, prompt_user);
+      let output = await openai_responses_cache(prompt_system, prompt_user);
       let passage_extension = {
         [g_sermon_generate_book_generic_property()]: output,
       };
