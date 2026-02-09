@@ -4,7 +4,7 @@ import { tautology } from "../../../love/public/src/tautology.mjs";
 import { function_multiple_rename_generic } from "../../../love/public/src/function_multiple_rename_generic.mjs";
 export async function function_multiple_rename_replace(from, to) {
   assert_arguments(arguments, 2);
-  let lambda = function lambda2(f_name_before) {
+  let lambda = function text_replace_curry_right_result(f_name_before) {
     let f_name_wrapped = text_replace(f_name_before, from, to);
     return f_name_wrapped;
   };
