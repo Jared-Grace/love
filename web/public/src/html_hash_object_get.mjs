@@ -23,8 +23,8 @@ export function html_hash_object_get() {
       let split2 = text_split_equal(s);
       let v = list_first_second(split2);
       let second = object_property_get(v, "second");
-      let function_copy_replace_first = object_property_get(v, "first");
-      oa(function_copy_replace_first, second);
+      let first = object_property_get(v, "first");
+      oa(first, second);
     }
     each(split, lambda);
   }

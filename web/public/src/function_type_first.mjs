@@ -18,6 +18,6 @@ export async function function_type_first(type) {
     js_visit_nodes(ast, lambda);
   }
   let list = list_adder(lambda2);
-  let function_copy_replace_first = list_first(list);
-  return function_copy_replace_first;
+  let first = list_first(list);
+  return first;
 }
