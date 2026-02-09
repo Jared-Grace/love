@@ -10,11 +10,11 @@ import { each } from "../../../love/public/src/each.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 export function list_intersect_multiple(list) {
   let fr = list_first_remaining(list);
-  let function_copy_replace_first = object_property_get(fr, "first");
+  let first = object_property_get(fr, "first");
   let remaining = object_property_get(fr, "remaining");
   let e = null_is(remaining);
   if (e) {
-    let copy = list_copy(function_copy_replace_first);
+    let copy = list_copy(first);
     return copy;
   }
   let uniques = list_map(remaining, list_unique_set);
@@ -29,7 +29,7 @@ export function list_intersect_multiple(list) {
         la(l);
       }
     }
-    each(function_copy_replace_first, lambda);
+    each(first, lambda);
   }
   let i = list_adder(lambda2);
   return i;
