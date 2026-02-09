@@ -10,7 +10,8 @@ export async function function_alias_replace(alias_old, f_name) {
   text_is_assert_multiple(items);
   function lambda(a) {
     let aliases = object_property_get(a, "aliases");
-    let exists = object_property_get(a, "exists");atm
+    let exists = object_property_get(a, "exists");
+    atm;
     if (not(exists)) {
       error("alias no exist");
     }
