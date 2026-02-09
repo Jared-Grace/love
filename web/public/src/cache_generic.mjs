@@ -5,7 +5,7 @@ export async function cache_generic(
   value_get,
   cache_save,
 ) {
-  let key = key_get();
+  let key = await key_get();
   let e = await cached_exists(key);
   let result = null;
   if (e) {
