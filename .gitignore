@@ -1,3 +1,29 @@
 gitignore/
 node_modules/
 firebase-debug.log
+
+# ===== Android Studio / Gradle =====
+/android/.gradle/
+/android/build/
+/android/local.properties
+
+# Ignore runtime "save" folder inside android
+/android/save/
+
+# Ignore generated IDE files
+/android/*.iml
+/android/.idea/
+/android/captures/
+/android/.externalNativeBuild/
+
+# Ignore logs
+/android/*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Optional: ignore native build outputs
+/android/.cxx/
+/android/lint/intermediates/
+/android/lint/generated/
