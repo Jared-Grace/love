@@ -1,4 +1,4 @@
-export function list_sort_string_mapper(list, lambda$item) {
+export function list_sort_text_mapper(list, lambda$item) {
   function lambda(a, b) {
     const va = lambda$item(a);
     const vb = lambda$item(b);
