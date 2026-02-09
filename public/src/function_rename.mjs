@@ -1,3 +1,4 @@
+import { data_identifiers_get } from "../../../love/public/src/data_identifiers_get.mjs";
 import { list_empty_is_assert_json } from "../../../love/public/src/list_empty_is_assert_json.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_identifiers_named } from "../../../love/public/src/js_identifiers_named.mjs";
@@ -7,6 +8,7 @@ import { function_rename_fn_names_check } from "../../../love/public/src/functio
 import { function_name_to_path_unalias } from "../../../love/public/src/function_name_to_path_unalias.mjs";
 import { function_move } from "../../../love/public/src/function_move.mjs";
 export async function function_rename(f_name_before, f_name_after) {
+  let identifiers = await data_identifiers_get();
   const v = await function_name_to_path_unalias(f_name_before);
   let unaliased = object_property_get(v, "unaliased");
   f_name_before = unaliased;
