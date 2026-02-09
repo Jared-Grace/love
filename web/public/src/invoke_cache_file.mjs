@@ -7,8 +7,8 @@ import { invoke_cache_value_get } from "../../../love/public/src/invoke_cache_va
 import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
 export async function invoke_cache_file(fn, args) {
   let key_get = invoke_cache_file_key_get(fn, args);
-  let cached_exists = file_exists;
   let value_get = invoke_cache_value_get(fn, args);
+  let cached_exists = file_exists;
   let cached_get = async function lambda2(key) {
     let data = await file_read_json(key);
     let result2 = object_property_get(data, "result");
