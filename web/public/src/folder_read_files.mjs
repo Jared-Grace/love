@@ -6,7 +6,7 @@ import { list_map_combine_left } from "../../../love/public/src/list_map_combine
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { folder_read_browser } from "../../../love/public/src/folder_read_browser.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
-import { list_sort_string } from "../../../love/public/src/list_sort_string.mjs";
+import { list_sort_text } from "../../../love/public/src/list_sort_text.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 export async function folder_read_files(path_folder) {
   if (browser_is()) {
@@ -28,6 +28,6 @@ export async function folder_read_files(path_folder) {
   }
   const all = fs.readdirSync(path_folder);
   let files = all.filter(lambda);
-  list_sort_string(files);
+  list_sort_text(files);
   return files;
 }
