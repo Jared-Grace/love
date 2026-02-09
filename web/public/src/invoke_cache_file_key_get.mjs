@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { text_to_uuid_cache } from "../../../love/public/src/text_to_uuid_cache.mjs";
 import { file_path_too_long } from "../../../love/public/src/file_path_too_long.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
@@ -12,6 +13,10 @@ export function invoke_cache_file_key_get(fn, args) {
     if (tl) {
       json = await text_to_uuid_cache(json);
     }
+    log({
+      json,
+      tl,
+    });
     let safe = file_path_safe_to(json);
     let file_name = file_name_json(safe);
     let f_path = folder_user_storage_function_path(fn);
