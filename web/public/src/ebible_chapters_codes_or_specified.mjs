@@ -7,7 +7,7 @@ export async function ebible_chapters_codes_or_specified(
   chapter_code_specified,
 ) {
   if (null_not_is(chapter_code_specified)) {
-    let book_code2 = ebible_chapter_code_to_book(chapter_code);
+    book_code = ebible_chapter_code_to_book(chapter_code_specified);
   }
   let chapters = await ebible_chapters(bible_folder, book_code);
   if (null_not_is(chapter_code_specified)) {
