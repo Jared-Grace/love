@@ -1,6 +1,6 @@
 import { text_to_uuid_save_initialize } from "../../../love/public/src/text_to_uuid_save_initialize.mjs";
 import { text_to_uuid_initial } from "../../../love/public/src/text_to_uuid_initial.mjs";
-import { text_to_uuid_get_initialize } from "../../../love/public/src/text_to_uuid_get_initialize.mjs";
+import { text_to_uuid_ids_initialize } from "../../../love/public/src/text_to_uuid_ids_initialize.mjs";
 import { text_to_uuid_path } from "../../../love/public/src/text_to_uuid_path.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { uuid } from "../../../love/public/src/uuid.mjs";
@@ -13,7 +13,7 @@ export async function text_to_uuid_save(text) {
   async function lambda(data) {
     let set = text_to_uuid_save_initialize(data);
     object_property_exists_not_assert(set, text);
-    let get = text_to_uuid_get_initialize(data);
+    let get = text_to_uuid_ids_initialize(data);
     let u = await uuid();
     object_property_set(set, text, u);
     object_property_set(get, u, text);
