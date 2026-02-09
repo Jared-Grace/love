@@ -24,8 +24,13 @@ except Exception as e:
     print(f"Error reading JSON: {e}")
     sys.exit(1)
 
-system_msg = data.get("system", "")
-user_msg   = data.get("user", "")
+system_msg = ensure_text(data.get("system", ""))
+user_msg   = ensure_text(data.get("user", ""))
+
+def ensure_text(x):
+    if isinstance(x, str):
+        return x
+    return json.dumps(x, ensure_ascii=False)
 
 # --- API call ---
 response = client.responses.create(
