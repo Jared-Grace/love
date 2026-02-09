@@ -2,6 +2,6 @@ import { text_to_uuid_set_initialize } from "../../../love/public/src/text_to_uu
 import { text_to_uuid_read } from "../../../love/public/src/text_to_uuid_read.mjs";
 export async function text_to_uuid_read_set() {
   let data = await text_to_uuid_read();
-  let get = text_to_uuid_set_initialize(data);
-  return get;
+  let set = text_to_uuid_set_initialize(data);
+  return set;
 }
