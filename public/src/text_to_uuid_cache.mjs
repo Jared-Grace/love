@@ -9,7 +9,7 @@ export async function text_to_uuid_cache(text) {
   let value_get = null_get();
   let cached_exists = text_to_uuid_save_exists;
   let cached_get = text_to_uuid_save_get;
-  let cache_save = async function lambda4(text, id) {
+  let cache_save = async function lambda4(text, n) {
     await text_to_uuid_save(text);
   };
   let r = await cache_generic(
