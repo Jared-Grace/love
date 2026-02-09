@@ -1,5 +1,5 @@
+import { list_empty_is_assert_json } from "../../../love/public/src/list_empty_is_assert_json.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { list_empty_is_assert } from "../../../love/public/src/list_empty_is_assert.mjs";
 import { js_identifiers_named } from "../../../love/public/src/js_identifiers_named.mjs";
 import { function_parse_unaliased } from "../../../love/public/src/function_parse_unaliased.mjs";
 import { function_rename_identifiers_alias } from "../../../love/public/src/function_rename_identifiers_alias.mjs";
@@ -13,7 +13,7 @@ export async function function_rename(f_name_before, f_name_after) {
   let v2 = await function_parse_unaliased(f_name_before);
   let ast = object_property_get(v2, "ast");
   let identifiers_named = js_identifiers_named(ast, f_name_after);
-  list_empty_is_assert(identifiers_named, {
+  list_empty_is_assert_json(identifiers_named, {
     f_name_after,
     msg: "already exists in file as identifier",
   });
