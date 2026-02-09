@@ -11,8 +11,8 @@ export async function invoke_cache_file(fn, args) {
   let cached_exists = file_exists;
   let cached_get = async function lambda2(key) {
     let data = await file_read_json(key);
-    let result2 = object_property_get(data, "result");
-    return result2;
+    let r = object_property_get(data, "result");
+    return r;
   };
   let cache_save = async function lambda4(key, result) {
     await file_overwrite_json(key, {
