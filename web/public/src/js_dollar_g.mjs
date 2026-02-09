@@ -19,7 +19,7 @@ export async function js_dollar_g({
 }) {
   let r = list_first_remaining(remaining);
   let property_names = object_property_get(r, "remaining");
-  let object_name = object_property_get(r, "function_copy_replace_first");
+  let object_name = object_property_get(r, "first");
   async function lambda2(property_name) {
     if (js_node_type_is(stack1, "ExpressionStatement")) {
       let unique = js_identifier_unique_ast(ast, property_name);
