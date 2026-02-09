@@ -4,6 +4,7 @@ import { folder_user_storage_function_path_function } from "./folder_user_storag
 export async function sandbox_5() {
   let f = folder_user_storage_function_path_function();
   let files = await folder_read_recursive_paths_async(f);
-  let mapped = list_map(list, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list, lambda);
   return files;
 }
