@@ -1,4 +1,3 @@
-import { function_copy_replace_first } from "../../../love/public/src/function_copy_replace_first.mjs";
 import { text_includes_not } from "../../../love/public/src/text_includes_not.mjs";
 import { html_hash_symbol } from "../../../love/public/src/html_hash_symbol.mjs";
 import { object_adder } from "../../../love/public/src/object_adder.mjs";
