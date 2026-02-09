@@ -1,3 +1,5 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { function_copy_replace_first } from "../../../love/public/src/function_copy_replace_first.mjs";
 import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier_unique_ast.mjs";
 import { js_assign_object_property_get } from "../../../love/public/src/js_assign_object_property_get.mjs";
 import { js_call_object_property_get } from "../../../love/public/src/js_call_object_property_get.mjs";
@@ -16,8 +18,9 @@ export async function js_dollar_g({
   ast,
   afters,
 }) {
-  let { function_copy_replace_first: object_name, remaining: property_names } =
-    list_first_remaining(remaining);
+  let r = list_first_remaining(remaining);
+  let property_names = object_property_get(r, "remaining");
+  let object_name = object_property_get(r, "function_copy_replace_first");
   async function lambda2(property_name) {
     if (js_node_type_is(stack1, "ExpressionStatement")) {
       let unique = js_identifier_unique_ast(ast, property_name);
