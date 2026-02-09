@@ -13,5 +13,6 @@ export async function sandbox() {
   let d = await text_decompress(c);
   log({
     d,
+    c,
   });
 }
