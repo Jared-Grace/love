@@ -6,8 +6,6 @@ import { invoke_cache_value_get } from "../../../love/public/src/invoke_cache_va
 import { invoke_cache_key_get } from "../../../love/public/src/invoke_cache_key_get.mjs";
 import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
 export async function invoke_cache_indexeddb(fn, args, db_get, store) {
-  let key_get = invoke_cache_key_get(fn, args);
-  let value_get = invoke_cache_value_get(fn, args);
   let cached_exists = async function lambda3(key) {
     let item = await indexeddb_get(db_get, store, key);
     let exists = null_not_is(item);
@@ -21,12 +19,12 @@ export async function invoke_cache_indexeddb(fn, args, db_get, store) {
     let value_get2 = lambda_get(value);
     await indexeddb_put(db_get, store, key, value_get2);
   };
-  let result = await cache_generic(
-    key_get,
-    cached_exists,
-    cached_get,
-    value_get,
-    cache_save,
-  );
-  return result;
+    let r = await invoke_cache_generic(
+      fn,
+      args,
+      cached_exists,
+      cached_get,
+      cache_save,
+    );
+    return r;
 }
