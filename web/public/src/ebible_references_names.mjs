@@ -3,7 +3,7 @@ import { each_object } from "../../../love/public/src/each_object.mjs";
 import { text_replace_if_starts_with } from "../../../love/public/src/text_replace_if_starts_with.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_first } from "../../../love/public/src/list_map_first.mjs";
-import { list_map_filter_string_empty_not_is } from "../../../love/public/src/list_map_filter_string_empty_not_is.mjs";
+import { list_map_filter_text_empty_not_is } from "../../../love/public/src/list_map_filter_text_empty_not_is.mjs";
 import { list_map_split_space } from "../../../love/public/src/list_map_split_space.mjs";
 import { list_map_prefix_without_any } from "../../../love/public/src/list_map_prefix_without_any.mjs";
 import { list_map_prefix_any } from "../../../love/public/src/list_map_prefix_any.mjs";
@@ -30,7 +30,7 @@ export function ebible_references_names(books, lines) {
   let book_names = list_map_prefix_any(verse_references, books_names);
   let mapped2 = list_map_prefix_without_any(verse_references, books_names);
   let mapped3 = list_map_split_space(mapped2);
-  let mapped4 = list_map_filter_string_empty_not_is(mapped3);
+  let mapped4 = list_map_filter_text_empty_not_is(mapped3);
   let chapter_verses_list = list_map_first(mapped4);
   let v = {
     chapter_verses_list,
