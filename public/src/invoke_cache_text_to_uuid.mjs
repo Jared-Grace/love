@@ -6,7 +6,7 @@ import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
 import { lambda_get } from "./lambda_get.mjs";
 export async function invoke_cache_text_to_uuid(text) {
   let key_get = lambda_get(text);
-  let value_get = null_get(value_get);
+  let value_get = null_get();
   let cached_exists = text_to_uuid_set_exists;
   let cached_get = text_to_uuid_get;
   let cache_save = async function lambda4(key, value) {
