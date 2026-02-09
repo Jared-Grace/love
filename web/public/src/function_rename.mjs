@@ -10,7 +10,7 @@ import { function_name_to_path_unalias } from "../../../love/public/src/function
 import { function_move } from "../../../love/public/src/function_move.mjs";
 export async function function_rename(f_name_before, f_name_after) {
   let identifiers = await data_identifiers_get();
-  object_property_exists_not_assert(object, property_name);
+  object_property_exists_not_assert(identifiers, f_name_after);
   const v = await function_name_to_path_unalias(f_name_before);
   let unaliased = object_property_get(v, "unaliased");
   f_name_before = unaliased;
