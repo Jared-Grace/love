@@ -8,12 +8,12 @@ export async function invoke_cache_text_to_uuid(fn, args) {
   let cache_save = async function lambda4(key, text) {
     await text_to_uuid_set(text);
   };
-  let result = await cache_generic(
-    key_get,
-    cached_exists,
-    cached_get,
-    value_get,
-    cache_save,
-  );
-  return result;
+    let r = await invoke_cache_generic(
+      fn,
+      args,
+      cached_exists,
+      cached_get,
+      cache_save,
+    );
+    return r;
 }
