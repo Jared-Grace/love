@@ -1,7 +1,7 @@
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { function_current_set } from "../../../love/public/src/function_current_set.mjs";
 import { text_split_comma } from "../../../love/public/src/text_split_comma.mjs";
-export async function function_multiple_param_delete_generic(
+export async function functions_param_delete_generic(
   f_names_comma,
   param_name,
   fn,
