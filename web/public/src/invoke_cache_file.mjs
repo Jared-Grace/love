@@ -15,12 +15,12 @@ export async function invoke_cache_file(fn, args) {
       result,
     });
   };
-  let v = await invoke_cache_generic(
+  let r = await invoke_cache_generic(
     fn,
     args,
     cached_exists,
     cached_get,
     cache_save,
   );
-  return v;
+  return r;
 }
