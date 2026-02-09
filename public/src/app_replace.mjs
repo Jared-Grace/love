@@ -1,6 +1,4 @@
-import { firebase_storage_function_run } from "../../../love/public/src/firebase_storage_function_run.mjs";
-import { app_replace_main } from "../../../love/public/src/app_replace_main.mjs";
+import { app_main_production } from "../../../love/public/src/app_main_production.mjs";
 export async function app_replace() {
-  let f_name = app_replace_main.name;
-  await firebase_storage_function_run(f_name);
+  await app_main_production("app_replace_main", "jared-grace");
 }
