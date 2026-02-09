@@ -17,7 +17,7 @@ export async function invoke_cache_text_to_uuid(fn, args, db_get, store) {
       key,
       value,
     };
-    await text_to_uuid_set(db_get, store, key, value_get2);
+    await text_to_uuid_set(o);
   };
   let result = await cache_generic(
     key_get,
