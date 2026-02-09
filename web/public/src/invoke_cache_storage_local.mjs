@@ -5,8 +5,6 @@ import { storage_local_get } from "../../../love/public/src/storage_local_get.mj
 import { storage_local_exists } from "../../../love/public/src/storage_local_exists.mjs";
 import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
 export async function invoke_cache_storage_local(fn, args) {
-  let key_get = invoke_cache_key_get(fn, args);
-  let value_get = invoke_cache_value_get(fn, args);
   let cached_exists = function lambda3(key) {
     let exists = storage_local_exists(invoke_cache_storage_local, key);
     return exists;
