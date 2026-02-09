@@ -8,7 +8,7 @@ import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
-import { list_sort_string_alpha_size } from "../../../love/public/src/list_sort_string_alpha_size.mjs";
+import { list_sort_text_alpha_size } from "../../../love/public/src/list_sort_text_alpha_size.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -55,7 +55,7 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
   refresh();
   function refresh() {
     html_clear(f_names_div);
-    list_sort_string_alpha_size(filtered);
+    list_sort_text_alpha_size(filtered);
     function lambda(text) {
       async function lambda3() {
         await f_name_select(text);
