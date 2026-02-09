@@ -1,5 +1,5 @@
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
-export function buffer_string_to(buffer) {
+export function buffer_text_to(buffer) {
   let s = null;
   let b = browser_is();
   if (b) {
