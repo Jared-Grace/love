@@ -5,7 +5,7 @@ import { text_to_uuid_get } from "../../../love/public/src/text_to_uuid_get.mjs"
 import { invoke_cache_value_get } from "../../../love/public/src/invoke_cache_value_get.mjs";
 import { invoke_cache_key_get } from "../../../love/public/src/invoke_cache_key_get.mjs";
 import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
-export async function invoke_cache_text_to_uuid(fn, args) {
+export async function invoke_cache_text_to_uuid(text) {
   let key_get = invoke_cache_key_get(fn, args);
   let value_get = invoke_cache_value_get(fn, args);
   let cached_exists = text_to_uuid_set_exists;
