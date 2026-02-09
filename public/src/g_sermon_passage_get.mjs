@@ -1,4 +1,3 @@
-import { function_copy_replace_first } from "../../../love/public/src/function_copy_replace_first.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { g_sermon_verse_to_text } from "../../../love/public/src/g_sermon_verse_to_text.mjs";
 import { g_sermon_generate_chapter_passages_get } from "../../../love/public/src/g_sermon_generate_chapter_passages_get.mjs";
@@ -10,8 +9,8 @@ export async function g_sermon_passage_get(chapter_code, verse_number) {
   let passages = await g_sermon_generate_chapter_passages_get(chapter_code);
   function lambda(v) {
     let verse_numbers = object_property_get(v, "verse_numbers");
-    let function_copy_replace_first = list_first(verse_numbers);
-    let v2 = function_copy_replace_first === verse_number;
+    let first = list_first(verse_numbers);
+    let v2 = first === verse_number;
     return v2;
   }
   let v = list_find(passages, lambda);
