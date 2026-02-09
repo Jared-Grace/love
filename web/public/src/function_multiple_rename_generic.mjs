@@ -6,7 +6,8 @@ import { list_empty_not_is_assert } from "../../../love/public/src/list_empty_no
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 export async function function_multiple_rename_generic(filter, name_change) {
   let f_names = await functions_names();
-  let filtered2 = list_filter(list, function lambda2(item) {});
+  function lambda2(item) {}
+  let filtered2 = list_filter(list, lambda2);
   let filtered = filter(f_names);
   list_empty_not_is_assert(filtered);
   await each_async(filtered, lambda);
