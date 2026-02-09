@@ -12,7 +12,7 @@ import { object_property_set } from "../../../love/public/src/object_property_se
 import { app_a_literal } from "../../../love/public/src/app_a_literal.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { app_a_raw } from "../../../love/public/src/app_a_raw.mjs";
-import { app_a_symbol_string_template } from "../../../love/public/src/app_a_symbol_string_template.mjs";
+import { app_a_symbol_text_template } from "../../../love/public/src/app_a_symbol_text_template.mjs";
 import { each_pair_or_null } from "../../../love/public/src/each_pair_or_null.mjs";
 import { app_a_keyword_blue } from "../../../love/public/src/app_a_keyword_blue.mjs";
 import { js_keyword_return } from "../../../love/public/src/js_keyword_return.mjs";
@@ -226,7 +226,7 @@ export function app_a_function_node(a) {
       let quasis = object_property_get(node, "quasis");
       let expressions = object_property_get(node, "expressions");
       let container = html_span(parent);
-      app_a_symbol_string_template(container);
+      app_a_symbol_text_template(container);
       function lambda22(q, e) {
         let value = object_property_get(q, "value");
         app_a_raw(value, container);
@@ -239,7 +239,7 @@ export function app_a_function_node(a) {
         }
       }
       each_pair_or_null(quasis, expressions, lambda22);
-      app_a_symbol_string_template(container);
+      app_a_symbol_text_template(container);
       let code = js_unparse(node);
       app_a_literal(a, container, node, on_change, code);
       function on_change(value_new) {
