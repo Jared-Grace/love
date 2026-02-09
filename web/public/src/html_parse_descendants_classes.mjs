@@ -1,4 +1,4 @@
-import { list_sort_string } from "../../../love/public/src/list_sort_string.mjs";
+import { list_sort_text } from "../../../love/public/src/list_sort_text.mjs";
 import { text_split } from "../../../love/public/src/text_split.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -20,6 +20,6 @@ export function html_parse_descendants_classes(item, d) {
   }
   let list = list_adder(lambda2);
   let classes = list_unique(list);
-  list_sort_string(classes);
+  list_sort_text(classes);
   return classes;
 }

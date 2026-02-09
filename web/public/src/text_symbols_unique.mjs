@@ -1,4 +1,4 @@
-import { list_sort_string } from "../../../love/public/src/list_sort_string.mjs";
+import { list_sort_text } from "../../../love/public/src/list_sort_text.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
@@ -9,7 +9,7 @@ export function text_symbols_unique(s) {
     each(split, la);
   }
   let unique_list = list_adder_unique(lambda4);
-  list_sort_string(unique_list);
+  list_sort_text(unique_list);
   let unique = list_join_empty(unique_list);
   return unique;
 }
