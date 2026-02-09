@@ -9,9 +9,10 @@ export async function function_multiple_rename_generic(filter, name_change) {
   list_empty_not_is_assert(filtered);
   await each_async(filtered, lambda);
   async function lambda(f_name_before) {
-    let after = name_change(f_name_before);
-    if (equal(left, right)) {
+    let f_name_after = name_change(f_name_before);
+    if (equal(f_name_before, f_name_after)) {
+      return;
     }
-    let v = await function_rename(f_name_before, after);
+    let v = await function_rename(f_name_before, f_name_after);
   }
 }
