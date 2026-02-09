@@ -1,5 +1,3 @@
-import { invoke_cache_value_get } from "../../../love/public/src/invoke_cache_value_get.mjs";
-import { invoke_cache_key_get } from "../../../love/public/src/invoke_cache_key_get.mjs";
 import { storage_local_set_exists_not } from "../../../love/public/src/storage_local_set_exists_not.mjs";
 import { storage_local_get } from "../../../love/public/src/storage_local_get.mjs";
 import { storage_local_exists } from "../../../love/public/src/storage_local_exists.mjs";
