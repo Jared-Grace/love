@@ -1,4 +1,3 @@
-import { function_copy_replace_first } from "../../../love/public/src/function_copy_replace_first.mjs";
 import { list_slice_from } from "../../../love/public/src/list_slice_from.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -10,7 +9,7 @@ export function list_first_last_slice(list_rg, list) {
   let sliced = list_slice_from(list, first, last);
   let v2 = {
     sliced,
-    function_copy_replace_first: first,
+    first,
     last,
   };
   return v2;
