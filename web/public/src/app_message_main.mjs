@@ -87,11 +87,8 @@ export async function app_message_main(context) {
             "I have received your message. Lord-willing, I will answer. Please come back later to see if I have replied.",
           );
         } else {
-          let function_copy_replace_first = list_first(results);
-          let outputs = object_property_get(
-            function_copy_replace_first,
-            "outputs",
-          );
+          let first = list_first(results);
+          let outputs = object_property_get(first, "outputs");
           html_div_text_multiple(right, outputs);
         }
       }
