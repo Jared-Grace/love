@@ -1,3 +1,4 @@
+import { assert_message } from "../../../love/public/src/assert_message.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { text_is_assert_multiple } from "../../../love/public/src/text_is_assert_multiple.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -11,7 +12,7 @@ export async function function_alias_replace(alias_old, f_name) {
   function lambda(a) {
     let aliases = object_property_get(a, "aliases");
     let exists = object_property_get(a, "exists");
-    atm;
+    assert_message(b, message);
     if (not(exists)) {
       error("alias no exist");
     }
