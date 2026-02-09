@@ -23,8 +23,8 @@ export async function folder_read_browser(path_folder) {
     let filtered = list_filter_starts_with(files_paths, prefix);
     let mapped = list_map_prefix_without(filtered, prefix);
     function lambda(item) {
-      let function_copy_replace_first = text_split_first(item, s);
-      return function_copy_replace_first;
+      let first = text_split_first(item, s);
+      return first;
     }
     let mapped2 = list_map(mapped, lambda);
     let unique = list_unique(mapped2);
