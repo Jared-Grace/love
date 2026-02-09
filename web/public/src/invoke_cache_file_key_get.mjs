@@ -10,7 +10,7 @@ export function invoke_cache_file_key_get(fn, args) {
     let json = invoke_cache_key(fn, args);
     let tl = file_path_too_long(json);
     if (tl) {
-      let r = await text_to_uuid(text);
+      json = await text_to_uuid(text);
     }
     let safe = file_path_safe_to(json);
     let file_name = file_name_json(safe);
