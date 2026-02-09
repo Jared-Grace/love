@@ -1,7 +1,6 @@
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
 import { app_ceb_bible_gloss_generate_generic } from "../../../love/public/src/app_ceb_bible_gloss_generate_generic.mjs";
 import { ebible_folder_cebuano } from "../../../love/public/src/ebible_folder_cebuano.mjs";
-import { app_ceb_bible_gloss_generate_property } from "../../../love/public/src/app_ceb_bible_gloss_generate_property.mjs";
 import { app_ceb_bible_gloss_generate } from "../../../love/public/src/app_ceb_bible_gloss_generate.mjs";
 export async function app_ceb_bible_gloss_generate_chapter(
   chapter_code_specified,
@@ -9,7 +8,6 @@ export async function app_ceb_bible_gloss_generate_chapter(
   let book_code = ebible_chapter_code_to_book(chapter_code_specified);
   let language = "Cebuano";
   let fn = app_ceb_bible_gloss_generate;
-  let property_name = app_ceb_bible_gloss_generate_property();
   let c = ebible_folder_cebuano();
   let bible_folder = "engbsb";
   const bible_folders = [c, bible_folder];
