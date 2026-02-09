@@ -4,7 +4,7 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { firebase_upload_generic } from "../../../love/public/src/firebase_upload_generic.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
-export async function firebase_upload_string_generic(
+export async function firebase_upload_text_generic(
   content,
   destination,
   content_type,
