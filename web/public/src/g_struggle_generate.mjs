@@ -25,7 +25,6 @@ Rules:
     fn,
     prompt_user_middle,
     prompt_system,
-    "struggle",
     chapter_code_specified,
   );
 }
