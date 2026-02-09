@@ -1,6 +1,7 @@
 import { tautology } from "../../../love/public/src/tautology.mjs";
 import { function_multiple_rename_generic } from "../../../love/public/src/function_multiple_rename_generic.mjs";
 export async function function_multiple_rename_replace(filter, name_change) {
-  let r = await function_multiple_rename_generic(tautology, () => {});
+  function lambda() {}
+  let r = await function_multiple_rename_generic(tautology, lambda);
   return r;
 }
