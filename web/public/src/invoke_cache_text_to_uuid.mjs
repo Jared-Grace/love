@@ -1,7 +1,6 @@
 import { text_to_uuid_set } from "../../../love/public/src/text_to_uuid_set.mjs";
 import { text_to_uuid_set_exists } from "../../../love/public/src/text_to_uuid_set_exists.mjs";
 import { text_to_uuid_get } from "../../../love/public/src/text_to_uuid_get.mjs";
-import { lambda_get } from "../../../love/public/src/lambda_get.mjs";
 import { invoke_cache_value_get } from "../../../love/public/src/invoke_cache_value_get.mjs";
 import { invoke_cache_key_get } from "../../../love/public/src/invoke_cache_key_get.mjs";
 import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
@@ -14,7 +13,10 @@ export async function invoke_cache_text_to_uuid(fn, args, db_get, store) {
     return item;
   };
   let cache_save = async function lambda4(key, value) {
-    let value_get2 = lambda_get(value);
+    let o = {
+      key,
+      value,
+    };
     await text_to_uuid_set(db_get, store, key, value_get2);
   };
   let result = await cache_generic(
