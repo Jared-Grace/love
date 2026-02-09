@@ -5,7 +5,6 @@ export async function app_ceb_bible_gloss_generate_generic(
   bible_folders,
   book_code,
   fn,
-  property_name,
   chapter_code_specified,
 ) {
   const prompt_system = `You will be given a Bible passage and its context in ${language}.
@@ -25,7 +24,6 @@ The ${last} provided as a reference.`;
     fn,
     prompt_user_middle,
     prompt_system,
-    property_name,
     chapter_code_specified,
   );
 }
