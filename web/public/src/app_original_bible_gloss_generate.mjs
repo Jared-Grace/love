@@ -9,8 +9,8 @@ export async function app_original_bible_gloss_generate() {
   await app_ceb_bible_gloss_generate_generic(
     language,
     last,
+    bible_folders,
     null,
-    book_code,
     fn,
     chapter_code_specified,
   );
