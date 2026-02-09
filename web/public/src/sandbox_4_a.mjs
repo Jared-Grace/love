@@ -20,7 +20,7 @@ export async function sandbox_4_a() {
   let split2 = list_map_whitespace_normalize(split);
   let mapped3 = list_map_split_comma(split2);
   async function lambda(item) {
-    let function_copy_replace_first = list_first(item);
+    let first = list_first(item);
     let second = list_second(item);
     let split3 = text_split_semicolon(second);
     let mapped2 = list_map_whitespace_normalize(split3);
@@ -33,7 +33,7 @@ export async function sandbox_4_a() {
       let verse_references = list_filter_starts_with_any(split, mapped);
     }
     await each_async(list, lambda2);
-    let v = [function_copy_replace_first, mapped2];
+    let v = [first, mapped2];
     return v;
   }
   let mapped = list_map(mapped3, lambda);
