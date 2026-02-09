@@ -14,7 +14,7 @@ import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { app_reply_buttons_languages } from "../../../love/public/src/app_reply_buttons_languages.mjs";
 import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_languages_prompt.mjs";
 import { app_reply_languages_chosen_reset } from "../../../love/public/src/app_reply_languages_chosen_reset.mjs";
-import { list_sort_string_property } from "../../../love/public/src/list_sort_string_property.mjs";
+import { list_sort_text_property } from "../../../love/public/src/list_sort_text_property.mjs";
 export function app_search_home(context) {
   let root = object_property_get(context, "root");
   html_clear(root);
@@ -22,7 +22,7 @@ export function app_search_home(context) {
   let languages = ebible_languages();
   let en_l = ebible_language_en();
   let languages_chosen_default = [en_l];
-  list_sort_string_property(languages, "name");
+  list_sort_text_property(languages, "name");
   app_reply_languages_chosen_reset(
     languages_chosen,
     languages_chosen_default,
