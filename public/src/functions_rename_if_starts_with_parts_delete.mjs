@@ -2,7 +2,7 @@ import { function_name_parts_remove } from "../../../love/public/src/function_na
 import { text_split_comma } from "../../../love/public/src/text_split_comma.mjs";
 import { functions_rename_generic_starts_with } from "../../../love/public/src/functions_rename_generic_starts_with.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
-export async function function_multiple_rename_if_starts_with_parts_delete(
+export async function functions_rename_if_starts_with_parts_delete(
   f_name_prefix_before,
   deleted,
 ) {
