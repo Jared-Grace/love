@@ -1,4 +1,3 @@
-import { function_copy_replace_first } from "../../../love/public/src/function_copy_replace_first.mjs";
 import { text_empty_is } from "../../../love/public/src/text_empty_is.mjs";
 import { git_push_repos } from "../../../love/public/src/git_push_repos.mjs";
 import { invoke } from "../../../love/public/src/invoke.mjs";
@@ -21,8 +20,8 @@ export async function app_a_upload(deltas) {
     let e = await file_exists(key);
     if (e) {
       let contents = await file_read(key);
-      let function_copy_replace_first = list_first(versions);
-      let eq = equal(contents, function_copy_replace_first);
+      let first = list_first(versions);
+      let eq = equal(contents, first);
       assert_json(eq, {
         contents,
         versions,
