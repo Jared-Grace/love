@@ -1,5 +1,4 @@
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { function_copy_replace_first } from "../../../love/public/src/function_copy_replace_first.mjs";
 import { js_identifier_unique_ast } from "../../../love/public/src/js_identifier_unique_ast.mjs";
 import { js_assign_object_property_get } from "../../../love/public/src/js_assign_object_property_get.mjs";
 import { js_call_object_property_get } from "../../../love/public/src/js_call_object_property_get.mjs";
