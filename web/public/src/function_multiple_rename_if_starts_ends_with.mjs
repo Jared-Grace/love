@@ -10,11 +10,11 @@ export async function function_multiple_rename_if_starts_ends_with(
 ) {
   assert_arguments(arguments, 3);
   let r = text_starts_ends_with(t, prefix, suffix);
-  await function_multiple_rename_generic(filter, name_change);
   let filter = text_starts_ends_with_curry_right(
     f_name_prefix,
     f_name_suffix_before,
   );
+  await function_multiple_rename_generic(filter, name_change);
   function name_change(f_name_before) {
     let together2 = text_suffix_change(
       f_name_before,
