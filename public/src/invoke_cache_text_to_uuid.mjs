@@ -9,8 +9,8 @@ export async function invoke_cache_text_to_uuid(text) {
   let value_get = null_get();
   let cached_exists = text_to_uuid_set_exists;
   let cached_get = async function lambda2(key) {
-    let result2 = await text_to_uuid_get(key);
-    return result2;
+    let r = await text_to_uuid_get(key);
+    return r;
   };
   let cache_save = async function lambda4(key, result) {
     await file_overwrite_json(key, {
