@@ -19,12 +19,12 @@ export async function invoke_cache_storage_local(fn, args) {
     );
     return v2;
   };
-  let result = await cache_generic(
-    key_get,
-    cached_exists,
-    cached_get,
-    value_get,
-    cache_save,
-  );
-  return result;
+    let r = await invoke_cache_generic(
+      fn,
+      args,
+      cached_exists,
+      cached_get,
+      cache_save,
+    );
+    return r;
 }
