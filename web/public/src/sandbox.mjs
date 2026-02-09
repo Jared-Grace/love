@@ -1,3 +1,4 @@
+import { text_decompress } from "../../../love/public/src/text_decompress.mjs";
 import { file_name_txt } from "../../../love/public/src/file_name_txt.mjs";
 import { app_original_bible_gloss_generate_chapter_code_specified } from "../../../love/public/src/app_original_bible_gloss_generate_chapter_code_specified.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -9,6 +10,7 @@ export async function sandbox() {
   let file_name = file_name_txt(chapter_code_specified);
   let p = folder_user_docs_path(file_name);
   let data = await file_read_json(p);
+  let v = await text_decompress(compressed);
   log({
     data,
   });
