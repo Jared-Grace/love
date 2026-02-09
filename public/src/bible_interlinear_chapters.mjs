@@ -28,8 +28,8 @@ export async function bible_interlinear_chapters() {
   let sorts = ["Heb Sort", "Greek Sort"];
   let chapters = {};
   async function lambda(verse_words, v_number) {
-    let function_copy_replace_first = list_first(verse_words);
-    let vid = object_property_get(function_copy_replace_first, "VerseId");
+    let first = list_first(verse_words);
+    let vid = object_property_get(first, "VerseId");
     function lambda3(sort) {
       function lambda2(item) {
         let value = object_property_get(item, sort);
