@@ -1,3 +1,4 @@
+import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { function_unalias_exists_not_assert } from "../../../love/public/src/function_unalias_exists_not_assert.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -6,6 +7,7 @@ import { object_property_delete } from "../../../love/public/src/object_property
 import { error } from "../../../love/public/src/error.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 export async function function_alias_change(alias_old, alias_new) {
+  assert_arguments(arguments, 2);
   await function_unalias_exists_not_assert(alias_new);
   function lambda(a) {
     let unaliased = object_property_get(a, "unaliased");
