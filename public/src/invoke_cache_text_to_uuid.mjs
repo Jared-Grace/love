@@ -1,3 +1,4 @@
+import { json_to } from "../../../love/public/src/json_to.mjs";
 import { text_to_uuid_set } from "../../../love/public/src/text_to_uuid_set.mjs";
 import { text_to_uuid_set_exists } from "../../../love/public/src/text_to_uuid_set_exists.mjs";
 import { text_to_uuid_get } from "../../../love/public/src/text_to_uuid_get.mjs";
@@ -17,6 +18,7 @@ export async function invoke_cache_text_to_uuid(fn, args, db_get, store) {
       key,
       value,
     };
+    let json = json_to(object);
     await text_to_uuid_set(o);
   };
   let result = await cache_generic(
