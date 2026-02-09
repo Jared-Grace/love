@@ -7,10 +7,10 @@ export function list_first_last_slice(list_rg, list) {
   let first = list_first(v);
   let last = list_last(v);
   let sliced = list_slice_from(list, first, last);
-  let v2 = {
+  let r = {
     sliced,
     first,
     last,
   };
-  return v2;
+  return r;
 }
