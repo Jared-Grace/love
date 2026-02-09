@@ -18,8 +18,8 @@ export async function invoke_cache_text_to_uuid(fn, args, db_get, store) {
       key,
       value,
     };
-    let json = json_to(object);
-    await text_to_uuid_set(o);
+    let json = json_to(o);
+    await text_to_uuid_set(json);
   };
   let result = await cache_generic(
     key_get,
