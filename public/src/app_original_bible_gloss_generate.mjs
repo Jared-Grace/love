@@ -14,7 +14,6 @@ export async function app_original_bible_gloss_generate() {
     bible_folders,
     book_code,
     fn,
-    property_name,
     null,
   );
 }
