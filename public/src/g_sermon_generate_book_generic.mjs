@@ -41,7 +41,6 @@ export async function g_sermon_generate_book_generic(
   fn,
   prompt_user_middle,
   prompt_system,
-  property_name,
   chapter_code_specified,
 ) {
   let bible_folder_first = list_first(bible_folders);
