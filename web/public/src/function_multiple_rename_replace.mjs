@@ -1,13 +1,10 @@
-import { text_replace } from "../../../love/public/src/text_replace.mjs";
+import { text_replace_curry_right } from "../../../love/public/src/text_replace_curry_right.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { tautology } from "../../../love/public/src/tautology.mjs";
 import { function_multiple_rename_generic } from "../../../love/public/src/function_multiple_rename_generic.mjs";
 export async function function_multiple_rename_replace(from, to) {
   assert_arguments(arguments, 2);
-  let lambda = function text_replace_curry_right_result(f_name_before) {
-    let f_name_wrapped = text_replace(f_name_before, from, to);
-    return f_name_wrapped;
-  };
+  let lambda = text_replace_curry_right(from, to);
   let r = await function_multiple_rename_generic(tautology, lambda);
   return r;
 }
