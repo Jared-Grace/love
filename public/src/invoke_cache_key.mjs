@@ -2,6 +2,6 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { json_to } from "../../../love/public/src/json_to.mjs";
 export function invoke_cache_key(fn, args) {
   let name = object_property_get(fn, "name");
-  let json2 = json_to([name, args]);
-  return json2;
+  let j = json_to([name, args]);
+  return j;
 }
