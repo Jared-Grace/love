@@ -1,4 +1,4 @@
-import { function_multiple_rename_generic_starts_with } from "../../../love/public/src/function_multiple_rename_generic_starts_with.mjs";
+import { functions_rename_generic_starts_with } from "../../../love/public/src/functions_rename_generic_starts_with.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { text_prefix_change } from "../../../love/public/src/text_prefix_change.mjs";
 export async function function_multiple_rename_if_starts_with(
@@ -6,10 +6,7 @@ export async function function_multiple_rename_if_starts_with(
   f_name_prefix_after,
 ) {
   assert_arguments(arguments, 2);
-  await function_multiple_rename_generic_starts_with(
-    name_change,
-    f_name_prefix_before,
-  );
+  await functions_rename_generic_starts_with(name_change, f_name_prefix_before);
   function name_change(f_name_before) {
     let together2 = text_prefix_change(
       f_name_before,
