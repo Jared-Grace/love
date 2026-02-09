@@ -1,4 +1,3 @@
-import { function_copy_replace_first } from "../../../love/public/src/function_copy_replace_first.mjs";
 import { text_split_comma } from "../../../love/public/src/text_split_comma.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
