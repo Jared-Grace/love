@@ -142,6 +142,8 @@ export async function app_replace_rule_set(context) {
       let lambda7 = app_replace_rule_valid_curried(rule2, current_list);
       let any = list_any(r, lambda7);
       html_enable_if(rb, any);
+      if (false) {
+      }
       html_style_set_or_remove(
         index2 === index_selected,
         rb,
