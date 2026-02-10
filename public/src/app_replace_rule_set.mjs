@@ -1,4 +1,3 @@
-import { html_span } from "../../../love/public/src/html_span.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_button_notext } from "../../../love/public/src/html_button_notext.mjs";
@@ -108,7 +107,7 @@ export async function app_replace_rule_set(context) {
         index_selected = null;
         refresh();
       }
-      let sb = html_span(div, letter, symbol_on_click);
+      let sb = html_span_text(div, letter, symbol_on_click);
       app_replace_button_symbol_style(sb);
       property_set_exists_not(sb, "index", index);
       let valid = false;
