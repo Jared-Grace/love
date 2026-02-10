@@ -141,11 +141,11 @@ export async function app_replace_rule_set(context) {
         let rule2 = list_get(mapped, index_selected);
         valid = app_replace_rule_valid(rule2, index3, current_list);
       }
+      let color_bg = null;
       html_enable_if(sb, valid);
       if (valid) {
       } else {
       }
-      let color_bg = null;
       color_bg = "#00b400ff";
       html_style_background_color(sb, color_bg);
     }
