@@ -10,7 +10,7 @@ import { object_property_initialize_lambda_async } from "../../../love/public/sr
 import { object_property_initialize_lambda } from "../../../love/public/src/object_property_initialize_lambda.mjs";
 import { object_property_initialize_empty } from "../../../love/public/src/object_property_initialize_empty.mjs";
 import { object_property_initialize } from "../../../love/public/src/object_property_initialize.mjs";
-import { object_property_get_or } from "../../../love/public/src/object_property_get_or.mjs";
+import { property_get_or } from "../../../love/public/src/property_get_or.mjs";
 import { property_get_name } from "../../../love/public/src/property_get_name.mjs";
 import { property_get_double_equal_assert } from "../../../love/public/src/property_get_double_equal_assert.mjs";
 import { property_get_curry_right } from "../../../love/public/src/property_get_curry_right.mjs";
@@ -86,7 +86,7 @@ export async function sandbox_5() {
     property_get_double_equal_assert:
       "public/src/object_property_get_double_equal_assert.mjs",
     property_get_name: "public/src/object_property_get_name.mjs",
-    object_property_get_or: "public/src/object_property_get_or.mjs",
+    property_get_or: "public/src/object_property_get_or.mjs",
     object_property_initialize: "public/src/object_property_initialize.mjs",
     object_property_initialize_empty:
       "public/src/object_property_initialize_empty.mjs",
