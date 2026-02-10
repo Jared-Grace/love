@@ -1,4 +1,4 @@
-import { object_property_exists_if_async } from "../../../love/public/src/object_property_exists_if_async.mjs";
+import { property_exists_if_async } from "../../../love/public/src/property_exists_if_async.mjs";
 import { function_rename } from "../../../love/public/src/function_rename.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { error_json } from "../../../love/public/src/error_json.mjs";
@@ -23,5 +23,5 @@ export async function function_rename_fn_names_check(f_name_before) {
       value,
     });
   }
-  await object_property_exists_if_async(i, f_name_before, lambda);
+  await property_exists_if_async(i, f_name_before, lambda);
 }
