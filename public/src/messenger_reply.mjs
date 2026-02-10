@@ -11,7 +11,7 @@ import { messenger_reply_wait } from "../../../love/public/src/messenger_reply_w
 import { list_filter_ends_with_not_any } from "../../../love/public/src/list_filter_ends_with_not_any.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-import { object_properties_get } from "../../../love/public/src/object_properties_get.mjs";
+import { properties_get } from "../../../love/public/src/properties_get.mjs";
 import { messenger_reply_messages_urls_transform } from "../../../love/public/src/messenger_reply_messages_urls_transform.mjs";
 import { messenger_reply_messages } from "../../../love/public/src/messenger_reply_messages.mjs";
 import { messenger_reply_puppeteer } from "../../../love/public/src/messenger_reply_puppeteer.mjs";
@@ -25,7 +25,7 @@ export async function messenger_reply() {
     function transform_inner(mu) {
       messages_urls = mu;
     }
-    let properties = object_properties_get(messages_urls);
+    let properties = properties_get(messages_urls);
     let skips = ["7632130373481137"];
     function lambda4(s) {
       let v = "/" + s;
