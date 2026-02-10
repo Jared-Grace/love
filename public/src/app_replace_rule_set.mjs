@@ -71,13 +71,13 @@ export async function app_replace_rule_set(context) {
       return;
     }
     let b = html_button_notext(root, lambda3);
-    function lambda2(symbol) {
+    function symbol_each(symbol) {
       let span = html_span_text(b, symbol);
       app_replace_button_symbol_style(span);
       app_replace_button_symbol_style_valid(span, true);
       return span;
     }
-    list_map(left, lambda2);
+    list_map(left, symbol_each);
     let span2 = html_span_text(b, " ↦ " + right_joined);
     html_disable(b);
     object_merge(b, {
