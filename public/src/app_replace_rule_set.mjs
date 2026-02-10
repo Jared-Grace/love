@@ -140,6 +140,8 @@ export async function app_replace_rule_set(context) {
         let rule2 = list_get(mapped, index_selected);
         valid = app_replace_rule_valid(rule2, index3, current_list);
       }
+      let color_font = null;
+      color_font = "white";
       let color_bg = null;
       html_enable_if(sb, valid);
       if (valid) {
@@ -148,7 +150,6 @@ export async function app_replace_rule_set(context) {
         color_bg = "#1e6c1eff";
       }
       html_style_background_color(sb, color_bg);
-      const color_font = "white";
       html_font_color_set(b, color_font);
     }
     each(symbols_buttons, each_symbol_button);
