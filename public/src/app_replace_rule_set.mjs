@@ -122,7 +122,7 @@ export async function app_replace_rule_set(context) {
         index2 === index_selected,
         rb,
         "lightgreen",
-        "#ccc",
+        "#ddd",
       );
     }
     each_index(rules_buttons, each_rule_button);
