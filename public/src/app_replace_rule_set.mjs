@@ -110,7 +110,7 @@ export async function app_replace_rule_set(context) {
       if (enabled) {
         function lambda2(lr) {
           let lambda4 =
-            app_replace_button_symbol_style_valid_curry_right(valid2);
+            app_replace_button_symbol_style_valid_curry_right(valid);
           let mapped = list_map(lr, lambda4);
         }
         each([rights, lefts], lambda2);
