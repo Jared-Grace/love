@@ -1,5 +1,5 @@
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
-import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
+import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { app_api_generic } from "../../../love/public/src/app_api_generic.mjs";
@@ -9,7 +9,7 @@ export async function app_api(a) {
   let f_name = property_get(a, "f_name");
   text_is_assert(f_name);
   let fn_http = http_post_json;
-  object_property_set_exists_not(a, "fn_http", fn_http);
+  property_set_exists_not(a, "fn_http", fn_http);
   let result = await app_api_generic(a);
   return result;
 }
