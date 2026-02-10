@@ -1,3 +1,4 @@
+import { html_bold } from "../../../love/public/src/html_bold.mjs";
 import { property_get_curried } from "../../../love/public/src/property_get_curried.mjs";
 import { each_nested } from "../../../love/public/src/each_nested.mjs";
 import { app_replace_button_symbol_style_valid_curry_right } from "../../../love/public/src/app_replace_button_symbol_style_valid_curry_right.mjs";
@@ -74,6 +75,7 @@ export async function app_replace_rule_set(context) {
     html_border_none(b);
     let lefts = rule_button_side(b, left);
     let span2 = html_span_text(b, " ↦ ");
+    html_bold(b2);
     let rights = rule_button_side(b, right);
     html_disable(b);
     object_merge(b, {
