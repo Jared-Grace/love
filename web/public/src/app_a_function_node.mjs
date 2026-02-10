@@ -41,7 +41,7 @@ import { list_empty_is_assert } from "../../../love/public/src/list_empty_is_ass
 import { js_keyword_export } from "../../../love/public/src/js_keyword_export.mjs";
 import { app_a_keyword_purple } from "../../../love/public/src/app_a_keyword_purple.mjs";
 import { js_keyword_from } from "../../../love/public/src/js_keyword_from.mjs";
-import { object_property_get_double_equal_assert } from "../../../love/public/src/object_property_get_double_equal_assert.mjs";
+import { property_get_double_equal_assert } from "../../../love/public/src/property_get_double_equal_assert.mjs";
 import { js_identifier_is_assert } from "../../../love/public/src/js_identifier_is_assert.mjs";
 import { app_a_function_node_child } from "../../../love/public/src/app_a_function_node_child.mjs";
 import { js_keyword_import } from "../../../love/public/src/js_keyword_import.mjs";
@@ -85,7 +85,7 @@ export function app_a_function_node(a) {
       js_identifier_is_assert(imported);
       let local = property_get(node, "local");
       const property_name = "name";
-      object_property_get_double_equal_assert(imported, local, property_name);
+      property_get_double_equal_assert(imported, local, property_name);
       app_a_function_node_child(a, local);
     },
     ["ExportNamedDeclaration"]: function lambda5() {
