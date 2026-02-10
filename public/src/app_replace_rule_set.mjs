@@ -111,11 +111,7 @@ export async function app_replace_rule_set(context) {
         function lambda2(lr) {
           let lambda4 =
             app_replace_button_symbol_style_valid_curry_right(valid2);
-          function symbol_each(span) {
-            app_replace_button_symbol_style_valid(span, enabled);
-            return span;
-          }
-          let mapped = list_map(lr, symbol_each);
+          let mapped = list_map(lr, lambda4);
         }
         each([rights, lefts], lambda2);
       } else {
