@@ -1,3 +1,4 @@
+import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { function_rename_check } from "../../../love/public/src/function_rename_check.mjs";
 import { list_empty_is_assert_json } from "../../../love/public/src/list_empty_is_assert_json.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -8,7 +9,7 @@ import { function_rename_fn_names_check } from "../../../love/public/src/functio
 import { function_name_to_path_unalias } from "../../../love/public/src/function_name_to_path_unalias.mjs";
 import { function_move } from "../../../love/public/src/function_move.mjs";
 export async function function_rename(f_name_before, f_name_after) {
-  ena;
+  let ne = equal_not(left, right);
   await function_rename_check(f_name_after);
   const v = await function_name_to_path_unalias(f_name_before);
   let unaliased = property_get(v, "unaliased");
