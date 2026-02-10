@@ -1,5 +1,5 @@
 import { each } from "../../../love/public/src/each.mjs";
-import { object_properties_get } from "../../../love/public/src/object_properties_get.mjs";
+import { properties_get } from "../../../love/public/src/properties_get.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
@@ -18,6 +18,6 @@ export function object_merge_generic(strict, to, from) {
     let value = object_property_get(from, property_name);
     object_property_set(to, property_name, value);
   }
-  let list = object_properties_get(from);
+  let list = properties_get(from);
   each(list, lambda);
 }
