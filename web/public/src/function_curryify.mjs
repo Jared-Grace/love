@@ -1,3 +1,4 @@
+import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_statement_return_argument } from "../../../love/public/src/js_statement_return_argument.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -43,6 +44,7 @@ export async function function_curryify(f_name) {
     js_declaration_asyncify(declaration, declaration_call);
     const p = "params";
     let value = [first];
+    let expression = js_parse_expression(code_expression);
     function lambda2(item2) {}
     let mapped = list_map(list, lambda2);
     property_set(declaration, p, value);
