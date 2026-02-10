@@ -106,8 +106,8 @@ export async function app_replace_rule_set(context) {
       let enabled = list_any(r, lambda7);
       html_enable_if(rb, enabled);
       let properties = ["rights", "lefts"];
-      function lambda2(item2) {}
-      let mapped2 = list_map(list2, lambda2);
+      function lambda2(property) {}
+      let mapped2 = list_map(properties, lambda2);
       let rights = property_get(rb, "rights");
       let lefts = property_get(rb, "lefts");
       const list = [rights, lefts];
