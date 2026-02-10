@@ -5,11 +5,11 @@ export function html_style_background_color_set_if(
   color_if,
   color_else,
 ) {
+  let c = null;
   if (condition) {
-    let c = null;
     c = color_if;
   } else {
-    color_else;
+    c = color_else;
   }
   html_style_background_color(component, color_else);
 }
