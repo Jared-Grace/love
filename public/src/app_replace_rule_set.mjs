@@ -52,7 +52,7 @@ export async function app_replace_rule_set(context) {
   let index_selected = null;
   let label_rules = html_p(root);
   let rules = property_get(item, "rules");
-  let mapped = list_map(rules, app_replace_rule_parse);
+  let rules_parsed = list_map(rules, app_replace_rule_parse);
   function lambda(rule, index) {
     let left = property_get(rule, "left");
     let right = property_get(rule, "right");
@@ -75,7 +75,7 @@ export async function app_replace_rule_set(context) {
     });
     return b;
   }
-  let rules_buttons = list_map_index(mapped, lambda);
+  let rules_buttons = list_map_index(rules_parsed, lambda);
   let label_symbols = html_p(root);
   let div = html_div(root);
   let current_list = text_split_empty(start);
@@ -85,7 +85,7 @@ export async function app_replace_rule_set(context) {
     html_clear(div);
     function symbols_mapper(letter, index) {
       function symbol_on_click() {
-        let rule2 = list_get(mapped, index_selected);
+        let rule2 = list_get(rules_parsed, index_selected);
         let eq = app_replace_rule_valid(rule2, index, current_list);
         if (not(eq)) {
           alert("invalid index for rule");
@@ -106,7 +106,7 @@ export async function app_replace_rule_set(context) {
       let nn2 = null_not_is(index_selected);
       if (nn2) {
         let index3 = property_get(sb, "index");
-        let rule2 = list_get(mapped, index_selected);
+        let rule2 = list_get(rules_parsed, index_selected);
         valid = app_replace_rule_valid(rule2, index3, current_list);
       }
       let color_font = null;
