@@ -108,7 +108,7 @@ export async function app_replace_rule_set(context) {
         let rule2 = list_get(rules_parsed, index_selected);
         valid = app_replace_rule_valid(rule2, index3, current_list);
       }
-      valid = app_replace_button_symbol_style_valid(sb, valid);
+      app_replace_button_symbol_style_valid(sb, valid);
       return sb;
     }
     each_index(current_list, symbols_mapper);
