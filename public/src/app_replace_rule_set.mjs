@@ -74,7 +74,7 @@ export async function app_replace_rule_set(context) {
     let b = html_button_notext(root, lambda3);
     html_border_none(b);
     let lefts = rule_button_side(b, left);
-    let span2 = html_span_text(b, " ↦ ");
+    let span2 = html_span_text(b, " ➜ ");
     html_bold(span2);
     let rights = rule_button_side(b, right);
     html_disable(b);
