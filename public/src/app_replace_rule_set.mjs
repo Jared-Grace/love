@@ -71,13 +71,7 @@ export async function app_replace_rule_set(context) {
       return;
     }
     let b = html_button_notext(root, lambda3);
-    function symbol_each(symbol) {
-      let span = html_span_text(b, symbol);
-      app_replace_button_symbol_style(span);
-      app_replace_button_symbol_style_valid(span, true);
-      return span;
-    }
-    list_map(left, symbol_each);
+    rule_button_side(b, left);
     let span2 = html_span_text(b, " ↦ " + right_joined);
     html_disable(b);
     object_merge(b, {
@@ -90,6 +84,15 @@ export async function app_replace_rule_set(context) {
   let div = html_div(root);
   let current_list = text_split_empty(start);
   refresh();
+  function rule_button_side(b, left) {
+    function symbol_each(symbol) {
+      let span = html_span_text(b, symbol);
+      app_replace_button_symbol_style(span);
+      app_replace_button_symbol_style_valid(span, true);
+      return span;
+    }
+    return list_map(left, symbol_each);
+  }
   function refresh() {
     html_clear(div);
     function symbols_mapper(letter, index) {
