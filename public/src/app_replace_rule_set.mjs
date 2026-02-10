@@ -79,14 +79,14 @@ export async function app_replace_rule_set(context) {
     html_style_background_color(b, "black");
     html_border_none(b);
     let lefts = rule_button_side(b, left);
-    let span2 = html_span_text(b, " ➜ ");
-    html_bold(span2);
+    let arrow = html_span_text(b, " ➜ ");
+    html_bold(arrow);
     let rights = rule_button_side(b, right);
     html_disable(b);
     object_merge(b, {
       rule,
       lefts,
-      rights,
+      rights,arrow
     });
     return b;
   }
