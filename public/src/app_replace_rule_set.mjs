@@ -1,3 +1,4 @@
+import { html_style_margin_y } from "../../../love/public/src/html_style_margin_y.mjs";
 import { html_style_margin_x } from "../../../love/public/src/html_style_margin_x.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_border_radius_em } from "../../../love/public/src/html_border_radius_em.mjs";
@@ -106,6 +107,7 @@ export async function app_replace_rule_set(context) {
       html_border_radius_em(b, 0.5);
       html_font_color_set(b, "white");
       html_style_margin_x(component2, value);
+      html_style_margin_y(component3, value2);
       property_set_exists_not(b, "index", index);
       return b;
     }
