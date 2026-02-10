@@ -4,13 +4,13 @@ import { each } from "../../../love/public/src/each.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { uuid } from "../../../love/public/src/uuid.mjs";
-import { object_property_initialize } from "./object_property_initialize.mjs";
+import { property_initialize } from "../../../love/public/src/property_initialize.mjs";
 export function reply_on_match_capture(fn, lambda) {
   function capture(possibilities, property, u) {
     function lambda(item) {
       let index = property_get(item, "index");
-      let d = object_property_initialize(item, "data", {});
-      let o = object_property_initialize(d, u, {});
+      let d = property_initialize(item, "data", {});
+      let o = property_initialize(d, u, {});
       object_property_set(o, property, index);
     }
     each(possibilities, lambda);

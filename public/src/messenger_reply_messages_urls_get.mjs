@@ -1,5 +1,5 @@
-import { object_property_initialize } from "../../../love/public/src/object_property_initialize.mjs";
+import { property_initialize } from "../../../love/public/src/property_initialize.mjs";
 export function messenger_reply_messages_urls_get(data) {
-  let value = object_property_initialize(data, "messages_urls", {});
+  let value = property_initialize(data, "messages_urls", {});
   return value;
 }
