@@ -127,7 +127,7 @@ export async function app_replace_rule_set(context) {
         "lightgreen",
         "#d7d7d7",
       );
-      html_style_font_color_set_if(condition, rb, "black", "#414141ff");
+      html_style_font_color_set_if(condition, rb, "black", "#ffffffff");
     }
     each_index(rules_buttons, each_rule_button);
     html_clear(div);
