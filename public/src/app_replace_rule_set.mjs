@@ -109,7 +109,7 @@ export async function app_replace_rule_set(context) {
       let properties = ["rights", "lefts"];
       let r2 = property_get_curried(rb);
       let list = list_map(properties, r2);
-      let lambda4 = app_replace_button_symbol_style_valid_curry_right(ienabled);
+      let lambda4 = app_replace_button_symbol_style_valid_curry_right(enabled);
       each_nested(list, lambda4);
       html_style_set_or_remove(
         index2 === index_selected,
