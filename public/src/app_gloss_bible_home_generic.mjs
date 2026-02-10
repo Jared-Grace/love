@@ -98,11 +98,11 @@ export async function app_gloss_bible_home_generic(
       }
       each(explains, lambda2);
     }
-    let word = app_gloss_bible_generate_generic_word();
+    let word_property = app_gloss_bible_generate_generic_word();
     function lambda(e) {
       let component2 = html_hr(p);
       let div2 = html_div(p);
-      let word = property_get(e, word);
+      let word = property_get(e, word_property);
       let gloss = property_get(e, "gloss");
       let explain = property_get(e, "explain");
       let span = html_span_text(div2, word);
