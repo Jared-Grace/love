@@ -17,7 +17,7 @@ import { each_pair_or_null } from "../../../love/public/src/each_pair_or_null.mj
 import { app_a_keyword_blue } from "../../../love/public/src/app_a_keyword_blue.mjs";
 import { js_keyword_return } from "../../../love/public/src/js_keyword_return.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
-import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
+import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
 import { app_a_identifier } from "../../../love/public/src/app_a_identifier.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
@@ -264,7 +264,7 @@ export function app_a_function_node(a) {
     let right = object_property_get(node, "right");
     app_a_function_node_child(a, right);
   }
-  let n = object_property_exists_not(lookup, type);
+  let n = property_exists_not(lookup, type);
   if (n) {
     log_keep({
       node,
