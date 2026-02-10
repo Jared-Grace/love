@@ -148,7 +148,7 @@ export async function app_replace_rule_set(context) {
         color_font = "white";
       } else {
         color_bg = "#1e6c1eff";
-        color_font = "#ccc";
+        color_font = "#878787ff";
       }
       html_style_background_color(sb, color_bg);
       html_font_color_set(b, color_font);
