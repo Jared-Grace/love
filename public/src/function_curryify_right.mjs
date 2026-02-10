@@ -5,7 +5,7 @@ import { function_curryify_choose_args_get } from "../../../love/public/src/func
 export async function function_curryify_right(f_name) {
   let args_get = function_curryify_choose_args_get(0);
   let combined = function_curryify_generic_name(f_name);
-  let combined2 = function_name_combine(left, right);
-  let output = await function_curryify_generic(f_name, combined, args_get);
+  let combined2 = function_name_combine(combined, combined);
+  let output = await function_curryify_generic(f_name, combined2, args_get);
   return output;
 }
