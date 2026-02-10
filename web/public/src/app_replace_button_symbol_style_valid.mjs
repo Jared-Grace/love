@@ -10,7 +10,7 @@ export function app_replace_button_symbol_style_valid(sb, valid) {
     color_font = "white";
   } else {
     color_bg = "#1e6c1eff";
-    color_font = "#b1e8b1ff";
+    color_font = "#c5f3c5ff";
   }
   html_style_background_color(sb, color_bg);
   html_font_color_set(sb, color_font);
