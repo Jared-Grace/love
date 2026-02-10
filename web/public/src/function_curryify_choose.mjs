@@ -1,3 +1,4 @@
+import { function_curryify_generic_name } from "../../../love/public/src/function_curryify_generic_name.mjs";
 import { list_remove_at } from "../../../love/public/src/list_remove_at.mjs";
 import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
