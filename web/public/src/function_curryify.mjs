@@ -44,9 +44,7 @@ export async function function_curryify(f_name) {
     js_declaration_asyncify(declaration, declaration_call);
     const p = "params";
     let value = [first];
-    let expression = js_parse_expression(code_expression);
-    function lambda2(item2) {}
-    let mapped = list_map(list, lambda2);
+    let mapped = list_map(value, js_parse_expression);
     property_set(declaration, p, value);
     await js_imports_missing_add(ast);
   }
