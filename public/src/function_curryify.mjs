@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_declaration_to_block_body } from "../../../love/public/src/js_declaration_to_block_body.mjs";
 import { js_declaration } from "../../../love/public/src/js_declaration.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
@@ -30,9 +31,10 @@ export async function function_curryify(f_name) {
       declaration_call,
     );
     let name_result = function_name_combine(f_name_curried, "result");
-    let declaration_lambda = js_declaration(declaration_call, name_result);
-    js_declaration_single_block_body_add(ast, declaration_lambda);
-    let body_block = js_declaration_to_block_body(declaration2);
+    let declaration_result = js_declaration(declaration_call, name_result);
+    js_declaration_single_block_body_add(ast, declaration_result);
+    let body_block = js_declaration_to_block_body(declaration_result);
+    list_add(list, item2);
     let declaration = js_declaration_single(ast);
     js_declaration_asyncify(declaration, declaration_call);
     const p = "params";
