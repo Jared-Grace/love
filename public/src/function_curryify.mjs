@@ -31,7 +31,8 @@ export async function function_curryify(f_name) {
     let remaining = property_get(r, "remaining");
     let name_result = function_name_combine(f_name_curried, "result");
     let declaration_result = js_declaration(declaration_call, name_result);
-    each(list, function lambda2(item2) {});
+    function lambda2(item2) {}
+    each(list, lambda2);
     let ret = js_statement_return_argument(declaration_result);
     js_declaration_single_block_body_add(ast, ret);
     let body_block = js_declaration_to_block_body(declaration_result);
