@@ -1,5 +1,5 @@
+import { each_nested } from "../../../love/public/src/each_nested.mjs";
 import { app_replace_button_symbol_style_valid_curry_right } from "../../../love/public/src/app_replace_button_symbol_style_valid_curry_right.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { app_replace_button_symbol_style_valid } from "../../../love/public/src/app_replace_button_symbol_style_valid.mjs";
 import { app_replace_rule_valid_curry } from "../../../love/public/src/app_replace_rule_valid_curry.mjs";
 import { html_border_none } from "../../../love/public/src/html_border_none.mjs";
@@ -109,10 +109,7 @@ export async function app_replace_rule_set(context) {
       let lefts = property_get(rb, "lefts");
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(valid);
       const list = [rights, lefts];
-      function lambda2(lr) {
-        each(lr, lambda4);
-      }
-      each(list, lambda2);
+      each_nested(lambda4, list);
       html_style_set_or_remove(
         index2 === index_selected,
         rb,
