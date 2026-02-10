@@ -1,3 +1,4 @@
+import { app_replace_rule_valid_curried } from "../../../love/public/src/app_replace_rule_valid_curried.mjs";
 import { html_border_none } from "../../../love/public/src/html_border_none.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_button_notext } from "../../../love/public/src/html_button_notext.mjs";
@@ -140,6 +141,7 @@ export async function app_replace_rule_set(context) {
         let eq2 = app_replace_rule_valid(rule2, index, current_list);
         return eq2;
       }
+      app_replace_rule_valid_curried(rule, current_list);
       let size2 = list_size(current_list);
       let r = range(size2);
       let any = list_any(r, lambda7);
