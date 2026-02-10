@@ -23,7 +23,7 @@ export async function functions_rename_generic(filter, name_change) {
   function lambda2(f_name_after) {
     object_property_exists_not_assert(identifiers, f_name_after);
   }
-  each_object_values(dictionary, lambda2);
+  each_object_values(different, lambda2);
   async function lambda3(f_name_after, f_name_before) {
     let v = await function_rename(f_name_before, f_name_after);
   }
