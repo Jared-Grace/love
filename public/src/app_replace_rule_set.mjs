@@ -107,15 +107,11 @@ export async function app_replace_rule_set(context) {
       html_enable_if(rb, enabled);
       let rights = property_get(rb, "rights");
       let lefts = property_get(rb, "lefts");
-      if (enabled) {
-        function lambda2(lr) {
-          let lambda4 =
-            app_replace_button_symbol_style_valid_curry_right(valid);
-          let mapped = list_map(lr, lambda4);
-        }
-        each([rights, lefts], lambda2);
-      } else {
+      let lambda4 = app_replace_button_symbol_style_valid_curry_right(valid);
+      function lambda2(lr) {
+        let mapped = list_map(lr, lambda4);
       }
+      each([rights, lefts], lambda2);
       html_style_set_or_remove(
         index2 === index_selected,
         rb,
