@@ -57,10 +57,10 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
     html_clear(f_names_div);
     list_sort_text_alpha_size(filtered);
     function lambda(text) {
-      async function lambda3() {
+      async function on_click() {
         await f_name_select(text);
       }
-      app_a_button_wide(f_names_div, text, lambda3);
+      app_a_button_wide(f_names_div, text, on_click);
     }
     each(filtered, lambda);
   }
