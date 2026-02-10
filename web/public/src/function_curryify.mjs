@@ -28,16 +28,16 @@ export async function function_curryify(f_name) {
     let r = list_first_remaining(arg_names);
     let first = property_get(r, "first");
     let remaining = property_get(r, "remaining");
-    let item = js_call_args_await_maybe_return(
-      unaliased,
-      arg_names,
-      declaration_call,
-    );
     let name_result = function_name_combine(f_name_curried, "result");
     let declaration_result = js_declaration(declaration_call, name_result);
     let ret = js_statement_return_argument(declaration_result);
     js_declaration_single_block_body_add(ast, ret);
     let body_block = js_declaration_to_block_body(declaration_result);
+    let item = js_call_args_await_maybe_return(
+      unaliased,
+      arg_names,
+      declaration_call,
+    );
     list_add(body_block, item);
     return;
     let declaration = js_declaration_single(ast);
