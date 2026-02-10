@@ -102,6 +102,12 @@ export async function app_replace_rule_set(context) {
       app_replace_button_symbol_style(sb);
       property_set_exists_not(sb, "index", index);
       let valid = false;
+      let nn2 = null_not_is(index_selected);
+      if (nn2) {
+        let index3 = property_get(sb, "index");
+        let rule2 = list_get(rules_parsed, index_selected);
+        valid = app_replace_rule_valid(rule2, index3, current_list);
+      }
       valid = app_replace_button_symbol_style_valid(sb, valid);
       return sb;
     }
@@ -130,12 +136,6 @@ export async function app_replace_rule_set(context) {
   }
   refresh();
   function app_replace_button_symbol_style_valid(sb, valid) {
-    let nn2 = null_not_is(index_selected);
-    if (nn2) {
-      let index3 = property_get(sb, "index");
-      let rule2 = list_get(rules_parsed, index_selected);
-      valid = app_replace_rule_valid(rule2, index3, current_list);
-    }
     let color_font = null;
     let color_bg = null;
     html_enable_if(sb, valid);
