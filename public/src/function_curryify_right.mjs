@@ -6,6 +6,6 @@ export async function function_curryify_right(f_name) {
   function lambda() {
     let combined = function_curryify_generic_name(f_name2);
   }
-  let output = await function_curryify_generic(f_name, args_get, lambda);
+  let output = await function_curryify_generic(f_name, lambda, args_get);
   return output;
 }

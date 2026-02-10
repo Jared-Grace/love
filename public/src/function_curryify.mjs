@@ -5,8 +5,8 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function function_curryify(f_name) {
   let output = await function_curryify_generic(
     f_name,
-    args_get,
     function_curryify_generic_name,
+    args_get,
   );
   return output;
   function args_get(arg_names) {
