@@ -27,9 +27,9 @@ import { app_g_chapter_code } from "../../../love/public/src/app_g_chapter_code.
 import { app_g_menu_clear_back } from "../../../love/public/src/app_g_menu_clear_back.mjs";
 import { emoji_book_open } from "../../../love/public/src/emoji_book_open.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_g_study(player, overlay, close) {
-  let review = object_property_get(player, "review");
+  let review = property_get(player, "review");
   let ne = list_empty_not_is(review);
   if (ne) {
     let text2 = emoji_book_open() + " Study";
@@ -48,8 +48,8 @@ export function app_g_study(player, overlay, close) {
         lambda5,
       );
       let r = list_first(review);
-      let verse_numbers = object_property_get(r, "verse_numbers");
-      let passages = object_property_get(sermons, "passages");
+      let verse_numbers = property_get(r, "verse_numbers");
+      let passages = property_get(sermons, "passages");
       let passage = list_find_property_json(
         passages,
         "verse_numbers",
@@ -66,7 +66,7 @@ export function app_g_study(player, overlay, close) {
       );
       let div = html_div(overlay);
       const property = "sermon";
-      let sermon_correct = object_property_get(passage, property);
+      let sermon_correct = property_get(passage, property);
       let sermon_correct_list = app_g_openai_split(sermon_correct);
       let sermon_index = 0;
       let mistakes = false;
@@ -74,8 +74,8 @@ export function app_g_study(player, overlay, close) {
       function refresh() {
         html_clear(div);
         let v = app_g_wrong(passage, passages, property);
-        let passage_wrong = object_property_get(v, "passage_wrong");
-        let sermon_wrong = object_property_get(passage_wrong, property);
+        let passage_wrong = property_get(v, "passage_wrong");
+        let sermon_wrong = property_get(passage_wrong, property);
         let sermon_wrong_list = app_g_openai_split(sermon_wrong);
         function correct() {
           let item = list_get(sermon_correct_list, sermon_index);

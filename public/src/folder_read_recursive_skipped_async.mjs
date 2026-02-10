@@ -1,5 +1,5 @@
 import { list_includes_not } from "../../../love/public/src/list_includes_not.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function folder_read_recursive_skipped_async(
   path_folder,
   folders_skipped,
@@ -11,7 +11,7 @@ export async function folder_read_recursive_skipped_async(
     withFileTypes: true,
   });
   for (const entry of entries) {
-    let name = object_property_get(entry, "name");
+    let name = property_get(entry, "name");
     if (entry.isFile()) {
       result.push(name);
     } else if (entry.isDirectory()) {

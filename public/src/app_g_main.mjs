@@ -21,7 +21,7 @@ import { localhost_is } from "../../../love/public/src/localhost_is.mjs";
 import { app_g_game_save } from "../../../love/public/src/app_g_game_save.mjs";
 import { g_gender_male } from "../../../love/public/src/g_gender_male.mjs";
 import { g_gender_female } from "../../../love/public/src/g_gender_female.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
@@ -40,7 +40,7 @@ import { g_folder_img } from "../../../love/public/src/g_folder_img.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 export async function app_g_main(context) {
-  let root = object_property_get(context, "root");
+  let root = property_get(context, "root");
   firebase_name_jg();
   let books = await ebible_version_books("engbsb");
   global_function_property_set(app_g_main, "books", books);
@@ -120,13 +120,13 @@ export async function app_g_main(context) {
   function npc_initialize(npc, index) {
     let r4 = mod(index, gender_count);
     let gender = list_get(genders, r4);
-    let imgs2 = object_property_get(gender, "imgs");
+    let imgs2 = property_get(gender, "imgs");
     let r3 = list_random_item(imgs2);
     object_property_set(npc, "img", r3);
-    let names2 = object_property_get(gender, "names");
+    let names2 = property_get(gender, "names");
     let r5 = list_random_item(names2);
     object_property_set(npc, "name", r5);
-    let name2 = object_property_get(gender, "name");
+    let name2 = property_get(gender, "name");
     object_property_set(npc, "gender", name2);
     object_property_set(npc, "meet", false);
     object_property_set(npc, "christian", false);

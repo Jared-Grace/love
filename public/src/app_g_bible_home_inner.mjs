@@ -9,7 +9,7 @@ import { text_to } from "../../../love/public/src/text_to.mjs";
 import { list_max } from "../../../love/public/src/list_max.mjs";
 import { integer_to_try } from "../../../love/public/src/integer_to_try.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function app_g_bible_home_inner(context, download) {
   let downloaded = null;
   let chapter_code = null;
@@ -18,12 +18,12 @@ export async function app_g_bible_home_inner(context, download) {
   async function lambda3(la) {
     async function lambda(a) {
       list_add(verses, a);
-      let verse_number = object_property_get(a, "verse_number");
-      chapter_code = object_property_get(a, "chapter_code");
+      let verse_number = property_get(a, "verse_number");
+      chapter_code = property_get(a, "chapter_code");
       downloaded = await download(chapter_code);
-      let passages = object_property_get(downloaded, "passages");
+      let passages = property_get(downloaded, "passages");
       function lambda2(passage) {
-        let verse_numbers = object_property_get(passage, "verse_numbers");
+        let verse_numbers = property_get(passage, "verse_numbers");
         let mapped = list_map(verse_numbers, integer_to_try);
         let max = list_max(mapped);
         let s = text_to(max);

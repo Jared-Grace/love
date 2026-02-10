@@ -1,4 +1,4 @@
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_to } from "../../../love/public/src/list_to.mjs";
 import { list_size_1_assert } from "../../../love/public/src/list_size_1_assert.mjs";
 import { js_auto } from "../../../love/public/src/js_auto.mjs";
@@ -12,8 +12,8 @@ export async function functions_combine(f_names_comma) {
   let list = list_to(arguments);
   list_size_1_assert(list);
   let v = await functions_combine_name(f_names_comma);
-  let combined = object_property_get(v, "combined");
-  let f_names = object_property_get(v, "f_names");
+  let combined = property_get(v, "combined");
+  let f_names = property_get(v, "f_names");
   async function lambda2(ast) {
     let body_block = js_declaration_single_block_body(ast);
     async function lambda(f_name) {

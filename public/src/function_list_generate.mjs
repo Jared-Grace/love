@@ -1,5 +1,5 @@
 import { js_statement_return_insert_code } from "../../../love/public/src/js_statement_return_insert_code.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_suffix_without } from "../../../love/public/src/text_suffix_without.mjs";
 import { function_open } from "../../../love/public/src/function_open.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
@@ -13,7 +13,7 @@ export async function function_list_generate(f_generate, list) {
   let f_generate_name = f_generate.name;
   let f_name = text_suffix_without(f_generate_name, "_generate");
   let v = await function_unalias_exists(f_name);
-  let exists = object_property_get(v, "exists");
+  let exists = property_get(v, "exists");
   if (not(exists)) {
     await function_new(f_name);
   }

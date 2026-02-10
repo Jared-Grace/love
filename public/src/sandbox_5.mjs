@@ -14,7 +14,7 @@ import { object_property_get_or } from "../../../love/public/src/object_property
 import { object_property_get_name } from "../../../love/public/src/object_property_get_name.mjs";
 import { object_property_get_double_equal_assert } from "../../../love/public/src/object_property_get_double_equal_assert.mjs";
 import { object_property_get_curry_right } from "../../../love/public/src/object_property_get_curry_right.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { property_from } from "../../../love/public/src/property_from.mjs";
 import { property_exists_not_assert } from "../../../love/public/src/property_exists_not_assert.mjs";
 import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
@@ -81,7 +81,7 @@ export async function sandbox_5() {
     property_exists_not_assert:
       "public/src/object_property_exists_not_assert.mjs",
     property_from: "public/src/object_property_from.mjs",
-    object_property_get: "public/src/object_property_get.mjs",
+    property_get: "public/src/property_get.mjs",
     object_property_get_curry_right:
       "public/src/object_property_get_curry_right.mjs",
     object_property_get_double_equal_assert:

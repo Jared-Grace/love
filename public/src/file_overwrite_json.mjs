@@ -1,5 +1,5 @@
 import { file_parent_exists_ensure } from "../../../love/public/src/file_parent_exists_ensure.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
@@ -17,7 +17,7 @@ export async function file_overwrite_json(file_path, object) {
     " did not work on sufficiently large object, whereas this did:";
   let fs = await import("fs");
   const v = await import("stream/promises");
-  let pipeline = object_property_get(v, "pipeline");
+  let pipeline = property_get(v, "pipeline");
   let streamJsonStringify = await (
     await import_install("stream-json-stringify")
   ).default;

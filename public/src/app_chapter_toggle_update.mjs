@@ -11,7 +11,7 @@ import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { list_map_find_property } from "../../../love/public/src/list_map_find_property.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { integer_to_try } from "../../../love/public/src/integer_to_try.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { html_style_background_color_set_or_remove_list } from "../../../love/public/src/html_style_background_color_set_or_remove_list.mjs";
@@ -45,10 +45,10 @@ export function app_chapter_toggle_update(
     let m = list_multiple_is(verse_numbers_chosen);
     if (m) {
       let l = list_last(languages_verses);
-      let verses = object_property_get(l, "verses");
+      let verses = property_get(l, "verses");
       let verse_numbers = list_map_property(verses, "verse_number");
       let v = list_first_last_slice(verse_numbers_chosen, verse_numbers);
-      sliced = object_property_get(v, "sliced");
+      sliced = property_get(v, "sliced");
     } else {
       sliced = verse_numbers_chosen;
     }
@@ -78,16 +78,16 @@ export function app_chapter_toggle_update(
         verse_numbers_chosen_normalized = [f, f];
       }
       let verse_numbers_mapped = null;
-      let books = object_property_get(bv, "books");
-      let verses = object_property_get(bv, "verses");
+      let books = property_get(bv, "books");
+      let verses = property_get(bv, "verses");
       let verse_numbers = list_map_property(verses, "verse_number");
       let v = list_first_last_slice(
         verse_numbers_chosen_normalized,
         verse_numbers,
       );
-      let last = object_property_get(v, "last");
-      let first = object_property_get(v, "first");
-      let sliced = object_property_get(v, "sliced");
+      let last = property_get(v, "last");
+      let first = property_get(v, "first");
+      let sliced = property_get(v, "sliced");
       verse_numbers_mapped = list_map_find_property(
         sliced,
         verses,

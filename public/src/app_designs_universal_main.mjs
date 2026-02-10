@@ -6,10 +6,10 @@ import { list_get } from "../../../love/public/src/list_get.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_cartesian_product_self } from "../../../love/public/src/list_cartesian_product_self.mjs";
 export function app_designs_universal_main(context) {
-  let root = object_property_get(context, "root");
+  let root = property_get(context, "root");
   const size = "7px";
   html_style_background_color(root, "gray");
   let colors = ["red", "orange", "yellow", "green", "blue", "purple"];
@@ -34,8 +34,8 @@ export function app_designs_universal_main(context) {
       "flex-wrap": "wrap",
       gap: size,
     });
-    let columns = object_property_get(dimension, "columns");
-    let rows = object_property_get(dimension, "rows");
+    let columns = property_get(dimension, "columns");
+    let rows = property_get(dimension, "rows");
     let slots = rows * columns;
     let possbilities = list_cartesian_product_self(colors, slots);
     function lambda3(possibility) {

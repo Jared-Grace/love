@@ -1,4 +1,4 @@
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
@@ -16,7 +16,7 @@ export async function function_params_new_generic(
   let properties = properties_get(result);
   async function lambda4(f_name_caller) {
     let v = await function_unalias_exists(f_name_caller);
-    let exists = object_property_get(v, "exists");
+    let exists = property_get(v, "exists");
     if (not(exists)) {
       return;
     }

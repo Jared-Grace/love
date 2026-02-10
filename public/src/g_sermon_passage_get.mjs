@@ -3,12 +3,12 @@ import { g_sermon_verse_to_text } from "../../../love/public/src/g_sermon_verse_
 import { g_sermon_generate_chapter_passages_get } from "../../../love/public/src/g_sermon_generate_chapter_passages_get.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function g_sermon_passage_get(chapter_code, verse_number) {
   let books = await ebible_version_books("engbsb");
   let passages = await g_sermon_generate_chapter_passages_get(chapter_code);
   function lambda(v) {
-    let verse_numbers = object_property_get(v, "verse_numbers");
+    let verse_numbers = property_get(v, "verse_numbers");
     let first = list_first(verse_numbers);
     let v2 = first === verse_number;
     return v2;

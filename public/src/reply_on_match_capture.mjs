@@ -1,14 +1,14 @@
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { reply_on_match_generic } from "../../../love/public/src/reply_on_match_generic.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { uuid } from "../../../love/public/src/uuid.mjs";
 import { object_property_initialize } from "./object_property_initialize.mjs";
 export function reply_on_match_capture(fn, lambda) {
   function capture(possibilities, property, u) {
     function lambda(item) {
-      let index = object_property_get(item, "index");
+      let index = property_get(item, "index");
       let d = object_property_initialize(item, "data", {});
       let o = object_property_initialize(d, u, {});
       object_property_set(o, property, index);

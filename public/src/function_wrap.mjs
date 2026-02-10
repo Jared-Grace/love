@@ -1,13 +1,13 @@
 import { function_parse_declaration_unaliased } from "../../../love/public/src/function_parse_declaration_unaliased.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_declaration_asyncify_params_from } from "../../../love/public/src/js_declaration_asyncify_params_from.mjs";
 import { js_code_call_args_await_maybe_declaration_return_add } from "../../../love/public/src/js_code_call_args_await_maybe_declaration_return_add.mjs";
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
 export async function function_wrap(f_name, f_name_wrapped) {
   let v2 = await function_parse_declaration_unaliased(f_name);
-  let unaliased = object_property_get(v2, "unaliased");
-  let declaration_call = object_property_get(v2, "declaration");
+  let unaliased = property_get(v2, "unaliased");
+  let declaration_call = property_get(v2, "declaration");
   let v = await function_new_transform(f_name_wrapped, lambda);
   return v;
   async function lambda(ast) {

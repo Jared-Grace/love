@@ -1,5 +1,5 @@
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export function html_component_element_get(component) {
-  let element = object_property_get(component, "element");
+  let element = property_get(component, "element");
   return element;
 }

@@ -34,7 +34,7 @@ import { local_function_path_json } from "../../../love/public/src/local_functio
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function g_sermon_generate_book_generic(
   bible_folders,
   book_code,
@@ -67,11 +67,11 @@ export async function g_sermon_generate_book_generic(
     async function each_chapter(verses_chapter_folders) {
       let verses_chapter = list_first(verses_chapter_folders);
       let verse_first = list_first(verses_chapter);
-      let chapter_code = object_property_get(verse_first, "chapter_code");
-      let interlinear = object_property_get(chapters_interlinear, chapter_code);
+      let chapter_code = property_get(verse_first, "chapter_code");
+      let interlinear = property_get(chapters_interlinear, chapter_code);
       async function each_verse(verse, index) {
-        let text = object_property_get(verse, "text");
-        let verse_number = object_property_get(verse, "verse_number");
+        let text = property_get(verse, "text");
+        let verse_number = property_get(verse, "verse_number");
         function mapper(verses_chapter_folder) {
           let text = list_find_property_get(
             verses_chapter_folder,
@@ -89,7 +89,7 @@ export async function g_sermon_generate_book_generic(
             "verse_number",
             verse_number,
           );
-          original = object_property_get(original_verse, "text");
+          original = property_get(original_verse, "text");
         }
         list_add(originals, original);
         list_add_pair(texts, texts_add);
@@ -120,14 +120,14 @@ export async function g_sermon_generate_book_generic(
     } else {
     }
     function filter_group(group) {
-      let item = object_property_get(group, "item");
+      let item = property_get(group, "item");
       let match_chapter = property_exists(item, "chapter_code", chapter_code);
       return match_chapter;
     }
     let groups_match_chapter = list_filter(nearbys, filter_group);
     async function map_group(g) {
-      let passage = object_property_get(g, "item");
-      let n = object_property_get(g, "nearby");
+      let passage = property_get(g, "item");
+      let n = property_get(g, "nearby");
       let user_prompt_before = prompt_get(n);
       let user_prompt_after = prompt_get([passage]);
       const prompt_user =
@@ -152,9 +152,9 @@ export async function g_sermon_generate_book_generic(
         let a = add_1(size);
         let r = list_new_multiple(a);
         function each_group(group) {
-          let texts = object_property_get(group, "texts");
+          let texts = property_get(group, "texts");
           let passages_folders_group = list_map_join_space(texts);
-          let originals = object_property_get(group, "originals");
+          let originals = property_get(group, "originals");
           let original = list_join_space(originals);
           list_add(passages_folders_group, original);
           return passages_folders_group;

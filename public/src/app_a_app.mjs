@@ -11,7 +11,7 @@ import { emoji_mobile } from "../../../love/public/src/emoji_mobile.mjs";
 import { app_a_function_select } from "../../../love/public/src/app_a_function_select.mjs";
 import { app_a_app_run } from "../../../love/public/src/app_a_app_run.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_unalias_exists } from "../../../love/public/src/function_unalias_exists.mjs";
 import { app_shared_name_main } from "../../../love/public/src/app_shared_name_main.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
@@ -26,7 +26,7 @@ export async function app_a_app(context) {
   let a_name_f = app_shared_name_prefixed(a_name);
   let combined = app_shared_name_main(a_name);
   let v = await function_unalias_exists(combined);
-  let unaliased = object_property_get(v, "unaliased");
+  let unaliased = property_get(v, "unaliased");
   let choices = [
     {
       shortcut: "f",
@@ -43,7 +43,7 @@ export async function app_a_app(context) {
       },
     },
   ];
-  let exists = object_property_get(v, "exists");
+  let exists = property_get(v, "exists");
   if (exists) {
     list_add(choices, {
       shortcut: "m",
@@ -57,7 +57,7 @@ export async function app_a_app(context) {
     app_a_on_keydown(e, choices);
   }
   function lambda(item) {
-    let fn = object_property_get(item, "fn");
+    let fn = property_get(item, "fn");
     function wrapped() {
       list_remove(on_keydowns, on_keydown);
       let result = fn();
@@ -66,7 +66,7 @@ export async function app_a_app(context) {
     object_property_set(item, "fn", wrapped);
   }
   each(choices, lambda);
-  let on_keydowns = object_property_get(context, "on_keydowns");
+  let on_keydowns = property_get(context, "on_keydowns");
   list_add(on_keydowns, on_keydown);
   app_a_buttons_shortcuts_wide(root, choices);
 }

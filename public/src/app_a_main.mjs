@@ -1,6 +1,6 @@
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
 import { app_a_file_system_initialize } from "../../../love/public/src/app_a_file_system_initialize.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { html_on_keydown } from "../../../love/public/src/html_on_keydown.mjs";
 import { html_font_sans_serif_set_html } from "../../../love/public/src/html_font_sans_serif_set_html.mjs";
@@ -21,7 +21,7 @@ export async function app_a_main(context) {
   function lambda(e) {
     invoke_multiple_arg(on_keydowns, e);
   }
-  let root = object_property_get(context, "root");
+  let root = property_get(context, "root");
   html_margin_0(root);
   html_on_keydown(root, lambda);
   html_font_sans_serif_set_html();

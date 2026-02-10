@@ -2,12 +2,12 @@ import { g_objection_generate_property } from "../../../love/public/src/g_object
 import { object_property_rename } from "../../../love/public/src/object_property_rename.mjs";
 import { file_json_transform } from "../../../love/public/src/file_json_transform.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function g_objection_generate_migrate() {
   await g_objection_generate_migrate_generic(file_each);
   async function file_each(file) {
     async function lambda(data) {
-      let passages = object_property_get(data, "passages");
+      let passages = property_get(data, "passages");
       function lambda3(item) {
         const property_name_before = "objection";
         let property_name_after = g_objection_generate_property();

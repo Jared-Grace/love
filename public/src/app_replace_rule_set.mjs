@@ -21,7 +21,7 @@ import { html_disable } from "../../../love/public/src/html_disable.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { app_replace_rule_parse } from "../../../love/public/src/app_replace_rule_parse.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -34,14 +34,14 @@ import { html_button_screen } from "../../../love/public/src/html_button_screen.
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 export async function app_replace_rule_set(context) {
-  let root = object_property_get(context, "root");
+  let root = property_get(context, "root");
   html_button_screen(root, emoji_home() + "Home", context, app_replace_home);
   let index = await storage_local_get_context(context, "rule_set_index");
   let rule_sets = app_replace_rule_sets();
   let item = list_get(rule_sets, index);
-  let name = object_property_get(item, "name");
+  let name = property_get(item, "name");
   html_p_text(root, "Rule set: " + name);
-  let start = object_property_get(item, "start");
+  let start = property_get(item, "start");
   let current = await storage_local_initialize_context(
     context,
     "rule_set_start",
@@ -49,11 +49,11 @@ export async function app_replace_rule_set(context) {
   );
   let index_selected = null;
   let label_rules = html_p(root);
-  let rules = object_property_get(item, "rules");
+  let rules = property_get(item, "rules");
   let mapped = list_map(rules, app_replace_rule_parse);
   function lambda(rule, index) {
-    let left = object_property_get(rule, "left");
-    let right = object_property_get(rule, "right");
+    let left = property_get(rule, "left");
+    let right = property_get(rule, "right");
     let right_joined = list_join_space(right);
     let left_joined = list_join_space(left);
     let text = left_joined + " ↦ " + right_joined;
@@ -88,8 +88,8 @@ export async function app_replace_rule_set(context) {
         if (not(eq)) {
           alert("invalid index for rule");
         }
-        let right = object_property_get(rule2, "right");
-        let left = object_property_get(rule2, "left");
+        let right = property_get(rule2, "right");
+        let left = property_get(rule2, "left");
         let before = list_take(current_list, index);
         let size = list_size(left);
         let after = list_skip(current_list, index + size);
@@ -106,7 +106,7 @@ export async function app_replace_rule_set(context) {
     html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
     html_text_set_if(nn, "Choose a symbol:", "Symbols:", label_symbols);
     function lambda6(component) {
-      let rule2 = object_property_get(component, "rule");
+      let rule2 = property_get(component, "rule");
       function lambda7(index) {
         let eq2 = app_replace_rule_valid(rule2, index, current_list);
         return eq2;
@@ -130,7 +130,7 @@ export async function app_replace_rule_set(context) {
       let valid = false;
       let nn2 = null_not_is(index_selected);
       if (nn2) {
-        let index3 = object_property_get(sb, "index");
+        let index3 = property_get(sb, "index");
         let rule2 = list_get(mapped, index_selected);
         valid = app_replace_rule_valid(rule2, index3, current_list);
       }
