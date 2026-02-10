@@ -1,3 +1,4 @@
+import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { app_replace_home } from "../../../love/public/src/app_replace_home.mjs";
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
@@ -100,6 +101,7 @@ export async function app_replace_rule_set(context) {
       }
       let b = html_button(div, letter, symbol_on_click);
       html_style_background_color(b, "darkgreen");
+      app_a_control_style(component2);
       property_set_exists_not(b, "index", index);
       return b;
     }
