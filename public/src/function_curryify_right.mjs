@@ -6,6 +6,6 @@ export async function function_curryify_right(f_name) {
   let args_get = function_curryify_choose_args_get(0);
   let combined = function_curryify_generic_name(unaliased);
   let combined2 = function_name_combine(combined, "right");
-  let output = await function_curryify_generic(f_name, combined2, args_get);
+  let output = await function_curryify_generic(f_name, () => {}, args_get);
   return output;
 }
