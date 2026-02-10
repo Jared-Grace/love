@@ -91,7 +91,8 @@ export async function app_replace_rule_set(context) {
       app_replace_button_symbol_style_valid(span, true);
       return span;
     }
-    return list_map(left, symbol_each);
+    let mapped = list_map(left, symbol_each);
+    return mapped;
   }
   function refresh() {
     html_clear(div);
