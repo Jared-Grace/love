@@ -110,7 +110,7 @@ export async function app_replace_rule_set(context) {
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(valid);
       const list = [rights, lefts];
       function lambda2(lr) {
-        let mapped = each(lr, lambda4);
+        each(lr, lambda4);
       }
       each(list, lambda2);
       html_style_set_or_remove(
