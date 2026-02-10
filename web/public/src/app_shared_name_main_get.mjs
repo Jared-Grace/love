@@ -1,5 +1,5 @@
+import { list_filter_text_match_ordered } from "../../../love/public/src/list_filter_text_match_ordered.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
-import { list_find_starts_with } from "../../../love/public/src/list_find_starts_with.mjs";
 import { apps_names } from "../../../love/public/src/apps_names.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_unalias_exists } from "../../../love/public/src/function_unalias_exists.mjs";
@@ -13,7 +13,7 @@ export async function app_shared_name_main_get(search) {
     app_name = search;
   } else {
     let mapped = await apps_names();
-    app_name = list_find_starts_with(mapped, search);
+    let app_names = list_filter_text_match_ordered(mapped, search);
   }
   f_name = app_shared_name_main(app_name);
   log_keep({
