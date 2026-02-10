@@ -15,7 +15,8 @@ export async function functions_rename_generic(filter, name_change) {
   list_empty_not_is_assert(filtered);
   let dictionary = list_to_dictionary_value(list, name_change);
   let identifiers = await data_identifiers_get();
-  let result3 = object_filter(object, function lambda(value, key) {});
+  function lambda(value, key) {}
+  let result3 = object_filter(object, lambda);
   function lambda2(f_name_after) {
     object_property_exists_not_assert(identifiers, f_name_after);
   }
