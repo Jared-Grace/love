@@ -108,10 +108,7 @@ export async function app_replace_rule_set(context) {
       html_enable_if(rb, enabled);
       let properties = ["rights", "lefts"];
       let r2 = property_get_curried(rb);
-      let mapped2 = list_map(properties, r2);
-      let rights = property_get(rb, "rights");
-      let lefts = property_get(rb, "lefts");
-      const list = [rights, lefts];
+      let list = list_map(properties, r2);
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(valid);
       each_nested(list, lambda4);
       html_style_set_or_remove(
