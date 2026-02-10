@@ -1,3 +1,4 @@
+import { html_style_padding_y } from "../../../love/public/src/html_style_padding_y.mjs";
 import { html_bold } from "../../../love/public/src/html_bold.mjs";
 import { property_get_curried } from "../../../love/public/src/property_get_curried.mjs";
 import { each_nested } from "../../../love/public/src/each_nested.mjs";
@@ -73,6 +74,7 @@ export async function app_replace_rule_set(context) {
     }
     let b = html_button_notext(root, lambda3);
     app_replace_button_symbol_style(b);
+    html_style_padding_y(b, "0.5em");
     html_border_none(b);
     let lefts = rule_button_side(b, left);
     let span2 = html_span_text(b, " ➜ ");
