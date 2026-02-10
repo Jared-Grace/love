@@ -156,7 +156,7 @@ export async function app_replace_rule_set(context) {
         valid,
       });
       html_style_background_color(sb, color_bg);
-      html_font_color_set(b, color_font);
+      html_font_color_set(sb, color_font);
     }
     each(symbols_buttons, each_symbol_button);
   }
