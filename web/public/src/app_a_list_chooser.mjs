@@ -1,4 +1,4 @@
-import { text_match_ordered } from "../../../love/public/src/text_match_ordered.mjs";
+import { text_match_ordered_curried } from "../../../love/public/src/text_match_ordered_curried.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
@@ -37,10 +37,7 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
   let f_names_div = html_div(root);
   function on_input() {
     let value = html_value_get(input);
-    function lambda2(text) {
-      let v3 = text_match_ordered(value, text);
-      return v3;
-    }
+    let r = text_match_ordered_curried(t);
     filtered = list_filter(texts, lambda2);
     refresh();
   }
