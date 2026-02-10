@@ -7,8 +7,8 @@ import { function_unalias_exists } from "../../../love/public/src/function_unali
 import { app_shared_name_main } from "../../../love/public/src/app_shared_name_main.mjs";
 export async function app_shared_name_main_get(search) {
   let f_name = app_shared_name_main(search);
-  let v2 = await function_unalias_exists(f_name);
-  let exists = property_get(v2, "exists");
+  let e = await function_unalias_exists(f_name);
+  let exists = property_get(e, "exists");
   let app_name = search;
   if (not(exists)) {
     let mapped = await apps_names();
