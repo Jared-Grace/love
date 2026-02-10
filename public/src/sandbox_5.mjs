@@ -17,7 +17,7 @@ import { object_property_get_curry_right } from "../../../love/public/src/object
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { object_property_from } from "../../../love/public/src/object_property_from.mjs";
 import { object_property_exists_not_assert } from "../../../love/public/src/object_property_exists_not_assert.mjs";
-import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
+import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
 import { property_exists_if_async } from "../../../love/public/src/property_exists_if_async.mjs";
 import { property_exists_equals } from "../../../love/public/src/property_exists_equals.mjs";
 import { property_exists_assert } from "../../../love/public/src/property_exists_assert.mjs";
@@ -77,7 +77,7 @@ export async function sandbox_5() {
     property_exists_assert: "public/src/object_property_exists_assert.mjs",
     property_exists_equals: "public/src/object_property_exists_equals.mjs",
     property_exists_if_async: "public/src/object_property_exists_if_async.mjs",
-    object_property_exists_not: "public/src/object_property_exists_not.mjs",
+    property_exists_not: "public/src/object_property_exists_not.mjs",
     object_property_exists_not_assert:
       "public/src/object_property_exists_not_assert.mjs",
     object_property_from: "public/src/object_property_from.mjs",
