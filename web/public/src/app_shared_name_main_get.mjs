@@ -13,7 +13,7 @@ export async function app_shared_name_main_get(search) {
     app_name = search;
   } else {
     let mapped = await apps_names();
-    app_name = list_find_text_match_ordered(mapped, search, app_name);
+    app_name = list_find_text_match_ordered(mapped, search);
   }
   f_name = app_shared_name_main(app_name);
   log_keep({
