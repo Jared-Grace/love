@@ -14,7 +14,7 @@ import { function_new_transform } from "../../../love/public/src/function_new_tr
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_parse_declaration_unaliased } from "../../../love/public/src/function_parse_declaration_unaliased.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
-export async function function_curryify_generic(f_name, args_get) {
+export async function function_curryify_generic(f_name, args_get, name_get) {
   let f_name_curried = function_curryify_generic_name(f_name);
   let u = await function_parse_declaration_unaliased(f_name);
   let unaliased = property_get(u, "unaliased");

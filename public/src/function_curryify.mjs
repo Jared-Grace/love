@@ -2,7 +2,11 @@ import { function_curryify_generic } from "../../../love/public/src/function_cur
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function function_curryify(f_name) {
-  let output = await function_curryify_generic(f_name, args_get);
+  let output = await function_curryify_generic(
+    f_name,
+    args_get,
+    function_curryify_generic_name,
+  );
   return output;
   function args_get(arg_names) {
     let fr = list_first_remaining(arg_names);
