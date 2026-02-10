@@ -62,7 +62,6 @@ export async function app_replace_rule_set(context) {
     let right = property_get(rule, "right");
     let right_joined = list_join_space(right);
     let left_joined = list_join_space(left);
-    let text = left_joined + right_joined;
     function lambda3() {
       if (index_selected === index) {
         index_selected = null;
