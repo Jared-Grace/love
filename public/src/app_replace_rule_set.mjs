@@ -1,3 +1,4 @@
+import { property_get_curried } from "../../../love/public/src/property_get_curried.mjs";
 import { each_nested } from "../../../love/public/src/each_nested.mjs";
 import { app_replace_button_symbol_style_valid_curry_right } from "../../../love/public/src/app_replace_button_symbol_style_valid_curry_right.mjs";
 import { app_replace_button_symbol_style_valid } from "../../../love/public/src/app_replace_button_symbol_style_valid.mjs";
@@ -106,6 +107,7 @@ export async function app_replace_rule_set(context) {
       let enabled = list_any(r, lambda7);
       html_enable_if(rb, enabled);
       let properties = ["rights", "lefts"];
+      let r2 = property_get_curried(object);
       function lambda2(property) {
         let value = property_get(rb, property);
         return value;
