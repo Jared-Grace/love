@@ -2,7 +2,7 @@ import { ebible_chapter_code_parse } from "../../../love/public/src/ebible_chapt
 import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_not_includes.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { object_property_initialize } from "../../../love/public/src/object_property_initialize.mjs";
+import { property_initialize } from "../../../love/public/src/property_initialize.mjs";
 import { ebible_chapters_each_verses } from "../../../love/public/src/ebible_chapters_each_verses.mjs";
 export async function ebible_index(bible_folder) {
   let books = {};
@@ -10,7 +10,7 @@ export async function ebible_index(bible_folder) {
   await ebible_chapters_each_verses(bible_folder, each_chapter);
   async function each_chapter(chapter_code, verses) {
     let { book_code, chapter_name } = ebible_chapter_code_parse(chapter_code);
-    let book = object_property_initialize(books, book_code, {
+    let book = property_initialize(books, book_code, {
       book_code,
       chapters: [],
     });
