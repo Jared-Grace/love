@@ -20,7 +20,7 @@ import { list_join_newline } from "../../../love/public/src/list_join_newline.mj
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { html_textarea } from "../../../love/public/src/html_textarea.mjs";
 import { app_g_openai_split } from "../../../love/public/src/app_g_openai_split.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function app_g_bible_home(context) {
   let downloaded = null;
   let chapter_code = null;
@@ -33,8 +33,8 @@ export async function app_g_bible_home(context) {
     ));
     function on_passage({ passage, verses }) {
       let last = list_last(verses);
-      let p = object_property_get(last, "p");
-      let sermon = object_property_get(passage, "sermon");
+      let p = property_get(last, "p");
+      let sermon = property_get(passage, "sermon");
       let mapped2 = app_g_openai_split(sermon);
       let size = list_size(mapped2);
       let joined = list_join_newline(mapped2);
@@ -55,7 +55,7 @@ export async function app_g_bible_home(context) {
     each(passages, on_passage);
   }
   let updates = await list_adder_async(lambda5);
-  let bar = object_property_get(r, "bar");
+  let bar = property_get(r, "bar");
   async function lambda4() {
     invoke_multiple(updates);
     let destination = g_sermon_generate_upload_path(chapter_code);

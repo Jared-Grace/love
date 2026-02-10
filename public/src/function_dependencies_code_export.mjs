@@ -2,17 +2,17 @@ import { list_join_newline } from "../../../love/public/src/list_join_newline.mj
 import { global_name } from "../../../love/public/src/global_name.mjs";
 import { js_code_export_wrapped } from "../../../love/public/src/js_code_export_wrapped.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_code_global_init } from "../../../karate_code/public/src/js_code_global_init.mjs";
 import { function_dependencies_code } from "../../../love/public/src/function_dependencies_code.mjs";
 export async function function_dependencies_code_export(f_name) {
   let global_init = js_code_global_init();
   let i = 10;
   let v = await function_dependencies_code(f_name);
-  let externals = object_property_get(v, "externals");
+  let externals = property_get(v, "externals");
   let v2 = {
     get: async function lambda() {
-      let dependencies = object_property_get(v, "code");
+      let dependencies = property_get(v, "code");
       let e = js_code_export_wrapped(f_name);
       let gn = global_name();
       let g = js_code_export_wrapped(gn);
@@ -23,8 +23,8 @@ export async function function_dependencies_code_export(f_name) {
       });
       const url = URL.createObjectURL(blob);
       const mod = await import(url);
-      let fn = object_property_get(mod, f_name);
-      let global = object_property_get(mod, gn);
+      let fn = property_get(mod, f_name);
+      let global = property_get(mod, gn);
       let v3 = {
         fn,
         global,

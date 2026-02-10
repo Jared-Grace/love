@@ -1,4 +1,4 @@
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_imports_fix } from "../../../love/public/src/js_imports_fix.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -10,7 +10,7 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 import { js_declaration_name } from "../../../love/public/src/js_declaration_name.mjs";
 import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
 export async function js_outside_move(ast) {
-  let body = object_property_get(ast, "body");
+  let body = property_get(ast, "body");
   let fds = list_filter_property(body, "type", "FunctionDeclaration");
   async function lambda(fd) {
     let f_name = js_declaration_name(fd);

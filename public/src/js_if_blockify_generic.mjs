@@ -6,7 +6,7 @@ import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { js_node_type } from "../../../love/public/src/js_node_type.mjs";
 import { object_copy } from "../../../love/public/src/object_copy.mjs";
 import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function js_if_blockify_generic(
   ast,
   type,
@@ -14,8 +14,8 @@ export async function js_if_blockify_generic(
   add_copy,
 ) {
   async function lambda(v) {
-    let node = object_property_get(v, "node");
-    let body = object_property_get(node, property_name);
+    let node = property_get(v, "node");
+    let body = property_get(node, property_name);
     let nti = js_node_type_not_is(body, "BlockStatement");
     if (nti) {
       let copy = object_copy(body);

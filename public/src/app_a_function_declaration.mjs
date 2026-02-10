@@ -19,25 +19,25 @@ import { js_keyword_async } from "../../../love/public/src/js_keyword_async.mjs"
 import { app_a_keyword_blue_space } from "../../../love/public/src/app_a_keyword_blue_space.mjs";
 import { js_keyword_function } from "../../../love/public/src/js_keyword_function.mjs";
 import { false_is_assert } from "../../../love/public/src/false_is_assert.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_a_function_declaration(a) {
-  let node = object_property_get(a, "node");
-  let parent = object_property_get(a, "parent");
-  let generator = object_property_get(node, "generator");
+  let node = property_get(a, "node");
+  let parent = property_get(a, "parent");
+  let generator = property_get(node, "generator");
   false_is_assert(generator);
-  let async = object_property_get(node, "async");
+  let async = property_get(node, "async");
   if (async) {
     let ka = js_keyword_async();
     app_a_keyword_blue_space(parent, ka);
   }
   let kf = js_keyword_function();
   let k = app_a_keyword_blue_space(parent, kf);
-  let keyword = object_property_get(k, "keyword");
+  let keyword = property_get(k, "keyword");
   function choices_get(o, choices) {
     app_a_functionize_choices_add(choices, a, o);
-    let ast = object_property_get(a, "ast");
+    let ast = property_get(a, "ast");
     let v_match = js_visit_match(ast, node);
-    let stack = object_property_get(v_match, "stack");
+    let stack = property_get(v_match, "stack");
     let e2 = list_get_end_2(stack);
     function lambda6() {
       list_add(choices, {
@@ -54,22 +54,22 @@ export function app_a_function_declaration(a) {
     js_node_type_is_if(e2, "BlockStatement", lambda6);
   }
   app_a_overlay_choices(a, keyword, choices_get);
-  let id = object_property_get(node, "id");
+  let id = property_get(node, "id");
   app_a_function_node_child(a, id);
   app_a_parenthesis_wrap(parent, inner);
   function inner() {
-    let params = object_property_get(node, "params");
+    let params = property_get(node, "params");
     app_a_nodes_list(a, params, parent);
   }
-  let body = object_property_get(node, "body");
+  let body = property_get(node, "body");
   html_span_space(parent);
   let r = app_a_function_node_child(a, body);
-  let left = object_property_get(r, "left");
-  let right = object_property_get(r, "right");
+  let left = property_get(r, "left");
+  let right = property_get(r, "right");
   function lambda(lr) {
     function lambda2(o) {
       let choices = [];
-      let body_list = object_property_get(body, "body");
+      let body_list = property_get(body, "body");
       let size = list_size(body_list);
       app_a_paste(choices, a, o, body_list, size, "");
       return choices;
