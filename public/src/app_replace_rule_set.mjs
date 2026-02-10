@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { html_margin_em } from "../../../love/public/src/html_margin_em.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_border_radius_em } from "../../../love/public/src/html_border_radius_em.mjs";
@@ -150,6 +151,10 @@ export async function app_replace_rule_set(context) {
         color_bg = "#1e6c1eff";
         color_font = "#878787ff";
       }
+      log({
+        sb,
+        valid,
+      });
       html_style_background_color(sb, color_bg);
       html_font_color_set(b, color_font);
     }
