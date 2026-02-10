@@ -7,13 +7,13 @@ import { object_copy } from "../../../love/public/src/object_copy.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_function_last_asyncify } from "../../../love/public/src/js_function_last_asyncify.mjs";
 import { not } from "../../../love/public/src/not.mjs";
-import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
+import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function js_await_add_inner(functions, ast, visited) {
   async function lambda(v) {
     let node = object_property_get(v, "node");
     async function lambda3(name) {
-      let en = object_property_exists_not(functions, name);
+      let en = property_exists_not(functions, name);
       if (en) {
         return;
       }
