@@ -27,6 +27,7 @@ import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs"
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
+import { html_button } from "../../../love/public/src/html_button.mjs";
 import { app_replace_rule_parse } from "../../../love/public/src/app_replace_rule_parse.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
@@ -107,7 +108,7 @@ export async function app_replace_rule_set(context) {
         index_selected = null;
         refresh();
       }
-      let sb = html_span_text(div, letter, symbol_on_click);
+      let sb = html_button(div, letter, symbol_on_click);
       app_replace_button_symbol_style(sb);
       property_set_exists_not(sb, "index", index);
       let valid = false;
