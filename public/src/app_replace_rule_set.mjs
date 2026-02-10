@@ -1,3 +1,4 @@
+import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_border_radius_em } from "../../../love/public/src/html_border_radius_em.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { app_replace_home } from "../../../love/public/src/app_replace_home.mjs";
@@ -102,6 +103,7 @@ export async function app_replace_rule_set(context) {
       let b = html_button(div, letter, symbol_on_click);
       html_style_background_color(b, "darkgreen");
       html_border_radius_em(b, 0.5);
+      html_font_color_set(component2, color);
       property_set_exists_not(b, "index", index);
       return b;
     }
