@@ -30,10 +30,10 @@ export async function function_curryify(f_name) {
       remaining,
       declaration_call,
     );
-    return;
     let name_result = function_name_combine(f_name_curried, "result");
     let declaration_result = js_declaration(declaration_call, name_result);
     js_declaration_single_block_body_add(ast, declaration_result);
+    return;
     let body_block = js_declaration_to_block_body(declaration_result);
     list_add(body_block, item);
     let declaration = js_declaration_single(ast);
