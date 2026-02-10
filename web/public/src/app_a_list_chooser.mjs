@@ -1,4 +1,4 @@
-import { text_match_ordered_curried } from "../../../love/public/src/text_match_ordered_curried.mjs";
+import { list_filter_text_match_ordered } from "../../../love/public/src/list_filter_text_match_ordered.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
@@ -12,7 +12,6 @@ import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mj
 import { list_sort_text_alpha_size } from "../../../love/public/src/list_sort_text_alpha_size.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_on_input } from "../../../love/public/src/html_on_input.mjs";
-import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_a_input } from "../../../love/public/src/app_a_input.mjs";
@@ -37,8 +36,7 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
   let f_names_div = html_div(root);
   function on_input() {
     let value = html_value_get(input);
-    let lambda2 = text_match_ordered_curried(t);
-    filtered = list_filter(texts, lambda2);
+    filtered = list_filter_text_match_ordered(filtered, texts);
     refresh();
   }
   html_on_input(input, on_input);
