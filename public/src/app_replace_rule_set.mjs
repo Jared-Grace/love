@@ -107,12 +107,12 @@ export async function app_replace_rule_set(context) {
       let rights = property_get(rb, "rights");
       let lefts = property_get(rb, "lefts");
       if (enabled) {
-        function lambda2(item2) {
+        function lambda2(lr) {
           function symbol_each(span) {
             app_replace_button_symbol_style_valid(span, enabled);
             return span;
           }
-          let mapped = list_map(left, symbol_each);
+          let mapped = list_map(lr, symbol_each);
         }
         each([rights, lefts], lambda2);
       } else {
