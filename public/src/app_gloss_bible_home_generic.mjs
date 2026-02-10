@@ -100,7 +100,7 @@ export async function app_gloss_bible_home_generic(
     function lambda(e) {
       let component2 = html_hr(p);
       let div2 = html_div(p);
-      let word = property_get(e, generated);
+      let word = property_get(e, "word");
       let gloss = property_get(e, "gloss");
       let explain = property_get(e, "explain");
       let span = html_span_text(div2, word);
