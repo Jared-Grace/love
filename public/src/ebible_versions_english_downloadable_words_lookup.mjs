@@ -3,7 +3,7 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 import { ebible_chapters_each_verses_check_with } from "../../../love/public/src/ebible_chapters_each_verses_check_with.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_initialize_list } from "../../../love/public/src/object_property_initialize_list.mjs";
-import { object_property_initialize_empty } from "../../../love/public/src/object_property_initialize_empty.mjs";
+import { property_initialize_empty } from "../../../love/public/src/property_initialize_empty.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { text_transform_lookup } from "../../../love/public/src/text_transform_lookup.mjs";
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
@@ -54,8 +54,8 @@ export async function ebible_versions_english_downloadable_words_lookup() {
             word_add(lower);
           }
           function word_add(lower) {
-            let word = object_property_initialize_empty(result, lower);
-            let chapter = object_property_initialize_empty(word, chapter_code);
+            let word = property_initialize_empty(result, lower);
+            let chapter = property_initialize_empty(word, chapter_code);
             let versions = object_property_initialize_list(
               chapter,
               verse_number,
