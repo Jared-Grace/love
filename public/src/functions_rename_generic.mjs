@@ -1,10 +1,10 @@
+import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { object_filter } from "../../../love/public/src/object_filter.mjs";
 import { each_object_async } from "../../../love/public/src/each_object_async.mjs";
 import { object_property_exists_not_assert } from "../../../love/public/src/object_property_exists_not_assert.mjs";
 import { data_identifiers_get } from "../../../love/public/src/data_identifiers_get.mjs";
 import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
-import { equal } from "../../../love/public/src/equal.mjs";
 import { function_rename } from "../../../love/public/src/function_rename.mjs";
 import { list_empty_not_is_assert } from "../../../love/public/src/list_empty_not_is_assert.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
@@ -15,16 +15,15 @@ export async function functions_rename_generic(filter, name_change) {
   list_empty_not_is_assert(filtered);
   let dictionary = list_to_dictionary_value(list, name_change);
   let identifiers = await data_identifiers_get();
-  function lambda(value, key) {}
+  function lambda(f_name_before, f_name_after) {
+    return equal_not(f_name_before, f_name_after);
+  }
   let different = object_filter(object, lambda);
   function lambda2(f_name_after) {
     object_property_exists_not_assert(identifiers, f_name_after);
   }
   each_object_values(dictionary, lambda2);
   async function lambda3(f_name_after, f_name_before) {
-    if (equal(f_name_before, f_name_after)) {
-      return;
-    }
     let v = await function_rename(f_name_before, f_name_after);
   }
   await each_object_async(dictionary, lambda3);
