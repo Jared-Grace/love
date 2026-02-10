@@ -25,11 +25,11 @@ export async function function_curryify(f_name) {
     let arg_names = js_declaration_params_names(declaration_call);
     let r = list_first_remaining(arg_names);
     let first = property_get(r, "first");
-    let remaining = property_get(r, "remaining");
-    let value = [first];
+    let fn_new_result_args = property_get(r, "remaining");
+    let fn_new_args = [first];
     let name_result = function_name_combine(f_name_curried, "result");
     let declaration_result = js_declaration(declaration_call, name_result);
-    js_declaration_params_add(declaration_result, remaining);
+    js_declaration_params_add(declaration_result, fn_new_result_args);
     let ret = js_statement_return_argument(declaration_result);
     js_declaration_single_block_body_add(ast, ret);
     let body_block = js_declaration_to_block_body(declaration_result);
@@ -41,7 +41,7 @@ export async function function_curryify(f_name) {
     list_add(body_block, item);
     let declaration = js_declaration_single(ast);
     js_declaration_asyncify(declaration, declaration_call);
-    js_declaration_params_add(declaration, value);
+    js_declaration_params_add(declaration, fn_new_args);
     await js_imports_missing_add(ast);
   }
 }
