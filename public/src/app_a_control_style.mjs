@@ -3,7 +3,7 @@ import { html_style_margin_y } from "../../../love/public/src/html_style_margin_
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 export function app_a_control_style(component) {
   const border_radius = "0.8";
-  html_border_radius_em(border_radius, component);
+  html_border_radius_em(component, border_radius);
   html_style_assign(component, {
     "border-width": "0px",
   });
