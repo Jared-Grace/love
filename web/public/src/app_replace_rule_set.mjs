@@ -140,8 +140,8 @@ export async function app_replace_rule_set(context) {
       let size2 = list_size(current_list);
       let r = range(size2);
       let lambda7 = app_replace_rule_valid_curried(rule2, current_list);
-      let any = list_any(r, lambda7);
-      html_enable_if(rb, any);
+      let enabled = list_any(r, lambda7);
+      html_enable_if(rb, enabled);
       if (false) {
       }
       html_style_set_or_remove(
