@@ -1,8 +1,6 @@
-import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
+import { app_replace_button_symbol_style } from "../../../love/public/src/app_replace_button_symbol_style.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { html_margin_em } from "../../../love/public/src/html_margin_em.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
-import { html_border_radius_em } from "../../../love/public/src/html_border_radius_em.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { app_replace_home } from "../../../love/public/src/app_replace_home.mjs";
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
@@ -104,9 +102,7 @@ export async function app_replace_rule_set(context) {
         refresh();
       }
       let b = html_button(div, letter, symbol_on_click);
-      html_border_radius_em(b, 0.5);
-      html_margin_em(b, 0.09);
-      html_style_set(b, "border", 0);
+      app_replace_button_symbol_style(b);
       property_set_exists_not(b, "index", index);
       return b;
     }
