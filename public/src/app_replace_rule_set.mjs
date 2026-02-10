@@ -26,7 +26,6 @@ import { html_p } from "../../../love/public/src/html_p.mjs";
 import { html_disable } from "../../../love/public/src/html_disable.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
-import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { app_replace_rule_parse } from "../../../love/public/src/app_replace_rule_parse.mjs";
@@ -60,8 +59,6 @@ export async function app_replace_rule_set(context) {
   function lambda(rule, index) {
     let left = property_get(rule, "left");
     let right = property_get(rule, "right");
-    let right_joined = list_join_space(right);
-    let left_joined = list_join_space(left);
     function lambda3() {
       if (index_selected === index) {
         index_selected = null;
