@@ -14,7 +14,7 @@ import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mj
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { js_identifier_defineds_includes } from "../../../love/public/src/js_identifier_defineds_includes.mjs";
-import { object_property_equals } from "../../../love/public/src/object_property_equals.mjs";
+import { property_equals } from "../../../love/public/src/property_equals.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -52,7 +52,7 @@ export async function js_functionize(
       let node = object_property_get(v, "node");
       let stack1 = list_get_end(stack, 1);
       if (js_node_type_is(stack1, "Property")) {
-        if (object_property_equals(stack1, "key", node)) {
+        if (property_equals(stack1, "key", node)) {
           return;
         }
       }

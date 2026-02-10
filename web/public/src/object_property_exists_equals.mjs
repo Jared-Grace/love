@@ -1,4 +1,4 @@
-import { object_property_equals } from "../../../love/public/src/object_property_equals.mjs";
+import { property_equals } from "../../../love/public/src/property_equals.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 export function object_property_exists_equals(
   o,
@@ -7,6 +7,6 @@ export function object_property_exists_equals(
 ) {
   let v =
     object_property_exists(property_name) &&
-    object_property_equals(o, property_name, property_value);
+    property_equals(o, property_name, property_value);
   return v;
 }
