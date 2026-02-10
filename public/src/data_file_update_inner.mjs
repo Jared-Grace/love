@@ -7,7 +7,7 @@ import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_na
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { object_property_delete } from "../../../love/public/src/object_property_delete.mjs";
+import { property_delete } from "../../../love/public/src/property_delete.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { list_remove_all } from "../../../love/public/src/list_remove_all.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
@@ -43,7 +43,7 @@ export function data_file_update_inner(parsed, data) {
       list_remove_all(list, f_name);
       let e = list_empty_is(list);
       if (e) {
-        object_property_delete(items_to_functions, item);
+        property_delete(items_to_functions, item);
       }
       each(removals, lambda);
     }
