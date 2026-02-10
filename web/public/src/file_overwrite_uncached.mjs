@@ -1,4 +1,4 @@
-import { object_property_delete_if_exists } from "../../../love/public/src/object_property_delete_if_exists.mjs";
+import { property_delete_if_exists } from "../../../love/public/src/property_delete_if_exists.mjs";
 import { text_empty_is } from "../../../love/public/src/text_empty_is.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { data_file_update } from "../../../love/public/src/data_file_update.mjs";
@@ -38,7 +38,7 @@ export async function file_overwrite_uncached(file_path, contents) {
       if (e) {
         object_property_set(previous, "deleted", true);
       } else {
-        object_property_delete_if_exists(previous, "deleted");
+        property_delete_if_exists(previous, "deleted");
       }
       let list = object_property_get(f, "versions");
       list_add(list, contents);
