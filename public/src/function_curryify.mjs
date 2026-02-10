@@ -1,9 +1,12 @@
 import { js_declaration_params_add } from "../../../love/public/src/js_declaration_params_add.mjs";
+import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_statement_return_argument } from "../../../love/public/src/js_statement_return_argument.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_declaration_to_block_body } from "../../../love/public/src/js_declaration_to_block_body.mjs";
 import { js_declaration } from "../../../love/public/src/js_declaration.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
 import { js_declaration_asyncify } from "../../../love/public/src/js_declaration_asyncify.mjs";
@@ -38,7 +41,6 @@ export async function function_curryify(f_name) {
       declaration_call,
     );
     list_add(body_block, item);
-    return;
     let declaration = js_declaration_single(ast);
     js_declaration_asyncify(declaration, declaration_call);
     let value = [first];
