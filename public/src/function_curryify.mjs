@@ -23,10 +23,9 @@ export async function function_curryify(f_name) {
   return output;
   async function lambda(ast) {
     let arg_names = js_declaration_params_names(declaration_call);
-    let r = list_first_remaining(arg_names);
-    let first = property_get(r, "first");
-    let fn_new_result_args = property_get(r, "remaining");
-    let fn_new_args = [first];
+    let r3 = args_get(arg_names);
+    let fn_new_args = property_get(r3, "fn_new_args");
+    let fn_new_result_args = property_get(r3, "fn_new_result_args");
     let name_result = function_name_combine(f_name_curried, "result");
     let declaration_result = js_declaration(declaration_call, name_result);
     js_declaration_params_add(declaration_result, fn_new_result_args);
@@ -43,5 +42,16 @@ export async function function_curryify(f_name) {
     js_declaration_asyncify(declaration, declaration_call);
     js_declaration_params_add(declaration, fn_new_args);
     await js_imports_missing_add(ast);
+  }
+  function args_get(arg_names) {
+    let r = list_first_remaining(arg_names);
+    let first = property_get(r, "first");
+    let fn_new_result_args = property_get(r, "remaining");
+    let fn_new_args = [first];
+    let r2 = {
+      fn_new_result_args,
+      fn_new_args,
+    };
+    return r2;
   }
 }
