@@ -31,7 +31,7 @@ import { app_g_bible_home_inner } from "../../../love/public/src/app_g_bible_hom
 import { list_second } from "../../../love/public/src/list_second.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
 export async function app_ceb_bible_home_generic(context, download, text_use) {
-  let language_code = g_sermon_generate_book_generic_property();
+  let generated = g_sermon_generate_book_generic_property();
   let v2 = await app_g_bible_home_inner(context, download);
   let passages = object_property_get(v2, "passages");
   each_next(passages, on_passage);
@@ -76,7 +76,7 @@ export async function app_ceb_bible_home_generic(context, download, text_use) {
       html_font_color_set_green(div);
     }
     each(texts, lambda5);
-    let explains_json = object_property_get(passage, "explains");
+    let explains_json = object_property_get(passage, generated);
     let explains = json_from(explains_json);
     if (false) {
       let div3 = html_div(p);
@@ -84,7 +84,7 @@ export async function app_ceb_bible_home_generic(context, download, text_use) {
         let span = html_span_text_nbsp_replace_property_from(
           div3,
           e,
-          language_code,
+          generated,
         );
         html_font_color_set_green(span);
         html_span_nbsp(div3);
@@ -97,7 +97,7 @@ export async function app_ceb_bible_home_generic(context, download, text_use) {
     function lambda(e) {
       let component2 = html_hr(p);
       let div2 = html_div(p);
-      let word = object_property_get(e, language_code);
+      let word = object_property_get(e, generated);
       let gloss = object_property_get(e, "gloss");
       let explain = object_property_get(e, "explain");
       let span = html_span_text(div2, word);
