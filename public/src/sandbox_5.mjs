@@ -25,7 +25,7 @@ import { object_property_exists } from "../../../love/public/src/object_property
 import { object_property_equals_lambda } from "../../../love/public/src/object_property_equals_lambda.mjs";
 import { object_property_equals_json_lambda } from "../../../love/public/src/object_property_equals_json_lambda.mjs";
 import { object_property_equals_json } from "../../../love/public/src/object_property_equals_json.mjs";
-import { object_property_equals } from "../../../love/public/src/object_property_equals.mjs";
+import { property_equals } from "../../../love/public/src/property_equals.mjs";
 import { property_delete_multiple } from "../../../love/public/src/property_delete_multiple.mjs";
 import { property_delete_if_exists } from "../../../love/public/src/property_delete_if_exists.mjs";
 import { property_delete } from "../../../love/public/src/property_delete.mjs";
@@ -68,7 +68,7 @@ export async function sandbox_5() {
     property_delete_if_exists:
       "public/src/object_property_delete_if_exists.mjs",
     property_delete_multiple: "public/src/object_property_delete_multiple.mjs",
-    object_property_equals: "public/src/object_property_equals.mjs",
+    property_equals: "public/src/object_property_equals.mjs",
     object_property_equals_json: "public/src/object_property_equals_json.mjs",
     object_property_equals_json_lambda:
       "public/src/object_property_equals_json_lambda.mjs",
