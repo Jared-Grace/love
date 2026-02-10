@@ -29,7 +29,7 @@ export async function function_curryify(f_name) {
     let declaration = js_declaration_single(ast);
     js_declaration_asyncify(declaration, declaration_call);
     const p = "params";
-    let value = property_get(declaration_call, p);
+    let value = [first];
     property_set(declaration, p, value);
     await js_imports_missing_add(ast);
   }
