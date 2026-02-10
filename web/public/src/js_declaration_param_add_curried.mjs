@@ -1,1 +1,6 @@
-export function js_declaration_param_add_curried() {}
+import { js_declaration_param_add } from "../../../love/public/src/js_declaration_param_add.mjs";
+export function js_declaration_param_add_curried(declaration) {
+  return function js_declaration_param_add_curried_result(param_name) {
+    return js_declaration_param_add(declaration, param_name);
+  };
+}
