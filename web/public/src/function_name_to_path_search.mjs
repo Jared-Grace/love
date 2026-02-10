@@ -1,4 +1,4 @@
-import { object_property_from } from "../../../love/public/src/object_property_from.mjs";
+import { property_from } from "../../../love/public/src/property_from.mjs";
 import { repos_paths_names_map_unordered_combine } from "../../../love/public/src/repos_paths_names_map_unordered_combine.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
@@ -36,8 +36,8 @@ export async function function_name_to_path_search(f_name) {
   if (exists) {
     let only = list_single(filtered);
     let mapped = object_property_get(only, "mapped");
-    object_property_from(search, "f_path", mapped);
-    object_property_from(search, "repo_name", only);
+    property_from(search, "f_path", mapped);
+    property_from(search, "repo_name", only);
   }
   return search;
 }
