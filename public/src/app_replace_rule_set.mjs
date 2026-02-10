@@ -106,6 +106,13 @@ export async function app_replace_rule_set(context) {
       let rights = property_get(rb, "rights");
       let lefts = property_get(rb, "lefts");
       if (enabled) {
+        function symbol_each(symbol) {
+          let span = html_span_text(b, symbol);
+          app_replace_button_symbol_style(span);
+          app_replace_button_symbol_style_valid(span, true);
+          return span;
+        }
+        let mapped = list_map(left, symbol_each);
       } else {
       }
       html_style_set_or_remove(
