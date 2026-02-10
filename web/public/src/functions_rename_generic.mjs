@@ -10,6 +10,7 @@ export async function functions_rename_generic(filter, name_change) {
   let filtered = list_filter(f_names, filter);
   log({
     filtered,
+    filter,
   });
   list_empty_not_is_assert(filtered);
   await each_async(filtered, lambda);
