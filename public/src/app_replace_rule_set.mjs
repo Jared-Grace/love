@@ -137,11 +137,7 @@ export async function app_replace_rule_set(context) {
     html_text_set_if(nn, "Choose a symbol:", "Symbols:", label_symbols);
     function each_rule_button(rb, index2) {
       let rule2 = property_get(rb, "rule");
-      function lambda7(index) {
-        let eq2 = app_replace_rule_valid(rule2, index, current_list);
-        return eq2;
-      }
-      let r2 = app_replace_rule_valid_curried(rule, current_list);
+      let lambda7 = app_replace_rule_valid_curried(rule, current_list);
       let size2 = list_size(current_list);
       let r = range(size2);
       let any = list_any(r, lambda7);
