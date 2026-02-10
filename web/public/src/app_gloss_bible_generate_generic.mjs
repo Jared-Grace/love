@@ -1,5 +1,5 @@
-import { app_ceb_bible_gloss_generate_generic_word } from "../../../love/public/src/app_ceb_bible_gloss_generate_generic_word.mjs";
-import { g_sermon_generate_book_generic } from "./g_sermon_generate_book_generic.mjs";
+import { app_gloss_bible_generate_generic_word } from "../../../love/public/src/app_gloss_bible_generate_generic_word.mjs";
+import { g_sermon_generate_book_generic } from "../../../love/public/src/g_sermon_generate_book_generic.mjs";
 export async function app_gloss_bible_generate_generic(
   language,
   last,
@@ -8,7 +8,7 @@ export async function app_gloss_bible_generate_generic(
   fn,
   chapter_code_specified,
 ) {
-  let r = app_ceb_bible_gloss_generate_generic_word();
+  let r = app_gloss_bible_generate_generic_word();
   const prompt_system = `You will be given a Bible passage and its context in ${language}.
 For each ${language} word, output an English gloss.
 Also output a full explanation of each ${language} word, explaining its meaning and grammar (including prefixes and suffixes), written for an English speaker with no background in grammar. 
