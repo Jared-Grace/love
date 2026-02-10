@@ -7,7 +7,7 @@ import { object_property_rename } from "../../../love/public/src/object_property
 import { object_property_lambda_async } from "../../../love/public/src/object_property_lambda_async.mjs";
 import { object_property_initialize_list } from "../../../love/public/src/object_property_initialize_list.mjs";
 import { object_property_initialize_lambda_async } from "../../../love/public/src/object_property_initialize_lambda_async.mjs";
-import { object_property_initialize_lambda } from "../../../love/public/src/object_property_initialize_lambda.mjs";
+import { property_initialize_lambda } from "../../../love/public/src/property_initialize_lambda.mjs";
 import { property_initialize_empty } from "../../../love/public/src/property_initialize_empty.mjs";
 import { property_initialize } from "../../../love/public/src/property_initialize.mjs";
 import { property_get_or } from "../../../love/public/src/property_get_or.mjs";
@@ -90,7 +90,7 @@ export async function sandbox_5() {
     property_initialize: "public/src/object_property_initialize.mjs",
     property_initialize_empty:
       "public/src/object_property_initialize_empty.mjs",
-    object_property_initialize_lambda:
+    property_initialize_lambda:
       "public/src/object_property_initialize_lambda.mjs",
     object_property_initialize_lambda_async:
       "public/src/object_property_initialize_lambda_async.mjs",
