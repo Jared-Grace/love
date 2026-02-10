@@ -72,7 +72,8 @@ export async function app_replace_rule_set(context) {
       return;
     }
     let b = html_button_notext(root, lambda3);
-    each(list, function lambda2(item2) {});
+    function lambda2(item2) {}
+    each(list, lambda2);
     let span = html_span_text(parent, text2);
     html_disable(b);
     object_merge(b, {
