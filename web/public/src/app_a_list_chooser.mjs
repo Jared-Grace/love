@@ -42,8 +42,8 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
     }
     filtered = list_filter(texts, lambda2);
     refresh();
-    function match(s, target) {
-      const escaped = s.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&");
+    function match(t, target) {
+      const escaped = t.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&");
       let regex_text = escaped.split("").join(".*");
       const regex = new RegExp(regex_text);
       let matches = regex.test(target);
