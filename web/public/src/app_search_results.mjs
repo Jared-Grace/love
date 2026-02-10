@@ -30,7 +30,7 @@ import { list_to_dictionary_value } from "../../../love/public/src/list_to_dicti
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { properties_from_empty } from "../../../love/public/src/properties_from_empty.mjs";
 import { list_intersect_multiple } from "../../../love/public/src/list_intersect_multiple.mjs";
-import { object_properties_get } from "../../../love/public/src/object_properties_get.mjs";
+import { properties_get } from "../../../love/public/src/properties_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { app_bible_search_word_path } from "../../../love/public/src/app_bible_search_word_path.mjs";
@@ -50,7 +50,7 @@ export async function app_search_results(context, div_results) {
     return o;
   }
   let mapped = await list_map_unordered_async(words, lambda);
-  let keys = list_map(mapped, object_properties_get);
+  let keys = list_map(mapped, properties_get);
   let chapter_codes_match = list_intersect_multiple(keys);
   function lambda4(m) {
     let to = properties_from_empty(m, chapter_codes_match);
