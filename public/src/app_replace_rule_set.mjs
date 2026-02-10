@@ -74,7 +74,7 @@ export async function app_replace_rule_set(context) {
     let b = html_button_notext(root, lambda3);
     function lambda2(symbol) {
       let span = html_span_text(parent, symbol);
-      app_replace_button_symbol_style(b2);
+      app_replace_button_symbol_style(span);
     }
     each(left, lambda2);
     html_disable(b);
