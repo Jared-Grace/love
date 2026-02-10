@@ -119,8 +119,9 @@ export async function app_replace_rule_set(context) {
       let list = list_map(properties, r2);
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(enabled);
       each_nested(list, lambda4);
+      const condition = index2 === index_selected;
       html_style_background_color_set_if(
-        index2 === index_selected,
+        condition,
         rb,
         "lightgreen",
         "#d7d7d7",
