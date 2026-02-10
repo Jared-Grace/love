@@ -1,5 +1,18 @@
-import { function_curryify_choose } from "../../../love/public/src/function_curryify_choose.mjs";
+import { function_curryify_generic } from "../../../love/public/src/function_curryify_generic.mjs";
+import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function function_curryify(f_name) {
-  let output = await function_curryify_choose(f_name, 0);
-  return output;
+  let r4 = await function_curryify_generic(f_name, args_get);
+  return r4;
+  function args_get(arg_names) {
+    let r = list_first_remaining(arg_names);
+    let first = property_get(r, "first");
+    let fn_new_result_args = property_get(r, "remaining");
+    let fn_new_args = [first];
+    let r2 = {
+      fn_new_result_args,
+      fn_new_args,
+    };
+    return r2;
+  }
 }
