@@ -1,5 +1,5 @@
 import { app_replace_button_symbol_style_valid } from "../../../love/public/src/app_replace_button_symbol_style_valid.mjs";
-import { app_replace_rule_valid_curried } from "../../../love/public/src/app_replace_rule_valid_curried.mjs";
+import { app_replace_rule_valid_curry } from "../../../love/public/src/app_replace_rule_valid_curry.mjs";
 import { html_border_none } from "../../../love/public/src/html_border_none.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_button_notext } from "../../../love/public/src/html_button_notext.mjs";
@@ -100,7 +100,7 @@ export async function app_replace_rule_set(context) {
       let rule2 = property_get(rb, "rule");
       let size2 = list_size(current_list);
       let r = range(size2);
-      let lambda7 = app_replace_rule_valid_curried(rule2, current_list);
+      let lambda7 = app_replace_rule_valid_curry(rule2, current_list);
       let enabled = list_any(r, lambda7);
       html_enable_if(rb, enabled);
       let rights = property_get(rb, "rights");
