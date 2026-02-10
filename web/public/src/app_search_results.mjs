@@ -28,7 +28,7 @@ import { app_karate_button_back_text } from "../../../love/public/src/app_karate
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { object_properties_from_empty } from "../../../love/public/src/object_properties_from_empty.mjs";
+import { properties_from_empty } from "../../../love/public/src/properties_from_empty.mjs";
 import { list_intersect_multiple } from "../../../love/public/src/list_intersect_multiple.mjs";
 import { object_properties_get } from "../../../love/public/src/object_properties_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -53,7 +53,7 @@ export async function app_search_results(context, div_results) {
   let keys = list_map(mapped, object_properties_get);
   let chapter_codes_match = list_intersect_multiple(keys);
   function lambda4(m) {
-    let to = object_properties_from_empty(m, chapter_codes_match);
+    let to = properties_from_empty(m, chapter_codes_match);
     return to;
   }
   list_map(mapped, lambda4);
