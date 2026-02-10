@@ -8,7 +8,7 @@ export async function app_gloss_bible_generate_generic(
   fn,
   chapter_code_specified,
 ) {
-  let r = app_gloss_bible_generate_generic_word();
+  let word = app_gloss_bible_generate_generic_word();
   const prompt_system = `You will be given a Bible passage and its context in ${language}.
 For each ${language} word, output an English gloss.
 Also output a full explanation of each ${language} word, explaining its meaning and grammar (including prefixes and suffixes), written for an English speaker with no background in grammar. 
@@ -16,7 +16,7 @@ Explanations should include any etymology.
 Explanations should be easy to understand. Explain as simply as possible.
 
 Output format:
-[{"${r}":"${language} word","gloss":"English gloss","explain":"full explanation"}, ...]
+[{"${word}":"${language} word","gloss":"English gloss","explain":"full explanation"}, ...]
 
 The ${last} provided as a reference.`;
   const prompt_user_middle = `Here is the ${language} passage to output English glosses for: `;
