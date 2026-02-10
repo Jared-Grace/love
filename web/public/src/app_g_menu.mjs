@@ -6,7 +6,7 @@ import { app_g_button_green } from "../../../love/public/src/app_g_button_green.
 import { app_g_button_uncolored } from "../../../love/public/src/app_g_button_uncolored.mjs";
 import { app_g_button_back } from "../../../love/public/src/app_g_button_back.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
 import { emoji_bow } from "../../../love/public/src/emoji_bow.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -20,7 +20,7 @@ export function app_g_menu(overlay, player) {
     app_g_menu_clear_back(overlay, player);
     app_g_container_text(overlay, "What prayer would you like to pray?");
     function lambda22() {
-      let prayer = object_property_get(player, "prayer");
+      let prayer = property_get(player, "prayer");
       object_property_set(prayer, "conversation", true);
       app_g_player_save(player);
       close();

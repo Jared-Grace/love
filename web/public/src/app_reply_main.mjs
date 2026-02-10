@@ -26,21 +26,21 @@ import { html_button } from "../../../love/public/src/html_button.mjs";
 import { app_reply_love } from "../../../love/public/src/app_reply_love.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_reply_initialize } from "../../../love/public/src/app_reply_initialize.mjs";
 export async function app_reply_main(context) {
   let r = await app_reply_initialize(context);
-  let choices = object_property_get(r, "choices");
-  let languages = object_property_get(r, "languages");
+  let choices = property_get(r, "choices");
+  let languages = property_get(r, "languages");
   let english_choices = await ebible_versions_english_choices();
   let en_l = ebible_language_en();
   let o = ebible_language_original();
   let languages_chosen_default = [o, en_l];
   let languages_chosen = [];
   languages_chosen_reset();
-  let root = object_property_get(r, "root");
-  let en = object_property_get(r, "en");
-  let encouragement = object_property_get(r, "encouragement");
+  let root = property_get(r, "root");
+  let en = property_get(r, "en");
+  let encouragement = property_get(r, "encouragement");
   let bible_texts = [];
   let responses = [];
   let responses_buttons = [];
@@ -116,9 +116,9 @@ export async function app_reply_main(context) {
   html_p_text(root, "3. (Optional) Choose any responses:");
   function lambda9(choice) {
     let b = null;
-    let text = object_property_get(choice, "text");
+    let text = property_get(choice, "text");
     async function lambda11() {
-      let response = object_property_get(choice, "response");
+      let response = property_get(choice, "response");
       list_add(responses, response);
       list_add(responses_buttons, b);
       await copy_refresh();
@@ -143,7 +143,7 @@ export async function app_reply_main(context) {
     let joined = await list_join_newline_2_copy(concated);
   }
   function lambda6(event) {
-    let key = object_property_get(event, "key");
+    let key = property_get(event, "key");
     if (equal(key, "Backspace")) {
       let ne = text_empty_not_is(typed);
       if (ne) {

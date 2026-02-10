@@ -2,27 +2,27 @@ import { js_identifier_defineds_includes } from "../../../love/public/src/js_ide
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 export function js_let_add(ast) {
   function lambda(v) {
-    let stack = object_property_get(v, "stack");
+    let stack = property_get(v, "stack");
     let stack1 = list_get_end_1(stack);
     let type_is = js_node_type_is(stack1, "ExpressionStatement");
     if (not(type_is)) {
       return;
     }
-    let node = object_property_get(v, "node");
-    let right = object_property_get(node, "right");
-    let left = object_property_get(node, "left");
+    let node = property_get(v, "node");
+    let right = property_get(node, "right");
+    let left = property_get(node, "left");
     let ii = js_identifier_is(left);
     if (not(ii)) {
       return;
     }
-    let name = object_property_get(left, "name");
+    let name = property_get(left, "name");
     let includes = js_identifier_defineds_includes(v, name);
     if (includes) {
       return;

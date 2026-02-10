@@ -1,4 +1,4 @@
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
@@ -36,9 +36,9 @@ export async function messenger_reply() {
     let first = list_first(filtered);
     let messages = await messenger_reply_messages(page, first);
     let v2 = await messenger_reply_unreplied(messages);
-    let unreplied = object_property_get(v2, "unreplied");
-    let mine_last = object_property_get(v2, "mine_last");
-    let message = object_property_get(mine_last, "message");
+    let unreplied = property_get(v2, "unreplied");
+    let mine_last = property_get(v2, "mine_last");
+    let message = property_get(mine_last, "message");
     let mine_last_lines = text_split_newline(message);
     let mine_last_lines_last = list_last(mine_last_lines);
     let property_name = messenger_reply_messages_message();

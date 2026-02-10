@@ -1,5 +1,5 @@
 import { js_return_identifier_name } from "../../../love/public/src/js_return_identifier_name.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_return_on_async } from "../../../love/public/src/js_return_on_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { js_list_type } from "../../../love/public/src/js_list_type.mjs";
@@ -11,7 +11,7 @@ export async function js_return_atomize(ast) {
   let existing = js_identifiers_names(ast);
   let rs = js_list_type(ast, "ReturnStatement");
   async function lambda(v) {
-    let node = object_property_get(v, "node");
+    let node = property_get(v, "node");
     await js_return_on_async(node, noop, identifier_not);
     async function identifier_not(argument) {
       if (argument === null) {

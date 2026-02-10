@@ -1,6 +1,6 @@
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { text_is } from "../../../love/public/src/text_is.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_a_identifier_generic } from "../../../love/public/src/app_a_identifier_generic.mjs";
 export function app_a_literal(a, component, node, on_change, raw) {
   let lines_multiple = null;
@@ -8,7 +8,7 @@ export function app_a_literal(a, component, node, on_change, raw) {
   if (type_is) {
     lines_multiple = true;
   } else {
-    let value = object_property_get(node, "value");
+    let value = property_get(node, "value");
     lines_multiple = text_is(value);
   }
   app_a_identifier_generic(

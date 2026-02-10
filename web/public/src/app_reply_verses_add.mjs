@@ -5,7 +5,7 @@ import { list_copy_reverse } from "../../../love/public/src/list_copy_reverse.mj
 import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
 export async function app_reply_verses_add(
   en,
@@ -31,7 +31,7 @@ export async function app_reply_verses_add(
       reference,
       languages_chosen,
     });
-    let text = object_property_get(v, "text");
+    let text = property_get(v, "text");
     list_add(bible_texts, text);
   }
   each(verses, lambda);

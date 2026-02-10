@@ -8,7 +8,7 @@ import { list_first_second } from "../../../love/public/src/list_first_second.mj
 import { list_skip } from "../../../love/public/src/list_skip.mjs";
 import { text_empty_not_is } from "../../../love/public/src/text_empty_not_is.mjs";
 import { text_split } from "../../../love/public/src/text_split.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_type_each_async } from "../../../love/public/src/js_visit_type_each_async.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -17,10 +17,10 @@ export async function js_dollar(ast) {
   let afters = [];
   async function lambda(v) {
     async function lambda2(c) {
-      let fn = object_property_get(c, "fn");
-      let choice_name = object_property_get(c, "name");
-      let stack = object_property_get(v, "stack");
-      let node = object_property_get(v, "node");
+      let fn = property_get(c, "fn");
+      let choice_name = property_get(c, "name");
+      let stack = property_get(v, "stack");
+      let node = property_get(v, "node");
       let jin = js_identifier_not_is(node);
       if (jin) {
         ("during the transformations, an identifier could be replaced into another node");
@@ -29,12 +29,12 @@ export async function js_dollar(ast) {
       let stack1 = list_get_end_1(stack);
       let stack2 = list_get_end_2(stack);
       let stack3 = list_get_end_3(stack);
-      let name = object_property_get(node, "name");
+      let name = property_get(node, "name");
       const separator = "$";
       let split = text_split(name, separator);
       let v2 = list_first_second(split);
-      let second = object_property_get(v2, "second");
-      let first = object_property_get(v2, "first");
+      let second = property_get(v2, "second");
+      let first = property_get(v2, "first");
       let ne = text_empty_not_is(first);
       if (ne) {
         ("if inside this block, then begins with non-$ - we only process beginning with $");

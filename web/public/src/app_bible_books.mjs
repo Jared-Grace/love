@@ -9,15 +9,15 @@ import { log } from "../../../love/public/src/log.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function app_bible_books(context) {
   let root = html_clear_context(context);
   let e = ebible_folder_english();
   let books = await ebible_version_books(e);
   let hash = html_hash_object_get();
   function lambda(item) {
-    let book_code = object_property_get(item, "book_code");
-    let text = object_property_get(item, "text");
+    let book_code = property_get(item, "book_code");
+    let text = property_get(item, "text");
     function lambda3() {
       let chapter_code = ebible_chapter_code_pad(book_code, "1");
       app_bible_chapter_set(hash, chapter_code);

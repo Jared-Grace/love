@@ -1,5 +1,5 @@
 import { js_call_new_insert } from "../../../love/public/src/js_call_new_insert.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { function_transform_marker } from "../../../love/public/src/function_transform_marker.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
@@ -11,10 +11,10 @@ export async function marker_call(f_name_call) {
     await function_transform_marker(f_name_current, lambda);
     async function lambda(a) {
       let v = marker_next_index(a);
-      let ast = object_property_get(v, "ast");
-      let index = object_property_get(v, "index");
-      let stack2 = object_property_get(v, "stack2");
-      let stack = object_property_get(v, "stack");
+      let ast = property_get(v, "ast");
+      let index = property_get(v, "index");
+      let stack2 = property_get(v, "stack2");
+      let stack = property_get(v, "stack");
       let parsed = await js_call_new_insert(
         f_name_call,
         ast,
