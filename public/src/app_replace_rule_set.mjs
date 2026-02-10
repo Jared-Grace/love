@@ -104,9 +104,8 @@ export async function app_replace_rule_set(context) {
       let b = html_button(div, letter, symbol_on_click);
       html_style_background_color(b, "darkgreen");
       html_border_radius_em(b, 0.5);
-      html_font_color_set(b, "white");$a
-      const margin = "0.5";
-      html_margin_em(margin, b);
+      html_font_color_set(b, "white");
+      html_margin_em("0.5", b);
       property_set_exists_not(b, "index", index);
       return b;
     }
