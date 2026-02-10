@@ -8,7 +8,8 @@ export function text_starts_with_curry_right(f_name_prefix) {
   text_is_assert(f_name_prefix);
   let r = function text_starts_with_curry_right_result(f_name) {
     text_is_assert(f_name);
-    return text_starts_with(f_name, f_name_prefix);
+    let sw = text_starts_with(f_name, f_name_prefix);
+    return sw;
   };
   return r;
 }
