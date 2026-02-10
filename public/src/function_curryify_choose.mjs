@@ -1,3 +1,4 @@
+import { list_copy } from "../../../love/public/src/list_copy.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { function_curryify_generic } from "../../../love/public/src/function_curryify_generic.mjs";
@@ -9,6 +10,7 @@ export async function function_curryify_choose(f_name, index_text) {
   return output;
   function args_get(arg_names) {
     let item = list_get(arg_names, index);
+    let copy = list_copy(original);
     let fr = list_first_remaining(arg_names);
     let first = property_get(fr, "first");
     let fn_new_result_args = property_get(fr, "remaining");
