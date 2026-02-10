@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_button_notext } from "../../../love/public/src/html_button_notext.mjs";
 import { app_replace_button_symbol_style } from "../../../love/public/src/app_replace_button_symbol_style.mjs";
@@ -70,7 +71,8 @@ export async function app_replace_rule_set(context) {
       refresh();
       return;
     }
-    let b = html_button_notext(root, lambda3);e
+    let b = html_button_notext(root, lambda3);
+    each(list, function lambda2(item2) {});
     let span = html_span_text(parent, text2);
     html_disable(b);
     object_merge(b, {
