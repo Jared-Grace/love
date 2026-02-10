@@ -9,6 +9,6 @@ export function object_filter(object, lambda$value$key) {
     }
     each_object(object, lambda3);
   }
-  let result3 = object_adder(lambda2);
-  return result3;
+  let filtered = object_adder(lambda2);
+  return filtered;
 }
