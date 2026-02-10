@@ -16,12 +16,12 @@ export async function functions_rename_generic(filter, name_change) {
   let filtered = list_filter(f_names, filter);
   list_empty_not_is_assert(filtered);
   let dictionary = list_to_dictionary_value(filtered, name_change);
-  let identifiers = await data_identifiers_get();
   function lambda(f_name_before, f_name_after) {
     let ne = equal_not(f_name_before, f_name_after);
     return ne;
   }
   let different = object_filter(dictionary, lambda);
+  let identifiers = await data_identifiers_get();
   function lambda2(f_name_after) {
     object_property_exists_not_assert(identifiers, f_name_after);
   }
