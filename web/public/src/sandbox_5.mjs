@@ -22,7 +22,7 @@ import { object_property_exists_if_async } from "../../../love/public/src/object
 import { object_property_exists_equals } from "../../../love/public/src/object_property_exists_equals.mjs";
 import { object_property_exists_assert } from "../../../love/public/src/object_property_exists_assert.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
-import { object_property_equals_lambda } from "../../../love/public/src/object_property_equals_lambda.mjs";
+import { property_equals_lambda } from "../../../love/public/src/property_equals_lambda.mjs";
 import { property_equals_json_lambda } from "../../../love/public/src/property_equals_json_lambda.mjs";
 import { property_equals_json } from "../../../love/public/src/property_equals_json.mjs";
 import { property_equals } from "../../../love/public/src/property_equals.mjs";
@@ -72,8 +72,7 @@ export async function sandbox_5() {
     property_equals_json: "public/src/object_property_equals_json.mjs",
     property_equals_json_lambda:
       "public/src/object_property_equals_json_lambda.mjs",
-    object_property_equals_lambda:
-      "public/src/object_property_equals_lambda.mjs",
+    property_equals_lambda: "public/src/object_property_equals_lambda.mjs",
     object_property_exists: "public/src/object_property_exists.mjs",
     object_property_exists_assert:
       "public/src/object_property_exists_assert.mjs",
