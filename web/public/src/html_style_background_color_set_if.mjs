@@ -6,8 +6,9 @@ export function html_style_background_color_set_if(
   color_else,
 ) {
   if (condition) {
-    html_style_background_color(component, color_if);
+    color_if;
   } else {
-    html_style_background_color(component, color_else);
+    color_else;
   }
+  html_style_background_color(component, color_else);
 }
