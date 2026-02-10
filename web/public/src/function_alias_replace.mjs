@@ -2,7 +2,7 @@ import { assert_message } from "../../../love/public/src/assert_message.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { text_is_assert_multiple } from "../../../love/public/src/text_is_assert_multiple.mjs";
 import { function_alias_generic } from "../../../love/public/src/function_alias_generic.mjs";
-import { object_property_delete } from "../../../love/public/src/object_property_delete.mjs";
+import { property_delete } from "../../../love/public/src/property_delete.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 export async function function_alias_replace(alias_old, f_name) {
   const items = [alias_old, f_name];
@@ -11,7 +11,7 @@ export async function function_alias_replace(alias_old, f_name) {
     let aliases = object_property_get(a, "aliases");
     let exists = object_property_get(a, "exists");
     assert_message(exists, "alias no exist");
-    object_property_delete(aliases, alias_old);
+    property_delete(aliases, alias_old);
     object_property_set(aliases, alias_old, f_name);
   }
   await function_alias_generic(alias_old, lambda);

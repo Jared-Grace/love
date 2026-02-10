@@ -1,4 +1,4 @@
-import { object_property_delete } from "../../../love/public/src/object_property_delete.mjs";
+import { property_delete } from "../../../love/public/src/property_delete.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
 import { properties_size } from "../../../love/public/src/properties_size.mjs";
@@ -26,7 +26,7 @@ export function storage_local_mock_enable() {
       return item;
     },
     removeItem: function lambda5(storage_local_key) {
-      object_property_delete(s, storage_local_key);
+      property_delete(s, storage_local_key);
     },
   };
   global.localStorage = localStorage;
