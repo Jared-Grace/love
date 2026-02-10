@@ -9,8 +9,7 @@ export async function functions_rename_generic(filter, name_change) {
   let f_names = await functions_names();
   let filtered = list_filter(f_names, filter);
   list_empty_not_is_assert(filtered);
-  function lambda2(item) {}
-  let dictionary = list_to_dictionary_value(list, lambda2);
+  let dictionary = list_to_dictionary_value(list, name_change);
   await list_map_async(filtered, lambda);
   async function lambda(f_name_before) {
     let f_name_after = name_change(f_name_before);
