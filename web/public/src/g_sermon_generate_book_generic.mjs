@@ -33,7 +33,7 @@ import { list_nearby } from "../../../love/public/src/list_nearby.mjs";
 import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
-import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
+import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 export async function g_sermon_generate_book_generic(
   bible_folders,
@@ -121,11 +121,7 @@ export async function g_sermon_generate_book_generic(
     }
     function filter_group(group) {
       let item = object_property_get(group, "item");
-      let match_chapter = object_property_exists(
-        item,
-        "chapter_code",
-        chapter_code,
-      );
+      let match_chapter = property_exists(item, "chapter_code", chapter_code);
       return match_chapter;
     }
     let groups_match_chapter = list_filter(nearbys, filter_group);
