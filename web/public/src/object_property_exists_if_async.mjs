@@ -1,11 +1,11 @@
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
+import { property_exists } from "../../../love/public/src/property_exists.mjs";
 export async function object_property_exists_if_async(
   obj,
   property,
   lambda$value,
 ) {
-  let e = object_property_exists(obj, property);
+  let e = property_exists(obj, property);
   if (e) {
     let value = object_property_get(obj, property);
     await lambda$value(value);
