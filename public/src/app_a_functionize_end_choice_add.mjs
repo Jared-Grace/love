@@ -1,4 +1,4 @@
-import { object_property_delete } from "../../../love/public/src/object_property_delete.mjs";
+import { property_delete } from "../../../love/public/src/property_delete.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
 import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mjs";
 import { app_a_function_on_change } from "../../../love/public/src/app_a_function_on_change.mjs";
@@ -29,7 +29,7 @@ export function app_a_functionize_end_choice_add(a, choices, o2) {
           let value_new = html_value_get(input);
           await app_a_functionize(a, value_new);
           await app_a_function_on_change(a, o);
-          object_property_delete(context, app_a_functionize.name);
+          property_delete(context, app_a_functionize.name);
         }
         let component = app_a_button_wide(overlay, "Functionize", on_enter);
       },
