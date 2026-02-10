@@ -112,7 +112,8 @@ export async function app_replace_rule_set(context) {
           return span;
         }
         let mapped = list_map(left, symbol_each);
-        each(list, function lambda2(item2) {});
+        function lambda2(item2) {}
+        each(list, lambda2);
       } else {
       }
       html_style_set_or_remove(
