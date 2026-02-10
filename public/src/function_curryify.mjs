@@ -1,3 +1,4 @@
+import { js_declaration } from "../../../love/public/src/js_declaration.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
@@ -27,6 +28,7 @@ export async function function_curryify(f_name) {
       remaining,
       declaration_call,
     );
+    let declaration_lambda = js_declaration(declaration, lamda_name);
     js_declaration_single_block_body_add(ast, item);
     let declaration = js_declaration_single(ast);
     js_declaration_asyncify(declaration, declaration_call);
