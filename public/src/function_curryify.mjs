@@ -5,14 +5,14 @@ export async function function_curryify(f_name) {
   let r4 = await function_curryify_generic(f_name, args_get);
   return r4;
   function args_get(arg_names) {
-    let r = list_first_remaining(arg_names);
-    let first = property_get(r, "first");
-    let fn_new_result_args = property_get(r, "remaining");
+    let fr = list_first_remaining(arg_names);
+    let first = property_get(fr, "first");
+    let fn_new_result_args = property_get(fr, "remaining");
     let fn_new_args = [first];
-    let r2 = {
+    let r = {
       fn_new_result_args,
       fn_new_args,
     };
-    return r2;
+    return r;
   }
 }
