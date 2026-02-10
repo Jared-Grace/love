@@ -2,7 +2,7 @@ import { function_rename } from "../../../love/public/src/function_rename.mjs";
 import { invoke } from "../../../love/public/src/invoke.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { js_expression_text } from "../../../love/public/src/js_expression_text.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -37,7 +37,7 @@ export async function app_shared_screen_rename(
               prefixed,
               screen_name_after,
             );
-            object_property_set(item, "key", key_after);
+            property_set(item, "key", key_after);
             async function lambda3() {
               let result2 = await function_rename(
                 combined_screen,

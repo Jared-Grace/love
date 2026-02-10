@@ -10,7 +10,7 @@ import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
 import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
 import { js_node_type_is_assert } from "../../../love/public/src/js_node_type_is_assert.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -61,7 +61,7 @@ export async function js_destructure_functionize(ast) {
       list_remove(block_body, block_body_item);
     } else {
       let expression = js_parse_expression(name4);
-      object_property_set(e1, "id", expression);
+      property_set(e1, "id", expression);
     }
   }
   js_visit_type(ast, "ObjectPattern", lambda);

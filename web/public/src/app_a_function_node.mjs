@@ -8,7 +8,7 @@ import { list_last_not_is } from "../../../love/public/src/list_last_not_is.mjs"
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { app_a_literal } from "../../../love/public/src/app_a_literal.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { app_a_raw } from "../../../love/public/src/app_a_raw.mjs";
@@ -154,7 +154,7 @@ export function app_a_function_node(a) {
       let raw = property_get(v3, "raw");
       app_a_literal(a, component, node, on_change, raw);
       function on_change(value_new) {
-        object_property_set(node, "raw", value_new);
+        property_set(node, "raw", value_new);
       }
     },
     ["VariableDeclaration"]: function lambda11() {

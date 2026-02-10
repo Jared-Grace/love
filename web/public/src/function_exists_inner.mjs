@@ -1,4 +1,4 @@
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { true_is } from "../../../love/public/src/true_is.mjs";
@@ -37,7 +37,7 @@ export async function function_exists_inner(u) {
   if (exists) {
     let only = list_single(filtered);
     let f_path2 = property_get(only, "f_path");
-    object_property_set(result, "f_path", f_path2);
+    property_set(result, "f_path", f_path2);
   }
   return result;
 }

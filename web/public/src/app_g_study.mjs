@@ -1,5 +1,5 @@
 import { app_g_button_wrong } from "../../../love/public/src/app_g_button_wrong.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -89,7 +89,7 @@ export function app_g_study(player, overlay, close) {
                 refresh();
               } else {
                 list_remove(review, r);
-                object_property_set(player, "studied", true);
+                property_set(player, "studied", true);
                 app_g_player_save(player);
                 close();
               }
