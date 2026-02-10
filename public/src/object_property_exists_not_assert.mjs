@@ -12,6 +12,7 @@ export function object_property_exists_not_assert(object, property_name) {
   if (e) {
     let value = object_property_get(object, property_name);
     error_json({
+      object,
       property_name,
       value,
     });
