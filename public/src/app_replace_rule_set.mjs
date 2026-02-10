@@ -107,7 +107,7 @@ export async function app_replace_rule_set(context) {
     let nn = null_not_is(index_selected);
     html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
     html_text_set_if(nn, "Choose a symbol:", "Symbols:", label_symbols);
-    function each_rule(component) {
+    function each_rule_button(component) {
       let rule2 = property_get(component, "rule");
       function lambda7(index) {
         let eq2 = app_replace_rule_valid(rule2, index, current_list);
@@ -118,7 +118,7 @@ export async function app_replace_rule_set(context) {
       let any = list_any(r, lambda7);
       html_enable_if(component, any);
     }
-    each(rules_buttons, each_rule);
+    each(rules_buttons, each_rule_button);
     function lambda4(rb, index2) {
       html_style_set_or_remove(
         index2 === index_selected,
