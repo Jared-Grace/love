@@ -1,3 +1,4 @@
+import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_replace_font_size_refresh } from "../../../love/public/src/app_replace_font_size_refresh.mjs";
 import { html_meta_viewport } from "../../../love/public/src/html_meta_viewport.mjs";
@@ -14,4 +15,5 @@ export async function app_replace_main(context) {
   });
   app_shared_refresh(context);
   app_replace_font_size_refresh(context);
+  let root = html_mobile_default(context2);
 }
