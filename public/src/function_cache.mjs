@@ -7,7 +7,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_run } from "../../../love/public/src/function_run.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { js_declaration_asyncify_params_from } from "../../../love/public/src/js_declaration_asyncify_params_from.mjs";
-import { js_code_call_args_await_maybe_declaration_return_add } from "../../../love/public/src/js_code_call_args_await_maybe_declaration_return_add.mjs";
+import { js_call_args_await_maybe_declaration_return_add } from "../../../love/public/src/js_call_args_await_maybe_declaration_return_add.mjs";
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
@@ -31,7 +31,7 @@ export async function function_cache(f_name) {
     let mapped = list_map(arg_names, js_parse_expression);
     let expression = js_expression_array(mapped);
     let code = js_unparse(expression);
-    js_code_call_args_await_maybe_declaration_return_add(
+    js_call_args_await_maybe_declaration_return_add(
       c,
       [unaliased, code],
       declaration_cache,
