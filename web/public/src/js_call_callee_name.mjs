@@ -1,6 +1,6 @@
 import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
 import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
-import { object_property_get_name } from "../../../love/public/src/object_property_get_name.mjs";
+import { property_get_name } from "../../../love/public/src/property_get_name.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function js_call_callee_name(expression) {
   let name = null;
@@ -13,6 +13,6 @@ export function js_call_callee_name(expression) {
   if (jin) {
     return name;
   }
-  name = object_property_get_name(callee);
+  name = property_get_name(callee);
   return name;
 }
