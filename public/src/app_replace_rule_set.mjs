@@ -75,6 +75,7 @@ export async function app_replace_rule_set(context) {
     function lambda2(symbol) {
       let span = html_span_text(b, symbol);
       app_replace_button_symbol_style(span);
+      app_replace_button_symbol_style_valid(span, true);
     }
     each(left, lambda2);
     let span2 = html_span_text(b, " ↦ " + right_joined);
