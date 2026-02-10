@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_statement_return_argument } from "../../../love/public/src/js_statement_return_argument.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_declaration_to_block_body } from "../../../love/public/src/js_declaration_to_block_body.mjs";
@@ -42,6 +43,7 @@ export async function function_curryify(f_name) {
     js_declaration_asyncify(declaration, declaration_call);
     const p = "params";
     let value = [first];
+    let mapped = list_map(list, function lambda2(item2) {});
     property_set(declaration, p, value);
     await js_imports_missing_add(ast);
   }
