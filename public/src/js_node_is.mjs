@@ -1,5 +1,5 @@
-import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
+import { property_exists } from "../../../love/public/src/property_exists.mjs";
 export function js_node_is(n) {
-  const ni = object_property_exists(n, "type");
+  const ni = property_exists(n, "type");
   return ni;
 }
