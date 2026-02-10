@@ -4,9 +4,9 @@ export function list_find_property_get(
   list,
   property_find,
   value,
-  property_get,
+  property_get_value,
 ) {
   let item = list_find_property(list, property_find, value);
-  let g = object_property_get(item, property_get);
+  let g = object_property_get(item, property_get_value);
   return g;
 }
