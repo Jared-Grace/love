@@ -103,6 +103,25 @@ export async function app_replace_rule_set(context) {
       let sb = html_button(div, letter, symbol_on_click);
       app_replace_button_symbol_style(sb);
       property_set_exists_not(sb, "index", index);
+      let valid = false;
+      let nn2 = null_not_is(index_selected);
+      if (nn2) {
+        let index3 = property_get(sb, "index");
+        let rule2 = list_get(mapped, index_selected);
+        valid = app_replace_rule_valid(rule2, index3, current_list);
+      }
+      let color_font = null;
+      let color_bg = null;
+      html_enable_if(sb, valid);
+      if (valid) {
+        color_bg = "#00b400ff";
+        color_font = "white";
+      } else {
+        color_bg = "#1e6c1eff";
+        color_font = "#93df93ff";
+      }
+      html_style_background_color(sb, color_bg);
+      html_font_color_set(sb, color_font);
       return sb;
     }
     symbols_buttons = list_map_index(current_list, symbols_mapper);
@@ -130,27 +149,7 @@ export async function app_replace_rule_set(context) {
       );
     }
     each_index(rules_buttons, lambda4);
-    function each_symbol_button(sb) {
-      let valid = false;
-      let nn2 = null_not_is(index_selected);
-      if (nn2) {
-        let index3 = property_get(sb, "index");
-        let rule2 = list_get(mapped, index_selected);
-        valid = app_replace_rule_valid(rule2, index3, current_list);
-      }
-      let color_font = null;
-      let color_bg = null;
-      html_enable_if(sb, valid);
-      if (valid) {
-        color_bg = "#00b400ff";
-        color_font = "white";
-      } else {
-        color_bg = "#1e6c1eff";
-        color_font = "#93df93ff";
-      }
-      html_style_background_color(sb, color_bg);
-      html_font_color_set(sb, color_font);
-    }
+    function each_symbol_button(sb) {}
     each(symbols_buttons, each_symbol_button);
   }
   refresh();
