@@ -4,9 +4,11 @@ import { function_curryify_generic } from "../../../love/public/src/function_cur
 import { function_curryify_choose_args_get } from "../../../love/public/src/function_curryify_choose_args_get.mjs";
 export async function function_curryify_right(f_name) {
   let args_get = function_curryify_choose_args_get(0);
-  let combined = function_curryify_generic_name(unaliased);
-  let combined2 = function_name_combine(combined, "right");
-  function lambda() {}
+  function lambda(unaliased) {
+    let combined = function_curryify_generic_name(unaliased);
+    let combined2 = function_name_combine(combined, "right");
+    return combined2;
+  }
   let output = await function_curryify_generic(f_name, lambda, args_get);
   return output;
 }
