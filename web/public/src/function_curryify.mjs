@@ -41,7 +41,7 @@ export async function function_curryify(f_name) {
     let declaration = js_declaration_single(ast);
     js_declaration_asyncify(declaration, declaration_call);
     let value = [first];
-    js_declaration_params_add(declaration_result, value);
+    js_declaration_params_add(declaration, value);
     await js_imports_missing_add(ast);
   }
 }
