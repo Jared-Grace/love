@@ -10,7 +10,7 @@ import { text_first_upper_to } from "../../../love/public/src/text_first_upper_t
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { property_set } from "../../../love/public/src/property_set.mjs";
 export function app_g_conversation(
   prayer,
   npcs_matched,
@@ -21,8 +21,8 @@ export function app_g_conversation(
   div_map,
   refresh,
 ) {
-  object_property_set(player, "conversed", true);
-  object_property_set(prayer, "conversation", false);
+  property_set(player, "conversed", true);
+  property_set(prayer, "conversation", false);
   let npc = list_single(npcs_matched);
   const greet = list_random_item(["hi", "hello", "greetings", "hey"]);
   let v = text_first_upper_to(greet);
@@ -32,7 +32,7 @@ export function app_g_conversation(
     " " + text_first_upper_to(text_random_or_empty(a) + s2 + " to ");
   let meet = property_get(npc, "meet");
   if (not(meet)) {
-    object_property_set(npc, "meet", true);
+    property_set(npc, "meet", true);
     meet_message += "meet you" + g_random_dot_bang();
   } else {
     meet_message +=

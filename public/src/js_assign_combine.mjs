@@ -3,7 +3,7 @@ import { list_not_is } from "../../../love/public/src/list_not_is.mjs";
 import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
 import { list_next_try } from "../../../love/public/src/list_next_try.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -47,7 +47,7 @@ export function js_assign_combine(ast) {
       let count = js_identifiers_named_count(ast, name);
       if (count === 2) {
         let init = property_get(declaration, "init");
-        object_property_set(declaration2, "init", init);
+        property_set(declaration2, "init", init);
         list_remove(e1, node);
       }
     }

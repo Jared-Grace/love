@@ -2,7 +2,7 @@ import { property_delete_if_exists } from "../../../love/public/src/property_del
 import { text_empty_is } from "../../../love/public/src/text_empty_is.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { data_file_update } from "../../../love/public/src/data_file_update.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { json_compress } from "../../../love/public/src/json_compress.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { indexeddb_put } from "../../../love/public/src/indexeddb_put.mjs";
@@ -36,14 +36,14 @@ export async function file_overwrite_uncached(file_path, contents) {
       }
       let e = text_empty_is(contents);
       if (e) {
-        object_property_set(previous, "deleted", true);
+        property_set(previous, "deleted", true);
       } else {
         property_delete_if_exists(previous, "deleted");
       }
       let list = property_get(f, "versions");
       list_add(list, contents);
       let compressed_after = await json_compress(f);
-      object_property_set(previous, p, compressed_after);
+      property_set(previous, p, compressed_after);
       return previous;
     }
     let item = await indexeddb_put(
