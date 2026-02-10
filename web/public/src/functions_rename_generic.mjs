@@ -1,5 +1,5 @@
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
-import { list_to_dictionary } from "../../../love/public/src/list_to_dictionary.mjs";
+import { list_to_dictionary_key } from "../../../love/public/src/list_to_dictionary_key.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { function_rename } from "../../../love/public/src/function_rename.mjs";
@@ -9,9 +9,7 @@ export async function functions_rename_generic(filter, name_change) {
   let f_names = await functions_names();
   let filtered = list_filter(f_names, filter);
   list_empty_not_is_assert(filtered);
-  function lambda2(item2v) {}
-  function lambda3(item2k) {}
-  let dictionary = list_to_dictionary(list, lambda2, lambda3);
+  let dictionary = list_to_dictionary_key(list, function lambda2(item) {});
   await list_map_async(filtered, lambda);
   async function lambda(f_name_before) {
     let f_name_after = name_change(f_name_before);
