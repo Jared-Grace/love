@@ -1,6 +1,6 @@
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
-import { property_from } from "../../../love/public/src/property_from.mjs";
 import { js_declaration_asyncify } from "../../../love/public/src/js_declaration_asyncify.mjs";
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
 import { js_declaration_single_block_body_add } from "../../../love/public/src/js_declaration_single_block_body_add.mjs";
@@ -28,7 +28,9 @@ export async function function_curryify(f_name) {
     js_declaration_single_block_body_add(ast, item);
     let declaration = js_declaration_single(ast);
     js_declaration_asyncify(declaration, declaration_call);
-    property_from(declaration, "params", declaration_call);
+    const p = "params";
+    let value = property_get(declaration_call, p);
+    property_set(declaration, p, value);
     await js_imports_missing_add(ast);
   }
 }
