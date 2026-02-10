@@ -134,7 +134,7 @@ export async function app_replace_rule_set(context) {
       );
     }
     each_index(rules_buttons, lambda4);
-    function lambda8(sb) {
+    function each_symbol_button(sb) {
       let valid = false;
       let nn2 = null_not_is(index_selected);
       if (nn2) {
@@ -144,7 +144,7 @@ export async function app_replace_rule_set(context) {
       }
       html_enable_if(sb, valid);
     }
-    each(symbols_buttons, lambda8);
+    each(symbols_buttons, each_symbol_button);
   }
   refresh();
 }
