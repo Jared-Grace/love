@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { app_replace_button_symbol_style_valid } from "../../../love/public/src/app_replace_button_symbol_style_valid.mjs";
 import { app_replace_rule_valid_curry } from "../../../love/public/src/app_replace_rule_valid_curry.mjs";
 import { html_border_none } from "../../../love/public/src/html_border_none.mjs";
@@ -111,6 +112,7 @@ export async function app_replace_rule_set(context) {
           return span;
         }
         let mapped = list_map(left, symbol_each);
+        each(list, function lambda2(item2) {});
       } else {
       }
       html_style_set_or_remove(
