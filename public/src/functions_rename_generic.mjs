@@ -19,7 +19,8 @@ export async function functions_rename_generic(filter, name_change) {
     object_property_exists_not_assert(identifiers, f_name_after);
   }
   each_object_values(object, lambda2);
-  await each_object_async(object2, async function lambda3(value, key) {});
+  async function lambda3(value, key) {}
+  await each_object_async(object2, lambda3);
   await list_map_async(filtered, lambda);
   async function lambda(f_name_before) {
     let f_name_after = name_change(f_name_before);
