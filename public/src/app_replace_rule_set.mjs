@@ -81,7 +81,7 @@ export async function app_replace_rule_set(context) {
   refresh();
   function refresh() {
     html_clear(div);
-    function lambda2(letter, index) {
+    function symbols_mapper(letter, index) {
       function lambda5() {
         let rule2 = list_get(mapped, index_selected);
         let eq = app_replace_rule_valid(rule2, index, current_list);
@@ -101,7 +101,7 @@ export async function app_replace_rule_set(context) {
       property_set_exists_not(b, "index", index);
       return b;
     }
-    symbols_buttons = list_map_index(current_list, lambda2);
+    symbols_buttons = list_map_index(current_list, symbols_mapper);
     let nn = null_not_is(index_selected);
     html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
     html_text_set_if(nn, "Choose a symbol:", "Symbols:", label_symbols);
