@@ -13,6 +13,7 @@ export async function app_shared_name_main_get(search) {
   if (not(exists)) {
     let mapped = await apps_names();
     app_name = list_find_starts_with(mapped, search);
+  } else {
   }
   f_name = app_shared_name_main(app_name);
   log_keep({
