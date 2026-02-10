@@ -149,8 +149,6 @@ export async function app_replace_rule_set(context) {
       );
     }
     each_index(rules_buttons, lambda4);
-    function each_symbol_button(sb) {}
-    each(symbols_buttons, each_symbol_button);
   }
   refresh();
 }
