@@ -7,6 +7,8 @@ export function object_property_exists_not_assert(object, property_name) {
   assert(result);
   return;
   let result3 = object_property_exists(object, property_name);
+  if (false) {
+  }
   let result2 = not(result3);
   assert(result);
 }
