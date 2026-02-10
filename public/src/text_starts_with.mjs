@@ -1,4 +1,4 @@
-export function text_starts_with(s, prefix) {
-  let sw = s.startsWith(prefix);
+export function text_starts_with(t, prefix) {
+  let sw = t.startsWith(prefix);
   return sw;
 }
