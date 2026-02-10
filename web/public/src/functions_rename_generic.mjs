@@ -1,4 +1,3 @@
-import { exit } from "../../../love/public/src/exit.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { object_filter } from "../../../love/public/src/object_filter.mjs";
@@ -28,7 +27,6 @@ export async function functions_rename_generic(filter, name_change) {
   log({
     different,
   });
-  exit();
   each_object_values(different, lambda2);
   async function lambda3(f_name_after, f_name_before) {
     let v = await function_rename(f_name_before, f_name_after);
