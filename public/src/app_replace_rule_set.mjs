@@ -1,5 +1,4 @@
 import { app_replace_button_symbol_style } from "../../../love/public/src/app_replace_button_symbol_style.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { app_replace_home } from "../../../love/public/src/app_replace_home.mjs";
@@ -149,10 +148,6 @@ export async function app_replace_rule_set(context) {
         color_bg = "#1e6c1eff";
         color_font = "#93df93ff";
       }
-      log({
-        sb,
-        valid,
-      });
       html_style_background_color(sb, color_bg);
       html_font_color_set(sb, color_font);
     }
