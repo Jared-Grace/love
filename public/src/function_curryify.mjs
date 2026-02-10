@@ -22,7 +22,7 @@ export async function function_curryify(f_name) {
     let remaining = property_get(r, "remaining");
     let item = js_call_args_await_maybe_return(
       unaliased,
-      arg_names,
+      remaining,
       declaration_call,
     );
     js_declaration_single_block_body_add(ast, item);
