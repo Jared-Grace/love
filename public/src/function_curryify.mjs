@@ -1,3 +1,4 @@
+import { js_declaration_param_add } from "../../../love/public/src/js_declaration_param_add.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -31,8 +32,10 @@ export async function function_curryify(f_name) {
     let remaining = property_get(r, "remaining");
     let name_result = function_name_combine(f_name_curried, "result");
     let declaration_result = js_declaration(declaration_call, name_result);
-    function lambda2(item2) {}
-    each(list, lambda2);
+    function lambda2(item2) {
+      js_declaration_param_add(declaration2, param_name);
+    }
+    each(remaining, lambda2);
     let ret = js_statement_return_argument(declaration_result);
     js_declaration_single_block_body_add(ast, ret);
     let body_block = js_declaration_to_block_body(declaration_result);
