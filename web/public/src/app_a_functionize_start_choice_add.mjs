@@ -1,11 +1,11 @@
 import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
-import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
+import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_functionize } from "../../../love/public/src/app_a_functionize.mjs";
 export function app_a_functionize_start_choice_add(choices, a, o) {
   let context = object_property_get(a, "context");
-  let ne = object_property_exists_not(context, app_a_functionize.name);
+  let ne = property_exists_not(context, app_a_functionize.name);
   if (ne) {
     list_add(choices, {
       shortcut: "f",
