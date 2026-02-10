@@ -6,5 +6,5 @@ export function html_style_font_color_set_if(
   color_else,
 ) {
   let c = ternary(condition, color_if, color_else);
-  html_style_font_color(component, c);
+  html_style_font_color_set(component, c);
 }
