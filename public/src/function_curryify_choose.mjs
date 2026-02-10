@@ -8,7 +8,7 @@ export async function function_curryify_choose(f_name, index_text) {
   let output = await function_curryify_generic(f_name, args_get);
   return output;
   function args_get(arg_names) {
-    let item = list_get(list, index);
+    let item = list_get(arg_names, index);
     let fr = list_first_remaining(arg_names);
     let first = property_get(fr, "first");
     let fn_new_result_args = property_get(fr, "remaining");
