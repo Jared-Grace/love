@@ -144,9 +144,9 @@ export async function app_replace_rule_set(context) {
       let color_bg = null;
       html_enable_if(sb, valid);
       if (valid) {
+        color_bg = "#00b400ff";
       } else {
       }
-      color_bg = "#00b400ff";
       html_style_background_color(sb, color_bg);
     }
     each(symbols_buttons, each_symbol_button);
