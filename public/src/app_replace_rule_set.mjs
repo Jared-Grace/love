@@ -1,4 +1,3 @@
-import { each } from "../../../love/public/src/each.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_button_notext } from "../../../love/public/src/html_button_notext.mjs";
 import { app_replace_button_symbol_style } from "../../../love/public/src/app_replace_button_symbol_style.mjs";
@@ -76,8 +75,9 @@ export async function app_replace_rule_set(context) {
       let span = html_span_text(b, symbol);
       app_replace_button_symbol_style(span);
       app_replace_button_symbol_style_valid(span, true);
+      return span;
     }
-    each(left, lambda2);
+    list_map(left, lambda2);
     let span2 = html_span_text(b, " ↦ " + right_joined);
     html_disable(b);
     object_merge(b, {
