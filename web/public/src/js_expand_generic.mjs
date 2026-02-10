@@ -1,5 +1,5 @@
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_remove_all_multiple } from "../../../love/public/src/list_remove_all_multiple.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
@@ -29,16 +29,16 @@ import { js_statement_call_get } from "../../../love/public/src/js_statement_cal
 export async function js_expand_generic(next, stack2, index, ast) {
   let inserted = null;
   let v = js_statement_call_get(next);
-  let declaration_call = object_property_get(v, "declaration");
-  let expression = object_property_get(v, "expression");
+  let declaration_call = property_get(v, "declaration");
+  let expression = property_get(v, "expression");
   if (expression !== null) {
-    let callee = object_property_get(expression, "callee");
-    let arguments2 = object_property_get(expression, "arguments");
+    let callee = property_get(expression, "callee");
+    let arguments2 = property_get(expression, "arguments");
     const a_names = js_identifiers_to_names(arguments2);
-    let name = object_property_get(callee, "name");
+    let name = property_get(callee, "name");
     let v2 = await function_parse_declaration(name);
-    let ast_call = object_property_get(v2, "ast");
-    let declaration = object_property_get(v2, "declaration");
+    let ast_call = property_get(v2, "ast");
+    let declaration = property_get(v2, "declaration");
     let identifiers_call = js_identifiers_names(ast_call);
     let identifiers = js_identifiers_names(ast);
     let intesection = list_intersect(identifiers_call, identifiers);
@@ -61,7 +61,7 @@ export async function js_expand_generic(next, stack2, index, ast) {
     let last = list_last(body_block);
     function lambda() {
       list_remove(body_block, last);
-      let argument = object_property_get(last, "argument");
+      let argument = property_get(last, "argument");
       let nn = null_not_is(declaration_call);
       if (nn) {
         let name = js_declaration_name(declaration_call);

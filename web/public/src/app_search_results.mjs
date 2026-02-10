@@ -12,7 +12,7 @@ import { html_button_copy_text } from "../../../love/public/src/html_button_copy
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
@@ -38,11 +38,11 @@ import { text_to_words } from "../../../love/public/src/text_to_words.mjs";
 import { catch_ignore_async } from "../../../love/public/src/catch_ignore_async.mjs";
 import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 export async function app_search_results(context, div_results) {
-  let languages_chosen = object_property_get(context, "languages_chosen");
+  let languages_chosen = property_get(context, "languages_chosen");
   let en = ebible_folder_english();
   let english_choices = [en];
   let books = await ebible_version_books(en);
-  let query = object_property_get(context, "query");
+  let query = property_get(context, "query");
   let words = text_to_words(query);
   async function lambda(word) {
     let destination = app_bible_search_word_path(word);
@@ -70,9 +70,9 @@ export async function app_search_results(context, div_results) {
   let expand_all = null;
   async function expand_all_lambda() {
     async function lambda9(b) {
-      let click2 = object_property_get(b, "click");
+      let click2 = property_get(b, "click");
       await catch_ignore_async(click2);
-      let bible_texts2 = object_property_get(b, "bible_texts");
+      let bible_texts2 = property_get(b, "bible_texts");
       return bible_texts2;
     }
     let waited = await list_map_unordered_async(button_list, lambda9);
@@ -95,8 +95,8 @@ export async function app_search_results(context, div_results) {
   );
   let results = object_to_list(dictionary);
   function each_result(vk) {
-    let verse_numbers = object_property_get(vk, "value");
-    let chapter_code = object_property_get(vk, "key");
+    let verse_numbers = property_get(vk, "value");
+    let chapter_code = property_get(vk, "key");
     let book_code = ebible_chapter_code_to_book(chapter_code);
     let e = ebible_book_exists(books, book_code);
     if (not(e)) {

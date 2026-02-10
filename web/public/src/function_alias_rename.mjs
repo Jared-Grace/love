@@ -2,7 +2,7 @@ import { data_aliases_path } from "../../../love/public/src/data_aliases_path.mj
 import { each } from "../../../love/public/src/each.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { data_transform } from "../../../love/public/src/data_transform.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
 import { object_invert } from "../../../love/public/src/object_invert.mjs";
 export async function function_alias_rename(before, after) {
@@ -12,7 +12,7 @@ export async function function_alias_rename(before, after) {
     if (n) {
       return aliases;
     }
-    let acronyms = object_property_get(inverted, before);
+    let acronyms = property_get(inverted, before);
     function lambda2(acronym) {
       object_property_set(aliases, acronym, after);
     }

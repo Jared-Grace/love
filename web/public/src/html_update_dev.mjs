@@ -4,7 +4,7 @@ import { list_join_newline } from "../../../love/public/src/list_join_newline.mj
 import { function_code_import_dev } from "../../../love/public/src/function_code_import_dev.mjs";
 import { app_context_initialize } from "../../../love/public/src/app_context_initialize.mjs";
 import { list_add_join_newline } from "../../../love/public/src/list_add_join_newline.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_update_externals } from "../../../love/public/src/html_update_externals.mjs";
 import { function_name_repo_path_combine } from "../../../love/public/src/function_name_repo_path_combine.mjs";
 import { app_shared_name_prefixed } from "../../../love/public/src/app_shared_name_prefixed.mjs";
@@ -15,7 +15,7 @@ import { app_shared_name_main } from "../../../love/public/src/app_shared_name_m
 import { html_name_to_path_dev } from "../../../love/public/src/html_name_to_path_dev.mjs";
 export async function html_update_dev(name) {
   let v2 = await app_shared_name_main_get(name);
-  name = object_property_get(v2, "a_name");
+  name = property_get(v2, "a_name");
   let file_path = html_name_to_path_dev(name);
   let a_name = app_shared_name_prefixed(name);
   let path = await function_name_repo_path_combine(a_name, file_path);
@@ -26,7 +26,7 @@ export async function html_update_dev(name) {
   let middle = list_join_newline([code, code2, call]);
   let body = html_code_script_module(middle);
   var v = await html_update_externals(name_prefixed);
-  let scripts = object_property_get(v, "scripts");
+  let scripts = property_get(v, "scripts");
   let joined2 = list_add_join_newline(scripts, body);
   await html_overwrite(name, path, joined2);
   await file_open(path);

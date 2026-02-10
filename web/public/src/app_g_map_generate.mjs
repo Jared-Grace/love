@@ -1,4 +1,4 @@
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_a_water } from "../../../love/public/src/app_a_water.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
@@ -72,8 +72,8 @@ export function app_g_map_generate() {
       let filtered2 = list_filter(coordinates, lambda7);
       r = list_random_item(filtered2);
     }
-    let x = object_property_get(r, "x");
-    let y = object_property_get(r, "y");
+    let x = property_get(r, "x");
+    let y = property_get(r, "y");
     let water_row = list_get(rows, y);
     list_set(water_row, x, w);
     list_remove(coordinates, r);

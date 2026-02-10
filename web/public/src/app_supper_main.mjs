@@ -9,7 +9,7 @@ import { html_div_text_centered } from "../../../love/public/src/html_div_text_c
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_supper_verses_get } from "../../../love/public/src/app_supper_verses_get.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
@@ -22,15 +22,15 @@ export async function app_supper_main(context) {
   function lambda2(v) {
     let v2 = list_first_is(verses, v);
     let n = not(v2);
-    let chapter_code = object_property_get(v, "chapter_code");
+    let chapter_code = property_get(v, "chapter_code");
     if (n) {
       if (equal_not(chapter_code, previous_chapter_code)) {
         html_hr_2(root);
       }
     }
     previous_chapter_code = chapter_code;
-    let text = object_property_get(v, "text");
-    let reference = object_property_get(v, "reference");
+    let text = property_get(v, "text");
+    let reference = property_get(v, "reference");
     let p = html_p(root);
     let d = html_div_text_centered(p, reference);
     html_font_color_set(d, "#aaa");

@@ -11,7 +11,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 export function app_a_body_inner(parent, body, a, indent) {
   let parent_new = parent;
@@ -20,7 +20,7 @@ export function app_a_body_inner(parent, body, a, indent) {
     const t = "ImportDeclaration";
     let v = list_first_is(body, b);
     if (v) {
-      let type = object_property_get(b, "type");
+      let type = property_get(b, "type");
       if (equal(type, t)) {
         imports = true;
         parent_new = html_div(parent);

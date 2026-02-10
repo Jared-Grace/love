@@ -13,7 +13,7 @@ import { integer_to_try } from "../../../love/public/src/integer_to_try.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
@@ -21,7 +21,7 @@ export async function app_bible_chapters(context) {
   let root = html_clear_context(context);
   let e = ebible_folder_english();
   let hash = html_hash_object_get();
-  let chapter_code = object_property_get(hash, "c");
+  let chapter_code = property_get(hash, "c");
   let book_code = ebible_chapter_code_to_book(chapter_code);
   let chapter_codes = await ebible_book_code_to_chapter_codes(e, book_code);
   let mapped = list_map_prefix_without(chapter_codes, book_code);

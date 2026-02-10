@@ -1,6 +1,6 @@
 import { function_rename_check } from "../../../love/public/src/function_rename_check.mjs";
 import { list_empty_is_assert_json } from "../../../love/public/src/list_empty_is_assert_json.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_identifiers_named } from "../../../love/public/src/js_identifiers_named.mjs";
 import { function_parse_unaliased } from "../../../love/public/src/function_parse_unaliased.mjs";
 import { function_rename_identifiers_alias } from "../../../love/public/src/function_rename_identifiers_alias.mjs";
@@ -10,10 +10,10 @@ import { function_move } from "../../../love/public/src/function_move.mjs";
 export async function function_rename(f_name_before, f_name_after) {
   await function_rename_check(f_name_after);
   const v = await function_name_to_path_unalias(f_name_before);
-  let unaliased = object_property_get(v, "unaliased");
+  let unaliased = property_get(v, "unaliased");
   f_name_before = unaliased;
   let v2 = await function_parse_unaliased(f_name_before);
-  let ast = object_property_get(v2, "ast");
+  let ast = property_get(v2, "ast");
   let identifiers_named = js_identifiers_named(ast, f_name_after);
   list_empty_is_assert_json(identifiers_named, {
     f_name_after,

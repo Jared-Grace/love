@@ -8,15 +8,15 @@ import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { list_skip_1 } from "../../../love/public/src/list_skip_1.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { file_read } from "../../../love/public/src/file_read.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { assert_json } from "../../../love/public/src/assert_json.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
 import { file_delete } from "../../../love/public/src/file_delete.mjs";
 export async function app_a_upload(deltas) {
   async function lambda(d) {
-    let key = object_property_get(d, "key");
-    let versions = object_property_get(d, "versions");
+    let key = property_get(d, "key");
+    let versions = property_get(d, "versions");
     let e = await file_exists(key);
     if (e) {
       let contents = await file_read(key);
@@ -30,8 +30,8 @@ export async function app_a_upload(deltas) {
   }
   await each_async(deltas, lambda);
   async function lambda2(d) {
-    let key = object_property_get(d, "key");
-    let versions = object_property_get(d, "versions");
+    let key = property_get(d, "key");
+    let versions = property_get(d, "versions");
     let skipped = list_skip_1(versions);
     async function lambda3(item) {
       let e2 = text_empty_is(item);

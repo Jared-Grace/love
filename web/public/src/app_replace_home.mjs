@@ -6,7 +6,7 @@ import { html_button } from "../../../love/public/src/html_button.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_replace_home(context) {
   let { root } = context;
   function lambda4() {
@@ -15,7 +15,7 @@ export function app_replace_home(context) {
   html_button(root, emoji_gear() + " Settings", lambda4);
   let rule_sets = app_replace_rule_sets();
   function lambda2(item, index) {
-    let name2 = object_property_get(item, "name");
+    let name2 = property_get(item, "name");
     html_button(root, name2, lambda);
     function lambda() {
       storage_local_set_context(context, "rule_set_index", index);

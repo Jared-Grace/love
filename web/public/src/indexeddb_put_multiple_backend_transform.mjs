@@ -1,5 +1,5 @@
 import { indexeddb_put_multiple_backend } from "../../../love/public/src/indexeddb_put_multiple_backend.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { object_values_map_async } from "../../../love/public/src/object_values_map_async.mjs";
 import { indexeddb_put_item } from "../../../love/public/src/indexeddb_put_item.mjs";
 export async function indexeddb_put_multiple_backend_transform(
@@ -19,7 +19,7 @@ export async function indexeddb_put_multiple_backend_transform(
     previouses = await object_values_map_async(lookup, lambda);
   }
   async function lambda3(previous, key) {
-    let value_get = object_property_get(lookup, key);
+    let value_get = property_get(lookup, key);
     const next = await value_get(previous);
     return next;
   }

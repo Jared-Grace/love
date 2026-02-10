@@ -17,7 +17,7 @@ import { app_g_container_text } from "../../../love/public/src/app_g_container_t
 import { app_g_npc_says } from "../../../love/public/src/app_g_npc_says.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { g_objection_generate_upload_path } from "../../../love/public/src/g_objection_generate_upload_path.mjs";
 import { positive_is } from "../../../love/public/src/positive_is.mjs";
@@ -32,7 +32,7 @@ export async function app_g_gospel(
   refresh,
 ) {
   html_clear(overlay);
-  let objections2 = object_property_get(npc, "objections");
+  let objections2 = property_get(npc, "objections");
   let p = positive_is(objections2);
   if (p) {
     let books = app_g_main_books();
@@ -48,13 +48,13 @@ export async function app_g_gospel(
       chapter_code,
       lambda5,
     );
-    let passages = object_property_get(o, "passages");
+    let passages = property_get(o, "passages");
     list_shuffle(passages);
     let passage = list_last(passages);
     let property = g_objection_generate_property();
     let v = app_g_wrong(passage, passages, property);
-    let passage_wrong = object_property_get(v, "passage_wrong");
-    let ob = object_property_get(v, "ob");
+    let passage_wrong = property_get(v, "passage_wrong");
+    let ob = property_get(v, "ob");
     app_g_npc_says(npc, overlay, game_prefix, ob);
     app_g_container_text(overlay, "What would you like to say?");
     function correct() {
@@ -83,8 +83,8 @@ export async function app_g_gospel(
       );
       function lambda3() {
         app_g_button_wrong(b);
-        let review = object_property_get(player, "review");
-        let verse_numbers = object_property_get(passage_wrong, "verse_numbers");
+        let review = property_get(player, "review");
+        let verse_numbers = property_get(passage_wrong, "verse_numbers");
         list_add(review, {
           chapter_code,
           verse_numbers,

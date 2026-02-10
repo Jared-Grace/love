@@ -6,7 +6,7 @@ import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { reply_messages_matches } from "../../../love/public/src/reply_messages_matches.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_message_reply_choices } from "../../../love/public/src/app_message_reply_choices.mjs";
 import { app_message_firebase_path } from "../../../love/public/src/app_message_firebase_path.mjs";
 import { app_karate_button_uncolored_background_color } from "../../../karate_code/public/src/app_karate_button_uncolored_background_color.mjs";
@@ -41,7 +41,7 @@ export async function app_message_main(context) {
   let u = await uuid();
   const user_id_property = "user_id";
   let app_fn = app_message_main;
-  let root = object_property_get(context, "root");
+  let root = property_get(context, "root");
   object_merge(context, {
     app_fn,
   });
@@ -88,7 +88,7 @@ export async function app_message_main(context) {
           );
         } else {
           let first = list_first(results);
-          let outputs = object_property_get(first, "outputs");
+          let outputs = property_get(first, "outputs");
           html_div_text_multiple(right, outputs);
         }
       }

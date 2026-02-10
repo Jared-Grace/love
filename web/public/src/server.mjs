@@ -5,7 +5,7 @@ import { server_url } from "../../../love/public/src/server_url.mjs";
 import { server_port } from "../../../love/public/src/server_port.mjs";
 import { server_url_api } from "../../../love/public/src/server_url_api.mjs";
 import { function_run_io_file_wrapper } from "../../../love/public/src/function_run_io_file_wrapper.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
@@ -26,7 +26,7 @@ export function server() {
   let v = express.static(result2);
   let u = server_url_api();
   async function api_generic(req, res) {
-    let body = object_property_get(req, "body");
+    let body = property_get(req, "body");
     let r = await function_run_io_file_wrapper(body);
     res.json(r);
   }

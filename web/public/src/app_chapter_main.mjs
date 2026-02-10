@@ -17,7 +17,7 @@ import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src
 import { ebible_language_to_bible_folder } from "../../../love/public/src/ebible_language_to_bible_folder.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { app_next_hash_to_languages_chosen } from "../../../love/public/src/app_next_hash_to_languages_chosen.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 export async function app_chapter_main(context) {
@@ -25,8 +25,8 @@ export async function app_chapter_main(context) {
   firebase_name_jg();
   html_margin_0(root);
   let bc = html_bar_content_padded(root);
-  let content = object_property_get(bc, "content");
-  let bar = object_property_get(bc, "bar");
+  let content = property_get(bc, "content");
+  let bar = property_get(bc, "bar");
   let t = html_button_copy_text();
   let max = app_chapter_chosen_max();
   let p2 = html_p_text(
@@ -36,8 +36,8 @@ export async function app_chapter_main(context) {
       " verses. That will copy all the verses in between (inclusive).",
   );
   let hash = html_hash_object_get();
-  let chapter_code = object_property_get(hash, "c");
-  let verse_number = object_property_get(hash, "v");
+  let chapter_code = property_get(hash, "c");
+  let verse_number = property_get(hash, "v");
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
   let verse_numbers_chosen = [];
   let languages_verses = [];
@@ -57,8 +57,8 @@ export async function app_chapter_main(context) {
       html_p_text(content, reference);
       let updates = [];
       async function lambda(v) {
-        let verse_number_v = object_property_get(v, "verse_number");
-        let text = object_property_get(v, "text");
+        let verse_number_v = property_get(v, "verse_number");
+        let text = property_get(v, "text");
         let p = html_p_text(content, verse_number_v + " " + text);
         let r = app_chapter_toggle_update(
           updates,
@@ -69,9 +69,9 @@ export async function app_chapter_main(context) {
           languages_verses,
           p,
         );
-        let update = object_property_get(r, "update");
-        let toggle = object_property_get(r, "toggle");
-        let copy = object_property_get(r, "copy");
+        let update = property_get(r, "update");
+        let toggle = property_get(r, "toggle");
+        let copy = property_get(r, "copy");
         if (verse_number_v === verse_number) {
           async function lambda4() {
             await html_scroll_center_now(p);

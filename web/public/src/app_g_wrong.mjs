@@ -6,15 +6,15 @@ import { list_sort_number_mapper } from "../../../love/public/src/list_sort_numb
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_intersect } from "../../../love/public/src/list_intersect.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_g_wrong(passage, passages, property) {
-  let text = object_property_get(passage, "text");
-  let objections = object_property_get(passage, property);
+  let text = property_get(passage, "text");
+  let objections = property_get(passage, property);
   let split = app_g_openai_split(objections);
   let ob = list_random_item(split);
   let themes_correct = g_themes(text + " " + ob);
   function lambda2(p) {
-    let text_candidate = object_property_get(p, "text");
+    let text_candidate = property_get(p, "text");
     let themes_candidate = g_themes(text_candidate);
     let list2 = list_intersect(themes_candidate, themes_correct);
     let size = list_size(list2);

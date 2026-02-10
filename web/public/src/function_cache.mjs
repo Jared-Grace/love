@@ -3,7 +3,7 @@ import { function_cache_name } from "../../../love/public/src/function_cache_nam
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_run } from "../../../love/public/src/function_run.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { js_declaration_asyncify_params_from } from "../../../love/public/src/js_declaration_asyncify_params_from.mjs";
@@ -15,13 +15,13 @@ import { invoke_cache_file } from "../../../love/public/src/invoke_cache_file.mj
 export async function function_cache(f_name) {
   let args_none = false;
   let v3 = await function_cache_name(f_name);
-  let f_name_cache = object_property_get(v3, "f_name_cache");
-  let unaliased = object_property_get(v3, "unaliased");
-  let parsed = object_property_get(v3, "parsed");
-  let declaration_call = object_property_get(parsed, "declaration");
+  let f_name_cache = property_get(v3, "f_name_cache");
+  let unaliased = property_get(v3, "unaliased");
+  let parsed = property_get(v3, "parsed");
+  let declaration_call = property_get(parsed, "declaration");
   const c = invoke_cache_file.name;
   let v4 = await function_parse_declaration(c);
-  let declaration_cache = object_property_get(v4, "declaration");
+  let declaration_cache = property_get(v4, "declaration");
   async function lambda(ast) {
     let arg_names = js_declaration_params_names(declaration_call);
     let e = list_empty_is(arg_names);

@@ -1,4 +1,4 @@
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_declaration_single_block_body_add_return } from "../../../love/public/src/js_declaration_single_block_body_add_return.mjs";
 import { function_open } from "../../../love/public/src/function_open.mjs";
 import { js_auto_transforms } from "../../../love/public/src/js_auto_transforms.mjs";
@@ -14,7 +14,7 @@ export async function js_auto_transform_new_inner(f_name_unprefixed) {
     let elements = marker_next_declare_single_init_elements(a);
     let expression = js_parse_expression(combined);
     list_add(elements, expression);
-    let ast = object_property_get(a, "ast");
+    let ast = property_get(a, "ast");
     js_declaration_single_block_body_add_return(ast);
     await js_imports_missing_add(ast);
   }

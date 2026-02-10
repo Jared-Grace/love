@@ -10,7 +10,7 @@ import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
 import { text_only_or_space } from "../../../love/public/src/text_only_or_space.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ebible_versions_english_downloadable_cache } from "../../../love/public/src/ebible_versions_english_downloadable_cache.mjs";
 export async function ebible_versions_english_downloadable_words_lookup() {
   let symbols_all =
@@ -41,8 +41,8 @@ export async function ebible_versions_english_downloadable_words_lookup() {
   async function lambda2(bible_folder) {
     async function lambda(chapter_code, verses) {
       function lambda4(verse) {
-        let text = object_property_get(verse, "text");
-        let verse_number = object_property_get(verse, "verse_number");
+        let text = property_get(verse, "text");
+        let verse_number = property_get(verse, "verse_number");
         let replaced = text_only_or_space(text, symbols_allowed);
         let n = whitespace_normalize(replaced);
         let split = text_split_space(n);

@@ -4,11 +4,11 @@ import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export function js_statement_call_remove(ast, fn) {
   function lambda(v) {
-    let node = object_property_get(v, "node");
-    let stack = object_property_get(v, "stack");
+    let node = property_get(v, "node");
+    let stack = property_get(v, "stack");
     let e1 = list_get_end_1(stack);
     let e2 = list_get_end_2(stack);
     function lambda3() {

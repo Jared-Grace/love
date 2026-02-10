@@ -20,7 +20,7 @@ import { app_reply_choices_will_done_fragment } from "../../../love/public/src/a
 import { app_reply_pray_response } from "../../../love/public/src/app_reply_pray_response.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { reply_roads } from "../../../love/public/src/reply_roads.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
@@ -66,11 +66,11 @@ export function app_message_reply_choices() {
   let fn20 = reply_sequence(["can", cannot_middle, "t"]);
   function lambda(filtered, u) {
     function lambda2(possibility) {
-      let tokens = object_property_get(possibility, "tokens");
-      let data = object_property_get(possibility, "data");
-      let v = object_property_get(data, u);
-      let after = object_property_get(v, "after");
-      let before = object_property_get(v, "before");
+      let tokens = property_get(possibility, "tokens");
+      let data = property_get(possibility, "data");
+      let v = property_get(data, u);
+      let after = property_get(v, "after");
+      let before = property_get(v, "before");
       const sliced = list_slice(tokens, before, after);
       let quote = list_join_empty(sliced);
       reply_on_match_output_add_multiple(possibility, [

@@ -1,7 +1,7 @@
 import { firebase_storage_download_ebible_cache } from "../../../love/public/src/firebase_storage_download_ebible_cache.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { ebible_language_original_code } from "../../../love/public/src/ebible_language_original_code.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { ebible_version_books_upload_name } from "../../../love/public/src/ebible_version_books_upload_name.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
@@ -25,7 +25,7 @@ export async function ebible_version_books(bible_folder) {
       bible_folder,
       file_name,
     );
-    let books = object_property_get(v, "books");
+    let books = property_get(v, "books");
     return books;
   }
   const n = ebible_class_new();

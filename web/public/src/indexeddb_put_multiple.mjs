@@ -1,7 +1,7 @@
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { list_remove_multiple } from "../../../love/public/src/list_remove_multiple.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { object_values } from "../../../love/public/src/object_values.mjs";
@@ -15,7 +15,7 @@ export async function indexeddb_put_multiple(db_get, store, lookup) {
   let keys = list_map_property(v, key);
   let existing = await indexeddb_get_all(db_get, store);
   function lambda(item) {
-    let k = object_property_get(item, key);
+    let k = property_get(item, key);
     let includes = list_includes(keys, k);
     return includes;
   }

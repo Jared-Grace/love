@@ -7,7 +7,7 @@ import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { throws_not_async } from "../../../love/public/src/throws_not_async.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { promise_is } from "../../../love/public/src/promise_is.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function file_exists(file_path) {
   if (browser_is()) {
     file_path = file_path_normalize(file_path);
@@ -25,8 +25,8 @@ export async function file_exists(file_path) {
   }
   let fs = await import("fs");
   let v = fs.promises;
-  let access = object_property_get(v, "access");
-  let constants = object_property_get(fs, "constants");
+  let access = property_get(v, "access");
+  let constants = property_get(fs, "constants");
   let exists = await throws_not_async(lambda);
   async function lambda() {
     await access(file_path, constants.F_OK);

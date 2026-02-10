@@ -15,17 +15,17 @@ import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function app_next_main(context) {
   firebase_name_jg();
   let hash = html_hash_object_get();
-  let chapter_code = object_property_get(hash, "c");
-  let verse_number = object_property_get(hash, "v");
+  let chapter_code = property_get(hash, "c");
+  let verse_number = property_get(hash, "v");
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
   async function lambda2(language) {
     let bible_folder = ebible_language_to_bible_folder(language);
     let d = await ebible_verse(bible_folder, chapter_code, verse_number);
-    let text = object_property_get(d, "text");
+    let text = property_get(d, "text");
     return text;
   }
   const version_english = "engbsb";
@@ -40,8 +40,8 @@ export async function app_next_main(context) {
     chapter_code,
     verse_number,
   });
-  let chapter_code2 = object_property_get(next, "chapter_code");
-  let verse_number2 = object_property_get(next, "verse_number");
+  let chapter_code2 = property_get(next, "chapter_code");
+  let verse_number2 = property_get(next, "verse_number");
   object_property_set(hash, "v", verse_number2);
   object_property_set(hash, "c", chapter_code2);
   const h2 = hash_to_url(hash);
@@ -49,6 +49,6 @@ export async function app_next_main(context) {
   url += "" + h2;
   list_add(mapped, url);
   let joined = await list_join_newline_2_copy(mapped);
-  let root = object_property_get(context, "root");
+  let root = property_get(context, "root");
   html_text_set(root, joined);
 }

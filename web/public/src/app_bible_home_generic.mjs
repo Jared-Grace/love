@@ -41,15 +41,15 @@ import { ebible_chapter_code_parse } from "../../../love/public/src/ebible_chapt
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_bar_content_padded } from "../../../love/public/src/html_bar_content_padded.mjs";
 import { html_on_scroll } from "../../../love/public/src/html_on_scroll.mjs";
 export async function app_bible_home_generic(context, lambda$a) {
   let root = html_clear_context(context);
   html_clear(root);
   let bc = html_bar_content_padded(root);
-  let content = object_property_get(bc, "content");
-  let bar = object_property_get(bc, "bar");
+  let content = property_get(bc, "content");
+  let bar = property_get(bc, "bar");
   html_centered(bar);
   let e = ebible_folder_english();
   let hash = html_hash_object_get();
@@ -58,10 +58,10 @@ export async function app_bible_home_generic(context, lambda$a) {
     app_bible_chapter_open(context, hash, "JHN01");
     return;
   }
-  let chapter_code = object_property_get(hash, "c");
+  let chapter_code = property_get(hash, "c");
   let v2 = ebible_chapter_code_parse(chapter_code);
-  let chapter_name = object_property_get(v2, "chapter_name");
-  let book_code = object_property_get(v2, "book_code");
+  let chapter_name = property_get(v2, "chapter_name");
+  let book_code = property_get(v2, "book_code");
   let books = await ebible_version_books(e);
   let book_name = ebible_book_code_to_name(books, book_code);
   async function lambda6() {
@@ -95,8 +95,8 @@ export async function app_bible_home_generic(context, lambda$a) {
   let languages_verses = [];
   let updates = [];
   async function each_verse(v) {
-    let verse_number = object_property_get(v, "verse_number");
-    let text = object_property_get(v, "text");
+    let verse_number = property_get(v, "verse_number");
+    let text = property_get(v, "text");
     let p_verse = html_p(content);
     let top = html_div(p_verse);
     let bottom = html_div(p_verse);
@@ -117,7 +117,7 @@ export async function app_bible_home_generic(context, lambda$a) {
       languages_verses,
       p_verse,
     );
-    let update = object_property_get(v3, "update");
+    let update = property_get(v3, "update");
     list_add(updates, update);
     function toggle() {
       hidden = not(hidden);
@@ -176,7 +176,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   html_on_scroll(content, on_scroll);
   let exists = property_exists(hash, scroll_top_key);
   if (exists) {
-    let value = object_property_get(hash, scroll_top_key);
+    let value = property_get(hash, scroll_top_key);
     html_scroll_top_set(content, value);
   }
   let v4 = {

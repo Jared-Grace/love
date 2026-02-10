@@ -5,7 +5,7 @@ import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs"
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { js_expression_text } from "../../../love/public/src/js_expression_text.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { app_shared_screen_add_generic } from "../../../love/public/src/app_shared_screen_add_generic.mjs";
@@ -23,9 +23,9 @@ export async function app_shared_screen_rename(
   async function lambda(properties, prefixed) {
     function lambda2(item) {
       function lambda4() {
-        let key = object_property_get(item, "key");
+        let key = property_get(item, "key");
         async function lambda5() {
-          let name = object_property_get(key, "name");
+          let name = property_get(key, "name");
           let match = name === screen_name_before;
           if (match) {
             let key_after = js_expression_text(screen_name_after);
