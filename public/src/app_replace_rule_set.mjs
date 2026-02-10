@@ -143,6 +143,7 @@ export async function app_replace_rule_set(context) {
       let enabled = list_any(r, lambda7);
       html_enable_if(rb, enabled);
       if (enabled) {
+      } else {
       }
       html_style_set_or_remove(
         index2 === index_selected,
