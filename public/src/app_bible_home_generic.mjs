@@ -1,5 +1,5 @@
 import { app_bible_hash_key_scroll_top } from "../../../love/public/src/app_bible_hash_key_scroll_top.mjs";
-import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
+import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { html_hash_object_property_set } from "../../../love/public/src/html_hash_object_property_set.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { html_scroll_top_set } from "../../../love/public/src/html_scroll_top_set.mjs";
@@ -174,7 +174,7 @@ export async function app_bible_home_generic(context, lambda$a) {
     html_hash_object_property_set(scroll_top_key, scroll_top);
   }
   html_on_scroll(content, on_scroll);
-  let exists = object_property_exists(hash, scroll_top_key);
+  let exists = property_exists(hash, scroll_top_key);
   if (exists) {
     let value = object_property_get(hash, scroll_top_key);
     html_scroll_top_set(content, value);

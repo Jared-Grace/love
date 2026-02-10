@@ -7,7 +7,7 @@ import { list_concat_multiple } from "../../../love/public/src/list_concat_multi
 import { prayer_blessing_expand } from "../../../love/public/src/prayer_blessing_expand.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { list_last_remaining } from "../../../love/public/src/list_last_remaining.mjs";
-import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
+import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_to_name } from "../../../love/public/src/ebible_chapter_code_to_name.mjs";
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
@@ -186,7 +186,7 @@ export async function app_reply_main_old(context) {
       let reference = object_property_get(v, "reference");
       list_add(other, reference);
       let original_translation = null;
-      let exists = object_property_exists(v, "translations");
+      let exists = property_exists(v, "translations");
       if (exists) {
         let translations2 = object_property_get(v, "translations");
         let v3 = list_last_remaining(translations2);
