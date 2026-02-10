@@ -7,7 +7,7 @@ import { html_scroll_top_get } from "../../../love/public/src/html_scroll_top_ge
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
 import { app_chapter_toggle_update } from "../../../love/public/src/app_chapter_toggle_update.mjs";
-import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
+import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -53,7 +53,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   html_centered(bar);
   let e = ebible_folder_english();
   let hash = html_hash_object_get();
-  let n = object_property_exists_not(hash, "c");
+  let n = property_exists_not(hash, "c");
   if (n) {
     app_bible_chapter_open(context, hash, "JHN01");
     return;

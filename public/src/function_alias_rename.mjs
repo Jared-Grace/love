@@ -3,12 +3,12 @@ import { each } from "../../../love/public/src/each.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { data_transform } from "../../../love/public/src/data_transform.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
-import { object_property_exists_not } from "../../../love/public/src/object_property_exists_not.mjs";
+import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
 import { object_invert } from "../../../love/public/src/object_invert.mjs";
 export async function function_alias_rename(before, after) {
   async function lambda(aliases) {
     let inverted = object_invert(aliases);
-    let n = object_property_exists_not(inverted, before);
+    let n = property_exists_not(inverted, before);
     if (n) {
       return aliases;
     }
