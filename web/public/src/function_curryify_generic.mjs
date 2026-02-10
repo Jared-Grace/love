@@ -1,4 +1,3 @@
-import { function_curryify_generic_name } from "../../../love/public/src/function_curryify_generic_name.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
 import { js_declaration_asyncify } from "../../../love/public/src/js_declaration_asyncify.mjs";
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
@@ -15,7 +14,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_parse_declaration_unaliased } from "../../../love/public/src/function_parse_declaration_unaliased.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 export async function function_curryify_generic(f_name, args_get, name_get) {
-  let f_name_curried = function_curryify_generic_name(f_name);
+  let f_name_curried = name_get(f_name);
   let u = await function_parse_declaration_unaliased(f_name);
   let unaliased = property_get(u, "unaliased");
   let declaration_call = property_get(u, "declaration");
