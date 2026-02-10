@@ -6,7 +6,7 @@ import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { property_delete } from "../../../love/public/src/property_delete.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { list_remove_all } from "../../../love/public/src/list_remove_all.mjs";
@@ -24,7 +24,7 @@ export function data_file_update_inner(parsed, data) {
   let f_this = property_initialize(functions, f_name, {});
   let declaration = js_declaration_single(ast);
   let async_is = property_get(declaration, "async");
-  object_property_set(f_this, "async", async_is);
+  property_set(f_this, "async", async_is);
   function data_add(property_name, items) {
     let items_to_functions = property_initialize(data, property_name, {});
     function identifier_add(i_name) {
@@ -43,7 +43,7 @@ export function data_file_update_inner(parsed, data) {
       }
       each(removals, lambda);
     }
-    object_property_set(f_this, property_name, items);
+    property_set(f_this, property_name, items);
   }
   let f_identifiers_new = js_identifiers_names(ast);
   data_add("identifiers", f_identifiers_new);

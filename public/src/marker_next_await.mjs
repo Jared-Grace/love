@@ -1,6 +1,6 @@
 import { js_await } from "../../../love/public/src/js_await.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { js_node_type_is_assert } from "../../../love/public/src/js_node_type_is_assert.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { marker_next_get } from "../../../love/public/src/marker_next_get.mjs";
@@ -17,7 +17,7 @@ export async function marker_next_await() {
       js_node_type_is_assert(next, "ExpressionStatement");
       let expression = property_get(next, "expression");
       let awaited = js_await(expression);
-      object_property_set(next, "expression", awaited);
+      property_set(next, "expression", awaited);
       let code = js_unparse(next);
       la(code);
     }

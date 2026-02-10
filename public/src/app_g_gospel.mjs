@@ -1,4 +1,4 @@
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { invoke_once } from "../../../love/public/src/invoke_once.mjs";
 import { app_g_button_wrong } from "../../../love/public/src/app_g_button_wrong.mjs";
 import { app_g_doxology } from "../../../love/public/src/app_g_doxology.mjs";
@@ -101,6 +101,6 @@ export async function app_g_gospel(
       await refresh();
     }
     app_g_button_conversation_end(overlay, lambda4);
-    object_property_set(npc, "christian", true);
+    property_set(npc, "christian", true);
   }
 }

@@ -5,7 +5,7 @@ import { list_find_json_next } from "../../../love/public/src/list_find_json_nex
 import { ebible_index_flat } from "../../../love/public/src/ebible_index_flat.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { html_url_without_hash } from "../../../love/public/src/html_url_without_hash.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
@@ -42,8 +42,8 @@ export async function app_next_main(context) {
   });
   let chapter_code2 = property_get(next, "chapter_code");
   let verse_number2 = property_get(next, "verse_number");
-  object_property_set(hash, "v", verse_number2);
-  object_property_set(hash, "c", chapter_code2);
+  property_set(hash, "v", verse_number2);
+  property_set(hash, "c", chapter_code2);
   const h2 = hash_to_url(hash);
   let url = html_url_without_hash();
   url += "" + h2;

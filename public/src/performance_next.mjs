@@ -1,5 +1,5 @@
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
@@ -14,7 +14,7 @@ export function performance_next(p, category) {
     let last = list_last(p);
     let time_previous = property_get(last, "time");
     delta = time - time_previous;
-    object_property_set(last, "delta", delta);
+    property_set(last, "delta", delta);
   }
   list_add(p, {
     time,
