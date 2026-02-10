@@ -6,7 +6,8 @@ export function html_style_background_color_set_if(
   color_else,
 ) {
   if (condition) {
-    let c = color_if;
+    let c = null;
+    c = color_if;
   } else {
     color_else;
   }
