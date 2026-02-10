@@ -8,7 +8,8 @@ export async function app_shared_name_main_get(search) {
   let f_name = app_shared_name_main(search);
   let e = await function_unalias_exists(f_name);
   let exists = property_get(e, "exists");
-  let app_name = search;
+  let app_name = null;
+  app_name = search;
   if (exists) {
   } else {
     let mapped = await apps_names();
