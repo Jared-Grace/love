@@ -27,7 +27,7 @@ export async function function_curryify(f_name) {
     let remaining = property_get(r, "remaining");
     let item = js_call_args_await_maybe_return(
       unaliased,
-      remaining,
+      arg_names,
       declaration_call,
     );
     let name_result = function_name_combine(f_name_curried, "result");
