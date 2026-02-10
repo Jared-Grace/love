@@ -1,3 +1,4 @@
+import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { error_json } from "../../../love/public/src/error_json.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
@@ -9,6 +10,7 @@ export function object_property_exists_not_assert(object, property_name) {
   return;
   let e = object_property_exists(object, property_name);
   if (e) {
+    let value = object_property_get(object2, property_name2);
     error_json({
       property_name,
     });
