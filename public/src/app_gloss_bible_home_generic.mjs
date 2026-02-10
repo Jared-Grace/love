@@ -72,8 +72,7 @@ export async function app_gloss_bible_home_generic(
       }
       texts = list_map(split3, lambda4);
     } else {
-      let originals = object_property_get(passage, "originals");
-      texts = originals;
+      texts = object_property_get(passage, "originals");
     }
     function lambda5(t) {
       let div = html_div_text(p, t);
