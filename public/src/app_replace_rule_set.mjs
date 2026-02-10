@@ -79,6 +79,8 @@ export async function app_replace_rule_set(context) {
     html_disable(b);
     object_merge(b, {
       rule,
+      lefts,
+      rights,
     });
     return b;
   }
