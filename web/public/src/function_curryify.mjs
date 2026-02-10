@@ -10,14 +10,16 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
 export async function function_curryify(f_name) {
-  let r = await function_parse_declaration_unaliased(f_name);
-  let unaliased = property_get(r, "unaliased");
-  let declaration_call = property_get(r, "declaration");
+  let u = await function_parse_declaration_unaliased(f_name);
+  let unaliased = property_get(u, "unaliased");
+  let declaration_call = property_get(u, "declaration");
   let v = await function_new_transform(f_name_wrapped, lambda);
   return v;
   async function lambda(ast) {
     let arg_names = js_declaration_params_names(declaration_call);
-    let result = list_first_remaining(list);
+    let r = list_first_remaining(arg_names);
+    let first = property_get(r, "first");
+    let remaining = property_get(r, "remaining");
     let item = js_call_args_await_maybe_return(
       unaliased,
       arg_names,
