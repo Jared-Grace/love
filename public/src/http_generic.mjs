@@ -1,7 +1,7 @@
 import { sleep } from "../../../love/public/src/sleep.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
-import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
+import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { assert_json } from "../../../love/public/src/assert_json.mjs";
 import { round } from "../../../love/public/src/round.mjs";
 import { catch_call } from "../../../love/public/src/catch_call.mjs";
@@ -22,7 +22,7 @@ export async function http_generic(url, options) {
       const r = {
         method,
       };
-      let exists = object_property_exists(options, "body");
+      let exists = property_exists(options, "body");
       if (exists) {
         object_assign(r, {
           headers: {
@@ -43,7 +43,7 @@ export async function http_generic(url, options) {
     return v;
   }
   let sleep = true;
-  let e = object_property_exists(options, "sleep");
+  let e = property_exists(options, "sleep");
   if (e) {
     sleep = object_property_get(options, "sleep");
   }
