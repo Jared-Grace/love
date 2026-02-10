@@ -45,7 +45,7 @@ export async function function_curryify(f_name) {
     const p = "params";
     let value = [first];
     let mapped = list_map(value, js_parse_expression);
-    property_set(declaration, p, value);
+    property_set(declaration, p, mapped);
     await js_imports_missing_add(ast);
   }
 }
