@@ -36,7 +36,7 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
   let f_names_div = html_div(root);
   function on_input() {
     let value = html_value_get(input);
-    filtered = list_filter_text_match_ordered(value, texts);
+    filtered = list_filter_text_match_ordered(texts, value);
     refresh();
   }
   html_on_input(input, on_input);
