@@ -86,7 +86,8 @@ export async function app_replace_rule_set(context) {
     object_merge(b, {
       rule,
       lefts,
-      rights,arrow
+      rights,
+      arrow,
     });
     return b;
   }
