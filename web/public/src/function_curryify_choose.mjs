@@ -1,7 +1,9 @@
+import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { function_curryify_generic } from "../../../love/public/src/function_curryify_generic.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function function_curryify_choose(f_name, index) {
+  let index2 = integer_to(index_string);
   let output = await function_curryify_generic(f_name, args_get);
   return output;
   function args_get(arg_names) {
