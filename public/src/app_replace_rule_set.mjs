@@ -99,7 +99,7 @@ export async function app_replace_rule_set(context) {
         refresh();
       }
       let b = html_button(div, letter, symbol_on_click);
-      html_style_background_color(b, background);
+      html_style_background_color(b, "darkgreen");
       property_set_exists_not(b, "index", index);
       return b;
     }
