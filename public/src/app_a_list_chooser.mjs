@@ -1,3 +1,4 @@
+import { text_match_ordered } from "../../../love/public/src/text_match_ordered.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
@@ -43,11 +44,8 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
     filtered = list_filter(texts, lambda2);
     refresh();
     function match(t, target) {
-      const escaped = t.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&");
-      let regex_text = escaped.split("").join(".*");
-      const regex = new RegExp(regex_text);
-      let matches = regex.test(target);
-      return matches;
+      let r = text_match_ordered(t, target);
+      return r;
     }
   }
   html_on_input(input, on_input);
