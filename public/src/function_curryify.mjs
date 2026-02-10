@@ -13,7 +13,7 @@ export async function function_curryify(f_name) {
   let u = await function_parse_declaration_unaliased(f_name);
   let unaliased = property_get(u, "unaliased");
   let declaration_call = property_get(u, "declaration");
-  let v = await function_new_transform(f_name_wrapped, lambda);
+  let v = await function_new_transform(f_name_curried, lambda);
   return v;
   async function lambda(ast) {
     let arg_names = js_declaration_params_names(declaration_call);
