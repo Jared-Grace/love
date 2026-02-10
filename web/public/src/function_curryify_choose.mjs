@@ -5,8 +5,8 @@ export async function function_curryify_choose(f_name, index_text) {
   let args_get = function_curryify_choose_args_get(index_text);
   let output = await function_curryify_generic(
     f_name,
-    args_get,
     function_curryify_generic_name,
+    args_get,
   );
   return output;
 }
