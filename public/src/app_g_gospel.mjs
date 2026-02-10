@@ -12,7 +12,7 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_g_button_conversation_end } from "../../../love/public/src/app_g_button_conversation_end.mjs";
 import { app_g_bible_passage_button } from "../../../love/public/src/app_g_bible_passage_button.mjs";
 import { subtract_1 } from "../../../love/public/src/subtract_1.mjs";
-import { object_property_change } from "../../../love/public/src/object_property_change.mjs";
+import { property_change } from "../../../love/public/src/property_change.mjs";
 import { app_g_container_text } from "../../../love/public/src/app_g_container_text.mjs";
 import { app_g_npc_says } from "../../../love/public/src/app_g_npc_says.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
@@ -59,7 +59,7 @@ export async function app_g_gospel(
     app_g_container_text(overlay, "What would you like to say?");
     function correct() {
       async function lambda() {
-        object_property_change(npc, "objections", subtract_1);
+        property_change(npc, "objections", subtract_1);
         await app_g_gospel(
           overlay,
           npc,
