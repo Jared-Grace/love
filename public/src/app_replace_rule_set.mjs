@@ -71,7 +71,7 @@ export async function app_replace_rule_set(context) {
       return;
     }
     let b = html_button_notext(root, lambda3);
-    rule_button_side(b, left);
+    let lefts = rule_button_side(b, left);
     let span2 = html_span_text(b, " ↦ " + right_joined);
     html_disable(b);
     object_merge(b, {
