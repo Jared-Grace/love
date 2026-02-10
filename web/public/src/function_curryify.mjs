@@ -4,11 +4,7 @@ import { list_first_remaining } from "../../../love/public/src/list_first_remain
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function function_curryify(f_name) {
   let combined = function_curryify_generic_name(f_name);
-  let output = await function_curryify_generic(
-    f_name,
-    function_curryify_generic_name,
-    args_get,
-  );
+  let output = await function_curryify_generic(f_name, combined, args_get);
   return output;
   function args_get(arg_names) {
     let fr = list_first_remaining(arg_names);
