@@ -14,7 +14,7 @@ Explanations should include any etymology.
 Explanations should be easy to understand. Explain as simply as possible.
 
 Output format:
-[{"word":"${language} word","gloss":"English gloss","explain":"full explanation"}, ...]
+[{"${"word"}":"${language} word","gloss":"English gloss","explain":"full explanation"}, ...]
 
 The ${last} provided as a reference.`;
   const prompt_user_middle = `Here is the ${language} passage to output English glosses for: `;
