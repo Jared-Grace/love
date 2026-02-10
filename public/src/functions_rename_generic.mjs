@@ -1,3 +1,4 @@
+import { object_filter } from "../../../love/public/src/object_filter.mjs";
 import { each_object_async } from "../../../love/public/src/each_object_async.mjs";
 import { object_property_exists_not_assert } from "../../../love/public/src/object_property_exists_not_assert.mjs";
 import { data_identifiers_get } from "../../../love/public/src/data_identifiers_get.mjs";
@@ -14,6 +15,7 @@ export async function functions_rename_generic(filter, name_change) {
   list_empty_not_is_assert(filtered);
   let dictionary = list_to_dictionary_value(list, name_change);
   let identifiers = await data_identifiers_get();
+  let result3 = object_filter(object, filter2);
   function lambda2(f_name_after) {
     object_property_exists_not_assert(identifiers, f_name_after);
   }
