@@ -1,3 +1,4 @@
+import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_declaration_params_add } from "../../../love/public/src/js_declaration_params_add.mjs";
 import { js_statement_return_argument } from "../../../love/public/src/js_statement_return_argument.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -29,6 +30,8 @@ export async function function_curryify(f_name) {
     let name_result = function_name_combine(f_name_curried, "result");
     let declaration_result = js_declaration(declaration_call, name_result);
     js_declaration_params_add(declaration_result, remaining);
+    js_declaration_single_block_body_add(ast, declaration_result);
+    let expression = js_parse_expression(code_expression);
     let ret = js_statement_return_argument(declaration_result);
     js_declaration_single_block_body_add(ast, ret);
     let body_block = js_declaration_to_block_body(declaration_result);
