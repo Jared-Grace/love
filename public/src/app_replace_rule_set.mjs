@@ -25,7 +25,6 @@ import { not } from "../../../love/public/src/not.mjs";
 import { html_enable_if } from "../../../love/public/src/html_enable_if.mjs";
 import { html_text_set_if } from "../../../love/public/src/html_text_set_if.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
-import { html_style_set_or_remove } from "../../../love/public/src/html_style_set_or_remove.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
@@ -120,16 +119,10 @@ export async function app_replace_rule_set(context) {
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(enabled);
       each_nested(list, lambda4);
       html_style_background_color_set_if(
-        condition,
-        component,
-        color_if,
-        color_else,
-      );
-      html_style_set_or_remove(
         index2 === index_selected,
         rb,
-        "background-color",
         "lightgreen",
+        "gray",
       );
     }
     each_index(rules_buttons, each_rule_button);
