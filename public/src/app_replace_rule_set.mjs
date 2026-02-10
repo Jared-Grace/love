@@ -100,10 +100,10 @@ export async function app_replace_rule_set(context) {
         index_selected = null;
         refresh();
       }
-      let b = html_button(div, letter, symbol_on_click);
-      app_replace_button_symbol_style(b);
-      property_set_exists_not(b, "index", index);
-      return b;
+      let sb = html_button(div, letter, symbol_on_click);
+      app_replace_button_symbol_style(sb);
+      property_set_exists_not(sb, "index", index);
+      return sb;
     }
     symbols_buttons = list_map_index(current_list, symbols_mapper);
     let nn = null_not_is(index_selected);
