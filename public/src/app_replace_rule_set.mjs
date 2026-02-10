@@ -102,7 +102,6 @@ export async function app_replace_rule_set(context) {
         refresh();
       }
       let b = html_button(div, letter, symbol_on_click);
-      html_style_background_color(b, "#00b400ff");
       html_border_radius_em(b, 0.5);
       html_font_color_set(b, "white");
       html_margin_em(b, 0.1);
@@ -143,9 +142,12 @@ export async function app_replace_rule_set(context) {
         valid = app_replace_rule_valid(rule2, index3, current_list);
       }
       html_enable_if(sb, valid);
-      if (false) {
+      if (valid) {
       } else {
       }
+      let color_bg = null;
+      color_bg = "#00b400ff";
+      html_style_background_color(sb, color_bg);
     }
     each(symbols_buttons, each_symbol_button);
   }
