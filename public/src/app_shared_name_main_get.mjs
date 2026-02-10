@@ -16,7 +16,6 @@ export async function app_shared_name_main_get(search) {
     let mapped = await apps_names();
     let app_names = list_filter_text_match_ordered(mapped, search);
     app_name = list_single(app_names);
-    let only = list_single(list);
   }
   f_name = app_shared_name_main(app_name);
   log_keep({
