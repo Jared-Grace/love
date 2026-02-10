@@ -27,7 +27,7 @@ import { emoji_mobile } from "../../../love/public/src/emoji_mobile.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { app_a_function_on_keydown_remove } from "../../../love/public/src/app_a_function_on_keydown_remove.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
-import { object_properties_from_empty } from "../../../love/public/src/object_properties_from_empty.mjs";
+import { properties_from_empty } from "../../../love/public/src/properties_from_empty.mjs";
 import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
 import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 import { app_a_overlay_container } from "../../../love/public/src/app_a_overlay_container.mjs";
@@ -86,7 +86,7 @@ export async function app_a_function(context) {
     await each_async(all, lambda);
     let filtered = list_filter_property(all, "changed", true);
     function lambda2(item2) {
-      let o = object_properties_from_empty(item2, ["key", "versions"]);
+      let o = properties_from_empty(item2, ["key", "versions"]);
       return o;
     }
     let deltas = list_map(filtered, lambda2);
