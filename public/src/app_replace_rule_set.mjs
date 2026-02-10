@@ -18,7 +18,6 @@ import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { html_style_set_or_remove } from "../../../love/public/src/html_style_set_or_remove.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { html_disable } from "../../../love/public/src/html_disable.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
@@ -128,7 +127,7 @@ export async function app_replace_rule_set(context) {
     let nn = null_not_is(index_selected);
     html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
     html_text_set_if(nn, "Choose a symbol:", "Symbols:", label_symbols);
-    function each_rule_button(component) {
+    function each_rule_button(component, index2) {
       let rule2 = property_get(component, "rule");
       function lambda7(index) {
         let eq2 = app_replace_rule_valid(rule2, index, current_list);
@@ -138,9 +137,6 @@ export async function app_replace_rule_set(context) {
       let r = range(size2);
       let any = list_any(r, lambda7);
       html_enable_if(component, any);
-    }
-    each(rules_buttons, each_rule_button);
-    function lambda4(rb, index2) {
       html_style_set_or_remove(
         index2 === index_selected,
         rb,
@@ -148,7 +144,7 @@ export async function app_replace_rule_set(context) {
         "lightgreen",
       );
     }
-    each_index(rules_buttons, lambda4);
+    each_index(rules_buttons, each_rule_button);
   }
   refresh();
 }
