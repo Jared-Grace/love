@@ -1,7 +1,7 @@
 import { identity } from "../../../love/public/src/identity.mjs";
 import { repos_paths_map_unordered_combine_squash } from "../../../love/public/src/repos_paths_map_unordered_combine_squash.mjs";
 import { command_line_node_g } from "../../../love/public/src/command_line_node_g.mjs";
-import { object_property_exists_equals } from "../../../love/public/src/object_property_exists_equals.mjs";
+import { property_exists_equals } from "../../../love/public/src/property_exists_equals.mjs";
 import { catch_log_async } from "../../../love/public/src/catch_log_async.mjs";
 import { function_auto_path } from "../../../love/public/src/function_auto_path.mjs";
 import { import_install } from "../../../love/public/src/import_install.mjs";
@@ -18,7 +18,7 @@ export async function watch() {
   async function lambda2(path) {
     async function lambda() {
       const value = true;
-      if (object_property_exists_equals(path, in_progress, value)) {
+      if (property_exists_equals(path, in_progress, value)) {
         return;
       }
       object_property_set(in_progress, path, value);
