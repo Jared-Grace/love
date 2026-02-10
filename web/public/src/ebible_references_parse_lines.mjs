@@ -9,7 +9,7 @@ import { each_pair_async } from "../../../love/public/src/each_pair_async.mjs";
 import { each_range_from_async } from "../../../love/public/src/each_range_from_async.mjs";
 import { text_to } from "../../../love/public/src/text_to.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
@@ -23,18 +23,18 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
   );
   let books = await ebible_version_books(bible_folder);
   let v = ebible_references_names(books, lines);
-  let book_names = object_property_get(v, "book_names");
-  let chapter_verses_list = object_property_get(v, "chapter_verses_list");
+  let book_names = property_get(v, "book_names");
+  let chapter_verses_list = property_get(v, "chapter_verses_list");
   async function lambda2(la) {
     async function lambda(book_name, chapter_verses) {
       let v2 = ebible_reference_parts(books, book_name, chapter_verses);
-      let verse_end = object_property_get(v2, "verse_end");
-      let verse_start = object_property_get(v2, "verse_start");
-      let chapter_code = object_property_get(v2, "chapter_code");
-      let index = object_property_get(v2, "index");
+      let verse_end = property_get(v2, "verse_end");
+      let verse_start = property_get(v2, "verse_start");
+      let chapter_code = property_get(v2, "chapter_code");
+      let index = property_get(v2, "index");
       async function lambda5(bible_folder, books) {
         let book2 = list_get(books, index);
-        let book_name = object_property_get(book2, "text");
+        let book_name = property_get(book2, "text");
         async function lambda4(verse_number) {
           await catch_ignore_async(verse_get);
           async function verse_get() {

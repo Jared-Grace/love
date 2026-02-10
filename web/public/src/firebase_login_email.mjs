@@ -5,9 +5,9 @@ import { each } from "../../../love/public/src/each.mjs";
 import { html_placeholder } from "../../../love/public/src/html_placeholder.mjs";
 import { html_input_password } from "../../../love/public/src/html_input_password.mjs";
 import { html_input_email } from "../../../love/public/src/html_input_email.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export function firebase_login_email(context, firebase_auth, auth) {
-  let root = object_property_get(context, "root");
+  let root = property_get(context, "root");
   let input_username = html_input_email(root);
   let input_password = html_input_password(root);
   html_placeholder(input_password, "Password");

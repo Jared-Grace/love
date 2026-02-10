@@ -1,5 +1,5 @@
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { server_url_data } from "../../../love/public/src/server_url_data.mjs";
 import { data_generate } from "../../../love/public/src/data_generate.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
@@ -29,7 +29,7 @@ export function server_data_endpoints(app) {
   let du = server_url_data();
   app.get(du, d_get);
   async function lambda4(req, res) {
-    let data_next = object_property_get(req, "body");
+    let data_next = property_get(req, "body");
     update();
     data_sequence = data_sequence.then(update);
     function update() {

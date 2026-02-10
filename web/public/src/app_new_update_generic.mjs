@@ -1,5 +1,5 @@
 import { function_parse_declaration_unaliased } from "../../../love/public/src/function_parse_declaration_unaliased.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
@@ -21,13 +21,13 @@ export async function app_new_update_generic(
   text_and_empty_not_is_assert(name);
   let a_name = app_shared_name_prefixed(name);
   let v = await function_name_to_path_search(a_name);
-  let repo_name = object_property_get(v, "repo_name");
+  let repo_name = property_get(v, "repo_name");
   let default2 = await firebase_name_repo(repo_name);
   let f_name = js_code_text(default2);
   let call_name = fn_call.name;
   let v2 = await function_parse_declaration_unaliased(call_name);
-  let unaliased = object_property_get(v2, "unaliased");
-  let declaration_call = object_property_get(v2, "declaration");
+  let unaliased = property_get(v2, "unaliased");
+  let declaration_call = property_get(v2, "declaration");
   async function lambda(ast) {
     let declaration = js_declaration_single(ast);
     declaration.async = true;

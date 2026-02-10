@@ -8,7 +8,7 @@ import { app_karate_validate_style_assign } from "../../../karate_code/public/sr
 import { each } from "../../../love/public/src/each.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { not } from "../../../love/public/src/not.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
 import { text_trim } from "../../../love/public/src/text_trim.mjs";
@@ -53,12 +53,12 @@ export function app_karate_screen_input_validate(
     let value = html_value_get(input);
     let trimmed = text_trim(value);
     html_value_set(input, trimmed);
-    let ul = object_property_get(input, "ul");
+    let ul = property_get(input, "ul");
     html_clear(ul);
     let valid = true;
     function lambda(c) {
-      let text2 = object_property_get(c, "text");
-      let check2 = object_property_get(c, "check");
+      let text2 = property_get(c, "text");
+      let check2 = property_get(c, "check");
       let a = check2(trimmed);
       if (not(a)) {
         let li = html_element(ul, "li");

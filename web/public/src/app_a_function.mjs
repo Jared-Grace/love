@@ -62,23 +62,23 @@ import { emoji_search } from "../../../love/public/src/emoji_search.mjs";
 import { app_a_functions } from "../../../love/public/src/app_a_functions.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_parse_unaliased } from "../../../love/public/src/function_parse_unaliased.mjs";
 export async function app_a_function(context) {
   let on_keydowns = app_a_on_keydown_add(context, app_a_function_on_keydown);
   let key = app_a_function_name_selected_key();
   let f_name = storage_local_get_context(context, key);
   let parsed = await function_parse_unaliased(f_name);
-  let ast = object_property_get(parsed, "ast");
-  let root = object_property_get(context, "root");
+  let ast = property_get(parsed, "ast");
+  let root = property_get(context, "root");
   html_clear(root);
   async function upload() {
     let store = app_a_file_system_store();
     let all = await indexeddb_get_all(app_a_indexeddb_initialize, store);
     async function lambda(item) {
-      let compressed = object_property_get(item, "compressed");
+      let compressed = property_get(item, "compressed");
       let f = await json_decompress(compressed);
-      let versions = object_property_get(f, "versions");
+      let versions = property_get(f, "versions");
       object_property_set_exists_not(item, "versions", versions);
       let m = list_multiple_is(versions);
       object_property_set_exists_not(item, "changed", m);
@@ -110,8 +110,8 @@ export async function app_a_function(context) {
     let b3 = app_a_button(content, text2, download);
   }
   let bc = html_bar_content(root);
-  let content = object_property_get(bc, "content");
-  let bar = object_property_get(bc, "bar");
+  let content = property_get(bc, "content");
+  let bar = property_get(bc, "bar");
   async function sync() {
     await upload();
     await download();
@@ -151,8 +151,8 @@ export async function app_a_function(context) {
             },
             on_keydown,
           );
-          let overlay_close = object_property_get(o, "overlay_close");
-          let overlay = object_property_get(o, "overlay");
+          let overlay_close = property_get(o, "overlay_close");
+          let overlay = property_get(o, "overlay");
           let v = app_a_choice_close(overlay_close);
           let choices = [v];
           function on_keydown(e) {
@@ -178,9 +178,9 @@ export async function app_a_function(context) {
       text: emoji_arrows_crossed(),
       fn: async function lambda10() {
         let v6 = await app_a_functions_overlay(a, lambda11);
-        let overlay_result = object_property_get(v6, "overlay_result");
-        let chooser_result = object_property_get(v6, "chooser_result");
-        let input_set = object_property_get(chooser_result, "input_set");
+        let overlay_result = property_get(v6, "overlay_result");
+        let chooser_result = property_get(v6, "chooser_result");
+        let input_set = property_get(chooser_result, "input_set");
         let combined2 = function_new_js_name("");
         input_set(combined2);
         async function lambda11(f_name_call) {
@@ -230,10 +230,10 @@ export async function app_a_function(context) {
   let f_names = await functions_names();
   function lambda8(la) {
     function lambda7(v) {
-      let n = object_property_get(v, "node");
-      let id = object_property_get(n, "id");
+      let n = property_get(v, "node");
+      let id = property_get(n, "id");
       function lambda9() {
-        let name2 = object_property_get(id, "name");
+        let name2 = property_get(id, "name");
         la(name2);
       }
       js_node_type_is_if(id, "Identifier", lambda9);

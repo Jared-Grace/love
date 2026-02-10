@@ -1,6 +1,6 @@
 import { not } from "../../../love/public/src/not.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 export async function object_property_initialize_lambda_async(
   object,
@@ -12,6 +12,6 @@ export async function object_property_initialize_lambda_async(
     let value_set = lambda();
     object_property_set(object, property_name, value_set);
   }
-  let value = await object_property_get(object, property_name);
+  let value = await property_get(object, property_name);
   return value;
 }

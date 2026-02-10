@@ -1,4 +1,4 @@
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_identifier_is_assert } from "../../../love/public/src/js_identifier_is_assert.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { undefined_not_is_assert } from "../../../love/public/src/undefined_not_is_assert.mjs";
@@ -14,9 +14,9 @@ export async function function_alias_add(first, second) {
   js_identifier_is_assert(expression);
   undefined_not_is_assert(f_name);
   function lambda(a) {
-    let unaliased = object_property_get(a, "unaliased");
-    let aliases = object_property_get(a, "aliases");
-    let exists = object_property_get(a, "exists");
+    let unaliased = property_get(a, "unaliased");
+    let aliases = property_get(a, "aliases");
+    let exists = property_get(a, "exists");
     if (exists) {
       error_json({
         message: "alias already exists",

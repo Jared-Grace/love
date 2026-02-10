@@ -45,7 +45,7 @@ import { app_a_button_wide } from "../../../love/public/src/app_a_button_wide.mj
 import { html_on_enter_lambda } from "../../../love/public/src/html_on_enter_lambda.mjs";
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { app_a_overlay_keydown } from "../../../love/public/src/app_a_overlay_keydown.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_a_identifier_generic(
   a,
   span,
@@ -55,23 +55,23 @@ export function app_a_identifier_generic(
   replace,
 ) {
   async function choices_get(o3, choices) {
-    let node = object_property_get(a, "node");
-    let ast = object_property_get(a, "ast");
+    let node = property_get(a, "node");
+    let ast = property_get(a, "ast");
     let v_match = js_visit_match_first(ast, node);
-    let stack = object_property_get(v_match, "stack");
+    let stack = property_get(v_match, "stack");
     let e2 = list_get_end_2(stack);
-    let overlay_close = object_property_get(o3, "overlay_close");
-    let overlay = object_property_get(o3, "overlay");
+    let overlay_close = property_get(o3, "overlay_close");
+    let overlay = property_get(o3, "overlay");
     let oc = app_a_overlay_container_centered(overlay);
     let div4 = html_div_text(oc, name);
-    let context = object_property_get(a, "context");
+    let context = property_get(a, "context");
     const change = {
       fn: async function lambda15() {
         let r = app_a_overlay_on_enter(on_enter, o3, a);
-        let o = object_property_get(r, "overlay_result");
-        let overlay = object_property_get(o, "overlay");
-        let oc = object_property_get(r, "container");
-        let text2 = object_property_get(change, "text");
+        let o = property_get(r, "overlay_result");
+        let overlay = property_get(o, "overlay");
+        let oc = property_get(r, "container");
+        let text2 = property_get(change, "text");
         let div2 = html_div_text(oc, text2 + " from:");
         let div = html_div_text(oc, name);
         html_div_text(oc, text2 + " to:");
@@ -92,7 +92,7 @@ export function app_a_identifier_generic(
         await html_select(input);
         async function on_enter() {
           let value_new = html_value_get(input);
-          let on_change = object_property_get(change, "on_change");
+          let on_change = property_get(change, "on_change");
           await on_change(value_new);
           await app_a_function_on_change(a, o);
         }
@@ -117,7 +117,7 @@ export function app_a_identifier_generic(
           let lambda22 = html_on_enter_lambda(lambda23);
           overlay_close();
           let o2 = app_a_overlay_keydown(a, lambda22);
-          let overlay = object_property_get(o2, "overlay");
+          let overlay = property_get(o2, "overlay");
           let oc = app_a_overlay_container_centered(overlay);
           let div3 = html_div_text(
             oc,
@@ -130,8 +130,8 @@ export function app_a_identifier_generic(
           async function lambda23() {
             let value_new = html_value_get(input);
             let v = app_a_node_index(a);
-            let index = object_property_get(v, "index");
-            let list = object_property_get(v, "list");
+            let index = property_get(v, "index");
+            let list = property_get(v, "list");
             let removals = list_remove_at_count(list, index, value_new);
             await app_a_function_on_change(a, o2);
           }
@@ -191,7 +191,7 @@ export function app_a_identifier_generic(
             let return_name = null;
             if (includes) {
               let v2 = await function_parse_declaration(name);
-              let ast_call = object_property_get(v2, "ast");
+              let ast_call = property_get(v2, "ast");
               return_name = js_return_name(ast_call);
             } else {
               let property_name = js_return_identifier_name();

@@ -6,14 +6,14 @@ import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 export function app_shared_flow(context, screens, before_or_after, find) {
   let current = storage_local_get_context(context, "screen");
   text_is_assert(current);
   function lambda(item2) {
-    let fn2 = object_property_get(item2, "fn");
-    let self = object_property_get(fn2, "name");
+    let fn2 = property_get(item2, "fn");
+    let self = property_get(fn2, "name");
     let eq2 = equal(self, current);
     return eq2;
   }
@@ -26,13 +26,13 @@ export function app_shared_flow(context, screens, before_or_after, find) {
       let v3 = true;
       return v3;
     }
-    let skip = object_property_get(item, "skip");
+    let skip = property_get(item, "skip");
     let a = skip();
     let n = not(a);
     return n;
   }
   let filtered = list_filter(ba, lambda4);
   let first = find(filtered);
-  let name2 = object_property_get(first, "fn");
+  let name2 = property_get(first, "fn");
   app_shared_screen_set(context, name2);
 }

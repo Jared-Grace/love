@@ -10,7 +10,7 @@ import { app_g_p_text } from "../../../love/public/src/app_g_p_text.mjs";
 import { app_g_button_back } from "../../../love/public/src/app_g_button_back.mjs";
 import { html_remove } from "../../../love/public/src/html_remove.mjs";
 import { emoji_pray } from "../../../love/public/src/emoji_pray.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_g_overlay } from "../../../love/public/src/app_g_overlay.mjs";
 export async function app_g_click_npc(
   div_map,
@@ -24,7 +24,7 @@ export async function app_g_click_npc(
     app_g_player_save(player);
     html_remove(overlay);
   }
-  let review = object_property_get(player, "review");
+  let review = property_get(player, "review");
   let ne = list_empty_not_is(review);
   if (ne) {
     let container = app_g_container(overlay);
@@ -33,13 +33,13 @@ export async function app_g_click_npc(
       emoji_book_open() + " You remember that you need to study!",
     );
     app_g_button_back(overlay, overlay_close);
-    let studied = object_property_get(player, "studied");
+    let studied = property_get(player, "studied");
     if (not(studied)) {
       app_g_tutorial_study(player, div_map);
     }
   } else {
-    let prayer = object_property_get(player, "prayer");
-    let conversation = object_property_get(prayer, "conversation");
+    let prayer = property_get(player, "prayer");
+    let conversation = property_get(prayer, "conversation");
     if (not(conversation)) {
       let container = app_g_container(overlay);
       app_g_p_text(
@@ -47,7 +47,7 @@ export async function app_g_click_npc(
         emoji_pray() +
           " You remember that you have not prayed, yet, before your next conversation!",
       );
-      let conversed = object_property_get(player, "conversed");
+      let conversed = property_get(player, "conversed");
       if (not(conversed)) {
         app_g_p_text(
           container,

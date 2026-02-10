@@ -17,7 +17,7 @@ import { list_intersect_empty_is_assert } from "../../../love/public/src/list_in
 import { ebible_verses_exclude } from "../../../love/public/src/ebible_verses_exclude.mjs";
 import { ebible_verses_include } from "../../../love/public/src/ebible_verses_include.mjs";
 import { html_parse_descendants_classes } from "../../../love/public/src/html_parse_descendants_classes.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_parse_text } from "../../../love/public/src/html_parse_text.mjs";
 export async function ebible_chapter_text(bible_folder, chapter_code) {
   let chapter_path = ebible_version_download_path_combine(
@@ -25,8 +25,8 @@ export async function ebible_chapter_text(bible_folder, chapter_code) {
     chapter_code,
   );
   let v2 = await html_parse_read(chapter_path);
-  let root = object_property_get(v2, "root");
-  let d = object_property_get(v2, "d");
+  let root = property_get(v2, "root");
+  let d = property_get(v2, "d");
   let main = html_parse_find(root, ".main");
   let list = html_parse_find_list_to(main, ".verse");
   let verse_numbers = list_map(list, lambda2);

@@ -3,13 +3,13 @@ import { list_map_property } from "../../../love/public/src/list_map_property.mj
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { ebible_book_video_generate } from "../../../love/public/src/ebible_book_video_generate.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ebible_version_books_testament_apocrypha } from "../../../love/public/src/ebible_version_books_testament_apocrypha.mjs";
 export async function ebible_apocrypha_videos_generate() {
   const bible_folder = "engwebu";
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
   async function lambda(item) {
-    let book_code = object_property_get(item, "book_code");
+    let book_code = property_get(item, "book_code");
     log({
       book_code,
     });

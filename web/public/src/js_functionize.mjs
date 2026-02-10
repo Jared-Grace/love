@@ -18,7 +18,7 @@ import { property_equals } from "../../../love/public/src/property_equals.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { js_declaration_to_block_body } from "../../../love/public/src/js_declaration_to_block_body.mjs";
 import { js_parse_statement_module } from "../../../love/public/src/js_parse_statement_module.mjs";
@@ -44,19 +44,19 @@ export async function js_functionize(
   let declaration = js_parse_statement_module(code_declaration);
   let body_block = js_declaration_to_block_body(declaration);
   list_add_multiple(body_block, range);
-  let body = object_property_get(ast, "body");
+  let body = property_get(ast, "body");
   list_add(body, declaration);
   function lambda3(la) {
     function lambda2(v) {
-      let stack = object_property_get(v, "stack");
-      let node = object_property_get(v, "node");
+      let stack = property_get(v, "stack");
+      let node = property_get(v, "node");
       let stack1 = list_get_end(stack, 1);
       if (js_node_type_is(stack1, "Property")) {
         if (property_equals(stack1, "key", node)) {
           return;
         }
       }
-      let name = object_property_get(node, "name");
+      let name = property_get(node, "name");
       let a = js_identifier_defineds_includes(v, name);
       if (not(a)) {
         la(name);
@@ -68,7 +68,7 @@ export async function js_functionize(
   list_remove(missing, f_name_new);
   let other = await functions_names();
   missing = list_difference(missing, other);
-  let list = object_property_get(declaration, "params");
+  let list = property_get(declaration, "params");
   let items = list_map(missing, js_parse_expression);
   list_add_multiple(list, items);
   list_remove_multiple(stack2, range);

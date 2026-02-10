@@ -3,7 +3,7 @@ import { file_read_cached } from "../../../love/public/src/file_read_cached.mjs"
 import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
 import { json_decompress } from "../../../love/public/src/json_decompress.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { file_path_normalize } from "../../../love/public/src/file_path_normalize.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
 import { app_a_file_system_store } from "../../../love/public/src/app_a_file_system_store.mjs";
@@ -25,9 +25,9 @@ export async function file_read(file_path) {
       store,
       file_path,
     );
-    let compressed = object_property_get(item, "compressed");
+    let compressed = property_get(item, "compressed");
     let f = await json_decompress(compressed);
-    let versions = object_property_get(f, "versions");
+    let versions = property_get(f, "versions");
     let last = list_last(versions);
     return last;
   }

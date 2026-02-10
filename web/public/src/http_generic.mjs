@@ -1,5 +1,5 @@
 import { sleep } from "../../../love/public/src/sleep.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { assert_json } from "../../../love/public/src/assert_json.mjs";
@@ -45,7 +45,7 @@ export async function http_generic(url, options) {
   let sleep = true;
   let e = property_exists(options, "sleep");
   if (e) {
-    sleep = object_property_get(options, "sleep");
+    sleep = property_get(options, "sleep");
   }
   if (sleep) {
     await http_sleep();
@@ -68,7 +68,7 @@ export async function http_generic(url, options) {
       let i = catch_call(reject, lambda2);
       res.on("data", i);
       function on_end() {
-        let statusCode = object_property_get(res, "statusCode");
+        let statusCode = property_get(res, "statusCode");
         const d = statusCode / 100;
         const rounded = round(d);
         assert_json(rounded === 2, {

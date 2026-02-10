@@ -8,7 +8,7 @@ import { text_replace } from "../../../love/public/src/text_replace.mjs";
 import { ebible_verses_before } from "../../../love/public/src/ebible_verses_before.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { urdu_allah_to_god } from "../../../love/public/src/urdu_allah_to_god.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -29,19 +29,19 @@ export async function ebible_verses(bible_folder, chapter_code) {
   }
   let v2 = await ebible_chapter_text(bible_folder, chapter_code);
   let property = "text";
-  let text = object_property_get(v2, property);
-  let verse_numbers = object_property_get(v2, "verse_numbers");
+  let text = property_get(v2, property);
+  let verse_numbers = property_get(v2, "verse_numbers");
   text = whitespace_normalize(text);
   text = urdu_allah_to_god(text);
   let split = text_split_space(text);
   let filtered = list_filter(split, text_empty_not_is);
   function lambda_list_adder(la) {
     function lambda_each_reverse(nn, nn_next) {
-      let name = object_property_get(nn, "name");
-      let number = object_property_get(nn, "number");
+      let name = property_get(nn, "name");
+      let number = property_get(nn, "number");
       let index = list_index_of_last(filtered, name);
       if (null_not_is(nn_next)) {
-        let name_next = object_property_get(nn_next, "name");
+        let name_next = property_get(nn_next, "name");
         let filtered3 = list_take(filtered, index);
         let index_next = list_index_of_last(filtered3, name_next);
         let r = list_index_of_all(filtered, name);
@@ -68,7 +68,7 @@ export async function ebible_verses(bible_folder, chapter_code) {
   }
   list_reverse(verses_unfiltered);
   function lambda3(item) {
-    let value = object_property_get(item, property);
+    let value = property_get(item, property);
     let replaced = text_replace(value, "[]", "");
     let n = text_empty_not_is(replaced);
     return n;

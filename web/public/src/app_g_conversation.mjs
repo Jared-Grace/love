@@ -8,7 +8,7 @@ import { not } from "../../../love/public/src/not.mjs";
 import { text_random_or_empty } from "../../../love/public/src/text_random_or_empty.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 export function app_g_conversation(
@@ -30,7 +30,7 @@ export function app_g_conversation(
   const a = list_random_item(["it's", "it is"]) + " ";
   let meet_message =
     " " + text_first_upper_to(text_random_or_empty(a) + s2 + " to ");
-  let meet = object_property_get(npc, "meet");
+  let meet = property_get(npc, "meet");
   if (not(meet)) {
     object_property_set(npc, "meet", true);
     meet_message += "meet you" + g_random_dot_bang();
@@ -53,7 +53,7 @@ export function app_g_conversation(
       ]) +
       "?";
   }
-  let name_player = object_property_get(player, "name");
+  let name_player = property_get(player, "name");
   const npc_says = v + " " + name_player + g_random_dot_bang() + meet_message;
   app_g_npc_says(npc, overlay, game_prefix, npc_says);
   async function npc_gospel() {
@@ -68,8 +68,8 @@ export function app_g_conversation(
     );
   }
   app_g_container_text(overlay, "What would you like to do?");
-  let name_npc2 = object_property_get(npc, "name");
-  let christian = object_property_get(npc, "christian");
+  let name_npc2 = property_get(npc, "name");
+  let christian = property_get(npc, "christian");
   if (not(christian)) {
     app_g_button_green(
       overlay,
