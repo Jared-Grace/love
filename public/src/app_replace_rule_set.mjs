@@ -1,3 +1,4 @@
+import { html_button_notext } from "../../../love/public/src/html_button_notext.mjs";
 import { app_replace_button_symbol_style } from "../../../love/public/src/app_replace_button_symbol_style.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
@@ -68,7 +69,7 @@ export async function app_replace_rule_set(context) {
       refresh();
       return;
     }
-    let b = html_button(root, text, lambda3);
+    let b = html_button_notext(root, lambda3);
     html_disable(b);
     object_merge(b, {
       rule,
