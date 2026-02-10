@@ -1,5 +1,5 @@
 import { object_property_initialize_lambda_async } from "../../../love/public/src/object_property_initialize_lambda_async.mjs";
-import { object_property_initialize } from "../../../love/public/src/object_property_initialize.mjs";
+import { property_initialize } from "../../../love/public/src/property_initialize.mjs";
 import { global_get } from "../../../love/public/src/global_get.mjs";
 export async function global_function_property_initialize_async(
   fn,
@@ -7,7 +7,7 @@ export async function global_function_property_initialize_async(
   lambda,
 ) {
   let global = global_get();
-  let fn_object = object_property_initialize(global, fn.name, {});
+  let fn_object = property_initialize(global, fn.name, {});
   let value = await object_property_initialize_lambda_async(
     fn_object,
     property_name,
