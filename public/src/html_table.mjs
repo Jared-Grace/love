@@ -2,11 +2,11 @@ import { each } from "../../../love/public/src/each.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
-import { object_properties } from "../../../love/public/src/object_properties.mjs";
+import { object_properties_get } from "../../../love/public/src/object_properties_get.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 export function html_table(parent, list) {
   let first = list_first(list);
-  let properties = object_properties(first);
+  let properties = object_properties_get(first);
   let component = html_element(parent, "table");
   let component2 = html_element(component, "tbody");
   function lambda(e) {
