@@ -97,6 +97,24 @@ export async function app_replace_rule_set(context) {
     return mapped;
   }
   function refresh() {
+    function each_rule_button(rb, index2) {
+      let rule2 = property_get(rb, "rule");
+      let size2 = list_size(current_list);
+      let r = range(size2);
+      let lambda7 = app_replace_rule_valid_curried(rule2, current_list);
+      let enabled = list_any(r, lambda7);
+      html_enable_if(rb, enabled);
+      if (enabled) {
+      } else {
+      }
+      html_style_set_or_remove(
+        index2 === index_selected,
+        rb,
+        "background-color",
+        "lightgreen",
+      );
+    }
+    each_index(rules_buttons, each_rule_button);
     html_clear(div);
     function symbols_mapper(letter, index) {
       function symbol_on_click() {
@@ -131,24 +149,6 @@ export async function app_replace_rule_set(context) {
     let nn = null_not_is(index_selected);
     html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
     html_text_set_if(nn, "Choose a symbol:", "Symbols:", label_symbols);
-    function each_rule_button(rb, index2) {
-      let rule2 = property_get(rb, "rule");
-      let size2 = list_size(current_list);
-      let r = range(size2);
-      let lambda7 = app_replace_rule_valid_curried(rule2, current_list);
-      let enabled = list_any(r, lambda7);
-      html_enable_if(rb, enabled);
-      if (enabled) {
-      } else {
-      }
-      html_style_set_or_remove(
-        index2 === index_selected,
-        rb,
-        "background-color",
-        "lightgreen",
-      );
-    }
-    each_index(rules_buttons, each_rule_button);
   }
   refresh();
   function app_replace_button_symbol_style_valid(sb, valid) {
