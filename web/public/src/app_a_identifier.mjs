@@ -1,5 +1,5 @@
 import { js_visit_match_first } from "../../../love/public/src/js_visit_match_first.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { js_identifier_defineds_includes } from "../../../love/public/src/js_identifier_defineds_includes.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { js_identifier_rename_imports_fix } from "../../../love/public/src/js_identifier_rename_imports_fix.mjs";
@@ -44,7 +44,7 @@ export function app_a_identifier(a) {
     html_font_color_set(span, color);
   }
   function replace(value_new) {
-    object_property_set(node, "name", value_new);
+    property_set(node, "name", value_new);
   }
   app_a_identifier_generic(
     a,

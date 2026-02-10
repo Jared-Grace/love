@@ -1,6 +1,6 @@
 import { ebible_language_en } from "../../../love/public/src/ebible_language_en.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
@@ -41,7 +41,7 @@ export function app_search_home(context) {
   let div_results = html_div(root);
   async function search() {
     let query = html_value_get(input);
-    object_property_set(context, "query", query);
+    property_set(context, "query", query);
     await app_search_results(context, div_results);
   }
 }
