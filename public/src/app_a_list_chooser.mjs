@@ -38,15 +38,11 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
   function on_input() {
     let value = html_value_get(input);
     function lambda2(text) {
-      let v3 = match(value, text);
+      let v3 = text_match_ordered(value, text);
       return v3;
     }
     filtered = list_filter(texts, lambda2);
     refresh();
-    function match(t, target) {
-      let r = text_match_ordered(t, target);
-      return r;
-    }
   }
   html_on_input(input, on_input);
   filtered = texts;
