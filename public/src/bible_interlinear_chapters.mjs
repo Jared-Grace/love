@@ -8,7 +8,7 @@ import { ebible_references_names } from "../../../love/public/src/ebible_referen
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
-import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
+import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
@@ -40,7 +40,7 @@ export async function bible_interlinear_chapters() {
     each(sorts, lambda3);
     let original_property = "WLC / Nestle Base TR RP WH NE NA SBL";
     function lambda4(item2) {
-      let exists = object_property_exists(item2, original_property);
+      let exists = property_exists(item2, original_property);
       return exists;
     }
     let filtered = list_filter(verse_words, lambda4);

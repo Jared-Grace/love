@@ -1,7 +1,7 @@
-import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
-import { assert_json_get } from "./assert_json_get.mjs";
+import { property_exists } from "../../../love/public/src/property_exists.mjs";
+import { assert_json_get } from "../../../love/public/src/assert_json_get.mjs";
 export function object_property_exists_assert(object, property_name) {
-  let result = object_property_exists(object, property_name);
+  let result = property_exists(object, property_name);
   function lambda() {
     let v = {
       object,
