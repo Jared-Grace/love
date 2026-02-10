@@ -7,7 +7,7 @@ import { html_button_copy_width_full } from "../../../love/public/src/html_butto
 import { firebase_storage_download_json_decompress } from "../../../love/public/src/firebase_storage_download_json_decompress.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
-import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
+import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
@@ -135,13 +135,13 @@ export async function app_search_results(context, div_results) {
           languages_chosen,
         );
         html_p_text_multiple(div_verse, bible_texts);
-        object_property_set_exists_not(b, "bible_texts", bible_texts);
+        property_set_exists_not(b, "bible_texts", bible_texts);
         async function copy() {
           await list_join_newline_2_copy(bible_texts);
         }
       }
       b = html_button_width_full(div_verse, reference, click);
-      object_property_set_exists_not(b, "click", click);
+      property_set_exists_not(b, "click", click);
       return b;
     }
     let bs = list_map(verse_numbers, each_verse_number);

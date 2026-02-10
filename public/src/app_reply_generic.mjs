@@ -14,7 +14,7 @@ import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
-import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
+import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { html_display_none_or_block } from "../../../love/public/src/html_display_none_or_block.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
@@ -181,7 +181,7 @@ export async function app_reply_generic(verse_get) {
     let response2 = property_get(choice, "response");
     let text = property_get(choice, "text");
     let component = html_button(root, text, lambda3);
-    object_property_set_exists_not(component, "text", text);
+    property_set_exists_not(component, "text", text);
     async function lambda3() {
       list_add(copied, response2);
       await preview_refresh();

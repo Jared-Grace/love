@@ -1,7 +1,7 @@
 import { object_property_swap } from "../../../love/public/src/object_property_swap.mjs";
 import { object_property_subtract_1 } from "../../../love/public/src/object_property_subtract_1.mjs";
 import { object_property_set_if_exists_not } from "../../../love/public/src/object_property_set_if_exists_not.mjs";
-import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
+import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { property_rename } from "../../../love/public/src/property_rename.mjs";
 import { property_lambda_async } from "../../../love/public/src/property_lambda_async.mjs";
@@ -98,8 +98,7 @@ export async function sandbox_5() {
     property_lambda_async: "public/src/object_property_lambda_async.mjs",
     property_rename: "public/src/object_property_rename.mjs",
     property_set: "public/src/object_property_set.mjs",
-    object_property_set_exists_not:
-      "public/src/object_property_set_exists_not.mjs",
+    property_set_exists_not: "public/src/object_property_set_exists_not.mjs",
     object_property_set_if_exists_not:
       "public/src/object_property_set_if_exists_not.mjs",
     object_property_subtract_1: "public/src/object_property_subtract_1.mjs",
