@@ -77,7 +77,7 @@ export async function app_replace_rule_set(context) {
       app_replace_button_symbol_style(span);
     }
     each(left, lambda2);
-    let span2 = html_span_text(parent2, " ↦ " + right_joined);
+    let span2 = html_span_text(b, " ↦ " + right_joined);
     html_disable(b);
     object_merge(b, {
       rule,
