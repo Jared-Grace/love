@@ -14,6 +14,6 @@ export async function app_replace_main(context) {
     screens,
   });
   app_shared_refresh(context);
-  app_replace_font_size_refresh(context);
   let root = html_mobile_default(context);
+  app_replace_font_size_refresh(context);
 }
