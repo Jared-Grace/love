@@ -1,7 +1,7 @@
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
-import { object_property_swap } from "../../../love/public/src/object_property_swap.mjs";
+import { property_swap } from "../../../love/public/src/property_swap.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { js_call_callee_name } from "../../../love/public/src/js_call_callee_name.mjs";
@@ -31,7 +31,7 @@ export function js_dollar_n({
       property_set(n, "test", only);
       const p1 = "alternate";
       const p2 = "consequent";
-      object_property_swap(n, p1, p2);
+      property_swap(n, p1, p2);
       list_remove(stack2, stack1);
     }
   }
