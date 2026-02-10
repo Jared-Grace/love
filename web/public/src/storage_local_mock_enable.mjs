@@ -4,12 +4,12 @@ import { properties_get } from "../../../love/public/src/properties_get.mjs";
 import { properties_size } from "../../../love/public/src/properties_size.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { text_to } from "../../../love/public/src/text_to.mjs";
-import { object_property_get_or } from "../../../love/public/src/object_property_get_or.mjs";
+import { property_get_or } from "../../../love/public/src/property_get_or.mjs";
 export function storage_local_mock_enable() {
   let s = {};
   let localStorage = {
     getItem: function getItem(storage_local_key) {
-      let value3 = object_property_get_or(s, storage_local_key, null);
+      let value3 = property_get_or(s, storage_local_key, null);
       return value3;
     },
     setItem: function setItem(storage_local_key, v) {
