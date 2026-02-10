@@ -82,7 +82,7 @@ export async function app_replace_rule_set(context) {
   function refresh() {
     html_clear(div);
     function symbols_mapper(letter, index) {
-      function lambda5() {
+      function symbol_on_click() {
         let rule2 = list_get(mapped, index_selected);
         let eq = app_replace_rule_valid(rule2, index, current_list);
         if (not(eq)) {
@@ -97,7 +97,7 @@ export async function app_replace_rule_set(context) {
         index_selected = null;
         refresh();
       }
-      let b = html_button(div, letter, lambda5);
+      let b = html_button(div, letter, symbol_on_click);
       property_set_exists_not(b, "index", index);
       return b;
     }
