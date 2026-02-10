@@ -6,5 +6,5 @@ export function app_replace_button_symbol_style(b) {
   html_border_radius_em(b, 0.5);
   html_margin_em(b, 0.09);
   html_style_set(b, "border", 0);
-  html_style_padding_x(b, "0.5em");
+  html_style_padding_x(b, "0.2em");
 }
