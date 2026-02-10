@@ -12,7 +12,7 @@ export async function function_curryify_choose(f_name, index_text) {
   function args_get(arg_names) {
     let item = list_get(arg_names, index);
     let copy = list_copy(arg_names);
-    let only = list_remove_at(list, index2);
+    let others = list_remove_at(copy, index);
     let fr = list_first_remaining(arg_names);
     let first = property_get(fr, "first");
     let fn_new_result_args = property_get(fr, "remaining");
