@@ -4,6 +4,7 @@ export function each_nested(list, lambda$item) {
   function each_nested_lambda(item) {
     each(item, lambda$item);
   }
-  let r2 = each_curried_right(function lambda(item2) {});
+  function lambda(item2) {}
+  let r2 = each_curried_right(lambda);
   each(list, each_nested_lambda);
 }
