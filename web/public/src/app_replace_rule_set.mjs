@@ -102,7 +102,7 @@ export async function app_replace_rule_set(context) {
         refresh();
       }
       let b = html_button(div, letter, symbol_on_click);
-      html_style_background_color(b, "darkgreen");
+      html_style_background_color(b, "#fff");
       html_border_radius_em(b, 0.5);
       html_font_color_set(b, "white");
       html_margin_em(b, 0.1);
