@@ -1,6 +1,6 @@
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { object_property_initialize_list } from "../../../love/public/src/object_property_initialize_list.mjs";
+import { property_initialize_list } from "../../../love/public/src/property_initialize_list.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { ebible_reference_parts } from "../../../love/public/src/ebible_reference_parts.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -61,10 +61,7 @@ export async function bible_interlinear_chapters() {
       verse_number: verse_start,
       text,
     };
-    let chapter_verses = object_property_initialize_list(
-      chapters,
-      chapter_code,
-    );
+    let chapter_verses = property_initialize_list(chapters, chapter_code);
     list_add(chapter_verses, verse);
   }
   each_object(verses, lambda);
