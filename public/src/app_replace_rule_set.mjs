@@ -122,7 +122,7 @@ export async function app_replace_rule_set(context) {
       html_font_color_set(sb, color_font);
       return sb;
     }
-    let symbols_buttons = list_map_index(current_list, symbols_mapper);
+    each_index(current_list, symbols_mapper);
     let nn = null_not_is(index_selected);
     html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
     html_text_set_if(nn, "Choose a symbol:", "Symbols:", label_symbols);
