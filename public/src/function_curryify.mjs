@@ -1,3 +1,4 @@
+import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
 import { property_from } from "../../../love/public/src/property_from.mjs";
 import { js_declaration_asyncify } from "../../../love/public/src/js_declaration_asyncify.mjs";
@@ -16,6 +17,7 @@ export async function function_curryify(f_name) {
   return v;
   async function lambda(ast) {
     let arg_names = js_declaration_params_names(declaration_call);
+    let result = list_first_remaining(list);
     let item = js_call_args_await_maybe_return(
       unaliased,
       arg_names,
