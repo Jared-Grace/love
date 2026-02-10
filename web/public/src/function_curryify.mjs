@@ -21,6 +21,7 @@ export async function function_curryify(f_name) {
   let output = await function_new_transform(f_name_curried, lambda);
   return output;
   async function lambda(ast) {
+    return;
     let arg_names = js_declaration_params_names(declaration_call);
     let r = list_first_remaining(arg_names);
     let first = property_get(r, "first");
