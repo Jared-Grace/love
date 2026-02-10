@@ -13,33 +13,29 @@ import { list_remove_all } from "../../../love/public/src/list_remove_all.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_add_if_not_includes } from "../../../love/public/src/list_add_if_not_includes.mjs";
-import { object_property_initialize } from "../../../love/public/src/object_property_initialize.mjs";
+import { property_initialize } from "../../../love/public/src/property_initialize.mjs";
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
 import { function_path_to_name } from "../../../love/public/src/function_path_to_name.mjs";
 export function data_file_update_inner(parsed, data) {
   let f_path = property_get(parsed, "f_path");
   let f_name = function_path_to_name(f_path);
   let ast = property_get(parsed, "ast");
-  let functions = object_property_initialize(data, "functions", {});
-  let f_this = object_property_initialize(functions, f_name, {});
+  let functions = property_initialize(data, "functions", {});
+  let f_this = property_initialize(functions, f_name, {});
   let declaration = js_declaration_single(ast);
   let async_is = property_get(declaration, "async");
   object_property_set(f_this, "async", async_is);
   function data_add(property_name, items) {
-    let items_to_functions = object_property_initialize(
-      data,
-      property_name,
-      {},
-    );
+    let items_to_functions = property_initialize(data, property_name, {});
     function identifier_add(i_name) {
-      let list = object_property_initialize(items_to_functions, i_name, []);
+      let list = property_initialize(items_to_functions, i_name, []);
       list_add_if_not_includes(list, f_name);
     }
     each(items, identifier_add);
-    let items_old = object_property_initialize(f_this, property_name, []);
+    let items_old = property_initialize(f_this, property_name, []);
     let removals = list_difference(items_old, items);
     function lambda(item) {
-      let list = object_property_initialize(items_to_functions, item, []);
+      let list = property_initialize(items_to_functions, item, []);
       list_remove_all(list, f_name);
       let e = list_empty_is(list);
       if (e) {
