@@ -76,7 +76,10 @@ export async function app_replace_rule_set(context) {
     let b = html_button_notext(root, lambda3);
     app_replace_button_symbol_style(b);
     html_style_padding_y(b, "0.3em");
-    html_style_background_color(b, "black");
+    function lambda2() {
+      html_style_background_color(b, "black");
+    }
+    setTimeout(lambda2, 1000);
     html_border_none(b);
     let lefts = rule_button_side(b, left);
     let span2 = html_span_text(b, " ➜ ");
