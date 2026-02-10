@@ -141,7 +141,7 @@ export async function app_replace_rule_set(context) {
         let eq2 = app_replace_rule_valid(rule2, index, current_list);
         return eq2;
       }
-      let r2 = app_replace_rule_valid_curried(rule3, current_list2);
+      let r2 = app_replace_rule_valid_curried(rule, current_list);
       let size2 = list_size(current_list);
       let r = range(size2);
       let any = list_any(r, lambda7);
