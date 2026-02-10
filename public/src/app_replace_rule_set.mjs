@@ -106,7 +106,7 @@ export async function app_replace_rule_set(context) {
       let b = html_button(div, letter, symbol_on_click);
       html_border_radius_em(b, 0.5);
       html_margin_em(b, 0.1);
-      html_style_set(b2, style_key, style_value);
+      html_style_set(b, "border", 0);
       property_set_exists_not(b, "index", index);
       return b;
     }
