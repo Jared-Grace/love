@@ -149,7 +149,7 @@ export async function app_replace_rule_set(context) {
         color_font = "white";
       } else {
         color_bg = "#1e6c1eff";
-        color_font = "#878787ff";
+        color_font = "#d2d2d2ff";
       }
       log({
         sb,
