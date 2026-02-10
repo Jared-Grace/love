@@ -109,7 +109,8 @@ export async function app_replace_rule_set(context) {
       let lefts = property_get(rb, "lefts");
       if (enabled) {
         function lambda2(lr) {
-          app_replace_button_symbol_style_valid_curry_right(enabled);
+          let lambda4 =
+            app_replace_button_symbol_style_valid_curry_right(valid2);
           function symbol_each(span) {
             app_replace_button_symbol_style_valid(span, enabled);
             return span;
