@@ -1,4 +1,4 @@
-import { object_properties_delete_if_exists } from "../../../love/public/src/object_properties_delete_if_exists.mjs";
+import { properties_delete_if_exists } from "../../../love/public/src/properties_delete_if_exists.mjs";
 import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
 import { data_generate } from "../../../love/public/src/data_generate.mjs";
 import { data_path } from "../../../love/public/src/data_path.mjs";
@@ -10,7 +10,7 @@ export async function data_files_update() {
   var d = await data_all(d_path);
   let data = object_property_get(d, "data");
   let properties = ["identifiers", "functions"];
-  object_properties_delete_if_exists(data, properties);
+  properties_delete_if_exists(data, properties);
   await data_generate(data);
   await data_save(d);
 }
