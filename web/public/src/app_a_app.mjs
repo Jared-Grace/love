@@ -1,5 +1,5 @@
 import { app_shared_name_prefixed } from "../../../love/public/src/app_shared_name_prefixed.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { app_a_on_keydown } from "../../../love/public/src/app_a_on_keydown.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -63,7 +63,7 @@ export async function app_a_app(context) {
       let result = fn();
       return result;
     }
-    object_property_set(item, "fn", wrapped);
+    property_set(item, "fn", wrapped);
   }
   each(choices, lambda);
   let on_keydowns = property_get(context, "on_keydowns");

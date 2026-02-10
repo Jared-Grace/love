@@ -1,4 +1,4 @@
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -34,7 +34,7 @@ export function app_karate_screen_input_validate(
     const border_color = app_karate_green_dark();
     app_karate_style_control_border(input, border_color);
     let ul = html_element(div_checks, "ul");
-    object_property_set(input, "ul", ul);
+    property_set(input, "ul", ul);
     html_style_assign(ul, {
       color: "#872121ff",
     });

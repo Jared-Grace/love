@@ -1,7 +1,7 @@
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
-import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { messenger_reply_messages_transform } from "../../../love/public/src/messenger_reply_messages_transform.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { messenger_reply_messages_message } from "../../../love/public/src/messenger_reply_messages_message.mjs";
@@ -45,7 +45,7 @@ export async function messenger_reply() {
     let mapped2 = list_map_property(unreplied, property_name);
     let joined = list_join_space(mapped2);
     async function lambda(messages2) {
-      object_property_set(messages2, joined, 1);
+      property_set(messages2, joined, 1);
     }
     await messenger_reply_messages_transform(lambda);
     let answer = await command_line_read_empty();
