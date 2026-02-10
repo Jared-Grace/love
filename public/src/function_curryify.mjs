@@ -1,3 +1,4 @@
+import { function_curryify_generic_name } from "../../../love/public/src/function_curryify_generic_name.mjs";
 import { function_curryify_generic } from "../../../love/public/src/function_curryify_generic.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
