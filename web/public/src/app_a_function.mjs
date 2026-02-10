@@ -45,7 +45,7 @@ import { app_a_upload } from "../../../love/public/src/app_a_upload.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
-import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
+import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { json_decompress } from "../../../love/public/src/json_decompress.mjs";
 import { app_a_file_system_store } from "../../../love/public/src/app_a_file_system_store.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
@@ -79,9 +79,9 @@ export async function app_a_function(context) {
       let compressed = property_get(item, "compressed");
       let f = await json_decompress(compressed);
       let versions = property_get(f, "versions");
-      object_property_set_exists_not(item, "versions", versions);
+      property_set_exists_not(item, "versions", versions);
       let m = list_multiple_is(versions);
-      object_property_set_exists_not(item, "changed", m);
+      property_set_exists_not(item, "changed", m);
     }
     await each_async(all, lambda);
     let filtered = list_filter_property(all, "changed", true);
