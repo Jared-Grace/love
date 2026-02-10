@@ -6,7 +6,7 @@ import { integer_to } from "../../../love/public/src/integer_to.mjs";
 import { function_curryify_generic } from "../../../love/public/src/function_curryify_generic.mjs";
 export async function function_curryify_choose(f_name, index_text) {
   let index = integer_to(index_text);
-  function args_get(arg_names) {
+  let args_get = function lambda(arg_names) {
     let item = list_get(arg_names, index);
     let fn_new_result_args = [item];
     let fn_new_args = list_copy(arg_names);
@@ -16,7 +16,7 @@ export async function function_curryify_choose(f_name, index_text) {
       fn_new_args,
     };
     return r;
-  }
+  };
   let output = await function_curryify_generic(
     f_name,
     args_get,
