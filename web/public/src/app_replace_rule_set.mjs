@@ -1,4 +1,4 @@
-import { html_margin } from "../../../love/public/src/html_margin.mjs";
+import { html_margin_em } from "../../../love/public/src/html_margin_em.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { html_border_radius_em } from "../../../love/public/src/html_border_radius_em.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
@@ -106,8 +106,7 @@ export async function app_replace_rule_set(context) {
       html_border_radius_em(b, 0.5);
       html_font_color_set(b, "white");
       const margin = "0.5";
-      let value_em = margin + "em";
-      html_margin(b, value_em);
+      html_margin_em(margin, b);
       property_set_exists_not(b, "index", index);
       return b;
     }
