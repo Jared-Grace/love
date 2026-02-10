@@ -1,6 +1,6 @@
 import { app_ceb_bible_gloss_generate_generic_word } from "../../../love/public/src/app_ceb_bible_gloss_generate_generic_word.mjs";
 import { g_sermon_generate_book_generic } from "./g_sermon_generate_book_generic.mjs";
-export async function app_gloss_bible_gloss_generate_generic(
+export async function app_gloss_bible_generate_generic(
   language,
   last,
   bible_folders,
