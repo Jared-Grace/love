@@ -1,6 +1,6 @@
 import { html_on_load_wait } from "../../../love/public/src/html_on_load_wait.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { object_property_set_exists_not } from "../../../love/public/src/object_property_set_exists_not.mjs";
+import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { g_icon_cross } from "../../../love/public/src/g_icon_cross.mjs";
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
@@ -28,7 +28,7 @@ export async function app_g_refresh(
 ) {
   html_clear(div_map_container);
   let div_map = html_div(div_map_container);
-  object_property_set_exists_not(div_map, "container", div_map_container);
+  property_set_exists_not(div_map, "container", div_map_container);
   html_style_assign(div_map, {
     position: "relative",
     display: "grid",
