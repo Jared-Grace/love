@@ -11,7 +11,7 @@ export async function function_curryify_choose(f_name, index_text) {
     let item = list_get(arg_names, index);
     let fn_new_result_args = [item];
     let fn_new_args = list_copy(arg_names);
-    list_remove_at(copy, index);
+    list_remove_at(fn_new_args, index);
     let r = {
       fn_new_result_args,
       fn_new_args,
