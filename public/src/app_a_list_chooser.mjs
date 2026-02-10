@@ -44,10 +44,10 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
     refresh();
     function match(s, target) {
       const escaped = s.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&");
-      let v2 = escaped.split("").join(".*");
-      const regex = new RegExp(v2);
-      let v = regex.test(target);
-      return v;
+      let regex_text = escaped.split("").join(".*");
+      const regex = new RegExp(regex_text);
+      let matches = regex.test(target);
+      return matches;
     }
   }
   html_on_input(input, on_input);
