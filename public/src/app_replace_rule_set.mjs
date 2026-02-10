@@ -143,6 +143,9 @@ export async function app_replace_rule_set(context) {
         valid = app_replace_rule_valid(rule2, index3, current_list);
       }
       html_enable_if(sb, valid);
+      if (false) {
+      } else {
+      }
     }
     each(symbols_buttons, each_symbol_button);
   }
