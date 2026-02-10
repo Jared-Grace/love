@@ -1,3 +1,4 @@
+import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { app_replace_home } from "../../../love/public/src/app_replace_home.mjs";
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { range } from "../../../love/public/src/range.mjs";
@@ -98,6 +99,7 @@ export async function app_replace_rule_set(context) {
         refresh();
       }
       let b = html_button(div, letter, symbol_on_click);
+      html_style_background_color(div2, background);
       property_set_exists_not(b, "index", index);
       return b;
     }
