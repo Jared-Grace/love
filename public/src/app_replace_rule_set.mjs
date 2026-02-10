@@ -148,6 +148,5 @@ export async function app_replace_rule_set(context) {
     }
     html_style_background_color(sb, color_bg);
     html_font_color_set(sb, color_font);
-    return valid;
   }
 }
