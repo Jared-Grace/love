@@ -9,7 +9,9 @@ export function object_property_exists_not_assert(object, property_name) {
   return;
   let e = object_property_exists(object, property_name);
   if (e) {
-    error_json(o);
+    error_json({
+      property_name,
+    });
   }
   let result2 = not(result3);
   assert(result);
