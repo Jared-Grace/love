@@ -1,6 +1,6 @@
 import { object_property_delete } from "../../../love/public/src/object_property_delete.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
-import { object_properties } from "../../../love/public/src/object_properties.mjs";
+import { object_properties_get } from "../../../love/public/src/object_properties_get.mjs";
 import { object_properties_size } from "../../../love/public/src/object_properties_size.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { text_to } from "../../../love/public/src/text_to.mjs";
@@ -21,7 +21,7 @@ export function storage_local_mock_enable() {
       return size;
     },
     key: function lambda2(index) {
-      let properties = object_properties(s);
+      let properties = object_properties_get(s);
       let item = list_get(properties, index);
       return item;
     },

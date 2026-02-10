@@ -10,7 +10,7 @@ import { app_a_functions_overlay_generic } from "../../../love/public/src/app_a_
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { app_a_function_name_selected_key } from "../../../love/public/src/app_a_function_name_selected_key.mjs";
 import { app_a_functionize_choices_add } from "../../../love/public/src/app_a_functionize_choices_add.mjs";
-import { object_properties } from "../../../love/public/src/object_properties.mjs";
+import { object_properties_get } from "../../../love/public/src/object_properties_get.mjs";
 import { data_identifiers_search } from "../../../love/public/src/data_identifiers_search.mjs";
 import { app_a_function_overlay_refresh } from "../../../love/public/src/app_a_function_overlay_refresh.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
@@ -168,7 +168,7 @@ export function app_a_identifier_generic(
         text: "References",
         fn: async function lambda() {
           let result = await data_identifiers_search(name);
-          let properties = object_properties(result);
+          let properties = object_properties_get(result);
           function lambda3(f_name) {
             app_a_function_select(context, f_name);
           }
