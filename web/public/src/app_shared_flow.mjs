@@ -2,7 +2,7 @@ import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { not } from "../../../love/public/src/not.mjs";
-import { object_property_exists } from "../../../love/public/src/object_property_exists.mjs";
+import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -21,7 +21,7 @@ export function app_shared_flow(context, screens, before_or_after, find) {
   let index = list_index_of(screens, only2);
   let ba = before_or_after(screens, index);
   function lambda4(item) {
-    let exists = object_property_exists(item, "skip");
+    let exists = property_exists(item, "skip");
     if (not(exists)) {
       let v3 = true;
       return v3;
