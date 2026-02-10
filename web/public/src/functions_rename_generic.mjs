@@ -21,7 +21,7 @@ export async function functions_rename_generic(filter, name_change) {
     let ne = equal_not(f_name_before, f_name_after);
     return ne;
   }
-  let different = object_filter(object, lambda);
+  let different = object_filter(dictionary, lambda);
   function lambda2(f_name_after) {
     object_property_exists_not_assert(identifiers, f_name_after);
   }
