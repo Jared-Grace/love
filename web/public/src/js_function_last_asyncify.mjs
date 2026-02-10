@@ -4,7 +4,7 @@ import { js_await_add_inner } from "../../../love/public/src/js_await_add_inner.
 import { js_declaration_name } from "../../../love/public/src/js_declaration_name.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
-import { object_properties_get } from "../../../love/public/src/object_properties_get.mjs";
+import { properties_get } from "../../../love/public/src/properties_get.mjs";
 import { data_identifiers_search } from "../../../love/public/src/data_identifiers_search.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
@@ -30,7 +30,7 @@ export async function js_function_last_asyncify(
       let value = object_property_get(functions, name);
       object_property_set(value, property_name, true);
       let result = await data_identifiers_search(name);
-      let properties = object_properties_get(result);
+      let properties = properties_get(result);
       let difference = list_difference(properties, visited);
       return;
       async function lambda(f_name) {
