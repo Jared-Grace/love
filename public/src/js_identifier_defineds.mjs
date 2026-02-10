@@ -13,16 +13,16 @@ import { each_range } from "../../../love/public/src/each_range.mjs";
 import { list_next } from "../../../love/public/src/list_next.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_adder_multiple } from "../../../love/public/src/list_adder_multiple.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 export function js_identifier_defineds(v) {
-  let stack = object_property_get(v, "stack");
+  let stack = property_get(v, "stack");
   function lambda4(la) {
     let e1 = list_get_end_1(stack);
     if (js_node_type_is(e1, "Property")) {
-      let node = object_property_get(v, "node");
-      let value = object_property_get(node, "name");
+      let node = property_get(v, "node");
+      let value = property_get(node, "name");
       la([value]);
     }
     function_type_add(e1, "FunctionExpression");
@@ -34,20 +34,20 @@ export function js_identifier_defineds(v) {
       function each_statement_up_to(i) {
         let list_item = list_get(bs_list, i);
         if (js_node_type_is(list_item, "VariableDeclaration")) {
-          let declarations = object_property_get(list_item, "declarations");
+          let declarations = property_get(list_item, "declarations");
           let ids = list_map_property(declarations, "id");
           function lambda(id) {
             if (js_node_type_is(id, "ObjectPattern")) {
-              let properties = object_property_get(id, "properties");
+              let properties = property_get(id, "properties");
               let values = list_map_property(properties, "value");
               let names = js_identifiers_to_names(values);
               la(names);
             } else if (js_node_type_is(id, "ArrayPattern")) {
-              let elements = object_property_get(id, "elements");
+              let elements = property_get(id, "elements");
               let names = js_identifiers_to_names(elements);
               la(names);
             } else if (js_node_type_is(id, "Identifier")) {
-              let value = object_property_get(id, "name");
+              let value = property_get(id, "name");
               la([value]);
             } else {
               let message = json_to(id);
@@ -66,10 +66,10 @@ export function js_identifier_defineds(v) {
     let types = js_types_function();
     function function_type_add(item2, f_type) {
       if (js_node_type_is(item2, f_type)) {
-        let id2 = object_property_get(item2, "id");
+        let id2 = property_get(item2, "id");
         let ii = js_identifier_is(id2);
         if (ii) {
-          let value = object_property_get(id2, "name");
+          let value = property_get(id2, "name");
           la([value]);
         }
       }

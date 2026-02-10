@@ -7,7 +7,7 @@ import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { js_declaration_param_add } from "../../../love/public/src/js_declaration_param_add.mjs";
 import { js_parse_statement_module } from "../../../love/public/src/js_parse_statement_module.mjs";
 import { js_code_declaration } from "../../../love/public/src/js_code_declaration.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -17,8 +17,8 @@ import { js_declaration_params_names } from "../../../love/public/src/js_declara
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
 export async function js_call_new_code(f_name_call, ast) {
   let v2 = await function_parse_declaration(f_name_call);
-  let ast_call = object_property_get(v2, "ast");
-  let declaration = object_property_get(v2, "declaration");
+  let ast_call = property_get(v2, "ast");
+  let declaration = property_get(v2, "declaration");
   let existing = js_identifiers_names(ast);
   let arg_names = js_declaration_params_names(declaration);
   async function lambda3(arg_name) {
@@ -30,7 +30,7 @@ export async function js_call_new_code(f_name_call, ast) {
       let b = list_size(split);
       let remaining = list_slice(split, skip_count, b);
       let lamda_name = await js_identifier_unique(existing, lambda);
-      let async_is = object_property_get(declaration, "async");
+      let async_is = property_get(declaration, "async");
       let code = js_code_declaration(lamda_name, "", async_is);
       let declaration_lambda = js_parse_statement_module(code);
       async function lambda2(p) {

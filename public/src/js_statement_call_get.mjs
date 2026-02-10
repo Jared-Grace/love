@@ -1,5 +1,5 @@
 import { not } from "../../../love/public/src/not.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
@@ -16,10 +16,10 @@ export function js_statement_call_get(node) {
       return v;
     }
     declaration = list_single(declarations);
-    expression = object_property_get(declaration, "init");
+    expression = property_get(declaration, "init");
   }
   if (js_node_type_is(expression, "AwaitExpression")) {
-    expression = object_property_get(expression, "argument");
+    expression = property_get(expression, "argument");
   }
   let a = js_node_type_is(expression, "CallExpression");
   if (not(a)) {

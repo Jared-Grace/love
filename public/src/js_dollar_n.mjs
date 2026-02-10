@@ -6,7 +6,7 @@ import { not } from "../../../love/public/src/not.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { js_call_callee_name } from "../../../love/public/src/js_call_callee_name.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_next } from "../../../love/public/src/list_next.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 export function js_dollar_n({
@@ -19,14 +19,14 @@ export function js_dollar_n({
   afters,
 }) {
   let n = list_next(stack2, stack1);
-  let test = object_property_get(n, "test");
+  let test = property_get(n, "test");
   function lambda2() {
     let name = js_call_callee_name(test);
     log({
       name,
     });
     if (equal(name, not.name)) {
-      let arguments2 = object_property_get(test, "arguments");
+      let arguments2 = property_get(test, "arguments");
       let only = list_single(arguments2);
       object_property_set(n, "test", only);
       const p1 = "alternate";

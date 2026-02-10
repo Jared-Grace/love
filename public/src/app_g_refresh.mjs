@@ -4,7 +4,7 @@ import { object_property_set_exists_not } from "../../../love/public/src/object_
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { g_icon_cross } from "../../../love/public/src/g_icon_cross.mjs";
 import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_scroll_center_container_now } from "../../../love/public/src/html_scroll_center_container_now.mjs";
 import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
 import { app_g_click } from "../../../love/public/src/app_g_click.mjs";
@@ -36,7 +36,7 @@ export async function app_g_refresh(
   async function refresh() {
     await app_g_refresh();
   }
-  let npcs = object_property_get(map, "npcs");
+  let npcs = property_get(map, "npcs");
   let player = app_g_player_get();
   let player_img_c = g_character_img(game_prefix, div_map, player);
   const style_text = `@keyframes pulseGlow {
@@ -61,7 +61,7 @@ export async function app_g_refresh(
   html_style_set(player_img_c, "animation", "pulseGlow 2s infinite alternate");
   function lambda12(npc) {
     let ci = g_character_img(game_prefix, div_map, npc);
-    let christian = object_property_get(npc, "christian");
+    let christian = property_get(npc, "christian");
     if (christian) {
       g_icon_cross(div_map, npc);
     }
@@ -104,6 +104,6 @@ export async function app_g_refresh(
     );
   }
   await html_on_load_wait();
-  let container = object_property_get(div_map, "container");
+  let container = property_get(div_map, "container");
   await html_scroll_center_container_now(player_img_c, container);
 }

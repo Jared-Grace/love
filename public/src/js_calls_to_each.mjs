@@ -9,7 +9,7 @@ import { js_statement_expression_get } from "../../../love/public/src/js_stateme
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_next_try } from "../../../love/public/src/list_next_try.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -24,7 +24,7 @@ export function js_calls_to_each(ast) {
     let call = expression;
     function lambda3() {
       async_is = true;
-      call = object_property_get(expression, "argument");
+      call = property_get(expression, "argument");
     }
     js_node_type_is_if(expression, "AwaitExpression", lambda3);
     let e1 = list_get_end_1(stack);
@@ -43,7 +43,7 @@ export function js_calls_to_each(ast) {
       if (nti) {
         return;
       }
-      call2 = object_property_get(expression2, "argument");
+      call2 = property_get(expression2, "argument");
     } else {
       call2 = expression2;
     }
@@ -57,7 +57,7 @@ export function js_calls_to_each(ast) {
       if (jin2) {
         return name;
       }
-      let callee = object_property_get(c, "callee");
+      let callee = property_get(c, "callee");
       let code = js_unparse(callee);
       return code;
     }
@@ -66,14 +66,14 @@ export function js_calls_to_each(ast) {
       return;
     }
     let { parsed } = await js_call_new(each_async.name, ast);
-    let expression3 = object_property_get(parsed, "expression");
+    let expression3 = property_get(parsed, "expression");
     if (async_is) {
-      expression3 = object_property_get(expression3, "argument");
+      expression3 = property_get(expression3, "argument");
     }
-    let arguments2 = object_property_get(expression3, "arguments");
+    let arguments2 = property_get(expression3, "arguments");
     let code2 = js_code_brackets_empty();
     let array_expression = js_parse_expression(code2);
-    let elements = object_property_get(array_expression, "elements");
+    let elements = property_get(array_expression, "elements");
     async function d() {
       await a(b);
       await a(c);

@@ -2,7 +2,7 @@ import { ebible_language_en } from "../../../love/public/src/ebible_language_en.
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { app_search_results } from "../../../love/public/src/app_search_results.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
@@ -16,9 +16,9 @@ import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_l
 import { app_reply_languages_chosen_reset } from "../../../love/public/src/app_reply_languages_chosen_reset.mjs";
 import { list_sort_text_property } from "../../../love/public/src/list_sort_text_property.mjs";
 export function app_search_home(context) {
-  let root = object_property_get(context, "root");
+  let root = property_get(context, "root");
   html_clear(root);
-  let languages_chosen = object_property_get(context, "languages_chosen");
+  let languages_chosen = property_get(context, "languages_chosen");
   let languages = ebible_languages();
   let en_l = ebible_language_en();
   let languages_chosen_default = [en_l];

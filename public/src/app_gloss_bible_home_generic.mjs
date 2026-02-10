@@ -26,7 +26,7 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { text_colon_2 } from "../../../love/public/src/text_colon_2.mjs";
 import { text_split } from "../../../love/public/src/text_split.mjs";
 import { text_colon_3 } from "../../../love/public/src/text_colon_3.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_g_bible_home_inner } from "../../../love/public/src/app_g_bible_home_inner.mjs";
 import { list_second } from "../../../love/public/src/list_second.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
@@ -37,17 +37,17 @@ export async function app_gloss_bible_home_generic(
 ) {
   let generated = g_sermon_generate_book_generic_property();
   let v2 = await app_g_bible_home_inner(context, download);
-  let passages = object_property_get(v2, "passages");
+  let passages = property_get(v2, "passages");
   each_next(passages, on_passage);
   function on_passage({ passage, verses }, next) {
     const prop = "p";
     let last = list_last(verses);
-    let p = object_property_get(last, prop);
+    let p = property_get(last, prop);
     if (null_not_is(next)) {
       let d = html_div_centered(p);
       let text3 = emoji_arrow_down();
       async function lambda3() {
-        let verses_next = object_property_get(next, "verses");
+        let verses_next = property_get(next, "verses");
         await scroll(verses_next);
       }
       let component = html_button(d, text3, lambda3);
@@ -55,7 +55,7 @@ export async function app_gloss_bible_home_generic(
     let h = html_hr(p);
     let texts = null;
     if (text_use) {
-      let text = object_property_get(passage, "text");
+      let text = property_get(passage, "text");
       let separator3 = text_colon_3();
       let split3 = text_split(text, separator3);
       function lambda4(v) {
@@ -72,14 +72,14 @@ export async function app_gloss_bible_home_generic(
       }
       texts = list_map(split3, lambda4);
     } else {
-      texts = object_property_get(passage, "originals");
+      texts = property_get(passage, "originals");
     }
     function lambda5(t) {
       let div = html_div_text(p, t);
       html_font_color_set_green(div);
     }
     each(texts, lambda5);
-    let explains_json = object_property_get(passage, generated);
+    let explains_json = property_get(passage, generated);
     let explains = json_from(explains_json);
     if (false) {
       let div3 = html_div(p);
@@ -100,9 +100,9 @@ export async function app_gloss_bible_home_generic(
     function lambda(e) {
       let component2 = html_hr(p);
       let div2 = html_div(p);
-      let word = object_property_get(e, generated);
-      let gloss = object_property_get(e, "gloss");
-      let explain = object_property_get(e, "explain");
+      let word = property_get(e, generated);
+      let gloss = property_get(e, "gloss");
+      let explain = property_get(e, "explain");
       let span = html_span_text(div2, word);
       html_bold_mild(span);
       html_font_color_set(span, "#e40000ff");
@@ -127,7 +127,7 @@ export async function app_gloss_bible_home_generic(
   }
   async function scroll(verses) {
     let f = list_first(verses);
-    let p = object_property_get(f, "p_verse");
+    let p = property_get(f, "p_verse");
     log({
       p,
       verses,

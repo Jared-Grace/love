@@ -6,7 +6,7 @@ import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_declare_single } from "../../../love/public/src/js_declare_single.mjs";
@@ -31,22 +31,22 @@ export function js_assign_combine(ast) {
     if (null_is(declaration2)) {
       return;
     }
-    let init2 = object_property_get(declaration2, "init");
+    let init2 = property_get(declaration2, "init");
     let nti = js_node_type_not_is(init2, "Identifier");
     if (nti) {
       return;
     }
-    let name2 = object_property_get(init2, "name");
-    let id = object_property_get(declaration, "id");
+    let name2 = property_get(init2, "name");
+    let id = property_get(declaration, "id");
     let nti2 = js_identifier_not_is(id);
     if (nti2) {
       return;
     }
-    let name = object_property_get(id, "name");
+    let name = property_get(id, "name");
     if (equal(name2, name)) {
       let count = js_identifiers_named_count(ast, name);
       if (count === 2) {
-        let init = object_property_get(declaration, "init");
+        let init = property_get(declaration, "init");
         object_property_set(declaration2, "init", init);
         list_remove(e1, node);
       }

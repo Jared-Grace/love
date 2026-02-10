@@ -6,23 +6,23 @@ import { app_a_function_on_change } from "../../../love/public/src/app_a_functio
 import { js_call_new_insert } from "../../../love/public/src/js_call_new_insert.mjs";
 import { app_a_node_index } from "../../../love/public/src/app_a_node_index.mjs";
 import { app_a_functions_overlay } from "../../../love/public/src/app_a_functions_overlay.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 export function app_a_statement_choices_add(choices, a, o) {
   let ab = {
     shortcut: "a",
     text: "Add call above",
     fn: async function lambda2() {
-      let overlay_close = object_property_get(o, "overlay_close");
+      let overlay_close = property_get(o, "overlay_close");
       overlay_close();
       let v2 = await app_a_functions_overlay(a, on_select);
-      let overlay_result = object_property_get(v2, "overlay_result");
+      let overlay_result = property_get(v2, "overlay_result");
       async function on_select(f_name_call) {
         let v = app_a_node_index(a);
-        let stack = object_property_get(v, "stack");
-        let index = object_property_get(v, "index");
-        let list = object_property_get(v, "list");
-        let ast = object_property_get(a, "ast");
+        let stack = property_get(v, "stack");
+        let index = property_get(v, "index");
+        let list = property_get(v, "list");
+        let ast = property_get(a, "ast");
         let parsed = await js_call_new_insert(
           f_name_call,
           ast,
@@ -42,9 +42,9 @@ export function app_a_statement_choices_add(choices, a, o) {
       shortcut: "r",
       text: "Add return below",
       fn: async function lambda2() {
-        let overlay_close = object_property_get(o, "overlay_close");
+        let overlay_close = property_get(o, "overlay_close");
         overlay_close();
-        let ast2 = object_property_get(a, "ast");
+        let ast2 = property_get(a, "ast");
         let i_names = js_identifiers_names(ast2);
         let v2 = app_a_list_overlay_generic(
           a,
@@ -52,11 +52,11 @@ export function app_a_statement_choices_add(choices, a, o) {
           "identifier",
           on_select,
         );
-        let overlay_result = object_property_get(v2, "overlay_result");
+        let overlay_result = property_get(v2, "overlay_result");
         async function on_select(identifier_name) {
           let v = app_a_node_index(a);
-          let list = object_property_get(v, "list");
-          let index = object_property_get(v, "index");
+          let list = property_get(v, "list");
+          let index = property_get(v, "index");
           js_statement_return_insert_code(list, index + 1, identifier_name);
           await app_a_function_on_change(a, overlay_result);
         }

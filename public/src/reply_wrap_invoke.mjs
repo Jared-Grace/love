@@ -9,7 +9,7 @@ import { list_is_assert } from "../../../love/public/src/list_is_assert.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_is } from "../../../love/public/src/function_is.mjs";
 import { reply_sequence } from "../../../love/public/src/reply_sequence.mjs";
 export async function reply_wrap_invoke(item, possibilities) {
@@ -30,10 +30,10 @@ export async function reply_wrap_invoke(item, possibilities) {
     if (null_is(wrapped)) {
       wrapped = function reply_wrap_inner(possibilities) {
         function lambda2(p) {
-          let tokens = object_property_get(p, "tokens");
-          let index_start = object_property_get(p, "index");
+          let tokens = property_get(p, "tokens");
+          let index_start = property_get(p, "index");
           let token = list_get(tokens, index_start);
-          let matches_previous = object_property_get(p, "matches");
+          let matches_previous = property_get(p, "matches");
           let e = json_equal(item, token);
           let empty = item === "";
           let delta = 1;

@@ -11,7 +11,7 @@ import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_to_lookup } from "../../../love/public/src/list_to_lookup.mjs";
 import { file_read_json } from "../../../love/public/src/file_read_json.mjs";
@@ -29,10 +29,10 @@ export async function bible_interlinear_chapters() {
   let chapters = {};
   async function lambda(verse_words, v_number) {
     let first = list_first(verse_words);
-    let vid = object_property_get(first, "VerseId");
+    let vid = property_get(first, "VerseId");
     function lambda3(sort) {
       function lambda2(item) {
-        let value = object_property_get(item, sort);
+        let value = property_get(item, sort);
         return value;
       }
       list_sort_number_mapper(verse_words, lambda2);
@@ -47,15 +47,15 @@ export async function bible_interlinear_chapters() {
     let mapped = list_map_property(filtered, original_property);
     let text = list_join_space(mapped);
     let v = ebible_references_names(books, [vid]);
-    let chapter_verses_list = object_property_get(v, "chapter_verses_list");
-    let book_names = object_property_get(v, "book_names");
+    let chapter_verses_list = property_get(v, "chapter_verses_list");
+    let book_names = property_get(v, "book_names");
     let bn = list_single(book_names);
     let cv = list_single(chapter_verses_list);
     let v2 = ebible_reference_parts(books, bn, cv);
-    let verse_end = object_property_get(v2, "verse_end");
-    let verse_start = object_property_get(v2, "verse_start");
-    let chapter_code = object_property_get(v2, "chapter_code");
-    let index = object_property_get(v2, "index");
+    let verse_end = property_get(v2, "verse_end");
+    let verse_start = property_get(v2, "verse_start");
+    let chapter_code = property_get(v2, "chapter_code");
+    let index = property_get(v2, "index");
     equal_assert(verse_start, verse_end);
     let verse = {
       verse_number: verse_start,

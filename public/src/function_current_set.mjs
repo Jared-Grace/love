@@ -1,4 +1,4 @@
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { user_repo_path } from "../../../love/public/src/user_repo_path.mjs";
 import { marker_top } from "../../../love/public/src/marker_top.mjs";
 import { function_parse_declaration_js_unparse } from "../../../love/public/src/function_parse_declaration_js_unparse.mjs";
@@ -9,8 +9,8 @@ import { data_transform } from "../../../love/public/src/data_transform.mjs";
 import { assert_json } from "../../../love/public/src/assert_json.mjs";
 export async function function_current_set(f_name) {
   const v2 = await function_unalias_exists(f_name);
-  let unaliased = object_property_get(v2, "unaliased");
-  let exists = object_property_get(v2, "exists");
+  let unaliased = property_get(v2, "unaliased");
+  let exists = property_get(v2, "exists");
   assert_json(exists, {
     f_name,
     unaliased,

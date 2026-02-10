@@ -7,7 +7,7 @@ import { json_compress } from "../../../love/public/src/json_compress.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { indexeddb_put } from "../../../love/public/src/indexeddb_put.mjs";
 import { json_decompress } from "../../../love/public/src/json_decompress.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_a_indexeddb_initialize } from "../../../love/public/src/app_a_indexeddb_initialize.mjs";
 import { app_a_file_system_store } from "../../../love/public/src/app_a_file_system_store.mjs";
 import { app_a_file_system_initialize } from "../../../love/public/src/app_a_file_system_initialize.mjs";
@@ -31,7 +31,7 @@ export async function file_overwrite_uncached(file_path, contents) {
           key: file_path,
         };
       } else {
-        let compressed_before = object_property_get(previous, p);
+        let compressed_before = property_get(previous, p);
         f = await json_decompress(compressed_before);
       }
       let e = text_empty_is(contents);
@@ -40,7 +40,7 @@ export async function file_overwrite_uncached(file_path, contents) {
       } else {
         property_delete_if_exists(previous, "deleted");
       }
-      let list = object_property_get(f, "versions");
+      let list = property_get(f, "versions");
       list_add(list, contents);
       let compressed_after = await json_compress(f);
       object_property_set(previous, p, compressed_after);

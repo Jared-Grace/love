@@ -14,7 +14,7 @@ import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
 import { html_rgba_to_rgb } from "../../../love/public/src/html_rgba_to_rgb.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_checked_set } from "../../../love/public/src/html_checked_set.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_input_type } from "../../../love/public/src/html_input_type.mjs";
 import { html_font_size_1em } from "../../../love/public/src/html_font_size_1em.mjs";
 import { app_karate_style_control } from "../../../karate_code/public/src/app_karate_style_control.mjs";
@@ -60,7 +60,7 @@ export function html_checkboxes(
     let checkbox = html_input_type(label, "checkbox");
     async function on_click() {
       function lambda2(r) {
-        let container2 = object_property_get(r, "container");
+        let container2 = property_get(r, "container");
         html_style_assign(container2, {
           "box-shadow": "none",
         });

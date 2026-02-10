@@ -1,4 +1,4 @@
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_text } from "../../../love/public/src/js_text.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
@@ -9,8 +9,8 @@ import { function_transform_marker_specified } from "../../../love/public/src/fu
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 export async function marker_rename(from, to) {
   async function lambda(a) {
-    let node = object_property_get(a, "node");
-    let arguments2 = object_property_get(node, "arguments");
+    let node = property_get(a, "node");
+    let arguments2 = property_get(node, "arguments");
     let s1 = list_size_1(arguments2);
     if (not(s1)) {
       return;

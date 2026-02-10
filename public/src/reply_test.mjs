@@ -3,7 +3,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { reply_optional } from "../../../love/public/src/reply_optional.mjs";
 import { reply_messages_inner } from "../../../love/public/src/reply_messages_inner.mjs";
 import { reply_last } from "../../../love/public/src/reply_last.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { json_equal_assert } from "../../../love/public/src/json_equal_assert.mjs";
 import { reply_sequence } from "./reply_sequence.mjs";
 import { reply_choice } from "./reply_choice.mjs";
@@ -306,9 +306,9 @@ export function reply_test() {
     },
   ];
   async function lambda(item) {
-    let message = object_property_get(item, "message");
-    let start2 = object_property_get(item, "start");
-    let expected = object_property_get(item, "expected");
+    let message = property_get(item, "message");
+    let start2 = property_get(item, "start");
+    let expected = property_get(item, "expected");
     let actual = await reply_messages_inner(message, start2);
     json_equal_assert(actual, expected);
   }

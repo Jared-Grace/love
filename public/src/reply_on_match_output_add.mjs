@@ -1,6 +1,6 @@
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export function reply_on_match_output_add(possibility, item) {
-  let outputs = object_property_get(possibility, "outputs");
+  let outputs = property_get(possibility, "outputs");
   list_add(outputs, item);
 }

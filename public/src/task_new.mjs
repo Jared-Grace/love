@@ -1,4 +1,4 @@
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { text_empty_not_is_assert } from "../../../love/public/src/text_empty_not_is_assert.mjs";
 import { data_function_current_restore } from "../../../love/public/src/data_function_current_restore.mjs";
@@ -17,7 +17,7 @@ export async function task_new(task_name) {
   let f_name = await function_current_get();
   let result2 = task_function_name_part();
   let v = await function_name_unalias(f_name);
-  let unaliased = object_property_get(v, "unaliased");
+  let unaliased = property_get(v, "unaliased");
   let f_name_task = function_name_combine_multiple([
     unaliased,
     result2,

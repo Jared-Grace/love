@@ -36,7 +36,7 @@ import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { html_on_keydown } from "../../../love/public/src/html_on_keydown.mjs";
 import { text_take_less_1 } from "../../../love/public/src/text_take_less_1.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
@@ -95,7 +95,7 @@ export async function app_reply_generic(verse_get) {
     await app_reply_main_verse_add([v], original);
   }
   function lambda6(event) {
-    let key = object_property_get(event, "key");
+    let key = property_get(event, "key");
     if (equal(key, "Backspace")) {
       typed = text_take_less_1(typed);
     } else {
@@ -148,7 +148,7 @@ export async function app_reply_generic(verse_get) {
   function languages_reset() {
     html_clear(component_languages);
     function lambda5(language) {
-      let name2 = object_property_get(language, "name");
+      let name2 = property_get(language, "name");
       let language_button = null;
       async function lambda7() {
         html_disable(language_button);
@@ -159,15 +159,15 @@ export async function app_reply_generic(verse_get) {
     each(languages, lambda5);
   }
   async function language_choose(language) {
-    let bible_folder2 = object_property_get(language, "bible_folder");
-    let language_code = object_property_get(language, "language_code");
+    let bible_folder2 = property_get(language, "bible_folder");
+    let language_code = property_get(language, "language_code");
     let v = await app_reply_main_verse_add(verses_list, bible_folder2);
     list_add_first(languages_chosens, language_code);
     await preview_refresh();
   }
   function buttons_refresh() {
     function lambda2(item) {
-      let text2 = object_property_get(item, "text");
+      let text2 = property_get(item, "text");
       let letters = text_letters_only(text2);
       let lower = text_lower_to(letters);
       let sw = text_starts_with(lower, typed);
@@ -178,8 +178,8 @@ export async function app_reply_generic(verse_get) {
     each(buttons, lambda2);
   }
   function lambda(choice) {
-    let response2 = object_property_get(choice, "response");
-    let text = object_property_get(choice, "text");
+    let response2 = property_get(choice, "response");
+    let text = property_get(choice, "text");
     let component = html_button(root, text, lambda3);
     object_property_set_exists_not(component, "text", text);
     async function lambda3() {
@@ -205,24 +205,24 @@ export async function app_reply_generic(verse_get) {
     if (false) {
       function lambda9(item3) {}
       each(list, lambda9);
-      let chapter_code2 = object_property_get(verse, "chapter_code");
+      let chapter_code2 = property_get(verse, "chapter_code");
       let book_code = ebible_chapter_code_to_book(chapter_code2);
       let chapter_name = ebible_chapter_code_to_name(chapter_code2);
       let book_name = ebible_book_code_to_name(books, book_code);
-      let verse_number2 = object_property_get(verse, "verse_number");
+      let verse_number2 = property_get(verse, "verse_number");
       let reference2 = book_name + " " + chapter_name + ":" + verse_number2;
     }
     const other = [];
     function lambda11(v) {
-      let reference = object_property_get(v, "reference");
+      let reference = property_get(v, "reference");
       list_add(other, reference);
       let original_translation = null;
       let exists = property_exists(v, "translations");
       if (exists) {
-        let translations2 = object_property_get(v, "translations");
+        let translations2 = property_get(v, "translations");
         let v3 = list_last_remaining(translations2);
-        let remaining = object_property_get(v3, "remaining");
-        let last = object_property_get(v3, "last");
+        let remaining = property_get(v3, "remaining");
+        let last = property_get(v3, "last");
         original_translation = last;
         if (remaining !== null) {
           each(remaining, verses_add);
@@ -242,18 +242,18 @@ export async function app_reply_generic(verse_get) {
     let concated = list_concat_multiple([copied, [v22], other]);
     return concated;
     function verses_add(v) {
-      let verses3 = object_property_get(v, "verses");
+      let verses3 = property_get(v, "verses");
       let verse_texts = list_map_property(verses3, "text");
       list_add_multiple(other, verse_texts);
     }
   }
   async function app_reply_main_verse_add(verses_list, bible_folder2) {
     async function lambda12(v_item) {
-      let verses2 = object_property_get(v_item, "verses");
-      let reference = object_property_get(v_item, "reference");
+      let verses2 = property_get(v_item, "verses");
+      let reference = property_get(v_item, "reference");
       async function lambda8(verse) {
-        let chapter_code2 = object_property_get(verse, "chapter_code");
-        let verse_number2 = object_property_get(verse, "verse_number");
+        let chapter_code2 = property_get(verse, "chapter_code");
+        let verse_number2 = property_get(verse, "verse_number");
         let d = await ebible_verse(bible_folder2, chapter_code2, verse_number2);
         return d;
       }
@@ -262,7 +262,7 @@ export async function app_reply_generic(verse_get) {
         verses,
         reference,
       };
-      let translations3 = object_property_get(v_item, "translations");
+      let translations3 = property_get(v_item, "translations");
       list_add_first(translations3, v);
     }
     await each_async(verses_list, lambda12);

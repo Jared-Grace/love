@@ -4,7 +4,7 @@ import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { list_next_index } from "../../../love/public/src/list_next_index.mjs";
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_left_right_set } from "../../../love/public/src/js_left_right_set.mjs";
 import { js_code_assign } from "../../../love/public/src/js_code_assign.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
@@ -32,17 +32,17 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     function lambda2(declaration) {
       let code = js_code_assign("a", "a");
       let s = js_parse_statement(code);
-      let expression = object_property_get(s, "expression");
+      let expression = property_get(s, "expression");
       let { id, init } = declaration;
       let type_is = js_literal_is(init);
       if (type_is) {
-        let value = object_property_get(init, "value");
+        let value = property_get(init, "value");
         if (null_is(value)) {
           return;
         }
       }
       js_left_right_set(expression, id, init);
-      let name3 = object_property_get(id, "name");
+      let name3 = property_get(id, "name");
       let init2 = js_null();
       let assign = js_declare(name3, init2);
       list_add(afters, lambda);

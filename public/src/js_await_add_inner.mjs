@@ -8,22 +8,22 @@ import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_function_last_asyncify } from "../../../love/public/src/js_function_last_asyncify.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function js_await_add_inner(functions, ast, visited) {
   async function lambda(v) {
-    let node = object_property_get(v, "node");
+    let node = property_get(v, "node");
     async function lambda3(name) {
       let en = property_exists_not(functions, name);
       if (en) {
         return;
       }
-      let f = object_property_get(functions, name);
-      let async_is = object_property_get(f, "async");
+      let f = property_get(functions, name);
+      let async_is = property_get(f, "async");
       let n = not(async_is);
       if (n) {
         return;
       }
-      let stack = object_property_get(v, "stack");
+      let stack = property_get(v, "stack");
       await js_function_last_asyncify(stack, async_is, ast, functions, visited);
       let stack1 = list_get_end_1(stack);
       function lambda4() {

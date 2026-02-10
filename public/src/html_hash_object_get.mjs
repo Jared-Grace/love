@@ -2,7 +2,7 @@ import { text_includes_not } from "../../../love/public/src/text_includes_not.mj
 import { html_hash_symbol } from "../../../love/public/src/html_hash_symbol.mjs";
 import { object_adder } from "../../../love/public/src/object_adder.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
 import { text_split_equal } from "../../../love/public/src/text_split_equal.mjs";
 import { text_split_comma } from "../../../love/public/src/text_split_comma.mjs";
@@ -21,8 +21,8 @@ export function html_hash_object_get() {
     function lambda(s) {
       let split2 = text_split_equal(s);
       let v = list_first_second(split2);
-      let second = object_property_get(v, "second");
-      let first = object_property_get(v, "first");
+      let second = property_get(v, "second");
+      let first = property_get(v, "first");
       oa(first, second);
     }
     each(split, lambda);

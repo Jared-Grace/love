@@ -47,17 +47,17 @@ import { app_a_function_node_child } from "../../../love/public/src/app_a_functi
 import { js_keyword_import } from "../../../love/public/src/js_keyword_import.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_a_function_node(a) {
-  let node = object_property_get(a, "node");
-  let parent = object_property_get(a, "parent");
-  let type = object_property_get(node, "type");
+  let node = property_get(a, "node");
+  let parent = property_get(a, "parent");
+  let type = property_get(node, "type");
   let lookup = {
     Program: function lambda3() {
       app_a_body(node, parent, a, false);
     },
     ["ImportDeclaration"]: function lambda4() {
-      let source = object_property_get(node, "source");
+      let source = property_get(node, "source");
       let text = js_keyword_import();
       app_a_keyword_purple_space(parent, text);
       app_a_braces_wrap(parent, inner);
@@ -67,7 +67,7 @@ export function app_a_function_node(a) {
       app_a_function_node_child(a, source);
       app_a_semicolon(parent);
       function inner() {
-        let specifiers = object_property_get(node, "specifiers");
+        let specifiers = property_get(node, "specifiers");
         function lambda2(specifier) {
           html_span_space(parent);
           app_a_function_node_child(a, specifier);
@@ -81,9 +81,9 @@ export function app_a_function_node(a) {
       }
     },
     ["ImportSpecifier"]: function lambda6() {
-      let imported = object_property_get(node, "imported");
+      let imported = property_get(node, "imported");
       js_identifier_is_assert(imported);
-      let local = object_property_get(node, "local");
+      let local = property_get(node, "local");
       const property_name = "name";
       object_property_get_double_equal_assert(imported, local, property_name);
       app_a_function_node_child(a, local);
@@ -91,8 +91,8 @@ export function app_a_function_node(a) {
     ["ExportNamedDeclaration"]: function lambda5() {
       let text4 = js_keyword_export();
       app_a_keyword_purple_space(parent, text4);
-      let declaration = object_property_get(node, "declaration");
-      let specifiers = object_property_get(node, "specifiers");
+      let declaration = property_get(node, "declaration");
+      let specifiers = property_get(node, "specifiers");
       list_empty_is_assert(specifiers);
       app_a_function_node_child(a, declaration);
     },
@@ -112,7 +112,7 @@ export function app_a_function_node(a) {
     ["ReturnStatement"]: function lambda7() {
       let k = js_keyword_return();
       app_a_keyword_purple(parent, k);
-      let argument2 = object_property_get(node, "argument");
+      let argument2 = property_get(node, "argument");
       let nn2 = null_not_is(argument2);
       if (nn2) {
         html_span_space(parent);
@@ -121,25 +121,25 @@ export function app_a_function_node(a) {
       app_a_semicolon(parent);
     },
     ["ExpressionStatement"]: function lambda7() {
-      let expression = object_property_get(node, "expression");
+      let expression = property_get(node, "expression");
       app_a_function_node_child(a, expression);
       app_a_semicolon(parent);
     },
     ["AwaitExpression"]: function lambda() {
       let k = js_keyword_await();
       let v = app_a_keyword_purple_space(parent, k);
-      let keyword = object_property_get(v, "keyword");
+      let keyword = property_get(v, "keyword");
       function lambda19(o, choices) {
         app_a_statement_choices_add(choices, a, o);
       }
       app_a_overlay_choices(a, keyword, lambda19);
-      let argument = object_property_get(node, "argument");
+      let argument = property_get(node, "argument");
       app_a_function_node_child(a, argument);
     },
     ["CallExpression"]: function lambda8() {
-      let callee = object_property_get(node, "callee");
+      let callee = property_get(node, "callee");
       app_a_function_node_child(a, callee);
-      let arguments2 = object_property_get(node, "arguments");
+      let arguments2 = property_get(node, "arguments");
       app_a_parenthesis_wrap(parent, inner);
       function inner() {
         app_a_nodes_list(a, arguments2, parent);
@@ -150,8 +150,8 @@ export function app_a_function_node(a) {
     },
     ["Literal"]: function lambda10() {
       let v3 = app_a_raw(node, parent);
-      let component = object_property_get(v3, "component");
-      let raw = object_property_get(v3, "raw");
+      let component = property_get(v3, "component");
+      let raw = property_get(v3, "raw");
       app_a_literal(a, component, node, on_change, raw);
       function on_change(value_new) {
         object_property_set(node, "raw", value_new);
@@ -161,29 +161,29 @@ export function app_a_function_node(a) {
       app_a_variable_declaration(a);
     },
     ["VariableDeclarator"]: function lambda13() {
-      let id = object_property_get(node, "id");
+      let id = property_get(node, "id");
       app_a_function_node_child(a, id);
       let text3 = js_code_equals_padded();
       let span = html_span_text(parent, text3);
-      let init = object_property_get(node, "init");
+      let init = property_get(node, "init");
       app_a_function_node_child(a, init);
     },
     ["ObjectExpression"]: o_props,
     ["Property"]: function lambda14() {
-      let kind2 = object_property_get(node, "kind");
+      let kind2 = property_get(node, "kind");
       equal_assert(kind2, "init");
-      let key = object_property_get(node, "key");
+      let key = property_get(node, "key");
       app_a_function_node_child(a, key);
-      let shorthand = object_property_get(node, "shorthand");
-      let method = object_property_get(node, "method");
+      let shorthand = property_get(node, "shorthand");
+      let method = property_get(node, "method");
       false_is_assert(method);
-      let computed = object_property_get(node, "computed");
+      let computed = property_get(node, "computed");
       false_is_assert(computed);
       if (not(shorthand)) {
         let c = js_code_colon();
         let span4 = html_span_text(parent, c);
         html_span_space(parent);
-        let value3 = object_property_get(node, "value");
+        let value3 = property_get(node, "value");
         app_a_function_node_child(a, value3);
       }
       app_a_comma(parent);
@@ -192,7 +192,7 @@ export function app_a_function_node(a) {
     ["ArrayExpression"]: function lambda17() {
       a_brackets_wrap(parent, inner);
       function inner() {
-        let elements = object_property_get(node, "elements");
+        let elements = property_get(node, "elements");
         app_a_nodes_list(a, elements, parent);
       }
     },
@@ -205,30 +205,30 @@ export function app_a_function_node(a) {
       let k2 = js_keyword_import();
       app_a_keyword_blue(parent, k2);
       function lambda20() {
-        let source2 = object_property_get(node, "source");
+        let source2 = property_get(node, "source");
         app_a_function_node_child(a, source2);
       }
       app_a_parenthesis_wrap(parent, lambda20);
     },
     ["MemberExpression"]: function lambda21() {
-      let computed2 = object_property_get(node, "computed");
+      let computed2 = property_get(node, "computed");
       false_is_assert(computed2);
-      let optional = object_property_get(node, "optional");
+      let optional = property_get(node, "optional");
       false_is_assert(optional);
-      let object = object_property_get(node, "object");
+      let object = property_get(node, "object");
       app_a_function_node_child(a, object);
       html_span_text(parent, ".");
-      let property = object_property_get(node, "property");
+      let property = property_get(node, "property");
       app_a_function_node_child(a, property);
     },
     ["ObjectPattern"]: o_props,
     ["TemplateLiteral"]: function lambda12() {
-      let quasis = object_property_get(node, "quasis");
-      let expressions = object_property_get(node, "expressions");
+      let quasis = property_get(node, "quasis");
+      let expressions = property_get(node, "expressions");
       let container = html_span(parent);
       app_a_symbol_text_template(container);
       function lambda22(q, e) {
-        let value = object_property_get(q, "value");
+        let value = property_get(q, "value");
         app_a_raw(value, container);
         if (null_not_is(e)) {
           app_a_keyword_purple(container, "$");
@@ -250,18 +250,18 @@ export function app_a_function_node(a) {
   };
   function o_props() {
     function lambda16() {
-      let properties = object_property_get(node, "properties");
+      let properties = property_get(node, "properties");
       app_a_body_inner(parent, properties, a, true);
     }
     app_a_braces_wrap(parent, lambda16);
   }
   function binary() {
-    let left = object_property_get(node, "left");
+    let left = property_get(node, "left");
     app_a_function_node_child(a, left);
-    let operator = object_property_get(node, "operator");
+    let operator = property_get(node, "operator");
     let padded = text_pad_space(operator);
     html_span_text(parent, padded);
-    let right = object_property_get(node, "right");
+    let right = property_get(node, "right");
     app_a_function_node_child(a, right);
   }
   let n = property_exists_not(lookup, type);
@@ -275,7 +275,7 @@ export function app_a_function_node(a) {
     });
     alert(json);
   }
-  let value = object_property_get(lookup, type);
+  let value = property_get(lookup, type);
   let r = value();
   return r;
 }

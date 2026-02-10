@@ -6,7 +6,7 @@ import { html_parse_text } from "../../../love/public/src/html_parse_text.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_parse_find_list_to } from "../../../love/public/src/html_parse_find_list_to.mjs";
 import { html_parse_find } from "../../../love/public/src/html_parse_find.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_parse_read } from "../../../love/public/src/html_parse_read.mjs";
 import { ebible_version_download_path_combine } from "../../../love/public/src/ebible_version_download_path_combine.mjs";
 export async function ebible_chapter_verse_numbers(bible_folder, chapter_code) {
@@ -15,8 +15,8 @@ export async function ebible_chapter_verse_numbers(bible_folder, chapter_code) {
     chapter_code,
   );
   let v2 = await html_parse_read(chapter_path);
-  let root = object_property_get(v2, "root");
-  let d = object_property_get(v2, "d");
+  let root = property_get(v2, "root");
+  let d = property_get(v2, "d");
   let main = html_parse_find(root, ".main");
   let list = html_parse_find_list_to(main, ".verse");
   let verse_numbers = list_map(list, lambda2);

@@ -4,7 +4,7 @@ import { js_literal_is_assert } from "../../../love/public/src/js_literal_is_ass
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
-import { object_property_get } from "../../../love/public/src/object_property_get.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
 import { object_property_set } from "../../../love/public/src/object_property_set.mjs";
 import { property_delete } from "../../../love/public/src/property_delete.mjs";
@@ -17,13 +17,13 @@ import { object_property_initialize } from "../../../love/public/src/object_prop
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
 import { function_path_to_name } from "../../../love/public/src/function_path_to_name.mjs";
 export function data_file_update_inner(parsed, data) {
-  let f_path = object_property_get(parsed, "f_path");
+  let f_path = property_get(parsed, "f_path");
   let f_name = function_path_to_name(f_path);
-  let ast = object_property_get(parsed, "ast");
+  let ast = property_get(parsed, "ast");
   let functions = object_property_initialize(data, "functions", {});
   let f_this = object_property_initialize(functions, f_name, {});
   let declaration = js_declaration_single(ast);
-  let async_is = object_property_get(declaration, "async");
+  let async_is = property_get(declaration, "async");
   object_property_set(f_this, "async", async_is);
   function data_add(property_name, items) {
     let items_to_functions = object_property_initialize(
@@ -64,7 +64,7 @@ export function data_file_update_inner(parsed, data) {
         return v;
       }
       js_literal_is_assert(first, lambda3);
-      let value = object_property_get(first, "value");
+      let value = property_get(first, "value");
       la(value);
     }
   }
