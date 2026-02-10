@@ -1,3 +1,4 @@
+import { app_replace_button_symbol_style_valid_curry_right } from "../../../love/public/src/app_replace_button_symbol_style_valid_curry_right.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_replace_button_symbol_style_valid } from "../../../love/public/src/app_replace_button_symbol_style_valid.mjs";
 import { app_replace_rule_valid_curry } from "../../../love/public/src/app_replace_rule_valid_curry.mjs";
@@ -108,6 +109,7 @@ export async function app_replace_rule_set(context) {
       let lefts = property_get(rb, "lefts");
       if (enabled) {
         function lambda2(lr) {
+          app_replace_button_symbol_style_valid_curry_right(enabled);
           function symbol_each(span) {
             app_replace_button_symbol_style_valid(span, enabled);
             return span;
