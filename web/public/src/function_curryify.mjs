@@ -34,7 +34,7 @@ export async function function_curryify(f_name) {
     let declaration_result = js_declaration(declaration_call, name_result);
     js_declaration_single_block_body_add(ast, declaration_result);
     let body_block = js_declaration_to_block_body(declaration_result);
-    list_add(list, item2);
+    list_add(body_block, item);
     let declaration = js_declaration_single(ast);
     js_declaration_asyncify(declaration, declaration_call);
     const p = "params";
