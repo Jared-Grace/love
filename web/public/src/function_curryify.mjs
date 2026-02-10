@@ -30,7 +30,7 @@ export async function function_curryify(f_name) {
     );
     let name_result = function_name_combine(f_name_curried, "result");
     let declaration_lambda = js_declaration(declaration_call, name_result);
-    js_declaration_single_block_body_add(ast, item);
+    js_declaration_single_block_body_add(ast, declaration_lambda);
     let declaration = js_declaration_single(ast);
     js_declaration_asyncify(declaration, declaration_call);
     const p = "params";
