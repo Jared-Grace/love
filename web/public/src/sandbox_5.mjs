@@ -39,7 +39,7 @@ import { object_properties_from } from "../../../love/public/src/object_properti
 import { object_properties_each_async } from "../../../love/public/src/object_properties_each_async.mjs";
 import { object_properties_delete_if_exists } from "../../../love/public/src/object_properties_delete_if_exists.mjs";
 import { object_properties_delete_all } from "../../../love/public/src/object_properties_delete_all.mjs";
-import { object_properties_delete } from "../../../love/public/src/object_properties_delete.mjs";
+import { properties_delete } from "../../../love/public/src/properties_delete.mjs";
 import { object_properties_get } from "../../../love/public/src/object_properties_get.mjs";
 import { js_call_object_property_get } from "../../../love/public/src/js_call_object_property_get.mjs";
 import { js_assign_object_property_get } from "../../../love/public/src/js_assign_object_property_get.mjs";
@@ -52,7 +52,7 @@ export async function sandbox_5() {
       "public/src/js_assign_object_property_get.mjs",
     js_call_object_property_get: "public/src/js_call_object_property_get.mjs",
     object_properties_get: "public/src/object_properties.mjs",
-    object_properties_delete: "public/src/object_properties_delete.mjs",
+    properties_delete: "public/src/object_properties_delete.mjs",
     object_properties_delete_all: "public/src/object_properties_delete_all.mjs",
     object_properties_delete_if_exists:
       "public/src/object_properties_delete_if_exists.mjs",
