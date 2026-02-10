@@ -1,3 +1,4 @@
+import { ternary } from "../../../love/public/src/ternary.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 export function html_style_background_color_set_if(
   condition,
@@ -5,15 +6,6 @@ export function html_style_background_color_set_if(
   color_if,
   color_else,
 ) {
-  ternary(condition, color_if, color_else);
-  html_style_background_color(component, color_else);
+  let c = ternary(condition, color_if, color_else);
+  html_style_background_color(component, c);
 }
-function ternary(condition, color_if, color_else) {
-  let c = null;
-  if (condition) {
-    c = color_if;
-  } else {
-    c = color_else;
-  }
-}
-
