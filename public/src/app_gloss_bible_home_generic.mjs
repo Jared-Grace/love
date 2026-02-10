@@ -1,3 +1,4 @@
+import { app_gloss_bible_generate_generic_word } from "../../../love/public/src/app_gloss_bible_generate_generic_word.mjs";
 import { g_sermon_generate_book_generic_property } from "../../../love/public/src/g_sermon_generate_book_generic_property.mjs";
 import { emoji_arrow_down } from "../../../love/public/src/emoji_arrow_down.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
@@ -97,10 +98,11 @@ export async function app_gloss_bible_home_generic(
       }
       each(explains, lambda2);
     }
+    let word = app_gloss_bible_generate_generic_word();
     function lambda(e) {
       let component2 = html_hr(p);
       let div2 = html_div(p);
-      let word = property_get(e, "word");
+      let word = property_get(e, word);
       let gloss = property_get(e, "gloss");
       let explain = property_get(e, "explain");
       let span = html_span_text(div2, word);
