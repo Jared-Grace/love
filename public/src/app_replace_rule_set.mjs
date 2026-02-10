@@ -105,7 +105,7 @@ export async function app_replace_rule_set(context) {
       html_style_background_color(b, "darkgreen");
       html_border_radius_em(b, 0.5);
       html_font_color_set(b, "white");
-      html_margin_em(b, "0.5");
+      html_margin_em(b, 0.1);
       property_set_exists_not(b, "index", index);
       return b;
     }
