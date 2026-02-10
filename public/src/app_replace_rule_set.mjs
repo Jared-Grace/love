@@ -105,7 +105,8 @@ export async function app_replace_rule_set(context) {
       html_style_background_color(b, "darkgreen");
       html_border_radius_em(b, 0.5);
       html_font_color_set(b, "white");
-      let value_em = "0.5" + "em";
+      const margin = "0.5";
+      let value_em = margin + "em";
       html_margin(b, value_em);
       property_set_exists_not(b, "index", index);
       return b;
