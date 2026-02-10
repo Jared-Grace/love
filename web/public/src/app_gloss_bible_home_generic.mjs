@@ -30,7 +30,11 @@ import { object_property_get } from "../../../love/public/src/object_property_ge
 import { app_g_bible_home_inner } from "../../../love/public/src/app_g_bible_home_inner.mjs";
 import { list_second } from "../../../love/public/src/list_second.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
-export async function app_ceb_bible_home_generic(context, download, text_use) {
+export async function app_gloss_bible_home_generic(
+  context,
+  download,
+  text_use,
+) {
   let generated = g_sermon_generate_book_generic_property();
   let v2 = await app_g_bible_home_inner(context, download);
   let passages = object_property_get(v2, "passages");
