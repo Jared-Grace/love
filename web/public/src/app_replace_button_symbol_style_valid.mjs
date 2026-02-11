@@ -1,4 +1,4 @@
-import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
+import { html_style_font_color_set_if } from "../../../love/public/src/html_style_font_color_set_if.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { html_enable_if } from "../../../love/public/src/html_enable_if.mjs";
 export function app_replace_button_symbol_style_valid(sb, valid) {
@@ -7,11 +7,9 @@ export function app_replace_button_symbol_style_valid(sb, valid) {
   html_enable_if(sb, valid);
   if (valid) {
     color_bg = "#00b400ff";
-    color_font = "white";
   } else {
     color_bg = "#1e6c1eff";
-    color_font = "#b9fcb9ff";
   }
   html_style_background_color_set(sb, color_bg);
-  html_font_color_set(sb, color_font);
+  html_style_font_color_set_if(sb, valid, "white", "#b9fcb9ff");
 }
