@@ -11,5 +11,5 @@ export function js_dollar_0({
 }) {
   let code_expression = js_keyword_false();
   let expression = js_parse_expression(code_expression);
-  return;
+  return expression;
 }
