@@ -10,6 +10,7 @@ export function js_object_expression_single_elements(ast) {
     let stack = property_get(v, "stack");
     let e1 = list_get_end_1(stack);
     function lambda3() {
+      let id = property_get(e1, "id");
       log({
         node,
         e1,
