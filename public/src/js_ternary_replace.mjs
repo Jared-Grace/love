@@ -14,6 +14,9 @@ export function js_ternary_replace(ast) {
       if (not(type_is)) {
         return false;
       }
+      log({
+        item,
+      });
     }
     let a = list_all([alternate, consequent], lambda2);
     log({
