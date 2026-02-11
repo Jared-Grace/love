@@ -1,3 +1,4 @@
+import { app_replace_button_rule_background_color } from "../../../love/public/src/app_replace_button_rule_background_color.mjs";
 import { text_pad_space } from "../../../love/public/src/text_pad_space.mjs";
 import { text_arrow } from "../../../love/public/src/text_arrow.mjs";
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
@@ -124,7 +125,8 @@ export async function app_replace_rule_set(context) {
       each_nested(list, lambda4);
       const selected = index2 === index_selected;
       let on_a = app_replace_rule_set_highlight();
-      let c = ternary_nested(selected, on_a, enabled, "#dadadaff", "#a8a8a8ff");
+      let on_b = app_replace_button_rule_background_color();
+      let c = ternary_nested(selected, on_a, enabled, on_b, "#a8a8a8ff");
       html_style_background_color_set(rb, c);
       let arrow2 = property_get(rb, "arrow");
       html_style_font_color_set_if(enabled, arrow2, "black", "#6a6a6a");
