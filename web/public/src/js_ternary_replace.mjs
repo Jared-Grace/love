@@ -8,7 +8,7 @@ export function js_ternary_replace(ast) {
     let alternate = property_get(node, "alternate");
     let consequent = property_get(node, "consequent");
     function lambda2(item) {}
-    let a = list_all(list, lambda2);
+    let a = list_all([alternate, consequent], lambda2);
     log({
       alternate,
       consequent,
