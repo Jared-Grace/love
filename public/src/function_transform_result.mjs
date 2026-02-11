@@ -16,7 +16,8 @@ export async function function_transform_result(f_names, lambda$ast) {
       await file_js_unparse(parsed);
       return result;
     }
-    await lambda2();
+    let r2 = await lambda2();
+    return r2;
   }
   await each_async(split, lambda);
   return;
