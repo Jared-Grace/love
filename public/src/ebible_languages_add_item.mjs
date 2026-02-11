@@ -1,3 +1,4 @@
+import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { html_parse_find_a_href_text } from "../../../love/public/src/html_parse_find_a_href_text.mjs";
 import { html_parse_find_a_href_starts_with_without_unique } from "../../../love/public/src/html_parse_find_a_href_starts_with_without_unique.mjs";
@@ -28,7 +29,7 @@ export async function ebible_languages_add_item(bible_folder) {
   let language_code = list_single(unique);
   let url_language = url_language_prefix + language_code + "";
   let mapped = html_parse_find_a_href_text(root, d);
-  lflp;
+  let filtered = list_filter_property(list, property_name, property_value);
   return unique;
   let r2 = await openai_responses_cache(
     "",
