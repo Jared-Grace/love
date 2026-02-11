@@ -31,7 +31,7 @@ export function js_ternary_replace(ast) {
     if (not(es)) {
       return false;
     }
-    let mapped3 = list_map_property(mapped, "expression");
+    let mapped3 = list_map_property(mapped2, "expression");
     let ae = list_all(mapped3, js_assignment_expression_is);
     if (not(ae)) {
       return false;
