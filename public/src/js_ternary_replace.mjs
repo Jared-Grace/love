@@ -6,4 +6,10 @@ export function js_ternary_replace(ast) {
     let alternate = property_get(consequent, "alternate");
   }
   js_visit_type(ast, "IfStatement", lambda);
+  return;
+  if (index_selected === index) {
+    let index_selected = null;
+  } else {
+    let index_selected = index;
+  }
 }
