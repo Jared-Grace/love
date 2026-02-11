@@ -26,6 +26,7 @@ export async function js_return_atomize(ast) {
         let list = js_boolean_values();
         let includes = list_includes(list, value);
         if (includes) {
+          return;
         }
       }
       let v = js_visit_match(ast, argument);
