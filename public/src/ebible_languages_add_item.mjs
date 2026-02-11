@@ -8,7 +8,11 @@ import { function_transform } from "../../../love/public/src/function_transform.
 export async function ebible_languages_add_item(bible_folder) {
   let f_name = ebible_languages.name;
   f_name = sandbox.name;
-  let r = await openai_responses_cache(system, user);
+  return;
+  let r = await openai_responses_cache(
+    "",
+    "What is the language code of the following language? Answer just the two or three characters of the code. ",
+  );
   async function lambda(ast) {
     let elements = js_array_expression_single_elements(ast);
     const object = {
