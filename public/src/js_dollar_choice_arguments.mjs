@@ -12,7 +12,8 @@ export async function js_dollar_choice_arguments() {
     let oes = js_object_expression_named(ast, search);
     let only = list_single(oes);
     let properties = property_get(only, "properties");
-    let mapped = list_map(list, function lambda3(item) {});
+    function lambda3(item) {}
+    let mapped = list_map(list, lambda3);
   }
   let output = await function_transform(f_name, lambda2);
   async function lambda(a) {
