@@ -36,4 +36,5 @@ export async function ebible_languages_add_item_info(bible_folder) {
     name,
     language_code,
   };
-  return
+  return r3;
+}
