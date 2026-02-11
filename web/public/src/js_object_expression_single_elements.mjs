@@ -9,7 +9,7 @@ export function js_object_expression_single_elements(ast) {
       node,
     });
   }
-  let vs = js_visit_type(ast, node_type, lambda);
+  js_visit_type(ast, node_type, lambda);
   return node;
   let elements = property_get(node, "elements");
   return elements;
