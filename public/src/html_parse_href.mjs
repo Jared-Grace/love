@@ -4,5 +4,7 @@ export function html_parse_href(d, item) {
   const name = "href";
   let href = html_parse_attr(d, item, name);
   let n = text_not_is(href);
+  if (false) {
+  }
   return n;
 }
