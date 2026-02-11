@@ -7,11 +7,11 @@ import { function_new } from "../../../love/public/src/function_new.mjs";
 export async function js_dollar_new(code) {
   let combined = js_dollar_new_name(code);
   await function_new(combined);
-  async function lambda2(ast) {
+  async function lambda(ast) {
     js_declaration_single_block_body_add_return(ast);
     await js_dollar_new_args_inner(ast);
   }
-  await function_transform(combined, lambda2);
+  await function_transform(combined, lambda);
   let code2 = await js_dollar_new_update_list(code);
   return code2;
 }
