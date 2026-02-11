@@ -1,3 +1,4 @@
+import { js_boolean_values } from "../../../love/public/src/js_boolean_values.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { js_return_identifier_name } from "../../../love/public/src/js_return_identifier_name.mjs";
@@ -22,8 +23,9 @@ export async function js_return_atomize(ast) {
       }
       if (js_node_type_is(argument, "Literal")) {
         let value = property_get(argument, "value");
-        let includes = list_includes([true, false], item);
-        if (false) {
+        let list = js_boolean_values();
+        let includes = list_includes(list, value);
+        if (includes) {
         }
       }
       let v = js_visit_match(ast, argument);
