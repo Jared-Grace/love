@@ -3,7 +3,7 @@ import { invoke } from "../../../love/public/src/invoke.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
-import { js_expression_text } from "../../../love/public/src/js_expression_text.mjs";
+import { js_expression_string } from "../../../love/public/src/js_expression_string.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
@@ -28,7 +28,7 @@ export async function app_shared_screen_rename(
           let name = property_get(key, "name");
           let match = name === screen_name_before;
           if (match) {
-            let key_after = js_expression_text(screen_name_after);
+            let key_after = js_expression_string(screen_name_after);
             let combined_screen = function_name_combine(
               prefixed,
               screen_name_before,
