@@ -1,3 +1,4 @@
+import { list_slice_count } from "../../../love/public/src/list_slice_count.mjs";
 import { list_size_assert_message } from "../../../love/public/src/list_size_assert_message.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -36,6 +37,7 @@ export async function ebible_languages_add_item(bible_folder) {
     3,
     "Should be 3 of these, if not then investigate?",
   );
+  let sliced2 = list_slice_count(list, index, count);
   return filtered;
   let r2 = await openai_responses_cache(
     "",
