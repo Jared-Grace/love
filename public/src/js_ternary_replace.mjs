@@ -24,7 +24,8 @@ export function js_ternary_replace(ast) {
     }
     let mapped2 = list_map(list2, list_single);
     function lambda2(item) {
-      let type_is = js_node_type_is(item, "BlockStatement");
+      let type_is = js_node_type_is(item, "ExpressionStatement");
+      let type_is2 = js_node_type_is(item, "AssignmentExpression");
     }
   }
   js_visit_type(ast, "IfStatement", lambda);
