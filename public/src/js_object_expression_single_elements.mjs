@@ -7,10 +7,10 @@ export function js_object_expression_single_elements(ast) {
   function lambda(v) {
     let node = property_get(v, "node");
     let stack = property_get(v, "stack");
-    let e1 = list_get_end_1(stack4);
+    let e1 = list_get_end_1(stack);
     log({
       node,
-      stack,
+      e1,
     });
   }
   js_visit_type(ast, node_type, lambda);
