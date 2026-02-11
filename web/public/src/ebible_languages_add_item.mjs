@@ -47,7 +47,9 @@ export async function ebible_languages_add_item(bible_folder) {
   async function lambda(ast) {
     let elements = js_array_expression_single_elements(ast);
     const object = {
+      name,
       bible_folder,
+      language_code,
     };
     let expression = js_object_to_expression(object);
     list_add(elements, expression);
