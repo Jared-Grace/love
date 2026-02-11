@@ -1,4 +1,3 @@
-import { html_style_set_or_remove } from "../../../love/public/src/html_style_set_or_remove.mjs";
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
 import { html_style_font_color_set_if } from "../../../love/public/src/html_style_font_color_set_if.mjs";
 import { list_map_property_get } from "../../../love/public/src/list_map_property_get.mjs";
@@ -120,13 +119,6 @@ export async function app_replace_rule_set(context) {
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(enabled);
       each_nested(list, lambda4);
       const selected = index2 === index_selected;
-      let h = app_replace_rule_set_highlight();
-      html_style_set_or_remove(
-        selected,
-        sb,
-        "box-shadow",
-        " 0 0 0 " + "0.1em" + " " + h,
-      );
       let on_a = app_replace_rule_set_highlight();
       let c = ternary_nested(selected, on_a, enabled, "#dadadaff", "#a8a8a8ff");
       html_style_background_color_set(rb, c);
