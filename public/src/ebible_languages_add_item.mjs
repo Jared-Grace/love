@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_object_to_expression } from "../../../love/public/src/js_object_to_expression.mjs";
 import { sandbox } from "../../../love/public/src/sandbox.mjs";
 import { js_array_expression_single_elements } from "../../../love/public/src/js_array_expression_single_elements.mjs";
@@ -12,6 +13,7 @@ export async function ebible_languages_add_item(bible_folder) {
       bible_folder,
     };
     let expression = js_object_to_expression(object);
+    list_add(list, item);
   }
   let output = await function_transform(f_name, lambda);
 }
