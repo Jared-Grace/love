@@ -1,3 +1,4 @@
+import { emoji_100 } from "../../../love/public/src/emoji_100.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -6,7 +7,7 @@ export function js_object_expression_single_elements(ast) {
   function lambda(v) {
     let node = property_get(v, "node");
     let stack = property_get(v, "stack");
-    le1;
+    let v2 = emoji_100();
     log({
       node,
       stack,
