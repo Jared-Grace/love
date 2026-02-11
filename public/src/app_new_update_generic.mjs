@@ -8,7 +8,7 @@ import { js_parse_statement } from "../../../love/public/src/js_parse_statement.
 import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
 import { app_shared_name_main } from "../../../love/public/src/app_shared_name_main.mjs";
 import { js_declaration_single } from "../../../love/public/src/js_declaration_single.mjs";
-import { js_code_text } from "../../../love/public/src/js_code_text.mjs";
+import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { firebase_name_repo } from "../../../love/public/src/firebase_name_repo.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
 import { app_shared_name_prefixed } from "../../../love/public/src/app_shared_name_prefixed.mjs";
@@ -23,7 +23,7 @@ export async function app_new_update_generic(
   let v = await function_name_to_path_search(a_name);
   let repo_name = property_get(v, "repo_name");
   let default2 = await firebase_name_repo(repo_name);
-  let f_name = js_code_text(default2);
+  let f_name = js_code_string(default2);
   let call_name = fn_call.name;
   let v2 = await function_parse_declaration_unaliased(call_name);
   let unaliased = property_get(v2, "unaliased");
@@ -32,7 +32,7 @@ export async function app_new_update_generic(
     let declaration = js_declaration_single(ast);
     declaration.async = true;
     let value_string = app_shared_name_main(name);
-    let main_name = js_code_text(value_string);
+    let main_name = js_code_string(value_string);
     let code = js_code_call_args_await_maybe(
       unaliased,
       [main_name, f_name],
