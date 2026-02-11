@@ -154,7 +154,7 @@ export function ebible_languages() {
     {
       name: "Kannada",
       bible_folder: "kanirv",
-      language_code: "mr",
+      language_code: "kn",
     },
   ];
   ("if you modify the above list, then run:");
