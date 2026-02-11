@@ -22,7 +22,7 @@ export async function ebible_languages_add_item(bible_folder) {
     d,
     "http://www.ethnologue.com/language/",
   );
-  return;
+  return unique;
   let r2 = await openai_responses_cache(
     "",
     "What is the language code of the following language? Answer just the two or three characters of the code. ",
