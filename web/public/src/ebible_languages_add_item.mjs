@@ -1,3 +1,4 @@
+import { openai_responses_cache } from "../../../love/public/src/openai_responses_cache.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_object_to_expression } from "../../../love/public/src/js_object_to_expression.mjs";
 import { sandbox } from "../../../love/public/src/sandbox.mjs";
@@ -7,6 +8,7 @@ import { function_transform } from "../../../love/public/src/function_transform.
 export async function ebible_languages_add_item(bible_folder) {
   let f_name = ebible_languages.name;
   f_name = sandbox.name;
+  let r = await openai_responses_cache(system, user);
   async function lambda(ast) {
     let elements = js_array_expression_single_elements(ast);
     const object = {
