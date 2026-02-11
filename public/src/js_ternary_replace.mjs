@@ -23,6 +23,10 @@ export function js_ternary_replace(ast) {
     if (not(a)) {
       return false;
     }
+    let es = list_all(mapped, js_expression_statement_is);
+    if (not(a)) {
+      return false;
+    }
     let mapped2 = list_map(list2, list_single);
     function lambda2(item) {
       let type_is = js_expression_statement_is(item);
