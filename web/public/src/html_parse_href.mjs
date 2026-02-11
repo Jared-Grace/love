@@ -7,5 +7,5 @@ export function html_parse_href(d, item) {
   if (n) {
     href = null;
   }
-  return n;
+  return href;
 }
