@@ -1,3 +1,4 @@
+import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { js_block_to_body } from "../../../love/public/src/js_block_to_body.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
@@ -16,6 +17,7 @@ export function js_ternary_replace(ast) {
         return false;
       }
       let body_block = js_block_to_body(item);
+      let s1 = list_size_1(list);
       log({
         body_block,
       });
