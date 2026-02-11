@@ -6,7 +6,7 @@ import { marker_next_declare_single_init } from "../../../love/public/src/marker
 export async function js_dollar_choice_arguments() {
   let result = null;
   async function lambda2(ast) {
-    let elements = js_object_expression_named(ast2, search);
+    let elements = js_object_expression_named(ast, search);
   }
   let output = await function_transform(f_name, lambda2);
   async function lambda(a) {
