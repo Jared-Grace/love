@@ -37,7 +37,7 @@ export function js_ternary_replace(ast) {
       return false;
     }
     let mapped4 = list_map_property(mapped2, "left");
-    let i = list_all(mapped3, js_identifier_is);
+    let i = list_all(mapped4, js_identifier_is);
   }
   js_visit_type(ast, "IfStatement", lambda);
   return;
