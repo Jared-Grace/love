@@ -1,3 +1,5 @@
+import { ebible_url } from "../../../love/public/src/ebible_url.mjs";
+import { ebible_url_details } from "../../../love/public/src/ebible_url_details.mjs";
 import { http_local_html_parse } from "../../../love/public/src/http_local_html_parse.mjs";
 import { openai_responses_cache } from "../../../love/public/src/openai_responses_cache.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -9,7 +11,8 @@ import { function_transform } from "../../../love/public/src/function_transform.
 export async function ebible_languages_add_item(bible_folder) {
   let f_name = ebible_languages.name;
   f_name = sandbox.name;
-  let r = await http_local_html_parse("https://ebible.org/details.php?id=mar");
+  let prefix = ebible_url_details();
+  let r = await http_local_html_parse(ebible_url() + prefix + bible_folder);
   return;
   let r2 = await openai_responses_cache(
     "",
