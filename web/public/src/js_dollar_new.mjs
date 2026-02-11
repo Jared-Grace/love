@@ -10,6 +10,6 @@ export async function js_dollar_new(code) {
     js_declaration_single_block_body_add_return(ast);
     await js_dollar_new_args_inner(ast);
   }
-  let code2 = await js_dollar_new_update_list(combined, lambda2, code);
+  let code2 = await js_dollar_new_update_list(lambda2, code);
   return code2;
 }
