@@ -4,7 +4,7 @@ import { function_transform } from "../../../love/public/src/function_transform.
 export async function ebible_languages_add_item() {
   let f_name = ebible_languages.name;
   async function lambda(ast) {
-    let elements = js_array_expression_single_elements(ast2);
+    let elements = js_array_expression_single_elements(ast);
   }
   let output = await function_transform(f_name, lambda);
 }
