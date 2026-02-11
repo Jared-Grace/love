@@ -1,6 +1,7 @@
 import { html_style_font_color_set_if } from "../../../love/public/src/html_style_font_color_set_if.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { html_enable_if } from "../../../love/public/src/html_enable_if.mjs";
+import { ternary } from "./ternary.mjs";
 export function app_replace_button_symbol_style_valid(sb, valid) {
   let color_font = null;
   let color_bg = null;
@@ -10,6 +11,7 @@ export function app_replace_button_symbol_style_valid(sb, valid) {
   } else {
     color_bg = "#1e6c1eff";
   }
+  let result = ternary(condition, on_true, on_false);
   html_style_background_color_set(sb, color_bg);
   html_style_font_color_set_if(sb, valid, "white", "#b9fcb9ff");
 }
