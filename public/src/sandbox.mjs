@@ -1,3 +1,7 @@
 export async function sandbox() {
-  let a = [];
+  let a = [
+    (a = {
+      bible_folder: "t",
+    }),
+  ];
 }
