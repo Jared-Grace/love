@@ -13,7 +13,7 @@ export async function js_dollar_choice_arguments() {
     let oes = js_object_expression_named(ast, "js_dollar_arguments");
     let only = list_single(oes);
     let properties = property_get(only, "properties");
-    let mapped = list_map_property(list, property_name);
+    let mapped = list_map_property(properties, "key");
     log({
       properties,
     });
