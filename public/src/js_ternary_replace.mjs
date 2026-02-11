@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
@@ -44,6 +45,7 @@ export function js_ternary_replace(ast) {
       return false;
     }
     let mapped5 = list_map(mapped, js_identifier_name);
+    let first = list_first(list2);
     let eq = list_all(mapped5, equal);
   }
   js_visit_type(ast, "IfStatement", lambda);
