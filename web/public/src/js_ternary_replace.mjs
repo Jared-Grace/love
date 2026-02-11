@@ -19,10 +19,6 @@ export function js_ternary_replace(ast) {
       });
     }
     let a = list_all([alternate, consequent], lambda2);
-    log({
-      alternate,
-      consequent,
-    });
   }
   js_visit_type(ast, "IfStatement", lambda);
   return;
