@@ -4,7 +4,7 @@ import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { function_parse_unaliased } from "../../../love/public/src/function_parse_unaliased.mjs";
 import { js_node_type } from "../../../love/public/src/js_node_type.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-export async function function_type_first(type) {
+export async function function_type_first(f_name, type) {
   let v = await function_parse_unaliased(f_name);
   let ast = property_get(v, "ast");
   function lambda2(la) {
