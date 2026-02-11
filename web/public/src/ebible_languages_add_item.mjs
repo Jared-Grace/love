@@ -1,6 +1,5 @@
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ebible_languages_add_item_info } from "../../../love/public/src/ebible_languages_add_item_info.mjs";
-import { openai_responses_cache } from "../../../love/public/src/openai_responses_cache.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_object_to_expression } from "../../../love/public/src/js_object_to_expression.mjs";
 import { sandbox } from "../../../love/public/src/sandbox.mjs";
@@ -13,11 +12,6 @@ export async function ebible_languages_add_item(bible_folder) {
   let r = await ebible_languages_add_item_info(bible_folder);
   let language_code = property_get(r, "language_code");
   let name = property_get(r, "name");
-  return name;
-  let r2 = await openai_responses_cache(
-    "",
-    "What is the language code of the following language? Answer just the two or three characters of the code. ",
-  );
   async function lambda(ast) {
     let elements = js_array_expression_single_elements(ast);
     const object = {
