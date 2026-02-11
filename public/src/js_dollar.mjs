@@ -1,4 +1,3 @@
-import { js_dollar_choice_arguments } from "../../../love/public/src/js_dollar_choice_arguments.mjs";
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
 import { js_dollar_choices } from "../../../love/public/src/js_dollar_choices.mjs";
