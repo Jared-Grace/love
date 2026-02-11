@@ -9,8 +9,6 @@ import { function_transform } from "../../../love/public/src/function_transform.
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { js_property_parse_expression_add } from "../../../love/public/src/js_property_parse_expression_add.mjs";
-import { js_dollar_choices } from "../../../love/public/src/js_dollar_choices.mjs";
-import { function_transform_marker_specified } from "../../../love/public/src/function_transform_marker_specified.mjs";
 export async function js_dollar_new(code) {
   let combined = js_dollar_new_name(code);
   await function_new(combined);
@@ -33,10 +31,5 @@ export async function js_dollar_new(code) {
     list_add(elements, oe);
     await js_imports_missing_add(ast);
   }
-  let code2 = await function_transform_marker_specified(
-    js_dollar_choices.name,
-    "choices",
-    lambda,
-  );
   return code2;
 }
