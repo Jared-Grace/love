@@ -28,6 +28,10 @@ export function js_ternary_replace(ast) {
     if (not(es)) {
       return false;
     }
+    let ae = list_all(list2, js_assignment_expression_is);
+    if (not(ae)) {
+      return false;
+    }
     function lambda2(item) {
       let type_is = js_expression_statement_is(item);
       let type_is2 = js_assignment_expression_is(item);
