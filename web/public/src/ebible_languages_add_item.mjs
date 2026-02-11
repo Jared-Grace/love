@@ -9,7 +9,7 @@ import { function_transform } from "../../../love/public/src/function_transform.
 export async function ebible_languages_add_item(bible_folder) {
   let f_name = ebible_languages.name;
   f_name = sandbox.name;
-  let r = await http_local_html_parse(url);
+  let r = await http_local_html_parse("https://ebible.org/details.php?id=mar");
   return;
   let r2 = await openai_responses_cache(
     "",
