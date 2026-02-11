@@ -5,13 +5,13 @@ import { html_style_assign } from "../../../love/public/src/html_style_assign.mj
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
-import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
+import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_cartesian_product_self } from "../../../love/public/src/list_cartesian_product_self.mjs";
 export function app_designs_universal_main(context) {
   let root = property_get(context, "root");
   const size = "7px";
-  html_style_background_color(root, "gray");
+  html_style_background_color_set(root, "gray");
   let colors = ["red", "orange", "yellow", "green", "blue", "purple"];
   let dimensions = [
     {
@@ -51,7 +51,7 @@ export function app_designs_universal_main(context) {
             height: size,
           });
           let item = list_get(possibility, offset_x);
-          html_style_background_color(column, item);
+          html_style_background_color_set(column, item);
         }
         each_range(columns, lambda2);
       }
