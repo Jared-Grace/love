@@ -1,5 +1,4 @@
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { js_dollar } from "../../../love/public/src/js_dollar.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -14,9 +13,6 @@ export async function js_dollar_choice_arguments() {
     let only = list_single(oes);
     let properties = property_get(only, "properties");
     let mapped = list_map_property(properties, "key");
-    log({
-      properties,
-    });
     result = list_map(mapped, js_identifier_name);
   }
   let output = await function_transform(js_dollar.name, lambda2);
