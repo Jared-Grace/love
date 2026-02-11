@@ -1,5 +1,4 @@
-import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
-import { json_to } from "../../../love/public/src/json_to.mjs";
+import { js_object_to_expression } from "../../../love/public/src/js_object_to_expression.mjs";
 import { sandbox } from "../../../love/public/src/sandbox.mjs";
 import { js_array_expression_single_elements } from "../../../love/public/src/js_array_expression_single_elements.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
@@ -12,8 +11,7 @@ export async function ebible_languages_add_item(bible_folder) {
     const object = {
       bible_folder,
     };
-    let json = json_to(object);
-    let expression = js_parse_expression(json);
+    js_object_to_expression(object);
   }
   let output = await function_transform(f_name, lambda);
 }
