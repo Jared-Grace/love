@@ -5,10 +5,10 @@ import { app_shared_name_prefixed } from "../../../love/public/src/app_shared_na
 export async function app_shared_screen_add_generic(a_name, lambda) {
   let prefixed = app_shared_name_prefixed(a_name);
   let combined = function_name_combine(prefixed, "screens");
-  async function lambda_ftms(ast) {
+  async function lambda_ft(ast) {
     let elements = js_array_expression_single_elements(ast);
     await lambda(elements, prefixed);
   }
-  let result = await function_transform(combined, lambda_ftms);
+  let result = await function_transform(combined, lambda_ft);
   return result;
 }

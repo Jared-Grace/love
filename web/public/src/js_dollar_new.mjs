@@ -19,9 +19,8 @@ export async function js_dollar_new(code) {
     await js_dollar_new_args_inner(ast);
   }
   await function_transform(combined, lambda2);
-  async function lambda(a) {
-    let ast = property_get(a, "ast");
-    let elements = marker_next_declare_single_init_elements(a);
+  async function lambda(ast) {
+      let elements = js_array_expression_single_elements(ast);
     let oe = {
       type: "ObjectExpression",
       properties: [],
@@ -33,7 +32,7 @@ export async function js_dollar_new(code) {
     list_add(elements, oe);
     await js_imports_missing_add(ast);
   }
-  let code2 = await function_transform_marker_specified(
+  let code2 = await function_transform(
     js_dollar_choices.name,
     "choices",
     lambda,
