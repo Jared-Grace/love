@@ -20,7 +20,7 @@ export function js_ternary_replace(ast) {
       return s1;
     }
     let a = list_all([alternate, consequent], lambda2);
-    if (false) {
+    if (a) {
     }
   }
   js_visit_type(ast, "IfStatement", lambda);
