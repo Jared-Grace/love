@@ -31,7 +31,11 @@ export async function ebible_languages_add_item(bible_folder) {
   let url_language = url_language_prefix + language_code + "";
   let mapped = html_parse_find_a_href_text(root, d);
   let filtered = list_filter_property(mapped, "href", url_language);
-  list_size_assert_message(filtered, 3, message);
+  list_size_assert_message(
+    filtered,
+    3,
+    "Should be 3 of these, if not then investigate?",
+  );
   lza;
   return filtered;
   let r2 = await openai_responses_cache(
