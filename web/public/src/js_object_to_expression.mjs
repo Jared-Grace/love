@@ -1,9 +1,11 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
+import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 import { js_code_let_assign } from "../../../love/public/src/js_code_let_assign.mjs";
-import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 export function js_object_to_expression(object) {
   let json = json_to(object);
   let code_assign = js_code_let_assign("a", json);
-  let expression = js_parse_expression(code_assign);
+  let statement = js_parse_statement(code_assign);
+  let expression = property_get(statement, "expression");
   return expression;
 }
