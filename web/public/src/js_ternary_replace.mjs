@@ -22,9 +22,6 @@ export function js_ternary_replace(ast) {
       return false;
     }
     let mapped = list_map(list, js_block_to_body);
-    log({
-      mapped2,
-    });
     let a = list_all(mapped, list_size_1);
     if (not(a)) {
       return false;
