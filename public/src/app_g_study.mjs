@@ -5,7 +5,7 @@ import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_index_last_is } from "../../../love/public/src/list_index_last_is.mjs";
 import { html_bold_mild } from "../../../love/public/src/html_bold_mild.mjs";
-import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
+import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
@@ -59,7 +59,7 @@ export function app_g_study(player, overlay, close) {
       const text = app_g_passage_to_reference(passage, chapter_code, books);
       let c = app_g_container_text(overlay, text);
       html_bold_mild(c);
-      html_style_background_color(c, "#ffffffcd");
+      html_style_background_color_set(c, "#ffffffcd");
       app_g_container_text(
         overlay,
         "If you were preaching from this Bible passage, what would you say?",
