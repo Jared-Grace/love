@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ebible_url } from "../../../love/public/src/ebible_url.mjs";
 import { ebible_url_details } from "../../../love/public/src/ebible_url_details.mjs";
 import { http_local_html_parse } from "../../../love/public/src/http_local_html_parse.mjs";
@@ -13,6 +14,8 @@ export async function ebible_languages_add_item(bible_folder) {
   f_name = sandbox.name;
   let prefix = ebible_url_details();
   let r = await http_local_html_parse(ebible_url() + prefix + bible_folder);
+  let root = property_get(r, "root");
+  let d = property_get(r, "d");
   return;
   let r2 = await openai_responses_cache(
     "",
