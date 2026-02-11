@@ -6,7 +6,8 @@ import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function js_object_expression_named(ast) {
-  let list = list_adder(function lambda2(la) {});
+  function lambda2(la) {}
+  let list = list_adder(lambda2);
   let node_type = "ObjectExpression";
   function lambda(v) {
     let node = property_get(v, "node");
