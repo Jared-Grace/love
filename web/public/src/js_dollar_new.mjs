@@ -7,7 +7,7 @@ import { function_new } from "../../../love/public/src/function_new.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { js_code_text } from "../../../love/public/src/js_code_text.mjs";
+import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { js_property_parse_expression_add } from "../../../love/public/src/js_property_parse_expression_add.mjs";
 import { js_dollar_choices } from "../../../love/public/src/js_dollar_choices.mjs";
 import { function_transform_marker_specified } from "../../../love/public/src/function_transform_marker_specified.mjs";
@@ -27,7 +27,7 @@ export async function js_dollar_new(code) {
       properties: [],
     };
     let properties = property_get(oe, "properties");
-    let code_string = js_code_text(code);
+    let code_string = js_code_string(code);
     js_property_parse_expression_add("name", code_string, properties);
     js_property_parse_expression_add("fn", combined, properties);
     list_add(elements, oe);
