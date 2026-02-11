@@ -1,3 +1,4 @@
+import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { js_assignment_expression_is } from "../../../love/public/src/js_assignment_expression_is.mjs";
 import { js_expression_statement_is } from "../../../love/public/src/js_expression_statement_is.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -36,6 +37,7 @@ export function js_ternary_replace(ast) {
       return false;
     }
     let mapped4 = list_map_property(mapped2, "left");
+    let i = list_all(mapped3, js_identifier_is);
   }
   js_visit_type(ast, "IfStatement", lambda);
   return;
