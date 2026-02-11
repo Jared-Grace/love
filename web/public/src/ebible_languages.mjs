@@ -1,4 +1,3 @@
-import { ebible_languages_add } from "../../../love/public/src/ebible_languages_add.mjs";
 import { ebible_folder_cebuano } from "../../../love/public/src/ebible_folder_cebuano.mjs";
 import { list_sort_text_property } from "../../../love/public/src/list_sort_text_property.mjs";
 import { ebible_language_original } from "../../../love/public/src/ebible_language_original.mjs";
@@ -6,8 +5,9 @@ import { ebible_language_en } from "../../../love/public/src/ebible_language_en.
 import { ebible_folder_swahili } from "../../../love/public/src/ebible_folder_swahili.mjs";
 import { ebible_languages_chapters_cache_refresh } from "../../../love/public/src/ebible_languages_chapters_cache_refresh.mjs";
 import { ebible_folder_urdu } from "../../../love/public/src/ebible_folder_urdu.mjs";
+import { fn_name } from "./fn_name.mjs";
 export function ebible_languages() {
-  "to add an entry, run: " + ebible_languages_add.name;
+  "to add an entry, run: " + fn_name("ebible_languages_add");
   let en = ebible_language_en();
   let o = ebible_language_original();
   let languages = [
