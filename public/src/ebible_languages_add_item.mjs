@@ -8,7 +8,10 @@ export async function ebible_languages_add_item(bible_folder) {
   f_name = sandbox.name;
   async function lambda(ast) {
     let elements = js_array_expression_single_elements(ast);
-    let json = json_to(object);
+    let json = json_to({
+      bible_folder,
+    });
+    jp;
   }
   let output = await function_transform(f_name, lambda);
 }
