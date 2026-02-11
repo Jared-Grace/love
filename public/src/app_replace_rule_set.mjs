@@ -1,3 +1,4 @@
+import { text_pad_space } from "../../../love/public/src/text_pad_space.mjs";
 import { text_arrow } from "../../../love/public/src/text_arrow.mjs";
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
 import { html_style_font_color_set_if } from "../../../love/public/src/html_style_font_color_set_if.mjs";
@@ -81,7 +82,9 @@ export async function app_replace_rule_set(context) {
     html_style_padding_y(b, "0.3em");
     html_border_none(b);
     let lefts = rule_button_side(b, left);
-    let arrow = html_span_text(b, " " + text_arrow() + " ");
+    let s = text_arrow();
+    let text = text_pad_space(s);
+    let arrow = html_span_text(b, text);
     html_bold(arrow);
     let rights = rule_button_side(b, right);
     html_disable(b);
