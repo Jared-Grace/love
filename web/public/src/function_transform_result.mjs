@@ -23,8 +23,7 @@ export async function function_transform_result(f_names, lambda$ast) {
   let r3 = await each_async(split, lambda);
   return r3;
   return;
-  async function lambda3(item) {}
-  let mapped = await list_map_async(list, lambda3);
+  let mapped = await list_map_async(list, async function lambda3(item) {});
   let d_path = data_path();
   await data_all_initialize(d_path);
   let r = await file_transform_cached(d_path, lambda2);
