@@ -28,9 +28,8 @@ export async function js_return_atomize(ast) {
   await each_async(rs, lambda);
   return;
   if (js_node_type_is(node, "ReturnStatement")) {
-    let argument2 = property_get(node, "argument2");
-    if (js_node_type_is(argument2, "Identifier")) {
-      await noop(argument2);
+    let argument = property_get(node, "argument");
+    if (js_node_type_is(argument, "Identifier")) {
     } else {
       if (argument === null) {
         return;
