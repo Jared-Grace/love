@@ -28,6 +28,7 @@ export async function ebible_languages_add_item(bible_folder) {
   let language_code = list_single(unique);
   let url_language = url_language_prefix + language_code + "";
   let mapped = html_parse_find_a_href_text(root, d);
+  lflp;
   return unique;
   let r2 = await openai_responses_cache(
     "",
