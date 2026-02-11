@@ -49,6 +49,7 @@ export function js_ternary_replace(ast) {
     let r = equal_curried(first);
     let eq = list_all(mapped5, r);
     if (not(eq)) {
+      return false;
     }
   }
   js_visit_type(ast, "IfStatement", lambda);
