@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_all_equal } from "../../../love/public/src/list_all_equal.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
@@ -48,6 +49,7 @@ export function js_ternary_replace(ast) {
     if (not(eq)) {
       return false;
     }
+    let first = list_first(list2);
   }
   js_visit_type(ast, "IfStatement", lambda);
   return;
