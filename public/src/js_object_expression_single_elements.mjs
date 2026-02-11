@@ -1,16 +1,15 @@
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { list_single } from "../../../love/public/src/list_single.mjs";
 export function js_object_expression_single_elements(ast) {
   let node_type = "ObjectExpression";
-  function lambda() {}
+  function lambda(v) {
+    let node = property_get(v, "node");
+    log({
+      node,
+    });
+  }
   let vs = js_visit_type(ast, node_type, lambda);
-  let only = list_single(vs);
-  let node = property_get(only, "node");
-  log({
-    node,
-  });
   return node;
   let elements = property_get(node, "elements");
   return elements;
