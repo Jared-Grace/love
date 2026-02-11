@@ -10,7 +10,7 @@ import { ebible_url } from "../../../love/public/src/ebible_url.mjs";
 import { http_local_html_parse } from "../../../love/public/src/http_local_html_parse.mjs";
 import { ebible_url_details } from "../../../love/public/src/ebible_url_details.mjs";
 export async function ebible_languages_add_item_info(bible_folder) {
-  text_is_assert(value);
+  text_is_assert(bible_folder);
   let prefix = ebible_url_details();
   let r = await http_local_html_parse(ebible_url() + prefix + bible_folder);
   let root = property_get(r, "root");
@@ -36,5 +36,4 @@ export async function ebible_languages_add_item_info(bible_folder) {
     name,
     language_code,
   };
-  return r3;
-}
+  return
