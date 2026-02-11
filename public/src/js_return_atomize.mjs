@@ -14,7 +14,6 @@ export async function js_return_atomize(ast) {
     if (js_node_type_is(node, "ReturnStatement")) {
       let argument = property_get(node, "argument");
       if (js_node_type_is(argument, "Identifier")) {
-        return;
         if (argument === null) {
           return;
         }
