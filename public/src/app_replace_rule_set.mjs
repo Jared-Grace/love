@@ -66,7 +66,7 @@ export async function app_replace_rule_set(context) {
   let label_rules = html_p(root);
   let rules = property_get(item, "rules");
   let rules_parsed = list_map(rules, app_replace_rule_parse);
-  function lambda(rule, index) {
+  function each_button_rule(rule, index) {
     let left = property_get(rule, "left");
     let right = property_get(rule, "right");
     function lambda3() {
@@ -97,7 +97,7 @@ export async function app_replace_rule_set(context) {
     });
     return b;
   }
-  let rules_buttons = list_map_index(rules_parsed, lambda);
+  let rules_buttons = list_map_index(rules_parsed, each_button_rule);
   let label_symbols = html_p(root);
   let div = html_div(root);
   let current_list = text_split_empty(start);
