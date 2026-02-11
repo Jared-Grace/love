@@ -1,4 +1,4 @@
 export function app_replace_button_rule_background_color() {
-  let r2 = "#dadadaff";
-  return r2;
+  let c = "#dadadaff";
+  return c;
 }
