@@ -1,5 +1,5 @@
+import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { js_dollar } from "../../../love/public/src/js_dollar.mjs";
-import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -11,7 +11,7 @@ export async function js_dollar_choice_arguments() {
     let oes = js_object_expression_named(ast, "js_dollar_arguments");
     let only = list_single(oes);
     let properties = property_get(only, "properties");
-    result = list_map(properties, js_identifier_is);
+    result = list_map(properties, js_identifier_name);
   }
   let output = await function_transform(js_dollar.name, lambda2);
   return result;
