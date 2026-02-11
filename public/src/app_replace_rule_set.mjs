@@ -1,3 +1,4 @@
+import { ternary_nested } from "../../../love/public/src/ternary_nested.mjs";
 import { html_style_font_color_set_if } from "../../../love/public/src/html_style_font_color_set_if.mjs";
 import { html_style_background_color_set_if } from "../../../love/public/src/html_style_background_color_set_if.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
@@ -121,6 +122,13 @@ export async function app_replace_rule_set(context) {
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(enabled);
       each_nested(list, lambda4);
       const condition = index2 === index_selected;
+      let result = ternary_nested(
+        condition_a,
+        on_a,
+        condition_b,
+        on_b,
+        on_false,
+      );
       html_style_background_color_set_if(
         condition,
         rb,
