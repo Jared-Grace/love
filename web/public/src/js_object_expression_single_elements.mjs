@@ -12,7 +12,7 @@ export function js_object_expression_single_elements(ast) {
     function lambda3() {
       let id = property_get(e1, "id");
       function lambda4() {}
-      js_node_type_is_if(node2, type, lambda4);
+      js_node_type_is_if(id, "Identifier", lambda4);
       log({
         node,
         e1,
