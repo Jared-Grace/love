@@ -25,7 +25,7 @@ export function js_ternary_replace(ast) {
     if (not(a)) {
       return false;
     }
-    let mapped2 = list_map(list2, list_single);
+    let mapped2 = list_map(mapped, list_single);
     let es = list_all(mapped2, js_expression_statement_is);
     if (not(es)) {
       return false;
