@@ -115,7 +115,7 @@ export async function app_replace_rule_set(context) {
       let enabled = list_any(r, lambda7);
       html_enable_if(rb, enabled);
       let properties = ["rights", "lefts"];
-      let list = list_map_property_get(rb, properties);
+      let list = list_map_property_get(properties, rb);
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(enabled);
       each_nested(list, lambda4);
       const condition = index2 === index_selected;
