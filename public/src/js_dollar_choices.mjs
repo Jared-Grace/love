@@ -1,3 +1,4 @@
+import { js_dollar_0 } from "../../../love/public/src/js_dollar_0.mjs";
 import { js_dollar_n } from "../../../love/public/src/js_dollar_n.mjs";
 import { js_dollar_inn } from "../../../love/public/src/js_dollar_inn.mjs";
 import { js_dollar_iel } from "../../../love/public/src/js_dollar_iel.mjs";
@@ -104,6 +105,10 @@ export function js_dollar_choices() {
     {
       name: "n",
       fn: js_dollar_n,
+    },
+    {
+      name: "0",
+      fn: js_dollar_0,
     },
   ];
   return choices;
