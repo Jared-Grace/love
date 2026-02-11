@@ -6,6 +6,7 @@ export function js_object_expression_single_elements(ast) {
   let vs = js_list_type(ast, node_type);
   let only = list_single(vs);
   let node = property_get(only, "node");
+  return node;
   let elements = property_get(node, "elements");
   return elements;
 }
