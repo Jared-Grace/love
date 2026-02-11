@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
@@ -7,14 +8,16 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 export function js_object_expression_named(ast) {
   function lambda2(la) {
     function lambda(v) {
-      let node = property_get(v, "node");
       let stack = property_get(v, "stack");
       let e1 = list_get_end_1(stack);
       function lambda3() {
         let id = property_get(e1, "id");
         function lambda4() {
           let name = js_identifier_name(id);
-          la(name);
+          if (equal(left, right)) {
+          }
+          let node = property_get(v, "node");
+          la(node);
         }
         js_node_type_is_if(id, "Identifier", lambda4);
       }
