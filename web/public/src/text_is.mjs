@@ -1,4 +1,4 @@
 export function text_is(value) {
-  let si = typeof value === "string";
-  return si;
+  let ti = typeof value === "string";
+  return ti;
 }
