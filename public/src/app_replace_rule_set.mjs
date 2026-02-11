@@ -125,6 +125,7 @@ export async function app_replace_rule_set(context) {
       let result = ternary(selected, h, on_false);
       if (false) {
         html_style_set_or_remove(
+          selected,
           sb,
           "box-shadow",
           " 0 0 0 " + "0.1em" + " " + h,
