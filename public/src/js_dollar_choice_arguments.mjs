@@ -8,7 +8,7 @@ import { function_transform } from "../../../love/public/src/function_transform.
 export async function js_dollar_choice_arguments() {
   let result = null;
   async function lambda2(ast) {
-    let oes = js_object_expression_named(ast, search);
+    let oes = js_object_expression_named(ast, "js_dollar_arguments");
     let only = list_single(oes);
     let properties = property_get(only, "properties");
     result = list_map(properties, js_identifier_is);
