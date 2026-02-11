@@ -101,7 +101,6 @@ export async function app_replace_rule_set(context) {
     function symbol_each(symbol) {
       let span = html_span_text(b, symbol);
       app_replace_button_symbol_style(span);
-      app_replace_button_symbol_style_valid(span, true);
       return span;
     }
     let mapped = list_map(left, symbol_each);
