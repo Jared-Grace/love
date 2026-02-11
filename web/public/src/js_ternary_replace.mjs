@@ -1,3 +1,4 @@
+import { equal_curried } from "../../../love/public/src/equal_curried.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
@@ -45,7 +46,8 @@ export function js_ternary_replace(ast) {
       return false;
     }
     let mapped5 = list_map(mapped, js_identifier_name);
-    let first = list_first(list2);
+    let first = list_first(mapped5);
+    let r = equal_curried(left);
     let eq = list_all(mapped5, equal);
   }
   js_visit_type(ast, "IfStatement", lambda);
