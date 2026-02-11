@@ -1,3 +1,4 @@
+import { js_assignment_expression_is } from "../../../love/public/src/js_assignment_expression_is.mjs";
 import { js_expression_statement_is } from "../../../love/public/src/js_expression_statement_is.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -5,7 +6,6 @@ import { js_block_statement_is } from "../../../love/public/src/js_block_stateme
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { js_block_to_body } from "../../../love/public/src/js_block_to_body.mjs";
 import { not } from "../../../love/public/src/not.mjs";
-import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
@@ -26,7 +26,7 @@ export function js_ternary_replace(ast) {
     let mapped2 = list_map(list2, list_single);
     function lambda2(item) {
       let type_is = js_expression_statement_is(item);
-      let type_is2 = js_node_type_is(item, "AssignmentExpression");
+      let type_is2 = js_assignment_expression_is(item);
     }
   }
   js_visit_type(ast, "IfStatement", lambda);
