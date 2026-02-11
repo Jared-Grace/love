@@ -1,7 +1,7 @@
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { error_json } from "./error_json.mjs";
-export function list_size_assert_message(list, message, size) {
+export function list_size_assert_message(list, size, message) {
   let a = list_size(list) === size;
   if (not(a)) {
     error_json({
