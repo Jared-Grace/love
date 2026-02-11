@@ -1,6 +1,6 @@
 import { list_filter_text_match_ordered } from "../../../love/public/src/list_filter_text_match_ordered.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
-import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
+import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { app_a_control_style } from "../../../love/public/src/app_a_control_style.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
@@ -24,7 +24,7 @@ export function app_a_list_chooser(context, noun, texts, lambda$text) {
   const text = "Choose " + articled + ":";
   let d = html_div_text_centered(root, text);
   app_a_control_style(d);
-  html_style_background_color(d, "white");
+  html_style_background_color_set(d, "white");
   let filtered = null;
   async function on_enter() {
     let first = list_first(filtered);
