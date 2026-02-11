@@ -10,7 +10,7 @@ export function js_object_expression_single_elements(ast) {
     });
   }
   js_visit_type(ast, node_type, lambda);
-  return node;
+  return;
   let elements = property_get(node, "elements");
   return elements;
   const js_dollar_arguments = {
