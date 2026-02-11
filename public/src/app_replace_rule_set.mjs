@@ -126,7 +126,7 @@ export async function app_replace_rule_set(context) {
         "#dadadaff",
         "#a8a8a8ff",
       );
-      html_style_background_color_set(rb, c);
+      html_style_background_color_set(rb, c);html_style_font_color_set_if
     }
     each_index(rules_buttons, each_rule_button);
     html_clear(div);
