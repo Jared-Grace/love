@@ -1,5 +1,5 @@
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { js_text } from "../../../love/public/src/js_text.mjs";
+import { js_string } from "../../../love/public/src/js_string.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_node_type_not_is } from "../../../love/public/src/js_node_type_not_is.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -20,7 +20,7 @@ export async function marker_rename(from, to) {
     if (nti) {
       return;
     }
-    let s = js_text(to);
+    let s = js_string(to);
     object_replace(a0, s);
   }
   let f_name_current = await function_current_get();
