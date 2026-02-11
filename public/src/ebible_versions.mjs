@@ -8,9 +8,9 @@ import { http_local_text } from "../../../love/public/src/http_local_text.mjs";
 export async function ebible_versions() {
   let url = "https://ebible.org/download.php";
   let text = await http_local_text(url);
-  let v = await html_parse(text);
-  let root = property_get(v, "root");
-  let d = property_get(v, "d");
+  let r = await html_parse(text);
+  let root = property_get(r, "root");
+  let d = property_get(r, "d");
   let list = html_parse_find_a_href_starts_with(root, d, "details.php?id=");
   let mapped = list_map_prefix_without(list, "details.php?id=");
   let unique = list_unique(mapped);
