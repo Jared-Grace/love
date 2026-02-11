@@ -17,7 +17,7 @@ export async function js_dollar_choice_arguments() {
     log({
       properties,
     });
-    result = list_map(properties, js_identifier_name);
+    result = list_map(mapped, js_identifier_name);
   }
   let output = await function_transform(js_dollar.name, lambda2);
   return result;
