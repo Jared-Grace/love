@@ -23,20 +23,11 @@ export function js_object_expression_named(ast, search) {
       }
       js_node_type_is_if(e1, "VariableDeclarator", lambda3);
     }
+    let node_type = "ObjectExpression";
     js_visit_type(ast, node_type, lambda);
   }
   let list = list_adder(lambda2);
-  let node_type = "ObjectExpression";
-  return;
+  return list;
   let elements = property_get(node, "elements");
   return elements;
-  const js_dollar_arguments = {
-    remaining,
-    node,
-    stack1,
-    stack2,
-    stack3,
-    ast,
-    afters,
-  };
 }
