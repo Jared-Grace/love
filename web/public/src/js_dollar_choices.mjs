@@ -110,6 +110,10 @@ export function js_dollar_choices() {
       name: "0",
       fn: js_dollar_0,
     },
+    {
+      name: "0",
+      fn: js_dollar_0,
+    },
   ];
   return choices;
 }
