@@ -1,3 +1,4 @@
+import { js_expression_statement_is } from "../../../love/public/src/js_expression_statement_is.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_block_statement_is } from "../../../love/public/src/js_block_statement_is.mjs";
@@ -24,7 +25,7 @@ export function js_ternary_replace(ast) {
     }
     let mapped2 = list_map(list2, list_single);
     function lambda2(item) {
-      let type_is = js_node_type_is(item, "ExpressionStatement");
+      let type_is = js_expression_statement_is(item);
       let type_is2 = js_node_type_is(item, "AssignmentExpression");
     }
   }
