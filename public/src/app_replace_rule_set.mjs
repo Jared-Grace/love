@@ -1,5 +1,4 @@
 import { ternary_nested } from "../../../love/public/src/ternary_nested.mjs";
-import { html_style_font_color_set_if } from "../../../love/public/src/html_style_font_color_set_if.mjs";
 import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
 import { html_style_padding_y } from "../../../love/public/src/html_style_padding_y.mjs";
 import { html_bold } from "../../../love/public/src/html_bold.mjs";
@@ -129,7 +128,6 @@ export async function app_replace_rule_set(context) {
         "#7e7e7eff",
       );
       html_style_background_color(rb, c);
-      html_style_font_color_set_if(enabled, rb, "black", "#7e7e7eff");
     }
     each_index(rules_buttons, each_rule_button);
     html_clear(div);
