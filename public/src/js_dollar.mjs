@@ -43,7 +43,7 @@ export async function js_dollar(ast) {
       let remaining = list_skip(split, 2);
       let lower = text_lower_to(second);
       if (lower === choice_name) {
-        const a = {
+        const js_dollar_arguments = {
           remaining,
           node,
           stack1,
@@ -52,7 +52,7 @@ export async function js_dollar(ast) {
           ast,
           afters,
         };
-        await fn(a);
+        await fn(js_dollar_arguments);
       }
     }
     await each_async(choices, lambda2);
