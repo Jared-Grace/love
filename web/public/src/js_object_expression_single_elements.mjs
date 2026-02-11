@@ -1,3 +1,4 @@
+import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
@@ -12,7 +13,7 @@ export function js_object_expression_single_elements(ast) {
     function lambda3() {
       let id = property_get(e1, "id");
       function lambda4() {
-        let name = property_get(id, "name");
+        let name = js_identifier_name(id);
       }
       js_node_type_is_if(id, "Identifier", lambda4);
       log({
