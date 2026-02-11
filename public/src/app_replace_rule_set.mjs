@@ -112,7 +112,7 @@ export async function app_replace_rule_set(context) {
     return mapped;
   }
   function refresh() {
-    function each_rule_button(rb, index2) {
+    function each_button_rule_refresh(rb, index2) {
       let rule2 = property_get(rb, "rule");
       let size2 = list_size(current_list);
       let r = range(size2);
@@ -131,7 +131,7 @@ export async function app_replace_rule_set(context) {
       let arrow2 = property_get(rb, "arrow");
       html_style_font_color_set_if(enabled, arrow2, "black", "#6a6a6a");
     }
-    each_index(rules_buttons, each_rule_button);
+    each_index(rules_buttons, each_button_rule_refresh);
     html_clear(div);
     function symbols_mapper(letter, index) {
       function symbol_on_click() {
