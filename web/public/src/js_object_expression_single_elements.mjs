@@ -11,6 +11,7 @@ export function js_object_expression_single_elements(ast) {
     let e1 = list_get_end_1(stack);
     function lambda3() {
       let id = property_get(e1, "id");
+      js_node_type_is_if(node2, type, function lambda4() {});
       log({
         node,
         e1,
