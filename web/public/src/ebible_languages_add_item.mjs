@@ -1,4 +1,3 @@
-import { list_second } from "../../../love/public/src/list_second.mjs";
 import { list_size_assert_message } from "../../../love/public/src/list_size_assert_message.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -15,6 +14,7 @@ import { sandbox } from "../../../love/public/src/sandbox.mjs";
 import { js_array_expression_single_elements } from "../../../love/public/src/js_array_expression_single_elements.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
+import { list_last } from "./list_last.mjs";
 export async function ebible_languages_add_item(bible_folder) {
   let f_name = ebible_languages.name;
   f_name = sandbox.name;
@@ -37,8 +37,8 @@ export async function ebible_languages_add_item(bible_folder) {
     3,
     "Should be 3 of these, if not then investigate?",
   );
-  let second = list_second(filtered);
-  let language_name = property_get(second, "text");
+  let i = list_last(filtered);
+  let language_name = property_get(i, "text");
   return language_name;
   let r2 = await openai_responses_cache(
     "",
