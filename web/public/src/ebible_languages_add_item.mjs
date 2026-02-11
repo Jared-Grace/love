@@ -1,3 +1,4 @@
+import { json_to } from "../../../love/public/src/json_to.mjs";
 import { sandbox } from "../../../love/public/src/sandbox.mjs";
 import { js_array_expression_single_elements } from "../../../love/public/src/js_array_expression_single_elements.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
@@ -7,6 +8,7 @@ export async function ebible_languages_add_item(bible_folder) {
   f_name = sandbox.name;
   async function lambda(ast) {
     let elements = js_array_expression_single_elements(ast);
+    let json = json_to(object);
   }
   let output = await function_transform(f_name, lambda);
 }
