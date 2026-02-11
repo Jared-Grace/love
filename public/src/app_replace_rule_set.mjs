@@ -119,6 +119,8 @@ export async function app_replace_rule_set(context) {
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(enabled);
       each_nested(list, lambda4);
       const selected = index2 === index_selected;
+      if (false) {
+      }
       let on_a = app_replace_rule_set_highlight();
       let c = ternary_nested(selected, on_a, enabled, "#dadadaff", "#a8a8a8ff");
       html_style_background_color_set(rb, c);
