@@ -6,7 +6,7 @@ import { text_is } from "../../../love/public/src/text_is.mjs";
 import { list_adder_unique } from "../../../love/public/src/list_adder_unique.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_types } from "../../../love/public/src/js_visit_types.mjs";
-export function js_texts(ast) {
+export function js_strings(ast) {
   function lambda2(la) {
     function lambda(v) {
       let node = property_get(v, "node");
