@@ -151,6 +151,11 @@ export function ebible_languages() {
       bible_folder: "mar",
       language_code: "mr",
     },
+    {
+      name: "Kannada",
+      bible_folder: "kanirv",
+      language_code: "mr",
+    },
   ];
   ("if you modify the above list, then run:");
   ebible_languages_chapters_cache_refresh.name;
