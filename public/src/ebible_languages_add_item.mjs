@@ -1,3 +1,4 @@
+import { html_parse_find_a_href_text } from "../../../love/public/src/html_parse_find_a_href_text.mjs";
 import { html_parse_find_a_href_starts_with_without_unique } from "../../../love/public/src/html_parse_find_a_href_starts_with_without_unique.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ebible_url } from "../../../love/public/src/ebible_url.mjs";
@@ -22,6 +23,7 @@ export async function ebible_languages_add_item(bible_folder) {
     d,
     "http://www.ethnologue.com/language/",
   );
+  let mapped = html_parse_find_a_href_text(root, d);
   return unique;
   let r2 = await openai_responses_cache(
     "",
