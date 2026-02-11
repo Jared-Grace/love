@@ -20,7 +20,7 @@ export async function ebible_languages_add_item(bible_folder) {
   let unique = html_parse_find_a_href_starts_with_without_unique(
     root,
     d,
-    "http://www.ethnologue.com/language/mar",
+    "http://www.ethnologue.com/language/",
   );
   return;
   let r2 = await openai_responses_cache(
