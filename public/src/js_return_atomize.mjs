@@ -32,17 +32,14 @@ export async function js_return_atomize(ast) {
     if (js_node_type_is(argument2, "Identifier")) {
       await noop(argument2);
     } else {
-      await identifier_not(argument2);
+      if (argument === null) {
+        return;
+      }
+      if (false) {
+      }
+      let v = js_visit_match(ast, argument);
+      let variable_name = js_return_identifier_name();
+      await js_node_atomize(existing, v, variable_name);
     }
-  }
-  async function identifier_not(argument) {
-    if (argument === null) {
-      return;
-    }
-    if (false) {
-    }
-    let v = js_visit_match(ast, argument);
-    let variable_name = js_return_identifier_name();
-    await js_node_atomize(existing, v, variable_name);
   }
 }
