@@ -15,9 +15,9 @@ export function js_ternary_replace(ast) {
       if (not(type_is)) {
         return false;
       }
-      let body_block = js_block_to_body(block);
+      let body_block = js_block_to_body(item);
       log({
-        item,
+        body_block,
       });
     }
     let a = list_all([alternate, consequent], lambda2);
