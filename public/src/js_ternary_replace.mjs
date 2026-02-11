@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
@@ -6,6 +7,7 @@ export function js_ternary_replace(ast) {
     let node = property_get(v, "node");
     let alternate = property_get(node, "alternate");
     let consequent = property_get(node, "consequent");
+    each(list, function lambda2(item) {});
     log({
       alternate,
       consequent,
