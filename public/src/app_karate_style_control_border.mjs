@@ -1,8 +1,5 @@
-import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
+import { html_border } from "../../../love/public/src/html_border.mjs";
 export function app_karate_style_control_border(input, border_color) {
   const border_width = "4px";
-  html_style_assign(input, {
-    "border-width": border_width,
-    "border-color": border_color,
-  });
+  html_border(input, border_width, border_color);
 }
