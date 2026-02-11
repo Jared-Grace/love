@@ -1,8 +1,8 @@
+import { list_map_property_get } from "../../../love/public/src/list_map_property_get.mjs";
 import { ternary_nested } from "../../../love/public/src/ternary_nested.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { html_style_padding_y } from "../../../love/public/src/html_style_padding_y.mjs";
 import { html_bold } from "../../../love/public/src/html_bold.mjs";
-import { property_get_curried } from "../../../love/public/src/property_get_curried.mjs";
 import { each_nested } from "../../../love/public/src/each_nested.mjs";
 import { app_replace_button_symbol_style_valid_curry_right } from "../../../love/public/src/app_replace_button_symbol_style_valid_curry_right.mjs";
 import { app_replace_button_symbol_style_valid } from "../../../love/public/src/app_replace_button_symbol_style_valid.mjs";
@@ -115,8 +115,7 @@ export async function app_replace_rule_set(context) {
       let enabled = list_any(r, lambda7);
       html_enable_if(rb, enabled);
       let properties = ["rights", "lefts"];
-      let r2 = property_get_curried(rb);
-      let list = list_map(properties, r2);
+      let list = list_map_property_get(rb, properties);
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(enabled);
       each_nested(list, lambda4);
       const condition = index2 === index_selected;
