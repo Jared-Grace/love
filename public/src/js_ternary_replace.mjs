@@ -10,6 +10,7 @@ import { not } from "../../../love/public/src/not.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
+import { list_map_property } from "./list_map_property.mjs";
 export function js_ternary_replace(ast) {
   function lambda(v) {
     let node = property_get(v, "node");
@@ -21,27 +22,22 @@ export function js_ternary_replace(ast) {
       return false;
     }
     let mapped = list_map(list, js_block_to_body);
-    log({
-      mapped,
-    });
     let a = list_all(mapped, list_size_1);
     if (not(a)) {
       return false;
     }
     let mapped2 = list_map(mapped, list_single);
-    log({
-      mapped2,
-    });
     let es = list_all(mapped2, js_expression_statement_is);
     if (not(es)) {
       return false;
     }
-    let ae = list_all(mapped2, js_assignment_expression_is);
+    let mapped3 = list_map_property(mapped, "expression");
+    let ae = list_all(mapped3, js_assignment_expression_is);
     if (not(ae)) {
       return false;
     }
     log({
-      ae,
+      mapped3,
     });
   }
   js_visit_type(ast, "IfStatement", lambda);
