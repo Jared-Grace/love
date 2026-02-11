@@ -49,7 +49,7 @@ export function js_ternary_replace(ast) {
     if (not(eq)) {
       return false;
     }
-    let first = list_first(list2);
+    let first = list_first(mapped5);
   }
   js_visit_type(ast, "IfStatement", lambda);
   return;
