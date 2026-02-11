@@ -20,8 +20,9 @@ export async function js_return_atomize(ast) {
         return;
       }
       if (js_node_type_is(argument, "Literal")) {
-        let value = null;
-        value = property_get(argument, "value");
+        let value = property_get(argument, "value");
+        if (false) {
+        }
       }
       let v = js_visit_match(ast, argument);
       let variable_name = js_return_identifier_name();
