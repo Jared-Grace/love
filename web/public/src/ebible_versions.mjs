@@ -11,9 +11,9 @@ export async function ebible_versions() {
   let r = await http_local_html_parse(url);
   let root = property_get(r, "root");
   let d = property_get(r, "d");
-  let book_code = ebible_url_details();
-  let list = html_parse_find_a_href_starts_with(root, d, book_code);
-  let mapped = list_map_prefix_without(list, book_code);
+  let prefix = ebible_url_details();
+  let list = html_parse_find_a_href_starts_with(root, d, prefix);
+  let mapped = list_map_prefix_without(list, prefix);
   let unique = list_unique(mapped);
   list_sort_text(unique);
   return unique;
