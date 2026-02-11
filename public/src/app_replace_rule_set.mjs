@@ -125,7 +125,7 @@ export async function app_replace_rule_set(context) {
         "lightgreen",
         enabled,
         "#dadadaff",
-        "#7e7e7eff",
+        "#939393ff",
       );
       html_style_background_color(rb, c);
     }
