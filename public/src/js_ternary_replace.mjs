@@ -29,9 +29,10 @@ export function js_ternary_replace(ast) {
   }
   js_visit_type(ast, "IfStatement", lambda);
   return;
+  let index_selected = null;
   if (index_selected === index) {
-    let index_selected = null;
+    index_selected = null;
   } else {
-    let index_selected = index;
+    index_selected = index;
   }
 }
