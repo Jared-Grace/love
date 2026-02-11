@@ -6,9 +6,7 @@ import { list_map_property } from "../../../love/public/src/list_map_property.mj
 export function html_parse_find_a_href_starts_with(root, d, prefix) {
   let mapped = html_parse_find_a_href_text(root, d);
   let mapped2 = list_map_property(mapped, "href");
-  function lambda(item) {}
-  let ti2 = text_is(value);
-  let filtered2 = list_filter(list, lambda);
+  let filtered2 = list_filter(list, text_is);
   let filtered = list_filter_starts_with(mapped2, prefix);
   return filtered;
 }
