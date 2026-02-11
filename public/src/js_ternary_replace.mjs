@@ -3,7 +3,6 @@ import { js_block_to_body } from "../../../love/public/src/js_block_to_body.mjs"
 import { not } from "../../../love/public/src/not.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 export function js_ternary_replace(ast) {
@@ -17,10 +16,8 @@ export function js_ternary_replace(ast) {
         return false;
       }
       let body_block = js_block_to_body(item);
-      let s1 = list_size_1(list);
-      log({
-        body_block,
-      });
+      let s1 = list_size_1(body_block);
+      return s1;
     }
     let a = list_all([alternate, consequent], lambda2);
   }
