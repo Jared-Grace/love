@@ -1,3 +1,4 @@
+import { html_style_font_color_set_if } from "../../../love/public/src/html_style_font_color_set_if.mjs";
 import { list_map_property_get } from "../../../love/public/src/list_map_property_get.mjs";
 import { ternary_nested } from "../../../love/public/src/ternary_nested.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
@@ -76,7 +77,6 @@ export async function app_replace_rule_set(context) {
     let b = html_button_notext(root, lambda3);
     app_replace_button_symbol_style(b);
     html_style_padding_y(b, "0.3em");
-    html_style_background_color_set(b, "black");
     html_border_none(b);
     let lefts = rule_button_side(b, left);
     let arrow = html_span_text(b, " ➜ ");
@@ -126,7 +126,8 @@ export async function app_replace_rule_set(context) {
         "#dadadaff",
         "#a8a8a8ff",
       );
-      html_style_background_color_set(rb, c);html_style_font_color_set_if
+      html_style_background_color_set(rb, c);
+      html_style_font_color_set_if(condition2, component, color_if, color_else);
     }
     each_index(rules_buttons, each_rule_button);
     html_clear(div);
