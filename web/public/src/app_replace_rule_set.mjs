@@ -118,15 +118,9 @@ export async function app_replace_rule_set(context) {
       let list = list_map_property_get(properties, rb);
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(enabled);
       each_nested(list, lambda4);
-      const condition = index2 === index_selected;
+      const selected = index2 === index_selected;
       let on_a = app_replace_rule_set_highlight();
-      let c = ternary_nested(
-        condition,
-        on_a,
-        enabled,
-        "#dadadaff",
-        "#a8a8a8ff",
-      );
+      let c = ternary_nested(selected, on_a, enabled, "#dadadaff", "#a8a8a8ff");
       html_style_background_color_set(rb, c);
       let arrow2 = property_get(rb, "arrow");
       html_style_font_color_set_if(enabled, arrow2, "black", "#6a6a6a");
