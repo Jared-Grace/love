@@ -19,7 +19,7 @@ export async function js_return_atomize(ast) {
       if (argument === null) {
         return;
       }
-      if (false) {
+      if (js_node_type_is(argument, "Literal")) {
       }
       let v = js_visit_match(ast, argument);
       let variable_name = js_return_identifier_name();
