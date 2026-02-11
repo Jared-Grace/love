@@ -22,7 +22,7 @@ export async function js_return_atomize(ast) {
       }
       if (js_node_type_is(argument, "Literal")) {
         let value = property_get(argument, "value");
-        let includes = list_includes(list, item);
+        let includes = list_includes([true, false], item);
         if (false) {
         }
       }
