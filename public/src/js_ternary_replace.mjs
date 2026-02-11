@@ -16,7 +16,8 @@ export function js_ternary_replace(ast) {
     if (not(b)) {
       return false;
     }
-    let mapped = list_map(list, function lambda3(item2) {});
+    function lambda3(item2) {}
+    let mapped = list_map(list, lambda3);
     function lambda2(item) {
       let type_is = js_node_type_is(item, "BlockStatement");
       if (not(type_is)) {
