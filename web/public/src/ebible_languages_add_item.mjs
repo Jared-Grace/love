@@ -38,6 +38,7 @@ export async function ebible_languages_add_item(bible_folder) {
     "Should be 3 of these, if not then investigate?",
   );
   let second = list_second(filtered);
+  let value = property_get(object2, property_name);
   return second;
   let r2 = await openai_responses_cache(
     "",
