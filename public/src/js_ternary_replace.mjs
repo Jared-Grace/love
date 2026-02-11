@@ -17,6 +17,10 @@ export function js_ternary_replace(ast) {
       return false;
     }
     let mapped = list_map(list, js_block_to_body);
+    let a = list_all(mapped, list_size_1);
+    if (not(a)) {
+      return false;
+    }
     function lambda2(item) {
       let type_is = js_node_type_is(item, "BlockStatement");
       if (not(type_is)) {
@@ -25,9 +29,6 @@ export function js_ternary_replace(ast) {
       let body_block = js_block_to_body(item);
       let s1 = list_size_1(body_block);
       return s1;
-    }
-    let a = list_all([alternate, consequent], lambda2);
-    if (a) {
     }
   }
   js_visit_type(ast, "IfStatement", lambda);
