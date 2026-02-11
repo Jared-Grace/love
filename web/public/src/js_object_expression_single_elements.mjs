@@ -9,12 +9,13 @@ export function js_object_expression_single_elements(ast) {
     let node = property_get(v, "node");
     let stack = property_get(v, "stack");
     let e1 = list_get_end_1(stack);
-    function lambda3() {}
+    function lambda3() {
+      log({
+        node,
+        e1,
+      });
+    }
     js_node_type_is_if(e1, "VariableDeclarator", lambda3);
-    log({
-      node,
-      e1,
-    });
   }
   js_visit_type(ast, node_type, lambda);
   return;
