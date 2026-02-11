@@ -9,4 +9,13 @@ export function js_object_expression_single_elements(ast) {
   return node;
   let elements = property_get(node, "elements");
   return elements;
+  const js_dollar_arguments = {
+    remaining,
+    node,
+    stack1,
+    stack2,
+    stack3,
+    ast,
+    afters,
+  };
 }
