@@ -1,5 +1,5 @@
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
-import { task_new } from "../../../love/public/src/task_new.mjs";
+import { ternary } from "../../../love/public/src/ternary.mjs";
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
 import { html_style_font_color_set_if } from "../../../love/public/src/html_style_font_color_set_if.mjs";
 import { list_map_property_get } from "../../../love/public/src/list_map_property_get.mjs";
@@ -109,7 +109,7 @@ export async function app_replace_rule_set(context) {
     return mapped;
   }
   function refresh() {
-    async function each_rule_button(rb, index2) {
+    function each_rule_button(rb, index2) {
       let rule2 = property_get(rb, "rule");
       let size2 = list_size(current_list);
       let r = range(size2);
@@ -121,7 +121,7 @@ export async function app_replace_rule_set(context) {
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(enabled);
       each_nested(list, lambda4);
       const selected = index2 === index_selected;
-      await task_new(task_name);
+      let result = ternary(condition, on_true, on_false);
       if (false) {
         html_style_set(sb, "box-shadow", " 0 0 0 " + "0.1em" + " " + h);
       }
