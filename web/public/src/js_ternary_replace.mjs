@@ -30,7 +30,7 @@ export function js_ternary_replace(ast) {
     if (not(es)) {
       return false;
     }
-    let ae = list_all(list2, js_assignment_expression_is);
+    let ae = list_all(mapped2, js_assignment_expression_is);
     if (not(ae)) {
       return false;
     }
