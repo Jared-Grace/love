@@ -1,5 +1,5 @@
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
-import { html_style_background_color } from "../../../love/public/src/html_style_background_color.mjs";
+import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { html_enable_if } from "../../../love/public/src/html_enable_if.mjs";
 export function app_replace_button_symbol_style_valid(sb, valid) {
   let color_font = null;
@@ -12,6 +12,6 @@ export function app_replace_button_symbol_style_valid(sb, valid) {
     color_bg = "#1e6c1eff";
     color_font = "#b9fcb9ff";
   }
-  html_style_background_color(sb, color_bg);
+  html_style_background_color_set(sb, color_bg);
   html_font_color_set(sb, color_font);
 }
