@@ -5,7 +5,8 @@ export function js_object_expression_single_elements(ast) {
   let node_type = "ObjectExpression";
   function lambda(v) {
     let node = property_get(v, "node");
-    let parent = property_get(v, "parent");
+    let stack = property_get(v, "stack");
+    le1;
     log({
       node,
       stack,
