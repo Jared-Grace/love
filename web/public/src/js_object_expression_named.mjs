@@ -15,6 +15,7 @@ export function js_object_expression_named(ast) {
         let id = property_get(e1, "id");
         function lambda4() {
           let name = js_identifier_name(id);
+          la(name);
         }
         js_node_type_is_if(id, "Identifier", lambda4);
         log({
