@@ -1,3 +1,4 @@
+import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_size_assert_message } from "../../../love/public/src/list_size_assert_message.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
@@ -9,6 +10,7 @@ import { ebible_url } from "../../../love/public/src/ebible_url.mjs";
 import { http_local_html_parse } from "../../../love/public/src/http_local_html_parse.mjs";
 import { ebible_url_details } from "../../../love/public/src/ebible_url_details.mjs";
 export async function ebible_languages_add_item_info(bible_folder) {
+  text_is_assert(value);
   let prefix = ebible_url_details();
   let r = await http_local_html_parse(ebible_url() + prefix + bible_folder);
   let root = property_get(r, "root");
