@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_assignment_expression_is } from "../../../love/public/src/js_assignment_expression_is.mjs";
 import { js_expression_statement_is } from "../../../love/public/src/js_expression_statement_is.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -32,10 +33,9 @@ export function js_ternary_replace(ast) {
     if (not(ae)) {
       return false;
     }
-    function lambda2(item) {
-      let type_is = js_expression_statement_is(item);
-      let type_is2 = js_assignment_expression_is(item);
-    }
+    log({
+      ae,
+    });
   }
   js_visit_type(ast, "IfStatement", lambda);
   return;
