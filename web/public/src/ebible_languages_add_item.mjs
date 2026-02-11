@@ -19,10 +19,11 @@ export async function ebible_languages_add_item(bible_folder) {
   let r = await http_local_html_parse(ebible_url() + prefix + bible_folder);
   let root = property_get(r, "root");
   let d = property_get(r, "d");
+  const url_language_prefix = "http://www.ethnologue.com/language/";
   let unique = html_parse_find_a_href_starts_with_without_unique(
     root,
     d,
-    "http://www.ethnologue.com/language/",
+    url_language_prefix,
   );
   let language_code = list_single(unique);
   let mapped = html_parse_find_a_href_text(root, d);
