@@ -1,3 +1,4 @@
+import { js_dollar_choice_argument } from "../../../love/public/src/js_dollar_choice_argument.mjs";
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
 import { js_dollar_choices } from "../../../love/public/src/js_dollar_choices.mjs";
@@ -43,7 +44,7 @@ export async function js_dollar(ast) {
       let remaining = list_skip(split, 2);
       let lower = text_lower_to(second);
       if (lower === choice_name) {
-        "This variable name is used by " + js_dollar_choice_arguments.name;
+        "This variable name is used by " + js_dollar_choice_argument.name;
         const js_dollar_arguments = {
           remaining,
           node,
