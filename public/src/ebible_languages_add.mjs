@@ -3,4 +3,5 @@ import { ebible_version_upload } from "../../../love/public/src/ebible_version_u
 export async function ebible_languages_add(bible_folder) {
   await ebible_version_upload(bible_folder);
   let r = await ebible_languages_chapters_cache_refresh();
+  return r;
 }
