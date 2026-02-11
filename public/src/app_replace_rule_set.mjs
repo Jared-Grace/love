@@ -1,3 +1,4 @@
+import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
 import { html_style_font_color_set_if } from "../../../love/public/src/html_style_font_color_set_if.mjs";
 import { list_map_property_get } from "../../../love/public/src/list_map_property_get.mjs";
 import { ternary_nested } from "../../../love/public/src/ternary_nested.mjs";
@@ -119,9 +120,10 @@ export async function app_replace_rule_set(context) {
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(enabled);
       each_nested(list, lambda4);
       const condition = index2 === index_selected;
+      let on_a = app_replace_rule_set_highlight();
       let c = ternary_nested(
         condition,
-        "lightgreen",
+        on_a,
         enabled,
         "#dadadaff",
         "#a8a8a8ff",
