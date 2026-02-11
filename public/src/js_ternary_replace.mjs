@@ -1,3 +1,4 @@
+import { js_block_to_body } from "../../../love/public/src/js_block_to_body.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
@@ -14,6 +15,7 @@ export function js_ternary_replace(ast) {
       if (not(type_is)) {
         return false;
       }
+      let body_block = js_block_to_body(block);
       log({
         item,
       });
