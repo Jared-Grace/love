@@ -6,7 +6,6 @@ import { data_all_initialize } from "../../../love/public/src/data_all_initializ
 import { file_transform_cached } from "../../../love/public/src/file_transform_cached.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { file_js_unparse } from "../../../love/public/src/file_js_unparse.mjs";
-import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function function_transform_result(f_names, lambda$ast) {
   let split = text_split_comma(f_names);
   async function lambda(f_name) {
@@ -20,11 +19,9 @@ export async function function_transform_result(f_names, lambda$ast) {
     let r2 = await lambda2();
     return r2;
   }
-  let r3 = await each_async(split, lambda);
+  let r3 = await list_map_async(split, lambda);
   return r3;
   return;
-  async function lambda3(item) {}
-  let mapped = await list_map_async(list, lambda3);
   let d_path = data_path();
   await data_all_initialize(d_path);
   let r = await file_transform_cached(d_path, lambda2);
