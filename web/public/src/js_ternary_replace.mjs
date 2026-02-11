@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -9,7 +10,9 @@ export function js_ternary_replace(ast) {
     let alternate = property_get(node, "alternate");
     let consequent = property_get(node, "consequent");
     function lambda2(item) {
-      let type_is = js_node_type_is(node2, type);
+      let type_is = js_node_type_is(item, "BlockStatement");
+      if (not(b)) {
+      }
     }
     let a = list_all([alternate, consequent], lambda2);
     log({
