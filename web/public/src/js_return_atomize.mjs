@@ -1,3 +1,4 @@
+import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { js_return_identifier_name } from "../../../love/public/src/js_return_identifier_name.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_return_on_async } from "../../../love/public/src/js_return_on_async.mjs";
@@ -25,4 +26,23 @@ export async function js_return_atomize(ast) {
     }
   }
   await each_async(rs, lambda);
+  return;
+  if (js_node_type_is(node, "ReturnStatement")) {
+    let argument2 = property_get(node, "argument2");
+    if (js_node_type_is(argument2, "Identifier")) {
+      await noop(argument2);
+    } else {
+      await identifier_not(argument2);
+    }
+  }
+  async function identifier_not(argument) {
+    if (argument === null) {
+      return;
+    }
+    if (false) {
+    }
+    let v = js_visit_match(ast, argument);
+    let variable_name = js_return_identifier_name();
+    await js_node_atomize(existing, v, variable_name);
+  }
 }
