@@ -10,7 +10,7 @@ export function js_object_expression_single_elements(ast) {
     let stack = property_get(v, "stack");
     let e1 = list_get_end_1(stack);
     function lambda3() {}
-    js_node_type_is_if(node2, type, lambda3);
+    js_node_type_is_if(e1, "VariableDeclarator", lambda3);
     log({
       node,
       e1,
