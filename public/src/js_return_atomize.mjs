@@ -1,3 +1,4 @@
+import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { js_return_identifier_name } from "../../../love/public/src/js_return_identifier_name.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -21,6 +22,7 @@ export async function js_return_atomize(ast) {
       }
       if (js_node_type_is(argument, "Literal")) {
         let value = property_get(argument, "value");
+        let includes = list_includes(list, item);
         if (false) {
         }
       }
