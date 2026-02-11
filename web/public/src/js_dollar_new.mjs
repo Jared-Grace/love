@@ -12,6 +12,6 @@ export async function js_dollar_new(code) {
     await js_dollar_new_args_inner(ast);
   }
   await function_transform(combined, lambda2);
-  let code2 = await js_dollar_new_update_list(lambda2, code);
+  let code2 = await js_dollar_new_update_list(code);
   return code2;
 }
