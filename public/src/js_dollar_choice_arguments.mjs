@@ -8,9 +8,9 @@ import { marker_next_declare_single_init } from "../../../love/public/src/marker
 export async function js_dollar_choice_arguments() {
   let result = null;
   async function lambda2(ast) {
-    let elements = js_object_expression_named(ast, search);
-    let only = list_single(list);
-    let properties = property_get(elements, "properties");
+    let oes = js_object_expression_named(ast, search);
+    let only = list_single(oes);
+    let properties = property_get(only, "properties");
   }
   let output = await function_transform(f_name, lambda2);
   async function lambda(a) {
