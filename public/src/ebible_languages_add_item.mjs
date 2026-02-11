@@ -38,8 +38,8 @@ export async function ebible_languages_add_item(bible_folder) {
     "Should be 3 of these, if not then investigate?",
   );
   let second = list_second(filtered);
-  let value = property_get(object2, property_name);
-  return second;
+  let value = property_get(second, 'text');
+  return value;
   let r2 = await openai_responses_cache(
     "",
     "What is the language code of the following language? Answer just the two or three characters of the code. ",
