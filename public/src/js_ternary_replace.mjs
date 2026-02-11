@@ -1,1 +1,1 @@
-export function js_ternary_replace() {}
+export function js_ternary_replace(ast) {}
