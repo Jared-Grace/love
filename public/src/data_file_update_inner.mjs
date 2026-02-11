@@ -1,4 +1,4 @@
-import { js_texts } from "../../../love/public/src/js_texts.mjs";
+import { js_strings } from "../../../love/public/src/js_strings.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { js_literal_is_assert } from "../../../love/public/src/js_literal_is_assert.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -47,7 +47,7 @@ export function data_file_update_inner(parsed, data) {
   }
   let f_identifiers_new = js_identifiers_names(ast);
   data_add("identifiers", f_identifiers_new);
-  let strings_new = js_texts(ast);
+  let strings_new = js_strings(ast);
   data_add("strings", strings_new);
   function lambda2(la) {
     js_visit_calls_named(ast, fn_name.name, lambda4);
