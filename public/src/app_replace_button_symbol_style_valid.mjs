@@ -9,7 +9,7 @@ export function app_replace_button_symbol_style_valid(sb, valid) {
   html_border(sb, "4px", h);
   html_style_set(sb, "box-shadow", "none");
   html_style_set(sb, "appearance", "none");
-  html_style_set(sb, "box-shadow", "none");
+  html_style_set(sb, "-webkit-appearance", "none");
   html_enable_if(sb, valid);
   html_style_background_color_set_if(valid, sb, "#00b400ff", "#1e6c1eff");
   html_style_font_color_set_if(valid, sb, "white", "#b9fcb9ff");
