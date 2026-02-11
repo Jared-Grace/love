@@ -11,7 +11,7 @@ export function js_ternary_replace(ast) {
     let consequent = property_get(node, "consequent");
     function lambda2(item) {
       let type_is = js_node_type_is(item, "BlockStatement");
-      if (not(b)) {
+      if (not(type_is)) {
       }
     }
     let a = list_all([alternate, consequent], lambda2);
