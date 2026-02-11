@@ -8,6 +8,7 @@ export function js_object_expression_single_elements(ast) {
     let stack = property_get(v, "stack");
     log({
       node,
+      stack,
     });
   }
   js_visit_type(ast, node_type, lambda);
