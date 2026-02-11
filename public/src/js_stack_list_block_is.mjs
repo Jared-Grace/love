@@ -1,5 +1,5 @@
+import { js_block_statement_is } from "../../../love/public/src/js_block_statement_is.mjs";
 import { not } from "../../../love/public/src/not.mjs";
-import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
 import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
 export function js_stack_list_block_is(stack, index_end) {
@@ -10,7 +10,7 @@ export function js_stack_list_block_is(stack, index_end) {
     return v;
   }
   let stack2 = list_get_end(stack, index_end + 1);
-  let a2 = js_node_type_is(stack2, "BlockStatement");
+  let a2 = js_block_statement_is(stack2);
   if (not(a2)) {
     let v2 = false;
     return v2;
