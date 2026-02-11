@@ -17,6 +17,8 @@ export async function js_return_atomize(ast) {
       if (argument === null) {
         return;
       }
+      if (false) {
+      }
       let v = js_visit_match(ast, argument);
       let variable_name = js_return_identifier_name();
       await js_node_atomize(existing, v, variable_name);
