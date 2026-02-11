@@ -5,7 +5,7 @@ import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export function js_object_expression_named(ast) {
+export function js_object_expression_named(ast, search) {
   function lambda2(la) {
     function lambda(v) {
       let stack = property_get(v, "stack");
@@ -14,7 +14,7 @@ export function js_object_expression_named(ast) {
         let id = property_get(e1, "id");
         function lambda4() {
           let name = js_identifier_name(id);
-          if (equal(left, right)) {
+          if (equal(name, search)) {
           }
           let node = property_get(v, "node");
           la(node);
