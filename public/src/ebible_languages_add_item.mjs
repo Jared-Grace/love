@@ -24,7 +24,7 @@ export async function ebible_languages_add_item(bible_folder) {
     d,
     "http://www.ethnologue.com/language/",
   );
-  let only = list_single(list);
+  let url_language = list_single(unique);
   let mapped = html_parse_find_a_href_text(root, d);
   return unique;
   let r2 = await openai_responses_cache(
