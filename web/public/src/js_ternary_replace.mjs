@@ -25,12 +25,6 @@ export function js_ternary_replace(ast) {
     let mapped2 = list_map(list2, list_single);
     function lambda2(item) {
       let type_is = js_node_type_is(item, "BlockStatement");
-      if (not(type_is)) {
-        return false;
-      }
-      let body_block = js_block_to_body(item);
-      let s1 = list_size_1(body_block);
-      return s1;
     }
   }
   js_visit_type(ast, "IfStatement", lambda);
