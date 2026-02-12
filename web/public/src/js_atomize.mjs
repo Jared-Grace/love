@@ -15,9 +15,10 @@ export async function js_atomize(ast) {
     let stack = property_get(v, "stack");
     let offset = 0;
     const stack1 = list_get_end_1(stack);
+    let list_possible = stack1;
     function lambda3() {
       offset = 1;
-      const stack2 = list_get_end_2(stack);
+      list_possible = list_get_end_2(stack);
     }
     js_node_type_is_if(stack1, "AwaitExpression", lambda3);
     if (list_is(stack1)) {
@@ -26,7 +27,6 @@ export async function js_atomize(ast) {
       await js_node_atomize(existing_ids, v, variable_name, offset);
     }
     return;
-    let list_possible = stack1;
   }
   await each_async(ces, lambda);
 }
