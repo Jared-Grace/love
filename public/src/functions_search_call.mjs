@@ -12,10 +12,7 @@ export async function functions_search_call(search) {
         let node = property_get(v, "node");
         let code = js_unparse(node);
         let f = js_declaration_single_name(ast);
-        la({
-          f,
-          code,
-        });
+        la(f, code);
       }
       js_visit_calls_named(ast, search, lambda3);
     }
