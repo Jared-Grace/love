@@ -2,7 +2,6 @@ import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
-import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { js_code_call } from "../../../love/public/src/js_code_call.mjs";
 import { js_left_right_set } from "../../../love/public/src/js_left_right_set.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
@@ -70,7 +69,6 @@ export function js_ternary_replace(ast) {
     let rights = list_map_property(ess, "right");
     list_add_multiple(arguments2, rights);
     js_left_right_set(a, expression, e);
-    let code = js_unparse(a);
     let stack = property_get(v, "stack");
     let e1 = list_get_end_1(stack);
     object_replace(node, e1);
