@@ -54,7 +54,8 @@ export async function app_gloss_bible_home_generic(
     let texts = null;
     if (text_use) {
       let passage_texts = property_get(passage, "texts");
-      let first = list_first(list);
+      let first = list_first(passage_texts);
+      texts = [first];
     } else {
       texts = property_get(passage, "originals");
     }
