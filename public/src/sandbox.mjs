@@ -1,4 +1,4 @@
-import { data_identifiers_search } from "../../../love/public/src/data_identifiers_search.mjs";
+import { functions_names } from "../../../love/public/src/functions_names.mjs";
 export async function sandbox(ast) {
-  let result = await data_identifiers_search(s);
+  let f_names = await functions_names();
 }
