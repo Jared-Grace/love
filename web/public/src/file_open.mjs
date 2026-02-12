@@ -11,11 +11,10 @@ export async function file_open(f_path) {
     let ext = function_name_extension();
     let ew = text_ends_with(f_path, ext);
     let output = null;
-    let on_true = await function_path_declaration_unparse(f_path);
     let on_false = await file_read(f_path);
     let result = null;
     if (ew) {
-      result = on_true;
+      result = await function_path_declaration_unparse(f_path);
     } else {
       result = on_false;
     }
