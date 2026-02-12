@@ -8,10 +8,10 @@ import { text_index_of_last } from "../../../love/public/src/text_index_of_last.
 import { json_from } from "../../../love/public/src/json_from.mjs";
 export function json_from_try(json) {
   let left = text_index_of_try(json, "{");
-  function lambda(item) {}
   let b = js_code_bracket_open();
   let v2 = js_code_brace_left();
   let list = [v2, b];
+  function lambda(item) {}
   each(list, lambda);
   let skipped = text_skip(json, left);
   let right = text_index_of_last(skipped, "}");
