@@ -1,10 +1,9 @@
+import { text_prefix_without } from "../../../love/public/src/text_prefix_without.mjs";
 import { text_starts_with } from "../../../love/public/src/text_starts_with.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { text_remove_if_starts_with } from "../../../love/public/src/text_remove_if_starts_with.mjs";
 export function text_remove_while_starts_with(item, prefix) {
-  let sw = text_starts_with(t, prefix2);
-  while (true) {
-    let removed = text_remove_if_starts_with(item, prefix);
+  while (text_starts_with(item, prefix)) {
+    let removed = text_prefix_without(item, prefix);
     ("was there no change?");
     if (equal(removed, item)) {
       break;
