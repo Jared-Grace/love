@@ -72,16 +72,12 @@ export function js_ternary_replace(ast) {
     list_add_multiple(arguments2, rights);
     js_left_right_set(a, expression, e);
     let c = js_code_statement("a");
-    property_set(object, property_name, value);
     let statement = js_parse_statement(c);
+    property_set(statement, "expression", a);
     object_replace(node, statement);
   }
   js_list_type_each(ast, "IfStatement", lambda);
   return;
   let index_selected = null;
-  if (index_selected === index) {
-    index_selected = null;
-  } else {
-    index_selected = index;
-  }
+  index_selected = ternary(index_selected === index, index, null);
 }
