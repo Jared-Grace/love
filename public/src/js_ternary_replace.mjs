@@ -65,7 +65,7 @@ export function js_ternary_replace(ast) {
     js_left_right_set(a, expression, arguments2);
     let code = js_unparse(ast2);
     log({
-      e,
+      code,
     });
   }
   js_visit_type(ast, "IfStatement", lambda);
