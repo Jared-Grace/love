@@ -81,7 +81,7 @@ export async function js_ternary_replace(ast) {
   }
   js_list_type_each(ast, "IfStatement", lambda);
   if (replaced) {
-    let result = await function_imports_add(ast2, imports);
+    await function_imports_add(ast, ternary);
   }
   return;
   let index_selected = null;
