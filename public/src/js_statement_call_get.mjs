@@ -10,7 +10,7 @@ export function js_statement_call_get(node) {
   if (js_node_type_is(node, "ExpressionStatement")) {
     let expression_next = property_get(node, "expression");
     call = expression_next;
-    if (js_node_type_is(node, "AssignmentExpression")) {
+    if (js_node_type_is(expression_next, "AssignmentExpression")) {
       assignment = expression_next;
       call = property_get(assignment, "right");
     } else {
