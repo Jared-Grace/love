@@ -1,6 +1,5 @@
-import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
+import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_node_atomize } from "../../../love/public/src/js_node_atomize.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { js_list_type } from "../../../love/public/src/js_list_type.mjs";
@@ -11,27 +10,13 @@ export async function js_atomize(ast) {
   let existing_ids = js_identifiers_names(ast);
   let ces = js_list_type(ast, "CallExpression");
   async function lambda(v) {
-    await lambda_each(v, 0);
-  }
-  await each_async(ces, lambda);
-  let aes = js_list_type(ast, "AwaitExpression");
-  async function lambda2(v) {
-    await lambda_each(v, 1);
-  }
-  async function lambda_each(v, offset) {
     let stack = property_get(v, "stack");
-    let stack1 = list_get_end(stack, 1 + offset);
+    const stack1 = list_get_end_1(stack);
     if (list_is(stack1)) {
       ("this list could be a block body or an argument list of a fn call");
       let variable_name = js_node_atomize_name();
-      await js_node_atomize(existing_ids, v, variable_name, offset);
+      await js_node_atomize(existing_ids, v, variable_name);
     }
   }
-  return;
-  await each_async(aes, lambda2);
-  return;
-  log({
-    aes,
-  });
-  let stack1 = list_get_end(stack, 1);
+  await each_async(ces, lambda);
 }
