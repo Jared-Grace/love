@@ -1,3 +1,4 @@
+import { ternary } from "../../../love/public/src/ternary.mjs";
 import { function_imports_add } from "../../../love/public/src/function_imports_add.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { js_list_type_each } from "../../../love/public/src/js_list_type_each.mjs";
@@ -85,9 +86,5 @@ export async function js_ternary_replace(ast) {
   }
   return;
   let a = null;
-  if (b === 1) {
-    a = 2;
-  } else {
-    a = 3;
-  }
+  a = ternary(b === 1, 3, 2);
 }
