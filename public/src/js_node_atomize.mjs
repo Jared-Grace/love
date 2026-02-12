@@ -1,5 +1,4 @@
 import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
-import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
 import { js_node_atomize_variable_name_get } from "../../../love/public/src/js_node_atomize_variable_name_get.mjs";
 import { js_block_insert } from "../../../love/public/src/js_block_insert.mjs";
@@ -24,7 +23,6 @@ export async function js_node_atomize(existing_ids, v, variable_name, offset) {
   js_block_insert(stack, assign);
   let v2 = js_parse_expression(unique);
   const replaced = list_get_end(stack, offset);
-  let code = js_unparse(replaced);
-  log_unparse(node2);
+  log_unparse(replaced);
   object_replace(replaced, v2);
 }
