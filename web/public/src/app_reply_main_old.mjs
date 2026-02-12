@@ -80,7 +80,7 @@ export async function app_reply_main_old(context) {
   }
   function lambda6(event) {
     let key = property_get(event, "key");
-    typed = ternary(equal(key, "Backspace"), key, text_take_less_1(typed));
+    typed = ternary(equal(key, "Backspace"), text_take_less_1(typed), key);
     buttons_refresh();
   }
   html_on_keydown_body(lambda6);

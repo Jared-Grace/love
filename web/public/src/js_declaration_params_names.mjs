@@ -8,8 +8,8 @@ export function js_declaration_params_names(declaration) {
   let params_names = null;
   params_names = ternary(
     false,
-    list_map_squash(params, js_declaration_params_names_node),
     js_identifiers_to_names(params),
+    list_map_squash(params, js_declaration_params_names_node),
   );
   return params_names;
 }
