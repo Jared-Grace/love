@@ -52,7 +52,7 @@ export function js_ternary_replace(ast) {
       return false;
     }
     let first = list_first(names);
-    let expression = js_parse_expression(code_expression);
+    let expression = js_parse_expression(first);
     let s = js_assign_default();
   }
   js_visit_type(ast, "IfStatement", lambda);
