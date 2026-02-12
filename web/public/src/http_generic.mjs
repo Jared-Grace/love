@@ -1,3 +1,4 @@
+import { ternary } from "../../../love/public/src/ternary.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
@@ -52,11 +53,7 @@ export async function http_generic(url, options) {
   }
   let h = null;
   let swHttps = text_starts_with(url, "https://");
-  if (swHttps) {
-    h = await import("https");
-  } else {
-    h = await import("http");
-  }
+  h = ternary(swHttps, await import("http"), await import("https"));
   let buffer = await promise_wrap(lambda);
   function lambda(resolve, reject) {
     const urlObj = new URL(url);

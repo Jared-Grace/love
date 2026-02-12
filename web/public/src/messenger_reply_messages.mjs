@@ -1,3 +1,4 @@
+import { ternary } from "../../../love/public/src/ternary.mjs";
 import { messenger_reply_messages_message } from "../../../love/public/src/messenger_reply_messages_message.mjs";
 import { messenger_reply_messages_name } from "../../../love/public/src/messenger_reply_messages_name.mjs";
 import { messenger_reply_messages_me } from "../../../love/public/src/messenger_reply_messages_me.mjs";
@@ -51,11 +52,11 @@ export async function messenger_reply_messages(page, url) {
           return v2;
         }
         let name = null;
-        if (list_empty_is(imgs)) {
-          name = messenger_reply_messages_me();
-        } else {
-          name = "them";
-        }
+        name = ternary(
+          list_empty_is(imgs),
+          "them",
+          messenger_reply_messages_me(),
+        );
         la({
           [messenger_reply_messages_name()]: name,
           [messenger_reply_messages_message()]: message,
