@@ -13,7 +13,7 @@ export function json_from_try(json) {
   const without = text_slice_0(skipped, right + 1);
   let first = list_first(without);
   if (first === js_code_bracket_open()) {
-    let last = list_last(list);
+    let last = list_last(without);
   }
   let result = json_from(without);
   return result;
