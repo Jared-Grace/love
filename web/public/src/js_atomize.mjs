@@ -12,6 +12,7 @@ export async function js_atomize(ast) {
   let ces = js_list_type(ast, "CallExpression");
   async function lambda(v) {
     let stack = property_get(v, "stack");
+    let offset = 0;
     const stack1 = list_get_end_1(stack);
     if (list_is(stack1)) {
       ("this list could be a block body or an argument list of a fn call");
@@ -20,7 +21,6 @@ export async function js_atomize(ast) {
     }
     return;
     function lambda3() {
-      let offset = null;
       offset = 1;
     }
     js_node_type_is_if(stack1, "AwaitExpression", lambda3);
