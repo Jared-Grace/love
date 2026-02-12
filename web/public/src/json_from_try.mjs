@@ -18,6 +18,7 @@ export function json_from_try(json) {
     let last = list_last(without);
     let end = js_code_bracket_close();
     if (equal_not(last, end)) {
+      without += end + "";
     }
   }
   let result = json_from(without);
