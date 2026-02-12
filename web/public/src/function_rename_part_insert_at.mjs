@@ -6,8 +6,8 @@ export async function function_rename_part_insert_at(
   part,
 ) {
   let f_name_after = function_name_part_insert_at(
-    index_string,
     f_name_before,
+    index_string,
     part,
   );
   await function_rename(f_name_before, f_name_after);
