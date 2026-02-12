@@ -1,12 +1,7 @@
-import { log } from "../../../love/public/src/log.mjs";
-import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
-import { object_copy } from "../../../love/public/src/object_copy.mjs";
 import { js_list_type_each } from "../../../love/public/src/js_list_type_each.mjs";
-import { property_set } from "../../../love/public/src/property_set.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 import { js_code_statement } from "../../../love/public/src/js_code_statement.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
-import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { js_code_call } from "../../../love/public/src/js_code_call.mjs";
@@ -82,5 +77,9 @@ export function js_ternary_replace(ast) {
   js_list_type_each(ast, "IfStatement", lambda);
   return;
   let index_selected = null;
-  a;
+  if (index_selected === index) {
+    index_selected = null;
+  } else {
+    index_selected = index;
+  }
 }
