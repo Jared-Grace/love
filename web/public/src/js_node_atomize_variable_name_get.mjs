@@ -17,6 +17,7 @@ export async function js_node_atomize_variable_name_get(
   variable_name,
   stack,
 ) {
+  "use return from called fn";
   if (js_node_type_is(node, "CallExpression")) {
     await js_call_function_if(node, lambda);
     async function lambda(name) {
@@ -28,6 +29,7 @@ export async function js_node_atomize_variable_name_get(
       }
     }
   }
+  ("use param name of containing fn");
   let stack2 = list_get_end(stack, 2);
   if (js_node_type_is(stack2, "CallExpression")) {
     let stack1 = list_get_end(stack, 1);
