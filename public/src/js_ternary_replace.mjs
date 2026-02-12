@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_call_new_code } from "../../../love/public/src/js_call_new_code.mjs";
 import { js_left_right_set } from "../../../love/public/src/js_left_right_set.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
@@ -57,7 +58,10 @@ export function js_ternary_replace(ast) {
     let first = list_first(names);
     let expression = js_parse_expression(first);
     let a = js_assign_default();
-    let r = await js_call_new_code(ternary.name, ast2);
+    let r = await js_call_new_code(ternary.name, ast);
+    log({
+      r,
+    });
     js_left_right_set(a, expression, init);
   }
   js_visit_type(ast, "IfStatement", lambda);
