@@ -81,7 +81,8 @@ export function js_ternary_replace(ast) {
     object_replace(node, statement);
   }
   let list = js_list_type(ast, "IfStatement", lambda);
-  each(list2, function lambda2(item) {});
+  function lambda2(item) {}
+  each(list2, lambda2);
   return;
   let index_selected = null;
   if (index_selected === index) {
