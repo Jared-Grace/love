@@ -1,3 +1,4 @@
+import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
 import { js_node_atomize_variable_name_get } from "../../../love/public/src/js_node_atomize_variable_name_get.mjs";
 import { js_block_insert } from "../../../love/public/src/js_block_insert.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
@@ -20,5 +21,6 @@ export async function js_node_atomize(existing_ids, v, variable_name, offset) {
   let assign = js_declare(unique, copy);
   js_block_insert(stack, assign);
   let v2 = js_parse_expression(unique);
-  object_replace(node, v2);
+  const replaced = list_get_end(stack, offset);
+  object_replace(replaced, v2);
 }
