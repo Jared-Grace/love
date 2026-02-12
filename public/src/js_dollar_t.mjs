@@ -9,7 +9,7 @@ export function js_dollar_t({
   ast,
   afters,
 }) {
-  return;
   let code_expression = js_keyword_true();
   js_parse_expression_replace(code_expression, node);
+  return;
 }
