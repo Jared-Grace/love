@@ -1,6 +1,4 @@
 import { function_transform_result_inner_curried_right } from "../../../love/public/src/function_transform_result_inner_curried_right.mjs";
-import { functions_names } from "../../../love/public/src/functions_names.mjs";
-import { function_transform_result_inner } from "../../../love/public/src/function_transform_result_inner.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -24,11 +22,6 @@ export async function sandbox() {
     js_visit_calls_named(ast, ternary.name, lambda3);
   }
   let waited = await functions_transform(lambda2);
-  let f_names = await functions_names();
-  async function lambda(f_name) {
-    await function_transform_result_inner(f_name, lambda$ast);
-  }
-  async function lambda4(ast2) {}
-  let r2 = await function_transform_result_inner_curried_right(lambda4);
+  let lambda = await function_transform_result_inner_curried_right(lambda2);
   await each_async(f_names, lambda);
 }
