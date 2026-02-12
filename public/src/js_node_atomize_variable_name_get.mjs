@@ -47,7 +47,7 @@ export async function js_node_atomize_variable_name_get(
           let params = property_get(declaration, "params");
           let child = list_get_end(stack, offset);
           let index = list_index_of(stack1, child);
-          log_unparse(node2);
+          log_unparse(child);
           let param = list_get(params, index);
           let b = equal_by(stack1, params, list_size);
           assert_json(b, {
