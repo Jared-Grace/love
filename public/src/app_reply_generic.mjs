@@ -97,7 +97,11 @@ export async function app_reply_generic(verse_get) {
   }
   function lambda6(event) {
     let key = property_get(event, "key");
-    typed = ternary(equal(key, "Backspace"), text_take_less_1(typed), key);
+      if (equal(key, "Backspace")) {
+    typed = text_take_less_1(typed);
+  } else {
+    typed = key;
+  }
     buttons_refresh();
   }
   html_on_keydown(root, lambda6);
