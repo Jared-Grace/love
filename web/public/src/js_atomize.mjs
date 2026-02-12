@@ -12,10 +12,8 @@ export async function js_atomize(ast) {
   let ces = js_list_type(ast, "CallExpression");
   async function lambda(v) {
     let v2 = await lambda_each(v, 0);
-    v2;
   }
   let v3 = await each_async(ces, lambda);
-  v3;
   let aes = js_list_type(ast, "AwaitExpression");
   async function lambda_each(v, offset) {
     let stack = property_get(v, "stack");
@@ -29,7 +27,6 @@ export async function js_atomize(ast) {
   }
   async function lambda2(v) {
     let v5 = await lambda_each(v, 1);
-    v5;
   }
   let v6 = await each_async(aes, lambda2);
   return;
