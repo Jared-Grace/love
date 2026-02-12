@@ -11,8 +11,7 @@ export async function js_atomize(ast) {
   let existing_ids = js_identifiers_names(ast);
   let ces = js_list_type(ast, "CallExpression");
   async function lambda(v) {
-    let offset = 0;
-    await lambda_each(v, offset);
+    await lambda_each(v, 0);
   }
   await each_async(ces, lambda);
   let aes = js_list_type(ast, "AwaitExpression");
