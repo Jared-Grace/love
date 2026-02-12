@@ -1,4 +1,4 @@
-export function text_index_of_try(s, item) {
-  let v = s.indexOf(item);
+export function text_index_of_try(t, item) {
+  let v = t.indexOf(item);
   return v;
 }
