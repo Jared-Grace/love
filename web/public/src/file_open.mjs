@@ -12,11 +12,9 @@ export async function file_open(f_path) {
     let ext = function_name_extension();
     let ew = text_ends_with(f_path, ext);
     let output = null;
-    output = ternary(
-      ew,
-      await function_path_declaration_unparse(f_path),
-      await file_read(f_path),
-    );
+    let on_true = await function_path_declaration_unparse(f_path);
+    let on_false = await file_read(f_path);
+    output = ternary(ew, on_true, on_false);
     log_keep(output);
   } else {
     await file_open_editor(f_path);
