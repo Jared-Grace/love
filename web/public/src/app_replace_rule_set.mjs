@@ -1,3 +1,4 @@
+import { ternary } from "../../../love/public/src/ternary.mjs";
 import { app_replace_button_rule_background_color } from "../../../love/public/src/app_replace_button_rule_background_color.mjs";
 import { text_pad_space } from "../../../love/public/src/text_pad_space.mjs";
 import { text_arrow } from "../../../love/public/src/text_arrow.mjs";
@@ -70,11 +71,7 @@ export async function app_replace_rule_set(context) {
     let left = property_get(rule, "left");
     let right = property_get(rule, "right");
     function lambda3() {
-      if (index_selected === index) {
-        index_selected = null;
-      } else {
-        index_selected = index;
-      }
+      index_selected = ternary(index_selected === index, index, null);
       refresh();
       return;
     }

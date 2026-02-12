@@ -1,3 +1,4 @@
+import { ternary } from "../../../love/public/src/ternary.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
@@ -96,11 +97,7 @@ export async function app_reply_generic(verse_get) {
   }
   function lambda6(event) {
     let key = property_get(event, "key");
-    if (equal(key, "Backspace")) {
-      typed = text_take_less_1(typed);
-    } else {
-      typed += key;
-    }
+    typed = ternary(equal(key, "Backspace"), key, text_take_less_1(typed));
     buttons_refresh();
   }
   html_on_keydown(root, lambda6);
