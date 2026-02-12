@@ -79,11 +79,10 @@ export async function app_reply_main_old(context) {
     await app_reply_main_verse_add([v], original);
   }
   function lambda6(event) {
-    let key = property_get(event, "key");
-    let a = b + c;
-    let condition = equal(key, "Backspace");
-    let on_true = text_take_less_1(typed);
-    typed = ternary(condition, on_true, key);
+    let key = property_get(event, "key");$x
+    let a = 1;
+    a=add(b,c)
+    typed = ternary(equal(key, "Backspace"), text_take_less_1(typed), key);
     buttons_refresh();
   }
   html_on_keydown_body(lambda6);
