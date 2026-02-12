@@ -6,7 +6,8 @@ import { js_declaration_single_name } from "../../../love/public/src/js_declarat
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function functions_search_call(search) {
-  let list = await list_adder_async(async function lambda2(la) {});
+  async function lambda2(la) {}
+  let list = await list_adder_async(lambda2);
   async function lambda(ast) {
     function lambda3(a) {
       let v = property_get(a, "v");
