@@ -32,7 +32,7 @@ export function js_statement_call_get(node) {
     return null;
   }
   let v3 = {
-    expression: call,
+    call,
     declaration,
   };
   return v3;
