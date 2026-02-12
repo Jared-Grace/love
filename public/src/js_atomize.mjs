@@ -30,7 +30,7 @@ export async function js_atomize(ast) {
     return;
     let v2 = noop();
     let v3 = noop();
-    [v2, await v3];
+    [v2, v3];
   }
   await each_async(ces, lambda);
 }
