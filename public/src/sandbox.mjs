@@ -27,5 +27,5 @@ export async function sandbox() {
   async function lambda(f_name) {
     await function_transform_result_inner(f_name, lambda$ast);
   }
-  await each_async(list, lambda);
+  await each_async(f_names, lambda);
 }
