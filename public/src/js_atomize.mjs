@@ -20,9 +20,7 @@ export async function js_atomize(ast) {
     }
     return;
     function lambda3() {}
-    js_node_type_is_if(node, type, lambda3);
-    if (false) {
-    }
+    js_node_type_is_if(stack1, "AwaitExpression", lambda3);
   }
   await each_async(ces, lambda);
 }
