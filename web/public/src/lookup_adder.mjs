@@ -1,7 +1,7 @@
 export function lookup_adder(fn_set) {
   let result = {};
   let oa = function lambda(key, value) {
-    opi;
+    pi;
     fn_set(result, key, value);
   };
   let r = {
