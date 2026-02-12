@@ -1,4 +1,3 @@
-import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { function_transform_result_inner } from "../../../love/public/src/function_transform_result_inner.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
@@ -22,8 +21,7 @@ export async function sandbox() {
     }
     js_visit_calls_named(ast, ternary.name, lambda3);
   }
-  let waited = await functions_transform(lambda2);
-  let f_names = await functions_names();
+  let waited = await functions_transform(lambda2);fns
   async function lambda(f_name) {
     await function_transform_result_inner(f_name, lambda$ast);
   }
