@@ -1,3 +1,4 @@
+import { function_transform_result_inner_curried_right } from "../../../love/public/src/function_transform_result_inner_curried_right.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { function_transform_result_inner } from "../../../love/public/src/function_transform_result_inner.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -27,5 +28,8 @@ export async function sandbox() {
   async function lambda(f_name) {
     await function_transform_result_inner(f_name, lambda$ast);
   }
+  let r2 = await function_transform_result_inner_curried_right(
+    async function lambda4(ast2) {},
+  );
   await each_async(f_names, lambda);
 }
