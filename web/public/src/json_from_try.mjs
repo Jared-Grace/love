@@ -13,7 +13,8 @@ export function json_from_try(json) {
   let list = [v2, b];
   function lambda2(item2) {}
   let mapped = list_map(list, text_index_of_try);
-  let filtered = list_filter(list2, function lambda(item) {});
+  function lambda(item) {}
+  let filtered = list_filter(list2, lambda);
   let skipped = text_skip(json, left);
   let right = text_index_of_last(skipped, "}");
   const without = text_slice_0(skipped, right + 1);
