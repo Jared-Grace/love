@@ -1,3 +1,4 @@
+import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_node_atomize } from "../../../love/public/src/js_node_atomize.mjs";
@@ -18,6 +19,7 @@ export async function js_atomize(ast) {
       await js_node_atomize(existing_ids, v, variable_name);
     }
     return;
+    js_node_type_is_if(node, type, function lambda3() {});
     if (false) {
     }
   }
