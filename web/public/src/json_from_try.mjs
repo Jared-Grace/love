@@ -11,7 +11,6 @@ export function json_from_try(json) {
   let b = js_code_bracket_open();
   let v2 = js_code_brace_left();
   let list = [v2, b];
-  function lambda2(item2) {}
   let mapped = list_map(list, text_index_of_try);
   let left = list_min_try(mapped);
   let skipped = text_skip(json, left);
