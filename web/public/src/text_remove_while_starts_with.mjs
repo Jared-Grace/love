@@ -9,5 +9,6 @@ export function text_remove_while_starts_with(item, prefix) {
     }
     item = removed;
   }
-  return item;
+  let result = item;
+  return result;
 }
