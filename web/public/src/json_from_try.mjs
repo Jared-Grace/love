@@ -1,3 +1,4 @@
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { js_code_bracket_open } from "../../../love/public/src/js_code_bracket_open.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -14,6 +15,8 @@ export function json_from_try(json) {
   let first = list_first(without);
   if (first === js_code_bracket_open()) {
     let last = list_last(without);
+    if (null_is(value)) {
+    }
   }
   let result = json_from(without);
   return result;
