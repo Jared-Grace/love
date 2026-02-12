@@ -3,8 +3,8 @@ import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { function_name_to_parts } from "../../../love/public/src/function_name_to_parts.mjs";
 import { integer_to } from "../../../love/public/src/integer_to.mjs";
 export function function_name_part_insert_at(
-  index_string,
   f_name_before,
+  index_string,
   part,
 ) {
   let index = integer_to(index_string);
