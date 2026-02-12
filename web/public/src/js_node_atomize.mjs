@@ -13,6 +13,7 @@ export async function js_node_atomize(existing_ids, v, variable_name, offset) {
     node,
     variable_name,
     stack,
+    error(),
   );
   let unique = js_identifier_unique(existing_ids, variable_name);
   let copy = object_copy(node);
