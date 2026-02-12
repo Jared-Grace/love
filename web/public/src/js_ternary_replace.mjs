@@ -72,7 +72,7 @@ export function js_ternary_replace(ast) {
     js_left_right_set(a, expression, e);
     let code = js_unparse(a);
     let stack = property_get(v, "stack");
-    let e1 = list_get_end_1(stack2);
+    let e1 = list_get_end_1(stack);
     log({
       code,
     });
