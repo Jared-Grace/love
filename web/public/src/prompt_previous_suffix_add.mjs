@@ -4,10 +4,10 @@ import { function_run_line } from "../../../love/public/src/function_run_line.mj
 import { data_prompts } from "../../../love/public/src/data_prompts.mjs";
 export async function prompt_previous_suffix_add(suffix) {
   let result = await data_prompts();
-  let last = list_get_end_1(result);
-  last += suffix + "";
+  let e1 = list_get_end_1(result);
+  e1 += suffix + "";
   log({
-    last,
+    e1,
   });
   return;
   let r = await function_run_line(last);
