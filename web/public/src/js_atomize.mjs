@@ -21,7 +21,6 @@ export async function js_atomize(ast) {
   }
   await each_async(ces, lambda);
   let aes = js_list_type(ast, "AwaitExpression");
-  return;
   log({
     aes,
   });
