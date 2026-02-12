@@ -53,7 +53,7 @@ export async function app_gloss_bible_home_generic(
     let h = html_hr(p);
     let texts = null;
     if (text_use) {
-      let passage_texts = property_get(passage, "texts");
+      passage_texts = property_get(passage, "texts");
     } else {
       texts = property_get(passage, "originals");
     }
