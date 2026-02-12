@@ -29,8 +29,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     let s1 = list_size_1(declarations);
     assert(s1);
     function lambda2(declaration) {
-      let s = js_assign_default();
-      let expression = property_get(s, "expression");
+      let expression = js_assign_default();
       let init = property_get(declaration, "init");
       let id = property_get(declaration, "id");
       let type_is = js_literal_is(init);
