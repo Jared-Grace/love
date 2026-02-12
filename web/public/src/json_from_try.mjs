@@ -7,7 +7,7 @@ export function json_from_try(json) {
   let left = text_index_of(json, "{");
   let skipped = text_skip(json, left);
   let right = text_index_of_last(skipped, "}");
-  const without = text_slice_0(skipped, right +1);
+  const without = text_slice_0(skipped, right + 1);
   let result = json_from(without);
   return result;
 }
