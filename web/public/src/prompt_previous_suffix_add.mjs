@@ -9,6 +9,7 @@ export async function prompt_previous_suffix_add(suffix) {
   log({
     last,
   });
+  return;
   let r = await function_run_line(last);
   return r;
 }
