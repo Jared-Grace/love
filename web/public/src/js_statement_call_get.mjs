@@ -12,7 +12,7 @@ export function js_statement_call_get(node) {
     expression = expression_next;
     if (js_node_type_is(node, "AssignmentExpression")) {
       assignment = expression_next;
-      let right = property_get(assignment, "right");
+      expression = property_get(assignment, "right");
     } else {
       expression = expression_next;
     }
