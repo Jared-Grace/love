@@ -1,3 +1,4 @@
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -76,8 +77,9 @@ export async function js_expand_generic(next, stack2, index, ast) {
         let nna = null_not_is(assignment);
         if (nna) {
           let name = js_declaration_name(declaration_call);
+          property_set(object, property_name, value);
           let assign = js_declare(name, argument);
-          list_add(body_block, assign);
+          list_add(body_block, assignment);
         }
       }
     }
