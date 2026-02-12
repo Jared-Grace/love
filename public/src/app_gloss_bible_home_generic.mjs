@@ -1,5 +1,4 @@
-import { text_remove_while_starts_with } from "../../../love/public/src/text_remove_while_starts_with.mjs";
-import { text_remove_if_starts_with } from "../../../love/public/src/text_remove_if_starts_with.mjs";
+import { json_try } from "../../../love/public/src/json_try.mjs";
 import { app_gloss_bible_generate_generic_word } from "../../../love/public/src/app_gloss_bible_generate_generic_word.mjs";
 import { g_sermon_generate_book_generic_property } from "../../../love/public/src/g_sermon_generate_book_generic_property.mjs";
 import { emoji_arrow_down } from "../../../love/public/src/emoji_arrow_down.mjs";
@@ -20,7 +19,6 @@ import { html_font_color_set } from "../../../love/public/src/html_font_color_se
 import { html_bold_mild } from "../../../love/public/src/html_bold_mild.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_hr } from "../../../love/public/src/html_hr.mjs";
-import { json_from } from "../../../love/public/src/json_from.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_font_color_set_green } from "../../../love/public/src/html_font_color_set_green.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
@@ -67,9 +65,7 @@ export async function app_gloss_bible_home_generic(
     }
     each(texts, lambda5);
     let explains_json = property_get(passage, generated);
-    let removed = text_remove_if_starts_with(explains_json, "json");
-    let removed2 = text_remove_while_starts_with(removed, "`");
-    let explains = json_from(removed2);
+    let explains = json_try(explains_json);
     if (false) {
       let div3 = html_div(p);
       function lambda2(e) {
