@@ -4,9 +4,9 @@ export async function ebible_chapters_each_verses(
   bible_folder,
   lambda$chapter_code$verses,
 ) {
-  let list = await ebible_chapter_codes(bible_folder);
+  let chapter_codes = await ebible_chapter_codes(bible_folder);
   await ebible_chapters_each_verses_list(
-    list,
+    chapter_codes,
     bible_folder,
     lambda$chapter_code$verses,
   );
