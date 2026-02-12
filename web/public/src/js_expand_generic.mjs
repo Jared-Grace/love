@@ -72,13 +72,13 @@ export async function js_expand_generic(next, stack2, index, ast) {
         let assign = js_declare(name, argument);
         list_add(body_block, assign);
       } else {
-      }
-      let declaration_calls = property_get(v, "declaration");
-      let nna = null_not_is(declaration_call);
-      if (nnd) {
-        let name = js_declaration_name(declaration_call);
-        let assign = js_declare(name, argument);
-        list_add(body_block, assign);
+        let declaration_calls = property_get(v, "declaration");
+        let nna = null_not_is(declaration_call);
+        if (nnd) {
+          let name = js_declaration_name(declaration_call);
+          let assign = js_declare(name, argument);
+          list_add(body_block, assign);
+        }
       }
     }
     js_return_on(last, lambda, noop);
