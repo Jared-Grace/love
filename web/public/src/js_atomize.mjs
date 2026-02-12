@@ -17,6 +17,9 @@ export async function js_atomize(ast) {
       let variable_name = js_node_atomize_name();
       await js_node_atomize(existing_ids, v, variable_name);
     }
+    return;
+    if (false) {
+    }
   }
   await each_async(ces, lambda);
 }
