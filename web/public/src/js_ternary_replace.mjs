@@ -62,6 +62,7 @@ export function js_ternary_replace(ast) {
     let code_expression = js_code_call(ternary.name);
     let e = js_parse_expression(code_expression);
     let arguments2 = property_get(e, "arguments");
+    let test = property_get(node, "test");
     js_left_right_set(a, expression, e);
     let code = js_unparse(a);
     log({
