@@ -25,6 +25,6 @@ export async function js_node_atomize(existing_ids, v, variable_name, offset) {
   let v2 = js_parse_expression(unique);
   const replaced = list_get_end(stack, offset);
   let code = js_unparse(replaced);
-  log({});
+  log(code);
   object_replace(replaced, v2);
 }
