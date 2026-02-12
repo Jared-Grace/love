@@ -1,3 +1,4 @@
+import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { functions_asts_each } from "../../../love/public/src/functions_asts_each.mjs";
 import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -5,6 +6,7 @@ import { js_declaration_single_name } from "../../../love/public/src/js_declarat
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function functions_search_call(search) {
+  let list = list_adder(function lambda2(la) {});
   async function lambda(ast) {
     function lambda3(a) {
       let v = property_get(a, "v");
