@@ -8,7 +8,7 @@ export function json_from_try(json) {
   let left = text_index_of(json, "{");
   let skipped = text_skip(json, left);
   let right = text_index_of_last(skipped, "}");
-  const without = string_skip_end(skipped, right + 1);
+  const without = string_skip_end(skipped, right);
   log({
     without,
     skipped,
