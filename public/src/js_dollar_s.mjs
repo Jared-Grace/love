@@ -1,4 +1,3 @@
-import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 import { js_assign_default } from "../../../love/public/src/js_assign_default.mjs";
 import { js_literal_is } from "../../../love/public/src/js_literal_is.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
@@ -55,6 +54,4 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     }
     each(declarations, lambda2);
   }
-  let s = js_parse_statement(code);
-  return s;
 }
