@@ -1,3 +1,4 @@
+import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { assert_json } from "../../../love/public/src/assert_json.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { equal_by } from "../../../love/public/src/equal_by.mjs";
@@ -46,6 +47,7 @@ export async function js_node_atomize_variable_name_get(
           let params = property_get(declaration, "params");
           let child = list_get_end(stack, offset);
           let index = list_index_of(stack1, child);
+          log_unparse(node2);
           let param = list_get(params, index);
           let b = equal_by(stack1, params, list_size);
           assert_json(b, {
