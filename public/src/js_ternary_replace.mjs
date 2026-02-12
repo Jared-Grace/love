@@ -1,3 +1,4 @@
+import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { js_code_call } from "../../../love/public/src/js_code_call.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -62,6 +63,7 @@ export function js_ternary_replace(ast) {
     let code_expression = js_code_call(ternary.name);
     let e = js_parse_expression(code_expression);
     let arguments2 = property_get(e, "arguments");
+    list_add_multiple(list2, items);
     let test = property_get(node, "test");
     js_left_right_set(a, expression, e);
     let code = js_unparse(a);
