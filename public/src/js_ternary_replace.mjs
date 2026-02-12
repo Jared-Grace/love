@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { object_copy } from "../../../love/public/src/object_copy.mjs";
 import { js_list_type_each } from "../../../love/public/src/js_list_type_each.mjs";
@@ -80,7 +81,10 @@ export function js_ternary_replace(ast) {
     let statement = js_parse_statement(c);
     let copy = object_copy(e1);
     property_set(statement, "expression", copy);
-    let code = js_unparse(ast2);
+    let code = js_unparse(statement);
+    log({
+      code,
+    });
     object_replace(node, statement);
   }
   js_list_type_each(ast, "IfStatement", lambda);
