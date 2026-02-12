@@ -1,3 +1,4 @@
+import { js_code_bracket_open } from "../../../love/public/src/js_code_bracket_open.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { text_index_of_try } from "../../../love/public/src/text_index_of_try.mjs";
 import { text_slice_0 } from "../../../love/public/src/text_slice_0.mjs";
@@ -7,7 +8,8 @@ import { json_from } from "../../../love/public/src/json_from.mjs";
 export function json_from_try(json) {
   let left = text_index_of_try(json, "{");
   function lambda(item) {}
-  let list = ["{", "["];
+  let b = js_code_bracket_open();
+  let list = ["{", b];
   each(list, lambda);
   let skipped = text_skip(json, left);
   let right = text_index_of_last(skipped, "}");
