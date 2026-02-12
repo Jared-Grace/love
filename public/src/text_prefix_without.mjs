@@ -16,6 +16,6 @@ export function text_prefix_without(s, prefix) {
   if (not(a)) {
     error();
   }
-  let without = text_prefix_without_inner(prefix, s);
+  let without = text_prefix_without_inner(s, prefix);
   return without;
 }
