@@ -14,7 +14,8 @@ export function json_from_try(json) {
   let list = [v2, b];
   function lambda(item) {}
   each(list, lambda);
-  let mapped = list_map(list2, function lambda2(item2) {});
+  function lambda2(item2) {}
+  let mapped = list_map(list2, lambda2);
   let skipped = text_skip(json, left);
   let right = text_index_of_last(skipped, "}");
   const without = text_slice_0(skipped, right + 1);
