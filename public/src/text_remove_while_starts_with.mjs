@@ -3,8 +3,11 @@ import { text_remove_if_starts_with } from "../../../love/public/src/text_remove
 export function text_remove_while_starts_with(item, prefix) {
   while (true) {
     let result = text_remove_if_starts_with(item, prefix);
-    if (equal(left, right)) {
+    ("was there no change?");
+    if (equal(result, item)) {
+      break;
     }
+    item = result;
   }
-  return result;
+  return item;
 }
