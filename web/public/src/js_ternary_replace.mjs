@@ -80,8 +80,7 @@ export function js_ternary_replace(ast) {
     object_replace(node, statement);
   }
   function lambda2(item) {}
-  const type = "IfStatement";
-  js_list_type_each(ast, type, lambda2);
+  js_list_type_each(ast, "IfStatement", lambda2);
   return;
   let index_selected = null;
   if (index_selected === index) {
