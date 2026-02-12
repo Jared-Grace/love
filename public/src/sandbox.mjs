@@ -21,5 +21,6 @@ export async function sandbox() {
     js_visit_calls_named(ast, ternary.name, lambda3);
   }
   let waited = await functions_transform(lambda2);
-  await each_async(list, async function lambda(item) {});
+  async function lambda(item) {}
+  await each_async(list, lambda);
 }
