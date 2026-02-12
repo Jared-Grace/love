@@ -1,7 +1,6 @@
 import { undefined_is } from "../../../love/public/src/undefined_is.mjs";
 import { function_parse_unaliased } from "../../../love/public/src/function_parse_unaliased.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { function_transform_result_inner } from "../../../love/public/src/function_transform_result_inner.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { text_split_comma } from "../../../love/public/src/text_split_comma.mjs";
 import { data_path } from "../../../love/public/src/data_path.mjs";
@@ -12,9 +11,12 @@ export async function function_transform_result(f_names, lambda$ast) {
   let split = text_split_comma(f_names);
   async function lambda(f_name) {
     async function lambda2() {
-      let r4 = await function_transform_result_inner(f_name, lambda$ast);
-      let result = property_get(r4, "result");
-      let parsed = property_get(r4, "parsed");
+      let parsed = await function_parse_unaliased(f_name);
+      let ast = property_get(parsed, "ast");
+      let result = await lambda$ast(ast);
+      if (undefined_is(result)) {
+        result = null;
+      }
       await file_js_unparse(parsed);
       return result;
     }
@@ -28,14 +30,4 @@ export async function function_transform_result(f_names, lambda$ast) {
   await data_all_initialize(d_path);
   let r = await file_transform_cached(d_path, lambda2);
   return r;
-  let parsed2 = await function_parse_unaliased(f_name);
-  let ast = property_get(parsed2, "ast");
-  let result2 = await lambda$ast(ast);
-  if (undefined_is(result2)) {
-    result2 = null;
-  }
-  let r4 = {
-    parsed2,
-    result2,
-  };
 }
