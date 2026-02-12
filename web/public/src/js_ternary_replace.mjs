@@ -75,8 +75,8 @@ export function js_ternary_replace(ast) {
     let statement = js_parse_statement(c);
     property_set(statement, "expression", a);
     object_replace(node, statement);
-    $s
-    let replaced = true;
+    let replaced = null;
+    replaced = true;
   }
   js_list_type_each(ast, "IfStatement", lambda);
   return;
