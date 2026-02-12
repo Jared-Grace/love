@@ -26,6 +26,7 @@ export async function sandbox() {
   let waited = await functions_transform(lambda2);
   let lambda = await function_transform_result_inner_curried_right(lambda2);
   let f_names = await functions_names();
-  let mapped = list_map(list, function lambda4(item) {});
+  function lambda4(item) {}
+  let mapped = list_map(list, lambda4);
   await each_async(f_names, lambda);
 }
