@@ -22,7 +22,7 @@ export async function js_node_atomize(existing_ids, v, variable_name, offset) {
   let assign = js_declare(unique, copy);
   js_block_insert(stack, assign);
   let v2 = js_parse_expression(unique);
-  const replaced = list_get_end(stack, offset);
-  log_unparse(replaced);
-  object_replace(replaced, v2);
+  const copied = list_get_end(stack, offset);
+  log_unparse(copied);
+  object_replace(copied, v2);
 }
