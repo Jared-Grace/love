@@ -63,7 +63,7 @@ export function js_ternary_replace(ast) {
     let e = js_parse_expression(code_expression);
     let arguments2 = property_get(e, "arguments");
     js_left_right_set(a, expression, arguments2);
-    let code = js_unparse(ast2);
+    let code = js_unparse(a);
     log({
       code,
     });
