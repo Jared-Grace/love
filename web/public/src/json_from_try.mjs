@@ -1,3 +1,4 @@
+import { text_first } from "../../../love/public/src/text_first.mjs";
 import { text_last } from "../../../love/public/src/text_last.mjs";
 import { js_code_bracket_close } from "../../../love/public/src/js_code_bracket_close.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
