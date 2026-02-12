@@ -5,6 +5,6 @@ import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 export function list_previous_wrap(list, item) {
   let previous = null;
   let li = list_first_is(list, item);
-  previous = ternary(li, list_previous(list, item), list_last(list));
+  previous = ternary(li, list_last(list), list_previous(list, item));
   return previous;
 }

@@ -1,5 +1,9 @@
 export function ternary(condition, on_true, on_false) {
   let result = null;
-  result = ternary(condition, on_false, on_true);
+  if (condition) {
+    result = on_true;
+  } else {
+    result = on_false;
+  }
   return result;
 }
