@@ -1,3 +1,4 @@
+import { js_left_right_set } from "../../../love/public/src/js_left_right_set.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_assign_default } from "../../../love/public/src/js_assign_default.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -54,6 +55,7 @@ export function js_ternary_replace(ast) {
     let first = list_first(names);
     let expression = js_parse_expression(first);
     let s = js_assign_default();
+    js_left_right_set(expression, id, init);
   }
   js_visit_type(ast, "IfStatement", lambda);
   return;
