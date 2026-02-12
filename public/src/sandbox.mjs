@@ -6,6 +6,7 @@ import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_na
 import { functions_transform } from "../../../love/public/src/functions_transform.mjs";
 import { ternary } from "./ternary.mjs";
 export async function sandbox() {
+  ea;
   async function lambda2(ast) {
     function lambda3(a) {
       let v = property_get(a, "v");
