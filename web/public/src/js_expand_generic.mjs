@@ -76,9 +76,7 @@ export async function js_expand_generic(next, stack2, index, ast) {
         let assignment = property_get(v, "assignment");
         let nna = null_not_is(assignment);
         if (nna) {
-          let name = js_declaration_name(declaration_call);
-          property_set(object, property_name, value);
-          let assign = js_declare(name, argument);
+          property_set(assignment, "right", argument);
           list_add(body_block, assignment);
         }
       }
