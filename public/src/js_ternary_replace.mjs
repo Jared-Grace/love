@@ -26,6 +26,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { ternary } from "./ternary.mjs";
 export function js_ternary_replace(ast) {
+  let replaced = null;
   async function lambda(v) {
     let node = property_get(v, "node");
     let alternate = property_get(node, "alternate");
@@ -75,7 +76,6 @@ export function js_ternary_replace(ast) {
     let statement = js_parse_statement(c);
     property_set(statement, "expression", a);
     object_replace(node, statement);
-    let replaced = null;
     replaced = true;
   }
   js_list_type_each(ast, "IfStatement", lambda);
