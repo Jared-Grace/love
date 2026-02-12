@@ -12,7 +12,8 @@ export async function js_atomize(ast) {
   let ces = js_list_type(ast, "CallExpression");
   async function lambda(v) {
     let stack = property_get(v, "stack");
-    let stack1 = list_get_end(stack, 1);
+    let offset = 0;
+    let stack1 = list_get_end(stack, 1 + offset);
     if (list_is(stack1)) {
       ("this list could be a block body or an argument list of a fn call");
       let variable_name = js_node_atomize_name();
@@ -28,5 +29,4 @@ export async function js_atomize(ast) {
     aes,
   });
   let stack1 = list_get_end(stack, 1);
-  let offset = 0;
 }
