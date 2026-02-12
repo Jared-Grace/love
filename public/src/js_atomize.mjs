@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_node_atomize } from "../../../love/public/src/js_node_atomize.mjs";
@@ -19,4 +20,9 @@ export async function js_atomize(ast) {
     }
   }
   await each_async(ces, lambda);
+  let aes = js_list_type(ast, "AwaitExpression");
+  return;
+  log({
+    aes,
+  });
 }
