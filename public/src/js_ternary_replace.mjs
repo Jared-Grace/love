@@ -42,12 +42,12 @@ export function js_ternary_replace(ast) {
     if (not(es)) {
       return false;
     }
-    let mapped3 = list_map_property(mapped2, "expression");
-    let ae = list_all(mapped3, js_assignment_expression_is);
+    let lefts = list_map_property(mapped2, "expression");
+    let ae = list_all(lefts, js_assignment_expression_is);
     if (not(ae)) {
       return false;
     }
-    let identifiers = list_map_property(mapped3, "left");
+    let identifiers = list_map_property(lefts, "left");
     let i = list_all(identifiers, js_identifier_is);
     if (not(i)) {
       return false;
