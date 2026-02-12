@@ -1,3 +1,4 @@
+import { text_remove_if_starts_with } from "../../../love/public/src/text_remove_if_starts_with.mjs";
 import { app_gloss_bible_generate_generic_word } from "../../../love/public/src/app_gloss_bible_generate_generic_word.mjs";
 import { g_sermon_generate_book_generic_property } from "../../../love/public/src/g_sermon_generate_book_generic_property.mjs";
 import { emoji_arrow_down } from "../../../love/public/src/emoji_arrow_down.mjs";
@@ -66,6 +67,7 @@ export async function app_gloss_bible_home_generic(
     each(texts, lambda5);
     let explains_json = property_get(passage, generated);
     let explains = json_from(explains_json);
+    text_remove_if_starts_with(explains, "json");
     if (false) {
       let div3 = html_div(p);
       function lambda2(e) {
