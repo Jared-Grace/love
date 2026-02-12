@@ -1,5 +1,5 @@
+import { function_imports_fix } from "../../../love/public/src/function_imports_fix.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
-import { function_imports_add } from "../../../love/public/src/function_imports_add.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { js_list_type_each } from "../../../love/public/src/js_list_type_each.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
@@ -81,7 +81,7 @@ export async function js_ternary_replace(ast) {
   }
   js_list_type_each(ast, "IfStatement", lambda);
   if (replaced) {
-    await function_imports_add(ast, [ternary.name]);
+    await function_imports_fix();
   }
   return;
   let a = null;
