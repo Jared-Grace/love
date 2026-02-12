@@ -31,9 +31,9 @@ export async function js_node_atomize_variable_name_get(
     }
   }
   ("use param name of containing fn");
-  let stack2 = list_get_end(stack, 2);
+  let stack2 = list_get_end(stack, 2 + offset);
   if (js_node_type_is(stack2, "CallExpression")) {
-    let stack1 = list_get_end(stack, 1);
+    let stack1 = list_get_end(stack, 1 + offset);
     if (list_is(stack1)) {
       let callee = property_get(stack2, "callee");
       if (js_node_type_is(callee, "Identifier")) {
