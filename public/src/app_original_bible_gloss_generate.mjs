@@ -12,7 +12,7 @@ export async function app_original_bible_gloss_generate() {
     language,
     last,
     bible_folders,
-    null,
+    book_code,
     fn,
     chapter_code_specified,
   );
