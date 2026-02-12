@@ -6,9 +6,14 @@ import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 export function js_statement_call_get(node) {
   let expression = null;
   let declaration = null;
+  let assignment = null;
   if (js_node_type_is(node, "ExpressionStatement")) {
     let expression_next = property_get(node, "expression");
     expression = expression_next;
+    if (js_node_type_is(node, "AssignmentExpression")) {
+      let expression_next = property_get(node, "expression");
+      expression = expression_next;
+    }
   } else if (js_node_type_is(node, "VariableDeclaration")) {
     let declarations = property_get(node, "declarations");
     if (list_multiple_is(declarations)) {
