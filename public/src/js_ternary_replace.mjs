@@ -80,11 +80,11 @@ export function js_ternary_replace(ast) {
     let c = js_code_statement("a");
     let statement = js_parse_statement(c);
     let code = js_unparse(statement);
-    log({
-      code,
-    });
     let copy = object_copy(e1);
     property_set(statement, "expression", copy);
+    log({
+      copy,
+    });
     object_replace(node, statement);
   }
   js_list_type_each(ast, "IfStatement", lambda);
