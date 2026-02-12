@@ -11,9 +11,9 @@ export async function sandbox() {
       let v = property_get(a, "v");
       let node = property_get(v, "node");
       let code = js_unparse(node);
-      let n = js_declaration_single_name(ast);
+      let f = js_declaration_single_name(ast);
       log({
-        n,
+        f,
         code,
       });
     }
