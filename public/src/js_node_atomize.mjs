@@ -6,7 +6,7 @@ import { js_parse_expression } from "../../../love/public/src/js_parse_expressio
 import { object_copy } from "../../../love/public/src/object_copy.mjs";
 import { js_identifier_unique } from "../../../love/public/src/js_identifier_unique.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export async function js_node_atomize(existing, v, variable_name) {
+export async function js_node_atomize(existing_ids, v, variable_name) {
   let node = property_get(v, "node");
   let stack = property_get(v, "stack");
   variable_name = await js_node_atomize_variable_name_get(
@@ -14,7 +14,7 @@ export async function js_node_atomize(existing, v, variable_name) {
     variable_name,
     stack,
   );
-  let unique = js_identifier_unique(existing, variable_name);
+  let unique = js_identifier_unique(existing_ids, variable_name);
   let copy = object_copy(node);
   let assign = js_declare(unique, copy);
   js_block_insert(stack, assign);
