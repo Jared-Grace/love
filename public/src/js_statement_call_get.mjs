@@ -12,8 +12,7 @@ export function js_statement_call_get(node) {
   } else if (js_node_type_is(node, "VariableDeclaration")) {
     let declarations = property_get(node, "declarations");
     if (list_multiple_is(declarations)) {
-      let v = null;
-      return v;
+      return null;
     }
     declaration = list_single(declarations);
     expression = property_get(declaration, "init");
