@@ -1,3 +1,4 @@
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 import { js_code_statement } from "../../../love/public/src/js_code_statement.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
@@ -75,7 +76,8 @@ export function js_ternary_replace(ast) {
     let e1 = list_get_end_1(stack);
     object_replace(node, e1);
     let c = js_code_statement("a");
-    let statement = js_parse_statement(code);
+    let statement = js_parse_statement(c);
+    property_set(object, property_name, value);
   }
   js_visit_type(ast, "IfStatement", lambda);
   return;
