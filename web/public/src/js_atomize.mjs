@@ -27,7 +27,7 @@ export async function js_atomize(ast) {
       let variable_name = js_node_atomize_name();
       await js_node_atomize(existing_ids, v, variable_name, offset);
     }
-    return;
+    return; 
     let v2 = noop();
     let v3 = noop();
     [v2, v3];
