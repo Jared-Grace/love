@@ -32,6 +32,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_g_bible_home_inner } from "../../../love/public/src/app_g_bible_home_inner.mjs";
 import { list_second } from "../../../love/public/src/list_second.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
+import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export async function app_gloss_bible_home_generic(
   context,
   download,
@@ -57,18 +58,8 @@ export async function app_gloss_bible_home_generic(
     let h = html_hr(p);
     let texts = null;
     if (text_use) {
-      let text = property_get(passage, "text");
-      let separator3 = text_colon_3();
-      let split3 = text_split(text, separator3);
-      function lambda4(v) {
-        let separator2 = text_colon_2();
-        let split = text_split(v, separator2);
-        let get = null;
-        get = ternary(text_use, list_first, list_second);
-        let text_ceb = list_first(split);
-        return text_ceb;
-      }
-      texts = list_map(split3, lambda4);
+
+       texts = property_get(passage, "texts");
     } else {
       texts = property_get(passage, "originals");
     }
