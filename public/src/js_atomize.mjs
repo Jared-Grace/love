@@ -13,17 +13,17 @@ export async function js_atomize(ast) {
   async function lambda(v) {
     let stack = property_get(v, "stack");
     let offset = 0;
-    const stack1 = list_get_end_1(stack);
-    if (list_is(stack1)) {
-      ("this list could be a block body or an argument list of a fn call");
-      let variable_name = js_node_atomize_name();
-      await js_node_atomize(existing_ids, v, variable_name);
-    }
-    return;
     function lambda3() {
       offset = 1;
     }
+    const stack1 = list_get_end_1(stack);
     js_node_type_is_if(stack1, "AwaitExpression", lambda3);
+    if (list_is(stack1)) {
+      ("this list could be a block body or an argument list of a fn call");
+      let variable_name = js_node_atomize_name();
+      await js_node_atomize(existing_ids, v, variable_name, offset);
+    }
+    return;
   }
   await each_async(ces, lambda);
 }
