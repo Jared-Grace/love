@@ -17,7 +17,8 @@ export async function sandbox() {
         code,
       });
     }
-    js_visit_calls_named(ast, ternary.name, lambda3);
+    const search = ternary.name;
+    js_visit_calls_named(ast, search, lambda3);
   }
   await functions_asts_each(lambda);
 }
