@@ -20,7 +20,8 @@ export async function js_atomize(ast) {
     }
     return;
     function lambda3() {
-      let offset = 1;
+      let offset = null;
+      offset = 1;
     }
     js_node_type_is_if(stack1, "AwaitExpression", lambda3);
   }
