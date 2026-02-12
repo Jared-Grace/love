@@ -1,5 +1,4 @@
-import { each } from "../../../love/public/src/each.mjs";
-import { js_list_type } from "../../../love/public/src/js_list_type.mjs";
+import { js_list_type_each } from "../../../love/public/src/js_list_type_each.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 import { js_code_statement } from "../../../love/public/src/js_code_statement.mjs";
@@ -80,10 +79,9 @@ export function js_ternary_replace(ast) {
     property_set(statement, "expression", e1);
     object_replace(node, statement);
   }
-  const type = "IfStatement";
-  let list = js_list_type(ast, type);
   function lambda2(item) {}
-  each(list, lambda2);
+  const type = "IfStatement";
+  js_list_type_each(ast, type, lambda2);
   return;
   let index_selected = null;
   if (index_selected === index) {
