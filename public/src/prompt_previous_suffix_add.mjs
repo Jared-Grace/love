@@ -5,6 +5,6 @@ export async function prompt_previous_suffix_add(suffix) {
   let result = await data_prompts();
   let e1 = list_get_end_1(result);
   e1 += suffix + "";
-  let r = await function_run_line(last);
+  let r = await function_run_line(e1);
   return r;
 }
