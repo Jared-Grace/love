@@ -1,9 +1,9 @@
+import { text_index_of_last } from "../../../love/public/src/text_index_of_last.mjs";
+import { text_index_of } from "../../../love/public/src/text_index_of.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
-import { text_remove_while_starts_with } from "../../../love/public/src/text_remove_while_starts_with.mjs";
-import { text_remove_if_starts_with } from "../../../love/public/src/text_remove_if_starts_with.mjs";
 export function json_from_try(json) {
-  let removed = text_remove_if_starts_with(json, "json");
-  let removed2 = text_remove_while_starts_with(removed, "`");
+  let index = text_index_of(s, item);
+  let i = text_index_of_last(s2, search);
   let result = json_from(removed2);
   return result;
 }
