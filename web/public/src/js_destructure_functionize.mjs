@@ -65,4 +65,12 @@ export async function js_destructure_functionize(ast) {
   }
   js_visit_type(ast, "ObjectPattern", lambda);
   await js_imports_missing_add(ast);
+  return;
+  let result = null;
+  if (ii) {
+    result = on_true;
+  } else {
+    result = on_false;
+  }
+  let name4 = result;
 }
