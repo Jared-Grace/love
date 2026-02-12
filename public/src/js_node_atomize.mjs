@@ -23,5 +23,5 @@ export async function js_node_atomize(existing_ids, v, variable_name, offset) {
   let assign = js_declare(unique, copy);
   js_block_insert(stack, assign);
   let v2 = js_parse_expression(unique);
-  object_replace(node, v2);
+  object_replace(copied, v2);
 }
