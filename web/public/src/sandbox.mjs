@@ -28,8 +28,7 @@ export async function sandbox() {
   async function lambda(f_name) {
     await function_transform_result_inner(f_name, lambda$ast);
   }
-  let r2 = await function_transform_result_inner_curried_right(
-    async function lambda4(ast2) {},
-  );
+  async function lambda4(ast2) {}
+  let r2 = await function_transform_result_inner_curried_right(lambda4);
   await each_async(f_names, lambda);
 }
