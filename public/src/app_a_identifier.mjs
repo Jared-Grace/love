@@ -33,7 +33,7 @@ export function app_a_identifier(a) {
       if (includes3) {
         let f_names_local = property_get(a, "f_names_local");
         let includes2 = list_includes(f_names_local, name);
-        color = ternary(includes2, "#4a4affff", "#00c800ff");
+        color = ternary(includes2, "#00c800ff", "#4a4affff");
       } else {
         color = "red";
       }

@@ -7,7 +7,7 @@ export function js_parse(code) {
   let a = null;
   let module_name = "acorn";
   let e = global_import_exists(module_name);
-  a = ternary(e, acorn, global_import_get(module_name));
+  a = ternary(e, global_import_get(module_name), acorn);
   let ast = js_parse_generic(a, code);
   return ast;
 }

@@ -14,8 +14,8 @@ export async function file_open(f_path) {
     let output = null;
     output = ternary(
       ew,
-      await file_read(f_path),
       await function_path_declaration_unparse(f_path),
+      await file_read(f_path),
     );
     log_keep(output);
   } else {
