@@ -7,7 +7,7 @@ export async function function_imports_fix(f_name) {
   let parsed = await function_imports_missing(f_name);
   let ast = property_get(parsed, "ast");
   let imports_missing = property_get(parsed, "imports_missing");
-  await js_imports_unused_remove(ast);
   await function_imports_add(ast, imports_missing);
+  await js_imports_unused_remove(ast);
   await file_js_unparse(parsed);
 }
