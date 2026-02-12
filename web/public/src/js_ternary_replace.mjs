@@ -58,7 +58,7 @@ export function js_ternary_replace(ast) {
     let first = list_first(names);
     let expression = js_parse_expression(first);
     let a = js_assign_default();
-    let code_expressionr = js_code_call(ternary.name);
+    let code_expression = js_code_call(ternary.name);
     let e = js_parse_expression(code_expression);
     log({
       e,
