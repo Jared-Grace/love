@@ -15,9 +15,9 @@ import { js_identifier_unique } from "../../../love/public/src/js_identifier_uni
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
 export async function js_call_new_code(f_name_call, ast) {
-  let v2 = await function_parse_declaration(f_name_call);
-  let ast_call = property_get(v2, "ast");
-  let declaration = property_get(v2, "declaration");
+  let r = await function_parse_declaration(f_name_call);
+  let ast_call = property_get(r, "ast");
+  let declaration = property_get(r, "declaration");
   let existing = js_identifiers_names(ast);
   let arg_names = js_declaration_params_names(declaration);
   async function lambda3(arg_name) {
