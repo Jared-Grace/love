@@ -1,3 +1,4 @@
+import { ternary } from "../../../love/public/src/ternary.mjs";
 import { js_return_identifier_name } from "../../../love/public/src/js_return_identifier_name.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
@@ -76,11 +77,7 @@ export function app_a_identifier_generic(
         let div = html_div_text(oc, name);
         html_div_text(oc, text2 + " to:");
         let fn = null;
-        if (lines_multiple) {
-          fn = app_a_textarea;
-        } else {
-          fn = app_a_input;
-        }
+        fn = ternary(lines_multiple, app_a_input, app_a_textarea);
         let input = fn(overlay);
         if (lines_multiple) {
           const row_count = 20;
