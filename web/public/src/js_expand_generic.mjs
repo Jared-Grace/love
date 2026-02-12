@@ -33,7 +33,6 @@ export async function js_expand_generic(next, stack2, index, ast) {
   });
   let inserted = null;
   let v = js_statement_call_get(next);
-  let declaration_call = property_get(v, "declaration");
   let call = property_get(v, "call");
   if (call !== null) {
     let callee = property_get(call, "callee");
@@ -66,7 +65,16 @@ export async function js_expand_generic(next, stack2, index, ast) {
     function lambda() {
       list_remove(body_block, last);
       let argument = property_get(last, "argument");
+      let declaration_call = property_get(v, "declaration");
       let nnd = null_not_is(declaration_call);
+      if (nnd) {
+        let name = js_declaration_name(declaration_call);
+        let assign = js_declare(name, argument);
+        list_add(body_block, assign);
+      } else {
+      }
+      let declaration_calls = property_get(v, "declaration");
+      let nna = null_not_is(declaration_call);
       if (nnd) {
         let name = js_declaration_name(declaration_call);
         let assign = js_declare(name, argument);
