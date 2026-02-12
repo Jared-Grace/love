@@ -1,3 +1,4 @@
+import { js_keyword_true } from "../../../love/public/src/js_keyword_true.mjs";
 import { js_parse_expression_replace } from "../../../love/public/src/js_parse_expression_replace.mjs";
 export function js_dollar_t({
   remaining,
