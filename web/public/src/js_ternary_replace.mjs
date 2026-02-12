@@ -66,7 +66,7 @@ export function js_ternary_replace(ast) {
     let arguments2 = property_get(e, "arguments");
     let test = property_get(node, "test");
     list_add(arguments2, test);
-    let rights = list_map_property(mapped2, "right");
+    let rights = list_map_property(ess, "right");
     list_add_multiple(arguments2, rights);
     js_left_right_set(a, expression, e);
     let code = js_unparse(a);
