@@ -1,3 +1,4 @@
+import { object_copy } from "../../../love/public/src/object_copy.mjs";
 import { js_list_type_each } from "../../../love/public/src/js_list_type_each.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
@@ -76,6 +77,7 @@ export function js_ternary_replace(ast) {
     let e1 = list_get_end_1(stack);
     let c = js_code_statement("a");
     let statement = js_parse_statement(c);
+    let copy = object_copy(from);
     property_set(statement, "expression", e1);
     object_replace(node, statement);
   }
