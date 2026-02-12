@@ -23,13 +23,13 @@ export function js_ternary_replace(ast) {
     let alternate = property_get(node, "alternate");
     let consequent = property_get(node, "consequent");
     const list = [alternate, consequent];
-    let b = list_all(list, js_block_statement_is);
-    if (not(b)) {
+    let bs = list_all(list, js_block_statement_is);
+    if (not(bs)) {
       return false;
     }
     let mapped = list_map(list, js_block_to_body);
-    let a = list_all(mapped, list_size_1);
-    if (not(a)) {
+    let bb = list_all(mapped, list_size_1);
+    if (not(bb)) {
       return false;
     }
     let mapped2 = list_map(mapped, list_single);
@@ -54,8 +54,8 @@ export function js_ternary_replace(ast) {
     }
     let first = list_first(names);
     let expression = js_parse_expression(first);
-    let s = js_assign_default();
-    js_left_right_set(expression, id, init);
+    let a = js_assign_default();
+    js_left_right_set(a, expression, init);
   }
   js_visit_type(ast, "IfStatement", lambda);
   return;
