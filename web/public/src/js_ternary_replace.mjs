@@ -1,3 +1,4 @@
+import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_assign_default } from "../../../love/public/src/js_assign_default.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_all_equal } from "../../../love/public/src/list_all_equal.mjs";
@@ -51,6 +52,7 @@ export function js_ternary_replace(ast) {
       return false;
     }
     let first = list_first(names);
+    let expression = js_parse_expression(code_expression);
     let s = js_assign_default();
   }
   js_visit_type(ast, "IfStatement", lambda);
