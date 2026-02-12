@@ -2,5 +2,6 @@ import { functions_search_call } from "../../../love/public/src/functions_search
 import { ternary } from "../../../love/public/src/ternary.mjs";
 export async function sandbox() {
   const search = ternary.name;
-  return await functions_search_call(search);
+  let r = await functions_search_call(search);
+  return r;
 }
