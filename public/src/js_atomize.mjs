@@ -11,9 +11,9 @@ export async function js_atomize(ast) {
   let existing_ids = js_identifiers_names(ast);
   let ces = js_list_type(ast, "CallExpression");
   async function lambda(v) {
-    let v2 = await lambda_each(v, 0);
+    await lambda_each(v, 0);
   }
-  let v3 = await each_async(ces, lambda);
+  await each_async(ces, lambda);
   let aes = js_list_type(ast, "AwaitExpression");
   async function lambda_each(v, offset) {
     let stack = property_get(v, "stack");
@@ -21,15 +21,14 @@ export async function js_atomize(ast) {
     if (list_is(stack1)) {
       ("this list could be a block body or an argument list of a fn call");
       let variable_name = js_node_atomize_name();
-      let v4 = await js_node_atomize(existing_ids, v, variable_name, offset);
-      v4;
+      await js_node_atomize(existing_ids, v, variable_name, offset);
     }
   }
   async function lambda2(v) {
-    let v9 = await lambda_each(v, 1);
-    v9;
+    await lambda_each(v, 1);
   }
-  let v6 = await each_async(aes, lambda2);
+  return;
+  await each_async(aes, lambda2);
   return;
   log({
     aes,
