@@ -1,4 +1,3 @@
-import { ternary } from "../../../love/public/src/ternary.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
@@ -82,7 +81,13 @@ export async function app_reply_main_old(context) {
     let key = property_get(event, "key");
     let condition = equal(key, "Backspace");
     let on_true = text_take_less_1(typed);
-    typed = ternary(condition, on_true, key);
+    let result = null;
+    if (condition) {
+      result = on_true;
+    } else {
+      result = key;
+    }
+    typed = result;
     buttons_refresh();
   }
   html_on_keydown_body(lambda6);
