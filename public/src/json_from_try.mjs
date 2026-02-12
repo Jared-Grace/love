@@ -4,6 +4,6 @@ import { text_remove_if_starts_with } from "../../../love/public/src/text_remove
 export function json_from_try(explains_json) {
   let removed = text_remove_if_starts_with(explains_json, "json");
   let removed2 = text_remove_while_starts_with(removed, "`");
-  let explains = json_from(removed2);
-  return explains;
+  let result = json_from(removed2);
+  return result;
 }
