@@ -1,4 +1,5 @@
-import { functions_names_each } from "../../../love/public/src/functions_names_each.mjs";
+import { each_async } from "../../../love/public/src/each_async.mjs";
+import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { function_transform_result_inner_curried_right } from "../../../love/public/src/function_transform_result_inner_curried_right.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -23,6 +24,6 @@ export async function sandbox() {
   }
   let waited = await functions_transform(lambda2);
   let lambda = await function_transform_result_inner_curried_right(lambda2);
-  function lambda4() {}
-  await functions_names_each(lambda4);
+  let f_names = await functions_names();
+  await each_async(f_names, lambda);
 }
