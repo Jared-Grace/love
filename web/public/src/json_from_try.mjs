@@ -1,16 +1,10 @@
-import { text_index_of_try_curried } from "../../../love/public/src/text_index_of_try_curried.mjs";
-import { json_starts } from "../../../love/public/src/json_starts.mjs";
-import { list_min_try } from "../../../love/public/src/list_min_try.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
+import { json_starts_find_index } from "../../../love/public/src/json_starts_find_index.mjs";
 import { text_slice_0 } from "../../../love/public/src/text_slice_0.mjs";
 import { text_skip } from "../../../love/public/src/text_skip.mjs";
 import { text_index_of_last } from "../../../love/public/src/text_index_of_last.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 export function json_from_try(json) {
-  let list = json_starts();
-  let r = text_index_of_try_curried(json);
-  let mapped = list_map(list, r);
-  let left = list_min_try(mapped);
+  let left = json_starts_find_index(json);
   let skipped = text_skip(json, left);
   let right = text_index_of_last(skipped, "}");
   const without = text_slice_0(skipped, right + 1);
