@@ -23,8 +23,8 @@ export function js_statement_call_get(node) {
   }
   let a = js_node_type_is(expression, "CallExpression");
   if (not(a)) {
-    let v2 = null;
-    return v2;
+    let r = null;
+    return r;
   }
   let v3 = {
     expression,
