@@ -45,12 +45,12 @@ export function js_ternary_replace(ast) {
     if (not(i)) {
       return false;
     }
-    let mapped5 = list_map(mapped, js_identifier_name);
-    let eq = list_all_equal(mapped5);
+    let names = list_map(mapped, js_identifier_name);
+    let eq = list_all_equal(names);
     if (not(eq)) {
       return false;
     }
-    let first = list_first(mapped5);
+    let first = list_first(names);
     let s = js_assign_default();
   }
   js_visit_type(ast, "IfStatement", lambda);
