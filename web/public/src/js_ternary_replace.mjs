@@ -26,7 +26,6 @@ import { not } from "../../../love/public/src/not.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
-import { ternary } from "./ternary.mjs";
 export async function js_ternary_replace(ast) {
   let replaced = null;
   async function lambda(v) {
