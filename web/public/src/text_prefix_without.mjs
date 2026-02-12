@@ -1,11 +1,11 @@
-import { assert_message } from "../../../love/public/src/assert_message.mjs";
+import { assert_json } from "../../../love/public/src/assert_json.mjs";
 import { text_prefix_without_inner } from "../../../love/public/src/text_prefix_without_inner.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { text_starts_with } from "../../../love/public/src/text_starts_with.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 export function text_prefix_without(s, prefix) {
   let a = text_starts_with(s, prefix);
-  assert_message(b, message);
+  assert_json(b, o);
   if (not(a)) {
     error();
   }
