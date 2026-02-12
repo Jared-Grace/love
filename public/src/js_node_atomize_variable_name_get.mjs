@@ -44,6 +44,7 @@ export async function js_node_atomize_variable_name_get(
           let r = await function_parse_strict_declaration(name);
           let declaration = property_get(r, "declaration");
           let params = property_get(declaration, "params");
+          let child = list_get_end(stack, offset);
           let index = list_index_of(stack1, node);
           let param = list_get(params, index);
           let b = equal_by(stack1, params, list_size);
