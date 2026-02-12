@@ -22,4 +22,5 @@ export async function functions_search_call(search) {
     await functions_asts_each(lambda);
   }
   let list = await lookup_adder_async(lambda2);
+  return list;
 }
