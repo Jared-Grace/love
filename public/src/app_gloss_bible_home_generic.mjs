@@ -1,3 +1,4 @@
+import { ternary } from "../../../love/public/src/ternary.mjs";
 import { app_gloss_bible_generate_generic_word } from "../../../love/public/src/app_gloss_bible_generate_generic_word.mjs";
 import { g_sermon_generate_book_generic_property } from "../../../love/public/src/g_sermon_generate_book_generic_property.mjs";
 import { emoji_arrow_down } from "../../../love/public/src/emoji_arrow_down.mjs";
@@ -63,11 +64,7 @@ export async function app_gloss_bible_home_generic(
         let separator2 = text_colon_2();
         let split = text_split(v, separator2);
         let get = null;
-        if (text_use) {
-          get = list_first;
-        } else {
-          get = list_second;
-        }
+        get = ternary(text_use, list_second, list_first);
         let text_ceb = list_first(split);
         return text_ceb;
       }
