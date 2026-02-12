@@ -4,17 +4,17 @@ import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 export function js_statement_call_get(node) {
-  let expression = null;
+  let call = null;
   let declaration = null;
   let assignment = null;
   if (js_node_type_is(node, "ExpressionStatement")) {
     let expression_next = property_get(node, "expression");
-    expression = expression_next;
+    call = expression_next;
     if (js_node_type_is(node, "AssignmentExpression")) {
       assignment = expression_next;
-      expression = property_get(assignment, "right");
+      call = property_get(assignment, "right");
     } else {
-      expression = expression_next;
+      call = expression_next;
     }
   } else if (js_node_type_is(node, "VariableDeclaration")) {
     let declarations = property_get(node, "declarations");
@@ -22,17 +22,17 @@ export function js_statement_call_get(node) {
       return null;
     }
     declaration = list_single(declarations);
-    expression = property_get(declaration, "init");
+    call = property_get(declaration, "init");
   }
-  if (js_node_type_is(expression, "AwaitExpression")) {
-    expression = property_get(expression, "argument");
+  if (js_node_type_is(call, "AwaitExpression")) {
+    call = property_get(call, "argument");
   }
-  let a = js_node_type_is(expression, "CallExpression");
+  let a = js_node_type_is(call, "CallExpression");
   if (not(a)) {
     return null;
   }
   let v3 = {
-    expression,
+    expression: call,
     declaration,
   };
   return v3;
