@@ -26,7 +26,8 @@ export async function js_atomize(ast) {
     }
   }
   async function lambda2(v) {
-    let v5 = await lambda_each(v, 1);
+    let v9 = await lambda_each(v, 1);
+    v9;
   }
   let v6 = await each_async(aes, lambda2);
   return;
