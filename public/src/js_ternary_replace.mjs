@@ -1,3 +1,4 @@
+import { function_imports_add } from "../../../love/public/src/function_imports_add.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { js_list_type_each } from "../../../love/public/src/js_list_type_each.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
@@ -25,7 +26,7 @@ import { list_all } from "../../../love/public/src/list_all.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { ternary } from "./ternary.mjs";
-export function js_ternary_replace(ast) {
+export async function js_ternary_replace(ast) {
   let replaced = null;
   async function lambda(v) {
     let node = property_get(v, "node");
@@ -80,6 +81,7 @@ export function js_ternary_replace(ast) {
   }
   js_list_type_each(ast, "IfStatement", lambda);
   if (replaced) {
+    let result = await function_imports_add(ast2, imports);
   }
   return;
   let index_selected = null;
