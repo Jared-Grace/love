@@ -1,4 +1,4 @@
 export function js_keyword_true() {
-  let v = "true";
-  return v;
+  let k = "true";
+  return k;
 }
