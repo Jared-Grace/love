@@ -33,7 +33,7 @@ export async function js_return_atomize(ast) {
       }
       let v = js_visit_match(ast, argument);
       let variable_name = js_return_identifier_name();
-      await js_node_atomize(existing, v, variable_name);
+      await js_node_atomize(existing, v, variable_name, 0);
     }
   }
   await each_async(rs, lambda);
