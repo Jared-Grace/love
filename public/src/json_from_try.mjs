@@ -12,7 +12,7 @@ export function json_from_try(json) {
   let left = json_starts_find_index(json);
   let skipped = text_skip(json, left);
   let right = json_ends_find_index(skipped);
-  const without = text_slice_0(skipped, right + 1);
+  let without = text_slice_0(skipped, right + 1);
   let first = text_first(without);
   if (first === js_code_bracket_open()) {
     let last = text_last(without);
