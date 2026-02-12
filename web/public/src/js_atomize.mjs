@@ -21,7 +21,7 @@ export async function js_atomize(ast) {
       list_possible = list_get_end_2(stack);
     }
     js_node_type_is_if(stack1, "AwaitExpression", lambda3);
-    if (list_is(stack1)) {
+    if (list_is(list_possible)) {
       ("this list could be a block body or an argument list of a fn call");
       let variable_name = js_node_atomize_name();
       await js_node_atomize(existing_ids, v, variable_name, offset);
