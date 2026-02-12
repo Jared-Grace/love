@@ -8,7 +8,6 @@ export async function functions_transform_list(lambda$ast, list) {
   }
   let waited = await list_map_unordered_async(list, lambda2);
   return waited;
-  let r2 = await function_transform_curried_right(
-    async function lambda(ast) {},
-  );
+  async function lambda(ast) {}
+  let r2 = await function_transform_curried_right(lambda);
 }
