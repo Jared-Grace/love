@@ -1,12 +1,13 @@
 import { property_initialize_list } from "../../../love/public/src/property_initialize_list.mjs";
+import { list_add } from "./list_add.mjs";
 export function lookup_adder(fn_set) {
   let result = {};
-  let oa = function lambda(key, value) {
-    let value2 = property_initialize_list(object, property_name);
-    fn_set(result, key, value);
+  let la = function lambda(key, value) {
+    let list = property_initialize_list(result, key);
+    list_add(list, value);
   };
   let r = {
-    oa,
+    la,
     result,
   };
   return r;
