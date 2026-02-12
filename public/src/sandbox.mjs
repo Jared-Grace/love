@@ -23,5 +23,6 @@ export async function sandbox() {
   }
   let waited = await functions_transform(lambda2);
   let lambda = await function_transform_result_inner_curried_right(lambda2);
-  await functions_names_each(() => {});
+  function lambda4() {}
+  await functions_names_each(lambda4);
 }
