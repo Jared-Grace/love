@@ -32,7 +32,6 @@ export async function js_atomize(ast) {
     v5;
   }
   let v6 = await each_async(aes, lambda2);
-  v6;
   return;
   log({
     aes,
