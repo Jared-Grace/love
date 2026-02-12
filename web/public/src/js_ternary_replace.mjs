@@ -79,8 +79,7 @@ export function js_ternary_replace(ast) {
     property_set(statement, "expression", e1);
     object_replace(node, statement);
   }
-  function lambda2(item) {}
-  js_list_type_each(ast, "IfStatement", lambda2);
+  js_list_type_each(ast, "IfStatement", lambda);
   return;
   let index_selected = null;
   if (index_selected === index) {
