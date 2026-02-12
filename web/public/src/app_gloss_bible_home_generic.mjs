@@ -64,7 +64,7 @@ export async function app_gloss_bible_home_generic(
         let separator2 = text_colon_2();
         let split = text_split(v, separator2);
         let get = null;
-        get = ternary(text_use, list_second, list_first);
+        get = ternary(text_use, list_first, list_second);
         let text_ceb = list_first(split);
         return text_ceb;
       }

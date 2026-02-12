@@ -1,4 +1,4 @@
-import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
+import { function_imports_fix } from "../../../love/public/src/function_imports_fix.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { js_list_type_each } from "../../../love/public/src/js_list_type_each.mjs";
@@ -26,6 +26,7 @@ import { not } from "../../../love/public/src/not.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
+const a = 3;
 export async function js_ternary_replace(ast) {
   let replaced = null;
   async function lambda(v) {
@@ -85,5 +86,8 @@ export async function js_ternary_replace(ast) {
   }
   return;
   let a = null;
-  a = ternary(b === 1, 3, 2);
+  const test = b === 1;
+  const b = 2;
+  c = 1;
+  a = ternary(test, b, c);
 }
