@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { js_code_call } from "../../../love/public/src/js_code_call.mjs";
@@ -64,7 +65,9 @@ export function js_ternary_replace(ast) {
     let e = js_parse_expression(code_expression);
     let arguments2 = property_get(e, "arguments");
     let test = property_get(node, "test");
-    list_add_multiple(arguments2, [test, consequent, alternate]);
+    list_add(arguments2, test);
+    let rights = list_map_property(mapped2, "right");
+    list_add_multiple(arguments2, rights);
     js_left_right_set(a, expression, e);
     let code = js_unparse(a);
     log({
