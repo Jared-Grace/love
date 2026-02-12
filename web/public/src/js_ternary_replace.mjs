@@ -77,8 +77,8 @@ export function js_ternary_replace(ast) {
     let e1 = list_get_end_1(stack);
     let c = js_code_statement("a");
     let statement = js_parse_statement(c);
-    let copy = object_copy(from);
-    property_set(statement, "expression", e1);
+    let copy = object_copy(e1);
+    property_set(statement, "expression", copy);
     object_replace(node, statement);
   }
   js_list_type_each(ast, "IfStatement", lambda);
