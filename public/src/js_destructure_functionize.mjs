@@ -1,3 +1,4 @@
+import { ternary } from "../../../love/public/src/ternary.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
@@ -34,11 +35,11 @@ export async function js_destructure_functionize(ast) {
     let name4 = null;
     let init = property_get(e1, "init");
     let ii = js_identifier_is(init);
-    if (ii) {
-      name4 = js_identifier_name(init);
-    } else {
-      name4 = js_identifier_unique_ast(ast, variable_name);
-    }
+    name4 = ternary(
+      ii,
+      js_identifier_unique_ast(ast, variable_name),
+      js_identifier_name(init),
+    );
     js_node_type_is_assert(e1, "VariableDeclarator");
     let block_body = list_get_end(stack, 4);
     list_is_assert(block_body);

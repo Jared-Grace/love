@@ -1,3 +1,4 @@
+import { ternary } from "../../../love/public/src/ternary.mjs";
 import { ebible_chapter_code_pad } from "../../../love/public/src/ebible_chapter_code_pad.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { list_second } from "../../../love/public/src/list_second.mjs";
@@ -20,11 +21,7 @@ export function ebible_reference_parts(books, book_name, chapter_verses) {
   let verse_start = list_first(verse_range);
   let verse_end = null;
   let m = list_multiple_is(verse_range);
-  if (m) {
-    verse_end = list_second(verse_range);
-  } else {
-    verse_end = verse_start;
-  }
+  verse_end = ternary(m, verse_start, list_second(verse_range));
   let index = list_index_of(books, book);
   let v = {
     index,

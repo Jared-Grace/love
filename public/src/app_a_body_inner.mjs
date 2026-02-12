@@ -1,3 +1,4 @@
+import { ternary } from "../../../love/public/src/ternary.mjs";
 import { html_span } from "../../../love/public/src/html_span.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
@@ -30,11 +31,7 @@ export function app_a_body_inner(parent, body, a, indent) {
         function imports_refresh() {
           function lambda3(b) {
             let text = null;
-            if (hidden) {
-              text = "Show";
-            } else {
-              text = "Hide";
-            }
+            text = ternary(hidden, "Hide", "Show");
             text += " imports";
             html_text_set(b, text);
           }
