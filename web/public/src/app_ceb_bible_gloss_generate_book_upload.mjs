@@ -4,10 +4,6 @@ import { app_ceb_bible_gloss_generate_chapter_upload } from "../../../love/publi
 export async function app_ceb_bible_gloss_generate_book_upload(book_code) {
   const bible_folder = "engbsb";
   let mapped = await ebible_chapters(bible_folder, book_code);
-  async function lambda(item) {}
-  await each_async(list, lambda);
-  let r = await app_ceb_bible_gloss_generate_chapter_upload(
-    chapter_code_specified,
-  );
+  await each_async(mapped, app_ceb_bible_gloss_generate_chapter_upload);
   return r;
 }
