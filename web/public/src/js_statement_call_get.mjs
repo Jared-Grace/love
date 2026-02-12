@@ -34,6 +34,7 @@ export function js_statement_call_get(node) {
   let v3 = {
     call,
     declaration,
+    assignment,
   };
   return v3;
 }
