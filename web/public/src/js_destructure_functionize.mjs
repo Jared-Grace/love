@@ -1,4 +1,3 @@
-import { ternary } from "../../../love/public/src/ternary.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
@@ -32,12 +31,17 @@ export async function js_destructure_functionize(ast) {
     if (type_is) {
       return;
     }
-    let name4 = null;
     let init = property_get(e1, "init");
     let ii = js_identifier_is(init);
-    let on_true = js_identifier_name(init);
-    let on_false = js_identifier_unique_ast(ast, variable_name);
-    name4 = ternary(ii, on_true, on_false);
+    let result = null;
+    if (ii) {
+      let on_true = js_identifier_name(init);
+      result = on_true;
+    } else {
+      let on_false = js_identifier_unique_ast(ast, variable_name);
+      result = on_false;
+    }
+    let name4 = result;
     js_node_type_is_assert(e1, "VariableDeclarator");
     let block_body = list_get_end(stack, 4);
     list_is_assert(block_body);
@@ -66,11 +70,4 @@ export async function js_destructure_functionize(ast) {
   js_visit_type(ast, "ObjectPattern", lambda);
   await js_imports_missing_add(ast);
   return;
-  let result = null;
-  if (ii) {
-    result = on_true;
-  } else {
-    result = on_false;
-  }
-  let name4 = result;
 }
