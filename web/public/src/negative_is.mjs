@@ -1,4 +1,4 @@
-export function negative_is(objections) {
-  let p = objections > 0;
+export function negative_is(i) {
+  let p = i < 0;
   return p;
 }
