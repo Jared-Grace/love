@@ -16,7 +16,7 @@ export function json_from_try(json) {
   function lambda2(item2) {}
   let mapped = list_map(list, text_index_of_try);
   let filtered = list_filter(mapped, integer_is);
-  let m = list_min(list2);
+  let left = list_min(filtered);
   let skipped = text_skip(json, left);
   let right = text_index_of_last(skipped, "}");
   const without = text_slice_0(skipped, right + 1);
