@@ -31,7 +31,7 @@ export function app_a_body_inner(parent, body, a, indent) {
         function imports_refresh() {
           function lambda3(b) {
             let text = null;
-            text = ternary(hidden, "Hide", "Show");
+            text = ternary(hidden, "Show", "Hide");
             text += " imports";
             html_text_set(b, text);
           }

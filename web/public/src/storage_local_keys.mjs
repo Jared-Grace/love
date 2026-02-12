@@ -7,8 +7,8 @@ export function storage_local_keys() {
   let keys3 = null;
   keys3 = ternary(
     enabled2,
-    storage_local_keys_global(),
     storage_local_keys_browser(),
+    storage_local_keys_global(),
   );
   return keys3;
 }

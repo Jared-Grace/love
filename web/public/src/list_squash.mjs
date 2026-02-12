@@ -9,7 +9,7 @@ export function list_squash(lists) {
       function lambda(item) {
         let l = list_is(item);
         let fn = null;
-        fn = ternary(l, la, list_process);
+        fn = ternary(l, list_process, la);
         fn(item);
       }
       each(list, lambda);
