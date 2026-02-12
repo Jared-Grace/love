@@ -2,7 +2,8 @@ import { app_ceb_bible_gloss_generate_chapter_upload } from "../../../love/publi
 export async function app_ceb_bible_gloss_generate_book_upload(
   chapter_code_specified,
 ) {
-  return await app_ceb_bible_gloss_generate_chapter_upload(
+  let r = await app_ceb_bible_gloss_generate_chapter_upload(
     chapter_code_specified,
   );
+  return r;
 }
