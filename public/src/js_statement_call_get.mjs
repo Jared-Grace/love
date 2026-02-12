@@ -7,10 +7,10 @@ export function js_statement_call_get(node) {
   let expression = null;
   let declaration = null;
   if (js_node_type_is(node, "ExpressionStatement")) {
-    let { expression: expression_next } = node;
+    let expression_next = property_get(node, "expression");
     expression = expression_next;
   } else if (js_node_type_is(node, "VariableDeclaration")) {
-    let { declarations } = node;
+    let declarations = property_get(node, "declarations");
     if (list_multiple_is(declarations)) {
       let v = null;
       return v;
