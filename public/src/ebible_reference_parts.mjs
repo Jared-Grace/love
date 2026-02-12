@@ -20,10 +20,9 @@ export function ebible_reference_parts(books, book_name, chapter_verses) {
   let verse_start = list_first(verse_range);
   let verse_end = null;
   let m = list_multiple_is(verse_range);
-  let on_true = list_second(verse_range);
   let result = null;
   if (m) {
-    result = on_true;
+    result = list_second(verse_range);
   } else {
     result = verse_start;
   }
