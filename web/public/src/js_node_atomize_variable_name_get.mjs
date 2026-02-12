@@ -16,6 +16,7 @@ export async function js_node_atomize_variable_name_get(
   node,
   variable_name,
   stack,
+  offset,
 ) {
   "use return from called fn";
   if (js_node_type_is(node, "CallExpression")) {
