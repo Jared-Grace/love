@@ -45,7 +45,7 @@ export function js_ternary_replace(ast) {
     if (not(ae)) {
       return false;
     }
-    let identifiers = list_map_property(mapped2, "left");
+    let identifiers = list_map_property(mapped3, "left");
     let i = list_all(identifiers, js_identifier_is);
     if (not(i)) {
       return false;
