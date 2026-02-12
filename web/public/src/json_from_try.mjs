@@ -7,6 +7,7 @@ import { json_from } from "../../../love/public/src/json_from.mjs";
 export function json_from_try(json) {
   let left = text_index_of_try(json, "{");
   function lambda(item) {}
+  let list = ["{", "["];
   each(list, lambda);
   let skipped = text_skip(json, left);
   let right = text_index_of_last(skipped, "}");
