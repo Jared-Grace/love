@@ -1,3 +1,4 @@
+import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_all_equal } from "../../../love/public/src/list_all_equal.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
@@ -50,6 +51,7 @@ export function js_ternary_replace(ast) {
       return false;
     }
     let first = list_first(mapped5);
+    let assign = js_declare(name, init);
   }
   js_visit_type(ast, "IfStatement", lambda);
   return;
