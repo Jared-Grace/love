@@ -50,7 +50,7 @@ export function js_ternary_replace(ast) {
     if (not(i)) {
       return false;
     }
-    let names = list_map(mapped, js_identifier_name);
+    let names = list_map(identifiers, js_identifier_name);
     let eq = list_all_equal(names);
     if (not(eq)) {
       return false;
