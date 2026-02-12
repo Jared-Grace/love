@@ -6,6 +6,7 @@ import { js_declaration_single_name } from "../../../love/public/src/js_declarat
 import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 export async function sandbox() {
+  const search = ternary.name;
   async function lambda(ast) {
     function lambda3(a) {
       let v = property_get(a, "v");
@@ -17,7 +18,6 @@ export async function sandbox() {
         code,
       });
     }
-    const search = ternary.name;
     js_visit_calls_named(ast, search, lambda3);
   }
   await functions_asts_each(lambda);
