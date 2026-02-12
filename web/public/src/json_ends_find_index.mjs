@@ -1,8 +1,8 @@
+import { json_starts_find_index_generic } from "../../../love/public/src/json_starts_find_index_generic.mjs";
 import { json_ends } from "../../../love/public/src/json_ends.mjs";
-import { list_map_min_try } from "../../../love/public/src/list_map_min_try.mjs";
 export function json_ends_find_index(json) {
-  let list = json_ends();
-  let r = text_index_of_last_try_curried(json);
-  let left = list_map_min_try(list, r);
+  let get = json_ends;
+  let c = text_index_of_last_try_curried;
+  let left = json_starts_find_index_generic(get, c, json);
   return left;
 }
