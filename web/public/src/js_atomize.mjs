@@ -15,6 +15,9 @@ export async function js_atomize(ast) {
   }
   await each_async(ces, lambda);
   let aes = js_list_type(ast, "AwaitExpression");
+  async function lambda2(v) {
+    await lambda_each(v, 1);
+  }
   async function lambda_each(v, offset) {
     let stack = property_get(v, "stack");
     let stack1 = list_get_end(stack, 1 + offset);
@@ -23,9 +26,6 @@ export async function js_atomize(ast) {
       let variable_name = js_node_atomize_name();
       await js_node_atomize(existing_ids, v, variable_name, offset);
     }
-  }
-  async function lambda2(v) {
-    await lambda_each(v, 1);
   }
   return;
   await each_async(aes, lambda2);
