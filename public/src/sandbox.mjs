@@ -10,10 +10,11 @@ export async function sandbox() {
     function lambda3(a) {
       let v = property_get(a, "v");
       let node = property_get(v, "node");
-      let code = js_unparse(ast2);
+      let code = js_unparse(node);
       let n = js_declaration_single_name(ast);
       log({
         n,
+        code,
       });
     }
     js_visit_calls_named(ast, ternary.name, lambda3);
