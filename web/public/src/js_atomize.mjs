@@ -13,8 +13,8 @@ export async function js_atomize(ast) {
     let stack = property_get(v, "stack");
     const stack1 = list_get_end_1(stack);
     if (list_is(stack1)) {
-      let v2 = js_node_atomize_name();
-      await js_node_atomize(existing, v, v2);
+      let variable_name = js_node_atomize_name();
+      await js_node_atomize(existing, v, variable_name);
     }
   }
   await each_async(ces, lambda);
