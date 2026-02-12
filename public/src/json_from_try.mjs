@@ -8,6 +8,8 @@ export function json_from_try(json) {
   let skipped = text_skip(json, left);
   let right = json_ends_find_index(skipped);
   const without = text_slice_0(skipped, right + 1);
+  if (false) {
+  }
   let result = json_from(without);
   return result;
 }
