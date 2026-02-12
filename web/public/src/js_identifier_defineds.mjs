@@ -16,6 +16,7 @@ import { list_adder_multiple } from "../../../love/public/src/list_adder_multipl
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
+import { log_unparse } from "./log_unparse.mjs";
 export function js_identifier_defineds(v) {
   let stack = property_get(v, "stack");
   function lambda4(la) {
@@ -75,6 +76,7 @@ export function js_identifier_defineds(v) {
       }
     }
     function lambda5(node) {
+      log_unparse(node);
       let params_names = js_declaration_params_names(node);
       la(params_names);
     }
