@@ -54,8 +54,8 @@ export async function messenger_reply_messages(page, url) {
         let name = null;
         name = ternary(
           list_empty_is(imgs),
-          "them",
           messenger_reply_messages_me(),
+          "them",
         );
         la({
           [messenger_reply_messages_name()]: name,

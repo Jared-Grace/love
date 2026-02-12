@@ -77,7 +77,7 @@ export function app_a_identifier_generic(
         let div = html_div_text(oc, name);
         html_div_text(oc, text2 + " to:");
         let fn = null;
-        fn = ternary(lines_multiple, app_a_input, app_a_textarea);
+        fn = ternary(lines_multiple, app_a_textarea, app_a_input);
         let input = fn(overlay);
         if (lines_multiple) {
           const row_count = 20;

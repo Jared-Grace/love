@@ -53,7 +53,7 @@ export async function http_generic(url, options) {
   }
   let h = null;
   let swHttps = text_starts_with(url, "https://");
-  h = ternary(swHttps, await import("http"), await import("https"));
+  h = ternary(swHttps, await import("https"), await import("http"));
   let buffer = await promise_wrap(lambda);
   function lambda(resolve, reject) {
     const urlObj = new URL(url);

@@ -37,8 +37,8 @@ export async function js_destructure_functionize(ast) {
     let ii = js_identifier_is(init);
     name4 = ternary(
       ii,
-      js_identifier_unique_ast(ast, variable_name),
       js_identifier_name(init),
+      js_identifier_unique_ast(ast, variable_name),
     );
     js_node_type_is_assert(e1, "VariableDeclarator");
     let block_body = list_get_end(stack, 4);

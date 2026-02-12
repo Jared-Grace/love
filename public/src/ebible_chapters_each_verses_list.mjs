@@ -33,7 +33,7 @@ export async function ebible_chapters_each_verses_list(
     });
     let any = list_any_starts_with(chapter_code, mapped);
     let ebible_verses_get = null;
-    ebible_verses_get = ternary(any, ebible_verses_readaloud, ebible_verses);
+    ebible_verses_get = ternary(any, ebible_verses, ebible_verses_readaloud);
     ("ebible website says canon only, but seems apocrypha included?");
     ebible_verses_get = ebible_verses_readaloud;
     let verses = await ebible_verses_get(bible_folder, chapter_code);
