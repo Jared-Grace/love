@@ -7,9 +7,6 @@ import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_na
 import { ternary } from "../../../love/public/src/ternary.mjs";
 export async function sandbox() {
   async function lambda(ast) {
-    log({
-      ast,
-    });
     function lambda3(a) {
       let v = property_get(a, "v");
       let node = property_get(v, "node");
