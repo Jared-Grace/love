@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_boolean_values } from "../../../love/public/src/js_boolean_values.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { js_node_type_is } from "../../../love/public/src/js_node_type_is.mjs";
@@ -24,6 +25,7 @@ export async function js_return_atomize(ast) {
       if (js_node_type_is(argument, "Literal")) {
         let value = property_get(argument, "value");
         let list = js_boolean_values();
+        list_add(list2, item);
         let includes = list_includes(list, value);
         if (includes) {
           return;
