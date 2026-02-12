@@ -1,3 +1,4 @@
+import { ternary } from "../../../love/public/src/ternary.mjs";
 import { js_visit_match_first } from "../../../love/public/src/js_visit_match_first.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { js_identifier_defineds_includes } from "../../../love/public/src/js_identifier_defineds_includes.mjs";
@@ -32,11 +33,7 @@ export function app_a_identifier(a) {
       if (includes3) {
         let f_names_local = property_get(a, "f_names_local");
         let includes2 = list_includes(f_names_local, name);
-        if (includes2) {
-          color = "#00c800ff";
-        } else {
-          color = "#4a4affff";
-        }
+        color = ternary(includes2, "#4a4affff", "#00c800ff");
       } else {
         color = "red";
       }
