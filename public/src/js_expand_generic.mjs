@@ -34,10 +34,10 @@ export async function js_expand_generic(next, stack2, index, ast) {
   let inserted = null;
   let v = js_statement_call_get(next);
   let declaration_call = property_get(v, "declaration");
-  let expression = property_get(v, "expression");
-  if (expression !== null) {
-    let callee = property_get(expression, "callee");
-    let arguments2 = property_get(expression, "arguments");
+  let call = property_get(v, "call");
+  if (call !== null) {
+    let callee = property_get(call, "callee");
+    let arguments2 = property_get(call, "arguments");
     const a_names = js_identifiers_to_names(arguments2);
     let name = property_get(callee, "name");
     let v2 = await function_parse_declaration(name);
