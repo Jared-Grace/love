@@ -79,11 +79,9 @@ export async function app_reply_main_old(context) {
   }
   function lambda6(event) {
     let key = property_get(event, "key");
-    let condition = equal(key, "Backspace");
-    let on_true = text_take_less_1(typed);
     let result = null;
-    if (condition) {
-      result = on_true;
+    if (equal(key, "Backspace")) {
+      result = text_take_less_1(typed);
     } else {
       result = key;
     }
