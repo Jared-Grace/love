@@ -65,6 +65,9 @@ export async function app_gloss_bible_home_generic(
     }
     each(texts, lambda5);
     let explains_json = property_get(passage, generated);
+    log({
+      explains_json,
+    });
     let explains = json_from(explains_json);
     if (false) {
       let div3 = html_div(p);
