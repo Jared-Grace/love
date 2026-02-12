@@ -1,4 +1,4 @@
-export function text_slice(s, a, b) {
-  let sliced = s.slice(a, b);
+export function text_slice(s, from, to) {
+  let sliced = s.slice(from, to);
   return sliced;
 }
