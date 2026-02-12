@@ -1,3 +1,4 @@
+import { js_list_type } from "../../../love/public/src/js_list_type.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 import { js_code_statement } from "../../../love/public/src/js_code_statement.mjs";
@@ -23,7 +24,6 @@ import { js_block_to_body } from "../../../love/public/src/js_block_to_body.mjs"
 import { not } from "../../../love/public/src/not.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { ternary } from "./ternary.mjs";
 export function js_ternary_replace(ast) {
@@ -79,7 +79,7 @@ export function js_ternary_replace(ast) {
     property_set(statement, "expression", e1);
     object_replace(node, statement);
   }
-  js_visit_type(ast, "IfStatement", lambda);
+  let list = js_list_type(ast, "IfStatement", lambda);
   return;
   let index_selected = null;
   if (index_selected === index) {
