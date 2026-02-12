@@ -1,3 +1,4 @@
+import { js_code_bracket_close } from "../../../love/public/src/js_code_bracket_close.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { js_code_bracket_open } from "../../../love/public/src/js_code_bracket_open.mjs";
@@ -15,7 +16,8 @@ export function json_from_try(json) {
   let first = list_first(without);
   if (first === js_code_bracket_open()) {
     let last = list_last(without);
-    if (equal_not(left2, right2)) {
+    let right2 = js_code_bracket_close();
+    if (equal_not(last, right2)) {
     }
   }
   let result = json_from(without);
