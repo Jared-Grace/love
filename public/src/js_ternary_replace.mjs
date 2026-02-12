@@ -75,24 +75,12 @@ export function js_ternary_replace(ast) {
     let rights = list_map_property(ess, "right");
     list_add_multiple(arguments2, rights);
     js_left_right_set(a, expression, e);
-    let stack = property_get(v, "stack");
-    let e1 = list_get_end_1(stack);
     let c = js_code_statement("a");
     let statement = js_parse_statement(c);
-    let code = js_unparse(statement);
-    let copy = object_copy(e1);
-    property_set(statement, "expression", copy);
-    log({
-      copy,
-    });
     object_replace(node, statement);
   }
   js_list_type_each(ast, "IfStatement", lambda);
   return;
   let index_selected = null;
-  if (index_selected === index) {
-    index_selected = null;
-  } else {
-    index_selected = index;
-  }
+  a;
 }
