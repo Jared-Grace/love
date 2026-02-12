@@ -11,8 +11,8 @@ export async function js_atomize(ast) {
   let existing_ids = js_identifiers_names(ast);
   let ces = js_list_type(ast, "CallExpression");
   async function lambda(v) {
-    let stack = property_get(v, "stack");
     let offset = 0;
+    let stack = property_get(v, "stack");
     let stack1 = list_get_end(stack, 1 + offset);
     if (list_is(stack1)) {
       ("this list could be a block body or an argument list of a fn call");
