@@ -1,7 +1,8 @@
+import { text_starts_with } from "../../../love/public/src/text_starts_with.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { text_remove_if_starts_with } from "../../../love/public/src/text_remove_if_starts_with.mjs";
 export function text_remove_while_starts_with(item, prefix) {
-  tsw;
+  let sw = text_starts_with(t, prefix2);
   while (true) {
     let removed = text_remove_if_starts_with(item, prefix);
     ("was there no change?");
