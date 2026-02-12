@@ -79,7 +79,7 @@ export function js_ternary_replace(ast) {
     replaced = true;
   }
   js_list_type_each(ast, "IfStatement", lambda);
-  if (false) {
+  if (replaced) {
   }
   return;
   let index_selected = null;
