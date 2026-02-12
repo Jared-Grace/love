@@ -67,9 +67,9 @@ export async function app_gloss_bible_home_generic(
     }
     each(texts, lambda5);
     let explains_json = property_get(passage, generated);
-    let explains = json_from(explains_json);
-    let removed = text_remove_if_starts_with(explains, "json");
+    let removed = text_remove_if_starts_with(explains_json, "json");
     let removed2 = text_remove_while_starts_with(removed, "`");
+    let explains = json_from(removed2);
     if (false) {
       let div3 = html_div(p);
       function lambda2(e) {
