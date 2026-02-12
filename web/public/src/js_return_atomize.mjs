@@ -25,7 +25,7 @@ export async function js_return_atomize(ast) {
       if (js_node_type_is(argument, "Literal")) {
         let value = property_get(argument, "value");
         let list = js_boolean_values();
-        list_add(list2, item);
+        list_add(list, null);
         let includes = list_includes(list, value);
         if (includes) {
           return;
