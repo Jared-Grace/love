@@ -9,6 +9,6 @@ export async function marker_call_atomize(input) {
     let { replaced, ast } = a;
     let existing = js_identifiers(ast);
     let v_match = js_visit_match(ast, replaced);
-    await js_node_atomize(existing, v_match, js_node_atomize_name(), error());
+    await js_node_atomize(existing, v_match, js_node_atomize_name());
   }
 }
