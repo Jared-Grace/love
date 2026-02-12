@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -6,7 +7,6 @@ import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_na
 import { functions_transform } from "../../../love/public/src/functions_transform.mjs";
 import { ternary } from "./ternary.mjs";
 export async function sandbox() {
-  ea;
   async function lambda2(ast) {
     function lambda3(a) {
       let v = property_get(a, "v");
@@ -21,4 +21,5 @@ export async function sandbox() {
     js_visit_calls_named(ast, ternary.name, lambda3);
   }
   let waited = await functions_transform(lambda2);
+  await each_async(list, async function lambda(item) {});
 }
