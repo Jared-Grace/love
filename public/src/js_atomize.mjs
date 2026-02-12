@@ -1,5 +1,3 @@
-import { not } from "../../../love/public/src/not.mjs";
-import { noop } from "../../../love/public/src/noop.mjs";
 import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -29,10 +27,6 @@ export async function js_atomize(ast) {
       await js_node_atomize(existing_ids, v, variable_name, offset);
     }
     return;
-    let v2 = noop();
-    let b = await noop();
-    let v3 = await not(b);
-    [v2, v3];
   }
   await each_async(ces, lambda);
 }
