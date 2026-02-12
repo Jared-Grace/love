@@ -7,13 +7,13 @@ import { ebible_verses_readaloud } from "../../../love/public/src/ebible_verses_
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function ebible_chapters_each_verses_list(
-  chapters,
+  chapter_codes,
   bible_folder,
   each_chapter,
 ) {
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
   let mapped = list_map_property(books, "book_code");
-  await each_async(chapters, lambda);
+  await each_async(chapter_codes, lambda);
   async function lambda(chapter_code) {
     if (bible_folder === "hausa" && chapter_code === "DAN14") {
       return;
