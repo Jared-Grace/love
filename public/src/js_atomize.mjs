@@ -7,7 +7,7 @@ import { list_is } from "../../../love/public/src/list_is.mjs";
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
 import { js_node_atomize_name } from "../../../love/public/src/js_node_atomize_name.mjs";
 export async function js_atomize(ast) {
-  let existing = js_identifiers_names(ast);
+  let existing_ids = js_identifiers_names(ast);
   let ces = js_list_type(ast, "CallExpression");
   async function lambda(v) {
     let stack = property_get(v, "stack");
@@ -15,7 +15,7 @@ export async function js_atomize(ast) {
     if (list_is(stack1)) {
       ("this list could be a block body or an argument list of a fn call");
       let variable_name = js_node_atomize_name();
-      await js_node_atomize(existing, v, variable_name);
+      await js_node_atomize(existing_ids, v, variable_name);
     }
   }
   await each_async(ces, lambda);
