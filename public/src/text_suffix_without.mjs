@@ -8,7 +8,8 @@ export function text_suffix_without(s, suffix) {
   if (not(a)) {
     error();
   }
-  const from = text_size(s) - text_size(suffix);
+  const missing = text_size(suffix);
+  const from = text_size(s) - missing;
   const without = text_slice_0(s, from);
   return without;
 }
