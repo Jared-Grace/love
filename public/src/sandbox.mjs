@@ -8,6 +8,7 @@ export async function sandbox() {
   async function lambda2(ast) {
     function lambda3(a) {
       let v = property_get(a, "v");
+      let node = property_get(v, "node");
       let n = js_declaration_single_name(ast);
       log({
         n,
