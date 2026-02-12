@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_code_brace_left } from "../../../love/public/src/js_code_brace_left.mjs";
 import { js_code_bracket_open } from "../../../love/public/src/js_code_bracket_open.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -13,6 +14,7 @@ export function json_from_try(json) {
   let list = [v2, b];
   function lambda(item) {}
   each(list, lambda);
+  let mapped = list_map(list2, function lambda2(item2) {});
   let skipped = text_skip(json, left);
   let right = text_index_of_last(skipped, "}");
   const without = text_slice_0(skipped, right + 1);
