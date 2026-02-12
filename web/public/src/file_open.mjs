@@ -1,3 +1,4 @@
+import { ternary } from "../../../love/public/src/ternary.mjs";
 import { function_path_declaration_unparse } from "../../../love/public/src/function_path_declaration_unparse.mjs";
 import { function_name_extension } from "../../../love/public/src/function_name_extension.mjs";
 import { text_ends_with } from "../../../love/public/src/text_ends_with.mjs";
@@ -13,13 +14,7 @@ export async function file_open(f_path) {
     let output = null;
     let on_true = await function_path_declaration_unparse(f_path);
     let on_false = await file_read(f_path);
-    let result = null;
-    if (ew) {
-      result = on_true;
-    } else {
-      result = on_false;
-    }
-    output = result;
+    output = ternary(ew, on_true, on_false);
     log_keep(output);
   } else {
     await file_open_editor(f_path);
