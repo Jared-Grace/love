@@ -79,5 +79,9 @@ export function js_ternary_replace(ast) {
   js_list_type_each(ast, "IfStatement", lambda);
   return;
   let index_selected = null;
-  index_selected = ternary(index_selected === index, index, null);
+  if (index_selected === index) {
+    index_selected = null;
+  } else {
+    index_selected = index;
+  }
 }
