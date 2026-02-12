@@ -84,10 +84,10 @@ export async function js_ternary_replace(ast) {
     await function_imports_add(ast, [ternary.name]);
   }
   return;
-  let index_selected = null;
-  if (index_selected === index) {
-    index_selected = null;
+  let a = null;
+  if (b === 1) {
+    a = 2;
   } else {
-    index_selected = index;
+    a = 3;
   }
 }
