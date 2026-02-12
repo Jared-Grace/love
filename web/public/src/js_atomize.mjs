@@ -19,7 +19,9 @@ export async function js_atomize(ast) {
       await js_node_atomize(existing_ids, v, variable_name);
     }
     return;
-    function lambda3() {}
+    function lambda3() {
+      let offset = 1;
+    }
     js_node_type_is_if(stack1, "AwaitExpression", lambda3);
   }
   await each_async(ces, lambda);
