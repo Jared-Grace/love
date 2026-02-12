@@ -1,4 +1,4 @@
-import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
+import { lookup_adder_async } from "../../../love/public/src/lookup_adder_async.mjs";
 import { functions_asts_each } from "../../../love/public/src/functions_asts_each.mjs";
 import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
 import { js_declaration_single_name } from "../../../love/public/src/js_declaration_single_name.mjs";
@@ -21,5 +21,5 @@ export async function functions_search_call(search) {
     }
     await functions_asts_each(lambda);
   }
-  let list = await list_adder_async(lambda2);
+  let list = await lookup_adder_async(lambda2);
 }
