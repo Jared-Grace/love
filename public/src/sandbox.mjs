@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { function_transform_result_inner_curried_right } from "../../../love/public/src/function_transform_result_inner_curried_right.mjs";
@@ -25,5 +26,6 @@ export async function sandbox() {
   let waited = await functions_transform(lambda2);
   let lambda = await function_transform_result_inner_curried_right(lambda2);
   let f_names = await functions_names();
+  let mapped = list_map(list, function lambda4(item) {});
   await each_async(f_names, lambda);
 }
