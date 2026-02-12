@@ -1,7 +1,5 @@
 import { text_get } from "../../../love/public/src/text_get.mjs";
-import { text_index_last } from "../../../love/public/src/text_index_last.mjs";
 export function text_first(s) {
-  let index_last = text_index_last(s);
-  let item = text_get(s, index_last);
+  let item = text_get(s, 0);
   return item;
 }
