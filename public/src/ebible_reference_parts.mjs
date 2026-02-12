@@ -21,7 +21,8 @@ export function ebible_reference_parts(books, book_name, chapter_verses) {
   let verse_start = list_first(verse_range);
   let verse_end = null;
   let m = list_multiple_is(verse_range);
-  verse_end = ternary(m, list_second(verse_range), verse_start);
+  let on_true = list_second(verse_range);
+  verse_end = ternary(m, on_true, verse_start);
   let index = list_index_of(books, book);
   let v = {
     index,
