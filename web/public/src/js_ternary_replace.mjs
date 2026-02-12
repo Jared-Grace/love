@@ -1,3 +1,4 @@
+import { function_alias_add } from "../../../love/public/src/function_alias_add.mjs";
 import { js_list_type_each } from "../../../love/public/src/js_list_type_each.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 import { js_code_statement } from "../../../love/public/src/js_code_statement.mjs";
@@ -24,7 +25,7 @@ import { list_all } from "../../../love/public/src/list_all.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 import { ternary } from "./ternary.mjs";
-export function js_ternary_replace(ast) {
+export async function js_ternary_replace(ast) {
   async function lambda(v) {
     let node = property_get(v, "node");
     let alternate = property_get(node, "alternate");
@@ -77,5 +78,5 @@ export function js_ternary_replace(ast) {
   js_list_type_each(ast, "IfStatement", lambda);
   return;
   let index_selected = null;
-  a;
+  await function_alias_add(first2, second);
 }
