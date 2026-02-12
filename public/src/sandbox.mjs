@@ -4,7 +4,7 @@ import { ternary } from "./ternary.mjs";
 export async function sandbox() {
   async function lambda2(ast) {
     function lambda3() {}
-    js_visit_calls_named(ast2, ternary.name, lambda3);
+    js_visit_calls_named(ast, ternary.name, lambda3);
   }
   let waited = await functions_transform(lambda2);
 }
