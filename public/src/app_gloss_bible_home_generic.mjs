@@ -1,4 +1,3 @@
-import { ternary } from "../../../love/public/src/ternary.mjs";
 import { app_gloss_bible_generate_generic_word } from "../../../love/public/src/app_gloss_bible_generate_generic_word.mjs";
 import { g_sermon_generate_book_generic_property } from "../../../love/public/src/g_sermon_generate_book_generic_property.mjs";
 import { emoji_arrow_down } from "../../../love/public/src/emoji_arrow_down.mjs";
@@ -23,16 +22,10 @@ import { json_from } from "../../../love/public/src/json_from.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_font_color_set_green } from "../../../love/public/src/html_font_color_set_green.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
-import { text_colon_2 } from "../../../love/public/src/text_colon_2.mjs";
-import { text_split } from "../../../love/public/src/text_split.mjs";
-import { text_colon_3 } from "../../../love/public/src/text_colon_3.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_g_bible_home_inner } from "../../../love/public/src/app_g_bible_home_inner.mjs";
-import { list_second } from "../../../love/public/src/list_second.mjs";
 import { html_span_space } from "../../../love/public/src/html_span_space.mjs";
-import { list_empty_is_assert_json } from "./list_empty_is_assert_json.mjs";
 export async function app_gloss_bible_home_generic(
   context,
   download,
@@ -42,7 +35,9 @@ export async function app_gloss_bible_home_generic(
   let v2 = await app_g_bible_home_inner(context, download);
   let passages = property_get(v2, "passages");
   each_next(passages, on_passage);
-  function on_passage({ passage, verses }, next) {
+  function on_passage(a, next) {
+    let verses = property_get(a, "verses");
+    let passage = property_get(a, "passage");
     const prop = "p";
     let last = list_last(verses);
     let p = property_get(last, prop);
@@ -58,8 +53,7 @@ export async function app_gloss_bible_home_generic(
     let h = html_hr(p);
     let texts = null;
     if (text_use) {
-
-       texts = property_get(passage, "texts");
+      texts = property_get(passage, "texts");
     } else {
       texts = property_get(passage, "originals");
     }
