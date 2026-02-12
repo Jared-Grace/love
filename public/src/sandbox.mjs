@@ -1,5 +1,4 @@
-import { functions_asts } from "../../../love/public/src/functions_asts.mjs";
-import { each_async } from "../../../love/public/src/each_async.mjs";
+import { functions_asts_each } from "../../../love/public/src/functions_asts_each.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -20,6 +19,5 @@ export async function sandbox() {
     }
     js_visit_calls_named(ast, ternary.name, lambda3);
   }
-  let asts = await functions_asts();
-  await each_async(asts, lambda);
+  await functions_asts_each(lambda);
 }
