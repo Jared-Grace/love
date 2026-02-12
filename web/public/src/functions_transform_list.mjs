@@ -1,13 +1,7 @@
 import { function_transform_curried_right } from "../../../love/public/src/function_transform_curried_right.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
-import { function_transform } from "../../../love/public/src/function_transform.mjs";
 export async function functions_transform_list(lambda$ast, list) {
-  async function lambda2(f_name) {
-    let output = await function_transform(f_name, lambda$ast);
-    return output;
-  }
+  let lambda2 = await function_transform_curried_right(lambda$ast);
   let waited = await list_map_unordered_async(list, lambda2);
   return waited;
-  async function lambda(ast) {}
-  let r2 = await function_transform_curried_right(lambda);
 }
