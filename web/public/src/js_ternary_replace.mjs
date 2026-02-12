@@ -1,3 +1,4 @@
+import { js_call_new_code } from "../../../love/public/src/js_call_new_code.mjs";
 import { js_left_right_set } from "../../../love/public/src/js_left_right_set.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { js_assign_default } from "../../../love/public/src/js_assign_default.mjs";
@@ -18,7 +19,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { list_map_property } from "./list_map_property.mjs";
 export function js_ternary_replace(ast) {
-  function lambda(v) {
+  async function lambda(v) {
     let node = property_get(v, "node");
     let alternate = property_get(node, "alternate");
     let consequent = property_get(node, "consequent");
@@ -55,6 +56,7 @@ export function js_ternary_replace(ast) {
     let first = list_first(names);
     let expression = js_parse_expression(first);
     let a = js_assign_default();
+    let r = await js_call_new_code(f_name_call, ast2);
     js_left_right_set(a, expression, init);
   }
   js_visit_type(ast, "IfStatement", lambda);
