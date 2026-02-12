@@ -1,3 +1,4 @@
+import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
@@ -27,4 +28,5 @@ export async function js_atomize(ast) {
   log({
     aes,
   });
+  let stack1 = list_get_end(stack, 1);
 }
