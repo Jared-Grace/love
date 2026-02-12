@@ -52,7 +52,7 @@ export async function http_generic(url, options) {
     await http_sleep();
   }
   let swHttps = text_starts_with(url, "https://");
-  h_name = ternary(swHttps, "s", "");
+  let h_name = ternary(swHttps, "s", "");
   let h = await import("http" + h_name);
   let buffer = await promise_wrap(lambda);
   function lambda(resolve, reject) {
