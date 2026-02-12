@@ -1,3 +1,4 @@
+import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
@@ -73,6 +74,7 @@ export function js_ternary_replace(ast) {
     let code = js_unparse(a);
     let stack = property_get(v, "stack");
     let e1 = list_get_end_1(stack);
+    object_replace(to, from);
     log({
       code,
     });
