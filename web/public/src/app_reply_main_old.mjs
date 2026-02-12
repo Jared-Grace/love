@@ -80,9 +80,6 @@ export async function app_reply_main_old(context) {
   }
   function lambda6(event) {
     let key = property_get(event, "key");
-    let a = 1;
-    const sum = b + c;
-    a = sum;
     let condition = equal(key, "Backspace");
     let on_true = text_take_less_1(typed);
     typed = ternary(condition, on_true, key);
