@@ -5,5 +5,4 @@ export async function app_ceb_bible_gloss_generate_book_upload(book_code) {
   const bible_folder = "engbsb";
   let mapped = await ebible_chapters(bible_folder, book_code);
   await each_async(mapped, app_ceb_bible_gloss_generate_chapter_upload);
-  return r;
 }
