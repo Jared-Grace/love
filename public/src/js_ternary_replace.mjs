@@ -39,16 +39,16 @@ export function js_ternary_replace(ast) {
       return false;
     }
     let mapped2 = list_map(mapped, list_single);
-    let es = list_all(mapped2, js_expression_statement_is);
-    if (not(es)) {
+    let esi = list_all(mapped2, js_expression_statement_is);
+    if (not(esi)) {
       return false;
     }
-    let lefts = list_map_property(mapped2, "expression");
-    let ae = list_all(lefts, js_assignment_expression_is);
+    let ess = list_map_property(mapped2, "expression");
+    let ae = list_all(ess, js_assignment_expression_is);
     if (not(ae)) {
       return false;
     }
-    let identifiers = list_map_property(lefts, "left");
+    let identifiers = list_map_property(ess, "left");
     let i = list_all(identifiers, js_identifier_is);
     if (not(i)) {
       return false;
