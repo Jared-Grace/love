@@ -10,6 +10,7 @@ export async function function_imports_add(ast, imports) {
   let dictionary = await functions_names_to_paths();
   let body = property_get(ast, "body");
   async function lambda(import_) {
+    text_is_assert(import_);
     const from = function_name_to_path_import(import_, dictionary);
     let code = js_code_import_single(import_, from);
     let statement = js_parse_statement_module(code);
@@ -17,5 +18,4 @@ export async function function_imports_add(ast, imports) {
   }
   await each_async(imports, lambda);
   return;
-  text_is_assert(value);
 }
