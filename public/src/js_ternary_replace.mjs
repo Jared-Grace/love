@@ -18,6 +18,7 @@ import { list_all } from "../../../love/public/src/list_all.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { list_map_property } from "./list_map_property.mjs";
+import { ternary } from "./ternary.mjs";
 export function js_ternary_replace(ast) {
   async function lambda(v) {
     let node = property_get(v, "node");
@@ -56,7 +57,7 @@ export function js_ternary_replace(ast) {
     let first = list_first(names);
     let expression = js_parse_expression(first);
     let a = js_assign_default();
-    let r = await js_call_new_code(f_name_call, ast2);
+    let r = await js_call_new_code(ternary.name, ast2);
     js_left_right_set(a, expression, init);
   }
   js_visit_type(ast, "IfStatement", lambda);
