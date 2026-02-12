@@ -1,3 +1,4 @@
+import { js_assign_default } from "../../../love/public/src/js_assign_default.mjs";
 import { js_literal_is } from "../../../love/public/src/js_literal_is.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
@@ -6,14 +7,12 @@ import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_left_right_set } from "../../../love/public/src/js_left_right_set.mjs";
-import { js_code_assign } from "../../../love/public/src/js_code_assign.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { assert } from "../../../love/public/src/assert.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_dollar_a_generic } from "../../../love/public/src/js_dollar_a_generic.mjs";
-import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 import { js_null } from "../../../love/public/src/js_null.mjs";
 export function js_dollar_s({ stack1, stack2, ast, afters }) {
   let count = 1;
@@ -30,10 +29,10 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     let s1 = list_size_1(declarations);
     assert(s1);
     function lambda2(declaration) {
-      let code = js_code_assign("a", "a");
-      let s = js_parse_statement(code);
+      let s = js_assign_default();
       let expression = property_get(s, "expression");
-      let { id, init } = declaration;
+      let init = property_get(declaration, "init");
+      let id = property_get(declaration, "id");
       let type_is = js_literal_is(init);
       if (type_is) {
         let value = property_get(init, "value");
