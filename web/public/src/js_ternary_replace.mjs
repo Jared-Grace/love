@@ -74,10 +74,10 @@ export function js_ternary_replace(ast) {
     js_left_right_set(a, expression, e);
     let stack = property_get(v, "stack");
     let e1 = list_get_end_1(stack);
-    object_replace(node, e1);
     let c = js_code_statement("a");
     let statement = js_parse_statement(c);
-    property_set(object, property_name, value);
+    property_set(statement, "expression", e1);
+    object_replace(node, statement);
   }
   js_visit_type(ast, "IfStatement", lambda);
   return;
