@@ -4,6 +4,6 @@ import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs"
 export function text_index_of_last(t, search) {
   assert_arguments(arguments, 2);
   let index = text_index_of_last_try(t, search);
-  text_index_of_assert(t, index, item);
+  text_index_of_assert(t, index, search);
   return index;
 }
