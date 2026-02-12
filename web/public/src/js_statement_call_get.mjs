@@ -11,8 +11,8 @@ export function js_statement_call_get(node) {
     let expression_next = property_get(node, "expression");
     expression = expression_next;
     if (js_node_type_is(node, "AssignmentExpression")) {
-      let expression_next = property_get(node, "expression");
-      expression = expression_next;
+      assignment = expression_next;
+    } else {
     }
   } else if (js_node_type_is(node, "VariableDeclaration")) {
     let declarations = property_get(node, "declarations");
