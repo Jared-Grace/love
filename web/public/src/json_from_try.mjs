@@ -1,4 +1,4 @@
-import { list_sort_number } from "../../../love/public/src/list_sort_number.mjs";
+import { list_min } from "../../../love/public/src/list_min.mjs";
 import { integer_is } from "../../../love/public/src/integer_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -16,7 +16,7 @@ export function json_from_try(json) {
   function lambda2(item2) {}
   let mapped = list_map(list, text_index_of_try);
   let filtered = list_filter(mapped, integer_is);
-  list_sort_number(list2);
+  let m = list_min(list2);
   let skipped = text_skip(json, left);
   let right = text_index_of_last(skipped, "}");
   const without = text_slice_0(skipped, right + 1);
