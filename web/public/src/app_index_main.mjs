@@ -59,13 +59,10 @@ export function app_index_main(context) {
   ];
   let hash = {};
   let lambda = window_open_app_curried_right(hash);
-  let r = lambda_invoker(fn2, args);
   function lambda3(a) {
     let fn = property_get(a, "app_fn");
+    let lambda2 = lambda_invoker(lambda, [fn]);
     let without = app_prefix_without(fn);
-    function lambda2() {
-      lambda(fn);
-    }
     let p = html_p(root);
     let component = html_button_wide(p, without, lambda2);
     let text = property_get(a, "text");
