@@ -27,9 +27,7 @@ export function app_replace_home(context) {
     });
     let span = html_span_text(b, a);
     html_style_assign(span, {
-      "grid-area": "1 / 1",
-      "justify-self": "start",
-      "margin-left": "10px",
+      "margin-right": "auto",
     });
     let span2 = html_span_text(b, name);
     html_style_assign(span2, {
