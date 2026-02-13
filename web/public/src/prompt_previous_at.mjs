@@ -5,7 +5,7 @@ import { data_prompts } from "../../../love/public/src/data_prompts.mjs";
 export async function prompt_previous_at(index) {
   assert_arguments(arguments, 1);
   let result = await data_prompts();
-  let item = list_get_end(result, index - 1);
+  let item = list_get_end(result, index);
   let r = await function_run_line(item);
   return r;
 }
