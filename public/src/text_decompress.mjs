@@ -3,10 +3,9 @@ import LZString from "lz-string";
 export async function text_decompress(compressed) {
   let lz = null;
   let condition = browser_is();
-  let l = (await import("lz-string")).default;
   let result = null;
   if (condition) {
-    result = l;
+    result = (await import("lz-string")).default;
   } else {
     result = LZString;
   }
