@@ -60,7 +60,15 @@ export function app_replace_rule_sets() {
       goals: [
         {
           start: "1=1",
-          end: "",
+          end: "11=11",
+        },
+        {
+          start: "1=1",
+          end: "11=1+1",
+        },
+        {
+          start: "1=1",
+          end: "1+1=11",
         },
       ],
     },
