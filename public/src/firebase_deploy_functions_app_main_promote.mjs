@@ -1,6 +1,6 @@
-import { app_promote } from "../../../love/public/src/app_promote.mjs";
-import { firebase_deploy_function_app_main } from "../../../love/public/src/firebase_deploy_function_app_main.mjs";
+import { each_async } from "../../../love/public/src/each_async.mjs";
+import { text_split_comma } from "../../../love/public/src/text_split_comma.mjs";
 export async function firebase_deploy_functions_app_main_promote(a) {
-  await firebase_deploy_function_app_main(a);
-  await app_promote(a);
+  let searches = text_split_comma(searches_comma);
+  await each_async(searches, firebase_deploy_function_app_main_promote);
 }
