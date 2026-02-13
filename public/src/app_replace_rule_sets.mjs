@@ -10,21 +10,25 @@ export function app_replace_rule_sets() {
       name: "Shrink",
       rules: ["a a > a"],
       start: "aaaaa",
+      goals: [],
     },
     {
       name: "Unary Equations",
       rules: ["= > 1 = 1"],
       start: "1=1",
+      goals: [],
     },
     {
       name: "Unary Equations Adding",
       rules: ["= > 1 = 1", "1 1 > 1 + 1"],
       start: "1=1",
+      goals: [],
     },
     {
       name: "Binary Counting",
       rules: ["0 a > 1", "1 a > a 0", "c > a c", "b a > b 1"],
       start: "b0c",
+      goals: [],
     },
     {
       name: "Unary to Binary Equations",
@@ -40,6 +44,7 @@ export function app_replace_rule_sets() {
         "b a > b 1",
       ],
       start: "dbce=bc",
+      goals: [],
     },
   ];
   return v;
