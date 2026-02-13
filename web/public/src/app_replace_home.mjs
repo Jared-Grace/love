@@ -1,3 +1,4 @@
+import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { app_replace_button_rule_background_color } from "../../../love/public/src/app_replace_button_rule_background_color.mjs";
 import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_set.mjs";
 import { app_replace_settings } from "../../../love/public/src/app_replace_settings.mjs";
@@ -19,6 +20,7 @@ export function app_replace_home(context) {
     let name2 = property_get(item, "name");
     let b = html_button(root, name2, lambda);
     let c = app_replace_button_rule_background_color();
+    html_style_background_color_set(component, background);
     function lambda() {
       storage_local_set_context(context, "rule_set_index", index);
       app_shared_screen_set(context, app_replace_rule_set);
