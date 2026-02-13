@@ -1,9 +1,8 @@
+import { list_first_not_is } from "../../../love/public/src/list_first_not_is.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { html_hr_2 } from "../../../love/public/src/html_hr_2.mjs";
 import { html_bar_content_padding } from "../../../love/public/src/html_bar_content_padding.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
-import { not } from "../../../love/public/src/not.mjs";
-import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
@@ -20,8 +19,7 @@ export async function app_supper_main(context) {
   let verses = await app_supper_verses_get();
   let previous_chapter_code = null;
   function lambda2(v) {
-    let v2 = list_first_is(verses, v);
-    let n = not(v2);
+    let n = list_first_not_is(verses, v);
     let chapter_code = property_get(v, "chapter_code");
     if (n) {
       if (equal_not(chapter_code, previous_chapter_code)) {
