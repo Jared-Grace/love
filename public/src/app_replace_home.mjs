@@ -1,5 +1,4 @@
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
-import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
 import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_set.mjs";
 import { app_replace_settings } from "../../../love/public/src/app_replace_settings.mjs";
 import { emoji_gear } from "../../../love/public/src/emoji_gear.mjs";
@@ -13,7 +12,7 @@ export function app_replace_home(context) {
   function lambda4() {
     app_shared_screen_set(context, app_replace_settings);
   }
-  app_replace_button(root, emoji_gear() + " Settings", lambda4);
+  app_replace_button_wide(root, emoji_gear() + " Settings", lambda4);
   let rule_sets = app_replace_rule_sets();
   function lambda2(item, index) {
     let name2 = property_get(item, "name");
