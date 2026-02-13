@@ -5,8 +5,8 @@ import { list_map_property } from "../../../love/public/src/list_map_property.mj
 import { json_to } from "../../../love/public/src/json_to.mjs";
 export function js_identifiers_to_names(identifiers) {
   let a = list_all(identifiers, js_identifier_is);
-  let message2 = json_to(identifiers);
-  assert_message(a, message2);
+  let messagem = json_to(identifiers);
+  assert_message(a, messagem);
   const names = list_map_property(identifiers, "name");
   return names;
 }
