@@ -1,4 +1,3 @@
-import { lambda_invoker } from "../../../love/public/src/lambda_invoker.mjs";
 import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_set.mjs";
 import { app_replace_settings } from "../../../love/public/src/app_replace_settings.mjs";
 import { emoji_gear } from "../../../love/public/src/emoji_gear.mjs";
@@ -13,7 +12,6 @@ export function app_replace_home(context) {
   function lambda4() {
     app_shared_screen_set(context, app_replace_settings);
   }
-  let r = lambda_invoker(fn, args);
   html_button(root, emoji_gear() + " Settings", lambda4);
   let rule_sets = app_replace_rule_sets();
   function lambda2(item, index) {
