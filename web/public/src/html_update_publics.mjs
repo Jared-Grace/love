@@ -4,5 +4,5 @@ import { html_update_public } from "../../../love/public/src/html_update_public.
 export async function html_update_publics(searches_comma) {
   let fn = html_update_public;
   let searches = text_split_comma(searches_comma);
-  await each_async(searches, html_update_public);
+  await each_async(searches, fn);
 }
