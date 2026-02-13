@@ -36,7 +36,7 @@ export function app_index_main(context) {
     },
     {
       app_fn: app_g,
-      text: "",
+      text: "Gospel sharing game",
     },
     {
       app_fn: app_replace,
