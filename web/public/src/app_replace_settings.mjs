@@ -1,4 +1,3 @@
-import { lambda_invoker_single } from "../../../love/public/src/lambda_invoker_single.mjs";
 import { app_replace_font_size_adjust_curried } from "../../../love/public/src/app_replace_font_size_adjust_curried.mjs";
 import { multiply_curried_right } from "../../../love/public/src/multiply_curried_right.mjs";
 import { divide_curried_right } from "../../../love/public/src/divide_curried_right.mjs";
@@ -17,8 +16,16 @@ export function app_replace_settings(context) {
   let value_get_multiply = multiply_curried_right(factor);
   let value_get_divide = divide_curried_right(factor);
   let c = app_replace_font_size_adjust_curried(context);
-  let m = lambda_invoker_single(c, value_get_multiply);
-  html_button(root, emoji_font_larger() + " Font size larger", m);
-  let d = lambda_invoker_single(c, value_get_divide);
-  html_button(root, emoji_font_smaller() + " Font size smaller", d);
+  async function lambda2() {
+    await c(value_get_multiply);
+  }
+  html_button(root, emoji_font_larger() + " Font size larger", lambda2);
+  async function lambda3() {
+    await c(value_get_divide);
+  }
+  let component = html_button(
+    root,
+    emoji_font_smaller() + " Font size smaller",
+    lambda3,
+  );
 }
