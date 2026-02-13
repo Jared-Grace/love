@@ -6,7 +6,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { app_search_results } from "../../../love/public/src/app_search_results.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
-import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
+import { html_button_wide } from "../../../love/public/src/html_button_wide.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { html_input_text } from "../../../karate_code/public/src/html_input_text.mjs";
@@ -37,7 +37,7 @@ export function app_search_home(context) {
   html_width_full(input);
   html_focus(input);
   const text = "Search";
-  html_button_width_full(root, text, search);
+  html_button_wide(root, text, search);
   let div_results = html_div(root);
   async function search() {
     let query = html_value_get(input);
