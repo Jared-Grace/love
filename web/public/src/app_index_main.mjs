@@ -19,7 +19,7 @@ export function app_index_main(context) {
     },
     {
       app_fn: app_bible,
-      text: "",
+      text: "Allows reading the Bible",
     },
     {
       app_fn: app_original_bible,
