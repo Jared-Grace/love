@@ -1,8 +1,10 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { window_open_app } from "../../../love/public/src/window_open_app.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 export function app_index_main(context) {
-  async function lambda2() {
-    window_open_app(url, {});
+  let root = property_get(context, "root");
+  async function lambda2(fn) {
+    window_open_app(fn, {});
   }
   let component = html_button(parent, text, lambda2);
 }
