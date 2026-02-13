@@ -1,3 +1,4 @@
+import { app_g } from "../../../love/public/src/app_g.mjs";
 import { html_button_wide } from "../../../love/public/src/html_button_wide.mjs";
 import { app_prefix_without } from "../../../love/public/src/app_prefix_without.mjs";
 import { window_open_app_curried_right } from "../../../love/public/src/window_open_app_curried_right.mjs";
@@ -31,6 +32,10 @@ export function app_index_main(context) {
     },
     {
       app_fn: app_supper,
+      text: "",
+    },
+    {
+      app_fn: app_g,
       text: "",
     },
     {
