@@ -30,8 +30,7 @@ export function app_replace_home(context) {
       "margin-right": "auto",
     });
     let title = html_span_text(b, name);
-    html_style_assign(title, {
-    });
+    html_style_assign(title, {});
     function lambda() {
       storage_local_set_context(context, "rule_set_index", index);
       app_shared_screen_set(context, app_replace_rule_set);
