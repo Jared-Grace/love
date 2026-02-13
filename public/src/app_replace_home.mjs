@@ -26,7 +26,10 @@ export function app_replace_home(context) {
       "grid-template-columns": "auto 1fr auto",
       "align-items": "center",
     });
-    html_style_assign(b3, s2);
+    html_style_assign(b3, {
+    "justify-self": "start",
+    "margin-left": "10px"
+  });
     html_style_assign(b4, s3);
     function lambda() {
       storage_local_set_context(context, "rule_set_index", index);
