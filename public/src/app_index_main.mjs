@@ -1,3 +1,4 @@
+import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { app_g } from "../../../love/public/src/app_g.mjs";
 import { html_button_wide } from "../../../love/public/src/html_button_wide.mjs";
@@ -57,8 +58,9 @@ export function app_index_main(context) {
     function lambda2() {
       lambda(fn);
     }
-    let p = html_p(root2);
-    let component = html_button_wide(root, without, lambda2);
+    let p = html_p(root);
+    let component = html_button_wide(p, without, lambda2);
+    let div = html_div_text(root2, text2);
   }
   each(fns, lambda3);
 }
