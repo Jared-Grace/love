@@ -1,1 +1,1 @@
-export function app_index_main() {}
+export function app_index_main(context) {}
