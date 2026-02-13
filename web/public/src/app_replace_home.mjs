@@ -1,4 +1,4 @@
-import { html_button_wide } from "../../../love/public/src/html_button_wide.mjs";
+import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
 import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_set.mjs";
 import { app_replace_settings } from "../../../love/public/src/app_replace_settings.mjs";
@@ -18,8 +18,7 @@ export function app_replace_home(context) {
   function lambda2(item, index) {
     let name2 = property_get(item, "name");
     app_replace_button(root, name2, lambda);
-    function lambda5() {}
-    let component = html_button_wide(root2, text, lambda5);
+    html_width_full(component);
     function lambda() {
       storage_local_set_context(context, "rule_set_index", index);
       app_shared_screen_set(context, app_replace_rule_set);
