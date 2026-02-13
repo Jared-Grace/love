@@ -38,7 +38,7 @@ export function app_index_main(context) {
   let hash = {};
   let lambda = window_open_app_curried_right(hash);
   function lambda3(a) {
-    let app_fn2 = property_get(a, "app_fn");
+    let fn = property_get(a, "app_fn");
     let text = property_get(a, "text");
     let without = app_prefix_without(fn);
     function lambda2() {
