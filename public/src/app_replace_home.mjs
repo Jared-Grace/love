@@ -20,7 +20,6 @@ export function app_replace_home(context) {
   function lambda2(item, index) {
     let name = property_get(item, "name");
     let a = add_1(index);
-    const text = a + " " + name;
     let b = app_replace_button_wide(root, text, lambda);
     html_style_assign(b, {
       display: "grid",
