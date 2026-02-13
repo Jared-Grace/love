@@ -1,5 +1,4 @@
 import { list_first_not_is } from "../../../love/public/src/list_first_not_is.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
 import { html_hr } from "../../../love/public/src/html_hr.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { app_search } from "../../../love/public/src/app_search.mjs";
@@ -66,7 +65,6 @@ export function app_index_main(context) {
     if (n) {
       let h = html_hr(root);
     }
-    let first = list_first(list);
     let fn = property_get(a, "app_fn");
     let without = app_prefix_without(fn);
     function lambda2() {
