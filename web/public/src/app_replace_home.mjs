@@ -22,7 +22,7 @@ export function app_replace_home(context) {
     let a = add_1(index) + ".";
     let b = app_replace_button_wide(root, "", lambda);
     html_style_assign(b, {
-      display: "grid",
+      display: "flex",
       "align-items": "center",
     });
     let span = html_span_text(b, a);
