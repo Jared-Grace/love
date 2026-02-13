@@ -6,7 +6,15 @@ export function app_replace_rule_sets() {
       goals: [
         {
           start: "a",
-          end: "",
+          end: "aa",
+        },
+        {
+          start: "a",
+          end: "aaa",
+        },
+        {
+          start: "a",
+          end: "aaaa",
         },
       ],
     },
