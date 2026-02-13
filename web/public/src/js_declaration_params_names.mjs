@@ -11,4 +11,11 @@ export function js_declaration_params_names(declaration) {
   let b = false;
   params_names = ternary(b, on_true, on_false);
   return params_names;
+  let result = null;
+  if (b) {
+    result = on_true;
+  } else {
+    result = on_false;
+  }
+  params_names = result;
 }
