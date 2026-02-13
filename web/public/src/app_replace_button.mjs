@@ -7,4 +7,5 @@ export function app_replace_button(parent, text, lambda) {
   app_replace_button_symbol_style(b);
   let c = app_replace_button_rule_background_color();
   html_style_background_color_set(b, c);
+  return b;
 }
