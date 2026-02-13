@@ -19,12 +19,10 @@ export function app_replace_settings(context) {
   let c = app_replace_font_size_adjust_curried(context);
   let m = lambda_invoker_single(c, value_get_multiply);
   html_button(root, emoji_font_larger() + " Font size larger", m);
-  async function lambda3() {
-    await c(value_get_divide);
-  }
+  let d = lambda_invoker_single(c, value_get_divide);
   let component = html_button(
     root,
     emoji_font_smaller() + " Font size smaller",
-    lambda3,
+    d,
   );
 }
