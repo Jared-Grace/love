@@ -1,4 +1,3 @@
-import { lambda_invoker_single } from "../../../love/public/src/lambda_invoker_single.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { app_search } from "../../../love/public/src/app_search.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
@@ -61,8 +60,10 @@ export function app_index_main(context) {
   let lambda = window_open_app_curried_right(hash);
   function lambda3(a) {
     let fn = property_get(a, "app_fn");
-    let lambda2 = lambda_invoker_single(lambda, fn);
     let without = app_prefix_without(fn);
+    function lambda2() {
+      lambda(fn);
+    }
     let p = html_p(root);
     let component = html_button_wide(p, without, lambda2);
     let text = property_get(a, "text");
