@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { window_open_app_curried_right } from "../../../love/public/src/window_open_app_curried_right.mjs";
 import { app_bible } from "../../../love/public/src/app_bible.mjs";
 import { app_reply } from "../../../love/public/src/app_reply.mjs";
@@ -7,6 +8,7 @@ import { app_supper } from "../../../love/public/src/app_supper.mjs";
 import { app_ceb_bible } from "../../../love/public/src/app_ceb_bible.mjs";
 import { app_original_bible } from "../../../love/public/src/app_original_bible.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
+import { window_open_app } from "../../../love/public/src/window_open_app.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 export function app_index_main(context) {
   let root = property_get(context, "root");
@@ -19,6 +21,10 @@ export function app_index_main(context) {
     app_replace,
     app_designs_universal,
   ];
+  async function lambda2(fn) {
+    window_open_app(fn, {});
+  }
   let r2 = window_open_app_curried_right({});
-  let component = html_button(parent, text, r2);
+  each(list, function lambda(item) {});
+  let component = html_button(parent, text, lambda2);
 }
