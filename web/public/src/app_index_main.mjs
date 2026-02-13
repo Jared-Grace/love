@@ -28,11 +28,11 @@ export function app_index_main(context) {
     },
     {
       app_fn: app_ceb_bible,
-      text: "",
+      text: "Allows learning the language Cebuano by reading the Bible in Cebuano (with word defintions and explanations)",
     },
     {
       app_fn: app_supper,
-      text: "",
+      text: "Bible verses and prayers for Lord's Supper",
     },
     {
       app_fn: app_g,
