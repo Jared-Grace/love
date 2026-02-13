@@ -30,7 +30,10 @@ export function app_replace_home(context) {
       "justify-self": "start",
       "margin-left": "10px",
     });
-    html_style_assign(b4, s3);
+    html_style_assign(b4, {
+    "grid-column": "1 / -1",
+    "text-align": "center"
+  });
     function lambda() {
       storage_local_set_context(context, "rule_set_index", index);
       app_shared_screen_set(context, app_replace_rule_set);
