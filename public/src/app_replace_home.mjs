@@ -1,3 +1,4 @@
+import { app_replace_button_rule_background_color } from "../../../love/public/src/app_replace_button_rule_background_color.mjs";
 import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_set.mjs";
 import { app_replace_settings } from "../../../love/public/src/app_replace_settings.mjs";
 import { emoji_gear } from "../../../love/public/src/emoji_gear.mjs";
@@ -17,7 +18,7 @@ export function app_replace_home(context) {
   function lambda2(item, index) {
     let name2 = property_get(item, "name");
     let b = html_button(root, name2, lambda);
-          let on_b = app_replace_button_rule_background_color();
+    let on_b = app_replace_button_rule_background_color();
     function lambda() {
       storage_local_set_context(context, "rule_set_index", index);
       app_shared_screen_set(context, app_replace_rule_set);
