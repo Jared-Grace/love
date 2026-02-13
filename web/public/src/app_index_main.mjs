@@ -24,11 +24,11 @@ export function app_index_main(context) {
     },
     {
       app_fn: app_original_bible,
-      text: "",
+      text: "Allows learning the ancient Greek of the Bible by reading the Bible in ancient Greek (with word defintions and explanations) - Only John 1 and 1 Peter 4 at this time",
     },
     {
       app_fn: app_ceb_bible,
-      text: "Allows learning the language Cebuano by reading the Bible in Cebuano (with word defintions and explanations)",
+      text: "Allows learning the language Cebuano by reading the Bible in Cebuano (with word defintions and explanations) - Only Song of Solomon, James and John 1 at this time",
     },
     {
       app_fn: app_supper,
