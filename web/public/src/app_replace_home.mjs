@@ -20,7 +20,7 @@ export function app_replace_home(context) {
     let name2 = property_get(item, "name");
     let b = html_button(root, name2, lambda);
     let c = app_replace_button_rule_background_color();
-    html_style_background_color_set(component, background);
+    html_style_background_color_set(b, c);
     function lambda() {
       storage_local_set_context(context, "rule_set_index", index);
       app_shared_screen_set(context, app_replace_rule_set);
