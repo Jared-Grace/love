@@ -1,3 +1,4 @@
+import { firebase_deploy_function_app_main_promote } from "../../../love/public/src/firebase_deploy_function_app_main_promote.mjs";
 import { text_split_comma_each_async } from "../../../love/public/src/text_split_comma_each_async.mjs";
 export async function firebase_deploy_functions_app_main_promote(
   searches_comma,
