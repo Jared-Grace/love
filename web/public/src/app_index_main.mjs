@@ -15,7 +15,7 @@ export function app_index_main(context) {
   let fns = [
     {
       app_fn: app_reply,
-      text: "",
+      text: "Allows you to choose languages, multiple encouraging bible verses and responses to copy and paste as messages",
     },
     {
       app_fn: app_bible,
