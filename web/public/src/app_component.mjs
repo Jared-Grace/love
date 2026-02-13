@@ -8,7 +8,7 @@ import { app_context_initialize_root } from "../../../love/public/src/app_contex
 import { function_dependencies_code_unaliased } from "../../../love/public/src/function_dependencies_code_unaliased.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_shared_name_main } from "../../../love/public/src/app_shared_name_main.mjs";
-import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
+import { html_button_wide } from "../../../love/public/src/html_button_wide.mjs";
 export async function app_component(a_name, on_click, button_text) {
   let combined = app_shared_name_main(a_name);
   let v = await function_dependencies_code_unaliased(combined);
@@ -24,6 +24,6 @@ export async function app_component(a_name, on_click, button_text) {
   let bc = html_bar_content_padded(root);
   let content = property_get(bc, "content");
   let bar = property_get(bc, "bar");
-  let component = html_button_width_full(bar, button_text, on_click);
+  let component = html_button_wide(bar, button_text, on_click);
   await app_context_initialize_root(content, fn);
 }

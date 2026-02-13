@@ -1,4 +1,4 @@
-import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
+import { html_button_wide } from "../../../love/public/src/html_button_wide.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -22,5 +22,5 @@ export function firebase_login_email(context, firebase_auth, auth) {
     );
     return v;
   }
-  let component = html_button_width_full(root, "Login", login);
+  let component = html_button_wide(root, "Login", login);
 }
