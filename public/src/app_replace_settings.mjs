@@ -14,11 +14,7 @@ export function app_replace_settings(context) {
   html_button_screen(root, emoji_home() + "Home", context, app_replace_home);
   async function lambda2() {
     const factor = app_replace_font_size_factor();
-    function value_get(value) {
-      value *= factor;
-      return value;
-    }
-    let r = multiply_curried_right(right);
+    let value_get = multiply_curried_right(factor);
     await app_replace_font_size_adjust(context, value_get);
   }
   html_button(root, emoji_font_larger() + " Font size larger", lambda2);
