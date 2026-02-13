@@ -1,5 +1,4 @@
 import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
-import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_set.mjs";
 import { app_replace_settings } from "../../../love/public/src/app_replace_settings.mjs";
 import { emoji_gear } from "../../../love/public/src/emoji_gear.mjs";
@@ -18,10 +17,7 @@ export function app_replace_home(context) {
   let rule_sets = app_replace_rule_sets();
   function lambda2(item, index) {
     let name2 = property_get(item, "name");
-    let r = app_replace_button(root, name2, lambda);
-    let c = property_get(r, "c");
-    let b = property_get(r, "b");
-    html_style_background_color_set(b, c);
+    app_replace_button(root, name2, lambda);
     function lambda() {
       storage_local_set_context(context, "rule_set_index", index);
       app_shared_screen_set(context, app_replace_rule_set);
