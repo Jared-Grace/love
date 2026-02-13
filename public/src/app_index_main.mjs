@@ -21,6 +21,7 @@ export function app_index_main(context) {
     app_replace,
     app_designs_universal,
   ];
+  let hash = {};
   let lambda = window_open_app_curried_right(hash);
   function lambda3(fn) {
     let without = app_prefix_without(fn);
