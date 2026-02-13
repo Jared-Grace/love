@@ -1,3 +1,4 @@
+import { app_prefix_without } from "../../../love/public/src/app_prefix_without.mjs";
 import { window_open_app_curried_right } from "../../../love/public/src/window_open_app_curried_right.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_bible } from "../../../love/public/src/app_bible.mjs";
@@ -22,6 +23,7 @@ export function app_index_main(context) {
   ];
   let lambda = window_open_app_curried_right(hash);
   function lambda3(fn) {
+    let without = app_prefix_without(app_fn);
     let component = html_button(parent, text, lambda);
   }
   each(fns, lambda3);
