@@ -1,3 +1,4 @@
+import { multiply_curried_right } from "../../../love/public/src/multiply_curried_right.mjs";
 import { divide_curried_right } from "../../../love/public/src/divide_curried_right.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_home } from "../../../love/public/src/app_replace_home.mjs";
@@ -17,6 +18,7 @@ export function app_replace_settings(context) {
       value *= factor;
       return value;
     }
+    let r = multiply_curried_right(right);
     await app_replace_font_size_adjust(context, value_get);
   }
   html_button(root, emoji_font_larger() + " Font size larger", lambda2);
