@@ -19,7 +19,7 @@ export function app_replace_home(context) {
     let name = property_get(item, "name");
     let a = add_1(index);
     const text = a + " " + name;
-    app_replace_button_wide(root, text, lambda);
+    let b = app_replace_button_wide(root, text, lambda);
     function lambda() {
       storage_local_set_context(context, "rule_set_index", index);
       app_shared_screen_set(context, app_replace_rule_set);
