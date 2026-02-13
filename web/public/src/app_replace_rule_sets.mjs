@@ -14,7 +14,7 @@ export function app_replace_rule_sets() {
         },
         {
           start: "a",
-          end: "aaaa",
+          end: "aaaaa",
         },
       ],
     },
@@ -24,7 +24,15 @@ export function app_replace_rule_sets() {
       goals: [
         {
           start: "aaaaa",
-          end: "",
+          end: "a",
+        },
+        {
+          start: "aaa",
+          end: "a",
+        },
+        {
+          start: "aa",
+          end: "a",
         },
       ],
     },
