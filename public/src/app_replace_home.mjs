@@ -1,3 +1,4 @@
+import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { add_1 } from "../../../love/public/src/add_1.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_set.mjs";
@@ -20,6 +21,9 @@ export function app_replace_home(context) {
     let a = add_1(index);
     const text = a + " " + name;
     let b = app_replace_button_wide(root, text, lambda);
+    html_style_assign(b2, s);
+    html_style_assign(b3, s2);
+    html_style_assign(b4, s3);
     function lambda() {
       storage_local_set_context(context, "rule_set_index", index);
       app_shared_screen_set(context, app_replace_rule_set);
