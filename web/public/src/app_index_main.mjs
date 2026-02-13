@@ -1,3 +1,4 @@
+import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { app_search } from "../../../love/public/src/app_search.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
@@ -16,6 +17,7 @@ import { app_original_bible } from "../../../love/public/src/app_original_bible.
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_index_main(context) {
   let root = property_get(context, "root");
+  html_mobile_default(context);
   let fns = [
     {
       app_fn: app_reply,
