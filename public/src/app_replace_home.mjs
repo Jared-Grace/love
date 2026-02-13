@@ -19,7 +19,7 @@ export function app_replace_home(context) {
   let rule_sets = app_replace_rule_sets();
   function lambda2(item, index) {
     let name = property_get(item, "name");
-    let a = add_1(index);
+    let a = add_1(index) + ".";
     let b = app_replace_button_wide(root, "", lambda);
     html_style_assign(b, {
       display: "grid",
