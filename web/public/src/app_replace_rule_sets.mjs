@@ -4,7 +4,12 @@ export function app_replace_rule_sets() {
       name: "Grow",
       rules: ["a > a a"],
       start: "a",
-      goals: [],
+      goals: [
+        {
+          start: "",
+          end: "",
+        },
+      ],
     },
     {
       name: "Shrink",
