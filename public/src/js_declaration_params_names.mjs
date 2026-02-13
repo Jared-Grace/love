@@ -6,10 +6,8 @@ import { js_declaration_params_names_node } from "../../../love/public/src/js_de
 export function js_declaration_params_names(declaration) {
   let params = js_declaration_params_get(declaration);
   let params_names = null;
-  params_names = ternary(
-    false,
-    js_identifiers_to_names(params),
-    list_map_squash(params, js_declaration_params_names_node),
-  );
+  let on_true = js_identifiers_to_names(params);
+  let on_false = list_map_squash(params, js_declaration_params_names_node);
+  params_names = ternary(false, on_true, on_false);
   return params_names;
 }
