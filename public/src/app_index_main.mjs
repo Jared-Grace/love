@@ -1,3 +1,4 @@
+import { html_p } from "../../../love/public/src/html_p.mjs";
 import { app_g } from "../../../love/public/src/app_g.mjs";
 import { html_button_wide } from "../../../love/public/src/html_button_wide.mjs";
 import { app_prefix_without } from "../../../love/public/src/app_prefix_without.mjs";
@@ -56,6 +57,7 @@ export function app_index_main(context) {
     function lambda2() {
       lambda(fn);
     }
+    let p = html_p(root2);
     let component = html_button_wide(root, without, lambda2);
   }
   each(fns, lambda3);
