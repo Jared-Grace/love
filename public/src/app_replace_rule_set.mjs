@@ -122,15 +122,9 @@ export async function app_replace_rule_set(context) {
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(enabled);
       each_nested(list, lambda4);
       const selected = index2 === index_selected;
-      log({
-        selected,
-      });
       let on_a = app_replace_rule_set_highlight();
       let on_b = app_replace_button_rule_background_color();
       let c = ternary_nested(selected, on_a, enabled, on_b, "#a8a8a8ff");
-      log({
-        c,
-      });
       html_style_background_color_set(rb, c);
       let arrow2 = property_get(rb, "arrow");
       html_style_font_color_set_if(enabled, arrow2, "black", "#6a6a6a");
@@ -163,6 +157,9 @@ export async function app_replace_rule_set(context) {
         let rule2 = list_get(rules_parsed, index_selected);
         valid = app_replace_rule_valid(rule2, index3, current_list);
       }
+      log({
+        valid,
+      });
       app_replace_button_symbol_style_valid(sb, valid);
       return sb;
     }
