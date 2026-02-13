@@ -19,8 +19,8 @@ export function app_replace_settings(context) {
   }
   html_button(root, emoji_font_larger() + " Font size larger", lambda2);
   async function lambda3() {
-    let value_get = divide_curried_right(factor);
-    await app_replace_font_size_adjust(context, value_get);
+    let value_get_divide = divide_curried_right(factor);
+    await app_replace_font_size_adjust(context, value_get_divide);
   }
   let component = html_button(
     root,
