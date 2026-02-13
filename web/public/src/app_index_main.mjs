@@ -20,10 +20,10 @@ export function app_index_main(context) {
     app_replace,
     app_designs_universal,
   ];
-  async function lambda2(fn) {
-    window_open_app(fn, {});
-  }
-  function lambda(item) {
+  function lambda(fn) {
+    async function lambda2(fn) {
+      window_open_app(fn, {});
+    }
     let component = html_button(parent, text, lambda2);
   }
   each(fns, lambda);
