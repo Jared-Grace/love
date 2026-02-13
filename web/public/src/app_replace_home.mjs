@@ -27,9 +27,9 @@ export function app_replace_home(context) {
       "align-items": "center",
     });
     html_style_assign(b3, {
-    "justify-self": "start",
-    "margin-left": "10px"
-  });
+      "justify-self": "start",
+      "margin-left": "10px",
+    });
     html_style_assign(b4, s3);
     function lambda() {
       storage_local_set_context(context, "rule_set_index", index);
