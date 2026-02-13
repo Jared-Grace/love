@@ -15,24 +15,31 @@ export function app_index_main(context) {
   let fns = [
     {
       app_fn: app_reply,
+      text: "",
     },
     {
       app_fn: app_bible,
+      text: "",
     },
     {
       app_fn: app_original_bible,
+      text: "",
     },
     {
       app_fn: app_ceb_bible,
+      text: "",
     },
     {
       app_fn: app_supper,
+      text: "",
     },
     {
       app_fn: app_replace,
+      text: "",
     },
     {
       app_fn: app_designs_universal,
+      text: "",
     },
   ];
   let hash = {};
