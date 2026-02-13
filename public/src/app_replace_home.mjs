@@ -13,7 +13,8 @@ export function app_replace_home(context) {
   function lambda4() {
     app_shared_screen_set(context, app_replace_settings);
   }
-  each(list, function lambda3(item2) {});
+  function lambda3(item2) {}
+  each(list, lambda3);
   html_button(root, emoji_gear() + " Settings", lambda4);
   let rule_sets = app_replace_rule_sets();
   function lambda2(item, index) {
