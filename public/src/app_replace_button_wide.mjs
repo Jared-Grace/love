@@ -3,4 +3,5 @@ import { app_replace_button } from "../../../love/public/src/app_replace_button.
 export function app_replace_button_wide(root, name2, lambda) {
   let b = app_replace_button(root, name2, lambda);
   html_width_full(b);
+  return b;
 }
