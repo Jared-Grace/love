@@ -29,8 +29,8 @@ export function app_replace_home(context) {
     html_style_assign(n, {
       "margin-right": "auto",
     });
-    let span2 = html_span_text(b, name);
-    html_style_assign(span2, {
+    let title = html_span_text(b, name);
+    html_style_assign(title, {
       "grid-area": "1 / 1",
       "justify-self": "center",
     });
