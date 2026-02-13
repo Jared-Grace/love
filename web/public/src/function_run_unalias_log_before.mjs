@@ -4,6 +4,6 @@ import { emoji_run } from "../../../love/public/src/emoji_run.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 export async function function_run_unalias_log_before(unaliased, args, f_name) {
   log_keep(emoji_run() + " " + unaliased + " " + json_to(args));
-  let result = await function_run_unalias(f_name, args);
+  let result = await function_run_unalias(unaliased, args);
   return result;
 }
