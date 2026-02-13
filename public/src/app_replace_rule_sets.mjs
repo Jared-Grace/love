@@ -13,10 +13,10 @@ export function app_replace_rule_sets() {
     {
       name: "Shrink",
       rules: ["a a > a"],
-      start: "aaaaa",
+      start: "",
       goals: [
         {
-          start: "",
+          start: "aaaaa",
           end: "",
         },
       ],
@@ -24,10 +24,10 @@ export function app_replace_rule_sets() {
     {
       name: "Unary Equations",
       rules: ["= > 1 = 1"],
-      start: "1=1",
+      start: "",
       goals: [
         {
-          start: "",
+          start: "1=1",
           end: "",
         },
       ],
@@ -35,10 +35,10 @@ export function app_replace_rule_sets() {
     {
       name: "Unary Equations Adding",
       rules: ["= > 1 = 1", "1 1 > 1 + 1"],
-      start: "1=1",
+      start: "",
       goals: [
         {
-          start: "",
+          start: "1=1",
           end: "",
         },
       ],
@@ -46,10 +46,10 @@ export function app_replace_rule_sets() {
     {
       name: "Binary Counting",
       rules: ["0 a > 1", "1 a > a 0", "c > a c", "b a > b 1"],
-      start: "b0c",
+      start: "",
       goals: [
         {
-          start: "",
+          start: "b0c",
           end: "",
         },
       ],
@@ -67,10 +67,10 @@ export function app_replace_rule_sets() {
         "1 a > a 0",
         "b a > b 1",
       ],
-      start: "dbce=bc",
+      start: "",
       goals: [
         {
-          start: "",
+          start: "dbce=bc",
           end: "",
         },
       ],
