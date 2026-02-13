@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { g_generate_upload_single } from "../../../love/public/src/g_generate_upload_single.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { text_includes } from "../../../love/public/src/text_includes.mjs";
@@ -7,9 +6,6 @@ export async function g_generate_upload_filter(fn, path_get, search) {
   await folder_user_storage_function_each(fn, file_each);
   async function file_each(file) {
     let i = text_includes(file, search);
-    log({
-      file,
-    });
     if (not(i)) {
       return;
     }
