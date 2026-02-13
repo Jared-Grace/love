@@ -134,6 +134,14 @@ export function app_replace_rule_sets() {
       goals: [
         {
           start: "dbce=bc",
+          end: "bdce=bc",
+        },
+        {
+          start: "dbce=bc",
+          end: "bade=bc",
+        },
+        {
+          start: "dbce=bc",
           end: "b1=b1d",
         },
       ],
