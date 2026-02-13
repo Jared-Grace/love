@@ -23,7 +23,7 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { ebible_book_exists } from "../../../love/public/src/ebible_book_exists.mjs";
 import { ebible_chapter_code_to_book } from "../../../love/public/src/ebible_chapter_code_to_book.mjs";
-import { html_button_width_full } from "../../../love/public/src/html_button_width_full.mjs";
+import { html_button_wide } from "../../../love/public/src/html_button_wide.mjs";
 import { app_karate_button_back_text } from "../../../love/public/src/app_karate_button_back_text.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
@@ -82,17 +82,9 @@ export async function app_search_results(context, div_results) {
       let squashed = list_squash(waited);
       await list_join_newline_2_copy(squashed);
     }
-    let component = html_button_width_full(
-      expand_all_div,
-      c2 + " all",
-      lambda6,
-    );
+    let component = html_button_wide(expand_all_div, c2 + " all", lambda6);
   }
-  expand_all = html_button_width_full(
-    div_results,
-    "Expand all",
-    expand_all_lambda,
-  );
+  expand_all = html_button_wide(div_results, "Expand all", expand_all_lambda);
   let results = object_to_list(dictionary);
   function each_result(vk) {
     let verse_numbers = property_get(vk, "value");
@@ -124,7 +116,7 @@ export async function app_search_results(context, div_results) {
             l: joined,
           });
         }
-        html_button_width_full(div_verse, "Open chapter", lambda3);
+        html_button_wide(div_verse, "Open chapter", lambda3);
         let bible_texts = [];
         await app_reply_verses_add(
           en,
@@ -140,7 +132,7 @@ export async function app_search_results(context, div_results) {
           await list_join_newline_2_copy(bible_texts);
         }
       }
-      b = html_button_width_full(div_verse, reference, click);
+      b = html_button_wide(div_verse, reference, click);
       property_set_exists_not(b, "click", click);
       return b;
     }
