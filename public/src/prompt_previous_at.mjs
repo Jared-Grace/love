@@ -1,5 +1,5 @@
-import { prompt_previous } from "../../../love/public/src/prompt_previous.mjs";
+import { data_prompts } from "../../../love/public/src/data_prompts.mjs";
 export async function prompt_previous_at() {
-  let r = await prompt_previous();
+  let result = await data_prompts();
   return r;
 }
