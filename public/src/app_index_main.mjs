@@ -1,3 +1,4 @@
+import { html_hr } from "../../../love/public/src/html_hr.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { app_search } from "../../../love/public/src/app_search.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
@@ -68,6 +69,7 @@ export function app_index_main(context) {
     let component = html_button_wide(p, without, lambda2);
     let text = property_get(a, "text");
     let div = html_div_text_centered(p, text);
+    let h = html_hr(root2);
   }
   each(fns, lambda3);
 }
