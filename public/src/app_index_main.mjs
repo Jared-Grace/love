@@ -23,7 +23,7 @@ export function app_index_main(context) {
     },
     {
       app_fn: app_search,
-      text: "Allows reading the Bible",
+      text: "Allows search across multiple versions of the Bible in English and copying results in multiple languages",
     },
     {
       app_fn: app_bible,
