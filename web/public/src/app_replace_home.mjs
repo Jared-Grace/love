@@ -20,7 +20,7 @@ export function app_replace_home(context) {
   function lambda2(item, index) {
     let name = property_get(item, "name");
     let a = add_1(index);
-    let b = app_replace_button_wide(root, text, lambda);
+    let b = app_replace_button_wide(root, "", lambda);
     html_style_assign(b, {
       display: "grid",
       "grid-template-columns": "auto 1fr auto",
