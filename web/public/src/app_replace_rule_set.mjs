@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { app_replace_button_rule_background_color } from "../../../love/public/src/app_replace_button_rule_background_color.mjs";
 import { text_pad_space } from "../../../love/public/src/text_pad_space.mjs";
@@ -157,9 +156,6 @@ export async function app_replace_rule_set(context) {
         let rule2 = list_get(rules_parsed, index_selected);
         valid = app_replace_rule_valid(rule2, index3, current_list);
       }
-      log({
-        valid,
-      });
       app_replace_button_symbol_style_valid(sb, valid);
       return sb;
     }
