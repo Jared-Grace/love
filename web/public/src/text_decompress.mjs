@@ -4,7 +4,8 @@ import LZString from "lz-string";
 export async function text_decompress(compressed) {
   let lz = null;
   let condition = browser_is();
-  lz = ternary(condition, (await import("lz-string")).default, LZString);
+  let l = (await import("lz-string")).default;
+  lz = ternary(condition, l, LZString);
   let v = lz.decompressFromUTF16(compressed);
   return v;
 }
