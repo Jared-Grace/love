@@ -70,6 +70,18 @@ export function app_replace_rule_sets() {
           start: "1=1",
           end: "1+1=11",
         },
+        {
+          start: "1=1",
+          end: "1+11=111",
+        },
+        {
+          start: "1=1",
+          end: "1+11=11+1",
+        },
+        {
+          start: "1=1",
+          end: "1+1+111=11111",
+        },
       ],
     },
     {
