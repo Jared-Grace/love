@@ -1,3 +1,4 @@
+import { window_open_app_curried_right } from "../../../love/public/src/window_open_app_curried_right.mjs";
 import { app_bible } from "../../../love/public/src/app_bible.mjs";
 import { app_reply } from "../../../love/public/src/app_reply.mjs";
 import { app_designs_universal } from "../../../love/public/src/app_designs_universal.mjs";
@@ -22,5 +23,6 @@ export function app_index_main(context) {
   async function lambda2(fn) {
     window_open_app(fn, {});
   }
+  let r2 = window_open_app_curried_right(hash);
   let component = html_button(parent, text, lambda2);
 }
