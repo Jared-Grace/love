@@ -25,7 +25,8 @@ export function app_index_main(context) {
   let lambda = window_open_app_curried_right(hash);
   function lambda3(fn) {
     let without = app_prefix_without(fn);
-    let component = html_button_wide(root, without, () => {});
+    function lambda2() {}
+    let component = html_button_wide(root, without, lambda2);
   }
   each(fns, lambda3);
 }
