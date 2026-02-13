@@ -26,11 +26,12 @@ export function app_replace_home(context) {
       "align-items": "center",
     });
     let n = html_span_text(b, a);
-    html_style_assign(n, {
-      "margin-right": "auto",
-    });
+    html_style_assign(n, {});
     let title = html_span_text(b, name);
-    html_style_assign(title, {});
+    html_style_assign(title, {
+      "flex-grow": "1",
+      "text-align": "center",
+    });
     function lambda() {
       storage_local_set_context(context, "rule_set_index", index);
       app_shared_screen_set(context, app_replace_rule_set);
