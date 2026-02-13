@@ -63,7 +63,8 @@ export function app_index_main(context) {
   let lambda = window_open_app_curried_right(hash);
   function lambda3(a) {
     let n = list_first_not_is(fns, a);
-    if (false) {
+    if (n) {
+      let h = html_hr(root);
     }
     let first = list_first(list);
     let fn = property_get(a, "app_fn");
@@ -75,7 +76,6 @@ export function app_index_main(context) {
     let component = html_button_wide(p, without, lambda2);
     let text = property_get(a, "text");
     let div = html_div_text_centered(p, text);
-    let h = html_hr(root2);
   }
   each(fns, lambda3);
 }
