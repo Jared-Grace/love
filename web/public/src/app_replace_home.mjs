@@ -27,12 +27,12 @@ export function app_replace_home(context) {
       "grid-template-columns": "auto 1fr auto",
       "align-items": "center",
     });
-    let span = html_span_text(parent, text2);
+    let span = html_span_text(root, a);
     html_style_assign(b3, {
       "justify-self": "start",
       "margin-left": "10px",
     });
-    let span2 = html_span_text(parent2, text3);
+    let span2 = html_span_text(root, name);
     html_style_assign(b4, {
       "grid-column": "1 / -1",
       "text-align": "center",
