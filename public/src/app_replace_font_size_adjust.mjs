@@ -5,5 +5,5 @@ export async function app_replace_font_size_adjust(context, value_get) {
   let value = await app_replace_font_size(context);
   value = value_get(value);
   storage_local_set_context(context, "font_size", value);
-  await app_replace_font_size_refresh(context);
+  app_replace_font_size_refresh(context);
 }
