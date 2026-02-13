@@ -761,7 +761,14 @@ async function json_decompress(compressed) {
 }
 async function text_decompress(compressed) {
   let lz = null;
-  lz = ternary(browser_is(), (await import("lz-string")).default, LZString);
+  let condition = browser_is();
+  let result = null;
+  if (condition) {
+    result = (await import("lz-string")).default;
+  } else {
+    result = LZString;
+  }
+  lz = result;
   let v = lz.decompressFromUTF16(compressed);
   return v;
 }
