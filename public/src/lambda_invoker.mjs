@@ -1,1 +1,3 @@
-export function lambda_invoker() {}
+export function lambda_invoker(fn, args) {
+  return () => {};
+}
