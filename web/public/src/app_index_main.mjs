@@ -23,7 +23,8 @@ export function app_index_main(context) {
   async function lambda2(fn) {
     window_open_app(fn, {});
   }
-  function lambda(item) {}
-  each(list, lambda);
-  let component = html_button(parent, text, lambda2);
+  function lambda(item) {
+    let component = html_button(parent, text, lambda2);
+  }
+  each(fns, lambda);
 }
