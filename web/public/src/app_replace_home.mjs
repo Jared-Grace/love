@@ -1,3 +1,4 @@
+import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { add_1 } from "../../../love/public/src/add_1.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
@@ -26,10 +27,12 @@ export function app_replace_home(context) {
       "grid-template-columns": "auto 1fr auto",
       "align-items": "center",
     });
+    let span = html_span_text(parent, text2);
     html_style_assign(b3, {
       "justify-self": "start",
       "margin-left": "10px",
     });
+    let span2 = html_span_text(parent2, text3);
     html_style_assign(b4, {
       "grid-column": "1 / -1",
       "text-align": "center",
