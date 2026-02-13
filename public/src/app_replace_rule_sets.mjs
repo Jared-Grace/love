@@ -142,6 +142,22 @@ export function app_replace_rule_sets() {
         },
         {
           start: "dbce=bc",
+          end: "ba=dbc",
+        },
+        {
+          start: "dbce=bc",
+          end: "ba=bdc",
+        },
+        {
+          start: "dbce=bc",
+          end: "ba=bad",
+        },
+        {
+          start: "dbce=bc",
+          end: "ba=b1d",
+        },
+        {
+          start: "dbce=bc",
           end: "b1=b1d",
         },
       ],
