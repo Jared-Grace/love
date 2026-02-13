@@ -118,7 +118,7 @@ function js_code_call_args(fn_name, args) {
   return code;
 }
 function assert_arguments(args, count) {
-  let length = object_property_get(args, "length");
+  let length = property_get(args, "length");
   equal_assert(length, count);
 }
 function equal_assert(left, right) {
@@ -134,7 +134,7 @@ function equal(left, right) {
   let eq = left === right;
   return eq;
 }
-function object_property_get(object, property_name) {
+function property_get(object, property_name) {
   let value = object[property_name];
   undefined_not_is_assert_lambda(value, object_get);
   function object_get() {
@@ -166,10 +166,10 @@ function fn_name(f_name) {
 }
 function js_code_wrap_parenthesis(inside) {
   const inside_larger = " " + inside + " ";
-  let v = string_wrap_parenthesis(inside_larger);
+  let v = text_wrap_parenthesis(inside_larger);
   return v;
 }
-function string_wrap_parenthesis(inside) {
+function text_wrap_parenthesis(inside) {
   let v2 = js_code_parenthesis_left() + inside + js_code_parenthesis_right();
   return v2;
 }
@@ -213,7 +213,7 @@ function html_text_set(component, text) {
   element.innerHTML = text;
 }
 function html_component_element_get(component) {
-  let element = object_property_get(component, "element");
+  let element = property_get(component, "element");
   return element;
 }
 function html_attribute_set(component, key, value) {
@@ -289,16 +289,16 @@ function js_code_brace_left() {
 }
 async function firebase_storage_download_property(storage_path, property_name) {
   let buffer = await firebase_storage_download(storage_path);
-  const json = buffer_string_to(buffer);
+  const json = buffer_text_to(buffer);
   let o = json_from(json);
-  let value = object_property_get(o, property_name);
+  let value = property_get(o, property_name);
   return value;
 }
 function json_from(json) {
   let v = JSON.parse(json);
   return v;
 }
-function buffer_string_to(buffer) {
+function buffer_text_to(buffer) {
   let s = null;
   let b = browser_is();
   if (b) {
@@ -397,7 +397,7 @@ async function http_generic(url, options) {
       const r = {
         method
       };
-      let exists = object_property_exists(options, "body");
+      let exists = property_exists(options, "body");
       if (exists) {
         object_assign(r, {
           headers: {
@@ -418,20 +418,16 @@ async function http_generic(url, options) {
     return v;
   }
   let sleep = true;
-  let e = object_property_exists(options, "sleep");
+  let e = property_exists(options, "sleep");
   if (e) {
-    sleep = object_property_get(options, "sleep");
+    sleep = property_get(options, "sleep");
   }
   if (sleep) {
     await http_sleep();
   }
-  let h = null;
-  let swHttps = string_starts_with(url, "https://");
-  if (swHttps) {
-    h = await import("https");
-  } else {
-    h = await import("http");
-  }
+  let swHttps = text_starts_with(url, "https://");
+  let h_name = ternary(swHttps, "s", "");
+  let h = await import("http" + h_name);
   let buffer = await promise_wrap(lambda);
   function lambda(resolve, reject) {
     const urlObj = new URL(url);
@@ -443,7 +439,7 @@ async function http_generic(url, options) {
       let i = catch_call(reject, lambda2);
       res.on("data", i);
       function on_end() {
-        let statusCode = object_property_get(res, "statusCode");
+        let statusCode = property_get(res, "statusCode");
         const d = statusCode / 100;
         const rounded = round(d);
         assert_json(rounded === 2, {
@@ -478,13 +474,22 @@ async function http_generic(url, options) {
   }
   return buffer;
 }
+function ternary(condition, on_true, on_false) {
+  let result = null;
+  if (condition) {
+    result = on_true;
+  } else {
+    result = on_false;
+  }
+  return result;
+}
 async function sleep(ms) {
   await new Promise(function lambda5(resolve) {
     let v = setTimeout(resolve, ms);
     return v;
   });
 }
-function object_property_exists(object, property_name) {
+function property_exists(object, property_name) {
   const exists = object && Object.hasOwn(object, property_name);
   return exists;
 }
@@ -523,8 +528,8 @@ async function promise_wrap(lambda$resolve$reject) {
   });
   return p;
 }
-function string_starts_with(s, prefix) {
-  let sw = s.startsWith(prefix);
+function text_starts_with(t, prefix) {
+  let sw = t.startsWith(prefix);
   return sw;
 }
 async function http_sleep() {
@@ -573,26 +578,26 @@ async function firebase_admin() {
 }
 async function global_function_async(fn, lambda) {
   let global = global_get();
-  let value = object_property_initialize_lambda(global, fn.name, lambda);
+  let value = property_initialize_lambda(global, fn.name, lambda);
   let awaited = await value;
   return awaited;
 }
-function object_property_initialize_lambda(object, property_name, lambda) {
-  const exists = object_property_exists(object, property_name);
+function property_initialize_lambda(object, property_name, lambda) {
+  const exists = property_exists(object, property_name);
   if (not(exists)) {
     let value_set = lambda();
-    object_property_set(object, property_name, value_set);
+    property_set(object, property_name, value_set);
   }
-  let value = object_property_get(object, property_name);
+  let value = property_get(object, property_name);
   return value;
 }
-function object_property_set(object, property_name, value) {
+function property_set(object, property_name, value) {
   object[property_name] = value;
 }
 function global_get() {
-  let exists = object_property_exists(global, global_alternate_set.name);
+  let exists = property_exists(global, global_alternate_set.name);
   if (exists) {
-    let value = object_property_get(global, global_alternate_set.name);
+    let value = property_get(global, global_alternate_set.name);
     return value;
   }
   return global;
@@ -601,16 +606,16 @@ function global_alternate_set(global_alternate) {
   let global = global_get();
   global_function_set(global_alternate_set, global_alternate);
   let unset = function lambda() {
-    object_property_delete(global, global_alternate_set.name);
+    property_delete(global, global_alternate_set.name);
   };
   return unset;
 }
-function object_property_delete(object, property_name) {
-  object_property_exists_assert(object, property_name);
+function property_delete(object, property_name) {
+  property_exists_assert(object, property_name);
   delete object[property_name];
 }
-function object_property_exists_assert(object, property_name) {
-  let result = object_property_exists(object, property_name);
+function property_exists_assert(object, property_name) {
+  let result = property_exists(object, property_name);
   function lambda() {
     let v = {
       object,
@@ -636,7 +641,7 @@ function assert_message_get(b, lambda) {
 }
 function global_function_set(fn, value) {
   let global = global_get();
-  object_property_set(global, fn.name, value);
+  property_set(global, fn.name, value);
 }
 async function firebase_admin_get() {
   const admin = (await import("firebase-admin")).default;
@@ -666,8 +671,8 @@ async function firebase_name_repo(repo_name) {
   const f_path = ".firebaserc";
   let combined = repo_path_combine(repo_name, f_path);
   let f = await file_read_json(combined);
-  let projects = object_property_get(f, "projects");
-  let default2 = object_property_get(projects, "default");
+  let projects = property_get(f, "projects");
+  let default2 = property_get(projects, "default");
   return default2;
 }
 async function file_read_json(file_path) {
@@ -686,9 +691,9 @@ async function file_read(file_path) {
     await app_a_file_system_initialize();
     let store = app_a_file_system_store();
     let item = await indexeddb_get(app_a_indexeddb_initialize, store, file_path);
-    let compressed = object_property_get(item, "compressed");
+    let compressed = property_get(item, "compressed");
     let f = await json_decompress(compressed);
-    let versions = object_property_get(f, "versions");
+    let versions = property_get(f, "versions");
     let last = list_last(versions);
     return last;
   }
@@ -698,7 +703,7 @@ async function file_read(file_path) {
 }
 function global_function_property_get(fn, property_name) {
   let fn_object = global_function_initialize(fn, {});
-  let value = object_property_get(fn_object, property_name);
+  let value = property_get(fn_object, property_name);
   return value;
 }
 function global_function_initialize(fn, initial) {
@@ -710,7 +715,7 @@ function global_function_initialize(fn, initial) {
 function global_function_initialize_lambda(fn, lambda) {
   assert_arguments(arguments, 2);
   let global = global_get();
-  let value = object_property_initialize_lambda(global, fn.name, lambda);
+  let value = property_initialize_lambda(global, fn.name, lambda);
   return value;
 }
 function lambda_get(value) {
@@ -738,7 +743,7 @@ function assert_not(b) {
 }
 function global_function_property_exists(fn, property_name) {
   let fn_object = global_function_initialize_object(fn);
-  let exists = object_property_exists(fn_object, property_name);
+  let exists = property_exists(fn_object, property_name);
   return exists;
 }
 function global_function_initialize_object(fn) {
@@ -747,20 +752,23 @@ function global_function_initialize_object(fn) {
 }
 function global_function_property_set(fn, property_name, value) {
   let fn_object = global_function_initialize(fn, {});
-  object_property_set(fn_object, property_name, value);
+  property_set(fn_object, property_name, value);
 }
 async function json_decompress(compressed) {
-  let json = await string_decompress(compressed);
+  let json = await text_decompress(compressed);
   let text = json_from(json);
   return text;
 }
-async function string_decompress(compressed) {
+async function text_decompress(compressed) {
   let lz = null;
-  if (browser_is()) {
-    lz = (await import("lz-string")).default;
+  let condition = browser_is();
+  let result = null;
+  if (condition) {
+    result = (await import("lz-string")).default;
   } else {
-    lz = LZString;
+    result = LZString;
   }
+  lz = result;
   let v = lz.decompressFromUTF16(compressed);
   return v;
 }
@@ -831,14 +839,14 @@ function integer_is_assert(index) {
 function file_path_normalize(file_path) {
   file_path = path_normalize(file_path);
   const prefix = "../";
-  let n = string_starts_with_not(file_path, prefix);
+  let n = text_starts_with_not(file_path, prefix);
   if (n) {
     file_path = prefix + "love/" + file_path;
   }
   return file_path;
 }
-function string_starts_with_not(item, book_code) {
-  let a = string_starts_with(item, book_code);
+function text_starts_with_not(item, book_code) {
+  let a = text_starts_with(item, book_code);
   let sw = not(a);
   return sw;
 }
@@ -897,19 +905,19 @@ async function indexeddb_get(db_get, store, key) {
   return f;
 }
 function list_find_property(list, property_name, property_value) {
-  let filter = object_property_equals_lambda(property_name, property_value);
+  let filter = property_equals_lambda(property_name, property_value);
   let item = list_find(list, filter);
   return item;
 }
-function object_property_equals_lambda(property_name, property_value) {
-  let v2 = function lambda(item) {
-    let v = object_property_equals(item, property_name, property_value);
+function property_equals_lambda(property_name, property_value) {
+  let v2 = function object_property_equals_lambda_result(item) {
+    let v = property_equals(item, property_name, property_value);
     return v;
   };
   return v2;
 }
-function object_property_equals(item, property_name, property_value) {
-  let left = object_property_get(item, property_name);
+function property_equals(item, property_name, property_value) {
+  let left = property_get(item, property_name);
   let v = equal(left, property_value);
   return v;
 }
@@ -920,11 +928,11 @@ function list_find(list, lambda$item) {
 }
 function list_filter(list, lambda$item) {
   list_is_assert(list);
-  function lambda(item) {
+  function list_filter_lambda(item) {
     let match = lambda$item(item);
     return match;
   }
-  let filtered = list.filter(lambda);
+  let filtered = list.filter(list_filter_lambda);
   return filtered;
 }
 function list_single(list) {
@@ -940,17 +948,16 @@ function list_size_1_assert(list) {
   list_size_1_assert_message(list, json);
 }
 function list_size_1_assert_message(list, message) {
-  let a = list_size_1(list);
+  list_size_assert_message(list, 1, message);
+}
+function list_size_assert_message(list, size, message) {
+  let a = list_size(list) === size;
   if (not(a)) {
     error_json({
       message,
       list
     });
   }
-}
-function list_size_1(list) {
-  const s1 = list_size(list) === 1;
-  return s1;
 }
 function list_first(list) {
   const index = 0;
@@ -1010,52 +1017,54 @@ async function app_a_file_system_initialize_download() {
   list_property_exists_not_error(all, "key");
 }
 async function app_api_fn(a) {
-  let fn = object_property_get(a, "fn");
+  let fn = property_get(a, "fn");
   let f_name = fn.name;
-  object_property_set_exists_not(a, "f_name", f_name);
+  property_set_exists_not(a, "f_name", f_name);
   let r = await app_api(a);
   return r;
 }
 async function app_api(a) {
   assert_arguments(arguments, 1);
-  let f_name = object_property_get(a, "f_name");
-  string_is_assert(f_name);
+  let f_name = property_get(a, "f_name");
+  text_is_assert(f_name);
   let fn_http = http_post_json;
-  object_property_set_exists_not(a, "fn_http", fn_http);
+  property_set_exists_not(a, "fn_http", fn_http);
   let result = await app_api_generic(a);
   return result;
 }
-function object_property_set_exists_not(object, property_name, value) {
-  object_property_exists_not_assert(object, property_name);
-  object_property_set(object, property_name, value);
+function property_set_exists_not(object, property_name, value) {
+  property_exists_not_assert(object, property_name);
+  property_set(object, property_name, value);
 }
-function object_property_exists_not_assert(object, property_name) {
-  let result = object_property_exists_not(object, property_name);
-  assert(result);
+function property_exists_not_assert(object, property_name) {
+  let e = property_exists(object, property_name);
+  if (e) {
+    let value = property_get(object, property_name);
+    error_json({
+      object,
+      property_name,
+      value
+    });
+  }
 }
-function object_property_exists_not(object, property_name) {
-  let result = object_property_exists(object, property_name);
-  let ne = not(result);
-  return ne;
-}
-function string_is_assert(value) {
-  let b = string_is(value);
+function text_is_assert(value) {
+  let b = text_is(value);
   assert(b);
 }
-function string_is(value) {
-  let si = typeof value === "string";
-  return si;
+function text_is(value) {
+  let ti = typeof value === "string";
+  return ti;
 }
 async function app_api_generic(a) {
   assert_arguments(arguments, 1);
-  let f_name = object_property_get(a, "f_name");
-  let args = object_property_initialize(a, "args", []);
-  let fn_http = object_property_get(a, "fn_http");
+  let f_name = property_get(a, "f_name");
+  let args = property_initialize(a, "args", []);
+  let fn_http = property_get(a, "fn_http");
   var v = app_api_generic_url_body(f_name, args);
-  let body = object_property_get(v, "body");
-  let url = object_property_get(v, "url");
+  let body = property_get(v, "body");
+  let url = property_get(v, "url");
   let o = await fn_http(url, body);
-  let result = object_property_get(o, "result");
+  let result = property_get(o, "result");
   return result;
 }
 function app_api_generic_url_body(f_name, args) {
@@ -1069,11 +1078,7 @@ function app_api_generic_url_body(f_name, args) {
 }
 function server_url_get() {
   let url = null;
-  if (browser_is()) {
-    url = "";
-  } else {
-    url = server_url();
-  }
+  url = ternary(browser_is(), "", server_url());
   url += server_url_api();
   return url;
 }
@@ -1102,12 +1107,12 @@ function list_to(a) {
   let l = Array.from(a);
   return l;
 }
-function object_property_initialize(object, property_name, value_initial) {
-  const exists = object_property_exists(object, property_name);
+function property_initialize(object, property_name, value_initial) {
+  const exists = property_exists(object, property_name);
   if (not(exists)) {
-    object_property_set(object, property_name, value_initial);
+    property_set(object, property_name, value_initial);
   }
-  let value = object_property_get(object, property_name);
+  let value = property_get(object, property_name);
   return value;
 }
 async function http_post_json(url, body) {
@@ -1137,7 +1142,7 @@ function object_merge(to, from) {
 function object_merge_generic(strict, to, from) {
   function lambda(property_name) {
     if (strict) {
-      if (object_property_exists(to, property_name)) {
+      if (property_exists(to, property_name)) {
         error_json({
           to,
           from,
@@ -1145,24 +1150,24 @@ function object_merge_generic(strict, to, from) {
         });
       }
     }
-    let value = object_property_get(from, property_name);
-    object_property_set(to, property_name, value);
+    let value = property_get(from, property_name);
+    property_set(to, property_name, value);
   }
-  let list = object_properties(from);
+  let list = properties_get(from);
   each(list, lambda);
 }
-function object_properties(obj) {
+function properties_get(obj) {
   const properties = Object.getOwnPropertyNames(obj);
   return properties;
 }
 function buffer_to_json(buffer) {
-  let text = buffer_string_to(buffer);
+  let text = buffer_text_to(buffer);
   let parsed = json_from(text);
   return parsed;
 }
 function list_property_exists_not_error(all, property) {
   function lambda(item, index) {
-    let n = object_property_exists_not(item, property);
+    let n = property_exists_not(item, property);
     if (n) {
       error({
         index
@@ -1179,9 +1184,14 @@ function each_index(list, lambda$item$index) {
   }
   each(list, lambda_each_index);
 }
+function property_exists_not(object, property_name) {
+  let e = property_exists(object, property_name);
+  let ne = not(e);
+  return ne;
+}
 function list_to_dictionary_property(list, property) {
   function key_get(item) {
-    let key = object_property_get(item, property);
+    let key = property_get(item, property);
     return key;
   }
   let dictionary = list_to_dictionary_key(list, key_get);
@@ -1198,7 +1208,7 @@ function list_to_dictionary(list, lambda$item2v, lambda$item2k) {
   function lambda(item) {
     let key = lambda$item2k(item);
     let value = lambda$item2v(item);
-    object_property_set_exists_not(dictionary, key, value);
+    property_set_exists_not(dictionary, key, value);
   }
   each(list, lambda);
   return dictionary;
@@ -1207,12 +1217,12 @@ function list_to_lookup(list, property_key) {
   "if each key has one value, then " + list_to_dictionary.name + " but if each key corresponds to a list of values, then " + list_to_lookup.name;
   let lookup = {};
   function lambda(item) {
-    let n = object_property_exists_not(item, property_key);
+    let n = property_exists_not(item, property_key);
     if (n) {
       return;
     }
-    let value = object_property_get(item, property_key);
-    let key_list = object_property_initialize_list(lookup, value);
+    let value = property_get(item, property_key);
+    let key_list = property_initialize_list(lookup, value);
     list_add(key_list, item);
   }
   each(list, lambda);
@@ -1221,8 +1231,8 @@ function list_to_lookup(list, property_key) {
 function list_add(list, item) {
   list.push(item);
 }
-function object_property_initialize_list(object, property_name) {
-  let value2 = object_property_initialize(object, property_name, []);
+function property_initialize_list(object, property_name) {
+  let value2 = property_initialize(object, property_name, []);
   return value2;
 }
 function identity(a) {
@@ -1235,7 +1245,7 @@ async function indexeddb_put_multiple(db_get, store, lookup) {
   let keys = list_map_property(v, key);
   let existing = await indexeddb_get_all(db_get, store);
   function lambda(item) {
-    let k = object_property_get(item, key);
+    let k = property_get(item, key);
     let includes = list_includes(keys, k);
     return includes;
   }
@@ -1285,12 +1295,16 @@ function list_includes(list, item) {
   return includes;
 }
 function list_map_property(list, property_name) {
-  function list_map_property_lambda(item) {
-    let value = object_property_get(item, property_name);
-    return value;
-  }
-  let mapped = list_map(list, list_map_property_lambda);
+  let r = property_get_curried_right(property_name);
+  let mapped = list_map(list, r);
   return mapped;
+}
+function property_get_curried_right(property_name) {
+  let r = function property_get_curried_right_result(object) {
+    let value = property_get(object, property_name);
+    return value;
+  };
+  return r;
 }
 function list_map(list, lambda$item) {
   list_is_assert(list);
@@ -1328,10 +1342,10 @@ function each_object_values(object, lambda$item) {
 }
 function each_object(object, lambda$value$property) {
   function lambda2(property) {
-    let value = object_property_get(object, property);
+    let value = property_get(object, property);
     lambda$value$property(value, property);
   }
-  let properties = object_properties(object);
+  let properties = properties_get(object);
   each(properties, lambda2);
 }
 function indexeddb_next(lambda_async) {
@@ -1374,12 +1388,12 @@ function storage_local_enabled() {
 }
 function global_function_get(fn) {
   let global = global_get();
-  let value = object_property_get(global, fn.name);
+  let value = property_get(global, fn.name);
   return value;
 }
 function global_function_exists(fn) {
   let global = global_get();
-  let exists = object_property_exists(global, fn.name);
+  let exists = property_exists(global, fn.name);
   return exists;
 }
 async function app_a_download() {
@@ -1408,10 +1422,10 @@ async function json_compress_object(data) {
 }
 async function json_compress(data) {
   let json = json_to(data);
-  let compressed = await string_compress(json);
+  let compressed = await text_compress(json);
   return compressed;
 }
-async function string_compress(text) {
+async function text_compress(text) {
   const LZString = (await import("lz-string")).default;
   let v = LZString.compressToUTF16(text);
   return v;
@@ -1491,7 +1505,7 @@ async function folder_read_recursive_skipped_async(path_folder, folders_skipped)
     withFileTypes: true
   });
   for (const entry of entries) {
-    let name = object_property_get(entry, "name");
+    let name = property_get(entry, "name");
     if (entry.isFile()) {
       result.push(name);
     } else if (entry.isDirectory()) {
@@ -1521,7 +1535,7 @@ function repos_folder() {
 function list_filter_ends_with_any(list, suffixes) {
   function lambda(item) {
     function lambda3(suffix) {
-      let ew = string_ends_with(item, suffix);
+      let ew = text_ends_with(item, suffix);
       return ew;
     }
     let any = list_any(suffixes, lambda3);
@@ -1535,7 +1549,7 @@ function list_any(list, lambda$item) {
   let any = list_empty_not_is(filtered);
   return any;
 }
-function string_ends_with(s, suffix) {
+function text_ends_with(s, suffix) {
   const ew = s.endsWith(suffix);
   return ew;
 }
@@ -1550,16 +1564,16 @@ function function_name_extension() {
 async function global_function_initialize_lambda_async(fn, lambda) {
   assert_arguments(arguments, 2);
   let global = global_get();
-  let value = await object_property_initialize_lambda_async(global, fn.name, lambda);
+  let value = await property_initialize_lambda_async(global, fn.name, lambda);
   return value;
 }
-async function object_property_initialize_lambda_async(object, property_name, lambda) {
-  const exists = object_property_exists(object, property_name);
+async function property_initialize_lambda_async(object, property_name, lambda) {
+  const exists = property_exists(object, property_name);
   if (not(exists)) {
     let value_set = lambda();
-    object_property_set(object, property_name, value_set);
+    property_set(object, property_name, value_set);
   }
-  let value = await object_property_get(object, property_name);
+  let value = await property_get(object, property_name);
   return value;
 }
 function storage_local_exists(app_fn, key) {
@@ -1593,7 +1607,7 @@ function repo_path(repo_name) {
 async function user_repo_get() {
   let f_path = user_repo_path();
   let v = await data_get("repo_current", null, f_path);
-  let repo_name = object_property_get(v, "value");
+  let repo_name = property_get(v, "value");
   await repo_exists_assert(repo_name);
   return repo_name;
 }
@@ -1624,7 +1638,7 @@ function folder_vscode() {
 async function folder_read(path_folder) {
   if (browser_is()) {
     let v = await folder_read_browser(path_folder);
-    let unique = object_property_get(v, "unique");
+    let unique = property_get(v, "unique");
     return unique;
   }
   let fs = await import("fs");
@@ -1637,12 +1651,12 @@ async function folder_read_browser(path_folder) {
   return r;
   function value_get() {
     let n = path_normalize(path_folder);
-    let s = string_slash_forward();
+    let s = text_slash_forward();
     let prefix = "" + n + s;
     let filtered = list_filter_starts_with(files_paths, prefix);
     let mapped = list_map_prefix_without(filtered, prefix);
     function lambda(item) {
-      let first = string_split_first(item, s);
+      let first = text_split_first(item, s);
       return first;
     }
     let mapped2 = list_map(mapped, lambda);
@@ -1665,13 +1679,13 @@ function global_function_property_cache(fn, property_name, key, value_get) {
 }
 function global_function_cache_generic(key, c, value_get) {
   let json = json_to(key);
-  let json_existing = object_property_get(c, "json");
+  let json_existing = property_get(c, "json");
   if (equal_not(json, json_existing)) {
     let r = value_get();
-    object_property_set(c, "result", r);
-    object_property_set(c, "json", json);
+    property_set(c, "result", r);
+    property_set(c, "json", json);
   }
-  let result = object_property_get(c, "result");
+  let result = property_get(c, "result");
   return result;
 }
 function equal_not(left, right) {
@@ -1681,8 +1695,8 @@ function equal_not(left, right) {
 }
 function global_function_property_initialize(fn, property_name, value_initial) {
   let global = global_get();
-  let fn_object = object_property_initialize(global, fn.name, {});
-  let value = object_property_initialize(fn_object, property_name, value_initial);
+  let fn_object = property_initialize(global, fn.name, {});
+  let value = property_initialize(fn_object, property_name, value_initial);
   return value;
 }
 function list_unique(list) {
@@ -1709,55 +1723,67 @@ function set_new() {
   let v = new Set();
   return v;
 }
-function string_split_first(item, s) {
-  let index = string_index_of_try(item, s);
+function text_split_first(item, s) {
+  let index = text_index_of_try(item, s);
   if (index < 0) {
     return item;
   }
-  let taken = string_take(item, index);
+  let taken = text_take(item, index);
   return taken;
 }
-function string_take(s, count) {
-  let taken = string_slice(s, 0, count);
+function text_take(s, count) {
+  let taken = text_slice(s, 0, count);
   return taken;
 }
-function string_slice(s, a, b) {
-  let sliced = s.slice(a, b);
+function text_slice(s, from, to) {
+  let sliced = s.slice(from, to);
   return sliced;
 }
-function string_index_of_try(s, item) {
-  let v = s.indexOf(item);
+function text_index_of_try(t, item) {
+  let v = t.indexOf(item);
   return v;
 }
 function list_map_prefix_without(list, prefix) {
   function lambda(item) {
-    let result = string_prefix_without(item, prefix);
+    let result = text_prefix_without(item, prefix);
     return result;
   }
   let mapped = list_map(list, lambda);
   return mapped;
 }
-function string_prefix_without(s, prefix) {
-  let a = string_starts_with(s, prefix);
+function text_prefix_without(s, prefix) {
+  let a = text_starts_with(s, prefix);
+  function lambda() {
+    let r = {
+      s,
+      prefix
+    };
+    return r;
+  }
+  assert_json_get(a, lambda);
   if (not(a)) {
     error();
   }
-  let skipped = string_size(prefix);
-  let without = string_skip(s, skipped);
+  let without = text_prefix_without_inner(s, prefix);
   return without;
 }
-function string_skip(s, skip_count) {
-  let b = string_size(s);
-  const skipped = string_slice(s, skip_count, b);
+function text_prefix_without_inner(s, prefix) {
+  let skipped = text_size(prefix);
+  let without = text_skip(s, skipped);
+  return without;
+}
+function text_skip(s, skip_count) {
+  let b = text_size(s);
+  const skipped = text_slice(s, skip_count, b);
   return skipped;
 }
-function string_size(s) {
+function text_size(s) {
   let size = s.length;
   return size;
 }
 function list_filter_starts_with(list, prefix) {
   function lambda(item) {
-    let sw = string_starts_with(item, prefix);
+    let sw = text_starts_with(item, prefix);
     return sw;
   }
   let filtered = list_filter(list, lambda);
@@ -1773,9 +1799,9 @@ async function app_a_files_paths() {
 }
 function list_filter_property_exclude_if_exists(list, property_name, value) {
   function lambda(item) {
-    let exists = object_property_exists(item, property_name);
+    let exists = property_exists(item, property_name);
     if (exists) {
-      let ne = object_property_get(item, property_name) !== value;
+      let ne = property_get(item, property_name) !== value;
       return ne;
     }
     let v2 = true;
@@ -1784,21 +1810,21 @@ function list_filter_property_exclude_if_exists(list, property_name, value) {
   let filtered = list_filter(list, lambda);
   return filtered;
 }
-function string_slash_forward() {
+function text_slash_forward() {
   let s = "/";
   return s;
 }
 async function data_get(property_name, value_initial, d_path) {
-  var v2 = await data_all(d_path);
-  let file_path = object_property_get(v2, "file_path");
-  let data = object_property_get(v2, "data");
-  let value = object_property_initialize(data, property_name, value_initial);
-  let v = {
+  var d = await data_all(d_path);
+  let file_path = property_get(d, "file_path");
+  let data = property_get(d, "data");
+  let value = property_initialize(data, property_name, value_initial);
+  let r = {
     value,
     file_path,
     data
   };
-  return v;
+  return r;
 }
 async function data_all(file_path) {
   let data = {};
@@ -1818,40 +1844,45 @@ async function data_all(file_path) {
 async function data_generate(data) {
   let f_paths = await functions_paths();
   let parseds = await list_map_unordered_async(f_paths, file_js_parse);
-  function lambda(parsed) {
-    data_file_update_inner(parsed, data);
-  }
+  let lambda = data_file_update_inner_curried_right(data);
   each(parseds, lambda);
   return;
 }
+function data_file_update_inner_curried_right(data) {
+  let r2 = function data_file_update_inner_curried_right_result(parsed) {
+    let r = data_file_update_inner(parsed, data);
+    return r;
+  };
+  return r2;
+}
 function data_file_update_inner(parsed, data) {
-  let f_path = object_property_get(parsed, "f_path");
+  let f_path = property_get(parsed, "f_path");
   let f_name = function_path_to_name(f_path);
-  let ast = object_property_get(parsed, "ast");
-  let functions = object_property_initialize(data, "functions", {});
-  let f_this = object_property_initialize(functions, f_name, {});
+  let ast = property_get(parsed, "ast");
+  let functions = property_initialize(data, "functions", {});
+  let f_this = property_initialize(functions, f_name, {});
   let declaration = js_declaration_single(ast);
-  let async_is = object_property_get(declaration, "async");
-  object_property_set(f_this, "async", async_is);
+  let async_is = property_get(declaration, "async");
+  property_set(f_this, "async", async_is);
   function data_add(property_name, items) {
-    let items_to_functions = object_property_initialize(data, property_name, {});
+    let items_to_functions = property_initialize(data, property_name, {});
     function identifier_add(i_name) {
-      let list = object_property_initialize(items_to_functions, i_name, []);
+      let list = property_initialize(items_to_functions, i_name, []);
       list_add_if_not_includes(list, f_name);
     }
     each(items, identifier_add);
-    let items_old = object_property_initialize(f_this, property_name, []);
+    let items_old = property_initialize(f_this, property_name, []);
     let removals = list_difference(items_old, items);
     function lambda(item) {
-      let list = object_property_initialize(items_to_functions, item, []);
+      let list = property_initialize(items_to_functions, item, []);
       list_remove_all(list, f_name);
       let e = list_empty_is(list);
       if (e) {
-        object_property_delete(items_to_functions, item);
+        property_delete(items_to_functions, item);
       }
       each(removals, lambda);
     }
-    object_property_set(f_this, property_name, items);
+    property_set(f_this, property_name, items);
   }
   let f_identifiers_new = js_identifiers_names(ast);
   data_add("identifiers", f_identifiers_new);
@@ -1868,7 +1899,7 @@ function data_file_update_inner(parsed, data) {
         return v;
       }
       js_literal_is_assert(first, lambda3);
-      let value = object_property_get(first, "value");
+      let value = property_get(first, "value");
       la(value);
     }
   }
@@ -1878,27 +1909,27 @@ function data_file_update_inner(parsed, data) {
 function js_strings(ast) {
   function lambda2(la) {
     function lambda(v) {
-      let node = object_property_get(v, "node");
+      let node = property_get(v, "node");
       let value = null;
       function lambda5() {
-        let quasis = object_property_get(node, "quasis");
+        let quasis = property_get(node, "quasis");
         let s1 = list_size_1(quasis);
         if (s1) {
-          let expressions = object_property_get(node, "expressions");
+          let expressions = property_get(node, "expressions");
           let e = list_empty_is(expressions);
           if (e) {
             let q = list_first(quasis);
-            let v2 = object_property_get(q, "value");
-            value = object_property_get(v2, "raw");
+            let v2 = property_get(q, "value");
+            value = property_get(v2, "raw");
           }
         }
       }
       js_node_type_is_if(node, "TemplateLiteral", lambda5);
       function lambda4() {
-        value = object_property_get(node, "value");
+        value = property_get(node, "value");
       }
       js_node_type_is_if(node, "Literal", lambda4);
-      let si2 = string_is(value);
+      let si2 = text_is(value);
       if (si2) {
         la(value);
       }
@@ -1907,6 +1938,10 @@ function js_strings(ast) {
   }
   const names = list_adder_unique(lambda2);
   return names;
+}
+function list_size_1(list) {
+  const s1 = list_size(list) === 1;
+  return s1;
 }
 function js_node_type_is_if(node, type, lambda) {
   let type_is = js_node_type_is(node, type);
@@ -1919,11 +1954,11 @@ function js_node_type_is(node, type) {
   return type_is;
 }
 function js_node_is(n) {
-  const ni = object_property_exists(n, "type");
+  const ni = property_exists(n, "type");
   return ni;
 }
 function js_node_type(n) {
-  const nt = object_property_get(n, "type");
+  const nt = property_get(n, "type");
   return nt;
 }
 function list_adder_unique(lambda$la) {
@@ -1946,7 +1981,7 @@ function list_adder_generic(lambda, fn) {
 }
 function js_visit_types(ast, types, lambda$v) {
   function lambda(v) {
-    let node = object_property_get(v, "node");
+    let node = property_get(v, "node");
     if (js_node_is(node) && js_node_types_is(node, types)) {
       lambda$v(v);
     }
@@ -2013,15 +2048,15 @@ function js_visit_children_get(n) {
   if (list_is(n)) {
     return n;
   }
-  if (string_is(n)) {
+  if (text_is(n)) {
     let v = [];
     return v;
   }
   function lambda(p) {
-    let value = object_property_get(n, p);
+    let value = property_get(n, p);
     return value;
   }
-  let list = object_properties(n);
+  let list = properties_get(n);
   let mapped = list_map(list, lambda);
   return mapped;
 }
@@ -2039,12 +2074,12 @@ function js_literal_is(node) {
 }
 function js_visit_calls_named(ast, f_name, lambda) {
   function lambda_inner(v) {
-    let node = object_property_get(v, "node");
+    let node = property_get(v, "node");
     let name = js_call_callee_name(node);
     if (equal_not(name, f_name)) {
       return;
     }
-    let args = object_property_get(node, "arguments");
+    let args = property_get(node, "arguments");
     lambda({
       v,
       args
@@ -2061,12 +2096,12 @@ function js_call_callee_name(expression) {
   if (jin2) {
     return name;
   }
-  let callee = object_property_get(expression, "callee");
+  let callee = property_get(expression, "callee");
   let jin = js_identifier_not_is(callee);
   if (jin) {
     return name;
   }
-  name = object_property_get_name(callee);
+  name = property_get_name(callee);
   return name;
 }
 function js_node_type_not_is(node, type) {
@@ -2078,8 +2113,8 @@ function js_identifier_not_is(id) {
   let jin = js_node_type_not_is(id, "Identifier");
   return jin;
 }
-function object_property_get_name(item) {
-  let name = object_property_get(item, "name");
+function property_get_name(item) {
+  let name = property_get(item, "name");
   return name;
 }
 function js_declaration_single(ast) {
@@ -2122,8 +2157,8 @@ function list_add_if_not_includes(list, item) {
 function js_identifiers_names(ast) {
   function lambda2(la) {
     function lambda(v) {
-      let node = object_property_get(v, "node");
-      let value = object_property_get(node, "name");
+      let node = property_get(v, "node");
+      let value = property_get(node, "name");
       la(value);
     }
     js_visit_type(ast, "Identifier", lambda);
@@ -2207,11 +2242,7 @@ function list_squash(lists) {
       function lambda(item) {
         let l = list_is(item);
         let fn = null;
-        if (l) {
-          fn = list_process;
-        } else {
-          fn = la;
-        }
+        fn = ternary(l, list_process, la);
         fn(item);
       }
       each(list, lambda);
@@ -2261,27 +2292,37 @@ async function functions_names_from_path(path) {
   let paths = await folder_read_files(path);
   function lambda(p) {
     let suffix = function_name_extension();
-    let without = string_suffix_without(p, suffix);
+    let without = text_suffix_without(p, suffix);
     return without;
   }
   let f_names = list_map(paths, lambda);
   return f_names;
 }
-function string_suffix_without(s, suffix) {
-  let a = string_ends_with(s, suffix);
+function text_suffix_without(s, suffix) {
+  let a = text_ends_with(s, suffix);
   if (not(a)) {
     error();
   }
-  const without = string_slice(s, 0, string_size(s) - string_size(suffix));
+  const missing = text_size(suffix);
+  const without = string_skip_end(s, missing);
   return without;
+}
+function string_skip_end(s, missing_count) {
+  const from = text_size(s) - missing_count;
+  const without = text_slice_0(s, from);
+  return without;
+}
+function text_slice_0(s, from) {
+  let sliced = text_slice(s, 0, from);
+  return sliced;
 }
 async function folder_read_files(path_folder) {
   if (browser_is()) {
     path_folder = file_path_normalize(path_folder);
     let r = await folder_read_browser(path_folder);
-    let filtered = object_property_get(r, "filtered");
-    let prefix = object_property_get(r, "prefix");
-    let unique = object_property_get(r, "unique");
+    let filtered = property_get(r, "filtered");
+    let prefix = property_get(r, "prefix");
+    let unique = property_get(r, "unique");
     let combineds = list_map_combine_left(unique, prefix);
     let r2 = list_intersect(filtered, combineds);
     let r3 = list_map(r2, path_base);
@@ -2295,7 +2336,7 @@ async function folder_read_files(path_folder) {
   }
   const all = fs.readdirSync(path_folder);
   let files = all.filter(lambda);
-  list_sort_string(files);
+  list_sort_text(files);
   return files;
 }
 function list_intersect(list, other) {
@@ -2304,8 +2345,8 @@ function list_intersect(list, other) {
 }
 function list_intersect_multiple(list) {
   let fr = list_first_remaining(list);
-  let first = object_property_get(fr, "first");
-  let remaining = object_property_get(fr, "remaining");
+  let first = property_get(fr, "first");
+  let remaining = property_get(fr, "remaining");
   let e = null_is(remaining);
   if (e) {
     let copy = list_copy(first);
@@ -2340,8 +2381,8 @@ function list_all(list, lambda$item) {
 function list_first_remaining(list) {
   const property_name = "remaining";
   let value_get = list_skip_1;
-  let result = list_first_second_generic(list, value_get, property_name);
-  return result;
+  let r = list_first_second_generic(list, value_get, property_name);
+  return r;
 }
 function list_first_second_generic(list, other_get, property_name_second) {
   let property_name_first = "first";
@@ -2393,10 +2434,10 @@ function list_map_combine_left(list, left) {
   let combineds = list_map(list, lambda);
   return combineds;
 }
-function list_sort_string(list) {
-  list_sort_string_mapper(list, identity);
+function list_sort_text(list) {
+  list_sort_text_mapper(list, identity);
 }
-function list_sort_string_mapper(list, lambda$item) {
+function list_sort_text_mapper(list, lambda$item) {
   function lambda(a, b) {
     const va = lambda$item(a);
     const vb = lambda$item(b);
@@ -2471,8 +2512,8 @@ async function file_exists(file_path) {
   }
   let fs = await import("fs");
   let v = fs.promises;
-  let access = object_property_get(v, "access");
-  let constants = object_property_get(fs, "constants");
+  let access = property_get(v, "access");
+  let constants = property_get(fs, "constants");
   let exists = await throws_not_async(lambda);
   async function lambda() {
     await access(file_path, constants.F_OK);
@@ -2511,7 +2552,7 @@ function list_find_property_exists(list, property, value) {
   return s1;
 }
 function list_filter_property(list, property_name, property_value) {
-  let filter = object_property_equals_lambda(property_name, property_value);
+  let filter = property_equals_lambda(property_name, property_value);
   let filtered = list_filter(list, filter);
   return filtered;
 }
@@ -2526,7 +2567,7 @@ async function throws_not_async(lambda) {
   return success;
 }
 async function file_overwrite(file_path, contents) {
-  string_is_assert(contents);
+  text_is_assert(contents);
   let exists = global_function_property_exists(file_read_cached, file_path);
   if (exists) {
     global_function_property_set(file_read_cached, file_path, contents);
@@ -2552,19 +2593,19 @@ async function file_overwrite_uncached(file_path, contents) {
           key: file_path
         };
       } else {
-        let compressed_before = object_property_get(previous, p);
+        let compressed_before = property_get(previous, p);
         f = await json_decompress(compressed_before);
       }
-      let e = string_empty_is(contents);
+      let e = text_empty_is(contents);
       if (e) {
-        object_property_set(previous, "deleted", true);
+        property_set(previous, "deleted", true);
       } else {
-        object_property_delete_if_exists(previous, "deleted");
+        property_delete_if_exists(previous, "deleted");
       }
-      let list = object_property_get(f, "versions");
+      let list = property_get(f, "versions");
       list_add(list, contents);
       let compressed_after = await json_compress(f);
-      object_property_set(previous, p, compressed_after);
+      property_set(previous, p, compressed_after);
       return previous;
     }
     let item = await indexeddb_put(app_a_indexeddb_initialize, store, file_path, value_get);
@@ -2577,13 +2618,13 @@ async function file_overwrite_uncached(file_path, contents) {
   await data_file_update(file_path);
   return;
 }
-function object_property_delete_if_exists(data, p) {
-  let exists = object_property_exists(data, p);
+function property_delete_if_exists(data, p) {
+  let exists = property_exists(data, p);
   if (exists) {
-    object_property_delete(data, p);
+    property_delete(data, p);
   }
 }
-function string_empty_is(s) {
+function text_empty_is(s) {
   const e = s === "";
   return e;
 }
@@ -2611,8 +2652,8 @@ async function functions_names() {
   return f_names;
 }
 async function data_save(a) {
-  let data = object_property_get(a, "data");
-  let file_path = object_property_get(a, "file_path");
+  let data = property_get(a, "data");
+  let file_path = property_get(a, "file_path");
   await file_overwrite_json(file_path, data);
 }
 async function file_overwrite_json(file_path, object) {
@@ -2625,7 +2666,7 @@ async function file_overwrite_json(file_path, object) {
   "Using " + json_to.name + " did not work on sufficiently large object, whereas this did:";
   let fs = await import("fs");
   const v = await import("stream/promises");
-  let pipeline = object_property_get(v, "pipeline");
+  let pipeline = property_get(v, "pipeline");
   let streamJsonStringify = await (await import_install("stream-json-stringify")).default;
   const out = fs.createWriteStream(file_path);
   let json = streamJsonStringify(object);
@@ -2656,8 +2697,8 @@ async function file_root_exists_assert(file_path) {
 async function file_root_exists(file_path) {
   let path = await import("path");
   let parsed = path.parse(file_path);
-  let root = object_property_get(parsed, "root");
-  let en = string_empty_not_is(root);
+  let root = property_get(parsed, "root");
+  let en = text_empty_not_is(root);
   let exists = true;
   if (en) {
     async function lambda2() {
@@ -2672,8 +2713,8 @@ async function file_root_exists(file_path) {
   };
   return v;
 }
-function string_empty_not_is(name) {
-  let a = string_empty_is(name);
+function text_empty_not_is(name) {
+  let a = text_empty_is(name);
   const ne = not(a);
   return ne;
 }
@@ -2728,7 +2769,7 @@ async function indexeddb_put(db_get, store, key, value_get) {
   return next;
 }
 function list_find_property_or_null(list, property_name, property_value) {
-  let filter = object_property_equals_lambda(property_name, property_value);
+  let filter = property_equals_lambda(property_name, property_value);
   let filtered = list_filter(list, filter);
   let e = list_empty_is(filtered);
   if (e) {
@@ -2772,16 +2813,16 @@ async function indexeddb_put_backend(db_get, store, key, next) {
 }
 function object_replace(to, from) {
   if (equal_not(to, from)) {
-    object_properties_delete_all(to);
+    properties_delete_all(to);
     object_merge(to, from);
   }
 }
-function object_properties_delete_all(obj) {
+function properties_delete_all(obj) {
   function lambda(p) {
-    let v = object_property_delete(obj, p);
+    let v = property_delete(obj, p);
     return v;
   }
-  let list = object_properties(obj);
+  let list = properties_get(obj);
   each(list, lambda);
 }
 function user_repo_path() {
@@ -2806,14 +2847,14 @@ async function function_run_unalias(f_name, args) {
 }
 async function function_import_unalias(f_name) {
   let v = await function_name_unalias(f_name);
-  let unaliased = object_property_get(v, "unaliased");
+  let unaliased = property_get(v, "unaliased");
   const imported_fn = await function_import(unaliased);
   return imported_fn;
 }
 async function function_import(f_name) {
   "if you need to unalias use " + function_import_unalias.name;
   let v2 = await function_name_to_path_search(f_name);
-  let f = object_property_get(v2, "f_path");
+  let f = property_get(v2, "f_path");
   let f_path = await path_resolve(f);
   const imported = await import(`file://${f_path}`);
   const imported_fn = imported[f_name];
@@ -2839,8 +2880,8 @@ async function function_name_to_path_search(f_name) {
   }
   let mapped = await repos_paths_names_map_unordered_combine(f_path, lambda);
   function lambda2(m) {
-    let mapped = object_property_get(m, "mapped");
-    let exists2 = object_property_get(mapped, "exists");
+    let mapped = property_get(m, "mapped");
+    let exists2 = property_get(mapped, "exists");
     let ti2 = true_is(exists2);
     return ti2;
   }
@@ -2854,15 +2895,15 @@ async function function_name_to_path_search(f_name) {
   };
   if (exists) {
     let only = list_single(filtered);
-    let mapped = object_property_get(only, "mapped");
-    object_property_from(search, "f_path", mapped);
-    object_property_from(search, "repo_name", only);
+    let mapped = property_get(only, "mapped");
+    property_from(search, "f_path", mapped);
+    property_from(search, "repo_name", only);
   }
   return search;
 }
-function object_property_from(to, property_name, from) {
-  let value = object_property_get(from, property_name);
-  object_property_set(to, property_name, value);
+function property_from(to, property_name, from) {
+  let value = property_get(from, property_name);
+  property_set(to, property_name, value);
 }
 async function repos_paths_names_map_unordered_combine(path, mapper) {
   let result = await repos_paths_names_map_unordered(each_folder);
@@ -2892,7 +2933,7 @@ function true_is(value) {
   return ti;
 }
 function function_name_to_path(f_name) {
-  if (string_includes(f_name, ".")) {
+  if (text_includes(f_name, ".")) {
     error_json({
       f_name
     });
@@ -2901,33 +2942,33 @@ function function_name_to_path(f_name) {
   let f_path = function_name_folder_to_path(f_name, folder);
   return f_path;
 }
-function string_includes(input, part) {
+function text_includes(input, part) {
   const o = {
     input,
     part
   };
-  string_is_assert_json(input, o);
-  string_is_assert_json(part, o);
+  text_is_assert_json(input, o);
+  text_is_assert_json(part, o);
   let i = input.includes(part);
   return i;
 }
-function string_is_assert_json(value, o) {
+function text_is_assert_json(value, o) {
   let message = json_to(o);
-  string_is_assert_message(value, message);
+  text_is_assert_message(value, message);
 }
-function string_is_assert_message(value, message) {
-  let b = string_is(value);
+function text_is_assert_message(value, message) {
+  let b = text_is(value);
   let v = assert_message(b, message);
   return v;
 }
 async function function_name_unalias(f_name) {
   assert_arguments(arguments, 1);
   var v2 = await function_alias_add_generic(f_name);
-  let unaliased_actual = object_property_get(v2, "unaliased");
-  let exists = object_property_get(v2, "exists");
+  let unaliased_actual = property_get(v2, "unaliased");
+  let exists = property_get(v2, "exists");
   let v3 = await function_acronym_to_name(f_name);
-  let expandeds = object_property_get(v3, "expandeds");
-  let expanded = object_property_get(v3, "expanded");
+  let expandeds = property_get(v3, "expandeds");
+  let expanded = property_get(v3, "expanded");
   const unaliased = exists ? unaliased_actual : expanded !== null ? expanded : f_name;
   let v = {
     unaliased,
@@ -2939,9 +2980,9 @@ async function function_acronym_to_name(alias) {
   let expanded = null;
   let expandeds = null;
   let acronyms = await function_names_to_acronyms();
-  const exists2 = object_property_exists(acronyms, alias);
+  const exists2 = property_exists(acronyms, alias);
   if (exists2) {
-    expandeds = object_property_get(acronyms, alias);
+    expandeds = property_get(acronyms, alias);
     let s1 = list_size_1(expandeds);
     if (s1) {
       expanded = list_single(expandeds);
@@ -2975,7 +3016,7 @@ function object_invert(object) {
   let inverted = {};
   function lambda(value, key) {
     undefined_not_is_assert(value);
-    let list = object_property_initialize(inverted, value, []);
+    let list = property_initialize(inverted, value, []);
     list_add(list, key);
   }
   each_object(object, lambda);
@@ -3004,20 +3045,20 @@ function function_name_to_acronym(f_name) {
   return acronym;
 }
 function list_join_empty(list) {
-  const e = string_empty();
+  const e = text_empty();
   let joined = list_join(list, e);
   return joined;
 }
-function string_empty() {
+function text_empty() {
   let v = "";
   return v;
 }
 function function_name_to_parts(f_name) {
   let separator = function_name_separator();
-  let parts = string_split(f_name, separator);
+  let parts = text_split(f_name, separator);
   return parts;
 }
-function string_split(s, separator) {
+function text_split(s, separator) {
   const split = s.split(separator);
   return split;
 }
@@ -3034,9 +3075,9 @@ async function function_alias_add_generic(alias) {
   let unaliased = null;
   let d_path = data_aliases_path();
   var {value: aliases, file_path, data} = await data_get("aliases", {}, d_path);
-  const exists = object_property_exists(aliases, alias);
+  const exists = property_exists(aliases, alias);
   if (exists) {
-    unaliased = object_property_get(aliases, alias);
+    unaliased = property_get(aliases, alias);
   }
   let v = {
     exists,
@@ -3078,16 +3119,16 @@ function path_repo_combine(repo, f_path) {
   return joined;
 }
 function firebase_path_fix(path) {
-  let replaced = string_replace(path, "\\", "/");
+  let replaced = text_replace(path, "\\", "/");
   return replaced;
 }
-function string_replace(s, from, to) {
-  let split = string_split(s, from);
+function text_replace(s, from, to) {
+  let split = text_split(s, from);
   let replaced = list_join(split, to);
   return replaced;
 }
 async function firebase_storage_url(storage_path) {
-  let replaced = string_replace(storage_path, "/", "%2F");
+  let replaced = text_replace(storage_path, "/", "%2F");
   let url = "https://firebasestorage.googleapis.com/v0/b/" + await firebase_storage_url_project() + "/o/" + replaced + "?alt=media";
   return url;
 }
