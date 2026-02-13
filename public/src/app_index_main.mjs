@@ -1,3 +1,5 @@
+import { app_bible } from "../../../love/public/src/app_bible.mjs";
+import { app_reply } from "../../../love/public/src/app_reply.mjs";
 import { app_designs_universal } from "../../../love/public/src/app_designs_universal.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
 import { app_supper } from "../../../love/public/src/app_supper.mjs";
@@ -9,8 +11,8 @@ import { html_button } from "../../../love/public/src/html_button.mjs";
 export function app_index_main(context) {
   let root = property_get(context, "root");
   let fns = [
-    reply,
-    bible,
+    app_reply,
+    app_bible,
     app_original_bible,
     app_ceb_bible,
     app_supper,
