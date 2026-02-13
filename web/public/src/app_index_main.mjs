@@ -1,3 +1,4 @@
+import { window_open_app_curried_right } from "../../../love/public/src/window_open_app_curried_right.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_bible } from "../../../love/public/src/app_bible.mjs";
 import { app_reply } from "../../../love/public/src/app_reply.mjs";
@@ -20,6 +21,7 @@ export function app_index_main(context) {
     app_replace,
     app_designs_universal,
   ];
+  let r2 = window_open_app_curried_right(hash);
   function lambda(fn) {
     async function lambda2(fn) {
       window_open_app(fn, {});
