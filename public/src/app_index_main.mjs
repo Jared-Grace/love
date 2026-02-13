@@ -9,7 +9,6 @@ import { app_supper } from "../../../love/public/src/app_supper.mjs";
 import { app_ceb_bible } from "../../../love/public/src/app_ceb_bible.mjs";
 import { app_original_bible } from "../../../love/public/src/app_original_bible.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { html_button } from "../../../love/public/src/html_button.mjs";
 export function app_index_main(context) {
   let root = property_get(context, "root");
   let fns = [
@@ -25,7 +24,7 @@ export function app_index_main(context) {
   let lambda = window_open_app_curried_right(hash);
   function lambda3(fn) {
     let without = app_prefix_without(fn);
-    let component = html_button(root, without, lambda);
+    let component = html_button_wide(root, without, lambda);
   }
   each(fns, lambda3);
 }
