@@ -22,8 +22,8 @@ export function app_replace_settings(context) {
   async function lambda3() {
     const factor = app_replace_font_size_factor();
     function value_get(value) {
-      value /= factor;
-      return value;
+      let r = value / factor;
+      return r;
     }
     await app_replace_font_size_adjust(context, value_get);
   }
