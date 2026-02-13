@@ -1,3 +1,4 @@
+import { divide } from "../../../love/public/src/divide.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_home } from "../../../love/public/src/app_replace_home.mjs";
 import { emoji_home } from "../../../love/public/src/emoji_home.mjs";
@@ -22,7 +23,7 @@ export function app_replace_settings(context) {
   async function lambda3() {
     const factor = app_replace_font_size_factor();
     function value_get(value) {
-      let r = value / factor;
+      let r = divide(value, factor);
       return r;
     }
     await app_replace_font_size_adjust(context, value_get);
