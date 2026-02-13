@@ -1,9 +1,10 @@
+import { app_original_bible } from "../../../love/public/src/app_original_bible.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { window_open_app } from "../../../love/public/src/window_open_app.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 export function app_index_main(context) {
   let root = property_get(context, "root");
-  let fns = [];
+  let fns = [app_original_bible];
   async function lambda2(fn) {
     window_open_app(fn, {});
   }
