@@ -10,13 +10,13 @@ import { app_replace_font_size_factor } from "../../../love/public/src/app_repla
 import { emoji_font_smaller } from "../../../love/public/src/emoji_font_smaller.mjs";
 import { emoji_font_larger } from "../../../love/public/src/emoji_font_larger.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
-export async function app_replace_settings(context) {
+export function app_replace_settings(context) {
   let root = property_get(context, "root");
   html_button_screen(root, emoji_home() + "Home", context, app_replace_home);
   const factor = app_replace_font_size_factor();
   let value_get_multiply = multiply_curried_right(factor);
   let value_get_divide = divide_curried_right(factor);
-  let r2 = await app_replace_font_size_adjust_curried(context2);
+  let r2 = app_replace_font_size_adjust_curried(context2);
   async function lambda2() {
     await app_replace_font_size_adjust(context, value_get_multiply);
   }
