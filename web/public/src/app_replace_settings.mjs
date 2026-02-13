@@ -1,3 +1,4 @@
+import { lambda_invoker_single } from "../../../love/public/src/lambda_invoker_single.mjs";
 import { app_replace_font_size_adjust_curried } from "../../../love/public/src/app_replace_font_size_adjust_curried.mjs";
 import { multiply_curried_right } from "../../../love/public/src/multiply_curried_right.mjs";
 import { divide_curried_right } from "../../../love/public/src/divide_curried_right.mjs";
@@ -16,6 +17,7 @@ export function app_replace_settings(context) {
   let value_get_multiply = multiply_curried_right(factor);
   let value_get_divide = divide_curried_right(factor);
   let c = app_replace_font_size_adjust_curried(context);
+  let r = lambda_invoker_single(fn, arg);
   async function lambda2() {
     await c(value_get_multiply);
   }
