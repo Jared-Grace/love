@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { app_replace_button_rule_background_color } from "../../../love/public/src/app_replace_button_rule_background_color.mjs";
 import { text_pad_space } from "../../../love/public/src/text_pad_space.mjs";
@@ -121,6 +122,9 @@ export async function app_replace_rule_set(context) {
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(enabled);
       each_nested(list, lambda4);
       const selected = index2 === index_selected;
+      log({
+        selected,
+      });
       let on_a = app_replace_rule_set_highlight();
       let on_b = app_replace_button_rule_background_color();
       let c = ternary_nested(selected, on_a, enabled, on_b, "#a8a8a8ff");
