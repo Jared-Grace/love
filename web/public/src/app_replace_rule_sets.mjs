@@ -90,7 +90,11 @@ export function app_replace_rule_sets() {
       goals: [
         {
           start: "b0c",
-          end: "",
+          end: "b0ac",
+        },
+        {
+          start: "b0c",
+          end: "b1c",
         },
       ],
     },
