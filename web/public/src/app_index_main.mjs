@@ -1,3 +1,4 @@
+import { app_search } from "../../../love/public/src/app_search.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { app_g } from "../../../love/public/src/app_g.mjs";
@@ -19,6 +20,10 @@ export function app_index_main(context) {
     {
       app_fn: app_reply,
       text: "Allows you to choose languages, multiple encouraging bible verses and responses to copy and paste as messages",
+    },
+    {
+      app_fn: app_search,
+      text: "Allows reading the Bible",
     },
     {
       app_fn: app_bible,
