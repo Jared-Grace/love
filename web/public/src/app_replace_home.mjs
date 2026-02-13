@@ -16,7 +16,7 @@ export function app_replace_home(context) {
   let rule_sets = app_replace_rule_sets();
   function lambda2(item, index) {
     let name2 = property_get(item, "name");
-    html_button(root, name2, lambda);
+    let b = html_button(root, name2, lambda);
     function lambda() {
       storage_local_set_context(context, "rule_set_index", index);
       app_shared_screen_set(context, app_replace_rule_set);
