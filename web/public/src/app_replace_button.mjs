@@ -4,7 +4,7 @@ import { app_replace_button_rule_background_color } from "../../../love/public/s
 import { html_button } from "../../../love/public/src/html_button.mjs";
 export function app_replace_button(parent, text, lambda) {
   let b = html_button(parent, text, lambda);
-  app_replace_button_symbol_style(b2);
+  app_replace_button_symbol_style(b);
   let c = app_replace_button_rule_background_color();
   html_style_background_color_set(b, c);
 }
