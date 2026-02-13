@@ -21,7 +21,11 @@ export function app_replace_home(context) {
     let a = add_1(index);
     const text = a + " " + name;
     let b = app_replace_button_wide(root, text, lambda);
-    html_style_assign(b2, s);
+    html_style_assign(b, {
+      display: "grid",
+      "grid-template-columns": "auto 1fr auto",
+      "align-items": "center",
+    });
     html_style_assign(b3, s2);
     html_style_assign(b4, s3);
     function lambda() {
