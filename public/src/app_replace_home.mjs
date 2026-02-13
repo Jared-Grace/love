@@ -23,18 +23,18 @@ export function app_replace_home(context) {
     let b = app_replace_button_wide(root, "", lambda);
     html_style_assign(b, {
       display: "grid",
-      "grid-template-columns": "auto 1fr auto",
       "align-items": "center",
     });
     let span = html_span_text(b, a);
     html_style_assign(span, {
+      "grid-area": "1 / 1",
       "justify-self": "start",
       "margin-left": "10px",
     });
     let span2 = html_span_text(b, name);
     html_style_assign(span2, {
-      "grid-column": "1 / -1",
-      "text-align": "center",
+      "grid-area": "1 / 1",
+      "justify-self": "center",
     });
     function lambda() {
       storage_local_set_context(context, "rule_set_index", index);
