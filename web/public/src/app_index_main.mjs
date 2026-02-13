@@ -25,6 +25,7 @@ export function app_index_main(context) {
     window_open_app(fn, {});
   }
   let r2 = window_open_app_curried_right({});
-  each(list, function lambda(item) {});
+  function lambda(item) {}
+  each(list, lambda);
   let component = html_button(parent, text, lambda2);
 }
