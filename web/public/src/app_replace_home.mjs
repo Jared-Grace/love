@@ -8,10 +8,11 @@ import { each_index } from "../../../love/public/src/each_index.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_replace_home(context) {
-  let { root } = context;
+  let root = property_get(context, "root");
   function lambda4() {
     app_shared_screen_set(context, app_replace_settings);
   }
+  lv;
   html_button(root, emoji_gear() + " Settings", lambda4);
   let rule_sets = app_replace_rule_sets();
   function lambda2(item, index) {
