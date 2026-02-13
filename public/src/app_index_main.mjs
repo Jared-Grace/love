@@ -13,13 +13,27 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_index_main(context) {
   let root = property_get(context, "root");
   let fns = [
-    app_reply,
-    app_bible,
-    app_original_bible,
-    app_ceb_bible,
-    app_supper,
-    app_replace,
-    app_designs_universal,
+    {
+      app_fn: app_reply,
+    },
+    {
+      app_fn: app_bible,
+    },
+    {
+      app_fn: app_original_bible,
+    },
+    {
+      app_fn: app_ceb_bible,
+    },
+    {
+      app_fn: app_supper,
+    },
+    {
+      app_fn: app_replace,
+    },
+    {
+      app_fn: app_designs_universal,
+    },
   ];
   let hash = {};
   let lambda = window_open_app_curried_right(hash);
