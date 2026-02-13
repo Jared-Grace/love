@@ -31,8 +31,6 @@ export function app_replace_home(context) {
     });
     let title = html_span_text(b, name);
     html_style_assign(title, {
-      "grid-area": "1 / 1",
-      "justify-self": "center",
     });
     function lambda() {
       storage_local_set_context(context, "rule_set_index", index);
