@@ -15,8 +15,8 @@ export function app_replace_home(context) {
   app_replace_button_wide(root, emoji_gear() + " Settings", lambda4);
   let rule_sets = app_replace_rule_sets();
   function lambda2(item, index) {
-    let name2 = property_get(item, "name");
-    app_replace_button_wide(root, name2, lambda);
+    let name = property_get(item, "name");
+    app_replace_button_wide(root, name, lambda);
     function lambda() {
       storage_local_set_context(context, "rule_set_index", index);
       app_shared_screen_set(context, app_replace_rule_set);
