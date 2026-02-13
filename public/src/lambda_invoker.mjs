@@ -1,3 +1,4 @@
 export function lambda_invoker(fn, args) {
-  return () => {};
+  let r = function lambda() {};
+  return r;
 }
