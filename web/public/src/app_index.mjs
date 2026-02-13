@@ -1,1 +1,3 @@
-export function app_index() {}
+export async function app_index() {
+  await app_main_production("app_index_main", "jared-grace");
+}
