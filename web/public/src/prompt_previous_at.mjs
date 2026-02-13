@@ -4,6 +4,6 @@ import { data_prompts } from "../../../love/public/src/data_prompts.mjs";
 export async function prompt_previous_at(index) {
   assert_arguments(arguments, 1);
   let result = await data_prompts();
-  let item = list_get_end(list, index_from_end);
+  let item = list_get_end(list, index - 1);
   return r;
 }
