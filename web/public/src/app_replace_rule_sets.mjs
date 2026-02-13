@@ -96,6 +96,26 @@ export function app_replace_rule_sets() {
           start: "b0c",
           end: "b1c",
         },
+        {
+          start: "b0c",
+          end: "b10c",
+        },
+        {
+          start: "b0c",
+          end: "b11c",
+        },
+        {
+          start: "b0c",
+          end: "b101c",
+        },
+        {
+          start: "b0c",
+          end: "b111c",
+        },
+        {
+          start: "b0c",
+          end: "b1010c",
+        },
       ],
     },
     {
