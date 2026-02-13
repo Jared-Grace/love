@@ -17,11 +17,8 @@ export function app_replace_settings(context) {
   let value_get_multiply = multiply_curried_right(factor);
   let value_get_divide = divide_curried_right(factor);
   let c = app_replace_font_size_adjust_curried(context);
-  let r = lambda_invoker_single(fn, arg);
-  async function lambda2() {
-    await c(value_get_multiply);
-  }
-  html_button(root, emoji_font_larger() + " Font size larger", lambda2);
+  let m = lambda_invoker_single(c, value_get_multiply);
+  html_button(root, emoji_font_larger() + " Font size larger", m);
   async function lambda3() {
     await c(value_get_divide);
   }
