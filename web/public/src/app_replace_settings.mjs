@@ -1,3 +1,4 @@
+import { divide_curried_right } from "../../../love/public/src/divide_curried_right.mjs";
 import { divide } from "../../../love/public/src/divide.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_home } from "../../../love/public/src/app_replace_home.mjs";
@@ -26,6 +27,7 @@ export function app_replace_settings(context) {
       let r = divide(value, factor);
       return r;
     }
+    let r2 = divide_curried_right(bottom);
     await app_replace_font_size_adjust(context, value_get);
   }
   let component = html_button(
