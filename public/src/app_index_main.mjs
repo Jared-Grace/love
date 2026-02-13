@@ -40,11 +40,11 @@ export function app_index_main(context) {
     },
     {
       app_fn: app_replace,
-      text: "",
+      text: "Teaches computer programming basics using substitution rules",
     },
     {
       app_fn: app_designs_universal,
-      text: "",
+      text: "Displays different possible designs",
     },
   ];
   let hash = {};
