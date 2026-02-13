@@ -17,6 +17,7 @@ export function app_replace_home(context) {
   function lambda2(item, index) {
     let name2 = property_get(item, "name");
     let b = html_button(root, name2, lambda);
+          let on_b = app_replace_button_rule_background_color();
     function lambda() {
       storage_local_set_context(context, "rule_set_index", index);
       app_shared_screen_set(context, app_replace_rule_set);
