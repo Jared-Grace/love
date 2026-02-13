@@ -14,11 +14,11 @@ export function app_replace_settings(context) {
   html_button_screen(root, emoji_home() + "Home", context, app_replace_home);
   const factor = app_replace_font_size_factor();
   let value_get_multiply = multiply_curried_right(factor);
+  let value_get_divide = divide_curried_right(factor);
   async function lambda2() {
     await app_replace_font_size_adjust(context, value_get_multiply);
   }
   html_button(root, emoji_font_larger() + " Font size larger", lambda2);
-  let value_get_divide = divide_curried_right(factor);
   async function lambda3() {
     await app_replace_font_size_adjust(context, value_get_divide);
   }
