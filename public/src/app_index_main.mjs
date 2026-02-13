@@ -53,14 +53,14 @@ export function app_index_main(context) {
   let lambda = window_open_app_curried_right(hash);
   function lambda3(a) {
     let fn = property_get(a, "app_fn");
-    let text = property_get(a, "text");
     let without = app_prefix_without(fn);
     function lambda2() {
       lambda(fn);
     }
     let p = html_p(root);
     let component = html_button_wide(p, without, lambda2);
-    let div = html_div_text(root2, text2);
+    let text = property_get(a, "text");
+    let div = html_div_text(p, text);
   }
   each(fns, lambda3);
 }
