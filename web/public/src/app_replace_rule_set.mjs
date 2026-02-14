@@ -1,3 +1,4 @@
+import { app_replace_button_side } from "../../../love/public/src/app_replace_button_side.mjs";
 import { app_replace_rule_set_get } from "../../../love/public/src/app_replace_rule_set_get.mjs";
 import { app_replace_button_style } from "../../../love/public/src/app_replace_button_style.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
@@ -103,15 +104,6 @@ export async function app_replace_rule_set(context) {
   let div = html_div(root);
   let current_list = text_split_empty(start);
   refresh();
-  function app_replace_button_side(b, left) {
-    function symbol_each(symbol) {
-      let span = html_span_text(b, symbol);
-      app_replace_button_symbol_style(span);
-      return span;
-    }
-    let mapped = list_map(left, symbol_each);
-    return mapped;
-  }
   function refresh() {
     function each_button_rule_refresh(rb, index2) {
       let rule2 = property_get(rb, "rule");
