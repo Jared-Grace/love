@@ -1,3 +1,4 @@
+import { app_replace_button_rule } from "../../../love/public/src/app_replace_button_rule.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { html_style_text_left_centered } from "../../../love/public/src/html_style_text_left_centered.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
@@ -17,6 +18,7 @@ export function app_replace_goals(context) {
   function each_item(item2, index2) {
     let name2 = text_get(item2);
     let a = add_1(index2) + ".";
+    let r2 = app_replace_button_rule(root, left, right, lambda);
     let b = app_replace_button_wide(root, "", lambda);
     html_style_text_left_centered(b, a, name2);
     function lambda() {
