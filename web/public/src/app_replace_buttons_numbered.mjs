@@ -19,7 +19,6 @@ export function app_replace_buttons_numbered(
       "align-items": "center",
     });
     let n = html_span_text(b, a);
-    html_style_assign(n, {});
     let title = html_span_text(b, name);
     html_style_assign(title, {
       "flex-grow": "1",
