@@ -57,7 +57,7 @@ export async function app_replace_rule_set(context) {
   function lambda2() {
     app_shared_screen_set(context, app_replace_goals);
   }
-  let b2 = app_replace_button(parent, "Goals", lambda2);
+  let b2 = app_replace_button(root, "Goals", lambda2);
   let rule = app_replace_rule_set_get(context);
   let name = property_get(rule, "name");
   html_p_text(root, "Rule set: " + name);
