@@ -1,3 +1,4 @@
+import { exit } from "../../../love/public/src/exit.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_identifier_rename_imports_fix } from "../../../love/public/src/js_identifier_rename_imports_fix.mjs";
 import { property_exists_if_async } from "../../../love/public/src/property_exists_if_async.mjs";
@@ -15,6 +16,10 @@ export async function function_rename_identifiers(f_name_before, f_name_after) {
         f_name,
       });
       async function lambda2(ast) {
+        try {
+        } catch (e) {
+          exit();
+        }
         await js_identifier_rename_imports_fix(
           ast,
           f_name_before,
