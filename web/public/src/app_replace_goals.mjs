@@ -10,7 +10,8 @@ export function app_replace_goals(context) {
   html_p_text(root, "Rule set: " + name);
   let goals = property_get(item, "goals");
   function lambda(item2) {
-    let b = app_replace_button_wide(root2, name2, function lambda3() {});
+    function lambda3() {}
+    let b = app_replace_button_wide(root2, name2, lambda3);
   }
   each(list, lambda);
 }
