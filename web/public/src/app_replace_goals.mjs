@@ -19,6 +19,7 @@ export function app_replace_goals(context) {
     let name2 = text_get(item2);
     let a = add_1(index2) + ".";
     let start = property_get(goal, "start");
+    tss;
     let end = property_get(goal, "end");
     let r2 = app_replace_button_rule(root, left, right, lambda);
     let b = app_replace_button_wide(root, "", lambda);
