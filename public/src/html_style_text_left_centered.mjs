@@ -15,4 +15,5 @@ export function html_style_text_left_centered(
     "flex-grow": "1",
     "text-align": "center",
   });
+  return title;
 }
