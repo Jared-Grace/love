@@ -16,7 +16,7 @@ export function app_replace_goals(context) {
     function lambda3() {}
     let b = app_replace_button_wide(root2, name2, lambda3);
   }
-  app_replace_buttons_numbered(root, rule_sets, text_get, on_click);
+  app_replace_buttons_numbered(root, goals, text_get, on_click);
   function on_click(index) {
     storage_local_set_context(context, "rule_set_index", index);
     app_shared_screen_set(context, app_replace_goals);
