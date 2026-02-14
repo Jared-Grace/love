@@ -1,3 +1,4 @@
+import { each_nested } from "../../../love/public/src/each_nested.mjs";
 import { json_equal } from "../../../love/public/src/json_equal.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_replace_button_symbol_style_valid_curry_right } from "../../../love/public/src/app_replace_button_symbol_style_valid_curry_right.mjs";
@@ -167,9 +168,7 @@ export async function app_replace_rule_set(context) {
     let eq2 = json_equal(current_list, goal_list);
     if (eq2) {
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(true);
-      each(goal_list_symbols, lambda4);
-      function lambda(item) {}
-      each(list, lambda);
+      each_nested([goal_list_symbols, sbs], lambda4);
     }
     let nn = null_not_is(index_selected);
     html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
