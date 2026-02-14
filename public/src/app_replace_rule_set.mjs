@@ -111,9 +111,9 @@ export async function app_replace_rule_set(context) {
   let end = property_get(goal, "end");
   let goal_list = text_split_empty(end);
   let p = html_p(root);
-  let mapped = app_replace_button_side(p, goal_list);
+  let goal_list_symbols = app_replace_button_side(p, goal_list);
   let lambda4 = app_replace_button_symbol_style_valid_curry_right(false);
-  each(mapped, lambda4);
+  each(goal_list_symbols, lambda4);
   refresh();
   function refresh() {
     function each_button_rule_refresh(rb, index2) {
@@ -167,7 +167,7 @@ export async function app_replace_rule_set(context) {
     let eq2 = json_equal(current_list, goal_list);
     if (eq2) {
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(true);
-      each(mapped, lambda4);
+      each(goal_list_symbols, lambda4);
     }
     let nn = null_not_is(index_selected);
     html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
