@@ -18,11 +18,11 @@ export function app_replace_button_rule(root, on_click, left, right) {
   let arrow = html_span_text(b, text);
   html_bold(arrow);
   let rights = app_replace_button_side(b, right);
-  let r2 = {
+  let r = {
     b,
     lefts,
     rights,
     arrow,
   };
-  return r2;
+  return r;
 }
