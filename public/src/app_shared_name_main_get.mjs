@@ -8,21 +8,21 @@ export async function app_shared_name_main_get(search) {
   let f_name = app_shared_name_main(search);
   let e = await function_unalias_exists(f_name);
   let exists = property_get(e, "exists");
-  let app_name = null;
+  let a_name = null;
   if (exists) {
-    app_name = search;
+    a_name = search;
   } else {
     let mapped = await apps_names();
-    app_name = list_find_text_match_ordered(mapped, search);
+    a_name = list_find_text_match_ordered(mapped, search);
   }
-  f_name = app_shared_name_main(app_name);
+  f_name = app_shared_name_main(a_name);
   log_keep({
     search,
-    app_name,
+    a_name,
   });
   let r = {
     f_name,
-    a_name: app_name,
+    a_name,
   };
   return r;
 }
