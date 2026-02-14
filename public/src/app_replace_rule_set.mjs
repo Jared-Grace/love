@@ -1,3 +1,4 @@
+import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { each_nested } from "../../../love/public/src/each_nested.mjs";
 import { json_equal } from "../../../love/public/src/json_equal.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -169,6 +170,7 @@ export async function app_replace_rule_set(context) {
     if (eq2) {
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(true);
       each_nested([goal_list_symbols, sbs], lambda4);
+      let span = html_span_text(parent, text);
     }
     let nn = null_not_is(index_selected);
     html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
