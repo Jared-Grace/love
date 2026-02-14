@@ -1,4 +1,4 @@
-import { app_replace_button_side } from "../../../love/public/src/app_replace_button_side.mjs";
+import { app_replace_button_rule_content_styled } from "../../../love/public/src/app_replace_button_rule_content_styled.mjs";
 import { app_replace_goals } from "../../../love/public/src/app_replace_goals.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
