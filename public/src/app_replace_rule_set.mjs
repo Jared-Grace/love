@@ -1,4 +1,4 @@
-import { log } from "../../../love/public/src/log.mjs";
+import { error_json } from "../../../love/public/src/error_json.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_replace_button_symbol_style_valid_curry_right } from "../../../love/public/src/app_replace_button_symbol_style_valid_curry_right.mjs";
 import { app_replace_button_side } from "../../../love/public/src/app_replace_button_side.mjs";
@@ -163,7 +163,8 @@ export async function app_replace_rule_set(context) {
       app_replace_button_symbol_style_valid(sb, valid);
       return sb;
     }
-    each_index(current_list, symbols_mapper);ej
+    each_index(current_list, symbols_mapper);
+    error_json(o);
     let nn = null_not_is(index_selected);
     html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
     html_text_set_if(nn, "Choose a symbol:", "Symbols:", label_symbols);
