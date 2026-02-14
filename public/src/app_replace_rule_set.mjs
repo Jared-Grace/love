@@ -73,7 +73,7 @@ export async function app_replace_rule_set(context) {
       refresh();
       return;
     }
-    let r2 = app_replace_button_rule(root, lambda3, left, right);
+    let r2 = app_replace_button_rule(root, left, right, lambda3);
     let arrow = property_get(r2, "arrow");
     let rights = property_get(r2, "rights");
     let lefts = property_get(r2, "lefts");
