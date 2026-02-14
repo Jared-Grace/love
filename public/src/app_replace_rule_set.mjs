@@ -108,7 +108,7 @@ export async function app_replace_rule_set(context) {
   let end = property_get(goal, "end");
   let split = text_split_empty(end);
   let p = html_p(root2);
-  let mapped = app_replace_button_side(root, split);
+  let mapped = app_replace_button_side(p, split);
   app_replace_button_symbol_style_valid(mapped, true);
   refresh();
   function refresh() {
