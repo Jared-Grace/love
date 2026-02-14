@@ -52,7 +52,8 @@ export async function app_replace_rule_set(context) {
     app_replace_home,
   );
   app_replace_button_style(b);
-  let b2 = app_replace_button(parent, text, function lambda2() {});
+  function lambda2() {}
+  let b2 = app_replace_button(parent, text, lambda2);
   let rule = app_replace_rule_set_get(context);
   let name = property_get(rule, "name");
   html_p_text(root, "Rule set: " + name);
