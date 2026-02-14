@@ -7,7 +7,7 @@ import { html_border_none } from "../../../love/public/src/html_border_none.mjs"
 import { html_style_padding_y } from "../../../love/public/src/html_style_padding_y.mjs";
 import { app_replace_button_symbol_style } from "../../../love/public/src/app_replace_button_symbol_style.mjs";
 import { html_button_notext } from "../../../love/public/src/html_button_notext.mjs";
-export function app_replace_button_rule(root, on_click, right, left) {
+export function app_replace_button_rule(root, on_click, left, right) {
   let b = html_button_notext(root, on_click);
   app_replace_button_symbol_style(b);
   html_style_padding_y(b, "0.3em");
