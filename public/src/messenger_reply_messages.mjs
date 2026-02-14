@@ -52,11 +52,9 @@ export async function messenger_reply_messages(page, url) {
           return v2;
         }
         let name = null;
-        name = ternary(
-          list_empty_is(imgs),
-          messenger_reply_messages_me(),
-          "them",
-        );
+        let condition = list_empty_is(imgs);
+        let on_true = messenger_reply_messages_me();
+        name = ternary(condition, on_true, "them");
         la({
           [messenger_reply_messages_name()]: name,
           [messenger_reply_messages_message()]: message,
