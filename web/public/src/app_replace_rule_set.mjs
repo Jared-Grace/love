@@ -57,12 +57,12 @@ export async function app_replace_rule_set(context) {
   html_p_text(root, "Rule set: " + name);
   let start = property_get(item, "start");
   if (false) {
+    let current = storage_local_initialize_context(
+      context,
+      "rule_set_start",
+      start,
+    );
   }
-  let current = storage_local_initialize_context(
-    context,
-    "rule_set_start",
-    start,
-  );
   let index_selected = null;
   let label_rules = html_p(root);
   let rules = property_get(item, "rules");
