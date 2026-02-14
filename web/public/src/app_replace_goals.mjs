@@ -15,8 +15,8 @@ export function app_replace_goals(context) {
   let name = property_get(item, "name");
   html_p_text(root, "Rule set: " + name);
   let goals = property_get(item, "goals");
-  function each_item(goal, index2) {
-    let a = add_1(index2) + ".";
+  function each_item(goal, index) {
+    let a = add_1(index) + ".";
     let start = property_get(goal, "start");
     let left = text_split_space(start);
     let end = property_get(goal, "end");
@@ -26,7 +26,7 @@ export function app_replace_goals(context) {
     let title = property_get(r, "title");
     let r2 = app_replace_button_rule_content(title, left, right);
     function lambda() {
-      on_click(index2);
+      on_click(index);
     }
   }
   each_index(goals, each_item);
