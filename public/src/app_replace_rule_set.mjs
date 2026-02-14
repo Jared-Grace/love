@@ -1,3 +1,4 @@
+import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { app_replace_button_rule } from "../../../love/public/src/app_replace_button_rule.mjs";
 import { app_replace_rule_set_get } from "../../../love/public/src/app_replace_rule_set_get.mjs";
 import { app_replace_button_style } from "../../../love/public/src/app_replace_button_style.mjs";
@@ -55,6 +56,7 @@ export async function app_replace_rule_set(context) {
   let item = app_replace_rule_set_get(context);
   let name = property_get(item, "name");
   html_p_text(root, "Rule set: " + name);
+  let goal_index = storage_local_get_context(context, "goal_index");
   let start = property_get(item, "start");
   if (false) {
     ("not sure if this is needed or not");
