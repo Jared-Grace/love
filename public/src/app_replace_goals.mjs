@@ -18,6 +18,8 @@ export function app_replace_goals(context) {
   function each_item(item2, index2) {
     let name2 = text_get(item2);
     let a = add_1(index2) + ".";
+    let start = property_get(goal, "start");
+    let end = property_get(goal, "end");
     let r2 = app_replace_button_rule(root, left, right, lambda);
     let b = app_replace_button_wide(root, "", lambda);
     html_style_text_left_centered(b, a, name2);
@@ -29,11 +31,5 @@ export function app_replace_goals(context) {
   function on_click(index) {
     storage_local_set_context(context, "rule_set_index", index);
     app_shared_screen_set(context, app_replace_goals);
-  }
-  function text_get(goal) {
-    let start = property_get(goal, "start");
-    let end = property_get(goal, "end");
-    let r = start + " " + end;
-    return r;
   }
 }
