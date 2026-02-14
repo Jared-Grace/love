@@ -134,7 +134,7 @@ export async function app_replace_rule_set(context) {
     }
     each_index(rules_buttons, each_button_rule_refresh);
     html_clear(content_refreshable);
-    function symbols_mapper(letter, index) {
+    function symbols_mapper(symbol, index) {
       function symbol_on_click() {
         let rule2 = list_get(rules_parsed, index_selected);
         let eq = app_replace_rule_valid(rule2, index, current_list);
@@ -150,7 +150,7 @@ export async function app_replace_rule_set(context) {
         index_selected = null;
         refresh();
       }
-      let sb = html_button(content_refreshable, letter, symbol_on_click);
+      let sb = html_button(content_refreshable, symbol, symbol_on_click);
       app_replace_button_symbol_style(sb);
       property_set_exists_not(sb, "index", index);
       let valid = false;
