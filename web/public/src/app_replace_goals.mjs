@@ -27,7 +27,7 @@ export function app_replace_goals(context) {
     let r = html_style_text_left_centered(b, a, "");
     let title = property_get(r, "title");
     let rb = app_replace_button_rule_content(title, left, right);
-    app_replace_lefts_rights_style(rb, false);
+    app_replace_lefts_rights_style(rb, true);
     function lambda() {
       on_click(index);
     }
