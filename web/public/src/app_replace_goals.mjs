@@ -8,5 +8,6 @@ export function app_replace_goals(context) {
   let name = property_get(item, "name");
   html_p_text(root, "Rule set: " + name);
   let goals = property_get(item, "goals");
-  each(list, function lambda(item2) {});
+  function lambda(item2) {}
+  each(list, lambda);
 }
