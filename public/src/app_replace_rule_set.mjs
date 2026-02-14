@@ -83,12 +83,12 @@ export async function app_replace_rule_set(context) {
     app_replace_button_symbol_style(b);
     html_style_padding_y(b, "0.3em");
     html_border_none(b);
-    let lefts = rule_button_side(b, left);
+    let lefts = app_replace_button_side(b, left);
     let s = text_arrow();
     let text = text_pad_space(s);
     let arrow = html_span_text(b, text);
     html_bold(arrow);
-    let rights = rule_button_side(b, right);
+    let rights = app_replace_button_side(b, right);
     html_disable(b);
     object_merge(b, {
       rule,
@@ -103,7 +103,7 @@ export async function app_replace_rule_set(context) {
   let div = html_div(root);
   let current_list = text_split_empty(start);
   refresh();
-  function rule_button_side(b, left) {
+  function app_replace_button_side(b, left) {
     function symbol_each(symbol) {
       let span = html_span_text(b, symbol);
       app_replace_button_symbol_style(span);
