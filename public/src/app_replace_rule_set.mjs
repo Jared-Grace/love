@@ -103,6 +103,7 @@ export async function app_replace_rule_set(context) {
   let label_symbols = html_p(root);
   let div = html_div(root);
   let current_list = text_split_empty(start);
+  let label_goal = html_p(root);
   refresh();
   function refresh() {
     function each_button_rule_refresh(rb, index2) {
