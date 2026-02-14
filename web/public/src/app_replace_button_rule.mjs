@@ -1,8 +1,5 @@
-import { html_bold } from "../../../love/public/src/html_bold.mjs";
-import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
-import { text_pad_space } from "../../../love/public/src/text_pad_space.mjs";
-import { text_arrow } from "../../../love/public/src/text_arrow.mjs";
-import { app_replace_button_side } from "../../../love/public/src/app_replace_button_side.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
+import { app_replace_button_rule_content } from "../../../love/public/src/app_replace_button_rule_content.mjs";
 import { html_border_none } from "../../../love/public/src/html_border_none.mjs";
 import { html_style_padding_y } from "../../../love/public/src/html_style_padding_y.mjs";
 import { app_replace_button_symbol_style } from "../../../love/public/src/app_replace_button_symbol_style.mjs";
@@ -12,7 +9,10 @@ export function app_replace_button_rule(root, left, right, on_click) {
   app_replace_button_symbol_style(b);
   html_style_padding_y(b, "0.3em");
   html_border_none(b);
-  let { lefts, rights, arrow } = app_replace_button_rule_content(b, left, right);
+  let r2 = app_replace_button_rule_content(b, left, right);
+  let arrow = property_get(r2, "arrow");
+  let rights = property_get(r2, "rights");
+  let lefts = property_get(r2, "lefts");
   let r = {
     b,
     lefts,
@@ -21,13 +21,3 @@ export function app_replace_button_rule(root, left, right, on_click) {
   };
   return r;
 }
-function app_replace_button_rule_content(b, left, right) {
-  let lefts = app_replace_button_side(b, left);
-  let s = text_arrow();
-  let text = text_pad_space(s);
-  let arrow = html_span_text(b, text);
-  html_bold(arrow);
-  let rights = app_replace_button_side(b, right);
-  return { lefts, rights, arrow };
-}
-
