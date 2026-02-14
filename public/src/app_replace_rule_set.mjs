@@ -59,7 +59,7 @@ export async function app_replace_rule_set(context) {
     app_replace_home,
   );
   app_replace_button_style(b);
-  let index = await storage_local_get_context(context, "rule_set_index");
+  let index = storage_local_get_context(context, "rule_set_index");
   let rule_sets = app_replace_rule_sets();
   let item = list_get(rule_sets, index);
   let name = property_get(item, "name");
