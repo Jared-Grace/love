@@ -163,10 +163,7 @@ export async function app_replace_rule_set(context) {
       app_replace_button_symbol_style_valid(sb, valid);
       return sb;
     }
-    each_index(current_list, symbols_mapper);
-    log({
-      current_list,
-    });
+    each_index(current_list, symbols_mapper);ej
     let nn = null_not_is(index_selected);
     html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
     html_text_set_if(nn, "Choose a symbol:", "Symbols:", label_symbols);
