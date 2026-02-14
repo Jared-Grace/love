@@ -19,7 +19,7 @@ export function app_replace_goals(context) {
   function text_get(goal) {
     let start = property_get(goal, "start");
     let end = property_get(goal, "end");
-    let value = property_get(item, "name");
-    return value;
+    let r = start + " " + end;
+    return r;
   }
 }
