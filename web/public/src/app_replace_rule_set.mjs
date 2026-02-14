@@ -1,3 +1,4 @@
+import { app_replace_lefts_rights_style } from "../../../love/public/src/app_replace_lefts_rights_style.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { app_replace_button_rule } from "../../../love/public/src/app_replace_button_rule.mjs";
 import { app_replace_rule_set_get } from "../../../love/public/src/app_replace_rule_set_get.mjs";
@@ -6,11 +7,8 @@ import { ternary } from "../../../love/public/src/ternary.mjs";
 import { app_replace_button_rule_background_color } from "../../../love/public/src/app_replace_button_rule_background_color.mjs";
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
 import { html_style_font_color_set_if } from "../../../love/public/src/html_style_font_color_set_if.mjs";
-import { list_map_property_get } from "../../../love/public/src/list_map_property_get.mjs";
 import { ternary_nested } from "../../../love/public/src/ternary_nested.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
-import { each_nested } from "../../../love/public/src/each_nested.mjs";
-import { app_replace_button_symbol_style_valid_curry_right } from "../../../love/public/src/app_replace_button_symbol_style_valid_curry_right.mjs";
 import { app_replace_button_symbol_style_valid } from "../../../love/public/src/app_replace_button_symbol_style_valid.mjs";
 import { app_replace_rule_valid_curry } from "../../../love/public/src/app_replace_rule_valid_curry.mjs";
 import { app_replace_button_symbol_style } from "../../../love/public/src/app_replace_button_symbol_style.mjs";
@@ -107,10 +105,7 @@ export async function app_replace_rule_set(context) {
       let lambda7 = app_replace_rule_valid_curry(rule2, current_list);
       let enabled = list_any(r, lambda7);
       html_enable_if(rb, enabled);
-      let properties = ["rights", "lefts"];
-      let list = list_map_property_get(properties, rb);
-      let lambda4 = app_replace_button_symbol_style_valid_curry_right(enabled);
-      each_nested(list, lambda4);
+      app_replace_lefts_rights_style(rb, enabled);
       const selected = index2 === index_selected;
       let on_a = app_replace_rule_set_highlight();
       let on_b = app_replace_button_rule_background_color();
