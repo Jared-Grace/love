@@ -101,7 +101,7 @@ export async function app_replace_rule_set(context) {
   }
   let rules_buttons = list_map_index(rules_parsed, each_button_rule);
   let label_symbols = html_p(root);
-  let div = html_div(root);
+  let content_refreshable = html_div(root);
   let current_list = text_split_empty(start);
   let label_goal = html_p(root);
   refresh();
@@ -123,7 +123,7 @@ export async function app_replace_rule_set(context) {
       html_style_font_color_set_if(enabled, arrow2, "black", "#6a6a6a");
     }
     each_index(rules_buttons, each_button_rule_refresh);
-    html_clear(div);
+    html_clear(content_refreshable);
     function symbols_mapper(letter, index) {
       function symbol_on_click() {
         let rule2 = list_get(rules_parsed, index_selected);
@@ -140,7 +140,7 @@ export async function app_replace_rule_set(context) {
         index_selected = null;
         refresh();
       }
-      let sb = html_button(div, letter, symbol_on_click);
+      let sb = html_button(content_refreshable, letter, symbol_on_click);
       app_replace_button_symbol_style(sb);
       property_set_exists_not(sb, "index", index);
       let valid = false;
