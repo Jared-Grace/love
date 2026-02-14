@@ -1,3 +1,5 @@
+import { app_replace_goals } from "../../../love/public/src/app_replace_goals.mjs";
+import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
 import { app_replace_lefts_rights_style } from "../../../love/public/src/app_replace_lefts_rights_style.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
@@ -52,8 +54,10 @@ export async function app_replace_rule_set(context) {
     app_replace_home,
   );
   app_replace_button_style(b);
-  function lambda2() {}
-  let b2 = app_replace_button(parent, text, lambda2);
+  function lambda2() {
+    app_shared_screen_set(context, app_replace_goals);
+  }
+  let b2 = app_replace_button(parent, "Goals", lambda2);
   let rule = app_replace_rule_set_get(context);
   let name = property_get(rule, "name");
   html_p_text(root, "Rule set: " + name);
