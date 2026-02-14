@@ -173,6 +173,7 @@ export async function app_replace_rule_set(context) {
       each_nested([goal_list_symbols, sbs], lambda4);
       let text = emoji_check();
       let span = html_span_text(div_symbols, text);
+      html_span_text(div_symbols, text);
     }
     let nn = null_not_is(index_selected);
     html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
