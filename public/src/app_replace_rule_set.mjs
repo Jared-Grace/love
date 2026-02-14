@@ -1,3 +1,4 @@
+import { app_replace_button_symbol_style_valid_curry_right } from "../../../love/public/src/app_replace_button_symbol_style_valid_curry_right.mjs";
 import { app_replace_button_side } from "../../../love/public/src/app_replace_button_side.mjs";
 import { app_replace_goals } from "../../../love/public/src/app_replace_goals.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
@@ -108,7 +109,8 @@ export async function app_replace_rule_set(context) {
   let end = property_get(goal, "end");
   let split = text_split_empty(end);
   let p = html_p(root);
-  let mapped = app_replace_button_side(p, split);app_replace_button_symbol_style_valid_curry_right
+  let mapped = app_replace_button_side(p, split);
+  let lambda4 = app_replace_button_symbol_style_valid_curry_right(valid2);
   function lambda(item) {}
   let mapped2 = list_map(list, lambda);
   app_replace_button_symbol_style_valid(p, true);
