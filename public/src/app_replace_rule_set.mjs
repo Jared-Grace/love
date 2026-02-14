@@ -167,6 +167,7 @@ export async function app_replace_rule_set(context) {
     let eq2 = json_equal(current_list, goal_list);
     if (eq2) {
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(true);
+      each(mapped, lambda4);
     }
     let nn = null_not_is(index_selected);
     html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
