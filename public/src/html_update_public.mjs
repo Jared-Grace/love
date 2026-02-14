@@ -1,5 +1,5 @@
+import { app_shared_name_main_both } from "../../../love/public/src/app_shared_name_main_both.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { app_shared_name_main_get } from "../../../love/public/src/app_shared_name_main_get.mjs";
 import { html_update_public_generic } from "../../../love/public/src/html_update_public_generic.mjs";
 import { app_shared_name_prefixed } from "../../../love/public/src/app_shared_name_prefixed.mjs";
 import { html_name_to_path } from "../../../love/public/src/html_name_to_path.mjs";
