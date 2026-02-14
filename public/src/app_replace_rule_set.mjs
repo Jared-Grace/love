@@ -1,24 +1,17 @@
-import { app_replace_button_side } from "../../../love/public/src/app_replace_button_side.mjs";
+import { app_replace_button_rule } from "../../../love/public/src/app_replace_button_rule.mjs";
 import { app_replace_rule_set_get } from "../../../love/public/src/app_replace_rule_set_get.mjs";
 import { app_replace_button_style } from "../../../love/public/src/app_replace_button_style.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { app_replace_button_rule_background_color } from "../../../love/public/src/app_replace_button_rule_background_color.mjs";
-import { text_pad_space } from "../../../love/public/src/text_pad_space.mjs";
-import { text_arrow } from "../../../love/public/src/text_arrow.mjs";
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
 import { html_style_font_color_set_if } from "../../../love/public/src/html_style_font_color_set_if.mjs";
 import { list_map_property_get } from "../../../love/public/src/list_map_property_get.mjs";
 import { ternary_nested } from "../../../love/public/src/ternary_nested.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
-import { html_style_padding_y } from "../../../love/public/src/html_style_padding_y.mjs";
-import { html_bold } from "../../../love/public/src/html_bold.mjs";
 import { each_nested } from "../../../love/public/src/each_nested.mjs";
 import { app_replace_button_symbol_style_valid_curry_right } from "../../../love/public/src/app_replace_button_symbol_style_valid_curry_right.mjs";
 import { app_replace_button_symbol_style_valid } from "../../../love/public/src/app_replace_button_symbol_style_valid.mjs";
 import { app_replace_rule_valid_curry } from "../../../love/public/src/app_replace_rule_valid_curry.mjs";
-import { html_border_none } from "../../../love/public/src/html_border_none.mjs";
-import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
-import { html_button_notext } from "../../../love/public/src/html_button_notext.mjs";
 import { app_replace_button_symbol_style } from "../../../love/public/src/app_replace_button_symbol_style.mjs";
 import { app_replace_home } from "../../../love/public/src/app_replace_home.mjs";
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
@@ -80,16 +73,11 @@ export async function app_replace_rule_set(context) {
       refresh();
       return;
     }
-    let b = html_button_notext(root, lambda3);
-    app_replace_button_symbol_style(b);
-    html_style_padding_y(b, "0.3em");
-    html_border_none(b);
-    let lefts = app_replace_button_side(b, left);
-    let s = text_arrow();
-    let text = text_pad_space(s);
-    let arrow = html_span_text(b, text);
-    html_bold(arrow);
-    let rights = app_replace_button_side(b, right);
+    let r2 = app_replace_button_rule(root, lambda3, left, right);
+    let arrow = property_get(r2, "arrow");
+    let rights = property_get(r2, "rights");
+    let lefts = property_get(r2, "lefts");
+    let b = property_get(r2, "b");
     html_disable(b);
     object_merge(b, {
       rule,
