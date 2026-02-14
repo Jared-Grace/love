@@ -163,7 +163,7 @@ export async function app_replace_rule_set(context) {
       app_replace_button_symbol_style_valid(sb, valid);
       return sb;
     }
-    list_map_index(current_list, symbols_mapper);
+    let sbs = list_map_index(current_list, symbols_mapper);
     let eq2 = json_equal(current_list, goal_list);
     if (eq2) {
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(true);
