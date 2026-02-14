@@ -1,3 +1,4 @@
+import { app_replace_lefts_rights_style } from "../../../love/public/src/app_replace_lefts_rights_style.mjs";
 import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_set.mjs";
 import { app_replace_button_rule_content } from "../../../love/public/src/app_replace_button_rule_content.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
@@ -25,7 +26,8 @@ export function app_replace_goals(context) {
     let b = app_replace_button_wide(root, "", lambda);
     let r = html_style_text_left_centered(b, a, "");
     let title = property_get(r, "title");
-    let r2 = app_replace_button_rule_content(title, left, right);
+    let rb = app_replace_button_rule_content(title, left, right);
+    app_replace_lefts_rights_style(rb, enabled);
     function lambda() {
       on_click(index);
     }
