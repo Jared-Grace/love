@@ -1,8 +1,8 @@
+import { app_replace_goals } from "../../../love/public/src/app_replace_goals.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { add_1 } from "../../../love/public/src/add_1.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
-import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_set.mjs";
 import { app_replace_settings } from "../../../love/public/src/app_replace_settings.mjs";
 import { emoji_gear } from "../../../love/public/src/emoji_gear.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
@@ -34,7 +34,7 @@ export function app_replace_home(context) {
     });
     function lambda() {
       storage_local_set_context(context, "rule_set_index", index);
-      app_shared_screen_set(context, app_replace_rule_set);
+      app_shared_screen_set(context, app_replace_goals);
     }
   }
   each_index(rule_sets, lambda2);
