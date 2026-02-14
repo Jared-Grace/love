@@ -6,4 +6,5 @@ export function app_replace_goals(context) {
   let item = app_replace_rule_set_get(context);
   let name = property_get(item, "name");
   html_p_text(root, "Rule set: " + name);
+  let goals = property_get(item, "goals");
 }
