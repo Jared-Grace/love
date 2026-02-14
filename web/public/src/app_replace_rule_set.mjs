@@ -57,7 +57,6 @@ export async function app_replace_rule_set(context) {
   let item = list_get(rule_sets, index);
   let name = property_get(item, "name");
   html_p_text(root, "Rule set: " + name);
-  let value = property_get(object, property_name);
   let start = property_get(item, "start");
   let current = await storage_local_initialize_context(
     context,
