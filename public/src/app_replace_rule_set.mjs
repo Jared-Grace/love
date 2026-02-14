@@ -111,8 +111,7 @@ export async function app_replace_rule_set(context) {
   let p = html_p(root);
   let mapped = app_replace_button_side(p, split);
   let lambda4 = app_replace_button_symbol_style_valid_curry_right(true);
-  let mapped2 = list_map(list, lambda4);
-  app_replace_button_symbol_style_valid(p, true);
+  let mapped2 = list_map(mapped, lambda4);
   refresh();
   function refresh() {
     function each_button_rule_refresh(rb, index2) {
