@@ -3,7 +3,7 @@ import { list_find_text_match_ordered } from "../../../love/public/src/list_find
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { apps_names } from "../../../love/public/src/apps_names.mjs";
 import { app_shared_name_main } from "../../../love/public/src/app_shared_name_main.mjs";
-export async function app_shared_name_main_get(search) {
+export async function app_shared_name_main_both(search) {
   let mapped = await apps_names();
   let includes = list_includes(mapped, search);
   let a_name = null;
