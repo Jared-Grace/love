@@ -31,7 +31,7 @@ export function app_replace_goals(context) {
   }
   each_index(goals, each_item);
   function on_click(index) {
-    storage_local_set_context(context, "rule_set_index", index);
+    storage_local_set_context(context, "goal_index", index);
     app_shared_screen_set(context, app_replace_goals);
   }
 }
