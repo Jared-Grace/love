@@ -18,7 +18,7 @@ export function app_replace_home(context) {
   }
   app_replace_button_wide(root, emoji_gear() + " Settings", lambda4);
   let rule_sets = app_replace_rule_sets();
-  function lambda2(item, index) {
+  function each_item(item, index) {
     let name = text_get(item);
     let a = add_1(index) + ".";
     let b = app_replace_button_wide(root, "", lambda);
@@ -37,7 +37,7 @@ export function app_replace_home(context) {
       on_click(index);
     }
   }
-  each_index(rule_sets, lambda2);
+  each_index(rule_sets, each_item);
   function on_click(index) {
     storage_local_set_context(context, "rule_set_index", index);
     app_shared_screen_set(context, app_replace_goals);
