@@ -1,3 +1,4 @@
+import { text_get } from "../../../love/public/src/text_get.mjs";
 import { app_replace_goals } from "../../../love/public/src/app_replace_goals.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
@@ -18,7 +19,7 @@ export function app_replace_home(context) {
   app_replace_button_wide(root, emoji_gear() + " Settings", lambda4);
   let rule_sets = app_replace_rule_sets();
   function lambda2(item, index) {
-    let name = property_get(item, "name");
+    let name = text_get(item);
     let a = add_1(index) + ".";
     let b = app_replace_button_wide(root, "", lambda);
     html_style_assign(b, {
@@ -38,4 +39,8 @@ export function app_replace_home(context) {
     }
   }
   each_index(rule_sets, lambda2);
+  function text_get(item) {
+    let value = property_get(item, "name");
+    return value;
+  }
 }
