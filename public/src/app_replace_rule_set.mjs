@@ -105,6 +105,7 @@ export async function app_replace_rule_set(context) {
   let content_refreshable = html_div(root);
   let current_list = text_split_empty(start);
   let label_goal = html_p_text(root, "Goal:");
+  let end = property_get(goal, "end");
   let mapped = app_replace_button_side(parent, list_symbols);
   refresh();
   function refresh() {
