@@ -111,7 +111,7 @@ export async function app_replace_rule_set(context) {
   let split = text_split_empty(end);
   let p = html_p(root);
   let mapped = app_replace_button_side(p, split);
-  let lambda4 = app_replace_button_symbol_style_valid_curry_right(true);
+  let lambda4 = app_replace_button_symbol_style_valid_curry_right(false);
   each(mapped, lambda4);
   refresh();
   function refresh() {
