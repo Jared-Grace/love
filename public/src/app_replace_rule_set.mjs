@@ -53,11 +53,12 @@ export async function app_replace_rule_set(context) {
     app_replace_home,
   );
   app_replace_button_style(b);
-  let item = app_replace_rule_set_get(context);
-  let name = property_get(item, "name");
+  let rule = app_replace_rule_set_get(context);
+  let name = property_get(rule, "name");
   html_p_text(root, "Rule set: " + name);
   let goal_index = storage_local_get_context(context, "goal_index");
-  let start = property_get(item, "start");
+  let goals = property_get(rule, "goals");
+  let start = property_get(rule, "start");
   if (false) {
     ("not sure if this is needed or not");
     let current = storage_local_initialize_context(
@@ -68,7 +69,7 @@ export async function app_replace_rule_set(context) {
   }
   let index_selected = null;
   let label_rules = html_p(root);
-  let rules = property_get(item, "rules");
+  let rules = property_get(rule, "rules");
   let rules_parsed = list_map(rules, app_replace_rule_parse);
   function each_button_rule(rule, index) {
     let left = property_get(rule, "left");
