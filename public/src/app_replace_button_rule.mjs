@@ -12,12 +12,7 @@ export function app_replace_button_rule(root, left, right, on_click) {
   app_replace_button_symbol_style(b);
   html_style_padding_y(b, "0.3em");
   html_border_none(b);
-  let lefts = app_replace_button_side(b, left);
-  let s = text_arrow();
-  let text = text_pad_space(s);
-  let arrow = html_span_text(b, text);
-  html_bold(arrow);
-  let rights = app_replace_button_side(b, right);
+  let { lefts, rights, arrow } = app_replace_button_rule_content(b, left, right);
   let r = {
     b,
     lefts,
@@ -26,3 +21,13 @@ export function app_replace_button_rule(root, left, right, on_click) {
   };
   return r;
 }
+function app_replace_button_rule_content(b, left, right) {
+  let lefts = app_replace_button_side(b, left);
+  let s = text_arrow();
+  let text = text_pad_space(s);
+  let arrow = html_span_text(b, text);
+  html_bold(arrow);
+  let rights = app_replace_button_side(b, right);
+  return { lefts, rights, arrow };
+}
+
