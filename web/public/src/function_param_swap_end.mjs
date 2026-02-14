@@ -1,3 +1,4 @@
+import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { list_index_last_second } from "../../../love/public/src/list_index_last_second.mjs";
 import { list_index_last } from "../../../love/public/src/list_index_last.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -5,6 +6,7 @@ import { js_declaration_params_ast_get } from "../../../love/public/src/js_decla
 import { list_swap_at } from "../../../love/public/src/list_swap_at.mjs";
 import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
 export async function function_param_swap_end(f_name) {
+  assert_arguments(arguments, 1);
   await function_params_new_generic(
     function_transform_current_lambda,
     on_call,
