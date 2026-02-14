@@ -109,9 +109,9 @@ export async function app_replace_rule_set(context) {
   let current_list = text_split_empty(start);
   let label_goal = html_p_text(root, "Goal:");
   let end = property_get(goal, "end");
-  let split = text_split_empty(end);
+  let goal_list = text_split_empty(end);
   let p = html_p(root);
-  let mapped = app_replace_button_side(p, split);
+  let mapped = app_replace_button_side(p, goal_list);
   let lambda4 = app_replace_button_symbol_style_valid_curry_right(false);
   each(mapped, lambda4);
   refresh();
