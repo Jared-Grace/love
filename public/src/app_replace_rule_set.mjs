@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { app_replace_button_symbol_style_valid_curry_right } from "../../../love/public/src/app_replace_button_symbol_style_valid_curry_right.mjs";
 import { app_replace_button_side } from "../../../love/public/src/app_replace_button_side.mjs";
 import { app_replace_goals } from "../../../love/public/src/app_replace_goals.mjs";
