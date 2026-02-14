@@ -50,13 +50,12 @@ export async function messenger_reply_messages(page, url) {
           let v2 = node.textContent;
           return v2;
         }
-        let name = null;$a
-        const t = "them";
+        let name = null;
         let result = null;
         if (list_empty_is(imgs)) {
           result = messenger_reply_messages_me();
         } else {
-          result = t;
+          result = "them";
         }
         name = result;
         la({
