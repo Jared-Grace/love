@@ -5,5 +5,4 @@ export async function app_promote(name) {
   assert_arguments(arguments, 1);
   let combined = await app_shared_name_search_main(name);
   let v = await firebase_promote_function(combined);
-  return v;
 }
