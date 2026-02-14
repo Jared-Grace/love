@@ -1,3 +1,4 @@
+import { app_replace_rule_set_get } from "../../../love/public/src/app_replace_rule_set_get.mjs";
 import { app_replace_button_style } from "../../../love/public/src/app_replace_button_style.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { app_replace_button_rule_background_color } from "../../../love/public/src/app_replace_button_rule_background_color.mjs";
@@ -43,9 +44,7 @@ import { html_button } from "../../../love/public/src/html_button.mjs";
 import { app_replace_rule_parse } from "../../../love/public/src/app_replace_rule_parse.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
-import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
-import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { emoji_home } from "../../../love/public/src/emoji_home.mjs";
 import { html_button_screen } from "../../../love/public/src/html_button_screen.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
@@ -59,9 +58,7 @@ export async function app_replace_rule_set(context) {
     app_replace_home,
   );
   app_replace_button_style(b);
-  let index = storage_local_get_context(context, "rule_set_index");
-  let rule_sets = app_replace_rule_sets();
-  let item = list_get(rule_sets, index);
+  let item = app_replace_rule_set_get(context);
   let name = property_get(item, "name");
   html_p_text(root, "Rule set: " + name);
   let start = property_get(item, "start");
