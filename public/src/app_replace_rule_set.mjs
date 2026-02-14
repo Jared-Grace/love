@@ -107,9 +107,9 @@ export async function app_replace_rule_set(context) {
   let label_goal = html_p_text(root, "Goal:");
   let end = property_get(goal, "end");
   let split = text_split_empty(end);
-  let p = html_p(root2);
+  let p = html_p(root);
   let mapped = app_replace_button_side(p, split);
-  app_replace_button_symbol_style_valid(mapped, true);
+  app_replace_button_symbol_style_valid(p, true);
   refresh();
   function refresh() {
     function each_button_rule_refresh(rb, index2) {
