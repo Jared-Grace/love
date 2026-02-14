@@ -58,6 +58,7 @@ export async function app_replace_rule_set(context) {
   html_p_text(root, "Rule set: " + name);
   let goal_index = storage_local_get_context(context, "goal_index");
   let goals = property_get(rule, "goals");
+  let item = list_get(list2, index4);
   let start = property_get(rule, "start");
   if (false) {
     ("not sure if this is needed or not");
