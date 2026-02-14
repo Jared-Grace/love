@@ -56,6 +56,8 @@ export async function app_replace_rule_set(context) {
   let name = property_get(item, "name");
   html_p_text(root, "Rule set: " + name);
   let start = property_get(item, "start");
+  if (false) {
+  }
   let current = storage_local_initialize_context(
     context,
     "rule_set_start",
