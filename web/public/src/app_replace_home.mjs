@@ -15,7 +15,7 @@ export function app_replace_home(context) {
   }
   app_replace_button_wide(root, emoji_gear() + " Settings", lambda4);
   let rule_sets = app_replace_rule_sets();
-  app_replace_buttons_numbered(rule_sets, text_get, root, on_click);
+  app_replace_buttons_numbered(root, rule_sets, text_get, on_click);
   function on_click(index) {
     storage_local_set_context(context, "rule_set_index", index);
     app_shared_screen_set(context, app_replace_goals);
