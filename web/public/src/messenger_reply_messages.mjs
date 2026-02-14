@@ -1,4 +1,3 @@
-import { ternary } from "../../../love/public/src/ternary.mjs";
 import { messenger_reply_messages_message } from "../../../love/public/src/messenger_reply_messages_message.mjs";
 import { messenger_reply_messages_name } from "../../../love/public/src/messenger_reply_messages_name.mjs";
 import { messenger_reply_messages_me } from "../../../love/public/src/messenger_reply_messages_me.mjs";
@@ -54,7 +53,14 @@ export async function messenger_reply_messages(page, url) {
         let name = null;
         let condition = list_empty_is(imgs);
         let on_true = messenger_reply_messages_me();
-        name = ternary(condition, on_true, "them");
+        const t = "them";
+        let result = null;
+        if (condition) {
+          result = on_true;
+        } else {
+          result = t;
+        }
+        name = result;
         la({
           [messenger_reply_messages_name()]: name,
           [messenger_reply_messages_message()]: message,
