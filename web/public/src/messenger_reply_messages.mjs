@@ -51,11 +51,10 @@ export async function messenger_reply_messages(page, url) {
           return v2;
         }
         let name = null;
-        let condition = list_empty_is(imgs);
         let on_true = messenger_reply_messages_me();
         const t = "them";
         let result = null;
-        if (condition) {
+        if (list_empty_is(imgs)) {
           result = on_true;
         } else {
           result = t;
