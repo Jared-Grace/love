@@ -6,7 +6,6 @@ import { app_replace_button_wide } from "../../../love/public/src/app_replace_bu
 import { add_1 } from "../../../love/public/src/add_1.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
-import { text_get } from "../../../love/public/src/text_get.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_rule_set_get } from "../../../love/public/src/app_replace_rule_set_get.mjs";
@@ -16,16 +15,15 @@ export function app_replace_goals(context) {
   let name = property_get(item, "name");
   html_p_text(root, "Rule set: " + name);
   let goals = property_get(item, "goals");
-  function each_item(item2, index2) {
-    let name2 = text_get(item2);
+  function each_item(goal, index2) {
     let a = add_1(index2) + ".";
     let start = property_get(goal, "start");
-    let split = text_split_space(s);
+    let left = text_split_space(start);
     let end = property_get(goal, "end");
-    let split2 = text_split_space(s2);
+    let right = text_split_space(end);
     let r2 = app_replace_button_rule(root, left, right, lambda);
     let b = app_replace_button_wide(root, "", lambda);
-    html_style_text_left_centered(b, a, name2);
+    let title = html_style_text_left_centered(b, a, "");
     function lambda() {
       on_click(index2);
     }
