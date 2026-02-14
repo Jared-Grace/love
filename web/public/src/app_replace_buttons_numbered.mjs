@@ -5,10 +5,10 @@ import { app_replace_button_wide } from "../../../love/public/src/app_replace_bu
 import { add_1 } from "../../../love/public/src/add_1.mjs";
 import { text_get } from "../../../love/public/src/text_get.mjs";
 export function app_replace_buttons_numbered(
+  rule_sets,
   text_get,
   root,
   on_click,
-  rule_sets,
 ) {
   function each_item(item, index) {
     let name = text_get(item);
