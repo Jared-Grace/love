@@ -34,11 +34,14 @@ export function app_replace_home(context) {
       "text-align": "center",
     });
     function lambda() {
-      storage_local_set_context(context, "rule_set_index", index);
-      app_shared_screen_set(context, app_replace_goals);
+      on_click(index);
     }
   }
   each_index(rule_sets, lambda2);
+  function on_click(index) {
+    storage_local_set_context(context, "rule_set_index", index);
+    app_shared_screen_set(context, app_replace_goals);
+  }
   function text_get(item) {
     let value = property_get(item, "name");
     return value;
