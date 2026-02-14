@@ -1,3 +1,4 @@
+import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
 import { app_replace_lefts_rights_style } from "../../../love/public/src/app_replace_lefts_rights_style.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { app_replace_button_rule } from "../../../love/public/src/app_replace_button_rule.mjs";
@@ -51,6 +52,7 @@ export async function app_replace_rule_set(context) {
     app_replace_home,
   );
   app_replace_button_style(b);
+  let b2 = app_replace_button(parent, text, function lambda2() {});
   let rule = app_replace_rule_set_get(context);
   let name = property_get(rule, "name");
   html_p_text(root, "Rule set: " + name);
