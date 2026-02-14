@@ -1,3 +1,4 @@
+import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { app_replace_button_rule_content } from "../../../love/public/src/app_replace_button_rule_content.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
@@ -32,6 +33,6 @@ export function app_replace_goals(context) {
   each_index(goals, each_item);
   function on_click(index) {
     storage_local_set_context(context, "goal_index", index);
-    app_shared_screen_set(context, app_replace_goals);
+    app_shared_screen_set(context, app_replace_rule_sets);
   }
 }
