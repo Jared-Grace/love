@@ -1,4 +1,4 @@
-import { undefined_is } from "../../../love/public/src/undefined_is.mjs";
+import { undefined_is_if_null } from "../../../love/public/src/undefined_is_if_null.mjs";
 import { function_parse_unaliased } from "../../../love/public/src/function_parse_unaliased.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
@@ -14,9 +14,7 @@ export async function function_transform_result(f_names, lambda$ast) {
       let parsed = await function_parse_unaliased(f_name);
       let ast = property_get(parsed, "ast");
       let result = await lambda$ast(ast);
-      if (undefined_is(result)) {
-        result = null;
-      }
+      result = undefined_is_if_null(result);
       await file_js_unparse(parsed);
       return result;
     }
