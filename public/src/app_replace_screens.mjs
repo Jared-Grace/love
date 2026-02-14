@@ -1,3 +1,4 @@
+import { app_replace_goals } from "../../../love/public/src/app_replace_goals.mjs";
 import { app_replace_settings } from "../../../love/public/src/app_replace_settings.mjs";
 import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_set.mjs";
 import { app_replace_home } from "../../../love/public/src/app_replace_home.mjs";
