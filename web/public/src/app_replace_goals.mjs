@@ -23,7 +23,7 @@ export function app_replace_goals(context) {
     let right = text_split_space(end);
     let r2 = app_replace_button_rule(root, left, right, lambda);
     let b = app_replace_button_wide(root, "", lambda);
-    let title = html_style_text_left_centered(b, a, "");
+    let {title} = html_style_text_left_centered(b, a, "");
     function lambda() {
       on_click(index2);
     }
