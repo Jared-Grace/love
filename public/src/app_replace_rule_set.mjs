@@ -1,3 +1,4 @@
+import { app_replace_button_style } from "../../../love/public/src/app_replace_button_style.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { app_replace_button_rule_background_color } from "../../../love/public/src/app_replace_button_rule_background_color.mjs";
 import { text_pad_space } from "../../../love/public/src/text_pad_space.mjs";
@@ -57,6 +58,7 @@ export async function app_replace_rule_set(context) {
     context,
     app_replace_home,
   );
+  app_replace_button_style(b);
   let index = await storage_local_get_context(context, "rule_set_index");
   let rule_sets = app_replace_rule_sets();
   let item = list_get(rule_sets, index);
