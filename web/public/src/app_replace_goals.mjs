@@ -1,7 +1,6 @@
 import { app_replace_lefts_rights_style } from "../../../love/public/src/app_replace_lefts_rights_style.mjs";
 import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_set.mjs";
 import { app_replace_button_rule_content } from "../../../love/public/src/app_replace_button_rule_content.mjs";
-import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { html_style_text_left_centered } from "../../../love/public/src/html_style_text_left_centered.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
@@ -11,6 +10,7 @@ import { storage_local_set_context } from "../../../love/public/src/storage_loca
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_rule_set_get } from "../../../love/public/src/app_replace_rule_set_get.mjs";
+import { text_split_empty } from "./text_split_empty.mjs";
 export function app_replace_goals(context) {
   let root = property_get(context, "root");
   let item = app_replace_rule_set_get(context);
@@ -20,9 +20,9 @@ export function app_replace_goals(context) {
   function each_item(goal, index) {
     let a = add_1(index) + ".";
     let start = property_get(goal, "start");
-    let left = text_split_space(start);
+    let left = text_split_empty(start);
     let end = property_get(goal, "end");
-    let right = text_split_space(end);
+    let right = text_split_empty(end);
     let b = app_replace_button_wide(root, "", lambda);
     let r = html_style_text_left_centered(b, a, "");
     let title = property_get(r, "title");
