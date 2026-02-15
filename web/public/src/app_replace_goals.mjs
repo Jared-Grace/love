@@ -1,7 +1,7 @@
+import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { app_replace_lefts_rights_style } from "../../../love/public/src/app_replace_lefts_rights_style.mjs";
 import { app_replace_button_rule_content } from "../../../love/public/src/app_replace_button_rule_content.mjs";
 import { app_replace_rule_sets_data_goal } from "../../../love/public/src/app_replace_rule_sets_data_goal.mjs";
-import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_set.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { html_style_text_left_centered } from "../../../love/public/src/html_style_text_left_centered.mjs";
@@ -29,7 +29,7 @@ export function app_replace_goals(context) {
     let r = html_style_text_left_centered(b, a, "");
     let title = property_get(r, "title");
     let rb = app_replace_button_rule_content(title, left, right);
-    let d = storage_local_get_context(context, "rule_sets_data", {});
+    let d = storage_local_initialize_context(context, "rule_sets_data", {});
     let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
     let completed = property_get(g, "completed");
     app_replace_lefts_rights_style(rb, completed);
