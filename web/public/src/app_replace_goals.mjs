@@ -23,6 +23,9 @@ export function app_replace_goals(context) {
   html_p_text(root, "Rule set: " + rule_name);
   let goals = property_get(item, "goals");
   function each_item(goal, index) {
+    let d = storage_local_initialize_context(context, "rule_sets_data", {});
+    let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
+    let completed = property_get_or(g, "completed", false);
     let a = add_1(index) + ".";
     let start = property_get(goal, "start");
     let left = text_split_empty(start);
@@ -32,9 +35,6 @@ export function app_replace_goals(context) {
     let r = html_style_text_left_centered(b, a, "");
     let title = property_get(r, "title");
     let rb = app_replace_button_rule_content(title, left, right);
-    let d = storage_local_initialize_context(context, "rule_sets_data", {});
-    let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
-    let completed = property_get_or(g, "completed", false);
     app_replace_lefts_rights_style(rb, completed);
     function lambda() {
       on_click(index);
