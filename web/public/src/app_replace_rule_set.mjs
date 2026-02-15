@@ -235,7 +235,7 @@ export async function app_replace_rule_set(context) {
         each(encouragements, lambda);
         let p2 = html_p(div_below);
         function lambda2() {
-          app_shared_screen_set(context, app_replace_goals);
+          app_shared_screen_set(context, app_replace_rule_set);
         }
         let text = app_karate_button_next_text();
         let b2 = app_replace_button(p2, text, lambda2);
