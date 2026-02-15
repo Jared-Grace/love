@@ -218,11 +218,11 @@ export async function app_replace_rule_set(context) {
           "Well done",
         ];
         let encouragements = list_shuffle_take(encouragements_choices, 2);
-        function lambda(item) {}
-        each(list, lambda);
+        function lambda(item) {
         let p4 = html_div_text(p3, encouragement + "!");
         html_bold(p4);
-        let p2 = html_p(div_below);
+        let p2 = html_p(div_below);}
+        each(list, lambda);
       }
       let nn = null_not_is(index_selected);
       html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
