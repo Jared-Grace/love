@@ -15,7 +15,6 @@ export function html_style_text_left_centered(
     display: "flex",
     "flex-grow": "1",
     "text-align": "center",
-    "min-width": 0,
     "flex-wrap": "wrap",
   });
   let r = {
