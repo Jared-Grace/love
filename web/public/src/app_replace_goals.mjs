@@ -40,6 +40,8 @@ export function app_replace_goals(context) {
       let e = emoji_check();
       a += string_pad_left_space(e);
     } else {
+      if (false) {
+      }
     }
     const condition = not(completed) && completed_previous;
     emoji_point_right();
