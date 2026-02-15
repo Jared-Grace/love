@@ -1,3 +1,4 @@
+import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { invoke } from "../../../love/public/src/invoke.mjs";
@@ -197,6 +198,7 @@ export async function app_replace_rule_set(context) {
       let mapped = list_map(taken, invoke);
       let joined = list_join_empty(mapped);
       let p = html_p(div_below);
+      html_centered(div);
       html_span_text(p, joined);
       html_style_background_color_set(p, highlight);
       let p2 = html_p(div_below);
