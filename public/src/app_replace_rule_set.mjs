@@ -253,7 +253,9 @@ export async function app_replace_rule_set(context) {
             } else {
               next = false;
             }
-          }$i
+          }
+          if (false) {
+          }
           app_shared_screen_set(context, app_replace_rule_set);
         }
         let text = app_karate_button_next_text();
