@@ -234,6 +234,7 @@ export async function app_replace_rule_set(context) {
           if (ii) {
             storage_local_set_context(context, "goal_index", goal_index_next);
           } else {
+            storage_local_set_context(context, "goal_index", 0);
           }
           app_shared_screen_set(context, app_replace_rule_set);
         }
