@@ -247,8 +247,8 @@ export async function app_replace_rule_set(context) {
           app_shared_screen_set(context, app_replace_rule_set);
         }
         let text = app_karate_button_next_text();
-        let b2 = app_replace_button(p2, text, lambda2);
-        html_width_full(component);
+        let bn = app_replace_button(p2, text, lambda2);
+        html_width_full(bn);
       }
       let nn = null_not_is(index_selected);
       html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
