@@ -251,10 +251,8 @@ export async function app_replace_rule_set(context) {
             storage_local_set_context(context, "goal_index", 0);
           } else {
             next = false;
-            const newLocal =
-              "You have completed all goals that are available at this time!";
-            let p5 = html_p_text(p_next, newLocal);
-            html_centered(p5);
+            const text = "You have completed all goals that are available at this time!";
+            html_p_text_centered(p_next, text);
           }
         }
         if (next) {
@@ -273,3 +271,10 @@ export async function app_replace_rule_set(context) {
   }
   refresh();
 }
+function html_p_text_centered(p_next, text) {
+  let p5 = html_p_text(
+    p_next,
+    text
+  ); html_centered(p5);
+}
+
