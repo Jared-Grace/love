@@ -1,3 +1,4 @@
+import { undefined_not_is_assert } from "../../../love/public/src/undefined_not_is_assert.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 export function storage_local_transform_context(
@@ -7,6 +8,7 @@ export function storage_local_transform_context(
   lambda$value,
 ) {
   let value = storage_local_initialize_context(context, key, value_initial);
-  let value_new = lambda$value(value);undefined_not_is_assert
+  let value_new = lambda$value(value);
+  undefined_not_is_assert(value2);
   storage_local_set_context(context, key, value_new);
 }
