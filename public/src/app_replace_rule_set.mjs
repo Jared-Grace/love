@@ -1,3 +1,4 @@
+import { app_replace_button_home } from "../../../love/public/src/app_replace_button_home.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { list_index_is } from "../../../love/public/src/list_index_is.mjs";
@@ -33,7 +34,6 @@ import { app_replace_lefts_rights_style } from "../../../love/public/src/app_rep
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { app_replace_button_rule } from "../../../love/public/src/app_replace_button_rule.mjs";
 import { app_replace_rule_set_get } from "../../../love/public/src/app_replace_rule_set_get.mjs";
-import { app_replace_button_style } from "../../../love/public/src/app_replace_button_style.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { app_replace_button_rule_background_color } from "../../../love/public/src/app_replace_button_rule_background_color.mjs";
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
@@ -43,7 +43,6 @@ import { html_style_background_color_set } from "../../../love/public/src/html_s
 import { app_replace_button_symbol_style_valid } from "../../../love/public/src/app_replace_button_symbol_style_valid.mjs";
 import { app_replace_rule_valid_curry } from "../../../love/public/src/app_replace_rule_valid_curry.mjs";
 import { app_replace_button_symbol_style } from "../../../love/public/src/app_replace_button_symbol_style.mjs";
-import { app_replace_home } from "../../../love/public/src/app_replace_home.mjs";
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { range } from "../../../love/public/src/range.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
@@ -69,19 +68,11 @@ import { app_replace_rule_parse } from "../../../love/public/src/app_replace_rul
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
-import { emoji_home } from "../../../love/public/src/emoji_home.mjs";
-import { html_button_screen } from "../../../love/public/src/html_button_screen.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 export async function app_replace_rule_set(context) {
   let root = property_get(context, "root");
-  let b = html_button_screen(
-    root,
-    emoji_home() + " Home",
-    context,
-    app_replace_home,
-  );
-  app_replace_button_style(b);
+  app_replace_button_home(root, context);
   function lambda2() {
     app_shared_screen_set(context, app_replace_goals);
   }
