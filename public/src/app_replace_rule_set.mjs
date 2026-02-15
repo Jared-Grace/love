@@ -1,3 +1,4 @@
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
 import { html_bold } from "../../../love/public/src/html_bold.mjs";
 import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
@@ -188,7 +189,9 @@ export async function app_replace_rule_set(context) {
       let eq2 = json_equal(current_list, goal_list);
       if (eq2) {
         success = true;
-        function lambda5() {}
+        function lambda5(value) {
+          property_set(object, property_name, value2);
+        }
         storage_local_transform_context(
           context,
           "goals_completed",
