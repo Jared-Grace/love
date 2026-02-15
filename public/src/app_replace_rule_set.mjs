@@ -1,4 +1,4 @@
-import { property_set } from "../../../love/public/src/property_set.mjs";
+import { property_initialize } from "../../../love/public/src/property_initialize.mjs";
 import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
 import { html_bold } from "../../../love/public/src/html_bold.mjs";
 import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
@@ -82,8 +82,8 @@ export async function app_replace_rule_set(context) {
   }
   let b2 = app_replace_button(root, "Goals", lambda2);
   let rule = app_replace_rule_set_get(context);
-  let name = property_get(rule, "name");
-  html_p_text(root, "Rule set: " + name);
+  let rule_name = property_get(rule, "name");
+  html_p_text(root, "Rule set: " + rule_name);
   let goal_index = storage_local_get_context(context, "goal_index");
   let goals = property_get(rule, "goals");
   let goal = list_get(goals, goal_index);
@@ -189,8 +189,16 @@ export async function app_replace_rule_set(context) {
       let eq2 = json_equal(current_list, goal_list);
       if (eq2) {
         success = true;
+        let rule_set_index = storage_local_get_context(
+          context,
+          "rule_set_index",
+        );
         function lambda5(value) {
-          property_set(object, property_name, value2);
+          let value2 = property_initialize(
+            object,
+            property_name,
+            value_initial,
+          );
         }
         storage_local_transform_context(
           context,
