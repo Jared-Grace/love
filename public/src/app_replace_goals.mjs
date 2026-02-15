@@ -47,7 +47,7 @@ export function app_replace_goals(context) {
     if (not(completed)) {
       if (completed_previous) {
         let highlight = app_replace_rule_set_highlight();
-        html_style_background_color_set(component, background);
+        html_style_background_color_set(b, highlight);
       }
     }
     app_replace_lefts_rights_style(rb, completed);
