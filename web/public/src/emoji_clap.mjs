@@ -1,3 +1,4 @@
 export function emoji_clap() {
-  return "👏";
+  let r = "👏";
+  return r;
 }
