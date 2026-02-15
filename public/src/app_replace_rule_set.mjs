@@ -184,7 +184,7 @@ export async function app_replace_rule_set(context) {
         emoji_clap,
         emoji_medal_star,
         emoji_medal_1,
-      ];
+      ];lri
       html_span_text(p_goal, text2);
     }
     let nn = null_not_is(index_selected);
