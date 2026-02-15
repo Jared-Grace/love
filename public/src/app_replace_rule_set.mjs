@@ -1,3 +1,4 @@
+import { json_to } from "../../../love/public/src/json_to.mjs";
 import { property_initialize_empty } from "../../../love/public/src/property_initialize_empty.mjs";
 import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
 import { html_bold } from "../../../love/public/src/html_bold.mjs";
@@ -194,7 +195,9 @@ export async function app_replace_rule_set(context) {
           "rule_set_index",
         );
         function lambda5(value) {
-          let r = property_initialize_empty(value, rule_name);
+          let value2 = property_initialize_empty(value, rule_name);
+          let json = json_to(object);
+          let value3 = property_initialize_empty(value2, rule_name);
         }
         storage_local_transform_context(
           context,
