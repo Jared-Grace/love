@@ -1,3 +1,4 @@
+import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { invoke } from "../../../love/public/src/invoke.mjs";
@@ -193,7 +194,8 @@ export async function app_replace_rule_set(context) {
         emoji_party_popper,
         emoji_party_face,
       ];
-      let taken = list_shuffle_take(choices, 3);laf
+      let taken = list_shuffle_take(choices, 3);
+      list_add_first(list, item);
       let mapped = list_map(taken, invoke);
       let joined = list_join_empty(mapped);
       log({
