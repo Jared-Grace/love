@@ -191,10 +191,6 @@ export async function app_replace_rule_set(context) {
       let eq2 = json_equal(current_list, goal_list);
       if (eq2) {
         success = true;
-        let rule_set_index = storage_local_get_context(
-          context,
-          "rule_set_index",
-        );
         function lambda5(value) {
           let r = property_initialize_empty(value, rule_name);
           let json = json_to(goal);
