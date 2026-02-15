@@ -251,10 +251,10 @@ export async function app_replace_rule_set(context) {
             storage_local_set_context(context, "goal_index", 0);
           } else {
             next = false;
-            let p5 = html_p_text_centered(
-              p_next,
-              "You have completed all goals that are available at this time!",
-            );
+            const newLocal =
+              "You have completed all goals that are available at this time!";
+            let p5 = html_p_text(p_next, newLocal);
+            html_centered(p5);
           }
         }
         if (next) {
