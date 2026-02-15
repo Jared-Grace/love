@@ -1,7 +1,7 @@
 export function app_replace_rule_sets() {
   let v = [
     {
-      name: "Grow",
+      name: "Double",
       rules: ["a > a a"],
       goals: [
         {
@@ -19,7 +19,7 @@ export function app_replace_rule_sets() {
       ],
     },
     {
-      name: "Shrink",
+      name: "Half",
       rules: ["a a > a"],
       goals: [
         {
