@@ -1,3 +1,4 @@
+import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
 import { html_bold } from "../../../love/public/src/html_bold.mjs";
 import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
@@ -187,6 +188,12 @@ export async function app_replace_rule_set(context) {
       let eq2 = json_equal(current_list, goal_list);
       if (eq2) {
         success = true;
+        storage_local_transform_context(
+          context2,
+          key,
+          value_initial,
+          transform,
+        );
         let lambda4 = app_replace_button_symbol_style_valid_curry_right(true);
         each_nested([goal_list_symbols, sbs], lambda4);
         let choices = [
