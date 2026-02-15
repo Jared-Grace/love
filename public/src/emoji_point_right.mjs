@@ -1,3 +1,4 @@
 export function emoji_point_right() {
-  return "👉";
+  let r = "👉";
+  return r;
 }
