@@ -1,3 +1,4 @@
+import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { invoke } from "../../../love/public/src/invoke.mjs";
 import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
 import { emoji_party_face } from "../../../love/public/src/emoji_party_face.mjs";
@@ -193,6 +194,7 @@ export async function app_replace_rule_set(context) {
       ];
       let taken = list_shuffle_take(choices, 3);
       let mapped = list_map(taken, invoke);
+      let joined = list_join_empty(list);
       html_span_text(p_goal, text2);
     }
     let nn = null_not_is(index_selected);
