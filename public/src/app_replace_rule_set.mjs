@@ -241,7 +241,7 @@ export async function app_replace_rule_set(context) {
             );
             let rule_sets = app_replace_rule_sets();
             let rule_set_index_next = rule_set_index + 1;
-            let ii2 = list_index_is(rule_sets, rule_set_index_next);
+            let ii2 = list_index_is(rule_sets, rule_set_index_next);$i
             function transform(rule_set_index) {}
             storage_local_transform_context(
               context,
