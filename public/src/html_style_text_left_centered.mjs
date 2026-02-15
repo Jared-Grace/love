@@ -15,6 +15,7 @@ export function html_style_text_left_centered(
     "flex-grow": "1",
     "flex-wrap": "wrap",
     "justify-content": "center",
+    "align-items": "center",
   });
   let r = {
     title,
