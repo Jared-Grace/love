@@ -232,6 +232,7 @@ export async function app_replace_rule_set(context) {
         function lambda2() {
           let goal_index_next = goal_index + 1;
           let ii = list_index_is(goals, goal_index_next);
+          let next = true;
           if (ii) {
             storage_local_set_context(context, "goal_index", goal_index_next);
           } else {
@@ -250,6 +251,7 @@ export async function app_replace_rule_set(context) {
               );
               storage_local_set_context(context, "goal_index", 0);
             } else {
+              next = false;
             }
           }
           app_shared_screen_set(context, app_replace_rule_set);
