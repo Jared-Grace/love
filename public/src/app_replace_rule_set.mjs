@@ -250,13 +250,6 @@ export async function app_replace_rule_set(context) {
               );
               storage_local_set_context(context, "goal_index", 0);
             }
-            function transform(rule_set_index) {}
-            storage_local_transform_context(
-              context,
-              "rule_set_index",
-              null,
-              transform,
-            );
           }
           app_shared_screen_set(context, app_replace_rule_set);
         }
