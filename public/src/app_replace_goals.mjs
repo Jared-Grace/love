@@ -49,8 +49,7 @@ export function app_replace_goals(context) {
     let background = app_replace_rule_set_highlight();
     const condition = not(completed) && completed_previous;
     html_style_background_color_set_if(condition, b, background);
-    let enabled = condition;
-    app_replace_lefts_rights_style(r2, enabled);
+    app_replace_lefts_rights_style(r2, completed);
     function lambda() {
       on_click(index);
     }
