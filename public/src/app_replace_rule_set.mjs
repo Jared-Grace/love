@@ -197,7 +197,12 @@ export async function app_replace_rule_set(context) {
           let g = property_initialize_empty(r, json);
           property_set(g, "completed", true);
         }
-        storage_local_transform_context(context, "goals_data", {}, lambda5);
+        storage_local_transform_context(
+          context,
+          "rule_sets_data",
+          {},
+          lambda5,
+        );
         let lambda4 = app_replace_button_symbol_style_valid_curry_right(true);
         each_nested([goal_list_symbols, sbs], lambda4);
         let choices = [
