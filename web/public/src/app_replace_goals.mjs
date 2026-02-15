@@ -1,3 +1,4 @@
+import { string_pad_left_space } from "../../../love/public/src/string_pad_left_space.mjs";
 import { emoji_point_right } from "../../../love/public/src/emoji_point_right.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { app_replace_button_rule_style } from "../../../love/public/src/app_replace_button_rule_style.mjs";
@@ -37,7 +38,7 @@ export function app_replace_goals(context) {
     let a = add_1(index) + ".";
     if (completed) {
       let e = emoji_check();
-      a += " " + e;
+      a += string_pad_left_space(e);
     } else {
     }
     const condition = not(completed) && completed_previous;
