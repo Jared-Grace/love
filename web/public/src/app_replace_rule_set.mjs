@@ -1,3 +1,4 @@
+import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { app_replace_button_home } from "../../../love/public/src/app_replace_button_home.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
@@ -238,7 +239,9 @@ export async function app_replace_rule_set(context) {
               context,
               "rule_set_index",
             );
+            let rule_sets = app_replace_rule_sets();
             let rule_set_index_next = rule_set_index + 1;
+            let ii2 = list_index_is(list, index4);
             function transform(rule_set_index) {}
             storage_local_transform_context(
               context,
