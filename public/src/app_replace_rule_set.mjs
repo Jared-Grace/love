@@ -219,9 +219,10 @@ export async function app_replace_rule_set(context) {
         ];
         let encouragements = list_shuffle_take(encouragements_choices, 2);
         function lambda(item) {
-        let p4 = html_div_text(p3, encouragement + "!");
-        html_bold(p4);
-        let p2 = html_p(div_below);}
+          let p4 = html_div_text(p3, encouragement + "!");
+          html_bold(p4);
+          let p2 = html_p(div_below);
+        }
         each(list, lambda);
       }
       let nn = null_not_is(index_selected);
