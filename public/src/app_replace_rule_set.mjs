@@ -1,3 +1,4 @@
+import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
@@ -201,6 +202,7 @@ export async function app_replace_rule_set(context) {
       html_centered(p);
       html_span_text(p, joined);
       html_style_background_color_set(p, highlight);
+      html_style_font_size(html, value);
       let p2 = html_p(div_below);
     }
     let nn = null_not_is(index_selected);
