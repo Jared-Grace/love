@@ -108,15 +108,15 @@ export async function app_replace_rule_set(context) {
     let arrow = property_get(r2, "arrow");
     let rights = property_get(r2, "rights");
     let lefts = property_get(r2, "lefts");
-    let b = property_get(r2, "b");
-    html_disable(b);
-    object_merge(b, {
+    let rb = property_get(r2, "b");
+    html_disable(rb);
+    object_merge(rb, {
       rule,
       lefts,
       rights,
       arrow,
     });
-    return b;
+    return rb;
   }
   let rules_buttons = list_map_index(rules_parsed, each_rule);
   let label_symbols = html_p(root);
