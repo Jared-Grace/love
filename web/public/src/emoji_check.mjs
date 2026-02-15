@@ -1,4 +1,4 @@
 export function emoji_check() {
-  let v = "✅";
-  return v;
+  let e = "✅";
+  return e;
 }
