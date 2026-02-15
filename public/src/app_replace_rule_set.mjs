@@ -1,5 +1,4 @@
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { invoke } from "../../../love/public/src/invoke.mjs";
 import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
@@ -197,14 +196,9 @@ export async function app_replace_rule_set(context) {
       list_add_first(taken, emoji_check);
       let mapped = list_map(taken, invoke);
       let joined = list_join_empty(mapped);
-      log({
-        joined,
-        taken,
-        mapped,
-      });
-      html_span_text(p_goal, joined);
-      html_style_background_color_set(div_symbols, highlight);
       let p = html_p(div_below);
+      html_span_text(p, joined);
+      html_style_background_color_set(p, highlight);
       let p2 = html_p(div_below);
     }
     let nn = null_not_is(index_selected);
