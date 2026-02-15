@@ -199,7 +199,7 @@ export async function app_replace_rule_set(context) {
           let r = property_initialize_empty(value, rule_name);
           let json = json_to(goal);
           let value3 = property_initialize_empty(r, json);
-          property_set(object, property_name, value2);
+          property_set(value3, "completed", true);
         }
         storage_local_transform_context(
           context,
