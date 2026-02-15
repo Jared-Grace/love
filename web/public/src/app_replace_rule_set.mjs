@@ -1,7 +1,6 @@
 import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
 import { emoji_party_face } from "../../../love/public/src/emoji_party_face.mjs";
 import { emoji_party_popper } from "../../../love/public/src/emoji_party_popper.mjs";
-import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { emoji_clap } from "../../../love/public/src/emoji_clap.mjs";
 import { emoji_100 } from "../../../love/public/src/emoji_100.mjs";
 import { emoji_medal_star } from "../../../love/public/src/emoji_medal_star.mjs";
@@ -191,9 +190,8 @@ export async function app_replace_rule_set(context) {
         emoji_party_popper,
         emoji_party_face,
       ];
-      let taken = list_shuffle_take(list, count);
-      let r3 = list_random_item(choices);
-      let text2 = r3();
+      let taken = list_shuffle_take(choices, 3);
+      let mapped = list_map(list, function lambda(item) {});
       html_span_text(p_goal, text2);
     }
     let nn = null_not_is(index_selected);
