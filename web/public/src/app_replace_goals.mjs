@@ -1,3 +1,4 @@
+import { app_replace_button_rule_style } from "../../../love/public/src/app_replace_button_rule_style.mjs";
 import { html_style_background_color_set_if } from "../../../love/public/src/html_style_background_color_set_if.mjs";
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -41,6 +42,7 @@ export function app_replace_goals(context) {
     let end = property_get(goal, "end");
     let right = text_split_empty(end);
     let b = app_replace_button_wide(root, "", lambda);
+    app_replace_button_rule_style(b);
     let r = html_style_text_left_centered(b, a, "");
     let title = property_get(r, "title");
     let r2 = app_replace_button_rule_content(title, left, right);
