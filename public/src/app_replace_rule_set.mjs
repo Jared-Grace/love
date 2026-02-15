@@ -1,3 +1,4 @@
+import { html_p_text_centered } from "../../../love/public/src/html_p_text_centered.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { app_replace_button_home } from "../../../love/public/src/app_replace_button_home.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
@@ -251,7 +252,8 @@ export async function app_replace_rule_set(context) {
             storage_local_set_context(context, "goal_index", 0);
           } else {
             next = false;
-            const text = "You have completed all goals that are available at this time!";
+            const text =
+              "You have completed all goals that are available at this time!";
             html_p_text_centered(p_next, text);
           }
         }
@@ -271,10 +273,3 @@ export async function app_replace_rule_set(context) {
   }
   refresh();
 }
-function html_p_text_centered(p_next, text) {
-  let p5 = html_p_text(
-    p_next,
-    text
-  ); html_centered(p5);
-}
-
