@@ -235,12 +235,12 @@ export async function app_replace_rule_set(context) {
         }
         each(encouragements, lambda);
         let p2 = html_p(div_below);
-        let goal_index_next = goal_index + 1;
-        let ii = list_index_is(goals, goal_index_next);
-        if (false) {
-        } else {
-        }
         function lambda2() {
+          let goal_index_next = goal_index + 1;
+          let ii = list_index_is(goals, goal_index_next);
+          if (ii) {
+          } else {
+          }
           app_shared_screen_set(context, app_replace_rule_set);
         }
         let text = app_karate_button_next_text();
