@@ -1,3 +1,5 @@
+import { emoji_clap } from "../../../love/public/src/emoji_clap.mjs";
+import { emoji_100 } from "../../../love/public/src/emoji_100.mjs";
 import { emoji_medal_star } from "../../../love/public/src/emoji_medal_star.mjs";
 import { emoji_medal_1 } from "../../../love/public/src/emoji_medal_1.mjs";
 import { emoji_trophy } from "../../../love/public/src/emoji_trophy.mjs";
@@ -176,7 +178,9 @@ export async function app_replace_rule_set(context) {
       each_nested([goal_list_symbols, sbs], lambda4);
       let text = emoji_check();
       let span = html_span_text(div_symbols, text);
-      let text2 = emoji_trophy();emoji_100();
+      let text2 = emoji_trophy();
+      emoji_100();
+      emoji_clap();
       emoji_medal_star();
       emoji_medal_1();
       html_span_text(p_goal, text2);
@@ -187,7 +191,3 @@ export async function app_replace_rule_set(context) {
   }
   refresh();
 }
-function emoji_100() {
-  '💯';
-}
-
