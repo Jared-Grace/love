@@ -1,3 +1,4 @@
+import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { list_index_is } from "../../../love/public/src/list_index_is.mjs";
 import { app_karate_button_next_text } from "../../../love/public/src/app_karate_button_next_text.mjs";
 import { app_replace_rule_sets_data_goal } from "../../../love/public/src/app_replace_rule_sets_data_goal.mjs";
@@ -239,6 +240,7 @@ export async function app_replace_rule_set(context) {
           let goal_index_next = goal_index + 1;
           let ii = list_index_is(goals, goal_index_next);
           if (ii) {
+            storage_local_set_context(context, "goal_index", goal_index_next);
           } else {
           }
           app_shared_screen_set(context, app_replace_rule_set);
