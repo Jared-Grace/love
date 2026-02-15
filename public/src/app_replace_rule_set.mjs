@@ -204,7 +204,8 @@ export async function app_replace_rule_set(context) {
       html_style_background_color_set(p, highlight);
       html_style_font_size(p, "1.5em");
       app_replace_button_symbol_style(p);
-      let p3 = html_p(root2);
+      let p3 = html_p(p);
+      let p4 = html_p_text(root2, text);
       let p2 = html_p(div_below);
     }
     let nn = null_not_is(index_selected);
