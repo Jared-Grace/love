@@ -55,7 +55,7 @@ export function app_replace_rule_sets() {
       ],
     },
     {
-      name: "Grow right",
+      name: "Grow left",
       rules: ["a > b a"],
       goals: [
         {
