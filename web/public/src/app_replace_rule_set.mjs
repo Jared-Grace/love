@@ -202,6 +202,7 @@ export async function app_replace_rule_set(context) {
         mapped,
       });
       html_span_text(p_goal, joined);
+      html_style_background_color_set(div_symbols, highlight);
     }
     let nn = null_not_is(index_selected);
     html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
