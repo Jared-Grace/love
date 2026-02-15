@@ -38,6 +38,7 @@ export function app_replace_goals(context) {
     if (completed) {
       let e = emoji_check();
       a += " " + e;
+    } else {
     }
     const condition = not(completed) && completed_previous;
     emoji_point_right();
