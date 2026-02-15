@@ -30,6 +30,7 @@ export function app_replace_goals(context) {
     let a = add_1(index) + ".";
     if (completed) {
       let e = emoji_check();
+      a += " " + e;
     }
     let start = property_get(goal, "start");
     let left = text_split_empty(start);
