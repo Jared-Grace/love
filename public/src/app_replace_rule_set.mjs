@@ -212,7 +212,12 @@ export async function app_replace_rule_set(context) {
         html_span_text(emojis, joined);
         html_style_font_size(emojis, "1.5em");
         let p3 = html_div(p);
-        const encouragements = ["Congratulations", "Success"];
+        const encouragements = [
+          "Congratulations",
+          "Success",
+          "Good job",
+          "Well done",
+        ];
         let encouragement = list_random_item(encouragements);
         let p4 = html_div_text(p3, encouragement + "!");
         html_bold(p4);
