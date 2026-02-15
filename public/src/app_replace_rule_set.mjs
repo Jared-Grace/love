@@ -128,7 +128,7 @@ export async function app_replace_rule_set(context) {
   let goal_list_symbols = app_replace_button_side(p_goal, goal_list);
   let lambda4 = app_replace_button_symbol_style_valid_curry_right(false);
   each(goal_list_symbols, lambda4);
-  let on_a = app_replace_rule_set_highlight();
+  let highlight = app_replace_rule_set_highlight();
   refresh();
   function refresh() {
     function each_button_rule_refresh(rb, index2) {
@@ -141,7 +141,7 @@ export async function app_replace_rule_set(context) {
       app_replace_lefts_rights_style(rb, enabled);
       const selected = index2 === index_selected;
       let on_b = app_replace_button_rule_background_color();
-      let c = ternary_nested(selected, on_a, enabled, on_b, "#a8a8a8ff");
+      let c = ternary_nested(selected, highlight, enabled, on_b, "#a8a8a8ff");
       html_style_background_color_set(rb, c);
       let arrow2 = property_get(rb, "arrow");
       html_style_font_color_set_if(enabled, arrow2, "black", "#6a6a6a");
