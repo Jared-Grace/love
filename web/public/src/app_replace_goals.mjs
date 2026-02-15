@@ -1,3 +1,4 @@
+import { emoji_point_right } from "../../../love/public/src/emoji_point_right.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { app_replace_button_rule_style } from "../../../love/public/src/app_replace_button_rule_style.mjs";
 import { html_style_background_color_set_if } from "../../../love/public/src/html_style_background_color_set_if.mjs";
@@ -38,6 +39,7 @@ export function app_replace_goals(context) {
       let e = emoji_check();
       a += " " + e;
     }
+    emoji_point_right();
     let start = property_get(goal, "start");
     let left = text_split_empty(start);
     let end = property_get(goal, "end");
