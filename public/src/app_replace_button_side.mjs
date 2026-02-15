@@ -8,7 +8,7 @@ export function app_replace_button_side(parent, list_symbols) {
     app_replace_button_symbol_style(span);
     html_style_assign(span, {
       display: "inline-block",
-      height: "auto",
+      "line-height": 1,
     });
     return span;
   }
