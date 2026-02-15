@@ -92,19 +92,19 @@ export function app_replace_rule_sets() {
     },
     {
       name: "Shrink left",
-      rules: ["a > b a"],
+      rules: ["b a > a"],
       goals: [
         {
-          start: "a",
-          end: "bba",
+          start: "bba",
+          end: "a",
         },
         {
-          start: "aa",
-          end: "bbbabba",
+          start: "bbbabba",
+          end: "aa",
         },
         {
-          start: "aaa",
-          end: "bbbabbaba",
+          start: "bbbabbaba",
+          end: "aaa",
         },
       ],
     },
