@@ -14,6 +14,7 @@ export function html_style_text_left_centered(
   html_style_assign(title, {
     "flex-grow": "1",
     "text-align": "center",
+    "min-width": 0,
   });
   let r = {
     title,
