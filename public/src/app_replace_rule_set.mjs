@@ -1,3 +1,4 @@
+import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { emoji_clap } from "../../../love/public/src/emoji_clap.mjs";
 import { emoji_100 } from "../../../love/public/src/emoji_100.mjs";
 import { emoji_medal_star } from "../../../love/public/src/emoji_medal_star.mjs";
@@ -185,7 +186,7 @@ export async function app_replace_rule_set(context) {
         emoji_medal_star,
         emoji_medal_1,
       ];
-      lri;
+      let r3 = list_random_item(list);
       html_span_text(p_goal, text2);
     }
     let nn = null_not_is(index_selected);
