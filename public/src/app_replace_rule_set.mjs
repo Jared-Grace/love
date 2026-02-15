@@ -1,3 +1,4 @@
+import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
 import { emoji_party_face } from "../../../love/public/src/emoji_party_face.mjs";
 import { emoji_party_popper } from "../../../love/public/src/emoji_party_popper.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
@@ -190,6 +191,7 @@ export async function app_replace_rule_set(context) {
         emoji_party_popper,
         emoji_party_face,
       ];
+      let taken = list_shuffle_take(list, count);
       let r3 = list_random_item(choices);
       let text2 = r3();
       html_span_text(p_goal, text2);
