@@ -14,7 +14,6 @@ export function html_style_text_left_centered(
   html_style_assign(title, {
     display: "flex",
     "flex-grow": "1",
-    "text-align": "center",
     "flex-wrap": "wrap",
     "justify-content": "center",
   });
