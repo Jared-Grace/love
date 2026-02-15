@@ -26,7 +26,7 @@ export function app_replace_goals(context) {
     let d = storage_local_initialize_context(context, "rule_sets_data", {});
     let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
     let completed = property_get_or(g, "completed", false);
-    let a = add_1(index) + ".";
+    let a = add_1(index) + ".";$i
     let start = property_get(goal, "start");
     let left = text_split_empty(start);
     let end = property_get(goal, "end");
