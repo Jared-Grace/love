@@ -191,7 +191,8 @@ export async function app_replace_rule_set(context) {
         emoji_party_face,
       ];
       let taken = list_shuffle_take(choices, 3);
-      let mapped = list_map(list, function lambda(item) {});
+      function lambda(item) {}
+      let mapped = list_map(list, lambda);
       html_span_text(p_goal, text2);
     }
     let nn = null_not_is(index_selected);
