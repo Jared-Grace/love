@@ -1,3 +1,4 @@
+import { emoji_trophy } from "../../../love/public/src/emoji_trophy.mjs";
 import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { each_nested } from "../../../love/public/src/each_nested.mjs";
@@ -173,7 +174,8 @@ export async function app_replace_rule_set(context) {
       each_nested([goal_list_symbols, sbs], lambda4);
       let text = emoji_check();
       let span = html_span_text(div_symbols, text);
-      html_span_text(div_symbols, text);
+      let text2 = emoji_trophy();
+      html_span_text(p_goal, text2);
     }
     let nn = null_not_is(index_selected);
     html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
