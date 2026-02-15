@@ -1,3 +1,4 @@
+import { app_karate_button_next_text } from "../../../love/public/src/app_karate_button_next_text.mjs";
 import { app_replace_rule_sets_data_goal } from "../../../love/public/src/app_replace_rule_sets_data_goal.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
@@ -233,6 +234,11 @@ export async function app_replace_rule_set(context) {
         }
         each(encouragements, lambda);
         let p2 = html_p(div_below);
+        function lambda2() {
+          app_shared_screen_set(context, app_replace_goals);
+        }
+        let text = app_karate_button_next_text();
+        let b2 = app_replace_button(p2, text, lambda2);
       }
       let nn = null_not_is(index_selected);
       html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
