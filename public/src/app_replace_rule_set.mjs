@@ -1,6 +1,5 @@
 import { html_bold } from "../../../love/public/src/html_bold.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
-import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
@@ -212,13 +211,13 @@ export async function app_replace_rule_set(context) {
         html_span_text(emojis, joined);
         html_style_font_size(emojis, "1.5em");
         let p3 = html_div(p);
-        const encouragements = [
+        const encouragements_choices = [
           "Congratulations",
           "Success",
           "Good job",
           "Well done",
         ];
-        let encouragement = list_random_item(encouragements);
+        let encouragements = list_shuffle_take(encouragements_choices, 2);
         let p4 = html_div_text(p3, encouragement + "!");
         html_bold(p4);
         let p2 = html_p(div_below);
