@@ -45,12 +45,12 @@ export function app_replace_rule_sets() {
           end: "bba",
         },
         {
-          start: "abab",
-          end: "baba",
-        },
-        {
           start: "abbbb",
           end: "bbbba",
+        },
+        {
+          start: "abbabb",
+          end: "bbbbaa",
         },
       ],
     },
