@@ -1,10 +1,8 @@
+import { app_replace_button_home } from "../../../love/public/src/app_replace_button_home.mjs";
 import { app_replace_font_size_adjust_curried } from "../../../love/public/src/app_replace_font_size_adjust_curried.mjs";
 import { multiply_curried_right } from "../../../love/public/src/multiply_curried_right.mjs";
 import { divide_curried_right } from "../../../love/public/src/divide_curried_right.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { app_replace_home } from "../../../love/public/src/app_replace_home.mjs";
-import { emoji_home } from "../../../love/public/src/emoji_home.mjs";
-import { html_button_screen } from "../../../love/public/src/html_button_screen.mjs";
 import { app_replace_font_size_factor } from "../../../love/public/src/app_replace_font_size_factor.mjs";
 import { emoji_font_smaller } from "../../../love/public/src/emoji_font_smaller.mjs";
 import { emoji_font_larger } from "../../../love/public/src/emoji_font_larger.mjs";
