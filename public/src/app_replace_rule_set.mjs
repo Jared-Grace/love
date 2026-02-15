@@ -234,6 +234,7 @@ export async function app_replace_rule_set(context) {
         }
         each(encouragements, lambda);
         let p2 = html_p(div_below);
+        goal_index = goal_index + 1;
         function lambda2() {
           app_shared_screen_set(context, app_replace_rule_set);
         }
