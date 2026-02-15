@@ -1,5 +1,4 @@
 import { html_bold } from "../../../love/public/src/html_bold.mjs";
-import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
@@ -218,7 +217,7 @@ export async function app_replace_rule_set(context) {
           "Well done",
         ];
         let encouragements = list_shuffle_take(encouragements_choices, 2);
-        let p4 = html_div_text(p3, encouragement + "!");
+        let p4 = html_div(p3);
         html_bold(p4);
         function lambda(encouragement) {
           html_span_text(p4, encouragement + "! ");
