@@ -185,7 +185,6 @@ export async function app_replace_rule_set(context) {
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(true);
       each_nested([goal_list_symbols, sbs], lambda4);
       let choices = [
-        emoji_check,
         emoji_trophy,
         emoji_100,
         emoji_clap,
@@ -195,7 +194,7 @@ export async function app_replace_rule_set(context) {
         emoji_party_face,
       ];
       let taken = list_shuffle_take(choices, 3);
-      list_add_first(list, item);
+      list_add_first(taken, emoji_check);
       let mapped = list_map(taken, invoke);
       let joined = list_join_empty(mapped);
       log({
