@@ -30,6 +30,7 @@ export function app_replace_goals(context) {
     app_replace_button_rule_content_styled(title, left, right);
     let d = storage_local_get_context(context, "rule_sets_data", {});
     let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
+    property_get(g, "completed");
     function lambda() {
       on_click(index);
     }
