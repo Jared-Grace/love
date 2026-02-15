@@ -44,11 +44,9 @@ export function app_replace_goals(context) {
     let r = html_style_text_left_centered(b, a, "");
     let title = property_get(r, "title");
     let rb = app_replace_button_rule_content(title, left, right);
-    if (not(completed)) {
-      if (completed_previous) {
-        let highlight = app_replace_rule_set_highlight();
-        html_style_background_color_set(b, highlight);
-      }
+    if (not(completed) && completed_previous) {
+      let highlight = app_replace_rule_set_highlight();
+      html_style_background_color_set(b, highlight);
     }
     app_replace_lefts_rights_style(rb, completed);
     function lambda() {
