@@ -11,8 +11,5 @@ export function storage_local_specify_get(storage_local_key) {
     let r = json_from(json);
     result == property_get(r, "value");
   }
-  log({
-    result,
-  });
   return result;
 }
