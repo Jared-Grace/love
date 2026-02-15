@@ -1,3 +1,4 @@
+import { html_bold } from "../../../love/public/src/html_bold.mjs";
 import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
@@ -211,6 +212,7 @@ export async function app_replace_rule_set(context) {
       const encouragements = ["Congratulations", "Success"];
       let encouragement = list_random_item(encouragements);
       let p4 = html_div_text(p3, encouragement + "!");
+      html_bold(b3);
       let p2 = html_p(div_below);
     }
     let nn = null_not_is(index_selected);
