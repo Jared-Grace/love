@@ -193,7 +193,7 @@ export async function app_replace_rule_set(context) {
         emoji_party_popper,
         emoji_party_face,
       ];
-      let taken = list_shuffle_take(choices, 3);
+      let taken = list_shuffle_take(choices, 3);laf
       let mapped = list_map(taken, invoke);
       let joined = list_join_empty(mapped);
       log({
