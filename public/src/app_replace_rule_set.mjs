@@ -254,9 +254,9 @@ export async function app_replace_rule_set(context) {
               next = false;
             }
           }
-          if (false) {
+          if (next) {
+            app_shared_screen_set(context, app_replace_rule_set);
           }
-          app_shared_screen_set(context, app_replace_rule_set);
         }
         let text = app_karate_button_next_text();
         let bn = app_replace_button(p2, text, lambda2);
