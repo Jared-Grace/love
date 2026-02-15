@@ -187,7 +187,7 @@ export async function app_replace_rule_set(context) {
         emoji_medal_star,
         emoji_medal_1,
         emoji_party_popper,
-        emoji_party_popper,
+        emoji_party_face,
       ];
       let r3 = list_random_item(choices);
       let text2 = r3();
