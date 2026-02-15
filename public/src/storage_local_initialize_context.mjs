@@ -6,6 +6,7 @@ export function storage_local_initialize_context(context, key, value_initial) {
   let value = storage_local_initialize(app_fn, key, value_initial);
   log({
     value_initial,
+    value,
   });
   return value;
 }
