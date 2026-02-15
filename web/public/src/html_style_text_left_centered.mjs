@@ -12,6 +12,7 @@ export function html_style_text_left_centered(
   let n = html_span_text(component, text_left);
   let title = html_span_text(component, text_centered);
   html_style_assign(title, {
+    display: "flex",
     "flex-grow": "1",
     "text-align": "center",
     "min-width": 0,
