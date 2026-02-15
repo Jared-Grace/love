@@ -56,19 +56,19 @@ export function app_replace_rule_sets() {
     },
     {
       name: "Grow right",
-      rules: ["a > a b"],
+      rules: ["a > b a"],
       goals: [
         {
           start: "a",
-          end: "abb",
+          end: "bba",
         },
         {
           start: "aa",
-          end: "abbabbb",
+          end: "bbbabba",
         },
         {
           start: "aaa",
-          end: "ababbabbb",
+          end: "bbbabbaba",
         },
       ],
     },
