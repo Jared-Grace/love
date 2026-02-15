@@ -128,7 +128,7 @@ export async function app_replace_rule_set(context) {
   let goal_list_symbols = app_replace_button_side(p_goal, goal_list);
   let lambda4 = app_replace_button_symbol_style_valid_curry_right(false);
   each(goal_list_symbols, lambda4);
-  let highlight = app_replace_rule_set_highlight();
+  let highlight = app_replace_rule_set_highlight();hd
   let p = html_p(root2);
   let p2 = html_p(root3);
   refresh();
