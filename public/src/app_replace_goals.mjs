@@ -46,7 +46,7 @@ export function app_replace_goals(context) {
     app_replace_button_rule_style(b);
     let r = html_style_text_left_centered(b, a, "");
     let title = property_get(r, "title");
-    html_style_set(title, "line-height", 1.3);
+    html_style_set(title, "line-height", 1.4);
     let r2 = app_replace_button_rule_content(title, left, right);
     let background = app_replace_rule_set_highlight();
     const condition = not(completed) && completed_previous;
