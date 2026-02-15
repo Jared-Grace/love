@@ -200,16 +200,16 @@ export async function app_replace_rule_set(context) {
       let mapped = list_map(taken, invoke);
       let joined = list_join_empty(mapped);
       let p = html_p(div_below);
-      let emojis = html_p(p);
-      html_centered(p);
-      html_span_text(p, joined);
       html_style_background_color_set(p, highlight);
-      html_style_font_size(p, "1.5em");
       app_replace_button_symbol_style(p);
+      html_centered(p);
+      let emojis = html_p(p);
+      html_span_text(emojis, joined);
+      html_style_font_size(emojis, "1.5em");
       let p3 = html_p(p);
       const encouragements = ["Congratulations", "Success"];
       let encouragement = list_random_item(encouragements);
-      let p4 = html_p_text(p, encouragement + "!");
+      let p4 = html_p_text(p3, encouragement + "!");
       let p2 = html_p(div_below);
     }
     let nn = null_not_is(index_selected);
