@@ -198,6 +198,8 @@ export async function app_replace_rule_set(context) {
       let joined = list_join_empty(mapped);
       log({
         joined,
+        taken,
+        mapped,
       });
       html_span_text(p_goal, joined);
     }
