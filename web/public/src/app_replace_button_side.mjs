@@ -6,7 +6,7 @@ export function app_replace_button_side(parent, list_symbols) {
   function symbol_each(symbol) {
     let span = html_span_text(parent, symbol);
     app_replace_button_symbol_style(span);
-    html_style_set(b, "flex", "0 0 auto");
+    html_style_set(span, "flex", "0 0 auto");
     return span;
   }
   let mapped = list_map(list_symbols, symbol_each);
