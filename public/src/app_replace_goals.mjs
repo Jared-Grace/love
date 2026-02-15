@@ -1,3 +1,4 @@
+import { app_replace_button_home } from "../../../love/public/src/app_replace_button_home.mjs";
 import { property_get_or } from "../../../love/public/src/property_get_or.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
@@ -17,6 +18,7 @@ import { app_replace_rule_set_get } from "../../../love/public/src/app_replace_r
 import { text_split_empty } from "./text_split_empty.mjs";
 export function app_replace_goals(context) {
   let root = property_get(context, "root");
+  app_replace_button_home(root, context);
   let item = app_replace_rule_set_get(context);
   let rule_name = property_get(item, "name");
   html_p_text(root, "Rule set: " + rule_name);
