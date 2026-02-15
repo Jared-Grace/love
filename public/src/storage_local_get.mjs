@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { storage_local_get_global } from "../../../love/public/src/storage_local_get_global.mjs";
 import { storage_local_enabled } from "../../../love/public/src/storage_local_enabled.mjs";
 import { storage_local_specify_get } from "../../../love/public/src/storage_local_specify_get.mjs";
