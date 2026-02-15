@@ -130,8 +130,6 @@ export async function app_replace_rule_set(context) {
   each(goal_list_symbols, lambda4);
   let highlight = app_replace_rule_set_highlight();
   let div_below = html_div(root);
-  let p = html_p(div_below);
-  let p2 = html_p(div_below);
   refresh();
   function refresh() {
     function each_button_rule_refresh(rb, index2) {
@@ -185,9 +183,8 @@ export async function app_replace_rule_set(context) {
     if (eq2) {
       let lambda4 = app_replace_button_symbol_style_valid_curry_right(true);
       each_nested([goal_list_symbols, sbs], lambda4);
-      let text = emoji_check();
-      let span = html_span_text(div_symbols, text);
       let choices = [
+        emoji_check,
         emoji_trophy,
         emoji_100,
         emoji_clap,
@@ -206,6 +203,8 @@ export async function app_replace_rule_set(context) {
       });
       html_span_text(p_goal, joined);
       html_style_background_color_set(div_symbols, highlight);
+      let p = html_p(div_below);
+      let p2 = html_p(div_below);
     }
     let nn = null_not_is(index_selected);
     html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
