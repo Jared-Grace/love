@@ -11,7 +11,7 @@ import { emoji_font_larger } from "../../../love/public/src/emoji_font_larger.mj
 import { html_button } from "../../../love/public/src/html_button.mjs";
 export function app_replace_settings(context) {
   let root = property_get(context, "root");
-  html_button_screen(root, emoji_home() + "Home", context, app_replace_home);
+  html_button_screen(root, emoji_home() + " Home", context, app_replace_home);
   const factor = app_replace_font_size_factor();
   let value_get_multiply = multiply_curried_right(factor);
   let value_get_divide = divide_curried_right(factor);
