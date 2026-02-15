@@ -55,20 +55,20 @@ export function app_replace_rule_sets() {
       ],
     },
     {
-      name: "Grow left",
-      rules: ["a > b a"],
+      name: "Grow right",
+      rules: ["a > a b"],
       goals: [
         {
-          start: "abb",
-          end: "bba",
+          start: "a",
+          end: "abb",
         },
         {
-          start: "abbbb",
-          end: "bbbba",
+          start: "aa",
+          end: "abbabbb",
         },
         {
-          start: "abbabb",
-          end: "bbbbaa",
+          start: "aaa",
+          end: "ababbabbb",
         },
       ],
     },
