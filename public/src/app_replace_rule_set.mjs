@@ -193,6 +193,7 @@ export async function app_replace_rule_set(context) {
         function lambda5(value) {
           let g = app_replace_rule_sets_data_goal(value, rule_name, goal);
           property_set(g, "completed", true);
+          return value;
         }
         storage_local_transform_context(context, "rule_sets_data", {}, lambda5);
         let lambda4 = app_replace_button_symbol_style_valid_curry_right(true);
