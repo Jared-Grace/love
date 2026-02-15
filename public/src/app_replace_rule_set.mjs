@@ -202,7 +202,7 @@ export async function app_replace_rule_set(context) {
       html_centered(p);
       html_span_text(p, joined);
       html_style_background_color_set(p, highlight);
-      html_style_font_size(html, value);
+      html_style_font_size(p, "1.5em");
       let p2 = html_p(div_below);
     }
     let nn = null_not_is(index_selected);
