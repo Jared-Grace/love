@@ -1,4 +1,4 @@
-import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
+import { html_style_background_color_set_if } from "../../../love/public/src/html_style_background_color_set_if.mjs";
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
@@ -46,9 +46,7 @@ export function app_replace_goals(context) {
     let rb = app_replace_button_rule_content(title, left, right);
     let background = app_replace_rule_set_highlight();
     const condition = not(completed) && completed_previous;
-    if (condition) {
-      html_style_background_color_set(component, background);
-    }
+    html_style_background_color_set_if(condition, component, background);
     app_replace_lefts_rights_style(rb, completed);
     function lambda() {
       on_click(index);
