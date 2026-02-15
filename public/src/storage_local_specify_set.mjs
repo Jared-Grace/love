@@ -6,7 +6,7 @@ export function storage_local_specify_set(value, storage_local_key) {
   });
   localStorage.setItem(storage_local_key, j);
   log({
-    i,
+    j,
     storage_local_key,
   });
 }
