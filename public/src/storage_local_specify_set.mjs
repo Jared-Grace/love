@@ -5,5 +5,5 @@ export function storage_local_specify_set(storage_local_key, value) {
     value,
   });
   localStorage.setItem(storage_local_key, j);
-  log({});
+  log({storage_local_key, j});
 }
