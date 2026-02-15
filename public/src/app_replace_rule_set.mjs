@@ -203,7 +203,7 @@ export async function app_replace_rule_set(context) {
       html_style_background_color_set(p, highlight);
       app_replace_button_symbol_style(p);
       html_centered(p);
-      let emojis = html_p(p);
+      let emojis = html_div(p);
       html_span_text(emojis, joined);
       html_style_font_size(emojis, "1.5em");
       let p3 = html_p(p);
