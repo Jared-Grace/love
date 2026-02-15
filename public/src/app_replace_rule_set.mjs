@@ -235,8 +235,11 @@ export async function app_replace_rule_set(context) {
         }
         each(encouragements, lambda);
         let p2 = html_p(div_below);
-        goal_index_next = goal_index + 1;
-        let ii = list_index_is(goals, goal_index_next);$iel
+        let goal_index_next = goal_index + 1;
+        let ii = list_index_is(goals, goal_index_next);
+        if (false) {
+        } else {
+        }
         function lambda2() {
           app_shared_screen_set(context, app_replace_rule_set);
         }
