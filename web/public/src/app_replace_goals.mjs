@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { app_replace_lefts_rights_style } from "../../../love/public/src/app_replace_lefts_rights_style.mjs";
 import { app_replace_button_rule_content } from "../../../love/public/src/app_replace_button_rule_content.mjs";
@@ -30,6 +31,9 @@ export function app_replace_goals(context) {
     let title = property_get(r, "title");
     let rb = app_replace_button_rule_content(title, left, right);
     let d = storage_local_initialize_context(context, "rule_sets_data", {});
+    log({
+      d,
+    });
     let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
     let completed = property_get(g, "completed");
     app_replace_lefts_rights_style(rb, completed);
