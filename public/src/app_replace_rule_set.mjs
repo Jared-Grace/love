@@ -194,8 +194,8 @@ export async function app_replace_rule_set(context) {
       ];
       let taken = list_shuffle_take(choices, 3);
       let mapped = list_map(taken, invoke);
-      let joined = list_join_empty(list);
-      html_span_text(p_goal, text2);
+      let joined = list_join_empty(mapped);
+      html_span_text(p_goal, joined);
     }
     let nn = null_not_is(index_selected);
     html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
