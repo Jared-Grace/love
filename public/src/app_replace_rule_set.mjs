@@ -1,3 +1,4 @@
+import { emoji_medal_1 } from "../../../love/public/src/emoji_medal_1.mjs";
 import { emoji_trophy } from "../../../love/public/src/emoji_trophy.mjs";
 import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
@@ -175,6 +176,7 @@ export async function app_replace_rule_set(context) {
       let text = emoji_check();
       let span = html_span_text(div_symbols, text);
       let text2 = emoji_trophy();
+      emoji_medal_1();
       html_span_text(p_goal, text2);
     }
     let nn = null_not_is(index_selected);
