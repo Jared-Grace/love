@@ -35,16 +35,17 @@ export function app_replace_goals(context) {
     let d = storage_local_initialize_context(context, "rule_sets_data", {});
     let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
     let completed = property_get_or(g, "completed", false);
+    const condition = not(completed) && completed_previous;
     let a = add_1(index) + ".";
     if (completed) {
       let e = emoji_check();
       a += string_pad_left_space(e);
     } else {
-      if (false) {
+      if (condition) {
+        let e = emoji_point_right();
+        a += string_pad_left_space(e);
       }
     }
-    const condition = not(completed) && completed_previous;
-    emoji_point_right();
     let start = property_get(goal, "start");
     let left = text_split_empty(start);
     let end = property_get(goal, "end");
