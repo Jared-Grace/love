@@ -204,7 +204,8 @@ export async function app_replace_rule_set(context) {
           emoji_party_popper,
           emoji_party_face,
         ];
-        let taken = list_shuffle_take(choices, 3);
+        const taken_count = 3;
+        let taken = list_shuffle_take(choices, taken_count);
         list_add_first(taken, emoji_check);
         let mapped = list_map(taken, invoke);
         let joined = list_join_empty(mapped);
