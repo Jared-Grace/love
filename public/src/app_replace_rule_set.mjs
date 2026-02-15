@@ -1,3 +1,4 @@
+import { list_index_is } from "../../../love/public/src/list_index_is.mjs";
 import { app_karate_button_next_text } from "../../../love/public/src/app_karate_button_next_text.mjs";
 import { app_replace_rule_sets_data_goal } from "../../../love/public/src/app_replace_rule_sets_data_goal.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
@@ -235,6 +236,7 @@ export async function app_replace_rule_set(context) {
         each(encouragements, lambda);
         let p2 = html_p(div_below);
         goal_index = goal_index + 1;
+        let ii = list_index_is(list, index4);
         function lambda2() {
           app_shared_screen_set(context, app_replace_rule_set);
         }
