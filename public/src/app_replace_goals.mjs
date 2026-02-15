@@ -23,6 +23,7 @@ export function app_replace_goals(context) {
   let rule_name = property_get(item, "name");
   html_p_text(root, "Rule set: " + rule_name);
   let goals = property_get(item, "goals");
+  let completed_previous = false;
   function each_item(goal, index) {
     let d = storage_local_initialize_context(context, "rule_sets_data", {});
     let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
