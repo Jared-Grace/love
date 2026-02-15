@@ -17,6 +17,7 @@ export function html_style_text_left_centered(
     "text-align": "center",
     "flex-wrap": "wrap",
     "align-items": "center",
+    "justify-content": "center",
   });
   let r = {
     title,
