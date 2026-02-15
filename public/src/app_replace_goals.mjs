@@ -1,3 +1,4 @@
+import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { app_replace_button_rule_content_styled } from "../../../love/public/src/app_replace_button_rule_content_styled.mjs";
 import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_set.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
@@ -26,6 +27,7 @@ export function app_replace_goals(context) {
     let r = html_style_text_left_centered(b, a, "");
     let title = property_get(r, "title");
     app_replace_button_rule_content_styled(title, left, right);
+    storage_local_get_context(context, "rule_sets_data", {});
     function lambda() {
       on_click(index);
     }
