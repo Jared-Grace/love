@@ -1,3 +1,4 @@
+import { app_replace_rule_sets_data_goal } from "../../../love/public/src/app_replace_rule_sets_data_goal.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
 import { app_replace_button_rule_content_styled } from "../../../love/public/src/app_replace_button_rule_content_styled.mjs";
 import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_set.mjs";
@@ -14,8 +15,8 @@ import { text_split_empty } from "./text_split_empty.mjs";
 export function app_replace_goals(context) {
   let root = property_get(context, "root");
   let item = app_replace_rule_set_get(context);
-  let name = property_get(item, "name");
-  html_p_text(root, "Rule set: " + name);
+  let rule_name = property_get(item, "name");
+  html_p_text(root, "Rule set: " + rule_name);
   let goals = property_get(item, "goals");
   function each_item(goal, index) {
     let a = add_1(index) + ".";
@@ -27,7 +28,8 @@ export function app_replace_goals(context) {
     let r = html_style_text_left_centered(b, a, "");
     let title = property_get(r, "title");
     app_replace_button_rule_content_styled(title, left, right);
-    storage_local_get_context(context, "rule_sets_data", {});
+    let d = storage_local_get_context(context, "rule_sets_data", {});
+    let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
     function lambda() {
       on_click(index);
     }
