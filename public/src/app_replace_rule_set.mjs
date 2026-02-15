@@ -229,38 +229,36 @@ export async function app_replace_rule_set(context) {
         }
         each(encouragements, lambda);
         let p_next = html_p(div_below);
-        function lambda2() {
-          let goal_index_next = goal_index + 1;
-          let ii = list_index_is(goals, goal_index_next);
-          let next = true;
-          if (ii) {
-            storage_local_set_context(context, "goal_index", goal_index_next);
-          } else {
-            let rule_set_index = storage_local_get_context(
+        let goal_index_next = goal_index + 1;
+        let ii = list_index_is(goals, goal_index_next);
+        let next = true;
+        if (ii) {
+          storage_local_set_context(context, "goal_index", goal_index_next);
+        } else {
+          let rule_set_index = storage_local_get_context(
+            context,
+            "rule_set_index",
+          );
+          let rule_sets = app_replace_rule_sets();
+          let rule_set_index_next = rule_set_index + 1;
+          let ii2 = list_index_is(rule_sets, rule_set_index_next);
+          if (ii2) {
+            storage_local_set_context(
               context,
               "rule_set_index",
+              rule_set_index_next,
             );
-            let rule_sets = app_replace_rule_sets();
-            let rule_set_index_next = rule_set_index + 1;
-            let ii2 = list_index_is(rule_sets, rule_set_index_next);
-            if (ii2) {
-              storage_local_set_context(
-                context,
-                "rule_set_index",
-                rule_set_index_next,
-              );
-              storage_local_set_context(context, "goal_index", 0);
-            } else {
-              next = false;
-              let p5 = html_p_text(
-                p_next,
-                "You have completed all goals that are available at this time!",
-              );
-            }
+            storage_local_set_context(context, "goal_index", 0);
+          } else {
+            next = false;
+            let p5 = html_p_text(
+              p_next,
+              "You have completed all goals that are available at this time!",
+            );
           }
-          if (next) {
-            app_shared_screen_set(context, app_replace_rule_set);
-          }
+        }
+        function lambda2() {
+          app_shared_screen_set(context, app_replace_rule_set);
         }
         let text = app_karate_button_next_text();
         let bn = app_replace_button(p_next, text, lambda2);
