@@ -37,6 +37,24 @@ export function app_replace_rule_sets() {
       ],
     },
     {
+      name: "Swap",
+      rules: ["a b > b a"],
+      goals: [
+        {
+          start: "abb",
+          end: "bba",
+        },
+        {
+          start: "aaa",
+          end: "a",
+        },
+        {
+          start: "aaaaa",
+          end: "a",
+        },
+      ],
+    },
+    {
       name: "Unary Equations",
       rules: ["= > 1 = 1"],
       goals: [
