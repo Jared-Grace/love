@@ -1,3 +1,4 @@
+import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
@@ -205,7 +206,8 @@ export async function app_replace_rule_set(context) {
       html_style_font_size(p, "1.5em");
       app_replace_button_symbol_style(p);
       let p3 = html_p(p);
-      const encouragement = "Congratulations";
+      const encouragements = "Congratulations";
+      let r3 = list_random_item(list);
       let p4 = html_p_text(p, encouragement + "!");
       let p2 = html_p(div_below);
     }
