@@ -113,8 +113,8 @@ export async function app_replace_rule_set(context) {
   let label_goal = html_p_text(root, "Goal:");
   let end = property_get(goal, "end");
   let goal_list = text_split_empty(end);
-  let p = html_p(root);
-  let goal_list_symbols = app_replace_button_side(p, goal_list);
+  let p_goal = html_p(root);
+  let goal_list_symbols = app_replace_button_side(p_goal, goal_list);
   let lambda4 = app_replace_button_symbol_style_valid_curry_right(false);
   each(goal_list_symbols, lambda4);
   refresh();
