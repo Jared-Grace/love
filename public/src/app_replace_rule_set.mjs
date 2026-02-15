@@ -252,6 +252,7 @@ export async function app_replace_rule_set(context) {
               storage_local_set_context(context, "goal_index", 0);
             } else {
               next = false;
+              let p5 = html_p_text(root2, text2);
             }
           }
           if (next) {
