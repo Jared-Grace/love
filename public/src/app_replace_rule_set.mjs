@@ -135,6 +135,7 @@ export async function app_replace_rule_set(context) {
   each(goal_list_symbols, lambda4);
   let highlight = app_replace_rule_set_highlight();
   let div_below = html_div(root);
+  let success = false;
   refresh();
   function refresh() {
     function each_button_rule_refresh(rb, index2) {
