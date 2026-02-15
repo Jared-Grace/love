@@ -44,7 +44,7 @@ export function app_replace_goals(context) {
     app_replace_lefts_rights_style(rb, completed);
     function lambda() {
       on_click(index);
-    }
+    }completed_previous=completed
   }
   each_index(goals, each_item);
   function on_click(index) {
