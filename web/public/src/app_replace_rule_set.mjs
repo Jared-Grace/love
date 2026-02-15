@@ -228,7 +228,7 @@ export async function app_replace_rule_set(context) {
           html_span_text(p4, encouragement + "! ");
         }
         each(encouragements, lambda);
-        let p2 = html_p(div_below);
+        let p_next = html_p(div_below);
         function lambda2() {
           let goal_index_next = goal_index + 1;
           let ii = list_index_is(goals, goal_index_next);
@@ -260,7 +260,7 @@ export async function app_replace_rule_set(context) {
           }
         }
         let text = app_karate_button_next_text();
-        let bn = app_replace_button(p2, text, lambda2);
+        let bn = app_replace_button(p_next, text, lambda2);
         html_width_full(bn);
       }
       let nn = null_not_is(index_selected);
