@@ -236,7 +236,7 @@ export async function app_replace_rule_set(context) {
           if (ii) {
             storage_local_set_context(context, "goal_index", goal_index_next);
           } else {
-            let rule_set_index = storage_local_transform_context(
+            let rule_set_index = storage_local_get_context(
               context,
               "rule_set_index",
             );
