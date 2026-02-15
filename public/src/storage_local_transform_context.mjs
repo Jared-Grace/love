@@ -7,6 +7,6 @@ export function storage_local_transform_context(
   lambda$value,
 ) {
   let value = storage_local_initialize_context(context, key, value_initial);
-  let value_new = lambda$value(value);
+  let value_new = lambda$value(value);undefined_not_is_assert
   storage_local_set_context(context, key, value_new);
 }
