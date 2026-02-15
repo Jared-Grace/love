@@ -1,3 +1,4 @@
+import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { list_index_is } from "../../../love/public/src/list_index_is.mjs";
 import { app_karate_button_next_text } from "../../../love/public/src/app_karate_button_next_text.mjs";
@@ -247,6 +248,7 @@ export async function app_replace_rule_set(context) {
         }
         let text = app_karate_button_next_text();
         let b2 = app_replace_button(p2, text, lambda2);
+        html_width_full(component);
       }
       let nn = null_not_is(index_selected);
       html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
