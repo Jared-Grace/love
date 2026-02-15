@@ -1,3 +1,4 @@
+import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { app_replace_button_rule_style } from "../../../love/public/src/app_replace_button_rule_style.mjs";
 import { html_style_background_color_set_if } from "../../../love/public/src/html_style_background_color_set_if.mjs";
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
@@ -45,6 +46,7 @@ export function app_replace_goals(context) {
     app_replace_button_rule_style(b);
     let r = html_style_text_left_centered(b, a, "");
     let title = property_get(r, "title");
+    html_style_set(b2, style_key, style_value);
     let r2 = app_replace_button_rule_content(title, left, right);
     let background = app_replace_rule_set_highlight();
     const condition = not(completed) && completed_previous;
