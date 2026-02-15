@@ -242,7 +242,13 @@ export async function app_replace_rule_set(context) {
             let rule_sets = app_replace_rule_sets();
             let rule_set_index_next = rule_set_index + 1;
             let ii2 = list_index_is(rule_sets, rule_set_index_next);
-            if (false) {
+            if (ii2) {
+              storage_local_set_context(
+                context,
+                "rule_set_index",
+                rule_set_index_next,
+              );
+              storage_local_set_context(context, "goal_index", 0);
             }
             function transform(rule_set_index) {}
             storage_local_transform_context(
@@ -251,7 +257,6 @@ export async function app_replace_rule_set(context) {
               null,
               transform,
             );
-            storage_local_set_context(context, "goal_index", 0);
           }
           app_shared_screen_set(context, app_replace_rule_set);
         }
