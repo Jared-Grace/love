@@ -195,9 +195,9 @@ export async function app_replace_rule_set(context) {
           "rule_set_index",
         );
         function lambda5(value) {
-          let value2 = property_initialize_empty(value, rule_name);
-          let json = json_to(object);
-          let value3 = property_initialize_empty(value2, rule_name);
+          let r = property_initialize_empty(value, rule_name);
+          let json = json_to(goal);
+          let value3 = property_initialize_empty(r, json);st
         }
         storage_local_transform_context(
           context,
