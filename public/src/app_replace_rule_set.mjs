@@ -185,42 +185,42 @@ export async function app_replace_rule_set(context) {
       return sb;
     }
     let sbs = list_map_index(current_list, symbols_mapper);
-    if (!success) {
-    let eq2 = json_equal(current_list, goal_list);
-    if (eq2) {
-      let lambda4 = app_replace_button_symbol_style_valid_curry_right(true);
-      each_nested([goal_list_symbols, sbs], lambda4);
-      let choices = [
-        emoji_trophy,
-        emoji_100,
-        emoji_clap,
-        emoji_medal_star,
-        emoji_medal_1,
-        emoji_party_popper,
-        emoji_party_face,
-      ];
-      let taken = list_shuffle_take(choices, 3);
-      list_add_first(taken, emoji_check);
-      let mapped = list_map(taken, invoke);
-      let joined = list_join_empty(mapped);
-      let p = html_p(div_below);
-      html_style_background_color_set(p, highlight);
-      app_replace_button_symbol_style(p);
-      html_centered(p);
-      let emojis = html_div(p);
-      html_span_text(emojis, joined);
-      html_style_font_size(emojis, "1.5em");
-      let p3 = html_div(p);
-      const encouragements = ["Congratulations", "Success"];
-      let encouragement = list_random_item(encouragements);
-      let p4 = html_div_text(p3, encouragement + "!");
-      html_bold(p4);
-      let p2 = html_p(div_below);
+    if (not(success)) {
+      let eq2 = json_equal(current_list, goal_list);
+      if (eq2) {
+        let lambda4 = app_replace_button_symbol_style_valid_curry_right(true);
+        each_nested([goal_list_symbols, sbs], lambda4);
+        let choices = [
+          emoji_trophy,
+          emoji_100,
+          emoji_clap,
+          emoji_medal_star,
+          emoji_medal_1,
+          emoji_party_popper,
+          emoji_party_face,
+        ];
+        let taken = list_shuffle_take(choices, 3);
+        list_add_first(taken, emoji_check);
+        let mapped = list_map(taken, invoke);
+        let joined = list_join_empty(mapped);
+        let p = html_p(div_below);
+        html_style_background_color_set(p, highlight);
+        app_replace_button_symbol_style(p);
+        html_centered(p);
+        let emojis = html_div(p);
+        html_span_text(emojis, joined);
+        html_style_font_size(emojis, "1.5em");
+        let p3 = html_div(p);
+        const encouragements = ["Congratulations", "Success"];
+        let encouragement = list_random_item(encouragements);
+        let p4 = html_div_text(p3, encouragement + "!");
+        html_bold(p4);
+        let p2 = html_p(div_below);
+      }
+      let nn = null_not_is(index_selected);
+      html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
+      html_text_set_if(nn, "Choose a symbol:", "Symbols:", label_symbols);
     }
-    let nn = null_not_is(index_selected);
-    html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
-    html_text_set_if(nn, "Choose a symbol:", "Symbols:", label_symbols);
   }
-    }
   refresh();
 }
