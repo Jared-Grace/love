@@ -187,7 +187,8 @@ export async function app_replace_rule_set(context) {
         emoji_medal_1,
       ];
       let r3 = list_random_item(choices);
-      html_span_text(p_goal, r3);
+      let text2 = r3();
+      html_span_text(p_goal, text2);
     }
     let nn = null_not_is(index_selected);
     html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
