@@ -1,3 +1,4 @@
 export function emoji_party_popper() {
-  return "🎉";
+  let r = "🎉";
+  return r;
 }
