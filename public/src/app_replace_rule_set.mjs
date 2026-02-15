@@ -194,8 +194,8 @@ export async function app_replace_rule_set(context) {
         function lambda5(value) {
           let r = property_initialize_empty(value, rule_name);
           let json = json_to(goal);
-          let value3 = property_initialize_empty(r, json);
-          property_set(value3, "completed", true);
+          let g = property_initialize_empty(r, json);
+          property_set(g, "completed", true);
         }
         storage_local_transform_context(
           context,
