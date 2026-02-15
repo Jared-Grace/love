@@ -1,3 +1,4 @@
+import { app_replace_lefts_rights_style } from "../../../love/public/src/app_replace_lefts_rights_style.mjs";
 import { app_replace_button_rule_content } from "../../../love/public/src/app_replace_button_rule_content.mjs";
 import { app_replace_rule_sets_data_goal } from "../../../love/public/src/app_replace_rule_sets_data_goal.mjs";
 import { storage_local_get_context } from "../../../love/public/src/storage_local_get_context.mjs";
@@ -30,7 +31,8 @@ export function app_replace_goals(context) {
     let rb = app_replace_button_rule_content(title, left, right);
     let d = storage_local_get_context(context, "rule_sets_data", {});
     let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
-    property_get(g, "completed");
+    let completed = property_get(g, "completed");
+    app_replace_lefts_rights_style(rb, completed);
     function lambda() {
       on_click(index);
     }
