@@ -129,6 +129,8 @@ export async function app_replace_rule_set(context) {
   let lambda4 = app_replace_button_symbol_style_valid_curry_right(false);
   each(goal_list_symbols, lambda4);
   let highlight = app_replace_rule_set_highlight();
+  let p = html_p(root2);
+  let p2 = html_p(root3);
   refresh();
   function refresh() {
     function each_button_rule_refresh(rb, index2) {
