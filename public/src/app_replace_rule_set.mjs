@@ -238,7 +238,8 @@ export async function app_replace_rule_set(context) {
               context,
               "rule_set_index",
             );
-            function transform(value2) {}
+            let rule_set_index_next = rule_set_index + 1;
+            function transform(rule_set_index) {}
             storage_local_transform_context(
               context,
               "rule_set_index",
