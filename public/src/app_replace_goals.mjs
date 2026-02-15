@@ -43,11 +43,11 @@ export function app_replace_goals(context) {
     let component = app_replace_button_wide(root, "", lambda);
     let r = html_style_text_left_centered(component, a, "");
     let title = property_get(r, "title");
-    let rb = app_replace_button_rule_content(title, left, right);
+    let r2 = app_replace_button_rule_content(title, left, right);
     let background = app_replace_rule_set_highlight();
     const condition = not(completed) && completed_previous;
     html_style_background_color_set_if(condition, component, background);
-    app_replace_lefts_rights_style(rb, completed);
+    app_replace_lefts_rights_style(r2, completed);
     function lambda() {
       on_click(index);
     }
