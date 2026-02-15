@@ -223,7 +223,7 @@ export async function app_replace_rule_set(context) {
           html_bold(p4);
         }
         each(encouragements, lambda);
-          let p2 = html_p(div_below);
+        let p2 = html_p(div_below);
       }
       let nn = null_not_is(index_selected);
       html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
