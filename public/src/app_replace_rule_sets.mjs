@@ -73,6 +73,42 @@ export function app_replace_rule_sets() {
       ],
     },
     {
+      name: "Shrink right",
+      rules: ["a b > a"],
+      goals: [
+        {
+          start: "abb",
+          end: "a",
+        },
+        {
+          start: "abbabbb",
+          end: "aa",
+        },
+        {
+          start: "ababbabbb",
+          end: "aaa",
+        },
+      ],
+    },
+    {
+      name: "Shrink left",
+      rules: ["a > b a"],
+      goals: [
+        {
+          start: "a",
+          end: "bba",
+        },
+        {
+          start: "aa",
+          end: "bbbabba",
+        },
+        {
+          start: "aaa",
+          end: "bbbabbaba",
+        },
+      ],
+    },
+    {
       name: "Swap",
       rules: ["a b > b a"],
       goals: [
