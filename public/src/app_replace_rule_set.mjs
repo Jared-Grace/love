@@ -1,3 +1,4 @@
+import { emoji_party_popper } from "../../../love/public/src/emoji_party_popper.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { emoji_clap } from "../../../love/public/src/emoji_clap.mjs";
 import { emoji_100 } from "../../../love/public/src/emoji_100.mjs";
@@ -186,7 +187,7 @@ export async function app_replace_rule_set(context) {
         emoji_medal_star,
         emoji_medal_1,
       ];
-      ("🎉");
+      emoji_party_popper();
       let r3 = list_random_item(choices);
       let text2 = r3();
       html_span_text(p_goal, text2);
