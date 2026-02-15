@@ -10,10 +10,10 @@ export function app_replace_button_rule_content(parent, left, right) {
   let arrow = html_span_text(parent, text);
   html_bold(arrow);
   let rights = app_replace_button_side(parent, right);
-  let r2 = {
+  let r = {
     lefts,
     rights,
     arrow,
   };
-  return r2;
+  return r;
 }
