@@ -40,13 +40,13 @@ export function app_replace_goals(context) {
     let left = text_split_empty(start);
     let end = property_get(goal, "end");
     let right = text_split_empty(end);
-    let component = app_replace_button_wide(root, "", lambda);
-    let r = html_style_text_left_centered(component, a, "");
+    let b = app_replace_button_wide(root, "", lambda);
+    let r = html_style_text_left_centered(b, a, "");
     let title = property_get(r, "title");
     let r2 = app_replace_button_rule_content(title, left, right);
     let background = app_replace_rule_set_highlight();
     const condition = not(completed) && completed_previous;
-    html_style_background_color_set_if(condition, component, background);
+    html_style_background_color_set_if(condition, b, background);
     app_replace_lefts_rights_style(r2, completed);
     function lambda() {
       on_click(index);
