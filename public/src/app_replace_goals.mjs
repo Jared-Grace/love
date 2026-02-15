@@ -39,6 +39,7 @@ export function app_replace_goals(context) {
       let e = emoji_check();
       a += " " + e;
     }
+    const condition = not(completed) && completed_previous;
     emoji_point_right();
     let start = property_get(goal, "start");
     let left = text_split_empty(start);
@@ -51,7 +52,6 @@ export function app_replace_goals(context) {
     html_style_set(title, "line-height", 1.5);
     let r2 = app_replace_button_rule_content(title, left, right);
     let background = app_replace_rule_set_highlight();
-    const condition = not(completed) && completed_previous;
     html_style_background_color_set_if(condition, b, background);
     app_replace_lefts_rights_style(r2, completed);
     function lambda() {
