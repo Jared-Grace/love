@@ -1,6 +1,6 @@
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
 import { not } from "../../../love/public/src/not.mjs";
-import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
+import { html_style_background_color_set_if } from "../../../love/public/src/html_style_background_color_set_if.mjs";
 import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
 import { app_replace_button_home } from "../../../love/public/src/app_replace_button_home.mjs";
 import { property_get_or } from "../../../love/public/src/property_get_or.mjs";
@@ -44,7 +44,12 @@ export function app_replace_goals(context) {
     let r = html_style_text_left_centered(b, a, "");
     let title = property_get(r, "title");
     let rb = app_replace_button_rule_content(title, left, right);
-    html_style_background_color_set(component, background);
+    html_style_background_color_set_if(
+      condition,
+      component,
+      color_if,
+      color_else,
+    );
     if (not(completed)) {
       if (completed_previous) {
         let highlight = app_replace_rule_set_highlight();
