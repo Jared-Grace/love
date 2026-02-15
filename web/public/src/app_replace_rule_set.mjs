@@ -237,7 +237,13 @@ export async function app_replace_rule_set(context) {
             let rule_set_index = storage_local_transform_context(
               context,
               "rule_set_index",
-            );storage_local_transform_context
+            );
+            storage_local_transform_context(
+              context2,
+              key,
+              value_initial,
+              function lambda6(value2) {},
+            );
             storage_local_set_context(context, "goal_index", 0);
           }
           app_shared_screen_set(context, app_replace_rule_set);
