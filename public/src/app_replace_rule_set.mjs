@@ -1,3 +1,4 @@
+import { emoji_party_face } from "../../../love/public/src/emoji_party_face.mjs";
 import { emoji_party_popper } from "../../../love/public/src/emoji_party_popper.mjs";
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { emoji_clap } from "../../../love/public/src/emoji_clap.mjs";
