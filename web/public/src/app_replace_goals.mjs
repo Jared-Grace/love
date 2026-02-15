@@ -1,3 +1,4 @@
+import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
 import { app_replace_button_home } from "../../../love/public/src/app_replace_button_home.mjs";
 import { property_get_or } from "../../../love/public/src/property_get_or.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
@@ -27,7 +28,8 @@ export function app_replace_goals(context) {
     let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
     let completed = property_get_or(g, "completed", false);
     let a = add_1(index) + ".";
-    if (false) {emoji_check
+    if (false) {
+      let v = emoji_check();
     }
     let start = property_get(goal, "start");
     let left = text_split_empty(start);
