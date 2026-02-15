@@ -238,12 +238,12 @@ export async function app_replace_rule_set(context) {
               context,
               "rule_set_index",
             );
-            function lambda6(value2) {}
+            function transform(value2) {}
             storage_local_transform_context(
               context,
               "rule_set_index",
               null,
-              lambda6,
+              transform,
             );
             storage_local_set_context(context, "goal_index", 0);
           }
