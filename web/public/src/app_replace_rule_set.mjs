@@ -1,6 +1,5 @@
+import { app_replace_rule_sets_data_goal } from "../../../love/public/src/app_replace_rule_sets_data_goal.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
-import { json_to } from "../../../love/public/src/json_to.mjs";
-import { property_initialize_empty } from "../../../love/public/src/property_initialize_empty.mjs";
 import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
 import { html_bold } from "../../../love/public/src/html_bold.mjs";
 import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
@@ -192,9 +191,7 @@ export async function app_replace_rule_set(context) {
       if (eq2) {
         success = true;
         function lambda5(value) {
-          let r = property_initialize_empty(value, rule_name);
-          let json = json_to(goal);
-          let g = property_initialize_empty(r, json);
+          let g = app_replace_rule_sets_data_goal(value, rule_name, goal);
           property_set(g, "completed", true);
         }
         storage_local_transform_context(context, "rule_sets_data", {}, lambda5);
