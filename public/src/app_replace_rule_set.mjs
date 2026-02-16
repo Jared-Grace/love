@@ -161,14 +161,14 @@ export async function app_replace_rule_set(context) {
           alert("invalid index for rule");
           return;
         } else {
+          let right = property_get(rule2, "right");
+          let left = property_get(rule2, "left");
+          let before = list_take(current_list, index);
+          let size = list_size(left);
+          let after = list_skip(current_list, index + size);
+          current_list = list_concat_multiple([before, right, after]);
+          index_selected = null;
         }
-        let right = property_get(rule2, "right");
-        let left = property_get(rule2, "left");
-        let before = list_take(current_list, index);
-        let size = list_size(left);
-        let after = list_skip(current_list, index + size);
-        current_list = list_concat_multiple([before, right, after]);
-        index_selected = null;
         refresh();
       }
       let sb = html_button(div_symbols, symbol, symbol_on_click);
