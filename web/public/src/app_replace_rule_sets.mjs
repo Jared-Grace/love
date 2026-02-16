@@ -289,6 +289,24 @@ export function app_replace_rule_sets() {
       ],
     },
     {
+      name: "Right Change",
+      rules: ["a b > a c"],
+      goals: [
+        {
+          end: "ababab",
+          start: "ababac",
+        },
+        {
+          end: "ababab",
+          start: "acabac",
+        },
+        {
+          end: "abaabaaabaaaab",
+          start: "acaacaaacaaaac",
+        },
+      ],
+    },
+    {
       name: "Grow Between",
       rules: ["a a > a b a"],
       goals: [
