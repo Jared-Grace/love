@@ -293,10 +293,6 @@ export async function app_replace_rule_set(context) {
           );
         }
         if (next) {
-          let p_next = html_p(div_below);
-          let goal_index_next = goal_index + 1;
-          let ii = list_index_is(goals, goal_index_next);
-          let next = true;
           if (ii) {
             storage_local_set_context(context, "goal_index", goal_index_next);
           } else {
