@@ -1,12 +1,11 @@
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
-import { html_scroll_generic_wait } from "../../../love/public/src/html_scroll_generic_wait.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
 export async function html_move_animate(
   component_from,
   component_to,
   duration = 500,
 ) {
-  let e = await html_scroll_generic_wait(component);
+  let e = html_component_element_get(component);
   let container_e = html_component_element_get(container);
   const movingRect = component_from.getBoundingClientRect();
   const targetRect = component_to.getBoundingClientRect();
