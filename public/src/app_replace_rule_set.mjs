@@ -169,7 +169,6 @@ export async function app_replace_rule_set(context) {
           index_selected = null;
         } else {
           property_set(symbols_invalid_chosen, index, true);
-          return;
         }
         refresh();
       }
