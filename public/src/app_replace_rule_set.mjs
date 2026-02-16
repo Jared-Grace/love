@@ -1,3 +1,4 @@
+import { html_insert } from "../../../love/public/src/html_insert.mjs";
 import { html_clone } from "../../../love/public/src/html_clone.mjs";
 import { list_wait } from "../../../love/public/src/list_wait.mjs";
 import { list_map_pairs } from "../../../love/public/src/list_map_pairs.mjs";
@@ -192,7 +193,9 @@ export async function app_replace_rule_set(context) {
           let mapped = list_map_pairs(sliced2, lefts2, lambda6);
           let v = await list_wait(mapped);
           let rights_cloned = list_map(rights2, html_clone);
-          function lambda8(item, index4) {}
+          function lambda8(item, index4) {
+            html_insert(parent, child, index5);
+          }
           each_index(list, lambda8);
           await sleep(10000);
           index_selected = null;
