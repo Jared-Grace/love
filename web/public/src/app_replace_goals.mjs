@@ -1,13 +1,10 @@
+import { app_replace_button_text_and_next } from "../../../love/public/src/app_replace_button_text_and_next.mjs";
 import { app_replace_goal_completed_initialize } from "../../../love/public/src/app_replace_goal_completed_initialize.mjs";
 import { app_replace_rule_sets_data_initialize } from "../../../love/public/src/app_replace_rule_sets_data_initialize.mjs";
-import { string_pad_left_space } from "../../../love/public/src/string_pad_left_space.mjs";
-import { emoji_point_right } from "../../../love/public/src/emoji_point_right.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { app_replace_button_rule_style } from "../../../love/public/src/app_replace_button_rule_style.mjs";
 import { html_style_background_color_set_if } from "../../../love/public/src/html_style_background_color_set_if.mjs";
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
-import { not } from "../../../love/public/src/not.mjs";
-import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
 import { app_replace_button_home } from "../../../love/public/src/app_replace_button_home.mjs";
 import { app_replace_lefts_rights_style } from "../../../love/public/src/app_replace_lefts_rights_style.mjs";
 import { app_replace_button_rule_content } from "../../../love/public/src/app_replace_button_rule_content.mjs";
@@ -16,7 +13,6 @@ import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { html_style_text_left_centered } from "../../../love/public/src/html_style_text_left_centered.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
-import { add_1 } from "../../../love/public/src/add_1.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
@@ -35,17 +31,13 @@ export function app_replace_goals(context) {
   function each_item(goal, index) {
     let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
     let completed = app_replace_goal_completed_initialize(g);
-    const choose_this_next = not(completed) && completed_previous;
-    let a = add_1(index) + ".";
-    if (completed) {
-      let e = emoji_check();
-      a += string_pad_left_space(e);
-    } else {
-      if (choose_this_next) {
-        let e = emoji_point_right();
-        a += string_pad_left_space(e);
-      }
-    }
+    var r3 = app_replace_button_text_and_next(
+      completed,
+      completed_previous,
+      index,
+    );
+    let choose_this_next = property_get(r3, "choose_this_next");
+    let a = property_get(r3, "a");
     let start = property_get(goal, "start");
     let left = text_split_empty(start);
     let end = property_get(goal, "end");
