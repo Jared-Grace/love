@@ -195,7 +195,7 @@ export async function app_replace_rule_set(context) {
           let v = await list_wait(mapped);
           let rights_cloned = list_map(rights2, html_clone);
           function lambda8(item, index5) {
-            html_visibility_hidden(i);
+            html_visibility_hidden(item);
             html_insert(div_symbols, item, index + index5);
           }
           each_index(rights_cloned, lambda8);
