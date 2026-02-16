@@ -1,10 +1,10 @@
+import { app_replace_button_text_and_next } from "../../../love/public/src/app_replace_button_text_and_next.mjs";
 import { app_replace_goal_completed_initialize } from "../../../love/public/src/app_replace_goal_completed_initialize.mjs";
 import { app_replace_rule_sets_data_goal } from "../../../love/public/src/app_replace_rule_sets_data_goal.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { app_replace_rule_sets_data_initialize } from "../../../love/public/src/app_replace_rule_sets_data_initialize.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { html_style_text_left_centered } from "../../../love/public/src/html_style_text_left_centered.mjs";
-import { add_1 } from "../../../love/public/src/add_1.mjs";
 import { app_replace_goals } from "../../../love/public/src/app_replace_goals.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { app_replace_settings } from "../../../love/public/src/app_replace_settings.mjs";
@@ -29,8 +29,13 @@ export function app_replace_home(context) {
       return value;
     }
     let completed_all = list_all(goals, lambda2);
+    var r3 = app_replace_button_text_and_next(
+      completed_all,
+      completed_previous,
+      index,
+    );
+    let choose_this_next = property_get(r3, "choose_this_next");
     let rule_name = property_get(item, "name");
-    let a = add_1(index2) + ".";
     let b = app_replace_button_wide(root, "", lambda);
     html_style_text_left_centered(b, a, rule_name);
     function lambda() {
