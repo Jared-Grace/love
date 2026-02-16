@@ -1,6 +1,6 @@
 export function html_component_wrap(element) {
-  let v = {
+  let c = {
     element,
   };
-  return v;
+  return c;
 }
