@@ -192,7 +192,7 @@ export async function app_replace_rule_set(context) {
       });
       if (exists) {
         html_style_background_color_set(sb, "red");
-        app_replace_button_symbol_style_box_shadow(true, sb, "red");
+        app_replace_button_symbol_style_box_shadow(true, sb, "lightred");
       }
       return sb;
     }
