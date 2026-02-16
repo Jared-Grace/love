@@ -217,6 +217,24 @@ export function app_replace_rule_sets() {
       ],
     },
     {
+      name: "Grow Between",
+      rules: ["a a > a b a"],
+      goals: [
+        {
+          start: "aaa",
+          end: "aaaba",
+        },
+        {
+          start: "aaaa",
+          end: "abaaaba",
+        },
+        {
+          start: "aaaaaa",
+          end: "abaabaaba",
+        },
+      ],
+    },
+    {
       name: "Unary Equations Adding",
       rules: ["= > 1 = 1", "1 1 > 1 + 1"],
       goals: [
