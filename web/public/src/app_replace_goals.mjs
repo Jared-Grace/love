@@ -37,7 +37,7 @@ export function app_replace_goals(context) {
       index,
     );
     let choose_this_next = property_get(r3, "choose_this_next");
-    let a = property_get(r3, "a");
+    let text = property_get(r3, "text");
     let start = property_get(goal, "start");
     let left = text_split_empty(start);
     let end = property_get(goal, "end");
