@@ -17,8 +17,8 @@ export function app_replace_home(context) {
   }
   app_replace_button_wide(root, emoji_gear() + " Settings", lambda4);
   let rule_sets = app_replace_rule_sets();
-  function each_item(item2, index2) {
-    let name = text_get(item2);
+  function each_item(item, index2) {
+    let name = property_get(item, "name");
     let a = add_1(index2) + ".";
     let b = app_replace_button_wide(root, "", lambda);
     html_style_text_left_centered(b, a, name);
