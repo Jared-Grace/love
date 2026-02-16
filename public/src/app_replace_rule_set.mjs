@@ -191,7 +191,7 @@ export async function app_replace_rule_set(context) {
         symbols_invalid_chosen,
       });
       if (exists) {
-        html_style_background_color_set(sb, "red");
+        html_style_background_color_set(sb, "#D10000");
         app_replace_button_symbol_style_box_shadow(true, sb, "lightred");
       }
       return sb;
