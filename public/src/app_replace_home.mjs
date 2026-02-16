@@ -32,7 +32,7 @@ export function app_replace_home(context) {
     let title = app_replace_goals_generic(
       completed,
       completed_previous,
-      index,
+      index2,
       root,
       lambda,
     );
