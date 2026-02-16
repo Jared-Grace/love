@@ -1,3 +1,4 @@
+import { html_move_animate } from "../../../love/public/src/html_move_animate.mjs";
 import { app_replace_button_symbol_style_box_shadow } from "../../../love/public/src/app_replace_button_symbol_style_box_shadow.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
@@ -161,7 +162,7 @@ export async function app_replace_rule_set(context) {
     each_index(rules_buttons, each_button_rule_refresh);
     html_clear(div_symbols);
     function symbols_mapper(symbol, index) {
-      function symbol_on_click() {
+      async function symbol_on_click() {
         let rule2 = list_get(rules_parsed, index_selected);
         let eq = app_replace_rule_valid(rule2, index, current_list);
         if (eq) {
@@ -173,6 +174,7 @@ export async function app_replace_rule_set(context) {
           let after = list_skip(current_list, index + size);
           current_list = list_concat_multiple([before, right, after]);
           index_selected = null;
+          await html_move_animate(component_from, component_to, duration);
         } else {
           property_set(symbols_invalid_chosen, index, true);
         }
