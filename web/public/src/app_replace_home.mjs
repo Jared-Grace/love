@@ -31,10 +31,10 @@ export function app_replace_home(context) {
     let completed_all = list_all(goals, lambda2);
     let rule_name = property_get(item, "name");
     let title = app_replace_goals_generic(
+      root,
       completed_all,
       completed_previous,
       index2,
-      root,
       lambda,
     );
     function lambda() {
