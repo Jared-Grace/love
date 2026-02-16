@@ -1,4 +1,4 @@
-import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
+import { html_visibility_hidden } from "../../../love/public/src/html_visibility_hidden.mjs";
 import { html_insert } from "../../../love/public/src/html_insert.mjs";
 import { html_clone } from "../../../love/public/src/html_clone.mjs";
 import { list_wait } from "../../../love/public/src/list_wait.mjs";
@@ -195,7 +195,7 @@ export async function app_replace_rule_set(context) {
           let v = await list_wait(mapped);
           let rights_cloned = list_map(rights2, html_clone);
           function lambda8(item, index5) {
-            html_style_set(b3, style_key, style_value);
+            html_visibility_hidden(i);
             html_insert(div_symbols, item, index + index5);
           }
           each_index(rights_cloned, lambda8);
