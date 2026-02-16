@@ -23,16 +23,16 @@ export function app_replace_rule_sets() {
       rules: ["b c > a"],
       goals: [
         {
-          start: "a",
-          end: "bc",
+          start: "bc",
+          end: "a",
         },
         {
-          start: "aa",
-          end: "bcbc",
+          start: "bcbc",
+          end: "aa",
         },
         {
-          start: "aaaa",
-          end: "bcbcbcbc",
+          start: "bcbcbcbc",
+          end: "aaaa",
         },
       ],
     },
