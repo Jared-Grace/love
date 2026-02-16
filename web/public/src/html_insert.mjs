@@ -7,10 +7,10 @@ export function html_insert(parent, child, index) {
   let pcl = parent_c.children.length;
   let le = less_than_equal(a, b);
   assert(le);
-  if (index > parent_c.children.length) {
+  if (index > pcl) {
     parent_c.appendChild(child_c);
   } else {
-    if (index === parent_c.children.length) {
+    if (index === pcl) {
       parent_c.appendChild(child_c);
     } else {
       parent_c.insertBefore(child_c, parent_c.children[index]);
