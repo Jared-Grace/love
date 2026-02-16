@@ -181,6 +181,7 @@ export async function app_replace_rule_set(context) {
           let rights2 = property_get(rb, "rights");
           let size3 = list_size(lefts2);
           let sliced2 = list_slice_count(lefts2, index, size3);
+          let mapped2 = list_map(list, function lambda6(item) {});
           await html_move_animate(sb, rb, 500);
           index_selected = null;
         } else {
