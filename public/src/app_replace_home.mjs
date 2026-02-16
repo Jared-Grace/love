@@ -31,7 +31,7 @@ export function app_replace_home(context) {
     }
     let completed_all = list_all(goals, lambda2);
     let title = app_replace_goals_generic(
-      completed,
+      completed_all,
       completed_previous,
       index2,
       root,
