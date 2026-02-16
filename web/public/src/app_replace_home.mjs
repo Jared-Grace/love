@@ -18,10 +18,10 @@ export function app_replace_home(context) {
   let rule_sets = app_replace_rule_sets();
   function each_item(item, index2) {
     let goals = property_get(item, "goals");
-    let name = property_get(item, "name");
+    let rule_name = property_get(item, "name");
     let a = add_1(index2) + ".";
     let b = app_replace_button_wide(root, "", lambda);
-    html_style_text_left_centered(b, a, name);
+    html_style_text_left_centered(b, a, rule_name);
     function lambda() {
       on_click(index2);
     }
