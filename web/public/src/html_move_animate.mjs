@@ -17,7 +17,6 @@ export async function html_move_animate(
   function lambda() {
     from_e.style.transition = "";
     from_e.style.transform = "";
-    to_e.parentNode.insertBefore(from_e, to_e);
   }
   setTimeout(lambda, duration);
 }
