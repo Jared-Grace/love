@@ -1,7 +1,6 @@
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { html_style_text_left_centered } from "../../../love/public/src/html_style_text_left_centered.mjs";
 import { add_1 } from "../../../love/public/src/add_1.mjs";
-import { text_get } from "../../../love/public/src/text_get.mjs";
 import { app_replace_goals } from "../../../love/public/src/app_replace_goals.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { app_replace_settings } from "../../../love/public/src/app_replace_settings.mjs";
@@ -30,9 +29,5 @@ export function app_replace_home(context) {
   function on_click(index) {
     storage_local_set_context(context, "rule_set_index", index);
     app_shared_screen_set(context, app_replace_goals);
-  }
-  function text_get(item) {
-    let value = property_get(item, "name");
-    return value;
   }
 }
