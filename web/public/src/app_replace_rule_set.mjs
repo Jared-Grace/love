@@ -185,6 +185,7 @@ export async function app_replace_rule_set(context) {
       app_replace_button_symbol_style_valid(sb, index_selected !== null);
       let exists = property_exists(symbols_invalid_chosen, index);
       if (exists) {
+        html_style_background_color_set(component, background);
       }
       return sb;
     }
