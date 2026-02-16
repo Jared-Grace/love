@@ -1,3 +1,4 @@
+import { app_replace_rule_sets_data_initialize } from "../../../love/public/src/app_replace_rule_sets_data_initialize.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { html_style_text_left_centered } from "../../../love/public/src/html_style_text_left_centered.mjs";
 import { add_1 } from "../../../love/public/src/add_1.mjs";
@@ -15,6 +16,7 @@ export function app_replace_home(context) {
     app_shared_screen_set(context, app_replace_settings);
   }
   app_replace_button_wide(root, emoji_gear() + " Settings", lambda4);
+  let d = app_replace_rule_sets_data_initialize(context);
   let rule_sets = app_replace_rule_sets();
   function each_item(item, index2) {
     let goals = property_get(item, "goals");
