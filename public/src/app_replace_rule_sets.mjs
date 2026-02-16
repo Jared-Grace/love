@@ -217,7 +217,7 @@ export function app_replace_rule_sets() {
       ],
     },
     {
-      name: "Replace Right",
+      name: "Same Replace Right",
       rules: ["a a > a b"],
       goals: [
         {
@@ -229,8 +229,26 @@ export function app_replace_rule_sets() {
           end: "abab",
         },
         {
-          start: "aaaaaa",
-          end: "abaabaaba",
+          start: "aaaaaaaa",
+          end: "abaabaab",
+        },
+      ],
+    },
+    {
+      name: "Same Replace Left",
+      rules: ["a a > b a"],
+      goals: [
+        {
+          start: "aaaa",
+          end: "abaa",
+        },
+        {
+          start: "aaaa",
+          end: "baba",
+        },
+        {
+          start: "aaaaaaaa",
+          end: "baabaaba",
         },
       ],
     },
