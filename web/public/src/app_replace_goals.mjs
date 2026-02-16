@@ -31,8 +31,8 @@ export function app_replace_goals(context) {
   html_p_text(root, "Rule set: " + rule_name);
   let goals = property_get(item, "goals");
   let completed_previous = true;
+  let d = storage_local_initialize_context(context, "rule_sets_data", {});
   function each_item(goal, index) {
-    let d = storage_local_initialize_context(context, "rule_sets_data", {});
     let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
     let completed = property_get_or(g, "completed", false);
     const condition = not(completed) && completed_previous;
