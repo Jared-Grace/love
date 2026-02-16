@@ -17,23 +17,17 @@ export function app_replace_goals_generic(
   root,
   lambda,
 ) {
-  const choose_this_next2 = not(completed) && completed_previous;
-  let text2 = add_1(index) + ".";
+  const choose_this_next = not(completed) && completed_previous;
+  let text = add_1(index) + ".";
   if (completed) {
     let e = emoji_check();
-    text2 += string_pad_left_space(e);
+    text += string_pad_left_space(e);
   } else {
-    if (choose_this_next2) {
+    if (choose_this_next) {
       let e = emoji_point_right();
-      text2 += string_pad_left_space(e);
+      text += string_pad_left_space(e);
     }
   }
-  let r3 = {
-    text2,
-    choose_this_next2,
-  };
-  let choose_this_next = property_get(r3, "choose_this_next");
-  let text = property_get(r3, "text");
   let b = app_replace_button_wide(root, "", lambda);
   app_replace_button_rule_style(b);
   let r = html_style_text_left_centered(b, text, "");
