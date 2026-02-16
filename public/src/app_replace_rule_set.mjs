@@ -1,3 +1,4 @@
+import { app_replace_button_symbol_style_box_shadow } from "../../../love/public/src/app_replace_button_symbol_style_box_shadow.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { html_p_text_centered } from "../../../love/public/src/html_p_text_centered.mjs";
@@ -190,6 +191,7 @@ export async function app_replace_rule_set(context) {
       });
       if (exists) {
         html_style_background_color_set(sb, "red");
+        app_replace_button_symbol_style_box_shadow(true, sb, "red");
       }
       return sb;
     }
