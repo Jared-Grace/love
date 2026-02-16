@@ -23,6 +23,7 @@ export function app_replace_home(context) {
   let rule_sets = app_replace_rule_sets();
   let completed_previous = true;
   function each_item(item, index2) {
+    let rule_name = property_get(item, "name");
     let goals = property_get(item, "goals");
     function lambda2(goal) {
       let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
@@ -30,7 +31,6 @@ export function app_replace_home(context) {
       return value;
     }
     let completed_all = list_all(goals, lambda2);
-    let rule_name = property_get(item, "name");
     let title = app_replace_goals_generic(
       root,
       completed_all,
