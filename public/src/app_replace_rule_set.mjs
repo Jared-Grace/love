@@ -189,7 +189,7 @@ export async function app_replace_rule_set(context) {
             await html_move_animate(a, b, duration);
           }
           let mapped = list_map_pairs(sliced2, lefts2, lambda6);
-          let v = await list_wait(mapped);
+          let v = await list_wait(mapped);e
           await sleep(10000);
           index_selected = null;
         } else {
