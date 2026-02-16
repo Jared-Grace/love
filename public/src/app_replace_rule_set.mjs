@@ -1,4 +1,4 @@
-import { each_pair } from "../../../love/public/src/each_pair.mjs";
+import { list_map_pairs } from "../../../love/public/src/list_map_pairs.mjs";
 import { list_slice_count } from "../../../love/public/src/list_slice_count.mjs";
 import { html_move_animate } from "../../../love/public/src/html_move_animate.mjs";
 import { app_replace_button_symbol_style_box_shadow } from "../../../love/public/src/app_replace_button_symbol_style_box_shadow.mjs";
@@ -183,8 +183,9 @@ export async function app_replace_rule_set(context) {
           let size3 = list_size(lefts2);
           let sliced2 = list_slice_count(lefts2, index, size3);
           async function lambda6(a, b) {
-          await html_move_animate(a, b, 500);}
-          mapped=list_map_pairs(lefts2, sliced2, lambda6);
+            await html_move_animate(a, b, 500);
+          }
+          let mapped = list_map_pairs(lefts2, sliced2, lambda6);
           index_selected = null;
         } else {
           property_set(symbols_invalid_chosen, index, true);
