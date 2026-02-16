@@ -11,10 +11,10 @@ import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
 import { add_1 } from "../../../love/public/src/add_1.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 export function app_replace_goals_generic(
+  root,
   completed,
   completed_previous,
   index,
-  root,
   lambda,
 ) {
   const choose_this_next = not(completed) && completed_previous;
