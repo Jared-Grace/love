@@ -32,7 +32,7 @@ export function app_replace_home(context) {
     var r3 = app_replace_button_text_and_next(
       completed_all,
       completed_previous,
-      index,
+      index2,
     );
     let choose_this_next = property_get(r3, "choose_this_next");
     let rule_name = property_get(item, "name");
