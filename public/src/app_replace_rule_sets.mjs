@@ -257,16 +257,16 @@ export function app_replace_rule_sets() {
       rules: ["a b > a a"],
       goals: [
         {
-          end: "ababab",
-          start: "abaaab",
+          start: "ababab",
+          end: "abaaab",
         },
         {
-          end: "abab",
-          start: "aaaa",
+          start: "abab",
+          end: "aaaa",
         },
         {
-          end: "abaabaab",
-          start: "aaaaaaaa",
+          start: "abaabaab",
+          end: "aaaaaaaa",
         },
       ],
     },
@@ -275,16 +275,16 @@ export function app_replace_rule_sets() {
       rules: ["b a > a a"],
       goals: [
         {
-          end: "bababa",
-          start: "baaaba",
+          start: "bababa",
+          end: "baaaba",
         },
         {
-          end: "baba",
-          start: "aaaa",
+          start: "baba",
+          end: "aaaa",
         },
         {
-          end: "baabaaba",
-          start: "aaaaaaaa",
+          start: "baabaaba",
+          end: "aaaaaaaa",
         },
       ],
     },
@@ -293,16 +293,16 @@ export function app_replace_rule_sets() {
       rules: ["a b > a c"],
       goals: [
         {
-          end: "ababab",
-          start: "ababac",
+          start: "ababab",
+          end: "ababac",
         },
         {
-          end: "ababab",
-          start: "acabac",
+          start: "ababab",
+          end: "acabac",
         },
         {
-          end: "abaabaaabaaaab",
-          start: "acaacaaacaaaac",
+          start: "abaabaaabaaaab",
+          end: "acaacaaacaaaac",
         },
       ],
     },
@@ -311,16 +311,16 @@ export function app_replace_rule_sets() {
       rules: ["a b > b c"],
       goals: [
         {
-          end: "ababab",
-          start: "ababbc",
+          start: "ababab",
+          end: "ababbc",
         },
         {
-          end: "abababab",
-          start: "bcbcabbc",
+          start: "abababab",
+          end: "bcbcabbc",
         },
         {
-          end: "abababababab",
-          start: "abbcabbcbcbc",
+          start: "abababababab",
+          end: "abbcabbcbcbc",
         },
       ],
     },
@@ -329,16 +329,16 @@ export function app_replace_rule_sets() {
       rules: ["b c > a b"],
       goals: [
         {
-          end: "ababab",
           start: "ababbc",
+          end: "ababab",
         },
         {
-          end: "abababab",
           start: "bcbcabbc",
+          end: "abababab",
         },
         {
-          end: "abababababab",
           start: "abbcabbcbcbc",
+          end: "abababababab",
         },
       ],
     },
