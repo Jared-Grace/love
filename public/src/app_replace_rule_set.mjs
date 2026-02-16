@@ -190,7 +190,7 @@ export async function app_replace_rule_set(context) {
           }
           let mapped = list_map_pairs(sliced2, lefts2, lambda6);
           let v = await list_wait(mapped);
-          await sleep(1000);
+          await sleep(10000);
           index_selected = null;
         } else {
           property_set(symbols_invalid_chosen, index, true);
