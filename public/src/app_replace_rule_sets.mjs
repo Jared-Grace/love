@@ -235,6 +235,24 @@ export function app_replace_rule_sets() {
       ],
     },
     {
+      name: "Shrink Between",
+      rules: ["a b a > a a"],
+      goals: [
+        {
+          start: "aaa",
+          end: "aaaba",
+        },
+        {
+          start: "aaaa",
+          end: "abaaaba",
+        },
+        {
+          start: "aaaaaa",
+          end: "abaabaaba",
+        },
+      ],
+    },
+    {
       name: "Unary Equations Adding",
       rules: ["= > 1 = 1", "1 1 > 1 + 1"],
       goals: [
