@@ -175,7 +175,7 @@ export async function app_replace_rule_set(context) {
           let after = list_skip(current_list, index + size);
           current_list = list_concat_multiple([before, right, after]);
           index_selected = null;
-          await html_move_animate(symbol, rule2, 500);
+          await html_move_animate(sb, rule2, 500);
         } else {
           property_set(symbols_invalid_chosen, index, true);
         }
