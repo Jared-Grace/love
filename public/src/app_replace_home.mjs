@@ -21,7 +21,8 @@ export function app_replace_home(context) {
   let rule_sets = app_replace_rule_sets();
   function each_item(item, index2) {
     let goals = property_get(item, "goals");
-    let a2 = list_all(list, function lambda2(item2) {});
+    function lambda2(item2) {}
+    let a2 = list_all(list, lambda2);
     let rule_name = property_get(item, "name");
     let a = add_1(index2) + ".";
     let b = app_replace_button_wide(root, "", lambda);
