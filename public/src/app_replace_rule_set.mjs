@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { html_p_text_centered } from "../../../love/public/src/html_p_text_centered.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
@@ -184,6 +185,9 @@ export async function app_replace_rule_set(context) {
       }
       app_replace_button_symbol_style_valid(sb, index_selected !== null);
       let exists = property_exists(symbols_invalid_chosen, index);
+      log({
+        symbols_invalid_chosen,
+      });
       if (exists) {
         html_style_background_color_set(sb, "red");
       }
