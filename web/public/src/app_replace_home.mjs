@@ -1,3 +1,4 @@
+import { app_replace_rule_sets_data_goal } from "../../../love/public/src/app_replace_rule_sets_data_goal.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { app_replace_rule_sets_data_initialize } from "../../../love/public/src/app_replace_rule_sets_data_initialize.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
@@ -21,7 +22,9 @@ export function app_replace_home(context) {
   let rule_sets = app_replace_rule_sets();
   function each_item(item, index2) {
     let goals = property_get(item, "goals");
-    function lambda2(item2) {}
+    function lambda2(item2) {
+      let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
+    }
     let a2 = list_all(list, lambda2);
     let rule_name = property_get(item, "name");
     let a = add_1(index2) + ".";
