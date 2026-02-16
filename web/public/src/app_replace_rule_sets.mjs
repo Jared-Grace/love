@@ -253,6 +253,42 @@ export function app_replace_rule_sets() {
       ],
     },
     {
+      name: "Replace Right Same",
+      rules: ["a b > a a"],
+      goals: [
+        {
+          end: "aaba",
+          start: "aaaa",
+        },
+        {
+          end: "abab",
+          start: "aaaa",
+        },
+        {
+          end: "abaabaab",
+          start: "aaaaaaaa",
+        },
+      ],
+    },
+    {
+      name: "Replace Left Same",
+      rules: ["b a > a a"],
+      goals: [
+        {
+          end: "abaa",
+          start: "aaaa",
+        },
+        {
+          end: "baba",
+          start: "aaaa",
+        },
+        {
+          end: "baabaaba",
+          start: "aaaaaaaa",
+        },
+      ],
+    },
+    {
       name: "Grow Between",
       rules: ["a a > a b a"],
       goals: [
