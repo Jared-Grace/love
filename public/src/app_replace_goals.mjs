@@ -47,9 +47,9 @@ export function app_replace_goals(context) {
     let r = html_style_text_left_centered(b, text, "");
     let title = property_get(r, "title");
     html_style_set(title, "line-height", 1.5);
-    let r2 = app_replace_button_rule_content(title, left, right);
     let background = app_replace_rule_set_highlight();
     html_style_background_color_set_if(choose_this_next, b, background);
+    let r2 = app_replace_button_rule_content(title, left, right);
     app_replace_lefts_rights_style(r2, completed);
     function lambda() {
       on_click(index);
