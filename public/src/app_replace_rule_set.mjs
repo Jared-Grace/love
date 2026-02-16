@@ -292,28 +292,26 @@ export async function app_replace_rule_set(context) {
             "You have completed all goals that are available at this time!",
           );
         }
-        if (next) {
-          function lambda2() {
-            if (ii) {
-              storage_local_set_context(context, "goal_index", goal_index_next);
+        function lambda2() {
+          if (ii) {
+            storage_local_set_context(context, "goal_index", goal_index_next);
+          } else {
+            if (ii2) {
+              storage_local_set_context(
+                context,
+                "rule_set_index",
+                rule_set_index_next,
+              );
+              storage_local_set_context(context, "goal_index", 0);
             } else {
-              if (ii2) {
-                storage_local_set_context(
-                  context,
-                  "rule_set_index",
-                  rule_set_index_next,
-                );
-                storage_local_set_context(context, "goal_index", 0);
-              } else {
-                next = false;
-              }
+              next = false;
             }
-            app_shared_screen_set(context, app_replace_rule_set);
           }
-          let text = app_karate_button_next_text();
-          let bn = app_replace_button(p_next, text, lambda2);
-          html_width_full(bn);
+          app_shared_screen_set(context, app_replace_rule_set);
         }
+        let text = app_karate_button_next_text();
+        let bn = app_replace_button(p_next, text, lambda2);
+        html_width_full(bn);
       }
       let nn = null_not_is(index_selected);
       html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
