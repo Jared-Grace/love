@@ -239,16 +239,16 @@ export function app_replace_rule_sets() {
       rules: ["a b a > a a"],
       goals: [
         {
-          start: "aaa",
-          end: "aaaba",
+          start: "aaaba",
+          end: "aaa",
         },
         {
-          start: "aaaa",
-          end: "abaaaba",
+          start: "abaaaba",
+          end: "aaaa",
         },
         {
-          start: "aaaaaa",
-          end: "abaabaaba",
+          start: "abaabaaba",
+          end: "aaaaaa",
         },
       ],
     },
