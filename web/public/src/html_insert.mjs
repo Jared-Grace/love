@@ -5,7 +5,7 @@ export function html_insert(parent, child, index) {
   let parent_c = html_component_element_get(parent);
   let child_c = html_component_element_get(child);
   let pcl = parent_c.children.length;
-  let le = less_than_equal(a, b);
+  let le = less_than_equal(index, pcl);
   assert(le);
   if (index > pcl) {
     parent_c.appendChild(child_c);
