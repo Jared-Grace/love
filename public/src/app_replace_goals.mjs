@@ -35,13 +35,13 @@ export function app_replace_goals(context) {
   function each_item(goal, index) {
     let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
     let completed = app_replace_goal_completed_initialize(g);
-    const condition = not(completed) && completed_previous;
+    const choose_this_next = not(completed) && completed_previous;
     let a = add_1(index) + ".";
     if (completed) {
       let e = emoji_check();
       a += string_pad_left_space(e);
     } else {
-      if (condition) {
+      if (choose_this_next) {
         let e = emoji_point_right();
         a += string_pad_left_space(e);
       }
@@ -57,7 +57,7 @@ export function app_replace_goals(context) {
     html_style_set(title, "line-height", 1.5);
     let r2 = app_replace_button_rule_content(title, left, right);
     let background = app_replace_rule_set_highlight();
-    html_style_background_color_set_if(condition, b, background);
+    html_style_background_color_set_if(choose_this_next, b, background);
     app_replace_lefts_rights_style(r2, completed);
     function lambda() {
       on_click(index);
