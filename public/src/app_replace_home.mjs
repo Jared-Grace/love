@@ -25,7 +25,8 @@ export function app_replace_home(context) {
     let goals = property_get(item, "goals");
     function lambda2(goal) {
       let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
-      let value = app_replace_goal_completed_initialize(g2);
+      let value = app_replace_goal_completed_initialize(g);
+      return value;
     }
     let a2 = list_all(goals, lambda2);
     let rule_name = property_get(item, "name");
