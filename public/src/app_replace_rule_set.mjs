@@ -183,8 +183,9 @@ export async function app_replace_rule_set(context) {
           let rights2 = property_get(rb, "rights");
           let size3 = list_size(lefts2);
           let sliced2 = list_slice_count(sbs, index, size3);
+          const duration = 500;
           async function lambda6(a, b) {
-            await html_move_animate(a, b, 500);
+            await html_move_animate(a, b, duration);
           }
           let mapped = list_map_pairs(sliced2, lefts2, lambda6);
           let v = await list_wait(mapped);
