@@ -199,6 +199,24 @@ export function app_replace_rule_sets() {
       ],
     },
     {
+      name: "Shrink Different 2",
+      rules: ["b c > a", "d e > b"],
+      goals: [
+        {
+          start: "dec",
+          end: "a",
+        },
+        {
+          start: "decdec",
+          end: "aa",
+        },
+        {
+          start: "decbcbcdec",
+          end: "aaaa",
+        },
+      ],
+    },
+    {
       name: "Unary Equations Adding",
       rules: ["= > 1 = 1", "1 1 > 1 + 1"],
       goals: [
