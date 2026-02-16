@@ -14,9 +14,6 @@ export async function html_move_animate(
   from_e.style.transition = `transform ${duration}ms`;
   from_e.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
   await sleep(duration);
-  function lambda() {
-    from_e.style.transition = "";
-    from_e.style.transform = "";
-  }
-  setTimeout(lambda, duration);
+  from_e.style.transition = "";
+  from_e.style.transform = "";
 }
