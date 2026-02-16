@@ -28,7 +28,7 @@ export function app_replace_home(context) {
       let value = app_replace_goal_completed_initialize(g);
       return value;
     }
-    let a2 = list_all(goals, lambda2);
+    let completed_all = list_all(goals, lambda2);
     let rule_name = property_get(item, "name");
     let a = add_1(index2) + ".";
     let b = app_replace_button_wide(root, "", lambda);
