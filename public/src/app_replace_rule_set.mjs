@@ -191,7 +191,7 @@ export async function app_replace_rule_set(context) {
           }
           let mapped = list_map_pairs(sliced2, lefts2, lambda6);
           let v = await list_wait(mapped);
-          let list = list_map(list, html_clone);
+          let rights_cloned = list_map(rights2, html_clone);
           await sleep(10000);
           index_selected = null;
         } else {
