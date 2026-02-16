@@ -14,4 +14,6 @@ export async function html_move_animate_rect(
   await sleep(duration);
   from_e.style.transition = "";
   from_e.style.transform = "";
+  const parent = from_e.parentNode;
+  parent.removeChild(from_e);
 }
