@@ -163,6 +163,7 @@ export async function app_replace_rule_set(context) {
     html_clear(div_symbols);
     function symbols_mapper(symbol, index) {
       async function symbol_on_click() {
+        let sb = null;
         let rule2 = list_get(rules_parsed, index_selected);
         let eq = app_replace_rule_valid(rule2, index, current_list);
         if (eq) {
@@ -180,8 +181,7 @@ export async function app_replace_rule_set(context) {
         }
         refresh();
       }
-      let sb = null;
-      sb = html_button(div_symbols, symbol, symbol_on_click);
+      let sb = html_button(div_symbols, symbol, symbol_on_click);
       app_replace_button_symbol_style(sb);
       property_set_exists_not(sb, "index", index);
       let valid = false;
