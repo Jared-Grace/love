@@ -9,18 +9,18 @@ export function app_replace_button_text_and_next(
   index,
 ) {
   const choose_this_next = not(completed) && completed_previous;
-  let a = add_1(index) + ".";
+  let text = add_1(index) + ".";
   if (completed) {
     let e = emoji_check();
-    a += string_pad_left_space(e);
+    text += string_pad_left_space(e);
   } else {
     if (choose_this_next) {
       let e = emoji_point_right();
-      a += string_pad_left_space(e);
+      text += string_pad_left_space(e);
     }
   }
   let r3 = {
-    a,
+    text,
     choose_this_next,
   };
   return r3;
