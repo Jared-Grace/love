@@ -101,11 +101,12 @@ export async function app_replace_rule_set(context) {
   let label_rules = html_p(root);
   let rules = property_get(rule, "rules");
   let rules_parsed = list_map(rules, app_replace_rule_parse);
+  let symbols_invalid_chosen = {};
   function each_rule(rule, index) {
     let left = property_get(rule, "left");
     let right = property_get(rule, "right");
     function lambda3() {
-      let symbols_invalid_chosen = {};
+          symbols_invalid_chosen = {};
       index_selected = ternary(index_selected === index, null, index);
       refresh();
       return;
@@ -138,7 +139,6 @@ export async function app_replace_rule_set(context) {
   let highlight = app_replace_rule_set_highlight();
   let div_below = html_div(root);
   let success = false;
-  let symbols_invalid_chosen = {};
   refresh();
   function refresh() {
     function each_button_rule_refresh(rb, index2) {
