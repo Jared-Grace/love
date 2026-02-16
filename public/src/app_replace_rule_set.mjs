@@ -149,6 +149,7 @@ export async function app_replace_rule_set(context) {
       let enabled = list_any(r, lambda7);
       const selected = index2 === index_selected;
       enabled = index_selected === null || selected;
+      enabled = true;
       html_enable_if(rb, enabled);
       app_replace_lefts_rights_style(rb, enabled);
       let on_b = app_replace_button_rule_background_color();
