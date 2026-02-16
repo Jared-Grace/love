@@ -31,6 +31,10 @@ export function app_replace_goals(context) {
   function each_item(goal, index) {
     let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
     let completed = app_replace_goal_completed_initialize(g);
+    let start = property_get(goal, "start");
+    let left = text_split_empty(start);
+    let end = property_get(goal, "end");
+    let right = text_split_empty(end);
     var r3 = app_replace_button_text_and_next(
       completed,
       completed_previous,
@@ -38,10 +42,6 @@ export function app_replace_goals(context) {
     );
     let choose_this_next = property_get(r3, "choose_this_next");
     let text = property_get(r3, "text");
-    let start = property_get(goal, "start");
-    let left = text_split_empty(start);
-    let end = property_get(goal, "end");
-    let right = text_split_empty(end);
     let b = app_replace_button_wide(root, "", lambda);
     app_replace_button_rule_style(b);
     let r = html_style_text_left_centered(b, text, "");
