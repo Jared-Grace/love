@@ -3,7 +3,7 @@ import { sleep } from "../../../love/public/src/sleep.mjs";
 export async function html_move_animate(
   component_from,
   component_to,
-  duration = 500,
+  duration,
 ) {
   let from_e = html_component_element_get(component_from);
   let to_e = html_component_element_get(component_to);
