@@ -147,10 +147,10 @@ export async function app_replace_rule_set(context) {
       let r = range(size2);
       let lambda7 = app_replace_rule_valid_curry(rule2, current_list);
       let enabled = list_any(r, lambda7);
-      enabled = true;
+      const selected = index2 === index_selected;
+      enabled = index_selected === null || selected;
       html_enable_if(rb, enabled);
       app_replace_lefts_rights_style(rb, enabled);
-      const selected = index2 === index_selected;
       let on_b = app_replace_button_rule_background_color();
       let c = ternary_nested(selected, highlight, enabled, on_b, "#a8a8a8ff");
       html_style_background_color_set(rb, c);
