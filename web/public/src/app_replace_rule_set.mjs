@@ -177,10 +177,7 @@ export async function app_replace_rule_set(context) {
           let rb = list_get(rules_buttons, index_selected);
           let lefts2 = property_get(rb, "lefts");
           let rights2 = property_get(rb, "rights");
-          log({
-            lefts2,
-            rights2,
-          });
+          let size3 = list_size(list);
           await html_move_animate(sb, rb, 500);
           index_selected = null;
         } else {
