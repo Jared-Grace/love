@@ -159,10 +159,7 @@ export async function app_replace_rule_set(context) {
       function symbol_on_click() {
         let rule2 = list_get(rules_parsed, index_selected);
         let eq = app_replace_rule_valid(rule2, index, current_list);
-        if (not(eq)) {
-          property_set(symbols_invalid_chosen, index, true);
-          return;
-        } else {
+        if (eq) {
           let right = property_get(rule2, "right");
           let left = property_get(rule2, "left");
           let before = list_take(current_list, index);
@@ -170,6 +167,9 @@ export async function app_replace_rule_set(context) {
           let after = list_skip(current_list, index + size);
           current_list = list_concat_multiple([before, right, after]);
           index_selected = null;
+        } else {
+          property_set(symbols_invalid_chosen, index, true);
+          return;
         }
         refresh();
       }
@@ -185,7 +185,7 @@ export async function app_replace_rule_set(context) {
       }
       app_replace_button_symbol_style_valid(sb, index_selected !== null);
       let exists = property_exists(symbols_invalid_chosen, index);
-      if (false) {
+      if (exists) {
       }
       return sb;
     }
