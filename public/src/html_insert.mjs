@@ -5,13 +5,9 @@ export function html_insert(parent, child, index) {
   let child_c = html_component_element_get(child);
   let pcl = parent_c.children.length;
   less_than_equal_assert(index, pcl);
-  if (index > pcl) {
+  if (index === pcl) {
     parent_c.appendChild(child_c);
   } else {
-    if (index === pcl) {
-      parent_c.appendChild(child_c);
-    } else {
-      parent_c.insertBefore(child_c, parent_c.children[index]);
-    }
+    parent_c.insertBefore(child_c, parent_c.children[index]);
   }
 }
