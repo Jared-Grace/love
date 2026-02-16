@@ -79,6 +79,7 @@ import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
+import { error } from "./error.mjs";
 export async function app_replace_rule_set(context) {
   let root = property_get(context, "root");
   app_replace_button_home(root, context);
@@ -188,6 +189,7 @@ export async function app_replace_rule_set(context) {
           }
           let mapped = list_map_pairs(lefts2, sliced2, lambda6);
           let v = await list_wait(mapped);
+          error();
           index_selected = null;
         } else {
           property_set(symbols_invalid_chosen, index, true);
