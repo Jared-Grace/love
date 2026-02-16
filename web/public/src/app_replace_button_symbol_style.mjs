@@ -10,7 +10,7 @@ export function app_replace_button_symbol_style(b) {
   html_border_none(b);
   html_style_padding_x(b, "0.37em");
   html_style_padding_y(b, "0.1em");
-  html_style_assign(span, {
+  html_style_assign(b, {
     display: "inline-block",
     "line-height": 1,
   });
