@@ -1,3 +1,4 @@
+import { html_style_overflow_hidden } from "../../../love/public/src/html_style_overflow_hidden.mjs";
 import { html_font_sans_serif_set_html } from "../../../love/public/src/html_font_sans_serif_set_html.mjs";
 import { g_coordinates } from "../../../love/public/src/g_coordinates.mjs";
 import { app_g_map_generate } from "../../../love/public/src/app_g_map_generate.mjs";
@@ -53,9 +54,9 @@ export async function app_g_main(context) {
       "font-size": "18px",
       margin: "0",
       padding: 0,
-      overflow: "hidden",
       height: "100%",
     });
+    html_style_overflow_hidden(item);
   }
   each([root], lambda);
   let path_prefix = "";
