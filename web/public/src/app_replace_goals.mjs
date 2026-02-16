@@ -1,4 +1,8 @@
-import { app_replace_button_text_and_next } from "../../../love/public/src/app_replace_button_text_and_next.mjs";
+import { emoji_point_right } from "../../../love/public/src/emoji_point_right.mjs";
+import { string_pad_left_space } from "../../../love/public/src/string_pad_left_space.mjs";
+import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
+import { add_1 } from "../../../love/public/src/add_1.mjs";
+import { not } from "../../../love/public/src/not.mjs";
 import { app_replace_goal_completed_initialize } from "../../../love/public/src/app_replace_goal_completed_initialize.mjs";
 import { app_replace_rule_sets_data_initialize } from "../../../love/public/src/app_replace_rule_sets_data_initialize.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
@@ -35,11 +39,21 @@ export function app_replace_goals(context) {
     let left = text_split_empty(start);
     let end = property_get(goal, "end");
     let right = text_split_empty(end);
-    var r3 = app_replace_button_text_and_next(
-      completed,
-      completed_previous,
-      index,
-    );
+    const choose_this_next2 = not(completed) && completed_previous;
+    let text2 = add_1(index) + ".";
+    if (completed) {
+      let e = emoji_check();
+      text2 += string_pad_left_space(e);
+    } else {
+      if (choose_this_next2) {
+        let e = emoji_point_right();
+        text2 += string_pad_left_space(e);
+      }
+    }
+    let r3 = {
+      text2,
+      choose_this_next2,
+    };
     let choose_this_next = property_get(r3, "choose_this_next");
     let text = property_get(r3, "text");
     let b = app_replace_button_wide(root, "", lambda);
