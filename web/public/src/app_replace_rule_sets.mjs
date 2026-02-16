@@ -1,8 +1,26 @@
 export function app_replace_rule_sets() {
   let v = [
     {
-      name: "Different",
+      name: "Grow Different",
       rules: ["a > b c"],
+      goals: [
+        {
+          start: "a",
+          end: "bc",
+        },
+        {
+          start: "aa",
+          end: "bcbc",
+        },
+        {
+          start: "aaaa",
+          end: "bcbcbcbc",
+        },
+      ],
+    },
+    {
+      name: "Shrink Different",
+      rules: ["b c > a"],
       goals: [
         {
           start: "a",
