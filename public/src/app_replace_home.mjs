@@ -4,7 +4,6 @@ import { app_replace_rule_sets_data_goal } from "../../../love/public/src/app_re
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { app_replace_rule_sets_data_initialize } from "../../../love/public/src/app_replace_rule_sets_data_initialize.mjs";
 import { each_index } from "../../../love/public/src/each_index.mjs";
-import { html_style_text_left_centered } from "../../../love/public/src/html_style_text_left_centered.mjs";
 import { app_replace_goals } from "../../../love/public/src/app_replace_goals.mjs";
 import { app_replace_button_wide } from "../../../love/public/src/app_replace_button_wide.mjs";
 import { app_replace_settings } from "../../../love/public/src/app_replace_settings.mjs";
@@ -30,6 +29,7 @@ export function app_replace_home(context) {
       return value;
     }
     let completed_all = list_all(goals, lambda2);
+    let rule_name = property_get(item, "name");
     let title = app_replace_goals_generic(
       completed_all,
       completed_previous,
@@ -37,9 +37,6 @@ export function app_replace_home(context) {
       root,
       lambda,
     );
-    let rule_name = property_get(item, "name");
-    let b = app_replace_button_wide(root, "", lambda);
-    html_style_text_left_centered(b, a, rule_name);
     function lambda() {
       on_click(index2);
     }
