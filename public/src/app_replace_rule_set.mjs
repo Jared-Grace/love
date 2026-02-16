@@ -1,3 +1,4 @@
+import { each_pair } from "../../../love/public/src/each_pair.mjs";
 import { list_slice_count } from "../../../love/public/src/list_slice_count.mjs";
 import { html_move_animate } from "../../../love/public/src/html_move_animate.mjs";
 import { app_replace_button_symbol_style_box_shadow } from "../../../love/public/src/app_replace_button_symbol_style_box_shadow.mjs";
@@ -181,8 +182,7 @@ export async function app_replace_rule_set(context) {
           let rights2 = property_get(rb, "rights");
           let size3 = list_size(lefts2);
           let sliced2 = list_slice_count(lefts2, index, size3);
-          function lambda6(item) {}
-          let mapped2 = list_map(list, lambda6);
+          each_pair(list_a, list_b, function lambda6(a, b) {});
           await html_move_animate(sb, rb, 500);
           index_selected = null;
         } else {
