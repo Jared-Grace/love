@@ -1,3 +1,4 @@
+import { app_replace_rule_sets_data_initialize } from "../../../love/public/src/app_replace_rule_sets_data_initialize.mjs";
 import { string_pad_left_space } from "../../../love/public/src/string_pad_left_space.mjs";
 import { emoji_point_right } from "../../../love/public/src/emoji_point_right.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
@@ -8,7 +9,6 @@ import { not } from "../../../love/public/src/not.mjs";
 import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
 import { app_replace_button_home } from "../../../love/public/src/app_replace_button_home.mjs";
 import { property_get_or } from "../../../love/public/src/property_get_or.mjs";
-import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { app_replace_lefts_rights_style } from "../../../love/public/src/app_replace_lefts_rights_style.mjs";
 import { app_replace_button_rule_content } from "../../../love/public/src/app_replace_button_rule_content.mjs";
 import { app_replace_rule_sets_data_goal } from "../../../love/public/src/app_replace_rule_sets_data_goal.mjs";
@@ -31,7 +31,7 @@ export function app_replace_goals(context) {
   html_p_text(root, "Rule set: " + rule_name);
   let goals = property_get(item, "goals");
   let completed_previous = true;
-  let d = storage_local_initialize_context(context, "rule_sets_data", {});
+  let d = app_replace_rule_sets_data_initialize(context);
   function each_item(goal, index) {
     let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
     let completed = property_get_or(g, "completed", false);
