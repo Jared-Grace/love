@@ -136,6 +136,7 @@ export async function app_replace_rule_set(context) {
   let highlight = app_replace_rule_set_highlight();
   let div_below = html_div(root);
   let success = false;
+  let symbols_invalid_chosen = {};
   refresh();
   function refresh() {
     function each_button_rule_refresh(rb, index2) {
@@ -155,7 +156,6 @@ export async function app_replace_rule_set(context) {
     }
     each_index(rules_buttons, each_button_rule_refresh);
     html_clear(div_symbols);
-    let symbols_invalid_chosen = {};
     function symbols_mapper(symbol, index) {
       function symbol_on_click() {
         let rule2 = list_get(rules_parsed, index_selected);
