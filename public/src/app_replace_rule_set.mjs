@@ -160,6 +160,7 @@ export async function app_replace_rule_set(context) {
         let eq = app_replace_rule_valid(rule2, index, current_list);
         if (not(eq)) {
           alert("invalid index for rule");
+          property_set(object, property_name, value2);
           return;
         } else {
           let right = property_get(rule2, "right");
