@@ -21,6 +21,7 @@ export function app_replace_home(context) {
   app_replace_button_wide(root, emoji_gear() + " Settings", lambda4);
   let d = app_replace_rule_sets_data_initialize(context);
   let rule_sets = app_replace_rule_sets();
+  let completed_previous = true;
   function each_item(item, index2) {
     let goals = property_get(item, "goals");
     function lambda2(goal) {
@@ -42,6 +43,7 @@ export function app_replace_home(context) {
     function lambda() {
       on_click(index2);
     }
+    completed_previous = completed_all;
   }
   each_index(rule_sets, each_item);
   function on_click(index) {
