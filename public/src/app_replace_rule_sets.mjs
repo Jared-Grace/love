@@ -312,15 +312,15 @@ export function app_replace_rule_sets() {
       goals: [
         {
           end: "ababab",
-          start: "bcabcb",
+          start: "ababbc",
         },
         {
-          end: "ababab",
-          start: "acabac",
+          end: "abababab",
+          start: "bcbcabbc",
         },
         {
-          end: "abaabaaabaaaab",
-          start: "acaacaaacaaaac",
+          end: "abababababab",
+          start: "abbcabbcbcbc",
         },
       ],
     },
