@@ -5,19 +5,19 @@ export async function html_move_animate(
   component_to,
   duration = 500,
 ) {
-  let e = html_component_element_get(component);
-  let container_e = html_component_element_get(container);
-  const movingRect = component_from.getBoundingClientRect();
-  const targetRect = component_to.getBoundingClientRect();
+  let from_e = html_component_element_get(component_from);
+  let to_e = html_component_element_get(component_to);
+  const movingRect = from_e.getBoundingClientRect();
+  const targetRect = to_e.getBoundingClientRect();
   const offsetX = targetRect.left - movingRect.left;
   const offsetY = targetRect.top - movingRect.top;
-  component_from.style.transition = `transform ${duration}ms`;
-  component_from.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+  from_e.style.transition = `transform ${duration}ms`;
+  from_e.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
   await sleep(duration);
   function lambda() {
-    component_from.style.transition = "";
-    component_from.style.transform = "";
-    component_to.parentNode.insertBefore(component_from, component_to);
+    from_e.style.transition = "";
+    from_e.style.transform = "";
+    to_e.parentNode.insertBefore(from_e, to_e);
   }
   setTimeout(lambda, duration);
 }
