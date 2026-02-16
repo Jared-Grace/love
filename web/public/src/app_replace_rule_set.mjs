@@ -184,7 +184,9 @@ export async function app_replace_rule_set(context) {
         valid = app_replace_rule_valid(rule2, index3, current_list);
       }
       app_replace_button_symbol_style_valid(sb, index_selected !== null);
-      let exists = property_exists(object, property_name);
+      let exists = property_exists(symbols_invalid_chosen, index);
+      if (false) {
+      }
       return sb;
     }
     let sbs = list_map_index(current_list, symbols_mapper);
