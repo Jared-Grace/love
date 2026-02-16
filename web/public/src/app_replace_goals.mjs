@@ -31,8 +31,6 @@ export function app_replace_goals(context) {
   function each_item(goal, index) {
     let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
     let completed = app_replace_goal_completed_initialize(g);
-    let choose_this_next = property_get(r3, "choose_this_next");
-    let text = property_get(r3, "text");
     let start = property_get(goal, "start");
     let left = text_split_empty(start);
     let end = property_get(goal, "end");
@@ -49,6 +47,8 @@ export function app_replace_goals(context) {
       completed_previous,
       index,
     );
+    let choose_this_next = property_get(r3, "choose_this_next");
+    let text = property_get(r3, "text");
     html_style_background_color_set_if(choose_this_next, b, background);
     app_replace_lefts_rights_style(r2, completed);
     function lambda() {
