@@ -296,13 +296,6 @@ export async function app_replace_rule_set(context) {
           if (ii) {
             storage_local_set_context(context, "goal_index", goal_index_next);
           } else {
-            let rule_set_index = storage_local_get_context(
-              context,
-              "rule_set_index",
-            );
-            let rule_sets = app_replace_rule_sets();
-            let rule_set_index_next = rule_set_index + 1;
-            let ii2 = list_index_is(rule_sets, rule_set_index_next);
             if (ii2) {
               storage_local_set_context(
                 context,
