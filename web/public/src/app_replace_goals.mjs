@@ -30,10 +30,10 @@ export function app_replace_goals(context) {
     let end = property_get(goal, "end");
     let right = text_split_empty(end);
     let title = app_replace_goals_generic(
+      root,
       completed,
       completed_previous,
       index,
-      root,
       lambda,
     );
     let r2 = app_replace_button_rule_content(title, left, right);
