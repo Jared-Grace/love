@@ -305,10 +305,6 @@ export async function app_replace_rule_set(context) {
               storage_local_set_context(context, "goal_index", 0);
             } else {
               next = false;
-              html_p_text_centered(
-                p_next,
-                "You have completed all goals that are available at this time!",
-              );
             }
           }
           function lambda2() {
