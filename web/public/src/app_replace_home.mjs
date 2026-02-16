@@ -1,4 +1,4 @@
-import { app_replace_button_text_and_next } from "../../../love/public/src/app_replace_button_text_and_next.mjs";
+import { app_replace_goals_generic } from "../../../love/public/src/app_replace_goals_generic.mjs";
 import { app_replace_goal_completed_initialize } from "../../../love/public/src/app_replace_goal_completed_initialize.mjs";
 import { app_replace_rule_sets_data_goal } from "../../../love/public/src/app_replace_rule_sets_data_goal.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
@@ -29,12 +29,13 @@ export function app_replace_home(context) {
       return value;
     }
     let completed_all = list_all(goals, lambda2);
-    var r3 = app_replace_button_text_and_next(
-      completed_all,
+    let title = app_replace_goals_generic(
+      completed,
       completed_previous,
-      index2,
+      index,
+      root,
+      lambda,
     );
-    let choose_this_next = property_get(r3, "choose_this_next");
     let rule_name = property_get(item, "name");
     let b = app_replace_button_wide(root, "", lambda);
     html_style_text_left_centered(b, a, rule_name);
