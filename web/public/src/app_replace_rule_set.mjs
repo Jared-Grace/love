@@ -175,6 +175,7 @@ export async function app_replace_rule_set(context) {
           let after = list_skip(current_list, index + size);
           current_list = list_concat_multiple([before, right, after]);
           index_selected = null;
+          let rb = list_get(rules_buttons, index_selected);
           await html_move_animate(sb, rule2, 500);
         } else {
           property_set(symbols_invalid_chosen, index, true);
