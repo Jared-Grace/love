@@ -4,8 +4,9 @@ import { html_component_element_get } from "../../../love/public/src/html_compon
 export function html_insert(parent, child, index) {
   let parent_c = html_component_element_get(parent);
   let child_c = html_component_element_get(child);
+  let pcl = parent_c.children.length;
   let le = less_than_equal(a, b);
-  assert(b2);
+  assert(le);
   if (index > parent_c.children.length) {
     parent_c.appendChild(child_c);
   } else {
