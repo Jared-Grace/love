@@ -1,3 +1,4 @@
+import { app_replace_button_symbol_style_valid_if_multiple } from "../../../love/public/src/app_replace_button_symbol_style_valid_if_multiple.mjs";
 import { app_replace_button_symbol_style_valid_multiple_nested } from "../../../love/public/src/app_replace_button_symbol_style_valid_multiple_nested.mjs";
 import { app_replace_button_symbol_style_invalid } from "../../../love/public/src/app_replace_button_symbol_style_invalid.mjs";
 import { html_style_padding_em } from "../../../love/public/src/html_style_padding_em.mjs";
@@ -191,7 +192,7 @@ export async function app_replace_rule_set(context) {
         let eq = app_replace_rule_valid(rule2, index, current_list);
         if (eq) {
           symbols_invalid_chosen = {};
-          app_replace_button_symbol_style_valid_multiple_nested(sbs, true);
+          app_replace_button_symbol_style_valid_if_multiple(sbs, true);
           let right = property_get(rule2, "right");
           let left = property_get(rule2, "left");
           let before = list_take(current_list, index);
