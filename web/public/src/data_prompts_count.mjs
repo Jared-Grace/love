@@ -1,6 +1,5 @@
 import { function_aliases_for } from "../../../love/public/src/function_aliases_for.mjs";
 import { prompt_previous_at } from "../../../love/public/src/prompt_previous_at.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { list_map_index_countdown } from "../../../love/public/src/list_map_index_countdown.mjs";
@@ -10,9 +9,6 @@ import { data_prompts_path } from "../../../love/public/src/data_prompts_path.mj
 export async function data_prompts_count(offset) {
   let fn = prompt_previous_at;
   let value = await function_aliases_for(fn);
-  log({
-    value,
-  });
   let first = list_first(value);
   let d_path = data_prompts_path();
   let prompts = await data_value("prompts", d_path);
