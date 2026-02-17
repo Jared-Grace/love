@@ -229,7 +229,8 @@ export async function app_replace_rule_set(context) {
           await list_wait(mapped2);
           log({});
           let rights_cloned2 = list_map(rights2, html_clone);
-          each(list, function lambda6(item2) {});
+          function lambda6(item2) {}
+          each(list, lambda6);
           html_parent_append_multiple(div_refresh, rights_cloned2);
           await html_move_animate_multiple(rights_cloned2, rights2, 0);
           index_selected = null;
