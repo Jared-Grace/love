@@ -218,6 +218,10 @@ export async function app_replace_rule_set(context) {
             const dy = rect_after.top - rect_middle.top;
             html_style_set(c, "transform", `translate(${dx}px, ${dy}px)`);
             c.offsetWidth;
+            let a = {
+              top: rect_after.top + dy,
+              left: rect_after.top + dx,
+            };
             await html_move_animate_rect(c, rects_before, rect_after, duration);
           }
           await each_multiple_async(
