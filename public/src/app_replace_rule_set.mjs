@@ -1,3 +1,4 @@
+import { html_style_padding } from "../../../love/public/src/html_style_padding.mjs";
 import { app_replace_button_screen } from "../../../love/public/src/app_replace_button_screen.mjs";
 import { storage_local_transform_empty_context } from "../../../love/public/src/storage_local_transform_empty_context.mjs";
 import { app_replace_button_symbol_style_valid_multiple } from "../../../love/public/src/app_replace_button_symbol_style_valid_multiple.mjs";
@@ -328,6 +329,7 @@ export async function app_replace_rule_set(context) {
         let p = html_p(div_below);
         html_style_background_color_set(p, highlight);
         app_replace_button_symbol_style_inner(p);
+        html_style_padding(component, value2);
         html_centered(p);
         let p_emojis = html_div(p);
         html_span_text(p_emojis, joined);
