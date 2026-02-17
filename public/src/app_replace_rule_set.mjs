@@ -116,6 +116,7 @@ export async function app_replace_rule_set(context) {
   let rules_parsed = list_map(rules, app_replace_rule_parse);
   let symbols_invalid_chosen = {};
   let rules_buttons = null;
+  let div = html_div(root2);
   let label_symbols = html_p(root);
   let div_symbols = html_div(root);
   let current_list = text_split_empty(start);
