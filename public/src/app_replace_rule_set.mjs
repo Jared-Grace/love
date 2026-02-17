@@ -342,7 +342,7 @@ export async function app_replace_rule_set(context) {
           "Congratulations",
           "Success",
           "Good job",
-          "Good job",
+          "Great job",
           "Well done",
           "Keep it up",
           "Amazing",
