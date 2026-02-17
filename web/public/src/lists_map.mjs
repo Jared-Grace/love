@@ -6,7 +6,7 @@ export function lists_map(lists, mapper) {
       const m = mapper(a, b);
       la(m);
     }
-    each_multiple(list_a, list_b, lambda_each_pair);
+    each_multiple(lists, lambda_each_pair);
   }
   let mapped = list_adder(lambda_list_adder);
   return mapped;
