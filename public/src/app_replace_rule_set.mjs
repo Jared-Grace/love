@@ -1,3 +1,4 @@
+import { html_bounding_client_rect } from "../../../love/public/src/html_bounding_client_rect.mjs";
 import { html_parent_remove } from "../../../love/public/src/html_parent_remove.mjs";
 import { html_visibility_hidden } from "../../../love/public/src/html_visibility_hidden.mjs";
 import { html_insert } from "../../../love/public/src/html_insert.mjs";
@@ -196,8 +197,7 @@ export async function app_replace_rule_set(context) {
           let mapped = list_map_pairs(sliced2, lefts2, lambda6);
           let v = await list_wait(mapped);
           let skipped = list_skip(sbs, index + size3);
-          function lambda9(item2) {}
-          let mapped2 = list_map(list, lambda9);
+          let mapped2 = list_map(skipped, html_bounding_client_rect);
           let rights_cloned = list_map(rights2, html_clone);
           function lambda8(item, index5) {
             html_visibility_hidden(item);
