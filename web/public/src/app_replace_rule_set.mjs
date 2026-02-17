@@ -312,7 +312,7 @@ export async function app_replace_rule_set(context) {
         );
         const list = [goal_list_symbols, sbs];
         app_replace_button_symbol_style_valid_multiple(list, true);
-        await html_move_animate_multiple(froms, tos, duration2);
+        await html_move_animate_multiple(sbs, goal_list_symbols, duration);
         let choices = [
           emoji_trophy,
           emoji_100,
