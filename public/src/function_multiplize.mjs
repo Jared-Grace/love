@@ -1,3 +1,4 @@
+import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_parse_declaration_unaliased } from "../../../love/public/src/function_parse_declaration_unaliased.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
@@ -9,8 +10,8 @@ import { function_new_transform } from "../../../love/public/src/function_new_tr
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 export async function function_multiplize(f_name) {
   let u = await function_parse_declaration_unaliased(f_name);
-  let unaliased = property_get(u, "unaliased");
   let declaration_call = property_get(u, "declaration");
+  let arg_names = js_declaration_params_names(declaration_call);
   let combined = function_name_combine(f_name, "multiple");
   async function lambda(ast) {
     const list = "list";
