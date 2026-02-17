@@ -233,40 +233,40 @@ export async function app_replace_rule_set(context) {
           await html_move_animate_multiple(rights2, rights_cloned, duration);
           return;
           if (false) {
-          let rights_cloneds2 = list_map(rights2, html_clone);
-          html_display_none_multiple(rights_cloneds2);
-          html_parent_append_multiple(div_refresh, rights_cloneds2);
-          html_display_inline_block_multiple(rights_cloneds2);
-          let rights_cloned2_rects =
-            list_map_html_bounding_client_rect(rights_cloneds2);
-          let rights2_rects = list_map_html_bounding_client_rect(rights2);
-          return;
-          async function lambda6([
-            rights_cloned2,
-            rights_cloned2_rect,
-            rights2_rect,
-          ]) {
-            await html_move_animate_rect(
+            let rights_cloneds2 = list_map(rights2, html_clone);
+            html_display_none_multiple(rights_cloneds2);
+            html_parent_append_multiple(div_refresh, rights_cloneds2);
+            html_display_inline_block_multiple(rights_cloneds2);
+            let rights_cloned2_rects =
+              list_map_html_bounding_client_rect(rights_cloneds2);
+            let rights2_rects = list_map_html_bounding_client_rect(rights2);
+            return;
+            async function lambda6([
               rights_cloned2,
-              rights2_rect,
               rights_cloned2_rect,
+              rights2_rect,
+            ]) {
+              await html_move_animate_rect(
+                rights_cloned2,
+                rights2_rect,
+                rights_cloned2_rect,
+                duration,
+              );
+            }
+            let mapped3 = lists_map(
+              [rights_cloneds2, rights_cloned2_rects, rights2_rects],
+              lambda6,
+            );
+            await list_wait(mapped3);
+            log({
+              rights_cloned2: rights_cloneds2,
+            });
+            return;
+            await html_move_animate_multiple(
+              rights_cloneds2,
+              rights_cloned,
               duration,
             );
-          }
-          let mapped3 = lists_map(
-            [rights_cloneds2, rights_cloned2_rects, rights2_rects],
-            lambda6,
-          );
-          await list_wait(mapped3);
-          log({
-            rights_cloned2: rights_cloneds2,
-          });
-          return;
-          await html_move_animate_multiple(
-            rights_cloneds2,
-            rights_cloned,
-            duration,
-          );
           }
           index_selected = null;
         } else {
