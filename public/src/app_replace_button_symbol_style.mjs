@@ -3,4 +3,7 @@ import { html_display_inline_block } from "../../../love/public/src/html_display
 export function app_replace_button_symbol_style(b) {
   app_replace_button_symbol_style_inner(b);
   html_display_inline_block(b);
+    html_style_assign(b, {
+      "line-height": 1,
+    });
 }
