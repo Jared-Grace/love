@@ -323,7 +323,6 @@ export async function app_replace_rule_set(context) {
         let joined = list_join_empty(mapped);
         let p = html_p(div_below);
         html_style_background_color_set(p, highlight);
-        app_replace_button_symbol_style(p);
         html_centered(p);
         let emojis = html_div(p);
         html_span_text(emojis, joined);
