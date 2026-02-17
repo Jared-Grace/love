@@ -238,7 +238,6 @@ export async function app_replace_rule_set(context) {
         }
         refresh();
       }
-      return;
       sb = html_button(div_symbols, symbol, symbol_on_click);
       app_replace_button_symbol_style(sb);
       property_set_exists_not(sb, "index", index);
