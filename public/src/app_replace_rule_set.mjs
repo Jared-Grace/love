@@ -227,7 +227,7 @@ export async function app_replace_rule_set(context) {
           await html_move_animate_multiple_parent_remove(
             duration,
             rights2,
-            lefts2,
+            rights_cloned,
           );
           index_selected = null;
         } else {
