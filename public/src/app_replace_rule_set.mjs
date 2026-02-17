@@ -306,9 +306,10 @@ export async function app_replace_rule_set(context) {
           return value;
         }
         const initial = {};
+        const property_name = "rule_sets_data";
         storage_local_transform_context(
           context,
-          "rule_sets_data",
+          property_name,
           initial,
           lambda5,
         );
