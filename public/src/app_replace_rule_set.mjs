@@ -1,3 +1,4 @@
+import { each_multiple } from "../../../love/public/src/each_multiple.mjs";
 import { html_bounding_client_rect } from "../../../love/public/src/html_bounding_client_rect.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { list_skip_map } from "../../../love/public/src/list_skip_map.mjs";
@@ -209,7 +210,7 @@ export async function app_replace_rule_set(context) {
           each_index(rights_cloned, lambda8);
           let mapper2 = error();
           let rects_after = list_skip_map(sbs, sum, html_bounding_client_rect);
-          em;
+          each_multiple(lists, function lambda10() {});
           await sleep(10000);
           index_selected = null;
         } else {
