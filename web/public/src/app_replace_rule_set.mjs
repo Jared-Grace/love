@@ -306,9 +306,9 @@ export async function app_replace_rule_set(context) {
           return value;
         }
         storage_local_transform_context(context, "rule_sets_data", {}, lambda5);$a
-        const v = true;$a
+        const val = true;
         const list = [goal_list_symbols, sbs];
-        app_replace_button_symbol_style_valid_multiple(v, list);
+        app_replace_button_symbol_style_valid_multiple(val, list);
         let choices = [
           emoji_trophy,
           emoji_100,
