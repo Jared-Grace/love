@@ -1,9 +1,9 @@
-import { each_nested } from "../../../love/public/src/each_nested.mjs";
+import { each } from "../../../love/public/src/each.mjs";
 import { app_replace_button_symbol_style_valid_if_curry_right } from "../../../love/public/src/app_replace_button_symbol_style_valid_if_curry_right.mjs";
 export function app_replace_button_symbol_style_valid_if_multiple(
   lists,
   valid,
 ) {
   let lambda4 = app_replace_button_symbol_style_valid_if_curry_right(valid);
-  each_nested(lists, lambda4);
+  each(lists, lambda4);
 }
