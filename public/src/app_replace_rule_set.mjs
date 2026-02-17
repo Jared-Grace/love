@@ -244,8 +244,8 @@ export async function app_replace_rule_set(context) {
           ]) {
             await html_move_animate_rect(
               rights_cloned2,
-              rights_cloned2_rect,
               rights2_rect,
+              rights_cloned2_rect,
               duration,
             );
           }
