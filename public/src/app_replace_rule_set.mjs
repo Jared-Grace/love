@@ -1,4 +1,5 @@
-import { each_multiple } from "../../../love/public/src/each_multiple.mjs";
+import { each_multiple_async } from "../../../love/public/src/each_multiple_async.mjs";
+import { html_move_animate_rect } from "../../../love/public/src/html_move_animate_rect.mjs";
 import { html_bounding_client_rect } from "../../../love/public/src/html_bounding_client_rect.mjs";
 import { html_parent_remove } from "../../../love/public/src/html_parent_remove.mjs";
 import { html_visibility_hidden } from "../../../love/public/src/html_visibility_hidden.mjs";
@@ -207,8 +208,18 @@ export async function app_replace_rule_set(context) {
           }
           each_index(rights_cloned, lambda8);
           let rects_after = list_map(skipped, html_bounding_client_rect);
-          function lambda10() {}
-          each_multiple([skipped, rects_before, rects_after], lambda10);
+          async function lambda10() {
+            await html_move_animate_rect(
+              component_from,
+              targetRect,
+              movingRect,
+              duration,
+            );
+          }
+          await each_multiple_async(
+            [skipped, rects_before, rects_after],
+            lambda10,
+          );
           await sleep(10000);
           index_selected = null;
         } else {
