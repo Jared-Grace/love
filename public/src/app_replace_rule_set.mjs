@@ -1,3 +1,4 @@
+import { html_display_inline_block } from "../../../love/public/src/html_display_inline_block.mjs";
 import { html_display_none_multiple } from "../../../love/public/src/html_display_none_multiple.mjs";
 import { html_move_animate_multiple } from "../../../love/public/src/html_move_animate_multiple.mjs";
 import { html_parent_append_multiple } from "../../../love/public/src/html_parent_append_multiple.mjs";
@@ -233,8 +234,7 @@ export async function app_replace_rule_set(context) {
           html_display_none_multiple(rights_cloned2);
           html_parent_append_multiple(div_refresh, rights_cloned2);
           await html_move_animate_multiple(rights_cloned2, rights2, 0);
-          function lambda6(item2) {}
-          each(list, lambda6);
+          each(rights_cloned2, html_display_inline_block);
           index_selected = null;
         } else {
           property_set(symbols_invalid_chosen, index, true);
