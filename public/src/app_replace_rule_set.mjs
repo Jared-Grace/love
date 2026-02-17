@@ -138,7 +138,8 @@ export async function app_replace_rule_set(context) {
     });
     return rb;
   }
-  let rules_buttons = list_map_index(rules_parsed, each_rule);
+  let rules_buttons = null;
+  rules_buttons = list_map_index(rules_parsed, each_rule);
   let label_symbols = html_p(root);
   let div_symbols = html_div(root);
   let current_list = text_split_empty(start);
