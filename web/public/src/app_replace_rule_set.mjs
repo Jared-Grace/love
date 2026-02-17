@@ -1,3 +1,4 @@
+import { app_replace_button_symbol_style_invalid } from "../../../love/public/src/app_replace_button_symbol_style_invalid.mjs";
 import { html_style_padding_em } from "../../../love/public/src/html_style_padding_em.mjs";
 import { app_replace_button_screen } from "../../../love/public/src/app_replace_button_screen.mjs";
 import { storage_local_transform_empty_context } from "../../../love/public/src/storage_local_transform_empty_context.mjs";
@@ -21,7 +22,6 @@ import { html_insert } from "../../../love/public/src/html_insert.mjs";
 import { html_clone } from "../../../love/public/src/html_clone.mjs";
 import { list_wait } from "../../../love/public/src/list_wait.mjs";
 import { list_slice_count } from "../../../love/public/src/list_slice_count.mjs";
-import { app_replace_button_symbol_style_box_shadow } from "../../../love/public/src/app_replace_button_symbol_style_box_shadow.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { html_p_text_centered } from "../../../love/public/src/html_p_text_centered.mjs";
@@ -287,8 +287,7 @@ export async function app_replace_rule_set(context) {
       app_replace_button_symbol_style_valid(sb, index_selected !== null);
       let exists = property_exists(symbols_invalid_chosen, index);
       if (exists) {
-        html_style_background_color_set(sb, "#D10000");
-        app_replace_button_symbol_style_box_shadow(true, sb, "#FF8A8A");
+        app_replace_button_symbol_style_invalid(sb);
       }
       return sb;
     }
