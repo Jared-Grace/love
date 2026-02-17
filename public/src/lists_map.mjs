@@ -3,7 +3,7 @@ import { each_multiple } from "./each_multiple.mjs";
 export function lists_map(lists, mapper) {
   function lambda_list_adder(la) {
     function lambda_each(elements) {
-      const m = mapper(a, b);
+      const m = mapper(elements);
       la(m);
     }
     each_multiple(lists, lambda_each);
