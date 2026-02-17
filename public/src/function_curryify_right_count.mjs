@@ -2,7 +2,6 @@ import { function_curryify_right_count_args_get_curried_right } from "../../../l
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { function_curryify_right_name } from "../../../love/public/src/function_curryify_right_name.mjs";
-import { function_curryify_right_args_get } from "../../../love/public/src/function_curryify_right_args_get.mjs";
 import { function_curryify_generic } from "../../../love/public/src/function_curryify_generic.mjs";
 export async function function_curryify_right_count(f_name, count) {
   assert_arguments(arguments, 2);
@@ -11,11 +10,7 @@ export async function function_curryify_right_count(f_name, count) {
     let combined = function_name_combine(n, count);
     return combined;
   }
-  let r2 = function_curryify_right_count_args_get_curried_right(count2);
-  let output = await function_curryify_generic(
-    f_name,
-    lambda,
-    function_curryify_right_args_get,
-  );
+  let r2 = function_curryify_right_count_args_get_curried_right(count);
+  let output = await function_curryify_generic(f_name, lambda, r2);
   return output;
 }
