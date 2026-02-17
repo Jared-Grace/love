@@ -221,8 +221,8 @@ export async function app_replace_rule_set(context) {
             log({
               duration,
             });
-            return;
             await sleep(duration);
+            return;
             html_style_set(el, "transform", `translate(0px, 0px)`);
             html_style_set(el, "transition", "");
             html_style_set(el, "transform", "");
