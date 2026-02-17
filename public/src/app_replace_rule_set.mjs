@@ -155,6 +155,7 @@ export async function app_replace_rule_set(context) {
   let success = false;
   refresh();
   function refresh() {
+    log({});
     function each_button_rule_refresh(rb, index2) {
       let rule2 = property_get(rb, "rule");
       let size2 = list_size(current_list);
