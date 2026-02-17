@@ -225,7 +225,7 @@ export async function app_replace_rule_set(context) {
             html_style_set(el, "transform", "");
           }
           await each_multiple_async(
-            [skipped, rect_before, rects_after],
+            [skipped, rects_before, rects_after],
             lambda9,
           );
           if (false) {
