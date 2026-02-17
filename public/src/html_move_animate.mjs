@@ -7,9 +7,9 @@ export async function html_move_animate(
   duration,
 ) {
   let to_e = html_component_element_get(component_to);
-  const targetRect = to_e.getBoundingClientRect();
+  const targetRect = html_bounding_client_rect(component_to);
   let from_e = html_component_element_get(component_from);
-  const movingRect = html_bounding_client_rect(from_e);
+  const movingRect = html_bounding_client_rect(component_from);
   const offsetX = targetRect.left - movingRect.left;
   const offsetY = targetRect.top - movingRect.top;
   from_e.style.transition = `transform ${duration}ms`;
