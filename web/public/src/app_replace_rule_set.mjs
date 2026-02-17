@@ -209,6 +209,7 @@ export async function app_replace_rule_set(context) {
             lefts2,
             duration,
           );
+          return;
           await html_request_animation_frame();
           let rects_before = list_map(skipped, html_bounding_client_rect);
           let rights_cloned = list_map(rights2, html_clone);
