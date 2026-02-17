@@ -9,7 +9,7 @@ export async function data_prompts_count(offset) {
   let d_path = data_prompts_path();
   let prompts = await data_value("prompts", d_path);
   let sliced = list_slice_end(prompts, offset);
-  let size = list_size(list);
+  let size = list_size(sliced);
   function lambda(item, index) {
     let difference = subtract(size, index);
     let r = text_between_space(difference, item);
