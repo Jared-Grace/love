@@ -220,8 +220,8 @@ export async function app_replace_rule_set(context) {
             c.offsetWidth;
             await html_move_animate_rect(
               c,
-              rects_before,
               rects_after,
+              rects_before,
               duration,
             );
           }
