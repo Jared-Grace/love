@@ -294,7 +294,7 @@ export async function app_replace_rule_set(context) {
       return sb;
     }
     sbs = list_map_index(current_list, symbols_mapper);
-    ("no success before?");
+    ("no success yet?");
     if (not(success)) {
       ("goal satisfied?");
       let eq2 = json_equal(current_list, goal_list);
