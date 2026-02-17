@@ -23,4 +23,5 @@ export async function function_multiplize(f_name) {
     await js_imports_missing_add(ast);
   }
   let output = await function_new_transform(combined, lambda);
+  return combined;
 }
