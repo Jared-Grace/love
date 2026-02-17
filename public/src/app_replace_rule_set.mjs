@@ -97,6 +97,7 @@ import { html_clear } from "../../../love/public/src/html_clear.mjs";
 export async function app_replace_rule_set(context) {
   let root = property_get(context, "root");
   app_replace_button_home(root, context);
+  let screen_fn = app_replace_goals;
   function lambda2() {
     app_shared_screen_set(context, app_replace_goals);
   }
