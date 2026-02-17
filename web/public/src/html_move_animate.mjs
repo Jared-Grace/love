@@ -8,7 +8,6 @@ export async function html_move_animate(
 ) {
   const targetRect = html_bounding_client_rect(component_to);
   const movingRect = html_bounding_client_rect(component_from);
-  let to_e = html_component_element_get(component_to);
   let from_e = html_component_element_get(component_from);
   const offsetX = targetRect.left - movingRect.left;
   const offsetY = targetRect.top - movingRect.top;
