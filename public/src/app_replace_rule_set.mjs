@@ -229,7 +229,7 @@ export async function app_replace_rule_set(context) {
               rect_after,
               rect_middle,
             });
-            await html_move_animate_rect(c, rect_after, a, duration);
+            await html_move_animate_rect(c, rect_after, rect_middle, duration);
           }
           await each_multiple_async(
             [skipped, rects_middle, rects_after],
