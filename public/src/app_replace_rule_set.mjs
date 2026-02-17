@@ -1,3 +1,4 @@
+import { app_replace_button_symbol_style_valid_multiple } from "../../../love/public/src/app_replace_button_symbol_style_valid_multiple.mjs";
 import { app_replace_button_symbol_style_inner } from "../../../love/public/src/app_replace_button_symbol_style_inner.mjs";
 import { list_map_html_bounding_client_rect } from "../../../love/public/src/list_map_html_bounding_client_rect.mjs";
 import { html_translation_transition_clear } from "../../../love/public/src/html_translation_transition_clear.mjs";
@@ -46,7 +47,6 @@ import { emoji_medal_1 } from "../../../love/public/src/emoji_medal_1.mjs";
 import { emoji_trophy } from "../../../love/public/src/emoji_trophy.mjs";
 import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
-import { each_nested } from "../../../love/public/src/each_nested.mjs";
 import { json_equal } from "../../../love/public/src/json_equal.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_replace_button_symbol_style_valid_curry_right } from "../../../love/public/src/app_replace_button_symbol_style_valid_curry_right.mjs";
@@ -308,8 +308,7 @@ export async function app_replace_rule_set(context) {
         storage_local_transform_context(context, "rule_sets_data", {}, lambda5);
         const v = true;
         const list = [goal_list_symbols, sbs];
-        let lambda4 = app_replace_button_symbol_style_valid_curry_right(v);
-        each_nested(list, lambda4);
+        app_replace_button_symbol_style_valid_multiple(v, list);
         let choices = [
           emoji_trophy,
           emoji_100,
