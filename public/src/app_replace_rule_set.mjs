@@ -1,3 +1,4 @@
+import { html_parent_remove } from "../../../love/public/src/html_parent_remove.mjs";
 import { html_visibility_hidden } from "../../../love/public/src/html_visibility_hidden.mjs";
 import { html_insert } from "../../../love/public/src/html_insert.mjs";
 import { html_clone } from "../../../love/public/src/html_clone.mjs";
@@ -197,6 +198,7 @@ export async function app_replace_rule_set(context) {
           function lambda8(item, index5) {
             html_visibility_hidden(item);
             html_insert(div_symbols, item, index + index5);
+            html_parent_remove(component);
           }
           each_index(rights_cloned, lambda8);
           await sleep(10000);
