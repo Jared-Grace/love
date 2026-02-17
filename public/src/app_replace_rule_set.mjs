@@ -215,6 +215,7 @@ export async function app_replace_rule_set(context) {
             const dy = rect_before.top - rect_after.top;
             html_style_set(c, "transform", `translate(${dx}px, ${dy}px)`);
             c.offsetWidth;
+            return;
             await html_move_animate_rect(c, rect_before, rect_after, duration);
           }
           await each_multiple_async(
