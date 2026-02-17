@@ -198,7 +198,7 @@ export async function app_replace_rule_set(context) {
           const sum = index + size3;
           let skipped = list_skip(sbs, sum);
           let rects_before = list_map(skipped, html_bounding_client_rect);
-          const duration = 600;
+          const duration = 777;
           async function lambda6(a, b) {
             await html_move_animate(a, b, duration);
             html_parent_remove(a);
