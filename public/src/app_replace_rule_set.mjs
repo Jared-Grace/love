@@ -230,7 +230,8 @@ export async function app_replace_rule_set(context) {
           let rights_cloned2 = list_map(rights2, html_clone);
           let body = html_document_body();
           let r22 = html_parent_append_curried(body);
-          each(list, function lambda6(item2) {});
+          function lambda6(item2) {}
+          each(list, lambda6);
           await html_move_animate_multiple_parent_remove(
             duration,
             rights2,
