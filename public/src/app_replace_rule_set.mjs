@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { list_skip_map } from "../../../love/public/src/list_skip_map.mjs";
 import { html_parent_remove } from "../../../love/public/src/html_parent_remove.mjs";
 import { html_visibility_hidden } from "../../../love/public/src/html_visibility_hidden.mjs";
@@ -197,14 +198,16 @@ export async function app_replace_rule_set(context) {
           let mapped = list_map_pairs(sliced2, lefts2, lambda6);
           let v = await list_wait(mapped);
           const sum = index + size3;
-          let mapped2 = list_skip_map(sbs, sum, error());
+          let mapper = error();
+          let mapped2 = list_skip_map(sbs, sum, mapper);
           let rights_cloned = list_map(rights2, html_clone);
           function lambda8(item, index5) {
             html_visibility_hidden(item);
             html_insert(div_symbols, item, index + index5);
           }
           each_index(rights_cloned, lambda8);
-          let mapped3 = list_skip_map(sbs, sum, error());
+          let mapper2 = error();
+          let mapped3 = list_skip_map(sbs, sum, mapper2);
           log({
             mapped3,
             mapped2,
