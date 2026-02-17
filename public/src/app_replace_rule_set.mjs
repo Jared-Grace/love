@@ -233,7 +233,7 @@ export async function app_replace_rule_set(context) {
           let rights_cloned2 = list_map(rights2, html_clone);
           html_display_none_multiple(rights_cloned2);
           html_parent_append_multiple(div_refresh, rights_cloned2);
-          await html_move_animate_multiple(rights_cloned2, rights2, 0);
+          await html_move_animate_multiple(rights_cloned2, rights2, 550);
           html_display_inline_block_multiple(rights_cloned2);
           log({
             rights_cloned2,
