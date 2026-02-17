@@ -1,3 +1,4 @@
+import { html_parent_remove } from "../../../love/public/src/html_parent_remove.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 export async function html_move_animate(
@@ -16,6 +17,5 @@ export async function html_move_animate(
   await sleep(duration);
   from_e.style.transition = "";
   from_e.style.transform = "";
-  const parent = from_e.parentNode;
-  parent.removeChild(from_e);
+  html_parent_remove(from_e);
 }
