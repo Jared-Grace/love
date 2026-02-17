@@ -231,6 +231,7 @@ export async function app_replace_rule_set(context) {
             [skipped, rects_after, rects_middle],
             lambda9,
           );
+          await list_wait(mapped2);
           if (false) {
             async function lambda10(arg) {
               let [c, rect_middle, rect_after] = arg;
