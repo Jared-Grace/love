@@ -11,8 +11,8 @@ export async function data_prompts_count(offset) {
   let sliced = list_slice_end(prompts, offset);
   let size = list_size(list);
   function lambda(item, index) {
-    let difference = subtract(left, right);
-    let r = text_between_space(index, item);
+    let difference = subtract(size, index);
+    let r = text_between_space(difference, item);
     return r;
   }
   let mapped = list_map_index(sliced, lambda);
