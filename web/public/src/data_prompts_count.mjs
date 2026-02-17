@@ -15,10 +15,14 @@ export async function data_prompts_count(offset) {
   let size = list_size(sliced);
   function lambda(item, index) {
     let difference = subtract(size, index);
+    let r2 = lambda_inner(difference, item);
+    return r2;
+  }
+  let mapped = list_map_index(sliced, lambda);
+  return mapped;
+  function lambda_inner(difference, item) {
     let together = text_combine(difference, " " + " ");
     let r = text_between_space(together, item);
     return r;
   }
-  let mapped = list_map_index(sliced, lambda);
-  return mapped;
 }
