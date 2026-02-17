@@ -38,8 +38,8 @@ export async function function_curryify_generic(f_name, name_get, args_get) {
     );
     list_add(body_block, item);
     let declaration = js_declaration_single(ast);
-    js_declaration_asyncify(declaration, declaration_call);
     js_declaration_params_add(declaration, fn_new_args);
+    js_declaration_asyncify(declaration, declaration_call);
     await js_imports_missing_add(ast);
   }
 }
