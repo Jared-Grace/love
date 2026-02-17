@@ -5,8 +5,8 @@ export function list_map_index_countdown(sliced, lambda_inner) {
   let size = list_size(sliced);
   function lambda(item, index_forwards) {
     let index = subtract(size, index_forwards);
-    let r2 = lambda_inner(item, index);
-    return r2;
+    let m = lambda_inner(item, index);
+    return m;
   }
   let mapped = list_map_index(sliced, lambda);
   return mapped;
