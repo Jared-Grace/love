@@ -7,9 +7,9 @@ export async function html_move_animate_rect(component, from, to, duration) {
     from,
     to,
   });
+  e.style.transition = `transform ${duration}ms`;
   const offsetX = from.left - to.left;
   const offsetY = from.top - to.top;
-  e.style.transition = `transform ${duration}ms`;
   const u = `translate(${offsetX}px, ${offsetY}px)`;
   e.style.transform = u;
   log({
