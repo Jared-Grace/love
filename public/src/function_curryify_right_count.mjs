@@ -6,8 +6,8 @@ import { function_curryify_generic } from "../../../love/public/src/function_cur
 export async function function_curryify_right_count(f_name, count) {
   assert_arguments(arguments, 2);
   function lambda(unaliased) {
-    let combined = function_curryify_right_name(unaliased);
-    let combined2 = function_name_combine(left, right);
+    let n = function_curryify_right_name(unaliased);
+    let combined = function_name_combine(n, ricountht);
     return combined;
   }
   let output = await function_curryify_generic(
