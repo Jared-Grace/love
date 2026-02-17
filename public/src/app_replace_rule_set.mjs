@@ -254,7 +254,6 @@ export async function app_replace_rule_set(context) {
             lambda6,
           );
           await list_wait(mapped3);
-          await html_move_animate_rect(component, rect_to, rect_from, duration);
           log({
             rights_cloned2: rights_cloneds2,
           });
