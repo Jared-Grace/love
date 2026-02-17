@@ -16,6 +16,4 @@ export async function html_move_animate_rect(component, from, to, duration) {
     u,
   });
   await sleep(duration);
-  e.style.transition = "";
-  e.style.transform = "";
 }
