@@ -7,5 +7,5 @@ export async function html_move_animate(
 ) {
   const rect_from = html_bounding_client_rect(component_from);
   const rect_to = html_bounding_client_rect(component_to);
-  await html_move_animate_rect(component_from, rect_to, rect_from, duration);
+  await html_move_animate_rect(component_from, rect_from, rect_to, duration);
 }
