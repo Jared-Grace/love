@@ -217,7 +217,6 @@ export async function app_replace_rule_set(context) {
             const dy = rect_before.top - rect_after.top;
             html_style_set(el, "transform", `translate(${dx}px, ${dy}px)`);
             html_style_set(el, "transition", "transform 0ms");
-            return;
             el.offsetWidth;
             html_style_set(el, "transition", `transform ${duration}ms`);
             html_style_set(el, "transform", `translate(0px, 0px)`);
