@@ -4,6 +4,6 @@ import { html_button } from "../../../love/public/src/html_button.mjs";
 export function app_replace_button(parent, text, lambda) {
   let b = html_button(parent, text, lambda);
   app_replace_button_style(b);
-  html_style_padding_em(b, "0.5");
+  html_style_padding_em(b, "0.3");
   return b;
 }
