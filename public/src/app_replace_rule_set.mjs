@@ -221,8 +221,7 @@ export async function app_replace_rule_set(context) {
             await html_request_animation_frame();
             await html_move_animate_translate(el, 0, 0, duration);
             await sleep(duration);
-            html_style_set(el, "transition", "");
-            html_style_set(el, "transform", "");
+            html_translation_transition_clear(el);
           }
           let mapped2 = lists_map(
             [skipped, rects_after, rects_before],
@@ -362,4 +361,8 @@ export async function app_replace_rule_set(context) {
     }
   }
   refresh();
+  function html_translation_transition_clear(el) {
+    html_style_set(el, "transition", "");
+    html_style_set(el, "transform", "");
+  }
 }
