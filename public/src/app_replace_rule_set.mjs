@@ -211,7 +211,7 @@ export async function app_replace_rule_set(context) {
           let mapper2 = error();
           let rects_after = list_skip_map(sbs, sum, html_bounding_client_rect);
           function lambda10() {}
-          each_multiple(lists, lambda10);
+          each_multiple([rects_before, rects_after], lambda10);
           await sleep(10000);
           index_selected = null;
         } else {
