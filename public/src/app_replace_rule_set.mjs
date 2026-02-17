@@ -217,12 +217,12 @@ export async function app_replace_rule_set(context) {
             const dy = rect_before.top - rect_after.top;
             html_style_set(el, "transition", "transform 0ms");
             html_style_set(el, "transform", `translate(${dx}px, ${dy}px)`);
+            return;
             el.offsetWidth;
             log({
               duration,
             });
             await sleep(duration);
-            return;
             html_style_set(el, "transform", `translate(0px, 0px)`);
             html_style_set(el, "transition", "");
             html_style_set(el, "transform", "");
