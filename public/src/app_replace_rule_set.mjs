@@ -268,9 +268,6 @@ export async function app_replace_rule_set(context) {
       }
       app_replace_button_symbol_style_valid(sb, index_selected !== null);
       let exists = property_exists(symbols_invalid_chosen, index);
-      log({
-        symbols_invalid_chosen,
-      });
       if (exists) {
         html_style_background_color_set(sb, "#D10000");
         app_replace_button_symbol_style_box_shadow(true, sb, "#FF8A8A");
