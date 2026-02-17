@@ -1,6 +1,5 @@
 import { each_multiple } from "../../../love/public/src/each_multiple.mjs";
 import { html_bounding_client_rect } from "../../../love/public/src/html_bounding_client_rect.mjs";
-import { error } from "../../../love/public/src/error.mjs";
 import { list_skip_map } from "../../../love/public/src/list_skip_map.mjs";
 import { html_parent_remove } from "../../../love/public/src/html_parent_remove.mjs";
 import { html_visibility_hidden } from "../../../love/public/src/html_visibility_hidden.mjs";
@@ -200,15 +199,14 @@ export async function app_replace_rule_set(context) {
           let mapped = list_map_pairs(sliced2, lefts2, lambda6);
           let v = await list_wait(mapped);
           const sum = index + size3;
-          let mapper = error();
-          let rects_before = list_skip_map(sbs, sum, html_bounding_client_rect);
+          let skipped = list_skip(sbs, sum);
+          let rects_before = list_map(skipped, html_bounding_client_rect);
           let rights_cloned = list_map(rights2, html_clone);
           function lambda8(item, index5) {
             html_visibility_hidden(item);
             html_insert(div_symbols, item, index + index5);
           }
           each_index(rights_cloned, lambda8);
-          let mapper2 = error();
           let rects_after = list_skip_map(sbs, sum, html_bounding_client_rect);
           function lambda10() {}
           each_multiple([rects_before, rects_after], lambda10);
