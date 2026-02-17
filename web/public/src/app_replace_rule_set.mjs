@@ -307,8 +307,9 @@ export async function app_replace_rule_set(context) {
         }
         storage_local_transform_context(context, "rule_sets_data", {}, lambda5);
         const v = true;
+        const list = [goal_list_symbols, sbs];
         let lambda4 = app_replace_button_symbol_style_valid_curry_right(v);
-        each_nested([goal_list_symbols, sbs], lambda4);
+        each_nested(list, lambda4);
         let choices = [
           emoji_trophy,
           emoji_100,
