@@ -66,7 +66,7 @@ import { app_replace_rule_set_highlight } from "../../../love/public/src/app_rep
 import { html_style_font_color_set_if } from "../../../love/public/src/html_style_font_color_set_if.mjs";
 import { ternary_nested } from "../../../love/public/src/ternary_nested.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
-import { app_replace_button_symbol_style_valid } from "../../../love/public/src/app_replace_button_symbol_style_valid.mjs";
+import { app_replace_button_symbol_style_valid_if } from "../../../love/public/src/app_replace_button_symbol_style_valid_if.mjs";
 import { app_replace_rule_valid_curry } from "../../../love/public/src/app_replace_rule_valid_curry.mjs";
 import { app_replace_button_symbol_style } from "../../../love/public/src/app_replace_button_symbol_style.mjs";
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
@@ -285,7 +285,7 @@ export async function app_replace_rule_set(context) {
         let rule2 = list_get(rules_parsed, index_selected);
         valid = app_replace_rule_valid(rule2, index3, current_list);
       }
-      app_replace_button_symbol_style_valid(sb, index_selected !== null);
+      app_replace_button_symbol_style_valid_if(sb, index_selected !== null);
       let exists = property_exists(symbols_invalid_chosen, index);
       if (exists) {
         app_replace_button_symbol_style_invalid(sb);
