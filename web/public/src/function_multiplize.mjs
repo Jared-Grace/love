@@ -1,3 +1,4 @@
+import { list_size_1_assert } from "../../../love/public/src/list_size_1_assert.mjs";
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_parse_declaration_unaliased } from "../../../love/public/src/function_parse_declaration_unaliased.mjs";
@@ -12,6 +13,7 @@ export async function function_multiplize(f_name) {
   let u = await function_parse_declaration_unaliased(f_name);
   let declaration_call = property_get(u, "declaration");
   let arg_names = js_declaration_params_names(declaration_call);
+  list_size_1_assert(list2);
   let combined = function_name_combine(f_name, "multiple");
   async function lambda(ast) {
     const list = "list";
