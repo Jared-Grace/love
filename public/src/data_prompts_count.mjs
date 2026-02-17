@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { prompt_previous } from "../../../love/public/src/prompt_previous.mjs";
 import { list_map_index_countdown } from "../../../love/public/src/list_map_index_countdown.mjs";
@@ -10,7 +11,8 @@ import { data_prompts_path } from "../../../love/public/src/data_prompts_path.mj
 export async function data_prompts_count(offset) {
   let fn = prompt_previous;
   let inverted = await function_aliases_inverted();
-  let value = property_get(object, property_name);
+  let value = property_get(inverted, fn.name);
+  let first = list_first(list);
   let d_path = data_prompts_path();
   let prompts = await data_value("prompts", d_path);
   let sliced = list_slice_end(prompts, offset);
