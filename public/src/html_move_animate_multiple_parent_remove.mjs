@@ -14,5 +14,6 @@ export async function html_move_animate_multiple_parent_remove(
   }
   let mapped = list_map_pairs(froms, tos, lambda6);
   let v = await list_wait(mapped);
-  each(list, function lambda(item) {});
+  function lambda(item) {}
+  each(list, lambda);
 }
