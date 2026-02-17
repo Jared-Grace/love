@@ -199,9 +199,9 @@ export async function app_replace_rule_set(context) {
           let skipped = list_skip(sbs, sum);
           const duration = 500;
           await html_move_animate_multiple_parent_remove(
-            duration,
             sliced2,
             lefts2,
+            duration,
           );
           await html_request_animation_frame();
           let rects_before = list_map(skipped, html_bounding_client_rect);
@@ -232,9 +232,9 @@ export async function app_replace_rule_set(context) {
           let r22 = html_parent_append_curried(body);
           each(rights_cloned2, r22);
           await html_move_animate_multiple_parent_remove(
-            duration,
             rights2,
             rights_cloned,
+            duration,
           );
           index_selected = null;
         } else {
