@@ -221,9 +221,6 @@ export async function app_replace_rule_set(context) {
             html_style_set(el, "transform", `translate(${dx}px, ${dy}px)`);
             el.offsetWidth;
             await html_request_animation_frame();
-            log({
-              duration,
-            });
             html_style_set(el, "transition", "transform " + duration + "ms");
             html_style_set(el, "transform", `translate(0px, 0px)`);
             await sleep(duration);
@@ -251,7 +248,6 @@ export async function app_replace_rule_set(context) {
               lambda10,
             );
           }
-          return;
           index_selected = null;
         } else {
           property_set(symbols_invalid_chosen, index, true);
