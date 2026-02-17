@@ -214,11 +214,7 @@ export async function app_replace_rule_set(context) {
           each_index(rights_cloned, lambda8);
           let rects_after = list_map(skipped, html_bounding_client_rect);
           async function lambda9([el, rect_before, rect_after]) {
-            await html_move_animate_rect(component, from, to, duration2);
-            const dx = rect_before.left - rect_after.left;
-            const dy = rect_before.top - rect_after.top;
-            html_style_set(el, "transition", "transform 0ms");
-            html_style_set(el, "transform", `translate(${dx}px, ${dy}px)`);
+            await html_move_animate_rect(el, rect_before, rect_after, duration);
             el.offsetWidth;
             await html_request_animation_frame();
             html_style_set(el, "transition", "transform " + duration + "ms");
