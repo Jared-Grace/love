@@ -210,12 +210,12 @@ export async function app_replace_rule_set(context) {
           each_index(rights_cloned, lambda8);
           let rects_after = list_map(skipped, html_bounding_client_rect);
           async function lambda10(arg) {
+            return;
             let [c, rect_before, rect_after] = arg;
             const dx = rect_before.left - rect_after.left;
             const dy = rect_before.top - rect_after.top;
             html_style_set(c, "transform", `translate(${dx}px, ${dy}px)`);
             c.offsetWidth;
-            return;
             await html_move_animate_rect(c, rect_before, rect_after, duration);
           }
           await each_multiple_async(
