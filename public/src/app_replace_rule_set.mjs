@@ -2,8 +2,6 @@ import { lists_map } from "../../../love/public/src/lists_map.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
 import { html_request_animation_frame } from "../../../love/public/src/html_request_animation_frame.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
-import { each_multiple_async } from "../../../love/public/src/each_multiple_async.mjs";
-import { html_move_animate_rect } from "../../../love/public/src/html_move_animate_rect.mjs";
 import { html_bounding_client_rect } from "../../../love/public/src/html_bounding_client_rect.mjs";
 import { html_parent_remove } from "../../../love/public/src/html_parent_remove.mjs";
 import { html_visibility_hidden } from "../../../love/public/src/html_visibility_hidden.mjs";
@@ -232,26 +230,6 @@ export async function app_replace_rule_set(context) {
             lambda9,
           );
           await list_wait(mapped2);
-          if (false) {
-            async function lambda10(arg) {
-              let [c, rect_middle, rect_after] = arg;
-              const dx = rect_after.left - rect_middle.left;
-              const dy = rect_after.top - rect_middle.top;
-              const t = `translate(${dx}px, ${dy}px)`;
-              html_style_set(c, "transform", t);
-              c.offsetWidth;
-              let a = {
-                top: rect_after.top + dy,
-                left: rect_after.left + dx,
-              };
-              let r3 = html_bounding_client_rect(c);
-              await html_move_animate_rect(c, r3, a, duration);
-            }
-            await each_multiple_async(
-              [skipped, rects_middle, rects_after],
-              lambda10,
-            );
-          }
           index_selected = null;
         } else {
           property_set(symbols_invalid_chosen, index, true);
