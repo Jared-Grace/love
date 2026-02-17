@@ -1,3 +1,4 @@
+import { html_display_inline_block } from "../../../love/public/src/html_display_inline_block.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_border_none } from "../../../love/public/src/html_border_none.mjs";
 import { html_style_padding_y } from "../../../love/public/src/html_style_padding_y.mjs";
@@ -14,4 +15,5 @@ export function app_replace_button_symbol_style(b) {
     display: "inline-block",
     "line-height": 1,
   });
+  html_display_inline_block(item);
 }
