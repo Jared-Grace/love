@@ -1,3 +1,4 @@
+import { html_request_animation_frame } from "../../../love/public/src/html_request_animation_frame.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { each_multiple_async } from "../../../love/public/src/each_multiple_async.mjs";
 import { html_move_animate_rect } from "../../../love/public/src/html_move_animate_rect.mjs";
@@ -199,6 +200,7 @@ export async function app_replace_rule_set(context) {
           }
           let mapped = list_map_pairs(sliced2, lefts2, lambda6);
           let v = await list_wait(mapped);
+          await html_request_animation_frame();
           const sum = index + size3;
           let skipped = list_skip(sbs, sum);
           let rects_before = list_map(skipped, html_bounding_client_rect);
