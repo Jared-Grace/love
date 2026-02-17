@@ -5,5 +5,5 @@ export async function html_move_animate_rect(component, from, to, duration) {
   e.style.transition = `transform ${duration}ms`;
   const offsetX = from.left - to.left;
   const offsetY = from.top - to.top;
-  await html_move_animate_translate(offsetX, offsetY, e, duration);
+  await html_move_animate_translate(offsetX, offsetY, component, duration);
 }
