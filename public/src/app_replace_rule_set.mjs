@@ -1,3 +1,4 @@
+import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { each_multiple_async } from "../../../love/public/src/each_multiple_async.mjs";
 import { html_move_animate_rect } from "../../../love/public/src/html_move_animate_rect.mjs";
 import { html_bounding_client_rect } from "../../../love/public/src/html_bounding_client_rect.mjs";
@@ -212,6 +213,7 @@ export async function app_replace_rule_set(context) {
             let [c, rect_before, rect_after] = arg;
             const dx = rect_before.left - rect_after.left;
             const dy = rect_before.top - rect_after.top;
+            html_style_set(b3, style_key, style_value);
             c.style.transform = `translate(${dx}px, ${dy}px)`;
             c.offsetWidth;
             await html_move_animate_rect(a, rect_before, rect_after, duration);
