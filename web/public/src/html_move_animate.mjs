@@ -6,6 +6,6 @@ export async function html_move_animate(
   duration,
 ) {
   const rect_from = html_bounding_client_rect(component_from);
-  const targetRect = html_bounding_client_rect(component_to);
-  await html_move_animate_rect(component_from, targetRect, rect_from, duration);
+  const rect_to = html_bounding_client_rect(component_to);
+  await html_move_animate_rect(component_from, rect_to, rect_from, duration);
 }
