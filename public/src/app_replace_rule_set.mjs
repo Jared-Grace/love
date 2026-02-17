@@ -213,12 +213,11 @@ export async function app_replace_rule_set(context) {
           each_index(rights_cloned, lambda8);
           let rects_after = list_map(skipped, html_bounding_client_rect);
           async function lambda10(arg) {
-            let [c, rect_before, rect_after] = arg;
-            const dx = rect_after.left - rect_before.left;
-            const dy = rect_after.top - rect_before.top;
+            let [c, rect_middle, rect_after] = arg;
+            const dx = rect_after.left - rect_middle.left;
+            const dy = rect_after.top - rect_middle.top;
             html_style_set(c, "transform", `translate(${dx}px, ${dy}px)`);
             c.offsetWidth;
-            return;
             await html_move_animate_rect(c, rects_before, rect_after, duration);
           }
           await each_multiple_async(
