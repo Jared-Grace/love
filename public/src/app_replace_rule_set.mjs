@@ -243,9 +243,9 @@ export async function app_replace_rule_set(context) {
             rights2_rect,
           ]) {
             await html_move_animate_rect(
-              component,
-              rect_to,
-              rect_from,
+              rights_cloned2,
+              rights_cloned2_rect,
+              rights2_rect,
               duration,
             );
           }
@@ -253,6 +253,7 @@ export async function app_replace_rule_set(context) {
             [rights_cloneds2, rights_cloned2_rects, rights2_rects],
             lambda6,
           );
+          await list_wait(mapped3);
           await html_move_animate_rect(component, rect_to, rect_from, duration);
           log({
             rights_cloned2: rights_cloneds2,
