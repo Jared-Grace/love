@@ -1,3 +1,4 @@
+import { list_map_html_bounding_client_rect } from "../../../love/public/src/list_map_html_bounding_client_rect.mjs";
 import { html_translation_transition_clear } from "../../../love/public/src/html_translation_transition_clear.mjs";
 import { html_display_inline_block_multiple } from "../../../love/public/src/html_display_inline_block_multiple.mjs";
 import { html_display_none_multiple } from "../../../love/public/src/html_display_none_multiple.mjs";
@@ -233,10 +234,8 @@ export async function app_replace_rule_set(context) {
           html_display_none_multiple(rights_cloned2);
           html_parent_append_multiple(div_refresh, rights_cloned2);
           html_display_inline_block_multiple(rights_cloned2);
-          let rights_cloned2_rects = list_map(
-            rights_cloned2,
-            html_bounding_client_rect,
-          );
+          let rights_cloned2_rects =
+            list_map_html_bounding_client_rect(rights_cloned2);
           await html_move_animate_multiple(rights_cloned2, rights2, 0);
           log({
             rights_cloned2,
