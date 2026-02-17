@@ -190,7 +190,8 @@ export async function app_replace_rule_set(context) {
         let rule2 = list_get(rules_parsed, index_selected);
         let eq = app_replace_rule_valid(rule2, index, current_list);
         if (eq) {
-          symbols_invalid_chosen = {};app_replace_button_symbol_style_valid
+          symbols_invalid_chosen = {};
+          app_replace_button_symbol_style_valid(sb2, valid2);
           let right = property_get(rule2, "right");
           let left = property_get(rule2, "left");
           let before = list_take(current_list, index);
