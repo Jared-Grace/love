@@ -230,7 +230,7 @@ export async function app_replace_rule_set(context) {
           log({});
           let rights_cloned2 = list_map(rights2, html_clone);
           html_parent_append_multiple(div_refresh, rights_cloned2);
-          await html_move_animate_multiple(rights_cloned2, rights2, duration);
+          await html_move_animate_multiple(rights_cloned2, rights2, 0);
           index_selected = null;
         } else {
           property_set(symbols_invalid_chosen, index, true);
