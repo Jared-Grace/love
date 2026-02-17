@@ -197,14 +197,14 @@ export async function app_replace_rule_set(context) {
           let mapped = list_map_pairs(sliced2, lefts2, lambda6);
           let v = await list_wait(mapped);
           const sum = index + size3;
-          let mapped2 = list_skip_map(sbs, sum);
+          let mapped2 = list_skip_map(sbs, sum, error());
           let rights_cloned = list_map(rights2, html_clone);
           function lambda8(item, index5) {
             html_visibility_hidden(item);
             html_insert(div_symbols, item, index + index5);
           }
           each_index(rights_cloned, lambda8);
-          let mapped3 = list_skip_map(sbs, sum);
+          let mapped3 = list_skip_map(sbs, sum, error());
           log({
             mapped3,
             mapped2,
