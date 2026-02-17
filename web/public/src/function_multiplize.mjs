@@ -6,8 +6,8 @@ import { function_name_combine } from "../../../love/public/src/function_name_co
 export async function function_multiplize(f_name) {
   let combined = function_name_combine(f_name, "multiple");
   async function lambda(ast) {
-    let i = js_call_insert(each.name, ["list", f_name], list, index);
-    js_declaration_single_block_body_add(ast, i);
+    let call = js_call_insert(each.name, ["list", f_name], list, index);
+    js_declaration_single_block_body_add(ast, call);
   }
   let output = await function_new_transform(combined, lambda);
 }
