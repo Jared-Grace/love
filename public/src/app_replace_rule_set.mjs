@@ -209,6 +209,7 @@ export async function app_replace_rule_set(context) {
           each_index(rights_cloned, lambda8);
           let mapper2 = error();
           let rects_after = list_skip_map(sbs, sum, html_bounding_client_rect);
+          em;
           await sleep(10000);
           index_selected = null;
         } else {
