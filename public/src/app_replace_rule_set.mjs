@@ -1,6 +1,5 @@
 import { each_multiple } from "../../../love/public/src/each_multiple.mjs";
 import { html_bounding_client_rect } from "../../../love/public/src/html_bounding_client_rect.mjs";
-import { list_skip_map } from "../../../love/public/src/list_skip_map.mjs";
 import { html_parent_remove } from "../../../love/public/src/html_parent_remove.mjs";
 import { html_visibility_hidden } from "../../../love/public/src/html_visibility_hidden.mjs";
 import { html_insert } from "../../../love/public/src/html_insert.mjs";
@@ -207,9 +206,9 @@ export async function app_replace_rule_set(context) {
             html_insert(div_symbols, item, index + index5);
           }
           each_index(rights_cloned, lambda8);
-          let rects_after = list_skip_map(sbs, sum, html_bounding_client_rect);
+          let rects_after = list_map(skipped, html_bounding_client_rect);
           function lambda10() {}
-          each_multiple([rects_before, rects_after], lambda10);
+          each_multiple([skipped, rects_before, rects_after], lambda10);
           await sleep(10000);
           index_selected = null;
         } else {
