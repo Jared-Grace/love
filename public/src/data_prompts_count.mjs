@@ -10,11 +10,11 @@ export async function data_prompts_count(offset) {
   let d_path = data_prompts_path();
   let prompts = await data_value("prompts", d_path);
   let sliced = list_slice_end(prompts, offset);
-  let mapped = list_map_index_countdown(sliced, lambda_inner);
-  return mapped;
   function lambda_inner(item, difference) {
     let together = text_combine(difference, " " + " ");
     let r = text_between_space(together, item);
     return r;
   }
+  let mapped = list_map_index_countdown(sliced, lambda_inner);
+  return mapped;
 }
