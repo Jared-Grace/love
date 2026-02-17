@@ -136,7 +136,7 @@ export async function app_replace_rule_set(context) {
   let success = false;
   refresh();
   function refresh() {
-    html_clear(element);
+    html_clear(div_rules_buttons);
     function each_rule(rule, index) {
       let left = property_get(rule, "left");
       let right = property_get(rule, "right");
