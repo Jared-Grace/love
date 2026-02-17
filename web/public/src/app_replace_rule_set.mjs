@@ -192,6 +192,9 @@ export async function app_replace_rule_set(context) {
           let rights2 = property_get(rb, "rights");
           let size3 = list_size(lefts2);
           let sliced2 = list_slice_count(sbs, index, size3);
+          const sum = index + size3;
+          let skipped = list_skip(sbs, sum);
+          let rects_before = list_map(skipped, html_bounding_client_rect);
           const duration = 500;
           async function lambda6(a, b) {
             await html_move_animate(a, b, duration);
@@ -199,9 +202,6 @@ export async function app_replace_rule_set(context) {
           }
           let mapped = list_map_pairs(sliced2, lefts2, lambda6);
           let v = await list_wait(mapped);
-          const sum = index + size3;
-          let skipped = list_skip(sbs, sum);
-          let rects_before = list_map(skipped, html_bounding_client_rect);
           let rights_cloned = list_map(rights2, html_clone);
           function lambda8(item, index5) {
             html_visibility_hidden(item);
