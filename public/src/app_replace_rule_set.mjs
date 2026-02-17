@@ -223,7 +223,7 @@ export async function app_replace_rule_set(context) {
               left: rect_after.left + dx,
             };
             let r3 = html_bounding_client_rect(c);
-            await html_move_animate_rect(c, a, r3, duration);
+            await html_move_animate_rect(c, r3, a, duration);
           }
           await each_multiple_async(
             [skipped, rects_middle, rects_after],
