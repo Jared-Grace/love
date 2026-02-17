@@ -4,7 +4,7 @@ import { list_size } from "../../../love/public/src/list_size.mjs";
 export function list_slice_end(list, count) {
   let end = list_size(list);
   let start = end - count;
-  let nn = negative_not_is(i);
+  let nn = negative_not_is(start);
   if (start < 0) {
     start = 0;
   }
