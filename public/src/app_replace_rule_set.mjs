@@ -219,11 +219,11 @@ export async function app_replace_rule_set(context) {
             html_style_set(el, "transform", `translate(${dx}px, ${dy}px)`);
             el.offsetWidth;
             html_style_set(el, "transition", `transform ${duration}ms`);
-            html_style_set(el, "transform", `translate(0px, 0px)`);
             log({
               duration,
             });
             await sleep(duration);
+            html_style_set(el, "transform", `translate(0px, 0px)`);
             html_style_set(el, "transition", "");
             html_style_set(el, "transform", "");
           }
