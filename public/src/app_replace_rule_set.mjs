@@ -329,7 +329,7 @@ export async function app_replace_rule_set(context) {
         let p = html_p(div_below);
         html_style_background_color_set(p, highlight);
         app_replace_button_symbol_style_inner(p);
-        html_style_padding(component, value2);
+        html_style_padding(p, "1em");
         html_centered(p);
         let p_emojis = html_div(p);
         html_span_text(p_emojis, joined);
