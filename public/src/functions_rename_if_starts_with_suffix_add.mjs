@@ -7,7 +7,7 @@ export async function functions_rename_if_starts_with_suffix_add(
   suffix,
 ) {
   assert_arguments(arguments, 2);
-  let combined = function_name_combine(left, right);
+  let f_name_prefix_after = function_name_combine(f_name_prefix_before, suffix);
   await functions_rename_generic_starts_with(name_change, f_name_prefix_before);
   function name_change(f_name_before) {
     let together = text_prefix_change(
