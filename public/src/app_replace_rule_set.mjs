@@ -204,13 +204,13 @@ export async function app_replace_rule_set(context) {
           let sliced2 = list_slice_count(sbs, index, size3);
           const sum = index + size3;
           let skipped = list_skip(sbs, sum);
+          let rects_before = list_map(skipped, html_bounding_client_rect);
           await html_move_animate_multiple_parent_remove(
             sliced2,
             lefts2,
             duration,
           );
           await html_request_animation_frame();
-          let rects_before = list_map(skipped, html_bounding_client_rect);
           let rights_cloned = list_map(rights2, html_clone);
           function lambda8(item, index5) {
             html_visibility_hidden(item);
@@ -219,7 +219,6 @@ export async function app_replace_rule_set(context) {
           each_index(rights_cloned, lambda8);
           let rects_after = list_map(skipped, html_bounding_client_rect);
           async function lambda9([el, rect_before, rect_after]) {
-            return;
             await html_move_animate_rect(el, rect_after, rect_before, 0);
             el.offsetWidth;
             await html_request_animation_frame();
