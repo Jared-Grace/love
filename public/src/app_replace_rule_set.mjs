@@ -222,6 +222,11 @@ export async function app_replace_rule_set(context) {
               top: rect_after.top + dy,
               left: rect_after.left + dx,
             };
+            log({
+              a,
+              rect_after,
+              rect_middle,
+            });
             await html_move_animate_rect(c, rect_after, a, duration);
           }
           await each_multiple_async(
