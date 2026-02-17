@@ -182,9 +182,6 @@ export async function app_replace_rule_set(context) {
     }
     each_index(rules_buttons, each_button_rule_refresh);
     html_clear(div_refresh);
-    if (success) {
-      return;
-    }
     let div_symbols = html_div(div_refresh);
     let sbs = null;
     function symbols_mapper(symbol, index) {
@@ -395,6 +392,10 @@ export async function app_replace_rule_set(context) {
       let nn = null_not_is(index_selected);
       html_text_set_if(nn, "Rules:", "Choose a rule:", label_rules);
       html_text_set_if(nn, "Choose a symbol:", "Symbols:", label_symbols);
+    }
+    if (success) {
+      html_visibility_hidden(div_symbols);
+      return;
     }
   }
   refresh();
