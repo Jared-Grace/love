@@ -3,9 +3,16 @@ export async function html_move_animate_multiple_parent_remove_curried_right(
   tos,
   duration,
 ) {
-  return async function html_move_animate_multiple_parent_remove_curried_right_result(
-    froms,
-  ) {
-    return await html_move_animate_multiple_parent_remove(froms, tos, duration);
-  };
+  let r2 =
+    async function html_move_animate_multiple_parent_remove_curried_right_result(
+      froms,
+    ) {
+      let r = await html_move_animate_multiple_parent_remove(
+        froms,
+        tos,
+        duration,
+      );
+      return r;
+    };
+  return r2;
 }
