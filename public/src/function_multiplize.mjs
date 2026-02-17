@@ -7,7 +7,7 @@ export async function function_multiplize(f_name) {
   async function lambda(ast) {
     function lambda2(item) {}
     each(list2, lambda2);
-    js_call_insert(f_name2, args_code, list, index);
+    js_call_insert(each.name, args_code, list, index);
   }
   let output = await function_new_transform(combined, lambda);
 }
