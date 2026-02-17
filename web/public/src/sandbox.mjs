@@ -1,7 +1,5 @@
-import { functions_search_call } from "../../../love/public/src/functions_search_call.mjs";
-import { ternary } from "../../../love/public/src/ternary.mjs";
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 export async function sandbox() {
-  const search = ternary.name;
-  let r = await functions_search_call(search);
-  return r;
+  let combined = text_combine_multiple(["a"]);
+  return combined;
 }
