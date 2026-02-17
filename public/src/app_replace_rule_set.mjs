@@ -198,7 +198,7 @@ export async function app_replace_rule_set(context) {
           function lambda8(item, index5) {
             html_visibility_hidden(item);
             html_insert(div_symbols, item, index + index5);
-            html_parent_remove(component);
+            html_parent_remove(item);
           }
           each_index(rights_cloned, lambda8);
           await sleep(10000);
