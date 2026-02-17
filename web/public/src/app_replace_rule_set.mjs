@@ -306,7 +306,7 @@ export async function app_replace_rule_set(context) {
           return value;
         }
         const key = "rule_sets_data";
-        storage_local_transform_empty_context(key, lambda5);
+        storage_local_transform_empty_context(context, key, lambda5);
         const list = [goal_list_symbols, sbs];
         app_replace_button_symbol_style_valid_multiple(list, true);
         let choices = [
