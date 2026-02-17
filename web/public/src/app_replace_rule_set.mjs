@@ -204,7 +204,11 @@ export async function app_replace_rule_set(context) {
             html_insert(div_symbols, item, index + index5);
           }
           each_index(rights_cloned, lambda8);
-          mapped2;
+          let mapped3 = list_skip_map(sbs, sum);
+          log({
+            mapped3,
+            mapped2,
+          });
           await sleep(10000);
           index_selected = null;
         } else {
