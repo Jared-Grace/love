@@ -233,7 +233,6 @@ export async function app_replace_rule_set(context) {
           await html_move_animate_multiple(rights2, rights_cloned, duration);
           return;
           if (false) {
-          }
           let rights_cloneds2 = list_map(rights2, html_clone);
           html_display_none_multiple(rights_cloneds2);
           html_parent_append_multiple(div_refresh, rights_cloneds2);
@@ -268,6 +267,7 @@ export async function app_replace_rule_set(context) {
             rights_cloned,
             duration,
           );
+          }
           index_selected = null;
         } else {
           property_set(symbols_invalid_chosen, index, true);
