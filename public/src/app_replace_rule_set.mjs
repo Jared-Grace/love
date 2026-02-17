@@ -220,7 +220,7 @@ export async function app_replace_rule_set(context) {
             c.offsetWidth;
             let a = {
               top: rect_after.top + dy,
-              left: rect_after.top + dx,
+              left: rect_after.left + dx,
             };
             await html_move_animate_rect(c, a, rect_after, duration);
           }
