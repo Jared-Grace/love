@@ -4,5 +4,5 @@ export function storage_local_transform_empty_context(
   key,
   lambda$value,
 ) {
-  storage_local_transform_context(key, key, {}, lambda$value);
+  storage_local_transform_context(context, key, {}, lambda$value);
 }
