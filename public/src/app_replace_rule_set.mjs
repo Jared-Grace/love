@@ -1,3 +1,4 @@
+import { html_translation_transition_clear } from "../../../love/public/src/html_translation_transition_clear.mjs";
 import { html_display_inline_block_multiple } from "../../../love/public/src/html_display_inline_block_multiple.mjs";
 import { html_display_none_multiple } from "../../../love/public/src/html_display_none_multiple.mjs";
 import { html_move_animate_multiple } from "../../../love/public/src/html_move_animate_multiple.mjs";
@@ -8,7 +9,6 @@ import { html_move_animate_rect } from "../../../love/public/src/html_move_anima
 import { lists_map } from "../../../love/public/src/lists_map.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
 import { html_request_animation_frame } from "../../../love/public/src/html_request_animation_frame.mjs";
-import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { html_bounding_client_rect } from "../../../love/public/src/html_bounding_client_rect.mjs";
 import { html_visibility_hidden } from "../../../love/public/src/html_visibility_hidden.mjs";
 import { html_insert } from "../../../love/public/src/html_insert.mjs";
@@ -361,8 +361,4 @@ export async function app_replace_rule_set(context) {
     }
   }
   refresh();
-  function html_translation_transition_clear(el) {
-    html_style_set(el, "transition", "");
-    html_style_set(el, "transform", "");
-  }
 }
