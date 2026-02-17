@@ -209,7 +209,6 @@ export async function app_replace_rule_set(context) {
             lefts2,
             duration,
           );
-          return;
           await html_request_animation_frame();
           let rects_before = list_map(skipped, html_bounding_client_rect);
           let rights_cloned = list_map(rights2, html_clone);
@@ -218,6 +217,7 @@ export async function app_replace_rule_set(context) {
             html_insert(div_symbols, item, index + index5);
           }
           each_index(rights_cloned, lambda8);
+          return;
           let rects_after = list_map(skipped, html_bounding_client_rect);
           async function lambda9([el, rect_before, rect_after]) {
             await html_move_animate_rect(el, rect_before, rect_after, 0);
