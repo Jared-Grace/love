@@ -13,7 +13,7 @@ export async function function_multiplize(f_name) {
   let u = await function_parse_declaration_unaliased(f_name);
   let declaration_call = property_get(u, "declaration");
   let arg_names = js_declaration_params_names(declaration_call);
-  list_size_1_assert(list2);
+  list_size_1_assert(arg_names);
   let combined = function_name_combine(arg_names, "multiple");
   async function lambda(ast) {
     const list = "list";
