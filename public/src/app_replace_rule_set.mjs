@@ -1,4 +1,3 @@
-import { html_visibility_hidden_multiple } from "../../../love/public/src/html_visibility_hidden_multiple.mjs";
 import { html_style_padding_em } from "../../../love/public/src/html_style_padding_em.mjs";
 import { app_replace_button_screen } from "../../../love/public/src/app_replace_button_screen.mjs";
 import { storage_local_transform_empty_context } from "../../../love/public/src/storage_local_transform_empty_context.mjs";
@@ -313,7 +312,7 @@ export async function app_replace_rule_set(context) {
         const list = [goal_list_symbols, sbs];
         app_replace_button_symbol_style_valid_multiple(list, true);
         await html_move_animate_multiple(sbs, goal_list_symbols, duration);
-        html_visibility_hidden_multiple(sbs);
+        html_visibility_hidden(div_symbols);
         let choices = [
           emoji_trophy,
           emoji_100,
