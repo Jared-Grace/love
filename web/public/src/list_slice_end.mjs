@@ -5,9 +5,6 @@ export function list_slice_end(list, count) {
   let end = list_size(list);
   let start = end - count;
   negative_not_is_assert(start);
-  if (start < 0) {
-    start = 0;
-  }
   let result = list_slice(list, start, end);
   return result;
 }
