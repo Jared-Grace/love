@@ -37,9 +37,14 @@ export async function function_curryify_generic(f_name, name_get, args_get) {
       declaration_call,
     );
     list_add(body_block, item);
-    let declaration = js_declaration_single(ast);
-    js_declaration_params_add(declaration, fn_new_args);
+    let declaration = js_declaration_single_params_add(ast, fn_new_args);
     js_declaration_asyncify(declaration, declaration_call);
     await js_imports_missing_add(ast);
   }
 }
+function js_declaration_single_params_add(ast, fn_new_args) {
+  let declaration = js_declaration_single(ast);
+  js_declaration_params_add(declaration, fn_new_args);
+  return declaration;
+}
+
