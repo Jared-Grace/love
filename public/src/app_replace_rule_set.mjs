@@ -230,6 +230,8 @@ export async function app_replace_rule_set(context) {
           );
           await list_wait(mapped2);
           log({});
+          await html_move_animate_multiple(rights2, rights_cloned, duration);
+          return;
           let rights_cloneds2 = list_map(rights2, html_clone);
           html_display_none_multiple(rights_cloneds2);
           html_parent_append_multiple(div_refresh, rights_cloneds2);
@@ -237,7 +239,6 @@ export async function app_replace_rule_set(context) {
           let rights_cloned2_rects =
             list_map_html_bounding_client_rect(rights_cloneds2);
           let rights2_rects = list_map_html_bounding_client_rect(rights2);
-          await html_move_animate_multiple(rights2, rights_cloned, duration);
           return;
           async function lambda6([
             rights_cloned2,
