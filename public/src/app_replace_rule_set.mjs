@@ -222,7 +222,7 @@ export async function app_replace_rule_set(context) {
               duration,
             });
             await sleep(duration);
-            html_style_set(el, "transform", `translate(0px, 0px)`);
+            html_style_set(el, "transform", `translate(${-dx}px, ${-dy}px)`);
             html_style_set(el, "transition", "");
             html_style_set(el, "transform", "");
           }
