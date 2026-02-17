@@ -14,7 +14,7 @@ export async function function_multiplize(f_name) {
   let declaration_call = property_get(u, "declaration");
   let arg_names = js_declaration_params_names(declaration_call);
   list_size_1_assert(list2);
-  let combined = function_name_combine(f_name, "multiple");
+  let combined = function_name_combine(arg_names, "multiple");
   async function lambda(ast) {
     const list = "list";
     let call = js_call(each.name, [list, f_name]);
