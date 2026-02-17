@@ -1,5 +1,9 @@
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export function function_curryify_args_get_generic(fn, arg_names) {
+export function function_curryify_args_get_generic(
+  fn,
+  arg_names,
+  property_name,
+) {
   let fr = fn(arg_names);
   let first = property_get(fr, "first");
   let fn_new_result_args = property_get(fr, "remaining");
