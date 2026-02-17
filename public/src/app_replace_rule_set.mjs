@@ -1,3 +1,4 @@
+import { sleep } from "../../../love/public/src/sleep.mjs";
 import { html_request_animation_frame } from "../../../love/public/src/html_request_animation_frame.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { each_multiple_async } from "../../../love/public/src/each_multiple_async.mjs";
@@ -211,26 +212,42 @@ export async function app_replace_rule_set(context) {
           }
           each_index(rights_cloned, lambda8);
           let rects_after = list_map(skipped, html_bounding_client_rect);
-          if (false) {
-          }
-          async function lambda10(arg) {
-            let [c, rect_middle, rect_after] = arg;
-            const dx = rect_after.left - rect_middle.left;
-            const dy = rect_after.top - rect_middle.top;
-            const t = `translate(${dx}px, ${dy}px)`;
-            html_style_set(c, "transform", t);
-            c.offsetWidth;
-            let a = {
-              top: rect_after.top + dy,
-              left: rect_after.left + dx,
-            };
-            let r3 = html_bounding_client_rect(c);
-            await html_move_animate_rect(c, r3, a, duration);
+          async function lambda9([el, rect_before, rect_after]) {
+            const dx = rect_before.left - rect_after.left;
+            const dy = rect_before.top - rect_after.top;
+            html_style_set(el, "transform", `translate(${dx}px, ${dy}px)`);
+            html_style_set(el, "transition", "transform 0ms");
+            el.offsetWidth;
+            html_style_set(el, "transition", `transform ${duration}ms`);
+            html_style_set(el, "transform", `translate(0px, 0px)`);
+            await sleep(duration);
+            html_style_set(el, "transition", "");
+            html_style_set(el, "transform", "");
           }
           await each_multiple_async(
-            [skipped, rects_middle, rects_after],
-            lambda10,
+            [skipped, rects_before, rects_after],
+            lambda9,
           );
+          if (false) {
+            async function lambda10(arg) {
+              let [c, rect_middle, rect_after] = arg;
+              const dx = rect_after.left - rect_middle.left;
+              const dy = rect_after.top - rect_middle.top;
+              const t = `translate(${dx}px, ${dy}px)`;
+              html_style_set(c, "transform", t);
+              c.offsetWidth;
+              let a = {
+                top: rect_after.top + dy,
+                left: rect_after.left + dx,
+              };
+              let r3 = html_bounding_client_rect(c);
+              await html_move_animate_rect(c, r3, a, duration);
+            }
+            await each_multiple_async(
+              [skipped, rects_middle, rects_after],
+              lambda10,
+            );
+          }
           return;
           index_selected = null;
         } else {
