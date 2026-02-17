@@ -8,11 +8,11 @@ export async function functions_rename_if_starts_with(
   assert_arguments(arguments, 2);
   await functions_rename_generic_starts_with(name_change, f_name_prefix_before);
   function name_change(f_name_before) {
-    let together2 = text_prefix_change(
+    let together = text_prefix_change(
       f_name_before,
       f_name_prefix_before,
       f_name_prefix_after,
     );
-    return together2;
+    return together;
   }
 }
