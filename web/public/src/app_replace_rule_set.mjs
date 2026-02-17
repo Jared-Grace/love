@@ -208,13 +208,8 @@ export async function app_replace_rule_set(context) {
           }
           each_index(rights_cloned, lambda8);
           let rects_after = list_map(skipped, html_bounding_client_rect);
-          async function lambda10() {
-            await html_move_animate_rect(
-              component_from,
-              targetRect,
-              movingRect,
-              duration,
-            );
+          async function lambda10(a, rect_before, rect_after) {
+            await html_move_animate_rect(a, rect_before, rect_after, duration);
           }
           await each_multiple_async(
             [skipped, rects_before, rects_after],
