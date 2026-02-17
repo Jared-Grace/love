@@ -4,9 +4,9 @@ import { function_curryify_generic_name } from "../../../love/public/src/functio
 import { function_curryify_generic } from "../../../love/public/src/function_curryify_generic.mjs";
 export async function function_curryify_right(f_name) {
   function lambda(unaliased) {
-    let combined = function_curryify_generic_name(unaliased);
-    let combined2 = function_name_combine(combined, "right");
-    return combined2;
+    let n = function_curryify_generic_name(unaliased);
+    let combined = function_name_combine(n, "right");
+    return combined;
   }
   let output = await function_curryify_generic(
     f_name,
