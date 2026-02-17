@@ -1,3 +1,4 @@
+import { html_move_animate_translate } from "../../../love/public/src/html_move_animate_translate.mjs";
 import { html_move_animate_rect } from "../../../love/public/src/html_move_animate_rect.mjs";
 import { lists_map } from "../../../love/public/src/lists_map.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
@@ -217,8 +218,7 @@ export async function app_replace_rule_set(context) {
             await html_move_animate_rect(el, rect_before, rect_after, 0);
             el.offsetWidth;
             await html_request_animation_frame();
-            html_style_set(el, "transition", "transform " + duration + "ms");
-            html_style_set(el, "transform", `translate(0px, 0px)`);
+            await html_move_animate_translate(el, 0, 0, duration);
             await sleep(duration);
             html_style_set(el, "transition", "");
             html_style_set(el, "transform", "");
