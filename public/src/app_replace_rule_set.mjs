@@ -99,8 +99,7 @@ export async function app_replace_rule_set(context) {
   let root = property_get(context, "root");
   app_replace_button_home(root, context);
   let screen_fn = app_replace_goals;
-  const text = "Goals";
-  app_replace_button_screen(context, screen_fn, root, text);
+  app_replace_button_screen(context, screen_fn, root, "Goals");
   let rule = app_replace_rule_set_get(context);
   let rule_name = property_get(rule, "name");
   html_p_text(root, "Rule set: " + rule_name);
