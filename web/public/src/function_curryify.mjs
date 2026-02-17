@@ -5,8 +5,7 @@ export async function function_curryify(f_name) {
   let output = await function_curryify_generic(
     f_name,
     function_curryify_generic_name,
-    args_get,
+    function_curryify_args_get,
   );
   return output;
-  let r = function_curryify_args_get(arg_names);
 }
