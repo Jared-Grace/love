@@ -5,6 +5,6 @@ export async function html_move_animate_multiple_parent_remove(
   tos,
   duration,
 ) {
-  await html_move_animate_multiple(duration, froms, tos);
+  await html_move_animate_multiple(froms, tos, duration);
   html_parent_remove_multiple(froms);
 }
