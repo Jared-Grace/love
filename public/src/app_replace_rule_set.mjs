@@ -329,10 +329,10 @@ export async function app_replace_rule_set(context) {
         html_style_background_color_set(p, highlight);
         app_replace_button_symbol_style_inner(p);
         html_centered(p);
-        let emojis = html_div(p);
-        html_span_text(emojis, joined);
-        html_style_font_size(emojis, "1.5em");
-        let p3 = html_div(p);
+        let p_emojis = html_div(p);
+        html_span_text(p_emojis, joined);
+        html_style_font_size(p_emojis, "1.5em");
+        let p_encouragement = html_div(p);
         const encouragements_choices = [
           "Congratulations",
           "Success",
@@ -340,9 +340,9 @@ export async function app_replace_rule_set(context) {
           "Well done",
         ];
         let encouragements = list_shuffle_take(encouragements_choices, 2);
-        html_bold(p3);
+        html_bold(p_encouragement);
         function lambda(encouragement) {
-          html_span_text(p3, encouragement + "! ");
+          html_span_text(p_encouragement, encouragement + "! ");
         }
         each(encouragements, lambda);
         let p_next = html_p(div_below);
