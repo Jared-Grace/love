@@ -194,7 +194,7 @@ export async function app_replace_rule_set(context) {
           let sliced2 = list_slice_count(sbs, index, size3);
           const sum = index + size3;
           let skipped = list_skip(sbs, sum);
-          const duration = 555;
+          const duration = 500;
           await html_move_animate_multiple_parent_remove(
             duration,
             sliced2,
