@@ -88,7 +88,6 @@ import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { sleep } from "./sleep.mjs";
 export async function app_replace_rule_set(context) {
   let root = property_get(context, "root");
   app_replace_button_home(root, context);
@@ -232,13 +231,14 @@ export async function app_replace_rule_set(context) {
             [skipped, rects_middle, rects_after],
             lambda10,
           );
-          await sleep(10000);
+          return;
           index_selected = null;
         } else {
           property_set(symbols_invalid_chosen, index, true);
         }
         refresh();
       }
+      return;
       sb = html_button(div_symbols, symbol, symbol_on_click);
       app_replace_button_symbol_style(sb);
       property_set_exists_not(sb, "index", index);
