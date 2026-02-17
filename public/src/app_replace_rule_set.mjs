@@ -340,10 +340,9 @@ export async function app_replace_rule_set(context) {
           "Well done",
         ];
         let encouragements = list_shuffle_take(encouragements_choices, 2);
-        let p4 = html_div(p3);
-        html_bold(p4);
+        html_bold(p3);
         function lambda(encouragement) {
-          html_span_text(p4, encouragement + "! ");
+          html_span_text(p3, encouragement + "! ");
         }
         each(encouragements, lambda);
         let p_next = html_p(div_below);
