@@ -5,7 +5,7 @@ export function function_curryify_args_get_generic(
   property_name,
 ) {
   let fr = fn(arg_names);
-  let first = property_get(fr, "first");
+  let first = property_get(fr, property_name);
   let fn_new_result_args = property_get(fr, "remaining");
   let fn_new_args = [first];
   let r = {
