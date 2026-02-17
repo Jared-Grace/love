@@ -218,6 +218,7 @@ export async function app_replace_rule_set(context) {
             html_style_set(el, "transform", `translate(${dx}px, ${dy}px)`);
             html_style_set(el, "transition", "transform 0ms");
             el.offsetWidth;
+            return;
             html_style_set(el, "transition", `transform ${duration}ms`);
             html_style_set(el, "transform", `translate(0px, 0px)`);
             await sleep(duration);
