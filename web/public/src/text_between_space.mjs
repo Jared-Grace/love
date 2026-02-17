@@ -1,5 +1,5 @@
 export function text_between_space(index, item) {
   const combine = " ";
-  let r2 = index + combine + item;
-  return r2;
+  let c = index + combine + item;
+  return c;
 }
