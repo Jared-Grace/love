@@ -144,7 +144,7 @@ export async function app_replace_rule_set(context) {
   }
   rules_buttons = list_map_index(rules_parsed, each_rule);
   let label_symbols = html_p(root);
-  let div_symbols = html_div(root);
+  let div_refresh = html_div(root);
   let current_list = text_split_empty(start);
   let label_goal = html_p_text(root, "Goal:");
   let end = property_get(goal, "end");
@@ -176,7 +176,8 @@ export async function app_replace_rule_set(context) {
       html_style_font_color_set_if(enabled, arrow2, "black", "#6a6a6a");
     }
     each_index(rules_buttons, each_button_rule_refresh);
-    html_clear(div_symbols);
+    html_clear(div_refresh);
+    let div_symbols = html_div(div_refresh);
     let sbs = null;
     function symbols_mapper(symbol, index) {
       let sb = null;
