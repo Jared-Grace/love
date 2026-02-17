@@ -196,7 +196,8 @@ export async function app_replace_rule_set(context) {
           let mapped = list_map_pairs(sliced2, lefts2, lambda6);
           let v = await list_wait(mapped);
           let skipped = list_skip(sbs, index + size3);
-          let mapped2 = list_map(list, function lambda9(item2) {});
+          function lambda9(item2) {}
+          let mapped2 = list_map(list, lambda9);
           let rights_cloned = list_map(rights2, html_clone);
           function lambda8(item, index5) {
             html_visibility_hidden(item);
