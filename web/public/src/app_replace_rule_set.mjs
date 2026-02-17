@@ -1,3 +1,4 @@
+import { html_move_animate_multiple_parent_remove } from "../../../love/public/src/html_move_animate_multiple_parent_remove.mjs";
 import { html_move_animate_translate } from "../../../love/public/src/html_move_animate_translate.mjs";
 import { html_move_animate_rect } from "../../../love/public/src/html_move_animate_rect.mjs";
 import { lists_map } from "../../../love/public/src/lists_map.mjs";
@@ -5,14 +6,11 @@ import { sleep } from "../../../love/public/src/sleep.mjs";
 import { html_request_animation_frame } from "../../../love/public/src/html_request_animation_frame.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { html_bounding_client_rect } from "../../../love/public/src/html_bounding_client_rect.mjs";
-import { html_parent_remove } from "../../../love/public/src/html_parent_remove.mjs";
 import { html_visibility_hidden } from "../../../love/public/src/html_visibility_hidden.mjs";
 import { html_insert } from "../../../love/public/src/html_insert.mjs";
 import { html_clone } from "../../../love/public/src/html_clone.mjs";
 import { list_wait } from "../../../love/public/src/list_wait.mjs";
-import { list_map_pairs } from "../../../love/public/src/list_map_pairs.mjs";
 import { list_slice_count } from "../../../love/public/src/list_slice_count.mjs";
-import { html_move_animate } from "../../../love/public/src/html_move_animate.mjs";
 import { app_replace_button_symbol_style_box_shadow } from "../../../love/public/src/app_replace_button_symbol_style_box_shadow.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
@@ -199,12 +197,11 @@ export async function app_replace_rule_set(context) {
           let skipped = list_skip(sbs, sum);
           let rects_before = list_map(skipped, html_bounding_client_rect);
           const duration = 555;
-          async function lambda6(a, b) {
-            await html_move_animate(a, b, duration);
-            html_parent_remove(a);
-          }
-          let mapped = list_map_pairs(sliced2, lefts2, lambda6);
-          let v = await list_wait(mapped);
+          await html_move_animate_multiple_parent_remove(
+            duration,
+            sliced2,
+            lefts2,
+          );
           await html_request_animation_frame();
           let rects_middle = list_map(skipped, html_bounding_client_rect);
           let rights_cloned = list_map(rights2, html_clone);
