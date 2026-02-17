@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -12,6 +13,9 @@ export async function data_prompts_count(offset) {
   let fn = prompt_previous;
   let inverted = await function_aliases_inverted();
   let value = property_get(inverted, fn.name);
+  log({
+    value,
+  });
   let first = list_first(value);
   let d_path = data_prompts_path();
   let prompts = await data_value("prompts", d_path);
