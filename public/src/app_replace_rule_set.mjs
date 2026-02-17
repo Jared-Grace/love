@@ -237,12 +237,11 @@ export async function app_replace_rule_set(context) {
           let rights_cloned2_rects =
             list_map_html_bounding_client_rect(rights_cloned2);
           let rights2_rects = list_map_html_bounding_client_rect(rights2);
-          await html_move_animate_multiple(rights_cloned2, rights2, 0);
           await html_move_animate_rect(
             component,
             rect_to,
             rect_from,
-            duration2,
+            duration,
           );
           log({
             rights_cloned2,
