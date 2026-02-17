@@ -131,6 +131,9 @@ export async function app_replace_rule_set(context) {
   let p_goal = html_p(root);
   let goal_list_symbols = app_replace_button_side(p_goal, goal_list);
   let lambda4 = app_replace_button_symbol_style_valid_if_curry_right(false);
+  log({
+    goal_list_symbols,
+  });
   each(goal_list_symbols, lambda4);
   let highlight = app_replace_rule_set_highlight();
   let div_below = html_div(root);
