@@ -120,8 +120,7 @@ export async function app_replace_rule_set(context) {
   let rules = property_get(rule, "rules");
   let rules_parsed = list_map(rules, app_replace_rule_parse);
   let symbols_invalid_chosen = {};
-  let div_rules_buttons = null;
-  let div = html_div(root2);
+  let div_rules_buttons = html_div(root);
   let label_symbols = html_p(root);
   let div_refresh = html_div(root);
   let current_list = text_split_empty(start);
@@ -137,6 +136,7 @@ export async function app_replace_rule_set(context) {
   let success = false;
   refresh();
   function refresh() {
+    html_clear(element);
     function each_rule(rule, index) {
       let left = property_get(rule, "left");
       let right = property_get(rule, "right");
