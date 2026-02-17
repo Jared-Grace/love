@@ -223,6 +223,8 @@ export async function app_replace_rule_set(context) {
               left: rect_after.left + dx,
             };
             log({
+              dx,
+              dy,
               a,
               rect_after,
               rect_middle,
