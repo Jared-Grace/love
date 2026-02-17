@@ -6,7 +6,7 @@ import { list_map_index_countdown } from "../../../love/public/src/list_map_inde
 import { list_slice_end } from "../../../love/public/src/list_slice_end.mjs";
 import { data_value } from "../../../love/public/src/data_value.mjs";
 import { data_prompts_path } from "../../../love/public/src/data_prompts_path.mjs";
-export async function data_prompts_count(offset) {
+export async function data_prompts_count_display(offset) {
   let fn = prompt_previous_at;
   let value = await function_aliases_for(fn);
   let first = list_first(value);
