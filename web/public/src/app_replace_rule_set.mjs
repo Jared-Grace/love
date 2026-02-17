@@ -120,31 +120,8 @@ export async function app_replace_rule_set(context) {
   let rules = property_get(rule, "rules");
   let rules_parsed = list_map(rules, app_replace_rule_parse);
   let symbols_invalid_chosen = {};
-  let rules_buttons = null;
-  function each_rule(rule, index) {
-    let left = property_get(rule, "left");
-    let right = property_get(rule, "right");
-    function lambda3() {
-      symbols_invalid_chosen = {};
-      index_selected = ternary(index_selected === index, null, index);
-      refresh();
-      return;
-    }
-    let r2 = app_replace_button_rule(root, left, right, lambda3);
-    let arrow = property_get(r2, "arrow");
-    let rights = property_get(r2, "rights");
-    let lefts = property_get(r2, "lefts");
-    let rb = property_get(r2, "b");
-    html_disable(rb);
-    object_merge(rb, {
-      rule,
-      lefts,
-      rights,
-      arrow,
-    });
-    return rb;
-  }
-  rules_buttons = list_map_index(rules_parsed, each_rule);
+  let div_rules_buttons = null;
+  let div = html_div(root2);
   let label_symbols = html_p(root);
   let div_refresh = html_div(root);
   let current_list = text_split_empty(start);
@@ -160,6 +137,30 @@ export async function app_replace_rule_set(context) {
   let success = false;
   refresh();
   function refresh() {
+    function each_rule(rule, index) {
+      let left = property_get(rule, "left");
+      let right = property_get(rule, "right");
+      function lambda3() {
+        symbols_invalid_chosen = {};
+        index_selected = ternary(index_selected === index, null, index);
+        refresh();
+        return;
+      }
+      let r2 = app_replace_button_rule(root, left, right, lambda3);
+      let arrow = property_get(r2, "arrow");
+      let rights = property_get(r2, "rights");
+      let lefts = property_get(r2, "lefts");
+      let rb = property_get(r2, "b");
+      html_disable(rb);
+      object_merge(rb, {
+        rule,
+        lefts,
+        rights,
+        arrow,
+      });
+      return rb;
+    }
+    let rules_buttons = list_map_index(rules_parsed, each_rule);
     function each_button_rule_refresh(rb, index2) {
       let rule2 = property_get(rb, "rule");
       let size2 = list_size(current_list);
