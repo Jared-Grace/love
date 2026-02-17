@@ -1,9 +1,9 @@
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { prompt_previous } from "../../../love/public/src/prompt_previous.mjs";
 import { list_map_index_countdown } from "../../../love/public/src/list_map_index_countdown.mjs";
 import { function_aliases_inverted } from "../../../love/public/src/function_aliases_inverted.mjs";
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { text_between_space } from "../../../love/public/src/text_between_space.mjs";
 import { list_slice_end } from "../../../love/public/src/list_slice_end.mjs";
 import { data_value } from "../../../love/public/src/data_value.mjs";
@@ -17,7 +17,7 @@ export async function data_prompts_count(offset) {
   let prompts = await data_value("prompts", d_path);
   let sliced = list_slice_end(prompts, offset);
   function lambda_inner(item, index) {
-    let together = text_combine(index, " " + first + " ");
+    let together = text_combine_multiple([index, " ", first, " "]);
     let r = text_between_space(together, item);
     return r;
   }
