@@ -5,6 +5,7 @@ import { sleep } from "../../../love/public/src/sleep.mjs";
 import { html_request_animation_frame } from "../../../love/public/src/html_request_animation_frame.mjs";
 import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
 import { html_bounding_client_rect } from "../../../love/public/src/html_bounding_client_rect.mjs";
+import { html_parent_remove } from "../../../love/public/src/html_parent_remove.mjs";
 import { html_visibility_hidden } from "../../../love/public/src/html_visibility_hidden.mjs";
 import { html_insert } from "../../../love/public/src/html_insert.mjs";
 import { html_clone } from "../../../love/public/src/html_clone.mjs";
@@ -200,6 +201,7 @@ export async function app_replace_rule_set(context) {
           const duration = 555;
           async function lambda6(a, b) {
             await html_move_animate(a, b, duration);
+            html_parent_remove(a);
           }
           let mapped = list_map_pairs(sliced2, lefts2, lambda6);
           let v = await list_wait(mapped);
