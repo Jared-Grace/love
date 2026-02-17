@@ -331,7 +331,7 @@ export async function app_replace_rule_set(context) {
         let p = html_p(div_below);
         html_style_background_color_set(p, highlight);
         app_replace_button_symbol_style_inner(p);
-        const value_em = "0.5";
+        const value_em = "0.3";
         html_style_padding_em(p, value_em);
         html_centered(p);
         let p_emojis = html_div(p);
