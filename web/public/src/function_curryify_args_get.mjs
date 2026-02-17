@@ -4,6 +4,6 @@ import { list_first_remaining } from "../../../love/public/src/list_first_remain
 export function function_curryify_args_get(arg_names) {
   let fn = list_first_remaining;
   let property_name = error();
-  let r = function_curryify_args_get_generic(fn, arg_names, property_name);
+  let r = function_curryify_args_get_generic(fn, arg_names, "first");
   return r;
 }
