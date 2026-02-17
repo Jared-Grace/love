@@ -7,6 +7,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { data_prompts } from "../../../love/public/src/data_prompts.mjs";
 import { function_aliases_inverted } from "../../../love/public/src/function_aliases_inverted.mjs";
 export async function prompt_previous_get() {
+  "gets the most recent prompt";
   let inverted = await function_aliases_inverted();
   let prompts = await data_prompts();
   let b = property_get(inverted, prompt_previous.name);
