@@ -1,3 +1,4 @@
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { subtract } from "../../../love/public/src/subtract.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { text_between_space } from "../../../love/public/src/text_between_space.mjs";
@@ -12,6 +13,7 @@ export async function data_prompts_count(offset) {
   let size = list_size(sliced);
   function lambda(item, index) {
     let difference = subtract(size, index);
+    let together = text_combine(left, right);
     let r = text_between_space(difference, item);
     return r;
   }
