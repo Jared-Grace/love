@@ -237,6 +237,7 @@ export async function app_replace_rule_set(context) {
           let rights_cloned2_rects =
             list_map_html_bounding_client_rect(rights_cloned2);
           let rights2_rects = list_map_html_bounding_client_rect(rights2);
+          let mapped3 = list_map(list, function lambda6(item2) {});
           await html_move_animate_rect(component, rect_to, rect_from, duration);
           log({
             rights_cloned2,
