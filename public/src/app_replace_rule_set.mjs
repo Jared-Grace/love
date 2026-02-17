@@ -209,7 +209,7 @@ export async function app_replace_rule_set(context) {
           each_index(rights_cloned, lambda8);
           let rects_after = list_map(skipped, html_bounding_client_rect);
           async function lambda10(arg) {
-            let [a, rect_before, rect_after] = arg;
+            let [c, rect_before, rect_after] = arg;
             const dx = rect_before.left - rect_after.left;
             const dy = rect_before.top - rect_after.top;
             c.style.transform = `translate(${dx}px, ${dy}px)`;
