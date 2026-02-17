@@ -12,8 +12,7 @@ export function app_replace_button_symbol_style(b) {
   html_style_padding_x(b, "0.37em");
   html_style_padding_y(b, "0.1em");
   html_style_assign(b, {
-    display: "inline-block",
     "line-height": 1,
   });
-  html_display_inline_block(item);
+  html_display_inline_block(b);
 }
