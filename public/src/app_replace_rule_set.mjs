@@ -1,3 +1,4 @@
+import { html_parent_append_curried } from "../../../love/public/src/html_parent_append_curried.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { html_move_animate_multiple_parent_remove } from "../../../love/public/src/html_move_animate_multiple_parent_remove.mjs";
 import { html_move_animate_translate } from "../../../love/public/src/html_move_animate_translate.mjs";
@@ -228,6 +229,7 @@ export async function app_replace_rule_set(context) {
           log({});
           let rights_cloned2 = list_map(rights2, html_clone);
           let body = html_document_body();
+          let r22 = html_parent_append_curried(parent);
           await html_move_animate_multiple_parent_remove(
             duration,
             rights2,
