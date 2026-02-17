@@ -51,7 +51,7 @@ import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
 import { html_span_text } from "../../../love/public/src/html_span_text.mjs";
 import { json_equal } from "../../../love/public/src/json_equal.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { app_replace_button_symbol_style_valid_curry_right } from "../../../love/public/src/app_replace_button_symbol_style_valid_curry_right.mjs";
+import { app_replace_button_symbol_style_valid_if_curry_right } from "../../../love/public/src/app_replace_button_symbol_style_valid_if_curry_right.mjs";
 import { app_replace_button_side } from "../../../love/public/src/app_replace_button_side.mjs";
 import { app_replace_goals } from "../../../love/public/src/app_replace_goals.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
@@ -130,7 +130,7 @@ export async function app_replace_rule_set(context) {
   let goal_list = text_split_empty(end);
   let p_goal = html_p(root);
   let goal_list_symbols = app_replace_button_side(p_goal, goal_list);
-  let lambda4 = app_replace_button_symbol_style_valid_curry_right(false);
+  let lambda4 = app_replace_button_symbol_style_valid_if_curry_right(false);
   each(goal_list_symbols, lambda4);
   let highlight = app_replace_rule_set_highlight();
   let div_below = html_div(root);
