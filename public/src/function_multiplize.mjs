@@ -7,9 +7,10 @@ import { function_name_combine } from "../../../love/public/src/function_name_co
 export async function function_multiplize(f_name) {
   let combined = function_name_combine(f_name, "multiple");
   async function lambda(ast) {
-    let call = js_call(each.name, ["list", f_name]);
+    const list = "list";
+    let call = js_call(each.name, [list, f_name]);
     js_declaration_single_block_body_add(ast, call);
-    js_declaration_single_params_add(ast, fn_new_args);
+    js_declaration_single_params_add(ast, [list]);
   }
   let output = await function_new_transform(combined, lambda);
 }
