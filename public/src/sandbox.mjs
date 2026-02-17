@@ -1,6 +1,6 @@
 import { list_slice_end } from "../../../love/public/src/list_slice_end.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
-export async function sandbox() {
+export async function sandbox(d, b, c) {
   const a = ["a", "b", "c"];
   let result = list_slice_end(a, 2);
   let combined = text_combine_multiple(a);
