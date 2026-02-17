@@ -209,7 +209,7 @@ export async function app_replace_rule_set(context) {
           each_index(rights_cloned, lambda8);
           let rects_after = list_map(skipped, html_bounding_client_rect);
           async function lambda10(arg) {
-            let [a, rect_before, rect_after] = args;
+            let [a, rect_before, rect_after] = arg;
             await html_move_animate_rect(a, rect_before, rect_after, duration);
           }
           await each_multiple_async(
