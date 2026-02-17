@@ -224,6 +224,7 @@ export async function app_replace_rule_set(context) {
             lambda9,
           );
           await list_wait(mapped2);
+          log({});
           await html_move_animate_multiple_parent_remove(
             duration,
             rights2,
