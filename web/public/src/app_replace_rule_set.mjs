@@ -2,7 +2,7 @@ import { app_replace_button_symbol_style_invalid } from "../../../love/public/sr
 import { html_style_padding_em } from "../../../love/public/src/html_style_padding_em.mjs";
 import { app_replace_button_screen } from "../../../love/public/src/app_replace_button_screen.mjs";
 import { storage_local_transform_empty_context } from "../../../love/public/src/storage_local_transform_empty_context.mjs";
-import { app_replace_button_symbol_style_valid_multiple } from "../../../love/public/src/app_replace_button_symbol_style_valid_multiple.mjs";
+import { app_replace_button_symbol_style_valid_if_multiple } from "../../../love/public/src/app_replace_button_symbol_style_valid_if_multiple.mjs";
 import { app_replace_button_symbol_style_inner } from "../../../love/public/src/app_replace_button_symbol_style_inner.mjs";
 import { list_map_html_bounding_client_rect } from "../../../love/public/src/list_map_html_bounding_client_rect.mjs";
 import { html_translation_transition_clear } from "../../../love/public/src/html_translation_transition_clear.mjs";
@@ -191,7 +191,7 @@ export async function app_replace_rule_set(context) {
         let eq = app_replace_rule_valid(rule2, index, current_list);
         if (eq) {
           symbols_invalid_chosen = {};
-          app_replace_button_symbol_style_valid_multiple(sbs, true);
+          app_replace_button_symbol_style_valid_if_multiple(sbs, true);
           let right = property_get(rule2, "right");
           let left = property_get(rule2, "left");
           let before = list_take(current_list, index);
@@ -310,7 +310,7 @@ export async function app_replace_rule_set(context) {
           lambda5,
         );
         const list = [goal_list_symbols, sbs];
-        app_replace_button_symbol_style_valid_multiple(list, true);
+        app_replace_button_symbol_style_valid_if_multiple(list, true);
         await html_move_animate_multiple(sbs, goal_list_symbols, duration);
         symbols_hide_on_success();
         let choices = [
