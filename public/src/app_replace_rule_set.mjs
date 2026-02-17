@@ -231,7 +231,6 @@ export async function app_replace_rule_set(context) {
           await list_wait(mapped2);
           log({});
           await html_move_animate_multiple(rights2, rights_cloned, duration);
-          return;
           if (false) {
             let rights_cloneds2 = list_map(rights2, html_clone);
             html_display_none_multiple(rights_cloneds2);
