@@ -224,6 +224,11 @@ export async function app_replace_rule_set(context) {
             lambda9,
           );
           await list_wait(mapped2);
+          await html_move_animate_multiple_parent_remove(
+            duration,
+            rights2,
+            lefts2,
+          );
           index_selected = null;
         } else {
           property_set(symbols_invalid_chosen, index, true);
