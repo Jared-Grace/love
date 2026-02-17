@@ -1,3 +1,4 @@
+import { html_display_none_multiple } from "../../../love/public/src/html_display_none_multiple.mjs";
 import { html_move_animate_multiple } from "../../../love/public/src/html_move_animate_multiple.mjs";
 import { html_parent_append_multiple } from "../../../love/public/src/html_parent_append_multiple.mjs";
 import { html_move_animate_multiple_parent_remove } from "../../../love/public/src/html_move_animate_multiple_parent_remove.mjs";
@@ -229,8 +230,7 @@ export async function app_replace_rule_set(context) {
           await list_wait(mapped2);
           log({});
           let rights_cloned2 = list_map(rights2, html_clone);
-          function lambda6(item2) {}
-          each(list, lambda6);
+          html_display_none_multiple(rights_cloned2);
           html_parent_append_multiple(div_refresh, rights_cloned2);
           await html_move_animate_multiple(rights_cloned2, rights2, 0);
           index_selected = null;
