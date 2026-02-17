@@ -136,7 +136,7 @@ export async function app_replace_rule_set(context) {
   let div_below = html_div(root);
   let success = false;
   refresh();
-  function refresh() {
+  async function refresh() {
     html_clear(div_rules_buttons);
     function each_rule(rule, index) {
       let left = property_get(rule, "left");
@@ -312,6 +312,7 @@ export async function app_replace_rule_set(context) {
         );
         const list = [goal_list_symbols, sbs];
         app_replace_button_symbol_style_valid_multiple(list, true);
+        await html_move_animate_multiple(froms, tos, duration2);
         let choices = [
           emoji_trophy,
           emoji_100,
