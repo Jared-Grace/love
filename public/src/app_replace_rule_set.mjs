@@ -229,7 +229,7 @@ export async function app_replace_rule_set(context) {
             html_style_set(el, "transition", "");
             html_style_set(el, "transform", "");
           }
-          await each_multiple([skipped, rects_after, rects_middle], lambda9);
+          each_multiple([skipped, rects_after, rects_middle], lambda9);
           if (false) {
             async function lambda10(arg) {
               let [c, rect_middle, rect_after] = arg;
