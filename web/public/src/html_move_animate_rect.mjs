@@ -13,7 +13,7 @@ export async function html_move_animate_rect(component, from, to, duration) {
   const u = `translate(${offsetX}px, ${offsetY}px)`;
   e.style.transform = u;
   log({
-    t: u,
+    tu,
   });
   await sleep(duration);
   e.style.transition = "";
