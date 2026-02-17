@@ -231,7 +231,11 @@ export async function app_replace_rule_set(context) {
           let rights_cloned2 = list_map(rights2, html_clone);
           let body = html_document_body();
           html_parent_append_multiple(body, rights_cloned2);
-          await html_move_animate_multiple(rights2, rights_cloned, duration);
+          await html_move_animate_multiple(
+            rights_cloned2,
+            rights_cloned,
+            duration,
+          );
           index_selected = null;
         } else {
           property_set(symbols_invalid_chosen, index, true);
