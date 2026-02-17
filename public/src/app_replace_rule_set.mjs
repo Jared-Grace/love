@@ -216,18 +216,15 @@ export async function app_replace_rule_set(context) {
             let [c, rect_middle, rect_after] = arg;
             const dx = rect_after.left - rect_middle.left;
             const dy = rect_after.top - rect_middle.top;
-            html_style_set(c, "transform", `translate(${dx}px, ${dy}px)`);
+            const t = `translate(${dx}px, ${dy}px)`;
+            html_style_set(c, "transform", t);
             c.offsetWidth;
             let a = {
               top: rect_after.top + dy,
               left: rect_after.left + dx,
             };
             log({
-              dx,
-              dy,
-              a,
-              rect_after,
-              rect_middle,
+              t,
             });
             await html_move_animate_rect(c, rect_after, rect_middle, duration);
           }
