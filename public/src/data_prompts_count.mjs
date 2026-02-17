@@ -17,7 +17,7 @@ export async function data_prompts_count(offset) {
   let prompts = await data_value("prompts", d_path);
   let sliced = list_slice_end(prompts, offset);
   function lambda_inner(item, index) {
-    let together = text_combine_multiple([first, " ", index, " "]);
+    let together = text_combine_multiple([first, " ", index, " : "]);
     let r = text_between_space(together, item);
     return r;
   }
