@@ -225,6 +225,7 @@ export async function app_replace_rule_set(context) {
           );
           await list_wait(mapped2);
           log({});
+          let rights_cloned2 = list_map(rights2, html_clone);
           await html_move_animate_multiple_parent_remove(
             duration,
             rights2,
