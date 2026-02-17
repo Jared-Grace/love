@@ -211,6 +211,8 @@ export async function app_replace_rule_set(context) {
           }
           each_index(rights_cloned, lambda8);
           let rects_after = list_map(skipped, html_bounding_client_rect);
+          if (false) {
+          }
           async function lambda10(arg) {
             let [c, rect_middle, rect_after] = arg;
             const dx = rect_after.left - rect_middle.left;
