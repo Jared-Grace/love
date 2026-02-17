@@ -1,3 +1,4 @@
+import { html_move_animate_rect } from "../../../love/public/src/html_move_animate_rect.mjs";
 import { lists_map } from "../../../love/public/src/lists_map.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
 import { html_request_animation_frame } from "../../../love/public/src/html_request_animation_frame.mjs";
@@ -213,6 +214,7 @@ export async function app_replace_rule_set(context) {
           each_index(rights_cloned, lambda8);
           let rects_after = list_map(skipped, html_bounding_client_rect);
           async function lambda9([el, rect_before, rect_after]) {
+            await html_move_animate_rect(component, from, to, duration2);
             const dx = rect_before.left - rect_after.left;
             const dy = rect_before.top - rect_after.top;
             html_style_set(el, "transition", "transform 0ms");
