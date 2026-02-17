@@ -21,7 +21,7 @@ export async function data_prompts_count(offset) {
   let sliced = list_slice_end(prompts, offset);
   function lambda_inner(item, index) {
     let together = text_combine_multiple([first, " ", index, " : ", item]);
-    return r;
+    return together;
   }
   let mapped = list_map_index_countdown(sliced, lambda_inner);
   return mapped;
