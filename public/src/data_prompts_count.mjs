@@ -13,7 +13,7 @@ export async function data_prompts_count(offset) {
   let size = list_size(sliced);
   function lambda(item, index) {
     let difference = subtract(size, index);
-    let together = text_combine(difference, ". ");
+    let together = text_combine(difference, " " + " ");
     let r = text_between_space(together, item);
     return r;
   }
