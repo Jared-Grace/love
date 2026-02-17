@@ -1,3 +1,4 @@
+import { html_bounding_client_rect } from "../../../love/public/src/html_bounding_client_rect.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
 import { html_component_element_get } from "../../../love/public/src/html_component_element_get.mjs";
 export async function html_move_animate(
@@ -8,7 +9,7 @@ export async function html_move_animate(
   let to_e = html_component_element_get(component_to);
   const targetRect = to_e.getBoundingClientRect();
   let from_e = html_component_element_get(component_from);
-  const movingRect = from_e.getBoundingClientRect();
+  const movingRect = html_bounding_client_rect(from_e);
   const offsetX = targetRect.left - movingRect.left;
   const offsetY = targetRect.top - movingRect.top;
   from_e.style.transition = `transform ${duration}ms`;
