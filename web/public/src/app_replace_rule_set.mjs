@@ -1,3 +1,4 @@
+import { storage_local_transform_empty_context } from "../../../love/public/src/storage_local_transform_empty_context.mjs";
 import { app_replace_button_symbol_style_valid_multiple } from "../../../love/public/src/app_replace_button_symbol_style_valid_multiple.mjs";
 import { app_replace_button_symbol_style_inner } from "../../../love/public/src/app_replace_button_symbol_style_inner.mjs";
 import { list_map_html_bounding_client_rect } from "../../../love/public/src/list_map_html_bounding_client_rect.mjs";
@@ -30,7 +31,6 @@ import { list_index_is } from "../../../love/public/src/list_index_is.mjs";
 import { app_karate_button_next_text } from "../../../love/public/src/app_karate_button_next_text.mjs";
 import { app_replace_rule_sets_data_goal } from "../../../love/public/src/app_replace_rule_sets_data_goal.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
-import { storage_local_transform_context } from "../../../love/public/src/storage_local_transform_context.mjs";
 import { html_bold } from "../../../love/public/src/html_bold.mjs";
 import { html_style_font_size } from "../../../love/public/src/html_style_font_size.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
@@ -305,14 +305,8 @@ export async function app_replace_rule_set(context) {
           property_set(g, "completed", true);
           return value;
         }
-        const initial = {};
-        const property_name = "rule_sets_data";
-        storage_local_transform_context(
-          context,
-          property_name,
-          initial,
-          lambda5,
-        );
+        const key = "rule_sets_data";
+        storage_local_transform_empty_context(key, lambda5);
         const list = [goal_list_symbols, sbs];
         app_replace_button_symbol_style_valid_multiple(list, true);
         let choices = [
