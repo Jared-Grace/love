@@ -12,12 +12,12 @@ export async function data_prompts_count(offset) {
   let fn = prompt_previous;
   let inverted = await function_aliases_inverted();
   let value = property_get(inverted, fn.name);
-  let first = list_first(list);
+  let first = list_first(value);
   let d_path = data_prompts_path();
   let prompts = await data_value("prompts", d_path);
   let sliced = list_slice_end(prompts, offset);
   function lambda_inner(item, index) {
-    let together = text_combine(index, " " + " ");
+    let together = text_combine(index, " " + first + " ");
     let r = text_between_space(together, item);
     return r;
   }
