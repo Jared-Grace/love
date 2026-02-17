@@ -7,7 +7,7 @@ export async function function_curryify_right_count(f_name, count) {
   assert_arguments(arguments, 2);
   function lambda(unaliased) {
     let n = function_curryify_right_name(unaliased);
-    let combined = function_name_combine(n, ricountht);
+    let combined = function_name_combine(n, count);
     return combined;
   }
   let output = await function_curryify_generic(
