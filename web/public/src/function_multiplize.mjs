@@ -1,1 +1,1 @@
-export function function_multiplize() {}
+export function function_multiplize(f_name) {}
