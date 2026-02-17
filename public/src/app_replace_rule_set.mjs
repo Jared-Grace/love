@@ -135,7 +135,7 @@ export async function app_replace_rule_set(context) {
   let highlight = app_replace_rule_set_highlight();
   let div_below = html_div(root);
   let success = false;
-  const duration = 500;
+  const duration = 555;
   refresh();
   async function refresh() {
     html_clear(div_rules_buttons);
