@@ -201,8 +201,8 @@ export async function app_replace_rule_set(context) {
             await html_move_animate(a, b, duration);
             html_parent_remove(a);
           }
-          return;
           let mapped = list_map_pairs(sliced2, lefts2, lambda6);
+          return;
           let v = await list_wait(mapped);
           await html_request_animation_frame();
           let rects_middle = list_map(skipped, html_bounding_client_rect);
