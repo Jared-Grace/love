@@ -182,7 +182,8 @@ export async function app_replace_rule_set(context) {
     }
     each_index(rules_buttons, each_button_rule_refresh);
     html_clear(div_refresh);
-    if (success) {$r
+    if (success) {
+      return;
     }
     let div_symbols = html_div(div_refresh);
     let sbs = null;
