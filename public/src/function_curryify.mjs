@@ -8,8 +8,5 @@ export async function function_curryify(f_name) {
     args_get,
   );
   return output;
-  function args_get(arg_names) {
-    let r2 = function_curryify_args_get(arg_names);
-    return r2;
-  }
+  let r = function_curryify_args_get(arg_names);
 }
