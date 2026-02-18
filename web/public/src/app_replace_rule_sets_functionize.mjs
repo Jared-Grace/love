@@ -7,6 +7,7 @@ import { function_transform } from "../../../love/public/src/function_transform.
 export async function app_replace_rule_sets_functionize() {
   let f_name = app_replace_rule_sets.name;
   async function lambda(ast) {
+    let search = "rs";
     let list = js_array_expression_named(ast, search);
     let elements = js_array_expression_single_elements(ast);
     log({
