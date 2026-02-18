@@ -3,7 +3,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
-import { js_declaration_single_block_body } from "../../../love/public/src/js_declaration_single_block_body.mjs";
+import { js_function_declaration_single_block_body } from "../../../love/public/src/js_function_declaration_single_block_body.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
 import { app_shared_name_main } from "../../../love/public/src/app_shared_name_main.mjs";
@@ -39,7 +39,7 @@ export async function app_new_update_generic(
       declaration_call,
     );
     let statement = js_parse_statement(code);
-    let body_block = js_declaration_single_block_body(ast);
+    let body_block = js_function_declaration_single_block_body(ast);
     list_empty(body_block);
     list_add(body_block, statement);
   }
