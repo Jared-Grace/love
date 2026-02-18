@@ -9,8 +9,6 @@ export async function app_replace_rule_sets_calls() {
   let names = js_list_calls_names(ast);
   let f_name = fn_name("app_replace_rule_sets");
   await function_delete_if_exists(f_name);
-  let output = await function_transform(
-    f_name2,
-    async function lambda(ast2) {},
-  );
+  async function lambda(ast2) {}
+  let output = await function_transform(f_name2, lambda);
 }
