@@ -14,7 +14,7 @@ export async function app_replace_rule_sets_calls() {
   async function lambda(ast) {
     let body_block = js_function_declaration_single_block_body(ast);
     list_empty(body_block);
-    let mapped = list_map(names, js_parse_expression);
+    let elements = list_map(names, js_parse_expression);
     let expression = js_expression_array(elements);
     js_statement_return_empty_add_argument_set(body_block, expression);
   }
