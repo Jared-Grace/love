@@ -769,8 +769,8 @@ export function app_replace_rule_sets() {
           end: "df=",
         },
         {
-          start: "de=f",
-          end: "df=",
+          start: "de=",
+          end: "=d",
         },
       ],
     },
