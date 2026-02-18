@@ -5,6 +5,7 @@ import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule
 import { js_array_expression_single_elements } from "../../../love/public/src/js_array_expression_single_elements.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 export async function app_replace_rule_sets_functionize() {
+  let f_name = app_replace_rule_sets.name;
   async function lambda(ast) {
     let search = "rs";
     let list = js_array_expression_named(ast, search);
