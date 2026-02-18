@@ -16,7 +16,7 @@ export async function app_replace_rule_sets_calls() {
     });
   }
   js_visit_calls(ast, lambda_inner);
-  const nt = "CallExpression";
-  let vs = js_list_type(ast, nt);
+  const node_type = "CallExpression";
+  let vs = js_list_type(ast, node_type);
   let mapped = list_map_property(vs, "node");
 }
