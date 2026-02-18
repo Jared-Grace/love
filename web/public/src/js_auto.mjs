@@ -1,7 +1,7 @@
 import { data_generate_get } from "../../../love/public/src/data_generate_get.mjs";
 import { data_get } from "../../../love/public/src/data_get.mjs";
 import { global_function_property_get } from "../../../love/public/src/global_function_property_get.mjs";
-import { js_declaration_single_path } from "../../../love/public/src/js_declaration_single_path.mjs";
+import { js_function_declaration_single_path } from "../../../love/public/src/js_function_declaration_single_path.mjs";
 import { data_file_update_inner } from "../../../love/public/src/data_file_update_inner.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { global_function_property_exists } from "../../../love/public/src/global_function_property_exists.mjs";
@@ -13,7 +13,7 @@ import { performance_next } from "../../../love/public/src/performance_next.mjs"
 import { performance_start } from "../../../love/public/src/performance_start.mjs";
 import { js_auto_transforms } from "../../../love/public/src/js_auto_transforms.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
-import { data_path } from "./data_path.mjs";
+import { data_path } from "../../../love/public/src/data_path.mjs";
 export async function js_auto(ast) {
   let d_path = data_path();
   let exists = global_function_property_exists(file_read_cached, d_path);
@@ -21,7 +21,7 @@ export async function js_auto(ast) {
     let data_get = data_generate_get();
     global_function_property_set(file_read_cached, d_path, data_get);
   }
-  let f_path = js_declaration_single_path(ast);
+  let f_path = js_function_declaration_single_path(ast);
   async function lambda() {
     const p = performance_start(js_auto.name);
     let transforms = js_auto_transforms();
