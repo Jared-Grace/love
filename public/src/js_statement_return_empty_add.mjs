@@ -3,4 +3,5 @@ import { js_statement_return_empty } from "../../../love/public/src/js_statement
 export function js_statement_return_empty_add(body_block) {
   let r = js_statement_return_empty();
   list_add(body_block, r);
+  return r;
 }
