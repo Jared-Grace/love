@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
@@ -22,6 +23,7 @@ export async function app_replace_rule_sets_functionize() {
         if (ii) {
           let name = js_identifier_name(i);
         }
+        let eq2 = equal(left, right);
         log({
           name,
         });
