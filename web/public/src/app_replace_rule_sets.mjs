@@ -291,6 +291,10 @@ export function app_replace_rule_sets() {
           end: "bcbcabbc",
         },
         {
+          start: "aaaab",
+          end: "bcccc",
+        },
+        {
           start: "abababababab",
           end: "abbcabbcbcbc",
         },
@@ -307,6 +311,10 @@ export function app_replace_rule_sets() {
         {
           start: "bcbcabbc",
           end: "abababab",
+        },
+        {
+          start: "bcccc",
+          end: "aaaab",
         },
         {
           start: "abbcabbcbcbc",
