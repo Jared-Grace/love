@@ -14,7 +14,7 @@ export async function function_alias_add(first, second) {
   let expression = js_parse_expression(f_name);
   js_identifier_is_assert(expression);
   undefined_not_is_assert(f_name);
-  await function_exists_assert(f_name2);
+  await function_exists_assert(f_name);
   function lambda(a) {
     let unaliased = property_get(a, "unaliased");
     let aliases = property_get(a, "aliases");
