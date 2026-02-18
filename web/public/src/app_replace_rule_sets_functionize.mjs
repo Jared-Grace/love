@@ -24,8 +24,8 @@ export async function app_replace_rule_sets_functionize() {
       let declaration = function_new_declaration_to(replaced);
       let body_block = js_function_declaration_to_block_body(declaration);
       let r = js_statement_return_empty_add(body_block);
-      log_unparse(node);
-      log_unparse(node2);
+      log_unparse(declaration);
+      log_unparse(r);
     }
     each(elements, lambda2);
   }
