@@ -1,7 +1,6 @@
-import { js_property_key_get } from "../../../love/public/src/js_property_key_get.mjs";
+import { js_property_key_named } from "../../../love/public/src/js_property_key_named.mjs";
 import { js_property_value_get } from "../../../love/public/src/js_property_value_get.mjs";
 import { js_literal_value_get } from "../../../love/public/src/js_literal_value_get.mjs";
-import { js_identifier_named_try } from "../../../love/public/src/js_identifier_named_try.mjs";
 import { text_replace_space_underscore_lower } from "../../../love/public/src/text_replace_space_underscore_lower.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
@@ -20,8 +19,7 @@ export async function app_replace_rule_sets_functionize() {
       let properties = property_get(e, "properties");
       let search = "name";
       function lambda3(p) {
-        let key = js_property_key_get(p);
-        let eq = js_identifier_named_try(key, search);
+        let eq = js_property_key_named(p, search);
         return eq;
       }
       let found = list_find(properties, lambda3);
