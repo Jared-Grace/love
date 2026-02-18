@@ -1,3 +1,4 @@
+import { list_single } from "../../../love/public/src/list_single.mjs";
 import { js_array_expression_named } from "../../../love/public/src/js_array_expression_named.mjs";
 import { function_ast } from "../../../love/public/src/function_ast.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -9,6 +10,7 @@ export async function app_replace_rule_sets_functionize() {
   async function lambda(ast) {
     let search = "rs";
     let list = js_array_expression_named(ast, search);
+    let only = list_single(list2);
     let elements = js_array_expression_single_elements(ast);
     log({
       list,
