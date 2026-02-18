@@ -1,5 +1,5 @@
 export function app_replace_rule_set_shrink_different_2() {
-  return {
+  let r = {
     name: "Shrink Different 2",
     rules: ["b c > a", "d e > b"],
     goals: [
@@ -17,4 +17,5 @@ export function app_replace_rule_set_shrink_different_2() {
       },
     ],
   };
+  return r;
 }
