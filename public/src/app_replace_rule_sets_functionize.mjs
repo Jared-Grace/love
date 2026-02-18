@@ -22,10 +22,10 @@ export async function app_replace_rule_sets_functionize() {
       let search = "name";
       let r = js_property_key_named_curried_right(search);
       let found = list_find(properties, r);
-      log(found);
       let value = js_property_value_get(found);
       let value2 = js_literal_value_get(value);
       let replaced = text_replace_space_underscore_lower(value2);
+      log(replaced);
     }
     each(elements, lambda2);
   }
