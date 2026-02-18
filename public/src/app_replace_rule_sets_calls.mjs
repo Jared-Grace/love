@@ -1,6 +1,5 @@
-import { js_parse_expressions } from "../../../love/public/src/js_parse_expressions.mjs";
+import { js_expression_array_identifiers } from "../../../love/public/src/js_expression_array_identifiers.mjs";
 import { js_statement_return_empty_add_argument_set } from "../../../love/public/src/js_statement_return_empty_add_argument_set.mjs";
-import { js_expression_array } from "../../../love/public/src/js_expression_array.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { js_function_declaration_single_block_body } from "../../../love/public/src/js_function_declaration_single_block_body.mjs";
 import { function_transform_fn } from "../../../love/public/src/function_transform_fn.mjs";
@@ -13,8 +12,7 @@ export async function app_replace_rule_sets_calls() {
   async function lambda(ast) {
     let body_block = js_function_declaration_single_block_body(ast);
     list_empty(body_block);
-    let elements = js_parse_expressions(names);
-    let expression = js_expression_array(elements);
+    let expression = js_expression_array_identifiers(names);
     js_statement_return_empty_add_argument_set(body_block, expression);
   }
   let output = await function_transform_fn(lambda);
