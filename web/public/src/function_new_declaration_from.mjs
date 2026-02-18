@@ -11,7 +11,7 @@ import { function_name_to_path } from "../../../love/public/src/function_name_to
 import { js_function_declaration_name } from "../../../love/public/src/js_function_declaration_name.mjs";
 import { js_parse } from "../../../love/public/src/js_parse.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
-export async function function_new_declaration(declaration) {
+export async function function_new_declaration_from(declaration) {
   let f_name = js_function_declaration_name(declaration);
   log({
     f_name,
