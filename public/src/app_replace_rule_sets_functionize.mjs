@@ -1,3 +1,4 @@
+import { function_ast } from "../../../love/public/src/function_ast.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { js_array_expression_single_elements } from "../../../love/public/src/js_array_expression_single_elements.mjs";
@@ -8,7 +9,8 @@ export async function app_replace_rule_sets_functionize() {
     log({
       elements,
     });
-  }function_ast
+  }
+  let ast2 = await function_ast(f_name);
   return;
   let output = await function_transform(app_replace_rule_sets.name, lambda);
 }
