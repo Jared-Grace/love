@@ -1,4 +1,4 @@
-import { js_node_type_is_assert } from "../../../love/public/src/js_node_type_is_assert.mjs";
+import { js_object_expression_is_assert } from "../../../love/public/src/js_object_expression_is_assert.mjs";
 import { js_property_key_named_curried_right } from "../../../love/public/src/js_property_key_named_curried_right.mjs";
 import { js_property_value_get } from "../../../love/public/src/js_property_value_get.mjs";
 import { js_literal_value_get } from "../../../love/public/src/js_literal_value_get.mjs";
@@ -17,7 +17,7 @@ export async function app_replace_rule_sets_functionize() {
   async function lambda(a) {
     let elements = marker_next_declare_single_init_elements(a);
     function lambda2(e) {
-      js_node_type_is_assert(e, "ObjectExpression");
+      js_object_expression_is_assert(e);
       let properties = property_get(e, "properties");
       let search = "name";
       let r = js_property_key_named_curried_right(search);
