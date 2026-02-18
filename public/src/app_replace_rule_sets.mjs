@@ -479,16 +479,16 @@ export function app_replace_rule_sets() {
           end: "cc",
         },
         {
+          start: "bab",
+          end: "cc",
+        },
+        {
           start: "aa",
           end: "bcb",
         },
         {
           start: "aaa",
           end: "bccb",
-        },
-        {
-          start: "caaaaac",
-          end: "ccabccc",
         },
       ],
     },
