@@ -10,11 +10,11 @@ import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 export async function app_replace_rule_sets_functionize() {
   let f_name = app_replace_rule_sets.name;
+  let search = "name";
   let code = await function_transform_marker_specified(f_name, "rules", lambda);
   async function lambda(a) {
     let elements = marker_next_declare_single_init_elements(a);
     function lambda2(e) {
-      let search = "name";
       let found = js_object_expression_properties_find_key_named(e, search);
       let p = js_property_value_get(found);
       let l = js_literal_value_get(p);
