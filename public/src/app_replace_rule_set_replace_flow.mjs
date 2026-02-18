@@ -1,5 +1,5 @@
 export function app_replace_rule_set_replace_flow() {
-  return {
+  let r = {
     name: "Replace Flow",
     rules: ["a > b", "b > c"],
     goals: [
@@ -21,4 +21,5 @@ export function app_replace_rule_set_replace_flow() {
       },
     ],
   };
+  return r;
 }
