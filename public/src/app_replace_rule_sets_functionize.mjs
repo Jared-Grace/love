@@ -18,8 +18,8 @@ export async function app_replace_rule_sets_functionize() {
       let search = "name";
       function lambda3(p) {
         let key = property_get(p, "key");
-        let eq2 = js_identifier_named_try(key, search);
-        return eq2;
+        let eq = js_identifier_named_try(key, search);
+        return eq;
       }
       let found = list_find(properties, lambda3);
       let value = property_get(found, "value");
