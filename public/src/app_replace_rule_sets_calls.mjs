@@ -7,15 +7,12 @@ import { app_replace_rule_sets_v_1 } from "../../../love/public/src/app_replace_
 export async function app_replace_rule_sets_calls() {
   let ast2 = await function_ast_fn(app_replace_rule_sets_v_1);
   let names = js_list_calls_names(ast2);
-  let r2 =
-    js_function_declaration_single_block_body_empty_return_identifiers_curried(
-      ast3,
-    );
+js_function_declaration_single_block_body_empty_return_identifiers_curried_right
   async function lambda(ast) {
     js_function_declaration_single_block_body_empty_return_identifiers(
       ast,
       names,
     );
   }
-  let output = await function_transform_fn(lambda);
+  let output = await function_transform_fn(r2);
 }
