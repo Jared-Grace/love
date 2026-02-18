@@ -16,6 +16,9 @@ export async function app_replace_rule_sets_functionize() {
     ast,
   });
   lambda(ast);
+  log({
+    f_name,
+  });
   return;
   let output = await function_transform(f_name, lambda);
 }
