@@ -4,7 +4,6 @@ import { list_find } from "../../../love/public/src/list_find.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { marker_next_declare_single_init_elements } from "../../../love/public/src/marker_next_declare_single_init_elements.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { function_transform_marker_specified } from "../../../love/public/src/function_transform_marker_specified.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
@@ -20,9 +19,6 @@ export async function app_replace_rule_sets_functionize() {
         let key = property_get(p, "key");
         let name = js_identifier_name_try(key);
         let eq2 = equal(name, search);
-        log({
-          name,
-        });
         return eq2;
       }
       let found = list_find(properties, lambda3);
