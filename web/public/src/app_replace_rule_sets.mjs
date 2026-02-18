@@ -719,6 +719,20 @@ export function app_replace_rule_sets() {
       ],
     },
     {
+      name: "Shrink Same Three Different",
+      rules: ["e = b > c e = b c"],
+      goals: [
+        {
+          start: "e=b",
+          end: "cce=bcc",
+        },
+        {
+          start: "e=b",
+          end: "cccce=bcccc",
+        },
+      ],
+    },
+    {
       name: "Unary to Binary Equations",
       rules: [
         "e = b > c e = b c",
