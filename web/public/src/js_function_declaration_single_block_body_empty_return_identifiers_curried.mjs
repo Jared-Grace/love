@@ -1,1 +1,0 @@
-export function js_function_declaration_single_block_body_empty_return_identifiers_curried() {}
