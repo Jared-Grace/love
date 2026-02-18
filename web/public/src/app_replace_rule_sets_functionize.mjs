@@ -27,7 +27,7 @@ export async function app_replace_rule_sets_functionize() {
       let value = property_get(found, "value");
       let value2 = property_get(value, "value");
       let replaced = text_replace_space_underscore_lower(value2);
-      log(value2);
+      log(replaced);
     }
     each(elements, lambda2);
   }
