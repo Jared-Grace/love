@@ -22,6 +22,7 @@ export async function app_replace_rule_sets_functionize() {
         return eq2;
       }
       let found = list_find(properties, lambda3);
+      let value = property_get(found, "value");
     }
     each(elements, lambda2);
   }
