@@ -346,7 +346,7 @@ export async function app_replace_rule_set(context) {
           "Well done",
           "Keep it up",
           "Amazing",
-          "Way to go",
+          "Way to go",'awesome'
         ];
         let encouragements = list_shuffle_take(encouragements_choices, 2);
         html_bold(p_encouragement);
