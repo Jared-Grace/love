@@ -1,6 +1,6 @@
 import { app_shared_screen_add_generic } from "../../../love/public/src/app_shared_screen_add_generic.mjs";
 import { html_clear_context } from "../../../love/public/src/html_clear_context.mjs";
-import { js_declaration_single_block_body_add } from "../../../love/public/src/js_declaration_single_block_body_add.mjs";
+import { js_function_declaration_single_block_body_add } from "../../../love/public/src/js_function_declaration_single_block_body_add.mjs";
 import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
 import { js_code_let_assign } from "../../../love/public/src/js_code_let_assign.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
@@ -24,7 +24,7 @@ export async function app_shared_screen_add(a_name, screen_name) {
       let code = js_code_call_args(html_clear_context.name, [v]);
       let code_assign = js_code_let_assign("root", code);
       let statement = js_parse_statement(code_assign);
-      js_declaration_single_block_body_add(ast, statement);
+      js_function_declaration_single_block_body_add(ast, statement);
     }
     let output = await function_transform(combined_screen, lambda2);
   }
