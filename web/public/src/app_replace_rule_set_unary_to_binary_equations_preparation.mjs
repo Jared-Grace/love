@@ -1,5 +1,5 @@
 export function app_replace_rule_set_unary_to_binary_equations_preparation() {
-  return {
+  let r = {
     name: "Unary to Binary Equations Preparation",
     rules: [
       "d e = > = d",
@@ -43,4 +43,5 @@ export function app_replace_rule_set_unary_to_binary_equations_preparation() {
       },
     ],
   };
+  return r;
 }
