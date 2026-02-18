@@ -8,7 +8,7 @@ export async function app_replace_rule_sets_functionize() {
     log({
       elements,
     });
-  }
+  }function_ast
   return;
   let output = await function_transform(app_replace_rule_sets.name, lambda);
 }
