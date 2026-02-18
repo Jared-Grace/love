@@ -792,6 +792,10 @@ export function app_replace_rule_sets() {
         },
         {
           start: "de=",
+          end: "dedf=",
+        },
+        {
+          start: "de=",
           end: "df=f=",
         },
       ],
