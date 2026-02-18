@@ -1,3 +1,4 @@
+import { js_list_type } from "../../../love/public/src/js_list_type.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_rule_sets_v_1 } from "../../../love/public/src/app_replace_rule_sets_v_1.mjs";
 import { function_ast } from "../../../love/public/src/function_ast.mjs";
@@ -14,4 +15,5 @@ export async function app_replace_rule_sets_calls() {
     });
   }
   js_visit_calls(ast, lambda_inner);
+  let vs = js_list_type(ast2, node_type);
 }
