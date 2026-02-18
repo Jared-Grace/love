@@ -80,7 +80,6 @@ export function app_replace_rule_sets() {
   let r37 = app_replace_rule_set_grow_same_three_different();
   let r38 = app_replace_rule_set_unary_to_binary_equations_preparation();
   let r39 = app_replace_rule_set_unary_to_binary_equations();
-  marker("rules");
   let rs = [
     r,
     r2,
@@ -123,5 +122,6 @@ export function app_replace_rule_sets() {
     r38,
     r39,
   ];
+  marker("rules");
   return rs;
 }
