@@ -6,6 +6,7 @@ import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function js_object_expression_named(ast, search) {
+  let node_type = "ObjectExpression";
   function lambda2(la) {
     function lambda(v) {
       let stack = property_get(v, "stack");
@@ -23,7 +24,6 @@ export function js_object_expression_named(ast, search) {
       }
       js_node_type_is_if(e1, "VariableDeclarator", lambda3);
     }
-    let node_type = "ObjectExpression";
     js_visit_type(ast, node_type, lambda);
   }
   let list = list_adder(lambda2);
