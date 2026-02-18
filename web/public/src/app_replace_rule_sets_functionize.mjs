@@ -17,6 +17,7 @@ export async function app_replace_rule_sets_functionize() {
       let properties = property_get(e, "properties");
       function lambda3(p) {
         let key = property_get(p, "key");
+        let name = null;
         let ii = js_identifier_is(key);
         let name2 = js_identifier_name(i);
       }
