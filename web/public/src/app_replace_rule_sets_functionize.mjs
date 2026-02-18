@@ -1,3 +1,4 @@
+import { js_list_type } from "../../../love/public/src/js_list_type.mjs";
 import { function_ast } from "../../../love/public/src/function_ast.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
@@ -17,7 +18,8 @@ export async function app_replace_rule_sets_functionize() {
     ast,
   });
   lambda(ast);
-  let elements = js_array_expression_single_elements(ast);
+  let node_type = "ArrayExpression";
+  let vs = js_list_type(ast, node_type);
   log({
     f_name,
   });
