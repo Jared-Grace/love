@@ -1,6 +1,6 @@
-import { app_replace_rule_sets_functionize } from "../../../love/public/src/app_replace_rule_sets_functionize.mjs";
+import { marker } from "./marker.mjs";
 export function app_replace_rule_sets() {
-  "this variable name is used in " + app_replace_rule_sets_functionize.name;
+  marker("rules");
   let rs = [
     {
       name: "Replace",
