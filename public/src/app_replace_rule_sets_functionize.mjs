@@ -8,6 +8,7 @@ export async function app_replace_rule_sets_functionize() {
   log({
     f_name,
   });
+  return;
   async function lambda(ast) {
     let elements = js_array_expression_single_elements(ast);
     log({
