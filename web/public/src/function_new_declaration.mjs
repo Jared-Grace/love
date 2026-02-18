@@ -8,11 +8,11 @@ import { file_write } from "../../../love/public/src/file_write.mjs";
 import { js_code_export } from "../../../love/public/src/js_code_export.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
-import { js_declaration_name } from "../../../love/public/src/js_declaration_name.mjs";
+import { js_function_declaration_name } from "../../../love/public/src/js_function_declaration_name.mjs";
 import { js_parse } from "../../../love/public/src/js_parse.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
 export async function function_new_declaration(declaration) {
-  let f_name = js_declaration_name(declaration);
+  let f_name = js_function_declaration_name(declaration);
   log({
     f_name,
   });

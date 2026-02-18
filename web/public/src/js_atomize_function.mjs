@@ -1,6 +1,6 @@
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_block_insert } from "../../../love/public/src/js_block_insert.mjs";
-import { js_declaration_name } from "../../../love/public/src/js_declaration_name.mjs";
+import { js_function_declaration_name } from "../../../love/public/src/js_function_declaration_name.mjs";
 import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -20,7 +20,7 @@ export async function js_atomize_function(ast) {
       let type_is = js_node_type_is(stack2, "CallExpression");
       if (type_is) {
         let node = property_get(v, "node");
-        let name = js_declaration_name(node);
+        let name = js_function_declaration_name(node);
         let copy = object_copy(node);
         js_block_insert(stack, copy);
         let expression = js_parse_expression(name);
