@@ -182,19 +182,19 @@ export function app_replace_rule_sets() {
     },
     {
       name: "Shrink Both Same",
-      rules: ["1 = 1 > ="],
+      rules: ["a b a > b"],
       goals: [
         {
-          start: "1=1",
-          end: "11=11",
+          end: "aabaa",
+          start: "aba",
         },
         {
-          start: "1=1",
-          end: "111=111",
+          end: "aaabaaa",
+          start: "aba",
         },
         {
-          start: "1=1",
-          end: "11111=11111",
+          end: "aaaaabaaaaa",
+          start: "aba",
         },
       ],
     },
