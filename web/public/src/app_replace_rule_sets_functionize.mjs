@@ -1,5 +1,4 @@
 import { js_property_key_named_curried_right } from "../../../love/public/src/js_property_key_named_curried_right.mjs";
-import { js_property_key_named } from "../../../love/public/src/js_property_key_named.mjs";
 import { js_property_value_get } from "../../../love/public/src/js_property_value_get.mjs";
 import { js_literal_value_get } from "../../../love/public/src/js_literal_value_get.mjs";
 import { text_replace_space_underscore_lower } from "../../../love/public/src/text_replace_space_underscore_lower.mjs";
@@ -19,10 +18,6 @@ export async function app_replace_rule_sets_functionize() {
     function lambda2(e) {
       let properties = property_get(e, "properties");
       let search = "name";
-      function lambda3(p) {
-        let eq = js_property_key_named(p, search);
-        return eq;
-      }
       let r = js_property_key_named_curried_right(search);
       let found = list_find(properties, r);
       log(found);
