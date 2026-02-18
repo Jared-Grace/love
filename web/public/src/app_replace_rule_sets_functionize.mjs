@@ -13,7 +13,7 @@ export async function app_replace_rule_sets_functionize() {
       list,
     });
   }
-  let ast2 = await function_ast(f_name);
+  let ast = await function_ast(f_name);
   lambda(ast);
   return;
   let output = await function_transform(app_replace_rule_sets.name, lambda);
