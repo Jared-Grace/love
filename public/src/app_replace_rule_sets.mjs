@@ -564,7 +564,7 @@ export function app_replace_rule_sets() {
     },
     {
       name: "Shrink Left Pair Replace Right Same",
-      rules: ["a > b a", "b b > b c"],
+      rules: ["b a > a", "b c > b b"],
       goals: [
         {
           start: "baba",
