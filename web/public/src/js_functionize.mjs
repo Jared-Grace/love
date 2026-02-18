@@ -20,7 +20,7 @@ import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
-import { js_declaration_to_block_body } from "../../../love/public/src/js_declaration_to_block_body.mjs";
+import { js_function_declaration_to_block_body } from "../../../love/public/src/js_function_declaration_to_block_body.mjs";
 import { js_parse_statement_module } from "../../../love/public/src/js_parse_statement_module.mjs";
 import { js_code_function_declaration } from "../../../love/public/src/js_code_function_declaration.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
@@ -46,7 +46,7 @@ export async function js_functionize(
     async_is,
   );
   let declaration = js_parse_statement_module(code_declaration);
-  let body_block = js_declaration_to_block_body(declaration);
+  let body_block = js_function_declaration_to_block_body(declaration);
   list_add_multiple(body_block, range);
   let body = property_get(ast, "body");
   list_add(body, declaration);
