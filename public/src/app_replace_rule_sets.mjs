@@ -765,7 +765,6 @@ export function app_replace_rule_sets() {
       rules: [
         "d e = > = d",
         "= d > d f =",
-        "= > = =",
         "d > d d",
         "d d > d e d",
         "e d > e =",
