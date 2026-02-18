@@ -1,7 +1,7 @@
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { list_index_of_next_outside } from "../../../love/public/src/list_index_of_next_outside.mjs";
-import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
+import { js_function_declaration_params_names } from "../../../love/public/src/js_function_declaration_params_names.mjs";
 import { js_types_function } from "../../../love/public/src/js_types_function.mjs";
 import { js_stack_filtered_multiple_each } from "../../../love/public/src/js_stack_filtered_multiple_each.mjs";
 import { js_stack_filtered_each } from "../../../love/public/src/js_stack_filtered_each.mjs";
@@ -16,7 +16,7 @@ import { list_adder_multiple } from "../../../love/public/src/list_adder_multipl
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
-import { log_unparse } from "./log_unparse.mjs";
+import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 export function js_identifier_defineds(v) {
   let stack = property_get(v, "stack");
   function lambda4(la) {
@@ -77,7 +77,7 @@ export function js_identifier_defineds(v) {
     }
     function lambda5(node) {
       log_unparse(node);
-      let params_names = js_declaration_params_names(node);
+      let params_names = js_function_declaration_params_names(node);
       la(params_names);
     }
     js_stack_filtered_multiple_each(stack, types, lambda5);
