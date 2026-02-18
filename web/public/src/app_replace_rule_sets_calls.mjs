@@ -1,5 +1,5 @@
+import { js_list_calls } from "../../../love/public/src/js_list_calls.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { js_list_type } from "../../../love/public/src/js_list_type.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_rule_sets_v_1 } from "../../../love/public/src/app_replace_rule_sets_v_1.mjs";
 import { function_ast } from "../../../love/public/src/function_ast.mjs";
@@ -16,7 +16,6 @@ export async function app_replace_rule_sets_calls() {
     });
   }
   js_visit_calls(ast, lambda_inner);
-  const node_type = "CallExpression";
-  let vs = js_list_type(ast, node_type);
+  let vs = js_list_calls(ast);
   let mapped = list_map_property(vs, "node");
 }
