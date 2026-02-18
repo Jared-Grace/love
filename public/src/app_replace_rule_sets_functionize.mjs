@@ -5,9 +5,6 @@ import { js_array_expression_single_elements } from "../../../love/public/src/js
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 export async function app_replace_rule_sets_functionize() {
   let f_name = app_replace_rule_sets.name;
-  log({
-    f_name,
-  });
   async function lambda(ast) {
     let elements = js_array_expression_single_elements(ast);
     log({
@@ -15,6 +12,9 @@ export async function app_replace_rule_sets_functionize() {
     });
   }
   let ast = await function_ast(f_name);
+  log({
+    ast,
+  });
   return;
   lambda(ast);
   return;
