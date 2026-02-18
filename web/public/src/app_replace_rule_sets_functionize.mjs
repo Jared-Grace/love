@@ -1,4 +1,4 @@
-import { text_replace_space_underscore } from "../../../love/public/src/text_replace_space_underscore.mjs";
+import { text_replace_space_underscore_lower } from "../../../love/public/src/text_replace_space_underscore_lower.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_identifier_name_try } from "../../../love/public/src/js_identifier_name_try.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -26,7 +26,7 @@ export async function app_replace_rule_sets_functionize() {
       let found = list_find(properties, lambda3);
       let value = property_get(found, "value");
       let value2 = property_get(value, "value");
-      let replaced2 = text_replace_space_underscore(value2);
+      let replaced = text_replace_space_underscore_lower(value2);
       log(value2);
     }
     each(elements, lambda2);
