@@ -18,7 +18,7 @@ import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { js_function_declaration_name } from "../../../love/public/src/js_function_declaration_name.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
-import { js_declaration_to_block_body } from "../../../love/public/src/js_declaration_to_block_body.mjs";
+import { js_function_declaration_to_block_body } from "../../../love/public/src/js_function_declaration_to_block_body.mjs";
 import { js_identifier_rename } from "../../../love/public/src/js_identifier_rename.mjs";
 import { each_pair } from "../../../love/public/src/each_pair.mjs";
 import { js_function_declaration_params_names } from "../../../love/public/src/js_function_declaration_params_names.mjs";
@@ -61,7 +61,7 @@ export async function js_expand_generic(next, stack2, index, ast) {
     function lambda3(param_name, a_name) {
       js_identifier_rename(ast_call, param_name, a_name);
     }
-    let body_block = js_declaration_to_block_body(declaration);
+    let body_block = js_function_declaration_to_block_body(declaration);
     let last = list_last(body_block);
     function lambda() {
       list_remove(body_block, last);
