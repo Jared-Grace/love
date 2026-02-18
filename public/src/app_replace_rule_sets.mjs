@@ -706,6 +706,20 @@ export function app_replace_rule_sets() {
     },
     {
       name: "Unary to Binary Equations",
+      rules: ["e = b > c e = b c"],
+      goals: [
+        {
+          start: "e=b",
+          end: "cce=bcc",
+        },
+        {
+          start: "e=b",
+          end: "cccce=bcccc",
+        },
+      ],
+    },
+    {
+      name: "Unary to Binary Equations",
       rules: [
         "e = b > c e = b c",
         "c c > c + b c",
