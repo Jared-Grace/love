@@ -16,7 +16,7 @@ export async function app_replace_rule_sets_functionize() {
     let elements = marker_next_declare_single_init_elements(a);
     function lambda2(e) {
       let properties = property_get(e, "properties");
-      let right = "name";
+      let search = "name";
       function lambda3(p) {
         let key = property_get(p, "key");
         let name = null;
@@ -24,7 +24,7 @@ export async function app_replace_rule_sets_functionize() {
         if (ii) {
           name = js_identifier_name(i);
         }
-        let eq2 = equal(name, right);
+        let eq2 = equal(name, search);
         log({
           name,
         });
