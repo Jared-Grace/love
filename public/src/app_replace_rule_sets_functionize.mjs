@@ -24,7 +24,7 @@ export async function app_replace_rule_sets_functionize() {
       }
       let found = list_find(properties, lambda3);
       let value = property_get(found, "value");
-      log_unparse(node);
+      log_unparse(value);
     }
     each(elements, lambda2);
   }
