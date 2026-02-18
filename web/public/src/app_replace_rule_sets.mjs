@@ -720,7 +720,35 @@ export function app_replace_rule_sets() {
     },
     {
       name: "Shrink Same Three Different",
-      rules: ["e = b > c e = b c"],
+      rules: ["c e = b c > e = b"],
+      goals: [
+        {
+          start: "cce=bcc",
+          end: "e=b",
+        },
+        {
+          start: "cccce=bcccc",
+          end: "e=b",
+        },
+      ],
+    },
+    {
+      name: "Two Different Grow Same",
+      rules: ["e b > c e b c"],
+      goals: [
+        {
+          start: "eb",
+          end: "ccebcc",
+        },
+        {
+          start: "e=b",
+          end: "ccccebcccc",
+        },
+      ],
+    },
+    {
+      name: "Grow Same Three Different",
+      rules: ["c e b c > e b"],
       goals: [
         {
           start: "cce=bcc",
