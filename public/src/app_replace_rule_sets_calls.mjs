@@ -10,9 +10,9 @@ export async function app_replace_rule_sets_calls() {
   let ast2 = await function_ast_fn(app_replace_rule_sets_v_1);
   let names = js_list_calls_names(ast2);
   async function lambda(ast) {
+    let expression = js_expression_array_identifiers(names);
     let body_block = js_function_declaration_single_block_body(ast);
     list_empty(body_block);
-    let expression = js_expression_array_identifiers(names);
     js_statement_return_empty_add_argument_set(body_block, expression);
   }
   let output = await function_transform_fn(lambda);
