@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { js_declaration_to_block_body } from "../../../love/public/src/js_declaration_to_block_body.mjs";
 import { js_function_declaration_single } from "../../../love/public/src/js_function_declaration_single.mjs";
@@ -10,7 +11,8 @@ export function marker_down_choices_lambda({ stack2, stack1, ast }) {
   let body_block = js_declaration_to_block_body(declaration);
   function lambda3(la) {
     function lambda2(v) {
-      let { stack, node } = v;
+      let node = property_get(v, "node");
+      let stack = property_get(v, "stack");
       let includes = list_includes([body_block, declaration], node);
       if (includes) {
         return;
