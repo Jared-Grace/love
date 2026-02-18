@@ -6,7 +6,7 @@ import { function_name_unalias } from "../../../love/public/src/function_name_un
 import { task_function_name_part } from "../../../love/public/src/task_function_name_part.mjs";
 import { function_name_combine_multiple } from "../../../love/public/src/function_name_combine_multiple.mjs";
 import { js_function_declaration_single_block_body } from "../../../love/public/src/js_function_declaration_single_block_body.mjs";
-import { js_call_insert } from "../../../love/public/src/js_call_insert.mjs";
+import { js_call_statement_insert } from "../../../love/public/src/js_call_statement_insert.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { function_new } from "../../../love/public/src/function_new.mjs";
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
@@ -29,7 +29,7 @@ export async function task_new(task_name) {
   }
   async function lambda(ast) {
     let body_block = js_function_declaration_single_block_body(ast);
-    js_call_insert(todo.name, [], body_block, 0);
+    js_call_statement_insert(todo.name, [], body_block, 0);
   }
   let result = await function_transform(f_name_task, lambda);
 }
