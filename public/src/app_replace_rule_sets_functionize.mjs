@@ -10,10 +10,11 @@ export async function app_replace_rule_sets_functionize() {
   let f_name = app_replace_rule_sets.name;
   async function lambda(ast) {
     let search = "rules";
+    async function lambda2(a) {}
     let code = await function_transform_marker_specified(
       f_name2,
       marker_name,
-      async function lambda2(a) {},
+      lambda2,
     );
     let list = js_array_expression_named(ast, search);
     let only = list_single(list);
