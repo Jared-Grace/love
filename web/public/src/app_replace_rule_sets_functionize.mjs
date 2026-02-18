@@ -1,4 +1,5 @@
-import { error_json } from "../../../love/public/src/error_json.mjs";
+import { error } from "../../../love/public/src/error.mjs";
+import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -31,11 +32,13 @@ export async function app_replace_rule_sets_functionize() {
   const m = {};
   const z = 1;
   let a = list_size(vs) === z;
-  error_json({
+  const j = {
     m,
     vs,
     z,
-  });
+  };
+  let message = json_format_to(j);
+  error(message);
   log(only);
   let mapped = list_map_property(vs, "node");
   let mapped2 = list_map(mapped, js_unparse);
