@@ -1,7 +1,7 @@
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_await_add_inner } from "../../../love/public/src/js_await_add_inner.mjs";
-import { js_declaration_name } from "../../../love/public/src/js_declaration_name.mjs";
+import { js_function_declaration_name } from "../../../love/public/src/js_function_declaration_name.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
@@ -26,7 +26,7 @@ export async function js_function_last_asyncify(
     property_set(f, property_name, true);
     let declaration = js_declaration_single(ast);
     if (equal(f, declaration)) {
-      let name = js_declaration_name(declaration);
+      let name = js_function_declaration_name(declaration);
       let value = property_get(functions, name);
       property_set(value, property_name, true);
       let result = await data_identifiers_search(name);
