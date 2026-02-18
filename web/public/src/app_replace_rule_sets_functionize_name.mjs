@@ -11,8 +11,8 @@ export function app_replace_rule_sets_functionize_name(e) {
   let p = js_property_value_get(found);
   let l = js_literal_value_get(p);
   let f_name_new = text_replace_space_underscore_lower(l);
-  app_replace_rule_sets.name;
-  let without = text_suffix_without(s, suffix);
+  let n = app_replace_rule_sets.name;
+  let without = text_suffix_without(n, "s");
   let combined = function_name_combine(left, f_name_new);
   return f_name_new;
 }
