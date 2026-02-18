@@ -341,8 +341,8 @@ export async function app_replace_rule_set(context) {
         const encouragements_choices = [
           "Congratulations",
           "Success",
-          "Good job",
-          "Great job",
+          "Good",
+          "Great",
           "Well done",
           "Keep it up",
           "Amazing",
