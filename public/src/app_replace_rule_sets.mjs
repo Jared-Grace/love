@@ -1,5 +1,5 @@
 export function app_replace_rule_sets() {
-  let v = [
+  let rs = [
     {
       name: "Replace",
       rules: ["a > b"],
@@ -849,5 +849,5 @@ export function app_replace_rule_sets() {
       ],
     },
   ];
-  return v;
+  return rs;
 }
