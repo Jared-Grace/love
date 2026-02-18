@@ -792,6 +792,10 @@ export function app_replace_rule_sets() {
         },
         {
           start: "de=",
+          end: "ddf=",
+        },
+        {
+          start: "de=",
           end: "dedf=",
         },
         {
