@@ -28,7 +28,8 @@ export async function app_replace_rule_sets_functionize() {
       let r = js_statement_return_empty_add(body_block);
       js_return_argument_set(r, e);
       log_unparse(declaration);
-      await function_new_declaration_from(declaration2);
+      return;
+      await function_new_declaration_from(declaration);
     }
     await each_async(elements, lambda2);
   }
