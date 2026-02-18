@@ -1,3 +1,4 @@
+import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { function_delete_if_exists } from "../../../love/public/src/function_delete_if_exists.mjs";
 import { function_ast_fn } from "../../../love/public/src/function_ast_fn.mjs";
@@ -10,5 +11,5 @@ export async function app_replace_rule_sets_calls() {
   let f_name = fn_name("app_replace_rule_sets");
   await function_delete_if_exists(f_name);
   async function lambda(ast2) {}
-  let output = await function_transform(f_name2, lambda);
+  let output = await function_transform(app_replace_rule_sets.name, lambda);
 }
