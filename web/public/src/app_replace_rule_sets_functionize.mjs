@@ -18,6 +18,8 @@ export async function app_replace_rule_sets_functionize() {
       function lambda3(p) {
         let key = property_get(p, "key");
         let name = null;
+        if (false) {
+        }
         let ii = js_identifier_is(key);
         let name2 = js_identifier_name(i);
       }
