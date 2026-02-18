@@ -1,4 +1,4 @@
-import { list_map } from "../../../love/public/src/list_map.mjs";
+import { js_parse_expressions } from "../../../love/public/src/js_parse_expressions.mjs";
 import { js_statement_return_empty_add_argument_set } from "../../../love/public/src/js_statement_return_empty_add_argument_set.mjs";
 import { js_expression_array } from "../../../love/public/src/js_expression_array.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
@@ -7,14 +7,13 @@ import { function_transform_fn } from "../../../love/public/src/function_transfo
 import { function_ast_fn } from "../../../love/public/src/function_ast_fn.mjs";
 import { js_list_calls_names } from "../../../love/public/src/js_list_calls_names.mjs";
 import { app_replace_rule_sets_v_1 } from "../../../love/public/src/app_replace_rule_sets_v_1.mjs";
-import { js_parse_expression } from "./js_parse_expression.mjs";
 export async function app_replace_rule_sets_calls() {
   let ast2 = await function_ast_fn(app_replace_rule_sets_v_1);
   let names = js_list_calls_names(ast2);
   async function lambda(ast) {
     let body_block = js_function_declaration_single_block_body(ast);
     list_empty(body_block);
-    let elements = list_map(names, js_parse_expression);
+    let elements = js_parse_expressions(names);
     let expression = js_expression_array(elements);
     js_statement_return_empty_add_argument_set(body_block, expression);
   }
