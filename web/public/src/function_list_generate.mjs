@@ -5,7 +5,7 @@ import { function_open } from "../../../love/public/src/function_open.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
-import { js_declaration_single_block_body } from "../../../love/public/src/js_declaration_single_block_body.mjs";
+import { js_function_declaration_single_block_body } from "../../../love/public/src/js_function_declaration_single_block_body.mjs";
 import { function_new } from "../../../love/public/src/function_new.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { function_unalias_exists } from "../../../love/public/src/function_unalias_exists.mjs";
@@ -18,7 +18,7 @@ export async function function_list_generate(f_generate, list) {
     await function_new(f_name);
   }
   async function lambda3(ast) {
-    let body_block = js_declaration_single_block_body(ast);
+    let body_block = js_function_declaration_single_block_body(ast);
     list_empty(body_block);
     let code = json_to(list);
     js_statement_return_insert_code(body_block, index, code);
