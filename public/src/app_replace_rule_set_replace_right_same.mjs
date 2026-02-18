@@ -1,5 +1,5 @@
 export function app_replace_rule_set_replace_right_same() {
-  return {
+  let r = {
     name: "Replace Right Same",
     rules: ["a b > a a"],
     goals: [
@@ -17,4 +17,5 @@ export function app_replace_rule_set_replace_right_same() {
       },
     ],
   };
+  return r;
 }
