@@ -30,8 +30,8 @@ export async function app_replace_rule_sets_functionize() {
       let f_name_new = app_replace_rule_sets_functionize_name(e);
       log_unparse(declaration);
       let parsed = js_call(f_name_new, []);
-      return declaration;
-      await function_new_declaration_from(declaration);
+      log_unparse(parsed);
+      return;
     }
     await each_async(elements, lambda2);
   }
