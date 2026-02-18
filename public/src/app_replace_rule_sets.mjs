@@ -471,8 +471,8 @@ export function app_replace_rule_sets() {
       rules: ["a > b b", "b b > c"],
       goals: [
         {
-          start: "ab",
-          end: "cc",
+          start: "a",
+          end: "c",
         },
         {
           start: "acb",
