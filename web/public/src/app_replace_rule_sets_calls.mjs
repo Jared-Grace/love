@@ -17,5 +17,5 @@ export async function app_replace_rule_sets_calls() {
   }
   js_visit_calls(ast, lambda_inner);
   let vs = js_list_type(ast, "CallExpression");
-  let mapped = list_map_property(list, property_name);
+  let mapped = list_map_property(vs, "node");
 }
