@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { js_function_declaration_single_block_body_empty_return_identifiers_curried_right } from "../../../love/public/src/js_function_declaration_single_block_body_empty_return_identifiers_curried_right.mjs";
 import { js_function_declaration_single_block_body_empty_return_identifiers } from "../../../love/public/src/js_function_declaration_single_block_body_empty_return_identifiers.mjs";
 import { function_transform_fn } from "../../../love/public/src/function_transform_fn.mjs";
@@ -17,5 +18,6 @@ export async function app_replace_rule_sets_calls() {
       names,
     );
   }
-  let output = await function_transform_fn(error(), r2);
+  let lambda2 = error();
+  let output = await function_transform_fn(r2, lambda2);
 }
