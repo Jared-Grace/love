@@ -1,4 +1,3 @@
-import { error } from "../../../love/public/src/error.mjs";
 import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
@@ -40,7 +39,7 @@ export async function app_replace_rule_sets_functionize() {
   log(1);
   let message = json_format_to(j);
   log(2);
-  error(message);
+  throw new Error(message);
   log(only);
   let mapped = list_map_property(vs, "node");
   let mapped2 = list_map(mapped, js_unparse);
