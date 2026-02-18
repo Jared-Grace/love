@@ -780,7 +780,11 @@ export function app_replace_rule_sets() {
         },
         {
           start: "d",
-          end: "de=f=",
+          end: "df=f=",
+        },
+        {
+          start: "d",
+          end: "df=f=f=",
         },
       ],
     },
