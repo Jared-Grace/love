@@ -5,7 +5,7 @@ import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.
 import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { js_visit_match } from "../../../love/public/src/js_visit_match.mjs";
-import { js_declaration_to_block_body } from "../../../love/public/src/js_declaration_to_block_body.mjs";
+import { js_function_declaration_to_block_body } from "../../../love/public/src/js_function_declaration_to_block_body.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_a_functionize_choices_add } from "../../../love/public/src/app_a_functionize_choices_add.mjs";
 import { app_a_paste } from "../../../love/public/src/app_a_paste.mjs";
@@ -45,7 +45,7 @@ export function app_a_function_declaration(a) {
         text: "Flatten",
         fn: async function lambda4() {
           let e1 = list_get_end_1(stack);
-          let body_block = js_declaration_to_block_body(node);
+          let body_block = js_function_declaration_to_block_body(node);
           list_replace_multiple(e1, node, body_block);
           await app_a_function_on_change(a, o);
         },
