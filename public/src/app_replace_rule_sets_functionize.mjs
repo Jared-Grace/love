@@ -16,14 +16,15 @@ export async function app_replace_rule_sets_functionize() {
     let elements = marker_next_declare_single_init_elements(a);
     function lambda2(e) {
       let properties = property_get(e, "properties");
+      let right = "name";
       function lambda3(p) {
         let key = property_get(p, "key");
         let name = null;
         let ii = js_identifier_is(key);
         if (ii) {
-          let name = js_identifier_name(i);
+          name = js_identifier_name(i);
         }
-        let eq2 = equal(left, right);
+        let eq2 = equal(name, right);
         log({
           name,
         });
