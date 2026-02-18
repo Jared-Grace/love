@@ -467,7 +467,7 @@ export function app_replace_rule_sets() {
       ],
     },
     {
-      name: "Replace Expand Collapse",
+      name: "Expand Collapse",
       rules: ["a > b b", "b b > c"],
       goals: [
         {
