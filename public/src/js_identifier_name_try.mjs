@@ -4,7 +4,7 @@ export function js_identifier_name_try(key) {
   let name = null;
   let ii = js_identifier_is(key);
   if (ii) {
-    name = js_identifier_name(i);
+    name = js_identifier_name(key);
   }
   return name;
 }
