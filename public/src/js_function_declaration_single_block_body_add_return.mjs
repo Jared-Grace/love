@@ -2,5 +2,6 @@ import { js_statement_return_empty_add } from "../../../love/public/src/js_state
 import { js_function_declaration_single_block_body } from "../../../love/public/src/js_function_declaration_single_block_body.mjs";
 export function js_function_declaration_single_block_body_add_return(ast) {
   let body_block = js_function_declaration_single_block_body(ast);
-  return js_statement_return_empty_add(body_block);
+  let r = js_statement_return_empty_add(body_block);
+  return r;
 }
