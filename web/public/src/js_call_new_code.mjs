@@ -1,4 +1,4 @@
-import { js_declaration } from "../../../love/public/src/js_declaration.mjs";
+import { js_function_declaration } from "../../../love/public/src/js_function_declaration.mjs";
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { js_return_name } from "../../../love/public/src/js_return_name.mjs";
@@ -29,7 +29,7 @@ export async function js_call_new_code(f_name_call, ast) {
       let b = list_size(split);
       let remaining = list_slice(split, skip_count, b);
       let lamda_name = await js_identifier_unique(existing, lambda);
-      let declaration_lambda = js_declaration(declaration, lamda_name);
+      let declaration_lambda = js_function_declaration(declaration, lamda_name);
       async function lambda2(p) {
         let unique = await js_identifier_unique(existing, p);
         js_declaration_param_add(declaration_lambda, unique);
