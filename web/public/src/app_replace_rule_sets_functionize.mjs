@@ -21,7 +21,7 @@ export async function app_replace_rule_sets_functionize() {
   let node_type = "ArrayExpression";
   let vs = js_list_type(ast, node_type);
   log({
-    f_name,
+    vs,
   });
   return;
   let output = await function_transform(f_name, lambda);
