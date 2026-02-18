@@ -1,3 +1,4 @@
+import { js_statement_return_empty_add } from "../../../love/public/src/js_statement_return_empty_add.mjs";
 import { js_function_declaration_to_block_body } from "../../../love/public/src/js_function_declaration_to_block_body.mjs";
 import { function_new_declaration_to } from "../../../love/public/src/function_new_declaration_to.mjs";
 import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
@@ -21,6 +22,7 @@ export async function app_replace_rule_sets_functionize() {
       let l = js_literal_value_get(p);
       let replaced = text_replace_space_underscore_lower(l);
       let declaration = function_new_declaration_to(f_name);
+      let r = js_statement_return_empty_add(body_block2);
       let body_block = js_function_declaration_to_block_body(declaration);
       log(e);
     }
