@@ -16,9 +16,9 @@ export async function app_replace_rule_sets_functionize() {
     function lambda2(e) {
       let search = "name";
       let found = js_object_expression_properties_find_key_named(e, search);
-      let value = js_property_value_get(found);
-      let value2 = js_literal_value_get(value);
-      let replaced = text_replace_space_underscore_lower(value2);
+      let p = js_property_value_get(found);
+      let l = js_literal_value_get(p);
+      let replaced = text_replace_space_underscore_lower(l);
       log(replaced);
     }
     each(elements, lambda2);
