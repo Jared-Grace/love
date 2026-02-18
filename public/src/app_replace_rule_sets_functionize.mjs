@@ -1,5 +1,5 @@
+import { js_call } from "../../../love/public/src/js_call.mjs";
 import { app_replace_rule_sets_functionize_name } from "../../../love/public/src/app_replace_rule_sets_functionize_name.mjs";
-import { js_call_statement } from "../../../love/public/src/js_call_statement.mjs";
 import { function_new_declaration_from } from "../../../love/public/src/function_new_declaration_from.mjs";
 import { js_return_argument_set } from "../../../love/public/src/js_return_argument_set.mjs";
 import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
@@ -28,7 +28,7 @@ export async function app_replace_rule_sets_functionize() {
     await each_async(elements, lambda2);
     async function lambda2(e) {
       let f_name_new = app_replace_rule_sets_functionize_name(e);
-      let parsed = js_call_statement(f_name_new, []);
+      let parsed = js_call(f_name_new, []);
       log_unparse(parsed);
       return;
     }
