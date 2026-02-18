@@ -1,6 +1,5 @@
+import { js_identifier_name_try } from "../../../love/public/src/js_identifier_name_try.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
-import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -19,11 +18,7 @@ export async function app_replace_rule_sets_functionize() {
       let search = "name";
       function lambda3(p) {
         let key = property_get(p, "key");
-        let name = null;
-        let ii = js_identifier_is(key);
-        if (ii) {
-          name = js_identifier_name(i);
-        }
+        let name = js_identifier_name_try(key);
         let eq2 = equal(name, search);
         log({
           name,
