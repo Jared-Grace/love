@@ -475,8 +475,8 @@ export function app_replace_rule_sets() {
           end: "c",
         },
         {
-          start: "acb",
-          end: "ccc",
+          start: "aa",
+          end: "bcb",
         },
         {
           start: "cabadc",
