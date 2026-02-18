@@ -15,11 +15,11 @@ import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule
 import { each_async } from "./each_async.mjs";
 export async function app_replace_rule_sets_functionize() {
   let f_name = app_replace_rule_sets.name;
-  let search = "name";
   let code = await function_transform_marker_specified(f_name, "rules", lambda);
   async function lambda(a) {
     let elements = marker_next_declare_single_init_elements(a);
     async function lambda2(e) {
+      let search = "name";
       let found = js_object_expression_properties_find_key_named(e, search);
       let p = js_property_value_get(found);
       let l = js_literal_value_get(p);
@@ -30,7 +30,7 @@ export async function app_replace_rule_sets_functionize() {
       js_return_argument_set(r, e);
       log_unparse(declaration);
       let parsed = js_call(replaced, []);
-      return;
+      return declaration;
       await function_new_declaration_from(declaration);
     }
     await each_async(elements, lambda2);
