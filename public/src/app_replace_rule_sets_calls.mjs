@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { js_statement_return_empty_add_argument_set } from "../../../love/public/src/js_statement_return_empty_add_argument_set.mjs";
 import { js_expression_array } from "../../../love/public/src/js_expression_array.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
@@ -12,6 +13,7 @@ export async function app_replace_rule_sets_calls() {
   async function lambda(ast) {
     let body_block = js_function_declaration_single_block_body(ast);
     list_empty(body_block);
+    let mapped = list_map(list, function lambda2(item) {});
     let expression = js_expression_array(elements);
     js_statement_return_empty_add_argument_set(body_block, expression);
   }
