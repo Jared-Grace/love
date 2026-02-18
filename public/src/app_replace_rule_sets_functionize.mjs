@@ -25,7 +25,7 @@ export async function app_replace_rule_sets_functionize() {
       let found = list_find(properties, lambda3);
       let value = property_get(found, "value");
       let value2 = property_get(value, "value");
-      log(value);
+      log(value2);
     }
     each(elements, lambda2);
   }
