@@ -1,5 +1,5 @@
 export function app_replace_rule_set_shrink_between() {
-  return {
+  let r = {
     name: "Shrink Between",
     rules: ["a b a > a a"],
     goals: [
@@ -17,4 +17,5 @@ export function app_replace_rule_set_shrink_between() {
       },
     ],
   };
+  return r;
 }
