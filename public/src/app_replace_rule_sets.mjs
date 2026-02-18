@@ -761,6 +761,16 @@ export function app_replace_rule_sets() {
       ],
     },
     {
+      name: "Swap Middle Shrink",
+      rules: ["d e = > = d"],
+      goals: [
+        {
+          start: "de=",
+          end: "=d",
+        },
+      ],
+    },
+    {
       name: "Unary to Binary Equations",
       rules: [
         "e = b > c e = b c",
