@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_return_on } from "../../../love/public/src/js_return_on.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
@@ -13,7 +14,7 @@ export function js_return_name(ast) {
     return_name = "result";
   }
   function identifier_if(argument) {
-    let { name: name_argument } = argument;
+    let name_argument = property_get(argument, "name");
     return_name = name_argument;
   }
   return return_name;
