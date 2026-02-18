@@ -1,4 +1,4 @@
-import { js_object_expression_named_generic } from "../../../love/public/src/js_object_expression_named_generic.mjs";
+import { js_array_expression_named } from "../../../love/public/src/js_array_expression_named.mjs";
 import { function_ast } from "../../../love/public/src/function_ast.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
@@ -7,14 +7,10 @@ import { function_transform } from "../../../love/public/src/function_transform.
 export async function app_replace_rule_sets_functionize() {
   async function lambda(ast) {
     let search = "rs";
-    let list = js_object_expression_named_generic(
-      ast,
-      "ArrayExpression",
-      search,
-    );
+    let list = js_array_expression_named(ast, search);
     let elements = js_array_expression_single_elements(ast);
     log({
-      elements,
+      list,
     });
   }
   let ast2 = await function_ast(f_name);
