@@ -40,7 +40,6 @@ import { app_replace_rule_set_grow_different } from "../../../love/public/src/ap
 import { app_replace_rule_set_replace } from "../../../love/public/src/app_replace_rule_set_replace.mjs";
 import { marker } from "./marker.mjs";
 export function app_replace_rule_sets() {
-  marker("rules");
   let r = app_replace_rule_set_replace();
   let r2 = app_replace_rule_set_grow_different();
   let r3 = app_replace_rule_set_shrink_different();
@@ -81,6 +80,7 @@ export function app_replace_rule_sets() {
   let r37 = app_replace_rule_set_grow_same_three_different();
   let r38 = app_replace_rule_set_unary_to_binary_equations_preparation();
   let r39 = app_replace_rule_set_unary_to_binary_equations();
+  marker("rules");
   let rs = [
     r,
     r2,
