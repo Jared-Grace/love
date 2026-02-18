@@ -639,6 +639,40 @@ export function app_replace_rule_sets() {
       ],
     },
     {
+      name: "Binary Counting Prepare 1",
+      rules: ["1 a > a 0", "1 > 1 1"],
+      goals: [
+        {
+          start: "b0c",
+          end: "b0ac",
+        },
+        {
+          start: "b0c",
+          end: "b1c",
+        },
+        {
+          start: "b0c",
+          end: "b10c",
+        },
+        {
+          start: "b0c",
+          end: "b11c",
+        },
+        {
+          start: "b0c",
+          end: "b101c",
+        },
+        {
+          start: "b0c",
+          end: "b111c",
+        },
+        {
+          start: "b0c",
+          end: "b1010c",
+        },
+      ],
+    },
+    {
       name: "Binary Counting",
       rules: ["0 a > 1", "1 a > a 0", "c > a c", "b a > b 1"],
       goals: [
