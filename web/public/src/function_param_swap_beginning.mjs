@@ -1,5 +1,5 @@
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { js_declaration_params_ast_get } from "../../../love/public/src/js_declaration_params_ast_get.mjs";
+import { js_function_declaration_params_ast_get } from "../../../love/public/src/js_function_declaration_params_ast_get.mjs";
 import { list_swap_at } from "../../../love/public/src/list_swap_at.mjs";
 import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
 export async function function_param_swap_beginning(f_name) {
@@ -14,7 +14,7 @@ export async function function_param_swap_beginning(f_name) {
     list_swap_at(args, index_a, index_b);
   }
   function function_transform_current_lambda(ast) {
-    let v2 = js_declaration_params_ast_get(ast);
+    let v2 = js_function_declaration_params_ast_get(ast);
     let params = property_get(v2, "params");
     list_swap_at(params, index_a, index_b);
   }
