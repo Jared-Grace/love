@@ -1,4 +1,4 @@
-import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
+import { log } from "../../../love/public/src/log.mjs";
 import { js_identifier_name_try } from "../../../love/public/src/js_identifier_name_try.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
@@ -24,7 +24,7 @@ export async function app_replace_rule_sets_functionize() {
       }
       let found = list_find(properties, lambda3);
       let value = property_get(found, "value");
-      log_unparse(value);
+      log(value);
     }
     each(elements, lambda2);
   }
