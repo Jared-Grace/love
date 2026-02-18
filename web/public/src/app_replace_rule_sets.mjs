@@ -780,7 +780,7 @@ export function app_replace_rule_sets() {
         },
         {
           start: "d",
-          end: "ddf==",
+          end: "ddf=",
         },
         {
           start: "d",
