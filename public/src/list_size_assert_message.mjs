@@ -7,6 +7,7 @@ export function list_size_assert_message(list, size, message) {
     error_json({
       message,
       list,
+      size,
     });
   }
 }
