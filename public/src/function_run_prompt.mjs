@@ -4,7 +4,7 @@ import { data_property_get_generic } from "../../../love/public/src/data_propert
 import { chalk_green } from "../../../love/public/src/chalk_green.mjs";
 import { function_run_line_git } from "../../../love/public/src/function_run_line_git.mjs";
 import { command_line_read } from "../../../love/public/src/command_line_read.mjs";
-import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
+import { json_format_to_truncated } from "../../../love/public/src/json_format_to_truncated.mjs";
 import { data_path } from "../../../love/public/src/data_path.mjs";
 export async function function_run_prompt() {
   if (false) {
@@ -14,7 +14,7 @@ export async function function_run_prompt() {
     let nn = null_not_is(ea);
     if (nn) {
       await log_error(property_name);
-      let prompt = json_format_to(ea);
+      let prompt = json_format_to_truncated(ea);
       await log_error(prompt);
     }
   }
