@@ -1,5 +1,5 @@
 export function app_replace_rule_set_shrink_triple() {
-  return {
+  let r = {
     name: "Shrink Triple",
     rules: ["a a a > a"],
     goals: [
@@ -17,4 +17,5 @@ export function app_replace_rule_set_shrink_triple() {
       },
     ],
   };
+  return r;
 }
