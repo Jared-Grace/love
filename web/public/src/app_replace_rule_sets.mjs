@@ -772,6 +772,10 @@ export function app_replace_rule_sets() {
       goals: [
         {
           start: "de=",
+          end: "=d",
+        },
+        {
+          start: "de=",
           end: "df=",
         },
         {
