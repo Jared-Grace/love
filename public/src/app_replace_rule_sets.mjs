@@ -723,12 +723,12 @@ export function app_replace_rule_sets() {
       rules: ["e = b > c e = b c"],
       goals: [
         {
-          start: "e=b",
-          end: "cce=bcc",
+          start: "cce=bcc",
+          end: "e=b",
         },
         {
-          start: "e=b",
-          end: "cccce=bcccc",
+          start: "cccce=bcccc",
+          end: "e=b",
         },
       ],
     },
