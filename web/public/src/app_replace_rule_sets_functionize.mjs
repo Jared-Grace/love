@@ -22,6 +22,16 @@ export async function app_replace_rule_sets_functionize() {
       let r = js_statement_return_empty_add(body_block);
       js_return_argument_set(r, e);
       log_unparse(declaration);
+      return declaration;
+    }
+    await each_async(elements, lambda2);
+    async function lambda2(e) {
+      let f_name_new = app_replace_rule_sets_functionize_name(e);
+      let declaration = function_new_declaration_to(f_name_new);
+      let body_block = js_function_declaration_to_block_body(declaration);
+      let r = js_statement_return_empty_add(body_block);
+      js_return_argument_set(r, e);
+      log_unparse(declaration);
       let parsed = js_call(f_name_new, []);
       return declaration;
       await function_new_declaration_from(declaration);
