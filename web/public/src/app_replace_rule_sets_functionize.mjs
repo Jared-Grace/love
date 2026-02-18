@@ -20,9 +20,7 @@ export async function app_replace_rule_sets_functionize() {
   lambda(ast);
   let node_type = "ArrayExpression";
   let vs = js_list_type(ast, node_type);
-  log({
-    vs,
-  });
+  log(vs);
   return;
   let output = await function_transform(f_name, lambda);
 }
