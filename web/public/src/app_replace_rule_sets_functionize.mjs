@@ -17,6 +17,7 @@ export async function app_replace_rule_sets_functionize() {
     ast,
   });
   lambda(ast);
+  let elements = js_array_expression_single_elements(ast);
   log({
     f_name,
   });
