@@ -705,7 +705,7 @@ export function app_replace_rule_sets() {
       ],
     },
     {
-      name: "Unary to Binary Equations",
+      name: "Three Different Grow Same",
       rules: ["e = b > c e = b c"],
       goals: [
         {
