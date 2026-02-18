@@ -23,6 +23,7 @@ export async function app_replace_rule_sets_functionize() {
         log({
           name,
         });
+        return eq2;
       }
       let found = list_find(properties, lambda3);
     }
