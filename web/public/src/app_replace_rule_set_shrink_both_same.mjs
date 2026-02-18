@@ -1,5 +1,5 @@
 export function app_replace_rule_set_shrink_both_same() {
-  return {
+  let r = {
     name: "Shrink Both Same",
     rules: ["a b a > b"],
     goals: [
@@ -17,4 +17,5 @@ export function app_replace_rule_set_shrink_both_same() {
       },
     ],
   };
+  return r;
 }
