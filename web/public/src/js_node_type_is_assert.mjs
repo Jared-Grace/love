@@ -5,10 +5,11 @@ export function js_node_type_is_assert(node, type) {
   let type_is = js_node_type_is(node, type);
   assert(type_is);
   function lambda2() {
-    return {
+    let r = {
       node,
       type,
     };
+    return r;
   }
   assert_json_get(b, lambda2);
 }
