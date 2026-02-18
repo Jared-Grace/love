@@ -23,6 +23,7 @@ export async function app_replace_rule_sets_functionize() {
       js_return_argument_set(r, e);
       log_unparse(declaration);
       return declaration;
+      await function_new_declaration_from(declaration);
     }
     await each_async(elements, lambda2);
     async function lambda2(e) {
