@@ -29,7 +29,7 @@ export async function app_replace_rule_sets_functionize() {
       let r = js_statement_return_empty_add(body_block);
       js_return_argument_set(r, e);
       log_unparse(declaration);
-      let parsed = js_call(f_name2, args_code);
+      let parsed = js_call(replaced, []);
       return;
       await function_new_declaration_from(declaration);
     }
