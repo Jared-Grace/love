@@ -15,7 +15,7 @@ import { noop } from "../../../love/public/src/noop.mjs";
 import { js_return_on } from "../../../love/public/src/js_return_on.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
-import { js_declaration_name } from "../../../love/public/src/js_declaration_name.mjs";
+import { js_function_declaration_name } from "../../../love/public/src/js_function_declaration_name.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { js_declaration_to_block_body } from "../../../love/public/src/js_declaration_to_block_body.mjs";
@@ -69,7 +69,7 @@ export async function js_expand_generic(next, stack2, index, ast) {
       let declaration_call = property_get(v, "declaration");
       let nnd = null_not_is(declaration_call);
       if (nnd) {
-        let name = js_declaration_name(declaration_call);
+        let name = js_function_declaration_name(declaration_call);
         let assign = js_declare(name, argument);
         list_add(body_block, assign);
       } else {
