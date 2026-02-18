@@ -17,5 +17,5 @@ export async function app_replace_rule_sets_calls() {
       names,
     );
   }
-  let output = await function_transform_fn(r2);
+  let output = await function_transform_fn(error(), r2);
 }
