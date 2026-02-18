@@ -1,5 +1,5 @@
 export function app_replace_rule_set_grow_triple() {
-  return {
+  let r = {
     name: "Grow Triple",
     rules: ["a > a a a"],
     goals: [
@@ -17,4 +17,5 @@ export function app_replace_rule_set_grow_triple() {
       },
     ],
   };
+  return r;
 }
