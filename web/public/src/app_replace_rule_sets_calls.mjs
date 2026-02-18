@@ -8,8 +8,8 @@ export async function app_replace_rule_sets_calls() {
   let names = js_list_calls_names(ast2);
   async function lambda(ast) {
     js_function_declaration_single_block_body_empty_return_identifiers(
-      names,
       ast,
+      names,
     );
   }
   let output = await function_transform_fn(lambda);
