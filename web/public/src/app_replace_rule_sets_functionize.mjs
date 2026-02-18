@@ -19,7 +19,7 @@ export async function app_replace_rule_sets_functionize() {
       let p = js_property_value_get(found);
       let l = js_literal_value_get(p);
       let replaced = text_replace_space_underscore_lower(l);
-      log(replaced);
+      log(found);
     }
     each(elements, lambda2);
   }
