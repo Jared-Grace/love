@@ -490,6 +490,10 @@ export function app_replace_rule_sets() {
           start: "aaa",
           end: "bccb",
         },
+        {
+          start: "aaaaa",
+          end: "acbbca",
+        },
       ],
     },
     {
