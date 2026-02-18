@@ -5,7 +5,7 @@ import { data_function_current_restore } from "../../../love/public/src/data_fun
 import { function_name_unalias } from "../../../love/public/src/function_name_unalias.mjs";
 import { task_function_name_part } from "../../../love/public/src/task_function_name_part.mjs";
 import { function_name_combine_multiple } from "../../../love/public/src/function_name_combine_multiple.mjs";
-import { js_declaration_single_block_body } from "../../../love/public/src/js_declaration_single_block_body.mjs";
+import { js_function_declaration_single_block_body } from "../../../love/public/src/js_function_declaration_single_block_body.mjs";
 import { js_call_insert } from "../../../love/public/src/js_call_insert.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { function_new } from "../../../love/public/src/function_new.mjs";
@@ -28,7 +28,7 @@ export async function task_new(task_name) {
     await function_new(f_name_task);
   }
   async function lambda(ast) {
-    let body_block = js_declaration_single_block_body(ast);
+    let body_block = js_function_declaration_single_block_body(ast);
     js_call_insert(todo.name, [], body_block, 0);
   }
   let result = await function_transform(f_name_task, lambda);
