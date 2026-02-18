@@ -1,3 +1,4 @@
+import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -16,6 +17,7 @@ export async function app_replace_rule_sets_functionize() {
       let properties = property_get(e, "properties");
       function lambda3(p) {
         let ii = js_identifier_is(p);
+        let name2 = js_identifier_name(i);
       }
       let found = list_find(properties, lambda3);
       log({
