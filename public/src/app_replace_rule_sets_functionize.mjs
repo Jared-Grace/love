@@ -25,7 +25,7 @@ export async function app_replace_rule_sets_functionize() {
       }
       let found = list_find(properties, lambda3);
       log(found);
-      js_node_type_is_assert(node, type);
+      js_node_type_is_assert(found, "Property");
       let value = property_get(found, "value");
       let value2 = js_literal_value_get(value);
       let replaced = text_replace_space_underscore_lower(value2);
