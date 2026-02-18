@@ -1,4 +1,6 @@
+import { app_replace_rule_sets_functionize } from "../../../love/public/src/app_replace_rule_sets_functionize.mjs";
 export function app_replace_rule_sets() {
+  "this variable name is used in " + app_replace_rule_sets_functionize.name;
   let rs = [
     {
       name: "Replace",
