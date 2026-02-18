@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_function_declaration_param_add } from "../../../love/public/src/js_function_declaration_param_add.mjs";
 import { js_stack_last_function } from "../../../love/public/src/js_stack_last_function.mjs";
 import { function_transform_marker } from "../../../love/public/src/function_transform_marker.mjs";
@@ -8,7 +9,7 @@ export async function marker_param_add(param_name) {
   async function lambda2(la) {
     await function_transform_marker(f_name_current, lambda);
     async function lambda(a) {
-      let { stack } = a;
+      let stack = property_get(a, "stack");
       let f = js_stack_last_function(stack);
       js_function_declaration_param_add(f, param_name);
     }
