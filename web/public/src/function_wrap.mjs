@@ -3,7 +3,7 @@ import { function_parse_declaration_unaliased } from "../../../love/public/src/f
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_function_declaration_asyncify_params_from } from "../../../love/public/src/js_function_declaration_asyncify_params_from.mjs";
 import { js_call_args_await_maybe_declaration_return_add } from "../../../love/public/src/js_call_args_await_maybe_declaration_return_add.mjs";
-import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
+import { js_function_declaration_params_names } from "../../../love/public/src/js_function_declaration_params_names.mjs";
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
 export async function function_wrap(f_name, f_name_wrapped) {
   assert_arguments(arguments, 2);
@@ -13,7 +13,7 @@ export async function function_wrap(f_name, f_name_wrapped) {
   let v = await function_new_transform(f_name_wrapped, lambda);
   return v;
   async function lambda(ast) {
-    let arg_names = js_declaration_params_names(declaration_call);
+    let arg_names = js_function_declaration_params_names(declaration_call);
     js_call_args_await_maybe_declaration_return_add(
       unaliased,
       arg_names,
