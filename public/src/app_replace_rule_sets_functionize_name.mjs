@@ -7,6 +7,6 @@ export function app_replace_rule_sets_functionize_name(e) {
   let found = js_object_expression_properties_find_key_named(e, search);
   let p = js_property_value_get(found);
   let l = js_literal_value_get(p);
-  let replaced = text_replace_space_underscore_lower(l);
-  return replaced;
+  let f_name_new = text_replace_space_underscore_lower(l);
+  return f_name_new;
 }
