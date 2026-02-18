@@ -1,5 +1,5 @@
 export function app_replace_rule_set_replace_2() {
-  return {
+  let r = {
     name: "Replace 2",
     rules: ["a > b", "c > d"],
     goals: [
@@ -21,4 +21,5 @@ export function app_replace_rule_set_replace_2() {
       },
     ],
   };
+  return r;
 }
