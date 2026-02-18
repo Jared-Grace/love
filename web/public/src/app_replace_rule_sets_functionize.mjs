@@ -26,7 +26,7 @@ export async function app_replace_rule_sets_functionize() {
   let vs = js_list_type(ast, node_type);
   log({
     f_name,
-  });
+  });$x
   list_size_1_assert_message(vs, {});
   log(only);
   let mapped = list_map_property(vs, "node");
