@@ -21,8 +21,8 @@ export function app_replace_rule_sets() {
           end: "abba",
         },
         {
-          start: "faaasaaasaaa",
-          end: "fabasabasaba",
+          start: "aaaaaaa",
+          end: "abababa",
         },
       ],
     },
