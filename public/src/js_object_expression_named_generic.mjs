@@ -5,7 +5,7 @@ import { equal } from "../../../love/public/src/equal.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export function js_object_expression_named_generic(ast, search, node_type) {
+export function js_object_expression_named_generic(ast, node_type, search) {
   function lambda2(la) {
     function lambda(v) {
       let stack = property_get(v, "stack");
