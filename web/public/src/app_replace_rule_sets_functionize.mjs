@@ -6,6 +6,7 @@ import { js_array_expression_single_elements } from "../../../love/public/src/js
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 export async function app_replace_rule_sets_functionize() {
   async function lambda(ast) {
+    let search = "rs";
     let list = js_object_expression_named_generic(
       ast,
       "ArrayExpression",
