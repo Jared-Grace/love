@@ -1,3 +1,4 @@
+import { list_find } from "../../../love/public/src/list_find.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { marker_next_declare_single_init_elements } from "../../../love/public/src/marker_next_declare_single_init_elements.mjs";
@@ -12,6 +13,7 @@ export async function app_replace_rule_sets_functionize() {
     let elements = marker_next_declare_single_init_elements(a);
     function lambda2(e) {
       let properties = property_get(e, "properties");
+      let found = list_find(list, function lambda3(item) {});
       log({
         properties,
       });
