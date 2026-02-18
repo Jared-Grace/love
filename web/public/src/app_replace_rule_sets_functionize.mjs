@@ -1,4 +1,4 @@
-import { js_property_is_assert } from "../../../love/public/src/js_property_is_assert.mjs";
+import { js_property_key_get } from "../../../love/public/src/js_property_key_get.mjs";
 import { js_property_value_get } from "../../../love/public/src/js_property_value_get.mjs";
 import { js_literal_value_get } from "../../../love/public/src/js_literal_value_get.mjs";
 import { js_identifier_named_try } from "../../../love/public/src/js_identifier_named_try.mjs";
@@ -20,8 +20,7 @@ export async function app_replace_rule_sets_functionize() {
       let properties = property_get(e, "properties");
       let search = "name";
       function lambda3(p) {
-        js_property_is_assert(p);
-        let key = property_get(p, "key");
+        let key = js_property_key_get(p);
         let eq = js_identifier_named_try(key, search);
         return eq;
       }
