@@ -7,14 +7,14 @@ import { function_transform_fn } from "../../../love/public/src/function_transfo
 import { function_ast_fn } from "../../../love/public/src/function_ast_fn.mjs";
 import { js_list_calls_names } from "../../../love/public/src/js_list_calls_names.mjs";
 import { app_replace_rule_sets_v_1 } from "../../../love/public/src/app_replace_rule_sets_v_1.mjs";
+import { js_parse_expression } from "./js_parse_expression.mjs";
 export async function app_replace_rule_sets_calls() {
   let ast2 = await function_ast_fn(app_replace_rule_sets_v_1);
   let names = js_list_calls_names(ast2);
   async function lambda(ast) {
     let body_block = js_function_declaration_single_block_body(ast);
     list_empty(body_block);
-    function lambda2(item) {}
-    let mapped = list_map(list, lambda2);
+    let mapped = list_map(names, js_parse_expression);
     let expression = js_expression_array(elements);
     js_statement_return_empty_add_argument_set(body_block, expression);
   }
