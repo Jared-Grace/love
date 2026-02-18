@@ -1,5 +1,5 @@
 export function app_replace_rule_set_grow_left_pair_change_right() {
-  return {
+  let r = {
     name: "Grow Left Pair Change Right",
     rules: ["a > b a", "b b > b c"],
     goals: [
@@ -29,4 +29,5 @@ export function app_replace_rule_set_grow_left_pair_change_right() {
       },
     ],
   };
+  return r;
 }
