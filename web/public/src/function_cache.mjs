@@ -6,7 +6,7 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_run } from "../../../love/public/src/function_run.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
-import { js_declaration_asyncify_params_from } from "../../../love/public/src/js_declaration_asyncify_params_from.mjs";
+import { js_function_declaration_asyncify_params_from } from "../../../love/public/src/js_function_declaration_asyncify_params_from.mjs";
 import { js_call_args_await_maybe_declaration_return_add } from "../../../love/public/src/js_call_args_await_maybe_declaration_return_add.mjs";
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
@@ -37,7 +37,7 @@ export async function function_cache(f_name) {
       declaration_cache,
       ast,
     );
-    await js_declaration_asyncify_params_from(ast, declaration_call);
+    await js_function_declaration_asyncify_params_from(ast, declaration_call);
   }
   let v = await function_new_transform(f_name_cache, lambda);
   if (args_none) {
