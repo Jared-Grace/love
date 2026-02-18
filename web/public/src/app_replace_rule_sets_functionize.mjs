@@ -1,3 +1,4 @@
+import { js_return_argument_set } from "../../../love/public/src/js_return_argument_set.mjs";
 import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { js_statement_return_empty_add } from "../../../love/public/src/js_statement_return_empty_add.mjs";
 import { js_function_declaration_to_block_body } from "../../../love/public/src/js_function_declaration_to_block_body.mjs";
@@ -24,6 +25,7 @@ export async function app_replace_rule_sets_functionize() {
       let declaration = function_new_declaration_to(replaced);
       let body_block = js_function_declaration_to_block_body(declaration);
       let r = js_statement_return_empty_add(body_block);
+      js_return_argument_set(r, e);
       log_unparse(declaration);
       log_unparse(r);
     }
