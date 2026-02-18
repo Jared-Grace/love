@@ -163,42 +163,6 @@ export function app_replace_rule_sets() {
       ],
     },
     {
-      name: "Unary Equations",
-      rules: ["= > 1 = 1"],
-      goals: [
-        {
-          start: "1=1",
-          end: "11=11",
-        },
-        {
-          start: "1=1",
-          end: "111=111",
-        },
-        {
-          start: "1=1",
-          end: "11111=11111",
-        },
-      ],
-    },
-    {
-      name: "Shrink Both Same",
-      rules: ["a b a > b"],
-      goals: [
-        {
-          end: "cabac",
-          start: "cbc",
-        },
-        {
-          end: "aaabaaa",
-          start: "aba",
-        },
-        {
-          end: "aaaaabaaaaa",
-          start: "aba",
-        },
-      ],
-    },
-    {
       name: "Grow Different 2",
       rules: ["a > b c", "b > d e"],
       goals: [
@@ -357,6 +321,42 @@ export function app_replace_rule_sets() {
         {
           start: "abbcabbcbcbc",
           end: "abababababab",
+        },
+      ],
+    },
+    {
+      name: "Unary Equations",
+      rules: ["= > 1 = 1"],
+      goals: [
+        {
+          start: "1=1",
+          end: "11=11",
+        },
+        {
+          start: "1=1",
+          end: "111=111",
+        },
+        {
+          start: "1=1",
+          end: "11111=11111",
+        },
+      ],
+    },
+    {
+      name: "Shrink Both Same",
+      rules: ["a b a > b"],
+      goals: [
+        {
+          end: "cabac",
+          start: "cbc",
+        },
+        {
+          end: "aaabaaa",
+          start: "aba",
+        },
+        {
+          end: "aaaaabaaaaa",
+          start: "aba",
         },
       ],
     },
