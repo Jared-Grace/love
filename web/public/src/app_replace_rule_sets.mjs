@@ -534,31 +534,31 @@ export function app_replace_rule_sets() {
     },
     {
       name: "Grow Left Pair Change Right",
-      rules: ["= > 1 =", "1 1 > 1 +"],
+      rules: ["a > b a", "b b > b c"],
       goals: [
         {
-          start: "1=1",
-          end: "11=11",
+          start: "bab",
+          end: "bbabb",
         },
         {
-          start: "1=1",
-          end: "11=1+1",
+          start: "bab",
+          end: "bbabcb",
         },
         {
-          start: "1=1",
-          end: "1+1=11",
+          start: "bab",
+          end: "bcbabb",
         },
         {
-          start: "1=1",
-          end: "1+11=111",
+          start: "bab",
+          end: "bcbbabbb",
         },
         {
-          start: "1=1",
-          end: "1+11=11+1",
+          start: "bab",
+          end: "bcbbabbcb",
         },
         {
-          start: "1=1",
-          end: "1+1+111=11111",
+          start: "bab",
+          end: "bcbcbbbabbbbb",
         },
       ],
     },
