@@ -476,6 +476,10 @@ export function app_replace_rule_sets() {
         },
         {
           start: "aa",
+          end: "cc",
+        },
+        {
+          start: "aa",
           end: "bcb",
         },
         {
