@@ -762,11 +762,11 @@ export function app_replace_rule_sets() {
     },
     {
       name: "Swap Middle Shrink",
-      rules: ["d e = > = d"],
+      rules: ["d e = > = d", "= d > d f ="],
       goals: [
         {
           start: "de=",
-          end: "=d",
+          end: "df=",
         },
       ],
     },
