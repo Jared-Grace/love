@@ -1,4 +1,4 @@
-import { js_declaration_single_name } from "../../../love/public/src/js_declaration_single_name.mjs";
+import { js_function_declaration_single_name } from "../../../love/public/src/js_function_declaration_single_name.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { object_copy } from "../../../love/public/src/object_copy.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
@@ -9,7 +9,7 @@ import { equal } from "../../../love/public/src/equal.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 export function js_bang_to_not(ast) {
-  let name = js_declaration_single_name(ast);
+  let name = js_function_declaration_single_name(ast);
   if (equal(name, not.name)) {
     return;
   }
