@@ -8,14 +8,10 @@ import { js_array_expression_single_elements } from "../../../love/public/src/js
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 export async function app_replace_rule_sets_functionize() {
   let f_name = app_replace_rule_sets.name;
+  let code = await function_transform_marker_specified(f_name, "rules", lambda);
   async function lambda(ast) {
     let search = "rules";
     async function lambda2(a) {}
-    let code = await function_transform_marker_specified(
-      f_name2,
-      marker_name,
-      lambda2,
-    );
     let list = js_array_expression_named(ast, search);
     let only = list_single(list);
     let elements = js_array_expression_single_elements(ast);
