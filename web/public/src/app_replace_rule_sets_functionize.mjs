@@ -25,9 +25,9 @@ export async function app_replace_rule_sets_functionize() {
   let node_type = "ArrayExpression";
   let vs = js_list_type(ast, node_type);
   let only = list_single(vs);
+  log(only);
   let mapped = list_map_property(vs, "node");
   let mapped2 = list_map(mapped, js_unparse);
-  log(only);
   return;
   let output = await function_transform(f_name, lambda);
 }
