@@ -26,7 +26,7 @@ export async function app_replace_rule_sets_functionize() {
       let found = list_find(properties, lambda3);
       let value = property_get(found, "value");
       let value2 = property_get(value, "value");
-      let replaced2 = text_replace_space_underscore(name_old);
+      let replaced2 = text_replace_space_underscore(value2);
       log(value2);
     }
     each(elements, lambda2);
