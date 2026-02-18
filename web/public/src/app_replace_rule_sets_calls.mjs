@@ -15,5 +15,5 @@ export async function app_replace_rule_sets_calls() {
     });
   }
   js_visit_calls(ast, lambda_inner);
-  let vs = js_list_type(ast2, node_type);
+  let vs = js_list_type(ast, "CallExpression");
 }
