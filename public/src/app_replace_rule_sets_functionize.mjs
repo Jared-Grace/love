@@ -29,6 +29,7 @@ export async function app_replace_rule_sets_functionize() {
       await function_new_declaration_from(declaration);
     }
     await each_async(elements, lambda2);
+    return;
     async function lambda3(e) {
       let f_name_new = app_replace_rule_sets_functionize_name(e);
       let parsed = js_call_empty(f_name_new);
