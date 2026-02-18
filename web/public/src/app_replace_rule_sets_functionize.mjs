@@ -6,11 +6,11 @@ import { js_array_expression_single_elements } from "../../../love/public/src/js
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 export async function app_replace_rule_sets_functionize() {
   let f_name = app_replace_rule_sets.name;
+  let search = "rs";
+  log({
+    search,
+  });
   async function lambda(ast) {
-    let search = "rs";
-    log({
-      search,
-    });
     let list = js_array_expression_named(ast, search);
     let elements = js_array_expression_single_elements(ast);
     log({
