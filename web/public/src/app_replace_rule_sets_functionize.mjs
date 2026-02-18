@@ -10,7 +10,7 @@ export async function app_replace_rule_sets_functionize() {
   async function lambda(ast) {
     let search = "rs";
     let list = js_array_expression_named(ast, search);
-    let only = list_single(list2);
+    let only = list_single(list);
     let elements = js_array_expression_single_elements(ast);
     log({
       list,
