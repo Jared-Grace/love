@@ -2,7 +2,7 @@ import { js_parse_statement_module } from "../../../love/public/src/js_parse_sta
 import { js_code_function_declaration } from "../../../love/public/src/js_code_function_declaration.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
-export function js_declaration(declaration, fn_name) {
+export function js_function_declaration(declaration, fn_name) {
   let async_is = property_get(declaration, "async");
   let code = js_code_function_declaration(fn_name, "", async_is);
   let declaration_lambda = js_parse_statement_module(code);
