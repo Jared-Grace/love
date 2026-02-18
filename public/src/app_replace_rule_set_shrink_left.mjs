@@ -1,5 +1,5 @@
 export function app_replace_rule_set_shrink_left() {
-  return {
+  let r = {
     name: "Shrink left",
     rules: ["b a > a"],
     goals: [
@@ -21,4 +21,5 @@ export function app_replace_rule_set_shrink_left() {
       },
     ],
   };
+  return r;
 }
