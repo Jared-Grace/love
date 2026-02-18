@@ -762,7 +762,7 @@ export function app_replace_rule_sets() {
     },
     {
       name: "Swap Middle Shrink Grow",
-      rules: ["d e = > = d", "= d > d f =", "= > = =", "d = d d"],
+      rules: ["d e = > = d", "= d > d f =", "= > d =", "d = d ="],
       goals: [
         {
           start: "de=",
@@ -770,7 +770,7 @@ export function app_replace_rule_sets() {
         },
         {
           start: "de=",
-          end: "=d",
+          end: "==dd",
         },
       ],
     },
