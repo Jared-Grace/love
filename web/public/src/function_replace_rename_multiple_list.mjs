@@ -5,7 +5,7 @@ export async function function_replace_rename_multiple_list(
   from,
   to,
 ) {
-  let split = text_split_comma(t);
-  let r = await function_replace_rename_multiple_generic(f_names, from, to);
+  let split = text_split_comma(f_names_comma);
+  let r = await function_replace_rename_multiple_generic(split, from, to);
   return r;
 }
