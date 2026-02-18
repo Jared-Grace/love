@@ -108,6 +108,10 @@ export function app_replace_rule_sets() {
         },
         {
           start: "aa",
+          end: "abbab",
+        },
+        {
+          start: "aa",
           end: "abbabbb",
         },
         {
@@ -123,6 +127,10 @@ export function app_replace_rule_sets() {
         {
           start: "a",
           end: "bba",
+        },
+        {
+          start: "a",
+          end: "babba",
         },
         {
           start: "aa",
