@@ -549,8 +549,8 @@ export function app_replace_rule_sets() {
           end: "bbba",
         },
         {
-          start: "bab",
-          end: "bcbabb",
+          start: "a",
+          end: "bcbca",
         },
         {
           start: "bab",
