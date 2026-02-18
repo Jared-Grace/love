@@ -22,7 +22,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { js_declaration_to_block_body } from "../../../love/public/src/js_declaration_to_block_body.mjs";
 import { js_parse_statement_module } from "../../../love/public/src/js_parse_statement_module.mjs";
-import { js_code_declaration } from "../../../love/public/src/js_code_declaration.mjs";
+import { js_code_function_declaration } from "../../../love/public/src/js_code_function_declaration.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
 import { js_node_types_includes } from "../../../love/public/src/js_node_types_includes.mjs";
 import { range } from "../../../love/public/src/range.mjs";
@@ -40,7 +40,11 @@ export async function js_functionize(
     return result;
   }
   let async_is = list_any(range, lambda);
-  const code_declaration = js_code_declaration(f_name_new, "", async_is);
+  const code_declaration = js_code_function_declaration(
+    f_name_new,
+    "",
+    async_is,
+  );
   let declaration = js_parse_statement_module(code_declaration);
   let body_block = js_declaration_to_block_body(declaration);
   list_add_multiple(body_block, range);
