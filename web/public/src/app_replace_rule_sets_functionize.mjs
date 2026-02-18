@@ -1,4 +1,4 @@
-import { json_format_to } from "../../../love/public/src/json_format_to.mjs";
+import { json_format_to_truncated } from "../../../love/public/src/json_format_to_truncated.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -37,7 +37,7 @@ export async function app_replace_rule_sets_functionize() {
     z,
   };
   log(1);
-  let message = json_format_to(j);
+  let message = json_format_to_truncated(j);
   log(message);
   throw new Error(message);
   log(only);
