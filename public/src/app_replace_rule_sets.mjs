@@ -439,8 +439,8 @@ export function app_replace_rule_sets() {
           end: "dbbbdd",
         },
         {
-          start: "aaaaaaa",
-          end: "abababa",
+          start: "caaaaac",
+          end: "dbababd",
         },
       ],
     },
