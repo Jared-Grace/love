@@ -16,8 +16,8 @@ export async function app_replace_rule_sets_functionize() {
   async function lambda(a) {
     let elements = marker_next_declare_single_init_elements(a);
     function lambda2(e) {
-      let properties = js_object_expression_properties(e);
       let search = "name";
+      let properties = js_object_expression_properties(e);
       let r = js_property_key_named_curried_right(search);
       let found = list_find(properties, r);
       let value = js_property_value_get(found);
