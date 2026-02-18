@@ -772,6 +772,14 @@ export function app_replace_rule_sets() {
       goals: [
         {
           start: "d",
+          end: "dd",
+        },
+        {
+          start: "d",
+          end: "ded",
+        },
+        {
+          start: "d",
           end: "de=",
         },
         {
@@ -783,11 +791,7 @@ export function app_replace_rule_sets() {
           end: "df=",
         },
         {
-          start: "d",
-          end: "ddf=",
-        },
-        {
-          start: "d",
+          start: "de=",
           end: "df=f=",
         },
         {
