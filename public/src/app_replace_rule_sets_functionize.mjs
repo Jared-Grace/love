@@ -27,9 +27,6 @@ export async function app_replace_rule_sets_functionize() {
         });
       }
       let found = list_find(properties, lambda3);
-      log({
-        properties,
-      });
     }
     each(elements, lambda2);
   }
