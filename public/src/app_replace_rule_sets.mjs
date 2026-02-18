@@ -423,6 +423,32 @@ export function app_replace_rule_sets() {
       ],
     },
     {
+      name: "Replace 2",
+      rules: ["a > b", "c > d"],
+      goals: [
+        {
+          start: "a",
+          end: "b",
+        },
+        {
+          start: "ac",
+          end: "bd",
+        },
+        {
+          start: "aca",
+          end: "bdb",
+        },
+        {
+          start: "cabacd",
+          end: "dbbbdd",
+        },
+        {
+          start: "aaaaaaa",
+          end: "abababa",
+        },
+      ],
+    },
+    {
       name: "Unary Equations Adding",
       rules: ["= > 1 = 1", "1 1 > 1 + 1"],
       goals: [
