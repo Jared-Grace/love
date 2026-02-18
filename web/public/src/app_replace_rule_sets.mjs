@@ -567,28 +567,28 @@ export function app_replace_rule_sets() {
       rules: ["a > b a", "b b > b c"],
       goals: [
         {
-          start: "aa",
           end: "baba",
-        },
-        {
-          start: "a",
-          end: "bba",
-        },
-        {
-          start: "bba",
-          end: "cca",
-        },
-        {
-          start: "a",
-          end: "bbba",
-        },
-        {
-          start: "a",
-          end: "bcbca",
-        },
-        {
           start: "aa",
+        },
+        {
+          end: "bba",
+          start: "a",
+        },
+        {
+          end: "cca",
+          start: "bba",
+        },
+        {
+          end: "bbba",
+          start: "a",
+        },
+        {
+          end: "bcbca",
+          start: "a",
+        },
+        {
           end: "bcbabcba",
+          start: "aa",
         },
       ],
     },
