@@ -1,3 +1,4 @@
+import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { js_list_type } from "../../../love/public/src/js_list_type.mjs";
@@ -23,6 +24,7 @@ export async function app_replace_rule_sets_functionize() {
   let node_type = "ArrayExpression";
   let vs = js_list_type(ast, node_type);
   let mapped = list_map_property(vs, "node");
+  let code = js_unparse(ast2);
   function lambda2(item) {}
   let mapped2 = list_map(list, lambda2);
   log(vs);
