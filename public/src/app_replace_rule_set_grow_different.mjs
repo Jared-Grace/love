@@ -1,5 +1,5 @@
 export function app_replace_rule_set_grow_different() {
-  return {
+  let r = {
     name: "Grow Different",
     rules: ["a > b c"],
     goals: [
@@ -17,4 +17,5 @@ export function app_replace_rule_set_grow_different() {
       },
     ],
   };
+  return r;
 }
