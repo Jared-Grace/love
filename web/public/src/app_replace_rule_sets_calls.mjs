@@ -8,7 +8,6 @@ import { js_visit_calls } from "../../../love/public/src/js_visit_calls.mjs";
 import { js_call_callee_name } from "../../../love/public/src/js_call_callee_name.mjs";
 export async function app_replace_rule_sets_calls() {
   let ast = await function_ast(app_replace_rule_sets_v_1.name);
-  js_visit_calls(ast, lambda_inner);
   let vs = js_list_calls(ast);
   let mapped = list_map_property(vs, "node");
   let names = list_map(mapped, js_call_callee_name);
