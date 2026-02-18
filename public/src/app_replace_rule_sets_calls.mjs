@@ -1,3 +1,4 @@
+import { js_statement_return_empty_add } from "../../../love/public/src/js_statement_return_empty_add.mjs";
 import { list_empty } from "../../../love/public/src/list_empty.mjs";
 import { js_function_declaration_single_block_body } from "../../../love/public/src/js_function_declaration_single_block_body.mjs";
 import { function_transform_fn } from "../../../love/public/src/function_transform_fn.mjs";
@@ -10,6 +11,7 @@ export async function app_replace_rule_sets_calls() {
   async function lambda(ast) {
     let body_block = js_function_declaration_single_block_body(ast);
     list_empty(body_block);
+    let r = js_statement_return_empty_add(body_block);
   }
   let output = await function_transform_fn(lambda);
 }
