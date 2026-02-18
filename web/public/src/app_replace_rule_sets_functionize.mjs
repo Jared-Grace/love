@@ -1,3 +1,4 @@
+import { js_node_type_is_assert } from "../../../love/public/src/js_node_type_is_assert.mjs";
 import { js_literal_value_get } from "../../../love/public/src/js_literal_value_get.mjs";
 import { js_identifier_named_try } from "../../../love/public/src/js_identifier_named_try.mjs";
 import { text_replace_space_underscore_lower } from "../../../love/public/src/text_replace_space_underscore_lower.mjs";
@@ -24,6 +25,7 @@ export async function app_replace_rule_sets_functionize() {
       }
       let found = list_find(properties, lambda3);
       log(found);
+      js_node_type_is_assert(node, type);
       let value = property_get(found, "value");
       let value2 = js_literal_value_get(value);
       let replaced = text_replace_space_underscore_lower(value2);
