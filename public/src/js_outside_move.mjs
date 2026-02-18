@@ -1,4 +1,4 @@
-import { js_declaration_name_to_path } from "../../../love/public/src/js_declaration_name_to_path.mjs";
+import { js_function_declaration_name_to_path } from "../../../love/public/src/js_function_declaration_name_to_path.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_imports_fix } from "../../../love/public/src/js_imports_fix.mjs";
@@ -12,7 +12,7 @@ export async function js_outside_move(ast) {
   let body = property_get(ast, "body");
   let fds = list_filter_property(body, "type", "FunctionDeclaration");
   async function lambda(fd) {
-    let f_path = js_declaration_name_to_path(fd);
+    let f_path = js_function_declaration_name_to_path(fd);
     await assert_file_exists_not(f_path);
   }
   await each_async(fds, lambda);
