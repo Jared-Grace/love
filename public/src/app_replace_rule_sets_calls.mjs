@@ -18,6 +18,6 @@ export async function app_replace_rule_sets_calls() {
       names,
     );
   }
-  let lambda2 = error();
-  let output = await function_transform_fn(r2, lambda2);
+  let fn = error();
+  let output = await function_transform_fn(fn, r2);
 }
