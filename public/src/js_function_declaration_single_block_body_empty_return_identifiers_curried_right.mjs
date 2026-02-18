@@ -2,12 +2,16 @@ import { js_function_declaration_single_block_body_empty_return_identifiers } fr
 export function js_function_declaration_single_block_body_empty_return_identifiers_curried_right(
   names,
 ) {
-  return function js_function_declaration_single_block_body_empty_return_identifiers_curried_right_result(
-    ast,
-  ) {
-    return js_function_declaration_single_block_body_empty_return_identifiers(
+  let r2 =
+    function js_function_declaration_single_block_body_empty_return_identifiers_curried_right_result(
       ast,
-      names,
-    );
-  };
+    ) {
+      let r =
+        js_function_declaration_single_block_body_empty_return_identifiers(
+          ast,
+          names,
+        );
+      return r;
+    };
+  return r2;
 }
