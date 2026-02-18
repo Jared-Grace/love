@@ -369,6 +369,24 @@ export function app_replace_rule_sets() {
       ],
     },
     {
+      name: "Shrink Triple",
+      rules: ["a a a > a"],
+      goals: [
+        {
+          start: "a",
+          end: "aaa",
+        },
+        {
+          start: "a",
+          end: "aaaaa",
+        },
+        {
+          start: "a",
+          end: "aaaaaaa",
+        },
+      ],
+    },
+    {
       name: "Unary Equations",
       rules: ["= > 1 = 1"],
       goals: [
