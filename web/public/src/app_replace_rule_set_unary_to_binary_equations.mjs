@@ -1,5 +1,5 @@
 export function app_replace_rule_set_unary_to_binary_equations() {
-  return {
+  let r = {
     name: "Unary to Binary Equations",
     rules: [
       "e = b > c e = b c",
@@ -43,4 +43,5 @@ export function app_replace_rule_set_unary_to_binary_equations() {
       },
     ],
   };
+  return r;
 }
