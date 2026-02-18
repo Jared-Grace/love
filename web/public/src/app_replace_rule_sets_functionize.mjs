@@ -5,5 +5,5 @@ export async function app_replace_rule_sets_functionize() {
   async function lambda(ast) {
     let elements = js_array_expression_single_elements(ast);
   }
-  let output = await function_transform(app_replace_rule_sets.nam, lambda);
+  let output = await function_transform(app_replace_rule_sets.name, lambda);
 }
