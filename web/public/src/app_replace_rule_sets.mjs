@@ -467,6 +467,28 @@ export function app_replace_rule_sets() {
       ],
     },
     {
+      name: "Replace Flow",
+      rules: ["a > b b", "b b > c"],
+      goals: [
+        {
+          start: "ab",
+          end: "cc",
+        },
+        {
+          start: "acb",
+          end: "ccc",
+        },
+        {
+          start: "cabadc",
+          end: "ccbcdc",
+        },
+        {
+          start: "caaaaac",
+          end: "ccabccc",
+        },
+      ],
+    },
+    {
       name: "Unary Equations Adding",
       rules: ["= > 1 = 1", "1 1 > 1 + 1"],
       goals: [
