@@ -1,10 +1,8 @@
+import { function_new_declaration_to } from "../../../love/public/src/function_new_declaration_to.mjs";
 import { function_new_declaration_from } from "../../../love/public/src/function_new_declaration_from.mjs";
-import { js_code_function_declaration } from "../../../love/public/src/js_code_function_declaration.mjs";
 import { function_open } from "../../../love/public/src/function_open.mjs";
-import { js_parse_statement_module } from "../../../love/public/src/js_parse_statement_module.mjs";
 export async function function_new(f_name) {
-  const code_declaration = js_code_function_declaration(f_name, "", false);
-  let declaration = js_parse_statement_module(code_declaration);
+  let declaration = function_new_declaration_to(f_name);
   await function_new_declaration_from(declaration);
   await function_open(f_name);
 }
