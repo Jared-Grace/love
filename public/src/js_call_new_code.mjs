@@ -5,7 +5,7 @@ import { js_return_name } from "../../../love/public/src/js_return_name.mjs";
 import { js_code_call_args_await_maybe } from "../../../love/public/src/js_code_call_args_await_maybe.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
-import { js_declaration_param_add } from "../../../love/public/src/js_declaration_param_add.mjs";
+import { js_function_declaration_param_add } from "../../../love/public/src/js_function_declaration_param_add.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_slice } from "../../../love/public/src/list_slice.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
@@ -32,7 +32,7 @@ export async function js_call_new_code(f_name_call, ast) {
       let declaration_lambda = js_function_declaration(declaration, lamda_name);
       async function lambda2(p) {
         let unique = await js_identifier_unique(existing, p);
-        js_declaration_param_add(declaration_lambda, unique);
+        js_function_declaration_param_add(declaration_lambda, unique);
       }
       await each_async(remaining, lambda2);
       arg_code = js_unparse(declaration_lambda);
