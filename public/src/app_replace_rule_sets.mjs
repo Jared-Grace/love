@@ -423,6 +423,42 @@ export function app_replace_rule_sets() {
       ],
     },
     {
+      name: "Grow Different 2",
+      rules: ["a > b c", "b > d e"],
+      goals: [
+        {
+          start: "a",
+          end: "dec",
+        },
+        {
+          start: "aa",
+          end: "decdec",
+        },
+        {
+          start: "aaaa",
+          end: "decbcbcdec",
+        },
+      ],
+    },
+    {
+      name: "Shrink Different 2",
+      rules: ["b c > a", "d e > b"],
+      goals: [
+        {
+          start: "dec",
+          end: "a",
+        },
+        {
+          start: "decdec",
+          end: "aa",
+        },
+        {
+          start: "decbcbcdec",
+          end: "aaaa",
+        },
+      ],
+    },
+    {
       name: "Replace 2",
       rules: ["a > b", "c > d"],
       goals: [
