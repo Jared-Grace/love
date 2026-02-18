@@ -3,7 +3,7 @@ import { list_get } from "../../../love/public/src/list_get.mjs";
 import { marker_next_index } from "../../../love/public/src/marker_next_index.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
-import { js_declaration_to_block_body } from "../../../love/public/src/js_declaration_to_block_body.mjs";
+import { js_function_declaration_to_block_body } from "../../../love/public/src/js_function_declaration_to_block_body.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { js_node_type } from "../../../love/public/src/js_node_type.mjs";
@@ -19,7 +19,7 @@ export async function marker_enter() {
       let next = list_get(stack2, index);
       var i = js_types_function_includes_node(next);
       if (i) {
-        body = js_declaration_to_block_body(next);
+        body = js_function_declaration_to_block_body(next);
       } else {
         let nt = js_node_type(next);
         if (nt === "IfStatement") {
