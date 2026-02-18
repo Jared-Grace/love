@@ -457,8 +457,8 @@ export function app_replace_rule_sets() {
           end: "ccc",
         },
         {
-          start: "cabacd",
-          end: "ccbccd",
+          start: "cabadc",
+          end: "ccbcdc",
         },
         {
           start: "caaaaac",
