@@ -1,4 +1,4 @@
-import { list_size_1_assert_message } from "../../../love/public/src/list_size_1_assert_message.mjs";
+import { list_size_assert_message } from "../../../love/public/src/list_size_assert_message.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -26,8 +26,9 @@ export async function app_replace_rule_sets_functionize() {
   let vs = js_list_type(ast, node_type);
   log({
     f_name,
-  });$x
-  list_size_1_assert_message(vs, {});
+  });
+  const m = {};
+  list_size_assert_message(vs, 1, m);
   log(only);
   let mapped = list_map_property(vs, "node");
   let mapped2 = list_map(mapped, js_unparse);
