@@ -8,7 +8,7 @@ import { js_declaration_single_block_body_add } from "../../../love/public/src/j
 import { js_statement_return_argument } from "../../../love/public/src/js_statement_return_argument.mjs";
 import { js_function_declaration_params_add } from "../../../love/public/src/js_function_declaration_params_add.mjs";
 import { js_function_declaration } from "../../../love/public/src/js_function_declaration.mjs";
-import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
+import { js_function_declaration_params_names } from "../../../love/public/src/js_function_declaration_params_names.mjs";
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_parse_declaration_unaliased } from "../../../love/public/src/function_parse_declaration_unaliased.mjs";
@@ -21,7 +21,7 @@ export async function function_curryify_generic(f_name, name_get, args_get) {
   let output = await function_new_transform(f_name_curried, lambda);
   return output;
   async function lambda(ast) {
-    let arg_names = js_declaration_params_names(declaration_call);
+    let arg_names = js_function_declaration_params_names(declaration_call);
     let r3 = args_get(arg_names);
     let fn_new_args = property_get(r3, "fn_new_args");
     let fn_new_result_args = property_get(r3, "fn_new_result_args");

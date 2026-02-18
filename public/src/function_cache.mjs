@@ -8,7 +8,7 @@ import { function_run } from "../../../love/public/src/function_run.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { js_function_declaration_asyncify_params_from } from "../../../love/public/src/js_function_declaration_asyncify_params_from.mjs";
 import { js_call_args_await_maybe_declaration_return_add } from "../../../love/public/src/js_call_args_await_maybe_declaration_return_add.mjs";
-import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
+import { js_function_declaration_params_names } from "../../../love/public/src/js_function_declaration_params_names.mjs";
 import { function_parse_declaration } from "../../../love/public/src/function_parse_declaration.mjs";
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
 import { invoke_cache_file } from "../../../love/public/src/invoke_cache_file.mjs";
@@ -23,7 +23,7 @@ export async function function_cache(f_name) {
   let v4 = await function_parse_declaration(c);
   let declaration_cache = property_get(v4, "declaration");
   async function lambda(ast) {
-    let arg_names = js_declaration_params_names(declaration_call);
+    let arg_names = js_function_declaration_params_names(declaration_call);
     let e = list_empty_is(arg_names);
     if (e) {
       args_none = true;

@@ -12,14 +12,14 @@ import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { text_split } from "../../../love/public/src/text_split.mjs";
 import { js_identifier_unique } from "../../../love/public/src/js_identifier_unique.mjs";
-import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
+import { js_function_declaration_params_names } from "../../../love/public/src/js_function_declaration_params_names.mjs";
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
 export async function js_call_new_code(f_name_call, ast) {
   let d = await function_parse_declaration(f_name_call);
   let ast_call = property_get(d, "ast");
   let declaration = property_get(d, "declaration");
   let existing = js_identifiers_names(ast);
-  let arg_names = js_declaration_params_names(declaration);
+  let arg_names = js_function_declaration_params_names(declaration);
   async function lambda3(arg_name) {
     let arg_code = await js_identifier_unique(existing, arg_name);
     let split = text_split(arg_name, "$");
