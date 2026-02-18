@@ -1,5 +1,5 @@
 export function app_replace_rule_set_grow_right() {
-  return {
+  let r = {
     name: "Grow right",
     rules: ["a > a b"],
     goals: [
@@ -21,4 +21,5 @@ export function app_replace_rule_set_grow_right() {
       },
     ],
   };
+  return r;
 }
