@@ -18,8 +18,9 @@ export async function app_replace_rule_sets_functionize() {
   async function lambda(a) {
     let elements = marker_next_declare_single_init_elements(a);
     async function lambda2(e) {
-      await function_delete(f_name2);
       let f_name_new = app_replace_rule_sets_functionize_name(e);
+      await function_delete(f_name_new);
+      return;
       let declaration = function_new_declaration_to(f_name_new);
       let body_block = js_function_declaration_to_block_body(declaration);
       let r = js_statement_return_empty_add(body_block);
