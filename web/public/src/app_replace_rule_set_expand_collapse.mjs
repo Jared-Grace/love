@@ -1,5 +1,5 @@
 export function app_replace_rule_set_expand_collapse() {
-  return {
+  let r = {
     name: "Expand Collapse",
     rules: ["a > b b", "b b > c"],
     goals: [
@@ -29,4 +29,5 @@ export function app_replace_rule_set_expand_collapse() {
       },
     ],
   };
+  return r;
 }
