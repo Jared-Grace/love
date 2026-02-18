@@ -13,6 +13,6 @@ export function app_replace_rule_sets_functionize_name(e) {
   let f_name_new = text_replace_space_underscore_lower(l);
   let n = app_replace_rule_sets.name;
   let without = text_suffix_without(n, "s");
-  let combined = function_name_combine(left, f_name_new);
+  let combined = function_name_combine(without, f_name_new);
   return f_name_new;
 }
