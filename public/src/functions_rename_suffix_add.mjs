@@ -4,7 +4,7 @@ export async function functions_rename_suffix_add(
   f_name_befores_comma,
   suffix,
 ) {
-  let split = text_split_comma(t);
-  let r = await function_rename_suffix_add(f_name_before, suffix);
+  let split = text_split_comma(f_name_befores_comma);
+  let r = await function_rename_suffix_add(split, suffix);
   return r;
 }
