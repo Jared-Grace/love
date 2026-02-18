@@ -1,5 +1,5 @@
 export function app_replace_rule_set_three_different_grow_same() {
-  return {
+  let r = {
     name: "Three Different Grow Same",
     rules: ["e = b > c e = b c"],
     goals: [
@@ -13,4 +13,5 @@ export function app_replace_rule_set_three_different_grow_same() {
       },
     ],
   };
+  return r;
 }
