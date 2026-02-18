@@ -9,7 +9,8 @@ export async function app_replace_rule_sets_functionize() {
   let code = await function_transform_marker_specified(f_name, "rules", lambda);
   async function lambda(a) {
     let r = marker_next_declare_single_init_elements(a);
-    each(list, function lambda2(item) {});
+    function lambda2(item) {}
+    each(list, lambda2);
     log({
       r,
     });
