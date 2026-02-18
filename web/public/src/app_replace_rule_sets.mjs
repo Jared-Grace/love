@@ -768,6 +768,7 @@ export function app_replace_rule_sets() {
         "= > = =",
         "d > d d",
         "d d > d e d",
+        "e d > e =",
       ],
       goals: [
         {
@@ -780,7 +781,7 @@ export function app_replace_rule_sets() {
         },
         {
           start: "d",
-          end: "ddf==",
+          end: "de=f=",
         },
       ],
     },
