@@ -6,7 +6,7 @@ import { js_call_args_await_maybe_return } from "../../../love/public/src/js_cal
 import { js_declaration_to_block_body } from "../../../love/public/src/js_declaration_to_block_body.mjs";
 import { js_declaration_single_block_body_add } from "../../../love/public/src/js_declaration_single_block_body_add.mjs";
 import { js_statement_return_argument } from "../../../love/public/src/js_statement_return_argument.mjs";
-import { js_declaration_params_add } from "../../../love/public/src/js_declaration_params_add.mjs";
+import { js_function_declaration_params_add } from "../../../love/public/src/js_function_declaration_params_add.mjs";
 import { js_function_declaration } from "../../../love/public/src/js_function_declaration.mjs";
 import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
@@ -30,7 +30,7 @@ export async function function_curryify_generic(f_name, name_get, args_get) {
       declaration_call,
       name_result,
     );
-    js_declaration_params_add(declaration_result, fn_new_result_args);
+    js_function_declaration_params_add(declaration_result, fn_new_result_args);
     let ret = js_statement_return_argument(declaration_result);
     js_declaration_single_block_body_add(ast, ret);
     let body_block = js_declaration_to_block_body(declaration_result);
