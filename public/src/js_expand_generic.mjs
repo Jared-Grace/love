@@ -21,7 +21,7 @@ import { list_last } from "../../../love/public/src/list_last.mjs";
 import { js_declaration_to_block_body } from "../../../love/public/src/js_declaration_to_block_body.mjs";
 import { js_identifier_rename } from "../../../love/public/src/js_identifier_rename.mjs";
 import { each_pair } from "../../../love/public/src/each_pair.mjs";
-import { js_declaration_params_names } from "../../../love/public/src/js_declaration_params_names.mjs";
+import { js_function_declaration_params_names } from "../../../love/public/src/js_function_declaration_params_names.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { list_intersect } from "../../../love/public/src/list_intersect.mjs";
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
@@ -56,7 +56,7 @@ export async function js_expand_generic(next, stack2, index, ast) {
       js_identifier_rename(ast_call, i, unique);
     }
     each(identifiers, lambda2);
-    let params_names = js_declaration_params_names(declaration);
+    let params_names = js_function_declaration_params_names(declaration);
     each_pair(params_names, a_names, lambda3);
     function lambda3(param_name, a_name) {
       js_identifier_rename(ast_call, param_name, a_name);
