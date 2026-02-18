@@ -13,7 +13,7 @@ export async function app_replace_rule_sets_functionize() {
     let elements = marker_next_declare_single_init_elements(a);
     function lambda2(e) {
       let properties = property_get(e, "properties");
-      function lambda3(item) {}
+      function lambda3(p) {}
       let found = list_find(properties, lambda3);
       log({
         properties,
