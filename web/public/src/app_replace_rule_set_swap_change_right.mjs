@@ -1,5 +1,5 @@
 export function app_replace_rule_set_swap_change_right() {
-  return {
+  let r = {
     name: "Swap Change Right",
     rules: ["a b > b c"],
     goals: [
@@ -25,4 +25,5 @@ export function app_replace_rule_set_swap_change_right() {
       },
     ],
   };
+  return r;
 }
