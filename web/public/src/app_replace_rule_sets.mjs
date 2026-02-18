@@ -741,7 +741,7 @@ export function app_replace_rule_sets() {
           end: "ccebcc",
         },
         {
-          start: "e=b",
+          start: "eb",
           end: "ccccebcccc",
         },
       ],
