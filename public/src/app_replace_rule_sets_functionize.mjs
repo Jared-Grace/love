@@ -1,3 +1,4 @@
+import { function_delete } from "../../../love/public/src/function_delete.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_call_empty } from "../../../love/public/src/js_call_empty.mjs";
 import { app_replace_rule_sets_functionize_name } from "../../../love/public/src/app_replace_rule_sets_functionize_name.mjs";
@@ -17,6 +18,7 @@ export async function app_replace_rule_sets_functionize() {
   async function lambda(a) {
     let elements = marker_next_declare_single_init_elements(a);
     async function lambda2(e) {
+      await function_delete(f_name2);
       let f_name_new = app_replace_rule_sets_functionize_name(e);
       let declaration = function_new_declaration_to(f_name_new);
       let body_block = js_function_declaration_to_block_body(declaration);
