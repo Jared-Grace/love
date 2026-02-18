@@ -1,5 +1,5 @@
 export function app_replace_rule_set_half() {
-  return {
+  let r = {
     name: "Half",
     rules: ["a a > a"],
     goals: [
@@ -17,4 +17,5 @@ export function app_replace_rule_set_half() {
       },
     ],
   };
+  return r;
 }
