@@ -761,7 +761,7 @@ export function app_replace_rule_sets() {
       ],
     },
     {
-      name: "Swap Middle Shrink Grow",
+      name: "Unary to Binary Equations Preparation",
       rules: [
         "d e = > = d",
         "= d > d f =",
