@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { js_list_type } from "../../../love/public/src/js_list_type.mjs";
 import { function_ast } from "../../../love/public/src/function_ast.mjs";
@@ -21,7 +22,8 @@ export async function app_replace_rule_sets_functionize() {
   lambda(ast);
   let node_type = "ArrayExpression";
   let vs = js_list_type(ast, node_type);
-  let mapped = list_map_property(list, property_name);
+  let mapped = list_map_property(vs, "node");
+  let mapped2 = list_map(list, function lambda2(item) {});
   log(vs);
   return;
   let output = await function_transform(f_name, lambda);
