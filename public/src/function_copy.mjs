@@ -21,7 +21,7 @@ export async function function_copy(f_name_old, f_name_new) {
     js_identifier_rename(ast, unaliased_old, unaliased_new);
   }
   await function_transform(unaliased_new, lambda);
-  await file_open(f_path_new);
   await function_current_set(unaliased_new);
+  await file_open(f_path_new);
   return unaliased_new;
 }
