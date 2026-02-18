@@ -13,15 +13,15 @@ export async function function_copy_open(f_name_old, f_name_new) {
   let unaliased_old = property_get(r, "unaliased");
   let f_path_old = property_get(r, "f_path");
   let r2 = await function_name_unalias(f_name_new);
-  let unaliased_new = property_get(r2, "unaliased");
+  let name = property_get(r2, "unaliased");
   let f_path = function_name_to_path(f_name_new);
   let f_path_new = await user_repo_path_combine(f_path);
   await file_copy(f_path_old, f_path_new);
   function lambda(ast) {
-    js_identifier_rename(ast, unaliased_old, unaliased_new);
+    js_identifier_rename(ast, unaliased_old, name);
   }
-  await function_transform(unaliased_new, lambda);
-  await function_current_set(unaliased_new);
+  await function_transform(name, lambda);
+  await function_current_set(name);
   await file_open(f_path_new);
-  return unaliased_new;
+  return name;
 }
