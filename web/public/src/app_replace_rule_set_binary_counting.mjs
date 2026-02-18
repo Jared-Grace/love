@@ -1,5 +1,5 @@
 export function app_replace_rule_set_binary_counting() {
-  return {
+  let r = {
     name: "Binary Counting",
     rules: ["0 a > 1", "1 a > a 0", "c > a c", "b a > b 1"],
     goals: [
@@ -33,4 +33,5 @@ export function app_replace_rule_set_binary_counting() {
       },
     ],
   };
+  return r;
 }
