@@ -5,7 +5,7 @@ import { js_imports_fix } from "../../../love/public/src/js_imports_fix.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
-import { function_new_declaration } from "../../../love/public/src/function_new_declaration.mjs";
+import { function_new_declaration_from } from "../../../love/public/src/function_new_declaration_from.mjs";
 import { assert_file_exists_not } from "../../../love/public/src/assert_file_exists_not.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function js_outside_move(ast) {
@@ -17,7 +17,7 @@ export async function js_outside_move(ast) {
   }
   await each_async(fds, lambda);
   async function lambda2(fd) {
-    await function_new_declaration(fd);
+    await function_new_declaration_from(fd);
   }
   await each_async(fds, lambda2);
   function lambda3(fd) {
