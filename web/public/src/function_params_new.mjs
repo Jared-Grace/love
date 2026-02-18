@@ -5,7 +5,7 @@ import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs"
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
-import { js_declaration_single_params_add } from "../../../love/public/src/js_declaration_single_params_add.mjs";
+import { js_function_declaration_single_params_add } from "../../../love/public/src/js_function_declaration_single_params_add.mjs";
 import { text_split } from "../../../love/public/src/text_split.mjs";
 export async function function_params_new(
   f_name,
@@ -32,6 +32,6 @@ export async function function_params_new(
       let names = js_identifiers_names(ast);
       list_intersect_empty_is_assert(names, param_names);
     }
-    js_declaration_single_params_add(ast, param_names);
+    js_function_declaration_single_params_add(ast, param_names);
   }
 }
