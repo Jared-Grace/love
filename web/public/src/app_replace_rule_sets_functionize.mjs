@@ -37,7 +37,9 @@ export async function app_replace_rule_sets_functionize() {
     vs,
     z,
   };
+  log(1);
   let message = json_format_to(j);
+  log(2);
   error(message);
   log(only);
   let mapped = list_map_property(vs, "node");
