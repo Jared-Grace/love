@@ -8,7 +8,7 @@ import { function_transform } from "../../../love/public/src/function_transform.
 import { file_copy } from "../../../love/public/src/file_copy.mjs";
 import { function_name_to_path_unalias } from "../../../love/public/src/function_name_to_path_unalias.mjs";
 import { file_open } from "../../../love/public/src/file_open.mjs";
-export async function function_copy(f_name_old, f_name_new) {
+export async function function_copy_open(f_name_old, f_name_new) {
   const r = await function_name_to_path_unalias(f_name_old);
   let unaliased_old = property_get(r, "unaliased");
   let f_path_old = property_get(r, "f_path");
