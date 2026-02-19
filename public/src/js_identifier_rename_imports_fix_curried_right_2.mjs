@@ -3,13 +3,16 @@ export async function js_identifier_rename_imports_fix_curried_right_2(
   f_name_before,
   f_name_after,
 ) {
-  return async function js_identifier_rename_imports_fix_curried_right_2_result(
-    ast,
-  ) {
-    return await js_identifier_rename_imports_fix(
+  let r2 =
+    async function js_identifier_rename_imports_fix_curried_right_2_result(
       ast,
-      f_name_before,
-      f_name_after,
-    );
-  };
+    ) {
+      let r = await js_identifier_rename_imports_fix(
+        ast,
+        f_name_before,
+        f_name_after,
+      );
+      return r;
+    };
+  return r2;
 }
