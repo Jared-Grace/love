@@ -1,4 +1,4 @@
-export function curry(fn) {
+export function invoke_curryify(fn) {
   let r4 = function curried(...args) {
     if (args.length >= fn.length) {
       let r = fn(...args);
