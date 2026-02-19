@@ -28,7 +28,7 @@ export async function app_original_bible_main(context) {
   window.onunhandledrejection = function lambda2(event) {
     reportError({
       type: "unhandledrejection",
-      reason: event.reason,
+      event,
     });
   };
   let app_fn = app_original_bible;
