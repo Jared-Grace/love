@@ -1,5 +1,7 @@
+import { html_public_from_latest } from "../../../love/public/src/html_public_from_latest.mjs";
 import { html_update_latest_new } from "../../../love/public/src/html_update_latest_new.mjs";
 export async function html_update_latest_promote(search) {
   let r = await html_update_latest_new(search);
+  await html_public_from_latest(search2);
   return r;
 }
