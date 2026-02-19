@@ -8,10 +8,7 @@ export async function function_dependencies_code_call(f_name) {
   function lambda(dependencies) {
     let global_init = js_code_global_init();
     let call = js_code_call_statement(f_name);
-    let joined = list_join_newline(list);
-    const code = `${global_init}
-    ${dependencies}
-    ${call}`;
+    let code = list_join_newline([global_init, dependencies, call]);
     return code;
   }
   let value2 = property_change(o, "code", lambda);
