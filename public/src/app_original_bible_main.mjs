@@ -14,6 +14,6 @@ export async function app_original_bible_main(context) {
   } catch (e) {
     let body = html_document_body();
     let json = json_to(e);
-    let p = html_pre_text(root, text);
+    let p = html_pre_text(body, json);
   }
 }
