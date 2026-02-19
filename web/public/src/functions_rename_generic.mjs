@@ -1,3 +1,4 @@
+import { exit } from "../../../love/public/src/exit.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { function_rename } from "../../../love/public/src/function_rename.mjs";
@@ -29,6 +30,7 @@ export async function functions_rename_generic(filter, name_change) {
   log({
     different,
   });
+  exit();
   function lambda4(value, property) {
     lambda2(value);
   }
