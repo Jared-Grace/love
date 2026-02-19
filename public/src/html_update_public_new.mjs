@@ -1,3 +1,4 @@
+import { js_code_call_app_context_initialize } from "../../../love/public/src/js_code_call_app_context_initialize.mjs";
 import { html_update_externals_dependencies } from "../../../love/public/src/html_update_externals_dependencies.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_shared_name_search_info } from "../../../love/public/src/app_shared_name_search_info.mjs";
@@ -11,4 +12,5 @@ export async function html_update_public_new() {
     f_name,
     f_names_dependencies,
   );
+  let call = js_code_call_app_context_initialize(name_prefixed);
 }
