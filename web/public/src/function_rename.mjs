@@ -1,3 +1,4 @@
+import { function_open } from "../../../love/public/src/function_open.mjs";
 import { function_move } from "../../../love/public/src/function_move.mjs";
 import { equal_not_assert } from "../../../love/public/src/equal_not_assert.mjs";
 import { function_rename_check } from "../../../love/public/src/function_rename_check.mjs";
@@ -24,5 +25,6 @@ export async function function_rename(f_name_before, f_name_after) {
   await function_rename_fn_names_check(f_name_before);
   await function_move(f_name_before, f_name_after);
   await function_rename_identifiers_alias(f_name_before, f_name_after);
+  await function_open(f_name);
   return;
 }
