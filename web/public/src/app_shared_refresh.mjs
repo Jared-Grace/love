@@ -4,7 +4,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { list_find_property } from "./list_find_property.mjs";
-export function app_shared_refresh(context) {
+export async function app_shared_refresh(context) {
   let screens = property_get(context, "screens");
   let app_fn = property_get(context, "app_fn");
   let body = html_document_body();
@@ -17,5 +17,5 @@ export function app_shared_refresh(context) {
     combined,
   );
   let screen = list_find_property(screens, "name", screen_name);
-  screen(context);
+  await screen(context);
 }
