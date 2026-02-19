@@ -7,6 +7,6 @@ export async function functions_imports_paths_fix_list(list) {
     let v2 = js_imports_paths_fix_inner(ast, dictionary);
     return v2;
   };
-  let v = await functions_transform_list(lambda, list);
+  let v = await functions_transform_list(list, lambda);
   return v;
 }
