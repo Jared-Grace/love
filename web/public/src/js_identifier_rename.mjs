@@ -1,3 +1,4 @@
+import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { property_set_if_equals } from "../../../love/public/src/property_set_if_equals.mjs";
 import { js_visit_identifiers } from "../../../love/public/src/js_visit_identifiers.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -11,4 +12,6 @@ export function js_identifier_rename(ast, name_from, name_to) {
     property_set_if_equals(node, "name", name_from, name_to);
   }
   js_visit_identifiers(ast, lambda);
+  return;
+  js_visit_type(ast, "Identifier", lambda);
 }
