@@ -2,8 +2,8 @@ import { property_change } from "../../../love/public/src/property_change.mjs";
 import { app_shared_code_run } from "../../../love/public/src/app_shared_code_run.mjs";
 import { function_dependencies_code_multiple } from "../../../love/public/src/function_dependencies_code_multiple.mjs";
 export async function function_dependencies_code_call_multiple(
-  f_names_dependencies,
   f_name_call,
+  f_names_dependencies,
 ) {
   let r = await function_dependencies_code_multiple(f_names_dependencies);
   function lambda(dependencies) {
