@@ -1,7 +1,7 @@
 import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { functions_rename_generic_starts_with } from "../../../love/public/src/functions_rename_generic_starts_with.mjs";
 import { text_starts_with } from "../../../love/public/src/text_starts_with.mjs";
-export function text_starts_with_curry_right(f_name_prefix) {
+export function text_starts_with_curried_right(f_name_prefix) {
   "asserts in this fn are to make sure " +
     functions_rename_generic_starts_with +
     " is ran correctly";
