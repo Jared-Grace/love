@@ -38,7 +38,6 @@ import { app_replace_rule_set_double } from "../../../love/public/src/app_replac
 import { app_replace_rule_set_shrink_different } from "../../../love/public/src/app_replace_rule_set_shrink_different.mjs";
 import { app_replace_rule_set_grow_different } from "../../../love/public/src/app_replace_rule_set_grow_different.mjs";
 import { app_replace_rule_set_replace } from "../../../love/public/src/app_replace_rule_set_replace.mjs";
-import { marker } from "./marker.mjs";
 export function app_replace_rule_sets() {
   let r = [
     app_replace_rule_set_replace,
@@ -81,7 +80,6 @@ export function app_replace_rule_sets() {
     app_replace_rule_set_grow_same_three_different,
     app_replace_rule_set_unary_to_binary_equations_preparation,
     app_replace_rule_set_unary_to_binary_equations,
-    marker,
   ];
   return r;
 }
