@@ -1,7 +1,7 @@
 import { text_starts_with_curry_right } from "../../../love/public/src/text_starts_with_curry_right.mjs";
 import { text_starts_ends_with_curry_right } from "../../../love/public/src/text_starts_ends_with_curry_right.mjs";
 import { text_replace_curry_right } from "../../../love/public/src/text_replace_curry_right.mjs";
-import { text_match_ordered_curry } from "../../../love/public/src/text_match_ordered_curry.mjs";
+import { text_match_ordered_curried } from "../../../love/public/src/text_match_ordered_curried.mjs";
 import { text_includes_curried_right_get } from "../../../love/public/src/text_includes_curried_right_get.mjs";
 import { property_get_curried_right } from "../../../love/public/src/property_get_curried_right.mjs";
 import { list_index_is_curried } from "../../../love/public/src/list_index_is_curried.mjs";
@@ -22,7 +22,7 @@ export async function sandbox() {
     list_index_is_curried: "curry_curry_curry_curry",
     property_get_curried_right: "curry_curry_curry_curry",
     text_includes_curried_right_get: "curry_curry_curry_curry_curry",
-    text_match_ordered_curry: "curry_curry_curry_curry",
+    text_match_ordered_curried: "curry_curry_curry_curry",
     text_replace_curry_right: "curry_curry_curry_curry",
     text_starts_ends_with_curry_right: "curry_curry_curry_curry_curry_curry",
     text_starts_with_curry_right: "curry_curry_curry_curry_curry",
