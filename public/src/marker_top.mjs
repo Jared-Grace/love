@@ -1,7 +1,7 @@
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { js_identifier_unique } from "../../../love/public/src/js_identifier_unique.mjs";
 import { js_marker_insert } from "../../../love/public/src/js_marker_insert.mjs";
-import { js_function_declaration_single_block_body } from "../../../love/public/src/js_function_declaration_single_block_body.mjs";
+import { js_flo_block_body } from "../../../love/public/src/js_flo_block_body.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
@@ -20,7 +20,7 @@ export async function marker_top() {
     }
     let names = list_map(markers, js_marker_name_get);
     let name_next = js_identifier_unique(names, "");
-    let body = js_function_declaration_single_block_body(ast);
+    let body = js_flo_block_body(ast);
     await js_marker_insert(name_next, body, 0);
     await js_imports_missing_add(ast);
   }
