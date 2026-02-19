@@ -1,1 +1,1 @@
-export function html_update_public_new() {}
+export function html_update_public_new(search) {}
