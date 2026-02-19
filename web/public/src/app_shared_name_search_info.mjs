@@ -9,7 +9,7 @@ export async function app_shared_name_search_info(search) {
   let f_name = app_shared_name_main(a_name);
   let app_name = app_shared_name_prefixed(a_name);
   let f_path = html_name_to_path(a_name);
-  let file_path = html_name_to_path_latest(name);
+  let f_path_latest = html_name_to_path_latest(name);
   log_keep({
     search,
     a_name,
@@ -18,6 +18,7 @@ export async function app_shared_name_search_info(search) {
     f_name,
     a_name,
     f_path,
+    f_path_latest,
     app_name,
   };
   return r;
