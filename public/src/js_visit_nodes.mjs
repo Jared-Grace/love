@@ -7,8 +7,6 @@ export function js_visit_nodes(parsed, on_each) {
     let a = js_node_is(node);
     if (a) {
       on_each(node);
-    } else {
-      return;
     }
   }
   js_visit(parsed, lambda);
