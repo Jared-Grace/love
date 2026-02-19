@@ -3,5 +3,5 @@ import { function_name_to_parts } from "../../../love/public/src/function_name_t
 export function function_name_part_replace(f_name, from, to) {
   let parts = function_name_to_parts(f_name);
   function lambda(item) {}
-  let mapped = list_map(list, lambda);
+  let mapped = list_map(parts, lambda);
 }
