@@ -6,6 +6,6 @@ export function function_name_part_replace(f_name, from, to) {
   let parts = function_name_to_parts(f_name);
   let r = ternary_equal_curried_right(from, to);
   let mapped = list_map(parts, r);
-  let combined = function_name_combine_multiple(parts2);
-  return mapped;
+  let combined = function_name_combine_multiple(mapped);
+  return combined;
 }
