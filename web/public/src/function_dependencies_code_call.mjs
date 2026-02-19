@@ -1,3 +1,4 @@
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_code_global_init } from "../../../karate_code/public/src/js_code_global_init.mjs";
 import { js_code_call_statement } from "../../../love/public/src/js_code_call_statement.mjs";
@@ -11,6 +12,7 @@ export async function function_dependencies_code_call(f_name) {
   const code = `${global_init}
     ${dependencies}
     ${call}`;
+  property_set(object, property_name, value);
   let v2 = {
     code,
     externals,
