@@ -1,8 +1,8 @@
-import { app_a_function_select_curry } from "../../../love/public/src/app_a_function_select_curry.mjs";
+import { app_a_function_select_curried } from "../../../love/public/src/app_a_function_select_curried.mjs";
 import { app_a_functions_generic } from "../../../love/public/src/app_a_functions_generic.mjs";
 import { app_a_button_function_if_exists } from "../../../love/public/src/app_a_button_function_if_exists.mjs";
 export async function app_a_functions(context) {
   app_a_button_function_if_exists(context);
-  let on_select = app_a_function_select_curry(context);
+  let on_select = app_a_function_select_curried(context);
   await app_a_functions_generic(context, on_select);
 }
