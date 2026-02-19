@@ -6,8 +6,8 @@ import { app_shared_name_main } from "../../../love/public/src/app_shared_name_m
 export async function app_shared_name_search_info(search) {
   let a_name = await app_shared_name_search(search);
   let f_name = app_shared_name_main(a_name);
-  let app_name = app_shared_name_prefixed(name);
-  let f_path = html_name_to_path(name);
+  let app_name = app_shared_name_prefixed(a_name);
+  let f_path = html_name_to_path(a_name);
   log_keep({
     search,
     a_name,
