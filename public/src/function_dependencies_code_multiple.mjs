@@ -17,9 +17,9 @@ export async function function_dependencies_code_multiple(f_names) {
   let externals_list = list_map_property(waited, "externals");
   let combined = list_concat_multiple(externals_list);
   let externals = list_unique(combined);
-  let v = {
+  let r = {
     code,
     externals,
   };
-  return v;
+  return r;
 }
