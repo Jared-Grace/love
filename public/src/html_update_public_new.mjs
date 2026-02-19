@@ -1,3 +1,4 @@
+import { app_context_initialize } from "../../../love/public/src/app_context_initialize.mjs";
 import { js_code_call_statement } from "../../../love/public/src/js_code_call_statement.mjs";
 import { js_code_call_app_context_initialize } from "../../../love/public/src/js_code_call_app_context_initialize.mjs";
 import { html_update_externals_dependencies } from "../../../love/public/src/html_update_externals_dependencies.mjs";
@@ -10,8 +11,8 @@ export async function html_update_public_new() {
   let f_path = property_get(r, "f_path");
   let a_name = property_get(r, "a_name");
   let r2 = await html_update_externals_dependencies(
-    f_name,
-    f_names_dependencies,
+    app_name,
+    [app_context_initialize.name],
     js_code_call_statement,
   );
   let call = js_code_call_app_context_initialize(name_prefixed);
