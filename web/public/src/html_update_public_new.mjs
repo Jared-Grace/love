@@ -1,4 +1,4 @@
-import { log_exit } from "../../../love/public/src/log_exit.mjs";
+import { log } from "../../../love/public/src/log.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { html_overwrite } from "../../../love/public/src/html_overwrite.mjs";
@@ -27,7 +27,7 @@ export async function html_update_public_new() {
   let code = property_get(dependencies, "code");
   list_add(scripts, code);
   let joined = list_join_newline(scripts);
-  log_exit({
+  log({
     a_name,
     f_path,
     joined,
