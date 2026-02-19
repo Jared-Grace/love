@@ -6,6 +6,5 @@ export async function html_update_public(search) {
   let app_name = property_get(r, "app_name");
   let f_path = property_get(r, "f_path");
   let a_name = property_get(r, "a_name");
-  let f_name = property_get(r, "f_name");
-  await html_update_public_generic(app_name, file_path, a_name);
+  await html_update_public_generic(app_name, f_path, a_name);
 }
