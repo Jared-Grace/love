@@ -1,3 +1,4 @@
+import { list_invoke } from "../../../love/public/src/list_invoke.mjs";
 import { app_replace_button_symbol_style_valid_if_multiple } from "../../../love/public/src/app_replace_button_symbol_style_valid_if_multiple.mjs";
 import { app_replace_button_symbol_style_valid_multiple_nested } from "../../../love/public/src/app_replace_button_symbol_style_valid_multiple_nested.mjs";
 import { app_replace_button_symbol_style_invalid } from "../../../love/public/src/app_replace_button_symbol_style_invalid.mjs";
@@ -39,7 +40,6 @@ import { html_style_font_size } from "../../../love/public/src/html_style_font_s
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
-import { invoke } from "../../../love/public/src/invoke.mjs";
 import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
 import { emoji_party_face } from "../../../love/public/src/emoji_party_face.mjs";
 import { emoji_party_popper } from "../../../love/public/src/emoji_party_popper.mjs";
@@ -326,7 +326,7 @@ export async function app_replace_rule_set(context) {
         const taken_count = 3;
         let taken = list_shuffle_take(choices, taken_count);
         list_add_first(taken, emoji_check);
-        let mapped = list_map(taken, invoke);
+        let mapped = list_invoke(taken);
         let joined = list_join_empty(mapped);
         let p = html_p(div_below);
         html_style_background_color_set(p, highlight);
