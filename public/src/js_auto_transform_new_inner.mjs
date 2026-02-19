@@ -1,5 +1,5 @@
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { js_function_declaration_single_block_body_add_return } from "../../../love/public/src/js_function_declaration_single_block_body_add_return.mjs";
+import { js_flo_block_body_add_return } from "../../../love/public/src/js_flo_block_body_add_return.mjs";
 import { function_open } from "../../../love/public/src/function_open.mjs";
 import { js_auto_transforms } from "../../../love/public/src/js_auto_transforms.mjs";
 import { function_transform_marker_specified } from "../../../love/public/src/function_transform_marker_specified.mjs";
@@ -15,7 +15,7 @@ export async function js_auto_transform_new_inner(f_name_unprefixed) {
     let expression = js_parse_expression(combined);
     list_add(elements, expression);
     let ast = property_get(a, "ast");
-    js_function_declaration_single_block_body_add_return(ast);
+    js_flo_block_body_add_return(ast);
     await js_imports_missing_add(ast);
   }
   let code = await function_transform_marker_specified(
