@@ -1,3 +1,4 @@
+import { js_code_call_statement } from "../../../love/public/src/js_code_call_statement.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { html_code_script_importmap } from "../../../love/public/src/html_code_script_importmap.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
