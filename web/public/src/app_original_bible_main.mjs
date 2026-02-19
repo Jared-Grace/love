@@ -1,3 +1,4 @@
+import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { app_ceb_bible_main_generic } from "../../../love/public/src/app_ceb_bible_main_generic.mjs";
@@ -12,6 +13,7 @@ export async function app_original_bible_main(context) {
     app_ceb_bible_main_generic(context, app_fn, screens, screen_home);
   } catch (e) {
     let body = html_document_body();
-    let json = json_to(object);
+    let json = json_to(e);
+    let p = html_p_text(root, text);
   }
 }
