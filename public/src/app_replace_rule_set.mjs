@@ -68,7 +68,7 @@ import { html_style_font_color_set_if } from "../../../love/public/src/html_styl
 import { ternary_nested } from "../../../love/public/src/ternary_nested.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { app_replace_button_symbol_style_valid_if } from "../../../love/public/src/app_replace_button_symbol_style_valid_if.mjs";
-import { app_replace_rule_valid_curry } from "../../../love/public/src/app_replace_rule_valid_curry.mjs";
+import { app_replace_rule_valid_curried } from "../../../love/public/src/app_replace_rule_valid_curried.mjs";
 import { app_replace_button_symbol_style } from "../../../love/public/src/app_replace_button_symbol_style.mjs";
 import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
 import { range } from "../../../love/public/src/range.mjs";
@@ -168,7 +168,7 @@ export async function app_replace_rule_set(context) {
       let rule2 = property_get(rb, "rule");
       let size2 = list_size(current_list);
       let r = range(size2);
-      let lambda7 = app_replace_rule_valid_curry(rule2, current_list);
+      let lambda7 = app_replace_rule_valid_curried(rule2, current_list);
       let enabled = list_any(r, lambda7);
       const selected = index2 === index_selected;
       enabled = index_selected === null || selected;
