@@ -4,7 +4,9 @@ export function property_set_if_equals_curried_right_3(
   name_from,
   name_to,
 ) {
-  return function property_set_if_equals_curried_right_3_result(node) {
-    return property_set_if_equals(node, property_name, name_from, name_to);
+  let r2 = function property_set_if_equals_curried_right_3_result(node) {
+    let r = property_set_if_equals(node, property_name, name_from, name_to);
+    return r;
   };
+  return r2;
 }
