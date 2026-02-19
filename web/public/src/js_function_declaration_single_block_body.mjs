@@ -1,7 +1,0 @@
-import { js_function_declaration_to_block_body } from "../../../love/public/src/js_function_declaration_to_block_body.mjs";
-import { js_function_declaration_single } from "../../../love/public/src/js_function_declaration_single.mjs";
-export function js_function_declaration_single_block_body(ast) {
-  let declaration = js_function_declaration_single(ast);
-  let body_block = js_function_declaration_to_block_body(declaration);
-  return body_block;
-}

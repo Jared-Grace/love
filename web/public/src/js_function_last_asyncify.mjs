@@ -7,7 +7,7 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
 import { data_identifiers_search } from "../../../love/public/src/data_identifiers_search.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { js_function_declaration_single } from "../../../love/public/src/js_function_declaration_single.mjs";
+import { js_flo } from "../../../love/public/src/js_flo.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { js_stack_last_function } from "../../../love/public/src/js_stack_last_function.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
@@ -24,7 +24,7 @@ export async function js_function_last_asyncify(
   let async = property_get(f, property_name);
   if (async_is && not(async)) {
     property_set(f, property_name, true);
-    let declaration = js_function_declaration_single(ast);
+    let declaration = js_flo(ast);
     if (equal(f, declaration)) {
       let name = js_function_declaration_name(declaration);
       let value = property_get(functions, name);
