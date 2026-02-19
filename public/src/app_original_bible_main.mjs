@@ -1,4 +1,3 @@
-import { error } from "../../../love/public/src/error.mjs";
 import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
@@ -7,32 +6,14 @@ import { app_original_bible_home } from "../../../love/public/src/app_original_b
 import { app_original_bible_screens } from "../../../love/public/src/app_original_bible_screens.mjs";
 import { app_original_bible } from "../../../love/public/src/app_original_bible.mjs";
 export async function app_original_bible_main(context) {
-  function reportError(err) {
-    alert(err);
+  try {
+    let app_fn = app_original_bible;
+    let screens = app_original_bible_screens();
+    let screen_home = app_original_bible_home;
+    await app_ceb_bible_main_generic(context, app_fn, screens, screen_home);
+  } catch (e) {
     let body = html_document_body();
-    let json = json_to(err);
+    let json = json_to(e);
     let p = html_pre_text(body, json);
-    html_pre_text(body, "test");
   }
-  window.onerror = function lambda(message, source, lineno, colno, error) {
-    reportError({
-      type: "error",
-      message,
-      source,
-      lineno,
-      colno,
-      stack: error?.stack,
-    });
-    return false;
-  };
-  window.onunhandledrejection = function lambda2(event) {
-    reportError({
-      type: "unhandledrejection",
-      event,
-    });
-  };
-  let app_fn = app_original_bible;
-  let screens = app_original_bible_screens();
-  let screen_home = app_original_bible_home;
-  await app_ceb_bible_main_generic(context, app_fn, screens, screen_home);
 }
