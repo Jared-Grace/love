@@ -11,6 +11,7 @@ export async function html_update_externals_dependencies(
   let dependencies = await function_dependencies_code_call_multiple(
     f_name,
     f_names_dependencies,
+    js_code_call_statement,
   );
   let externals = property_get(dependencies, "externals");
   let ne = list_empty_not_is(externals);
