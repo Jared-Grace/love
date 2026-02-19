@@ -10,7 +10,8 @@ export function js_identifier_rename(ast, name_from, name_to) {
   function lambda(v) {
     let node = property_get(v, "node");
     if (property_equals(node, "name", name_from)) {
-      property_set(node, "name", name_to);
+      const property_name = "name";
+      property_set(node, property_name, name_to);
     }
   }
   js_visit_identifiers(ast, lambda);
