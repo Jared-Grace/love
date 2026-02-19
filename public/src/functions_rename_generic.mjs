@@ -1,3 +1,4 @@
+import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { function_rename } from "../../../love/public/src/function_rename.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
@@ -22,6 +23,7 @@ export async function functions_rename_generic(filter, name_change) {
   let different = object_filter(dictionary, lambda);
   let identifiers = await data_identifiers_get();
   function lambda2(f_name_after) {
+    text_is_assert(value);
     property_exists_not_assert(identifiers, f_name_after);
   }
   log({
