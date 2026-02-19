@@ -31,5 +31,6 @@ export async function functions_rename_generic(filter, name_change) {
   async function lambda3(f_name_after, f_name_before) {
     let v = await function_rename(f_name_before, f_name_after);
   }
-  return await object_map_async(different, lambda3);
+  let r = await object_map_async(different, lambda3);
+  return r;
 }
