@@ -5,6 +5,7 @@ import { function_dependencies_code_multiple } from "../../../love/public/src/fu
 export async function function_dependencies_code_call_multiple(
   f_name_call,
   f_names_dependencies,
+  call_code_get,
 ) {
   let r = await function_dependencies_code_multiple(f_names_dependencies);
   function lambda(dependencies) {
