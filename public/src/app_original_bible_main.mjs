@@ -8,6 +8,7 @@ import { app_original_bible_screens } from "../../../love/public/src/app_origina
 import { app_original_bible } from "../../../love/public/src/app_original_bible.mjs";
 export async function app_original_bible_main(context) {
   function reportError(err) {
+    alert(err);
     let body = html_document_body();
     let json = json_to(err);
     let p = html_pre_text(body, json);
