@@ -18,8 +18,7 @@ export function function_dependencies_externals_to_urls(externals) {
   const lookup = {
     acorn: "https://cdn.jsdelivr.net/npm/acorn/dist/acorn.mjs",
     astring: "https://cdn.jsdelivr.net/npm/astring/dist/astring.mjs",
-    "lz-string":
-      "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js",
+    "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm",
   };
   let r = properties_from(o, externals, lookup);
   return r;
