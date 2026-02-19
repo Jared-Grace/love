@@ -6,7 +6,7 @@ export function property_exists_not_assert(object, property_name) {
   let e = property_exists(object, property_name);
   if (e) {
     let value = property_get(object, property_name);
-    log_keep(message);
+    log_keep(property_name);
     error_json({
       object,
       property_name,
