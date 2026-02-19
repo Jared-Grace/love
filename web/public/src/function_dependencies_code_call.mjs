@@ -11,6 +11,6 @@ export async function function_dependencies_code_call(f_name) {
     let code = list_join_newline([global_init, dependencies, call]);
     return code;
   }
-  let value2 = property_change(o, "code", lambda);
+  let value2 = property_change(r, "code", lambda);
   return r;
 }
