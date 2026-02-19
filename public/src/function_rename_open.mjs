@@ -9,7 +9,7 @@ import { function_parse_unaliased } from "../../../love/public/src/function_pars
 import { function_rename_identifiers_alias } from "../../../love/public/src/function_rename_identifiers_alias.mjs";
 import { function_rename_fn_names_check } from "../../../love/public/src/function_rename_fn_names_check.mjs";
 import { function_name_to_path_unalias } from "../../../love/public/src/function_name_to_path_unalias.mjs";
-export async function function_rename(f_name_before, f_name_after) {
+export async function function_rename_open(f_name_before, f_name_after) {
   equal_not_assert(f_name_before, f_name_after);
   await function_rename_check(f_name_after);
   const v = await function_name_to_path_unalias(f_name_before);
