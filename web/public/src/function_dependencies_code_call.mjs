@@ -7,15 +7,10 @@ export async function function_dependencies_code_call(f_name) {
   let global_init = js_code_global_init();
   let r = await function_dependencies_code_multiple([f_name]);
   let dependencies = property_get(r, "code");
-  let externals = property_get(r, "externals");
   let call = js_code_call_statement(f_name);
   const code = `${global_init}
     ${dependencies}
     ${call}`;
-  property_set(object, property_name, value);
-  let v2 = {
-    code,
-    externals,
-  };
-  return v2;
+  property_set(r, "code", code);
+  return r;
 }
