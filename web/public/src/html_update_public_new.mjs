@@ -11,6 +11,7 @@ export async function html_update_public_new() {
   let r2 = await html_update_externals_dependencies(
     f_name,
     f_names_dependencies,
+    js_code_call_statement,
   );
   let call = js_code_call_app_context_initialize(name_prefixed);
 }
