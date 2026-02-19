@@ -21,6 +21,7 @@ export async function html_update_public_new() {
   );
   let dependencies = property_get(r2, "dependencies");
   let scripts = property_get(r2, "scripts");
+  let code = property_get(dependencies, "code");
   return r2;
   await html_overwrite(a_name, f_path, joined2);
 }
