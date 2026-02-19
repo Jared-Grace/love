@@ -4,6 +4,7 @@ export async function html_update_externals(f_name) {
   let r = await html_update_externals_dependencies(
     f_name,
     f_names_dependencies,
+    js_code_call_statement,
   );
   return r;
 }
