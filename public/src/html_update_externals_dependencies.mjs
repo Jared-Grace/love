@@ -7,6 +7,7 @@ import { function_dependencies_code_call_multiple } from "../../../love/public/s
 export async function html_update_externals_dependencies(
   f_name,
   f_names_dependencies,
+  call_code_get,
 ) {
   let scripts = [];
   let dependencies = await function_dependencies_code_call_multiple(
