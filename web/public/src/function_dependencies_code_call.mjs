@@ -1,3 +1,4 @@
+import { js_code_call_statement } from "../../../love/public/src/js_code_call_statement.mjs";
 import { function_dependencies_code_call_multiple } from "../../../love/public/src/function_dependencies_code_call_multiple.mjs";
 export async function function_dependencies_code_call(f_name) {
   const f_names = [f_name];
