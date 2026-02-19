@@ -4,11 +4,11 @@ import { html_code_script_importmap } from "../../../love/public/src/html_code_s
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function html_update_externals(f_name) {
-  const f_names = [f_name];
+  const f_names_dependencies = [f_name];
   let scripts = [];
   let dependencies = await function_dependencies_code_call_multiple(
     f_name,
-    f_names,
+    f_names_dependencies,
   );
   let externals = property_get(dependencies, "externals");
   let ne = list_empty_not_is(externals);
