@@ -6,10 +6,10 @@ export function js_visit_nodes(parsed, on_each) {
     let node = property_get(v, "node");
     let a = js_node_is(node);
     if (a) {
+      on_each(node);
     } else {
       return;
     }
-    on_each(node);
   }
   js_visit(parsed, lambda);
 }
