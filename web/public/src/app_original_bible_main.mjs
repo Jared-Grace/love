@@ -1,4 +1,4 @@
-import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
+import { html_pre_text } from "../../../love/public/src/html_pre_text.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { app_ceb_bible_main_generic } from "../../../love/public/src/app_ceb_bible_main_generic.mjs";
