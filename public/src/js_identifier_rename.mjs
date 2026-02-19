@@ -11,7 +11,7 @@ export function js_identifier_rename(ast, name_from, name_to) {
     let node = property_get(v, "node");
     property_set_if_equals(node, "name", name_from, name_to);
   }
-  js_visit_identifiers(ast, lambda);
-  return;
   js_visit_type(ast, "Identifier", lambda);
+  return;
+  js_visit_identifiers(ast, lambda);
 }
