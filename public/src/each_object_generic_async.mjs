@@ -6,5 +6,6 @@ export async function each_object_generic_async(object, lambda, each_lambda) {
     await lambda(value, property);
   }
   let properties = properties_get(object);
-  return await each_lambda(properties, lambda2);
+  let r = await each_lambda(properties, lambda2);
+  return r;
 }
