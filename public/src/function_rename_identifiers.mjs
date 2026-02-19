@@ -5,11 +5,11 @@ import { list_remove_if_exists } from "../../../love/public/src/list_remove_if_e
 export async function function_rename_identifiers(f_name_before, f_name_after) {
   await data_identifier_exists_if(f_name_before, on_exist);
   async function on_exist(f_names) {
+    list_remove_if_exists(f_names, f_name_before);
     let r2 = await js_identifier_rename_imports_fix_curried_right_2(
       f_name_before,
       f_name_after,
     );
-    list_remove_if_exists(f_names, f_name_before);
     await functions_transform_list(f_names, r2);
   }
 }
