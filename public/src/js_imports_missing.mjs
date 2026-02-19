@@ -1,4 +1,4 @@
-import { js_function_declaration_single_name } from "../../../love/public/src/js_function_declaration_single_name.mjs";
+import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 import { list_intersect } from "../../../love/public/src/list_intersect.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
@@ -7,7 +7,7 @@ import { js_identifiers_names } from "../../../love/public/src/js_identifiers_na
 import { js_imports } from "../../../love/public/src/js_imports.mjs";
 import { js_flo } from "../../../love/public/src/js_flo.mjs";
 export async function js_imports_missing(ast) {
-  let name = js_function_declaration_single_name(ast);
+  let name = js_flo_name(ast);
   let declaration = js_flo(ast);
   let imports = js_imports(ast);
   let identifiers = js_identifiers_names(declaration);
