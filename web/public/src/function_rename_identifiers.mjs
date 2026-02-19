@@ -6,9 +6,9 @@ export async function function_rename_identifiers(f_name_before, f_name_after) {
   async function on_exist(f_names) {
     list_remove_if_exists(f_names, f_name_before);
     await functions_identifier_rename_imports_fix(
+      f_names,
       f_name_before,
       f_name_after,
-      f_names,
     );
   }
 }
