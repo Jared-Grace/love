@@ -1,5 +1,5 @@
 import { js_call_args_await_maybe_return } from "../../../love/public/src/js_call_args_await_maybe_return.mjs";
-import { js_function_declaration_single_block_body_add } from "../../../love/public/src/js_function_declaration_single_block_body_add.mjs";
+import { js_flo_block_body_add } from "../../../love/public/src/js_flo_block_body_add.mjs";
 export function js_call_args_await_maybe_declaration_return_add(
   unaliased,
   arg_names,
@@ -11,5 +11,5 @@ export function js_call_args_await_maybe_declaration_return_add(
     arg_names,
     declaration_call,
   );
-  js_function_declaration_single_block_body_add(ast, item);
+  js_flo_block_body_add(ast, item);
 }
