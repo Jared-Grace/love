@@ -10,7 +10,7 @@ import { app_shared_name_search_info } from "../../../love/public/src/app_shared
 export async function html_update_latest_new(search) {
   let r = await app_shared_name_search_info(search);
   let f_name = property_get(r, "f_name");
-  let f_path = property_get(r, "f_path");
+  let f_path_latest = property_get(r, "f_path_latest");
   let a_name = property_get(r, "a_name");
   function lambda() {
     let result = js_code_call_app_context_initialize(f_name);
@@ -27,5 +27,5 @@ export async function html_update_latest_new(search) {
   let script = html_code_script_module(code);
   list_add(scripts, script);
   let joined = list_join_newline(scripts);
-  await html_overwrite(a_name, f_path, joined);
+  await html_overwrite(a_name, f_path_latest, joined);
 }
