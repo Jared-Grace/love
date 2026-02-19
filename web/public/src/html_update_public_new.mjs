@@ -1,9 +1,9 @@
-import { html_name_to_path } from "../../../love/public/src/html_name_to_path.mjs";
-import { app_shared_name_prefixed } from "../../../love/public/src/app_shared_name_prefixed.mjs";
-import { app_shared_name_search } from "../../../love/public/src/app_shared_name_search.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
+import { app_shared_name_search_info } from "../../../love/public/src/app_shared_name_search_info.mjs";
 export async function html_update_public_new() {
   let search = "rce";
-  let name = await app_shared_name_search(search);
-  let a_name = app_shared_name_prefixed(name);
-  let file_path = html_name_to_path(name);
+  let r = await app_shared_name_search_info(search);
+  let app_name = property_get(r, "app_name");
+  let f_path = property_get(r, "f_path");
+  let a_name = property_get(r, "a_name");
 }
