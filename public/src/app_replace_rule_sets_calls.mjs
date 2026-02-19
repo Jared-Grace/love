@@ -9,7 +9,7 @@ export async function app_replace_rule_sets_calls() {
   let names = js_list_calls_names(ast2);
   let r22 =
     js_function_declaration_single_block_body_empty_return_identifiers_curried_right(
-      names2,
+      names,
     );
   let output = await function_transform_fn(app_replace_rule_sets, r2);
 }
