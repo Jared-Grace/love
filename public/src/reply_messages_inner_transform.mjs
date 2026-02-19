@@ -1,4 +1,4 @@
-import { text_includes_curry_right_get } from "../../../love/public/src/text_includes_curry_right_get.mjs";
+import { text_includes_curried_right_get } from "../../../love/public/src/text_includes_curried_right_get.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
 import { text_letters_is } from "../../../love/public/src/text_letters_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -8,7 +8,7 @@ import { digits_text } from "../../../love/public/src/digits_text.mjs";
 export function reply_messages_inner_transform(message) {
   let lower = text_lower_to(message);
   let tokens = text_split_empty(lower);
-  let string_includes_curry_right = text_includes_curry_right_get(
+  let string_includes_curry_right = text_includes_curried_right_get(
     "'" + digits_text(),
   );
   const choices = [text_letters_is, string_includes_curry_right];
