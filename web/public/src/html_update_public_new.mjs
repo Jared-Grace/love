@@ -1,0 +1,1 @@
+export function html_update_public_new() {}
