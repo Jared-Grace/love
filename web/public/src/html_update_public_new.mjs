@@ -10,7 +10,9 @@ export async function html_update_public_new() {
   let app_name = property_get(r, "app_name");
   let f_path = property_get(r, "f_path");
   let a_name = property_get(r, "a_name");
-  function lambda() {}
+  function lambda() {
+    return js_code_call_app_context_initialize(name_prefixed);
+  }
   let r2 = await html_update_externals_dependencies(
     app_name,
     [app_context_initialize.name],
@@ -18,5 +20,4 @@ export async function html_update_public_new() {
   );
   return r2;
   await html_overwrite(name, path, joined2);
-  let call = js_code_call_app_context_initialize(name_prefixed);
 }
