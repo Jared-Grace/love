@@ -1,5 +1,4 @@
 import { html_code_script_module } from "../../../love/public/src/html_code_script_module.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { html_overwrite } from "../../../love/public/src/html_overwrite.mjs";
@@ -30,10 +29,5 @@ export async function html_update_public_new() {
   let code2 = html_code_script_module(code);
   list_add(scripts, code2);
   let joined = list_join_newline(scripts);
-  log({
-    a_name,
-    f_path,
-    joined,
-  });
   await html_overwrite(a_name, f_path, joined);
 }
