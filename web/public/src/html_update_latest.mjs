@@ -5,8 +5,8 @@ import { html_update_public_generic } from "../../../love/public/src/html_update
 import { html_name_to_path_latest } from "../../../love/public/src/html_name_to_path_latest.mjs";
 export async function html_update_latest(search) {
   "todo: maybe rename staging everywhere to latest to be consistent with naming, one less name (staging not needed) to remember";
-  let r = await app_shared_name_search_info(search);
-  let name = property_get(r, "a_name");
+  let info = await app_shared_name_search_info(search);
+  let name = property_get(info, "a_name");
   let f_name = app_shared_name_latest(name);
   let file_path = html_name_to_path_latest(name);
   await html_update_public_generic(f_name, file_path, name);
