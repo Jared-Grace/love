@@ -14,12 +14,12 @@ export async function app_shared_name_search_info(search) {
     search,
     a_name,
   });
-  let r = {
+  let info = {
     f_name,
     a_name,
     f_path,
     f_path_latest,
     app_name,
   };
-  return r;
+  return info;
 }
