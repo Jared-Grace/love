@@ -1,3 +1,4 @@
+import { exit } from "../../../love/public/src/exit.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { error_json } from "../../../love/public/src/error_json.mjs";
@@ -7,6 +8,7 @@ export function property_exists_not_assert(object, property_name) {
   if (e) {
     let value = property_get(object, property_name);
     log_keep(property_name);
+    exit();
     error_json({
       object,
       property_name,
