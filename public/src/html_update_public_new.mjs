@@ -20,5 +20,5 @@ export async function html_update_public_new() {
     lambda,
   );
   return r2;
-  await html_overwrite(name, path, joined2);
+  await html_overwrite(a_name, f_path, joined2);
 }
