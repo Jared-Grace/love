@@ -5,7 +5,7 @@ import { prayer_end } from "../../../love/public/src/prayer_end.mjs";
 import { prayer_start } from "../../../love/public/src/prayer_start.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_p_text_multiple } from "../../../love/public/src/html_p_text_multiple.mjs";
-import { each_object_async } from "../../../love/public/src/each_object_async.mjs";
+import { object_map_async } from "../../../love/public/src/object_map_async.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
 export async function app_autopray_main(context) {
   let root = property_get(context, "root");
@@ -26,6 +26,6 @@ export async function app_autopray_main(context) {
     await sleep(c);
   }
   while (true) {
-    await each_object_async(v, lambda2);
+    await object_map_async(v, lambda2);
   }
 }
