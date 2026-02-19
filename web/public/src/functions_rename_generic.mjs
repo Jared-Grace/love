@@ -6,7 +6,7 @@ import { property_exists_not_assert } from "../../../love/public/src/property_ex
 import { data_identifiers_get } from "../../../love/public/src/data_identifiers_get.mjs";
 import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
-import { function_rename } from "../../../love/public/src/function_rename.mjs";
+import { function_rename_open } from "../../../love/public/src/function_rename_open.mjs";
 import { list_empty_not_is_assert } from "../../../love/public/src/list_empty_not_is_assert.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { each_object_values } from "../../../love/public/src/each_object_values.mjs";
@@ -29,7 +29,7 @@ export async function functions_rename_generic(filter, name_change) {
   });
   each_object_values(different, lambda2);
   async function lambda3(f_name_after, f_name_before) {
-    let v = await function_rename(f_name_before, f_name_after);
+    let v = await function_rename_open(f_name_before, f_name_after);
   }
   await each_object_async(different, lambda3);
 }
