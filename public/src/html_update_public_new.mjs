@@ -25,7 +25,7 @@ export async function html_update_public_new() {
   let scripts = property_get(r2, "scripts");
   let joined = list_join_newline(scripts);
   let code = property_get(dependencies, "code");
-  let combined = text_combine(left, right);
+  let combined = text_combine(joined, code);
   return r2;
-  await html_overwrite(a_name, f_path, joined2);
+  await html_overwrite(a_name, f_path, combined);
 }
