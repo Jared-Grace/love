@@ -1,3 +1,4 @@
+import { html_name_to_path_latest } from "../../../love/public/src/html_name_to_path_latest.mjs";
 import { html_name_to_path } from "../../../love/public/src/html_name_to_path.mjs";
 import { app_shared_name_prefixed } from "../../../love/public/src/app_shared_name_prefixed.mjs";
 import { app_shared_name_search } from "../../../love/public/src/app_shared_name_search.mjs";
@@ -8,6 +9,7 @@ export async function app_shared_name_search_info(search) {
   let f_name = app_shared_name_main(a_name);
   let app_name = app_shared_name_prefixed(a_name);
   let f_path = html_name_to_path(a_name);
+  let file_path = html_name_to_path_latest(name);
   log_keep({
     search,
     a_name,
