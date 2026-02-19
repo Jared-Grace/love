@@ -11,7 +11,6 @@ export async function html_update_public_new() {
   let search = "rce";
   let r = await app_shared_name_search_info(search);
   let f_name = property_get(r, "f_name");
-  let app_name = property_get(r, "app_name");
   let f_path = property_get(r, "f_path");
   let a_name = property_get(r, "a_name");
   function lambda() {
