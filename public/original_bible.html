@@ -36,27 +36,11 @@ function html_component_wrap(element) {
   return c;
 }
 async function app_original_bible_main(context) {
-  alert("test");
-  let app_fn = app_original_bible;
-  let screens = app_original_bible_screens();
-  let screen_home = app_original_bible_home;
-  app_ceb_bible_main_generic(context, app_fn, screens, screen_home);
-}
-function app_ceb_bible_main_generic(context, app_fn, screens, screen_home) {
-  app_bible_main_generic_before(context, app_fn, screens, screen_home);
-  app_shared_refresh(context);
-}
-function app_shared_refresh(context) {
   try {
-    let screens = property_get(context, "screens");
-    let app_fn = property_get(context, "app_fn");
-    let body = html_document_body();
-    html_clear(body);
-    let value = property_get(app_fn, "name");
-    let combined = function_name_combine(value, "home");
-    let screen_name = storage_local_initialize_context(context, "screen", combined);
-    let screen = list_find_property(screens, "name", screen_name);
-    screen(context);
+    let app_fn = app_original_bible;
+    let screens = app_original_bible_screens();
+    let screen_home = app_original_bible_home;
+    app_ceb_bible_main_generic(context, app_fn, screens, screen_home);
   } catch (e) {
     let body = html_document_body();
     let json = json_to(e);
@@ -125,6 +109,21 @@ function html_style_set(b, style_key, style_value) {
 function html_text_set(component, text) {
   let element = html_component_element_get(component);
   element.innerHTML = text;
+}
+function app_ceb_bible_main_generic(context, app_fn, screens, screen_home) {
+  app_bible_main_generic_before(context, app_fn, screens, screen_home);
+  app_shared_refresh(context);
+}
+function app_shared_refresh(context) {
+  let screens = property_get(context, "screens");
+  let app_fn = property_get(context, "app_fn");
+  let body = html_document_body();
+  html_clear(body);
+  let value = property_get(app_fn, "name");
+  let combined = function_name_combine(value, "home");
+  let screen_name = storage_local_initialize_context(context, "screen", combined);
+  let screen = list_find_property(screens, "name", screen_name);
+  screen(context);
 }
 function function_name_combine(left, right) {
   const combined = function_name_combine_multiple([left, right]);
