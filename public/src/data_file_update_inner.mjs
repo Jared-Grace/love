@@ -5,7 +5,7 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { js_function_declaration_single } from "../../../love/public/src/js_function_declaration_single.mjs";
+import { js_flo } from "../../../love/public/src/js_flo.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { property_delete } from "../../../love/public/src/property_delete.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
@@ -22,7 +22,7 @@ export function data_file_update_inner(parsed, data) {
   let ast = property_get(parsed, "ast");
   let functions = property_initialize(data, "functions", {});
   let f_this = property_initialize(functions, f_name, {});
-  let declaration = js_function_declaration_single(ast);
+  let declaration = js_flo(ast);
   let async_is = property_get(declaration, "async");
   property_set(f_this, "async", async_is);
   function data_add(property_name, items) {
