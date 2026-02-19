@@ -7,6 +7,6 @@ import { app_replace_rule_sets_v_1 } from "../../../love/public/src/app_replace_
 export async function app_replace_rule_sets_calls() {
   let ast2 = await function_ast_fn(app_replace_rule_sets_v_1);
   let names = js_list_calls_names(ast2);
-  let r22 = js_flo_body_empty_return_identifiers_curried_right(names);
+  let r2 = js_flo_body_empty_return_identifiers_curried_right(names);
   let output = await function_transform_fn(app_replace_rule_sets, r2);
 }
