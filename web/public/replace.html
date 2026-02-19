@@ -12,7 +12,8 @@
  }
 }
   </script>
-let global = {};
+<script type="module"> 
+    let global = {};
 async function app_context_initialize(fn) {
   const root = html_document_body();
   await app_context_initialize_root(root, fn);
@@ -3142,5 +3143,6 @@ async function firebase_storage_url(storage_path) {
   return url;
 }
 app_context_initialize( app_replace );
+  </script>
 </body>
 </html>
