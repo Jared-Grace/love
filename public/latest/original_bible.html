@@ -46,15 +46,84 @@ function app_ceb_bible_main_generic(context, app_fn, screens, screen_home) {
   app_shared_refresh(context);
 }
 function app_shared_refresh(context) {
-  let screens = property_get(context, "screens");
-  let app_fn = property_get(context, "app_fn");
-  let body = html_document_body();
-  html_clear(body);
-  let value = property_get(app_fn, "name");
-  let combined = function_name_combine(value, "home");
-  let screen_name = storage_local_initialize_context(context, "screen", combined);
-  let screen = list_find_property(screens, "name", screen_name);
-  screen(context);
+  try {
+    let screens = property_get(context, "screens");
+    let app_fn = property_get(context, "app_fn");
+    let body = html_document_body();
+    html_clear(body);
+    let value = property_get(app_fn, "name");
+    let combined = function_name_combine(value, "home");
+    let screen_name = storage_local_initialize_context(context, "screen", combined);
+    let screen = list_find_property(screens, "name", screen_name);
+    screen(context);
+  } catch (e) {
+    let body = html_document_body();
+    let json = json_to(e);
+    let p = html_pre_text(body, json);
+  }
+}
+function html_pre_text(root, text) {
+  let pre = html_pre(root);
+  html_text_set(pre, text);
+  return pre;
+}
+function html_pre(root) {
+  let component = html_element(root, "pre");
+  return component;
+}
+function html_element(parent, tag_name) {
+  const e = document.createElement(tag_name);
+  let component = html_component_wrap(e);
+  html_parent_append(parent, component);
+  html_style_set(component, "box-sizing", "border-box");
+  return component;
+}
+function html_parent_append(parent, child) {
+  let parent_element = html_component_element_get(parent);
+  let child_element = html_component_element_get(child);
+  parent_element.appendChild(child_element);
+}
+function html_component_element_get(component) {
+  let element = property_get(component, "element");
+  return element;
+}
+function property_get(object, property_name) {
+  let value = object[property_name];
+  undefined_not_is_assert_lambda(value, object_get);
+  function object_get() {
+    let v = {
+      object,
+      property_name
+    };
+    return v;
+  }
+  return value;
+}
+function undefined_not_is_assert_lambda(value, lambda) {
+  if (undefined_is(value)) {
+    const object = lambda();
+    let message = json_to(object);
+    error(message);
+  }
+}
+function error(message) {
+  throw new Error(message);
+}
+function json_to(object) {
+  let json = JSON.stringify(object);
+  return json;
+}
+function undefined_is(value) {
+  let v = typeof value === "undefined";
+  return v;
+}
+function html_style_set(b, style_key, style_value) {
+  let b_element = html_component_element_get(b);
+  b_element.style[style_key] = style_value;
+}
+function html_text_set(component, text) {
+  let element = html_component_element_get(component);
+  element.innerHTML = text;
 }
 function function_name_combine(left, right) {
   const combined = function_name_combine_multiple([left, right]);
@@ -91,9 +160,6 @@ function error_json(o) {
   let message = json_format_to_truncated(o);
   error(message);
 }
-function error(message) {
-  throw new Error(message);
-}
 function json_format_to_truncated(object) {
   let j = json_format_to(object);
   let taken = text_take(j, 10000);
@@ -115,33 +181,6 @@ function storage_local_initialize_context(context, key, value_initial) {
   let app_fn = property_get(context, "app_fn");
   let value = storage_local_initialize(app_fn, key, value_initial);
   return value;
-}
-function property_get(object, property_name) {
-  let value = object[property_name];
-  undefined_not_is_assert_lambda(value, object_get);
-  function object_get() {
-    let v = {
-      object,
-      property_name
-    };
-    return v;
-  }
-  return value;
-}
-function undefined_not_is_assert_lambda(value, lambda) {
-  if (undefined_is(value)) {
-    const object = lambda();
-    let message = json_to(object);
-    error(message);
-  }
-}
-function json_to(object) {
-  let json = JSON.stringify(object);
-  return json;
-}
-function undefined_is(value) {
-  let v = typeof value === "undefined";
-  return v;
 }
 function storage_local_initialize(app_fn, key, value_initial) {
   let value = storage_local_get(app_fn, key);
@@ -371,14 +410,6 @@ function json_from(json) {
 function html_clear(element) {
   html_text_set(element, "");
 }
-function html_text_set(component, text) {
-  let element = html_component_element_get(component);
-  element.innerHTML = text;
-}
-function html_component_element_get(component) {
-  let element = property_get(component, "element");
-  return element;
-}
 function list_find_property(list, property_name, property_value) {
   let filter = property_equals_lambda(property_name, property_value);
   let item = list_find(list, filter);
@@ -525,10 +556,6 @@ function html_mobile_default_font_size(root) {
 function html_style_font_size(html, value) {
   html_style_set(html, "font-size", value);
 }
-function html_style_set(b, style_key, style_value) {
-  let b_element = html_component_element_get(b);
-  b_element.style[style_key] = style_value;
-}
 function html_font_sans_serif_set_html() {
   let html2 = html_document_root();
   html_roboto_include();
@@ -544,18 +571,6 @@ function html_style_head(style_text) {
   let parent = html_document_head();
   let component = html_element(parent, "style");
   html_text_set(component, style_text);
-}
-function html_element(parent, tag_name) {
-  const e = document.createElement(tag_name);
-  let component = html_component_wrap(e);
-  html_parent_append(parent, component);
-  html_style_set(component, "box-sizing", "border-box");
-  return component;
-}
-function html_parent_append(parent, child) {
-  let parent_element = html_component_element_get(parent);
-  let child_element = html_component_element_get(child);
-  parent_element.appendChild(child_element);
 }
 function html_document_head() {
   let head_e = document.head;
