@@ -7,7 +7,7 @@ import { js_code_call_app_context_initialize } from "../../../love/public/src/js
 import { html_update_externals_dependencies } from "../../../love/public/src/html_update_externals_dependencies.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_shared_name_search_info } from "../../../love/public/src/app_shared_name_search_info.mjs";
-export async function html_update_public_new(search) {
+export async function html_update_latest_new(search) {
   let r = await app_shared_name_search_info(search);
   let f_name = property_get(r, "f_name");
   let f_path = property_get(r, "f_path");
