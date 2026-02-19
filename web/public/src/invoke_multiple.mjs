@@ -1,6 +1,8 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { invoke } from "../../../love/public/src/invoke.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { list_map } from "./list_map.mjs";
 export function invoke_multiple(list_fns) {
-  $r,list_map(list_fns, invoke);
+  each(list_fns, invoke);
+  return;
+  return list_map(list_fns, invoke);
 }
