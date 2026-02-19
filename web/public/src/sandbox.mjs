@@ -5,7 +5,7 @@ import { text_match_ordered_curry } from "../../../love/public/src/text_match_or
 import { text_includes_curry_right_get } from "../../../love/public/src/text_includes_curry_right_get.mjs";
 import { property_get_curried_right } from "../../../love/public/src/property_get_curried_right.mjs";
 import { list_index_is_curry } from "../../../love/public/src/list_index_is_curry.mjs";
-import { list_get_curry } from "../../../love/public/src/list_get_curry.mjs";
+import { list_get_curried } from "../../../love/public/src/list_get_curried.mjs";
 import { js_function_declaration_param_add_curried } from "../../../love/public/src/js_function_declaration_param_add_curried.mjs";
 import { app_replace_rule_valid_curried } from "../../../love/public/src/app_replace_rule_valid_curried.mjs";
 import { app_replace_button_symbol_style_valid_if_curried_right } from "../../../love/public/src/app_replace_button_symbol_style_valid_if_curried_right.mjs";
@@ -18,7 +18,7 @@ export async function sandbox() {
     app_replace_rule_valid_curried: "curry_curry_curry_curry_curry",
     js_function_declaration_param_add_curried:
       "curry_curry_curry_curry_curry_curry",
-    list_get_curry: "curry_curry_curry",
+    list_get_curried: "curry_curry_curry",
     list_index_is_curry: "curry_curry_curry_curry",
     property_get_curried_right: "curry_curry_curry_curry",
     text_includes_curry_right_get: "curry_curry_curry_curry_curry",
