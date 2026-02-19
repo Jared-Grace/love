@@ -1,7 +1,7 @@
+import { list_invoke_unordered_async } from "../../../love/public/src/list_invoke_unordered_async.mjs";
 import { html_textarea } from "../../../love/public/src/html_textarea.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
-import { invoke } from "../../../love/public/src/invoke.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { html_div_text_multiple } from "../../../love/public/src/html_div_text_multiple.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -35,7 +35,6 @@ import { app_replace_font_size_refresh } from "../../../love/public/src/app_repl
 import { app_karate_style_control_border } from "../../../love/public/src/app_karate_style_control_border.mjs";
 import { app_karate_style_control } from "../../../karate_code/public/src/app_karate_style_control.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 export async function app_message_main(context) {
   const messages_property = "messages";
   let u = await uuid();
@@ -95,7 +94,7 @@ export async function app_message_main(context) {
       return next;
     }
     let nexts = list_map(messages, lambda2);
-    await list_map_unordered_async(nexts, invoke);
+    await list_invoke_unordered_async(nexts);
   }
   function message_display(direction, message) {
     let div_message = app_karate_container(div_messages);
