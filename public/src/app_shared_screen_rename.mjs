@@ -1,6 +1,5 @@
+import { invoke_multiple_async } from "../../../love/public/src/invoke_multiple_async.mjs";
 import { function_rename_open } from "../../../love/public/src/function_rename_open.mjs";
-import { invoke } from "../../../love/public/src/invoke.mjs";
-import { each_async } from "../../../love/public/src/each_async.mjs";
 import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { js_expression_string } from "../../../love/public/src/js_expression_string.mjs";
@@ -18,7 +17,7 @@ export async function app_shared_screen_rename(
   assert_arguments(arguments, 3);
   let afters = [];
   let result = await app_shared_screen_add_generic(a_name, lambda);
-  await each_async(afters, invoke);
+  await invoke_multiple_async(afters);
   return result;
   async function lambda(properties, prefixed) {
     function lambda2(item) {
