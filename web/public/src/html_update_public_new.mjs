@@ -15,5 +15,6 @@ export async function html_update_public_new() {
     [app_context_initialize.name],
     js_code_call_statement,
   );
+  return r2;
   let call = js_code_call_app_context_initialize(name_prefixed);
 }
