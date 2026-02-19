@@ -23,7 +23,7 @@ export async function functions_rename_generic(filter, name_change) {
   let different = object_filter(dictionary, lambda);
   let identifiers = await data_identifiers_get();
   function lambda2(f_name_after) {
-    text_is_assert(value);
+    text_is_assert(f_name_after);
     property_exists_not_assert(identifiers, f_name_after);
   }
   log({
