@@ -4,7 +4,7 @@ import { js_code_call_statement } from "../../../love/public/src/js_code_call_st
 import { function_dependencies_code_multiple } from "./function_dependencies_code_multiple.mjs";
 export async function function_dependencies_code_call(f_name) {
   let global_init = js_code_global_init();
-  let r = await function_dependencies_code_multiple(f_name);
+  let r = await function_dependencies_code_multiple([f_name]);
   let dependencies = property_get(r, "code");
   let externals = property_get(r, "externals");
   let call = js_code_call_statement(f_name);
