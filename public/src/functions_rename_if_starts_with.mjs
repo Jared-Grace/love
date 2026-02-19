@@ -6,9 +6,9 @@ export async function functions_rename_if_starts_with(
   f_name_prefix_after,
 ) {
   assert_arguments(arguments, 2);
-  let r = text_prefix_change_curried_right_2(
+  let c = text_prefix_change_curried_right_2(
     f_name_prefix_before,
     f_name_prefix_after,
   );
-  await functions_rename_generic_starts_with(r, f_name_prefix_before);
+  await functions_rename_generic_starts_with(c, f_name_prefix_before);
 }
