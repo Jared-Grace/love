@@ -8,7 +8,8 @@ export async function function_dependencies_code_call(f_name) {
   let global_init = js_code_global_init();
   let r = await function_dependencies_code_multiple([f_name]);
   let dependencies = property_get(r, "code");
-  let value2 = property_change(o, property, function lambda(value) {});
+  function lambda(value) {}
+  let value2 = property_change(o, property, lambda);
   let call = js_code_call_statement(f_name);
   const code = `${global_init}
     ${dependencies}
