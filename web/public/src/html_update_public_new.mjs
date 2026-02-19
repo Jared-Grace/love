@@ -1,3 +1,4 @@
+import { html_code_script_module } from "../../../love/public/src/html_code_script_module.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
@@ -25,6 +26,7 @@ export async function html_update_public_new() {
   let dependencies = property_get(r2, "dependencies");
   let scripts = property_get(r2, "scripts");
   let code = property_get(dependencies, "code");
+  let code2 = html_code_script_module(middle);
   list_add(scripts, code);
   let joined = list_join_newline(scripts);
   log({
