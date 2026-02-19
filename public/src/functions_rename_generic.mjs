@@ -1,3 +1,4 @@
+import { each_object } from "../../../love/public/src/each_object.mjs";
 import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { function_rename } from "../../../love/public/src/function_rename.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -10,7 +11,6 @@ import { list_to_dictionary_value } from "../../../love/public/src/list_to_dicti
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_empty_not_is_assert } from "../../../love/public/src/list_empty_not_is_assert.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
-import { each_object_values } from "../../../love/public/src/each_object_values.mjs";
 export async function functions_rename_generic(filter, name_change) {
   let f_names = await functions_names();
   let filtered = list_filter(f_names, filter);
@@ -29,7 +29,10 @@ export async function functions_rename_generic(filter, name_change) {
   log({
     different,
   });
-  each_object_values(different, lambda2);
+  function lambda4(value, property) {
+    lambda2(value);
+  }
+  each_object(different, lambda4);
   async function lambda3(f_name_after, f_name_before) {
     let v = await function_rename(f_name_before, f_name_after);
   }
