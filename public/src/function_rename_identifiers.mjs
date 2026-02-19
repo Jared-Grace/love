@@ -10,15 +10,11 @@ export async function function_rename_identifiers(f_name_before, f_name_after) {
   async function on_exist(f_names) {
     list_remove_if_exists(f_names, f_name_before);
     async function lambda(f_name) {
-      async function lambda2(ast) {
-        await js_identifier_rename_imports_fix(
-          ast,
-          f_name_before,
-          f_name_after,
-        );
-      }
       let output = await function_transform(f_name, lambda2);
     }
     await each_async(f_names, lambda);
+  }
+  async function lambda2(ast) {
+    await js_identifier_rename_imports_fix(ast, f_name_before, f_name_after);
   }
 }
