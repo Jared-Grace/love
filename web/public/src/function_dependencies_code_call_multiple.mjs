@@ -7,7 +7,11 @@ export async function function_dependencies_code_call_multiple(
 ) {
   let r = await function_dependencies_code_multiple(f_names_dependencies);
   function lambda(dependencies) {
-    let code = app_shared_code_run(f_name_call, dependencies);
+    let code = app_shared_code_run(
+      f_name_call,
+      dependencies,
+      js_code_call_statement,
+    );
     return code;
   }
   let value2 = property_change(r, "code", lambda);
