@@ -8,6 +8,7 @@ export function js_visit_nodes(parsed, on_each) {
     let a = js_node_is(node);
     if (not(a)) {
       return;
+    } else {
     }
     on_each(node);
   }
