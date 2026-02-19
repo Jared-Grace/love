@@ -14,7 +14,7 @@ export async function html_update_public_new() {
   let f_path = property_get(r, "f_path");
   let a_name = property_get(r, "a_name");
   function lambda() {
-    let result = js_code_call_app_context_initialize(name_prefixed);
+    let result = js_code_call_app_context_initialize(app_name);
     return result;
   }
   let r2 = await html_update_externals_dependencies(
