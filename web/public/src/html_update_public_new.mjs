@@ -1,3 +1,4 @@
+import { html_overwrite } from "../../../love/public/src/html_overwrite.mjs";
 import { app_context_initialize } from "../../../love/public/src/app_context_initialize.mjs";
 import { js_code_call_statement } from "../../../love/public/src/js_code_call_statement.mjs";
 import { js_code_call_app_context_initialize } from "../../../love/public/src/js_code_call_app_context_initialize.mjs";
@@ -16,5 +17,6 @@ export async function html_update_public_new() {
     js_code_call_statement,
   );
   return r2;
+  await html_overwrite(name, path, joined2);
   let call = js_code_call_app_context_initialize(name_prefixed);
 }
