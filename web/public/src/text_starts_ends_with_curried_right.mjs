@@ -2,7 +2,7 @@ import { functions_rename_if_starts_ends_with } from "../../../love/public/src/f
 import { text_is_assert_multiple } from "../../../love/public/src/text_is_assert_multiple.mjs";
 import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { text_starts_ends_with } from "../../../love/public/src/text_starts_ends_with.mjs";
-export function text_starts_ends_with_curry_right(
+export function text_starts_ends_with_curried_right(
   f_name_prefix,
   f_name_suffix_before,
 ) {
