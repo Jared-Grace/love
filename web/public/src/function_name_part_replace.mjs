@@ -7,6 +7,7 @@ export function function_name_part_replace(f_name, from, to) {
   function lambda(item) {
     let eq = equal(item, from);
     let result = ternary(eq, to, item);
+    return result;
   }
   let mapped = list_map(parts, lambda);
 }
