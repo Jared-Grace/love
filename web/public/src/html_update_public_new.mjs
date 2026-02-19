@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { html_overwrite } from "../../../love/public/src/html_overwrite.mjs";
@@ -23,8 +24,9 @@ export async function html_update_public_new() {
   );
   let dependencies = property_get(r2, "dependencies");
   let scripts = property_get(r2, "scripts");
-  let joined = list_join_newline(scripts);
   let code = property_get(dependencies, "code");
+  list_add(list, item);
+  let joined = list_join_newline(scripts);
   let combined = text_combine(joined, code);
   return r2;
   await html_overwrite(a_name, f_path, combined);
