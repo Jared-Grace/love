@@ -2,10 +2,9 @@ import { vite_config_entry_path } from "../../../love/public/src/vite_config_ent
 import { app_context_initialize } from "../../../love/public/src/app_context_initialize.mjs";
 import { defineConfig } from "vite";
 export async function vite_config() {
+  let fn = app_context_initialize;
   const entry = {
-    [app_context_initialize.name]: vite_config_entry_path(
-      app_context_initialize,
-    ),
+    [fn.name]: vite_config_entry_path(fn),
     decompress: "src/text_decompress.js",
   };
   let r = defineConfig({
