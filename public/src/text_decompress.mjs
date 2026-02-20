@@ -1,15 +1,13 @@
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
-import LZString from "lz-string";
 export async function text_decompress(compressed) {
-  let lz = null;
-  let condition = browser_is();
-  let result = null;
-  if (condition) {
-    result = (await import("lz-string")).default;
+  let LZModule = null;
+  if (browser_is()) {
+    LZModule = await import("lz-string");
   } else {
-    result = LZString;
+    const LZ = await import("lz-string");
+    LZModule = LZ;
   }
-  lz = result;
-  let v = lz.decompressFromUTF16(compressed);
-  return v;
+  const LZString = LZModule.default ?? LZModule;
+  const result = LZString.decompressFromUTF16(compressed);
+  return result;
 }
