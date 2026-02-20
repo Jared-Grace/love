@@ -1,5 +1,5 @@
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
-import { assert_not } from "../../../love/public/src/assert_not.mjs";
+import { not_assert } from "../../../love/public/src/not_assert.mjs";
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
@@ -14,7 +14,7 @@ export async function function_identifier_replace(
   function lambda2(ast) {
     let identifiers_named = js_identifiers_named(ast, identifier_name);
     let b = list_empty_is(identifiers_named);
-    assert_not(b);
+    not_assert(b);
     let from = js_parse_expression(replacement);
     function lambda(i) {
       let v = object_replace(i, from);
