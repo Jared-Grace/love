@@ -9,7 +9,7 @@ export async function vite_config() {
   let c = defineConfig({
     build: {
       lib: {
-        name: "Test",
+        name: "ViteLib",
         formats: ["iife"],
         fileName: function lambda(format, entryName) {
           let r = `${entryName}.js`;
