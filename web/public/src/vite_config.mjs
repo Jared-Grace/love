@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 export function vite_config() {
-  return defineConfig({
+  let r = defineConfig({
     build: {
       lib: {
         entry: {
@@ -13,4 +13,5 @@ export function vite_config() {
       },
     },
   });
+  return r;
 }
