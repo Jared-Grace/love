@@ -5,7 +5,6 @@ export async function vite_config() {
   let fn = app_context_initialize;
   const entry = {
     [fn.name]: vite_config_entry_path(fn),
-    decompress: "src/text_decompress.js",
   };
   let r = defineConfig({
     build: {
