@@ -9,9 +9,9 @@ import { js_function_declaration_param_named } from "../../../love/public/src/js
 import { js_function_declaration_params_get } from "../../../love/public/src/js_function_declaration_params_get.mjs";
 import { js_flo } from "../../../love/public/src/js_flo.mjs";
 import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
-import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 export async function function_param_delete_multiple(param_names_comma) {
-  assert_arguments(arguments, 1);
+  arguments_assert(arguments, 1);
   let param_names = text_split_comma(param_names_comma);
   let indices = null;
   let f_name = error();

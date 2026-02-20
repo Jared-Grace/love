@@ -4,7 +4,7 @@ import { js_function_declaration_params_get } from "../../../love/public/src/js_
 import { js_flo } from "../../../love/public/src/js_flo.mjs";
 import { js_special_arguments } from "../../../love/public/src/js_special_arguments.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
-import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
 export function js_assert_arguments_args(ast) {
   let declaration = js_flo(ast);
@@ -17,5 +17,5 @@ export function js_assert_arguments_args(ast) {
     let args_new = [args_expression, size_expression];
     list_replace_all(args, args_new);
   }
-  js_visit_calls_named(ast, assert_arguments.name, lambda2);
+  js_visit_calls_named(ast, arguments_assert.name, lambda2);
 }
