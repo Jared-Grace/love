@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 
+import { function_name_to_path } from '../public/src/function_name_to_path.mjs';
 export default defineConfig({
   build: {
     lib: {
