@@ -1,9 +1,9 @@
-import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { app_api_generic_url_body } from "../../../love/public/src/app_api_generic_url_body.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { property_initialize } from "../../../love/public/src/property_initialize.mjs";
 export async function app_api_generic(a) {
-  assert_arguments(arguments, 1);
+  arguments_assert(arguments, 1);
   let f_name = property_get(a, "f_name");
   let args = property_initialize(a, "args", []);
   let fn_http = property_get(a, "fn_http");
