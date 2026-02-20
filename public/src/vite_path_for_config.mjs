@@ -4,6 +4,6 @@ import { function_name_to_path } from "../../../love/public/src/function_name_to
 import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
 export function vite_path_for_config() {
   let p = folder_previous();
-  let joined = path_join([p]);
   let path = function_name_to_path(app_context_initialize.name);
+  let joined = path_join([path]);
 }
