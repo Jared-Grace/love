@@ -7,7 +7,9 @@ export async function vite_config() {
     build: {
       lib: {
         entry: {
-          compress: "src/text_compress.js",
+          [app_context_initialize.name]: vite_path_for_config(
+            app_context_initialize,
+          ),
           decompress: "src/text_decompress.js",
         },
         name: "TextCompress",
