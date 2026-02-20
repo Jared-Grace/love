@@ -1,10 +1,10 @@
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { file_name_html } from "../../../love/public/src/file_name_html.mjs";
-import { folder_public_combine } from "../../../love/public/src/folder_public_combine.mjs";
+import { folder_public_join } from "../../../love/public/src/folder_public_join.mjs";
 import { user_repo_path_combine } from "../../../love/public/src/user_repo_path_combine.mjs";
 export async function html_index_generate(app_name) {
   let f_name = file_name_html("index");
-  let combined2 = folder_public_combine(f_name);
+  let combined2 = folder_public_join(f_name);
   let combined = await user_repo_path_combine(combined2);
   let contents = `<!DOCTYPE html>
 <html>
