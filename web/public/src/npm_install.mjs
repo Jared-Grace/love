@@ -1,6 +1,5 @@
-import { command_line } from "../../../love/public/src/command_line.mjs";
+import { npm_install_generic } from "../../../love/public/src/npm_install_generic.mjs";
 export async function npm_install(package_name) {
   let before = "";
-  const command = "npm install " + before + package_name + "@latest";
-  await command_line(command);
+  await npm_install_generic(before, package_name);
 }
