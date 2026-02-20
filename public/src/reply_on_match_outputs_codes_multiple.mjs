@@ -1,9 +1,9 @@
 import { reply_on_match_property_multiple_lambda } from "../../../love/public/src/reply_on_match_property_multiple_lambda.mjs";
 import { reply_on_match_output_multiple_lambda } from "../../../love/public/src/reply_on_match_output_multiple_lambda.mjs";
 import { reply_on_match } from "../../../love/public/src/reply_on_match.mjs";
-import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 export function reply_on_match_outputs_codes_multiple(fn_a, outputs, codes) {
-  assert_arguments(arguments, 3);
+  arguments_assert(arguments, 3);
   let on_match_outputs = reply_on_match_output_multiple_lambda(outputs);
   const property_name = "codes";
   let on_match_codes = reply_on_match_property_multiple_lambda(

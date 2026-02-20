@@ -1,5 +1,5 @@
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { text_empty_not_is_assert } from "../../../love/public/src/text_empty_not_is_assert.mjs";
 import { data_function_current_restore } from "../../../love/public/src/data_function_current_restore.mjs";
 import { function_name_unalias } from "../../../love/public/src/function_name_unalias.mjs";
@@ -12,7 +12,7 @@ import { function_new } from "../../../love/public/src/function_new.mjs";
 import { function_current_get } from "../../../love/public/src/function_current_get.mjs";
 import { todo } from "../../../love/public/src/todo.mjs";
 export async function task_new(task_name) {
-  assert_arguments(arguments, 1);
+  arguments_assert(arguments, 1);
   text_empty_not_is_assert(task_name);
   let f_name = await function_current_get();
   let result2 = task_function_name_part();
