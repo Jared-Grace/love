@@ -6,6 +6,6 @@ export async function vite_run() {
   let path = vite_config_path();
   let stdout = await command_line("vite --config " + path);
   let exists = await file_exists(path);
-  assert(b);
+  assert(exists);
   return stdout;
 }
