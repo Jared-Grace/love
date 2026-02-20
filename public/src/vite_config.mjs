@@ -11,6 +11,10 @@ export async function vite_config() {
       lib: {
         name: "Test",
         formats: ["iife"],
+        fileName: function lambda(format, entryName) {
+          let r = `${entryName}.js`;
+          return r;
+        },
       },
     },
   });
