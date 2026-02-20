@@ -1,4 +1,7 @@
+import { app_context_initialize } from "../../../love/public/src/app_context_initialize.mjs";
+import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
 import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
 export function vite_path_for_config() {
   folder_previous();
+  function_name_to_path(app_context_initialize.name);
 }
