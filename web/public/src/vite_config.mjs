@@ -5,7 +5,7 @@ import { defineConfig } from "vite";
 export async function vite_config() {
   let fn = app_context_initialize;
   const entry = {};
-  let to2 = object_merge(entry, {
+  object_merge(entry, {
     [fn.name]: vite_config_entry_path(fn),
   });
   let r = defineConfig({
