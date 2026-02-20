@@ -5,7 +5,14 @@
   <title>original_bible</title>
 </head>
 <body>
-  <script type="module"> 
+  <script type="importmap"> 
+    {
+ "imports": {
+  "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm"
+ }
+}
+  </script>
+<script type="module"> 
     let global = {};
 async function app_context_initialize(fn) {
   const root = html_document_body();
