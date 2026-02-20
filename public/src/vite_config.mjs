@@ -10,8 +10,8 @@ export async function vite_config() {
     build: {
       lib: {
         entry: entry,
-        name: "TextCompress",
-        fileName: "text-compress",
+        name: "Test",
+        fileName: "test",
         formats: ["iife"],
       },
     },
