@@ -15,6 +15,7 @@ export async function vite_config() {
           let r = `${entryName}.js`;
           return r;
         },
+        outDir: "dist",
       },
     },
   });
