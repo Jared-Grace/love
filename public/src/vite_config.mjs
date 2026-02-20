@@ -6,7 +6,7 @@ export async function vite_config() {
   const entry = {};
   vite_config_entry_add(entry, app_context_initialize);
   vite_config_entry_add(entry, app_index_main);
-  let r = defineConfig({
+  let c = defineConfig({
     build: {
       lib: {
         entry: entry,
@@ -15,5 +15,5 @@ export async function vite_config() {
       },
     },
   });
-  return r;
+  return c;
 }
