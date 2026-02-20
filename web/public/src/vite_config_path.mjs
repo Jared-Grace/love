@@ -1,1 +1,3 @@
-export function vite_config_path() {}
+export function vite_config_path() {
+  "scripts";
+}
