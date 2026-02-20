@@ -5,14 +5,7 @@
   <title>original_bible</title>
 </head>
 <body>
-  <script type="importmap"> 
-    {
- "imports": {
-  "lz-string": "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"
- }
-}
-  </script>
-<script type="module"> 
+  <script type="module"> 
     let global = {};
 async function app_context_initialize(fn) {
   const root = html_document_body();
@@ -698,21 +691,10 @@ async function json_decompress(compressed) {
   return text;
 }
 async function text_decompress(compressed) {
-  let lz = null;
-  let condition = browser_is();
-  let result = null;
-  if (condition) {
-    result = (await import("lz-string")).default;
-  } else {
-    result = LZString;
-  }
-  lz = result;
-  let v = lz.decompressFromUTF16(compressed);
-  return v;
-}
-function browser_is() {
-  let b = typeof window !== "undefined" && typeof window.document !== "undefined";
-  return b;
+  let imported = await import("lz-string");
+  const l = imported.default ?? imported;
+  const decompressed = l.decompressFromUTF16(compressed);
+  return decompressed;
 }
 function list_last(list) {
   list_empty_not_is_assert(list);
@@ -892,6 +874,10 @@ async function firebase_storage_function_run_generic(version_get, f_name, call) 
   } else {
     eval(joined);
   }
+}
+function browser_is() {
+  let b = typeof window !== "undefined" && typeof window.document !== "undefined";
+  return b;
 }
 function list_join_newline(list) {
   let separator = newline();
@@ -2060,9 +2046,10 @@ async function json_compress(data) {
   return compressed;
 }
 async function text_compress(text) {
-  const LZString = (await import("lz-string")).default;
-  let v = LZString.compressToUTF16(text);
-  return v;
+  const LZModule = await import("lz-string");
+  const LZString = LZModule.default ?? LZModule;
+  const compressed = LZString.compressToUTF16(text);
+  return compressed;
 }
 async function app_a_download_paths() {
   let path_folder = repos_folder();
