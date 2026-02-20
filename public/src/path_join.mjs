@@ -1,8 +1,8 @@
-import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
 export function path_join(segments) {
-  assert_arguments(arguments, 1);
+  arguments_assert(arguments, 1);
   let parts = [];
   for (let seg of segments) {
     if (not(seg)) {

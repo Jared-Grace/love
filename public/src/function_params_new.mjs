@@ -1,7 +1,7 @@
 import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
 import { js_identifiers_names } from "../../../love/public/src/js_identifiers_names.mjs";
 import { list_intersect_empty_is_assert } from "../../../love/public/src/list_intersect_empty_is_assert.mjs";
-import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
@@ -12,7 +12,7 @@ export async function function_params_new(
   param_names_comma,
   values_default_comma,
 ) {
-  assert_arguments(arguments, 3);
+  arguments_assert(arguments, 3);
   let param_names = text_split(param_names_comma, ",");
   let values_default = text_split(values_default_comma, ",");
   await function_params_new_generic(

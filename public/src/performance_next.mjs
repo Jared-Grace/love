@@ -1,4 +1,4 @@
-import { assert_arguments } from "../../../love/public/src/assert_arguments.mjs";
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -6,7 +6,7 @@ import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { performance_now } from "../../../love/public/src/performance_now.mjs";
 export function performance_next(p, category) {
-  assert_arguments(arguments, 2);
+  arguments_assert(arguments, 2);
   const time = performance_now();
   let delta = null;
   let e = list_empty_not_is(p);
