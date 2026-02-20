@@ -1,10 +1,8 @@
-import { path_join } from "../../../love/public/src/path_join.mjs";
+import { folder_previous_join } from "../../../love/public/src/folder_previous_join.mjs";
 import { app_context_initialize } from "../../../love/public/src/app_context_initialize.mjs";
 import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
-import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
 export function vite_path_for_config() {
   let path = function_name_to_path(app_context_initialize.name);
-  let p = folder_previous();
-  let joined = path_join([p, path]);
+  let joined = folder_previous_join(path);
   return joined;
 }
