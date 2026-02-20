@@ -9,7 +9,6 @@ export async function vite_config() {
   let c = defineConfig({
     build: {
       lib: {
-        entry: entry,
         name: "Test",
         formats: ["iife"],
       },
