@@ -1,10 +1,7 @@
-import { file_exists_assert } from "../../../love/public/src/file_exists_assert.mjs";
+import { vite_run_command } from "../../../love/public/src/vite_run_command.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
-import { vite_config_path } from "../../../love/public/src/vite_config_path.mjs";
 export async function vite_run() {
-  let path = vite_config_path();
-  const command = "vite --config " + path;
-  await file_exists_assert(path);
+  const command = await vite_run_command();
   let stdout = await command_line(command);
   return stdout;
 }
