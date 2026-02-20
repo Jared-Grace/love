@@ -1,5 +1,7 @@
+import { app_context_initialize } from "../../../love/public/src/app_context_initialize.mjs";
 import { defineConfig } from "vite";
-export function vite_config() {
+export async function vite_config() {
+  await app_context_initialize(fn);
   let r = defineConfig({
     build: {
       lib: {
