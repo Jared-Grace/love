@@ -9,9 +9,9 @@ export function html_code_script_attributes(attributes, middle) {
   function lambda(item) {
     let key = property_get(item, "key");
     let value = property_get(item, "value");
+    let value_padded = text_pad(value, '"');
   }
   let mapped = list_map(list2, lambda);
-  let padded = text_pad(s, '"');
   let combined2 = text_between_equal(key, padded);
   let c = `<script${attributes}> 
     ${middle}
