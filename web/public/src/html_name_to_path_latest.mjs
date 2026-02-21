@@ -2,6 +2,6 @@ import { app_shared_name_latest_text } from "../../../love/public/src/app_shared
 import { html_name_to_path_folder } from "../../../love/public/src/html_name_to_path_folder.mjs";
 export function html_name_to_path_latest(name) {
   const folder = app_shared_name_latest_text();
-  let file_path = html_name_to_path_folder(name, folder);
+  let file_path = html_name_to_path_folder(name, folder, file_name_html);
   return file_path;
 }
