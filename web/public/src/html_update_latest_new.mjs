@@ -19,6 +19,6 @@ export async function html_update_latest_new(search) {
   let code3 = js_code_dot_same(app_context_initialize.a_name);
   let code = js_code_call_args(code3, [code2]);
   let c2 = html_code_script_attributes({}, code);
-  let joined = list_join_newline(list);
-  await html_overwrite(a_name, f_path_latest, c);
+  let joined = list_join_newline([c, c2]);
+  await html_overwrite(a_name, f_path_latest, joined);
 }
