@@ -14,6 +14,7 @@ export async function vite_config() {
   let c = defineConfig({
     publicDir: false,
     define: {
+      "process.env.NODE_ENV": JSON.stringify("production"),
       "process.env": {},
       process: {},
     },
