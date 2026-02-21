@@ -1,3 +1,4 @@
+import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -14,7 +15,8 @@ export function html_code_script_attributes(attributes, middle) {
     return combined;
   }
   let mapped = list_map(list, lambda);
-  let joined = list_join_space(list);
+  let joined = list_join_space(mapped);
+  list_add_first(list2, item2);
   let c = `<script${"attributes"}> 
     ${middle}
   </script>`;
