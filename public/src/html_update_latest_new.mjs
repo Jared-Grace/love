@@ -9,6 +9,6 @@ export async function html_update_latest_new(search) {
   let a_name = property_get(r, "a_name");
   let f_name = property_get(r, "f_name");
   let src = file_name_js(f_name);
-  let r2 = html_code_script_src(src, "");
-  await html_overwrite(a_name, f_path_latest, joined);
+  let c = html_code_script_src(src, "");
+  await html_overwrite(a_name, f_path_latest, c);
 }
