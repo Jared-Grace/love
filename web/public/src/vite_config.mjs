@@ -12,7 +12,7 @@ export async function vite_config() {
         name: "ViteLib",
         formats: ["iife"],
         fileName: function lambda(format, entryName) {
-          let r = `${entryName}.js`;
+          let r = `${entryName}${".js"}`;
           return r;
         },
         outDir: folder_public(),
