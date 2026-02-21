@@ -14,5 +14,6 @@ export function command_line_text_env_vars(dictionary, command) {
   }
   let mapped = list_map(list, lambda);
   list_add(mapped, command);
-  let joined = list_join(list2, separator);
+  let c = list_join(mapped, " && ");
+  return c;
 }
