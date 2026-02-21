@@ -13,7 +13,7 @@ export async function html_update_latest_new(search) {
   let f_name = property_get(r, "f_name");
   let src = file_name_js(f_name);
   let c = html_code_script_src(src);
-  let code = js_code_call_args(fn_name, args);
+  let code = js_code_call_args(fn_name, []);
   let middle = 1;
   let c2 = html_code_script_attributes({}, middle);
   await html_overwrite(a_name, f_path_latest, c);
