@@ -1,3 +1,4 @@
+import { list_join } from "../../../love/public/src/list_join.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
@@ -13,4 +14,5 @@ export function command_line_text_env_vars(dictionary, command) {
   }
   let mapped = list_map(list, lambda);
   list_add(mapped, command);
+  let joined = list_join(list2, separator);
 }
