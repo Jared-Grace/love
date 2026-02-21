@@ -3,7 +3,7 @@ import { vite_config_file_name_get } from "../../../love/public/src/vite_config_
 import { folder_public } from "../../../love/public/src/folder_public.mjs";
 import { defineConfig } from "vite";
 export async function vite_config() {
-  let entry = process_env(env_var_name);
+  let entry = process_env("lib_entry");
   let c = defineConfig({
     publicDir: false,
     build: {
