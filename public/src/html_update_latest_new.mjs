@@ -10,5 +10,6 @@ export async function html_update_latest_new(search) {
   let f_name = property_get(r, "f_name");
   let src = file_name_js(f_name);
   let c = html_code_script_src(src);
+  html_code_script;
   await html_overwrite(a_name, f_path_latest, c);
 }
