@@ -4,7 +4,7 @@ export function html_code_script_src(src, middle) {
     {
       src,
     },
-    middle,
+    "",
   );
   return c;
 }
