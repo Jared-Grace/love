@@ -14,12 +14,12 @@ export async function vite_config() {
     publicDir: false,
     build: {
       emptyOutDir: false,
+      outDir: folder_public(),
       lib: {
         entry,
         name,
         formats: ["iife"],
         fileName: vite_config_file_name_get,
-        outDir: folder_public(),
       },
     },
   });
