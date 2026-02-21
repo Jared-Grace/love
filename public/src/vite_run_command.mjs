@@ -12,5 +12,5 @@ export async function vite_run_command(lib_entry) {
     [env_var_name]: lib_entry,
   };
   let c = command_line_text_env_vars(env_vars, command);
-  return command;
+  return c;
 }
