@@ -12,7 +12,7 @@ export async function app_index_main_fns_migrate() {
       let node = property_get(v, "node");
       let properties = js_object_expression_properties(node);
       function lambda4(item2) {}
-      let filtered = list_filter(list, lambda4);
+      let filtered = list_filter(properties, lambda4);
       function lambda3(item) {
         log(item);
       }
