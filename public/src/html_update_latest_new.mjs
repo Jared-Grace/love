@@ -16,7 +16,7 @@ export async function html_update_latest_new(search) {
   let src = file_name_js(f_name);
   let c = html_code_script_src(src);
   let code2 = js_code_dot_same(f_name);
-  let code3 = js_code_dot_same(app_context_initialize.a_name);
+  let code3 = js_code_dot_same(app_context_initialize.name);
   let code = js_code_call_args(code3, [code2]);
   let c2 = html_code_script_attributes({}, code);
   let joined = list_join_newline([c, c2]);
