@@ -13,6 +13,7 @@ export async function app_index_main_fns_migrate() {
       let node = property_get(v, "node");
       let properties = js_object_expression_properties(node);
       function lambda4(item2) {
+        let key = property_get(item2, "key");
         let ii = js_identifier_is(node2);
       }
       let filtered = list_filter(properties, lambda4);
