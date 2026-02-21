@@ -8,7 +8,7 @@ export async function vite_run_fn(f_name, path_prefix) {
   let path = function_name_to_path(f_name);
   let name = path_name(path);
   let combined = text_combine(path_prefix, name);
-  const command = await vite_run_command(path, name);
+  const command = await vite_run_command(combined, name);
   log_keep(command);
   let stdout = await command_line(command);
   return stdout;
