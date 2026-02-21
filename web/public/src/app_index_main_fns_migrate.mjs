@@ -9,7 +9,7 @@ export async function app_index_main_fns_migrate() {
     function lambda2(v) {
       let node = property_get(v, "node");
       let properties = js_object_expression_properties(e);
-      log_unparse(node2);
+      log_unparse(node);
     }
     js_visit_type(ast, "ObjectExpression", lambda2);
   }
