@@ -18,7 +18,7 @@ export async function vite_config() {
       outDir,
       lib: {
         entry,
-        name: name,
+        name,
         formats: ["iife"],
         fileName: vite_config_file_name_get,
       },
