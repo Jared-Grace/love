@@ -1,3 +1,4 @@
+import { text_combine_3 } from "../../../love/public/src/text_combine_3.mjs";
 import { list_join } from "../../../love/public/src/list_join.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -9,6 +10,7 @@ export function command_line_text_env_vars(env_vars, command) {
   function lambda(item) {
     let key = property_get(item, "key");
     let value = property_get(item, "value");
+    let combined2 = text_combine_3(a, b, c2);
     let combined = text_combine_multiple(["set ", key, "=", value]);
     return combined;
   }
