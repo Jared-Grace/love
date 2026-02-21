@@ -11,9 +11,9 @@ export async function app_index_main_fns_migrate() {
       let node = property_get(v, "node");
       let properties = js_object_expression_properties(node);
       function lambda3(item) {
-        log_unparse(node2);
+        log_unparse(item);
       }
-      each(list2, lambda3);
+      each(properties, lambda3);
     }
     js_visit_type(ast, "ObjectExpression", lambda2);
   }
