@@ -1,3 +1,5 @@
+import { fn_name } from "../../../love/public/src/fn_name.mjs";
+import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { html_code_script_attributes } from "../../../love/public/src/html_code_script_attributes.mjs";
 import { html_code_script_src } from "../../../love/public/src/html_code_script_src.mjs";
 import { html_overwrite } from "../../../love/public/src/html_overwrite.mjs";
@@ -11,6 +13,8 @@ export async function html_update_latest_new(search) {
   let f_name = property_get(r, "f_name");
   let src = file_name_js(f_name);
   let c = html_code_script_src(src);
-  let c2 = html_code_script_attributes(attributes, middle);
+  let code = js_code_call_args(fn_name, args);
+  let middle = 1;
+  let c2 = html_code_script_attributes({}, middle);
   await html_overwrite(a_name, f_path_latest, c);
 }
