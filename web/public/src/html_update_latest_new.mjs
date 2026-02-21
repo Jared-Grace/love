@@ -1,3 +1,4 @@
+import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { app_context_initialize } from "../../../love/public/src/app_context_initialize.mjs";
 import { js_code_dot_same } from "../../../love/public/src/js_code_dot_same.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
@@ -18,5 +19,6 @@ export async function html_update_latest_new(search) {
   let code3 = js_code_dot_same(app_context_initialize.a_name);
   let code = js_code_call_args(code3, [code2]);
   let c2 = html_code_script_attributes({}, code);
+  let joined = list_join_newline(list);
   await html_overwrite(a_name, f_path_latest, c);
 }
