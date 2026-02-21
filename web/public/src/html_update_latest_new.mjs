@@ -1,4 +1,4 @@
-import { js_code_dot } from "../../../love/public/src/js_code_dot.mjs";
+import { js_code_dot_same } from "../../../love/public/src/js_code_dot_same.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { html_code_script_attributes } from "../../../love/public/src/html_code_script_attributes.mjs";
 import { html_code_script_src } from "../../../love/public/src/html_code_script_src.mjs";
@@ -13,7 +13,7 @@ export async function html_update_latest_new(search) {
   let f_name = property_get(r, "f_name");
   let src = file_name_js(f_name);
   let c = html_code_script_src(src);
-  let code2 = js_code_dot(f_name, f_name);
+  let code2 = js_code_dot_same(f_name);
   let code = js_code_call_args(f_name, []);
   let middle = 1;
   let c2 = html_code_script_attributes({}, middle);
