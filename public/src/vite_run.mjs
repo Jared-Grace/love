@@ -10,8 +10,8 @@ export async function vite_run(search) {
   let f_names = [f_name, app_context_initialize.name];
   let latest = app_shared_name_latest_text();
   let s = text_slash_forward();
-  let combined = text_combine(latest, right);
-  let r2 = vite_run_fn_curried_right(path_prefix);
+  let combined = text_combine(latest, s);
+  let r2 = vite_run_fn_curried_right(combined);
   let waited = await list_map_unordered_async(f_names, r2);
   return waited;
 }
