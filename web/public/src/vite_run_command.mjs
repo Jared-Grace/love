@@ -1,3 +1,4 @@
+import { vite_config_name } from "../../../love/public/src/vite_config_name.mjs";
 import { vite_config_lib_entry } from "../../../love/public/src/vite_config_lib_entry.mjs";
 import { command_line_text_env_vars } from "../../../love/public/src/command_line_text_env_vars.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
@@ -10,7 +11,7 @@ export async function vite_run_command(lib_entry, name) {
   let env_var_name = vite_config_lib_entry();
   let env_vars = {
     [env_var_name]: lib_entry,
-    ["name"]: name,
+    [vite_config_name()]: name,
   };
   let c = command_line_text_env_vars(env_vars, command);
   return c;
