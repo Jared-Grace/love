@@ -1,4 +1,4 @@
 export function folder_public() {
-  let v = "public";
-  return v;
+  let p = "public";
+  return p;
 }
