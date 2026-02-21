@@ -1,10 +1,10 @@
+import { app_prefix_without } from "../../../love/public/src/app_prefix_without.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 import { app_search } from "../../../love/public/src/app_search.mjs";
 import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { app_g } from "../../../love/public/src/app_g.mjs";
 import { html_button_wide } from "../../../love/public/src/html_button_wide.mjs";
-import { app_prefix_without_fn } from "../../../love/public/src/app_prefix_without_fn.mjs";
 import { window_open_app_curried_right } from "../../../love/public/src/window_open_app_curried_right.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_bible } from "../../../love/public/src/app_bible.mjs";
@@ -60,7 +60,7 @@ export function app_index_main(context) {
   let lambda = window_open_app_curried_right(hash);
   function lambda3(a) {
     let fn = property_get(a, "app_fn");
-    let without = app_prefix_without_fn(fn);
+    let without = app_prefix_without(fn);
     function lambda2() {
       lambda(fn);
     }
