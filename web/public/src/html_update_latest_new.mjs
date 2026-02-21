@@ -1,3 +1,4 @@
+import { app_context_initialize } from "../../../love/public/src/app_context_initialize.mjs";
 import { js_code_dot_same } from "../../../love/public/src/js_code_dot_same.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { html_code_script_attributes } from "../../../love/public/src/html_code_script_attributes.mjs";
@@ -14,7 +15,7 @@ export async function html_update_latest_new(search) {
   let src = file_name_js(f_name);
   let c = html_code_script_src(src);
   let code2 = js_code_dot_same(f_name);
-  let code3 = js_code_dot_same(f_name2);
+  let code3 = js_code_dot_same(app_context_initialize.a_name);
   let code = js_code_call_args(code2, [code2]);
   let middle = 1;
   let c2 = html_code_script_attributes({}, middle);
