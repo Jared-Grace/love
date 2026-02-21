@@ -26,7 +26,7 @@ export function path_join(segments) {
       }
     }
   }
-  let path = parts.join("/");
+  let s2 = text_slash_forward();
+  let path = parts.join(s2);
   return path;
-  text_slash_forward();
 }
