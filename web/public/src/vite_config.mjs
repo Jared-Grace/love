@@ -9,14 +9,14 @@ export async function vite_config() {
   let env_var_name = vite_config_lib_entry();
   let entry = process_env(env_var_name);
   entry = text_trim(entry);
-  let name2 = path_name(entry);
+  let name = path_name(entry);
   let c = defineConfig({
     publicDir: false,
     build: {
       emptyOutDir: false,
       lib: {
         entry,
-        name: entry,
+        name,
         formats: ["iife"],
         fileName: vite_config_file_name_get,
         outDir: folder_public(),
