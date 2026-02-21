@@ -10,8 +10,8 @@ export function command_line_text_env_vars(env_vars, command) {
   function lambda(item) {
     let key = property_get(item, "key");
     let value = property_get(item, "value");
-    let combined2 = text_combine_3(a, b, c2);
-    let combined = text_combine_multiple(["set ", key, "=", value]);
+    let combined2 = text_combine_3(key, "=", value);
+    let combined = text_combine_multiple(["set ", combined2]);
     return combined;
   }
   let mapped = list_map(list, lambda);
