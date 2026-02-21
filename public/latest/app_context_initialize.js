@@ -1,0 +1,1 @@
+var app_context_initialize=(function(e){"use strict";async function o(t,n){await n({root:t})}function i(t){return{element:t}}function c(){let t=document.body;return i(t)}async function a(t){const n=c();await o(n,t)}return e.app_context_initialize=a,Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),e})({});
