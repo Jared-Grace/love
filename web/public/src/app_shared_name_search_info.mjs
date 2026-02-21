@@ -22,7 +22,7 @@ export async function app_shared_name_search_info(search) {
     a_name,
     f_path,
     f_path_latest,
-    app_name,
+    app_name,src_path_latest
   };
   return info;
 }
