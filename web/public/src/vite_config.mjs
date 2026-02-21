@@ -1,3 +1,5 @@
+import { exit } from "../../../love/public/src/exit.mjs";
+import { log } from "../../../love/public/src/log.mjs";
 import { vite_config_out_dir } from "../../../love/public/src/vite_config_out_dir.mjs";
 import { vite_config_name } from "../../../love/public/src/vite_config_name.mjs";
 import { text_trim } from "../../../love/public/src/text_trim.mjs";
@@ -11,6 +13,10 @@ export async function vite_config() {
   entry = text_trim(entry);
   let ev_name = vite_config_name();
   let name = process_env(ev_name);
+  log({
+    name,
+  });
+  exit();
   let c = defineConfig({
     publicDir: false,
     build: {
