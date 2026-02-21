@@ -1,3 +1,4 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -12,6 +13,7 @@ export async function app_index_main_fns_migrate() {
     function lambda2(v) {
       let node = property_get(v, "node");
       let properties = js_object_expression_properties(node);
+      let mapped = list_map_property(list, property_name);
       function lambda4(item2) {
         let key = property_get(item2, "key");
         let ii = js_identifier_is(key);
