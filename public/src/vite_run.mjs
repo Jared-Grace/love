@@ -4,7 +4,7 @@ import { app_shared_name_search_main } from "../../../love/public/src/app_shared
 export async function vite_run(search) {
   let f_name = await app_shared_name_search_main(search);
   let f_names = [f_name];
-  let r2 = vite_run_fn_curried_right(path_prefix);
+  let r2 = vite_run_fn_curried_right("");
   let waited = await list_map_unordered_async(f_names, r2);
   return waited;
 }
