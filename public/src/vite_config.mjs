@@ -13,6 +13,9 @@ export async function vite_config() {
   let outDir = process_env_trim(ev_out_dir);
   let c = defineConfig({
     publicDir: false,
+    define: {
+      "process.env": {},
+    },
     build: {
       emptyOutDir: false,
       outDir,
