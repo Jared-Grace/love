@@ -13,7 +13,7 @@ export async function html_update_latest_new(search) {
   let f_name = property_get(r, "f_name");
   let src = file_name_js(f_name);
   let c = html_code_script_src(src);
-  let code2 = js_code_dot(left, right);
+  let code2 = js_code_dot(f_name, f_name);
   let code = js_code_call_args(f_name, []);
   let middle = 1;
   let c2 = html_code_script_attributes({}, middle);
