@@ -4,6 +4,6 @@ import { html_name_to_path_folder } from "../../../love/public/src/html_name_to_
 export function html_name_to_path_latest(name) {
   let fn = file_name_html;
   const folder = app_shared_name_latest_text();
-  let file_path = html_name_to_path_folder(name, folder, file_name_html);
+  let file_path = html_name_to_path_folder(name, folder, fn);
   return file_path;
 }
