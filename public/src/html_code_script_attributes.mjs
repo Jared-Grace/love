@@ -1,6 +1,7 @@
 export function html_code_script_attributes(attributes, middle) {
-  let r = `<script${attributes}> 
+  let list = object_to_list(env_vars);
+  let c = `<script${attributes}> 
     ${middle}
   </script>`;
-  return r;
+  return c;
 }
