@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>sandbox</title>
+</head>
+<body>
+  <script type="module"> 
+    let global = {};
+    app_sandbox(  );
+    async function app_sandbox() {
+  await app_main_production("app_sandbox_main", "jared-grace");
+}
+function marker(marker_name) {
+  noop();
+}
+function noop() {}
+  </script>
+</body>
+</html>

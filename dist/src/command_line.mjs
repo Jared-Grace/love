@@ -1,0 +1,6 @@
+import { command_line_generic } from "../../../love/public/src/command_line_generic.mjs";
+export async function command_line(command) {
+  let extra = {};
+  const stdout = await command_line_generic(command, extra);
+  return stdout;
+}

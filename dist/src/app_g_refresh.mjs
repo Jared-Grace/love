@@ -1,0 +1,109 @@
+import { html_on_load_wait } from "../../../love/public/src/html_on_load_wait.mjs";
+import { html_clear } from "../../../love/public/src/html_clear.mjs";
+import { property_set_exists_not } from "../../../love/public/src/property_set_exists_not.mjs";
+import { html_div } from "../../../love/public/src/html_div.mjs";
+import { g_icon_cross } from "../../../love/public/src/g_icon_cross.mjs";
+import { html_style_head } from "../../../love/public/src/html_style_head.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
+import { html_scroll_center_container_now } from "../../../love/public/src/html_scroll_center_container_now.mjs";
+import { app_g_player_get } from "../../../love/public/src/app_g_player_get.mjs";
+import { app_g_click } from "../../../love/public/src/app_g_click.mjs";
+import { html_data_set_json } from "../../../love/public/src/html_data_set_json.mjs";
+import { html_class_add } from "../../../love/public/src/html_class_add.mjs";
+import { g_img_square_style } from "../../../love/public/src/g_img_square_style.mjs";
+import { html_img } from "../../../love/public/src/html_img.mjs";
+import { list_size } from "../../../love/public/src/list_size.mjs";
+import { each_index } from "../../../love/public/src/each_index.mjs";
+import { html_on_click } from "../../../love/public/src/html_on_click.mjs";
+import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
+import { each } from "../../../love/public/src/each.mjs";
+import { html_style_set } from "../../../love/public/src/html_style_set.mjs";
+import { g_character_img } from "../../../love/public/src/g_character_img.mjs";
+export async function app_g_refresh(
+  div_map_container,
+  game_prefix,
+  tiles_path,
+  rows,
+  map,
+) {
+  html_clear(div_map_container);
+  let div_map = html_div(div_map_container);
+  property_set_exists_not(div_map, "container", div_map_container);
+  html_style_assign(div_map, {
+    position: "relative",
+    display: "grid",
+  });
+  async function refresh() {
+    await app_g_refresh();
+  }
+  let npcs = property_get(map, "npcs");
+  let player = app_g_player_get();
+  let player_img_c = g_character_img(game_prefix, div_map, player);
+  const style_text = `@keyframes pulseGlow {
+  0%,100% { 
+    filter: 
+      drop-shadow(0 0 1px rgba(255,255,255,0.5))
+      drop-shadow(0 0 3px rgba(255,255,255,0.3))
+      drop-shadow(0 0 12px rgba(255,255,255,0.1)); 
+  }
+  50% { 
+    filter: 
+      drop-shadow(0 0 2px rgba(255,255,255,1))
+      drop-shadow(0 0 12px rgba(255,255,255,0.9))
+      drop-shadow(0 0 24px rgba(255,255,255,0.7)); 
+  }
+}
+  @keyframes upDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); } /* move up 10px */
+}`;
+  html_style_head(style_text);
+  html_style_set(player_img_c, "animation", "pulseGlow 2s infinite alternate");
+  function lambda12(npc) {
+    let ci = g_character_img(game_prefix, div_map, npc);
+    let christian = property_get(npc, "christian");
+    if (christian) {
+      g_icon_cross(div_map, npc);
+    }
+  }
+  each(npcs, lambda12);
+  let rows_size = list_size(rows);
+  html_style_assign(div_map, {
+    gridTemplateRows: "repeat(" + rows_size + ", auto)",
+  });
+  const tile_class = "tile";
+  function lambda2(columns, y) {
+    let columns_size = list_size(columns);
+    html_style_assign(div_map, {
+      gridTemplateColumns: "repeat(" + columns_size + ", auto)",
+    });
+    function lambda(r, x) {
+      const src = tiles_path + r + ".png";
+      let tile = html_img(div_map, src);
+      g_img_square_style(tile);
+      html_class_add(tile, tile_class);
+      const coordinates_tile = {
+        x,
+        y,
+      };
+      html_data_set_json(tile, "coordinates", coordinates_tile);
+    }
+    each_index(columns, lambda);
+  }
+  each_index(rows, lambda2);
+  html_on_click(div_map, on_click);
+  async function on_click(e) {
+    await app_g_click(
+      e,
+      tile_class,
+      div_map,
+      player_img_c,
+      map,
+      game_prefix,
+      refresh,
+    );
+  }
+  await html_on_load_wait();
+  let container = property_get(div_map, "container");
+  await html_scroll_center_container_now(player_img_c, container);
+}

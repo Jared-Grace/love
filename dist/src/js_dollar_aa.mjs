@@ -1,0 +1,22 @@
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
+import { js_code_call } from "../../../love/public/src/js_code_call.mjs";
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
+import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
+import { js_flo_body } from "../../../love/public/src/js_flo_body.mjs";
+import { js_parse_statement } from "../../../love/public/src/js_parse_statement.mjs";
+export function js_dollar_aa({
+  remaining,
+  node,
+  stack1,
+  stack2,
+  stack3,
+  ast,
+  afters,
+}) {
+  list_remove(stack2, stack1);
+  let body_block = js_flo_body(ast);
+  let code = js_code_call(arguments_assert.name);
+  let expression = js_parse_statement(code);
+  list_add_first(body_block, expression);
+  return;
+}
