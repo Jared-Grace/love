@@ -14,7 +14,7 @@ export async function html_update_latest_new(search) {
   let src = file_name_js(f_name);
   let c = html_code_script_src(src);
   let code2 = js_code_dot_same(f_name);
-  let code = js_code_call_args(f_name, []);
+  let code = js_code_call_args(code2, []);
   let middle = 1;
   let c2 = html_code_script_attributes({}, middle);
   await html_overwrite(a_name, f_path_latest, c);
