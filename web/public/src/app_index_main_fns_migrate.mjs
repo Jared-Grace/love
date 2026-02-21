@@ -12,7 +12,6 @@ export async function app_index_main_fns_migrate() {
     function lambda2(v) {
       let node = property_get(v, "node");
       let properties = js_object_expression_properties(node);
-      function lambda4(item2) {}
       let filtered = list_filter(properties, js_identifier_is);
       function lambda3(item) {
         log(item);
