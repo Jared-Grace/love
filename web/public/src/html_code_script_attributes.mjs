@@ -11,8 +11,7 @@ export function html_code_script_attributes(attributes, middle) {
     let value_padded = text_pad(value, '"');
     let combined = text_between_equal(key, value);
   }
-  let mapped = list_map(list2, lambda);
-  let combined2 = text_between_equal(key, padded);
+  let mapped = list_map(list, lambda);
   let c = `<script${attributes}> 
     ${middle}
   </script>`;
