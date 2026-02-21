@@ -15,6 +15,7 @@ export async function vite_config() {
     publicDir: false,
     define: {
       "process.env": {},
+      process: {},
     },
     build: {
       emptyOutDir: false,
