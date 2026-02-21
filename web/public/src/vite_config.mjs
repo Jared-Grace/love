@@ -1,10 +1,10 @@
+import { vite_config_out_dir } from "../../../love/public/src/vite_config_out_dir.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { vite_config_name } from "../../../love/public/src/vite_config_name.mjs";
 import { text_trim } from "../../../love/public/src/text_trim.mjs";
 import { vite_config_lib_entry } from "../../../love/public/src/vite_config_lib_entry.mjs";
 import { process_env } from "../../../love/public/src/process_env.mjs";
 import { vite_config_file_name_get } from "../../../love/public/src/vite_config_file_name_get.mjs";
-import { folder_public } from "../../../love/public/src/folder_public.mjs";
 import { defineConfig } from "vite";
 export async function vite_config() {
   let env_var_name = vite_config_lib_entry();
@@ -16,7 +16,7 @@ export async function vite_config() {
     publicDir: false,
     build: {
       emptyOutDir: false,
-      outDir: folder_public(),
+      outDir: vite_config_out_dir(),
       lib: {
         entry,
         name,
