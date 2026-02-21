@@ -11,6 +11,7 @@ export async function vite_config() {
   let c = defineConfig({
     publicDir: false,
     build: {
+      emptyOutDir: false,
       lib: {
         entry,
         name: "ViteLib",
