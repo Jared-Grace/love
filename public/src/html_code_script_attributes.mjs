@@ -8,7 +8,8 @@ export function html_code_script_attributes(attributes, middle) {
   let key2 = property_get(item, "key");
   let value = property_get(item, "value");
   let combined22 = text_between_equal(key2, value);
-  let mapped = list_map(list2, function lambda(item2) {});
+  function lambda(item2) {}
+  let mapped = list_map(list2, lambda);
   let padded = text_pad(s, '"');
   let combined2 = text_between_equal(key, padded);
   let c = `<script${attributes}> 
