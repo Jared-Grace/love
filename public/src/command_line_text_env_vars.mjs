@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -11,4 +12,5 @@ export function command_line_text_env_vars(dictionary, command) {
     return combined;
   }
   let mapped = list_map(list, lambda);
+  list_add(list2, item2);
 }
