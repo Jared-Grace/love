@@ -1,3 +1,4 @@
+import { folder_public_join } from "../../../love/public/src/folder_public_join.mjs";
 import { file_name_js } from "../../../love/public/src/file_name_js.mjs";
 import { html_name_to_path_latest_generic } from "../../../love/public/src/html_name_to_path_latest_generic.mjs";
 import { html_name_to_path_latest } from "../../../love/public/src/html_name_to_path_latest.mjs";
@@ -13,6 +14,8 @@ export async function app_shared_name_search_info(search) {
   let f_path = html_name_to_path(a_name);
   let f_path_latest = html_name_to_path_latest(a_name);
   let src_path_latest = html_name_to_path_latest_generic(a_name, file_name_js);
+  let file_name = file_name_js(a_name);
+  let src_path = folder_public_join(file_name);
   log_keep({
     search,
     a_name,
@@ -24,6 +27,7 @@ export async function app_shared_name_search_info(search) {
     f_path_latest,
     app_name,
     src_path_latest,
+    src_path,
   };
   return info;
 }
