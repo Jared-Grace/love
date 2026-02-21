@@ -1,4 +1,3 @@
-import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { js_code_call_args } from "../../../love/public/src/js_code_call_args.mjs";
 import { html_code_script_attributes } from "../../../love/public/src/html_code_script_attributes.mjs";
 import { html_code_script_src } from "../../../love/public/src/html_code_script_src.mjs";
