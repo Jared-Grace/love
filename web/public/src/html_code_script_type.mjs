@@ -1,5 +1,6 @@
 export function html_code_script_type(script_type, middle) {
-  let v = `<script${` type="${script_type}"`}> 
+  const attributes = ` type="${script_type}"`;
+  let v = `<script${attributes}> 
     ${middle}
   </script>`;
   return v;
