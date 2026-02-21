@@ -17,7 +17,7 @@ export function html_code_script_attributes(attributes, middle) {
   let mapped = list_map(list, lambda);
   list_add_first(mapped, "");
   let joined = list_join_space(mapped);
-  let c = `<script${"attributes"}> 
+  let c = `<script${joined}> 
     ${middle}
   </script>`;
   return c;
