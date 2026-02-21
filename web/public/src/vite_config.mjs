@@ -1,4 +1,4 @@
-import { file_name_js } from "../../../love/public/src/file_name_js.mjs";
+import { vite_config_file_name_get } from "../../../love/public/src/vite_config_file_name_get.mjs";
 import { folder_public } from "../../../love/public/src/folder_public.mjs";
 import { app_index_main } from "../../../love/public/src/app_index_main.mjs";
 import { function_name_to_path_fn } from "../../../love/public/src/function_name_to_path_fn.mjs";
@@ -12,10 +12,7 @@ export async function vite_config() {
         entry: path,
         name: "ViteLib",
         formats: ["iife"],
-        fileName: function vite_config_file_name_get(format, entryName) {
-          let r = file_name_js(entryName);
-          return r;
-        },
+        fileName: vite_config_file_name_get,
         outDir: folder_public(),
       },
     },
