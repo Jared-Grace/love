@@ -8,7 +8,7 @@ export function command_line_text_env_vars(env_vars, command) {
   let list = object_to_list(env_vars);
   let mapped2 = list_map(list, property_key_value_text_between_equal);
   function lambda(item) {
-    let combined = text_combine_multiple(["set ", combined2]);
+    let combined = text_combine_multiple(["set ", item]);
     return combined;
   }
   let mapped = list_map(mapped2, lambda);
