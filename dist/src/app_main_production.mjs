@@ -1,0 +1,10 @@
+import { firebase_deploy_function_destination_production } from "../../../love/public/src/firebase_deploy_function_destination_production.mjs";
+import { app_main } from "../../../love/public/src/app_main.mjs";
+export async function app_main_production(f_name, firebase_name_value) {
+  let v = await app_main(
+    f_name,
+    firebase_name_value,
+    firebase_deploy_function_destination_production,
+  );
+  return v;
+}

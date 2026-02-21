@@ -1,0 +1,11 @@
+import { function_run_line } from "../../../love/public/src/function_run_line.mjs";
+import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
+import { data_prompts } from "../../../love/public/src/data_prompts.mjs";
+export async function prompt_previous_at(index) {
+  arguments_assert(arguments, 1);
+  let result = await data_prompts();
+  let item = list_get_end(result, index);
+  let r = await function_run_line(item);
+  return r;
+}

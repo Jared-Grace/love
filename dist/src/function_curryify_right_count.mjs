@@ -1,0 +1,16 @@
+import { function_curryify_right_count_args_get_curried_right } from "../../../love/public/src/function_curryify_right_count_args_get_curried_right.mjs";
+import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
+import { function_curryify_right_name } from "../../../love/public/src/function_curryify_right_name.mjs";
+import { function_curryify_generic } from "../../../love/public/src/function_curryify_generic.mjs";
+export async function function_curryify_right_count(f_name, count) {
+  arguments_assert(arguments, 2);
+  function lambda(unaliased) {
+    let n = function_curryify_right_name(unaliased);
+    let combined = function_name_combine(n, count);
+    return combined;
+  }
+  let r2 = function_curryify_right_count_args_get_curried_right(count);
+  let output = await function_curryify_generic(f_name, lambda, r2);
+  return output;
+}

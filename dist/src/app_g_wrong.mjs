@@ -1,0 +1,31 @@
+import { g_themes } from "../../../love/public/src/g_themes.mjs";
+import { app_g_openai_split } from "../../../love/public/src/app_g_openai_split.mjs";
+import { list_get } from "../../../love/public/src/list_get.mjs";
+import { integer_random_0 } from "../../../love/public/src/integer_random_0.mjs";
+import { list_sort_number_mapper } from "../../../love/public/src/list_sort_number_mapper.mjs";
+import { list_size } from "../../../love/public/src/list_size.mjs";
+import { list_intersect } from "../../../love/public/src/list_intersect.mjs";
+import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
+import { property_get } from "../../../love/public/src/property_get.mjs";
+export function app_g_wrong(passage, passages, property) {
+  let text = property_get(passage, "text");
+  let objections = property_get(passage, property);
+  let split = app_g_openai_split(objections);
+  let ob = list_random_item(split);
+  let themes_correct = g_themes(text + " " + ob);
+  function lambda2(p) {
+    let text_candidate = property_get(p, "text");
+    let themes_candidate = g_themes(text_candidate);
+    let list2 = list_intersect(themes_candidate, themes_correct);
+    let size = list_size(list2);
+    return size;
+  }
+  list_sort_number_mapper(passages, lambda2);
+  let r6 = integer_random_0(1);
+  let passage_wrong = list_get(passages, r6);
+  let v2 = {
+    ob,
+    passage_wrong,
+  };
+  return v2;
+}

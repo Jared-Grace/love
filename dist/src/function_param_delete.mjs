@@ -1,0 +1,21 @@
+import { function_param_index } from "../../../love/public/src/function_param_index.mjs";
+import { list_remove_at } from "../../../love/public/src/list_remove_at.mjs";
+import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
+export async function function_param_delete(f_name, param_name) {
+  arguments_assert(arguments, 2);
+  let index = null;
+  await function_params_new_generic(
+    function_transform_current_lambda,
+    on_call,
+    f_name,
+  );
+  function on_call(args) {
+    list_remove_at(args, index);
+  }
+  function function_transform_current_lambda(ast) {
+    let params = null;
+    ({ params, index } = function_param_index(ast, param_name));
+    list_remove_at(params, index);
+  }
+}

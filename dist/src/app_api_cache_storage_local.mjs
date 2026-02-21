@@ -1,0 +1,7 @@
+import { app_api_generic } from "../../../love/public/src/app_api_generic.mjs";
+import { http_post_json_cache_storage_local } from "../../../love/public/src/http_post_json_cache_storage_local.mjs";
+export async function app_api_cache_storage_local(f_name, args) {
+  let fn = http_post_json_cache_storage_local;
+  let result = await app_api_generic(f_name, args, fn);
+  return result;
+}

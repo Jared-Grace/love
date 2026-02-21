@@ -1,0 +1,7 @@
+export function localhost_is() {
+  let li =
+    location.hostname === "localhost" ||
+    location.hostname === "127.0.0.1" ||
+    location.hostname === "::1";
+  return li;
+}
