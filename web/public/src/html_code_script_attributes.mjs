@@ -1,3 +1,4 @@
+import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { text_pad } from "../../../love/public/src/text_pad.mjs";
@@ -13,7 +14,8 @@ export function html_code_script_attributes(attributes, middle) {
     return combined;
   }
   let mapped = list_map(list, lambda);
-  let c = `<script${attributes}> 
+  let joined = list_join_space(list2);
+  let c = `<script${"attributes"}> 
     ${middle}
   </script>`;
   return c;
