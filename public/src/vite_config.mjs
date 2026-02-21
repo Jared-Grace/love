@@ -9,6 +9,7 @@ export async function vite_config() {
   let entry = process_env(env_var_name);
   entry = text_trim(entry);
   let c = defineConfig({
+    publicDir: false,
     build: {
       lib: {
         entry,
