@@ -4,6 +4,7 @@ import { app_index_main_fns } from "../../../love/public/src/app_index_main_fns.
 export async function app_index_main_fns_migrate() {
   async function lambda(ast) {
     let properties = js_object_expression_properties(e);
+    ("ObjectExpression");
   }
   let output = await function_transform_fn(app_index_main_fns, lambda);
 }
