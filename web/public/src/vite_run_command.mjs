@@ -10,6 +10,7 @@ export async function vite_run_command(lib_entry, name) {
   let env_var_name = vite_config_lib_entry();
   let env_vars = {
     [env_var_name]: lib_entry,
+    ["name"]: name,
   };
   let c = command_line_text_env_vars(env_vars, command);
   return c;
