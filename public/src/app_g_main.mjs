@@ -1,3 +1,4 @@
+import { app_shared_name_latest_text } from "../../../love/public/src/app_shared_name_latest_text.mjs";
 import { html_style_overflow_hidden } from "../../../love/public/src/html_style_overflow_hidden.mjs";
 import { html_font_sans_serif_set_html } from "../../../love/public/src/html_font_sans_serif_set_html.mjs";
 import { g_coordinates } from "../../../love/public/src/g_coordinates.mjs";
@@ -61,7 +62,7 @@ export async function app_g_main(context) {
   each([root], lambda);
   let path_prefix = "";
   let l = localhost_is();
-  const path_part = "latest";
+  const path_part = app_shared_name_latest_text();
   let sw = location_pathname_part_first_starts_with(path_part);
   if (l || sw) {
     path_prefix = "..\\";
