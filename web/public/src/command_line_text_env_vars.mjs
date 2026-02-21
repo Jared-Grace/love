@@ -7,7 +7,7 @@ export function command_line_text_env_vars(dictionary, command) {
   function lambda(item) {
     let key = property_get(item, "key");
     let value = property_get(item, "value");
-    let combined = text_combine_multiple(["set ", LIB_ENTRY, "="]);
+    let combined = text_combine_multiple(["set ", key, "=", value]);
   }
   let mapped = list_map(list, lambda);
 }
