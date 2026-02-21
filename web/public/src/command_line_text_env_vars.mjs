@@ -12,5 +12,5 @@ export function command_line_text_env_vars(dictionary, command) {
     return combined;
   }
   let mapped = list_map(list, lambda);
-  list_add(list2, item2);
+  list_add(mapped, command);
 }
