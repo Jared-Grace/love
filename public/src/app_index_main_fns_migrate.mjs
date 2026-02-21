@@ -8,7 +8,7 @@ export async function app_index_main_fns_migrate() {
   async function lambda(ast) {
     function lambda2(v) {
       let node = property_get(v, "node");
-      let properties = js_object_expression_properties(e);
+      let properties = js_object_expression_properties(node);
       log_unparse(node);
     }
     js_visit_type(ast, "ObjectExpression", lambda2);
