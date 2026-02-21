@@ -12,7 +12,7 @@ export async function vite_config() {
         entry: path,
         name: "ViteLib",
         formats: ["iife"],
-        fileName: function lambda(format, entryName) {
+        fileName: function vite_config_file_name_get(format, entryName) {
           let r = file_name_js(entryName);
           return r;
         },
