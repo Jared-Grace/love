@@ -4,8 +4,8 @@ import { defineConfig } from "vite";
 export async function vite_config() {
   let path = function_name_to_path_fn(app_index_main);
   let c = defineConfig({
+    publicDir: false,
     build: {
-      publicDir: false,
       lib: {
         entry: path,
         name: "ViteLib",
