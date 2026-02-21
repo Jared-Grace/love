@@ -1,3 +1,4 @@
+import { html_code_script } from "../../../love/public/src/html_code_script.mjs";
 import { html_code_script_module } from "../../../love/public/src/html_code_script_module.mjs";
 import { html_overwrite } from "../../../love/public/src/html_overwrite.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -7,5 +8,6 @@ export async function html_update_latest_new(search) {
   let f_path_latest = property_get(r, "f_path_latest");
   let a_name = property_get(r, "a_name");
   let script = html_code_script_module();
+  let r2 = html_code_script(middle);
   await html_overwrite(a_name, f_path_latest, joined);
 }
