@@ -1,8 +1,0 @@
-import { repo_path } from "../../../love/public/src/repo_path.mjs";
-import { command_line_git } from "../../../love/public/src/command_line_git.mjs";
-import { git_repo_url } from "../../../love/public/src/git_repo_url.mjs";
-export async function git_repo_clone(user, repo) {
-  const url = git_repo_url(user, repo);
-  let folder_name = repo_path(repo);
-  await command_line_git("clone " + url + " " + folder_name);
-}
