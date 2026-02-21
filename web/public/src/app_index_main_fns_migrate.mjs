@@ -15,7 +15,6 @@ export async function app_index_main_fns_migrate() {
         log_unparse(node2);
       }
       each(list2, lambda3);
-      let joined = list_join(list, separator);
     }
     js_visit_type(ast, "ObjectExpression", lambda2);
   }
