@@ -2,7 +2,6 @@ import { process_env_trim } from "../../../love/public/src/process_env_trim.mjs"
 import { vite_config_out_dir } from "../../../love/public/src/vite_config_out_dir.mjs";
 import { vite_config_name } from "../../../love/public/src/vite_config_name.mjs";
 import { vite_config_lib_entry } from "../../../love/public/src/vite_config_lib_entry.mjs";
-import { process_env } from "../../../love/public/src/process_env.mjs";
 import { vite_config_file_name_get } from "../../../love/public/src/vite_config_file_name_get.mjs";
 import { defineConfig } from "vite";
 export async function vite_config() {
