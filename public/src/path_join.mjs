@@ -1,3 +1,4 @@
+import { text_slash_forward } from "../../../love/public/src/text_slash_forward.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { folder_previous } from "../../../love/public/src/folder_previous.mjs";
@@ -27,4 +28,5 @@ export function path_join(segments) {
   }
   let path = parts.join("/");
   return path;
+  text_slash_forward();
 }
