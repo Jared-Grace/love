@@ -10,6 +10,7 @@ export function html_code_script_attributes(attributes, middle) {
     let value = property_get(item, "value");
     let value_padded = text_pad(value, '"');
     let combined = text_between_equal(key, value_padded);
+    return combined;
   }
   let mapped = list_map(list, lambda);
   let c = `<script${attributes}> 
