@@ -5,6 +5,7 @@ export async function vite_config() {
   let path = function_name_to_path_fn(app_index_main);
   let c = defineConfig({
     build: {
+      publicDir: false,
       lib: {
         entry: path,
         name: "ViteLib",
