@@ -7,7 +7,7 @@ import { defineConfig } from "vite";
 export async function vite_config() {
   let env_var_name = vite_config_lib_entry();
   let entry = process_env(env_var_name);
-  let trimmed = text_trim(message);
+  entry = text_trim(entry);
   let c = defineConfig({
     publicDir: false,
     build: {
