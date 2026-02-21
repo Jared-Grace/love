@@ -1,6 +1,5 @@
 import { text_combine_curried } from "../../../love/public/src/text_combine_curried.mjs";
 import { list_map_property_key_value_text_between_equal } from "../../../love/public/src/list_map_property_key_value_text_between_equal.mjs";
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { list_join } from "../../../love/public/src/list_join.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -8,12 +7,8 @@ import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
 export function command_line_text_env_vars(env_vars, command) {
   let list = object_to_list(env_vars);
   let mapped2 = list_map_property_key_value_text_between_equal(list);
-  let r = text_combine_curried(left);
-  function lambda(item) {
-    let combined = text_combine("set ", item);
-    return combined;
-  }
-  let mapped = list_map(mapped2, lambda);
+  let r = text_combine_curried("set ");
+  let mapped = list_map(mapped2, r);
   list_add(mapped, command);
   let c = list_join(mapped, " && ");
   return c;
