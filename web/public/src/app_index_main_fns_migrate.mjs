@@ -1,4 +1,4 @@
-import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
+import { log } from "../../../love/public/src/log.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
@@ -11,7 +11,7 @@ export async function app_index_main_fns_migrate() {
       let node = property_get(v, "node");
       let properties = js_object_expression_properties(node);
       function lambda3(item) {
-        log_unparse(item);
+        log(item);
       }
       each(properties, lambda3);
     }
