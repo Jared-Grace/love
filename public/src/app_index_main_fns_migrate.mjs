@@ -21,7 +21,7 @@ export async function app_index_main_fns_migrate() {
       function lambda3(item) {
         log(item);
       }
-      each(properties, lambda3);
+      each(filtered, lambda3);
     }
     js_visit_type(ast, "ObjectExpression", lambda2);
   }
