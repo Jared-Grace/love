@@ -1,3 +1,4 @@
+import { vite_config_name } from "../../../love/public/src/vite_config_name.mjs";
 import { path_name } from "../../../love/public/src/path_name.mjs";
 import { text_trim } from "../../../love/public/src/text_trim.mjs";
 import { vite_config_lib_entry } from "../../../love/public/src/vite_config_lib_entry.mjs";
@@ -10,6 +11,7 @@ export async function vite_config() {
   let entry = process_env(env_var_name);
   entry = text_trim(entry);
   let name = path_name(entry);
+  let r = vite_config_name();
   let c = defineConfig({
     publicDir: false,
     build: {
