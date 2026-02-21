@@ -1,3 +1,4 @@
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -10,6 +11,7 @@ export async function app_index_main_fns_migrate() {
     function lambda2(v) {
       let node = property_get(v, "node");
       let properties = js_object_expression_properties(node);
+      let filtered = list_filter(list, function lambda4(item2) {});
       function lambda3(item) {
         log(item);
       }
