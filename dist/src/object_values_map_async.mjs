@@ -1,9 +1,0 @@
-import { each_object_values_generic_async } from "../../../love/public/src/each_object_values_generic_async.mjs";
-import { object_adder_async } from "../../../love/public/src/object_adder_async.mjs";
-export async function object_values_map_async(object, lambda$value$key) {
-  async function lambda(oad) {
-    await each_object_values_generic_async(object, lambda$value$key, oad);
-  }
-  let result = await object_adder_async(lambda);
-  return result;
-}

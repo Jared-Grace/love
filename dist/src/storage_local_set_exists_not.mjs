@@ -1,8 +1,0 @@
-import { storage_local_exists } from "../../../love/public/src/storage_local_exists.mjs";
-import { not_assert } from "../../../love/public/src/not_assert.mjs";
-import { storage_local_set } from "../../../love/public/src/storage_local_set.mjs";
-export function storage_local_set_exists_not(app_fn, key, value) {
-  let e = storage_local_exists(app_fn, key);
-  not_assert(e);
-  storage_local_set(app_fn, key, value);
-}
