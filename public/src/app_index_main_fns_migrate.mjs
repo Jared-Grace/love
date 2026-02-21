@@ -6,7 +6,8 @@ export async function app_index_main_fns_migrate() {
   async function lambda(ast) {
     let properties = js_object_expression_properties(e);
     ("ObjectExpression");
-    js_visit_type(ast2, type, function lambda2(v) {});
+    function lambda2(v) {}
+    js_visit_type(ast2, type, lambda2);
   }
   let output = await function_transform_fn(app_index_main_fns, lambda);
 }
