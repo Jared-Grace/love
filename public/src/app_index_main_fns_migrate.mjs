@@ -1,3 +1,4 @@
+import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { log_exit } from "../../../love/public/src/log_exit.mjs";
@@ -25,6 +26,7 @@ export async function app_index_main_fns_migrate() {
       let property_name_b = "app_fn";
       let filter = function property_get_exists_curried_right_2_result(item3) {
         let value = property_get(item3, property_name_a);
+        let jin = js_identifier_not_is(id);
         let e = property_exists(value, property_name_b);
         return e;
       };
