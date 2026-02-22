@@ -16,7 +16,8 @@ export async function app_index_main_fns_migrate() {
       let properties = js_object_expression_properties(node);
       let mapped = list_map_property(properties, "key");
       let filtered = list_filter(mapped, js_identifier_is);
-      let mapped2 = list_map(list, function lambda4(item2) {});
+      function lambda4(item2) {}
+      let mapped2 = list_map(list, lambda4);
       function lambda3(item) {
         log(item);
       }
