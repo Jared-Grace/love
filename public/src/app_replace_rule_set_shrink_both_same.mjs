@@ -4,16 +4,16 @@ export function app_replace_rule_set_shrink_both_same() {
     rules: ["a b a > b"],
     goals: [
       {
-        end: "cabac",
-        start: "cbc",
+        start: "cabac",
+        end: "cbc",
       },
       {
-        end: "aaabaaa",
-        start: "aba",
+        start: "aaabaaa",
+        end: "aba",
       },
       {
-        end: "aaaaabaaaaa",
-        start: "aba",
+        start: "aaaaabaaaaa",
+        end: "aba",
       },
     ],
   };
