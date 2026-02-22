@@ -9,7 +9,7 @@ export function webpack_config() {
   const entry = folder_current_join(result);
   let r = {
     mode: "production",
-    entry: result,
+    entry: entry,
     output: {
       filename: "bundle.js",
       path: path.resolve("./dist"),
