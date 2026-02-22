@@ -1,3 +1,4 @@
+import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { js_identifier_named_try } from "../../../love/public/src/js_identifier_named_try.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { log_exit } from "../../../love/public/src/log_exit.mjs";
@@ -31,6 +32,7 @@ export async function app_index_main_fns_migrate() {
       let value = property_get(item2, "value");
       log_exit(value);
       let r3 = list_single_item(item4);
+      let name2 = js_identifier_name(i2);
       let filtered = list_filter(mapped, js_identifier_is);
       let names = js_identifiers_to_names(filtered);
       let mapped3 = list_map(names, list_single_item);
