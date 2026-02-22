@@ -1,6 +1,5 @@
 import { js_identifier_named } from "../../../love/public/src/js_identifier_named.mjs";
 import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
-import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { log_exit } from "../../../love/public/src/log_exit.mjs";
 import { js_call_args_curried } from "../../../love/public/src/js_call_args_curried.mjs";
@@ -32,8 +31,7 @@ export async function app_index_main_fns_migrate() {
           return;
         }
         let r2 = js_identifier_named(i, identifier_name);
-        let e = property_exists(i, identifier_name);
-        return e;
+        return r2;
       };
       let item2 = list_find(properties, filter);
       log_exit(item2);
