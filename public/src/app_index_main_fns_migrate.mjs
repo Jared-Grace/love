@@ -1,4 +1,4 @@
-import { property_equals } from "../../../love/public/src/property_equals.mjs";
+import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { log_exit } from "../../../love/public/src/log_exit.mjs";
 import { js_call_args_curried } from "../../../love/public/src/js_call_args_curried.mjs";
@@ -26,7 +26,7 @@ export async function app_index_main_fns_migrate() {
       let property_name = "app_fn";
       let filter = function object_property_equals_lambda_result(item3) {
         let value = property_get(item3, property_name2);
-        let r2 = property_equals(value, property_name, property_value);
+        let r2 = property_exists(value, property_name, property_value);
         return r2;
       };
       let item2 = list_find(list, filter);
