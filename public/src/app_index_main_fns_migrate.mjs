@@ -21,7 +21,6 @@ export async function app_index_main_fns_migrate() {
     function lambda2(v) {
       let node = property_get(v, "node");
       let properties = js_object_expression_properties(node);
-      log_exit(properties);
       let property_name_a = "key";
       let property_name_b = "app_fn";
       let filter = property_get_exists_curried_right_2(
@@ -29,6 +28,7 @@ export async function app_index_main_fns_migrate() {
         property_name_b,
       );
       let item2 = list_find(list, filter);
+      log_exit(item2);
       let mapped = list_map_property(properties, "key");
       let filtered = list_filter(mapped, js_identifier_is);
       let names = js_identifiers_to_names(filtered);
