@@ -26,7 +26,7 @@ export async function app_index_main_fns_migrate() {
       let property_name = "app_fn";
       let filter = function object_property_equals_lambda_result(item3) {
         let value = property_get(item3, property_name2);
-        let r2 = property_exists(value, property_name, property_value);
+        let r2 = property_exists(value, property_name);
         return r2;
       };
       let item2 = list_find(list, filter);
