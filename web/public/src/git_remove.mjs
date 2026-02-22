@@ -8,7 +8,7 @@ import { git_ignore_name } from "../../../love/public/src/git_ignore_name.mjs";
 import { git_push } from "../../../love/public/src/git_push.mjs";
 export async function git_remove(f_path) {
   let g_name = git_ignore_name();
-  await command_line_git("rm --cached " + f_path);
+  await command_line_git("rm -r --cached " + f_path);
   function lambda(before) {
     let after = text_between_newline(before, f_path);
     return after;
