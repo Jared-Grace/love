@@ -11,6 +11,7 @@
     "express": "^5.1.0",
     "firebase-admin": "^13.4.0",
     "lz-string": "^1.5.0",
+    "parcel": "^2.16.4",
     "playwright": "^1.55.1",
     "prettier": "^3.6.2",
     "puppeteer": "^24.22.3",
@@ -37,11 +38,11 @@
     "url": "^0.11.4",
     "util": "^0.12.5",
     "vm-browserify": "^1.1.2"
-  },  
+  },
   "targets": {
     "default": {
       "includeNodeModules": {
-       "firebase-admin": false,
+        "firebase-admin": false,
         "google-gax": false,
         "gaxios": false,
         "gcp-metadata": false
