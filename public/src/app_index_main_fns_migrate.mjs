@@ -30,7 +30,7 @@ export async function app_index_main_fns_migrate() {
       let v2 = property_get(item2, value);
       let name2 = js_identifier_name(v2);
       let code_string = js_code_string(name2);
-      let r3 = list_single_item(name2);
+      let r3 = list_single_item(code_string);
       let parsed = js_call_args(fn_name.name, r3);
       log(r3);
       exit();
