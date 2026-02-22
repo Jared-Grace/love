@@ -18,13 +18,11 @@ export async function app_index_main_fns_migrate() {
       let properties = js_object_expression_properties(node);
       let mapped = list_map_property(properties, "key");
       let filtered = list_filter(mapped, js_identifier_is);
-      let names = js_identifiers_to_names(identifiers);
-      function lambda5(item3) {}
-      let mapped3 = list_map(list2, lambda5);
+      let names = js_identifiers_to_names(filtered);
       function lambda4(item2) {
-        let parsed = js_call_args(f_name, args_code);
+        let parsed = js_call_args(f_name, [item2]);
       }
-      let mapped2 = list_map(list, lambda4);
+      let mapped2 = list_map(names, lambda4);
       function lambda3(item) {
         log(item);
       }
