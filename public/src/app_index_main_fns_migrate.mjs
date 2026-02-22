@@ -3,10 +3,7 @@ import { js_identifier_name } from "../../../love/public/src/js_identifier_name.
 import { js_identifier_named_try } from "../../../love/public/src/js_identifier_named_try.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { log_exit } from "../../../love/public/src/log_exit.mjs";
-import { js_call_args_curried } from "../../../love/public/src/js_call_args_curried.mjs";
 import { list_single_item } from "../../../love/public/src/list_single_item.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
@@ -30,13 +27,8 @@ export async function app_index_main_fns_migrate() {
       let value = property_get(item2, "value");
       let name2 = js_identifier_name(value);
       let r3 = list_single_item(name2);
+      let parsed = js_call_args(fn_name.name, r3);
       log_exit(r3);
-      let parsed = js_call_args(f_name, args_code);
-      let r = js_call_args_curried(fn_name.name);
-      let mapped2 = list_map(mapped3, r);
-      function lambda3(item) {
-        log(item);
-      }
       each(mapped2, lambda3);
     }
     js_visit_type(ast, "ObjectExpression", lambda2);
