@@ -6,9 +6,10 @@ import TerserPlugin from "terser-webpack-plugin";
 import webpack from "webpack";
 export function webpack_config() {
   let result = function_name_to_path_fn(app_index_main);
+  const entry = folder_current_join(result);
   let r = {
     mode: "production",
-    entry: folder_current_join(result),
+    entry: "./public/src/app_index_main.mjs",
     output: {
       filename: "bundle.js",
       path: path.resolve("./dist"),
