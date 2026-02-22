@@ -22,6 +22,7 @@ export async function app_index_main_fns_migrate() {
       let filtered = list_filter(mapped, js_identifier_is);
       let names = js_identifiers_to_names(filtered);
       let mapped3 = list_map(names, list_single_item);
+      log(mapped3);
       let r = js_call_args_curried(fn_name.name);
       let mapped2 = list_map(mapped3, r);
       function lambda3(item) {
