@@ -1,4 +1,4 @@
-25680
+25681
 39C:\Users\chris\repos\love\firebase.json134160225815428597 0
 71C:\Users\chris\repos\love\node_modules\nyc\node_modules\core-js\fn\date134092667690334496 1
 58C:\Users\chris\repos\love\node_modules\object-hash\LICENSE134034821818257159 0
@@ -77,7 +77,7 @@
 67C:\Users\chris\repos\love\node_modules\nyc\node_modules\core-js\es5134092667688514652 1
 79C:\Users\chris\repos\love\node_modules\jose\dist\node\cjs\runtime\key_to_jwk.js134034821837601334 0
 66C:\Users\chris\repos\love\public\src\function_delete_if_exists.mjs134153406791112620 0
-30C:\Users\chris\repos\love\dist134162563093722774 1
+30C:\Users\chris\repos\love\dist134162576651822630 1
 52C:\Users\chris\repos\love\node_modules\socks\LICENSE134034821818192014 0
 72C:\Users\chris\repos\love\node_modules\zod\src\v3\tests\pipeline.test.ts134034821843403314 0
 104C:\Users\chris\repos\love\node_modules\@google-cloud\storage\node_modules\uuid\dist\esm-node\validate.js134035664904059373 0
@@ -104,7 +104,7 @@
 57C:\Users\chris\repos\love\public\src\app_a_identifier.mjs134153788594802818 0
 72C:\Users\chris\repos\love\public\src\global_function_property_delete.mjs134151581304506836 0
 142C:\Users\chris\repos\love\android\search\app\build\intermediates\merged_res_blame_folder\debug\mergeDebugResources\out\multi-v2\values-az.json134151463848627697 0
-36C:\Users\chris\repos\love\public\src134161975738045800 1
+36C:\Users\chris\repos\love\public\src134162566262421569 1
 77C:\Users\chris\repos\love\node_modules\nyc\node_modules\lodash\_arrayEvery.js134092667716635782 0
 109C:\Users\chris\repos\love\node_modules\chromium-bidi\lib\esm\bidiMapper\modules\input\USKeyboardLayout.js.map134035666816764969 0
 63C:\Users\chris\repos\love\public\src\app_message_reply_give.mjs134053560212743975 0
@@ -2367,7 +2367,7 @@
 59C:\Users\chris\repos\love\node_modules\create-hmac\index.js134162543887753963 0
 86C:\Users\chris\repos\love\node_modules\puppeteer-core\lib\esm\puppeteer\util\util.d.ts134034821852289090 0
 63C:\Users\chris\repos\love\public\src\app_new_update_generic.mjs134159331741223566 0
-66C:\Users\chris\repos\love\public\src\firebase_storage_download.mjs134148044907275982 0
+66C:\Users\chris\repos\love\public\src\firebase_storage_download.mjs134162573649797902 0
 81C:\Users\chris\repos\love\node_modules\nyc\node_modules\core-js\fn\reflect\has.js134092667689412190 0
 86C:\Users\chris\repos\love\public\src\functions_rename_if_starts_ends_with_to_empty.mjs134151346755457751 0
 94C:\Users\chris\repos\love\node_modules\parse5\node_modules\entities\dist\commonjs\package.json134034821827199293 0
@@ -3685,6 +3685,12 @@
 64C:\Users\chris\repos\love\public\src\ebible_references_parse.mjs134150518178362493 0
 70C:\Users\chris\repos\love\public\src\ebible_references_parse_lines.mjs134153406790729244 0
 77C:\Users\chris\repos\love\node_modules\nyc\node_modules\lodash\fp\isNative.js134092667717653395 0
+56C:\Users\chris\repos\love\node_modules\depd\package.json134034821818390352 0
+64C:\Users\chris\repos\love\public\src\function_new_app_screen.mjs134148052197059089 0
+66C:\Users\chris\repos\love\node_modules\@types\jsonwebtoken\LICENSE134035665136747388 0
+62C:\Users\chris\repos\love\node_modules\tap-parser\package.json134092667737650384 0
+70C:\Users\chris\repos\love\public\src\firebase_storage_download_old.mjs134162573608101503 0
+87C:\Users\chris\repos\love\node_modules\nyc\node_modules\lodash\_createPartialWrapper.js134092667714039018 0
 81C:\Users\chris\repos\love\node_modules\cheerio\dist\browser\api\attributes.js.map134035666813697463 0
 63C:\Users\chris\repos\love\public\src\ebible_reference_parts.mjs134153962720281538 0
 57C:\Users\chris\repos\love\public\src\folder_user_join.mjs134160923409637446 0
@@ -4790,8 +4796,6 @@
 55C:\Users\chris\repos\love\node_modules\verror\README.md134092667733867679 0
 80C:\Users\chris\repos\love\node_modules\firebase-admin\lib\eventarc\eventarc.d.ts134034821837237048 0
 71C:\Users\chris\repos\love\node_modules\tap-mocha-reporter\lib\reporters134092667738157324 1
-56C:\Users\chris\repos\love\node_modules\depd\package.json134034821818390352 0
-64C:\Users\chris\repos\love\public\src\function_new_app_screen.mjs134148052197059089 0
 86C:\Users\chris\repos\love\node_modules\tap-mocha-reporter\node_modules\debug\.eslintrc134092667732573345 0
 68C:\Users\chris\repos\love\public\src\function_new_declaration_to.mjs134159169022239966 0
 51C:\Users\chris\repos\love\node_modules\gtoken\build134034821818818723 1
@@ -6109,9 +6113,9 @@
 59C:\Users\chris\repos\love\public\src\js_dollar_new_args.mjs134148052199841694 0
 49C:\Users\chris\repos\love\public\src\list_any.mjs134148053281955552 0
 65C:\Users\chris\repos\love\public\src\js_dollar_new_args_inner.mjs134159329159691668 0
-59C:\Users\chris\repos\love\public\src\js_dollar_new_name.mjs134036574480766399 0
 94C:\Users\chris\repos\love\node_modules\nyc\node_modules\babel-runtime\core-js\array\entries.js134092667685168009 0
 43C:\Users\chris\repos\love\node_modules\vite134160231220872265 1
+59C:\Users\chris\repos\love\public\src\js_dollar_new_name.mjs134036574480766399 0
 66C:\Users\chris\repos\love\public\src\js_dollar_new_update_list.mjs134153238967029539 0
 55C:\Users\chris\repos\love\node_modules\events\Readme.md134162543844547191 0
 49C:\Users\chris\repos\love\public\src\text_pad.mjs134150515538074761 0
@@ -6139,9 +6143,9 @@
 57C:\Users\chris\repos\love\public\src\js_flo_param_add.mjs134159329713047238 0
 104C:\Users\chris\repos\love\node_modules\@google-cloud\storage\node_modules\uuid\dist\umd\uuidParse.min.js134035664904149924 0
 59C:\Users\chris\repos\love\public\src\reply_messages_all.mjs134153406792354712 0
-50C:\Users\chris\repos\love\public\src\js_format.mjs134148052375549120 0
 103C:\Users\chris\repos\love\node_modules\puppeteer-core\lib\esm\puppeteer\common\PSelectorParser.d.ts.map134034821846887802 0
 60C:\Users\chris\repos\love\public\src\js_marker_named_ast.mjs134149682581852175 0
+50C:\Users\chris\repos\love\public\src\js_format.mjs134148052375549120 0
 121C:\Users\chris\repos\love\android\search\app\build\intermediates\manifest_merge_blame_file\debug\processDebugMainManifest134151463866194925 1
 86C:\Users\chris\repos\love\public\img\game\characters\woman_20\rotations\south-east.png134118903600000000 0
 91C:\Users\chris\repos\love\node_modules\nyc\node_modules\core-js\library\modules\_wks-ext.js134092667694130776 0
@@ -9527,8 +9531,6 @@
 69C:\Users\chris\repos\love\node_modules\zod\v3\helpers\errorUtil.d.cts134034821834258046 0
 61C:\Users\chris\repos\love\node_modules\frac\dist\frac.min.map134070265724925271 0
 60C:\Users\chris\repos\love\node_modules\zod\v4\locales\es.cjs134034821827659640 0
-64C:\Users\chris\repos\love\node_modules\fast-deep-equal\README.md134034821822652413 0
-80C:\Users\chris\repos\love\node_modules\ip-address\dist\v6\regular-expressions.js134034821824198685 0
 61C:\Users\chris\repos\love\node_modules\zod\v4\locales\es.d.ts134034821841689754 0
 86C:\Users\chris\repos\love\node_modules\foreground-child\node_modules\yallist\README.md134092667741765306 0
 75C:\Users\chris\repos\love\node_modules\nyc\node_modules\for-in\package.json134092667702565010 0
@@ -11744,8 +11746,6 @@
 58C:\Users\chris\repos\love\node_modules\tar-fs\package.json134034821819688610 0
 60C:\Users\chris\repos\love\node_modules\@types\node\util.d.ts134035665137778964 0
 53C:\Users\chris\repos\love\node_modules\tap-parser\bin134092667737782696 1
-66C:\Users\chris\repos\love\node_modules\@types\jsonwebtoken\LICENSE134035665136747388 0
-62C:\Users\chris\repos\love\node_modules\tap-parser\package.json134092667737650384 0
 71C:\Users\chris\repos\love\node_modules\tap-parser\node_modules\argparse134092667732444617 1
 88C:\Users\chris\repos\love\node_modules\puppeteer-core\lib\cjs\puppeteer\util\Function.js134034821837459355 0
 72C:\Users\chris\repos\love\node_modules\nyc\node_modules\lodash\fp\now.js134092667717613053 0
@@ -17232,7 +17232,6 @@
 101C:\Users\chris\repos\love\node_modules\@google-cloud\storage\build\cjs\src\hash-stream-validator.d.ts134035664903332696 0
 83C:\Users\chris\repos\love\node_modules\nyc\node_modules\lodash\_createCompounder.js134092667714142661 0
 84C:\Users\chris\repos\love\node_modules\nyc\node_modules\lodash\_createCtorWrapper.js134092667714142661 0
-87C:\Users\chris\repos\love\node_modules\nyc\node_modules\lodash\_createPartialWrapper.js134092667714039018 0
 78C:\Users\chris\repos\love\node_modules\nyc\node_modules\lodash\_createRange.js134092667714012531 0
 87C:\Users\chris\repos\love\node_modules\nyc\node_modules\lodash\_createRecurryWrapper.js134092667714012531 0
 78C:\Users\chris\repos\love\node_modules\nyc\node_modules\lodash\_createRound.js134092667713986354 0
@@ -17662,7 +17661,7 @@
 80C:\Users\chris\repos\love\node_modules\firebase-admin\lib\auth\token-verifier.js134034821835859629 0
 95C:\Users\chris\repos\love\node_modules\nyc\node_modules\istanbul-lib-report\docs\assets\site.js134092667709282903 0
 89C:\Users\chris\repos\love\node_modules\nyc\node_modules\istanbul-lib-instrument\README.md134092667681655079 0
-43C:\Users\chris\repos\love\dist\replace.html134162563093205705 0
+43C:\Users\chris\repos\love\dist\replace.html134162576651765374 0
 97C:\Users\chris\repos\love\node_modules\chromium-bidi\lib\esm\bidiMapper\modules\log\LogManager.js134035666816784964 0
 103C:\Users\chris\repos\love\node_modules\nyc\node_modules\istanbul-lib-instrument\dist\source-coverage.js134092667681811904 0
 78C:\Users\chris\repos\love\node_modules\nyc\node_modules\istanbul-lib-hook\docs134092667708667319 1
@@ -18397,7 +18396,7 @@
 105C:\Users\chris\repos\love\node_modules\nyc\node_modules\core-js\library\modules\es6.typed.uint32-array.js134092667695537385 0
 112C:\Users\chris\repos\love\node_modules\nyc\node_modules\core-js\library\modules\es6.typed.uint8-clamped-array.js134092667695571170 0
 95C:\Users\chris\repos\love\node_modules\nyc\node_modules\core-js\library\modules\es6.weak-set.js134092667695601216 0
-48C:\Users\chris\repos\love\gitignore\prompts.json134162555967658098 0
+48C:\Users\chris\repos\love\gitignore\prompts.json134162573794337788 0
 101C:\Users\chris\repos\love\node_modules\nyc\node_modules\core-js\library\modules\es7.array.includes.js134092667695626334 0
 84C:\Users\chris\repos\love\node_modules\@grpc\grpc-js\build\src\subchannel-address.js134035664908185059 0
 98C:\Users\chris\repos\love\node_modules\nyc\node_modules\core-js\library\modules\es7.map.to-json.js134092667695670599 0
@@ -20001,6 +20000,8 @@
 70C:\Users\chris\repos\love\node_modules\ip-address\dist\v6\constants.js134034821821767475 0
 62C:\Users\chris\repos\love\node_modules\ansi-regex\package.json134035666812276751 0
 82C:\Users\chris\repos\love\node_modules\ip-address\dist\v6\regular-expressions.d.ts134034821829757793 0
+64C:\Users\chris\repos\love\node_modules\fast-deep-equal\README.md134034821822652413 0
+80C:\Users\chris\repos\love\node_modules\ip-address\dist\v6\regular-expressions.js134034821824198685 0
 113C:\Users\chris\repos\love\node_modules\browserify-sign\node_modules\readable-stream\doc\wg-meetings\2015-01-30.md134162543879357022 0
 84C:\Users\chris\repos\love\node_modules\ip-address\dist\v6\regular-expressions.js.map134034821827679704 0
 76C:\Users\chris\repos\love\node_modules\ip-address\dist\v4\constants.d.ts.map134034821825605593 0
@@ -25127,7 +25128,7 @@
 51C:\Users\chris\repos\love\node_modules\.bin\vm2.ps1134098788023404187 0
 48C:\Users\chris\repos\love\node_modules\.bin\xlsx134070265729307241 0
 137C:\Users\chris\repos\love\android\search\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-vi\values-vi.xml134151463844690704 0
-45C:\Users\chris\repos\love\gitignore\user.json134162555989720434 0
+45C:\Users\chris\repos\love\gitignore\user.json134162573648605886 0
 57C:\Users\chris\repos\love\dist\firebase-admin.5f8b0cf0.js134162544152604257 0
 61C:\Users\chris\repos\love\dist\firebase-admin.5f8b0cf0.js.map134162544154327867 0
 57C:\Users\chris\repos\love\dist\firebase-admin.faa21ab1.js134162544152594301 0

@@ -1,6 +1,8 @@
 gitignore/
 node_modules/
 firebase-debug.log
+.parcel-cache/
+.firebase/
 
 # ===== Android Studio / Gradle =====
 /android/.gradle/
