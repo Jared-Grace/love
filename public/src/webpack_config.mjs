@@ -23,12 +23,11 @@ export function webpack_config() {
         }),
       ],
     },
-    resolve: {
-      fallback: {
-        util: "util/",
-        buffer: "buffer/",
-      },
-    },
+    plugins: [
+      new webpack.IgnorePlugin({
+        resourceRegExp: /module-name-to-ignore/,
+      }),
+    ],
   };
   return r;
 }
