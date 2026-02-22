@@ -24,6 +24,7 @@
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "@parcel/optimizer-terser": "^2.16.4",
     "assert": "^2.1.0",
     "browserify-zlib": "^0.2.0",
     "crypto-browserify": "^3.12.1",
@@ -46,7 +47,8 @@
         "google-gax": false,
         "gaxios": false,
         "gcp-metadata": false
-      }
+      },
+      "optimize": false
     }
   }
 }
