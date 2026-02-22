@@ -8,6 +8,7 @@ import { file_exists_assert } from "../../../love/public/src/file_exists_assert.
 import { vite_config_path } from "../../../love/public/src/vite_config_path.mjs";
 export async function vite_run_build_command(lib_entry, name) {
   const command_parts = ["vite", "build", "--config", path];
+  lins;
   let path = vite_config_path();
   await file_exists_assert(path);
   let command = list_join_space(command_parts);
