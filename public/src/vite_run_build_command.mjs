@@ -1,3 +1,4 @@
+import { list_insert } from "../../../love/public/src/list_insert.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { vite_config_out_dir_value } from "../../../love/public/src/vite_config_out_dir_value.mjs";
 import { vite_config_out_dir } from "../../../love/public/src/vite_config_out_dir.mjs";
@@ -8,7 +9,7 @@ import { file_exists_assert } from "../../../love/public/src/file_exists_assert.
 import { vite_config_path } from "../../../love/public/src/vite_config_path.mjs";
 export async function vite_run_build_command(lib_entry, name) {
   const command_parts = ["vite", "build", "--config", path];
-  lins;
+  list_insert(list, index, value);
   let path = vite_config_path();
   await file_exists_assert(path);
   let command = list_join_space(command_parts);
