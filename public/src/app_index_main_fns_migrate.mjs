@@ -5,7 +5,6 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
@@ -17,8 +16,6 @@ export async function app_index_main_fns_migrate() {
     function lambda2(v) {
       let node = property_get(v, "node");
       let properties = js_object_expression_properties(node);
-      log(properties);
-      return;
       let mapped = list_map_property(properties, "key");
       let filtered = list_filter(mapped, js_identifier_is);
       let names = js_identifiers_to_names(filtered);
