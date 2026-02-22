@@ -17,20 +17,21 @@ export async function app_index_main_fns_migrate() {
     function lambda2(v) {
       let node = property_get(v, "node");
       let properties = js_object_expression_properties(node);
-      let property_name_a = "key";
+      let key = "key";
       let identifier_name = "app_fn";
       let filter = function lambda4(item3) {
-        let i = property_get(item3, property_name_a);
+        let i = property_get(item3, key);
         let r2 = js_identifier_named_try(i, identifier_name);
         return r2;
       };
       let item2 = list_find(properties, filter);
-      let value = property_get(item2, "value");
-      let name2 = js_identifier_name(value);
+      const value = "value";
+      let v2 = property_get(item2, value);
+      let name2 = js_identifier_name(v2);
       let r3 = list_single_item(name2);
       let parsed = js_call_args(fn_name.name, r3);
-      log_exit(r3);
-      property_set(object, property_name, value2);
+      log_exit(parsed);
+      property_set(object, value, value2);
       each(mapped2, lambda3);
     }
     js_visit_type(ast, "ObjectExpression", lambda2);
