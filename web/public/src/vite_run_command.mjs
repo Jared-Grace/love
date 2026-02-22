@@ -1,3 +1,4 @@
+import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { vite_config_out_dir_value } from "../../../love/public/src/vite_config_out_dir_value.mjs";
 import { vite_config_out_dir } from "../../../love/public/src/vite_config_out_dir.mjs";
 import { vite_config_name } from "../../../love/public/src/vite_config_name.mjs";
@@ -9,6 +10,7 @@ import { vite_config_path } from "../../../love/public/src/vite_config_path.mjs"
 export async function vite_run_command(lib_entry, name) {
   let path = vite_config_path();
   await file_exists_assert(path);
+  let joined = list_join_space(list);
   let command = text_combine_multiple(["vite build --config ", path]);
   let env_vars = {
     [vite_config_lib_entry()]: lib_entry,
