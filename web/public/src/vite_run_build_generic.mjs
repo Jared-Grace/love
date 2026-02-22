@@ -11,9 +11,9 @@ export async function vite_run_build_generic(
   lib_entry,
   name,
 ) {
+  let path = vite_config_path();
   const command_parts = ["vite", "--config", path];
   command_transform(command_parts);
-  let path = vite_config_path();
   await file_exists_assert(path);
   let command = list_join_space(command_parts);
   let env_vars = {
