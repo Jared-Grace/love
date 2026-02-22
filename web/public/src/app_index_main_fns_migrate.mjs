@@ -26,8 +26,8 @@ export async function app_index_main_fns_migrate() {
       let property_name_a = "key";
       let property_name_b = "app_fn";
       let r3 = property_get_exists_curried_right_2(
-        property_name_a2,
-        property_name_b2,
+        property_name_a,
+        property_name_b,
       );
       let filter = function lambda4(item3) {
         let r2 = property_get_exists(item3, property_name_a, property_name_b);
