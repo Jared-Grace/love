@@ -27,7 +27,7 @@ export async function app_index_main_fns_migrate() {
       const value = "value";
       let v2 = property_get(item2, value);
       let name2 = js_identifier_name(v2);
-      let code_string = js_code_string(value_string);
+      let code_string = js_code_string(name2);
       let r3 = list_single_item(name2);
       let parsed = js_call_args(fn_name.name, r3);
       property_set(item2, value, r3);
