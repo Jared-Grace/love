@@ -25,8 +25,8 @@ export function webpack_config() {
     },
     resolve: {
       fallback: {
-        util: require.resolve("util/"),
-        buffer: require.resolve("buffer/"),
+        util: "util/",
+        buffer: "buffer/",
       },
     },
   };
