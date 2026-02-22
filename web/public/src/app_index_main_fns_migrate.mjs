@@ -27,7 +27,7 @@ export async function app_index_main_fns_migrate() {
         property_name_a,
         property_name_b,
       );
-      let item2 = list_find(list, filter);
+      let item2 = list_find(properties, filter);
       log_exit(item2);
       let mapped = list_map_property(properties, "key");
       let filtered = list_filter(mapped, js_identifier_is);
