@@ -1,3 +1,4 @@
+import { vite_config_define } from "../../../love/public/src/vite_config_define.mjs";
 import { vite_config_out_dir } from "../../../love/public/src/vite_config_out_dir.mjs";
 import { process_env_trim } from "../../../love/public/src/process_env_trim.mjs";
 import { vite_config_name } from "../../../love/public/src/vite_config_name.mjs";
@@ -10,7 +11,7 @@ export async function vite_config() {
   let name = process_env_trim(ev_name);
   let ev_out_dir = vite_config_out_dir();
   let outDir = process_env_trim(ev_out_dir);
-  let c = defineConfig({
+  let c = vite_config_define({
     publicDir: false,
     define: {
       "process.env.NODE_ENV": JSON.stringify("production"),
