@@ -1,1 +1,3 @@
-export function webpack_config() {}
+export function webpack_config() {
+  return;
+}
