@@ -14,6 +14,7 @@ export function webpack_config() {
       filename: "bundle.js",
       path: path.resolve("./dist"),
     },
+    sideEffects: ["./public/src/app_index_main.mjs"],
     optimization: {
       minimize: true,
       minimizer: [
