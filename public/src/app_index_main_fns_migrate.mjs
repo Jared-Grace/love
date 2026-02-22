@@ -1,5 +1,5 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
-import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { js_call_args } from "../../../love/public/src/js_call_args.mjs";
@@ -32,7 +32,7 @@ export async function app_index_main_fns_migrate() {
       let code_string = js_code_string(name2);
       let r3 = list_single_item(name2);
       let parsed = js_call_args(fn_name.name, r3);
-      log_unparse(r3);
+      log(r3);
       exit();
       property_set(item2, value, r3);
     }
