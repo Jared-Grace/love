@@ -1,4 +1,4 @@
 export function git_ignore_name() {
-  let v = ".gitignore";
-  return v;
+  let n = ".gitignore";
+  return n;
 }
