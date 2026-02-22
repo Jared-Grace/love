@@ -1,3 +1,22 @@
 export function webpack_config() {
-  return;
+  let r = {
+    mode: "production",
+    entry: "./src/index.js",
+    output: {
+      filename: "bundle.js",
+      path: path.resolve("./dist"),
+    },
+    optimization: {
+      minimize: true,
+      minimizer: [
+        new TerserPlugin({
+          terserOptions: {
+            keep_fnames: true,
+            keep_classnames: true,
+          },
+        }),
+      ],
+    },
+  };
+  return r;
 }
