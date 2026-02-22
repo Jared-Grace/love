@@ -29,3 +29,4 @@ Thumbs.db
 /android/.cxx/
 /android/lint/intermediates/
 /android/lint/generated/
+.firebase
