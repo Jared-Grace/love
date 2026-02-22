@@ -1,11 +1,11 @@
-import { app_index_main } from "../../../love/public/src/app_index_main.mjs";
+import { app_index_main_sb } from "../../../love/public/src/app_index_main_sb.mjs";
 import { folder_current_join } from "../../../love/public/src/folder_current_join.mjs";
 import { function_name_to_path_fn } from "../../../love/public/src/function_name_to_path_fn.mjs";
 import path from "path";
 import TerserPlugin from "terser-webpack-plugin";
 import webpack from "webpack";
 export function webpack_config() {
-  let result = function_name_to_path_fn(app_index_main);
+  let result = function_name_to_path_fn(app_index_main_sb);
   const entry = folder_current_join(result);
   let r = {
     mode: "production",
