@@ -5,7 +5,6 @@ import { js_call_args_curried } from "../../../love/public/src/js_call_args_curr
 import { list_single_item } from "../../../love/public/src/list_single_item.mjs";
 import { js_identifiers_to_names } from "../../../love/public/src/js_identifiers_to_names.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -29,9 +28,9 @@ export async function app_index_main_fns_migrate() {
         return r2;
       };
       let item2 = list_find(properties, filter);
-      log_exit(item2);
+      let value = property_get(properties, "value");
+      log_exit(value);
       let r3 = list_single_item(item4);
-      let mapped = list_map_property(properties, "key");
       let filtered = list_filter(mapped, js_identifier_is);
       let names = js_identifiers_to_names(filtered);
       let mapped3 = list_map(names, list_single_item);
