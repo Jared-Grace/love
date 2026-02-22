@@ -30,6 +30,7 @@ export async function app_index_main_fns_migrate() {
       };
       let item2 = list_find(properties, filter);
       log_exit(item2);
+      let r3 = list_single_item(item4);
       let mapped = list_map_property(properties, "key");
       let filtered = list_filter(mapped, js_identifier_is);
       let names = js_identifiers_to_names(filtered);
