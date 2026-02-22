@@ -43,15 +43,9 @@
     "webpack": "^5.105.2",
     "webpack-cli": "^6.0.1"
   },
-  "targets": {
-    "default": {
-      "includeNodeModules": {
-        "firebase-admin": false,
-        "google-gax": false,
-        "gaxios": false,
-        "gcp-metadata": false
-      },
-      "optimize": false
-    }
-  }
+
+  "sideEffects": [
+    "./public/src/app_index_main.mjs"
+  ]
+
 }
