@@ -1,12 +1,4 @@
-import { app_designs_universal } from "../../../love/public/src/app_designs_universal.mjs";
-import { app_replace } from "../../../love/public/src/app_replace.mjs";
-import { app_g } from "../../../love/public/src/app_g.mjs";
-import { app_supper } from "../../../love/public/src/app_supper.mjs";
-import { app_ceb_bible } from "../../../love/public/src/app_ceb_bible.mjs";
-import { app_original_bible } from "../../../love/public/src/app_original_bible.mjs";
-import { app_bible } from "../../../love/public/src/app_bible.mjs";
-import { app_search } from "../../../love/public/src/app_search.mjs";
-import { app_reply } from "../../../love/public/src/app_reply.mjs";
+import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export function app_index_main_fns() {
   let r = [
     {
