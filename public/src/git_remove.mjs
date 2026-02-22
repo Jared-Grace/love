@@ -1,3 +1,4 @@
+import { text_between_newline_curried_right } from "../../../love/public/src/text_between_newline_curried_right.mjs";
 import { repos_gitignore_overwrite } from "../../../love/public/src/repos_gitignore_overwrite.mjs";
 import { git_commit } from "../../../love/public/src/git_commit.mjs";
 import { git_add } from "../../../love/public/src/git_add.mjs";
@@ -9,6 +10,7 @@ import { git_push } from "../../../love/public/src/git_push.mjs";
 export async function git_remove(f_path) {
   let g_name = git_ignore_name();
   await command_line_git("rm -r --cached " + f_path);
+  let r2 = text_between_newline_curried_right(b);
   function lambda(before) {
     let after = text_between_newline(before, f_path);
     return after;
