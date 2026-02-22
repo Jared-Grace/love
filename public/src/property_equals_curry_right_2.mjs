@@ -1,8 +1,8 @@
 import { property_equals } from "../../../love/public/src/property_equals.mjs";
 export function property_equals_curry_right_2(property_name, property_value) {
   let c = function object_property_equals_lambda_result(item) {
-    let v = property_equals(item, property_name, property_value);
-    return v;
+    let r = property_equals(item, property_name, property_value);
+    return r;
   };
   return c;
 }
