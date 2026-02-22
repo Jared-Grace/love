@@ -5,6 +5,7 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
+import { log } from "../../../love/public/src/log.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
@@ -22,8 +23,10 @@ export async function app_index_main_fns_migrate() {
       let mapped3 = list_map(names, list_single_item);
       let r = js_call_args_curried(f_name);
       let mapped2 = list_map(mapped3, r);
-      function lambda3(item) {}
-      each(filtered, lambda3);
+      function lambda3(item) {
+        log(item);
+      }
+      each(mapped2, lambda3);
     }
     js_visit_type(ast, "ObjectExpression", lambda2);
   }
