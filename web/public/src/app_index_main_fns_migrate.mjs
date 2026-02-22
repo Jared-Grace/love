@@ -1,3 +1,4 @@
+import { log_exit } from "../../../love/public/src/log_exit.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { js_call_args_curried } from "../../../love/public/src/js_call_args_curried.mjs";
 import { list_single_item } from "../../../love/public/src/list_single_item.mjs";
@@ -19,6 +20,7 @@ export async function app_index_main_fns_migrate() {
     function lambda2(v) {
       let node = property_get(v, "node");
       let properties = js_object_expression_properties(node);
+      log_exit(message);
       let item2 = list_find_property(list, property_name, property_value);
       let mapped = list_map_property(properties, "key");
       let filtered = list_filter(mapped, js_identifier_is);
