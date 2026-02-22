@@ -1,4 +1,4 @@
-import { property_get_exists_curried_right_2 } from "../../../love/public/src/property_get_exists_curried_right_2.mjs";
+import { property_get_exists } from "../../../love/public/src/property_get_exists.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { log_exit } from "../../../love/public/src/log_exit.mjs";
 import { js_call_args_curried } from "../../../love/public/src/js_call_args_curried.mjs";
@@ -23,10 +23,10 @@ export async function app_index_main_fns_migrate() {
       let properties = js_object_expression_properties(node);
       let property_name_a = "key";
       let property_name_b = "app_fn";
-      let filter = property_get_exists_curried_right_2(
-        property_name_a,
-        property_name_b,
-      );
+      let filter = function property_get_exists_curried_right_2_result(item3) {
+        let e = property_get_exists(item3, property_name_a, property_name_b);
+        return e;
+      };
       let item2 = list_find(properties, filter);
       log_exit(item2);
       let mapped = list_map_property(properties, "key");
