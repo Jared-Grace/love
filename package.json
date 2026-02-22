@@ -41,6 +41,7 @@
   "targets": {
     "default": {
       "includeNodeModules": {
+       "firebase-admin": false,
         "google-gax": false,
         "gaxios": false,
         "gcp-metadata": false
