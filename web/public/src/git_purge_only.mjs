@@ -7,7 +7,9 @@ export async function git_purge_only(f_path) {
   let v = py_exe_name();
   let combined = text_combine_multiple([
     v,
-    " -m git_filter_repo --force --path " + f_path + " --invert-paths",
+    " -m git_filter_repo --force --path ",
+    f_path,
+    " --invert-paths",
   ]);
   let stdout = await command_line(combined);
   await git_purge_only_after();
