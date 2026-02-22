@@ -23,6 +23,7 @@ export async function app_index_main_fns_migrate() {
       let properties = js_object_expression_properties(node);
       log_exit(properties);
       let filter = function object_property_equals_lambda_result(item3) {
+        let value = property_get(object, property_name2);
         let r2 = property_equals(item3, property_name, property_value);
         return r2;
       };
