@@ -24,7 +24,7 @@ export async function app_index_main_fns_migrate() {
       let node = property_get(v, "node");
       let properties = js_object_expression_properties(node);
       let property_name_a = "key";
-      let property_name_b = "app_fn";
+      let identifier_name = "app_fn";
       let filter = function property_get_exists_curried_right_2_result(item3) {
         let value = property_get(item3, property_name_a);
         let jin = js_identifier_not_is(value);
@@ -32,7 +32,7 @@ export async function app_index_main_fns_migrate() {
           return;
         }
         let r2 = js_identifier_named(i, identifier_name);
-        let e = property_exists(value, property_name_b);
+        let e = property_exists(value, identifier_name);
         return e;
       };
       let item2 = list_find(properties, filter);
