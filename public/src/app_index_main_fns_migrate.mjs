@@ -1,3 +1,4 @@
+import { property_set } from "../../../love/public/src/property_set.mjs";
 import { js_call_args } from "../../../love/public/src/js_call_args.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { js_identifier_named_try } from "../../../love/public/src/js_identifier_named_try.mjs";
@@ -29,6 +30,7 @@ export async function app_index_main_fns_migrate() {
       let r3 = list_single_item(name2);
       let parsed = js_call_args(fn_name.name, r3);
       log_exit(r3);
+      property_set(object, property_name, value2);
       each(mapped2, lambda3);
     }
     js_visit_type(ast, "ObjectExpression", lambda2);
