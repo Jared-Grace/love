@@ -1,3 +1,5 @@
+import path from "path";
+import TerserPlugin from "terser-webpack-plugin";
 export function webpack_config() {
   let r = {
     mode: "production",
