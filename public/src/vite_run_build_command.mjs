@@ -9,7 +9,7 @@ import { file_exists_assert } from "../../../love/public/src/file_exists_assert.
 import { vite_config_path } from "../../../love/public/src/vite_config_path.mjs";
 export async function vite_run_build_command(lib_entry, name) {
   const command_parts = ["vite", "--config", path];
-  list_insert(command_parts, 1, "build");
+  command_transform(command_parts);
   let path = vite_config_path();
   await file_exists_assert(path);
   let command = list_join_space(command_parts);
@@ -20,4 +20,7 @@ export async function vite_run_build_command(lib_entry, name) {
   };
   let c = command_line_text_env_vars(env_vars, command);
   return c;
+  function command_transform(command_parts) {
+    list_insert(command_parts, 1, "build");
+  }
 }
