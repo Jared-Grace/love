@@ -17,15 +17,15 @@ export async function app_index_main_fns_migrate() {
     function lambda2(v) {
       let node = property_get(v, "node");
       let properties = js_object_expression_properties(node);
+      log(properties);
+      return;
       let mapped = list_map_property(properties, "key");
       let filtered = list_filter(mapped, js_identifier_is);
       let names = js_identifiers_to_names(filtered);
       let mapped3 = list_map(names, list_single_item);
       let r = js_call_args_curried(f_name);
       let mapped2 = list_map(mapped3, r);
-      function lambda3(item) {
-        log(item);
-      }
+      function lambda3(item) {}
       each(filtered, lambda3);
     }
     js_visit_type(ast, "ObjectExpression", lambda2);
