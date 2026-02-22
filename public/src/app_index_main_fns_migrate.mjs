@@ -20,7 +20,7 @@ export async function app_index_main_fns_migrate() {
     function lambda2(v) {
       let node = property_get(v, "node");
       let properties = js_object_expression_properties(node);
-      log_exit(message);
+      log_exit(properties);
       let item2 = list_find_property(list, property_name, property_value);
       let mapped = list_map_property(properties, "key");
       let filtered = list_filter(mapped, js_identifier_is);
