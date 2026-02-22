@@ -1,3 +1,4 @@
+import { list_single_item } from "../../../love/public/src/list_single_item.mjs";
 import { js_identifiers_to_names } from "../../../love/public/src/js_identifiers_to_names.mjs";
 import { js_call_args } from "../../../love/public/src/js_call_args.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -19,8 +20,7 @@ export async function app_index_main_fns_migrate() {
       let mapped = list_map_property(properties, "key");
       let filtered = list_filter(mapped, js_identifier_is);
       let names = js_identifiers_to_names(filtered);
-      function lambda5(item3) {}
-      let mapped3 = list_map(list, lambda5);
+      let mapped3 = list_map(list, list_single_item);
       function lambda4(item2) {
         let parsed = js_call_args(f_name, [item2]);
       }
