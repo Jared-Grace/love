@@ -22,9 +22,11 @@ export async function app_index_main_fns_migrate() {
       let node = property_get(v, "node");
       let properties = js_object_expression_properties(node);
       log_exit(properties);
+      let property_name2 = "key";
+      let property_name = "app_fn";
       let filter = function object_property_equals_lambda_result(item3) {
-        let value = property_get(object, property_name2);
-        let r2 = property_equals(item3, property_name, property_value);
+        let value = property_get(item3, property_name2);
+        let r2 = property_equals(value, property_name, property_value);
         return r2;
       };
       let item2 = list_find(list, filter);
