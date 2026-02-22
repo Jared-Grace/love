@@ -22,10 +22,10 @@ export async function app_index_main_fns_migrate() {
       let node = property_get(v, "node");
       let properties = js_object_expression_properties(node);
       log_exit(properties);
-      let property_name2 = "key";
+      let property_name_a = "key";
       let property_name = "app_fn";
       let filter = function lambda4(item3) {
-        let r2 = property_get_exists(item3, property_name2, property_name);
+        let r2 = property_get_exists(item3, property_name_a, property_name);
         return r2;
       };
       let item2 = list_find(list, filter);
