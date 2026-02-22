@@ -3,9 +3,7 @@ import { js_call_args } from "../../../love/public/src/js_call_args.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { js_identifier_named_try } from "../../../love/public/src/js_identifier_named_try.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
-import { log_exit } from "../../../love/public/src/log_exit.mjs";
 import { list_single_item } from "../../../love/public/src/list_single_item.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 import { js_object_expression_properties } from "../../../love/public/src/js_object_expression_properties.mjs";
@@ -30,9 +28,7 @@ export async function app_index_main_fns_migrate() {
       let name2 = js_identifier_name(v2);
       let r3 = list_single_item(name2);
       let parsed = js_call_args(fn_name.name, r3);
-      log_exit(parsed);
-      property_set(object, value, value2);
-      each(mapped2, lambda3);
+      property_set(item2, value, r3);
     }
     js_visit_type(ast, "ObjectExpression", lambda2);
   }
