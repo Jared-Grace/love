@@ -1,5 +1,5 @@
+import { property_equals } from "../../../love/public/src/property_equals.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
-import { property_equals_curry_right_2 } from "../../../love/public/src/property_equals_curry_right_2.mjs";
 import { log_exit } from "../../../love/public/src/log_exit.mjs";
 import { js_call_args_curried } from "../../../love/public/src/js_call_args_curried.mjs";
 import { list_single_item } from "../../../love/public/src/list_single_item.mjs";
@@ -22,7 +22,10 @@ export async function app_index_main_fns_migrate() {
       let node = property_get(v, "node");
       let properties = js_object_expression_properties(node);
       log_exit(properties);
-      let filter = property_equals_curry_right_2(property_name, property_value);
+      let filter = function object_property_equals_lambda_result(item3) {
+        let r2 = property_equals(item3, property_name, property_value);
+        return r2;
+      };
       let item2 = list_find(list, filter);
       let mapped = list_map_property(properties, "key");
       let filtered = list_filter(mapped, js_identifier_is);
