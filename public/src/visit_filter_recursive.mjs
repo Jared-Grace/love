@@ -17,10 +17,10 @@ export function visit_filter_recursive(
   }
   list_add(stack, node);
   let children = children_get(node);
-  function lambda(c) {
+  function visit_filter_recursive_each_child(c) {
     visit_filter_recursive(c, children_get, filter, on_each, stack);
   }
-  each(children, lambda);
+  each(children, visit_filter_recursive_each_child);
   let copy = list_copy(stack);
   on_each({
     node,
