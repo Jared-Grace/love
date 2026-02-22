@@ -1,5 +1,4 @@
-import { js_identifier_named } from "../../../love/public/src/js_identifier_named.mjs";
-import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
+import { js_identifier_named_try } from "../../../love/public/src/js_identifier_named_try.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { log_exit } from "../../../love/public/src/log_exit.mjs";
 import { js_call_args_curried } from "../../../love/public/src/js_call_args_curried.mjs";
@@ -26,11 +25,7 @@ export async function app_index_main_fns_migrate() {
       let identifier_name = "app_fn";
       let filter = function property_get_exists_curried_right_2_result(item3) {
         let i = property_get(item3, property_name_a);
-        let jin = js_identifier_not_is(i);
-        if (jin) {
-          return;
-        }
-        let r2 = js_identifier_named(i, identifier_name);
+        let r2 = js_identifier_named_try(i, identifier_name);
         return r2;
       };
       let item2 = list_find(properties, filter);
