@@ -9,7 +9,7 @@ import { file_transform_cached } from "../../../love/public/src/file_transform_c
 import { file_js_unparse } from "../../../love/public/src/file_js_unparse.mjs";
 export async function function_transform_result(f_names, lambda$ast) {
   let split = text_split_comma(f_names);
-  async function lambda(f_name) {
+  async function lambda_each_function(f_name) {
     let parsed = await function_parse_unaliased(f_name);
     let ast = property_get(parsed, "ast");
     let result = await lambda$ast(ast);
@@ -17,7 +17,7 @@ export async function function_transform_result(f_names, lambda$ast) {
     await file_js_unparse(parsed);
     return result;
   }
-  let r3 = await list_map_async(split, lambda);
+  let r3 = await list_map_async(split, lambda_each_function);
   return r3;
   return;
   let d_path = data_path();
