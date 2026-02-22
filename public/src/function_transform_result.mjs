@@ -10,16 +10,12 @@ import { file_js_unparse } from "../../../love/public/src/file_js_unparse.mjs";
 export async function function_transform_result(f_names, lambda$ast) {
   let split = text_split_comma(f_names);
   async function lambda(f_name) {
-    async function lambda2() {
-      let parsed = await function_parse_unaliased(f_name);
-      let ast = property_get(parsed, "ast");
-      let result = await lambda$ast(ast);
-      result = undefined_is_if_null(result);
-      await file_js_unparse(parsed);
-      return result;
-    }
-    let r2 = await lambda2();
-    return r2;
+    let parsed = await function_parse_unaliased(f_name);
+    let ast = property_get(parsed, "ast");
+    let result = await lambda$ast(ast);
+    result = undefined_is_if_null(result);
+    await file_js_unparse(parsed);
+    return result;
   }
   let r3 = await list_map_async(split, lambda);
   return r3;
