@@ -9,7 +9,7 @@ export function webpack_config() {
   const entry = folder_current_join(result);
   let r = {
     mode: "production",
-    entry: "./public/src/app_index_main.mjs",
+    entry: result,
     output: {
       filename: "bundle.js",
       path: path.resolve("./dist"),
