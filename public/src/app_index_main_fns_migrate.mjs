@@ -1,7 +1,6 @@
 import { js_call_args_curried } from "../../../love/public/src/js_call_args_curried.mjs";
 import { list_single_item } from "../../../love/public/src/list_single_item.mjs";
 import { js_identifiers_to_names } from "../../../love/public/src/js_identifiers_to_names.mjs";
-import { js_call_args } from "../../../love/public/src/js_call_args.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { js_identifier_is } from "../../../love/public/src/js_identifier_is.mjs";
@@ -22,11 +21,8 @@ export async function app_index_main_fns_migrate() {
       let filtered = list_filter(mapped, js_identifier_is);
       let names = js_identifiers_to_names(filtered);
       let mapped3 = list_map(names, list_single_item);
-      let r = js_call_args_curried(f_name2);
-      function lambda4(item2) {
-        let parsed = js_call_args(f_name, [item2]);
-      }
-      let mapped2 = list_map(names, lambda4);
+      let r = js_call_args_curried(f_name);
+      let mapped2 = list_map(names, r);
       function lambda3(item) {
         log(item);
       }
