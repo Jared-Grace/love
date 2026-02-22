@@ -1,4 +1,4 @@
-import { property_get_exists } from "../../../love/public/src/property_get_exists.mjs";
+import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { log_exit } from "../../../love/public/src/log_exit.mjs";
 import { js_call_args_curried } from "../../../love/public/src/js_call_args_curried.mjs";
@@ -24,7 +24,8 @@ export async function app_index_main_fns_migrate() {
       let property_name_a = "key";
       let property_name_b = "app_fn";
       let filter = function property_get_exists_curried_right_2_result(item3) {
-        let e = property_get_exists(item3, property_name_a, property_name_b);
+        let value = property_get(item3, property_name_a);
+        let e = property_exists(value, property_name_b);
         return e;
       };
       let item2 = list_find(properties, filter);
