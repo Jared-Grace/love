@@ -30,9 +30,9 @@ export async function app_index_main_fns_migrate() {
       };
       let item2 = list_find(properties, filter);
       let value = property_get(item2, "value");
-      log_exit(value);
-      let r3 = list_single_item(item4);
-      let name2 = js_identifier_name(i2);
+      let name2 = js_identifier_name(value);
+      let r3 = list_single_item(name2);
+      log_exit(r3);
       let filtered = list_filter(mapped, js_identifier_is);
       let names = js_identifiers_to_names(filtered);
       let mapped3 = list_map(names, list_single_item);
