@@ -15,8 +15,8 @@ import { app_index_main_fns } from "../../../love/public/src/app_index_main_fns.
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export async function app_index_main_fns_migrate() {
   async function lambda(ast) {
-    exit();
     function lambda2(v) {
+      exit();
       let node = property_get(v, "node");
       let properties = js_object_expression_properties(node);
       let key = "key";
