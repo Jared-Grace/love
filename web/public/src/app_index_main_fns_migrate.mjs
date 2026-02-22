@@ -1,3 +1,4 @@
+import { js_identifier_named } from "../../../love/public/src/js_identifier_named.mjs";
 import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
@@ -30,6 +31,7 @@ export async function app_index_main_fns_migrate() {
         if (jin) {
           return;
         }
+        let r2 = js_identifier_named(i, identifier_name);
         let e = property_exists(value, property_name_b);
         return e;
       };
