@@ -6,7 +6,7 @@ import { vite_config_lib_entry } from "../../../love/public/src/vite_config_lib_
 import { command_line_text_env_vars } from "../../../love/public/src/command_line_text_env_vars.mjs";
 import { file_exists_assert } from "../../../love/public/src/file_exists_assert.mjs";
 import { vite_config_path } from "../../../love/public/src/vite_config_path.mjs";
-export async function vite_run_command(lib_entry, name) {
+export async function vite_run_build_command(lib_entry, name) {
   const command_parts = ["vite", "build", "--config", path];
   let path = vite_config_path();
   await file_exists_assert(path);
