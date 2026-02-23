@@ -4,6 +4,7 @@ import { git_ignore_name } from "../../../love/public/src/git_ignore_name.mjs";
 export async function git_ignore_add(f_path) {
   let g_name = git_ignore_name();
   let lambda = text_between_newline_curried_right(f_path);
-  return await file_transform(g_name, lambda);
+  let r = await file_transform(g_name, lambda);
+  return r;
   return g_name;
 }
