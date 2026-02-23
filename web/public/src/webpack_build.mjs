@@ -1,3 +1,5 @@
+import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
+import { js_code_call_app_context_initialize } from "../../../love/public/src/js_code_call_app_context_initialize.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -23,6 +25,8 @@ export async function webpack_build(search) {
     let joined = folder_previous_2_join(main_path);
     let code_string = js_code_string(joined);
     let i = js_code_import_single(f_name, code_string);
+    let call = js_code_call_app_context_initialize(f_name);
+    let joined2 = list_join_newline(list);
     log({
       i,
     });
