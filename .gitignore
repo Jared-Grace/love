@@ -29,4 +29,5 @@ Thumbs.db
 /android/.cxx/
 /android/lint/intermediates/
 /android/lint/generated/
-scripts/temp/
+
+/scripts/temp/
