@@ -14,7 +14,7 @@ export async function webpack_build(search) {
   let path = folder_scripts_join(path2);
   let f_name_ext = function_name_to_base(path);
   async function lambda(temp_path) {
-    let joined = folder_previous_2_join(temp_path);
+    let joined = folder_previous_2_join(f_path);
     let i = js_code_import_single(f_name, joined);
     await file_overwrite(file_path, contents);
   }
