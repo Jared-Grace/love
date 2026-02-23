@@ -8,11 +8,12 @@ export function webpack_config() {
   let props = [webpack_config_entry_path];
   let dictionary = process_env_args_get(props);
   let entry = property_invoke_get(dictionary, webpack_config_entry_path);
+  const filename = "bundle.js";
   let r = {
     mode: "production",
     entry,
     output: {
-      filename: "bundle.js",
+      filename: filename,
       path: path.resolve("./dist"),
     },
     optimization: {
