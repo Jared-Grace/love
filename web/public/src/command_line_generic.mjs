@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
@@ -12,6 +13,9 @@ export async function command_line_generic(command, extra) {
     encoding: "utf8",
   };
   object_merge(options, extra);
+  log({
+    command,
+  });
   const stdout = await execAsync(command, options);
   return stdout;
 }
