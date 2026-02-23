@@ -1,4 +1,4 @@
-import { list_to_dictionary } from "../../../love/public/src/list_to_dictionary.mjs";
+import { list_to_dictionary_key } from "../../../love/public/src/list_to_dictionary_key.mjs";
 import { webpack_config_entry_path } from "../../../love/public/src/webpack_config_entry_path.mjs";
 import { process_env_trim } from "../../../love/public/src/process_env_trim.mjs";
 import path from "path";
@@ -11,7 +11,7 @@ export function webpack_config() {
   let props = [p];
   function lambda(item2v) {}
   function lambda2(item2k) {}
-  let dictionary = list_to_dictionary(list, lambda, lambda2);
+  let dictionary = list_to_dictionary_key(list, lambda, lambda2);
   let r = {
     mode: "production",
     entry,
