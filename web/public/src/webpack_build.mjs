@@ -1,3 +1,4 @@
+import { file_name_js } from "../../../love/public/src/file_name_js.mjs";
 import { webpack_config_filename } from "../../../love/public/src/webpack_config_filename.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -19,6 +20,7 @@ import { function_name_combine } from "../../../love/public/src/function_name_co
 import { file_delete_after } from "../../../love/public/src/file_delete_after.mjs";
 export async function webpack_build(search) {
   let a = await app_shared_name_search_info(search);
+  let a_name = property_get(a, "a_name");
   let f_name = property_get(a, "f_name");
   let combined = function_name_combine(f_name, "run");
   let path2 = path_join(["temp", combined]);
@@ -28,12 +30,13 @@ export async function webpack_build(search) {
   let call = js_code_call_app_context_initialize(f_name);
   list_add(mapped, call);
   let joined = list_join_newline(mapped);
+  let r = file_name_js(entryName);
   async function lambda(entry) {
     await file_overwrite(entry, joined);
     const entry_path = folder_current_join(entry);
     let env_vars = {
       [webpack_config_entry_path()]: entry_path,
-      [webpack_config_filename()]: entry_path,
+      [webpack_config_filename()]: a_name,
     };
     let f_name_ext = folder_scripts_join_mjs("webpack.config");
     let combined2 = text_combine("npx webpack --config ", f_name_ext);
