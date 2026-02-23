@@ -1,1 +1,3 @@
-export function webpack_config_filename() {}
+export function webpack_config_filename() {
+  return "filename";
+}
