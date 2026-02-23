@@ -15,7 +15,7 @@ export async function webpack_build(search) {
   async function lambda(temp_path) {
     let path3 = folder_previous_join(path);
     let joined = folder_previous_join(path3);
-    let v = js_code_import_single(f_name, "..");
+    let v = js_code_import_single(f_name, joined);
   }
   let result = await file_delete_after(f_name_ext, lambda);
 }
