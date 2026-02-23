@@ -27,8 +27,8 @@ export async function webpack_build(search) {
     let mapped = list_map(fns, webpack_build_code_import);
     let call = js_code_call_app_context_initialize(f_name);
     list_add(mapped, call);
-    let joined = list_join_newline(list);
-    await file_overwrite(entry, mapped);
+    let joined = list_join_newline(mapped);
+    await file_overwrite(entry, joined);
     const entry_path = folder_current_join(entry);
     let env_vars = {
       [webpack_config_entry_path()]: entry_path,
