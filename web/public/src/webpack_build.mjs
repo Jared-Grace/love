@@ -1,3 +1,4 @@
+import { folder_current_join } from "../../../love/public/src/folder_current_join.mjs";
 import { log_exit } from "../../../love/public/src/log_exit.mjs";
 import { webpack_config } from "../../../love/public/src/webpack_config.mjs";
 import { global_function_property_initialize } from "../../../love/public/src/global_function_property_initialize.mjs";
@@ -22,14 +23,15 @@ export async function webpack_build(search) {
   let path2 = path_join(["temp", combined]);
   let path = folder_scripts_join(path2);
   let f_name_ext = function_name_to_base(path);
-  async function lambda(entry_path) {
+  async function lambda(entry) {
     let joined = folder_previous_2_join(main_path);
     let code_string = js_code_string(joined);
     let i = js_code_import_single(f_name, code_string);
     let call = js_code_call_app_context_initialize(f_name);
     let joined2 = list_join_newline([i, call]);
-    log_exit(entry_path);
-    await file_overwrite(entry_path, joined2);
+    log_exit(entry);
+    await file_overwrite(entry, joined2);
+    const entry_path = folder_current_join(entry);
     let value = global_function_property_initialize(
       webpack_config,
       "entry_path",
