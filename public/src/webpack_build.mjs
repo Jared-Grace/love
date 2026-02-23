@@ -1,3 +1,8 @@
+import { command_line_text_env_vars } from "../../../love/public/src/command_line_text_env_vars.mjs";
+import { vite_config_out_dir_value } from "../../../love/public/src/vite_config_out_dir_value.mjs";
+import { vite_config_out_dir } from "../../../love/public/src/vite_config_out_dir.mjs";
+import { vite_config_name } from "../../../love/public/src/vite_config_name.mjs";
+import { vite_config_lib_entry } from "../../../love/public/src/vite_config_lib_entry.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { folder_scripts_join_mjs } from "../../../love/public/src/folder_scripts_join_mjs.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
@@ -35,6 +40,12 @@ export async function webpack_build(search) {
       "entry_path",
       entry_path,
     );
+    let env_vars = {
+      [vite_config_lib_entry()]: lib_entry,
+      [vite_config_name()]: name,
+      [vite_config_out_dir()]: vite_config_out_dir_value(),
+    };
+    let c = command_line_text_env_vars(env_vars, command);
     let f_name_ext = folder_scripts_join_mjs("webpack.config");
     let combined2 = text_combine("npx webpack --config ", f_name_ext);
     let stdout = await command_line(combined2);
