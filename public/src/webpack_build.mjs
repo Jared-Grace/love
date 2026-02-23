@@ -5,7 +5,7 @@ import { app_shared_name_search_main } from "../../../love/public/src/app_shared
 import { file_delete_after } from "../../../love/public/src/file_delete_after.mjs";
 export async function webpack_build(search) {
   let f_name = await app_shared_name_search_main(search);
-  let combined = function_name_combine(left, right);
+  let combined = function_name_combine(f_name, "run");
   let path = folder_scripts_join(f_name);
   let f_name_ext = function_name_to_base(path);
   return f_name_ext;
