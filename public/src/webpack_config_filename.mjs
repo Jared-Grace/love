@@ -1,3 +1,4 @@
 export function webpack_config_filename() {
-  return "filename";
+  let r = "filename";
+  return r;
 }
