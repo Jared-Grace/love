@@ -4,8 +4,8 @@ import path from "path";
 import TerserPlugin from "terser-webpack-plugin";
 import webpack from "webpack";
 export function webpack_config() {
-  let ev_lib_entry = webpack_config_entry_path();
-  let entry = process_env_trim(ev_lib_entry);
+  let entry_path = webpack_config_entry_path();
+  let entry = process_env_trim(entry_path);
   let r = {
     mode: "production",
     entry,
