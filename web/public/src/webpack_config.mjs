@@ -11,7 +11,7 @@ export function webpack_config() {
   let props = [p];
   function lambda(item2v) {}
   function lambda2(item2k) {}
-  let dictionary = list_to_dictionary_key(list, lambda, lambda2);
+  let dictionary = list_to_dictionary_key(props, lambda, lambda2);
   let r = {
     mode: "production",
     entry,
