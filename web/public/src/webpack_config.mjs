@@ -15,7 +15,7 @@ export function webpack_config() {
     entry,
     output: {
       filename,
-      path: path.resolve("./dist"),
+      path: "./dist",
     },
     optimization: {
       minimize: true,
