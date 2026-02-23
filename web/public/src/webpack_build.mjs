@@ -6,7 +6,7 @@ export async function webpack_build(search) {
   let f_name = await app_shared_name_search_main(search);
   let path = folder_scripts_join(f_name);
   let f_name_ext = function_name_to_base(path);
-  return path;
+  return f_name_ext;
   async function lambda(temp_path) {}
   let result = await file_delete_after(lambda, temp_path);
 }
