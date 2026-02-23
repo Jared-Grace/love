@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_context_initialize } from "../../../love/public/src/app_context_initialize.mjs";
 import { webpack_build_code_import } from "../../../love/public/src/webpack_build_code_import.mjs";
@@ -27,6 +28,7 @@ export async function webpack_build(search) {
     let mapped = list_map(fns, webpack_build_code_import);
     let i = webpack_build_code_import(f_name);
     let call = js_code_call_app_context_initialize(f_name);
+    list_add(list, item);
     let joined2 = list_join_newline([i, call]);
     await file_overwrite(entry, joined2);
     const entry_path = folder_current_join(entry);
