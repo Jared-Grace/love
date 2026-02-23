@@ -13,13 +13,13 @@ import { file_delete_after } from "../../../love/public/src/file_delete_after.mj
 export async function webpack_build(search) {
   let a = await app_shared_name_search_info(search);
   let f_name = property_get(a, "f_name");
-  let f_path = property_get(a, "f_path");
+  let main_path = property_get(a, "main_path");
   let combined = function_name_combine(f_name, "run");
   let path2 = path_join(["temp", combined]);
   let path = folder_scripts_join(path2);
   let f_name_ext = function_name_to_base(path);
   async function lambda(temp_path) {
-    let joined = folder_previous_2_join(f_path);
+    let joined = folder_previous_2_join(main_path);
     let i = js_code_import_single(f_name, joined);
     log({
       i,
