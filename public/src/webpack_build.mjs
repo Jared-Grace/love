@@ -1,3 +1,4 @@
+import { exit } from "../../../love/public/src/exit.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_shared_name_search_info } from "../../../love/public/src/app_shared_name_search_info.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -23,6 +24,7 @@ export async function webpack_build(search) {
     log({
       i,
     });
+    exit();
     await file_overwrite(temp_path, contents);
   }
   let result = await file_delete_after(f_name_ext, lambda);
