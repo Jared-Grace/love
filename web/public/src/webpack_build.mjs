@@ -40,7 +40,7 @@ export async function webpack_build(search) {
     let env_vars = {
       [webpack_config_entry_path()]: entry_path,
       [webpack_config_filename()]: r,
-      [webpack_config_path()]: r,
+      [webpack_config_path()]: p,
     };
     let f_name_ext = folder_scripts_join_mjs("webpack.config");
     let combined2 = text_combine("npx webpack --config ", f_name_ext);
