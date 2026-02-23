@@ -36,7 +36,9 @@ export async function webpack_build(search) {
       "entry_path",
       entry_path,
     );
-    let stdout = await command_line(command);
+    let stdout = await command_line(
+      "npx webpack --config scripts/webpack.config.mjscommand",
+    );
   }
   let result = await file_delete_after(f_name_ext, lambda);
 }
