@@ -9,8 +9,7 @@ export function webpack_config() {
   let p = webpack_config_entry_path();
   let props = [p];
   let dictionary = list_to_dictionary_value(props, process_env_trim);
-  let p2 = webpack_config_entry_path;
-  let entry = property_get_invoke(dictionary, p2);
+  let entry = property_get_invoke(dictionary, webpack_config_entry_path);
   let r = {
     mode: "production",
     entry,
