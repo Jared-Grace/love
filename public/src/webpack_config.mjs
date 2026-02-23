@@ -1,3 +1,4 @@
+import { webpack_config_filename } from "../../../love/public/src/webpack_config_filename.mjs";
 import { process_env_args_get } from "../../../love/public/src/process_env_args_get.mjs";
 import { property_invoke_get } from "../../../love/public/src/property_invoke_get.mjs";
 import { webpack_config_entry_path } from "../../../love/public/src/webpack_config_entry_path.mjs";
@@ -8,7 +9,7 @@ export function webpack_config() {
   let props = [webpack_config_entry_path];
   let dictionary = process_env_args_get(props);
   let entry = property_invoke_get(dictionary, webpack_config_entry_path);
-  const filename = "bundle.js";
+  let filename = property_invoke_get(dictionary, webpack_config_filename);
   let r = {
     mode: "production",
     entry,
