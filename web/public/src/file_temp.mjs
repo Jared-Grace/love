@@ -4,6 +4,6 @@ import { uuid } from "../../../love/public/src/uuid.mjs";
 export async function file_temp(lambda$temp_path) {
   let u = await uuid();
   let temp_path = folder_user_join("temp", u);
-  let result = await file_delete_after(lambda$temp_path, temp_path);
+  let result = await file_delete_after(temp_path, lambda$temp_path);
   return result;
 }
