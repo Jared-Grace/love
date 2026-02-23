@@ -1,3 +1,4 @@
+import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
 import { folder_public_join } from "../../../love/public/src/folder_public_join.mjs";
 import { file_name_js } from "../../../love/public/src/file_name_js.mjs";
 import { html_name_to_path_latest_generic } from "../../../love/public/src/html_name_to_path_latest_generic.mjs";
