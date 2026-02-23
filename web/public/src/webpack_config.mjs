@@ -1,13 +1,15 @@
+import { path_resolve } from "../../../love/public/src/path_resolve.mjs";
 import { webpack_config_filename } from "../../../love/public/src/webpack_config_filename.mjs";
 import { process_env_args_get } from "../../../love/public/src/process_env_args_get.mjs";
 import { webpack_config_entry_path } from "../../../love/public/src/webpack_config_entry_path.mjs";
 import path from "path";
 import TerserPlugin from "terser-webpack-plugin";
 import webpack from "webpack";
-export function webpack_config() {
+export async function webpack_config() {
   let process_env_get = process_env_args_get();
   let entry = process_env_get(webpack_config_entry_path);
   let filename = process_env_get(webpack_config_filename);
+  let v = await path_resolve(paths);
   let r = {
     mode: "production",
     entry,
