@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_to_dictionary_key } from "../../../love/public/src/list_to_dictionary_key.mjs";
 import { webpack_config_entry_path } from "../../../love/public/src/webpack_config_entry_path.mjs";
 import { process_env_trim } from "../../../love/public/src/process_env_trim.mjs";
@@ -10,7 +11,7 @@ export function webpack_config() {
   let p = webpack_config_entry_path();
   let props = [p];
   let dictionary = list_to_dictionary_key(props, process_env_trim);
-  opg;
+  let value = property_get(object, property_name);
   let r = {
     mode: "production",
     entry,
