@@ -1,5 +1,4 @@
 import { sandbox } from "../../../love/public/src/sandbox.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { folder_public } from "../../../love/public/src/folder_public.mjs";
 import { webpack_config_folder } from "../../../love/public/src/webpack_config_folder.mjs";
 import { file_name_js } from "../../../love/public/src/file_name_js.mjs";
@@ -24,7 +23,6 @@ import { function_name_combine } from "../../../love/public/src/function_name_co
 import { file_delete_after } from "../../../love/public/src/file_delete_after.mjs";
 export async function webpack_build(search) {
   let r2 = await sandbox();
-  log(r2);
   let a = await app_shared_name_search_info(search);
   let a_name = property_get(a, "a_name");
   let f_name = property_get(a, "f_name");
@@ -49,9 +47,6 @@ export async function webpack_build(search) {
     let f_name_ext = folder_scripts_join_mjs("webpack.config");
     let combined2 = text_combine("npx webpack --config ", f_name_ext);
     let command = await command_line_text_env_vars(env_vars, combined2);
-    log({
-      command,
-    });
     let stdout = await command_line(command);
     return stdout;
   }
