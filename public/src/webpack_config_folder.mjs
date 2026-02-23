@@ -1,4 +1,4 @@
 export function webpack_config_folder() {
-  let r = "path";
+  let r = "folder";
   return r;
 }
