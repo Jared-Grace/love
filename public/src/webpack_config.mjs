@@ -6,12 +6,12 @@ import path from "path";
 import TerserPlugin from "terser-webpack-plugin";
 import webpack from "webpack";
 export function webpack_config() {
-  let entry_path = webpack_config_entry_path();
   let entry = process_env_trim(entry_path);
   let p = webpack_config_entry_path();
   let props = [p];
   let dictionary = list_to_dictionary_key(props, process_env_trim);
-  let value = property_get(object, property_name);
+  let entry_path = webpack_config_entry_path();
+  let value = property_get(object, entry_path);
   let r = {
     mode: "production",
     entry,
