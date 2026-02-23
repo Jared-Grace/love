@@ -1,4 +1,4 @@
-import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { webpack_config_entry_path } from "../../../love/public/src/webpack_config_entry_path.mjs";
 import { process_env_trim } from "../../../love/public/src/process_env_trim.mjs";
 import path from "path";
@@ -9,7 +9,7 @@ export function webpack_config() {
   let entry = process_env_trim(entry_path);
   let p = webpack_config_entry_path();
   let props = [p];
-  let mapped = list_map_property(list, property_name);
+  let mapped = list_map(list, function lambda(item) {});
   let r = {
     mode: "production",
     entry,
