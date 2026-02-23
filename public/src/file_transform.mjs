@@ -5,8 +5,8 @@ export async function file_transform(f_path, lambda) {
   let after = lambda(contents);
   let result = await file_overwrite(f_path, after);
   let r = {
-    f_path,
     after,
+    f_path,
   };
   return r;
 }
