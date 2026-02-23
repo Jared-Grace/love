@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
