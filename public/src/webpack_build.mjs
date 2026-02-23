@@ -30,13 +30,13 @@ export async function webpack_build(search) {
   let call = js_code_call_app_context_initialize(f_name);
   list_add(mapped, call);
   let joined = list_join_newline(mapped);
-  let r = file_name_js(entryName);
+  let r = file_name_js(a_name);
   async function lambda(entry) {
     await file_overwrite(entry, joined);
     const entry_path = folder_current_join(entry);
     let env_vars = {
       [webpack_config_entry_path()]: entry_path,
-      [webpack_config_filename()]: a_name,
+      [webpack_config_filename()]: r,
     };
     let f_name_ext = folder_scripts_join_mjs("webpack.config");
     let combined2 = text_combine("npx webpack --config ", f_name_ext);
