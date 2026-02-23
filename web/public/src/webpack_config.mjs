@@ -9,7 +9,8 @@ export function webpack_config() {
   let entry = process_env_trim(entry_path);
   let p = webpack_config_entry_path();
   let props = [p];
-  let mapped = list_map(list, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list, lambda);
   let r = {
     mode: "production",
     entry,
