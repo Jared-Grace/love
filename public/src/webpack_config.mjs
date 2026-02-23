@@ -9,7 +9,7 @@ export function webpack_config() {
   let p = webpack_config_entry_path();
   let props = [p];
   let dictionary = list_to_dictionary_key(props, process_env_trim);
-  let p2 = webpack_config_entry_path();
+  let p2 = webpack_config_entry_path;
   let property_name = p2();
   let entry = property_get(dictionary, property_name);
   let r = {
