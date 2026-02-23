@@ -1,3 +1,4 @@
+import { folder_public } from "../../../love/public/src/folder_public.mjs";
 import { webpack_config_path } from "../../../love/public/src/webpack_config_path.mjs";
 import { file_name_js } from "../../../love/public/src/file_name_js.mjs";
 import { webpack_config_filename } from "../../../love/public/src/webpack_config_filename.mjs";
@@ -32,6 +33,7 @@ export async function webpack_build(search) {
   list_add(mapped, call);
   let joined = list_join_newline(mapped);
   let r = file_name_js(a_name);
+  let p = folder_public();
   async function lambda(entry) {
     await file_overwrite(entry, joined);
     const entry_path = folder_current_join(entry);
