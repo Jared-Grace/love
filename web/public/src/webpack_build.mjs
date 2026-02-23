@@ -1,5 +1,4 @@
-import { sandbox } from "../../../love/public/src/sandbox.mjs";
-import { folder_public } from "../../../love/public/src/folder_public.mjs";
+import { app_shared_name_latest_text } from "../../../love/public/src/app_shared_name_latest_text.mjs";
 import { webpack_config_folder } from "../../../love/public/src/webpack_config_folder.mjs";
 import { file_name_js } from "../../../love/public/src/file_name_js.mjs";
 import { webpack_config_filename } from "../../../love/public/src/webpack_config_filename.mjs";
