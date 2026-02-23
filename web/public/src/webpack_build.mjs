@@ -10,5 +10,5 @@ export async function webpack_build(search) {
   let f_name_ext = function_name_to_base(path);
   return f_name_ext;
   async function lambda(temp_path) {}
-  let result = await file_delete_after(lambda, f_name_ext);
+  let result = await file_delete_after(f_name_ext, lambda);
 }
