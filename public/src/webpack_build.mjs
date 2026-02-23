@@ -1,3 +1,4 @@
+import { app_context_initialize } from "../../../love/public/src/app_context_initialize.mjs";
 import { webpack_build_code_import } from "../../../love/public/src/webpack_build_code_import.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { webpack_config_entry_path } from "../../../love/public/src/webpack_config_entry_path.mjs";
@@ -21,8 +22,12 @@ export async function webpack_build(search) {
   let path2 = path_join(["temp", combined]);
   let f_name_ext = folder_scripts_join_mjs(path2);
   async function lambda(entry) {
+    let fns = [f_name];
     let i = webpack_build_code_import(f_name);
-    let call = js_code_call_app_context_initialize(f_name);
+    let call = js_code_call_app_context_initialize(
+      f_name,
+      app_context_initialize.name,
+    );
     let joined2 = list_join_newline([i, call]);
     await file_overwrite(entry, joined2);
     const entry_path = folder_current_join(entry);
