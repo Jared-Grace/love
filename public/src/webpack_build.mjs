@@ -1,3 +1,4 @@
+import { command_line } from "../../../love/public/src/command_line.mjs";
 import { folder_current_join } from "../../../love/public/src/folder_current_join.mjs";
 import { webpack_config } from "../../../love/public/src/webpack_config.mjs";
 import { global_function_property_initialize } from "../../../love/public/src/global_function_property_initialize.mjs";
@@ -35,6 +36,7 @@ export async function webpack_build(search) {
       "entry_path",
       entry_path,
     );
+    let stdout = await command_line(command);
   }
   let result = await file_delete_after(f_name_ext, lambda);
 }
