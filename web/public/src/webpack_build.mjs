@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { folder_public } from "../../../love/public/src/folder_public.mjs";
 import { webpack_config_path } from "../../../love/public/src/webpack_config_path.mjs";
 import { file_name_js } from "../../../love/public/src/file_name_js.mjs";
@@ -21,6 +22,7 @@ import { path_join } from "../../../love/public/src/path_join.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { file_delete_after } from "../../../love/public/src/file_delete_after.mjs";
 export async function webpack_build(search) {
+  log(message);
   let a = await app_shared_name_search_info(search);
   let a_name = property_get(a, "a_name");
   let f_name = property_get(a, "f_name");
