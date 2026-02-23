@@ -1,3 +1,4 @@
+import { folder_previous_join } from "../../../love/public/src/folder_previous_join.mjs";
 import { js_code_import_single } from "../../../love/public/src/js_code_import_single.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
@@ -12,7 +13,8 @@ export async function webpack_build(search) {
   let path = folder_scripts_join(path2);
   let f_name_ext = function_name_to_base(path);
   async function lambda(temp_path) {
-    let v = js_code_import_single(f_name, from);
+    let joined = folder_previous_join(path3);
+    let v = js_code_import_single(f_name, "..");
   }
   let result = await file_delete_after(f_name_ext, lambda);
 }
