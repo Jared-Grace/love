@@ -26,12 +26,12 @@ export async function webpack_build(search) {
     let code_string = js_code_string(joined);
     let i = js_code_import_single(f_name, code_string);
     let call = js_code_call_app_context_initialize(f_name);
-    let joined2 = list_join_newline(list);
+    let joined2 = list_join_newline([i, call]);
     log({
       i,
     });
     exit();
-    await file_overwrite(temp_path, contents);
+    await file_overwrite(temp_path, joined2);
   }
   let result = await file_delete_after(f_name_ext, lambda);
 }
