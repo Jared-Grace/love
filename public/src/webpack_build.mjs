@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_context_initialize } from "../../../love/public/src/app_context_initialize.mjs";
 import { webpack_build_code_import } from "../../../love/public/src/webpack_build_code_import.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
@@ -23,6 +24,7 @@ export async function webpack_build(search) {
   let f_name_ext = folder_scripts_join_mjs(path2);
   async function lambda(entry) {
     let fns = [f_name, app_context_initialize.name];
+    let mapped = list_map(list, function lambda2(item) {});
     let i = webpack_build_code_import(f_name);
     let call = js_code_call_app_context_initialize(f_name);
     let joined2 = list_join_newline([i, call]);
