@@ -4,7 +4,8 @@ export async function file_transform(f_path, lambda) {
   let contents = await file_read(f_path);
   let after = lambda(contents);
   let result = await file_overwrite(f_path, after);
-  return {
+  let r = {
     after,
   };
+  return r;
 }
