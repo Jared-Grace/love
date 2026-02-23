@@ -4,7 +4,6 @@ import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_shared_name_search_info } from "../../../love/public/src/app_shared_name_search_info.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { folder_previous_2_join } from "../../../love/public/src/folder_previous_2_join.mjs";
 import { js_code_import_single } from "../../../love/public/src/js_code_import_single.mjs";
@@ -27,9 +26,6 @@ export async function webpack_build(search) {
     let i = js_code_import_single(f_name, code_string);
     let call = js_code_call_app_context_initialize(f_name);
     let joined2 = list_join_newline([i, call]);
-    log({
-      i,
-    });
     exit();
     await file_overwrite(temp_path, joined2);
   }
