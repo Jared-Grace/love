@@ -1,3 +1,4 @@
+import { function_name_to_parts } from "../../../love/public/src/function_name_to_parts.mjs";
 import { folder_public_join } from "../../../love/public/src/folder_public_join.mjs";
 import { file_name_js } from "../../../love/public/src/file_name_js.mjs";
 import { html_name_to_path_latest_generic } from "../../../love/public/src/html_name_to_path_latest_generic.mjs";
@@ -16,6 +17,7 @@ export async function app_shared_name_search_info(search) {
   let src_path_latest = html_name_to_path_latest_generic(a_name, file_name_js);
   let file_name = file_name_js(a_name);
   let src_path = folder_public_join(file_name);
+  let parts = function_name_to_parts(f_name2);
   log_keep({
     search,
     a_name,
