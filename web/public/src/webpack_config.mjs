@@ -9,11 +9,9 @@ export function webpack_config() {
   let entry = process_env_trim(entry_path);
   let p = webpack_config_entry_path();
   let props = [p];
-  let dictionary = list_to_dictionary(
-    list,
-    function lambda(item2v) {},
-    function lambda2(item2k) {},
-  );
+  function lambda(item2v) {}
+  function lambda2(item2k) {}
+  let dictionary = list_to_dictionary(list, lambda, lambda2);
   let r = {
     mode: "production",
     entry,
