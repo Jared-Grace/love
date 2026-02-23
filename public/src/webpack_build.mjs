@@ -34,6 +34,7 @@ export async function webpack_build(search) {
       "entry_path",
       entry_path,
     );
+    let f_name_ext = folder_scripts_join_mjs("webpack.config.mjs");
     let stdout = await command_line(
       "npx webpack --config scripts/webpack.config.mjs",
     );
