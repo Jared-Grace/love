@@ -1,3 +1,4 @@
+import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_shared_name_search_info } from "../../../love/public/src/app_shared_name_search_info.mjs";
@@ -19,6 +20,7 @@ export async function webpack_build(search) {
   let path = folder_scripts_join(path2);
   let f_name_ext = function_name_to_base(path);
   async function lambda(temp_path) {
+    let code_string = js_code_string(value_string);
     let joined = folder_previous_2_join(main_path);
     let i = js_code_import_single(f_name, joined);
     log({
