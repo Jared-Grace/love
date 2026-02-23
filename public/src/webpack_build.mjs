@@ -16,7 +16,7 @@ import { file_delete_after } from "../../../love/public/src/file_delete_after.mj
 export async function webpack_build(search) {
   let a = await app_shared_name_search_info(search);
   let f_name = property_get(a, "f_name");
-  let main_path = property_get(a, "main_path");
+  let main_pah = property_get(a, "main_path");
   let combined = function_name_combine(f_name, "run");
   let path2 = path_join(["temp", combined]);
   let f_name_ext = folder_scripts_join_mjs(path2);
