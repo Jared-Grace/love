@@ -23,9 +23,9 @@ import { path_join } from "../../../love/public/src/path_join.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { file_delete_after } from "../../../love/public/src/file_delete_after.mjs";
 export async function webpack_build(search) {
-  log(message);
   let r2 = await sandbox();
-  let a = await app_shared_name_search_info(r2);
+  log(r2);
+  let a = await app_shared_name_search_info(search);
   let a_name = property_get(a, "a_name");
   let f_name = property_get(a, "f_name");
   let combined = function_name_combine(f_name, "run");
