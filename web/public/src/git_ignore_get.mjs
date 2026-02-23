@@ -1,9 +1,7 @@
-import { file_transform } from "../../../love/public/src/file_transform.mjs";
-import { text_between_newline_curried_right } from "../../../love/public/src/text_between_newline_curried_right.mjs";
+import { file_read } from "../../../love/public/src/file_read.mjs";
 import { git_ignore_name } from "../../../love/public/src/git_ignore_name.mjs";
-export async function git_ignore_get(f_path) {
+export async function git_ignore_get() {
   let g_name = git_ignore_name();
-  let lambda = text_between_newline_curried_right(f_path);
-  let r = await file_transform(g_name, lambda);
+  let r = await file_read(g_name, lambda);
   return r;
 }
