@@ -21,7 +21,7 @@ export async function webpack_build(search) {
   let path2 = path_join(["temp", combined]);
   let f_name_ext = folder_scripts_join_mjs(path2);
   async function lambda(entry) {
-    let i = webpack_build_code_import(main_path, f_name);
+    let i = webpack_build_code_import(f_name);
     let call = js_code_call_app_context_initialize(f_name);
     let joined2 = list_join_newline([i, call]);
     await file_overwrite(entry, joined2);
