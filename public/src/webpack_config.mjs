@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { webpack_config_path } from "../../../love/public/src/webpack_config_path.mjs";
 import { path_resolve } from "../../../love/public/src/path_resolve.mjs";
 import { webpack_config_filename } from "../../../love/public/src/webpack_config_filename.mjs";
@@ -36,5 +37,8 @@ export async function webpack_config() {
       }),
     ],
   };
+  log({
+    r,
+  });
   return r;
 }
