@@ -1,7 +1,7 @@
 import { sandbox } from "../../../love/public/src/sandbox.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { folder_public } from "../../../love/public/src/folder_public.mjs";
-import { webpack_config_path } from "../../../love/public/src/webpack_config_path.mjs";
+import { webpack_config_folder } from "../../../love/public/src/webpack_config_folder.mjs";
 import { file_name_js } from "../../../love/public/src/file_name_js.mjs";
 import { webpack_config_filename } from "../../../love/public/src/webpack_config_filename.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
@@ -44,7 +44,7 @@ export async function webpack_build(search) {
     let env_vars = {
       [webpack_config_entry_path()]: entry_path,
       [webpack_config_filename()]: r,
-      [webpack_config_path()]: p,
+      [webpack_config_folder()]: p,
     };
     let f_name_ext = folder_scripts_join_mjs("webpack.config");
     let combined2 = text_combine("npx webpack --config ", f_name_ext);
