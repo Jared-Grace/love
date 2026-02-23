@@ -52,6 +52,7 @@ export async function webpack_build(search) {
     let stdout2 = await command_line("npx webpack");
     log({
       stdout2,
+      command,
     });
     let stdout = await command_line(command);
     return stdout;
