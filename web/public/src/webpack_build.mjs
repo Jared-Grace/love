@@ -1,3 +1,4 @@
+import { global_function_property_initialize } from "../../../love/public/src/global_function_property_initialize.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { js_code_call_app_context_initialize } from "../../../love/public/src/js_code_call_app_context_initialize.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
@@ -26,6 +27,11 @@ export async function webpack_build(search) {
     let call = js_code_call_app_context_initialize(f_name);
     let joined2 = list_join_newline([i, call]);
     await file_overwrite(temp_path, joined2);
+    let value = global_function_property_initialize(
+      fn,
+      property_name,
+      value_initial,
+    );
   }
   let result = await file_delete_after(f_name_ext, lambda);
 }
