@@ -6,8 +6,8 @@ import webpack from "webpack";
 export function webpack_config() {
   let entry_path = webpack_config_entry_path();
   let entry = process_env_trim(entry_path);
-  let r2 = webpack_config_entry_path();
-  let props = [r2];
+  let p = webpack_config_entry_path();
+  let props = [p];
   let r = {
     mode: "production",
     entry,
