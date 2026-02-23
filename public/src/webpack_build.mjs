@@ -30,7 +30,7 @@ export async function webpack_build(search) {
     await file_overwrite(entry_path, joined2);
     let value = global_function_property_initialize(
       webpack_config,
-      property_name,
+      "entry_path",
       value_initial,
     );
   }
