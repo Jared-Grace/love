@@ -1,5 +1,5 @@
+import { property_get_invoke } from "../../../love/public/src/property_get_invoke.mjs";
 import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
-import { property_get } from "../../../love/public/src/property_get.mjs";
 import { webpack_config_entry_path } from "../../../love/public/src/webpack_config_entry_path.mjs";
 import { process_env_trim } from "../../../love/public/src/process_env_trim.mjs";
 import path from "path";
@@ -10,8 +10,7 @@ export function webpack_config() {
   let props = [p];
   let dictionary = list_to_dictionary_value(props, process_env_trim);
   let p2 = webpack_config_entry_path;
-  let property_name = p2();
-  let entry = property_get(dictionary, property_name);
+  let entry = property_get_invoke(p2, dictionary);
   let r = {
     mode: "production",
     entry,
