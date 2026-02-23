@@ -31,7 +31,7 @@ export async function webpack_build(search) {
     let value = global_function_property_initialize(
       webpack_config,
       "entry_path",
-      value_initial,
+      entry_path,
     );
   }
   let result = await file_delete_after(f_name_ext, lambda);
