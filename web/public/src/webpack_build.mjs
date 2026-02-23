@@ -1,3 +1,4 @@
+import { webpack_config_filename } from "../../../love/public/src/webpack_config_filename.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -32,6 +33,7 @@ export async function webpack_build(search) {
     const entry_path = folder_current_join(entry);
     let env_vars = {
       [webpack_config_entry_path()]: entry_path,
+      [webpack_config_filename()]: entry_path,
     };
     let f_name_ext = folder_scripts_join_mjs("webpack.config");
     let combined2 = text_combine("npx webpack --config ", f_name_ext);
