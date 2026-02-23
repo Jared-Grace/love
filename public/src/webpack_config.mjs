@@ -10,6 +10,7 @@ export function webpack_config() {
   let p = webpack_config_entry_path();
   let props = [p];
   let dictionary = list_to_dictionary_key(props, process_env_trim);
+  opg;
   let r = {
     mode: "production",
     entry,
