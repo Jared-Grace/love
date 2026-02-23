@@ -1,15 +1,12 @@
-import { list_invoke } from "../../../love/public/src/list_invoke.mjs";
+import { process_env_args_get } from "../../../love/public/src/process_env_args_get.mjs";
 import { property_invoke_get } from "../../../love/public/src/property_invoke_get.mjs";
-import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
 import { webpack_config_entry_path } from "../../../love/public/src/webpack_config_entry_path.mjs";
-import { process_env_trim } from "../../../love/public/src/process_env_trim.mjs";
 import path from "path";
 import TerserPlugin from "terser-webpack-plugin";
 import webpack from "webpack";
 export function webpack_config() {
   let props = [webpack_config_entry_path];
-  let mapped = list_invoke(props);
-  let dictionary = list_to_dictionary_value(mapped, process_env_trim);
+  let dictionary = process_env_args_get(props);
   let entry = property_invoke_get(dictionary, webpack_config_entry_path);
   let r = {
     mode: "production",
