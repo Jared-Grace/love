@@ -12,7 +12,7 @@ export async function webpack_build(search) {
   let path = folder_scripts_join(path2);
   let f_name_ext = function_name_to_base(path);
   async function lambda(temp_path) {
-    let v = js_code_import_single(import_, from);
+    let v = js_code_import_single(f_name, from);
   }
   let result = await file_delete_after(f_name_ext, lambda);
 }
