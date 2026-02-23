@@ -24,8 +24,7 @@ export async function webpack_build(search) {
   let f_name_ext = folder_scripts_join_mjs(path2);
   async function lambda(entry) {
     let fns = [f_name, app_context_initialize.name];
-    function lambda2(item) {}
-    let mapped = list_map(list, lambda2);
+    let mapped = list_map(fns, webpack_build_code_import);
     let i = webpack_build_code_import(f_name);
     let call = js_code_call_app_context_initialize(f_name);
     let joined2 = list_join_newline([i, call]);
