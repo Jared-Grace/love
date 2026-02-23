@@ -17,7 +17,7 @@ export async function app_shared_name_search_info(search) {
   let src_path_latest = html_name_to_path_latest_generic(a_name, file_name_js);
   let file_name = file_name_js(a_name);
   let src_path = folder_public_join(file_name);
-  let path = function_name_to_path(f_name);
+  let main_path = function_name_to_path(f_name);
   log_keep({
     search,
     a_name,
@@ -30,6 +30,7 @@ export async function app_shared_name_search_info(search) {
     app_name,
     src_path_latest,
     src_path,
+    main_path,
   };
   return info;
 }
