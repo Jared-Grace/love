@@ -11,8 +11,8 @@ export async function webpack_config() {
   let process_env_get = process_env_args_get();
   let entry = process_env_get(webpack_config_entry_path);
   let filename = process_env_get(webpack_config_filename);
-  let path_env = process_env_get(webpack_config_folder);
-  let path = await path_resolve(path_env);
+  let folder = process_env_get(webpack_config_folder);
+  let path = await path_resolve(folder);
   let r = {
     mode: "production",
     entry,
