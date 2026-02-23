@@ -1,9 +1,10 @@
+import { webpack_config_entry_path } from "../../../love/public/src/webpack_config_entry_path.mjs";
 import { process_env_trim } from "../../../love/public/src/process_env_trim.mjs";
 import path from "path";
 import TerserPlugin from "terser-webpack-plugin";
 import webpack from "webpack";
 export function webpack_config() {
-  let ev_lib_entry = "entry_path";
+  let ev_lib_entry = webpack_config_entry_path();
   let entry = process_env_trim(ev_lib_entry);
   let r = {
     mode: "production",
