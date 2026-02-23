@@ -6,8 +6,7 @@ import path from "path";
 import TerserPlugin from "terser-webpack-plugin";
 import webpack from "webpack";
 export function webpack_config() {
-  let p = webpack_config_entry_path();
-  let props = [p];
+  let props = [webpack_config_entry_path];
   let dictionary = list_to_dictionary_value(props, process_env_trim);
   let entry = property_invoke_get(dictionary, webpack_config_entry_path);
   let r = {
