@@ -2,7 +2,6 @@ import { webpack_config_entry_path } from "../../../love/public/src/webpack_conf
 import { command_line_text_env_vars } from "../../../love/public/src/command_line_text_env_vars.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { folder_scripts_join_mjs } from "../../../love/public/src/folder_scripts_join_mjs.mjs";
-import { command_line } from "../../../love/public/src/command_line.mjs";
 import { folder_current_join } from "../../../love/public/src/folder_current_join.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { js_code_call_app_context_initialize } from "../../../love/public/src/js_code_call_app_context_initialize.mjs";
@@ -36,7 +35,7 @@ export async function webpack_build(search) {
     let c = command_line_text_env_vars(env_vars, command);
     let f_name_ext = folder_scripts_join_mjs("webpack.config");
     let combined2 = text_combine("npx webpack --config ", f_name_ext);
-    let stdout = await command_line(combined2);
+    let stdout = await command_line_text_env_vars(env_vars, combined2);
   }
   let result = await file_delete_after(f_name_ext, lambda);
 }
