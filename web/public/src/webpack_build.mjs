@@ -23,12 +23,12 @@ export async function webpack_build(search) {
   let combined = function_name_combine(f_name, "run");
   let path2 = path_join(["temp", combined]);
   let f_name_ext = folder_scripts_join_mjs(path2);
+  let fns = [f_name, app_context_initialize.name];
+  let mapped = list_map(fns, webpack_build_code_import);
+  let call = js_code_call_app_context_initialize(f_name);
+  list_add(mapped, call);
+  let joined = list_join_newline(mapped);
   async function lambda(entry) {
-    let fns = [f_name, app_context_initialize.name];
-    let mapped = list_map(fns, webpack_build_code_import);
-    let call = js_code_call_app_context_initialize(f_name);
-    list_add(mapped, call);
-    let joined = list_join_newline(mapped);
     await file_overwrite(entry, joined);
     const entry_path = folder_current_join(entry);
     let env_vars = {
