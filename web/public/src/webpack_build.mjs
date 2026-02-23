@@ -26,11 +26,9 @@ export async function webpack_build(search) {
   async function lambda(entry) {
     let fns = [f_name, app_context_initialize.name];
     let mapped = list_map(fns, webpack_build_code_import);
-    let i = webpack_build_code_import(f_name);
     let call = js_code_call_app_context_initialize(f_name);
-    list_add(list, item);
-    let joined2 = list_join_newline([i, call]);
-    await file_overwrite(entry, joined2);
+    list_add(mapped, call);
+    await file_overwrite(entry, mapped);
     const entry_path = folder_current_join(entry);
     let env_vars = {
       [webpack_config_entry_path()]: entry_path,
