@@ -9,7 +9,7 @@ import webpack from "webpack";
 export function webpack_config() {
   let props = [webpack_config_entry_path];
   let mapped = list_invoke(props);
-  let dictionary = list_to_dictionary_value(props, process_env_trim);
+  let dictionary = list_to_dictionary_value(mapped, process_env_trim);
   let entry = property_invoke_get(dictionary, webpack_config_entry_path);
   let r = {
     mode: "production",
