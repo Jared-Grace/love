@@ -35,6 +35,8 @@ export async function webpack_build(search) {
     let f_name_ext = folder_scripts_join_mjs("webpack.config");
     let combined2 = text_combine("npx webpack --config ", f_name_ext);
     let stdout = await command_line_text_env_vars(env_vars, combined2);
+    return stdout;
   }
   let result = await file_delete_after(f_name_ext, lambda);
+  return result;
 }
