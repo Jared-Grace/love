@@ -49,9 +49,7 @@ export async function webpack_build(search) {
     let f_name_ext = folder_scripts_join_mjs("webpack.config");
     let combined2 = text_combine("npx webpack --config ", f_name_ext);
     let command = await command_line_text_env_vars(env_vars, combined2);
-    let stdout2 = await command_line("npx webpack");
     log({
-      stdout2,
       command,
     });
     let stdout = await command_line(command);
