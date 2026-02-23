@@ -8,7 +8,6 @@ export async function webpack_build(search) {
   let combined = function_name_combine(f_name, "run");
   let path = folder_scripts_join(combined);
   let f_name_ext = function_name_to_base(path);
-  return f_name_ext;
   async function lambda(temp_path) {}
   let result = await file_delete_after(f_name_ext, lambda);
 }
