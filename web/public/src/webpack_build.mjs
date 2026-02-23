@@ -21,8 +21,8 @@ import { file_overwrite } from "../../../love/public/src/file_overwrite.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { file_delete_after } from "../../../love/public/src/file_delete_after.mjs";
+import { folder_public_join } from "./folder_public_join.mjs";
 export async function webpack_build(search) {
-  let r2 = await sandbox();
   let a = await app_shared_name_search_info(search);
   let a_name = property_get(a, "a_name");
   let f_name = property_get(a, "f_name");
@@ -35,7 +35,8 @@ export async function webpack_build(search) {
   list_add(mapped, call);
   let joined = list_join_newline(mapped);
   let r = file_name_js(a_name);
-  let p = folder_public();
+  const folder = app_shared_name_latest_text();
+  let p = folder_public_join(folder);
   async function lambda(entry) {
     await file_overwrite(entry, joined);
     const entry_path = folder_current_join(entry);
