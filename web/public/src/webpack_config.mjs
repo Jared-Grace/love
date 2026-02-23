@@ -9,13 +9,13 @@ export async function webpack_config() {
   let process_env_get = process_env_args_get();
   let entry = process_env_get(webpack_config_entry_path);
   let filename = process_env_get(webpack_config_filename);
-  let v = await path_resolve(paths);
+  let path = await path_resolve("./dist");
   let r = {
     mode: "production",
     entry,
     output: {
       filename,
-      path: "./dist",
+      path,
     },
     optimization: {
       minimize: true,
