@@ -6,7 +6,6 @@ import { vite_config_name } from "../../../love/public/src/vite_config_name.mjs"
 import { vite_config_lib_entry } from "../../../love/public/src/vite_config_lib_entry.mjs";
 import { vite_config_file_name_get } from "../../../love/public/src/vite_config_file_name_get.mjs";
 export async function vite_config_build() {
-  let props = [vite_config_lib_entry, vite_config_name, vite_config_out_dir];
   let process_env_get = process_env_args_get();
   let entry = process_env_get(webpack_config_entry_path);
   let name = process_env_get(vite_config_name);
