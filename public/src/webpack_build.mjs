@@ -1,3 +1,4 @@
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { folder_scripts_join_mjs } from "../../../love/public/src/folder_scripts_join_mjs.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { folder_current_join } from "../../../love/public/src/folder_current_join.mjs";
@@ -35,6 +36,7 @@ export async function webpack_build(search) {
       entry_path,
     );
     let f_name_ext = folder_scripts_join_mjs("webpack.config");
+    let combined2 = text_combine(left, right);
     let stdout = await command_line("npx webpack --config ");
   }
   let result = await file_delete_after(f_name_ext, lambda);
