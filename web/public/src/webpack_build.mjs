@@ -13,7 +13,7 @@ export async function webpack_build(search) {
   let path = folder_scripts_join(path2);
   let f_name_ext = function_name_to_base(path);
   async function lambda(temp_path) {
-    let path3 = folder_previous_join(path);
+    let path3 = folder_previous_join(temp_path);
     let joined = folder_previous_join(path3);
     let v = js_code_import_single(f_name, joined);
   }
