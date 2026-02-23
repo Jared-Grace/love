@@ -48,7 +48,7 @@ export async function webpack_build(search) {
     };
     let f_name_ext = folder_scripts_join_mjs("webpack.config");
     let combined2 = text_combine(
-      "node .\\node_modules\\.bin\\webpack --config ",
+      "node ./node_modules/webpack/bin/webpack.js --config ",
       f_name_ext,
     );
     let command = await command_line_text_env_vars(env_vars, combined2);
