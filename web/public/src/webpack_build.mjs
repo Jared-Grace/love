@@ -1,3 +1,4 @@
+import { path_join } from "../../../love/public/src/path_join.mjs";
 import { function_name_combine } from "../../../love/public/src/function_name_combine.mjs";
 import { function_name_to_base } from "../../../love/public/src/function_name_to_base.mjs";
 import { folder_scripts_join } from "../../../love/public/src/folder_scripts_join.mjs";
@@ -6,6 +7,7 @@ import { file_delete_after } from "../../../love/public/src/file_delete_after.mj
 export async function webpack_build(search) {
   let f_name = await app_shared_name_search_main(search);
   let combined = function_name_combine(f_name, "run");
+  let path2 = path_join(segments);
   let path = folder_scripts_join(combined);
   let f_name_ext = function_name_to_base(path);
   async function lambda(temp_path) {}
