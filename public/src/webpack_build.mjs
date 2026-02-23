@@ -26,7 +26,6 @@ export async function webpack_build(search) {
   let r2 = await sandbox();
   log(r2);
   let a = await app_shared_name_search_info(search);
-  let a_name = property_get(a, "a_name");
   let f_name = property_get(a, "f_name");
   let combined = function_name_combine(f_name, "run");
   let path2 = path_join(["temp", combined]);
@@ -36,7 +35,7 @@ export async function webpack_build(search) {
   let call = js_code_call_app_context_initialize(f_name);
   list_add(mapped, call);
   let joined = list_join_newline(mapped);
-  let r = file_name_js(a_name);
+  let r = file_name_js(f_name);
   let p = folder_public();
   async function lambda(entry) {
     await file_overwrite(entry, joined);
