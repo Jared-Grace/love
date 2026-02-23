@@ -7,8 +7,8 @@ import { file_delete_after } from "../../../love/public/src/file_delete_after.mj
 export async function webpack_build(search) {
   let f_name = await app_shared_name_search_main(search);
   let combined = function_name_combine(f_name, "run");
-  let path2 = path_join(segments);
-  let path = folder_scripts_join(combined);
+  let path2 = path_join(["temp", combined]);
+  let path = folder_scripts_join(path2);
   let f_name_ext = function_name_to_base(path);
   async function lambda(temp_path) {}
   let result = await file_delete_after(f_name_ext, lambda);
