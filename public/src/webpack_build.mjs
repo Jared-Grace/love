@@ -1,5 +1,4 @@
 import { folder_current_join } from "../../../love/public/src/folder_current_join.mjs";
-import { log_exit } from "../../../love/public/src/log_exit.mjs";
 import { webpack_config } from "../../../love/public/src/webpack_config.mjs";
 import { global_function_property_initialize } from "../../../love/public/src/global_function_property_initialize.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
@@ -29,7 +28,6 @@ export async function webpack_build(search) {
     let i = js_code_import_single(f_name, code_string);
     let call = js_code_call_app_context_initialize(f_name);
     let joined2 = list_join_newline([i, call]);
-    log_exit(entry);
     await file_overwrite(entry, joined2);
     const entry_path = folder_current_join(entry);
     let value = global_function_property_initialize(
