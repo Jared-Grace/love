@@ -23,7 +23,7 @@ export async function webpack_build(search) {
     log({
       i,
     });
-    await file_overwrite(file_path, contents);
+    await file_overwrite(temp_path, contents);
   }
   let result = await file_delete_after(f_name_ext, lambda);
 }
