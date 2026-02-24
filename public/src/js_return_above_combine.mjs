@@ -21,11 +21,12 @@ export function js_return_above_combine(ast) {
       return;
     }
     let previous = list_previous(e1, node);
-    function lambda3() {}
-    js_node_type_is_if(node2, type, lambda3);
-    log({
-      previous,
-    });
+    function lambda3() {
+      log({
+        previous,
+      });
+    }
+    js_node_type_is_if(previous, "VariableDeclaration", lambda3);
   }
   js_visit_type(ast, "ReturnStatement", lambda);
   let a = null;
