@@ -11,6 +11,7 @@ export function js_return_above_combine(ast) {
     let e1 = list_get_end_1(stack);
     let l = list_is(e1);
     if (not(l)) {
+      return;
     }
     log({
       e1,
