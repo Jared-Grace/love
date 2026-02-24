@@ -15,15 +15,15 @@ export async function firebase_storage_function_run_generic(
   let destination_version = version_get(f_name);
   let project_url = error();
   let destination = await firebase_storage_download_property(
+    project_url,
     destination_version,
     "destination",
-    project_url,
   );
   let project_url2 = error();
   let code = await firebase_storage_download_property(
+    project_url2,
     destination,
     "code",
-    project_url2,
   );
   let global_init = js_code_global_init();
   let joined = list_join_newline([global_init, code, call]);
