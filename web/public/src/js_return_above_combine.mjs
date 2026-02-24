@@ -21,7 +21,8 @@ export function js_return_above_combine(ast) {
       return;
     }
     let previous = list_previous(e1, node);
-    js_node_type_is_if(node2, type, function lambda3() {});
+    function lambda3() {}
+    js_node_type_is_if(node2, type, lambda3);
     log({
       previous,
     });
