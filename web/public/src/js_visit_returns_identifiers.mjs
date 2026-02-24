@@ -9,6 +9,7 @@ export function js_visit_returns_identifiers(lambda2, ast) {
       lambda2({
         node,
         argument,
+        v,
       });
     }
     js_identifier_is_if(argument, lambda5);
