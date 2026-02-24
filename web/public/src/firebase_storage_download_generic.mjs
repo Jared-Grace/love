@@ -9,9 +9,5 @@ export async function firebase_storage_download_generic(destination, fn) {
     return buffer;
   }
   let result = await html_loading(lambda2);
-  let r = {
-    result,
-    destination,
-  };
-  return r;
+  return result;
 }
