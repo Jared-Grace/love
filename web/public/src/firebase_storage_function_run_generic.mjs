@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_attribute_set } from "../../../love/public/src/html_attribute_set.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
@@ -12,15 +13,17 @@ export async function firebase_storage_function_run_generic(
   call,
 ) {
   let destination_version = version_get(f_name);
+  let project_url = error();
   let destination = await firebase_storage_download_property(
     destination_version,
     "destination",
-    error(),
+    project_url,
   );
+  let project_url2 = error();
   let code = await firebase_storage_download_property(
     destination,
     "code",
-    error(),
+    project_url2,
   );
   let global_init = js_code_global_init();
   let joined = list_join_newline([global_init, code, call]);
