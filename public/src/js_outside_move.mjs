@@ -1,6 +1,5 @@
 import { js_function_declaration_name_to_path } from "../../../love/public/src/js_function_declaration_name_to_path.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { js_imports_fix } from "../../../love/public/src/js_imports_fix.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_filter_property } from "../../../love/public/src/list_filter_property.mjs";
@@ -25,5 +24,4 @@ export async function js_outside_move(ast) {
   }
   each(fds, lambda3);
   await js_imports_fix(ast);
-  log("message");
 }
