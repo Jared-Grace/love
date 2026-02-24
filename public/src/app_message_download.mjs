@@ -12,7 +12,7 @@ export async function app_message_download() {
   });
   async function lambda(item) {
     let name2 = property_get(item, "name");
-    let buffer = await firebase_storage_download(name2);
+    let buffer = await firebase_storage_download(error(), name2);
     let s = buffer_text_to(buffer);
     let o = json_from(s);
     return o;
