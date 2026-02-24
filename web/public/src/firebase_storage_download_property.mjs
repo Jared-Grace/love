@@ -5,6 +5,7 @@ import { firebase_storage_download } from "../../../love/public/src/firebase_sto
 export async function firebase_storage_download_property(
   storage_path,
   property_name,
+  project_url,
 ) {
   let buffer = await firebase_storage_download(project_url, storage_path);
   const json = buffer_text_to(buffer);
