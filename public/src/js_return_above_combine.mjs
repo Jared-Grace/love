@@ -31,8 +31,7 @@ export function js_return_above_combine(ast) {
         function lambda(only) {
           let id = property_get(only, "id");
           function lambda4() {
-            let fn = js_identifier_name;
-            const n = equal_by_not(id, argument, fn);
+            const n = equal_by_not(id, argument, js_identifier_name);
             if (n) {
             }
           }
