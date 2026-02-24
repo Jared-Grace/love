@@ -4,7 +4,7 @@ import { firebase_path_fix } from "../../../love/public/src/firebase_path_fix.mj
 export async function firebase_storage_download_generic(destination, http_fn) {
   destination = firebase_path_fix(destination);
   async function lambda2() {
-    let url = await firebase_storage_url(destination);
+    let url = await firebase_storage_url(destination, error());
     let buffer = await http_fn(url);
     return buffer;
   }
