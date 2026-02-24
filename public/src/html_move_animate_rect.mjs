@@ -9,6 +9,9 @@ export async function html_move_animate_rect(
   const x = rect_to.left - rect_from.left;
   const y = rect_to.top - rect_from.top;
   await html_move_animate_translate(component, x, y, duration);
-  let r = hypotenuse(x, y);
+  let distance = hypotenuse(x, y);
+  let r = {
+    distance,
+  };
   return r;
 }
