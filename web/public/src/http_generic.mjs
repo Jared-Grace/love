@@ -1,3 +1,4 @@
+import { http_generic_options_default } from "../../../love/public/src/http_generic_options_default.mjs";
 import { http_generic_browser } from "../../../love/public/src/http_generic_browser.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
@@ -12,8 +13,9 @@ import { http_sleep } from "../../../love/public/src/http_sleep.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 export async function http_generic(url, options) {
-  const method = options.method || "GET";
-  const body = options.body || null;
+  const r = http_generic_options_default(options);
+  let body = property_get(r, "body");
+  let method = property_get(r, "method");
   const b = browser_is();
   if (b) {
     let v = await http_generic_browser(method, options, body, url);
