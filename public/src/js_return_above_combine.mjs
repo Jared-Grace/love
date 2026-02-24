@@ -1,3 +1,4 @@
+import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 import { list_previous } from "../../../love/public/src/list_previous.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
@@ -14,6 +15,7 @@ export function js_return_above_combine(ast) {
     if (not(l)) {
       return;
     }
+    let fi = list_first_is(list2, item2);
     let previous = list_previous(list, item);
     log({
       e1,
