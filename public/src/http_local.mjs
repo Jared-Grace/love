@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { file_write_buffer } from "../../../love/public/src/file_write_buffer.mjs";
 import { file_read_buffer } from "../../../love/public/src/file_read_buffer.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
@@ -12,7 +13,8 @@ export async function http_local(url) {
   let cached_exists = file_exists;
   let cached_get = file_read_buffer;
   let value_get = async function lambda2() {
-    let v = await http_firebase(url, error());
+    let project_url = error();
+    let v = await http_firebase(url, project_url);
     return v;
   };
   let cache_save = file_write_buffer;
