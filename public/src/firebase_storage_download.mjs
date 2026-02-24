@@ -1,6 +1,6 @@
 import { firebase_storage_download_generic } from "../../../love/public/src/firebase_storage_download_generic.mjs";
 import { http } from "../../../love/public/src/http.mjs";
-export async function firebase_storage_download(destination) {
+export async function firebase_storage_download(destination, project_url) {
   let fn = http;
   let result = await firebase_storage_download_generic(
     project_url,
