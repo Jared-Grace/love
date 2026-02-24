@@ -1,5 +1,5 @@
+import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
-import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { bible_verses_uplifting } from "../../../love/public/src/bible_verses_uplifting.mjs";
@@ -14,7 +14,7 @@ export async function app_reply_initialize(context) {
   let encouragement = bible_verses_uplifting();
   let en = ebible_folder_english();
   let original = bible_interlinear_verses_upload_folder();
-  let books = await ebible_version_books(en);
+  let books = await ebible_version_books_browser(en);
   let r = {
     encouragement,
     en,
