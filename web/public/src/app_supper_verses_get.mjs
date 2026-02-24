@@ -1,8 +1,8 @@
+import { ebible_chapter_codes_browser } from "../../../love/public/src/ebible_chapter_codes_browser.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_supper_verses_get_upload_destination } from "../../../love/public/src/app_supper_verses_get_upload_destination.mjs";
 import { firebase_storage_download_json_decompress } from "../../../love/public/src/firebase_storage_download_json_decompress.mjs";
 import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
-import { ebible_chapter_codes } from "../../../love/public/src/ebible_chapter_codes.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
@@ -17,7 +17,7 @@ export async function app_supper_verses_get() {
       return v;
     }
     let value = await global_function_property_initialize_async(
-      ebible_chapter_codes,
+      ebible_chapter_codes_browser,
       e,
       get,
     );
