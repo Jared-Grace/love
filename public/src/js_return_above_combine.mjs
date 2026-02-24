@@ -42,7 +42,9 @@ export function js_return_above_combine(ast) {
       }
       js_node_type_is_if(previous, "VariableDeclaration", lambda3);
     }
-    function lambda5() {}
+    function lambda5() {
+      lambda2(node, argument);
+    }
     js_identifier_is_if(argument, lambda5);
   }
   js_visit_returns(ast, lambda);
