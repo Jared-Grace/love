@@ -12,7 +12,7 @@ export async function http_local(url) {
   let cached_exists = file_exists;
   let cached_get = file_read_buffer;
   let value_get = async function lambda2() {
-    let v = await http_firebase(url);
+    let v = await http_firebase(url, error());
     return v;
   };
   let cache_save = file_write_buffer;
