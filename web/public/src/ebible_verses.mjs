@@ -6,8 +6,6 @@ import { list_index_of_last } from "../../../love/public/src/list_index_of_last.
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { text_replace } from "../../../love/public/src/text_replace.mjs";
 import { ebible_verses_before } from "../../../love/public/src/ebible_verses_before.mjs";
-import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
-import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { urdu_allah_to_god } from "../../../love/public/src/urdu_allah_to_god.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -23,10 +21,6 @@ import { text_split_space } from "../../../love/public/src/text_split_space.mjs"
 import { ebible_chapter_text } from "../../../love/public/src/ebible_chapter_text.mjs";
 import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 export async function ebible_verses(bible_folder, chapter_code) {
-  if (browser_is()) {
-    let verses = await ebible_verses_browser(bible_folder, chapter_code);
-    return verses;
-  }
   let v2 = await ebible_chapter_text(bible_folder, chapter_code);
   let property = "text";
   let text = property_get(v2, property);
