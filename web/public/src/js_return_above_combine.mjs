@@ -1,3 +1,4 @@
+import { js_identifier_is_if } from "../../../love/public/src/js_identifier_is_if.mjs";
 import { list_single_if } from "../../../love/public/src/list_single_if.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
@@ -26,7 +27,7 @@ export function js_return_above_combine(ast) {
       let declarations = property_get(previous, "declarations");
       function lambda(only) {
         function lambda4() {}
-        js_node_type_is_if(node2, type, lambda4);
+        js_identifier_is_if(only, lambda4);
         log({
           only,
         });
