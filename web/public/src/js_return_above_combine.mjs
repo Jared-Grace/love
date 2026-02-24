@@ -7,4 +7,5 @@ export function js_return_above_combine(ast) {
     let e1 = list_get_end_1(stack);
   }
   js_visit_type(ast, "ReturnStatement", lambda);
+  return;
 }
