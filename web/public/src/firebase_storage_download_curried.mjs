@@ -1,5 +1,5 @@
 import { firebase_storage_download } from "../../../love/public/src/firebase_storage_download.mjs";
-export async function firebase_storage_download_curried(project_url) {
+export function firebase_storage_download_curried(project_url) {
   let r2 = async function firebase_storage_download_curried_result(
     destination,
   ) {
