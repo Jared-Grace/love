@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { buffer_text_to } from "../../../love/public/src/buffer_text_to.mjs";
@@ -12,7 +13,8 @@ export async function app_message_download() {
   });
   async function lambda(item) {
     let name2 = property_get(item, "name");
-    let buffer = await firebase_storage_download(error(), name2);
+    let destination = error();
+    let buffer = await firebase_storage_download(name2, destination);
     let s = buffer_text_to(buffer);
     let o = json_from(s);
     return o;
