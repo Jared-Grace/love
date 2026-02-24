@@ -5,7 +5,6 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { ebible_version_books_upload_name } from "../../../love/public/src/ebible_version_books_upload_name.mjs";
 export async function ebible_version_books_browser(bible_folder) {
-  let a = 1;
   let right = ebible_language_original_code();
   if (equal(bible_folder, right)) {
     let bible_folder2 = ebible_folder_english();
