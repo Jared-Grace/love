@@ -26,8 +26,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     count,
   });
   function lambda({ stack1, next, stack2, ast, declarations }) {
-    log({});
-    ("todo handle more than 1");
+    "todo handle more than 1";
     let s1 = list_size_1(declarations);
     assert(s1);
     function lambda2(declaration) {
@@ -38,6 +37,9 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       if (type_is) {
         let value = property_get(init, "value");
         if (null_is(value)) {
+          log({
+            value,
+          });
           return;
         }
       }
