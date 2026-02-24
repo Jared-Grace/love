@@ -3,6 +3,7 @@ import { http } from "../../../love/public/src/http.mjs";
 import { firebase_path_fix } from "../../../love/public/src/firebase_path_fix.mjs";
 import { firebase_storage_url } from "../../../love/public/src/firebase_storage_url.mjs";
 export async function firebase_storage_download(destination) {
+  let fn = http;
   destination = firebase_path_fix(destination);
   async function lambda2() {
     let url = await firebase_storage_url(destination);
