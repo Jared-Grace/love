@@ -1,6 +1,4 @@
-import { firebase_name } from "./firebase_name.mjs";
-export async function firebase_storage_url_project(project_name) {
-  const prefix = await firebase_name();
-  let url = prefix + ".firebasestorage.app";
+export function firebase_storage_url_project(project_name) {
+  let url = project_name + ".firebasestorage.app";
   return url;
 }
