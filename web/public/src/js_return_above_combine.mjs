@@ -1,3 +1,4 @@
+import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 import { list_previous } from "../../../love/public/src/list_previous.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -20,6 +21,7 @@ export function js_return_above_combine(ast) {
       return;
     }
     let previous = list_previous(e1, node);
+    js_node_type_is_if(node2, type, function lambda3() {});
     log({
       previous,
     });
