@@ -8,7 +8,7 @@ import { html_overwrite } from "../../../love/public/src/html_overwrite.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_shared_name_search_info } from "../../../love/public/src/app_shared_name_search_info.mjs";
 import { file_name_js } from "./file_name_js.mjs";
-export async function html_update_latest_new(search) {
+export async function html_update_latest_vite(search) {
   let r = await app_shared_name_search_info(search);
   let f_path_latest = property_get(r, "f_path_latest");
   let a_name = property_get(r, "a_name");
