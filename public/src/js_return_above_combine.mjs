@@ -1,3 +1,4 @@
+import { equal_by } from "../../../love/public/src/equal_by.mjs";
 import { js_identifier_is_if } from "../../../love/public/src/js_identifier_is_if.mjs";
 import { list_single_if } from "../../../love/public/src/list_single_if.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
@@ -28,7 +29,9 @@ export function js_return_above_combine(ast) {
         let declarations = property_get(previous, "declarations");
         function lambda(only) {
           let id = property_get(only, "id");
-          function lambda4() {}
+          function lambda4() {
+            let eq = equal_by(a2, b, function lambda5(item) {});
+          }
           js_identifier_is_if(id, lambda4);
         }
         list_single_if(declarations, lambda);
