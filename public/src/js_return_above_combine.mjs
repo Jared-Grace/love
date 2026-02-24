@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { equal_by } from "../../../love/public/src/equal_by.mjs";
 import { js_identifier_is_if } from "../../../love/public/src/js_identifier_is_if.mjs";
@@ -32,7 +33,9 @@ export function js_return_above_combine(ast) {
           let id = property_get(only, "id");
           function lambda4() {
             let eq = equal_by(id, argument, js_identifier_name);
-            $l$eq
+            log({
+              eq,
+            });
           }
           js_identifier_is_if(id, lambda4);
         }
