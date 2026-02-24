@@ -14,34 +14,6 @@ export function js_return_above_combine(ast) {
   function lambda(v) {
     let node = property_get(v, "node");
     let argument = property_get(node, "argument");
-    function lambda2(node, argument) {
-      let stack = property_get(v, "stack");
-      let e1 = list_get_end_1(stack);
-      let l = list_is(e1);
-      if (not(l)) {
-        return;
-      }
-      let fi = list_first_is(e1, node);
-      if (fi) {
-        return;
-      }
-      let previous = list_previous(e1, node);
-      function lambda3() {
-        let declarations = property_get(previous, "declarations");
-        function lambda(only) {
-          let id = property_get(only, "id");
-          function lambda4() {
-            const n = equal_by_not(id, argument, js_identifier_name);
-            if (n) {
-              return;
-            }
-          }
-          js_identifier_is_if(id, lambda4);
-        }
-        list_single_if(declarations, lambda);
-      }
-      js_node_type_is_if(previous, "VariableDeclaration", lambda3);
-    }
     function lambda5() {
       lambda2(node, argument);
     }
@@ -50,4 +22,32 @@ export function js_return_above_combine(ast) {
   js_visit_returns(ast, lambda);
   let a = null;
   return a;
+  function lambda2(node, argument) {
+    let stack = property_get(v, "stack");
+    let e1 = list_get_end_1(stack);
+    let l = list_is(e1);
+    if (not(l)) {
+      return;
+    }
+    let fi = list_first_is(e1, node);
+    if (fi) {
+      return;
+    }
+    let previous = list_previous(e1, node);
+    function lambda3() {
+      let declarations = property_get(previous, "declarations");
+      function lambda(only) {
+        let id = property_get(only, "id");
+        function lambda4() {
+          const n = equal_by_not(id, argument, js_identifier_name);
+          if (n) {
+            return;
+          }
+        }
+        js_identifier_is_if(id, lambda4);
+      }
+      list_single_if(declarations, lambda);
+    }
+    js_node_type_is_if(previous, "VariableDeclaration", lambda3);
+  }
 }
