@@ -62,8 +62,8 @@ export async function js_dollar(ast) {
   }
   await js_visit_type_each_async(ast, "Identifier", lambda);
   invoke_multiple(afters);
-  return;
   log({
     afters,
   });
+  return;
 }
