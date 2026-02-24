@@ -1,4 +1,3 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { js_dollar_choice_argument } from "../../../love/public/src/js_dollar_choice_argument.mjs";
 import { text_lower_to } from "../../../love/public/src/text_lower_to.mjs";
 import { js_identifier_not_is } from "../../../love/public/src/js_identifier_not_is.mjs";
@@ -62,8 +61,5 @@ export async function js_dollar(ast) {
   }
   await js_visit_type_each_async(ast, "Identifier", lambda);
   invoke_multiple(afters);
-  log({
-    afters,
-  });
   return;
 }
