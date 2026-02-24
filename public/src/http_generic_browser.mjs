@@ -6,7 +6,7 @@ import { not } from "../../../love/public/src/not.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
-export async function http_generic_browser(method, options, body, url) {
+export async function http_generic_browser(options, url) {
   async function lambda3() {
     const o = http_generic_options_default(options);
     let body = property_get(o, "body");
