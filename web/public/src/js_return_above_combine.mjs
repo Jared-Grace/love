@@ -5,7 +5,6 @@ import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 import { list_previous } from "../../../love/public/src/list_previous.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
@@ -28,10 +27,7 @@ export function js_return_above_combine(ast) {
       function lambda(only) {
         let id = property_get(only, "id");
         function lambda4() {}
-        js_identifier_is_if(only, lambda4);
-        log({
-          only,
-        });
+        js_identifier_is_if(id, lambda4);
       }
       list_single_if(declarations, lambda);
     }
