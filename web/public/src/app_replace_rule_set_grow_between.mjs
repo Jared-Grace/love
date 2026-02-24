@@ -5,11 +5,11 @@ export function app_replace_rule_set_grow_between() {
     goals: [
       {
         start: "aaa",
-        end: "aaaba",
+        end: "aaba",
       },
       {
         start: "aaaa",
-        end: "abaaaba",
+        end: "abaaba",
       },
       {
         start: "aaaaaa",
