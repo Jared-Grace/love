@@ -1,3 +1,4 @@
+import { list_is } from "../../../love/public/src/list_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -7,6 +8,7 @@ export function js_return_above_combine(ast) {
     let node = property_get(v, "node");
     let stack = property_get(v, "stack");
     let e1 = list_get_end_1(stack);
+    let l = list_is(value);
     log({
       e1,
     });
