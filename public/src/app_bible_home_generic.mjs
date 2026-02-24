@@ -1,3 +1,4 @@
+import { ebible_chapter_codes_browser } from "../../../love/public/src/ebible_chapter_codes_browser.mjs";
 import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { text_replace_space_underscore_lower } from "../../../love/public/src/text_replace_space_underscore_lower.mjs";
@@ -31,7 +32,6 @@ import { list_previous_wrap } from "../../../love/public/src/list_previous_wrap.
 import { emoji_arrow_left } from "../../../love/public/src/emoji_arrow_left.mjs";
 import { list_next_wrap } from "../../../love/public/src/list_next_wrap.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
-import { ebible_chapter_codes } from "../../../love/public/src/ebible_chapter_codes.mjs";
 import { emoji_arrow_right } from "../../../love/public/src/emoji_arrow_right.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
@@ -86,7 +86,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   const scroll_top_key = app_bible_hash_key_scroll_top();
   let verses = await ebible_verses_browser(e, chapter_code);
   async function on_arrow(list_next_wrap) {
-    let list = await ebible_chapter_codes(e);
+    let list = await ebible_chapter_codes_browser(e);
     let next = list_next_wrap(list, chapter_code);
     app_bible_chapter_open(context, hash, next);
   }
