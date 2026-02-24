@@ -5,7 +5,7 @@ export async function firebase_admin_get() {
   const admin = (await import("firebase-admin")).default;
   let service_account = await firebase_service_account();
   let project_name = await firebase_name();
-  const sb = await firebase_storage_url_project(project_name);
+  const sb = firebase_storage_url_project(project_name);
   admin.initializeApp({
     credential: admin.credential.cert(service_account),
     storageBucket: sb,
