@@ -1,3 +1,4 @@
+import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
@@ -26,6 +27,7 @@ export function js_return_above_combine(ast) {
       let declarations = property_get(previous, "declarations");
       let s1 = list_size_1(declarations);
       if (s1) {
+        let only = list_single(list);
       }
       log({
         declarations,
