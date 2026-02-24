@@ -26,6 +26,7 @@ export function js_return_above_combine(ast) {
     function lambda3() {
       let declarations = property_get(previous, "declarations");
       function lambda(only) {
+        let id = property_get(only, "id");
         function lambda4() {}
         js_identifier_is_if(only, lambda4);
         log({
