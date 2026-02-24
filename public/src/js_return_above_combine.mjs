@@ -30,7 +30,8 @@ export function js_return_above_combine(ast) {
         function lambda(only) {
           let id = property_get(only, "id");
           function lambda4() {
-            let eq = equal_by(a2, b, function lambda5(item) {});
+            function lambda5(item) {}
+            let eq = equal_by(a2, b, lambda5);
           }
           js_identifier_is_if(id, lambda4);
         }
