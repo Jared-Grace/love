@@ -33,6 +33,7 @@ export function js_return_above_combine(ast) {
           function lambda4() {
             const n = equal_by_not(id, argument, js_identifier_name);
             if (n) {
+              return;
             }
           }
           js_identifier_is_if(id, lambda4);
