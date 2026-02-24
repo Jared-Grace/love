@@ -8,4 +8,5 @@ export async function html_move_animate_rect(
   const offsetX = rect_to.left - rect_from.left;
   const offsetY = rect_to.top - rect_from.top;
   await html_move_animate_translate(component, offsetX, offsetY, duration);
+  return Math.hypot(a, b);
 }
