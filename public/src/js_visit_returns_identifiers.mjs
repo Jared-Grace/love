@@ -6,7 +6,10 @@ export function js_visit_returns_identifiers(lambda2, ast) {
     let node = property_get(v, "node");
     let argument = property_get(node, "argument");
     function lambda5() {
-      lambda2(node, argument);
+      lambda2({
+        node,
+        argument,
+      });
     }
     js_identifier_is_if(argument, lambda5);
   }
