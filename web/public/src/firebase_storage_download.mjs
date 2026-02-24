@@ -1,15 +1,11 @@
-import { html_loading } from "../../../love/public/src/html_loading.mjs";
+import { firebase_storage_download_generic } from "../../../love/public/src/firebase_storage_download_generic.mjs";
 import { http } from "../../../love/public/src/http.mjs";
-import { firebase_path_fix } from "../../../love/public/src/firebase_path_fix.mjs";
-import { firebase_storage_url } from "../../../love/public/src/firebase_storage_url.mjs";
 export async function firebase_storage_download(destination) {
   let fn = http;
-  destination = firebase_path_fix(destination);
-  async function lambda2() {
-    let url = await firebase_storage_url(destination);
-    let buffer = await fn(url);
-    return buffer;
-  }
-  let result = await html_loading(lambda2);
+  let result = null;
+  ({ result, destination } = await firebase_storage_download_generic(
+    destination,
+    fn,
+  ));
   return result;
 }
