@@ -5,9 +5,9 @@ export async function firebase_storage_download(destination) {
   let fn = http;
   let project_url = error();
   let result = await firebase_storage_download_generic(
+    project_url,
     destination,
     fn,
-    project_url,
   );
   return result;
 }
