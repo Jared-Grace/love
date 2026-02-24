@@ -7,4 +7,5 @@ export async function html_public_from_latest(search) {
     "src_path_latest",
     "src_path",
   );
+  await file_copy_overwrite_from_properties(info, "f_path_latest", "f_path");
 }
