@@ -1,10 +1,8 @@
-import { ebible_languages_add } from "../../../love/public/src/ebible_languages_add.mjs";
 import { ebible_folder_cebuano } from "../../../love/public/src/ebible_folder_cebuano.mjs";
 import { list_sort_text_property } from "../../../love/public/src/list_sort_text_property.mjs";
 import { ebible_language_original } from "../../../love/public/src/ebible_language_original.mjs";
 import { ebible_language_en } from "../../../love/public/src/ebible_language_en.mjs";
 import { ebible_folder_swahili } from "../../../love/public/src/ebible_folder_swahili.mjs";
-import { ebible_languages_chapters_cache_refresh } from "../../../love/public/src/ebible_languages_chapters_cache_refresh.mjs";
 import { ebible_folder_urdu } from "../../../love/public/src/ebible_folder_urdu.mjs";
 import { fn_name } from "./fn_name.mjs";
 export function ebible_languages() {
@@ -166,8 +164,8 @@ export function ebible_languages() {
     },
   ];
   ("Rather than modifying list, use: ");
-  ebible_languages_add.name("if you modify the above list, then run:");
-  ebible_languages_chapters_cache_refresh.name;
+  fn_name("ebible_languages_add")("if you modify the above list, then run:");
+  fn_name("ebible_languages_chapters_cache_refresh");
   list_sort_text_property(languages, "name");
   return languages;
 }
