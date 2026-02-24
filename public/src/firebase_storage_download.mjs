@@ -3,9 +3,6 @@ import { http } from "../../../love/public/src/http.mjs";
 export async function firebase_storage_download(destination) {
   let fn = http;
   let result = null;
-  ({ result, destination } = await firebase_storage_download_generic(
-    destination,
-    fn,
-  ));
+  result = await firebase_storage_download_generic(destination, fn);
   return result;
 }
