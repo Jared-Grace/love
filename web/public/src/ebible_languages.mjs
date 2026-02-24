@@ -164,7 +164,8 @@ export function ebible_languages() {
     },
   ];
   ("Rather than modifying list, use: ");
-  fn_name("ebible_languages_add")("if you modify the above list, then run:");
+  fn_name("ebible_languages_add");
+  ("if you modify the above list, then run:");
   fn_name("ebible_languages_chapters_cache_refresh");
   list_sort_text_property(languages, "name");
   return languages;
