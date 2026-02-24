@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { list_is } from "../../../love/public/src/list_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_get_end_1 } from "../../../love/public/src/list_get_end_1.mjs";
@@ -9,6 +10,8 @@ export function js_return_above_combine(ast) {
     let stack = property_get(v, "stack");
     let e1 = list_get_end_1(stack);
     let l = list_is(e1);
+    if (not(b)) {
+    }
     log({
       e1,
     });
