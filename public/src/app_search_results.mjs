@@ -1,3 +1,4 @@
+import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { list_join_plus } from "../../../love/public/src/list_join_plus.mjs";
@@ -11,7 +12,6 @@ import { property_set_exists_not } from "../../../love/public/src/property_set_e
 import { html_button_copy_text } from "../../../love/public/src/html_button_copy_text.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
-import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
@@ -41,7 +41,7 @@ export async function app_search_results(context, div_results) {
   let languages_chosen = property_get(context, "languages_chosen");
   let en = ebible_folder_english();
   let english_choices = [en];
-  let books = await ebible_version_books(en);
+  let books = await ebible_version_books_browser(en);
   let query = property_get(context, "query");
   let words = text_to_words(query);
   async function lambda(word) {
