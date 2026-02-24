@@ -1,3 +1,4 @@
+import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { text_replace_space_underscore_lower } from "../../../love/public/src/text_replace_space_underscore_lower.mjs";
 import { app_bible_hash_key_scroll_top } from "../../../love/public/src/app_bible_hash_key_scroll_top.mjs";
@@ -33,7 +34,6 @@ import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { ebible_chapter_codes } from "../../../love/public/src/ebible_chapter_codes.mjs";
 import { emoji_arrow_right } from "../../../love/public/src/emoji_arrow_right.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
 import { ebible_chapter_code_parse } from "../../../love/public/src/ebible_chapter_code_parse.mjs";
@@ -84,7 +84,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   function lambda12() {}
   let component7 = html_button(bar, "Languages", lambda12);
   const scroll_top_key = app_bible_hash_key_scroll_top();
-  let verses = await ebible_verses(e, chapter_code);
+  let verses = await ebible_verses_browser(e, chapter_code);
   async function on_arrow(list_next_wrap) {
     let list = await ebible_chapter_codes(e);
     let next = list_next_wrap(list, chapter_code);
