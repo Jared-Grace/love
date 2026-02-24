@@ -1,7 +1,5 @@
-import { firebase_upload_text_generic_browser } from "../../../love/public/src/firebase_upload_text_generic_browser.mjs";
 import { firebase_upload_generic } from "../../../love/public/src/firebase_upload_generic.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { browser_is } from "../../../love/public/src/browser_is.mjs";
 export async function firebase_upload_text_generic(
   content,
   destination,
@@ -11,10 +9,6 @@ export async function firebase_upload_text_generic(
     msg: "uploading to firebase",
     destination,
   });
-  if (browser_is()) {
-    await firebase_upload_text_generic_browser(destination, content);
-    return;
-  }
   let buffer = Buffer.from(content);
   const settings = {
     contentType: content_type,
