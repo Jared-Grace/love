@@ -45,14 +45,12 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       let init2 = js_null();
       let assign = js_declare(name3, init2);
       list_add(afters, js_dollar_s_after);
-      log({
-        afters,
-      });
       function js_dollar_s_after() {
         object_replace(next, expression);
         let index_next = list_next_index(stack2, stack1);
         list_insert(stack2, index_next, assign);
         list_remove(stack2, stack1);
+        log("invoked");
       }
       return;
     }
