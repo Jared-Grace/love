@@ -5,11 +5,11 @@ export function app_replace_rule_set_shrink_between() {
     goals: [
       {
         start: "aaaba",
-        end: "aaa",
+        end: "aaaa",
       },
       {
         start: "abaaaba",
-        end: "aaaa",
+        end: "aaaaa",
       },
       {
         start: "abaabaaba",
