@@ -110,7 +110,7 @@ export async function app_bible_home_generic(context, lambda$a) {
       "Interlinear",
     );
     biblehub_button_open("", "", verse_number, bottom, "Parallel");
-    biblehub_button_open("", "#commentary", verse_number, bottom, "Parallel");
+    biblehub_button_open("", "#commentary", verse_number, bottom, "Commentary");
     function lambda8() {}
     let text4 = html_button_copy_text();
     let component6 = html_button(bottom, text4, lambda8);
