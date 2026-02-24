@@ -3,9 +3,9 @@ import { buffer_text_to } from "../../../love/public/src/buffer_text_to.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { firebase_storage_download } from "../../../love/public/src/firebase_storage_download.mjs";
 export async function firebase_storage_download_property(
+  project_url,
   storage_path,
   property_name,
-  project_url,
 ) {
   let buffer = await firebase_storage_download(project_url, storage_path);
   const json = buffer_text_to(buffer);
