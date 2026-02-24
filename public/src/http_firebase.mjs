@@ -4,7 +4,7 @@ import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
 import { http_firebase_file_path } from "../../../love/public/src/http_firebase_file_path.mjs";
 import { firebase_storage_exists } from "../../../love/public/src/firebase_storage_exists.mjs";
 import { http } from "../../../love/public/src/http.mjs";
-export async function http_firebase(url) {
+export async function http_firebase(url, project_url) {
   let key_get = function lambda() {
     let joined = http_firebase_file_path(url);
     return joined;
