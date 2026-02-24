@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { js_assign_default } from "../../../love/public/src/js_assign_default.mjs";
 import { js_literal_is } from "../../../love/public/src/js_literal_is.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
@@ -25,7 +26,8 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     count,
   });
   function lambda({ stack1, next, stack2, ast, declarations }) {
-    "todo handle more than 1";
+    log({});
+    ("todo handle more than 1");
     let s1 = list_size_1(declarations);
     assert(s1);
     function lambda2(declaration) {
