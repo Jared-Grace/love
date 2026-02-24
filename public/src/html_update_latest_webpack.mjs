@@ -7,5 +7,5 @@ export async function html_update_latest_webpack(search) {
   let f_path_latest = property_get(r, "f_path_latest");
   let a_name = property_get(r, "a_name");
   let c = html_code_script_src_js(a_name);
-  await html_overwrite(a_name, f_path_latest,  c);
+  await html_overwrite(a_name, f_path_latest, c);
 }
