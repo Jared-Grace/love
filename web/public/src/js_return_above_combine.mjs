@@ -28,10 +28,10 @@ export function js_return_above_combine(ast) {
       let s1 = list_size_1(declarations);
       if (s1) {
         let only = list_single(list);
+        log({
+          only,
+        });
       }
-      log({
-        declarations,
-      });
     }
     js_node_type_is_if(previous, "VariableDeclaration", lambda3);
   }
