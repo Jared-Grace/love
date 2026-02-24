@@ -6,7 +6,7 @@ export async function firebase_storage_download_property(
   storage_path,
   property_name,
 ) {
-  let buffer = await firebase_storage_download(storage_path, error());
+  let buffer = await firebase_storage_download(error(), storage_path);
   const json = buffer_text_to(buffer);
   let o = json_from(json);
   let value = property_get(o, property_name);
