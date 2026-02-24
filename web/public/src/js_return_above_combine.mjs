@@ -25,7 +25,8 @@ export function js_return_above_combine(ast) {
     function lambda3() {
       let declarations = property_get(previous, "declarations");
       function lambda(only) {
-        js_node_type_is_if(node2, type, function lambda4() {});
+        function lambda4() {}
+        js_node_type_is_if(node2, type, lambda4);
         log({
           only,
         });
