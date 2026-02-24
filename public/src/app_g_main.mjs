@@ -1,3 +1,4 @@
+import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { app_shared_name_latest_text } from "../../../love/public/src/app_shared_name_latest_text.mjs";
 import { html_style_overflow_hidden } from "../../../love/public/src/html_style_overflow_hidden.mjs";
 import { html_font_sans_serif_set_html } from "../../../love/public/src/html_font_sans_serif_set_html.mjs";
@@ -8,7 +9,6 @@ import { g_icon_cross_unpositioned } from "../../../love/public/src/g_icon_cross
 import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs";
 import { html_remix_icon } from "../../../love/public/src/html_remix_icon.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
-import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
 import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -44,7 +44,7 @@ import { html_style_assign } from "../../../love/public/src/html_style_assign.mj
 export async function app_g_main(context) {
   let root = property_get(context, "root");
   firebase_name_jg();
-  let books = await ebible_version_books("engbsb");
+  let books = await ebible_version_books_browser("engbsb");
   global_function_property_set(app_g_main, "books", books);
   global_function_property_set(app_g_main, "chapter_code", "JAS01");
   html_meta_viewport();
