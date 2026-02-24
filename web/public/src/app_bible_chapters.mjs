@@ -1,5 +1,5 @@
+import { ebible_book_code_to_chapter_codes_browser } from "../../../love/public/src/ebible_book_code_to_chapter_codes_browser.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
-import { ebible_book_code_to_chapter_codes } from "../../../love/public/src/ebible_book_code_to_chapter_codes.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_bible_chapter_open } from "../../../love/public/src/app_bible_chapter_open.mjs";
@@ -23,7 +23,10 @@ export async function app_bible_chapters(context) {
   let hash = html_hash_object_get();
   let chapter_code = property_get(hash, "c");
   let book_code = ebible_chapter_code_to_book(chapter_code);
-  let chapter_codes = await ebible_book_code_to_chapter_codes(e, book_code);
+  let chapter_codes = await ebible_book_code_to_chapter_codes_browser(
+    e,
+    book_code,
+  );
   let mapped = list_map_prefix_without(chapter_codes, book_code);
   let chapter_numbers = list_map(mapped, integer_to_try);
   let books = await ebible_version_books_browser(e);
