@@ -22,8 +22,9 @@ export function js_return_above_combine(ast) {
     }
     let previous = list_previous(e1, node);
     function lambda3() {
+      let declarations = property_get(previous, "declarations");
       log({
-        previous,
+        declarations,
       });
     }
     js_node_type_is_if(previous, "VariableDeclaration", lambda3);
