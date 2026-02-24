@@ -10,7 +10,7 @@ export async function http_firebase(url, project_url) {
     return joined;
   };
   let cached_exists = firebase_storage_exists;
-  let cached_get = await firebase_storage_download_curried(project_url);
+  let cached_get = firebase_storage_download_curried(project_url);
   let value_get = async function lambda2() {
     let v = await http(url);
     return v;
