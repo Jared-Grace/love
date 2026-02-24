@@ -11,9 +11,9 @@ export async function ebible_version_books_browser(bible_folder) {
   if (equal(bible_folder, right)) {
     let bible_folder2 = ebible_folder_english();
     result = await ebible_version_books_browser(bible_folder2);
-    return result;
   }
-  if (null_not_is(value)) {
+  if (null_not_is(result)) {
+    return result;
   }
   let file_name = ebible_version_books_upload_name();
   let v = await firebase_storage_download_ebible_cache(
