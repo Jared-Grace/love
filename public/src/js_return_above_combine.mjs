@@ -5,6 +5,7 @@ import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 export function js_return_above_combine(ast) {
   function lambda(v) {
     let node = property_get(v, "node");
+    let stack = property_get(v, "stack");
     let e1 = list_get_end_1(stack);
     log({
       e1,
