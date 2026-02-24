@@ -8,8 +8,8 @@ export async function ebible_version_books_browser(bible_folder) {
   let right = ebible_language_original_code();
   if (equal(bible_folder, right)) {
     let bible_folder2 = ebible_folder_english();
-    let r = await ebible_version_books_browser(bible_folder2);
-    return r;
+    let result = await ebible_version_books_browser(bible_folder2);
+    return result;
   }
   let file_name = ebible_version_books_upload_name();
   let v = await firebase_storage_download_ebible_cache(
