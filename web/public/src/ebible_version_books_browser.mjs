@@ -1,3 +1,4 @@
+import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { firebase_storage_download_ebible_cache } from "../../../love/public/src/firebase_storage_download_ebible_cache.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { ebible_language_original_code } from "../../../love/public/src/ebible_language_original_code.mjs";
@@ -11,6 +12,8 @@ export async function ebible_version_books_browser(bible_folder) {
     let bible_folder2 = ebible_folder_english();
     result = await ebible_version_books_browser(bible_folder2);
     return result;
+  }
+  if (null_not_is(value)) {
   }
   let file_name = ebible_version_books_upload_name();
   let v = await firebase_storage_download_ebible_cache(
