@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { buffer_text_to } from "../../../love/public/src/buffer_text_to.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -6,7 +7,8 @@ export async function firebase_storage_download_property(
   storage_path,
   property_name,
 ) {
-  let buffer = await firebase_storage_download(error(), storage_path);
+  let destination = error();
+  let buffer = await firebase_storage_download(storage_path, destination);
   const json = buffer_text_to(buffer);
   let o = json_from(json);
   let value = property_get(o, property_name);
