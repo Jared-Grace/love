@@ -3,7 +3,7 @@ import { firebase_service_account } from "../../../love/public/src/firebase_serv
 export async function firebase_admin_get() {
   const admin = (await import("firebase-admin")).default;
   let service_account = await firebase_service_account();
-  const sb = await firebase_storage_url_project();
+  const sb = await firebase_storage_url_project(await firebase_name());
   admin.initializeApp({
     credential: admin.credential.cert(service_account),
     storageBucket: sb,
