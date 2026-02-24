@@ -1,3 +1,4 @@
+import { ebible_languages_add } from "../../../love/public/src/ebible_languages_add.mjs";
 import { ebible_folder_cebuano } from "../../../love/public/src/ebible_folder_cebuano.mjs";
 import { list_sort_text_property } from "../../../love/public/src/list_sort_text_property.mjs";
 import { ebible_language_original } from "../../../love/public/src/ebible_language_original.mjs";
@@ -164,7 +165,8 @@ export function ebible_languages() {
       language_code: "twi",
     },
   ];
-  ("if you modify the above list, then run:");
+  ("Rather than modifying list, use: ");
+  ebible_languages_add.name("if you modify the above list, then run:");
   ebible_languages_chapters_cache_refresh.name;
   list_sort_text_property(languages, "name");
   return languages;
