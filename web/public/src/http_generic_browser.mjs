@@ -1,3 +1,5 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
+import { http_generic_options_default } from "../../../love/public/src/http_generic_options_default.mjs";
 import { html_loading } from "../../../love/public/src/html_loading.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -6,6 +8,9 @@ import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 export async function http_generic_browser(method, options, body, url) {
   async function lambda3() {
+    const o = http_generic_options_default(options);
+    let body = property_get(o, "body");
+    let method = property_get(o, "method");
     const r = {
       method,
     };
