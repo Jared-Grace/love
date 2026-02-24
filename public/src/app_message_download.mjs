@@ -1,5 +1,4 @@
-import { firebase_storage_url_project } from "../../../love/public/src/firebase_storage_url_project.mjs";
-import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
+import { firebase_storage_url_project_jg } from "../../../love/public/src/firebase_storage_url_project_jg.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { buffer_text_to } from "../../../love/public/src/buffer_text_to.mjs";
@@ -14,8 +13,7 @@ export async function app_message_download() {
   });
   async function lambda(item) {
     let name2 = property_get(item, "name");
-    let project_name = firebase_name_jg();
-    let project_url = firebase_storage_url_project(project_name);
+    let project_url = firebase_storage_url_project_jg();
     let buffer = await firebase_storage_download(project_url, name2);
     let s = buffer_text_to(buffer);
     let o = json_from(s);
