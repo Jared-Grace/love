@@ -5,9 +5,9 @@ export async function html_move_animate_rect(
   rect_to,
   duration,
 ) {
-  const offsetX = rect_to.left - rect_from.left;
-  const offsetY = rect_to.top - rect_from.top;
-  await html_move_animate_translate(component, offsetX, offsetY, duration);
-  let r = Math.hypot(offsetX, offsetY);
+  const x = rect_to.left - rect_from.left;
+  const y = rect_to.top - rect_from.top;
+  await html_move_animate_translate(component, x, y, duration);
+  let r = Math.hypot(x, y);
   return r;
 }
