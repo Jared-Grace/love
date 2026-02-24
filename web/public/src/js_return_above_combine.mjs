@@ -24,7 +24,9 @@ export function js_return_above_combine(ast) {
     let previous = list_previous(e1, node);
     function lambda3() {
       let declarations = property_get(previous, "declarations");
-      let s1 = list_size_1(list);
+      let s1 = list_size_1(declarations);
+      if (false) {
+      }
       log({
         declarations,
       });
