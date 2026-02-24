@@ -7,6 +7,7 @@ export async function sandbox() {
     firebase_storage_download_property,
     firebase_storage_download_text,
   ];
-  each(list, function lambda(item) {});
+  function lambda(item) {}
+  each(list, lambda);
   await function_param_new(f_name, param_name, default_value);
 }
