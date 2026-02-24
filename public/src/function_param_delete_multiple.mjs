@@ -1,4 +1,3 @@
-import { error } from "../../../love/public/src/error.mjs";
 import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 import { list_remove_at_multiple } from "../../../love/public/src/list_remove_at_multiple.mjs";
 import { list_sort_number } from "../../../love/public/src/list_sort_number.mjs";
@@ -14,7 +13,6 @@ export async function function_param_delete_multiple(param_names_comma) {
   arguments_assert(arguments, 1);
   let param_names = text_split_comma(param_names_comma);
   let indices = null;
-  let f_name = error();
   await function_params_new_generic(
     function_transform_current_lambda,
     on_call,
