@@ -24,12 +24,12 @@ export function js_return_above_combine(ast) {
     let previous = list_previous(e1, node);
     function lambda3() {
       let declarations = property_get(previous, "declarations");
-      list_single_if(declarations, lambda);
       function lambda(only) {
         log({
           only,
         });
       }
+      list_single_if(declarations, lambda);
     }
     js_node_type_is_if(previous, "VariableDeclaration", lambda3);
   }
