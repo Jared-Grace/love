@@ -26,10 +26,7 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
     count,
   });
   function lambda({ stack1, next, stack2, ast, declarations }) {
-    log({
-      declarations,
-    });
-    ("todo handle more than 1");
+    "todo handle more than 1";
     let s1 = list_size_1(declarations);
     assert(s1);
     function lambda2(declaration) {
@@ -48,6 +45,9 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       let init2 = js_null();
       let assign = js_declare(name3, init2);
       list_add(afters, lambda);
+      log({
+        afters,
+      });
       function lambda() {
         object_replace(next, expression);
         let index_next = list_next_index(stack2, stack1);
