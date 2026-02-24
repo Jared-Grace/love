@@ -19,9 +19,9 @@ export function js_return_above_combine(ast) {
     if (fi) {
       return;
     }
-    let previous = list_previous(list, item);
+    let previous = list_previous(e1, node);
     log({
-      e1,
+      previous,
     });
   }
   js_visit_type(ast, "ReturnStatement", lambda);
