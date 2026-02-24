@@ -231,8 +231,8 @@ export async function app_replace_rule_set(context) {
             let distance = property_get(r3, "distance");
             el.offsetWidth;
             await html_request_animation_frame();
-            await html_move_animate_translate(el, 0, 0, distance * 5);
-            await sleep(distance * 5);
+            await html_move_animate_translate(el, 0, 0, distance * 3);
+            await sleep(distance * 3);
             html_translation_transition_clear(el);
           }
           let mapped2 = lists_map(
