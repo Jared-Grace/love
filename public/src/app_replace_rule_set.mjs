@@ -224,7 +224,7 @@ export async function app_replace_rule_set(context) {
             await html_move_animate_rect(el, rect_before, rect_after, 0);
             el.offsetWidth;
             await html_request_animation_frame();
-            await html_move_animate_translate(el, 0, 0, 0);
+            await html_move_animate_translate(el, 0, 0, duration);
             await sleep(duration);
             html_translation_transition_clear(el);
           }
