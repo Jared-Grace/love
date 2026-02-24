@@ -1,4 +1,4 @@
-import { firebase_storage_download } from "../../../love/public/src/firebase_storage_download.mjs";
+import { firebase_storage_download_curried } from "../../../love/public/src/firebase_storage_download_curried.mjs";
 import { firebase_upload_buffer } from "../../../love/public/src/firebase_upload_buffer.mjs";
 import { cache_generic } from "../../../love/public/src/cache_generic.mjs";
 import { http_firebase_file_path } from "../../../love/public/src/http_firebase_file_path.mjs";
@@ -10,7 +10,7 @@ export async function http_firebase(url, project_url) {
     return joined;
   };
   let cached_exists = firebase_storage_exists;
-  let cached_get = firebase_storage_download;
+  let cached_get = await firebase_storage_download_curried(project_url);
   let value_get = async function lambda2() {
     let v = await http(url);
     return v;
