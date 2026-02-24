@@ -222,12 +222,13 @@ export async function app_replace_rule_set(context) {
           let rects_after = list_map(skipped, html_bounding_client_rect);
           async function lambda9(a) {
             let [el, rect_before, rect_after] = a;
-            let {distance} = await html_move_animate_rect(
+            let r3 = await html_move_animate_rect(
               el,
               rect_before,
               rect_after,
               0,
             );
+            let distance = property_get(r3, "distance");
             el.offsetWidth;
             await html_request_animation_frame();
             await html_move_animate_translate(el, 0, 0, duration);
