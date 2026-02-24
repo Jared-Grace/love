@@ -11,6 +11,7 @@ import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 export function js_return_above_combine(ast) {
   function lambda(v) {
     let node = property_get(v, "node");
+    let argument = property_get(node, "argument");
     js_identifier_is_if(only2, lambda42);
     let stack = property_get(v, "stack");
     let e1 = list_get_end_1(stack);
