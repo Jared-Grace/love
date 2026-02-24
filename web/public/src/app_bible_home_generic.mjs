@@ -1,3 +1,4 @@
+import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { text_replace_space_underscore_lower } from "../../../love/public/src/text_replace_space_underscore_lower.mjs";
 import { app_bible_hash_key_scroll_top } from "../../../love/public/src/app_bible_hash_key_scroll_top.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
@@ -35,7 +36,6 @@ import { each } from "../../../love/public/src/each.mjs";
 import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { ebible_book_code_to_name } from "../../../love/public/src/ebible_book_code_to_name.mjs";
-import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_chapter_code_parse } from "../../../love/public/src/ebible_chapter_code_parse.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
@@ -61,7 +61,7 @@ export async function app_bible_home_generic(context, lambda$a) {
   let v2 = ebible_chapter_code_parse(chapter_code);
   let chapter_name = property_get(v2, "chapter_name");
   let book_code = property_get(v2, "book_code");
-  let books = await ebible_version_books(e);
+  let books = await ebible_version_books_browser(e);
   let book_name = ebible_book_code_to_name(books, book_code);
   async function lambda6() {
     await on_arrow(list_previous_wrap);
