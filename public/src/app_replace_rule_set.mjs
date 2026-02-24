@@ -231,6 +231,7 @@ export async function app_replace_rule_set(context) {
             let distance = property_get(r3, "distance");
             el.offsetWidth;
             await html_request_animation_frame();
+            ("here the duration depends on the distance so that smaller distances take less time");
             const time = distance * 4;
             await html_move_animate_translate(el, 0, 0, time);
             await sleep(time);
