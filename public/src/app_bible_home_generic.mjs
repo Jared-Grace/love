@@ -155,7 +155,13 @@ export async function app_bible_home_generic(context, lambda$a) {
     verses,
     books,
   });
-  function biblehub_button_open(folder, verse_number_v, bottom, button_text) {
+  function biblehub_button_open(
+    folder,
+    ending,
+    verse_number_v,
+    bottom,
+    button_text,
+  ) {
     function lambda10() {
       let replaced = text_replace_space_underscore_lower(book_name);
       if (equal(replaced, "song")) {
@@ -169,7 +175,8 @@ export async function app_bible_home_generic(context, lambda$a) {
           chapter_name +
           "-" +
           verse_number_v +
-          ".htm",
+          ".htm" +
+          ending,
       );
     }
     let component5 = html_button(bottom, button_text, lambda10);
