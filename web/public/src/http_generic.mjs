@@ -18,7 +18,7 @@ export async function http_generic(url, options) {
   let method = property_get(r, "method");
   const b = browser_is();
   if (b) {
-    let v = await http_generic_browser(method, options, body, url);
+    let v = await http_generic_browser(options, url);
     return v;
   }
   let sleep = true;
