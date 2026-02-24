@@ -158,6 +158,11 @@ export function ebible_languages() {
       bible_folder: "kanirv",
       language_code: "kn",
     },
+    {
+      name: "Twi",
+      bible_folder: "twiasante",
+      language_code: "twi",
+    },
   ];
   ("if you modify the above list, then run:");
   ebible_languages_chapters_cache_refresh.name;
