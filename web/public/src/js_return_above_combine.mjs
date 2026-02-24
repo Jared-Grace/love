@@ -15,7 +15,10 @@ export function js_return_above_combine(ast) {
     if (not(l)) {
       return;
     }
-    let fi = list_first_is(list2, item2);
+    let fi = list_first_is(e1, node);
+    if (fi) {
+      return;
+    }
     let previous = list_previous(list, item);
     log({
       e1,
