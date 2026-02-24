@@ -1,3 +1,4 @@
+import { ebible_verses_browser } from "../../../love/public/src/ebible_verses_browser.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { promise_later } from "../../../love/public/src/promise_later.mjs";
 import { html_scroll_center_now } from "../../../love/public/src/html_scroll_center_now.mjs";
@@ -15,7 +16,6 @@ import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { list_first_last } from "../../../love/public/src/list_first_last.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { ebible_language_to_bible_folder } from "../../../love/public/src/ebible_language_to_bible_folder.mjs";
-import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 import { app_next_hash_to_languages_chosen } from "../../../love/public/src/app_next_hash_to_languages_chosen.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
@@ -43,7 +43,7 @@ export async function app_chapter_main(context) {
   let languages_verses = [];
   async function lambda2(lc) {
     let bible_folder = ebible_language_to_bible_folder(lc);
-    let verses = await ebible_verses(bible_folder, chapter_code);
+    let verses = await ebible_verses_browser(bible_folder, chapter_code);
     let books = await ebible_version_books_browser(bible_folder);
     let li = list_last_is(languages_chosen, lc);
     if (li) {
