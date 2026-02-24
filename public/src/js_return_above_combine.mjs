@@ -25,7 +25,7 @@ export function js_return_above_combine(ast) {
     function lambda3() {
       let declarations = property_get(previous, "declarations");
       let s1 = list_size_1(declarations);
-      if (false) {
+      if (s1) {
       }
       log({
         declarations,
