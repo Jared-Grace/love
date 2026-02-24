@@ -1,9 +1,9 @@
-import { firebase_upload_object } from "../../../love/public/src/firebase_upload_object.mjs";
+import { firebase_upload_object_browser } from "../../../love/public/src/firebase_upload_object_browser.mjs";
 import { json_compress_object } from "../../../love/public/src/json_compress_object.mjs";
 export async function firebase_upload_object_compressed_browser(
   destination,
   value,
 ) {
   let c = await json_compress_object(value);
-  await firebase_upload_object(destination, c);
+  await firebase_upload_object_browser(destination, c);
 }
