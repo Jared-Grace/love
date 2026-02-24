@@ -35,6 +35,8 @@ export function js_return_above_combine(ast) {
             let eq = equal_by(id, argument, js_identifier_name);
             log({
               eq,
+              id,
+              argument,
             });
           }
           js_identifier_is_if(id, lambda4);
