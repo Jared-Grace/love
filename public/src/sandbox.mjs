@@ -1,5 +1,4 @@
-import { command_line } from "../../../love/public/src/command_line.mjs";
+import { firebase_storage_download_property } from "../../../love/public/src/firebase_storage_download_property.mjs";
 export async function sandbox() {
-  let r = await command_line("echo %PATH%");
-  return r;
+  let fns = [firebase_storage_download_property];
 }
