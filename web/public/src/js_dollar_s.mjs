@@ -1,11 +1,9 @@
-import { log } from "../../../love/public/src/log.mjs";
 import { js_assign_default } from "../../../love/public/src/js_assign_default.mjs";
 import { js_literal_is } from "../../../love/public/src/js_literal_is.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 import { list_next_index } from "../../../love/public/src/list_next_index.mjs";
 import { list_insert } from "../../../love/public/src/list_insert.mjs";
-import { list_add } from "../../../love/public/src/list_add.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_left_right_set } from "../../../love/public/src/js_left_right_set.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
@@ -44,15 +42,10 @@ export function js_dollar_s({ stack1, stack2, ast, afters }) {
       let name3 = property_get(id, "name");
       let init2 = js_null();
       let assign = js_declare(name3, init2);
-      list_add(afters, js_dollar_s_after);
-      function js_dollar_s_after() {
-        log("invoked2");
-        object_replace(next, expression);
-        let index_next = list_next_index(stack2, stack1);
-        list_insert(stack2, index_next, assign);
-        list_remove(stack2, stack1);
-        log("invoked");
-      }
+      object_replace(next, expression);
+      let index_next = list_next_index(stack2, stack1);
+      list_insert(stack2, index_next, assign);
+      list_remove(stack2, stack1);
       return;
     }
     each(declarations, lambda2);
