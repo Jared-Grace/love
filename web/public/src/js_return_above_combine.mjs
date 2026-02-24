@@ -1,3 +1,4 @@
+import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 import { list_previous } from "../../../love/public/src/list_previous.mjs";
@@ -23,6 +24,7 @@ export function js_return_above_combine(ast) {
     let previous = list_previous(e1, node);
     function lambda3() {
       let declarations = property_get(previous, "declarations");
+      let s1 = list_size_1(list);
       log({
         declarations,
       });
