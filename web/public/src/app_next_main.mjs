@@ -1,3 +1,4 @@
+import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { ebible_language_to_bible_folder } from "../../../love/public/src/ebible_language_to_bible_folder.mjs";
 import { app_next_hash_to_languages_chosen } from "../../../love/public/src/app_next_hash_to_languages_chosen.mjs";
 import { hash_to_url } from "../../../love/public/src/hash_to_url.mjs";
@@ -8,7 +9,6 @@ import { html_url_without_hash } from "../../../love/public/src/html_url_without
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
@@ -29,7 +29,7 @@ export async function app_next_main(context) {
     return text;
   }
   const version_english = "engbsb";
-  let books = await ebible_version_books(version_english);
+  let books = await ebible_version_books_browser(version_english);
   let reference = ebible_parts_chapter_code_to_reference(chapter_code, books, [
     verse_number,
   ]);
