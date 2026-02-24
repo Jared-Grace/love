@@ -15,8 +15,13 @@ export async function firebase_storage_function_run_generic(
   let destination = await firebase_storage_download_property(
     destination_version,
     "destination",
+    error(),
   );
-  let code = await firebase_storage_download_property(destination, "code");
+  let code = await firebase_storage_download_property(
+    destination,
+    "code",
+    error(),
+  );
   let global_init = js_code_global_init();
   let joined = list_join_newline([global_init, code, call]);
   if (browser_is()) {
