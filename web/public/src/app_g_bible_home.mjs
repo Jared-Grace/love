@@ -1,3 +1,4 @@
+import { firebase_upload_object_compressed_browser } from "../../../love/public/src/firebase_upload_object_compressed_browser.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { g_sermon_generate_download } from "../../../love/public/src/g_sermon_generate_download.mjs";
@@ -11,7 +12,6 @@ import { newline_windows } from "../../../love/public/src/newline_windows.mjs";
 import { newline } from "../../../love/public/src/newline.mjs";
 import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
-import { firebase_upload_object_compressed } from "../../../love/public/src/firebase_upload_object_compressed.mjs";
 import { html_mobile_default_font_size } from "../../../love/public/src/html_mobile_default_font_size.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
@@ -59,7 +59,7 @@ export async function app_g_bible_home(context) {
   async function lambda4() {
     invoke_multiple(updates);
     let destination = g_sermon_generate_upload_path(chapter_code);
-    await firebase_upload_object_compressed(destination, downloaded);
+    await firebase_upload_object_compressed_browser(destination, downloaded);
   }
   let component2 = html_button(bar, "Update", lambda4);
 }
