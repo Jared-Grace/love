@@ -13,7 +13,8 @@ import { js_declare_single } from "../../../love/public/src/js_declare_single.mj
 import { js_visit_type } from "../../../love/public/src/js_visit_type.mjs";
 export function js_assign_combine(ast) {
   function lambda(v) {
-    let { node, stack } = v;
+    let stack = property_get(v, "stack");
+    let node = property_get(v, "node");
     let declaration = js_declare_single(node);
     if (null_is(declaration)) {
       return;
