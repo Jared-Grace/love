@@ -14,7 +14,7 @@ export function js_return_above_combine(ast) {
   function lambda(v) {
     let node = property_get(v, "node");
     let argument = property_get(node, "argument");
-    function lambda2() {
+    function lambda2(node, argument) {
       let stack = property_get(v, "stack");
       let e1 = list_get_end_1(stack);
       let l = list_is(e1);
@@ -42,7 +42,7 @@ export function js_return_above_combine(ast) {
       }
       js_node_type_is_if(previous, "VariableDeclaration", lambda3);
     }
-    js_identifier_is_if(argument, lambda2);
+    js_identifier_is_if(argument, () => {});
   }
   js_visit_returns(ast, lambda);
   let a = null;
