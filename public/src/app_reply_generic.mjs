@@ -1,3 +1,4 @@
+import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
@@ -42,7 +43,6 @@ import { ebible_references_parse_lines } from "../../../love/public/src/ebible_r
 import { list_random_item } from "../../../love/public/src/list_random_item.mjs";
 import { each_range_async } from "../../../love/public/src/each_range_async.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
-import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
 import { firebase_storage_download_ebible } from "../../../love/public/src/firebase_storage_download_ebible.mjs";
 import { ebible_index_flat_upload_name } from "../../../love/public/src/ebible_index_flat_upload_name.mjs";
 import { list_remove_property_multiple } from "../../../love/public/src/list_remove_property_multiple.mjs";
@@ -62,7 +62,7 @@ export async function app_reply_generic(verse_get) {
   let file_name = ebible_index_flat_upload_name();
   let en = ebible_folder_english();
   let index = await firebase_storage_download_ebible(en, file_name);
-  let books = await ebible_version_books(en);
+  let books = await ebible_version_books_browser(en);
   let verses_list = null;
   const root = html_document_body();
   let copied = [];
