@@ -10,8 +10,8 @@ import { js_flo } from "../../../love/public/src/js_flo.mjs";
 import { function_params_new_generic } from "../../../love/public/src/function_params_new_generic.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 export async function function_param_delete_multiple(
-  param_names_comma,
   f_name,
+  param_names_comma,
 ) {
   arguments_assert(arguments, 2);
   let param_names = text_split_comma(param_names_comma);
