@@ -25,5 +25,6 @@ export function js_return_above_combine(ast) {
     });
   }
   js_visit_type(ast, "ReturnStatement", lambda);
-  return;
+  let a = null;
+  return a;
 }
