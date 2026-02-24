@@ -1,7 +1,7 @@
+import { http_generic_browser } from "../../../love/public/src/http_generic_browser.mjs";
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { assert_json } from "../../../love/public/src/assert_json.mjs";
 import { round } from "../../../love/public/src/round.mjs";
@@ -9,9 +9,6 @@ import { catch_call } from "../../../love/public/src/catch_call.mjs";
 import { promise_wrap } from "../../../love/public/src/promise_wrap.mjs";
 import { text_starts_with } from "../../../love/public/src/text_starts_with.mjs";
 import { http_sleep } from "../../../love/public/src/http_sleep.mjs";
-import { html_loading } from "../../../love/public/src/html_loading.mjs";
-import { error } from "../../../love/public/src/error.mjs";
-import { not } from "../../../love/public/src/not.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 export async function http_generic(url, options) {
@@ -19,28 +16,7 @@ export async function http_generic(url, options) {
   const body = options.body || null;
   const b = browser_is();
   if (b) {
-    async function lambda3() {
-      const r = {
-        method,
-      };
-      let exists = property_exists(options, "body");
-      if (exists) {
-        object_assign(r, {
-          headers: {
-            "Content-Type": "application/json",
-            ...(options.headers || {}),
-          },
-          body: json_to(body),
-        });
-      }
-      const response = await fetch(url, r);
-      if (not(response.ok)) {
-        error("Failed to fetch file");
-      }
-      const buf = await response.arrayBuffer();
-      return buf;
-    }
-    let v = await html_loading(lambda3);
+    let v = await http_generic_browser(method, options, body, url);
     return v;
   }
   let sleep = true;
