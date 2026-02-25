@@ -53,7 +53,7 @@ export function js_return_above_combine(ast) {
               let name = js_flo_name(ast);
               log_exit(name);
               js_return_argument_set(node, value);
-              list_remove(list, item);
+              list_remove(e1, node);
             }
           }
           js_node_type_is_if(init, "Literal", lambda6);
