@@ -44,7 +44,7 @@ export function js_return_above_combine(ast) {
             let values = [null, false, true];
             let includes = list_includes(values, value);
             if (includes) {
-              js_return_argument_set(node, value);
+              js_return_argument_set(node, init);
               list_remove(e1, previous);
             }
           }
