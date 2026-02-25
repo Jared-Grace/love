@@ -1,3 +1,4 @@
+import { js_literal_is_if } from "../../../love/public/src/js_literal_is_if.mjs";
 import { list_includes_if } from "../../../love/public/src/list_includes_if.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { js_return_argument_set } from "../../../love/public/src/js_return_argument_set.mjs";
@@ -47,7 +48,7 @@ export function js_return_above_combine(ast) {
               list_remove(e1, previous);
             }
           }
-          js_node_type_is_if(init, "Literal", lambda6);
+          js_literal_is_if(init, lambda6);
         }
         js_identifier_is_if(id, lambda4);
       }
