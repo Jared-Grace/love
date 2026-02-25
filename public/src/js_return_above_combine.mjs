@@ -16,7 +16,6 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 export function js_return_above_combine(ast) {
   "this refactors two sequential statements to be one return statement";
   js_visit_returns_identifiers(ast, lambda2);
-  return null;
   function lambda2({ v, node, argument }) {
     let stack = property_get(v, "stack");
     let e1 = list_get_end_1(stack);
