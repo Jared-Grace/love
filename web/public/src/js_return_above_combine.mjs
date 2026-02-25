@@ -44,8 +44,9 @@ export function js_return_above_combine(ast) {
           }
           let init = property_get(only, "init");
           function lambda6() {
+            let value = property_get(init, "value");
             let values = [null, false, true];
-            let includes = list_includes(list, item);
+            let includes = list_includes(values, item);
             let name = js_flo_name(ast);
             log_exit(name);
           }
