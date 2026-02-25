@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { log_exit } from "../../../love/public/src/log_exit.mjs";
 import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 import { js_visit_returns_identifiers } from "../../../love/public/src/js_visit_returns_identifiers.mjs";
@@ -32,6 +33,9 @@ export function js_return_above_combine(ast) {
       let declarations = property_get(previous, "declarations");
       function lambda(only) {
         let id = property_get(only, "id");
+        log({
+          only,
+        });
         function lambda4() {
           const n = equal_by_not(id, argument, js_identifier_name);
           if (n) {
