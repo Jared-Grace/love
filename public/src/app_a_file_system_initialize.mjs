@@ -10,7 +10,6 @@ export async function app_a_file_system_initialize() {
   async function lambda2() {
     await app_a_file_system_initialize_download();
     let v = true;
-    return v;
   }
   let value2 = await global_function_initialize_lambda_async(
     app_a_file_system_initialize,
