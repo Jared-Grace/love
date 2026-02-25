@@ -92,8 +92,7 @@ export async function app_search_results(context, div_results) {
     let book_code = ebible_chapter_code_to_book(chapter_code);
     let e = ebible_book_exists(books, book_code);
     if (not(e)) {
-      let v = null;
-      return v;
+      return null;
     }
     function each_verse_number(verse_number) {
       let div_verse = html_div(div_results);

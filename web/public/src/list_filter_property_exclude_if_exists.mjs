@@ -12,8 +12,7 @@ export function list_filter_property_exclude_if_exists(
       let ne = property_get(item, property_name) !== value;
       return ne;
     }
-    let v2 = true;
-    return v2;
+    return true;
   }
   let filtered = list_filter(list, lambda);
   return filtered;
