@@ -24,8 +24,7 @@ export function app_message_provide_generic(category, emoji, context, verse) {
     emoji +
     " Please choose one of the following:";
   let value_previous_get = function lambda2() {
-    let v = null;
-    return v;
+    return null;
   };
   const yes = "yes";
   const choices = [

@@ -28,8 +28,7 @@ export function js_unparse(ast) {
         js_unparse_inner(node);
       } catch (e) {
         current = node;
-        let v2 = true;
-        return v2;
+        return true;
       }
     }
     js_visit_each(ast, lambda);

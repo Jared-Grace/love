@@ -15,6 +15,5 @@ export function list_index_is(list, index) {
   if (index > index_last) {
     return v;
   }
-  let ii = true;
-  return ii;
+  return true;
 }

@@ -5,12 +5,10 @@ import { file_read } from "../../../love/public/src/file_read.mjs";
 export async function file_read_cached(f_path) {
   let exists = global_function_property_exists(file_read_cached, f_path);
   if (exists) {
-    let v2 = false;
-    return v2;
+    return false;
   }
   not_assert(exists);
   let contents = await file_read(f_path);
   global_function_property_set(file_read_cached, f_path, contents);
-  let v = true;
-  return v;
+  return true;
 }

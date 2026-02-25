@@ -23,8 +23,7 @@ export function app_shared_flow(context, screens, before_or_after, find) {
   function lambda4(item) {
     let exists = property_exists(item, "skip");
     if (not(exists)) {
-      let v3 = true;
-      return v3;
+      return true;
     }
     let skip = property_get(item, "skip");
     let a = skip();
