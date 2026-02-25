@@ -6,10 +6,8 @@ export async function functions_return_above_find() {
   async function lambda2(f_name) {
     let ast = await function_ast(f_name);
     js_return_above_combine(ast);
-    let output = await function_transform(
-      f_name2,
-      async function lambda(ast2) {},
-    );
+    async function lambda(ast2) {}
+    let output = await function_transform(f_name2, lambda);
   }
   await functions_names_each(lambda2);
 }
