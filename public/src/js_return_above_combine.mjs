@@ -48,9 +48,9 @@ export function js_return_above_combine(ast) {
             let values = [null, false, true];
             let includes = list_includes(values, value);
             if (includes) {
+              let name = js_flo_name(ast);
+              log_exit(name);
             }
-            let name = js_flo_name(ast);
-            log_exit(name);
           }
           js_node_type_is_if(init, "Literal", lambda6);
         }
