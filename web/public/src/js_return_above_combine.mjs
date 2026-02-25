@@ -1,3 +1,4 @@
+import { log_exit } from "../../../love/public/src/log_exit.mjs";
 import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 import { js_visit_returns_identifiers } from "../../../love/public/src/js_visit_returns_identifiers.mjs";
 import { equal_by_not } from "../../../love/public/src/equal_by_not.mjs";
@@ -37,6 +38,7 @@ export function js_return_above_combine(ast) {
             return;
           }
           let name = js_flo_name(ast);
+          log_exit(message);
         }
         js_identifier_is_if(id, lambda4);
       }
