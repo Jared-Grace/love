@@ -41,9 +41,10 @@ export function js_return_above_combine(ast) {
           if (n) {
             return;
           }
-          function lambda6() {}
-          let name = js_flo_name(ast);
-          log_exit(name);
+          function lambda6() {
+            let name = js_flo_name(ast);
+            log_exit(name);
+          }
           let init = property_get(only, "init");
           js_node_type_is_if(init, "Literal", lambda6);
         }
