@@ -11,8 +11,7 @@ export function list_find_property_or_null(
   let filtered = list_filter(list, filter);
   let e = list_empty_is(filtered);
   if (e) {
-    let v = null;
-    return v;
+    return null;
   }
   let only = list_single(filtered);
   return only;
