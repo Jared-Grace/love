@@ -6,15 +6,12 @@ export function js_stack_list_block_is(stack, index_end) {
   let stack1 = list_get_end(stack, index_end);
   let a = list_is(stack1);
   if (not(a)) {
-    let v = false;
-    return v;
+    return false;
   }
   let stack2 = list_get_end(stack, index_end + 1);
   let a2 = js_block_statement_is(stack2);
   if (not(a2)) {
-    let v2 = false;
-    return v2;
+    return false;
   }
-  let si = true;
-  return si;
+  return true;
 }
