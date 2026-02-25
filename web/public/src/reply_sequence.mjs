@@ -11,8 +11,7 @@ export function reply_sequence(sequence_fns) {
       possibilities = reply_matches(possibilities);
       let e = list_empty_is(possibilities);
       if (e) {
-        let v = true;
-        return v;
+        return true;
       }
     }
     await each_async(sequence_fns, lambda);
