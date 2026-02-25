@@ -1,9 +1,6 @@
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { js_return_argument_set } from "../../../love/public/src/js_return_argument_set.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
-import { log } from "../../../love/public/src/log.mjs";
-import { log_exit } from "../../../love/public/src/log_exit.mjs";
-import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 import { js_visit_returns_identifiers } from "../../../love/public/src/js_visit_returns_identifiers.mjs";
 import { equal_by_not } from "../../../love/public/src/equal_by_not.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
@@ -36,9 +33,6 @@ export function js_return_above_combine(ast) {
       let declarations = property_get(previous, "declarations");
       function lambda(only) {
         let id = property_get(only, "id");
-        log({
-          only,
-        });
         function lambda4() {
           const n = equal_by_not(id, argument, js_identifier_name);
           if (n) {
@@ -52,8 +46,6 @@ export function js_return_above_combine(ast) {
             if (includes) {
               js_return_argument_set(node, value);
               list_remove(e1, node);
-              let name = js_flo_name(ast);
-              log_exit(name);
             }
           }
           js_node_type_is_if(init, "Literal", lambda6);
