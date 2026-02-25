@@ -1,3 +1,4 @@
+import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { log_exit } from "../../../love/public/src/log_exit.mjs";
 import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
@@ -44,6 +45,7 @@ export function js_return_above_combine(ast) {
           let init = property_get(only, "init");
           function lambda6() {
             let values = [null, false, true];
+            let includes = list_includes(list, item);
             let name = js_flo_name(ast);
             log_exit(name);
           }
