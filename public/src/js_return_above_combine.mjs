@@ -47,7 +47,7 @@ export function js_return_above_combine(ast) {
             let value = property_get(init, "value");
             let values = [null, false, true];
             let includes = list_includes(values, value);
-            if (false) {
+            if (includes) {
             }
             let name = js_flo_name(ast);
             log_exit(name);
