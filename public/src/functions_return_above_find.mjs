@@ -4,8 +4,7 @@ import { functions_names_each } from "../../../love/public/src/functions_names_e
 export async function functions_return_above_find() {
   async function lambda2(f_name) {
     let ast = await function_ast(f_name);
-    function lambda() {}
-    js_return_above_combine(ast, lambda);
+    js_return_above_combine(ast);
   }
   await functions_names_each(lambda2);
 }
