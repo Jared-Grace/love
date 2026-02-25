@@ -36,7 +36,7 @@ export function js_return_above_combine(ast) {
           if (n) {
             return;
           }
-          let name = js_flo_name(ast2);
+          let name = js_flo_name(ast);
         }
         js_identifier_is_if(id, lambda4);
       }
