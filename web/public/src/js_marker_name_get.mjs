@@ -13,36 +13,30 @@ export function js_marker_name_get(v) {
   let stack1 = list_get_end(stack, 1);
   let a = js_node_is(stack1);
   if (not(a)) {
-    let v2 = null;
-    return v2;
+    return null;
   }
   let a2 = js_node_type_is(stack1, "ExpressionStatement");
   if (not(a2)) {
-    let v3 = null;
-    return v3;
+    return null;
   }
   let node = property_get(v, "node");
   let callee = property_get(node, "callee");
   let a3 = js_node_type_is(callee, "Identifier");
   if (not(a3)) {
-    let v4 = null;
-    return v4;
+    return null;
   }
   let name = property_get(callee, "name");
   if (name !== marker.name) {
-    let v5 = null;
-    return v5;
+    return null;
   }
   let arguments2 = property_get(node, "arguments");
   if (list_empty_is(arguments2)) {
-    let v6 = null;
-    return v6;
+    return null;
   }
   let a_first = list_first(arguments2);
   let a4 = js_node_type_is(a_first, "Literal");
   if (not(a4)) {
-    let v7 = null;
-    return v7;
+    return null;
   }
   let stack2 = list_get_end(stack, 2);
   let a5 = list_is(stack2);
