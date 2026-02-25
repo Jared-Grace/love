@@ -38,7 +38,7 @@ export function js_return_above_combine(ast) {
             return;
           }
           function lambda6() {}
-          js_node_type_is_if(node2, type, lambda6);
+          js_node_type_is_if(node2, "Literal", lambda6);
           let name = js_flo_name(ast);
           log_exit(name);
         }
