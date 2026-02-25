@@ -1,6 +1,6 @@
+import { list_includes_if } from "../../../love/public/src/list_includes_if.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { js_return_argument_set } from "../../../love/public/src/js_return_argument_set.mjs";
-import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { js_visit_returns_identifiers } from "../../../love/public/src/js_visit_returns_identifiers.mjs";
 import { equal_by_not } from "../../../love/public/src/equal_by_not.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
@@ -41,8 +41,8 @@ export function js_return_above_combine(ast) {
           function lambda6() {
             let value = property_get(init, "value");
             let values = [null, false, true];
-            let includes = list_includes(values, value);
-            if (includes) {
+            list_includes_if(values, value, lambda_if);
+            function lambda_if() {
               js_return_argument_set(node, init);
               list_remove(e1, previous);
             }
