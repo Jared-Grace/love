@@ -8,5 +8,6 @@ export async function functions_return_above_find() {
     js_return_above_combine(ast);
   }
   await functions_names_each(lambda2);
-  let waited = await functions_transform(async function lambda(ast2) {});
+  async function lambda(ast2) {}
+  let waited = await functions_transform(lambda);
 }
