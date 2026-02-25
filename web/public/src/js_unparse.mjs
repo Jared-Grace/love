@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { js_visit_each } from "../../../love/public/src/js_visit_each.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { error_json } from "../../../love/public/src/error_json.mjs";
@@ -23,7 +24,7 @@ export function js_unparse(ast) {
   } catch (e) {
     let current = null;
     function lambda(v) {
-      let { node } = v;
+      let node = property_get(v, "node");
       try {
         js_unparse_inner(node);
       } catch (e) {
