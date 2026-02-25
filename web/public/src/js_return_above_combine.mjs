@@ -1,3 +1,4 @@
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { js_return_argument_set } from "../../../love/public/src/js_return_argument_set.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -51,7 +52,8 @@ export function js_return_above_combine(ast) {
             if (includes) {
               let name = js_flo_name(ast);
               log_exit(name);
-              js_return_argument_set(r, a2);
+              js_return_argument_set(node, value);
+              list_remove(list, item);
             }
           }
           js_node_type_is_if(init, "Literal", lambda6);
