@@ -1,10 +1,9 @@
+import { js_identifiers_names_equal_not } from "../../../love/public/src/js_identifiers_names_equal_not.mjs";
 import { js_literal_is_if } from "../../../love/public/src/js_literal_is_if.mjs";
 import { list_includes_if } from "../../../love/public/src/list_includes_if.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { js_return_argument_set } from "../../../love/public/src/js_return_argument_set.mjs";
 import { js_visit_returns_identifiers } from "../../../love/public/src/js_visit_returns_identifiers.mjs";
-import { equal_by_not } from "../../../love/public/src/equal_by_not.mjs";
-import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { js_identifier_is_if } from "../../../love/public/src/js_identifier_is_if.mjs";
 import { list_single_if } from "../../../love/public/src/list_single_if.mjs";
 import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
@@ -34,7 +33,7 @@ export function js_return_above_combine(ast) {
       function lambda(only) {
         let id = property_get(only, "id");
         function lambda4() {
-          const n = equal_by_not(id, argument, js_identifier_name);
+          const n = js_identifiers_names_equal_not(id, argument);
           if (n) {
             return;
           }
