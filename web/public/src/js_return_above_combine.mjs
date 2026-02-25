@@ -41,6 +41,7 @@ export function js_return_above_combine(ast) {
           if (n) {
             return;
           }
+          let init = property_get(only, "init");
           function lambda6() {}
           let name = js_flo_name(ast);
           log_exit(name);
