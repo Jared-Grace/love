@@ -37,7 +37,8 @@ export function js_return_above_combine(ast) {
           if (n) {
             return;
           }
-          js_node_type_is_if(node2, type, function lambda6() {});
+          function lambda6() {}
+          js_node_type_is_if(node2, type, lambda6);
           let name = js_flo_name(ast);
           log_exit(name);
         }
