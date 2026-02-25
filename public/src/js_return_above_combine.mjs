@@ -41,11 +41,11 @@ export function js_return_above_combine(ast) {
           if (n) {
             return;
           }
-          let init = property_get(only, "init");
           function lambda6() {}
           let name = js_flo_name(ast);
           log_exit(name);
-          js_node_type_is_if(node2, "Literal", lambda6);
+          let init = property_get(only, "init");
+          js_node_type_is_if(init, "Literal", lambda6);
         }
         js_identifier_is_if(id, lambda4);
       }
