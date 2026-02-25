@@ -1,3 +1,4 @@
+import { js_variable_declaration_is_if } from "../../../love/public/src/js_variable_declaration_is_if.mjs";
 import { js_identifiers_names_equal_not } from "../../../love/public/src/js_identifiers_names_equal_not.mjs";
 import { js_literal_is_if } from "../../../love/public/src/js_literal_is_if.mjs";
 import { list_includes_if } from "../../../love/public/src/list_includes_if.mjs";
@@ -6,7 +7,6 @@ import { js_return_argument_set } from "../../../love/public/src/js_return_argum
 import { js_visit_returns_identifiers } from "../../../love/public/src/js_visit_returns_identifiers.mjs";
 import { js_identifier_is_if } from "../../../love/public/src/js_identifier_is_if.mjs";
 import { list_single_if } from "../../../love/public/src/list_single_if.mjs";
-import { js_node_type_is_if } from "../../../love/public/src/js_node_type_is_if.mjs";
 import { list_first_is } from "../../../love/public/src/list_first_is.mjs";
 import { list_previous } from "../../../love/public/src/list_previous.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -53,6 +53,6 @@ export function js_return_above_combine(ast) {
       }
       list_single_if(declarations, lambda);
     }
-    js_node_type_is_if(previous, "VariableDeclaration", lambda3);
+    js_variable_declaration_is_if(previous, lambda3);
   }
 }
