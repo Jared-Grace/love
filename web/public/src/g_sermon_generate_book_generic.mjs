@@ -24,7 +24,7 @@ export async function g_sermon_generate_book_generic(
   );
   async function lambda2(c) {
     let chapter_code = property_get(c, "chapter_code");
-    let passages = property_get(c, "passages");
+    let passages_with_prompts = property_get(c, "passages");
     async function lambda3(p) {
       let passage = property_get(p, "passage");
       let prompt_user = property_get(p, "prompt_user");
@@ -36,10 +36,10 @@ export async function g_sermon_generate_book_generic(
       object_merge(passage, passage_extension);
       log_keep(output);
     }
-    await each_async(passages, lambda3);
+    await each_async(passages_with_prompts, lambda3);
     await file_overwrite_json(path, {
       chapter_code,
-      passages,
+      passages: passages_with_prompts,
     });
     log_keep({
       file_overwrite_json,
