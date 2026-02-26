@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { app_gloss_bible_generate_generic_word } from "../../../love/public/src/app_gloss_bible_generate_generic_word.mjs";
@@ -34,6 +35,7 @@ export async function g_sermon_generate_book_generic_open() {
     prompt_system,
   );
   let only = list_single(chapters);
+  let passages = property_get(only, "passages");
   let e2 = list_get_end_2(only);
   return e2;
   let imported_fn = await function_import(f_name);
