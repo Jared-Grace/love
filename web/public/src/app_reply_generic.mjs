@@ -58,7 +58,6 @@ export async function app_reply_generic(verse_get) {
   let languages = ebible_languages();
   list_remove_property_multiple(languages, "language_code", ["en", original]);
   let encouragement = bible_verses_uplifting();
-  firebase_project_name_jg();
   let file_name = ebible_index_flat_upload_name();
   let en = ebible_folder_english();
   let index = await firebase_storage_download_ebible(en, file_name);
