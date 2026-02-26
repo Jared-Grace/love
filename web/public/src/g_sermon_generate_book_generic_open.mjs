@@ -1,3 +1,4 @@
+import { app_gloss_bible_generate_generic_word } from "../../../love/public/src/app_gloss_bible_generate_generic_word.mjs";
 import { app_ceb_bible_gloss_generate_chapter_language } from "../../../love/public/src/app_ceb_bible_gloss_generate_chapter_language.mjs";
 import { app_ceb_bible_gloss_generate_chapter_bible_folders } from "../../../love/public/src/app_ceb_bible_gloss_generate_chapter_bible_folders.mjs";
 import { app_ceb_bible_gloss_generate } from "../../../love/public/src/app_ceb_bible_gloss_generate.mjs";
@@ -12,6 +13,8 @@ import { local_function_path_json } from "../../../love/public/src/local_functio
 export async function g_sermon_generate_book_generic_open() {
   let chapter_code = "PRO22";
   let language = app_ceb_bible_gloss_generate_chapter_language();
+  let last = "original language and English are";
+  let word = app_gloss_bible_generate_generic_word();
   const prompt_system = app_gloss_bible_generate_generic_prompt_system(
     language,
     word,
