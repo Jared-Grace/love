@@ -7,6 +7,7 @@ export async function g_sermon_generate_download(chapter_code) {
     fn,
     destination_get,
     chapter_code,
+    error(),
   );
   return value;
 }
