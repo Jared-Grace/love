@@ -4,6 +4,7 @@ export async function global_firebase_storage_download_json_decompress(
   fn,
   destination_get,
   property_name,
+  project_url,
 ) {
   async function get() {
     let destination = destination_get(property_name);

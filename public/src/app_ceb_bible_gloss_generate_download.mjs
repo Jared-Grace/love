@@ -7,6 +7,7 @@ export async function app_ceb_bible_gloss_generate_download(chapter_code) {
     fn,
     destination_get,
     chapter_code,
+    error(),
   );
   return value;
 }
