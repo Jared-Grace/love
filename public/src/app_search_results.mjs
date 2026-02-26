@@ -47,10 +47,10 @@ export async function app_search_results(context, div_results) {
   let words = text_to_words(query);
   async function lambda(word) {
     let destination = app_bible_search_word_path(word);
-    let destination2 = error();
+    let project_url = error();
     let o = await firebase_storage_download_json_decompress(
+      project_url,
       destination,
-      destination2,
     );
     return o;
   }
