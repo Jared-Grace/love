@@ -5,7 +5,7 @@ import { http_local_html_parse } from "../../../love/public/src/http_local_html_
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function ebible_versions() {
   let url = ebible_url() + "download.php";
-  let r = await http_local_html_parse(url);
+  let r = await http_local_html_parse(url, error());
   let root = property_get(r, "root");
   let d = property_get(r, "d");
   let prefix = ebible_url_details();
