@@ -1,3 +1,4 @@
+import { app_ceb_bible_gloss_generate_chapter_bible_folders } from "../../../love/public/src/app_ceb_bible_gloss_generate_chapter_bible_folders.mjs";
 import { app_ceb_bible_gloss_generate } from "../../../love/public/src/app_ceb_bible_gloss_generate.mjs";
 import { g_sermon_generate_book_generic_prompts } from "../../../love/public/src/g_sermon_generate_book_generic_prompts.mjs";
 import { app_gloss_bible_generate_generic_prompt_user_middle } from "../../../love/public/src/app_gloss_bible_generate_generic_prompt_user_middle.mjs";
@@ -18,6 +19,7 @@ export async function g_sermon_generate_book_generic_open(
   );
   const prompt_user_middle =
     app_gloss_bible_generate_generic_prompt_user_middle(language);
+  const bible_folders = app_ceb_bible_gloss_generate_chapter_bible_folders();
   let chapters = await g_sermon_generate_book_generic_prompts(
     bible_folders,
     null,
