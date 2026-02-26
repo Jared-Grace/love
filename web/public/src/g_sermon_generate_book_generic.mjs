@@ -130,23 +130,6 @@ export async function g_sermon_generate_book_generic(
       let n = property_get(g, "nearby");
       let user_prompt_before = prompt_get(n);
       let user_prompt_after = prompt_get([passage]);
-      const prompt_user =
-        "Here is the context: " +
-        user_prompt_before +
-        " :::: " +
-        prompt_user_middle +
-        user_prompt_after;
-      g_sermon_generate +
-        "sermons were originally generated using: " +
-        openai_chat_completions;
-      log_keep(prompt_system + " " + prompt_user);
-      let output = await openai_responses_cache(prompt_system, prompt_user);
-      let passage_extension = {
-        [g_sermon_generate_book_generic_property()]: output,
-      };
-      let to2 = object_merge(passage, passage_extension);
-      log_keep(output);
-      return passage;
       function prompt_get(groups) {
         let size = list_size(bible_folders);
         let a = add_1(size);
@@ -168,6 +151,28 @@ export async function g_sermon_generate_book_generic(
         let user_prompt = list_join(mapped, " :: ");
         return user_prompt;
       }
+      const prompt_user =
+        "Here is the context: " +
+        user_prompt_before +
+        " :::: " +
+        prompt_user_middle +
+        user_prompt_after;
+      g_sermon_generate +
+        "sermons were originally generated using: " +
+        openai_chat_completions;
+      log_keep(prompt_system + " " + prompt_user);
+      return {
+        prompt_system,
+        prompt_user,
+        passage,
+      };
+      let output = await openai_responses_cache(prompt_system, prompt_user);
+      let passage_extension = {
+        [g_sermon_generate_book_generic_property()]: output,
+      };
+      let to2 = object_merge(passage, passage_extension);
+      log_keep(output);
+      return passage;
     }
     let passages = await list_map_async(groups_match_chapter, map_group);
     await file_overwrite_json(path, {
