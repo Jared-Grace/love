@@ -186,7 +186,14 @@ export async function g_sermon_generate_book_generic(
   async function lambda2(c) {
     let chapter_code = property_get(c, "chapter_code");
     let passages = property_get(c, "passages");
-    async function lambda3(passage) {}
+    async function lambda3(passage) {
+      let output = await openai_responses_cache(prompt_system, prompt_user);
+      let passage_extension = {
+        [g_sermon_generate_book_generic_property()]: output,
+      };
+      let to2 = object_merge(passage, passage_extension);
+      log_keep(output);
+    }
     await each_async(passages, lambda3);
     await file_overwrite_json(path, {
       chapter_code,
