@@ -8,7 +8,6 @@ import { app_reply_choices } from "../../../love/public/src/app_reply_choices.mj
 import { firebase_project_name_jg } from "../../../love/public/src/firebase_project_name_jg.mjs";
 export async function app_reply_initialize(context) {
   let root = html_mobile_default(context);
-  firebase_project_name_jg();
   let choices = app_reply_choices();
   let languages = ebible_languages();
   let encouragement = bible_verses_uplifting();
