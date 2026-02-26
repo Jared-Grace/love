@@ -12,7 +12,10 @@ import { ebible_url_details } from "../../../love/public/src/ebible_url_details.
 export async function ebible_languages_add_item_info(bible_folder) {
   text_is_assert(bible_folder);
   let prefix = ebible_url_details();
-  let r = await http_local_html_parse(ebible_url() + prefix + bible_folder);
+  let r = await http_local_html_parse(
+    ebible_url() + prefix + bible_folder,
+    error(),
+  );
   let root = property_get(r, "root");
   let d = property_get(r, "d");
   const url_language_prefix = "http://www.ethnologue.com/language/";
