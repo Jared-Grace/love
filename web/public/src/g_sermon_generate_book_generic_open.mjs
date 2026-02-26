@@ -44,6 +44,7 @@ export async function g_sermon_generate_book_generic_open() {
   let prompt_system2 = property_get(e2, "prompt_system");
   let args = openai_responses_cache_args(prompt_system2, prompt_user);
   let key_get = invoke_cache_file_key_get(openai_responses, args);
+  let k = key_get();
   return e2;
   let imported_fn = await function_import(f_name);
   let path = local_function_path_json(chapter_code, imported_fn);
