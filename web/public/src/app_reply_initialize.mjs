@@ -5,7 +5,6 @@ import { ebible_folder_english } from "../../../love/public/src/ebible_folder_en
 import { bible_verses_uplifting } from "../../../love/public/src/bible_verses_uplifting.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { app_reply_choices } from "../../../love/public/src/app_reply_choices.mjs";
-import { firebase_project_name_jg } from "../../../love/public/src/firebase_project_name_jg.mjs";
 export async function app_reply_initialize(context) {
   let root = html_mobile_default(context);
   let choices = app_reply_choices();
