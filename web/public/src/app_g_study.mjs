@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { app_g_button_wrong } from "../../../love/public/src/app_g_button_wrong.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
@@ -38,7 +39,8 @@ export function app_g_study(player, overlay, close) {
       let chapter_code = app_g_chapter_code();
       async function lambda5() {
         let destination = g_sermon_generate_upload_path(chapter_code);
-        let o = await firebase_storage_download_json(error(), destination);
+        let destination2 = error();
+        let o = await firebase_storage_download_json(destination, destination2);
         return o;
       }
       let sermons = await global_function_property_nested_lambda(
