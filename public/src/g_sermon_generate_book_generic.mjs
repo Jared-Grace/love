@@ -38,10 +38,10 @@ export async function g_sermon_generate_book_generic(
       log_keep(output);
     }
     await each_async(passages_with_prompts, lambda3);
-    let mapped = list_map_property(list, property_name);
+    let passages = list_map_property(passages_with_prompts, "passage");
     await file_overwrite_json(path, {
       chapter_code,
-      passages: passages_with_prompts,
+      passages,
     });
     log_keep({
       file_overwrite_json,
