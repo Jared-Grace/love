@@ -23,7 +23,7 @@ export async function g_sermon_generate_book_generic_open(
   let chapters = await g_sermon_generate_book_generic_prompts(
     bible_folders,
     null,
-    "PRO22",
+    chapter_code,
     app_ceb_bible_gloss_generate,
     prompt_user_middle,
     prompt_system,
