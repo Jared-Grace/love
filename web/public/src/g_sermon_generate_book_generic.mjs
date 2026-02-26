@@ -181,6 +181,9 @@ export async function g_sermon_generate_book_generic(
       passages,
     };
     return r3;
+  }
+  let chapters = await list_map_async(chapters_codes, each_chapter);
+  async function lambda2(item3) {
     await file_overwrite_json(path, {
       chapter_code,
       passages,
@@ -190,7 +193,5 @@ export async function g_sermon_generate_book_generic(
       path,
     });
   }
-  let chapters = await list_map_async(chapters_codes, each_chapter);
-  async function lambda2(item3) {}
-  await each_async(list, lambda2);
+  await each_async(chapters, lambda2);
 }
