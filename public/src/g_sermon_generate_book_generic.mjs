@@ -8,7 +8,6 @@ import { list_size } from "../../../love/public/src/list_size.mjs";
 import { lists_to_news } from "../../../love/public/src/lists_to_news.mjs";
 import { bible_interlinear_chapters } from "../../../love/public/src/bible_interlinear_chapters.mjs";
 import { bible_verse_end_is } from "../../../love/public/src/bible_verse_end_is.mjs";
-import { each_async } from "../../../love/public/src/each_async.mjs";
 import { each_index_async } from "../../../love/public/src/each_index_async.mjs";
 import { each_multiple_async } from "../../../love/public/src/each_multiple_async.mjs";
 import { ebible_chapters_codes_or_specified } from "../../../love/public/src/ebible_chapters_codes_or_specified.mjs";
@@ -185,5 +184,5 @@ export async function g_sermon_generate_book_generic(
       path,
     });
   }
-  await each_async(chapters_codes, each_chapter);
+  await list_map_async(chapters_codes, each_chapter);
 }
