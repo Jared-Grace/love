@@ -6,8 +6,8 @@ export async function ebible_verses_browser(bible_folder, chapter_code) {
   async function get() {
     let destination = ebible_firebase_upload_path(bible_folder, chapter_code);
     let c = await firebase_storage_download_json_decompress(
-      destination,
       error(),
+      destination,
     );
     let verses = property_get(c, "verses");
     return verses;
