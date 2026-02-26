@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_size_assert_message } from "../../../love/public/src/list_size_assert_message.mjs";
@@ -12,9 +13,10 @@ import { ebible_url_details } from "../../../love/public/src/ebible_url_details.
 export async function ebible_languages_add_item_info(bible_folder) {
   text_is_assert(bible_folder);
   let prefix = ebible_url_details();
+  let project_url = error();
   let r = await http_local_html_parse(
     ebible_url() + prefix + bible_folder,
-    error(),
+    project_url,
   );
   let root = property_get(r, "root");
   let d = property_get(r, "d");
