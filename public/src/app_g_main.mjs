@@ -43,7 +43,6 @@ import { html_div } from "../../../love/public/src/html_div.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 export async function app_g_main(context) {
   let root = property_get(context, "root");
-  firebase_project_name_jg();
   let books = await ebible_version_books_browser("engbsb");
   global_function_property_set(app_g_main, "books", books);
   global_function_property_set(app_g_main, "chapter_code", "JAS01");
