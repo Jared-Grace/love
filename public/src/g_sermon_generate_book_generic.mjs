@@ -175,7 +175,8 @@ export async function g_sermon_generate_book_generic(
       return passage;
     }
     let passages = await list_map_async(groups_match_chapter, map_group);
-    return {};
+    let r3 = {};
+    return r3;
     await file_overwrite_json(path, {
       chapter_code,
       passages,
