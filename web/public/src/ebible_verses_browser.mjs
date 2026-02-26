@@ -6,10 +6,10 @@ import { ebible_firebase_upload_path } from "../../../love/public/src/ebible_fir
 export async function ebible_verses_browser(bible_folder, chapter_code) {
   async function get() {
     let destination = ebible_firebase_upload_path(bible_folder, chapter_code);
-    let destination2 = error();
+    let project_url = error();
     let c = await firebase_storage_download_json_decompress(
+      project_url,
       destination,
-      destination2,
     );
     let verses = property_get(c, "verses");
     return verses;
