@@ -8,8 +8,8 @@ export async function global_firebase_storage_download_json_decompress(
   async function get() {
     let destination = destination_get(property_name);
     let o = await firebase_storage_download_json_decompress(
-      destination,
       error(),
+      destination,
     );
     return o;
   }
