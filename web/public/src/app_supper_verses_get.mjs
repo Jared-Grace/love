@@ -1,4 +1,4 @@
-import { error } from "../../../love/public/src/error.mjs";
+import { firebase_storage_url_project_jg } from "../../../love/public/src/firebase_storage_url_project_jg.mjs";
 import { ebible_chapter_codes_browser } from "../../../love/public/src/ebible_chapter_codes_browser.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_supper_verses_get_upload_destination } from "../../../love/public/src/app_supper_verses_get_upload_destination.mjs";
@@ -14,7 +14,7 @@ export async function app_supper_verses_get() {
   if (b) {
     async function get() {
       let destination = app_supper_verses_get_upload_destination();
-      let project_url = error();
+      let project_url = firebase_storage_url_project_jg();
       let v = await firebase_storage_download_json_decompress(
         project_url,
         destination,
