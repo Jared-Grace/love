@@ -17,7 +17,6 @@ import { firebase_project_name_jg } from "../../../love/public/src/firebase_proj
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function app_next_main(context) {
-  firebase_project_name_jg();
   let hash = html_hash_object_get();
   let chapter_code = property_get(hash, "c");
   let verse_number = property_get(hash, "v");
