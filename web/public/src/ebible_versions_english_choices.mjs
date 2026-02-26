@@ -1,6 +1,5 @@
-import { error } from "../../../love/public/src/error.mjs";
+import { firebase_storage_download_json_jg } from "../../../love/public/src/firebase_storage_download_json_jg.mjs";
 import { ebible_versions_english_choices_upload_path } from "../../../love/public/src/ebible_versions_english_choices_upload_path.mjs";
-import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { global_function_initialize_lambda_async } from "../../../love/public/src/global_function_initialize_lambda_async.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
@@ -11,11 +10,7 @@ export async function ebible_versions_english_choices() {
   if (browser_is()) {
     async function lambda() {
       let destination = ebible_versions_english_choices_upload_path();
-      let destination2 = error();
-      let choices = await firebase_storage_download_json(
-        destination,
-        destination2,
-      );
+      let choices = await firebase_storage_download_json_jg(destination);
       return choices;
     }
     let english_choices = await global_function_initialize_lambda_async(
