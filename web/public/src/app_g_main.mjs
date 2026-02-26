@@ -10,7 +10,6 @@ import { g_tutorials_each } from "../../../love/public/src/g_tutorials_each.mjs"
 import { html_remix_icon } from "../../../love/public/src/html_remix_icon.mjs";
 import { global_function_property_set } from "../../../love/public/src/global_function_property_set.mjs";
 import { list_remove_last } from "../../../love/public/src/list_remove_last.mjs";
-import { firebase_project_name_jg } from "../../../love/public/src/firebase_project_name_jg.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { list_remove_end } from "../../../love/public/src/list_remove_end.mjs";
