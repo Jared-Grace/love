@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
@@ -46,9 +47,10 @@ export async function app_search_results(context, div_results) {
   let words = text_to_words(query);
   async function lambda(word) {
     let destination = app_bible_search_word_path(word);
+    let destination2 = error();
     let o = await firebase_storage_download_json_decompress(
-      error(),
       destination,
+      destination2,
     );
     return o;
   }
