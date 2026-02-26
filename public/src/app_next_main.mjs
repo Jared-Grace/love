@@ -13,7 +13,6 @@ import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
-import { firebase_project_name_jg } from "../../../love/public/src/firebase_project_name_jg.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function app_next_main(context) {
