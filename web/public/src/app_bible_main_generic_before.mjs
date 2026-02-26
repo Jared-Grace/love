@@ -1,6 +1,5 @@
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
-import { firebase_project_name_jg } from "../../../love/public/src/firebase_project_name_jg.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 export function app_bible_main_generic_before(
   context,
@@ -13,7 +12,6 @@ export function app_bible_main_generic_before(
     screens,
     screen_home,
   });
-  firebase_project_name_jg();
   let root = html_mobile_default(context);
   html_margin_0(root);
 }
