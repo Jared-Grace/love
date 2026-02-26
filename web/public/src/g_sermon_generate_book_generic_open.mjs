@@ -46,6 +46,7 @@ export async function g_sermon_generate_book_generic_open() {
   let args = openai_responses_cache_args(prompt_system2, prompt_user);
   let key_get = invoke_cache_file_key_get(openai_responses, args);
   let k = await key_get();
+  await file_open(k);
   let cached_get = invoke_cache_file_get();
   let r = await cached_get(k);
   return r;
@@ -55,5 +56,4 @@ export async function g_sermon_generate_book_generic_open() {
   log({
     data,
   });
-  await file_open(path);
 }
