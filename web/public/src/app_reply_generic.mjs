@@ -48,7 +48,7 @@ import { ebible_index_flat_upload_name } from "../../../love/public/src/ebible_i
 import { list_remove_property_multiple } from "../../../love/public/src/list_remove_property_multiple.mjs";
 import { bible_interlinear_verses_upload_folder } from "../../../love/public/src/bible_interlinear_verses_upload_folder.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
-import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
+import { firebase_project_name_jg } from "../../../love/public/src/firebase_project_name_jg.mjs";
 import { bible_verses_uplifting } from "../../../love/public/src/bible_verses_uplifting.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { app_reply_choices } from "../../../love/public/src/app_reply_choices.mjs";
@@ -58,7 +58,7 @@ export async function app_reply_generic(verse_get) {
   let languages = ebible_languages();
   list_remove_property_multiple(languages, "language_code", ["en", original]);
   let encouragement = bible_verses_uplifting();
-  firebase_name_jg();
+  firebase_project_name_jg();
   let file_name = ebible_index_flat_upload_name();
   let en = ebible_folder_english();
   let index = await firebase_storage_download_ebible(en, file_name);
