@@ -175,6 +175,7 @@ export async function g_sermon_generate_book_generic(
       passages,
     });
     log_keep({
+      file_overwrite_json,
       path,
     });
   }
