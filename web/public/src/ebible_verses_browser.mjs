@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { global_function_call_cache_async } from "../../../love/public/src/global_function_call_cache_async.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { firebase_storage_download_json_decompress } from "../../../love/public/src/firebase_storage_download_json_decompress.mjs";
@@ -5,9 +6,10 @@ import { ebible_firebase_upload_path } from "../../../love/public/src/ebible_fir
 export async function ebible_verses_browser(bible_folder, chapter_code) {
   async function get() {
     let destination = ebible_firebase_upload_path(bible_folder, chapter_code);
+    let destination2 = error();
     let c = await firebase_storage_download_json_decompress(
-      error(),
       destination,
+      destination2,
     );
     let verses = property_get(c, "verses");
     return verses;
