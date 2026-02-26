@@ -1,4 +1,3 @@
-import { error } from "../../../love/public/src/error.mjs";
 import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
 import { firebase_storage_download_json_decompress } from "../../../love/public/src/firebase_storage_download_json_decompress.mjs";
 export async function global_firebase_storage_download_json_decompress(
@@ -8,7 +7,6 @@ export async function global_firebase_storage_download_json_decompress(
 ) {
   async function get() {
     let destination = destination_get(property_name);
-    let project_url = error();
     let o = await firebase_storage_download_json_decompress(
       project_url,
       destination,
