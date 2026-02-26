@@ -4,7 +4,6 @@ import { firebase_project_name_jg } from "../../../love/public/src/firebase_proj
 import { html_mobile_default } from "../../../love/public/src/html_mobile_default.mjs";
 export async function app_search_main(context) {
   html_mobile_default(context);
-  firebase_project_name_jg();
   let languages_chosen = [];
   property_set_exists_not(context, "languages_chosen", languages_chosen);
   app_search_home(context);
