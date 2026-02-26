@@ -11,7 +11,6 @@ import { html_mobile_default } from "../../../love/public/src/html_mobile_defaul
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_supper_verses_get } from "../../../love/public/src/app_supper_verses_get.mjs";
-import { firebase_project_name_jg } from "../../../love/public/src/firebase_project_name_jg.mjs";
 export async function app_supper_main(context) {
   let root = html_mobile_default(context);
   html_bar_content_padding(root);
