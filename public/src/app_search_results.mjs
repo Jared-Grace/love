@@ -46,7 +46,10 @@ export async function app_search_results(context, div_results) {
   let words = text_to_words(query);
   async function lambda(word) {
     let destination = app_bible_search_word_path(word);
-    let o = await firebase_storage_download_json_decompress(destination);
+    let o = await firebase_storage_download_json_decompress(
+      error(),
+      destination,
+    );
     return o;
   }
   let mapped = await list_map_unordered_async(words, lambda);
