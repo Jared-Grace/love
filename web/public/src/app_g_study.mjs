@@ -1,5 +1,4 @@
 import { firebase_storage_download_json_jg } from "../../../love/public/src/firebase_storage_download_json_jg.mjs";
-import { error } from "../../../love/public/src/error.mjs";
 import { app_g_button_wrong } from "../../../love/public/src/app_g_button_wrong.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { app_g_player_save } from "../../../love/public/src/app_g_player_save.mjs";
