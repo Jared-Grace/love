@@ -1,3 +1,4 @@
+import { g_sermon_generate_book_generic_prompts } from "../../../love/public/src/g_sermon_generate_book_generic_prompts.mjs";
 import { app_gloss_bible_generate_generic_prompt_user_middle } from "../../../love/public/src/app_gloss_bible_generate_generic_prompt_user_middle.mjs";
 import { app_gloss_bible_generate_generic_prompt_system } from "../../../love/public/src/app_gloss_bible_generate_generic_prompt_system.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -9,6 +10,14 @@ export async function g_sermon_generate_book_generic_open(
   f_name,
   chapter_code,
 ) {
+  let chapters = await g_sermon_generate_book_generic_prompts(
+    bible_folders,
+    book_code,
+    chapter_code_specified,
+    fn,
+    prompt_user_middle2,
+    prompt_system2,
+  );
   const prompt_system = app_gloss_bible_generate_generic_prompt_system(
     language,
     word,
