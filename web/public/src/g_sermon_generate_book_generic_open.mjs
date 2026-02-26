@@ -32,8 +32,8 @@ export async function g_sermon_generate_book_generic_open() {
     prompt_user_middle,
     prompt_system,
   );
-  let only = list_single(list);
-  return chapters;
+  let only = list_single(chapters);
+  return only;
   let imported_fn = await function_import(f_name);
   let path = local_function_path_json(chapter_code, imported_fn);
   let data = await file_read_json(path);
