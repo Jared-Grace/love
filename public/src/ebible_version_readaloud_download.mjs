@@ -6,7 +6,7 @@ import { http_local } from "../../../love/public/src/http_local.mjs";
 export async function ebible_version_readaloud_download(bible_folder) {
   let url = ebible_version_download_url(bible_folder, "readaloud");
   let url2 = error();
-  let buffer = await http_local(url, url2);
+  let buffer = await http_local(url2, url);
   let file_path = ebible_version_readaloud_download_path(bible_folder);
   await unzip(file_path, buffer);
   return file_path;
