@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { openai_responses_cache } from "../../../love/public/src/openai_responses_cache.mjs";
 import { list_map_async } from "../../../love/public/src/list_map_async.mjs";
 import { g_sermon_generate_book_generic_property } from "../../../love/public/src/g_sermon_generate_book_generic_property.mjs";
@@ -190,4 +191,5 @@ export async function g_sermon_generate_book_generic(
     });
   }
   let chapters = await list_map_async(chapters_codes, each_chapter);
+  await each_async(list, async function lambda2(item3) {});
 }
