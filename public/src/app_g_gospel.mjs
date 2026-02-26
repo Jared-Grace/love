@@ -1,4 +1,4 @@
-import { firebase_storage_url_project_jg } from "../../../love/public/src/firebase_storage_url_project_jg.mjs";
+import { firebase_storage_download_json_jg } from "../../../love/public/src/firebase_storage_download_json_jg.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { invoke_once } from "../../../love/public/src/invoke_once.mjs";
 import { app_g_button_wrong } from "../../../love/public/src/app_g_button_wrong.mjs";
@@ -19,7 +19,6 @@ import { app_g_npc_says } from "../../../love/public/src/app_g_npc_says.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { g_objection_generate_upload_path } from "../../../love/public/src/g_objection_generate_upload_path.mjs";
 import { positive_is } from "../../../love/public/src/positive_is.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -40,8 +39,7 @@ export async function app_g_gospel(
     let chapter_code = app_g_chapter_code();
     async function lambda5() {
       let destination = g_objection_generate_upload_path(chapter_code);
-      let project_url = firebase_storage_url_project_jg();
-      let o = await firebase_storage_download_json(project_url, destination);
+      let o = await firebase_storage_download_json_jg(destination);
       return o;
     }
     let o = await global_function_property_nested_lambda(
