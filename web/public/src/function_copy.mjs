@@ -1,3 +1,4 @@
+import { function_rename_check } from "../../../love/public/src/function_rename_check.mjs";
 import { function_current_set } from "../../../love/public/src/function_current_set.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { js_identifier_rename } from "../../../love/public/src/js_identifier_rename.mjs";
@@ -13,7 +14,8 @@ export async function function_copy(f_name_old, f_name_new) {
   let f_path_old = property_get(r, "f_path");
   let r2 = await function_name_unalias(f_name_new);
   let name = property_get(r2, "unaliased");
-  let f_path = function_name_to_path(f_name_new);
+  await function_rename_check(name);
+  let f_path = function_name_to_path(name);
   let f_path_new = await user_repo_path_combine(f_path);
   await file_copy(f_path_old, f_path_new);
   function lambda(ast) {
