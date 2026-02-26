@@ -39,7 +39,6 @@ export function app_g_study(player, overlay, close) {
       let chapter_code = app_g_chapter_code();
       async function lambda5() {
         let destination = g_sermon_generate_upload_path(chapter_code);
-        let project_url = error();
         let o = await firebase_storage_download_json_jg(destination);
         return o;
       }
