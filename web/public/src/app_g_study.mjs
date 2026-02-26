@@ -38,7 +38,7 @@ export function app_g_study(player, overlay, close) {
       let chapter_code = app_g_chapter_code();
       async function lambda5() {
         let destination = g_sermon_generate_upload_path(chapter_code);
-        let o = await firebase_storage_download_json(destination);
+        let o = await firebase_storage_download_json(destination, error());
         return o;
       }
       let sermons = await global_function_property_nested_lambda(
