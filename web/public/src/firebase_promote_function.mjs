@@ -4,7 +4,7 @@ import { firebase_upload_object } from "../../../love/public/src/firebase_upload
 import { firebase_deploy_function_destination_production } from "../../../love/public/src/firebase_deploy_function_destination_production.mjs";
 export async function firebase_promote_function(f_name) {
   let destination_latest = firebase_deploy_function_destination_latest(f_name);
-  let value = await firebase_storage_download_json(destination_latest, error());
+  let value = await firebase_storage_download_json(error(), destination_latest);
   let destination_production =
     firebase_deploy_function_destination_production(f_name);
   await firebase_upload_object(destination_production, value);
