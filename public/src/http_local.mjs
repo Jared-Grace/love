@@ -1,4 +1,3 @@
-import { firebase_storage_url_project_jg } from "../../../love/public/src/firebase_storage_url_project_jg.mjs";
 import { file_write_buffer } from "../../../love/public/src/file_write_buffer.mjs";
 import { file_read_buffer } from "../../../love/public/src/file_read_buffer.mjs";
 import { file_exists } from "../../../love/public/src/file_exists.mjs";
@@ -13,7 +12,6 @@ export async function http_local(url) {
   let cached_exists = file_exists;
   let cached_get = file_read_buffer;
   let value_get = async function lambda2() {
-    let project_url = firebase_storage_url_project_jg();
     let v = await http_firebase(url, project_url);
     return v;
   };
