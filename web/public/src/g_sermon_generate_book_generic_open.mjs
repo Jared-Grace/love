@@ -1,5 +1,5 @@
+import { list_get_end } from "../../../love/public/src/list_get_end.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { list_get_end_2 } from "../../../love/public/src/list_get_end_2.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { app_gloss_bible_generate_generic_word } from "../../../love/public/src/app_gloss_bible_generate_generic_word.mjs";
 import { app_ceb_bible_gloss_generate_chapter_language } from "../../../love/public/src/app_ceb_bible_gloss_generate_chapter_language.mjs";
@@ -36,7 +36,7 @@ export async function g_sermon_generate_book_generic_open() {
   );
   let only = list_single(chapters);
   let passages = property_get(only, "passages");
-  let e2 = list_get_end_2(passages);
+  let e2 = list_get_end(passages, 2);
   return e2;
   let imported_fn = await function_import(f_name);
   let path = local_function_path_json(chapter_code, imported_fn);
