@@ -12,6 +12,7 @@ export async function function_copy(f_name_old, f_name_new) {
   const r = await function_name_to_path_unalias(f_name_old);
   let unaliased_old = property_get(r, "unaliased");
   let f_path_old = property_get(r, "f_path");
+  ("not sure if should be unaliasing the new name - why would an alias already exist for a function that does not exist yet?");
   let r2 = await function_name_unalias(f_name_new);
   let name = property_get(r2, "unaliased");
   await function_rename_check(name);
