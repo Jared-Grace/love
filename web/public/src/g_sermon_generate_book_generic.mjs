@@ -184,5 +184,5 @@ export async function g_sermon_generate_book_generic(
       path,
     });
   }
-  await list_map_async(chapters_codes, each_chapter);
+  let chapters = await list_map_async(chapters_codes, each_chapter);
 }
