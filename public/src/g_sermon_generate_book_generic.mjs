@@ -1,3 +1,4 @@
+import { local_function_path_json } from "../../../love/public/src/local_function_path_json.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { g_sermon_generate_book_generic_prompts } from "../../../love/public/src/g_sermon_generate_book_generic_prompts.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -39,6 +40,7 @@ export async function g_sermon_generate_book_generic(
     }
     await each_async(passages_with_prompts, lambda3);
     let passages = list_map_property(passages_with_prompts, "passage");
+    let path = local_function_path_json(chapter_code, fn);
     await file_overwrite_json(path, {
       chapter_code,
       passages,
