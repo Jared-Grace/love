@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { ebible_chapter_codes_browser } from "../../../love/public/src/ebible_chapter_codes_browser.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_supper_verses_get_upload_destination } from "../../../love/public/src/app_supper_verses_get_upload_destination.mjs";
@@ -13,9 +14,10 @@ export async function app_supper_verses_get() {
   if (b) {
     async function get() {
       let destination = app_supper_verses_get_upload_destination();
+      let destination2 = error();
       let v = await firebase_storage_download_json_decompress(
-        error(),
         destination,
+        destination2,
       );
       return v;
     }
