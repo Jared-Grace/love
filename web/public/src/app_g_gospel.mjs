@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { invoke_once } from "../../../love/public/src/invoke_once.mjs";
 import { app_g_button_wrong } from "../../../love/public/src/app_g_button_wrong.mjs";
@@ -39,7 +40,8 @@ export async function app_g_gospel(
     let chapter_code = app_g_chapter_code();
     async function lambda5() {
       let destination = g_objection_generate_upload_path(chapter_code);
-      let o = await firebase_storage_download_json(error(), destination);
+      let destination2 = error();
+      let o = await firebase_storage_download_json(destination, destination2);
       return o;
     }
     let o = await global_function_property_nested_lambda(
