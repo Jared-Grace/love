@@ -1,7 +1,9 @@
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { firebase_storage_url_project_jg } from "../../../love/public/src/firebase_storage_url_project_jg.mjs";
 import { app_ceb_bible_gloss_generate_upload_path } from "../../../love/public/src/app_ceb_bible_gloss_generate_upload_path.mjs";
 import { global_firebase_storage_download_json_decompress } from "../../../love/public/src/global_firebase_storage_download_json_decompress.mjs";
 export async function app_ceb_bible_gloss_generate_download(chapter_code) {
+  arguments_assert(arguments, 1);
   let destination_get = app_ceb_bible_gloss_generate_upload_path;
   let fn = app_ceb_bible_gloss_generate_download;
   let project_url = firebase_storage_url_project_jg();
