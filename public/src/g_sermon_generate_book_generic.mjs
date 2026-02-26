@@ -161,11 +161,12 @@ export async function g_sermon_generate_book_generic(
         "sermons were originally generated using: " +
         openai_chat_completions;
       log_keep(prompt_system + " " + prompt_user);
-      return {
+      let r2 = {
         prompt_system,
         prompt_user,
         passage,
       };
+      return r2;
       let output = await openai_responses_cache(prompt_system, prompt_user);
       let passage_extension = {
         [g_sermon_generate_book_generic_property()]: output,
