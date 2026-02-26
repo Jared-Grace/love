@@ -36,7 +36,7 @@ export async function g_sermon_generate_book_generic_open() {
   );
   let only = list_single(chapters);
   let passages = property_get(only, "passages");
-  let e2 = list_get_end(passages, 2);
+  let e2 = list_get_end(passages, 3);
   return e2;
   let imported_fn = await function_import(f_name);
   let path = local_function_path_json(chapter_code, imported_fn);
