@@ -19,10 +19,10 @@ import { ebible_language_to_bible_folder } from "../../../love/public/src/ebible
 import { app_next_hash_to_languages_chosen } from "../../../love/public/src/app_next_hash_to_languages_chosen.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_hash_object_get } from "../../../love/public/src/html_hash_object_get.mjs";
-import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
+import { firebase_project_name_jg } from "../../../love/public/src/firebase_project_name_jg.mjs";
 export async function app_chapter_main(context) {
   let root = html_mobile_default(context);
-  firebase_name_jg();
+  firebase_project_name_jg();
   html_margin_0(root);
   let bc = html_bar_content_padded(root);
   let content = property_get(bc, "content");

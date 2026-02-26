@@ -1,4 +1,4 @@
-import { firebase_name_jg } from "../../../love/public/src/firebase_name_jg.mjs";
+import { firebase_project_name_jg } from "../../../love/public/src/firebase_project_name_jg.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { invoke_once } from "../../../love/public/src/invoke_once.mjs";
 import { app_g_button_wrong } from "../../../love/public/src/app_g_button_wrong.mjs";
@@ -40,7 +40,7 @@ export async function app_g_gospel(
     let chapter_code = app_g_chapter_code();
     async function lambda5() {
       let destination = g_objection_generate_upload_path(chapter_code);
-      let project_url = firebase_name_jg();
+      let project_url = firebase_project_name_jg();
       let o = await firebase_storage_download_json(project_url, destination);
       return o;
     }
