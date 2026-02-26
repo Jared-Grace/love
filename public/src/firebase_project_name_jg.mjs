@@ -1,3 +1,4 @@
 export function firebase_project_name_jg() {
-  return "jared-grace";
+  let r = "jared-grace";
+  return r;
 }
