@@ -1,7 +1,9 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { http_local_text } from "../../../love/public/src/http_local_text.mjs";
 export async function http_local_json(url) {
-  let text = await http_local_text(url, error());
+  let project_url = error();
+  let text = await http_local_text(url, project_url);
   let dictionary = json_from(text);
   return dictionary;
 }
