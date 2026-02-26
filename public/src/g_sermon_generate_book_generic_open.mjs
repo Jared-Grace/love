@@ -41,7 +41,6 @@ export async function g_sermon_generate_book_generic_open() {
   let only = list_single(chapters);
   let passages = property_get(only, "passages");
   let e2 = list_get_end(passages, 4);
-  return e2;
   let prompt_user = property_get(e2, "prompt_user");
   let prompt_system2 = property_get(e2, "prompt_system");
   let args = openai_responses_cache_args(prompt_system2, prompt_user);
