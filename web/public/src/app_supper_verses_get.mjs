@@ -13,7 +13,10 @@ export async function app_supper_verses_get() {
   if (b) {
     async function get() {
       let destination = app_supper_verses_get_upload_destination();
-      let v = await firebase_storage_download_json_decompress(destination);
+      let v = await firebase_storage_download_json_decompress(
+        error(),
+        destination,
+      );
       return v;
     }
     let value = await global_function_property_initialize_async(
