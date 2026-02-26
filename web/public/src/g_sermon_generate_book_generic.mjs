@@ -1,3 +1,4 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { g_sermon_generate_book_generic_prompts } from "../../../love/public/src/g_sermon_generate_book_generic_prompts.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { openai_responses_cache } from "../../../love/public/src/openai_responses_cache.mjs";
@@ -37,6 +38,7 @@ export async function g_sermon_generate_book_generic(
       log_keep(output);
     }
     await each_async(passages_with_prompts, lambda3);
+    let mapped = list_map_property(list, property_name);
     await file_overwrite_json(path, {
       chapter_code,
       passages: passages_with_prompts,
