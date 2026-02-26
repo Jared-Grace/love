@@ -39,7 +39,7 @@ export async function app_g_gospel(
     let chapter_code = app_g_chapter_code();
     async function lambda5() {
       let destination = g_objection_generate_upload_path(chapter_code);
-      let o = await firebase_storage_download_json(destination, error());
+      let o = await firebase_storage_download_json(error(), destination);
       return o;
     }
     let o = await global_function_property_nested_lambda(
