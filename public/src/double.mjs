@@ -1,3 +1,4 @@
 export function double(n) {
-  return n * 2;
+  let r = n * 2;
+  return r;
 }
