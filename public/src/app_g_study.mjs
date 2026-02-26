@@ -1,3 +1,4 @@
+import { firebase_storage_download_json_jg } from "../../../love/public/src/firebase_storage_download_json_jg.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { app_g_button_wrong } from "../../../love/public/src/app_g_button_wrong.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
@@ -22,7 +23,6 @@ import { app_g_container_text } from "../../../love/public/src/app_g_container_t
 import { list_find_property_json } from "../../../love/public/src/list_find_property_json.mjs";
 import { app_g_gospel } from "../../../love/public/src/app_g_gospel.mjs";
 import { global_function_property_nested_lambda } from "../../../love/public/src/global_function_property_nested_lambda.mjs";
-import { firebase_storage_download_json } from "../../../love/public/src/firebase_storage_download_json.mjs";
 import { g_sermon_generate_upload_path } from "../../../love/public/src/g_sermon_generate_upload_path.mjs";
 import { app_g_chapter_code } from "../../../love/public/src/app_g_chapter_code.mjs";
 import { app_g_menu_clear_back } from "../../../love/public/src/app_g_menu_clear_back.mjs";
@@ -40,7 +40,7 @@ export function app_g_study(player, overlay, close) {
       async function lambda5() {
         let destination = g_sermon_generate_upload_path(chapter_code);
         let project_url = error();
-        let o = await firebase_storage_download_json(project_url, destination);
+        let o = await firebase_storage_download_json_jg(destination);
         return o;
       }
       let sermons = await global_function_property_nested_lambda(
