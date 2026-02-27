@@ -36,7 +36,6 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
         let book2 = list_get(books, index);
         let book_name = property_get(book2, "text");
         async function lambda4(verse_number) {
-          await catch_ignore_async(verse_get);
           async function verse_get() {
             verse_number = text_to(verse_number);
             let reference = ebible_parts_chapter_code_to_reference(
