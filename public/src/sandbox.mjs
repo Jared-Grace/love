@@ -4,5 +4,5 @@ import { invoke_cache_file_remove } from "../../../love/public/src/invoke_cache_
 export async function sandbox() {
   let bible_folder = "engbsb";
   await invoke_cache_file_remove(ebible_version_chapters, [bible_folder]);
-  let chapters = await ebible_chapters_upload(bible_folder2);
+  let chapters = await ebible_chapters_upload(bible_folder);
 }
