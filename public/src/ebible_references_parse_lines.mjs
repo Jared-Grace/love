@@ -32,7 +32,7 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
       let verse_start = property_get(v2, "verse_start");
       let chapter_code = property_get(v2, "chapter_code");
       let index = property_get(v2, "index");
-      async function lambda5(bible_folder, books) {
+      async function each_version(bible_folder, books) {
         let book2 = list_get(books, index);
         let book_name = property_get(book2, "text");
         async function lambda4(verse_number) {
@@ -61,7 +61,7 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
         }
         await each_range_from_async(verse_start, verse_end, lambda4);
       }
-      await each_pair_async(bible_folders, books_all, lambda5);
+      await each_pair_async(bible_folders, books_all, each_version);
     }
     await each_pair_async(book_names, chapter_verses_list, lambda);
   }
