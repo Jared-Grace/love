@@ -48,7 +48,6 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
             verse_number,
             reference,
           });
-          la(verse_get);
         }
         await each_range_from_async(verse_start, verse_end, lambda4);
       }
