@@ -1,3 +1,4 @@
+import { ebible_references_parse_lines_browser } from "../../../love/public/src/ebible_references_parse_lines_browser.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -6,7 +7,6 @@ import { each } from "../../../love/public/src/each.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
 export async function app_reply_verses_add(
   en,
   reference,
@@ -17,7 +17,9 @@ export async function app_reply_verses_add(
 ) {
   let copy = list_copy_reverse(languages_chosen);
   let mapped2 = list_map_property(copy, "bible_folder");
-  let verses = await ebible_references_parse_lines(mapped2, [reference]);
+  let verses = await ebible_references_parse_lines_browser(mapped2, [
+    reference,
+  ]);
   function lambda(v) {
     if (null_is(v)) {
       return;
