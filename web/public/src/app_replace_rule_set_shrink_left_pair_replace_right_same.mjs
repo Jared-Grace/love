@@ -13,7 +13,7 @@ export function app_replace_rule_set_shrink_left_pair_replace_right_same() {
       },
       {
         start: "bca",
-        end: "ba",
+        end: "bba",
       },
       {
         start: "bbba",
