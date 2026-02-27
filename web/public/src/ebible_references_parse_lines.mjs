@@ -58,8 +58,8 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
     let verse_number = property_get(v, "verse_number");
     let chapter_code = property_get(v, "chapter_code");
     let bible_folder = property_get(v, "bible_folder");
-    let v3 = await catch_ignore_async(verse_get);
-    async function verse_get() {
+    let v3 = await catch_ignore_async(verse_get_lambda);
+    async function verse_get_lambda() {
       let result = await ebible_verse(bible_folder, chapter_code, verse_number);
       object_merge(result, {
         reference,
