@@ -3,7 +3,7 @@ import { list_find_text_match_ordered } from "../../../love/public/src/list_find
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { apps_names } from "../../../love/public/src/apps_names.mjs";
 export async function app_shared_name_search(search) {
-  text_is_assert(value);
+  text_is_assert(search);
   let mapped = await apps_names();
   let includes = list_includes(mapped, search);
   let a_name = null;
