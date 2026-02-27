@@ -1,7 +1,6 @@
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_pair } from "../../../love/public/src/each_pair.mjs";
 import { each_range_from } from "../../../love/public/src/each_range_from.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { ebible_references_names } from "../../../love/public/src/ebible_references_names.mjs";
@@ -75,8 +74,5 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
     return v3;
   }
   let waited = await list_map_unordered_async(list, lambda3);
-  log({
-    waited,
-  });
   return waited;
 }
