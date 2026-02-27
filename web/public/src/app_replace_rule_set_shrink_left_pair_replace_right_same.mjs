@@ -12,6 +12,10 @@ export function app_replace_rule_set_shrink_left_pair_replace_right_same() {
         end: "a",
       },
       {
+        start: "bca",
+        end: "ba",
+      },
+      {
         start: "bbba",
         end: "a",
       },
