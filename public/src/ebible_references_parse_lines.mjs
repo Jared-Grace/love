@@ -39,15 +39,15 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
           await catch_ignore_async(verse_get);
           async function verse_get() {
             verse_number = text_to(verse_number);
-            let result = await ebible_verse(
-              bible_folder,
-              chapter_code,
-              verse_number,
-            );
             let reference = ebible_parts_chapter_code_to_reference(
               chapter_code,
               books,
               [verse_number],
+            );
+            let result = await ebible_verse(
+              bible_folder,
+              chapter_code,
+              verse_number,
             );
             object_merge(result, {
               reference,
