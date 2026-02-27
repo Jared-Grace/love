@@ -12,7 +12,7 @@ export function app_replace_rule_set_grow_left_pair_change_right() {
         end: "bba",
       },
       {
-        start: "ba",
+        start: "bba",
         end: "bca",
       },
       {
