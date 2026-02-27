@@ -5,6 +5,7 @@ export async function sandbox() {
   let bible_folder = "engbsb";
   let chapters = await ebible_version_chapters_cache(bible_folder);
   let item = list_find_property(chapters, "chapter_code", "AMO09");
+  ebible_verses_get;
   return item;
   return;
   await ebible_chapters_upload_refresh(bible_folder);
