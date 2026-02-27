@@ -13,9 +13,9 @@ import { ebible_references_names } from "../../../love/public/src/ebible_referen
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 export async function ebible_references_parse_lines_generic(
+  books_get,
   verse_get,
   bible_folders,
-  books_get,
   lines,
 ) {
   let bible_folder = ebible_folder_english();
