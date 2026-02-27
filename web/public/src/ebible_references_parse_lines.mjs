@@ -16,6 +16,7 @@ import { catch_ignore_async } from "../../../love/public/src/catch_ignore_async.
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 export async function ebible_references_parse_lines(bible_folders, lines) {
   let books_get = ebible_version_books;
+  let verse_get = ebible_verse;
   let bible_folder = ebible_folder_english();
   let books_all = await list_map_unordered_async(bible_folders, books_get);
   let books = await books_get(bible_folder);
