@@ -47,20 +47,6 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
             chapter_code,
             verse_number,
           });
-          async function verse_get() {
-            let result = await ebible_verse(
-              bible_folder,
-              chapter_code,
-              verse_number,
-            );
-            object_merge(result, {
-              reference,
-            });
-            object_assign(result, {
-              chapter_code,
-            });
-            return result;
-          }
           la(verse_get);
         }
         await each_range_from_async(verse_start, verse_end, lambda4);
@@ -72,6 +58,16 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
   let list = await list_adder_async(lambda2);
   async function lambda3(verse_get) {
     let v3 = await catch_ignore_async(verse_get);
+    async function verse_get() {
+      let result = await ebible_verse(bible_folder, chapter_code, verse_number);
+      object_merge(result, {
+        reference,
+      });
+      object_assign(result, {
+        chapter_code,
+      });
+      return result;
+    }
     return v3;
   }
   let waited = await list_map_unordered_async(list, lambda3);
