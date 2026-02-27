@@ -1,3 +1,4 @@
+import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { catch_ignore_async } from "../../../love/public/src/catch_ignore_async.mjs";
@@ -62,7 +63,7 @@ export async function ebible_references_parse_lines_generic(
     let bible_folder = property_get(v, "bible_folder");
     let v3 = await catch_ignore_async(verse_get_lambda);
     async function verse_get_lambda() {
-      let result = await verse_get(bible_folder, chapter_code, verse_number);
+      let result = await ebible_verse(bible_folder, chapter_code, verse_number);
       object_merge(result, {
         reference,
       });
