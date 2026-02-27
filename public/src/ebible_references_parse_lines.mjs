@@ -56,7 +56,11 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
     each_pair(book_names, chapter_verses_list, lambda);
   }
   let list = list_adder(lambda2);
-  async function lambda3(verse_get) {
+  async function lambda3(v) {
+    let reference = property_get(v, "reference");
+    let verse_number = property_get(v, "verse_number");
+    let chapter_code = property_get(v, "chapter_code");
+    let bible_folder = property_get(v, "bible_folder");
     let v3 = await catch_ignore_async(verse_get);
     async function verse_get() {
       let result = await ebible_verse(bible_folder, chapter_code, verse_number);
