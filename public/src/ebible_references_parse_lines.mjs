@@ -46,6 +46,7 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
             bible_folder,
             chapter_code,
             verse_number,
+            reference,
           });
           la(verse_get);
         }
