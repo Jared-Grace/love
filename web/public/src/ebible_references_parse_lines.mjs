@@ -1,12 +1,12 @@
+import { list_adder } from "../../../love/public/src/list_adder.mjs";
+import { each_pair } from "../../../love/public/src/each_pair.mjs";
+import { each_range_from } from "../../../love/public/src/each_range_from.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { ebible_references_names } from "../../../love/public/src/ebible_references_names.mjs";
 import { ebible_reference_parts } from "../../../love/public/src/ebible_reference_parts.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
-import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
-import { each_pair_async } from "../../../love/public/src/each_pair_async.mjs";
-import { each_range_from_async } from "../../../love/public/src/each_range_from_async.mjs";
 import { text_to } from "../../../love/public/src/text_to.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -25,17 +25,17 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
   let v = ebible_references_names(books, lines);
   let book_names = property_get(v, "book_names");
   let chapter_verses_list = property_get(v, "chapter_verses_list");
-  async function lambda2(la) {
-    async function lambda(book_name, chapter_verses) {
+  function lambda2(la) {
+    function lambda(book_name, chapter_verses) {
       let v2 = ebible_reference_parts(books, book_name, chapter_verses);
       let verse_end = property_get(v2, "verse_end");
       let verse_start = property_get(v2, "verse_start");
       let chapter_code = property_get(v2, "chapter_code");
       let index = property_get(v2, "index");
-      async function each_version(bible_folder, books) {
+      function each_version(bible_folder, books) {
         let book2 = list_get(books, index);
         let book_name = property_get(book2, "text");
-        async function lambda4(verse_number) {
+        function lambda4(verse_number) {
           verse_number = text_to(verse_number);
           let reference = ebible_parts_chapter_code_to_reference(
             chapter_code,
@@ -49,13 +49,13 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
             reference,
           });
         }
-        await each_range_from_async(verse_start, verse_end, lambda4);
+        each_range_from(verse_start, verse_end, lambda4);
       }
-      await each_pair_async(bible_folders, books_all, each_version);
+      each_pair(bible_folders, books_all, each_version);
     }
-    await each_pair_async(book_names, chapter_verses_list, lambda);
+    each_pair(book_names, chapter_verses_list, lambda);
   }
-  let list = await list_adder_async(lambda2);
+  let list = list_adder(lambda2);
   async function lambda3(verse_get) {
     let v3 = await catch_ignore_async(verse_get);
     async function verse_get() {
