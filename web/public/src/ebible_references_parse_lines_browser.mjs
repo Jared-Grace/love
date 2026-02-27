@@ -6,7 +6,6 @@ export async function ebible_references_parse_lines_browser(
   lines,
 ) {
   let books_get = ebible_version_books_browser;
-  let verse_get = ebible_verse;
   let waited = await ebible_references_parse_lines_generic(
     books_get,
     bible_folders,
