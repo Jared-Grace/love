@@ -8,7 +8,7 @@ export async function sandbox() {
   let chapters = await ebible_version_chapters_cache(bible_folder);
   let item = list_find_property(chapters, "chapter_code", chapter_code);
   let list = await ebible_verses_readaloud(bible_folder, chapter_code);
-  return item;
+  return list;
   return;
   await ebible_chapters_upload_refresh(bible_folder);
 }
