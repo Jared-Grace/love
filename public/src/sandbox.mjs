@@ -4,7 +4,7 @@ import { ebible_chapters_upload_refresh } from "../../../love/public/src/ebible_
 export async function sandbox() {
   let bible_folder = "engbsb";
   let chapters = await ebible_version_chapters_cache(bible_folder);
-  let item = list_find_property(list, property_name, property_value);
+  let item = list_find_property(chapters, "chapter_code", "AMO09");
   return chapters;
   return;
   await ebible_chapters_upload_refresh(bible_folder);
