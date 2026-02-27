@@ -1,3 +1,4 @@
+import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { whitespace_normalize } from "../../../love/public/src/whitespace_normalize.mjs";
 import { roman_to_integer } from "../../../love/public/src/roman_to_integer.mjs";
 import { text_prefix_without } from "../../../love/public/src/text_prefix_without.mjs";
@@ -20,6 +21,7 @@ import { html_parse_descendants_classes } from "../../../love/public/src/html_pa
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_parse_text } from "../../../love/public/src/html_parse_text.mjs";
 export async function ebible_chapter_text(bible_folder, chapter_code) {
+  arguments_assert(arguments, 2);
   let chapter_path = ebible_version_download_path_combine(
     bible_folder,
     chapter_code,
