@@ -163,7 +163,7 @@ export function ebible_languages() {
       language_code: "twi",
     },
   ];
-  ("Rather than modifying list, use: ");
+  ("Rather than modifying this list, use: ");
   fn_name("ebible_languages_add");
   ("if you modify the above list, then run:");
   fn_name("ebible_languages_chapters_cache_refresh");
