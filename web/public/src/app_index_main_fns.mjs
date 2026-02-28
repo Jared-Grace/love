@@ -37,6 +37,10 @@ export function app_index_main_fns() {
       app_fn: fn_name("app_designs_universal"),
       text: "Displays different possible designs",
     },
+    {
+      app_fn: fn_name("app_g_bible"),
+      text: "App for me",
+    },
   ];
   return r;
 }
