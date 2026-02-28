@@ -3,7 +3,7 @@ import { ebible_version_books_browser } from "../../../love/public/src/ebible_ve
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { list_join_plus } from "../../../love/public/src/list_join_plus.mjs";
-import { window_open_app } from "../../../love/public/src/window_open_app.mjs";
+import { window_open_app_fn } from "../../../love/public/src/window_open_app_fn.mjs";
 import { app_chapter } from "../../../love/public/src/app_chapter.mjs";
 import { html_button_copy_width_full } from "../../../love/public/src/html_button_copy_width_full.mjs";
 import { firebase_storage_download_json_decompress } from "../../../love/public/src/firebase_storage_download_json_decompress.mjs";
@@ -114,7 +114,7 @@ export async function app_search_results(context, div_results) {
           let mapped4 = list_map_property(languages_chosen, "language_code");
           list_reverse(mapped4);
           let joined = list_join_plus(mapped4);
-          window_open_app(app_chapter, {
+          window_open_app_fn(app_chapter, {
             c: chapter_code,
             v: verse_number,
             l: joined,
