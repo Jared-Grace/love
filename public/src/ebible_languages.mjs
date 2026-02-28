@@ -162,6 +162,11 @@ export function ebible_languages() {
       bible_folder: "twiasante",
       language_code: "twi",
     },
+    {
+      name: "eʋegbe",
+      bible_folder: "ewe",
+      language_code: "ewe",
+    },
   ];
   ("Rather than modifying this list, use: ");
   fn_name("ebible_languages_add");
