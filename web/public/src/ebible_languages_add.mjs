@@ -1,3 +1,4 @@
+import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { ebible_languages_add_item } from "../../../love/public/src/ebible_languages_add_item.mjs";
 import { ebible_languages_chapters_cache_refresh } from "../../../love/public/src/ebible_languages_chapters_cache_refresh.mjs";
 import { ebible_version_upload } from "../../../love/public/src/ebible_version_upload.mjs";
@@ -6,4 +7,5 @@ export async function ebible_languages_add(bible_folder) {
   let r = await ebible_languages_chapters_cache_refresh();
   await ebible_languages_add_item(bible_folder);
   return r;
+  ebible_languages.name;
 }
