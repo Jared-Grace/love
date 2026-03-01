@@ -33,6 +33,7 @@ export function ebible_reference_parts(books, book_name, chapter_verses) {
     chapter_code,
     verse_start,
     verse_end,
+    book_code,
   };
   return v;
 }
