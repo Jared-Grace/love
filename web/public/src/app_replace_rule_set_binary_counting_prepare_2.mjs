@@ -8,11 +8,11 @@ export function app_replace_rule_set_binary_counting_prepare_2() {
         end: "10",
       },
       {
-        start: "01aa",
+        start: "01a",
         end: "100",
       },
       {
-        start: "01aaaa",
+        start: "01a",
         end: "10000",
       },
     ],
