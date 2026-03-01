@@ -7,5 +7,6 @@ export async function ebible_languages_add(bible_folder) {
   let r = await ebible_languages_chapters_cache_refresh();
   await ebible_languages_add_item(bible_folder);
   return r;
+  ("the following is here to serve as a link to this fn");
   ebible_languages.name;
 }
