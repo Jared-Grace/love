@@ -12,7 +12,7 @@ export function app_replace_rule_set_binary_counting_prepare_2() {
         end: "100",
       },
       {
-        start: "01aaa",
+        start: "01aaaa",
         end: "10000",
       },
     ],
