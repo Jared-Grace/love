@@ -8,7 +8,6 @@ import { each_pair } from "../../../love/public/src/each_pair.mjs";
 import { each_range_from } from "../../../love/public/src/each_range_from.mjs";
 import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src/ebible_parts_chapter_code_to_reference.mjs";
 import { text_to } from "../../../love/public/src/text_to.mjs";
-import { list_get } from "../../../love/public/src/list_get.mjs";
 import { ebible_reference_parts } from "../../../love/public/src/ebible_reference_parts.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ebible_references_names } from "../../../love/public/src/ebible_references_names.mjs";
@@ -31,10 +30,9 @@ export async function ebible_references_parse_lines_generic(
       let verse_end = property_get(v2, "verse_end");
       let verse_start = property_get(v2, "verse_start");
       let chapter_code = property_get(v2, "chapter_code");
-      let index = property_get(v2, "index");
+      let book_code = property_get(v2, "book_code");
       function each_version(bible_folder, books) {
-        let item = list_find_property(list2, property_name, property_value);
-        let book2 = list_get(books, index);
+        let book2 = list_find_property(books, "book_code", book_code);
         let book_name = property_get(book2, "text");
         function lambda4(verse_number) {
           verse_number = text_to(verse_number);
