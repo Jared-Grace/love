@@ -167,6 +167,11 @@ export function ebible_languages() {
       bible_folder: "ewe",
       language_code: "ewe",
     },
+    {
+      name: "Tamil",
+      bible_folder: "tamtcv",
+      language_code: "tam",
+    },
   ];
   ("Rather than modifying this list, use: ");
   fn_name("ebible_languages_add");
