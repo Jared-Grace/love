@@ -1,3 +1,4 @@
+import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
 import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { object_assign } from "../../../love/public/src/object_assign.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
@@ -32,6 +33,7 @@ export async function ebible_references_parse_lines_generic(
       let chapter_code = property_get(v2, "chapter_code");
       let index = property_get(v2, "index");
       function each_version(bible_folder, books) {
+        let item = list_find_property(list2, property_name, property_value);
         let book2 = list_get(books, index);
         let book_name = property_get(book2, "text");
         function lambda4(verse_number) {
