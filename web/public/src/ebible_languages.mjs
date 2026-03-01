@@ -172,6 +172,11 @@ export function ebible_languages() {
       bible_folder: "tamtcv",
       language_code: "tam",
     },
+    {
+      name: "Meitei",
+      bible_folder: "mni",
+      language_code: "mni",
+    },
   ];
   ("Rather than modifying this list, use: ");
   fn_name("ebible_languages_add");
