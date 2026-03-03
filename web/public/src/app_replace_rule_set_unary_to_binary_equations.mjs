@@ -61,6 +61,10 @@ export function app_replace_rule_set_unary_to_binary_equations() {
         start: "dbccccce=bccccc",
         end: "dbc+bccc+bce=bccc+bcc",
       },
+      {
+        start: "dbc+bce=bcc",
+        end: "dbc+bce=bcc",
+      },
     ],
   };
   return r;
