@@ -71,7 +71,7 @@ export function app_replace_rule_set_unary_to_binary_equations() {
       },
       {
         start: "baad+bce=bccc",
-        end: "baa+bae=baaad",
+        end: "baa+ba=baaad",
       },
     ],
   };
