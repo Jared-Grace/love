@@ -77,6 +77,14 @@ export function app_replace_rule_set_unary_to_binary_equations() {
         start: "baa+baa=baaaad",
         end: "b10+b10=b100d",
       },
+      {
+        start: "dbce=bc",
+        end: "b1+b10=b11d",
+      },
+      {
+        start: "dbce=bc",
+        end: "b10+b11=b101d",
+      },
     ],
   };
   return r;
