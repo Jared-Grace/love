@@ -55,11 +55,11 @@ export function app_replace_rule_set_unary_to_binary_equations() {
       },
       {
         start: "dbcce=bcc",
-        end: "dbc+ce=bcc",
+        end: "dbc+bce=bcc",
       },
       {
         start: "dbccccce=bccccc",
-        end: "dbc+ccc+ce=bccc+cc",
+        end: "dbc+bccc+bce=bccc+bcc",
       },
     ],
   };
