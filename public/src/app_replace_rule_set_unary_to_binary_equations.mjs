@@ -66,8 +66,8 @@ export function app_replace_rule_set_unary_to_binary_equations() {
         end: "baad+bce=bccc",
       },
       {
-        start: "dbcc+bce=bccc",
-        end: "bad+bcce=bccc",
+        start: "bad+bcce=bccc",
+        end: "ba+baade=bccc",
       },
     ],
   };
