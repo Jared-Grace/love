@@ -23,7 +23,7 @@ import { file_delete_after } from "../../../love/public/src/file_delete_after.mj
 import { folder_public_join } from "./folder_public_join.mjs";
 export async function webpack_build(search) {
   const folder = app_shared_name_latest_text();
-  let p = folder_public_join(folder);
+  let config_folder = folder_public_join(folder);
   let a = await app_shared_name_search_info(search);
   let a_name = property_get(a, "a_name");
   let f_name = property_get(a, "f_name");
@@ -42,7 +42,7 @@ export async function webpack_build(search) {
     let env_vars = {
       [webpack_config_entry_path()]: entry_path,
       [webpack_config_filename()]: r,
-      [webpack_config_folder()]: p,
+      [webpack_config_folder()]: config_folder,
     };
     let f_name_ext = folder_scripts_join_mjs("webpack.config");
     let combined2 = text_combine("npx webpack --config ", f_name_ext);
