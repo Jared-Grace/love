@@ -7,7 +7,7 @@ import { prayer_start } from "../../../love/public/src/prayer_start.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 export async function autopray() {
-  async function lambda(chapter_code, verses) {
+  async function lambda(chapter_code, verses) {lmp
     log({
       verses,
     });
