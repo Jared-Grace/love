@@ -13,7 +13,8 @@ export async function autopray() {
   let list2 = await list_adder_async(lambda3);
   async function lambda(chapter_code, verses) {
     let mapped = list_map_property(list, "text");
-    each(list3, function lambda4(item) {});
+    function lambda4(item) {}
+    each(list3, lambda4);
   }
   await ebible_chapters_each_verses("engbsb", lambda);
   return;
