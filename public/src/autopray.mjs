@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { ebible_chapters_each_verses } from "../../../love/public/src/ebible_chapters_each_verses.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { text_may_the_lord } from "../../../love/public/src/text_may_the_lord.mjs";
@@ -6,7 +7,11 @@ import { prayer_start } from "../../../love/public/src/prayer_start.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 export async function autopray() {
-  async function lambda(chapter_code, verses) {}
+  async function lambda(chapter_code, verses) {
+    log({
+      verses,
+    });
+  }
   await ebible_chapters_each_verses("engbsb", lambda);
   function lambda2(verse_text, verse_reference) {
     let v2 = prayer_start();
