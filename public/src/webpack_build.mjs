@@ -45,10 +45,11 @@ export async function webpack_build(search) {
       [webpack_config_folder()]: config_folder,
     };
     let f_name_ext = folder_scripts_join_mjs("webpack.config");
+    const command_text_after = "";
     let combined2 = text_combine_multiple([
       "npx webpack --config ",
       f_name_ext,
-      "",
+      command_text_after,
     ]);
     let command = await command_line_text_env_vars(env_vars, combined2);
     let stdout = await command_line(command);
