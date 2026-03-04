@@ -1,5 +1,4 @@
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { ebible_chapters_each_verses } from "../../../love/public/src/ebible_chapters_each_verses.mjs";
 import { each_object } from "../../../love/public/src/each_object.mjs";
 import { text_may_the_lord } from "../../../love/public/src/text_may_the_lord.mjs";
@@ -8,11 +7,9 @@ import { prayer_start } from "../../../love/public/src/prayer_start.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 export async function autopray() {
+  laa;
   async function lambda(chapter_code, verses) {
     let mapped = list_map_property(list, "text");
-    log({
-      verses,
-    });
   }
   await ebible_chapters_each_verses("engbsb", lambda);
   return;
