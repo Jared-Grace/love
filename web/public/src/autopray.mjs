@@ -2,7 +2,6 @@ import { each } from "../../../love/public/src/each.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { ebible_chapters_each_verses } from "../../../love/public/src/ebible_chapters_each_verses.mjs";
-import { each_object } from "../../../love/public/src/each_object.mjs";
 import { text_may_the_lord } from "../../../love/public/src/text_may_the_lord.mjs";
 import { prayer_end } from "../../../love/public/src/prayer_end.mjs";
 import { prayer_start } from "../../../love/public/src/prayer_start.mjs";
@@ -33,6 +32,6 @@ export async function autopray() {
     log_keep(p);
   }
   while (true) {
-    each_object(v, lambda2);
+    each(v, lambda2);
   }
 }
