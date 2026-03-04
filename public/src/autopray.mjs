@@ -8,7 +8,8 @@ import { prayer_start } from "../../../love/public/src/prayer_start.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 export async function autopray() {
-  let list2 = await list_adder_async(async function lambda3(la) {});
+  async function lambda3(la) {}
+  let list2 = await list_adder_async(lambda3);
   async function lambda(chapter_code, verses) {
     let mapped = list_map_property(list, "text");
   }
