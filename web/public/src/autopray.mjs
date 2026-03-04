@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { ebible_chapters_each_verses } from "../../../love/public/src/ebible_chapters_each_verses.mjs";
@@ -12,6 +13,7 @@ export async function autopray() {
   let list2 = await list_adder_async(lambda3);
   async function lambda(chapter_code, verses) {
     let mapped = list_map_property(list, "text");
+    each(list3, function lambda4(item) {});
   }
   await ebible_chapters_each_verses("engbsb", lambda);
   return;
