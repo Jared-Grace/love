@@ -11,7 +11,7 @@ import { log_keep } from "../../../love/public/src/log_keep.mjs";
 export async function autopray() {
   async function lambda3(la) {
     async function lambda(chapter_code, verses) {
-      let mapped = list_map_property(list, "text");
+      let mapped = list_map_property(verses, "text");
       each(mapped, la);
     }
     await ebible_chapters_each_verses("engbsb", lambda);
