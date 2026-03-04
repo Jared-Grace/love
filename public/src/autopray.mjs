@@ -9,7 +9,7 @@ import { list_join_newline } from "../../../love/public/src/list_join_newline.mj
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 export async function autopray() {
   async function lambda(chapter_code, verses) {
-    let mapped = list_map_property(list, property_name);
+    let mapped = list_map_property(list, "text");
     log({
       verses,
     });
