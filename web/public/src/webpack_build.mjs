@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { app_shared_name_latest_text } from "../../../love/public/src/app_shared_name_latest_text.mjs";
 import { webpack_config_folder } from "../../../love/public/src/webpack_config_folder.mjs";
 import { file_name_js } from "../../../love/public/src/file_name_js.mjs";
@@ -10,7 +11,6 @@ import { webpack_build_code_import } from "../../../love/public/src/webpack_buil
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { webpack_config_entry_path } from "../../../love/public/src/webpack_config_entry_path.mjs";
 import { command_line_text_env_vars } from "../../../love/public/src/command_line_text_env_vars.mjs";
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { folder_scripts_join_mjs } from "../../../love/public/src/folder_scripts_join_mjs.mjs";
 import { folder_current_join } from "../../../love/public/src/folder_current_join.mjs";
 import { js_code_call_app_context_initialize } from "../../../love/public/src/js_code_call_app_context_initialize.mjs";
