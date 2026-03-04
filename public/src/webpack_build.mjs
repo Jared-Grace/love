@@ -22,6 +22,7 @@ import { function_name_combine } from "../../../love/public/src/function_name_co
 import { file_delete_after } from "../../../love/public/src/file_delete_after.mjs";
 import { folder_public_join } from "./folder_public_join.mjs";
 export async function webpack_build(search) {
+  const command_text_after = "";
   const folder = app_shared_name_latest_text();
   let config_folder = folder_public_join(folder);
   let a = await app_shared_name_search_info(search);
@@ -45,7 +46,6 @@ export async function webpack_build(search) {
       [webpack_config_folder()]: config_folder,
     };
     let f_name_ext = folder_scripts_join_mjs("webpack.config");
-    const command_text_after = "";
     let combined2 = text_combine_multiple([
       "npx webpack --config ",
       f_name_ext,
