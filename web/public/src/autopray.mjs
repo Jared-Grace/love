@@ -15,7 +15,7 @@ export async function autopray() {
     }
     await ebible_chapters_each_verses("engbsb", lambda);
   }
-  let list2 = await list_adder_async(lambda3);
+  let verses = await list_adder_async(lambda3);
   return;
   function lambda2(verse_text, verse_reference) {
     let v2 = prayer_start();
@@ -32,6 +32,6 @@ export async function autopray() {
     log_keep(p);
   }
   while (true) {
-    each(v, lambda2);
+    each(verses, lambda2);
   }
 }
