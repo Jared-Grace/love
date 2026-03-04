@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { file_delete_after } from "../../../love/public/src/file_delete_after.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 import { command_line_text_env_vars } from "../../../love/public/src/command_line_text_env_vars.mjs";
@@ -52,6 +53,9 @@ export async function webpack_build_generic(
       command_text_after,
     ]);
     let command = await command_line_text_env_vars(env_vars, combined2);
+    log({
+      command,
+    });
     let stdout = await command_line(command);
     return stdout;
   }
