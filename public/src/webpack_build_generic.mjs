@@ -48,6 +48,7 @@ export async function webpack_build_generic(
     let combined2 = text_combine_multiple([
       "npx webpack --config ",
       f_name_ext,
+      " ",
       command_text_after,
     ]);
     let command = await command_line_text_env_vars(env_vars, combined2);
