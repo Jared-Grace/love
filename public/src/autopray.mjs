@@ -6,8 +6,10 @@ import { prayer_start } from "../../../love/public/src/prayer_start.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 export async function autopray() {
-  async function lambda(chapter_code, verses) {}
-  await ebible_chapters_each_verses(bible_folder, lambda);
+  await ebible_chapters_each_verses(
+    'engbsb',
+    async function lambda(chapter_code, verses) {},
+  );
   function lambda2(verse_text, verse_reference) {
     let v2 = prayer_start();
     let v3 = prayer_end();
