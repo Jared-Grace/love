@@ -1,3 +1,4 @@
+import { openai_responses_cache } from "../../../love/public/src/openai_responses_cache.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
 import { list_filter_index } from "../../../love/public/src/list_filter_index.mjs";
 import { list_split } from "../../../love/public/src/list_split.mjs";
@@ -17,5 +18,6 @@ export async function sandbox() {
     return r2;
   }
   let filtered2 = list_filter_index(groups, lambda);
+  let r3 = await openai_responses_cache(system, user);
   return filtered2;
 }
