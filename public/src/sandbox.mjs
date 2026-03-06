@@ -20,7 +20,6 @@ export async function sandbox() {
     return r4;
   }
   let value = list_filter_index(groups, lambda);
-  return value;
   let json = json_to({
     value,
   });
