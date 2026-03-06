@@ -14,5 +14,5 @@ export async function sandbox() {
     each(filtered, lambda);
   }
   let groups = list_adder_group(lambda2);
-  return filtered;
+  return groups;
 }
