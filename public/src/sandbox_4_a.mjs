@@ -13,9 +13,9 @@ import { text_split_newline } from "../../../love/public/src/text_split_newline.
 import { file_read } from "../../../love/public/src/file_read.mjs";
 import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
 export async function sandbox_4_a() {
-  let file_path = folder_user_docs_path("nations_mentioned.carm.org.txt");
+  const path = "nations_mentioned.carm.org.txt";
+  let file_path = folder_user_docs_path(path);
   let contents = await file_read(file_path);
-  return contents;
   let split = text_split_newline(contents);
   let split2 = list_map_whitespace_normalize(split);
   let mapped3 = list_map_split_comma(split2);
