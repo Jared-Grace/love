@@ -15,7 +15,7 @@ import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs
 export async function sandbox_4_a() {
   let file_path = folder_user_docs_path("nations_mentioned.carm.org.txt");
   let contents = await file_read(file_path);
-  return;
+  return contents;
   let split = text_split_newline(contents);
   let split2 = list_map_whitespace_normalize(split);
   let mapped3 = list_map_split_comma(split2);
