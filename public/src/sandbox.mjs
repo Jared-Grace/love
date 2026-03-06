@@ -18,9 +18,9 @@ export async function sandbox() {
     let r2 = mod(index, m);
     return r2;
   }
-  let list = list_filter_index(groups, lambda);
+  let value = list_filter_index(groups, lambda);
   let json = json_to({
-    list,
+    value,
   });
   return json;
   let language = "Urdu";
