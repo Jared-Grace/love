@@ -33,6 +33,8 @@ export async function sandbox() {
   );
   function lambda2(item2, index2) {
     let change = lambda(item2, index2);
+    if (false) {
+    }
   }
   let mapped = list_map_index(list, lambda2);
   return r3;
