@@ -34,6 +34,7 @@ response = client.responses.create(
         {"role": "system", "content": system_msg},
         {"role": "user", "content": user_msg}
     ],
+    response_format={"type": "json_object"},
     temperature=0
 )
 
