@@ -17,5 +17,5 @@ export async function sandbox() {
     return r2;
   }
   let filtered2 = list_filter_index(groups, lambda);
-  return groups;
+  return filtered2;
 }
