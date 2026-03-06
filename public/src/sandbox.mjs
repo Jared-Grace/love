@@ -6,5 +6,6 @@ export async function sandbox() {
   let r = await file_read_folder_user_split_normalize(path);
   let normalized = property_get(r, "normalized");
   let filtered = list_filter_empty_not_is(normalized);
+  let separator = "---";
   return filtered;
 }
