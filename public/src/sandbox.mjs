@@ -17,11 +17,11 @@ export async function sandbox() {
     let r2 = mod(index, m);
     return r2;
   }
-  let filtered2 = list_filter_index(groups, lambda);
+  let list = list_filter_index(groups, lambda);
   let language = "Urdu";
   let r3 = await openai_responses_cache(
     "Translate the following to " + language,
     user,
   );
-  return filtered2;
+  return list;
 }
