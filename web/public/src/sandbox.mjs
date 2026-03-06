@@ -11,7 +11,11 @@ export async function sandbox() {
   let separator = "---";
   function lambda2(g) {
     g.start();
-    function lambda(item) {}
+    function lambda(item) {
+      if (false) {
+      } else {
+      }
+    }
     each(filtered, lambda);
   }
   let groups = list_adder_group(lambda2);
