@@ -1,3 +1,5 @@
+import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
+import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
@@ -46,5 +48,7 @@ export async function sandbox() {
     return item2;
   }
   let mapped = list_map_index(groups, lambda2);
+  let names = list_squash(mapped);
+  let joined = list_join_newline_2(list);
   return mapped;
 }
