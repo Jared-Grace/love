@@ -22,7 +22,6 @@ export async function sandbox() {
   let json = json_to({
     value,
   });
-  return json;
   let language = "Urdu";
   let r3 = await openai_responses_cache(
     "Translate the text inside the JSON object to " +
