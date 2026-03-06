@@ -1,7 +1,7 @@
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-export async function list_adder_group(lambda) {
+export function list_adder_group(lambda) {
   async function adder_groups(la) {
     let group = null;
     lambda({
@@ -20,6 +20,6 @@ export async function list_adder_group(lambda) {
       list_add(group, item);
     }
   }
-  let groups = await list_adder(adder_groups);
+  let groups = list_adder(adder_groups);
   return groups;
 }
