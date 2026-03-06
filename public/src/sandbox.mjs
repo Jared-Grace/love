@@ -22,7 +22,7 @@ export async function sandbox() {
   let r3 = await openai_responses_cache(
     "Translate the text inside the JSON object to " +
       language +
-      ". Do not change any keys.",
+      ". Do not change any object keys.",
     user,
   );
   return list;
