@@ -11,6 +11,6 @@ export async function sandbox() {
   let separator = "---";
   let groups = list_split(filtered, separator);
   function lambda(item, index) {}
-  let filtered2 = list_filter_index(list, lambda);
+  let filtered2 = list_filter_index(groups, lambda);
   return groups;
 }
