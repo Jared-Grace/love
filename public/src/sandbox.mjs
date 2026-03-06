@@ -18,6 +18,10 @@ export async function sandbox() {
     return r2;
   }
   let filtered2 = list_filter_index(groups, lambda);
-  let r3 = await openai_responses_cache(system, user);
+  let language = "Urdu";
+  let r3 = await openai_responses_cache(
+    "Translate the following to " + language,
+    user,
+  );
   return filtered2;
 }
