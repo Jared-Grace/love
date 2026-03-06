@@ -14,6 +14,7 @@ export async function sandbox() {
   let m = 2;
   function lambda(item, index) {
     let r2 = mod(index, m);
+    return r2;
   }
   let filtered2 = list_filter_index(groups, lambda);
   return groups;
