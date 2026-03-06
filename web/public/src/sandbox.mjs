@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { list_adder_group } from "../../../love/public/src/list_adder_group.mjs";
 import { list_filter_empty_not_is } from "../../../love/public/src/list_filter_empty_not_is.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -8,7 +9,9 @@ export async function sandbox() {
   let normalized = property_get(r, "normalized");
   let filtered = list_filter_empty_not_is(normalized);
   let separator = "---";
-  function lambda2(g) {}
+  function lambda2(g) {
+    each(list, function lambda(item) {});
+  }
   let groups = list_adder_group(lambda2);
   return filtered;
 }
