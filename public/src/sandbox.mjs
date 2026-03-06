@@ -10,6 +10,7 @@ export async function sandbox() {
   let filtered = list_filter_empty_not_is(normalized);
   let separator = "---";
   function lambda2(g) {
+    g.start();
     function lambda(item) {}
     each(filtered, lambda);
   }
