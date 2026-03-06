@@ -1,3 +1,4 @@
+import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { json_from } from "../../../love/public/src/json_from.mjs";
@@ -51,5 +52,6 @@ export async function sandbox() {
   let mapped = list_map_index(groups, lambda2);
   let lines = list_squash(mapped);
   let joined = list_join_newline_2(lines);
+  await clipboard_copy(text);
   return joined;
 }
