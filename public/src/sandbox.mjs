@@ -8,6 +8,7 @@ export async function sandbox() {
   let normalized = property_get(r, "normalized");
   let filtered = list_filter_empty_not_is(normalized);
   let separator = "---";
-  let groups = list_adder_group(function lambda2() {});
+  function lambda2() {}
+  let groups = list_adder_group(lambda2);
   return filtered;
 }
