@@ -177,6 +177,11 @@ export function ebible_languages() {
       bible_folder: "mni",
       language_code: "mni",
     },
+    {
+      name: "Dutch",
+      bible_folder: "nldnbg",
+      language_code: "nld",
+    },
   ];
   ("Rather than modifying this list, use: ");
   fn_name("ebible_languages_add");
