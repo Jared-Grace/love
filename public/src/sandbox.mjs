@@ -44,5 +44,5 @@ export async function sandbox() {
     return item2;
   }
   let mapped = list_map_index(list, lambda2);
-  return r3;
+  return mapped;
 }
