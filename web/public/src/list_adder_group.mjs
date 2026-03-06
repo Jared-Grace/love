@@ -1,10 +1,10 @@
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { add } from "../../../love/public/src/add.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-export function list_adder_group(lambda) {
+export function list_adder_group(lambda$g) {
   async function adder_groups(la) {
     let group = null;
-    lambda({
+    lambda$g({
       start,
       add,
       end,
