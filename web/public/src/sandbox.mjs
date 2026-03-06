@@ -1,3 +1,4 @@
+import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { openai_responses_cache } from "../../../love/public/src/openai_responses_cache.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
@@ -30,5 +31,6 @@ export async function sandbox() {
       ". Do not change any object keys.",
     json,
   );
+  let m2 = list_multiple_is(list);
   return r3;
 }
