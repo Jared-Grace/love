@@ -10,6 +10,7 @@ export async function sandbox() {
   let filtered = list_filter_empty_not_is(normalized);
   let separator = "---";
   let groups = list_split(filtered, separator);
-  let filtered2 = list_filter_index(list, function lambda(item, index) {});
+  function lambda(item, index) {}
+  let filtered2 = list_filter_index(list, lambda);
   return groups;
 }
