@@ -1,3 +1,4 @@
+import { floor } from "../../../love/public/src/floor.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { openai_responses_cache } from "../../../love/public/src/openai_responses_cache.mjs";
@@ -34,6 +35,7 @@ export async function sandbox() {
   function lambda2(item2, index2) {
     let change = lambda(item2, index2);
     if (change) {
+      floor(index / 2);
     }
   }
   let mapped = list_map_index(list, lambda2);
