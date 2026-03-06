@@ -5,6 +5,6 @@ export async function sandbox() {
   const path = "David.txt";
   let r = await file_read_folder_user_split_normalize(path);
   let normalized = property_get(r, "normalized");
-  let filtered = list_filter_empty_not_is(item);
+  let filtered = list_filter_empty_not_is(normalized);
   return filtered;
 }
