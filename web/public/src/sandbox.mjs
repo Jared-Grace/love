@@ -1,3 +1,4 @@
+import { add } from "../../../love/public/src/add.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_adder_group } from "../../../love/public/src/list_adder_group.mjs";
 import { list_filter_empty_not_is } from "../../../love/public/src/list_filter_empty_not_is.mjs";
@@ -12,11 +13,14 @@ export async function sandbox() {
   function lambda2(g) {
     g.start();
     function lambda(item) {
-      if (false) {
+      if (item === separator) {
+        g.end();
       } else {
+        g.add(item);
       }
     }
     each(filtered, lambda);
+    g.end();
   }
   let groups = list_adder_group(lambda2);
   return groups;
