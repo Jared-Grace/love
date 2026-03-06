@@ -19,13 +19,13 @@ export async function sandbox() {
     return r2;
   }
   let list = list_filter_index(groups, lambda);
-  let json = json_to(object);
+  let json = json_to(list);
   let language = "Urdu";
   let r3 = await openai_responses_cache(
     "Translate the text inside the JSON object to " +
       language +
       ". Do not change any object keys.",
-    user,
+    json,
   );
   return list;
 }
