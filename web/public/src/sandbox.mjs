@@ -10,7 +10,8 @@ export async function sandbox() {
   let filtered = list_filter_empty_not_is(normalized);
   let separator = "---";
   function lambda2(g) {
-    each(list, function lambda(item) {});
+    function lambda(item) {}
+    each(list, lambda);
   }
   let groups = list_adder_group(lambda2);
   return filtered;
