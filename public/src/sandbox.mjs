@@ -52,6 +52,6 @@ export async function sandbox() {
   let mapped = list_map_index(groups, lambda2);
   let lines = list_squash(mapped);
   let joined = list_join_newline_2(lines);
-  await clipboard_copy(text);
+  await clipboard_copy(joined);
   return joined;
 }
