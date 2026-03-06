@@ -17,8 +17,8 @@ export async function sandbox_4_a() {
   let file_path = folder_user_docs_path(path);
   let contents = await file_read(file_path);
   let split = text_split_newline(contents);
-  let split2 = list_map_whitespace_normalize(split);
-  let mapped3 = list_map_split_comma(split2);
+  let normalized = list_map_whitespace_normalize(split);
+  let mapped3 = list_map_split_comma(normalized);
   async function lambda(item) {
     let first = list_first(item);
     let second = list_second(item);
