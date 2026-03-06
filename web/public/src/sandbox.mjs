@@ -1,3 +1,4 @@
+import { list_get } from "../../../love/public/src/list_get.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
@@ -36,6 +37,7 @@ export async function sandbox() {
     let change = lambda(item2, index2);
     if (change) {
       let i = floor(index2 / 2);
+      let item3 = list_get(list2, index3);
     }
   }
   let mapped = list_map_index(list, lambda2);
