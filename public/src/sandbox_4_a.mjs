@@ -1,3 +1,5 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
+import { file_read_folder_user_split_normalize } from "../../../love/public/src/file_read_folder_user_split_normalize.mjs";
 import { list_filter_starts_with_any } from "../../../love/public/src/list_filter_starts_with_any.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { ebible_version_books } from "../../../love/public/src/ebible_version_books.mjs";
@@ -9,15 +11,11 @@ import { list_second } from "../../../love/public/src/list_second.mjs";
 import { text_split_semicolon } from "../../../love/public/src/text_split_semicolon.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_map_split_comma } from "../../../love/public/src/list_map_split_comma.mjs";
-import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
-import { file_read } from "../../../love/public/src/file_read.mjs";
-import { folder_user_docs_path } from "../../../love/public/src/folder_user_docs_path.mjs";
 export async function sandbox_4_a() {
   const path = "nations_mentioned.carm.org.txt";
-  let file_path = folder_user_docs_path(path);
-  let contents = await file_read(file_path);
-  let split = text_split_newline(contents);
-  let normalized = list_map_whitespace_normalize(split);
+  let r = await file_read_folder_user_split_normalize(path);
+  let split = property_get(r, "split");
+  let normalized = property_get(r, "normalized");
   let mapped3 = list_map_split_comma(normalized);
   async function lambda(item) {
     let first = list_first(item);
