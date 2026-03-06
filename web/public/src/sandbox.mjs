@@ -1,3 +1,4 @@
+import { mod } from "../../../love/public/src/mod.mjs";
 import { list_filter_index } from "../../../love/public/src/list_filter_index.mjs";
 import { list_split } from "../../../love/public/src/list_split.mjs";
 import { list_filter_empty_not_is } from "../../../love/public/src/list_filter_empty_not_is.mjs";
@@ -10,7 +11,9 @@ export async function sandbox() {
   let filtered = list_filter_empty_not_is(normalized);
   let separator = "---";
   let groups = list_split(filtered, separator);
-  function lambda(item, index) {}
+  function lambda(item, index) {
+    let r2 = mod(n, m);
+  }
   let filtered2 = list_filter_index(groups, lambda);
   return groups;
 }
