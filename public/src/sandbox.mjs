@@ -35,7 +35,7 @@ export async function sandbox() {
   function lambda2(item2, index2) {
     let change = lambda(item2, index2);
     if (change) {
-      floor(index / 2);
+      let i = floor(index2 / 2);
     }
   }
   let mapped = list_map_index(list, lambda2);
