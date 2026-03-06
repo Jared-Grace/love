@@ -1,11 +1,11 @@
 import { list_adder_group } from "../../../love/public/src/list_adder_group.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { add } from "../../../love/public/src/add.mjs";
-export function list_split(list, separator) {
+export function list_split(list, separator_item) {
   function lambda2(g) {
     g.start();
     function lambda(item) {
-      if (item === separator) {
+      if (item === separator_item) {
         g.end();
       } else {
         g.add(item);
