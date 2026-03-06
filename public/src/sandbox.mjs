@@ -8,6 +8,6 @@ export async function sandbox() {
   let normalized = property_get(r, "normalized");
   let filtered = list_filter_empty_not_is(normalized);
   let separator = "---";
-  let groups = list_split(separator, filtered);
+  let groups = list_split(filtered, separator);
   return groups;
 }
