@@ -31,6 +31,7 @@ export async function sandbox() {
       ". Do not change any object keys.",
     json,
   );
-  let mapped = list_map_index(list, function lambda2(item2, index2) {});
+  function lambda2(item2, index2) {}
+  let mapped = list_map_index(list, lambda2);
   return r3;
 }
