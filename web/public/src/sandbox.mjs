@@ -43,7 +43,8 @@ export async function sandbox() {
     if (change) {
       let i = floor(index2 / 2);
       let item3 = list_get(value2, i);
-      return item3;
+      let r5 = [item3, item2];
+      return r5;
     }
     return item2;
   }
