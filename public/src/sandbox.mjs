@@ -48,7 +48,7 @@ export async function sandbox() {
     return item2;
   }
   let mapped = list_map_index(groups, lambda2);
-  let names = list_squash(mapped);
-  let joined = list_join_newline_2(names);
+  let lines = list_squash(mapped);
+  let joined = list_join_newline_2(lines);
   return joined;
 }
