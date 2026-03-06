@@ -5,5 +5,5 @@ export async function sandbox() {
   let r = await file_read_folder_user_split_normalize(path);
   let split = property_get(r, "split");
   let normalized = property_get(r, "normalized");
-  return split;
+  return normalized;
 }
