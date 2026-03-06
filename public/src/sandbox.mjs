@@ -16,6 +16,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { file_read_folder_user_split_normalize } from "../../../love/public/src/file_read_folder_user_split_normalize.mjs";
 export async function sandbox() {
   const path = file_name_txt("David");
+  let language = "Urdu";
   let separator = "---";
   let r = await file_read_folder_user_split_normalize(path);
   let normalized = property_get(r, "normalized");
@@ -31,7 +32,6 @@ export async function sandbox() {
   let json = json_to({
     value,
   });
-  let language = "Urdu";
   let r3 = await openai_responses_cache(
     "Translate the text inside the JSON object to " +
       language +
