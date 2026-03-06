@@ -1,3 +1,4 @@
+import { json_to } from "../../../love/public/src/json_to.mjs";
 import { openai_responses_cache } from "../../../love/public/src/openai_responses_cache.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
 import { list_filter_index } from "../../../love/public/src/list_filter_index.mjs";
@@ -18,6 +19,7 @@ export async function sandbox() {
     return r2;
   }
   let list = list_filter_index(groups, lambda);
+  let json = json_to(object);
   let language = "Urdu";
   let r3 = await openai_responses_cache(
     "Translate the text inside the JSON object to " +
