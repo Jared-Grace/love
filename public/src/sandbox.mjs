@@ -20,7 +20,7 @@ export async function sandbox() {
   let list = list_filter_index(groups, lambda);
   let language = "Urdu";
   let r3 = await openai_responses_cache(
-    "Translate the following to " + language,
+    "Translate the text inside the JSON object to " + language,
     user,
   );
   return list;
