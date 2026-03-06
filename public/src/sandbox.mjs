@@ -3,7 +3,6 @@ import { file_read_folder_user_split_normalize } from "../../../love/public/src/
 export async function sandbox() {
   const path = "David.txt";
   let r = await file_read_folder_user_split_normalize(path);
-  let split = property_get(r, "split");
   let normalized = property_get(r, "normalized");
   return normalized;
 }
