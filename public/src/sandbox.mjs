@@ -1,3 +1,4 @@
+import { json_from } from "../../../love/public/src/json_from.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { floor } from "../../../love/public/src/floor.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
@@ -33,6 +34,7 @@ export async function sandbox() {
       ". Do not change any object keys.",
     json,
   );
+  let v = json_from(json2);
   let value2 = property_get(r3, "value");
   function lambda2(item2, index2) {
     let change = lambda(item2, index2);
