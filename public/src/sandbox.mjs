@@ -11,7 +11,7 @@ export async function sandbox() {
   let separator = "---";
   function lambda2(g) {
     function lambda(item) {}
-    each(list, lambda);
+    each(filtered, lambda);
   }
   let groups = list_adder_group(lambda2);
   return filtered;
