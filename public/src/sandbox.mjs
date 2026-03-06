@@ -11,8 +11,9 @@ export async function sandbox() {
   let filtered = list_filter_empty_not_is(normalized);
   let separator = "---";
   let groups = list_split(filtered, separator);
+  let m = 2;
   function lambda(item, index) {
-    let r2 = mod(n, m);
+    let r2 = mod(index, m);
   }
   let filtered2 = list_filter_index(groups, lambda);
   return groups;
