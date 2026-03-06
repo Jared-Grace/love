@@ -33,6 +33,7 @@ export async function sandbox() {
       ". Do not change any object keys.",
     json,
   );
+  let value2 = property_get(r3, "value");
   function lambda2(item2, index2) {
     let change = lambda(item2, index2);
     if (change) {
