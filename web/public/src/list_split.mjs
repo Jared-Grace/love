@@ -1,7 +1,7 @@
 import { list_adder_group } from "../../../love/public/src/list_adder_group.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { add } from "../../../love/public/src/add.mjs";
-export function list_split(filtered, separator) {
+export function list_split(list, separator) {
   function lambda2(g) {
     g.start();
     function lambda(item) {
@@ -11,7 +11,7 @@ export function list_split(filtered, separator) {
         g.add(item);
       }
     }
-    each(filtered, lambda);
+    each(list, lambda);
     g.end();
   }
   let groups = list_adder_group(lambda2);
