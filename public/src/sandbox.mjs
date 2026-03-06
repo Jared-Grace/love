@@ -16,7 +16,8 @@ export async function sandbox() {
   let m = 2;
   function lambda(item, index) {
     let r2 = mod(index, m);
-    return r2;
+    let r4 = r2 === 1;
+    return r4;
   }
   let value = list_filter_index(groups, lambda);
   let json = json_to({
