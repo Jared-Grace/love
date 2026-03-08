@@ -8,8 +8,8 @@ export function app_replace_rule_set_swap_3() {
         end: "cdbda",
       },
       {
-        start: "acbacc",
-        end: "cbccaa",
+        start: "adbadc",
+        end: "dbdcaa",
       },
     ],
   };
