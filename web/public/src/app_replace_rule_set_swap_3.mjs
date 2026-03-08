@@ -11,6 +11,10 @@ export function app_replace_rule_set_swap_3() {
         start: "adbadc",
         end: "dbdcaa",
       },
+      {
+        start: "adbcadcb",
+        end: "dbcdcbaa",
+      },
     ],
   };
   return r;
