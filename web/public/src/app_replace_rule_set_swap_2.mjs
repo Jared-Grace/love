@@ -1,19 +1,19 @@
 export function app_replace_rule_set_swap_2() {
   let r = {
     name: "Swap",
-    rules: ["a b > b a"],
+    rules: ["a b > b a", "a c > c a"],
     goals: [
       {
-        start: "abb",
-        end: "bba",
+        start: "abc",
+        end: "bca",
       },
       {
-        start: "abbbb",
-        end: "bbbba",
+        start: "acbcb",
+        end: "cbbca",
       },
       {
-        start: "abbabb",
-        end: "bbbbaa",
+        start: "acbacc",
+        end: "cbccaa",
       },
     ],
   };
