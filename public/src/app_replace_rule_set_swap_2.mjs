@@ -1,6 +1,6 @@
 export function app_replace_rule_set_swap_2() {
   let r = {
-    name: "Swap",
+    name: "Swap 2",
     rules: ["a b > b a", "a c > c a"],
     goals: [
       {
