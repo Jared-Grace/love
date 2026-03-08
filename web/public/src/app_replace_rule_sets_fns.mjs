@@ -1,3 +1,4 @@
+import { app_replace_rule_set_swap_3 } from "../../../love/public/src/app_replace_rule_set_swap_3.mjs";
 import { app_replace_rule_set_swap_2 } from "../../../love/public/src/app_replace_rule_set_swap_2.mjs";
 import { app_replace_rule_set_unary_to_binary_equations } from "../../../love/public/src/app_replace_rule_set_unary_to_binary_equations.mjs";
 import { app_replace_rule_set_unary_to_binary_equations_preparation } from "../../../love/public/src/app_replace_rule_set_unary_to_binary_equations_preparation.mjs";
@@ -69,6 +70,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_grow_different_2,
     app_replace_rule_set_shrink_different_2,
     app_replace_rule_set_swap_2,
+    app_replace_rule_set_swap_3,
     app_replace_rule_set_expand_collapse,
     app_replace_rule_set_grow_left_pair_change_right,
     app_replace_rule_set_shrink_left_pair_replace_right_same,
