@@ -34,7 +34,7 @@ export function app_replace_rule_set_numbers() {
       },
       {
         start: "g",
-        end: "77.e4607",
+        end: "77e4607",
       },
     ],
   };
