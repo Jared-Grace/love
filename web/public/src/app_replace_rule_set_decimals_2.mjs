@@ -22,11 +22,11 @@ export function app_replace_rule_set_decimals_2() {
       },
       {
         start: "g",
-        end: ".5E-1",
+        end: "2.e+39",
       },
       {
         start: "g",
-        end: "2.e+3",
+        end: ".5E-18",
       },
       {
         start: "g",
@@ -34,7 +34,7 @@ export function app_replace_rule_set_decimals_2() {
       },
       {
         start: "g",
-        end: "77.4607",
+        end: "77.e4607",
       },
     ],
   };
