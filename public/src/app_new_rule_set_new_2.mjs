@@ -5,7 +5,11 @@ export function app_new_rule_set_new_2() {
     goals: [
       {
         start: "a",
-        end: "b",
+        end: "0",
+      },
+      {
+        start: "a",
+        end: "1",
       },
     ],
   };
