@@ -1,4 +1,4 @@
-export function app_new_rule_set_new_2() {
+export function app_replace_rule_set_binary_numbers() {
   let r = {
     name: "Binary numbers",
     rules: ["a > a b", "a > b", "b > 0", "b > 1"],
