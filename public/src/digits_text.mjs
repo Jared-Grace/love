@@ -1,4 +1,4 @@
 export function digits_text() {
-  let v = "1234567890";
+  let v = "0123456789";
   return v;
 }
