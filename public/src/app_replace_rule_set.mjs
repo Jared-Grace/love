@@ -6,12 +6,8 @@ import { html_style_padding_em } from "../../../love/public/src/html_style_paddi
 import { app_replace_button_screen } from "../../../love/public/src/app_replace_button_screen.mjs";
 import { storage_local_transform_empty_context } from "../../../love/public/src/storage_local_transform_empty_context.mjs";
 import { app_replace_button_symbol_style_inner } from "../../../love/public/src/app_replace_button_symbol_style_inner.mjs";
-import { list_map_html_bounding_client_rect } from "../../../love/public/src/list_map_html_bounding_client_rect.mjs";
 import { html_translation_transition_clear } from "../../../love/public/src/html_translation_transition_clear.mjs";
-import { html_display_inline_block_multiple } from "../../../love/public/src/html_display_inline_block_multiple.mjs";
-import { html_display_none_multiple } from "../../../love/public/src/html_display_none_multiple.mjs";
 import { html_move_animate_multiple } from "../../../love/public/src/html_move_animate_multiple.mjs";
-import { html_parent_append_multiple } from "../../../love/public/src/html_parent_append_multiple.mjs";
 import { html_move_animate_multiple_parent_remove } from "../../../love/public/src/html_move_animate_multiple_parent_remove.mjs";
 import { html_move_animate_translate } from "../../../love/public/src/html_move_animate_translate.mjs";
 import { html_move_animate_rect } from "../../../love/public/src/html_move_animate_rect.mjs";
@@ -24,7 +20,6 @@ import { html_insert } from "../../../love/public/src/html_insert.mjs";
 import { html_clone } from "../../../love/public/src/html_clone.mjs";
 import { list_wait } from "../../../love/public/src/list_wait.mjs";
 import { list_slice_count } from "../../../love/public/src/list_slice_count.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { html_p_text_centered } from "../../../love/public/src/html_p_text_centered.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
@@ -88,7 +83,6 @@ import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { html_disable } from "../../../love/public/src/html_disable.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
-import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { app_replace_rule_parse } from "../../../love/public/src/app_replace_rule_parse.mjs";
@@ -109,14 +103,6 @@ export async function app_replace_rule_set(context) {
   let goals = property_get(rule, "goals");
   let goal = list_get(goals, goal_index);
   let start = property_get(goal, "start");
-  if (false) {
-    ("not sure if this is needed or not");
-    let current = storage_local_initialize_context(
-      context,
-      "rule_set_start",
-      start,
-    );
-  }
   let index_selected = null;
   let label_rules = html_p(root);
   let rules = property_get(rule, "rules");
@@ -243,42 +229,6 @@ export async function app_replace_rule_set(context) {
           );
           await list_wait(mapped2);
           await html_move_animate_multiple(rights2, rights_cloned, duration);
-          if (false) {
-            let rights_cloneds2 = list_map(rights2, html_clone);
-            html_display_none_multiple(rights_cloneds2);
-            html_parent_append_multiple(div_refresh, rights_cloneds2);
-            html_display_inline_block_multiple(rights_cloneds2);
-            let rights_cloned2_rects =
-              list_map_html_bounding_client_rect(rights_cloneds2);
-            let rights2_rects = list_map_html_bounding_client_rect(rights2);
-            return;
-            async function lambda6([
-              rights_cloned2,
-              rights_cloned2_rect,
-              rights2_rect,
-            ]) {
-              await html_move_animate_rect(
-                rights_cloned2,
-                rights_cloned2_rect,
-                rights2_rect,
-                duration,
-              );
-            }
-            let mapped3 = lists_map(
-              [rights_cloneds2, rights_cloned2_rects, rights2_rects],
-              lambda6,
-            );
-            await list_wait(mapped3);
-            log({
-              rights_cloned2: rights_cloneds2,
-            });
-            return;
-            await html_move_animate_multiple(
-              rights_cloneds2,
-              rights_cloned,
-              duration,
-            );
-          }
           index_selected = null;
         } else {
           property_set(symbols_invalid_chosen, index, true);
