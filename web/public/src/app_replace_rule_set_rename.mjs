@@ -15,6 +15,5 @@ export async function app_replace_rule_set_rename(f_name) {
     filtered,
   });
   let e = list_single(filtered);
-  let f_name_new = app_replace_rule_sets_name_expression(e);
-  return f_name_new;
+  return e;
 }
