@@ -1,3 +1,4 @@
+import { range_1 } from "../../../love/public/src/range_1.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
 export function app_replace_rule_set_integer_digits_2() {
