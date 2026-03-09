@@ -12,11 +12,15 @@ export function app_replace_rule_set_integer_digits() {
     goals: [
       {
         start: "a",
+        end: "0",
+      },
+      {
+        start: "a",
         end: "2",
       },
       {
         start: "a",
-        end: "3",
+        end: "03",
       },
       {
         start: "a",
@@ -32,7 +36,7 @@ export function app_replace_rule_set_integer_digits() {
       },
       {
         start: "a",
-        end: "1234",
+        end: "01234",
       },
     ],
   };
