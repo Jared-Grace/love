@@ -7,7 +7,7 @@ export function js_object_expression_properties_find_key_named(e, search) {
   let properties = js_object_expression_properties(e);
   log_unparse(e);
   let r = js_property_key_named_curried_right(search);
-  let found = list_find(properties, r);
+  let found = list_find_or_null(properties, r);
   log({
     found,
   });
