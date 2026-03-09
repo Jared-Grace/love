@@ -7,7 +7,8 @@ export function list_find_property_or_null(
   property_name,
   property_value,
 ) {
-  let filter = property_equals_curry_right_2(property_name, property_value);
+  let filter_get = property_equals_curry_right_2;
+  let filter = filter_get(property_name, property_value);
   let filtered = list_filter(list, filter);
   let e = list_empty_is(filtered);
   let only = null;
