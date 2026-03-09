@@ -3,8 +3,8 @@ import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mj
 import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
 export function app_replace_rule_set_integer_digits() {
   let d = digits();
-  let combineds = list_map_combine_left(d, "b > ");
   const rules = ["a > b a", "a > b"];
+  let combineds = list_map_combine_left(d, "b > ");
   list_add_multiple(rules, combineds);
   let r = {
     name: "Integer digits",
