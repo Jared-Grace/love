@@ -2,7 +2,7 @@ import { app_replace_rule_set_integers_rules } from "../../../love/public/src/ap
 export function app_replace_rule_set_integers_2() {
   const rules = app_replace_rule_set_integers_rules();
   let r = {
-    name: "Integers",
+    name: "Decimals",
     rules,
     goals: [
       {
