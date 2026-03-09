@@ -1,5 +1,4 @@
 import { function_rename } from "../../../love/public/src/function_rename.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_filter_null_not_is } from "../../../love/public/src/list_filter_null_not_is.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -12,9 +11,6 @@ export async function app_replace_rule_set_rename(f_name) {
   let list = js_list_type_nodes(ast, type);
   let mapped = list_map(list, app_replace_rule_sets_name_expression);
   let filtered = list_filter_null_not_is(mapped);
-  log({
-    filtered,
-  });
   let f_name_after = list_single(filtered);
   await function_rename(f_name, f_name_after);
 }
