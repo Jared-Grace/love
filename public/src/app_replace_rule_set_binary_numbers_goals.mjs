@@ -1,5 +1,5 @@
 export function app_replace_rule_set_binary_numbers_goals() {
-  let r2 = [
+  let r = [
     {
       start: "a",
       end: "0",
@@ -25,5 +25,5 @@ export function app_replace_rule_set_binary_numbers_goals() {
       end: "1010",
     },
   ];
-  return r2;
+  return r;
 }
