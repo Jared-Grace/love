@@ -5,6 +5,6 @@ export function property_equals_try(object, property_name, property_value) {
   if (n) {
     return false;
   }
-  property_equals(object, property_name, property_value);
+  let eq = property_equals(object, property_name, property_value);
   return eq;
 }
