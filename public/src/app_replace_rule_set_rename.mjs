@@ -1,3 +1,4 @@
+import { function_rename_open } from "../../../love/public/src/function_rename_open.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_filter_null_not_is } from "../../../love/public/src/list_filter_null_not_is.mjs";
@@ -15,5 +16,6 @@ export async function app_replace_rule_set_rename(f_name) {
     filtered,
   });
   let e = list_single(filtered);
+  let f_name_after2 = await function_rename_open(f_name_before, f_name_after);
   return e;
 }
