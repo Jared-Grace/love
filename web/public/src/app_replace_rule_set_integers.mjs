@@ -4,7 +4,7 @@ import { list_map_combine_left } from "../../../love/public/src/list_map_combine
 export function app_replace_rule_set_integers() {
   const rules = ["a > c b", "a > d", "b > d b", "d > 0", "d > c", "b > d"];
   let r2 = digits_positive();
-  let combineds = list_map_combine_left(r2, "c > ");
+  let combineds = list_map_combine_left(r2, "c" + " > ");
   list_add_multiple(rules, combineds);
   let r = {
     name: "Integers",
