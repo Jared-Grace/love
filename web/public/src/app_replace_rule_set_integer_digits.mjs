@@ -28,11 +28,11 @@ export function app_replace_rule_set_integer_digits() {
       },
       {
         start: "a",
-        end: "76",
+        end: "89",
       },
       {
         start: "a",
-        end: "890",
+        end: "777",
       },
       {
         start: "a",
