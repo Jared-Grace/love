@@ -8,7 +8,7 @@ export function app_replace_rule_set_binary_numbers_2() {
   const rules = ["a > b a", "a > b"];
   list_add_multiple(rules, combineds);
   let r = {
-    name: "Binary numbers",
+    name: "Integers",
     rules,
     goals: app_replace_rule_set_binary_numbers_goals(),
   };
