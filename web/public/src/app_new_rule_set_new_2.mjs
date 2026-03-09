@@ -23,6 +23,10 @@ export function app_new_rule_set_new_2() {
         start: "a",
         end: "101",
       },
+      {
+        start: "a",
+        end: "1010",
+      },
     ],
   };
   return r;
