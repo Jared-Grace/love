@@ -10,11 +10,11 @@ export function list_find_property_or_null(
   let filter = property_equals_curry_right_2(property_name, property_value);
   let filtered = list_filter(list, filter);
   let e = list_empty_is(filtered);
-  if (e) {
-    return null;
-  } else {
-  }
   let only = null;
-  only = list_single(filtered);
+  if (e) {
+    only = null;
+  } else {
+    only = list_single(filtered);
+  }
   return only;
 }
