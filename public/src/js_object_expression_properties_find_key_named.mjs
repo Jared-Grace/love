@@ -5,10 +5,7 @@ import { js_property_key_named_curried_right } from "../../../love/public/src/js
 import { js_object_expression_properties } from "../../../love/public/src/js_object_expression_properties.mjs";
 export function js_object_expression_properties_find_key_named(e, search) {
   let properties = js_object_expression_properties(e);
-  log_unparse(node);
-  log({
-    properties,
-  });
+  log_unparse(e);
   let r = js_property_key_named_curried_right(search);
   let found = list_find_property_try_or_null(properties, r);
   return found;
