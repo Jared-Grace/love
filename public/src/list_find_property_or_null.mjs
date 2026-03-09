@@ -13,7 +13,6 @@ export function list_find_property_or_null(
   let e = list_empty_is(filtered);
   let only = null;
   if (e) {
-    only = null;
   } else {
     only = list_single(filtered);
   }
