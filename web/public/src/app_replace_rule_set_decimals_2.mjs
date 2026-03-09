@@ -18,19 +18,19 @@ export function app_replace_rule_set_decimals_2() {
     goals: [
       {
         start: "g",
-        end: "0.",
+        end: "0.e1",
       },
       {
         start: "g",
-        end: ".5",
+        end: ".5E-1",
       },
       {
         start: "g",
-        end: "2.",
+        end: "2.e+3",
       },
       {
         start: "g",
-        end: "3.14",
+        end: "3.14e0",
       },
       {
         start: "g",
