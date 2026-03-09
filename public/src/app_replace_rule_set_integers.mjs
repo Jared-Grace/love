@@ -7,7 +7,7 @@ export function app_replace_rule_set_integers() {
   const rules = ["a > b a", "a > b"];
   list_add_multiple(rules, combineds);
   let r = {
-    name: "Integers",
+    name: "Integer digits",
     rules,
     goals: [
       {
