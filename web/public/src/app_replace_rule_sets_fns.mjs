@@ -1,3 +1,4 @@
+import { app_replace_rule_set_integers } from "../../../love/public/src/app_replace_rule_set_integers.mjs";
 import { app_replace_rule_set_integer_digits } from "../../../love/public/src/app_replace_rule_set_integer_digits.mjs";
 import { app_replace_rule_set_binary_numbers_simple } from "../../../love/public/src/app_replace_rule_set_binary_numbers_simple.mjs";
 import { app_replace_rule_set_binary_numbers } from "../../../love/public/src/app_replace_rule_set_binary_numbers.mjs";
@@ -90,6 +91,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_binary_numbers_simple,
     app_replace_rule_set_binary_numbers,
     app_replace_rule_set_integer_digits,
+    app_replace_rule_set_integers,
   ];
   return r2;
 }
