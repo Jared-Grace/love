@@ -5,7 +5,7 @@ import { text_replace_space_underscore_lower } from "../../../love/public/src/te
 import { js_literal_value_get } from "../../../love/public/src/js_literal_value_get.mjs";
 import { js_property_value_get } from "../../../love/public/src/js_property_value_get.mjs";
 import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
-export function app_replace_rule_sets_name(e) {
+export function app_replace_rule_sets_name_expression(e) {
   let search = "name";
   let found = js_object_expression_properties_find_key_named(e, search);
   let p = js_property_value_get(found);
