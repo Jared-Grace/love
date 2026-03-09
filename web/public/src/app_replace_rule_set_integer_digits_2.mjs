@@ -1,8 +1,8 @@
-import { range_1 } from "../../../love/public/src/range_1.mjs";
+import { digits_positive } from "../../../love/public/src/digits_positive.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
 export function app_replace_rule_set_integer_digits_2() {
-  let r2 = range_1(10);
+  let r2 = digits_positive();
   let combineds = list_map_combine_left(r2, "b > ");
   const rules = ["a > b a", "a > b"];
   list_add_multiple(rules, combineds);
