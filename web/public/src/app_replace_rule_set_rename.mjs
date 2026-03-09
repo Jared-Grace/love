@@ -13,4 +13,5 @@ export async function app_replace_rule_set_rename(f_name) {
   let filtered = list_filter_null_not_is(mapped);
   let f_name_after = list_single(filtered);
   await function_rename(f_name, f_name_after);
+  return f_name_after;
 }
