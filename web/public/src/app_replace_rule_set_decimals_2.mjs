@@ -2,7 +2,7 @@ import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mj
 import { app_replace_rule_set_integers_rules } from "../../../love/public/src/app_replace_rule_set_integers_rules.mjs";
 export function app_replace_rule_set_decimals_2() {
   const rules = app_replace_rule_set_integers_rules();
-  list_add_multiple(rules, ["h > a i a", "h > g i a"]);
+  list_add_multiple(rules, ["h > a i j", "h > g i j"]);
   let r = {
     name: "Numbers",
     rules,
