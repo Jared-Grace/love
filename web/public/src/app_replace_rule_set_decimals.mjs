@@ -29,6 +29,10 @@ export function app_replace_rule_set_decimals() {
         start: "e",
         end: "3.14",
       },
+      {
+        start: "e",
+        end: "77.467",
+      },
     ],
   };
   return r;
