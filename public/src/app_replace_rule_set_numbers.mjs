@@ -30,7 +30,7 @@ export function app_replace_rule_set_numbers() {
       },
       {
         start: "h",
-        end: "3.14E0",
+        end: "3.14e0",
       },
       {
         start: "h",
