@@ -13,7 +13,7 @@ export function list_find_property_or_null(
   if (e) {
     return null;
   } else {
-  }
+  }$s
   let only = list_single(filtered);
   return only;
 }
