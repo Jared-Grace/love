@@ -5,8 +5,8 @@ import { app_replace_rule_set_binary_numbers_goals } from "../../../love/public/
 export function app_replace_rule_set_binary_numbers_2() {
   let r2 = range(10);
   let combineds = list_map_combine_left(r2, "b > ");
-  const rules = ["a > b a", "a > b", "b > 0", "b > 1"];
-  list_add_multiple(list, items);
+  const rules = ["a > b a", "a > b"];
+  list_add_multiple(rules, combineds);
   let r = {
     name: "Binary numbers",
     rules,
