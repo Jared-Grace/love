@@ -8,7 +8,9 @@ export function app_replace_rule_set_decimals_2() {
     "j > i k",
     "i > e",
     "i > E",
-    "k > ",
+    "k > + a",
+    "k > - a",
+    "k > a",
   ]);
   let r = {
     name: "Numbers",
