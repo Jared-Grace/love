@@ -14,32 +14,12 @@ export function app_replace_rule_set_decimals() {
     rules,
     goals: [
       {
-        start: "a",
-        end: "0",
+        start: "e",
+        end: "0.",
       },
       {
-        start: "a",
-        end: "2",
-      },
-      {
-        start: "a",
-        end: "13",
-      },
-      {
-        start: "a",
-        end: "77",
-      },
-      {
-        start: "a",
-        end: "40",
-      },
-      {
-        start: "a",
-        end: "969",
-      },
-      {
-        start: "a",
-        end: "5678",
+        start: "e",
+        end: ".1",
       },
     ],
   };
