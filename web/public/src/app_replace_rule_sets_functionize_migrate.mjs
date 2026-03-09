@@ -1,7 +1,7 @@
 import { js_statement_return_empty_add_argument_set } from "../../../love/public/src/js_statement_return_empty_add_argument_set.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_call_empty } from "../../../love/public/src/js_call_empty.mjs";
-import { app_replace_rule_sets_functionize_name } from "../../../love/public/src/app_replace_rule_sets_functionize_name.mjs";
+import { app_replace_rule_sets_functionize_migrate_name } from "../../../love/public/src/app_replace_rule_sets_functionize_migrate_name.mjs";
 import { function_new_declaration_from } from "../../../love/public/src/function_new_declaration_from.mjs";
 import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { js_function_declaration_to_block_body } from "../../../love/public/src/js_function_declaration_to_block_body.mjs";
@@ -17,7 +17,7 @@ export async function app_replace_rule_sets_functionize_migrate() {
   async function lambda(a) {
     let elements = marker_next_declare_single_init_elements(a);
     async function lambda2(e) {
-      let f_name_new = app_replace_rule_sets_functionize_name(e);
+      let f_name_new = app_replace_rule_sets_functionize_migrate_name(e);
       let declaration = function_new_declaration_to(f_name_new);
       let body_block = js_function_declaration_to_block_body(declaration);
       js_statement_return_empty_add_argument_set(body_block, e);
@@ -26,7 +26,7 @@ export async function app_replace_rule_sets_functionize_migrate() {
     }
     await each_async(elements, lambda2);
     async function lambda3(e) {
-      let f_name_new = app_replace_rule_sets_functionize_name(e);
+      let f_name_new = app_replace_rule_sets_functionize_migrate_name(e);
       let parsed = js_call_empty(f_name_new);
       object_replace(e, parsed);
     }
