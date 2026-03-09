@@ -10,7 +10,7 @@ export async function app_replace_rule_set_rename(f_name) {
   let list = js_list_type_nodes(ast, type);
   let mapped = list_map(list, app_replace_rule_sets_name_expression);
   let filtered = list_filter_null_not_is(mapped);
-  let e = list_first(filtered);
+  let e = list_single(filtered);
   let f_name_new = app_replace_rule_sets_name_expression(e);
   return f_name_new;
 }
