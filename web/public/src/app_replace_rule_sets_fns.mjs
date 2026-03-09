@@ -86,8 +86,8 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_grow_same_three_different,
     app_replace_rule_set_unary_to_binary_equations_preparation,
     app_replace_rule_set_unary_to_binary_equations,
-    app_replace_rule_set_binary_numbers,
     app_replace_rule_set_binary_numbers_simple,
+    app_replace_rule_set_binary_numbers,
   ];
   return r2;
 }
