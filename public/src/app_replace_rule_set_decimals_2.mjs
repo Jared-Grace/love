@@ -3,7 +3,7 @@ import { app_replace_rule_set_integers_rules } from "../../../love/public/src/ap
 export function app_replace_rule_set_decimals_2() {
   const rules = app_replace_rule_set_integers_rules();
   list_add_multiple(rules, [
-    "g > f . b",
+    "h > a i a",
     "g > f .",
     "f > a",
     "f > 0",
