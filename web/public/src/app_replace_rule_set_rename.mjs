@@ -1,1 +1,1 @@
-export function app_replace_rule_set_rename() {}
+export function app_replace_rule_set_rename(f_name) {}
