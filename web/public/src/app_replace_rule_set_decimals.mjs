@@ -19,7 +19,15 @@ export function app_replace_rule_set_decimals() {
       },
       {
         start: "e",
-        end: ".1",
+        end: ".5",
+      },
+      {
+        start: "e",
+        end: "2.",
+      },
+      {
+        start: "e",
+        end: "3.14",
       },
     ],
   };
