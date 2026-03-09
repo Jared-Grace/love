@@ -1,11 +1,9 @@
+import { app_replace_rule_set_add_rights } from "../../../love/public/src/app_replace_rule_set_add_rights.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
-import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
-import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
 export function app_replace_rule_set_integer_digits() {
   let d = digits();
   const rules = ["a > b a", "a > b"];
-  let combineds = list_map_combine_left(d, "b > ");
-  list_add_multiple(rules, combineds);
+  app_replace_rule_set_add_rights(rules, "b", d);
   let r = {
     name: "Integer digits",
     rules,
