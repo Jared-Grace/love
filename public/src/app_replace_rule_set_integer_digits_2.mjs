@@ -20,23 +20,23 @@ export function app_replace_rule_set_integer_digits_2() {
       },
       {
         start: "a",
-        end: "03",
+        end: "13",
       },
       {
         start: "a",
-        end: "54",
+        end: "77",
       },
       {
         start: "a",
-        end: "89",
+        end: "40",
       },
       {
         start: "a",
-        end: "777",
+        end: "969",
       },
       {
         start: "a",
-        end: "01234",
+        end: "5678",
       },
     ],
   };
