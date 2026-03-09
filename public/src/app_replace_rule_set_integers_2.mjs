@@ -2,7 +2,7 @@ import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mj
 import { app_replace_rule_set_integers_rules } from "../../../love/public/src/app_replace_rule_set_integers_rules.mjs";
 export function app_replace_rule_set_integers_2() {
   const rules = app_replace_rule_set_integers_rules();
-  list_add_multiple(list, items);
+  list_add_multiple(rules, ["e > a"]);
   let r = {
     name: "Decimals",
     rules,
