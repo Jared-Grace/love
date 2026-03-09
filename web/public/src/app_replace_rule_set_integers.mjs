@@ -4,7 +4,7 @@ export function app_replace_rule_set_integers() {
   const rules = ["a > c b", "a > d", "b > d b", "d > 0", "d > c", "b > d"];
   let r2 = digits_positive();
   const symbol = "c";
-  app_replace_rule_set_add_left(r2, symbol, rules);
+  app_replace_rule_set_add_left(rules, r2, symbol);
   let r = {
     name: "Integers",
     rules,
