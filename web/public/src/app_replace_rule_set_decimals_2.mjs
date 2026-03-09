@@ -10,7 +10,7 @@ export function app_replace_rule_set_decimals_2() {
     "e > . b",
   ]);
   let r = {
-    name: "Decimals",
+    name: "Numbers",
     rules,
     goals: [
       {
