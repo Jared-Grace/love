@@ -2,27 +2,27 @@ export function app_replace_rule_set_binary_numbers_goals() {
   let r2 = [
     {
       start: "a",
-      end: "0",
+      end: "2",
     },
     {
       start: "a",
-      end: "1",
+      end: "3",
     },
     {
       start: "a",
-      end: "10",
+      end: "54",
     },
     {
       start: "a",
-      end: "11",
+      end: "76",
     },
     {
       start: "a",
-      end: "101",
+      end: "890",
     },
     {
       start: "a",
-      end: "1010",
+      end: "1234",
     },
   ];
   return r2;
