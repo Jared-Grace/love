@@ -11,6 +11,18 @@ export function app_new_rule_set_new_2() {
         start: "a",
         end: "1",
       },
+      {
+        start: "a",
+        end: "10",
+      },
+      {
+        start: "a",
+        end: "11",
+      },
+      {
+        start: "a",
+        end: "101",
+      },
     ],
   };
   return r;
