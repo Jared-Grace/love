@@ -1,3 +1,4 @@
+import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_replace_rule_sets_name_expression } from "../../../love/public/src/app_replace_rule_sets_name_expression.mjs";
@@ -9,9 +10,8 @@ export async function app_replace_rule_set_rename(f_name) {
   const type = "ObjectExpression";
   let vs = js_list_type_nodes(ast, type);
   let mapped = list_map(list, app_replace_rule_sets_name_expression);
-  function lambda(item) {}
-  let filtered = list_filter(list2, lambda);
-  let e = list_first(vs);
+  let filtered = list_filter(mapped, null_not_is);
+  let e = list_first(filtered);
   let f_name_new = app_replace_rule_sets_name_expression(e);
   return f_name_new;
 }
