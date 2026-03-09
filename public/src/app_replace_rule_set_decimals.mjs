@@ -31,7 +31,7 @@ export function app_replace_rule_set_decimals() {
       },
       {
         start: "e",
-        end: "77.467",
+        end: "77.4607",
       },
     ],
   };
