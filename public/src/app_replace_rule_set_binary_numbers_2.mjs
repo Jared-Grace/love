@@ -1,6 +1,7 @@
+import { range } from "../../../love/public/src/range.mjs";
 import { app_replace_rule_set_binary_numbers_goals } from "../../../love/public/src/app_replace_rule_set_binary_numbers_goals.mjs";
 export function app_replace_rule_set_binary_numbers_2() {
-  rg;
+  let r2 = range(count);
   let r = {
     name: "Binary numbers",
     rules: ["a > b a", "a > b", "b > 0", "b > 1"],
