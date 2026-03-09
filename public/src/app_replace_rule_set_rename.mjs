@@ -7,5 +7,6 @@ export async function app_replace_rule_set_rename(f_name) {
   const type = "ObjectExpression";
   let vs = js_list_type_nodes(ast, type);
   let e = list_first(vs);
-  app_replace_rule_sets_name_expression(e);
+  let f_name_new = app_replace_rule_sets_name_expression(e);
+  return f_name_new;
 }
