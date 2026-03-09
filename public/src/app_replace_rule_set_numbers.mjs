@@ -17,23 +17,23 @@ export function app_replace_rule_set_numbers() {
     rules,
     goals: [
       {
-        start: "g",
+        start: "h",
         end: "0.e1",
       },
       {
-        start: "g",
+        start: "h",
         end: "2.e+39",
       },
       {
-        start: "g",
+        start: "h",
         end: ".5E-18",
       },
       {
-        start: "g",
+        start: "h",
         end: "3.14e0",
       },
       {
-        start: "g",
+        start: "h",
         end: "77e4607",
       },
     ],
