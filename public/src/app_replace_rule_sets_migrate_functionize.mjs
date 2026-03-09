@@ -10,7 +10,7 @@ import { marker_next_declare_single_init_elements } from "../../../love/public/s
 import { function_transform_marker_specified } from "../../../love/public/src/function_transform_marker_specified.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
-export async function app_replace_rule_sets_functionize_migrate() {
+export async function app_replace_rule_sets_migrate_functionize() {
   "this took a list of objects and moved each object to its own file";
   let f_name = app_replace_rule_sets.name;
   let code = await function_transform_marker_specified(f_name, "rules", lambda);
