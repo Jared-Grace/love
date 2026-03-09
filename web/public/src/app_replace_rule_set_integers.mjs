@@ -1,12 +1,10 @@
+import { app_replace_rule_set_add_left } from "../../../love/public/src/app_replace_rule_set_add_left.mjs";
 import { digits_positive } from "../../../love/public/src/digits_positive.mjs";
-import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
-import { list_map_combine_left } from "../../../love/public/src/list_map_combine_left.mjs";
 export function app_replace_rule_set_integers() {
   const rules = ["a > c b", "a > d", "b > d b", "d > 0", "d > c", "b > d"];
   let r2 = digits_positive();
   const symbol = "c";
-  let combineds = list_map_combine_left(r2, symbol + " > ");
-  list_add_multiple(rules, combineds);
+  app_replace_rule_set_add_left(r2, symbol, rules);
   let r = {
     name: "Integers",
     rules,
