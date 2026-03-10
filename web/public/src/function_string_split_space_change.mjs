@@ -15,7 +15,6 @@ import { function_transform } from "../../../love/public/src/function_transform.
 export async function function_string_split_space_change(f_name, list) {
   let split2 = text_split_comma(list);
   let chunks = list_chunk(split2, 2);
-  return chunks;
   async function lambda(ast) {
     function lambda4(chunk) {
       let result = list_first_second(chunk);
