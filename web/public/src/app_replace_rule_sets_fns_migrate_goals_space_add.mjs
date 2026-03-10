@@ -41,7 +41,7 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
       let s = js_object_expression_properties_find_key_named(item, "start");
       let literal = js_property_value_get(s);
       let value3 = js_literal_value_get(literal);
-      let joined = text_between_space(value3);
+      let joined = text_combine_space(value3);
       log({
         joined,
       });
@@ -54,9 +54,8 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
   }
   return filtered;
 }
-function text_between_space(value3) {
-    let split = text_split_empty(value3);
-    let joined = list_join_space(split);
-    return joined;
+function text_combine_space(value3) {
+  let split = text_split_empty(value3);
+  let joined = list_join_space(split);
+  return joined;
 }
-
