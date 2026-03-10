@@ -1,6 +1,6 @@
 import { app_replace_rule_set_decimals_rules } from "../../../love/public/src/app_replace_rule_set_decimals_rules.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
-export function app_replace_rule_set_numbers() {
+export function app_replace_rule_set_scientific_notation_numbers() {
   const rules = app_replace_rule_set_decimals_rules();
   list_add_multiple(rules, [
     "n > i se",
