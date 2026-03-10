@@ -1,3 +1,4 @@
+import { js_property_value_get } from "../../../love/public/src/js_property_value_get.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
@@ -27,6 +28,7 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
     });
   } else {
     let only = list_single(filtered);
+    let value = js_property_value_get(found);
     log({
       only,
     });
