@@ -7,23 +7,23 @@ export function app_replace_rule_set_decimals() {
     goals: [
       {
         start: "g",
-        end: "0.",
+        end: "0 .",
       },
       {
         start: "g",
-        end: ".5",
+        end: ". 5",
       },
       {
         start: "g",
-        end: "2.",
+        end: "2 .",
       },
       {
         start: "g",
-        end: "3.14",
+        end: "3 . 1 4",
       },
       {
         start: "g",
-        end: "77.4607",
+        end: "7 7 . 4 6 0 7",
       },
     ],
   };
