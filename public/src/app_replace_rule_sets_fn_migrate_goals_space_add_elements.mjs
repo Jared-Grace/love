@@ -8,9 +8,8 @@ export function app_replace_rule_sets_fn_migrate_goals_space_add_elements(
   function lambda_each(item) {
     let ps = ["start", "end"];
     function lambda2(p) {
-      let s = js_object_expression_properties_find_key_named(item, p);$a
-      let lambda = text_between_space;
-      js_literal_value_change(lambda, s);
+      let s = js_object_expression_properties_find_key_named(item, p);
+      js_literal_value_change(text_between_space, s);
     }
     each(ps, lambda2);
   }
