@@ -37,10 +37,10 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
     function lambda(item) {
       let s = js_object_expression_properties_find_key_named(item, "start");
       let value = js_property_value_get(s);
-      log_unparse(value);
+      log(value);
       let e = js_object_expression_properties_find_key_named(item, "end");
       let value2 = js_property_value_get(e);
-      log_unparse(value2);
+      log(value2);
     }
     each(elements, lambda);
     log_unparse(only);
