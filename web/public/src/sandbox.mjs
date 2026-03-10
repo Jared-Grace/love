@@ -1,4 +1,4 @@
-import { list_adder } from "../../../love/public/src/list_adder.mjs";
+import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_set.mjs";
 import { function_name_separator_trail } from "../../../love/public/src/function_name_separator_trail.mjs";
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
@@ -7,8 +7,7 @@ import { app_replace_rule_sets_names } from "../../../love/public/src/app_replac
 export async function sandbox() {
   let names = app_replace_rule_sets_names();
   let f_names = await functions_names();
-  function lambda(la) {}
-  let list = list_adder(lambda);
+  let difference = list_difference(list, other);
   let prefix = function_name_separator_trail(app_replace_rule_set.name);
   let filtered = list_filter_starts_with(f_names, prefix);
 }
