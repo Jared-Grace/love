@@ -2,9 +2,12 @@ import { js_object_expression_properties_find_key_named } from "../../../love/pu
 export function js_object_expression_properties_find_key_named_curried_right(
   search,
 ) {
-  return function js_object_expression_properties_find_key_named_curried_right_result(
-    e,
-  ) {
-    return js_object_expression_properties_find_key_named(e, search);
-  };
+  let r =
+    function js_object_expression_properties_find_key_named_curried_right_result(
+      e,
+    ) {
+      let found = js_object_expression_properties_find_key_named(e, search);
+      return found;
+    };
+  return r;
 }
