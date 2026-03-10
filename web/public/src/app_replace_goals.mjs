@@ -1,3 +1,4 @@
+import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
 import { app_replace_goals_generic } from "../../../love/public/src/app_replace_goals_generic.mjs";
 import { app_replace_goal_completed_initialize } from "../../../love/public/src/app_replace_goal_completed_initialize.mjs";
 import { app_replace_rule_sets_data_initialize } from "../../../love/public/src/app_replace_rule_sets_data_initialize.mjs";
@@ -12,7 +13,6 @@ import { storage_local_set_context } from "../../../love/public/src/storage_loca
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_rule_set_get } from "../../../love/public/src/app_replace_rule_set_get.mjs";
-import { text_split_space } from "./text_split_space.mjs";
 export function app_replace_goals(context) {
   let root = property_get(context, "root");
   app_replace_button_home(root, context);
@@ -25,10 +25,9 @@ export function app_replace_goals(context) {
   function each_item(goal, index) {
     let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
     let completed = app_replace_goal_completed_initialize(g);
-    let startv = property_get(goal, "start");
-    let start = text_split_space(startv);
-    let endv = property_get(goal, "end");
-    let end = text_split_space(endv);
+    let r4 = app_replace_start_end_get(goal);
+    let start = property_get(r4, "start");
+    let end = property_get(r4, "end");
     let title = app_replace_goals_generic(
       root,
       completed,
