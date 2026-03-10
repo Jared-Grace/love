@@ -1,5 +1,4 @@
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
 import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
@@ -29,11 +28,6 @@ export async function function_string_split_space_change(f_name, list) {
           let r = change_if_equal_curried_right_2(from, to);
           let mapped = list_map(split, r);
           let joined = list_join_space(mapped);
-          log({
-            joined,
-            from,
-            to,
-          });
           return joined;
         }
         let value_after = js_literal_map(literal, lambda3);
