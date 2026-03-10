@@ -1,4 +1,4 @@
-import { js_property_value_set } from "../../../love/public/src/js_property_value_set.mjs";
+import { js_property_value_change } from "../../../love/public/src/js_property_value_change.mjs";
 import { js_string } from "../../../love/public/src/js_string.mjs";
 import { text_between_space } from "../../../love/public/src/text_between_space.mjs";
 import { js_literal_value_get } from "../../../love/public/src/js_literal_value_get.mjs";
@@ -40,9 +40,7 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
     let elements = js_array_expression_elements(value);
     function lambda$previous(item) {
       let s = js_object_expression_properties_find_key_named(item, "start");
-      let previous = js_property_value_get(s);
-      let value_new = lambda$previous(previous);
-      js_property_value_set(s, value_new);
+      js_property_value_change(s, lambda$previous);
       let e = js_object_expression_properties_find_key_named(item, "end");
       let value2 = js_property_value_get(e);
       log(value2);
