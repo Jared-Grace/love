@@ -4,16 +4,16 @@ export function app_replace_rule_set_shrink_different_2() {
     rules: ["b c > a", "d e > b"],
     goals: [
       {
-        start: "dec",
+        start: "d e c",
         end: "a",
       },
       {
-        start: "decdec",
-        end: "aa",
+        start: "d e c d e c",
+        end: "a a",
       },
       {
-        start: "decbcbcdec",
-        end: "aaaa",
+        start: "d e c b c b c d e c",
+        end: "a a a a",
       },
     ],
   };

@@ -4,24 +4,24 @@ export function app_replace_rule_set_swap_change_right() {
     rules: ["a b > b c"],
     goals: [
       {
-        start: "aab",
-        end: "bcc",
+        start: "a a b",
+        end: "b c c",
       },
       {
-        start: "ababab",
-        end: "ababbc",
+        start: "a b a b a b",
+        end: "a b a b b c",
       },
       {
-        start: "abababab",
-        end: "bcbcabbc",
+        start: "a b a b a b a b",
+        end: "b c b c a b b c",
       },
       {
-        start: "aaaab",
-        end: "bcccc",
+        start: "a a a a b",
+        end: "b c c c c",
       },
       {
-        start: "abababababab",
-        end: "abbcabbcbcbc",
+        start: "a b a b a b a b a b a b",
+        end: "a b b c a b b c b c b c",
       },
     ],
   };

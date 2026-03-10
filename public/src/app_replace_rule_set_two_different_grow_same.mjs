@@ -4,12 +4,12 @@ export function app_replace_rule_set_two_different_grow_same() {
     rules: ["e b > c e b c"],
     goals: [
       {
-        start: "eb",
-        end: "ccebcc",
+        start: "e b",
+        end: "c c e b c c",
       },
       {
-        start: "eb",
-        end: "ccccebcccc",
+        start: "e b",
+        end: "c c c c e b c c c c",
       },
     ],
   };
