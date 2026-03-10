@@ -1,3 +1,4 @@
+import { js_literal_map_curried_right } from "../../../love/public/src/js_literal_map_curried_right.mjs";
 import { js_literal_map } from "../../../love/public/src/js_literal_map.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { js_property_value_change } from "../../../love/public/src/js_property_value_change.mjs";
@@ -10,7 +11,8 @@ export function app_replace_rule_sets_fn_migrate_goals_space_add_elements(
     let ps = ["start", "end"];
     function lambda2(p) {
       let s = js_object_expression_properties_find_key_named(item, p);
-      let fn = text_between_space;js_literal_map_curried_right
+      let fn = text_between_space;
+      let r = js_literal_map_curried_right(function lambda(value) {});
       function lambda$previous(literal) {
         let s2 = js_literal_map(literal, fn);
         return s2;
