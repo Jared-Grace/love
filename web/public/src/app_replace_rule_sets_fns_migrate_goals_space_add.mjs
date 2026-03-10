@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { js_object_expression_properties_find_key_named_curried_right } from "../../../love/public/src/js_object_expression_properties_find_key_named_curried_right.mjs";
 import { list_filter_null_not_is } from "../../../love/public/src/list_filter_null_not_is.mjs";
@@ -18,8 +19,11 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
   let m = js_object_expression_properties_find_key_named_curried_right(search);
   let mapped2 = list_map(list, m);
   let filtered = list_filter_null_not_is(mapped2);
-  let e = list_empty_is(list2);
-  if (false) {
+  let e = list_empty_is(filtered);
+  if (e) {
+    log({
+      name,
+    });
   }
   return filtered;
 }
