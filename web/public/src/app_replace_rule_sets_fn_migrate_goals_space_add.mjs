@@ -37,7 +37,8 @@ export async function app_replace_rule_sets_fn_migrate_goals_space_add(name) {
       let elements = js_array_expression_elements(value);
       function lambda(item) {
         let ps = ["start", "end"];
-        each(list2, function lambda2(item2) {});
+        function lambda2(item2) {}
+        each(list2, lambda2);
         let s = js_object_expression_properties_find_key_named(item, "start");
         js_property_value_change(s, lambda$previous);
         let e = js_object_expression_properties_find_key_named(item, "end");
