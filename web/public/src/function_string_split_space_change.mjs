@@ -29,7 +29,7 @@ export async function function_string_split_space_change(f_name, list) {
           let mapped = list_map(split, r);
           let joined = list_join_space(mapped);
           log({
-            joined,
+            joined,from, to
           });
           return joined;
         }
