@@ -7,7 +7,8 @@ import { app_replace_rule_sets_names } from "../../../love/public/src/app_replac
 export async function sandbox() {
   let names = app_replace_rule_sets_names();
   let f_names = await functions_names();
-  let difference = list_difference(list, other);
+  let difference = list_difference(f_names, names);
   let prefix = function_name_separator_trail(app_replace_rule_set.name);
-  let filtered = list_filter_starts_with(f_names, prefix);
+  let filtered = list_filter_starts_with(difference, prefix);
+  return filtered;
 }
