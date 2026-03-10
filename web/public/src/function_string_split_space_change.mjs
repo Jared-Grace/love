@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { arguments_assert } from "../../../love/public/src/arguments_assert.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
@@ -14,7 +15,8 @@ import { js_list_type_nodes } from "../../../love/public/src/js_list_type_nodes.
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 export async function function_string_split_space_change(f_name, list) {
   arguments_assert(arguments, 2);
-  let split3 = text_split_comma(t);
+  let split3 = text_split_comma(f_name);
+  await each_async(list2, async function lambda5(item) {});
   let split2 = text_split_comma(list);
   let chunks = list_chunk(split2, 2);
   async function lambda(ast) {
