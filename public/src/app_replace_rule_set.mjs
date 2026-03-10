@@ -103,9 +103,9 @@ export async function app_replace_rule_set(context) {
   let goals = property_get(rule, "goals");
   let goal = list_get(goals, goal_index);
   let start_value = property_get(goal, "start");
-  let current_list = text_split_space(start_value);
+  let start = text_split_space(start_value);
   let end_value = property_get(goal, "end");
-  let goal_list = text_split_space(end_value);
+  let end = text_split_space(end_value);
   let index_selected = null;
   let label_rules = html_p(root);
   let rules = property_get(rule, "rules");
@@ -116,7 +116,7 @@ export async function app_replace_rule_set(context) {
   let div_refresh = html_div(root);
   let label_goal = html_p_text(root, "Goal:");
   let p_goal = html_p(root);
-  let goal_list_symbols = app_replace_button_side(p_goal, goal_list);
+  let goal_list_symbols = app_replace_button_side(p_goal, end);
   let lambda4 = app_replace_button_symbol_style_valid_if_curried_right(false);
   each(goal_list_symbols, lambda4);
   let highlight = app_replace_rule_set_highlight();
@@ -152,9 +152,9 @@ export async function app_replace_rule_set(context) {
     let rules_buttons = list_map_index(rules_parsed, each_rule);
     function each_button_rule_refresh(rb, index2) {
       let rule2 = property_get(rb, "rule");
-      let size2 = list_size(current_list);
+      let size2 = list_size(start);
       let r = range(size2);
-      let lambda7 = app_replace_rule_valid_curried(rule2, current_list);
+      let lambda7 = app_replace_rule_valid_curried(rule2, start);
       let enabled = list_any(r, lambda7);
       const selected = index2 === index_selected;
       enabled = index_selected === null || selected;
@@ -175,16 +175,16 @@ export async function app_replace_rule_set(context) {
       let sb = null;
       async function symbol_on_click() {
         let rule2 = list_get(rules_parsed, index_selected);
-        let eq = app_replace_rule_valid(rule2, index, current_list);
+        let eq = app_replace_rule_valid(rule2, index, start);
         if (eq) {
           symbols_invalid_chosen = {};
           app_replace_button_symbol_style_valid_if_multiple(sbs, true);
           let right = property_get(rule2, "right");
           let left = property_get(rule2, "left");
-          let before = list_take(current_list, index);
+          let before = list_take(start, index);
           let size = list_size(left);
-          let after = list_skip(current_list, index + size);
-          current_list = list_concat_multiple([before, right, after]);
+          let after = list_skip(start, index + size);
+          start = list_concat_multiple([before, right, after]);
           let rb = list_get(rules_buttons, index_selected);
           let lefts2 = property_get(rb, "lefts");
           let rights2 = property_get(rb, "rights");
@@ -243,7 +243,7 @@ export async function app_replace_rule_set(context) {
       if (nn2) {
         let index3 = property_get(sb, "index");
         let rule2 = list_get(rules_parsed, index_selected);
-        valid = app_replace_rule_valid(rule2, index3, current_list);
+        valid = app_replace_rule_valid(rule2, index3, start);
       }
       app_replace_button_symbol_style_valid_if(sb, index_selected !== null);
       let exists = property_exists(symbols_invalid_chosen, index);
@@ -252,11 +252,11 @@ export async function app_replace_rule_set(context) {
       }
       return sb;
     }
-    sbs = list_map_index(current_list, symbols_mapper);
+    sbs = list_map_index(start, symbols_mapper);
     ("no success yet?");
     if (not(success)) {
       ("goal satisfied?");
-      let eq2 = json_equal(current_list, goal_list);
+      let eq2 = json_equal(start, end);
       if (eq2) {
         success = true;
         function lambda5(value) {
