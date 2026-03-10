@@ -1,3 +1,4 @@
+import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { change_if_equal_curried_right_2 } from "../../../love/public/src/change_if_equal_curried_right_2.mjs";
@@ -22,6 +23,7 @@ export async function function_string_split_space_change(f_name, from, to) {
         return joined;
       }
       let value_after = js_literal_map(literal, lambda3);
+      object_replace(to2, from2);
     }
     each(literal, lambda2);
   }
