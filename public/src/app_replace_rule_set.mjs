@@ -82,7 +82,6 @@ import { each_index } from "../../../love/public/src/each_index.mjs";
 import { list_map_index } from "../../../love/public/src/list_map_index.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { html_disable } from "../../../love/public/src/html_disable.mjs";
-import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
 import { app_replace_rule_parse } from "../../../love/public/src/app_replace_rule_parse.mjs";
@@ -91,6 +90,7 @@ import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
+import { text_split_space } from "./text_split_space.mjs";
 export async function app_replace_rule_set(context) {
   let root = property_get(context, "root");
   app_replace_button_home(root, context);
@@ -111,10 +111,10 @@ export async function app_replace_rule_set(context) {
   let div_rules_buttons = html_div(root);
   let label_symbols = html_p(root);
   let div_refresh = html_div(root);
-  let current_list = text_split_empty(start);
+  let current_list = text_split_space(start);
   let label_goal = html_p_text(root, "Goal:");
   let end = property_get(goal, "end");
-  let goal_list = text_split_empty(end);
+  let goal_list = text_split_space(end);
   let p_goal = html_p(root);
   let goal_list_symbols = app_replace_button_side(p_goal, goal_list);
   let lambda4 = app_replace_button_symbol_style_valid_if_curried_right(false);
