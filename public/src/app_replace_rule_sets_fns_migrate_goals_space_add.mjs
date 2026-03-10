@@ -1,5 +1,4 @@
-import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
-import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
+import { text_between_space } from "../../../love/public/src/text_between_space.mjs";
 import { js_literal_value_get } from "../../../love/public/src/js_literal_value_get.mjs";
 import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
 import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
@@ -41,7 +40,7 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
       let s = js_object_expression_properties_find_key_named(item, "start");
       let literal = js_property_value_get(s);
       let value3 = js_literal_value_get(literal);
-      let joined = text_combine_space(value3);
+      let joined = text_between_space(value3);
       log({
         joined,
       });
@@ -53,9 +52,4 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
     log_unparse(only);
   }
   return filtered;
-}
-function text_combine_space(value3) {
-  let split = text_split_empty(value3);
-  let joined = list_join_space(split);
-  return joined;
 }
