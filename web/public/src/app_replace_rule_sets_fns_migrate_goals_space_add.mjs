@@ -43,11 +43,11 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
       let literal = js_property_value_get(s);
       let value3 = js_literal_value_get(literal);
       let joined = text_between_space(value3);
-      let s2 = js_string(joined);
-      js_property_value_set(s, s2);
       log({
         joined,
       });
+      let s2 = js_string(joined);
+      js_property_value_set(s, s2);
       let e = js_object_expression_properties_find_key_named(item, "end");
       let value2 = js_property_value_get(e);
       log(value2);
