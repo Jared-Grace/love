@@ -37,7 +37,7 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
     let elements = js_array_expression_elements(value);
     function lambda(item) {
       let s = js_object_expression_properties_find_key_named(item, "start");
-      let value = js_property_value_get(s);
+      let literal = js_property_value_get(s);
       let value3 = js_literal_value_get(literal);
       log(value);
       let e = js_object_expression_properties_find_key_named(item, "end");
