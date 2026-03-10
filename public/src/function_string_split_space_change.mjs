@@ -1,3 +1,4 @@
+import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { js_literal_map } from "../../../love/public/src/js_literal_map.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { js_list_type_nodes } from "../../../love/public/src/js_list_type_nodes.mjs";
@@ -6,7 +7,9 @@ export async function function_string_split_space_change(f_name, from, to) {
   async function lambda(ast) {
     let nodes = js_list_type_nodes(ast, "Literal");
     function lambda2(item) {
-      function lambda3(value) {}
+      function lambda3(value) {
+        let split = text_split_space(s);
+      }
       let value_after = js_literal_map(literal, lambda3);
     }
     each(list, lambda2);
