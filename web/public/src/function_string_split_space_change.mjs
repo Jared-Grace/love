@@ -7,7 +7,7 @@ import { js_literal_map } from "../../../love/public/src/js_literal_map.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { js_list_type_nodes } from "../../../love/public/src/js_list_type_nodes.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
-export async function function_string_split_space_change(f_name, from, to) {
+export async function function_string_split_space_change(f_name, list) {
   async function lambda(ast) {
     let literal = js_list_type_nodes(ast, "Literal");
     function lambda2(literal) {
