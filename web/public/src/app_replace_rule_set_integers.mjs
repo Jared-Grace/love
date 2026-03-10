@@ -6,31 +6,31 @@ export function app_replace_rule_set_integers() {
     rules,
     goals: [
       {
-        start: "a",
+        start: "i",
         end: "0",
       },
       {
-        start: "a",
+        start: "i",
         end: "2",
       },
       {
-        start: "a",
+        start: "i",
         end: "1 3",
       },
       {
-        start: "a",
+        start: "i",
         end: "7 7",
       },
       {
-        start: "a",
+        start: "i",
         end: "4 0",
       },
       {
-        start: "a",
+        start: "i",
         end: "9 6 9",
       },
       {
-        start: "a",
+        start: "i",
         end: "5 6 7 8",
       },
     ],
