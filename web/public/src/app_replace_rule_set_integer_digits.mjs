@@ -2,38 +2,38 @@ import { app_replace_rule_set_add_rights } from "../../../love/public/src/app_re
 import { digits } from "../../../love/public/src/digits.mjs";
 export function app_replace_rule_set_integer_digits() {
   let d = digits();
-  const rules = ["a > d a", "a > d"];
+  const rules = ["g > d g", "g > d"];
   app_replace_rule_set_add_rights(rules, "d", d);
   let r = {
     name: "Integer digits",
     rules,
     goals: [
       {
-        start: "a",
+        start: "g",
         end: "0",
       },
       {
-        start: "a",
+        start: "g",
         end: "2",
       },
       {
-        start: "a",
+        start: "g",
         end: "0 3",
       },
       {
-        start: "a",
+        start: "g",
         end: "5 4",
       },
       {
-        start: "a",
+        start: "g",
         end: "8 9",
       },
       {
-        start: "a",
+        start: "g",
         end: "7 7 7",
       },
       {
-        start: "a",
+        start: "g",
         end: "0 1 2 3 4",
       },
     ],
