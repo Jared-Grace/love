@@ -42,9 +42,7 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
       let s = js_object_expression_properties_find_key_named(item, "start");
       js_property_value_change(s, lambda$previous);
       let e = js_object_expression_properties_find_key_named(item, "end");
-      let value2 = js_property_value_get(e);
-      log(value2);
-      js_property_value_change(s, lambda$previous);
+      js_property_value_change(e, lambda$previous);
       function lambda$previous(literal) {
         let value3 = js_literal_value_get(literal);
         let joined = text_between_space(value3);
