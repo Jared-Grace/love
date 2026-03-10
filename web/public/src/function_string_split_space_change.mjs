@@ -6,7 +6,8 @@ export async function function_string_split_space_change(f_name, from, to) {
   async function lambda(ast) {
     let nodes = js_list_type_nodes(ast, "Literal");
     function lambda2(item) {
-      let value_after = js_literal_map(literal, function lambda3(value) {});
+      function lambda3(value) {}
+      let value_after = js_literal_map(literal, lambda3);
     }
     each(list, lambda2);
   }
