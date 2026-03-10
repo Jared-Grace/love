@@ -25,39 +25,40 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
   let elements = js_array_expression_single_elements(ast);
   let mapped = list_map(elements, js_identifier_name);
   let name = "app_replace_rule_set_numbers";
-  function lambda2() {}
-  let waited = await each_unordered_async(mapped, lambda2);
-  let list = await function_ast_list_type_nodes_object_expression(name);
-  let search = "goals";
-  let m = js_object_expression_properties_find_key_named_curried_right(search);
-  let mapped2 = list_map(list, m);
-  let filtered = list_filter_null_not_is(mapped2);
-  let e = list_empty_is(filtered);
-  if (e) {
-    log({
-      name,
-    });
-  } else {
-    let only = list_single(filtered);
-    let value = js_property_value_get(only);
-    let elements = js_array_expression_elements(value);
-    function lambda(item) {
-      let s = js_object_expression_properties_find_key_named(item, "start");
-      js_property_value_change(s, lambda$previous);
-      let e = js_object_expression_properties_find_key_named(item, "end");
-      js_property_value_change(e, lambda$previous);
-      function lambda$previous(literal) {
-        let value3 = js_literal_value_get(literal);
-        let joined = text_between_space(value3);
-        let s2 = js_string(joined);
-        log({
-          s2,
-        });
-        return s2;
+  async function lambda2(name) {
+    let list = await function_ast_list_type_nodes_object_expression(name);
+    let search = "goals";
+    let m =
+      js_object_expression_properties_find_key_named_curried_right(search);
+    let mapped2 = list_map(list, m);
+    let filtered = list_filter_null_not_is(mapped2);
+    let e = list_empty_is(filtered);
+    if (e) {
+      log({
+        name,
+      });
+    } else {
+      let only = list_single(filtered);
+      let value = js_property_value_get(only);
+      let elements = js_array_expression_elements(value);
+      function lambda(item) {
+        let s = js_object_expression_properties_find_key_named(item, "start");
+        js_property_value_change(s, lambda$previous);
+        let e = js_object_expression_properties_find_key_named(item, "end");
+        js_property_value_change(e, lambda$previous);
+        function lambda$previous(literal) {
+          let value3 = js_literal_value_get(literal);
+          let joined = text_between_space(value3);
+          let s2 = js_string(joined);
+          log({
+            s2,
+          });
+          return s2;
+        }
       }
+      each(elements, lambda);
+      log_unparse(only);
     }
-    each(elements, lambda);
-    log_unparse(only);
   }
-  return filtered;
+  let waited = await each_unordered_async(mapped, lambda2);
 }
