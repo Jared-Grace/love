@@ -1,4 +1,3 @@
-import { app_replace_rule_set_numbers } from "../../../love/public/src/app_replace_rule_set_numbers.mjs";
 import { js_identifier_name } from "../../../love/public/src/js_identifier_name.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { function_ast } from "../../../love/public/src/function_ast.mjs";
@@ -10,6 +9,6 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
   let ast = await function_ast(f_name);
   let elements = js_array_expression_single_elements(ast);
   let mapped = list_map(elements, js_identifier_name);
-  let name = 'app_replace_rule_set_numbers';
+  let name = "app_replace_rule_set_numbers";
   let list = await function_ast_list_type_nodes_object_expression(f_name);
 }
