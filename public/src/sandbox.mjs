@@ -9,6 +9,6 @@ export async function sandbox() {
   let f_names = await functions_names();
   let difference = list_difference(f_names, names);
   let prefix = function_name_separator_trail(app_replace_rule_set.name);
-  let filtered = list_filter_starts_with(difference, prefix);
+  let filtered = list_filter_starts_with(f_names, prefix);
   return filtered;
 }
