@@ -49,10 +49,10 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
           let value3 = js_literal_value_get(literal);
           let joined = text_between_space(value3);
           let s2 = js_string(joined);
+          return s2;
         }
       }
       each(elements, lambda);
-      log_unparse(only);
     }
   }
   let waited = await each_unordered_async(mapped, lambda2);
