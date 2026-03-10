@@ -12,7 +12,8 @@ export function app_replace_rule_sets_fn_migrate_goals_space_add_elements(
     function lambda2(p) {
       let s = js_object_expression_properties_find_key_named(item, p);
       let fn = text_between_space;
-      let r = js_literal_map_curried_right(function lambda(value) {});
+      function lambda(value) {}
+      let r = js_literal_map_curried_right(lambda);
       function lambda$previous(literal) {
         let s2 = js_literal_map(literal, fn);
         return s2;
