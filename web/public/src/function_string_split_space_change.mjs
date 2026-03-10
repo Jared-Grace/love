@@ -1,3 +1,4 @@
+import { list_first_second } from "../../../love/public/src/list_first_second.mjs";
 import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
 import { text_split_comma } from "../../../love/public/src/text_split_comma.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
@@ -14,7 +15,9 @@ export async function function_string_split_space_change(f_name, list) {
   let chunks = list_chunk(split2, 2);
   return chunks;
   async function lambda(ast) {
-    function lambda4(chunk) {}
+    function lambda4(chunk) {
+      let result = list_first_second(list2);
+    }
     each(chunks, lambda4);
     let literal = js_list_type_nodes(ast, "Literal");
     function lambda2(literal) {
