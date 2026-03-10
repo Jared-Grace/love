@@ -3,7 +3,7 @@ export function app_replace_rule_set_binary_numbers_simple() {
   let r = {
     name: "Binary numbers simple",
     rules: ["b > b b", "b > 0", "b > 1"],
-    goals: app_replace_rule_set_binary_numbers_goals(),
+    goals: app_replace_rule_set_binary_numbers_goals('b'),
   };
   return r;
 }
