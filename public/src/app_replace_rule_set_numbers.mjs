@@ -3,9 +3,9 @@ import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mj
 export function app_replace_rule_set_numbers() {
   const rules = app_replace_rule_set_decimals_rules();
   list_add_multiple(rules, [
-    "h > i j",
-    "h > g j",
-    "j > eE ex",
+    "n > i se",
+    "n > g se",
+    "se > eE ex",
     "eE > e",
     "eE > E",
     "ex > + i",
@@ -17,23 +17,23 @@ export function app_replace_rule_set_numbers() {
     rules,
     goals: [
       {
-        start: "h",
+        start: "n",
         end: "0 . e 1",
       },
       {
-        start: "h",
+        start: "n",
         end: "2 . E + 3 9",
       },
       {
-        start: "h",
+        start: "n",
         end: ". 5 e - 1 8",
       },
       {
-        start: "h",
+        start: "n",
         end: "3 . 1 4 E 0",
       },
       {
-        start: "h",
+        start: "n",
         end: "7 7 e 4 6 0 7",
       },
     ],
