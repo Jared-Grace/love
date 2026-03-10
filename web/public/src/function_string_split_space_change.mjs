@@ -6,7 +6,8 @@ import { function_transform } from "../../../love/public/src/function_transform.
 export async function function_string_split_space_change(f_name, from, to) {
   async function lambda(ast) {
     let nodes = js_list_type_nodes(ast, "Literal");
-    each(list, function lambda2(item) {});
+    function lambda2(item) {}
+    each(list, lambda2);
     let filtered = list_filter_property(nodes, "value", from);
     log({
       filtered,
