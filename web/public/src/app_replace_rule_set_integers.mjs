@@ -15,23 +15,23 @@ export function app_replace_rule_set_integers() {
       },
       {
         start: "a",
-        end: "13",
+        end: "1 3",
       },
       {
         start: "a",
-        end: "77",
+        end: "7 7",
       },
       {
         start: "a",
-        end: "40",
+        end: "4 0",
       },
       {
         start: "a",
-        end: "969",
+        end: "9 6 9",
       },
       {
         start: "a",
-        end: "5678",
+        end: "5 6 7 8",
       },
     ],
   };
