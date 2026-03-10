@@ -4,28 +4,28 @@ export function app_replace_rule_set_shrink_left_pair_replace_right_same() {
     rules: ["b a > a", "b c > b b"],
     goals: [
       {
-        start: "baba",
-        end: "aa",
+        start: "b a b a",
+        end: "a a",
       },
       {
-        start: "bba",
+        start: "b b a",
         end: "a",
       },
       {
-        start: "bca",
-        end: "bba",
+        start: "b c a",
+        end: "b b a",
       },
       {
-        start: "bbba",
+        start: "b b b a",
         end: "a",
       },
       {
-        start: "bcbca",
+        start: "b c b c a",
         end: "a",
       },
       {
-        start: "bcbabcba",
-        end: "aa",
+        start: "b c b a b c b a",
+        end: "a a",
       },
     ],
   };

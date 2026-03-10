@@ -4,15 +4,15 @@ export function app_replace_rule_set_shrink_triple() {
     rules: ["a a a > a"],
     goals: [
       {
-        start: "aaa",
+        start: "a a a",
         end: "a",
       },
       {
-        start: "aaaaa",
+        start: "a a a a a",
         end: "a",
       },
       {
-        start: "aaaaaaa",
+        start: "a a a a a a a",
         end: "a",
       },
     ],

@@ -8,24 +8,24 @@ export function app_replace_rule_set_expand_collapse() {
         end: "c",
       },
       {
-        start: "aa",
-        end: "cc",
+        start: "a a",
+        end: "c c",
       },
       {
-        start: "bab",
-        end: "cc",
+        start: "b a b",
+        end: "c c",
       },
       {
-        start: "aa",
-        end: "bcb",
+        start: "a a",
+        end: "b c b",
       },
       {
-        start: "aaa",
-        end: "bccb",
+        start: "a a a",
+        end: "b c c b",
       },
       {
-        start: "aaaaa",
-        end: "acbbca",
+        start: "a a a a a",
+        end: "a c b b c a",
       },
     ],
   };

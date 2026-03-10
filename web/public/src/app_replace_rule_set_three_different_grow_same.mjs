@@ -4,12 +4,12 @@ export function app_replace_rule_set_three_different_grow_same() {
     rules: ["e = b > c e = b c"],
     goals: [
       {
-        start: "e=b",
-        end: "cce=bcc",
+        start: "e = b",
+        end: "c c e = b c c",
       },
       {
-        start: "e=b",
-        end: "cccce=bcccc",
+        start: "e = b",
+        end: "c c c c e = b c c c c",
       },
     ],
   };

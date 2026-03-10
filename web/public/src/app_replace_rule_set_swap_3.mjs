@@ -4,16 +4,16 @@ export function app_replace_rule_set_swap_3() {
     rules: ["a b > b a", "a c > c a", "a d > d a"],
     goals: [
       {
-        start: "acdbd",
-        end: "cdbda",
+        start: "a c d b d",
+        end: "c d b d a",
       },
       {
-        start: "adbadc",
-        end: "dbdcaa",
+        start: "a d b a d c",
+        end: "d b d c a a",
       },
       {
-        start: "adbcadcb",
-        end: "dbcdcbaa",
+        start: "a d b c a d c b",
+        end: "d b c d c b a a",
       },
     ],
   };

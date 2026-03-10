@@ -4,16 +4,16 @@ export function app_replace_rule_set_shrink_between() {
     rules: ["a b a > a a"],
     goals: [
       {
-        start: "aaaba",
-        end: "aaaa",
+        start: "a a a b a",
+        end: "a a a a",
       },
       {
-        start: "abaaaba",
-        end: "aaaaa",
+        start: "a b a a a b a",
+        end: "a a a a a",
       },
       {
-        start: "abaabaaba",
-        end: "aaaaaa",
+        start: "a b a a b a a b a",
+        end: "a a a a a a",
       },
     ],
   };

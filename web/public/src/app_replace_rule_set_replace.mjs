@@ -8,20 +8,20 @@ export function app_replace_rule_set_replace() {
         end: "b",
       },
       {
-        start: "aa",
-        end: "bb",
+        start: "a a",
+        end: "b b",
       },
       {
-        start: "aaa",
-        end: "bbb",
+        start: "a a a",
+        end: "b b b",
       },
       {
-        start: "aaaa",
-        end: "abba",
+        start: "a a a a",
+        end: "a b b a",
       },
       {
-        start: "aaaaaaa",
-        end: "abababa",
+        start: "a a a a a a a",
+        end: "a b a b a b a",
       },
     ],
   };

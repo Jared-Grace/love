@@ -4,20 +4,20 @@ export function app_replace_rule_set_replace_2() {
     rules: ["a > b", "c > d"],
     goals: [
       {
-        start: "ac",
-        end: "bd",
+        start: "a c",
+        end: "b d",
       },
       {
-        start: "aca",
-        end: "bdb",
+        start: "a c a",
+        end: "b d b",
       },
       {
-        start: "cabacd",
-        end: "dbbbdd",
+        start: "c a b a c d",
+        end: "d b b b d d",
       },
       {
-        start: "caaaaac",
-        end: "dbababd",
+        start: "c a a a a a c",
+        end: "d b a b a b d",
       },
     ],
   };

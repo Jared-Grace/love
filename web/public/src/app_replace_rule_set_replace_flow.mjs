@@ -4,20 +4,20 @@ export function app_replace_rule_set_replace_flow() {
     rules: ["a > b", "b > c"],
     goals: [
       {
-        start: "ab",
-        end: "cc",
+        start: "a b",
+        end: "c c",
       },
       {
-        start: "acb",
-        end: "ccc",
+        start: "a c b",
+        end: "c c c",
       },
       {
-        start: "cabadc",
-        end: "ccbcdc",
+        start: "c a b a d c",
+        end: "c c b c d c",
       },
       {
-        start: "caaaaac",
-        end: "ccabccc",
+        start: "c a a a a a c",
+        end: "c c a b c c c",
       },
     ],
   };
