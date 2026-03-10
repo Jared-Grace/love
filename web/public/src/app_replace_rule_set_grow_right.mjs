@@ -1,23 +1,23 @@
 export function app_replace_rule_set_grow_right() {
   let r = {
     name: "Grow right",
-    rules: ["a > a b"],
+    rules: ["g > g s"],
     goals: [
       {
-        start: "a",
-        end: "a b b",
+        start: "g",
+        end: "g s s",
       },
       {
-        start: "a a",
-        end: "a b b a b",
+        start: "g g",
+        end: "g s s g s",
       },
       {
-        start: "a a",
-        end: "a b b a b b b",
+        start: "g g",
+        end: "g s s g s s s",
       },
       {
-        start: "a a a",
-        end: "a b a b b a b b b",
+        start: "g g g",
+        end: "g s g s s g s s s",
       },
     ],
   };
