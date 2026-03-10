@@ -1,6 +1,6 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { js_list_type_nodes } from "../../../love/public/src/js_list_type_nodes.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
-import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
 import { js_property_value_change } from "../../../love/public/src/js_property_value_change.mjs";
 import { js_string } from "../../../love/public/src/js_string.mjs";
 import { text_between_space } from "../../../love/public/src/text_between_space.mjs";
@@ -62,5 +62,5 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
     }
     let output = await function_transform(name, lambda3);
   }
-  let waited = await each_unordered_async(mapped, lambda2);
+  let waited = await each_async(mapped, lambda2);
 }
