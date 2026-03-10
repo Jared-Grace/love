@@ -4,16 +4,16 @@ export function app_replace_rule_set_same_replace_left() {
     rules: ["a a > b a"],
     goals: [
       {
-        start: "aaaa",
-        end: "abaa",
+        start: "a a a a",
+        end: "a b a a",
       },
       {
-        start: "aaaa",
-        end: "baba",
+        start: "a a a a",
+        end: "b a b a",
       },
       {
-        start: "aaaaaaaa",
-        end: "baabaaba",
+        start: "a a a a a a a a",
+        end: "b a a b a a b a",
       },
     ],
   };
