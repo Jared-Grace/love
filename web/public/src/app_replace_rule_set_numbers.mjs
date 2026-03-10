@@ -5,12 +5,12 @@ export function app_replace_rule_set_numbers() {
   list_add_multiple(rules, [
     "h > i j",
     "h > g j",
-    "j > eE k",
+    "j > eE ex",
     "eE > e",
     "eE > E",
-    "k > + i",
-    "k > - i",
-    "k > i",
+    "ex > + i",
+    "ex > - i",
+    "ex > i",
   ]);
   let r = {
     name: "Numbers",
