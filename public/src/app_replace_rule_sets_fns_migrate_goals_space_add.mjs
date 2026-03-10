@@ -19,5 +19,7 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
   let mapped2 = list_map(list, m);
   let filtered = list_filter_null_not_is(mapped2);
   let e = list_empty_is(list2);
+  if (false) {
+  }
   return filtered;
 }
