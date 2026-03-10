@@ -11,7 +11,7 @@ import { js_list_type_nodes } from "../../../love/public/src/js_list_type_nodes.
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 export async function function_string_split_space_change(f_name, list) {
   let split2 = text_split_comma(list);
-  let chunks = list_chunk(list2, chunk_size);
+  let chunks = list_chunk(split2, 2);
   async function lambda(ast) {
     let literal = js_list_type_nodes(ast, "Literal");
     function lambda2(literal) {
