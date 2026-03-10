@@ -1,3 +1,4 @@
+import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { text_split_empty } from "../../../love/public/src/text_split_empty.mjs";
 import { js_literal_value_get } from "../../../love/public/src/js_literal_value_get.mjs";
 import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
@@ -41,6 +42,7 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
       let literal = js_property_value_get(s);
       let value3 = js_literal_value_get(literal);
       let split = text_split_empty(value3);
+      let joined = list_join_space(list2);
       log(value);
       let e = js_object_expression_properties_find_key_named(item, "end");
       let value2 = js_property_value_get(e);
