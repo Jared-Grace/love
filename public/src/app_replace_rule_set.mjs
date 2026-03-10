@@ -102,10 +102,10 @@ export async function app_replace_rule_set(context) {
   let goal_index = storage_local_get_context(context, "goal_index");
   let goals = property_get(rule, "goals");
   let goal = list_get(goals, goal_index);
-  let start = property_get(goal, "start");
-  let current_list = text_split_space(start);
-  let end = property_get(goal, "end");
-  let goal_list = text_split_space(end);
+  let start_value = property_get(goal, "start");
+  let current_list = text_split_space(start_value);
+  let end_value = property_get(goal, "end");
+  let goal_list = text_split_space(end_value);
   let index_selected = null;
   let label_rules = html_p(root);
   let rules = property_get(rule, "rules");
