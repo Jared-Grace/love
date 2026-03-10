@@ -7,7 +7,8 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
   let f_name = app_replace_rule_sets_fns.name;
   let ast = await function_ast(f_name);
   let elements = js_array_expression_single_elements(ast);
-  let mapped = list_map(list2, function lambda(item) {});
+  function lambda(item) {}
+  let mapped = list_map(list2, lambda);
   return elements;
   let list = await function_ast_list_type_nodes_object_expression(f_name);
 }
