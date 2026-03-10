@@ -7,7 +7,7 @@ import { js_object_expression_properties_find_key_named } from "../../../love/pu
 export function app_replace_rule_sets_fn_migrate_goals_space_add_elements(
   elements,
 ) {
-  function lambda(item) {
+  function lambda_each(item) {
     let ps = ["start", "end"];
     function lambda2(p) {
       let s = js_object_expression_properties_find_key_named(item, p);
@@ -21,5 +21,5 @@ export function app_replace_rule_sets_fn_migrate_goals_space_add_elements(
     }
     each(ps, lambda2);
   }
-  each(elements, lambda);
+  each(elements, lambda_each);
 }
