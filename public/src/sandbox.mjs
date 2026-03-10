@@ -7,10 +7,10 @@ import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
 export async function sandbox() {
   let fns = app_replace_rule_sets_fns();
-  let mapped = list_map_property(fns, "name");
+  let mapped = list_map_property(fns, 'name');
   let f_names = await functions_names();
-  let difference = list_difference(f_names, names);
+  let difference = list_difference(f_names, mapped);
   let prefix = function_name_separator_trail(app_replace_rule_set.name);
-  let filtered = list_filter_starts_with(f_names, prefix);
+  let filtered = list_filter_starts_with(difference, prefix);
   return filtered;
 }
