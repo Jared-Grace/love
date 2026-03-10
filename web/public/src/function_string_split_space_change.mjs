@@ -23,7 +23,7 @@ export async function function_string_split_space_change(f_name, from, to) {
         return joined;
       }
       let value_after = js_literal_map(literal, lambda3);
-      object_replace(to2, from2);
+      object_replace(literal, value_after);
     }
     each(literal, lambda2);
   }
