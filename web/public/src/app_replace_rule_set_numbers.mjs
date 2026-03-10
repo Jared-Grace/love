@@ -3,14 +3,14 @@ import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mj
 export function app_replace_rule_set_numbers() {
   const rules = app_replace_rule_set_decimals_rules();
   list_add_multiple(rules, [
-    "h > a j",
+    "h > i j",
     "h > g j",
-    "j > i k",
-    "i > e",
-    "i > E",
-    "k > + a",
-    "k > - a",
-    "k > a",
+    "j > eE k",
+    "eE > e",
+    "eE > E",
+    "k > + i",
+    "k > - i",
+    "k > i",
   ]);
   let r = {
     name: "Numbers",
