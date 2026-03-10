@@ -11,9 +11,8 @@ export async function function_string_split_space_change(f_name, from, to) {
     function lambda2(literal) {
       function lambda3(value) {
         let split = text_split_space(value);
-        function lambda4(item2) {}
-        let r = change_if_equal_curried_right_2(from2, to2);
-        let mapped = list_map(split, lambda4);
+        let r = change_if_equal_curried_right_2(from, to);
+        let mapped = list_map(split, r);
       }
       let value_after = js_literal_map(literal, lambda3);
     }
