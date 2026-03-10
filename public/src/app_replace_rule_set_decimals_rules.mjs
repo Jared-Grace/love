@@ -5,7 +5,7 @@ export function app_replace_rule_set_decimals_rules() {
   list_add_multiple(rules, [
     "g > f . b",
     "g > f .",
-    "f > a",
+    "f > i",
     "f > 0",
     "g > . b",
   ]);
