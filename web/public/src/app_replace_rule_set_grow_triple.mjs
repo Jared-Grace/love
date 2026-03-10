@@ -5,15 +5,15 @@ export function app_replace_rule_set_grow_triple() {
     goals: [
       {
         start: "a",
-        end: "aaa",
+        end: "a a a",
       },
       {
         start: "a",
-        end: "aaaaa",
+        end: "a a a a a",
       },
       {
         start: "a",
-        end: "aaaaaaa",
+        end: "a a a a a a a",
       },
     ],
   };
