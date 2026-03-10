@@ -48,10 +48,10 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
       function lambda$previous(literal) {
         let value3 = js_literal_value_get(literal);
         let joined = text_between_space(value3);
-        log({
-          joined,
-        });
         let s2 = js_string(joined);
+        log({
+          s2,
+        });
         return s2;
       }
     }
