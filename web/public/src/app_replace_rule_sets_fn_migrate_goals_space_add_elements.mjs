@@ -10,7 +10,7 @@ export function app_replace_rule_sets_fn_migrate_goals_space_add_elements(
     let ps = ["start", "end"];
     function lambda2(p) {
       let s = js_object_expression_properties_find_key_named(item, p);
-      let fn = text_between_space;
+      let fn = text_between_space;js_literal_map_curried_right
       function lambda$previous(literal) {
         let s2 = js_literal_map(literal, fn);
         return s2;
