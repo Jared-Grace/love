@@ -1,3 +1,4 @@
+import { js_object_expression_properties } from "../../../love/public/src/js_object_expression_properties.mjs";
 import { log_unparse } from "../../../love/public/src/log_unparse.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { js_array_expression_elements } from "../../../love/public/src/js_array_expression_elements.mjs";
@@ -33,7 +34,9 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
     let only = list_single(filtered);
     let value = js_property_value_get(only);
     let elements = js_array_expression_elements(value);
-    function lambda(item) {}
+    function lambda(item) {
+      let properties = js_object_expression_properties(e2);
+    }
     each(elements, lambda);
     log_unparse(only);
   }
