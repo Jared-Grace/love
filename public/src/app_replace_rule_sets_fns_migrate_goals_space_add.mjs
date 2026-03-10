@@ -32,7 +32,8 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
     let only = list_single(filtered);
     let value = js_property_value_get(only);
     let elements = js_array_expression_elements(value);
-    each(list2, function lambda(item) {});
+    function lambda(item) {}
+    each(list2, lambda);
     log({
       elements,
     });
