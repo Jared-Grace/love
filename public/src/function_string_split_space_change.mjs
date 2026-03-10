@@ -1,3 +1,4 @@
+import { text_split_comma } from "../../../love/public/src/text_split_comma.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { change_if_equal_curried_right_2 } from "../../../love/public/src/change_if_equal_curried_right_2.mjs";
@@ -8,6 +9,7 @@ import { each } from "../../../love/public/src/each.mjs";
 import { js_list_type_nodes } from "../../../love/public/src/js_list_type_nodes.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 export async function function_string_split_space_change(f_name, list) {
+  let split2 = text_split_comma(t);
   async function lambda(ast) {
     let literal = js_list_type_nodes(ast, "Literal");
     function lambda2(literal) {
