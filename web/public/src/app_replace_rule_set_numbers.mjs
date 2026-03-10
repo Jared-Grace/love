@@ -13,7 +13,7 @@ export function app_replace_rule_set_numbers() {
     "ex > i",
   ]);
   let r = {
-    name: "Numbers",
+    name: "Scientific Notation Numbers",
     rules,
     goals: [
       {
