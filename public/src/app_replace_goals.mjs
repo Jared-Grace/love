@@ -12,7 +12,7 @@ import { storage_local_set_context } from "../../../love/public/src/storage_loca
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_rule_set_get } from "../../../love/public/src/app_replace_rule_set_get.mjs";
-import { text_split_empty } from "./text_split_empty.mjs";
+import { text_split_space } from "./text_split_space.mjs";
 export function app_replace_goals(context) {
   let root = property_get(context, "root");
   app_replace_button_home(root, context);
@@ -26,9 +26,9 @@ export function app_replace_goals(context) {
     let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
     let completed = app_replace_goal_completed_initialize(g);
     let start = property_get(goal, "start");
-    let left = text_split_empty(start);
+    let left = text_split_space(start);
     let end = property_get(goal, "end");
-    let right = text_split_empty(end);
+    let right = text_split_space(end);
     let title = app_replace_goals_generic(
       root,
       completed,
