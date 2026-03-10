@@ -25,7 +25,8 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
   let elements = js_array_expression_single_elements(ast);
   let mapped = list_map(elements, js_identifier_name);
   let name = "app_replace_rule_set_numbers";
-  await functions_asts_each_unordered(async function lambda3() {});
+  async function lambda3() {}
+  await functions_asts_each_unordered(lambda3);
   let list = await function_ast_list_type_nodes_object_expression(name);
   let search = "goals";
   let m = js_object_expression_properties_find_key_named_curried_right(search);
