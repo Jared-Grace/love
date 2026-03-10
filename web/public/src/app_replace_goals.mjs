@@ -25,10 +25,10 @@ export function app_replace_goals(context) {
   function each_item(goal, index) {
     let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
     let completed = app_replace_goal_completed_initialize(g);
-    let start = property_get(goal, "start");
-    let left = text_split_space(start);
-    let end = property_get(goal, "end");
-    let right = text_split_space(end);
+    let startv = property_get(goal, "start");
+    let start = text_split_space(startv);
+    let endv = property_get(goal, "end");
+    let end = text_split_space(endv);
     let title = app_replace_goals_generic(
       root,
       completed,
@@ -36,7 +36,7 @@ export function app_replace_goals(context) {
       index,
       lambda,
     );
-    let r2 = app_replace_button_rule_content(title, left, right);
+    let r2 = app_replace_button_rule_content(title, start, end);
     app_replace_lefts_rights_style(r2, completed);
     function lambda() {
       on_click(index);
