@@ -15,7 +15,8 @@ import { list_filter_empty_not_is } from "../../../love/public/src/list_filter_e
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { file_read_folder_user_split_normalize } from "../../../love/public/src/file_read_folder_user_split_normalize.mjs";
 export async function sandbox() {
-  const path = file_name_txt("David");
+  const file_name = "David";
+  const path = file_name_txt(file_name);
   let language = "Urdu";
   let separator = "---";
   let r = await file_read_folder_user_split_normalize(path);
