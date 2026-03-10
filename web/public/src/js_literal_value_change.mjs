@@ -4,8 +4,8 @@ import { js_literal_value_get } from "../../../love/public/src/js_literal_value_
 export function js_literal_value_change(s, lambda$value) {
   function lambda$previous(literal) {
     let value = js_literal_value_get(literal);
-    let joined = lambda$value(value);
-    let s2 = js_string(joined);
+    let after = lambda$value(value);
+    let s2 = js_string(after);
     return s2;
   }
   js_property_value_change(s, lambda$previous);
