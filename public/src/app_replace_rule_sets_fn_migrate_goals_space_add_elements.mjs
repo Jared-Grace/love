@@ -11,9 +11,10 @@ export function app_replace_rule_sets_fn_migrate_goals_space_add_elements(
     let ps = ["start", "end"];
     function lambda2(p) {
       let s = js_object_expression_properties_find_key_named(item, p);
+      let lambda = text_between_space;
       function lambda$previous(literal) {
         let value3 = js_literal_value_get(literal);
-        let joined = text_between_space(value3);
+        let joined = lambda(value3);
         let s2 = js_string(joined);
         return s2;
       }
