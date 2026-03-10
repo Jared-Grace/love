@@ -1,27 +1,27 @@
-export function app_replace_rule_set_binary_numbers_goals() {
+export function app_replace_rule_set_binary_numbers_goals(start) {
   let r = [
     {
-      start: "b",
+      start,
       end: "0",
     },
     {
-      start: "b",
+      start,
       end: "1",
     },
     {
-      start: "b",
+      start,
       end: "1 0",
     },
     {
-      start: "b",
+      start,
       end: "1 1",
     },
     {
-      start: "b",
+      start,
       end: "1 0 1",
     },
     {
-      start: "b",
+      start,
       end: "1 0 1 0",
     },
   ];
