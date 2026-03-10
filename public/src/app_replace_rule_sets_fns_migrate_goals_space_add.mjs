@@ -43,7 +43,9 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
       let value3 = js_literal_value_get(literal);
       let split = text_split_empty(value3);
       let joined = list_join_space(split);
-      log({joined});
+      log({
+        joined,
+      });
       let e = js_object_expression_properties_find_key_named(item, "end");
       let value2 = js_property_value_get(e);
       log(value2);
