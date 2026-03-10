@@ -4,16 +4,16 @@ export function app_replace_rule_set_shrink_different() {
     rules: ["b c > a"],
     goals: [
       {
-        start: "bc",
+        start: "b c",
         end: "a",
       },
       {
-        start: "bcbc",
-        end: "aa",
+        start: "b c b c",
+        end: "a a",
       },
       {
-        start: "bcbcbcbc",
-        end: "aaaa",
+        start: "b c b c b c b c",
+        end: "a a a a",
       },
     ],
   };

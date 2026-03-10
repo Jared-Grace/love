@@ -5,19 +5,19 @@ export function app_replace_rule_set_grow_right() {
     goals: [
       {
         start: "a",
-        end: "abb",
+        end: "a b b",
       },
       {
-        start: "aa",
-        end: "abbab",
+        start: "a a",
+        end: "a b b a b",
       },
       {
-        start: "aa",
-        end: "abbabbb",
+        start: "a a",
+        end: "a b b a b b b",
       },
       {
-        start: "aaa",
-        end: "ababbabbb",
+        start: "a a a",
+        end: "a b a b b a b b b",
       },
     ],
   };

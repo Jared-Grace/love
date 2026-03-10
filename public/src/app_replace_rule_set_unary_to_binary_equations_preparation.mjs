@@ -11,35 +11,35 @@ export function app_replace_rule_set_unary_to_binary_equations_preparation() {
     goals: [
       {
         start: "d",
-        end: "dd",
+        end: "d d",
       },
       {
         start: "d",
-        end: "ded",
+        end: "d e d",
       },
       {
         start: "d",
-        end: "de=",
+        end: "d e =",
       },
       {
-        start: "de=",
-        end: "=d",
+        start: "d e =",
+        end: "= d",
       },
       {
-        start: "de=",
-        end: "df=",
+        start: "d e =",
+        end: "d f =",
       },
       {
-        start: "de=",
-        end: "ddf=",
+        start: "d e =",
+        end: "d d f =",
       },
       {
-        start: "de=",
-        end: "dedf=",
+        start: "d e =",
+        end: "d e d f =",
       },
       {
-        start: "de=",
-        end: "df=f=",
+        start: "d e =",
+        end: "d f = f =",
       },
     ],
   };

@@ -5,15 +5,15 @@ export function app_replace_rule_set_double() {
     goals: [
       {
         start: "a",
-        end: "aa",
+        end: "a a",
       },
       {
         start: "a",
-        end: "aaa",
+        end: "a a a",
       },
       {
         start: "a",
-        end: "aaaaa",
+        end: "a a a a a",
       },
     ],
   };

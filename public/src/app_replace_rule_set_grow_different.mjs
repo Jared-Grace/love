@@ -5,15 +5,15 @@ export function app_replace_rule_set_grow_different() {
     goals: [
       {
         start: "a",
-        end: "bc",
+        end: "b c",
       },
       {
-        start: "aa",
-        end: "bcbc",
+        start: "a a",
+        end: "b c b c",
       },
       {
-        start: "aaaa",
-        end: "bcbcbcbc",
+        start: "a a a a",
+        end: "b c b c b c b c",
       },
     ],
   };

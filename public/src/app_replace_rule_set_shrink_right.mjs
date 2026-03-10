@@ -4,20 +4,20 @@ export function app_replace_rule_set_shrink_right() {
     rules: ["a b > a"],
     goals: [
       {
-        start: "abb",
+        start: "a b b",
         end: "a",
       },
       {
-        start: "abbab",
-        end: "aa",
+        start: "a b b a b",
+        end: "a a",
       },
       {
-        start: "abbabbb",
-        end: "aa",
+        start: "a b b a b b b",
+        end: "a a",
       },
       {
-        start: "ababbabbb",
-        end: "aaa",
+        start: "a b a b b a b b b",
+        end: "a a a",
       },
     ],
   };
