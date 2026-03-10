@@ -26,6 +26,9 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
   let mapped = list_map(elements, js_identifier_name);
   async function lambda2(name) {
     async function lambda3(ast) {
+      log({
+        name,
+      });
       const type = "ObjectExpression";
       let list = js_list_type_nodes(ast, type);
       let search = "goals";
