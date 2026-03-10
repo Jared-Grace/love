@@ -1,3 +1,4 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_replace_rule_sets_fns } from "../../../love/public/src/app_replace_rule_sets_fns.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_set.mjs";
@@ -5,7 +6,8 @@ import { function_name_separator_trail } from "../../../love/public/src/function
 import { functions_names } from "../../../love/public/src/functions_names.mjs";
 import { list_filter_starts_with } from "../../../love/public/src/list_filter_starts_with.mjs";
 export async function sandbox() {
-  let names = app_replace_rule_sets_fns();lmp
+  let names = app_replace_rule_sets_fns();
+  let mapped = list_map_property(list, property_name);
   let f_names = await functions_names();
   let difference = list_difference(f_names, names);
   let prefix = function_name_separator_trail(app_replace_rule_set.name);
