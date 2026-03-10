@@ -1,7 +1,7 @@
+import { function_name_separator_trail } from "../../../love/public/src/function_name_separator_trail.mjs";
 import { app_shared_name_search_info } from "../../../love/public/src/app_shared_name_search_info.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { function_name_to_path } from "../../../love/public/src/function_name_to_path.mjs";
-import { function_name_separator } from "../../../love/public/src/function_name_separator.mjs";
 import { app_shared_name_prefixed } from "../../../love/public/src/app_shared_name_prefixed.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { functions_search } from "../../../love/public/src/functions_search.mjs";
@@ -9,8 +9,7 @@ export async function functions_search_app_prefix(s) {
   let v2 = await app_shared_name_search_info(s);
   s = property_get(v2, "a_name");
   let a_name = app_shared_name_prefixed(s);
-  let separator = function_name_separator();
-  const c = a_name + separator + "";
+  const c = function_name_separator_trail(a_name);
   let results_search = await functions_search(c);
   let value = function_name_to_path(a_name);
   let results = object_merge(
