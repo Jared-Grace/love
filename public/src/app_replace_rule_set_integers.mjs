@@ -1,6 +1,6 @@
 import { app_replace_rule_set_integers_rules } from "../../../love/public/src/app_replace_rule_set_integers_rules.mjs";
 export function app_replace_rule_set_integers() {
-  const rules = app_replace_rule_set_integers_rules();
+  const rules = app_replace_rule_set_integers_rules("d");
   let r = {
     name: "Integers",
     rules,
