@@ -3,6 +3,6 @@ import { js_literal_value_get } from "../../../love/public/src/js_literal_value_
 export function js_literal_map(literal, lambda$value) {
   let value = js_literal_value_get(literal);
   let joined = lambda$value(value);
-  let value_after = js_string(joined);
-  return value_after;
+  let mapped = js_string(joined);
+  return mapped;
 }
