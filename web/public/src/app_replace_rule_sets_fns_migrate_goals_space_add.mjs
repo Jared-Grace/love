@@ -1,4 +1,4 @@
-import { list_find } from "../../../love/public/src/list_find.mjs";
+import { list_single } from "../../../love/public/src/list_single.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_empty_is } from "../../../love/public/src/list_empty_is.mjs";
 import { js_object_expression_properties_find_key_named_curried_right } from "../../../love/public/src/js_object_expression_properties_find_key_named_curried_right.mjs";
@@ -26,8 +26,7 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
       name,
     });
   } else {
-    function lambda(item) {}
-    let found = list_find(list, lambda);
+    let only = list_single(list2);
   }
   return filtered;
 }
