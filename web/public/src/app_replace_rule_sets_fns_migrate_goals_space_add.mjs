@@ -26,7 +26,8 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
       name,
     });
   } else {
-    let found = list_find(list2, function lambda(item) {});
+    function lambda(item) {}
+    let found = list_find(list2, lambda);
   }
   return filtered;
 }
