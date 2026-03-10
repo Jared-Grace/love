@@ -6,23 +6,23 @@ export function app_replace_rule_set_decimals() {
     rules,
     goals: [
       {
-        start: "g",
+        start: "de",
         end: "0 .",
       },
       {
-        start: "g",
+        start: "de",
         end: ". 5",
       },
       {
-        start: "g",
+        start: "de",
         end: "2 .",
       },
       {
-        start: "g",
+        start: "de",
         end: "3 . 1 4",
       },
       {
-        start: "g",
+        start: "de",
         end: "7 7 . 4 6 0 7",
       },
     ],
