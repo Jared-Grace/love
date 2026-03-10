@@ -2,8 +2,8 @@ import { app_replace_rule_set_add_rights } from "../../../love/public/src/app_re
 import { digits } from "../../../love/public/src/digits.mjs";
 export function app_replace_rule_set_integer_digits() {
   let d = digits();
-  const rules = ["a > id a", "a > id"];
-  app_replace_rule_set_add_rights(rules, "id", d);
+  const rules = ["a > d a", "a > d"];
+  app_replace_rule_set_add_rights(rules, "d", d);
   let r = {
     name: "Integer digits",
     rules,
