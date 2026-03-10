@@ -3,11 +3,11 @@ import { app_replace_rule_set_integers_rules } from "../../../love/public/src/ap
 export function app_replace_rule_set_decimals_rules() {
   const rules = app_replace_rule_set_integers_rules("dt");
   list_add_multiple(rules, [
-    "g > f . b",
-    "g > f .",
+    "de > f . g",
+    "de > f .",
     "f > i",
     "f > 0",
-    "g > . b",
+    "de > . g",
   ]);
   return rules;
 }
