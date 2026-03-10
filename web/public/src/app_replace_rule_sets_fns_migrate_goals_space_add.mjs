@@ -38,22 +38,26 @@ export async function app_replace_rule_sets_fns_migrate_goals_space_add() {
     let only = list_single(filtered);
     let value = js_property_value_get(only);
     let elements = js_array_expression_elements(value);
-    function lambda(item) {
+    function lambda$previous(item) {
       let s = js_object_expression_properties_find_key_named(item, "start");
       let literal = js_property_value_get(s);
-      let value3 = js_literal_value_get(literal);
-      let joined = text_between_space(value3);
-      log({
-        joined,
-      });
-      let s2 = js_string(joined);
+      let s2 = lambda$previous(literal);
       js_property_value_set(s, s2);
       let e = js_object_expression_properties_find_key_named(item, "end");
       let value2 = js_property_value_get(e);
       log(value2);
     }
-    each(elements, lambda);
+    each(elements, lambda$previous);
     log_unparse(only);
   }
   return filtered;
+  function lambda(literal) {
+    let value3 = js_literal_value_get(literal);
+    let joined = text_between_space(value3);
+    log({
+      joined,
+    });
+    let s2 = js_string(joined);
+    return s2;
+  }
 }
