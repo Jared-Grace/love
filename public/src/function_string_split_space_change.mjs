@@ -14,6 +14,7 @@ export async function function_string_split_space_change(f_name, list) {
   let chunks = list_chunk(split2, 2);
   return chunks;
   async function lambda(ast) {
+    each(list2, function lambda4(item) {});
     let literal = js_list_type_nodes(ast, "Literal");
     function lambda2(literal) {
       function lambda3(value) {
