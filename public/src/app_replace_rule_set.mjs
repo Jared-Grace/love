@@ -103,6 +103,9 @@ export async function app_replace_rule_set(context) {
   let goals = property_get(rule, "goals");
   let goal = list_get(goals, goal_index);
   let start = property_get(goal, "start");
+  let current_list = text_split_space(start);
+  let end = property_get(goal, "end");
+  let goal_list = text_split_space(end);
   let index_selected = null;
   let label_rules = html_p(root);
   let rules = property_get(rule, "rules");
@@ -111,10 +114,7 @@ export async function app_replace_rule_set(context) {
   let div_rules_buttons = html_div(root);
   let label_symbols = html_p(root);
   let div_refresh = html_div(root);
-  let current_list = text_split_space(start);
   let label_goal = html_p_text(root, "Goal:");
-  let end = property_get(goal, "end");
-  let goal_list = text_split_space(end);
   let p_goal = html_p(root);
   let goal_list_symbols = app_replace_button_side(p_goal, goal_list);
   let lambda4 = app_replace_button_symbol_style_valid_if_curried_right(false);
