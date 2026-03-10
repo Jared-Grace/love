@@ -10,7 +10,8 @@ export async function functions_search_app_prefix(s) {
   s = property_get(v2, "a_name");
   let a_name = app_shared_name_prefixed(s);
   let separator = function_name_separator();
-  let results_search = await functions_search(a_name + separator + "");
+  const c = a_name + separator + "";
+  let results_search = await functions_search(c);
   let value = function_name_to_path(a_name);
   let results = object_merge(
     {
