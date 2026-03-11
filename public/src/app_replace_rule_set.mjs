@@ -105,7 +105,7 @@ export async function app_replace_rule_set(context) {
   if (exists2) {
     let abbreviations = property_get(rule, "abbreviations");
     let list2 = object_to_list(abbreviations);
-    list_sort_text_property(list2, 'key');
+    list_sort_text_property(list2, "key");
   }
   let goal_index = storage_local_get_context(context, "goal_index");
   let goals = property_get(rule, "goals");
