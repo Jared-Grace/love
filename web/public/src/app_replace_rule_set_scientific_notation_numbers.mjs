@@ -1,3 +1,4 @@
+import { html_cycle_bold_curried_right } from "../../../love/public/src/html_cycle_bold_curried_right.mjs";
 import { app_replace_rule_set_decimals_rules } from "../../../love/public/src/app_replace_rule_set_decimals_rules.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 export function app_replace_rule_set_scientific_notation_numbers() {
@@ -13,7 +14,13 @@ export function app_replace_rule_set_scientific_notation_numbers() {
     "ex > i",
   ]);
   let a = {
-    eE: 'lowercase or uppercase letter "e" for "exponent"',
+    eE: html_cycle_bold_curried_right(
+      'lowercase or uppercase letter "',
+      "e",
+      '" for "',
+      "e",
+      'xponent"',
+    ),
     sn: "scientific notation number",
   };
   let r = {
