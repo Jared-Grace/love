@@ -14,6 +14,7 @@ export function app_replace_rule_set_scientific_notation_numbers() {
   ]);
   let a = {
     eE: 'lowercase or uppercase letter "e" for "exponent"',
+    sn: "scientific notation number",
   };
   let r = {
     name: "Scientific Notation Numbers",
