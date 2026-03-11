@@ -107,7 +107,7 @@ export async function app_replace_rule_set(context) {
   let exists2 = property_exists(rule, "abbreviations");
   if (exists2) {
     html_p_text(root, "Abbreviations");
-    let component = html_element(parent, "ul");
+    let component = html_element(root, "ul");
     let abbreviations = property_get(rule, "abbreviations");
     let list2 = object_to_list(abbreviations);
     list_sort_text_property(list2, "key");
