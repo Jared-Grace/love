@@ -15,8 +15,8 @@ export function app_replace_rule_set_scientific_notation_numbers() {
   let a = {
     eE: ['lowercase or uppercase letter "', "e", '" for "', "e", 'xponent"'],
     i: ["", "i", "nteger (non-negative whole number)"],
+    se: ["", "s", "cientific notation number", "e", "nding"],
     sn: ["", "s", "cientific ", "n", "otation number"],
-    sn: ["", "s", "cientific notation number", "e", "nding"],
   };
   let r = {
     name: "Scientific Notation Numbers",
