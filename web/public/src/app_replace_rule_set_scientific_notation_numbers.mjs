@@ -12,6 +12,7 @@ export function app_replace_rule_set_scientific_notation_numbers() {
     "ex > - i",
     "ex > i",
   ]);
+  let a = {};
   let r = {
     name: "Scientific Notation Numbers",
     abbreviations: function lambda() {},
