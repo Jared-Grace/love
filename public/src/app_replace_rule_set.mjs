@@ -112,7 +112,8 @@ export async function app_replace_rule_set(context) {
     list_sort_text_property(list2, "key");
     function lambda6(kv) {
       let key = property_get(kv, "key");
-      let value2 = property_get(kv, "value");he
+      let value2 = property_get(kv, "value");
+      let component2 = html_element(parent2, tag_name);
       html_cycle_bold(root, value2);
     }
     each(list2, lambda6);
