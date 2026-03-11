@@ -1,1 +1,1 @@
-export function html_cycle_bold() {}
+export function html_cycle_bold(list) {}
