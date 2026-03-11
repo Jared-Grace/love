@@ -13,6 +13,7 @@ export function app_replace_rule_set_scientific_notation_numbers() {
     "ex > i",
   ]);
   let a = {
+    di: ["", "di", "git (positive or 0)"],
     eE: ['lowercase or uppercase letter "', "e", '" for "', "e", 'xponent"'],
     i: ["", "i", "nteger (non-negative whole number)"],
     p: ["", "p", "ositive digit"],
