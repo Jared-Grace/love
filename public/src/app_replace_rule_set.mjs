@@ -111,7 +111,7 @@ export async function app_replace_rule_set(context) {
     function lambda6(kv) {
       let key = property_get(kv, "key");
       let value2 = property_get(kv, "value");
-      html_cycle_bold(root, parts);
+      html_cycle_bold(root, value2);
     }
     each(list2, lambda6);
   }
