@@ -6,10 +6,10 @@ import { noop } from "../../../love/public/src/noop.mjs";
 import { html_bold } from "./html_bold.mjs";
 export function html_cycle_bold(parent, parts) {
   let cycles = [noop, html_bold];
-  let size = list_size(cycles);
   function lambda(part, index) {
+    let size = list_size(cycles);
     let r = mod(index, size);
-    let item = list_get(list, index2);
+    let item = list_get(cycles, r);
   }
   each_index(parts, lambda);
 }
