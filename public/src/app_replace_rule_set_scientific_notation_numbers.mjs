@@ -14,13 +14,13 @@ export function app_replace_rule_set_scientific_notation_numbers() {
     "ex > i",
   ]);
   let a = {
-    eE: html_cycle_bold_curried_right(
+    eE: html_cycle_bold_curried_right([
       'lowercase or uppercase letter "',
       "e",
       '" for "',
       "e",
       'xponent"',
-    ),
+    ]),
     sn: "scientific notation number",
   };
   let r = {
