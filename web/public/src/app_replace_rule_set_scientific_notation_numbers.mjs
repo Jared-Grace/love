@@ -13,7 +13,7 @@ export function app_replace_rule_set_scientific_notation_numbers() {
     "ex > i",
   ]);
   let a = {
-    eE: 'lowercase or uppercase letter "e" for exponent',
+    eE: 'lowercase or uppercase letter "e" for "exponent"',
   };
   let r = {
     name: "Scientific Notation Numbers",
