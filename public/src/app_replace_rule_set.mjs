@@ -114,10 +114,9 @@ export async function app_replace_rule_set(context) {
     function lambda6(kv) {
       let key = property_get(kv, "key");
       let value2 = property_get(kv, "value");
+      let concated = list_concat(["", key, ": "], value2);
       let component2 = html_element(component, "li");
-      let concated = list_concat(a2, b);
-      html_cycle_bold(component2, "", key, ": ");
-      html_cycle_bold(component2, value2);
+      html_cycle_bold(component2, concated);
     }
     each(list2, lambda6);
   }
