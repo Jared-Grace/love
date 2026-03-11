@@ -1,3 +1,4 @@
+import { html_element } from "../../../love/public/src/html_element.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
 import { list_sort_text_property } from "../../../love/public/src/list_sort_text_property.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
@@ -105,6 +106,7 @@ export async function app_replace_rule_set(context) {
   let exists2 = property_exists(rule, "abbreviations");
   if (exists2) {
     html_p_text(root, "Abbreviations");
+    let component = html_element(parent, tag_name);
     let abbreviations = property_get(rule, "abbreviations");
     let list2 = object_to_list(abbreviations);
     list_sort_text_property(list2, "key");
