@@ -21,13 +21,8 @@ export function app_replace_rule_set_scientific_notation_numbers() {
     p: ["", "p", "ositive digit (numbers 1-9)"],
   };
   let a = {
-    de: ["", "de", "cimal number"],
-    di: ["", "di", "git (numbers 0-9)"],
     eE: ['lowercase or uppercase letter "', "e", '" for "', "e", 'xponent"'],
     ex: ["", "ex", "ponent"],
-    g: ["integer ", "g", "rower"],
-    i: ["", "i", "nteger (non-negative whole number)"],
-    p: ["", "p", "ositive digit (numbers 1-9)"],
     se: ["", "s", "cientific notation number ", "e", "nding"],
     sn: ["", "s", "cientific ", "n", "otation number"],
   };
