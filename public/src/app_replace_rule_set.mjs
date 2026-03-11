@@ -1,3 +1,4 @@
+import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
 import { list_sort_text_property } from "../../../love/public/src/list_sort_text_property.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
@@ -109,6 +110,7 @@ export async function app_replace_rule_set(context) {
     function lambda6(kv) {
       let key = property_get(kv, "key");
       let value2 = property_get(kv, "value");
+      html_cycle_bold(parent, parts);
     }
     each(list2, lambda6);
   }
