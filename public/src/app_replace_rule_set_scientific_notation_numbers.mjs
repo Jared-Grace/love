@@ -25,7 +25,7 @@ export function app_replace_rule_set_scientific_notation_numbers() {
   };
   let r = {
     name: "Scientific Notation Numbers",
-    abbreviations: function lambda() {},
+    abbreviations: a,
     rules,
     goals: [
       {
