@@ -1,3 +1,4 @@
+import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
 import { list_sort_text_property } from "../../../love/public/src/list_sort_text_property.mjs";
@@ -114,6 +115,7 @@ export async function app_replace_rule_set(context) {
       let key = property_get(kv, "key");
       let value2 = property_get(kv, "value");
       let component2 = html_element(component, "li");
+      let concated = list_concat(a2, b);
       html_cycle_bold(component2, "", key, ": ");
       html_cycle_bold(component2, value2);
     }
