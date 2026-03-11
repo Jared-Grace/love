@@ -1,3 +1,4 @@
+import { app_replace_rule_set_decimals_abbreivations } from "../../../love/public/src/app_replace_rule_set_decimals_abbreivations.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_replace_rule_set_decimals_rules } from "../../../love/public/src/app_replace_rule_set_decimals_rules.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
@@ -13,13 +14,7 @@ export function app_replace_rule_set_scientific_notation_numbers() {
     "ex > - i",
     "ex > i",
   ]);
-  let ad = {
-    de: ["", "de", "cimal number"],
-    di: ["", "di", "git (numbers 0-9)"],
-    g: ["integer ", "g", "rower"],
-    i: ["", "i", "nteger (non-negative whole number)"],
-    p: ["", "p", "ositive digit (numbers 1-9)"],
-  };
+  let ad = app_replace_rule_set_decimals_abbreivations();
   let a = {
     eE: ['lowercase or uppercase letter "', "e", '" for "', "e", 'xponent"'],
     ex: ["", "ex", "ponent"],
