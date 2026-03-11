@@ -7,7 +7,7 @@ export function html_cycle_bold(parent, parts) {
   let cycles = [noop, html_bold];
   let size = list_size(cycles);
   function lambda(part, index) {
-    let r = mod(n, m);
+    let r = mod(index, size);
   }
   each_index(parts, lambda);
 }
