@@ -104,13 +104,14 @@ export async function app_replace_rule_set(context) {
   html_p_text(root, "Rule set: " + rule_name);
   let exists2 = property_exists(rule, "abbreviations");
   if (exists2) {
+    html_p_text(root, "Abbreviations");
     let abbreviations = property_get(rule, "abbreviations");
     let list2 = object_to_list(abbreviations);
     list_sort_text_property(list2, "key");
     function lambda6(kv) {
       let key = property_get(kv, "key");
       let value2 = property_get(kv, "value");
-      html_cycle_bold(parent, parts);
+      html_cycle_bold(root, parts);
     }
     each(list2, lambda6);
   }
