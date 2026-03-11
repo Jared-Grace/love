@@ -19,7 +19,7 @@ export function app_replace_rule_set_scientific_notation_numbers() {
     ex: ["", "ex", "ponent"],
     g: ["integer ", "g", "rower"],
     i: ["", "i", "nteger (non-negative whole number)"],
-    p: ["", "p", "ositive digit"],
+    p: ["", "p", "ositive digit (numbers 1-9)"],
     se: ["", "s", "cientific notation number ", "e", "nding"],
     sn: ["", "s", "cientific ", "n", "otation number"],
   };
