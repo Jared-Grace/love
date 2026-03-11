@@ -99,7 +99,9 @@ export async function app_replace_rule_set(context) {
   let rule = app_replace_rule_set_get(context);
   let rule_name = property_get(rule, "name");
   html_p_text(root, "Rule set: " + rule_name);
-  let exists2 = property_exists(object, property_name);
+  let exists2 = property_exists(root, "abbreviations");
+  if (false) {
+  }
   let goal_index = storage_local_get_context(context, "goal_index");
   let goals = property_get(rule, "goals");
   let goal = list_get(goals, goal_index);
