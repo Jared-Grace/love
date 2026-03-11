@@ -11,7 +11,8 @@ export function html_cycle_bold(parent, parts) {
     let size = list_size(cycles);
     let r = mod(index, size);
     let item = list_get(cycles, r);
-    let span = html_span_text(parent2, text);
+    let span = html_span_text(parent, part);
+    item(span);
   }
   each_index(parts, lambda);
 }
