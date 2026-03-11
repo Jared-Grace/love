@@ -114,7 +114,8 @@ export async function app_replace_rule_set(context) {
       let key = property_get(kv, "key");
       let value2 = property_get(kv, "value");
       let component2 = html_element(component, "li");
-      html_cycle_bold(root, value2);
+      let span = html_span_text(parent2, text2);
+      html_cycle_bold(component2, value2);
     }
     each(list2, lambda6);
   }
