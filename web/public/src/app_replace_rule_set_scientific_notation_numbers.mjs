@@ -16,7 +16,7 @@ export function app_replace_rule_set_scientific_notation_numbers() {
     di: ["", "de", "cimal number"],
     di: ["", "di", "git (numbers 0-9)"],
     eE: ['lowercase or uppercase letter "', "e", '" for "', "e", 'xponent"'],
-    ex: ["ex", "ponent"],
+    ex: ["", "ex", "ponent"],
     g: ["integer ", "g", "rower"],
     i: ["", "i", "nteger (non-negative whole number)"],
     p: ["", "p", "ositive digit"],
