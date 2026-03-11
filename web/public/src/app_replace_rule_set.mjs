@@ -1,3 +1,4 @@
+import { list_sort_text } from "../../../love/public/src/list_sort_text.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
 import { list_invoke } from "../../../love/public/src/list_invoke.mjs";
@@ -104,6 +105,7 @@ export async function app_replace_rule_set(context) {
   if (exists2) {
     let abbreviations = property_get(rule, "abbreviations");
     let list2 = object_to_list(abbreviations);
+    list_sort_text(list3);
   }
   let goal_index = storage_local_get_context(context, "goal_index");
   let goals = property_get(rule, "goals");
