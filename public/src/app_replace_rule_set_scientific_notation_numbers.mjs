@@ -31,7 +31,7 @@ export function app_replace_rule_set_scientific_notation_numbers() {
     se: ["", "s", "cientific notation number ", "e", "nding"],
     sn: ["", "s", "cientific ", "n", "otation number"],
   };
-  let to2 = object_merge(to, from);
+  object_merge(a, ad);
   let r = {
     name: "Scientific Notation Numbers",
     abbreviations: a,
