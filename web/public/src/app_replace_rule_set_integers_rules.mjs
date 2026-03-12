@@ -4,7 +4,7 @@ export function app_replace_rule_set_integers_rules() {
   const rules = [
     "i > p g",
     "i > di",
-    "g > si" + " g",
+    "g > di" + " g",
     "di > 0",
     "di > p",
     "g > di",
