@@ -1,3 +1,4 @@
+import { git_acp_folder } from "../../../love/public/src/git_acp_folder.mjs";
 import { path_join } from "../../../love/public/src/path_join.mjs";
 import { functions_path } from "../../../love/public/src/functions_path.mjs";
 import { repo_path } from "../../../love/public/src/repo_path.mjs";
@@ -11,6 +12,7 @@ export async function sandbox() {
   let path = functions_path();
   let path2 = path_join([joined, path]);
   await folder_exists_ensure(path2);
+  await git_acp_folder(folder, message);
   await repos_gitignore_overwrite_list([repo_name]);
   let cmds = [
     "git init",
