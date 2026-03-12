@@ -8,6 +8,7 @@ export async function ebible_references_parse_lines(bible_folders, lines) {
     books_get,
     bible_folders,
     lines,
+    ebible_verse,
   );
   return waited;
 }
