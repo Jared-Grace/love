@@ -8,7 +8,9 @@ export async function sandbox() {
   await folder_exists_ensure(joined);
   let cmds = [
     "git init",
-    "gh repo create " + " --public --source=. --remote=origin --push",
+    "gh repo create " +
+      repo_name +
+      " --public --source=. --remote=origin --push",
   ];
   async function lambda(item) {
     let stdout2 = await command_line_folder(cmd, joined);
