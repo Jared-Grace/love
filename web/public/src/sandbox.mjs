@@ -1,3 +1,4 @@
+import { functions_path } from "../../../love/public/src/functions_path.mjs";
 import { repo_path } from "../../../love/public/src/repo_path.mjs";
 import { repos_gitignore_overwrite_list } from "../../../love/public/src/repos_gitignore_overwrite_list.mjs";
 import { command_line_folder_curried_right } from "../../../love/public/src/command_line_folder_curried_right.mjs";
@@ -6,6 +7,7 @@ import { folder_exists_ensure } from "../../../love/public/src/folder_exists_ens
 export async function sandbox() {
   let repo_name = "portfolio_qa";
   let joined = repo_path(repo_name);
+  let path = functions_path();
   await folder_exists_ensure(joined);
   await repos_gitignore_overwrite_list([repo_name]);
   let cmds = [
