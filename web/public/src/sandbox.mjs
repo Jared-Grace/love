@@ -1,3 +1,4 @@
+import { folder_previous_join } from "../../../love/public/src/folder_previous_join.mjs";
 import { app_replace_rule_sets_fns_names } from "../../../love/public/src/app_replace_rule_sets_fns_names.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_set.mjs";
@@ -11,4 +12,5 @@ export async function sandbox() {
   let prefix = function_name_separator_trail(app_replace_rule_set.name);
   let filtered = list_filter_starts_with(difference, prefix);
   return filtered;
+  let joined = folder_previous_join(path);
 }
