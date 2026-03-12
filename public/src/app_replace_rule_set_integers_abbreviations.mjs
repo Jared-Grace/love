@@ -1,4 +1,4 @@
-export function app_replace_rule_set_integers_abbreivations() {
+export function app_replace_rule_set_integers_abbreviations() {
   let r = {
     di: ["", "di", "git (numbers 0-9)"],
     g: ["integer ", "g", "rower"],
