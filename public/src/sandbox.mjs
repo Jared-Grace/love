@@ -1,3 +1,4 @@
+import { command_line_folder_curried_right } from "../../../love/public/src/command_line_folder_curried_right.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { command_line_folder } from "../../../love/public/src/command_line_folder.mjs";
 import { folder_exists_ensure } from "../../../love/public/src/folder_exists_ensure.mjs";
@@ -12,6 +13,7 @@ export async function sandbox() {
       repo_name +
       " --public --source=. --remote=origin --push",
   ];
+  let r2 = await command_line_folder_curried_right(folder);
   async function lambda(cmd) {
     let stdout2 = await command_line_folder(cmd, joined);
   }
