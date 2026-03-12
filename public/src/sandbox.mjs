@@ -9,8 +9,8 @@ export async function sandbox() {
   let repo_name = "portfolio_qa";
   let joined = repo_path(repo_name);
   let path = functions_path();
-  let path2 = path_join(segments);
-  await folder_exists_ensure(joined);
+  let path2 = path_join([joined, path]);
+  await folder_exists_ensure(path2);
   await repos_gitignore_overwrite_list([repo_name]);
   let cmds = [
     "git init",
