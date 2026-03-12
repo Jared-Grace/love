@@ -14,7 +14,7 @@ export async function repo_new(repo_name) {
   let path2 = path_join([joined, path]);
   await folder_exists_ensure(path2);
   await git_acp_folder(joined, "message");
-  let r3 = await git_init_folder(folder2);
+  let r3 = await git_init_folder(joined);
   let r = await command_line_folder("cmd", folder);
   await repos_gitignore_overwrite_list([repo_name]);
   let cmds = [
