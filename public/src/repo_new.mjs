@@ -1,4 +1,4 @@
-import { git_acp_call_folder } from "../../../love/public/src/git_acp_call_folder.mjs";
+import { git_ac_call_folder } from "../../../love/public/src/git_ac_call_folder.mjs";
 import { git_init_folder } from "../../../love/public/src/git_init_folder.mjs";
 import { command_line_folder } from "../../../love/public/src/command_line_folder.mjs";
 import { repos_gitignore_overwrite_list } from "../../../love/public/src/repos_gitignore_overwrite_list.mjs";
@@ -13,7 +13,7 @@ export async function repo_new(repo_name) {
   await folder_exists_ensure(path2);
   let r3 = await git_init_folder(folder);
   await repos_gitignore_overwrite_list([repo_name]);
-  await git_acp_call_folder(repo_new.name, [repo_name], folder);
+  await git_ac_call_folder(repo_new.name, [repo_name], folder);
   let r = await command_line_folder(
     "gh repo create " +
       repo_name +
