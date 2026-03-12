@@ -4,5 +4,4 @@ export async function folder_exists_ensure(dir) {
   await fs.promises.mkdir(dir, {
     recursive: true,
   });
-  return path;
 }
