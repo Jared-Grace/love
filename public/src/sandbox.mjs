@@ -15,6 +15,6 @@ export async function sandbox() {
   ];
   let r2 = await command_line_folder_curried_right(joined);
   await each_async(cmds, r2);
-  await repos_gitignore_overwrite_list(repos);
+  await repos_gitignore_overwrite_list([repo_name]);
   return joined;
 }
