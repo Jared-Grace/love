@@ -9,7 +9,8 @@ export async function sandbox() {
     "git init",
     "gh repo create my-project --public --source=. --remote=origin --push",
   ];
-  await each_async(list, async function lambda(item) {});
+  async function lambda(item) {}
+  await each_async(list, lambda);
   let stdout2 = await command_line_folder(cmd, folder);
   return stdout2;
   let repo_name = "portfolio_qa";
