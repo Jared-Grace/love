@@ -1,3 +1,4 @@
+import { app_replace_rule_set_integers_abbreviations_di } from "../../../love/public/src/app_replace_rule_set_integers_abbreviations_di.mjs";
 import { app_replace_rule_set_integer_digits_abbreviations } from "../../../love/public/src/app_replace_rule_set_integer_digits_abbreviations.mjs";
 import { app_replace_rule_set_add_rights } from "../../../love/public/src/app_replace_rule_set_add_rights.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
@@ -6,6 +7,7 @@ export function app_replace_rule_set_integer_digits() {
   const rules = ["g > di g", "g > di"];
   app_replace_rule_set_add_rights(rules, "di", d);
   let abbreviations = app_replace_rule_set_integer_digits_abbreviations();
+  app_replace_rule_set_integers_abbreviations_di(abbreviations);
   let r = {
     name: "Integer digits",
     abbreviations,
