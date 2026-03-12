@@ -1,9 +1,11 @@
+import { app_replace_rule_set_integer_digits_abbreviations } from "../../../love/public/src/app_replace_rule_set_integer_digits_abbreviations.mjs";
 import { app_replace_rule_set_add_rights } from "../../../love/public/src/app_replace_rule_set_add_rights.mjs";
 import { digits } from "../../../love/public/src/digits.mjs";
 export function app_replace_rule_set_integer_digits() {
   let d = digits();
   const rules = ["g > p g", "g > p"];
   app_replace_rule_set_add_rights(rules, "d", d);
+  let i = app_replace_rule_set_integer_digits_abbreviations();
   let r = {
     name: "Integer digits",
     rules,
