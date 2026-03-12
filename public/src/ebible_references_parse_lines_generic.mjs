@@ -16,6 +16,7 @@ export async function ebible_references_parse_lines_generic(
   books_get,
   bible_folders,
   lines,
+  verse_get,
 ) {
   let bible_folder = ebible_folder_english();
   let books_all = await list_map_unordered_async(bible_folders, books_get);
