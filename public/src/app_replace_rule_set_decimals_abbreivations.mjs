@@ -9,6 +9,6 @@ export function app_replace_rule_set_decimals_abbreivations() {
   let a = {
     de: ["", "de", "cimal number"],
   };
-  let to2 = object_merge(to, from);
-  return a;
+  let ab = object_merge(a, i);
+  return ab;
 }
