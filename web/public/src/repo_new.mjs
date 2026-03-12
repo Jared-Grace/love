@@ -1,3 +1,4 @@
+import { command_line_folder } from "../../../love/public/src/command_line_folder.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { command_line_folder_curried_right } from "../../../love/public/src/command_line_folder_curried_right.mjs";
 import { repos_gitignore_overwrite_list } from "../../../love/public/src/repos_gitignore_overwrite_list.mjs";
@@ -12,6 +13,7 @@ export async function repo_new(repo_name) {
   let path2 = path_join([joined, path]);
   await folder_exists_ensure(path2);
   await git_acp_folder(joined, "message");
+  let r = await command_line_folder(cmd, folder);
   await repos_gitignore_overwrite_list([repo_name]);
   let cmds = [
     "git init",
