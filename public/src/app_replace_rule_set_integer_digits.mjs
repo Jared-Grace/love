@@ -3,8 +3,8 @@ import { app_replace_rule_set_add_rights } from "../../../love/public/src/app_re
 import { digits } from "../../../love/public/src/digits.mjs";
 export function app_replace_rule_set_integer_digits() {
   let d = digits();
-  const rules = ["g > d g", "g > d"];
-  app_replace_rule_set_add_rights(rules, "d", d);
+  const rules = ["g > di g", "g > di"];
+  app_replace_rule_set_add_rights(rules, "di", d);
   let abbreviations = app_replace_rule_set_integer_digits_abbreviations();
   let r = {
     name: "Integer digits",
