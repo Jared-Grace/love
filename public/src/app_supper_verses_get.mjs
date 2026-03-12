@@ -1,3 +1,4 @@
+import { ebible_references_parse_lines_browser } from "../../../love/public/src/ebible_references_parse_lines_browser.mjs";
 import { firebase_storage_url_project_jg } from "../../../love/public/src/firebase_storage_url_project_jg.mjs";
 import { ebible_chapter_codes_browser } from "../../../love/public/src/ebible_chapter_codes_browser.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -5,7 +6,6 @@ import { app_supper_verses_get_upload_destination } from "../../../love/public/s
 import { firebase_storage_download_json_decompress } from "../../../love/public/src/firebase_storage_download_json_decompress.mjs";
 import { global_function_property_initialize_async } from "../../../love/public/src/global_function_property_initialize_async.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
-import { ebible_references_parse_lines } from "../../../love/public/src/ebible_references_parse_lines.mjs";
 import { ebible_folder_english } from "../../../love/public/src/ebible_folder_english.mjs";
 import { text_split_newline } from "../../../love/public/src/text_split_newline.mjs";
 export async function app_supper_verses_get() {
@@ -39,6 +39,6 @@ Acts 20:7
 1 Corinthians 10:16-22
 1 Corinthians 11:17-34`;
   let split = text_split_newline(references);
-  let list = await ebible_references_parse_lines([e], split);
+  let list = await ebible_references_parse_lines_browser([e], split);
   return list;
 }
