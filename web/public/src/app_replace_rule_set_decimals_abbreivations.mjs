@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 export function app_replace_rule_set_decimals_abbreivations() {
   let i = {
     di: ["", "di", "git (numbers 0-9)"],
@@ -8,5 +9,6 @@ export function app_replace_rule_set_decimals_abbreivations() {
   let a = {
     de: ["", "de", "cimal number"],
   };
+  let to2 = object_merge(to, from);
   return a;
 }
