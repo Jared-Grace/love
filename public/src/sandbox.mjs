@@ -5,6 +5,7 @@ import { folder_previous_join } from "../../../love/public/src/folder_previous_j
 export async function sandbox() {
   const folder = "data";
   const cmd = "dir";
+  let cmds = [];
   let stdout2 = await command_line_folder(cmd, folder);
   return stdout2;
   let stdout = await command_line("cd data && dir");
