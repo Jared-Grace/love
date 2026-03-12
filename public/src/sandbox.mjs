@@ -7,6 +7,7 @@ export async function sandbox() {
   let repo_name = "portfolio_qa";
   let joined = folder_previous_join(repo_name);
   await folder_exists_ensure(joined);
+  await repos_gitignore_overwrite_list([repo_name]);
   let cmds = [
     "git init",
     "gh repo create " +
@@ -15,6 +16,5 @@ export async function sandbox() {
   ];
   let r2 = await command_line_folder_curried_right(joined);
   await each_async(cmds, r2);
-  await repos_gitignore_overwrite_list([repo_name]);
   return joined;
 }
