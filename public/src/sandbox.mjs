@@ -12,7 +12,7 @@ export async function sandbox() {
   let path = functions_path();
   let path2 = path_join([joined, path]);
   await folder_exists_ensure(path2);
-  await git_acp_folder(folder, message);
+  await git_acp_folder(joined, "message");
   await repos_gitignore_overwrite_list([repo_name]);
   let cmds = [
     "git init",
