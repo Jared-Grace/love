@@ -3,6 +3,8 @@ import { command_line_folder } from "../../../love/public/src/command_line_folde
 import { folder_exists_ensure } from "../../../love/public/src/folder_exists_ensure.mjs";
 import { folder_previous_join } from "../../../love/public/src/folder_previous_join.mjs";
 export async function sandbox() {
+  let repo_name = "portfolio_qa";
+  let joined = folder_previous_join(repo_name);
   const folder = "data";
   const cmd = "dir";
   let cmds = [
@@ -11,10 +13,8 @@ export async function sandbox() {
   ];
   async function lambda(item) {}
   await each_async(list, lambda);
-  let stdout2 = await command_line_folder(cmd, folder);
+  let stdout2 = await command_line_folder(cmd, joined);
   return stdout2;
-  let repo_name = "portfolio_qa";
-  let joined = folder_previous_join(repo_name);
   let path = await folder_exists_ensure(joined);
   return joined;
 }
