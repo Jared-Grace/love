@@ -6,6 +6,6 @@ export function app_replace_rule_set_integers_abbreviations() {
     di: ["", "di", "git (numbers 0-9)"],
     i: ["", "i", "nteger (non-negative whole number)"],
   };
-  let to2 = object_merge(to, from);
+  let to2 = object_merge(r, i);
   return r;
 }
