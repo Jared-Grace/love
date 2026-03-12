@@ -12,7 +12,7 @@ export async function sandbox() {
       repo_name +
       " --public --source=. --remote=origin --push",
   ];
-  async function lambda(item) {
+  async function lambda(cmd) {
     let stdout2 = await command_line_folder(cmd, joined);
   }
   await each_async(cmds, lambda);
