@@ -9,6 +9,7 @@ export async function ebible_references_parse_lines_browser(
     books_get,
     bible_folders,
     lines,
+    ebible_verse,
   );
   return waited;
 }
