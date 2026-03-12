@@ -4,7 +4,8 @@ import { folder_exists_ensure } from "../../../love/public/src/folder_exists_ens
 import { folder_previous_join } from "../../../love/public/src/folder_previous_join.mjs";
 export async function sandbox() {
   const folder = "data";
-  let stdout2 = await command_line_generic("dir", {
+  const cmd = "dir";
+  let stdout2 = await command_line_generic(cmd, {
     cwd: folder,
   });
   return stdout2;
