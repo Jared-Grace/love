@@ -5,16 +5,16 @@ import { folder_previous_join } from "../../../love/public/src/folder_previous_j
 export async function sandbox() {
   let repo_name = "portfolio_qa";
   let joined = folder_previous_join(repo_name);
+  let path = await folder_exists_ensure(joined);
   const folder = "data";
   const cmd = "dir";
   let cmds = [
     "git init",
     "gh repo create my-project --public --source=. --remote=origin --push",
   ];
-  async function lambda(item) {}
+  async function lambda(item) {
+    let stdout2 = await command_line_folder(cmd, joined);
+  }
   await each_async(list, lambda);
-  let stdout2 = await command_line_folder(cmd, joined);
-  return stdout2;
-  let path = await folder_exists_ensure(joined);
   return joined;
 }
