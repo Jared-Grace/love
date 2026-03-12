@@ -5,8 +5,8 @@ export function app_replace_rule_set_decimals() {
   let abbreviations = app_replace_rule_set_decimals_abbreivations();
   let r = {
     name: "Decimals",
-    rules,
     abbreviations,
+    rules,
     goals: [
       {
         start: "de",
