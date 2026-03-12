@@ -13,7 +13,6 @@ import { date_now } from "../../../love/public/src/date_now.mjs";
 import { catch_log_async } from "../../../love/public/src/catch_log_async.mjs";
 import { git_push_text } from "../../../love/public/src/git_push_text.mjs";
 export async function git_push_folder(folder) {
-  const command_git = git_push_text();
   await catch_log_async(lambda);
   async function lambda() {
     const now = date_now();
@@ -27,6 +26,7 @@ export async function git_push_folder(folder) {
     if (mins < 5) {
       return;
     }
+    const command_git = git_push_text();
     await command_line_git_folder(folder, command_git);
     let lambda$previous = lambda_get(now_iso);
     await data_set(lambda$previous, property_name, joined);
