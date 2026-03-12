@@ -6,15 +6,13 @@ export async function sandbox() {
   let repo_name = "portfolio_qa";
   let joined = folder_previous_join(repo_name);
   await folder_exists_ensure(joined);
-  const folder = "data";
-  const cmd = "dir";
   let cmds = [
     "git init",
-    "gh repo create my-project --public --source=. --remote=origin --push",
+    "gh repo create " + " --public --source=. --remote=origin --push",
   ];
   async function lambda(item) {
     let stdout2 = await command_line_folder(cmd, joined);
   }
-  await each_async(list, lambda);
+  await each_async(cmds, lambda);
   return joined;
 }
