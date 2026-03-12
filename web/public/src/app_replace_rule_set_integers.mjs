@@ -1,7 +1,7 @@
 import { app_replace_rule_set_integers_abbreviations } from "../../../love/public/src/app_replace_rule_set_integers_abbreviations.mjs";
 import { app_replace_rule_set_integers_rules } from "../../../love/public/src/app_replace_rule_set_integers_rules.mjs";
 export function app_replace_rule_set_integers() {
-  const rules = app_replace_rule_set_integers_rules("d");
+  const rules = app_replace_rule_set_integers_rules();
   let abbreviations = app_replace_rule_set_integers_abbreviations();
   let r = {
     name: "Integers",
