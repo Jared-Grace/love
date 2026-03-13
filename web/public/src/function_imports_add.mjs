@@ -1,3 +1,4 @@
+import { function_name_to_path_import_code_curried_right } from "../../../karate_code/public/src/function_name_to_path_import_code_curried_right.mjs";
 import { function_name_to_path_import_code } from "../../../karate_code/public/src/function_name_to_path_import_code.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -19,4 +20,5 @@ export async function function_imports_add(ast, imports) {
   }
   await each_async(mapped, lambda);
   return;
+  let r = function_name_to_path_import_code_curried_right(dictionary2);
 }
