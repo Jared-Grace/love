@@ -28,11 +28,14 @@ export async function app_reply_verses_add(
       list_add(bible_texts, reference);
       reference_current = reference;
     }
-    log({
-      v,
-      reference,
-      languages_chosen,
-    });
+    log(
+      {
+        v,
+        reference,
+        languages_chosen,
+      },
+      "TODO",
+    );
     let text = property_get(v, "text");
     list_add(bible_texts, text);
   }
