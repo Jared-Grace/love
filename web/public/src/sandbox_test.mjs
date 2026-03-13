@@ -8,7 +8,8 @@ export async function sandbox_test() {
     headless: false,
   });
   const page = await browser.newPage();
-  await page.goto("https://www.saucedemo.com/");
+  const url = "https://www.saucedemo.com/";
+  await page.goto(url);
   const title = await page.title();
   ("this assert is a smoke test");
   equal_assert(title, "Swag Labs");
