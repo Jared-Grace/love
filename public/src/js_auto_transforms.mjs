@@ -37,8 +37,8 @@ export function js_auto_transforms() {
     js_assign_combine,
     js_assert_arguments_args,
     js_destructure_functionize,
+    js_log_f_name_add,
   ];
   return transforms;
   return;
-  js_log_f_name_add(ast);
 }
