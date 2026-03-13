@@ -22,6 +22,7 @@ export async function html_update_dev(name) {
   let path = await function_name_repo_path_combine(a_name, file_path);
   const name_prefixed = app_shared_name_main(name);
   let call = js_code_call_app_context_initialize(name_prefixed);
+  let imports = [];
   let r = await function_name_to_path_import_code_multiple();
   let code = r(name_prefixed);
   let code2 = r(app_context_initialize.name);
