@@ -4,10 +4,8 @@ import { list_filter_ends_with } from "../../../love/public/src/list_filter_ends
 import { folder_public } from "../../../love/public/src/folder_public.mjs";
 import { folder_read_files } from "../../../love/public/src/folder_read_files.mjs";
 export async function apps_paths() {
-  let result = await repos_paths_map_unordered_combine(
-    path,
-    async function lambda(path2) {},
-  );
+  async function lambda(path2) {}
+  let result = await repos_paths_map_unordered_combine(path, lambda);
   let fop = folder_public();
   let files = await folder_read_files(fop);
   let sufix = html_extension();
