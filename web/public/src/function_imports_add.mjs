@@ -13,6 +13,7 @@ export async function function_imports_add(ast, imports) {
     text_is_assert(import_);
     const from = function_name_to_path_import(import_, dictionary);
     let code = js_code_import_single(import_, from);
+    return code;
   }
   let mapped = list_map(imports, lambda2);
   let body = property_get(ast, "body");
