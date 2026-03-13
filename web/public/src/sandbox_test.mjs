@@ -1,3 +1,4 @@
+import { playwright_test_url } from "../../../karate_code/public/src/playwright_test_url.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { playwright_by_attribute } from "../../../love/public/src/playwright_by_attribute.mjs";
 import { playwright_by_attribute_type } from "../../../love/public/src/playwright_by_attribute_type.mjs";
@@ -5,13 +6,7 @@ import { sleep } from "../../../love/public/src/sleep.mjs";
 import { chromium } from "playwright";
 export async function sandbox_test() {
   const url = "https://www.saucedemo.com/";
-  const browser = await chromium.launch({
-    headless: false,
-  });
-  const page = await browser.newPage();
-  await page.goto(url);
-  await lambda(page);
-  await browser.close();
+  await playwright_test_url(url, lambda);
   async function lambda(page) {
     const title = await page.title();
     ("this assert is a smoke test");
