@@ -14,9 +14,12 @@ export async function retry(count, lambda) {
         success = true;
         return success;
       } catch (e) {
-        log_keep({
-          e,
-        });
+        log_keep(
+          {
+            e,
+          },
+          "TODO",
+        );
         la(e);
         await sleep(wait);
         wait *= 2;
