@@ -10,9 +10,9 @@ export async function sandbox_test() {
   });
   const page = await browser.newPage();
   await page.goto(url);
-  await lambda();
+  await lambda(page);
   await browser.close();
-  async function lambda() {
+  async function lambda(page) {
     const title = await page.title();
     ("this assert is a smoke test");
     equal_assert(title, "Swag Labs");
