@@ -53,7 +53,7 @@ export async function webpack_build_generic(
       command_text_after,
     ]);
     let command = await command_line_text_env_vars(env_vars, combined2);
-    log("TODO", {
+    log(webpack_build_generic.name, {
       command,
     });
     let stdout = await command_line(command);
