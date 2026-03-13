@@ -13,7 +13,7 @@ import { js_parse } from "../../../love/public/src/js_parse.mjs";
 import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
 export async function function_new_declaration_from(declaration) {
   let f_name = js_function_declaration_name(declaration);
-  log("TODO", {
+  log(function_new_declaration_from.name, {
     f_name,
   });
   await function_unalias_exists_not_assert(f_name);

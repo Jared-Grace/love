@@ -37,7 +37,7 @@ export async function webpack_config() {
       }),
     ],
   };
-  log("TODO", {
+  log(webpack_config.name, {
     r,
   });
   return r;

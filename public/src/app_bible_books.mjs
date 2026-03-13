@@ -26,7 +26,7 @@ export async function app_bible_books(context) {
     let component = html_button(root, text, lambda3);
   }
   each(books, lambda);
-  log("TODO", {
+  log(app_bible_books.name, {
     books,
   });
 }

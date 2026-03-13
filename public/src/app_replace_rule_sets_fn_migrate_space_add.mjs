@@ -4,7 +4,7 @@ import { js_list_type_nodes } from "../../../love/public/src/js_list_type_nodes.
 import { log } from "../../../love/public/src/log.mjs";
 export async function app_replace_rule_sets_fn_migrate_space_add(name) {
   async function lambda3(ast) {
-    log("TODO", {
+    log(app_replace_rule_sets_fn_migrate_space_add.name, {
       name,
     });
     const type = "ObjectExpression";
