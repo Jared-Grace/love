@@ -9,7 +9,7 @@ export async function ebible_text_to_speech_book(bible_folder, book_code) {
     book_code,
   );
   async function lambda2(chapter_code) {
-    log("TODO", {
+    log(ebible_text_to_speech_book.name, {
       chapter_code,
     });
     let verses = await ebible_verses(bible_folder, chapter_code);

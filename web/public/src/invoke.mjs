@@ -1,7 +1,7 @@
 import { log } from "../../../love/public/src/log.mjs";
 export function invoke(lambda) {
   let r = lambda();
-  log("TODO", {
+  log(invoke.name, {
     lambda,
   });
   return r;
