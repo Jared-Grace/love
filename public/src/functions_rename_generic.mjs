@@ -26,9 +26,12 @@ export async function functions_rename_generic(filter, name_change) {
     text_is_assert(f_name_after);
     property_exists_not_assert(identifiers, f_name_after);
   }
-  log({
-    different,
-  });
+  log(
+    {
+      different,
+    },
+    "TODO",
+  );
   function lambda4(value, property) {
     lambda2(value);
   }
