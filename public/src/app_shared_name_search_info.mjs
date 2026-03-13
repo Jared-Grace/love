@@ -1,3 +1,4 @@
+import { html_name_to_path_dev } from "../../../love/public/src/html_name_to_path_dev.mjs";
 import { repo_path_combine } from "../../../love/public/src/repo_path_combine.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { function_name_to_path_search } from "../../../love/public/src/function_name_to_path_search.mjs";
@@ -18,6 +19,7 @@ export async function app_shared_name_search_info(search) {
   let repo_name = property_get(r, "repo_name");
   let f_path_relative = html_name_to_path(a_name);
   let f_path = repo_path_combine(repo_name, f_path_relative);
+  let file_path = html_name_to_path_dev(name2);
   let f_path_latest_relative = html_name_to_path_latest(a_name);
   let f_path_latest = repo_path_combine(repo_name, f_path_latest_relative);
   let src_path_latest_relative = html_name_to_path_latest_generic(
