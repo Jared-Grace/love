@@ -1,3 +1,4 @@
+import { js_log_f_name_add } from "../../../karate_code/public/src/js_log_f_name_add.mjs";
 import { js_destructure_functionize } from "../../../love/public/src/js_destructure_functionize.mjs";
 import { js_assert_arguments_args } from "../../../love/public/src/js_assert_arguments_args.mjs";
 import { js_assign_combine } from "../../../love/public/src/js_assign_combine.mjs";
@@ -39,4 +40,5 @@ export function js_auto_transforms() {
   ];
   return transforms;
   return;
+  js_log_f_name_add(ast);
 }
