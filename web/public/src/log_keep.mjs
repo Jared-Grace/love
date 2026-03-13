@@ -1,5 +1,4 @@
-import { each } from "../../../love/public/src/each.mjs";
-import { log } from "../../../love/public/src/log.mjs";
+import { log_inner } from "../../../karate_code/public/src/log_inner.mjs";
 export function log_keep(f_name, message) {
-  each([f_name, message], console.log);
+  log_inner(f_name, message);
 }
