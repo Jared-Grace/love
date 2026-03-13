@@ -4,9 +4,12 @@ import { js_list_type_nodes } from "../../../love/public/src/js_list_type_nodes.
 import { log } from "../../../love/public/src/log.mjs";
 export async function app_replace_rule_sets_fn_migrate_space_add(name) {
   async function lambda3(ast) {
-    log({
-      name,
-    });
+    log(
+      {
+        name,
+      },
+      "TODO",
+    );
     const type = "ObjectExpression";
     let list = js_list_type_nodes(ast, type);
     app_replace_rule_sets_fn_migrate_goals_space_add_elements(list);
