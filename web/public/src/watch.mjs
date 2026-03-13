@@ -1,5 +1,5 @@
 import { identity } from "../../../love/public/src/identity.mjs";
-import { repos_paths_map_unordered_combine_squash } from "../../../love/public/src/repos_paths_map_unordered_combine_squash.mjs";
+import { repos_paths_map_unordered_combine_squash_functions } from "../../../karate_code/public/src/repos_paths_map_unordered_combine_squash_functions.mjs";
 import { command_line_node_g } from "../../../love/public/src/command_line_node_g.mjs";
 import { property_exists_equals } from "../../../love/public/src/property_exists_equals.mjs";
 import { catch_log_async } from "../../../love/public/src/catch_log_async.mjs";
@@ -9,7 +9,8 @@ import { data_file_update } from "../../../love/public/src/data_file_update.mjs"
 import { property_set } from "../../../love/public/src/property_set.mjs";
 export async function watch() {
   const chokidar = (await import_install("chokidar")).default;
-  let squashed = await repos_paths_map_unordered_combine_squash(identity);
+  let squashed =
+    await repos_paths_map_unordered_combine_squash_functions(identity);
   const watcher = chokidar.watch(squashed, {
     persistent: true,
     ignoreInitial: true,
