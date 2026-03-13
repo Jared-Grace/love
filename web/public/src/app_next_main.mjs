@@ -1,3 +1,4 @@
+import { ebible_verse_browser } from "../../../love/public/src/ebible_verse_browser.mjs";
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
 import { ebible_language_to_bible_folder } from "../../../love/public/src/ebible_language_to_bible_folder.mjs";
 import { app_next_hash_to_languages_chosen } from "../../../love/public/src/app_next_hash_to_languages_chosen.mjs";
@@ -13,7 +14,6 @@ import { ebible_parts_chapter_code_to_reference } from "../../../love/public/src
 import { list_join_newline_2_copy } from "../../../love/public/src/list_join_newline_2_copy.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
-import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function app_next_main(context) {
   let hash = html_hash_object_get();
@@ -22,7 +22,11 @@ export async function app_next_main(context) {
   let languages_chosen = app_next_hash_to_languages_chosen(hash);
   async function lambda2(language) {
     let bible_folder = ebible_language_to_bible_folder(language);
-    let d = await ebible_verse(bible_folder, chapter_code, verse_number);
+    let d = await ebible_verse_browser(
+      bible_folder,
+      chapter_code,
+      verse_number,
+    );
     let text = property_get(d, "text");
     return text;
   }
