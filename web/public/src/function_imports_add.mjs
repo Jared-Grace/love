@@ -19,5 +19,6 @@ export async function function_imports_add(ast, imports) {
   }
   await each_async(imports, lambda);
   return;
-  let mapped = list_map(list, function lambda2(item) {});
+  function lambda2(item) {}
+  let mapped = list_map(list, lambda2);
 }
