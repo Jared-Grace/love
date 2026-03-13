@@ -27,7 +27,7 @@ export async function ebible_chapters_each_verses_list(
     if (bible_folder === "engojb" && chapter_code === "MAL04") {
       return;
     }
-    log_keep("TODO", {
+    log_keep(ebible_chapters_each_verses_list.name, {
       bible_folder,
       chapter_code,
     });

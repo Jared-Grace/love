@@ -266,7 +266,7 @@ export function app_a_function_node(a) {
   }
   let n = property_exists_not(lookup, type);
   if (n) {
-    log_keep("TODO", {
+    log_keep(app_a_function_node.name, {
       node,
     });
     let json = json_to({

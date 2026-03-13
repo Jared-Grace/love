@@ -3,6 +3,6 @@ export function catch_log(lambda) {
   try {
     lambda();
   } catch (e) {
-    log_keep("TODO", e);
+    log_keep(catch_log.name, e);
   }
 }

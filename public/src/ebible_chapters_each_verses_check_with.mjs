@@ -5,7 +5,7 @@ export async function ebible_chapters_each_verses_check_with(
   bible_folder,
   lambda$chapter_code$verses,
 ) {
-  log_keep("TODO", {
+  log_keep(ebible_chapters_each_verses_check_with.name, {
     bible_folder,
   });
   await ebible_chapters_each_verses_check(bible_folder);

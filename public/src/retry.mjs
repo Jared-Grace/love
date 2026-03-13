@@ -14,7 +14,7 @@ export async function retry(count, lambda) {
         success = true;
         return success;
       } catch (e) {
-        log_keep("TODO", {
+        log_keep(retry.name, {
           e,
         });
         la(e);

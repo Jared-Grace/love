@@ -5,7 +5,7 @@ export async function firebase_delete(destination) {
   let file = null;
   ({ file, destination } = await firebase_bucket_file_get(destination));
   await retry_standard(lambda);
-  log_keep("TODO", `Deleted data at ${destination}`);
+  log_keep(firebase_delete.name, `Deleted data at ${destination}`);
   async function lambda() {
     await file.delete();
   }
