@@ -155,7 +155,7 @@ export async function g_sermon_generate_book_generic_prompts(
       g_sermon_generate +
         "sermons were originally generated using: " +
         openai_chat_completions;
-      log_keep(prompt_system + " " + prompt_user, "TODO");
+      log_keep("TODO", prompt_system + " " + prompt_user);
       let r2 = {
         prompt_system,
         prompt_user,
