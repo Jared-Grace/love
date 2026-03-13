@@ -6,6 +6,6 @@ export async function catch_log_async(lambda) {
     await lambda();
   } catch (e) {
     let message = message_get(e);
-    log_keep("TODO", message);
+    log_keep(catch_log_async.name, message);
   }
 }
