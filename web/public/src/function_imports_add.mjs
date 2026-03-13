@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { functions_names_to_paths } from "../../../love/public/src/functions_names_to_paths.mjs";
@@ -18,4 +19,5 @@ export async function function_imports_add(ast, imports) {
   }
   await each_async(imports, lambda);
   return;
+  let mapped = list_map(list, function lambda2(item) {});
 }
