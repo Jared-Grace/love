@@ -3,7 +3,6 @@ import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { playwright_by_attribute } from "../../../love/public/src/playwright_by_attribute.mjs";
 import { playwright_by_attribute_type } from "../../../love/public/src/playwright_by_attribute_type.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
-import { chromium } from "playwright";
 export async function sandbox_test() {
   const url = "https://www.saucedemo.com/";
   await playwright_test_url(url, lambda);
