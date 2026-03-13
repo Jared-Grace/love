@@ -18,8 +18,13 @@ export async function app_shared_name_search_info(search) {
   let repo_name = property_get(r, "repo_name");
   let f_path_relative = html_name_to_path(a_name);
   let f_path = repo_path_combine(repo_name, f_path_relative);
-  let f_path_latest = html_name_to_path_latest(a_name);
-  let src_path_latest = html_name_to_path_latest_generic(a_name, file_name_js);
+  let f_path_latest_relative = html_name_to_path_latest(a_name);
+  let f_path_latest = repo_path_combine(repo_name, f_path_latest_relative);
+  let src_path_latest_relative = html_name_to_path_latest_generic(
+    a_name,
+    file_name_js,
+  );
+  let src_path_latest = repo_path_combine(repo_name, src_path_latest_relative);
   let file_name = file_name_js(a_name);
   let src_path = folder_public_join(file_name);
   log_keep({
