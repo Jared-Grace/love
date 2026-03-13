@@ -177,12 +177,9 @@ export function app_a_identifier_generic(
     }
     async function lambda6() {
       let e1 = list_get_end_1(stack);
-      log(
-        {
-          e1,
-        },
-        "TODO",
-      );
+      log("TODO", {
+        e1,
+      });
       function lambda7() {
         const c = {
           shortcut: "g",
@@ -198,12 +195,9 @@ export function app_a_identifier_generic(
               return_name = js_identifier_unique_ast(ast, property_name);
             }
             let assign = js_declare(return_name, e1);
-            log(
-              {
-                assign,
-              },
-              "TODO",
-            );
+            log("TODO", {
+              assign,
+            });
             object_replace(e2, assign);
             await app_a_function_on_change(a, o3);
           },
