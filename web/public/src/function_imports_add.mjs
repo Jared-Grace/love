@@ -1,18 +1,14 @@
+import { function_name_to_path_import_code } from "../../../karate_code/public/src/function_name_to_path_import_code.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { text_is_assert } from "../../../love/public/src/text_is_assert.mjs";
 import { functions_names_to_paths } from "../../../love/public/src/functions_names_to_paths.mjs";
-import { function_name_to_path_import } from "../../../love/public/src/function_name_to_path_import.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
-import { js_code_import_single } from "../../../love/public/src/js_code_import_single.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { js_parse_statement_module } from "../../../love/public/src/js_parse_statement_module.mjs";
 export async function function_imports_add(ast, imports) {
   let dictionary = await functions_names_to_paths();
   function lambda2(import_) {
-    text_is_assert(import_);
-    const from = function_name_to_path_import(import_, dictionary);
-    let code = js_code_import_single(import_, from);
+    let code = function_name_to_path_import_code(import_, dictionary);
     return code;
   }
   let mapped = list_map(imports, lambda2);
