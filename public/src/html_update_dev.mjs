@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { function_name_to_path_import_code_multiple } from "../../../karate_code/public/src/function_name_to_path_import_code_multiple.mjs";
 import { app_shared_name_search_info } from "../../../love/public/src/app_shared_name_search_info.mjs";
 import { js_code_call_app_context_initialize } from "../../../love/public/src/js_code_call_app_context_initialize.mjs";
@@ -24,6 +25,7 @@ export async function html_update_dev(name) {
   let r = await function_name_to_path_import_code_multiple();
   let code = r(name_prefixed);
   let code2 = r(app_context_initialize.name);
+  let mapped = list_map(list, function lambda(item) {});
   let middle = list_join_newline([code, code2, call]);
   let body = html_code_script_module(middle);
   var v = await html_update_externals(name_prefixed);
