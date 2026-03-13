@@ -28,7 +28,7 @@ export async function autopray() {
       verse_reference,
       v3,
     ]);
-    log_keep(p, "TODO");
+    log_keep("TODO", p);
   }
   while (true) {
     each(verses, lambda2);
