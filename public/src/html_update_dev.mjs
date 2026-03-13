@@ -1,6 +1,5 @@
+import { function_name_to_path_import_code_multiple_map } from "../../../karate_code/public/src/function_name_to_path_import_code_multiple_map.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
-import { function_name_to_path_import_code_multiple } from "../../../karate_code/public/src/function_name_to_path_import_code_multiple.mjs";
 import { app_shared_name_search_info } from "../../../love/public/src/app_shared_name_search_info.mjs";
 import { js_code_call_app_context_initialize } from "../../../love/public/src/js_code_call_app_context_initialize.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
@@ -24,8 +23,7 @@ export async function html_update_dev(name) {
   const name_prefixed = app_shared_name_main(name);
   let call = js_code_call_app_context_initialize(name_prefixed);
   let imports = [name_prefixed, app_context_initialize.name];
-  let r = await function_name_to_path_import_code_multiple();
-  let mapped = list_map(imports, r);
+  let mapped = await function_name_to_path_import_code_multiple_map(imports);
   list_add(mapped, call);
   let middle = list_join_newline(mapped);
   let body = html_code_script_module(middle);
