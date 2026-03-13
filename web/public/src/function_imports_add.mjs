@@ -17,13 +17,10 @@ export async function function_imports_add(ast, imports) {
   }
   let mapped = list_map(imports, lambda2);
   let body = property_get(ast, "body");
-  async function lambda(import_) {
-    text_is_assert(import_);
-    const from = function_name_to_path_import(import_, dictionary);
-    let code = js_code_import_single(import_, from);
+  async function lambda(code) {
     let statement = js_parse_statement_module(code);
     list_add_first(body, statement);
   }
-  await each_async(imports, lambda);
+  await each_async(mapped, lambda);
   return;
 }
