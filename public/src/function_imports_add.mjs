@@ -9,7 +9,7 @@ import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { js_parse_statement_module } from "../../../love/public/src/js_parse_statement_module.mjs";
 export async function function_imports_add(ast, imports) {
   let dictionary = await functions_names_to_paths();
-  function lambda2(item) {
+  function lambda2(import_) {
     text_is_assert(import_);
     const from = function_name_to_path_import(import_, dictionary);
     let code = js_code_import_single(import_, from);
