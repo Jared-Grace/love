@@ -2,7 +2,7 @@ import { log } from "../../../love/public/src/log.mjs";
 import { property_equals } from "../../../love/public/src/property_equals.mjs";
 import { property_exists_not } from "../../../love/public/src/property_exists_not.mjs";
 export function property_equals_try(object, property_name, property_value) {
-  log("TODO", {
+  log(property_equals_try.name, {
     object,
     property_name,
     property_value,
@@ -12,7 +12,7 @@ export function property_equals_try(object, property_name, property_value) {
     return false;
   }
   let eq = property_equals(object, property_name, property_value);
-  log("TODO", {
+  log(property_equals_try.name, {
     eq,
     property_name,
     property_value,

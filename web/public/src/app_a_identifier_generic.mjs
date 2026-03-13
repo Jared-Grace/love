@@ -177,7 +177,7 @@ export function app_a_identifier_generic(
     }
     async function lambda6() {
       let e1 = list_get_end_1(stack);
-      log("TODO", {
+      log(app_a_identifier_generic.name, {
         e1,
       });
       function lambda7() {
@@ -195,7 +195,7 @@ export function app_a_identifier_generic(
               return_name = js_identifier_unique_ast(ast, property_name);
             }
             let assign = js_declare(return_name, e1);
-            log("TODO", {
+            log(app_a_identifier_generic.name, {
               assign,
             });
             object_replace(e2, assign);

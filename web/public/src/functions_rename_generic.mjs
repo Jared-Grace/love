@@ -26,7 +26,7 @@ export async function functions_rename_generic(filter, name_change) {
     text_is_assert(f_name_after);
     property_exists_not_assert(identifiers, f_name_after);
   }
-  log("TODO", {
+  log(functions_rename_generic.name, {
     different,
   });
   function lambda4(value, property) {

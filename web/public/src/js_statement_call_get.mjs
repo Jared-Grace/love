@@ -8,7 +8,7 @@ export function js_statement_call_get(node) {
   let call = null;
   let declaration = null;
   let assignment = null;
-  log("TODO", {
+  log(js_statement_call_get.name, {
     node,
   });
   if (js_node_type_is(node, "ExpressionStatement")) {
