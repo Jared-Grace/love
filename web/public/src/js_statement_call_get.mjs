@@ -8,12 +8,9 @@ export function js_statement_call_get(node) {
   let call = null;
   let declaration = null;
   let assignment = null;
-  log(
-    {
-      node,
-    },
-    "TODO",
-  );
+  log("TODO", {
+    node,
+  });
   if (js_node_type_is(node, "ExpressionStatement")) {
     let expression_next = property_get(node, "expression");
     call = expression_next;
