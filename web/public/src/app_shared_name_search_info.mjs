@@ -26,7 +26,8 @@ export async function app_shared_name_search_info(search) {
   );
   let src_path_latest = repo_path_combine(repo_name, src_path_latest_relative);
   let file_name = file_name_js(a_name);
-  let src_path = folder_public_join(file_name);
+  let src_path_relative = folder_public_join(file_name);
+  let src_path = repo_path_combine(repo_name, src_path_relative);
   log_keep({
     search,
     a_name,
