@@ -1,6 +1,6 @@
 import { reduce } from "../../../love/public/src/reduce.mjs";
 import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
-import { repos_paths_map_unordered_combine_squash } from "../../../love/public/src/repos_paths_map_unordered_combine_squash.mjs";
+import { repos_paths_map_unordered_combine_squash_functions } from "../../../karate_code/public/src/repos_paths_map_unordered_combine_squash_functions.mjs";
 import { functions_names_from_path } from "../../../love/public/src/functions_names_from_path.mjs";
 import { function_name_folder_to_path } from "../../../love/public/src/function_name_folder_to_path.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
@@ -14,7 +14,8 @@ export async function functions_names_to_paths() {
     let dictionary = list_to_dictionary_value(f_names, lambda);
     return dictionary;
   }
-  let squashed = await repos_paths_map_unordered_combine_squash(mapper);
+  let squashed =
+    await repos_paths_map_unordered_combine_squash_functions(mapper);
   let dictionary = reduce({}, squashed, object_merge);
   return dictionary;
 }
