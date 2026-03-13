@@ -47,7 +47,7 @@ export function server() {
   server_data_endpoints(app);
   app.use(v);
   function lambda() {
-    log_keep("Static server running at: " + server_url());
+    log_keep("Static server running at: " + server_url(), "TODO");
   }
   app.listen(port, lambda);
 }
