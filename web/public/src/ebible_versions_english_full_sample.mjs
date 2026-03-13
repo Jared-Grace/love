@@ -5,7 +5,7 @@ import { object_values_map_async } from "../../../love/public/src/object_values_
 export async function ebible_versions_english_full_sample() {
   let result3 = await ebible_versions_english_choices();
   async function lambda(value, key) {
-    log(key, "TODO");
+    log("TODO", key);
     let result2 = await ebible_verse(key, "GEN01", "1");
     return result2;
   }

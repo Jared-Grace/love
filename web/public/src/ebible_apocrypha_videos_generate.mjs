@@ -10,12 +10,9 @@ export async function ebible_apocrypha_videos_generate() {
   let books = await ebible_version_books_testament_apocrypha(bible_folder);
   async function lambda(item) {
     let book_code = property_get(item, "book_code");
-    log(
-      {
-        book_code,
-      },
-      "TODO",
-    );
+    log("TODO", {
+      book_code,
+    });
     let v = await ebible_book_video_generate(bible_folder, book_code);
     return v;
   }
