@@ -27,7 +27,7 @@ export async function html_update_dev(name) {
   let r = await function_name_to_path_import_code_multiple();
   let mapped = list_map(imports, r);
   list_add(mapped, call);
-  let middle = list_join_newline([code, code2, call]);
+  let middle = list_join_newline(mapped);
   let body = html_code_script_module(middle);
   var v = await html_update_externals(name_prefixed);
   let scripts = property_get(v, "scripts");
