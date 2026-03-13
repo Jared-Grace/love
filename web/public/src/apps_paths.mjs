@@ -9,8 +9,7 @@ export async function apps_paths() {
     fop,
     folder_read_files,
   );
-  let files = await folder_read_files(fop);
   let sufix = html_extension();
-  let aps = list_filter_ends_with(files, sufix);
+  let aps = list_filter_ends_with(result, sufix);
   return aps;
 }
