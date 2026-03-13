@@ -10,7 +10,7 @@ import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { app_shared_name_main } from "../../../love/public/src/app_shared_name_main.mjs";
 export async function app_shared_name_search_info(search) {
   let a_name = await app_shared_name_search(search);
-  let search2 = await function_name_to_path_search(f_name2);
+  let search2 = await function_name_to_path_search(a_name);
   let f_name = app_shared_name_main(a_name);
   let app_name = app_shared_name_prefixed(a_name);
   let f_path = html_name_to_path(a_name);
@@ -30,6 +30,7 @@ export async function app_shared_name_search_info(search) {
     app_name,
     src_path_latest,
     src_path,
+    search2,
   };
   return info;
 }
