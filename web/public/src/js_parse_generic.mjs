@@ -7,7 +7,7 @@ export function js_parse_generic(acorn, code) {
       sourceType: "module",
     });
   } catch (e) {
-    log_keep(code, "TODO");
+    log_keep("TODO", code);
     throw e;
   }
   return ast;
