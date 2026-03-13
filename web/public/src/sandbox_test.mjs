@@ -4,11 +4,11 @@ import { playwright_by_attribute_type } from "../../../love/public/src/playwrigh
 import { sleep } from "../../../love/public/src/sleep.mjs";
 import { chromium } from "playwright";
 export async function sandbox_test() {
+  const url = "https://www.saucedemo.com/";
   const browser = await chromium.launch({
     headless: false,
   });
   const page = await browser.newPage();
-  const url = "https://www.saucedemo.com/";
   await page.goto(url);
   const title = await page.title();
   ("this assert is a smoke test");
