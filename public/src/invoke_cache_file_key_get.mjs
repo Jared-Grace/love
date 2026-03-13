@@ -13,7 +13,7 @@ export function invoke_cache_file_key_get(fn, args) {
     if (tl) {
       json = await text_to_uuid_cache(json);
     }
-    log("TODO", {
+    log(invoke_cache_file_key_get.name, {
       json,
       tl,
     });
