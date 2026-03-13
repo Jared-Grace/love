@@ -3,7 +3,7 @@ import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
 export async function vite_run() {
   const command = await vite_run_command();
-  log_keep("TODO", command);
+  log_keep(vite_run.name, command);
   let stdout = await command_line(command);
   return stdout;
 }

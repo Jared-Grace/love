@@ -16,7 +16,7 @@ export async function file_open(f_path) {
     } else {
       output = await file_read(f_path);
     }
-    log_keep("TODO", output);
+    log_keep(file_open.name, output);
   } else {
     await file_open_editor(f_path);
   }

@@ -8,5 +8,5 @@ export async function command_line_node_g(f_name, args) {
     "node scripts/g.mjs " + f_name + " " + result,
   );
   let stdout = property_get(output, "stdout");
-  log_keep("TODO", stdout);
+  log_keep(command_line_node_g.name, stdout);
 }
