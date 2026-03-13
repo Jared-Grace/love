@@ -11,12 +11,9 @@ import { js_list_type_nodes } from "../../../love/public/src/js_list_type_nodes.
 import { log } from "../../../love/public/src/log.mjs";
 export async function app_replace_rule_sets_fn_migrate_goals_space_add(name) {
   async function lambda3(ast) {
-    log(
-      {
-        name,
-      },
-      "TODO",
-    );
+    log("TODO", {
+      name,
+    });
     const type = "ObjectExpression";
     let list = js_list_type_nodes(ast, type);
     let search = "goals";
@@ -26,12 +23,9 @@ export async function app_replace_rule_sets_fn_migrate_goals_space_add(name) {
     let filtered = list_filter_null_not_is(mapped2);
     let e = list_empty_is(filtered);
     if (e) {
-      log(
-        {
-          name,
-        },
-        "TODO",
-      );
+      log("TODO", {
+        name,
+      });
     } else {
       let only = list_single(filtered);
       let value = js_property_value_get(only);
