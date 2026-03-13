@@ -5,13 +5,10 @@ export async function firebase_upload_text_generic(
   destination,
   content_type,
 ) {
-  log(
-    {
-      msg: "uploading to firebase",
-      destination,
-    },
-    "TODO",
-  );
+  log("TODO", {
+    msg: "uploading to firebase",
+    destination,
+  });
   let buffer = Buffer.from(content);
   const settings = {
     contentType: content_type,

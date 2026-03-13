@@ -9,12 +9,9 @@ export async function ebible_text_to_speech_book(bible_folder, book_code) {
     book_code,
   );
   async function lambda2(chapter_code) {
-    log(
-      {
-        chapter_code,
-      },
-      "TODO",
-    );
+    log("TODO", {
+      chapter_code,
+    });
     let verses = await ebible_verses(bible_folder, chapter_code);
     await ebible_text_to_speech_chapter_generic(
       bible_folder,
