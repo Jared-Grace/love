@@ -2,7 +2,6 @@ import { function_name_to_path_import_code_multiple } from "../../../karate_code
 import { app_shared_name_search_info } from "../../../love/public/src/app_shared_name_search_info.mjs";
 import { js_code_call_app_context_initialize } from "../../../love/public/src/js_code_call_app_context_initialize.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
-import { function_code_import_dev } from "../../../love/public/src/function_code_import_dev.mjs";
 import { app_context_initialize } from "../../../love/public/src/app_context_initialize.mjs";
 import { list_add_join_newline } from "../../../love/public/src/list_add_join_newline.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -22,8 +21,8 @@ export async function html_update_dev(name) {
   let path = await function_name_repo_path_combine(a_name, file_path);
   const name_prefixed = app_shared_name_main(name);
   let call = js_code_call_app_context_initialize(name_prefixed);
-  let code = function_code_import_dev(name_prefixed);
   let r = await function_name_to_path_import_code_multiple();
+  let code = r(name_prefixed);
   let code2 = r(app_context_initialize.name);
   let middle = list_join_newline([code, code2, call]);
   let body = html_code_script_module(middle);
