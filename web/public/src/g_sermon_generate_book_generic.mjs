@@ -36,7 +36,7 @@ export async function g_sermon_generate_book_generic(
         [g_sermon_generate_book_generic_property()]: output,
       };
       object_merge(passage, passage_extension);
-      log_keep("TODO", output);
+      log_keep(g_sermon_generate_book_generic.name, output);
     }
     await each_async(passages_with_prompts, lambda3);
     let passages = list_map_property(passages_with_prompts, "passage");
@@ -45,7 +45,7 @@ export async function g_sermon_generate_book_generic(
       chapter_code,
       passages,
     });
-    log_keep("TODO", {
+    log_keep(g_sermon_generate_book_generic.name, {
       file_overwrite_json,
       path,
     });
