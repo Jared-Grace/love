@@ -6,7 +6,7 @@ export async function function_run_log(f_name, args) {
   let v = await function_name_unalias(f_name);
   let unaliased = property_get(v, "unaliased");
   let result = await function_run_unalias_log_before(unaliased, args);
-  log_keep("🔥");
-  log_keep(result);
+  log_keep("🔥", "TODO");
+  log_keep(result, "TODO");
   return result;
 }
