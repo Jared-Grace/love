@@ -10,22 +10,25 @@ export async function sandbox_test() {
   });
   const page = await browser.newPage();
   await page.goto(url);
-  const title = await page.title();
-  ("this assert is a smoke test");
-  equal_assert(title, "Swag Labs");
-  await playwright_by_attribute_type(
-    page,
-    "data-test",
-    "username",
-    "standard_user",
-  );
-  await playwright_by_attribute_type(
-    page,
-    "data-test",
-    "password",
-    "secret_sauce",
-  );
-  await playwright_by_attribute(page, "data-test", "login-button").click();
-  await sleep(10000);
+  await lambda();
   await browser.close();
+  async function lambda() {
+    const title = await page.title();
+    ("this assert is a smoke test");
+    equal_assert(title, "Swag Labs");
+    await playwright_by_attribute_type(
+      page,
+      "data-test",
+      "username",
+      "standard_user",
+    );
+    await playwright_by_attribute_type(
+      page,
+      "data-test",
+      "password",
+      "secret_sauce",
+    );
+    await playwright_by_attribute(page, "data-test", "login-button").click();
+    await sleep(10000);
+  }
 }
