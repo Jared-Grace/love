@@ -29,7 +29,7 @@ export function app_chapter_toggle_update(
   component_highlighted,
 ) {
   async function choose() {
-    log("message", "TODO");
+    log("TODO", "message");
     toggle();
     invoke_multiple(updates);
     await copy();
@@ -66,12 +66,9 @@ export function app_chapter_toggle_update(
   async function copy() {
     list_sort_number_mapper(verse_numbers_chosen, integer_to_try);
     function lambda3(bv) {
-      log(
-        {
-          languages_verses,
-        },
-        "TODO",
-      );
+      log("TODO", {
+        languages_verses,
+      });
       let m = list_multiple_is(verse_numbers_chosen);
       let verse_numbers_chosen_normalized = null;
       if (m) {
