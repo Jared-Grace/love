@@ -22,7 +22,7 @@ export async function ebible_verses_upload_compare(bible_folder) {
       let text = property_change(b, "text", lambda);
       let n = json_equal_not(a, b);
       if (n) {
-        log("TODO", {
+        log(ebible_verses_upload_compare.name, {
           chapter_code,
           a,
           b,

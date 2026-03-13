@@ -8,7 +8,7 @@ export async function html_update_latest_webpack_generic(search, path) {
   let f_path_latest = property_get(r, path);
   let a_name = property_get(r, "a_name");
   let c = html_code_script_src_js(a_name);
-  log("TODO", {
+  log(html_update_latest_webpack_generic.name, {
     f_path_latest,
   });
   await html_overwrite(a_name, f_path_latest, c);

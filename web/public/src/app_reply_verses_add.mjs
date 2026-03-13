@@ -28,7 +28,7 @@ export async function app_reply_verses_add(
       list_add(bible_texts, reference);
       reference_current = reference;
     }
-    log("TODO", {
+    log(app_reply_verses_add.name, {
       v,
       reference,
       languages_chosen,

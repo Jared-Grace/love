@@ -43,5 +43,5 @@ export async function js_auto(ast) {
   }
   await lambda();
   return;
-  log("TODO", r);
+  log(js_auto.name, r);
 }

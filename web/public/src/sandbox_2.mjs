@@ -8,7 +8,7 @@ export async function sandbox_2() {
   async function lambda(l) {
     let bible_folder = property_get(l, "bible_folder");
     let r = await ebible_languages_add_item_info(bible_folder);
-    log("TODO", {
+    log(sandbox_2.name, {
       r,
     });
   }

@@ -114,7 +114,7 @@ export async function app_gloss_bible_home_generic(
   async function scroll(verses) {
     let f = list_first(verses);
     let p = property_get(f, "p_verse");
-    log("TODO", {
+    log(app_gloss_bible_home_generic.name, {
       p,
       verses,
     });

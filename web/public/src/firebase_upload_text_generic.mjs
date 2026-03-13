@@ -5,7 +5,7 @@ export async function firebase_upload_text_generic(
   destination,
   content_type,
 ) {
-  log("TODO", {
+  log(firebase_upload_text_generic.name, {
     msg: "uploading to firebase",
     destination,
   });

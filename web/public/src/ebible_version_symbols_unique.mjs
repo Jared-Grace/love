@@ -7,7 +7,7 @@ export async function ebible_version_symbols_unique(bible_folder) {
   let unique = await text_symbols_unique_adder(lambda$la);
   async function lambda$la(la) {
     async function lambda2(chapter_code, verses) {
-      log("TODO", {
+      log(ebible_version_symbols_unique.name, {
         bible_folder,
         chapter_code,
       });
