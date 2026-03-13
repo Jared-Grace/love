@@ -27,13 +27,10 @@ export async function ebible_chapters_each_verses_list(
     if (bible_folder === "engojb" && chapter_code === "MAL04") {
       return;
     }
-    log_keep(
-      {
-        bible_folder,
-        chapter_code,
-      },
-      "TODO",
-    );
+    log_keep("TODO", {
+      bible_folder,
+      chapter_code,
+    });
     let any = list_any_starts_with(chapter_code, mapped);
     let ebible_verses_get = null;
     ebible_verses_get = ternary(any, ebible_verses, ebible_verses_readaloud);
