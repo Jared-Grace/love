@@ -34,7 +34,6 @@ export async function app_shared_name_search_info(search) {
     app_name,
     src_path_latest,
     src_path,
-    search2,
   };
   return info;
 }
