@@ -22,9 +22,12 @@ export function js_dollar_n({
   let test = property_get(n, "test");
   function lambda2() {
     let name = js_call_callee_name(test);
-    log({
-      name,
-    });
+    log(
+      {
+        name,
+      },
+      "TODO",
+    );
     if (equal(name, not.name)) {
       let arguments2 = property_get(test, "arguments");
       let only = list_single(arguments2);
