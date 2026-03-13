@@ -25,8 +25,7 @@ export async function html_update_dev(name) {
   let r = await function_name_to_path_import_code_multiple();
   let code = r(name_prefixed);
   let code2 = r(app_context_initialize.name);
-  function lambda(item) {}
-  let mapped = list_map(list, lambda);
+  let mapped = list_map(list, r);
   let middle = list_join_newline([code, code2, call]);
   let body = html_code_script_module(middle);
   var v = await html_update_externals(name_prefixed);
