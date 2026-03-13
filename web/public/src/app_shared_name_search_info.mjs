@@ -19,7 +19,7 @@ export async function app_shared_name_search_info(search) {
   let repo_name = property_get(r, "repo_name");
   let f_path_relative = html_name_to_path(a_name);
   let f_path = repo_path_combine(repo_name, f_path_relative);
-  let file_path = html_name_to_path_dev(name2);
+  let f_path_dev = html_name_to_path_dev(a_name);
   let f_path_latest_relative = html_name_to_path_latest(a_name);
   let f_path_latest = repo_path_combine(repo_name, f_path_latest_relative);
   let src_path_latest_relative = html_name_to_path_latest_generic(
