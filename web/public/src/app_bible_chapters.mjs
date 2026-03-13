@@ -42,10 +42,7 @@ export async function app_bible_chapters(context) {
     let component = html_button(div, chapter_name, lambda3);
   }
   each(chapter_codes, lambda);
-  log(
-    {
-      mapped2: chapter_numbers,
-    },
-    "TODO",
-  );
+  log("TODO", {
+    mapped2: chapter_numbers,
+  });
 }
