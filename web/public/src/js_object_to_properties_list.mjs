@@ -12,7 +12,7 @@ export function js_object_to_properties_list(ast) {
     let expression = js_expression_array(mapped);
     object_replace(node, expression);
     let b = 1;
-    log([mapped, b]);
+    log([mapped, b], "TODO");
   }
   js_visit_type(ast, "ObjectExpression", lambda);
 }
