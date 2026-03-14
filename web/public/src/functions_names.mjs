@@ -8,6 +8,6 @@ export async function functions_names() {
   );
   return f_names;
   (async function lambda(repo_path) {
-    let paths = await folder_read_files(path);
+    let paths = await folder_read_files(repo_path);
   });
 }
