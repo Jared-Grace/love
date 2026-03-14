@@ -6,10 +6,11 @@ export function equal_assert(left, right) {
   assert(eq);
   return;
   function lambda2() {
-    return {
+    let r = {
       left,
       right,
     };
+    return r;
   }
   assert_json_get(eq, lambda2);
 }
