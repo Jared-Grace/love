@@ -1,4 +1,4 @@
-import { invoke_multiple_unordered_async } from "../../../karate_code/public/src/invoke_multiple_unordered_async.mjs";
+import { invoke_multiple_unordered_async } from "../../../love/public/src/invoke_multiple_unordered_async.mjs";
 import { html_textarea } from "../../../love/public/src/html_textarea.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";

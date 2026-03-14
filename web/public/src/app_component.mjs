@@ -1,7 +1,7 @@
 import { html_bar_content_padded } from "../../../love/public/src/html_bar_content_padded.mjs";
 import { html_margin_0 } from "../../../love/public/src/html_margin_0.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
-import { js_code_global_init } from "../../../karate_code/public/src/js_code_global_init.mjs";
+import { js_code_global_init } from "../../../love/public/src/js_code_global_init.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { app_context_initialize_root } from "../../../love/public/src/app_context_initialize_root.mjs";
