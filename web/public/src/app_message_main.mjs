@@ -1,4 +1,4 @@
-import { invoke_unordered_async } from "../../../karate_code/public/src/invoke_unordered_async.mjs";
+import { invoke_multiple_unordered_async } from "../../../karate_code/public/src/invoke_multiple_unordered_async.mjs";
 import { html_textarea } from "../../../love/public/src/html_textarea.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { html_value_set } from "../../../love/public/src/html_value_set.mjs";
@@ -94,7 +94,7 @@ export async function app_message_main(context) {
       return next;
     }
     let nexts = list_map(messages, lambda2);
-    await invoke_unordered_async(nexts);
+    await invoke_multiple_unordered_async(nexts);
   }
   function message_display(direction, message) {
     let div_message = app_karate_container(div_messages);
