@@ -7,7 +7,7 @@ export async function functions_search_generic(search, fn) {
   let r = await functions_names_paths();
   let r2 = property_get_curried(r);
   let properties = properties_get(r);
-  log(functions_search_generic.name, message);
+  log(functions_search_generic.name, properties);
   let result2 = search_generic(search, properties, r2, fn);
   return result2;
   ("$L$properties");
