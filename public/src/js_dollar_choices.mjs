@@ -4,7 +4,7 @@ import { js_dollar_n } from "../../../love/public/src/js_dollar_n.mjs";
 import { js_dollar_inn } from "../../../love/public/src/js_dollar_inn.mjs";
 import { js_dollar_iel } from "../../../love/public/src/js_dollar_iel.mjs";
 import { js_dollar_e } from "../../../love/public/src/js_dollar_e.mjs";
-import { js_dollar_in } from "../../../karate_code/public/src/js_dollar_in.mjs";
+import { js_dollar_in } from "../../../love/public/src/js_dollar_in.mjs";
 import { js_dollar_aa } from "../../../love/public/src/js_dollar_aa.mjs";
 import { js_dollar_ine } from "../../../love/public/src/js_dollar_ine.mjs";
 import { js_dollar_ib } from "../../../love/public/src/js_dollar_ib.mjs";

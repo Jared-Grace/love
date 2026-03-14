@@ -1,4 +1,4 @@
-import { function_name_to_path_import_code_multiple_map } from "../../../karate_code/public/src/function_name_to_path_import_code_multiple_map.mjs";
+import { function_name_to_path_import_code_multiple_map } from "../../../love/public/src/function_name_to_path_import_code_multiple_map.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_shared_name_search_info } from "../../../love/public/src/app_shared_name_search_info.mjs";
 import { js_code_call_app_context_initialize } from "../../../love/public/src/js_code_call_app_context_initialize.mjs";
