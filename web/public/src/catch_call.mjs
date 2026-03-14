@@ -1,10 +1,10 @@
-export function catch_call(reject, lambda) {
+export function catch_call(lambda$e, lambda) {
   let i = function inner() {
     let result = null;
     try {
       result = lambda(...arguments);
     } catch (e) {
-      reject(e);
+      lambda$e(e);
     }
     return result;
   };
