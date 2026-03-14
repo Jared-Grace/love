@@ -10,7 +10,6 @@ export async function functions_names_from_path(path) {
     let without = text_suffix_without(p, suffix);
     return without;
   }
-  let f_names = list_map(paths, lambda);
+  let f_names = list_map(paths, function_path_to_name);
   return f_names;
-  let f_name = function_path_to_name(f_path);
 }
