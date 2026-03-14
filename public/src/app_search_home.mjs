@@ -9,7 +9,7 @@ import { html_value_get } from "../../../love/public/src/html_value_get.mjs";
 import { html_button_wide } from "../../../love/public/src/html_button_wide.mjs";
 import { html_focus } from "../../../love/public/src/html_focus.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
-import { html_input_text } from "../../../karate_code/public/src/html_input_text.mjs";
+import { html_input_text } from "../../../love/public/src/html_input_text.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { app_reply_buttons_languages } from "../../../love/public/src/app_reply_buttons_languages.mjs";
 import { app_reply_languages_prompt } from "../../../love/public/src/app_reply_languages_prompt.mjs";
