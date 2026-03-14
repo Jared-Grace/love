@@ -1,4 +1,6 @@
+import { word_plural } from "../../../karate_code/public/src/word_plural.mjs";
 export function g_themes_plural_list(root) {
-  let v = [root, root + "s"];
+  let r = word_plural(root);
+  let v = [root, r];
   return v;
 }
