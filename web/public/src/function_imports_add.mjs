@@ -1,4 +1,4 @@
-import { function_name_to_path_import_code_multiple_map } from "../../../karate_code/public/src/function_name_to_path_import_code_multiple_map.mjs";
+import { function_name_to_path_import_code_multiple_map } from "../../../love/public/src/function_name_to_path_import_code_multiple_map.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";

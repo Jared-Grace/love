@@ -3,7 +3,7 @@ import { global_name } from "../../../love/public/src/global_name.mjs";
 import { js_code_export_wrapped } from "../../../love/public/src/js_code_export_wrapped.mjs";
 import { mod } from "../../../love/public/src/mod.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { js_code_global_init } from "../../../karate_code/public/src/js_code_global_init.mjs";
+import { js_code_global_init } from "../../../love/public/src/js_code_global_init.mjs";
 import { function_dependencies_code } from "../../../love/public/src/function_dependencies_code.mjs";
 export async function function_dependencies_code_export(f_name) {
   let global_init = js_code_global_init();

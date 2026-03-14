@@ -1,4 +1,4 @@
-import { js_expression_fn_name } from "../../../karate_code/public/src/js_expression_fn_name.mjs";
+import { js_expression_fn_name } from "../../../love/public/src/js_expression_fn_name.mjs";
 import { js_declare } from "../../../love/public/src/js_declare.mjs";
 export function app_new_assign(combined) {
   const v = "f_name";

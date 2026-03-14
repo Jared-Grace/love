@@ -5,7 +5,7 @@ import { html_element } from "../../../love/public/src/html_element.mjs";
 import { html_document_body } from "../../../love/public/src/html_document_body.mjs";
 import { browser_is } from "../../../love/public/src/browser_is.mjs";
 import { list_join_newline } from "../../../love/public/src/list_join_newline.mjs";
-import { js_code_global_init } from "../../../karate_code/public/src/js_code_global_init.mjs";
+import { js_code_global_init } from "../../../love/public/src/js_code_global_init.mjs";
 import { firebase_storage_download_property } from "../../../love/public/src/firebase_storage_download_property.mjs";
 export async function firebase_storage_function_run_generic(
   version_get,
