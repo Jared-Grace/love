@@ -1,7 +1,7 @@
 import { storage_local_keys_context_empty_is_assert } from "../../../love/public/src/storage_local_keys_context_empty_is_assert.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { storage_local_remove } from "../../../love/public/src/storage_local_remove.mjs";
-import { storage_local_keys_values } from "../../../karate_code/public/src/storage_local_keys_values.mjs";
+import { storage_local_keys_values } from "../../../love/public/src/storage_local_keys_values.mjs";
 import { storage_local_keys_context } from "../../../love/public/src/storage_local_keys_context.mjs";
 export function storage_local_remove_app(context) {
   let { app_fn: af } = context;
