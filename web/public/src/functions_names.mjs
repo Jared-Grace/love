@@ -1,3 +1,4 @@
+import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
 import { folder_read_async } from "../../../love/public/src/folder_read_async.mjs";
 import { repo_path } from "../../../love/public/src/repo_path.mjs";
 import { repos_paths_map_unordered_combine_squash_functions } from "../../../karate_code/public/src/repos_paths_map_unordered_combine_squash_functions.mjs";
@@ -9,5 +10,7 @@ export async function functions_names() {
   return f_names;
   (async function lambda(repo_path) {
     let paths = await folder_read_async(repo_path);
+    function lambda2(item2v) {}
+    let dictionary = list_to_dictionary_value(list, lambda2);
   });
 }
