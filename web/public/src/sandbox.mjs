@@ -3,5 +3,5 @@ import { identity } from "./identity.mjs";
 export async function sandbox() {
   let f_names =
     await repos_paths_map_unordered_combine_squash_functions(identity);
-  return f_names;
+  return f_names;$L$f_names
 }
