@@ -5,5 +5,5 @@ export async function functions_names() {
     functions_names_from_path,
   );
   return f_names;
-  () => {};
+  (function lambda() {});
 }
