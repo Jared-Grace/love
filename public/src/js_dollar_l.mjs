@@ -18,7 +18,7 @@ export function js_dollar_l({
   let result = list_join_comma(remaining);
   let n = js_null();
   let v = js_code_wrap_braces(result);
-  let code = js_code_call_args(log.name, [v]);
+  let code = js_code_call_args(log.name, [n, v]);
   let parsed = js_parse_expression(code);
   let code2 = js_unparse(node);
   object_replace(node, parsed);
