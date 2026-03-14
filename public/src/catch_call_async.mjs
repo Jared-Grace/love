@@ -3,9 +3,6 @@ export function catch_call_async(lambda$e, lambda) {
   let i = async function inner() {
     let result = null;
     try {
-      log(catch_call_async.name, {
-        a: "a",
-      });
       result = await lambda(...arguments);
     } catch (e) {
       log(catch_call_async.name, {
