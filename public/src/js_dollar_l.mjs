@@ -1,4 +1,4 @@
-import { js_null } from "../../../love/public/src/js_null.mjs";
+import { js_keyword_null } from "../../../love/public/src/js_keyword_null.mjs";
 import { js_code_wrap_braces } from "../../../love/public/src/js_code_wrap_braces.mjs";
 import { list_join_comma } from "../../../love/public/src/list_join_comma.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
@@ -16,7 +16,7 @@ export function js_dollar_l({
   afters,
 }) {
   let result = list_join_comma(remaining);
-  let n = js_null();
+  let n = js_keyword_null();
   let v = js_code_wrap_braces(result);
   let code = js_code_call_args(log.name, [n, v]);
   let parsed = js_parse_expression(code);
