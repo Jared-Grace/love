@@ -7,5 +7,6 @@ export async function functions_search_generic(search, fn) {
   let r2 = property_get_curried(r);
   let properties = properties_get(r);
   let result2 = search_generic(search, properties, r2, fn);
-  return result2;$L$properties
+  return result2;
+  ("$L$properties");
 }
