@@ -11,6 +11,7 @@ export async function functions_names() {
   return f_names;
   (async function lambda(repo_path) {
     let paths = await folder_read_async(repo_path);
-    let dictionary = list_to_dictionary_key(list, function_path_to_name);
+    let dictionary = list_to_dictionary_key(paths, function_path_to_name);
+    return dictionary;
   });
 }
