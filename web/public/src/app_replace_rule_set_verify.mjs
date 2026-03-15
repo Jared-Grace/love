@@ -10,9 +10,9 @@ export function app_replace_rule_set_verify() {
   let rules = property_get(rs, "rules");
   let goals = property_get(rs, "goals");
   let g = list_first(goals);
-  let r4 = app_replace_start_end_get(goal);
-  let start = property_get(g, "start");
-  let end = property_get(g, "end");
+  let se = app_replace_start_end_get(g);
+  let start = property_get(se, "start");
+  let end = property_get(se, "end");
   function lambda(rules) {
     function lambda2(item2) {}
     each(list2, lambda2);
