@@ -4,5 +4,5 @@ export async function app_replace_rule_set_add(name) {
   let prefix = "app_replace_rule_set_";
   let combined = text_combine(prefix, name);
   async function lambda(ast) {}
-  let output = await function_new_transform(f_name, lambda);
+  let output = await function_new_transform(combined, lambda);
 }
