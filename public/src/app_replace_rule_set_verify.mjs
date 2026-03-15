@@ -29,5 +29,5 @@ export function app_replace_rule_set_verify() {
     }
   }
   let neighbors = list_adder(lambda);
-  let r2 = graph_search_depth_first(start2, neighbors_get, max_depth, target);
+  let r2 = graph_search_depth_first(start, neighbors_get, max_depth, target);
 }
