@@ -17,11 +17,15 @@ export function app_replace_rule_set_verify() {
   let r = list_size_range(start);
   function lambda(rule) {
     function lambda2(index) {
-      let eq = app_replace_rule_valid(rule, index, start);
+      let eq = lambda3(rule, index);
     }
     each(r, lambda2);
   }
   each(rules, lambda);
   let eq = app_replace_rule_valid(rule, index, start);
   let start3 = app_replace_rule_apply(rule, index, start);
+  function lambda3(rule, index) {
+    let eq2 = app_replace_rule_valid(rule, index, start);
+    return eq2;
+  }
 }
