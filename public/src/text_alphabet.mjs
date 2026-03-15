@@ -1,1 +1,3 @@
-export function text_alphabet() {}
+export function text_alphabet() {
+  return "abcdefghijklmnopqrstuvwxyz";
+}
