@@ -1,7 +1,7 @@
 export function app_new_rule_set_new_2() {
   let r = {
     name: "Identifier",
-    rules: ["id > b"],
+    rules: ["id > a"],
     goals: [
       {
         start: "a",
