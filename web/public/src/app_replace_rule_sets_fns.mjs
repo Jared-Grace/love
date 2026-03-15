@@ -1,4 +1,4 @@
-import { app_new_rule_set_new_2 } from "../../../love/public/src/app_new_rule_set_new_2.mjs";
+import { app_replace_rule_set_identifiers_simple } from "../../../love/public/src/app_replace_rule_set_identifiers_simple.mjs";
 import { app_replace_rule_set_scientific_notation_numbers } from "../../../love/public/src/app_replace_rule_set_scientific_notation_numbers.mjs";
 import { app_replace_rule_set_decimals } from "../../../love/public/src/app_replace_rule_set_decimals.mjs";
 import { app_replace_rule_set_integers } from "../../../love/public/src/app_replace_rule_set_integers.mjs";
@@ -97,7 +97,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_integers,
     app_replace_rule_set_decimals,
     app_replace_rule_set_scientific_notation_numbers,
-    app_new_rule_set_new_2,
+    app_replace_rule_set_identifiers_simple,
   ];
   return r2;
 }
