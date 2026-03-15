@@ -13,11 +13,11 @@ export function app_replace_rule_set_verify() {
   let se = app_replace_start_end_get(g);
   let start = property_get(se, "start");
   let end = property_get(se, "end");
-  function lambda(rules) {
+  function lambda(rule) {
     function lambda2(item2) {}
     each(list2, lambda2);
   }
-  each(list, lambda);
+  each(rules, lambda);
   let eq = app_replace_rule_valid(rule, index, start);
   let start3 = app_replace_rule_apply(rule, index, start);
 }
