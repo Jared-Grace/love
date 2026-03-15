@@ -10,5 +10,5 @@ export async function app_replace_rule_set_add(name) {
   async function lambda(ast) {
     let elements = js_array_expression_single_elements(ast);
   }
-  let output = await function_transform(f_name, lambda);
+  let output = await function_transform(combined, lambda);
 }
