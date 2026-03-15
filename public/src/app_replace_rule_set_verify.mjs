@@ -1,5 +1,4 @@
-import { list_size } from "../../../love/public/src/list_size.mjs";
-import { range } from "../../../love/public/src/range.mjs";
+import { list_size_range } from "../../../love/public/src/list_size_range.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -15,8 +14,7 @@ export function app_replace_rule_set_verify() {
   let se = app_replace_start_end_get(g);
   let start = property_get(se, "start");
   let end = property_get(se, "end");
-  let size = list_size(start);
-  let r = range(size);
+  list_size_range(start);
   function lambda(rule) {
     function lambda2(item2) {}
     each(list2, lambda2);
