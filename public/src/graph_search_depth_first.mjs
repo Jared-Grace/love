@@ -1,12 +1,12 @@
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { add } from "../../../love/public/src/add.mjs";
-export function graph_search_depth_first({
+export function graph_search_depth_first(
   start,
   neighbors_get,
-  max_depth = Infinity,
+  max_depth,
   target,
-}) {
+) {
   const visited = new Set();
   const queue = [];
   queue.push({
