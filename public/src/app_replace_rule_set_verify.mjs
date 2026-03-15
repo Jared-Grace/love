@@ -16,18 +16,21 @@ export function app_replace_rule_set_verify() {
   let se = app_replace_start_end_get(g);
   let end = property_get(se, "end");
   let start = property_get(se, "start");
-  let r = list_size_range(start);
-  function lambda(la) {
-    each_nested_distinct(lambda3, r, rules);
-    function lambda3(rule, index) {
-      let eq = app_replace_rule_valid(rule, index, start);
-      if (eq) {
-        let start_next = app_replace_rule_apply(rule, index, start);
-        la(start_next);
-      }
-      return eq;
-    }
-  }
-  let neighbors = list_adder(lambda);
+  neighbors_get();
   let r2 = graph_search_depth_first(start, neighbors_get, max_depth, target);
+  function neighbors_get(start) {
+    let r = list_size_range(start);
+    function lambda(la) {
+      each_nested_distinct(lambda3, r, rules);
+      function lambda3(rule, index) {
+        let eq = app_replace_rule_valid(rule, index, start);
+        if (eq) {
+          let start_next = app_replace_rule_apply(rule, index, start);
+          la(start_next);
+        }
+        return eq;
+      }
+    }
+    let neighbors = list_adder(lambda);
+  }
 }
