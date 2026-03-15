@@ -4,6 +4,7 @@ export function app_replace_rule_set_identifiers_simple() {
     rules: [
       "id > idf",
       "id > idf idg",
+      "idg > idp",
       "idg > idp idg",
       "idf > A",
       "idf > B",
