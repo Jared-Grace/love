@@ -23,6 +23,10 @@ export function app_new_rule_set_new_2() {
     goals: [
       {
         start: "id",
+        end: "_",
+      },
+      {
+        start: "id",
         end: "t3",
       },
       {
