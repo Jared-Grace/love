@@ -1,5 +1,4 @@
 export function playwright_by_attribute(page, name, value) {
-  const inside = name + '="' + value;
-  let r = page.locator("[" + inside + '"]');
+  let r = page.locator("[" + name + '="' + value + '"' + "]");
   return r;
 }
