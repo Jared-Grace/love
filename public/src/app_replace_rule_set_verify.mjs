@@ -7,5 +7,5 @@ export function app_replace_rule_set_verify() {
   let rules = property_get(rs, "rules");
   let goals = property_get(rs, "goals");
   let eq = app_replace_rule_valid(rules, index, start);
-  let start3 = app_replace_rule_apply(rule2, start2, index2);
+  let start3 = app_replace_rule_apply(rule2, start, index);
 }
