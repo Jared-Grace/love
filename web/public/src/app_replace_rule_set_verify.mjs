@@ -9,5 +9,5 @@ export function app_replace_rule_set_verify() {
   let goals = property_get(rs, "goals");
   let first = list_first(goals);
   let eq = app_replace_rule_valid(rule, index, start);
-  let start3 = app_replace_rule_apply(rule, start, index);
+  let start3 = app_replace_rule_apply(rule, index, start);
 }
