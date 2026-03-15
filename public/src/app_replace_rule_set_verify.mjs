@@ -1,3 +1,4 @@
+import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { app_replace_rule_apply } from "../../../love/public/src/app_replace_rule_apply.mjs";
@@ -9,6 +10,7 @@ export function app_replace_rule_set_verify() {
   let rules = property_get(rs, "rules");
   let goals = property_get(rs, "goals");
   let g = list_first(goals);
+  let r4 = app_replace_start_end_get(goal);
   let start = property_get(g, "start");
   let end = property_get(g, "end");
   function lambda(rules) {
