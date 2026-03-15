@@ -1,3 +1,4 @@
+import { portfolio_qa_attribute_test_data } from "../../../portfolio_qa/public/src/portfolio_qa_attribute_test_data.mjs";
 import { app_karate_main_title } from "../../../karate_code/public/src/app_karate_main_title.mjs";
 import { server_url } from "../../../love/public/src/server_url.mjs";
 import { text_prefix_without } from "../../../love/public/src/text_prefix_without.mjs";
@@ -26,22 +27,11 @@ export async function karate_tests() {
     await sleep(10000);
     return;
     ("this assert is a smoke test");
-    await playwright_by_attribute_type(
-      page,
-      portfolio_qa_attribute_test_data(),
-      "username",
-      "standard_user",
-    );
-    await playwright_by_attribute_type(
-      page,
-      portfolio_qa_attribute_test_data(),
-      "password",
-      "secret_sauce",
-    );
-    await playwright_by_attribute(
-      page,
-      portfolio_qa_attribute_test_data(),
-      "login-button",
-    ).click();
+    let name = portfolio_qa_attribute_test_data();
+    await playwright_by_attribute_type(page, name, "username", "standard_user");
+    let name2 = portfolio_qa_attribute_test_data();
+    await playwright_by_attribute_type(page, name2, "password", "secret_sauce");
+    let name3 = portfolio_qa_attribute_test_data();
+    await playwright_by_attribute(page, name3, "login-button").click();
   }
 }
