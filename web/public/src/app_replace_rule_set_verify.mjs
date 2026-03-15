@@ -8,7 +8,7 @@ export function app_replace_rule_set_verify() {
   let rules = property_get(rs, "rules");
   let goals = property_get(rs, "goals");
   let g = list_first(goals);
-  let start2 = property_get(g, "start");
+  let start = property_get(g, "start");
   let end = property_get(g, "end");
   let eq = app_replace_rule_valid(rule, index, start);
   let start3 = app_replace_rule_apply(rule, index, start);
