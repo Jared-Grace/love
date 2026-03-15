@@ -1,4 +1,4 @@
-import { app_replace_rules_parse } from "../../../love/public/src/app_replace_rules_parse.mjs";
+import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
 import { app_replace_rule_apply } from "../../../love/public/src/app_replace_rule_apply.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
@@ -127,8 +127,7 @@ export async function app_replace_rule_set(context) {
   let end = property_get(r4, "end");
   let index_selected = null;
   let label_rules = html_p(root);
-  let rules = property_get(rs, "rules");
-  let rules_parsed = app_replace_rules_parse(rules);
+  let rules_parsed = app_replace_rule_set_rules_get(rs);
   let symbols_invalid_chosen = {};
   let div_rules_buttons = html_div(root);
   let label_symbols = html_p(root);
