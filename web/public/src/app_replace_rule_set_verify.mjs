@@ -16,14 +16,15 @@ export function app_replace_rule_set_verify() {
   let start = property_get(se, "start");
   let end = property_get(se, "end");
   let r = list_size_range(start);
-  function lambda(la) {}
-  let list = list_adder(lambda);
-  each_nested_distinct(lambda3, r, rules);
-  function lambda3(rule, index) {
-    let eq = app_replace_rule_valid(rule, index, start);
-    if (eq) {
-      let start_next = app_replace_rule_apply(rule, index, start);
+  function lambda(la) {
+    each_nested_distinct(lambda3, r, rules);
+    function lambda3(rule, index) {
+      let eq = app_replace_rule_valid(rule, index, start);
+      if (eq) {
+        let start_next = app_replace_rule_apply(rule, index, start);
+      }
+      return eq;
     }
-    return eq;
   }
+  let list = list_adder(lambda);
 }
