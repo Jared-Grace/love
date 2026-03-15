@@ -12,8 +12,8 @@ export async function app_replace_rule_set_add(name) {
   await function_copy_open(app_new_rule_set_new.name, combined);
   async function lambda(ast) {
     let elements = js_array_expression_single_elements(ast);
-    let expression = js_parse_expression(code_expression);
-    list_add(elements, item);
+    let expression = js_parse_expression(combined);
+    list_add(elements, expression);
   }
   let output = await function_transform(app_replace_rule_sets_fns.name, lambda);
 }
