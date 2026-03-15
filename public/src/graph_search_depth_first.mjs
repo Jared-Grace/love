@@ -4,6 +4,7 @@ import { add } from "../../../love/public/src/add.mjs";
 export function graph_search_depth_first(
   start,
   neighbors_get,
+  equal_is,
   max_depth,
   target,
 ) {
