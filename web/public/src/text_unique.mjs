@@ -8,7 +8,8 @@ export function text_unique(used, name, prefix) {
   let unique = null;
   let attempt = 1;
   do {
-    const suffix = attempt === 1 && text_empty_not_is(name) ? "" : attempt;
+    const suffix =
+      attempt === 1 && text_empty_not_is(name) ? "" : prefix + attempt;
     unique = name + suffix;
     attempt++;
   } while (text_empty_is(unique) || list_includes(used, unique));
