@@ -1,3 +1,4 @@
 export function text_alphabet() {
-  return "abcdefghijklmnopqrstuvwxyz";
+  let r = "abcdefghijklmnopqrstuvwxyz";
+  return r;
 }
