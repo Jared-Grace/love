@@ -10,6 +10,7 @@ export function app_new_rule_set_new_2() {
       "idf > A",
       "idf > B",
       "idf > B",
+      "idp > 1",
     ],
     goals: [
       {
