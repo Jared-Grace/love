@@ -7,7 +7,7 @@ export function js_identifier_unique(existing, name) {
   let v2 = js_special_arguments();
   let v = js_keyword_default();
   let used = list_concat(existing, [v2, v]);
-  let unique = text_unique(used, name);
+  let unique = text_unique(used, name, "");
   list_add(existing, unique);
   return unique;
 }
