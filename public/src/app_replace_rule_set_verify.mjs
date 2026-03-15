@@ -17,7 +17,7 @@ export function app_replace_rule_set_verify() {
   let r = list_size_range(start);
   function lambda(rule) {
     function lambda2(index) {
-      let eq = lambda3(rule, index);
+      lambda3(rule, index);
     }
     each(r, lambda2);
   }
