@@ -22,6 +22,7 @@ export function app_replace_rule_set_verify() {
       let eq = app_replace_rule_valid(rule, index, start);
       if (eq) {
         let start_next = app_replace_rule_apply(rule, index, start);
+        la(start_next);
       }
       return eq;
     }
