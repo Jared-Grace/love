@@ -14,7 +14,8 @@ export function app_new_rule_set_new_2() {
       "idf > v",
       "idf > $",
       "idf > _",
-      "idp > 1",
+      "idp > di",
+      "di > 1",
     ],
     goals: [
       {
