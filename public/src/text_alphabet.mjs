@@ -4,6 +4,6 @@ import { text_alphabet_upper } from "../../../love/public/src/text_alphabet_uppe
 export function text_alphabet() {
   let r = text_alphabet_lower();
   let u = text_alphabet_upper();
-  let combined = text_combine(left, right);
-  return u;
+  let combined = text_combine(r, u);
+  return combined;
 }
