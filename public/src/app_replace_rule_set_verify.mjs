@@ -13,8 +13,8 @@ export function app_replace_rule_set_verify() {
   let goals = property_get(rs, "goals");
   let g = list_first(goals);
   let se = app_replace_start_end_get(g);
-  let start = property_get(se, "start");
   let end = property_get(se, "end");
+  let start = property_get(se, "start");
   let r = list_size_range(start);
   function lambda(la) {
     each_nested_distinct(lambda3, r, rules);
