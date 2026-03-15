@@ -10,6 +10,7 @@ export function app_new_rule_set_new_2() {
       "idf > A",
       "idf > B",
       "idf > l",
+      "idf > t",
       "idf > u",
       "idf > v",
       "idf > $",
@@ -20,7 +21,11 @@ export function app_new_rule_set_new_2() {
     goals: [
       {
         start: "id",
-        end: "luv",
+        end: "t3",
+      },
+      {
+        start: "id",
+        end: "t3",
       },
       {
         start: "id",
