@@ -22,12 +22,12 @@ export function graph_search_depth_first(
     }
     visited.add(node);
     if (node === target) {
-      let r = {
+      let r2 = {
         found: true,
         node,
         depth,
       };
-      return r;
+      return r2;
     }
     if (depth >= max_depth) {
       continue;
@@ -43,8 +43,8 @@ export function graph_search_depth_first(
       }
     }
   }
-  let r2 = {
+  let r = {
     found: false,
   };
-  return r2;
+  return r;
 }
