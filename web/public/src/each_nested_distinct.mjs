@@ -1,10 +1,10 @@
 import { each } from "../../../love/public/src/each.mjs";
-export function each_nested_distinct(lambda3, list_b, list_a) {
-  function lambda(rule) {
-    function lambda2(index) {
-      lambda3(rule, index);
+export function each_nested_distinct(lambda$a$b, list_b, list_a) {
+  function lambda_a(a) {
+    function lambda_b(b) {
+      lambda$a$b(a, b);
     }
-    each(list_b, lambda2);
+    each(list_b, lambda_b);
   }
-  each(list_a, lambda);
+  each(list_a, lambda_a);
 }
