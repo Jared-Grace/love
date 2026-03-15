@@ -100,14 +100,14 @@ export async function app_replace_rule_set(context) {
   app_replace_button_home(root, context);
   app_replace_button_screen(context, app_replace_goals, root, "Goals");
   app_replace_button_screen(context, app_replace_rule_set, root, "Start over");
-  let rule = app_replace_rule_set_get(context);
-  let rule_name = property_get(rule, "name");
+  let rs = app_replace_rule_set_get(context);
+  let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
-  let exists2 = property_exists(rule, "abbreviations");
+  let exists2 = property_exists(rs, "abbreviations");
   if (exists2) {
     html_p_text(root, "Abbreviations");
     let component = html_element(root, "ul");
-    let abbreviations = property_get(rule, "abbreviations");
+    let abbreviations = property_get(rs, "abbreviations");
     let list2 = object_to_list(abbreviations);
     list_sort_text_property(list2, "key");
     function lambda6(kv) {
@@ -120,14 +120,14 @@ export async function app_replace_rule_set(context) {
     each(list2, lambda6);
   }
   let goal_index = storage_local_get_context(context, "goal_index");
-  let goals = property_get(rule, "goals");
+  let goals = property_get(rs, "goals");
   let goal = list_get(goals, goal_index);
   let r4 = app_replace_start_end_get(goal);
   let start = property_get(r4, "start");
   let end = property_get(r4, "end");
   let index_selected = null;
   let label_rules = html_p(root);
-  let rules = property_get(rule, "rules");
+  let rules = property_get(rs, "rules");
   let rules_parsed = app_replace_rules_parse(rules);
   let symbols_invalid_chosen = {};
   let div_rules_buttons = html_div(root);
