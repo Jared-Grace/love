@@ -1,3 +1,4 @@
+import { graph_search_depth_first } from "../../../love/public/src/graph_search_depth_first.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_nested_distinct } from "../../../love/public/src/each_nested_distinct.mjs";
 import { list_size_range } from "../../../love/public/src/list_size_range.mjs";
@@ -27,5 +28,6 @@ export function app_replace_rule_set_verify() {
       return eq;
     }
   }
-  let neighbors = list_adder(lambda);graph_search_depth_first
+  let neighbors = list_adder(lambda);
+  let r2 = graph_search_depth_first(start2, neighbors_get, max_depth, target);
 }
