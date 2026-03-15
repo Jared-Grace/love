@@ -1,5 +1,5 @@
 import { function_new_transform } from "../../../love/public/src/function_new_transform.mjs";
-export async function app_replace_rule_set_add() {
+export async function app_replace_rule_set_add(name) {
   async function lambda(ast) {}
   let output = await function_new_transform(f_name, lambda);
 }
