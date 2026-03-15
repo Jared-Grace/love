@@ -21,7 +21,7 @@ export function graph_search_depth_first(
       continue;
     }
     visited.add(node);
-    if (node === target) {
+    if (equal_is(node === target)) {
       let r2 = {
         found: true,
         node,
