@@ -6,8 +6,8 @@ export function app_new_rule_set_new_2() {
     rules: ["id > idf", "id > idf idp", "idp > a", "idp > b", "idp > c"],
     goals: [
       {
-        start: "a",
-        end: "b",
+        start: "id",
+        end: "abba",
       },
     ],
   };
