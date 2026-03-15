@@ -28,16 +28,20 @@ export async function karate_tests() {
     ("this assert is a smoke test");
     await playwright_by_attribute_type(
       page,
-      "data-test",
+      portfolio_qa_attribute_test_data(),
       "username",
       "standard_user",
     );
     await playwright_by_attribute_type(
       page,
-      "data-test",
+      portfolio_qa_attribute_test_data(),
       "password",
       "secret_sauce",
     );
-    await playwright_by_attribute(page, "data-test", "login-button").click();
+    await playwright_by_attribute(
+      page,
+      portfolio_qa_attribute_test_data(),
+      "login-button",
+    ).click();
   }
 }
