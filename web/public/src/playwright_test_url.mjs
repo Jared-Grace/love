@@ -1,7 +1,7 @@
 import { chromium } from "playwright";
 export async function playwright_test_url(url, lambda) {
   const browser = await chromium.launch({
-    headless: false,
+    headless: true,
   });
   try {
     const page = await browser.newPage();
