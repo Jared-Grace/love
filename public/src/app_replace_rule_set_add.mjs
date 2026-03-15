@@ -10,7 +10,7 @@ import { function_copy_open } from "../../../love/public/src/function_copy_open.
 export async function app_replace_rule_set_add() {
   let f_names = await functions_names();
   const f = app_new_rule_set_new.name;
-  let unique = text_unique(used, f);
+  let unique = text_unique(f_names, f);
   await function_copy_open(f, combined);
   let expression = js_parse_expression(combined);
   async function lambda(ast) {
