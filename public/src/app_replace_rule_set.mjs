@@ -1,3 +1,4 @@
+import { app_replace_rule_apply } from "../../../love/public/src/app_replace_rule_apply.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
@@ -75,7 +76,6 @@ import { property_set_exists_not } from "../../../love/public/src/property_set_e
 import { range } from "../../../love/public/src/range.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
-import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_skip } from "../../../love/public/src/list_skip.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
@@ -94,7 +94,6 @@ import { app_replace_rule_parse } from "../../../love/public/src/app_replace_rul
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
-import { list_take } from "../../../love/public/src/list_take.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
 export async function app_replace_rule_set(context) {
   let root = property_get(context, "root");
@@ -199,12 +198,7 @@ export async function app_replace_rule_set(context) {
         if (eq) {
           symbols_invalid_chosen = {};
           app_replace_button_symbol_style_valid_if_multiple(sbs, true);
-          let right = property_get(rule2, "right");
-          let left = property_get(rule2, "left");
-          let before = list_take(start, index);
-          let size = list_size(left);
-          let after = list_skip(start, index + size);
-          start = list_concat_multiple([before, right, after]);
+          start = app_replace_rule_apply(rule2, start, index);
           let rb = list_get(rules_buttons, index_selected);
           let lefts2 = property_get(rb, "lefts");
           let rights2 = property_get(rb, "rights");
