@@ -1,3 +1,4 @@
+import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_nested_distinct } from "../../../love/public/src/each_nested_distinct.mjs";
 import { list_size_range } from "../../../love/public/src/list_size_range.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
@@ -15,6 +16,8 @@ export function app_replace_rule_set_verify() {
   let start = property_get(se, "start");
   let end = property_get(se, "end");
   let r = list_size_range(start);
+  function lambda(la) {}
+  let list = list_adder(lambda);
   each_nested_distinct(lambda3, r, rules);
   function lambda3(rule, index) {
     let eq = app_replace_rule_valid(rule, index, start);
