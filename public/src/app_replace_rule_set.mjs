@@ -1,3 +1,4 @@
+import { app_replace_rules_parse } from "../../../love/public/src/app_replace_rules_parse.mjs";
 import { app_replace_rule_apply } from "../../../love/public/src/app_replace_rule_apply.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
@@ -90,7 +91,6 @@ import { html_p } from "../../../love/public/src/html_p.mjs";
 import { html_disable } from "../../../love/public/src/html_disable.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
-import { app_replace_rule_parse } from "../../../love/public/src/app_replace_rule_parse.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
@@ -128,7 +128,7 @@ export async function app_replace_rule_set(context) {
   let index_selected = null;
   let label_rules = html_p(root);
   let rules = property_get(rule, "rules");
-  let rules_parsed = list_map(rules, app_replace_rule_parse);
+  let rules_parsed = app_replace_rules_parse(rules);
   let symbols_invalid_chosen = {};
   let div_rules_buttons = html_div(root);
   let label_symbols = html_p(root);
