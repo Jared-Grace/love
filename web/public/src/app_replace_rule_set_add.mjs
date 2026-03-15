@@ -6,7 +6,7 @@ import { js_array_expression_single_elements } from "../../../love/public/src/js
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { app_new_rule_set_new } from "../../../love/public/src/app_new_rule_set_new.mjs";
 import { function_copy_open } from "../../../love/public/src/function_copy_open.mjs";
-export async function app_replace_rule_set_add(name) {
+export async function app_replace_rule_set_add() {
   const f = app_new_rule_set_new.name;
   let unique = text_unique(used, f);
   await function_copy_open(f, combined);
