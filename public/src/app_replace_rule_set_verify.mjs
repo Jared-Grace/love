@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { app_replace_rule_apply } from "../../../love/public/src/app_replace_rule_apply.mjs";
 import { app_replace_rule_valid } from "../../../love/public/src/app_replace_rule_valid.mjs";
@@ -10,6 +11,8 @@ export function app_replace_rule_set_verify() {
   let g = list_first(goals);
   let start = property_get(g, "start");
   let end = property_get(g, "end");
+  function lambda(item) {}
+  each(list, lambda);
   let eq = app_replace_rule_valid(rule, index, start);
   let start3 = app_replace_rule_apply(rule, index, start);
 }
