@@ -11,7 +11,10 @@ export function app_replace_rule_set_verify() {
   let g = list_first(goals);
   let start = property_get(g, "start");
   let end = property_get(g, "end");
-  function lambda(item) {}
+  function lambda(item) {
+    function lambda2(item2) {}
+    each(list2, lambda2);
+  }
   each(list, lambda);
   let eq = app_replace_rule_valid(rule, index, start);
   let start3 = app_replace_rule_apply(rule, index, start);
