@@ -17,9 +17,9 @@ export function app_replace_rule_set_verify() {
   let r = list_size_range(start);
   each_nested_distinct(lambda3, r, rules);
   let eq = app_replace_rule_valid(rule, index, start);
-  let start3 = app_replace_rule_apply(rule, index, start);
   function lambda3(rule, index) {
-    let eq2 = app_replace_rule_valid(rule, index, start);
-    return eq2;
+    let eq = app_replace_rule_valid(rule, index, start);
+    let start3 = app_replace_rule_apply(rule, index, start);
+    return eq;
   }
 }
