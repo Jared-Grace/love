@@ -11,8 +11,8 @@ export async function app_replace_rule_set_add() {
   let f_names = await functions_names();
   const f = app_new_rule_set_new.name;
   let unique = text_unique(f_names, f);
-  await function_copy_open(f, combined);
-  let expression = js_parse_expression(combined);
+  await function_copy_open(f, unique);
+  let expression = js_parse_expression(unique);
   async function lambda(ast) {
     let elements = js_array_expression_single_elements(ast);
     list_add(elements, expression);
