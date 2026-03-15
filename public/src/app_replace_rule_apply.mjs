@@ -3,7 +3,7 @@ import { list_skip } from "../../../love/public/src/list_skip.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export function app_replace_rule_apply(rule2, start, index) {
+export function app_replace_rule_apply(rule2, index, start) {
   let right = property_get(rule2, "right");
   let left = property_get(rule2, "left");
   let before = list_take(start, index);
