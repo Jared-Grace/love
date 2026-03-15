@@ -9,6 +9,7 @@ export function app_new_rule_set_new_2() {
       "idg > idp idg",
       "idf > A",
       "idf > B",
+      "idf > h",
       "idf > l",
       "idf > t",
       "idf > u",
@@ -16,13 +17,10 @@ export function app_new_rule_set_new_2() {
       "idf > $",
       "idf > _",
       "idp > di",
+      "di > 0",
       "di > 1",
     ],
     goals: [
-      {
-        start: "id",
-        end: "t3",
-      },
       {
         start: "id",
         end: "t3",
@@ -34,6 +32,10 @@ export function app_new_rule_set_new_2() {
       {
         start: "id",
         end: "ABBA",
+      },
+      {
+        start: "id",
+        end: "J0$h",
       },
     ],
   };
