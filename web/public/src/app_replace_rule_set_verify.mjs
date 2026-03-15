@@ -27,5 +27,5 @@ export function app_replace_rule_set_verify() {
       return eq;
     }
   }
-  let list = list_adder(lambda);
+  let neighbors = list_adder(lambda);
 }
