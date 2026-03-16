@@ -1,5 +1,6 @@
-import { set_includes_json } from "../../../love/public/src/set_includes_json.mjs";
-import { set_add_json } from "../../../love/public/src/set_add_json.mjs";
+import { set_add } from "../../../love/public/src/set_add.mjs";
+import { set_includes } from "../../../love/public/src/set_includes.mjs";
+import { json_to } from "../../../love/public/src/json_to.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -20,11 +21,13 @@ export function graph_search_depth_first(
     const r3 = queue.shift();
     let depth = property_get(r3, "depth");
     let node = property_get(r3, "node");
-    const i = set_includes_json(visited, node);
+    let json = json_to(node);
+    let i = set_includes(visited, json);
     if (i) {
       continue;
     }
-    set_add_json(visited, node);
+    let json2 = json_to(node);
+    let r4 = set_add(visited, json2);
     if (equal_is(node, target)) {
       let r2 = {
         found: true,
@@ -38,7 +41,8 @@ export function graph_search_depth_first(
     }
     const neighbors = neighbors_get(node) || [];
     for (const n of neighbors) {
-      let b = set_includes_json(visited, n);
+      let json3 = json_to(n);
+      let b = set_includes(visited, json3);
       if (not(b)) {
         queue.push({
           node: n,
