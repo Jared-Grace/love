@@ -46,7 +46,9 @@ export async function sermon_translate_urdu(file_name) {
     if (change) {
       let i = floor(index2 / 2);
       let item3 = list_get(value2, i);
-      function lambda3() {}
+      function lambda3(a, b) {
+        return [a, b];
+      }
       let mapped2 = list_map_pairs(item3, item2, lambda3);
       let r5 = [item3, item2];
       return r5;
