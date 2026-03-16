@@ -1,7 +1,7 @@
+import { set_add_json } from "../../../love/public/src/set_add_json.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { not } from "../../../love/public/src/not.mjs";
-import { add } from "../../../love/public/src/add.mjs";
 export function graph_search_depth_first(
   start,
   neighbors_get,
@@ -22,7 +22,7 @@ export function graph_search_depth_first(
     if (visited.has(node)) {
       continue;
     }
-    visited.add(node);
+    set_add_json(visited, node);
     log(graph_search_depth_first.name, {
       node,
     });
