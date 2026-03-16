@@ -1,7 +1,11 @@
-import { repos_paths_map_unordered_combine_squash_functions } from "../../../love/public/src/repos_paths_map_unordered_combine_squash_functions.mjs";
-import { identity } from "../../../love/public/src/identity.mjs";
+import { log } from "../../../love/public/src/log.mjs";
+import nearley from "nearley";
 export async function sandbox() {
-  let f_names =
-    await repos_paths_map_unordered_combine_squash_functions(identity);
-  return f_names;
+  let v = nearley.Grammar.fromCompiled(`sn -> i se
+i -> di g
+di -> "0"
+di -> "1"`);
+  const parser = new nearley.Parser(v);
+  parser.feed("0.e1");
+  console.log(parser.results);
 }
