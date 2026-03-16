@@ -24,9 +24,6 @@ export function graph_search_depth_first(
       continue;
     }
     set_add_json(visited, node);
-    log(graph_search_depth_first.name, {
-      node,
-    });
     if (equal_is(node, target)) {
       let r2 = {
         found: true,
