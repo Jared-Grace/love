@@ -23,6 +23,7 @@ export function js_auto_transforms() {
     js_await_add,
     js_arrow_blockify,
     js_if_blockify,
+    js_arrow_to_function,
     js_function_id_add,
     js_let_add,
     js_declare_assign_null,
