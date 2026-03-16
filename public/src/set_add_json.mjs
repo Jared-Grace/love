@@ -1,0 +1,4 @@
+import { set_add } from "../../../love/public/src/set_add.mjs";
+export function set_add_json(found, item) {
+  return set_add(found, item);
+}
