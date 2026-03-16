@@ -23,6 +23,7 @@ export function app_replace_rule_set_verify(rule_set_get) {
   function neighbors_get(start) {
     log(app_replace_rule_set_verify.name, {
       start,
+      end,
     });
     let r = list_size_range(start);
     function lambda(la) {
