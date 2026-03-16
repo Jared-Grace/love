@@ -34,5 +34,6 @@ export function app_replace_rule_set_verify() {
       }
     }
     let neighbors = list_adder(lambda);
+    return neighbors;
   }
 }
