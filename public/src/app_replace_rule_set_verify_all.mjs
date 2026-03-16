@@ -1,3 +1,4 @@
+import { assert_json_get } from "../../../love/public/src/assert_json_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_replace_rule_sets_fns } from "../../../love/public/src/app_replace_rule_sets_fns.mjs";
@@ -7,6 +8,8 @@ export function app_replace_rule_set_verify_all() {
   function lambda(rule_set_get) {
     let r = app_replace_rule_set_verify(rule_set_get);
     let found = property_get(r, "found");
+    function lambda3() {}
+    assert_json_get(b, lambda3);
   }
   each(rule_set_gets, lambda);
 }
