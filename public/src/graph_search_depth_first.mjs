@@ -1,3 +1,4 @@
+import { set_includes_json } from "../../../love/public/src/set_includes_json.mjs";
 import { set_add_json } from "../../../love/public/src/set_add_json.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -19,7 +20,7 @@ export function graph_search_depth_first(
     const r3 = queue.shift();
     let depth = property_get(r3, "depth");
     let node = property_get(r3, "node");
-    if (visited.has(node)) {
+    if (set_includes_json(visited, node)) {
       continue;
     }
     set_add_json(visited, node);
@@ -39,7 +40,7 @@ export function graph_search_depth_first(
     }
     const neighbors = neighbors_get(node) || [];
     for (const n of neighbors) {
-      let b = visited.has(n);
+      let b = set_includes_json(visited, n);
       if (not(b)) {
         queue.push({
           node: n,
