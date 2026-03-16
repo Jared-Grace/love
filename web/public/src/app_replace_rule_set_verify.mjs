@@ -9,7 +9,7 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { app_replace_rule_apply } from "../../../love/public/src/app_replace_rule_apply.mjs";
 import { app_replace_rule_valid } from "../../../love/public/src/app_replace_rule_valid.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { json_equal } from "./json_equal.mjs";
+import { json_to } from "./json_to.mjs";
 export function app_replace_rule_set_verify(rule_set_get) {
   let rs = rule_set_get();
   let rules = app_replace_rule_set_rules_get(rs);
@@ -18,7 +18,7 @@ export function app_replace_rule_set_verify(rule_set_get) {
   let se = app_replace_start_end_get(g);
   let end = property_get(se, "end");
   let start = property_get(se, "start");
-  let r2 = graph_search_depth_first(start, neighbors_get, json_equal, 9, end);
+  let r2 = graph_search_depth_first(start, neighbors_get, json_to, 9, end);
   return r2;
   function neighbors_get(start) {
     log(app_replace_rule_set_verify.name, {
