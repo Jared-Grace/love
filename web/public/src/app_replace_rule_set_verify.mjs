@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
 import { graph_search_depth_first } from "../../../love/public/src/graph_search_depth_first.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -20,6 +21,9 @@ export function app_replace_rule_set_verify(rule_set_get) {
   let r2 = graph_search_depth_first(start, neighbors_get, json_equal, 10, end);
   return r2;
   function neighbors_get(start) {
+    log(app_replace_rule_set_verify.name, {
+      start,
+    });
     let r = list_size_range(start);
     function lambda(la) {
       each_nested_distinct(lambda3, r, rules);
