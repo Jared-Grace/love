@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { add } from "../../../love/public/src/add.mjs";
@@ -44,6 +45,9 @@ export function graph_search_depth_first(
       }
     }
   }
+  log(graph_search_depth_first.name, {
+    visited,
+  });
   let r = {
     found: false,
   };
