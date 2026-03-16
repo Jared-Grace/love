@@ -9,6 +9,7 @@ import { app_replace_rule_apply } from "../../../love/public/src/app_replace_rul
 import { app_replace_rule_valid } from "../../../love/public/src/app_replace_rule_valid.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_rule_set_identifiers_simple } from "../../../love/public/src/app_replace_rule_set_identifiers_simple.mjs";
+import { json_equal } from "./json_equal.mjs";
 export function app_replace_rule_set_verify() {
   let rs = app_replace_rule_set_identifiers_simple();
   let rules = app_replace_rule_set_rules_get(rs);
@@ -17,7 +18,7 @@ export function app_replace_rule_set_verify() {
   let se = app_replace_start_end_get(g);
   let end = property_get(se, "end");
   let start = property_get(se, "start");
-  let r2 = graph_search_depth_first(start, neighbors_get, 10, end);
+  let r2 = graph_search_depth_first(start, neighbors_get, json_equal, 10, end);
   return r2;
   function neighbors_get(start) {
     let r = list_size_range(start);
