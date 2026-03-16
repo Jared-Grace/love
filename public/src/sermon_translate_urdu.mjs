@@ -1,3 +1,4 @@
+import { pair_to_list } from "../../../love/public/src/pair_to_list.mjs";
 import { list_map_pairs } from "../../../love/public/src/list_map_pairs.mjs";
 import { clipboard_copy } from "../../../love/public/src/clipboard_copy.mjs";
 import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
@@ -46,10 +47,6 @@ export async function sermon_translate_urdu(file_name) {
     if (change) {
       let i = floor(index2 / 2);
       let item3 = list_get(value2, i);
-      function pair_to_list(a, b) {
-        let l = [a, b];
-        return l;
-      }
       let mapped2 = list_map_pairs(item3, item2, pair_to_list);
       let r5 = [item3, item2];
       return r5;
