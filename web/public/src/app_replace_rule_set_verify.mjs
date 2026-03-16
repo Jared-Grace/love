@@ -9,8 +9,8 @@ import { app_replace_rule_apply } from "../../../love/public/src/app_replace_rul
 import { app_replace_rule_valid } from "../../../love/public/src/app_replace_rule_valid.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { json_equal } from "./json_equal.mjs";
-export function app_replace_rule_set_verify(fn) {
-  let rs = fn();
+export function app_replace_rule_set_verify(rule_set_get) {
+  let rs = rule_set_get();
   let rules = app_replace_rule_set_rules_get(rs);
   let goals = property_get(rs, "goals");
   let g = list_first(goals);
