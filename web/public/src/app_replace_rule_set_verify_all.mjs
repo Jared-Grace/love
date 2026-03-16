@@ -8,8 +8,10 @@ export function app_replace_rule_set_verify_all() {
   function lambda(rule_set_get) {
     let r = app_replace_rule_set_verify(rule_set_get);
     let found = property_get(r, "found");
-    function lambda3() {}
-    assert_json_get(b, lambda3);
+    function lambda3() {
+      return r;
+    }
+    assert_json_get(found, lambda3);
   }
   each(rule_set_gets, lambda);
 }
