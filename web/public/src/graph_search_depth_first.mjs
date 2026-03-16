@@ -20,7 +20,8 @@ export function graph_search_depth_first(
     const r3 = queue.shift();
     let depth = property_get(r3, "depth");
     let node = property_get(r3, "node");
-    if (set_includes_json(visited, node)) {
+    const i = set_includes_json(visited, node);
+    if (i) {
       continue;
     }
     set_add_json(visited, node);
