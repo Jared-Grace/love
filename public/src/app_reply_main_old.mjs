@@ -1,6 +1,5 @@
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
-import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_concat_multiple } from "../../../love/public/src/list_concat_multiple.mjs";
@@ -226,7 +225,11 @@ export async function app_reply_main_old(context) {
       async function lambda8(verse) {
         let chapter_code2 = property_get(verse, "chapter_code");
         let verse_number2 = property_get(verse, "verse_number");
-        let d = await ebible_verse_browser(bible_folder2, chapter_code2, verse_number2);
+        let d = await ebible_verse_browser(
+          bible_folder2,
+          chapter_code2,
+          verse_number2,
+        );
         return d;
       }
       let verses = await list_map_unordered_async(verses2, lambda8);
