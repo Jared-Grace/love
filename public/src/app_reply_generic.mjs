@@ -1,5 +1,4 @@
 import { ebible_version_books_browser } from "../../../love/public/src/ebible_version_books_browser.mjs";
-import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -51,6 +50,7 @@ import { ebible_folder_english } from "../../../love/public/src/ebible_folder_en
 import { bible_verses_uplifting } from "../../../love/public/src/bible_verses_uplifting.mjs";
 import { ebible_languages } from "../../../love/public/src/ebible_languages.mjs";
 import { app_reply_choices } from "../../../love/public/src/app_reply_choices.mjs";
+import { ebible_verse_browser } from "./ebible_verse_browser.mjs";
 export async function app_reply_generic(verse_get) {
   let choices = app_reply_choices();
   let original = bible_interlinear_verses_upload_folder();
@@ -252,7 +252,11 @@ export async function app_reply_generic(verse_get) {
       async function lambda8(verse) {
         let chapter_code2 = property_get(verse, "chapter_code");
         let verse_number2 = property_get(verse, "verse_number");
-        let d = await ebible_verse(bible_folder2, chapter_code2, verse_number2);
+        let d = await ebible_verse_browser(
+          bible_folder2,
+          chapter_code2,
+          verse_number2,
+        );
         return d;
       }
       let verses = await list_map_unordered_async(verses2, lambda8);
