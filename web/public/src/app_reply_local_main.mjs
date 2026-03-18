@@ -1,6 +1,6 @@
+import { ebible_verse_browser } from "../../../love/public/src/ebible_verse_browser.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { ebible_verse_merge } from "../../../love/public/src/ebible_verse_merge.mjs";
-import { ebible_verse } from "../../../love/public/src/ebible_verse.mjs";
 import { global_function_set } from "../../../love/public/src/global_function_set.mjs";
 import { app_reply_main } from "../../../love/public/src/app_reply_main.mjs";
 import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
@@ -20,6 +20,6 @@ export async function app_reply_local_main(context) {
     let verse = ebible_verse_merge(bible_folder, chapter_code, v);
     return verse;
   }
-  global_function_set(ebible_verse, verse_get);
+  global_function_set(ebible_verse_browser, verse_get);
   await app_reply_main(context);
 }
