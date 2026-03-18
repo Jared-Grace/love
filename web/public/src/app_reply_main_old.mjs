@@ -37,6 +37,7 @@ import { each_range_async } from "../../../love/public/src/each_range_async.mjs"
 import { list_skip } from "../../../love/public/src/list_skip.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_reply_initialize } from "../../../love/public/src/app_reply_initialize.mjs";
+import { ebible_verse_browser } from "./ebible_verse_browser.mjs";
 export async function app_reply_main_old(context) {
   let r = await app_reply_initialize(context);
   let books = property_get(r, "books");
@@ -225,7 +226,7 @@ export async function app_reply_main_old(context) {
       async function lambda8(verse) {
         let chapter_code2 = property_get(verse, "chapter_code");
         let verse_number2 = property_get(verse, "verse_number");
-        let d = await ebible_verse(bible_folder2, chapter_code2, verse_number2);
+        let d = await ebible_verse_browser(bible_folder2, chapter_code2, verse_number2);
         return d;
       }
       let verses = await list_map_unordered_async(verses2, lambda8);
