@@ -182,6 +182,11 @@ export function ebible_languages() {
       bible_folder: "nldnbg",
       language_code: "nld",
     },
+    {
+      name: "Italian",
+      bible_folder: "ita1927",
+      language_code: "ita",
+    },
   ];
   ("Rather than modifying this list, use: ");
   fn_name("ebible_languages_add");
