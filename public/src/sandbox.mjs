@@ -8,13 +8,11 @@ export async function sandbox() {
 main -> bits {% d => d[0] %}
 
 bits -> bits di {% ([b,d]) => ({
-  value: d,
   start: b.start,
   end: d.end,
   steps: [...b.steps, d]
 }) %}
      | di {% (d) => ({
-  value: d.value,
   start: d.start,
   end: d.end,
   steps: [d]
@@ -44,6 +42,6 @@ di -> "0" {% (d, location) => {
   const grammar = module.exports;
   let v2 = nearley.Grammar.fromCompiled(grammar);
   const parser = new nearley.Parser(v2);
-  parser.feed("1");
+  parser.feed("001");
   log_json(parser.results);
 }
