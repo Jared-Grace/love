@@ -8,7 +8,7 @@ export async function sandbox() {
     main -> bits
 
     bits -> bits di {% ([b,d]) => b + d %}
-         | di {% d %}
+         | di {% id %}
 
     di -> "0"
         | "1"
