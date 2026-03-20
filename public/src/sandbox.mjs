@@ -1,5 +1,4 @@
 import { log_json } from "../../../love/public/src/log_json.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import nearley from "nearley";
 import compile from "nearley/lib/compile.js";
 import generate from "nearley/lib/generate.js";
