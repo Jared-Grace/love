@@ -7,11 +7,11 @@ export async function sandbox() {
   const grammarText = `
 main -> bits {% d => d[0] %}
 
-bits -> bits di {% ([b,d]) => ({
-  value: d,
-  start: b.start,
-  end: d.end,
-  steps: [...b.steps, d]
+bits -> bits di {% (a) => ({
+  value: a,
+  start: a[0].start,
+  end: a[1].end,
+  steps: [...a[0].steps, a[1]]
 }) %}
      | di {% (d) => ({
   value: d.value,
