@@ -3,7 +3,6 @@ import compile from "nearley/lib/compile.js";
 import generate from "nearley/lib/generate.js";
 import grammarParser from "nearley/lib/nearley-language-bootstrapped.js";
 import { log_json } from "../../../love/public/src/log_json.mjs";
-
 export async function sandbox() {
   const grammarText = `
 main -> bits {% d => d[0] %}
@@ -30,25 +29,21 @@ di -> "0" {% (d, location) => {
   return { rule: "di", value: val, start: location - 1, end: location };
 } %}
 `;
-
-  // Parse grammar string
-  const parserGrammar = new nearley.Parser(
-    nearley.Grammar.fromCompiled(grammarParser)
-  );
+  let v = nearley.Grammar.fromCompiled(grammarParser);
+  const parserGrammar = new nearley.Parser(v);
   parserGrammar.feed(grammarText);
   const grammarAst = parserGrammar.results[0];
-
-  // Compile and generate JS module
   const compiled = compile(grammarAst, {});
-  const jsModule = generate(compiled, "grammar", { output: "commonjs" });
-  const module = { exports: {} };
+  const jsModule = generate(compiled, "grammar", {
+    output: "commonjs",
+  });
+  const module = {
+    exports: {},
+  };
   eval(jsModule);
   const grammar = module.exports;
-
-  // Parse input
-  const parser = new nearley.Parser(nearley.Grammar.fromCompiled(grammar));
+  let v2 = nearley.Grammar.fromCompiled(grammar);
+  const parser = new nearley.Parser(v2);
   parser.feed("001");
-
-  // Log full annotated parse
   log_json(parser.results);
 }
