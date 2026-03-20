@@ -29,7 +29,7 @@ export async function sandbox() {
   const grammar = module.exports;
   let v2 = nearley.Grammar.fromCompiled(grammar);
   const parser = new nearley.Parser(v2);
-  parser.feed("0");
+  parser.feed("0000");
   let t = parser.table;
   function lambda(i) {
     log(sandbox.name, t[i]);
