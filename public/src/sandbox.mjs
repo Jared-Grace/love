@@ -33,7 +33,8 @@ export async function sandbox() {
     ],
     ParserStart: "main",
   };
-  const parser = new nearley.Parser(grammar);
+  let v = nearley.Grammar.fromCompiled(grammar);
+  const parser = new nearley.Parser(v);
   parser.feed("001");
   console.log(parser.results);
 }
