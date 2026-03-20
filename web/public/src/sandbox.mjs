@@ -39,5 +39,5 @@ di -> "0" {% (d, location) => ({ rule: "di", value: "0", start: location-1, end:
   let v2 = nearley.Grammar.fromCompiled(grammar);
   const parser = new nearley.Parser(v2);
   parser.feed("001");
-  log_json(parser.table);
+  log_json(parser.results);
 }
