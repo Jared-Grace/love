@@ -4,7 +4,6 @@ import nearley from "nearley";
 export async function sandbox() {
   let v2 = ["sn -> i se", "i -> di g", 'di -> "0"', 'di -> "1"'];
   parser.feed("0.e1");
-  console.log(parser.results);
   const grammar = {
     Lexer: undefined,
     ParserRules: [
@@ -37,4 +36,5 @@ export async function sandbox() {
   };
   const parser = new nearley.Parser(grammar);
   parser.feed("001");
+  console.log(parser.results);
 }
