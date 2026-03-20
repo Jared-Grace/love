@@ -32,7 +32,7 @@ export async function sandbox() {
   parser.feed("001");
   let t = parser.table;
   function lambda(i) {
-    log(sandbox.name, message);
+    log(sandbox.name, t[i]);
   }
   each_range(t.length, lambda);
 }
