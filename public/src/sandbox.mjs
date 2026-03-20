@@ -1,4 +1,4 @@
-import { error } from "../../../love/public/src/error.mjs";
+import { each_range } from "../../../love/public/src/each_range.mjs";
 import nearley from "nearley";
 import compile from "nearley/lib/compile.js";
 import generate from "nearley/lib/generate.js";
@@ -29,5 +29,6 @@ export async function sandbox() {
   let v2 = nearley.Grammar.fromCompiled(grammar);
   const parser = new nearley.Parser(v2);
   parser.feed("001");
-  error(message);
+  function lambda(i) {}
+  each_range(count, lambda);
 }
