@@ -18,7 +18,7 @@ bits -> bits di {% ([b,d]) => ({
   steps: [d]
 }) %}
 
-di -> "0" {% (d, location) => {
+di -> "0" {% (d, location) => {console.log(d)
   const val = d.flat(Infinity)[0]; // unwrap nested array
   return { rule: "di", value: val, location };
 } %}
