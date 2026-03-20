@@ -20,11 +20,11 @@ bits -> bits di {% ([b,d]) => ({
 
 di -> "0" {% (d, location) => {
   const val = d.flat(Infinity)[0]; // unwrap nested array
-  return { rule: "di", value: val, start: location - 1, end: location };
+  return { rule: "di", start: location - 1, end: location };
 } %}
    | "1" {% (d, location) => {
   const val = d.flat(Infinity)[0];
-  return { rule: "di", value: val, start: location - 1, end: location };
+  return { rule: "di", start: location - 1, end: location };
 } %}
 `;
   let v = nearley.Grammar.fromCompiled(grammarParser);
