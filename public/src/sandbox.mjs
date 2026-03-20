@@ -35,6 +35,6 @@ export async function sandbox() {
   };
   let v = nearley.Grammar.fromCompiled(grammar);
   const parser = new nearley.Parser(v);
-  parser.feed("001");
+  parser.feed("0");
   console.log(parser.results);
 }
