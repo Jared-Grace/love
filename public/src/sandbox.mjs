@@ -1,4 +1,4 @@
-import { list_join } from "../../../love/public/src/list_join.mjs";
+import { log_json } from "../../../love/public/src/log_json.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import nearley from "nearley";
 import compile from "nearley/lib/compile.js";
@@ -30,6 +30,6 @@ export async function sandbox() {
   let v2 = nearley.Grammar.fromCompiled(grammar);
   const parser = new nearley.Parser(v2);
   parser.feed("001");
-  let joined = list_join(list, separator);
+  log_json(right);
   console.log(parser.results);
 }
