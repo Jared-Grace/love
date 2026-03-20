@@ -13,7 +13,10 @@ bits -> bits di {% ([b,d]) => ({
   end: d.end,
   steps: [...b.steps, d]
 }) %}
-     | di {% (d) => (d) %}
+     | di {% (d) => ({
+  value: console.log({d}),
+  steps: d
+}) %}
 
 di -> "0" {% (d, location) => {
   const val = d.flat(Infinity)[0]; // unwrap nested array
