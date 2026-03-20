@@ -7,7 +7,7 @@ export async function sandbox() {
   const grammarText = `
     main -> bits
 
-    bits -> bits di {% '([b,d]) => b + d' %}
+    bits -> bits di {% ([b,d]) => b + d %}
          | di {% id %}
 
     di -> "0"
