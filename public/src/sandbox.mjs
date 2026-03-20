@@ -13,7 +13,7 @@ bits -> bits di {% ([b,d]) => ({
   end: d.end,
   steps: [...b.steps, d]
 }) %}
-     | di {% (b,d) => ({
+     | di {% (d) => ({
   value: d.value,
   start: d.start,
   end: d.end,
