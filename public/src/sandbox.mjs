@@ -14,7 +14,7 @@ bits -> bits di {% ([b,d]) => ({
   steps: [...b.steps, d]
 }) %}
      | di {% (d) => ({
-  value: console.log({d}),
+  value: d.value,
   steps: d
 }) %}
 
