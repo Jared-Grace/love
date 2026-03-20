@@ -3,6 +3,7 @@ import compile from "nearley/lib/compile.js";
 import generate from "nearley/lib/generate.js";
 import grammarParser from "nearley/lib/nearley-language-bootstrapped.js";
 import { log_json } from "../../../love/public/src/log_json.mjs";
+
 export async function sandbox() {
   const grammarText = `
 main -> bits {% d => d[0] %}
@@ -10,34 +11,52 @@ main -> bits {% d => d[0] %}
 bits -> bits di {% ([b,d], location) => ({
   value: b.value + d.value,
   start: b.start,
-  end: location,
+  end: d.end,
   steps: [...b.steps, d]
 }) %}
-     | di {% (d, location) => ({
+     | di {% (d) => ({
   value: d.value,
-  start: location - 1,
-  end: location,
+  start: d.start,
+  end: d.end,
   steps: [d]
 }) %}
 
-di -> "0" {% (d, location) => ({ rule: "di", value: d[0], start: location-1, end: location }) %}
-   | "1" {% (d, location) => ({ rule: "di", value: d[0], start: location-1, end: location }) %}
+di -> "0" {% (d, location) => ({
+  rule: "di",
+  value: Array.isArray(d[0]) ? d[0][0] : d[0],
+  start: location - 1,
+  end: location
+}) %}
+   | "1" {% (d, location) => ({
+  rule: "di",
+  value: Array.isArray(d[0]) ? d[0][0] : d[0],
+  start: location - 1,
+  end: location
+}) %}
 `;
-  let v = nearley.Grammar.fromCompiled(grammarParser);
-  const parserGrammar = new nearley.Parser(v);
+
+  // Parse grammar string into AST
+  const parserGrammar = new nearley.Parser(
+    nearley.Grammar.fromCompiled(grammarParser)
+  );
   parserGrammar.feed(grammarText);
   const grammarAst = parserGrammar.results[0];
+
+  // Compile AST into grammar object
   const compiled = compile(grammarAst, {});
-  const jsModule = generate(compiled, "grammar", {
-    output: "commonjs",
-  });
-  const module = {
-    exports: {},
-  };
+  const jsModule = generate(compiled, "grammar", { output: "commonjs" });
+  
+  // Eval in Node-safe environment
+  const module = { exports: {} };
   eval(jsModule);
   const grammar = module.exports;
-  let v2 = nearley.Grammar.fromCompiled(grammar);
-  const parser = new nearley.Parser(v2);
+
+  // Create parser from compiled grammar
+  const parser = new nearley.Parser(nearley.Grammar.fromCompiled(grammar));
+
+  // Parse input
   parser.feed("001");
+
+  // Log annotated parse result
   log_json(parser.results);
 }
