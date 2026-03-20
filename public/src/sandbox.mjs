@@ -15,7 +15,7 @@ bits -> bits di {% ([b,d]) => ({
      | di {% (d) => ({
   value: d.value,
   location: d.location,
-  steps: [d]
+  steps: [...d]
 }) %}
 
 di -> "0" {% (d, location) => {
