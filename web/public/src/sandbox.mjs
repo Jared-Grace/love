@@ -29,5 +29,5 @@ export async function sandbox() {
   let v2 = nearley.Grammar.fromCompiled(grammar);
   const parser = new nearley.Parser(v2);
   parser.feed("001");
-  console.log(parser.results);
+  console.log(parser.table);
 }
