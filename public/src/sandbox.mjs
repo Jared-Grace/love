@@ -42,6 +42,6 @@ di -> "0" {% (d, location) => {
   const grammar = module.exports;
   let v2 = nearley.Grammar.fromCompiled(grammar);
   const parser = new nearley.Parser(v2);
-  parser.feed("001");
+  parser.feed("0");
   log_json(parser.results);
 }
