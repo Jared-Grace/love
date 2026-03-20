@@ -3,7 +3,6 @@ import { log } from "../../../love/public/src/log.mjs";
 import nearley from "nearley";
 export async function sandbox() {
   let v2 = ["sn -> i se", "i -> di g", 'di -> "0"', 'di -> "1"'];
-  parser.feed("0.e1");
   const grammar = {
     Lexer: undefined,
     ParserRules: [
