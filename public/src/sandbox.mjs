@@ -12,7 +12,6 @@ bits -> bits di {% ([b,d]) => ({
   steps: [...b.steps, d]
 }) %}
      | di {% (d) => ({
-v:console.log({d}),
   steps: [...d]
 }) %}
 
