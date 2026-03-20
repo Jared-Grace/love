@@ -7,11 +7,11 @@ export async function sandbox() {
     ParserRules: [
       {
         name: "main",
-        symbols: ["i"],
-      },
-      {
-        name: "i",
         symbols: ["di"],
+        postprocess: function lambda(id) {
+          let r = id[0];
+          return r;
+        },
       },
       {
         name: "di",
@@ -20,6 +20,10 @@ export async function sandbox() {
             literal: "0",
           },
         ],
+        postprocess: function lambda2(id) {
+          let r2 = id[0];
+          return r2;
+        },
       },
       {
         name: "di",
@@ -28,6 +32,10 @@ export async function sandbox() {
             literal: "1",
           },
         ],
+        postprocess: function lambda3(id) {
+          let r3 = id[0];
+          return r3;
+        },
       },
     ],
     ParserStart: "main",
