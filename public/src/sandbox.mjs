@@ -1,5 +1,4 @@
 import { log_json } from "../../../love/public/src/log_json.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import nearley from "nearley";
 import compile from "nearley/lib/compile.js";
 import generate from "nearley/lib/generate.js";
@@ -30,6 +29,5 @@ export async function sandbox() {
   let v2 = nearley.Grammar.fromCompiled(grammar);
   const parser = new nearley.Parser(v2);
   parser.feed("001");
-  console.log(parser.results);
-  log_json(right);
+  log_json(parser);
 }
