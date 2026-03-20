@@ -1,47 +1,27 @@
-import { undefined } from "../../../love/public/src/undefined.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import nearley from "nearley";
+import compile from "nearley/lib/compile.js";
+import generate from "nearley/lib/generate.js";
+import grammarParser from "nearley/lib/nearley-language-bootstrapped.js";
 export async function sandbox() {
-  const grammar = {
-    Lexer: undefined,
-    ParserRules: [
-      {
-        name: "main",
-        symbols: ["di"],
-        postprocess: function lambda(id) {
-          let r = id[0];
-          return r;
-        },
-      },
-      {
-        name: "di",
-        symbols: [
-          {
-            literal: "0",
-          },
-        ],
-        postprocess: function lambda2(id) {
-          let r2 = id[0];
-          return r2;
-        },
-      },
-      {
-        name: "di",
-        symbols: [
-          {
-            literal: "1",
-          },
-        ],
-        postprocess: function lambda3(id) {
-          let r3 = id[0];
-          return r3;
-        },
-      },
-    ],
-    ParserStart: "main",
-  };
-  let v = nearley.Grammar.fromCompiled(grammar);
-  const parser = new nearley.Parser(v);
-  parser.feed("0");
+  const grammarText = `
+  main -> bits
+
+  bits -> bits di {% ([b,d]) => b + d %}
+       | di {% id %}
+
+  di -> "0"
+      | "1"
+  `;
+  let v = nearley.Grammar.fromCompiled(grammarParser);
+  const parserGrammar = new nearley.Parser(v);
+  parserGrammar.feed(grammarText);
+  const grammarAst = parserGrammar.results[0];
+  const compiled = compile(grammarAst, {});
+  const jsModule = generate(compiled, "grammar");
+  const grammar = eval(jsModule);
+  let v2 = nearley.Grammar.fromCompiled(grammar);
+  const parser = new nearley.Parser(v2);
+  parser.feed("001");
   console.log(parser.results);
 }
