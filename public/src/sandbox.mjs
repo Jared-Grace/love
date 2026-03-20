@@ -7,7 +7,20 @@ export async function sandbox() {
   const grammarText = `
 main -> bits {% (d, location, reject) => d[0] %}
 
-bits -> bits di -> "0" {% (d, location) => ({
+bits -> bits di {% ([b,d], location) => ({
+  value: b.value + d.value,
+  start: b.start,
+  end: location,
+  steps: [...b.steps, d]
+}) %}
+     | di {% (d, location) => ({
+  value: d.value,
+  start: location - 1,
+  end: location,
+  steps: [{ rule: "di", value: d, start: location-1, end: location }]
+}) %}
+
+di -> "0" {% (d, location) => ({
   rule: "di",
   value: d[0],       // "0"
   start: location - 1, // end index minus 1
@@ -20,9 +33,6 @@ di -> "1" {% (d, location) => ({
   start: location - 1,
   end: location
 }) %}
-
-di -> "0" {% (d, location) => ({ rule: "di", value: "0", start: location-1, end: location }) %}
-   | "1" {% (d, location) => ({ rule: "di", value: "1", start: location-1, end: location }) %}
 `;
   let v = nearley.Grammar.fromCompiled(grammarParser);
   const parserGrammar = new nearley.Parser(v);
