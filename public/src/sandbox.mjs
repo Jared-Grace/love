@@ -8,7 +8,6 @@ export async function sandbox() {
 main -> bits {% d => d[0] %}
 
 bits -> bits di {% ([b,d]) => ({
-  value: b,
   location: d.location,
   steps: [...b.steps, d]
 }) %}
