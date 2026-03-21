@@ -47,6 +47,10 @@ export function app_replace_rule_set_unary_to_binary_equations() {
       },
       {
         start: "d b c e = b c",
+        end: "d b c c c c e = b c c c c",
+      },
+      {
+        start: "d b c e = b c",
         end: "d b c c c e = b c c c",
       },
       {
