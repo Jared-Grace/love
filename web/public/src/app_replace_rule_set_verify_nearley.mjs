@@ -3,8 +3,8 @@ import { log } from "../../../love/public/src/log.mjs";
 import { log_json } from "../../../love/public/src/log_json.mjs";
 export function app_replace_rule_set_verify_nearley(rules) {
   log(app_replace_rule_set_verify_nearley.name, rules);
-  function lambda(item) {}
-  let mapped = list_map(list, lambda);
+  function lambda(rule) {}
+  let mapped = list_map(rules, lambda);
   return;
   const grammarText = `
 bits -> bits di {% (d) => ({
