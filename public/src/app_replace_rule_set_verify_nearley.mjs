@@ -21,7 +21,7 @@ export function app_replace_rule_set_verify_nearley(rules) {
       left: js_code_string(only),
       right: identifier,
     };
-    let list = object_to_list(o);
+    let list = object_to_list(object);
     let w = js_code_wrap_braces(inside2);
     let w2 = js_code_wrap_parenthesis(w);
     let code = js_code_arrow_args_body_expression(identifier, w2);
