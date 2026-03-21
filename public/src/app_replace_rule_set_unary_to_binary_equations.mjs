@@ -95,7 +95,7 @@ export function app_replace_rule_set_unary_to_binary_equations() {
       },
       {
         start: "b a a a d + b c c c c e = b c c c c c c c",
-        end: "b a a a + b a a c c d e = b c c c c c c c",
+        end: "b a a a + b a a d c c e = b c c c c c c c",
       },
       {
         start: "b a a d + b c e = b c c c",
