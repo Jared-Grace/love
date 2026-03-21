@@ -38,7 +38,7 @@ export function app_replace_rule_set_integer_digits() {
         end: "di di g",
       },
       {
-        start: "g",
+        start: "di di g",
         end: "7 7 7",
       },
       {
