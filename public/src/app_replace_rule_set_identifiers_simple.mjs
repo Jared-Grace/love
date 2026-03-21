@@ -65,6 +65,10 @@ export function app_replace_rule_set_identifiers_simple() {
       },
       {
         start: "idf ida ida ida",
+        end: "idf di idf idf",
+      },
+      {
+        start: "idf ida ida ida",
         end: "J 0 $ h",
       },
     ],
