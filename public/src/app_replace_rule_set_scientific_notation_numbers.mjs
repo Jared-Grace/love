@@ -68,6 +68,10 @@ export function app_replace_rule_set_scientific_notation_numbers() {
         end: "i . di di E 0",
       },
       {
+        start: "i . di di E 0",
+        end: "3 . 1 4 E 0",
+      },
+      {
         start: "sn",
         end: "3 . 1 4 E 0",
       },
