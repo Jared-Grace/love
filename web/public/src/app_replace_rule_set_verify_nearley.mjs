@@ -31,7 +31,7 @@ export function app_replace_rule_set_verify_nearley(rules) {
     return r;
   }
   let mapped = list_map(rules, lambda);
-  return mapped;
+  return 'mapped';
   const grammarText = `
 bits -> bits di {% (d) => ({
   left: 'bits',
