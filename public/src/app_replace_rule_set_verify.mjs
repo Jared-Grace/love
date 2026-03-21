@@ -40,7 +40,6 @@ export function app_replace_rule_set_verify(rule_set_get) {
     function lambda3() {
       let r = {
         goal,
-        rule_set_get: 1,
       };
       return r;
     }
