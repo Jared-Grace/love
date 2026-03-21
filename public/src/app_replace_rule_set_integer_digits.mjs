@@ -35,10 +35,10 @@ export function app_replace_rule_set_integer_digits() {
       },
       {
         start: "g",
-        end: "di di g",
+        end: "di di di",
       },
       {
-        start: "di di g",
+        start: "di di di",
         end: "7 7 7",
       },
       {
