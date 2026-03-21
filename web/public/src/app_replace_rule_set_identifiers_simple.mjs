@@ -4,8 +4,9 @@ export function app_replace_rule_set_identifiers_simple() {
     rules: [
       "id > idf",
       "id > idf idg",
-      "idg > idp",
-      "idg > idp idg",
+      "idg > ida",
+      "idg > ida idg",
+      "ida > idf",
       "idf > A",
       "idf > B",
       "idf > h",
@@ -32,6 +33,10 @@ export function app_replace_rule_set_identifiers_simple() {
       {
         start: "id",
         end: "t 3",
+      },
+      {
+        start: "id",
+        end: "l u v",
       },
       {
         start: "id",
