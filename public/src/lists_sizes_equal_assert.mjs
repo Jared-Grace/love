@@ -12,9 +12,10 @@ export function lists_sizes_equal_assert(lists) {
   }
   let a = list_all(lists, lambda3);
   function lambda2() {
-    return {
+    let r = {
       lists,
     };
+    return r;
   }
   assert_json_get(a, lambda2);
 }
