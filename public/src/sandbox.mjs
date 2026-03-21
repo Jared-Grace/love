@@ -5,8 +5,6 @@ import grammarParser from "nearley/lib/nearley-language-bootstrapped.js";
 import { log_json } from "../../../love/public/src/log_json.mjs";
 export async function sandbox() {
   const grammarText = `
-main -> bits {% d => d[0] %}
-
 bits -> bits di {% (d) => ({
   left: 'bits',
   right: d
@@ -21,7 +19,7 @@ di -> "0" {% (d) => {
   const val = d.flat(Infinity)[0]; // unwrap nested array
   return { left: "di", right: [val] };
 } %}
- 
+
 di -> "1" {% (d) => {
   const val = d.flat(Infinity)[0];
   return { left: "di", right: [val] };
