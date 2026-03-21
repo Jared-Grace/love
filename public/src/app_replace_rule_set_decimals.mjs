@@ -38,6 +38,10 @@ export function app_replace_rule_set_decimals() {
       },
       {
         start: "7 7 . di di di di",
+        end: "7 7 . 4 6 di di",
+      },
+      {
+        start: "7 7 . 4 6 di di",
         end: "7 7 . 4 6 0 7",
       },
     ],
