@@ -77,6 +77,10 @@ export function app_replace_rule_set_scientific_notation_numbers() {
       },
       {
         start: "sn",
+        end: "i . g E g",
+      },
+      {
+        start: "sn",
         end: "7 7 e 4 6 0 7",
       },
     ],
