@@ -30,6 +30,10 @@ export function app_replace_rule_set_integers() {
       },
       {
         start: "i",
+        end: "p di di",
+      },
+      {
+        start: "p di di",
         end: "9 6 9",
       },
       {
