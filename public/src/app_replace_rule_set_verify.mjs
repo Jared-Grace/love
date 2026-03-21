@@ -40,5 +40,5 @@ export function app_replace_rule_set_verify(rule_set_get) {
       return neighbors;
     }
   }
-  each(list, lambda2);
+  each(goals, lambda2);
 }
