@@ -10,9 +10,9 @@ export function app_replace_rule_set_scientific_notation_numbers() {
     "se > eE ex",
     "eE > e",
     "eE > E",
-    "ex > + i",
-    "ex > - i",
-    "ex > i",
+    "ex > + g",
+    "ex > - g",
+    "ex > g",
   ]);
   let ad = app_replace_rule_set_decimals_abbreviations();
   let abbreviations = {
