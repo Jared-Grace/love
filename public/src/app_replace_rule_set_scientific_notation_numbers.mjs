@@ -85,7 +85,7 @@ export function app_replace_rule_set_scientific_notation_numbers() {
       },
       {
         start: "p di E g",
-        end: "p di E g",
+        end: "p di E di di di di",
       },
       {
         start: "sn",
