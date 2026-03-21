@@ -30,6 +30,10 @@ export function app_replace_rule_set_decimals() {
       },
       {
         start: "de",
+        end: "p . di di di di di",
+      },
+      {
+        start: "p . di di di di di",
         end: "7 7 . 4 6 0 7",
       },
     ],
