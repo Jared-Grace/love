@@ -1,8 +1,5 @@
-import { list_join_comma_space } from "../../../love/public/src/list_join_comma_space.mjs";
-import { js_code_property } from "../../../love/public/src/js_code_property.mjs";
-import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
+import { js_code_object } from "../../../love/public/src/js_code_object.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
-import { js_code_wrap_braces } from "../../../love/public/src/js_code_wrap_braces.mjs";
 import { js_code_wrap_parenthesis } from "../../../love/public/src/js_code_wrap_parenthesis.mjs";
 import { js_code_arrow_args_body_expression } from "../../../love/public/src/js_code_arrow_args_body_expression.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
@@ -23,16 +20,7 @@ export function app_replace_rule_set_verify_nearley(rules) {
       left: js_code_string(only),
       right: identifier,
     };
-    let list = object_to_list(object);
-    function lambda2(item) {
-      let key = property_get(item, "key");
-      let value = property_get(item, "value");
-      let combined = js_code_property(key, value);
-      return combined;
-    }
-    let mapped2 = list_map(list, lambda2);
-    let v3 = list_join_comma_space(mapped2);
-    let w = js_code_wrap_braces(v3);
+    let w = js_code_object(object);
     let w2 = js_code_wrap_parenthesis(w);
     let code = js_code_arrow_args_body_expression(identifier, w2);
     let r = `${only} -> ${joined} {% ${code}
