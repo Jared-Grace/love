@@ -83,14 +83,6 @@ export function app_replace_rule_set_unary_to_binary_equations() {
       },
       {
         start: "d b c e = b c",
-        end: "b a + b a a = b a a a d",
-      },
-      {
-        start: "d b c e = b c",
-        end: "b 1 + b 1 0 = b 1 1 d",
-      },
-      {
-        start: "d b c e = b c",
         end: "b 1 0 + b 1 1 = b 1 0 1 d",
       },
     ],
