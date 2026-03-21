@@ -126,6 +126,10 @@ export function app_replace_rule_set_unary_to_binary_equations() {
         end: "b 1 1 + b a a a a = b a a a a a a a d",
       },
       {
+        start: "b 1 1 + b a a a a = b a a a a a a a d",
+        end: "b 1 1 + b 1 0 0 = b a a a a a a a d",
+      },
+      {
         start: "b 1 1 + b 1 0 0 = b a a a a a a a d",
         end: "b 1 1 + b 1 0 0 = b 1 a a a a a d",
       },
