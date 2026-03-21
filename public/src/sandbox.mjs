@@ -16,11 +16,11 @@ bits -> bits di {% (d) => ({
   right: d
 }) %}
 
-di -> "0" {% (d, location) => {
+di -> "0" {% (d) => {
   const val = d.flat(Infinity)[0]; // unwrap nested array
   return { left: "di", right: [val] };
 } %}
-   | "1" {% (d, location) => {
+   | "1" {% (d) => {
   const val = d.flat(Infinity)[0];
   return { left: "di", right: [val] };
 } %}
