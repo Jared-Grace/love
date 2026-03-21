@@ -38,6 +38,10 @@ export function app_replace_rule_set_integers() {
       },
       {
         start: "p di di di",
+        end: "5 6 di di",
+      },
+      {
+        start: "5 6 di di",
         end: "5 6 7 8",
       },
     ],
