@@ -19,6 +19,7 @@ export function app_replace_rule_set_verify(rule_set_get) {
   let start = property_get(se, "start");
   let dfs = graph_search_depth_first(start, neighbors_get, json_to, 7, end);
   let found = property_get(dfs, "found");
+  $ne;
   return dfs;
   function neighbors_get(start) {
     let r = list_size_range(start);
