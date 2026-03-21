@@ -4,7 +4,8 @@ import { log_json } from "../../../love/public/src/log_json.mjs";
 export function app_replace_rule_set_verify_nearley(rules) {
   log(app_replace_rule_set_verify_nearley.name, rules);
   function lambda(rule) {
-    return ``;
+    let r = ``;
+    return r;
   }
   let mapped = list_map(rules, lambda);
   return;
