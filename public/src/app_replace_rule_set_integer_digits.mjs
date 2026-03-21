@@ -39,6 +39,10 @@ export function app_replace_rule_set_integer_digits() {
       },
       {
         start: "g",
+        end: "g g g g g",
+      },
+      {
+        start: "g g g g g",
         end: "0 1 2 3 4",
       },
     ],
