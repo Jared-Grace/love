@@ -31,7 +31,7 @@ export function app_replace_rule_set_verify_nearley(rules) {
       let code_string = js_code_string(key);
       let code2 = js_code_wrap_brackets(code_string);
       let c = js_code_colon();
-      let combined = text_combine_multiple([code2]);
+      let combined = text_combine_multiple([code2, c, " ", value]);
     }
     let mapped2 = list_map(list, lambda2);
     let w = js_code_wrap_braces(inside2);
