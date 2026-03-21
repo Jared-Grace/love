@@ -8,9 +8,7 @@ export function app_replace_rule_set_verify_all() {
     log(app_replace_rule_set_verify_all.name, {
       rule_set_get,
     });
-    let fs = app_replace_rule_set_verify(rule_set_get);
-    function lambda2(f) {}
-    each(fs, lambda2);
+    app_replace_rule_set_verify(rule_set_get);
   }
   each(rule_set_gets, lambda);
 }
