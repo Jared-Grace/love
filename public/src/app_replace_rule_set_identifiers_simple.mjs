@@ -59,7 +59,7 @@ export function app_replace_rule_set_identifiers_simple() {
         end: "idf idf idf idf",
       },
       {
-        start: "idf ida ida ida",
+        start: "idf idf idf idf",
         end: "A B B A",
       },
       {
