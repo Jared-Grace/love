@@ -15,8 +15,8 @@ export function app_replace_rule_set_verify(rule_set_get) {
   let rs = rule_set_get();
   let rules = app_replace_rule_set_rules_get(rs);
   let goals = property_get(rs, "goals");
-  function lambda2(g) {
-    let se = app_replace_start_end_get(g);
+  function lambda2(goal) {
+    let se = app_replace_start_end_get(goal);
     let end = property_get(se, "end");
     let start = property_get(se, "start");
     let dfs = graph_search_depth_first(start, neighbors_get, json_to, 7, end);
@@ -38,7 +38,7 @@ export function app_replace_rule_set_verify(rule_set_get) {
     }
     let found = property_get(dfs, "found");
     function lambda3() {
-      return r;
+      return goal;
     }
     assert_json_get(found, lambda3);
     if (not(found)) {
