@@ -1,3 +1,4 @@
+import { assert_json_get } from "../../../love/public/src/assert_json_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
@@ -39,6 +40,10 @@ export function app_replace_rule_set_verify(rule_set_get) {
       let neighbors = list_adder(lambda);
       return neighbors;
     }
+    function lambda3() {
+      return r;
+    }
+    assert_json_get(found, lambda3);
   }
   each(goals, lambda2);
 }
