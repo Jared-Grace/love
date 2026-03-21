@@ -26,23 +26,23 @@ export function app_replace_rule_set_identifiers_simple() {
       },
       {
         start: "id",
-        end: "_1",
+        end: "_ 1",
       },
       {
         start: "id",
-        end: "t3",
+        end: "t 3",
       },
       {
         start: "id",
-        end: "luv",
+        end: "l u v",
       },
       {
         start: "id",
-        end: "ABBA",
+        end: "A B B A",
       },
       {
         start: "id",
-        end: "J0$h",
+        end: "J 0 $ h",
       },
     ],
   };
