@@ -6,6 +6,7 @@ import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
+import { log } from "../../../love/public/src/log.mjs";
 import { log_json } from "../../../love/public/src/log_json.mjs";
 export function app_replace_rule_set_verify_nearley(rules) {
   function lambda(rule) {
@@ -31,8 +32,7 @@ export function app_replace_rule_set_verify_nearley(rules) {
     return r;
   }
   let mapped = list_map(rules, lambda);
-  let r2 = "mapped";
-  return r2;
+  return mapped;
   const grammarText = `
 bits -> bits di {% (d) => ({
   left: 'bits',
