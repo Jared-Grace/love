@@ -21,12 +21,12 @@ bits -> di {% (d) => ({
 
 di -> "0" {% (d) => {
   const val = d.flat(Infinity)[0];
-  return { left: "di", right: [val] };
+  return { left: "di", right: d };
 } %}
 
 di -> "1" {% (d) => {
   const val = d.flat(Infinity)[0];
-  return { left: "di", right: [val] };
+  return { left: "di", right: d };
 } %}
 `;
   let v = nearley.Grammar.fromCompiled(grammarParser);
