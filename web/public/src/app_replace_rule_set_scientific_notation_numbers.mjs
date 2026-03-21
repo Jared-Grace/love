@@ -88,6 +88,10 @@ export function app_replace_rule_set_scientific_notation_numbers() {
         end: "p di E di di di di",
       },
       {
+        start: "p di E di di di di",
+        end: "7 7 E di di di 7",
+      },
+      {
         start: "sn",
         end: "7 7 e 4 6 0 7",
       },
