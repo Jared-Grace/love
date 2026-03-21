@@ -20,7 +20,7 @@ export function app_replace_rule_set_binary_counting() {
         end: "b 1 1 c",
       },
       {
-        start: "b 0 c",
+        start: "b 1 c",
         end: "b 1 0 1 c",
       },
       {
