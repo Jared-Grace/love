@@ -16,7 +16,7 @@ bits -> di {% (d) => ({
 }) %}
 
 di -> "0" {% (d) => {
-  const val = d.flat(Infinity)[0]; // unwrap nested array
+  const val = d.flat(Infinity)[0];
   return { left: "di", right: [val] };
 } %}
 
