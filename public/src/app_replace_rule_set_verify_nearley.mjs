@@ -9,7 +9,6 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { log_json } from "../../../love/public/src/log_json.mjs";
 export function app_replace_rule_set_verify_nearley(rules) {
-  log(app_replace_rule_set_verify_nearley.name, rules);
   function lambda(rule) {
     let left = property_get(rule, "left");
     let only = list_single(left);
