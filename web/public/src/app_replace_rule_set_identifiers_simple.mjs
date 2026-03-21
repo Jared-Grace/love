@@ -31,7 +31,7 @@ export function app_replace_rule_set_identifiers_simple() {
         end: "idf ida",
       },
       {
-        start: "id",
+        start: "idf ida",
         end: "_ 1",
       },
       {
