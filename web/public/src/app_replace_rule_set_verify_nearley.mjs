@@ -1,3 +1,4 @@
+import { js_code_wrap_braces } from "../../../love/public/src/js_code_wrap_braces.mjs";
 import { js_code_wrap_parenthesis } from "../../../love/public/src/js_code_wrap_parenthesis.mjs";
 import { js_code_arrow_args_body_expression } from "../../../love/public/src/js_code_arrow_args_body_expression.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
@@ -14,6 +15,7 @@ export function app_replace_rule_set_verify_nearley(rules) {
     let right = property_get(rule, "right");
     let joined = list_join_space(right);
     let identifier = "d";
+    let w = js_code_wrap_braces(inside2);
     let v3 = js_code_wrap_parenthesis(inside);
     let code = js_code_arrow_args_body_expression(identifier);
     let r = `${only} -> ${joined} {% ${code}
