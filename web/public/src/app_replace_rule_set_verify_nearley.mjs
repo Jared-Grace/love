@@ -4,7 +4,10 @@ import { log_json } from "../../../love/public/src/log_json.mjs";
 export function app_replace_rule_set_verify_nearley(rules) {
   log(app_replace_rule_set_verify_nearley.name, rules);
   function lambda(rule) {
-    let r = ``;
+    let r = `bits -> bits di {% (d) => ({
+  left: 'bits',
+  right: d
+}) %}`;
     return r;
   }
   let mapped = list_map(rules, lambda);
