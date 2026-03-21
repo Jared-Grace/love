@@ -10,6 +10,7 @@ export function app_replace_rule_set_identifiers_simple() {
       "idf > A",
       "idf > B",
       "idf > h",
+      "idf > J",
       "idf > l",
       "idf > t",
       "idf > u",
