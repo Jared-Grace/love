@@ -1,7 +1,6 @@
 import { equal } from "../../../love/public/src/equal.mjs";
 import { set_add } from "../../../love/public/src/set_add.mjs";
 import { set_includes } from "../../../love/public/src/set_includes.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 export function graph_search_depth_first(
@@ -52,9 +51,6 @@ export function graph_search_depth_first(
       }
     }
   }
-  log(graph_search_depth_first.name, {
-    visited,
-  });
   let r = {
     found: false,
   };
