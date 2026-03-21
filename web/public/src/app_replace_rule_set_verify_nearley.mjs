@@ -23,7 +23,7 @@ export function app_replace_rule_set_verify_nearley(rules) {
     };
     let list = object_to_list(object);
     function lambda2(item) {}
-    let mapped2 = list_map(list2, lambda2);
+    let mapped2 = list_map(list, lambda2);
     let w = js_code_wrap_braces(inside2);
     let w2 = js_code_wrap_parenthesis(w);
     let code = js_code_arrow_args_body_expression(identifier, w2);
