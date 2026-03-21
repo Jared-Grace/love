@@ -6,7 +6,6 @@ import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { each_nested_distinct } from "../../../love/public/src/each_nested_distinct.mjs";
 import { list_size_range } from "../../../love/public/src/list_size_range.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
 import { app_replace_rule_apply } from "../../../love/public/src/app_replace_rule_apply.mjs";
 import { app_replace_rule_valid } from "../../../love/public/src/app_replace_rule_valid.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -15,31 +14,31 @@ export function app_replace_rule_set_verify(rule_set_get) {
   let rs = rule_set_get();
   let rules = app_replace_rule_set_rules_get(rs);
   let goals = property_get(rs, "goals");
-  function lambda2(item) {}
-  each(list, lambda2);
-  let g = list_first(goals);
-  let se = app_replace_start_end_get(g);
-  let end = property_get(se, "end");
-  let start = property_get(se, "start");
-  let dfs = graph_search_depth_first(start, neighbors_get, json_to, 7, end);
-  let found = property_get(dfs, "found");
-  if (not(found)) {
-  }
-  return dfs;
-  function neighbors_get(start) {
-    let indices = list_size_range(start);
-    function lambda(la) {
-      each_nested_distinct(lambda3, rules, indices);
-      function lambda3(rule, index) {
-        let eq = app_replace_rule_valid(rule, index, start);
-        if (eq) {
-          let start_next = app_replace_rule_apply(rule, index, start);
-          la(start_next);
-        }
-        return eq;
-      }
+  function lambda2(g) {
+    let se = app_replace_start_end_get(g);
+    let end = property_get(se, "end");
+    let start = property_get(se, "start");
+    let dfs = graph_search_depth_first(start, neighbors_get, json_to, 7, end);
+    let found = property_get(dfs, "found");
+    if (not(found)) {
     }
-    let neighbors = list_adder(lambda);
-    return neighbors;
+    return dfs;
+    function neighbors_get(start) {
+      let indices = list_size_range(start);
+      function lambda(la) {
+        each_nested_distinct(lambda3, rules, indices);
+        function lambda3(rule, index) {
+          let eq = app_replace_rule_valid(rule, index, start);
+          if (eq) {
+            let start_next = app_replace_rule_apply(rule, index, start);
+            la(start_next);
+          }
+          return eq;
+        }
+      }
+      let neighbors = list_adder(lambda);
+      return neighbors;
+    }
   }
+  each(list, lambda2);
 }
