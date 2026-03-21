@@ -5,7 +5,7 @@ import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mj
 export function app_replace_rule_set_scientific_notation_numbers() {
   const rules = app_replace_rule_set_decimals_rules();
   list_add_multiple(rules, [
-    "sn > i se",
+    "sn > de se",
     "sn > g se",
     "se > eE ex",
     "eE > e",
