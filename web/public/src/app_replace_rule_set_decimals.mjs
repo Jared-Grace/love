@@ -22,6 +22,10 @@ export function app_replace_rule_set_decimals() {
       },
       {
         start: "de",
+        end: "p . di di",
+      },
+      {
+        start: "p . di di",
         end: "3 . 1 4",
       },
       {
