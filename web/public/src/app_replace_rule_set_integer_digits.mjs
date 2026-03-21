@@ -43,6 +43,10 @@ export function app_replace_rule_set_integer_digits() {
       },
       {
         start: "di di di di di",
+        end: "0 1 2 di di",
+      },
+      {
+        start: "di di di di di",
         end: "0 1 2 3 4",
       },
     ],
