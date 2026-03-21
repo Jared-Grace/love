@@ -9,7 +9,7 @@ export function app_replace_rule_parse(rule) {
   let middle = list_index_of(split, ">");
   let left = list_take(split, middle);
   let right = list_skip(split, middle + 1);
-  each(list, list_includes_empty_not_assert);
+  each([left, right], list_includes_empty_not_assert);
   let v = {
     left,
     right,
