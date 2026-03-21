@@ -24,9 +24,9 @@ export function app_replace_rule_set_verify(rule_set_get) {
   }
   return dfs;
   function neighbors_get(start) {
-    let r = list_size_range(start);
+    let indices = list_size_range(start);
     function lambda(la) {
-      each_nested_distinct(lambda3, rules, r);
+      each_nested_distinct(lambda3, rules, indices);
       function lambda3(rule, index) {
         let eq = app_replace_rule_valid(rule, index, start);
         if (eq) {
