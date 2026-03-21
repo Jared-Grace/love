@@ -42,6 +42,14 @@ export function app_replace_rule_set_integer_digits() {
         end: "di di di di di",
       },
       {
+        start: "g",
+        end: "di di g",
+      },
+      {
+        start: "di di g",
+        end: "di di di di di",
+      },
+      {
         start: "di di di di di",
         end: "0 1 2 di di",
       },
