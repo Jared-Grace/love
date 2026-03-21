@@ -10,7 +10,7 @@ export function app_replace_rule_parse(rule) {
   let left = list_take(split, middle);
   let right = list_skip(split, middle + 1);
   let filtered = list_filter_empty_not_is(left);
-  lists_sizes_equal_assert(lists);
+  lists_sizes_equal_assert([filtered, left]);
   let v = {
     left,
     right,
