@@ -1,4 +1,4 @@
-import { each } from "../../../love/public/src/each.mjs";
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
 import { graph_search_depth_first } from "../../../love/public/src/graph_search_depth_first.mjs";
@@ -40,5 +40,5 @@ export function app_replace_rule_set_verify(rule_set_get) {
       return neighbors;
     }
   }
-  each(goals, lambda2);
+  return list_map(goals, lambda2);
 }
