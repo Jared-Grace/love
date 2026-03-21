@@ -52,7 +52,7 @@ export function app_replace_rule_set_scientific_notation_numbers() {
         end: ". di e - g",
       },
       {
-        end: ". di e - g",
+        start: ". di e - g",
         end: ". 5 e - 1 8",
       },
       {
