@@ -8,7 +8,7 @@ export function app_replace_rule_parse(rule) {
   let middle = list_index_of(split, ">");
   let left = list_take(split, middle);
   let right = list_skip(split, middle + 1);
-  let filtered = list_filter_empty_not_is(list);
+  let filtered = list_filter_empty_not_is(left);
   let v = {
     left,
     right,
