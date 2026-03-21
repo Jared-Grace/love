@@ -16,7 +16,7 @@ export function app_replace_rule_set_identifiers_simple() {
       "idf > v",
       "idf > $",
       "idf > _",
-      "idp > di",
+      "ida > di",
       "di > 0",
       "di > 1",
       "di > 3",
@@ -31,7 +31,7 @@ export function app_replace_rule_set_identifiers_simple() {
         end: "idf ida",
       },
       {
-        start: "_ ida",
+        start: "idf ida",
         end: "_ 1",
       },
       {
