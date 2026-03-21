@@ -10,14 +10,15 @@ export function app_replace_rule_set_verify_all() {
     log(app_replace_rule_set_verify_all.name, {
       rule_set_get,
     });
-    let r = app_replace_rule_set_verify(rule_set_get);
-    function lambda2(item) {}
-    each(list, lambda2);
-    let found = property_get(r, "found");
-    function lambda3() {
-      return r;
+    let fs = app_replace_rule_set_verify(rule_set_get);
+    function lambda2(f) {
+      let found = property_get(f, "found");
+      function lambda3() {
+        return r;
+      }
+      assert_json_get(found, lambda3);
     }
-    assert_json_get(found, lambda3);
+    each(fs, lambda2);
   }
   each(rule_set_gets, lambda);
 }
