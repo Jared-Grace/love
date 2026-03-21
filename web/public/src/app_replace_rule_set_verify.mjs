@@ -40,5 +40,6 @@ export function app_replace_rule_set_verify(rule_set_get) {
       return neighbors;
     }
   }
-  return list_map(goals, lambda2);
+  let mapped = list_map(goals, lambda2);
+  return mapped;
 }
