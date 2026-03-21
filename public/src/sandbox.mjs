@@ -7,22 +7,22 @@ export async function sandbox() {
   const grammarText = `
 main -> bits {% d => d[0] %}
 
-bits -> bits di {% ([b,d]) => ({
+bits -> bits di {% (d) => ({
   left: 'bits',
-  right: [b, d]
+  right: d
 }) %}
-     | di {% ([d]) => ({
+     | di {% (d) => ({
   left: 'bits',
   right: d
 }) %}
 
 di -> "0" {% (d, location) => {
   const val = d.flat(Infinity)[0]; // unwrap nested array
-  return { left: "di", right: val };
+  return { left: "di", right: [val] };
 } %}
    | "1" {% (d, location) => {
   const val = d.flat(Infinity)[0];
-  return { left: "di", right: val };
+  return { left: "di", right: [val] };
 } %}
 `;
   let v = nearley.Grammar.fromCompiled(grammarParser);
