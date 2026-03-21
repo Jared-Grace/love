@@ -29,15 +29,15 @@ export function app_replace_rule_set_scientific_notation_numbers() {
     goals: [
       {
         start: "sn",
-        end: "i . e g",
+        end: "i . e di",
       },
       {
-        start: "i . e i",
+        start: "i . e di",
         end: "0 . e 1",
       },
       {
         start: "sn",
-        end: "i . E + g g",
+        end: "i . E + di di",
       },
       {
         start: "sn",
