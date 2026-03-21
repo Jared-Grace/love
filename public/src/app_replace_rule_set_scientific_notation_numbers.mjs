@@ -49,11 +49,10 @@ export function app_replace_rule_set_scientific_notation_numbers() {
       },
       {
         start: "sn",
-        end: ". 5 e - 1 8",
         end: ". di e - g",
       },
       {
-        start: "sn",
+        end: ". di e - g",
         end: ". 5 e - 1 8",
       },
       {
