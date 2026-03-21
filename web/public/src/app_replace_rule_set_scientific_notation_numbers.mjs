@@ -44,6 +44,10 @@ export function app_replace_rule_set_scientific_notation_numbers() {
         end: "i . E + di di",
       },
       {
+        start: "i . E + di di",
+        end: "2 . E + 3 9",
+      },
+      {
         start: "sn",
         end: "2 . E + 3 9",
       },
