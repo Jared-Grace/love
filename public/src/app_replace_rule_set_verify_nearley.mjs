@@ -4,6 +4,7 @@ export function app_replace_rule_set_verify_nearley(rs) {
   log(app_replace_rule_set_verify_nearley.name, {
     rs,
   });
+  return;
   const grammarText = `
 bits -> bits di {% (d) => ({
   left: 'bits',
