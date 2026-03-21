@@ -39,10 +39,10 @@ export function app_replace_rule_set_integer_digits() {
       },
       {
         start: "g",
-        end: "g g g g g",
+        end: "di di di di di",
       },
       {
-        start: "g g g g g",
+        start: "di di di di di",
         end: "0 1 2 3 4",
       },
     ],
