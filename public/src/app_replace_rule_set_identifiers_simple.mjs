@@ -28,11 +28,11 @@ export function app_replace_rule_set_identifiers_simple() {
       },
       {
         start: "id",
-        end: "_ 1",
+        end: "idf ida",
       },
       {
         start: "id",
-        end: "idf ida",
+        end: "_ 1",
       },
       {
         start: "id",
