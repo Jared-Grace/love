@@ -37,7 +37,7 @@ export function app_replace_rule_set_decimals() {
         end: "7 7 . 4 di di di",
       },
       {
-        start: "7 7 . 4 di di di",
+        start: "7 7 . di di di di",
         end: "7 7 . 4 6 0 7",
       },
     ],
