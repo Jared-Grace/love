@@ -2,6 +2,7 @@ import { js_code_braces_empty } from "../../../love/public/src/js_code_braces_em
 import { js_code_parenthesis_open_close } from "../../../love/public/src/js_code_parenthesis_open_close.mjs";
 export function js_code_arrow() {
   let oc = js_code_parenthesis_open_close();
-  const code = oc + "=>" + js_code_braces_empty();
+  const b = js_code_braces_empty();
+  const code = oc + "=>" + b;
   return code;
 }
