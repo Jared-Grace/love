@@ -18,6 +18,7 @@ export function app_replace_rule_set_identifiers_simple() {
       "idp > di",
       "di > 0",
       "di > 1",
+      "di > 3",
     ],
     goals: [
       {
