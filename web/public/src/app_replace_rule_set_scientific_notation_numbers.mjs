@@ -77,11 +77,15 @@ export function app_replace_rule_set_scientific_notation_numbers() {
       },
       {
         start: "sn",
-        end: "i . g E g",
+        end: "i . E g",
       },
       {
-        start: "i . g E g",
-        end: "p di . g E g",
+        start: "i E g",
+        end: "p di E g",
+      },
+      {
+        start: "p di E g",
+        end: "p di E g",
       },
       {
         start: "sn",
