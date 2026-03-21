@@ -9,6 +9,7 @@ export function app_replace_rule_set_verify_nearley(rules) {
     let left = property_get(rule, "left");
     let only = list_single(left);
     let right = property_get(rule, "right");
+    log_json(right2);
     let r = `${only} -> bits di {% (d) => ({
   left: 'bits',
   right: d
