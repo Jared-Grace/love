@@ -26,7 +26,7 @@ export function app_replace_rule_set_verify_nearley(rules) {
     function lambda2(item) {
       let key = property_get(item, "key");
       let value = property_get(item, "value");
-      let combined = text_combine_multiple(list2);
+      let combined = text_combine_multiple([key]);
     }
     let mapped2 = list_map(list, lambda2);
     let w = js_code_wrap_braces(inside2);
