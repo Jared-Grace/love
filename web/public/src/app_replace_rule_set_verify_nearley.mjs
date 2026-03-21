@@ -10,9 +10,9 @@ export function app_replace_rule_set_verify_nearley(rules) {
     let left = property_get(rule, "left");
     let only = list_single(left);
     let right = property_get(rule, "right");
-    let joined = list_join_space(list);
-    let r = `${only} -> bits di {% (d) => ({
-  left: 'bits',
+    let joined = list_join_space(right);
+    let r = `${only} -> ${joined} {% (d) => ({
+  left: '${only}',
   right: d
 }) %}`;
     return r;
