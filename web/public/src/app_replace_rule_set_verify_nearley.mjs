@@ -12,6 +12,7 @@ export function app_replace_rule_set_verify_nearley(rules) {
     let only = list_single(left);
     let right = property_get(rule, "right");
     let joined = list_join_space(right);
+    let identifier = "d";
     let code = js_code_arrow_args_body();
     let r = `${only} -> ${joined} {% ${code}
     
