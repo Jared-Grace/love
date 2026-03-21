@@ -1,2 +1,1 @@
-export async function sandbox() {
-}
+export async function sandbox() {}
