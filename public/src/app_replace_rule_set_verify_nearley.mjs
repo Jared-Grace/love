@@ -1,3 +1,4 @@
+import { each_object } from "../../../love/public/src/each_object.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { js_code_wrap_braces } from "../../../love/public/src/js_code_wrap_braces.mjs";
 import { js_code_wrap_parenthesis } from "../../../love/public/src/js_code_wrap_parenthesis.mjs";
@@ -20,6 +21,8 @@ export function app_replace_rule_set_verify_nearley(rules) {
       left: js_code_string(only),
       right: identifier,
     };
+    function lambda2(value, property) {}
+    each_object(object2, lambda2);
     let w = js_code_wrap_braces(inside2);
     let w2 = js_code_wrap_parenthesis(w);
     let code = js_code_arrow_args_body_expression(identifier, w2);
