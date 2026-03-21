@@ -1,4 +1,4 @@
-import { js_code_arrow_args_body } from "../../../love/public/src/js_code_arrow_args_body.mjs";
+import { js_code_arrow_args_body_expression } from "../../../love/public/src/js_code_arrow_args_body_expression.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -13,7 +13,7 @@ export function app_replace_rule_set_verify_nearley(rules) {
     let right = property_get(rule, "right");
     let joined = list_join_space(right);
     let identifier = "d";
-    let code = js_code_arrow_args_body(identifier);
+    let code = js_code_arrow_args_body_expression(identifier);
     let r = `${only} -> ${joined} {% ${code}
     
     (d) => ({
