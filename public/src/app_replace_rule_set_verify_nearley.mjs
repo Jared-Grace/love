@@ -1,3 +1,4 @@
+import { js_code_arrow_args_body } from "../../../love/public/src/js_code_arrow_args_body.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -11,7 +12,10 @@ export function app_replace_rule_set_verify_nearley(rules) {
     let only = list_single(left);
     let right = property_get(rule, "right");
     let joined = list_join_space(right);
-    let r = `${only} -> ${joined} {% (d) => ({
+    let code = js_code_arrow_args_body();
+    let r = `${only} -> ${joined} {% ${code}
+    
+    (d) => ({
   left: '${only}',
   right: d
 }) %}`;
