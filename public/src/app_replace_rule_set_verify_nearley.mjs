@@ -22,7 +22,10 @@ export function app_replace_rule_set_verify_nearley(rules) {
       right: identifier,
     };
     let list = object_to_list(object);
-    function lambda2(item) {}
+    function lambda2(item) {
+      let key = property_get(item, "key");
+      let value = property_get(item, "value");
+    }
     let mapped2 = list_map(list, lambda2);
     let w = js_code_wrap_braces(inside2);
     let w2 = js_code_wrap_parenthesis(w);
