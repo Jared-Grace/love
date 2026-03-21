@@ -1,3 +1,4 @@
+import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -9,7 +10,7 @@ export function app_replace_rule_set_verify_nearley(rules) {
     let left = property_get(rule, "left");
     let only = list_single(left);
     let right = property_get(rule, "right");
-    log_json(right2);
+    let joined = list_join_space(list);
     let r = `${only} -> bits di {% (d) => ({
   left: 'bits',
   right: d
