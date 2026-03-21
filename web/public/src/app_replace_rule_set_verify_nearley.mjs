@@ -1,6 +1,4 @@
-import { js_code_colon } from "../../../love/public/src/js_code_colon.mjs";
-import { js_code_wrap_brackets } from "../../../love/public/src/js_code_wrap_brackets.mjs";
-import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
+import { js_code_property } from "../../../love/public/src/js_code_property.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { js_code_wrap_braces } from "../../../love/public/src/js_code_wrap_braces.mjs";
@@ -28,10 +26,7 @@ export function app_replace_rule_set_verify_nearley(rules) {
     function lambda2(item) {
       let key = property_get(item, "key");
       let value = property_get(item, "value");
-      let code_string = js_code_string(key);
-      let code2 = js_code_wrap_brackets(code_string);
-      let c = js_code_colon();
-      let combined = text_combine_multiple([code2, c, " ", value]);
+      let combined = js_code_property(key, value);
       return combined;
     }
     let mapped2 = list_map(list, lambda2);
