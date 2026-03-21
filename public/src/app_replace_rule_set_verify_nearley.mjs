@@ -1,5 +1,5 @@
 import { log_json } from "../../../love/public/src/log_json.mjs";
-export function app_replace_rule_set_verify_nearley() {
+export function app_replace_rule_set_verify_nearley(fn) {
   const grammarText = `
 bits -> bits di {% (d) => ({
   left: 'bits',
