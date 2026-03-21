@@ -7,9 +7,9 @@ export function app_replace_rule_set_verify_nearley(rules) {
   log(app_replace_rule_set_verify_nearley.name, rules);
   function lambda(rule) {
     let left = property_get(rule, "left");
-    let only = list_single(list);
+    let only = list_single(left);
     let right = property_get(rule, "right");
-    let r = `bits -> bits di {% (d) => ({
+    let r = `${only} -> bits di {% (d) => ({
   left: 'bits',
   right: d
 }) %}`;
