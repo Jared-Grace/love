@@ -19,7 +19,7 @@ export function app_replace_rule_set_verify(rule_set_get) {
     let se = app_replace_start_end_get(goal);
     let end = property_get(se, "end");
     let start = property_get(se, "start");
-    let dfs = graph_search_depth_first(start, neighbors_get, json_to, 10, end);
+    let dfs = graph_search_depth_first(start, neighbors_get, json_to, 11, end);
     function neighbors_get(start) {
       let indices = list_size_range(start);
       function lambda(la) {
