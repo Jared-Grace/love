@@ -32,6 +32,10 @@ export function app_replace_rule_set_identifiers_simple() {
       },
       {
         start: "id",
+        end: "idf ida",
+      },
+      {
+        start: "id",
         end: "t 3",
       },
       {
