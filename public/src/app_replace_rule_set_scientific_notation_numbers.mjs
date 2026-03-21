@@ -29,7 +29,7 @@ export function app_replace_rule_set_scientific_notation_numbers() {
     goals: [
       {
         start: "sn",
-        end: "i . e i",
+        end: "i . e g",
       },
       {
         start: "i . e i",
@@ -37,7 +37,7 @@ export function app_replace_rule_set_scientific_notation_numbers() {
       },
       {
         start: "sn",
-        end: "i . E + i i",
+        end: "i . E + g g",
       },
       {
         start: "sn",
