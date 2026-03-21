@@ -7,6 +7,10 @@ import { list_single } from "../../../love/public/src/list_single.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log_json } from "../../../love/public/src/log_json.mjs";
+import nearley from "nearley";
+import compile from "nearley/lib/compile.js";
+import generate from "nearley/lib/generate.js";
+import grammarParser from "nearley/lib/nearley-language-bootstrapped.js";
 export function app_replace_rule_set_verify_nearley(rules) {
   const grammarText = `
 bits -> bits di {% (d) => ({
