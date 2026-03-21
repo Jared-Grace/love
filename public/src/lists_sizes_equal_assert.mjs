@@ -1,5 +1,4 @@
 import { assert_json_get } from "../../../love/public/src/assert_json_get.mjs";
-import { assert } from "../../../love/public/src/assert.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -12,7 +11,10 @@ export function lists_sizes_equal_assert(lists) {
     return v;
   }
   let a = list_all(lists, lambda3);
-  function lambda2() {}
-  assert_json_get(b, lambda2);
-  assert(a);
+  function lambda2() {
+    return {
+      lists,
+    };
+  }
+  assert_json_get(a, lambda2);
 }
