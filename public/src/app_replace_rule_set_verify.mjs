@@ -38,7 +38,10 @@ export function app_replace_rule_set_verify(rule_set_get) {
     }
     let found = property_get(dfs, "found");
     function lambda3() {
-      return goal;
+      let r = {
+        goal,
+      };
+      return r;
     }
     assert_json_get(found, lambda3);
     if (not(found)) {
