@@ -1,3 +1,4 @@
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
 import { js_code_wrap_braces } from "../../../love/public/src/js_code_wrap_braces.mjs";
@@ -25,6 +26,7 @@ export function app_replace_rule_set_verify_nearley(rules) {
     function lambda2(item) {
       let key = property_get(item, "key");
       let value = property_get(item, "value");
+      let combined = text_combine_multiple(list2);
     }
     let mapped2 = list_map(list, lambda2);
     let w = js_code_wrap_braces(inside2);
