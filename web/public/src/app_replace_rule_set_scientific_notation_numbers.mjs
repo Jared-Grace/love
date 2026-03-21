@@ -41,10 +41,10 @@ export function app_replace_rule_set_scientific_notation_numbers() {
       },
       {
         start: "i . E + g",
-        end: "i . E + di di",
+        end: "2 . E + di di",
       },
       {
-        start: "i . E + di di",
+        start: "2 . E + di di",
         end: "2 . E + 3 9",
       },
       {
