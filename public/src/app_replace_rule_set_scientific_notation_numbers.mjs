@@ -65,11 +65,11 @@ export function app_replace_rule_set_scientific_notation_numbers() {
       },
       {
         start: "i . g E di",
-        end: "3 . di di E 0",
+        end: "i . di di E 0",
       },
       {
-        start: "3 . di di E 0",
-        end: "3 . 1 4 E 0",
+        start: "i . di di E 0",
+        end: "3 . 1 di E 0",
       },
       {
         start: "sn",
