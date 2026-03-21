@@ -8,5 +8,6 @@ import grammarParser from "nearley/lib/nearley-language-bootstrapped.js";
 export async function sandbox() {
   let rs = app_replace_rule_set_scientific_notation_numbers();
   let rules = app_replace_rule_set_rules_get(rs);
-  return app_replace_rule_set_verify_nearley(rules);
+  let r = app_replace_rule_set_verify_nearley(rules);
+  return r;
 }
