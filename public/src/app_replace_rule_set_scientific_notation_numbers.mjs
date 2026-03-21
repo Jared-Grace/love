@@ -37,6 +37,10 @@ export function app_replace_rule_set_scientific_notation_numbers() {
       },
       {
         start: "sn",
+        end: "i . E + g",
+      },
+      {
+        start: "sn",
         end: "i . E + di di",
       },
       {
