@@ -1,4 +1,4 @@
-import { null_is } from "../../../love/public/src/null_is.mjs";
+import { not } from "../../../love/public/src/not.mjs";
 import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
 import { graph_search_depth_first } from "../../../love/public/src/graph_search_depth_first.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -20,7 +20,7 @@ export function app_replace_rule_set_verify(rule_set_get) {
   let start = property_get(se, "start");
   let dfs = graph_search_depth_first(start, neighbors_get, json_to, 7, end);
   let found = property_get(dfs, "found");
-  if (null_is(value)) {
+  if (not(b)) {
   }
   return dfs;
   function neighbors_get(start) {
