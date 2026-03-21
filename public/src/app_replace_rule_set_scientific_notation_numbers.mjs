@@ -77,23 +77,23 @@ export function app_replace_rule_set_scientific_notation_numbers() {
       },
       {
         start: "sn",
-        end: "i . E g",
+        end: "i . e g",
       },
       {
-        start: "i E g",
-        end: "p di E g",
+        start: "i e g",
+        end: "p di e g",
       },
       {
-        start: "p di E g",
-        end: "p di E di di di di",
+        start: "p di e g",
+        end: "p di e di di di di",
       },
       {
-        start: "p di E di di di di",
+        start: "p di e di di di di",
         end: "7 7 E di di di di",
       },
       {
-        start: "7 7 E di di di di",
-        end: "7 7 E 4 6 di di",
+        start: "7 7 e di di di di",
+        end: "7 7 e 4 6 di di",
       },
       {
         start: "7 7 E 4 6 di di",
