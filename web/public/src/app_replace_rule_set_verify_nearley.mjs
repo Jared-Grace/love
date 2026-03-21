@@ -1,3 +1,4 @@
+import { list_join_comma_space } from "../../../love/public/src/list_join_comma_space.mjs";
 import { js_code_property } from "../../../love/public/src/js_code_property.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
@@ -30,6 +31,7 @@ export function app_replace_rule_set_verify_nearley(rules) {
       return combined;
     }
     let mapped2 = list_map(list, lambda2);
+    let v3 = list_join_comma_space(args);
     let w = js_code_wrap_braces(inside2);
     let w2 = js_code_wrap_parenthesis(w);
     let code = js_code_arrow_args_body_expression(identifier, w2);
