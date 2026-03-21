@@ -32,6 +32,10 @@ export function app_replace_rule_set_scientific_notation_numbers() {
         end: "i . e i",
       },
       {
+        start: "i . e i",
+        end: "0 . e 1",
+      },
+      {
         start: "sn",
         end: "2 . E + 3 9",
       },
