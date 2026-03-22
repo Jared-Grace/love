@@ -8,7 +8,6 @@ import { json_to } from "../../../love/public/src/json_to.mjs";
 import { graph_search_depth_first } from "../../../love/public/src/graph_search_depth_first.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
-import { app_replace_rule_set_verify } from "../../../love/public/src/app_replace_rule_set_verify.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 export function app_replace_rule_set_verify_goal(goal, rules) {
   log(app_replace_rule_set_verify_goal.name, {
