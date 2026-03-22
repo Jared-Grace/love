@@ -6,5 +6,5 @@ export async function ebible_version_readaloud_download_refresh(bible_folder) {
     ebible_version_readaloud_download_zip_delete,
     ebible_version_readaloud_download,
   ];
-  let r = await invoke_multiple_arg_async(fns, bible_folder);
+  await invoke_multiple_arg_async(fns, bible_folder);
 }
