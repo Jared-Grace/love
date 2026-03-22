@@ -135,7 +135,7 @@ export async function app_replace_rule_set(context) {
       let ceiling = ceil(divided);
       list_shuffle(start_indices);
       list_swap_first(start_indices, index_symbol);
-      let taken2 = list_take(start_indices, ceiling);
+      start_indices = list_take(start_indices, ceiling);
     } else {
       button_rule_on_click_inner(index_rule);
     }
