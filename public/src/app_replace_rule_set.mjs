@@ -129,7 +129,7 @@ export async function app_replace_rule_set(context) {
     }
     let list3 = list_adder(lambda12);
     log(app_replace_rule_set.name, {
-      dfs,
+      list3,
     });
   }
   let left2 = emoji_question();
