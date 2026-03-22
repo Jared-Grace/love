@@ -111,6 +111,8 @@ export async function app_replace_rule_set(context) {
   let b = app_replace_button(parent, combined, lambda11);
   let rs = app_replace_rule_set_get(context);
   let goals = property_get(rs, "goals");
+  let goal_index = storage_local_get_context(context, "goal_index");
+  let goal = list_get(goals, goal_index);
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
   let exists2 = property_exists(rs, "abbreviations");
@@ -129,8 +131,6 @@ export async function app_replace_rule_set(context) {
     }
     each(list2, lambda6);
   }
-  let goal_index = storage_local_get_context(context, "goal_index");
-  let goal = list_get(goals, goal_index);
   let r4 = app_replace_start_end_get(goal);
   let start = property_get(r4, "start");
   let end = property_get(r4, "end");
