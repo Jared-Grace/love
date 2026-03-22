@@ -11,7 +11,7 @@ import { app_replace_start_end_get } from "../../../love/public/src/app_replace_
 import { app_replace_rule_set_verify } from "../../../love/public/src/app_replace_rule_set_verify.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 export function app_replace_rule_set_verify_goal(goal, rules) {
-  log(app_replace_rule_set_verify.name, {
+  log(app_replace_rule_set_verify_goal.name, {
     goal,
   });
   let se = app_replace_start_end_get(goal);
