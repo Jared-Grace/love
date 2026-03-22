@@ -1,7 +1,6 @@
 import { log } from "../../../love/public/src/log.mjs";
 import { assert_json_get } from "../../../love/public/src/assert_json_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
-import { not } from "../../../love/public/src/not.mjs";
 import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
 import { graph_search_depth_first } from "../../../love/public/src/graph_search_depth_first.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
@@ -48,8 +47,6 @@ export function app_replace_rule_set_verify(rule_set_get) {
       return r;
     }
     assert_json_get(found, lambda3);
-    if (not(found)) {
-    }
     return dfs;
   }
   each(goals, lambda2);
