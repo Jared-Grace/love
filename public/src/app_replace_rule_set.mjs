@@ -113,7 +113,7 @@ export async function app_replace_rule_set(context) {
   function lambda11() {
     let path = app_replace_rule_set_verify_goal_path(goal, rules_parsed);
     log(app_replace_rule_set.name, {
-      mapped3: path,
+       path,
     });
   }
   let left2 = emoji_question();
