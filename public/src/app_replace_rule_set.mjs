@@ -128,7 +128,7 @@ export async function app_replace_rule_set(context) {
     let index_symbol = property_get(second, "index");
     if (equal(index_rule, index_selected)) {
       let size = list_size(list);
-      let r22 = divide(top, bottom);
+      let r22 = divide(size, 2);
       let ceiling = ceil(p2);
       let taken2 = list_shuffle_take(list3, count);
     } else {
