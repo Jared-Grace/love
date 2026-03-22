@@ -29,7 +29,7 @@ export function graph_search_depth_first(
     }
     let m = mapper(node);
     set_add(visited, m);
-    if (equal(m, mt)) {
+    if (equal(m, mt)) {la
       let r2 = {
         found: true,
         node,
