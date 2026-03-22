@@ -1,8 +1,7 @@
+import { list_size_half_ceil } from "../../../love/public/src/list_size_half_ceil.mjs";
 import { list_swap_first } from "../../../love/public/src/list_swap_first.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
-import { half } from "../../../love/public/src/half.mjs";
-import { ceil } from "../../../love/public/src/ceil.mjs";
 import { list_size_range } from "../../../love/public/src/list_size_range.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
@@ -130,9 +129,7 @@ export async function app_replace_rule_set(context) {
     let index_rule = list_index_of(rules_parsed, rule3);
     let index_symbol = property_get(second, "index");
     if (equal(index_rule, index_selected)) {
-      let size = list_size(start_indices);
-      let divided = half(size);
-      let ceiling = ceil(divided);
+      let ceiling = list_size_half_ceil(start_indices);
       list_shuffle(start_indices);
       list_swap_first(start_indices, index_symbol);
       start_indices = list_take(start_indices, ceiling);
