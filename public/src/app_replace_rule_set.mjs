@@ -100,6 +100,8 @@ export async function app_replace_rule_set(context) {
   app_replace_button_home(root, context);
   app_replace_button_screen(context, app_replace_goals, root, "Goals");
   app_replace_button_screen(context, app_replace_rule_set, root, "Start over");
+  function lambda11() {}
+  let b = app_replace_button(parent, text2, lambda11);
   let rs = app_replace_rule_set_get(context);
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
