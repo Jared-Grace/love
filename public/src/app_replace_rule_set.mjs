@@ -1,8 +1,6 @@
+import { list_linked_to_list } from "../../../love/public/src/list_linked_to_list.mjs";
 import { list_reverse } from "../../../love/public/src/list_reverse.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { null_is } from "../../../love/public/src/null_is.mjs";
-import { list_adder } from "../../../love/public/src/list_adder.mjs";
-import { each_range } from "../../../love/public/src/each_range.mjs";
 import { app_replace_rule_set_verify_goal_depth_max } from "../../../love/public/src/app_replace_rule_set_verify_goal_depth_max.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_rule_set_verify_goal } from "../../../love/public/src/app_replace_rule_set_verify_goal.mjs";
@@ -119,18 +117,7 @@ export async function app_replace_rule_set(context) {
     let dfs = app_replace_rule_set_verify_goal(goal, rules_parsed);
     let max_depth = app_replace_rule_set_verify_goal_depth_max();
     const property_name = "previous";
-    function lambda12(la) {
-      la(dfs);
-      function lambda10(i) {
-        dfs = property_get(dfs, property_name);
-        if (null_is(dfs)) {
-          return true;
-        }
-        la(dfs);
-      }
-      each_range(max_depth, lambda10);
-    }
-    let list3 = list_adder(lambda12);
+    let list3 = list_linked_to_list(dfs, property_name, max_depth);
     let mapped3 = list_map_property(list3, "data");
     list_reverse(mapped3);
     log(app_replace_rule_set.name, {
