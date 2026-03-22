@@ -1,5 +1,5 @@
+import { half } from "../../../love/public/src/half.mjs";
 import { ceil } from "../../../love/public/src/ceil.mjs";
-import { divide } from "../../../love/public/src/divide.mjs";
 import { list_size_range } from "../../../love/public/src/list_size_range.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
@@ -418,7 +418,3 @@ export async function app_replace_rule_set(context) {
     refresh();
   }
 }
-function half(size) {
-  return divide(size, 2);
-}
-
