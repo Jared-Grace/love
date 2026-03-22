@@ -14,6 +14,6 @@ export function list_linked_to_list(node_first, property_name_next, max_depth) {
     }
     each_range(max_depth, lambda10);
   }
-  let list3 = list_adder(lambda12);
-  return list3;
+  let list = list_adder(lambda12);
+  return list;
 }
