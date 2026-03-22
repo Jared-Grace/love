@@ -42,7 +42,14 @@ export function app_replace_rule_set_verify_goal(goal, rules_parsed) {
       }
     }
     let neighbors = list_adder(lambda);
-    return neighbors;
+    let r2 = {
+      neighbors,
+      data: {
+        rule,
+        index,
+      },
+    };
+    return r2;
   }
   let found = property_get(dfs, "found");
   function lambda3() {
