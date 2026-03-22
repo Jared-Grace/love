@@ -119,7 +119,8 @@ export async function app_replace_rule_set(context) {
     function lambda12(la) {
       function lambda10(i) {
         let previous = property_get(dfs, "previous");
-        if (null_is(value3)) {
+        if (null_is(previous)) {
+          return true;
         }
       }
       each_range(max_depth, lambda10);
