@@ -28,7 +28,7 @@ export function graph_search_depth_first(
       continue;
     }
     let m = mapper(node);
-    let r4 = set_add(visited, m);
+    set_add(visited, m);
     if (equal(m, mt)) {
       let r2 = {
         found: true,
