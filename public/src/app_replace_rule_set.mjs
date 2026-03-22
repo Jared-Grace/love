@@ -118,10 +118,11 @@ export async function app_replace_rule_set(context) {
   function lambda11() {
     let dfs = app_replace_rule_set_verify_goal(goal, rules_parsed);
     let max_depth = app_replace_rule_set_verify_goal_depth_max();
+    const property_name = "previous";
     function lambda12(la) {
       la(dfs);
       function lambda10(i) {
-        dfs = property_get(dfs, "previous");
+        dfs = property_get(dfs, property_name);
         if (null_is(dfs)) {
           return true;
         }
