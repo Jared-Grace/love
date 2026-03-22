@@ -1,3 +1,4 @@
+import { app_replace_rule_set_verify_goal } from "../../../love/public/src/app_replace_rule_set_verify_goal.mjs";
 import { emoji_question } from "../../../love/public/src/emoji_question.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
@@ -102,7 +103,9 @@ export async function app_replace_rule_set(context) {
   app_replace_button_home(root, context);
   app_replace_button_screen(context, app_replace_goals, root, "Goals");
   app_replace_button_screen(context, app_replace_rule_set, root, "Start over");
-  function lambda11() {}
+  function lambda11() {
+    app_replace_rule_set_verify_goal(goal, rules);
+  }
   let left2 = emoji_question();
   let combined = text_combine(left2, " Hint");
   let b = app_replace_button(parent, combined, lambda11);
