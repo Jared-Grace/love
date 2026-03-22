@@ -107,8 +107,9 @@ export async function app_replace_rule_set(context) {
   let goals = property_get(rs, "goals");
   let goal_index = storage_local_get_context(context, "goal_index");
   let goal = list_get(goals, goal_index);
+  let rules_parsed = app_replace_rule_set_rules_get(rs);
   function lambda11() {
-    app_replace_rule_set_verify_goal(goal, rules);
+    app_replace_rule_set_verify_goal(goal, rules_parsed);
   }
   let left2 = emoji_question();
   let combined = text_combine(left2, " Hint");
@@ -136,7 +137,6 @@ export async function app_replace_rule_set(context) {
   let end = property_get(r4, "end");
   let index_selected = null;
   let label_rules = html_p(root);
-  let rules_parsed = app_replace_rule_set_rules_get(rs);
   let symbols_invalid_chosen = {};
   let div_rules_buttons = html_div(root);
   let label_symbols = html_p(root);
