@@ -130,6 +130,7 @@ export async function app_replace_rule_set(context) {
     let index_rule = list_index_of(rules_parsed, rule3);
     let index_symbol = property_get(second, "index");
     if (equal(index_rule, index_selected)) {
+      let item2 = list_get(list4, index4);
       let size = list_size(list);
       let divided = half(size);
       let ceiling = ceil(divided);
