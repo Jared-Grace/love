@@ -111,9 +111,9 @@ export async function app_replace_rule_set(context) {
   let rules_parsed = app_replace_rule_set_rules_get(rs);
   let index_selected = null;
   function lambda11() {
-    let path = app_replace_rule_set_verify_goal_path(goal, rules_parsed);
+    let path = app_replace_rule_set_verify_goal_path(goal, rules_parsed);list_second
     log(app_replace_rule_set.name, {
-      path,
+       path,
     });
   }
   let left2 = emoji_question();
