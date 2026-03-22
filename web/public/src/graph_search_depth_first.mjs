@@ -39,7 +39,7 @@ export function graph_search_depth_first(
     if (depth >= max_depth) {
       continue;
     }
-    const neighbors = neighbors_get(node) || [];
+    const {neighbors,data} = neighbors_get(node);
     for (const n of neighbors) {
       let json3 = mapper(n);
       let b = set_includes(visited, json3);
