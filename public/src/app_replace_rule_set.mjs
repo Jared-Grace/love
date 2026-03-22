@@ -1,5 +1,4 @@
-import { list_swap } from "../../../love/public/src/list_swap.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
+import { list_swap_first } from "../../../love/public/src/list_swap_first.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { half } from "../../../love/public/src/half.mjs";
@@ -424,8 +423,3 @@ export async function app_replace_rule_set(context) {
     refresh();
   }
 }
-function list_swap_first(start_indices, index_symbol) {
-  let first = list_first(start_indices);
-  list_swap(start_indices, first, index_symbol);
-}
-
