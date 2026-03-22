@@ -1,3 +1,4 @@
+import { list_size_range } from "../../../love/public/src/list_size_range.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { list_second } from "../../../love/public/src/list_second.mjs";
@@ -115,6 +116,7 @@ export async function app_replace_rule_set(context) {
   let index_selected = null;
   let r4 = app_replace_start_end_get(goal);
   let start = property_get(r4, "start");
+  let r5 = list_size_range(start2);
   let end = property_get(r4, "end");
   function lambda11() {
     let path = app_replace_rule_set_verify_goal_path(goal, rules_parsed);
