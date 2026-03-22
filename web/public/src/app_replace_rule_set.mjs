@@ -114,6 +114,9 @@ export async function app_replace_rule_set(context) {
   function lambda11() {
     let path = app_replace_rule_set_verify_goal_path(goal, rules_parsed);
     let second = list_second(path);
+    let rule3 = property_get(second, "rule");
+    let index4 = property_get(second, "index");
+    button_rule_on_click_inner(index);
     log(app_replace_rule_set.name, {
       second,
     });
