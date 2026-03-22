@@ -115,10 +115,13 @@ export async function app_replace_rule_set(context) {
   function lambda11() {
     let dfs = app_replace_rule_set_verify_goal(goal, rules_parsed);
     let max_depth = app_replace_rule_set_verify_goal_depth_max();
-    function lambda12(la) {}
+    function lambda12(la) {
+      function lambda10(i) {
+        let previous = property_get(dfs, "previous");
+      }
+      each_range(max_depth, lambda10);
+    }
     let list3 = list_adder(lambda12);
-    function lambda10(i) {}
-    each_range(max_depth, lambda10);
     log(app_replace_rule_set.name, {
       dfs,
     });
