@@ -1,3 +1,4 @@
+import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { list_second } from "../../../love/public/src/list_second.mjs";
 import { app_replace_rule_set_verify_goal_path } from "../../../love/public/src/app_replace_rule_set_verify_goal_path.mjs";
@@ -117,7 +118,9 @@ export async function app_replace_rule_set(context) {
     let second = list_second(path);
     let rule3 = property_get(second, "rule");
     let index_rule = list_index_of(rules_parsed, rule3);
-    let index4 = property_get(second, "index");$ine
+    let index4 = property_get(second, "index");
+    if (equal_not(left3, right2)) {
+    }
     button_rule_on_click_inner(index_rule);
     log(app_replace_rule_set.name, {
       second,
