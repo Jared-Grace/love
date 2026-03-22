@@ -162,13 +162,18 @@ export async function app_replace_rule_set(context) {
     function each_rule(rule, index) {
       let left = property_get(rule, "left");
       let right = property_get(rule, "right");
-      function lambda3() {
+      function button_rule_on_click() {
         symbols_invalid_chosen = {};
         index_selected = ternary(index_selected === index, null, index);
         refresh();
         return;
       }
-      let r2 = app_replace_button_rule(div_rules_buttons, left, right, lambda3);
+      let r2 = app_replace_button_rule(
+        div_rules_buttons,
+        left,
+        right,
+        button_rule_on_click,
+      );
       let arrow = property_get(r2, "arrow");
       let rights = property_get(r2, "rights");
       let lefts = property_get(r2, "lefts");
