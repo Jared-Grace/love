@@ -117,7 +117,7 @@ export async function app_replace_rule_set(context) {
     let second = list_second(path);
     let rule3 = property_get(second, "rule");
     let index_rule = list_index_of(rules_parsed, rule3);
-    let index4 = property_get(second, "index");
+    let index4 = property_get(second, "index");$ine
     button_rule_on_click_inner(index_rule);
     log(app_replace_rule_set.name, {
       second,
