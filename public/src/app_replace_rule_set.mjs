@@ -163,10 +163,7 @@ export async function app_replace_rule_set(context) {
       let left = property_get(rule, "left");
       let right = property_get(rule, "right");
       function button_rule_on_click() {
-        symbols_invalid_chosen = {};
-        index_selected = ternary(index_selected === index, null, index);
-        refresh();
-        return;
+        button_rule_on_click_inner(index);
       }
       let r2 = app_replace_button_rule(
         div_rules_buttons,
@@ -397,4 +394,9 @@ export async function app_replace_rule_set(context) {
     }
   }
   refresh();
+  function button_rule_on_click_inner(index) {
+    symbols_invalid_chosen = {};
+    index_selected = ternary(index_selected === index, null, index);
+    refresh();
+  }
 }
