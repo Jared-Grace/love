@@ -18,9 +18,9 @@ export function graph_search_depth_first(
     depth: 0,
   });
   while (queue.length > 0) {
-    const r3 = queue.shift();
-    let depth = property_get(r3, "depth");
-    let node = property_get(r3, "node");
+    const q_current = queue.shift();
+    let depth = property_get(q_current, "depth");
+    let node = property_get(q_current, "node");
     let json = mapper(node);
     let i = set_includes(visited, json);
     if (i) {
