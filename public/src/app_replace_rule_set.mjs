@@ -128,8 +128,8 @@ export async function app_replace_rule_set(context) {
     let index_symbol = property_get(second, "index");
     if (equal(index_rule, index_selected)) {
       let size = list_size(list);
-      let r22 = divide(size, 2);
-      let ceiling = ceil(p2);
+      let divided = half(size);
+      let ceiling = ceil(divided);
       let taken2 = list_shuffle_take(list3, count);
     } else {
       button_rule_on_click_inner(index_rule);
@@ -418,3 +418,7 @@ export async function app_replace_rule_set(context) {
     refresh();
   }
 }
+function half(size) {
+  return divide(size, 2);
+}
+
