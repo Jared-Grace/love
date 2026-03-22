@@ -16,6 +16,7 @@ export function graph_search_depth_first(
   const queue = [];
   queue.push({
     node: start,
+    data: null,
     previous: null,
     depth: 0,
   });
