@@ -6,7 +6,7 @@ export function app_replace_rule_set_identifiers_simple() {
     goals: [
       {
         start: "id",
-        end: "$",
+        end: "_",
       },
       {
         start: "id",
@@ -14,7 +14,7 @@ export function app_replace_rule_set_identifiers_simple() {
       },
       {
         start: "idf ida",
-        end: "_ 1",
+        end: "$ 1",
       },
       {
         start: "id",
