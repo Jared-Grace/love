@@ -130,7 +130,7 @@ export async function app_replace_rule_set(context) {
       each_range(max_depth, lambda10);
     }
     let list3 = list_adder(lambda12);
-    let mapped3 = list_map_property(list3, "node");
+    let mapped3 = list_map_property(list3, "data");
     list_reverse(mapped3);
     log(app_replace_rule_set.name, {
       mapped3,
