@@ -31,13 +31,11 @@ export function graph_search_depth_first(
     let m = mapper(node);
     set_add(visited, m);
     if (equal(m, mt)) {
-      object_merge(to, from);
-      let r2 = {
+      object_merge({
+        q_current,
         found: true,
-        node,
-        depth,
-      };
-      return r2;
+      });
+      return q_current;
     }
     if (depth >= max_depth) {
       continue;
