@@ -46,6 +46,7 @@ export function graph_search_depth_first(
       if (not(b)) {
         queue.push({
           node: n,
+          previous: q_current,
           depth: depth + 1,
         });
       }
