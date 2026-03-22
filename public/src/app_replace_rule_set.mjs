@@ -102,11 +102,12 @@ export async function app_replace_rule_set(context) {
   app_replace_button_home(root, context);
   app_replace_button_screen(context, app_replace_goals, root, "Goals");
   app_replace_button_screen(context, app_replace_rule_set, root, "Start over");
+  let rs = app_replace_rule_set_get(context);
+  let rules_parsed = app_replace_rule_set_rules_get(rs);
   function lambda11() {}
   let left2 = emoji_question();
   let combined = text_combine(left2, " Hint");
   let b = app_replace_button(parent, combined, lambda11);
-  let rs = app_replace_rule_set_get(context);
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
   let exists2 = property_exists(rs, "abbreviations");
@@ -133,7 +134,6 @@ export async function app_replace_rule_set(context) {
   let end = property_get(r4, "end");
   let index_selected = null;
   let label_rules = html_p(root);
-  let rules_parsed = app_replace_rule_set_rules_get(rs);
   let symbols_invalid_chosen = {};
   let div_rules_buttons = html_div(root);
   let label_symbols = html_p(root);
