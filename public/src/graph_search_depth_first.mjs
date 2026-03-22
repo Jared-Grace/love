@@ -31,7 +31,7 @@ export function graph_search_depth_first(
     let m = mapper(node);
     set_add(visited, m);
     if (equal(m, mt)) {
-      let to2 = object_merge(to, from);
+      object_merge(to, from);
       let r2 = {
         found: true,
         node,
