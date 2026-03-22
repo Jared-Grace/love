@@ -130,7 +130,7 @@ export async function app_replace_rule_set(context) {
       let size = list_size(list);
       let divided = half(size);
       let ceiling = ceil(divided);
-      let taken2 = list_shuffle_take(list3, count);
+      let taken2 = list_shuffle_take(start_indices, ceiling);
     } else {
       button_rule_on_click_inner(index_rule);
     }
