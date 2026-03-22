@@ -119,6 +119,7 @@ export async function app_replace_rule_set(context) {
     let rule3 = property_get(second, "rule");
     let index_rule = list_index_of(rules_parsed, rule3);
     let index4 = property_get(second, "index");
+    $n;
     if (equal_not(index_rule, index_selected)) {
       button_rule_on_click_inner(index_rule);
     } else {
