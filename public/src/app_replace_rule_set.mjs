@@ -130,7 +130,7 @@ export async function app_replace_rule_set(context) {
     if (equal(index_rule, index_selected)) {
       let size = list_size(list);
       let divided = half(size);
-      let ceiling = ceil(divided);
+      let ceiling = ceil(divided);$x
       let taken2 = list_shuffle_take(start_indices, ceiling);
       list_swap_at(list3, index_a, index_b);
     } else {
