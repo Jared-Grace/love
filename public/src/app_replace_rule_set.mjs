@@ -116,7 +116,7 @@ export async function app_replace_rule_set(context) {
   let index_selected = null;
   let r4 = app_replace_start_end_get(goal);
   let start = property_get(r4, "start");
-  let r5 = list_size_range(start2);
+  let start_indices = list_size_range(start);
   let end = property_get(r4, "end");
   function lambda11() {
     let path = app_replace_rule_set_verify_goal_path(goal, rules_parsed);
@@ -225,7 +225,7 @@ export async function app_replace_rule_set(context) {
         if (eq) {
           symbols_invalid_chosen = {};
           app_replace_button_symbol_style_valid_if_multiple(sbs, true);
-          start = app_replace_rule_apply(rule2, index, start);
+          start = app_replace_rule_apply(rule2, index, start);start_indices = list_size_range(start);
           let rb = list_get(rules_buttons, index_selected);
           let lefts2 = property_get(rb, "lefts");
           let rights2 = property_get(rb, "rights");
