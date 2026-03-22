@@ -117,7 +117,7 @@ export async function app_replace_rule_set(context) {
     let max_depth = app_replace_rule_set_verify_goal_depth_max();
     function lambda12(la) {
       function lambda10(i) {
-        let previous = property_get(dfs, "previous");
+        let previous = property_get(dfs, "previous");$ien
       }
       each_range(max_depth, lambda10);
     }
