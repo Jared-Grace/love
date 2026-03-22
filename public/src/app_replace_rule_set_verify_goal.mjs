@@ -9,7 +9,7 @@ import { graph_search_depth_first } from "../../../love/public/src/graph_search_
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-export function app_replace_rule_set_verify_goal(goal, rules) {
+export function app_replace_rule_set_verify_goal(goal, rules_parsed) {
   log(app_replace_rule_set_verify_goal.name, {
     goal,
   });
@@ -23,7 +23,7 @@ export function app_replace_rule_set_verify_goal(goal, rules) {
   function neighbors_get(start) {
     let indices = list_size_range(start);
     function lambda(la) {
-      each_nested_distinct(lambda3, rules, indices);
+      each_nested_distinct(lambda3, rules_parsed, indices);
       function lambda3(rule, index) {
         let eq = app_replace_rule_valid(rule, index, start);
         if (eq) {
