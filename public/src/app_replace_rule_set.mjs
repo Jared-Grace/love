@@ -109,10 +109,11 @@ export async function app_replace_rule_set(context) {
   let goal_index = storage_local_get_context(context, "goal_index");
   let goal = list_get(goals, goal_index);
   let rules_parsed = app_replace_rule_set_rules_get(rs);
+  let index_selected = null;
   function lambda11() {
-    let mapped3 = app_replace_rule_set_verify_goal_path(goal, rules_parsed);
+    let path = app_replace_rule_set_verify_goal_path(goal, rules_parsed);
     log(app_replace_rule_set.name, {
-      mapped3,
+      mapped3: path,
     });
   }
   let left2 = emoji_question();
@@ -139,7 +140,6 @@ export async function app_replace_rule_set(context) {
   let r4 = app_replace_start_end_get(goal);
   let start = property_get(r4, "start");
   let end = property_get(r4, "end");
-  let index_selected = null;
   let label_rules = html_p(root);
   let symbols_invalid_chosen = {};
   let div_rules_buttons = html_div(root);
