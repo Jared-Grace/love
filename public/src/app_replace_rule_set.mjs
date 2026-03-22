@@ -103,16 +103,16 @@ export async function app_replace_rule_set(context) {
   app_replace_button_home(root, context);
   app_replace_button_screen(context, app_replace_goals, root, "Goals");
   app_replace_button_screen(context, app_replace_rule_set, root, "Start over");
+  let rs = app_replace_rule_set_get(context);
+  let goals = property_get(rs, "goals");
+  let goal_index = storage_local_get_context(context, "goal_index");
+  let goal = list_get(goals, goal_index);
   function lambda11() {
     app_replace_rule_set_verify_goal(goal, rules);
   }
   let left2 = emoji_question();
   let combined = text_combine(left2, " Hint");
   let b = app_replace_button(parent, combined, lambda11);
-  let rs = app_replace_rule_set_get(context);
-  let goals = property_get(rs, "goals");
-  let goal_index = storage_local_get_context(context, "goal_index");
-  let goal = list_get(goals, goal_index);
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
   let exists2 = property_exists(rs, "abbreviations");
