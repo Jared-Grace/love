@@ -1,27 +1,8 @@
+import { app_replace_rule_set_identifiers_simple_rules } from "../../../love/public/src/app_replace_rule_set_identifiers_simple_rules.mjs";
 export function app_replace_rule_set_identifiers_simple() {
   let r = {
     name: "Identifiers simple",
-    rules: [
-      "id > idf",
-      "id > idf idg",
-      "idg > ida",
-      "idg > ida idg",
-      "ida > idf",
-      "idf > A",
-      "idf > B",
-      "idf > h",
-      "idf > J",
-      "idf > l",
-      "idf > t",
-      "idf > u",
-      "idf > v",
-      "idf > $",
-      "idf > _",
-      "ida > di",
-      "di > 0",
-      "di > 1",
-      "di > 3",
-    ],
+    rules: app_replace_rule_set_identifiers_simple_rules(),
     goals: [
       {
         start: "id",
