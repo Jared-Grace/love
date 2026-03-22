@@ -129,7 +129,7 @@ export async function app_replace_rule_set(context) {
       each_range(max_depth, lambda10);
     }
     let list3 = list_adder(lambda12);
-    let mapped3 = list_map_property(list4, property_name);
+    let mapped3 = list_map_property(list3, 'node');
     log(app_replace_rule_set.name, {
       list3,
     });
