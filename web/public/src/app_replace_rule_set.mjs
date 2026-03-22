@@ -1,3 +1,5 @@
+import { ceil } from "../../../love/public/src/ceil.mjs";
+import { divide } from "../../../love/public/src/divide.mjs";
 import { list_size_range } from "../../../love/public/src/list_size_range.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
@@ -125,6 +127,9 @@ export async function app_replace_rule_set(context) {
     let index_rule = list_index_of(rules_parsed, rule3);
     let index_symbol = property_get(second, "index");
     if (equal(index_rule, index_selected)) {
+      let size = list_size(list);
+      let r22 = divide(top, bottom);
+      let ceiling = ceil(p2);
       let taken2 = list_shuffle_take(list3, count);
     } else {
       button_rule_on_click_inner(index_rule);
