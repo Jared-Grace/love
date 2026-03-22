@@ -1,3 +1,4 @@
+import { list_swap_at } from "../../../love/public/src/list_swap_at.mjs";
 import { half } from "../../../love/public/src/half.mjs";
 import { ceil } from "../../../love/public/src/ceil.mjs";
 import { list_size_range } from "../../../love/public/src/list_size_range.mjs";
@@ -131,6 +132,7 @@ export async function app_replace_rule_set(context) {
       let divided = half(size);
       let ceiling = ceil(divided);
       let taken2 = list_shuffle_take(start_indices, ceiling);
+      list_swap_at(list3, index_a, index_b);
     } else {
       button_rule_on_click_inner(index_rule);
     }
