@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_rule_set_verify_goal } from "../../../love/public/src/app_replace_rule_set_verify_goal.mjs";
 import { emoji_question } from "../../../love/public/src/emoji_question.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
@@ -109,7 +110,10 @@ export async function app_replace_rule_set(context) {
   let goal = list_get(goals, goal_index);
   let rules_parsed = app_replace_rule_set_rules_get(rs);
   function lambda11() {
-    app_replace_rule_set_verify_goal(goal, rules_parsed);
+    let dfs = app_replace_rule_set_verify_goal(goal, rules_parsed);
+    log(app_replace_rule_set.name, {
+      dfs,
+    });
   }
   let left2 = emoji_question();
   let combined = text_combine(left2, " Hint");
