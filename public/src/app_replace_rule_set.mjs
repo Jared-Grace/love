@@ -225,7 +225,8 @@ export async function app_replace_rule_set(context) {
         if (eq) {
           symbols_invalid_chosen = {};
           app_replace_button_symbol_style_valid_if_multiple(sbs, true);
-          start = app_replace_rule_apply(rule2, index, start);start_indices = list_size_range(start);
+          start = app_replace_rule_apply(rule2, index, start);
+          start_indices = list_size_range(start);
           let rb = list_get(rules_buttons, index_selected);
           let lefts2 = property_get(rb, "lefts");
           let rights2 = property_get(rb, "rights");
