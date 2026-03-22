@@ -38,8 +38,10 @@ export function app_replace_rule_set_verify_goal(goal, rules_parsed) {
           let neighbor = app_replace_rule_apply(rule, index, start);
           la({
             neighbor,
-            rule,
-            index,
+            data: {
+              rule,
+              index,
+            },
           });
         }
         return eq;
