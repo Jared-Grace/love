@@ -131,9 +131,9 @@ export async function app_replace_rule_set(context) {
     }
     let list3 = list_adder(lambda12);
     let mapped3 = list_map_property(list3, "node");
-    list_reverse(list4);
+    list_reverse(mapped3);
     log(app_replace_rule_set.name, {
-      list3,
+      mapped3,
     });
   }
   let left2 = emoji_question();
