@@ -131,13 +131,11 @@ export async function app_replace_rule_set(context) {
     let index_rule = list_index_of(rules_parsed, rule3);
     let index_symbol = property_get(second, "index");
     if (equal(index_rule, index_selected)) {
-      let s = list_get(start, index_symbol);
       let size = list_size(list);
       let divided = half(size);
       let ceiling = ceil(divided);
       list_shuffle(start_indices);
-      let first = list_first(list4);
-      list_swap(list3, index_a, index_b);
+      list_swap_first(start_indices, index_symbol);
       let taken2 = list_take(start_indices, ceiling);
     } else {
       button_rule_on_click_inner(index_rule);
@@ -426,3 +424,8 @@ export async function app_replace_rule_set(context) {
     refresh();
   }
 }
+function list_swap_first(start_indices, index_symbol) {
+  let first = list_first(start_indices);
+  list_swap(start_indices, first, index_symbol);
+}
+
