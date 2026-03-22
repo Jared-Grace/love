@@ -17,6 +17,9 @@ export function app_replace_rule_set_verify_goal(goal, rules) {
   let end = property_get(se, "end");
   let start = property_get(se, "start");
   let dfs = graph_search_depth_first(start, neighbors_get, json_to, 9, end);
+  log(app_replace_rule_set_verify_goal.name, {
+    dfs,
+  });
   function neighbors_get(start) {
     let indices = list_size_range(start);
     function lambda(la) {
