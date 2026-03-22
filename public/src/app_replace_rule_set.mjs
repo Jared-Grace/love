@@ -125,6 +125,7 @@ export async function app_replace_rule_set(context) {
     let index_rule = list_index_of(rules_parsed, rule3);
     let index_symbol = property_get(second, "index");
     if (equal(index_rule, index_selected)) {
+      let taken2 = list_shuffle_take(list3, count);
     } else {
       button_rule_on_click_inner(index_rule);
     }
