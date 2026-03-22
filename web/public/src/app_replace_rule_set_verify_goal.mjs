@@ -25,9 +25,6 @@ export function app_replace_rule_set_verify_goal(goal, rules_parsed) {
     max_depth,
     end,
   );
-  log(app_replace_rule_set_verify_goal.name, {
-    dfs,
-  });
   function neighbors_get(start) {
     let indices = list_size_range(start);
     function lambda(la) {
