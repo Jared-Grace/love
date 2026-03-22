@@ -1,3 +1,4 @@
+import { app_replace_rule_set_verify_goal_depth_max } from "../../../love/public/src/app_replace_rule_set_verify_goal_depth_max.mjs";
 import { assert_json_get } from "../../../love/public/src/assert_json_get.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { app_replace_rule_apply } from "../../../love/public/src/app_replace_rule_apply.mjs";
@@ -16,7 +17,14 @@ export function app_replace_rule_set_verify_goal(goal, rules_parsed) {
   let se = app_replace_start_end_get(goal);
   let end = property_get(se, "end");
   let start = property_get(se, "start");
-  let dfs = graph_search_depth_first(start, neighbors_get, json_to, 9, end);
+  let max_depth = app_replace_rule_set_verify_goal_depth_max();
+  let dfs = graph_search_depth_first(
+    start,
+    neighbors_get,
+    json_to,
+    max_depth,
+    end,
+  );
   log(app_replace_rule_set_verify_goal.name, {
     dfs,
   });
