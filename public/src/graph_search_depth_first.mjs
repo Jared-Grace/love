@@ -39,15 +39,15 @@ export function graph_search_depth_first(
     if (depth >= max_depth) {
       continue;
     }
-    const r2 = neighbors_get(node);
-    let data = property_get(r2, "data");
-    let neighbors = property_get(r2, "neighbors");
+    const neighbors = neighbors_get(node);
     for (const n of neighbors) {
-      let json3 = mapper(n);
+      let data = property_get(n, "data");
+      let neighbor = property_get(n, "neighbor");
+      let json3 = mapper(neighbor);
       let b = set_includes(visited, json3);
       if (not(b)) {
         queue.push({
-          node: n,
+          node: neighbor,
           data,
           previous: q_current,
           depth: depth + 1,
