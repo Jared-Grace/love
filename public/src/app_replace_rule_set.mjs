@@ -1,4 +1,5 @@
-import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
+import { emoji_question } from "../../../love/public/src/emoji_question.mjs";
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
 import { app_replace_rule_apply } from "../../../love/public/src/app_replace_rule_apply.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
@@ -102,8 +103,9 @@ export async function app_replace_rule_set(context) {
   app_replace_button_screen(context, app_replace_goals, root, "Goals");
   app_replace_button_screen(context, app_replace_rule_set, root, "Start over");
   function lambda11() {}
-  let combined = text_combine_multiple(list3);
-  let b = app_replace_button(parent, "Hint", lambda11);
+  let left2 = emoji_question();
+  let combined = text_combine(left2, " Hint");
+  let b = app_replace_button(parent, combined, lambda11);
   let rs = app_replace_rule_set_get(context);
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
