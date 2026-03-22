@@ -251,12 +251,11 @@ export async function app_replace_rule_set(context) {
       sb = html_button(div_symbols, symbol, symbol_on_click);
       app_replace_button_symbol_style(sb);
       property_set_exists_not(sb, "index", index);
-      let valid = false;
       let nn2 = null_not_is(index_selected);
       if (nn2) {
         let index3 = property_get(sb, "index");
         let rule2 = list_get(rules_parsed, index_selected);
-        valid = app_replace_rule_valid(rule2, index3, start);
+        let valid = app_replace_rule_valid(rule2, index3, start);
       }
       app_replace_button_symbol_style_valid_if(sb, index_selected !== null);
       let exists = property_exists(symbols_invalid_chosen, index);
