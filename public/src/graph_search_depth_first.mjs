@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { set_add } from "../../../love/public/src/set_add.mjs";
 import { set_includes } from "../../../love/public/src/set_includes.mjs";
@@ -30,7 +31,7 @@ export function graph_search_depth_first(
     let m = mapper(node);
     set_add(visited, m);
     if (equal(m, mt)) {
-      om;
+      let to2 = object_merge(to, from);
       let r2 = {
         found: true,
         node,
