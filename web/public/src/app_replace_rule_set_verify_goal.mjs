@@ -48,14 +48,7 @@ export function app_replace_rule_set_verify_goal(goal, rules_parsed) {
       }
     }
     let neighbors = list_adder(lambda);
-    let r2 = {
-      neighbors,
-      data: {
-        rule,
-        index,
-      },
-    };
-    return r2;
+    return neighbors;
   }
   let found = property_get(dfs, "found");
   function lambda3() {
