@@ -39,7 +39,19 @@ export async function app_replace_tests_run_e2e() {
           end,
         );
         async function lambda3(p) {
-          let r2 = playwright_by_attribute_named(page, "data-test");
+          let locator = playwright_by_attribute_named(page, "data-test");
+          function lambda5(elements, name) {
+            function lambda4(el) {
+              let r = el.getAttribute(name);
+              return r;
+            }
+            let r2 = elements.map(lambda4);
+            return r2;
+          }
+          const values = await locator.evaluateAll(lambda5, name);
+          log(app_replace_tests_run_e2e.name, {
+            values,
+          });
           let value3 =
             app_replace_rule_set_attribute_refresh_count(refresh_count);
           await playwright_by_attribute_test_exists_assert(page, value3);
