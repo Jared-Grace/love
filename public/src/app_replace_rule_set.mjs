@@ -96,7 +96,7 @@ export async function app_replace_rule_set(context) {
     }
   }
   let left2 = emoji_question();
-  let combined = text_combine(left2, " Hint");
+  let combined = text_combine(left2, "Hint");
   let b = app_replace_button(root, combined, lambda11);
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
