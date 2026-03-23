@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_size_half_ceil } from "../../../love/public/src/list_size_half_ceil.mjs";
 import { app_replace_rule_set_attribute_hint } from "../../../love/public/src/app_replace_rule_set_attribute_hint.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
@@ -73,6 +74,9 @@ export async function app_replace_tests_run_e2e() {
             }
             let waited = await list_map_unordered_async(values, lambda5);
             let filtered2 = list_filter_null_not_is(waited);
+            log(app_replace_tests_run_e2e.name, {
+              filtered2,
+            });
             let size = list_size(filtered2);
             let m = list_multiple_is(filtered2);
             let ceiling = list_size_half_ceil(start_indices);
