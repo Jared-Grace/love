@@ -59,7 +59,7 @@ export async function app_replace_tests_run_e2e() {
           let values = await playwright_by_attribute_named_all(
             page,
             combined,
-            "true",
+            true,
           );
           log_exit({
             values,
