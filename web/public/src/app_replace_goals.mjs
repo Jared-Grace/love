@@ -1,3 +1,4 @@
+import { html_data_set_test } from "../../../love/public/src/html_data_set_test.mjs";
 import { html_data_set_object } from "../../../love/public/src/html_data_set_object.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
@@ -39,6 +40,7 @@ export function app_replace_goals(context) {
     );
     html_data_set_object(title, r4);
     let v = json_to(goal);
+    html_data_set_test(title, v);
     let r2 = app_replace_button_rule_content(title, start, end);
     app_replace_lefts_rights_style(r2, completed);
     function lambda() {
