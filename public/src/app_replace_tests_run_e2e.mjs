@@ -33,6 +33,7 @@ export async function app_replace_tests_run_e2e() {
           start,
           end,
         );
+        let rule = property_get(second, "rule");
         let json2 = json_to(second);
         log(app_replace_tests_run_e2e.name, {
           json2,
