@@ -1,3 +1,4 @@
+import { sleep_long } from "../../../portfolio_qa/public/src/sleep_long.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { log_exit } from "../../../love/public/src/log_exit.mjs";
 import { app_replace_button_symbol_style_valid_if_attribute } from "../../../love/public/src/app_replace_button_symbol_style_valid_if_attribute.mjs";
@@ -67,6 +68,7 @@ export async function app_replace_tests_run_e2e() {
             return html;
           }
           let waited = await list_map_unordered_async(values, lambda5);
+          await sleep_long();
           log_exit({
             waited,
           });
