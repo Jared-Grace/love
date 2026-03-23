@@ -6,9 +6,8 @@ import { sleep } from "../../../love/public/src/sleep.mjs";
 import { playwright_by_attribute } from "../../../love/public/src/playwright_by_attribute.mjs";
 import { playwright_by_attribute_type } from "../../../love/public/src/playwright_by_attribute_type.mjs";
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
-export async function karate_tests() {$a
-  let app_fn = app_karate;
-  await playwright_test_app_dev(app_fn, lambda);
+export async function karate_tests() {
+  await playwright_test_app_dev(app_karate, lambda);
   async function lambda(page) {
     const title_actual = await page.title();
     const title = app_karate_main_title();
