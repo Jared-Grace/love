@@ -33,14 +33,15 @@ export async function app_replace_tests_run_e2e() {
           start,
           end,
         );
-        async function lambda3(item) {}
-        await each_async(list, lambda3);
-        let rule = property_get(second, "rule");
-        let index = property_get(second, "index");
-        let original = property_get(rule, "original");
-        await playwright_by_attribute_test_click(page, original);
-        let value = app_replace_rule_set_attribute_symbol(index);
-        await playwright_by_attribute_test_click(page, value);
+        async function lambda3(p) {
+          let rule = property_get(p, "rule");
+          let index = property_get(p, "index");
+          let original = property_get(rule, "original");
+          await playwright_by_attribute_test_click(page, original);
+          let value = app_replace_rule_set_attribute_symbol(index);
+          await playwright_by_attribute_test_click(page, value);
+        }
+        await each_async(path, lambda3);
         let name = app_replace_rule_set_success_attribute_next();
         await playwright_by_attribute_test_click(page, name);
       }
