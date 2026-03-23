@@ -1,3 +1,4 @@
+import { sleep } from "../../../love/public/src/sleep.mjs";
 import { playwright_by_attribute_test_click } from "../../../love/public/src/playwright_by_attribute_test_click.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -16,7 +17,7 @@ export async function app_replace_tests_run_e2e() {
     let goals = property_get(first, "goals");
     let g = list_first(goals);
     let json = json_to(g);
-    await sleep_long();
+    await sleep(1000);
     await playwright_by_attribute_test_click(page, json);
     await sleep_long();
     async function lambda_each(rule_set) {
