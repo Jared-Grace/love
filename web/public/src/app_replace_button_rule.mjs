@@ -8,6 +8,7 @@ export function app_replace_button_rule(root, rule, on_click) {
   let left = property_get(rule, "left");
   let right = property_get(rule, "right");
   let b = html_button_notext(root, on_click);
+  let original = property_get(rule, "original");
   let json = json_to(rule);
   html_data_set_test(b, json);
   app_replace_button_rule_style(b);
