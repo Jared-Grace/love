@@ -72,12 +72,11 @@ export async function app_replace_tests_run_e2e() {
               page,
               combined,
             );
-            const attribute_name = "data-test";
             let a = html_data_set_test_attribute();
             let r = html_attribute_data_prefix();
             let combined2 = text_combine(r, a);
             async function lambda5(item) {
-              let value = html_attribute_get_unwrapped(item, attribute_name);
+              let value = html_attribute_get_unwrapped(item, combined2);
               return value;
             }
             let waited = await list_map_unordered_async(values, lambda5);
