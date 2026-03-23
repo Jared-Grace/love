@@ -11,6 +11,7 @@ export async function playwright_by_attribute_named_all(page, name) {
   let locator = playwright_by_attribute_named(page, name);
   const elements = await locator.evaluateAll(identity, name);
   function lambda(element) {
+    let value = el.getAttribute(name);
     let r3 = {};
     return r3;
   }
