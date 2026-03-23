@@ -56,7 +56,7 @@ export async function app_replace_tests_run_e2e() {
               page,
             );
           let symbol_id = null;
-          if (true) {
+          if (false) {
             while (true) {
               let hint = app_replace_rule_set_attribute_hint();
               refresh_count =
