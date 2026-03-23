@@ -17,6 +17,7 @@ import { app_replace_rule_set_attribute_symbol } from "../../../love/public/src/
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function app_replace_tests_run_e2e() {
   await app_replace_tests_run_e2e_generic(hinted);
+  await app_replace_tests_run_e2e_generic(normal);
   async function normal(p, refresh_count, page, symbol_id) {
     let rule = property_get(p, "rule");
     let original = property_get(rule, "original");
