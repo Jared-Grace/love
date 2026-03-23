@@ -69,8 +69,8 @@ export async function app_replace_tests_run_e2e() {
               combined,
             );
             async function lambda5(item) {
-              const attribute = "data-test";
-              let r = item.getAttribute(attribute);
+              const attribute_name = "data-test";
+              let r = item.getAttribute(attribute_name);
               return r;
             }
             let waited = await list_map_unordered_async(values, lambda5);
