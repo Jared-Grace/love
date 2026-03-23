@@ -19,7 +19,7 @@ export async function retry(count, lambda) {
         });
         la(e);
         await sleep(wait);
-        wait *= 2;
+        wait = wait_get(wait);
       }
     }
     await each_range_async(count, lambda2);
@@ -31,4 +31,7 @@ export async function retry(count, lambda) {
   error_json({
     errors,
   });
+  function wait_get(wait) {
+    wait *= 2;
+  }
 }
