@@ -70,6 +70,8 @@ export async function app_replace_tests_run_e2e() {
               log(app_replace_tests_run_e2e.name, {
                 combined,
               });
+                let left = html_attribute_data_prefix();
+                name = text_combine(left, name);
               let values = await playwright_by_attribute_named_all(
                 page,
                 combined,
