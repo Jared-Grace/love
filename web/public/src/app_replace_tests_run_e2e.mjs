@@ -7,7 +7,6 @@ import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_size_half_ceil } from "../../../love/public/src/list_size_half_ceil.mjs";
 import { app_replace_rule_set_attribute_hint } from "../../../love/public/src/app_replace_rule_set_attribute_hint.mjs";
-import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_filter_null_not_is } from "../../../love/public/src/list_filter_null_not_is.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { log_exit } from "../../../love/public/src/log_exit.mjs";
