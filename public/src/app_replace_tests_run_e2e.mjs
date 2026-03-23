@@ -1,3 +1,4 @@
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_attribute_get_unwrapped } from "../../../love/public/src/html_attribute_get_unwrapped.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_size_half_ceil } from "../../../love/public/src/list_size_half_ceil.mjs";
@@ -70,6 +71,7 @@ export async function app_replace_tests_run_e2e() {
               combined,
             );
             const attribute_name = "data-test";
+            let combined2 = text_combine(left, right);
             async function lambda5(item) {
               let value = html_attribute_get_unwrapped(item, attribute_name);
               return value;
