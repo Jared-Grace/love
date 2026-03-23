@@ -15,7 +15,7 @@ export async function app_replace_tests_run_e2e() {
     const name = qa_attribute_test_data();
     await playwright_by_attribute_click(page, name, name2);
     let goals = property_get(first, "goals");
-    let first2 = list_first(list);
+    let first2 = list_first(goals);
     async function lambda_each(rule_set) {
       await sleep_long();
       return true;
