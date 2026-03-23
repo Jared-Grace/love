@@ -1,3 +1,4 @@
+import { json_to } from "../../../love/public/src/json_to.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
@@ -15,7 +16,8 @@ export async function app_replace_tests_run_e2e() {
     const name = qa_attribute_test_data();
     await playwright_by_attribute_click(page, name, name2);
     let goals = property_get(first, "goals");
-    let first2 = list_first(goals);
+    let g = list_first(goals);
+    let json = json_to(object);
     async function lambda_each(rule_set) {
       await sleep_long();
       return true;
