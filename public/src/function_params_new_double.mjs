@@ -4,9 +4,10 @@ export async function function_params_new_double(
   param_names_comma,
   values_default_comma,
 ) {
-  return await function_params_new(
+  let r = await function_params_new(
     f_name,
     param_names_comma,
     values_default_comma,
   );
+  return r;
 }
