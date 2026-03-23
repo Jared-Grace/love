@@ -1,4 +1,4 @@
-import { playwright_by_attribute_click_test } from "../../../love/public/src/playwright_by_attribute_click_test.mjs";
+import { playwright_by_attribute_test_click } from "../../../love/public/src/playwright_by_attribute_test_click.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
@@ -12,7 +12,7 @@ export async function app_replace_tests_run_e2e() {
   async function lambda(page) {
     let first = list_first(rule_sets);
     let name2 = property_get(first, "name");
-    await playwright_by_attribute_click_test(page, name2);
+    await playwright_by_attribute_test_click(page, name2);
     let goals = property_get(first, "goals");
     let g = list_first(goals);
     let json = json_to(g);
