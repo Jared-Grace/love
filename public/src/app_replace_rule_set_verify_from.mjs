@@ -10,8 +10,8 @@ import { graph_search_depth_first } from "../../../love/public/src/graph_search_
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-export function app_replace_rule_set_verify_goal(goal, rules_parsed) {
-  log(app_replace_rule_set_verify_goal.name, {
+export function app_replace_rule_set_verify_from(goal, rules_parsed) {
+  log(app_replace_rule_set_verify_from.name, {
     goal,
   });
   let se = app_replace_start_end_get(goal);
