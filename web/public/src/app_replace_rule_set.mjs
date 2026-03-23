@@ -236,6 +236,7 @@ export async function app_replace_rule_set(context) {
           highlight,
           goal_index,
           goals,
+          symbols_hide,
         );
       }
       let nn = null_not_is(index_selected);
