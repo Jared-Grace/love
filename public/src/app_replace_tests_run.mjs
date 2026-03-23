@@ -5,10 +5,11 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 import { app_replace_rule_set_verify_all } from "../../../love/public/src/app_replace_rule_set_verify_all.mjs";
 export async function app_replace_tests_run() {
   let rule_sets = app_replace_rule_set_verify_all();
-  function lambda() {}
-  await playwright_test_app_dev(app_replace, lambda);
-  async function lambda_each(rule_set) {
-    await playwright_test_url(url, lambda$page);
+  async function lambda(page) {
+    async function lambda_each(rule_set) {
+      await playwright_test_url(url, lambda$page);
+    }
+    await each_async(rule_sets, lambda_each);
   }
-  await each_async(rule_sets, lambda_each);
+  await playwright_test_app_dev(app_replace, lambda);
 }
