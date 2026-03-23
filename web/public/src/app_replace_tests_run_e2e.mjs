@@ -56,7 +56,7 @@ export async function app_replace_tests_run_e2e() {
         );
         async function lambda3(p) {
           let symbol_id = null;
-          if (false) {
+          if (true) {
             while (true) {
               let hint = app_replace_rule_set_attribute_hint();
               refresh_count =
