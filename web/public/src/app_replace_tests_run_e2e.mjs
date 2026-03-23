@@ -17,7 +17,7 @@ export async function app_replace_tests_run_e2e() {
     await playwright_by_attribute_click(page, name, name2);
     let goals = property_get(first, "goals");
     let g = list_first(goals);
-    let json = json_to(object);
+    let json = json_to(g);
     async function lambda_each(rule_set) {
       await sleep_long();
       return true;
