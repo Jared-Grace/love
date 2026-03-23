@@ -15,8 +15,8 @@ import { app_replace_button_symbol_style_valid_if_attribute } from "../../../lov
 import { html_data_set_test_suffixes_attribute } from "../../../love/public/src/html_data_set_test_suffixes_attribute.mjs";
 import { app_replace_rule_set_attribute_refresh_click } from "../../../love/public/src/app_replace_rule_set_attribute_refresh_click.mjs";
 export async function app_replace_tests_run_e2e() {
-  await app_replace_tests_run_e2e_generic(hinted);
   await app_replace_tests_run_e2e_normal();
+  await app_replace_tests_run_e2e_generic(hinted);
   async function hinted(p, refresh_count, page, symbol_id) {
     while (true) {
       let hint = app_replace_rule_set_attribute_hint();
