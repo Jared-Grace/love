@@ -1,3 +1,4 @@
+import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { log_exit } from "../../../love/public/src/log_exit.mjs";
 import { app_replace_button_symbol_style_valid_if_attribute } from "../../../love/public/src/app_replace_button_symbol_style_valid_if_attribute.mjs";
 import { html_data_set_test_suffixes_attribute } from "../../../love/public/src/html_data_set_test_suffixes_attribute.mjs";
@@ -57,6 +58,8 @@ export async function app_replace_tests_run_e2e() {
           let suffix = app_replace_button_symbol_style_valid_if_attribute();
           let combined = html_data_set_test_suffixes_attribute([suffix]);
           let values = await playwright_by_attribute_named_all(page, combined);
+          async function lambda5(item) {}
+          let waited = await list_map_unordered_async(list, lambda5);
           function lambda4(el) {
             let r = el.outerHTML;
             return r;
