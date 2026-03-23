@@ -69,8 +69,8 @@ export async function app_replace_tests_run_e2e() {
               page,
               combined,
             );
+            const attribute_name = "data-test";
             async function lambda5(item) {
-              const attribute_name = "data-test";
               let value = html_attribute_get_unwrapped(item, attribute_name);
               return value;
             }
