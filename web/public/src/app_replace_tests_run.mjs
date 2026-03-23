@@ -6,7 +6,7 @@ import { app_replace_rule_set_verify_all } from "../../../love/public/src/app_re
 export async function app_replace_tests_run() {
   let rule_sets = app_replace_rule_set_verify_all();
   async function lambda(page) {
-    await sleep_long(ms);
+    await sleep_long();
     async function lambda_each(rule_set) {}
     await each_async(rule_sets, lambda_each);
   }
