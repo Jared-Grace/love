@@ -289,7 +289,6 @@ export async function app_replace_rule_set(context) {
           goal_list_symbols,
           sbs,
           duration,
-          symbols_hide_on_success,
           div_below,
           highlight,
           goal_index,
