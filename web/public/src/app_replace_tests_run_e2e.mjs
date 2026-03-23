@@ -1,7 +1,7 @@
+import { html_attribute_get_unwrapped_curried_right } from "../../../love/public/src/html_attribute_get_unwrapped_curried_right.mjs";
 import { html_data_set_test_attribute } from "../../../love/public/src/html_data_set_test_attribute.mjs";
 import { html_attribute_data_prefix } from "../../../love/public/src/html_attribute_data_prefix.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
-import { html_attribute_get_unwrapped } from "../../../love/public/src/html_attribute_get_unwrapped.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_size_half_ceil } from "../../../love/public/src/list_size_half_ceil.mjs";
 import { app_replace_rule_set_attribute_hint } from "../../../love/public/src/app_replace_rule_set_attribute_hint.mjs";
@@ -75,11 +75,8 @@ export async function app_replace_tests_run_e2e() {
             let a = html_data_set_test_attribute();
             let r = html_attribute_data_prefix();
             let combined2 = text_combine(r, a);
-            async function lambda5(item) {
-              let value = html_attribute_get_unwrapped(item, combined2);
-              return value;
-            }
-            let waited = await list_map_unordered_async(values, lambda5);
+            let ag = html_attribute_get_unwrapped_curried_right(combined2);
+            let waited = await list_map_unordered_async(values, ag);
             let filtered2 = list_filter_null_not_is(waited);
             log(app_replace_tests_run_e2e.name, {
               filtered2,
