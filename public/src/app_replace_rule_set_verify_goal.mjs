@@ -50,7 +50,8 @@ export function app_replace_rule_set_verify_goal(goal, rules_parsed) {
   let found = property_get(dfs, "found");
   function lambda3() {
     let r = {
-      goal,
+      start,
+      end,
     };
     return r;
   }
