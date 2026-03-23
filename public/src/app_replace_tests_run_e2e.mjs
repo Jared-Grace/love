@@ -1,3 +1,4 @@
+import { html_attribute_data_prefix } from "../../../love/public/src/html_attribute_data_prefix.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_attribute_get_unwrapped } from "../../../love/public/src/html_attribute_get_unwrapped.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -70,7 +71,8 @@ export async function app_replace_tests_run_e2e() {
               page,
               combined,
             );
-            const attribute_name = "data-test";html_attribute_data_prefix
+            const attribute_name = "data-test";
+            let r = html_attribute_data_prefix();
             let combined2 = text_combine(left, right);
             async function lambda5(item) {
               let value = html_attribute_get_unwrapped(item, attribute_name);
