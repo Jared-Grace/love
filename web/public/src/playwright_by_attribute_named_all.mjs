@@ -10,8 +10,5 @@ export async function playwright_by_attribute_named_all(page, name) {
   const locator = playwright_by_attribute_named(page, name);
   await playwright_locator_wait(locator);
   const handles = await locator.elementHandles();
-  log(playwright_by_attribute_named_all.name, {
-    handles,
-  });
   return handles;
 }
