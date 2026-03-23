@@ -1,3 +1,5 @@
+import { json_to } from "../../../love/public/src/json_to.mjs";
+import { html_data_set_test } from "../../../love/public/src/html_data_set_test.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
 import { app_replace_goals_generic } from "../../../love/public/src/app_replace_goals_generic.mjs";
 import { app_replace_goal_completed_initialize } from "../../../love/public/src/app_replace_goal_completed_initialize.mjs";
@@ -35,6 +37,8 @@ export function app_replace_goals(context) {
       index,
       lambda,
     );
+    let rule_name2 = json_to(goal);
+    html_data_set_test(title, rule_name2);
     let r2 = app_replace_button_rule_content(title, start, end);
     app_replace_lefts_rights_style(r2, completed);
     function lambda() {
