@@ -1,3 +1,4 @@
+import { each_object } from "../../../love/public/src/each_object.mjs";
 import { html_data_set } from "../../../love/public/src/html_data_set.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
@@ -37,6 +38,8 @@ export function app_replace_goals(context) {
       index,
       lambda,
     );
+    function lambda2(value, property) {}
+    each_object(object, lambda2);
     let v = json_to(goal);
     html_data_set(title, "test", v);
     let r2 = app_replace_button_rule_content(title, start, end);
