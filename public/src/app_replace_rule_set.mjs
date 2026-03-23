@@ -142,7 +142,7 @@ export async function app_replace_rule_set(context) {
     });
     html_clear(div_rules_buttons);
     refresh_count++;
-    html_data_set_test(div_rules_buttons, refresh.name + "_" + refresh_count);
+    html_data_set_test(div_rules_buttons, "refresh_count_" + refresh_count);
     function each_rule(rule, index) {
       function button_rule_on_click() {
         start_indices = list_size_range(start);
