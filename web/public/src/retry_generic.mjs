@@ -15,7 +15,7 @@ export async function retry_generic(lambda, wait, wait_get, count) {
         success = true;
         return success;
       } catch (e) {
-        log_keep(retry.name, {
+        log_keep(retry_generic.name, {
           e,
         });
         la(e);
