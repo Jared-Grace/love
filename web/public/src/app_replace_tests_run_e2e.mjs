@@ -34,11 +34,12 @@ export async function app_replace_tests_run_e2e() {
           end,
         );
         let rule = property_get(second, "rule");
+        let index = property_get(second, "index");
         let original = property_get(rule, "original");
         await sleep_long();
         let json2 = json_to(second);
         log(app_replace_tests_run_e2e.name, {
-          original,
+          index,
         });
         return true;
         await playwright_by_attribute_test_click(page, original);
