@@ -10,7 +10,6 @@ import { equal } from "../../../love/public/src/equal.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { list_second } from "../../../love/public/src/list_second.mjs";
 import { app_replace_rule_set_verify_goal_path } from "../../../love/public/src/app_replace_rule_set_verify_goal_path.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { emoji_question } from "../../../love/public/src/emoji_question.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
@@ -94,9 +93,6 @@ export async function app_replace_rule_set(context) {
     } else {
       button_rule_on_click_inner(index_rule);
     }
-    log(app_replace_rule_set.name, {
-      second,
-    });
   }
   let left2 = emoji_question();
   let combined = text_combine(left2, " Hint");
