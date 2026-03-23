@@ -1,3 +1,4 @@
+import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
 import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_replace_rule_set_verify_goal_next } from "../../../love/public/src/app_replace_rule_set_verify_goal_next.mjs";
@@ -23,8 +24,9 @@ export async function app_replace_tests_run_e2e() {
       let goals = property_get(rule_set, "goals");
       let rules_parsed = app_replace_rule_set_rules_get(rule_set);
       function lambda2(goal) {
-        let start = property_get(goal, "start");
-        let end = property_get(goal, "end");
+        let r4 = app_replace_start_end_get(goal);
+        let start = property_get(r4, "start");
+        let end = property_get(r4, "end");
         let second = app_replace_rule_set_verify_goal_next(
           rules_parsed,
           start,
