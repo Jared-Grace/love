@@ -82,7 +82,7 @@ export async function app_replace_tests_run_e2e() {
               });
               let s = list_size_1(filtered2);
               if (s) {
-                let original = list_single(filtered2);
+                symbol_id = list_single(filtered2);
                 break;
               }
             }
