@@ -1,3 +1,4 @@
+import { list_first } from "../../../love/public/src/list_first.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
 import { playwright_test_app_dev } from "../../../love/public/src/playwright_test_app_dev.mjs";
@@ -9,6 +10,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function app_replace_tests_run_e2e() {
   let rule_sets = app_replace_rule_sets();
   async function lambda(page) {
+    let first = list_first(list);
     async function lambda_each(rule_set) {
       let name2 = property_get(rule_set, "name");
       const name = qa_attribute_test_data();
