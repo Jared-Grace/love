@@ -5,7 +5,6 @@ import { html_data_set_test_attribute } from "../../../love/public/src/html_data
 import { html_attribute_data_prefix } from "../../../love/public/src/html_attribute_data_prefix.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { list_size_half_ceil } from "../../../love/public/src/list_size_half_ceil.mjs";
 import { app_replace_rule_set_attribute_hint } from "../../../love/public/src/app_replace_rule_set_attribute_hint.mjs";
 import { list_filter_null_not_is } from "../../../love/public/src/list_filter_null_not_is.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
@@ -88,7 +87,6 @@ export async function app_replace_tests_run_e2e() {
                 attribute_value = list_single(filtered2);
                 break;
               }
-              let ceiling = list_size_half_ceil(start_indices);
             }
           }
           refresh_count = await app_replace_rule_set_attribute_refresh_click(
