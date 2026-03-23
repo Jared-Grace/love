@@ -13,6 +13,9 @@ export async function playwright_by_attribute_named_all(page, name, value) {
   });
   let locator = playwright_by_attribute_named(page, name);
   const elements = await locator.evaluateAll(identity, name);
+  log(playwright_by_attribute_named_all.name, {
+    elements,
+  });
   function lambda(element) {
     let r3 = playwright_element_attribute_equals(element, name, value);
     return r3;
