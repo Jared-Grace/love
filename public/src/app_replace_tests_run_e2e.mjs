@@ -61,7 +61,7 @@ export async function app_replace_tests_run_e2e() {
           let values = await playwright_by_attribute_named_all(page, combined);
           async function lambda5(item) {
             function lambda4(el) {
-              let r = el.outerHTML;
+              let r = el.getAttribute("data-test");
               return r;
             }
             const html = await item.evaluate(lambda4);
