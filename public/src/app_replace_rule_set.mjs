@@ -80,7 +80,7 @@ export async function app_replace_rule_set(context) {
   let start_indices = list_size_range(start);
   let end = property_get(r4, "end");
   function lambda11() {
-    let path = app_replace_rule_set_verify_goal_path(rules_parsed);
+    let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);
     log(app_replace_rule_set.name, {
       path,
     });
