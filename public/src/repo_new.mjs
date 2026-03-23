@@ -3,6 +3,7 @@ import { git_ac_call_folder } from "../../../love/public/src/git_ac_call_folder.
 import { command_line_folder } from "../../../love/public/src/command_line_folder.mjs";
 export async function repo_new(repo_name) {
   let folder = await repo_new_local(repo_name);
+    let r3 = await git_init_folder(folder);
   await git_ac_call_folder(repo_new.name, [repo_name], folder);
   let r = await command_line_folder(
     "gh repo create " +
