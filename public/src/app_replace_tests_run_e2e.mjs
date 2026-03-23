@@ -21,8 +21,8 @@ export async function app_replace_tests_run_e2e() {
     async function lambda_each(rule_set) {
       let goals = property_get(rule_set, "goals");
       function lambda2(goal) {
-        let start2 = property_get(goal, "start");
-        let end2 = property_get(goal, "end");
+        let start = property_get(goal, "start");
+        let end = property_get(goal, "end");
         let second = app_replace_rule_set_verify_goal_next(
           rules_parsed,
           start,
