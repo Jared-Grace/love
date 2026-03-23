@@ -1,12 +1,8 @@
 import { git_acp_call_folder_try } from "../../../love/public/src/git_acp_call_folder_try.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { repos_paths_map_unordered } from "../../../love/public/src/repos_paths_map_unordered.mjs";
 export async function git_acp_call_repos(f_name, args) {
   await repos_paths_map_unordered(each_folder);
   async function each_folder(folder) {
-    log(git_acp_call_repos.name, {
-      folder,
-    });
     await git_acp_call_folder_try(folder, f_name, args);
   }
 }
