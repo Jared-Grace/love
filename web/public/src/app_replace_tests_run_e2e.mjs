@@ -37,7 +37,7 @@ export async function app_replace_tests_run_e2e() {
         let original = property_get(rule, "original");
         let json2 = json_to(second);
         log(app_replace_tests_run_e2e.name, {
-          json2,
+          original,
         });
         return true;
       }
