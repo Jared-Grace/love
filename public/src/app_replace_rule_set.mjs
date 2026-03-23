@@ -143,6 +143,7 @@ export async function app_replace_rule_set(context) {
       let left = property_get(rule, "left");
       let right = property_get(rule, "right");
       function button_rule_on_click() {
+        start_indices = list_size_range(start);
         button_rule_on_click_inner(index);
       }
       let r2 = app_replace_button_rule(
