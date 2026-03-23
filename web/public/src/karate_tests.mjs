@@ -13,7 +13,8 @@ import { playwright_by_attribute_type } from "../../../love/public/src/playwrigh
 import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { playwright_test_url } from "../../../love/public/src/playwright_test_url.mjs";
 export async function karate_tests() {
-  let without = app_prefix_without_fn(app_karate);
+  let app_fn = app_karate;
+  let without = app_prefix_without_fn(app_fn);
   let r = await app_shared_name_search_info(without);
   let f_path_dev = property_get(r, "f_path_dev");
   let previous = folder_previous();
