@@ -9,9 +9,11 @@ export async function playwright_by_attribute_named_all(page, name) {
     name,
   });
   let locator = playwright_by_attribute_named(page, name);
-  const values = await locator.evaluateAll(identity, name);
-  function lambda(item) {}
-  let mapped = list_map(list, lambda);
+  const elements = await locator.evaluateAll(identity, name);
+  function lambda(element) {
+    return {};
+  }
+  let mapped = list_map(elements, lambda);
   function lambda5(elements, name) {
     function lambda4(el) {
       let r = el.getAttribute(name);
