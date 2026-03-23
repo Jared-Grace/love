@@ -1,3 +1,4 @@
+import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_replace_rule_set_verify_goal_next } from "../../../love/public/src/app_replace_rule_set_verify_goal_next.mjs";
 import { playwright_by_attribute_test_click } from "../../../love/public/src/playwright_by_attribute_test_click.mjs";
@@ -20,6 +21,7 @@ export async function app_replace_tests_run_e2e() {
     await playwright_by_attribute_test_click(page, json);
     async function lambda_each(rule_set) {
       let goals = property_get(rule_set, "goals");
+      let rules_parsed = app_replace_rule_set_rules_get(rule_set);
       function lambda2(goal) {
         let start = property_get(goal, "start");
         let end = property_get(goal, "end");
