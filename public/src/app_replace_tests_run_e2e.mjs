@@ -1,3 +1,4 @@
+import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
 import { playwright_test_app_dev } from "../../../love/public/src/playwright_test_app_dev.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -5,7 +6,8 @@ import { sleep_long } from "../../../portfolio_qa/public/src/sleep_long.mjs";
 import { playwright_by_attribute_click } from "../../../love/public/src/playwright_by_attribute_click.mjs";
 import { qa_attribute_test_data } from "../../../love/public/src/qa_attribute_test_data.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export async function app_replace_tests_run_e2e(rule_sets) {
+export async function app_replace_tests_run_e2e(rule_sets2) {
+  let rule_sets = app_replace_rule_sets();
   async function lambda(page) {
     async function lambda_each(rule_set) {
       let name2 = property_get(rule_set, "name");
