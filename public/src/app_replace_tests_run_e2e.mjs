@@ -1,3 +1,4 @@
+import { html_data_set_test_attribute } from "../../../love/public/src/html_data_set_test_attribute.mjs";
 import { html_attribute_data_prefix } from "../../../love/public/src/html_attribute_data_prefix.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_attribute_get_unwrapped } from "../../../love/public/src/html_attribute_get_unwrapped.mjs";
@@ -72,8 +73,9 @@ export async function app_replace_tests_run_e2e() {
               combined,
             );
             const attribute_name = "data-test";
+            let a = html_data_set_test_attribute();
             let r = html_attribute_data_prefix();
-            let combined2 = text_combine(r, right);
+            let combined2 = text_combine(r, a);
             async function lambda5(item) {
               let value = html_attribute_get_unwrapped(item, attribute_name);
               return value;
