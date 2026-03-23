@@ -1,3 +1,4 @@
+import { app_replace_rule_set_symbol_on_click } from "../../../love/public/src/app_replace_rule_set_symbol_on_click.mjs";
 import { app_replace_rule_set_success } from "../../../love/public/src/app_replace_rule_set_success.mjs";
 import { list_size_half_ceil } from "../../../love/public/src/list_size_half_ceil.mjs";
 import { list_swap_first } from "../../../love/public/src/list_swap_first.mjs";
@@ -12,33 +13,17 @@ import { log } from "../../../love/public/src/log.mjs";
 import { emoji_question } from "../../../love/public/src/emoji_question.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
-import { app_replace_rule_apply } from "../../../love/public/src/app_replace_rule_apply.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 import { html_element } from "../../../love/public/src/html_element.mjs";
 import { html_cycle_bold } from "../../../love/public/src/html_cycle_bold.mjs";
 import { list_sort_text_property } from "../../../love/public/src/list_sort_text_property.mjs";
 import { object_to_list } from "../../../love/public/src/object_to_list.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
-import { app_replace_button_symbol_style_valid_if_multiple } from "../../../love/public/src/app_replace_button_symbol_style_valid_if_multiple.mjs";
 import { app_replace_button_symbol_style_invalid } from "../../../love/public/src/app_replace_button_symbol_style_invalid.mjs";
 import { app_replace_button_screen } from "../../../love/public/src/app_replace_button_screen.mjs";
-import { html_translation_transition_clear } from "../../../love/public/src/html_translation_transition_clear.mjs";
-import { html_move_animate_multiple } from "../../../love/public/src/html_move_animate_multiple.mjs";
-import { html_move_animate_multiple_parent_remove } from "../../../love/public/src/html_move_animate_multiple_parent_remove.mjs";
-import { html_move_animate_translate } from "../../../love/public/src/html_move_animate_translate.mjs";
-import { html_move_animate_rect } from "../../../love/public/src/html_move_animate_rect.mjs";
-import { lists_map } from "../../../love/public/src/lists_map.mjs";
-import { sleep } from "../../../love/public/src/sleep.mjs";
-import { html_request_animation_frame } from "../../../love/public/src/html_request_animation_frame.mjs";
-import { html_bounding_client_rect } from "../../../love/public/src/html_bounding_client_rect.mjs";
 import { html_visibility_hidden } from "../../../love/public/src/html_visibility_hidden.mjs";
-import { html_insert } from "../../../love/public/src/html_insert.mjs";
-import { html_clone } from "../../../love/public/src/html_clone.mjs";
-import { list_wait } from "../../../love/public/src/list_wait.mjs";
-import { list_slice_count } from "../../../love/public/src/list_slice_count.mjs";
 import { property_exists } from "../../../love/public/src/property_exists.mjs";
 import { app_replace_button_home } from "../../../love/public/src/app_replace_button_home.mjs";
-import { property_set } from "../../../love/public/src/property_set.mjs";
 import { json_equal } from "../../../love/public/src/json_equal.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_replace_button_symbol_style_valid_if_curried_right } from "../../../love/public/src/app_replace_button_symbol_style_valid_if_curried_right.mjs";
@@ -63,7 +48,6 @@ import { range } from "../../../love/public/src/range.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
-import { list_skip } from "../../../love/public/src/list_skip.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_replace_rule_valid } from "../../../love/public/src/app_replace_rule_valid.mjs";
 import { not } from "../../../love/public/src/not.mjs";
@@ -76,7 +60,6 @@ import { html_p } from "../../../love/public/src/html_p.mjs";
 import { html_disable } from "../../../love/public/src/html_disable.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { html_button } from "../../../love/public/src/html_button.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
@@ -202,62 +185,20 @@ export async function app_replace_rule_set(context) {
     function symbols_mapper(symbol, index) {
       let sb = null;
       async function symbol_on_click() {
-        let rule2 = list_get(rules_parsed, index_selected);
-        let eq = app_replace_rule_valid(rule2, index, start);
-        if (eq) {
-          symbols_invalid_chosen = {};
-          app_replace_button_symbol_style_valid_if_multiple(sbs, true);
-          start = app_replace_rule_apply(rule2, index, start);
-          start_indices = list_size_range(start);
-          let rb = list_get(rules_buttons, index_selected);
-          let lefts2 = property_get(rb, "lefts");
-          let rights2 = property_get(rb, "rights");
-          let size3 = list_size(lefts2);
-          let sliced2 = list_slice_count(sbs, index, size3);
-          const sum = index + size3;
-          let skipped = list_skip(sbs, sum);
-          let rects_before = list_map(skipped, html_bounding_client_rect);
-          await html_move_animate_multiple_parent_remove(
-            sliced2,
-            lefts2,
+        ({ index_selected, start, symbols_invalid_chosen, start_indices } =
+          await app_replace_rule_set_symbol_on_click(
+            rules_parsed,
+            index_selected,
+            index,
+            start,
+            symbols_invalid_chosen,
+            sbs,
+            start_indices,
+            rules_buttons,
             duration,
-          );
-          await html_request_animation_frame();
-          let rights_cloned = list_map(rights2, html_clone);
-          function lambda8(item, index5) {
-            html_visibility_hidden(item);
-            html_insert(div_symbols, item, index + index5);
-          }
-          each_index(rights_cloned, lambda8);
-          let rects_after = list_map(skipped, html_bounding_client_rect);
-          async function lambda9(a) {
-            let [el, rect_before, rect_after] = a;
-            let r3 = await html_move_animate_rect(
-              el,
-              rect_before,
-              rect_after,
-              0,
-            );
-            let distance = property_get(r3, "distance");
-            el.offsetWidth;
-            await html_request_animation_frame();
-            ("here the duration depends on the distance so that smaller distances take less time");
-            const time = distance * 4;
-            await html_move_animate_translate(el, 0, 0, time);
-            await sleep(time);
-            html_translation_transition_clear(el);
-          }
-          let mapped2 = lists_map(
-            [skipped, rects_after, rects_before],
-            lambda9,
-          );
-          await list_wait(mapped2);
-          await html_move_animate_multiple(rights2, rights_cloned, duration);
-          index_selected = null;
-        } else {
-          property_set(symbols_invalid_chosen, index, true);
-        }
-        refresh();
+            div_symbols,
+            refresh,
+          ));
       }
       sb = html_button(div_symbols, symbol, symbol_on_click);
       app_replace_button_symbol_style(sb);
