@@ -16,6 +16,7 @@ export async function app_replace_tests_run_e2e() {
     let goals = property_get(first, "goals");
     let g = list_first(goals);
     let json = json_to(g);
+    await sleep_long();
     await playwright_by_attribute_test_click(page, json);
     await sleep_long();
     async function lambda_each(rule_set) {
