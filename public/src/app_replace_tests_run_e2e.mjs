@@ -40,8 +40,8 @@ export async function app_replace_tests_run_e2e() {
         await playwright_by_attribute_test_click(page, original);
         let value = app_replace_rule_set_attribute_symbol(index);
         await playwright_by_attribute_test_click(page, value);
-        let name22 = app_replace_rule_set_success_attribute_next();
-        await playwright_by_attribute_test_click(page, name22);
+        let name = app_replace_rule_set_success_attribute_next();
+        await playwright_by_attribute_test_click(page, name);
         log(app_replace_tests_run_e2e.name, {
           index,
         });
