@@ -1,6 +1,5 @@
 import { log } from "../../../love/public/src/log.mjs";
 import { playwright_by_attribute_test_exists_assert } from "../../../love/public/src/playwright_by_attribute_test_exists_assert.mjs";
-import { app_replace_rule_set_attribute_refresh_count } from "../../../love/public/src/app_replace_rule_set_attribute_refresh_count.mjs";
 import { app_replace_rule_set_verify_goal_path } from "../../../love/public/src/app_replace_rule_set_verify_goal_path.mjs";
 import { app_replace_rule_set_success_attribute_next } from "../../../love/public/src/app_replace_rule_set_success_attribute_next.mjs";
 import { app_replace_rule_set_attribute_symbol } from "../../../love/public/src/app_replace_rule_set_attribute_symbol.mjs";
@@ -38,8 +37,6 @@ export async function app_replace_tests_run_e2e() {
           end,
         );
         async function lambda3(p) {
-          let value3 =
-            app_replace_rule_set_attribute_refresh_count(refresh_count);
           await playwright_by_attribute_test_exists_assert(page, value3);
           let rule = property_get(p, "rule");
           let index = property_get(p, "index");
