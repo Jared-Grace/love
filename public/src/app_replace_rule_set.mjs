@@ -1,3 +1,4 @@
+import { app_replace_rule_set_attribute_refresh_count } from "../../../love/public/src/app_replace_rule_set_attribute_refresh_count.mjs";
 import { app_replace_rule_set_attribute_symbol } from "../../../love/public/src/app_replace_rule_set_attribute_symbol.mjs";
 import { html_data_set_test } from "../../../love/public/src/html_data_set_test.mjs";
 import { app_replace_rule_set_verify_goal_next } from "../../../love/public/src/app_replace_rule_set_verify_goal_next.mjs";
@@ -142,7 +143,8 @@ export async function app_replace_rule_set(context) {
     });
     html_clear(div_rules_buttons);
     refresh_count++;
-    html_data_set_test(div_rules_buttons, "refresh_count_" + refresh_count);
+    let value3 = app_replace_rule_set_attribute_refresh_count(refresh_count);
+    html_data_set_test(div_rules_buttons, value3);
     function each_rule(rule, index) {
       function button_rule_on_click() {
         start_indices = list_size_range(start);
