@@ -4,6 +4,8 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_button_rule_content } from "../../../love/public/src/app_replace_button_rule_content.mjs";
 import { html_button_notext } from "../../../love/public/src/html_button_notext.mjs";
 export function app_replace_button_rule(root, rule, on_click) {
+  let left = property_get(rule, "left");
+  let right = property_get(rule, "right");
   let b = html_button_notext(root, on_click);
   html_data_set_test(b, value);
   app_replace_button_rule_style(b);
