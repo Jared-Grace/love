@@ -300,9 +300,6 @@ export async function app_replace_rule_set(context) {
       html_text_set_if(nn, "Choose a symbol:", "Symbols:", label_symbols);
     }
     if (success) {
-      symbols_hide_on_success();
-    }
-    function symbols_hide_on_success() {
       html_visibility_hidden(div_symbols);
     }
   }
