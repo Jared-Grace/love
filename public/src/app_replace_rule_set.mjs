@@ -145,12 +145,7 @@ export async function app_replace_rule_set(context) {
         start_indices = list_size_range(start);
         button_rule_on_click_inner(index);
       }
-      let r2 = app_replace_button_rule(
-        div_rules_buttons,
-        left,
-        right,
-        button_rule_on_click,
-      );
+      let r2 = app_replace_button_rule(div_rules_buttons, button_rule_on_click);
       let arrow = property_get(r2, "arrow");
       let rights = property_get(r2, "rights");
       let lefts = property_get(r2, "lefts");
