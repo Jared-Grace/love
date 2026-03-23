@@ -7,7 +7,7 @@ export function app_replace_button_rule(root, rule, on_click) {
   let left = property_get(rule, "left");
   let right = property_get(rule, "right");
   let b = html_button_notext(root, on_click);
-  html_data_set_test(b, value);
+  html_data_set_test(b, rule);
   app_replace_button_rule_style(b);
   let r2 = app_replace_button_rule_content(b, left, right);
   let arrow = property_get(r2, "arrow");
