@@ -47,7 +47,6 @@ export async function app_replace_rule_set_success(
   highlight,
   goal_index,
   goals,
-  symbols_hide,
 ) {
   function lambda5(value) {
     let g = app_replace_rule_sets_data_goal(value, rule_name, goal);
