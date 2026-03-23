@@ -39,7 +39,7 @@ export function app_replace_home(context) {
       index2,
       lambda,
     );
-    html_data_set(title, "t", "123");
+    html_data_set(title, "test", rule_name);
     html_text_set(title, rule_name);
     function lambda() {
       on_click(index2);
