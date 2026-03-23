@@ -10,7 +10,7 @@ export function app_replace_button_symbol_style_valid_if(sb, valid) {
   html_style_background_color_set_if_else(valid, sb, "#00b400ff", "#1e6c1eff");
   html_style_font_color_set_if(valid, sb, "white", "#b9fcb9ff");
   let suffix = app_replace_button_symbol_style_valid_if_attribute();
-  html_data_set_test_suffix(suffix, valid);
+  html_data_set_test_suffix(component, suffix, valid);
   let h = app_replace_rule_set_highlight();
   app_replace_button_symbol_style_box_shadow(valid, sb, h);
 }
