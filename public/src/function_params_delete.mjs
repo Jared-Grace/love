@@ -1,8 +1,10 @@
+import { function_param_delete_curried } from "../../../love/public/src/function_param_delete_curried.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { text_split_comma } from "../../../love/public/src/text_split_comma.mjs";
 import { function_param_delete } from "../../../love/public/src/function_param_delete.mjs";
 export async function function_params_delete(f_name, param_names_comma) {
-  let param_names = text_split_comma(param_names_comma);function_param_delete_curried
+  let param_names = text_split_comma(param_names_comma);
+  let r2 = await function_param_delete_curried(f_name2);
   async function lambda(param_name) {
     await function_param_delete(f_name, param_name);
   }
