@@ -1,6 +1,5 @@
 import { app_replace_rule_set_attribute_refresh_click } from "../../../love/public/src/app_replace_rule_set_attribute_refresh_click.mjs";
 import { app_replace_rule_set_attribute_refresh_count_assert } from "../../../love/public/src/app_replace_rule_set_attribute_refresh_count_assert.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_rule_set_verify_goal_path } from "../../../love/public/src/app_replace_rule_set_verify_goal_path.mjs";
 import { app_replace_rule_set_success_attribute_next } from "../../../love/public/src/app_replace_rule_set_success_attribute_next.mjs";
 import { app_replace_rule_set_attribute_symbol } from "../../../love/public/src/app_replace_rule_set_attribute_symbol.mjs";
@@ -58,9 +57,6 @@ export async function app_replace_tests_run_e2e() {
             refresh_count,
           );
         }
-        log(app_replace_tests_run_e2e.name, {
-          path,
-        });
         await each_async(path, lambda3);
         let name = app_replace_rule_set_success_attribute_next();
         await playwright_by_attribute_test_click(page, name);
