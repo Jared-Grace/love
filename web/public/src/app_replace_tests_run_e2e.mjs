@@ -20,13 +20,14 @@ export async function app_replace_tests_run_e2e() {
     await playwright_by_attribute_test_click(page, json);
     async function lambda_each(rule_set) {
       let goals = property_get(rule_set, "goals");
-      function lambda2(item) {}
-      each(list, lambda2);
-      let second = app_replace_rule_set_verify_goal_next(
-        rules_parsed,
-        start,
-        end,
-      );
+      function lambda2(goal) {
+        let second = app_replace_rule_set_verify_goal_next(
+          rules_parsed,
+          start,
+          end,
+        );
+      }
+      each(goals, lambda2);
       return true;
     }
     await each_async(rule_sets, lambda_each);
