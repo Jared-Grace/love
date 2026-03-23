@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { playwright_by_attribute_click } from "../../../love/public/src/playwright_by_attribute_click.mjs";
 import { portfolio_qa_attribute_test_data } from "../../../portfolio_qa/public/src/portfolio_qa_attribute_test_data.mjs";
 import { sleep_long } from "../../../portfolio_qa/public/src/sleep_long.mjs";
@@ -10,6 +11,7 @@ export async function app_replace_tests_run() {
   async function lambda(page) {
     await sleep_long();
     async function lambda_each(rule_set) {
+      let name2 = property_get(rule_set, "name");
       const name = portfolio_qa_attribute_test_data();
       const value = "login-button";
       await playwright_by_attribute_click(page, name, value);
