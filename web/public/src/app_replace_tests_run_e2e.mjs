@@ -1,3 +1,4 @@
+import { app_replace_rule_set_attribute_refresh_click } from "../../../love/public/src/app_replace_rule_set_attribute_refresh_click.mjs";
 import { app_replace_rule_set_attribute_refresh_count_assert } from "../../../love/public/src/app_replace_rule_set_attribute_refresh_count_assert.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_rule_set_verify_goal_path } from "../../../love/public/src/app_replace_rule_set_verify_goal_path.mjs";
@@ -45,12 +46,11 @@ export async function app_replace_tests_run_e2e() {
           let rule = property_get(p, "rule");
           let index = property_get(p, "index");
           let original = property_get(rule, "original");
-          await playwright_by_attribute_test_click(page, original);
-          refresh_count =
-            await app_replace_rule_set_attribute_refresh_count_assert(
-              refresh_count,
-              page,
-            );
+          refresh_count = await app_replace_rule_set_attribute_refresh_click(
+            page,
+            original,
+            refresh_count,
+          );
           let value = app_replace_rule_set_attribute_symbol(index);
           await playwright_by_attribute_test_click(page, value);
           refresh_count =
