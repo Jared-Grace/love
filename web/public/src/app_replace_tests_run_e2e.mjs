@@ -60,22 +60,25 @@ export async function app_replace_tests_run_e2e() {
             original,
             refresh_count,
           );
-          let suffix = app_replace_button_symbol_style_valid_if_attribute();
-          let combined = html_data_set_test_suffixes_attribute([suffix]);
-          let values = await playwright_by_attribute_named_all(page, combined);
-          async function lambda5(item) {
-            function lambda4(el) {
-              let r = el.getAttribute("data-test");
-              return r;
-            }
-            const html = await item.evaluate(lambda4);
-            return html;
-          }
-          let waited = await list_map_unordered_async(values, lambda5);
-          let filtered2 = list_filter_null_not_is(waited);
-          let size = list_size(filtered2);
-          let m = list_multiple_is(filtered2);
           if (m) {
+            let suffix = app_replace_button_symbol_style_valid_if_attribute();
+            let combined = html_data_set_test_suffixes_attribute([suffix]);
+            let values = await playwright_by_attribute_named_all(
+              page,
+              combined,
+            );
+            async function lambda5(item) {
+              function lambda4(el) {
+                let r = el.getAttribute("data-test");
+                return r;
+              }
+              const html = await item.evaluate(lambda4);
+              return html;
+            }
+            let waited = await list_map_unordered_async(values, lambda5);
+            let filtered2 = list_filter_null_not_is(waited);
+            let size = list_size(filtered2);
+            let m = list_multiple_is(filtered2);
             let ceiling = list_size_half_ceil(start_indices);
             let hint = app_replace_rule_set_attribute_hint();
             refresh_count = await app_replace_rule_set_attribute_refresh_click(
