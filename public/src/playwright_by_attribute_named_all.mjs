@@ -12,4 +12,9 @@ export async function playwright_by_attribute_named_all(page, name, value) {
   const elements = await locator.evaluateAll(identity, name);
   function lambda(element) {
     let actual = element.getAttribute(name);
-    let r3 = actual 
+    let r3 = actual === value;
+    return r3;
+  }
+  let mapped = list_filter(elements, lambda);
+  return mapped;
+}
