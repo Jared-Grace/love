@@ -13,8 +13,8 @@ export async function app_replace_tests_run_e2e() {
     let first = list_first(rule_sets);
     let name2 = property_get(first, "name");
     await playwright_by_attribute_test_click(page, name2);
-    let goals_first = property_get(first, "goals");
-    let g = list_first(goals_first);
+    let goals_first_rs = property_get(first, "goals");
+    let g = list_first(goals_first_rs);
     let json = json_to(g);
     await playwright_by_attribute_test_click(page, json);
     async function lambda_each(rule_set) {
