@@ -13,7 +13,7 @@ import { app_replace_button_symbol_style_valid_if_attribute } from "../../../lov
 import { app_replace_rule_set_attribute_refresh_click } from "../../../love/public/src/app_replace_rule_set_attribute_refresh_click.mjs";
 import { app_replace_rule_set_attribute_hint } from "../../../love/public/src/app_replace_rule_set_attribute_hint.mjs";
 import { app_replace_tests_run_e2e_generic } from "../../../love/public/src/app_replace_tests_run_e2e_generic.mjs";
-export async function app_replace_tests_run_hinted() {
+export async function app_replace_tests_run_e2e_hinted() {
   await app_replace_tests_run_e2e_generic(hinted);
   async function hinted(p, refresh_count, page, symbol_id) {
     while (true) {
@@ -25,7 +25,7 @@ export async function app_replace_tests_run_hinted() {
       );
       let suffix = app_replace_button_symbol_style_valid_if_attribute();
       let combined = html_data_set_test_suffixes_attribute([suffix]);
-      log(app_replace_tests_run_hinted.name, {
+      log(app_replace_tests_run_e2e_hinted.name, {
         combined,
       });
       let left = html_attribute_data_prefix();
@@ -37,7 +37,7 @@ export async function app_replace_tests_run_hinted() {
       let ag = html_attribute_get_unwrapped_curried_right(combined2);
       let waited = await list_map_unordered_async(values, ag);
       let filtered2 = list_filter_null_not_is(waited);
-      log(app_replace_tests_run_hinted.name, {
+      log(app_replace_tests_run_e2e_hinted.name, {
         filtered2,
       });
       let s = list_size_1(filtered2);
