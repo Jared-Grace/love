@@ -75,10 +75,10 @@ export async function app_replace_tests_run_e2e() {
           let size = list_size(filtered2);
           let m = list_multiple_is(filtered2);
           if (m) {
-            let a = app_replace_rule_set_attribute_hint();
+            let hint = app_replace_rule_set_attribute_hint();
             refresh_count = await app_replace_rule_set_attribute_refresh_click(
               page,
-              original,
+              hint,
               refresh_count,
             );
           }
