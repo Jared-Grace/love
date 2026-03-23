@@ -27,6 +27,7 @@ export async function app_replace_tests_run_e2e() {
       let goals = property_get(rule_set, "goals");
       let rules_parsed = app_replace_rule_set_rules_get(rule_set);
       async function lambda2(goal) {
+        let refresh_count = 1;
         let r4 = app_replace_start_end_get(goal);
         let start = property_get(r4, "start");
         let end = property_get(r4, "end");
@@ -43,8 +44,10 @@ export async function app_replace_tests_run_e2e() {
           let index = property_get(p, "index");
           let original = property_get(rule, "original");
           await playwright_by_attribute_test_click(page, original);
+          refresh_count++;
           let value = app_replace_rule_set_attribute_symbol(index);
           await playwright_by_attribute_test_click(page, value);
+          refresh_count++;
         }
         await each_async(path, lambda3);
         let name = app_replace_rule_set_success_attribute_next();
