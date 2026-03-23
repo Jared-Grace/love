@@ -1,3 +1,4 @@
+import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { html_attribute_get_unwrapped_curried_right } from "../../../love/public/src/html_attribute_get_unwrapped_curried_right.mjs";
 import { html_data_set_test_attribute } from "../../../love/public/src/html_data_set_test_attribute.mjs";
 import { html_attribute_data_prefix } from "../../../love/public/src/html_attribute_data_prefix.mjs";
@@ -84,7 +85,7 @@ export async function app_replace_tests_run_e2e() {
                 filtered2,
               });
               let size = list_size(filtered2);
-              let s = list_single_is(filtered2);
+              let s = list_size_1(filtered2);
               let ceiling = list_size_half_ceil(start_indices);
               refresh_count =
                 await app_replace_rule_set_attribute_refresh_click(
