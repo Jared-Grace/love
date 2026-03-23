@@ -1,3 +1,4 @@
+import { playwright_by_attribute_named_all } from "../../../love/public/src/playwright_by_attribute_named_all.mjs";
 import { app_replace_rule_set_attribute_refresh_click } from "../../../love/public/src/app_replace_rule_set_attribute_refresh_click.mjs";
 import { app_replace_rule_set_attribute_refresh_count_assert } from "../../../love/public/src/app_replace_rule_set_attribute_refresh_count_assert.mjs";
 import { app_replace_rule_set_verify_goal_path } from "../../../love/public/src/app_replace_rule_set_verify_goal_path.mjs";
@@ -50,6 +51,7 @@ export async function app_replace_tests_run_e2e() {
             original,
             refresh_count,
           );
+          let values = await playwright_by_attribute_named_all(page2, name3);
           let value = app_replace_rule_set_attribute_symbol(index);
           refresh_count = await app_replace_rule_set_attribute_refresh_click(
             page,
