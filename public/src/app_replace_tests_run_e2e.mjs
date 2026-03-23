@@ -63,15 +63,12 @@ export async function app_replace_tests_run_e2e() {
               symbol_id,
             ));
           } else {
-            let rule = property_get(p, "rule");
-            let original = property_get(rule, "original");
-            refresh_count = await app_replace_rule_set_attribute_refresh_click(
-              page,
-              original,
+            ({ refresh_count, symbol_id } = await normal(
+              p,
               refresh_count,
-            );
-            let index = property_get(p, "index");
-            symbol_id = app_replace_rule_set_attribute_symbol(index);
+              page,
+              symbol_id,
+            ));
           }
           refresh_count = await app_replace_rule_set_attribute_refresh_click(
             page,
@@ -88,6 +85,22 @@ export async function app_replace_tests_run_e2e() {
     await each_async(rule_sets, lambda_each);
   }
   await playwright_test_app_dev(app_replace, lambda);
+  async function normal(p, refresh_count, page, symbol_id) {
+    let rule = property_get(p, "rule");
+    let original = property_get(rule, "original");
+    refresh_count = await app_replace_rule_set_attribute_refresh_click(
+      page,
+      original,
+      refresh_count,
+    );
+    let index = property_get(p, "index");
+    symbol_id = app_replace_rule_set_attribute_symbol(index);
+    let r3 = {
+      refresh_count,
+      symbol_id,
+    };
+    return r3;
+  }
   async function hinted(refresh_count, page, symbol_id) {
     while (true) {
       let hint = app_replace_rule_set_attribute_hint();
