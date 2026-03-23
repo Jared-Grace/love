@@ -11,7 +11,6 @@ import { app_replace } from "../../../love/public/src/app_replace.mjs";
 import { playwright_test_app_dev } from "../../../love/public/src/playwright_test_app_dev.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { sleep } from "./sleep.mjs";
 export async function app_replace_tests_run_e2e() {
   let rule_sets = app_replace_rule_sets();
   async function lambda(page) {
@@ -38,7 +37,6 @@ export async function app_replace_tests_run_e2e() {
           let rule = property_get(p, "rule");
           let index = property_get(p, "index");
           let original = property_get(rule, "original");
-          await sleep(3000);
           await playwright_by_attribute_test_click(page, original);
           let value = app_replace_rule_set_attribute_symbol(index);
           await playwright_by_attribute_test_click(page, value);
