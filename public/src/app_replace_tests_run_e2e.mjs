@@ -12,6 +12,7 @@ import { app_replace_button_symbol_style_valid_if_attribute } from "../../../lov
 import { html_data_set_test_suffixes_attribute } from "../../../love/public/src/html_data_set_test_suffixes_attribute.mjs";
 import { playwright_by_attribute_named_all } from "../../../love/public/src/playwright_by_attribute_named_all.mjs";
 import { app_replace_rule_set_attribute_refresh_click } from "../../../love/public/src/app_replace_rule_set_attribute_refresh_click.mjs";
+import { app_replace_rule_set_attribute_refresh_count_assert } from "../../../love/public/src/app_replace_rule_set_attribute_refresh_count_assert.mjs";
 import { app_replace_rule_set_verify_goal_path } from "../../../love/public/src/app_replace_rule_set_verify_goal_path.mjs";
 import { app_replace_rule_set_success_attribute_next } from "../../../love/public/src/app_replace_rule_set_success_attribute_next.mjs";
 import { app_replace_rule_set_attribute_symbol } from "../../../love/public/src/app_replace_rule_set_attribute_symbol.mjs";
@@ -39,7 +40,12 @@ export async function app_replace_tests_run_e2e() {
       let goals = property_get(rule_set, "goals");
       let rules_parsed = app_replace_rule_set_rules_get(rule_set);
       async function lambda2(goal) {
-        let refresh_count = 1;
+        let refresh_count = 0;
+        refresh_count =
+          await app_replace_rule_set_attribute_refresh_count_assert(
+            refresh_count,
+            page,
+          );
         let se = app_replace_start_end_get(goal);
         let start = property_get(se, "start");
         let end = property_get(se, "end");
