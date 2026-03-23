@@ -1,3 +1,5 @@
+import { app_replace_rule_set_success_attribute_next } from "../../../love/public/src/app_replace_rule_set_success_attribute_next.mjs";
+import { html_data_set_test } from "../../../love/public/src/html_data_set_test.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
 import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
 import { app_karate_button_next_text } from "../../../love/public/src/app_karate_button_next_text.mjs";
@@ -132,4 +134,6 @@ export async function app_replace_rule_set_success(
   let text = app_karate_button_next_text();
   let bn = app_replace_button(p_next, text, lambda2);
   html_width_full(bn);
+  let value2 = app_replace_rule_set_success_attribute_next();
+  html_data_set_test(bn, value2);
 }
