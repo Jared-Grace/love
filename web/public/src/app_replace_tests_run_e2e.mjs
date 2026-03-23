@@ -1,3 +1,4 @@
+import { html_attribute_get_unwrapped } from "../../../love/public/src/html_attribute_get_unwrapped.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_size_half_ceil } from "../../../love/public/src/list_size_half_ceil.mjs";
 import { app_replace_rule_set_attribute_hint } from "../../../love/public/src/app_replace_rule_set_attribute_hint.mjs";
@@ -70,8 +71,8 @@ export async function app_replace_tests_run_e2e() {
             );
             async function lambda5(item) {
               const attribute_name = "data-test";
-              let r = item.getAttribute(attribute_name);
-              return r;
+              let value = html_attribute_get_unwrapped(item, attribute_name);
+              return value;
             }
             let waited = await list_map_unordered_async(values, lambda5);
             let filtered2 = list_filter_null_not_is(waited);
