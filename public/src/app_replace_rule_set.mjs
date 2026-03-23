@@ -86,8 +86,8 @@ export async function app_replace_rule_set(context) {
       start,
       end,
     );
-    let rule3 = property_get(second, "rule");
-    let index_rule = list_index_of(rules_parsed, rule3);
+    let rule_next = property_get(second, "rule");
+    let index_rule = list_index_of(rules_parsed, rule_next);
     let index_symbol = property_get(second, "index");
     if (equal(index_rule, index_selected)) {
       let ceiling = list_size_half_ceil(start_indices);
