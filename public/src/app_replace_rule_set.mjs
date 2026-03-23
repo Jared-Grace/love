@@ -132,6 +132,9 @@ export async function app_replace_rule_set(context) {
   const duration = 555;
   refresh();
   async function refresh() {
+    log(app_replace_rule_set.name, {
+      refresh,
+    });
     html_clear(div_rules_buttons);
     function each_rule(rule, index) {
       let left = property_get(rule, "left");
