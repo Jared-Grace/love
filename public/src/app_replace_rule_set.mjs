@@ -134,6 +134,7 @@ export async function app_replace_rule_set(context) {
   let div_below = html_div(root);
   let success = false;
   const duration = 555;
+  let refresh_count = 0;
   refresh();
   async function refresh() {
     log(app_replace_rule_set.name, {
