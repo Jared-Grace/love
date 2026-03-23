@@ -68,7 +68,7 @@ export async function app_replace_tests_run_e2e() {
           }
           let waited = await list_map_unordered_async(list, lambda5);
           log_exit({
-            html,
+            waited,
           });
           let value = app_replace_rule_set_attribute_symbol(index);
           refresh_count = await app_replace_rule_set_attribute_refresh_click(
