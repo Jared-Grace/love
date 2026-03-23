@@ -81,6 +81,9 @@ export async function app_replace_rule_set(context) {
   let end = property_get(r4, "end");
   function lambda11() {
     let path = app_replace_rule_set_verify_goal_path(goal, rules_parsed);
+    log(app_replace_rule_set.name, {
+      path,
+    });
     let second = list_second(path);
     let rule3 = property_get(second, "rule");
     let index_rule = list_index_of(rules_parsed, rule3);
