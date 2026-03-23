@@ -6,6 +6,6 @@ export async function retry_fast(lambda) {
   let result = await retry_generic(lambda, interval, wait_get, count);
   return result;
   function wait_get(wait) {
-    wait += interval;
+    return wait + interval;
   }
 }
