@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
 import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -33,7 +34,9 @@ export async function app_replace_tests_run_e2e() {
           end,
         );
         let json2 = json_to(second);
-        alert(json2);
+        log(app_replace_tests_run_e2e.name, {
+          json2,
+        });
         return true;
       }
       each(goals, lambda2);
