@@ -28,7 +28,8 @@ export async function app_replace_tests_run_e2e() {
           start,
           end,
         );
-        let json2 = json_to(object);
+        let json2 = json_to(second);
+        alert(json2);
         return true;
       }
       each(goals, lambda2);
