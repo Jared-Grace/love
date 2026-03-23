@@ -74,7 +74,7 @@ export async function app_replace_tests_run_e2e() {
               let name = text_combine(left, combined);
               let values = await playwright_by_attribute_all(
                 page,
-                combined,
+                name,
                 "true",
               );
               let a = html_data_set_test_attribute();
