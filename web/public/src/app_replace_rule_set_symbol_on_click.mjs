@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { html_move_animate_multiple } from "../../../love/public/src/html_move_animate_multiple.mjs";
 import { list_wait } from "../../../love/public/src/list_wait.mjs";
@@ -43,6 +44,9 @@ export async function app_replace_rule_set_symbol_on_click(
     app_replace_button_symbol_style_valid_if_multiple(sbs, true);
     start = app_replace_rule_apply(rule2, index, start);
     start_indices = list_size_range(start);
+    log(app_replace_rule_set_symbol_on_click.name, {
+      start_indices,
+    });
     let rb = list_get(rules_buttons, index_selected);
     let lefts2 = property_get(rb, "lefts");
     let rights2 = property_get(rb, "rights");
