@@ -48,7 +48,7 @@ export async function app_replace_tests_run_e2e() {
             let r2 = elements.map(lambda4);
             return r2;
           }
-          const values = await locator.evaluateAll(lambda5, name);
+          const values = await locator.evaluateAll(lambda5, "data-test");
           log(app_replace_tests_run_e2e.name, {
             values,
           });
