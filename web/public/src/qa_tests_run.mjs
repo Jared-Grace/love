@@ -9,7 +9,7 @@ export async function qa_tests_run(fns, name_get) {
   function lambda(item) {
     function on_error(error) {
       list_add(errors, {
-        name: item.name,
+        name: name_get(item),
         error,
       });
     }
