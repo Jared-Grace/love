@@ -57,6 +57,7 @@ export async function app_replace_tests_run_e2e() {
             );
           let rule = property_get(p, "rule");
           let index = property_get(p, "index");
+          let symbol_id = null;
           if (true) {
             while (true) {
               let hint = app_replace_rule_set_attribute_hint();
@@ -95,7 +96,6 @@ export async function app_replace_tests_run_e2e() {
               refresh_count,
             );
           }
-          let symbol_id = null;
           symbol_id = app_replace_rule_set_attribute_symbol(index);
           refresh_count = await app_replace_rule_set_attribute_refresh_click(
             page,
