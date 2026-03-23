@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -9,6 +10,8 @@ export async function playwright_by_attribute_named_all(page, name) {
   });
   let locator = playwright_by_attribute_named(page, name);
   const values = await locator.evaluateAll(identity, name);
+  function lambda(item) {}
+  let mapped = list_map(list, lambda);
   function lambda5(elements, name) {
     function lambda4(el) {
       let r = el.getAttribute(name);
