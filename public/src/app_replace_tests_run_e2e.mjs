@@ -85,10 +85,9 @@ export async function app_replace_tests_run_e2e() {
               log(app_replace_tests_run_e2e.name, {
                 filtered2,
               });
-              let size = list_size(filtered2);
               let s = list_size_1(filtered2);
               if (s) {
-                let only = list_single(list);
+                let only = list_single(filtered2);
                 break;
               }
               let ceiling = list_size_half_ceil(start_indices);
