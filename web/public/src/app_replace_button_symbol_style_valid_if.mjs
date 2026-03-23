@@ -1,4 +1,4 @@
-import { html_data_set_test_suffixes } from "../../../love/public/src/html_data_set_test_suffixes.mjs";
+import { html_data_set_test_suffix } from "../../../love/public/src/html_data_set_test_suffix.mjs";
 import { html_data_set } from "../../../love/public/src/html_data_set.mjs";
 import { app_replace_button_symbol_style_box_shadow } from "../../../love/public/src/app_replace_button_symbol_style_box_shadow.mjs";
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
@@ -11,7 +11,7 @@ export function app_replace_button_symbol_style_valid_if(sb, valid) {
   html_style_font_color_set_if(valid, sb, "white", "#b9fcb9ff");
   html_data_set(sb, "test", valid);
   let suffix = "valid";
-  html_data_set_test_suffixes(component, [suffix], value);
+  html_data_set_test_suffix(suffix, valid);
   let h = app_replace_rule_set_highlight();
   app_replace_button_symbol_style_box_shadow(valid, sb, h);
 }
