@@ -17,6 +17,11 @@ export async function app_replace_tests_run_e2e() {
     let json = json_to(g);
     await playwright_by_attribute_test_click(page, json);
     async function lambda_each(rule_set) {
+        let second = app_replace_rule_set_verify_goal_next(
+          rules_parsed,
+          start,
+          end,
+        );
       return true;
     }
     await each_async(rule_sets, lambda_each);
