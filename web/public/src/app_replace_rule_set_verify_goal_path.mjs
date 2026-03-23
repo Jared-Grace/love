@@ -15,6 +15,6 @@ export function app_replace_rule_set_verify_goal_path(
   let list = list_linked_to_list(dfs, property_name, max_depth);
   let path = list_map_property(list, "data");
   list_reverse(path);
-  let skipped = list_skip_1(list2);
-  return path;
+  let skipped = list_skip_1(path);
+  return skipped;
 }
