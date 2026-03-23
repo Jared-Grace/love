@@ -1,7 +1,5 @@
-import { text_combine } from "../../../love/public/src/text_combine.mjs";
-import { html_data_set } from "../../../love/public/src/html_data_set.mjs";
+import { html_data_set_test_suffix } from "../../../love/public/src/html_data_set_test_suffix.mjs";
 export function html_data_set_test(component, value) {
   let suffix = "";
-  let combined = text_combine("test", suffix);
-  html_data_set(component, combined, value);
+  html_data_set_test_suffix(suffix, component, value);
 }
