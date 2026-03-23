@@ -3,7 +3,7 @@ import { function_name_combine_multiple } from "../../../love/public/src/functio
 import { html_data_set } from "../../../love/public/src/html_data_set.mjs";
 export function html_data_set_test_suffix(suffixes, component, value) {
   const list = ["test"];
-  list_add_multiple(list2, suffixes);
+  list_add_multiple(list, suffixes);
   let combined = function_name_combine_multiple(list);
   html_data_set(component, combined, value);
 }
