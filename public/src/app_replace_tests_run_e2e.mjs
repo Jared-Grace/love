@@ -1,3 +1,4 @@
+import { list_size_half_ceil } from "../../../love/public/src/list_size_half_ceil.mjs";
 import { app_replace_rule_set_attribute_hint } from "../../../love/public/src/app_replace_rule_set_attribute_hint.mjs";
 import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
@@ -75,6 +76,7 @@ export async function app_replace_tests_run_e2e() {
           let size = list_size(filtered2);
           let m = list_multiple_is(filtered2);
           if (m) {
+            let ceiling = list_size_half_ceil(start_indices);
             let hint = app_replace_rule_set_attribute_hint();
             refresh_count = await app_replace_rule_set_attribute_refresh_click(
               page,
