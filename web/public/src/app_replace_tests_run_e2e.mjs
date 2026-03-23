@@ -10,11 +10,11 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function app_replace_tests_run_e2e() {
   let rule_sets = app_replace_rule_sets();
   async function lambda(page) {
-    let first = list_first(list);
+    let first = list_first(rule_sets);
+    let name2 = property_get(first, "name");
+    const name = qa_attribute_test_data();
+    await playwright_by_attribute_click(page, name, name2);
     async function lambda_each(rule_set) {
-      let name2 = property_get(rule_set, "name");
-      const name = qa_attribute_test_data();
-      await playwright_by_attribute_click(page, name, name2);
       await sleep_long();
       return true;
     }
