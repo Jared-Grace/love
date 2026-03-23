@@ -13,6 +13,7 @@ export function app_replace_rule_parse(rule) {
   let v = {
     left,
     right,
+    original: rule,
   };
   return v;
 }
