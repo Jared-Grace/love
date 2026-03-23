@@ -7,7 +7,6 @@ export async function app_replace_tests_run() {
   let rule_sets = app_replace_rule_set_verify_all();
   async function lambda(page) {
     async function lambda_each(rule_set) {
-      await playwright_test_url(url, lambda$page);
     }
     await each_async(rule_sets, lambda_each);
   }
