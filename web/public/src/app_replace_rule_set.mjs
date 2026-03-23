@@ -133,6 +133,7 @@ export async function app_replace_rule_set(context) {
       list_shuffle(start_indices);
       list_swap_first(start_indices, index_symbol);
       start_indices = list_take(start_indices, ceiling);
+      refresh();
     } else {
       button_rule_on_click_inner(index_rule);
     }
