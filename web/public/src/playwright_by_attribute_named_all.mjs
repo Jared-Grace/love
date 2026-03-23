@@ -1,9 +1,9 @@
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { playwright_by_attribute_named } from "../../../portfolio_qa/public/src/playwright_by_attribute_named.mjs";
-export async function playwright_by_attribute_named_all(page, name) {
+import { list_filter } from "./list_filter.mjs";
+export async function playwright_by_attribute_named_all(page, name, value) {
   name = text_combine("data-", name);
   log(playwright_by_attribute_named_all.name, {
     name,
@@ -11,11 +11,11 @@ export async function playwright_by_attribute_named_all(page, name) {
   let locator = playwright_by_attribute_named(page, name);
   const elements = await locator.evaluateAll(identity, name);
   function lambda(element) {
-    let value = el.getAttribute(name);
-    let r3 = {};
+    let actual = element.getAttribute(name);
+    let r3 = actual === value;
     return r3;
   }
-  let mapped = list_map(elements, lambda);
+  let mapped = list_filter(elements, lambda);
   function lambda5(elements, name) {
     function lambda4(el) {
       let r = el.getAttribute(name);
