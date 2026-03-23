@@ -33,6 +33,8 @@ export async function app_replace_tests_run_e2e() {
           start,
           end,
         );
+        async function lambda3(item) {}
+        await each_async(list, lambda3);
         let rule = property_get(second, "rule");
         let index = property_get(second, "index");
         let original = property_get(rule, "original");
