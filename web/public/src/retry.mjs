@@ -1,3 +1,4 @@
+import { not } from "../../../love/public/src/not.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
 import { error_json } from "../../../love/public/src/error_json.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
@@ -25,12 +26,12 @@ export async function retry(count, lambda) {
     await each_range_async(count, lambda2);
   }
   let errors = await list_adder_async(lambda3);
-  if (success) {
-    return result;
+  if (not(success)) {
+    error_json({
+      errors,
+    });
   }
-  error_json({
-    errors,
-  });
+  return result;
   function wait_get(wait) {
     wait *= 2;
   }
