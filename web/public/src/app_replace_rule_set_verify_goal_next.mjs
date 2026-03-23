@@ -8,7 +8,7 @@ export function app_replace_rule_set_verify_goal_next(
   end,
 ) {
   let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);
-  log(app_replace_rule_set.name, {
+  log(app_replace_rule_set_verify_goal_next.name, {
     path,
   });
   let second = list_second(path);
