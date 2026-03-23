@@ -5,7 +5,6 @@ import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_size_half_ceil } from "../../../love/public/src/list_size_half_ceil.mjs";
 import { app_replace_rule_set_attribute_hint } from "../../../love/public/src/app_replace_rule_set_attribute_hint.mjs";
-import { list_multiple_is } from "../../../love/public/src/list_multiple_is.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_filter_null_not_is } from "../../../love/public/src/list_filter_null_not_is.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
@@ -61,12 +60,13 @@ export async function app_replace_tests_run_e2e() {
           let index = property_get(p, "index");
           let original = property_get(rule, "original");
           if (true) {
-            refresh_count = await app_replace_rule_set_attribute_refresh_click(
-              page,
-              hint,
-              refresh_count,
-            );
             do {
+              refresh_count =
+                await app_replace_rule_set_attribute_refresh_click(
+                  page,
+                  hint,
+                  refresh_count,
+                );
               let suffix = app_replace_button_symbol_style_valid_if_attribute();
               let combined = html_data_set_test_suffixes_attribute([suffix]);
               let values = await playwright_by_attribute_named_all(
@@ -83,7 +83,7 @@ export async function app_replace_tests_run_e2e() {
                 filtered2,
               });
               let size = list_size(filtered2);
-              let m = list_multiple_is(filtered2);
+              let s = list_single_is(filtered2);
               let ceiling = list_size_half_ceil(start_indices);
               let hint = app_replace_rule_set_attribute_hint();
               refresh_count =
