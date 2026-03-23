@@ -72,8 +72,8 @@ export async function app_replace_tests_run_e2e() {
           let waited = await list_map_unordered_async(values, lambda5);
           let filtered2 = list_filter_null_not_is(waited);
           let size = list_size(filtered2);
-          let g2 = list_multiple_is(filtered2, 2);
-          if (g2) {
+          let m = list_multiple_is(filtered2);
+          if (m) {
           }
           log_exit({
             waited,
