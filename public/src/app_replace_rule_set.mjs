@@ -141,6 +141,8 @@ export async function app_replace_rule_set(context) {
       refresh,
     });
     html_clear(div_rules_buttons);
+    refresh_count++;
+    html_data_set_test(component3, value3);
     function each_rule(rule, index) {
       function button_rule_on_click() {
         start_indices = list_size_range(start);
