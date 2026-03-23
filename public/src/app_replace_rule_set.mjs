@@ -198,7 +198,6 @@ export async function app_replace_rule_set(context) {
             rules_buttons,
             duration,
             div_symbols,
-            refresh,
           ));
         refresh();
       }
