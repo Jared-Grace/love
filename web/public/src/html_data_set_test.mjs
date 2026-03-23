@@ -1,5 +1,5 @@
 import { html_data_set_test_suffixes } from "../../../love/public/src/html_data_set_test_suffixes.mjs";
 export function html_data_set_test(component, value) {
   let suffix = "";
-  html_data_set_test_suffixes(suffix, component, value);
+  html_data_set_test_suffixes(component, suffix, value);
 }
