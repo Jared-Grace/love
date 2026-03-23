@@ -301,7 +301,6 @@ export async function app_replace_rule_set(context) {
     }
     if (success) {
       symbols_hide_on_success();
-      return;
     }
     function symbols_hide_on_success() {
       html_visibility_hidden(div_symbols);
