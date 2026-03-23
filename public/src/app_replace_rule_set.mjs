@@ -203,7 +203,7 @@ export async function app_replace_rule_set(context) {
         refresh();
       }
       sb = html_button(div_symbols, symbol, symbol_on_click);
-      html_data_set_test(component3, value);
+      html_data_set_test(sb, index);
       app_replace_button_symbol_style(sb);
       property_set_exists_not(sb, "index", index);
       let nn2 = null_not_is(index_selected);
