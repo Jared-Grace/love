@@ -243,7 +243,9 @@ export async function app_replace_rule_set(context) {
       html_text_set_if(nn, "Choose a symbol:", "Symbols:", label_symbols);
     }
     if (success) {
-      log(app_replace_rule_set.name, {here:1});
+      log(app_replace_rule_set.name, {
+        here: 1,
+      });
       html_visibility_hidden(div_symbols);
     }
   }
