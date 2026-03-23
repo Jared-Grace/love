@@ -12,8 +12,6 @@ export function app_replace_rule_set_verify_from(
   start,
   end,
   rules_parsed,
-  start,
-  end,
 ) {
   let max_depth = app_replace_rule_set_verify_goal_depth_max();
   let dfs = graph_search_depth_first(
