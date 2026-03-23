@@ -15,7 +15,6 @@ import { app_replace_rule_set_attribute_refresh_click } from "../../../love/publ
 import { app_replace_rule_set_attribute_refresh_count_assert } from "../../../love/public/src/app_replace_rule_set_attribute_refresh_count_assert.mjs";
 import { app_replace_rule_set_verify_goal_path } from "../../../love/public/src/app_replace_rule_set_verify_goal_path.mjs";
 import { app_replace_rule_set_success_attribute_next } from "../../../love/public/src/app_replace_rule_set_success_attribute_next.mjs";
-import { app_replace_rule_set_attribute_symbol } from "../../../love/public/src/app_replace_rule_set_attribute_symbol.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
 import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
 import { playwright_by_attribute_test_click } from "../../../love/public/src/playwright_by_attribute_test_click.mjs";
@@ -57,7 +56,7 @@ export async function app_replace_tests_run_e2e() {
             );
           let rule = property_get(p, "rule");
           let index = property_get(p, "index");
-          let attribute_value = property_get(rule, "original");
+          let rule_name = property_get(rule, "original");
           if (true) {
             while (true) {
               let hint = app_replace_rule_set_attribute_hint();
@@ -84,16 +83,20 @@ export async function app_replace_tests_run_e2e() {
               });
               let s = list_size_1(filtered2);
               if (s) {
-                attribute_value = list_single(filtered2);
+                rule_name = list_single(filtered2);
                 break;
               }
             }
           } else {
-            attribute_value = app_replace_rule_set_attribute_symbol(index);
           }
           refresh_count = await app_replace_rule_set_attribute_refresh_click(
             page,
-            attribute_value,
+            rule_name,
+            refresh_count,
+          );
+          refresh_count = await app_replace_rule_set_attribute_refresh_click(
+            page,
+            value,
             refresh_count,
           );
         }
