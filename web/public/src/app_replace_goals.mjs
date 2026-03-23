@@ -38,10 +38,11 @@ export function app_replace_goals(context) {
       index,
       lambda,
     );
-    function lambda2(value, property) {}
-    each_object(object, lambda2);
+    function lambda2(value, property) {
+      html_data_set(title, property, value);
+    }
+    each_object(r4, lambda2);
     let v = json_to(goal);
-    html_data_set(title, "test", v);
     let r2 = app_replace_button_rule_content(title, start, end);
     app_replace_lefts_rights_style(r2, completed);
     function lambda() {
