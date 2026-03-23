@@ -60,7 +60,7 @@ export async function app_replace_tests_run_e2e() {
             original,
             refresh_count,
           );
-          if (m) {
+          if (true) {
             let suffix = app_replace_button_symbol_style_valid_if_attribute();
             let combined = html_data_set_test_suffixes_attribute([suffix]);
             let values = await playwright_by_attribute_named_all(
