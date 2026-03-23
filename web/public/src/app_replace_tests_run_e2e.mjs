@@ -59,13 +59,14 @@ export async function app_replace_tests_run_e2e() {
           let combined = html_data_set_test_suffixes_attribute([suffix]);
           let values = await playwright_by_attribute_named_all(page, combined);
           async function lambda5(item) {
-            const html = await values.evaluate(lambda4);
+            function lambda4(el) {
+              let r = el.outerHTML;
+              return r;
+            }
+            const html = await item.evaluate(lambda4);
+            return html;
           }
           let waited = await list_map_unordered_async(list, lambda5);
-          function lambda4(el) {
-            let r = el.outerHTML;
-            return r;
-          }
           log_exit({
             html,
           });
