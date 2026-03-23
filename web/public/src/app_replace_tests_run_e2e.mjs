@@ -66,7 +66,7 @@ export async function app_replace_tests_run_e2e() {
             const html = await item.evaluate(lambda4);
             return html;
           }
-          let waited = await list_map_unordered_async(list, lambda5);
+          let waited = await list_map_unordered_async(values, lambda5);
           log_exit({
             waited,
           });
