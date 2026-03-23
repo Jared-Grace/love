@@ -1,3 +1,4 @@
+import { greater_than } from "../../../love/public/src/greater_than.mjs";
 import { list_filter_null_not_is } from "../../../love/public/src/list_filter_null_not_is.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { log_exit } from "../../../love/public/src/log_exit.mjs";
@@ -68,7 +69,8 @@ export async function app_replace_tests_run_e2e() {
             return html;
           }
           let waited = await list_map_unordered_async(values, lambda5);
-          let filtered2 = list_filter_null_not_is(waited);gt
+          let filtered2 = list_filter_null_not_is(waited);
+          let g2 = greater_than(a, b);
           if (false) {
           }
           log_exit({
