@@ -12,7 +12,7 @@ export async function playwright_by_attribute_named_all(page, name) {
       let r = el.getAttribute(name);
       return r;
     }
-    let r2 = elements.map(lambda4);
+    let r2 = elements.filter(lambda4);
     return r2;
   }
   const values = await locator.evaluateAll(lambda5, name);
