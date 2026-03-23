@@ -1,3 +1,4 @@
+import { list_size } from "../../../love/public/src/list_size.mjs";
 import { greater_than_or_equal } from "../../../love/public/src/greater_than_or_equal.mjs";
 import { list_filter_null_not_is } from "../../../love/public/src/list_filter_null_not_is.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
@@ -70,8 +71,9 @@ export async function app_replace_tests_run_e2e() {
           }
           let waited = await list_map_unordered_async(values, lambda5);
           let filtered2 = list_filter_null_not_is(waited);
-          let g2 = greater_than_or_equal(left, right);
-          if (false) {
+          let size = list_size(list);
+          let g2 = greater_than_or_equal(left, 2);
+          if (g2) {
           }
           log_exit({
             waited,
