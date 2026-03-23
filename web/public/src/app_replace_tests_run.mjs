@@ -9,11 +9,12 @@ import { app_replace_rule_set_verify_all } from "../../../love/public/src/app_re
 export async function app_replace_tests_run() {
   let rule_sets = app_replace_rule_set_verify_all();
   async function lambda(page) {
-    await sleep_long();
     async function lambda_each(rule_set) {
       let name2 = property_get(rule_set, "name");
       const name = qa_attribute_test_data();
       await playwright_by_attribute_click(page, name, name2);
+      await sleep_long();
+      return true;
     }
     await each_async(rule_sets, lambda_each);
   }
