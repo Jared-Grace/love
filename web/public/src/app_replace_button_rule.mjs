@@ -3,7 +3,7 @@ import { app_replace_button_rule_style } from "../../../love/public/src/app_repl
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_button_rule_content } from "../../../love/public/src/app_replace_button_rule_content.mjs";
 import { html_button_notext } from "../../../love/public/src/html_button_notext.mjs";
-export function app_replace_button_rule(root, on_click) {
+export function app_replace_button_rule(root, on_click, rule) {
   let b = html_button_notext(root, on_click);
   html_data_set_test(b, value);
   app_replace_button_rule_style(b);
