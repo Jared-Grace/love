@@ -103,7 +103,7 @@ export async function app_replace_rule_set(context) {
   let left2 = emoji_question();
   let combined = text_combine(left2, "Hint");
   let hint_button = app_replace_button(root, combined, lambda11);
-  html_data_set_test(hint_button, "hint");
+  html_data_set_test(hint_button, app_replace_rule_set_attribute_hint());
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
   let exists2 = property_exists(rs, "abbreviations");
@@ -265,3 +265,7 @@ export async function app_replace_rule_set(context) {
     refresh();
   }
 }
+function app_replace_rule_set_attribute_hint() {
+  return 'hint';
+}
+
