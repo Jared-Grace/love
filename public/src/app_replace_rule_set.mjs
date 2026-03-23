@@ -1,3 +1,4 @@
+import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { app_replace_rule_set_symbol_on_click } from "../../../love/public/src/app_replace_rule_set_symbol_on_click.mjs";
 import { app_replace_rule_set_success } from "../../../love/public/src/app_replace_rule_set_success.mjs";
 import { list_size_half_ceil } from "../../../love/public/src/list_size_half_ceil.mjs";
@@ -209,6 +210,7 @@ export async function app_replace_rule_set(context) {
         let rule2 = list_get(rules_parsed, index_selected);
         let valid = app_replace_rule_valid(rule2, index3, start);
       }
+      let includes = list_includes(list, item);
       app_replace_button_symbol_style_valid_if(sb, index_selected !== null);
       let exists = property_exists(symbols_invalid_chosen, index);
       if (exists) {
