@@ -1,8 +1,8 @@
+import { app_replace_rule_set_verify_goal_path } from "../../../love/public/src/app_replace_rule_set_verify_goal_path.mjs";
 import { app_replace_rule_set_success_attribute_next } from "../../../love/public/src/app_replace_rule_set_success_attribute_next.mjs";
 import { app_replace_rule_set_attribute_symbol } from "../../../love/public/src/app_replace_rule_set_attribute_symbol.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
 import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
-import { app_replace_rule_set_verify_goal_next } from "../../../love/public/src/app_replace_rule_set_verify_goal_next.mjs";
 import { playwright_by_attribute_test_click } from "../../../love/public/src/playwright_by_attribute_test_click.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -28,7 +28,7 @@ export async function app_replace_tests_run_e2e() {
         let r4 = app_replace_start_end_get(goal);
         let start = property_get(r4, "start");
         let end = property_get(r4, "end");
-        let second = app_replace_rule_set_verify_goal_next(
+        let path = app_replace_rule_set_verify_goal_path(
           rules_parsed,
           start,
           end,
