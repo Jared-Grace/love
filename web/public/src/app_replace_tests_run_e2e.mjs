@@ -68,7 +68,7 @@ export async function app_replace_tests_run_e2e() {
             return html;
           }
           let waited = await list_map_unordered_async(values, lambda5);
-          let filtered2 = list_filter_null_not_is(mapped);
+          let filtered2 = list_filter_null_not_is(waited);
           log_exit({
             waited,
           });
