@@ -73,7 +73,7 @@ export async function app_replace_tests_run_e2e() {
             );
             const attribute_name = "data-test";
             let r = html_attribute_data_prefix();
-            let combined2 = text_combine(left, right);
+            let combined2 = text_combine(r, right);
             async function lambda5(item) {
               let value = html_attribute_get_unwrapped(item, attribute_name);
               return value;
