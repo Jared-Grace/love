@@ -1,4 +1,4 @@
-import { html_data_set } from "../../../love/public/src/html_data_set.mjs";
+import { html_data_set_test } from "../../../love/public/src/html_data_set_test.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { app_replace_goals_generic } from "../../../love/public/src/app_replace_goals_generic.mjs";
 import { app_replace_goal_completed_initialize } from "../../../love/public/src/app_replace_goal_completed_initialize.mjs";
@@ -39,7 +39,7 @@ export function app_replace_home(context) {
       index2,
       lambda,
     );
-    html_data_set(title, "test", rule_name);
+    html_data_set_test(title, rule_name);
     html_text_set(title, rule_name);
     function lambda() {
       on_click(index2);
