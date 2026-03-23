@@ -83,7 +83,6 @@ export async function app_replace_rule_set_symbol_on_click(
   } else {
     property_set(symbols_invalid_chosen, index, true);
   }
-  refresh();
   let r5 = {
     index_selected,
     start,
