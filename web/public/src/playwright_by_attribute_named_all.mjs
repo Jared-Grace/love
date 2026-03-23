@@ -6,7 +6,7 @@ import { log } from "../../../love/public/src/log.mjs";
 import { playwright_by_attribute_named } from "../../../portfolio_qa/public/src/playwright_by_attribute_named.mjs";
 import { list_filter } from "./list_filter.mjs";
 export async function playwright_by_attribute_named_all(page, name, value) {
-  let s = text_to(input);
+  value = text_to(value);
   name = text_combine("data-", name);
   log(playwright_by_attribute_named_all.name, {
     name,
