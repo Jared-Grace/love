@@ -1,4 +1,4 @@
-import { add_curried_right } from "../../../love/public/src/add_curried_right.mjs";
+import { add_curried } from "../../../love/public/src/add_curried.mjs";
 import { retry_generic } from "../../../love/public/src/retry_generic.mjs";
 export async function retry_fast(lambda) {
   let interval = 100;
