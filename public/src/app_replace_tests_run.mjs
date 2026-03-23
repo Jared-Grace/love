@@ -1,3 +1,5 @@
+import { playwright_by_attribute_click } from "../../../love/public/src/playwright_by_attribute_click.mjs";
+import { portfolio_qa_attribute_test_data } from "../../../portfolio_qa/public/src/portfolio_qa_attribute_test_data.mjs";
 import { sleep_long } from "../../../portfolio_qa/public/src/sleep_long.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
 import { playwright_test_app_dev } from "../../../love/public/src/playwright_test_app_dev.mjs";
@@ -7,7 +9,11 @@ export async function app_replace_tests_run() {
   let rule_sets = app_replace_rule_set_verify_all();
   async function lambda(page) {
     await sleep_long();
-    async function lambda_each(rule_set) {}
+    async function lambda_each(rule_set) {
+      const name = portfolio_qa_attribute_test_data();
+      const value = "login-button";
+      await playwright_by_attribute_click(page, name, value);
+    }
     await each_async(rule_sets, lambda_each);
   }
   await playwright_test_app_dev(app_replace, lambda);
