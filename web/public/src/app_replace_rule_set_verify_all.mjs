@@ -11,4 +11,5 @@ export function app_replace_rule_set_verify_all() {
     app_replace_rule_set_verify(rule_set_get);
   }
   each(rule_set_gets, lambda);
+  return rule_set_gets;
 }
