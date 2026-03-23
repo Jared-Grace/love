@@ -1,3 +1,4 @@
+import { app_replace_rule_set_attribute_symbol } from "../../../love/public/src/app_replace_rule_set_attribute_symbol.mjs";
 import { html_data_set_test } from "../../../love/public/src/html_data_set_test.mjs";
 import { app_replace_rule_set_verify_goal_next } from "../../../love/public/src/app_replace_rule_set_verify_goal_next.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -203,7 +204,8 @@ export async function app_replace_rule_set(context) {
         refresh();
       }
       sb = html_button(div_symbols, symbol, symbol_on_click);
-      html_data_set_test(sb, "symbol_" + index);
+      let value = app_replace_rule_set_attribute_symbol(index);
+      html_data_set_test(sb, value);
       app_replace_button_symbol_style(sb);
       property_set_exists_not(sb, "index", index);
       let nn2 = null_not_is(index_selected);
