@@ -35,12 +35,12 @@ export async function app_replace_tests_run_e2e() {
         let rule = property_get(second, "rule");
         let index = property_get(second, "index");
         let original = property_get(rule, "original");
+        await playwright_by_attribute_test_click(page, original);
         let json2 = json_to(second);
         log(app_replace_tests_run_e2e.name, {
           index,
         });
         return true;
-        await playwright_by_attribute_test_click(page, original);
       }
       await each_async(goals, lambda2);
       return true;
