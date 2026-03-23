@@ -236,7 +236,6 @@ export async function app_replace_rule_set(context) {
           highlight,
           goal_index,
           goals,
-          symbols_hide,
         );
       }
       let nn = null_not_is(index_selected);
@@ -247,9 +246,6 @@ export async function app_replace_rule_set(context) {
       log(app_replace_rule_set.name, {
         here: 1,
       });
-      symbols_hide();
-    }
-    function symbols_hide() {
       html_visibility_hidden(div_symbols);
     }
   }
