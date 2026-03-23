@@ -252,7 +252,6 @@ export async function app_replace_rule_set(context) {
       html_visibility_hidden(div_symbols);
     }
   }
-  refresh();
   function button_rule_on_click_inner(index) {
     symbols_invalid_chosen = {};
     index_selected = ternary(index_selected === index, null, index);
