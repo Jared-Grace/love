@@ -1,3 +1,4 @@
+import { playwright_element_attribute_get } from "../../../love/public/src/playwright_element_attribute_get.mjs";
 import { identity } from "../../../love/public/src/identity.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -11,7 +12,7 @@ export async function playwright_by_attribute_named_all(page, name, value) {
   let locator = playwright_by_attribute_named(page, name);
   const elements = await locator.evaluateAll(identity, name);
   function lambda(element) {
-    let actual = element.getAttribute(name);
+    let actual = playwright_element_attribute_get(element, name);
     let r3 = actual === value;
     return r3;
   }
