@@ -8,8 +8,8 @@ export function app_replace_button_rule(root, rule, on_click) {
   let left = property_get(rule, "left");
   let right = property_get(rule, "right");
   let b = html_button_notext(root, on_click);
-  let json = json_to(object);
-  html_data_set_test(b, rule);
+  let json = json_to(rule);
+  html_data_set_test(b, json);
   app_replace_button_rule_style(b);
   let r2 = app_replace_button_rule_content(b, left, right);
   let arrow = property_get(r2, "arrow");
