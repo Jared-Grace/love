@@ -5,7 +5,7 @@ import { app_replace_rule_sets_fns } from "../../../love/public/src/app_replace_
 import { app_replace_rule_set_verify } from "../../../love/public/src/app_replace_rule_set_verify.mjs";
 export function app_replace_rule_set_verify_all() {
   let rule_set_gets = app_replace_rule_sets_fns();
-  let mapped = invoke_multiple(list_fns);
+  let rule_sets = invoke_multiple(rule_set_gets);
   function lambda(rule_set_get) {
     log(app_replace_rule_set_verify_all.name, {
       rule_set_get,
