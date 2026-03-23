@@ -1,4 +1,3 @@
-import { app_replace_rule_set_verify_all } from "../../../love/public/src/app_replace_rule_set_verify_all.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_rule_set_verify_goal } from "../../../love/public/src/app_replace_rule_set_verify_goal.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -8,7 +7,6 @@ export function app_replace_rule_set_verify(rule_set) {
   log(app_replace_rule_set_verify.name, {
     rule_set,
   });
-  let rs = rule_set_get();
   let rules_parsed = app_replace_rule_set_rules_get(rule_set);
   let goals = property_get(rule_set, "goals");
   function lambda2(goal) {
