@@ -7,7 +7,6 @@ import { html_data_set_test_attribute } from "../../../love/public/src/html_data
 import { playwright_by_attribute_all } from "../../../love/public/src/playwright_by_attribute_all.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_attribute_data_prefix } from "../../../love/public/src/html_attribute_data_prefix.mjs";
-import { app_replace_tests_run_e2e } from "../../../love/public/src/app_replace_tests_run_e2e.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { html_data_set_test_suffixes_attribute } from "../../../love/public/src/html_data_set_test_suffixes_attribute.mjs";
 import { app_replace_button_symbol_style_valid_if_attribute } from "../../../love/public/src/app_replace_button_symbol_style_valid_if_attribute.mjs";
