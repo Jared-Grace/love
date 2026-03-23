@@ -11,7 +11,8 @@ export async function playwright_by_attribute_named_all(page, name, value) {
     name,
   });
   let locator = playwright_by_attribute_named(page, name);
-  const elements = await locator.evaluateAll(() => {}, name);
+  function lambda2() {}
+  const elements = await locator.evaluateAll(lambda2, name);
   log(playwright_by_attribute_named_all.name, {
     elements,
   });
