@@ -71,7 +71,7 @@ export async function app_replace_tests_run_e2e() {
                 combined,
               });
               let left = html_attribute_data_prefix();
-              let name = text_combine(left, name);
+              let name = text_combine(left, combined);
               let values = await playwright_by_attribute_all(
                 page,
                 combined,
