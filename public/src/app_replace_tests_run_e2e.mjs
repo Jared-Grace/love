@@ -1,4 +1,4 @@
-import { playwright_by_attribute_named } from "../../../portfolio_qa/public/src/playwright_by_attribute_named.mjs";
+import { playwright_by_attribute_named_all } from "../../../love/public/src/playwright_by_attribute_named_all.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { playwright_by_attribute_test_exists_assert } from "../../../love/public/src/playwright_by_attribute_test_exists_assert.mjs";
 import { app_replace_rule_set_attribute_refresh_count } from "../../../love/public/src/app_replace_rule_set_attribute_refresh_count.mjs";
@@ -39,16 +39,7 @@ export async function app_replace_tests_run_e2e() {
           end,
         );
         async function lambda3(p) {
-          let locator = playwright_by_attribute_named(page, "data-test");
-          function lambda5(elements, name) {
-            function lambda4(el) {
-              let r = el.getAttribute(name);
-              return r;
-            }
-            let r2 = elements.map(lambda4);
-            return r2;
-          }
-          const values = await locator.evaluateAll(lambda5, "data-test");
+          const values = await playwright_by_attribute_named_all(page, name);
           log(app_replace_tests_run_e2e.name, {
             values,
           });
