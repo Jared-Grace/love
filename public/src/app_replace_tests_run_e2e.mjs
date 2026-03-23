@@ -1,3 +1,4 @@
+import { app_replace_rule_set_success_attribute_next } from "../../../love/public/src/app_replace_rule_set_success_attribute_next.mjs";
 import { sleep_long } from "../../../portfolio_qa/public/src/sleep_long.mjs";
 import { app_replace_rule_set_attribute_symbol } from "../../../love/public/src/app_replace_rule_set_attribute_symbol.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -40,6 +41,8 @@ export async function app_replace_tests_run_e2e() {
         await playwright_by_attribute_test_click(page, original);
         let value = app_replace_rule_set_attribute_symbol(index);
         await playwright_by_attribute_test_click(page, value);
+        let name22 = app_replace_rule_set_success_attribute_next();
+        await playwright_by_attribute_test_click(page, name22);
         await sleep_long();
         let json2 = json_to(second);
         log(app_replace_tests_run_e2e.name, {
