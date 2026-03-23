@@ -40,6 +40,7 @@ export async function app_replace_tests_run_e2e() {
           let index = property_get(p, "index");
           let original = property_get(rule, "original");
           await playwright_by_attribute_test_click(page, original);
+          await sleep(1000);
           let value = app_replace_rule_set_attribute_symbol(index);
           await playwright_by_attribute_test_click(page, value);
         }
