@@ -35,7 +35,6 @@ export async function app_replace_rule_set_symbol_on_click(
   rules_buttons,
   duration,
   div_symbols,
-  refresh,
 ) {
   let rule2 = list_get(rules_parsed, index_selected);
   let eq = app_replace_rule_valid(rule2, index, start);
