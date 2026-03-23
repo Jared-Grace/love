@@ -6,7 +6,7 @@ import { sleep_long } from "../../../portfolio_qa/public/src/sleep_long.mjs";
 import { playwright_by_attribute_click } from "../../../love/public/src/playwright_by_attribute_click.mjs";
 import { qa_attribute_test_data } from "../../../love/public/src/qa_attribute_test_data.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export async function app_replace_tests_run_e2e(rule_sets2) {
+export async function app_replace_tests_run_e2e() {
   let rule_sets = app_replace_rule_sets();
   async function lambda(page) {
     async function lambda_each(rule_set) {
