@@ -1,3 +1,4 @@
+import { app_replace_rule_set_verify_goal_next } from "../../../love/public/src/app_replace_rule_set_verify_goal_next.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { app_replace_rule_set_symbol_on_click } from "../../../love/public/src/app_replace_rule_set_symbol_on_click.mjs";
@@ -9,8 +10,6 @@ import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_size_range } from "../../../love/public/src/list_size_range.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
-import { list_second } from "../../../love/public/src/list_second.mjs";
-import { app_replace_rule_set_verify_goal_path } from "../../../love/public/src/app_replace_rule_set_verify_goal_path.mjs";
 import { emoji_question } from "../../../love/public/src/emoji_question.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
@@ -80,11 +79,11 @@ export async function app_replace_rule_set(context) {
   let start_indices = list_size_range(start);
   let end = property_get(r4, "end");
   function lambda11() {
-    let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);
-    log(app_replace_rule_set.name, {
-      path,
-    });
-    let second = list_second(path);
+    let second = app_replace_rule_set_verify_goal_next(
+      rules_parsed,
+      start,
+      end,
+    );
     let rule3 = property_get(second, "rule");
     let index_rule = list_index_of(rules_parsed, rule3);
     let index_symbol = property_get(second, "index");
