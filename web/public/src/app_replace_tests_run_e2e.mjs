@@ -29,9 +29,9 @@ export async function app_replace_tests_run_e2e() {
       let rules_parsed = app_replace_rule_set_rules_get(rule_set);
       async function lambda2(goal) {
         let refresh_count = 0;
-        let r4 = app_replace_start_end_get(goal);
-        let start = property_get(r4, "start");
-        let end = property_get(r4, "end");
+        let se = app_replace_start_end_get(goal);
+        let start = property_get(se, "start");
+        let end = property_get(se, "end");
         let path = app_replace_rule_set_verify_goal_path(
           rules_parsed,
           start,
