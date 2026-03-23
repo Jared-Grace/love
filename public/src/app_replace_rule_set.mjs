@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { app_replace_rule_set_symbol_on_click } from "../../../love/public/src/app_replace_rule_set_symbol_on_click.mjs";
 import { app_replace_rule_set_success } from "../../../love/public/src/app_replace_rule_set_success.mjs";
@@ -242,6 +243,7 @@ export async function app_replace_rule_set(context) {
       html_text_set_if(nn, "Choose a symbol:", "Symbols:", label_symbols);
     }
     if (success) {
+      log(app_replace_rule_set.name, {});
       html_visibility_hidden(div_symbols);
     }
   }
