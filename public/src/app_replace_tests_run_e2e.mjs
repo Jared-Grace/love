@@ -61,6 +61,7 @@ export async function app_replace_tests_run_e2e() {
           let original = property_get(rule, "original");
           if (true) {
             do {
+              let hint = app_replace_rule_set_attribute_hint();
               refresh_count =
                 await app_replace_rule_set_attribute_refresh_click(
                   page,
@@ -85,7 +86,6 @@ export async function app_replace_tests_run_e2e() {
               let size = list_size(filtered2);
               let s = list_single_is(filtered2);
               let ceiling = list_size_half_ceil(start_indices);
-              let hint = app_replace_rule_set_attribute_hint();
               refresh_count =
                 await app_replace_rule_set_attribute_refresh_click(
                   page,
