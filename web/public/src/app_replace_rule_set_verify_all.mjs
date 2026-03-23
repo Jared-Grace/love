@@ -4,5 +4,4 @@ import { app_replace_rule_set_verify } from "../../../love/public/src/app_replac
 export function app_replace_rule_set_verify_all() {
   let rule_sets = app_replace_rule_sets();
   each(rule_sets, app_replace_rule_set_verify);
-  
 }
