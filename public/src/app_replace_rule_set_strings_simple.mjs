@@ -46,12 +46,12 @@ export function app_replace_rule_set_strings_simple() {
   }
   each(filtered, lambda2);
   let mapped = list_map(copy, app_replace_end_get);
-  log(app_replace_rule_set_strings_simple.name, {
-    mapped,
-  });
   let mapped2 = list_map(mapped, list_size);
   let unique = list_unique(mapped2);
   list_sort_number(unique);
+  log(app_replace_rule_set_strings_simple.name, {
+    unique,
+  });
   let r = {
     name: "Strings simple",
     rules,
