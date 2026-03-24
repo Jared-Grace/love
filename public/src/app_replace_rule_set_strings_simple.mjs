@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { range_value } from "../../../love/public/src/range_value.mjs";
@@ -48,9 +49,17 @@ export function app_replace_rule_set_strings_simple() {
   let mapped2 = list_map(mapped, list_size);
   let unique = list_unique(mapped2);
   list_sort_number(unique);
+  function lambda3(item2v) {
+    let m = range_value(item2v, character);
+    let joined = list_join_space(m);
+    let p = text_pad_nested_space_quote_double(joined);
+    return p;
+  }
+  let dictionary = list_to_dictionary_value(list, lambda3);
   function lambda4(item2) {
     let m = range_value(item2, character);
     let joined = list_join_space(m);
+    let value = property_get(object, property_name);
     let p = text_pad_nested_space_quote_double(joined);
     let r3 = {
       start: root,
@@ -59,13 +68,6 @@ export function app_replace_rule_set_strings_simple() {
     };
     return r3;
   }
-  function lambda3(item2v) {
-    let m = range_value(item2v, character);
-    let joined = list_join_space(m);
-    let p = text_pad_nested_space_quote_double(joined);
-    return p;
-  }
-  let dictionary = list_to_dictionary_value(list, lambda3);
   let goals = list_map(unique, lambda4);
   list_add_multiple(goals, filtered);
   let r = {
