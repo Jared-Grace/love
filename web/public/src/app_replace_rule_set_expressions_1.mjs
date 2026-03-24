@@ -1,3 +1,4 @@
+import { app_replace_rule_set_integers_abbreviation_i } from "../../../love/public/src/app_replace_rule_set_integers_abbreviation_i.mjs";
 import { app_replace_rule_set_decimals_abbreviations_only } from "../../../love/public/src/app_replace_rule_set_decimals_abbreviations_only.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_replace_rule_set_boolean_literal_abbreviations } from "../../../love/public/src/app_replace_rule_set_boolean_literal_abbreviations.mjs";
@@ -22,6 +23,7 @@ export function app_replace_rule_set_expressions_1() {
     pe: ["", "e", "xpression"],
     de: ["", "n", "umber"],
   };
+  app_replace_rule_set_integers_abbreviation_i(abbreviations);
   let to2 = object_merge(abbreviations, b);
   let ab = app_replace_rule_set_decimals_abbreviations_only(abbreviations);
   let items = app_replace_rule_set_boolean_literal_rules();
