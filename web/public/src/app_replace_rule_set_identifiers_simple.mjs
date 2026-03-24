@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_replace_rule_set_identifiers_simple_goals } from "../../../love/public/src/app_replace_rule_set_identifiers_simple_goals.mjs";
 import { app_replace_rule_set_identifiers_simple_rules } from "../../../love/public/src/app_replace_rule_set_identifiers_simple_rules.mjs";
 export function app_replace_rule_set_identifiers_simple() {
@@ -22,6 +23,7 @@ export function app_replace_rule_set_identifiers_simple() {
     ],
     di: ["", "di", "git sample: a few choices of digits"],
   };
+  let to2 = object_merge(to, from);
   let r = {
     name: "Identifiers simple",
     rules: app_replace_rule_set_identifiers_simple_rules(),
