@@ -14,7 +14,6 @@ export function app_replace_rule_set_expressions_1() {
   ];
   let b = app_replace_rule_set_boolean_literal_abbreviations();
   let abbreviations = {
-    bo: ["", "bo", "oolean literal"],
     pe: ["", "p", "rimary ", "e", "xpression"],
     id: ["", "id", "entifier"],
   };
