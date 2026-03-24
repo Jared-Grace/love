@@ -28,6 +28,7 @@ export function app_replace_rule_set_strings_simple() {
   let goals = app_replace_rule_set_identifiers_simple_goals();
   function lambda(g) {
     let end = app_replace_end_get(g);
+    ("is the end made up of only single character items?");
     let a = list_all(end, text_size_1);
     return a;
   }
