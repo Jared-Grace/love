@@ -1,7 +1,7 @@
 export function app_new_rule_set_new_2() {
   let r = {
     name: "Expressions member and access",
-    rules: ["a > b"],
+    rules: ["me > pe", "me > . id", "me > [ e ]"],
     goals: [
       {
         start: "a",
