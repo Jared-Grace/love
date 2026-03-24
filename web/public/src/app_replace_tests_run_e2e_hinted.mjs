@@ -1,5 +1,4 @@
-import { app_replace_rule_set_verify_goal_depth_max } from "../../../love/public/src/app_replace_rule_set_verify_goal_depth_max.mjs";
-import { each } from "../../../love/public/src/each.mjs";
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { list_filter_null_not_is } from "../../../love/public/src/list_filter_null_not_is.mjs";
@@ -17,9 +16,8 @@ import { app_replace_tests_run_e2e_generic } from "../../../love/public/src/app_
 export async function app_replace_tests_run_e2e_hinted() {
   await app_replace_tests_run_e2e_generic(hinted);
   async function hinted(p, refresh_count, page, symbol_id) {
-    let r22 = app_replace_rule_set_verify_goal_depth_max();
-    function lambda(item) {}
-    each(list, lambda);
+    async function lambda(item) {}
+    await each_async(list, lambda);
     while (true) {
       let hint = app_replace_rule_set_attribute_hint();
       refresh_count = await app_replace_rule_set_attribute_refresh_click(
