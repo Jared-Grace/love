@@ -5,7 +5,7 @@ import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_replace_rule_set_boolean_literal_abbreviations } from "../../../love/public/src/app_replace_rule_set_boolean_literal_abbreviations.mjs";
 import { app_replace_rule_set_boolean_literal_rules } from "../../../love/public/src/app_replace_rule_set_boolean_literal_rules.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
-export function app_replace_rule_set_expressions_1() {
+export function app_replace_rule_set_expressions_primary() {
   const rules = [
     "pe > id",
     "pe > li",
