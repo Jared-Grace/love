@@ -20,7 +20,7 @@ export function app_replace_rule_set_expressions_1() {
   let abbreviations = {
     pe: ["", "p", "rimary ", "e", "xpression"],
     id: ["", "id", "entifier"],
-    id: ["", "li", "entifier"],
+    id: ["", "li", "teral"],
     pe: ["", "e", "xpression"],
     de: ["", "n", "umber"],
   };
