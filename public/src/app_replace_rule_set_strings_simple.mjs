@@ -33,7 +33,7 @@ export function app_replace_rule_set_strings_simple() {
     return a;
   }
   let filtered = list_filter(goals, lambda);
-  let copy = json_copy(o);
+  let filtered2 = json_copy(filtered);
   function lambda2(item) {
     property_set(item, "start", root);
     function lambda3(value) {
@@ -48,7 +48,7 @@ export function app_replace_rule_set_strings_simple() {
   log(app_replace_rule_set_strings_simple.name, {
     mapped2,
   });
-  let mapped = list_map(filtered, list_size);
+  let mapped = list_map(filtered2, list_size);
   let unique = list_unique(mapped);
   list_sort_number(unique);
   log(app_replace_rule_set_strings_simple.name, {
