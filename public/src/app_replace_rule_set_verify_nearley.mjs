@@ -77,6 +77,6 @@ di -> "1" {% (d) => {
     return r;
   }
   let mapped = list_map(rules, lambda);
-  let joined2 = list_join_newline_2(list);
-  return mapped;
+  let joined2 = list_join_newline_2(mapped);
+  return joined2;
 }
