@@ -1,7 +1,7 @@
 export function app_new_rule_set_new_2() {
   let r = {
     name: "TODO",
-    rules: ["a > b"],
+    rules: ["bo > true", "bo > false"],
     goals: [
       {
         start: "a",
