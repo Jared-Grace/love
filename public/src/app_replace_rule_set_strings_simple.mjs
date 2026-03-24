@@ -20,6 +20,8 @@ export function app_replace_rule_set_strings_simple() {
   let filtered = list_filter(goals, lambda);
   let r2 = property_set_curried_right_2("start", root);
   each(filtered, r2);
+  function lambda2(item) {}
+  each(list, lambda2);
   let r = {
     name: "Strings simple",
     rules: concated,
