@@ -1,3 +1,4 @@
+import { app_replace_end_get_size } from "../../../love/public/src/app_replace_end_get_size.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
@@ -60,8 +61,7 @@ export function app_replace_rule_set_strings_simple() {
   let goals = list_map(unique, lambda4);
   function lambda5(item) {
     let end3 = property_get(item, "end");
-    let end2 = app_replace_end_get(end3);
-    let size = list_size(end2);
+    let size = app_replace_end_get_size(end3);
     let value2 = property_get(dictionary, size);
     property_set(item, "start", value2);
     property_change(item, "end", text_pad_nested_space_quote_double);
