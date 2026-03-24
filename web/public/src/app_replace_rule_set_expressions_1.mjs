@@ -1,5 +1,5 @@
 import { app_replace_rule_set_integers_abbreviation_i } from "../../../love/public/src/app_replace_rule_set_integers_abbreviation_i.mjs";
-import { app_replace_rule_set_decimals_abbreviations_only } from "../../../love/public/src/app_replace_rule_set_decimals_abbreviations_only.mjs";
+import { app_replace_rule_set_decimals_abbreviation_de } from "../../../love/public/src/app_replace_rule_set_decimals_abbreviation_de.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_replace_rule_set_boolean_literal_abbreviations } from "../../../love/public/src/app_replace_rule_set_boolean_literal_abbreviations.mjs";
 import { app_replace_rule_set_boolean_literal_rules } from "../../../love/public/src/app_replace_rule_set_boolean_literal_rules.mjs";
@@ -25,7 +25,7 @@ export function app_replace_rule_set_expressions_1() {
   };
   app_replace_rule_set_integers_abbreviation_i(abbreviations);
   let to2 = object_merge(abbreviations, b);
-  let ab = app_replace_rule_set_decimals_abbreviations_only(abbreviations);
+  let ab = app_replace_rule_set_decimals_abbreviation_de(abbreviations);
   let items = app_replace_rule_set_boolean_literal_rules();
   list_add_multiple(rules, items);
   let r = {
