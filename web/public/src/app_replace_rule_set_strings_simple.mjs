@@ -1,4 +1,3 @@
-import { json_copy } from "../../../love/public/src/json_copy.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_sort_number } from "../../../love/public/src/list_sort_number.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
@@ -33,7 +32,6 @@ export function app_replace_rule_set_strings_simple() {
     return a;
   }
   let filtered = list_filter(goals, lambda);
-  let filtered2 = json_copy(filtered);
   function lambda2(item) {
     property_set(item, "start", root);
     function lambda3(value) {
@@ -44,11 +42,7 @@ export function app_replace_rule_set_strings_simple() {
     property_change(item, "end", lambda3);
   }
   each(filtered, lambda2);
-  let mapped2 = list_map(goals, app_replace_end_get);
-  log(app_replace_rule_set_strings_simple.name, {
-    mapped2,
-  });
-  let mapped = list_map(filtered2, list_size);
+  let mapped = list_map(filtered, list_size);
   let unique = list_unique(mapped);
   list_sort_number(unique);
   log(app_replace_rule_set_strings_simple.name, {
