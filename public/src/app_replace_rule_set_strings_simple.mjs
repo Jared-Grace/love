@@ -1,4 +1,4 @@
-import { string_size_1 } from "../../../love/public/src/string_size_1.mjs";
+import { text_size_1 } from "../../../love/public/src/text_size_1.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { app_replace_end_get } from "../../../love/public/src/app_replace_end_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -12,7 +12,7 @@ export function app_replace_rule_set_strings_simple() {
   let goals = app_replace_rule_set_identifiers_simple_goals();
   function lambda(g) {
     let end = app_replace_end_get(g);
-    let a = list_all(end, string_size_1);
+    let a = list_all(end, text_size_1);
     return a;
   }
   let filtered = list_filter(goals, lambda);
