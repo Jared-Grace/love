@@ -61,7 +61,7 @@ export function app_replace_rule_set_strings_simple() {
   function lambda5(item) {
     let end3 = property_get(item, "end");
     let end2 = app_replace_end_get(end3);
-    let size = list_size(list);
+    let size = list_size(end2);
     ("let value2 = property_get(dictionary, item);");
     property_set(item, "start", value2);
     property_change(item, "end", text_pad_nested_space_quote_double);
