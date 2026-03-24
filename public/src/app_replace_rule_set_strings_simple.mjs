@@ -1,3 +1,4 @@
+import { list_concat } from "../../../love/public/src/list_concat.mjs";
 export function app_replace_rule_set_strings_simple() {
   const rules = [
     "st > ida",
@@ -17,6 +18,7 @@ export function app_replace_rule_set_strings_simple() {
     "di > 1",
     "di > 3",
   ];
+  let concated = list_concat(a, b);
   let r = {
     name: "Strings simple",
     rules: rules,
