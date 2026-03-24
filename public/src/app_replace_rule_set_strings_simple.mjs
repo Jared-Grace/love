@@ -1,3 +1,4 @@
+import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { range_value } from "../../../love/public/src/range_value.mjs";
 import { text_pad_nested_space_quote_double } from "../../../love/public/src/text_pad_nested_space_quote_double.mjs";
@@ -58,6 +59,8 @@ export function app_replace_rule_set_strings_simple() {
     };
     return r3;
   }
+  function lambda3(item2v) {}
+  let dictionary = list_to_dictionary_value(list, lambda3);
   let goals = list_map(unique, lambda4);
   list_add_multiple(goals, filtered);
   let r = {
