@@ -21,10 +21,10 @@ export function app_replace_rule_set_strings_simple() {
   let filtered = list_filter(goals, lambda);
   let r2 = property_set_curried_right_2("start", root);
   each(filtered, r2);
-  function lambda2(item) {
-    property_set(object, property_name, value);
+  function lambda2(g) {
+    property_set(g, "start", root);
   }
-  each(list, lambda2);
+  each(filtered, lambda2);
   let r = {
     name: "Strings simple",
     rules: concated,
