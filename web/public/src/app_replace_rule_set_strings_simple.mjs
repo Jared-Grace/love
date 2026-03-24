@@ -1,3 +1,4 @@
+import { text_pad } from "../../../love/public/src/text_pad.mjs";
 import { text_pad_space } from "../../../love/public/src/text_pad_space.mjs";
 import { property_change } from "../../../love/public/src/property_change.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
@@ -26,7 +27,8 @@ export function app_replace_rule_set_strings_simple() {
   function lambda2(item) {
     property_set(item, "start", root);
     function lambda3(value) {
-      let padded = text_pad_space(s);
+      let padded = text_pad_space(value);
+      let padded2 = text_pad(s, padding);
     }
     let value2 = property_change(o, "end", lambda3);
   }
