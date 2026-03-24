@@ -1,4 +1,4 @@
-import { text_pad_nested } from "../../../love/public/src/text_pad_nested.mjs";
+import { text_pad_nested_space_quote_double } from "../../../love/public/src/text_pad_nested_space_quote_double.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { range } from "../../../love/public/src/range.mjs";
 import { json_copy } from "../../../love/public/src/json_copy.mjs";
@@ -24,7 +24,7 @@ export function app_replace_rule_set_strings_simple() {
   let delimeter = '"';
   let character = "ida";
   const item = "stg";
-  let quoted = text_pad_nested(item, " ", delimeter);
+  let quoted = text_pad_nested_space_quote_double(item);
   const rules = [
     root + " > " + quoted,
     "stg > " + character,
