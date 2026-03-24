@@ -1,5 +1,4 @@
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
-import { log_json } from "../../../love/public/src/log_json.mjs";
 import { range_value } from "../../../love/public/src/range_value.mjs";
 import { text_pad_nested_space_quote_double } from "../../../love/public/src/text_pad_nested_space_quote_double.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -52,12 +51,10 @@ export function app_replace_rule_set_strings_simple() {
   function lambda4(item2) {
     let m = range_value(item2, character);
     let p = text_pad_nested_space_quote_double(m);
-    log_json(right);
-    let j = log_json(p);
-    let joined = list_join_space(list);
+    let joined = list_join_space(p);
     let r3 = {
       start: root,
-      end: j,
+      end: joined,
     };
     return r3;
   }
