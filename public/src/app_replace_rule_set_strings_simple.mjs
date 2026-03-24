@@ -9,7 +9,7 @@ export function app_replace_rule_set_strings_simple() {
   let concated = list_concat(["st > ida"], rules);
   let goals = app_replace_rule_set_identifiers_simple_goals();
   function lambda(g) {
-    let end = app_replace_end_get(goal);
+    let end = app_replace_end_get(g);
     log(app_replace_rule_set_strings_simple.name, {
       end,
     });
