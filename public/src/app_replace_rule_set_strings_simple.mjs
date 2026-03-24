@@ -38,7 +38,6 @@ export function app_replace_rule_set_strings_simple() {
     return a;
   }
   let filtered = list_filter(goals_identifiers, lambda);
-  let copy = filtered;
   let mapped = list_map(copy, app_replace_end_get);
   let mapped2 = list_map(mapped, list_size);
   let unique = list_unique(mapped2);
