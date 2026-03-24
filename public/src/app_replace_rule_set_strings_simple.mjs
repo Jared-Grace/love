@@ -42,9 +42,6 @@ export function app_replace_rule_set_strings_simple() {
     property_change(item, "end", lambda3);
   }
   each(filtered, lambda2);
-  let mapped = list_map(filtered, list_size);
-  let unique = list_unique(mapped);
-  list_sort_number(unique);
   log(app_replace_rule_set_strings_simple.name, {
     filtered,
   });
