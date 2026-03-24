@@ -23,7 +23,7 @@ export function app_replace_rule_set_identifiers_simple() {
     ],
     di: ["", "di", "git sample: a few choices of digits"],
   };
-  let to2 = object_merge(to, from);
+  let to2 = object_merge(abbreviations, abbreviations2);
   let r = {
     name: "Identifiers simple",
     rules: app_replace_rule_set_identifiers_simple_rules(),
