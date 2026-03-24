@@ -3,7 +3,6 @@ import { list_to_dictionary_value } from "../../../love/public/src/list_to_dicti
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { range_value } from "../../../love/public/src/range_value.mjs";
 import { text_pad_nested_space_quote_double } from "../../../love/public/src/text_pad_nested_space_quote_double.mjs";
-import { json_copy } from "../../../love/public/src/json_copy.mjs";
 import { list_sort_number } from "../../../love/public/src/list_sort_number.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
@@ -39,7 +38,7 @@ export function app_replace_rule_set_strings_simple() {
     return a;
   }
   let filtered = list_filter(goals_identifiers, lambda);
-  let copy = filtered
+  let copy = filtered;
   let mapped = list_map(copy, app_replace_end_get);
   let mapped2 = list_map(mapped, list_size);
   let unique = list_unique(mapped2);
