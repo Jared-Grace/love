@@ -8,7 +8,7 @@ export function app_replace_rule_set_identifiers_simple() {
       "id",
       "entifier ",
       "f",
-      "irst: symbol that can be used as the first symbol",
+      "irst: symbol that can be used as the first symbol of an identifier",
     ],
   };
   let r = {
