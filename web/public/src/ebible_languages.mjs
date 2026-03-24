@@ -187,6 +187,11 @@ export function ebible_languages() {
       bible_folder: "ita1927",
       language_code: "ita",
     },
+    {
+      name: "chiShona",
+      bible_folder: "sna",
+      language_code: "sna",
+    },
   ];
   ("Rather than modifying this list, use: ");
   fn_name("ebible_languages_add");
