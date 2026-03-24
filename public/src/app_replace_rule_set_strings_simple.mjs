@@ -21,20 +21,12 @@ export function app_replace_rule_set_strings_simple() {
         end: '" ida "',
       },
       {
-        start: "st",
-        end: '" ida ida "',
-      },
-      {
-        start: "st",
-        end: '" ida ida ida "',
-      },
-      {
-        start: "st",
-        end: '" ida ida ida ida "',
-      },
-      {
         start: '" ida "',
         end: '" _ "',
+      },
+      {
+        start: "st",
+        end: '" ida ida "',
       },
       {
         start: '" ida ida "',
@@ -49,8 +41,24 @@ export function app_replace_rule_set_strings_simple() {
         end: '" l u v "',
       },
       {
+        start: "st",
+        end: '" ida ida ida "',
+      },
+      {
+        start: "st",
+        end: '" ida ida ida ida "',
+      },
+      {
         start: '" ida ida ida ida "',
+        end: '" idf idf idf idf "',
+      },
+      {
+        start: '" idf idf idf idf "',
         end: '" A B B A "',
+      },
+      {
+        start: '" idf idf idf idf "',
+        end: '" idf di idf idf "',
       },
       {
         start: '" ida ida ida ida "',
