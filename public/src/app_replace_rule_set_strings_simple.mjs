@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_end_get_size } from "../../../love/public/src/app_replace_end_get_size.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_to_dictionary_value } from "../../../love/public/src/list_to_dictionary_value.mjs";
@@ -60,6 +61,9 @@ export function app_replace_rule_set_strings_simple() {
   }
   let goals = list_map(unique, lambda4);
   function lambda5(item) {
+    log(app_replace_rule_set_strings_simple.name, {
+      item,
+    });
     let size = app_replace_end_get_size(item);
     let value2 = property_get(dictionary, size);
     property_set(item, "start", value2);
