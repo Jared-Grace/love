@@ -1,7 +1,6 @@
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { range_value } from "../../../love/public/src/range_value.mjs";
 import { text_pad_nested_space_quote_double } from "../../../love/public/src/text_pad_nested_space_quote_double.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { json_copy } from "../../../love/public/src/json_copy.mjs";
 import { list_sort_number } from "../../../love/public/src/list_sort_number.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
@@ -58,8 +57,8 @@ export function app_replace_rule_set_strings_simple() {
     };
     return r3;
   }
-  let mapped3 = list_map(unique, lambda4);
-  log(app_replace_rule_set_strings_simple.name, mapped3);
+  let goals = list_map(unique, lambda4);
+  list_add_multiple(list, items);
   let r = {
     name: "Strings simple",
     rules,
