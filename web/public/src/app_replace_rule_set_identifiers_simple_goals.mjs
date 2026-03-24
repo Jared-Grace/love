@@ -1,5 +1,5 @@
 export function app_replace_rule_set_identifiers_simple_goals() {
-  let r2 = [
+  let goals = [
     {
       start: "id",
       end: "_",
@@ -49,5 +49,5 @@ export function app_replace_rule_set_identifiers_simple_goals() {
       end: "J 0 $ h",
     },
   ];
-  return r2;
+  return goals;
 }
