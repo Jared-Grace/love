@@ -32,7 +32,7 @@ export function app_replace_rule_set_strings_simple() {
       let padded2 = text_pad(padded, delimeter);
       return padded2;
     }
-    property_change(o, "end", lambda3);
+    property_change(item, "end", lambda3);
   }
   each(filtered, lambda2);
   let r = {
