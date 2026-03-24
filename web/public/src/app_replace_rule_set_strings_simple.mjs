@@ -1,3 +1,4 @@
+import { property_set_curried_right_2 } from "../../../love/public/src/property_set_curried_right_2.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { text_size_1 } from "../../../love/public/src/text_size_1.mjs";
@@ -18,6 +19,7 @@ export function app_replace_rule_set_strings_simple() {
     return a;
   }
   let filtered = list_filter(goals, lambda);
+  let r2 = property_set_curried_right_2(property_name, value);
   function lambda2(g) {
     let value2 = property_set(g, "start", "st");
   }
