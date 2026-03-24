@@ -1,3 +1,4 @@
+import { app_replace_rule_set_boolean_literal_rules } from "../../../love/public/src/app_replace_rule_set_boolean_literal_rules.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 export function app_replace_rule_set_expressions_1() {
   const rules = [
@@ -9,7 +10,8 @@ export function app_replace_rule_set_expressions_1() {
     "n > i",
     "li > st",
   ];
-  list_add_multiple(list, items);
+  let items = app_replace_rule_set_boolean_literal_rules();
+  list_add_multiple(rules, items);
   let r = {
     name: "Expressions 1",
     rules: rules,
