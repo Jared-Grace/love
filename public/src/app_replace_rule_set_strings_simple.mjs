@@ -26,7 +26,7 @@ export function app_replace_rule_set_strings_simple() {
   const item = "stg";
   let quoted = text_pad_nested(item, " ", delimeter);
   const rules = [
-    root + " > " + delimeter + quoted + delimeter,
+    root + " > " + quoted,
     "stg > " + character,
     "stg > " + character + " stg",
   ];
