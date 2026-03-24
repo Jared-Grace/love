@@ -113,6 +113,7 @@ export async function app_replace_rule_set_success(
       p_next,
       "You have completed all goals that are available at this time!",
     );
+    return;
   }
   function lambda2() {
     if (ii) {
