@@ -1,4 +1,4 @@
-export function app_new_rule_set_new_2() {
+export function app_replace_rule_set_strings_simple() {
   let r = {
     name: "Strings simple",
     rules: [
