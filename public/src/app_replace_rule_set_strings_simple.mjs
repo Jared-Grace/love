@@ -1,3 +1,4 @@
+import { json_compress } from "../../../love/public/src/json_compress.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_sort_number } from "../../../love/public/src/list_sort_number.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
@@ -15,7 +16,7 @@ import { app_replace_end_get } from "../../../love/public/src/app_replace_end_ge
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { app_replace_rule_set_identifiers_simple_goals } from "../../../love/public/src/app_replace_rule_set_identifiers_simple_goals.mjs";
 import { app_replace_rule_set_strings_simple_rules_base } from "../../../love/public/src/app_replace_rule_set_strings_simple_rules_base.mjs";
-export function app_replace_rule_set_strings_simple() {
+export async function app_replace_rule_set_strings_simple() {
   const extra = app_replace_rule_set_strings_simple_rules_base();
   const root = "st";
   let delimeter = '"';
@@ -33,6 +34,7 @@ export function app_replace_rule_set_strings_simple() {
     return a;
   }
   let filtered = list_filter(goals, lambda);
+  let compressed = await json_compress(data);
   log(app_replace_rule_set_strings_simple.name, {
     filtered,
   });
