@@ -56,6 +56,22 @@ export function app_replace_rule_set_expressions_1() {
         start: "pe",
         end: "null",
       },
+      {
+        start: "pe",
+        end: "( e )",
+      },
+      {
+        start: "pe",
+        end: "( pe )",
+      },
+      {
+        start: "pe",
+        end: "( id )",
+      },
+      {
+        start: "pe",
+        end: "( ( e )) )",
+      },
     ],
   };
   return r;
