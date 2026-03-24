@@ -23,8 +23,8 @@ export function app_replace_rule_set_strings_simple() {
   let character = "ida";
   const rules = [
     root + " > " + delimeter + " stg " + delimeter,
-    "stg > ",
-    "stg > ida stg",
+    "stg > " + character,
+    "stg > " + character + " stg",
   ];
   list_add_multiple(rules, extra);
   let goals = app_replace_rule_set_identifiers_simple_goals();
