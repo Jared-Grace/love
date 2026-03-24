@@ -3,12 +3,11 @@ import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mj
 import { app_replace_rule_set_strings_simple_rules_base } from "../../../love/public/src/app_replace_rule_set_strings_simple_rules_base.mjs";
 export function app_replace_rule_set_strings_simple() {
   const extra = app_replace_rule_set_strings_simple_rules_base();
-  const root = "st";
   let character = "ida";
   const item = "stg";
   let quoted = text_pad_nested_space_quote_double(item);
   const rules = [
-    root + " > " + quoted,
+    "st > " + quoted,
     "stg > " + character,
     "stg > " + character + " stg",
   ];
