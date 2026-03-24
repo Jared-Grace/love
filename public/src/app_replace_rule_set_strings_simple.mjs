@@ -59,6 +59,7 @@ export function app_replace_rule_set_strings_simple() {
   }
   let goals = list_map(unique, lambda4);
   function lambda5(item) {
+    let value2 = property_get(object, property_name);
     property_set(item, "start", root);
     property_change(item, "end", text_pad_nested_space_quote_double);
   }
