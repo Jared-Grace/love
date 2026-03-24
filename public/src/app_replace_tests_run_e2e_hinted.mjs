@@ -15,7 +15,7 @@ import { app_replace_rule_set_attribute_hint } from "../../../love/public/src/ap
 import { app_replace_tests_run_e2e_generic } from "../../../love/public/src/app_replace_tests_run_e2e_generic.mjs";
 export async function app_replace_tests_run_e2e_hinted() {
   await app_replace_tests_run_e2e_generic(hinted);
-  async function hinted(p, refresh_count, page, symbol_id) {
+  async function hinted(p, refresh_count, page, symbol_id) {app_replace_rule_set_verify_goal_depth_max
     function lambda(item) {}
     each(list, lambda);
     while (true) {
