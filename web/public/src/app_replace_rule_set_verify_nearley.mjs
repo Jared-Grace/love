@@ -1,3 +1,4 @@
+import { list_join_newline_2 } from "../../../love/public/src/list_join_newline_2.mjs";
 import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
 import { app_replace_rule_set_strings_simple } from "../../../love/public/src/app_replace_rule_set_strings_simple.mjs";
 import { js_code_object } from "../../../love/public/src/js_code_object.mjs";
@@ -76,5 +77,6 @@ di -> "1" {% (d) => {
     return r;
   }
   let mapped = list_map(rules, lambda);
+  let joined2 = list_join_newline_2(list);
   return mapped;
 }
