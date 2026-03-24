@@ -2,6 +2,9 @@ import { text_pad_nested_space_quote_double } from "../../../love/public/src/tex
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { app_replace_rule_set_strings_simple_rules_base } from "../../../love/public/src/app_replace_rule_set_strings_simple_rules_base.mjs";
 export function app_replace_rule_set_strings_simple() {
+  let abbreviations = {
+    bo: ["", "bo", "oolean literal"],
+  };
   const extra = app_replace_rule_set_strings_simple_rules_base();
   let character = "ida";
   const item = "stg";
@@ -65,6 +68,7 @@ export function app_replace_rule_set_strings_simple() {
         end: '" J 0 $ h "',
       },
     ],
+    abbreviations,
   };
   return r;
 }
