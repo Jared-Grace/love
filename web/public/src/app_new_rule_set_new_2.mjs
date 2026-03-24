@@ -4,8 +4,12 @@ export function app_new_rule_set_new_2() {
     rules: ["bo > true", "bo > false"],
     goals: [
       {
-        start: "a",
-        end: "b",
+        start: "bo",
+        end: "true",
+      },
+      {
+        start: "bo",
+        end: "false",
       },
     ],
   };
