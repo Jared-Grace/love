@@ -71,6 +71,8 @@ di -> "1" {% (d) => {
   const grammar = module.exports;
   let v2 = nearley.Grammar.fromCompiled(grammar);
   const parser = new nearley.Parser(v2);
-  parser.feed('"_"');
+  let input = '"_"';
+  input = "000";
+  parser.feed(input);
   log_json(parser.results);
 }
