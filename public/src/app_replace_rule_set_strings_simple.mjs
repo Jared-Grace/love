@@ -65,7 +65,8 @@ export function app_replace_rule_set_strings_simple() {
     return r3;
   }
   let goals = list_map(unique, lambda4);
-  each(filtered, () => {});
+  function lambda5() {}
+  each(filtered, lambda5);
   list_add_multiple(goals, filtered);
   let r = {
     name: "Strings simple",
