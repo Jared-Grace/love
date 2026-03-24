@@ -10,10 +10,10 @@ export function app_replace_rule_parse(rule) {
   let left = list_take(split, middle);
   let right = list_skip(split, middle + 1);
   each([left, right], list_includes_empty_not_assert);
-  let v = {
+  let p = {
     left,
     right,
     original: rule,
   };
-  return v;
+  return p;
 }
