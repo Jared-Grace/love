@@ -52,10 +52,10 @@ export function app_replace_rule_set_strings_simple() {
     function lambda5(item3) {
       return character;
     }
-    let end = list_map(r2, lambda5);
+    let m = list_map(r2, lambda5);
     let r3 = {
       start: root,
-      end,
+      end: text_pad_nested_space_quote_double(m),
     };
     return r3;
   }
