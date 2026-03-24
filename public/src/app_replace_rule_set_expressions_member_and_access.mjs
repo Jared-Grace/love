@@ -16,6 +16,10 @@ export function app_replace_rule_set_expressions_member_and_access() {
         start: "me",
         end: "id . id",
       },
+      {
+        start: "me",
+        end: "( e ) . id",
+      },
     ],
   };
   return r;
