@@ -57,12 +57,12 @@ di -> "1" {% (d) => {
   }
   let mapped = list_map(rules, lambda);
   let joined2 = list_join_newline_2(mapped);
-  let v = nearley.Grammar.fromCompiled(grammarText);
+  let v = nearley.Grammar.fromCompiled(grammarParser);
   const parserGrammar = new nearley.Parser(v);
   parserGrammar.feed(grammarText);
   const grammarAst = parserGrammar.results[0];
   const compiled = compile(grammarAst, {});
-  const jsModule = generate(compiled, "grammarText", {
+  const jsModule = generate(compiled, "grammar", {
     output: "commonjs",
   });
   const module = {
@@ -72,7 +72,6 @@ di -> "1" {% (d) => {
   const grammar = module.exports;
   let v2 = nearley.Grammar.fromCompiled(grammar);
   const parser = new nearley.Parser(v2);
-  `  parser.feed('"_"');`;
   parser.feed("001");
   log_json(parser.results);
 }
