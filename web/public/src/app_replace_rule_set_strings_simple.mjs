@@ -23,9 +23,9 @@ export function app_replace_rule_set_strings_simple() {
   const root = "st";
   let delimeter = '"';
   let character = "ida";
-  let padded22 = text_pad_nested("stg", " ", delimeter);
+  let quoted = text_pad_nested("stg", " ", delimeter);
   const rules = [
-    root + " > " + delimeter + padded22 + delimeter,
+    root + " > " + delimeter + quoted + delimeter,
     "stg > " + character,
     "stg > " + character + " stg",
   ];
