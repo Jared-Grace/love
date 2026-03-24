@@ -4,11 +4,13 @@ import { text_pad_nested_space_quote_double } from "../../../love/public/src/tex
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { app_replace_rule_set_strings_simple_rules_base } from "../../../love/public/src/app_replace_rule_set_strings_simple_rules_base.mjs";
 export function app_replace_rule_set_strings_simple() {
-  let abbreviations = {
-    st: ["", "st", "ring"],
-    stg: ["", "st", "ring ", "g", "rower"],
-  };
-  let to2 = object_merge({}, abbreviations);
+  let abbreviations = object_merge(
+    {},
+    {
+      st: ["", "st", "ring"],
+      stg: ["", "st", "ring ", "g", "rower"],
+    },
+  );
   app_replace_rule_set_identifiers_simple_abbreviations(abbreviations);
   const extra = app_replace_rule_set_strings_simple_rules_base();
   let character = "ida";
