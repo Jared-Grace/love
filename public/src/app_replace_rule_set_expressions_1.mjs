@@ -17,7 +17,7 @@ export function app_replace_rule_set_expressions_1() {
     rules: rules,
     goals: [
       {
-        start: "a",
+        start: "pe",
         end: "b",
       },
     ],
