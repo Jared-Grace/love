@@ -20,8 +20,7 @@ export function app_replace_rule_set_strings_simple() {
   const rules = [
     root + " > " + delimeter + " stg " + delimeter,
     "stg > ida",
-    root + " > ida stg",
-    "st > ida",
+    "stg > ida stg",
   ];
   list_add_multiple(rules, extra);
   let goals = app_replace_rule_set_identifiers_simple_goals();
