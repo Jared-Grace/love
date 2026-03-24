@@ -1,24 +1,25 @@
 export function app_replace_rule_set_strings_simple() {
+  const rules = [
+    "st > ida",
+    "ida > idf",
+    "ida > di",
+    "idf > A",
+    "idf > B",
+    "idf > h",
+    "idf > J",
+    "idf > l",
+    "idf > t",
+    "idf > u",
+    "idf > v",
+    "idf > $",
+    "idf > _",
+    "di > 0",
+    "di > 1",
+    "di > 3",
+  ];
   let r = {
     name: "Strings simple",
-    rules: [
-      "st > ida",
-      "ida > idf",
-      "ida > di",
-      "idf > A",
-      "idf > B",
-      "idf > h",
-      "idf > J",
-      "idf > l",
-      "idf > t",
-      "idf > u",
-      "idf > v",
-      "idf > $",
-      "idf > _",
-      "di > 0",
-      "di > 1",
-      "di > 3",
-    ],
+    rules: rules,
     goals: [
       {
         start: "a",
