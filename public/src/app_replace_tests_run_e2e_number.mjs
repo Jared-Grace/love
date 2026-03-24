@@ -1,5 +1,5 @@
 import { function_run } from "../../../love/public/src/function_run.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 export async function app_replace_tests_run_e2e_number(fn_name) {
-  let result = await function_run(f_name, args);
+  let result = await function_run(fn_name, []);
 }
