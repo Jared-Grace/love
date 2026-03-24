@@ -1,4 +1,4 @@
-import { js_code_property } from "../../../love/public/src/js_code_property.mjs";
+import { json_copy } from "../../../love/public/src/json_copy.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_sort_number } from "../../../love/public/src/list_sort_number.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
@@ -34,7 +34,7 @@ export function app_replace_rule_set_strings_simple() {
     return a;
   }
   let filtered = list_filter(goals, lambda);
-  let combined = js_code_property(key, value2);
+  let copy = json_copy(o);
   log(app_replace_rule_set_strings_simple.name, {
     filtered,
   });
