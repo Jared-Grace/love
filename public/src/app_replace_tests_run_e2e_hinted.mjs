@@ -1,4 +1,4 @@
-import { each_async } from "../../../love/public/src/each_async.mjs";
+import { each_range_async } from "../../../love/public/src/each_range_async.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
 import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { list_filter_null_not_is } from "../../../love/public/src/list_filter_null_not_is.mjs";
