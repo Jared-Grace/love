@@ -12,9 +12,9 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { playwright_by_attribute_test_click } from "../../../love/public/src/playwright_by_attribute_test_click.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function app_replace_tests_run_e2e_generic(
+  rule_sets,
   first,
   inner,
-  rule_sets,
 ) {
   async function lambda(page) {
     let name2 = property_get(first, "name");
