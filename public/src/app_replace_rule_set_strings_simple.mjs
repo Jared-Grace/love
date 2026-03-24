@@ -12,9 +12,9 @@ import { app_replace_rule_set_identifiers_simple_goals } from "../../../love/pub
 import { app_replace_rule_set_strings_simple_rules_base } from "../../../love/public/src/app_replace_rule_set_strings_simple_rules_base.mjs";
 export function app_replace_rule_set_strings_simple() {
   const extra = app_replace_rule_set_strings_simple_rules_base();
-  const root = "st";
+  const root = "stg";
   let delimeter = '"';
-  const rules = [root + " > idg", root + " > " + delimeter];
+  const rules = [root + " > st", root + " > st stg", "st > " + delimeter];
   list_add_multiple(rules, extra);
   let goals = app_replace_rule_set_identifiers_simple_goals();
   function lambda(g) {
