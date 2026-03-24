@@ -1,3 +1,4 @@
+import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { app_replace_rule_set_strings_simple_rules_base } from "../../../love/public/src/app_replace_rule_set_strings_simple_rules_base.mjs";
 export function app_replace_rule_set_identifiers_simple_rules() {
   const rules = app_replace_rule_set_strings_simple_rules_base();
@@ -22,5 +23,6 @@ export function app_replace_rule_set_identifiers_simple_rules() {
     "di > 1",
     "di > 3",
   ];
+  list_add_multiple(list, items);
   return r2;
 }
