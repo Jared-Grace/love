@@ -104,6 +104,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_identifiers_simple,
     app_replace_rule_set_strings_simple,
     app_replace_rule_set_expressions_1,
+    app_new_rule_set_new_2,
   ];
   return r2;
 }
