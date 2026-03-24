@@ -3,6 +3,7 @@ import { app_replace_rule_set_identifiers_simple_rules } from "../../../love/pub
 export function app_replace_rule_set_identifiers_simple() {
   let abbreviations = {
     id: ["", "id", "entifier"],
+    idg: ["", "id", "entifier ", "g", "rower"],
     idf: [
       "",
       "id",
@@ -17,7 +18,6 @@ export function app_replace_rule_set_identifiers_simple() {
       "a",
       "ny: symbol that can be used as any symbol of an identifier",
     ],
-    idg: ["", "id", "entifier ", "g", "rower"],
     di: ["", "di", "git sample: a few choices of digits"],
   };
   let r = {
