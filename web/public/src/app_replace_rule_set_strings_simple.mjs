@@ -1,5 +1,5 @@
+import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { each_range } from "../../../love/public/src/each_range.mjs";
-import { list_max } from "../../../love/public/src/list_max.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
@@ -44,8 +44,7 @@ export function app_replace_rule_set_strings_simple() {
   each(filtered, lambda2);
   let mapped2 = list_map(filtered, app_replace_end_get);
   let mapped = list_map(mapped2, list_size);
-  let max = list_max(mapped);
-  function lambda4(i) {}
+  let unique = list_unique(list);
   each_range(max, lambda4);
   let r = {
     name: "Strings simple",
