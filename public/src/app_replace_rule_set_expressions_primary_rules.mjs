@@ -1,4 +1,4 @@
-export function app_replace_rule_set_expressions_primary_rules() {
+export function app_replace_rule_set_expressions_primary_rules(rules) {
   let r2 = [
     "pe > id",
     "pe > li",

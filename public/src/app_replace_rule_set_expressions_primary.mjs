@@ -9,7 +9,7 @@ import { app_replace_rule_set_boolean_literal_rules } from "../../../love/public
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 export function app_replace_rule_set_expressions_primary() {
   const rules = [];
-  app_replace_rule_set_expressions_primary_rules();
+  app_replace_rule_set_expressions_primary_rules(rules);
   list_add(rules, "e > pe");
   let b = app_replace_rule_set_boolean_literal_abbreviations();
   let abbreviations = {
