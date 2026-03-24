@@ -15,7 +15,7 @@ export function app_replace_rule_set_strings_simple() {
   const root = "st";
   let delimeter = '"';
   const rules = [root + " > idg", root + " > " + delimeter];
-  let concated = list_add_multiple(rules, extra);
+  list_add_multiple(rules, extra);
   let goals = app_replace_rule_set_identifiers_simple_goals();
   function lambda(g) {
     let end = app_replace_end_get(g);
@@ -35,7 +35,7 @@ export function app_replace_rule_set_strings_simple() {
   each(filtered, lambda2);
   let r = {
     name: "Strings simple",
-    rules: concated,
+    rules,
     goals: filtered,
   };
   return r;
