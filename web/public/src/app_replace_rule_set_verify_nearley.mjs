@@ -12,8 +12,8 @@ import nearley from "nearley";
 import compile from "nearley/lib/compile.js";
 import generate from "nearley/lib/generate.js";
 import grammarParser from "nearley/lib/nearley-language-bootstrapped.js";
-export function app_replace_rule_set_verify_nearley(rules) {
-  let r2 = app_replace_rule_set_strings_simple();
+export function app_replace_rule_set_verify_nearley() {
+  let {rules} = app_replace_rule_set_strings_simple();
   const grammarText = `
 bits -> bits di {% (d) => ({
   left: 'bits',
