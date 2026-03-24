@@ -10,6 +10,13 @@ export function app_replace_rule_set_identifiers_simple() {
       "f",
       "irst: symbol that can be used as the first symbol of an identifier",
     ],
+    ida: [
+      "",
+      "id",
+      "entifier ",
+      "a",
+      "ny: symbol that can be used as any symbol of an identifier",
+    ],
   };
   let r = {
     name: "Identifiers simple",
