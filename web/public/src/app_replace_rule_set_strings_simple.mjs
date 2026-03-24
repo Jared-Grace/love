@@ -51,6 +51,7 @@ export function app_replace_rule_set_strings_simple() {
   function lambda4(item2) {
     let m = range_value(item2, character);
     let p = text_pad_nested_space_quote_double(m);
+    log_json(right);
     let j = log_json(p);
     let r3 = {
       start: root,
