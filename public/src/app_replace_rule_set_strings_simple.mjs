@@ -1,3 +1,4 @@
+import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { app_replace_rule_set_identifiers_simple_goals } from "../../../love/public/src/app_replace_rule_set_identifiers_simple_goals.mjs";
 import { app_replace_rule_set_strings_simple_rules_base } from "../../../love/public/src/app_replace_rule_set_strings_simple_rules_base.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
@@ -5,6 +6,8 @@ export function app_replace_rule_set_strings_simple() {
   const rules = app_replace_rule_set_strings_simple_rules_base();
   let concated = list_concat(["st > ida"], rules);
   let goals = app_replace_rule_set_identifiers_simple_goals();
+  function lambda(item) {}
+  let filtered = list_filter(list, lambda);
   let r = {
     name: "Strings simple",
     rules: concated,
