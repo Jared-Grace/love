@@ -28,9 +28,9 @@ export function app_replace_rule_set_strings_simple() {
   let goals = app_replace_rule_set_identifiers_simple_goals();
   let mapped2 = list_map(goals, app_replace_end_get);
   let mapped = list_map(list, list_size);
-  let max = list_max(list2);
+  let max = list_max(mapped);
   log(app_replace_rule_set_strings_simple.name, {
-    mapped2,
+    max,
   });
   function lambda(g) {
     let end = app_replace_end_get(g);
