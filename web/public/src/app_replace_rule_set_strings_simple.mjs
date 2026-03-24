@@ -40,11 +40,6 @@ export function app_replace_rule_set_strings_simple() {
   }
   let filtered = list_filter(goals_identifiers, lambda);
   let copy = json_copy(filtered);
-  function lambda2(item) {
-    property_set(item, "start", root);
-    property_change(item, "end", text_pad_nested_space_quote_double);
-  }
-  each(filtered, lambda2);
   let mapped = list_map(copy, app_replace_end_get);
   let mapped2 = list_map(mapped, list_size);
   let unique = list_unique(mapped2);
@@ -65,7 +60,10 @@ export function app_replace_rule_set_strings_simple() {
     return r3;
   }
   let goals = list_map(unique, lambda4);
-  function lambda5() {}
+  function lambda5() {
+    property_set(item, "start", root);
+    property_change(item, "end", text_pad_nested_space_quote_double);
+  }
   each(filtered, lambda5);
   list_add_multiple(goals, filtered);
   let r = {
