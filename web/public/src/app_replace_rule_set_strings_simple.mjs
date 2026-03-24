@@ -60,8 +60,7 @@ export function app_replace_rule_set_strings_simple() {
   }
   let goals = list_map(unique, lambda4);
   function lambda5(item) {
-    let end3 = property_get(item, "end");
-    let size = app_replace_end_get_size(end3);
+    let size = app_replace_end_get_size(item);
     let value2 = property_get(dictionary, size);
     property_set(item, "start", value2);
     property_change(item, "end", text_pad_nested_space_quote_double);
