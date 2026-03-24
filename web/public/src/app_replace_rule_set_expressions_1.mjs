@@ -1,3 +1,4 @@
+import { app_replace_rule_set_decimals_abbreviations_only } from "../../../love/public/src/app_replace_rule_set_decimals_abbreviations_only.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_replace_rule_set_boolean_literal_abbreviations } from "../../../love/public/src/app_replace_rule_set_boolean_literal_abbreviations.mjs";
 import { app_replace_rule_set_boolean_literal_rules } from "../../../love/public/src/app_replace_rule_set_boolean_literal_rules.mjs";
@@ -19,8 +20,10 @@ export function app_replace_rule_set_expressions_1() {
     id: ["", "id", "entifier"],
     id: ["", "li", "entifier"],
     pe: ["", "e", "xpression"],
+    de: ["", "e", "xpression"],
   };
   let to2 = object_merge(abbreviations, b);
+  let ab = app_replace_rule_set_decimals_abbreviations_only(abbreviations);
   let items = app_replace_rule_set_boolean_literal_rules();
   list_add_multiple(rules, items);
   let r = {
