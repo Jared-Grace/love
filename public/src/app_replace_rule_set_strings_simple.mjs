@@ -14,7 +14,11 @@ import { list_concat } from "../../../love/public/src/list_concat.mjs";
 export function app_replace_rule_set_strings_simple() {
   const rules = app_replace_rule_set_strings_simple_rules_base();
   const root = "st";
-  let concated = list_concat([root + " > ida", root + " > \'"], rules);
+  let delimeter = "\'";
+  let concated = list_concat(
+    [root + " > ida", root + " > " + delimeter],
+    rules,
+  );
   let goals = app_replace_rule_set_identifiers_simple_goals();
   function lambda(g) {
     let end = app_replace_end_get(g);
@@ -28,7 +32,8 @@ export function app_replace_rule_set_strings_simple() {
     property_set(item, "start", root);
     function lambda3(value) {
       let padded = text_pad_space(value);
-      let padded2 = text_pad(s, padding);
+      let padded2 = text_pad(padded, delimeter);
+      return padded2;
     }
     let value2 = property_change(o, "end", lambda3);
   }
