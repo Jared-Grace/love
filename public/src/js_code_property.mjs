@@ -6,6 +6,6 @@ export function js_code_property(key, value) {
   let code_string = js_code_string(key);
   let code2 = js_code_wrap_brackets(code_string);
   let c = js_code_colon();
-  let combined = text_combine_multiple([code2, c, " ", value]);
+  let combined = text_combine_multiple([key, c, " ", value]);
   return combined;
 }
