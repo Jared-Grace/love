@@ -5,8 +5,6 @@ import { app_replace_rule_set_integers_abbreviation_i } from "../../../love/publ
 import { app_replace_rule_set_decimals_abbreviation_de } from "../../../love/public/src/app_replace_rule_set_decimals_abbreviation_de.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_replace_rule_set_boolean_literal_abbreviations } from "../../../love/public/src/app_replace_rule_set_boolean_literal_abbreviations.mjs";
-import { app_replace_rule_set_boolean_literal_rules } from "../../../love/public/src/app_replace_rule_set_boolean_literal_rules.mjs";
-import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 export function app_replace_rule_set_expressions_primary() {
   const rules = [];
   app_replace_rule_set_expressions_primary_rules(rules);
@@ -23,8 +21,6 @@ export function app_replace_rule_set_expressions_primary() {
   app_replace_rule_set_strings_simple_abbreviation_st(abbreviations);
   let to2 = object_merge(abbreviations, b);
   let ab = app_replace_rule_set_decimals_abbreviation_de(abbreviations);
-  let items = app_replace_rule_set_boolean_literal_rules();
-  list_add_multiple(rules, items);
   let r = {
     name: "Expressions primary",
     abbreviations,
