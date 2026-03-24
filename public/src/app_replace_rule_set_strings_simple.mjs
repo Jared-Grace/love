@@ -53,7 +53,7 @@ export function app_replace_rule_set_strings_simple() {
     let p = text_pad_nested_space_quote_double(joined);
     let r3 = {
       start: root,
-      end: p,
+      end: p,item2
     };
     return r3;
   }
