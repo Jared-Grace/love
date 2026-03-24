@@ -1,6 +1,6 @@
 export function app_new_rule_set_new_2() {
   let r = {
-    name: "Expressions Member Access",
+    name: "Expressions member and access",
     rules: ["a > b"],
     goals: [
       {
