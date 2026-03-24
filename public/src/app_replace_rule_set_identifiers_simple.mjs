@@ -17,6 +17,7 @@ export function app_replace_rule_set_identifiers_simple() {
       "a",
       "ny: symbol that can be used as any symbol of an identifier",
     ],
+    ida: ["", "id", "entifier ", "g", "rower"],
   };
   let r = {
     name: "Identifiers simple",
