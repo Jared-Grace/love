@@ -4,6 +4,7 @@ import { app_replace_rule_set_strings_simple_rules_base } from "../../../love/pu
 export function app_replace_rule_set_strings_simple() {
   let abbreviations = {
     st: ["", "st", "ring"],
+    stg: ["", "st", "ring ", "g", "rower"],
   };
   const extra = app_replace_rule_set_strings_simple_rules_base();
   let character = "ida";
