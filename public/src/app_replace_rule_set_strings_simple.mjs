@@ -14,7 +14,12 @@ export function app_replace_rule_set_strings_simple() {
   const extra = app_replace_rule_set_strings_simple_rules_base();
   const root = "stg";
   let delimeter = '"';
-  const rules = [root + " > st", root + " > st stg", "st > " + delimeter];
+  const rules = [
+    root + " > st",
+    root + " > st stg",
+    "st > " + delimeter,
+    "st > ida",
+  ];
   list_add_multiple(rules, extra);
   let goals = app_replace_rule_set_identifiers_simple_goals();
   function lambda(g) {
