@@ -20,7 +20,7 @@ export function app_replace_rule_set_expressions_1() {
     id: ["", "id", "entifier"],
     id: ["", "li", "entifier"],
     pe: ["", "e", "xpression"],
-    de: ["", "e", "xpression"],
+    de: ["", "n", "umber"],
   };
   let to2 = object_merge(abbreviations, b);
   let ab = app_replace_rule_set_decimals_abbreviations_only(abbreviations);
