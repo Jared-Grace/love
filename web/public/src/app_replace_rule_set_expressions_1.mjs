@@ -18,7 +18,7 @@ export function app_replace_rule_set_expressions_1() {
     pe: ["", "p", "rimary ", "e", "xpression"],
     id: ["", "id", "entifier"],
   };
-  let to2 = object_merge(to, from);
+  let to2 = object_merge(abbreviations, b);
   let items = app_replace_rule_set_boolean_literal_rules();
   list_add_multiple(rules, items);
   let r = {
