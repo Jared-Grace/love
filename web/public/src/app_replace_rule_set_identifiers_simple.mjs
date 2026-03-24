@@ -9,6 +9,7 @@ export function app_replace_rule_set_identifiers_simple() {
     name: "Identifiers simple",
     rules: app_replace_rule_set_identifiers_simple_rules(),
     goals: app_replace_rule_set_identifiers_simple_goals(),
+    abbreviations,
   };
   return r;
 }
