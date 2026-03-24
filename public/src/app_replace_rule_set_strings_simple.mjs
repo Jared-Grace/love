@@ -49,7 +49,7 @@ export function app_replace_rule_set_strings_simple() {
   let unique = list_unique(mapped2);
   list_sort_number(unique);
   function lambda4(item2) {}
-  let mapped3 = list_map(list, lambda4);
+  let mapped3 = list_map(unique, lambda4);
   let r = {
     name: "Strings simple",
     rules,
