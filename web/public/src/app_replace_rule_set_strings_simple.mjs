@@ -2,10 +2,7 @@ export function app_replace_rule_set_strings_simple() {
   let r = {
     name: "Strings simple",
     rules: [
-      "id > idf",
-      "id > idf idg",
-      "idg > ida",
-      "idg > ida idg",
+      "st > ida",
       "ida > idf",
       "ida > di",
       "idf > A",
