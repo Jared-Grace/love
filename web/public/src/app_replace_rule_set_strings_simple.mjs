@@ -59,6 +59,7 @@ export function app_replace_rule_set_strings_simple() {
   }
   let goals = list_map(unique, lambda4);
   function lambda5(item) {
+    let end3 = property_get(item, "end");
     let end2 = app_replace_end_get(goal);
     ("let value2 = property_get(dictionary, item);");
     property_set(item, "start", value2);
