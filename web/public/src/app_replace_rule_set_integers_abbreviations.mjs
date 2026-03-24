@@ -8,6 +8,6 @@ export function app_replace_rule_set_integers_abbreviations() {
     p: ["", "p", "ositive digit (numbers 1-9)"],
   };
   app_replace_rule_set_integers_abbreviations_di(i);
-  object_merge(r, i);
+  object_merge(i, r);
   return r;
 }
