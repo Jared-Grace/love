@@ -1,8 +1,7 @@
+import { app_replace_rule_set_boolean_literal_abbreviations } from "../../../love/public/src/app_replace_rule_set_boolean_literal_abbreviations.mjs";
 import { app_replace_rule_set_boolean_literal_rules } from "../../../love/public/src/app_replace_rule_set_boolean_literal_rules.mjs";
 export function app_replace_rule_set_boolean_literal() {
-  let abbreviations = {
-    bo: ["", "bo", "oolean literal"],
-  };
+  let abbreviations = app_replace_rule_set_boolean_literal_abbreviations();
   let r = {
     name: "Boolean Literal",
     abbreviations,
