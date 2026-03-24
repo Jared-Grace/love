@@ -32,6 +32,9 @@ export function app_replace_rule_set_strings_simple() {
     return a;
   }
   let filtered = list_filter(goals, lambda);
+  log(app_replace_rule_set_strings_simple.name, {
+    filtered,
+  });
   function lambda2(item) {
     property_set(item, "start", root);
     function lambda3(value) {
@@ -46,9 +49,6 @@ export function app_replace_rule_set_strings_simple() {
   let mapped2 = list_map(mapped, list_size);
   let unique = list_unique(mapped2);
   list_sort_number(unique);
-  log(app_replace_rule_set_strings_simple.name, {
-    mapped,
-  });
   let r = {
     name: "Strings simple",
     rules,
