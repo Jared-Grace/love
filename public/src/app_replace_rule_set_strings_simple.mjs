@@ -1,3 +1,4 @@
+import { text_pad_nested } from "../../../love/public/src/text_pad_nested.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { range } from "../../../love/public/src/range.mjs";
 import { json_copy } from "../../../love/public/src/json_copy.mjs";
@@ -22,6 +23,7 @@ export function app_replace_rule_set_strings_simple() {
   const root = "st";
   let delimeter = '"';
   let character = "ida";
+  let padded22 = text_pad_nested(s, padding, padding2);
   const rules = [
     root + " > " + delimeter + " stg " + delimeter,
     "stg > " + character,
