@@ -26,12 +26,6 @@ export function app_replace_rule_set_strings_simple() {
   ];
   list_add_multiple(rules, extra);
   let goals = app_replace_rule_set_identifiers_simple_goals();
-  let mapped2 = list_map(goals, app_replace_end_get);
-  let mapped = list_map(mapped2, list_size);
-  let max = list_max(mapped);
-  log(app_replace_rule_set_strings_simple.name, {
-    max,
-  });
   function lambda(g) {
     let end = app_replace_end_get(g);
     let a = list_all(end, text_size_1);
@@ -48,6 +42,12 @@ export function app_replace_rule_set_strings_simple() {
     property_change(item, "end", lambda3);
   }
   each(filtered, lambda2);
+  let mapped2 = list_map(filtered, app_replace_end_get);
+  let mapped = list_map(mapped2, list_size);
+  let max = list_max(mapped);
+  log(app_replace_rule_set_strings_simple.name, {
+    max,
+  });
   let r = {
     name: "Strings simple",
     rules,
