@@ -59,12 +59,11 @@ export function app_replace_rule_set_strings_simple() {
   function lambda4(item2) {
     let m = range_value(item2, character);
     let joined = list_join_space(m);
-    let value = property_get(object, property_name);
+    let value = property_get(dictionary, property_name);
     let p = text_pad_nested_space_quote_double(joined);
     let r3 = {
       start: root,
-      end: p,
-      item2,
+      end: value,
     };
     return r3;
   }
