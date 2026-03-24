@@ -57,6 +57,7 @@ di -> "1" {% (d) => {
   }
   let mapped = list_map(rules, lambda);
   let joined2 = list_join_newline_2(mapped);
+  return joined2;
   let v = nearley.Grammar.fromCompiled(joined2);
   const parserGrammar = new nearley.Parser(v);
   parserGrammar.feed(grammarText);
