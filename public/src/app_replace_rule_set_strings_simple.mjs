@@ -50,11 +50,11 @@ export function app_replace_rule_set_strings_simple() {
   list_sort_number(unique);
   function lambda4(item2) {
     let m = range_value(item2, character);
-    let p = text_pad_nested_space_quote_double(m);
-    let joined = list_join_space(p);
+    let joined = list_join_space(m);
+    let p = text_pad_nested_space_quote_double(joined);
     let r3 = {
       start: root,
-      end: joined,
+      end: p,
     };
     return r3;
   }
