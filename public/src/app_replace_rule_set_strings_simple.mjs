@@ -10,7 +10,8 @@ import { app_replace_rule_set_strings_simple_rules_base } from "../../../love/pu
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 export function app_replace_rule_set_strings_simple() {
   const rules = app_replace_rule_set_strings_simple_rules_base();
-  let concated = list_concat(["st" + " > ida"], rules);
+  const root = "st";
+  let concated = list_concat([root + " > ida"], rules);
   let goals = app_replace_rule_set_identifiers_simple_goals();
   function lambda(g) {
     let end = app_replace_end_get(g);
@@ -18,7 +19,7 @@ export function app_replace_rule_set_strings_simple() {
     return a;
   }
   let filtered = list_filter(goals, lambda);
-  let r2 = property_set_curried_right_2("start", "st");
+  let r2 = property_set_curried_right_2("start", root);
   each(filtered, r2);
   log(app_replace_rule_set_strings_simple.name, {
     filtered,
