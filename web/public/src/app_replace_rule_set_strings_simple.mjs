@@ -46,7 +46,7 @@ export function app_replace_rule_set_strings_simple() {
   let mapped = list_map(mapped2, list_size);
   let max = list_max(mapped);
   function lambda4(i) {}
-  each_range(count, lambda4);
+  each_range(max, lambda4);
   let r = {
     name: "Strings simple",
     rules,
