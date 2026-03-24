@@ -33,7 +33,7 @@ export function app_replace_rule_set_strings_simple() {
     let a = list_all(end, text_size_1);
     return a;
   }
-  let filtered = list_filter(mapped2, lambda);
+  let filtered = list_filter(goals, lambda);
   function lambda2(item) {
     property_set(item, "start", root);
     function lambda3(value) {
