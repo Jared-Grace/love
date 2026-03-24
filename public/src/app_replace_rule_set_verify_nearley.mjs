@@ -19,23 +19,23 @@ export function app_replace_rule_set_verify_nearley() {
   let rules = app_replace_rule_set_rules_get(r2);
   const grammarText = `
 bits -> bits di {% (d) => ({
-  left: 'bits',
-  right: d
+  ['left']: 'bits',
+  ['right']: d
 }) %}
 
 bits -> di {% (d) => ({
-  left: 'bits',
-  right: d
+  ['left']: 'bits',
+  ['right']: d
 }) %}
 
 di -> "0" {% (d) => {
   const val = d.flat(Infinity)[0];
-  return { left: "di", right: d };
+  return { ['left']: "di", ['right']: d };
 } %}
 
 di -> "1" {% (d) => {
   const val = d.flat(Infinity)[0];
-  return { left: "di", right: d };
+  return { ['left']: "di", ['right']: d };
 } %}
 `;
   function lambda(rule) {
