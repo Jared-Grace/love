@@ -1,6 +1,6 @@
 export function app_new_rule_set_new_2() {
   let r = {
-    name: "TODO",
+    name: "Boolean Literal",
     rules: ["bo > true", "bo > false"],
     goals: [
       {
