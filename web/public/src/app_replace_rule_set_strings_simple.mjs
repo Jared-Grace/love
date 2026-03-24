@@ -1,22 +1,7 @@
+import { app_replace_rule_set_strings_simple_rules_base } from "../../../love/public/src/app_replace_rule_set_strings_simple_rules_base.mjs";
 import { list_concat } from "../../../love/public/src/list_concat.mjs";
 export function app_replace_rule_set_strings_simple() {
-  const rules = [
-    "ida > idf",
-    "ida > di",
-    "idf > A",
-    "idf > B",
-    "idf > h",
-    "idf > J",
-    "idf > l",
-    "idf > t",
-    "idf > u",
-    "idf > v",
-    "idf > $",
-    "idf > _",
-    "di > 0",
-    "di > 1",
-    "di > 3",
-  ];
+  const rules = app_replace_rule_set_strings_simple_rules_base();
   let concated = list_concat(["st > ida"], rules);
   let r = {
     name: "Strings simple",
