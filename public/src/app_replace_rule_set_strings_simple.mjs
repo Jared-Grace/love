@@ -10,14 +10,12 @@ import { app_replace_end_get } from "../../../love/public/src/app_replace_end_ge
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { app_replace_rule_set_identifiers_simple_goals } from "../../../love/public/src/app_replace_rule_set_identifiers_simple_goals.mjs";
 import { app_replace_rule_set_strings_simple_rules_base } from "../../../love/public/src/app_replace_rule_set_strings_simple_rules_base.mjs";
-import { list_concat } from "../../../love/public/src/list_concat.mjs";
 export function app_replace_rule_set_strings_simple() {
   const extra = app_replace_rule_set_strings_simple_rules_base();
   const root = "st";
   let delimeter = '"';
   const rules = [root + " > idg", root + " > " + delimeter];
-  list_add_multiple(list, items);
-  let concated = list_concat(rules, extra);
+  let concated = list_add_multiple(rules, extra);
   let goals = app_replace_rule_set_identifiers_simple_goals();
   function lambda(g) {
     let end = app_replace_end_get(g);
