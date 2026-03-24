@@ -53,7 +53,6 @@ di -> "1" {% (d) => {
   const parser = new nearley.Parser(v2);
   parser.feed("001");
   log_json(parser.results);
-  return;
   function lambda(rule) {
     let left = property_get(rule, "left");
     let only = list_single(left);
