@@ -26,10 +26,6 @@ export function app_replace_rule_set_identifiers_simple_goals() {
     },
     {
       start: "id",
-      end: "l u v",
-    },
-    {
-      start: "id",
       end: "idf ida ida ida",
     },
     {
