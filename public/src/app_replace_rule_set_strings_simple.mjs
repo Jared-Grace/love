@@ -55,7 +55,7 @@ export function app_replace_rule_set_strings_simple() {
     let p = text_pad_nested_space_quote_double(joined);
     return p;
   }
-  let dictionary = list_to_dictionary_value(list, lambda3);
+  let dictionary = list_to_dictionary_value(unique, lambda3);
   function lambda4(item2) {
     let value = property_get(dictionary, item2);
     let r3 = {
