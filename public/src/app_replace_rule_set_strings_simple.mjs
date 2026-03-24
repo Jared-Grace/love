@@ -51,6 +51,8 @@ export function app_replace_rule_set_strings_simple() {
   list_sort_number(unique);
   function lambda4(item2) {
     let r2 = range(item2);
+    function lambda5(item3) {}
+    let mapped4 = list_map(list, lambda5);
   }
   let mapped3 = list_map(unique, lambda4);
   let r = {
