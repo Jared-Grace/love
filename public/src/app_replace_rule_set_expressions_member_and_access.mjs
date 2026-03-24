@@ -42,7 +42,7 @@ export function app_replace_rule_set_expressions_member_and_access() {
       },
       {
         start: "me [ i ]",
-        end: "me [ i ]",
+        end: "me [ i ] [ i ]",
       },
       {
         start: "me",
