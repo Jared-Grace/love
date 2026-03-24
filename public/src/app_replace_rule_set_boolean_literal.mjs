@@ -1,7 +1,8 @@
+import { app_replace_rule_set_boolean_literal_rules } from "../../../love/public/src/app_replace_rule_set_boolean_literal_rules.mjs";
 export function app_replace_rule_set_boolean_literal() {
   let r = {
     name: "Boolean Literal",
-    rules: ["bo > true", "bo > false"],
+    rules: app_replace_rule_set_boolean_literal_rules(),
     goals: [
       {
         start: "bo",
