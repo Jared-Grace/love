@@ -13,7 +13,7 @@ import { list_concat } from "../../../love/public/src/list_concat.mjs";
 export function app_replace_rule_set_strings_simple() {
   const rules = app_replace_rule_set_strings_simple_rules_base();
   const root = "st";
-  let delimeter = "\"";
+  let delimeter = '"';
   let concated = list_concat(
     [root + " > ida", root + " > " + delimeter],
     rules,
