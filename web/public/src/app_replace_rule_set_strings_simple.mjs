@@ -7,8 +7,6 @@ import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
-import { text_pad } from "../../../love/public/src/text_pad.mjs";
-import { text_pad_space } from "../../../love/public/src/text_pad_space.mjs";
 import { property_change } from "../../../love/public/src/property_change.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -42,12 +40,7 @@ export function app_replace_rule_set_strings_simple() {
   let copy = json_copy(filtered);
   function lambda2(item) {
     property_set(item, "start", root);
-    function lambda3(value) {
-      let padded = text_pad_space(value);
-      let padded2 = text_pad(padded, delimeter);
-      return padded2;
-    }
-    property_change(item, "end", lambda3);
+    property_change(item, "end", text_pad_nested_space_quote_double);
   }
   each(filtered, lambda2);
   let mapped = list_map(copy, app_replace_end_get);
