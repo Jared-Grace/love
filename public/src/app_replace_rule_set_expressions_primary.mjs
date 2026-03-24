@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_replace_rule_set_strings_simple_abbreviation_st } from "../../../love/public/src/app_replace_rule_set_strings_simple_abbreviation_st.mjs";
 import { app_replace_rule_set_integers_abbreviation_i } from "../../../love/public/src/app_replace_rule_set_integers_abbreviation_i.mjs";
 import { app_replace_rule_set_decimals_abbreviation_de } from "../../../love/public/src/app_replace_rule_set_decimals_abbreviation_de.mjs";
@@ -17,6 +18,7 @@ export function app_replace_rule_set_expressions_primary() {
     "li > null",
     "e > pe",
   ];
+  list_add(list, item);
   let b = app_replace_rule_set_boolean_literal_abbreviations();
   let abbreviations = {
     pe: ["", "p", "rimary ", "e", "xpression"],
