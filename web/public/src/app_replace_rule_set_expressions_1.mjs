@@ -38,7 +38,23 @@ export function app_replace_rule_set_expressions_1() {
     goals: [
       {
         start: "pe",
-        end: "b",
+        end: "id",
+      },
+      {
+        start: "pe",
+        end: "de",
+      },
+      {
+        start: "pe",
+        end: "i",
+      },
+      {
+        start: "pe",
+        end: "st",
+      },
+      {
+        start: "pe",
+        end: "null",
       },
     ],
   };
