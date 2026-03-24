@@ -1,3 +1,5 @@
+import { list_max } from "../../../love/public/src/list_max.mjs";
+import { list_size } from "../../../love/public/src/list_size.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
@@ -25,8 +27,8 @@ export function app_replace_rule_set_strings_simple() {
   list_add_multiple(rules, extra);
   let goals = app_replace_rule_set_identifiers_simple_goals();
   let mapped2 = list_map(goals, app_replace_end_get);
-  function lambda4(item2) {}
-  let mapped = list_map(list, lambda4);
+  let mapped = list_map(list, list_size);
+  let max = list_max(list2);
   log(app_replace_rule_set_strings_simple.name, {
     mapped2,
   });
