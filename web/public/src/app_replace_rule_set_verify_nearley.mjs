@@ -1,3 +1,4 @@
+import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
 import { app_replace_rule_set_strings_simple } from "../../../love/public/src/app_replace_rule_set_strings_simple.mjs";
 import { js_code_object } from "../../../love/public/src/js_code_object.mjs";
 import { js_code_string } from "../../../love/public/src/js_code_string.mjs";
@@ -14,7 +15,7 @@ import generate from "nearley/lib/generate.js";
 import grammarParser from "nearley/lib/nearley-language-bootstrapped.js";
 export function app_replace_rule_set_verify_nearley() {
   let r2 = app_replace_rule_set_strings_simple();
-  let rules = property_get(r2, "rules");
+  let rules = app_replace_rule_set_rules_get(r2);
   const grammarText = `
 bits -> bits di {% (d) => ({
   left: 'bits',
