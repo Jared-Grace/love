@@ -63,9 +63,7 @@ export function app_replace_rule_set_strings_simple() {
     return r3;
   }
   let mapped3 = list_map(unique, lambda4);
-  log(app_replace_rule_set_strings_simple.name, {
-    mapped3,
-  });
+  log(app_replace_rule_set_strings_simple.name, mapped3);
   let r = {
     name: "Strings simple",
     rules,
