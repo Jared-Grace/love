@@ -1,3 +1,4 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { text_pad } from "../../../love/public/src/text_pad.mjs";
 import { text_pad_space } from "../../../love/public/src/text_pad_space.mjs";
@@ -38,6 +39,7 @@ export function app_replace_rule_set_strings_simple() {
     property_change(item, "end", lambda3);
   }
   each(filtered, lambda2);
+  let mapped = list_map_property(list, property_name);
   let r = {
     name: "Strings simple",
     rules,
