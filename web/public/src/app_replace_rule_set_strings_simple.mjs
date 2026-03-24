@@ -7,6 +7,8 @@ export function app_replace_rule_set_strings_simple() {
   let abbreviations = {};
   object_merge(abbreviations, {
     st: ["", "st", "ring"],
+  });
+  object_merge(abbreviations, {
     stg: ["", "st", "ring ", "g", "rower"],
   });
   app_replace_rule_set_identifiers_simple_abbreviations(abbreviations);
