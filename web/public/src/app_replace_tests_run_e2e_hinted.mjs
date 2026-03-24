@@ -16,9 +16,7 @@ import { app_replace_tests_run_e2e_generic } from "../../../love/public/src/app_
 export async function app_replace_tests_run_e2e_hinted() {
   await app_replace_tests_run_e2e_generic(hinted);
   async function hinted(p, refresh_count, page, symbol_id) {
-    async function lambda(item) {}
-    await each_async(list, lambda);
-    while (true) {
+    async function lambda(item) {
       let hint = app_replace_rule_set_attribute_hint();
       refresh_count = await app_replace_rule_set_attribute_refresh_click(
         page,
@@ -39,9 +37,11 @@ export async function app_replace_tests_run_e2e_hinted() {
       let s = list_size_1(filtered2);
       if (s) {
         symbol_id = list_single(filtered2);
-        break;
+        return true;
       }
     }
+    await each_async(list, lambda);
+    while (true) {}
     let r2 = {
       refresh_count,
       symbol_id,
