@@ -12,9 +12,7 @@ export function app_replace_rule_set_strings_simple() {
   let goals = app_replace_rule_set_identifiers_simple_goals();
   function lambda(g) {
     let end = app_replace_end_get(g);
-    function lambda2(item) {}
-    let s1 = list_size_1(list);
-    let a = list_all(end, lambda2);
+    let a = list_all(end, list_size_1);
     log(app_replace_rule_set_strings_simple.name, {
       end,
     });
