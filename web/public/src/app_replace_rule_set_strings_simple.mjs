@@ -61,7 +61,7 @@ export function app_replace_rule_set_strings_simple() {
         end: '" idf di idf idf "',
       },
       {
-        start: '" ida ida ida ida "',
+        start: '" idf di idf idf "',
         end: '" J 0 $ h "',
       },
     ],
