@@ -2,7 +2,6 @@ import { text_pad } from "../../../love/public/src/text_pad.mjs";
 import { text_pad_space } from "../../../love/public/src/text_pad_space.mjs";
 import { property_change } from "../../../love/public/src/property_change.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
-import { property_set_curried_right_2 } from "../../../love/public/src/property_set_curried_right_2.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { text_size_1 } from "../../../love/public/src/text_size_1.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
