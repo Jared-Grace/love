@@ -14,8 +14,8 @@ import { list_first } from "../../../love/public/src/list_first.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 export async function app_replace_tests_run_e2e_generic(inner) {
   let rule_sets = app_replace_rule_sets();
+  let first = list_first(rule_sets);
   async function lambda(page) {
-    let first = list_first(rule_sets);
     let name2 = property_get(first, "name");
     await playwright_by_attribute_test_click(page, name2);
     let goals_first_rs = property_get(first, "goals");
