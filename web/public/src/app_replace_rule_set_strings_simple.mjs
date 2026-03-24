@@ -56,6 +56,7 @@ export function app_replace_rule_set_strings_simple() {
       return character;
     }
     let mapped4 = list_map(list, lambda5);
+    return mapped4;
   }
   let mapped3 = list_map(unique, lambda4);
   let r = {
