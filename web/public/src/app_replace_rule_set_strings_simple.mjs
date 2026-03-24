@@ -34,9 +34,9 @@ export function app_replace_rule_set_strings_simple() {
     return a;
   }
   let filtered = list_filter(goals, lambda);
-  let copy = json_copy(o);
+  let copy = json_copy(filtered);
   log(app_replace_rule_set_strings_simple.name, {
-    filtered,
+    copy,
   });
   function lambda2(item) {
     property_set(item, "start", root);
