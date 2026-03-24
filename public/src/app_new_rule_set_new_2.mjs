@@ -4,7 +4,7 @@ export function app_new_rule_set_new_2() {
     rules: ["me > pe", "me > me . id", "me > [ e ]"],
     goals: [
       {
-        start: "a",
+        start: "me",
         end: "b",
       },
     ],
