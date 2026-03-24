@@ -65,7 +65,6 @@ di -> "1" {% (d) => {
       right: identifier,
     };
     let w = js_code_object(object);
-    return w;
     let w2 = js_code_wrap_parenthesis(w);
     let code = js_code_arrow_args_body_expression(identifier, w2);
     let r = `${only} -> ${joined} {% ${code}
