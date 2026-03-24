@@ -26,8 +26,6 @@ export function app_replace_rule_set_strings_simple() {
     return a;
   }
   let filtered = list_filter(goals, lambda);
-  let r2 = property_set_curried_right_2("start", root);
-  each(filtered, r2);
   function lambda2(item) {
     property_set(item, "start", root);
     function lambda3(value) {
