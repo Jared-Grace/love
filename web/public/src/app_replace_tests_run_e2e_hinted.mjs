@@ -7,7 +7,6 @@ import { html_data_set_test_attribute } from "../../../love/public/src/html_data
 import { playwright_by_attribute_all } from "../../../love/public/src/playwright_by_attribute_all.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_attribute_data_prefix } from "../../../love/public/src/html_attribute_data_prefix.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { html_data_set_test_suffixes_attribute } from "../../../love/public/src/html_data_set_test_suffixes_attribute.mjs";
 import { app_replace_button_symbol_style_valid_if_attribute } from "../../../love/public/src/app_replace_button_symbol_style_valid_if_attribute.mjs";
 import { app_replace_rule_set_attribute_refresh_click } from "../../../love/public/src/app_replace_rule_set_attribute_refresh_click.mjs";
@@ -25,9 +24,6 @@ export async function app_replace_tests_run_e2e_hinted() {
       );
       let suffix = app_replace_button_symbol_style_valid_if_attribute();
       let combined = html_data_set_test_suffixes_attribute([suffix]);
-      log(app_replace_tests_run_e2e_hinted.name, {
-        combined,
-      });
       let left = html_attribute_data_prefix();
       let name = text_combine(left, combined);
       let values = await playwright_by_attribute_all(page, name, "true");
