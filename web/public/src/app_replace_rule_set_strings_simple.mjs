@@ -15,7 +15,7 @@ export function app_replace_rule_set_strings_simple() {
   const root = "st";
   let delimeter = '"';
   let concated = list_concat(
-    [root + " > ida", root + " > " + delimeter],
+    [root + " > idg", root + " > " + delimeter],
     rules,
   );
   let goals = app_replace_rule_set_identifiers_simple_goals();
