@@ -1,6 +1,6 @@
+import { range_value } from "../../../love/public/src/range_value.mjs";
 import { text_pad_nested_space_quote_double } from "../../../love/public/src/text_pad_nested_space_quote_double.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { range } from "../../../love/public/src/range.mjs";
 import { json_copy } from "../../../love/public/src/json_copy.mjs";
 import { list_sort_number } from "../../../love/public/src/list_sort_number.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
@@ -48,11 +48,7 @@ export function app_replace_rule_set_strings_simple() {
   let unique = list_unique(mapped2);
   list_sort_number(unique);
   function lambda4(item2) {
-    let r2 = range(item2);
-    function lambda5(item3) {
-      return character;
-    }
-    let m = list_map(r2, lambda5);
+    let m = range_value(item2, character);
     let r3 = {
       start: root,
       end: text_pad_nested_space_quote_double(m),
