@@ -35,11 +35,19 @@ export function app_replace_rule_set_expressions_primary() {
       },
       {
         start: "pe",
-        end: "de",
+        end: "true",
+      },
+      {
+        start: "pe",
+        end: "false",
       },
       {
         start: "pe",
         end: "i",
+      },
+      {
+        start: "pe",
+        end: "de",
       },
       {
         start: "pe",
