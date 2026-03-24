@@ -1,3 +1,4 @@
+import { property_change } from "../../../love/public/src/property_change.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { property_set_curried_right_2 } from "../../../love/public/src/property_set_curried_right_2.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -21,8 +22,10 @@ export function app_replace_rule_set_strings_simple() {
   let filtered = list_filter(goals, lambda);
   let r2 = property_set_curried_right_2("start", root);
   each(filtered, r2);
-  function lambda2(g) {
-    property_set(g, "start", root);
+  function lambda2(item) {
+    property_set(item, "start", root);
+    function lambda3(value) {}
+    let value2 = property_change(o, property, lambda3);
   }
   each(filtered, lambda2);
   let r = {
