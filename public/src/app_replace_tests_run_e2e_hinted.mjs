@@ -40,7 +40,7 @@ export async function app_replace_tests_run_e2e_hinted() {
         return true;
       }
     }
-    await each_async(list, lambda);
+    await each_range_async(list, lambda);
     let r2 = {
       refresh_count,
       symbol_id,
