@@ -10,7 +10,7 @@ import { list_concat } from "../../../love/public/src/list_concat.mjs";
 export function app_replace_rule_set_strings_simple() {
   const rules = app_replace_rule_set_strings_simple_rules_base();
   const root = "st";
-  let concated = list_concat([root + " > ida"], rules);
+  let concated = list_concat([root + " > ida", root + " > \'"], rules);
   let goals = app_replace_rule_set_identifiers_simple_goals();
   function lambda(g) {
     let end = app_replace_end_get(g);
