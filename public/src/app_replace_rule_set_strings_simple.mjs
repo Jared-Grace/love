@@ -25,6 +25,8 @@ export function app_replace_rule_set_strings_simple() {
   list_add_multiple(rules, extra);
   let goals = app_replace_rule_set_identifiers_simple_goals();
   let mapped2 = list_map(goals, app_replace_end_get);
+  function lambda4(item2) {}
+  let mapped = list_map(list, lambda4);
   log(app_replace_rule_set_strings_simple.name, {
     mapped2,
   });
