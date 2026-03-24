@@ -47,7 +47,7 @@ export function app_replace_rule_set_strings_simple() {
   let unique = list_unique(mapped2);
   list_sort_number(unique);
   log(app_replace_rule_set_strings_simple.name, {
-    unique,
+    mapped2,
   });
   let r = {
     name: "Strings simple",
