@@ -8,7 +8,7 @@ export function app_replace_rule_set_expressions_1() {
       "li > n",
       "n > de",
       "n > i",
-      "st",
+      "li > st",
     ],
     goals: [
       {
