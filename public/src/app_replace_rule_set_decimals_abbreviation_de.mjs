@@ -3,6 +3,6 @@ export function app_replace_rule_set_decimals_abbreviation_de(i) {
   let a = {
     de: ["", "de", "cimal number"],
   };
-  let ab = object_merge(a, i);
+  let ab = object_merge(i, a);
   return ab;
 }
