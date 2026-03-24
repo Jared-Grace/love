@@ -13,11 +13,12 @@ export function app_replace_rule_set_strings_simple() {
   function lambda(g) {
     let end = app_replace_end_get(g);
     let a = list_all(end, list_size_1);
-    log(app_replace_rule_set_strings_simple.name, {
-      end,
-    });
+    return a;
   }
   let filtered = list_filter(goals, lambda);
+  log(app_replace_rule_set_strings_simple.name, {
+    filtered,
+  });
   let r = {
     name: "Strings simple",
     rules: concated,
