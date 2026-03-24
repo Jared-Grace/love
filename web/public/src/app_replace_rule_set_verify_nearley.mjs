@@ -52,7 +52,7 @@ di -> "1" {% (d) => {
     let w2 = js_code_wrap_parenthesis(w);
     let code = js_code_arrow_args_body_expression(identifier, w2);
     let r = `${only} -> ${joined} {% ${code}
-}) %}`;
+} %}`;
     return r;
   }
   let mapped = list_map(rules, lambda);
