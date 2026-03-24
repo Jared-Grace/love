@@ -22,7 +22,7 @@ export function app_replace_rule_set_expressions_1() {
     pe: ["", "p", "rimary ", "e", "xpression"],
     id: ["", "id", "entifier"],
     li: ["", "li", "teral"],
-    pe: ["", "e", "xpression"],
+    e: ["", "e", "xpression"],
     n: ["", "n", "umber"],
   };
   app_replace_rule_set_integers_abbreviation_i(abbreviations);
