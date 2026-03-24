@@ -39,7 +39,7 @@ export function app_replace_rule_set_strings_simple() {
     property_change(item, "end", lambda3);
   }
   each(filtered, lambda2);
-  let mapped = list_map_property(list, property_name);
+  let mapped = list_map_property(filtered, "end");
   let r = {
     name: "Strings simple",
     rules,
