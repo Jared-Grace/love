@@ -5,7 +5,7 @@ export function app_replace_rule_set_expressions_member_and_access() {
   const rules = [];
   list_add_multiple(rules, ["me > pe", "me > me . id", "me > [ e ]"]);
   app_replace_rule_set_expressions_primary_rules(rules);
-  list_add(list, item);
+  list_add(rules, "e > me");
   let r = {
     name: "Expressions member and access",
     rules: rules,
