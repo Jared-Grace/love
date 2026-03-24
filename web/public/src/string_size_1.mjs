@@ -1,5 +1,4 @@
-import { list_size } from "../../../love/public/src/list_size.mjs";
 export function string_size_1(list) {
-  const s1 = list_size(list) === 1;
+  const s1 = string_size(list) === 1;
   return s1;
 }
