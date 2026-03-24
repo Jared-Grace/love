@@ -21,7 +21,7 @@ export function app_replace_rule_set_identifiers_simple() {
     idg: ["", "id", "entifier ", "g", "rower"],
   };
   object_merge(abbreviations, {
-    di: ["", "di", "git sample: a sampling of digits"],
+    di: ["", "di", "git sample: a few choices of digits"],
   });
   let r = {
     name: "Identifiers simple",
