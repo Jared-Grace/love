@@ -1,4 +1,8 @@
 import { log } from "../../../love/public/src/log.mjs";
+import { list_sort_number } from "../../../love/public/src/list_sort_number.mjs";
+import { list_unique } from "../../../love/public/src/list_unique.mjs";
+import { list_size } from "../../../love/public/src/list_size.mjs";
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { text_pad } from "../../../love/public/src/text_pad.mjs";
 import { text_pad_space } from "../../../love/public/src/text_pad_space.mjs";
@@ -38,6 +42,10 @@ export function app_replace_rule_set_strings_simple() {
     property_change(item, "end", lambda3);
   }
   each(filtered, lambda2);
+  let mapped = list_map(filtered, app_replace_end_get);
+  let mapped2 = list_map(mapped, list_size);
+  let unique = list_unique(mapped);
+  list_sort_number(unique);
   log(app_replace_rule_set_strings_simple.name, {
     filtered,
   });
