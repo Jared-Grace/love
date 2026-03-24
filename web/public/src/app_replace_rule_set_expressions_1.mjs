@@ -32,7 +32,7 @@ export function app_replace_rule_set_expressions_1() {
   let items = app_replace_rule_set_boolean_literal_rules();
   list_add_multiple(rules, items);
   let r = {
-    name: "Expressions Primary",
+    name: "Expressions primary",
     abbreviations,
     rules: rules,
     goals: [
