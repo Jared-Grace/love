@@ -38,23 +38,6 @@ di -> "1" {% (d) => {
   return { left: "di", right: d };
 } %}
 `;
-  let v = nearley.Grammar.fromCompiled(grammarParser);
-  const parserGrammar = new nearley.Parser(v);
-  parserGrammar.feed(grammarText);
-  const grammarAst = parserGrammar.results[0];
-  const compiled = compile(grammarAst, {});
-  const jsModule = generate(compiled, "grammar", {
-    output: "commonjs",
-  });
-  const module = {
-    exports: {},
-  };
-  eval(jsModule);
-  const grammar = module.exports;
-  let v2 = nearley.Grammar.fromCompiled(grammar);
-  const parser = new nearley.Parser(v2);
-  parser.feed("001");
-  log_json(parser.results);
   function lambda(rule) {
     let left = property_get(rule, "left");
     let only = list_single(left);
@@ -74,5 +57,21 @@ di -> "1" {% (d) => {
   }
   let mapped = list_map(rules, lambda);
   let joined2 = list_join_newline_2(mapped);
-  return joined2;
+  let v = nearley.Grammar.fromCompiled(joined2);
+  const parserGrammar = new nearley.Parser(v);
+  parserGrammar.feed(grammarText);
+  const grammarAst = parserGrammar.results[0];
+  const compiled = compile(grammarAst, {});
+  const jsModule = generate(compiled, "grammar", {
+    output: "commonjs",
+  });
+  const module = {
+    exports: {},
+  };
+  eval(jsModule);
+  const grammar = module.exports;
+  let v2 = nearley.Grammar.fromCompiled(grammar);
+  const parser = new nearley.Parser(v2);
+  parser.feed("001");
+  log_json(parser.results);
 }
