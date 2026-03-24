@@ -1,3 +1,4 @@
+import { app_replace_rule_set_strings_simple_st } from "../../../love/public/src/app_replace_rule_set_strings_simple_st.mjs";
 import { app_replace_rule_set_integers_abbreviation_i } from "../../../love/public/src/app_replace_rule_set_integers_abbreviation_i.mjs";
 import { app_replace_rule_set_decimals_abbreviation_de } from "../../../love/public/src/app_replace_rule_set_decimals_abbreviation_de.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
@@ -24,6 +25,7 @@ export function app_replace_rule_set_expressions_1() {
     de: ["", "n", "umber"],
   };
   app_replace_rule_set_integers_abbreviation_i(abbreviations);
+  app_replace_rule_set_strings_simple_st(abbreviations);
   let to2 = object_merge(abbreviations, b);
   let ab = app_replace_rule_set_decimals_abbreviation_de(abbreviations);
   let items = app_replace_rule_set_boolean_literal_rules();
