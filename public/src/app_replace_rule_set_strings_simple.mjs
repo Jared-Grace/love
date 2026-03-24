@@ -57,7 +57,7 @@ export function app_replace_rule_set_strings_simple() {
       return character;
     }
     let end = list_map(r2, lambda5);
-    return end;
+    return {end};
   }
   let mapped3 = list_map(unique, lambda4);
   log(app_replace_rule_set_strings_simple.name, {
