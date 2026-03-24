@@ -2,27 +2,7 @@ import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mj
 import { app_replace_rule_set_strings_simple_rules_base } from "../../../love/public/src/app_replace_rule_set_strings_simple_rules_base.mjs";
 export function app_replace_rule_set_identifiers_simple_rules() {
   const rules = app_replace_rule_set_strings_simple_rules_base();
-  let r2 = [
-    "id > idf",
-    "id > idf idg",
-    "idg > ida",
-    "idg > ida idg",
-    "ida > idf",
-    "ida > di",
-    "idf > A",
-    "idf > B",
-    "idf > h",
-    "idf > J",
-    "idf > l",
-    "idf > t",
-    "idf > u",
-    "idf > v",
-    "idf > $",
-    "idf > _",
-    "di > 0",
-    "di > 1",
-    "di > 3",
-  ];
-  list_add_multiple(list, items);
+  let r2 = ["id > idf", "id > idf idg"];
+  list_add_multiple(r2, rules);
   return r2;
 }
