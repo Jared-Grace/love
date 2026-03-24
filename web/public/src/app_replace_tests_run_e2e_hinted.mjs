@@ -37,9 +37,6 @@ export async function app_replace_tests_run_e2e_hinted() {
       let ag = html_attribute_get_unwrapped_curried_right(combined2);
       let waited = await list_map_unordered_async(values, ag);
       let filtered2 = list_filter_null_not_is(waited);
-      log(app_replace_tests_run_e2e_hinted.name, {
-        filtered2,
-      });
       let s = list_size_1(filtered2);
       if (s) {
         symbol_id = list_single(filtered2);
