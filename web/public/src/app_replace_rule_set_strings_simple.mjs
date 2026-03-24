@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { text_size_1 } from "../../../love/public/src/text_size_1.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { app_replace_end_get } from "../../../love/public/src/app_replace_end_get.mjs";
@@ -16,6 +17,8 @@ export function app_replace_rule_set_strings_simple() {
     return a;
   }
   let filtered = list_filter(goals, lambda);
+  function lambda2(item) {}
+  each(list, lambda2);
   log(app_replace_rule_set_strings_simple.name, {
     filtered,
   });
