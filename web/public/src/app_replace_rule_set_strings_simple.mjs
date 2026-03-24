@@ -44,7 +44,7 @@ export function app_replace_rule_set_strings_simple() {
   }
   each(filtered, lambda2);
   let mapped = list_map_property(filtered, "end");
-  let mapped2 = list_map(list, text_size);
+  let mapped2 = list_map(mapped, text_size);
   let max = list_max(mapped2);
   log(app_replace_rule_set_strings_simple.name, {
     max,
