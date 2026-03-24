@@ -21,15 +21,11 @@ export function app_replace_rule_set_expressions_member_and_access() {
         end: "( e ) . id",
       },
       {
-        start: "me",
+        start: "( e ) . id",
         end: "( id . id ) . id",
       },
       {
-        start: "me",
-        end: "me . id . id",
-      },
-      {
-        start: "me",
+        start: "me . id",
         end: "id . id . id",
       },
       {
@@ -38,11 +34,15 @@ export function app_replace_rule_set_expressions_member_and_access() {
       },
       {
         start: "me",
-        end: "id [ i ]",
+        end: "id [ st ]",
       },
       {
         start: "me",
-        end: "id [ st ]",
+        end: "me [ i ]",
+      },
+      {
+        start: "me [ i ]",
+        end: "me [ i ]",
       },
       {
         start: "me",
