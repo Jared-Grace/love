@@ -1,6 +1,6 @@
 export function app_new_rule_set_new_2() {
   let r = {
-    name: "TODO",
+    name: "Strings simple",
     rules: ["a > b"],
     goals: [
       {
