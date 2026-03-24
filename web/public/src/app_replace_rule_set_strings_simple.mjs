@@ -20,7 +20,7 @@ export function app_replace_rule_set_strings_simple() {
   let concated = list_concat(["st > ida"], rules);
   let r = {
     name: "Strings simple",
-    rules: rules,
+    rules: concated,
     goals: [
       {
         start: "a",
