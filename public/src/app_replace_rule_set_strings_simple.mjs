@@ -59,7 +59,12 @@ export function app_replace_rule_set_strings_simple() {
     };
     return r3;
   }
-  function lambda3(item2v) {}
+  function lambda3(item2v) {
+    let m = range_value(item2v, character);
+    let joined = list_join_space(m);
+    let p = text_pad_nested_space_quote_double(joined);
+    return p;
+  }
   let dictionary = list_to_dictionary_value(list, lambda3);
   let goals = list_map(unique, lambda4);
   list_add_multiple(goals, filtered);
