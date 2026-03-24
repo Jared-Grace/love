@@ -28,7 +28,8 @@ export function app_replace_rule_set_strings_simple() {
   log(app_replace_rule_set_strings_simple.name, {
     mapped2,
   });
-  function lambda(end) {
+  function lambda(g) {
+    let end = app_replace_end_get(g);
     let a = list_all(end, text_size_1);
     return a;
   }
