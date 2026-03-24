@@ -1,66 +1,8 @@
-import { app_replace } from "../../../love/public/src/app_replace.mjs";
-import { playwright_test_app_dev } from "../../../love/public/src/playwright_test_app_dev.mjs";
-import { app_replace_rule_set_success_attribute_next } from "../../../love/public/src/app_replace_rule_set_success_attribute_next.mjs";
-import { each_async } from "../../../love/public/src/each_async.mjs";
-import { app_replace_rule_set_attribute_refresh_click } from "../../../love/public/src/app_replace_rule_set_attribute_refresh_click.mjs";
-import { app_replace_rule_set_verify_goal_path } from "../../../love/public/src/app_replace_rule_set_verify_goal_path.mjs";
-import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
-import { app_replace_rule_set_attribute_refresh_count_assert } from "../../../love/public/src/app_replace_rule_set_attribute_refresh_count_assert.mjs";
-import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
-import { json_to } from "../../../love/public/src/json_to.mjs";
-import { playwright_by_attribute_test_click } from "../../../love/public/src/playwright_by_attribute_test_click.mjs";
-import { property_get } from "../../../love/public/src/property_get.mjs";
+import { app_replace_tests_run_e2e_generic } from "../../../love/public/src/app_replace_tests_run_e2e_generic.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 export async function app_replace_tests_run_e2e_all(inner) {
   let rule_sets = app_replace_rule_sets();
   let first = list_first(rule_sets);
-  async function lambda(page) {
-    let name2 = property_get(first, "name");
-    await playwright_by_attribute_test_click(page, name2);
-    let goals_first_rs = property_get(first, "goals");
-    let g = list_first(goals_first_rs);
-    let json = json_to(g);
-    await playwright_by_attribute_test_click(page, json);
-    async function lambda_each(rule_set) {
-      let goals = property_get(rule_set, "goals");
-      let rules_parsed = app_replace_rule_set_rules_get(rule_set);
-      async function lambda2(goal) {
-        let refresh_count = 0;
-        refresh_count =
-          await app_replace_rule_set_attribute_refresh_count_assert(
-            refresh_count,
-            page,
-          );
-        let se = app_replace_start_end_get(goal);
-        let start = property_get(se, "start");
-        let end = property_get(se, "end");
-        let path = app_replace_rule_set_verify_goal_path(
-          rules_parsed,
-          start,
-          end,
-        );
-        async function lambda3(p) {
-          let symbol_id = null;
-          ({ refresh_count, symbol_id } = await inner(
-            p,
-            refresh_count,
-            page,
-            symbol_id,
-          ));
-          refresh_count = await app_replace_rule_set_attribute_refresh_click(
-            page,
-            symbol_id,
-            refresh_count,
-          );
-        }
-        await each_async(path, lambda3);
-        let name = app_replace_rule_set_success_attribute_next();
-        await playwright_by_attribute_test_click(page, name);
-      }
-      await each_async(goals, lambda2);
-    }
-    await each_async(rule_sets, lambda_each);
-  }
-  await playwright_test_app_dev(app_replace, lambda);
+  await app_replace_tests_run_e2e_generic(first, inner, rule_sets);
 }
