@@ -10,6 +10,9 @@ export function app_replace_rule_set_expressions_1() {
     "n > i",
     "li > st",
   ];
+  let a = {
+    bo: ["", "bo", "oolean literal"],
+  };
   let items = app_replace_rule_set_boolean_literal_rules();
   list_add_multiple(rules, items);
   let r = {
