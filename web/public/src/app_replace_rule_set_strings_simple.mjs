@@ -1,5 +1,4 @@
 import { json_copy } from "../../../love/public/src/json_copy.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_sort_number } from "../../../love/public/src/list_sort_number.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
@@ -49,9 +48,8 @@ export function app_replace_rule_set_strings_simple() {
   let mapped2 = list_map(mapped, list_size);
   let unique = list_unique(mapped2);
   list_sort_number(unique);
-  log(app_replace_rule_set_strings_simple.name, {
-    unique,
-  });
+  function lambda4(item2) {}
+  let mapped3 = list_map(list, lambda4);
   let r = {
     name: "Strings simple",
     rules,
