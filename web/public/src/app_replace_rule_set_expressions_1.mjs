@@ -15,6 +15,7 @@ export function app_replace_rule_set_expressions_1() {
     "n > i",
     "li > st",
     "li > null",
+    "e > pe",
   ];
   let b = app_replace_rule_set_boolean_literal_abbreviations();
   let abbreviations = {
