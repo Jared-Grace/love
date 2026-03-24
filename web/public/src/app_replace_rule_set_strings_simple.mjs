@@ -58,6 +58,7 @@ export function app_replace_rule_set_strings_simple() {
     }
     let end = list_map(r2, lambda5);
     let r3 = {
+      start: root,
       end,
     };
     return r3;
