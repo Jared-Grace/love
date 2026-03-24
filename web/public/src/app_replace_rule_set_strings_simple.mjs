@@ -1,3 +1,4 @@
+import { text_pad_space } from "../../../love/public/src/text_pad_space.mjs";
 import { property_change } from "../../../love/public/src/property_change.mjs";
 import { property_set } from "../../../love/public/src/property_set.mjs";
 import { property_set_curried_right_2 } from "../../../love/public/src/property_set_curried_right_2.mjs";
@@ -24,8 +25,10 @@ export function app_replace_rule_set_strings_simple() {
   each(filtered, r2);
   function lambda2(item) {
     property_set(item, "start", root);
-    function lambda3(value) {}
-    let value2 = property_change(o, property, lambda3);
+    function lambda3(value) {
+      let padded = text_pad_space(s);
+    }
+    let value2 = property_change(o, "end", lambda3);
   }
   each(filtered, lambda2);
   let r = {
