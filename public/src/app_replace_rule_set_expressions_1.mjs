@@ -70,7 +70,7 @@ export function app_replace_rule_set_expressions_1() {
       },
       {
         start: "pe",
-        end: "( ( e )) )",
+        end: "( ( e ) )",
       },
     ],
   };
