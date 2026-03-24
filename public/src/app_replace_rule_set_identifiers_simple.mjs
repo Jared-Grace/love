@@ -3,7 +3,7 @@ import { app_replace_rule_set_identifiers_simple_rules } from "../../../love/pub
 export function app_replace_rule_set_identifiers_simple() {
   let abbreviations = {
     id: ["", "id", "entifier"],
-    id: [
+    idf: [
       "",
       "id",
       "entifier ",
