@@ -11,4 +11,6 @@ export function app_replace_rule_set_expressions_primary_rules(rules) {
     "li > null",
   ];
   list_add_multiple(rules, added);
+  let items = app_replace_rule_set_boolean_literal_rules();
+  list_add_multiple(rules, items);
 }
