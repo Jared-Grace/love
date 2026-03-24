@@ -1,7 +1,5 @@
 import { log } from "../../../love/public/src/log.mjs";
-import { list_max } from "../../../love/public/src/list_max.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { text_pad } from "../../../love/public/src/text_pad.mjs";
 import { text_pad_space } from "../../../love/public/src/text_pad_space.mjs";
@@ -27,6 +25,9 @@ export function app_replace_rule_set_strings_simple() {
   list_add_multiple(rules, extra);
   let goals = app_replace_rule_set_identifiers_simple_goals();
   let mapped2 = list_map(goals, app_replace_end_get);
+  log(app_replace_rule_set_strings_simple.name, {
+    mapped2,
+  });
   function lambda(end) {
     let a = list_all(end, text_size_1);
     return a;
@@ -42,11 +43,6 @@ export function app_replace_rule_set_strings_simple() {
     property_change(item, "end", lambda3);
   }
   each(filtered, lambda2);
-  let mapped = list_map_property(filtered, "end");
-  let max = list_max(mapped2);
-  log(app_replace_rule_set_strings_simple.name, {
-    max,
-  });
   let r = {
     name: "Strings simple",
     rules,
