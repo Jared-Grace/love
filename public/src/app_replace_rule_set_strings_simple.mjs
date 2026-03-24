@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_replace_rule_set_identifiers_simple_abbreviations } from "../../../love/public/src/app_replace_rule_set_identifiers_simple_abbreviations.mjs";
 import { text_pad_nested_space_quote_double } from "../../../love/public/src/text_pad_nested_space_quote_double.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
@@ -7,6 +8,7 @@ export function app_replace_rule_set_strings_simple() {
     st: ["", "st", "ring"],
     stg: ["", "st", "ring ", "g", "rower"],
   };
+  let to2 = object_merge(to, from);
   app_replace_rule_set_identifiers_simple_abbreviations(abbreviations);
   const extra = app_replace_rule_set_strings_simple_rules_base();
   let character = "ida";
