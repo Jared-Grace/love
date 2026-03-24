@@ -30,14 +30,14 @@ export function app_replace_rule_set_strings_simple() {
     "stg > " + character + " stg",
   ];
   list_add_multiple(rules, extra);
-  let goals = app_replace_rule_set_identifiers_simple_goals();
+  let goals_identifiers = app_replace_rule_set_identifiers_simple_goals();
   function lambda(g) {
     let end = app_replace_end_get(g);
     ("is the end made up of only single character items?");
     let a = list_all(end, text_size_1);
     return a;
   }
-  let filtered = list_filter(goals, lambda);
+  let filtered = list_filter(goals_identifiers, lambda);
   let copy = json_copy(filtered);
   function lambda2(item) {
     property_set(item, "start", root);
