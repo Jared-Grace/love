@@ -10,13 +10,14 @@ export function app_replace_rule_set_expressions_1() {
     "n > i",
     "li > st",
   ];
-  let a = {
+  let abbreviations = {
     bo: ["", "bo", "oolean literal"],
   };
   let items = app_replace_rule_set_boolean_literal_rules();
   list_add_multiple(rules, items);
   let r = {
     name: "Expressions 1",
+    abbreviations,
     rules: rules,
     goals: [
       {
