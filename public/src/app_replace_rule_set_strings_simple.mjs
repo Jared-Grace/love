@@ -57,10 +57,7 @@ export function app_replace_rule_set_strings_simple() {
   }
   let dictionary = list_to_dictionary_value(list, lambda3);
   function lambda4(item2) {
-    let m = range_value(item2, character);
-    let joined = list_join_space(m);
-    let value = property_get(dictionary, property_name);
-    let p = text_pad_nested_space_quote_double(joined);
+    let value = property_get(dictionary, item2);
     let r3 = {
       start: root,
       end: value,
