@@ -1,3 +1,4 @@
+import { log_json } from "../../../love/public/src/log_json.mjs";
 import { range_value } from "../../../love/public/src/range_value.mjs";
 import { text_pad_nested_space_quote_double } from "../../../love/public/src/text_pad_nested_space_quote_double.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -49,6 +50,7 @@ export function app_replace_rule_set_strings_simple() {
   list_sort_number(unique);
   function lambda4(item2) {
     let m = range_value(item2, character);
+    log_json(right);
     let r3 = {
       start: root,
       end: text_pad_nested_space_quote_double(m),
