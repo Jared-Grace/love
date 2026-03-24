@@ -20,7 +20,7 @@ export function app_replace_rule_set_strings_simple() {
   let filtered = list_filter(goals, lambda);
   function lambda2(g) {
     function lambda3(value) {}
-    let value2 = property_change(o, property, lambda3);
+    let value2 = property_change(o, "start", lambda3);
   }
   each(filtered, lambda2);
   log(app_replace_rule_set_strings_simple.name, {
