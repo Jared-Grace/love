@@ -10,6 +10,7 @@ export function app_replace_rule_set_expressions_primary_rules(rules) {
     "n > i",
     "li > st",
     "li > null",
+    "li > bo",
   ];
   list_add_multiple(rules, added);
   let items = app_replace_rule_set_boolean_literal_rules();
