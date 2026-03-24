@@ -17,7 +17,7 @@ export function app_replace_rule_set_strings_simple() {
     "di > 1",
     "di > 3",
   ];
-  let concated = list_concat(rules, ["st > ida"]);
+  let concated = list_concat(["st > ida"], rules);
   let r = {
     name: "Strings simple",
     rules: rules,
