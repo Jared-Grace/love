@@ -4,6 +4,8 @@ export function app_replace_rule_set_identifiers_simple() {
   let abbreviations = {
     id: ["", "id", "entifier"],
     idg: ["", "id", "entifier ", "g", "rower"],
+  };
+  let abbreviations2 = {
     idf: [
       "",
       "id",
