@@ -57,7 +57,7 @@ export function app_replace_rule_set_strings_simple() {
         end: '" A B B A "',
       },
       {
-        start: '" idf idf idf idf "',
+        start: '" ida ida ida ida "',
         end: '" idf di idf idf "',
       },
       {
