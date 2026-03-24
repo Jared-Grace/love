@@ -8,8 +8,9 @@ export function app_replace_rule_set_integers_abbreviations() {
     i: ["", "i", "nteger (non-negative whole number)"],
     p: ["", "p", "ositive digit (numbers 1-9)"],
   });
-  return {
+  let r = {
     i: ["", "i", "nteger (non-negative whole number)"],
     p: ["", "p", "ositive digit (numbers 1-9)"],
   };
+  return r;
 }
