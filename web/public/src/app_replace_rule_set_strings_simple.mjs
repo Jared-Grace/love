@@ -1,3 +1,4 @@
+import { list_size_1 } from "../../../love/public/src/list_size_1.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { app_replace_end_get } from "../../../love/public/src/app_replace_end_get.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -12,7 +13,8 @@ export function app_replace_rule_set_strings_simple() {
   function lambda(g) {
     let end = app_replace_end_get(g);
     function lambda2(item) {}
-    let a = list_all(list, lambda2);
+    let s1 = list_size_1(list);
+    let a = list_all(end, lambda2);
     log(app_replace_rule_set_strings_simple.name, {
       end,
     });
