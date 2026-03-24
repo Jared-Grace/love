@@ -22,8 +22,6 @@ export function app_replace_rule_set_strings_simple() {
   ];
   list_add_multiple(rules, extra);
   let goals = app_replace_rule_set_identifiers_simple_goals();
-  function lambda4(item2) {}
-  each(list, lambda4);
   function lambda(g) {
     let end = app_replace_end_get(g);
     let a = list_all(end, text_size_1);
