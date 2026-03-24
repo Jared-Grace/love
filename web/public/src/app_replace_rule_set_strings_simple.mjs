@@ -7,7 +7,7 @@ export function app_replace_rule_set_strings_simple() {
   let concated = list_concat(["st > ida"], rules);
   let goals = app_replace_rule_set_identifiers_simple_goals();
   function lambda(item) {}
-  let filtered = list_filter(list, lambda);
+  let filtered = list_filter(goals, lambda);
   let r = {
     name: "Strings simple",
     rules: concated,
