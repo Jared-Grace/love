@@ -44,22 +44,6 @@ export function app_replace_rule_set_expressions_member_and_access() {
         start: "me [ i ]",
         end: "me [ i ] [ i ]",
       },
-      {
-        start: "me",
-        end: "( e ) . id",
-      },
-      {
-        start: "me",
-        end: "( id . id ) . id",
-      },
-      {
-        start: "me",
-        end: "me . id . id",
-      },
-      {
-        start: "me",
-        end: "id . id . id",
-      },
     ],
   };
   return r;
