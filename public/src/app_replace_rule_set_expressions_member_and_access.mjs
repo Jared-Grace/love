@@ -1,5 +1,5 @@
 import { app_replace_rule_set_expressions_primary_rules } from "../../../love/public/src/app_replace_rule_set_expressions_primary_rules.mjs";
-export function app_new_rule_set_new_2() {
+export function app_replace_rule_set_expressions_member_and_access() {
   const rules = [];
   ["me > pe", "me > me . id", "me > [ e ]"];
   app_replace_rule_set_expressions_primary_rules(rules);
