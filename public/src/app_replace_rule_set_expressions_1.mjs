@@ -13,6 +13,7 @@ export function app_replace_rule_set_expressions_1() {
   let abbreviations = {
     bo: ["", "bo", "oolean literal"],
     pe: ["", "p", "rimary ", "e", "xpression"],
+    id: ["", "id", "entifier"],
   };
   let items = app_replace_rule_set_boolean_literal_rules();
   list_add_multiple(rules, items);
