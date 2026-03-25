@@ -17,8 +17,8 @@ export function app_new_rule_set_new_2() {
     rules: ["mue > ue", "mue > mue mo ue", "mo > *", "mo > /"],
     goals: [
       {
-        start: "a",
-        end: "b",
+        start: "mue",
+        end: "li mo li",
       },
     ],
   };
