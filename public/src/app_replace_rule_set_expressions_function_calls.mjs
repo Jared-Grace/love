@@ -1,4 +1,9 @@
+import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
+import { app_replace_rule_set_expressions_member_and_access_rules } from "../../../love/public/src/app_replace_rule_set_expressions_member_and_access_rules.mjs";
 export function app_replace_rule_set_expressions_function_calls() {
+  const rules = [];
+  app_replace_rule_set_expressions_member_and_access_rules(rules);
+  list_add_multiple(list, items);
   let r = {
     name: "Expressions function calls",
     rules: [
