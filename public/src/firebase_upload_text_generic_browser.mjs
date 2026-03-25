@@ -2,6 +2,7 @@ import { html_loading } from "../../../love/public/src/html_loading.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { firebase_app_initialize } from "../../../love/public/src/firebase_app_initialize.mjs";
 import { getStorage, ref, uploadString } from "firebase/storage";
+import { log_keep } from "./log_keep.mjs";
 export async function firebase_upload_text_generic_browser(
   destination,
   content,
@@ -16,7 +17,7 @@ export async function firebase_upload_text_generic_browser(
     await uploadString(jsonRef, content, "raw", {
       contentType: "application/json",
     });
-    console.log("✅ JSON uploaded successfully");
+    log_keep(firebase_upload_text_generic_browser.name, "✅ JSON uploaded successfully");
   }
   let r = await html_loading(lambda2);
   return r;
