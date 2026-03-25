@@ -35,12 +35,12 @@ export function app_replace_goals(context) {
       index,
       lambda,
     );
-    let r4 = app_replace_start_end_get(goal);
-    let start = property_get(goal, "start");
-    let end = property_get(goal, "end");
-    html_data_set_object(title, r4);
+    html_data_set_object(title, goal);
     let v = json_to(goal);
     html_data_set_test(title, v);
+    let r4 = app_replace_start_end_get(goal);
+    let start = property_get(r4, "start");
+    let end = property_get(r4, "end");
     let r2 = app_replace_button_rule_content(title, start, end);
     app_replace_lefts_rights_style(r2, completed);
     function lambda() {
