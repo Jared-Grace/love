@@ -3,7 +3,7 @@ import { app_replace_rule_set_expressions_function_calls_rules } from "../../../
 export function app_replace_rule_set_expressions_unary() {
   const rules = [];
   app_replace_rule_set_expressions_function_calls_rules(rules);
-  list_add(rules, "e > ce");
+  list_add(rules, "e > ue");
   let r = {
     name: "Expressions unary",
     rules: [
