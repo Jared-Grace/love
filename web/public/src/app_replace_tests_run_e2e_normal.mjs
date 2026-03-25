@@ -36,7 +36,9 @@ export async function app_replace_tests_run_e2e_normal() {
           rule_set,
           app_replace_tests_run_e2e_normal_fn,
         );
-        log(app_replace_tests_run_e2e_normal.name, {});
+        log(app_replace_tests_run_e2e_normal.name, {
+          a: "here",
+        });
       }
       await list_empty_not_is_while_async(remaining, lambda4);
     }
