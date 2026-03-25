@@ -22,6 +22,10 @@ export function app_replace_rule_set_expressions_multiplicative() {
         start: "mue",
         end: "mae mo mae",
       },
+      {
+        start: "mae mo mae",
+        end: "n mo n",
+      },
     ],
   };
   return r;
