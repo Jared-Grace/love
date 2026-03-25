@@ -1,3 +1,4 @@
+import { app_new_rule_set_new_2 } from "../../../love/public/src/app_new_rule_set_new_2.mjs";
 import { app_replace_rule_set_expressions_member_and_access } from "../../../love/public/src/app_replace_rule_set_expressions_member_and_access.mjs";
 import { app_replace_rule_set_expressions_primary } from "../../../love/public/src/app_replace_rule_set_expressions_primary.mjs";
 import { app_replace_rule_set_strings_simple } from "../../../love/public/src/app_replace_rule_set_strings_simple.mjs";
