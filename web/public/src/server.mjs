@@ -1,3 +1,4 @@
+import { global_get } from "../../../love/public/src/global_get.mjs";
 import { server_data_endpoints } from "../../../love/public/src/server_data_endpoints.mjs";
 import { promise_resolved } from "../../../love/public/src/promise_resolved.mjs";
 import { server_url_api_ordered } from "../../../love/public/src/server_url_api_ordered.mjs";
@@ -47,8 +48,9 @@ export function server() {
   server_data_endpoints(app);
   app.use(v);
   function lambda() {
+    let global = global_get();
+    return;
     log_keep(server.name, "Static server running at: " + server_url());
   }
   app.listen(port, lambda);
-  log_keep(server.name, "Static server running at: " + server_url());
 }
