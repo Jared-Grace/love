@@ -13,7 +13,7 @@ export async function app_replace_tests_run_e2e_normal() {
     app_replace_tests_run_e2e_normal_fn,
   );
   return;
-  let chunks = list_chunk(list, chunk_size);
+  let chunks = list_chunk(rule_sets, 2);
   async function lambda(rule_set) {
     await app_replace_tests_run_e2e_generic(
       [rule_set],
