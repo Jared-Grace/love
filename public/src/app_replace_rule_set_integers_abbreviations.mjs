@@ -7,7 +7,7 @@ export function app_replace_rule_set_integers_abbreviations() {
   app_replace_rule_set_integers_abbreviations_di(i);
   app_replace_rule_set_integers_abbreviation_i(i);
   object_merge(i, {
-    p: ["", "p", "ositive digit (numbers 1-9)"],
+    p: ["", "p", "ositive ", "i", "nteger digit (numbers 1-9)"],
   });
   return i;
 }
