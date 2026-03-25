@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_pop_first } from "../../../love/public/src/list_pop_first.mjs";
 import { list_empty_not_is_while_async } from "../../../love/public/src/list_empty_not_is_while_async.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
@@ -35,6 +36,7 @@ export async function app_replace_tests_run_e2e_normal() {
           rule_set,
           app_replace_tests_run_e2e_normal_fn,
         );
+        log(app_replace_tests_run_e2e_normal.name, {});
       }
       await list_empty_not_is_while_async(remaining, lambda4);
     }
