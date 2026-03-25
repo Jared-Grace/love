@@ -6,7 +6,7 @@ import { each_range_unordered_async } from "../../../love/public/src/each_range_
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
 import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
-import { app_replace_tests_run_e2e_generic } from "../../../love/public/src/app_replace_tests_run_e2e_generic.mjs";
+import { app_replace_tests_run_e2e_browser } from "../../../love/public/src/app_replace_tests_run_e2e_browser.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { app_replace_tests_run_e2e_normal_fn } from "../../../love/public/src/app_replace_tests_run_e2e_normal_fn.mjs";
 export async function app_replace_tests_run_e2e_normal() {
@@ -27,7 +27,7 @@ export async function app_replace_tests_run_e2e_normal() {
     async function each_rs(m) {
       let rule_set = property_get(m, "rule_set");
       let goal = property_get(m, "goal");
-      await app_replace_tests_run_e2e_generic(
+      await app_replace_tests_run_e2e_browser(
         rule_set,
         goal,
         app_replace_tests_run_e2e_normal_fn,
