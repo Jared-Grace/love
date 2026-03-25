@@ -26,11 +26,11 @@ export function app_replace_rule_set_expressions_primary() {
       },
       {
         start: "pe",
-        end: "i",
+        end: "1",
       },
       {
         start: "pe",
-        end: "de",
+        end: "3 . 1 4",
       },
       {
         start: "pe",
