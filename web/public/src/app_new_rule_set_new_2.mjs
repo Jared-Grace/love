@@ -48,7 +48,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "nu ao ( ae ao ue )",
-        end: "nu ao ( pe ao ue )",
+        end: "nu ao ( mae ao ue )",
       },
       {
         start: "nu ao ( mae ao ue )",
