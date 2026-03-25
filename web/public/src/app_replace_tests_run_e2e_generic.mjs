@@ -17,11 +17,11 @@ import { json_to } from "../../../love/public/src/json_to.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { playwright_by_attribute_test_click } from "../../../love/public/src/playwright_by_attribute_test_click.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export async function app_replace_tests_run_e2e_generic(first, inner) {
-  let rs_first_goals = property_get(first, "goals");
+export async function app_replace_tests_run_e2e_generic(rs, inner) {
+  let rs_first_goals = property_get(rs, "goals");
   let rs_first_goal_first = list_first(rs_first_goals);
   let json = json_to(rs_first_goal_first);
-  let first_name = property_get(first, "name");
+  let first_name = property_get(rs, "name");
   let fns = app_replace_rule_sets_fns();
   let last = list_last(fns);
   let last_rs = last();
