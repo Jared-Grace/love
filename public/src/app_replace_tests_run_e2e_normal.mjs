@@ -30,6 +30,9 @@ export async function app_replace_tests_run_e2e_normal() {
         let next = list_pop_first(remaining);
         let rule_set = property_get(next, "rule_set");
         let goal = property_get(next, "goal");
+        log(app_replace_tests_run_e2e_normal.name, {
+          a: "here1",
+        });
         await app_replace_tests_run_e2e_goal(
           page,
           goal,
