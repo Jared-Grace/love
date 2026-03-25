@@ -5,7 +5,7 @@ export async function playwright_by_attribute(page, name, value) {
     name,
     value,
   });
-  const elements = await page.locator(`[${name}]`).elementHandles();
+  const elements = await page.waitForSelector(`[${name}]`).elementHandles();
   const filtered = [];
   for (const el of elements) {
     const a = await el.getAttribute(name);
