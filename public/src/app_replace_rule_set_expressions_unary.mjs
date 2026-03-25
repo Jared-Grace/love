@@ -50,7 +50,7 @@ export function app_replace_rule_set_expressions_unary() {
         end: "- ( e )",
       },
       {
-        start: "ue",
+        start: "- ( e )",
         end: "- ( - 1 )",
       },
     ],
