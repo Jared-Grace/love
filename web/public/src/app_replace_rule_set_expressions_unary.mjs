@@ -14,7 +14,7 @@ export function app_replace_rule_set_expressions_unary() {
     "uo > +",
     "uo > typeof",
   ]);
-  list_add(rules, "e > ue");
+  list_add(rules, "ex > ue");
   let abbreviations = {};
   app_replace_rule_set_expressions_function_calls_abbreviations(abbreviations);
   object_merge(abbreviations, {
