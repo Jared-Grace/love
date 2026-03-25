@@ -9,6 +9,7 @@ import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule
 import { app_replace_tests_run_e2e_normal_fn } from "../../../love/public/src/app_replace_tests_run_e2e_normal_fn.mjs";
 export async function app_replace_tests_run_e2e_normal() {
   let rule_sets = app_replace_rule_sets();
+  let mapped = list_map_property(list, property_name2);
   const property_name = "goals";
   let unsquashed = list_map_property(rule_sets, property_name);
   let goals = list_squash(unsquashed);
