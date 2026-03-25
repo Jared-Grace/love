@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { json_equal } from "../../../love/public/src/json_equal.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
@@ -32,6 +33,7 @@ export async function app_replace_tests_run_e2e_generic(
     await playwright_by_attribute_test_click(page, json);
     async function lambda_each(rule_set) {
       let goals = property_get(rule_set, "goals");
+      let goal_last = list_last(goals);
       let rules_parsed = app_replace_rule_set_rules_get(rule_set);
       async function lambda2(goal) {
         let refresh_count = 0;
@@ -65,6 +67,8 @@ export async function app_replace_tests_run_e2e_generic(
         await each_async(path, lambda3);
         let eq2 = json_equal(rule_set, last_rs);
         if (not(eq2)) {
+          if (equal(left, right)) {
+          }
           let name = app_replace_rule_set_success_attribute_next();
           await playwright_by_attribute_test_click(page, name);
         }
