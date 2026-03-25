@@ -38,7 +38,7 @@ export function app_replace_rule_set_expressions_function_calls() {
       },
       {
         start: "id ( e )",
-        end: "id ( arg )",
+        end: "id ( e, e )",
       },
     ],
   };
