@@ -110,6 +110,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_expressions_member_and_access,
     app_replace_rule_set_expressions_function_calls,
     app_replace_rule_set_expressions_unary,
+    app_new_rule_set_new_2,
   ];
   return r2;
 }
