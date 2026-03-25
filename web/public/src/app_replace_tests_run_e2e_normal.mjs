@@ -8,7 +8,7 @@ import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule
 import { app_replace_tests_run_e2e_normal_fn } from "../../../love/public/src/app_replace_tests_run_e2e_normal_fn.mjs";
 export async function app_replace_tests_run_e2e_normal() {
   let rule_sets = app_replace_rule_sets();
-  let mapped = list_map_property(list, property_name);
+  let mapped = list_map_property(rule_sets, "goals");
   let count = 20;
   let chunks = list_chunk(rule_sets, count);
   async function each_chunk(chunk) {
