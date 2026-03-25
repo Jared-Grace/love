@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_replace_rule_set_expressions_multiplicative_abbreviations } from "../../../love/public/src/app_replace_rule_set_expressions_multiplicative_abbreviations.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_replace_rule_set_expressions_multiplicative_rules } from "../../../love/public/src/app_replace_rule_set_expressions_multiplicative_rules.mjs";
@@ -9,6 +10,10 @@ export function app_new_rule_set_new_2() {
   list_add(rules, "ex > ae");
   let abbreviations = {};
   app_replace_rule_set_expressions_multiplicative_abbreviations(abbreviations);
+  object_merge(abbreviations, {
+    mue: ["", "mu", "ltiplicative ", "e", "xpression"],
+    mo: ["", "m", "ultiplicative ", "o", "perator"],
+  });
   let r = {
     name: "Expresions additive",
     rules: ["a > b"],
