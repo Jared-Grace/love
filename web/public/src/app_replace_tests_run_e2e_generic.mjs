@@ -28,58 +28,54 @@ export async function app_replace_tests_run_e2e_generic(rs, inner) {
   async function lambda(page) {
     await playwright_by_attribute_test_click(page, first_name);
     await playwright_by_attribute_test_click(page, json);
-    async function each_rule_set(rule_set) {
-      let goals = property_get(rule_set, "goals");
-      let goal_last = list_last(goals);
-      let rules_parsed = app_replace_rule_set_rules_get(rule_set);
-      async function each_goal(goal) {
-        let refresh_count = 0;
-        refresh_count =
-          await app_replace_rule_set_attribute_refresh_count_assert(
-            refresh_count,
-            page,
-          );
-        let se = app_replace_start_end_get(goal);
-        let start = property_get(se, "start");
-        let end = property_get(se, "end");
-        let path = app_replace_rule_set_verify_goal_path(
-          rules_parsed,
-          start,
-          end,
+    let goals = property_get(rule_set, "goals");
+    let goal_last = list_last(goals);
+    let rules_parsed = app_replace_rule_set_rules_get(rule_set);
+    async function each_goal(goal) {
+      let refresh_count = 0;
+      refresh_count = await app_replace_rule_set_attribute_refresh_count_assert(
+        refresh_count,
+        page,
+      );
+      let se = app_replace_start_end_get(goal);
+      let start = property_get(se, "start");
+      let end = property_get(se, "end");
+      let path = app_replace_rule_set_verify_goal_path(
+        rules_parsed,
+        start,
+        end,
+      );
+      async function each_step(p) {
+        let symbol_id = null;
+        ({ refresh_count, symbol_id } = await inner(
+          p,
+          refresh_count,
+          page,
+          symbol_id,
+        ));
+        refresh_count = await app_replace_rule_set_attribute_refresh_click(
+          page,
+          symbol_id,
+          refresh_count,
         );
-        async function each_step(p) {
-          let symbol_id = null;
-          ({ refresh_count, symbol_id } = await inner(
-            p,
-            refresh_count,
-            page,
-            symbol_id,
-          ));
-          refresh_count = await app_replace_rule_set_attribute_refresh_click(
-            page,
-            symbol_id,
-            refresh_count,
-          );
-        }
-        await each_async(path, each_step);
-        let last_goal = false;
-        let eq2 = json_equal(rule_set, last_rs);
-        if (eq2) {
-          if (equal(goal, goal_last)) {
-            last_goal = true;
-          }
-        }
-        if (last_goal) {
-          let a = app_replace_rule_set_success_attribute_completed();
-          await playwright_by_attribute_test_exists_assert(page, a);
-        } else {
-          let name = app_replace_rule_set_success_attribute_next();
-          await playwright_by_attribute_test_click(page, name);
+      }
+      await each_async(path, each_step);
+      let last_goal = false;
+      let eq2 = json_equal(rule_set, last_rs);
+      if (eq2) {
+        if (equal(goal, goal_last)) {
+          last_goal = true;
         }
       }
-      await each_async(goals, each_goal);
+      if (last_goal) {
+        let a = app_replace_rule_set_success_attribute_completed();
+        await playwright_by_attribute_test_exists_assert(page, a);
+      } else {
+        let name = app_replace_rule_set_success_attribute_next();
+        await playwright_by_attribute_test_click(page, name);
+      }
     }
-    await each_async(rule_sets, each_rule_set);
+    await each_goal(goal);
   }
   await playwright_test_app_dev(app_replace, lambda);
 }
