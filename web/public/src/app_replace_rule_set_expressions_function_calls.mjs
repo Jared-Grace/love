@@ -26,38 +26,38 @@ export function app_replace_rule_set_expressions_function_calls() {
       },
       {
         start: "ce",
-        end: "id ( e )",
+        end: "id ( ex )",
       },
       {
-        start: "id ( e )",
+        start: "id ( ex )",
         end: "id ( de )",
       },
       {
         start: "id ( arg )",
-        end: "id ( e , e )",
+        end: "id ( ex , ex )",
       },
       {
-        start: "id ( e , e )",
-        end: "id ( i , e )",
+        start: "id ( ex , ex )",
+        end: "id ( in , ex )",
       },
       {
-        start: "id ( i , e )",
-        end: "id ( i , i )",
+        start: "id ( in , ex )",
+        end: "id ( in , in )",
       },
       {
-        start: "id ( e )",
+        start: "id ( ex )",
         end: "id ( id . id )",
       },
       {
-        start: "id ( e )",
-        end: "id ( id [ e ] )",
+        start: "id ( ex )",
+        end: "id ( id [ ex ] )",
       },
       {
-        start: "id ( id [ e ] )",
+        start: "id ( id [ ex ] )",
         end: "id ( id [ i ] )",
       },
       {
-        start: "id ( e )",
+        start: "id ( ex )",
         end: "id ( id ( ) )",
       },
     ],
