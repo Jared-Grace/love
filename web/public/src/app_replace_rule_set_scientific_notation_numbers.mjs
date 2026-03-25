@@ -37,10 +37,10 @@ export function app_replace_rule_set_scientific_notation_numbers() {
       },
       {
         start: "sn",
-        end: "in . E + g",
+        end: "in . E + ig",
       },
       {
-        start: "in . E + g",
+        start: "in . E + ig",
         end: "2 . E + di di",
       },
       {
@@ -61,10 +61,10 @@ export function app_replace_rule_set_scientific_notation_numbers() {
       },
       {
         start: "sn",
-        end: "i . g E di",
+        end: "in . ig E di",
       },
       {
-        start: "in . g E di",
+        start: "in . ig E di",
         end: "in . di di E 0",
       },
       {
@@ -80,7 +80,7 @@ export function app_replace_rule_set_scientific_notation_numbers() {
         end: "in . e ig",
       },
       {
-        start: "i e ig",
+        start: "in e ig",
         end: "pi di e ig",
       },
       {
