@@ -26,8 +26,12 @@ export function app_replace_rule_set_expressions_unary() {
     rules,
     goals: [
       {
-        start: "a",
-        end: "b",
+        start: "ue",
+        end: "- i",
+      },
+      {
+        start: "ue",
+        end: "! true",
       },
     ],
   };
