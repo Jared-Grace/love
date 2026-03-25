@@ -20,6 +20,6 @@ export async function app_replace_tests_run_e2e_normal() {
     await each_unordered_async(chunk, each_rs);
   }
   await each_async(chunks, each_chunk);
-  async function lambda$index() {}
-  await each_range_unordered_async(count, lambda$index);
+  async function lambda(index) {}
+  await each_range_unordered_async(count2, lambda);
 }
