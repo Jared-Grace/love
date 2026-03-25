@@ -1,4 +1,4 @@
-export function app_new_rule_set_new_2() {
+export function app_replace_rule_set_expressions_function_calls() {
   let r = {
     name: "Expressions function calls",
     rules: [
