@@ -1,17 +1,12 @@
+import { app_replace_rule_set_expresions_additive_abbreviations } from "../../../love/public/src/app_replace_rule_set_expresions_additive_abbreviations.mjs";
 import { app_replace_rule_set_expresions_additive_rules } from "../../../love/public/src/app_replace_rule_set_expresions_additive_rules.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
-import { app_replace_rule_set_expressions_multiplicative_abbreviations } from "../../../love/public/src/app_replace_rule_set_expressions_multiplicative_abbreviations.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 export function app_replace_rule_set_expresions_additive() {
   const rules = [];
   app_replace_rule_set_expresions_additive_rules(rules);
   list_add(rules, "ex > ae");
   let abbreviations = {};
-  app_replace_rule_set_expressions_multiplicative_abbreviations(abbreviations);
-  object_merge(abbreviations, {
-    ae: ["", "a", "dditive ", "e", "xpression"],
-    ao: ["", "a", "dditive ", "o", "perator"],
-  });
+  app_replace_rule_set_expresions_additive_abbreviations(abbreviations);
   let r = {
     name: "Expresions additive",
     rules: rules,
