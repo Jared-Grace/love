@@ -51,7 +51,7 @@ export function app_replace_rule_set_expressions_multiplicative() {
         end: "nu mo ( pe mo ue )",
       },
       {
-        start: "nu mo ( mue mo ue )",
+        start: "nu mo ( pe mo ue )",
         end: "nu mo ( nu mo nu )",
       },
     ],
