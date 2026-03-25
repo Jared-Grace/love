@@ -17,7 +17,7 @@ export async function app_replace_tests_run_e2e_normal() {
     let merged = {
       rule_set,
     };
-    object_merge_multiple(merged, goals);
+    object_merge_multiple(goals, merged);
   }
   let squashed = list_map_squash(properties, lambda2);
   const property_name = "goals";
