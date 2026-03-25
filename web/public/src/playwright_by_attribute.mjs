@@ -6,7 +6,6 @@ export async function playwright_by_attribute(page, name, value) {
     value,
   });
   async function lambda2() {
-    await page.waitForSelector(`[${name}]`);
     const elements = await page.locator(`[${name}]`).elementHandles();
     const filtered = [];
     for (const el of elements) {
