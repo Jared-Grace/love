@@ -9,27 +9,27 @@ export function app_replace_rule_set_integers() {
     rules,
     goals: [
       {
-        start: "i",
+        start: "in",
         end: "0",
       },
       {
-        start: "i",
+        start: "in",
         end: "2",
       },
       {
-        start: "i",
+        start: "in",
         end: "1 3",
       },
       {
-        start: "i",
+        start: "in",
         end: "7 7",
       },
       {
-        start: "i",
+        start: "in",
         end: "4 0",
       },
       {
-        start: "i",
+        start: "in",
         end: "p di di",
       },
       {
@@ -37,11 +37,11 @@ export function app_replace_rule_set_integers() {
         end: "9 6 9",
       },
       {
-        start: "i",
-        end: "p di di di",
+        start: "in",
+        end: "pi di di di",
       },
       {
-        start: "p di di di",
+        start: "pi di di di",
         end: "5 6 di di",
       },
       {
