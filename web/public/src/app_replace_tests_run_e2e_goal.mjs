@@ -1,5 +1,4 @@
 import { playwright_refresh } from "../../../love/public/src/playwright_refresh.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_rule_set_success_attribute_next } from "../../../love/public/src/app_replace_rule_set_success_attribute_next.mjs";
 import { playwright_by_attribute_test_exists_assert } from "../../../love/public/src/playwright_by_attribute_test_exists_assert.mjs";
 import { app_replace_rule_set_success_attribute_completed } from "../../../love/public/src/app_replace_rule_set_success_attribute_completed.mjs";
