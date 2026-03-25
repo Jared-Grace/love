@@ -10,6 +10,7 @@ export function undefined_not_is_assert_object_property(
     let properties = properties_get(obj);
     let v = {
       object,
+      properties,
       property_name,
     };
     return v;
