@@ -18,6 +18,7 @@ export function app_replace_rule_set_expressions_function_calls() {
   app_replace_rule_set_expressions_primary_abbreviations(abbreviations);
   let to2 = object_merge(abbreviations, {
     ce: ["", "c", "all ", "e", "xpression"],
+    arg: ["", "ar", "arguments ", "g", "rower"],
   });
   let r = {
     name: "Expressions function calls",
