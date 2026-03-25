@@ -3,10 +3,10 @@ import { app_replace_rule_set_expressions_member_and_access_rules } from "../../
 export function app_replace_rule_set_expressions_function_calls_rules(rules) {
   app_replace_rule_set_expressions_member_and_access_rules(rules);
   list_add_multiple(rules, [
-    "ce > me",
+    "ce > mae",
     "ce > ce ( )",
-    "ce > ce ( arg )",
-    "arg > e , arg",
-    "arg > e",
+    "ce > ce ( ag )",
+    "ag > xe , ag",
+    "ag > ex",
   ]);
 }
