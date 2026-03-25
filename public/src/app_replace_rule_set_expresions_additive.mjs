@@ -48,7 +48,7 @@ export function app_replace_rule_set_expresions_additive() {
         end: "nu ao ( nu ao ue )",
       },
       {
-        start: "nu ao ( nu ao mae )",
+        start: "nu ao ( nu ao ue )",
         end: "nu ao ( nu ao nu )",
       },
       {
