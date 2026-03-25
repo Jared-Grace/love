@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { app_replace_rule_set_expressions_member_and_access_rules } from "../../../love/public/src/app_replace_rule_set_expressions_member_and_access_rules.mjs";
 export function app_replace_rule_set_expressions_function_calls() {
@@ -10,6 +11,7 @@ export function app_replace_rule_set_expressions_function_calls() {
     "arg > e, arg",
     "arg > e",
   ]);
+  list_add(list, item);
   let r = {
     name: "Expressions function calls",
     rules,
