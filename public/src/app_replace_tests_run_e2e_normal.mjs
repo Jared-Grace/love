@@ -6,8 +6,6 @@ import { object_merge_multiple } from "../../../love/public/src/object_merge_mul
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map_squash } from "../../../love/public/src/list_map_squash.mjs";
 import { each_range_unordered_async } from "../../../love/public/src/each_range_unordered_async.mjs";
-import { each_async } from "../../../love/public/src/each_async.mjs";
-import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
 import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
 import { app_replace_tests_run_e2e_browser } from "../../../love/public/src/app_replace_tests_run_e2e_browser.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
@@ -25,7 +23,6 @@ export async function app_replace_tests_run_e2e_normal() {
   }
   let remaining = list_map_squash(rule_sets, lambda2);
   let count = 15;
-  let chunks = list_chunk(remaining, count);
   async function each_chunk(chunk) {
     async function each_goal(m) {
       let rule_set = property_get(m, "rule_set");
@@ -38,8 +35,6 @@ export async function app_replace_tests_run_e2e_normal() {
     }
     await each_unordered_async(chunk, each_goal);
   }
-  await each_async(chunks, each_chunk);
-  return;
   async function lambda(index) {
     async function lambda(page) {
       await app_replace_tests_run_e2e_goal(page, goal, rule_set, inner);
