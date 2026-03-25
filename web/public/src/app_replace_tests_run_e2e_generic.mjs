@@ -1,3 +1,4 @@
+import { json_equal } from "../../../love/public/src/json_equal.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { app_replace_rule_sets_fns } from "../../../love/public/src/app_replace_rule_sets_fns.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
@@ -61,6 +62,7 @@ export async function app_replace_tests_run_e2e_generic(
           );
         }
         await each_async(path, lambda3);
+        let eq2 = json_equal(left, right);
         let name = app_replace_rule_set_success_attribute_next();
         await playwright_by_attribute_test_click(page, name);
       }
