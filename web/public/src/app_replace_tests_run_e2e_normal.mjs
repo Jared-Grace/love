@@ -27,8 +27,6 @@ export async function app_replace_tests_run_e2e_normal() {
   let count = 15;
   async function each_chunk(chunk) {
     async function each_goal(m) {
-      let rule_set = property_get(m, "rule_set");
-      let goal = property_get(m, "goal");
       await app_replace_tests_run_e2e_browser(
         rule_set,
         goal,
@@ -40,7 +38,9 @@ export async function app_replace_tests_run_e2e_normal() {
   async function lambda(index) {
     async function lambda(page) {
       async function lambda4() {
-        let next = list_pop(queue);
+        let next = list_pop(remaining);
+        let rule_set = property_get(next, "rule_set");
+        let goal = property_get(next, "goal");
         await app_replace_tests_run_e2e_goal(page, goal, rule_set, inner);
       }
       await list_empty_not_is_while_async(queue, lambda4);
