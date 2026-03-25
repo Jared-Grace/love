@@ -10,8 +10,8 @@ export function app_replace_rule_set_expressions_primary_abbreviations(
     pe: ["", "p", "rimary ", "e", "xpression"],
     id: ["", "id", "entifier"],
     li: ["", "li", "teral"],
-    e: ["", "ex", "pression"],
-    n: ["", "nu", "mber"],
+    ex: ["", "ex", "pression"],
+    nu: ["", "nu", "mber"],
   });
   app_replace_rule_set_integers_abbreviation_i(abbreviations);
   app_replace_rule_set_strings_simple_abbreviation_st(abbreviations);
