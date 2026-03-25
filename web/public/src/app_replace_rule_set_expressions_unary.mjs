@@ -47,7 +47,11 @@ export function app_replace_rule_set_expressions_unary() {
       },
       {
         start: "ue",
-        end: "- ( - i )",
+        end: "- ( e )",
+      },
+      {
+        start: "ue",
+        end: "- ( - 1 )",
       },
     ],
   };
