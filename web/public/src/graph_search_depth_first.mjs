@@ -1,5 +1,4 @@
 import { list_empty_not_is_while } from "../../../love/public/src/list_empty_not_is_while.mjs";
-import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { list_pop_first } from "../../../love/public/src/list_pop_first.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -23,16 +22,14 @@ export function graph_search_depth_first(
     previous: null,
     depth: 0,
   });
-  function lambda2() {}
-  list_empty_not_is_while(queue2, lambda2);
-  while (list_empty_not_is(queue)) {
+  function lambda2() {
     const q_current = list_pop_first(queue);
     let depth = property_get(q_current, "depth");
     let node = property_get(q_current, "node");
     let json = mapper(node);
     let i = set_includes(visited, json);
     if (i) {
-      continue;
+      return;
     }
     let m = mapper(node);
     set_add(visited, m);
@@ -43,7 +40,7 @@ export function graph_search_depth_first(
       return q_current;
     }
     if (depth >= max_depth) {
-      continue;
+      return;
     }
     const neighbors = neighbors_get(node);
     for (const n of neighbors) {
@@ -61,6 +58,7 @@ export function graph_search_depth_first(
       }
     }
   }
+  list_empty_not_is_while(queue2, lambda2);
   let r = {
     found: false,
   };
