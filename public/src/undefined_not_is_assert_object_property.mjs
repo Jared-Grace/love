@@ -7,7 +7,7 @@ export function undefined_not_is_assert_object_property(
 ) {
   undefined_not_is_assert_lambda(value, object_get);
   function object_get() {
-    let properties = properties_get(obj);
+    let properties = properties_get(object);
     let v = {
       object,
       properties,
