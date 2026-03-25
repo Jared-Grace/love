@@ -19,8 +19,7 @@ export async function app_replace_tests_run_e2e_normal() {
       rule_set,
     };
     let r = object_merge_curried_right(merged);
-    function lambda3(item) {}
-    each(list, lambda3);
+    each(goals, r);
   }
   let squashed = list_map_squash(properties, lambda2);
   const property_name = "goals";
