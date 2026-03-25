@@ -20,7 +20,7 @@ export function app_replace_rule_set_expressions_multiplicative() {
     goals: [
       {
         start: "mue",
-        end: "li mo li",
+        end: "mae mo mae",
       },
     ],
   };
