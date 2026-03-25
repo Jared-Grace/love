@@ -7,14 +7,15 @@ export async function playwright_by_attribute(page, name, value) {
       has: page.locator(`[${name}]`),
     })
     .elementHandles();
-  log(playwright_by_attribute.name, {
-    name,
-    value,
-    elements,
-  });
   const filtered = [];
   for (const el of elements) {
-    if ((await el.getAttribute(name)) === value) {
+    const a = await el.getAttribute(name);
+    log(playwright_by_attribute.name, {
+      name,
+      value,
+      a,
+    });
+    if (a === value) {
       filtered.push(el);
     }
   }
