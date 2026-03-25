@@ -115,7 +115,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_expressions_unary,
     app_replace_rule_set_expressions_multiplicative,
     app_replace_rule_set_expressions_additive,
+    app_new_rule_set_new_2,
   ];
-  let r = app_new_rule_set_new_2();
   return fns;
 }
