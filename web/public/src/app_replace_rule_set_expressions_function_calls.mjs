@@ -33,7 +33,7 @@ export function app_replace_rule_set_expressions_function_calls() {
         end: "id ( de )",
       },
       {
-        start: "id ( arg )",
+        start: "id ( ag )",
         end: "id ( ex , ex )",
       },
       {
