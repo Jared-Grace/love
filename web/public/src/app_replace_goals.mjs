@@ -28,9 +28,6 @@ export function app_replace_goals(context) {
   function each_goal(goal, index) {
     let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
     let completed = app_replace_goal_completed_initialize(g);
-    let r4 = app_replace_start_end_get(goal);
-    let start = property_get(r4, "start");
-    let end = property_get(r4, "end");
     let title = app_replace_goals_generic(
       root,
       completed,
@@ -38,6 +35,9 @@ export function app_replace_goals(context) {
       index,
       lambda,
     );
+    let r4 = app_replace_start_end_get(goal);
+    let start = property_get(r4, "start");
+    let end = property_get(r4, "end");
     html_data_set_object(title, r4);
     let v = json_to(goal);
     html_data_set_test(title, v);
