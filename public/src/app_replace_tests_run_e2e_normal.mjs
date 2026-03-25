@@ -1,3 +1,4 @@
+import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
 import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
 import { app_replace_tests_run_e2e_generic } from "../../../love/public/src/app_replace_tests_run_e2e_generic.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
@@ -12,6 +13,7 @@ export async function app_replace_tests_run_e2e_normal() {
     app_replace_tests_run_e2e_normal_fn,
   );
   return;
+  let chunks = list_chunk(list, chunk_size);
   async function lambda(rule_set) {
     await app_replace_tests_run_e2e_generic(
       [rule_set],
