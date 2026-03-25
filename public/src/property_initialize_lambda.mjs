@@ -7,7 +7,6 @@ export function property_initialize_lambda(object, property_name, lambda) {
   const exists = property_exists(object, property_name);
   if (not(exists)) {
     let value_set = lambda();
-    console.log({lambda,property_initialize_lambda:1,object})
     property_set(object, property_name, value_set);
   }
   let value = property_get(object, property_name);
