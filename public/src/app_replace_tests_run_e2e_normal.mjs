@@ -25,7 +25,7 @@ export async function app_replace_tests_run_e2e_normal() {
     async function each_rs(goal) {
       let rule_set2 = property_get(goal, "rule_set");
       await app_replace_tests_run_e2e_generic(
-        rule_set,
+        rule_set2,
         goal,
         app_replace_tests_run_e2e_normal_fn,
       );
