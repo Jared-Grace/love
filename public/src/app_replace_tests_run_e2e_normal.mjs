@@ -1,5 +1,4 @@
-import { object_wrap_curried_right } from "../../../love/public/src/object_wrap_curried_right.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
+import { object_wrap_multiple } from "../../../love/public/src/object_wrap_multiple.mjs";
 import { object_merge_multiple } from "../../../love/public/src/object_merge_multiple.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map_squash } from "../../../love/public/src/list_map_squash.mjs";
@@ -16,8 +15,7 @@ export async function app_replace_tests_run_e2e_normal() {
     let goals = property_get(rule_set, "goals");
     let rule_set_name = property_get(rule_set, "name");
     let property_name = "goal";
-    let r = object_wrap_curried_right(property_name);
-    let mapped = list_map(goals, r);
+    let mapped = object_wrap_multiple(property_name, goals);
     let merged = {
       rule_set_name,
     };
