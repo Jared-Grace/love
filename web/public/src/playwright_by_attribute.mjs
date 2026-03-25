@@ -12,6 +12,6 @@ export async function playwright_by_attribute(page, name, value) {
       filtered.push(el);
     }
   }
-  let only = list_single(list);
-  return filtered;
+  let only = list_single(filtered);
+  return only;
 }
