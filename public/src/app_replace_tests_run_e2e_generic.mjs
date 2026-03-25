@@ -1,3 +1,4 @@
+import { list_last } from "../../../love/public/src/list_last.mjs";
 import { app_replace_rule_sets_fns } from "../../../love/public/src/app_replace_rule_sets_fns.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
 import { playwright_test_app_dev } from "../../../love/public/src/playwright_test_app_dev.mjs";
@@ -17,7 +18,8 @@ export async function app_replace_tests_run_e2e_generic(
   first,
   inner,
 ) {
-  let fns = app_replace_rule_sets_fns();ll
+  let fns = app_replace_rule_sets_fns();
+  let last = list_last(list);
   async function lambda(page) {
     let name2 = property_get(first, "name");
     await playwright_by_attribute_test_click(page, name2);
