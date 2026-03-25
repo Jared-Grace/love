@@ -6,13 +6,13 @@ export function app_replace_rule_set_scientific_notation_numbers() {
   const rules = app_replace_rule_set_decimals_rules();
   list_add_multiple(rules, [
     "sn > de se",
-    "sn > g se",
+    "sn > ig se",
     "se > eE ex",
     "eE > e",
     "eE > E",
-    "ex > + g",
-    "ex > - g",
-    "ex > g",
+    "ex > + ig",
+    "ex > - ig",
+    "ex > ig",
   ]);
   let ad = app_replace_rule_set_decimals_abbreviations();
   let abbreviations = {
@@ -29,18 +29,18 @@ export function app_replace_rule_set_scientific_notation_numbers() {
     goals: [
       {
         start: "sn",
-        end: "i . e di",
+        end: "in . e di",
       },
       {
-        start: "i . e di",
+        start: "in . e di",
         end: "0 . e 1",
       },
       {
         start: "sn",
-        end: "i . E + g",
+        end: "in . E + g",
       },
       {
-        start: "i . E + g",
+        start: "in . E + g",
         end: "2 . E + di di",
       },
       {
@@ -49,10 +49,10 @@ export function app_replace_rule_set_scientific_notation_numbers() {
       },
       {
         start: "sn",
-        end: ". di e - g",
+        end: ". di e - ig",
       },
       {
-        start: ". di e - g",
+        start: ". di e - ig",
         end: ". di e - di di",
       },
       {
@@ -64,11 +64,11 @@ export function app_replace_rule_set_scientific_notation_numbers() {
         end: "i . g E di",
       },
       {
-        start: "i . g E di",
-        end: "i . di di E 0",
+        start: "in . g E di",
+        end: "in . di di E 0",
       },
       {
-        start: "i . di di E 0",
+        start: "in . di di E 0",
         end: "3 . 1 di E 0",
       },
       {
@@ -77,18 +77,18 @@ export function app_replace_rule_set_scientific_notation_numbers() {
       },
       {
         start: "sn",
-        end: "i . e g",
+        end: "in . e ig",
       },
       {
-        start: "i e g",
-        end: "p di e g",
+        start: "i e ig",
+        end: "pi di e ig",
       },
       {
-        start: "p di e g",
-        end: "p di e di di di di",
+        start: "pi di e ig",
+        end: "pi di e di di di di",
       },
       {
-        start: "p di e di di di di",
+        start: "pi di e di di di di",
         end: "7 7 e di di di di",
       },
       {
