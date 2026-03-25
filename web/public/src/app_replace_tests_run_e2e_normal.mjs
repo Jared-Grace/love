@@ -1,5 +1,13 @@
+import { app_replace_tests_run_e2e_generic } from "../../../love/public/src/app_replace_tests_run_e2e_generic.mjs";
+import { list_first } from "../../../love/public/src/list_first.mjs";
+import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { app_replace_tests_run_e2e_normal_fn } from "../../../love/public/src/app_replace_tests_run_e2e_normal_fn.mjs";
-import { app_replace_tests_run_e2e_all } from "../../../love/public/src/app_replace_tests_run_e2e_all.mjs";
 export async function app_replace_tests_run_e2e_normal() {
-  await app_replace_tests_run_e2e_all(app_replace_tests_run_e2e_normal_fn);
+  let rule_sets = app_replace_rule_sets();
+  let first = list_first(rule_sets);
+  await app_replace_tests_run_e2e_generic(
+    rule_sets,
+    first,
+    app_replace_tests_run_e2e_normal_fn,
+  );
 }
