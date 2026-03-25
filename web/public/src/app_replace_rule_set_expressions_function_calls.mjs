@@ -41,7 +41,7 @@ export function app_replace_rule_set_expressions_function_calls() {
         end: "id ( e , e )",
       },
       {
-        start: "id ( e, e )",
+        start: "id ( e , e )",
         end: "id ( i , e )",
       },
       {
