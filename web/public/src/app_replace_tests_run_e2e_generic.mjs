@@ -25,12 +25,12 @@ export async function app_replace_tests_run_e2e_generic(
   let rs_first_goals = property_get(first, "goals");
   let rs_first_goal_first = list_first(rs_first_goals);
   let json = json_to(rs_first_goal_first);
-  let name2 = property_get(first, "name");
+  let first_name = property_get(first, "name");
   let fns = app_replace_rule_sets_fns();
   let last = list_last(fns);
   let last_rs = last();
   async function lambda(page) {
-    await playwright_by_attribute_test_click(page, name2);
+    await playwright_by_attribute_test_click(page, first_name);
     await playwright_by_attribute_test_click(page, json);
     async function each_rule_set(rule_set) {
       let goals = property_get(rule_set, "goals");
