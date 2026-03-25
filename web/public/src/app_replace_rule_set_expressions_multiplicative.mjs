@@ -46,6 +46,10 @@ export function app_replace_rule_set_expressions_multiplicative() {
         start: "nu mo ( ex )",
         end: "nu mo ( mue mo ue )",
       },
+      {
+        start: "nu mo ( mue mo ue )",
+        end: "nu mo ( mue mo ue )",
+      },
     ],
   };
   return r;
