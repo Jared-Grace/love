@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { properties_get } from "../../../love/public/src/properties_get.mjs";
 import { global_get } from "../../../love/public/src/global_get.mjs";
 import { server_data_endpoints } from "../../../love/public/src/server_data_endpoints.mjs";
@@ -50,7 +51,10 @@ export function server() {
   app.use(v);
   function lambda() {
     let global = global_get();
-    let properties = properties_get(obj);
+    let properties = properties_get(global);
+    log(server.name, {
+      properties,
+    });
     return;
     log_keep(server.name, "Static server running at: " + server_url());
   }
