@@ -26,7 +26,7 @@ export async function app_replace_tests_run_e2e_normal() {
     squashed,
   });
   exit();
-  let count = 20;
+  let count = 10;
   let chunks = list_chunk(squashed, count);
   async function each_chunk(chunk) {
     async function each_rs(goal) {
