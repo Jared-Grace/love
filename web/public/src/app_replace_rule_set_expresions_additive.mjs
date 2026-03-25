@@ -3,7 +3,7 @@ import { app_replace_rule_set_expressions_multiplicative_abbreviations } from ".
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_replace_rule_set_expressions_multiplicative_rules } from "../../../love/public/src/app_replace_rule_set_expressions_multiplicative_rules.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
-export function app_new_rule_set_new_2() {
+export function app_replace_rule_set_expresions_additive() {
   const rules = [];
   app_replace_rule_set_expressions_multiplicative_rules(rules);
   list_add_multiple(rules, ["ae > mue", "ae > ae ao mue", "ao > +", "ao > -"]);
