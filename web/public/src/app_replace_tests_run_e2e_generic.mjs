@@ -23,8 +23,8 @@ export async function app_replace_tests_run_e2e_generic(
   inner,
 ) {
   let rs_first_goals = property_get(first, "goals");
-  let g = list_first(rs_first_goals);
-  let json = json_to(g);
+  let rs_first_goal_first = list_first(rs_first_goals);
+  let json = json_to(rs_first_goal_first);
   let name2 = property_get(first, "name");
   let fns = app_replace_rule_sets_fns();
   let last = list_last(fns);
