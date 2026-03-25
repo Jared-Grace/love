@@ -4,5 +4,5 @@ import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule
 export async function app_replace_tests_run_e2e_all(inner) {
   let rule_sets = app_replace_rule_sets();
   let first = list_first(rule_sets);
-  await app_replace_tests_run_e2e_generic(rule_sets, first, inner);
+  await app_replace_tests_run_e2e_generic(first, inner);
 }

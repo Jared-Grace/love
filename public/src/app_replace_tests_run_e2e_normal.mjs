@@ -12,7 +12,6 @@ export async function app_replace_tests_run_e2e_normal() {
   async function each_chunk(chunk) {
     async function each_rs(rule_set) {
       await app_replace_tests_run_e2e_generic(
-        [rule_set],
         rule_set,
         app_replace_tests_run_e2e_normal_fn,
       );
