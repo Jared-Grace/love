@@ -23,9 +23,9 @@ export async function app_replace_tests_run_e2e_normal() {
     object_merge_multiple(mapped, merged);
     return mapped;
   }
-  let squashed = list_map_squash(rule_sets, lambda2);
+  let remaining = list_map_squash(rule_sets, lambda2);
   let count = 15;
-  let chunks = list_chunk(squashed, count);
+  let chunks = list_chunk(remaining, count);
   async function each_chunk(chunk) {
     async function each_goal(m) {
       let rule_set = property_get(m, "rule_set");
