@@ -21,7 +21,7 @@ export async function app_replace_tests_run_e2e_normal() {
   }
   let squashed = list_map_squash(rule_sets, lambda2);
   let count = 20;
-  let chunks = list_chunk(rule_sets, count);
+  let chunks = list_chunk(squashed, count);
   async function each_chunk(chunk) {
     async function each_rs(goal) {
       let rule_set_name = property_get(goal, "rule_set_name");
@@ -31,7 +31,7 @@ export async function app_replace_tests_run_e2e_normal() {
         app_replace_tests_run_e2e_normal_fn,
       );
     }
-    await each_unordered_async(squashed, each_rs);
+    await each_unordered_async(chunk, each_rs);
   }
   await each_async(chunks, each_chunk);
   return;
