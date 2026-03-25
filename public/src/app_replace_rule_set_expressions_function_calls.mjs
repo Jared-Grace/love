@@ -11,7 +11,7 @@ export function app_replace_rule_set_expressions_function_calls() {
     "arg > e, arg",
     "arg > e",
   ]);
-  list_add(rules, 'e > ce');
+  list_add(rules, "e > ce");
   let r = {
     name: "Expressions function calls",
     rules,
