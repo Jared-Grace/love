@@ -21,8 +21,9 @@ export async function app_replace_tests_run_e2e_goal(
   inner,
 ) {
   log(app_replace_tests_run_e2e_goal.name, "sleep");
-  await page.reload({
-    timeout: 0,
+  let v = page.url();
+  await page.goto(v, {
+    waitUntil: "load",
   });
   log(app_replace_tests_run_e2e_goal.name, "refreshed");
   let json = json_to(goal);
