@@ -22,8 +22,7 @@ export function graph_search_depth_first(
     previous: null,
     depth: 0,
   });
-  let ne = list_empty_not_is(list);
-  while (queue.length > 0) {
+  while (list_empty_not_is(queue)) {
     const q_current = list_pop_first(queue);
     let depth = property_get(q_current, "depth");
     let node = property_get(q_current, "node");
