@@ -22,9 +22,13 @@ export async function app_replace_tests_run_e2e_goal(
 ) {
   log(app_replace_tests_run_e2e_goal.name, "sleep");
   let v = page.url();
-  await page.goto(v, {
-    waitUntil: "load",
-  });
+  await context.clearCookies();
+  function lambda() {
+    localStorage.clear();
+    sessionStorage.clear();
+  }
+  await page.evaluate(lambda);
+  await page.reload();
   log(app_replace_tests_run_e2e_goal.name, "refreshed");
   let json = json_to(goal);
   let fns = app_replace_rule_sets_fns();
