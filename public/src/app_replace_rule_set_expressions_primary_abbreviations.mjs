@@ -11,7 +11,7 @@ export function app_replace_rule_set_expressions_primary_abbreviations(
     id: ["", "id", "entifier"],
     li: ["", "li", "teral"],
     e: ["", "ex", "pression"],
-    n: ["", "n", "umber"],
+    n: ["", "nu", "mber"],
   });
   app_replace_rule_set_integers_abbreviation_i(abbreviations);
   app_replace_rule_set_strings_simple_abbreviation_st(abbreviations);
