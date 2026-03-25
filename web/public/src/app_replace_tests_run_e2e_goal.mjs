@@ -1,4 +1,3 @@
-import { sleep } from "../../../love/public/src/sleep.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_rule_set_success_attribute_next } from "../../../love/public/src/app_replace_rule_set_success_attribute_next.mjs";
 import { playwright_by_attribute_test_exists_assert } from "../../../love/public/src/playwright_by_attribute_test_exists_assert.mjs";
@@ -22,9 +21,8 @@ export async function app_replace_tests_run_e2e_goal(
   inner,
 ) {
   log(app_replace_tests_run_e2e_goal.name, "sleep");
-  await sleep(5000);
   await page.reload({
-    waitUntil: "load",
+    timeout: 0,
   });
   log(app_replace_tests_run_e2e_goal.name, "refreshed");
   let json = json_to(goal);
