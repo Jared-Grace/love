@@ -6,11 +6,12 @@ import { app_replace_tests_run_e2e_normal_fn } from "../../../love/public/src/ap
 export async function app_replace_tests_run_e2e_normal() {
   let rule_sets = app_replace_rule_sets();
   let first = list_first(rule_sets);
-  async function lambda(rule_set) {}
+  async function lambda(rule_set) {
+    await app_replace_tests_run_e2e_generic(
+      [rule_set],
+      first,
+      app_replace_tests_run_e2e_normal_fn,
+    );
+  }
   await each_unordered_async(rule_sets, lambda);
-  await app_replace_tests_run_e2e_generic(
-    rule_sets,
-    first,
-    app_replace_tests_run_e2e_normal_fn,
-  );
 }
