@@ -6,7 +6,7 @@ import { app_replace_rule_set_expressions_unary_rules } from "../../../love/publ
 export function app_replace_rule_set_expressions_multiplicative() {
   const rules = [];
   app_replace_rule_set_expressions_unary_rules(rules);
-  list_add_multiple(list, items);
+  list_add_multiple(rules, ["mue > ue", "mue > mue mo ue", "mo > *", "mo > /"]);
   list_add(rules, "ex > mue");
   let abbreviations = {};
   app_replace_rule_set_expressions_unary_abbreviations(abbreviations);
@@ -16,11 +16,11 @@ export function app_replace_rule_set_expressions_multiplicative() {
   });
   let r = {
     name: "Expressions multiplicative",
-    rules: ["mue > ue", "mue > mue mo ue", "mo > *", "mo > /"],
+    rules,
     goals: [
       {
         start: "mue",
-        end: "mue mo ce",
+        end: "li mo li",
       },
     ],
   };
