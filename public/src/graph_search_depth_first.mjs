@@ -58,7 +58,7 @@ export function graph_search_depth_first(
       }
     }
   }
-  list_empty_not_is_while(queue2, lambda2);
+  list_empty_not_is_while(queue, lambda2);
   let r = {
     found: false,
   };
