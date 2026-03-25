@@ -8,8 +8,8 @@ export function app_new_rule_set_new_2() {
         end: "b",
       },
       {
-        start: "a",
-        end: "b",
+        start: "aa",
+        end: "ba",
       },
     ],
   };
