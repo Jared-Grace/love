@@ -16,7 +16,9 @@ export function app_replace_rule_set_expressions_function_calls() {
   list_add(rules, "e > ce");
   let abbreviations = {};
   app_replace_rule_set_expressions_primary_abbreviations(abbreviations);
-  let to2 = object_merge(abbreviations, {});
+  let to2 = object_merge(abbreviations, {
+    pe: ["", "p", "rimary ", "e", "xpression"],
+  });
   let r = {
     name: "Expressions function calls",
     rules,
