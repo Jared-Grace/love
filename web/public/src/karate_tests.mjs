@@ -20,6 +20,6 @@ export async function karate_tests() {
     let name2 = portfolio_qa_attribute_test_data();
     await playwright_by_attribute_type(page, name2, "password", "secret_sauce");
     let name3 = portfolio_qa_attribute_test_data();
-    await playwright_by_attribute(page, name3, "login-button").click();
+    await (await playwright_by_attribute(page, name3, "login-button")).click();
   }
 }
