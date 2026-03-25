@@ -16,9 +16,10 @@ export async function app_replace_tests_run_e2e_normal() {
     let rule_set_name = property_get(rule_set, "name");
     let property_name = "goal";
     function lambda3(goal) {
-      return {
+      let r = {
         [property_name]: goal,
       };
+      return r;
     }
     let mapped = list_map(goals, lambda3);
     let merged = {
