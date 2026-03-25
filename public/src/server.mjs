@@ -13,8 +13,6 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 export function server() {
-  log_keep(server.name, "Static server running at: " + server_url());
-  return;
   const app = express();
   let v3 = express.json({
     limit: "50mb",
@@ -52,4 +50,5 @@ export function server() {
     log_keep(server.name, "Static server running at: " + server_url());
   }
   app.listen(port, lambda);
+  log_keep(server.name, "Static server running at: " + server_url());
 }
