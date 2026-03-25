@@ -50,7 +50,7 @@ export async function app_replace_tests_run_e2e_generic(
           start,
           end,
         );
-        async function lambda3(p) {
+        async function each_step(p) {
           let symbol_id = null;
           ({ refresh_count, symbol_id } = await inner(
             p,
@@ -64,7 +64,7 @@ export async function app_replace_tests_run_e2e_generic(
             refresh_count,
           );
         }
-        await each_async(path, lambda3);
+        await each_async(path, each_step);
         let eq2 = json_equal(rule_set, last_rs);
         if (not(eq2)) {
           if (equal(goal, goal_last)) {
