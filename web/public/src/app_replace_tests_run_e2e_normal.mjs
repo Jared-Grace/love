@@ -1,3 +1,4 @@
+import { list_empty_not_is_while } from "../../../love/public/src/list_empty_not_is_while.mjs";
 import { list_pop } from "../../../love/public/src/list_pop.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
 import { playwright_test_app_dev } from "../../../love/public/src/playwright_test_app_dev.mjs";
@@ -37,8 +38,10 @@ export async function app_replace_tests_run_e2e_normal() {
     await each_unordered_async(chunk, each_goal);
   }
   async function lambda(index) {
-    let next = list_pop(queue);
     async function lambda(page) {
+      function lambda4() {}
+      list_empty_not_is_while(queue2, lambda4);
+      let next = list_pop(queue);
       await app_replace_tests_run_e2e_goal(page, goal, rule_set, inner);
     }
     await playwright_test_app_dev(app_replace, lambda);
