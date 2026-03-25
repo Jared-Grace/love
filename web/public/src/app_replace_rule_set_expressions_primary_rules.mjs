@@ -12,6 +12,7 @@ export function app_replace_rule_set_expressions_primary_rules(rules) {
     "i > 1",
     "i > 2",
     "li > st",
+    'st > " l u v "',
     "li > null",
     "li > bo",
   ];
