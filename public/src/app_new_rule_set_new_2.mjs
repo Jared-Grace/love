@@ -44,10 +44,10 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "nu ao ( ex )",
-        end: "nu ao ( mue ao ue )",
+        end: "nu ao ( ae ao ue )",
       },
       {
-        start: "nu ao ( mue ao ue )",
+        start: "nu ao ( ae ao ue )",
         end: "nu ao ( pe ao ue )",
       },
       {
