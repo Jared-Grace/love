@@ -1,3 +1,4 @@
+import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { list_pop_first } from "../../../love/public/src/list_pop_first.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -21,6 +22,7 @@ export function graph_search_depth_first(
     previous: null,
     depth: 0,
   });
+  let ne = list_empty_not_is(list);
   while (queue.length > 0) {
     const q_current = list_pop_first(queue);
     let depth = property_get(q_current, "depth");
