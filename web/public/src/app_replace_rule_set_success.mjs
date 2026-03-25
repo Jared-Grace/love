@@ -109,7 +109,7 @@ export async function app_replace_rule_set_success(
   let ii2 = list_index_is(rule_sets, rule_set_index_next);
   let next = true;
   if (not(ii) && not(ii2)) {
-    html_p_text_centered(
+    let completed = html_p_text_centered(
       p_next,
       "You have completed all goals that are available at this time!",
     );
