@@ -41,6 +41,10 @@ export function app_replace_rule_set_expressions_unary() {
         start: "ue",
         end: "typeof null",
       },
+      {
+        start: "ue",
+        end: "- ( - i )",
+      },
     ],
   };
   return r;
