@@ -20,7 +20,7 @@ export async function app_replace_tests_run_e2e_normal() {
     return goals;
   }
   let squashed = list_map_squash(rule_sets, lambda2);
-  let count = 10;
+  let count = 1;
   let chunks = list_chunk(squashed, count);
   async function each_chunk(chunk) {
     async function each_rs(goal) {
