@@ -19,7 +19,7 @@ export function app_replace_rule_set_expressions_function_calls() {
     abbreviations,
   );
   object_merge(abbreviations, {
-    ce: ["", "m", "ember ", "e", "xpression"],
+    ce: ["", "c", "all ", "e", "xpression"],
   });
   let r = {
     name: "Expressions function calls",
