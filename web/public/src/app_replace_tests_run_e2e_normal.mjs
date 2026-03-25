@@ -36,7 +36,7 @@ export async function app_replace_tests_run_e2e_normal() {
           app_replace_tests_run_e2e_normal_fn,
         );
       }
-      await list_empty_not_is_while_async(queue, lambda4);
+      await list_empty_not_is_while_async(remaining, lambda4);
     }
     await playwright_test_app_dev(app_replace, lambda);
   }
