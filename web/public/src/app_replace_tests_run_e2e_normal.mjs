@@ -13,7 +13,7 @@ export async function app_replace_tests_run_e2e_normal() {
   let rule_sets = app_replace_rule_sets();
   function lambda2(rule_set) {
     let goals = property_get(rule_set, "goals");
-    let rule_set_name = property_get(rule_set, "name");
+    let rule_set_name = property_get(rule_set, "name");$a
     let property_name = "goal";
     let mapped = object_wrap_multiple(property_name, goals);
     let merged = {
