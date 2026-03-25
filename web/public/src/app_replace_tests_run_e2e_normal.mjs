@@ -9,12 +9,6 @@ export async function app_replace_tests_run_e2e_normal() {
   let rule_sets = app_replace_rule_sets();
   let first = list_first(rule_sets);
   let chunks = list_chunk(rule_sets, 2);
-  await app_replace_tests_run_e2e_generic(
-    [first],
-    first,
-    app_replace_tests_run_e2e_normal_fn,
-  );
-  return;
   async function each_chunk(chunk) {
     async function each_rs(rule_set) {
       await app_replace_tests_run_e2e_generic(
