@@ -22,5 +22,5 @@ export async function app_replace_tests_run_e2e_normal() {
   await each_async(chunks, each_chunk);
   async function lambda2() {}
   let r = range(count);
-  await each_async(r, lambda2);
+  await each_unordered_async(r, lambda2);
 }
