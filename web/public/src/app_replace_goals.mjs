@@ -25,7 +25,7 @@ export function app_replace_goals(context) {
   let goals = property_get(item, "goals");
   let completed_previous = true;
   let d = app_replace_rule_sets_data_initialize(context);
-  function each_item(goal, index) {
+  function each_goal(goal, index) {
     let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
     let completed = app_replace_goal_completed_initialize(g);
     let r4 = app_replace_start_end_get(goal);
@@ -48,7 +48,7 @@ export function app_replace_goals(context) {
     }
     completed_previous = completed;
   }
-  each_index(goals, each_item);
+  each_index(goals, each_goal);
   function on_click(index) {
     storage_local_set_context(context, "goal_index", index);
     app_shared_screen_set(context, app_replace_rule_set);
