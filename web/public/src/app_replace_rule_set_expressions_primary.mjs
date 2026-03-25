@@ -4,7 +4,7 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 export function app_replace_rule_set_expressions_primary() {
   const rules = [];
   app_replace_rule_set_expressions_primary_rules(rules);
-  list_add(rules, "e > pe");
+  list_add(rules, "ex > pe");
   let abbreviations = {};
   app_replace_rule_set_expressions_primary_abbreviations(abbreviations);
   let r = {
@@ -42,7 +42,7 @@ export function app_replace_rule_set_expressions_primary() {
       },
       {
         start: "pe",
-        end: "( e )",
+        end: "( ex )",
       },
       {
         start: "pe",
@@ -54,7 +54,7 @@ export function app_replace_rule_set_expressions_primary() {
       },
       {
         start: "pe",
-        end: "( ( e ) )",
+        end: "( ( ex ) )",
       },
     ],
   };
