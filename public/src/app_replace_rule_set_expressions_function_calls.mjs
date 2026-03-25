@@ -34,11 +34,15 @@ export function app_replace_rule_set_expressions_function_calls() {
       },
       {
         start: "id ( e )",
-        end: "id ( i )",
+        end: "id ( de )",
       },
       {
         start: "id ( arg )",
         end: "id ( e, e )",
+      },
+      {
+        start: "id ( e, e )",
+        end: "id ( i, i )",
       },
     ],
   };
