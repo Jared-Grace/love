@@ -58,6 +58,10 @@ export function app_replace_rule_set_expressions_multiplicative() {
         start: "nu mo ( nu mo pe )",
         end: "nu mo ( nu mo nu )",
       },
+      {
+        start: "nu mo ( nu mo nu )",
+        end: "3 . 1 4 / ( 2 * 2 )",
+      },
     ],
   };
   return r;
