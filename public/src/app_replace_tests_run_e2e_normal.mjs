@@ -22,14 +22,15 @@ export async function app_replace_tests_run_e2e_normal() {
   let count = 20;
   let chunks = list_chunk(rule_sets, count);
   async function each_chunk(chunk) {
-    async function each_rs(rule_set) {
+    async function each_rs(goal) {
+      let rule_set2 = property_get(goal, "rule_set");
       await app_replace_tests_run_e2e_generic(
         rule_set,
         goal,
         app_replace_tests_run_e2e_normal_fn,
       );
     }
-    await each_unordered_async(chunk, each_rs);
+    await each_unordered_async(squashed, each_rs);
   }
   await each_async(chunks, each_chunk);
   async function lambda(index) {}
