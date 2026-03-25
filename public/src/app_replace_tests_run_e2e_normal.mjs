@@ -18,7 +18,7 @@ export async function app_replace_tests_run_e2e_normal() {
     object_merge_multiple(goals, merged);
     return goals;
   }
-  let squashed = list_map_squash(properties, lambda2);
+  let squashed = list_map_squash(rule_sets, lambda2);
   let count = 20;
   let chunks = list_chunk(rule_sets, count);
   async function each_chunk(chunk) {
