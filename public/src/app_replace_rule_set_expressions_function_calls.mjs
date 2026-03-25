@@ -30,6 +30,10 @@ export function app_replace_rule_set_expressions_function_calls() {
       },
       {
         start: "ce",
+        end: "id ( e )",
+      },
+      {
+        start: "id ( e )",
         end: "id ( i )",
       },
     ],
