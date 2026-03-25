@@ -61,6 +61,10 @@ export function app_replace_rule_set_expressions_function_calls() {
         end: "id ( id [ e ] )",
       },
       {
+        start: "id ( id [ e ] )",
+        end: "id ( id [ i ] )",
+      },
+      {
         start: "id ( e )",
         end: "id ( id ( ) )",
       },
