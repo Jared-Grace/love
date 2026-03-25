@@ -38,11 +38,11 @@ export function app_replace_rule_set_expressions_unary() {
         end: "! true",
       },
       {
-        start: "ue",
+        start: "uo li",
         end: "+ 3 . 1 4",
       },
       {
-        start: "ue",
+        start: "uo li",
         end: "typeof null",
       },
       {
