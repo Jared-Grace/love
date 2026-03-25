@@ -9,7 +9,7 @@ export async function app_replace_tests_run_e2e_normal() {
   async function lambda(rule_set) {
     await app_replace_tests_run_e2e_generic(
       [rule_set],
-      first,
+      rule_set,
       app_replace_tests_run_e2e_normal_fn,
     );
   }
