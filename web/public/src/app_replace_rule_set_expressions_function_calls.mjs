@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_replace_rule_set_expressions_member_and_access_abbreviations } from "../../../love/public/src/app_replace_rule_set_expressions_member_and_access_abbreviations.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
@@ -17,6 +18,9 @@ export function app_replace_rule_set_expressions_function_calls() {
   app_replace_rule_set_expressions_member_and_access_abbreviations(
     abbreviations,
   );
+  object_merge(abbreviations, {
+    ce: ["", "m", "ember ", "e", "xpression"],
+  });
   let r = {
     name: "Expressions function calls",
     abbreviations,
