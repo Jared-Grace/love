@@ -22,15 +22,15 @@ export async function app_replace_tests_run_e2e_generic(
   first,
   inner,
 ) {
+  let goals_first_rs = property_get(first, "goals");
+  let g = list_first(goals_first_rs);
+  let json = json_to(g);
+  let name2 = property_get(first, "name");
   let fns = app_replace_rule_sets_fns();
   let last = list_last(fns);
   let last_rs = last();
   async function lambda(page) {
-    let name2 = property_get(first, "name");
     await playwright_by_attribute_test_click(page, name2);
-    let goals_first_rs = property_get(first, "goals");
-    let g = list_first(goals_first_rs);
-    let json = json_to(g);
     await playwright_by_attribute_test_click(page, json);
     async function each_rule_set(rule_set) {
       let goals = property_get(rule_set, "goals");
