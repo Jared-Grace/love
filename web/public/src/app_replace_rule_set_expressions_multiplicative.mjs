@@ -34,6 +34,10 @@ export function app_replace_rule_set_expressions_multiplicative() {
         start: "nu mo nu",
         end: "3 . 1 4 * 2",
       },
+      {
+        start: "mae mo mae",
+        end: "mae mo ex",
+      },
     ],
   };
   return r;
