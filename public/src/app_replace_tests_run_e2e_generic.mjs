@@ -17,6 +17,7 @@ import { playwright_by_attribute_test_click } from "../../../love/public/src/pla
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function app_replace_tests_run_e2e_generic(rule_set, goal, inner) {
   async function lambda(page) {
+    await page.reload();
     let json = json_to(goal);
     let fns = app_replace_rule_sets_fns();
     let last = list_last(fns);
