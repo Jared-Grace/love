@@ -1,3 +1,4 @@
+import { list_empty_not_is_while } from "../../../love/public/src/list_empty_not_is_while.mjs";
 import { list_empty_not_is } from "../../../love/public/src/list_empty_not_is.mjs";
 import { list_pop_first } from "../../../love/public/src/list_pop_first.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
@@ -22,6 +23,8 @@ export function graph_search_depth_first(
     previous: null,
     depth: 0,
   });
+  function lambda2() {}
+  list_empty_not_is_while(queue2, lambda2);
   while (list_empty_not_is(queue)) {
     const q_current = list_pop_first(queue);
     let depth = property_get(q_current, "depth");
