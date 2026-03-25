@@ -17,7 +17,7 @@ import { json_to } from "../../../love/public/src/json_to.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { playwright_by_attribute_test_click } from "../../../love/public/src/playwright_by_attribute_test_click.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-export async function app_replace_tests_run_e2e_generic(rs, inner) {
+export async function app_replace_tests_run_e2e_generic(rs, inner, goal) {
   let rs_goals = property_get(rs, "goals");
   let rs_goal_first = list_first(rs_goals);
   let json = json_to(rs_goal_first);
