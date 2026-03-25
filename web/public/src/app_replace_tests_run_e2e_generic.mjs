@@ -16,14 +16,14 @@ import { json_to } from "../../../love/public/src/json_to.mjs";
 import { playwright_by_attribute_test_click } from "../../../love/public/src/playwright_by_attribute_test_click.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function app_replace_tests_run_e2e_generic(rule_set, goal, inner) {
-  let json = json_to(goal);
-  let fns = app_replace_rule_sets_fns();
-  let last = list_last(fns);
-  let last_rs = last();
-  let goals = property_get(last_rs, "goals");
-  let goal_last = list_last(goals);
-  let rule_set_name = property_get(rule_set, "name");
   async function lambda(page) {
+    let json = json_to(goal);
+    let fns = app_replace_rule_sets_fns();
+    let last = list_last(fns);
+    let last_rs = last();
+    let goals = property_get(last_rs, "goals");
+    let goal_last = list_last(goals);
+    let rule_set_name = property_get(rule_set, "name");
     await playwright_by_attribute_test_click(page, rule_set_name);
     await playwright_by_attribute_test_click(page, json);
     let rules_parsed = app_replace_rule_set_rules_get(rule_set);
