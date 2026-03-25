@@ -9,7 +9,7 @@ export async function playwright_by_attribute(page, name, value) {
     .elementHandles();
   const filtered = [];
   for (const el of elements) {
-    const a = el.getAttribute(name);
+    const a = await el.getAttribute(name);
     log(playwright_by_attribute.name, {
       name,
       value,
