@@ -67,7 +67,8 @@ export async function app_replace_tests_run_e2e_generic(
         await each_async(path, each_step);
         let eq2 = json_equal(rule_set, last_rs);
         if (not(eq2)) {
-          if (equal(goal, goal_last)) {$s
+          if (equal(goal, goal_last)) {
+            $s;
             last = true;
             let name = app_replace_rule_set_success_attribute_next();
             await playwright_by_attribute_test_click(page, name);
