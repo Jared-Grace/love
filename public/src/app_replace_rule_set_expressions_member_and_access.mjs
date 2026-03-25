@@ -43,11 +43,11 @@ export function app_replace_rule_set_expressions_member_and_access() {
       },
       {
         start: "me",
-        end: "me [ i ]",
+        end: "me [ 1 ]",
       },
       {
-        start: "me [ i ]",
-        end: "me [ i ] [ i ]",
+        start: "me [ 1 ]",
+        end: "me [ 2 ] [ 1 ]",
       },
     ],
   };
