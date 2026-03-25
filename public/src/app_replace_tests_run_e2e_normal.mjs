@@ -1,4 +1,4 @@
-import { each_range_async } from "../../../love/public/src/each_range_async.mjs";
+import { range } from "../../../love/public/src/range.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
 import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
@@ -21,5 +21,6 @@ export async function app_replace_tests_run_e2e_normal() {
   }
   await each_async(chunks, each_chunk);
   async function lambda2() {}
-  await each_range_async(count, lambda2);
+  let r = range(count);
+  await each_async(r, lambda2);
 }
