@@ -1,17 +1,9 @@
+import { app_replace_rule_set_expressions_function_calls_rules } from "../../../love/public/src/app_replace_rule_set_expressions_function_calls_rules.mjs";
 import { app_replace_rule_set_expressions_function_calls_abbreviations } from "../../../love/public/src/app_replace_rule_set_expressions_function_calls_abbreviations.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
-import { app_replace_rule_set_expressions_member_and_access_rules } from "../../../love/public/src/app_replace_rule_set_expressions_member_and_access_rules.mjs";
 export function app_replace_rule_set_expressions_function_calls() {
   const rules = [];
-  app_replace_rule_set_expressions_member_and_access_rules(rules);
-  list_add_multiple(rules, [
-    "ce > me",
-    "ce > ce ( )",
-    "ce > ce ( arg )",
-    "arg > e , arg",
-    "arg > e",
-  ]);
+  app_replace_rule_set_expressions_function_calls_rules(rules);
   list_add(rules, "e > ce");
   let abbreviations = {};
   app_replace_rule_set_expressions_function_calls_abbreviations(abbreviations);
