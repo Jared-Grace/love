@@ -55,10 +55,6 @@ export function app_replace_rule_set_expresions_additive() {
         start: "nu ao ( nu ao nu )",
         end: "3 . 1 4 - ( 2 + 2 )",
       },
-      {
-        start: "nu ao ( nu ao ue )",
-        end: "nu ao ( nu ao ce ( ag ) )",
-      },
     ],
   };
   return r;
