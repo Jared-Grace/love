@@ -8,7 +8,7 @@ export function app_replace_rule_set_expressions_member_and_access() {
   app_replace_rule_set_expressions_member_and_access_abbreviations(
     abbreviations,
   );
-  list_add(rules, "e > mae");
+  list_add(rules, "ex > mae");
   let r = {
     name: "Expressions member and access",
     rules: rules,
@@ -23,10 +23,10 @@ export function app_replace_rule_set_expressions_member_and_access() {
       },
       {
         start: "mae",
-        end: "( e ) . id",
+        end: "( ex ) . id",
       },
       {
-        start: "( e ) . id",
+        start: "( ex ) . id",
         end: "( id . id ) . id",
       },
       {
