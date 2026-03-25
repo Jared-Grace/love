@@ -24,9 +24,9 @@ export async function app_replace_tests_run_e2e_normal() {
   let chunks = list_chunk(rule_sets, count);
   async function each_chunk(chunk) {
     async function each_rs(goal) {
-      let rule_set2 = property_get(goal, "rule_set");
+      let rule_set_name = property_get(goal, "rule_set_name");
       await app_replace_tests_run_e2e_generic(
-        rule_set2,
+        rule_set_name,
         goal,
         app_replace_tests_run_e2e_normal_fn,
       );
