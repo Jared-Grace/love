@@ -13,7 +13,7 @@ import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule
 export async function app_replace_tests_run_e2e_all(e2e_inner) {
   let rule_sets = app_replace_rule_sets();
   let r = app_replace_rule_set_strings_simple();
-  let rules_sets = [r];
+  rule_sets = [r];
   function lambda2(rule_set) {
     let goals = property_get(rule_set, "goals");
     let mapped = object_wrap_multiple(goals, "goal");
