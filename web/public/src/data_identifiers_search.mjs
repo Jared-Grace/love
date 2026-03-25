@@ -6,11 +6,11 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function data_identifiers_search(s) {
   arguments_assert(arguments, 1);
   if (false) {
+    let fn = data_identifiers_get;
+    const v = await function_name_to_path_unalias(s);
+    let unaliased = property_get(v, "unaliased");
+    s = unaliased;
   }
-  let fn = data_identifiers_get;
-  const v = await function_name_to_path_unalias(s);
-  let unaliased = property_get(v, "unaliased");
-  s = unaliased;
   let result = await data_identifiers_search_generic(fn, s);
   return result;
 }
