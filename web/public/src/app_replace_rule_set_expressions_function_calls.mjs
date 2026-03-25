@@ -28,11 +28,11 @@ export function app_replace_rule_set_expressions_function_calls() {
       },
       {
         start: "ce",
-        end: "id ( i )",
+        end: "id ( e )",
       },
       {
-        start: "ce",
-        end: "id ( i, i )",
+        start: "id ( e )",
+        end: "id ( i )",
       },
     ],
   };
