@@ -7,7 +7,6 @@ import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule
 import { app_replace_tests_run_e2e_normal_fn } from "../../../love/public/src/app_replace_tests_run_e2e_normal_fn.mjs";
 export async function app_replace_tests_run_e2e_normal() {
   let rule_sets = app_replace_rule_sets();
-  let first = list_first(rule_sets);
   let chunks = list_chunk(rule_sets, 2);
   async function each_chunk(chunk) {
     async function each_rs(rule_set) {
