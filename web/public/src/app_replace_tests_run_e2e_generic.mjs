@@ -31,11 +31,11 @@ export async function app_replace_tests_run_e2e_generic(
     let g = list_first(goals_first_rs);
     let json = json_to(g);
     await playwright_by_attribute_test_click(page, json);
-    async function lambda_each(rule_set) {
+    async function each_rule_set(rule_set) {
       let goals = property_get(rule_set, "goals");
       let goal_last = list_last(goals);
       let rules_parsed = app_replace_rule_set_rules_get(rule_set);
-      async function lambda2(goal) {
+      async function each_goal(goal) {
         let refresh_count = 0;
         refresh_count =
           await app_replace_rule_set_attribute_refresh_count_assert(
@@ -73,9 +73,9 @@ export async function app_replace_tests_run_e2e_generic(
           }
         }
       }
-      await each_async(goals, lambda2);
+      await each_async(goals, each_goal);
     }
-    await each_async(rule_sets, lambda_each);
+    await each_async(rule_sets, each_rule_set);
   }
   await playwright_test_app_dev(app_replace, lambda);
 }
