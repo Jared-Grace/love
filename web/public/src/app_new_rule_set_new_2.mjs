@@ -20,14 +20,14 @@ export function app_new_rule_set_new_2() {
     goals: [
       {
         start: "ae",
-        end: "mae mo mae",
+        end: "ce mo ce",
       },
       {
-        start: "mae mo mae",
+        start: "ce mo ce",
         end: "nu mo mae",
       },
       {
-        start: "nu mo mae",
+        start: "nu mo ce",
         end: "nu mo nu",
       },
       {
@@ -39,7 +39,7 @@ export function app_new_rule_set_new_2() {
         end: "3 . 1 4 + 2",
       },
       {
-        start: "nu ao mae",
+        start: "nu ao ce",
         end: "nu ao ( ex )",
       },
       {
