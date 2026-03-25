@@ -18,7 +18,7 @@ export async function app_replace_tests_run_e2e_goal(
   page,
   goal,
   rule_set,
-  inner,
+  e2e_inner,
 ) {
   await playwright_refresh(page);
   let json = json_to(goal);
@@ -43,7 +43,7 @@ export async function app_replace_tests_run_e2e_goal(
     let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);
     async function each_step(p) {
       let symbol_id = null;
-      ({ refresh_count, symbol_id } = await inner(
+      ({ refresh_count, symbol_id } = await e2e_inner(
         p,
         refresh_count,
         page,

@@ -10,7 +10,7 @@ import { list_map_squash } from "../../../love/public/src/list_map_squash.mjs";
 import { each_range_unordered_async } from "../../../love/public/src/each_range_unordered_async.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { app_replace_tests_run_e2e_normal_fn } from "../../../love/public/src/app_replace_tests_run_e2e_normal_fn.mjs";
-export async function app_replace_tests_run_e2e_normal() {
+export async function app_replace_tests_run_e2e_normal() {e2e_inner=app_replace_tests_run_e2e_normal_fn
   let rule_sets = app_replace_rule_sets();
   function lambda2(rule_set) {
     let goals = property_get(rule_set, "goals");
