@@ -19,7 +19,7 @@ export function app_replace_rule_set_expressions_unary() {
   app_replace_rule_set_expressions_function_calls_abbreviations(abbreviations);
   object_merge(abbreviations, {
     ce: ["", "u", "nary ", "e", "xpression"],
-    arg: ["", "ar", "arguments ", "g", "rower"],
+    arg: ["", "u", "nary ", "o", "perator"],
   });
   let r = {
     name: "Expressions unary",
