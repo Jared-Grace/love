@@ -9,6 +9,7 @@ export async function app_replace_tests_run_e2e_single(fn_name) {
   await app_replace_tests_run_e2e_generic(
     rs,
     app_replace_tests_run_e2e_normal_fn,
+    goal,
   );
   return name;
 }
