@@ -4,7 +4,7 @@ export function app_replace_rule_set_expressions_primary_rules(rules) {
   let added = [
     "pe > id",
     "pe > li",
-    "pe > ( e )",
+    "pe > ( ex )",
     "li > n",
     "n > de",
     "de > 3 . 1 4",
