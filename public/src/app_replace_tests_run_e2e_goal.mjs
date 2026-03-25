@@ -1,3 +1,4 @@
+import { playwright_refresh } from "../../../love/public/src/playwright_refresh.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_rule_set_success_attribute_next } from "../../../love/public/src/app_replace_rule_set_success_attribute_next.mjs";
 import { playwright_by_attribute_test_exists_assert } from "../../../love/public/src/playwright_by_attribute_test_exists_assert.mjs";
@@ -21,14 +22,7 @@ export async function app_replace_tests_run_e2e_goal(
   inner,
 ) {
   log(app_replace_tests_run_e2e_goal.name, "sleep");
-  const context = page.context();
-  await context.clearCookies();
-  function lambda() {
-    localStorage.clear();
-    sessionStorage.clear();
-  }
-  await page.evaluate(lambda);
-  await page.reload();
+  await playwright_refresh(page);
   log(app_replace_tests_run_e2e_goal.name, "refreshed");
   let json = json_to(goal);
   let fns = app_replace_rule_sets_fns();
