@@ -31,7 +31,7 @@ export function app_replace_rule_set_expressions_unary() {
       },
       {
         start: "uo li",
-        end: "- de",
+        end: "- 2",
       },
       {
         start: "uo li",
@@ -39,7 +39,7 @@ export function app_replace_rule_set_expressions_unary() {
       },
       {
         start: "ue",
-        end: "+ i",
+        end: "+ 3 . 1 4",
       },
       {
         start: "ue",
