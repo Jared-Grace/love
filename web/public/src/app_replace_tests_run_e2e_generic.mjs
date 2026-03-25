@@ -67,7 +67,7 @@ export async function app_replace_tests_run_e2e_generic(
         await each_async(path, each_step);
         let eq2 = json_equal(rule_set, last_rs);
         let last_goal = false;
-        if (not(eq2)) {
+        if (eq2) {
           if (equal(goal, goal_last)) {
             last_goal = true;
           }
