@@ -22,7 +22,7 @@ export async function app_replace_tests_run_e2e_generic(rule_set, goal, inner) {
   let last_rs = last();
   let goals = property_get(last_rs, "goals");
   let goal_last = list_last(goals);
-  let rule_set_name = property_get(rule_set, "rule_set_name");
+  let rule_set_name = property_get(rule_set, "name");
   async function lambda(page) {
     await playwright_by_attribute_test_click(page, rule_set_name);
     await playwright_by_attribute_test_click(page, json);
