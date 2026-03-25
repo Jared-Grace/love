@@ -27,11 +27,19 @@ export function app_replace_rule_set_expressions_unary() {
     goals: [
       {
         start: "ue",
-        end: "- i",
+        end: "- de",
       },
       {
         start: "ue",
         end: "! true",
+      },
+      {
+        start: "ue",
+        end: "+ i",
+      },
+      {
+        start: "ue",
+        end: "typeof null",
       },
     ],
   };
