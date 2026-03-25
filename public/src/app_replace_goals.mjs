@@ -1,7 +1,6 @@
 import { html_data_set_test } from "../../../love/public/src/html_data_set_test.mjs";
 import { html_data_set_object } from "../../../love/public/src/html_data_set_object.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
-import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
 import { app_replace_goals_generic } from "../../../love/public/src/app_replace_goals_generic.mjs";
 import { app_replace_goal_completed_initialize } from "../../../love/public/src/app_replace_goal_completed_initialize.mjs";
 import { app_replace_rule_sets_data_initialize } from "../../../love/public/src/app_replace_rule_sets_data_initialize.mjs";
@@ -35,9 +34,8 @@ export function app_replace_goals(context) {
       index,
       lambda,
     );
-    let r4 = app_replace_start_end_get(goal);
-    let start = property_get(r4, "start");
-    let end = property_get(r4, "end");
+    let start = property_get(goal, "start");
+    let end = property_get(goal, "end");
     html_data_set_object(title, r4);
     let v = json_to(goal);
     html_data_set_test(title, v);
