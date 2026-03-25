@@ -1,4 +1,4 @@
-import { app_new_rule_set_new_2 } from "../../../love/public/src/app_new_rule_set_new_2.mjs";
+import { app_replace_rule_set_expresions_additive } from "../../../love/public/src/app_replace_rule_set_expresions_additive.mjs";
 import { app_replace_rule_set_expressions_multiplicative } from "../../../love/public/src/app_replace_rule_set_expressions_multiplicative.mjs";
 import { app_replace_rule_set_expressions_unary } from "../../../love/public/src/app_replace_rule_set_expressions_unary.mjs";
 import { app_replace_rule_set_expressions_function_calls } from "../../../love/public/src/app_replace_rule_set_expressions_function_calls.mjs";
@@ -113,7 +113,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_expressions_function_calls,
     app_replace_rule_set_expressions_unary,
     app_replace_rule_set_expressions_multiplicative,
-    app_new_rule_set_new_2,
+    app_replace_rule_set_expresions_additive,
   ];
   return r2;
 }
