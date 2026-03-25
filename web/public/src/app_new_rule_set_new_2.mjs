@@ -19,8 +19,48 @@ export function app_new_rule_set_new_2() {
     rules: rules,
     goals: [
       {
-        start: "a",
-        end: "b",
+        start: "ae",
+        end: "ae mo ae",
+      },
+      {
+        start: "ae mo ae",
+        end: "nu mo ae",
+      },
+      {
+        start: "nu mo ae",
+        end: "nu mo nu",
+      },
+      {
+        start: "nu ao nu",
+        end: "1 - 2",
+      },
+      {
+        start: "nu ao nu",
+        end: "3 . 1 4 + 2",
+      },
+      {
+        start: "nu ao ae",
+        end: "nu ao ( ex )",
+      },
+      {
+        start: "nu ao ( ex )",
+        end: "nu ao ( mue ao ue )",
+      },
+      {
+        start: "nu ao ( mue ao ue )",
+        end: "nu ao ( pe ao ue )",
+      },
+      {
+        start: "nu ao ( pe ao ue )",
+        end: "nu ao ( nu ao pe )",
+      },
+      {
+        start: "nu ao ( nu ao pe )",
+        end: "nu ao ( nu ao nu )",
+      },
+      {
+        start: "nu ao ( nu ao nu )",
+        end: "3 . 1 4 - ( 2 + 2 )",
       },
     ],
   };
