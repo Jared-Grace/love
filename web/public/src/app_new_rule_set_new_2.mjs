@@ -9,7 +9,7 @@ export function app_new_rule_set_new_2() {
   let abbreviations = {};
   app_replace_rule_set_expressions_unary_abbreviations(abbreviations);
   object_merge(abbreviations, {
-    ue: ["", "u", "nary ", "e", "xpression"],
+    mue: ["", "mu", "ltiplicative ", "e", "xpression"],
     uo: ["", "u", "nary ", "o", "perator"],
   });
   let r = {
