@@ -15,14 +15,15 @@ export async function app_replace_tests_run_e2e_normal() {
     app_replace_tests_run_e2e_normal_fn,
   );
   return;
-  async function lambda2(item) {}
-  await each_async(list, lambda2);
-  async function lambda(rule_set) {
-    await app_replace_tests_run_e2e_generic(
-      [rule_set],
-      rule_set,
-      app_replace_tests_run_e2e_normal_fn,
-    );
+  async function each_chunk(chunk) {
+    async function each_rs(rule_set) {
+      await app_replace_tests_run_e2e_generic(
+        [rule_set],
+        rule_set,
+        app_replace_tests_run_e2e_normal_fn,
+      );
+    }
+    await each_unordered_async(chunk, each_rs);
   }
-  await each_unordered_async(rule_sets, lambda);
+  await each_async(chunks, each_chunk);
 }
