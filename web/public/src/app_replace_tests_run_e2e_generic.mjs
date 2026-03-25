@@ -73,9 +73,7 @@ export async function app_replace_tests_run_e2e_generic(
           if (equal(goal, goal_last)) {
             last_goal = true;
           }
-        }
-        if (false) {
-        }
+        }$n
         if (not(last_goal)) {
           let name = app_replace_rule_set_success_attribute_next();
           await playwright_by_attribute_test_click(page, name);
