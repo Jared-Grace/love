@@ -21,7 +21,6 @@ export async function app_replace_tests_run_e2e_goal(
   inner,
 ) {
   log(app_replace_tests_run_e2e_goal.name, "sleep");
-  let v = page.url();
   const context = page.context();
   await context.clearCookies();
   function lambda() {
