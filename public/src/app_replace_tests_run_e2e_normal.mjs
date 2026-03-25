@@ -1,3 +1,6 @@
+import { app_replace } from "../../../love/public/src/app_replace.mjs";
+import { playwright_test_app_dev } from "../../../love/public/src/playwright_test_app_dev.mjs";
+import { app_replace_tests_run_e2e_goal } from "../../../love/public/src/app_replace_tests_run_e2e_goal.mjs";
 import { object_wrap_multiple } from "../../../love/public/src/object_wrap_multiple.mjs";
 import { object_merge_multiple } from "../../../love/public/src/object_merge_multiple.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -25,6 +28,10 @@ export async function app_replace_tests_run_e2e_normal() {
   let chunks = list_chunk(squashed, count);
   async function each_chunk(chunk) {
     async function each_goal(m) {
+      async function lambda(page) {
+        await app_replace_tests_run_e2e_goal(page, goal, rule_set, inner);
+      }
+      await playwright_test_app_dev(app_replace, lambda);
       let rule_set = property_get(m, "rule_set");
       let goal = property_get(m, "goal");
       await app_replace_tests_run_e2e_browser(
