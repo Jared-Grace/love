@@ -47,10 +47,10 @@ export function app_replace_rule_set_expressions_unary() {
       },
       {
         start: "ue",
-        end: "- ( e )",
+        end: "- ( ex )",
       },
       {
-        start: "- ( e )",
+        start: "- ( ex )",
         end: "- ( - li )",
       },
       {
