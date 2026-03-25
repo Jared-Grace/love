@@ -1,3 +1,4 @@
+import { app_replace_rule_set_success_attribute_completed } from "../../../love/public/src/app_replace_rule_set_success_attribute_completed.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { json_equal } from "../../../love/public/src/json_equal.mjs";
@@ -76,6 +77,7 @@ export async function app_replace_tests_run_e2e_generic(
           let name = app_replace_rule_set_success_attribute_next();
           await playwright_by_attribute_test_click(page, name);
         }
+        let a = app_replace_rule_set_success_attribute_completed();
       }
       await each_async(goals, each_goal);
     }
