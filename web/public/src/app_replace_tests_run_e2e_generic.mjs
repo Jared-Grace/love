@@ -19,7 +19,8 @@ export async function app_replace_tests_run_e2e_generic(
   inner,
 ) {
   let fns = app_replace_rule_sets_fns();
-  let last = list_last(list);
+  let last = list_last(fns);
+  let last_rs = last();
   async function lambda(page) {
     let name2 = property_get(first, "name");
     await playwright_by_attribute_test_click(page, name2);
