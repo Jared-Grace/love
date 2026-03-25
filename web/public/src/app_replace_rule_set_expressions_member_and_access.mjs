@@ -8,21 +8,21 @@ export function app_replace_rule_set_expressions_member_and_access() {
   app_replace_rule_set_expressions_member_and_access_abbreviations(
     abbreviations,
   );
-  list_add(rules, "e > me");
+  list_add(rules, "e > mae");
   let r = {
     name: "Expressions member and access",
     rules: rules,
     goals: [
       {
-        start: "me",
+        start: "mae",
         end: "i",
       },
       {
-        start: "me",
+        start: "mae",
         end: "id . id",
       },
       {
-        start: "me",
+        start: "mae",
         end: "( e ) . id",
       },
       {
@@ -30,24 +30,24 @@ export function app_replace_rule_set_expressions_member_and_access() {
         end: "( id . id ) . id",
       },
       {
-        start: "me . id",
+        start: "mae . id",
         end: "id . id . id",
       },
       {
-        start: "me",
+        start: "mae",
         end: "id [ pe ]",
       },
       {
-        start: "me",
+        start: "mae",
         end: 'id [ " l u v " ]',
       },
       {
-        start: "me",
-        end: "me [ 1 ]",
+        start: "mae",
+        end: "mae [ 1 ]",
       },
       {
-        start: "me [ 1 ]",
-        end: "me [ 2 ] [ 1 ]",
+        start: "mae [ 1 ]",
+        end: "mae [ 2 ] [ 1 ]",
       },
     ],
   };
