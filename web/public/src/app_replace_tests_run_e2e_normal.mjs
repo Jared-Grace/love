@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { object_merge_curried_right } from "../../../love/public/src/object_merge_curried_right.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map_squash } from "../../../love/public/src/list_map_squash.mjs";
@@ -18,6 +19,8 @@ export async function app_replace_tests_run_e2e_normal() {
       rule_set,
     };
     let r = object_merge_curried_right(merged);
+    function lambda3(item) {}
+    each(list, lambda3);
   }
   let squashed = list_map_squash(properties, lambda2);
   const property_name = "goals";
