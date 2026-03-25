@@ -8,7 +8,7 @@ export function app_replace_rule_set_expressions_function_calls() {
     "ce > me",
     "ce > ce ( )",
     "ce > ce ( arg )",
-    "arg > e, arg",
+    "arg > e , arg",
     "arg > e",
   ]);
   list_add(rules, "e > ce");
@@ -38,11 +38,11 @@ export function app_replace_rule_set_expressions_function_calls() {
       },
       {
         start: "id ( arg )",
-        end: "id ( e, e )",
+        end: "id ( e , e )",
       },
       {
         start: "id ( e, e )",
-        end: "id ( i, e )",
+        end: "id ( i , e )",
       },
       {
         start: "id ( e )",
