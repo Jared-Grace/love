@@ -34,7 +34,7 @@ export function app_replace_rule_set_expressions_primary() {
       },
       {
         start: "pe",
-        end: "st",
+        end: '" l u v "',
       },
       {
         start: "pe",
