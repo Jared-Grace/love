@@ -8,8 +8,7 @@ export function app_replace_rule_set_expressions_member_and_access() {
   let abbreviations = {};
   app_replace_rule_set_expressions_function_calls_abbreviations(abbreviations);
   object_merge(abbreviations, {
-    ce: ["", "c", "all ", "e", "xpression"],
-    arg: ["", "ar", "arguments ", "g", "rower"],
+    ce: ["", "m", "ember ", "e", "xpression"],
   });
   list_add(rules, "e > me");
   let r = {
