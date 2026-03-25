@@ -1,5 +1,3 @@
-import { exit } from "../../../love/public/src/exit.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { object_merge_multiple } from "../../../love/public/src/object_merge_multiple.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map_squash } from "../../../love/public/src/list_map_squash.mjs";
@@ -22,10 +20,6 @@ export async function app_replace_tests_run_e2e_normal() {
     return goals;
   }
   let squashed = list_map_squash(rule_sets, lambda2);
-  log(app_replace_tests_run_e2e_normal.name, {
-    squashed,
-  });
-  exit();
   let count = 10;
   let chunks = list_chunk(squashed, count);
   async function each_chunk(chunk) {
