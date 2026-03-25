@@ -1,3 +1,4 @@
+import { app_replace_rule_sets_fns } from "../../../love/public/src/app_replace_rule_sets_fns.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
 import { playwright_test_app_dev } from "../../../love/public/src/playwright_test_app_dev.mjs";
 import { app_replace_rule_set_success_attribute_next } from "../../../love/public/src/app_replace_rule_set_success_attribute_next.mjs";
@@ -16,6 +17,7 @@ export async function app_replace_tests_run_e2e_generic(
   first,
   inner,
 ) {
+  let r2 = app_replace_rule_sets_fns();
   async function lambda(page) {
     let name2 = property_get(first, "name");
     await playwright_by_attribute_test_click(page, name2);
