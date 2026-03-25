@@ -8,8 +8,8 @@ export async function app_replace_tests_run_e2e_single(fn_name) {
   let name = property_get(rs, "name");
   await app_replace_tests_run_e2e_generic(
     rs,
-    app_replace_tests_run_e2e_normal_fn,
     goal,
+    app_replace_tests_run_e2e_normal_fn,
   );
   return name;
 }
