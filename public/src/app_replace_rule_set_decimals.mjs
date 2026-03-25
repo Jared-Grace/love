@@ -22,18 +22,18 @@ export function app_replace_rule_set_decimals() {
       },
       {
         start: "de",
-        end: "p . di di",
+        end: "pi . di di",
       },
       {
-        start: "p . di di",
+        start: "pi . di di",
         end: "3 . 1 4",
       },
       {
-        start: "p . di g",
-        end: "p . di di di di di",
+        start: "pi . di g",
+        end: "pi . di di di di di",
       },
       {
-        start: "p . di di di di di",
+        start: "pi . di di di di di",
         end: "7 . 7 di di di di",
       },
       {
