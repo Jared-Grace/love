@@ -1,7 +1,3 @@
-import { log_inner } from "../../../love/public/src/log_inner.mjs";
-import { log } from "../../../love/public/src/log.mjs";
-import { properties_get } from "../../../love/public/src/properties_get.mjs";
-import { global_get } from "../../../love/public/src/global_get.mjs";
 import { server_data_endpoints } from "../../../love/public/src/server_data_endpoints.mjs";
 import { promise_resolved } from "../../../love/public/src/promise_resolved.mjs";
 import { server_url_api_ordered } from "../../../love/public/src/server_url_api_ordered.mjs";
@@ -50,17 +46,7 @@ export function server() {
   }
   server_data_endpoints(app);
   app.use(v);
-  let global = global_get();
-  log_keep(server.name, "Static server running at: " + server_url());
-  console.log({
-    a: global.log_inner,
-  });
   function lambda() {
-    let properties = properties_get(global);
-    console.log(properties);
-    console.log(global.log_inner);
-    return;
-    log_keep(server.name, "Static server running at: " + server_url());
     log_keep(server.name, "Static server running at: " + server_url());
   }
   app.listen(port, lambda);
