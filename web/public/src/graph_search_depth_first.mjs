@@ -1,3 +1,4 @@
+import { list_pop_first } from "../../../love/public/src/list_pop_first.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { set_add } from "../../../love/public/src/set_add.mjs";
@@ -21,7 +22,7 @@ export function graph_search_depth_first(
     depth: 0,
   });
   while (queue.length > 0) {
-    const q_current = queue.shift();
+    const q_current = list_pop_first(queue);
     let depth = property_get(q_current, "depth");
     let node = property_get(q_current, "node");
     let json = mapper(node);
