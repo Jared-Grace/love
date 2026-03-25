@@ -1,8 +1,6 @@
 import { object_merge_multiple } from "../../../love/public/src/object_merge_multiple.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_map_squash } from "../../../love/public/src/list_map_squash.mjs";
-import { list_squash } from "../../../love/public/src/list_squash.mjs";
-import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { each_range_unordered_async } from "../../../love/public/src/each_range_unordered_async.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_chunk } from "../../../love/public/src/list_chunk.mjs";
@@ -21,9 +19,6 @@ export async function app_replace_tests_run_e2e_normal() {
     return goals;
   }
   let squashed = list_map_squash(properties, lambda2);
-  const property_name = "goals";
-  let unsquashed = list_map_property(rule_sets, property_name);
-  let goalss = list_squash(unsquashed);
   let count = 20;
   let chunks = list_chunk(rule_sets, count);
   async function each_chunk(chunk) {
