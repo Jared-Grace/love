@@ -56,7 +56,7 @@ import { app_replace_rule_set_shrink_different } from "../../../love/public/src/
 import { app_replace_rule_set_grow_different } from "../../../love/public/src/app_replace_rule_set_grow_different.mjs";
 import { app_replace_rule_set_replace } from "../../../love/public/src/app_replace_rule_set_replace.mjs";
 export function app_replace_rule_sets_fns() {
-  let r2 = [
+  let fns = [
     app_replace_rule_set_replace,
     app_replace_rule_set_grow_different,
     app_replace_rule_set_shrink_different,
@@ -115,5 +115,5 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_expressions_multiplicative,
     app_replace_rule_set_expressions_additive,
   ];
-  return r2;
+  return fns;
 }
