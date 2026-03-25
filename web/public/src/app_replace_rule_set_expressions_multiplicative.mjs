@@ -26,6 +26,10 @@ export function app_replace_rule_set_expressions_multiplicative() {
         start: "mae mo mae",
         end: "nu mo nu",
       },
+      {
+        start: "nu mo nu",
+        end: "1 / 2",
+      },
     ],
   };
   return r;
