@@ -66,14 +66,14 @@ export async function app_replace_tests_run_e2e_generic(
         }
         await each_async(path, each_step);
         let eq2 = json_equal(rule_set, last_rs);
-        let last_goal = false;
+            let last_goal = false;
         if (not(eq2)) {
           if (equal(goal, goal_last)) {
             last_goal = true;
             let name = app_replace_rule_set_success_attribute_next();
             await playwright_by_attribute_test_click(page, name);
           }
-        }
+        }$i
       }
       await each_async(goals, each_goal);
     }
