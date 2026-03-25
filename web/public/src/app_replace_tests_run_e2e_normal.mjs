@@ -22,7 +22,7 @@ export async function app_replace_tests_run_e2e_normal() {
     return mapped;
   }
   let remaining = list_map_squash(rule_sets, lambda2);
-  let count = 20;
+  let count = 17;
   async function lambda(index) {
     async function lambda(page) {
       async function lambda4() {
