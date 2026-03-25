@@ -40,7 +40,7 @@ export async function app_replace_tests_run_e2e_normal() {
   async function lambda(index) {
     async function lambda(page) {
       function lambda4() {}
-      list_empty_not_is_while(queue2, lambda4);
+      list_empty_not_is_while(queue, lambda4);
       let next = list_pop(queue);
       await app_replace_tests_run_e2e_goal(page, goal, rule_set, inner);
     }
