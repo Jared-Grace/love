@@ -25,8 +25,8 @@ export async function app_replace_tests_run_e2e_normal() {
     let merged = {
       rule_set_name,
     };
-    object_merge_multiple(goals, merged);
-    return goals;
+    object_merge_multiple(mapped, merged);
+    return mapped;
   }
   let squashed = list_map_squash(rule_sets, lambda2);
   let count = 1;
