@@ -8,6 +8,6 @@ export function app_replace_rule_set_expressions_function_calls_abbreviations(
   );
   let to2 = object_merge(abbreviations, {
     ce: ["", "c", "all ", "e", "xpression"],
-    arg: ["", "ar", "arguments ", "g", "rower"],
+    arg: ["", "a", "arguments ", "g", "rower"],
   });
 }
