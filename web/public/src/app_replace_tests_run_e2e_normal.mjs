@@ -14,6 +14,7 @@ export async function app_replace_tests_run_e2e_normal() {
       await app_replace_tests_run_e2e_generic(
         rule_set,
         app_replace_tests_run_e2e_normal_fn,
+        goal,
       );
     }
     await each_unordered_async(chunk, each_rs);
