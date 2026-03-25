@@ -29,7 +29,7 @@ export function app_replace_rule_set_decimals() {
         end: "3 . 1 4",
       },
       {
-        start: "pi . di g",
+        start: "pi . di ig",
         end: "pi . di di di di di",
       },
       {
