@@ -1,4 +1,4 @@
-import { each_async } from "../../../love/public/src/each_async.mjs";
+import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
 import { app_replace_tests_run_e2e_generic } from "../../../love/public/src/app_replace_tests_run_e2e_generic.mjs";
 import { list_first } from "../../../love/public/src/list_first.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
@@ -7,7 +7,7 @@ export async function app_replace_tests_run_e2e_normal() {
   let rule_sets = app_replace_rule_sets();
   let first = list_first(rule_sets);
   async function lambda(item) {}
-  await each_async(list, lambda);
+  await each_unordered_async(list, lambda);
   await app_replace_tests_run_e2e_generic(
     rule_sets,
     first,
