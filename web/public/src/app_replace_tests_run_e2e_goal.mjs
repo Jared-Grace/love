@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_rule_set_success_attribute_next } from "../../../love/public/src/app_replace_rule_set_success_attribute_next.mjs";
 import { playwright_by_attribute_test_exists_assert } from "../../../love/public/src/playwright_by_attribute_test_exists_assert.mjs";
 import { app_replace_rule_set_success_attribute_completed } from "../../../love/public/src/app_replace_rule_set_success_attribute_completed.mjs";
@@ -22,6 +23,7 @@ export async function app_replace_tests_run_e2e_goal(
   await page.reload({
     waitUntil: "load",
   });
+  log(app_replace_tests_run_e2e_goal.name, {});
   let json = json_to(goal);
   let fns = app_replace_rule_sets_fns();
   let last = list_last(fns);
