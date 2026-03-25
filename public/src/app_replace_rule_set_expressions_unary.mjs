@@ -27,6 +27,10 @@ export function app_replace_rule_set_expressions_unary() {
     goals: [
       {
         start: "ue",
+        end: "- li",
+      },
+      {
+        start: "- li",
         end: "- de",
       },
       {
