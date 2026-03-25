@@ -23,14 +23,7 @@ export function app_replace_rule_set_expressions_unary() {
   });
   let r = {
     name: "Expressions unary",
-    rules: [
-      "ue > ce",
-      "ue > uo ue",
-      "uo > !",
-      "uo > -",
-      "uo > +",
-      "uo > typeof",
-    ],
+    rules,
     goals: [
       {
         start: "a",
