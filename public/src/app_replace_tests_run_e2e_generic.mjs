@@ -1,7 +1,6 @@
 import { playwright_by_attribute_exists_assert } from "../../../portfolio_qa/public/src/playwright_by_attribute_exists_assert.mjs";
 import { app_replace_rule_set_success_attribute_completed } from "../../../love/public/src/app_replace_rule_set_success_attribute_completed.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { not } from "../../../love/public/src/not.mjs";
 import { json_equal } from "../../../love/public/src/json_equal.mjs";
 import { list_last } from "../../../love/public/src/list_last.mjs";
 import { app_replace_rule_sets_fns } from "../../../love/public/src/app_replace_rule_sets_fns.mjs";
@@ -73,11 +72,11 @@ export async function app_replace_tests_run_e2e_generic(
           if (equal(goal, goal_last)) {
             last_goal = true;
           }
-        }$n
-        if (not(last_goal)) {
+        }
+        if (last_goal) {
+        } else {
           let name = app_replace_rule_set_success_attribute_next();
           await playwright_by_attribute_test_click(page, name);
-        } else {
         }
         await playwright_by_attribute_exists_assert(page2, name3, value);
         let a = app_replace_rule_set_success_attribute_completed();
