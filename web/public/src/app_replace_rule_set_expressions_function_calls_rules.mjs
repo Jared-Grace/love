@@ -6,7 +6,7 @@ export function app_replace_rule_set_expressions_function_calls_rules(rules) {
     "ce > mae",
     "ce > ce ( )",
     "ce > ce ( ag )",
-    "ag > xe , ag",
+    "ag > ex , ag",
     "ag > ex",
   ]);
 }
