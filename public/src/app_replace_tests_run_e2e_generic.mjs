@@ -24,11 +24,11 @@ export async function app_replace_tests_run_e2e_generic(
   let fns = app_replace_rule_sets_fns();
   let last = list_last(fns);
   let last_rs = last();
+  let goals = property_get(last_rs, "goals");
+  let goal_last = list_last(goals);
   async function lambda(page) {
     await playwright_by_attribute_test_click(page, rule_set_name);
     await playwright_by_attribute_test_click(page, json);
-    let goals = property_get(rule_set, "goals");
-    let goal_last = list_last(goals);
     let rules_parsed = app_replace_rule_set_rules_get(rule_set);
     async function each_goal(goal) {
       let refresh_count = 0;
