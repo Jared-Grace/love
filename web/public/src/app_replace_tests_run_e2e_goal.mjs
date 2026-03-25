@@ -21,11 +21,12 @@ export async function app_replace_tests_run_e2e_goal(
   rule_set,
   inner,
 ) {
+  log(app_replace_tests_run_e2e_goal.name, "sleep");
   await sleep(5000);
   await page.reload({
     waitUntil: "load",
   });
-  log(app_replace_tests_run_e2e_goal.name, {});
+  log(app_replace_tests_run_e2e_goal.name, "refreshed");
   let json = json_to(goal);
   let fns = app_replace_rule_sets_fns();
   let last = list_last(fns);
