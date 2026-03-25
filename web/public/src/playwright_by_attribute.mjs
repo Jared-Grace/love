@@ -1,3 +1,4 @@
+import { list_single } from "../../../love/public/src/list_single.mjs";
 export async function playwright_by_attribute(page, name, value) {
   const elements = await page
     .locator("*")
@@ -11,5 +12,6 @@ export async function playwright_by_attribute(page, name, value) {
       filtered.push(el);
     }
   }
+  let only = list_single(list);
   return filtered;
 }
