@@ -36,7 +36,7 @@ export function app_replace_rule_set_expressions_multiplicative() {
       },
       {
         start: "mae mo mae",
-        end: "mae mo ex",
+        end: "mae mo ( ex )",
       },
     ],
   };
