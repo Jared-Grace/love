@@ -1,7 +1,7 @@
 export function app_new_rule_set_new_2() {
   let r = {
     name: "Expressions unary",
-    rules: ["eu > b"],
+    rules: ["ue > b"],
     goals: [
       {
         start: "a",
