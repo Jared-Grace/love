@@ -3,16 +3,16 @@ import { app_replace_rule_set_expressions_member_and_access_rules } from "../../
 export function app_replace_rule_set_expressions_function_calls() {
   const rules = [];
   app_replace_rule_set_expressions_member_and_access_rules(rules);
-  list_add_multiple(list, items);
+  list_add_multiple(rules, [
+    "ce > me",
+    "ce > ce ( )",
+    "ce > ce ( arg )",
+    "arg > e, arg",
+    "arg > e",
+  ]);
   let r = {
     name: "Expressions function calls",
-    rules: [
-      "ce > me",
-      "ce > ce ( )",
-      "ce > ce ( arg )",
-      "arg > e, arg",
-      "arg > e",
-    ],
+    rules,
     goals: [
       {
         start: "ce",
