@@ -11,8 +11,8 @@ export function app_new_rule_set_new_2() {
   let abbreviations = {};
   app_replace_rule_set_expressions_multiplicative_abbreviations(abbreviations);
   object_merge(abbreviations, {
-    mue: ["", "mu", "ltiplicative ", "e", "xpression"],
-    mo: ["", "m", "ultiplicative ", "o", "perator"],
+    ae: ["", "a", "dditive ", "e", "xpression"],
+    ao: ["", "a", "dditive ", "o", "perator"],
   });
   let r = {
     name: "Expresions additive",
