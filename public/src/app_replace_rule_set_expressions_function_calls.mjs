@@ -22,6 +22,10 @@ export function app_replace_rule_set_expressions_function_calls() {
         start: "ce",
         end: "id ( )",
       },
+      {
+        start: "ce",
+        end: "id . id ( )",
+      },
     ],
   };
   return r;
