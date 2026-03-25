@@ -1,3 +1,4 @@
+import { app_replace_rule_set_success_attribute_completed } from "../../../love/public/src/app_replace_rule_set_success_attribute_completed.mjs";
 import { app_replace_rule_set_success_attribute_next } from "../../../love/public/src/app_replace_rule_set_success_attribute_next.mjs";
 import { html_data_set_test } from "../../../love/public/src/html_data_set_test.mjs";
 import { html_width_full } from "../../../love/public/src/html_width_full.mjs";
@@ -113,6 +114,8 @@ export async function app_replace_rule_set_success(
       p_next,
       "You have completed all goals that are available at this time!",
     );
+    let value3 = app_replace_rule_set_success_attribute_completed();
+    html_data_set_test(completed, value3);
     return;
   }
   function lambda2() {
