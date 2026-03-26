@@ -141,6 +141,7 @@ export async function app_replace_rule_set(context) {
     "border-radius": "9999px",
     "background-color": highlight,
     "padding-left": "0.6em",
+    width: rule_set_index / size + "%",
   });
   html_centered(div);
   html_style_padding_y(div, "0.3em");
