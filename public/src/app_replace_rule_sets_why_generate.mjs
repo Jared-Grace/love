@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -11,6 +12,9 @@ export async function app_replace_rule_sets_why_generate() {
       "You will receive the JSON of an unrestricted grammar (although it could be more restrictive like a context-free grammar). Please provide a sentence or two describing what the grammar demonstrates, and why.",
       json,
     );
+    log(app_replace_rule_sets_why_generate.name, {
+      r,
+    });
     exit();
   }
   await each_async(rule_sets, lambda);
