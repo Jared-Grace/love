@@ -1,6 +1,5 @@
-import { list_find_or_null } from "../../../love/public/src/list_find_or_null.mjs";
+import { js_object_expression_property_named_or_null } from "../../../love/public/src/js_object_expression_property_named_or_null.mjs";
 import { list_find } from "../../../love/public/src/list_find.mjs";
-import { js_property_key_named_curried_right } from "../../../love/public/src/js_property_key_named_curried_right.mjs";
 import { js_object_expression_properties } from "../../../love/public/src/js_object_expression_properties.mjs";
 import { app_replace_rule_sets_why_generate_single_openai } from "../../../love/public/src/app_replace_rule_sets_why_generate_single_openai.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -35,9 +34,7 @@ export async function app_replace_rule_sets_why_generate() {
     let list = await function_ast_list_type_nodes_object_expression(f_name2);
     function lambda3(e) {
       let search = "name";
-      let properties = js_object_expression_properties(e);
-      let r = js_property_key_named_curried_right(search);
-      let found = list_find_or_null(properties, r);
+      let found = js_object_expression_property_named_or_null(e, search);
       return found;
     }
     let f = list_find(list, lambda3);
