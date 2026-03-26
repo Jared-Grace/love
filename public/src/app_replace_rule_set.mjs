@@ -1,5 +1,4 @@
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
-import { html_font_color_set_green } from "../../../love/public/src/html_font_color_set_green.mjs";
 import { app_replace_rule_set_rules_used } from "../../../love/public/src/app_replace_rule_set_rules_used.mjs";
 import { list_map_property_multiple } from "../../../love/public/src/list_map_property_multiple.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
