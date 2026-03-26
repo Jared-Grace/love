@@ -31,7 +31,8 @@ export async function app_replace_rule_sets_fns_capitalization() {
         function lambda2(t) {
           let split = text_split_space(t);
           let mapped = list_map(split, text_first_upper_to);
-          let joined = list_join_space(list2);
+          let joined = list_join_space(mapped);
+          return joined;
         }
         let r = js_literal_map_curried_right(lambda2);
         log(app_replace_rule_sets_fns_capitalization.name, {
