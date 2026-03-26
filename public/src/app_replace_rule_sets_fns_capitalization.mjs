@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_map_name } from "../../../love/public/src/list_map_name.mjs";
 import { app_replace_rule_sets_fns } from "../../../love/public/src/app_replace_rule_sets_fns.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -11,6 +12,8 @@ import { log } from "../../../love/public/src/log.mjs";
 export async function app_replace_rule_sets_fns_capitalization() {
   let fns = app_replace_rule_sets_fns();
   let result = list_map_name(fns);
+  async function lambda(item2) {}
+  await each_async(list2, lambda);
   return result;
   async function lambda3(ast) {
     log(app_replace_rule_sets_fns_capitalization.name, {
