@@ -120,7 +120,7 @@ export async function app_replace_rule_set(context) {
   html_data_set_test(hint_button, value4);
   let div = html_div(root);
   html_font_color_set_green(div);
-  html_text_set(div, '0');
+  html_text_set(div, "0");
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
   let div_abbreviations = html_div(root);
