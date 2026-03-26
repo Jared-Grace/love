@@ -152,6 +152,7 @@ export async function app_replace_rule_set(context) {
   let mapped = list_map_property(path, "rule");
   let rules_used = list_unique(mapped);
   list_shuffle(rules_used);
+  let mapped2 = list_map_property(list, property_name);
   refresh();
   async function refresh() {
     html_clear(div_rules_buttons);
