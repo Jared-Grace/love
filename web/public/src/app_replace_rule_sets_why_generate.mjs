@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { app_replace_rules_parse_left_right_only } from "../../../love/public/src/app_replace_rules_parse_left_right_only.mjs";
 import { property_change } from "../../../love/public/src/property_change.mjs";
@@ -15,6 +16,7 @@ export async function app_replace_rule_sets_why_generate() {
       "rules",
       app_replace_rules_parse_left_right_only,
     );
+    let goals = property_get(rule_set, "goals");
     function lambda2(item) {}
     each(list, lambda2);
     let json = json_to(rule_set);
