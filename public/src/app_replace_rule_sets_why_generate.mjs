@@ -1,3 +1,4 @@
+import { function_ast_list_type_nodes_object_expression } from "../../../love/public/src/function_ast_list_type_nodes_object_expression.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_rule_sets_why_generate_single } from "../../../love/public/src/app_replace_rule_sets_why_generate_single.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -20,6 +21,7 @@ export async function app_replace_rule_sets_why_generate() {
   async function lambda(rs) {
     let r = await app_replace_rule_sets_why_generate_single(rs);
     let f_name2 = property_get(r, "f_name");
+    let list = await function_ast_list_type_nodes_object_expression(f_name2);
   }
   await each_async(taken, lambda);
 }
