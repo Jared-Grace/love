@@ -1,5 +1,4 @@
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_rules_parse_left_right_only } from "../../../love/public/src/app_replace_rules_parse_left_right_only.mjs";
 import { property_change } from "../../../love/public/src/property_change.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -16,10 +15,8 @@ export async function app_replace_rule_sets_why_generate() {
       "rules",
       app_replace_rules_parse_left_right_only,
     );
-    let goals = property_get(rule_set, "goals");
-    function lambda2(item) {}
-    function lambda3(value) {}
-    let value3 = property_change(o, property, lambda3);
+    function lambda3(goals) {}
+    let value3 = property_change(o, "goals", lambda3);
     let mapped = list_map(list, lambda2);
     let json = json_to(rule_set);
     log(app_replace_rule_sets_why_generate.name, {
