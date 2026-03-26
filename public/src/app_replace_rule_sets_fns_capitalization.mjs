@@ -18,13 +18,14 @@ export async function app_replace_rule_sets_fns_capitalization() {
     });
     let list = js_list_nodes_object_expression(ast);
     function lambda_each(item) {
-      let ps = ["name", "end"];
-      function lambda2(p) {
-        let s = js_object_expression_properties_find_key_named(item, p);
-        let r = js_literal_map_curried_right(text_between_space);
-        js_property_value_change(s, r);
-      }
-      each(ps, lambda2);
+      let p = "name";
+      let s = js_object_expression_properties_find_key_named(item, p);
+      log(app_replace_rule_sets_fns_capitalization.name, {
+        s,
+      });
+      return;
+      let r = js_literal_map_curried_right(text_between_space);
+      js_property_value_change(s, r);
     }
     each(list, lambda_each);
   }
