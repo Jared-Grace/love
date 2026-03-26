@@ -75,7 +75,12 @@ export async function app_replace_rule_set(context) {
   let root = property_get(context, "root");
   app_replace_button_home(root, context);
   app_replace_button_screen(context, app_replace_goals, root, "Goals");
-  app_replace_button_screen(context, app_replace_rule_set, root, "Start over");
+  let start_over = app_replace_button_screen(
+    context,
+    app_replace_rule_set,
+    root,
+    "Start over",
+  );
   let rs = app_replace_rule_set_get(context);
   let goals = property_get(rs, "goals");
   let goal_index = storage_local_get_context(context, "goal_index");
