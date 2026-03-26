@@ -1,4 +1,3 @@
-import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_replace_rule_sets_why_generate_single } from "../../../love/public/src/app_replace_rule_sets_why_generate_single.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_replace_rule_sets_fns } from "../../../love/public/src/app_replace_rule_sets_fns.mjs";
@@ -13,10 +12,9 @@ export async function app_replace_rule_sets_why_generate() {
     };
     return r3;
   }
-  let mapped = list_map(r2, lambda2);
-  let mapped2 = list_map_property(mapped, "rule_set");
+  let rule_sets = list_map(r2, lambda2);
   let taken = list_take(rule_sets, 2);
-  await each_async(rule_sets, app_replace_rule_sets_why_generate_single);
+  await each_async(taken, app_replace_rule_sets_why_generate_single);
   function lambda() {}
-  await each_async(rule_sets, lambda);
+  await each_async(taken, lambda);
 }
