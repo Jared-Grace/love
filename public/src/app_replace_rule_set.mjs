@@ -154,10 +154,10 @@ export async function app_replace_rule_set(context) {
       let key = property_get(kv, "key");
       let includes2 = list_includes(unique, key);
       if (includes2) {
-      let value2 = property_get(kv, "value");
-      let concated = list_concat(["", key, ": ", ""], value2);
-      let component2 = html_element(component, "li");
-      html_cycle_bold(component2, concated);
+        let value2 = property_get(kv, "value");
+        let concated = list_concat(["", key, ": ", ""], value2);
+        let component2 = html_element(component, "li");
+        html_cycle_bold(component2, concated);
       }
     }
     each(list2, lambda6);
