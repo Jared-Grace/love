@@ -11,7 +11,6 @@ import { object_merge_multiple } from "../../../love/public/src/object_merge_mul
 import { object_wrap_multiple } from "../../../love/public/src/object_wrap_multiple.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
-import { log_keep } from "./log_keep.mjs";
 export async function app_replace_tests_run_e2e_all(e2e_inner_fns) {
   let rule_sets = app_replace_rule_sets();
   let r = app_replace_rule_set_binary_counting();
@@ -32,9 +31,6 @@ export async function app_replace_tests_run_e2e_all(e2e_inner_fns) {
         let next = list_pop_first(remaining);
         let rule_set = property_get(next, "rule_set");
         let goal = property_get(next, "goal");
-        log_keep(app_replace_tests_run_e2e_all.name, {
-          goal,
-        });
         async function each_e2e_inner_fn(e2e_inner_fn) {
           await app_replace_tests_run_e2e_goal(
             page,
