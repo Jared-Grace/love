@@ -5,7 +5,6 @@ import { app_replace_rules_parse_left_right_only } from "../../../love/public/sr
 import { property_change } from "../../../love/public/src/property_change.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
-import { exit } from "../../../love/public/src/exit.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { openai_responses_cache } from "../../../love/public/src/openai_responses_cache.mjs";
