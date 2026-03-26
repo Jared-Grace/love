@@ -1,6 +1,6 @@
 export function app_replace_rule_set_unary_to_binary_equations_preparation() {
   let r = {
-    name: "Unary to Binary Equations Preparation",
+    name: "Unary To Binary Equations Preparation",
     rules: [
       "d e = > = d",
       "= d > d f =",
