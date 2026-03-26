@@ -9,7 +9,8 @@ export function text_first_transform(s, transform) {
   let remaining = property_get(r, "remaining");
   let first = property_get(r, "first");
   let lower = transform(first);
-  if (null_is(value)) {
+  if (null_is(remaining)) {
+    remaining = [];
   }
   let joined = list_join_empty(remaining);
   let v = "" + lower + joined;
