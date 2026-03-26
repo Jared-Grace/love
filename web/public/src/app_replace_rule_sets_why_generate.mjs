@@ -18,6 +18,8 @@ export async function app_replace_rule_sets_why_generate() {
     );
     let goals = property_get(rule_set, "goals");
     function lambda2(item) {}
+    function lambda3(value) {}
+    let value3 = property_change(o, property, lambda3);
     let mapped = list_map(list, lambda2);
     let json = json_to(rule_set);
     log(app_replace_rule_sets_why_generate.name, {
