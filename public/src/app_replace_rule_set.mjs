@@ -145,6 +145,9 @@ export async function app_replace_rule_set(context) {
   let size = list_size(rules_used);
   let number_to_add = 3 - size;
   let p = positive_is(number_to_add);
+  log(app_replace_rule_set.name, {
+    number_to_add,
+  });
   if (p) {
     let difference = list_difference(rules_parsed, rules_used);
     let taken = list_shuffle_take(difference, 2);
