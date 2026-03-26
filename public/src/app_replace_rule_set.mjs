@@ -117,8 +117,8 @@ export async function app_replace_rule_set(context) {
   let hint_button = app_replace_button(root, hint_text, on_hint);
   let value4 = app_replace_rule_set_attribute_hint();
   html_data_set_test(hint_button, value4);
-  let div = html_div(root2);
-  html_font_color_set_green(div2);
+  let div = html_div(root);
+  html_font_color_set_green(div);
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
   let div_abbreviations = html_div(root);
