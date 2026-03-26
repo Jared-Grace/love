@@ -1,3 +1,4 @@
+import { app_replace_rule_sets_why_generate_single_openai } from "../../../love/public/src/app_replace_rule_sets_why_generate_single_openai.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_filter_null_not_is_single } from "../../../love/public/src/list_filter_null_not_is_single.mjs";
 import { app_replace_rule_sets_name_expression } from "../../../love/public/src/app_replace_rule_sets_name_expression.mjs";
@@ -22,7 +23,9 @@ export async function app_replace_rule_sets_why_generate() {
   ("generate all responses first");
   await each_async(taken, app_replace_rule_sets_why_generate_single);
   async function lambda(rs) {
-    let r = await app_replace_rule_sets_why_generate_single(rs);
+    let rule_set = property_get(rs, "rule_set");
+    let parsed =
+      await app_replace_rule_sets_why_generate_single_openai(rule_set);
     let f_name2 = property_get(r, "f_name");
     log(app_replace_rule_sets_why_generate.name, {
       f_name2,
