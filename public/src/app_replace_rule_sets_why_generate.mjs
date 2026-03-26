@@ -1,3 +1,4 @@
+import { list_take } from "../../../love/public/src/list_take.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
 import { property_change_list_map } from "../../../love/public/src/property_change_list_map.mjs";
 import { app_replace_rules_parse_left_right_only } from "../../../love/public/src/app_replace_rules_parse_left_right_only.mjs";
@@ -10,7 +11,7 @@ import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule
 import { openai_responses_cache } from "../../../love/public/src/openai_responses_cache.mjs";
 export async function app_replace_rule_sets_why_generate() {
   let rule_sets = app_replace_rule_sets();
-  ltk;
+  let taken = list_take(list, count);
   async function lambda(rule_set) {
     let value2 = property_change(
       rule_set,
