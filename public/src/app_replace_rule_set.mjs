@@ -152,7 +152,8 @@ export async function app_replace_rule_set(context) {
   refresh();
   async function refresh() {
     html_clear(div_rules_buttons);
-    let path = app_replace_rule_set_verify_from_try(rules_parsed, start, end);
+    let t = app_replace_rule_set_verify_from_try(rules_parsed, start, end);
+    let found = property_get(t, "found");
     log(app_replace_rule_set.name, {
       path,
     });
