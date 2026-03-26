@@ -42,6 +42,7 @@ export function app_replace_rule_set_unary_to_binary_equations_preparation() {
         end: "d f = f =",
       },
     ],
+    why: "These replacement rules demonstrate a grammar for transforming unary equations into a form suitable for binary equations. The rules manipulate sequences of symbols (such as 'd', 'e', '=', 'f') to systematically rewrite and expand expressions, showing how unary representations can be prepared or converted for binary operations. The goals illustrate various possible end states starting from specific initial configurations, highlighting the stepwise transformation process.",
   };
   return r;
 }
