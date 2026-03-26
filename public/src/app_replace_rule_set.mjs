@@ -144,7 +144,7 @@ export async function app_replace_rule_set(context) {
   let refresh_count = 0;
   let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);
   let mapped = list_map_property(path, "rule");
-  let unique = list_unique(list);
+  let unique = list_unique(mapped);
   log(app_replace_rule_set.name, {
     path,
   });
