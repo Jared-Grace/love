@@ -45,6 +45,7 @@ export function app_replace_rule_set_decimals() {
         end: "7 7 . 4 6 0 7",
       },
     ],
+    why: "These replacement rules define a context-free grammar for generating decimal numbers, including both whole numbers and numbers with fractional parts. The rules specify how to construct integers and decimal numbers by combining digits, ensuring that numbers do not have leading zeros (except for '0' itself), and allowing for various decimal formats (e.g., '2.', '.5', '3.14'). The grammar demonstrates how to systematically build valid decimal representations from basic digit components.",
   };
   return r;
 }
