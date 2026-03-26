@@ -21,7 +21,6 @@ export async function app_replace_rule_sets_why_generate() {
       return mapped2;
     }
     let value3 = property_change(o, "goals", lambda3);
-    let mapped = list_map(list, lambda2);
     let json = json_to(rule_set);
     log(app_replace_rule_sets_why_generate.name, {
       json,
