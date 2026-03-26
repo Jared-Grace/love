@@ -1,4 +1,4 @@
-import { each_range } from "../../../love/public/src/each_range.mjs";
+import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
 import { positive_is } from "../../../love/public/src/positive_is.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
@@ -147,9 +147,8 @@ export async function app_replace_rule_set(context) {
   let p = positive_is(number_to_add);
   if (p) {
     let difference = list_difference(rules_parsed, rules_used);
-    list_shuffle_take(difference);
-    function lambda(i) {}
-    each_range(count, lambda);
+    list_shuffle_take(difference, 2);
+    list_add_multiple(list, items);
   }
   list_shuffle(rules_used);
   let exists2 = property_exists(rs, "abbreviations");
