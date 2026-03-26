@@ -1,10 +1,3 @@
-import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
-import { app_replace_rule_set_expressions_additive } from "../../../love/public/src/app_replace_rule_set_expressions_additive.mjs";
-import { app_replace_rule_set_expressions_multiplicative } from "../../../love/public/src/app_replace_rule_set_expressions_multiplicative.mjs";
-import { app_replace_rule_set_expressions_unary } from "../../../love/public/src/app_replace_rule_set_expressions_unary.mjs";
-import { app_replace_rule_set_expressions_function_calls } from "../../../love/public/src/app_replace_rule_set_expressions_function_calls.mjs";
-import { app_replace_rule_set_expressions_member_and_access } from "../../../love/public/src/app_replace_rule_set_expressions_member_and_access.mjs";
-import { app_replace_rule_set_expressions_primary } from "../../../love/public/src/app_replace_rule_set_expressions_primary.mjs";
 import { each_range_unordered_async } from "../../../love/public/src/each_range_unordered_async.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
 import { playwright_test_app_dev } from "../../../love/public/src/playwright_test_app_dev.mjs";
@@ -18,15 +11,6 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 export async function app_replace_tests_run_e2e_all(e2e_inner) {
   let rule_sets = app_replace_rule_sets();
-  let rule_sets_fns = [
-    app_replace_rule_set_expressions_primary,
-    app_replace_rule_set_expressions_member_and_access,
-    app_replace_rule_set_expressions_function_calls,
-    app_replace_rule_set_expressions_unary,
-    app_replace_rule_set_expressions_multiplicative,
-    app_replace_rule_set_expressions_additive,
-  ];
-  rule_sets = invoke_multiple(rule_sets_fns);
   function lambda2(rule_set) {
     let goals = property_get(rule_set, "goals");
     let mapped = object_wrap_multiple(goals, "goal");
