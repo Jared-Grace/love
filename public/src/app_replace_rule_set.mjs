@@ -127,7 +127,7 @@ export async function app_replace_rule_set(context) {
     "padding-left": "0.6em",
     "font-size": "0.8em",
   });
-  html_style_padding_y(component3, value5);
+  html_style_padding_y(progress_container, "0.3em");
   let div = html_div(progress_container);
   html_style_assign(div, {
     "border-radius": "9999px",
