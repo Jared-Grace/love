@@ -8,7 +8,7 @@ export function app_replace_rule_set_expressions_function_calls() {
   let abbreviations = {};
   app_replace_rule_set_expressions_function_calls_abbreviations(abbreviations);
   let r = {
-    name: "Expressions function calls",
+    name: "Expressions Function Calls",
     abbreviations,
     rules,
     goals: [
