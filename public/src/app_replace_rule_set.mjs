@@ -119,10 +119,10 @@ export async function app_replace_rule_set(context) {
   html_data_set_test(hint_button, value4);
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
-  let div = html_div(root2);
+  let div_abbreviations = html_div(root);
   let exists2 = property_exists(rs, "abbreviations");
   if (exists2) {
-    html_p_text(root, "Abbreviations");
+    html_p_text(div_abbreviations, "Abbreviations");
     let component = html_element(root, "ul");
     let abbreviations = property_get(rs, "abbreviations");
     let list2 = object_to_list(abbreviations);
