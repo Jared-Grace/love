@@ -55,12 +55,8 @@ export async function app_replace_tests_run_e2e_goal(
       let rule_original_previous = null;
       async function each_step(p) {
         let symbol_id = null;
-        ({ refresh_count, symbol_id } = await e2e_inner_fn(
-          p,
-          refresh_count,
-          page,
-          rule_original_previous,
-        ));
+        ({ refresh_count, symbol_id, rule_original_previous } =
+          await e2e_inner_fn(p, refresh_count, page, rule_original_previous));
         refresh_count = await app_replace_rule_set_attribute_refresh_click(
           page,
           symbol_id,
