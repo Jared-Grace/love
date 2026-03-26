@@ -1,3 +1,4 @@
+import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { app_replace_rule_set_index_get } from "../../../love/public/src/app_replace_rule_set_index_get.mjs";
@@ -152,7 +153,8 @@ export async function app_replace_rule_set(context) {
     " out of ",
     size,
   ]);
-  html_text_set(progress_container, combined);
+  let text = text_first_upper_to(combined);
+  html_text_set(progress_container, text);
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
   let div_abbreviations = html_div(root);
