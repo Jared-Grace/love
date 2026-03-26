@@ -21,7 +21,7 @@ export function app_replace_rule_set_rules_used(
   let size = list_size(rules_used);
   let number_to_add = 3 - size;
   let p = positive_is(number_to_add);
-  log(app_replace_rule_set.name, {
+  log(app_replace_rule_set_rules_used.name, {
     number_to_add,
     path,
   });
