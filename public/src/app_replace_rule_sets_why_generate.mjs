@@ -41,9 +41,7 @@ export async function app_replace_rule_sets_why_generate() {
       return found;
     }
     let mapped = list_find(list, lambda3);
-    log(app_replace_rule_sets_why_generate.name, {
-      mapped,
-    });
+    log(app_replace_rule_sets_why_generate.name, mapped);
   }
   await each_async(taken, lambda);
 }
