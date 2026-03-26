@@ -1,3 +1,4 @@
+import { each_range } from "../../../love/public/src/each_range.mjs";
 import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
 import { positive_is } from "../../../love/public/src/positive_is.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
@@ -141,15 +142,16 @@ export async function app_replace_rule_set(context) {
   let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);
   let mapped = list_map_property(path, "rule");
   let rules_used = list_unique(mapped);
-  list_shuffle(rules_used);
   let size = list_size(rules_parsed);
   let number_to_add = 3 - size;
   let p = positive_is(number_to_add);
   if (p) {
     let difference = list_difference(rules_parsed, rules_used);
     list_shuffle_take(difference);
-    rules_used = rules_parsed;
+    function lambda(i) {}
+    each_range(count, lambda);
   }
+  list_shuffle(rules_used);
   let exists2 = property_exists(rs, "abbreviations");
   if (exists2) {
     let properties = ["left", "right"];
