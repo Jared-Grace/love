@@ -1,3 +1,4 @@
+import { playwright_by_attribute } from "../../../love/public/src/playwright_by_attribute.mjs";
 import { app_replace_rule_set_verify_goal_depth_max } from "../../../love/public/src/app_replace_rule_set_verify_goal_depth_max.mjs";
 import { each_range_async } from "../../../love/public/src/each_range_async.mjs";
 import { list_single } from "../../../love/public/src/list_single.mjs";
@@ -6,7 +7,6 @@ import { list_filter_null_not_is } from "../../../love/public/src/list_filter_nu
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { html_attribute_get_unwrapped_curried_right } from "../../../love/public/src/html_attribute_get_unwrapped_curried_right.mjs";
 import { html_data_set_test_attribute } from "../../../love/public/src/html_data_set_test_attribute.mjs";
-import { playwright_by_attribute_all } from "../../../love/public/src/playwright_by_attribute_all.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_attribute_data_prefix } from "../../../love/public/src/html_attribute_data_prefix.mjs";
 import { html_data_set_test_suffixes_attribute } from "../../../love/public/src/html_data_set_test_suffixes_attribute.mjs";
@@ -29,7 +29,7 @@ export async function app_replace_tests_run_e2e_hinted() {
       let combined = html_data_set_test_suffixes_attribute([suffix]);
       let left = html_attribute_data_prefix();
       let name = text_combine(left, combined);
-      let values = await playwright_by_attribute_all(page, name, "true");
+      let values = await playwright_by_attribute(page, name, "true");
       let a = html_data_set_test_attribute();
       let r = html_attribute_data_prefix();
       let combined2 = text_combine(r, a);
