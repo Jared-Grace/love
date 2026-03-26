@@ -57,7 +57,7 @@ export async function app_replace_rule_sets_why_generate() {
       list_add(properties, p);
     }
     let s = js_string(parsed);
-    js_property_value_set(found2, value);
+    js_property_value_set(found, s);
     log(app_replace_rule_sets_why_generate.name, f);
   }
   await each_async(taken, lambda);
