@@ -138,14 +138,13 @@ export async function app_replace_rule_set(context) {
     "border-radius": "9999px",
     "background-color": button_background_color,
     padding: "0",
-    height: "0.5em",
   });
   let div = html_div(progress_container);
   html_style_assign(div, {
     "border-radius": "9999px",
     "background-color": color_valid,
     "padding-left": "0.6em",
-    height: "0.5em",
+    height: "100%",
     width: (100 * rule_set_index) / size + "%",
   });
   html_centered(div);
