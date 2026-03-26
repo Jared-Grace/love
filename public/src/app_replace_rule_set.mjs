@@ -1,3 +1,4 @@
+import { positive_is } from "../../../love/public/src/positive_is.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { list_map_property_multiple } from "../../../love/public/src/list_map_property_multiple.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
@@ -140,8 +141,10 @@ export async function app_replace_rule_set(context) {
   let mapped = list_map_property(path, "rule");
   let rules_used = list_unique(mapped);
   list_shuffle(rules_used);
-  let difference = list_difference(list, other);
   let size = list_size(rules_parsed);
+  let number_to_add = 3 - size;
+  let difference = list_difference(list, rules_used);
+  let p = positive_is(i);
   if (size <= 3) {
     rules_used = rules_parsed;
   }
