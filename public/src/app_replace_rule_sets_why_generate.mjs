@@ -39,7 +39,7 @@ export async function app_replace_rule_sets_why_generate() {
       await app_replace_rule_sets_why_generate_single_openai(rule_set);
     let f_name2 = property_get(rs, "f_name");
     log(app_replace_rule_sets_why_generate.name, {
-      f_name2,
+      parsed,
     });
     let list = await function_ast_list_type_nodes_object_expression(f_name2);
     function lambda3(e) {
