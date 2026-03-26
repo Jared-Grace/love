@@ -24,6 +24,9 @@ export async function app_replace_rule_sets_why_generate() {
   async function lambda(rs) {
     let r = await app_replace_rule_sets_why_generate_single(rs);
     let f_name2 = property_get(r, "f_name");
+    log(app_replace_rule_sets_why_generate.name, {
+      f_name2,
+    });
     let list = await function_ast_list_type_nodes_object_expression(f_name2);
     let mapped = list_map(list, app_replace_rule_sets_name_expression);
     let f_name_after = list_filter_null_not_is_single(mapped);
