@@ -148,7 +148,8 @@ export async function app_replace_rule_set(context) {
     rule_set_index,
     " out of ",
     size,
-    "rule sets completed",
+    "rule sets",
+    " completed",
   ]);
   html_text_set(progress_container, combined);
   let rule_name = property_get(rs, "name");
