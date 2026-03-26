@@ -1,3 +1,4 @@
+import { list_filter_null_not_is_single } from "../../../love/public/src/list_filter_null_not_is_single.mjs";
 import { app_replace_rule_sets_name_expression } from "../../../love/public/src/app_replace_rule_sets_name_expression.mjs";
 import { function_ast_list_type_nodes_object_expression } from "../../../love/public/src/function_ast_list_type_nodes_object_expression.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -24,6 +25,7 @@ export async function app_replace_rule_sets_why_generate() {
     let f_name2 = property_get(r, "f_name");
     let list = await function_ast_list_type_nodes_object_expression(f_name2);
     let mapped = list_map(list, app_replace_rule_sets_name_expression);
+    let f_name_after = list_filter_null_not_is_single(mapped);
   }
   await each_async(taken, lambda);
 }
