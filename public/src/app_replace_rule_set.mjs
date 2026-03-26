@@ -1,3 +1,4 @@
+import { app_karate_container_background_color } from "../../../love/public/src/app_karate_container_background_color.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { app_replace_rule_set_rules_used } from "../../../love/public/src/app_replace_rule_set_rules_used.mjs";
@@ -121,9 +122,9 @@ export async function app_replace_rule_set(context) {
   let div = html_div(root);
   html_style_assign(div, {
     "border-radius": "50%",
+    "background-color": app_karate_container_background_color() + "ff",
     padding: "0.6em",
   });
-  html_background_color_set_green(div);
   html_text_set(div, "0");
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
