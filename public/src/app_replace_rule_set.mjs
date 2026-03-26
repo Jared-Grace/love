@@ -237,7 +237,7 @@ export async function app_replace_rule_set(context) {
     function symbols_mapper(symbol, index) {
       let sb = null;
       async function symbol_on_click() {
-        ({ index_selected, start, symbols_invalid_chosen, start_indices } =
+        ({ start, symbols_invalid_chosen, start_indices } =
           await app_replace_rule_set_symbol_on_click(
             rules_used,
             index_selected,
