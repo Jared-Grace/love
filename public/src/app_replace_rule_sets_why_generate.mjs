@@ -33,7 +33,7 @@ export async function app_replace_rule_sets_why_generate() {
       f_name2,
     });
     let list = await function_ast_list_type_nodes_object_expression(f_name2);
-    function lambda3() {
+    function lambda3(e) {
       let found = js_object_expression_properties_find_key_named(e, search);
       let nn = null_not_is(found);
       return nn;
