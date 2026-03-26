@@ -93,6 +93,7 @@ export async function app_replace_rule_set(context) {
   let goal = list_get(goals, goal_index);
   let rules_parsed = app_replace_rule_set_rules_get(rs);
   let index_selected = null;
+  let rules_used = null;
   let r4 = app_replace_start_end_get(goal);
   let start = property_get(r4, "start");
   let start_indices = list_size_range(start);
@@ -104,7 +105,7 @@ export async function app_replace_rule_set(context) {
       end,
     );
     let rule_next = property_get(second, "rule");
-    let index_rule = list_index_of(rules_parsed, rule_next);
+    let index_rule = list_index_of(rules_used, rule_next);
     let index_symbol = property_get(second, "index");
     if (equal(index_rule, index_selected)) {
       let ceiling = list_size_half_ceil(start_indices);
@@ -141,7 +142,6 @@ export async function app_replace_rule_set(context) {
   let refresh_count = 0;
   let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);
   let mapped = list_map_property(path, "rule");
-  let rules_used = null;
   rules_used = list_unique(mapped);
   let size = list_size(rules_used);
   let number_to_add = 3 - size;
