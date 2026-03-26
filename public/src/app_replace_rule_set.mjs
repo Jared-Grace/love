@@ -1,6 +1,5 @@
+import { list_map_property_multiple } from "../../../love/public/src/list_map_property_multiple.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
-import { list_map_property_curried } from "../../../love/public/src/list_map_property_curried.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_replace_rule_set_verify_from_try } from "../../../love/public/src/app_replace_rule_set_verify_from_try.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -156,8 +155,7 @@ export async function app_replace_rule_set(context) {
   let rules_used = list_unique(mapped);
   list_shuffle(rules_used);
   let properties = ["left", "right"];
-  let r3 = list_map_property_curried(rules_used);
-  let mapped3 = list_map(properties, r3);
+  let mapped3 = list_map_property_multiple(rules_used, properties);
   let squashed = list_squash(mapped3);
   refresh();
   async function refresh() {
