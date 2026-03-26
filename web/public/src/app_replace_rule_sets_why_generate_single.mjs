@@ -1,0 +1,31 @@
+import { openai_responses_cache } from "../../../love/public/src/openai_responses_cache.mjs";
+import { app_replace_rule_sets_why_generate } from "../../../love/public/src/app_replace_rule_sets_why_generate.mjs";
+import { log } from "../../../love/public/src/log.mjs";
+import { json_to } from "../../../love/public/src/json_to.mjs";
+import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
+import { property_change_list_map } from "../../../love/public/src/property_change_list_map.mjs";
+import { app_replace_rules_parse_left_right_only } from "../../../love/public/src/app_replace_rules_parse_left_right_only.mjs";
+import { property_change } from "../../../love/public/src/property_change.mjs";
+export async function app_replace_rule_sets_why_generate_single(rule_set) {
+  let value2 = property_change(
+    rule_set,
+    "rules",
+    app_replace_rules_parse_left_right_only,
+  );
+  let value_changed = property_change_list_map(
+    rule_set,
+    "goals",
+    app_replace_start_end_get,
+  );
+  let json = json_to(rule_set);
+  log(app_replace_rule_sets_why_generate.name, {
+    json,
+  });
+  let r = await openai_responses_cache(
+    'You will receive the JSON of the replacement rules of a grammar. Please provide a sentence or two describing what the replacement rules demonstrate, and why. Answer using JSON: { "result": "description" }',
+    json,
+  );
+  log(app_replace_rule_sets_why_generate.name, {
+    r,
+  });
+}
