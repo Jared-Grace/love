@@ -1,4 +1,14 @@
+progress bar replace for both rule sets and goals
 
+previous rule remains selected
+
+add other grammar rule sets - to assignment and also statements, branching, looping, functions
+
+e2e test should do first two rule sets to make sure next is working on goals and rule set next is working
+
+add new post to reddit
+- added compiler grammar rule sets
+- added hint system
 
 ---
 
