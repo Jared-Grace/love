@@ -1,3 +1,4 @@
+import { app_replace_tests_run_e2e_all } from "../../../love/public/src/app_replace_tests_run_e2e_all.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { playwright_refresh } from "../../../love/public/src/playwright_refresh.mjs";
@@ -23,6 +24,10 @@ export async function app_replace_tests_run_e2e_goal(
   e2e_inner_fn,
 ) {
   try {
+    log_keep(app_replace_tests_run_e2e_goal.name, {
+      goal,
+      e2e_inner_fn_name: e2e_inner_fn.name,
+    });
     await playwright_refresh(page);
     let json = json_to(goal);
     let fns = app_replace_rule_sets_fns();
