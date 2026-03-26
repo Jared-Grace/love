@@ -187,9 +187,6 @@ export async function app_replace_rule_set(context) {
     if (not(found)) {
       html_style_background_color_set(start_over, highlight);
     }
-    log(app_replace_rule_set.name, {
-      path,
-    });
     refresh_count++;
     let value3 = app_replace_rule_set_attribute_refresh_count(refresh_count);
     html_data_set_test(div_rules_buttons, value3);
