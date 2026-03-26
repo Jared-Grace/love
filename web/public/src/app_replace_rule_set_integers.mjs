@@ -49,6 +49,7 @@ export function app_replace_rule_set_integers() {
         end: "5 6 7 8",
       },
     ],
+    why: "These replacement rules define a context-free grammar for generating non-negative integers in decimal notation. The rules demonstrate how integers can be constructed from digits, with special handling to ensure that multi-digit numbers do not start with zero (except for the single digit '0'). The grammar distinguishes between any digit (0-9) and positive digits (1-9) to enforce this constraint, illustrating the structure of valid integer representations.",
   };
   return r;
 }
