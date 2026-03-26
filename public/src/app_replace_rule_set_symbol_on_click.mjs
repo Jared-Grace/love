@@ -78,12 +78,10 @@ export async function app_replace_rule_set_symbol_on_click(
     let mapped2 = lists_map([skipped, rects_after, rects_before], lambda9);
     await list_wait(mapped2);
     await html_move_animate_multiple(rights2, rights_cloned, duration);
-    index_selected = null;
   } else {
     property_set(symbols_invalid_chosen, index, true);
   }
   let r5 = {
-    index_selected,
     start,
     symbols_invalid_chosen,
     start_indices,
