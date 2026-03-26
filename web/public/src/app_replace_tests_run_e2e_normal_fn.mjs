@@ -10,13 +10,13 @@ export async function app_replace_tests_run_e2e_normal_fn(
 ) {
   let rule = property_get(p, "rule");
   let original = property_get(rule, "original");
-  if (equal_not(left, right)) {
+  if (equal_not(original, rule_original_previous)) {
+    refresh_count = await app_replace_rule_set_attribute_refresh_click(
+      page,
+      original,
+      refresh_count,
+    );
   }
-  refresh_count = await app_replace_rule_set_attribute_refresh_click(
-    page,
-    original,
-    refresh_count,
-  );
   rule_original_previous = original;
   let index = property_get(p, "index");
   let symbol_id = app_replace_rule_set_attribute_symbol(index);
