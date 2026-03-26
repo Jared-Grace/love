@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { list_includes_empty_not_assert } from "../../../love/public/src/list_includes_empty_not_assert.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_skip } from "../../../love/public/src/list_skip.mjs";
@@ -15,5 +16,6 @@ export function app_replace_rule_parse(rule) {
     right,
     original: rule,
   };
+  let to2 = object_merge(to, from);
   return p;
 }
