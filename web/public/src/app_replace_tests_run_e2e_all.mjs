@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { each_range_unordered_async } from "../../../love/public/src/each_range_unordered_async.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
@@ -29,6 +30,9 @@ export async function app_replace_tests_run_e2e_all(e2e_inner_fns) {
         let next = list_pop_first(remaining);
         let rule_set = property_get(next, "rule_set");
         let goal = property_get(next, "goal");
+        log(app_replace_tests_run_e2e_all.name, {
+          goal,
+        });
         async function each_e2e_inner_fn(e2e_inner_fn) {
           await app_replace_tests_run_e2e_goal(
             page,
