@@ -1,3 +1,4 @@
+import { app_replace_rule_set_binary_numbers_simple } from "../../../love/public/src/app_replace_rule_set_binary_numbers_simple.mjs";
 import { app_new_rule_set_new_2 } from "../../../love/public/src/app_new_rule_set_new_2.mjs";
 import { app_replace_rule_set_expressions_additive } from "../../../love/public/src/app_replace_rule_set_expressions_additive.mjs";
 import { app_replace_rule_set_expressions_multiplicative } from "../../../love/public/src/app_replace_rule_set_expressions_multiplicative.mjs";
@@ -101,6 +102,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_unary_to_binary_equations_preparation,
     app_replace_rule_set_unary_to_binary_equations,
     app_replace_rule_set_boolean_literal,
+    app_replace_rule_set_binary_numbers_simple,
     app_replace_rule_set_binary_numbers_simple_2,
     app_replace_rule_set_binary_numbers,
     app_replace_rule_set_integer_digits,
