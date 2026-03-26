@@ -125,6 +125,7 @@ export async function app_replace_rule_set(context) {
   html_data_set_test(hint_button, value4);
   let rule_set_index = app_replace_rule_set_index_get(context);
   let rule_sets = app_replace_rule_sets();
+  let size = list_size(list);
   let progress_container = html_p(root);
   let highlight = app_replace_rule_set_highlight();
   html_style_assign(progress_container, {
@@ -143,7 +144,7 @@ export async function app_replace_rule_set(context) {
   });
   html_centered(div);
   html_style_padding_y(div, "0.3em");
-  let combined = text_combine_multiple(list);
+  let combined = text_combine_multiple([rule_set_index, " out of "]);
   html_text_set(progress_container, "0");
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
