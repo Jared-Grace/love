@@ -1,7 +1,7 @@
+import { list_find } from "../../../love/public/src/list_find.mjs";
 import { list_any } from "../../../love/public/src/list_any.mjs";
 import { js_property_key_named_curried_right } from "../../../love/public/src/js_property_key_named_curried_right.mjs";
 import { js_object_expression_properties } from "../../../love/public/src/js_object_expression_properties.mjs";
-import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { app_replace_rule_sets_why_generate_single_openai } from "../../../love/public/src/app_replace_rule_sets_why_generate_single_openai.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { function_ast_list_type_nodes_object_expression } from "../../../love/public/src/function_ast_list_type_nodes_object_expression.mjs";
@@ -40,7 +40,7 @@ export async function app_replace_rule_sets_why_generate() {
       let found = list_any(properties, r);
       return found;
     }
-    let mapped = list_filter(list, lambda3);
+    let mapped = list_find(list, lambda3);
     log(app_replace_rule_sets_why_generate.name, {
       mapped,
     });
