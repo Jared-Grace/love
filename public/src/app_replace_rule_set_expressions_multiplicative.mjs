@@ -8,7 +8,7 @@ export function app_replace_rule_set_expressions_multiplicative() {
   let abbreviations = {};
   app_replace_rule_set_expressions_multiplicative_abbreviations(abbreviations);
   let r = {
-    name: "Expressions multiplicative",
+    name: "Expressions Multiplicative",
     rules,
     goals: [
       {
