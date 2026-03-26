@@ -1,3 +1,4 @@
+import { app_replace_button_symbol_style_background_color_invalid } from "../../../love/public/src/app_replace_button_symbol_style_background_color_invalid.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
@@ -131,6 +132,8 @@ export async function app_replace_rule_set(context) {
   let progress_container = html_p(root);
   let button_background_color = app_replace_button_rule_background_color();
   let highlight = app_replace_rule_set_highlight();
+  let color_invalid =
+    app_replace_button_symbol_style_background_color_invalid();
   html_style_assign(progress_container, {
     "border-radius": "9999px",
     "background-color": button_background_color,
@@ -142,7 +145,7 @@ export async function app_replace_rule_set(context) {
   let div = html_div(progress_container);
   html_style_assign(div, {
     "border-radius": "9999px",
-    "background-color": highlight,
+    "background-color": color_invalid,
     "padding-left": "0.6em",
     height: "100%",
     width: (100 * rule_set_index) / size + "%",
