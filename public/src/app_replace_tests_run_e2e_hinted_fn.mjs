@@ -17,7 +17,6 @@ export async function app_replace_tests_run_e2e_hinted_fn(
   p,
   refresh_count,
   page,
-  symbol_id,
 ) {
   let max = app_replace_rule_set_verify_goal_depth_max();
   async function lambda(item) {
