@@ -1,3 +1,4 @@
+import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { html_font_color_set_green } from "../../../love/public/src/html_font_color_set_green.mjs";
 import { app_replace_rule_set_rules_used } from "../../../love/public/src/app_replace_rule_set_rules_used.mjs";
 import { list_map_property_multiple } from "../../../love/public/src/list_map_property_multiple.mjs";
@@ -119,7 +120,7 @@ export async function app_replace_rule_set(context) {
   html_data_set_test(hint_button, value4);
   let div = html_div(root);
   html_font_color_set_green(div);
-  hts;
+  html_text_set(component3, text);
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
   let div_abbreviations = html_div(root);
