@@ -4,7 +4,6 @@ import { app_replace } from "../../../love/public/src/app_replace.mjs";
 import { playwright_test_app_dev } from "../../../love/public/src/playwright_test_app_dev.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { app_replace_tests_run_e2e_goal } from "../../../love/public/src/app_replace_tests_run_e2e_goal.mjs";
-import { list_pop_first } from "../../../love/public/src/list_pop_first.mjs";
 import { app_replace_tests_run_e2e_hinted_fn } from "../../../love/public/src/app_replace_tests_run_e2e_hinted_fn.mjs";
 import { app_replace_tests_run_e2e_normal_fn } from "../../../love/public/src/app_replace_tests_run_e2e_normal_fn.mjs";
 import { app_replace_tests_run_e2e_all } from "../../../love/public/src/app_replace_tests_run_e2e_all.mjs";
@@ -22,7 +21,6 @@ export async function app_replace_tests_run_e2e() {
         );
       }
       await each_async(list, lambda2);
-      let next = list_pop_first(remaining);
     }
     await each_async(taken, lambda3);
   }
