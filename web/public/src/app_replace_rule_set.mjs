@@ -1,3 +1,4 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_rule_set_verify_goal_path } from "../../../love/public/src/app_replace_rule_set_verify_goal_path.mjs";
 import { app_replace_rule_set_attribute_hint } from "../../../love/public/src/app_replace_rule_set_attribute_hint.mjs";
@@ -141,6 +142,7 @@ export async function app_replace_rule_set(context) {
   const duration = 555;
   let refresh_count = 0;
   let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);
+  let mapped = list_map_property(list, property_name);
   log(app_replace_rule_set.name, {
     path,
   });
