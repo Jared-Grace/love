@@ -159,6 +159,7 @@ export async function app_replace_rule_set(context) {
   ]);
   let text = text_first_upper_to(combined);
   let div2 = html_div_text_centered(progress_container_text, text);
+  html_style_assign(div2, {});
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
   let div_abbreviations = html_div(root);
