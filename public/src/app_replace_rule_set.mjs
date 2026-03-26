@@ -1,3 +1,4 @@
+import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
 import { app_replace_button_symbol_style_background_color_valid } from "../../../love/public/src/app_replace_button_symbol_style_background_color_valid.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
@@ -156,7 +157,7 @@ export async function app_replace_rule_set(context) {
     size,
   ]);
   let text = text_first_upper_to(combined);
-  let div2 = html_div_centered_text(root, text);
+  let div2 = html_div_text_centered(root, text);
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
   let div_abbreviations = html_div(root);
