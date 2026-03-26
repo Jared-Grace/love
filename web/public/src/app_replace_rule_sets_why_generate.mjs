@@ -1,7 +1,6 @@
 import { list_any } from "../../../love/public/src/list_any.mjs";
 import { js_property_key_named_curried_right } from "../../../love/public/src/js_property_key_named_curried_right.mjs";
 import { js_object_expression_properties } from "../../../love/public/src/js_object_expression_properties.mjs";
-import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { app_replace_rule_sets_why_generate_single_openai } from "../../../love/public/src/app_replace_rule_sets_why_generate_single_openai.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -40,8 +39,7 @@ export async function app_replace_rule_sets_why_generate() {
       let properties = js_object_expression_properties(e);
       let r = js_property_key_named_curried_right(search);
       let found = list_any(properties, r);
-      let nn = null_not_is(found);
-      return nn;
+      return found;
     }
     let mapped = list_filter(list, lambda3);
     let f_name_after = list_filter_null_not_is_single(mapped);
