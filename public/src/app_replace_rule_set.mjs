@@ -139,12 +139,12 @@ export async function app_replace_rule_set(context) {
   let mapped = list_map_property(path, "rule");
   let rules_used = list_unique(mapped);
   list_shuffle(rules_used);
-  let properties = ["left", "right"];
-  let mapped3 = list_map_property_multiple(rules_used, properties);
-  let squashed = list_squash(mapped3);
-  let unique = list_unique(squashed);
   let exists2 = property_exists(rs, "abbreviations");
   if (exists2) {
+    let properties = ["left", "right"];
+    let mapped3 = list_map_property_multiple(rules_used, properties);
+    let squashed = list_squash(mapped3);
+    let unique = list_unique(squashed);
     html_p_text(div_abbreviations, "Abbreviations");
     let component = html_element(div_abbreviations, "ul");
     let abbreviations = property_get(rs, "abbreviations");
