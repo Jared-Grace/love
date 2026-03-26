@@ -120,22 +120,6 @@ export async function app_replace_rule_set(context) {
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
   let div_abbreviations = html_div(root);
-  let exists2 = property_exists(rs, "abbreviations");
-  if (exists2) {
-    html_p_text(div_abbreviations, "Abbreviations");
-    let component = html_element(root, "ul");
-    let abbreviations = property_get(rs, "abbreviations");
-    let list2 = object_to_list(abbreviations);
-    list_sort_text_property(list2, "key");
-    function lambda6(kv) {
-      let key = property_get(kv, "key");
-      let value2 = property_get(kv, "value");
-      let concated = list_concat(["", key, ": ", ""], value2);
-      let component2 = html_element(component, "li");
-      html_cycle_bold(component2, concated);
-    }
-    each(list2, lambda6);
-  }
   let label_rules = html_p(root);
   let symbols_invalid_chosen = {};
   let div_rules_buttons = html_div(root);
@@ -159,6 +143,22 @@ export async function app_replace_rule_set(context) {
   let mapped3 = list_map_property_multiple(rules_used, properties);
   let squashed = list_squash(mapped3);
   let unique = list_unique(squashed);
+  let exists2 = property_exists(rs, "abbreviations");
+  if (exists2) {
+    html_p_text(div_abbreviations, "Abbreviations");
+    let component = html_element(root, "ul");
+    let abbreviations = property_get(rs, "abbreviations");
+    let list2 = object_to_list(abbreviations);
+    list_sort_text_property(list2, "key");
+    function lambda6(kv) {
+      let key = property_get(kv, "key");
+      let value2 = property_get(kv, "value");
+      let concated = list_concat(["", key, ": ", ""], value2);
+      let component2 = html_element(component, "li");
+      html_cycle_bold(component2, concated);
+    }
+    each(list2, lambda6);
+  }
   refresh();
   async function refresh() {
     html_clear(div_rules_buttons);
