@@ -1,4 +1,4 @@
-progress bar replace for both rule sets and goals
+
 
 previous rule remains selected
 
@@ -13,7 +13,8 @@ there should be a description for each rule set
 add new post to reddit
 - added compiler grammar rule sets
 - added hint system
-- if at least 4 rules, then un-used rules are not shown
+- if at least 4 rules, then unused rules for the current goal are not shown
+- progress bar replace for both rule sets and goals
 
 ---
 
