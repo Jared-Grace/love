@@ -10,7 +10,7 @@ export function app_replace_rule_set_expressions_member_and_access() {
   );
   list_add(rules, "ex > mae");
   let r = {
-    name: "Expressions member and access",
+    name: "Expressions Member And Access",
     rules: rules,
     goals: [
       {

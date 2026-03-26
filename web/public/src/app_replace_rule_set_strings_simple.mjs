@@ -22,7 +22,7 @@ export function app_replace_rule_set_strings_simple() {
   ];
   list_add_multiple(rules, extra);
   let r = {
-    name: "Strings simple",
+    name: "Strings Simple",
     rules,
     goals: [
       {
