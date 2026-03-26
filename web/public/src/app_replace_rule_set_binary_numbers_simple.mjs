@@ -2,7 +2,7 @@ import { app_replace_rule_set_binary_numbers_goals } from "../../../love/public/
 export function app_replace_rule_set_binary_numbers_simple() {
   let r = {
     name: "Binary numbers simple 2",
-    rules: ["b > b b", "b > 0", "b > 1"],
+    rules: ["0 > 0 0", "0 > 1"],
     goals: app_replace_rule_set_binary_numbers_goals("b"),
   };
   return r;
