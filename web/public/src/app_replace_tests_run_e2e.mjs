@@ -11,7 +11,7 @@ import { app_replace_tests_run_e2e_normal_fn } from "../../../love/public/src/ap
 import { app_replace_tests_run_e2e_all } from "../../../love/public/src/app_replace_tests_run_e2e_all.mjs";
 export async function app_replace_tests_run_e2e() {
   let rule_sets = app_replace_rule_sets();
-  let taken = list_take(list, count);
+  let taken = list_take(rule_sets, 2);
   async function lambda(page) {
     let next = list_pop_first(remaining);
     let rule_set = property_get(next, "rule_set");
