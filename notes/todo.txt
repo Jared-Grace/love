@@ -8,6 +8,8 @@ e2e test should do first two rule sets to make sure next is working on goals and
 
 animation speed should be adjustable
 
+there should be a description for each rule set
+
 add new post to reddit
 - added compiler grammar rule sets
 - added hint system
