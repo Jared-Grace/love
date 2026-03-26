@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { each_range_unordered_async } from "../../../love/public/src/each_range_unordered_async.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
 import { playwright_test_app_dev } from "../../../love/public/src/playwright_test_app_dev.mjs";
@@ -28,6 +29,8 @@ export async function app_replace_tests_run_e2e_all(e2e_inner) {
         let next = list_pop_first(remaining);
         let rule_set = property_get(next, "rule_set");
         let goal = property_get(next, "goal");
+        async function lambda3(item) {}
+        await each_async(list, lambda3);
         await app_replace_tests_run_e2e_goal(page, goal, rule_set, e2e_inner);
       }
       await list_empty_not_is_while_async(remaining, lambda4);
