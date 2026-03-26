@@ -23,6 +23,7 @@ export async function app_replace_rule_sets_fns_capitalization() {
         let p = "name";
         let s = js_object_expression_properties_find_key_named(item, p);
         if (null_is(value)) {
+        return;
         }
         log(app_replace_rule_sets_fns_capitalization.name, {
           s,
