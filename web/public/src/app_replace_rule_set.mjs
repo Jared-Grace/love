@@ -130,6 +130,7 @@ export async function app_replace_rule_set(context) {
   let size = list_size(rule_sets);
   const progress_bar_name = "rule set";
   let progress_container = html_p(root);
+  let div3 = html_div(parent);
   let button_background_color = app_replace_button_rule_background_color();
   let highlight = app_replace_rule_set_highlight();
   let color_valid = app_replace_button_symbol_style_background_color_valid();
