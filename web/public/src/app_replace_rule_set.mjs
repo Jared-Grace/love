@@ -1,4 +1,4 @@
-import { list_without } from "../../../love/public/src/list_without.mjs";
+import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { list_map_property_multiple } from "../../../love/public/src/list_map_property_multiple.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { app_replace_rule_set_verify_from_try } from "../../../love/public/src/app_replace_rule_set_verify_from_try.mjs";
@@ -139,7 +139,8 @@ export async function app_replace_rule_set(context) {
   let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);
   let mapped = list_map_property(path, "rule");
   let rules_used = list_unique(mapped);
-  list_shuffle(rules_used);ldf
+  list_shuffle(rules_used);
+  let difference = list_difference(list, other);
   let size = list_size(rules_parsed);
   if (size <= 3) {
     rules_used = rules_parsed;
