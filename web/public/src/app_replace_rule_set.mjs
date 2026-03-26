@@ -131,7 +131,6 @@ export async function app_replace_rule_set(context) {
   let highlight = app_replace_rule_set_highlight();
   html_style_assign(progress_container, {
     "border-radius": "9999px",
-    "background-color": highlight,
     "padding-left": "0.6em",
     "font-size": "0.8em",
   });
