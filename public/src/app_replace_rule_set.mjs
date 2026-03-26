@@ -139,7 +139,7 @@ export async function app_replace_rule_set(context) {
   let success = false;
   const duration = 555;
   let refresh_count = 0;
-  let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);
+  let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);$l$path
   refresh();
   async function refresh() {
     html_clear(div_rules_buttons);
