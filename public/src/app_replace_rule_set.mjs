@@ -149,6 +149,7 @@ export async function app_replace_rule_set(context) {
     rule_set_index,
     " out of ",
     size,
+    " ",
     progress_bar_name_plural,
     " completed",
   ]);
