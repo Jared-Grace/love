@@ -12,25 +12,26 @@ import { log } from "../../../love/public/src/log.mjs";
 export async function app_replace_rule_sets_fns_capitalization() {
   let fns = app_replace_rule_sets_fns();
   let result = list_map_name(fns);
-  async function lambda(item2) {}
-  await each_async(list2, lambda);
-  return result;
-  async function lambda3(ast) {
-    log(app_replace_rule_sets_fns_capitalization.name, {
-      name,
-    });
-    let list = js_list_nodes_object_expression(ast);
-    function lambda_each(item) {
-      let p = "name";
-      let s = js_object_expression_properties_find_key_named(item, p);
+  async function lambda(name) {
+    async function lambda3(ast) {
       log(app_replace_rule_sets_fns_capitalization.name, {
-        s,
+        name,
       });
-      return;
-      let r = js_literal_map_curried_right(text_between_space);
-      js_property_value_change(s, r);
+      let list = js_list_nodes_object_expression(ast);
+      function lambda_each(item) {
+        let p = "name";
+        let s = js_object_expression_properties_find_key_named(item, p);
+        log(app_replace_rule_sets_fns_capitalization.name, {
+          s,
+        });
+        return;
+        let r = js_literal_map_curried_right(text_between_space);
+        js_property_value_change(s, r);
+      }
+      each(list, lambda_each);
     }
-    each(list, lambda_each);
+    let output = await function_transform(name, lambda3);
   }
-  let output = await function_transform(name, lambda3);
+  await each_async(result, lambda);
+  return result;
 }
