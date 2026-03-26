@@ -11,7 +11,8 @@ import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule
 import { openai_responses_cache } from "../../../love/public/src/openai_responses_cache.mjs";
 export async function app_replace_rule_sets_why_generate() {
   let rule_sets = app_replace_rule_sets();
-  let taken = list_take(list, count);
+  let taken = list_take(rule_sets, 2);
+  rule_sets = taken;
   async function lambda(rule_set) {
     let value2 = property_change(
       rule_set,
