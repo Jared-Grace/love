@@ -1,3 +1,4 @@
+import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
 import { positive_is } from "../../../love/public/src/positive_is.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { list_map_property_multiple } from "../../../love/public/src/list_map_property_multiple.mjs";
@@ -143,9 +144,10 @@ export async function app_replace_rule_set(context) {
   list_shuffle(rules_used);
   let size = list_size(rules_parsed);
   let number_to_add = 3 - size;
-  let difference = list_difference(list, rules_used);
-  let p = positive_is(i);
-  if (size <= 3) {
+  let p = positive_is(number_to_add);
+  if (p) {
+    let difference = list_difference(rules_parsed, rules_used);
+    list_shuffle_take(difference);
     rules_used = rules_parsed;
   }
   let exists2 = property_exists(rs, "abbreviations");
