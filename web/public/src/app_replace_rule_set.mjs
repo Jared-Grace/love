@@ -177,7 +177,7 @@ export async function app_replace_rule_set(context) {
       });
       return rb;
     }
-    let rules_buttons = list_map_index(rules_parsed, each_rule);
+    let rules_buttons = list_map_index(unique, each_rule);
     function each_button_rule_refresh(rb, index2) {
       let rule2 = property_get(rb, "rule");
       let size2 = list_size(start);
@@ -204,7 +204,7 @@ export async function app_replace_rule_set(context) {
       async function symbol_on_click() {
         ({ index_selected, start, symbols_invalid_chosen, start_indices } =
           await app_replace_rule_set_symbol_on_click(
-            rules_parsed,
+            unique,
             index_selected,
             index,
             start,
@@ -225,7 +225,7 @@ export async function app_replace_rule_set(context) {
       let nn2 = null_not_is(index_selected);
       if (nn2) {
         let index3 = property_get(sb, "index");
-        let rule2 = list_get(rules_parsed, index_selected);
+        let rule2 = list_get(unique, index_selected);
         let valid = app_replace_rule_valid(rule2, index3, start);
       }
       let includes = list_includes(start_indices, index);
