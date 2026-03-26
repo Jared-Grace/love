@@ -30,6 +30,6 @@ export async function app_replace_rule_sets_why_generate_single(rs) {
   log(app_replace_rule_sets_why_generate_single.name, {
     r,
   });
-  let v = json_from(json2);
-  return r;
+  let v = json_from(r);
+  return v;
 }
