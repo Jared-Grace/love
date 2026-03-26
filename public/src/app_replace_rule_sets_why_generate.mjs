@@ -2,7 +2,6 @@ import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { app_replace_rule_sets_why_generate_single_openai } from "../../../love/public/src/app_replace_rule_sets_why_generate_single_openai.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_filter_null_not_is_single } from "../../../love/public/src/list_filter_null_not_is_single.mjs";
-import { app_replace_rule_sets_name_expression } from "../../../love/public/src/app_replace_rule_sets_name_expression.mjs";
 import { function_ast_list_type_nodes_object_expression } from "../../../love/public/src/function_ast_list_type_nodes_object_expression.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_rule_sets_why_generate_single } from "../../../love/public/src/app_replace_rule_sets_why_generate_single.mjs";
@@ -32,7 +31,7 @@ export async function app_replace_rule_sets_why_generate() {
       f_name2,
     });
     let list = await function_ast_list_type_nodes_object_expression(f_name2);
-    let mapped = list_filter(list, app_replace_rule_sets_name_expression);
+    let mapped = list_filter(list, () => {});
     let f_name_after = list_filter_null_not_is_single(mapped);
     log(app_replace_rule_sets_why_generate.name, {
       f_name_after,
