@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { app_replace_rules_parse_left_right_only } from "../../../love/public/src/app_replace_rules_parse_left_right_only.mjs";
 import { property_change } from "../../../love/public/src/property_change.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -14,6 +15,8 @@ export async function app_replace_rule_sets_why_generate() {
       "rules",
       app_replace_rules_parse_left_right_only,
     );
+    function lambda2(item) {}
+    each(list, lambda2);
     let json = json_to(rule_set);
     log(app_replace_rule_sets_why_generate.name, {
       json,
