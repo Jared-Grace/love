@@ -16,6 +16,7 @@ export function app_replace_rule_set_boolean_literal() {
         end: "false",
       },
     ],
+    why: "The replacement rules define a grammar for Boolean literals, allowing the nonterminal 'bo' to be replaced by either 'true' or 'false'. This demonstrates how Boolean values are represented in many programming languages, where only these two literals are valid Boolean constants.",
   };
   return r;
 }
