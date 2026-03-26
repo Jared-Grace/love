@@ -1,3 +1,4 @@
+import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { app_replace_rule_sets_why_generate_single_openai } from "../../../love/public/src/app_replace_rule_sets_why_generate_single_openai.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -31,7 +32,9 @@ export async function app_replace_rule_sets_why_generate() {
       f_name2,
     });
     let list = await function_ast_list_type_nodes_object_expression(f_name2);
-    function lambda3() {}
+    function lambda3() {
+      let found = js_object_expression_properties_find_key_named(e, search);
+    }
     let mapped = list_filter(list, lambda3);
     let f_name_after = list_filter_null_not_is_single(mapped);
     log(app_replace_rule_sets_why_generate.name, {
