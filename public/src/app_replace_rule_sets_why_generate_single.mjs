@@ -1,3 +1,4 @@
+import { json_from } from "../../../love/public/src/json_from.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { openai_responses_cache } from "../../../love/public/src/openai_responses_cache.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -29,5 +30,6 @@ export async function app_replace_rule_sets_why_generate_single(rs) {
   log(app_replace_rule_sets_why_generate_single.name, {
     r,
   });
+  let v = json_from(json2);
   return r;
 }
