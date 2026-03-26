@@ -16,9 +16,10 @@ export async function app_replace_rule_sets_why_generate() {
       "rules",
       app_replace_rules_parse_left_right_only,
     );
+    const property_name = "goals";
     let lambda$item = app_replace_start_end_get;
     let c = list_map_curried_right(lambda$item);
-    let value3 = property_change(o, "goals", c);
+    let value3 = property_change(o, property_name, c);
     let json = json_to(rule_set);
     log(app_replace_rule_sets_why_generate.name, {
       json,
