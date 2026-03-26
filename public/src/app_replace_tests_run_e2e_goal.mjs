@@ -1,3 +1,4 @@
+import { error } from "../../../love/public/src/error.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { playwright_refresh } from "../../../love/public/src/playwright_refresh.mjs";
 import { app_replace_rule_set_success_attribute_next } from "../../../love/public/src/app_replace_rule_set_success_attribute_next.mjs";
@@ -82,7 +83,7 @@ export async function app_replace_tests_run_e2e_goal(
     log_keep(app_replace_tests_run_e2e_goal.name, {
       e,
       goal,
-      completed: true,
+      error: true,
       e2e_inner_fn_name: e2e_inner_fn.name,
     });
     throw e;
