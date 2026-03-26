@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { openai_responses_cache } from "../../../love/public/src/openai_responses_cache.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
@@ -5,7 +6,8 @@ import { app_replace_start_end_get } from "../../../love/public/src/app_replace_
 import { property_change_list_map } from "../../../love/public/src/property_change_list_map.mjs";
 import { app_replace_rules_parse_left_right_only } from "../../../love/public/src/app_replace_rules_parse_left_right_only.mjs";
 import { property_change } from "../../../love/public/src/property_change.mjs";
-export async function app_replace_rule_sets_why_generate_single(rule_set) {
+export async function app_replace_rule_sets_why_generate_single(rs) {
+  let rule_set2 = property_get(rs, "rule_set");
   let value2 = property_change(
     rule_set,
     "rules",
