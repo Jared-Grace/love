@@ -35,7 +35,6 @@ export async function app_replace_rule_sets_why_generate() {
     log(app_replace_rule_sets_why_generate.name, {
       r,
     });
-    exit();
   }
   await each_async(rule_sets, lambda);
 }
