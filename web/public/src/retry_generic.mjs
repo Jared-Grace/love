@@ -14,8 +14,8 @@ export async function retry_generic(lambda, wait, wait_get, count) {
         success = true;
         return success;
       } catch (e) {
-        let json = json_to(object);
-        la(e);
+        let json = json_to(e);
+        la(json);
         await sleep(wait);
         wait = wait_get(wait);
       }
