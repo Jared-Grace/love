@@ -5,7 +5,6 @@ export async function app_replace_tests_run_e2e_normal_fn(
   p,
   refresh_count,
   page,
-  symbol_id,
 ) {
   let rule = property_get(p, "rule");
   let original = property_get(rule, "original");
