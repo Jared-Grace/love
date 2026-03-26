@@ -157,6 +157,7 @@ export async function app_replace_rule_set(context) {
   let properties = ["left", "right"];
   let mapped3 = list_map_property_multiple(rules_used, properties);
   let squashed = list_squash(mapped3);
+  let unique = list_unique(list);
   refresh();
   async function refresh() {
     html_clear(div_rules_buttons);
