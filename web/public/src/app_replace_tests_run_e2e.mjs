@@ -14,15 +14,15 @@ export async function app_replace_tests_run_e2e() {
   async function lambda(page) {
     async function lambda3(rule_set) {
       let goals = property_get(rule_set, "goals");
-      async function lambda2(rule_sets) {
+      async function lambda2(goal) {
         await app_replace_tests_run_e2e_goal(
           page,
           goal,
           rule_set,
-          e2e_inner_fn,
+          app_replace_tests_run_e2e_normal_fn,
         );
       }
-      await each_async(list, lambda2);
+      await each_async(goals, lambda2);
     }
     await each_async(taken, lambda3);
   }
