@@ -1,6 +1,6 @@
 export function app_replace_rule_set_grow_left() {
   let r = {
-    name: "Grow left",
+    name: "Grow Left",
     rules: ["g > s g"],
     goals: [
       {
