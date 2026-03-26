@@ -119,6 +119,7 @@ export async function app_replace_rule_set(context) {
   html_data_set_test(hint_button, value4);
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
+  let div = html_div(root2);
   let exists2 = property_exists(rs, "abbreviations");
   if (exists2) {
     html_p_text(root, "Abbreviations");
