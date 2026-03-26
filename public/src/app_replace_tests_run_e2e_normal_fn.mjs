@@ -18,7 +18,8 @@ export async function app_replace_tests_run_e2e_normal_fn(
   let symbol_id = app_replace_rule_set_attribute_symbol(index);
   let r3 = {
     refresh_count,
-    symbol_id,rule_original_previous
+    symbol_id,
+    rule_original_previous,
   };
   return r3;
 }
