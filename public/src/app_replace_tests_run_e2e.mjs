@@ -13,6 +13,8 @@ export async function app_replace_tests_run_e2e() {
   let rule_sets = app_replace_rule_sets();
   let taken = list_take(rule_sets, 2);
   async function lambda(page) {
+    async function lambda2(item) {}
+    await each_async(list, lambda2);
     let next = list_pop_first(remaining);
     let rule_set = property_get(next, "rule_set");
     let goal = property_get(next, "goal");
