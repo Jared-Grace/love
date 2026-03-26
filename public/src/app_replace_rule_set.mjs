@@ -138,7 +138,7 @@ export async function app_replace_rule_set(context) {
     "border-radius": "9999px",
     "background-color": button_background_color,
     padding: "0",
-    height: "1.2em",
+    height: "1em",
   });
   let div = html_div(progress_container);
   html_style_assign(div, {
