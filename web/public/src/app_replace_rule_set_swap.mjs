@@ -15,6 +15,10 @@ export function app_replace_rule_set_swap() {
         start: "a b b a b b",
         end: "b b b b a a",
       },
+      {
+        start: "a a a b",
+        end: "b a a a",
+      },
     ],
   };
   return r;
