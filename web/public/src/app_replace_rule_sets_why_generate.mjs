@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_rule_sets_why_generate_single } from "../../../love/public/src/app_replace_rule_sets_why_generate_single.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_replace_rule_sets_fns } from "../../../love/public/src/app_replace_rule_sets_fns.mjs";
@@ -17,6 +18,7 @@ export async function app_replace_rule_sets_why_generate() {
   await each_async(taken, app_replace_rule_sets_why_generate_single);
   async function lambda(rs) {
     let r = await app_replace_rule_sets_why_generate_single(rs);
+    let f_name2 = property_get(r, "f_name");
   }
   await each_async(taken, lambda);
 }
