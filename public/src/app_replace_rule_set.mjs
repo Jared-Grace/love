@@ -141,6 +141,7 @@ export async function app_replace_rule_set(context) {
   list_shuffle(rules_used);
   let size = list_size(rules_parsed);
   if (size <= 3) {
+    rules_used = rules_parsed;
   }
   let exists2 = property_exists(rs, "abbreviations");
   if (exists2) {
