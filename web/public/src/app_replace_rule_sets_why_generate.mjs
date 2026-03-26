@@ -15,7 +15,7 @@ export async function app_replace_rule_sets_why_generate() {
   function lambda2(fn) {
     let r3 = {
       name: fn.name,
-      fn: fn,
+      fn: fn(),
     };
     return r3;
   }
