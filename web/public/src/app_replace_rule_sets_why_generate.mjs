@@ -54,7 +54,7 @@ export async function app_replace_rule_sets_why_generate() {
       let expression = js_parse_expression(property);
       let c = js_call_empty(error.name);
       let p = js_property(expression, c);
-      let properties = js_object_expression_properties(e);
+      let properties = js_object_expression_properties(f);
       list_add(properties, p);
     }
     let s = js_string(parsed);
