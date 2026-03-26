@@ -1,6 +1,6 @@
 export function app_replace_rule_set_shrink_right() {
   let r = {
-    name: "Shrink right",
+    name: "Shrink Right",
     rules: ["a b > a"],
     goals: [
       {
