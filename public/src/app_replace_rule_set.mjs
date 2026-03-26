@@ -1,3 +1,4 @@
+import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { list_map_property_curried } from "../../../love/public/src/list_map_property_curried.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_replace_rule_set_verify_from_try } from "../../../love/public/src/app_replace_rule_set_verify_from_try.mjs";
@@ -157,6 +158,7 @@ export async function app_replace_rule_set(context) {
   let properties = ["left", "right"];
   let r3 = list_map_property_curried(rules_used);
   let mapped3 = list_map(properties, r3);
+  let squashed = list_squash(lists);
   refresh();
   async function refresh() {
     html_clear(div_rules_buttons);
