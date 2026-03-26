@@ -20,6 +20,7 @@ export function app_replace_rule_set_swap() {
         end: "b a a a",
       },
     ],
+    why: "The replacement rules demonstrate a simple swapping operation where every occurrence of 'a' followed by 'b' can be replaced with 'b' followed by 'a'. This allows any 'a' to move rightward past adjacent 'b's, effectively sorting all 'a's to the right and all 'b's to the left in the sequence.",
   };
   return r;
 }
