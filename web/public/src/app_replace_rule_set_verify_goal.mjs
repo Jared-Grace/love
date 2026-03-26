@@ -9,6 +9,6 @@ export function app_replace_rule_set_verify_goal(goal, rules_parsed) {
   let se = app_replace_start_end_get(goal);
   let end = property_get(se, "end");
   let start = property_get(se, "start");
-  let dfs = app_replace_rule_set_verify_from(start, end, rules_parsed);
+  let dfs = app_replace_rule_set_verify_from(rules_parsed, start, end);
   return dfs;
 }
