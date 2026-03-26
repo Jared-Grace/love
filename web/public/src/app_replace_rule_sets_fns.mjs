@@ -12,7 +12,7 @@ import { app_replace_rule_set_scientific_notation_numbers } from "../../../love/
 import { app_replace_rule_set_decimals } from "../../../love/public/src/app_replace_rule_set_decimals.mjs";
 import { app_replace_rule_set_integers } from "../../../love/public/src/app_replace_rule_set_integers.mjs";
 import { app_replace_rule_set_integer_digits } from "../../../love/public/src/app_replace_rule_set_integer_digits.mjs";
-import { app_replace_rule_set_binary_numbers_simple } from "../../../love/public/src/app_replace_rule_set_binary_numbers_simple.mjs";
+import { app_replace_rule_set_binary_numbers_simple_2 } from "../../../love/public/src/app_replace_rule_set_binary_numbers_simple_2.mjs";
 import { app_replace_rule_set_binary_numbers } from "../../../love/public/src/app_replace_rule_set_binary_numbers.mjs";
 import { app_replace_rule_set_swap_3 } from "../../../love/public/src/app_replace_rule_set_swap_3.mjs";
 import { app_replace_rule_set_swap_2 } from "../../../love/public/src/app_replace_rule_set_swap_2.mjs";
@@ -101,7 +101,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_unary_to_binary_equations_preparation,
     app_replace_rule_set_unary_to_binary_equations,
     app_replace_rule_set_boolean_literal,
-    app_replace_rule_set_binary_numbers_simple,
+    app_replace_rule_set_binary_numbers_simple_2,
     app_replace_rule_set_binary_numbers,
     app_replace_rule_set_integer_digits,
     app_replace_rule_set_integers,
