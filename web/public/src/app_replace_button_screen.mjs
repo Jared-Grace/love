@@ -4,5 +4,6 @@ export function app_replace_button_screen(context, screen_fn, parent, text) {
   function lambda2() {
     app_shared_screen_set(context, screen_fn);
   }
-  let b2 = app_replace_button(parent, text, lambda2);
+  let b = app_replace_button(parent, text, lambda2);
+  return b;
 }
