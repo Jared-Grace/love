@@ -26,7 +26,7 @@ export async function app_replace_rule_sets_fns_capitalization() {
           return;
         }
         function lambda2(t) {
-          let split = text_split_space(s2);
+          let split = text_split_space(t);
         }
         let r = js_literal_map_curried_right(lambda2);
         log(app_replace_rule_sets_fns_capitalization.name, {
