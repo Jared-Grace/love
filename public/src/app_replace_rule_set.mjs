@@ -126,7 +126,7 @@ export async function app_replace_rule_set(context) {
   let rule_set_index = app_replace_rule_set_index_get(context);
   let rule_sets = app_replace_rule_sets();
   let size = list_size(rule_sets);
-  const progress_bar_name_plural = "rule sets";
+  const progress_bar_name = "rule set";
   let progress_container = html_p(root);
   let highlight = app_replace_rule_set_highlight();
   html_style_assign(progress_container, {
@@ -150,7 +150,7 @@ export async function app_replace_rule_set(context) {
     " out of ",
     size,
     " ",
-    progress_bar_name_plural,
+    progress_bar_name,
     " completed",
   ]);
   html_text_set(progress_container, combined);
