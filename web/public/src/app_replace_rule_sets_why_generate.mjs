@@ -1,3 +1,4 @@
+import { functions_transform } from "../../../love/public/src/functions_transform.mjs";
 import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { js_property_value_set } from "../../../love/public/src/js_property_value_set.mjs";
@@ -39,6 +40,8 @@ export async function app_replace_rule_sets_why_generate() {
       await app_replace_rule_sets_why_generate_single_openai(rule_set);
     let result = property_get(parsed, "result");
     let f_name2 = property_get(rs, "f_name");
+    async function lambda4(ast) {}
+    let waited = await functions_transform(lambda4);
     let list = await function_ast_list_type_nodes_object_expression(f_name2);
     function lambda3(e) {
       let search = "name";
