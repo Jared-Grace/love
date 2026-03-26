@@ -129,6 +129,7 @@ export async function app_replace_rule_set(context) {
   let size = list_size(rule_sets);
   const progress_bar_name = "rule set";
   let progress_container = html_p(root);
+  let button_background_color = app_replace_button_rule_background_color();
   let highlight = app_replace_rule_set_highlight();
   html_style_assign(progress_container, {
     "border-radius": "9999px",
@@ -139,7 +140,6 @@ export async function app_replace_rule_set(context) {
   html_centered(progress_container);
   html_style_padding_y(progress_container, "0.3em");
   let div = html_div(progress_container);
-  let button_background_color = app_replace_button_rule_background_color();
   html_style_assign(div, {
     "border-radius": "9999px",
     "background-color": highlight,
