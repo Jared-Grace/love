@@ -146,7 +146,7 @@ export async function app_replace_rule_set(context) {
   html_centered(div);
   html_style_padding_y(div, "0.3em");
   let combined = text_combine_multiple([
-    progress_bar_name,
+    progress_bar_name,' ',
     rule_set_index + 1,
     " out of ",
     size,
