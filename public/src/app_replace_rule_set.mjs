@@ -1,3 +1,4 @@
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_replace_rule_set_verify_from_try } from "../../../love/public/src/app_replace_rule_set_verify_from_try.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
@@ -153,6 +154,8 @@ export async function app_replace_rule_set(context) {
   let rules_used = list_unique(mapped);
   list_shuffle(rules_used);
   let properties = ["left", "right"];
+  function lambda(item) {}
+  let mapped3 = list_map(list3, lambda);
   let mapped2 = list_map_property(list, property_name);
   refresh();
   async function refresh() {
