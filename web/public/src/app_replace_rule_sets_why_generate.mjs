@@ -15,6 +15,8 @@ export async function app_replace_rule_sets_why_generate() {
   let rule_sets = list_map(r2, lambda2);
   let taken = list_take(rule_sets, 2);
   await each_async(taken, app_replace_rule_sets_why_generate_single);
-  function lambda() {}
+  async function lambda() {
+    let v = await app_replace_rule_sets_why_generate_single(rs);
+  }
   await each_async(taken, lambda);
 }
