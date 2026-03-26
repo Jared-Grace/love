@@ -136,7 +136,7 @@ export async function app_replace_rule_set(context) {
   html_style_assign(progress_container, {
     "border-radius": "9999px",
     "background-color": button_background_color,
-    "padding-left": "0.6em",
+    padding: "0",
     "font-size": "0.8em",
   });
   html_centered(progress_container);
