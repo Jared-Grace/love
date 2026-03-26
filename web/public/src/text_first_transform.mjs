@@ -1,3 +1,4 @@
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
 import { list_first_remaining } from "../../../love/public/src/list_first_remaining.mjs";
@@ -8,6 +9,8 @@ export function text_first_transform(s, transform) {
   let remaining = property_get(r, "remaining");
   let first = property_get(r, "first");
   let lower = transform(first);
+  if (null_is(value)) {
+  }
   let joined = list_join_empty(remaining);
   let v = "" + lower + joined;
   return v;
