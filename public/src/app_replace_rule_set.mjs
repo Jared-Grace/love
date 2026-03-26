@@ -119,14 +119,15 @@ export async function app_replace_rule_set(context) {
   let hint_button = app_replace_button(root, hint_text, on_hint);
   let value4 = app_replace_rule_set_attribute_hint();
   html_data_set_test(hint_button, value4);
-  let div = html_p(root);
-  html_style_assign(div, {
+  let progress_container = html_p(root);
+  html_style_assign(progress_container, {
     "border-radius": "9999px",
     "background-color": app_karate_container_background_color() + "ff",
     padding: "0.6em",
     "font-size": "0.8em",
   });
-  html_text_set(div, "0");
+  let div = html_div(parent);
+  html_text_set(progress_container, "0");
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
   let div_abbreviations = html_div(root);
