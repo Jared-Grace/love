@@ -60,7 +60,7 @@ export async function app_replace_rule_sets_why_generate() {
     }
     let s = js_string(parsed);
     js_property_value_set(found, s);
-    let code = js_unparse(found);
+    let code = js_unparse(f);
     log(app_replace_rule_sets_why_generate.name, code);
   }
   await each_async(taken, lambda);
