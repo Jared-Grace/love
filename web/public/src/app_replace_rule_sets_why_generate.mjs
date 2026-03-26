@@ -26,7 +26,7 @@ export async function app_replace_rule_sets_why_generate() {
     let rule_set = property_get(rs, "rule_set");
     let parsed =
       await app_replace_rule_sets_why_generate_single_openai(rule_set);
-    let f_name2 = property_get(r, "f_name");
+    let f_name2 = property_get(rs, "f_name");
     log(app_replace_rule_sets_why_generate.name, {
       f_name2,
     });
