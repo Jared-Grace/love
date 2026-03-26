@@ -40,11 +40,6 @@ export async function app_replace_tests_run_e2e_all(e2e_inner_fns) {
             rule_set,
             e2e_inner_fn,
           );
-          log_keep(app_replace_tests_run_e2e_all.name, {
-            goal,
-            completed: true,
-            e2e_inner_fn_name: e2e_inner_fn.name,
-          });
         }
         await each_async(e2e_inner_fns, each_e2e_inner_fn);
       }
