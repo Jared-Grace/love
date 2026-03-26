@@ -22,7 +22,7 @@ export async function app_replace_rule_sets_fns_capitalization() {
       function lambda_each(item) {
         let p = "name";
         let s = js_object_expression_properties_find_key_named(item, p);
-        if (null_is(value)) {
+        if (null_is(s)) {
           return;
         }
         log(app_replace_rule_sets_fns_capitalization.name, {
