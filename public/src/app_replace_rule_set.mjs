@@ -159,6 +159,8 @@ export async function app_replace_rule_set(context) {
     html_clear(div_rules_buttons);
     let t = app_replace_rule_set_verify_from_try(rules_parsed, start, end);
     let found = property_get(t, "found");
+    if (not(b)) {
+    }
     log(app_replace_rule_set.name, {
       path,
     });
