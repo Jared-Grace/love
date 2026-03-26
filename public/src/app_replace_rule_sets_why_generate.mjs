@@ -1,3 +1,4 @@
+import { js_call_empty } from "../../../love/public/src/js_call_empty.mjs";
 import { js_property } from "../../../love/public/src/js_property.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { js_object_expression_property_named_or_null } from "../../../love/public/src/js_object_expression_property_named_or_null.mjs";
@@ -42,6 +43,7 @@ export async function app_replace_rule_sets_why_generate() {
     let found = js_object_expression_property_named_or_null(e, "why");
     let n = null_is(found);
     if (n) {
+      let c = js_call_empty(f_name_new);
       let p = js_property(key, value);
     }
     log(app_replace_rule_sets_why_generate.name, f);
