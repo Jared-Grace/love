@@ -14,8 +14,9 @@ export function app_replace_rule_parse(rule) {
   let p = {
     left,
     right,
-    original: rule,
   };
-  let to2 = object_merge(to, from);
+  let to2 = object_merge(p, {
+    original: rule,
+  });
   return p;
 }
