@@ -1,3 +1,6 @@
+import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
+import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
+import { app_replace_rule_set_index_get } from "../../../love/public/src/app_replace_rule_set_index_get.mjs";
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { html_style_padding_y } from "../../../love/public/src/html_style_padding_y.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
@@ -120,6 +123,8 @@ export async function app_replace_rule_set(context) {
   let hint_button = app_replace_button(root, hint_text, on_hint);
   let value4 = app_replace_rule_set_attribute_hint();
   html_data_set_test(hint_button, value4);
+  let rule_set_index = app_replace_rule_set_index_get(context);
+  let rule_sets = app_replace_rule_sets();
   let progress_container = html_p(root);
   let highlight = app_replace_rule_set_highlight();
   html_style_assign(progress_container, {
@@ -138,6 +143,7 @@ export async function app_replace_rule_set(context) {
   });
   html_centered(div);
   html_style_padding_y(div, "0.3em");
+  let combined = text_combine_multiple(list);
   html_text_set(progress_container, "0");
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
