@@ -52,6 +52,7 @@ export async function app_replace_tests_run_e2e_goal(
         start,
         end,
       );
+      let rule_original_previous = null;
       async function each_step(p) {
         let symbol_id = null;
         ({ refresh_count, symbol_id } = await e2e_inner_fn(
