@@ -11,6 +11,7 @@ animation speed should be adjustable
 add new post to reddit
 - added compiler grammar rule sets
 - added hint system
+- if at least 4 rules, then un-used rules are not shown
 
 ---
 
