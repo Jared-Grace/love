@@ -28,7 +28,7 @@ export async function app_replace_rule_sets_why_generate() {
       json,
     });
     let r = await openai_responses_cache(
-      'You will receive the JSON of an unrestricted grammar (although it could be more restrictive like a context-free grammar). Please provide a sentence or two describing what the grammar demonstrates, and why. Answer should be an innerHTML. Answer using JSON: { "result": "description" }',
+      'You will receive the JSON of an unrestricted grammar (although it could be more restrictive like a context-free grammar). Please provide a sentence or two describing what the grammar demonstrates, and why. Answer should be HTML without a root element. Answer using JSON: { "result": "description" }',
       json,
     );
     log(app_replace_rule_sets_why_generate.name, {
