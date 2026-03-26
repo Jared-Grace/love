@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
@@ -12,6 +13,7 @@ export async function app_replace_tests_run_e2e() {
   let taken = list_take(rule_sets, 2);
   async function lambda(page) {
     async function lambda3(rule_set) {
+      let goals = property_get(rule_set, "goals");
       async function lambda2(rule_sets) {
         await app_replace_tests_run_e2e_goal(
           page,
