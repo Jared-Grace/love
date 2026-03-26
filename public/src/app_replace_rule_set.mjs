@@ -1,3 +1,4 @@
+import { app_replace_rule_set_verify_from_try } from "../../../love/public/src/app_replace_rule_set_verify_from_try.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -151,7 +152,7 @@ export async function app_replace_rule_set(context) {
   refresh();
   async function refresh() {
     html_clear(div_rules_buttons);
-    let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);
+    let path = app_replace_rule_set_verify_from_try(rules_parsed, start, end);
     log(app_replace_rule_set.name, {
       path,
     });
