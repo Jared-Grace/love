@@ -1,3 +1,4 @@
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_map_name } from "../../../love/public/src/list_map_name.mjs";
 import { app_replace_rule_sets_fns } from "../../../love/public/src/app_replace_rule_sets_fns.mjs";
@@ -21,6 +22,8 @@ export async function app_replace_rule_sets_fns_capitalization() {
       function lambda_each(item) {
         let p = "name";
         let s = js_object_expression_properties_find_key_named(item, p);
+        if (null_is(value)) {
+        }
         log(app_replace_rule_sets_fns_capitalization.name, {
           s,
         });
