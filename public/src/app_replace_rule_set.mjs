@@ -86,6 +86,7 @@ export async function app_replace_rule_set(context) {
   );
   let rs = app_replace_rule_set_get(context);
   let goals = property_get(rs, "goals");
+  let size3 = list_size(list);
   let goal_index = storage_local_get_context(context, "goal_index");
   let goal = list_get(goals, goal_index);
   let rules_parsed = app_replace_rule_set_rules_get(rs);
@@ -125,6 +126,7 @@ export async function app_replace_rule_set(context) {
   const progress_bar_name = "rule set";
   let highlight = app_replace_rule_set_highlight();
   html_progress_bar(root, rule_set_index, size, progress_bar_name);
+  html_progress_bar(root, goal_index, size, progress_bar_name);
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
   let div_abbreviations = html_div(root);
