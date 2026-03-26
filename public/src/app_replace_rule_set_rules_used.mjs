@@ -2,7 +2,6 @@ import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
-import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_set.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { positive_is } from "../../../love/public/src/positive_is.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
