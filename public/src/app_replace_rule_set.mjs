@@ -3,7 +3,6 @@ import { app_replace_rule_set_attribute_refresh_count } from "../../../love/publ
 import { app_replace_rule_set_attribute_symbol } from "../../../love/public/src/app_replace_rule_set_attribute_symbol.mjs";
 import { html_data_set_test } from "../../../love/public/src/html_data_set_test.mjs";
 import { app_replace_rule_set_verify_goal_next } from "../../../love/public/src/app_replace_rule_set_verify_goal_next.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { app_replace_rule_set_symbol_on_click } from "../../../love/public/src/app_replace_rule_set_symbol_on_click.mjs";
 import { app_replace_rule_set_success } from "../../../love/public/src/app_replace_rule_set_success.mjs";
@@ -141,9 +140,6 @@ export async function app_replace_rule_set(context) {
   let refresh_count = 0;
   refresh();
   async function refresh() {
-    log(app_replace_rule_set.name, {
-      refresh,
-    });
     html_clear(div_rules_buttons);
     refresh_count++;
     let value3 = app_replace_rule_set_attribute_refresh_count(refresh_count);
