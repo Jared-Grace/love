@@ -16,6 +16,7 @@ export function app_replace_rule_set_replace_right_same() {
         end: "a a a a a a a a",
       },
     ],
+    why: "The replacement rules demonstrate a grammar where every occurrence of the sequence 'a b' can be replaced with 'a a'. This shows a process of systematically replacing 'b's that follow 'a's with 'a's, effectively transforming sequences with 'a b' pairs into sequences with only 'a's, or reducing the number of 'b's in the string.",
   };
   return r;
 }
