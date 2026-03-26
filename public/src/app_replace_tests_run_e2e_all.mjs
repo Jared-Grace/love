@@ -1,3 +1,4 @@
+import { list_second } from "../../../love/public/src/list_second.mjs";
 import { app_replace_rule_set_binary_counting } from "../../../love/public/src/app_replace_rule_set_binary_counting.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { each_range_unordered_async } from "../../../love/public/src/each_range_unordered_async.mjs";
@@ -18,6 +19,8 @@ export async function app_replace_tests_run_e2e_all(e2e_inner_fns) {
   rule_sets = [r];
   function lambda2(rule_set) {
     let goals = property_get(rule_set, "goals");
+    let second = list_second(goals);
+    goals = [second];
     let mapped = object_wrap_multiple(goals, "goal");
     let merged = {
       rule_set,
