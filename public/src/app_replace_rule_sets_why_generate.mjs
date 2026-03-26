@@ -5,7 +5,7 @@ import { openai_responses_cache } from "../../../love/public/src/openai_response
 export async function app_replace_rule_sets_why_generate() {
   let rule_sets = app_replace_rule_sets();
   async function lambda(item) {
-  let r = await openai_responses_cache(system, user);
+    let r = await openai_responses_cache(system, user);
     exit();
   }
   await each_async(rule_sets, lambda);
