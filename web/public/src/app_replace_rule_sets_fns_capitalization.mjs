@@ -4,7 +4,6 @@ import { list_map_name } from "../../../love/public/src/list_map_name.mjs";
 import { app_replace_rule_sets_fns } from "../../../love/public/src/app_replace_rule_sets_fns.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { js_property_value_change } from "../../../love/public/src/js_property_value_change.mjs";
-import { text_between_space } from "../../../love/public/src/text_between_space.mjs";
 import { js_literal_map_curried_right } from "../../../love/public/src/js_literal_map_curried_right.mjs";
 import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
 import { js_list_nodes_object_expression } from "../../../love/public/src/js_list_nodes_object_expression.mjs";
@@ -29,7 +28,7 @@ export async function app_replace_rule_sets_fns_capitalization() {
           s,
         });
         return;
-        let r = js_literal_map_curried_right(text_between_space);
+        let r = js_literal_map_curried_right(() => {});
         js_property_value_change(s, r);
       }
       each(list, lambda_each);
