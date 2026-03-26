@@ -24,7 +24,7 @@ export async function app_replace_tests_run_e2e_all(e2e_inner_fns) {
   let remaining = list_map_squash(rule_sets, lambda2);
   let parallel_count = 12;
   async function lambda(index) {
-    async function lambda(page) {
+    async function on_page(page) {
       async function while_non_empty() {
         let next = list_pop_first(remaining);
         let rule_set = property_get(next, "rule_set");
@@ -41,7 +41,7 @@ export async function app_replace_tests_run_e2e_all(e2e_inner_fns) {
       }
       await list_empty_not_is_while_async(remaining, while_non_empty);
     }
-    await playwright_test_app_dev(app_replace, lambda);
+    await playwright_test_app_dev(app_replace, on_page);
   }
   await each_range_unordered_async(parallel_count, lambda);
 }
