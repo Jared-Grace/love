@@ -124,7 +124,7 @@ export async function app_replace_rule_set(context) {
     "border-radius": "9999px",
     "background-color": app_karate_container_background_color() + "ff",
     padding: "0.6em",
-    "font-size": "0.7em",
+    "font-size": "0.8em",
   });
   html_text_set(div, "0");
   let rule_name = property_get(rs, "name");
