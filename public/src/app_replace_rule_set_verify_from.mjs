@@ -2,7 +2,7 @@ import { app_replace_rule_set_verify_from_try } from "../../../love/public/src/a
 import { assert_json_get } from "../../../love/public/src/assert_json_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_replace_rule_set_verify_from(start, end, rules_parsed) {
-  let dfs = app_replace_rule_set_verify_from_try(start, end, rules_parsed);
+  let dfs = app_replace_rule_set_verify_from_try(rules_parsed, start, end);
   let found = property_get(dfs, "found");
   function lambda3() {
     let r = {
