@@ -29,7 +29,7 @@ export async function app_replace_tests_run_e2e_all(e2e_inner_fns) {
         let next = list_pop_first(remaining);
         let rule_set = property_get(next, "rule_set");
         let goal = property_get(next, "goal");
-        async function lambda3(e2e_inner_fn) {
+        async function each_e2e_inner_fn(e2e_inner_fn) {
           await app_replace_tests_run_e2e_goal(
             page,
             goal,
@@ -37,7 +37,7 @@ export async function app_replace_tests_run_e2e_all(e2e_inner_fns) {
             e2e_inner_fn,
           );
         }
-        await each_async(e2e_inner_fns, lambda3);
+        await each_async(e2e_inner_fns, each_e2e_inner_fn);
       }
       await list_empty_not_is_while_async(remaining, lambda4);
     }
