@@ -1,3 +1,4 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { error } from "../../../love/public/src/error.mjs";
 import { js_call_empty } from "../../../love/public/src/js_call_empty.mjs";
@@ -46,9 +47,10 @@ export async function app_replace_rule_sets_why_generate() {
     let found = js_object_expression_property_named_or_null(e, property);
     let n = null_is(found);
     if (n) {
-      let expression = js_parse_expression(code_expression);
+      let expression = js_parse_expression(property);
       let c = js_call_empty(error.name);
-      let p = js_property(key, c);
+      let p = js_property(expression, c);
+      list_add(list2, item);
     }
     log(app_replace_rule_sets_why_generate.name, f);
   }
