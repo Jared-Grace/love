@@ -1,6 +1,5 @@
 import { list_map_curried_right } from "../../../love/public/src/list_map_curried_right.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
-import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_replace_rules_parse_left_right_only } from "../../../love/public/src/app_replace_rules_parse_left_right_only.mjs";
 import { property_change } from "../../../love/public/src/property_change.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -19,11 +18,7 @@ export async function app_replace_rule_sets_why_generate() {
     );
     let lambda$item = app_replace_start_end_get;
     let c = list_map_curried_right(lambda$item);
-    function lambda3(goals) {
-      let mapped2 = list_map(goals, lambda$item);
-      return mapped2;
-    }
-    let value3 = property_change(o, "goals", lambda3);
+    let value3 = property_change(o, "goals", c);
     let json = json_to(rule_set);
     log(app_replace_rule_sets_why_generate.name, {
       json,
