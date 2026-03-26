@@ -32,6 +32,7 @@ export function app_replace_rule_set_binary_counting() {
         end: "b 1 0 1 0 c",
       },
     ],
+    why: "These replacement rules demonstrate the process of incrementing a binary number by one, simulating binary counting. The rules manipulate sequences of symbols to represent the carry and increment operations typical in binary addition, with 'a' acting as a marker for increment, and the transformations showing how each bit is updated accordingly.",
   };
   return r;
 }
