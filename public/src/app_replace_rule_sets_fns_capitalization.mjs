@@ -1,3 +1,4 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_replace_rule_sets_fns } from "../../../love/public/src/app_replace_rule_sets_fns.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { js_property_value_change } from "../../../love/public/src/js_property_value_change.mjs";
@@ -9,6 +10,7 @@ import { function_transform } from "../../../love/public/src/function_transform.
 import { log } from "../../../love/public/src/log.mjs";
 export async function app_replace_rule_sets_fns_capitalization() {
   let fns = app_replace_rule_sets_fns();
+  let mapped = list_map_property(list2, property_name);
   async function lambda3(ast) {
     log(app_replace_rule_sets_fns_capitalization.name, {
       name,
