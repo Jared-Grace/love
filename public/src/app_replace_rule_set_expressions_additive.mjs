@@ -56,6 +56,7 @@ export function app_replace_rule_set_expressions_additive() {
         end: "3 . 1 4 - ( 2 + 2 )",
       },
     ],
+    why: "These replacement rules define a context-free grammar for parsing additive expressions similar to those found in programming languages like JavaScript. The grammar demonstrates how numbers, strings, booleans, identifiers, member access, function calls, unary and binary operators, and grouping with parentheses can be combined to form valid expressions. The rules show the hierarchical structure of expressions, supporting operator precedence and associativity, and illustrate how complex expressions are built from simpler components.",
   };
   return r;
 }
