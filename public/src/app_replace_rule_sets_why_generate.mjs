@@ -18,7 +18,7 @@ export async function app_replace_rule_sets_why_generate() {
     );
     let goals = property_get(rule_set, "goals");
     function lambda2(item) {}
-    each(list, lambda2);
+    each(goals, lambda2);
     let json = json_to(rule_set);
     log(app_replace_rule_sets_why_generate.name, {
       json,
