@@ -132,6 +132,7 @@ export async function app_replace_rule_set(context) {
   let highlight = app_replace_rule_set_highlight();
   html_style_assign(progress_container, {
     "border-radius": "9999px",
+    "background-color": button_background_color,
     "padding-left": "0.6em",
     "font-size": "0.8em",
   });
@@ -141,7 +142,7 @@ export async function app_replace_rule_set(context) {
   let button_background_color = app_replace_button_rule_background_color();
   html_style_assign(div, {
     "border-radius": "9999px",
-    "background-color": button_background_color,
+    "background-color": highlight,
     "padding-left": "0.6em",
     height: "100%",
     width: (100 * rule_set_index) / size + "%",
