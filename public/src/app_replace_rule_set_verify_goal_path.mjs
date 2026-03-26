@@ -9,7 +9,7 @@ export function app_replace_rule_set_verify_goal_path(
   start,
   end,
 ) {
-  let dfs = app_replace_rule_set_verify_from(start, end, rules_parsed);
+  let dfs = app_replace_rule_set_verify_from(rules_parsed, start, end);
   let max_depth = app_replace_rule_set_verify_goal_depth_max();
   const property_name = "previous";
   let list = list_linked_to_list(dfs, property_name, max_depth);
