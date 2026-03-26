@@ -39,9 +39,6 @@ export async function app_replace_rule_sets_why_generate() {
       await app_replace_rule_sets_why_generate_single_openai(rule_set);
     let result = property_get(parsed, "result");
     let f_name2 = property_get(rs, "f_name");
-    log(app_replace_rule_sets_why_generate.name, {
-      parsed,
-    });
     let list = await function_ast_list_type_nodes_object_expression(f_name2);
     function lambda3(e) {
       let search = "name";
@@ -59,7 +56,7 @@ export async function app_replace_rule_sets_why_generate() {
       let properties = js_object_expression_properties(f);
       list_add(properties, found);
     }
-    let s = js_string(parsed);
+    let s = js_string(result);
     js_property_value_set(found, s);
     let code = js_unparse(f);
     log(app_replace_rule_sets_why_generate.name, code);
