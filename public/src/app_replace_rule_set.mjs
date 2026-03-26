@@ -139,9 +139,8 @@ export async function app_replace_rule_set(context) {
   let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);
   let mapped = list_map_property(path, "rule");
   let rules_used = list_unique(mapped);
-  list_shuffle(rules_used);
+  list_shuffle(rules_used);ldf
   let size = list_size(rules_parsed);
-  let filtered = list_without(list, item);
   if (size <= 3) {
     rules_used = rules_parsed;
   }
