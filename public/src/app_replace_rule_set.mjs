@@ -136,6 +136,7 @@ export async function app_replace_rule_set(context) {
     "background-color": highlight,
     "padding-left": "0.6em",
   });
+  html_centered(div);
   html_style_padding_y(div, "0.3em");
   html_text_set(progress_container, "0");
   let rule_name = property_get(rs, "name");
