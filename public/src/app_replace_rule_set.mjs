@@ -1,3 +1,4 @@
+import { html_style_padding_y } from "../../../love/public/src/html_style_padding_y.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { app_replace_rule_set_rules_used } from "../../../love/public/src/app_replace_rule_set_rules_used.mjs";
@@ -126,6 +127,7 @@ export async function app_replace_rule_set(context) {
     "padding-left": "0.6em",
     "font-size": "0.8em",
   });
+  html_style_padding_y(component3, value5);
   let div = html_div(progress_container);
   html_style_assign(div, {
     "border-radius": "9999px",
