@@ -16,6 +16,7 @@ export function app_replace_rule_set_swap_3() {
         end: "d b c d c b a a",
       },
     ],
+    why: "The replacement rules demonstrate a grammar for swapping the letter 'a' with any immediately following letter ('b', 'c', or 'd'). This allows 'a' to move rightward through a sequence by repeatedly swapping with its neighbor, effectively 'bubbling' all 'a's to the end of the string. The examples show how starting sequences are transformed into goal sequences by applying these swaps.",
   };
   return r;
 }
