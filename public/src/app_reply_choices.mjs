@@ -366,10 +366,6 @@ export function app_reply_choices() {
     },
     travel_pray,
     {
-      text: emoji_pray() + " Travel ask",
-      response: emoji_pray() + "No money for travel",
-    },
-    {
       text: emoji_voice() + " Voice",
       response:
         emojis_sing_wrap("My voice is a gift and miracle from God! ") +
