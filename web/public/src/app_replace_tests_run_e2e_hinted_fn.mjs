@@ -16,7 +16,8 @@ import { app_replace_rule_set_verify_goal_depth_max } from "../../../love/public
 export async function app_replace_tests_run_e2e_hinted_fn(
   p,
   refresh_count,
-  page,rule_original_previous
+  page,
+  rule_original_previous,
 ) {
   let symbol_id = null;
   let max = app_replace_rule_set_verify_goal_depth_max();
