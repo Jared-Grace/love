@@ -1,12 +1,6 @@
-import { html_div_text_centered } from "../../../love/public/src/html_div_text_centered.mjs";
-import { app_replace_button_symbol_style_background_color_valid } from "../../../love/public/src/app_replace_button_symbol_style_background_color_valid.mjs";
-import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
-import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
+import { html_progress_bar } from "../../../love/public/src/html_progress_bar.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { app_replace_rule_set_index_get } from "../../../love/public/src/app_replace_rule_set_index_get.mjs";
-import { html_centered } from "../../../love/public/src/html_centered.mjs";
-import { html_style_padding_y } from "../../../love/public/src/html_style_padding_y.mjs";
-import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { app_replace_rule_set_rules_used } from "../../../love/public/src/app_replace_rule_set_rules_used.mjs";
 import { list_map_property_multiple } from "../../../love/public/src/list_map_property_multiple.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
@@ -130,37 +124,7 @@ export async function app_replace_rule_set(context) {
   let size = list_size(rule_sets);
   const progress_bar_name = "rule set";
   let highlight = app_replace_rule_set_highlight();
-  let progress_container_text = html_p(root);
-  let progress_container = html_div(progress_container_text);
-  let button_background_color = app_replace_button_rule_background_color();
-  let color_valid = app_replace_button_symbol_style_background_color_valid();
-  html_style_assign(progress_container, {
-    "border-radius": "9999px",
-    "background-color": button_background_color,
-    padding: "0",
-  });
-  let div = html_div(progress_container);
-  html_style_assign(div, {
-    "border-radius": "9999px",
-    "background-color": color_valid,
-    "padding-left": "0.6em",
-    height: "100%",
-    width: (100 * rule_set_index) / size + "%",
-  });
-  html_centered(div);
-  html_style_padding_y(div, "0.3em");
-  let combined = text_combine_multiple([
-    progress_bar_name,
-    " ",
-    rule_set_index + 1,
-    " out of ",
-    size,
-  ]);
-  let text = text_first_upper_to(combined);
-  let div2 = html_div_text_centered(progress_container_text, text);
-  html_style_assign(div2, {
-    "font-size": "0.8em",
-  });
+  html_progress_bar(root, rule_set_index, size, progress_bar_name);
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
   let div_abbreviations = html_div(root);
