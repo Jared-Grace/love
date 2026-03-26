@@ -4,7 +4,6 @@ import { js_object_expression_properties } from "../../../love/public/src/js_obj
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { app_replace_rule_sets_why_generate_single_openai } from "../../../love/public/src/app_replace_rule_sets_why_generate_single_openai.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { list_filter_null_not_is_single } from "../../../love/public/src/list_filter_null_not_is_single.mjs";
 import { function_ast_list_type_nodes_object_expression } from "../../../love/public/src/function_ast_list_type_nodes_object_expression.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_rule_sets_why_generate_single } from "../../../love/public/src/app_replace_rule_sets_why_generate_single.mjs";
@@ -42,9 +41,8 @@ export async function app_replace_rule_sets_why_generate() {
       return found;
     }
     let mapped = list_filter(list, lambda3);
-    let f_name_after = list_filter_null_not_is_single(mapped);
     log(app_replace_rule_sets_why_generate.name, {
-      f_name_after,
+      mapped,
     });
   }
   await each_async(taken, lambda);
