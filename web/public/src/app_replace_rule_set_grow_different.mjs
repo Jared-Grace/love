@@ -1,6 +1,6 @@
 export function app_replace_rule_set_grow_different() {
   let r = {
-    name: "grow different",
+    name: "Grow Different",
     rules: ["a > b c"],
     goals: [
       {
