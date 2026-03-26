@@ -1,4 +1,4 @@
-import { list_map_curried_right } from "../../../love/public/src/list_map_curried_right.mjs";
+import { property_change_list_map } from "../../../love/public/src/property_change_list_map.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
 import { app_replace_rules_parse_left_right_only } from "../../../love/public/src/app_replace_rules_parse_left_right_only.mjs";
 import { property_change } from "../../../love/public/src/property_change.mjs";
@@ -18,12 +18,11 @@ export async function app_replace_rule_sets_why_generate() {
     );
     const property_name = "goals";
     let lambda$item = app_replace_start_end_get;
-    let c = list_map_curried_right(lambda$item);
-    let value3 = property_change(o, property_name, c);
+    let value_changed = property_change_list_map(lambda$item, property_name);
     let json = json_to(rule_set);
     log(app_replace_rule_sets_why_generate.name, {
       json,
-      value3,
+      value3: value_changed,
     });
     exit();
     let r = await openai_responses_cache(
