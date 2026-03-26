@@ -28,6 +28,7 @@ export function app_replace_rule_set_shrink_left_pair_replace_right_same() {
         end: "a a",
       },
     ],
+    why: "These replacement rules demonstrate a grammar that systematically reduces sequences starting with 'b' followed by either 'a' or 'c' to simpler forms, ultimately aiming to produce strings of 'a' or 'a a'. The first rule shrinks the pair 'b a' to 'a', while the second rule replaces 'b c' with two 'b's, allowing further reductions. This shows how local pairwise replacements can be used to simplify or normalize strings according to specific patterns.",
   };
   return r;
 }
