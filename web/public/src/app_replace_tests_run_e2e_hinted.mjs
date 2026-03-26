@@ -15,8 +15,13 @@ import { app_replace_rule_set_attribute_refresh_click } from "../../../love/publ
 import { app_replace_rule_set_attribute_hint } from "../../../love/public/src/app_replace_rule_set_attribute_hint.mjs";
 import { app_replace_tests_run_e2e_all } from "../../../love/public/src/app_replace_tests_run_e2e_all.mjs";
 export async function app_replace_tests_run_e2e_hinted() {
-  await app_replace_tests_run_e2e_all(hinted);
-  async function hinted(p, refresh_count, page, symbol_id) {
+  await app_replace_tests_run_e2e_all(app_replace_tests_run_e2e_hinted_fn);
+  async function app_replace_tests_run_e2e_hinted_fn(
+    p,
+    refresh_count,
+    page,
+    symbol_id,
+  ) {
     let max = app_replace_rule_set_verify_goal_depth_max();
     async function lambda(item) {
       let hint = app_replace_rule_set_attribute_hint();
