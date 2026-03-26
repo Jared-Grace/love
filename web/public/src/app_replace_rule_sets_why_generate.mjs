@@ -1,3 +1,4 @@
+import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { js_property_value_set } from "../../../love/public/src/js_property_value_set.mjs";
 import { js_string } from "../../../love/public/src/js_string.mjs";
@@ -48,7 +49,7 @@ export async function app_replace_rule_sets_why_generate() {
     }
     let f = list_find(list, lambda3);
     const property = "why";
-    let found = js_object_expression_property_named_or_null(f, property);
+    let found = js_object_expression_properties_find_key_named(f, property);
     let n = null_is(found);
     if (n) {
       let expression = js_parse_expression(property);
