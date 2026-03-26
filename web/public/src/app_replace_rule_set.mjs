@@ -1,14 +1,8 @@
-import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
-import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
-import { positive_is } from "../../../love/public/src/positive_is.mjs";
-import { list_difference } from "../../../love/public/src/list_difference.mjs";
+import { app_replace_rule_set_rules_used } from "../../../love/public/src/app_replace_rule_set_rules_used.mjs";
 import { list_map_property_multiple } from "../../../love/public/src/list_map_property_multiple.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { app_replace_rule_set_verify_from_try } from "../../../love/public/src/app_replace_rule_set_verify_from_try.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
-import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
-import { log } from "../../../love/public/src/log.mjs";
-import { app_replace_rule_set_verify_goal_path } from "../../../love/public/src/app_replace_rule_set_verify_goal_path.mjs";
 import { app_replace_rule_set_attribute_hint } from "../../../love/public/src/app_replace_rule_set_attribute_hint.mjs";
 import { app_replace_rule_set_attribute_refresh_count } from "../../../love/public/src/app_replace_rule_set_attribute_refresh_count.mjs";
 import { app_replace_rule_set_attribute_symbol } from "../../../love/public/src/app_replace_rule_set_attribute_symbol.mjs";
@@ -140,22 +134,12 @@ export async function app_replace_rule_set(context) {
   let success = false;
   const duration = 555;
   let refresh_count = 0;
-  let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);
-  let mapped = list_map_property(path, "rule");
-  rules_used = list_unique(mapped);
-  let size = list_size(rules_used);
-  let number_to_add = 3 - size;
-  let p = positive_is(number_to_add);
-  log(app_replace_rule_set.name, {
-    number_to_add,
-    path,
-  });
-  if (p) {
-    let difference = list_difference(rules_parsed, rules_used);
-    let taken = list_shuffle_take(difference, number_to_add);
-    list_add_multiple(rules_used, taken);
-  }
-  list_shuffle(rules_used);
+  rules_used = app_replace_rule_set_rules_used(
+    rules_parsed,
+    start,
+    end,
+    rules_used,
+  );
   let exists2 = property_exists(rs, "abbreviations");
   if (exists2) {
     let properties = ["left", "right"];
