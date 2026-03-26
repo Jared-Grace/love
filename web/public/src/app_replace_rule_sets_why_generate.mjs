@@ -17,7 +17,7 @@ export async function app_replace_rule_sets_why_generate() {
       app_replace_rules_parse_left_right_only,
     );
     let value_changed = property_change_list_map(
-      object,
+      rule_set,
       "goals",
       app_replace_start_end_get,
     );
