@@ -28,7 +28,8 @@ export async function app_replace_rule_sets_fns_capitalization() {
           s,
         });
         return;
-        let r = js_literal_map_curried_right(() => {});
+        function lambda2() {}
+        let r = js_literal_map_curried_right(lambda2);
         js_property_value_change(s, r);
       }
       each(list, lambda_each);
