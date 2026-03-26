@@ -129,8 +129,8 @@ export async function app_replace_rule_set(context) {
   let rule_sets = app_replace_rule_sets();
   let size = list_size(rule_sets);
   const progress_bar_name = "rule set";
-  let progress_container = html_p(root);
-  let div3 = html_div(parent);
+  let progress_container_text = html_p(root);
+  let progress_container = html_div(progress_container_text);
   let button_background_color = app_replace_button_rule_background_color();
   let highlight = app_replace_rule_set_highlight();
   let color_valid = app_replace_button_symbol_style_background_color_valid();
@@ -158,7 +158,7 @@ export async function app_replace_rule_set(context) {
     size,
   ]);
   let text = text_first_upper_to(combined);
-  let div2 = html_div_text_centered(root, text);
+  let div2 = html_div_text_centered(progress_container_text, text);
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
   let div_abbreviations = html_div(root);
