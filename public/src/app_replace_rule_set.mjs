@@ -144,11 +144,12 @@ export async function app_replace_rule_set(context) {
   });
   html_centered(div);
   html_style_padding_y(div, "0.3em");
+  const progress_bar_name_plural = "rule sets";
   let combined = text_combine_multiple([
     rule_set_index,
     " out of ",
     size,
-    "rule sets",
+    progress_bar_name_plural,
     " completed",
   ]);
   html_text_set(progress_container, combined);
