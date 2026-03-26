@@ -154,9 +154,11 @@ export async function app_replace_rule_set(context) {
   let rules_used = list_unique(mapped);
   list_shuffle(rules_used);
   let properties = ["left", "right"];
-  function lambda(item) {}
-  let mapped3 = list_map(list3, lambda);
-  let mapped2 = list_map_property(list, property_name);
+  function lambda(property_name) {
+    let mapped2 = list_map_property(list, property_name);
+    return mapped2;
+  }
+  let mapped3 = list_map(properties, lambda);
   refresh();
   async function refresh() {
     html_clear(div_rules_buttons);
