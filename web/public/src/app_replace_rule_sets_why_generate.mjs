@@ -31,7 +31,8 @@ export async function app_replace_rule_sets_why_generate() {
       f_name2,
     });
     let list = await function_ast_list_type_nodes_object_expression(f_name2);
-    let mapped = list_filter(list, () => {});
+    function lambda3() {}
+    let mapped = list_filter(list, lambda3);
     let f_name_after = list_filter_null_not_is_single(mapped);
     log(app_replace_rule_sets_why_generate.name, {
       f_name_after,
