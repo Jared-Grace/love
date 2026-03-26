@@ -11,6 +11,7 @@ import { openai_responses_cache } from "../../../love/public/src/openai_response
 export async function app_replace_rule_sets_why_generate() {
   let rule_sets = app_replace_rule_sets();
   let taken = list_take(rule_sets, 2);
+  rule_sets = taken;
   async function lambda(rule_set) {
     let value2 = property_change(
       rule_set,
@@ -27,7 +28,7 @@ export async function app_replace_rule_sets_why_generate() {
       json,
     });
     let r = await openai_responses_cache(
-      'You will receive the JSON of the replacement rules of a grammar. Please provide a sentence or two describing what the replacement rules demonstrate, and why. Answer must be formatted as HTML. Answer using JSON: { "result": "description_HTML" }',
+      'You will receive the JSON of the replacement rules of a grammar. Please provide a sentence or two describing what the replacement rules demonstrate, and why. Answer using JSON: { "result": "description" }',
       json,
     );
     log(app_replace_rule_sets_why_generate.name, {
