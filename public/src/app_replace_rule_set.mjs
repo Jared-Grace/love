@@ -131,7 +131,6 @@ export async function app_replace_rule_set(context) {
     "border-radius": "9999px",
     "background-color": highlight,
     padding: "0",
-    "font-size": "0.8em",
   });
   html_text_set(progress_container, "0");
   let rule_name = property_get(rs, "name");
