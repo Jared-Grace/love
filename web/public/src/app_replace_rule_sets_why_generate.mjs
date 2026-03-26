@@ -55,7 +55,7 @@ export async function app_replace_rule_sets_why_generate() {
       let properties = js_object_expression_properties(e);
       list_add(properties, p);
     }
-    let s = js_string(value_string);
+    let s = js_string(parsed);
     log(app_replace_rule_sets_why_generate.name, f);
   }
   await each_async(taken, lambda);
