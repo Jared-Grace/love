@@ -1,3 +1,4 @@
+import { exit } from "../../../love/public/src/exit.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -40,6 +41,7 @@ export async function app_replace_rule_sets_fns_capitalization() {
       each(list, lambda_each);
     }
     let output = await function_transform(name, lambda3);
+    exit();
   }
   await each_async(result, lambda);
   return result;
