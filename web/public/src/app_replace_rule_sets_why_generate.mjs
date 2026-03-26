@@ -24,7 +24,6 @@ export async function app_replace_rule_sets_why_generate() {
     let json = json_to(rule_set);
     log(app_replace_rule_sets_why_generate.name, {
       json,
-      value_changed,
     });
     let r = await openai_responses_cache(
       "You will receive the JSON of an unrestricted grammar (although it could be more restrictive like a context-free grammar). Please provide a sentence or two describing what the grammar demonstrates, and why.",
