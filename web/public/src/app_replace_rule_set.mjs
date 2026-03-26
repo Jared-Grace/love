@@ -138,9 +138,10 @@ export async function app_replace_rule_set(context) {
   html_centered(progress_container);
   html_style_padding_y(progress_container, "0.3em");
   let div = html_div(progress_container);
+  let button_background_color = app_replace_button_rule_background_color();
   html_style_assign(div, {
     "border-radius": "9999px",
-    "background-color": highlight,
+    "background-color": button_background_color,
     "padding-left": "0.6em",
     height: "100%",
     width: (100 * rule_set_index) / size + "%",
@@ -250,8 +251,13 @@ export async function app_replace_rule_set(context) {
       enabled = true;
       html_enable_if(rb, enabled);
       app_replace_lefts_rights_style(rb, enabled);
-      let on_b = app_replace_button_rule_background_color();
-      let c = ternary_nested(selected, highlight, enabled, on_b, "#a8a8a8ff");
+      let c = ternary_nested(
+        selected,
+        highlight,
+        enabled,
+        button_background_color,
+        "#a8a8a8ff",
+      );
       html_style_background_color_set(rb, c);
       let arrow2 = property_get(rb, "arrow");
       html_style_font_color_set_if(enabled, arrow2, "black", "#6a6a6a");
