@@ -151,7 +151,7 @@ export async function app_replace_rule_set(context) {
   });
   if (p) {
     let difference = list_difference(rules_parsed, rules_used);
-    let taken = list_shuffle_take(difference, 2);
+    let taken = list_shuffle_take(difference, number_to_add);
     list_add_multiple(rules_used, taken);
   }
   list_shuffle(rules_used);
