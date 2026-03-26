@@ -1,3 +1,4 @@
+import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_replace_rules_parse_left_right_only } from "../../../love/public/src/app_replace_rules_parse_left_right_only.mjs";
 import { property_change } from "../../../love/public/src/property_change.mjs";
@@ -16,8 +17,8 @@ export async function app_replace_rule_sets_why_generate() {
       app_replace_rules_parse_left_right_only,
     );
     function lambda3(goals) {
-      function lambda4(item) {}
-      let mapped2 = list_map(list2, lambda4);
+      let mapped2 = list_map(goals, app_replace_start_end_get);
+      return mapped2;
     }
     let value3 = property_change(o, "goals", lambda3);
     let mapped = list_map(list, lambda2);
