@@ -1,5 +1,3 @@
-import { log_json } from "../../../love/public/src/log_json.mjs";
-import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
@@ -30,8 +28,7 @@ export async function app_replace_rule_sets_fns_capitalization() {
         }
         function lambda2(t) {
           let split = text_split_space(t);
-          let mapped = list_map(split, text_first_upper_to);
-          log_json(right);
+          let mapped = list_map(split, text_first_upper_to);ljsp
         }
         let r = js_literal_map_curried_right(lambda2);
         log(app_replace_rule_sets_fns_capitalization.name, {
