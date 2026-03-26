@@ -92,7 +92,7 @@ export async function app_replace_rule_set(context) {
   let start = property_get(r4, "start");
   let start_indices = list_size_range(start);
   let end = property_get(r4, "end");
-  function lambda11() {
+  function on_hint() {
     let second = app_replace_rule_set_verify_goal_next(
       rules_parsed,
       start,
@@ -112,8 +112,8 @@ export async function app_replace_rule_set(context) {
     }
   }
   let left2 = emoji_question();
-  let combined = text_combine(left2, "Hint");
-  let hint_button = app_replace_button(root, combined, lambda11);
+  let hint_text = text_combine(left2, "Hint");
+  let hint_button = app_replace_button(root, hint_text, on_hint);
   let value4 = app_replace_rule_set_attribute_hint();
   html_data_set_test(hint_button, value4);
   let rule_name = property_get(rs, "name");
