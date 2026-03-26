@@ -146,12 +146,10 @@ export async function app_replace_rule_set(context) {
   html_centered(div);
   html_style_padding_y(div, "0.3em");
   let combined = text_combine_multiple([
-    rule_set_index,
+    progress_bar_name,
+    rule_set_index + 1,
     " out of ",
     size,
-    " ",
-    progress_bar_name,
-    " completed",
   ]);
   html_text_set(progress_container, combined);
   let rule_name = property_get(rs, "name");
