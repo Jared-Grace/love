@@ -150,7 +150,7 @@ export async function app_replace_rule_set(context) {
     size,
     "rule sets completed",
   ]);
-  html_text_set(progress_container, "0");
+  html_text_set(progress_container, combined);
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
   let div_abbreviations = html_div(root);
