@@ -1,3 +1,4 @@
+import { json_to } from "../../../love/public/src/json_to.mjs";
 import { error_json } from "../../../love/public/src/error_json.mjs";
 import { not } from "../../../love/public/src/not.mjs";
 import { list_adder_async } from "../../../love/public/src/list_adder_async.mjs";
@@ -13,6 +14,7 @@ export async function retry_generic(lambda, wait, wait_get, count) {
         success = true;
         return success;
       } catch (e) {
+        let json = json_to(object);
         la(e);
         await sleep(wait);
         wait = wait_get(wait);
