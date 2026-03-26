@@ -17,4 +17,5 @@ export async function app_replace_rule_sets_why_generate() {
   let rule_sets = invoke_multiple(r2);
   let taken = list_take(rule_sets, 2);
   await each_async(rule_sets, app_replace_rule_sets_why_generate_single);
+  await each_async(rule_sets, () => {});
 }
