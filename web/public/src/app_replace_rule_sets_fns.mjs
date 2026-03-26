@@ -59,8 +59,8 @@ import { app_replace_rule_set_grow_different } from "../../../love/public/src/ap
 import { app_replace_rule_set_replace } from "../../../love/public/src/app_replace_rule_set_replace.mjs";
 export function app_replace_rule_sets_fns() {
   let fns = [
-    app_replace_rule_set_replace,
     app_replace_rule_set_grow_different,
+    app_replace_rule_set_replace,
     app_replace_rule_set_shrink_different,
     app_replace_rule_set_double,
     app_replace_rule_set_half,
