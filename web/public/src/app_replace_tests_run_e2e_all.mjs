@@ -10,7 +10,7 @@ import { object_merge_multiple } from "../../../love/public/src/object_merge_mul
 import { object_wrap_multiple } from "../../../love/public/src/object_wrap_multiple.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
-export async function app_replace_tests_run_e2e_all(e2e_inner) {
+export async function app_replace_tests_run_e2e_all(e2e_inner_fns) {
   let rule_sets = app_replace_rule_sets();
   function lambda2(rule_set) {
     let goals = property_get(rule_set, "goals");
@@ -29,9 +29,15 @@ export async function app_replace_tests_run_e2e_all(e2e_inner) {
         let next = list_pop_first(remaining);
         let rule_set = property_get(next, "rule_set");
         let goal = property_get(next, "goal");
-        async function lambda3(item) {}
-        await each_async(list, lambda3);
-        await app_replace_tests_run_e2e_goal(page, goal, rule_set, e2e_inner);
+        async function lambda3(e2e_inner_fn) {
+          await app_replace_tests_run_e2e_goal(
+            page,
+            goal,
+            rule_set,
+            e2e_inner_fn,
+          );
+        }
+        await each_async(e2e_inner_fns, lambda3);
       }
       await list_empty_not_is_while_async(remaining, lambda4);
     }
