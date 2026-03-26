@@ -1,4 +1,6 @@
-import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
+import { list_find_or_null } from "../../../love/public/src/list_find_or_null.mjs";
+import { js_property_key_named_curried_right } from "../../../love/public/src/js_property_key_named_curried_right.mjs";
+import { js_object_expression_properties } from "../../../love/public/src/js_object_expression_properties.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { app_replace_rule_sets_why_generate_single_openai } from "../../../love/public/src/app_replace_rule_sets_why_generate_single_openai.mjs";
@@ -35,7 +37,9 @@ export async function app_replace_rule_sets_why_generate() {
     let list = await function_ast_list_type_nodes_object_expression(f_name2);
     function lambda3(e) {
       let search = "name";
-      let found = js_object_expression_properties_find_key_named(e, search);
+      let properties = js_object_expression_properties(e);
+      let r = js_property_key_named_curried_right(search);
+      let found = list_find_or_null(properties, r);
       let nn = null_not_is(found);
       return nn;
     }
