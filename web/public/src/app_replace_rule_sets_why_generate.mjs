@@ -1,3 +1,5 @@
+import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
+import { app_replace_rule_sets_fns } from "../../../love/public/src/app_replace_rule_sets_fns.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
 import { property_change_list_map } from "../../../love/public/src/property_change_list_map.mjs";
@@ -6,10 +8,10 @@ import { property_change } from "../../../love/public/src/property_change.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
-import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { openai_responses_cache } from "../../../love/public/src/openai_responses_cache.mjs";
 export async function app_replace_rule_sets_why_generate() {
-  let rule_sets = app_replace_rule_sets();
+  let r2 = app_replace_rule_sets_fns();
+  let rule_sets = invoke_multiple(r2);
   let taken = list_take(rule_sets, 2);
   async function lambda(rule_set) {
     let value2 = property_change(
