@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { app_replace_rule_set_verify_goal_path } from "../../../love/public/src/app_replace_rule_set_verify_goal_path.mjs";
 import { app_replace_rule_set_attribute_hint } from "../../../love/public/src/app_replace_rule_set_attribute_hint.mjs";
 import { app_replace_rule_set_attribute_refresh_count } from "../../../love/public/src/app_replace_rule_set_attribute_refresh_count.mjs";
@@ -139,7 +140,10 @@ export async function app_replace_rule_set(context) {
   let success = false;
   const duration = 555;
   let refresh_count = 0;
-  let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);$l$path
+  let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);
+  log(app_replace_rule_set.name, {
+    path,
+  });
   refresh();
   async function refresh() {
     html_clear(div_rules_buttons);
