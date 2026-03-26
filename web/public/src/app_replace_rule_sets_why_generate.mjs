@@ -12,11 +12,12 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 import { openai_responses_cache } from "../../../love/public/src/openai_responses_cache.mjs";
 export async function app_replace_rule_sets_why_generate() {
   let r2 = app_replace_rule_sets_fns();
-  function lambda2(fn) {
-    return {
-      name: fn.name,
-      fn: fn,
+  function lambda2(f) {
+    let r3 = {
+      name: f.name,
+      fn: f,
     };
+    return r3;
   }
   let mapped = list_map(r2, lambda2);
   let rule_sets = invoke_multiple(r2);
