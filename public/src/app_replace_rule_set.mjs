@@ -155,7 +155,6 @@ export async function app_replace_rule_set(context) {
     list_add_multiple(rules_used, taken);
   }
   list_shuffle(rules_used);
-  rules_parsed = rules_used;
   let exists2 = property_exists(rs, "abbreviations");
   if (exists2) {
     let properties = ["left", "right"];
