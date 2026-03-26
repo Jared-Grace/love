@@ -48,7 +48,7 @@ export async function app_replace_tests_run_e2e_hinted_fn(
   await each_range_async(max, lambda);
   let r2 = {
     refresh_count,
-    symbol_id,
+    symbol_id,rule_original_previous
   };
   return r2;
 }
