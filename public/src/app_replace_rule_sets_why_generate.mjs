@@ -1,4 +1,4 @@
-import { app_replace_rule_sets_name_expression } from "../../../love/public/src/app_replace_rule_sets_name_expression.mjs";
+import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { list_filter } from "../../../love/public/src/list_filter.mjs";
 import { app_replace_rule_sets_why_generate_single_openai } from "../../../love/public/src/app_replace_rule_sets_why_generate_single_openai.mjs";
@@ -34,7 +34,8 @@ export async function app_replace_rule_sets_why_generate() {
     });
     let list = await function_ast_list_type_nodes_object_expression(f_name2);
     function lambda3(e) {
-      let found = app_replace_rule_sets_name_expression(e, search);
+      let search = "name";
+      let found = js_object_expression_properties_find_key_named(e, search);
       let nn = null_not_is(found);
       return nn;
     }
