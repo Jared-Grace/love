@@ -1,4 +1,4 @@
-import { each_unordered_async } from "../../../love/public/src/each_unordered_async.mjs";
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
@@ -43,6 +43,6 @@ export async function app_replace_rule_sets_fns_capitalization() {
     let output = await function_transform(name, lambda3);
     exit();
   }
-  await each_unordered_async(result, lambda);
+  await each_async(result, lambda);
   return result;
 }
