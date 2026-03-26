@@ -1,3 +1,4 @@
+import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_map_name } from "../../../love/public/src/list_map_name.mjs";
@@ -24,7 +25,9 @@ export async function app_replace_rule_sets_fns_capitalization() {
         if (null_is(s)) {
           return;
         }
-        function lambda2() {}
+        function lambda2(t) {
+          let split = text_split_space(s2);
+        }
         let r = js_literal_map_curried_right(lambda2);
         log(app_replace_rule_sets_fns_capitalization.name, {
           r,
