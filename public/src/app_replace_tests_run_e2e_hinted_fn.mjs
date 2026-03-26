@@ -39,7 +39,7 @@ export async function app_replace_tests_run_e2e_hinted_fn(
     let filtered2 = list_filter_null_not_is(waited);
     let s = list_size_1(filtered2);
     if (s) {
-      symbol_id = list_single(filtered2);
+      let symbol_id = list_single(filtered2);
       return true;
     }
   }
