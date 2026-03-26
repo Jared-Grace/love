@@ -119,7 +119,7 @@ export async function app_replace_rule_set(context) {
   let hint_button = app_replace_button(root, hint_text, on_hint);
   let value4 = app_replace_rule_set_attribute_hint();
   html_data_set_test(hint_button, value4);
-  let div = html_div(root);
+  let div = html_p(root);
   html_style_assign(div, {
     "border-radius": "9999px",
     "background-color": app_karate_container_background_color() + "ff",
