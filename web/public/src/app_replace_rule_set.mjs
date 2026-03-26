@@ -1,3 +1,4 @@
+import { html_div_text } from "../../../love/public/src/html_div_text.mjs";
 import { app_replace_button_symbol_style_background_color_valid } from "../../../love/public/src/app_replace_button_symbol_style_background_color_valid.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
@@ -6,7 +7,6 @@ import { app_replace_rule_set_index_get } from "../../../love/public/src/app_rep
 import { html_centered } from "../../../love/public/src/html_centered.mjs";
 import { html_style_padding_y } from "../../../love/public/src/html_style_padding_y.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
-import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { app_replace_rule_set_rules_used } from "../../../love/public/src/app_replace_rule_set_rules_used.mjs";
 import { list_map_property_multiple } from "../../../love/public/src/list_map_property_multiple.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
@@ -158,9 +158,7 @@ export async function app_replace_rule_set(context) {
     size,
   ]);
   let text = text_first_upper_to(combined);
-  if (false) {
-    html_text_set(progress_container, text);
-  }
+  let div2 = html_div_text(root2, text2);
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
   let div_abbreviations = html_div(root);
