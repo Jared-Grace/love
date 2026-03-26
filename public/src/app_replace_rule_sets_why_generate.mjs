@@ -22,7 +22,7 @@ export async function app_replace_rule_sets_why_generate() {
     let json = json_to(rule_set);
     log(app_replace_rule_sets_why_generate.name, {
       json,
-       value_changed,
+      value_changed,
     });
     exit();
     let r = await openai_responses_cache(
