@@ -1,3 +1,5 @@
+import { app_replace_tests_run_e2e_all } from "../../../love/public/src/app_replace_tests_run_e2e_all.mjs";
+import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { playwright_refresh } from "../../../love/public/src/playwright_refresh.mjs";
 import { app_replace_rule_set_success_attribute_next } from "../../../love/public/src/app_replace_rule_set_success_attribute_next.mjs";
 import { playwright_by_attribute_test_exists_assert } from "../../../love/public/src/playwright_by_attribute_test_exists_assert.mjs";
@@ -18,8 +20,16 @@ export async function app_replace_tests_run_e2e_goal(
   page,
   goal,
   rule_set,
-  e2e_inner,
+  e2e_inner_fn,
 ) {
+  try {
+  } catch (e) {
+    log_keep(app_replace_tests_run_e2e_goal.name, {
+      goal,
+      completed: true,
+      e2e_inner_fn_name: e2e_inner_fn.name,
+    });
+  }
   await playwright_refresh(page);
   let json = json_to(goal);
   let fns = app_replace_rule_sets_fns();
@@ -43,7 +53,7 @@ export async function app_replace_tests_run_e2e_goal(
     let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);
     async function each_step(p) {
       let symbol_id = null;
-      ({ refresh_count, symbol_id } = await e2e_inner(
+      ({ refresh_count, symbol_id } = await e2e_inner_fn(
         p,
         refresh_count,
         page,
