@@ -1,4 +1,3 @@
-import { app_karate_container_background_color } from "../../../love/public/src/app_karate_container_background_color.mjs";
 import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { app_replace_rule_set_rules_used } from "../../../love/public/src/app_replace_rule_set_rules_used.mjs";
@@ -120,13 +119,20 @@ export async function app_replace_rule_set(context) {
   let value4 = app_replace_rule_set_attribute_hint();
   html_data_set_test(hint_button, value4);
   let progress_container = html_p(root);
+  let highlight = app_replace_rule_set_highlight();
   html_style_assign(progress_container, {
     "border-radius": "9999px",
-    "background-color": app_karate_container_background_color() + "ff",
-    padding: "0.6em",
+    "background-color": highlight,
+    padding: "0",
     "font-size": "0.8em",
   });
-  let div = html_div(parent);
+  let div = html_div(progress_container);
+  html_style_assign(div, {
+    "border-radius": "9999px",
+    "background-color": highlight,
+    padding: "0",
+    "font-size": "0.8em",
+  });
   html_text_set(progress_container, "0");
   let rule_name = property_get(rs, "name");
   html_p_text(root, "Rule set: " + rule_name);
@@ -141,7 +147,6 @@ export async function app_replace_rule_set(context) {
   let goal_list_symbols = app_replace_button_side(p_goal, end);
   let lambda4 = app_replace_button_symbol_style_valid_if_curried_right(false);
   each(goal_list_symbols, lambda4);
-  let highlight = app_replace_rule_set_highlight();
   let div_below = html_div(root);
   let success = false;
   const duration = 555;
