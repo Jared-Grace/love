@@ -57,6 +57,7 @@ export function app_replace_rule_set_expressions_primary() {
         end: "( ( ex ) )",
       },
     ],
+    why: "These replacement rules define the primary expressions in a simple expression grammar. They demonstrate how a primary expression (such as an identifier, literal, or parenthesized expression) can be constructed from more basic elements like numbers, strings, booleans, and null. The rules show the recursive structure of expressions, allowing for nesting via parentheses, and enumerate the possible forms a primary expression can take.",
   };
   return r;
 }
