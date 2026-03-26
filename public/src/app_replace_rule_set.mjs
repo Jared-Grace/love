@@ -147,7 +147,7 @@ export async function app_replace_rule_set(context) {
   let p = positive_is(number_to_add);
   log(app_replace_rule_set.name, {
     number_to_add,
-    rules_used,
+    path,
   });
   if (p) {
     let difference = list_difference(rules_parsed, rules_used);
