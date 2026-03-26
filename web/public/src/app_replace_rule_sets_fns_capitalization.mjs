@@ -35,10 +35,6 @@ export async function app_replace_rule_sets_fns_capitalization() {
           return joined;
         }
         let r = js_literal_map_curried_right(lambda2);
-        log(app_replace_rule_sets_fns_capitalization.name, {
-          r,
-        });
-        return;
         js_property_value_change(s, r);
       }
       each(list, lambda_each);
