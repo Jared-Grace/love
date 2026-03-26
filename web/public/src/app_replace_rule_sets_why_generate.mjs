@@ -40,29 +40,30 @@ export async function app_replace_rule_sets_why_generate() {
       await app_replace_rule_sets_why_generate_single_openai(rule_set);
     let result = property_get(parsed, "result");
     let f_name2 = property_get(rs, "f_name");
-    async function lambda4(ast) {}
+    async function lambda4(ast) {
+      let list = await function_ast_list_type_nodes_object_expression(f_name2);
+      function lambda3(e) {
+        let search = "name";
+        let found = js_object_expression_property_named_or_null(e, search);
+        return found;
+      }
+      let f = list_find(list, lambda3);
+      const property = "why";
+      let found = js_object_expression_properties_find_key_named(f, property);
+      let n = null_is(found);
+      if (n) {
+        let expression = js_parse_expression(property);
+        let c = js_call_empty(error.name);
+        found = js_property(expression, c);
+        let properties = js_object_expression_properties(f);
+        list_add(properties, found);
+      }
+      let s = js_string(result);
+      js_property_value_set(found, s);
+      let code = js_unparse(f);
+      log(app_replace_rule_sets_why_generate.name, code);
+    }
     let waited = await functions_transform(lambda4);
-    let list = await function_ast_list_type_nodes_object_expression(f_name2);
-    function lambda3(e) {
-      let search = "name";
-      let found = js_object_expression_property_named_or_null(e, search);
-      return found;
-    }
-    let f = list_find(list, lambda3);
-    const property = "why";
-    let found = js_object_expression_properties_find_key_named(f, property);
-    let n = null_is(found);
-    if (n) {
-      let expression = js_parse_expression(property);
-      let c = js_call_empty(error.name);
-      found = js_property(expression, c);
-      let properties = js_object_expression_properties(f);
-      list_add(properties, found);
-    }
-    let s = js_string(result);
-    js_property_value_set(found, s);
-    let code = js_unparse(f);
-    log(app_replace_rule_sets_why_generate.name, code);
   }
   await each_async(taken, lambda);
 }
