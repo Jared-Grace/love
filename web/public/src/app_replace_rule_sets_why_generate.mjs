@@ -1,3 +1,4 @@
+import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { js_property_value_set } from "../../../love/public/src/js_property_value_set.mjs";
 import { js_string } from "../../../love/public/src/js_string.mjs";
 import { js_object_expression_properties } from "../../../love/public/src/js_object_expression_properties.mjs";
@@ -58,6 +59,7 @@ export async function app_replace_rule_sets_why_generate() {
     }
     let s = js_string(parsed);
     js_property_value_set(found, s);
+    let code = js_unparse(ast);
     log(app_replace_rule_sets_why_generate.name, f);
   }
   await each_async(taken, lambda);
