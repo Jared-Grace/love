@@ -7,6 +7,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 export async function app_replace_tests_run_e2e_next() {
+  "it takes a long time to run all tests in browser in a row - instead, run all tests in parallel, and this function tests the first two rule sets so that next-ing is tested";
   let rule_sets = app_replace_rule_sets();
   let taken = list_take(rule_sets, 2);
   async function lambda(page) {
