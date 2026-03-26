@@ -8,7 +8,7 @@ export function app_replace_rule_set_expressions_additive() {
   let abbreviations = {};
   app_replace_rule_set_expresions_additive_abbreviations(abbreviations);
   let r = {
-    name: "Expressions additive",
+    name: "Expressions Additive",
     rules: rules,
     goals: [
       {

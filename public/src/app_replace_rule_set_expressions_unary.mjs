@@ -8,7 +8,7 @@ export function app_replace_rule_set_expressions_unary() {
   let abbreviations = {};
   app_replace_rule_set_expressions_unary_abbreviations(abbreviations);
   let r = {
-    name: "Expressions unary",
+    name: "Expressions Unary",
     rules,
     goals: [
       {
