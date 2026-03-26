@@ -121,7 +121,7 @@ export async function app_replace_rule_set(context) {
   html_data_set_test(hint_button, value4);
   let div = html_div(root);
   html_style_assign(div, {
-    "border-radius": "50%",
+    "border-radius": "9999px",
     "background-color": app_karate_container_background_color() + "ff",
     padding: "0.6em",
   });
