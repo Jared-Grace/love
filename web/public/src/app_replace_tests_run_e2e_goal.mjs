@@ -84,5 +84,6 @@ export async function app_replace_tests_run_e2e_goal(
       completed: true,
       e2e_inner_fn_name: e2e_inner_fn.name,
     });
+    throw e;
   }
 }
