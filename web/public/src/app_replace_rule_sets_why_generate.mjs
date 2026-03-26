@@ -11,7 +11,7 @@ export async function app_replace_rule_sets_why_generate() {
   async function lambda(rule_set) {
     let value2 = property_change(rule_set, "rules", app_replace_rules_parse);
     log(app_replace_rule_sets_why_generate.name, {
-      value2,
+      rule_set,
     });
     exit();
     let json = json_to(rule_set);
