@@ -253,6 +253,7 @@ export async function app_replace_rule_set(context) {
       enabled = true;
       html_enable_if(rb, enabled);
       app_replace_lefts_rights_style(rb, enabled);
+      let button_background_color = app_replace_button_rule_background_color();
       let c = ternary_nested(
         selected,
         highlight,
