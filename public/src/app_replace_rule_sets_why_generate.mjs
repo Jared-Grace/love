@@ -16,8 +16,9 @@ export async function app_replace_rule_sets_why_generate() {
       "rules",
       app_replace_rules_parse_left_right_only,
     );
+    let mapper = app_replace_start_end_get;
     function lambda3(goals) {
-      let mapped2 = list_map(goals, app_replace_start_end_get);
+      let mapped2 = list_map(goals, mapper);
       return mapped2;
     }
     let value3 = property_change(o, "goals", lambda3);
