@@ -40,8 +40,9 @@ export async function app_replace_rule_sets_why_generate() {
       let found = list_any(properties, r);
       return found;
     }
-    let mapped = list_find(list, lambda3);
-    log(app_replace_rule_sets_why_generate.name, mapped);
+    let f = list_find(list, lambda3);
+    let properties = js_object_expression_properties(e);
+    log(app_replace_rule_sets_why_generate.name, f);
   }
   await each_async(taken, lambda);
 }
