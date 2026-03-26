@@ -1,4 +1,5 @@
-import { functions_transform } from "../../../love/public/src/functions_transform.mjs";
+import { function_transform } from "../../../love/public/src/function_transform.mjs";
+import { js_list_type_nodes } from "../../../love/public/src/js_list_type_nodes.mjs";
 import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { js_property_value_set } from "../../../love/public/src/js_property_value_set.mjs";
@@ -14,7 +15,6 @@ import { js_object_expression_property_named_or_null } from "../../../love/publi
 import { list_find } from "../../../love/public/src/list_find.mjs";
 import { app_replace_rule_sets_why_generate_single_openai } from "../../../love/public/src/app_replace_rule_sets_why_generate_single_openai.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { function_ast_list_type_nodes_object_expression } from "../../../love/public/src/function_ast_list_type_nodes_object_expression.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_rule_sets_why_generate_single } from "../../../love/public/src/app_replace_rule_sets_why_generate_single.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -41,7 +41,8 @@ export async function app_replace_rule_sets_why_generate() {
     let result = property_get(parsed, "result");
     let f_name2 = property_get(rs, "f_name");
     async function lambda4(ast) {
-      let list = await function_ast_list_type_nodes_object_expression(f_name2);
+      const type = "ObjectExpression";
+      let list = js_list_type_nodes(ast, type);
       function lambda3(e) {
         let search = "name";
         let found = js_object_expression_property_named_or_null(e, search);
@@ -63,7 +64,7 @@ export async function app_replace_rule_sets_why_generate() {
       let code = js_unparse(f);
       log(app_replace_rule_sets_why_generate.name, code);
     }
-    let waited = await functions_transform(lambda4);
+    let waited = await function_transform(f_name2, lambda4);
   }
   await each_async(taken, lambda);
 }
