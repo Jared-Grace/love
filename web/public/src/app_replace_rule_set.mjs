@@ -151,6 +151,10 @@ export async function app_replace_rule_set(context) {
   refresh();
   async function refresh() {
     html_clear(div_rules_buttons);
+    let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);
+    log(app_replace_rule_set.name, {
+      path,
+    });
     refresh_count++;
     let value3 = app_replace_rule_set_attribute_refresh_count(refresh_count);
     html_data_set_test(div_rules_buttons, value3);
