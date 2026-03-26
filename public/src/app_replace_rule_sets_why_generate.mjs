@@ -14,7 +14,7 @@ export async function app_replace_rule_sets_why_generate() {
     return r3;
   }
   let mapped = list_map(r2, lambda2);
-  let mapped2 = list_map_property(list, property_name);
+  let mapped2 = list_map_property(mapped, "rule_set");
   let taken = list_take(rule_sets, 2);
   await each_async(rule_sets, app_replace_rule_sets_why_generate_single);
   function lambda() {}
