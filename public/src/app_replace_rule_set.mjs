@@ -160,7 +160,7 @@ export async function app_replace_rule_set(context) {
     let t = app_replace_rule_set_verify_from_try(rules_parsed, start, end);
     let found = property_get(t, "found");
     if (not(found)) {
-      start_over;
+      html_style_background_color_set(start_over, highlight);
     }
     log(app_replace_rule_set.name, {
       path,
