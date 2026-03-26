@@ -1,3 +1,4 @@
+import { html_style_assign } from "../../../love/public/src/html_style_assign.mjs";
 import { html_text_set } from "../../../love/public/src/html_text_set.mjs";
 import { app_replace_rule_set_rules_used } from "../../../love/public/src/app_replace_rule_set_rules_used.mjs";
 import { list_map_property_multiple } from "../../../love/public/src/list_map_property_multiple.mjs";
@@ -118,6 +119,10 @@ export async function app_replace_rule_set(context) {
   let value4 = app_replace_rule_set_attribute_hint();
   html_data_set_test(hint_button, value4);
   let div = html_div(root);
+  html_style_assign(div, {
+    "border-radius": "50%",
+    padding: "0.6em",
+  });
   html_background_color_set_green(div);
   html_text_set(div, "0");
   let rule_name = property_get(rs, "name");
