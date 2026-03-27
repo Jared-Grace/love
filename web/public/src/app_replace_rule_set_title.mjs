@@ -9,7 +9,7 @@ export function app_replace_rule_set_title(context) {
   let root = property_get(context, "root");
   let rule_set = app_replace_rule_set_get(context);
   let rule_set_name = property_get(rule_set, "name");
-  html_p_text(root, "Rule set: " + rule_set_name);
+  let title = html_p_text(root, "Rule set: " + rule_set_name);
   html_style_margin_y(component, value);
   let why = property_get(rule_set, "why");
   let p = html_p_text(root, why);
