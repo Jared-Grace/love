@@ -29,7 +29,7 @@ export function app_replace_rule_set_expressions_relational() {
       },
       {
         start: "mae < mae",
-        end: "1 < 2",
+        end: "nu < nu",
       },
     ],
   };
