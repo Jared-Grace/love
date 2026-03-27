@@ -16,7 +16,7 @@ export function app_replace_rule_set_same_replace_left() {
         end: "b a a b a a b a",
       },
     ],
-    why: "The replacement rules demonstrate a leftmost, non-overlapping substitution process where every occurrence of two consecutive 'a's is replaced by 'b' followed by 'a'. This shows how a simple rule can systematically transform a string by repeatedly applying the rule to the leftmost eligible pair, resulting in predictable patterns in the output.",
+    why: "The rules demonstrate a grammar where every occurrence of two consecutive 'a's is replaced by 'b','a', allowing multiple non-overlapping replacements from left to right, which transforms sequences of 'a's into alternating 'b','a' patterns.",
   };
   return r;
 }
