@@ -48,7 +48,7 @@ export function app_replace_rule_set_expressions_relational() {
       },
       {
         start: "nu < ( ex )",
-        end: "1 < ( ae )",
+        end: "1 < ( ae ao mue )",
       },
     ],
   };
