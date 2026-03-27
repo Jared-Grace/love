@@ -68,6 +68,7 @@ export function app_new_rule_set_new_2() {
         end: "( true || false ) && true",
       },
     ],
+    why: "The replacement rules define a context-free grammar for logical and arithmetic expressions similar to those in JavaScript, demonstrating operator precedence, associativity, and the structure of primary, unary, binary, and logical expressions.",
   };
   return r;
 }
