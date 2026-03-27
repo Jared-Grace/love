@@ -122,7 +122,6 @@ export async function app_replace_rule_set(context) {
   let value4 = app_replace_rule_set_attribute_hint();
   html_data_set_test(hint_button, value4);
   app_replace_rule_set_title(context);
-  let rule_sets = app_replace_rule_sets();
   let highlight = app_replace_rule_set_highlight();
   app_replace_rule_sets_progress_bar(context);
   let root3 = property_get(context, "root");
