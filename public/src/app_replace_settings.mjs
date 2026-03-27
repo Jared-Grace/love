@@ -1,3 +1,4 @@
+import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { app_replace_animation_duration_default } from "../../../love/public/src/app_replace_animation_duration_default.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
@@ -35,6 +36,11 @@ export function app_replace_settings(context) {
   );
   let div2 = html_div(parent);
   let left = emoji_clock();
+  const duration = storage_local_initialize_context(
+    context,
+    "animation_duration",
+    value_initial,
+  );
   let choices = [
     {
       ending: "off",
