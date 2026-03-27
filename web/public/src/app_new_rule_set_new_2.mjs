@@ -52,8 +52,8 @@ export function app_new_rule_set_new_2() {
         end: "( re || re ) && true",
       },
       {
-        start: "( mue ) && true",
-        end: "( pe ) && true",
+        start: "( re || re ) && true",
+        end: "( mue || mue ) && true",
       },
       {
         start: "( pe ) && true",
