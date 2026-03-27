@@ -16,7 +16,7 @@ export function app_replace_rule_set_binary_counting_prepare_2() {
         end: "1 0 0 0 0",
       },
     ],
-    why: "These replacement rules demonstrate a grammar for incrementing binary numbers using a symbol 'a' as an increment operator. The rules show how to add one to a binary number, handling carries appropriately, and the goals illustrate the process of incrementing the binary number represented by the start sequence to reach the desired end sequence.",
+    why: "The rules demonstrate binary incrementation, where applying 'a' to a binary number (represented by 0s and 1s) simulates adding one, including carrying over, as shown by the transformation of the start to end sequences in the goals.",
   };
   return r;
 }
