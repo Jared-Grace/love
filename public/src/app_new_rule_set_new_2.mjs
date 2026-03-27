@@ -36,7 +36,7 @@ export function app_new_rule_set_new_2() {
         end: "li lo li",
       },
       {
-        start: "li lo li",
+        start: "pe lo pe",
         end: "true && false",
       },
       {
