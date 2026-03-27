@@ -45,7 +45,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "pe lo pe",
-        end: "( ex ) lo pe",
+        end: "( ex ) && true",
       },
       {
         start: "( ex ) lo pe",
