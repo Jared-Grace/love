@@ -15,7 +15,7 @@ export function app_new_rule_set_new_2() {
     eo: ["", "e", "elational ", "o", "perator"],
   });
   let r = {
-    name: "Expressions equality",
+    name: "Expressions Equality",
     abbreviations,
     rules,
     goals: [
