@@ -20,7 +20,7 @@ export function app_replace_rule_set_verify(rule_set) {
   });
   let paths = list_map(squashed, app_replace_rule_set_verify_path_get);
   let squashed2 = list_squash(paths);
-  let mapped = list_map_property(list, property_name);
+  let mapped = list_map_property(squashed2, "rule");
   log(app_replace_rule_set_verify.name, {
     squashed2,
   });
