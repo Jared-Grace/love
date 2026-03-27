@@ -1,3 +1,4 @@
+import { app_replace_rule_set_title } from "../../../love/public/src/app_replace_rule_set_title.mjs";
 import { html_progress_bar } from "../../../love/public/src/html_progress_bar.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { app_replace_rule_set_index_get } from "../../../love/public/src/app_replace_rule_set_index_get.mjs";
@@ -120,6 +121,7 @@ export async function app_replace_rule_set(context) {
   let hint_button = app_replace_button(root, hint_text, on_hint);
   let value4 = app_replace_rule_set_attribute_hint();
   html_data_set_test(hint_button, value4);
+  app_replace_rule_set_title(context);
   let rule_set_index = app_replace_rule_set_index_get(context);
   let rule_sets = app_replace_rule_sets();
   let size = list_size(rule_sets);
