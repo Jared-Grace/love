@@ -49,7 +49,7 @@ export function app_replace_rule_set_expressions_equality() {
       },
       {
         start: "( ue ao ue ) === pe",
-        end: "( pe ao pe ) === pe",
+        end: "( ue ao ue ) === pe",
       },
     ],
   };
