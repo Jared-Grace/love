@@ -68,6 +68,10 @@ export function app_replace_rule_set_expressions_additive() {
         start: "ce ao ce mo ce",
         end: "nu ao ce mo ce",
       },
+      {
+        start: "nu ao ce mo ce",
+        end: "nu ao nu mo ce",
+      },
     ],
     why: "The replacement rules define a context-free grammar for parsing arithmetic and function call expressions similar to those in JavaScript, including literals, identifiers, unary and binary operators, function calls, and member access, demonstrating how complex expressions are constructed from simpler components.",
   };
