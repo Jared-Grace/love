@@ -73,7 +73,7 @@ export function app_replace_settings(context) {
     }
     let b = app_replace_button(div2, combined, lambda4);
     if (equal(animation_duration2, duration)) {
-      html_style_background_color_set(component2, background);
+      html_style_background_color_set(b, highlight);
     }
   }
   each(choices, lambda);
