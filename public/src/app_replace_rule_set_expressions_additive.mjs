@@ -18,7 +18,7 @@ export function app_replace_rule_set_expressions_additive() {
       },
       {
         start: "ce ao ce",
-        end: "nu ao mae",
+        end: "nu ao ce",
       },
       {
         start: "nu ao ce",
