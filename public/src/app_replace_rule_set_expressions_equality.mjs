@@ -1,17 +1,12 @@
+import { app_replace_rule_set_expressions_equality_abbreviations } from "../../../love/public/src/app_replace_rule_set_expressions_equality_abbreviations.mjs";
 import { app_replace_rule_set_expressions_equality_rules } from "../../../love/public/src/app_replace_rule_set_expressions_equality_rules.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
-import { app_replace_rule_set_expressions_relational_abbreviations } from "../../../love/public/src/app_replace_rule_set_expressions_relational_abbreviations.mjs";
 export function app_replace_rule_set_expressions_equality() {
   const rules = [];
   app_replace_rule_set_expressions_equality_rules(rules);
   list_add(rules, "ex > ee");
   let abbreviations = {};
-  app_replace_rule_set_expressions_relational_abbreviations(abbreviations);
-  object_merge(abbreviations, {
-    ee: ["", "e", "quality ", "e", "xpression"],
-    eo: ["", "e", "elational ", "o", "perator"],
-  });
+  app_replace_rule_set_expressions_equality_abbreviations(abbreviations);
   let r = {
     name: "Expressions Equality",
     abbreviations,
