@@ -5,7 +5,6 @@ import { app_replace_rule_sets_progress_bar } from "../../../love/public/src/app
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_rule_set_get } from "../../../love/public/src/app_replace_rule_set_get.mjs";
-import { html_style_margin_bottom } from "./html_style_margin_bottom.mjs";
 export function app_replace_rule_set_title(context) {
   let r2 = app_replace_rule_sets_progress_bar(context);
   let root = property_get(context, "root");
@@ -16,7 +15,6 @@ export function app_replace_rule_set_title(context) {
   let why = property_get(rule_set, "why");
   let p = html_p_text(root, why);
   html_style_margin_top(p, "0.5em");
-  html_style_margin_bottom(p, "0");
   html_style_font_size(p, "0.9em");
   let r = {
     rule_set,
