@@ -1,3 +1,4 @@
+import { list_includes_curried } from "../../../love/public/src/list_includes_curried.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
@@ -26,6 +27,7 @@ export function app_replace_rule_set_verify(rule_set) {
   let mapped = list_map_properties(list, ["rule", "original"]);
   let unique = list_unique(mapped);
   let rules = property_get(rule_set, "rules");
+  let r2 = list_includes_curried(list2);
   function lambda(u) {
     let includes = list_includes(rules, u);
     return includes;
