@@ -4,8 +4,8 @@ import { app_replace_rule_set_expressions_relational_rules } from "../../../love
 export function app_replace_rule_set_expressions_relational() {
   const rules = [];
   app_replace_rule_set_expressions_relational_rules(rules);
-  let abbreviations = {};
   list_add(rules, "ex > re");
+  let abbreviations = {};
   app_replace_rule_set_expressions_relational_abbreviations(abbreviations);
   let r = {
     name: "Expressions Relational",
