@@ -1,5 +1,4 @@
 import { list_map_properties } from "../../../love/public/src/list_map_properties.mjs";
-import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_replace_rule_set_verify_path_get } from "../../../love/public/src/app_replace_rule_set_verify_path_get.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { app_replace_rule_set_verify_goal_curried_right } from "../../../love/public/src/app_replace_rule_set_verify_goal_curried_right.mjs";
@@ -22,8 +21,6 @@ export function app_replace_rule_set_verify(rule_set) {
   let paths = list_map(squashed, app_replace_rule_set_verify_path_get);
   let list = list_squash(paths);
   list = list_map_properties(list, ["rule", "original"]);
-  let mapped = list_map_property(list, "rule");
-  let mapped2 = list_map_property(list, "original");
   log(app_replace_rule_set_verify.name, {
     mapped,
   });
