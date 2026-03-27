@@ -51,8 +51,8 @@ export function app_replace_settings(context) {
   function lambda(choice) {
     let ending2 = property_get(choice, "ending");
     let animation_duration2 = property_get(choice, "animation_duration");
-    let combined2 = text_combine(left2, right);
-    let combined = text_combine(left, "Animations ");
+    let combined2 = text_combine("Animations ", ending2);
+    let combined = text_combine(left, combined2);
     function lambda4() {
       storage_local_set_context(
         context,
