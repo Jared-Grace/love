@@ -29,7 +29,7 @@ export function app_replace_rule_set_expressions_equality() {
       },
       {
         start: "mae === mae",
-        end: "mae === mae",
+        end: "pe === pe",
       },
     ],
   };
