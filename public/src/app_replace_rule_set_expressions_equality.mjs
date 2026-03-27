@@ -31,6 +31,10 @@ export function app_replace_rule_set_expressions_equality() {
         start: "mae === mae",
         end: "pe === pe",
       },
+      {
+        start: "mae === mae",
+        end: "1 === 1",
+      },
     ],
   };
   return r;
