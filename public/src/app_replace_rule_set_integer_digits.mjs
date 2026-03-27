@@ -27,11 +27,11 @@ export function app_replace_rule_set_integer_digits() {
       },
       {
         start: "g",
-        end: "6 5 4",
+        end: "8 9",
       },
       {
         start: "g",
-        end: "8 9",
+        end: "6 5 4",
       },
       {
         start: "g",
