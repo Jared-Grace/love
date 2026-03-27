@@ -57,7 +57,7 @@ export function app_replace_rule_set_expressions_multiplicative() {
         end: "3 . 1 4 / ( 2 * 2 )",
       },
     ],
-    why: "These replacement rules define a context-free grammar for parsing multiplicative expressions (like those in programming languages), supporting identifiers, numbers, strings, booleans, null, member access, function calls, unary operators, and specifically the precedence and associativity of multiplication and division.",
+    why: "The replacement rules define a context-free grammar for parsing primary, member access, call, unary, and multiplicative expressions similar to those in JavaScript, demonstrating how complex expressions are built from literals, identifiers, operators, and grouping, with clear operator precedence and associativity.",
   };
   return r;
 }
