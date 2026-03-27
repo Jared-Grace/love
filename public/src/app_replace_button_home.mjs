@@ -6,6 +6,6 @@ export function app_replace_button_home(root, context) {
     context,
     app_replace_home,
     root,
-    emoji_home() + " Home",
+    emoji_home() + "Home",
   );
 }
