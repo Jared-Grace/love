@@ -1,11 +1,8 @@
 
 add other grammar rule sets - to assignment and also statements, branching, looping, functions
 
-e2e test should do first two rule sets to make sure next is working on goals and rule set next is working
-
 animation speed should be adjustable
 
-there should be a description for each rule set
 
 add new post to reddit
 - added compiler grammar rule sets
@@ -13,6 +10,7 @@ add new post to reddit
 - if at least 4 rules, then unused rules for the current goal are not shown
 - progress bar replace for both rule sets and goals
 - previous rule remains selected
+- there should be a description for each rule set
 
 ---
 
