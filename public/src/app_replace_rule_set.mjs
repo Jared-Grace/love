@@ -77,6 +77,7 @@ export async function app_replace_rule_set(context) {
   let root = property_get(context, "root");
   app_replace_button_home(root, context);
   app_replace_button_screen(context, app_replace_goals, root, "Goals");
+  let combined = text_combine(left, right);
   let start_over = app_replace_button_screen(
     context,
     app_replace_rule_set,
