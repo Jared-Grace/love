@@ -29,8 +29,10 @@ export function app_replace_rule_set_verify(rule_set) {
   let rules = property_get(rule_set, "rules");
   let r2 = list_includes_curried(unique);
   let all_rules_used = list_all(rules, r2);
-  function lambda2() {}
-  assert_json_get(b, lambda2);
+  function lambda2() {
+    return {};
+  }
+  assert_json_get(all_rules_used, lambda2);
   log(app_replace_rule_set_verify.name, {
     unique,
     rules,
