@@ -29,4 +29,6 @@ export function app_replace_settings(context) {
     lambda3,
   );
   let div2 = html_div(parent);
+  function lambda4() {}
+  let b = app_replace_button(parent2, text, lambda4);
 }
