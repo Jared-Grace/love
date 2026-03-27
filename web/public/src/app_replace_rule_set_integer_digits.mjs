@@ -31,15 +31,15 @@ export function app_replace_rule_set_integer_digits() {
       },
       {
         start: "g",
-        end: "6 5 4",
-      },
-      {
-        start: "g",
         end: "di di di",
       },
       {
         start: "di di di",
         end: "7 7 7",
+      },
+      {
+        start: "di di di",
+        end: "6 5 4",
       },
       {
         start: "di di g",
