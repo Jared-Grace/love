@@ -122,6 +122,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_expressions_relational,
     app_replace_rule_set_expressions_equality,
     app_replace_rule_set_logical_expressions,
+    app_new_rule_set_new_2,
   ];
   return fns;
 }
