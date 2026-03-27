@@ -49,7 +49,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "( ex ) && true",
-        end: "( re ) && true",
+        end: "( mue ) && true",
       },
     ],
   };
