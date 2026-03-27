@@ -42,7 +42,7 @@ export function app_replace_rule_set_decimals() {
       },
       {
         start: "7 7 . 4 6 di di",
-        end: "7 7 . 4 6 0 7",
+        end: "7 9 . 5 8 6 7",
       },
     ],
     why: "The replacement rules define a context-free grammar for decimal numbers, including integers, digits, and positive integer digits, and show how to construct decimal numbers with or without fractional parts by combining these components.",
