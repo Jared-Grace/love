@@ -1,7 +1,6 @@
 import { app_replace_rule_set_verify_goal_curried_right } from "../../../love/public/src/app_replace_rule_set_verify_goal_curried_right.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-import { app_replace_rule_set_verify_goal } from "../../../love/public/src/app_replace_rule_set_verify_goal.mjs";
 import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_replace_rule_set_verify(rule_set) {
@@ -10,11 +9,7 @@ export function app_replace_rule_set_verify(rule_set) {
   });
   let rules_parsed = app_replace_rule_set_rules_get(rule_set);
   let goals = property_get(rule_set, "goals");
-  let r = app_replace_rule_set_verify_goal_curried_right(rules_parsed2);
-  function lambda2(goal) {
-    let dfs = app_replace_rule_set_verify_goal(goal, rules_parsed);
-    return dfs;
-  }
-  let mapped = list_map(goals, lambda2);
+  let r = app_replace_rule_set_verify_goal_curried_right(rules_parsed);
+  let mapped = list_map(goals, r);
   return mapped;
 }
