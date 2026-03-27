@@ -16,15 +16,15 @@ export function app_new_rule_set_new_2() {
     goals: [
       {
         start: "le",
-        end: "re && re",
+        end: "re lo re",
       },
       {
-        start: "re && re",
-        end: "mue && mue",
+        start: "re lo re",
+        end: "mue lo mue",
       },
       {
-        start: "mue && mue",
-        end: "mae && mae",
+        start: "mue lo mue",
+        end: "mae lo mae",
       },
     ],
   };
