@@ -12,7 +12,7 @@ export function app_replace_rule_set_identifiers_simple() {
     rules: app_replace_rule_set_identifiers_simple_rules(),
     goals: app_replace_rule_set_identifiers_simple_goals(),
     abbreviations,
-    why: "These replacement rules define a simple context-free grammar for generating identifiers, similar to those used in programming languages. The rules specify how an identifier can be constructed from a set of allowed starting characters (like letters, '$', or '_') and subsequent characters (which can include digits). The grammar demonstrates the recursive structure of identifiers, allowing for sequences of valid characters, and highlights the distinction between the first character and subsequent characters in identifier formation.",
+    why: "The replacement rules define a context-free grammar for a simplified identifier system, where identifiers can start with certain letters or symbols and may be followed by additional allowed characters or digits, demonstrating how valid identifier strings can be constructed recursively from a set of permitted starting and continuing characters.",
   };
   return r;
 }
