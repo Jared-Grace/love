@@ -81,6 +81,10 @@ export function app_replace_rule_set_expressions_additive() {
         end: "nu - nu mo nu",
       },
       {
+        start: "nu - nu mo nu",
+        end: "nu - nu / nu",
+      },
+      {
         start: "ae",
         end: "ex",
       },
