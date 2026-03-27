@@ -27,7 +27,7 @@ export function app_new_rule_set_new_2() {
         end: "mae lo mae",
       },
       {
-        start: "mue lo mue",
+        start: "mae lo mae",
         end: "bo lo bo",
       },
     ],
