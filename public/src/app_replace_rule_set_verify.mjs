@@ -1,6 +1,5 @@
 import { list_includes_curried } from "../../../love/public/src/list_includes_curried.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
-import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_map_properties } from "../../../love/public/src/list_map_properties.mjs";
 import { app_replace_rule_set_verify_path_get } from "../../../love/public/src/app_replace_rule_set_verify_path_get.mjs";
@@ -27,12 +26,8 @@ export function app_replace_rule_set_verify(rule_set) {
   let mapped = list_map_properties(list, ["rule", "original"]);
   let unique = list_unique(mapped);
   let rules = property_get(rule_set, "rules");
-  let r2 = list_includes_curried(list2);
-  function lambda(u) {
-    let includes = list_includes(rules, u);
-    return includes;
-  }
-  let all_rules_used = list_all(unique, lambda);
+  let r2 = list_includes_curried(rules);
+  let all_rules_used = list_all(unique, r2);
   log(app_replace_rule_set_verify.name, {
     unique,
     rule_set,
