@@ -26,6 +26,10 @@ export function app_new_rule_set_new_2() {
         start: "mue lo mue",
         end: "mae lo mae",
       },
+      {
+        start: "mue lo mue",
+        end: "bo lo bo",
+      },
     ],
   };
   return r;
