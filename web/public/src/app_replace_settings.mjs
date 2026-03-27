@@ -1,3 +1,4 @@
+import { each } from "../../../love/public/src/each.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { emoji_clock } from "../../../love/public/src/emoji_clock.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
@@ -36,9 +37,19 @@ export function app_replace_settings(context) {
   let choices = [
     {
       ending: "off",
-      duration: 0,
+      animation_duration: 0,
+    },
+    {
+      ending: "fast",
+      animation_duration: 111,
+    },
+    {
+      ending: "slow",
+      animation_duration: 555,
     },
   ];
+  function lambda(item) {}
+  each(list, lambda);
   let combined = text_combine(left, "Animations off");
   function lambda4() {
     storage_local_set_context(context, "animation_duration");
