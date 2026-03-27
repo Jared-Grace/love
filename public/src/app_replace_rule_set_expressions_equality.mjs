@@ -23,6 +23,10 @@ export function app_replace_rule_set_expressions_equality() {
         start: "ee",
         end: "mue === mue",
       },
+      {
+        start: "mue === mue",
+        end: "mue === mue",
+      },
     ],
   };
   return r;
