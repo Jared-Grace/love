@@ -23,11 +23,11 @@ export function app_replace_rule_set_verify(rule_set) {
   let paths = list_map(squashed, app_replace_rule_set_verify_path_get);
   let squashed2 = list_squash(paths);
   let mapped = list_map_properties(squashed2, ["rule", "original"]);
-  let items = list_unique(mapped);
+  let unique = list_unique(mapped);
   let list = property_get(rule_set, "rules");
-  let includes_all = list_includes_all_assert(list, items);
+  let includes_all = list_includes_all_assert(list, unique);
   log(app_replace_rule_set_verify.name, {
-    unique: items,
+    unique: unique,
     rules: list,
     all_rules_used: includes_all,
   });
