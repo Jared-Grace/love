@@ -23,6 +23,7 @@ export function app_replace_rule_set_verify(rule_set) {
   let list = list_squash(paths);
   let mapped = list_map_properties(list, ["rule", "original"]);
   let unique = list_unique(mapped);
+  let rules = property_get(rule_set, "rules");
   log(app_replace_rule_set_verify.name, {
     unique,
     rule_set,
