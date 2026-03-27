@@ -15,7 +15,7 @@ export function app_replace_rule_set_verify(rule_set) {
   let dfss = list_map(goals, r);
   let squashed = list_squash(dfss);
   log(app_replace_rule_set_verify.name, {
-    squashed
+    squashed,
   });
   let paths = list_map(squashed, app_replace_rule_set_verify_path_get);
   log(app_replace_rule_set_verify.name, {
