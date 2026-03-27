@@ -1,3 +1,5 @@
+import { app_replace_rule_sets_why_generate } from "../../../love/public/src/app_replace_rule_sets_why_generate.mjs";
+import { app_replace_rule_sets_fns_migrate_capitalization_upper } from "../../../love/public/src/app_replace_rule_sets_fns_migrate_capitalization_upper.mjs";
 import { html_update_latest_promote_deploy_app_fn } from "../../../love/public/src/html_update_latest_promote_deploy_app_fn.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
 import { app_replace_tests_run } from "../../../love/public/src/app_replace_tests_run.mjs";
