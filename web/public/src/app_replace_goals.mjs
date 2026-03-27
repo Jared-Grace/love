@@ -18,7 +18,7 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 export function app_replace_goals(context) {
   let root = property_get(context, "root");
   app_replace_button_home(root, context);
-  let r = app_replace_rule_set_title(context, root);
+  let r = app_replace_rule_set_title(context);
   let rule_name = property_get(r, "rule_name");
   let item = property_get(r, "item");
   let goals = property_get(item, "goals");
