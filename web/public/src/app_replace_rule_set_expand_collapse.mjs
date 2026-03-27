@@ -28,7 +28,7 @@ export function app_replace_rule_set_expand_collapse() {
         end: "a c b b c a",
       },
     ],
-    why: "The replacement rules demonstrate a simple context-free grammar where the symbol 'a' expands to two 'b's, and any pair of 'b's collapses into a 'c'. This shows how a sequence can be expanded and then reduced, illustrating the process of derivation and simplification in formal grammars.",
+    why: "The rules demonstrate a grammar where 'a' expands to two 'b's, and any pair of 'b's collapses into a 'c', modeling a process of binary expansion and reduction; this is evident from the way the goals transform sequences of 'a's and 'b's into sequences with 'c's via these rules.",
   };
   return r;
 }
