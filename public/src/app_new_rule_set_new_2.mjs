@@ -47,6 +47,10 @@ export function app_new_rule_set_new_2() {
         start: "pe lo pe",
         end: "( ex ) lo pe",
       },
+      {
+        start: "( ex ) lo pe",
+        end: "( ex ) lo pe",
+      },
     ],
   };
   return r;
