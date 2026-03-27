@@ -1,3 +1,4 @@
+import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
 import { app_replace_button_home } from "../../../love/public/src/app_replace_button_home.mjs";
 import { app_replace_font_size_adjust_curried } from "../../../love/public/src/app_replace_font_size_adjust_curried.mjs";
@@ -13,6 +14,7 @@ export function app_replace_settings(context) {
   const factor = app_replace_font_size_factor();
   let value_get_multiply = multiply_curried_right(factor);
   let value_get_divide = divide_curried_right(factor);
+  let div = html_div(parent);
   let c = app_replace_font_size_adjust_curried(context);
   async function lambda2() {
     await c(value_get_multiply);
