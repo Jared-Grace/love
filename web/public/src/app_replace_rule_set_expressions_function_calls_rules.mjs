@@ -3,9 +3,9 @@ import { app_replace_rule_set_expressions_member_and_access_rules } from "../../
 export function app_replace_rule_set_expressions_function_calls_rules(rules) {
   app_replace_rule_set_expressions_member_and_access_rules(rules);
   list_add_multiple(rules, [
-    "cae > mae",
-    "cae > cae ( )",
-    "cae > cae ( ag )",
+    "ce > mae",
+    "ce > ce ( )",
+    "ce > ce ( ag )",
     "ag > ex , ag",
     "ag > ex",
   ]);
