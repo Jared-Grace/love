@@ -20,7 +20,7 @@ export function app_replace_rule_set_shrink_left() {
         end: "a a a",
       },
     ],
-    why: "The replacement rules demonstrate a grammar that systematically reduces any occurrence of the sequence 'b a' to just 'a'. This process effectively 'shrinks' the leftmost 'b' in each 'b a' pair, simplifying sequences of 'b's followed by 'a's into fewer 'a's, as shown in the provided start and end examples.",
+    why: "The rules demonstrate a left-shrinking process where every occurrence of 'b' immediately followed by 'a' is replaced by 'a', effectively removing leading 'b's before each 'a' and reducing the sequence to only 'a's.",
   };
   return r;
 }
