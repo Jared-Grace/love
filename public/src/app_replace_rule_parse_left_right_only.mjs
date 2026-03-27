@@ -9,9 +9,8 @@ import { text_split_space } from "../../../love/public/src/text_split_space.mjs"
 export function app_replace_rule_parse_left_right_only(rule) {
   let split = text_split_space(rule);
   let middle = list_index_of(split, ">");
-  let r2 = text_replace_curried_right_2(from, to);
-  function lambda(item) {}
-  let mapped = list_map(list, lambda);
+  let r2 = text_replace_curried_right_2(">>", ">");
+  let mapped = list_map(list, r2);
   let left = list_take(split, middle);
   let right = list_skip(split, middle + 1);
   each([left, right], list_includes_empty_not_assert);
