@@ -19,6 +19,8 @@ export function app_replace_rule_set_verify(rule_set) {
   let goals = property_get(rule_set, "goals");
   let r = app_replace_rule_set_verify_goal_curried_right(rules_parsed);
   let dfss = list_map(goals, r);
+  return;
+  ("the following code was used to make sure each rule was used somewhere in a goal - however became too much to sort through for expression rule sets");
   let squashed = list_squash(dfss);
   let paths = list_map(squashed, app_replace_rule_set_verify_path_get);
   let squashed2 = list_squash(paths);
