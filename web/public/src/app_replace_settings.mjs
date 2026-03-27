@@ -28,4 +28,5 @@ export function app_replace_settings(context) {
     emoji_font_smaller() + " Font size smaller",
     lambda3,
   );
+  let div2 = html_div(parent);
 }
