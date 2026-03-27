@@ -126,7 +126,7 @@ export async function app_replace_rule_set(context) {
   let hint_button = app_replace_button(root, hint_text, on_hint);
   let value4 = app_replace_rule_set_attribute_hint();
   html_data_set_test(hint_button, value4);
-  app_replace_rule_set_title(context);
+  let container = app_replace_rule_set_title(context);
   html_progress_bar(root, goal_index, goals_count, "goal");
   let highlight = app_replace_rule_set_highlight();
   let rule_set_name = property_get(rs, "name");
