@@ -24,7 +24,7 @@ export function app_replace_rule_set_swap_change_left() {
         end: "a b a b a b a b a b a b",
       },
     ],
-    why: "The replacement rules demonstrate a simple string rewriting system where every occurrence of the sequence ['b', 'c'] is replaced with ['a', 'b']. This process can be applied repeatedly to transform a starting sequence into a desired end sequence, illustrating how local substitution rules can systematically alter a string to achieve a specific pattern.",
+    why: "The replacement rule demonstrates a context-sensitive grammar where every occurrence of 'b' followed by 'c' can be replaced with 'a' followed by 'b', effectively transforming sequences of 'b','c' pairs into 'a','b' pairs from left to right.",
   };
   return r;
 }
