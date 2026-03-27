@@ -42,10 +42,10 @@ export function app_replace_rule_set_expressions_additive() {
       },
       {
         start: "nu ao ( ade ao ue )",
-        end: "nu ao ( made ao ue )",
+        end: "nu ao ( mae ao ue )",
       },
       {
-        start: "nu ao ( made ao ue )",
+        start: "nu ao ( mae ao ue )",
         end: "nu ao ( nu ao ue )",
       },
       {
