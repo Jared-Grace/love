@@ -17,7 +17,7 @@ export function app_new_rule_set_new_2() {
   let r = {
     name: "Expressions relational",
     abbreviations,
-    rules: ["a > b"],
+    rules,
     goals: [
       {
         start: "a",
