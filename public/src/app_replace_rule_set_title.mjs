@@ -13,6 +13,6 @@ export function app_replace_rule_set_title(context) {
     rule_set_name,
   };
   let why = property_get(rule_set, "why");
-  let p = html_p_text(root, "why");
+  let p = html_p_text(root, why);
   return r;
 }
