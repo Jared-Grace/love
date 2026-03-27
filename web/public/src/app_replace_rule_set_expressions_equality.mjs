@@ -41,7 +41,7 @@ export function app_replace_rule_set_expressions_equality() {
       },
       {
         start: "pe === pe",
-        end: "( ae ao ce ) === pe",
+        end: "( ce ao ce ) === pe",
       },
     ],
   };
