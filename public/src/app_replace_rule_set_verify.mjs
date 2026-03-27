@@ -26,8 +26,8 @@ export function app_replace_rule_set_verify(rule_set) {
   let mapped = list_map_properties(list, ["rule", "original"]);
   let unique = list_unique(mapped);
   let rules = property_get(rule_set, "rules");
-  let r2 = list_includes_curried(rules);
-  let all_rules_used = list_all(unique, r2);
+  let r2 = list_includes_curried(unique);
+  let all_rules_used = list_all(rules, r2);
   log(app_replace_rule_set_verify.name, {
     unique,
     rules,
