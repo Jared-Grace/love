@@ -1,4 +1,3 @@
-import { app_replace_rule_set_verify_named } from "../../../love/public/src/app_replace_rule_set_verify_named.mjs";
 import { app_replace_rule_set_verify_path_get } from "../../../love/public/src/app_replace_rule_set_verify_path_get.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { app_replace_rule_set_verify_goal_curried_right } from "../../../love/public/src/app_replace_rule_set_verify_goal_curried_right.mjs";
