@@ -49,7 +49,7 @@ export function app_replace_rule_set_decimals() {
         end: "7 9 . 5 8 6 7",
       },
     ],
-    why: "The replacement rules define a context-free grammar for decimal numbers, including integers, digits, and positive integer digits, and show how to construct decimal numbers with or without fractional parts by combining these components.",
+    why: "The replacement rules define a context-free grammar for decimal numbers, including integers and numbers with fractional parts, by specifying how digits and decimal points can be combined to form valid decimal representations.",
   };
   return r;
 }
