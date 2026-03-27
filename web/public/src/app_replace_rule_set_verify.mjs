@@ -1,3 +1,4 @@
+import { property_get_or_null } from "../../../love/public/src/property_get_or_null.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { list_includes_all_assert } from "../../../love/public/src/list_includes_all_assert.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
@@ -23,6 +24,7 @@ export function app_replace_rule_set_verify(rule_set) {
   let mapped = list_map_properties(squashed2, ["rule", "original"]);
   let unique = list_unique(mapped);
   let rules = property_get(rule_set, "rules");
+  let value = property_get_or_null(object, property);
   let difference = list_difference(list, other);
   list_includes_all_assert(rules, unique);
 }
