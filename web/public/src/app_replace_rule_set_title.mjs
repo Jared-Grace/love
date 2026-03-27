@@ -8,11 +8,11 @@ export function app_replace_rule_set_title(context) {
   let rule_set = app_replace_rule_set_get(context);
   let rule_set_name = property_get(rule_set, "name");
   html_p_text(root, "Rule set: " + rule_set_name);
+  let why = property_get(rule_set, "why");
+  let p = html_p_text(root, why);
   let r = {
     rule_set,
     rule_set_name,
   };
-  let why = property_get(rule_set, "why");
-  let p = html_p_text(root, why);
   return r;
 }
