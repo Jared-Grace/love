@@ -23,7 +23,7 @@ import { app_replace_rule_sets_fns } from "../../../love/public/src/app_replace_
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function app_replace_rule_sets_why_generate() {
-  "run dynamically in case modification in previous step";
+  "run dynamically in case modification in previous step of deploy";
   let r2 = await function_run_args_none(app_replace_rule_sets_fns);
   function lambda2(fn) {
     let r3 = {
