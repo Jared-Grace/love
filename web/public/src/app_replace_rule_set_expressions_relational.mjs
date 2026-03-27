@@ -69,7 +69,7 @@ export function app_replace_rule_set_expressions_relational() {
         end: "1 < ( 2 + 3 . 1 4 )",
       },
     ],
-    why: "The replacement rules demonstrate the grammar for parsing relational expressions (like < and >) involving identifiers, literals, arithmetic, member access, function calls, and grouping, showing how complex expressions are built from simpler components.",
+    why: "These replacement rules define a context-free grammar for arithmetic and relational expressions, demonstrating how identifiers, literals, member access, function calls, unary and binary operations, and relational comparisons are constructed and combined, reflecting the syntax of a typical programming language's expression evaluation.",
   };
   return r;
 }
