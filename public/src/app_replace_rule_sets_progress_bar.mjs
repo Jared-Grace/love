@@ -1,4 +1,4 @@
-import { html_style_margin_y } from "../../../love/public/src/html_style_margin_y.mjs";
+import { html_style_margin_bottom } from "../../../love/public/src/html_style_margin_bottom.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { html_progress_bar } from "../../../love/public/src/html_progress_bar.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
