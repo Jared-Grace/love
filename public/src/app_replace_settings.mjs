@@ -14,17 +14,17 @@ export function app_replace_settings(context) {
   const factor = app_replace_font_size_factor();
   let value_get_multiply = multiply_curried_right(factor);
   let value_get_divide = divide_curried_right(factor);
-  let div = html_div(parent);
+  let div = html_div(root);
   let c = app_replace_font_size_adjust_curried(context);
   async function lambda2() {
     await c(value_get_multiply);
   }
-  app_replace_button(root, emoji_font_larger() + " Font size larger", lambda2);
+  app_replace_button(div, emoji_font_larger() + " Font size larger", lambda2);
   async function lambda3() {
     await c(value_get_divide);
   }
   let component = app_replace_button(
-    root,
+    div,
     emoji_font_smaller() + " Font size smaller",
     lambda3,
   );
