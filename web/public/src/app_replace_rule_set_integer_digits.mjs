@@ -54,7 +54,7 @@ export function app_replace_rule_set_integer_digits() {
         end: "0 1 2 3 4",
       },
     ],
-    why: "These replacement rules define a context-free grammar for generating sequences of decimal digits, representing integers. The rules show how a nonterminal symbol for a digit ('di') can be replaced by any single digit from 0 to 9, and how a 'g' (grower) can recursively generate sequences of digits by expanding into one or more digits. This demonstrates how integers can be constructed from sequences of digits using simple production rules.",
+    why: "The replacement rules define a grammar for generating sequences of decimal digits (0-9), representing integers of arbitrary length, by recursively expanding nonterminals into single digits or further digit sequences.",
   };
   return r;
 }
