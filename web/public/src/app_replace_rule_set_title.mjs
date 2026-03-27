@@ -7,7 +7,7 @@ export function app_replace_rule_set_title(context) {
   html_p_text(root, "Rule set: " + rule_set_name);
   let r = {
     rule_set,
-    rule_name: rule_set_name,
+    rule_set_name,
   };
   return r;
 }
