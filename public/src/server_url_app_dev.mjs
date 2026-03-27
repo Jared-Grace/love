@@ -7,6 +7,7 @@ import { app_shared_name_search_info } from "../../../love/public/src/app_shared
 import { app_prefix_without_fn } from "../../../love/public/src/app_prefix_without_fn.mjs";
 export async function server_url_app_dev(app_fn) {
   let url2 = hash_to_url({});
+  return url2;
   let without = app_prefix_without_fn(app_fn);
   let r = await app_shared_name_search_info(without);
   let f_path_dev = property_get(r, "f_path_dev");
