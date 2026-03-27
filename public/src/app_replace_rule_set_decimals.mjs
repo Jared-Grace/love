@@ -33,11 +33,11 @@ export function app_replace_rule_set_decimals() {
         end: "pi ig . ig",
       },
       {
-        start: "pi . di ig",
-        end: "pi . di di di di",
+        start: "pi ig . di ig",
+        end: "pi ig . di di di di",
       },
       {
-        start: "pi . di di di di",
+        start: "pi ig . di di di di",
         end: "7 9 . di di di di",
       },
       {
