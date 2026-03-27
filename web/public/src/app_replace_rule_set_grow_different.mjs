@@ -16,7 +16,7 @@ export function app_replace_rule_set_grow_different() {
         end: "b c b c b c b c",
       },
     ],
-    why: "The replacement rules demonstrate a simple context-free grammar where the symbol 'a' is always replaced by the sequence 'b c'. This shows how a single non-terminal can be expanded into a fixed sequence, and how repeated applications of the rule to multiple 'a's in the start string result in repeated 'b c' sequences in the output.",
+    why: "The rules demonstrate that each 'a' in the input is replaced by the sequence 'b', 'c', so any string of n 'a's is transformed into a string of 2n symbols alternating 'b' and 'c'.",
   };
   return r;
 }
