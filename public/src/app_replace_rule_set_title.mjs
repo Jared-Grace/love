@@ -12,5 +12,6 @@ export function app_replace_rule_set_title(context) {
     rule_set,
     rule_set_name,
   };
+  let p = html_p_text(root2, text);
   return r;
 }
