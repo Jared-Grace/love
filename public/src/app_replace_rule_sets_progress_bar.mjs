@@ -1,3 +1,4 @@
+import { html_style_margin_y } from "../../../love/public/src/html_style_margin_y.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 import { html_progress_bar } from "../../../love/public/src/html_progress_bar.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -9,5 +10,7 @@ export function app_replace_rule_sets_progress_bar(context) {
   let rule_set_index = app_replace_rule_set_index_get(context);
   let root = property_get(context, "root");
   let r = html_progress_bar(root, rule_set_index, size, "rule set");
+  let container = property_get(r, "container");
+  html_style_margin_y(container, "0.5em");
   return r;
 }
