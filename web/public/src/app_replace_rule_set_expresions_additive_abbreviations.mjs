@@ -5,7 +5,7 @@ export function app_replace_rule_set_expresions_additive_abbreviations(
 ) {
   app_replace_rule_set_expressions_multiplicative_abbreviations(abbreviations);
   object_merge(abbreviations, {
-    ae: ["", "a", "dditive ", "e", "xpression"],
+    ade: ["", "ad", "ditive ", "e", "xpression"],
     ao: ["", "a", "dditive ", "o", "perator"],
   });
 }
