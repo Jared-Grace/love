@@ -45,5 +45,8 @@ export function html_progress_bar(
   html_style_assign(div2, {
     "font-size": "0.8em",
   });
-  return progress_container;
+  let r = {
+    container: progress_container,
+  };
+  return r;
 }
