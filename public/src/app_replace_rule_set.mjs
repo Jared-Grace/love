@@ -127,9 +127,8 @@ export async function app_replace_rule_set(context) {
   let value4 = app_replace_rule_set_attribute_hint();
   html_data_set_test(hint_button, value4);
   app_replace_rule_set_title(context);
-  let highlight = app_replace_rule_set_highlight();
-  let root3 = property_get(context, "root");
   html_progress_bar(root, goal_index, size3, "goal");
+  let highlight = app_replace_rule_set_highlight();
   let rule_set_name = property_get(rs, "name");
   let div_abbreviations = html_div(root);
   let label_rules = html_p(root);
