@@ -43,7 +43,6 @@ export function app_replace_settings(context) {
   let highlight = app_replace_rule_set_highlight();
   const duration = app_replace_animation_duration_initialize(
     context,
-    value_initial,
   );
   let choices = [
     {
