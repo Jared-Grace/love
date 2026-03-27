@@ -22,6 +22,10 @@ export function app_new_rule_set_new_2() {
         start: "re && re",
         end: "mue && mue",
       },
+      {
+        start: "mue && mue",
+        end: "mae && mae",
+      },
     ],
   };
   return r;
