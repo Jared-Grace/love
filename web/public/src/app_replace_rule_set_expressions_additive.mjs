@@ -14,14 +14,14 @@ export function app_replace_rule_set_expressions_additive() {
     goals: [
       {
         start: "ae",
-        end: "cae ao cae",
+        end: "ce ao ce",
       },
       {
-        start: "cae ao cae",
-        end: "nu ao cae",
+        start: "ce ao ce",
+        end: "nu ao ce",
       },
       {
-        start: "nu ao cae",
+        start: "nu ao ce",
         end: "nu ao nu",
       },
       {
@@ -33,7 +33,7 @@ export function app_replace_rule_set_expressions_additive() {
         end: "3 . 1 4 + 2",
       },
       {
-        start: "nu ao cae",
+        start: "nu ao ce",
         end: "nu ao ( ex )",
       },
       {
@@ -58,26 +58,26 @@ export function app_replace_rule_set_expressions_additive() {
       },
       {
         start: "ae",
-        end: "cae ao mue mo ue",
+        end: "ce ao mue mo ue",
       },
       {
-        start: "cae ao mue mo ue",
-        end: "cae ao cae mo cae",
+        start: "ce ao mue mo ue",
+        end: "ce ao ce mo ce",
       },
       {
-        start: "cae ao cae mo cae",
-        end: "nu ao cae mo cae",
+        start: "ce ao ce mo ce",
+        end: "nu ao ce mo ce",
       },
       {
-        start: "nu ao cae mo cae",
-        end: "nu ao nu mo cae",
+        start: "nu ao ce mo ce",
+        end: "nu ao nu mo ce",
       },
       {
-        start: "nu ao nu mo cae",
+        start: "nu ao nu mo ce",
         end: "nu ao nu mo nu",
       },
       {
-        start: "nu ao nu mo cae",
+        start: "nu ao nu mo ce",
         end: "nu - nu mo nu",
       },
       {
@@ -90,26 +90,26 @@ export function app_replace_rule_set_expressions_additive() {
       },
       {
         start: "ae",
-        end: "cae",
+        end: "ce",
       },
       {
-        start: "cae",
-        end: "cae ( ae )",
+        start: "ce",
+        end: "ce ( ae )",
       },
       {
-        start: "cae ( ae )",
+        start: "ce ( ae )",
         end: "id ( ae )",
       },
       {
         start: "id ( ae )",
-        end: "id ( cae ao cae )",
+        end: "id ( ce ao ce )",
       },
       {
-        start: "id ( cae ao cae )",
-        end: "id ( nu ao cae )",
+        start: "id ( ce ao ce )",
+        end: "id ( nu ao ce )",
       },
       {
-        start: "id ( nu ao cae )",
+        start: "id ( nu ao ce )",
         end: "id ( nu ao nu )",
       },
       {
