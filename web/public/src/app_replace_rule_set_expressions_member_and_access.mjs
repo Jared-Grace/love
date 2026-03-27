@@ -50,7 +50,7 @@ export function app_replace_rule_set_expressions_member_and_access() {
         end: "mae [ 2 ] [ 1 ]",
       },
     ],
-    why: "These replacement rules define a grammar for parsing member access and indexing expressions, similar to those found in programming languages like JavaScript or Python. The rules demonstrate how identifiers, literals (numbers, strings, booleans, null), and parenthesized expressions can be accessed via dot notation (object.property) or bracket notation (object[index]), supporting nested and chained accesses. This showcases the structure of expressions involving property and element access.",
+    why: "The replacement rules define a grammar for parsing member access and indexing expressions (like object.property and object[index]) in a programming language, supporting identifiers, literals (numbers, strings, booleans, null), and nested access, demonstrating how complex expressions are built from simpler components.",
   };
   return r;
 }
