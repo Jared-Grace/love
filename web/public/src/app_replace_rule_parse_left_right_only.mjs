@@ -1,3 +1,4 @@
+import { text_replace_curried_right_2 } from "../../../love/public/src/text_replace_curried_right_2.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_includes_empty_not_assert } from "../../../love/public/src/list_includes_empty_not_assert.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -8,6 +9,7 @@ import { text_split_space } from "../../../love/public/src/text_split_space.mjs"
 export function app_replace_rule_parse_left_right_only(rule) {
   let split = text_split_space(rule);
   let middle = list_index_of(split, ">");
+  let r2 = text_replace_curried_right_2(from, to);
   function lambda(item) {}
   let mapped = list_map(list, lambda);
   let left = list_take(split, middle);
