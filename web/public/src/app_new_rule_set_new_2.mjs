@@ -7,7 +7,7 @@ export function app_new_rule_set_new_2() {
   const rules = [];
   app_replace_rule_set_expresions_additive_rules(rules);
   list_add_multiple(rules, ["re > ae", "re > re ro ae", "ro > <", "ro > >>"]);
-  list_add(rules, "ex > coe");
+  list_add(rules, "ex > re");
   let abbreviations = {};
   app_replace_rule_set_expresions_additive_abbreviations(abbreviations);
   object_merge(abbreviations, {
