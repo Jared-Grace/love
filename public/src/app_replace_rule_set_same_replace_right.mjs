@@ -16,7 +16,7 @@ export function app_replace_rule_set_same_replace_right() {
         end: "a b a a b a a b",
       },
     ],
-    why: "These replacement rules demonstrate a simple string rewriting system where every occurrence of two consecutive 'a's is replaced by 'a' followed by 'b'. This shows how a repetitive pattern in a string can be systematically transformed into a new pattern by applying the rule from left to right.",
+    why: "The rules demonstrate a grammar where every occurrence of two consecutive 'a's can be replaced by 'a','b', allowing the transformation of any even-length sequence of 'a's into a sequence where each original pair is replaced, showing a systematic rightward replacement pattern.",
   };
   return r;
 }
