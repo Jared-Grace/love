@@ -48,8 +48,11 @@ export function app_replace_settings(context) {
       animation_duration: 555,
     },
   ];
-  function lambda(item) {}
-  each(list, lambda);
+  function lambda(choice) {
+    let ending2 = property_get(choice, "ending");
+    let animation_duration2 = property_get(choice, "animation_duration");
+  }
+  each(choices, lambda);
   let combined = text_combine(left, "Animations off");
   function lambda4() {
     storage_local_set_context(context, "animation_duration");
