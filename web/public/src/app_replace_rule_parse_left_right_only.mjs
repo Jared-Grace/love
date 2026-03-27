@@ -11,8 +11,8 @@ export function app_replace_rule_parse_left_right_only(rule) {
   let middle = list_index_of(split, ">");
   let r2 = text_replace_curried_right_2(">>", ">");
   let mapped = list_map(list, r2);
-  let left = list_take(split, middle);
-  let right = list_skip(split, middle + 1);
+  let left = list_take(mapped, middle);
+  let right = list_skip(mapped, middle + 1);
   each([left, right], list_includes_empty_not_assert);
   let p = {
     left,
