@@ -1,3 +1,4 @@
+import { list_includes } from "../../../love/public/src/list_includes.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_map_properties } from "../../../love/public/src/list_map_properties.mjs";
@@ -25,7 +26,9 @@ export function app_replace_rule_set_verify(rule_set) {
   let mapped = list_map_properties(list, ["rule", "original"]);
   let unique = list_unique(mapped);
   let rules = property_get(rule_set, "rules");
-  function lambda(item) {}
+  function lambda(item) {
+    let includes = list_includes(list3, item2);
+  }
   each(list2, lambda);
   log(app_replace_rule_set_verify.name, {
     unique,
