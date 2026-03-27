@@ -144,9 +144,7 @@ export async function app_replace_rule_set(context) {
   each(goal_list_symbols, lambda4);
   let div_below = html_div(root);
   let success = false;
-  const duration = app_replace_animation_duration_initialize(
-    context,
-  );
+  const duration = app_replace_animation_duration_initialize(context);
   let refresh_count = 0;
   rules_used = app_replace_rule_set_rules_used(
     rules_parsed,
