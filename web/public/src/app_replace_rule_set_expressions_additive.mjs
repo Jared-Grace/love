@@ -98,7 +98,7 @@ export function app_replace_rule_set_expressions_additive() {
       },
       {
         start: "ce ( ae )",
-        end: "ce ( ae )",
+        end: "id ( ae )",
       },
     ],
     why: "The replacement rules define a context-free grammar for parsing arithmetic and function call expressions similar to those in JavaScript, including literals, identifiers, unary and binary operators, function calls, and member access, demonstrating how complex expressions are constructed from simpler components.",
