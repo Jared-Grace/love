@@ -11,7 +11,8 @@ export function app_new_rule_set_new_2() {
   app_replace_rule_set_expressions_equality_abbreviations(abbreviations);
   let r = {
     name: "Logical Expressions",
-    rules: ["a > b"],
+    rules,
+    abbreviations,
     goals: [
       {
         start: "a",
