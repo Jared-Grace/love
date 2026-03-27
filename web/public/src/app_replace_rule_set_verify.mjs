@@ -30,7 +30,7 @@ export function app_replace_rule_set_verify(rule_set) {
     let includes = list_includes(rules, u);
     return includes;
   }
-  list_all(unique, lambda);
+  let all_rules_used = list_all(unique, lambda);
   log(app_replace_rule_set_verify.name, {
     unique,
     rule_set,
