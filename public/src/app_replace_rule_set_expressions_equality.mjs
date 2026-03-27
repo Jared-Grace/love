@@ -61,6 +61,10 @@ export function app_replace_rule_set_expressions_equality() {
       },
       {
         start: "( nu ao nu ) === nu",
+        end: "( 1 + 1 ) === 2",
+      },
+      {
+        start: "( nu ao nu ) === nu",
         end: "( 2 - 1 ) === 1",
       },
     ],
