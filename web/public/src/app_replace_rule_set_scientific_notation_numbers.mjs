@@ -100,7 +100,7 @@ export function app_replace_rule_set_scientific_notation_numbers() {
         end: "7 7 e 4 6 0 7",
       },
     ],
-    why: "These replacement rules define a context-free grammar for generating and parsing numbers in scientific notation, such as '3.14E0' or '0.5e-18'. The grammar demonstrates how to construct valid scientific notation numbers by combining integers, decimals, and exponent parts (with optional '+' or '-' signs), and it distinguishes between digits, positive digits, and the structure of exponents. The rules show the step-by-step derivation of scientific notation numbers from basic digits, illustrating the hierarchical structure of such numbers.",
+    why: "The replacement rules define a grammar for recognizing and generating numbers in scientific notation, including integers, decimals, and exponent parts with optional signs, demonstrating how such numbers are structured and parsed.",
   };
   return r;
 }
