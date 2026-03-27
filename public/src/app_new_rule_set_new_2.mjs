@@ -43,6 +43,10 @@ export function app_new_rule_set_new_2() {
         start: "pe lo pe",
         end: "false || true",
       },
+      {
+        start: "( ex ) lo pe",
+        end: "false && true",
+      },
     ],
   };
   return r;
