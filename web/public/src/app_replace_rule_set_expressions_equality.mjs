@@ -7,7 +7,7 @@ export function app_replace_rule_set_expressions_equality() {
   const rules = [];
   app_replace_rule_set_expressions_relational_rules(rules);
   list_add_multiple(rules, ["ee > re", "ee > ee === re"]);
-  list_add(rules, "ex > re");
+  list_add(rules, "ex > ee");
   let abbreviations = {};
   app_replace_rule_set_expressions_relational_abbreviations(abbreviations);
   object_merge(abbreviations, {
