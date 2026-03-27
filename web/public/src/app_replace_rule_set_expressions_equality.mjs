@@ -41,7 +41,7 @@ export function app_replace_rule_set_expressions_equality() {
       },
       {
         start: "pe === pe",
-        end: "( mae ) === pe",
+        end: "( ae ) === n",
       },
     ],
   };
