@@ -24,6 +24,7 @@ export function app_replace_rule_set_verify(rule_set) {
   let mapped = list_map_properties(list, ["rule", "original"]);
   let unique = list_unique(mapped);
   log(app_replace_rule_set_verify.name, {
-    unique,rule_set
+    unique,
+    rule_set,
   });
 }
