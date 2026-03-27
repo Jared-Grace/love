@@ -1,3 +1,4 @@
+import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { property_get_or_null } from "../../../love/public/src/property_get_or_null.mjs";
 import { list_difference } from "../../../love/public/src/list_difference.mjs";
 import { list_includes_all_assert } from "../../../love/public/src/list_includes_all_assert.mjs";
@@ -25,6 +26,8 @@ export function app_replace_rule_set_verify(rule_set) {
   let unique = list_unique(mapped);
   let rules = property_get(rule_set, "rules");
   let value = property_get_or_null(rule_set, "rules_unused");
+  if (null_not_is(value2)) {
+  }
   let difference = list_difference(list, other);
   list_includes_all_assert(rules, unique);
 }
