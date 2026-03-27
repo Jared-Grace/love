@@ -15,7 +15,7 @@ export function app_new_rule_set_new_2() {
     abbreviations,
     goals: [
       {
-        start: "a",
+        start: "le",
         end: "b",
       },
     ],
