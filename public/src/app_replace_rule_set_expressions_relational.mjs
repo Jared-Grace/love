@@ -46,6 +46,10 @@ export function app_replace_rule_set_expressions_relational() {
         start: "mae < mae",
         end: "nu < ( ex )",
       },
+      {
+        start: "nu < ( ex )",
+        end: "1 < ( ae )",
+      },
     ],
   };
   return r;
