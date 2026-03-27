@@ -37,7 +37,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "li lo li",
-        end: "true lo false",
+        end: "true && false",
       },
     ],
   };
