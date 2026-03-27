@@ -34,10 +34,10 @@ export function app_replace_rule_set_expressions_equality() {
       },
       {
         start: "pe === pe",
-        end: "( ae ao mue ) === pe",
+        end: "( ade ao mue ) === pe",
       },
       {
-        start: "( ae ao mue ) === pe",
+        start: "( ade ao mue ) === pe",
         end: "( ue ao ue ) === pe",
       },
       {
