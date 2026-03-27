@@ -5,7 +5,8 @@ import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_rule_set_get } from "../../../love/public/src/app_replace_rule_set_get.mjs";
 export function app_replace_rule_set_title(context) {
-  let container = app_replace_rule_sets_progress_bar(context);
+  let r2 = app_replace_rule_sets_progress_bar(context);
+  let container = property_get(r2, "container");
   html_style_margin_y(title, "0.1em");
   let root = property_get(context, "root");
   let rule_set = app_replace_rule_set_get(context);
