@@ -24,7 +24,7 @@ export function app_replace_rule_set_replace() {
         end: "a b a b a b a",
       },
     ],
-    why: "The replacement rules demonstrate a simple substitution grammar where every occurrence of 'a' is replaced by 'b'. This is shown by the rule {'a' -> 'b'}, and the goals illustrate how any string of 'a's is transformed into a string of 'b's of the same length. The last two goals, however, show partial application or selective replacement, suggesting the grammar could also be used to demonstrate non-uniform or incomplete application of rules.",
+    why: "The rules demonstrate a grammar where every 'a' in the input can be independently replaced by 'b', allowing any combination of 'a's and 'b's in the output, as shown by the varied goal examples.",
   };
   return r;
 }
