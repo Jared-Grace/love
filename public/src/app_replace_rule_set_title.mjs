@@ -6,7 +6,6 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_rule_set_get } from "../../../love/public/src/app_replace_rule_set_get.mjs";
 export function app_replace_rule_set_title(context) {
   let r2 = app_replace_rule_sets_progress_bar(context);
-  let container = property_get(r2, "container");
   let root = property_get(context, "root");
   let rule_set = app_replace_rule_set_get(context);
   let rule_set_name = property_get(rule_set, "name");
