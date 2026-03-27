@@ -5,6 +5,7 @@ export function app_replace_animation_duration_default() {
   let hash = html_hash_object_get();
   const property = "d";
   let d = property_get_or(hash, property, null);
+  $inni;
   let r = app_replace_animation_duration_max();
   return r;
 }
