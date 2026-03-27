@@ -41,9 +41,7 @@ export function app_replace_settings(context) {
   let div2 = html_div(root);
   let left = emoji_clock();
   let highlight = app_replace_rule_set_highlight();
-  const duration = app_replace_animation_duration_initialize(
-    context,
-  );
+  const duration = app_replace_animation_duration_initialize(context);
   let choices = [
     {
       ending: "off",
