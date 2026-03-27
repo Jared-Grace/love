@@ -21,19 +21,19 @@ export function app_replace_rule_set_expressions_relational() {
     goals: [
       {
         start: "re",
-        end: "mue ro mue",
+        end: "mue < mue",
       },
       {
         start: "mue < mue",
-        end: "ce ro ce",
+        end: "mae < mae",
       },
       {
         start: "mae < mae",
-        end: "nu ro nu",
+        end: "nu < nu",
       },
       {
-        start: "nu ro nu",
-        end: "1 ro 2",
+        start: "nu < nu",
+        end: "1 < 2",
       },
     ],
   };
