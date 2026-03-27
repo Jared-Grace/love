@@ -1,7 +1,7 @@
 export function app_replace_rule_set_replace() {
   let r = {
     name: "Replace",
-    rules: ["a > b", "a > c"],
+    rules: ["a > b"],
     goals: [
       {
         start: "a",
