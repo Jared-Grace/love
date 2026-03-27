@@ -8,7 +8,7 @@ export function app_replace_rule_set_expressions_relational() {
   list_add(rules, "ex > re");
   app_replace_rule_set_expressions_relational_abbreviations(abbreviations);
   let r = {
-    name: "Expressions relational",
+    name: "Expressions Relational",
     abbreviations,
     rules,
     goals: [
