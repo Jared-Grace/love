@@ -1,3 +1,4 @@
+import { app_new_rule_set_new_2 } from "../../../love/public/src/app_new_rule_set_new_2.mjs";
 import { app_replace_rule_set_expressions_equality } from "../../../love/public/src/app_replace_rule_set_expressions_equality.mjs";
 import { app_replace_rule_set_expressions_relational } from "../../../love/public/src/app_replace_rule_set_expressions_relational.mjs";
 import { app_replace_rule_set_binary_numbers_simple } from "../../../love/public/src/app_replace_rule_set_binary_numbers_simple.mjs";
