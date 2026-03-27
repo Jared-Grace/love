@@ -1,3 +1,5 @@
+import { equal } from "../../../love/public/src/equal.mjs";
+import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
 import { app_replace_animation_duration_default } from "../../../love/public/src/app_replace_animation_duration_default.mjs";
 import { each } from "../../../love/public/src/each.mjs";
@@ -36,6 +38,7 @@ export function app_replace_settings(context) {
   );
   let div2 = html_div(parent);
   let left = emoji_clock();
+  let highlight = app_replace_rule_set_highlight();
   const duration = storage_local_initialize_context(
     context,
     "animation_duration",
@@ -68,6 +71,8 @@ export function app_replace_settings(context) {
       );
     }
     let b = app_replace_button(div2, combined, lambda4);
+    if (equal(left2, right)) {
+    }
   }
   each(choices, lambda);
 }
