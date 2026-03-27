@@ -27,7 +27,7 @@ export function app_replace_rule_set_integer_digits() {
       },
       {
         start: "g",
-        end: "5 4",
+        end: "6 5 4",
       },
       {
         start: "g",
