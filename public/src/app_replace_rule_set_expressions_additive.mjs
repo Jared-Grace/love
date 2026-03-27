@@ -14,15 +14,15 @@ export function app_replace_rule_set_expressions_additive() {
     goals: [
       {
         start: "ae",
-        end: "ce mo ce",
+        end: "ce ao ce",
       },
       {
-        start: "ce mo ce",
-        end: "nu mo mae",
+        start: "ce ao ce",
+        end: "nu ao mae",
       },
       {
-        start: "nu mo ce",
-        end: "nu mo nu",
+        start: "nu ao ce",
+        end: "nu ao nu",
       },
       {
         start: "nu ao nu",
