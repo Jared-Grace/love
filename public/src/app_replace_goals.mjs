@@ -19,13 +19,13 @@ export function app_replace_goals(context) {
   let root = property_get(context, "root");
   app_replace_button_home(root, context);
   let r = app_replace_rule_set_title(context);
-  let rule_name = property_get(r, "rule_name");
+  let rule_set_name = property_get(r, "rule_set_name");
   let item = property_get(r, "rule_set");
   let goals = property_get(item, "goals");
   let completed_previous = true;
   let d = app_replace_rule_sets_data_initialize(context);
   function each_goal(goal, index) {
-    let g = app_replace_rule_sets_data_goal(d, rule_name, goal);
+    let g = app_replace_rule_sets_data_goal(d, rule_set_name, goal);
     let completed = app_replace_goal_completed_initialize(g);
     let title = app_replace_goals_generic(
       root,
