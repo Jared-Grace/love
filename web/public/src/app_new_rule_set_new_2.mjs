@@ -20,12 +20,8 @@ export function app_new_rule_set_new_2() {
     rules,
     goals: [
       {
-        start: "a",
-        end: "b",
-      },
-      {
-        start: "a a",
-        end: "b a",
+        start: "re",
+        end: "re ro ae",
       },
     ],
   };
