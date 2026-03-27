@@ -1,3 +1,4 @@
+import { emoji_restart } from "../../../love/public/src/emoji_restart.mjs";
 import { app_replace_rule_set_title } from "../../../love/public/src/app_replace_rule_set_title.mjs";
 import { html_progress_bar } from "../../../love/public/src/html_progress_bar.mjs";
 import { app_replace_rule_set_rules_used } from "../../../love/public/src/app_replace_rule_set_rules_used.mjs";
@@ -77,7 +78,8 @@ export async function app_replace_rule_set(context) {
   let root = property_get(context, "root");
   app_replace_button_home(root, context);
   app_replace_button_screen(context, app_replace_goals, root, "Goals");
-  let combined = text_combine("↩️", "Start over");
+  let left = emoji_restart();
+  let combined = text_combine(left, "Start over");
   let start_over = app_replace_button_screen(
     context,
     app_replace_rule_set,
