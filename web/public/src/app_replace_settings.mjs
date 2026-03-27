@@ -53,7 +53,7 @@ export function app_replace_settings(context) {
     },
     {
       ending: "medium",
-      animation_duration: 377,
+      animation_duration: 355,
     },
     {
       ending: "slow",
