@@ -11,6 +11,7 @@ export function app_replace_rule_set_expressions_primary() {
     name: "Expressions Primary",
     abbreviations,
     rules: rules,
+    rules_unused: ["in > 2"],
     goals: [
       {
         start: "pe",
