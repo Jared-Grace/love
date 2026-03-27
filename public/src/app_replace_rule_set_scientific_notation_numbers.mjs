@@ -26,7 +26,6 @@ export function app_replace_rule_set_scientific_notation_numbers() {
     name: "Scientific Notation Numbers",
     abbreviations,
     rules,
-    rules_unused: ["in > pi ig"],
     goals: [
       {
         start: "sn",
