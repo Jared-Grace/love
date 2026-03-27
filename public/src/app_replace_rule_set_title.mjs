@@ -10,8 +10,8 @@ export function app_replace_rule_set_title(context) {
   html_p_text(root, "Rule set: " + rule_set_name);
   let why = property_get(rule_set, "why");
   if (false) {
+    let p = html_p_text(root, why);
   }
-  let p = html_p_text(root, why);
   let r = {
     rule_set,
     rule_set_name,
