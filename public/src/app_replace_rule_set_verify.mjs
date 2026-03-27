@@ -1,3 +1,4 @@
+import { assert_json_get } from "../../../love/public/src/assert_json_get.mjs";
 import { list_includes_curried } from "../../../love/public/src/list_includes_curried.mjs";
 import { list_all } from "../../../love/public/src/list_all.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
@@ -28,6 +29,8 @@ export function app_replace_rule_set_verify(rule_set) {
   let rules = property_get(rule_set, "rules");
   let r2 = list_includes_curried(unique);
   let all_rules_used = list_all(rules, r2);
+  function lambda2() {}
+  assert_json_get(b, lambda2);
   log(app_replace_rule_set_verify.name, {
     unique,
     rules,
