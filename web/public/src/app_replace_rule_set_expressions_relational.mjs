@@ -35,6 +35,22 @@ export function app_replace_rule_set_expressions_relational() {
         start: "nu < nu",
         end: "1 < 2",
       },
+      {
+        start: "re",
+        end: "mue > mue",
+      },
+      {
+        start: "mue > mue",
+        end: "mae > mae",
+      },
+      {
+        start: "mae > mae",
+        end: "nu > nu",
+      },
+      {
+        start: "nu > nu",
+        end: "3 . 1 4 > 2",
+      },
     ],
   };
   return r;
