@@ -16,7 +16,7 @@ export function app_replace_rule_set_grow_triple() {
         end: "a a a a a a a",
       },
     ],
-    why: "The replacement rules demonstrate a grammar that triples the number of 'a's in each derivation step. Starting from a single 'a', each application of the rule replaces one 'a' with three, allowing the generation of sequences whose lengths are powers of three. The goals show how the grammar can derive strings of 3, 5, or 7 'a's from a single 'a' by repeated application and partial expansion.",
+    why: "The replacement rules demonstrate a grammar where each 'a' is replaced by three 'a's, showing exponential growth (tripling) of 'a's with each application, which explains how the goals with 3, 5, and 7 'a's can be derived from a single 'a' through repeated rule applications.",
   };
   return r;
 }
