@@ -75,7 +75,7 @@ export function app_replace_rule_set_strings_simple() {
       },
     ],
     abbreviations,
-    why: "These replacement rules define a simple grammar for generating strings that resemble identifiers enclosed in double quotes. The rules demonstrate how an identifier can be composed of certain letters, symbols, and digits, with specific rules for what can appear as the first character and what can follow. The grammar illustrates the structure of quoted identifiers, showing the distinction between valid starting characters and subsequent characters, which is typical in programming language syntax.",
+    why: "The replacement rules define a grammar for generating simple string literals enclosed in double quotes, where the content consists of a sequence of identifier-like symbols (letters, $, _) and a few digits (0, 1, 3), demonstrating how identifiers and digits can be combined to form the inner content of quoted strings.",
   };
   return r;
 }
