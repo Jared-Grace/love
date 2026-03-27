@@ -128,8 +128,7 @@ export async function app_replace_rule_set(context) {
   let highlight = app_replace_rule_set_highlight();
   html_progress_bar(root, rule_set_index, size, "rule set");
   html_progress_bar(root, goal_index, size3, "goal");
-  let rule_name = property_get(rs, "name");
-  html_p_text(root, "Rule set: " + rule_name);
+  let rule_set_name = property_get(rs, "name");
   let div_abbreviations = html_div(root);
   let label_rules = html_p(root);
   let symbols_invalid_chosen = {};
@@ -284,7 +283,7 @@ export async function app_replace_rule_set(context) {
       if (eq2) {
         success = true;
         await app_replace_rule_set_success(
-          rule_name,
+          rule_set_name,
           goal,
           context,
           goal_list_symbols,
