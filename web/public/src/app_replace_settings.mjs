@@ -38,7 +38,7 @@ export function app_replace_settings(context) {
     emoji_font_smaller() + " Font size smaller",
     lambda3,
   );
-  let div2 = html_div(parent);
+  let div2 = html_div(root);
   let left = emoji_clock();
   let highlight = app_replace_rule_set_highlight();
   const duration = storage_local_initialize_context(
