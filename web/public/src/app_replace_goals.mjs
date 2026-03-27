@@ -1,3 +1,4 @@
+import { app_replace_rule_set_title } from "../../../love/public/src/app_replace_rule_set_title.mjs";
 import { html_data_set_test } from "../../../love/public/src/html_data_set_test.mjs";
 import { html_data_set_object } from "../../../love/public/src/html_data_set_object.mjs";
 import { json_to } from "../../../love/public/src/json_to.mjs";
@@ -13,15 +14,13 @@ import { app_replace_rule_set } from "../../../love/public/src/app_replace_rule_
 import { each_index } from "../../../love/public/src/each_index.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
-import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { app_replace_rule_set_get } from "../../../love/public/src/app_replace_rule_set_get.mjs";
 export function app_replace_goals(context) {
   let root = property_get(context, "root");
   app_replace_button_home(root, context);
-  let item = app_replace_rule_set_get(context);
-  let rule_name = property_get(item, "name");
-  html_p_text(root, "Rule set: " + rule_name);
+  let r = app_replace_rule_set_title(context, root);
+  let rule_name = property_get(r, "rule_name");
+  let item = property_get(r, "item");
   let goals = property_get(item, "goals");
   let completed_previous = true;
   let d = app_replace_rule_sets_data_initialize(context);
