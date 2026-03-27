@@ -16,7 +16,7 @@ export function app_replace_rule_set_double() {
         end: "a a a a a",
       },
     ],
-    why: "The replacement rules demonstrate a grammar that doubles the number of 'a's in a string each time the rule is applied. Starting from a single 'a', each application of the rule replaces 'a' with 'aa', so repeated applications generate strings with lengths that are powers of two. The goals show examples of deriving longer strings of 'a's from a single 'a' using this doubling rule.",
+    why: "The replacement rule demonstrates a grammar that doubles the symbol 'a' each time the rule is applied, as each 'a' is replaced by two 'a's, leading to exponential growth in the number of 'a's.",
   };
   return r;
 }
