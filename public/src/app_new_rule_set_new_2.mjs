@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { app_replace_rule_set_expressions_equality_abbreviations } from "../../../love/public/src/app_replace_rule_set_expressions_equality_abbreviations.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -9,6 +10,10 @@ export function app_new_rule_set_new_2() {
   list_add(rules, "ex > le");
   let abbreviations = {};
   app_replace_rule_set_expressions_equality_abbreviations(abbreviations);
+  object_merge(abbreviations, {
+    ee: ["", "e", "quality ", "e", "xpression"],
+    eo: ["", "e", "elational ", "o", "perator"],
+  });
   let r = {
     name: "Logical Expressions",
     rules,
