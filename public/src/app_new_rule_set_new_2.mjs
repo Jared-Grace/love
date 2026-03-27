@@ -51,6 +51,10 @@ export function app_new_rule_set_new_2() {
         start: "( ex ) && true",
         end: "( mue ) && true",
       },
+      {
+        start: "( mue ) && true",
+        end: "( pe ) && true",
+      },
     ],
   };
   return r;
