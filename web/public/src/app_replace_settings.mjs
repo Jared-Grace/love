@@ -30,5 +30,5 @@ export function app_replace_settings(context) {
   );
   let div2 = html_div(parent);
   function lambda4() {}
-  let b = app_replace_button(parent2, text, lambda4);
+  let b = app_replace_button(div2, "Animations off", lambda4);
 }
