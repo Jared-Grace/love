@@ -126,7 +126,9 @@ export async function app_replace_rule_set(context) {
   let highlight = app_replace_rule_set_highlight();
   let size = list_size(rule_sets);
   let rule_set_index = app_replace_rule_set_index_get(context);
-  html_progress_bar(root, rule_set_index, size, "rule set");
+  let root2 = property_get(context, "root");
+  html_progress_bar(root2, rule_set_index, size, "rule set");
+  let root3 = property_get(context, "root");
   html_progress_bar(root, goal_index, size3, "goal");
   let rule_set_name = property_get(rs, "name");
   let div_abbreviations = html_div(root);
