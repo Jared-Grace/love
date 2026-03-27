@@ -52,7 +52,7 @@ export function app_replace_settings(context) {
       animation_duration: 111,
     },
     {
-      ending: "normal",
+      ending: "medium",
       animation_duration: 222,
     },
     {
