@@ -25,7 +25,7 @@ export function app_replace_rule_set_expressions_relational() {
       },
       {
         start: "mue < mue",
-        end: "mae ro mae",
+        end: "ce ro ce",
       },
       {
         start: "mae < mae",
