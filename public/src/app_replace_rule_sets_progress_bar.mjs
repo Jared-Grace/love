@@ -11,6 +11,6 @@ export function app_replace_rule_sets_progress_bar(context) {
   let root = property_get(context, "root");
   let r = html_progress_bar(root, rule_set_index, size, "rule set");
   let container = property_get(r, "container");
-  html_style_margin_y(container, "0.62em");
+  html_style_margin_bottom(container, "0.62em");
   return r;
 }
