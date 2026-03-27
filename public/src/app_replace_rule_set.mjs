@@ -1,3 +1,4 @@
+import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
 import { app_replace_animation_duration_initialize } from "../../../love/public/src/app_replace_animation_duration_initialize.mjs";
 import { emoji_target } from "../../../love/public/src/emoji_target.mjs";
 import { emoji_restart } from "../../../love/public/src/emoji_restart.mjs";
@@ -129,6 +130,7 @@ export async function app_replace_rule_set(context) {
   app_replace_rule_set_title(context);
   let r3 = html_progress_bar(root, goal_index, goals_count, "goal");
   let container = property_get(r3, "container");
+  html_style_margin_top(container, "0");
   let highlight = app_replace_rule_set_highlight();
   let rule_set_name = property_get(rs, "name");
   let div_abbreviations = html_div(root);
