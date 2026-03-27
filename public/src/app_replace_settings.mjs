@@ -1,3 +1,4 @@
+import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
 import { app_replace_button } from "../../../love/public/src/app_replace_button.mjs";
 import { app_replace_button_home } from "../../../love/public/src/app_replace_button_home.mjs";
@@ -29,6 +30,7 @@ export function app_replace_settings(context) {
     lambda3,
   );
   let div2 = html_div(parent);
+  let combined = text_combine(left, right);
   function lambda4() {}
   let b = app_replace_button(div2, "Animations off", lambda4);
 }
