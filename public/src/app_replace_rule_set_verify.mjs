@@ -26,8 +26,8 @@ export function app_replace_rule_set_verify(rule_set) {
   let unique = list_unique(mapped);
   let rules = property_get(rule_set, "rules");
   let value = property_get_or_null(rule_set, "rules_unused");
-  if (null_not_is(value2)) {
+  if (null_not_is(value)) {
+    rules = list_difference(rules, value);
   }
-  let difference = list_difference(list, other);
   list_includes_all_assert(rules, unique);
 }
