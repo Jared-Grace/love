@@ -12,7 +12,7 @@ export function app_replace_rule_set_binary_counting_prepare_1() {
         end: "a 0 0 0",
       },
     ],
-    why: "These replacement rules demonstrate a simple binary counting mechanism. The rule ['1', 'a'] → ['a', '0'] simulates incrementing a binary number, while ['1'] → ['1', '1'] allows for the binary number to grow in length, representing higher values. The goals show how starting from ['1', 'a'], the rules can generate binary representations of numbers, such as ['a', '0'] and ['a', '0', '0', '0'], illustrating the process of binary incrementation.",
+    why: "The rules demonstrate binary counting by simulating the process of incrementing a binary number, where '1' acts as a carry and 'a' as a digit, showing how binary addition propagates carries and extends the number.",
   };
   return r;
 }
