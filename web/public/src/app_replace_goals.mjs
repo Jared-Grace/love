@@ -20,7 +20,7 @@ export function app_replace_goals(context) {
   app_replace_button_home(root, context);
   let r = app_replace_rule_set_title(context);
   let rule_name = property_get(r, "rule_name");
-  let item = property_get(r, "item");
+  let item = property_get(r, "rule_set");
   let goals = property_get(item, "goals");
   let completed_previous = true;
   let d = app_replace_rule_sets_data_initialize(context);
