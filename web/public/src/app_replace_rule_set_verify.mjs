@@ -30,7 +30,8 @@ export function app_replace_rule_set_verify(rule_set) {
   let r2 = list_includes_curried(unique);
   let all_rules_used = list_all(rules, r2);
   function lambda2() {
-    return {};
+    let r3 = {};
+    return r3;
   }
   assert_json_get(all_rules_used, lambda2);
   log(app_replace_rule_set_verify.name, {
