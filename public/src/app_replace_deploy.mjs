@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { app_replace_rule_sets_fns_names } from "../../../love/public/src/app_replace_rule_sets_fns_names.mjs";
 import { app_replace_rule_set_rename } from "../../../love/public/src/app_replace_rule_set_rename.mjs";
 import { app_replace_rule_sets_why_generate } from "../../../love/public/src/app_replace_rule_sets_why_generate.mjs";
@@ -8,6 +9,8 @@ import { app_replace_tests_run } from "../../../love/public/src/app_replace_test
 export async function app_replace_deploy() {
   let result = await app_replace_rule_sets_fns_migrate_capitalization_upper();
   let mapped = app_replace_rule_sets_fns_names();
+  async function lambda(item) {}
+  await each_async(list, lambda);
   let f_name_after = await app_replace_rule_set_rename(f_name);
   await app_replace_rule_sets_why_generate();
   await app_replace_tests_run();
