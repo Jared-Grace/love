@@ -28,10 +28,10 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "mae lo mae",
-        end: "lit lo lit",
+        end: "li lo li",
       },
       {
-        start: "lit lo lit",
+        start: "li lo li",
         end: "true lo false",
       },
     ],
