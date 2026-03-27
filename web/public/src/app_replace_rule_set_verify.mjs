@@ -10,6 +10,6 @@ export function app_replace_rule_set_verify(rule_set) {
   let rules_parsed = app_replace_rule_set_rules_get(rule_set);
   let goals = property_get(rule_set, "goals");
   let r = app_replace_rule_set_verify_goal_curried_right(rules_parsed);
-  let mapped = list_map(goals, r);
-  return mapped;
+  let dfss = list_map(goals, r);
+  return dfss;
 }
