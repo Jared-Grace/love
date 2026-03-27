@@ -6,6 +6,6 @@ export function app_replace_rule_set_verify_goal_path(
   end,
 ) {
   let dfs = app_replace_rule_set_verify_from(rules_parsed, start, end);
-  let skipped = app_replace_rule_set_verify_path_get(dfs);
-  return skipped;
+  let path = app_replace_rule_set_verify_path_get(dfs);
+  return path;
 }
