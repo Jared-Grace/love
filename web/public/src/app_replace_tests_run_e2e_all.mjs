@@ -1,8 +1,8 @@
+import { playwright_test_app_dev_hash } from "../../../love/public/src/playwright_test_app_dev_hash.mjs";
 import { app_replace_rule_set_binary_counting } from "../../../love/public/src/app_replace_rule_set_binary_counting.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { each_range_unordered_async } from "../../../love/public/src/each_range_unordered_async.mjs";
 import { app_replace } from "../../../love/public/src/app_replace.mjs";
-import { playwright_test_app_dev } from "../../../love/public/src/playwright_test_app_dev.mjs";
 import { list_empty_not_is_while_async } from "../../../love/public/src/list_empty_not_is_while_async.mjs";
 import { app_replace_tests_run_e2e_goal } from "../../../love/public/src/app_replace_tests_run_e2e_goal.mjs";
 import { list_pop_first } from "../../../love/public/src/list_pop_first.mjs";
@@ -43,7 +43,7 @@ export async function app_replace_tests_run_e2e_all(e2e_inner_fns) {
       }
       await list_empty_not_is_while_async(remaining, while_non_empty);
     }
-    await playwright_test_app_dev(app_replace, on_page);
+    await playwright_test_app_dev_hash(app_replace, on_page);
   }
   await each_range_unordered_async(parallel_count, lambda);
 }
