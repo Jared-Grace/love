@@ -4,4 +4,8 @@ export function html_style_margin_y(component, value) {
     "margin-top": value,
     "margin-bottom": value,
   });
+  html_style_assign(component, {
+    "margin-top": value,
+    "margin-bottom": value,
+  });
 }
