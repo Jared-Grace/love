@@ -6,4 +6,5 @@ export function app_replace_rule_set_verify_all() {
   let rule_sets = app_replace_rule_sets();
   let dfsss = list_map(rule_sets, app_replace_rule_set_verify);
   let squashed = list_squash(dfsss);
+  return squashed;
 }
