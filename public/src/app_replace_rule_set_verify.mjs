@@ -1,5 +1,4 @@
-import { list_includes_all } from "../../../love/public/src/list_includes_all.mjs";
-import { assert_json_get } from "../../../love/public/src/assert_json_get.mjs";
+import { list_includes_all_assert } from "../../../love/public/src/list_includes_all_assert.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_map_properties } from "../../../love/public/src/list_map_properties.mjs";
 import { app_replace_rule_set_verify_path_get } from "../../../love/public/src/app_replace_rule_set_verify_path_get.mjs";
@@ -26,12 +25,7 @@ export function app_replace_rule_set_verify(rule_set) {
   let mapped = list_map_properties(squashed2, ["rule", "original"]);
   let items = list_unique(mapped);
   let list = property_get(rule_set, "rules");
-  let includes_all = list_includes_all(list, items);
-  function lambda2() {
-    let r3 = {};
-    return r3;
-  }
-  assert_json_get(includes_all, lambda2);
+  let includes_all = list_includes_all_assert(list, items);
   log(app_replace_rule_set_verify.name, {
     unique: items,
     rules: list,
