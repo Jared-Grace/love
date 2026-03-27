@@ -1,3 +1,4 @@
+import { app_replace_rule_set_expressions_relational } from "../../../love/public/src/app_replace_rule_set_expressions_relational.mjs";
 import { app_replace_rule_set_binary_numbers_simple } from "../../../love/public/src/app_replace_rule_set_binary_numbers_simple.mjs";
 import { app_replace_rule_set_expressions_additive } from "../../../love/public/src/app_replace_rule_set_expressions_additive.mjs";
 import { app_replace_rule_set_expressions_multiplicative } from "../../../love/public/src/app_replace_rule_set_expressions_multiplicative.mjs";
@@ -116,6 +117,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_expressions_unary,
     app_replace_rule_set_expressions_multiplicative,
     app_replace_rule_set_expressions_additive,
+    app_replace_rule_set_expressions_relational,
   ];
   return fns;
 }
