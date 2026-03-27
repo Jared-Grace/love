@@ -11,8 +11,8 @@ export function app_new_rule_set_new_2() {
   let abbreviations = {};
   app_replace_rule_set_expresions_additive_abbreviations(abbreviations);
   object_merge(abbreviations, {
-    coe: ["", "r", "elational ", "e", "xpression"],
-    coo: ["", "r", "elational ", "o", "perator"],
+    re: ["", "r", "elational ", "e", "xpression"],
+    ro: ["", "r", "elational ", "o", "perator"],
   });
   let r = {
     name: "Expressions relational",
