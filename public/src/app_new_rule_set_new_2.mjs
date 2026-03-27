@@ -15,7 +15,7 @@ export function app_new_rule_set_new_2() {
     coo: ["", "r", "elational ", "o", "perator"],
   });
   let r = {
-    name: "Expressions comparison",
+    name: "Expressions relational",
     abbreviations,
     rules: ["a > b"],
     goals: [
