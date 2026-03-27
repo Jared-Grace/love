@@ -1,7 +1,7 @@
+import { app_replace_rule_sets_progress_bar } from "../../../love/public/src/app_replace_rule_sets_progress_bar.mjs";
 import { app_replace_rule_set_title } from "../../../love/public/src/app_replace_rule_set_title.mjs";
 import { html_progress_bar } from "../../../love/public/src/html_progress_bar.mjs";
 import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
-import { app_replace_rule_set_index_get } from "../../../love/public/src/app_replace_rule_set_index_get.mjs";
 import { app_replace_rule_set_rules_used } from "../../../love/public/src/app_replace_rule_set_rules_used.mjs";
 import { list_map_property_multiple } from "../../../love/public/src/list_map_property_multiple.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
@@ -124,10 +124,7 @@ export async function app_replace_rule_set(context) {
   app_replace_rule_set_title(context);
   let rule_sets = app_replace_rule_sets();
   let highlight = app_replace_rule_set_highlight();
-  let size = list_size(rule_sets);
-  let rule_set_index = app_replace_rule_set_index_get(context);
-  let root2 = property_get(context, "root");
-  html_progress_bar(root2, rule_set_index, size, "rule set");
+  app_replace_rule_sets_progress_bar(rule_sets, context);
   let root3 = property_get(context, "root");
   html_progress_bar(root, goal_index, size3, "goal");
   let rule_set_name = property_get(rs, "name");
