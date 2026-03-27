@@ -49,11 +49,11 @@ export function app_replace_settings(context) {
     },
     {
       ending: "fast",
-      animation_duration: 111,
+      animation_duration: 155,
     },
     {
       ending: "medium",
-      animation_duration: 222,
+      animation_duration: 333,
     },
     {
       ending: "slow",
