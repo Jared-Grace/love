@@ -20,7 +20,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "re && re",
-        end: "re && re",
+        end: "mue && mue",
       },
     ],
   };
