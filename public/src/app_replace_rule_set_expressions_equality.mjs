@@ -56,8 +56,8 @@ export function app_replace_rule_set_expressions_equality() {
         end: "( pe ao pe ) === pe",
       },
       {
-        start: "( mae ao mae ) === pe",
-        end: "( nu - nu ) === nu",
+        start: "( pe ao pe ) === pe",
+        end: "( nu + nu ) === nu",
       },
     ],
   };
