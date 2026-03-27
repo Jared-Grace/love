@@ -143,11 +143,7 @@ export async function app_replace_rule_set(context) {
   each(goal_list_symbols, lambda4);
   let div_below = html_div(root);
   let success = false;
-  const duration = 555 =storage_local_get_context(
-          context,
-          "animation_duration",
-
-        );
+  const duration = storage_local_get_context(context, "animation_duration");
   let refresh_count = 0;
   rules_used = app_replace_rule_set_rules_used(
     rules_parsed,
