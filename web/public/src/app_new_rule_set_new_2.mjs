@@ -16,7 +16,7 @@ export function app_new_rule_set_new_2() {
     goals: [
       {
         start: "le",
-        end: "re && re",
+        end: "ae && ae",
       },
       {
         start: "re && re",
