@@ -77,7 +77,7 @@ export function app_replace_rule_set_scientific_notation_numbers() {
       },
       {
         start: "sn",
-        end: "pi di e ig",
+        end: "pi ig e ig",
       },
       {
         start: "pi di e ig",
