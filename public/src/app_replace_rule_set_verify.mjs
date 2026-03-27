@@ -24,16 +24,16 @@ export function app_replace_rule_set_verify(rule_set) {
   let paths = list_map(squashed, app_replace_rule_set_verify_path_get);
   let squashed2 = list_squash(paths);
   let mapped = list_map_properties(squashed2, ["rule", "original"]);
-  let unique = list_unique(mapped);
+  let items = list_unique(mapped);
   let list = property_get(rule_set, "rules");
-  let includes_all = list_includes_all(list, unique);
+  let includes_all = list_includes_all(list, items);
   function lambda2() {
     let r3 = {};
     return r3;
   }
   assert_json_get(includes_all, lambda2);
   log(app_replace_rule_set_verify.name, {
-    unique,
+    unique: items,
     rules: list,
     all_rules_used: includes_all,
   });
