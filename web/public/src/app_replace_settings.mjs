@@ -1,3 +1,4 @@
+import { app_replace_animation_duration_default } from "../../../love/public/src/app_replace_animation_duration_default.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { emoji_clock } from "../../../love/public/src/emoji_clock.mjs";
@@ -45,7 +46,7 @@ export function app_replace_settings(context) {
     },
     {
       ending: "slow",
-      animation_duration: 555,
+      animation_duration: app_replace_animation_duration_default(),
     },
   ];
   function lambda(choice) {
