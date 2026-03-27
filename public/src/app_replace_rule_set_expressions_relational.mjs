@@ -50,6 +50,10 @@ export function app_replace_rule_set_expressions_relational() {
         start: "nu < ( ex )",
         end: "1 < ( ae ao mue )",
       },
+      {
+        start: "1 < ( ae ao mue )",
+        end: "1 < ( nu + mue )",
+      },
     ],
   };
   return r;
