@@ -21,7 +21,7 @@ export function app_new_rule_set_new_2() {
     goals: [
       {
         start: "re",
-        end: "re ro ae",
+        end: "ce > ce",
       },
     ],
   };
