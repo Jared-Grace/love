@@ -20,8 +20,8 @@ export function app_replace_rule_set_expressions_equality() {
     rules,
     goals: [
       {
-        start: "a",
-        end: "b",
+        start: "ee",
+        end: "mue === mue",
       },
     ],
   };
