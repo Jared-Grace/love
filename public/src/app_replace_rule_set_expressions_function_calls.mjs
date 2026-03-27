@@ -13,19 +13,19 @@ export function app_replace_rule_set_expressions_function_calls() {
     rules,
     goals: [
       {
-        start: "ce",
+        start: "cae",
         end: "id",
       },
       {
-        start: "ce",
+        start: "cae",
         end: "id ( )",
       },
       {
-        start: "ce",
+        start: "cae",
         end: "id . id ( )",
       },
       {
-        start: "ce",
+        start: "cae",
         end: "id ( ex )",
       },
       {
