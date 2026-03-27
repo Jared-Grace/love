@@ -14,7 +14,7 @@ export function app_replace_rule_set_title(context) {
   html_style_margin_y(title, "0.3em");
   let why = property_get(rule_set, "why");
   let p = html_p_text(root, why);
-  html_style_margin_top(p, "0.5em");
+  html_style_margin_top(p, "0.7em");
   html_style_margin_top(p, "0");
   html_style_font_size(p, "0.9em");
   let r = {
