@@ -25,7 +25,7 @@ export function app_replace_rule_set_expressions_relational() {
       },
       {
         start: "re",
-        end: "pe ro ue",
+        end: "mae ro ue",
       },
     ],
   };
