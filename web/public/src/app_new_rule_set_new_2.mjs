@@ -11,10 +11,11 @@ export function app_new_rule_set_new_2() {
   app_replace_rule_set_logical_expressions_abbreviations(abbreviations);
   let r = {
     name: "Assignment Expressions",
-    rules: ["a > b"],
+    abbreviations,
+    rules,
     goals: [
       {
-        start: "a",
+        start: "ase",
         end: "b",
       },
     ],
