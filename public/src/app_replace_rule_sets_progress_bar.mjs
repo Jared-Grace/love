@@ -8,5 +8,6 @@ export function app_replace_rule_sets_progress_bar(context) {
   let size = list_size(rule_sets);
   let rule_set_index = app_replace_rule_set_index_get(context);
   let root = property_get(context, "root");
-  return html_progress_bar(root, rule_set_index, size, "rule set");
+  let r = html_progress_bar(root, rule_set_index, size, "rule set");
+  return r;
 }
