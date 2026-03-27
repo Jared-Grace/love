@@ -54,7 +54,7 @@ export function app_replace_rule_set_integer_digits() {
         end: "0 1 2 3 4",
       },
     ],
-    why: "The replacement rules define a grammar for generating sequences of decimal digits (0-9), representing integers of arbitrary length, by recursively expanding nonterminals into single digits or further digit sequences.",
+    why: "The replacement rules define a grammar for generating sequences of decimal digits (0-9), representing integers of arbitrary length, by recursively expanding a nonterminal into one or more digits.",
   };
   return r;
 }
