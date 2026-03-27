@@ -78,7 +78,7 @@ export function app_replace_rule_set_expressions_additive() {
       },
       {
         start: "nu ao nu mo ce",
-        end: "nu - nu / nu",
+        end: "nu - nu mo nu",
       },
       {
         start: "ae",
