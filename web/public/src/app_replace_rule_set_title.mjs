@@ -12,7 +12,7 @@ export function app_replace_rule_set_title(context) {
   let rule_set = app_replace_rule_set_get(context);
   let rule_set_name = property_get(rule_set, "name");
   let title = html_p_text(root, "Rule set: " + rule_set_name);
-  html_style_margin_y(title, "0.3em");
+  html_style_margin_y(title, "0.4em");
   let why = property_get(rule_set, "why");
   let p = html_p_text(root, why);
   html_style_margin_top(p, "0.5em");
