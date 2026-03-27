@@ -9,7 +9,7 @@ export function app_replace_rule_set_expressions_additive() {
   app_replace_rule_set_expresions_additive_abbreviations(abbreviations);
   let r = {
     name: "Expressions Additive",
-    rules: rules,
+    rules: rules,abbreviations,
     goals: [
       {
         start: "ae",
@@ -54,6 +54,10 @@ export function app_replace_rule_set_expressions_additive() {
       {
         start: "nu ao ( nu ao nu )",
         end: "3 . 1 4 - ( 2 + 2 )",
+      },
+      {
+        start: "nu mo ce",
+        end: "nu mo nu",
       },
     ],
     why: "The replacement rules define a context-free grammar for parsing arithmetic and function call expressions similar to those in JavaScript, including literals, identifiers, unary and binary operators, function calls, and member access, demonstrating how complex expressions are constructed from simpler components.",
