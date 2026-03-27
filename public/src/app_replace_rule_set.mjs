@@ -92,7 +92,7 @@ export async function app_replace_rule_set(context) {
   );
   let rs = app_replace_rule_set_get(context);
   let goals = property_get(rs, "goals");
-  let size3 = list_size(goals);
+  let goals_count = list_size(goals);
   let goal_index = storage_local_get_context(context, "goal_index");
   let goal = list_get(goals, goal_index);
   let rules_parsed = app_replace_rule_set_rules_get(rs);
@@ -127,7 +127,7 @@ export async function app_replace_rule_set(context) {
   let value4 = app_replace_rule_set_attribute_hint();
   html_data_set_test(hint_button, value4);
   app_replace_rule_set_title(context);
-  html_progress_bar(root, goal_index, size3, "goal");
+  html_progress_bar(root, goal_index, goals_count, "goal");
   let highlight = app_replace_rule_set_highlight();
   let rule_set_name = property_get(rs, "name");
   let div_abbreviations = html_div(root);
