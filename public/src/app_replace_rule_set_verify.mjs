@@ -25,10 +25,5 @@ export function app_replace_rule_set_verify(rule_set) {
   let mapped = list_map_properties(squashed2, ["rule", "original"]);
   let unique = list_unique(mapped);
   let rules = property_get(rule_set, "rules");
-  let includes_all = list_includes_all_assert(rules, unique);
-  log(app_replace_rule_set_verify.name, {
-    unique: unique,
-    rules: rules,
-    all_rules_used: includes_all,
-  });
+  list_includes_all_assert(rules, unique);
 }
