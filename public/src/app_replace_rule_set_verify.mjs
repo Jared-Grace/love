@@ -18,8 +18,9 @@ export function app_replace_rule_set_verify(rule_set) {
     squashed,
   });
   let paths = list_map(squashed, app_replace_rule_set_verify_path_get);
+  let squashed2 = list_squash(paths);
   log(app_replace_rule_set_verify.name, {
-    paths,
+    squashed2,
   });
   return dfss;
 }
