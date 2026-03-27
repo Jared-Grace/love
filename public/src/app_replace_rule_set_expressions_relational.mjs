@@ -58,6 +58,10 @@ export function app_replace_rule_set_expressions_relational() {
         start: "1 < ( ue + ue )",
         end: "1 < ( mae + mae )",
       },
+      {
+        start: "1 < ( mae + mae )",
+        end: "1 < ( nu + nu )",
+      },
     ],
   };
   return r;
