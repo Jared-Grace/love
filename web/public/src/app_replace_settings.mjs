@@ -1,3 +1,4 @@
+import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
 import { storage_local_initialize_context } from "../../../love/public/src/storage_local_initialize_context.mjs";
@@ -71,7 +72,8 @@ export function app_replace_settings(context) {
       );
     }
     let b = app_replace_button(div2, combined, lambda4);
-    if (equal(left2, right)) {
+    if (equal(animation_duration2, duration)) {
+      html_style_background_color_set(component2, background);
     }
   }
   each(choices, lambda);
