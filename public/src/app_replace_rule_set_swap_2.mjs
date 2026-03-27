@@ -16,7 +16,7 @@ export function app_replace_rule_set_swap_2() {
         end: "c b c c a a",
       },
     ],
-    why: "The replacement rules demonstrate a local swapping mechanism where 'a' can swap places with either 'b' or 'c' when they are adjacent. This allows 'a' to move rightward past any sequence of 'b's and 'c's, effectively shifting 'a' to the end of the string while preserving the order of the other elements. The goals show examples of moving 'a' from its initial position to the end using these swaps.",
+    why: "The replacement rules demonstrate a grammar for swapping the first 'a' in a sequence with the next 'b' or 'c' to its right, effectively moving 'a' rightward past 'b' or 'c' one step at a time.",
   };
   return r;
 }
