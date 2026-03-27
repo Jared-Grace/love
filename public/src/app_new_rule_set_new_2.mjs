@@ -11,8 +11,8 @@ export function app_new_rule_set_new_2() {
   let abbreviations = {};
   app_replace_rule_set_expressions_equality_abbreviations(abbreviations);
   object_merge(abbreviations, {
-    ee: ["", "l", "ogical ", "e", "xpression"],
-    eo: ["", "l", "ogical ", "o", "perator"],
+    le: ["", "l", "ogical ", "e", "xpression"],
+    lo: ["", "l", "ogical ", "o", "perator"],
   });
   let r = {
     name: "Logical Expressions",
