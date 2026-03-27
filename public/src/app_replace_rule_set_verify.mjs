@@ -21,7 +21,9 @@ export function app_replace_rule_set_verify(rule_set) {
   });
   let paths = list_map(squashed, app_replace_rule_set_verify_path_get);
   let squashed2 = list_squash(paths);
-  function lambda(item) {}
+  function lambda(item) {
+    squashed2;
+  }
   each(list2, lambda);
   let mapped = list_map_property(squashed2, "rule");
   let mapped2 = list_map_property(list, "original");
