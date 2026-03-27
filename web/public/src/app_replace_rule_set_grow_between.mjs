@@ -16,7 +16,7 @@ export function app_replace_rule_set_grow_between() {
         end: "a b a a b a a b a",
       },
     ],
-    why: "The replacement rules demonstrate a context-free grammar where every occurrence of two consecutive 'a's is replaced by 'a', 'b', 'a', effectively growing the string by inserting 'b' between each pair of 'a's. This shows how a simple rule can recursively expand a string, illustrating the concept of string rewriting and growth in formal grammars.",
+    why: "The rules demonstrate an insertion grammar where every occurrence of two consecutive 'a's is replaced by 'a', 'b', 'a', effectively growing the string by inserting 'b' between each pair of 'a's.",
   };
   return r;
 }
