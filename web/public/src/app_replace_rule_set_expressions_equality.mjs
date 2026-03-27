@@ -51,6 +51,10 @@ export function app_replace_rule_set_expressions_equality() {
         start: "( ue ao ue ) === pe",
         end: "( mae ao mae ) === pe",
       },
+      {
+        start: "( mae ao mae ) === pe",
+        end: "( mae ao mae ) === pe",
+      },
     ],
   };
   return r;
