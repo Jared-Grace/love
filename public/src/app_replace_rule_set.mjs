@@ -77,6 +77,7 @@ import { html_clear } from "../../../love/public/src/html_clear.mjs";
 export async function app_replace_rule_set(context) {
   let root = property_get(context, "root");
   app_replace_button_home(root, context);
+  let combined2 = text_combine(left3, right);
   app_replace_button_screen(context, app_replace_goals, root, "Goals");
   let left = emoji_restart();
   let combined = text_combine(left, "Start over");
