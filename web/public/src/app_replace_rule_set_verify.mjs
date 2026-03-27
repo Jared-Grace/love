@@ -22,7 +22,7 @@ export function app_replace_rule_set_verify(rule_set) {
   let squashed2 = list_squash(paths);
   let mapped = list_map_property(squashed2, "rule");
   log(app_replace_rule_set_verify.name, {
-    squashed2,
+    mapped,
   });
   return dfss;
 }
