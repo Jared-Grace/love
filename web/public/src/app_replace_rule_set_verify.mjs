@@ -24,5 +24,4 @@ export function app_replace_rule_set_verify(rule_set) {
   log(app_replace_rule_set_verify.name, {
     mapped,
   });
-  return dfss;
 }
