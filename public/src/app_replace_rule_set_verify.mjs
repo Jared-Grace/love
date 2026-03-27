@@ -24,7 +24,7 @@ export function app_replace_rule_set_verify(rule_set) {
   let mapped = list_map_properties(squashed2, ["rule", "original"]);
   let unique = list_unique(mapped);
   let rules = property_get(rule_set, "rules");
-  let value = property_get_or_null(rule_set, "missing");
+  let value = property_get_or_null(rule_set, "rules_unused");
   let difference = list_difference(list, other);
   list_includes_all_assert(rules, unique);
 }
