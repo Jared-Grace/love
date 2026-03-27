@@ -48,8 +48,8 @@ export function app_new_rule_set_new_2() {
         end: "( le ) && true",
       },
       {
-        start: "( ex ) && true",
-        end: "( mue ) && true",
+        start: "( le ) && true",
+        end: "( re || re ) && true",
       },
       {
         start: "( mue ) && true",
