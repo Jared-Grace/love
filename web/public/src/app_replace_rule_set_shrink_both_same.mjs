@@ -16,7 +16,7 @@ export function app_replace_rule_set_shrink_both_same() {
         end: "a b a",
       },
     ],
-    why: "The replacement rules demonstrate a grammar that reduces sequences where 'a', 'b', and 'a' appear together to just 'b'. This rule can be applied repeatedly to shrink longer sequences with repeated 'a's surrounding a 'b' into a more compact form, ultimately simplifying the string to a desired goal configuration.",
+    why: "The rules demonstrate a grammar that reduces any occurrence of 'a b a' to 'b', effectively shrinking sequences by removing matching 'a's on both sides of a 'b'.",
   };
   return r;
 }
