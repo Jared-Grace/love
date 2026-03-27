@@ -1,9 +1,6 @@
 
 add other grammar rule sets - to assignment and also statements, branching, looping, functions
 
-animation speed should be adjustable
-
-
 add new post to reddit
 - added compiler grammar rule sets
 - added hint system
@@ -11,6 +8,7 @@ add new post to reddit
 - progress bar replace for both rule sets and goals
 - previous rule remains selected
 - there should be a description for each rule set
+- animation speed should be adjustable
 
 ---
 
