@@ -124,7 +124,7 @@ export async function app_replace_rule_set(context) {
   app_replace_rule_set_title(context);
   let rule_sets = app_replace_rule_sets();
   let highlight = app_replace_rule_set_highlight();
-  app_replace_rule_sets_progress_bar(rule_sets, context);
+  app_replace_rule_sets_progress_bar(context);
   let root3 = property_get(context, "root");
   html_progress_bar(root, goal_index, size3, "goal");
   let rule_set_name = property_get(rs, "name");
