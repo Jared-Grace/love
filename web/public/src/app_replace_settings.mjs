@@ -33,6 +33,12 @@ export function app_replace_settings(context) {
   );
   let div2 = html_div(parent);
   let left = emoji_clock();
+  let choices = [
+    {
+      ending: "off",
+      duration: 0,
+    },
+  ];
   let combined = text_combine(left, "Animations off");
   function lambda4() {
     storage_local_set_context(context, "animation_duration");
