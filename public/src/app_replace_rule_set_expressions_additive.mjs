@@ -4,7 +4,7 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 export function app_replace_rule_set_expressions_additive() {
   const rules = [];
   app_replace_rule_set_expresions_additive_rules(rules);
-  list_add(rules, "ex > ae");
+  list_add(rules, "ex > ade");
   let abbreviations = {};
   app_replace_rule_set_expresions_additive_abbreviations(abbreviations);
   let r = {
@@ -13,7 +13,7 @@ export function app_replace_rule_set_expressions_additive() {
     abbreviations,
     goals: [
       {
-        start: "ae",
+        start: "ade",
         end: "ce ao ce",
       },
       {
@@ -38,14 +38,14 @@ export function app_replace_rule_set_expressions_additive() {
       },
       {
         start: "nu ao ( ex )",
-        end: "nu ao ( ae ao mue )",
+        end: "nu ao ( ade ao mue )",
       },
       {
-        start: "nu ao ( ae ao ue )",
-        end: "nu ao ( mae ao ue )",
+        start: "nu ao ( ade ao ue )",
+        end: "nu ao ( made ao ue )",
       },
       {
-        start: "nu ao ( mae ao ue )",
+        start: "nu ao ( made ao ue )",
         end: "nu ao ( nu ao ue )",
       },
       {
@@ -57,7 +57,7 @@ export function app_replace_rule_set_expressions_additive() {
         end: "3 . 1 4 - ( 2 + 2 )",
       },
       {
-        start: "ae",
+        start: "ade",
         end: "ce ao mue mo ue",
       },
       {
@@ -89,19 +89,19 @@ export function app_replace_rule_set_expressions_additive() {
         end: "1 - 3 . 1 4 / 2",
       },
       {
-        start: "ae",
+        start: "ade",
         end: "ce",
       },
       {
         start: "ce",
-        end: "ce ( ae )",
+        end: "ce ( ade )",
       },
       {
-        start: "ce ( ae )",
-        end: "id ( ae )",
+        start: "ce ( ade )",
+        end: "id ( ade )",
       },
       {
-        start: "id ( ae )",
+        start: "id ( ade )",
         end: "id ( ce ao ce )",
       },
       {
