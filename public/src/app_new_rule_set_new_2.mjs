@@ -59,6 +59,10 @@ export function app_new_rule_set_new_2() {
         start: "( mue || mue ) && true",
         end: "( li || li ) && true",
       },
+      {
+        start: "( li || li ) && true",
+        end: "( true || false ) && true",
+      },
     ],
   };
   return r;
