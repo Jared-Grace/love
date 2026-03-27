@@ -24,8 +24,8 @@ export function app_replace_rule_set_expressions_relational() {
         end: "ue ro ue",
       },
       {
-        start: "re",
-        end: "mae ro ue",
+        start: "ue ro ue",
+        end: "1 ro ue",
       },
     ],
   };
