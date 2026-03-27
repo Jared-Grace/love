@@ -32,7 +32,7 @@ export function app_replace_settings(context) {
   );
   let div2 = html_div(parent);
   let left = emoji_clock();
-  let combined = text_combine(left, right);
+  let combined = text_combine(left, "Animations off");
   function lambda4() {}
-  let b = app_replace_button(div2, "Animations off", lambda4);
+  let b = app_replace_button(div2, combined, lambda4);
 }
