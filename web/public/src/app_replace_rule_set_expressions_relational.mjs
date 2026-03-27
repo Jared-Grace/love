@@ -21,7 +21,7 @@ export function app_replace_rule_set_expressions_relational() {
     goals: [
       {
         start: "re",
-        end: "ce > ce",
+        end: "ce ro ce",
       },
     ],
   };
