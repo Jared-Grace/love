@@ -106,10 +106,10 @@ export function app_replace_rule_set_expressions_additive() {
       },
       {
         start: "id ( ce ao ce )",
-        end: "id ( 1 ao ce )",
+        end: "id ( nu ao nu )",
       },
       {
-        start: "id ( ce ao ce )",
+        start: "id ( nu ao nu )",
         end: "id ( 1 + 2 )",
       },
     ],
