@@ -1,4 +1,3 @@
-import { app_replace_rule_sets_progress_bar } from "../../../love/public/src/app_replace_rule_sets_progress_bar.mjs";
 import { app_replace_rule_set_title } from "../../../love/public/src/app_replace_rule_set_title.mjs";
 import { html_progress_bar } from "../../../love/public/src/html_progress_bar.mjs";
 import { app_replace_rule_set_rules_used } from "../../../love/public/src/app_replace_rule_set_rules_used.mjs";
