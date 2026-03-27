@@ -13,12 +13,12 @@ import { js_object_expression_properties_find_key_named } from "../../../love/pu
 import { js_list_nodes_object_expression } from "../../../love/public/src/js_list_nodes_object_expression.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { log } from "../../../love/public/src/log.mjs";
-export async function app_replace_rule_sets_fns_migrate_capitalization() {
+export async function app_replace_rule_sets_fns_migrate_capitalization_upper() {
   let fns = app_replace_rule_sets_fns();
   let result = list_map_name(fns);
   async function lambda(name) {
     async function lambda3(ast) {
-      log(app_replace_rule_sets_fns_migrate_capitalization.name, {
+      log(app_replace_rule_sets_fns_migrate_capitalization_upper.name, {
         name,
       });
       let list = js_list_nodes_object_expression(ast);
@@ -29,7 +29,7 @@ export async function app_replace_rule_sets_fns_migrate_capitalization() {
           return;
         }
         function lambda2(t) {
-          log(app_replace_rule_sets_fns_migrate_capitalization.name, {
+          log(app_replace_rule_sets_fns_migrate_capitalization_upper.name, {
             t,
           });
           let split = text_split_space(t);
