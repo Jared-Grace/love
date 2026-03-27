@@ -45,7 +45,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "pe lo pe",
-        end: "( ex ) && true",
+        end: "( le ) && true",
       },
       {
         start: "( ex ) && true",
@@ -53,6 +53,10 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "( mue ) && true",
+        end: "( pe ) && true",
+      },
+      {
+        start: "( pe ) && true",
         end: "( pe ) && true",
       },
     ],
