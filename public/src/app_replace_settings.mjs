@@ -1,3 +1,4 @@
+import { storage_local_set_context } from "../../../love/public/src/storage_local_set_context.mjs";
 import { emoji_clock } from "../../../love/public/src/emoji_clock.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { html_div } from "../../../love/public/src/html_div.mjs";
@@ -33,6 +34,8 @@ export function app_replace_settings(context) {
   let div2 = html_div(parent);
   let left = emoji_clock();
   let combined = text_combine(left, "Animations off");
-  function lambda4() {}
+  function lambda4() {
+    storage_local_set_context(context, "animation_duration");
+  }
   let b = app_replace_button(div2, combined, lambda4);
 }
