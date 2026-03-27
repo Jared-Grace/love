@@ -1,4 +1,4 @@
-import { function_run_args_none } from "../../../love/public/src/function_run_args_none.mjs";
+import { app_replace_rule_sets_run } from "../../../love/public/src/app_replace_rule_sets_run.mjs";
 import { app_replace_test_e2e } from "../../../love/public/src/app_replace_test_e2e.mjs";
 import { app_replace_rule_set_binary_counting } from "../../../love/public/src/app_replace_rule_set_binary_counting.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -10,10 +10,8 @@ import { list_map_squash } from "../../../love/public/src/list_map_squash.mjs";
 import { object_merge_multiple } from "../../../love/public/src/object_merge_multiple.mjs";
 import { object_wrap_multiple } from "../../../love/public/src/object_wrap_multiple.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { app_replace_rule_sets } from "../../../love/public/src/app_replace_rule_sets.mjs";
 export async function app_replace_tests_run_e2e_all(e2e_inner_fns) {
-  "run dynamically in case modification in previous step of deploy";
-  let rule_sets = await function_run_args_none(app_replace_rule_sets);
+  let rule_sets = await app_replace_rule_sets_run();
   let r = app_replace_rule_set_binary_counting();
   function lambda2(rule_set) {
     let goals = property_get(rule_set, "goals");
