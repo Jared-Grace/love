@@ -1,5 +1,4 @@
 import { app_replace_animation_duration_initialize } from "../../../love/public/src/app_replace_animation_duration_initialize.mjs";
-import { app_replace_animation_duration_default } from "../../../love/public/src/app_replace_animation_duration_default.mjs";
 import { emoji_target } from "../../../love/public/src/emoji_target.mjs";
 import { emoji_restart } from "../../../love/public/src/emoji_restart.mjs";
 import { app_replace_rule_set_title } from "../../../love/public/src/app_replace_rule_set_title.mjs";
@@ -145,7 +144,6 @@ export async function app_replace_rule_set(context) {
   each(goal_list_symbols, lambda4);
   let div_below = html_div(root);
   let success = false;
-  let value_initial = app_replace_animation_duration_default();
   const duration = app_replace_animation_duration_initialize(
     context,
     value_initial,
