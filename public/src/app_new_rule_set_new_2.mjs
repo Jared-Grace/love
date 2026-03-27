@@ -57,7 +57,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "( mue || mue ) && true",
-        end: "( mue || mue ) && true",
+        end: "( li || li ) && true",
       },
     ],
   };
