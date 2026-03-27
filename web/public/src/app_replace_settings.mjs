@@ -51,9 +51,14 @@ export function app_replace_settings(context) {
   function lambda(choice) {
     let ending2 = property_get(choice, "ending");
     let animation_duration2 = property_get(choice, "animation_duration");
-    let combined = text_combine(left, "Animations off");
+    let combined2 = text_combine(left2, right);
+    let combined = text_combine(left, "Animations ");
     function lambda4() {
-      storage_local_set_context(context, "animation_duration");
+      storage_local_set_context(
+        context,
+        "animation_duration",
+        animation_duration2,
+      );
     }
     let b = app_replace_button(div2, combined, lambda4);
   }
