@@ -9,9 +9,7 @@ import { app_replace_tests_run } from "../../../love/public/src/app_replace_test
 export async function app_replace_deploy() {
   let result = await app_replace_rule_sets_fns_migrate_capitalization_upper();
   let mapped = app_replace_rule_sets_fns_names();
-  async function lambda(item) {}
-  await each_async(list, lambda);
-  let f_name_after = await app_replace_rule_set_rename(f_name);
+  await each_async(mapped, app_replace_rule_set_rename);
   await app_replace_rule_sets_why_generate();
   await app_replace_tests_run();
   await html_update_latest_promote_deploy_app_fn(app_replace);
