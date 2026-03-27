@@ -8,7 +8,8 @@ export async function app_replace_rule_set_rename(f_name) {
   let list = await function_ast_list_type_nodes_object_expression(f_name);
   let mapped = list_map(list, app_replace_rule_sets_name_expression_value);
   let f_name_after = list_filter_null_not_is_single(mapped);
-  if (equal_not(left, right)) {
+  if (equal_not(f_name, f_name_after)) {
+    return;
   }
   await function_rename_open(f_name, f_name_after);
   return f_name_after;
