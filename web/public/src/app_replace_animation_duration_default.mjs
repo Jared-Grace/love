@@ -9,5 +9,5 @@ export function app_replace_animation_duration_default() {
   if (null_is(d)) {
     d = app_replace_animation_duration_max();
   }
-  return r;
+  return d;
 }
