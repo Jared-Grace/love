@@ -4,7 +4,7 @@ import { list_add } from "../../../love/public/src/list_add.mjs";
 export function app_replace_rule_set_expressions_function_calls() {
   const rules = [];
   app_replace_rule_set_expressions_function_calls_rules(rules);
-  list_add(rules, "ex > cae");
+  list_add(rules, "ex > ce");
   let abbreviations = {};
   app_replace_rule_set_expressions_function_calls_abbreviations(abbreviations);
   let r = {
@@ -13,19 +13,19 @@ export function app_replace_rule_set_expressions_function_calls() {
     rules,
     goals: [
       {
-        start: "cae",
+        start: "ce",
         end: "id",
       },
       {
-        start: "cae",
+        start: "ce",
         end: "id ( )",
       },
       {
-        start: "cae",
+        start: "ce",
         end: "id . id ( )",
       },
       {
-        start: "cae",
+        start: "ce",
         end: "id ( ex )",
       },
       {
