@@ -146,7 +146,6 @@ export async function app_replace_rule_set(context) {
   let success = false;
   const duration = app_replace_animation_duration_initialize(
     context,
-    value_initial,
   );
   let refresh_count = 0;
   rules_used = app_replace_rule_set_rules_used(
