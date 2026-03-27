@@ -28,7 +28,7 @@ export function app_replace_rule_set_grow_left_pair_change_right() {
         end: "b c b a b c b a",
       },
     ],
-    why: "The replacement rules demonstrate a grammar that grows sequences by repeatedly expanding 'a' into 'b a' (growing to the left), and then, whenever two 'b's are adjacent, the pair 'b b' can be changed into 'b c' (changing the right element). This shows how simple local rules can generate increasingly complex patterns by alternately expanding and transforming parts of a string.",
+    why: "These rules demonstrate a grammar where 'a' grows into 'b a' (expanding leftwards), and any adjacent 'b b' pair changes to 'b c', showing leftward growth and selective transformation of repeated symbols.",
   };
   return r;
 }
