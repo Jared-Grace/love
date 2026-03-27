@@ -20,6 +20,7 @@ export function app_replace_rule_set_verify(rule_set) {
     squashed,
   });
   let paths = list_map(squashed, app_replace_rule_set_verify_path_get);
+  let properties = ["rule", "original"];
   let list = list_squash(paths);
   function lambda(p) {
     list = list_map_property(list, p);
