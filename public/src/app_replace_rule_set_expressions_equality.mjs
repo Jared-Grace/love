@@ -3,7 +3,7 @@ import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mj
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_replace_rule_set_expressions_relational_abbreviations } from "../../../love/public/src/app_replace_rule_set_expressions_relational_abbreviations.mjs";
 import { app_replace_rule_set_expressions_relational_rules } from "../../../love/public/src/app_replace_rule_set_expressions_relational_rules.mjs";
-export function app_new_rule_set_new_2() {
+export function app_replace_rule_set_expressions_equality() {
   const rules = [];
   app_replace_rule_set_expressions_relational_rules(rules);
   list_add_multiple(rules, ["re > ae", "re > re ro ae", "ro > <", "ro > >>"]);
