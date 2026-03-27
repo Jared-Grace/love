@@ -23,6 +23,10 @@ export function app_replace_rule_set_expressions_relational() {
         start: "re",
         end: "ue ro ue",
       },
+      {
+        start: "re",
+        end: "1 ro ue",
+      },
     ],
   };
   return r;
