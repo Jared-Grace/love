@@ -1,3 +1,4 @@
+import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { app_replace_rule_set_highlight } from "../../../love/public/src/app_replace_rule_set_highlight.mjs";
@@ -70,6 +71,7 @@ export function app_replace_settings(context) {
         "animation_duration",
         animation_duration2,
       );
+      app_shared_screen_set(context, app_replace_settings);
     }
     let b = app_replace_button(div2, combined, lambda4);
     if (equal(animation_duration2, duration)) {
