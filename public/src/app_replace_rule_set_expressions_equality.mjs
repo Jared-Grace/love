@@ -57,7 +57,11 @@ export function app_replace_rule_set_expressions_equality() {
       },
       {
         start: "( pe ao pe ) === pe",
-        end: "( nu + nu ) === nu",
+        end: "( nu ao nu ) === nu",
+      },
+      {
+        start: "( nu ao nu ) === nu",
+        end: "( 2 - 1 ) === 1",
       },
     ],
   };
