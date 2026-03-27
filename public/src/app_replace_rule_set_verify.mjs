@@ -1,5 +1,5 @@
+import { list_all } from "../../../love/public/src/list_all.mjs";
 import { list_includes } from "../../../love/public/src/list_includes.mjs";
-import { each } from "../../../love/public/src/each.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_map_properties } from "../../../love/public/src/list_map_properties.mjs";
 import { app_replace_rule_set_verify_path_get } from "../../../love/public/src/app_replace_rule_set_verify_path_get.mjs";
@@ -26,10 +26,10 @@ export function app_replace_rule_set_verify(rule_set) {
   let mapped = list_map_properties(list, ["rule", "original"]);
   let unique = list_unique(mapped);
   let rules = property_get(rule_set, "rules");
-  function lambda(item) {
-    let includes = list_includes(list3, item2);
+  function lambda(u) {
+    let includes = list_includes(rules, u);
   }
-  each(list2, lambda);
+  list_all(unique, lambda);
   log(app_replace_rule_set_verify.name, {
     unique,
     rule_set,
