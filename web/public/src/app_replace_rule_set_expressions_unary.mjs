@@ -10,6 +10,7 @@ export function app_replace_rule_set_expressions_unary() {
   let r = {
     name: "Expressions Unary",
     rules,
+    abbreviations,
     goals: [
       {
         start: "ue",
