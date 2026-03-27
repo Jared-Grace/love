@@ -39,6 +39,10 @@ export function app_replace_rule_set_expressions_equality() {
         start: "nu === nu",
         end: "1 === 1",
       },
+      {
+        start: "pe === pe",
+        end: "pe === ( ex )",
+      },
     ],
   };
   return r;
