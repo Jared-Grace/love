@@ -16,7 +16,7 @@ export function app_replace_rule_set_grow_different_2() {
         end: "d e c b c b c d e c",
       },
     ],
-    why: "The replacement rules demonstrate a simple context-free grammar where the symbol 'a' expands into 'b c', and 'b' further expands into 'd e'. This shows how a starting symbol can be systematically rewritten into a sequence of terminal symbols through a series of rule applications, illustrating the process of derivation in formal grammars.",
+    why: "The rules demonstrate a context-free grammar where 'a' expands to 'b c' and 'b' further expands to 'd e', allowing derivations from 'a' to sequences like 'd e c', and showing how repeated applications generate longer strings by recursively expanding each 'a'.",
   };
   return r;
 }
