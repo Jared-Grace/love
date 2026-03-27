@@ -96,7 +96,7 @@ export function app_replace_rule_set_scientific_notation_numbers() {
         end: "7 7 e 4 6 0 7",
       },
     ],
-    why: "The replacement rules define a grammar for recognizing and generating numbers in scientific notation, including integers, decimals, and exponent parts with optional signs, demonstrating how such numbers are structured and parsed.",
+    why: "The replacement rules define a grammar for parsing and generating numbers in scientific notation, including integers, decimals, and exponent parts with optional signs, demonstrating how such numbers are constructed from digits and symbols according to standard scientific notation conventions.",
   };
   return r;
 }
