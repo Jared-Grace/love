@@ -13,8 +13,6 @@ export function app_replace_rule_set_verify(rule_set) {
   let r = app_replace_rule_set_verify_goal_curried_right(rules_parsed);
   let dfss = list_map(goals, r);
   let paths = list_map(dfss, app_replace_rule_set_verify_path_get);
-  log(app_replace_rule_set_verify.name, 
-    paths,
-  );
+  log(app_replace_rule_set_verify.name, paths);
   return dfss;
 }
