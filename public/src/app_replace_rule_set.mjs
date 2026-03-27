@@ -123,8 +123,8 @@ export async function app_replace_rule_set(context) {
   html_data_set_test(hint_button, value4);
   app_replace_rule_set_title(context);
   let rule_sets = app_replace_rule_sets();
-  let size = list_size(rule_sets);
   let highlight = app_replace_rule_set_highlight();
+  let size = list_size(rule_sets);
   let rule_set_index = app_replace_rule_set_index_get(context);
   html_progress_bar(root, rule_set_index, size, "rule set");
   html_progress_bar(root, goal_index, size3, "goal");
