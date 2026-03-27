@@ -16,7 +16,7 @@ export function app_replace_rule_set_right_change() {
         end: "a c a a c a a a c a a a a c",
       },
     ],
-    why: "The replacement rules demonstrate a simple context-free grammar where every occurrence of the sequence ['a', 'b'] can be replaced by ['a', 'c']. This allows for the systematic transformation of strings by changing each 'b' that follows an 'a' into a 'c', illustrating a pattern-based substitution process.",
+    why: "The replacement rules demonstrate a context-sensitive grammar where every occurrence of 'a b' can be replaced with 'a c', allowing selective transformation of 'b's that are immediately preceded by 'a' into 'c's, as shown by the progression from the start to end strings in the goals.",
   };
   return r;
 }
