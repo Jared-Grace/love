@@ -18,6 +18,10 @@ export function app_new_rule_set_new_2() {
         start: "le",
         end: "re && re",
       },
+      {
+        start: "re && re",
+        end: "re && re",
+      },
     ],
   };
   return r;
