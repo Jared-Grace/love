@@ -41,6 +41,22 @@ export function app_replace_rule_set_expressions_assignment() {
       },
       {
         start: "ase",
+        end: "x . y = ade",
+      },
+      {
+        start: "id = ade",
+        end: "x . y = ue",
+      },
+      {
+        start: "x . y = ue",
+        end: "x . y = li",
+      },
+      {
+        start: "x . y = li",
+        end: "x . y = 1",
+      },
+      {
+        start: "ase",
         end: "id = id = ase",
       },
       {
