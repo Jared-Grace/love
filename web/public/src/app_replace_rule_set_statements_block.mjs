@@ -23,7 +23,7 @@ export function app_replace_rule_set_statements_block() {
         end: "{ u p d a t e ( ) ; return true ; }",
       },
     ],
-    why: "The replacement rules define a simple block-based statement grammar that allows sequences of statements (including 'return' and expression statements like 'update()') inside curly braces, demonstrating how statements and expressions can be composed and nested in a block structure.",
+    why: "The replacement rules define a grammar for a block of statements in a programming language, allowing sequences of statements (including 'return' and 'update()' expressions) within curly braces, demonstrating how simple statement blocks are structured and parsed.",
   };
   return r;
 }

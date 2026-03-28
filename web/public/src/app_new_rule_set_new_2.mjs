@@ -33,6 +33,7 @@ export function app_new_rule_set_new_2() {
         end: js_keyword_if() + " ( c h a n g e d ) { u p d a t e ( ) ; }",
       },
     ],
+    why: "The replacement rules define a grammar for JavaScript-like variable declarations, expressions, and statements, with a focus on parsing if statements and their associated blocks, demonstrating how conditional logic and variable handling are structured in such languages.",
   };
   return r;
 }
