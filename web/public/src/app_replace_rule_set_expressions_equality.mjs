@@ -54,6 +54,10 @@ export function app_replace_rule_set_expressions_equality() {
       },
       {
         start: "( pe ao pe ) === pe",
+        end: "( li ao li ) === li",
+      },
+      {
+        start: "( li ao li ) === li",
         end: "( nu ao nu ) === nu",
       },
       {
