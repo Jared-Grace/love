@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_replace_rule_set_statements_block_rules } from "../../../love/public/src/app_replace_rule_set_statements_block_rules.mjs";
 import { app_replace_rule_set_statements_block_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_block_abbreviations.mjs";
 import { js_keyword_else } from "../../../love/public/src/js_keyword_else.mjs";
@@ -18,6 +19,9 @@ export function app_new_rule_set_new_2() {
   let abbreviations = {};
   app_replace_rule_set_statements_variable_abbreviations(abbreviations);
   app_replace_rule_set_statements_block_abbreviations(abbreviations);
+  object_merge(abbreviations, {
+    is: ["", "i", "f ", "s", "tatement"],
+  });
   let r = {
     name: "Statements if",
     rules,
