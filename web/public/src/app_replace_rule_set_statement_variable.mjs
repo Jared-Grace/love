@@ -34,6 +34,8 @@ export function app_replace_rule_set_statement_variable() {
   app_replace_rule_set_expressions_primary_abbreviation_ex(abbreviations);
   object_merge(abbreviations, {
     vs: ["", "v", "ariable ", "s", "tatement"],
+    vk: ["", "v", "ariable ", "k", "eyword"],
+    vdg: ["", "v", "ariable ", "d", "eclaration ", "g", "rower"],
   });
   const y_eq_2 = js_code_assign("y", "2");
   let r = {
