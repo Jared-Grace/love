@@ -27,6 +27,7 @@ export function app_new_rule_set_new_2() {
   ]);
   let abbreviations = {};
   app_replace_rule_set_expressions_primary_abbreviation_ex(abbreviations);
+  const y_eq_2 = js_code_assign("y", "2");
   let r = {
     name: "Statement variable",
     abbreviations,
@@ -49,8 +50,8 @@ export function app_new_rule_set_new_2() {
         end: "const vdg , " + js_code_assign("y", "2") + " ;",
       },
       {
-        start: "const vdg , y = 2 ;",
-        end: "const x = 1 , y = 2 ;",
+        start: "const vdg , " + js_code_assign("y", "2") + " ;",
+        end: "const x = 1 , " + y_eq_2 + " ;",
       },
     ],
   };
