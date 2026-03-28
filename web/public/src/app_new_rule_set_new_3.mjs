@@ -12,6 +12,7 @@ export function app_new_rule_set_new_3() {
     "ex > c o p y [ i ] = l i s t [ i ]",
     "ex > l o g ( a p o s t l e [ i ] )",
     "ex > l o g ( i )",
+    "ex > i < l i s t . l e n g t h",
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_if_abbreviations(abbreviations);
