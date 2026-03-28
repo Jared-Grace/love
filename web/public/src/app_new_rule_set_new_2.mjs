@@ -11,6 +11,9 @@ export function app_new_rule_set_new_2() {
     "ex > x < 3",
     "ex > x = x + 1",
     "ex > y = y - 1",
+    "ex > ! found ( door )",
+    "ex > ask ( )",
+    "ex > seek ( )",
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_block_abbreviations(abbreviations);
