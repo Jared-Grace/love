@@ -1,3 +1,4 @@
+import { app_replace_rule_set_expressions_primary_abbreviation_ex } from "../../../love/public/src/app_replace_rule_set_expressions_primary_abbreviation_ex.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 export function app_replace_rule_set_statements_simple() {
@@ -11,9 +12,9 @@ export function app_replace_rule_set_statements_simple() {
     "ex > u p d a t e ( )",
   ]);
   let abbreviations = {};
+  app_replace_rule_set_expressions_primary_abbreviation_ex(abbreviations);
   object_merge(abbreviations, {
     sm: ["", "s", "tate", "m", "ent"],
-    ex: ["", "l", "ogical ", "o", "perator"],
   });
   let r = {
     name: "Statements Simple",
