@@ -51,10 +51,10 @@ export function app_replace_rule_set_statement_variable() {
       },
       {
         start: "vs",
-        end: "var a , b , vd ;",
+        end: "var a , vd , vd ;",
       },
       {
-        start: "var a , b , vd ;",
+        start: "var a , vd , vd ;",
         end: "var a , b , c ;",
       },
       {
