@@ -75,7 +75,7 @@ export function app_replace_rule_set_strings_simple() {
       },
     ],
     abbreviations,
-    why: "The replacement rules define a grammar for generating simple string literals enclosed in double quotes, where the content consists of a sequence of identifier-like symbols (letters, $, _) and a few digits (0, 1, 3), demonstrating how identifiers and digits can be combined to form the inner content of quoted strings.",
+    why: "The replacement rules define a grammar for simple string literals consisting of double quotes surrounding a sequence of identifier characters (letters, $, or _), possibly interleaved with a few digits (0, 1, 3), demonstrating how identifiers and digits can be combined to form the contents of quoted strings.",
   };
   return r;
 }
