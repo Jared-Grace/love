@@ -1,5 +1,6 @@
 import { app_replace_rule_set_expressions_primary_abbreviation_ex } from "../../../love/public/src/app_replace_rule_set_expressions_primary_abbreviation_ex.mjs";
 export function app_new_rule_set_new_2() {
+  let abbreviations = {};
   app_replace_rule_set_expressions_primary_abbreviation_ex(abbreviations);
   let r = {
     name: "Statement variable",
