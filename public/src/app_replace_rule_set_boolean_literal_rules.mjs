@@ -7,5 +7,5 @@ export function app_replace_rule_set_boolean_literal_rules() {
   let f = js_keyword_false();
   let r = [t, f];
   app_replace_rule_set_add_rights(rules, "bo", r);
-  return r;
+  return rules;
 }
