@@ -86,14 +86,10 @@ export function app_replace_rule_set_expressions_assignment() {
       },
       {
         start: "pe [ pe ] = pe",
-        end: "z [ y ] = 0",
+        end: "id [ id ] = nu",
       },
       {
-        start: "z [ y ] = ue",
-        end: "z [ y ] = li",
-      },
-      {
-        start: "z [ y ] = li",
+        start: "id [ id ] = nu",
         end: "z [ y ] = 0",
       },
       {
