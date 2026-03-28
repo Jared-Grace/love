@@ -8,5 +8,11 @@ export function app_replace_rule_set_expressions_function_calls_rules(rules) {
     "ce > ce ( ag )",
     "ag > ex , ag",
     "ag > ex",
+    "id > f n",
+    "id > u p d a t e",
+    "id > p a g e",
+    "id > r e f r e s h",
+    "id > a d d",
+    "id > d o u b l e",
   ]);
 }
