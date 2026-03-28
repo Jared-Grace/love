@@ -110,7 +110,7 @@ export function app_replace_rule_set_expressions_additive() {
       },
       {
         start: "id ( ce ao ce )",
-        end: "id ( mae ao nae )",
+        end: "id ( mae ao mae )",
       },
       {
         start: "id ( mae ao mae )",
