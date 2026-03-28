@@ -7,12 +7,10 @@ export function app_replace_rule_set_expressions_primary_abbreviations(
   abbreviations,
 ) {
   object_merge(abbreviations, {
+    ex: ["", "ex", "pression"],
     pe: ["", "p", "rimary ", "e", "xpression"],
-  });
-  object_merge(abbreviations, {
     id: ["", "id", "entifier"],
     li: ["", "li", "teral"],
-    ex: ["", "ex", "pression"],
     nu: ["", "nu", "mber"],
   });
   app_replace_rule_set_integers_abbreviation_in(abbreviations);
