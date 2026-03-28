@@ -16,6 +16,7 @@ export async function function_rename_fn_names_check(
 ) {
   log(function_rename_fn_names_check.name, {
     f_name_before,
+    f_name_after,
   });
   let i = await data_identifiers_fn_names_get();
   async function lambda(value) {
