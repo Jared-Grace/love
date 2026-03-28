@@ -14,7 +14,7 @@ export function app_new_rule_set_new_3() {
     ase: ["", "as", "signment ", "e", "xpression"],
   });
   let r = {
-    name: "Expressions assignment",
+    name: "Expressions Assignment",
     rules,
     abbreviations,
     goals: [
