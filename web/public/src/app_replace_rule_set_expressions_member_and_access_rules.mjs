@@ -4,5 +4,10 @@ export function app_replace_rule_set_expressions_member_and_access_rules(
   rules,
 ) {
   app_replace_rule_set_expressions_primary_rules(rules);
-  list_add_multiple(rules, ["mae > pe", "mae > mae . id", "mae > mae [ ex ]"]);
+  list_add_multiple(rules, [
+    "mae > pe",
+    "mae > mae . id",
+    "mae > mae [ ex ]",
+    "id > p r o p",
+  ]);
 }
