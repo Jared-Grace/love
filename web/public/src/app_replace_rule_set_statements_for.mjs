@@ -38,6 +38,7 @@ export function app_replace_rule_set_statements_for() {
         end: "for ( let i = 0 ; i < l i s t . l e n g t h ; i = i + 1 ) { c o p y [ i ] = l i s t [ i ] ; l o g ( i ) ; }",
       },
     ],
+    why: "The replacement rules describe the grammar for JavaScript-like variable declarations, statements, and especially for-loops, demonstrating how for-loops are constructed with initialization, condition, increment, and a statement or block as the body.",
   };
   return r;
 }
