@@ -69,7 +69,7 @@ export function app_replace_rule_set_expressions_relational() {
         end: "1 < ( 2 + 3 . 1 4 )",
       },
     ],
-    why: "These replacement rules define a context-free grammar for arithmetic and relational expressions, demonstrating how identifiers, literals, member access, function calls, unary and binary operations, and relational comparisons are constructed and combined, reflecting the syntax of a typical programming language's expression evaluation.",
+    why: "The replacement rules define a context-free grammar for arithmetic and relational expressions, demonstrating how identifiers, literals, member access, function calls, unary and binary operations, and relational comparisons are constructed and parsed, reflecting the structure of typical programming language expressions.",
   };
   return r;
 }
