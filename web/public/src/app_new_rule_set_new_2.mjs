@@ -10,7 +10,7 @@ export function app_new_rule_set_new_2() {
     sm: ["", "s", "tate", "m", "ent ", "g", "rower"],
   });
   let r = {
-    name: "Block Statement",
+    name: "Block Statements",
     rules,
     abbreviations,
     goals: [
