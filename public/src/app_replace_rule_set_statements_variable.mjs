@@ -8,7 +8,7 @@ import { js_keyword_const } from "../../../love/public/src/js_keyword_const.mjs"
 import { js_keyword_let } from "../../../love/public/src/js_keyword_let.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { app_replace_rule_set_expressions_primary_abbreviation_ex } from "../../../love/public/src/app_replace_rule_set_expressions_primary_abbreviation_ex.mjs";
-export function app_replace_rule_set_statement_variable() {
+export function app_replace_rule_set_statements_variable() {
   const rules = [];
   list_add_multiple(rules, [
     "vs > vk vdg " + js_code_semicolon(),
