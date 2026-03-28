@@ -11,6 +11,6 @@ export function app_replace_rule_set_expressions_member_and_access_rules(
     "id > p r o p",
     "id > h u m a n",
     "id > n a m e",
-    "id > f a m i l y",
+    "id > l a s t",
   ]);
 }
