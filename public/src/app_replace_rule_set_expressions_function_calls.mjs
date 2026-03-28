@@ -54,7 +54,7 @@ export function app_replace_rule_set_expressions_function_calls() {
       },
       {
         start: "id ( id [ ex ] )",
-        end: "id ( id [ in ] )",
+        end: "id ( id [ nu ] )",
       },
       {
         start: "id ( ex )",
