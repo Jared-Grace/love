@@ -29,7 +29,7 @@ export function app_new_rule_set_new_2() {
     goals: [
       {
         start: "is",
-        end: js_keyword_if() + " ( true ) { u p d a t e ( ) }",
+        end: js_keyword_if() + " ( true ) { u p d a t e ( ) ; }",
       },
     ],
   };
