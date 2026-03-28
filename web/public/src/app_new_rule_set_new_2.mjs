@@ -40,15 +40,15 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "vs",
-        end: "let x , y ;",
+        end: "var x , y ;",
       },
       {
         start: "vs",
-        end: "let vdg , y = 2 ;",
+        end: "const vdg , y = 2 ;",
       },
       {
         start: "let vdg , y = 2 ;",
-        end: "let x = 1 , y = 2 ;",
+        end: "const x = 1 , y = 2 ;",
       },
     ],
   };
