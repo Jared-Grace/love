@@ -20,7 +20,7 @@ export function app_new_rule_set_new_3() {
     goals: [
       {
         start: "ase",
-        end: "id = le",
+        end: "id = 1",
       },
     ],
   };
