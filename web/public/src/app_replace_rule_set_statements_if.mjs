@@ -5,6 +5,18 @@ import { js_keyword_if } from "../../../love/public/src/js_keyword_if.mjs";
 export function app_replace_rule_set_statements_if() {
   const rules = [];
   app_replace_rule_set_statements_if_rules(rules);
+    list_add_multiple(rules, [
+
+    "ex > x < 0",
+    "ex > x > 0",
+    "ex > x = 1",
+    "ex > y === null",
+    "ex > positive = true",
+    "ex > positive = false",
+    "ex > y = 0",
+    'ex > log ( " r e s e t " )',
+    "ex > y >> max",
+  ]);
   let abbreviations = {};
   app_replace_rule_set_statements_if_abbreviations(abbreviations);
   object_merge(abbreviations, {
