@@ -52,7 +52,7 @@ export function app_new_rule_set_new_3() {
       },
       {
         start: "x = y = ue",
-        end: "x = y = 1",
+        end: "x = y = 0",
       },
     ],
   };
