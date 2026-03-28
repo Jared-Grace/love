@@ -49,6 +49,10 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "is",
+        end: js_keyword_if() + " ( y > max ) { smg }",
+      },
+      {
+        start: js_keyword_if() + " ( y > max ) { smg }",
         end:
           js_keyword_if() + ' ( y > max ) { y = 0 ; log ( " r e s e t " ) ; }',
       },
