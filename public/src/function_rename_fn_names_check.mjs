@@ -13,7 +13,6 @@ import { data_identifiers_fn_names_get } from "../../../love/public/src/data_ide
 export async function function_rename_fn_names_check(
   f_name_before,
   f_name_after,
-  f_name_after,
 ) {
   log(function_rename_fn_names_check.name, {
     f_name_before,
