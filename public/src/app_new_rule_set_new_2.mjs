@@ -1,3 +1,4 @@
+import { js_code_assign } from "../../../love/public/src/js_code_assign.mjs";
 import { js_code_semicolon } from "../../../love/public/src/js_code_semicolon.mjs";
 import { js_keyword_var } from "../../../love/public/src/js_keyword_var.mjs";
 import { js_keyword_const } from "../../../love/public/src/js_keyword_const.mjs";
@@ -36,7 +37,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "vs",
-        end: "let j = 0 ;",
+        end: "let " + js_code_assign("j", "0") + " ;",
       },
       {
         start: "vs",
