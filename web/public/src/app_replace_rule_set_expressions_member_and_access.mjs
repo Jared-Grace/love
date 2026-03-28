@@ -47,7 +47,7 @@ export function app_replace_rule_set_expressions_member_and_access() {
         end: "id [ pe ]",
       },
       {
-        start: "mae",
+        start: "id [ pe ]",
         end: 'id [ " l u v " ]',
       },
       {
