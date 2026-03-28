@@ -3,6 +3,7 @@ import { app_replace_rule_set_statements_if_rules } from "../../../love/public/s
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 export function app_new_rule_set_new_3() {
   const rules = [];
+  app_replace_rule_set_statements_if_rules(rules);
   list_add_multiple(rules, [
     "fs > for ( ex ; ex ; ex ) sm",
     "ex > let i = 0",
@@ -10,7 +11,6 @@ export function app_new_rule_set_new_3() {
     "ex > i = i + 1",
     "ex > l o g ( a p o s t l e [ i ] )",
   ]);
-  app_replace_rule_set_statements_if_rules(rules);
   let abbreviations = {};
   app_replace_rule_set_statements_if_abbreviations(abbreviations);
   let r = {
