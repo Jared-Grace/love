@@ -42,6 +42,10 @@ export function app_new_rule_set_new_3() {
         start: "id = id = ase",
         end: "x = y = ase",
       },
+      {
+        start: "id = id = ase",
+        end: "x = y = ce",
+      },
     ],
   };
   return r;
