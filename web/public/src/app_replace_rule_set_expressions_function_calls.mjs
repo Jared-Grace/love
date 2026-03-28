@@ -50,7 +50,7 @@ export function app_replace_rule_set_expressions_function_calls() {
       },
       {
         start: "id ( in , in )",
-        end: "a d d ( in , in )",
+        end: "a d d ( 1 , 2 )",
       },
       {
         start: "id ( ex )",
