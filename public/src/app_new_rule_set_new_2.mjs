@@ -1,3 +1,4 @@
+import { js_code_assign } from "../../../love/public/src/js_code_assign.mjs";
 import { js_code_let_assign } from "../../../love/public/src/js_code_let_assign.mjs";
 import { js_code_semicolon } from "../../../love/public/src/js_code_semicolon.mjs";
 import { js_keyword_var } from "../../../love/public/src/js_keyword_var.mjs";
@@ -45,7 +46,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "vs",
-        end: "const vdg , y = 2 ;",
+        end: "const vdg , " + js_code_assign("y", "2") + " ;",
       },
       {
         start: "const vdg , y = 2 ;",
