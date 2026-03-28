@@ -1,11 +1,9 @@
+import { app_replace_rule_set_statements_block_rules } from "../../../love/public/src/app_replace_rule_set_statements_block_rules.mjs";
 import { app_replace_rule_set_statements_simple_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_simple_abbreviations.mjs";
-import { app_replace_rule_set_statements_simple_rules } from "../../../love/public/src/app_replace_rule_set_statements_simple_rules.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
-import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 export function app_replace_rule_set_statements_block() {
   const rules = [];
-  app_replace_rule_set_statements_simple_rules(rules);
-  list_add_multiple(rules, ["bs > { smg }", "smg > sm", "smg > smg sm"]);
+  app_replace_rule_set_statements_block_rules(rules);
   let abbreviations = {};
   app_replace_rule_set_statements_simple_abbreviations(abbreviations);
   object_merge(abbreviations, {
