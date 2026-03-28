@@ -21,6 +21,7 @@ export function app_new_rule_set_new_2() {
     "id > j",
     "id > x",
     "id > y",
+    "id > z",
     "ex > 0",
     "ex > 1",
     "ex > 2",
@@ -44,6 +45,10 @@ export function app_new_rule_set_new_2() {
       {
         start: "vs",
         end: "var x , y ;",
+      },
+      {
+        start: "vs",
+        end: "var x , y , z;",
       },
       {
         start: "vs",
