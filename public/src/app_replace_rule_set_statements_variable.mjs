@@ -1,6 +1,5 @@
+import { app_replace_rule_set_statements_variable_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_variable_abbreviations.mjs";
 import { app_replace_rule_set_statements_variable_rules } from "../../../love/public/src/app_replace_rule_set_statements_variable_rules.mjs";
-import { app_replace_rule_set_identifiers_simple_abbreviation_id } from "../../../love/public/src/app_replace_rule_set_identifiers_simple_abbreviation_id.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { js_code_assign } from "../../../love/public/src/js_code_assign.mjs";
 import { js_code_let_assign } from "../../../love/public/src/js_code_let_assign.mjs";
 import { app_replace_rule_set_expressions_primary_abbreviation_ex } from "../../../love/public/src/app_replace_rule_set_expressions_primary_abbreviation_ex.mjs";
@@ -9,13 +8,7 @@ export function app_replace_rule_set_statements_variable() {
   app_replace_rule_set_statements_variable_rules(rules);
   let abbreviations = {};
   app_replace_rule_set_expressions_primary_abbreviation_ex(abbreviations);
-  app_replace_rule_set_identifiers_simple_abbreviation_id(abbreviations);
-  object_merge(abbreviations, {
-    vs: ["", "v", "ariable ", "s", "tatement"],
-    vk: ["", "v", "ariable ", "k", "eyword"],
-    vdg: ["", "v", "ariable ", "d", "eclaration ", "g", "rower"],
-    vd: ["", "v", "ariable ", "d", "eclaration"],
-  });
+  app_replace_rule_set_statements_variable_abbreviations(abbreviations);
   const y_eq_2 = js_code_assign("y", "2");
   let r = {
     name: "Statements Variable",
