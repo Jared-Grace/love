@@ -10,8 +10,8 @@ export function app_new_rule_set_new_2() {
   app_replace_rule_set_statements_variable_rules(rules);
   app_replace_rule_set_statements_block_rules(rules);
   list_add_multiple(rules, [
-    js_keyword_if() + " ( ex ) sm",
-    js_keyword_if() + " ( ex ) sm " + js_keyword_else() + " sm",
+    "is > " + js_keyword_if() + " ( ex ) sm",
+    "is > " + js_keyword_if() + " ( ex ) sm " + js_keyword_else() + " sm",
     "sm > vs",
     "sm > bs",
   ]);
