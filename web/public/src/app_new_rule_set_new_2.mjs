@@ -12,6 +12,7 @@ export function app_new_rule_set_new_2() {
     "sm > ;",
     "ex > true",
     "ex > 3",
+    "ex > a d d ( )",
   ]);
   list_add(rules, "ex > ase");
   let abbreviations = {};
@@ -22,7 +23,7 @@ export function app_new_rule_set_new_2() {
     rules,
     goals: [
       {
-        start: "ase",
+        start: "sm",
         end: "ase = le",
       },
     ],
