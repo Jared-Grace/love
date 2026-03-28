@@ -42,7 +42,7 @@ export function app_replace_rule_set_statement_variable() {
   });
   const y_eq_2 = js_code_assign("y", "2");
   let r = {
-    name: "Statement Variable",
+    name: "Statements Variable",
     abbreviations,
     rules,
     goals: [
