@@ -38,7 +38,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "vs",
-        end: "let x = 1 , y = 2 ;",
+        end: "let x , y ;",
       },
     ],
   };
