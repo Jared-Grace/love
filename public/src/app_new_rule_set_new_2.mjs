@@ -45,6 +45,12 @@ export function app_new_rule_set_new_2() {
         start: "is",
         end:
           js_keyword_if() +
+          ' ( y === null ) { y = 0 ; log ( " r e s e t " ) ; }',
+      },
+      {
+        start: "is",
+        end:
+          js_keyword_if() +
           " ( x > 0 ) positive = true ; else positive = false ;",
       },
     ],
