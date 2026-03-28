@@ -23,6 +23,10 @@ export function app_new_rule_set_new_2() {
     goals: [
       {
         start: "sm",
+        end: ";",
+      },
+      {
+        start: "sm",
         end: "r e t u r n ;",
       },
       {
