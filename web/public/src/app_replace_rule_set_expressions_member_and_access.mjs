@@ -1,9 +1,18 @@
+import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { app_replace_rule_set_expressions_member_and_access_abbreviations } from "../../../love/public/src/app_replace_rule_set_expressions_member_and_access_abbreviations.mjs";
 import { app_replace_rule_set_expressions_member_and_access_rules } from "../../../love/public/src/app_replace_rule_set_expressions_member_and_access_rules.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 export function app_replace_rule_set_expressions_member_and_access() {
   const rules = [];
   app_replace_rule_set_expressions_member_and_access_rules(rules);
+  list_add_multiple(rules, [
+    "id > p r o p",
+    "id > h u m a n",
+    "id > n a m e",
+    "id > l a s t",
+    "id > b i r t h d a t e",
+    "id > y e a r",
+  ]);
   let abbreviations = {};
   app_replace_rule_set_expressions_member_and_access_abbreviations(
     abbreviations,
