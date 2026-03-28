@@ -1,7 +1,7 @@
 import { app_replace_rule_set_statements_while_rules } from "../../../love/public/src/app_replace_rule_set_statements_while_rules.mjs";
 import { app_replace_rule_set_statements_if_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_if_abbreviations.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
-export function app_new_rule_set_new_3() {
+export function app_replace_rule_set_statements_for() {
   const rules = [];
   app_replace_rule_set_statements_while_rules(rules);
   list_add_multiple(rules, [
@@ -17,7 +17,7 @@ export function app_new_rule_set_new_3() {
   let abbreviations = {};
   app_replace_rule_set_statements_if_abbreviations(abbreviations);
   let r = {
-    name: "Statements for",
+    name: "Statements For",
     rules,
     abbreviations,
     goals: [
