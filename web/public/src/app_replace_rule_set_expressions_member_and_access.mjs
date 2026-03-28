@@ -28,7 +28,7 @@ export function app_replace_rule_set_expressions_member_and_access() {
       },
       {
         start: "( ex ) . id",
-        end: "( id . id ) . id",
+        end: "( h u m a n . n a m e ) . id",
       },
       {
         start: "mae . id",
