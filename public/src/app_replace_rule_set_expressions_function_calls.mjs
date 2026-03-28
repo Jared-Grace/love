@@ -34,7 +34,7 @@ export function app_replace_rule_set_expressions_function_calls() {
       },
       {
         start: "id ( ag )",
-        end: "id ( ex , ex )",
+        end: "a d d ( ex , ex )",
       },
       {
         start: "id ( ex , ex )",
