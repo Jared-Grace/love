@@ -1,7 +1,12 @@
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 export function app_new_rule_set_new_3() {
   const rules = [];
-  list_add_multiple(rules, ["fs > for ( ex ; ex ; ex ) sm"]);
+  list_add_multiple(rules, [
+    "fs > for ( ex ; ex ; ex ) sm",
+    "ex > let i = 0",
+    "ex > i < 12",
+    "ex > i = i + 1",
+  ]);
   let abbreviations = {};
   let r = {
     name: "Statements for",
