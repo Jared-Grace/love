@@ -1,15 +1,10 @@
+import { app_replace_rule_set_statements_block_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_block_abbreviations.mjs";
 import { app_replace_rule_set_statements_block_rules } from "../../../love/public/src/app_replace_rule_set_statements_block_rules.mjs";
-import { app_replace_rule_set_statements_simple_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_simple_abbreviations.mjs";
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
 export function app_replace_rule_set_statements_block() {
   const rules = [];
   app_replace_rule_set_statements_block_rules(rules);
   let abbreviations = {};
-  app_replace_rule_set_statements_simple_abbreviations(abbreviations);
-  object_merge(abbreviations, {
-    smg: ["", "s", "tate", "m", "ent ", "g", "rower"],
-    bs: ["", "b", "lock ", "statement"],
-  });
+  app_replace_rule_set_statements_block_abbreviations(abbreviations);
   let r = {
     name: "Statements Block",
     rules,
