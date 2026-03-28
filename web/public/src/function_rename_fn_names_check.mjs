@@ -19,7 +19,6 @@ export async function function_rename_fn_names_check(f_name_before) {
           f_name,
         });
         let value = fn_name_arg_get(args, f_name);
-        la(value);
       }
     }
     let waited = await functions_transform_list(value, lambda3);
