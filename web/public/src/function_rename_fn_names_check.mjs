@@ -28,7 +28,8 @@ export async function function_rename_fn_names_check(
         log(function_rename_fn_names_check.name, {
           f_name,
           value,
-          args,s
+          args,
+          s,
         });
         exit();
       }
