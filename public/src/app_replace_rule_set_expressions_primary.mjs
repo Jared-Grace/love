@@ -1,3 +1,6 @@
+import { js_keyword_null } from "../../../love/public/src/js_keyword_null.mjs";
+import { js_keyword_false } from "../../../love/public/src/js_keyword_false.mjs";
+import { js_keyword_true } from "../../../love/public/src/js_keyword_true.mjs";
 import { app_replace_rule_set_expressions_primary_abbreviations } from "../../../love/public/src/app_replace_rule_set_expressions_primary_abbreviations.mjs";
 import { app_replace_rule_set_expressions_primary_rules } from "../../../love/public/src/app_replace_rule_set_expressions_primary_rules.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -18,11 +21,11 @@ export function app_replace_rule_set_expressions_primary() {
       },
       {
         start: "pe",
-        end: "true",
+        end: js_keyword_true(),
       },
       {
         start: "pe",
-        end: "false",
+        end: js_keyword_false(),
       },
       {
         start: "pe",
@@ -38,7 +41,7 @@ export function app_replace_rule_set_expressions_primary() {
       },
       {
         start: "pe",
-        end: "null",
+        end: js_keyword_null(),
       },
       {
         start: "pe",
