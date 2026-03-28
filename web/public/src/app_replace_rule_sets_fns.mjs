@@ -134,6 +134,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_statements_block,
     app_replace_rule_set_statements_if,
     app_new_rule_set_new_2,
+    app_new_rule_set_new_3,
   ];
   return fns;
 }
