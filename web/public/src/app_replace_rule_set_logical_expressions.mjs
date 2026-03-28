@@ -8,7 +8,7 @@ export function app_replace_rule_set_logical_expressions() {
   let abbreviations = {};
   app_replace_rule_set_logical_expressions_abbreviations(abbreviations);
   let r = {
-    name: "Logical Expressions",
+    name: "Expressions Logical",
     rules,
     abbreviations,
     goals: [
