@@ -1,3 +1,4 @@
+import { js_keyword_else } from "../../../love/public/src/js_keyword_else.mjs";
 import { app_replace_rule_set_statements_variable_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_variable_abbreviations.mjs";
 import { app_replace_rule_set_statements_simple_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_simple_abbreviations.mjs";
 import { app_replace_rule_set_statements_simple_rules } from "../../../love/public/src/app_replace_rule_set_statements_simple_rules.mjs";
@@ -10,7 +11,7 @@ export function app_new_rule_set_new_2() {
   app_replace_rule_set_statements_variable_rules(rules);
   list_add_multiple(rules, [
     js_keyword_if() + " ( ex ) sm",
-    js_keyword_if() + " ( ex ) sm else sm",
+    js_keyword_if() + " ( ex ) sm " + js_keyword_else() + " sm",
     "sm > vs",
     "sm > bs",
   ]);
