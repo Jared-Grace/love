@@ -13,6 +13,7 @@ export function app_new_rule_set_new_2() {
   app_replace_rule_set_expressions_primary_abbreviation_ex(abbreviations);
   let r = {
     name: "Statement variable",
+    abbreviations,
     rules,
     goals: [
       {
