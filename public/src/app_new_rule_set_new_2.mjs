@@ -1,3 +1,4 @@
+import { app_replace_rule_set_statements_variable_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_variable_abbreviations.mjs";
 import { app_replace_rule_set_statements_simple_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_simple_abbreviations.mjs";
 import { app_replace_rule_set_statements_simple_rules } from "../../../love/public/src/app_replace_rule_set_statements_simple_rules.mjs";
 import { app_replace_rule_set_statements_variable_rules } from "../../../love/public/src/app_replace_rule_set_statements_variable_rules.mjs";
@@ -13,6 +14,7 @@ export function app_new_rule_set_new_2() {
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_simple_abbreviations(abbreviations);
+  app_replace_rule_set_statements_variable_abbreviations(abbreviations);
   let r = {
     name: "Statements if",
     rules,
