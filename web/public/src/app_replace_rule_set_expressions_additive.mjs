@@ -114,6 +114,10 @@ export function app_replace_rule_set_expressions_additive() {
       },
       {
         start: "id ( mae ao mae )",
+        end: "id ( li ao li )",
+      },
+      {
+        start: "id ( li ao li )",
         end: "id ( nu ao nu )",
       },
       {
