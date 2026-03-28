@@ -38,7 +38,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "vs",
-        end: "let vdg , vd ;",
+        end: "let vdg , id = ex ;",
       },
     ],
   };
