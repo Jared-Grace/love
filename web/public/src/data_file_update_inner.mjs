@@ -1,7 +1,6 @@
+import { fn_name_arg_get } from "../../../love/public/src/fn_name_arg_get.mjs";
 import { js_strings } from "../../../love/public/src/js_strings.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
-import { js_literal_is_assert } from "../../../love/public/src/js_literal_is_assert.mjs";
-import { list_first } from "../../../love/public/src/list_first.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -52,15 +51,7 @@ export function data_file_update_inner(parsed, data) {
   function lambda2(la) {
     js_visit_calls_named(ast, fn_name.name, lambda4);
     function lambda4({ args }) {
-      let first = list_first(args);
-      function lambda3() {
-        let v = {
-          msg: fn_name.name + " first argument should be a literal: " + f_name,
-        };
-        return v;
-      }
-      js_literal_is_assert(first, lambda3);
-      let value = property_get(first, "value");
+      let value = fn_name_arg_get(args, f_name);
       la(value);
     }
   }
