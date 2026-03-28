@@ -1,3 +1,4 @@
+import { js_code_semicolon } from "../../../love/public/src/js_code_semicolon.mjs";
 import { js_keyword_var } from "../../../love/public/src/js_keyword_var.mjs";
 import { js_keyword_const } from "../../../love/public/src/js_keyword_const.mjs";
 import { js_keyword_let } from "../../../love/public/src/js_keyword_let.mjs";
@@ -6,7 +7,7 @@ import { app_replace_rule_set_expressions_primary_abbreviation_ex } from "../../
 export function app_new_rule_set_new_2() {
   const rules = [];
   list_add_multiple(rules, [
-    "vs > vk vdg ;",
+    "vs > vk vdg " + js_code_semicolon(),
     "vk > " + js_keyword_let(),
     "vk > " + js_keyword_const(),
     "vk > " + js_keyword_var(),
