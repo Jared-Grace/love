@@ -61,7 +61,7 @@ export function app_replace_rule_set_expressions_function_calls() {
         end: "id ( id ( ) )",
       },
     ],
-    why: "The replacement rules define a grammar for parsing function call expressions, including nested calls, member access, literals, and argument lists, demonstrating how complex expressions like function calls with various argument types and member accesses are constructed from simpler components.",
+    why: "These replacement rules define a grammar for parsing function call expressions, including nested calls, member access, literals, and argument lists, demonstrating how complex expressions like method calls and property accesses are constructed from simpler components.",
   };
   return r;
 }
