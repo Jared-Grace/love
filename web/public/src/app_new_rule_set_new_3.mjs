@@ -34,6 +34,10 @@ export function app_new_rule_set_new_3() {
         start: "x = li",
         end: "x = 1",
       },
+      {
+        start: "ase",
+        end: "id = id = ase",
+      },
     ],
   };
   return r;
