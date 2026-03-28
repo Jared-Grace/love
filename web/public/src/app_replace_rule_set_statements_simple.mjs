@@ -38,7 +38,7 @@ export function app_replace_rule_set_statements_simple() {
         end: "return true ;",
       },
     ],
-    why: "These replacement rules define a context-free grammar for a simple programming language's statement and expression syntax, demonstrating how identifiers, literals, expressions, and statements (like return and semicolon-terminated statements) are constructed and combined, including operator precedence and function calls.",
+    why: "The replacement rules define a simple grammar for statements, allowing for empty statements, return statements, expression statements, and return-expression statements, with expressions limited to 'true' or a 'update()' call; this demonstrates a minimal subset of statement and expression syntax, likely for a programming language.",
   };
   return r;
 }
