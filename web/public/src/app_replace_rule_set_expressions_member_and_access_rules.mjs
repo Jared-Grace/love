@@ -14,5 +14,6 @@ export function app_replace_rule_set_expressions_member_and_access_rules(
     "id > l a s t",
     "id > b i r t h d a t e",
     "id > y e a r",
+    "id > u p d a t e",
   ]);
 }
