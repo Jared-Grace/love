@@ -17,7 +17,7 @@ export function app_new_rule_set_new_2() {
     "sm > bs",
     "ex > x < 0",
     "ex > x = 1",
-    "ex > null",
+    "ex > y === null",
     "ex > positive = true",
     "ex > positive = false",
   ]);
