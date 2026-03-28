@@ -70,6 +70,10 @@ export function app_replace_rule_set_expressions_relational() {
       },
       {
         start: "1 < ( mae + mae )",
+        end: "1 < ( li + li )",
+      },
+      {
+        start: "1 < ( li + li )",
         end: "1 < ( nu + nu )",
       },
       {
