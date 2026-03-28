@@ -22,7 +22,7 @@ export async function function_rename_fn_names_check(f_name_before) {
         let value = fn_name_arg_get(args, f_name);
         log(function_rename_fn_names_check.name, {
           f_name,
-          value,
+          value,args
         });
         exit();
       }
