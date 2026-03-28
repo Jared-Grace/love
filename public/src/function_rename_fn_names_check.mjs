@@ -1,3 +1,4 @@
+import { functions_transform_list } from "../../../love/public/src/functions_transform_list.mjs";
 import { property_exists_if_async } from "../../../love/public/src/property_exists_if_async.mjs";
 import { function_rename_open } from "../../../love/public/src/function_rename_open.mjs";
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
@@ -24,4 +25,6 @@ export async function function_rename_fn_names_check(f_name_before) {
     });
   }
   await property_exists_if_async(i, f_name_before, lambda);
+  async function lambda2(ast) {}
+  let waited = await functions_transform_list(list, lambda2);
 }
