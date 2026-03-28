@@ -1,3 +1,4 @@
+import { exit } from "../../../love/public/src/exit.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 import { fn_name_arg_get } from "../../../love/public/src/fn_name_arg_get.mjs";
@@ -19,6 +20,7 @@ export async function function_rename_fn_names_check(f_name_before) {
           f_name,
         });
         let value = fn_name_arg_get(args, f_name);
+        exit();
       }
     }
     let waited = await functions_transform_list(value, lambda3);
