@@ -5,5 +5,4 @@ export function js_code_let_assign(left, right) {
   let code_assign =
     js_keyword_let() + " " + js_code_assign(left, right) + js_code_semicolon();
   return code_assign;
-  let v2 = js_code_semicolon();
 }
