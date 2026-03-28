@@ -23,7 +23,7 @@ export function app_new_rule_set_new_3() {
         end: "for ( let i = 0 ; i < 12 ; i = i + 1 ) sm",
       },
       {
-        start: "fs",
+        start: "for ( let i = 0 ; i < 12 ; i = i + 1 ) sm",
         end: "for ( let i = 0 ; i < 12 ; i = i + 1 ) l o g ( a p o s t l e [ i ] ) ;",
       },
     ],
