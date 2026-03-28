@@ -32,7 +32,7 @@ export function app_new_rule_set_new_3() {
       },
       {
         start: "for ( let i = 0 ; i < l i s t . l e n g t h ; i = i + 1 ) sm",
-        end: "for ( let i = 0 ; i < l i s t . l e n g t h ; i = i + 1 ) { l i s t [ i ] = null ; }",
+        end: "for ( let i = 0 ; i < l i s t . l e n g t h ; i = i + 1 ) { c o p y [ i ] = l i s t [ i ] ; }",
       },
     ],
   };
