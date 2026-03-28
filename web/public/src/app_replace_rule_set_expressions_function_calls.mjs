@@ -45,11 +45,11 @@ export function app_replace_rule_set_expressions_function_calls() {
         end: "id ( nu , ex )",
       },
       {
-        start: "id ( in , ex )",
-        end: "id ( in , in )",
+        start: "id ( nu , ex )",
+        end: "id ( nu , nu)",
       },
       {
-        start: "id ( in , in )",
+        start: "id ( nu , nu )",
         end: "a d d ( 1 , 2 )",
       },
       {
