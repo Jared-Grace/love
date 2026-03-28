@@ -9,7 +9,7 @@ export function app_new_rule_set_new_2() {
     "sm > ex ;",
     "sm > r e t u r n ;",
     "sm > r e t u r n ex ;",
-    ";",
+    "sm > ;",
     "ex > true",
     "ex > 3",
   ]);
