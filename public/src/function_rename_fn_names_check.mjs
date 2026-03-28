@@ -1,6 +1,5 @@
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { js_string } from "../../../love/public/src/js_string.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 import { fn_name_arg_get } from "../../../love/public/src/fn_name_arg_get.mjs";
 import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
@@ -14,10 +13,6 @@ export async function function_rename_fn_names_check(
   f_name_before,
   f_name_after,
 ) {
-  log(function_rename_fn_names_check.name, {
-    f_name_before,
-    f_name_after,
-  });
   let i = await data_identifiers_fn_names_get();
   async function lambda(value) {
     function lambda3(ast) {
