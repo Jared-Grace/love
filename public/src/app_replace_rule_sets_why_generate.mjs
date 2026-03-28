@@ -1,4 +1,4 @@
-import { app_replace_rule_sets_fns_run } from "../../../love/public/src/app_replace_rule_sets_fns_run.mjs";
+import { app_replace_rule_sets_fns } from "../../../love/public/src/app_replace_rule_sets_fns.mjs";
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { js_list_type_nodes } from "../../../love/public/src/js_list_type_nodes.mjs";
 import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
@@ -22,7 +22,7 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { list_take } from "../../../love/public/src/list_take.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function app_replace_rule_sets_why_generate() {
-  let r2 = await app_replace_rule_sets_fns_run();
+  let r2 = app_replace_rule_sets_fns();
   function lambda2(fn) {
     let r3 = {
       f_name: fn.name,
