@@ -58,7 +58,7 @@ export function app_replace_rule_set_expressions_function_calls() {
       },
       {
         start: "id ( id . id )",
-        end: "d o u b l e ( id . id )",
+        end: "d o u b l e ( w a g e . m i n )",
       },
       {
         start: "id ( ex )",
