@@ -47,7 +47,7 @@ export function app_new_rule_set_new_2() {
         end: "const vdg , y = 2 ;",
       },
       {
-        start: "let vdg , y = 2 ;",
+        start: "const vdg , y = 2 ;",
         end: "const x = 1 , y = 2 ;",
       },
     ],
