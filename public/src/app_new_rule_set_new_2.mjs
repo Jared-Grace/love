@@ -32,12 +32,12 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "ws",
-        end:
-          js_keyword_while() + " ( ! found ( door ) ) { ask ( ) ; seek ( ) ; }",
+        end: js_keyword_while() + " ( ! found ( door ) ) { sm sm }",
       },
       {
         start: "ws",
-        end: js_keyword_while() + " ( ! found ( door ) ) { sm sm }",
+        end:
+          js_keyword_while() + " ( ! found ( door ) ) { ask ( ) ; seek ( ) ; }",
       },
     ],
   };
