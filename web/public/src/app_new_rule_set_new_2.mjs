@@ -17,6 +17,8 @@ export function app_new_rule_set_new_2() {
     "vd > id = ex",
     "id > i",
     "id > j",
+    "id > x",
+    "id > y",
     "ex > 0",
     "ex > 1",
     "ex > 2",
