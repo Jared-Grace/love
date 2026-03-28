@@ -54,7 +54,7 @@ export function app_replace_rule_set_statement_variable() {
         end: "var a , b , vdg ;",
       },
       {
-        start: "var a , b , vdg ;",
+        start: "var a , b , vd ;",
         end: "var a , b , c ;",
       },
       {
