@@ -1,3 +1,4 @@
+import { js_keyword_var } from "../../../love/public/src/js_keyword_var.mjs";
 import { js_keyword_const } from "../../../love/public/src/js_keyword_const.mjs";
 import { js_keyword_let } from "../../../love/public/src/js_keyword_let.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
@@ -8,13 +9,13 @@ export function app_new_rule_set_new_2() {
     "vs > vk vdg ;",
     "vk > " + js_keyword_let(),
     "vk > " + js_keyword_const(),
-    "vk > var",
+    "vk > " + js_keyword_var(),
     "vdg > vd",
     "vdg > vdg , vd",
     "vd > id",
     "vd > id = ex",
-    "id > x",
-    "id > y",
+    "id > i",
+    "id > j",
   ]);
   let abbreviations = {};
   app_replace_rule_set_expressions_primary_abbreviation_ex(abbreviations);
