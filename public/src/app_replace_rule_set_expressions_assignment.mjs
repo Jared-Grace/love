@@ -61,7 +61,7 @@ export function app_replace_rule_set_expressions_assignment() {
       },
       {
         start: "mle = ade",
-        end: "mae [ ade ] = ade",
+        end: "mae [ le ] = ade",
       },
       {
         start: "ade [ ade ] = ade",
