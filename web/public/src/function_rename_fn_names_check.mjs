@@ -27,14 +27,8 @@ export async function function_rename_fn_names_check(
         let f_name = js_flo_name(ast);
         let value = fn_name_arg_get(args, f_name);
         let s = js_string(f_name_after);
-        object_replace(to, from);
-        log(function_rename_fn_names_check.name, {
-          f_name,
-          value,
-          args,
-          s,
-        });
-        exit();
+        object_replace(value, s);
+
       }
     }
     let waited = await functions_transform_list(value, lambda3);
