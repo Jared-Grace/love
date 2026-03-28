@@ -1,4 +1,4 @@
-import { app_new_rule_set_new_2 } from "../../../love/public/src/app_new_rule_set_new_2.mjs";
+import { app_replace_rule_set_statements_block } from "../../../love/public/src/app_replace_rule_set_statements_block.mjs";
 import { app_replace_rule_set_statement_variable } from "../../../love/public/src/app_replace_rule_set_statement_variable.mjs";
 import { app_replace_rule_set_statements_simple } from "../../../love/public/src/app_replace_rule_set_statements_simple.mjs";
 import { app_replace_rule_set_expressions_logical } from "../../../love/public/src/app_replace_rule_set_expressions_logical.mjs";
@@ -127,7 +127,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_expressions_logical,
     app_replace_rule_set_statements_simple,
     app_replace_rule_set_statement_variable,
-    app_new_rule_set_new_2,
+    app_replace_rule_set_statements_block,
   ];
   return fns;
 }
