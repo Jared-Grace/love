@@ -59,7 +59,7 @@ export function app_replace_rule_set_statements_if() {
           " ( x > 0 ) positive = true ; else positive = false ;",
       },
     ],
-    why: "The replacement rules describe a grammar for JavaScript-like variable declarations, expressions, and if statements, demonstrating how to construct valid statements and blocks using keywords, identifiers, expressions, and control flow, as shown by the production rules and example goals.",
+    why: "The replacement rules define a grammar for JavaScript-like variable declarations, expressions, and if/else statements, demonstrating how to construct valid statement and block structures with variable assignments, comparisons, and control flow, reflecting typical imperative programming syntax.",
   };
   return r;
 }
