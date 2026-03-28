@@ -8,6 +8,7 @@ export function app_replace_rule_set_statements_block() {
   app_replace_rule_set_statements_simple_abbreviations(abbreviations);
   object_merge(abbreviations, {
     smg: ["", "s", "tate", "m", "ent ", "g", "rower"],
+    smg: ["", "b", "lock ", "statement"],
   });
   let r = {
     name: "Statements Block",
