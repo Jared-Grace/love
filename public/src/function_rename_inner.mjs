@@ -17,7 +17,7 @@ export async function function_rename_inner(f_name_before, f_name_after) {
     f_name_after,
     msg: "already exists in file as identifier",
   });
-  await function_rename_fn_names_check(f_name_before);
+  await function_rename_fn_names_check(f_name_before, f_name_after);
   await function_move(f_name_before, f_name_after);
   await functions_identifiers_rename_alias(f_name_before, f_name_after);
   return f_name_before;

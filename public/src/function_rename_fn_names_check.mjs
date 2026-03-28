@@ -10,7 +10,10 @@ import { function_rename_open } from "../../../love/public/src/function_rename_o
 import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { error_json } from "../../../love/public/src/error_json.mjs";
 import { data_identifiers_fn_names_get } from "../../../love/public/src/data_identifiers_fn_names_get.mjs";
-export async function function_rename_fn_names_check(f_name_before) {
+export async function function_rename_fn_names_check(
+  f_name_before,
+  f_name_after,
+) {
   log(function_rename_fn_names_check.name, {
     f_name_before,
   });
