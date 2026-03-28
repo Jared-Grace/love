@@ -9,6 +9,7 @@ export function app_new_rule_set_new_2() {
     "vd > id",
     "vd > id = ex",
     "id > a",
+    "id > b",
   ]);
   let abbreviations = {};
   app_replace_rule_set_expressions_primary_abbreviation_ex(abbreviations);
