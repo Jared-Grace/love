@@ -4,6 +4,7 @@ import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mj
 export function app_replace_rule_set_expressions_primary_rules(rules) {
   let added = [
     "pe > id",
+    "id > x",
     "pe > li",
     "pe > ( ex )",
     "li > nu",
