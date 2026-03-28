@@ -12,15 +12,4 @@ export function app_replace_rule_set_statements_if_rules(rules) {
     "sm > vs",
     "sm > bs",
   ]);
-  list_add_multiple(rules, [
-    "ex > x < 0",
-    "ex > x > 0",
-    "ex > x = 1",
-    "ex > y === null",
-    "ex > positive = true",
-    "ex > positive = false",
-    "ex > y = 0",
-    'ex > log ( " r e s e t " )',
-    "ex > y >> max",
-  ]);
 }
