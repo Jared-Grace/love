@@ -45,19 +45,19 @@ export function app_replace_rule_set_expressions_assignment() {
       },
       {
         start: "mle = ade",
-        end: "x . y = ade",
+        end: "y . x = ade",
       },
       {
-        start: "x . y = ade",
-        end: "x . y = ue",
+        start: "y . x = ade",
+        end: "y . x = ue",
       },
       {
-        start: "x . y = ue",
-        end: "x . y = li",
+        start: "y . x = ue",
+        end: "y . x = li",
       },
       {
-        start: "x . y = li",
-        end: "x . y = 1",
+        start: "y . x = li",
+        end: "y . x = 1",
       },
       {
         start: "ase",
