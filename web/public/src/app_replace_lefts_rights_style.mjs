@@ -4,6 +4,6 @@ import { list_map_property_get } from "../../../love/public/src/list_map_propert
 export function app_replace_lefts_rights_style(rb, enabled) {
   let properties = ["rights", "lefts"];
   let list = list_map_property_get(properties, rb);
-  let lambda4 = app_replace_button_symbol_style_valid_if_curried_right(enabled);
-  each_nested(list, lambda4);
+  let lambda = app_replace_button_symbol_style_valid_if_curried_right(enabled);
+  each_nested(list, lambda);
 }
