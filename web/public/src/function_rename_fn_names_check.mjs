@@ -1,3 +1,4 @@
+import { js_string } from "../../../love/public/src/js_string.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
@@ -20,6 +21,7 @@ export async function function_rename_fn_names_check(f_name_before) {
       function lambda4({ args }) {
         let f_name = js_flo_name(ast);
         let value = fn_name_arg_get(args, f_name);
+        let s = js_string(value_string);
         log(function_rename_fn_names_check.name, {
           f_name,
           value,
