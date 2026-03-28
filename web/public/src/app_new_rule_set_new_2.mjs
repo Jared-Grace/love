@@ -16,7 +16,7 @@ export function app_new_rule_set_new_2() {
     "sm > vs",
     "sm > bs",
     "ex > x < 0",
-    "ex > x = 0",
+    "ex > x = 1",
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_variable_abbreviations(abbreviations);
