@@ -37,7 +37,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "vs",
-        end: "let " + js_code_assign("j", "0") + " ;",
+        end: js_code_let_assign ("j", "0"),
       },
       {
         start: "vs",
