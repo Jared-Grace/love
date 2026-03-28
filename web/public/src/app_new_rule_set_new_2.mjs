@@ -14,7 +14,7 @@ export function app_new_rule_set_new_2() {
     goals: [
       {
         start: "ws",
-        end: js_keyword_while() + " ( ex ) sm",
+        end: js_keyword_while() + " ( x < 3 || x === 3 ) sm",
       },
     ],
   };
