@@ -25,7 +25,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "ws",
-        end: js_keyword_while() + " ( y > 0 ) bs",
+        end: js_keyword_while() + " ( y > 0 ) { y = y - 1 ; }",
       },
     ],
   };
