@@ -1,4 +1,3 @@
-import { command_line_node_g } from "../../../love/public/src/command_line_node_g.mjs";
 import { log_keep } from "../../../love/public/src/log_keep.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { command_line } from "../../../love/public/src/command_line.mjs";
