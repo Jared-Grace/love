@@ -11,6 +11,8 @@ export function app_replace_rule_set_statements_if_rules(rules) {
     "is > " + js_keyword_if() + " ( ex ) sm " + js_keyword_else() + " sm",
     "sm > vs",
     "sm > bs",
+  ]);
+  list_add_multiple(rules, [
     "ex > x < 0",
     "ex > x > 0",
     "ex > x = 1",
