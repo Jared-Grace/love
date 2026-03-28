@@ -24,6 +24,10 @@ export function app_new_rule_set_new_2() {
         start: "bs",
         end: "{ u p d a t e ( ) ; }",
       },
+      {
+        start: "bs",
+        end: "{ u p d a t e ( ) ; return true ; }",
+      },
     ],
   };
   return r;
