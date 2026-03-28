@@ -1,9 +1,9 @@
+import { app_replace_rule_set_statements_while_rules } from "../../../love/public/src/app_replace_rule_set_statements_while_rules.mjs";
 import { app_replace_rule_set_statements_if_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_if_abbreviations.mjs";
-import { app_replace_rule_set_statements_if_rules } from "../../../love/public/src/app_replace_rule_set_statements_if_rules.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 export function app_new_rule_set_new_3() {
   const rules = [];
-  app_replace_rule_set_statements_if_rules(rules);
+  app_replace_rule_set_statements_while_rules(rules);
   list_add_multiple(rules, [
     "fs > for ( ex ; ex ; ex ) sm",
     "ex > let i = 0",
