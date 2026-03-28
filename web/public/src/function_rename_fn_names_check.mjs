@@ -1,3 +1,4 @@
+import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 import { fn_name_arg_get } from "../../../love/public/src/fn_name_arg_get.mjs";
 import { js_visit_calls_named } from "../../../love/public/src/js_visit_calls_named.mjs";
 import { functions_transform_list } from "../../../love/public/src/functions_transform_list.mjs";
@@ -12,6 +13,7 @@ export async function function_rename_fn_names_check(f_name_before) {
     function lambda3(ast) {
       js_visit_calls_named(ast, fn_name.name, lambda4);
       function lambda4({ args }) {
+        let name2 = js_flo_name(ast2);
         let value = fn_name_arg_get(args, f_name);
         la(value);
       }
