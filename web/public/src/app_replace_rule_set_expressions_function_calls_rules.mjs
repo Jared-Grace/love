@@ -13,9 +13,8 @@ export function app_replace_rule_set_expressions_function_calls_rules(rules) {
     "id > p a g e",
     "id > r e f r e s h",
     "id > a d d",
-    "id > d o u b l e",
-    "id > w a g e",
-    "id > m i n",
-    "id > n o w",
+    "id > k n o c k",
+    "id > b u i l d i n g",
+    "id > d o o r )",
   ]);
 }
