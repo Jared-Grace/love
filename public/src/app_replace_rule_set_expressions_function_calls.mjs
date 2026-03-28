@@ -25,6 +25,10 @@ export function app_replace_rule_set_expressions_function_calls() {
         end: "id . id ( )",
       },
       {
+        start: "id . id ( )",
+        end: "p a g e . r e f r e sh ( )",
+      },
+      {
         start: "ce",
         end: "id ( ex )",
       },
