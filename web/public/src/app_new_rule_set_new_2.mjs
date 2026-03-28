@@ -18,6 +18,10 @@ export function app_new_rule_set_new_2() {
     goals: [
       {
         start: "bs",
+        end: "{ ; }",
+      },
+      {
+        start: "bs",
         end: "{ u p d a t e ( ) ; }",
       },
     ],
