@@ -7,9 +7,9 @@ export function app_new_rule_set_new_2() {
   app_replace_rule_set_logical_expressions_rules(rules);
   list_add_multiple(rules, [
     "sm > ;",
-    "sm > r e t u r n ;",
+    "sm > return ;",
     "sm > ex ;",
-    "sm > r e t u r n ex ;",
+    "sm > return ex ;",
     "ex > true",
     "ex > u p d a t e ( )",
   ]);
@@ -27,7 +27,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "sm",
-        end: "r e t u r n ;",
+        end: "return ;",
       },
       {
         start: "sm",
@@ -35,7 +35,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "sm",
-        end: "r e t u r n true ;",
+        end: "return true ;",
       },
     ],
   };
