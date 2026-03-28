@@ -1,3 +1,4 @@
+import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { app_replace_rule_set_statements_if_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_if_abbreviations.mjs";
 import { app_replace_rule_set_statements_if_rules } from "../../../love/public/src/app_replace_rule_set_statements_if_rules.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
@@ -5,8 +6,7 @@ import { js_keyword_if } from "../../../love/public/src/js_keyword_if.mjs";
 export function app_replace_rule_set_statements_if() {
   const rules = [];
   app_replace_rule_set_statements_if_rules(rules);
-    list_add_multiple(rules, [
-
+  list_add_multiple(rules, [
     "ex > x < 0",
     "ex > x > 0",
     "ex > x = 1",
