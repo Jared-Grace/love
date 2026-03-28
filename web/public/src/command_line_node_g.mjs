@@ -5,7 +5,7 @@ import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 export async function command_line_node_g(f_name, args) {
   let result = list_join_space(args);
   let output = await command_line(
-    "node scripts/g.mjs " + f_name + " " + result,
+    "node scripts/" + "g" + ".mjs " + f_name + " " + result,
   );
   let stdout = property_get(output, "stdout");
   log_keep(command_line_node_g.name, stdout);
