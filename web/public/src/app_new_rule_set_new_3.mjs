@@ -40,7 +40,7 @@ export function app_new_rule_set_new_3() {
       },
       {
         start: "id = id = ase",
-        end: "x = y = 0",
+        end: "x = y = ase",
       },
     ],
   };
