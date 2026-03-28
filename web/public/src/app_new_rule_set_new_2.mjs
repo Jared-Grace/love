@@ -35,6 +35,10 @@ export function app_new_rule_set_new_2() {
         end:
           js_keyword_while() + " ( ! found ( door ) ) { ask ( ) ; seek ( ) ; }",
       },
+      {
+        start: "ws",
+        end: js_keyword_while() + " ( ! found ( door ) ) { sm sm }",
+      },
     ],
   };
   return r;
