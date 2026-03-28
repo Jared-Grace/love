@@ -25,6 +25,7 @@ export async function function_rename_fn_names_check(f_name_before) {
     });
   }
   await property_exists_if_async(i, f_name_before, lambda);
+  return;
   async function lambda2(ast) {}
   let waited = await functions_transform_list(list, lambda2);
 }
