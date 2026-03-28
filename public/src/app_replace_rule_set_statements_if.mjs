@@ -1,30 +1,11 @@
+import { app_replace_rule_set_statements_if_rules } from "../../../love/public/src/app_replace_rule_set_statements_if_rules.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
-import { app_replace_rule_set_statements_block_rules } from "../../../love/public/src/app_replace_rule_set_statements_block_rules.mjs";
 import { app_replace_rule_set_statements_block_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_block_abbreviations.mjs";
-import { js_keyword_else } from "../../../love/public/src/js_keyword_else.mjs";
 import { app_replace_rule_set_statements_variable_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_variable_abbreviations.mjs";
-import { app_replace_rule_set_statements_variable_rules } from "../../../love/public/src/app_replace_rule_set_statements_variable_rules.mjs";
 import { js_keyword_if } from "../../../love/public/src/js_keyword_if.mjs";
-import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 export function app_replace_rule_set_statements_if() {
   const rules = [];
-  app_replace_rule_set_statements_variable_rules(rules);
-  app_replace_rule_set_statements_block_rules(rules);
-  list_add_multiple(rules, [
-    "is > " + js_keyword_if() + " ( ex ) sm",
-    "is > " + js_keyword_if() + " ( ex ) sm " + js_keyword_else() + " sm",
-    "sm > vs",
-    "sm > bs",
-    "ex > x < 0",
-    "ex > x > 0",
-    "ex > x = 1",
-    "ex > y === null",
-    "ex > positive = true",
-    "ex > positive = false",
-    "ex > y = 0",
-    'ex > log ( " r e s e t " )',
-    "ex > y >> max",
-  ]);
+  app_replace_rule_set_statements_if_rules(rules);
   let abbreviations = {};
   app_replace_rule_set_statements_variable_abbreviations(abbreviations);
   app_replace_rule_set_statements_block_abbreviations(abbreviations);
