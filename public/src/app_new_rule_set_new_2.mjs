@@ -31,6 +31,10 @@ export function app_new_rule_set_new_2() {
     goals: [
       {
         start: "is",
+        end: js_keyword_if() + " ( x < 0 ) x = 1 ;",
+      },
+      {
+        start: "is",
         end: js_keyword_if() + " ( x < 0 ) { x = 1 ; }",
       },
       {
