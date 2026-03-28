@@ -117,7 +117,7 @@ export function app_replace_rule_set_expressions_additive() {
         end: "id ( 1 + 2 )",
       },
     ],
-    why: "These replacement rules define a context-free grammar for parsing arithmetic and function call expressions, including literals, identifiers, unary and binary operators, member access, and function calls, demonstrating the structure and precedence of expressions similar to those in JavaScript-like languages.",
+    why: "These replacement rules define a context-free grammar for arithmetic and function call expressions, demonstrating how identifiers, literals, operators, and parentheses combine to form valid additive expressions similar to those in programming languages like JavaScript.",
   };
   return r;
 }
