@@ -31,7 +31,7 @@ export function app_new_rule_set_new_3() {
         end: "x = li",
       },
       {
-        start: "id = li",
+        start: "x = li",
         end: "x = 1",
       },
     ],
