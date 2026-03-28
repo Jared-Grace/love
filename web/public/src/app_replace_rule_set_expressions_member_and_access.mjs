@@ -20,7 +20,7 @@ export function app_replace_rule_set_expressions_member_and_access() {
       },
       {
         start: "mae",
-        end: "id . id",
+        end: "x . id",
       },
       {
         start: "mae",
