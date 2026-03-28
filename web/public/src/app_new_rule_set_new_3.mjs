@@ -9,7 +9,9 @@ export function app_new_rule_set_new_3() {
     "ex > let i = 0",
     "ex > i < 12",
     "ex > i = i + 1",
+    "ex > c o p y [ i ] = l i s t [ i ]",
     "ex > l o g ( a p o s t l e [ i ] )",
+    "ex > l o g ( i )",
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_if_abbreviations(abbreviations);
