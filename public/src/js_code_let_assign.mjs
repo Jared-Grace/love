@@ -1,9 +1,7 @@
-import { js_code_semicolon } from "../../../love/public/src/js_code_semicolon.mjs";
-import { js_code_assign } from "../../../love/public/src/js_code_assign.mjs";
+import { js_code_statement_assign } from "../../../love/public/src/js_code_statement_assign.mjs";
 import { js_keyword_let } from "../../../love/public/src/js_keyword_let.mjs";
 export function js_code_let_assign(left, right) {
   const kind = js_keyword_let();
-  let code_assign =
-    kind + " " + js_code_assign(left, right) + js_code_semicolon();
+  let code_assign = js_code_statement_assign(kind, left, right);
   return code_assign;
 }
