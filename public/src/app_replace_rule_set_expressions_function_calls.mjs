@@ -49,6 +49,10 @@ export function app_replace_rule_set_expressions_function_calls() {
         end: "id ( in , in )",
       },
       {
+        start: "id ( in , in )",
+        end: "a d d ( in , in )",
+      },
+      {
         start: "id ( ex )",
         end: "id ( id . id )",
       },
