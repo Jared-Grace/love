@@ -6,6 +6,6 @@ export function app_replace_rule_set_expressions_member_and_access_abbreviations
   app_replace_rule_set_expressions_primary_abbreviations(abbreviations);
   object_merge(abbreviations, {
     mae: ["", "m", "ember ", "a", "ccess ", "e", "xpression"],
-    mlh: ["", "m", "ember access ", "l", "eft-", "h", "and"],
+    mlh: ["", "m", "ember access ", "l", "eft-", "h", "and expression"],
   });
 }
