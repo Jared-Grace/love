@@ -39,6 +39,10 @@ export function app_replace_rule_set_expressions_member_and_access() {
         end: "id . id . id",
       },
       {
+        start: "mae . id",
+        end: "h u m a n . b i r t h d a t e . y e a r",
+      },
+      {
         start: "mae",
         end: "id [ pe ]",
       },
