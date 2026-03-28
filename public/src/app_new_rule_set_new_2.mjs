@@ -28,8 +28,8 @@ export function app_new_rule_set_new_2() {
     abbreviations,
     goals: [
       {
-        start: "a",
-        end: "b",
+        start: "is",
+        end: js_keyword_if() + " ( true ) { u p d a t e ( ) }",
       },
     ],
   };
