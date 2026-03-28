@@ -15,6 +15,7 @@ export function app_new_rule_set_new_2() {
     "is > " + js_keyword_if() + " ( ex ) sm " + js_keyword_else() + " sm",
     "sm > vs",
     "sm > bs",
+    "id > c h a n g e d",
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_variable_abbreviations(abbreviations);
@@ -29,7 +30,7 @@ export function app_new_rule_set_new_2() {
     goals: [
       {
         start: "is",
-        end: js_keyword_if() + " ( true ) { u p d a t e ( ) ; }",
+        end: js_keyword_if() + " ( c h a n g e d ) { u p d a t e ( ) ; }",
       },
     ],
   };
