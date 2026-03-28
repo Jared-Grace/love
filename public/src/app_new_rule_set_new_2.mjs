@@ -7,8 +7,10 @@ export function app_new_rule_set_new_2() {
   app_replace_rule_set_statements_block_rules(rules);
   list_add_multiple(rules, [
     "ws > " + js_keyword_while() + " ( ex ) sm",
+    "ex > y > 0 ",
     "ex > x < 3",
     "ex > x = x + 1",
+    "ex > y = y - 1",
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_block_abbreviations(abbreviations);
@@ -23,7 +25,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "ws",
-        end: js_keyword_while() + " ( x > 0 ) { x = x - 1 ; }",
+        end: js_keyword_while() + " ( y > 0 ) { y = y - 1 ; }",
       },
     ],
   };
