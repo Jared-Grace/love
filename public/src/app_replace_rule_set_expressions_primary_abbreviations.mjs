@@ -9,8 +9,10 @@ export function app_replace_rule_set_expressions_primary_abbreviations(
 ) {
   app_replace_rule_set_expressions_primary_abbreviation_ex(abbreviations);
   object_merge(abbreviations, {
-    pe: ["", "p", "rimary ", "e", "xpression"],
     id: ["", "id", "entifier"],
+  });
+  object_merge(abbreviations, {
+    pe: ["", "p", "rimary ", "e", "xpression"],
     li: ["", "li", "teral"],
     nu: ["", "nu", "mber"],
   });
