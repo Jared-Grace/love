@@ -19,5 +19,6 @@ export function app_replace_rule_set_expressions_member_and_access_rules(
     "id > p a g e",
     "id > r e f r e s h",
     "id > a d d",
+    "id > d o u b l e",
   ]);
 }
