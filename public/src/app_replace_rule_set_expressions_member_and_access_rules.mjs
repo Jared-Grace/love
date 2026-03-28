@@ -16,5 +16,6 @@ export function app_replace_rule_set_expressions_member_and_access_rules(
     "id > y e a r",
     "id > f n",
     "id > u p d a t e",
+    "id > p a g e",
   ]);
 }
