@@ -6,8 +6,8 @@ export function app_replace_rule_set_expressions_member_and_access_rules(
   app_replace_rule_set_expressions_primary_rules(rules);
   list_add_multiple(rules, [
     "mae > pe",
-    "mae > mlh",
-    "mlh > mae . id",
-    "mlh > mae [ ex ]",
+    "mae > mle",
+    "mle > mae . id",
+    "mle > mae [ ex ]",
   ]);
 }
