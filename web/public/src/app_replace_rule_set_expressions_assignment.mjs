@@ -80,6 +80,10 @@ export function app_replace_rule_set_expressions_assignment() {
         end: "mae [ mae ] = mae",
       },
       {
+        start: "mae [ mae ] = mae",
+        end: "id [ id ] = lit",
+      },
+      {
         start: "z [ y ] = ade",
         end: "z [ y ] = ue",
       },
