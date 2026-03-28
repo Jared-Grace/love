@@ -16,5 +16,6 @@ export function app_replace_rule_set_expressions_function_calls_rules(rules) {
     "id > d o u b l e",
     "id > w a g e",
     "id > m i n",
+    "id > n o w",
   ]);
 }
