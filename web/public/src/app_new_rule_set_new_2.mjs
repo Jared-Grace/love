@@ -42,7 +42,9 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "is",
-        end: js_keyword_if() + " ( x > 0 ) y = true ; else y = false ;",
+        end:
+          js_keyword_if() +
+          " ( x > 0 ) positive = true ; else positive = false ;",
       },
     ],
     why: "The replacement rules define a grammar for JavaScript-like variable declarations, expressions, and statements, with a focus on parsing if statements and their associated blocks, demonstrating how conditional logic and variable handling are structured in such languages.",
