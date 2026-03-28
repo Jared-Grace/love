@@ -76,7 +76,7 @@ export function app_replace_rule_set_expressions_member_and_access() {
         end: "mae [ 2 ] [ 1 ]",
       },
     ],
-    why: "The replacement rules define a grammar for parsing member access and indexing expressions (like obj.prop or arr[1]), supporting identifiers, literals (numbers, strings, booleans, null), and nested expressions, demonstrating how complex property and element access can be constructed from simpler expressions.",
+    why: "The replacement rules define a grammar for parsing member access and property access expressions (like obj.prop, obj['key'], or nested forms) in a programming language, demonstrating how identifiers, literals, and expressions can be composed to form complex member access chains.",
   };
   return r;
 }
