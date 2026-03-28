@@ -4,7 +4,7 @@ export function app_new_rule_set_new_3() {
   list_add_multiple(rules, ["a > b"]);
   let abbreviations = {};
   let r = {
-    name: "TODO",
+    name: "Statements for",
     rules,
     abbreviations,
     goals: [
