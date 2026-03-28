@@ -30,6 +30,7 @@ export async function function_rename_fn_names_check(
       }
     }
     let waited = await functions_transform_list(value, lambda3);
+    return;
     error_json({
       message:
         "You are trying to rename: " +
