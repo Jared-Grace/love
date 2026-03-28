@@ -1,4 +1,4 @@
 export function js_keyword_var() {
-  let k = "let";
+  let k = "var";
   return k;
 }
