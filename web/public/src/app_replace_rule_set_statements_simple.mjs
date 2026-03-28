@@ -1,3 +1,4 @@
+import { js_code_semicolon } from "../../../love/public/src/js_code_semicolon.mjs";
 import { js_keyword_true } from "../../../love/public/src/js_keyword_true.mjs";
 import { js_keyword_return } from "../../../love/public/src/js_keyword_return.mjs";
 import { app_replace_rule_set_statements_simple_rules } from "../../../love/public/src/app_replace_rule_set_statements_simple_rules.mjs";
@@ -18,19 +19,24 @@ export function app_replace_rule_set_statements_simple() {
     goals: [
       {
         start: "sm",
-        end: ";",
+        end: js_code_semicolon(),
       },
       {
         start: "sm",
-        end: js_keyword_return() + " ;",
+        end: js_keyword_return() + " " + js_code_semicolon(),
       },
       {
         start: "sm",
-        end: "u p d a t e ( ) ;",
+        end: "u p d a t e ( ) " + js_code_semicolon(),
       },
       {
         start: "sm",
-        end: js_keyword_return() + " " + js_keyword_true() + " ;",
+        end:
+          js_keyword_return() +
+          " " +
+          js_keyword_true() +
+          " " +
+          js_code_semicolon(),
       },
     ],
     why: "The replacement rules define a simple grammar for statements, allowing for empty statements, return statements, expression statements, and return-expression statements, with expressions limited to 'true' or a 'update()' call; this demonstrates a minimal subset of statement and expression syntax, likely for a programming language.",
