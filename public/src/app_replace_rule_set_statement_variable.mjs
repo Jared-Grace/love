@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { js_code_assign } from "../../../love/public/src/js_code_assign.mjs";
 import { js_code_let_assign } from "../../../love/public/src/js_code_let_assign.mjs";
 import { js_code_semicolon } from "../../../love/public/src/js_code_semicolon.mjs";
@@ -31,6 +32,9 @@ export function app_replace_rule_set_statement_variable() {
   ]);
   let abbreviations = {};
   app_replace_rule_set_expressions_primary_abbreviation_ex(abbreviations);
+  object_merge(abbreviations, {
+    vs: ["", "v", "ariable ", "s", "tatement"],
+  });
   const y_eq_2 = js_code_assign("y", "2");
   let r = {
     name: "Statement Variable",
