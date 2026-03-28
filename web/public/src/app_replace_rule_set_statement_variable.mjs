@@ -62,6 +62,7 @@ export function app_replace_rule_set_statement_variable() {
         end: "const x = 1 , " + y_eq_2 + " ;",
       },
     ],
+    why: "The replacement rules describe the grammar for variable declaration statements in JavaScript-like languages, demonstrating how keywords (let, const, var), identifiers, optional initializations, and comma-separated lists form valid variable declarations.",
   };
   return r;
 }
