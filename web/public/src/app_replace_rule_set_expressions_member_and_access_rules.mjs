@@ -9,5 +9,6 @@ export function app_replace_rule_set_expressions_member_and_access_rules(
     "mae > mae . id",
     "mae > mae [ ex ]",
     "id > p r o p",
+    "id > h u m a n",
   ]);
 }
