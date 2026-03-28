@@ -47,10 +47,10 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "vs",
-        end: "const vdg , " + js_code_assign("y", "2") + " ;",
+        end: "const vdg , " + y_eq_2 + " ;",
       },
       {
-        start: "const vdg , " + js_code_assign("y", "2") + " ;",
+        start: "const vdg , " + y_eq_2 + " ;",
         end: "const x = 1 , " + y_eq_2 + " ;",
       },
     ],
