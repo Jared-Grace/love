@@ -8,6 +8,8 @@ export function app_replace_rule_set_expressions_primary_abbreviations(
 ) {
   object_merge(abbreviations, {
     pe: ["", "p", "rimary ", "e", "xpression"],
+  });
+  object_merge(abbreviations, {
     id: ["", "id", "entifier"],
     li: ["", "li", "teral"],
     ex: ["", "ex", "pression"],
