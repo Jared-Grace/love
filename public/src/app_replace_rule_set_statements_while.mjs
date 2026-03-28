@@ -2,7 +2,7 @@ import { app_replace_rule_set_statements_if_rules } from "../../../love/public/s
 import { app_replace_rule_set_statements_block_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_block_abbreviations.mjs";
 import { js_keyword_while } from "../../../love/public/src/js_keyword_while.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
-export function app_new_rule_set_new_2() {
+export function app_replace_rule_set_statements_while() {
   const rules = [];
   app_replace_rule_set_statements_if_rules(rules);
   list_add_multiple(rules, ["ws > " + js_keyword_while() + " ( ex ) sm"]);
