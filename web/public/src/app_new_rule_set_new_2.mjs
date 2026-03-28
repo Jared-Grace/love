@@ -27,7 +27,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "sm",
-        end: "a d d ( ) ;",
+        end: "u p d a t e ( ) ;",
       },
       {
         start: "sm",
