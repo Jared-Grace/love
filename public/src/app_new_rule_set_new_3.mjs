@@ -20,15 +20,15 @@ export function app_new_rule_set_new_3() {
     goals: [
       {
         start: "ase",
-        end: "id = ade",
+        end: "x = ade",
       },
       {
         start: "id = ade",
-        end: "id = li",
+        end: "x = li",
       },
       {
         start: "id = li",
-        end: "id = 1",
+        end: "x = 1",
       },
     ],
   };
