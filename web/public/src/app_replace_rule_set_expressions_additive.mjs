@@ -102,6 +102,14 @@ export function app_replace_rule_set_expressions_additive() {
       },
       {
         start: "id ( ade )",
+        end: "id ( ue ao ue )",
+      },
+      {
+        start: "id ( ue ao ue )",
+        end: "id ( ce ao ce )",
+      },
+      {
+        start: "id ( ade )",
         end: "id ( ce ao ce )",
       },
       {
