@@ -36,6 +36,7 @@ export function app_replace_rule_set_statements_simple() {
         end: "return true ;",
       },
     ],
+    why: "These replacement rules define a context-free grammar for a simple programming language's statement and expression syntax, demonstrating how identifiers, literals, expressions, and statements (like return and semicolon-terminated statements) are constructed and combined, including operator precedence and function calls.",
   };
   return r;
 }
