@@ -17,7 +17,7 @@ export function app_replace_rule_set_statements_while() {
   let abbreviations = {};
   app_replace_rule_set_statements_block_abbreviations(abbreviations);
   let r = {
-    name: "Statements while",
+    name: "Statements While",
     rules,
     abbreviations,
     goals: [
