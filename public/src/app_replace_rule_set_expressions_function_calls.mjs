@@ -70,7 +70,7 @@ export function app_replace_rule_set_expressions_function_calls() {
       },
       {
         start: "id ( id [ nu ] )",
-        end: "id ( l i s t [ 0 ] )",
+        end: "d o u b l e ( l i s t [ 0 ] )",
       },
       {
         start: "id ( ex )",
