@@ -69,6 +69,10 @@ export function app_replace_rule_set_expressions_function_calls() {
         end: "id ( id [ nu ] )",
       },
       {
+        start: "id ( id [ nu ] )",
+        end: "id ( l i s t [ 0 ] )",
+      },
+      {
         start: "id ( ex )",
         end: "id ( id ( ) )",
       },
