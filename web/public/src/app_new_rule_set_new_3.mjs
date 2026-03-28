@@ -43,7 +43,7 @@ export function app_new_rule_set_new_3() {
         end: "x = y = ase",
       },
       {
-        start: "id = id = ase",
+        start: "x = y = ase",
         end: "x = y = ade",
       },
     ],
