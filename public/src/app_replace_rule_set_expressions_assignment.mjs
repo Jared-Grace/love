@@ -11,6 +11,7 @@ export function app_replace_rule_set_expressions_assignment() {
     "ase > le",
     "lh > mle",
     "lh > id",
+    "id > z",
   ]);
   list_add(rules, "ex > ase");
   let abbreviations = {};
