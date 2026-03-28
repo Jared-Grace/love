@@ -13,7 +13,7 @@ export function app_replace_rule_set_statements_simple() {
   let abbreviations = {};
   object_merge(abbreviations, {
     sm: ["", "s", "tate", "m", "ent"],
-    lo: ["", "l", "ogical ", "o", "perator"],
+    ex: ["", "l", "ogical ", "o", "perator"],
   });
   let r = {
     name: "Statements Simple",
