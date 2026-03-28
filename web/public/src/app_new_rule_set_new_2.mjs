@@ -23,7 +23,7 @@ export function app_new_rule_set_new_2() {
     "ex > positive = false",
     "ex > y = 0",
     'ex > log ( " r e s e t " )',
-    "ex > y > max",
+    "ex > y >> max",
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_variable_abbreviations(abbreviations);
