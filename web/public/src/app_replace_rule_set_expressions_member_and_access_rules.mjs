@@ -8,11 +8,6 @@ export function app_replace_rule_set_expressions_member_and_access_rules(
     "mae > pe",
     "mae > mae . id",
     "mae > mae [ ex ]",
-    "id > p r o p",
-    "id > h u m a n",
-    "id > n a m e",
-    "id > l a s t",
-    "id > b i r t h d a t e",
-    "id > y e a r",
+
   ]);
 }
