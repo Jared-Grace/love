@@ -1,10 +1,12 @@
+import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_replace_rule_set_logical_expressions_abbreviations } from "../../../love/public/src/app_replace_rule_set_logical_expressions_abbreviations.mjs";
 import { app_replace_rule_set_logical_expressions_rules } from "../../../love/public/src/app_replace_rule_set_logical_expressions_rules.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 export function app_new_rule_set_new_3() {
   const rules = [];
   app_replace_rule_set_logical_expressions_rules(rules);
-  list_add_multiple(rules, ["ase > le = ase"]);
+  list_add_multiple(rules, ["ase > id = ase"]);
+  list_add(rules, "ex > ase");
   let abbreviations = {};
   app_replace_rule_set_logical_expressions_abbreviations(abbreviations);
   let r = {
