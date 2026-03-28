@@ -6,7 +6,12 @@ import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mj
 export function app_replace_rule_set_expressions_assignment() {
   const rules = [];
   app_replace_rule_set_logical_expressions_rules(rules);
-  list_add_multiple(rules, ["ase > id = ase", "ase > le"]);
+  list_add_multiple(rules, [
+    "ase > lh = ase",
+    "ase > le",
+    "lh > mle",
+    "lh > id",
+  ]);
   list_add(rules, "ex > ase");
   let abbreviations = {};
   app_replace_rule_set_logical_expressions_abbreviations(abbreviations);
