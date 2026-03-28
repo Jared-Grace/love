@@ -11,7 +11,7 @@ export function app_new_rule_set_new_3() {
   let abbreviations = {};
   app_replace_rule_set_logical_expressions_abbreviations(abbreviations);
   object_merge(abbreviations, {
-    le: ["", "as", "signment ", "e", "xpression"],
+    ase: ["", "as", "signment ", "e", "xpression"],
   });
   let r = {
     name: "Expressions assignment",
