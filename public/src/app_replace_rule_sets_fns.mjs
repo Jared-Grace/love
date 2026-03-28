@@ -1,3 +1,4 @@
+import { app_new_rule_set_new_3 } from "../../../love/public/src/app_new_rule_set_new_3.mjs";
 import { app_new_rule_set_new_2 } from "../../../love/public/src/app_new_rule_set_new_2.mjs";
 import { app_replace_rule_set_expressions_assignment } from "../../../love/public/src/app_replace_rule_set_expressions_assignment.mjs";
 import { app_replace_rule_set_statements_if } from "../../../love/public/src/app_replace_rule_set_statements_if.mjs";
