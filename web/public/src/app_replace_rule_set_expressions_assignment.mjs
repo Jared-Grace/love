@@ -81,7 +81,7 @@ export function app_replace_rule_set_expressions_assignment() {
       },
       {
         start: "mae [ mae ] = mae",
-        end: "id [ id ] = lit",
+        end: "pe [ pe ] = pe",
       },
       {
         start: "z [ y ] = ade",
