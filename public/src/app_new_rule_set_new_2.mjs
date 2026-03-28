@@ -18,7 +18,7 @@ export function app_new_rule_set_new_2() {
   let abbreviations = {};
   app_replace_rule_set_statements_block_abbreviations(abbreviations);
   let r = {
-    name: "TODO",
+    name: "Statements while",
     rules,
     abbreviations,
     goals: [
