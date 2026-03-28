@@ -4,6 +4,9 @@ export function app_new_rule_set_new_2() {
   const rules = [];
   list_add_multiple(rules, [
     "vs > vk vdg ;",
+    "vk > let",
+    "vk > const",
+    "vk > var",
     "vdg > vd",
     "vdg > vdg , vd",
     "vd > id",
@@ -19,7 +22,7 @@ export function app_new_rule_set_new_2() {
     rules,
     goals: [
       {
-        start: "a",
+        start: "vs",
         end: "b",
       },
     ],
