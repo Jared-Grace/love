@@ -13,7 +13,7 @@ export async function function_rename_fn_names_check(f_name_before) {
     function lambda3(ast) {
       js_visit_calls_named(ast, fn_name.name, lambda4);
       function lambda4({ args }) {
-        let name2 = js_flo_name(ast2);
+        let f_name = js_flo_name(ast);
         let value = fn_name_arg_get(args, f_name);
         la(value);
       }
