@@ -1,3 +1,4 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { app_replace_rule_set_logical_expressions_abbreviations } from "../../../love/public/src/app_replace_rule_set_logical_expressions_abbreviations.mjs";
 import { app_replace_rule_set_logical_expressions_rules } from "../../../love/public/src/app_replace_rule_set_logical_expressions_rules.mjs";
@@ -9,13 +10,16 @@ export function app_new_rule_set_new_3() {
   list_add(rules, "ex > ase");
   let abbreviations = {};
   app_replace_rule_set_logical_expressions_abbreviations(abbreviations);
+  object_merge(abbreviations, {
+    le: ["", "as", "signment ", "e", "xpression"],
+  });
   let r = {
-    name: "TODO",
+    name: "Expressions assignment",
     rules,
     abbreviations,
     goals: [
       {
-        start: "a",
+        start: "ase",
         end: "b",
       },
     ],
