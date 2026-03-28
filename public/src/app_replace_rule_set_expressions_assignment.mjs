@@ -57,7 +57,7 @@ export function app_replace_rule_set_expressions_assignment() {
       },
       {
         start: "y . x = li",
-        end: "y . x = 1",
+        end: "y . x = 2",
       },
       {
         start: "ase",
