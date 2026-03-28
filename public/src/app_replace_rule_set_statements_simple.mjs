@@ -1,16 +1,9 @@
+import { app_replace_rule_set_statements_simple_rules } from "../../../love/public/src/app_replace_rule_set_statements_simple_rules.mjs";
 import { app_replace_rule_set_expressions_primary_abbreviation_ex } from "../../../love/public/src/app_replace_rule_set_expressions_primary_abbreviation_ex.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
-import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 export function app_replace_rule_set_statements_simple() {
   const rules = [];
-  list_add_multiple(rules, [
-    "sm > ;",
-    "sm > return ;",
-    "sm > ex ;",
-    "sm > return ex ;",
-    "ex > true",
-    "ex > u p d a t e ( )",
-  ]);
+  app_replace_rule_set_statements_simple_rules(rules);
   let abbreviations = {};
   app_replace_rule_set_expressions_primary_abbreviation_ex(abbreviations);
   object_merge(abbreviations, {
