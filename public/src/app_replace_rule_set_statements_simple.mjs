@@ -1,9 +1,7 @@
+import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
-import { app_replace_rule_set_logical_expressions_abbreviations } from "../../../love/public/src/app_replace_rule_set_logical_expressions_abbreviations.mjs";
-import { app_replace_rule_set_logical_expressions_rules } from "../../../love/public/src/app_replace_rule_set_logical_expressions_rules.mjs";
 export function app_replace_rule_set_statements_simple() {
   const rules = [];
-  app_replace_rule_set_logical_expressions_rules(rules);
   list_add_multiple(rules, [
     "sm > ;",
     "sm > return ;",
@@ -13,7 +11,10 @@ export function app_replace_rule_set_statements_simple() {
     "ex > u p d a t e ( )",
   ]);
   let abbreviations = {};
-  app_replace_rule_set_logical_expressions_abbreviations(abbreviations);
+  object_merge(abbreviations, {
+    sm: ["", "s", "tate", "m", "ent"],
+    lo: ["", "l", "ogical ", "o", "perator"],
+  });
   let r = {
     name: "Statements Simple",
     abbreviations,
