@@ -61,10 +61,10 @@ export function app_replace_rule_set_expressions_assignment() {
       },
       {
         start: "mle = ade",
-        end: "ce [ ce ] = ade",
+        end: "ade [ ade ] = ade",
       },
       {
-        start: "ce [ ce ] = ade",
+        start: "ade [ ade ] = ade",
         end: "z [ y ] = ade",
       },
       {
