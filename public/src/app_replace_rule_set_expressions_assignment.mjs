@@ -94,7 +94,7 @@ export function app_replace_rule_set_expressions_assignment() {
       },
       {
         start: "z [ y ] = li",
-        end: "z [ y ] = 3",
+        end: "z [ y ] = 0",
       },
       {
         start: "ase",
