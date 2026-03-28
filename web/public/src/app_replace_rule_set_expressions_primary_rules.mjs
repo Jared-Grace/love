@@ -5,6 +5,7 @@ export function app_replace_rule_set_expressions_primary_rules(rules) {
   let added = [
     "pe > id",
     "id > x",
+    "id > y",
     "pe > li",
     "pe > ( ex )",
     "li > nu",
