@@ -57,7 +57,7 @@ export function app_replace_rule_set_expressions_primary() {
         end: "( ( ex ) )",
       },
     ],
-    why: "These replacement rules define the grammar for primary expressions in a programming language, allowing identifiers, literals (numbers, strings, booleans, null), and parenthesized expressions, demonstrating the basic building blocks for constructing expressions.",
+    why: "The replacement rules define a grammar for primary expressions in a programming language, allowing identifiers, literals (numbers, strings, booleans, null), and parenthesized expressions, demonstrating how complex expressions can be built from these basic components.",
   };
   return r;
 }
