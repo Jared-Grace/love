@@ -40,6 +40,10 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "vs",
+        end: "let x , y ;",
+      },
+      {
+        start: "vs",
         end: "let vdg , y = 2 ;",
       },
       {
