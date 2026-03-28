@@ -30,6 +30,10 @@ export function app_new_rule_set_new_3() {
         start: "fs",
         end: "for ( let i = 0 ; i < l i s t . l e n g t h ; i = i + 1 ) sm",
       },
+      {
+        start: "for ( let i = 0 ; i < l i s t . l e n g t h ; i = i + 1 ) sm",
+        end: "for ( let i = 0 ; i < l i s t . l e n g t h ; i = i + 1 ) { }",
+      },
     ],
   };
   return r;
