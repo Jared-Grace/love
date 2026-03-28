@@ -17,6 +17,9 @@ export function app_new_rule_set_new_2() {
     "vdg > vdg , vd",
     "vd > id",
     "vd > id = ex",
+    "id > a",
+    "id > b",
+    "id > c",
     "id > i",
     "id > j",
     "id > x",
@@ -48,7 +51,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "vs",
-        end: "var x , y , z;",
+        end: "var a , b , c;",
       },
       {
         start: "vs",
