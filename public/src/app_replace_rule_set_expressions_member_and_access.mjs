@@ -52,6 +52,10 @@ export function app_replace_rule_set_expressions_member_and_access() {
       },
       {
         start: "mae",
+        end: "mae [ pe ]",
+      },
+      {
+        start: "mae [ pe ]",
         end: "mae [ 1 ]",
       },
       {
