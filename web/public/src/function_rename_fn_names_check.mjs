@@ -10,6 +10,9 @@ import { fn_name } from "../../../love/public/src/fn_name.mjs";
 import { error_json } from "../../../love/public/src/error_json.mjs";
 import { data_identifiers_fn_names_get } from "../../../love/public/src/data_identifiers_fn_names_get.mjs";
 export async function function_rename_fn_names_check(f_name_before) {
+  log(function_rename_fn_names_check.name, {
+    f_name_before,
+  });
   let i = await data_identifiers_fn_names_get();
   async function lambda(value) {
     function lambda3(ast) {
