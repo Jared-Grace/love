@@ -1,4 +1,4 @@
-import { app_new_rule_set_new_3 } from "../../../love/public/src/app_new_rule_set_new_3.mjs";
+import { app_replace_rule_set_expressions_assignment } from "../../../love/public/src/app_replace_rule_set_expressions_assignment.mjs";
 import { app_new_rule_set_new_2 } from "../../../love/public/src/app_new_rule_set_new_2.mjs";
 import { app_replace_rule_set_statements_block } from "../../../love/public/src/app_replace_rule_set_statements_block.mjs";
 import { app_replace_rule_set_statements_variable } from "../../../love/public/src/app_replace_rule_set_statements_variable.mjs";
@@ -127,7 +127,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_expressions_relational,
     app_replace_rule_set_expressions_equality,
     app_replace_rule_set_expressions_logical,
-    app_new_rule_set_new_3,
+    app_replace_rule_set_expressions_assignment,
     app_replace_rule_set_statements_simple,
     app_replace_rule_set_statements_variable,
     app_replace_rule_set_statements_block,
