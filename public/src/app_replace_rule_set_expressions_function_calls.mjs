@@ -14,7 +14,7 @@ export function app_replace_rule_set_expressions_function_calls() {
     goals: [
       {
         start: "ce",
-        end: "id",
+        end: "f n",
       },
       {
         start: "ce",
