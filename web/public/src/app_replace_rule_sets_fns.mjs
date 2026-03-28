@@ -126,6 +126,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_expressions_logical,
     app_replace_rule_set_statements_simple,
     app_replace_rule_set_statement_variable,
+    app_new_rule_set_new_2,
   ];
   return fns;
 }
