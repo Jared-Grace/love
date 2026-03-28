@@ -18,7 +18,7 @@ export function app_replace_rule_set_expressions_function_calls() {
       },
       {
         start: "ce",
-        end: "f n ( )",
+        end: "id ( )",
       },
       {
         start: "ce",
@@ -38,7 +38,7 @@ export function app_replace_rule_set_expressions_function_calls() {
       },
       {
         start: "id ( ex , ex )",
-        end: "id ( in , ex )",
+        end: "id ( nu , ex )",
       },
       {
         start: "id ( in , ex )",
