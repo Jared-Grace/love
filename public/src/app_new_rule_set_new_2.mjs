@@ -11,9 +11,9 @@ export function app_new_rule_set_new_2() {
     "ex > x < 3",
     "ex > x = x + 1",
     "ex > y = y - 1",
-    "ex > ! found ( door )",
-    "ex > ask ( )",
-    "ex > seek ( )",
+    "ex > ! f o u n d ( d o o r )",
+    "ex > a s k ( )",
+    "ex > s e e k ( )",
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_block_abbreviations(abbreviations);
@@ -32,12 +32,13 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "ws",
-        end: js_keyword_while() + " ( ! found ( door ) ) { sm sm }",
+        end: js_keyword_while() + " ( ! f o u n d ( d o o r ) ) { sm sm }",
       },
       {
-        start: js_keyword_while() + " ( ! found ( door ) ) { sm sm }",
+        start: js_keyword_while() + " ( ! f o u n d ( d o o r ) ) { sm sm }",
         end:
-          js_keyword_while() + " ( ! found ( door ) ) { ask ( ) ; seek ( ) ; }",
+          js_keyword_while() +
+          " ( ! f o u n d ( d o o r ) ) { a s k ( ) ; s e e k ( ) ; }",
       },
     ],
   };
