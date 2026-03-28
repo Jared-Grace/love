@@ -32,7 +32,7 @@ export function app_new_rule_set_new_2() {
     is: ["", "i", "f ", "s", "tatement"],
   });
   let r = {
-    name: "Statements if",
+    name: "Statements If",
     rules,
     abbreviations,
     goals: [
