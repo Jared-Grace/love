@@ -10,7 +10,7 @@ export function app_new_rule_set_new_2() {
     sm: ["", "s", "tate", "m", "ent ", "g", "rower"],
   });
   let r = {
-    name: "TODO",
+    name: "Block Statement",
     rules,
     abbreviations,
     goals: [
