@@ -30,6 +30,10 @@ export function app_new_rule_set_new_2() {
         start: "sm",
         end: "a d d ( ) ;",
       },
+      {
+        start: "sm",
+        end: "r e t u r n ex ;",
+      },
     ],
   };
   return r;
