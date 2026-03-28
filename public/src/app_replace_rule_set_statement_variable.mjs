@@ -36,6 +36,7 @@ export function app_replace_rule_set_statement_variable() {
     vs: ["", "v", "ariable ", "s", "tatement"],
     vk: ["", "v", "ariable ", "k", "eyword"],
     vdg: ["", "v", "ariable ", "d", "eclaration ", "g", "rower"],
+    vd: ["", "v", "ariable ", "d", "eclaration"],
   });
   const y_eq_2 = js_code_assign("y", "2");
   let r = {
