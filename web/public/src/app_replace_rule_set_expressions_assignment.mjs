@@ -85,8 +85,8 @@ export function app_replace_rule_set_expressions_assignment() {
         end: "pe [ pe ] = pe",
       },
       {
-        start: "z [ y ] = ade",
-        end: "z [ y ] = ue",
+        start: "pe [ pe ] = pe",
+        end: "z [ y ] = 0",
       },
       {
         start: "z [ y ] = ue",
