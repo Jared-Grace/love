@@ -72,7 +72,7 @@ export function app_replace_rule_set_expressions_assignment() {
         end: "mae [ mue ] = mue",
       },
       {
-        start: "mae [ mae ] = mue",
+        start: "mae [ mue ] = mue",
         end: "mae [ mae ] = mae",
       },
       {
