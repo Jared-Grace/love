@@ -24,11 +24,11 @@ export async function function_rename_fn_names_check(
       function lambda4({ args }) {
         let f_name = js_flo_name(ast);
         let value = fn_name_arg_get(args, f_name);
-        let s = js_string(value_string);
+        let s = js_string(f_name_after);
         log(function_rename_fn_names_check.name, {
           f_name,
           value,
-          args,
+          args,s
         });
         exit();
       }
