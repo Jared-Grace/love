@@ -19,10 +19,11 @@ export async function function_rename_fn_names_check(f_name_before) {
       js_visit_calls_named(ast, fn_name.name, lambda4);
       function lambda4({ args }) {
         let f_name = js_flo_name(ast);
+        let value = fn_name_arg_get(args, f_name);
         log(function_rename_fn_names_check.name, {
           f_name,
+          value,
         });
-        let value = fn_name_arg_get(args, f_name);
         exit();
       }
     }
