@@ -31,7 +31,7 @@ export function app_new_rule_set_new_2() {
     goals: [
       {
         start: "is",
-        end: js_keyword_if() + " ( x < 0 ) x = 1 ;",
+        end: js_keyword_if() + " ( y === null ) return ;",
       },
       {
         start: "is",
