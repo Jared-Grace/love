@@ -41,6 +41,10 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "is",
+        end: js_keyword_if() + " ( x < 0 ) { smg }",
+      },
+      {
+        start: js_keyword_if() + " ( x < 0 ) { smg }",
         end: js_keyword_if() + " ( x < 0 ) { x = 1 ; }",
       },
       {
