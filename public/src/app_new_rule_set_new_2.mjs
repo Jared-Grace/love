@@ -21,6 +21,8 @@ export function app_new_rule_set_new_2() {
     "ex > y === null",
     "ex > positive = true",
     "ex > positive = false",
+    "ex > y = 0",
+    'ex > log ( " r e s e t " )',
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_variable_abbreviations(abbreviations);
@@ -44,8 +46,7 @@ export function app_new_rule_set_new_2() {
       {
         start: "is",
         end:
-          js_keyword_if() +
-          ' ( y === null ) { y = 0 ; log ( " r e s e t " ) ; }',
+          js_keyword_if() + ' ( y > max ) { y = 0 ; log ( " r e s e t " ) ; }',
       },
       {
         start: "is",
