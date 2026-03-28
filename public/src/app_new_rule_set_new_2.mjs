@@ -27,6 +27,11 @@ export function app_new_rule_set_new_2() {
         start: "ws",
         end: js_keyword_while() + " ( y > 0 ) { y = y - 1 ; }",
       },
+      {
+        start: "ws",
+        end:
+          js_keyword_while() + " ( ! found ( door ) ) { ask ( ) ; seek ( ) ; }",
+      },
     ],
   };
   return r;
