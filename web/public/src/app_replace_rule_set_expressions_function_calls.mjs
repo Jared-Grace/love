@@ -34,6 +34,10 @@ export function app_replace_rule_set_expressions_function_calls() {
       },
       {
         start: "id ( ex )",
+        end: "id ( li )",
+      },
+      {
+        start: "id ( li )",
         end: "id ( de )",
       },
       {
