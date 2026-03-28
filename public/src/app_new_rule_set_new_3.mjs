@@ -9,8 +9,8 @@ export function app_new_rule_set_new_3() {
     abbreviations,
     goals: [
       {
-        start: "a",
-        end: "b",
+        start: "fs",
+        end: "for ( let i = 0 ; i < 12 ; i = i + 1 ) sm",
       },
     ],
   };
