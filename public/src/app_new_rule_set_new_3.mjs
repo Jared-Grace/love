@@ -22,6 +22,10 @@ export function app_new_rule_set_new_3() {
         start: "ase",
         end: "id = ade",
       },
+      {
+        start: "id = ade",
+        end: "id = 1",
+      },
     ],
   };
   return r;
