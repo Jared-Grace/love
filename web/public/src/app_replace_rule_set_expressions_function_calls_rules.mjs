@@ -18,6 +18,7 @@ export function app_replace_rule_set_expressions_function_calls_rules(rules) {
     "id > d o o r",
     "id > a l l",
     "id > l o v e",
+    "id > l i s t",
     "in > 0",
   ]);
 }
