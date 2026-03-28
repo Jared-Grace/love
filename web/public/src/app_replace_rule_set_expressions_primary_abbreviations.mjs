@@ -1,3 +1,4 @@
+import { app_replace_rule_set_expressions_primary_abbreviation_id } from "../../../love/public/src/app_replace_rule_set_expressions_primary_abbreviation_id.mjs";
 import { app_replace_rule_set_expressions_primary_abbreviation_ex } from "../../../love/public/src/app_replace_rule_set_expressions_primary_abbreviation_ex.mjs";
 import { app_replace_rule_set_decimals_abbreviation_de } from "../../../love/public/src/app_replace_rule_set_decimals_abbreviation_de.mjs";
 import { app_replace_rule_set_boolean_literal_abbreviations } from "../../../love/public/src/app_replace_rule_set_boolean_literal_abbreviations.mjs";
@@ -8,9 +9,7 @@ export function app_replace_rule_set_expressions_primary_abbreviations(
   abbreviations,
 ) {
   app_replace_rule_set_expressions_primary_abbreviation_ex(abbreviations);
-  object_merge(abbreviations, {
-    id: ["", "id", "entifier"],
-  });
+  app_replace_rule_set_expressions_primary_abbreviation_id(abbreviations);
   object_merge(abbreviations, {
     pe: ["", "p", "rimary ", "e", "xpression"],
     li: ["", "li", "teral"],
