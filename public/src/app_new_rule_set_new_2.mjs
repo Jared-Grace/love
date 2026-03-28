@@ -17,6 +17,7 @@ export function app_new_rule_set_new_2() {
     "vd > id = ex",
     "id > i",
     "id > j",
+    "ex > 0",
   ]);
   let abbreviations = {};
   app_replace_rule_set_expressions_primary_abbreviation_ex(abbreviations);
@@ -28,6 +29,10 @@ export function app_new_rule_set_new_2() {
       {
         start: "vs",
         end: "let i ;",
+      },
+      {
+        start: "vs",
+        end: "let j = 0 ;",
       },
     ],
   };
