@@ -61,7 +61,7 @@ export function app_replace_rule_set_expressions_logical() {
         end: "( true || false ) && true",
       },
     ],
-    why: "These replacement rules define a context-free grammar for logical and arithmetic expressions similar to those in JavaScript, demonstrating operator precedence, associativity, and the structure of primary, unary, multiplicative, additive, relational, equality, and logical expressions.",
+    why: "These replacement rules define a context-free grammar for logical and arithmetic expressions, demonstrating how identifiers, literals, operators, and grouping can be combined to form valid expressions similar to those in programming languages like JavaScript.",
   };
   return r;
 }
