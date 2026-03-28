@@ -11,6 +11,7 @@ export function app_new_rule_set_new_2() {
   list_add_multiple(rules, [
     js_keyword_if() + " ( ex ) sm",
     js_keyword_if() + " ( ex ) sm else sm",
+    "sm > vs",
     "sm > bs",
   ]);
   let abbreviations = {};
