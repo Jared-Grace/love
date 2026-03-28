@@ -51,7 +51,8 @@ export function data_file_update_inner(parsed, data) {
   function lambda2(la) {
     js_visit_calls_named(ast, fn_name.name, lambda4);
     function lambda4({ args }) {
-      let value = fn_name_arg_get(args, f_name);
+      let first = fn_name_arg_get(args, f_name);
+  let value = property_get(first, "value");
       la(value);
     }
   }
