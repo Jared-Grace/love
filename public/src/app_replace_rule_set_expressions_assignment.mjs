@@ -55,6 +55,7 @@ export function app_replace_rule_set_expressions_assignment() {
         end: "x = y = 0",
       },
     ],
+    why: "These replacement rules define a context-free grammar for parsing assignment and expression statements similar to those in JavaScript, demonstrating how identifiers, literals, operators, and expressions can be recursively combined to form valid assignment and expression constructs.",
   };
   return r;
 }
