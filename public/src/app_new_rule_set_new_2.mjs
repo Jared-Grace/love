@@ -4,7 +4,8 @@ export function app_new_rule_set_new_2() {
   const rules = [];
   list_add_multiple(rules, [
     "ws > " + js_keyword_while() + " ( ex ) sm",
-    "x > x < 3",
+    "ex > x < 3",
+    "ex > x = x + 1",
   ]);
   let abbreviations = {};
   let r = {
