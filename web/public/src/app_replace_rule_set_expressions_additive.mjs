@@ -110,10 +110,10 @@ export function app_replace_rule_set_expressions_additive() {
       },
       {
         start: "id ( ue ao ue )",
-        end: "id ( nu ao ue )",
+        end: "id ( mae ao nae )",
       },
       {
-        start: "id ( nu ao ue )",
+        start: "id ( mae ao mae )",
         end: "id ( nu ao nu )",
       },
       {
