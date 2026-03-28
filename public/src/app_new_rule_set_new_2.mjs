@@ -18,7 +18,7 @@ export function app_new_rule_set_new_2() {
     goals: [
       {
         start: "bs",
-        end: "{ sm }",
+        end: "{ u p d a t e ( ) ; }",
       },
     ],
   };
