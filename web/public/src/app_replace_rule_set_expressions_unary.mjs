@@ -45,7 +45,7 @@ export function app_replace_rule_set_expressions_unary() {
         end: "- ( - 1 )",
       },
     ],
-    why: "The replacement rules define a grammar for unary expressions in a programming language, demonstrating how primary expressions (identifiers, literals, parenthesized expressions) can be combined with unary operators (like !, -, +, typeof) and member/call access to form more complex expressions, reflecting the structure of JavaScript-like unary and member access syntax.",
+    why: "The replacement rules define a grammar for unary expressions in a programming language, demonstrating how primary expressions (identifiers, literals, parenthesized expressions) can be combined with unary operators (like !, -, +, typeof) and member/call expressions to form valid unary expressions, reflecting the structure of JavaScript-like expression syntax.",
   };
   return r;
 }

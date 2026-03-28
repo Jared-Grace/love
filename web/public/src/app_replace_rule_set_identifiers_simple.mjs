@@ -11,7 +11,7 @@ export function app_replace_rule_set_identifiers_simple() {
     rules: app_replace_rule_set_identifiers_simple_rules(),
     goals: app_replace_rule_set_identifiers_simple_goals(),
     abbreviations,
-    why: "The replacement rules define a context-free grammar for a simplified identifier system, where identifiers can start with certain letters or symbols and may be followed by additional allowed characters or digits, demonstrating how valid identifier strings can be constructed recursively from a set of permitted starting and continuing characters.",
+    why: "The replacement rules define a context-free grammar for a simplified identifier system, where identifiers can start with certain letters or symbols and may include a limited set of digits and additional characters, demonstrating how identifiers are constructed from allowed starting and subsequent characters.",
   };
   return r;
 }
