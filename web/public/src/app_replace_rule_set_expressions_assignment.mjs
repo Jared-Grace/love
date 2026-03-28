@@ -60,6 +60,22 @@ export function app_replace_rule_set_expressions_assignment() {
         end: "y . x = 2",
       },
       {
+        start: "mle = ade",
+        end: "z [ y ] = ade",
+      },
+      {
+        start: "z [ y ] = ade",
+        end: "z [ y ] = ue",
+      },
+      {
+        start: "z [ y ] = ue",
+        end: "z [ y ] = li",
+      },
+      {
+        start: "z [ y ] = li",
+        end: "z [ y ] = 3",
+      },
+      {
         start: "ase",
         end: "id = id = ase",
       },
