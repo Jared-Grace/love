@@ -9,6 +9,7 @@ export function app_new_rule_set_new_2() {
     "sm > ex ;",
     "sm > r e t u r n ;",
     "sm > r e t u r n ex ;",
+    ";",
   ]);
   list_add(rules, "ex > ase");
   let abbreviations = {};
