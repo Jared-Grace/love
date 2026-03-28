@@ -46,7 +46,7 @@ export function app_replace_rule_set_expressions_function_calls() {
       },
       {
         start: "id ( nu , ex )",
-        end: "id ( nu , nu)",
+        end: "id ( nu , nu )",
       },
       {
         start: "id ( nu , nu )",
