@@ -22,7 +22,7 @@ export async function app_replace_rule_sets_fns_migrate_used() {
     let code = js_unparse(value);
     let expression = js_parse_expression(code);
     log(app_replace_rule_sets_fns_migrate_used.name, {
-      code,
+      expression,
     });
   }
   let result = await app_replace_rule_sets_fns_transform(lambda);
