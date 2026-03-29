@@ -1,4 +1,4 @@
-import { lambda_timeout } from "../../../love/public/src/lambda_timeout.mjs";
+import { lambda_timeout_null } from "../../../love/public/src/lambda_timeout_null.mjs";
 import { list_map_property_invoke } from "../../../love/public/src/list_map_property_invoke.mjs";
 import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
 import { app_replace_animation_duration_get } from "../../../love/public/src/app_replace_animation_duration_get.mjs";
@@ -192,7 +192,9 @@ export async function app_replace_rule_set(context) {
       );
       return t_inner;
     }
-    let t = await lambda_timeout_null(lambda, 1000);$inn
+    let t = await lambda_timeout_null(lambda, 1000);
+    if (null_not_is(value5)) {
+    }
     if (false) {
     }
     let found = property_get(t, "found");
