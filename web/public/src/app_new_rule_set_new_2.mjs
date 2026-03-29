@@ -5,7 +5,7 @@ import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mj
 export function app_new_rule_set_new_2() {
   const rules = [];
   app_replace_rule_set_statements_for_rules(rules);
-  list_add_multiple(rules, ["fd > b"]);
+  list_add_multiple(rules, ["fd > "]);
   let abbreviations = {};
   app_replace_rule_set_statements_for_abbreviations(abbreviations);
   object_merge(abbreviations, {
