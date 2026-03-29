@@ -97,6 +97,322 @@ export function app_replace_rule_set_scientific_notation_numbers() {
       },
     ],
     why: "The replacement rules define a grammar for parsing and generating numbers in scientific notation, including integers, decimals, and exponent parts with optional signs, demonstrating how such numbers are constructed from digits and symbols according to standard scientific notation conventions.",
+    rules_used: [
+      [
+        {
+          left: ["de"],
+          right: ["in", "."],
+        },
+        {
+          left: ["ex"],
+          right: ["ig"],
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+        },
+        {
+          left: ["sn"],
+          right: ["de", "se"],
+        },
+        {
+          left: ["eE"],
+          right: ["e"],
+        },
+        {
+          left: ["se"],
+          right: ["eE", "ex"],
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+        {
+          left: ["in"],
+          right: ["di"],
+        },
+        {
+          left: ["pi"],
+          right: ["1"],
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+        },
+      ],
+      [
+        {
+          left: ["se"],
+          right: ["eE", "ex"],
+        },
+        {
+          left: ["ex"],
+          right: ["+", "ig"],
+        },
+        {
+          left: ["eE"],
+          right: ["E"],
+        },
+        {
+          left: ["de"],
+          right: ["in", "."],
+        },
+        {
+          left: ["sn"],
+          right: ["de", "se"],
+        },
+      ],
+      [
+        {
+          left: ["ig"],
+          right: ["di"],
+        },
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+        },
+        {
+          left: ["pi"],
+          right: ["2"],
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+        {
+          left: ["in"],
+          right: ["di"],
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["3"],
+        },
+        {
+          left: ["pi"],
+          right: ["9"],
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+      ],
+      [
+        {
+          left: ["sn"],
+          right: ["de", "se"],
+        },
+        {
+          left: ["ex"],
+          right: ["-", "ig"],
+        },
+        {
+          left: ["se"],
+          right: ["eE", "ex"],
+        },
+        {
+          left: ["de"],
+          right: [".", "ig"],
+        },
+        {
+          left: ["eE"],
+          right: ["e"],
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+        },
+      ],
+      [
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+        },
+        {
+          left: ["pi"],
+          right: ["3"],
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["8"],
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+        {
+          left: ["pi"],
+          right: ["5"],
+        },
+        {
+          left: ["pi"],
+          right: ["1"],
+        },
+      ],
+      [
+        {
+          left: ["ig"],
+          right: ["di"],
+        },
+        {
+          left: ["se"],
+          right: ["eE", "ex"],
+        },
+        {
+          left: ["de"],
+          right: ["in", ".", "ig"],
+        },
+        {
+          left: ["eE"],
+          right: ["E"],
+        },
+        {
+          left: ["sn"],
+          right: ["de", "se"],
+        },
+        {
+          left: ["ex"],
+          right: ["ig"],
+        },
+      ],
+      [
+        {
+          left: ["ig"],
+          right: ["di"],
+        },
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["3"],
+        },
+        {
+          left: ["in"],
+          right: ["di"],
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+        {
+          left: ["pi"],
+          right: ["1"],
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["6"],
+        },
+        {
+          left: ["pi"],
+          right: ["4"],
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["ig"],
+        },
+        {
+          left: ["se"],
+          right: ["eE", "ex"],
+        },
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+        {
+          left: ["eE"],
+          right: ["e"],
+        },
+        {
+          left: ["sn"],
+          right: ["ig", "se"],
+        },
+      ],
+      [
+        {
+          left: ["ig"],
+          right: ["di"],
+        },
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+        },
+        {
+          left: ["pi"],
+          right: ["5"],
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["7"],
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+        {
+          left: ["pi"],
+          right: ["6"],
+        },
+        {
+          left: ["pi"],
+          right: ["4"],
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["0"],
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+        {
+          left: ["pi"],
+          right: ["7"],
+        },
+      ],
+    ],
   };
   return r;
 }

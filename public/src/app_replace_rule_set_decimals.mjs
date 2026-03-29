@@ -50,6 +50,160 @@ export function app_replace_rule_set_decimals() {
       },
     ],
     why: "The replacement rules define a context-free grammar for decimal numbers, including integers and numbers with fractional parts, by specifying how digits and decimal points can be combined to form valid decimal representations.",
+    rules_used: [
+      [
+        {
+          left: ["di"],
+          right: ["0"],
+        },
+        {
+          left: ["in"],
+          right: ["di"],
+        },
+        {
+          left: ["de"],
+          right: ["in", "."],
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["5"],
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+        },
+        {
+          left: ["de"],
+          right: [".", "ig"],
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+        {
+          left: ["pi"],
+          right: ["2"],
+        },
+        {
+          left: ["in"],
+          right: ["di"],
+        },
+        {
+          left: ["de"],
+          right: ["in", "."],
+        },
+      ],
+      [
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+        },
+        {
+          left: ["de"],
+          right: ["in", ".", "ig"],
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+        {
+          left: ["pi"],
+          right: ["1"],
+        },
+        {
+          left: ["pi"],
+          right: ["4"],
+        },
+        {
+          left: ["pi"],
+          right: ["3"],
+        },
+      ],
+      [
+        {
+          left: ["de"],
+          right: ["in", "."],
+        },
+        {
+          left: ["in"],
+          right: ["pi", "ig"],
+        },
+        {
+          left: ["de"],
+          right: ["in", ".", "ig"],
+        },
+      ],
+      [
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+        },
+        {
+          left: ["de"],
+          right: ["in", ".", "ig"],
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["7"],
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+        {
+          left: ["pi"],
+          right: ["9"],
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["5"],
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+        {
+          left: ["pi"],
+          right: ["8"],
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["6"],
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+        {
+          left: ["pi"],
+          right: ["7"],
+        },
+      ],
+    ],
   };
   return r;
 }

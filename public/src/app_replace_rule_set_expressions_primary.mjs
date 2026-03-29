@@ -69,6 +69,202 @@ export function app_replace_rule_set_expressions_primary() {
       },
     ],
     why: "The replacement rules define a grammar for primary expressions in a programming language, allowing identifiers, literals (numbers, strings, booleans, null), and parenthesized expressions, demonstrating how basic building blocks of expressions are structured and parsed.",
+    rules_used: [
+      [
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+        {
+          left: ["st"],
+          right: ['"', "l", "u", "v", '"'],
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+        },
+      ],
+      [
+        {
+          left: ["nu"],
+          right: ["de"],
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+        },
+        {
+          left: ["id"],
+          right: ["x"],
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+        {
+          left: ["bo"],
+          right: ["true"],
+        },
+        {
+          left: ["li"],
+          right: ["bo"],
+        },
+      ],
+      [
+        {
+          left: ["li"],
+          right: ["bo"],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+        {
+          left: ["bo"],
+          right: ["false"],
+        },
+      ],
+      [
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+        {
+          left: ["in"],
+          right: ["1"],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+      ],
+      [
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+        {
+          left: ["nu"],
+          right: ["de"],
+        },
+        {
+          left: ["de"],
+          right: ["3", ".", "1", "4"],
+        },
+      ],
+      [
+        {
+          left: ["st"],
+          right: ['"', "l", "u", "v", '"'],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+        {
+          left: ["li"],
+          right: ["st"],
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+        {
+          left: ["li"],
+          right: ["bo"],
+        },
+        {
+          left: ["li"],
+          right: ["null"],
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+        },
+        {
+          left: ["li"],
+          right: ["null"],
+        },
+        {
+          left: ["bo"],
+          right: ["false"],
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+        {
+          left: ["ex"],
+          right: ["pe"],
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["pe"],
+        },
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["id"],
+        },
+        {
+          left: ["id"],
+          right: ["y"],
+        },
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+        },
+        {
+          left: ["ex"],
+          right: ["pe"],
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["pe"],
+        },
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+      ],
+    ],
   };
   return r;
 }

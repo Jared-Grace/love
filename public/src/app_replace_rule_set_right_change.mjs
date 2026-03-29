@@ -17,6 +17,26 @@ export function app_replace_rule_set_right_change() {
       },
     ],
     why: "The replacement rules demonstrate a context-sensitive grammar where every occurrence of 'a b' can be replaced with 'a c', allowing selective transformation of 'b's that are immediately preceded by 'a' into 'c's, as shown by the progression from the start to end strings in the goals.",
+    rules_used: [
+      [
+        {
+          left: ["a", "b"],
+          right: ["a", "c"],
+        },
+      ],
+      [
+        {
+          left: ["a", "b"],
+          right: ["a", "c"],
+        },
+      ],
+      [
+        {
+          left: ["a", "b"],
+          right: ["a", "c"],
+        },
+      ],
+    ],
   };
   return r;
 }

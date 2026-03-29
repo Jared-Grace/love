@@ -56,6 +56,178 @@ export function app_replace_rule_set_identifiers_simple() {
     ],
     abbreviations,
     why: "The replacement rules define a context-free grammar for a simplified identifier system, where identifiers can start with certain letters or symbols and may include a limited set of digits and additional characters, demonstrating how identifiers are constructed from allowed starting and subsequent characters.",
+    rules_used: [
+      [
+        {
+          left: ["idf"],
+          right: ["_"],
+        },
+        {
+          left: ["id"],
+          right: ["idf"],
+        },
+        {
+          left: ["ida"],
+          right: ["di"],
+        },
+      ],
+      [
+        {
+          left: ["idf"],
+          right: ["B"],
+        },
+        {
+          left: ["idg"],
+          right: ["ida"],
+        },
+        {
+          left: ["id"],
+          right: ["idf", "idg"],
+        },
+      ],
+      [
+        {
+          left: ["ida"],
+          right: ["di"],
+        },
+        {
+          left: ["di"],
+          right: ["1"],
+        },
+        {
+          left: ["idf"],
+          right: ["$"],
+        },
+      ],
+      [
+        {
+          left: ["ida"],
+          right: ["di"],
+        },
+        {
+          left: ["idf"],
+          right: ["t"],
+        },
+        {
+          left: ["idg"],
+          right: ["ida"],
+        },
+        {
+          left: ["di"],
+          right: ["3"],
+        },
+        {
+          left: ["id"],
+          right: ["idf", "idg"],
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["idf", "idg"],
+        },
+        {
+          left: ["idg"],
+          right: ["ida"],
+        },
+        {
+          left: ["idg"],
+          right: ["ida", "idg"],
+        },
+      ],
+      [
+        {
+          left: ["idf"],
+          right: ["v"],
+        },
+        {
+          left: ["idf"],
+          right: ["u"],
+        },
+        {
+          left: ["idf"],
+          right: ["l"],
+        },
+        {
+          left: ["ida"],
+          right: ["idf"],
+        },
+      ],
+      [
+        {
+          left: ["idg"],
+          right: ["ida", "idg"],
+        },
+        {
+          left: ["idg"],
+          right: ["ida"],
+        },
+        {
+          left: ["id"],
+          right: ["idf", "idg"],
+        },
+      ],
+      [
+        {
+          left: ["ida"],
+          right: ["idf"],
+        },
+        {
+          left: ["di"],
+          right: ["3"],
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+        },
+      ],
+      [
+        {
+          left: ["idf"],
+          right: ["B"],
+        },
+        {
+          left: ["idf"],
+          right: ["A"],
+        },
+        {
+          left: ["idf"],
+          right: ["$"],
+        },
+      ],
+      [
+        {
+          left: ["ida"],
+          right: ["idf"],
+        },
+        {
+          left: ["ida"],
+          right: ["di"],
+        },
+        {
+          left: ["idf"],
+          right: ["B"],
+        },
+      ],
+      [
+        {
+          left: ["idf"],
+          right: ["h"],
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+        },
+        {
+          left: ["idf"],
+          right: ["J"],
+        },
+        {
+          left: ["idf"],
+          right: ["$"],
+        },
+      ],
+    ],
   };
   return r;
 }

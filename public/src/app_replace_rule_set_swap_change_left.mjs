@@ -25,6 +25,38 @@ export function app_replace_rule_set_swap_change_left() {
       },
     ],
     why: "The replacement rule demonstrates a context-sensitive grammar where every occurrence of 'b' followed by 'c' can be replaced with 'a' followed by 'b', effectively transforming sequences of 'b','c' pairs into 'a','b' pairs from left to right.",
+    rules_used: [
+      [
+        {
+          left: ["b", "c"],
+          right: ["a", "b"],
+        },
+      ],
+      [
+        {
+          left: ["b", "c"],
+          right: ["a", "b"],
+        },
+      ],
+      [
+        {
+          left: ["b", "c"],
+          right: ["a", "b"],
+        },
+      ],
+      [
+        {
+          left: ["b", "c"],
+          right: ["a", "b"],
+        },
+      ],
+      [
+        {
+          left: ["b", "c"],
+          right: ["a", "b"],
+        },
+      ],
+    ],
   };
   return r;
 }
