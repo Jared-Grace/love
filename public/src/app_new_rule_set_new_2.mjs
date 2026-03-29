@@ -139,7 +139,7 @@ export function app_new_rule_set_new_2() {
           " id ( id ) { let id = ex , id ; sm return ex ; }",
         end:
           js_keyword_function() +
-          " s u m ( l i s t ) { let id = ex , id ; fs return ex ; }",
+          " s u m ( l i s t ) { let id = ex , id ; s u m = s u m + 1 return ex ; }",
       },
     ],
   };
