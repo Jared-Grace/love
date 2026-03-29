@@ -1,3 +1,4 @@
+import { log_exit } from "../../../love/public/src/log_exit.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
@@ -42,6 +43,7 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
       list_remove(properties, p_existing);
     }
     let expression = js_object_to_expression(rules_used);
+    log_exit(message);
     let p = js_property(p_name, expression);
     list_add(properties, p);
     log(app_replace_rule_sets_fns_rules_used_generate.name, {
