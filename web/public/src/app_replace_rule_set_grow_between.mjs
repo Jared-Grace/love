@@ -17,29 +17,6 @@ export function app_replace_rule_set_grow_between() {
       },
     ],
     why: "The rules demonstrate an insertion grammar where every occurrence of two consecutive 'a's is replaced by 'a', 'b', 'a', effectively growing the string by inserting 'b' between each pair of 'a's.",
-    rules_used: [
-      [
-        {
-          left: ["a", "a"],
-          right: ["a", "b", "a"],
-          original: "a a > a b a",
-        },
-      ],
-      [
-        {
-          left: ["a", "a"],
-          right: ["a", "b", "a"],
-          original: "a a > a b a",
-        },
-      ],
-      [
-        {
-          left: ["a", "a"],
-          right: ["a", "b", "a"],
-          original: "a a > a b a",
-        },
-      ],
-    ],
   };
   return r;
 }

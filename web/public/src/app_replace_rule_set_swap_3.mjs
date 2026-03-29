@@ -17,59 +17,6 @@ export function app_replace_rule_set_swap_3() {
       },
     ],
     why: "The replacement rules demonstrate a grammar for swapping the letter 'a' with any immediately following letter ('b', 'c', or 'd'), allowing 'a' to move rightward through a sequence by repeated applications.",
-    rules_used: [
-      [
-        {
-          left: ["a", "b"],
-          right: ["b", "a"],
-          original: "a b > b a",
-        },
-        {
-          left: ["a", "c"],
-          right: ["c", "a"],
-          original: "a c > c a",
-        },
-        {
-          left: ["a", "d"],
-          right: ["d", "a"],
-          original: "a d > d a",
-        },
-      ],
-      [
-        {
-          left: ["a", "b"],
-          right: ["b", "a"],
-          original: "a b > b a",
-        },
-        {
-          left: ["a", "c"],
-          right: ["c", "a"],
-          original: "a c > c a",
-        },
-        {
-          left: ["a", "d"],
-          right: ["d", "a"],
-          original: "a d > d a",
-        },
-      ],
-      [
-        {
-          left: ["a", "c"],
-          right: ["c", "a"],
-          original: "a c > c a",
-        },
-        {
-          left: ["a", "b"],
-          right: ["b", "a"],
-          original: "a b > b a",
-        },
-        {
-          left: ["a", "d"],
-          right: ["d", "a"],
-          original: "a d > d a",
-        },
-      ],
-    ],
   };
   return r;
 }

@@ -17,44 +17,6 @@ export function app_replace_rule_set_shrink_different_2() {
       },
     ],
     why: "The rules demonstrate how sequences of 'd','e' can be replaced by 'b', and then 'b','c' by 'a', allowing reduction of complex strings to simpler forms, ultimately transforming specific starting sequences into one or more 'a's.",
-    rules_used: [
-      [
-        {
-          left: ["b", "c"],
-          right: ["a"],
-          original: "b c > a",
-        },
-        {
-          left: ["d", "e"],
-          right: ["b"],
-          original: "d e > b",
-        },
-      ],
-      [
-        {
-          left: ["b", "c"],
-          right: ["a"],
-          original: "b c > a",
-        },
-        {
-          left: ["d", "e"],
-          right: ["b"],
-          original: "d e > b",
-        },
-      ],
-      [
-        {
-          left: ["b", "c"],
-          right: ["a"],
-          original: "b c > a",
-        },
-        {
-          left: ["d", "e"],
-          right: ["b"],
-          original: "d e > b",
-        },
-      ],
-    ],
   };
   return r;
 }

@@ -17,29 +17,6 @@ export function app_replace_rule_set_same_replace_left() {
       },
     ],
     why: "The rules demonstrate a grammar where every occurrence of two consecutive 'a's is replaced by 'b','a', allowing multiple non-overlapping replacements from left to right, which transforms sequences of 'a's into alternating 'b','a' patterns.",
-    rules_used: [
-      [
-        {
-          left: ["a", "a"],
-          right: ["b", "a"],
-          original: "a a > b a",
-        },
-      ],
-      [
-        {
-          left: ["a", "a"],
-          right: ["b", "a"],
-          original: "a a > b a",
-        },
-      ],
-      [
-        {
-          left: ["a", "a"],
-          right: ["b", "a"],
-          original: "a a > b a",
-        },
-      ],
-    ],
   };
   return r;
 }
