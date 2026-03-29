@@ -17,6 +17,7 @@ export function app_new_rule_set_new_2() {
     "id > i n v o k e",
     "ex > true",
     "ex > i",
+    "ex > f ( )",
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_for_abbreviations(abbreviations);
