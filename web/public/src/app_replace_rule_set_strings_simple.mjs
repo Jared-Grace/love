@@ -76,6 +76,192 @@ export function app_replace_rule_set_strings_simple() {
     ],
     abbreviations,
     why: "The replacement rules define a grammar for simple string literals consisting of double quotes surrounding a sequence of identifier characters (letters, $, or _), possibly interleaved with a few digits (0, 1, 3), demonstrating how identifiers and digits can be combined to form the contents of quoted strings.",
+    rules_used: [
+      [
+        {
+          left: ["idf"],
+          right: ["B"],
+        },
+        {
+          left: ["stg"],
+          right: ["ida"],
+        },
+        {
+          left: ["st"],
+          right: ['"', "stg", '"'],
+        },
+      ],
+      [
+        {
+          left: ["idf"],
+          right: ["_"],
+        },
+        {
+          left: ["idf"],
+          right: ["v"],
+        },
+        {
+          left: ["ida"],
+          right: ["idf"],
+        },
+      ],
+      [
+        {
+          left: ["st"],
+          right: ['"', "stg", '"'],
+        },
+        {
+          left: ["stg"],
+          right: ["ida"],
+        },
+        {
+          left: ["stg"],
+          right: ["ida", "stg"],
+        },
+      ],
+      [
+        {
+          left: ["ida"],
+          right: ["idf"],
+        },
+        {
+          left: ["idf"],
+          right: ["$"],
+        },
+        {
+          left: ["di"],
+          right: ["1"],
+        },
+        {
+          left: ["ida"],
+          right: ["di"],
+        },
+      ],
+      [
+        {
+          left: ["ida"],
+          right: ["di"],
+        },
+        {
+          left: ["ida"],
+          right: ["idf"],
+        },
+        {
+          left: ["di"],
+          right: ["3"],
+        },
+        {
+          left: ["idf"],
+          right: ["t"],
+        },
+      ],
+      [
+        {
+          left: ["idf"],
+          right: ["v"],
+        },
+        {
+          left: ["idf"],
+          right: ["u"],
+        },
+        {
+          left: ["idf"],
+          right: ["l"],
+        },
+        {
+          left: ["ida"],
+          right: ["idf"],
+        },
+      ],
+      [
+        {
+          left: ["stg"],
+          right: ["ida"],
+        },
+        {
+          left: ["st"],
+          right: ['"', "stg", '"'],
+        },
+        {
+          left: ["stg"],
+          right: ["ida", "stg"],
+        },
+      ],
+      [
+        {
+          left: ["st"],
+          right: ['"', "stg", '"'],
+        },
+        {
+          left: ["stg"],
+          right: ["ida", "stg"],
+        },
+        {
+          left: ["stg"],
+          right: ["ida"],
+        },
+      ],
+      [
+        {
+          left: ["idf"],
+          right: ["u"],
+        },
+        {
+          left: ["ida"],
+          right: ["idf"],
+        },
+        {
+          left: ["di"],
+          right: ["1"],
+        },
+      ],
+      [
+        {
+          left: ["idf"],
+          right: ["B"],
+        },
+        {
+          left: ["idf"],
+          right: ["u"],
+        },
+        {
+          left: ["idf"],
+          right: ["A"],
+        },
+      ],
+      [
+        {
+          left: ["ida"],
+          right: ["di"],
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+        },
+        {
+          left: ["ida"],
+          right: ["idf"],
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["0"],
+        },
+        {
+          left: ["idf"],
+          right: ["$"],
+        },
+        {
+          left: ["idf"],
+          right: ["h"],
+        },
+        {
+          left: ["idf"],
+          right: ["J"],
+        },
+      ],
+    ],
   };
   return r;
 }

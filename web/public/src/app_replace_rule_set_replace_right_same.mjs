@@ -17,6 +17,26 @@ export function app_replace_rule_set_replace_right_same() {
       },
     ],
     why: "The rules demonstrate a grammar that replaces every occurrence of 'a b' with 'a a', effectively transforming all 'b's that follow an 'a' into 'a's, resulting in sequences where 'a's replace 'b's in those specific contexts.",
+    rules_used: [
+      [
+        {
+          left: ["a", "b"],
+          right: ["a", "a"],
+        },
+      ],
+      [
+        {
+          left: ["a", "b"],
+          right: ["a", "a"],
+        },
+      ],
+      [
+        {
+          left: ["a", "b"],
+          right: ["a", "a"],
+        },
+      ],
+    ],
   };
   return r;
 }

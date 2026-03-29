@@ -126,6 +126,492 @@ export function app_replace_rule_set_expressions_additive() {
       },
     ],
     why: "These replacement rules define a context-free grammar for parsing additive expressions, including identifiers, literals (numbers, strings, booleans, null), member access, function calls, unary and binary operations (additive and multiplicative), and grouping with parentheses, demonstrating the structure and precedence of expressions similar to those in programming languages like JavaScript.",
+    rules_used: [
+      [
+        {
+          left: ["ade"],
+          right: ["mue"],
+        },
+        {
+          left: ["ade"],
+          right: ["ade", "ao", "mue"],
+        },
+        {
+          left: ["mue"],
+          right: ["ue"],
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+        },
+      ],
+      [
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+      ],
+      [
+        {
+          left: ["in"],
+          right: ["1"],
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+        },
+        {
+          left: ["ao"],
+          right: ["-"],
+        },
+      ],
+      [
+        {
+          left: ["de"],
+          right: ["3", ".", "1", "4"],
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+        },
+        {
+          left: ["ao"],
+          right: ["+"],
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+        {
+          left: ["nu"],
+          right: ["de"],
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["ade"],
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+        },
+        {
+          left: ["ade"],
+          right: ["ade", "ao", "mue"],
+        },
+      ],
+      [
+        {
+          left: ["ade"],
+          right: ["mue"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+        {
+          left: ["mue"],
+          right: ["ue"],
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+        },
+      ],
+      [
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+      ],
+      [
+        {
+          left: ["ue"],
+          right: ["ce"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+      ],
+      [
+        {
+          left: ["ao"],
+          right: ["-"],
+        },
+        {
+          left: ["ao"],
+          right: ["+"],
+        },
+        {
+          left: ["de"],
+          right: ["3", ".", "1", "4"],
+        },
+        {
+          left: ["nu"],
+          right: ["de"],
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+        },
+      ],
+      [
+        {
+          left: ["ade"],
+          right: ["ade", "ao", "mue"],
+        },
+        {
+          left: ["mue"],
+          right: ["mue", "mo", "ue"],
+        },
+        {
+          left: ["mue"],
+          right: ["ue"],
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+        },
+      ],
+      [
+        {
+          left: ["mue"],
+          right: ["ue"],
+        },
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+      ],
+      [
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+      ],
+      [
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["ao"],
+          right: ["-"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["d", "o", "u", "b", "l", "e"],
+        },
+        {
+          left: ["mo"],
+          right: ["/"],
+        },
+        {
+          left: ["id"],
+          right: ["d", "o", "o", "r"],
+        },
+      ],
+      [
+        {
+          left: ["in"],
+          right: ["2"],
+        },
+        {
+          left: ["in"],
+          right: ["1"],
+        },
+        {
+          left: ["de"],
+          right: ["3", ".", "1", "4"],
+        },
+        {
+          left: ["nu"],
+          right: ["de"],
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+      ],
+      [
+        {
+          left: ["mue"],
+          right: ["ue"],
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+        },
+      ],
+      [
+        {
+          left: ["ag"],
+          right: ["ex"],
+        },
+        {
+          left: ["ce"],
+          right: ["ce", "(", "ag", ")"],
+        },
+        {
+          left: ["ex"],
+          right: ["ade"],
+        },
+      ],
+      [
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+        },
+      ],
+      [
+        {
+          left: ["ade"],
+          right: ["ade", "ao", "mue"],
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+        },
+        {
+          left: ["mue"],
+          right: ["ue"],
+        },
+      ],
+      [
+        {
+          left: ["bo"],
+          right: ["true"],
+        },
+        {
+          left: ["mle"],
+          right: ["mae", ".", "id"],
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+        },
+      ],
+      [
+        {
+          left: ["li"],
+          right: ["bo"],
+        },
+        {
+          left: ["mue"],
+          right: ["mue", "mo", "ue"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+      ],
+      [
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["id"],
+          right: ["r", "e", "f", "r", "e", "s", "h"],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+      ],
+      [
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+        {
+          left: ["mo"],
+          right: ["*"],
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+      ],
+      [
+        {
+          left: ["ao"],
+          right: ["+"],
+        },
+        {
+          left: ["id"],
+          right: ["d", "o", "u", "b", "l", "e"],
+        },
+        {
+          left: ["in"],
+          right: ["1"],
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+      ],
+    ],
   };
   return r;
 }

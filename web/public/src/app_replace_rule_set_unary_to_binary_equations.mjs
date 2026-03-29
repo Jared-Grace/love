@@ -147,6 +147,490 @@ export function app_replace_rule_set_unary_to_binary_equations() {
       },
     ],
     why: "These replacement rules demonstrate the conversion of unary addition equations into binary addition equations, as shown by the transformation of sequences of 'a' (unary digits) into binary digits ('1', '0') and the systematic rewriting of expressions involving addition and equality.",
+    rules_used: [
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+        },
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+        },
+      ],
+      [
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+        },
+      ],
+      [
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+        },
+      ],
+      [
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+        },
+      ],
+      [
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+        },
+      ],
+      [
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+        },
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+        },
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+        },
+      ],
+      [
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+        },
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+        },
+      ],
+      [
+        {
+          left: ["0", "a"],
+          right: ["1"],
+        },
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+        },
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+        },
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+        },
+      ],
+      [
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+        },
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+        },
+      ],
+      [
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+        },
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+        },
+      ],
+      [
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+        },
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+        },
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+        },
+      ],
+      [
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+        },
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+        },
+      ],
+      [
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+        },
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+        },
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+        },
+      ],
+      [
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+        },
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+        },
+      ],
+      [
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+        },
+      ],
+      [
+        {
+          left: ["0", "a"],
+          right: ["1"],
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+        },
+      ],
+      [
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+        },
+      ],
+      [
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+        },
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+        },
+      ],
+    ],
   };
   return r;
 }

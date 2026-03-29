@@ -33,6 +33,118 @@ export function app_replace_rule_set_binary_counting() {
       },
     ],
     why: "The replacement rules demonstrate binary counting by simulating the process of incrementing a binary number, where 'a' acts as an increment operator and the rules handle binary addition and carry propagation.",
+    rules_used: [
+      [
+        {
+          left: ["c"],
+          right: ["a", "c"],
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+        },
+      ],
+      [
+        {
+          left: ["c"],
+          right: ["a", "c"],
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+        },
+      ],
+      [
+        {
+          left: ["0", "a"],
+          right: ["1"],
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+        },
+        {
+          left: ["c"],
+          right: ["a", "c"],
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+        },
+        {
+          left: ["c"],
+          right: ["a", "c"],
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+        },
+        {
+          left: ["c"],
+          right: ["a", "c"],
+        },
+      ],
+      [
+        {
+          left: ["c"],
+          right: ["a", "c"],
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+        },
+      ],
+      [
+        {
+          left: ["0", "a"],
+          right: ["1"],
+        },
+        {
+          left: ["c"],
+          right: ["a", "c"],
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+        },
+      ],
+    ],
   };
   return r;
 }

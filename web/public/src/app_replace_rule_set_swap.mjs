@@ -21,6 +21,32 @@ export function app_replace_rule_set_swap() {
       },
     ],
     why: "The replacement rules demonstrate a grammar for swapping adjacent 'a' and 'b' symbols, effectively moving all 'a's to the end of the sequence by repeatedly swapping any 'a' that appears before a 'b'.",
+    rules_used: [
+      [
+        {
+          left: ["a", "b"],
+          right: ["b", "a"],
+        },
+      ],
+      [
+        {
+          left: ["a", "b"],
+          right: ["b", "a"],
+        },
+      ],
+      [
+        {
+          left: ["a", "b"],
+          right: ["b", "a"],
+        },
+      ],
+      [
+        {
+          left: ["a", "b"],
+          right: ["b", "a"],
+        },
+      ],
+    ],
   };
   return r;
 }
