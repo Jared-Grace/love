@@ -1,3 +1,4 @@
+import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
@@ -39,7 +40,8 @@ export async function app_replace_rule_sets_fns_migrate_used() {
       item,
       p_name,
     );
-    if (null_not_is(name_property)) {lr
+    if (null_not_is(name_property)) {
+      list_remove(list, item2);
     }
     list_add(properties, p);
     log(app_replace_rule_sets_fns_migrate_used.name, {
