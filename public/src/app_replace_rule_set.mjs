@@ -151,6 +151,7 @@ export async function app_replace_rule_set(context) {
   let rbs = null;
   const duration = app_replace_animation_duration_get(context);
   let refresh_count = 0;
+  let rules_used2 = property_get(rs, "rules_used");
   rules_used = app_replace_rule_set_rules_used(rules_parsed, start, end);
   let exists2 = property_exists(rs, "abbreviations");
   if (exists2) {
