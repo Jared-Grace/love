@@ -212,8 +212,8 @@ export async function app_replace_rule_set(context) {
         arrow,
       });
       return rb;
-    }
-    let rules_buttons = list_map_index(rules_used, each_rule);
+    }$s
+    let rbs = list_map_index(rules_used, each_rule);
     function refresh_rb(rb, index2) {
       let rule2 = property_get(rb, "rule");
       let size2 = list_size(start);
@@ -240,7 +240,7 @@ export async function app_replace_rule_set(context) {
         refresh_rb,
       });
     }
-    each_index(rules_buttons, refresh_rb);
+    each_index(rbs, refresh_rb);
     html_clear(div_refresh);
     let div_symbols = html_div(div_refresh);
     function symbols_mapper(symbol, index) {
@@ -255,7 +255,7 @@ export async function app_replace_rule_set(context) {
             symbols_invalid_chosen,
             sbs,
             start_indices,
-            rules_buttons,
+            rbs,
             duration,
             div_symbols,
           ));
