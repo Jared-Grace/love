@@ -176,7 +176,7 @@ export async function app_replace_rule_set(context) {
     let found = property_get(t, "found");
     if (not(found)) {
       html_style_background_color_set(start_over, "red");
-      html_font_color_set(start_over, 'white');
+      html_font_color_set(start_over, "white");
     }
     refresh_count_increase();
     function each_rule(rule, index) {
