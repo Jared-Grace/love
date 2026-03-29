@@ -21,8 +21,8 @@ import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function app_replace_rule_sets_fns_rules_used_generate() {
   async function lambda3(oad) {
     async function lambda(a) {
-      let name = property_get(a, "name");
-      let rs = await function_run_args_none(name);
+      let f_name = property_get(a, "name");
+      let rs = await function_run_args_none(f_name);
       log(app_replace_rule_sets_fns_rules_used_generate.name, {
         rs,
       });
@@ -44,7 +44,7 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
       let s = js_string(p_name);
       let p = js_property(s, expression);
       list_add(properties, p);
-      oad(name, rules_used);
+      oad(f_name, rules_used);
     }
     let r2 =
       await app_replace_rule_sets_fns_transform_lambda_curried_right(lambda);
