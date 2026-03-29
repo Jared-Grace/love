@@ -17,7 +17,7 @@ export async function app_replace_rule_sets_fns_migrate_capitalization_upper() {
   let fns = app_replace_rule_sets_fns_names();
   let result = list_map_name(fns);
   async function lambda3(ast) {
-    let name2 = js_flo_name(ast2);
+    let name = js_flo_name(ast);
     log(app_replace_rule_sets_fns_migrate_capitalization_upper.name, {
       name,
     });
