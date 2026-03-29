@@ -5,8 +5,8 @@ export async function command_line_generic(command, extra) {
   text_is_assert(command);
   const c = await import("child_process");
   let exec = property_get(c, "exec");
-  const r2 = await import("util");
-  let promisify = property_get(r2, "promisify");
+  const u = await import("util");
+  let promisify = property_get(u, "promisify");
   const execAsync = promisify(exec);
   const options = {
     encoding: "utf8",
