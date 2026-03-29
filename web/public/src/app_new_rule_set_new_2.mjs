@@ -54,6 +54,14 @@ export function app_new_rule_set_new_2() {
     abbreviations,
     goals: [
       {
+        start:
+          js_keyword_function() +
+          " id ( id ) { let id = ex , id ; for ( i = 0 ; i < l i s t . s i z e ; i = i + 1 ) sm return ex ; }",
+        end:
+          js_keyword_function() +
+          " l i s t _ s u m ( l i s t ) { let s u m = 0 , id ; for ( i = 0 ; i < l i s t . s i z e ; i = i + 1 ) s u m = s u m + l i s t [ 0 ] ; return s u m ; }",
+      },
+      {
         start: "fd",
         end: js_keyword_function() + " e m p t y ( ) { }",
       },
