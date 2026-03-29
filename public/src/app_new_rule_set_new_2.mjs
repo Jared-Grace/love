@@ -72,6 +72,11 @@ export function app_new_rule_set_new_2() {
         start: js_keyword_function() + " id ( id , id ) { return ex ; }",
         end: js_keyword_function() + " a d d ( x , y ) { return x + y ; }",
       },
+      {
+        start: js_keyword_function() + " id ( id , id ) { return ex ; }",
+        end:
+          js_keyword_function() + " a v e r a g e ( x , y ) { return x + y ; }",
+      },
     ],
   };
   return r;
