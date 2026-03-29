@@ -1,5 +1,3 @@
-import { html_scroll_center } from "../../../love/public/src/html_scroll_center.mjs";
-import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { list_map_property_invoke } from "../../../love/public/src/list_map_property_invoke.mjs";
 import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
 import { app_replace_animation_duration_get } from "../../../love/public/src/app_replace_animation_duration_get.mjs";
@@ -9,7 +7,6 @@ import { app_replace_rule_set_title } from "../../../love/public/src/app_replace
 import { html_progress_bar } from "../../../love/public/src/html_progress_bar.mjs";
 import { list_map_property_multiple } from "../../../love/public/src/list_map_property_multiple.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
-import { app_replace_rule_set_verify_from_try } from "../../../love/public/src/app_replace_rule_set_verify_from_try.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { app_replace_rule_set_attribute_hint } from "../../../love/public/src/app_replace_rule_set_attribute_hint.mjs";
 import { app_replace_rule_set_attribute_refresh_count } from "../../../love/public/src/app_replace_rule_set_attribute_refresh_count.mjs";
@@ -173,13 +170,6 @@ export async function app_replace_rule_set(context) {
   await refresh();
   async function refresh() {
     html_clear(div_rules_buttons);
-    let t = app_replace_rule_set_verify_from_try(rules_used, start, end);
-    let found = property_get(t, "found");
-    if (not(found)) {
-      html_style_background_color_set(start_over, "red");
-      html_font_color_set(start_over, "white");
-      await html_scroll_center(start_over);
-    }
     refresh_count_increase();
     function each_rule(rule, index) {
       function button_rule_on_click() {
