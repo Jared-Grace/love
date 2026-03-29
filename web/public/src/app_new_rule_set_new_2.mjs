@@ -33,7 +33,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: "fd",
-        end: js_keyword_function() + " t a u t o l o g y ( ) { return true; }",
+        end: js_keyword_function() + " t a u t o l o g y ( ) { return true ; }",
       },
     ],
   };
