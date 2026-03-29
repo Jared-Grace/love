@@ -1,3 +1,4 @@
+import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_replace_rules_parse_left_right_only } from "../../../love/public/src/app_replace_rules_parse_left_right_only.mjs";
 import { app_replace_rule_set_rules_used } from "../../../love/public/src/app_replace_rule_set_rules_used.mjs";
@@ -16,6 +17,7 @@ export async function app_replace_rule_sets_fns_migrate_used() {
     let goals = property_get(rs, "goals");
     let rules_parsed = app_replace_rules_parse_left_right_only(rules);
     function lambda2(g) {
+      let r4 = app_replace_start_end_get(goal);
       let end = property_get(g, "end");
       let start = property_get(g, "start");
       let ru = app_replace_rule_set_rules_used(rules_parsed, start, end);
