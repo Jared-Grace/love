@@ -45,7 +45,7 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
       let s = js_string(p_name);
       let p = js_property(s, expression);
       list_add(properties, p);
-      oad(f_name, rules_used);
+      oad(name2, rules_used);
     }
     let r2 =
       await app_replace_rule_sets_fns_transform_lambda_curried_right(lambda);
