@@ -16,6 +16,7 @@ import { function_run_args_none } from "../../../love/public/src/function_run_ar
 import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function app_replace_rule_sets_fns_rules_used_generate() {
+  oea;
   async function lambda(a) {
     let name = property_get(a, "name");
     let rs = await function_run_args_none(name);
