@@ -19,6 +19,8 @@ export function app_new_rule_set_new_2() {
     "id > i n v o k e",
     "id > a d d",
     "id > a v e r a g e",
+    "id > l i s t",
+    "id > l i s t _ s u m",
     "id > i",
     "id > f",
     "id > x",
