@@ -8,9 +8,6 @@ import { app_replace_rule_sets_fns_transform } from "../../../love/public/src/ap
 export async function app_replace_rule_sets_fns_migrate_used() {
   async function lambda(a) {
     let name = property_get(a, "name");
-    log(app_replace_rule_sets_fns_migrate_used.name, {
-      name,
-    });
     let rs = await function_run_args_none(name);
     log(app_replace_rule_sets_fns_migrate_used.name, {
       rs,
