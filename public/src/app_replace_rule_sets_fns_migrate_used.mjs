@@ -18,7 +18,9 @@ export async function app_replace_rule_sets_fns_migrate_used() {
     let rules = property_get(rs, "rules");
     let goals = property_get(rs, "goals");
     let rules_parsed = app_replace_rules_parse_left_right_only(rules);
-    function lambda2(item2) {}
+    function lambda2(g) {
+      let end2 = property_get(start, "end");
+    }
     list_map(goals, lambda2);
     let rules_used = app_replace_rule_set_rules_used(rules_parsed, start, end);
   }
