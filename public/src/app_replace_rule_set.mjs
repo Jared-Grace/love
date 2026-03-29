@@ -1,3 +1,4 @@
+import { lambda_timeout } from "../../../love/public/src/lambda_timeout.mjs";
 import { list_map_property_invoke } from "../../../love/public/src/list_map_property_invoke.mjs";
 import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
 import { app_replace_animation_duration_get } from "../../../love/public/src/app_replace_animation_duration_get.mjs";
@@ -184,6 +185,7 @@ export async function app_replace_rule_set(context) {
   async function refresh() {
     html_clear(div_rules_buttons);
     let t = app_replace_rule_set_verify_from_try(rules_parsed, start, end);
+    let r32 = lambda_timeout(fn, ms);
     let found = property_get(t, "found");
     if (not(found)) {
       html_style_background_color_set(start_over, highlight);
