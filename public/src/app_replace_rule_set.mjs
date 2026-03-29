@@ -268,7 +268,8 @@ export async function app_replace_rule_set(context) {
         let rule2 = list_get(rules_used, index_selected);
         let valid = app_replace_rule_valid(rule2, index3, start);
       }
-      refresh_sb();om
+      refresh_sb();
+      let to2 = object_merge(to, from);
       let exists = property_exists(symbols_invalid_chosen, index);
       if (exists) {
         app_replace_button_symbol_style_invalid(sb);
