@@ -1,16 +1,6 @@
+import { lambda_timeout_generic } from "../../../love/public/src/lambda_timeout_generic.mjs";
 export async function lambda_timeout(fn, ms) {
   let value = new Error(lambda_timeout.name);
-  let v = Promise.resolve().then(fn);
-  let r = await Promise.race([
-    v,
-    new Promise(function lambda2(_, reject) {
-      function lambda() {
-        let r4 = reject(value);
-        return r4;
-      }
-      let r2 = setTimeout(lambda, ms);
-      return r2;
-    }),
-  ]);
+  let r = await lambda_timeout_generic(fn, value, ms);
   return r;
 }
