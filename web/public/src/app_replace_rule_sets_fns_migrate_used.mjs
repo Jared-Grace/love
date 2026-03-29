@@ -1,4 +1,4 @@
-import { function_run } from "../../../love/public/src/function_run.mjs";
+import { function_run_args_none } from "../../../love/public/src/function_run_args_none.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
@@ -26,7 +26,7 @@ export async function app_replace_rule_sets_fns_migrate_used() {
       expression,
     });
     let name = property_get(a, "name");
-    let result2 = await function_run(f_name, args);
+    let result2 = await function_run_args_none(name);
   }
   let result = await app_replace_rule_sets_fns_transform(lambda);
 }
