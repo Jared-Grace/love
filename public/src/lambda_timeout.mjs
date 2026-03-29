@@ -1,4 +1,4 @@
-export function lambda_time_limit(fn, ms) {
+export function lambda_timeout(fn, ms) {
   let v = Promise.resolve().then(fn);
   let r3 = Promise.race([
     v,
