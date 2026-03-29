@@ -1,3 +1,4 @@
+import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
@@ -19,6 +20,7 @@ export async function app_replace_rule_sets_fns_migrate_used() {
       return;
     }
     let code = js_unparse(value);
+    let expression = js_parse_expression(code_expression);
     log(app_replace_rule_sets_fns_migrate_used.name, {
       code,
     });
