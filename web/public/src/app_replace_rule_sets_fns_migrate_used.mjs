@@ -1,3 +1,4 @@
+import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
@@ -7,9 +8,11 @@ export async function app_replace_rule_sets_fns_migrate_used() {
     let item = property_get(a, "item");
     let p = "goals";
     let goals = js_object_expression_properties_find_key_named(item, p);
-    $ne;
+    const t = goals.value.type;
+    if (equal_not(left, right)) {
+    }
     log(app_replace_rule_sets_fns_migrate_used.name, {
-      goals: goals.value.type,
+      goals: t,
     });
   }
   let result = await app_replace_rule_sets_fns_transform(lambda);
