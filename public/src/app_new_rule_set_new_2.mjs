@@ -1,3 +1,4 @@
+import { js_keyword_function } from "../../../love/public/src/js_keyword_function.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_replace_rule_set_statements_for_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_for_abbreviations.mjs";
 import { app_replace_rule_set_statements_for_rules } from "../../../love/public/src/app_replace_rule_set_statements_for_rules.mjs";
@@ -5,7 +6,9 @@ import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mj
 export function app_new_rule_set_new_2() {
   const rules = [];
   app_replace_rule_set_statements_for_rules(rules);
-  list_add_multiple(rules, ["fd > "]);
+  list_add_multiple(rules, [
+    "fd > " + js_keyword_function() + " id ( " + +" ) bs",
+  ]);
   let abbreviations = {};
   app_replace_rule_set_statements_for_abbreviations(abbreviations);
   object_merge(abbreviations, {
