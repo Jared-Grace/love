@@ -20,14 +20,10 @@ export async function app_replace_rule_sets_fns_migrate_used() {
     let rules_parsed = app_replace_rules_parse_left_right_only(rules);
     function lambda2(g) {
       let end = property_get(start, "end");
-      let ru = app_replace_rule_set_rules_used(
-        rules_parsed,
-        start,
-        end,
-      );
+      let ru = app_replace_rule_set_rules_used(rules_parsed, start, end);
       return ru;
     }
-    rules_used=list_map(goals, lambda2);
+    let rules_used = list_map(goals, lambda2);
   }
   let result = await app_replace_rule_sets_fns_transform(lambda);
 }
