@@ -139,7 +139,15 @@ export function app_new_rule_set_new_2() {
       {
         start:
           js_keyword_function() +
-          " id ( id ) { let id = ex , id ; sm return ex ; }",
+          " id ( id ) { let id = ex , id ; for ( i = 0 ; i < l i s t . s i z e ; i = i + 1 ) sm ; return ex ; }",
+        end:
+          js_keyword_function() +
+          " s u m ( l i s t ) { let id = ex , id ; s u m = s u m + 1 return ex ; }",
+      },
+      {
+        start:
+          js_keyword_function() +
+          " id ( id ) { let id = ex , id ; for ( i = 0 ; i < l i s t . s i z e ; i = i + 1 ) sm ; return ex ; }",
         end:
           js_keyword_function() +
           " s u m ( l i s t ) { let id = ex , id ; s u m = s u m + 1 return ex ; }",
