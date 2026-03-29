@@ -99,7 +99,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: js_keyword_function() + " id ( id ) { sm sm sm }",
-        end: js_keyword_function() + " id ( id ) { let id = ex ; sm sm ; }",
+        end: js_keyword_function() + " id ( id ) { vs ; sm return ex ; }",
       },
       {
         start: js_keyword_function() + " id ( id ) { sm sm sm }",
