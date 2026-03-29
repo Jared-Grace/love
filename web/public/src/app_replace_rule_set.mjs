@@ -153,8 +153,8 @@ export async function app_replace_rule_set(context) {
   if (null_is(rules_used_all)) {
     rules_used = rules_parsed;
   } else {
+    rules_used = list_get(rules_used_all, goal_index);
   }
-  rules_used = list_get(rules_used_all, goal_index);
   let exists2 = property_exists(rs, "abbreviations");
   if (exists2) {
     let properties = ["left", "right"];
