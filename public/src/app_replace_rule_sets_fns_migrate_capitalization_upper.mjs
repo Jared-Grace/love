@@ -11,7 +11,7 @@ export async function app_replace_rule_sets_fns_migrate_capitalization_upper() {
   let result = await app_replace_rule_sets_fns_transform(on_result);
   return result;
   function on_result(a) {
-    let name2 = property_get(a, "name");
+    let name = property_get(a, "name");
     function lambda2(t) {
       log(app_replace_rule_sets_fns_migrate_capitalization_upper.name, {
         t,
