@@ -10,10 +10,10 @@ export async function app_replace_rule_sets_fns_migrate_used() {
     let goals = js_object_expression_properties_find_key_named(item, p);
     const t = goals.value.type;
     if (equal_not(t, "ArrayExpression")) {
+      log(app_replace_rule_sets_fns_migrate_used.name, {
+        goals: t,
+      });
     }
-    log(app_replace_rule_sets_fns_migrate_used.name, {
-      goals: t,
-    });
   }
   let result = await app_replace_rule_sets_fns_transform(lambda);
 }
