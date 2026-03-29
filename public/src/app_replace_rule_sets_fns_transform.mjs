@@ -5,11 +5,9 @@ import { js_list_nodes_object_expression } from "../../../love/public/src/js_lis
 import { log } from "../../../love/public/src/log.mjs";
 import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 import { functions_transform_list } from "../../../love/public/src/functions_transform_list.mjs";
-import { list_map_name } from "../../../love/public/src/list_map_name.mjs";
 import { app_replace_rule_sets_fns_names } from "../../../love/public/src/app_replace_rule_sets_fns_names.mjs";
 export async function app_replace_rule_sets_fns_transform(lambda$a) {
-  let fns = app_replace_rule_sets_fns_names();
-  let result = list_map_name(fns);
+  let result = app_replace_rule_sets_fns_names();
   async function lambda3(ast) {
     let name = js_flo_name(ast);
     log(app_replace_rule_sets_fns_transform.name, {
