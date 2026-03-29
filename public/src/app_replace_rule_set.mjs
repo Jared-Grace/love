@@ -148,6 +148,7 @@ export async function app_replace_rule_set(context) {
   let div_below = html_div(root);
   let success = false;
   let sbs = null;
+  let rbs = null;
   const duration = app_replace_animation_duration_get(context);
   let refresh_count = 0;
   rules_used = app_replace_rule_set_rules_used(
@@ -213,7 +214,6 @@ export async function app_replace_rule_set(context) {
       });
       return rb;
     }
-    let rbs = null;
     rbs = list_map_index(rules_used, each_rule);
     function refresh_rb(rb, index2) {
       let rule2 = property_get(rb, "rule");
