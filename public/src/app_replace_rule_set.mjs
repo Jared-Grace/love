@@ -254,7 +254,7 @@ export async function app_replace_rule_set(context) {
             duration,
             div_symbols,
           ));
-        refresh();
+        await refresh();
       }
       sb = html_button(div_symbols, symbol, symbol_on_click);
       let value = app_replace_rule_set_attribute_symbol(index);
