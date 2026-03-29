@@ -42,6 +42,7 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
     list_add(properties, p);
     log(app_replace_rule_sets_fns_rules_used_generate.name, {
       rules_used,
+      name,
     });
     exit();
   }
