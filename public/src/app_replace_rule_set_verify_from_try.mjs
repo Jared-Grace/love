@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_adder } from "../../../love/public/src/list_adder.mjs";
 import { app_replace_rule_apply } from "../../../love/public/src/app_replace_rule_apply.mjs";
 import { app_replace_rule_valid } from "../../../love/public/src/app_replace_rule_valid.mjs";
@@ -7,6 +8,7 @@ import { json_to } from "../../../love/public/src/json_to.mjs";
 import { graph_search_depth_first } from "../../../love/public/src/graph_search_depth_first.mjs";
 import { app_replace_rule_set_verify_goal_depth_max } from "../../../love/public/src/app_replace_rule_set_verify_goal_depth_max.mjs";
 export function app_replace_rule_set_verify_from_try(rules_parsed, start, end) {
+  log(app_replace_rule_set_verify_from_try.name, {});
   let max_depth = app_replace_rule_set_verify_goal_depth_max();
   let dfs = graph_search_depth_first(
     start,
