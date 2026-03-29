@@ -24,6 +24,9 @@ export async function app_replace_rule_sets_fns_migrate_used() {
       return ru;
     }
     let rules_used = list_map(goals, lambda2);
+    log(app_replace_rule_sets_fns_migrate_used.name, {
+      rules_used,
+    });
   }
   let result = await app_replace_rule_sets_fns_transform(lambda);
 }
