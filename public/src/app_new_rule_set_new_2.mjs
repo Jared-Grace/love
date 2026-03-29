@@ -18,6 +18,9 @@ export function app_new_rule_set_new_2() {
     "id > i n v o k e",
     "ex > true",
     "ex > i",
+    "ex > x + y",
+    "ex > x",
+    "ex > y",
     "ex > f ( )",
   ]);
   let abbreviations = {};
@@ -47,6 +50,10 @@ export function app_new_rule_set_new_2() {
       {
         start: "fd",
         end: js_keyword_function() + " i n v o k e ( f ) { return f ( ) ; }",
+      },
+      {
+        start: "fd",
+        end: js_keyword_function() + " a d d ( x , y ) { return x + y ; }",
       },
     ],
   };
