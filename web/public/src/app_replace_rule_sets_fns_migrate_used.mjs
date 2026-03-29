@@ -31,9 +31,6 @@ export async function app_replace_rule_sets_fns_migrate_used() {
       return ru;
     }
     let rules_used = list_map(goals, lambda2);
-    let expression = js_object_to_expression(rules_used);
-    const p_name = "rules_used";
-    let p = js_property(p_name, expression);
     let item = property_get(a, "item");
     let properties = js_object_expression_properties(item);
     let p_existing = js_object_expression_properties_find_key_named(
@@ -43,6 +40,9 @@ export async function app_replace_rule_sets_fns_migrate_used() {
     if (null_not_is(p_existing)) {
       list_remove(properties, p_existing);
     }
+    let expression = js_object_to_expression(rules_used);
+    const p_name = "rules_used";
+    let p = js_property(p_name, expression);
     list_add(properties, p);
     log(app_replace_rule_sets_fns_migrate_used.name, {
       rules_used,
