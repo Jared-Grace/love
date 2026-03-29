@@ -8,12 +8,7 @@ import { list_size } from "../../../love/public/src/list_size.mjs";
 import { list_unique } from "../../../love/public/src/list_unique.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { app_replace_rule_set_verify_goal_path } from "../../../love/public/src/app_replace_rule_set_verify_goal_path.mjs";
-export function app_replace_rule_set_rules_used(
-  rules_parsed,
-  start,
-  end,
-  rules_used,
-) {
+export function app_replace_rule_set_rules_used(rules_parsed, start, end) {
   let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);
   let mapped = list_map_property(path, "rule");
   rules_used = list_unique(mapped);
