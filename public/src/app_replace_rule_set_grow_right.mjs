@@ -21,6 +21,32 @@ export function app_replace_rule_set_grow_right() {
       },
     ],
     why: "The replacement rules demonstrate a right-growing grammar where each 'g' can be replaced by 'g s', allowing the sequence to expand by adding an 's' to the right of each 'g' in the string; this is evident from the way the goals show progressively longer sequences generated from initial 'g's.",
+    rules_used: [
+      [
+        {
+          left: ["g"],
+          right: ["g", "s"],
+        },
+      ],
+      [
+        {
+          left: ["g"],
+          right: ["g", "s"],
+        },
+      ],
+      [
+        {
+          left: ["g"],
+          right: ["g", "s"],
+        },
+      ],
+      [
+        {
+          left: ["g"],
+          right: ["g", "s"],
+        },
+      ],
+    ],
   };
   return r;
 }

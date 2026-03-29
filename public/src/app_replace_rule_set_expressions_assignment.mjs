@@ -114,6 +114,388 @@ export function app_replace_rule_set_expressions_assignment() {
       },
     ],
     why: "These replacement rules define a context-free grammar for parsing assignment and expression statements similar to those in JavaScript, demonstrating how identifiers, literals, member access, function calls, unary, binary, and assignment expressions are constructed and combined, reflecting the syntactic structure and operator precedence of typical programming languages.",
+    rules_used: [
+      [
+        {
+          left: ["le"],
+          right: ["ee"],
+        },
+        {
+          left: ["id"],
+          right: ["x"],
+        },
+        {
+          left: ["ee"],
+          right: ["re"],
+        },
+        {
+          left: ["ase"],
+          right: ["lh", "=", "ase"],
+        },
+        {
+          left: ["lh"],
+          right: ["id"],
+        },
+        {
+          left: ["ase"],
+          right: ["le"],
+        },
+        {
+          left: ["re"],
+          right: ["ade"],
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["x"],
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+        },
+        {
+          left: ["mue"],
+          right: ["ue"],
+        },
+      ],
+      [
+        {
+          left: ["ue"],
+          right: ["ce"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+      ],
+      [
+        {
+          left: ["in"],
+          right: ["1"],
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+      ],
+      [
+        {
+          left: ["re"],
+          right: ["ade"],
+        },
+        {
+          left: ["le"],
+          right: ["ee"],
+        },
+        {
+          left: ["ase"],
+          right: ["le"],
+        },
+        {
+          left: ["ee"],
+          right: ["re"],
+        },
+        {
+          left: ["lh"],
+          right: ["mle"],
+        },
+        {
+          left: ["ase"],
+          right: ["lh", "=", "ase"],
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["x"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["mle"],
+          right: ["mae", ".", "id"],
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+        },
+        {
+          left: ["id"],
+          right: ["y"],
+        },
+      ],
+      [
+        {
+          left: ["mue"],
+          right: ["ue"],
+        },
+        {
+          left: ["ag"],
+          right: ["ex", ",", "ag"],
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+        },
+      ],
+      [
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+        },
+      ],
+      [
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+      ],
+      [
+        {
+          left: ["ase"],
+          right: ["le"],
+        },
+        {
+          left: ["ex"],
+          right: ["ase"],
+        },
+        {
+          left: ["le"],
+          right: ["ee"],
+        },
+        {
+          left: ["mle"],
+          right: ["mae", "[", "ex", "]"],
+        },
+      ],
+      [
+        {
+          left: ["ee"],
+          right: ["re"],
+        },
+        {
+          left: ["re"],
+          right: ["ade"],
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+        },
+      ],
+      [
+        {
+          left: ["ro"],
+          right: [">"],
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+        },
+        {
+          left: ["id"],
+          right: ["x"],
+        },
+      ],
+      [
+        {
+          left: ["ue"],
+          right: ["ce"],
+        },
+        {
+          left: ["mue"],
+          right: ["ue"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+      ],
+      [
+        {
+          left: ["ue"],
+          right: ["ce"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+        {
+          left: ["mue"],
+          right: ["ue"],
+        },
+      ],
+      [
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["id"],
+          right: ["r", "e", "f", "r", "e", "s", "h"],
+        },
+        {
+          left: ["id"],
+          right: ["d", "o", "u", "b", "l", "e"],
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["y"],
+        },
+        {
+          left: ["id"],
+          right: ["z"],
+        },
+        {
+          left: ["in"],
+          right: ["0"],
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+      ],
+      [
+        {
+          left: ["ade"],
+          right: ["ade", "ao", "mue"],
+        },
+        {
+          left: ["ase"],
+          right: ["lh", "=", "ase"],
+        },
+        {
+          left: ["lh"],
+          right: ["id"],
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["y"],
+        },
+        {
+          left: ["id"],
+          right: ["x"],
+        },
+        {
+          left: ["id"],
+          right: ["l", "o", "v", "e"],
+        },
+      ],
+      [
+        {
+          left: ["ee"],
+          right: ["re"],
+        },
+        {
+          left: ["re"],
+          right: ["ade"],
+        },
+        {
+          left: ["ase"],
+          right: ["le"],
+        },
+        {
+          left: ["le"],
+          right: ["ee"],
+        },
+      ],
+      [
+        {
+          left: ["ade"],
+          right: ["mue"],
+        },
+        {
+          left: ["mue"],
+          right: ["ue"],
+        },
+        {
+          left: ["lo"],
+          right: ["||"],
+        },
+      ],
+      [
+        {
+          left: ["in"],
+          right: ["0"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+        },
+      ],
+    ],
   };
   return r;
 }

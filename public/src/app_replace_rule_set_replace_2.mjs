@@ -21,6 +21,48 @@ export function app_replace_rule_set_replace_2() {
       },
     ],
     why: "The replacement rules demonstrate a simple substitution grammar where every 'a' is replaced by 'b' and every 'c' is replaced by 'd', as shown by the transformation of each start sequence into its corresponding end sequence by applying these rules to each symbol independently.",
+    rules_used: [
+      [
+        {
+          left: ["c"],
+          right: ["d"],
+        },
+        {
+          left: ["a"],
+          right: ["b"],
+        },
+      ],
+      [
+        {
+          left: ["c"],
+          right: ["d"],
+        },
+        {
+          left: ["a"],
+          right: ["b"],
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b"],
+        },
+        {
+          left: ["c"],
+          right: ["d"],
+        },
+      ],
+      [
+        {
+          left: ["c"],
+          right: ["d"],
+        },
+        {
+          left: ["a"],
+          right: ["b"],
+        },
+      ],
+    ],
   };
   return r;
 }

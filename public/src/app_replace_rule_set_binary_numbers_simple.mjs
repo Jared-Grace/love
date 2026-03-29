@@ -5,6 +5,68 @@ export function app_replace_rule_set_binary_numbers_simple() {
     rules: ["0 > 0 0", "0 > 1"],
     goals: app_replace_rule_set_binary_numbers_goals("0"),
     why: "The rules generate all binary numbers starting with '1' by repeatedly doubling the length of zeros and then replacing the last zero with a one, demonstrating a simple binary counting system.",
+    rules_used: [
+      [
+        {
+          left: ["0"],
+          right: ["0", "0"],
+        },
+        {
+          left: ["0"],
+          right: ["1"],
+        },
+      ],
+      [
+        {
+          left: ["0"],
+          right: ["1"],
+        },
+        {
+          left: ["0"],
+          right: ["0", "0"],
+        },
+      ],
+      [
+        {
+          left: ["0"],
+          right: ["1"],
+        },
+        {
+          left: ["0"],
+          right: ["0", "0"],
+        },
+      ],
+      [
+        {
+          left: ["0"],
+          right: ["0", "0"],
+        },
+        {
+          left: ["0"],
+          right: ["1"],
+        },
+      ],
+      [
+        {
+          left: ["0"],
+          right: ["1"],
+        },
+        {
+          left: ["0"],
+          right: ["0", "0"],
+        },
+      ],
+      [
+        {
+          left: ["0"],
+          right: ["0", "0"],
+        },
+        {
+          left: ["0"],
+          right: ["1"],
+        },
+      ],
+    ],
   };
   return r;
 }

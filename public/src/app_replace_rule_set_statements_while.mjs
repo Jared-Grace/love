@@ -41,6 +41,96 @@ export function app_replace_rule_set_statements_while() {
       },
     ],
     why: "The replacement rules define a grammar for JavaScript-like while statements, including variable declarations, expressions, blocks, and if-else statements, demonstrating how complex control flow and statement grouping are constructed from simpler syntactic elements.",
+    rules_used: [
+      [
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+        },
+        {
+          left: ["ws"],
+          right: ["while", "(", "ex", ")", "sm"],
+        },
+        {
+          left: ["ex"],
+          right: ["x", "<", "3"],
+        },
+        {
+          left: ["ex"],
+          right: ["x", "=", "x", "+", "1"],
+        },
+      ],
+      [
+        {
+          left: ["ws"],
+          right: ["while", "(", "ex", ")", "sm"],
+        },
+        {
+          left: ["sm"],
+          right: ["bs"],
+        },
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+        },
+        {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+        },
+        {
+          left: ["ex"],
+          right: ["y", "=", "y", "-", "1"],
+        },
+        {
+          left: ["smg"],
+          right: ["sm"],
+        },
+        {
+          left: ["ex"],
+          right: ["y", ">", "0"],
+        },
+      ],
+      [
+        {
+          left: ["ws"],
+          right: ["while", "(", "ex", ")", "sm"],
+        },
+        {
+          left: ["ex"],
+          right: ["!", "f", "o", "u", "n", "d", "(", "d", "o", "o", "r", ")"],
+        },
+        {
+          left: ["sm"],
+          right: ["bs"],
+        },
+        {
+          left: ["smg"],
+          right: ["sm"],
+        },
+        {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+        },
+        {
+          left: ["smg"],
+          right: ["smg", "sm"],
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["s", "e", "e", "k", "(", ")"],
+        },
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+        },
+        {
+          left: ["ex"],
+          right: ["a", "s", "k", "(", ")"],
+        },
+      ],
+    ],
   };
   return r;
 }

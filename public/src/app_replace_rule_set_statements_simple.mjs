@@ -38,6 +38,64 @@ export function app_replace_rule_set_statements_simple() {
       },
     ],
     why: "The replacement rules define a simple grammar for statements, allowing for empty statements, return statements, expression statements, and return-expression statements, with expressions limited to 'true' or a 'update()' call; this demonstrates a minimal subset of statement and expression syntax, likely for a programming language.",
+    rules_used: [
+      [
+        {
+          left: ["ex"],
+          right: ["true"],
+        },
+        {
+          left: ["sm"],
+          right: [";"],
+        },
+        {
+          left: ["sm"],
+          right: ["return", ";"],
+        },
+      ],
+      [
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+        },
+        {
+          left: ["ex"],
+          right: ["u", "p", "d", "a", "t", "e", "(", ")"],
+        },
+        {
+          left: ["sm"],
+          right: ["return", ";"],
+        },
+      ],
+      [
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+        },
+        {
+          left: ["ex"],
+          right: ["u", "p", "d", "a", "t", "e", "(", ")"],
+        },
+        {
+          left: ["sm"],
+          right: ["return", ";"],
+        },
+      ],
+      [
+        {
+          left: ["sm"],
+          right: ["return", ";"],
+        },
+        {
+          left: ["ex"],
+          right: ["true"],
+        },
+        {
+          left: ["sm"],
+          right: ["return", "ex", ";"],
+        },
+      ],
+    ],
   };
   return r;
 }
