@@ -34,60 +34,72 @@ export function app_replace_rule_set_expand_collapse() {
         {
           left: ["a"],
           right: ["b", "b"],
+          original: "a > b b",
         },
         {
           left: ["b", "b"],
           right: ["c"],
+          original: "b b > c",
         },
       ],
       [
         {
           left: ["a"],
           right: ["b", "b"],
+          original: "a > b b",
         },
         {
           left: ["b", "b"],
           right: ["c"],
+          original: "b b > c",
         },
       ],
       [
         {
           left: ["a"],
           right: ["b", "b"],
+          original: "a > b b",
         },
         {
           left: ["b", "b"],
           right: ["c"],
-        },
-      ],
-      [
-        {
-          left: ["b", "b"],
-          right: ["c"],
-        },
-        {
-          left: ["a"],
-          right: ["b", "b"],
-        },
-      ],
-      [
-        {
-          left: ["b", "b"],
-          right: ["c"],
-        },
-        {
-          left: ["a"],
-          right: ["b", "b"],
+          original: "b b > c",
         },
       ],
       [
         {
           left: ["a"],
           right: ["b", "b"],
+          original: "a > b b",
         },
         {
           left: ["b", "b"],
           right: ["c"],
+          original: "b b > c",
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b", "b"],
+          original: "a > b b",
+        },
+        {
+          left: ["b", "b"],
+          right: ["c"],
+          original: "b b > c",
+        },
+      ],
+      [
+        {
+          left: ["b", "b"],
+          right: ["c"],
+          original: "b b > c",
+        },
+        {
+          left: ["a"],
+          right: ["b", "b"],
+          original: "a > b b",
         },
       ],
     ],

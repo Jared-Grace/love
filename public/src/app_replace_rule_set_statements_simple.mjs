@@ -43,56 +43,68 @@ export function app_replace_rule_set_statements_simple() {
         {
           left: ["ex"],
           right: ["true"],
+          original: "ex > true",
         },
         {
           left: ["sm"],
           right: [";"],
-        },
-        {
-          left: ["sm"],
-          right: ["return", ";"],
-        },
-      ],
-      [
-        {
-          left: ["sm"],
-          right: ["ex", ";"],
+          original: "sm > ;",
         },
         {
           left: ["ex"],
           right: ["u", "p", "d", "a", "t", "e", "(", ")"],
-        },
-        {
-          left: ["sm"],
-          right: ["return", ";"],
+          original: "ex > u p d a t e ( )",
         },
       ],
       [
         {
           left: ["sm"],
-          right: ["ex", ";"],
-        },
-        {
-          left: ["ex"],
-          right: ["u", "p", "d", "a", "t", "e", "(", ")"],
-        },
-        {
-          left: ["sm"],
-          right: ["return", ";"],
-        },
-      ],
-      [
-        {
-          left: ["sm"],
-          right: ["return", ";"],
+          right: [";"],
+          original: "sm > ;",
         },
         {
           left: ["ex"],
           right: ["true"],
+          original: "ex > true",
+        },
+        {
+          left: ["sm"],
+          right: ["return", ";"],
+          original: "sm > return ;",
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["u", "p", "d", "a", "t", "e", "(", ")"],
+          original: "ex > u p d a t e ( )",
+        },
+        {
+          left: ["sm"],
+          right: [";"],
+          original: "sm > ;",
+        },
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+          original: "sm > ex ;",
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["u", "p", "d", "a", "t", "e", "(", ")"],
+          original: "ex > u p d a t e ( )",
         },
         {
           left: ["sm"],
           right: ["return", "ex", ";"],
+          original: "sm > return ex ;",
+        },
+        {
+          left: ["ex"],
+          right: ["true"],
+          original: "ex > true",
         },
       ],
     ],

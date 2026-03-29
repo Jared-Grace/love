@@ -59,116 +59,141 @@ export function app_replace_rule_set_statements_if() {
     rules_used: [
       [
         {
-          left: ["sm"],
-          right: ["return", ";"],
-        },
-        {
           left: ["ex"],
           right: ["y", "===", "null"],
+          original: "ex > y === null",
         },
         {
           left: ["is"],
           right: ["if", "(", "ex", ")", "sm"],
+          original: "is > if ( ex ) sm",
+        },
+        {
+          left: ["sm"],
+          right: ["return", ";"],
+          original: "sm > return ;",
         },
       ],
       [
-        {
-          left: ["bs"],
-          right: ["{", "smg", "}"],
-        },
-        {
-          left: ["is"],
-          right: ["if", "(", "ex", ")", "sm"],
-        },
         {
           left: ["ex"],
           right: ["x", "<", "0"],
-        },
-        {
-          left: ["sm"],
-          right: ["bs"],
-        },
-      ],
-      [
-        {
-          left: ["ex"],
-          right: ["x", "=", "1"],
-        },
-        {
-          left: ["sm"],
-          right: ["ex", ";"],
-        },
-        {
-          left: ["smg"],
-          right: ["sm"],
-        },
-      ],
-      [
-        {
-          left: ["ex"],
-          right: ["y", ">", "max"],
-        },
-        {
-          left: ["sm"],
-          right: ["bs"],
+          original: "ex > x < 0",
         },
         {
           left: ["bs"],
           right: ["{", "smg", "}"],
+          original: "bs > { smg }",
+        },
+        {
+          left: ["sm"],
+          right: ["bs"],
+          original: "sm > bs",
         },
         {
           left: ["is"],
           right: ["if", "(", "ex", ")", "sm"],
+          original: "is > if ( ex ) sm",
         },
       ],
       [
         {
-          left: ["smg"],
-          right: ["sm"],
-        },
-        {
-          left: ["smg"],
-          right: ["smg", "sm"],
-        },
-        {
           left: ["sm"],
           right: ["ex", ";"],
+          original: "sm > ex ;",
+        },
+        {
+          left: ["smg"],
+          right: ["sm"],
+          original: "smg > sm",
+        },
+        {
+          left: ["ex"],
+          right: ["x", "=", "1"],
+          original: "ex > x = 1",
+        },
+      ],
+      [
+        {
+          left: ["sm"],
+          right: ["bs"],
+          original: "sm > bs",
+        },
+        {
+          left: ["ex"],
+          right: ["y", ">", "max"],
+          original: "ex > y >> max",
+        },
+        {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+          original: "bs > { smg }",
+        },
+        {
+          left: ["is"],
+          right: ["if", "(", "ex", ")", "sm"],
+          original: "is > if ( ex ) sm",
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["log", "(", '"', "r", "e", "s", "e", "t", '"', ")"],
+          original: 'ex > log ( " r e s e t " )',
         },
         {
           left: ["ex"],
           right: ["y", "=", "0"],
+          original: "ex > y = 0",
         },
         {
-          left: ["ex"],
-          right: ["log", "(", '"', "r", "e", "s", "e", "t", '"', ")"],
-        },
-      ],
-      [
-        {
-          left: ["ex"],
-          right: ["x", ">", "0"],
+          left: ["smg"],
+          right: ["sm"],
+          original: "smg > sm",
         },
         {
-          left: ["sm"],
-          right: ["bs"],
-        },
-        {
-          left: ["is"],
-          right: ["if", "(", "ex", ")", "sm", "else", "sm"],
-        },
-      ],
-      [
-        {
-          left: ["ex"],
-          right: ["positive", "=", "true"],
+          left: ["smg"],
+          right: ["smg", "sm"],
+          original: "smg > smg sm",
         },
         {
           left: ["sm"],
           right: ["ex", ";"],
+          original: "sm > ex ;",
+        },
+      ],
+      [
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+          original: "sm > ex ;",
         },
         {
           left: ["ex"],
+          right: ["x", ">", "0"],
+          original: "ex > x > 0",
+        },
+        {
+          left: ["is"],
+          right: ["if", "(", "ex", ")", "sm", "else", "sm"],
+          original: "is > if ( ex ) sm else sm",
+        },
+      ],
+      [
+        {
+          left: ["ex"],
           right: ["positive", "=", "false"],
+          original: "ex > positive = false",
+        },
+        {
+          left: ["ex"],
+          right: ["positive", "=", "true"],
+          original: "ex > positive = true",
+        },
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+          original: "sm > ex ;",
         },
       ],
     ],

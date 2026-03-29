@@ -66,201 +66,245 @@ export function app_replace_rule_set_expressions_logical() {
       [
         {
           left: ["le"],
-          right: ["ee"],
+          right: ["le", "lo", "ee"],
+          original: "le > le lo ee",
         },
         {
           left: ["le"],
-          right: ["le", "lo", "ee"],
+          right: ["ee"],
+          original: "le > ee",
         },
         {
           left: ["ee"],
           right: ["re"],
+          original: "ee > re",
         },
       ],
       [
-        {
-          left: ["ade"],
-          right: ["mue"],
-        },
         {
           left: ["re"],
           right: ["ade"],
+          original: "re > ade",
         },
         {
-          left: ["li"],
-          right: ["null"],
+          left: ["ade"],
+          right: ["mue"],
+          original: "ade > mue",
+        },
+        {
+          left: ["le"],
+          right: ["ee"],
+          original: "le > ee",
         },
       ],
       [
         {
-          left: ["ce"],
-          right: ["mae"],
-        },
-        {
           left: ["ue"],
           right: ["ce"],
+          original: "ue > ce",
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+          original: "ce > mae",
         },
         {
           left: ["mue"],
           right: ["ue"],
+          original: "mue > ue",
         },
       ],
       [
         {
-          left: ["mae"],
-          right: ["pe"],
-        },
-        {
-          left: ["mae"],
-          right: ["mle"],
-        },
-        {
           left: ["pe"],
           right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["id"],
+          right: ["y"],
+          original: "id > y",
         },
       ],
       [
         {
           left: ["lo"],
           right: ["&&"],
+          original: "lo > &&",
+        },
+        {
+          left: ["bo"],
+          right: ["true"],
+          original: "bo > true",
         },
         {
           left: ["bo"],
           right: ["false"],
-        },
-        {
-          left: ["bo"],
-          right: ["true"],
+          original: "bo > false",
         },
         {
           left: ["pe"],
           right: ["li"],
+          original: "pe > li",
         },
         {
           left: ["li"],
           right: ["bo"],
+          original: "li > bo",
         },
       ],
       [
         {
-          left: ["pe"],
-          right: ["li"],
-        },
-        {
           left: ["bo"],
           right: ["true"],
-        },
-        {
-          left: ["li"],
-          right: ["bo"],
+          original: "bo > true",
         },
         {
           left: ["lo"],
           right: ["||"],
+          original: "lo > ||",
         },
         {
           left: ["bo"],
           right: ["false"],
+          original: "bo > false",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
+          left: ["li"],
+          right: ["bo"],
+          original: "li > bo",
         },
       ],
       [
         {
+          left: ["ex"],
+          right: ["le"],
+          original: "ex > le",
+        },
+        {
           left: ["bo"],
           right: ["true"],
+          original: "bo > true",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
         },
         {
           left: ["pe"],
           right: ["(", "ex", ")"],
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
+          original: "pe > ( ex )",
         },
         {
           left: ["lo"],
           right: ["&&"],
+          original: "lo > &&",
         },
         {
           left: ["li"],
           right: ["bo"],
-        },
-        {
-          left: ["ex"],
-          right: ["le"],
+          original: "li > bo",
         },
       ],
       [
         {
           left: ["le"],
           right: ["ee"],
-        },
-        {
-          left: ["ee"],
-          right: ["re"],
+          original: "le > ee",
         },
         {
           left: ["le"],
           right: ["le", "lo", "ee"],
+          original: "le > le lo ee",
+        },
+        {
+          left: ["ee"],
+          right: ["re"],
+          original: "ee > re",
         },
         {
           left: ["lo"],
           right: ["||"],
+          original: "lo > ||",
         },
       ],
       [
         {
-          left: ["re"],
-          right: ["ade"],
-        },
-        {
-          left: ["lo"],
-          right: ["||"],
-        },
-        {
           left: ["ade"],
           right: ["mue"],
+          original: "ade > mue",
+        },
+        {
+          left: ["re"],
+          right: ["ade"],
+          original: "re > ade",
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+          original: "mae > pe",
         },
       ],
       [
         {
           left: ["ue"],
           right: ["ce"],
+          original: "ue > ce",
         },
         {
           left: ["ce"],
           right: ["mae"],
+          original: "ce > mae",
         },
         {
           left: ["mue"],
           right: ["ue"],
+          original: "mue > ue",
         },
       ],
       [
         {
-          left: ["in"],
-          right: ["1"],
-        },
-        {
           left: ["mae"],
           right: ["pe"],
+          original: "mae > pe",
+        },
+        {
+          left: ["bo"],
+          right: ["true"],
+          original: "bo > true",
         },
         {
           left: ["pe"],
           right: ["li"],
+          original: "pe > li",
         },
       ],
       [
         {
-          left: ["bo"],
-          right: ["true"],
-        },
-        {
           left: ["li"],
           right: ["bo"],
+          original: "li > bo",
         },
         {
           left: ["bo"],
           right: ["false"],
+          original: "bo > false",
+        },
+        {
+          left: ["bo"],
+          right: ["true"],
+          original: "bo > true",
         },
       ],
     ],

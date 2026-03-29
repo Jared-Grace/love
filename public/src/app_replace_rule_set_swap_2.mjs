@@ -22,30 +22,36 @@ export function app_replace_rule_set_swap_2() {
         {
           left: ["a", "c"],
           right: ["c", "a"],
+          original: "a c > c a",
         },
         {
           left: ["a", "b"],
           right: ["b", "a"],
+          original: "a b > b a",
+        },
+      ],
+      [
+        {
+          left: ["a", "b"],
+          right: ["b", "a"],
+          original: "a b > b a",
+        },
+        {
+          left: ["a", "c"],
+          right: ["c", "a"],
+          original: "a c > c a",
         },
       ],
       [
         {
           left: ["a", "c"],
           right: ["c", "a"],
+          original: "a c > c a",
         },
         {
           left: ["a", "b"],
           right: ["b", "a"],
-        },
-      ],
-      [
-        {
-          left: ["a", "c"],
-          right: ["c", "a"],
-        },
-        {
-          left: ["a", "b"],
-          right: ["b", "a"],
+          original: "a b > b a",
         },
       ],
     ],

@@ -62,164 +62,201 @@ export function app_replace_rule_set_statements_variable() {
     rules_used: [
       [
         {
-          left: ["vd"],
-          right: ["id"],
-        },
-        {
           left: ["vs"],
           right: ["vk", "vdg", ";"],
+          original: "vs > vk vdg ;",
         },
         {
           left: ["vk"],
           right: ["let"],
+          original: "vk > let",
         },
         {
           left: ["vdg"],
           right: ["vd"],
+          original: "vdg > vd",
         },
         {
           left: ["id"],
           right: ["i"],
+          original: "id > i",
+        },
+        {
+          left: ["vd"],
+          right: ["id"],
+          original: "vd > id",
         },
       ],
       [
         {
-          left: ["vs"],
-          right: ["vk", "vdg", ";"],
+          left: ["id"],
+          right: ["j"],
+          original: "id > j",
         },
         {
-          left: ["vk"],
-          right: ["let"],
+          left: ["vdg"],
+          right: ["vd"],
+          original: "vdg > vd",
         },
         {
           left: ["vd"],
           right: ["id", "=", "ex"],
-        },
-        {
-          left: ["id"],
-          right: ["j"],
-        },
-        {
-          left: ["vdg"],
-          right: ["vd"],
+          original: "vd > id = ex",
         },
         {
           left: ["ex"],
           right: ["0"],
-        },
-      ],
-      [
-        {
-          left: ["vdg"],
-          right: ["vdg", ",", "vd"],
+          original: "ex > 0",
         },
         {
           left: ["vk"],
-          right: ["var"],
+          right: ["let"],
+          original: "vk > let",
         },
         {
           left: ["vs"],
           right: ["vk", "vdg", ";"],
+          original: "vs > vk vdg ;",
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["y"],
+          original: "id > y",
         },
         {
-          left: ["vd"],
-          right: ["id"],
+          left: ["vk"],
+          right: ["var"],
+          original: "vk > var",
+        },
+        {
+          left: ["vdg"],
+          right: ["vd"],
+          original: "vdg > vd",
+        },
+        {
+          left: ["vs"],
+          right: ["vk", "vdg", ";"],
+          original: "vs > vk vdg ;",
         },
         {
           left: ["id"],
           right: ["x"],
+          original: "id > x",
         },
-        {
-          left: ["id"],
-          right: ["y"],
-        },
-        {
-          left: ["vdg"],
-          right: ["vd"],
-        },
-      ],
-      [
         {
           left: ["vd"],
           right: ["id"],
-        },
-        {
-          left: ["vs"],
-          right: ["vk", "vdg", ";"],
-        },
-        {
-          left: ["vdg"],
-          right: ["vd"],
-        },
-        {
-          left: ["id"],
-          right: ["a"],
-        },
-        {
-          left: ["vk"],
-          right: ["var"],
+          original: "vd > id",
         },
         {
           left: ["vdg"],
           right: ["vdg", ",", "vd"],
+          original: "vdg > vdg , vd",
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["a"],
+          original: "id > a",
+        },
+        {
+          left: ["vdg"],
+          right: ["vd"],
+          original: "vdg > vd",
+        },
+        {
+          left: ["vs"],
+          right: ["vk", "vdg", ";"],
+          original: "vs > vk vdg ;",
+        },
+        {
+          left: ["vk"],
+          right: ["var"],
+          original: "vk > var",
+        },
+        {
+          left: ["vdg"],
+          right: ["vdg", ",", "vd"],
+          original: "vdg > vdg , vd",
+        },
+        {
+          left: ["vd"],
+          right: ["id"],
+          original: "vd > id",
         },
       ],
       [
         {
           left: ["id"],
           right: ["c"],
+          original: "id > c",
         },
         {
           left: ["vd"],
           right: ["id"],
+          original: "vd > id",
         },
         {
           left: ["id"],
           right: ["b"],
+          original: "id > b",
         },
       ],
       [
         {
-          left: ["vk"],
-          right: ["const"],
+          left: ["vdg"],
+          right: ["vdg", ",", "vd"],
+          original: "vdg > vdg , vd",
         },
         {
           left: ["id"],
           right: ["y"],
+          original: "id > y",
         },
         {
-          left: ["vd"],
-          right: ["id", "=", "ex"],
+          left: ["vk"],
+          right: ["const"],
+          original: "vk > const",
         },
         {
           left: ["vs"],
           right: ["vk", "vdg", ";"],
+          original: "vs > vk vdg ;",
+        },
+        {
+          left: ["vd"],
+          right: ["id", "=", "ex"],
+          original: "vd > id = ex",
         },
         {
           left: ["ex"],
           right: ["2"],
-        },
-        {
-          left: ["vdg"],
-          right: ["vdg", ",", "vd"],
+          original: "ex > 2",
         },
       ],
       [
         {
           left: ["vdg"],
           right: ["vd"],
-        },
-        {
-          left: ["vd"],
-          right: ["id", "=", "ex"],
-        },
-        {
-          left: ["ex"],
-          right: ["1"],
+          original: "vdg > vd",
         },
         {
           left: ["id"],
           right: ["x"],
+          original: "id > x",
+        },
+        {
+          left: ["vd"],
+          right: ["id", "=", "ex"],
+          original: "vd > id = ex",
+        },
+        {
+          left: ["ex"],
+          right: ["1"],
+          original: "ex > 1",
         },
       ],
     ],

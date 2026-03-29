@@ -22,18 +22,21 @@ export function app_replace_rule_set_shrink_triple() {
         {
           left: ["a", "a", "a"],
           right: ["a"],
+          original: "a a a > a",
         },
       ],
       [
         {
           left: ["a", "a", "a"],
           right: ["a"],
+          original: "a a a > a",
         },
       ],
       [
         {
           left: ["a", "a", "a"],
           right: ["a"],
+          original: "a a a > a",
         },
       ],
     ],
