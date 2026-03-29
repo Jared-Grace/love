@@ -1,5 +1,4 @@
 import { object_adder_async } from "../../../love/public/src/object_adder_async.mjs";
-import { exit } from "../../../love/public/src/exit.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { functions_asts_list } from "../../../love/public/src/functions_asts_list.mjs";
 import { app_replace_rule_sets_fns_names } from "../../../love/public/src/app_replace_rule_sets_fns_names.mjs";
@@ -42,11 +41,7 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
       let s = js_string(p_name);
       let p = js_property(s, expression);
       list_add(properties, p);
-      log(app_replace_rule_sets_fns_rules_used_generate.name, {
-        rules_used,
-        name,
-      });
-      exit();
+      oad(name, rules_used);
     }
     let r2 =
       await app_replace_rule_sets_fns_transform_lambda_curried_right(lambda);
@@ -55,4 +50,5 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
     let waited = await list_map_unordered_async(asts, r2);
   }
   let result = await object_adder_async(lambda3);
+  return result;
 }
