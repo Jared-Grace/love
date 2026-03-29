@@ -319,6 +319,5 @@ export async function app_replace_rule_set(context) {
     index_selected = ternary(index_selected === index, null, index);
     let property_name = "refresh_sb";
     list_map_property_invoke(sbs, property_name);
-    refresh();
   }
 }
