@@ -13,16 +13,5 @@ export function app_replace_rule_set_statements_variable_rules(rules) {
     "vdg > vdg , vd",
     "vd > id",
     "vd > id = ex",
-    "id > a",
-    "id > b",
-    "id > c",
-    "id > i",
-    "id > j",
-    "id > x",
-    "id > y",
-    "id > z",
-    "ex > 0",
-    "ex > 1",
-    "ex > 2",
   ]);
 }
