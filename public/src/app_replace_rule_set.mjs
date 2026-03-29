@@ -212,8 +212,9 @@ export async function app_replace_rule_set(context) {
         arrow,
       });
       return rb;
-    }$s
-    let rbs = list_map_index(rules_used, each_rule);
+    }
+    let rbs = null;
+    rbs = list_map_index(rules_used, each_rule);
     function refresh_rb(rb, index2) {
       let rule2 = property_get(rb, "rule");
       let size2 = list_size(start);
