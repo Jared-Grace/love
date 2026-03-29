@@ -1,4 +1,4 @@
-import { each } from "../../../love/public/src/each.mjs";
+import { list_map } from "../../../love/public/src/list_map.mjs";
 import { app_replace_rules_parse_left_right_only } from "../../../love/public/src/app_replace_rules_parse_left_right_only.mjs";
 import { app_replace_rule_set_rules_used } from "../../../love/public/src/app_replace_rule_set_rules_used.mjs";
 import { function_run_args_none } from "../../../love/public/src/function_run_args_none.mjs";
@@ -33,7 +33,7 @@ export async function app_replace_rule_sets_fns_migrate_used() {
     let goals2 = property_get(rs, "goals");
     let rules_parsed = app_replace_rules_parse_left_right_only(rules);
     function lambda2(item2) {}
-    each(list, lambda2);
+    list_map(list, lambda2);
     let rules_used = app_replace_rule_set_rules_used(rules_parsed, start, end);
   }
   let result = await app_replace_rule_sets_fns_transform(lambda);
