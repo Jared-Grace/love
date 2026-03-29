@@ -1,3 +1,4 @@
+import { object_adder_async } from "../../../love/public/src/object_adder_async.mjs";
 import { exit } from "../../../love/public/src/exit.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { functions_asts_list } from "../../../love/public/src/functions_asts_list.mjs";
@@ -16,7 +17,8 @@ import { function_run_args_none } from "../../../love/public/src/function_run_ar
 import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
 export async function app_replace_rule_sets_fns_rules_used_generate() {
-  oea;
+  async function lambda3(oad) {}
+  let result = await object_adder_async(lambda3);
   async function lambda(a) {
     let name = property_get(a, "name");
     let rs = await function_run_args_none(name);
