@@ -43,7 +43,7 @@ export function app_replace_settings(context) {
   let left = emoji_clock();
   let highlight = app_replace_rule_set_highlight();
   const duration = app_replace_animation_duration_get(context);
-  ("if not null then speed is being overwritten by hash");
+  ("if not null then speed is being overwritten by hash so don't show choices");
   if (null_is(duration)) {
     let choices = [
       {
