@@ -9,11 +9,11 @@ export function app_replace_animation_duration_get(context) {
   let d = property_get_or_null(hash, property);
   if (null_is(d)) {
     let value_initial = app_replace_animation_duration_default();
-    let value5 = storage_local_initialize_context(
+    d = storage_local_initialize_context(
       context,
       "animation_duration",
       value_initial,
     );
   }
-  return value5;
+  return d;
 }
