@@ -53,6 +53,6 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
   }
   async function lambda3(a2) {}
   let result = await app_replace_rule_sets_fns_transform(lambda);
-  async function lambda5() {}
-  await functions_asts_each(lambda5);
+  async function lambda4(ast) {}
+  await functions_asts_each(lambda4);
 }
