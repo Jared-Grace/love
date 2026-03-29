@@ -61,7 +61,7 @@ export function app_new_rule_set_new_2() {
           " id ( id ) { let id = ex , id ; for ( i = 0 ; i < l i s t . s i z e ; i = i + 1 ) sm return ex ; }",
         end:
           js_keyword_function() +
-          " l i s t _ s u m ( l i s t ) { let s u m = 0 , i ; for ( i = 0 ; i < l i s t . s i z e ; i = i + 1 ) sm return ex ; }",
+          " l i s t _ s u m ( l i s t ) { let id = ex , id ; for ( i = 0 ; i < l i s t . s i z e ; i = i + 1 ) sm return ex ; }",
       },
       {
         start:
