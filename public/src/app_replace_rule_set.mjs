@@ -318,7 +318,7 @@ export async function app_replace_rule_set(context) {
     symbols_invalid_chosen = {};
     index_selected = ternary(index_selected === index, null, index);
     let property_name = "refresh_sb";
-    let mapped = list_map_property(list, property_name);
+    let mapped = list_map_property(sbs, property_name);
     refresh();
   }
 }
