@@ -4,8 +4,8 @@ import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mj
 export function app_replace_rule_set_statements_for() {
   const rules = [];
   app_replace_rule_set_statements_while_rules(rules);
+  list_add_multiple(rules, ["fs > for ( ex ; ex ; ex ) sm"]);
   list_add_multiple(rules, [
-    "fs > for ( ex ; ex ; ex ) sm",
     "ex > let i = 0",
     "ex > i < 12",
     "ex > i = i + 1",
