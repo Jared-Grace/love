@@ -15,7 +15,6 @@ import { app_replace_rule_set_rules_used } from "../../../love/public/src/app_re
 import { function_run_args_none } from "../../../love/public/src/function_run_args_none.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { property_get } from "../../../love/public/src/property_get.mjs";
-import { app_replace_rule_sets_fns_transform } from "../../../love/public/src/app_replace_rule_sets_fns_transform.mjs";
 export async function app_replace_rule_sets_fns_rules_used_generate() {
   async function lambda(a) {
     let name = property_get(a, "name");
@@ -52,7 +51,6 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
       rules_used,
     });
   }
-  let result = await app_replace_rule_sets_fns_transform(lambda);
   let r2 =
     await app_replace_rule_sets_fns_transform_lambda_curried_right(lambda);
   await functions_asts_each(r2);
