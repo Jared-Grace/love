@@ -186,7 +186,7 @@ export async function app_replace_rule_set(context) {
     html_clear(div_rules_buttons);
     function lambda() {
       let t_inner = app_replace_rule_set_verify_from_try(
-        rules_parsed,
+        rules_used,
         start,
         end,
       );
