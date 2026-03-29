@@ -32,7 +32,7 @@ export async function app_replace_rule_sets_fns_migrate_used() {
     let p = js_property("rules_used", expression);
     let item = property_get(a, "item");
     let properties = js_object_expression_properties(item);
-    list_add(list, item2);
+    list_add(properties, p);
     log(app_replace_rule_sets_fns_migrate_used.name, {
       rules_used,
     });
