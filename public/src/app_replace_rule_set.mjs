@@ -83,14 +83,6 @@ export async function app_replace_rule_set(context) {
   let left3 = emoji_target();
   let combined2 = text_combine(left3, "Goals");
   app_replace_button_screen(context, app_replace_goals, root, combined2);
-  let left = emoji_restart();
-  let combined = text_combine(left, "Start over");
-  let start_over = app_replace_button_screen(
-    context,
-    app_replace_rule_set,
-    root,
-    combined,
-  );
   let rs = app_replace_rule_set_get(context);
   let goals = property_get(rs, "goals");
   let goals_count = list_size(goals);
@@ -315,6 +307,14 @@ export async function app_replace_rule_set(context) {
       html_visibility_hidden(div_symbols);
     }
   }
+  let left = emoji_restart();
+  let combined = text_combine(left, "Start over");
+  let start_over = app_replace_button_screen(
+    context,
+    app_replace_rule_set,
+    root,
+    combined,
+  );
   function refresh_count_increase() {
     refresh_count++;
     let value3 = app_replace_rule_set_attribute_refresh_count(refresh_count);
