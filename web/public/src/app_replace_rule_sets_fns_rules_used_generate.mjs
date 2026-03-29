@@ -1,3 +1,4 @@
+import { app_replace_rule_sets_fns_rules_used } from "../../../love/public/src/app_replace_rule_sets_fns_rules_used.mjs";
 import { object_adder_async } from "../../../love/public/src/object_adder_async.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { functions_asts_list } from "../../../love/public/src/functions_asts_list.mjs";
@@ -51,5 +52,6 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
   }
   let result = await object_adder_async(lambda3);
   let e = js_object_to_expression(result);
+  let fn = app_replace_rule_sets_fns_rules_used;
   return result;
 }
