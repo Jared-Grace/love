@@ -193,13 +193,11 @@ export async function app_replace_rule_set(context) {
       return t_inner;
     }
     let t = await lambda_timeout_null(lambda, 1000);
-    if (null_not_is(value5)) {
-    }
-    if (false) {
-    }
-    let found = property_get(t, "found");
-    if (not(found)) {
-      html_style_background_color_set(start_over, highlight);
+    if (null_not_is(t)) {
+      let found = property_get(t, "found");
+      if (not(found)) {
+        html_style_background_color_set(start_over, highlight);
+      }
     }
     refresh_count_increase();
     function each_rule(rule, index) {
