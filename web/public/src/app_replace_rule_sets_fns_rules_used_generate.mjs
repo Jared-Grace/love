@@ -1,5 +1,4 @@
 import { js_string } from "../../../love/public/src/js_string.mjs";
-import { log_exit } from "../../../love/public/src/log_exit.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
