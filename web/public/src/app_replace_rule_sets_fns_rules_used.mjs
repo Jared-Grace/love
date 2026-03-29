@@ -68,7 +68,7 @@ import { app_replace_rule_set_binary_numbers } from "../../../love/public/src/ap
 import { app_replace_rule_set_binary_numbers_simple_2 } from "../../../love/public/src/app_replace_rule_set_binary_numbers_simple_2.mjs";
 import { app_replace_rule_set_binary_numbers_simple } from "../../../love/public/src/app_replace_rule_set_binary_numbers_simple.mjs";
 export function app_replace_rule_sets_fns_rules_used() {
-  let r = {
+  let rules_useds = {
     app_replace_rule_set_binary_numbers_simple: [
       [
         {
@@ -8258,5 +8258,5 @@ export function app_replace_rule_sets_fns_rules_used() {
       ],
     ],
   };
-  return r;
+  return rules_useds;
 }
