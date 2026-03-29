@@ -43,7 +43,7 @@ export function app_replace_settings(context) {
   let left = emoji_clock();
   let highlight = app_replace_rule_set_highlight();
   const duration = app_replace_animation_duration_get(context);
-  if (null_not_is(value)) {
+  if (null_not_is(duration)) {
   }
   let choices = [
     {
