@@ -1,4 +1,4 @@
-import { app_new_rule_set_new_2 } from "../../../love/public/src/app_new_rule_set_new_2.mjs";
+import { app_replace_rule_set_function_declarations } from "../../../love/public/src/app_replace_rule_set_function_declarations.mjs";
 import { app_replace_rule_set_statements_for } from "../../../love/public/src/app_replace_rule_set_statements_for.mjs";
 import { app_replace_rule_set_statements_while } from "../../../love/public/src/app_replace_rule_set_statements_while.mjs";
 import { app_replace_rule_set_expressions_assignment } from "../../../love/public/src/app_replace_rule_set_expressions_assignment.mjs";
@@ -137,7 +137,7 @@ export function app_replace_rule_sets_fns() {
     app_replace_rule_set_statements_if,
     app_replace_rule_set_statements_while,
     app_replace_rule_set_statements_for,
-    app_new_rule_set_new_2,
+    app_replace_rule_set_function_declarations,
   ];
   return fns;
 }
