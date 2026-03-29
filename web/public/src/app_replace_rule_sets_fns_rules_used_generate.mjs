@@ -52,10 +52,8 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
       rules_used,
     });
   }
-  async function lambda3(a2) {}
   let result = await app_replace_rule_sets_fns_transform(lambda);
   let r2 =
-    await app_replace_rule_sets_fns_transform_lambda_curried_right(lambda$a);
-  async function lambda4(ast) {}
-  await functions_asts_each(lambda4);
+    await app_replace_rule_sets_fns_transform_lambda_curried_right(lambda);
+  await functions_asts_each(r2);
 }
