@@ -1,3 +1,4 @@
+import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 import { functions_transform_list } from "../../../love/public/src/functions_transform_list.mjs";
 import { app_replace_rule_sets_fns_names } from "../../../love/public/src/app_replace_rule_sets_fns_names.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
@@ -16,6 +17,7 @@ export async function app_replace_rule_sets_fns_migrate_capitalization_upper() {
   let fns = app_replace_rule_sets_fns_names();
   let result = list_map_name(fns);
   async function lambda3(ast) {
+    let name2 = js_flo_name(ast2);
     log(app_replace_rule_sets_fns_migrate_capitalization_upper.name, {
       name,
     });
