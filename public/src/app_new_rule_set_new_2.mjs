@@ -13,6 +13,7 @@ export function app_new_rule_set_new_2() {
     "fpg > fpg , id",
     "fpg > id",
     "id > t a u t o l o g y",
+    "ex > true",
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_for_abbreviations(abbreviations);
