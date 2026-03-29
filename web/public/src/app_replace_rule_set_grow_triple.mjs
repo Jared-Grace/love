@@ -17,29 +17,6 @@ export function app_replace_rule_set_grow_triple() {
       },
     ],
     why: "The replacement rules demonstrate a grammar where each 'a' is replaced by three 'a's, showing exponential growth (tripling) of 'a's with each application, which explains how the goals with 3, 5, and 7 'a's can be derived from a single 'a' through repeated rule applications.",
-    rules_used: [
-      [
-        {
-          left: ["a"],
-          right: ["a", "a", "a"],
-          original: "a > a a a",
-        },
-      ],
-      [
-        {
-          left: ["a"],
-          right: ["a", "a", "a"],
-          original: "a > a a a",
-        },
-      ],
-      [
-        {
-          left: ["a"],
-          right: ["a", "a", "a"],
-          original: "a > a a a",
-        },
-      ],
-    ],
   };
   return r;
 }
