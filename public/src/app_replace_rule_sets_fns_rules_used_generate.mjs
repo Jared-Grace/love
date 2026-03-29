@@ -43,7 +43,7 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
       list_remove(properties, p_existing);
     }
     let expression = js_object_to_expression(rules_used);
-    log_exit(message);
+    log_exit(expression);
     let p = js_property(p_name, expression);
     list_add(properties, p);
     log(app_replace_rule_sets_fns_rules_used_generate.name, {
