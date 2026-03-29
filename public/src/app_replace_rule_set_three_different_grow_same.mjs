@@ -18,12 +18,14 @@ export function app_replace_rule_set_three_different_grow_same() {
         {
           left: ["e", "=", "b"],
           right: ["c", "e", "=", "b", "c"],
+          original: "e = b > c e = b c",
         },
       ],
       [
         {
           left: ["e", "=", "b"],
           right: ["c", "e", "=", "b", "c"],
+          original: "e = b > c e = b c",
         },
       ],
     ],

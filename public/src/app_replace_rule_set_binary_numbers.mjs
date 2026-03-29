@@ -8,98 +8,119 @@ export function app_replace_rule_set_binary_numbers() {
     rules_used: [
       [
         {
-          left: ["g"],
-          right: ["b", "g"],
-        },
-        {
-          left: ["g"],
-          right: ["b"],
-        },
-        {
-          left: ["b"],
-          right: ["0"],
-        },
-      ],
-      [
-        {
           left: ["b"],
           right: ["1"],
-        },
-        {
-          left: ["g"],
-          right: ["b"],
+          original: "b > 1",
         },
         {
           left: ["b"],
           right: ["0"],
+          original: "b > 0",
+        },
+        {
+          left: ["g"],
+          right: ["b"],
+          original: "g > b",
         },
       ],
       [
         {
           left: ["g"],
           right: ["b"],
-        },
-        {
-          left: ["b"],
-          right: ["0"],
-        },
-        {
-          left: ["g"],
-          right: ["b", "g"],
+          original: "g > b",
         },
         {
           left: ["b"],
           right: ["1"],
+          original: "b > 1",
+        },
+        {
+          left: ["g"],
+          right: ["b", "g"],
+          original: "g > b g",
         },
       ],
       [
         {
           left: ["g"],
           right: ["b"],
+          original: "g > b",
         },
         {
           left: ["g"],
           right: ["b", "g"],
+          original: "g > b g",
+        },
+        {
+          left: ["b"],
+          right: ["0"],
+          original: "b > 0",
         },
         {
           left: ["b"],
           right: ["1"],
+          original: "b > 1",
         },
       ],
       [
         {
-          left: ["b"],
-          right: ["0"],
-        },
-        {
           left: ["g"],
-          right: ["b", "g"],
+          right: ["b"],
+          original: "g > b",
         },
         {
           left: ["b"],
           right: ["1"],
+          original: "b > 1",
         },
         {
           left: ["g"],
-          right: ["b"],
+          right: ["b", "g"],
+          original: "g > b g",
         },
       ],
       [
         {
-          left: ["b"],
-          right: ["0"],
-        },
-        {
-          left: ["b"],
-          right: ["1"],
-        },
-        {
           left: ["g"],
           right: ["b"],
+          original: "g > b",
         },
         {
           left: ["g"],
           right: ["b", "g"],
+          original: "g > b g",
+        },
+        {
+          left: ["b"],
+          right: ["0"],
+          original: "b > 0",
+        },
+        {
+          left: ["b"],
+          right: ["1"],
+          original: "b > 1",
+        },
+      ],
+      [
+        {
+          left: ["g"],
+          right: ["b"],
+          original: "g > b",
+        },
+        {
+          left: ["b"],
+          right: ["1"],
+          original: "b > 1",
+        },
+        {
+          left: ["b"],
+          right: ["0"],
+          original: "b > 0",
+        },
+        {
+          left: ["g"],
+          right: ["b", "g"],
+          original: "g > b g",
         },
       ],
     ],

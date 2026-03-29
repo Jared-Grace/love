@@ -100,316 +100,386 @@ export function app_replace_rule_set_scientific_notation_numbers() {
     rules_used: [
       [
         {
-          left: ["de"],
-          right: ["in", "."],
-        },
-        {
-          left: ["ex"],
-          right: ["ig"],
-        },
-        {
-          left: ["ig"],
-          right: ["di"],
-        },
-        {
           left: ["sn"],
           right: ["de", "se"],
+          original: "sn > de se",
         },
         {
           left: ["eE"],
           right: ["e"],
+          original: "eE > e",
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
+        {
+          left: ["de"],
+          right: ["in", "."],
+          original: "de > in .",
         },
         {
           left: ["se"],
           right: ["eE", "ex"],
+          original: "se > eE ex",
+        },
+        {
+          left: ["ex"],
+          right: ["ig"],
+          original: "ex > ig",
         },
       ],
       [
         {
-          left: ["di"],
-          right: ["pi"],
-        },
-        {
-          left: ["in"],
-          right: ["di"],
-        },
-        {
           left: ["pi"],
           right: ["1"],
+          original: "pi > 1",
         },
         {
           left: ["di"],
           right: ["0"],
+          original: "di > 0",
+        },
+        {
+          left: ["in"],
+          right: ["di"],
+          original: "in > di",
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
         },
       ],
       [
         {
-          left: ["se"],
-          right: ["eE", "ex"],
+          left: ["eE"],
+          right: ["E"],
+          original: "eE > E",
+        },
+        {
+          left: ["de"],
+          right: ["in", "."],
+          original: "de > in .",
+        },
+        {
+          left: ["sn"],
+          right: ["de", "se"],
+          original: "sn > de se",
         },
         {
           left: ["ex"],
           right: ["+", "ig"],
+          original: "ex > + ig",
         },
         {
-          left: ["eE"],
-          right: ["E"],
-        },
-        {
-          left: ["de"],
-          right: ["in", "."],
-        },
-        {
-          left: ["sn"],
-          right: ["de", "se"],
+          left: ["se"],
+          right: ["eE", "ex"],
+          original: "se > eE ex",
         },
       ],
       [
         {
+          left: ["in"],
+          right: ["di"],
+          original: "in > di",
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
           left: ["ig"],
           right: ["di"],
+          original: "ig > di",
         },
         {
           left: ["ig"],
           right: ["di", "ig"],
+          original: "ig > di ig",
         },
         {
           left: ["pi"],
           right: ["2"],
-        },
-        {
-          left: ["di"],
-          right: ["pi"],
-        },
-        {
-          left: ["in"],
-          right: ["di"],
+          original: "pi > 2",
         },
       ],
       [
-        {
-          left: ["pi"],
-          right: ["3"],
-        },
         {
           left: ["pi"],
           right: ["9"],
+          original: "pi > 9",
         },
         {
           left: ["di"],
           right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["pi"],
+          right: ["3"],
+          original: "pi > 3",
         },
       ],
       [
         {
-          left: ["sn"],
-          right: ["de", "se"],
+          left: ["de"],
+          right: [".", "ig"],
+          original: "de > . ig",
         },
         {
           left: ["ex"],
           right: ["-", "ig"],
-        },
-        {
-          left: ["se"],
-          right: ["eE", "ex"],
-        },
-        {
-          left: ["de"],
-          right: [".", "ig"],
-        },
-        {
-          left: ["eE"],
-          right: ["e"],
+          original: "ex > - ig",
         },
         {
           left: ["ig"],
           right: ["di"],
-        },
-      ],
-      [
-        {
-          left: ["ig"],
-          right: ["di", "ig"],
-        },
-        {
-          left: ["pi"],
-          right: ["3"],
-        },
-        {
-          left: ["ig"],
-          right: ["di"],
-        },
-      ],
-      [
-        {
-          left: ["pi"],
-          right: ["8"],
-        },
-        {
-          left: ["di"],
-          right: ["pi"],
-        },
-        {
-          left: ["pi"],
-          right: ["5"],
-        },
-        {
-          left: ["pi"],
-          right: ["1"],
-        },
-      ],
-      [
-        {
-          left: ["ig"],
-          right: ["di"],
-        },
-        {
-          left: ["se"],
-          right: ["eE", "ex"],
-        },
-        {
-          left: ["de"],
-          right: ["in", ".", "ig"],
-        },
-        {
-          left: ["eE"],
-          right: ["E"],
+          original: "ig > di",
         },
         {
           left: ["sn"],
           right: ["de", "se"],
-        },
-        {
-          left: ["ex"],
-          right: ["ig"],
-        },
-      ],
-      [
-        {
-          left: ["ig"],
-          right: ["di"],
-        },
-        {
-          left: ["ig"],
-          right: ["di", "ig"],
-        },
-        {
-          left: ["di"],
-          right: ["0"],
-        },
-      ],
-      [
-        {
-          left: ["pi"],
-          right: ["3"],
-        },
-        {
-          left: ["in"],
-          right: ["di"],
-        },
-        {
-          left: ["di"],
-          right: ["pi"],
-        },
-        {
-          left: ["pi"],
-          right: ["1"],
-        },
-      ],
-      [
-        {
-          left: ["pi"],
-          right: ["6"],
-        },
-        {
-          left: ["pi"],
-          right: ["4"],
-        },
-        {
-          left: ["di"],
-          right: ["pi"],
-        },
-      ],
-      [
-        {
-          left: ["ex"],
-          right: ["ig"],
+          original: "sn > de se",
         },
         {
           left: ["se"],
           right: ["eE", "ex"],
-        },
-        {
-          left: ["ig"],
-          right: ["di", "ig"],
-        },
-        {
-          left: ["di"],
-          right: ["pi"],
+          original: "se > eE ex",
         },
         {
           left: ["eE"],
           right: ["e"],
-        },
-        {
-          left: ["sn"],
-          right: ["ig", "se"],
+          original: "eE > e",
         },
       ],
       [
-        {
-          left: ["ig"],
-          right: ["di"],
-        },
         {
           left: ["ig"],
           right: ["di", "ig"],
-        },
-        {
-          left: ["pi"],
-          right: ["5"],
-        },
-      ],
-      [
-        {
-          left: ["pi"],
-          right: ["7"],
+          original: "ig > di ig",
         },
         {
           left: ["ig"],
           right: ["di"],
-        },
-        {
-          left: ["di"],
-          right: ["pi"],
-        },
-      ],
-      [
-        {
-          left: ["di"],
-          right: ["pi"],
-        },
-        {
-          left: ["pi"],
-          right: ["6"],
+          original: "ig > di",
         },
         {
           left: ["pi"],
           right: ["4"],
+          original: "pi > 4",
         },
       ],
       [
         {
           left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["pi"],
+          right: ["1"],
+          original: "pi > 1",
+        },
+        {
+          left: ["pi"],
+          right: ["8"],
+          original: "pi > 8",
+        },
+        {
+          left: ["pi"],
+          right: ["5"],
+          original: "pi > 5",
+        },
+      ],
+      [
+        {
+          left: ["se"],
+          right: ["eE", "ex"],
+          original: "se > eE ex",
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
+        {
+          left: ["sn"],
+          right: ["de", "se"],
+          original: "sn > de se",
+        },
+        {
+          left: ["de"],
+          right: ["in", ".", "ig"],
+          original: "de > in . ig",
+        },
+        {
+          left: ["ex"],
+          right: ["ig"],
+          original: "ex > ig",
+        },
+        {
+          left: ["eE"],
+          right: ["E"],
+          original: "eE > E",
+        },
+      ],
+      [
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+          original: "ig > di ig",
+        },
+        {
+          left: ["di"],
           right: ["0"],
+          original: "di > 0",
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["1"],
+          original: "pi > 1",
+        },
+        {
+          left: ["in"],
+          right: ["di"],
+          original: "in > di",
         },
         {
           left: ["di"],
           right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["pi"],
+          right: ["3"],
+          original: "pi > 3",
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["4"],
+          original: "pi > 4",
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["sn"],
+          right: ["ig", "se"],
+          original: "sn > ig se",
+        },
+      ],
+      [
+        {
+          left: ["se"],
+          right: ["eE", "ex"],
+          original: "se > eE ex",
+        },
+        {
+          left: ["eE"],
+          right: ["e"],
+          original: "eE > e",
+        },
+        {
+          left: ["ex"],
+          right: ["ig"],
+          original: "ex > ig",
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["sn"],
+          right: ["ig", "se"],
+          original: "sn > ig se",
+        },
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+          original: "ig > di ig",
+        },
+      ],
+      [
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
+        },
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+          original: "ig > di ig",
+        },
+        {
+          left: ["ex"],
+          right: ["-", "ig"],
+          original: "ex > - ig",
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
         },
         {
           left: ["pi"],
           right: ["7"],
+          original: "pi > 7",
+        },
+        {
+          left: ["pi"],
+          right: ["1"],
+          original: "pi > 1",
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["pi"],
+          right: ["6"],
+          original: "pi > 6",
+        },
+        {
+          left: ["pi"],
+          right: ["4"],
+          original: "pi > 4",
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+          original: "di > 0",
+        },
+        {
+          left: ["pi"],
+          right: ["7"],
+          original: "pi > 7",
         },
       ],
     ],

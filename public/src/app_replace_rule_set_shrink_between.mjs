@@ -22,18 +22,21 @@ export function app_replace_rule_set_shrink_between() {
         {
           left: ["a", "b", "a"],
           right: ["a", "a"],
+          original: "a b a > a a",
         },
       ],
       [
         {
           left: ["a", "b", "a"],
           right: ["a", "a"],
+          original: "a b a > a a",
         },
       ],
       [
         {
           left: ["a", "b", "a"],
           right: ["a", "a"],
+          original: "a b a > a a",
         },
       ],
     ],

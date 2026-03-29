@@ -10,84 +10,102 @@ export function app_replace_rule_set_binary_numbers_simple_2() {
         {
           left: ["b"],
           right: ["1"],
+          original: "b > 1",
         },
         {
           left: ["b"],
           right: ["b", "b"],
+          original: "b > b b",
         },
         {
           left: ["b"],
           right: ["0"],
-        },
-      ],
-      [
-        {
-          left: ["b"],
-          right: ["b", "b"],
-        },
-        {
-          left: ["b"],
-          right: ["1"],
-        },
-        {
-          left: ["b"],
-          right: ["0"],
+          original: "b > 0",
         },
       ],
       [
         {
           left: ["b"],
           right: ["0"],
+          original: "b > 0",
         },
         {
           left: ["b"],
           right: ["b", "b"],
+          original: "b > b b",
         },
         {
           left: ["b"],
           right: ["1"],
-        },
-      ],
-      [
-        {
-          left: ["b"],
-          right: ["b", "b"],
-        },
-        {
-          left: ["b"],
-          right: ["1"],
-        },
-        {
-          left: ["b"],
-          right: ["0"],
+          original: "b > 1",
         },
       ],
       [
         {
           left: ["b"],
           right: ["1"],
+          original: "b > 1",
         },
         {
           left: ["b"],
           right: ["0"],
+          original: "b > 0",
         },
         {
           left: ["b"],
           right: ["b", "b"],
+          original: "b > b b",
         },
       ],
       [
         {
           left: ["b"],
           right: ["0"],
+          original: "b > 0",
         },
         {
           left: ["b"],
           right: ["b", "b"],
+          original: "b > b b",
         },
         {
           left: ["b"],
           right: ["1"],
+          original: "b > 1",
+        },
+      ],
+      [
+        {
+          left: ["b"],
+          right: ["b", "b"],
+          original: "b > b b",
+        },
+        {
+          left: ["b"],
+          right: ["0"],
+          original: "b > 0",
+        },
+        {
+          left: ["b"],
+          right: ["1"],
+          original: "b > 1",
+        },
+      ],
+      [
+        {
+          left: ["b"],
+          right: ["1"],
+          original: "b > 1",
+        },
+        {
+          left: ["b"],
+          right: ["0"],
+          original: "b > 0",
+        },
+        {
+          left: ["b"],
+          right: ["b", "b"],
+          original: "b > b b",
         },
       ],
     ],

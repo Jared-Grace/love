@@ -10,60 +10,72 @@ export function app_replace_rule_set_binary_numbers_simple() {
         {
           left: ["0"],
           right: ["0", "0"],
+          original: "0 > 0 0",
         },
         {
           left: ["0"],
           right: ["1"],
-        },
-      ],
-      [
-        {
-          left: ["0"],
-          right: ["1"],
-        },
-        {
-          left: ["0"],
-          right: ["0", "0"],
-        },
-      ],
-      [
-        {
-          left: ["0"],
-          right: ["1"],
-        },
-        {
-          left: ["0"],
-          right: ["0", "0"],
+          original: "0 > 1",
         },
       ],
       [
         {
           left: ["0"],
           right: ["0", "0"],
+          original: "0 > 0 0",
         },
         {
           left: ["0"],
           right: ["1"],
-        },
-      ],
-      [
-        {
-          left: ["0"],
-          right: ["1"],
-        },
-        {
-          left: ["0"],
-          right: ["0", "0"],
+          original: "0 > 1",
         },
       ],
       [
         {
           left: ["0"],
           right: ["0", "0"],
+          original: "0 > 0 0",
         },
         {
           left: ["0"],
           right: ["1"],
+          original: "0 > 1",
+        },
+      ],
+      [
+        {
+          left: ["0"],
+          right: ["1"],
+          original: "0 > 1",
+        },
+        {
+          left: ["0"],
+          right: ["0", "0"],
+          original: "0 > 0 0",
+        },
+      ],
+      [
+        {
+          left: ["0"],
+          right: ["0", "0"],
+          original: "0 > 0 0",
+        },
+        {
+          left: ["0"],
+          right: ["1"],
+          original: "0 > 1",
+        },
+      ],
+      [
+        {
+          left: ["0"],
+          right: ["0", "0"],
+          original: "0 > 0 0",
+        },
+        {
+          left: ["0"],
+          right: ["1"],
+          original: "0 > 1",
         },
       ],
     ],

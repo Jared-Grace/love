@@ -22,18 +22,21 @@ export function app_replace_rule_set_half() {
         {
           left: ["a", "a"],
           right: ["a"],
+          original: "a a > a",
         },
       ],
       [
         {
           left: ["a", "a"],
           right: ["a"],
+          original: "a a > a",
         },
       ],
       [
         {
           left: ["a", "a"],
           right: ["a"],
+          original: "a a > a",
         },
       ],
     ],
