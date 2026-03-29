@@ -1,5 +1,4 @@
-import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
-import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
+import { list_map_property_invoke } from "../../../love/public/src/list_map_property_invoke.mjs";
 import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
 import { app_replace_animation_duration_get } from "../../../love/public/src/app_replace_animation_duration_get.mjs";
 import { emoji_target } from "../../../love/public/src/emoji_target.mjs";
@@ -319,8 +318,7 @@ export async function app_replace_rule_set(context) {
     symbols_invalid_chosen = {};
     index_selected = ternary(index_selected === index, null, index);
     let property_name = "refresh_sb";
-    let mapped = list_map_property(sbs, property_name);
-    invoke_multiple(mapped);
+    list_map_property_invoke(sbs, property_name);
     refresh();
   }
 }
