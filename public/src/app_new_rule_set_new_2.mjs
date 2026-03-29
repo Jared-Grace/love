@@ -61,6 +61,10 @@ export function app_new_rule_set_new_2() {
         end: js_keyword_function() + " i n v o k e ( f ) { return f ( ) ; }",
       },
       {
+        start: "fd",
+        end: js_keyword_function() + " id ( fpg ) { smg }",
+      },
+      {
         start: js_keyword_function() + " id ( fpg ) { smg }",
         end: js_keyword_function() + " id ( id , id ) { return ex ; }",
       },
