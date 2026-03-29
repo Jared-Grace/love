@@ -1,4 +1,4 @@
-import { each } from "../../../love/public/src/each.mjs";
+import { each_async } from "../../../love/public/src/each_async.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
 import { js_list_nodes_object_expression } from "../../../love/public/src/js_list_nodes_object_expression.mjs";
@@ -14,7 +14,7 @@ export async function app_replace_rule_sets_fns_transform(lambda$a) {
       name,
     });
     let list = js_list_nodes_object_expression(ast);
-    function lambda_each(item) {
+    async function lambda_each(item) {
       let p = "name";
       let name_property = js_object_expression_properties_find_key_named(
         item,
@@ -23,13 +23,13 @@ export async function app_replace_rule_sets_fns_transform(lambda$a) {
       if (null_is(name_property)) {
         return;
       }
-      lambda$a({
+      await lambda$a({
         name_property,
         item,
         name,
       });
     }
-    each(list, lambda_each);
+    await each_async(list, lambda_each);
   }
   await functions_transform_list(names, lambda3);
   return names;
