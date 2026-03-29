@@ -44,9 +44,8 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
       list_remove(properties, p_existing);
     }
     let expression = js_object_to_expression(rules_used);
-    log_exit(expression);
-    let s = js_string(value_string);
-    let p = js_property(p_name, expression);
+    let s = js_string(p_name);
+    let p = js_property(s, expression);
     list_add(properties, p);
     log(app_replace_rule_sets_fns_rules_used_generate.name, {
       rules_used,
