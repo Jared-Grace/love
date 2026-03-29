@@ -12,6 +12,10 @@ export function app_replace_rule_set_statements_block() {
     goals: [
       {
         start: "bs",
+        end: "{ }",
+      },
+      {
+        start: "bs",
         end: "{ ; }",
       },
       {
