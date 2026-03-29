@@ -1,3 +1,4 @@
+import { app_replace_rule_set_identifiers_simple_abbreviation_id } from "../../../love/public/src/app_replace_rule_set_identifiers_simple_abbreviation_id.mjs";
 import { js_keyword_function } from "../../../love/public/src/js_keyword_function.mjs";
 import { object_merge } from "../../../love/public/src/object_merge.mjs";
 import { app_replace_rule_set_statements_for_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_for_abbreviations.mjs";
@@ -34,6 +35,7 @@ export function app_replace_rule_set_function_declarations() {
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_for_abbreviations(abbreviations);
+  app_replace_rule_set_identifiers_simple_abbreviation_id(abbreviations2);
   object_merge(abbreviations, {
     fd: ["", "f", "unction ", "d", "eclaration"],
     fdm: ["", "f", "unction ", "d", "eclaration ", "m", "iddle"],
