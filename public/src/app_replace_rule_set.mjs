@@ -301,6 +301,13 @@ export async function app_replace_rule_set(context) {
     if (success) {
       html_visibility_hidden(div_symbols);
     }
+    let t = app_replace_rule_set_verify_from_try(rules_used, start, end);
+    let found = property_get(t, "found");
+    if (not(found)) {
+      html_style_background_color_set(start_over, "red");
+      html_font_color_set(start_over, "white");
+      await html_scroll_center(start_over);
+    }
   }
   let left = emoji_restart();
   let combined = text_combine(left, "Start over");
