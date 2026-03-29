@@ -8,8 +8,8 @@ export function app_new_rule_set_new_2() {
   app_replace_rule_set_statements_for_rules(rules);
   list_add_multiple(rules, [
     "fd > " + js_keyword_function() + " id (" + "fdm bs",
-    "fdm" > ")",
-    "fdm" > "fpg )",
+    "fdm > )",
+    "fdm > fpg )",
     "fpg > fpg , id",
     "fpg > id",
   ]);
