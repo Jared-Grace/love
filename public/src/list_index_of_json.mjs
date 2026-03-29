@@ -10,5 +10,6 @@ export function list_index_of_json(list, item) {
     return eq2;
   }
   let found = list_find(list, lambda);
-  let index = list_index_of(list2, item2);
+  let index = list_index_of(list, found);
+  return index;
 }
