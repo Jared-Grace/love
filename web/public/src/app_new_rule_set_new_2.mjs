@@ -8,6 +8,7 @@ export function app_new_rule_set_new_2() {
   app_replace_rule_set_statements_for_rules(rules);
   list_add_multiple(rules, [
     "fd > " + js_keyword_function() + " id ( " + " ) bs",
+    "fpg > id , fpg",
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_for_abbreviations(abbreviations);
