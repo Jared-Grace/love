@@ -268,16 +268,19 @@ export async function app_replace_rule_set(context) {
         let rule2 = list_get(rules_used, index_selected);
         let valid = app_replace_rule_valid(rule2, index3, start);
       }
-      let includes = list_includes(start_indices, index);
-      app_replace_button_symbol_style_valid_if(
-        sb,
-        index_selected !== null && includes,
-      );
+      refresh_sb();
       let exists = property_exists(symbols_invalid_chosen, index);
       if (exists) {
         app_replace_button_symbol_style_invalid(sb);
       }
       return sb;
+      function refresh_sb() {
+        let includes = list_includes(start_indices, index);
+        app_replace_button_symbol_style_valid_if(
+          sb,
+          index_selected !== null && includes,
+        );
+      }
     }
     sbs = list_map_index(start, symbols_mapper);
     ("no success yet?");
