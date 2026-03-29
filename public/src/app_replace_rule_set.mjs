@@ -1,3 +1,4 @@
+import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
 import { app_replace_animation_duration_get } from "../../../love/public/src/app_replace_animation_duration_get.mjs";
 import { emoji_target } from "../../../love/public/src/emoji_target.mjs";
@@ -316,6 +317,7 @@ export async function app_replace_rule_set(context) {
   function button_rule_on_click_inner(index) {
     symbols_invalid_chosen = {};
     index_selected = ternary(index_selected === index, null, index);
+    let mapped = list_map_property(list, property_name);
     refresh();
   }
 }
