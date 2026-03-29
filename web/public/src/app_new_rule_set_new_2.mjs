@@ -16,7 +16,7 @@ export function app_new_rule_set_new_2() {
   let abbreviations = {};
   app_replace_rule_set_statements_for_abbreviations(abbreviations);
   object_merge(abbreviations, {
-    fs: ["", "f", "unction ", "d", "eclaration"],
+    fd: ["", "f", "unction ", "d", "eclaration"],
     fdm: ["", "f", "unction ", "d", "eclaration ", "m", "iddle"],
     fpg: ["", "f", "unction ", "p", "arameter ", "g", "rower"],
   });
