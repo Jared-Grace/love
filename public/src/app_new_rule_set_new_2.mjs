@@ -82,7 +82,7 @@ export function app_new_rule_set_new_2() {
         end: js_keyword_function() + " id ( x , y ) { vs return ex ; }",
       },
       {
-        start: js_keyword_function() + " id ( x , y ) { smg }",
+        start: s_keyword_function() + " id ( x , y ) { vs return ex ; }",
         end:
           js_keyword_function() +
           " a v e r a g e ( x , y ) { let sum = a d d ( x , y ) ; return sum / 2 ; }",
