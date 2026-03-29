@@ -185,10 +185,14 @@ export async function app_replace_rule_set(context) {
   async function refresh() {
     html_clear(div_rules_buttons);
     function lambda() {
-      let t = app_replace_rule_set_verify_from_try(rules_parsed, start, end);
-      return t;
+      let t_inner = app_replace_rule_set_verify_from_try(
+        rules_parsed,
+        start,
+        end,
+      );
+      return t_inner;
     }
-    let to = await lambda_timeout(lambda, 1000);
+    let t = await lambda_timeout(lambda, 1000);
     let found = property_get(t, "found");
     if (not(found)) {
       html_style_background_color_set(start_over, highlight);
