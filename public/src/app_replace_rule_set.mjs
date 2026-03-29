@@ -1,3 +1,6 @@
+import { html_scroll_center } from "../../../love/public/src/html_scroll_center.mjs";
+import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
+import { app_replace_rule_set_verify_from_try } from "../../../love/public/src/app_replace_rule_set_verify_from_try.mjs";
 import { list_map_property_invoke } from "../../../love/public/src/list_map_property_invoke.mjs";
 import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
 import { app_replace_animation_duration_get } from "../../../love/public/src/app_replace_animation_duration_get.mjs";
