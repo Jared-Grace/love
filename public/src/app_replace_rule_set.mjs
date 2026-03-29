@@ -150,7 +150,9 @@ export async function app_replace_rule_set(context) {
   let refresh_count = 0;
   let rules_useds = app_replace_rule_sets_fns_rules_used();
   let rules_used_all = property_get_or_null(rules_useds, rule_set_name);
-  if (null_is(value5)) {
+  if (null_is(rules_used_all)) {
+    rules_used = rules_parsed;
+  } else {
   }
   rules_used = list_get(rules_used_all, goal_index);
   let exists2 = property_exists(rs, "abbreviations");
