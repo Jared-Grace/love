@@ -70,7 +70,7 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: js_keyword_function() + " id ( fpg ) { smg }",
-        end: js_keyword_function() + " id ( id , id ) { return ex ; }",
+        end: js_keyword_function() + " id ( id , id ) { smg }",
       },
       {
         start: js_keyword_function() + " id ( id , id ) { smg }",
