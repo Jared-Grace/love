@@ -1,3 +1,4 @@
+import { app_replace_rule_parse } from "../../../love/public/src/app_replace_rule_parse.mjs";
 import { js_string } from "../../../love/public/src/js_string.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
 import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
@@ -8,7 +9,6 @@ import { js_object_expression_properties } from "../../../love/public/src/js_obj
 import { js_property } from "../../../love/public/src/js_property.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-import { app_replace_rules_parse_left_right_only } from "../../../love/public/src/app_replace_rules_parse_left_right_only.mjs";
 import { app_replace_rule_set_rules_used } from "../../../love/public/src/app_replace_rule_set_rules_used.mjs";
 import { function_run_args_none } from "../../../love/public/src/function_run_args_none.mjs";
 import { log } from "../../../love/public/src/log.mjs";
@@ -23,7 +23,7 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
     });
     let rules = property_get(rs, "rules");
     let goals = property_get(rs, "goals");
-    let rules_parsed = app_replace_rules_parse_left_right_only(rules);
+    let rules_parsed = app_replace_rule_parse(rules);
     function lambda2(g) {
       let se = app_replace_start_end_get(g);
       let end = property_get(se, "end");
