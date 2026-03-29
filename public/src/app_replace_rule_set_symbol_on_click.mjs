@@ -37,12 +37,12 @@ export async function app_replace_rule_set_symbol_on_click(
   duration,
   div_symbols,
 ) {
-  let rule2 = list_get(rules_parsed, index_selected);
-  let eq = app_replace_rule_valid(rule2, index, start);
+  let rule = list_get(rules_parsed, index_selected);
+  let eq = app_replace_rule_valid(rule, index, start);
   if (eq) {
     symbols_invalid_chosen = {};
     app_replace_button_symbol_style_valid_if_multiple(sbs, true);
-    start = app_replace_rule_apply(rule2, index, start);
+    start = app_replace_rule_apply(rule, index, start);
     start_indices = list_size_range(start);
     log(app_replace_rule_set_symbol_on_click.name, {
       start_indices,
