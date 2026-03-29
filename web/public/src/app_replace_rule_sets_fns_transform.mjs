@@ -22,7 +22,10 @@ export async function app_replace_rule_sets_fns_transform(lambda$name$item) {
       if (null_is(name)) {
         return;
       }
-      lambda$name$item(name, item);
+      lambda$a({
+        name,
+        item,
+      });
     }
     each(list, lambda_each);
   }
