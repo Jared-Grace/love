@@ -3,6 +3,7 @@ import { app_replace_rule_set_statements_simple_rules } from "../../../love/publ
 export function app_replace_rule_set_statements_block_rules(rules) {
   app_replace_rule_set_statements_simple_rules(rules);
   list_add_multiple(rules, [
+    "bs > { }",
     "bs > { smg }",
     "smg > sm",
     "smg > smg sm",
