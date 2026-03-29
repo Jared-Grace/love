@@ -106,7 +106,7 @@ export function app_new_rule_set_new_2() {
         start: js_keyword_function() + " id ( id ) { sm sm sm }",
         end:
           js_keyword_function() +
-          " s u m ( l i s t ) { let id = ex ; sm return ex ; }",
+          " s u m ( l i s t ) { let id = ex ; sm sm ; }",
       },
     ],
   };
