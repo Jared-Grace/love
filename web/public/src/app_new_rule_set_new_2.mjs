@@ -73,7 +73,7 @@ export function app_new_rule_set_new_2() {
         end: js_keyword_function() + " id ( x , y ) { smg }",
       },
       {
-        start: js_keyword_function() + " id ( id , id ) { smg }",
+        start: js_keyword_function() + " id ( x , y ) { smg }",
         end: js_keyword_function() + " a d d ( x , y ) { return x + y ; }",
       },
       {
