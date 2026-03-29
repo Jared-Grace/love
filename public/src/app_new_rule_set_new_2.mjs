@@ -40,6 +40,7 @@ export function app_new_rule_set_new_2() {
     "ex > s u m = 0",
     "ex > i < l i s t . s i z e",
     "ex > i = i + 1",
+    "ex > s u m = s u m + l i s t [ 0 ]",
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_for_abbreviations(abbreviations);
