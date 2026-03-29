@@ -11,6 +11,7 @@ export function app_new_rule_set_new_2() {
     "fdm" > ")",
     "fdm" > "fpg )",
     "fpg > fpg , id",
+    "fpg > id",
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_for_abbreviations(abbreviations);
