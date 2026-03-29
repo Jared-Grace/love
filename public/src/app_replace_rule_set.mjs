@@ -1,3 +1,4 @@
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { app_replace_rule_sets_fns_rules_used } from "../../../love/public/src/app_replace_rule_sets_fns_rules_used.mjs";
 import { list_index_of_json } from "../../../love/public/src/list_index_of_json.mjs";
 import { html_scroll_center } from "../../../love/public/src/html_scroll_center.mjs";
@@ -80,6 +81,7 @@ import { html_button } from "../../../love/public/src/html_button.mjs";
 import { html_p_text } from "../../../love/public/src/html_p_text.mjs";
 import { list_get } from "../../../love/public/src/list_get.mjs";
 import { html_clear } from "../../../love/public/src/html_clear.mjs";
+import { property_get_or_null } from "./property_get_or_null.mjs";
 export async function app_replace_rule_set(context) {
   let root = property_get(context, "root");
   app_replace_button_home(root, context);
@@ -147,7 +149,9 @@ export async function app_replace_rule_set(context) {
   const duration = app_replace_animation_duration_get(context);
   let refresh_count = 0;
   let rules_useds = app_replace_rule_sets_fns_rules_used();
-  let rules_used_all = property_get(rules_useds, rule_set_name);
+  let rules_used_all = property_get_or_null(rules_useds, rule_set_name);
+  if (null_is(value5)) {
+  }
   rules_used = list_get(rules_used_all, goal_index);
   let exists2 = property_exists(rs, "abbreviations");
   if (exists2) {
