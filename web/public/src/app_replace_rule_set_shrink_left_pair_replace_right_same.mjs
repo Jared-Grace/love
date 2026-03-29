@@ -34,60 +34,72 @@ export function app_replace_rule_set_shrink_left_pair_replace_right_same() {
         {
           left: ["b", "c"],
           right: ["b", "b"],
+          original: "b c > b b",
         },
         {
           left: ["b", "a"],
           right: ["a"],
+          original: "b a > a",
         },
       ],
       [
         {
           left: ["b", "a"],
           right: ["a"],
+          original: "b a > a",
         },
         {
           left: ["b", "c"],
           right: ["b", "b"],
-        },
-      ],
-      [
-        {
-          left: ["b", "c"],
-          right: ["b", "b"],
-        },
-        {
-          left: ["b", "a"],
-          right: ["a"],
+          original: "b c > b b",
         },
       ],
       [
         {
           left: ["b", "a"],
           right: ["a"],
+          original: "b a > a",
         },
         {
           left: ["b", "c"],
           right: ["b", "b"],
+          original: "b c > b b",
         },
       ],
       [
         {
           left: ["b", "a"],
           right: ["a"],
+          original: "b a > a",
         },
         {
           left: ["b", "c"],
           right: ["b", "b"],
+          original: "b c > b b",
+        },
+      ],
+      [
+        {
+          left: ["b", "a"],
+          right: ["a"],
+          original: "b a > a",
+        },
+        {
+          left: ["b", "c"],
+          right: ["b", "b"],
+          original: "b c > b b",
         },
       ],
       [
         {
           left: ["b", "c"],
           right: ["b", "b"],
+          original: "b c > b b",
         },
         {
           left: ["b", "a"],
           right: ["a"],
+          original: "b a > a",
         },
       ],
     ],

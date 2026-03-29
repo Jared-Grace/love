@@ -20,32 +20,38 @@ export function app_replace_rule_set_shrink_different_2() {
     rules_used: [
       [
         {
-          left: ["d", "e"],
-          right: ["b"],
-        },
-        {
           left: ["b", "c"],
           right: ["a"],
+          original: "b c > a",
+        },
+        {
+          left: ["d", "e"],
+          right: ["b"],
+          original: "d e > b",
         },
       ],
       [
         {
-          left: ["d", "e"],
-          right: ["b"],
-        },
-        {
           left: ["b", "c"],
           right: ["a"],
+          original: "b c > a",
+        },
+        {
+          left: ["d", "e"],
+          right: ["b"],
+          original: "d e > b",
         },
       ],
       [
         {
-          left: ["d", "e"],
-          right: ["b"],
-        },
-        {
           left: ["b", "c"],
           right: ["a"],
+          original: "b c > a",
+        },
+        {
+          left: ["d", "e"],
+          right: ["b"],
+          original: "d e > b",
         },
       ],
     ],

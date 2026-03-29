@@ -53,158 +53,192 @@ export function app_replace_rule_set_integers() {
     rules_used: [
       [
         {
-          left: ["pi"],
-          right: ["9"],
-        },
-        {
           left: ["in"],
           right: ["di"],
+          original: "in > di",
+        },
+        {
+          left: ["pi"],
+          right: ["3"],
+          original: "pi > 3",
         },
         {
           left: ["di"],
           right: ["0"],
+          original: "di > 0",
         },
       ],
       [
         {
-          left: ["di"],
-          right: ["pi"],
-        },
-        {
           left: ["pi"],
           right: ["2"],
+          original: "pi > 2",
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
         },
         {
           left: ["in"],
           right: ["di"],
+          original: "in > di",
         },
       ],
       [
         {
-          left: ["pi"],
-          right: ["3"],
-        },
-        {
-          left: ["di"],
-          right: ["pi"],
+          left: ["in"],
+          right: ["pi", "ig"],
+          original: "in > pi ig",
         },
         {
           left: ["ig"],
           right: ["di"],
+          original: "ig > di",
         },
         {
-          left: ["in"],
-          right: ["pi", "ig"],
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
         },
         {
           left: ["pi"],
           right: ["1"],
+          original: "pi > 1",
+        },
+        {
+          left: ["pi"],
+          right: ["3"],
+          original: "pi > 3",
         },
       ],
       [
         {
-          left: ["pi"],
-          right: ["7"],
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
         },
         {
           left: ["in"],
           right: ["pi", "ig"],
+          original: "in > pi ig",
         },
         {
           left: ["di"],
           right: ["pi"],
+          original: "di > pi",
         },
         {
-          left: ["ig"],
-          right: ["di"],
+          left: ["pi"],
+          right: ["7"],
+          original: "pi > 7",
         },
       ],
       [
         {
           left: ["pi"],
           right: ["4"],
-        },
-        {
-          left: ["ig"],
-          right: ["di"],
+          original: "pi > 4",
         },
         {
           left: ["in"],
           right: ["pi", "ig"],
+          original: "in > pi ig",
         },
         {
           left: ["di"],
           right: ["0"],
+          original: "di > 0",
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
         },
       ],
       [
         {
           left: ["ig"],
           right: ["di"],
-        },
-        {
-          left: ["in"],
-          right: ["pi", "ig"],
+          original: "ig > di",
         },
         {
           left: ["ig"],
           right: ["di", "ig"],
+          original: "ig > di ig",
+        },
+        {
+          left: ["in"],
+          right: ["pi", "ig"],
+          original: "in > pi ig",
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["pi"],
+          right: ["9"],
+          original: "pi > 9",
+        },
+        {
+          left: ["pi"],
+          right: ["6"],
+          original: "pi > 6",
+        },
+      ],
+      [
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+          original: "ig > di ig",
+        },
+        {
+          left: ["in"],
+          right: ["pi", "ig"],
+          original: "in > pi ig",
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+          original: "ig > di",
         },
       ],
       [
         {
           left: ["pi"],
-          right: ["9"],
+          right: ["6"],
+          original: "pi > 6",
         },
         {
           left: ["di"],
           right: ["pi"],
-        },
-        {
-          left: ["pi"],
-          right: ["6"],
-        },
-      ],
-      [
-        {
-          left: ["ig"],
-          right: ["di"],
-        },
-        {
-          left: ["ig"],
-          right: ["di", "ig"],
-        },
-        {
-          left: ["in"],
-          right: ["pi", "ig"],
-        },
-      ],
-      [
-        {
-          left: ["pi"],
-          right: ["6"],
+          original: "di > pi",
         },
         {
           left: ["pi"],
           right: ["5"],
-        },
-        {
-          left: ["di"],
-          right: ["pi"],
+          original: "pi > 5",
         },
       ],
       [
         {
           left: ["pi"],
           right: ["8"],
-        },
-        {
-          left: ["pi"],
-          right: ["7"],
+          original: "pi > 8",
         },
         {
           left: ["di"],
           right: ["pi"],
+          original: "di > pi",
+        },
+        {
+          left: ["pi"],
+          right: ["7"],
+          original: "pi > 7",
         },
       ],
     ],

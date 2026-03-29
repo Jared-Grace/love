@@ -30,30 +30,35 @@ export function app_replace_rule_set_swap_change_left() {
         {
           left: ["b", "c"],
           right: ["a", "b"],
+          original: "b c > a b",
         },
       ],
       [
         {
           left: ["b", "c"],
           right: ["a", "b"],
+          original: "b c > a b",
         },
       ],
       [
         {
           left: ["b", "c"],
           right: ["a", "b"],
+          original: "b c > a b",
         },
       ],
       [
         {
           left: ["b", "c"],
           right: ["a", "b"],
+          original: "b c > a b",
         },
       ],
       [
         {
           left: ["b", "c"],
           right: ["a", "b"],
+          original: "b c > a b",
         },
       ],
     ],
