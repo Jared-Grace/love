@@ -27,7 +27,7 @@ export function app_new_rule_set_new_2() {
     goals: [
       {
         start: "fd",
-        end: js_keyword_function() + " id ( ) { }",
+        end: js_keyword_function() + " id ( fdm",
       },
     ],
   };
