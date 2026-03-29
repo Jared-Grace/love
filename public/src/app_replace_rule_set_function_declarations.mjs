@@ -35,7 +35,7 @@ export function app_replace_rule_set_function_declarations() {
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_for_abbreviations(abbreviations);
-  app_replace_rule_set_identifiers_simple_abbreviation_id(abbreviations2);
+  app_replace_rule_set_identifiers_simple_abbreviation_id(abbreviations);
   object_merge(abbreviations, {
     fd: ["", "f", "unction ", "d", "eclaration"],
     fdm: ["", "f", "unction ", "d", "eclaration ", "m", "iddle"],
