@@ -58,7 +58,7 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
   let r22 = js_flo_body_add_return_argument_curried_right(e);
   let output = await function_transform_fn(
     app_replace_rule_sets_fns_rules_used,
-    r22,
+    () => {},
   );
   return result;
 }
