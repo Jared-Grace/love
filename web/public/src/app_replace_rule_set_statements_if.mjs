@@ -56,6 +56,122 @@ export function app_replace_rule_set_statements_if() {
       },
     ],
     why: "The replacement rules describe a grammar for JavaScript-like variable declarations, statements, and if-else control flow, demonstrating how variable statements, expressions, and block/conditional statements are structured and composed in such a language.",
+    rules_used: [
+      [
+        {
+          left: ["sm"],
+          right: ["return", ";"],
+        },
+        {
+          left: ["ex"],
+          right: ["y", "===", "null"],
+        },
+        {
+          left: ["is"],
+          right: ["if", "(", "ex", ")", "sm"],
+        },
+      ],
+      [
+        {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+        },
+        {
+          left: ["is"],
+          right: ["if", "(", "ex", ")", "sm"],
+        },
+        {
+          left: ["ex"],
+          right: ["x", "<", "0"],
+        },
+        {
+          left: ["sm"],
+          right: ["bs"],
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["x", "=", "1"],
+        },
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+        },
+        {
+          left: ["smg"],
+          right: ["sm"],
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["y", ">", "max"],
+        },
+        {
+          left: ["sm"],
+          right: ["bs"],
+        },
+        {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+        },
+        {
+          left: ["is"],
+          right: ["if", "(", "ex", ")", "sm"],
+        },
+      ],
+      [
+        {
+          left: ["smg"],
+          right: ["sm"],
+        },
+        {
+          left: ["smg"],
+          right: ["smg", "sm"],
+        },
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+        },
+        {
+          left: ["ex"],
+          right: ["y", "=", "0"],
+        },
+        {
+          left: ["ex"],
+          right: ["log", "(", '"', "r", "e", "s", "e", "t", '"', ")"],
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["x", ">", "0"],
+        },
+        {
+          left: ["sm"],
+          right: ["bs"],
+        },
+        {
+          left: ["is"],
+          right: ["if", "(", "ex", ")", "sm", "else", "sm"],
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["positive", "=", "true"],
+        },
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+        },
+        {
+          left: ["ex"],
+          right: ["positive", "=", "false"],
+        },
+      ],
+    ],
   };
   return r;
 }

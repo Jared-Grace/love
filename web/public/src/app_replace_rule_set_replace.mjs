@@ -25,6 +25,38 @@ export function app_replace_rule_set_replace() {
       },
     ],
     why: "The rules demonstrate a grammar where every 'a' in the input can be independently replaced by 'b', allowing any combination of 'a's and 'b's in the output, as shown by the varied goal examples.",
+    rules_used: [
+      [
+        {
+          left: ["a"],
+          right: ["b"],
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b"],
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b"],
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b"],
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b"],
+        },
+      ],
+    ],
   };
   return r;
 }

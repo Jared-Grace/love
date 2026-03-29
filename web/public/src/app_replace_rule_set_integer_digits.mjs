@@ -55,6 +55,156 @@ export function app_replace_rule_set_integer_digits() {
       },
     ],
     why: "The replacement rules define a grammar for generating sequences of decimal digits (0-9), representing integers of arbitrary length, by recursively expanding a nonterminal into one or more digits.",
+    rules_used: [
+      [
+        {
+          left: ["di"],
+          right: ["1"],
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+        },
+        {
+          left: ["g"],
+          right: ["di"],
+        },
+      ],
+      [
+        {
+          left: ["g"],
+          right: ["di"],
+        },
+        {
+          left: ["di"],
+          right: ["8"],
+        },
+        {
+          left: ["di"],
+          right: ["2"],
+        },
+      ],
+      [
+        {
+          left: ["g"],
+          right: ["di", "g"],
+        },
+        {
+          left: ["di"],
+          right: ["3"],
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+        },
+        {
+          left: ["g"],
+          right: ["di"],
+        },
+      ],
+      [
+        {
+          left: ["g"],
+          right: ["di"],
+        },
+        {
+          left: ["di"],
+          right: ["8"],
+        },
+        {
+          left: ["di"],
+          right: ["9"],
+        },
+        {
+          left: ["g"],
+          right: ["di", "g"],
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["1"],
+        },
+        {
+          left: ["g"],
+          right: ["di"],
+        },
+        {
+          left: ["g"],
+          right: ["di", "g"],
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["4"],
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+        },
+        {
+          left: ["di"],
+          right: ["7"],
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["5"],
+        },
+        {
+          left: ["di"],
+          right: ["4"],
+        },
+        {
+          left: ["di"],
+          right: ["6"],
+        },
+      ],
+      [
+        {
+          left: ["g"],
+          right: ["di"],
+        },
+        {
+          left: ["di"],
+          right: ["3"],
+        },
+        {
+          left: ["g"],
+          right: ["di", "g"],
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["2"],
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+        },
+        {
+          left: ["di"],
+          right: ["1"],
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["7"],
+        },
+        {
+          left: ["di"],
+          right: ["4"],
+        },
+        {
+          left: ["di"],
+          right: ["3"],
+        },
+      ],
+    ],
   };
   return r;
 }
