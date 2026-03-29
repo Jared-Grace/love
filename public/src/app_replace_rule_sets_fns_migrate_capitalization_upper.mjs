@@ -21,16 +21,16 @@ export async function app_replace_rule_sets_fns_migrate_capitalization_upper() {
     let list = js_list_nodes_object_expression(ast);
     function lambda_each(item) {
       let p = "name";
-      let s = js_object_expression_properties_find_key_named(item, p);
-      if (null_is(s)) {
+      let name = js_object_expression_properties_find_key_named(item, p);
+      if (null_is(name)) {
         return;
       }
-      on_result(s);
+      on_result(name);
     }
     each(list, lambda_each);
   }
   return result;
-  function on_result(s) {
+  function on_result(name) {
     function lambda2(t) {
       log(app_replace_rule_sets_fns_migrate_capitalization_upper.name, {
         t,
@@ -41,6 +41,6 @@ export async function app_replace_rule_sets_fns_migrate_capitalization_upper() {
       return joined;
     }
     let r = js_literal_map_curried_right(lambda2);
-    js_property_value_change(s, r);
+    js_property_value_change(name, r);
   }
 }
