@@ -2,9 +2,6 @@ import { app_replace_rule_sets_fns_transform_lambda_curried_right } from "../../
 import { functions_asts_each } from "../../../love/public/src/functions_asts_each.mjs";
 import { app_replace_rules_parse } from "../../../love/public/src/app_replace_rules_parse.mjs";
 import { js_string } from "../../../love/public/src/js_string.mjs";
-import { list_remove } from "../../../love/public/src/list_remove.mjs";
-import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
-import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_object_to_expression } from "../../../love/public/src/js_object_to_expression.mjs";
 import { js_object_expression_properties } from "../../../love/public/src/js_object_expression_properties.mjs";
@@ -36,13 +33,6 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
     let item = property_get(a, "item");
     let properties = js_object_expression_properties(item);
     const p_name = "rules_used";
-    let p_existing = js_object_expression_properties_find_key_named(
-      item,
-      p_name,
-    );
-    if (null_not_is(p_existing)) {
-      list_remove(properties, p_existing);
-    }
     let expression = js_object_to_expression(rules_used);
     let s = js_string(p_name);
     let p = js_property(s, expression);
