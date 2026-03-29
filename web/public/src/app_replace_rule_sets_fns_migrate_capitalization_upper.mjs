@@ -25,19 +25,22 @@ export async function app_replace_rule_sets_fns_migrate_capitalization_upper() {
       if (null_is(s)) {
         return;
       }
-      function lambda2(t) {
-        log(app_replace_rule_sets_fns_migrate_capitalization_upper.name, {
-          t,
-        });
-        let split = text_split_space(t);
-        let mapped = list_map(split, text_first_upper_to);
-        let joined = list_join_space(mapped);
-        return joined;
-      }
-      let r = js_literal_map_curried_right(lambda2);
-      js_property_value_change(s, r);
+      on_result(s);
     }
     each(list, lambda_each);
   }
   return result;
+  function on_result(s) {
+    function lambda2(t) {
+      log(app_replace_rule_sets_fns_migrate_capitalization_upper.name, {
+        t,
+      });
+      let split = text_split_space(t);
+      let mapped = list_map(split, text_first_upper_to);
+      let joined = list_join_space(mapped);
+      return joined;
+    }
+    let r = js_literal_map_curried_right(lambda2);
+    js_property_value_change(s, r);
+  }
 }
