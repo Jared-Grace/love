@@ -7,7 +7,7 @@ export function app_new_rule_set_new_2() {
   const rules = [];
   app_replace_rule_set_statements_for_rules(rules);
   list_add_multiple(rules, [
-    "fd > a",
+    "fd > " + js_keyword_function(),
     "fd > " + js_keyword_function() + " id (" + "fdm bs",
     "fdm > )",
     "fdm > fpg )",
@@ -28,7 +28,7 @@ export function app_new_rule_set_new_2() {
     goals: [
       {
         start: "fd",
-        end: "a",
+        end: js_keyword_function(),
       },
     ],
   };
