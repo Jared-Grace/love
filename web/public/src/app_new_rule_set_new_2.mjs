@@ -79,6 +79,10 @@ export function app_new_rule_set_new_2() {
       },
       {
         start: js_keyword_function() + " id ( x , y ) { smg }",
+        end: js_keyword_function() + " id ( x , y ) { sm sm }",
+      },
+      {
+        start: js_keyword_function() + " id ( x , y ) { smg }",
         end:
           js_keyword_function() +
           " a v e r a g e ( x , y ) { let sum = a d d ( x , y ) ; return sum / 2 ; }",
