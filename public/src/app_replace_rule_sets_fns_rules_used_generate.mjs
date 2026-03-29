@@ -1,5 +1,4 @@
 import { js_flo_body_add_return_argument } from "../../../portfolio_qa/public/src/js_flo_body_add_return_argument.mjs";
-import { js_flo_body_add_return_argument_curried_right } from "../../../love/public/src/js_flo_body_add_return_argument_curried_right.mjs";
 import { function_transform_fn } from "../../../love/public/src/function_transform_fn.mjs";
 import { app_replace_rule_sets_fns_rules_used } from "../../../love/public/src/app_replace_rule_sets_fns_rules_used.mjs";
 import { object_adder_async } from "../../../love/public/src/object_adder_async.mjs";
@@ -56,9 +55,8 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
   }
   let result = await object_adder_async(lambda3);
   let e = js_object_to_expression(result);
-  let r22 = js_flo_body_add_return_argument_curried_right(e);
-  function lambda4() {
-    js_flo_body_add_return_argument(ast, e2);
+  function lambda4(ast) {
+    js_flo_body_add_return_argument(ast, e);
   }
   let output = await function_transform_fn(
     app_replace_rule_sets_fns_rules_used,
