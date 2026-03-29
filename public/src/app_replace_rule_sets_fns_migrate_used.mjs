@@ -1,3 +1,4 @@
+import { function_run } from "../../../love/public/src/function_run.mjs";
 import { js_parse_expression } from "../../../love/public/src/js_parse_expression.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_unparse } from "../../../love/public/src/js_unparse.mjs";
@@ -7,7 +8,7 @@ import { js_object_expression_properties_find_key_named } from "../../../love/pu
 import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_rule_sets_fns_transform } from "../../../love/public/src/app_replace_rule_sets_fns_transform.mjs";
 export async function app_replace_rule_sets_fns_migrate_used() {
-  function lambda(a) {
+  async function lambda(a) {
     let item = property_get(a, "item");
     let p = "goals";
     let goals = js_object_expression_properties_find_key_named(item, p);
@@ -25,6 +26,7 @@ export async function app_replace_rule_sets_fns_migrate_used() {
       expression,
     });
     let name = property_get(a, "name");
+    let result2 = await function_run(f_name, args);
   }
   let result = await app_replace_rule_sets_fns_transform(lambda);
 }
