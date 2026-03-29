@@ -1,3 +1,4 @@
+import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { app_replace_rule_set_statements_simple_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_simple_abbreviations.mjs";
 import { js_code_semicolon } from "../../../love/public/src/js_code_semicolon.mjs";
 import { js_keyword_true } from "../../../love/public/src/js_keyword_true.mjs";
@@ -6,6 +7,7 @@ import { app_replace_rule_set_statements_simple_rules } from "../../../love/publ
 export function app_replace_rule_set_statements_simple() {
   const rules = [];
   app_replace_rule_set_statements_simple_rules(rules);
+  list_add_multiple(rules, ["ex > true", "ex > u p d a t e ( )"]);
   let abbreviations = {};
   app_replace_rule_set_statements_simple_abbreviations(abbreviations);
   let r = {
