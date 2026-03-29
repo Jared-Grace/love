@@ -20,44 +20,53 @@ export function app_replace_rule_set_swap_3() {
     rules_used: [
       [
         {
-          left: ["a", "d"],
-          right: ["d", "a"],
+          left: ["a", "b"],
+          right: ["b", "a"],
+          original: "a b > b a",
         },
         {
           left: ["a", "c"],
           right: ["c", "a"],
+          original: "a c > c a",
         },
+        {
+          left: ["a", "d"],
+          right: ["d", "a"],
+          original: "a d > d a",
+        },
+      ],
+      [
         {
           left: ["a", "b"],
           right: ["b", "a"],
+          original: "a b > b a",
+        },
+        {
+          left: ["a", "c"],
+          right: ["c", "a"],
+          original: "a c > c a",
+        },
+        {
+          left: ["a", "d"],
+          right: ["d", "a"],
+          original: "a d > d a",
         },
       ],
       [
         {
           left: ["a", "c"],
           right: ["c", "a"],
+          original: "a c > c a",
         },
         {
           left: ["a", "b"],
           right: ["b", "a"],
+          original: "a b > b a",
         },
         {
           left: ["a", "d"],
           right: ["d", "a"],
-        },
-      ],
-      [
-        {
-          left: ["a", "d"],
-          right: ["d", "a"],
-        },
-        {
-          left: ["a", "c"],
-          right: ["c", "a"],
-        },
-        {
-          left: ["a", "b"],
-          right: ["b", "a"],
+          original: "a d > d a",
         },
       ],
     ],

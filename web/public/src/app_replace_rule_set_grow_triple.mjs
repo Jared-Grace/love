@@ -22,18 +22,21 @@ export function app_replace_rule_set_grow_triple() {
         {
           left: ["a"],
           right: ["a", "a", "a"],
+          original: "a > a a a",
         },
       ],
       [
         {
           left: ["a"],
           right: ["a", "a", "a"],
+          original: "a > a a a",
         },
       ],
       [
         {
           left: ["a"],
           right: ["a", "a", "a"],
+          original: "a > a a a",
         },
       ],
     ],

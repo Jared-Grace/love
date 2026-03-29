@@ -97,196 +97,239 @@ export function app_replace_rule_set_function_declarations() {
     rules_used: [
       [
         {
-          left: ["fdm"],
-          right: [")"],
-        },
-        {
           left: ["id"],
           right: ["e", "m", "p", "t", "y"],
+          original: "id > e m p t y",
         },
         {
           left: ["fd"],
           right: ["function", "id", "(", "fdm", "bs"],
+          original: "fd > function id ( fdm bs",
+        },
+        {
+          left: ["fdm"],
+          right: [")"],
+          original: "fdm > )",
         },
         {
           left: ["bs"],
           right: ["{", "}"],
+          original: "bs > { }",
         },
       ],
       [
         {
-          left: ["sm"],
-          right: ["return", "ex", ";"],
-        },
-        {
           left: ["fdm"],
           right: [")"],
+          original: "fdm > )",
         },
         {
-          left: ["fd"],
-          right: ["function", "id", "(", "fdm", "bs"],
-        },
-        {
-          left: ["smg"],
-          right: ["sm"],
-        },
-        {
-          left: ["id"],
-          right: ["t", "a", "u", "t", "o", "l", "o", "g", "y"],
-        },
-        {
-          left: ["ex"],
-          right: ["true"],
+          left: ["sm"],
+          right: ["return", "ex", ";"],
+          original: "sm > return ex ;",
         },
         {
           left: ["bs"],
           right: ["{", "smg", "}"],
+          original: "bs > { smg }",
+        },
+        {
+          left: ["fd"],
+          right: ["function", "id", "(", "fdm", "bs"],
+          original: "fd > function id ( fdm bs",
+        },
+        {
+          left: ["ex"],
+          right: ["true"],
+          original: "ex > true",
+        },
+        {
+          left: ["id"],
+          right: ["t", "a", "u", "t", "o", "l", "o", "g", "y"],
+          original: "id > t a u t o l o g y",
+        },
+        {
+          left: ["smg"],
+          right: ["sm"],
+          original: "smg > sm",
         },
       ],
       [
         {
-          left: ["fd"],
-          right: ["function", "id", "(", "fdm", "bs"],
-        },
-        {
           left: ["fpg"],
           right: ["id"],
+          original: "fpg > id",
+        },
+        {
+          left: ["fd"],
+          right: ["function", "id", "(", "fdm", "bs"],
+          original: "fd > function id ( fdm bs",
         },
         {
           left: ["fdm"],
           right: ["fpg", ")"],
+          original: "fdm > fpg )",
         },
       ],
       [
         {
-          left: ["id"],
-          right: ["i", "d", "e", "n", "t", "i", "t", "y"],
-        },
-        {
-          left: ["id"],
-          right: ["i"],
-        },
-        {
           left: ["ex"],
           right: ["i"],
+          original: "ex > i",
+        },
+        {
+          left: ["id"],
+          right: ["i"],
+          original: "id > i",
+        },
+        {
+          left: ["id"],
+          right: ["i", "d", "e", "n", "t", "i", "t", "y"],
+          original: "id > i d e n t i t y",
         },
       ],
       [
         {
           left: ["id"],
           right: ["i", "n", "v", "o", "k", "e"],
+          original: "id > i n v o k e",
         },
         {
           left: ["id"],
           right: ["f"],
+          original: "id > f",
         },
         {
           left: ["ex"],
           right: ["f", "(", ")"],
+          original: "ex > f ( )",
         },
       ],
       [
         {
           left: ["bs"],
           right: ["{", "smg", "}"],
-        },
-        {
-          left: ["fdm"],
-          right: ["fpg", ")"],
+          original: "bs > { smg }",
         },
         {
           left: ["fd"],
           right: ["function", "id", "(", "fdm", "bs"],
+          original: "fd > function id ( fdm bs",
+        },
+        {
+          left: ["fdm"],
+          right: ["fpg", ")"],
+          original: "fdm > fpg )",
         },
       ],
       [
         {
-          left: ["fpg"],
-          right: ["id"],
-        },
-        {
-          left: ["id"],
-          right: ["x"],
-        },
-        {
           left: ["id"],
           right: ["y"],
+          original: "id > y",
         },
         {
           left: ["fpg"],
           right: ["fpg", ",", "id"],
+          original: "fpg > fpg , id",
+        },
+        {
+          left: ["fpg"],
+          right: ["id"],
+          original: "fpg > id",
+        },
+        {
+          left: ["id"],
+          right: ["x"],
+          original: "id > x",
         },
       ],
       [
         {
           left: ["smg"],
           right: ["sm"],
-        },
-        {
-          left: ["sm"],
-          right: ["return", "ex", ";"],
-        },
-        {
-          left: ["id"],
-          right: ["a", "d", "d"],
+          original: "smg > sm",
         },
         {
           left: ["ex"],
           right: ["x", "+", "y"],
+          original: "ex > x + y",
+        },
+        {
+          left: ["id"],
+          right: ["a", "d", "d"],
+          original: "id > a d d",
+        },
+        {
+          left: ["sm"],
+          right: ["return", "ex", ";"],
+          original: "sm > return ex ;",
         },
       ],
       [
         {
           left: ["smg"],
           right: ["sm"],
+          original: "smg > sm",
         },
         {
           left: ["sm"],
           right: ["vs"],
-        },
-        {
-          left: ["sm"],
-          right: ["return", "ex", ";"],
+          original: "sm > vs",
         },
         {
           left: ["smg"],
           right: ["smg", "sm"],
+          original: "smg > smg sm",
+        },
+        {
+          left: ["sm"],
+          right: ["return", "ex", ";"],
+          original: "sm > return ex ;",
         },
       ],
       [
         {
-          left: ["vk"],
-          right: ["let"],
-        },
-        {
-          left: ["vs"],
-          right: ["vk", "vdg", ";"],
-        },
-        {
           left: ["vd"],
           right: ["id", "=", "ex"],
+          original: "vd > id = ex",
+        },
+        {
+          left: ["vk"],
+          right: ["let"],
+          original: "vk > let",
         },
         {
           left: ["vdg"],
           right: ["vd"],
+          original: "vdg > vd",
+        },
+        {
+          left: ["vs"],
+          right: ["vk", "vdg", ";"],
+          original: "vs > vk vdg ;",
         },
       ],
       [
         {
+          left: ["ex"],
+          right: ["a", "d", "d", "(", "x", ",", "y", ")"],
+          original: "ex > a d d ( x , y )",
+        },
+        {
           left: ["id"],
           right: ["a", "v", "e", "r", "a", "g", "e"],
+          original: "id > a v e r a g e",
         },
         {
           left: ["ex"],
           right: ["s", "u", "m", "/", "2"],
-        },
-        {
-          left: ["ex"],
-          right: ["a", "d", "d", "(", "x", ",", "y", ")"],
+          original: "ex > s u m / 2",
         },
         {
           left: ["id"],
           right: ["s", "u", "m"],
+          original: "id > s u m",
         },
       ],
     ],

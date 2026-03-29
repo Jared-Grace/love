@@ -26,40 +26,48 @@ export function app_replace_rule_set_replace_flow() {
         {
           left: ["a"],
           right: ["b"],
+          original: "a > b",
         },
         {
           left: ["b"],
           right: ["c"],
+          original: "b > c",
         },
       ],
       [
         {
           left: ["a"],
           right: ["b"],
+          original: "a > b",
         },
         {
           left: ["b"],
           right: ["c"],
+          original: "b > c",
         },
       ],
       [
         {
           left: ["a"],
           right: ["b"],
+          original: "a > b",
         },
         {
           left: ["b"],
           right: ["c"],
+          original: "b > c",
         },
       ],
       [
         {
           left: ["b"],
           right: ["c"],
+          original: "b > c",
         },
         {
           left: ["a"],
           right: ["b"],
+          original: "a > b",
         },
       ],
     ],

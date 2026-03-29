@@ -26,24 +26,28 @@ export function app_replace_rule_set_grow_left() {
         {
           left: ["g"],
           right: ["s", "g"],
+          original: "g > s g",
         },
       ],
       [
         {
           left: ["g"],
           right: ["s", "g"],
+          original: "g > s g",
         },
       ],
       [
         {
           left: ["g"],
           right: ["s", "g"],
+          original: "g > s g",
         },
       ],
       [
         {
           left: ["g"],
           right: ["s", "g"],
+          original: "g > s g",
         },
       ],
     ],

@@ -33,78 +33,95 @@ export function app_replace_rule_set_statements_block() {
     rules_used: [
       [
         {
-          left: ["bs"],
-          right: ["{", "}"],
+          left: ["sm"],
+          right: ["return", "ex", ";"],
+          original: "sm > return ex ;",
         },
         {
           left: ["smg"],
-          right: ["sm"],
+          right: ["smg", "sm"],
+          original: "smg > smg sm",
         },
         {
-          left: ["sm"],
-          right: ["return", "ex", ";"],
+          left: ["bs"],
+          right: ["{", "}"],
+          original: "bs > { }",
         },
       ],
       [
         {
           left: ["sm"],
           right: [";"],
+          original: "sm > ;",
+        },
+        {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+          original: "bs > { smg }",
         },
         {
           left: ["smg"],
           right: ["sm"],
-        },
-        {
-          left: ["bs"],
-          right: ["{", "smg", "}"],
+          original: "smg > sm",
         },
       ],
       [
         {
+          left: ["sm"],
+          right: ["ex", ";"],
+          original: "sm > ex ;",
+        },
+        {
+          left: ["ex"],
+          right: ["u", "p", "d", "a", "t", "e", "(", ")"],
+          original: "ex > u p d a t e ( )",
+        },
+        {
           left: ["bs"],
           right: ["{", "smg", "}"],
+          original: "bs > { smg }",
+        },
+        {
+          left: ["smg"],
+          right: ["sm"],
+          original: "smg > sm",
+        },
+      ],
+      [
+        {
+          left: ["smg"],
+          right: ["smg", "sm"],
+          original: "smg > smg sm",
+        },
+        {
+          left: ["ex"],
+          right: ["u", "p", "d", "a", "t", "e", "(", ")"],
+          original: "ex > u p d a t e ( )",
         },
         {
           left: ["sm"],
           right: ["ex", ";"],
-        },
-        {
-          left: ["smg"],
-          right: ["sm"],
-        },
-        {
-          left: ["ex"],
-          right: ["u", "p", "d", "a", "t", "e", "(", ")"],
-        },
-      ],
-      [
-        {
-          left: ["ex"],
-          right: ["u", "p", "d", "a", "t", "e", "(", ")"],
+          original: "sm > ex ;",
         },
         {
           left: ["ex"],
           right: ["true"],
-        },
-        {
-          left: ["smg"],
-          right: ["smg", "sm"],
-        },
-        {
-          left: ["sm"],
-          right: ["return", "ex", ";"],
-        },
-        {
-          left: ["sm"],
-          right: ["ex", ";"],
-        },
-        {
-          left: ["smg"],
-          right: ["sm"],
+          original: "ex > true",
         },
         {
           left: ["bs"],
           right: ["{", "smg", "}"],
+          original: "bs > { smg }",
+        },
+        {
+          left: ["smg"],
+          right: ["sm"],
+          original: "smg > sm",
+        },
+        {
+          left: ["sm"],
+          right: ["return", "ex", ";"],
+          original: "sm > return ex ;",
         },
       ],
     ],
