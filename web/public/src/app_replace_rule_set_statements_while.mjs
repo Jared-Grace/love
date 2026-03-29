@@ -1,6 +1,5 @@
-import { object_merge } from "../../../love/public/src/object_merge.mjs";
+import { app_replace_rule_set_statements_while_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_while_abbreviations.mjs";
 import { app_replace_rule_set_statements_while_rules } from "../../../love/public/src/app_replace_rule_set_statements_while_rules.mjs";
-import { app_replace_rule_set_statements_block_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_block_abbreviations.mjs";
 import { js_keyword_while } from "../../../love/public/src/js_keyword_while.mjs";
 import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 export function app_replace_rule_set_statements_while() {
@@ -16,10 +15,7 @@ export function app_replace_rule_set_statements_while() {
     "ex > s e e k ( )",
   ]);
   let abbreviations = {};
-  app_replace_rule_set_statements_block_abbreviations(abbreviations);
-  object_merge(abbreviations, {
-    smg: ["", "w", "hile", "s", "tatement"],
-  });
+  app_replace_rule_set_statements_while_abbreviations(abbreviations);
   let r = {
     name: "Statements While",
     rules,
