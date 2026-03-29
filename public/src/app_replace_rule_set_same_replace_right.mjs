@@ -17,29 +17,6 @@ export function app_replace_rule_set_same_replace_right() {
       },
     ],
     why: "The rules demonstrate a grammar where every occurrence of two consecutive 'a's can be replaced by 'a','b', allowing the transformation of any even-length sequence of 'a's into a sequence where each original pair is replaced, showing a systematic rightward replacement pattern.",
-    rules_used: [
-      [
-        {
-          left: ["a", "a"],
-          right: ["a", "b"],
-          original: "a a > a b",
-        },
-      ],
-      [
-        {
-          left: ["a", "a"],
-          right: ["a", "b"],
-          original: "a a > a b",
-        },
-      ],
-      [
-        {
-          left: ["a", "a"],
-          right: ["a", "b"],
-          original: "a a > a b",
-        },
-      ],
-    ],
   };
   return r;
 }
