@@ -216,30 +216,34 @@ export async function app_replace_rule_set(context) {
     }
     rbs = list_map_index(rules_used, each_rule);
     function rbs_each(rb, index2) {
-      let rule2 = property_get(rb, "rule");
-      let size2 = list_size(start);
-      let r = range(size2);
-      let lambda7 = app_replace_rule_valid_curried(rule2, start);
-      let enabled = list_any(r, lambda7);
-      const selected = index2 === index_selected;
-      enabled = index_selected === null || selected;
-      enabled = true;
-      html_enable_if(rb, enabled);
-      app_replace_lefts_rights_style(rb, enabled);
-      let button_background_color = app_replace_button_rule_background_color();
-      let c = ternary_nested(
-        selected,
-        highlight,
-        enabled,
-        button_background_color,
-        "#a8a8a8ff",
-      );
-      html_style_background_color_set(rb, c);
-      let arrow2 = property_get(rb, "arrow");
-      html_style_font_color_set_if(enabled, arrow2, "black", "#6a6a6a");
+      refresh_rb();
       object_merge(rb, {
-        refresh_rb: rbs_each,
+        refresh_rb,
       });
+      function refresh_rb() {
+        let rule2 = property_get(rb, "rule");
+        let size2 = list_size(start);
+        let r = range(size2);
+        let lambda7 = app_replace_rule_valid_curried(rule2, start);
+        let enabled = list_any(r, lambda7);
+        const selected = index2 === index_selected;
+        enabled = index_selected === null || selected;
+        enabled = true;
+        html_enable_if(rb, enabled);
+        app_replace_lefts_rights_style(rb, enabled);
+        let button_background_color =
+          app_replace_button_rule_background_color();
+        let c = ternary_nested(
+          selected,
+          highlight,
+          enabled,
+          button_background_color,
+          "#a8a8a8ff",
+        );
+        html_style_background_color_set(rb, c);
+        let arrow2 = property_get(rb, "arrow");
+        html_style_font_color_set_if(enabled, arrow2, "black", "#6a6a6a");
+      }
     }
     each_index(rbs, rbs_each);
     html_clear(div_refresh);
