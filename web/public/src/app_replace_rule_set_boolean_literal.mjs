@@ -17,32 +17,6 @@ export function app_replace_rule_set_boolean_literal() {
       },
     ],
     why: "The replacement rules define a grammar for Boolean literals, allowing the nonterminal 'bo' to be replaced by either 'true' or 'false', representing the two possible Boolean values.",
-    rules_used: [
-      [
-        {
-          left: ["bo"],
-          right: ["true"],
-          original: "bo > true",
-        },
-        {
-          left: ["bo"],
-          right: ["false"],
-          original: "bo > false",
-        },
-      ],
-      [
-        {
-          left: ["bo"],
-          right: ["false"],
-          original: "bo > false",
-        },
-        {
-          left: ["bo"],
-          right: ["true"],
-          original: "bo > true",
-        },
-      ],
-    ],
   };
   return r;
 }
