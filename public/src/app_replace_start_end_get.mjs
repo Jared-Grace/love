@@ -5,9 +5,9 @@ export function app_replace_start_end_get(goal) {
   let start_value = property_get(goal, "start");
   let start = text_split_space(start_value);
   let end = app_replace_end_get(goal);
-  let r4 = {
+  let se = {
     end,
     start,
   };
-  return r4;
+  return se;
 }
