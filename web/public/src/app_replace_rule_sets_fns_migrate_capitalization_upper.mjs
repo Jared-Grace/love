@@ -1,3 +1,4 @@
+import { app_replace_rule_sets_fns_names } from "../../../love/public/src/app_replace_rule_sets_fns_names.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
@@ -5,7 +6,6 @@ import { list_map } from "../../../love/public/src/list_map.mjs";
 import { text_split_space } from "../../../love/public/src/text_split_space.mjs";
 import { null_is } from "../../../love/public/src/null_is.mjs";
 import { list_map_name } from "../../../love/public/src/list_map_name.mjs";
-import { app_replace_rule_sets_fns } from "../../../love/public/src/app_replace_rule_sets_fns.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { js_property_value_change } from "../../../love/public/src/js_property_value_change.mjs";
 import { js_literal_map_curried_right } from "../../../love/public/src/js_literal_map_curried_right.mjs";
@@ -14,7 +14,7 @@ import { js_list_nodes_object_expression } from "../../../love/public/src/js_lis
 import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 export async function app_replace_rule_sets_fns_migrate_capitalization_upper() {
-  let fns = app_replace_rule_sets_fns();
+  let fns = app_replace_rule_sets_fns_names();
   let result = list_map_name(fns);
   async function lambda(name) {
     async function lambda3(ast) {
