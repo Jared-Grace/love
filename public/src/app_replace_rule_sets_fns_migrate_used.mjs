@@ -1,3 +1,4 @@
+import { null_is } from "../../../love/public/src/null_is.mjs";
 import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_object_to_expression } from "../../../love/public/src/js_object_to_expression.mjs";
@@ -38,6 +39,8 @@ export async function app_replace_rule_sets_fns_migrate_used() {
       item,
       p_name,
     );
+    if (null_is(value)) {
+    }
     list_add(properties, p);
     log(app_replace_rule_sets_fns_migrate_used.name, {
       rules_used,
