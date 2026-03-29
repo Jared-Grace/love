@@ -150,8 +150,8 @@ export async function app_replace_rule_set(context) {
   let rbs = null;
   const duration = app_replace_animation_duration_get(context);
   let refresh_count = 0;
-  rules_used = property_get(rs, "rules_used");
-  let item = list_get(list, index4);
+  let rules_used_all = property_get(rs, "rules_used");
+  rules_used = list_get(rules_used_all, goal_index);
   let exists2 = property_exists(rs, "abbreviations");
   if (exists2) {
     let properties = ["left", "right"];
