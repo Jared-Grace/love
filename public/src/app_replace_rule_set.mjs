@@ -1,5 +1,5 @@
 import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
-import { app_replace_animation_duration_initialize } from "../../../love/public/src/app_replace_animation_duration_initialize.mjs";
+import { app_replace_animation_duration_get } from "../../../love/public/src/app_replace_animation_duration_get.mjs";
 import { emoji_target } from "../../../love/public/src/emoji_target.mjs";
 import { emoji_restart } from "../../../love/public/src/emoji_restart.mjs";
 import { app_replace_rule_set_title } from "../../../love/public/src/app_replace_rule_set_title.mjs";
@@ -146,7 +146,7 @@ export async function app_replace_rule_set(context) {
   each(goal_list_symbols, lambda4);
   let div_below = html_div(root);
   let success = false;
-  const duration = app_replace_animation_duration_initialize(context);
+  const duration = app_replace_animation_duration_get(context);
   let refresh_count = 0;
   rules_used = app_replace_rule_set_rules_used(
     rules_parsed,
