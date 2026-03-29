@@ -29,7 +29,7 @@ export function app_new_rule_set_new_2() {
     "ex > x",
     "ex > y",
     "ex > f ( )",
-    "ex > sum / 2",
+    "ex > s u m / 2",
     "ex > a d d ( x , y )",
   ]);
   let abbreviations = {};
