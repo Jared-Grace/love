@@ -23,6 +23,9 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
     });
     let rules = property_get(rs, "rules");
     let goals = property_get(rs, "goals");
+    log(app_replace_rule_sets_fns_rules_used_generate.name, {
+      rules,
+    });
     let rules_parsed = app_replace_rule_parse(rules);
     function lambda2(g) {
       let se = app_replace_start_end_get(g);
