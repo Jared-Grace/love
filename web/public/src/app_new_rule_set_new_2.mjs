@@ -48,7 +48,7 @@ export function app_new_rule_set_new_2() {
         end: js_keyword_function() + " id ( id ) bs",
       },
       {
-        start: "fd",
+        start: js_keyword_function() + " id ( id ) bs",
         end: js_keyword_function() + " i d e n t i t y ( i ) { return i ; }",
       },
       {
