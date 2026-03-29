@@ -20,7 +20,7 @@ export async function app_replace_rule_sets_fns_migrate_used() {
       return;
     }
     let code = js_unparse(value);
-    let expression = js_parse_expression(code_expression);
+    let expression = js_parse_expression(code);
     log(app_replace_rule_sets_fns_migrate_used.name, {
       code,
     });
