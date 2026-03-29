@@ -43,43 +43,44 @@ export function app_replace_settings(context) {
   let left = emoji_clock();
   let highlight = app_replace_rule_set_highlight();
   const duration = app_replace_animation_duration_get(context);
+  (" if not null then speed is being overwritten by hash");
   if (null_not_is(duration)) {
-  }
-  let choices = [
-    {
-      ending: "off",
-      animation_duration: 0,
-    },
-    {
-      ending: "fast",
-      animation_duration: 200,
-    },
-    {
-      ending: "medium",
-      animation_duration: 355,
-    },
-    {
-      ending: "slow",
-      animation_duration: app_replace_animation_duration_default(),
-    },
-  ];
-  function lambda(choice) {
-    let ending2 = property_get(choice, "ending");
-    let animation_duration2 = property_get(choice, "animation_duration");
-    let combined2 = text_combine("Animations ", ending2);
-    let combined = text_combine(left, combined2);
-    function lambda4() {
-      storage_local_set_context(
-        context,
-        "animation_duration",
-        animation_duration2,
-      );
-      app_shared_screen_set(context, app_replace_settings);
+    let choices = [
+      {
+        ending: "off",
+        animation_duration: 0,
+      },
+      {
+        ending: "fast",
+        animation_duration: 200,
+      },
+      {
+        ending: "medium",
+        animation_duration: 355,
+      },
+      {
+        ending: "slow",
+        animation_duration: app_replace_animation_duration_default(),
+      },
+    ];
+    function lambda(choice) {
+      let ending2 = property_get(choice, "ending");
+      let animation_duration2 = property_get(choice, "animation_duration");
+      let combined2 = text_combine("Animations ", ending2);
+      let combined = text_combine(left, combined2);
+      function lambda4() {
+        storage_local_set_context(
+          context,
+          "animation_duration",
+          animation_duration2,
+        );
+        app_shared_screen_set(context, app_replace_settings);
+      }
+      let b = app_replace_button(div2, combined, lambda4);
+      if (equal(animation_duration2, duration)) {
+        html_style_background_color_set(b, highlight);
+      }
     }
-    let b = app_replace_button(div2, combined, lambda4);
-    if (equal(animation_duration2, duration)) {
-      html_style_background_color_set(b, highlight);
-    }
+    each(choices, lambda);
   }
-  each(choices, lambda);
 }
