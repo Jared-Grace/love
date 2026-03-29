@@ -18,8 +18,7 @@ export function app_replace_rule_set_statements_for() {
   let abbreviations = {};
   app_replace_rule_set_statements_if_abbreviations(abbreviations);
   object_merge(abbreviations, {
-    smg: ["", "s", "tate", "m", "ent ", "g", "rower"],
-    bs: ["", "b", "lock ", "statement"],
+    smg: ["", "f", "or", "s", "tatement"],
   });
   let r = {
     name: "Statements For",
