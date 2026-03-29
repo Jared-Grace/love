@@ -12,6 +12,7 @@ export function app_new_rule_set_new_2() {
     "fdm > fpg )",
     "fpg > fpg , id",
     "fpg > id",
+    "id > e m p t y",
     "id > t a u t o l o g y",
     "id > i d e n t i t y",
     "id > i n v o k e",
@@ -33,7 +34,7 @@ export function app_new_rule_set_new_2() {
     goals: [
       {
         start: "fd",
-        end: js_keyword_function() + " id ( ) { }",
+        end: js_keyword_function() + " e m p t y ( ) { }",
       },
       {
         start: "fd",
