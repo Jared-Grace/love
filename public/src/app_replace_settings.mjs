@@ -1,3 +1,4 @@
+import { null_not_is } from "../../../love/public/src/null_not_is.mjs";
 import { app_replace_animation_duration_get } from "../../../love/public/src/app_replace_animation_duration_get.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
@@ -42,6 +43,8 @@ export function app_replace_settings(context) {
   let left = emoji_clock();
   let highlight = app_replace_rule_set_highlight();
   const duration = app_replace_animation_duration_get(context);
+  if (null_not_is(value)) {
+  }
   let choices = [
     {
       ending: "off",
