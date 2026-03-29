@@ -1,3 +1,4 @@
+import { js_object_expression_properties } from "../../../love/public/src/js_object_expression_properties.mjs";
 import { js_property } from "../../../love/public/src/js_property.mjs";
 import { app_replace_start_end_get } from "../../../love/public/src/app_replace_start_end_get.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -26,6 +27,7 @@ export async function app_replace_rule_sets_fns_migrate_used() {
     }
     let rules_used = list_map(goals, lambda2);
     let p = js_property("rules_used", value);
+    let properties = js_object_expression_properties(e);
     log(app_replace_rule_sets_fns_migrate_used.name, {
       rules_used,
     });
