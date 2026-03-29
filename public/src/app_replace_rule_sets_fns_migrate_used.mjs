@@ -8,7 +8,7 @@ export async function app_replace_rule_sets_fns_migrate_used() {
     let item = property_get(a, "item");
     let p = "goals";
     let goals = js_object_expression_properties_find_key_named(item, p);
-    let mapped = list_map_property(list, property_name);
+    let mapped = list_map_property(goals, "value");
     log(app_replace_rule_sets_fns_migrate_used.name, {
       goals,
     });
