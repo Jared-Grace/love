@@ -50,6 +50,164 @@ export function app_replace_rule_set_integers() {
       },
     ],
     why: "The replacement rules define a context-free grammar for non-negative integers, allowing for the generation of single-digit and multi-digit numbers by recursively combining digits, with special handling for leading digits to avoid leading zeros except for the number zero itself.",
+    rules_used: [
+      [
+        {
+          left: ["pi"],
+          right: ["9"],
+        },
+        {
+          left: ["in"],
+          right: ["di"],
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+        },
+      ],
+      [
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+        {
+          left: ["pi"],
+          right: ["2"],
+        },
+        {
+          left: ["in"],
+          right: ["di"],
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["3"],
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+        },
+        {
+          left: ["in"],
+          right: ["pi", "ig"],
+        },
+        {
+          left: ["pi"],
+          right: ["1"],
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["7"],
+        },
+        {
+          left: ["in"],
+          right: ["pi", "ig"],
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["4"],
+        },
+        {
+          left: ["ig"],
+          right: ["di"],
+        },
+        {
+          left: ["in"],
+          right: ["pi", "ig"],
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+        },
+      ],
+      [
+        {
+          left: ["ig"],
+          right: ["di"],
+        },
+        {
+          left: ["in"],
+          right: ["pi", "ig"],
+        },
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["9"],
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+        {
+          left: ["pi"],
+          right: ["6"],
+        },
+      ],
+      [
+        {
+          left: ["ig"],
+          right: ["di"],
+        },
+        {
+          left: ["ig"],
+          right: ["di", "ig"],
+        },
+        {
+          left: ["in"],
+          right: ["pi", "ig"],
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["6"],
+        },
+        {
+          left: ["pi"],
+          right: ["5"],
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+      ],
+      [
+        {
+          left: ["pi"],
+          right: ["8"],
+        },
+        {
+          left: ["pi"],
+          right: ["7"],
+        },
+        {
+          left: ["di"],
+          right: ["pi"],
+        },
+      ],
+    ],
   };
   return r;
 }

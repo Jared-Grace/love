@@ -30,6 +30,84 @@ export function app_replace_rule_set_statements_block() {
       },
     ],
     why: "The replacement rules define a grammar for a block of statements in a programming language, supporting empty blocks, sequences of statements, return statements, and simple expressions like 'true' and 'update()', demonstrating how statements and blocks can be recursively composed.",
+    rules_used: [
+      [
+        {
+          left: ["bs"],
+          right: ["{", "}"],
+        },
+        {
+          left: ["smg"],
+          right: ["sm"],
+        },
+        {
+          left: ["sm"],
+          right: ["return", "ex", ";"],
+        },
+      ],
+      [
+        {
+          left: ["sm"],
+          right: [";"],
+        },
+        {
+          left: ["smg"],
+          right: ["sm"],
+        },
+        {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+        },
+      ],
+      [
+        {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+        },
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+        },
+        {
+          left: ["smg"],
+          right: ["sm"],
+        },
+        {
+          left: ["ex"],
+          right: ["u", "p", "d", "a", "t", "e", "(", ")"],
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["u", "p", "d", "a", "t", "e", "(", ")"],
+        },
+        {
+          left: ["ex"],
+          right: ["true"],
+        },
+        {
+          left: ["smg"],
+          right: ["smg", "sm"],
+        },
+        {
+          left: ["sm"],
+          right: ["return", "ex", ";"],
+        },
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+        },
+        {
+          left: ["smg"],
+          right: ["sm"],
+        },
+        {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+        },
+      ],
+    ],
   };
   return r;
 }

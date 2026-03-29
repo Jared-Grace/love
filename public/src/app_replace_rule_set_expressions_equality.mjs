@@ -70,6 +70,224 @@ export function app_replace_rule_set_expressions_equality() {
       },
     ],
     why: "The replacement rules define a grammar for parsing and evaluating equality between expressions, particularly focusing on arithmetic, member access, function calls, and literal values, demonstrating how complex expressions can be reduced and compared for equality using '==='.",
+    rules_used: [
+      [
+        {
+          left: ["ee"],
+          right: ["re"],
+        },
+        {
+          left: ["ee"],
+          right: ["ee", "===", "re"],
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+        },
+        {
+          left: ["re"],
+          right: ["ade"],
+        },
+      ],
+      [
+        {
+          left: ["ue"],
+          right: ["ce"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+        {
+          left: ["mue"],
+          right: ["ue"],
+        },
+      ],
+      [
+        {
+          left: ["mo"],
+          right: ["/"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["ro"],
+          right: ["<"],
+        },
+      ],
+      [
+        {
+          left: ["ce"],
+          right: ["ce", "(", ")"],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["p", "a", "g", "e"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+      ],
+      [
+        {
+          left: ["in"],
+          right: ["1"],
+        },
+        {
+          left: ["ue"],
+          right: ["uo", "ue"],
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["ee"],
+        },
+        {
+          left: ["ee"],
+          right: ["re"],
+        },
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+        },
+        {
+          left: ["ade"],
+          right: ["ade", "ao", "mue"],
+        },
+        {
+          left: ["re"],
+          right: ["ade"],
+        },
+      ],
+      [
+        {
+          left: ["mue"],
+          right: ["ue"],
+        },
+        {
+          left: ["ade"],
+          right: ["mue"],
+        },
+        {
+          left: ["id"],
+          right: ["l", "i", "s", "t"],
+        },
+      ],
+      [
+        {
+          left: ["ue"],
+          right: ["ce"],
+        },
+        {
+          left: ["st"],
+          right: ['"', "l", "u", "v", '"'],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["a", "l", "l"],
+        },
+        {
+          left: ["id"],
+          right: ["p", "a", "g", "e"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["d", "o", "o", "r"],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+        {
+          left: ["mo"],
+          right: ["/"],
+        },
+      ],
+      [
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+        {
+          left: ["id"],
+          right: ["d", "o", "u", "b", "l", "e"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+      ],
+      [
+        {
+          left: ["ao"],
+          right: ["+"],
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+        {
+          left: ["in"],
+          right: ["1"],
+        },
+      ],
+      [
+        {
+          left: ["in"],
+          right: ["1"],
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+        },
+        {
+          left: ["ao"],
+          right: ["-"],
+        },
+      ],
+    ],
   };
   return r;
 }

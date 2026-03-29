@@ -46,6 +46,164 @@ export function app_replace_rule_set_expressions_unary() {
       },
     ],
     why: "The replacement rules define a grammar for parsing unary expressions in a programming language, including identifiers, literals (numbers, strings, booleans, null), member access, function calls, and unary operators like !, -, +, and typeof, demonstrating how complex expressions are built from simpler components.",
+    rules_used: [
+      [
+        {
+          left: ["ue"],
+          right: ["uo", "ue"],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+      ],
+      [
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+        },
+        {
+          left: ["uo"],
+          right: ["-"],
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+      ],
+      [
+        {
+          left: ["li"],
+          right: ["bo"],
+        },
+        {
+          left: ["uo"],
+          right: ["!"],
+        },
+        {
+          left: ["bo"],
+          right: ["true"],
+        },
+      ],
+      [
+        {
+          left: ["de"],
+          right: ["3", ".", "1", "4"],
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+        {
+          left: ["nu"],
+          right: ["de"],
+        },
+        {
+          left: ["uo"],
+          right: ["+"],
+        },
+      ],
+      [
+        {
+          left: ["li"],
+          right: ["null"],
+        },
+        {
+          left: ["uo"],
+          right: ["typeof"],
+        },
+        {
+          left: ["bo"],
+          right: ["true"],
+        },
+      ],
+      [
+        {
+          left: ["ue"],
+          right: ["ce"],
+        },
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+        },
+        {
+          left: ["ue"],
+          right: ["uo", "ue"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+        {
+          left: ["uo"],
+          right: ["-"],
+        },
+      ],
+      [
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["ue"],
+          right: ["uo", "ue"],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+        {
+          left: ["ex"],
+          right: ["ue"],
+        },
+        {
+          left: ["uo"],
+          right: ["-"],
+        },
+        {
+          left: ["ce"],
+          right: ["mae"],
+        },
+        {
+          left: ["ue"],
+          right: ["ce"],
+        },
+      ],
+      [
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+        {
+          left: ["in"],
+          right: ["1"],
+        },
+      ],
+    ],
   };
   return r;
 }
