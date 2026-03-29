@@ -14,6 +14,7 @@ export function app_new_rule_set_new_2() {
     "fpg > id",
     "id > t a u t o l o g y",
     "id > i d e n t i t y",
+    "id > i n v o k e",
     "ex > true",
     "ex > i",
   ]);
@@ -40,6 +41,10 @@ export function app_new_rule_set_new_2() {
       {
         start: "fd",
         end: js_keyword_function() + " i d e n t i t y ( i ) { return i ; }",
+      },
+      {
+        start: "fd",
+        end: js_keyword_function() + " i n v o k e ( f ) { return f ( ) ; }",
       },
     ],
   };
