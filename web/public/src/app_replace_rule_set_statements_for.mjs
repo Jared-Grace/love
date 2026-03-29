@@ -41,23 +41,32 @@ export function app_replace_rule_set_statements_for() {
     rules_used: [
       [
         {
-          left: ["ex"],
-          right: ["i", "=", "i", "+", "1"],
+          left: ["fs"],
+          right: ["for", "(", "ex", ";", "ex", ";", "ex", ")", "sm"],
+          original: "fs > for ( ex ; ex ; ex ) sm",
         },
         {
           left: ["ex"],
           right: ["i", "<", "12"],
+          original: "ex > i < 12",
         },
         {
-          left: ["fs"],
-          right: ["for", "(", "ex", ";", "ex", ";", "ex", ")", "sm"],
+          left: ["ex"],
+          right: ["i", "=", "i", "+", "1"],
+          original: "ex > i = i + 1",
         },
         {
           left: ["ex"],
           right: ["i", "=", "0"],
+          original: "ex > i = 0",
         },
       ],
       [
+        {
+          left: ["fs"],
+          right: ["for", "(", "ex", ";", "ex", ";", "ex", ")", "sm"],
+          original: "fs > for ( ex ; ex ; ex ) sm",
+        },
         {
           left: ["ex"],
           right: [
@@ -77,38 +86,29 @@ export function app_replace_rule_set_statements_for() {
             "]",
             ")",
           ],
-        },
-        {
-          left: ["ex"],
-          right: [
-            "i",
-            "<",
-            "l",
-            "i",
-            "s",
-            "t",
-            ".",
-            "l",
-            "e",
-            "n",
-            "g",
-            "t",
-            "h",
-          ],
+          original: "ex > l o g ( a p o s t l e [ i ] )",
         },
         {
           left: ["sm"],
           right: ["ex", ";"],
+          original: "sm > ex ;",
         },
       ],
       [
         {
           left: ["ex"],
-          right: ["i", "=", "0"],
+          right: ["i", "=", "i", "+", "1"],
+          original: "ex > i = i + 1",
         },
         {
           left: ["fs"],
           right: ["for", "(", "ex", ";", "ex", ";", "ex", ")", "sm"],
+          original: "fs > for ( ex ; ex ; ex ) sm",
+        },
+        {
+          left: ["ex"],
+          right: ["i", "=", "0"],
+          original: "ex > i = 0",
         },
         {
           left: ["ex"],
@@ -127,13 +127,35 @@ export function app_replace_rule_set_statements_for() {
             "t",
             "h",
           ],
-        },
-        {
-          left: ["ex"],
-          right: ["i", "=", "i", "+", "1"],
+          original: "ex > i < l i s t . l e n g t h",
         },
       ],
       [
+        {
+          left: ["sm"],
+          right: ["bs"],
+          original: "sm > bs",
+        },
+        {
+          left: ["ex"],
+          right: ["l", "o", "g", "(", "i", ")"],
+          original: "ex > l o g ( i )",
+        },
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+          original: "sm > ex ;",
+        },
+        {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+          original: "bs > { smg }",
+        },
+        {
+          left: ["smg"],
+          right: ["sm"],
+          original: "smg > sm",
+        },
         {
           left: ["ex"],
           right: [
@@ -153,30 +175,12 @@ export function app_replace_rule_set_statements_for() {
             "i",
             "]",
           ],
-        },
-        {
-          left: ["bs"],
-          right: ["{", "smg", "}"],
-        },
-        {
-          left: ["sm"],
-          right: ["bs"],
-        },
-        {
-          left: ["smg"],
-          right: ["sm"],
+          original: "ex > c o p y [ i ] = l i s t [ i ]",
         },
         {
           left: ["smg"],
           right: ["smg", "sm"],
-        },
-        {
-          left: ["sm"],
-          right: ["ex", ";"],
-        },
-        {
-          left: ["ex"],
-          right: ["l", "o", "g", "(", "i", ")"],
+          original: "smg > smg sm",
         },
       ],
     ],

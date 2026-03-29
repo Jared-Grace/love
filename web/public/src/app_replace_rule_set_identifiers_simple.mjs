@@ -59,172 +59,209 @@ export function app_replace_rule_set_identifiers_simple() {
     rules_used: [
       [
         {
-          left: ["idf"],
-          right: ["_"],
-        },
-        {
           left: ["id"],
           right: ["idf"],
-        },
-        {
-          left: ["ida"],
-          right: ["di"],
-        },
-      ],
-      [
-        {
-          left: ["idf"],
-          right: ["B"],
-        },
-        {
-          left: ["idg"],
-          right: ["ida"],
-        },
-        {
-          left: ["id"],
-          right: ["idf", "idg"],
-        },
-      ],
-      [
-        {
-          left: ["ida"],
-          right: ["di"],
-        },
-        {
-          left: ["di"],
-          right: ["1"],
+          original: "id > idf",
         },
         {
           left: ["idf"],
-          right: ["$"],
-        },
-      ],
-      [
-        {
-          left: ["ida"],
-          right: ["di"],
-        },
-        {
-          left: ["idf"],
-          right: ["t"],
-        },
-        {
-          left: ["idg"],
-          right: ["ida"],
-        },
-        {
-          left: ["di"],
-          right: ["3"],
-        },
-        {
-          left: ["id"],
-          right: ["idf", "idg"],
-        },
-      ],
-      [
-        {
-          left: ["id"],
-          right: ["idf", "idg"],
-        },
-        {
-          left: ["idg"],
-          right: ["ida"],
-        },
-        {
-          left: ["idg"],
-          right: ["ida", "idg"],
-        },
-      ],
-      [
-        {
-          left: ["idf"],
-          right: ["v"],
-        },
-        {
-          left: ["idf"],
-          right: ["u"],
+          right: ["_"],
+          original: "idf > _",
         },
         {
           left: ["idf"],
           right: ["l"],
+          original: "idf > l",
+        },
+      ],
+      [
+        {
+          left: ["idg"],
+          right: ["ida"],
+          original: "idg > ida",
         },
         {
+          left: ["idf"],
+          right: ["l"],
+          original: "idf > l",
+        },
+        {
+          left: ["id"],
+          right: ["idf", "idg"],
+          original: "id > idf idg",
+        },
+      ],
+      [
+        {
           left: ["ida"],
-          right: ["idf"],
+          right: ["di"],
+          original: "ida > di",
+        },
+        {
+          left: ["di"],
+          right: ["1"],
+          original: "di > 1",
+        },
+        {
+          left: ["idf"],
+          right: ["$"],
+          original: "idf > $",
+        },
+      ],
+      [
+        {
+          left: ["ida"],
+          right: ["di"],
+          original: "ida > di",
+        },
+        {
+          left: ["idg"],
+          right: ["ida"],
+          original: "idg > ida",
+        },
+        {
+          left: ["id"],
+          right: ["idf", "idg"],
+          original: "id > idf idg",
+        },
+        {
+          left: ["di"],
+          right: ["3"],
+          original: "di > 3",
+        },
+        {
+          left: ["idf"],
+          right: ["t"],
+          original: "idf > t",
         },
       ],
       [
         {
           left: ["idg"],
           right: ["ida", "idg"],
-        },
-        {
-          left: ["idg"],
-          right: ["ida"],
+          original: "idg > ida idg",
         },
         {
           left: ["id"],
           right: ["idf", "idg"],
+          original: "id > idf idg",
+        },
+        {
+          left: ["idg"],
+          right: ["ida"],
+          original: "idg > ida",
+        },
+      ],
+      [
+        {
+          left: ["idf"],
+          right: ["l"],
+          original: "idf > l",
+        },
+        {
+          left: ["idf"],
+          right: ["v"],
+          original: "idf > v",
+        },
+        {
+          left: ["idf"],
+          right: ["u"],
+          original: "idf > u",
+        },
+        {
+          left: ["ida"],
+          right: ["idf"],
+          original: "ida > idf",
+        },
+      ],
+      [
+        {
+          left: ["idg"],
+          right: ["ida", "idg"],
+          original: "idg > ida idg",
+        },
+        {
+          left: ["id"],
+          right: ["idf", "idg"],
+          original: "id > idf idg",
+        },
+        {
+          left: ["idg"],
+          right: ["ida"],
+          original: "idg > ida",
         },
       ],
       [
         {
           left: ["ida"],
           right: ["idf"],
+          original: "ida > idf",
+        },
+        {
+          left: ["idf"],
+          right: ["t"],
+          original: "idf > t",
         },
         {
           left: ["di"],
           right: ["3"],
-        },
-        {
-          left: ["di"],
-          right: ["0"],
+          original: "di > 3",
         },
       ],
       [
-        {
-          left: ["idf"],
-          right: ["B"],
-        },
         {
           left: ["idf"],
           right: ["A"],
-        },
-        {
-          left: ["idf"],
-          right: ["$"],
-        },
-      ],
-      [
-        {
-          left: ["ida"],
-          right: ["idf"],
-        },
-        {
-          left: ["ida"],
-          right: ["di"],
-        },
-        {
-          left: ["idf"],
-          right: ["B"],
-        },
-      ],
-      [
-        {
-          left: ["idf"],
-          right: ["h"],
-        },
-        {
-          left: ["di"],
-          right: ["0"],
+          original: "idf > A",
         },
         {
           left: ["idf"],
           right: ["J"],
+          original: "idf > J",
+        },
+        {
+          left: ["idf"],
+          right: ["B"],
+          original: "idf > B",
+        },
+      ],
+      [
+        {
+          left: ["ida"],
+          right: ["di"],
+          original: "ida > di",
+        },
+        {
+          left: ["idf"],
+          right: ["t"],
+          original: "idf > t",
+        },
+        {
+          left: ["ida"],
+          right: ["idf"],
+          original: "ida > idf",
+        },
+      ],
+      [
+        {
+          left: ["idf"],
+          right: ["J"],
+          original: "idf > J",
+        },
+        {
+          left: ["di"],
+          right: ["0"],
+          original: "di > 0",
+        },
+        {
+          left: ["idf"],
+          right: ["h"],
+          original: "idf > h",
         },
         {
           left: ["idf"],
           right: ["$"],
+          original: "idf > $",
         },
       ],
     ],

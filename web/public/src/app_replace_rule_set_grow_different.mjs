@@ -22,18 +22,21 @@ export function app_replace_rule_set_grow_different() {
         {
           left: ["a"],
           right: ["b", "c"],
+          original: "a > b c",
         },
       ],
       [
         {
           left: ["a"],
           right: ["b", "c"],
+          original: "a > b c",
         },
       ],
       [
         {
           left: ["a"],
           right: ["b", "c"],
+          original: "a > b c",
         },
       ],
     ],

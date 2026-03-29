@@ -26,24 +26,28 @@ export function app_replace_rule_set_shrink_left() {
         {
           left: ["b", "a"],
           right: ["a"],
+          original: "b a > a",
         },
       ],
       [
         {
           left: ["b", "a"],
           right: ["a"],
+          original: "b a > a",
         },
       ],
       [
         {
           left: ["b", "a"],
           right: ["a"],
+          original: "b a > a",
         },
       ],
       [
         {
           left: ["b", "a"],
           right: ["a"],
+          original: "b a > a",
         },
       ],
     ],

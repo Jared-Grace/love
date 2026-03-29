@@ -18,20 +18,24 @@ export function app_replace_rule_set_binary_counting_prepare_1() {
         {
           left: ["1"],
           right: ["1", "1"],
+          original: "1 > 1 1",
         },
         {
           left: ["1", "a"],
           right: ["a", "0"],
+          original: "1 a > a 0",
         },
       ],
       [
         {
           left: ["1"],
           right: ["1", "1"],
+          original: "1 > 1 1",
         },
         {
           left: ["1", "a"],
           right: ["a", "0"],
+          original: "1 a > a 0",
         },
       ],
     ],

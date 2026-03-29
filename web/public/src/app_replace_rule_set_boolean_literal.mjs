@@ -22,20 +22,24 @@ export function app_replace_rule_set_boolean_literal() {
         {
           left: ["bo"],
           right: ["true"],
+          original: "bo > true",
         },
         {
           left: ["bo"],
           right: ["false"],
+          original: "bo > false",
         },
       ],
       [
         {
           left: ["bo"],
-          right: ["true"],
+          right: ["false"],
+          original: "bo > false",
         },
         {
           left: ["bo"],
-          right: ["false"],
+          right: ["true"],
+          original: "bo > true",
         },
       ],
     ],

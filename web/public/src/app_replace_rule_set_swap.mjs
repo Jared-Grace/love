@@ -26,24 +26,28 @@ export function app_replace_rule_set_swap() {
         {
           left: ["a", "b"],
           right: ["b", "a"],
+          original: "a b > b a",
         },
       ],
       [
         {
           left: ["a", "b"],
           right: ["b", "a"],
+          original: "a b > b a",
         },
       ],
       [
         {
           left: ["a", "b"],
           right: ["b", "a"],
+          original: "a b > b a",
         },
       ],
       [
         {
           left: ["a", "b"],
           right: ["b", "a"],
+          original: "a b > b a",
         },
       ],
     ],

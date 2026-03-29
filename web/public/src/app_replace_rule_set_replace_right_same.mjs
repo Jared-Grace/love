@@ -22,18 +22,21 @@ export function app_replace_rule_set_replace_right_same() {
         {
           left: ["a", "b"],
           right: ["a", "a"],
+          original: "a b > a a",
         },
       ],
       [
         {
           left: ["a", "b"],
           right: ["a", "a"],
+          original: "a b > a a",
         },
       ],
       [
         {
           left: ["a", "b"],
           right: ["a", "a"],
+          original: "a b > a a",
         },
       ],
     ],

@@ -46,126 +46,153 @@ export function app_replace_rule_set_unary_to_binary_equations_preparation() {
     rules_used: [
       [
         {
-          left: ["d"],
-          right: ["d", "d"],
-        },
-        {
-          left: ["d", "d"],
-          right: ["d", "e", "d"],
-        },
-        {
-          left: ["e", "d"],
-          right: ["e", "="],
-        },
-      ],
-      [
-        {
-          left: ["d", "d"],
-          right: ["d", "e", "d"],
-        },
-        {
-          left: ["d"],
-          right: ["d", "d"],
-        },
-        {
           left: ["d", "e", "="],
           right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["d"],
+          right: ["d", "d"],
+          original: "d > d d",
+        },
+        {
+          left: ["d", "d"],
+          right: ["d", "e", "d"],
+          original: "d d > d e d",
         },
       ],
       [
         {
           left: ["d", "d"],
           right: ["d", "e", "d"],
-        },
-        {
-          left: ["d"],
-          right: ["d", "d"],
-        },
-        {
-          left: ["e", "d"],
-          right: ["e", "="],
-        },
-      ],
-      [
-        {
-          left: ["d"],
-          right: ["d", "d"],
-        },
-        {
-          left: ["d", "d"],
-          right: ["d", "e", "d"],
+          original: "d d > d e d",
         },
         {
           left: ["d", "e", "="],
           right: ["=", "d"],
-        },
-      ],
-      [
-        {
-          left: ["d"],
-          right: ["d", "d"],
-        },
-        {
-          left: ["=", "d"],
-          right: ["d", "f", "="],
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-        },
-      ],
-      [
-        {
-          left: ["d"],
-          right: ["d", "d"],
-        },
-        {
-          left: ["=", "d"],
-          right: ["d", "f", "="],
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-        },
-      ],
-      [
-        {
-          left: ["d", "d"],
-          right: ["d", "e", "d"],
+          original: "d e = > = d",
         },
         {
           left: ["d"],
           right: ["d", "d"],
-        },
-        {
-          left: ["=", "d"],
-          right: ["d", "f", "="],
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
+          original: "d > d d",
         },
       ],
       [
         {
           left: ["e", "d"],
           right: ["e", "="],
-        },
-        {
-          left: ["d", "d"],
-          right: ["d", "e", "d"],
+          original: "e d > e =",
         },
         {
           left: ["d"],
           right: ["d", "d"],
+          original: "d > d d",
         },
         {
-          left: ["=", "d"],
-          right: ["d", "f", "="],
+          left: ["d", "d"],
+          right: ["d", "e", "d"],
+          original: "d d > d e d",
+        },
+      ],
+      [
+        {
+          left: ["d", "d"],
+          right: ["d", "e", "d"],
+          original: "d d > d e d",
+        },
+        {
+          left: ["d"],
+          right: ["d", "d"],
+          original: "d > d d",
         },
         {
           left: ["d", "e", "="],
           right: ["=", "d"],
+          original: "d e = > = d",
+        },
+      ],
+      [
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["=", "d"],
+          right: ["d", "f", "="],
+          original: "= d > d f =",
+        },
+        {
+          left: ["d"],
+          right: ["d", "d"],
+          original: "d > d d",
+        },
+      ],
+      [
+        {
+          left: ["d"],
+          right: ["d", "d"],
+          original: "d > d d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["=", "d"],
+          right: ["d", "f", "="],
+          original: "= d > d f =",
+        },
+      ],
+      [
+        {
+          left: ["d"],
+          right: ["d", "d"],
+          original: "d > d d",
+        },
+        {
+          left: ["=", "d"],
+          right: ["d", "f", "="],
+          original: "= d > d f =",
+        },
+        {
+          left: ["d", "d"],
+          right: ["d", "e", "d"],
+          original: "d d > d e d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+      ],
+      [
+        {
+          left: ["e", "d"],
+          right: ["e", "="],
+          original: "e d > e =",
+        },
+        {
+          left: ["d"],
+          right: ["d", "d"],
+          original: "d > d d",
+        },
+        {
+          left: ["d", "d"],
+          right: ["d", "e", "d"],
+          original: "d d > d e d",
+        },
+        {
+          left: ["=", "d"],
+          right: ["d", "f", "="],
+          original: "= d > d f =",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
         },
       ],
     ],
