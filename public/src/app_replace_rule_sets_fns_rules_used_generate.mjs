@@ -45,5 +45,5 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
   let r2 =
     await app_replace_rule_sets_fns_transform_lambda_curried_right(lambda);
   let names = app_replace_rule_sets_fns_names();
-  await functions_asts_list(names);
+  let asts = await functions_asts_list(names);
 }
