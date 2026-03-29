@@ -1,4 +1,3 @@
-import { app_replace_rule_sets_fns_transform_lambda } from "../../../love/public/src/app_replace_rule_sets_fns_transform_lambda.mjs";
 import { app_replace_rules_parse } from "../../../love/public/src/app_replace_rules_parse.mjs";
 import { js_string } from "../../../love/public/src/js_string.mjs";
 import { list_remove } from "../../../love/public/src/list_remove.mjs";
@@ -52,6 +51,5 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
     });
   }
   async function lambda3(a2) {}
-  await app_replace_rule_sets_fns_transform_lambda(ast, lambda3);
   let result = await app_replace_rule_sets_fns_transform(lambda);
 }
