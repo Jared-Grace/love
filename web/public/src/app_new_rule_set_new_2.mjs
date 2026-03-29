@@ -60,7 +60,7 @@ export function app_new_rule_set_new_2() {
         end: js_keyword_function() + " i n v o k e ( f ) { return f ( ) ; }",
       },
       {
-        start: js_keyword_function() + " id ( id ) { return ex ; }",
+        start: js_keyword_function() + " id ( id , id ) { return ex ; }",
         end: js_keyword_function() + " a d d ( x , y ) { return x + y ; }",
       },
     ],
