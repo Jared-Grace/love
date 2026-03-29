@@ -1,3 +1,4 @@
+import { list_add_multiple } from "../../../love/public/src/list_add_multiple.mjs";
 import { app_replace_rule_set_statements_variable_abbreviations } from "../../../love/public/src/app_replace_rule_set_statements_variable_abbreviations.mjs";
 import { app_replace_rule_set_statements_variable_rules } from "../../../love/public/src/app_replace_rule_set_statements_variable_rules.mjs";
 import { js_code_assign } from "../../../love/public/src/js_code_assign.mjs";
@@ -9,6 +10,19 @@ export function app_replace_rule_set_statements_variable() {
   let abbreviations = {};
   app_replace_rule_set_expressions_primary_abbreviation_ex(abbreviations);
   app_replace_rule_set_statements_variable_abbreviations(abbreviations);
+  list_add_multiple(rules, [
+    "id > a",
+    "id > b",
+    "id > c",
+    "id > i",
+    "id > j",
+    "id > x",
+    "id > y",
+    "id > z",
+    "ex > 0",
+    "ex > 1",
+    "ex > 2",
+  ]);
   const y_eq_2 = js_code_assign("y", "2");
   let r = {
     name: "Statements Variable",
