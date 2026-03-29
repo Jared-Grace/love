@@ -236,8 +236,8 @@ export async function app_replace_rule_set(context) {
       html_style_background_color_set(rb, c);
       let arrow2 = property_get(rb, "arrow");
       html_style_font_color_set_if(enabled, arrow2, "black", "#6a6a6a");
-      object_merge(rb, {
-        refresh_rb,
+            object_merge(rb, {
+        refresh_rb
       });
     }
     each_index(rules_buttons, refresh_rb);
@@ -319,7 +319,7 @@ export async function app_replace_rule_set(context) {
   }
   function button_rule_on_click_inner(index) {
     symbols_invalid_chosen = {};
-    index_selected = ternary(index_selected === index, null, index);
+    index_selected = ternary(index_selected === index, null, index);$a
     let property_name = "refresh_sb";
     list_map_property_invoke(sbs, property_name);
   }
