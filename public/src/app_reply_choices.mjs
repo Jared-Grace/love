@@ -99,7 +99,7 @@ export function app_reply_choices() {
     },
     {
       text: emoji_phone() + " Call want why?",
-      response: app_reply_call_why_generic("do", "want "),
+      response: app_reply_call_why_generic("do", "want to "),
     },
     {
       text: app_reply_called_why(),
