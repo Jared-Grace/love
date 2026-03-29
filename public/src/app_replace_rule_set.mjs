@@ -90,6 +90,7 @@ export async function app_replace_rule_set(context) {
   let goal = list_get(goals, goal_index);
   let rules_parsed = app_replace_rule_set_rules_get(rs);
   let index_selected = null;
+  let start_over = null;
   let rules_used = null;
   let r4 = app_replace_start_end_get(goal);
   let start = property_get(r4, "start");
@@ -309,7 +310,6 @@ export async function app_replace_rule_set(context) {
   }
   let left = emoji_restart();
   let combined = text_combine(left, "Start over");
-  let start_over = null;
   start_over = app_replace_button_screen(
     context,
     app_replace_rule_set,
