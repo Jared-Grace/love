@@ -4,6 +4,7 @@ import { app_replace_rule_sets_fns_names } from "../../../love/public/src/app_re
 export async function app_replace_rule_sets_fns_transform(lambda3) {
   let fns = app_replace_rule_sets_fns_names();
   let result = list_map_name(fns);
-  await functions_transform_list(result, () => {});
+  function lambda() {}
+  await functions_transform_list(result, lambda);
   return result;
 }
