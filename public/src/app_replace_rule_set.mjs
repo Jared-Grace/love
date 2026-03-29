@@ -236,6 +236,9 @@ export async function app_replace_rule_set(context) {
       html_style_background_color_set(rb, c);
       let arrow2 = property_get(rb, "arrow");
       html_style_font_color_set_if(enabled, arrow2, "black", "#6a6a6a");
+      object_merge(rb, {
+        refresh_rb,
+      });
     }
     each_index(rules_buttons, refresh_rb);
     html_clear(div_refresh);
