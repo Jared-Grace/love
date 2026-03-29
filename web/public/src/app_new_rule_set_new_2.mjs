@@ -12,6 +12,7 @@ export function app_new_rule_set_new_2() {
     "fdm > fpg )",
     "fpg > fpg , id",
     "fpg > id",
+    "sm > fs",
     "id > e m p t y",
     "id > t a u t o l o g y",
     "id > i d e n t i t y",
