@@ -1,3 +1,4 @@
+import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
 import { list_add } from "../../../love/public/src/list_add.mjs";
 import { js_object_to_expression } from "../../../love/public/src/js_object_to_expression.mjs";
 import { js_object_expression_properties } from "../../../love/public/src/js_object_expression_properties.mjs";
@@ -32,6 +33,7 @@ export async function app_replace_rule_sets_fns_migrate_used() {
     let p = js_property("rules_used", expression);
     let item = property_get(a, "item");
     let properties = js_object_expression_properties(item);
+    let name_property = js_object_expression_properties_find_key_named(item, p);
     list_add(properties, p);
     log(app_replace_rule_sets_fns_migrate_used.name, {
       rules_used,
