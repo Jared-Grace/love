@@ -5,6 +5,6 @@ export function app_replace_rule_set_statements_while_abbreviations(
 ) {
   app_replace_rule_set_statements_block_abbreviations(abbreviations);
   object_merge(abbreviations, {
-    smg: ["", "w", "hile", "s", "tatement"],
+    ws: ["", "w", "hile", "s", "tatement"],
   });
 }
