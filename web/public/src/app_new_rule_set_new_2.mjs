@@ -34,6 +34,9 @@ export function app_new_rule_set_new_2() {
     "ex > s u m / 2",
     "ex > a d d ( x , y )",
     "ex > s u m = s u m + 1",
+    "ex > i = 0",
+    "ex > i < l i s t . s i z e",
+    "ex > i = i + 1",
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_for_abbreviations(abbreviations);
@@ -131,7 +134,7 @@ export function app_new_rule_set_new_2() {
           " id ( id ) { let id = ex , id ; for ( ex ; ex ; ex ) sm return ex ; }",
         end:
           js_keyword_function() +
-          " id ( id ) { let id = ex , id ; for ( ex ; ex ; ex ) s u m = s u m + 1 ; return ex ; }",
+          " id ( id ) { let id = ex , id ; for ( i = 0 ; i < l i s t . s i z e ; i = i + 1 ) sm ; return ex ; }",
       },
       {
         start:
