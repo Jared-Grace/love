@@ -1,3 +1,4 @@
+import { list_index_of_json } from "../../../love/public/src/list_index_of_json.mjs";
 import { html_scroll_center } from "../../../love/public/src/html_scroll_center.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { app_replace_rule_set_verify_from_try } from "../../../love/public/src/app_replace_rule_set_verify_from_try.mjs";
@@ -25,7 +26,6 @@ import { list_take } from "../../../love/public/src/list_take.mjs";
 import { list_shuffle } from "../../../love/public/src/list_shuffle.mjs";
 import { list_size_range } from "../../../love/public/src/list_size_range.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
-import { list_index_of } from "../../../love/public/src/list_index_of.mjs";
 import { emoji_question } from "../../../love/public/src/emoji_question.mjs";
 import { text_combine } from "../../../love/public/src/text_combine.mjs";
 import { app_replace_rule_set_rules_get } from "../../../love/public/src/app_replace_rule_set_rules_get.mjs";
@@ -105,7 +105,7 @@ export async function app_replace_rule_set(context) {
       end,
     );
     let rule_next = property_get(second, "rule");
-    let index_rule = list_index_of(rules_used, rule_next);
+    let index_rule = list_index_of_json(rules_used, rule_next);
     let index_symbol = property_get(second, "index");
     if (equal(index_rule, index_selected)) {
       let ceiling = list_size_half_ceil(start_indices);
