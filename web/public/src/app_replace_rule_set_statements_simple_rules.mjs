@@ -5,7 +5,5 @@ export function app_replace_rule_set_statements_simple_rules(rules) {
     "sm > return ;",
     "sm > ex ;",
     "sm > return ex ;",
-    "ex > true",
-    "ex > u p d a t e ( )",
   ]);
 }
