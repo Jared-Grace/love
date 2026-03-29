@@ -7,7 +7,7 @@ import { log } from "../../../love/public/src/log.mjs";
 import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 export async function app_replace_rule_sets_fns_transform_lambda(ast) {
   let name = js_flo_name(ast);
-  log(app_replace_rule_sets_fns_transform.name, {
+  log(app_replace_rule_sets_fns_transform_lambda.name, {
     name,
   });
   let list = js_list_nodes_object_expression(ast);
