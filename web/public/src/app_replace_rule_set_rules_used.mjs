@@ -11,7 +11,7 @@ import { app_replace_rule_set_verify_goal_path } from "../../../love/public/src/
 export function app_replace_rule_set_rules_used(rules_parsed, start, end) {
   let path = app_replace_rule_set_verify_goal_path(rules_parsed, start, end);
   let mapped = list_map_property(path, "rule");
-  rules_used = list_unique(mapped);
+  let rules_used = list_unique(mapped);
   let size = list_size(rules_used);
   let number_to_add = 3 - size;
   let p = positive_is(number_to_add);
