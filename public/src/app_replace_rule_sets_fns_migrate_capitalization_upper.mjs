@@ -1,3 +1,4 @@
+import { property_get } from "../../../love/public/src/property_get.mjs";
 import { app_replace_rule_sets_fns_transform } from "../../../love/public/src/app_replace_rule_sets_fns_transform.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
@@ -9,7 +10,8 @@ import { log } from "../../../love/public/src/log.mjs";
 export async function app_replace_rule_sets_fns_migrate_capitalization_upper() {
   let result = await app_replace_rule_sets_fns_transform(on_result);
   return result;
-  function on_result(name) {
+  function on_result(a) {
+    let name2 = property_get(a, "name");
     function lambda2(t) {
       log(app_replace_rule_sets_fns_migrate_capitalization_upper.name, {
         t,
