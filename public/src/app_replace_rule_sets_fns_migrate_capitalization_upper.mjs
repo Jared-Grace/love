@@ -1,5 +1,5 @@
+import { functions_transform_list } from "../../../love/public/src/functions_transform_list.mjs";
 import { app_replace_rule_sets_fns_names } from "../../../love/public/src/app_replace_rule_sets_fns_names.mjs";
-import { each_async } from "../../../love/public/src/each_async.mjs";
 import { list_join_space } from "../../../love/public/src/list_join_space.mjs";
 import { text_first_upper_to } from "../../../love/public/src/text_first_upper_to.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
@@ -44,6 +44,6 @@ export async function app_replace_rule_sets_fns_migrate_capitalization_upper() {
     }
     let output = await function_transform(name, lambda3);
   }
-  await each_async(result, lambda);
+  await functions_transform_list(result, lambda);
   return result;
 }
