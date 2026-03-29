@@ -22,18 +22,21 @@ export function app_replace_rule_set_double() {
         {
           left: ["a"],
           right: ["a", "a"],
+          original: "a > a a",
         },
       ],
       [
         {
           left: ["a"],
           right: ["a", "a"],
+          original: "a > a a",
         },
       ],
       [
         {
           left: ["a"],
           right: ["a", "a"],
+          original: "a > a a",
         },
       ],
     ],

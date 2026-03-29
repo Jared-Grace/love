@@ -72,196 +72,238 @@ export function app_replace_rule_set_expressions_primary() {
     rules_used: [
       [
         {
-          left: ["nu"],
-          right: ["in"],
-        },
-        {
-          left: ["st"],
-          right: ['"', "l", "u", "v", '"'],
-        },
-        {
-          left: ["pe"],
-          right: ["id"],
-        },
-      ],
-      [
-        {
-          left: ["nu"],
-          right: ["de"],
-        },
-        {
-          left: ["pe"],
-          right: ["id"],
-        },
-        {
-          left: ["id"],
-          right: ["x"],
-        },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["li"],
+          left: ["li"],
+          right: ["bo"],
+          original: "li > bo",
         },
         {
           left: ["bo"],
           right: ["true"],
+          original: "bo > true",
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["x"],
+          original: "id > x",
+        },
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
         },
         {
           left: ["li"],
           right: ["bo"],
+          original: "li > bo",
+        },
+        {
+          left: ["bo"],
+          right: ["true"],
+          original: "bo > true",
         },
       ],
       [
         {
           left: ["li"],
           right: ["bo"],
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
+          original: "li > bo",
         },
         {
           left: ["bo"],
           right: ["false"],
+          original: "bo > false",
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
         },
       ],
       [
         {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
+        },
+        {
           left: ["nu"],
           right: ["in"],
+          original: "nu > in",
         },
         {
           left: ["li"],
           right: ["nu"],
+          original: "li > nu",
         },
         {
           left: ["in"],
           right: ["1"],
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
+          original: "in > 1",
         },
       ],
       [
         {
-          left: ["li"],
-          right: ["nu"],
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
+          left: ["de"],
+          right: ["3", ".", "1", "4"],
+          original: "de > 3 . 1 4",
         },
         {
           left: ["nu"],
           right: ["de"],
+          original: "nu > de",
         },
         {
-          left: ["de"],
-          right: ["3", ".", "1", "4"],
-        },
-      ],
-      [
-        {
-          left: ["st"],
-          right: ['"', "l", "u", "v", '"'],
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
         },
         {
           left: ["pe"],
           right: ["li"],
+          original: "pe > li",
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+          original: "pe > li",
         },
         {
           left: ["li"],
           right: ["st"],
+          original: "li > st",
+        },
+        {
+          left: ["st"],
+          right: ['"', "l", "u", "v", '"'],
+          original: 'st > " l u v "',
         },
       ],
       [
+        {
+          left: ["ex"],
+          right: ["pe"],
+          original: "ex > pe",
+        },
         {
           left: ["pe"],
           right: ["li"],
-        },
-        {
-          left: ["li"],
-          right: ["bo"],
-        },
-        {
-          left: ["li"],
-          right: ["null"],
-        },
-      ],
-      [
-        {
-          left: ["pe"],
-          right: ["(", "ex", ")"],
+          original: "pe > li",
         },
         {
           left: ["li"],
           right: ["null"],
-        },
-        {
-          left: ["bo"],
-          right: ["false"],
+          original: "li > null",
         },
       ],
       [
         {
+          left: ["in"],
+          right: ["1"],
+          original: "in > 1",
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+          original: "in > 2",
+        },
+        {
           left: ["pe"],
           right: ["(", "ex", ")"],
-        },
-        {
-          left: ["nu"],
-          right: ["in"],
-        },
-        {
-          left: ["ex"],
-          right: ["pe"],
+          original: "pe > ( ex )",
         },
       ],
       [
         {
           left: ["ex"],
           right: ["pe"],
+          original: "ex > pe",
         },
         {
           left: ["pe"],
           right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
         },
         {
-          left: ["pe"],
-          right: ["id"],
+          left: ["li"],
+          right: ["nu"],
+          original: "li > nu",
         },
       ],
       [
         {
           left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
+        },
+        {
+          left: ["ex"],
+          right: ["pe"],
+          original: "ex > pe",
+        },
+        {
+          left: ["pe"],
           right: ["id"],
+          original: "pe > id",
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+          original: "pe > ( ex )",
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+          original: "pe > id",
+        },
+        {
+          left: ["ex"],
+          right: ["pe"],
+          original: "ex > pe",
         },
         {
           left: ["id"],
           right: ["y"],
-        },
-        {
-          left: ["pe"],
-          right: ["(", "ex", ")"],
-        },
-        {
-          left: ["ex"],
-          right: ["pe"],
+          original: "id > y",
         },
       ],
       [
         {
+          left: ["li"],
+          right: ["bo"],
+          original: "li > bo",
+        },
+        {
           left: ["ex"],
           right: ["pe"],
+          original: "ex > pe",
         },
         {
           left: ["pe"],
           right: ["(", "ex", ")"],
-        },
-        {
-          left: ["pe"],
-          right: ["li"],
+          original: "pe > ( ex )",
         },
       ],
     ],

@@ -32,62 +32,74 @@ export function app_replace_rule_set_grow_left_pair_change_right() {
     rules_used: [
       [
         {
-          left: ["a"],
-          right: ["b", "a"],
-        },
-        {
           left: ["b", "b"],
           right: ["b", "c"],
+          original: "b b > b c",
+        },
+        {
+          left: ["a"],
+          right: ["b", "a"],
+          original: "a > b a",
         },
       ],
       [
         {
           left: ["b", "b"],
           right: ["b", "c"],
+          original: "b b > b c",
         },
         {
           left: ["a"],
           right: ["b", "a"],
+          original: "a > b a",
         },
       ],
       [
         {
           left: ["a"],
           right: ["b", "a"],
+          original: "a > b a",
         },
         {
           left: ["b", "b"],
           right: ["b", "c"],
-        },
-      ],
-      [
-        {
-          left: ["b", "b"],
-          right: ["b", "c"],
-        },
-        {
-          left: ["a"],
-          right: ["b", "a"],
+          original: "b b > b c",
         },
       ],
       [
         {
           left: ["a"],
           right: ["b", "a"],
+          original: "a > b a",
         },
         {
           left: ["b", "b"],
           right: ["b", "c"],
+          original: "b b > b c",
         },
       ],
       [
         {
           left: ["b", "b"],
           right: ["b", "c"],
+          original: "b b > b c",
         },
         {
           left: ["a"],
           right: ["b", "a"],
+          original: "a > b a",
+        },
+      ],
+      [
+        {
+          left: ["b", "b"],
+          right: ["b", "c"],
+          original: "b b > b c",
+        },
+        {
+          left: ["a"],
+          right: ["b", "a"],
+          original: "a > b a",
         },
       ],
     ],

@@ -150,484 +150,588 @@ export function app_replace_rule_set_unary_to_binary_equations() {
     rules_used: [
       [
         {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
           left: ["d", "b"],
           right: ["b", "d"],
+          original: "d b > b d",
         },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+      ],
+      [
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+      ],
+      [
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+      ],
+      [
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+      ],
+      [
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+      ],
+      [
         {
           left: ["1", "a"],
           right: ["a", "0"],
+          original: "1 a > a 0",
         },
         {
           left: ["e", "=", "b"],
           right: ["c", "e", "=", "b", "c"],
-        },
-      ],
-      [
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
+          original: "e = b > c e = b c",
         },
         {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-        },
-      ],
-      [
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-        },
-      ],
-      [
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-        },
-      ],
-      [
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-        },
-      ],
-      [
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-        },
-      ],
-      [
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
+          left: ["d", "+"],
+          right: ["+", "d"],
+          original: "d + > + d",
         },
       ],
       [
         {
           left: ["e", "=", "b"],
           right: ["c", "e", "=", "b", "c"],
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-        },
-      ],
-      [
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-        },
-      ],
-      [
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
+          original: "e = b > c e = b c",
         },
         {
           left: ["d", "c"],
           right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+          original: "d + > + d",
         },
       ],
       [
         {
           left: ["d", "+"],
           right: ["+", "d"],
+          original: "d + > + d",
         },
         {
           left: ["e", "=", "b"],
           right: ["c", "e", "=", "b", "c"],
+          original: "e = b > c e = b c",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+      ],
+      [
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+          original: "e = b > c e = b c",
+        },
+      ],
+      [
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+          original: "e = b > c e = b c",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+      ],
+      [
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
         },
         {
           left: ["c", "c"],
           right: ["c", "+", "b", "c"],
+          original: "c c > c + b c",
         },
       ],
       [
         {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-        },
-        {
           left: ["c", "c"],
           right: ["c", "+", "b", "c"],
+          original: "c c > c + b c",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
         },
       ],
       [
         {
-          left: ["0", "a"],
-          right: ["1"],
-        },
-        {
-          left: ["c", "c"],
-          right: ["c", "+", "b", "c"],
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
         },
         {
           left: ["d", "+"],
           right: ["+", "d"],
+          original: "d + > + d",
+        },
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+          original: "c c > c + b c",
+        },
+      ],
+      [
+        {
+          left: ["c", "c"],
+          right: ["c", "+", "b", "c"],
+          original: "c c > c + b c",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
         },
       ],
       [
         {
           left: ["1", "a"],
           right: ["a", "0"],
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
+          original: "1 a > a 0",
         },
         {
           left: ["c", "c"],
           right: ["c", "+", "b", "c"],
-        },
-      ],
-      [
-        {
-          left: ["c", "c"],
-          right: ["c", "+", "b", "c"],
+          original: "c c > c + b c",
         },
         {
           left: ["0", "a"],
           right: ["1"],
+          original: "0 a > 1",
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+      ],
+      [
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+          original: "d + > + d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+          original: "d + > + d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+      ],
+      [
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+          original: "d + > + d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+      ],
+      [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
         },
         {
           left: ["e", "=", "b"],
           right: ["c", "e", "=", "b", "c"],
+          original: "e = b > c e = b c",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+      ],
+      [
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "+"],
+          right: ["+", "d"],
+          original: "d + > + d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
         },
       ],
       [
         {
           left: ["d", "e", "="],
           right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["d", "b"],
+          right: ["b", "d"],
+          original: "d b > b d",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+      ],
+      [
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+          original: "d e = > = d",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+      ],
+      [
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
         },
         {
           left: ["1", "a"],
           right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+      ],
+      [
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+      ],
+      [
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+      ],
+      [
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+      ],
+      [
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
+        },
+      ],
+      [
+        {
+          left: ["b", "a"],
+          right: ["b", "1"],
+          original: "b a > b 1",
+        },
+        {
+          left: ["1", "a"],
+          right: ["a", "0"],
+          original: "1 a > a 0",
         },
         {
           left: ["c", "c"],
           right: ["c", "+", "b", "c"],
+          original: "c c > c + b c",
         },
       ],
       [
+        {
+          left: ["d", "c"],
+          right: ["a", "d"],
+          original: "d c > a d",
+        },
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
+        {
+          left: ["e", "=", "b"],
+          right: ["c", "e", "=", "b", "c"],
+          original: "e = b > c e = b c",
+        },
+      ],
+      [
+        {
+          left: ["0", "a"],
+          right: ["1"],
+          original: "0 a > 1",
+        },
         {
           left: ["c", "c"],
           right: ["c", "+", "b", "c"],
-        },
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-        },
-        {
-          left: ["d", "+"],
-          right: ["+", "d"],
-        },
-      ],
-      [
-        {
-          left: ["d", "+"],
-          right: ["+", "d"],
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-        },
-      ],
-      [
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-        },
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-        },
-      ],
-      [
-        {
-          left: ["d", "+"],
-          right: ["+", "d"],
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-        },
-      ],
-      [
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-        },
-        {
-          left: ["d", "+"],
-          right: ["+", "d"],
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-        },
-      ],
-      [
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-        },
-        {
-          left: ["d", "+"],
-          right: ["+", "d"],
+          original: "c c > c + b c",
         },
         {
           left: ["1", "a"],
           right: ["a", "0"],
-        },
-      ],
-      [
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-        },
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-        },
-        {
-          left: ["d", "+"],
-          right: ["+", "d"],
-        },
-      ],
-      [
-        {
-          left: ["d", "b"],
-          right: ["b", "d"],
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-        },
-      ],
-      [
-        {
-          left: ["e", "=", "b"],
-          right: ["c", "e", "=", "b", "c"],
-        },
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-        },
-        {
-          left: ["d", "c"],
-          right: ["a", "d"],
-        },
-      ],
-      [
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-        },
-      ],
-      [
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-        },
-      ],
-      [
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-        },
-      ],
-      [
-        {
-          left: ["0", "a"],
-          right: ["1"],
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-        },
-      ],
-      [
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-        },
-      ],
-      [
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-        },
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-        },
-      ],
-      [
-        {
-          left: ["d", "e", "="],
-          right: ["=", "d"],
-        },
-        {
-          left: ["b", "a"],
-          right: ["b", "1"],
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
-        },
-      ],
-      [
-        {
-          left: ["1", "a"],
-          right: ["a", "0"],
-        },
-        {
-          left: ["d", "+"],
-          right: ["+", "d"],
-        },
-        {
-          left: ["0", "a"],
-          right: ["1"],
+          original: "1 a > a 0",
         },
       ],
     ],

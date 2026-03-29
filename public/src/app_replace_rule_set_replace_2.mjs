@@ -24,42 +24,50 @@ export function app_replace_rule_set_replace_2() {
     rules_used: [
       [
         {
-          left: ["c"],
-          right: ["d"],
-        },
-        {
           left: ["a"],
           right: ["b"],
+          original: "a > b",
+        },
+        {
+          left: ["c"],
+          right: ["d"],
+          original: "c > d",
         },
       ],
       [
         {
           left: ["c"],
           right: ["d"],
+          original: "c > d",
         },
         {
           left: ["a"],
           right: ["b"],
-        },
-      ],
-      [
-        {
-          left: ["a"],
-          right: ["b"],
-        },
-        {
-          left: ["c"],
-          right: ["d"],
+          original: "a > b",
         },
       ],
       [
         {
           left: ["c"],
           right: ["d"],
+          original: "c > d",
         },
         {
           left: ["a"],
           right: ["b"],
+          original: "a > b",
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b"],
+          original: "a > b",
+        },
+        {
+          left: ["c"],
+          right: ["d"],
+          original: "c > d",
         },
       ],
     ],
