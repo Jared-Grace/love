@@ -1,3 +1,4 @@
+import { app_replace_rule_sets_fns_transform_lambda_curried_right } from "../../../love/public/src/app_replace_rule_sets_fns_transform_lambda_curried_right.mjs";
 import { functions_asts_each } from "../../../love/public/src/functions_asts_each.mjs";
 import { app_replace_rules_parse } from "../../../love/public/src/app_replace_rules_parse.mjs";
 import { js_string } from "../../../love/public/src/js_string.mjs";
@@ -53,6 +54,8 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
   }
   async function lambda3(a2) {}
   let result = await app_replace_rule_sets_fns_transform(lambda);
+  let r2 =
+    await app_replace_rule_sets_fns_transform_lambda_curried_right(lambda$a);
   async function lambda4(ast) {}
   await functions_asts_each(lambda4);
 }
