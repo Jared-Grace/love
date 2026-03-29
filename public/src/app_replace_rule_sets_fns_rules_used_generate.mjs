@@ -23,6 +23,7 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
     async function lambda(a) {
       let f_name = property_get(a, "name");
       let rs = await function_run_args_none(f_name);
+      let name2 = property_get(rs, "name");
       log(app_replace_rule_sets_fns_rules_used_generate.name, {
         rs,
       });
