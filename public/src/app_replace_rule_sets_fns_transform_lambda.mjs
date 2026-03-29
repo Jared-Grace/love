@@ -4,7 +4,10 @@ import { js_object_expression_properties_find_key_named } from "../../../love/pu
 import { js_list_nodes_object_expression } from "../../../love/public/src/js_list_nodes_object_expression.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
-export async function app_replace_rule_sets_fns_transform_lambda(ast) {
+export async function app_replace_rule_sets_fns_transform_lambda(
+  ast,
+  lambda$a,
+) {
   let name = js_flo_name(ast);
   log(app_replace_rule_sets_fns_transform_lambda.name, {
     name,
