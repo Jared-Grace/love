@@ -146,6 +146,7 @@ export async function app_replace_rule_set(context) {
   each(goal_list_symbols, lambda4);
   let div_below = html_div(root);
   let success = false;
+  let sbs = null;
   const duration = app_replace_animation_duration_get(context);
   let refresh_count = 0;
   rules_used = app_replace_rule_set_rules_used(
@@ -238,7 +239,6 @@ export async function app_replace_rule_set(context) {
     each_index(rules_buttons, each_button_rule_refresh);
     html_clear(div_refresh);
     let div_symbols = html_div(div_refresh);
-    let sbs = null;
     function symbols_mapper(symbol, index) {
       let sb = null;
       async function symbol_on_click() {
