@@ -13,7 +13,9 @@ export function app_new_rule_set_new_2() {
     "fpg > fpg , id",
     "fpg > id",
     "id > t a u t o l o g y",
+    "id > i d e n t i t y",
     "ex > true",
+    "ex > i",
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_for_abbreviations(abbreviations);
@@ -34,6 +36,10 @@ export function app_new_rule_set_new_2() {
       {
         start: "fd",
         end: js_keyword_function() + " t a u t o l o g y ( ) { return true ; }",
+      },
+      {
+        start: "fd",
+        end: js_keyword_function() + " i d e n t i t y ( i ) { return i ; }",
       },
     ],
   };
