@@ -17,6 +17,7 @@ export function app_new_rule_set_new_2() {
   app_replace_rule_set_statements_for_abbreviations(abbreviations);
   object_merge(abbreviations, {
     fs: ["", "f", "unction ", "d", "eclaration"],
+    fs: ["", "f", "unction ", "d", "eclaration ", "m", "iddle"],
   });
   let r = {
     name: "TODO",
