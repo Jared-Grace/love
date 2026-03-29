@@ -4,7 +4,7 @@ export async function lambda_timeout(fn, ms) {
     v,
     new Promise(function lambda2(_, reject) {
       function lambda() {
-        let r4 = reject(new Error("Timeout"));
+        let r4 = reject(new Error(lambda_timeout.name));
         return r4;
       }
       let r2 = setTimeout(lambda, ms);
