@@ -1,4 +1,5 @@
 export async function lambda_timeout(fn, ms) {
+  let value = new Error(lambda_timeout.name);
   let v = Promise.resolve().then(fn);
   let r = await Promise.race([
     v,
