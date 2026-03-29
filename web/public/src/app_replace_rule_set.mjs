@@ -170,7 +170,7 @@ export async function app_replace_rule_set(context) {
     }
     each(list2, lambda6);
   }
-  refresh();
+  await refresh();
   async function refresh() {
     html_clear(div_rules_buttons);
     let t = app_replace_rule_set_verify_from_try(rules_used, start, end);
