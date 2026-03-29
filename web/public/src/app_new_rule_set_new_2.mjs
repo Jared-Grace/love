@@ -23,6 +23,7 @@ export function app_new_rule_set_new_2() {
     "id > x",
     "id > y",
     "id > s u m",
+    "id > l i s t",
     "ex > true",
     "ex > i",
     "ex > x + y",
