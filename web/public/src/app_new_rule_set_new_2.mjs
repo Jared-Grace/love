@@ -12,21 +12,17 @@ export function app_new_rule_set_new_2() {
     "fdm > fpg )",
     "fpg > fpg , id",
     "fpg > id",
-    "sm > fs",
     "id > e m p t y",
     "id > t a u t o l o g y",
     "id > i d e n t i t y",
     "id > i n v o k e",
     "id > a d d",
     "id > a v e r a g e",
-    "id > l i s t",
-    "id > l i s t _ s u m",
     "id > i",
     "id > f",
     "id > x",
     "id > y",
     "id > s u m",
-    "id > l i s t",
     "ex > true",
     "ex > i",
     "ex > x + y",
@@ -35,13 +31,6 @@ export function app_new_rule_set_new_2() {
     "ex > f ( )",
     "ex > s u m / 2",
     "ex > a d d ( x , y )",
-    "ex > s u m = s u m + 1",
-    "ex > i = 0",
-    "ex > 0",
-    "ex > s u m",
-    "ex > i < l i s t . s i z e",
-    "ex > i = i + 1",
-    "ex > s u m = s u m + l i s t [ 0 ]",
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_for_abbreviations(abbreviations);
@@ -102,76 +91,6 @@ export function app_new_rule_set_new_2() {
         end:
           js_keyword_function() +
           " a v e r a g e ( x , y ) { let s u m = a d d ( x , y ) ; return s u m / 2 ; }",
-      },
-      {
-        start: js_keyword_function() + " id ( fpg ) { smg }",
-        end: js_keyword_function() + " id ( id ) { sm sm sm }",
-      },
-      {
-        start: js_keyword_function() + " id ( id ) { sm sm sm }",
-        end: js_keyword_function() + " id ( id ) { vs sm return ex ; }",
-      },
-      {
-        start: js_keyword_function() + " id ( id ) { vs sm return ex ; }",
-        end:
-          js_keyword_function() +
-          " id ( id ) { let vdg , vd ; sm return ex ; }",
-      },
-      {
-        start:
-          js_keyword_function() +
-          " id ( id ) { let vdg , vd ; sm return ex ; }",
-        end:
-          js_keyword_function() +
-          " id ( id ) { let id = ex , id ; sm return ex ; }",
-      },
-      {
-        start:
-          js_keyword_function() +
-          " id ( id ) { let id = ex , id ; sm return ex ; }",
-        end:
-          js_keyword_function() +
-          " id ( id ) { let id = ex , id ; for ( ex ; ex ; ex ) sm return ex ; }",
-      },
-      {
-        start:
-          js_keyword_function() +
-          " id ( id ) { let id = ex , id ; for ( ex ; ex ; ex ) sm return ex ; }",
-        end:
-          js_keyword_function() +
-          " id ( id ) { let id = ex , id ; for ( i = 0 ; i < l i s t . s i z e ; i = i + 1 ) sm return ex ; }",
-      },
-      {
-        start:
-          js_keyword_function() +
-          " id ( id ) { let id = ex , id ; for ( i = 0 ; i < l i s t . s i z e ; i = i + 1 ) sm return ex ; }",
-        end:
-          js_keyword_function() +
-          " l i s t _ s u m ( l i s t ) { let id = ex , id ; for ( i = 0 ; i < l i s t . s i z e ; i = i + 1 ) sm return ex ; }",
-      },
-      {
-        start:
-          js_keyword_function() +
-          " l i s t _ s u m ( l i s t ) { let id = ex , id ; for ( i = 0 ; i < l i s t . s i z e ; i = i + 1 ) sm return ex ; }",
-        end:
-          js_keyword_function() +
-          " l i s t _ s u m ( l i s t ) { let s u m = 0 , i ; for ( i = 0 ; i < l i s t . s i z e ; i = i + 1 ) sm return ex ; }",
-      },
-      {
-        start:
-          js_keyword_function() +
-          " l i s t _ s u m ( l i s t ) { let s u m = 0 , i ; for ( i = 0 ; i < l i s t . s i z e ; i = i + 1 ) sm return ex ; }",
-        end:
-          js_keyword_function() +
-          " l i s t _ s u m ( l i s t ) { let s u m = 0 , i ; for ( i = 0 ; i < l i s t . s i z e ; i = i + 1 ) s u m = s u m + l i s t [ 0 ] ; return s u m ; }",
-      },
-      {
-        start:
-          js_keyword_function() +
-          " l i s t _ s u m ( l i s t ) { let s u m = 0 , i ; for ( i = 0 ; i < l i s t . s i z e ; i = i + 1 ) sm return ex ; }",
-        end:
-          js_keyword_function() +
-          " l i s t _ s u m ( l i s t ) { let s u m = 0 , i ; for ( i = 0 ; i < l i s t . s i z e ; i = i + 1 ) s u m = s u m + l i s t [ 0 ] ; return s u m ; }",
       },
     ],
   };
