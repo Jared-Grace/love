@@ -1,4 +1,4 @@
-import { app_replace_animation_duration_initialize } from "../../../love/public/src/app_replace_animation_duration_initialize.mjs";
+import { app_replace_animation_duration_get } from "../../../love/public/src/app_replace_animation_duration_get.mjs";
 import { app_shared_screen_set } from "../../../love/public/src/app_shared_screen_set.mjs";
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
@@ -41,7 +41,7 @@ export function app_replace_settings(context) {
   let div2 = html_div(root);
   let left = emoji_clock();
   let highlight = app_replace_rule_set_highlight();
-  const duration = app_replace_animation_duration_initialize(context);
+  const duration = app_replace_animation_duration_get(context);
   let choices = [
     {
       ending: "off",
