@@ -16,6 +16,7 @@ import { log } from "../../../love/public/src/log.mjs";
 export async function app_replace_rule_sets_fns_migrate_capitalization_upper() {
   let fns = app_replace_rule_sets_fns_names();
   let result = list_map_name(fns);
+  await functions_transform_list(result, lambda3);
   async function lambda3(ast) {
     let name = js_flo_name(ast);
     log(app_replace_rule_sets_fns_migrate_capitalization_upper.name, {
@@ -42,6 +43,5 @@ export async function app_replace_rule_sets_fns_migrate_capitalization_upper() {
     }
     each(list, lambda_each);
   }
-  await functions_transform_list(result, lambda3);
   return result;
 }
