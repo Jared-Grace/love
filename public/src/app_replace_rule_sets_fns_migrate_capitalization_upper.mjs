@@ -11,39 +11,35 @@ import { js_property_value_change } from "../../../love/public/src/js_property_v
 import { js_literal_map_curried_right } from "../../../love/public/src/js_literal_map_curried_right.mjs";
 import { js_object_expression_properties_find_key_named } from "../../../love/public/src/js_object_expression_properties_find_key_named.mjs";
 import { js_list_nodes_object_expression } from "../../../love/public/src/js_list_nodes_object_expression.mjs";
-import { function_transform } from "../../../love/public/src/function_transform.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 export async function app_replace_rule_sets_fns_migrate_capitalization_upper() {
   let fns = app_replace_rule_sets_fns_names();
   let result = list_map_name(fns);
-  async function lambda(name) {
-    async function lambda3(ast) {
-      log(app_replace_rule_sets_fns_migrate_capitalization_upper.name, {
-        name,
-      });
-      let list = js_list_nodes_object_expression(ast);
-      function lambda_each(item) {
-        let p = "name";
-        let s = js_object_expression_properties_find_key_named(item, p);
-        if (null_is(s)) {
-          return;
-        }
-        function lambda2(t) {
-          log(app_replace_rule_sets_fns_migrate_capitalization_upper.name, {
-            t,
-          });
-          let split = text_split_space(t);
-          let mapped = list_map(split, text_first_upper_to);
-          let joined = list_join_space(mapped);
-          return joined;
-        }
-        let r = js_literal_map_curried_right(lambda2);
-        js_property_value_change(s, r);
+  async function lambda3(ast) {
+    log(app_replace_rule_sets_fns_migrate_capitalization_upper.name, {
+      name,
+    });
+    let list = js_list_nodes_object_expression(ast);
+    function lambda_each(item) {
+      let p = "name";
+      let s = js_object_expression_properties_find_key_named(item, p);
+      if (null_is(s)) {
+        return;
       }
-      each(list, lambda_each);
+      function lambda2(t) {
+        log(app_replace_rule_sets_fns_migrate_capitalization_upper.name, {
+          t,
+        });
+        let split = text_split_space(t);
+        let mapped = list_map(split, text_first_upper_to);
+        let joined = list_join_space(mapped);
+        return joined;
+      }
+      let r = js_literal_map_curried_right(lambda2);
+      js_property_value_change(s, r);
     }
-    let output = await function_transform(name, lambda3);
+    each(list, lambda_each);
   }
-  await functions_transform_list(result, lambda);
+  await functions_transform_list(result, lambda3);
   return result;
 }
