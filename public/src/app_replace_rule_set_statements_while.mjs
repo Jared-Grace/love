@@ -40,7 +40,7 @@ export function app_replace_rule_set_statements_while() {
           " ( ! f o u n d ( d o o r ) ) { a s k ( ) ; s e e k ( ) ; }",
       },
     ],
-    why: "The replacement rules describe a grammar for JavaScript-like while loops, including variable declarations, expressions, statements, blocks, and control flow, demonstrating how to construct valid while statements and their bodies using basic programming constructs.",
+    why: "The replacement rules define a grammar for JavaScript-like while statements, including variable declarations, expressions, blocks, and if-else statements, demonstrating how complex control flow and statement grouping are constructed from simpler syntactic elements.",
   };
   return r;
 }
