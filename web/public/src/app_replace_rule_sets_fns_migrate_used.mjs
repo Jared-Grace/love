@@ -9,7 +9,7 @@ export async function app_replace_rule_sets_fns_migrate_used() {
     let item = property_get(a, "item");
     let p = "goals";
     let goals = js_object_expression_properties_find_key_named(item, p);
-    if (null_is(value2)) {
+    if (null_is(goals)) {
     }
     const t = goals.value.type;
     if (equal_not(t, "ArrayExpression")) {
