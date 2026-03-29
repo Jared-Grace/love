@@ -17,44 +17,6 @@ export function app_replace_rule_set_grow_different_2() {
       },
     ],
     why: "The rules demonstrate a context-free grammar where 'a' expands to 'b c' and 'b' further expands to 'd e', allowing derivations from 'a' to sequences like 'd e c', and showing how repeated applications generate longer strings by recursively expanding each 'a'.",
-    rules_used: [
-      [
-        {
-          left: ["a"],
-          right: ["b", "c"],
-          original: "a > b c",
-        },
-        {
-          left: ["b"],
-          right: ["d", "e"],
-          original: "b > d e",
-        },
-      ],
-      [
-        {
-          left: ["a"],
-          right: ["b", "c"],
-          original: "a > b c",
-        },
-        {
-          left: ["b"],
-          right: ["d", "e"],
-          original: "b > d e",
-        },
-      ],
-      [
-        {
-          left: ["b"],
-          right: ["d", "e"],
-          original: "b > d e",
-        },
-        {
-          left: ["a"],
-          right: ["b", "c"],
-          original: "a > b c",
-        },
-      ],
-    ],
   };
   return r;
 }
