@@ -18,8 +18,7 @@ export function app_replace_rule_set_statements_while() {
   let abbreviations = {};
   app_replace_rule_set_statements_block_abbreviations(abbreviations);
   object_merge(abbreviations, {
-    smg: ["", "s", "tate", "m", "ent ", "g", "rower"],
-    bs: ["", "b", "lock ", "statement"],
+    smg: ["", "w", "hile", "s", "tatement"],
   });
   let r = {
     name: "Statements While",
