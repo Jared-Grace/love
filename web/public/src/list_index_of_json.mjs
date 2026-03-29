@@ -5,7 +5,8 @@ export function list_index_of_json(list, item) {
   let search = json_to(item);
   function lambda(item_found) {
     let json = json_to(item_found);
-    let eq2 = equal(left, right);
+    let eq2 = equal(json, search);
+    return eq2;
   }
   let found = list_find(list, lambda);
 }
