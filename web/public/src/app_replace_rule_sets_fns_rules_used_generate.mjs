@@ -1,3 +1,4 @@
+import { exit } from "../../../love/public/src/exit.mjs";
 import { list_map_unordered_async } from "../../../love/public/src/list_map_unordered_async.mjs";
 import { functions_asts_list } from "../../../love/public/src/functions_asts_list.mjs";
 import { app_replace_rule_sets_fns_names } from "../../../love/public/src/app_replace_rule_sets_fns_names.mjs";
@@ -42,6 +43,7 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
     log(app_replace_rule_sets_fns_rules_used_generate.name, {
       rules_used,
     });
+    exit();
   }
   let r2 =
     await app_replace_rule_sets_fns_transform_lambda_curried_right(lambda);
