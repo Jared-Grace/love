@@ -1,3 +1,4 @@
+import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { list_map_property_invoke } from "../../../love/public/src/list_map_property_invoke.mjs";
 import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
 import { app_replace_animation_duration_get } from "../../../love/public/src/app_replace_animation_duration_get.mjs";
@@ -175,6 +176,7 @@ export async function app_replace_rule_set(context) {
     let found = property_get(t, "found");
     if (not(found)) {
       html_style_background_color_set(start_over, "red");
+      html_font_color_set(component3, color);
     }
     refresh_count_increase();
     function each_rule(rule, index) {
