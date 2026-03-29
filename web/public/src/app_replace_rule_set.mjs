@@ -1,3 +1,4 @@
+import { html_scroll_center } from "../../../love/public/src/html_scroll_center.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
 import { list_map_property_invoke } from "../../../love/public/src/list_map_property_invoke.mjs";
 import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
@@ -177,6 +178,7 @@ export async function app_replace_rule_set(context) {
     if (not(found)) {
       html_style_background_color_set(start_over, "red");
       html_font_color_set(start_over, "white");
+      await html_scroll_center(c2);
     }
     refresh_count_increase();
     function each_rule(rule, index) {
