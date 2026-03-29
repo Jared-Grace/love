@@ -25,7 +25,8 @@ export async function app_replace_rule_sets_fns_migrate_used() {
     let name = property_get(a, "name");
     let rs = await function_run_args_none(name);
     log(app_replace_rule_sets_fns_migrate_used.name, {
-      expression,rs
+      expression,
+      rs,
     });
   }
   let result = await app_replace_rule_sets_fns_transform(lambda);
