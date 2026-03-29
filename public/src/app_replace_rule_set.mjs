@@ -5,7 +5,6 @@ import { emoji_target } from "../../../love/public/src/emoji_target.mjs";
 import { emoji_restart } from "../../../love/public/src/emoji_restart.mjs";
 import { app_replace_rule_set_title } from "../../../love/public/src/app_replace_rule_set_title.mjs";
 import { html_progress_bar } from "../../../love/public/src/html_progress_bar.mjs";
-import { app_replace_rule_set_rules_used } from "../../../love/public/src/app_replace_rule_set_rules_used.mjs";
 import { list_map_property_multiple } from "../../../love/public/src/list_map_property_multiple.mjs";
 import { list_squash } from "../../../love/public/src/list_squash.mjs";
 import { app_replace_rule_set_verify_from_try } from "../../../love/public/src/app_replace_rule_set_verify_from_try.mjs";
@@ -151,8 +150,7 @@ export async function app_replace_rule_set(context) {
   let rbs = null;
   const duration = app_replace_animation_duration_get(context);
   let refresh_count = 0;
-  let rules_used2 = property_get(rs, "rules_used");
-  rules_used = app_replace_rule_set_rules_used(rules_parsed, start, end);
+  rules_used = property_get(rs, "rules_used");
   let exists2 = property_exists(rs, "abbreviations");
   if (exists2) {
     let properties = ["left", "right"];
