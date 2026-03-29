@@ -188,9 +188,7 @@ export async function app_replace_rule_set(context) {
     if (not(found)) {
       html_style_background_color_set(start_over, highlight);
     }
-    refresh_count++;
-    let value3 = app_replace_rule_set_attribute_refresh_count(refresh_count);
-    html_data_set_test(div_rules_buttons, value3);
+    refresh_count_increase();
     function each_rule(rule, index) {
       function button_rule_on_click() {
         start_indices = list_size_range(start);
@@ -322,10 +320,16 @@ export async function app_replace_rule_set(context) {
       html_visibility_hidden(div_symbols);
     }
   }
+  function refresh_count_increase() {
+    refresh_count++;
+    let value3 = app_replace_rule_set_attribute_refresh_count(refresh_count);
+    html_data_set_test(div_rules_buttons, value3);
+  }
   function button_rule_on_click_inner(index) {
     symbols_invalid_chosen = {};
     index_selected = ternary(index_selected === index, null, index);
     list_map_property_invoke(sbs, "refresh_sb");
     list_map_property_invoke(rbs, "refresh_rb");
+    refresh_count_increase();
   }
 }
