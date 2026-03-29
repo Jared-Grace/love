@@ -98,7 +98,7 @@ export async function app_replace_rule_set(context) {
   let start = property_get(r4, "start");
   let start_indices = list_size_range(start);
   let end = property_get(r4, "end");
-  function on_hint() {
+  async function on_hint() {
     let second = app_replace_rule_set_verify_goal_next(
       rules_parsed,
       start,
@@ -112,7 +112,7 @@ export async function app_replace_rule_set(context) {
       list_shuffle(start_indices);
       list_swap_first(start_indices, index_symbol);
       start_indices = list_take(start_indices, ceiling);
-      refresh();
+      await refresh();
     } else {
       button_rule_on_click_inner(index_rule);
     }
