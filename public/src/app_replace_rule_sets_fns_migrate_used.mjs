@@ -13,6 +13,7 @@ export async function app_replace_rule_sets_fns_migrate_used() {
     if (null_is(goals)) {
       return;
     }
+    let value2 = property_get(goals, "value");
     const t = goals.value.type;
     if (equal_not(t, "ArrayExpression")) {
       return;
