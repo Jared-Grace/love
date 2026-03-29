@@ -8,7 +8,11 @@ import { json_to } from "../../../love/public/src/json_to.mjs";
 import { graph_search_depth_first } from "../../../love/public/src/graph_search_depth_first.mjs";
 import { app_replace_rule_set_verify_goal_depth_max } from "../../../love/public/src/app_replace_rule_set_verify_goal_depth_max.mjs";
 export function app_replace_rule_set_verify_from_try(rules_parsed, start, end) {
-  log(app_replace_rule_set_verify_from_try.name, {});
+  log(app_replace_rule_set_verify_from_try.name, {
+    rules_parsed,
+    start,
+    end,
+  });
   let max_depth = app_replace_rule_set_verify_goal_depth_max();
   let dfs = graph_search_depth_first(
     start,
