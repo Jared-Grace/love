@@ -22,12 +22,15 @@ export function app_new_rule_set_new_2() {
     "id > f",
     "id > x",
     "id > y",
+    "id > s u m",
     "ex > true",
     "ex > i",
     "ex > x + y",
     "ex > x",
     "ex > y",
     "ex > f ( )",
+    "ex > sum / 2",
+    "ex > a d d ( x , y )",
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_for_abbreviations(abbreviations);
@@ -85,7 +88,7 @@ export function app_new_rule_set_new_2() {
         start: s_keyword_function() + " id ( x , y ) { vs return ex ; }",
         end:
           js_keyword_function() +
-          " a v e r a g e ( x , y ) { let sum = a d d ( x , y ) ; return sum / 2 ; }",
+          " a v e r a g e ( x , y ) { let s u m = a d d ( x , y ) ; return s u m / 2 ; }",
       },
     ],
   };
