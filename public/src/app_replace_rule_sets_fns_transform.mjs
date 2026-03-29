@@ -7,7 +7,7 @@ import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 import { functions_transform_list } from "../../../love/public/src/functions_transform_list.mjs";
 import { list_map_name } from "../../../love/public/src/list_map_name.mjs";
 import { app_replace_rule_sets_fns_names } from "../../../love/public/src/app_replace_rule_sets_fns_names.mjs";
-export async function app_replace_rule_sets_fns_transform(lambda$name$item) {
+export async function app_replace_rule_sets_fns_transform(lambda$a) {
   let fns = app_replace_rule_sets_fns_names();
   let result = list_map_name(fns);
   async function lambda3(ast) {
