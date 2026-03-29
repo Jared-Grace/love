@@ -21,7 +21,7 @@ export function app_new_rule_set_new_2() {
     fpg: ["", "f", "unction ", "p", "arameter ", "g", "rower"],
   });
   let r = {
-    name: "TODO",
+    name: "Function Declarations",
     rules,
     abbreviations,
     goals: [
