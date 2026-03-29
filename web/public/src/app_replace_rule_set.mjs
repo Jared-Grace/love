@@ -322,5 +322,6 @@ export async function app_replace_rule_set(context) {
     symbols_invalid_chosen = {};
     index_selected = ternary(index_selected === index, null, index);
     list_map_property_invoke(sbs, "refresh_sb");
+    list_map_property_invoke(rbs, "refresh_rb");
   }
 }
