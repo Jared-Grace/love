@@ -1,4 +1,4 @@
-export async function lambda_timeout_generic(fn, value, ms) {
+export async function lambda_timeout_generic(fn, ms, value) {
   let v = Promise.resolve().then(fn);
   let r = await Promise.race([
     v,
