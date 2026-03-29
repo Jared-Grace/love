@@ -1,3 +1,4 @@
+import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { html_style_margin_top } from "../../../love/public/src/html_style_margin_top.mjs";
 import { app_replace_animation_duration_get } from "../../../love/public/src/app_replace_animation_duration_get.mjs";
@@ -319,6 +320,7 @@ export async function app_replace_rule_set(context) {
     index_selected = ternary(index_selected === index, null, index);
     let property_name = "refresh_sb";
     let mapped = list_map_property(sbs, property_name);
+    let mapped2 = invoke_multiple(list_fns);
     refresh();
   }
 }
