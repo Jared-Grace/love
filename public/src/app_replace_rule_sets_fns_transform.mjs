@@ -16,13 +16,17 @@ export async function app_replace_rule_sets_fns_transform(lambda$a) {
     let list = js_list_nodes_object_expression(ast);
     function lambda_each(item) {
       let p = "name";
-      let name = js_object_expression_properties_find_key_named(item, p);
-      if (null_is(name)) {
+      let name_property = js_object_expression_properties_find_key_named(
+        item,
+        p,
+      );
+      if (null_is(name_property)) {
         return;
       }
       lambda$a({
-        name,
+        name_property,
         item,
+        name,
       });
     }
     each(list, lambda_each);
