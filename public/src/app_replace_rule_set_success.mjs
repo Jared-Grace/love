@@ -23,7 +23,7 @@ import { app_replace_button_symbol_style_inner } from "../../../love/public/src/
 import { html_style_background_color_set } from "../../../love/public/src/html_style_background_color_set.mjs";
 import { html_p } from "../../../love/public/src/html_p.mjs";
 import { list_join_empty } from "../../../love/public/src/list_join_empty.mjs";
-import { list_invoke } from "../../../love/public/src/list_invoke.mjs";
+import { invoke_multiple } from "../../../love/public/src/invoke_multiple.mjs";
 import { emoji_check } from "../../../love/public/src/emoji_check.mjs";
 import { list_add_first } from "../../../love/public/src/list_add_first.mjs";
 import { list_shuffle_take } from "../../../love/public/src/list_shuffle_take.mjs";
@@ -72,7 +72,7 @@ export async function app_replace_rule_set_success(
   const taken_count = 3;
   let taken = list_shuffle_take(choices, taken_count);
   list_add_first(taken, emoji_check);
-  let mapped = list_invoke(taken);
+  let mapped = invoke_multiple(taken);
   let joined = list_join_empty(mapped);
   let p = html_p(div_below);
   html_style_background_color_set(p, highlight);
