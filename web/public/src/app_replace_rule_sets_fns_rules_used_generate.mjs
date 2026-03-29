@@ -57,7 +57,7 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
   let result = await object_adder_async(lambda3);
   let e = js_object_to_expression(result);
   function lambda4(ast) {
-    let body_block = js_flo_body_empty(ast2);
+    let body_block = js_flo_body_empty(ast);
     js_flo_body_add_return_argument(ast, e);
   }
   let output = await function_transform_fn(
