@@ -215,7 +215,7 @@ export async function app_replace_rule_set(context) {
       return rb;
     }
     rbs = list_map_index(rules_used, each_rule);
-    function refresh_rb(rb, index2) {
+    function rbs_each(rb, index2) {
       let rule2 = property_get(rb, "rule");
       let size2 = list_size(start);
       let r = range(size2);
@@ -238,10 +238,10 @@ export async function app_replace_rule_set(context) {
       let arrow2 = property_get(rb, "arrow");
       html_style_font_color_set_if(enabled, arrow2, "black", "#6a6a6a");
       object_merge(rb, {
-        refresh_rb,
+        refresh_rb: rbs_each,
       });
     }
-    each_index(rbs, refresh_rb);
+    each_index(rbs, rbs_each);
     html_clear(div_refresh);
     let div_symbols = html_div(div_refresh);
     function symbols_mapper(symbol, index) {
