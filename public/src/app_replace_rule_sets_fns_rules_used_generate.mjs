@@ -47,6 +47,6 @@ export async function app_replace_rule_sets_fns_rules_used_generate() {
     await app_replace_rule_sets_fns_transform_lambda_curried_right(lambda);
   let names = app_replace_rule_sets_fns_names();
   let asts = await functions_asts_list(names);
-  async function lambda3(item2) {}
-  let waited = await list_map_unordered_async(list, lambda3);
+  async function lambda3(ast) {}
+  let waited = await list_map_unordered_async(asts, lambda3);
 }
