@@ -7,7 +7,7 @@ import { js_property_value_change } from "../../../love/public/src/js_property_v
 import { js_literal_map_curried_right } from "../../../love/public/src/js_literal_map_curried_right.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 export async function app_replace_rule_sets_fns_migrate_capitalization_upper() {
-  let result = await app_replace_rule_sets_fns_transform(lambda3);
+  let result = await app_replace_rule_sets_fns_transform(on_result);
   return result;
   function on_result(name) {
     function lambda2(t) {
