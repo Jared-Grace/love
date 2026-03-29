@@ -185,7 +185,7 @@ export async function app_replace_rule_set(context) {
   async function refresh() {
     html_clear(div_rules_buttons);
     let t = app_replace_rule_set_verify_from_try(rules_parsed, start, end);
-    let r32 = lambda_timeout(fn, ms);
+    let r32 = await lambda_timeout(() => {}, ms);
     let found = property_get(t, "found");
     if (not(found)) {
       html_style_background_color_set(start_over, highlight);
