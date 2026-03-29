@@ -77,6 +77,250 @@ export function app_replace_rule_set_expressions_member_and_access() {
       },
     ],
     why: "The replacement rules define a grammar for parsing member access and property access expressions (like obj.prop, obj['key'], or nested forms) in a programming language, demonstrating how identifiers, literals, and expressions can be composed to form complex member access chains.",
+    rules_used: [
+      [
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["id"],
+        },
+        {
+          left: ["id"],
+          right: ["y"],
+        },
+        {
+          left: ["id"],
+          right: ["x"],
+        },
+        {
+          left: ["mae"],
+          right: ["mle"],
+        },
+        {
+          left: ["mle"],
+          right: ["mae", ".", "id"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["(", "ex", ")"],
+        },
+        {
+          left: ["mle"],
+          right: ["mae", ".", "id"],
+        },
+        {
+          left: ["id"],
+          right: ["p", "r", "o", "p"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["mae"],
+          right: ["mle"],
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["id"],
+        },
+        {
+          left: ["mle"],
+          right: ["mae", ".", "id"],
+        },
+        {
+          left: ["ex"],
+          right: ["mae"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["mae"],
+          right: ["mle"],
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["l", "a", "s", "t"],
+        },
+        {
+          left: ["id"],
+          right: ["n", "a", "m", "e"],
+        },
+        {
+          left: ["id"],
+          right: ["h", "u", "m", "a", "n"],
+        },
+      ],
+      [
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["mle"],
+          right: ["mae", ".", "id"],
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+        },
+        {
+          left: ["mae"],
+          right: ["mle"],
+        },
+      ],
+      [
+        {
+          left: ["id"],
+          right: ["y", "e", "a", "r"],
+        },
+        {
+          left: ["id"],
+          right: ["h", "u", "m", "a", "n"],
+        },
+        {
+          left: ["id"],
+          right: ["b", "i", "r", "t", "h", "d", "a", "t", "e"],
+        },
+      ],
+      [
+        {
+          left: ["mae"],
+          right: ["mle"],
+        },
+        {
+          left: ["mle"],
+          right: ["mae", "[", "ex", "]"],
+        },
+        {
+          left: ["ex"],
+          right: ["mae"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["pe"],
+          right: ["id"],
+        },
+      ],
+      [
+        {
+          left: ["st"],
+          right: ['"', "l", "u", "v", '"'],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+        {
+          left: ["li"],
+          right: ["st"],
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["mae"],
+        },
+        {
+          left: ["mae"],
+          right: ["mle"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["mle"],
+          right: ["mae", "[", "ex", "]"],
+        },
+      ],
+      [
+        {
+          left: ["in"],
+          right: ["1"],
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+      ],
+      [
+        {
+          left: ["mle"],
+          right: ["mae", "[", "ex", "]"],
+        },
+        {
+          left: ["mae"],
+          right: ["pe"],
+        },
+        {
+          left: ["ex"],
+          right: ["mae"],
+        },
+        {
+          left: ["mae"],
+          right: ["mle"],
+        },
+      ],
+      [
+        {
+          left: ["pe"],
+          right: ["li"],
+        },
+        {
+          left: ["in"],
+          right: ["2"],
+        },
+        {
+          left: ["nu"],
+          right: ["in"],
+        },
+        {
+          left: ["li"],
+          right: ["nu"],
+        },
+      ],
+    ],
   };
   return r;
 }

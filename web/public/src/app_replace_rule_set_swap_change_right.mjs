@@ -25,6 +25,38 @@ export function app_replace_rule_set_swap_change_right() {
       },
     ],
     why: "The rules demonstrate a grammar where every occurrence of the sequence 'a','b' is replaced by 'b','c', showing a systematic transformation of 'a','b' pairs into 'b','c' throughout a string.",
+    rules_used: [
+      [
+        {
+          left: ["a", "b"],
+          right: ["b", "c"],
+        },
+      ],
+      [
+        {
+          left: ["a", "b"],
+          right: ["b", "c"],
+        },
+      ],
+      [
+        {
+          left: ["a", "b"],
+          right: ["b", "c"],
+        },
+      ],
+      [
+        {
+          left: ["a", "b"],
+          right: ["b", "c"],
+        },
+      ],
+      [
+        {
+          left: ["a", "b"],
+          right: ["b", "c"],
+        },
+      ],
+    ],
   };
   return r;
 }

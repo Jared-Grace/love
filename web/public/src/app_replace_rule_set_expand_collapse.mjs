@@ -29,6 +29,68 @@ export function app_replace_rule_set_expand_collapse() {
       },
     ],
     why: "The rules demonstrate a grammar where 'a' expands to two 'b's, and any pair of 'b's collapses into a 'c', modeling a process of binary expansion and reduction; this is evident from the way the goals transform sequences of 'a's and 'b's into sequences with 'c's via these rules.",
+    rules_used: [
+      [
+        {
+          left: ["a"],
+          right: ["b", "b"],
+        },
+        {
+          left: ["b", "b"],
+          right: ["c"],
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b", "b"],
+        },
+        {
+          left: ["b", "b"],
+          right: ["c"],
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b", "b"],
+        },
+        {
+          left: ["b", "b"],
+          right: ["c"],
+        },
+      ],
+      [
+        {
+          left: ["b", "b"],
+          right: ["c"],
+        },
+        {
+          left: ["a"],
+          right: ["b", "b"],
+        },
+      ],
+      [
+        {
+          left: ["b", "b"],
+          right: ["c"],
+        },
+        {
+          left: ["a"],
+          right: ["b", "b"],
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b", "b"],
+        },
+        {
+          left: ["b", "b"],
+          right: ["c"],
+        },
+      ],
+    ],
   };
   return r;
 }

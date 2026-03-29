@@ -38,6 +38,148 @@ export function app_replace_rule_set_statements_for() {
       },
     ],
     why: "The replacement rules describe the grammar for JavaScript-like for-loops and related statements, demonstrating how variable declarations, expressions, and block statements are structured within for-loops and other control flow constructs, as shown by the rules for variable declarations, expressions, and the composition of statements inside blocks.",
+    rules_used: [
+      [
+        {
+          left: ["ex"],
+          right: ["i", "=", "i", "+", "1"],
+        },
+        {
+          left: ["ex"],
+          right: ["i", "<", "12"],
+        },
+        {
+          left: ["fs"],
+          right: ["for", "(", "ex", ";", "ex", ";", "ex", ")", "sm"],
+        },
+        {
+          left: ["ex"],
+          right: ["i", "=", "0"],
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: [
+            "l",
+            "o",
+            "g",
+            "(",
+            "a",
+            "p",
+            "o",
+            "s",
+            "t",
+            "l",
+            "e",
+            "[",
+            "i",
+            "]",
+            ")",
+          ],
+        },
+        {
+          left: ["ex"],
+          right: [
+            "i",
+            "<",
+            "l",
+            "i",
+            "s",
+            "t",
+            ".",
+            "l",
+            "e",
+            "n",
+            "g",
+            "t",
+            "h",
+          ],
+        },
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: ["i", "=", "0"],
+        },
+        {
+          left: ["fs"],
+          right: ["for", "(", "ex", ";", "ex", ";", "ex", ")", "sm"],
+        },
+        {
+          left: ["ex"],
+          right: [
+            "i",
+            "<",
+            "l",
+            "i",
+            "s",
+            "t",
+            ".",
+            "l",
+            "e",
+            "n",
+            "g",
+            "t",
+            "h",
+          ],
+        },
+        {
+          left: ["ex"],
+          right: ["i", "=", "i", "+", "1"],
+        },
+      ],
+      [
+        {
+          left: ["ex"],
+          right: [
+            "c",
+            "o",
+            "p",
+            "y",
+            "[",
+            "i",
+            "]",
+            "=",
+            "l",
+            "i",
+            "s",
+            "t",
+            "[",
+            "i",
+            "]",
+          ],
+        },
+        {
+          left: ["bs"],
+          right: ["{", "smg", "}"],
+        },
+        {
+          left: ["sm"],
+          right: ["bs"],
+        },
+        {
+          left: ["smg"],
+          right: ["sm"],
+        },
+        {
+          left: ["smg"],
+          right: ["smg", "sm"],
+        },
+        {
+          left: ["sm"],
+          right: ["ex", ";"],
+        },
+        {
+          left: ["ex"],
+          right: ["l", "o", "g", "(", "i", ")"],
+        },
+      ],
+    ],
   };
   return r;
 }

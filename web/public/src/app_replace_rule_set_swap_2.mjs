@@ -17,6 +17,38 @@ export function app_replace_rule_set_swap_2() {
       },
     ],
     why: "The replacement rules demonstrate a grammar for swapping the first 'a' in a sequence with the next 'b' or 'c' to its right, effectively moving 'a' rightward past 'b' or 'c' one step at a time.",
+    rules_used: [
+      [
+        {
+          left: ["a", "c"],
+          right: ["c", "a"],
+        },
+        {
+          left: ["a", "b"],
+          right: ["b", "a"],
+        },
+      ],
+      [
+        {
+          left: ["a", "c"],
+          right: ["c", "a"],
+        },
+        {
+          left: ["a", "b"],
+          right: ["b", "a"],
+        },
+      ],
+      [
+        {
+          left: ["a", "c"],
+          right: ["c", "a"],
+        },
+        {
+          left: ["a", "b"],
+          right: ["b", "a"],
+        },
+      ],
+    ],
   };
   return r;
 }

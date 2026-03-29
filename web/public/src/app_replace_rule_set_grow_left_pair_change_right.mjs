@@ -29,6 +29,68 @@ export function app_replace_rule_set_grow_left_pair_change_right() {
       },
     ],
     why: "These rules demonstrate a grammar where 'a' grows into 'b a' (expanding leftwards), and any adjacent 'b b' pair changes to 'b c', showing leftward growth and selective transformation of repeated symbols.",
+    rules_used: [
+      [
+        {
+          left: ["a"],
+          right: ["b", "a"],
+        },
+        {
+          left: ["b", "b"],
+          right: ["b", "c"],
+        },
+      ],
+      [
+        {
+          left: ["b", "b"],
+          right: ["b", "c"],
+        },
+        {
+          left: ["a"],
+          right: ["b", "a"],
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b", "a"],
+        },
+        {
+          left: ["b", "b"],
+          right: ["b", "c"],
+        },
+      ],
+      [
+        {
+          left: ["b", "b"],
+          right: ["b", "c"],
+        },
+        {
+          left: ["a"],
+          right: ["b", "a"],
+        },
+      ],
+      [
+        {
+          left: ["a"],
+          right: ["b", "a"],
+        },
+        {
+          left: ["b", "b"],
+          right: ["b", "c"],
+        },
+      ],
+      [
+        {
+          left: ["b", "b"],
+          right: ["b", "c"],
+        },
+        {
+          left: ["a"],
+          right: ["b", "a"],
+        },
+      ],
+    ],
   };
   return r;
 }

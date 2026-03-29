@@ -43,6 +43,132 @@ export function app_replace_rule_set_unary_to_binary_equations_preparation() {
       },
     ],
     why: "The replacement rules demonstrate a process for transforming unary equations into a binary-like form by systematically introducing new symbols and rearranging terms, simulating the conversion of unary representations to binary equations through stepwise symbol manipulation.",
+    rules_used: [
+      [
+        {
+          left: ["d"],
+          right: ["d", "d"],
+        },
+        {
+          left: ["d", "d"],
+          right: ["d", "e", "d"],
+        },
+        {
+          left: ["e", "d"],
+          right: ["e", "="],
+        },
+      ],
+      [
+        {
+          left: ["d", "d"],
+          right: ["d", "e", "d"],
+        },
+        {
+          left: ["d"],
+          right: ["d", "d"],
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+        },
+      ],
+      [
+        {
+          left: ["d", "d"],
+          right: ["d", "e", "d"],
+        },
+        {
+          left: ["d"],
+          right: ["d", "d"],
+        },
+        {
+          left: ["e", "d"],
+          right: ["e", "="],
+        },
+      ],
+      [
+        {
+          left: ["d"],
+          right: ["d", "d"],
+        },
+        {
+          left: ["d", "d"],
+          right: ["d", "e", "d"],
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+        },
+      ],
+      [
+        {
+          left: ["d"],
+          right: ["d", "d"],
+        },
+        {
+          left: ["=", "d"],
+          right: ["d", "f", "="],
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+        },
+      ],
+      [
+        {
+          left: ["d"],
+          right: ["d", "d"],
+        },
+        {
+          left: ["=", "d"],
+          right: ["d", "f", "="],
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+        },
+      ],
+      [
+        {
+          left: ["d", "d"],
+          right: ["d", "e", "d"],
+        },
+        {
+          left: ["d"],
+          right: ["d", "d"],
+        },
+        {
+          left: ["=", "d"],
+          right: ["d", "f", "="],
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+        },
+      ],
+      [
+        {
+          left: ["e", "d"],
+          right: ["e", "="],
+        },
+        {
+          left: ["d", "d"],
+          right: ["d", "e", "d"],
+        },
+        {
+          left: ["d"],
+          right: ["d", "d"],
+        },
+        {
+          left: ["=", "d"],
+          right: ["d", "f", "="],
+        },
+        {
+          left: ["d", "e", "="],
+          right: ["=", "d"],
+        },
+      ],
+    ],
   };
   return r;
 }
