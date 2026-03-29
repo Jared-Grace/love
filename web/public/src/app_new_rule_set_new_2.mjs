@@ -111,7 +111,7 @@ export function app_new_rule_set_new_2() {
       {
         start:
           js_keyword_function() +
-          " id ( id ) { let id = ex , id ; sm return ex ; }",
+          " id ( id ) { let vdg , vd ; sm return ex ; }",
         end:
           js_keyword_function() +
           " id ( id ) { let id = ex , id ; sm return ex ; }",
