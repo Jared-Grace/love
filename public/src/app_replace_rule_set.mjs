@@ -178,7 +178,7 @@ export async function app_replace_rule_set(context) {
     if (not(found)) {
       html_style_background_color_set(start_over, "red");
       html_font_color_set(start_over, "white");
-      await html_scroll_center(c2);
+      await html_scroll_center(start_over);
     }
     refresh_count_increase();
     function each_rule(rule, index) {
