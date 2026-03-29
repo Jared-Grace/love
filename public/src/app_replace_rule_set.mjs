@@ -186,6 +186,7 @@ export async function app_replace_rule_set(context) {
     html_clear(div_rules_buttons);
     function lambda() {
       let t = app_replace_rule_set_verify_from_try(rules_parsed, start, end);
+      $r,t
     }
     let r32 = await lambda_timeout(lambda, ms);
     let found = property_get(t, "found");
