@@ -1,3 +1,4 @@
+import { app_replace_rule_sets_fns_rules_used } from "../../../love/public/src/app_replace_rule_sets_fns_rules_used.mjs";
 import { list_index_of_json } from "../../../love/public/src/list_index_of_json.mjs";
 import { html_scroll_center } from "../../../love/public/src/html_scroll_center.mjs";
 import { html_font_color_set } from "../../../love/public/src/html_font_color_set.mjs";
@@ -145,6 +146,7 @@ export async function app_replace_rule_set(context) {
   let rbs = null;
   const duration = app_replace_animation_duration_get(context);
   let refresh_count = 0;
+  let r5 = app_replace_rule_sets_fns_rules_used();
   let rules_used_all = property_get(rs, "rules_used");
   rules_used = list_get(rules_used_all, goal_index);
   let exists2 = property_exists(rs, "abbreviations");
