@@ -6206,7 +6206,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["a", "l", "l"],
-          original: "id > a l l",
+          original: "id > all",
         },
         {
           left: ["ce"],
