@@ -1418,7 +1418,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["ex"],
           right: ["!", "f", "o", "u", "n", "d", "(", "d", "o", "o", "r", ")"],
-          original: "ex > ! f o u n d ( d o o r )",
+          original: "ex > ! f o u n d ( door )",
         },
         {
           left: ["bs"],
@@ -6076,7 +6076,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["d", "o", "o", "r"],
-          original: "id > d o o r",
+          original: "id > door",
         },
         {
           left: ["id"],
@@ -6281,7 +6281,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["d", "o", "o", "r"],
-          original: "id > d o o r",
+          original: "id > door",
         },
         {
           left: ["li"],
@@ -7396,7 +7396,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["d", "o", "o", "r"],
-          original: "id > d o o r",
+          original: "id > door",
         },
         {
           left: ["ao"],
