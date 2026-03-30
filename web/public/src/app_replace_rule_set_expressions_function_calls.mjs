@@ -62,7 +62,7 @@ export function app_replace_rule_set_expressions_function_calls() {
       },
       {
         start: "id ( id . id )",
-        end: "knock ( building . d o o r )",
+        end: "knock ( building . door )",
       },
       {
         start: "id ( ex )",
