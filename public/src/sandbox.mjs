@@ -18,7 +18,8 @@ export async function sandbox() {
     let to = "";
     let replaced = text_replace(s, from, to);
     log(sandbox.name, {
-      item: from,
+      from,
+      replaced,
     });
     return;
     await function_source_replace(f_name, from, to);
