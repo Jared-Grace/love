@@ -11,7 +11,7 @@ export async function sandbox() {
     "id > a v e r a g e",
     "id > s u m",
   ];
-  let mapped = list_map_prefix_without(list2, prefix2);
+  let mapped = list_map_prefix_without(list, prefix);
   async function lambda(item) {
     await function_source_replace(f_name, from, to);
   }
