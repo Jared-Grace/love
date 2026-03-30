@@ -7,10 +7,7 @@ export async function sandbox() {
   let f_name = app_replace_rule_set_statements_for.name;
   let prefix = "ex > ";
   let list = [
-    "ex > c o p y",
-    "ex > a p o s t l e",
-    "ex > l o g",
-    "ex > l e n g t h",
+    "ex > l i s t",
   ];
   let mapped = list_map_prefix_without(list, prefix);
   async function lambda(from) {
