@@ -1851,7 +1851,7 @@ export function app_replace_rule_sets_fns_rules_used() {
             "t",
             "h",
           ],
-          original: "ex > i < l i s t . l e n g t h",
+          original: "ex > i < list . l e n g t h",
         },
       ],
       [
@@ -1894,7 +1894,7 @@ export function app_replace_rule_sets_fns_rules_used() {
             "i",
             "]",
           ],
-          original: "ex > c o p y [ i ] = l i s t [ i ]",
+          original: "ex > c o p y [ i ] = list [ i ]",
         },
         {
           left: ["smg"],
@@ -6162,7 +6162,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["l", "i", "s", "t"],
-          original: "id > l i s t",
+          original: "id > list",
         },
         {
           left: ["in"],
@@ -6966,7 +6966,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["l", "i", "s", "t"],
-          original: "id > l i s t",
+          original: "id > list",
         },
       ],
       [
