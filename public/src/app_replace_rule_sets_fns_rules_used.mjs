@@ -6152,7 +6152,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["d", "o", "u", "b", "l", "e"],
-          original: "id > d o u b l e",
+          original: "id > double",
         },
         {
           left: ["nu"],
@@ -7591,7 +7591,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["d", "o", "u", "b", "l", "e"],
-          original: "id > d o u b l e",
+          original: "id > double",
         },
         {
           left: ["in"],
