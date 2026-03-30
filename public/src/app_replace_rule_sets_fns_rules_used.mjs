@@ -6201,7 +6201,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["l", "o", "v", "e"],
-          original: "id > l o v e",
+          original: "id > love",
         },
         {
           left: ["id"],
