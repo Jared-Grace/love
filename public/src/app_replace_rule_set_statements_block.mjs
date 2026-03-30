@@ -22,11 +22,11 @@ export function app_replace_rule_set_statements_block() {
       },
       {
         start: "bs",
-        end: "{ u p d a t e ( ) ; }",
+        end: "{ update ( ) ; }",
       },
       {
         start: "bs",
-        end: "{ u p d a t e ( ) ; return true ; }",
+        end: "{ update ( ) ; return true ; }",
       },
     ],
     why: "The replacement rules define a grammar for a block of statements in a programming language, supporting empty blocks, sequences of statements, return statements, and simple expressions like 'true' and 'update()', demonstrating how statements and blocks can be recursively composed.",
