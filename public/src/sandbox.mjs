@@ -16,7 +16,8 @@ export async function sandbox() {
   let mapped = list_map_prefix_without(list, prefix);
   async function lambda(from) {
     let empty = "";
-    let replaced = text_replace(s, from, empty);
+    const removal = " ";
+    let replaced = text_replace(from, removal, empty);
     log(sandbox.name, {
       from,
       replaced,
