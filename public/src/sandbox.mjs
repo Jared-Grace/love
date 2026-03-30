@@ -18,6 +18,6 @@ export async function sandbox() {
     }
     await each_async(mapped, lambda);
   }
-  let r = await functions_names_paths();
+  let r = await functions_names_paths();ea
   await functions_paths(lambda2);
 }
