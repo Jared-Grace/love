@@ -13,12 +13,12 @@ export function app_replace_rule_set_function_declarations() {
     "fdm > fpg )",
     "fpg > fpg , id",
     "fpg > id",
-    "id > e m p t y",
-    "id > t a u t o l o g y",
-    "id > i d e n t i t y",
-    "id > i n v o k e",
-    "id > a v e r a g e",
-    "id > s u m",
+    "id > empty",
+    "id > tautology",
+    "id > identity",
+    "id > invoke",
+    "id > average",
+    "id > sum",
     "id > add",
     "id > i",
     "id > f",
@@ -30,7 +30,7 @@ export function app_replace_rule_set_function_declarations() {
     "ex > x",
     "ex > y",
     "ex > f ( )",
-    "ex > s u m / 2",
+    "ex > sum / 2",
     "ex > add ( x , y )",
   ]);
   let abbreviations = {};
@@ -48,11 +48,11 @@ export function app_replace_rule_set_function_declarations() {
     goals: [
       {
         start: "fd",
-        end: js_keyword_function() + " e m p t y ( ) { }",
+        end: js_keyword_function() + " empty ( ) { }",
       },
       {
         start: "fd",
-        end: js_keyword_function() + " t a u t o l o g y ( ) { return true ; }",
+        end: js_keyword_function() + " tautology ( ) { return true ; }",
       },
       {
         start: "fd",
@@ -60,11 +60,11 @@ export function app_replace_rule_set_function_declarations() {
       },
       {
         start: js_keyword_function() + " id ( id ) { return ex ; }",
-        end: js_keyword_function() + " i d e n t i t y ( i ) { return i ; }",
+        end: js_keyword_function() + " identity ( i ) { return i ; }",
       },
       {
         start: js_keyword_function() + " id ( id ) { return ex ; }",
-        end: js_keyword_function() + " i n v o k e ( f ) { return f ( ) ; }",
+        end: js_keyword_function() + " invoke ( f ) { return f ( ) ; }",
       },
       {
         start: "fd",
@@ -92,7 +92,7 @@ export function app_replace_rule_set_function_declarations() {
           js_keyword_function() + " id ( x , y ) { let id = ex ; return ex ; }",
         end:
           js_keyword_function() +
-          " a v e r a g e ( x , y ) { let s u m = add ( x , y ) ; return s u m / 2 ; }",
+          " average ( x , y ) { let sum = add ( x , y ) ; return sum / 2 ; }",
       },
     ],
     why: "The replacement rules define a context-free grammar for JavaScript-like function declarations, including variable declarations, statements, blocks, control flow, and expressions, demonstrating how to construct valid function definitions and bodies from basic language constructs.",
