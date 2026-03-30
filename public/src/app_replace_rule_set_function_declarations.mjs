@@ -17,7 +17,7 @@ export function app_replace_rule_set_function_declarations() {
     "id > t a u t o l o g y",
     "id > i d e n t i t y",
     "id > i n v o k e",
-    "id > a d d",
+    "id > add",
     "id > a v e r a g e",
     "id > i",
     "id > f",
@@ -31,7 +31,7 @@ export function app_replace_rule_set_function_declarations() {
     "ex > y",
     "ex > f ( )",
     "ex > s u m / 2",
-    "ex > a d d ( x , y )",
+    "ex > add ( x , y )",
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_for_abbreviations(abbreviations);
@@ -76,7 +76,7 @@ export function app_replace_rule_set_function_declarations() {
       },
       {
         start: js_keyword_function() + " id ( x , y ) { smg }",
-        end: js_keyword_function() + " a d d ( x , y ) { return x + y ; }",
+        end: js_keyword_function() + " add ( x , y ) { return x + y ; }",
       },
       {
         start: js_keyword_function() + " id ( x , y ) { smg }",
@@ -92,7 +92,7 @@ export function app_replace_rule_set_function_declarations() {
           js_keyword_function() + " id ( x , y ) { let id = ex ; return ex ; }",
         end:
           js_keyword_function() +
-          " a v e r a g e ( x , y ) { let s u m = a d d ( x , y ) ; return s u m / 2 ; }",
+          " a v e r a g e ( x , y ) { let s u m = add ( x , y ) ; return s u m / 2 ; }",
       },
     ],
     why: "The replacement rules define a context-free grammar for JavaScript-like function declarations, including variable declarations, statements, blocks, control flow, and expressions, demonstrating how to construct valid function definitions and bodies from basic language constructs.",
