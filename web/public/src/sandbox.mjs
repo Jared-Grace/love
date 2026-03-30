@@ -1,3 +1,4 @@
+import { functions_names_each } from "../../../love/public/src/functions_names_each.mjs";
 import { app_replace_rule_set_statements_if } from "../../../love/public/src/app_replace_rule_set_statements_if.mjs";
 import { text_remove } from "../../../love/public/src/text_remove.mjs";
 import { list_map_prefix_without } from "../../../love/public/src/list_map_prefix_without.mjs";
@@ -14,4 +15,6 @@ export async function sandbox() {
     await function_source_replace(f_name, from, replaced);
   }
   await each_async(mapped, lambda);
+  async function lambda2(f_name2) {}
+  await functions_names_each(lambda2);
 }
