@@ -8,10 +8,10 @@ export function app_replace_rule_set_statements_for() {
     "ex > i = 0",
     "ex > i < 12",
     "ex > i = i + 1",
-    "ex > c o p y [ i ] = list [ i ]",
-    "ex > l o g ( a p o s t l e [ i ] )",
-    "ex > l o g ( i )",
-    "ex > i < list . l e n g t h",
+    "ex > copy [ i ] = list [ i ]",
+    "ex > log ( apostle [ i ] )",
+    "ex > log ( i )",
+    "ex > i < list . length",
   ]);
   let abbreviations = {};
   app_replace_rule_set_statements_for_abbreviations(abbreviations);
@@ -26,15 +26,15 @@ export function app_replace_rule_set_statements_for() {
       },
       {
         start: "for ( i = 0 ; i < 12 ; i = i + 1 ) sm",
-        end: "for ( i = 0 ; i < 12 ; i = i + 1 ) l o g ( a p o s t l e [ i ] ) ;",
+        end: "for ( i = 0 ; i < 12 ; i = i + 1 ) log ( apostle [ i ] ) ;",
       },
       {
         start: "fs",
-        end: "for ( i = 0 ; i < list . l e n g t h ; i = i + 1 ) sm",
+        end: "for ( i = 0 ; i < list . length ; i = i + 1 ) sm",
       },
       {
-        start: "for ( i = 0 ; i < list . l e n g t h ; i = i + 1 ) sm",
-        end: "for ( i = 0 ; i < l i s t . l e n g t h ; i = i + 1 ) { c o p y [ i ] = l i s t [ i ] ; l o g ( i ) ; }",
+        start: "for ( i = 0 ; i < list . length ; i = i + 1 ) sm",
+        end: "for ( i = 0 ; i < l i s t . length ; i = i + 1 ) { copy [ i ] = l i s t [ i ] ; log ( i ) ; }",
       },
     ],
     why: "The replacement rules describe the grammar for JavaScript-like for-loops and related statements, demonstrating how variable declarations, expressions, and block statements are structured within for-loops and other control flow constructs, as shown by the rules for variable declarations, expressions, and the composition of statements inside blocks.",
