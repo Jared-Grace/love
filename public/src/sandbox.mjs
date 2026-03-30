@@ -21,7 +21,6 @@ export async function sandbox() {
       from,
       replaced,
     });
-    return;
     await function_source_replace(f_name, from, replaced);
   }
   await each_async(mapped, lambda);
