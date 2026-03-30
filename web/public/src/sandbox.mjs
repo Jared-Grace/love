@@ -1,3 +1,4 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { list_map_prefix_without } from "../../../love/public/src/list_map_prefix_without.mjs";
 import { function_source_replace } from "../../../love/public/src/function_source_replace.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
@@ -13,7 +14,11 @@ export async function sandbox() {
   ];
   let mapped = list_map_prefix_without(list, prefix);
   async function lambda(item) {
+    log(sandbox.name, {
+      item,
+    });
+    return;
     await function_source_replace(f_name, from, to);
   }
-  await each_async(list, lambda);
+  await each_async(mapped, lambda);
 }
