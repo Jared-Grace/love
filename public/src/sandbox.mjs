@@ -1,4 +1,4 @@
-import { tasks_run } from "../../../love/public/src/tasks_run.mjs";
+import { text_replace } from "../../../love/public/src/text_replace.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_map_prefix_without } from "../../../love/public/src/list_map_prefix_without.mjs";
 import { function_source_replace } from "../../../love/public/src/function_source_replace.mjs";
@@ -15,7 +15,7 @@ export async function sandbox() {
   ];
   let mapped = list_map_prefix_without(list, prefix);
   async function lambda(from) {
-    let result = await tasks_run();
+    let replaced = text_replace(s, from2, to2);
     log(sandbox.name, {
       item: from,
     });
