@@ -1,3 +1,4 @@
+import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function sandbox() {
   let list = [
     "id > e m p t y",
@@ -7,4 +8,6 @@ export async function sandbox() {
     "id > a v e r a g e",
     "id > s u m",
   ];
+  async function lambda(item) {}
+  await each_async(list2, lambda);
 }
