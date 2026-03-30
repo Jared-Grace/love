@@ -17,7 +17,7 @@ export function app_replace_rule_set_expressions_function_calls_rules(rules) {
     "id > building",
     "id > door",
     "id > all",
-    "id > l o v e",
+    "id > love",
     "id > l i s t",
     "id > d o u b l e",
     "in > 0",
