@@ -15,14 +15,14 @@ export async function sandbox() {
   ];
   let mapped = list_map_prefix_without(list, prefix);
   async function lambda(from) {
-    let to = "";
-    let replaced = text_replace(s, from, to);
+    let empty = "";
+    let replaced = text_replace(s, from, empty);
     log(sandbox.name, {
       from,
       replaced,
     });
     return;
-    await function_source_replace(f_name, from, to);
+    await function_source_replace(f_name, from, empty);
   }
   await each_async(mapped, lambda);
 }
