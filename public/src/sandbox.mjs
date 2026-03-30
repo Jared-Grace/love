@@ -6,7 +6,7 @@ import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function sandbox() {
   let f_name = app_replace_rule_set_statements_if.name;
   let prefix = "";
-  let list = ['" r e s e t "'];
+  let list = ['" l u v "'];
   let mapped = list_map_prefix_without(list, prefix);
   async function lambda(from) {
     const removal = " ";
