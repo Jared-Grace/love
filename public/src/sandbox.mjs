@@ -5,14 +5,12 @@ import { function_source_replace } from "../../../love/public/src/function_sourc
 import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function sandbox() {
   let f_name = app_replace_rule_set_statements_for.name;
-  let prefix = "id > ";
+  let prefix = "ex > ";
   let list = [
-    "id > e m p t y",
-    "id > t a u t o l o g y",
-    "id > i d e n t i t y",
-    "id > i n v o k e",
-    "id > a v e r a g e",
-    "id > s u m",
+    "ex > c o p y",
+    "ex > a p o s t l e",
+    "ex > l o g",
+    "ex > l e n g t h",
   ];
   let mapped = list_map_prefix_without(list, prefix);
   async function lambda(from) {
