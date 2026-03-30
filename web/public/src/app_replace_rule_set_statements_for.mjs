@@ -34,7 +34,7 @@ export function app_replace_rule_set_statements_for() {
       },
       {
         start: "for ( i = 0 ; i < list . length ; i = i + 1 ) sm",
-        end: "for ( i = 0 ; i < l i s t . length ; i = i + 1 ) { copy [ i ] = l i s t [ i ] ; log ( i ) ; }",
+        end: "for ( i = 0 ; i < list . length ; i = i + 1 ) { copy [ i ] = list [ i ] ; log ( i ) ; }",
       },
     ],
     why: "The replacement rules describe the grammar for JavaScript-like for-loops and related statements, demonstrating how variable declarations, expressions, and block statements are structured within for-loops and other control flow constructs, as shown by the rules for variable declarations, expressions, and the composition of statements inside blocks.",
