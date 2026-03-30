@@ -1,6 +1,5 @@
 import { functions_paths } from "../../../love/public/src/functions_paths.mjs";
 import { file_transform_replace } from "../../../love/public/src/file_transform_replace.mjs";
-import { functions_names_paths } from "../../../love/public/src/functions_names_paths.mjs";
 import { app_replace_rule_set_statements_if } from "../../../love/public/src/app_replace_rule_set_statements_if.mjs";
 import { text_remove } from "../../../love/public/src/text_remove.mjs";
 import { list_map_prefix_without } from "../../../love/public/src/list_map_prefix_without.mjs";
@@ -18,6 +17,6 @@ export async function sandbox() {
     }
     await each_async(mapped, lambda);
   }
-  let r = await functions_names_paths();ea
-  await functions_paths(lambda2);
+  let r = await functions_paths();
+  await each_async(r, lambda2);
 }
