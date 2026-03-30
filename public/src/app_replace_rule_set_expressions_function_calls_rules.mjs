@@ -11,7 +11,7 @@ export function app_replace_rule_set_expressions_function_calls_rules(rules) {
     "id > f n",
     "id > update",
     "id > page",
-    "id > r e f r e s h",
+    "id > refresh",
     "id > a d d",
     "id > k n o c k",
     "id > b u i l d i n g",

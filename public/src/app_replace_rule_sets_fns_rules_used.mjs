@@ -5868,7 +5868,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["r", "e", "f", "r", "e", "s", "h"],
-          original: "id > r e f r e s h",
+          original: "id > refresh",
         },
         {
           left: ["id"],
