@@ -36,8 +36,7 @@ export function app_replace_rule_set_statements_while() {
       {
         start: js_keyword_while() + " ( ! found ( door ) ) { sm sm }",
         end:
-          js_keyword_while() +
-          " ( ! found ( door ) ) { ask ( ) ; seek ( ) ; }",
+          js_keyword_while() + " ( ! found ( door ) ) { ask ( ) ; seek ( ) ; }",
       },
     ],
     why: "The replacement rules define a grammar for JavaScript-like while statements, including variable declarations, expressions, blocks, and if-else statements, demonstrating how complex control flow and statement grouping are constructed from simpler syntactic elements.",
