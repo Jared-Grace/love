@@ -8,7 +8,7 @@ export function app_replace_rule_set_expressions_function_calls_rules(rules) {
     "ce > ce ( ag )",
     "ag > ex , ag",
     "ag > ex",
-    "id > f n",
+    "id > fn",
     "id > update",
     "id > page",
     "id > refresh",

@@ -3502,7 +3502,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["f", "n"],
-          original: "id > f n",
+          original: "id > fn",
         },
         {
           left: ["pe"],
@@ -5824,7 +5824,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["f", "n"],
-          original: "id > f n",
+          original: "id > fn",
         },
         {
           left: ["ce"],

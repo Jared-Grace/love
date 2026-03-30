@@ -18,7 +18,7 @@ export function app_replace_rule_set_expressions_function_calls() {
       },
       {
         start: "ce",
-        end: "f n ( )",
+        end: "fn ( )",
       },
       {
         start: "ce",
