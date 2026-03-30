@@ -41,8 +41,7 @@ export function app_replace_rule_set_statements_if() {
       },
       {
         start: js_keyword_if() + " ( y > max ) { smg }",
-        end:
-          js_keyword_if() + ' ( y > max ) { y = 0 ; log ( "reset" ) ; }',
+        end: js_keyword_if() + ' ( y > max ) { y = 0 ; log ( "reset" ) ; }',
       },
       {
         start: "is",
