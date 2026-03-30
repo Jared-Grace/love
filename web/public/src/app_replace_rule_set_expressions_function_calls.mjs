@@ -82,7 +82,7 @@ export function app_replace_rule_set_expressions_function_calls() {
       },
       {
         start: "id ( id ( ) )",
-        end: "l o v e ( a l l ( ) )",
+        end: "l o v e ( all ( ) )",
       },
     ],
     why: "These replacement rules define a grammar for parsing function calls and member access expressions, including identifiers, literals, numbers, strings, booleans, and nested function calls, demonstrating how complex expressions and function invocations are constructed from simpler components.",
