@@ -13,7 +13,7 @@ export function app_replace_rule_set_statements_if() {
     "ex > positive = true",
     "ex > positive = false",
     "ex > y = 0",
-    'ex > log ( " r e s e t " )',
+    'ex > log ( "reset" )',
     "ex > y >> max",
   ]);
   let abbreviations = {};
@@ -42,7 +42,7 @@ export function app_replace_rule_set_statements_if() {
       {
         start: js_keyword_if() + " ( y > max ) { smg }",
         end:
-          js_keyword_if() + ' ( y > max ) { y = 0 ; log ( " r e s e t " ) ; }',
+          js_keyword_if() + ' ( y > max ) { y = 0 ; log ( "reset" ) ; }',
       },
       {
         start: "is",
