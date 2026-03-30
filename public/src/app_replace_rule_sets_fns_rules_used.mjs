@@ -4028,7 +4028,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["k", "n", "o", "c", "k"],
-          original: "id > k n o c k",
+          original: "id > knock",
         },
         {
           left: ["mue"],
@@ -6081,7 +6081,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["k", "n", "o", "c", "k"],
-          original: "id > k n o c k",
+          original: "id > knock",
         },
         {
           left: ["id"],
