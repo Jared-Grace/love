@@ -2758,7 +2758,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["de"],
           right: ["3", ".", "1", "4"],
-          original: "de > 3 . 1 4",
+          original: "de > 3.14",
         },
         {
           left: ["uo"],
@@ -3999,7 +3999,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["de"],
           right: ["3", ".", "1", "4"],
-          original: "de > 3 . 1 4",
+          original: "de > 3.14",
         },
       ],
       [
@@ -4106,7 +4106,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["de"],
           right: ["3", ".", "1", "4"],
-          original: "de > 3 . 1 4",
+          original: "de > 3.14",
         },
         {
           left: ["mo"],
@@ -4710,14 +4710,14 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["de"],
           right: ["3", ".", "1", "4"],
-          original: "de > 3 . 1 4",
+          original: "de > 3.14",
         },
       ],
       [
         {
           left: ["st"],
           right: ['"', "l", "u", "v", '"'],
-          original: 'st > " l u v "',
+          original: 'st > "luv"',
         },
         {
           left: ["li"],
@@ -5034,7 +5034,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["st"],
           right: ['"', "l", "u", "v", '"'],
-          original: 'st > " l u v "',
+          original: 'st > "luv"',
         },
         {
           left: ["li"],
@@ -5348,7 +5348,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["de"],
           right: ["3", ".", "1", "4"],
-          original: "de > 3 . 1 4",
+          original: "de > 3.14",
         },
         {
           left: ["ue"],
@@ -6388,7 +6388,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["de"],
           right: ["3", ".", "1", "4"],
-          original: "de > 3 . 1 4",
+          original: "de > 3.14",
         },
         {
           left: ["nu"],
@@ -6537,7 +6537,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["de"],
           right: ["3", ".", "1", "4"],
-          original: "de > 3 . 1 4",
+          original: "de > 3.14",
         },
       ],
     ],
@@ -7110,7 +7110,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["de"],
           right: ["3", ".", "1", "4"],
-          original: "de > 3 . 1 4",
+          original: "de > 3.14",
         },
         {
           left: ["nu"],
@@ -7247,7 +7247,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["de"],
           right: ["3", ".", "1", "4"],
-          original: "de > 3 . 1 4",
+          original: "de > 3.14",
         },
         {
           left: ["in"],
@@ -7428,7 +7428,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["de"],
           right: ["3", ".", "1", "4"],
-          original: "de > 3 . 1 4",
+          original: "de > 3.14",
         },
         {
           left: ["in"],
