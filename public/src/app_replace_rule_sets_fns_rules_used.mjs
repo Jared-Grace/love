@@ -1454,7 +1454,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["ex"],
           right: ["u", "p", "d", "a", "t", "e", "(", ")"],
-          original: "ex > u p d a t e ( )",
+          original: "ex > update ( )",
         },
         {
           left: ["sm"],
@@ -1476,7 +1476,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["ex"],
           right: ["u", "p", "d", "a", "t", "e", "(", ")"],
-          original: "ex > u p d a t e ( )",
+          original: "ex > update ( )",
         },
         {
           left: ["sm"],
@@ -1488,7 +1488,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["ex"],
           right: ["u", "p", "d", "a", "t", "e", "(", ")"],
-          original: "ex > u p d a t e ( )",
+          original: "ex > update ( )",
         },
         {
           left: ["sm"],
@@ -1534,7 +1534,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["ex"],
           right: ["u", "p", "d", "a", "t", "e", "(", ")"],
-          original: "ex > u p d a t e ( )",
+          original: "ex > update ( )",
         },
       ],
       [
@@ -1568,7 +1568,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["ex"],
           right: ["u", "p", "d", "a", "t", "e", "(", ")"],
-          original: "ex > u p d a t e ( )",
+          original: "ex > update ( )",
         },
         {
           left: ["bs"],
@@ -1595,7 +1595,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["ex"],
           right: ["u", "p", "d", "a", "t", "e", "(", ")"],
-          original: "ex > u p d a t e ( )",
+          original: "ex > update ( )",
         },
         {
           left: ["sm"],
@@ -5873,7 +5873,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["p", "a", "g", "e"],
-          original: "id > p a g e",
+          original: "id > page",
         },
         {
           left: ["ag"],
@@ -6803,7 +6803,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["u", "p", "d", "a", "t", "e"],
-          original: "id > u p d a t e",
+          original: "id > update",
         },
       ],
       [
@@ -7542,7 +7542,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["u", "p", "d", "a", "t", "e"],
-          original: "id > u p d a t e",
+          original: "id > update",
         },
         {
           left: ["pe"],

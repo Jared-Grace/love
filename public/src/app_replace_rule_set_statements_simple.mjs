@@ -25,7 +25,7 @@ export function app_replace_rule_set_statements_simple() {
       },
       {
         start: "sm",
-        end: "u p d a t e ( ) " + js_code_semicolon(),
+        end: "update ( ) " + js_code_semicolon(),
       },
       {
         start: "sm",
