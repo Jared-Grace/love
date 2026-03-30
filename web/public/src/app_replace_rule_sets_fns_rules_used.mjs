@@ -4289,7 +4289,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["a", "d", "d"],
-          original: "id > a d d",
+          original: "id > add",
         },
         {
           left: ["smg"],
@@ -4370,7 +4370,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["ex"],
           right: ["a", "d", "d", "(", "x", ",", "y", ")"],
-          original: "ex > a d d ( x , y )",
+          original: "ex > add ( x , y )",
         },
       ],
     ],
@@ -6037,7 +6037,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["a", "d", "d"],
-          original: "id > a d d",
+          original: "id > add",
         },
       ],
       [
@@ -6349,7 +6349,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["a", "d", "d"],
-          original: "id > a d d",
+          original: "id > add",
         },
         {
           left: ["pe"],
@@ -7154,7 +7154,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["a", "d", "d"],
-          original: "id > a d d",
+          original: "id > add",
         },
       ],
       [
