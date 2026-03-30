@@ -1,3 +1,4 @@
+import { list_map_prefix_without } from "../../../love/public/src/list_map_prefix_without.mjs";
 import { function_source_replace } from "../../../love/public/src/function_source_replace.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function sandbox() {
@@ -10,6 +11,7 @@ export async function sandbox() {
     "id > a v e r a g e",
     "id > s u m",
   ];
+  let mapped = list_map_prefix_without(list2, prefix2);
   async function lambda(item) {
     await function_source_replace(f_name, from, to);
   }
