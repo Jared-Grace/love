@@ -10,7 +10,7 @@ export function app_replace_rule_set_statements_while() {
     "ex > x < 3",
     "ex > x = x + 1",
     "ex > y = y - 1",
-    "ex > ! f o u n d ( d o o r )",
+    "ex > ! f o u n d ( door )",
     "ex > a s k ( )",
     "ex > s e e k ( )",
   ]);
@@ -31,13 +31,13 @@ export function app_replace_rule_set_statements_while() {
       },
       {
         start: "ws",
-        end: js_keyword_while() + " ( ! f o u n d ( d o o r ) ) { sm sm }",
+        end: js_keyword_while() + " ( ! f o u n d ( door ) ) { sm sm }",
       },
       {
-        start: js_keyword_while() + " ( ! f o u n d ( d o o r ) ) { sm sm }",
+        start: js_keyword_while() + " ( ! f o u n d ( door ) ) { sm sm }",
         end:
           js_keyword_while() +
-          " ( ! f o u n d ( d o o r ) ) { a s k ( ) ; s e e k ( ) ; }",
+          " ( ! f o u n d ( door ) ) { a s k ( ) ; s e e k ( ) ; }",
       },
     ],
     why: "The replacement rules define a grammar for JavaScript-like while statements, including variable declarations, expressions, blocks, and if-else statements, demonstrating how complex control flow and statement grouping are constructed from simpler syntactic elements.",
