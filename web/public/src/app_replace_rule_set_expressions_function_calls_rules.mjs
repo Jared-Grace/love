@@ -19,7 +19,7 @@ export function app_replace_rule_set_expressions_function_calls_rules(rules) {
     "id > all",
     "id > love",
     "id > list",
-    "id > d o u b l e",
+    "id > double",
     "in > 0",
   ]);
 }
