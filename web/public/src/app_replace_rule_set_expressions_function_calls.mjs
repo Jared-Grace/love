@@ -26,7 +26,7 @@ export function app_replace_rule_set_expressions_function_calls() {
       },
       {
         start: "id . id ( )",
-        end: "page . r e f r e s h ( )",
+        end: "page . refresh ( )",
       },
       {
         start: "ce",
