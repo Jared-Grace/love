@@ -1,6 +1,7 @@
 import { function_source_replace } from "../../../love/public/src/function_source_replace.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function sandbox() {
+  let prefix = "id > ";
   let list = [
     "id > e m p t y",
     "id > t a u t o l o g y",
