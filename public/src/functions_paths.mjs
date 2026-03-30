@@ -2,7 +2,7 @@ import { repos_paths_map_unordered_combine_squash_functions } from "../../../lov
 import { functions_names_from_path } from "../../../love/public/src/functions_names_from_path.mjs";
 import { function_name_folder_to_path } from "../../../love/public/src/function_name_folder_to_path.mjs";
 import { list_map } from "../../../love/public/src/list_map.mjs";
-export async function functions_paths() {
+export async function functions_paths() {$aa
   async function mapper(folder) {
     let f_names = await functions_names_from_path(folder);
     function lambda2(f_name) {
