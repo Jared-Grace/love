@@ -1,9 +1,11 @@
+import { app_replace_rule_set_function_declarations } from "../../../love/public/src/app_replace_rule_set_function_declarations.mjs";
 import { text_remove } from "../../../love/public/src/text_remove.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { list_map_prefix_without } from "../../../love/public/src/list_map_prefix_without.mjs";
 import { function_source_replace } from "../../../love/public/src/function_source_replace.mjs";
 import { each_async } from "../../../love/public/src/each_async.mjs";
 export async function sandbox() {
+  let f_name = app_replace_rule_set_function_declarations.name;
   let prefix = "id > ";
   let list = [
     "id > e m p t y",
