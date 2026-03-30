@@ -6086,7 +6086,7 @@ export function app_replace_rule_sets_fns_rules_used() {
         {
           left: ["id"],
           right: ["b", "u", "i", "l", "d", "i", "n", "g"],
-          original: "id > b u i l d i n g",
+          original: "id > building",
         },
       ],
       [
