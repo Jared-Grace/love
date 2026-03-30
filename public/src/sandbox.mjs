@@ -1,3 +1,4 @@
+import { functions_names_paths } from "../../../love/public/src/functions_names_paths.mjs";
 import { functions_names_each } from "../../../love/public/src/functions_names_each.mjs";
 import { app_replace_rule_set_statements_if } from "../../../love/public/src/app_replace_rule_set_statements_if.mjs";
 import { text_remove } from "../../../love/public/src/text_remove.mjs";
@@ -16,6 +17,7 @@ export async function sandbox() {
       await function_source_replace(f_name, from, replaced);
     }
     await each_async(mapped, lambda);
-  }functions_names_paths
+  }
+  let r = await functions_names_paths();
   await functions_names_each(lambda2);
 }
