@@ -21,12 +21,9 @@ export function server() {
   const port = server_port();
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
-  console.log(__dirname)
   let previous = folder_previous();
   let result2 = path_join([__dirname, previous, previous, previous]);
-  console.log(result2)
   result2 = path.resolve(result2);
-  console.log(result2)
   let v = express.static(result2);
   let u = server_url_api();
   async function api_generic(req, res) {
